@@ -18,13 +18,14 @@
 2. 在 composer.json 的 require 结构体中加入依赖：
     > "tencentcloud/tencentcloud-sdk-php": "3.0.1"
 3. 运行 composer install 下载安装 PHP SDK。
-4. 引用方法可参考示例。
+4. 添加以下引用代码，引用方法可参考示例。
+    > require 'vendor/autoload.php';
 
 ## 通过源码包安装
 1. 前往 [Github 代码托管地址](https://github.com/tencentcloud/tencentcloud-sdk-php) 下载源码压缩包。
 2. 解压源码包到您项目合适的位置。
-3. 引用方法可参考示例。
-
+3. 添加以下引用代码，引用方法可参考示例。
+    > require_once '../TCloudAutoLoader.php';
 # 示例
 ```php
 <?php

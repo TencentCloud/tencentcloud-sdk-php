@@ -1,6 +1,6 @@
 {
     "name": "tencentcloud/tencentcloud-sdk-php",
-    "description": "TencentCloudApi php sdk",
+    "description": "TencentCloudApi php sdk 3.0.1",
     "type": "library",
     "homepage": "https://github.com/TencentCloud/tencentcloud-sdk-php",
     "license": "Apache-2.0",
@@ -13,6 +13,7 @@
         }
     ],
     "require": {
+        "php": ">=5.6.33",
         "guzzlehttp/guzzle": "6.3.0",
         "guzzlehttp/psr7": "1.4.2"
     },

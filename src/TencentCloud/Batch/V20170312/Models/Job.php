@@ -1,0 +1,143 @@
+<?php
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+namespace TencentCloud\Batch\V20170312\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * @method string getJobName() 获取作业名称
+ * @method void setJobName(string $JobName) 设置作业名称
+ * @method string getJobDescription() 获取作业描述
+ * @method void setJobDescription(string $JobDescription) 设置作业描述
+ * @method integer getPriority() 获取作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+ * @method void setPriority(integer $Priority) 设置作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+ * @method array getTasks() 获取任务信息
+ * @method void setTasks(array $Tasks) 设置任务信息
+ * @method array getDependences() 获取依赖信息
+ * @method void setDependences(array $Dependences) 设置依赖信息
+ * @method array getNotifications() 获取通知信息
+ * @method void setNotifications(array $Notifications) 设置通知信息
+ * @method string getTaskExecutionDependOn() 获取对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
+ * @method void setTaskExecutionDependOn(string $TaskExecutionDependOn) 设置对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
+ */
+
+/**
+ *作业
+ */
+class Job extends AbstractModel
+{
+    /**
+     * @var string 作业名称
+     */
+    public $JobName;
+
+    /**
+     * @var string 作业描述
+     */
+    public $JobDescription;
+
+    /**
+     * @var integer 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+     */
+    public $Priority;
+
+    /**
+     * @var array 任务信息
+     */
+    public $Tasks;
+
+    /**
+     * @var array 依赖信息
+     */
+    public $Dependences;
+
+    /**
+     * @var array 通知信息
+     */
+    public $Notifications;
+
+    /**
+     * @var string 对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
+     */
+    public $TaskExecutionDependOn;
+    /**
+     * @param string $JobName 作业名称
+     * @param string $JobDescription 作业描述
+     * @param integer $Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+     * @param array $Tasks 任务信息
+     * @param array $Dependences 依赖信息
+     * @param array $Notifications 通知信息
+     * @param string $TaskExecutionDependOn 对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
+     */
+    function __construct()
+    {
+
+    }
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("JobName",$param) and $param["JobName"] !== null) {
+            $this->JobName = $param["JobName"];
+        }
+
+        if (array_key_exists("JobDescription",$param) and $param["JobDescription"] !== null) {
+            $this->JobDescription = $param["JobDescription"];
+        }
+
+        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
+            $this->Priority = $param["Priority"];
+        }
+
+        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
+            $this->Tasks = [];
+            foreach ($param["Tasks"] as $key => $value){
+                $obj = new Task();
+                $obj->deserialize($value);
+                array_push($this->Tasks, $obj);
+            }
+        }
+
+        if (array_key_exists("Dependences",$param) and $param["Dependences"] !== null) {
+            $this->Dependences = [];
+            foreach ($param["Dependences"] as $key => $value){
+                $obj = new Dependence();
+                $obj->deserialize($value);
+                array_push($this->Dependences, $obj);
+            }
+        }
+
+        if (array_key_exists("Notifications",$param) and $param["Notifications"] !== null) {
+            $this->Notifications = [];
+            foreach ($param["Notifications"] as $key => $value){
+                $obj = new Notification();
+                $obj->deserialize($value);
+                array_push($this->Notifications, $obj);
+            }
+        }
+
+        if (array_key_exists("TaskExecutionDependOn",$param) and $param["TaskExecutionDependOn"] !== null) {
+            $this->TaskExecutionDependOn = $param["TaskExecutionDependOn"];
+        }
+    }
+}

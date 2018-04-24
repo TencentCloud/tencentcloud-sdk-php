@@ -1,0 +1,128 @@
+<?php
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+namespace TencentCloud\Cws\V20180312\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * @method string getDomain() 获取根域名。
+ * @method void setDomain(string $Domain) 设置根域名。
+ * @method string getTxtName() 获取txt解析域名验证的name。
+ * @method void setTxtName(string $TxtName) 设置txt解析域名验证的name。
+ * @method string getTxtText() 获取txt解析域名验证的text。
+ * @method void setTxtText(string $TxtText) 设置txt解析域名验证的text。
+ * @method string getValidTo() 获取验证有效期，在此之前有效。
+ * @method void setValidTo(string $ValidTo) 设置验证有效期，在此之前有效。
+ * @method integer getVerifyStatus() 获取验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
+ * @method void setVerifyStatus(integer $VerifyStatus) 设置验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
+ * @method string getCreatedAt() 获取CreatedAt。
+ * @method void setCreatedAt(string $CreatedAt) 设置CreatedAt。
+ * @method string getUpdatedAt() 获取UpdatedAt。
+ * @method void setUpdatedAt(string $UpdatedAt) 设置UpdatedAt。
+ */
+
+/**
+ *站点验证数据
+ */
+class SitesVerification extends AbstractModel
+{
+    /**
+     * @var string 根域名。
+     */
+    public $Domain;
+
+    /**
+     * @var string txt解析域名验证的name。
+     */
+    public $TxtName;
+
+    /**
+     * @var string txt解析域名验证的text。
+     */
+    public $TxtText;
+
+    /**
+     * @var string 验证有效期，在此之前有效。
+     */
+    public $ValidTo;
+
+    /**
+     * @var integer 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
+     */
+    public $VerifyStatus;
+
+    /**
+     * @var string CreatedAt。
+     */
+    public $CreatedAt;
+
+    /**
+     * @var string UpdatedAt。
+     */
+    public $UpdatedAt;
+    /**
+     * @param string $Domain 根域名。
+     * @param string $TxtName txt解析域名验证的name。
+     * @param string $TxtText txt解析域名验证的text。
+     * @param string $ValidTo 验证有效期，在此之前有效。
+     * @param integer $VerifyStatus 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
+     * @param string $CreatedAt CreatedAt。
+     * @param string $UpdatedAt UpdatedAt。
+     */
+    function __construct()
+    {
+
+    }
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("TxtName",$param) and $param["TxtName"] !== null) {
+            $this->TxtName = $param["TxtName"];
+        }
+
+        if (array_key_exists("TxtText",$param) and $param["TxtText"] !== null) {
+            $this->TxtText = $param["TxtText"];
+        }
+
+        if (array_key_exists("ValidTo",$param) and $param["ValidTo"] !== null) {
+            $this->ValidTo = $param["ValidTo"];
+        }
+
+        if (array_key_exists("VerifyStatus",$param) and $param["VerifyStatus"] !== null) {
+            $this->VerifyStatus = $param["VerifyStatus"];
+        }
+
+        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
+            $this->CreatedAt = $param["CreatedAt"];
+        }
+
+        if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
+            $this->UpdatedAt = $param["UpdatedAt"];
+        }
+    }
+}

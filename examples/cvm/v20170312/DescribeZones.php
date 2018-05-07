@@ -1,8 +1,8 @@
 <?php
 require_once '../../../TCloudAutoLoader.php';
-// 导入对应产品模块的client。
+// 导入对应产品模块的client
 use TencentCloud\Cvm\V20170312\CvmClient;
-// 导入要请求接口对应的Request对象
+// 导入要请求接口对应的Request类
 use TencentCloud\Cvm\V20170312\Models\DescribeZonesRequest;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;

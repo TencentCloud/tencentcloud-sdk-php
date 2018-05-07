@@ -27,15 +27,18 @@
 3. 添加以下引用代码，引用方法可参考示例。
     > require_once '../TCloudAutoLoader.php';
 # 示例
+您可以在[github仓库](https://github.com/tencentcloud/tencentcloud-sdk-php)examples目录中找到部分接口的示例。例如查询可用区接口：
 ```php
 <?php
 require_once '../../../TCloudAutoLoader.php';
+// 导入对应产品模块的client。
 use TencentCloud\Cvm\V20170312\CvmClient;
+// 导入要请求接口对应的Request对象
 use TencentCloud\Cvm\V20170312\Models\DescribeZonesRequest;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
 try {
-    // 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey
+    // 实例化一个证书对象，入参需要传入腾讯云账户secretId，secretKey
     $cred = new Credential("secretId", "secretKey");
 
     // # 实例化要请求产品(以cvm为例)的client对象
@@ -46,8 +49,7 @@ try {
 
     // 通过client对象调用想要访问的接口，需要传入请求对象
     $resp = $client->DescribeZones($req);
-    
-    // 输出json格式的字符串回包
+
     print_r($resp->toJsonString());
 }
 catch(TencentCloudSDKException $e) {

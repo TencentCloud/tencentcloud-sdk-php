@@ -21,6 +21,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method array getSecurityGroupSet() 获取安全组对象。
+ * @method void setSecurityGroupSet(array $SecurityGroupSet) 设置安全组对象。
+ * @method integer getTotalCount() 获取符合条件的实例数量。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例数量。
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -31,10 +35,22 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSecurityGroupsResponse extends AbstractModel
 {
     /**
+     * @var array 安全组对象。
+     */
+    public $SecurityGroupSet;
+
+    /**
+     * @var integer 符合条件的实例数量。
+     */
+    public $TotalCount;
+
+    /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
+     * @param array $SecurityGroupSet 安全组对象。
+     * @param integer $TotalCount 符合条件的实例数量。
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -49,6 +65,19 @@ class DescribeSecurityGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SecurityGroupSet",$param) and $param["SecurityGroupSet"] !== null) {
+            $this->SecurityGroupSet = [];
+            foreach ($param["SecurityGroupSet"] as $key => $value){
+                $obj = new SecurityGroup();
+                $obj->deserialize($value);
+                array_push($this->SecurityGroupSet, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

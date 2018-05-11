@@ -23,10 +23,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getName() 获取产品名称
  * @method void setName(string $Name) 设置产品名称
- * @method string getDescription() 获取产品类型
- * @method void setDescription(string $Description) 设置产品类型
- * @method integer getAuthType() 获取产品鉴权类型（0：直连，1：Token）
- * @method void setAuthType(integer $AuthType) 设置产品鉴权类型（0：直连，1：Token）
+ * @method string getDescription() 获取产品描述
+ * @method void setDescription(string $Description) 设置产品描述
+ * @method integer getAuthType() 获取产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
+ * @method void setAuthType(integer $AuthType) 设置产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
  * @method array getDataTemplate() 获取数据模版（json数组）
  * @method void setDataTemplate(array $DataTemplate) 设置数据模版（json数组）
  */
@@ -42,12 +42,12 @@ class AddProductRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 产品类型
+     * @var string 产品描述
      */
     public $Description;
 
     /**
-     * @var integer 产品鉴权类型（0：直连，1：Token）
+     * @var integer 产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
      */
     public $AuthType;
 
@@ -57,8 +57,8 @@ class AddProductRequest extends AbstractModel
     public $DataTemplate;
     /**
      * @param string $Name 产品名称
-     * @param string $Description 产品类型
-     * @param integer $AuthType 产品鉴权类型（0：直连，1：Token）
+     * @param string $Description 产品描述
+     * @param integer $AuthType 产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
      * @param array $DataTemplate 数据模版（json数组）
      */
     function __construct()

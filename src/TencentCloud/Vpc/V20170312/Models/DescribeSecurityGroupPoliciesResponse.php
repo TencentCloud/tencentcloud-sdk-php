@@ -21,6 +21,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method SecurityGroupPolicySet getSecurityGroupPolicySet() 获取安全组规则集合。
+ * @method void setSecurityGroupPolicySet(SecurityGroupPolicySet $SecurityGroupPolicySet) 设置安全组规则集合。
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -31,10 +33,16 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSecurityGroupPoliciesResponse extends AbstractModel
 {
     /**
+     * @var SecurityGroupPolicySet 安全组规则集合。
+     */
+    public $SecurityGroupPolicySet;
+
+    /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
+     * @param SecurityGroupPolicySet $SecurityGroupPolicySet 安全组规则集合。
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -49,6 +57,11 @@ class DescribeSecurityGroupPoliciesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SecurityGroupPolicySet",$param) and $param["SecurityGroupPolicySet"] !== null) {
+            $this->SecurityGroupPolicySet = new SecurityGroupPolicySet();
+            $this->SecurityGroupPolicySet->deserialize($param["SecurityGroupPolicySet"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

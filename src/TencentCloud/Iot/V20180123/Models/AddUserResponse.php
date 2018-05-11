@@ -21,29 +21,29 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProductId() 获取产品Id
- * @method void setProductId(string $ProductId) 设置产品Id
- * @method string getDeviceName() 获取设备名称，唯一标识某产品下的一个设备
- * @method void setDeviceName(string $DeviceName) 设置设备名称，唯一标识某产品下的一个设备
+ * @method User getUser() 获取用户信息
+ * @method void setUser(User $User) 设置用户信息
+ * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
- *AddDevice请求参数结构体
+ *AddUser返回参数结构体
  */
-class AddDeviceRequest extends AbstractModel
+class AddUserResponse extends AbstractModel
 {
     /**
-     * @var string 产品Id
+     * @var User 用户信息
      */
-    public $ProductId;
+    public $User;
 
     /**
-     * @var string 设备名称，唯一标识某产品下的一个设备
+     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
-    public $DeviceName;
+    public $RequestId;
     /**
-     * @param string $ProductId 产品Id
-     * @param string $DeviceName 设备名称，唯一标识某产品下的一个设备
+     * @param User $User 用户信息
+     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
     {
@@ -57,12 +57,13 @@ class AddDeviceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists("User",$param) and $param["User"] !== null) {
+            $this->User = new User();
+            $this->User->deserialize($param["User"]);
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

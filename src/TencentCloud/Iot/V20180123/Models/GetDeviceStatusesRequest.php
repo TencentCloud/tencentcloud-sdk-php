@@ -23,8 +23,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
- * @method array getDeviceNames() 获取设备名称列表（单次限制1000个）
- * @method void setDeviceNames(array $DeviceNames) 设置设备名称列表（单次限制1000个）
+ * @method array getDeviceNames() 获取设备名称列表（单次限制1000个设备）
+ * @method void setDeviceNames(array $DeviceNames) 设置设备名称列表（单次限制1000个设备）
  */
 
 /**
@@ -38,12 +38,12 @@ class GetDeviceStatusesRequest extends AbstractModel
     public $ProductId;
 
     /**
-     * @var array 设备名称列表（单次限制1000个）
+     * @var array 设备名称列表（单次限制1000个设备）
      */
     public $DeviceNames;
     /**
      * @param string $ProductId 产品ID
-     * @param array $DeviceNames 设备名称列表（单次限制1000个）
+     * @param array $DeviceNames 设备名称列表（单次限制1000个设备）
      */
     function __construct()
     {

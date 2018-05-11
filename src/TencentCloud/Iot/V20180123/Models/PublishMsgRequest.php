@@ -25,8 +25,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopic(string $Topic) 设置Topic
  * @method string getMessage() 获取消息内容
  * @method void setMessage(string $Message) 设置消息内容
- * @method integer getQos() 获取Qos
- * @method void setQos(integer $Qos) 设置Qos
+ * @method integer getQos() 获取Qos(目前QoS支持0与1)
+ * @method void setQos(integer $Qos) 设置Qos(目前QoS支持0与1)
  */
 
 /**
@@ -45,13 +45,13 @@ class PublishMsgRequest extends AbstractModel
     public $Message;
 
     /**
-     * @var integer Qos
+     * @var integer Qos(目前QoS支持0与1)
      */
     public $Qos;
     /**
      * @param string $Topic Topic
      * @param string $Message 消息内容
-     * @param integer $Qos Qos
+     * @param integer $Qos Qos(目前QoS支持0与1)
      */
     function __construct()
     {

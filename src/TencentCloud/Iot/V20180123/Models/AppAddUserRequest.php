@@ -21,29 +21,29 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProductId() 获取产品Id
- * @method void setProductId(string $ProductId) 设置产品Id
- * @method string getDeviceName() 获取设备名称，唯一标识某产品下的一个设备
- * @method void setDeviceName(string $DeviceName) 设置设备名称，唯一标识某产品下的一个设备
+ * @method string getUserName() 获取用户名
+ * @method void setUserName(string $UserName) 设置用户名
+ * @method string getPassword() 获取密码
+ * @method void setPassword(string $Password) 设置密码
  */
 
 /**
- *AddDevice请求参数结构体
+ *AppAddUser请求参数结构体
  */
-class AddDeviceRequest extends AbstractModel
+class AppAddUserRequest extends AbstractModel
 {
     /**
-     * @var string 产品Id
+     * @var string 用户名
      */
-    public $ProductId;
+    public $UserName;
 
     /**
-     * @var string 设备名称，唯一标识某产品下的一个设备
+     * @var string 密码
      */
-    public $DeviceName;
+    public $Password;
     /**
-     * @param string $ProductId 产品Id
-     * @param string $DeviceName 设备名称，唯一标识某产品下的一个设备
+     * @param string $UserName 用户名
+     * @param string $Password 密码
      */
     function __construct()
     {
@@ -57,12 +57,12 @@ class AddDeviceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
         }
     }
 }

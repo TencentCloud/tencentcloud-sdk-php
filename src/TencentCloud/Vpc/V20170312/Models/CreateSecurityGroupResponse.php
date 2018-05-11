@@ -21,6 +21,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method SecurityGroup getSecurityGroup() 获取安全组对象。
+ * @method void setSecurityGroup(SecurityGroup $SecurityGroup) 设置安全组对象。
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -31,10 +33,16 @@ use TencentCloud\Common\AbstractModel;
 class CreateSecurityGroupResponse extends AbstractModel
 {
     /**
+     * @var SecurityGroup 安全组对象。
+     */
+    public $SecurityGroup;
+
+    /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
+     * @param SecurityGroup $SecurityGroup 安全组对象。
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -49,6 +57,11 @@ class CreateSecurityGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
+            $this->SecurityGroup = new SecurityGroup();
+            $this->SecurityGroup->deserialize($param["SecurityGroup"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

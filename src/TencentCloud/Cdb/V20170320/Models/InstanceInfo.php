@@ -27,8 +27,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区信息
  * @method integer getInitFlag() 获取初始化标志
  * @method void setInitFlag(integer $InitFlag) 设置初始化标志
- * @method RoVipInfo getRoVipInfo() 获取只读vip信息
- * @method void setRoVipInfo(RoVipInfo $RoVipInfo) 设置只读vip信息
+ * @method array getRoVipInfo() 获取只读vip信息
+ * @method void setRoVipInfo(array $RoVipInfo) 设置只读vip信息
  * @method integer getMemory() 获取内存容量
  * @method void setMemory(integer $Memory) 设置内存容量
  * @method integer getStatus() 获取实例状态
@@ -85,6 +85,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVport(integer $Vport) 设置端口号
  * @method integer getCdbError() 获取实例状态
  * @method void setCdbError(integer $CdbError) 设置实例状态
+ * @method string getUniqVpcId() 获取私有网络描述符
+ * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络描述符
+ * @method string getUniqSubnetId() 获取子网描述符
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网描述符
  */
 
 /**
@@ -108,7 +112,7 @@ class InstanceInfo extends AbstractModel
     public $InitFlag;
 
     /**
-     * @var RoVipInfo 只读vip信息
+     * @var array 只读vip信息
      */
     public $RoVipInfo;
 
@@ -251,11 +255,21 @@ class InstanceInfo extends AbstractModel
      * @var integer 实例状态
      */
     public $CdbError;
+
+    /**
+     * @var string 私有网络描述符
+     */
+    public $UniqVpcId;
+
+    /**
+     * @var string 子网描述符
+     */
+    public $UniqSubnetId;
     /**
      * @param integer $WanStatus 外网状态
      * @param string $Zone 可用区信息
      * @param integer $InitFlag 初始化标志
-     * @param RoVipInfo $RoVipInfo 只读vip信息
+     * @param array $RoVipInfo 只读vip信息
      * @param integer $Memory 内存容量
      * @param integer $Status 实例状态
      * @param integer $VpcId 私有网络ID
@@ -284,6 +298,8 @@ class InstanceInfo extends AbstractModel
      * @param string $Vip 实例IP
      * @param integer $Vport 端口号
      * @param integer $CdbError 实例状态
+     * @param string $UniqVpcId 私有网络描述符
+     * @param string $UniqSubnetId 子网描述符
      */
     function __construct()
     {
@@ -310,8 +326,12 @@ class InstanceInfo extends AbstractModel
         }
 
         if (array_key_exists("RoVipInfo",$param) and $param["RoVipInfo"] !== null) {
-            $this->RoVipInfo = new RoVipInfo();
-            $this->RoVipInfo->deserialize($param["RoVipInfo"]);
+            $this->RoVipInfo = [];
+            foreach ($param["RoVipInfo"] as $key => $value){
+                $obj = new RoVipInfo();
+                $obj->deserialize($value);
+                array_push($this->RoVipInfo, $obj);
+            }
         }
 
         if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
@@ -436,6 +456,14 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("CdbError",$param) and $param["CdbError"] !== null) {
             $this->CdbError = $param["CdbError"];
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
+        }
+
+        if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
+            $this->UniqSubnetId = $param["UniqSubnetId"];
         }
     }
 }

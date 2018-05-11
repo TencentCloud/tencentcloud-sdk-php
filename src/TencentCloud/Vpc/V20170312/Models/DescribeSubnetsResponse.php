@@ -23,8 +23,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getTotalCount() 获取符合条件的实例数量。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例数量。
- * @method array getDescribeSubnets() 获取子网对象。
- * @method void setDescribeSubnets(array $DescribeSubnets) 设置子网对象。
+ * @method array getSubnetSet() 获取子网对象。
+ * @method void setSubnetSet(array $SubnetSet) 设置子网对象。
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -42,7 +42,7 @@ class DescribeSubnetsResponse extends AbstractModel
     /**
      * @var array 子网对象。
      */
-    public $DescribeSubnets;
+    public $SubnetSet;
 
     /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -50,7 +50,7 @@ class DescribeSubnetsResponse extends AbstractModel
     public $RequestId;
     /**
      * @param integer $TotalCount 符合条件的实例数量。
-     * @param array $DescribeSubnets 子网对象。
+     * @param array $SubnetSet 子网对象。
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -69,12 +69,12 @@ class DescribeSubnetsResponse extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("DescribeSubnets",$param) and $param["DescribeSubnets"] !== null) {
-            $this->DescribeSubnets = [];
-            foreach ($param["DescribeSubnets"] as $key => $value){
+        if (array_key_exists("SubnetSet",$param) and $param["SubnetSet"] !== null) {
+            $this->SubnetSet = [];
+            foreach ($param["SubnetSet"] as $key => $value){
                 $obj = new Subnet();
                 $obj->deserialize($value);
-                array_push($this->DescribeSubnets, $obj);
+                array_push($this->SubnetSet, $obj);
             }
         }
 

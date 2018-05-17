@@ -22,11 +22,11 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method array getFilters() 获取过滤条件。
-<li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](document/api/213/9452#zone)过滤。</li>
+<li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](https://cloud.tencent.com/document/api/213/9452#zone)过滤。</li>
 <li> instance-family - String - 是否必填：否 -（过滤条件）按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
 每次请求的`Filters`的上限为10，`Filter.Values`的上限为1。
  * @method void setFilters(array $Filters) 设置过滤条件。
-<li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](document/api/213/9452#zone)过滤。</li>
+<li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](https://cloud.tencent.com/document/api/213/9452#zone)过滤。</li>
 <li> instance-family - String - 是否必填：否 -（过滤条件）按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
 每次请求的`Filters`的上限为10，`Filter.Values`的上限为1。
  */
@@ -38,14 +38,14 @@ class DescribeInstanceTypeConfigsRequest extends AbstractModel
 {
     /**
      * @var array 过滤条件。
-<li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](document/api/213/9452#zone)过滤。</li>
+<li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](https://cloud.tencent.com/document/api/213/9452#zone)过滤。</li>
 <li> instance-family - String - 是否必填：否 -（过滤条件）按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
 每次请求的`Filters`的上限为10，`Filter.Values`的上限为1。
      */
     public $Filters;
     /**
      * @param array $Filters 过滤条件。
-<li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](document/api/213/9452#zone)过滤。</li>
+<li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](https://cloud.tencent.com/document/api/213/9452#zone)过滤。</li>
 <li> instance-family - String - 是否必填：否 -（过滤条件）按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
 每次请求的`Filters`的上限为10，`Filter.Values`的上限为1。
      */

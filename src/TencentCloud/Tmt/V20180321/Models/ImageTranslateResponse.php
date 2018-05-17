@@ -21,53 +21,27 @@ namespace TencentCloud\Tmt\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSessionUuid() 获取请求的SessionUuid直接返回
- * @method void setSessionUuid(string $SessionUuid) 设置请求的SessionUuid直接返回
- * @method integer getRecognizeStatus() 获取语音识别状态 1-进行中 0-完成
- * @method void setRecognizeStatus(integer $RecognizeStatus) 设置语音识别状态 1-进行中 0-完成
- * @method string getSourceText() 获取识别出的源文
- * @method void setSourceText(string $SourceText) 设置识别出的源文
- * @method string getTargetText() 获取翻译出的译文
- * @method void setTargetText(string $TargetText) 设置翻译出的译文
- * @method integer getSeq() 获取第几个语音分片
- * @method void setSeq(integer $Seq) 设置第几个语音分片
+ * @method string getSessionUuid() 获取请求的SessionUuid返回
+ * @method void setSessionUuid(string $SessionUuid) 设置请求的SessionUuid返回
  * @method string getSource() 获取源语言
  * @method void setSource(string $Source) 设置源语言
  * @method string getTarget() 获取目标语言
  * @method void setTarget(string $Target) 设置目标语言
+ * @method ImageRecord getImageRecord() 获取图片翻译结果
+ * @method void setImageRecord(ImageRecord $ImageRecord) 设置图片翻译结果
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
- *SpeechTranslate返回参数结构体
+ *ImageTranslate返回参数结构体
  */
-class SpeechTranslateResponse extends AbstractModel
+class ImageTranslateResponse extends AbstractModel
 {
     /**
-     * @var string 请求的SessionUuid直接返回
+     * @var string 请求的SessionUuid返回
      */
     public $SessionUuid;
-
-    /**
-     * @var integer 语音识别状态 1-进行中 0-完成
-     */
-    public $RecognizeStatus;
-
-    /**
-     * @var string 识别出的源文
-     */
-    public $SourceText;
-
-    /**
-     * @var string 翻译出的译文
-     */
-    public $TargetText;
-
-    /**
-     * @var integer 第几个语音分片
-     */
-    public $Seq;
 
     /**
      * @var string 源语言
@@ -80,17 +54,19 @@ class SpeechTranslateResponse extends AbstractModel
     public $Target;
 
     /**
+     * @var ImageRecord 图片翻译结果
+     */
+    public $ImageRecord;
+
+    /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
-     * @param string $SessionUuid 请求的SessionUuid直接返回
-     * @param integer $RecognizeStatus 语音识别状态 1-进行中 0-完成
-     * @param string $SourceText 识别出的源文
-     * @param string $TargetText 翻译出的译文
-     * @param integer $Seq 第几个语音分片
+     * @param string $SessionUuid 请求的SessionUuid返回
      * @param string $Source 源语言
      * @param string $Target 目标语言
+     * @param ImageRecord $ImageRecord 图片翻译结果
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -109,28 +85,17 @@ class SpeechTranslateResponse extends AbstractModel
             $this->SessionUuid = $param["SessionUuid"];
         }
 
-        if (array_key_exists("RecognizeStatus",$param) and $param["RecognizeStatus"] !== null) {
-            $this->RecognizeStatus = $param["RecognizeStatus"];
-        }
-
-        if (array_key_exists("SourceText",$param) and $param["SourceText"] !== null) {
-            $this->SourceText = $param["SourceText"];
-        }
-
-        if (array_key_exists("TargetText",$param) and $param["TargetText"] !== null) {
-            $this->TargetText = $param["TargetText"];
-        }
-
-        if (array_key_exists("Seq",$param) and $param["Seq"] !== null) {
-            $this->Seq = $param["Seq"];
-        }
-
         if (array_key_exists("Source",$param) and $param["Source"] !== null) {
             $this->Source = $param["Source"];
         }
 
         if (array_key_exists("Target",$param) and $param["Target"] !== null) {
             $this->Target = $param["Target"];
+        }
+
+        if (array_key_exists("ImageRecord",$param) and $param["ImageRecord"] !== null) {
+            $this->ImageRecord = new ImageRecord();
+            $this->ImageRecord->deserialize($param["ImageRecord"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

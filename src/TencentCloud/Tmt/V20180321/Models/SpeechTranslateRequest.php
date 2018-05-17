@@ -21,20 +21,22 @@ namespace TencentCloud\Tmt\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSessionUuid() 获取一段完整的语⾳音对应⼀一个sessionUuid
- * @method void setSessionUuid(string $SessionUuid) 设置一段完整的语⾳音对应⼀一个sessionUuid
- * @method string getSource() 获取音频中的语⾔言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
- * @method void setSource(string $Source) 设置音频中的语⾔言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
- * @method string getTarget() 获取翻译⽬目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
- * @method void setTarget(string $Target) 设置翻译⽬目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+ * @method string getSessionUuid() 获取一段完整的语音对应一个SessionUuid
+ * @method void setSessionUuid(string $SessionUuid) 设置一段完整的语音对应一个SessionUuid
+ * @method string getSource() 获取音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+ * @method void setSource(string $Source) 设置音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+ * @method string getTarget() 获取翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+ * @method void setTarget(string $Target) 设置翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
  * @method integer getAudioFormat() 获取pcm : 146   amr : 33554432   mp3 : 83886080
  * @method void setAudioFormat(integer $AudioFormat) 设置pcm : 146   amr : 33554432   mp3 : 83886080
- * @method integer getSeq() 获取语⾳音分⽚片后的第⼏几⽚片
- * @method void setSeq(integer $Seq) 设置语⾳音分⽚片后的第⼏几⽚片
- * @method integer getIsEnd() 获取是否最后⼀片
- * @method void setIsEnd(integer $IsEnd) 设置是否最后⼀片
- * @method string getData() 获取语⾳音分⽚片内容的 base64字符串串
- * @method void setData(string $Data) 设置语⾳音分⽚片内容的 base64字符串串
+ * @method integer getSeq() 获取语音分片后的第几片
+ * @method void setSeq(integer $Seq) 设置语音分片后的第几片
+ * @method integer getIsEnd() 获取是否最后一片
+ * @method void setIsEnd(integer $IsEnd) 设置是否最后一片
+ * @method string getData() 获取语音分片内容的base64字符串
+ * @method void setData(string $Data) 设置语音分片内容的base64字符串
+ * @method integer getProjectId() 获取项目id
+ * @method void setProjectId(integer $ProjectId) 设置项目id
  */
 
 /**
@@ -43,17 +45,17 @@ use TencentCloud\Common\AbstractModel;
 class SpeechTranslateRequest extends AbstractModel
 {
     /**
-     * @var string 一段完整的语⾳音对应⼀一个sessionUuid
+     * @var string 一段完整的语音对应一个SessionUuid
      */
     public $SessionUuid;
 
     /**
-     * @var string 音频中的语⾔言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * @var string 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      */
     public $Source;
 
     /**
-     * @var string 翻译⽬目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * @var string 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      */
     public $Target;
 
@@ -63,27 +65,33 @@ class SpeechTranslateRequest extends AbstractModel
     public $AudioFormat;
 
     /**
-     * @var integer 语⾳音分⽚片后的第⼏几⽚片
+     * @var integer 语音分片后的第几片
      */
     public $Seq;
 
     /**
-     * @var integer 是否最后⼀片
+     * @var integer 是否最后一片
      */
     public $IsEnd;
 
     /**
-     * @var string 语⾳音分⽚片内容的 base64字符串串
+     * @var string 语音分片内容的base64字符串
      */
     public $Data;
+
     /**
-     * @param string $SessionUuid 一段完整的语⾳音对应⼀一个sessionUuid
-     * @param string $Source 音频中的语⾔言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
-     * @param string $Target 翻译⽬目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * @var integer 项目id
+     */
+    public $ProjectId;
+    /**
+     * @param string $SessionUuid 一段完整的语音对应一个SessionUuid
+     * @param string $Source 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * @param string $Target 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      * @param integer $AudioFormat pcm : 146   amr : 33554432   mp3 : 83886080
-     * @param integer $Seq 语⾳音分⽚片后的第⼏几⽚片
-     * @param integer $IsEnd 是否最后⼀片
-     * @param string $Data 语⾳音分⽚片内容的 base64字符串串
+     * @param integer $Seq 语音分片后的第几片
+     * @param integer $IsEnd 是否最后一片
+     * @param string $Data 语音分片内容的base64字符串
+     * @param integer $ProjectId 项目id
      */
     function __construct()
     {
@@ -123,6 +131,10 @@ class SpeechTranslateRequest extends AbstractModel
 
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = $param["Data"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

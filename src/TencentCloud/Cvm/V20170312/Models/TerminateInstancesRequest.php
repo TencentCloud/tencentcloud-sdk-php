@@ -23,8 +23,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getInstanceIds() 获取一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
  * @method void setInstanceIds(array $InstanceIds) 设置一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
- * @method boolean getDryRun() 获取试运行。
- * @method void setDryRun(boolean $DryRun) 设置试运行。
  */
 
 /**
@@ -36,14 +34,8 @@ class TerminateInstancesRequest extends AbstractModel
      * @var array 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
      */
     public $InstanceIds;
-
-    /**
-     * @var boolean 试运行。
-     */
-    public $DryRun;
     /**
      * @param array $InstanceIds 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
-     * @param boolean $DryRun 试运行。
      */
     function __construct()
     {
@@ -59,10 +51,6 @@ class TerminateInstancesRequest extends AbstractModel
         }
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
-        }
-
-        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
-            $this->DryRun = $param["DryRun"];
         }
     }
 }

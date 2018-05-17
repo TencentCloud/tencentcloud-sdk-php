@@ -33,16 +33,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageName(string $ImageName) 设置镜像名称
  * @method string getImageDescription() 获取镜像描述
  * @method void setImageDescription(string $ImageDescription) 设置镜像描述
- * @method string getImageSize() 获取镜像大小
- * @method void setImageSize(string $ImageSize) 设置镜像大小
+ * @method integer getImageSize() 获取镜像大小
+ * @method void setImageSize(integer $ImageSize) 设置镜像大小
  * @method string getArchitecture() 获取镜像架构
  * @method void setArchitecture(string $Architecture) 设置镜像架构
  * @method string getImageState() 获取镜像状态
  * @method void setImageState(string $ImageState) 设置镜像状态
- * @method array getPlatform() 获取镜像来源平台
- * @method void setPlatform(array $Platform) 设置镜像来源平台
- * @method array getImageCreator() 获取镜像创建者
- * @method void setImageCreator(array $ImageCreator) 设置镜像创建者
+ * @method string getPlatform() 获取镜像来源平台
+ * @method void setPlatform(string $Platform) 设置镜像来源平台
+ * @method string getImageCreator() 获取镜像创建者
+ * @method void setImageCreator(string $ImageCreator) 设置镜像创建者
  * @method string getImageSource() 获取镜像来源
  * @method void setImageSource(string $ImageSource) 设置镜像来源
  */
@@ -83,7 +83,7 @@ class Image extends AbstractModel
     public $ImageDescription;
 
     /**
-     * @var string 镜像大小
+     * @var integer 镜像大小
      */
     public $ImageSize;
 
@@ -98,12 +98,12 @@ class Image extends AbstractModel
     public $ImageState;
 
     /**
-     * @var array 镜像来源平台
+     * @var string 镜像来源平台
      */
     public $Platform;
 
     /**
-     * @var array 镜像创建者
+     * @var string 镜像创建者
      */
     public $ImageCreator;
 
@@ -118,11 +118,11 @@ class Image extends AbstractModel
      * @param string $CreatedTime 镜像创建时间
      * @param string $ImageName 镜像名称
      * @param string $ImageDescription 镜像描述
-     * @param string $ImageSize 镜像大小
+     * @param integer $ImageSize 镜像大小
      * @param string $Architecture 镜像架构
      * @param string $ImageState 镜像状态
-     * @param array $Platform 镜像来源平台
-     * @param array $ImageCreator 镜像创建者
+     * @param string $Platform 镜像来源平台
+     * @param string $ImageCreator 镜像创建者
      * @param string $ImageSource 镜像来源
      */
     function __construct()

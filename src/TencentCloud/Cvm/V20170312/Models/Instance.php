@@ -57,6 +57,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
  * @method string getExpiredTime() 获取到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
  * @method void setExpiredTime(string $ExpiredTime) 设置到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+ * @method string getOsName() 获取操作系统名称。
+ * @method void setOsName(string $OsName) 设置操作系统名称。
+ * @method array getSecurityGroupIds() 获取实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+ * @method LoginSettings getLoginSettings() 获取实例登录设置。目前只返回实例所关联的密钥。
+ * @method void setLoginSettings(LoginSettings $LoginSettings) 设置实例登录设置。目前只返回实例所关联的密钥。
  */
 
 /**
@@ -153,6 +159,21 @@ class Instance extends AbstractModel
      * @var string 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public $ExpiredTime;
+
+    /**
+     * @var string 操作系统名称。
+     */
+    public $OsName;
+
+    /**
+     * @var array 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+     */
+    public $SecurityGroupIds;
+
+    /**
+     * @var LoginSettings 实例登录设置。目前只返回实例所关联的密钥。
+     */
+    public $LoginSettings;
     /**
      * @param Placement $Placement 实例所在的位置。
      * @param string $InstanceId 实例`ID`。
@@ -172,6 +193,9 @@ class Instance extends AbstractModel
      * @param string $RenewFlag 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
      * @param string $CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      * @param string $ExpiredTime 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * @param string $OsName 操作系统名称。
+     * @param array $SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+     * @param LoginSettings $LoginSettings 实例登录设置。目前只返回实例所关联的密钥。
      */
     function __construct()
     {
@@ -264,6 +288,19 @@ class Instance extends AbstractModel
 
         if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
             $this->ExpiredTime = $param["ExpiredTime"];
+        }
+
+        if (array_key_exists("OsName",$param) and $param["OsName"] !== null) {
+            $this->OsName = $param["OsName"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("LoginSettings",$param) and $param["LoginSettings"] !== null) {
+            $this->LoginSettings = new LoginSettings();
+            $this->LoginSettings->deserialize($param["LoginSettings"]);
         }
     }
 }

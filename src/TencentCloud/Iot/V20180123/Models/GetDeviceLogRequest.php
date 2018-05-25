@@ -23,8 +23,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getProductId() 获取产品Id
  * @method void setProductId(string $ProductId) 设置产品Id
- * @method array getDeviceNames() 获取设备名称列表
- * @method void setDeviceNames(array $DeviceNames) 设置设备名称列表
+ * @method array getDeviceNames() 获取设备名称列表，最大支持100台
+ * @method void setDeviceNames(array $DeviceNames) 设置设备名称列表，最大支持100台
  * @method string getStartTime() 获取查询开始时间
  * @method void setStartTime(string $StartTime) 设置查询开始时间
  * @method string getEndTime() 获取查询结束时间
@@ -35,6 +35,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) 设置时间排序（desc/asc）
  * @method string getScrollId() 获取查询游标
  * @method void setScrollId(string $ScrollId) 设置查询游标
+ * @method string getType() 获取日志类型（comm/status）
+ * @method void setType(string $Type) 设置日志类型（comm/status）
  */
 
 /**
@@ -48,7 +50,7 @@ class GetDeviceLogRequest extends AbstractModel
     public $ProductId;
 
     /**
-     * @var array 设备名称列表
+     * @var array 设备名称列表，最大支持100台
      */
     public $DeviceNames;
 
@@ -76,14 +78,20 @@ class GetDeviceLogRequest extends AbstractModel
      * @var string 查询游标
      */
     public $ScrollId;
+
+    /**
+     * @var string 日志类型（comm/status）
+     */
+    public $Type;
     /**
      * @param string $ProductId 产品Id
-     * @param array $DeviceNames 设备名称列表
+     * @param array $DeviceNames 设备名称列表，最大支持100台
      * @param string $StartTime 查询开始时间
      * @param string $EndTime 查询结束时间
      * @param integer $Size 查询数据量
      * @param string $Order 时间排序（desc/asc）
      * @param string $ScrollId 查询游标
+     * @param string $Type 日志类型（comm/status）
      */
     function __construct()
     {
@@ -123,6 +131,10 @@ class GetDeviceLogRequest extends AbstractModel
 
         if (array_key_exists("ScrollId",$param) and $param["ScrollId"] !== null) {
             $this->ScrollId = $param["ScrollId"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

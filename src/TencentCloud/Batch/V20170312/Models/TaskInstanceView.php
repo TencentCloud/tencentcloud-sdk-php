@@ -41,6 +41,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间
  * @method RedirectInfo getRedirectInfo() 获取重定向信息
  * @method void setRedirectInfo(RedirectInfo $RedirectInfo) 设置重定向信息
+ * @method string getStateDetailedReason() 获取任务实例状态原因详情，任务实例失败时，会记录失败原因
+ * @method void setStateDetailedReason(string $StateDetailedReason) 设置任务实例状态原因详情，任务实例失败时，会记录失败原因
  */
 
 /**
@@ -97,6 +99,11 @@ class TaskInstanceView extends AbstractModel
      * @var RedirectInfo 重定向信息
      */
     public $RedirectInfo;
+
+    /**
+     * @var string 任务实例状态原因详情，任务实例失败时，会记录失败原因
+     */
+    public $StateDetailedReason;
     /**
      * @param integer $TaskInstanceIndex 任务实例索引
      * @param string $TaskInstanceState 任务实例状态
@@ -108,6 +115,7 @@ class TaskInstanceView extends AbstractModel
      * @param string $RunningTime 开始运行时间
      * @param string $EndTime 结束时间
      * @param RedirectInfo $RedirectInfo 重定向信息
+     * @param string $StateDetailedReason 任务实例状态原因详情，任务实例失败时，会记录失败原因
      */
     function __construct()
     {
@@ -160,6 +168,10 @@ class TaskInstanceView extends AbstractModel
         if (array_key_exists("RedirectInfo",$param) and $param["RedirectInfo"] !== null) {
             $this->RedirectInfo = new RedirectInfo();
             $this->RedirectInfo->deserialize($param["RedirectInfo"]);
+        }
+
+        if (array_key_exists("StateDetailedReason",$param) and $param["StateDetailedReason"] !== null) {
+            $this->StateDetailedReason = $param["StateDetailedReason"];
         }
     }
 }

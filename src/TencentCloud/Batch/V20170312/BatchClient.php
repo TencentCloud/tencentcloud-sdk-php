@@ -48,6 +48,7 @@ use TencentCloud\Batch\V20170312\Models as Models;
 * @method Models\SubmitJobResponse SubmitJob(Models\SubmitJobRequest $req) 用于提交一个作业
 * @method Models\TerminateComputeNodeResponse TerminateComputeNode(Models\TerminateComputeNodeRequest $req) 用于销毁计算节点。
 对于状态为CREATED、CREATION_FAILED、RUNNING和ABNORMAL的节点，允许销毁处理。
+* @method Models\TerminateComputeNodesResponse TerminateComputeNodes(Models\TerminateComputeNodesRequest $req) 用于批量销毁计算节点，不允许重复销毁同一个节点。
 * @method Models\TerminateJobResponse TerminateJob(Models\TerminateJobRequest $req) 用于终止作业。
 终止作业的效果相当于所含的所有任务实例进行TerminateTaskInstance操作。具体效果和用法可参考TerminateTaskInstance。
 * @method Models\TerminateTaskInstanceResponse TerminateTaskInstance(Models\TerminateTaskInstanceRequest $req) 用于终止任务实例

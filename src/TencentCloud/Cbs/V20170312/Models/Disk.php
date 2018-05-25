@@ -27,8 +27,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskUsage(string $DiskUsage) 设置云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
  * @method string getDiskChargeType() 获取付费模式。取值范围：<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：后付费，即按量计费。
  * @method void setDiskChargeType(string $DiskChargeType) 设置付费模式。取值范围：<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：后付费，即按量计费。
- * @method boolean getPortable() 获取是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
- * @method void setPortable(boolean $Portable) 设置是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
+ * @method boolean getPortable() 获取是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。
+ * @method void setPortable(boolean $Portable) 设置是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。
  * @method Placement getPlacement() 获取云硬盘所在的位置。
  * @method void setPlacement(Placement $Placement) 设置云硬盘所在的位置。
  * @method boolean getSnapshotAbility() 获取云盘是否具备创建快照的能力。取值范围：<br><li>false表示不具备<br><li>true表示具备。
@@ -39,28 +39,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskSize(integer $DiskSize) 设置云硬盘大小。
  * @method string getDiskState() 获取云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中。
  * @method void setDiskState(string $DiskState) 设置云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中。
- * @method string getDiskType() 获取云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高效云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
- * @method void setDiskType(string $DiskType) 设置云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高效云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
- * @method boolean getAttached() 获取云盘是否挂载到云主机上。取值范围：<br><li>false表示未挂载<br><li>true表示已挂载。
- * @method void setAttached(boolean $Attached) 设置云盘是否挂载到云主机上。取值范围：<br><li>false表示未挂载<br><li>true表示已挂载。
+ * @method string getDiskType() 获取云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+ * @method void setDiskType(string $DiskType) 设置云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+ * @method boolean getAttached() 获取云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载<br><li>true:表示已挂载。
+ * @method void setAttached(boolean $Attached) 设置云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载<br><li>true:表示已挂载。
  * @method string getInstanceId() 获取云硬盘挂载的云主机ID。
  * @method void setInstanceId(string $InstanceId) 设置云硬盘挂载的云主机ID。
  * @method string getCreateTime() 获取云硬盘的创建时间。
  * @method void setCreateTime(string $CreateTime) 设置云硬盘的创建时间。
  * @method string getDeadlineTime() 获取云硬盘的到期时间。
  * @method void setDeadlineTime(string $DeadlineTime) 设置云硬盘的到期时间。
- * @method boolean getRollbacking() 获取云盘是否处于快照回滚状态。取值范围：<br><li>false表示不处于快照回滚状态<br><li>true表示处于快照回滚状态。
- * @method void setRollbacking(boolean $Rollbacking) 设置云盘是否处于快照回滚状态。取值范围：<br><li>false表示不处于快照回滚状态<br><li>true表示处于快照回滚状态。
+ * @method boolean getRollbacking() 获取云盘是否处于快照回滚状态。取值范围：<br><li>false:表示不处于快照回滚状态<br><li>true:表示处于快照回滚状态。
+ * @method void setRollbacking(boolean $Rollbacking) 设置云盘是否处于快照回滚状态。取值范围：<br><li>false:表示不处于快照回滚状态<br><li>true:表示处于快照回滚状态。
  * @method integer getRollbackPercent() 获取云盘快照回滚的进度。
  * @method void setRollbackPercent(integer $RollbackPercent) 设置云盘快照回滚的进度。
- * @method boolean getEncrypt() 获取云盘是否为加密盘。取值范围：<br><li>false表示非加密盘<br><li>true表示加密盘。
- * @method void setEncrypt(boolean $Encrypt) 设置云盘是否为加密盘。取值范围：<br><li>false表示非加密盘<br><li>true表示加密盘。
+ * @method boolean getEncrypt() 获取云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
+ * @method void setEncrypt(boolean $Encrypt) 设置云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
  * @method boolean getAutoRenewFlagError() 获取云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置<br><li>false：云盘自动续费标识正常。
  * @method void setAutoRenewFlagError(boolean $AutoRenewFlagError) 设置云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置<br><li>false：云盘自动续费标识正常。
  * @method string getRenewFlag() 获取自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
  * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
- * @method boolean getDeadlineError() 获取云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true:云盘到期时间早于子机。false：云盘到期时间晚于子机。
- * @method void setDeadlineError(boolean $DeadlineError) 设置云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true:云盘到期时间早于子机。false：云盘到期时间晚于子机。
+ * @method boolean getDeadlineError() 获取在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
+ * @method void setDeadlineError(boolean $DeadlineError) 设置在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
  * @method boolean getIsReturnable() 获取判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还<br><li>false:不支持主动退还。
  * @method void setIsReturnable(boolean $IsReturnable) 设置判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还<br><li>false:不支持主动退还。
  * @method integer getReturnFailCode() 获取预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
@@ -90,7 +90,7 @@ class Disk extends AbstractModel
     public $DiskChargeType;
 
     /**
-     * @var boolean 是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
+     * @var boolean 是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。
      */
     public $Portable;
 
@@ -120,12 +120,12 @@ class Disk extends AbstractModel
     public $DiskState;
 
     /**
-     * @var string 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高效云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * @var string 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
      */
     public $DiskType;
 
     /**
-     * @var boolean 云盘是否挂载到云主机上。取值范围：<br><li>false表示未挂载<br><li>true表示已挂载。
+     * @var boolean 云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载<br><li>true:表示已挂载。
      */
     public $Attached;
 
@@ -145,7 +145,7 @@ class Disk extends AbstractModel
     public $DeadlineTime;
 
     /**
-     * @var boolean 云盘是否处于快照回滚状态。取值范围：<br><li>false表示不处于快照回滚状态<br><li>true表示处于快照回滚状态。
+     * @var boolean 云盘是否处于快照回滚状态。取值范围：<br><li>false:表示不处于快照回滚状态<br><li>true:表示处于快照回滚状态。
      */
     public $Rollbacking;
 
@@ -155,7 +155,7 @@ class Disk extends AbstractModel
     public $RollbackPercent;
 
     /**
-     * @var boolean 云盘是否为加密盘。取值范围：<br><li>false表示非加密盘<br><li>true表示加密盘。
+     * @var boolean 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
      */
     public $Encrypt;
 
@@ -170,7 +170,7 @@ class Disk extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var boolean 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true:云盘到期时间早于子机。false：云盘到期时间晚于子机。
+     * @var boolean 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
      */
     public $DeadlineError;
 
@@ -192,23 +192,23 @@ class Disk extends AbstractModel
      * @param string $DiskId 云硬盘ID。
      * @param string $DiskUsage 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
      * @param string $DiskChargeType 付费模式。取值范围：<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：后付费，即按量计费。
-     * @param boolean $Portable 是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
+     * @param boolean $Portable 是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。
      * @param Placement $Placement 云硬盘所在的位置。
      * @param boolean $SnapshotAbility 云盘是否具备创建快照的能力。取值范围：<br><li>false表示不具备<br><li>true表示具备。
      * @param string $DiskName 云硬盘名称。
      * @param integer $DiskSize 云硬盘大小。
      * @param string $DiskState 云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中。
-     * @param string $DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高效云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
-     * @param boolean $Attached 云盘是否挂载到云主机上。取值范围：<br><li>false表示未挂载<br><li>true表示已挂载。
+     * @param string $DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * @param boolean $Attached 云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载<br><li>true:表示已挂载。
      * @param string $InstanceId 云硬盘挂载的云主机ID。
      * @param string $CreateTime 云硬盘的创建时间。
      * @param string $DeadlineTime 云硬盘的到期时间。
-     * @param boolean $Rollbacking 云盘是否处于快照回滚状态。取值范围：<br><li>false表示不处于快照回滚状态<br><li>true表示处于快照回滚状态。
+     * @param boolean $Rollbacking 云盘是否处于快照回滚状态。取值范围：<br><li>false:表示不处于快照回滚状态<br><li>true:表示处于快照回滚状态。
      * @param integer $RollbackPercent 云盘快照回滚的进度。
-     * @param boolean $Encrypt 云盘是否为加密盘。取值范围：<br><li>false表示非加密盘<br><li>true表示加密盘。
+     * @param boolean $Encrypt 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
      * @param boolean $AutoRenewFlagError 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置<br><li>false：云盘自动续费标识正常。
      * @param string $RenewFlag 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
-     * @param boolean $DeadlineError 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true:云盘到期时间早于子机。false：云盘到期时间晚于子机。
+     * @param boolean $DeadlineError 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
      * @param boolean $IsReturnable 判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还<br><li>false:不支持主动退还。
      * @param integer $ReturnFailCode 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
      * @param array $AutoSnapshotPolicyIds 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。

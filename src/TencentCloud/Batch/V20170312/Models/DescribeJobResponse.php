@@ -43,6 +43,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskMetrics(TaskMetrics $TaskMetrics) 设置任务统计指标
  * @method TaskInstanceView getTaskInstanceMetrics() 获取任务实例统计指标
  * @method void setTaskInstanceMetrics(TaskInstanceView $TaskInstanceMetrics) 设置任务实例统计指标
+ * @method string getStateReason() 获取作业失败原因
+ * @method void setStateReason(string $StateReason) 设置作业失败原因
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -108,6 +110,11 @@ class DescribeJobResponse extends AbstractModel
     public $TaskInstanceMetrics;
 
     /**
+     * @var string 作业失败原因
+     */
+    public $StateReason;
+
+    /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
@@ -123,6 +130,7 @@ class DescribeJobResponse extends AbstractModel
      * @param array $DependenceSet 任务间依赖信息
      * @param TaskMetrics $TaskMetrics 任务统计指标
      * @param TaskInstanceView $TaskInstanceMetrics 任务实例统计指标
+     * @param string $StateReason 作业失败原因
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -191,6 +199,10 @@ class DescribeJobResponse extends AbstractModel
         if (array_key_exists("TaskInstanceMetrics",$param) and $param["TaskInstanceMetrics"] !== null) {
             $this->TaskInstanceMetrics = new TaskInstanceView();
             $this->TaskInstanceMetrics->deserialize($param["TaskInstanceMetrics"]);
+        }
+
+        if (array_key_exists("StateReason",$param) and $param["StateReason"] !== null) {
+            $this->StateReason = $param["StateReason"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -35,6 +35,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedAt(string $CreatedAt) 设置CreatedAt。
  * @method string getUpdatedAt() 获取UpdatedAt。
  * @method void setUpdatedAt(string $UpdatedAt) 设置UpdatedAt。
+ * @method integer getId() 获取ID。
+ * @method void setId(integer $Id) 设置ID。
+ * @method integer getAppid() 获取云用户appid
+ * @method void setAppid(integer $Appid) 设置云用户appid
  */
 
 /**
@@ -76,6 +80,16 @@ class SitesVerification extends AbstractModel
      * @var string UpdatedAt。
      */
     public $UpdatedAt;
+
+    /**
+     * @var integer ID。
+     */
+    public $Id;
+
+    /**
+     * @var integer 云用户appid
+     */
+    public $Appid;
     /**
      * @param string $Domain 根域名。
      * @param string $TxtName txt解析域名验证的name。
@@ -84,6 +98,8 @@ class SitesVerification extends AbstractModel
      * @param integer $VerifyStatus 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
      * @param string $CreatedAt CreatedAt。
      * @param string $UpdatedAt UpdatedAt。
+     * @param integer $Id ID。
+     * @param integer $Appid 云用户appid
      */
     function __construct()
     {
@@ -123,6 +139,14 @@ class SitesVerification extends AbstractModel
 
         if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
             $this->UpdatedAt = $param["UpdatedAt"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Appid",$param) and $param["Appid"] !== null) {
+            $this->Appid = $param["Appid"];
         }
     }
 }

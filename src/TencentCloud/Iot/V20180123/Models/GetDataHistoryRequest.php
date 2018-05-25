@@ -23,8 +23,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getProductId() 获取产品Id
  * @method void setProductId(string $ProductId) 设置产品Id
- * @method array getDeviceNames() 获取设备名称列表
- * @method void setDeviceNames(array $DeviceNames) 设置设备名称列表
+ * @method array getDeviceNames() 获取设备名称列表，允许最多一次100台
+ * @method void setDeviceNames(array $DeviceNames) 设置设备名称列表，允许最多一次100台
  * @method string getStartTime() 获取查询开始时间
  * @method void setStartTime(string $StartTime) 设置查询开始时间
  * @method string getEndTime() 获取查询结束时间
@@ -48,7 +48,7 @@ class GetDataHistoryRequest extends AbstractModel
     public $ProductId;
 
     /**
-     * @var array 设备名称列表
+     * @var array 设备名称列表，允许最多一次100台
      */
     public $DeviceNames;
 
@@ -78,7 +78,7 @@ class GetDataHistoryRequest extends AbstractModel
     public $ScrollId;
     /**
      * @param string $ProductId 产品Id
-     * @param array $DeviceNames 设备名称列表
+     * @param array $DeviceNames 设备名称列表，允许最多一次100台
      * @param string $StartTime 查询开始时间
      * @param string $EndTime 查询结束时间
      * @param array $Size 查询数据量

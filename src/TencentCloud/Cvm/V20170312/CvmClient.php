@@ -75,7 +75,7 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 
 * 可以根据实例`ID`来查询实例的状态。
 * 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的实例状态。
-* @method Models\DescribeInternetChargeTypeConfigsResponse DescribeInternetChargeTypeConfigs(Models\DescribeInternetChargeTypeConfigsRequest $req) 查询网络计费的类型
+* @method Models\DescribeInternetChargeTypeConfigsResponse DescribeInternetChargeTypeConfigs(Models\DescribeInternetChargeTypeConfigsRequest $req) 本接口（DescribeInternetChargeTypeConfigs）用于查询网络的计费类型。
 * @method Models\DescribeKeyPairsResponse DescribeKeyPairs(Models\DescribeKeyPairsRequest $req) 本接口 (DescribeKeyPairs) 用于查询密钥对信息。
 
 * 密钥对是通过一种算法生成的一对密钥，在生成的密钥对中，一个向外界公开，称为公钥；另一个用户自己保留，称为私钥。密钥对的公钥内容可以通过这个接口查询，但私钥内容系统不保留。
@@ -146,7 +146,6 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 * 修改密钥对ID所指定的密钥对的名称和描述信息。
 * 密钥对名称不能和已经存在的密钥对的名称重复。
 * 密钥对ID是密钥对的唯一标识，不可修改。
-* @method Models\QueryMigrateTaskResponse QueryMigrateTask(Models\QueryMigrateTaskRequest $req) 查询迁移任务进度。
 * @method Models\RebootInstancesResponse RebootInstances(Models\RebootInstancesRequest $req) 本接口 (RebootInstances) 用于重启实例。
 
 * 只有状态为`RUNNING`的实例才可以进行此操作。

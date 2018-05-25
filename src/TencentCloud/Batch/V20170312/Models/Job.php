@@ -35,6 +35,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotifications(array $Notifications) 设置通知信息
  * @method string getTaskExecutionDependOn() 获取对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
  * @method void setTaskExecutionDependOn(string $TaskExecutionDependOn) 设置对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
+ * @method string getStateIfCreateCvmFailed() 获取表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
+ * @method void setStateIfCreateCvmFailed(string $StateIfCreateCvmFailed) 设置表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
  */
 
 /**
@@ -76,6 +78,11 @@ class Job extends AbstractModel
      * @var string 对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
      */
     public $TaskExecutionDependOn;
+
+    /**
+     * @var string 表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
+     */
+    public $StateIfCreateCvmFailed;
     /**
      * @param string $JobName 作业名称
      * @param string $JobDescription 作业描述
@@ -84,6 +91,7 @@ class Job extends AbstractModel
      * @param array $Dependences 依赖信息
      * @param array $Notifications 通知信息
      * @param string $TaskExecutionDependOn 对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
+     * @param string $StateIfCreateCvmFailed 表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
      */
     function __construct()
     {
@@ -138,6 +146,10 @@ class Job extends AbstractModel
 
         if (array_key_exists("TaskExecutionDependOn",$param) and $param["TaskExecutionDependOn"] !== null) {
             $this->TaskExecutionDependOn = $param["TaskExecutionDependOn"];
+        }
+
+        if (array_key_exists("StateIfCreateCvmFailed",$param) and $param["StateIfCreateCvmFailed"] !== null) {
+            $this->StateIfCreateCvmFailed = $param["StateIfCreateCvmFailed"];
         }
     }
 }

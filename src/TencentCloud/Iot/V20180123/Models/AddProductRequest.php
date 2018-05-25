@@ -21,14 +21,16 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取产品名称
- * @method void setName(string $Name) 设置产品名称
+ * @method string getName() 获取产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
+ * @method void setName(string $Name) 设置产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
  * @method string getDescription() 获取产品描述
  * @method void setDescription(string $Description) 设置产品描述
- * @method integer getAuthType() 获取产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
- * @method void setAuthType(integer $AuthType) 设置产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
+ * @method integer getAuthType() 获取鉴权模式（1：动态令牌，推荐使用动态令牌）
+ * @method void setAuthType(integer $AuthType) 设置鉴权模式（1：动态令牌，推荐使用动态令牌）
  * @method array getDataTemplate() 获取数据模版（json数组）
  * @method void setDataTemplate(array $DataTemplate) 设置数据模版（json数组）
+ * @method string getDataProtocol() 获取数据协议（native表示自定义，template表示数据模板，默认值为template）
+ * @method void setDataProtocol(string $DataProtocol) 设置数据协议（native表示自定义，template表示数据模板，默认值为template）
  */
 
 /**
@@ -37,7 +39,7 @@ use TencentCloud\Common\AbstractModel;
 class AddProductRequest extends AbstractModel
 {
     /**
-     * @var string 产品名称
+     * @var string 产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
      */
     public $Name;
 
@@ -47,7 +49,7 @@ class AddProductRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer 产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
+     * @var integer 鉴权模式（1：动态令牌，推荐使用动态令牌）
      */
     public $AuthType;
 
@@ -55,11 +57,17 @@ class AddProductRequest extends AbstractModel
      * @var array 数据模版（json数组）
      */
     public $DataTemplate;
+
     /**
-     * @param string $Name 产品名称
+     * @var string 数据协议（native表示自定义，template表示数据模板，默认值为template）
+     */
+    public $DataProtocol;
+    /**
+     * @param string $Name 产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
      * @param string $Description 产品描述
-     * @param integer $AuthType 产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
+     * @param integer $AuthType 鉴权模式（1：动态令牌，推荐使用动态令牌）
      * @param array $DataTemplate 数据模版（json数组）
+     * @param string $DataProtocol 数据协议（native表示自定义，template表示数据模板，默认值为template）
      */
     function __construct()
     {
@@ -87,6 +95,10 @@ class AddProductRequest extends AbstractModel
 
         if (array_key_exists("DataTemplate",$param) and $param["DataTemplate"] !== null) {
             $this->DataTemplate = $param["DataTemplate"];
+        }
+
+        if (array_key_exists("DataProtocol",$param) and $param["DataProtocol"] !== null) {
+            $this->DataProtocol = $param["DataProtocol"];
         }
     }
 }

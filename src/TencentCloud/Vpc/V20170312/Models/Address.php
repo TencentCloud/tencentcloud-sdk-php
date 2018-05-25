@@ -25,8 +25,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddressId(string $AddressId) 设置`EIP`的`ID`，是`EIP`的唯一标识。
  * @method string getAddressName() 获取`EIP`名称。
  * @method void setAddressName(string $AddressName) 设置`EIP`名称。
- * @method string getAddressState() 获取`EIP`状态。
- * @method void setAddressState(string $AddressState) 设置`EIP`状态。
+ * @method string getAddressStatus() 获取`EIP`状态。
+ * @method void setAddressStatus(string $AddressStatus) 设置`EIP`状态。
  * @method string getAddressIp() 获取弹性外网IP
  * @method void setAddressIp(string $AddressIp) 设置弹性外网IP
  * @method string getBindedResourceId() 获取绑定的资源实例`ID`。可能是一个`CVM`，`NAT`，或是弹性网卡。
@@ -53,7 +53,7 @@ class Address extends AbstractModel
     /**
      * @var string `EIP`状态。
      */
-    public $AddressState;
+    public $AddressStatus;
 
     /**
      * @var string 弹性外网IP
@@ -72,7 +72,7 @@ class Address extends AbstractModel
     /**
      * @param string $AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      * @param string $AddressName `EIP`名称。
-     * @param string $AddressState `EIP`状态。
+     * @param string $AddressStatus `EIP`状态。
      * @param string $AddressIp 弹性外网IP
      * @param string $BindedResourceId 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`，或是弹性网卡。
      * @param string $CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
@@ -97,8 +97,8 @@ class Address extends AbstractModel
             $this->AddressName = $param["AddressName"];
         }
 
-        if (array_key_exists("AddressState",$param) and $param["AddressState"] !== null) {
-            $this->AddressState = $param["AddressState"];
+        if (array_key_exists("AddressStatus",$param) and $param["AddressStatus"] !== null) {
+            $this->AddressStatus = $param["AddressStatus"];
         }
 
         if (array_key_exists("AddressIp",$param) and $param["AddressIp"] !== null) {

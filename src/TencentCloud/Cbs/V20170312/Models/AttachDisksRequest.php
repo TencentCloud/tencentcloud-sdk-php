@@ -23,8 +23,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getDiskIds() 获取将要被挂载的弹性云盘ID。通过[DescribeDisks](/document/product/362/16315)接口查询。单次最多可挂载10块弹性云盘。
  * @method void setDiskIds(array $DiskIds) 设置将要被挂载的弹性云盘ID。通过[DescribeDisks](/document/product/362/16315)接口查询。单次最多可挂载10块弹性云盘。
- * @method string getInstanceId() 获取云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/api/213/9388)接口查询。
- * @method void setInstanceId(string $InstanceId) 设置云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/api/213/9388)接口查询。
+ * @method string getInstanceId() 获取云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/product/213/15728)接口查询。
+ * @method void setInstanceId(string $InstanceId) 设置云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/product/213/15728)接口查询。
  */
 
 /**
@@ -38,12 +38,12 @@ class AttachDisksRequest extends AbstractModel
     public $DiskIds;
 
     /**
-     * @var string 云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/api/213/9388)接口查询。
+     * @var string 云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/product/213/15728)接口查询。
      */
     public $InstanceId;
     /**
      * @param array $DiskIds 将要被挂载的弹性云盘ID。通过[DescribeDisks](/document/product/362/16315)接口查询。单次最多可挂载10块弹性云盘。
-     * @param string $InstanceId 云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/api/213/9388)接口查询。
+     * @param string $InstanceId 云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/product/213/15728)接口查询。
      */
     function __construct()
     {

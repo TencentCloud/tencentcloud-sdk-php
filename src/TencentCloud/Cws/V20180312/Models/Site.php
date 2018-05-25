@@ -67,6 +67,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastScanNoticeNum(integer $LastScanNoticeNum) 设置最近一次扫描提示总数量
  * @method integer getProgress() 获取扫描进度，百分比整数
  * @method void setProgress(integer $Progress) 设置扫描进度，百分比整数
+ * @method string getLastScanExtsCount() 获取最近一次扫描各个类型风险漏洞数量，存储的是json对象
+ * @method void setLastScanExtsCount(string $LastScanExtsCount) 设置最近一次扫描各个类型风险漏洞数量，存储的是json对象
+ * @method integer getAppid() 获取云用户appid。
+ * @method void setAppid(integer $Appid) 设置云用户appid。
+ * @method string getUin() 获取云用户标识。
+ * @method void setUin(string $Uin) 设置云用户标识。
  */
 
 /**
@@ -188,6 +194,21 @@ class Site extends AbstractModel
      * @var integer 扫描进度，百分比整数
      */
     public $Progress;
+
+    /**
+     * @var string 最近一次扫描各个类型风险漏洞数量，存储的是json对象
+     */
+    public $LastScanExtsCount;
+
+    /**
+     * @var integer 云用户appid。
+     */
+    public $Appid;
+
+    /**
+     * @var string 云用户标识。
+     */
+    public $Uin;
     /**
      * @param integer $Id 站点ID。
      * @param integer $MonitorId 监控任务ID，为0时表示未加入监控任务。
@@ -212,6 +233,9 @@ class Site extends AbstractModel
      * @param integer $LastScanVulsNum 最近一次扫描漏洞总数量。
      * @param integer $LastScanNoticeNum 最近一次扫描提示总数量
      * @param integer $Progress 扫描进度，百分比整数
+     * @param string $LastScanExtsCount 最近一次扫描各个类型风险漏洞数量，存储的是json对象
+     * @param integer $Appid 云用户appid。
+     * @param string $Uin 云用户标识。
      */
     function __construct()
     {
@@ -315,6 +339,18 @@ class Site extends AbstractModel
 
         if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
             $this->Progress = $param["Progress"];
+        }
+
+        if (array_key_exists("LastScanExtsCount",$param) and $param["LastScanExtsCount"] !== null) {
+            $this->LastScanExtsCount = $param["LastScanExtsCount"];
+        }
+
+        if (array_key_exists("Appid",$param) and $param["Appid"] !== null) {
+            $this->Appid = $param["Appid"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
         }
     }
 }

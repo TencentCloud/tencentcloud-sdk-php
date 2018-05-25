@@ -41,6 +41,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgentRunningMode(AgentRunningMode $AgentRunningMode) 设置agent运行模式，适用于Windows系统
  * @method Notification getNotifications() 获取通知信息
  * @method void setNotifications(Notification $Notifications) 设置通知信息
+ * @method string getActionIfComputeNodeInactive() 获取非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
+ * @method void setActionIfComputeNodeInactive(string $ActionIfComputeNodeInactive) 设置非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
  */
 
 /**
@@ -97,6 +99,11 @@ class NamedComputeEnv extends AbstractModel
      * @var Notification 通知信息
      */
     public $Notifications;
+
+    /**
+     * @var string 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
+     */
+    public $ActionIfComputeNodeInactive;
     /**
      * @param string $EnvName 计算环境名称
      * @param string $EnvDescription 计算环境描述
@@ -108,6 +115,7 @@ class NamedComputeEnv extends AbstractModel
      * @param array $InputMappings 输入映射信息
      * @param AgentRunningMode $AgentRunningMode agent运行模式，适用于Windows系统
      * @param Notification $Notifications 通知信息
+     * @param string $ActionIfComputeNodeInactive 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
      */
     function __construct()
     {
@@ -177,6 +185,10 @@ class NamedComputeEnv extends AbstractModel
         if (array_key_exists("Notifications",$param) and $param["Notifications"] !== null) {
             $this->Notifications = new Notification();
             $this->Notifications->deserialize($param["Notifications"]);
+        }
+
+        if (array_key_exists("ActionIfComputeNodeInactive",$param) and $param["ActionIfComputeNodeInactive"] !== null) {
+            $this->ActionIfComputeNodeInactive = $param["ActionIfComputeNodeInactive"];
         }
     }
 }

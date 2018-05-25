@@ -17,32 +17,32 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Aai\V20180522\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getTaskId() 获取任务ID，可以用于查询任务状态
- * @method void setTaskId(array $TaskId) 设置任务ID，可以用于查询任务状态
+ * @method string getResult() 获取识别结果。
+ * @method void setResult(string $Result) 设置识别结果。
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
- *ImportSnapshot返回参数结构体
+ *SentenceRecognition返回参数结构体
  */
-class ImportSnapshotResponse extends AbstractModel
+class SentenceRecognitionResponse extends AbstractModel
 {
     /**
-     * @var array 任务ID，可以用于查询任务状态
+     * @var string 识别结果。
      */
-    public $TaskId;
+    public $Result;
 
     /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
-     * @param array $TaskId 任务ID，可以用于查询任务状态
+     * @param string $Result 识别结果。
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -57,8 +57,8 @@ class ImportSnapshotResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

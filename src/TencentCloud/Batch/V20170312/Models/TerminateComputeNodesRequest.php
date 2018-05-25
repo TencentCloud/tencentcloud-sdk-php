@@ -17,25 +17,33 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getEnvId() 获取计算环境ID
+ * @method void setEnvId(string $EnvId) 设置计算环境ID
+ * @method array getComputeNodeIds() 获取计算节点ID列表
+ * @method void setComputeNodeIds(array $ComputeNodeIds) 设置计算节点ID列表
  */
 
 /**
- *ColdMigrateInstance返回参数结构体
+ *TerminateComputeNodes请求参数结构体
  */
-class ColdMigrateInstanceResponse extends AbstractModel
+class TerminateComputeNodesRequest extends AbstractModel
 {
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 计算环境ID
      */
-    public $RequestId;
+    public $EnvId;
+
     /**
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var array 计算节点ID列表
+     */
+    public $ComputeNodeIds;
+    /**
+     * @param string $EnvId 计算环境ID
+     * @param array $ComputeNodeIds 计算节点ID列表
      */
     function __construct()
     {
@@ -49,8 +57,12 @@ class ColdMigrateInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
+            $this->EnvId = $param["EnvId"];
+        }
+
+        if (array_key_exists("ComputeNodeIds",$param) and $param["ComputeNodeIds"] !== null) {
+            $this->ComputeNodeIds = $param["ComputeNodeIds"];
         }
     }
 }

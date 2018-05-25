@@ -27,8 +27,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCidrBlock(string $CidrBlock) 设置vpc的cidr，只能为10.0.0.0/16，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
  * @method string getEnableMulticast() 获取是否开启组播。true: 开启, false: 不开启。
  * @method void setEnableMulticast(string $EnableMulticast) 设置是否开启组播。true: 开启, false: 不开启。
- * @method array getDnsServers() 获取DNS地址，最多支持4个，第1个默认为主，其余为备
- * @method void setDnsServers(array $DnsServers) 设置DNS地址，最多支持4个，第1个默认为主，其余为备
+ * @method array getDnsServers() 获取DNS地址，最多支持4个
+ * @method void setDnsServers(array $DnsServers) 设置DNS地址，最多支持4个
  * @method string getDomainName() 获取域名
  * @method void setDomainName(string $DomainName) 设置域名
  */
@@ -54,7 +54,7 @@ class CreateVpcRequest extends AbstractModel
     public $EnableMulticast;
 
     /**
-     * @var array DNS地址，最多支持4个，第1个默认为主，其余为备
+     * @var array DNS地址，最多支持4个
      */
     public $DnsServers;
 
@@ -66,7 +66,7 @@ class CreateVpcRequest extends AbstractModel
      * @param string $VpcName vpc名称，最大长度不能超过60个字节。
      * @param string $CidrBlock vpc的cidr，只能为10.0.0.0/16，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
      * @param string $EnableMulticast 是否开启组播。true: 开启, false: 不开启。
-     * @param array $DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备
+     * @param array $DnsServers DNS地址，最多支持4个
      * @param string $DomainName 域名
      */
     function __construct()

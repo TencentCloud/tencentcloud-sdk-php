@@ -45,6 +45,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncrypt(boolean $Encrypt) 设置是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
  * @method boolean getIsPermanent() 获取是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
  * @method void setIsPermanent(boolean $IsPermanent) 设置是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
+ * @method array getCopyingToRegions() 获取快照正在跨地域复制的目的地域，默认取值为[]。
+ * @method void setCopyingToRegions(array $CopyingToRegions) 设置快照正在跨地域复制的目的地域，默认取值为[]。
+ * @method boolean getCopyFromRemote() 获取是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
+ * @method void setCopyFromRemote(boolean $CopyFromRemote) 设置是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
  */
 
 /**
@@ -111,6 +115,16 @@ class Snapshot extends AbstractModel
      * @var boolean 是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
      */
     public $IsPermanent;
+
+    /**
+     * @var array 快照正在跨地域复制的目的地域，默认取值为[]。
+     */
+    public $CopyingToRegions;
+
+    /**
+     * @var boolean 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
+     */
+    public $CopyFromRemote;
     /**
      * @param string $SnapshotId 快照ID。
      * @param Placement $Placement 快照所在的位置。
@@ -124,6 +138,8 @@ class Snapshot extends AbstractModel
      * @param string $DeadlineTime 快照到期时间。如果快照为永久保留，此字段为空。
      * @param boolean $Encrypt 是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
      * @param boolean $IsPermanent 是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
+     * @param array $CopyingToRegions 快照正在跨地域复制的目的地域，默认取值为[]。
+     * @param boolean $CopyFromRemote 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
      */
     function __construct()
     {
@@ -184,6 +200,14 @@ class Snapshot extends AbstractModel
 
         if (array_key_exists("IsPermanent",$param) and $param["IsPermanent"] !== null) {
             $this->IsPermanent = $param["IsPermanent"];
+        }
+
+        if (array_key_exists("CopyingToRegions",$param) and $param["CopyingToRegions"] !== null) {
+            $this->CopyingToRegions = $param["CopyingToRegions"];
+        }
+
+        if (array_key_exists("CopyFromRemote",$param) and $param["CopyFromRemote"] !== null) {
+            $this->CopyFromRemote = $param["CopyFromRemote"];
         }
     }
 }

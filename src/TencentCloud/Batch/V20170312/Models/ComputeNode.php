@@ -37,6 +37,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskInstanceNumAvailable(integer $TaskInstanceNumAvailable) 设置计算节点运行  TaskInstance 可用容量。0表示计算节点忙碌。
  * @method string getAgentVersion() 获取Batch Agent 版本
  * @method void setAgentVersion(string $AgentVersion) 设置Batch Agent 版本
+ * @method array getPrivateIpAddresses() 获取实例内网IP
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置实例内网IP
+ * @method array getPublicIpAddresses() 获取实例公网IP
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置实例公网IP
  */
 
 /**
@@ -83,6 +87,16 @@ class ComputeNode extends AbstractModel
      * @var string Batch Agent 版本
      */
     public $AgentVersion;
+
+    /**
+     * @var array 实例内网IP
+     */
+    public $PrivateIpAddresses;
+
+    /**
+     * @var array 实例公网IP
+     */
+    public $PublicIpAddresses;
     /**
      * @param string $ComputeNodeId 计算节点ID
      * @param string $ComputeNodeInstanceId 计算节点实例ID，对于CVM场景，即为CVM的InstanceId
@@ -92,6 +106,8 @@ class ComputeNode extends AbstractModel
      * @param string $ResourceCreatedTime 资源创建完成时间
      * @param integer $TaskInstanceNumAvailable 计算节点运行  TaskInstance 可用容量。0表示计算节点忙碌。
      * @param string $AgentVersion Batch Agent 版本
+     * @param array $PrivateIpAddresses 实例内网IP
+     * @param array $PublicIpAddresses 实例公网IP
      */
     function __construct()
     {
@@ -135,6 +151,14 @@ class ComputeNode extends AbstractModel
 
         if (array_key_exists("AgentVersion",$param) and $param["AgentVersion"] !== null) {
             $this->AgentVersion = $param["AgentVersion"];
+        }
+
+        if (array_key_exists("PrivateIpAddresses",$param) and $param["PrivateIpAddresses"] !== null) {
+            $this->PrivateIpAddresses = $param["PrivateIpAddresses"];
+        }
+
+        if (array_key_exists("PublicIpAddresses",$param) and $param["PublicIpAddresses"] !== null) {
+            $this->PublicIpAddresses = $param["PublicIpAddresses"];
         }
     }
 }

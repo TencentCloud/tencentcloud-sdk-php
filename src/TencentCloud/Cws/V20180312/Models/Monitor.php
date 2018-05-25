@@ -21,8 +21,8 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getID() 获取监控任务ID。
- * @method void setID(integer $ID) 设置监控任务ID。
+ * @method integer getId() 获取监控任务ID。
+ * @method void setId(integer $Id) 设置监控任务ID。
  * @method string getName() 获取监控名称。
  * @method void setName(string $Name) 设置监控名称。
  * @method integer getMonitorStatus() 获取监测状态：1-监测中；2-暂停监测。
@@ -47,6 +47,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedAt(string $CreatedAt) 设置CreatedAt。
  * @method string getUpdatedAt() 获取UpdatedAt。
  * @method void setUpdatedAt(string $UpdatedAt) 设置UpdatedAt。
+ * @method integer getAppid() 获取云用户appid。
+ * @method void setAppid(integer $Appid) 设置云用户appid。
  */
 
 /**
@@ -57,7 +59,7 @@ class Monitor extends AbstractModel
     /**
      * @var integer 监控任务ID。
      */
-    public $ID;
+    public $Id;
 
     /**
      * @var string 监控名称。
@@ -118,8 +120,13 @@ class Monitor extends AbstractModel
      * @var string UpdatedAt。
      */
     public $UpdatedAt;
+
     /**
-     * @param integer $ID 监控任务ID。
+     * @var integer 云用户appid。
+     */
+    public $Appid;
+    /**
+     * @param integer $Id 监控任务ID。
      * @param string $Name 监控名称。
      * @param integer $MonitorStatus 监测状态：1-监测中；2-暂停监测。
      * @param string $ScannerType 监测模式，normal-正常扫描；deep-深度扫描。
@@ -132,6 +139,7 @@ class Monitor extends AbstractModel
      * @param string $CurrentScanStartTime 当前扫描开始时间，如扫描完成则为上一次扫描的开始时间。
      * @param string $CreatedAt CreatedAt。
      * @param string $UpdatedAt UpdatedAt。
+     * @param integer $Appid 云用户appid。
      */
     function __construct()
     {
@@ -145,8 +153,8 @@ class Monitor extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
-            $this->ID = $param["ID"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
@@ -195,6 +203,10 @@ class Monitor extends AbstractModel
 
         if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
             $this->UpdatedAt = $param["UpdatedAt"];
+        }
+
+        if (array_key_exists("Appid",$param) and $param["Appid"] !== null) {
+            $this->Appid = $param["Appid"];
         }
     }
 }

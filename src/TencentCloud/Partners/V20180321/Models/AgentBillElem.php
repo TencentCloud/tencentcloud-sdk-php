@@ -39,6 +39,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSettleMonth(string $SettleMonth) 设置支付月份
  * @method integer getAmt() 获取支付金额，单位分
  * @method void setAmt(integer $Amt) 设置支付金额，单位分
+ * @method string getPayerMode() 获取agentpay：代付；selfpay：自付
+ * @method void setPayerMode(string $PayerMode) 设置agentpay：代付；selfpay：自付
  */
 
 /**
@@ -90,6 +92,11 @@ class AgentBillElem extends AbstractModel
      * @var integer 支付金额，单位分
      */
     public $Amt;
+
+    /**
+     * @var string agentpay：代付；selfpay：自付
+     */
+    public $PayerMode;
     /**
      * @param string $Uin 代理商账号ID
      * @param string $OrderId 订单号，仅对预付费账单有意义
@@ -100,6 +107,7 @@ class AgentBillElem extends AbstractModel
      * @param string $PayMode 预付费/后付费
      * @param string $SettleMonth 支付月份
      * @param integer $Amt 支付金额，单位分
+     * @param string $PayerMode agentpay：代付；selfpay：自付
      */
     function __construct()
     {
@@ -147,6 +155,10 @@ class AgentBillElem extends AbstractModel
 
         if (array_key_exists("Amt",$param) and $param["Amt"] !== null) {
             $this->Amt = $param["Amt"];
+        }
+
+        if (array_key_exists("PayerMode",$param) and $param["PayerMode"] !== null) {
+            $this->PayerMode = $param["PayerMode"];
         }
     }
 }

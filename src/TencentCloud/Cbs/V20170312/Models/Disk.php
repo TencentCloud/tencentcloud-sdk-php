@@ -67,6 +67,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReturnFailCode(integer $ReturnFailCode) 设置预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
  * @method array getAutoSnapshotPolicyIds() 获取云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
  * @method void setAutoSnapshotPolicyIds(array $AutoSnapshotPolicyIds) 设置云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+ * @method array getTags() 获取与云盘绑定的标签，云盘未绑定标签则取值为空。
+ * @method void setTags(array $Tags) 设置与云盘绑定的标签，云盘未绑定标签则取值为空。
  */
 
 /**
@@ -188,6 +190,11 @@ class Disk extends AbstractModel
      * @var array 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
      */
     public $AutoSnapshotPolicyIds;
+
+    /**
+     * @var array 与云盘绑定的标签，云盘未绑定标签则取值为空。
+     */
+    public $Tags;
     /**
      * @param string $DiskId 云硬盘ID。
      * @param string $DiskUsage 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
@@ -212,6 +219,7 @@ class Disk extends AbstractModel
      * @param boolean $IsReturnable 判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还<br><li>false:不支持主动退还。
      * @param integer $ReturnFailCode 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
      * @param array $AutoSnapshotPolicyIds 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+     * @param array $Tags 与云盘绑定的标签，云盘未绑定标签则取值为空。
      */
     function __construct()
     {
@@ -316,6 +324,15 @@ class Disk extends AbstractModel
 
         if (array_key_exists("AutoSnapshotPolicyIds",$param) and $param["AutoSnapshotPolicyIds"] !== null) {
             $this->AutoSnapshotPolicyIds = $param["AutoSnapshotPolicyIds"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

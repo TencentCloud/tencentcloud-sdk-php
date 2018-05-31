@@ -39,6 +39,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-l2h8d7c2。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method integer getAvailableIpAddressCount() 获取可用IP数。
+ * @method void setAvailableIpAddressCount(integer $AvailableIpAddressCount) 设置可用IP数。
  */
 
 /**
@@ -90,6 +92,11 @@ class Subnet extends AbstractModel
      * @var string 创建时间。
      */
     public $CreatedTime;
+
+    /**
+     * @var integer 可用IP数。
+     */
+    public $AvailableIpAddressCount;
     /**
      * @param string $VpcId VPC实例ID。
      * @param string $SubnetId 子网实例ID，例如：subnet-bthucmmy。
@@ -100,6 +107,7 @@ class Subnet extends AbstractModel
      * @param string $Zone 可用区。
      * @param string $RouteTableId 路由表实例ID，例如：rtb-l2h8d7c2。
      * @param string $CreatedTime 创建时间。
+     * @param integer $AvailableIpAddressCount 可用IP数。
      */
     function __construct()
     {
@@ -147,6 +155,10 @@ class Subnet extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("AvailableIpAddressCount",$param) and $param["AvailableIpAddressCount"] !== null) {
+            $this->AvailableIpAddressCount = $param["AvailableIpAddressCount"];
         }
     }
 }

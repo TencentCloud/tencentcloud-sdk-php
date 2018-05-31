@@ -21,12 +21,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取云数据库实例ID
- * @method void setInstanceId(string $instanceId) 设置云数据库实例ID
- * @method string getUser() 获取数据库的账号名称
- * @method void setUser(string $user) 设置数据库的账号名称
- * @method string getHost() 获取数据库的账号域名
- * @method void setHost(string $host) 设置数据库的账号域名
+ * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method string getUser() 获取数据库的账号名称。
+ * @method void setUser(string $User) 设置数据库的账号名称。
+ * @method string getHost() 获取数据库的账号域名。
+ * @method void setHost(string $Host) 设置数据库的账号域名。
  */
 
 /**
@@ -35,23 +35,23 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccountPrivilegesRequest extends AbstractModel
 {
     /**
-     * @var string 云数据库实例ID
+     * @var string 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
      */
-    public $instanceId;
+    public $InstanceId;
 
     /**
-     * @var string 数据库的账号名称
+     * @var string 数据库的账号名称。
      */
-    public $user;
+    public $User;
 
     /**
-     * @var string 数据库的账号域名
+     * @var string 数据库的账号域名。
      */
-    public $host;
+    public $Host;
     /**
-     * @param string $instanceId 云数据库实例ID
-     * @param string $user 数据库的账号名称
-     * @param string $host 数据库的账号域名
+     * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @param string $User 数据库的账号名称。
+     * @param string $Host 数据库的账号域名。
      */
     function __construct()
     {
@@ -66,15 +66,15 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
             return;
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->instanceId = $param["InstanceId"];
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("User",$param) and $param["User"] !== null) {
-            $this->user = $param["User"];
+            $this->User = $param["User"];
         }
 
         if (array_key_exists("Host",$param) and $param["Host"] !== null) {
-            $this->host = $param["Host"];
+            $this->Host = $param["Host"];
         }
     }
 }

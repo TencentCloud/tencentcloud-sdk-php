@@ -21,10 +21,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTimerAction() 获取定时器
- * @method void setTimerAction(string $TimerAction) 设置定时器
- * @method string getActionTime() 获取执行时间
- * @method void setActionTime(string $ActionTime) 设置执行时间
+ * @method string getTimerAction() 获取定时器名称，目前仅支持销毁一个值：TerminateInstances。
+ * @method void setTimerAction(string $TimerAction) 设置定时器名称，目前仅支持销毁一个值：TerminateInstances。
+ * @method string getActionTime() 获取执行时间，格式形如：2018/5/29 11:26:40,执行时间必须大于当前时间5分钟。
+ * @method void setActionTime(string $ActionTime) 设置执行时间，格式形如：2018/5/29 11:26:40,执行时间必须大于当前时间5分钟。
  * @method Externals getExternals() 获取扩展数据
  * @method void setExternals(Externals $Externals) 设置扩展数据
  */
@@ -35,12 +35,12 @@ use TencentCloud\Common\AbstractModel;
 class ActionTimer extends AbstractModel
 {
     /**
-     * @var string 定时器
+     * @var string 定时器名称，目前仅支持销毁一个值：TerminateInstances。
      */
     public $TimerAction;
 
     /**
-     * @var string 执行时间
+     * @var string 执行时间，格式形如：2018/5/29 11:26:40,执行时间必须大于当前时间5分钟。
      */
     public $ActionTime;
 
@@ -49,8 +49,8 @@ class ActionTimer extends AbstractModel
      */
     public $Externals;
     /**
-     * @param string $TimerAction 定时器
-     * @param string $ActionTime 执行时间
+     * @param string $TimerAction 定时器名称，目前仅支持销毁一个值：TerminateInstances。
+     * @param string $ActionTime 执行时间，格式形如：2018/5/29 11:26:40,执行时间必须大于当前时间5分钟。
      * @param Externals $Externals 扩展数据
      */
     function __construct()

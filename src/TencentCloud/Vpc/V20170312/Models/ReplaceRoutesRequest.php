@@ -62,7 +62,12 @@ class ReplaceRoutesRequest extends AbstractModel
         }
 
         if (array_key_exists("Routes",$param) and $param["Routes"] !== null) {
-            $this->Routes = $param["Routes"];
+            $this->Routes = [];
+            foreach ($param["Routes"] as $key => $value){
+                $obj = new Route();
+                $obj->deserialize($value);
+                array_push($this->Routes, $obj);
+            }
         }
     }
 }

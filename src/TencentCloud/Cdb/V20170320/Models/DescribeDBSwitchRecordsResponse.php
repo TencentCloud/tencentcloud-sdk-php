@@ -21,8 +21,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method integer getTotalCount() 获取实例切换记录的总数。
+ * @method void setTotalCount(integer $TotalCount) 设置实例切换记录的总数。
+ * @method array getItems() 获取实例切换记录详情。
+ * @method void setItems(array $Items) 设置实例切换记录详情。
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $requestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
@@ -31,11 +35,23 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBSwitchRecordsResponse extends AbstractModel
 {
     /**
+     * @var integer 实例切换记录的总数。
+     */
+    public $TotalCount;
+
+    /**
+     * @var array 实例切换记录详情。
+     */
+    public $Items;
+
+    /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
-    public $requestId;
+    public $RequestId;
     /**
-     * @param string $requestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param integer $TotalCount 实例切换记录的总数。
+     * @param array $Items 实例切换记录详情。
+     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
     {
@@ -49,8 +65,21 @@ class DescribeDBSwitchRecordsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new DBSwitchInfo();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->requestId = $param["RequestId"];
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

@@ -21,18 +21,18 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取云数据库实例ID
- * @method void setInstanceId(string $instanceId) 设置云数据库实例ID
- * @method array getAccounts() 获取数据库的账号，包括用户名和域名
- * @method void setAccounts(array $accounts) 设置数据库的账号，包括用户名和域名
- * @method array getGlobalPrivileges() 获取全局权限
- * @method void setGlobalPrivileges(array $globalPrivileges) 设置全局权限
- * @method array getDatabasePrivileges() 获取数据库的权限
- * @method void setDatabasePrivileges(array $databasePrivileges) 设置数据库的权限
- * @method array getTablePrivileges() 获取数据库中表的权限
- * @method void setTablePrivileges(array $tablePrivileges) 设置数据库中表的权限
- * @method array getColumnPrivileges() 获取数据库表中列的权限
- * @method void setColumnPrivileges(array $columnPrivileges) 设置数据库表中列的权限
+ * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method array getAccounts() 获取数据库的账号，包括用户名和域名。
+ * @method void setAccounts(array $Accounts) 设置数据库的账号，包括用户名和域名。
+ * @method array getGlobalPrivileges() 获取全局权限。其中，GlobalPrivileges 中权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","SHOW DATABASES","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
+ * @method void setGlobalPrivileges(array $GlobalPrivileges) 设置全局权限。其中，GlobalPrivileges 中权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","SHOW DATABASES","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
+ * @method array getDatabasePrivileges() 获取数据库的权限。Privileges权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
+ * @method void setDatabasePrivileges(array $DatabasePrivileges) 设置数据库的权限。Privileges权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
+ * @method array getTablePrivileges() 获取数据库中表的权限。Privileges权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+ * @method void setTablePrivileges(array $TablePrivileges) 设置数据库中表的权限。Privileges权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+ * @method array getColumnPrivileges() 获取数据库表中列的权限。Privileges权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
+ * @method void setColumnPrivileges(array $ColumnPrivileges) 设置数据库表中列的权限。Privileges权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
  */
 
 /**
@@ -41,41 +41,41 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAccountPrivilegesRequest extends AbstractModel
 {
     /**
-     * @var string 云数据库实例ID
+     * @var string 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
      */
-    public $instanceId;
+    public $InstanceId;
 
     /**
-     * @var array 数据库的账号，包括用户名和域名
+     * @var array 数据库的账号，包括用户名和域名。
      */
-    public $accounts;
+    public $Accounts;
 
     /**
-     * @var array 全局权限
+     * @var array 全局权限。其中，GlobalPrivileges 中权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","SHOW DATABASES","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
      */
-    public $globalPrivileges;
+    public $GlobalPrivileges;
 
     /**
-     * @var array 数据库的权限
+     * @var array 数据库的权限。Privileges权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
      */
-    public $databasePrivileges;
+    public $DatabasePrivileges;
 
     /**
-     * @var array 数据库中表的权限
+     * @var array 数据库中表的权限。Privileges权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
      */
-    public $tablePrivileges;
+    public $TablePrivileges;
 
     /**
-     * @var array 数据库表中列的权限
+     * @var array 数据库表中列的权限。Privileges权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
      */
-    public $columnPrivileges;
+    public $ColumnPrivileges;
     /**
-     * @param string $instanceId 云数据库实例ID
-     * @param array $accounts 数据库的账号，包括用户名和域名
-     * @param array $globalPrivileges 全局权限
-     * @param array $databasePrivileges 数据库的权限
-     * @param array $tablePrivileges 数据库中表的权限
-     * @param array $columnPrivileges 数据库表中列的权限
+     * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @param array $Accounts 数据库的账号，包括用户名和域名。
+     * @param array $GlobalPrivileges 全局权限。其中，GlobalPrivileges 中权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","SHOW DATABASES","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
+     * @param array $DatabasePrivileges 数据库的权限。Privileges权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
+     * @param array $TablePrivileges 数据库中表的权限。Privileges权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+     * @param array $ColumnPrivileges 数据库表中列的权限。Privileges权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
      */
     function __construct()
     {
@@ -90,27 +90,47 @@ class ModifyAccountPrivilegesRequest extends AbstractModel
             return;
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->instanceId = $param["InstanceId"];
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("Accounts",$param) and $param["Accounts"] !== null) {
-            $this->accounts = $param["Accounts"];
+            $this->Accounts = [];
+            foreach ($param["Accounts"] as $key => $value){
+                $obj = new Account();
+                $obj->deserialize($value);
+                array_push($this->Accounts, $obj);
+            }
         }
 
         if (array_key_exists("GlobalPrivileges",$param) and $param["GlobalPrivileges"] !== null) {
-            $this->globalPrivileges = $param["GlobalPrivileges"];
+            $this->GlobalPrivileges = $param["GlobalPrivileges"];
         }
 
         if (array_key_exists("DatabasePrivileges",$param) and $param["DatabasePrivileges"] !== null) {
-            $this->databasePrivileges = $param["DatabasePrivileges"];
+            $this->DatabasePrivileges = [];
+            foreach ($param["DatabasePrivileges"] as $key => $value){
+                $obj = new DatabasePrivilege();
+                $obj->deserialize($value);
+                array_push($this->DatabasePrivileges, $obj);
+            }
         }
 
         if (array_key_exists("TablePrivileges",$param) and $param["TablePrivileges"] !== null) {
-            $this->tablePrivileges = $param["TablePrivileges"];
+            $this->TablePrivileges = [];
+            foreach ($param["TablePrivileges"] as $key => $value){
+                $obj = new TablePrivilege();
+                $obj->deserialize($value);
+                array_push($this->TablePrivileges, $obj);
+            }
         }
 
         if (array_key_exists("ColumnPrivileges",$param) and $param["ColumnPrivileges"] !== null) {
-            $this->columnPrivileges = $param["ColumnPrivileges"];
+            $this->ColumnPrivileges = [];
+            foreach ($param["ColumnPrivileges"] as $key => $value){
+                $obj = new ColumnPrivilege();
+                $obj->deserialize($value);
+                array_push($this->ColumnPrivileges, $obj);
+            }
         }
     }
 }

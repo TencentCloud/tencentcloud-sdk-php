@@ -23,6 +23,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method boolean getReleaseAddress() 获取释放地址
  * @method void setReleaseAddress(boolean $ReleaseAddress) 设置释放地址
+ * @method array getUnsupportNetworks() 获取不支持的网络类型
+ * @method void setUnsupportNetworks(array $UnsupportNetworks) 设置不支持的网络类型
+ * @method StorageBlock getStorageBlockAttr() 获取HDD本地存储属性
+ * @method void setStorageBlockAttr(StorageBlock $StorageBlockAttr) 设置HDD本地存储属性
  */
 
 /**
@@ -34,8 +38,20 @@ class Externals extends AbstractModel
      * @var boolean 释放地址
      */
     public $ReleaseAddress;
+
+    /**
+     * @var array 不支持的网络类型
+     */
+    public $UnsupportNetworks;
+
+    /**
+     * @var StorageBlock HDD本地存储属性
+     */
+    public $StorageBlockAttr;
     /**
      * @param boolean $ReleaseAddress 释放地址
+     * @param array $UnsupportNetworks 不支持的网络类型
+     * @param StorageBlock $StorageBlockAttr HDD本地存储属性
      */
     function __construct()
     {
@@ -51,6 +67,15 @@ class Externals extends AbstractModel
         }
         if (array_key_exists("ReleaseAddress",$param) and $param["ReleaseAddress"] !== null) {
             $this->ReleaseAddress = $param["ReleaseAddress"];
+        }
+
+        if (array_key_exists("UnsupportNetworks",$param) and $param["UnsupportNetworks"] !== null) {
+            $this->UnsupportNetworks = $param["UnsupportNetworks"];
+        }
+
+        if (array_key_exists("StorageBlockAttr",$param) and $param["StorageBlockAttr"] !== null) {
+            $this->StorageBlockAttr = new StorageBlock();
+            $this->StorageBlockAttr->deserialize($param["StorageBlockAttr"]);
         }
     }
 }

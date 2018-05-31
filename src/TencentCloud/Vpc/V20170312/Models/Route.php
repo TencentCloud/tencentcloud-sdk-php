@@ -21,8 +21,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRouteId() 获取路由策略ID。
- * @method void setRouteId(string $RouteId) 设置路由策略ID。
+ * @method integer getRouteId() 获取路由策略ID。
+ * @method void setRouteId(integer $RouteId) 设置路由策略ID。
  * @method string getDestinationCidrBlock() 获取目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
  * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
  * @method string getGatewayType() 获取下一跳类型，目前我们支持的类型有：CVM：公网网关类型的云主机；VPN：vpn网关； DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；SSLVPN：sslvpn网关；NAT：nat网关; NORMAL_CVM：普通云主机。
@@ -39,7 +39,7 @@ use TencentCloud\Common\AbstractModel;
 class Route extends AbstractModel
 {
     /**
-     * @var string 路由策略ID。
+     * @var integer 路由策略ID。
      */
     public $RouteId;
 
@@ -63,7 +63,7 @@ class Route extends AbstractModel
      */
     public $RouteDescription;
     /**
-     * @param string $RouteId 路由策略ID。
+     * @param integer $RouteId 路由策略ID。
      * @param string $DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      * @param string $GatewayType 下一跳类型，目前我们支持的类型有：CVM：公网网关类型的云主机；VPN：vpn网关； DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；SSLVPN：sslvpn网关；NAT：nat网关; NORMAL_CVM：普通云主机。
      * @param string $GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。

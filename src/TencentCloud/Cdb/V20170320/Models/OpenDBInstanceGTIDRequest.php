@@ -21,8 +21,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取云数据库实例ID
- * @method void setInstanceId(string $instanceId) 设置云数据库实例ID
+ * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
  */
 
 /**
@@ -31,11 +31,11 @@ use TencentCloud\Common\AbstractModel;
 class OpenDBInstanceGTIDRequest extends AbstractModel
 {
     /**
-     * @var string 云数据库实例ID
+     * @var string 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
      */
-    public $instanceId;
+    public $InstanceId;
     /**
-     * @param string $instanceId 云数据库实例ID
+     * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
      */
     function __construct()
     {
@@ -50,7 +50,7 @@ class OpenDBInstanceGTIDRequest extends AbstractModel
             return;
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->instanceId = $param["InstanceId"];
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

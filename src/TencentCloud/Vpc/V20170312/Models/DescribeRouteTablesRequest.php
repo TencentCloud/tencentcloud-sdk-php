@@ -27,12 +27,12 @@ use TencentCloud\Common\AbstractModel;
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>association.main - Boolean - （过滤条件）是否主路由表。</li>
+<li>association.main - String - （过滤条件）是否主路由表。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定RouteTableIds和Filters。
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>association.main - Boolean - （过滤条件）是否主路由表。</li>
+<li>association.main - String - （过滤条件）是否主路由表。</li>
  * @method string getOffset() 获取偏移量。
  * @method void setOffset(string $Offset) 设置偏移量。
  * @method string getLimit() 获取请求对象个数。
@@ -54,7 +54,7 @@ class DescribeRouteTablesRequest extends AbstractModel
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>association.main - Boolean - （过滤条件）是否主路由表。</li>
+<li>association.main - String - （过滤条件）是否主路由表。</li>
      */
     public $Filters;
 
@@ -73,7 +73,7 @@ class DescribeRouteTablesRequest extends AbstractModel
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>association.main - Boolean - （过滤条件）是否主路由表。</li>
+<li>association.main - String - （过滤条件）是否主路由表。</li>
      * @param string $Offset 偏移量。
      * @param string $Limit 请求对象个数。
      */

@@ -21,14 +21,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取云数据库实例ID
- * @method void setInstanceId(string $instanceId) 设置云数据库实例ID
- * @method array getAccounts() 获取云数据库账号
- * @method void setAccounts(array $accounts) 设置云数据库账号
- * @method string getPassword() 获取新账户的密码
- * @method void setPassword(string $password) 设置新账户的密码
- * @method string getDescription() 获取备注信息
- * @method void setDescription(string $description) 设置备注信息
+ * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method array getAccounts() 获取云数据库账号。
+ * @method void setAccounts(array $Accounts) 设置云数据库账号。
+ * @method string getPassword() 获取新账户的密码。
+ * @method void setPassword(string $Password) 设置新账户的密码。
+ * @method string getDescription() 获取备注信息。
+ * @method void setDescription(string $Description) 设置备注信息。
  */
 
 /**
@@ -37,29 +37,29 @@ use TencentCloud\Common\AbstractModel;
 class CreateAccountsRequest extends AbstractModel
 {
     /**
-     * @var string 云数据库实例ID
+     * @var string 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
      */
-    public $instanceId;
+    public $InstanceId;
 
     /**
-     * @var array 云数据库账号
+     * @var array 云数据库账号。
      */
-    public $accounts;
+    public $Accounts;
 
     /**
-     * @var string 新账户的密码
+     * @var string 新账户的密码。
      */
-    public $password;
+    public $Password;
 
     /**
-     * @var string 备注信息
+     * @var string 备注信息。
      */
-    public $description;
+    public $Description;
     /**
-     * @param string $instanceId 云数据库实例ID
-     * @param array $accounts 云数据库账号
-     * @param string $password 新账户的密码
-     * @param string $description 备注信息
+     * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @param array $Accounts 云数据库账号。
+     * @param string $Password 新账户的密码。
+     * @param string $Description 备注信息。
      */
     function __construct()
     {
@@ -74,19 +74,24 @@ class CreateAccountsRequest extends AbstractModel
             return;
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->instanceId = $param["InstanceId"];
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("Accounts",$param) and $param["Accounts"] !== null) {
-            $this->accounts = $param["Accounts"];
+            $this->Accounts = [];
+            foreach ($param["Accounts"] as $key => $value){
+                $obj = new Account();
+                $obj->deserialize($value);
+                array_push($this->Accounts, $obj);
+            }
         }
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->password = $param["Password"];
+            $this->Password = $param["Password"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->description = $param["Description"];
+            $this->Description = $param["Description"];
         }
     }
 }

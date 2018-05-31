@@ -21,10 +21,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取云数据库实例ID
- * @method void setInstanceId(string $instanceId) 设置云数据库实例ID
- * @method string getPassword() 获取实例ROOT账号的密码
- * @method void setPassword(string $password) 设置实例ROOT账号的密码
+ * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method string getPassword() 获取实例ROOT账号的密码。
+ * @method void setPassword(string $Password) 设置实例ROOT账号的密码。
  */
 
 /**
@@ -33,17 +33,17 @@ use TencentCloud\Common\AbstractModel;
 class VerifyRootAccountRequest extends AbstractModel
 {
     /**
-     * @var string 云数据库实例ID
+     * @var string 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
      */
-    public $instanceId;
+    public $InstanceId;
 
     /**
-     * @var string 实例ROOT账号的密码
+     * @var string 实例ROOT账号的密码。
      */
-    public $password;
+    public $Password;
     /**
-     * @param string $instanceId 云数据库实例ID
-     * @param string $password 实例ROOT账号的密码
+     * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @param string $Password 实例ROOT账号的密码。
      */
     function __construct()
     {
@@ -58,11 +58,11 @@ class VerifyRootAccountRequest extends AbstractModel
             return;
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->instanceId = $param["InstanceId"];
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->password = $param["Password"];
+            $this->Password = $param["Password"];
         }
     }
 }

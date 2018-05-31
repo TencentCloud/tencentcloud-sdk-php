@@ -80,6 +80,7 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 
 * 密钥对是通过一种算法生成的一对密钥，在生成的密钥对中，一个向外界公开，称为公钥；另一个用户自己保留，称为私钥。密钥对的公钥内容可以通过这个接口查询，但私钥内容系统不保留。
 * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口(DescribeRegions)用于查询地域信息。
+* @method Models\DescribeZoneInstanceConfigInfosResponse DescribeZoneInstanceConfigInfos(Models\DescribeZoneInstanceConfigInfosRequest $req) 本接口(DescribeZoneInstanceConfigInfos) 获取可用区的机型信息。
 * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 本接口(DescribeZones)用于查询可用区信息。
 * @method Models\DisassociateInstancesKeyPairsResponse DisassociateInstancesKeyPairs(Models\DisassociateInstancesKeyPairsRequest $req) 本接口 (DisassociateInstancesKeyPairs) 用于解除实例的密钥绑定关系。
 

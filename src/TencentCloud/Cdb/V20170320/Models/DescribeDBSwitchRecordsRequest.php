@@ -21,12 +21,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $instanceId) 设置实例ID
- * @method integer getOffset() 获取分页参数，偏移量
- * @method void setOffset(integer $offset) 设置分页参数，偏移量
- * @method integer getLimit() 获取分页参数，单次请求数量限制
- * @method void setLimit(integer $limit) 设置分页参数，单次请求数量限制
+ * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method integer getOffset() 获取分页参数，偏移量。
+ * @method void setOffset(integer $Offset) 设置分页参数，偏移量。
+ * @method integer getLimit() 获取分页参数，单次请求数量限制。
+ * @method void setLimit(integer $Limit) 设置分页参数，单次请求数量限制。
  */
 
 /**
@@ -35,23 +35,23 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBSwitchRecordsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
      */
-    public $instanceId;
+    public $InstanceId;
 
     /**
-     * @var integer 分页参数，偏移量
+     * @var integer 分页参数，偏移量。
      */
-    public $offset;
+    public $Offset;
 
     /**
-     * @var integer 分页参数，单次请求数量限制
+     * @var integer 分页参数，单次请求数量限制。
      */
-    public $limit;
+    public $Limit;
     /**
-     * @param string $instanceId 实例ID
-     * @param integer $offset 分页参数，偏移量
-     * @param integer $limit 分页参数，单次请求数量限制
+     * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @param integer $Offset 分页参数，偏移量。
+     * @param integer $Limit 分页参数，单次请求数量限制。
      */
     function __construct()
     {
@@ -66,15 +66,15 @@ class DescribeDBSwitchRecordsRequest extends AbstractModel
             return;
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->instanceId = $param["InstanceId"];
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->offset = $param["Offset"];
+            $this->Offset = $param["Offset"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->limit = $param["Limit"];
+            $this->Limit = $param["Limit"];
         }
     }
 }

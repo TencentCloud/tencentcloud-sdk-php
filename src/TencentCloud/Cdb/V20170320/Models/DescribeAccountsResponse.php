@@ -21,8 +21,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method integer getTotalCount() 获取符合查询条件的账号数量。
+ * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的账号数量。
+ * @method array getItems() 获取符合查询条件的账号详细信息。
+ * @method void setItems(array $Items) 设置符合查询条件的账号详细信息。
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $requestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
@@ -31,11 +35,23 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccountsResponse extends AbstractModel
 {
     /**
+     * @var integer 符合查询条件的账号数量。
+     */
+    public $TotalCount;
+
+    /**
+     * @var array 符合查询条件的账号详细信息。
+     */
+    public $Items;
+
+    /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
-    public $requestId;
+    public $RequestId;
     /**
-     * @param string $requestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param integer $TotalCount 符合查询条件的账号数量。
+     * @param array $Items 符合查询条件的账号详细信息。
+     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
     {
@@ -49,8 +65,21 @@ class DescribeAccountsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new AccountInfo();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->requestId = $param["RequestId"];
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

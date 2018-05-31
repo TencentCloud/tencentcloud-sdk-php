@@ -21,12 +21,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
- * @method void setInstanceId(string $instanceId) 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
- * @method integer getOffset() 获取偏移量，最小值为0
- * @method void setOffset(integer $offset) 设置偏移量，最小值为0
- * @method integer getLimit() 获取单次请求数量，取值范围：[0-100]
- * @method void setLimit(integer $limit) 设置单次请求数量，取值范围：[0-100]
+ * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method integer getOffset() 获取偏移量，最小值为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，最小值为0。
+ * @method integer getLimit() 获取单次请求数量，取值范围：[0-100]。
+ * @method void setLimit(integer $Limit) 设置单次请求数量，取值范围：[0-100]。
+ * @method string getDatabaseRegexp() 获取匹配数据库库名的正则表达式，规则同MySQL官网
+ * @method void setDatabaseRegexp(string $DatabaseRegexp) 设置匹配数据库库名的正则表达式，规则同MySQL官网
  */
 
 /**
@@ -35,23 +37,29 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDatabasesRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
+     * @var string 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
      */
-    public $instanceId;
+    public $InstanceId;
 
     /**
-     * @var integer 偏移量，最小值为0
+     * @var integer 偏移量，最小值为0。
      */
-    public $offset;
+    public $Offset;
 
     /**
-     * @var integer 单次请求数量，取值范围：[0-100]
+     * @var integer 单次请求数量，取值范围：[0-100]。
      */
-    public $limit;
+    public $Limit;
+
     /**
-     * @param string $instanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
-     * @param integer $offset 偏移量，最小值为0
-     * @param integer $limit 单次请求数量，取值范围：[0-100]
+     * @var string 匹配数据库库名的正则表达式，规则同MySQL官网
+     */
+    public $DatabaseRegexp;
+    /**
+     * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @param integer $Offset 偏移量，最小值为0。
+     * @param integer $Limit 单次请求数量，取值范围：[0-100]。
+     * @param string $DatabaseRegexp 匹配数据库库名的正则表达式，规则同MySQL官网
      */
     function __construct()
     {
@@ -66,15 +74,19 @@ class DescribeDatabasesRequest extends AbstractModel
             return;
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->instanceId = $param["InstanceId"];
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->offset = $param["Offset"];
+            $this->Offset = $param["Offset"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->limit = $param["Limit"];
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("DatabaseRegexp",$param) and $param["DatabaseRegexp"] !== null) {
+            $this->DatabaseRegexp = $param["DatabaseRegexp"];
         }
     }
 }

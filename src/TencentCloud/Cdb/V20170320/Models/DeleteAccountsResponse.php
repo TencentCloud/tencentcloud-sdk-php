@@ -21,8 +21,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method string getAsyncRequestId() 获取异步任务的请求ID，可使用此ID查询异步任务的执行结果。
+ * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务的请求ID，可使用此ID查询异步任务的执行结果。
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $requestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
@@ -31,11 +33,17 @@ use TencentCloud\Common\AbstractModel;
 class DeleteAccountsResponse extends AbstractModel
 {
     /**
+     * @var string 异步任务的请求ID，可使用此ID查询异步任务的执行结果。
+     */
+    public $AsyncRequestId;
+
+    /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
-    public $requestId;
+    public $RequestId;
     /**
-     * @param string $requestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $AsyncRequestId 异步任务的请求ID，可使用此ID查询异步任务的执行结果。
+     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
     {
@@ -49,8 +57,12 @@ class DeleteAccountsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
+            $this->AsyncRequestId = $param["AsyncRequestId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->requestId = $param["RequestId"];
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

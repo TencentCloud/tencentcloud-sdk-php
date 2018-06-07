@@ -62,7 +62,6 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 
 * 只支持查询`BANDWIDTH_PREPAID`计费模式的带宽配置。
 * 接口返回实例的所有带宽配置信息（包含历史的带宽配置信息）。
-* @method Models\DescribeInstanceOperationLogsResponse DescribeInstanceOperationLogs(Models\DescribeInstanceOperationLogsRequest $req) 本接口（DescribeInstanceOperationLogs）查询指定实例操作记录。
 * @method Models\DescribeInstanceTypeConfigsResponse DescribeInstanceTypeConfigs(Models\DescribeInstanceTypeConfigsRequest $req) 本接口 (DescribeInstanceTypeConfigs) 用于查询实例机型配置。
 
 * 可以根据`zone`、`instance-family`来查询实例机型配置。过滤条件详见过滤器`Filter`。
@@ -217,9 +216,6 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 * 不再使用的实例，可通过本接口主动退还。
 * 按量计费的实例通过本接口可直接退还；包年包月实例如符合[退还规则](https://cloud.tencent.com/document/product/213/9711)，也可通过本接口主动退还。
 * 支持批量操作，每次请求批量实例的上限为100。
-* @method Models\UpdateInstanceVpcConfigResponse UpdateInstanceVpcConfig(Models\UpdateInstanceVpcConfigRequest $req) 本接口(UpdateInstanceVpcConfig)用于修改实例vpc属性，如私有网络ip。
-* 此操作默认会关闭实例，完成后再启动。
-* 不支持跨VpcId操作。
  */
 
 class CvmClient extends AbstractClient

@@ -17,24 +17,32 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method integer getProgress() 获取任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+ * @method void setProgress(integer $Progress) 设置任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
- *UpdateInstanceVpcConfig返回参数结构体
+ *DeleteScanInstances返回参数结构体
  */
-class UpdateInstanceVpcConfigResponse extends AbstractModel
+class DeleteScanInstancesResponse extends AbstractModel
 {
+    /**
+     * @var integer 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+     */
+    public $Progress;
+
     /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
+     * @param integer $Progress 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -49,6 +57,10 @@ class UpdateInstanceVpcConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

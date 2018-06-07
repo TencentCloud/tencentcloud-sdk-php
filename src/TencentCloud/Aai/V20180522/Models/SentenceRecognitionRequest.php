@@ -29,14 +29,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngSerViceType(string $EngSerViceType) 设置引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method void setSourceType(integer $SourceType) 设置语音数据来源。0：语音 URL；1：语音数据（post body）。
- * @method string getUrl() 获取语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048。
- * @method void setUrl(string $Url) 设置语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048。
+ * @method string getUrl() 获取语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。
+ * @method void setUrl(string $Url) 设置语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。
  * @method string getVoiceFormat() 获取识别音频的音频格式（支持mp3,wav）。
  * @method void setVoiceFormat(string $VoiceFormat) 设置识别音频的音频格式（支持mp3,wav）。
  * @method string getUsrAudioKey() 获取用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
  * @method void setUsrAudioKey(string $UsrAudioKey) 设置用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
- * @method string getData() 获取语音数据，当SourceType 值为1时必须填写，为0可不写。
- * @method void setData(string $Data) 设置语音数据，当SourceType 值为1时必须填写，为0可不写。
+ * @method string getData() 获取语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码
+ * @method void setData(string $Data) 设置语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码
  * @method integer getDataLen() 获取数据长度，当 SourceType 值为1时必须填写，为0可不写。
  * @method void setDataLen(integer $DataLen) 设置数据长度，当 SourceType 值为1时必须填写，为0可不写。
  */
@@ -67,7 +67,7 @@ class SentenceRecognitionRequest extends AbstractModel
     public $SourceType;
 
     /**
-     * @var string 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048。
+     * @var string 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。
      */
     public $Url;
 
@@ -82,7 +82,7 @@ class SentenceRecognitionRequest extends AbstractModel
     public $UsrAudioKey;
 
     /**
-     * @var string 语音数据，当SourceType 值为1时必须填写，为0可不写。
+     * @var string 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码
      */
     public $Data;
 
@@ -95,10 +95,10 @@ class SentenceRecognitionRequest extends AbstractModel
      * @param integer $SubServiceType 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。
      * @param string $EngSerViceType 引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
-     * @param string $Url 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048。
+     * @param string $Url 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。
      * @param string $VoiceFormat 识别音频的音频格式（支持mp3,wav）。
      * @param string $UsrAudioKey 用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
-     * @param string $Data 语音数据，当SourceType 值为1时必须填写，为0可不写。
+     * @param string $Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码
      * @param integer $DataLen 数据长度，当 SourceType 值为1时必须填写，为0可不写。
      */
     function __construct()

@@ -17,40 +17,32 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method ImageOsList getImportImageOsListSupported() 获取支持的导入镜像的操作系统类型。
- * @method void setImportImageOsListSupported(ImageOsList $ImportImageOsListSupported) 设置支持的导入镜像的操作系统类型。
- * @method array getImportImageOsVersionSet() 获取支持的导入镜像的操作系统版本。
- * @method void setImportImageOsVersionSet(array $ImportImageOsVersionSet) 设置支持的导入镜像的操作系统版本。
+ * @method array getAccountAttributeSet() 获取用户账号私有属性对象
+ * @method void setAccountAttributeSet(array $AccountAttributeSet) 设置用户账号私有属性对象
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
- *DescribeImportImageOs返回参数结构体
+ *DescribeAccountAttributes返回参数结构体
  */
-class DescribeImportImageOsResponse extends AbstractModel
+class DescribeAccountAttributesResponse extends AbstractModel
 {
     /**
-     * @var ImageOsList 支持的导入镜像的操作系统类型。
+     * @var array 用户账号私有属性对象
      */
-    public $ImportImageOsListSupported;
-
-    /**
-     * @var array 支持的导入镜像的操作系统版本。
-     */
-    public $ImportImageOsVersionSet;
+    public $AccountAttributeSet;
 
     /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
-     * @param ImageOsList $ImportImageOsListSupported 支持的导入镜像的操作系统类型。
-     * @param array $ImportImageOsVersionSet 支持的导入镜像的操作系统版本。
+     * @param array $AccountAttributeSet 用户账号私有属性对象
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -65,17 +57,12 @@ class DescribeImportImageOsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImportImageOsListSupported",$param) and $param["ImportImageOsListSupported"] !== null) {
-            $this->ImportImageOsListSupported = new ImageOsList();
-            $this->ImportImageOsListSupported->deserialize($param["ImportImageOsListSupported"]);
-        }
-
-        if (array_key_exists("ImportImageOsVersionSet",$param) and $param["ImportImageOsVersionSet"] !== null) {
-            $this->ImportImageOsVersionSet = [];
-            foreach ($param["ImportImageOsVersionSet"] as $key => $value){
-                $obj = new OsVersion();
+        if (array_key_exists("AccountAttributeSet",$param) and $param["AccountAttributeSet"] !== null) {
+            $this->AccountAttributeSet = [];
+            foreach ($param["AccountAttributeSet"] as $key => $value){
+                $obj = new AccountAttribute();
                 $obj->deserialize($value);
-                array_push($this->ImportImageOsVersionSet, $obj);
+                array_push($this->AccountAttributeSet, $obj);
             }
         }
 

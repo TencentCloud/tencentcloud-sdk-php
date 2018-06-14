@@ -17,33 +17,33 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace TencentCloud\Cws\V20180312\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getUrls() 获取站点的url列表
- * @method void setUrls(array $Urls) 设置站点的url列表
- * @method string getUserAgent() 获取访问网站的客户端标识
- * @method void setUserAgent(string $UserAgent) 设置访问网站的客户端标识
+ * @method string getVpcId() 获取默认VpcId
+ * @method void setVpcId(string $VpcId) 设置默认VpcId
+ * @method string getSubnetId() 获取默认SubnetId
+ * @method void setSubnetId(string $SubnetId) 设置默认SubnetId
  */
 
 /**
- *CreateSites请求参数结构体
+ *默认VPC和子网
  */
-class CreateSitesRequest extends AbstractModel
+class DefaultVpcSubnet extends AbstractModel
 {
     /**
-     * @var array 站点的url列表
+     * @var string 默认VpcId
      */
-    public $Urls;
+    public $VpcId;
 
     /**
-     * @var string 访问网站的客户端标识
+     * @var string 默认SubnetId
      */
-    public $UserAgent;
+    public $SubnetId;
     /**
-     * @param array $Urls 站点的url列表
-     * @param string $UserAgent 访问网站的客户端标识
+     * @param string $VpcId 默认VpcId
+     * @param string $SubnetId 默认SubnetId
      */
     function __construct()
     {
@@ -57,12 +57,12 @@ class CreateSitesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
 
-        if (array_key_exists("UserAgent",$param) and $param["UserAgent"] !== null) {
-            $this->UserAgent = $param["UserAgent"];
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

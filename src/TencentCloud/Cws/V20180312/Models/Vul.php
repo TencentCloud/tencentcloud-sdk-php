@@ -53,6 +53,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdatedAt(string $UpdatedAt) 设置UpdatedAt。
  * @method integer getIsReported() 获取是否已经添加误报，0-否，1-是。
  * @method void setIsReported(integer $IsReported) 设置是否已经添加误报，0-否，1-是。
+ * @method integer getAppid() 获取云用户appid。
+ * @method void setAppid(integer $Appid) 设置云用户appid。
+ * @method string getUin() 获取云用户标识。
+ * @method void setUin(string $Uin) 设置云用户标识。
  */
 
 /**
@@ -139,6 +143,16 @@ class Vul extends AbstractModel
      * @var integer 是否已经添加误报，0-否，1-是。
      */
     public $IsReported;
+
+    /**
+     * @var integer 云用户appid。
+     */
+    public $Appid;
+
+    /**
+     * @var string 云用户标识。
+     */
+    public $Uin;
     /**
      * @param integer $Id 漏洞ID。
      * @param integer $SiteId 站点ID。
@@ -156,6 +170,8 @@ class Vul extends AbstractModel
      * @param string $CreatedAt CreatedAt。
      * @param string $UpdatedAt UpdatedAt。
      * @param integer $IsReported 是否已经添加误报，0-否，1-是。
+     * @param integer $Appid 云用户appid。
+     * @param string $Uin 云用户标识。
      */
     function __construct()
     {
@@ -231,6 +247,14 @@ class Vul extends AbstractModel
 
         if (array_key_exists("IsReported",$param) and $param["IsReported"] !== null) {
             $this->IsReported = $param["IsReported"];
+        }
+
+        if (array_key_exists("Appid",$param) and $param["Appid"] !== null) {
+            $this->Appid = $param["Appid"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
         }
     }
 }

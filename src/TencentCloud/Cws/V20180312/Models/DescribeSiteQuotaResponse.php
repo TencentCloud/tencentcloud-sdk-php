@@ -21,12 +21,12 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotal() 获取已购买的站点数。
- * @method void setTotal(integer $Total) 设置已购买的站点数。
- * @method integer getUsed() 获取已使用的站点数。
- * @method void setUsed(integer $Used) 设置已使用的站点数。
- * @method integer getAvailable() 获取剩余可用的站点数。
- * @method void setAvailable(integer $Available) 设置剩余可用的站点数。
+ * @method integer getTotal() 获取已购买的扫描次数。
+ * @method void setTotal(integer $Total) 设置已购买的扫描次数。
+ * @method integer getUsed() 获取已使用的扫描次数。
+ * @method void setUsed(integer $Used) 设置已使用的扫描次数。
+ * @method integer getAvailable() 获取剩余可用的扫描次数。
+ * @method void setAvailable(integer $Available) 设置剩余可用的扫描次数。
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -37,17 +37,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSiteQuotaResponse extends AbstractModel
 {
     /**
-     * @var integer 已购买的站点数。
+     * @var integer 已购买的扫描次数。
      */
     public $Total;
 
     /**
-     * @var integer 已使用的站点数。
+     * @var integer 已使用的扫描次数。
      */
     public $Used;
 
     /**
-     * @var integer 剩余可用的站点数。
+     * @var integer 剩余可用的扫描次数。
      */
     public $Available;
 
@@ -56,9 +56,9 @@ class DescribeSiteQuotaResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $Total 已购买的站点数。
-     * @param integer $Used 已使用的站点数。
-     * @param integer $Available 剩余可用的站点数。
+     * @param integer $Total 已购买的扫描次数。
+     * @param integer $Used 已使用的扫描次数。
+     * @param integer $Available 剩余可用的扫描次数。
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()

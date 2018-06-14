@@ -21,8 +21,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDealIds() 获取短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
- * @method void setDealIds(string $DealIds) 设置短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
+ * @method array getDealIds() 获取短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
+ * @method void setDealIds(array $DealIds) 设置短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
  * @method array getInstanceIds() 获取实例ID列表
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -35,7 +35,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDBInstanceHourResponse extends AbstractModel
 {
     /**
-     * @var string 短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
+     * @var array 短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
      */
     public $DealIds;
 
@@ -49,7 +49,7 @@ class CreateDBInstanceHourResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $DealIds 短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
+     * @param array $DealIds 短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
      * @param array $InstanceIds 实例ID列表
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */

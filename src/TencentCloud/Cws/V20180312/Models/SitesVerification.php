@@ -39,6 +39,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(integer $Id) 设置ID。
  * @method integer getAppid() 获取云用户appid
  * @method void setAppid(integer $Appid) 设置云用户appid
+ * @method string getVerifyUrl() 获取用于验证站点的url，即访问该url获取验证数据。
+ * @method void setVerifyUrl(string $VerifyUrl) 设置用于验证站点的url，即访问该url获取验证数据。
+ * @method string getVerifyFileUrl() 获取获取验证验证文件的url。
+ * @method void setVerifyFileUrl(string $VerifyFileUrl) 设置获取验证验证文件的url。
  */
 
 /**
@@ -90,6 +94,16 @@ class SitesVerification extends AbstractModel
      * @var integer 云用户appid
      */
     public $Appid;
+
+    /**
+     * @var string 用于验证站点的url，即访问该url获取验证数据。
+     */
+    public $VerifyUrl;
+
+    /**
+     * @var string 获取验证验证文件的url。
+     */
+    public $VerifyFileUrl;
     /**
      * @param string $Domain 根域名。
      * @param string $TxtName txt解析域名验证的name。
@@ -100,6 +114,8 @@ class SitesVerification extends AbstractModel
      * @param string $UpdatedAt UpdatedAt。
      * @param integer $Id ID。
      * @param integer $Appid 云用户appid
+     * @param string $VerifyUrl 用于验证站点的url，即访问该url获取验证数据。
+     * @param string $VerifyFileUrl 获取验证验证文件的url。
      */
     function __construct()
     {
@@ -147,6 +163,14 @@ class SitesVerification extends AbstractModel
 
         if (array_key_exists("Appid",$param) and $param["Appid"] !== null) {
             $this->Appid = $param["Appid"];
+        }
+
+        if (array_key_exists("VerifyUrl",$param) and $param["VerifyUrl"] !== null) {
+            $this->VerifyUrl = $param["VerifyUrl"];
+        }
+
+        if (array_key_exists("VerifyFileUrl",$param) and $param["VerifyFileUrl"] !== null) {
+            $this->VerifyFileUrl = $param["VerifyFileUrl"];
         }
     }
 }

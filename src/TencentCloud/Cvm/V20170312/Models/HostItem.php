@@ -37,8 +37,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置cdh实例创建时间
  * @method string getExpiredTime() 获取cdh实例过期时间
  * @method void setExpiredTime(string $ExpiredTime) 设置cdh实例过期时间
- * @method string getInstanceIds() 获取cdh实例上已创建云子机的实例id列表
- * @method void setInstanceIds(string $InstanceIds) 设置cdh实例上已创建云子机的实例id列表
+ * @method array getInstanceIds() 获取cdh实例上已创建云子机的实例id列表
+ * @method void setInstanceIds(array $InstanceIds) 设置cdh实例上已创建云子机的实例id列表
  * @method string getHostState() 获取cdh实例状态
  * @method void setHostState(string $HostState) 设置cdh实例状态
  * @method string getHostIp() 获取cdh实例ip
@@ -93,7 +93,7 @@ class HostItem extends AbstractModel
     public $ExpiredTime;
 
     /**
-     * @var string cdh实例上已创建云子机的实例id列表
+     * @var array cdh实例上已创建云子机的实例id列表
      */
     public $InstanceIds;
 
@@ -120,7 +120,7 @@ class HostItem extends AbstractModel
      * @param string $RenewFlag cdh实例自动续费标记
      * @param string $CreatedTime cdh实例创建时间
      * @param string $ExpiredTime cdh实例过期时间
-     * @param string $InstanceIds cdh实例上已创建云子机的实例id列表
+     * @param array $InstanceIds cdh实例上已创建云子机的实例id列表
      * @param string $HostState cdh实例状态
      * @param string $HostIp cdh实例ip
      * @param HostResource $HostResource cdh实例资源信息

@@ -17,40 +17,32 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method ImageOsList getImportImageOsListSupported() 获取支持的导入镜像的操作系统类型。
- * @method void setImportImageOsListSupported(ImageOsList $ImportImageOsListSupported) 设置支持的导入镜像的操作系统类型。
- * @method array getImportImageOsVersionSet() 获取支持的导入镜像的操作系统版本。
- * @method void setImportImageOsVersionSet(array $ImportImageOsVersionSet) 设置支持的导入镜像的操作系统版本。
+ * @method DefaultVpcSubnet getVpc() 获取默认VPC和子网ID
+ * @method void setVpc(DefaultVpcSubnet $Vpc) 设置默认VPC和子网ID
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
- *DescribeImportImageOs返回参数结构体
+ *CreateDefaultVpc返回参数结构体
  */
-class DescribeImportImageOsResponse extends AbstractModel
+class CreateDefaultVpcResponse extends AbstractModel
 {
     /**
-     * @var ImageOsList 支持的导入镜像的操作系统类型。
+     * @var DefaultVpcSubnet 默认VPC和子网ID
      */
-    public $ImportImageOsListSupported;
-
-    /**
-     * @var array 支持的导入镜像的操作系统版本。
-     */
-    public $ImportImageOsVersionSet;
+    public $Vpc;
 
     /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
-     * @param ImageOsList $ImportImageOsListSupported 支持的导入镜像的操作系统类型。
-     * @param array $ImportImageOsVersionSet 支持的导入镜像的操作系统版本。
+     * @param DefaultVpcSubnet $Vpc 默认VPC和子网ID
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -65,18 +57,9 @@ class DescribeImportImageOsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImportImageOsListSupported",$param) and $param["ImportImageOsListSupported"] !== null) {
-            $this->ImportImageOsListSupported = new ImageOsList();
-            $this->ImportImageOsListSupported->deserialize($param["ImportImageOsListSupported"]);
-        }
-
-        if (array_key_exists("ImportImageOsVersionSet",$param) and $param["ImportImageOsVersionSet"] !== null) {
-            $this->ImportImageOsVersionSet = [];
-            foreach ($param["ImportImageOsVersionSet"] as $key => $value){
-                $obj = new OsVersion();
-                $obj->deserialize($value);
-                array_push($this->ImportImageOsVersionSet, $obj);
-            }
+        if (array_key_exists("Vpc",$param) and $param["Vpc"] !== null) {
+            $this->Vpc = new DefaultVpcSubnet();
+            $this->Vpc->deserialize($param["Vpc"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

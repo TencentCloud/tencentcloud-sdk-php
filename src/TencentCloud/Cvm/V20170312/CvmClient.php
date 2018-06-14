@@ -33,6 +33,7 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 * 如果实例原来绑定过密钥，那么原来的密钥将失效。
 * 如果实例原来是通过密码登录，绑定密钥后无法使用密码登录。
 * 支持批量操作。每次请求批量实例的上限为100。如果批量实例存在不允许操作的实例，操作会以特定错误码返回。
+* @method Models\CreateDisasterRecoverGroupResponse CreateDisasterRecoverGroup(Models\CreateDisasterRecoverGroupRequest $req) 本接口 (CreateDisasterRecoverGroup)用于创建[分散置放群组](https://cloud.tencent.com/document/product/213/15486)。创建好的置放群组，可在[创建实例](https://cloud.tencent.com/document/api/213/15730)时指定。
 * @method Models\CreateImageResponse CreateImage(Models\CreateImageRequest $req) 本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
 * @method Models\CreateKeyPairResponse CreateKeyPair(Models\CreateKeyPairRequest $req) 本接口 (CreateKeyPair) 用于创建一个 `OpenSSH RSA` 密钥对，可以用于登录 `Linux` 实例。
 
@@ -40,6 +41,7 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 * 密钥对名称不能和已经存在的密钥对的名称重复。
 * 私钥的内容可以保存到文件中作为 `SSH` 的一种认证方式。
 * 腾讯云不会保存用户的私钥，请妥善保管。
+* @method Models\DeleteDisasterRecoverGroupsResponse DeleteDisasterRecoverGroups(Models\DeleteDisasterRecoverGroupsRequest $req) 本接口 (DeleteDisasterRecoverGroups)用于删除[分散置放群组](https://cloud.tencent.com/document/product/213/15486)。只有空的置放群组才能被删除，非空的群组需要先销毁组内所有云主机，才能执行删除操作，不然会产生删除置放群组失败的错误。
 * @method Models\DeleteImagesResponse DeleteImages(Models\DeleteImagesRequest $req) 本接口（DeleteImages）用于删除一个或多个镜像。
 
 * 当[镜像状态](https://cloud.tencent.com/document/api/213/9452#image_state)为`创建中`和`使用中`时, 不允许删除。镜像状态可以通过[DescribeImages](https://cloud.tencent.com/document/api/213/9418)获取。
@@ -49,6 +51,8 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 
 * 可以同时删除多个密钥对。
 * 不能删除已被实例或镜像引用的密钥对，所以需要独立判断是否所有密钥对都被成功删除。
+* @method Models\DescribeDisasterRecoverGroupQuotaResponse DescribeDisasterRecoverGroupQuota(Models\DescribeDisasterRecoverGroupQuotaRequest $req) 本接口 (DescribeDisasterRecoverGroupQuota)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)配额。
+* @method Models\DescribeDisasterRecoverGroupsResponse DescribeDisasterRecoverGroups(Models\DescribeDisasterRecoverGroupsRequest $req) 本接口 (DescribeDisasterRecoverGroups)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)信息。
 * @method Models\DescribeHostsResponse DescribeHosts(Models\DescribeHostsRequest $req) 本接口 (DescribeHosts) 用于获取一个或多个CDH实例的详细信息。
 * @method Models\DescribeImageQuotaResponse DescribeImageQuota(Models\DescribeImageQuotaRequest $req) 本接口(DescribeImageQuota)用于查询用户帐号的镜像配额。
 * @method Models\DescribeImageSharePermissionResponse DescribeImageSharePermission(Models\DescribeImageSharePermissionRequest $req) 本接口（ModifyImageSharePermission）用于修改镜像分享信息。
@@ -116,6 +120,7 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 * 目前只支持扩容随实例购买的数据盘询价，且[数据盘类型](/document/api/213/9452#block_device)为：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。
 * 目前不支持[CDH](https://cloud.tencent.com/document/product/416)实例使用该接口扩容数据盘询价。* 仅支持包年包月实例随机器购买的数据盘。* 目前只支持扩容一块数据盘询价。
 * @method Models\InquiryPriceRunInstancesResponse InquiryPriceRunInstances(Models\InquiryPriceRunInstancesRequest $req) 本接口(InquiryPriceRunInstances)用于创建实例询价。本接口仅允许针对购买限制范围内的实例配置进行询价, 详见：[创建实例](https://cloud.tencent.com/document/api/213/15730)。
+* @method Models\ModifyDisasterRecoverGroupAttributeResponse ModifyDisasterRecoverGroupAttribute(Models\ModifyDisasterRecoverGroupAttributeRequest $req) 本接口 (ModifyDisasterRecoverGroupAttribute)用于修改[分散置放群组](https://cloud.tencent.com/document/product/213/15486)属性。
 * @method Models\ModifyHostsAttributeResponse ModifyHostsAttribute(Models\ModifyHostsAttributeRequest $req) 本接口（ModifyHostsAttribute）用于修改CDH实例的属性，如实例名称和续费标记等。参数HostName和RenewFlag必须设置其中一个，但不能同时设置。
 * @method Models\ModifyImageAttributeResponse ModifyImageAttribute(Models\ModifyImageAttributeRequest $req) 本接口（ModifyImageAttribute）用于修改镜像属性。
 

@@ -17,33 +17,33 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace TencentCloud\Cws\V20180312\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getUrls() 获取站点的url列表
- * @method void setUrls(array $Urls) 设置站点的url列表
- * @method string getUserAgent() 获取访问网站的客户端标识
- * @method void setUserAgent(string $UserAgent) 设置访问网站的客户端标识
+ * @method string getAttributeName() 获取属性名
+ * @method void setAttributeName(string $AttributeName) 设置属性名
+ * @method array getAttributeValues() 获取属性值
+ * @method void setAttributeValues(array $AttributeValues) 设置属性值
  */
 
 /**
- *CreateSites请求参数结构体
+ *账户属性对象
  */
-class CreateSitesRequest extends AbstractModel
+class AccountAttribute extends AbstractModel
 {
     /**
-     * @var array 站点的url列表
+     * @var string 属性名
      */
-    public $Urls;
+    public $AttributeName;
 
     /**
-     * @var string 访问网站的客户端标识
+     * @var array 属性值
      */
-    public $UserAgent;
+    public $AttributeValues;
     /**
-     * @param array $Urls 站点的url列表
-     * @param string $UserAgent 访问网站的客户端标识
+     * @param string $AttributeName 属性名
+     * @param array $AttributeValues 属性值
      */
     function __construct()
     {
@@ -57,12 +57,12 @@ class CreateSitesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
+        if (array_key_exists("AttributeName",$param) and $param["AttributeName"] !== null) {
+            $this->AttributeName = $param["AttributeName"];
         }
 
-        if (array_key_exists("UserAgent",$param) and $param["UserAgent"] !== null) {
-            $this->UserAgent = $param["UserAgent"];
+        if (array_key_exists("AttributeValues",$param) and $param["AttributeValues"] !== null) {
+            $this->AttributeValues = $param["AttributeValues"];
         }
     }
 }

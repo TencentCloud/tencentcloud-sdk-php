@@ -25,6 +25,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSiteId(integer $SiteId) 设置站点ID
  * @method string getName() 获取站点名称
  * @method void setName(string $Name) 设置站点名称
+ * @method integer getNeedLogin() 获取网站是否需要登录扫描：0-未知；-1-不需要；1-需要
+ * @method void setNeedLogin(integer $NeedLogin) 设置网站是否需要登录扫描：0-未知；-1-不需要；1-需要
+ * @method string getLoginCookie() 获取登录后的cookie
+ * @method void setLoginCookie(string $LoginCookie) 设置登录后的cookie
+ * @method string getLoginCheckUrl() 获取用于测试cookie是否有效的URL
+ * @method void setLoginCheckUrl(string $LoginCheckUrl) 设置用于测试cookie是否有效的URL
+ * @method string getLoginCheckKw() 获取用于测试cookie是否有效的关键字
+ * @method void setLoginCheckKw(string $LoginCheckKw) 设置用于测试cookie是否有效的关键字
+ * @method string getScanDisallow() 获取禁止扫描器扫描的目录关键字
+ * @method void setScanDisallow(string $ScanDisallow) 设置禁止扫描器扫描的目录关键字
  */
 
 /**
@@ -41,9 +51,39 @@ class ModifySiteAttributeRequest extends AbstractModel
      * @var string 站点名称
      */
     public $Name;
+
+    /**
+     * @var integer 网站是否需要登录扫描：0-未知；-1-不需要；1-需要
+     */
+    public $NeedLogin;
+
+    /**
+     * @var string 登录后的cookie
+     */
+    public $LoginCookie;
+
+    /**
+     * @var string 用于测试cookie是否有效的URL
+     */
+    public $LoginCheckUrl;
+
+    /**
+     * @var string 用于测试cookie是否有效的关键字
+     */
+    public $LoginCheckKw;
+
+    /**
+     * @var string 禁止扫描器扫描的目录关键字
+     */
+    public $ScanDisallow;
     /**
      * @param integer $SiteId 站点ID
      * @param string $Name 站点名称
+     * @param integer $NeedLogin 网站是否需要登录扫描：0-未知；-1-不需要；1-需要
+     * @param string $LoginCookie 登录后的cookie
+     * @param string $LoginCheckUrl 用于测试cookie是否有效的URL
+     * @param string $LoginCheckKw 用于测试cookie是否有效的关键字
+     * @param string $ScanDisallow 禁止扫描器扫描的目录关键字
      */
     function __construct()
     {
@@ -63,6 +103,26 @@ class ModifySiteAttributeRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("NeedLogin",$param) and $param["NeedLogin"] !== null) {
+            $this->NeedLogin = $param["NeedLogin"];
+        }
+
+        if (array_key_exists("LoginCookie",$param) and $param["LoginCookie"] !== null) {
+            $this->LoginCookie = $param["LoginCookie"];
+        }
+
+        if (array_key_exists("LoginCheckUrl",$param) and $param["LoginCheckUrl"] !== null) {
+            $this->LoginCheckUrl = $param["LoginCheckUrl"];
+        }
+
+        if (array_key_exists("LoginCheckKw",$param) and $param["LoginCheckKw"] !== null) {
+            $this->LoginCheckKw = $param["LoginCheckKw"];
+        }
+
+        if (array_key_exists("ScanDisallow",$param) and $param["ScanDisallow"] !== null) {
+            $this->ScanDisallow = $param["ScanDisallow"];
         }
     }
 }

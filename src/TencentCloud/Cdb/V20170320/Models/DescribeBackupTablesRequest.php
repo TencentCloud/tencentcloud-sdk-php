@@ -27,8 +27,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间，格式为：2017-07-12 10:29:20。
  * @method string getDatabaseName() 获取指定的数据库名。
  * @method void setDatabaseName(string $DatabaseName) 设置指定的数据库名。
- * @method array getSearchTable() 获取要查询的数据表名前缀。
- * @method void setSearchTable(array $SearchTable) 设置要查询的数据表名前缀。
+ * @method string getSearchTable() 获取要查询的数据表名前缀。
+ * @method void setSearchTable(string $SearchTable) 设置要查询的数据表名前缀。
  * @method integer getOffset() 获取分页偏移。
  * @method void setOffset(integer $Offset) 设置分页偏移。
  * @method integer getLimit() 获取分页大小，最大值为2000。
@@ -56,7 +56,7 @@ class DescribeBackupTablesRequest extends AbstractModel
     public $DatabaseName;
 
     /**
-     * @var array 要查询的数据表名前缀。
+     * @var string 要查询的数据表名前缀。
      */
     public $SearchTable;
 
@@ -73,7 +73,7 @@ class DescribeBackupTablesRequest extends AbstractModel
      * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
      * @param string $StartTime 开始时间，格式为：2017-07-12 10:29:20。
      * @param string $DatabaseName 指定的数据库名。
-     * @param array $SearchTable 要查询的数据表名前缀。
+     * @param string $SearchTable 要查询的数据表名前缀。
      * @param integer $Offset 分页偏移。
      * @param integer $Limit 分页大小，最大值为2000。
      */

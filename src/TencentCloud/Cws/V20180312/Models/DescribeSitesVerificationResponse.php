@@ -23,8 +23,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getTotalCount() 获取验证信息数量。
  * @method void setTotalCount(integer $TotalCount) 设置验证信息数量。
- * @method SitesVerification getSitesVerification() 获取验证信息列表。
- * @method void setSitesVerification(SitesVerification $SitesVerification) 设置验证信息列表。
+ * @method array getSitesVerification() 获取验证信息列表。
+ * @method void setSitesVerification(array $SitesVerification) 设置验证信息列表。
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -40,7 +40,7 @@ class DescribeSitesVerificationResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var SitesVerification 验证信息列表。
+     * @var array 验证信息列表。
      */
     public $SitesVerification;
 
@@ -50,7 +50,7 @@ class DescribeSitesVerificationResponse extends AbstractModel
     public $RequestId;
     /**
      * @param integer $TotalCount 验证信息数量。
-     * @param SitesVerification $SitesVerification 验证信息列表。
+     * @param array $SitesVerification 验证信息列表。
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -70,8 +70,12 @@ class DescribeSitesVerificationResponse extends AbstractModel
         }
 
         if (array_key_exists("SitesVerification",$param) and $param["SitesVerification"] !== null) {
-            $this->SitesVerification = new SitesVerification();
-            $this->SitesVerification->deserialize($param["SitesVerification"]);
+            $this->SitesVerification = [];
+            foreach ($param["SitesVerification"] as $key => $value){
+                $obj = new SitesVerification();
+                $obj->deserialize($value);
+                array_push($this->SitesVerification, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

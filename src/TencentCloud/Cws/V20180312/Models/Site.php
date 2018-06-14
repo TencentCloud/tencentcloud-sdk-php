@@ -67,12 +67,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastScanNoticeNum(integer $LastScanNoticeNum) 设置最近一次扫描提示总数量
  * @method integer getProgress() 获取扫描进度，百分比整数
  * @method void setProgress(integer $Progress) 设置扫描进度，百分比整数
- * @method string getLastScanExtsCount() 获取最近一次扫描各个类型风险漏洞数量，存储的是json对象
- * @method void setLastScanExtsCount(string $LastScanExtsCount) 设置最近一次扫描各个类型风险漏洞数量，存储的是json对象
  * @method integer getAppid() 获取云用户appid。
  * @method void setAppid(integer $Appid) 设置云用户appid。
  * @method string getUin() 获取云用户标识。
  * @method void setUin(string $Uin) 设置云用户标识。
+ * @method integer getNeedLogin() 获取网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+ * @method void setNeedLogin(integer $NeedLogin) 设置网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+ * @method string getLoginCookie() 获取登录后的cookie。
+ * @method void setLoginCookie(string $LoginCookie) 设置登录后的cookie。
+ * @method integer getLoginCookieValid() 获取登录后的cookie是否有效：0-无效；1-有效。
+ * @method void setLoginCookieValid(integer $LoginCookieValid) 设置登录后的cookie是否有效：0-无效；1-有效。
+ * @method string getLoginCheckUrl() 获取用于测试cookie是否有效的URL。
+ * @method void setLoginCheckUrl(string $LoginCheckUrl) 设置用于测试cookie是否有效的URL。
+ * @method string getLoginCheckKw() 获取用于测试cookie是否有效的关键字。
+ * @method void setLoginCheckKw(string $LoginCheckKw) 设置用于测试cookie是否有效的关键字。
+ * @method string getScanDisallow() 获取禁止扫描器扫描的目录关键字。
+ * @method void setScanDisallow(string $ScanDisallow) 设置禁止扫描器扫描的目录关键字。
+ * @method string getUserAgent() 获取访问网站的客户端标识。
+ * @method void setUserAgent(string $UserAgent) 设置访问网站的客户端标识。
  */
 
 /**
@@ -196,11 +208,6 @@ class Site extends AbstractModel
     public $Progress;
 
     /**
-     * @var string 最近一次扫描各个类型风险漏洞数量，存储的是json对象
-     */
-    public $LastScanExtsCount;
-
-    /**
      * @var integer 云用户appid。
      */
     public $Appid;
@@ -209,6 +216,41 @@ class Site extends AbstractModel
      * @var string 云用户标识。
      */
     public $Uin;
+
+    /**
+     * @var integer 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+     */
+    public $NeedLogin;
+
+    /**
+     * @var string 登录后的cookie。
+     */
+    public $LoginCookie;
+
+    /**
+     * @var integer 登录后的cookie是否有效：0-无效；1-有效。
+     */
+    public $LoginCookieValid;
+
+    /**
+     * @var string 用于测试cookie是否有效的URL。
+     */
+    public $LoginCheckUrl;
+
+    /**
+     * @var string 用于测试cookie是否有效的关键字。
+     */
+    public $LoginCheckKw;
+
+    /**
+     * @var string 禁止扫描器扫描的目录关键字。
+     */
+    public $ScanDisallow;
+
+    /**
+     * @var string 访问网站的客户端标识。
+     */
+    public $UserAgent;
     /**
      * @param integer $Id 站点ID。
      * @param integer $MonitorId 监控任务ID，为0时表示未加入监控任务。
@@ -233,9 +275,15 @@ class Site extends AbstractModel
      * @param integer $LastScanVulsNum 最近一次扫描漏洞总数量。
      * @param integer $LastScanNoticeNum 最近一次扫描提示总数量
      * @param integer $Progress 扫描进度，百分比整数
-     * @param string $LastScanExtsCount 最近一次扫描各个类型风险漏洞数量，存储的是json对象
      * @param integer $Appid 云用户appid。
      * @param string $Uin 云用户标识。
+     * @param integer $NeedLogin 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+     * @param string $LoginCookie 登录后的cookie。
+     * @param integer $LoginCookieValid 登录后的cookie是否有效：0-无效；1-有效。
+     * @param string $LoginCheckUrl 用于测试cookie是否有效的URL。
+     * @param string $LoginCheckKw 用于测试cookie是否有效的关键字。
+     * @param string $ScanDisallow 禁止扫描器扫描的目录关键字。
+     * @param string $UserAgent 访问网站的客户端标识。
      */
     function __construct()
     {
@@ -341,16 +389,40 @@ class Site extends AbstractModel
             $this->Progress = $param["Progress"];
         }
 
-        if (array_key_exists("LastScanExtsCount",$param) and $param["LastScanExtsCount"] !== null) {
-            $this->LastScanExtsCount = $param["LastScanExtsCount"];
-        }
-
         if (array_key_exists("Appid",$param) and $param["Appid"] !== null) {
             $this->Appid = $param["Appid"];
         }
 
         if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
             $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("NeedLogin",$param) and $param["NeedLogin"] !== null) {
+            $this->NeedLogin = $param["NeedLogin"];
+        }
+
+        if (array_key_exists("LoginCookie",$param) and $param["LoginCookie"] !== null) {
+            $this->LoginCookie = $param["LoginCookie"];
+        }
+
+        if (array_key_exists("LoginCookieValid",$param) and $param["LoginCookieValid"] !== null) {
+            $this->LoginCookieValid = $param["LoginCookieValid"];
+        }
+
+        if (array_key_exists("LoginCheckUrl",$param) and $param["LoginCheckUrl"] !== null) {
+            $this->LoginCheckUrl = $param["LoginCheckUrl"];
+        }
+
+        if (array_key_exists("LoginCheckKw",$param) and $param["LoginCheckKw"] !== null) {
+            $this->LoginCheckKw = $param["LoginCheckKw"];
+        }
+
+        if (array_key_exists("ScanDisallow",$param) and $param["ScanDisallow"] !== null) {
+            $this->ScanDisallow = $param["ScanDisallow"];
+        }
+
+        if (array_key_exists("UserAgent",$param) and $param["UserAgent"] !== null) {
+            $this->UserAgent = $param["UserAgent"];
         }
     }
 }

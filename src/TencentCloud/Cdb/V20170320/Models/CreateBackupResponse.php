@@ -21,6 +21,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method integer getBackupId() 获取备份任务ID。
+ * @method void setBackupId(integer $BackupId) 设置备份任务ID。
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -31,10 +33,16 @@ use TencentCloud\Common\AbstractModel;
 class CreateBackupResponse extends AbstractModel
 {
     /**
+     * @var integer 备份任务ID。
+     */
+    public $BackupId;
+
+    /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
+     * @param integer $BackupId 备份任务ID。
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -49,6 +57,10 @@ class CreateBackupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("BackupId",$param) and $param["BackupId"] !== null) {
+            $this->BackupId = $param["BackupId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

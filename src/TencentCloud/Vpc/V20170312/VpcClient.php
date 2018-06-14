@@ -50,6 +50,15 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * @method Models\CreateAddressTemplateResponse CreateAddressTemplate(Models\CreateAddressTemplateRequest $req) 创建IP地址模版
 * @method Models\CreateAddressTemplateGroupResponse CreateAddressTemplateGroup(Models\CreateAddressTemplateGroupRequest $req) 创建IP地址模版集合
 * @method Models\CreateCustomerGatewayResponse CreateCustomerGateway(Models\CreateCustomerGatewayRequest $req) 本接口（CreateCustomerGateway）用于创建对端网关。
+* @method Models\CreateDefaultVpcResponse CreateDefaultVpc(Models\CreateDefaultVpcRequest $req) 本接口(CreateDefaultVpc)用于创建默认私有网络(VPC)。
+
+默认VPC适用于快速入门和启动公共实例，您可以像使用任何其他VPC一样使用默认VPC。如果你想创建标准VPC，即指定VPC名称、VPC网段、子网网段、子网可用区，请使用常规创建VPC接口(CreateVpc)
+
+正常情况，本接口并不一定生产默认VPC，而是根据用户账号的网络属性(DescribeAccountVpcAttributes)来决定的
+* 支持基础网络（classic），返回VpcId为0
+* 只支持VPC（only-vpc），生产默认VPC，并返回VPC信息
+
+你也可以通过 Force 参数，强制生产默认VPC
 * @method Models\CreateNetworkInterfaceResponse CreateNetworkInterface(Models\CreateNetworkInterfaceRequest $req) 本接口（CreateNetworkInterface）用于创建弹性网卡。
 * 创建弹性网卡时可以指定内网IP，并且可以指定一个主IP，指定的内网IP必须在弹性网卡所在子网内，而且不能被占用。
 * 创建弹性网卡时可以指定需要申请的内网IP数量，系统会随机生成内网IP地址。
@@ -109,6 +118,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 删除私有网络是不可逆的操作，请谨慎处理。
 * @method Models\DeleteVpnConnectionResponse DeleteVpnConnection(Models\DeleteVpnConnectionRequest $req) 本接口(DeleteVpnConnection)用于删除VPN通道。
 * @method Models\DeleteVpnGatewayResponse DeleteVpnGateway(Models\DeleteVpnGatewayRequest $req) 本接口（DeleteVpnGateway）用于删除VPN网关。目前只支持删除运行中的按量计费的IPSEC网关实例。
+* @method Models\DescribeAccountAttributesResponse DescribeAccountAttributes(Models\DescribeAccountAttributesRequest $req) 本接口(DescribeAccountAttributes)用于查询用户账号私有属性。
 * @method Models\DescribeAddressQuotaResponse DescribeAddressQuota(Models\DescribeAddressQuotaRequest $req) 本接口 (DescribeAddressQuota) 用于查询您账户的[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）在当前地域的配额信息。配额详情可参见 [EIP 产品简介](https://cloud.tencent.com/document/product/213/5733)。
 * @method Models\DescribeAddressTemplateGroupsResponse DescribeAddressTemplateGroups(Models\DescribeAddressTemplateGroupsRequest $req) 查询IP地址模板集合
 * @method Models\DescribeAddressTemplatesResponse DescribeAddressTemplates(Models\DescribeAddressTemplatesRequest $req) 查询IP地址模板

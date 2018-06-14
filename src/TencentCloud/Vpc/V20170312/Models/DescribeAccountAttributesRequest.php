@@ -17,33 +17,21 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace TencentCloud\Cws\V20180312\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getUrls() 获取站点的url列表
- * @method void setUrls(array $Urls) 设置站点的url列表
- * @method string getUserAgent() 获取访问网站的客户端标识
- * @method void setUserAgent(string $UserAgent) 设置访问网站的客户端标识
+
  */
 
 /**
- *CreateSites请求参数结构体
+ *DescribeAccountAttributes请求参数结构体
  */
-class CreateSitesRequest extends AbstractModel
+class DescribeAccountAttributesRequest extends AbstractModel
 {
-    /**
-     * @var array 站点的url列表
-     */
-    public $Urls;
 
     /**
-     * @var string 访问网站的客户端标识
-     */
-    public $UserAgent;
-    /**
-     * @param array $Urls 站点的url列表
-     * @param string $UserAgent 访问网站的客户端标识
+
      */
     function __construct()
     {
@@ -57,12 +45,6 @@ class CreateSitesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
-        }
 
-        if (array_key_exists("UserAgent",$param) and $param["UserAgent"] !== null) {
-            $this->UserAgent = $param["UserAgent"];
-        }
     }
 }

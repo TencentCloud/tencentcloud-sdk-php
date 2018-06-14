@@ -17,33 +17,33 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace TencentCloud\Cws\V20180312\Models;
+namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getUrls() 获取站点的url列表
- * @method void setUrls(array $Urls) 设置站点的url列表
- * @method string getUserAgent() 获取访问网站的客户端标识
- * @method void setUserAgent(string $UserAgent) 设置访问网站的客户端标识
+ * @method array getWindows() 获取支持的windows操作系统。
+ * @method void setWindows(array $Windows) 设置支持的windows操作系统。
+ * @method array getLinux() 获取支持的linux操作系统
+ * @method void setLinux(array $Linux) 设置支持的linux操作系统
  */
 
 /**
- *CreateSites请求参数结构体
+ *支持的操作系统类型，根据windows和linux分类。
  */
-class CreateSitesRequest extends AbstractModel
+class ImageOsList extends AbstractModel
 {
     /**
-     * @var array 站点的url列表
+     * @var array 支持的windows操作系统。
      */
-    public $Urls;
+    public $Windows;
 
     /**
-     * @var string 访问网站的客户端标识
+     * @var array 支持的linux操作系统
      */
-    public $UserAgent;
+    public $Linux;
     /**
-     * @param array $Urls 站点的url列表
-     * @param string $UserAgent 访问网站的客户端标识
+     * @param array $Windows 支持的windows操作系统。
+     * @param array $Linux 支持的linux操作系统
      */
     function __construct()
     {
@@ -57,12 +57,12 @@ class CreateSitesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
+        if (array_key_exists("Windows",$param) and $param["Windows"] !== null) {
+            $this->Windows = $param["Windows"];
         }
 
-        if (array_key_exists("UserAgent",$param) and $param["UserAgent"] !== null) {
-            $this->UserAgent = $param["UserAgent"];
+        if (array_key_exists("Linux",$param) and $param["Linux"] !== null) {
+            $this->Linux = $param["Linux"];
         }
     }
 }

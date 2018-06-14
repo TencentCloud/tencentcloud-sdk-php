@@ -29,6 +29,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedAt(string $CreatedAt) 设置记录创建时间。
  * @method string getUpdatedAt() 获取记录更新新建。
  * @method void setUpdatedAt(string $UpdatedAt) 设置记录更新新建。
+ * @method integer getAppid() 获取云用户appid。
+ * @method void setAppid(integer $Appid) 设置云用户appid。
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -59,6 +61,11 @@ class DescribeConfigResponse extends AbstractModel
     public $UpdatedAt;
 
     /**
+     * @var integer 云用户appid。
+     */
+    public $Appid;
+
+    /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
@@ -67,6 +74,7 @@ class DescribeConfigResponse extends AbstractModel
      * @param integer $Id 配置ID。
      * @param string $CreatedAt 记录创建时间。
      * @param string $UpdatedAt 记录更新新建。
+     * @param integer $Appid 云用户appid。
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -95,6 +103,10 @@ class DescribeConfigResponse extends AbstractModel
 
         if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
             $this->UpdatedAt = $param["UpdatedAt"];
+        }
+
+        if (array_key_exists("Appid",$param) and $param["Appid"] !== null) {
+            $this->Appid = $param["Appid"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

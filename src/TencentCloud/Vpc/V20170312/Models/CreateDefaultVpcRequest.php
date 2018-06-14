@@ -17,33 +17,33 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace TencentCloud\Cws\V20180312\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getUrls() 获取站点的url列表
- * @method void setUrls(array $Urls) 设置站点的url列表
- * @method string getUserAgent() 获取访问网站的客户端标识
- * @method void setUserAgent(string $UserAgent) 设置访问网站的客户端标识
+ * @method string getZone() 获取子网所在的可用区ID，不指定将随机选择可用区
+ * @method void setZone(string $Zone) 设置子网所在的可用区ID，不指定将随机选择可用区
+ * @method boolean getForce() 获取是否强制返回默认VPC
+ * @method void setForce(boolean $Force) 设置是否强制返回默认VPC
  */
 
 /**
- *CreateSites请求参数结构体
+ *CreateDefaultVpc请求参数结构体
  */
-class CreateSitesRequest extends AbstractModel
+class CreateDefaultVpcRequest extends AbstractModel
 {
     /**
-     * @var array 站点的url列表
+     * @var string 子网所在的可用区ID，不指定将随机选择可用区
      */
-    public $Urls;
+    public $Zone;
 
     /**
-     * @var string 访问网站的客户端标识
+     * @var boolean 是否强制返回默认VPC
      */
-    public $UserAgent;
+    public $Force;
     /**
-     * @param array $Urls 站点的url列表
-     * @param string $UserAgent 访问网站的客户端标识
+     * @param string $Zone 子网所在的可用区ID，不指定将随机选择可用区
+     * @param boolean $Force 是否强制返回默认VPC
      */
     function __construct()
     {
@@ -57,12 +57,12 @@ class CreateSitesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
 
-        if (array_key_exists("UserAgent",$param) and $param["UserAgent"] !== null) {
-            $this->UserAgent = $param["UserAgent"];
+        if (array_key_exists("Force",$param) and $param["Force"] !== null) {
+            $this->Force = $param["Force"];
         }
     }
 }

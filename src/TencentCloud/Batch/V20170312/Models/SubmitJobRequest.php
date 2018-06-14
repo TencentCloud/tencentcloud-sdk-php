@@ -21,8 +21,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getPlacement() 获取作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
- * @method void setPlacement(array $Placement) 设置作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
+ * @method Placement getPlacement() 获取作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
+ * @method void setPlacement(Placement $Placement) 设置作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
  * @method Job getJob() 获取作业信息
  * @method void setJob(Job $Job) 设置作业信息
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
@@ -35,7 +35,7 @@ use TencentCloud\Common\AbstractModel;
 class SubmitJobRequest extends AbstractModel
 {
     /**
-     * @var array 作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
+     * @var Placement 作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
      */
     public $Placement;
 
@@ -49,7 +49,7 @@ class SubmitJobRequest extends AbstractModel
      */
     public $ClientToken;
     /**
-     * @param array $Placement 作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
+     * @param Placement $Placement 作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
      * @param Job $Job 作业信息
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
@@ -66,12 +66,8 @@ class SubmitJobRequest extends AbstractModel
             return;
         }
         if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
-            $this->Placement = [];
-            foreach ($param["Placement"] as $key => $value){
-                $obj = new Placement();
-                $obj->deserialize($value);
-                array_push($this->Placement, $obj);
-            }
+            $this->Placement = new Placement();
+            $this->Placement->deserialize($param["Placement"]);
         }
 
         if (array_key_exists("Job",$param) and $param["Job"] !== null) {

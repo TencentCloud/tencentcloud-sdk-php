@@ -41,8 +41,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setState(string $State) 设置取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
  * @method array getPrivateIpAddressSet() 获取内网IP信息。
  * @method void setPrivateIpAddressSet(array $PrivateIpAddressSet) 设置内网IP信息。
- * @method array getAttachment() 获取绑定的云服务器对象。
- * @method void setAttachment(array $Attachment) 设置绑定的云服务器对象。
+ * @method NetworkInterfaceAttachment getAttachment() 获取绑定的云服务器对象。
+ * @method void setAttachment(NetworkInterfaceAttachment $Attachment) 设置绑定的云服务器对象。
  * @method string getZone() 获取可用区。
  * @method void setZone(string $Zone) 设置可用区。
  * @method string getCreatedTime() 获取创建时间。
@@ -105,7 +105,7 @@ class NetworkInterface extends AbstractModel
     public $PrivateIpAddressSet;
 
     /**
-     * @var array 绑定的云服务器对象。
+     * @var NetworkInterfaceAttachment 绑定的云服务器对象。
      */
     public $Attachment;
 
@@ -129,7 +129,7 @@ class NetworkInterface extends AbstractModel
      * @param string $MacAddress MAC地址。
      * @param string $State 取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
      * @param array $PrivateIpAddressSet 内网IP信息。
-     * @param array $Attachment 绑定的云服务器对象。
+     * @param NetworkInterfaceAttachment $Attachment 绑定的云服务器对象。
      * @param string $Zone 可用区。
      * @param string $CreatedTime 创建时间。
      */
@@ -191,12 +191,8 @@ class NetworkInterface extends AbstractModel
         }
 
         if (array_key_exists("Attachment",$param) and $param["Attachment"] !== null) {
-            $this->Attachment = [];
-            foreach ($param["Attachment"] as $key => $value){
-                $obj = new InstanceChargePrepaid();
-                $obj->deserialize($value);
-                array_push($this->Attachment, $obj);
-            }
+            $this->Attachment = new NetworkInterfaceAttachment();
+            $this->Attachment->deserialize($param["Attachment"]);
         }
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {

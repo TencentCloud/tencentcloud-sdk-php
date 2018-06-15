@@ -43,14 +43,12 @@ try {
     $params = [
         "Filters" => [
             [
-                "Filter" => [
-                    "name" => "zone",
-                    "value" => ["ap-shanghai-1", "ap-shanghai-2"]
-                ]
+                "Name" => "zone",
+                "Values" => ["ap-shanghai-1", "ap-shanghai-2"]
             ]
         ]
     ];
-    $req->fromJsonString(json_encode(params));
+    $req->fromJsonString(json_encode($params));
 
     // 通过client对象调用DescribeInstances方法发起请求。注意请求方法名与请求对象是对应的
     // 返回的resp是一个DescribeInstancesResponse类的实例，与请求对象对应

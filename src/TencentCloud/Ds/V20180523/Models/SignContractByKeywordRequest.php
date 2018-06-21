@@ -27,22 +27,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperation(string $Operation) 设置操作名
  * @method string getContractResId() 获取合同ID
  * @method void setContractResId(string $ContractResId) 设置合同ID
- * @method string getAccountResId() 获取帐户ID
- * @method void setAccountResId(string $AccountResId) 设置帐户ID
+ * @method string getAccountResId() 获取账户ID
+ * @method void setAccountResId(string $AccountResId) 设置账户ID
  * @method string getAuthorizationTime() 获取授权时间，格式为年月日时分秒，例20160801095509
  * @method void setAuthorizationTime(string $AuthorizationTime) 设置授权时间，格式为年月日时分秒，例20160801095509
  * @method string getPosition() 获取授权IP地址
  * @method void setPosition(string $Position) 设置授权IP地址
- * @method array getSignLocations() 获取签署坐标，坐标不得超过合同文件边界
- * @method void setSignLocations(array $SignLocations) 设置签署坐标，坐标不得超过合同文件边界
- * @method string getSealResId() 获取印章ID
- * @method void setSealResId(string $SealResId) 设置印章ID
+ * @method string getSealResId() 获取签章ID
+ * @method void setSealResId(string $SealResId) 设置签章ID
+ * @method SignKeyword getSignKeyword() 获取签署关键字，坐标和范围不得超过合同文件边界
+ * @method void setSignKeyword(SignKeyword $SignKeyword) 设置签署关键字，坐标和范围不得超过合同文件边界
  */
 
 /**
- *SignContractByCoordinate请求参数结构体
+ *SignContractByKeyword请求参数结构体
  */
-class SignContractByCoordinateRequest extends AbstractModel
+class SignContractByKeywordRequest extends AbstractModel
 {
     /**
      * @var string 模块名
@@ -60,7 +60,7 @@ class SignContractByCoordinateRequest extends AbstractModel
     public $ContractResId;
 
     /**
-     * @var string 帐户ID
+     * @var string 账户ID
      */
     public $AccountResId;
 
@@ -75,23 +75,23 @@ class SignContractByCoordinateRequest extends AbstractModel
     public $Position;
 
     /**
-     * @var array 签署坐标，坐标不得超过合同文件边界
-     */
-    public $SignLocations;
-
-    /**
-     * @var string 印章ID
+     * @var string 签章ID
      */
     public $SealResId;
+
+    /**
+     * @var SignKeyword 签署关键字，坐标和范围不得超过合同文件边界
+     */
+    public $SignKeyword;
     /**
      * @param string $Module 模块名
      * @param string $Operation 操作名
      * @param string $ContractResId 合同ID
-     * @param string $AccountResId 帐户ID
+     * @param string $AccountResId 账户ID
      * @param string $AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
      * @param string $Position 授权IP地址
-     * @param array $SignLocations 签署坐标，坐标不得超过合同文件边界
-     * @param string $SealResId 印章ID
+     * @param string $SealResId 签章ID
+     * @param SignKeyword $SignKeyword 签署关键字，坐标和范围不得超过合同文件边界
      */
     function __construct()
     {
@@ -129,17 +129,13 @@ class SignContractByCoordinateRequest extends AbstractModel
             $this->Position = $param["Position"];
         }
 
-        if (array_key_exists("SignLocations",$param) and $param["SignLocations"] !== null) {
-            $this->SignLocations = [];
-            foreach ($param["SignLocations"] as $key => $value){
-                $obj = new SignLocation();
-                $obj->deserialize($value);
-                array_push($this->SignLocations, $obj);
-            }
-        }
-
         if (array_key_exists("SealResId",$param) and $param["SealResId"] !== null) {
             $this->SealResId = $param["SealResId"];
+        }
+
+        if (array_key_exists("SignKeyword",$param) and $param["SignKeyword"] !== null) {
+            $this->SignKeyword = new SignKeyword();
+            $this->SignKeyword->deserialize($param["SignKeyword"]);
         }
     }
 }

@@ -38,6 +38,7 @@ use TencentCloud\Ds\V20180523\Models as Models;
 * @method Models\DownloadContractResponse DownloadContract(Models\DownloadContractRequest $req) 下载合同接口。调用该接口可以下载签署中和签署完成的接口。接口返回任务号，可调用DescribeTaskStatus接口查看任务执行结果。
 * @method Models\SendVcodeResponse SendVcode(Models\SendVcodeRequest $req) 发送验证码接口。此接口用于：企业电子合同平台需要腾讯云发送验证码对其用户进行验证时调用，腾讯云将向其用户联系手机(企业电子合同平台为用户开户时通过接口传入)发送验证码，以验证码授权方式签署合同。企业电子合同平台可以选择签署合同时不校验验证码（需线下沟通）。用户验证工作由企业电子合同平台自身完成。
 * @method Models\SignContractByCoordinateResponse SignContractByCoordinate(Models\SignContractByCoordinateRequest $req) 此接口适用于：客户平台在创建好合同后，由合同签署方对创建的合同内容进行确认，无误后再进行签署。客户平台使用该接口提供详细的PDF文档签名坐标进行签署。
+* @method Models\SignContractByKeywordResponse SignContractByKeyword(Models\SignContractByKeywordRequest $req) 此接口适用于：客户平台在创建好合同后，由合同签署方对创建的合同内容进行确认，无误后再进行签署。客户平台使用该接口对PDF合同文档按照关键字和坐标进行签署。
  */
 
 class DsClient extends AbstractClient

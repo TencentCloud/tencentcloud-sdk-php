@@ -55,7 +55,7 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 * @method Models\DescribeDisasterRecoverGroupsResponse DescribeDisasterRecoverGroups(Models\DescribeDisasterRecoverGroupsRequest $req) 本接口 (DescribeDisasterRecoverGroups)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)信息。
 * @method Models\DescribeHostsResponse DescribeHosts(Models\DescribeHostsRequest $req) 本接口 (DescribeHosts) 用于获取一个或多个CDH实例的详细信息。
 * @method Models\DescribeImageQuotaResponse DescribeImageQuota(Models\DescribeImageQuotaRequest $req) 本接口(DescribeImageQuota)用于查询用户帐号的镜像配额。
-* @method Models\DescribeImageSharePermissionResponse DescribeImageSharePermission(Models\DescribeImageSharePermissionRequest $req) 本接口（ModifyImageSharePermission）用于修改镜像分享信息。
+* @method Models\DescribeImageSharePermissionResponse DescribeImageSharePermission(Models\DescribeImageSharePermissionRequest $req) 本接口（DescribeImageSharePermission）用于查询镜像分享信息。
 * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 本接口(DescribeImages) 用于查看镜像列表。
 
 * 可以通过指定镜像ID来查询指定镜像的详细信息，或通过设定过滤器来查询满足过滤条件的镜像的详细信息。
@@ -97,6 +97,10 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 * 本接口的功能是将密钥对导入到用户账户，并不会自动绑定到实例。如需绑定可以使用[AssociasteInstancesKeyPair](https://cloud.tencent.com/document/api/213/9404)接口。
 * 需指定密钥对名称以及该密钥对的公钥文本。
 * 如果用户只有私钥，可以通过 `SSL` 工具将私钥转换成公钥后再导入。
+* @method Models\InquiryPriceModifyInstancesChargeTypeResponse InquiryPriceModifyInstancesChargeType(Models\InquiryPriceModifyInstancesChargeTypeRequest $req) 本接口 (InquiryPriceModifyInstancesChargeType) 用于切换实例的计费模式询价。
+
+* 只支持从 `POSTPAID_BY_HOUR` 计费模式切换为`PREPAID`计费模式。
+* 关机不收费的实例、`BC1`和`BS1`机型族的实例、设置定时销毁的实例不支持该操作。
 * @method Models\InquiryPriceRenewInstancesResponse InquiryPriceRenewInstances(Models\InquiryPriceRenewInstancesRequest $req) 本接口 (InquiryPriceRenewInstances) 用于续费包年包月实例询价。
 
 * 只支持查询包年包月实例的续费价格。
@@ -136,6 +140,10 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 
 * “实例名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行实例管理操作的依据。
 * 支持批量操作。每次请求批量实例的上限为100。
+* @method Models\ModifyInstancesChargeTypeResponse ModifyInstancesChargeType(Models\ModifyInstancesChargeTypeRequest $req) 本接口 (ModifyInstancesChargeType) 用于切换实例的计费模式。
+
+* 只支持从 `POSTPAID_BY_HOUR` 计费模式切换为`PREPAID`计费模式。
+* 关机不收费的实例、`BC1`和`BS1`机型族的实例、设置定时销毁的实例不支持该操作。
 * @method Models\ModifyInstancesProjectResponse ModifyInstancesProject(Models\ModifyInstancesProjectRequest $req) 本接口 (ModifyInstancesProject) 用于修改实例所属项目。
 
 * 项目为一个虚拟概念，用户可以在一个账户下面建立多个项目，每个项目中管理不同的资源；将多个不同实例分属到不同项目中，后续使用 [`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)接口查询实例，项目ID可用于过滤结果。

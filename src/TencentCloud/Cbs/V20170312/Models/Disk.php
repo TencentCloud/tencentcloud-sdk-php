@@ -35,8 +35,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotAbility(boolean $SnapshotAbility) 设置云盘是否具备创建快照的能力。取值范围：<br><li>false表示不具备<br><li>true表示具备。
  * @method string getDiskName() 获取云硬盘名称。
  * @method void setDiskName(string $DiskName) 设置云硬盘名称。
- * @method integer getDiskSize() 获取云硬盘大小。
- * @method void setDiskSize(integer $DiskSize) 设置云硬盘大小。
+ * @method integer getDiskSize() 获取云硬盘大小，单位GB。
+ * @method void setDiskSize(integer $DiskSize) 设置云硬盘大小，单位GB。
  * @method string getDiskState() 获取云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中。
  * @method void setDiskState(string $DiskState) 设置云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中。
  * @method string getDiskType() 获取云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
@@ -112,7 +112,7 @@ class Disk extends AbstractModel
     public $DiskName;
 
     /**
-     * @var integer 云硬盘大小。
+     * @var integer 云硬盘大小，单位GB。
      */
     public $DiskSize;
 
@@ -203,7 +203,7 @@ class Disk extends AbstractModel
      * @param Placement $Placement 云硬盘所在的位置。
      * @param boolean $SnapshotAbility 云盘是否具备创建快照的能力。取值范围：<br><li>false表示不具备<br><li>true表示具备。
      * @param string $DiskName 云硬盘名称。
-     * @param integer $DiskSize 云硬盘大小。
+     * @param integer $DiskSize 云硬盘大小，单位GB。
      * @param string $DiskState 云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中。
      * @param string $DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
      * @param boolean $Attached 云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载<br><li>true:表示已挂载。

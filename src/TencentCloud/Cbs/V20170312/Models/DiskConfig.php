@@ -29,10 +29,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskUsage(string $DiskUsage) 设置云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
  * @method string getDiskChargeType() 获取付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
  * @method void setDiskChargeType(string $DiskChargeType) 设置付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
- * @method integer getMaxDiskSize() 获取最大可配置云盘大小。
- * @method void setMaxDiskSize(integer $MaxDiskSize) 设置最大可配置云盘大小。
- * @method integer getMinDiskSize() 获取最小可配置云盘大小。
- * @method void setMinDiskSize(integer $MinDiskSize) 设置最小可配置云盘大小。
+ * @method integer getMaxDiskSize() 获取最大可配置云盘大小，单位GB。
+ * @method void setMaxDiskSize(integer $MaxDiskSize) 设置最大可配置云盘大小，单位GB。
+ * @method integer getMinDiskSize() 获取最小可配置云盘大小，单位GB。
+ * @method void setMinDiskSize(integer $MinDiskSize) 设置最小可配置云盘大小，单位GB。
  * @method string getZone() 获取所在[可用区](/document/api/213/9452#zone)。
  * @method void setZone(string $Zone) 设置所在[可用区](/document/api/213/9452#zone)。
  * @method string getDeviceClass() 获取实例机型。
@@ -67,12 +67,12 @@ class DiskConfig extends AbstractModel
     public $DiskChargeType;
 
     /**
-     * @var integer 最大可配置云盘大小。
+     * @var integer 最大可配置云盘大小，单位GB。
      */
     public $MaxDiskSize;
 
     /**
-     * @var integer 最小可配置云盘大小。
+     * @var integer 最小可配置云盘大小，单位GB。
      */
     public $MinDiskSize;
 
@@ -95,8 +95,8 @@ class DiskConfig extends AbstractModel
      * @param string $DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
      * @param string $DiskUsage 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
      * @param string $DiskChargeType 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
-     * @param integer $MaxDiskSize 最大可配置云盘大小。
-     * @param integer $MinDiskSize 最小可配置云盘大小。
+     * @param integer $MaxDiskSize 最大可配置云盘大小，单位GB。
+     * @param integer $MinDiskSize 最小可配置云盘大小，单位GB。
      * @param string $Zone 所在[可用区](/document/api/213/9452#zone)。
      * @param string $DeviceClass 实例机型。
      * @param string $InstanceFamily 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)

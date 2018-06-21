@@ -23,6 +23,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getAccountResId() 获取账户ID
  * @method void setAccountResId(string $AccountResId) 设置账户ID
+ * @method string getAuthorizationTime() 获取授权时间，格式为年月日时分秒，例20160801095509
+ * @method void setAuthorizationTime(string $AuthorizationTime) 设置授权时间，格式为年月日时分秒，例20160801095509
+ * @method string getLocation() 获取授权IP地址
+ * @method void setLocation(string $Location) 设置授权IP地址
+ * @method string getSealId() 获取签章ID
+ * @method void setSealId(string $SealId) 设置签章ID
+ * @method string getImageData() 获取签名图片，优先级比SealId高
+ * @method void setImageData(string $ImageData) 设置签名图片，优先级比SealId高
+ * @method integer getCertType() 获取默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+ * @method void setCertType(integer $CertType) 设置默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
  */
 
 /**
@@ -34,8 +44,38 @@ class SignInfo extends AbstractModel
      * @var string 账户ID
      */
     public $AccountResId;
+
+    /**
+     * @var string 授权时间，格式为年月日时分秒，例20160801095509
+     */
+    public $AuthorizationTime;
+
+    /**
+     * @var string 授权IP地址
+     */
+    public $Location;
+
+    /**
+     * @var string 签章ID
+     */
+    public $SealId;
+
+    /**
+     * @var string 签名图片，优先级比SealId高
+     */
+    public $ImageData;
+
+    /**
+     * @var integer 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     */
+    public $CertType;
     /**
      * @param string $AccountResId 账户ID
+     * @param string $AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
+     * @param string $Location 授权IP地址
+     * @param string $SealId 签章ID
+     * @param string $ImageData 签名图片，优先级比SealId高
+     * @param integer $CertType 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      */
     function __construct()
     {
@@ -51,6 +91,26 @@ class SignInfo extends AbstractModel
         }
         if (array_key_exists("AccountResId",$param) and $param["AccountResId"] !== null) {
             $this->AccountResId = $param["AccountResId"];
+        }
+
+        if (array_key_exists("AuthorizationTime",$param) and $param["AuthorizationTime"] !== null) {
+            $this->AuthorizationTime = $param["AuthorizationTime"];
+        }
+
+        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+            $this->Location = $param["Location"];
+        }
+
+        if (array_key_exists("SealId",$param) and $param["SealId"] !== null) {
+            $this->SealId = $param["SealId"];
+        }
+
+        if (array_key_exists("ImageData",$param) and $param["ImageData"] !== null) {
+            $this->ImageData = $param["ImageData"];
+        }
+
+        if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
+            $this->CertType = $param["CertType"];
         }
     }
 }

@@ -27,8 +27,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperation(string $Operation) 设置操作名
  * @method string getAccountResId() 获取帐号ID
  * @method void setAccountResId(string $AccountResId) 设置帐号ID
- * @method string getImgUrl() 获取签章链接
- * @method void setImgUrl(string $ImgUrl) 设置签章链接
+ * @method string getImgUrl() 获取签章链接，图片必须为png格式
+ * @method void setImgUrl(string $ImgUrl) 设置签章链接，图片必须为png格式
  */
 
 /**
@@ -52,14 +52,14 @@ class CreateSealRequest extends AbstractModel
     public $AccountResId;
 
     /**
-     * @var string 签章链接
+     * @var string 签章链接，图片必须为png格式
      */
     public $ImgUrl;
     /**
      * @param string $Module 模块名
      * @param string $Operation 操作名
      * @param string $AccountResId 帐号ID
-     * @param string $ImgUrl 签章链接
+     * @param string $ImgUrl 签章链接，图片必须为png格式
      */
     function __construct()
     {

@@ -21,6 +21,10 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method integer getProgress() 获取监控任务包含的站点列表的平均扫描进度。
+ * @method void setProgress(integer $Progress) 设置监控任务包含的站点列表的平均扫描进度。
+ * @method integer getPageCount() 获取扫描页面总数。
+ * @method void setPageCount(integer $PageCount) 设置扫描页面总数。
  * @method Monitor getBasic() 获取监控任务基础信息。
  * @method void setBasic(Monitor $Basic) 设置监控任务基础信息。
  * @method array getSites() 获取监控任务包含的站点列表。
@@ -39,10 +43,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulsLowNumber(integer $VulsLowNumber) 设置低风险漏洞数量。
  * @method integer getVulsNoticeNumber() 获取提示数量。
  * @method void setVulsNoticeNumber(integer $VulsNoticeNumber) 设置提示数量。
- * @method integer getProgress() 获取监控任务包含的站点列表的平均扫描进度。
- * @method void setProgress(integer $Progress) 设置监控任务包含的站点列表的平均扫描进度。
- * @method integer getPageCount() 获取扫描页面总数。
- * @method void setPageCount(integer $PageCount) 设置扫描页面总数。
  */
 
 /**
@@ -50,6 +50,16 @@ use TencentCloud\Common\AbstractModel;
  */
 class MonitorsDetail extends AbstractModel
 {
+    /**
+     * @var integer 监控任务包含的站点列表的平均扫描进度。
+     */
+    public $Progress;
+
+    /**
+     * @var integer 扫描页面总数。
+     */
+    public $PageCount;
+
     /**
      * @var Monitor 监控任务基础信息。
      */
@@ -94,17 +104,9 @@ class MonitorsDetail extends AbstractModel
      * @var integer 提示数量。
      */
     public $VulsNoticeNumber;
-
     /**
-     * @var integer 监控任务包含的站点列表的平均扫描进度。
-     */
-    public $Progress;
-
-    /**
-     * @var integer 扫描页面总数。
-     */
-    public $PageCount;
-    /**
+     * @param integer $Progress 监控任务包含的站点列表的平均扫描进度。
+     * @param integer $PageCount 扫描页面总数。
      * @param Monitor $Basic 监控任务基础信息。
      * @param array $Sites 监控任务包含的站点列表。
      * @param integer $SiteNumber 监控任务包含的站点列表数量。
@@ -114,8 +116,6 @@ class MonitorsDetail extends AbstractModel
      * @param integer $VulsMiddleNumber 中风险漏洞数量。
      * @param integer $VulsLowNumber 低风险漏洞数量。
      * @param integer $VulsNoticeNumber 提示数量。
-     * @param integer $Progress 监控任务包含的站点列表的平均扫描进度。
-     * @param integer $PageCount 扫描页面总数。
      */
     function __construct()
     {
@@ -129,6 +129,14 @@ class MonitorsDetail extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
+        }
+
+        if (array_key_exists("PageCount",$param) and $param["PageCount"] !== null) {
+            $this->PageCount = $param["PageCount"];
+        }
+
         if (array_key_exists("Basic",$param) and $param["Basic"] !== null) {
             $this->Basic = new Monitor();
             $this->Basic->deserialize($param["Basic"]);
@@ -174,14 +182,6 @@ class MonitorsDetail extends AbstractModel
 
         if (array_key_exists("VulsNoticeNumber",$param) and $param["VulsNoticeNumber"] !== null) {
             $this->VulsNoticeNumber = $param["VulsNoticeNumber"];
-        }
-
-        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
-            $this->Progress = $param["Progress"];
-        }
-
-        if (array_key_exists("PageCount",$param) and $param["PageCount"] !== null) {
-            $this->PageCount = $param["PageCount"];
         }
     }
 }

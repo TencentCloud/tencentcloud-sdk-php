@@ -21,8 +21,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDBInstanceId() 获取实例ID。
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。
+ * @method string getDBInstanceId() 获取实例ID
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID
  */
 
 /**
@@ -31,11 +31,11 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBInstanceAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例ID
      */
     public $DBInstanceId;
     /**
-     * @param string $DBInstanceId 实例ID。
+     * @param string $DBInstanceId 实例ID
      */
     function __construct()
     {

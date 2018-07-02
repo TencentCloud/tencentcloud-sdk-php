@@ -21,12 +21,12 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPageSize() 获取每页显示数量，默认返回10条。
- * @method void setPageSize(integer $PageSize) 设置每页显示数量，默认返回10条。
- * @method integer getPageNumber() 获取分页序号，从1开始。
- * @method void setPageNumber(integer $PageNumber) 设置分页序号，从1开始。
  * @method array getFilters() 获取过滤条件，目前支持：db-instance-id、db-instance-name两种。
  * @method void setFilters(array $Filters) 设置过滤条件，目前支持：db-instance-id、db-instance-name两种。
+ * @method integer getLimit() 获取每页显示数量，默认返回10条。
+ * @method void setLimit(integer $Limit) 设置每页显示数量，默认返回10条。
+ * @method integer getOffset() 获取分页序号，从0开始。
+ * @method void setOffset(integer $Offset) 设置分页序号，从0开始。
  */
 
 /**
@@ -35,23 +35,23 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer 每页显示数量，默认返回10条。
-     */
-    public $PageSize;
-
-    /**
-     * @var integer 分页序号，从1开始。
-     */
-    public $PageNumber;
-
-    /**
      * @var array 过滤条件，目前支持：db-instance-id、db-instance-name两种。
      */
     public $Filters;
+
     /**
-     * @param integer $PageSize 每页显示数量，默认返回10条。
-     * @param integer $PageNumber 分页序号，从1开始。
+     * @var integer 每页显示数量，默认返回10条。
+     */
+    public $Limit;
+
+    /**
+     * @var integer 分页序号，从0开始。
+     */
+    public $Offset;
+    /**
      * @param array $Filters 过滤条件，目前支持：db-instance-id、db-instance-name两种。
+     * @param integer $Limit 每页显示数量，默认返回10条。
+     * @param integer $Offset 分页序号，从0开始。
      */
     function __construct()
     {
@@ -65,14 +65,6 @@ class DescribeDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
-            $this->PageSize = $param["PageSize"];
-        }
-
-        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
-            $this->PageNumber = $param["PageNumber"];
-        }
-
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -80,6 +72,14 @@ class DescribeDBInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

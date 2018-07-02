@@ -23,12 +23,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getDiskType() 获取云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
  * @method void setDiskType(string $DiskType) 设置云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
- * @method integer getDiskSize() 获取云盘大小，取值范围： 普通云硬盘:10GB ~ 4000G；高性能云硬盘:50GB ~ 4000GB；SSD云硬盘:100GB ~ 4000GB，步长均为10GB。
- * @method void setDiskSize(integer $DiskSize) 设置云盘大小，取值范围： 普通云硬盘:10GB ~ 4000G；高性能云硬盘:50GB ~ 4000GB；SSD云硬盘:100GB ~ 4000GB，步长均为10GB。
- * @method string getDiskChargeType() 获取付费模式，目前只有预付费，即只能取值为PREPAID。
- * @method void setDiskChargeType(string $DiskChargeType) 设置付费模式，目前只有预付费，即只能取值为PREPAID。
- * @method DiskChargePrepaid getDiskChargePrepaid() 获取预付费相关参数设置，通过该参数可以指定包年包月云盘的购买时长，预付费云盘该参数必传。
- * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) 设置预付费相关参数设置，通过该参数可以指定包年包月云盘的购买时长，预付费云盘该参数必传。
+ * @method integer getDiskSize() 获取云硬盘大小，单位为GB。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
+ * @method void setDiskSize(integer $DiskSize) 设置云硬盘大小，单位为GB。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
+ * @method string getDiskChargeType() 获取云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
+ * @method void setDiskChargeType(string $DiskChargeType) 设置云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
+ * @method DiskChargePrepaid getDiskChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
+ * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
  * @method integer getDiskCount() 获取购买云盘的数量。不填则默认为1。
  * @method void setDiskCount(integer $DiskCount) 设置购买云盘的数量。不填则默认为1。
  * @method integer getProjectId() 获取云盘所属项目ID。
@@ -46,17 +46,17 @@ class InquiryPriceCreateDisksRequest extends AbstractModel
     public $DiskType;
 
     /**
-     * @var integer 云盘大小，取值范围： 普通云硬盘:10GB ~ 4000G；高性能云硬盘:50GB ~ 4000GB；SSD云硬盘:100GB ~ 4000GB，步长均为10GB。
+     * @var integer 云硬盘大小，单位为GB。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
      */
     public $DiskSize;
 
     /**
-     * @var string 付费模式，目前只有预付费，即只能取值为PREPAID。
+     * @var string 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
      */
     public $DiskChargeType;
 
     /**
-     * @var DiskChargePrepaid 预付费相关参数设置，通过该参数可以指定包年包月云盘的购买时长，预付费云盘该参数必传。
+     * @var DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
      */
     public $DiskChargePrepaid;
 
@@ -71,9 +71,9 @@ class InquiryPriceCreateDisksRequest extends AbstractModel
     public $ProjectId;
     /**
      * @param string $DiskType 云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
-     * @param integer $DiskSize 云盘大小，取值范围： 普通云硬盘:10GB ~ 4000G；高性能云硬盘:50GB ~ 4000GB；SSD云硬盘:100GB ~ 4000GB，步长均为10GB。
-     * @param string $DiskChargeType 付费模式，目前只有预付费，即只能取值为PREPAID。
-     * @param DiskChargePrepaid $DiskChargePrepaid 预付费相关参数设置，通过该参数可以指定包年包月云盘的购买时长，预付费云盘该参数必传。
+     * @param integer $DiskSize 云硬盘大小，单位为GB。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
+     * @param string $DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
+     * @param DiskChargePrepaid $DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
      * @param integer $DiskCount 购买云盘的数量。不填则默认为1。
      * @param integer $ProjectId 云盘所属项目ID。
      */

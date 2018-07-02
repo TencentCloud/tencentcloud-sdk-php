@@ -27,10 +27,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersion(string $Version) 设置PostgreSQL的内核版本编号
  * @method string getVersionName() 获取内核编号对应的完整版本名称
  * @method void setVersionName(string $VersionName) 设置内核编号对应的完整版本名称
- * @method array getCpu() 获取CPU核数
- * @method void setCpu(array $Cpu) 设置CPU核数
- * @method array getMemory() 获取内存大小，单位：MB
- * @method void setMemory(array $Memory) 设置内存大小，单位：MB
+ * @method integer getCpu() 获取CPU核数
+ * @method void setCpu(integer $Cpu) 设置CPU核数
+ * @method integer getMemory() 获取内存大小，单位：MB
+ * @method void setMemory(integer $Memory) 设置内存大小，单位：MB
  * @method integer getMaxStorage() 获取该规格所支持最大存储容量，单位：GB
  * @method void setMaxStorage(integer $MaxStorage) 设置该规格所支持最大存储容量，单位：GB
  * @method integer getMinStorage() 获取该规格所支持最小存储容量，单位：GB
@@ -62,12 +62,12 @@ class SpecItemInfo extends AbstractModel
     public $VersionName;
 
     /**
-     * @var array CPU核数
+     * @var integer CPU核数
      */
     public $Cpu;
 
     /**
-     * @var array 内存大小，单位：MB
+     * @var integer 内存大小，单位：MB
      */
     public $Memory;
 
@@ -94,8 +94,8 @@ class SpecItemInfo extends AbstractModel
      * @param string $SpecCode 规格ID
      * @param string $Version PostgreSQL的内核版本编号
      * @param string $VersionName 内核编号对应的完整版本名称
-     * @param array $Cpu CPU核数
-     * @param array $Memory 内存大小，单位：MB
+     * @param integer $Cpu CPU核数
+     * @param integer $Memory 内存大小，单位：MB
      * @param integer $MaxStorage 该规格所支持最大存储容量，单位：GB
      * @param integer $MinStorage 该规格所支持最小存储容量，单位：GB
      * @param integer $Qps 该规格的预估QPS
@@ -126,21 +126,11 @@ class SpecItemInfo extends AbstractModel
         }
 
         if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = [];
-            foreach ($param["Cpu"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->Cpu, $obj);
-            }
+            $this->Cpu = $param["Cpu"];
         }
 
         if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = [];
-            foreach ($param["Memory"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->Memory, $obj);
-            }
+            $this->Memory = $param["Memory"];
         }
 
         if (array_key_exists("MaxStorage",$param) and $param["MaxStorage"] !== null) {

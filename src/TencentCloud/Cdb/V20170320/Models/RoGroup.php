@@ -21,10 +21,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRoGroupId() 获取只读组ID
- * @method void setRoGroupId(string $RoGroupId) 设置只读组ID
  * @method string getRoGroupMode() 获取只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组
  * @method void setRoGroupMode(string $RoGroupMode) 设置只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组
+ * @method string getRoGroupId() 获取只读组ID
+ * @method void setRoGroupId(string $RoGroupId) 设置只读组ID
  * @method string getRoGroupName() 获取只读组名称
  * @method void setRoGroupName(string $RoGroupName) 设置只读组名称
  * @method integer getRoOfflineDelay() 获取是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值值，只读实例将被隔离。可选值：1-启用；0-不启用
@@ -37,6 +37,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWeightMode(string $WeightMode) 设置读写权重分配模式，可选值：system-系统自动分配；custom-自定义
  * @method integer getWeight() 获取权重值
  * @method void setWeight(integer $Weight) 设置权重值
+ * @method array getRoInstances() 获取只读组中的只读实例详情
+ * @method void setRoInstances(array $RoInstances) 设置只读组中的只读实例详情
+ * @method string getVip() 获取只读组的内网IP
+ * @method void setVip(string $Vip) 设置只读组的内网IP
+ * @method integer getVport() 获取只读组的内网端口号
+ * @method void setVport(integer $Vport) 设置只读组的内网端口号
  */
 
 /**
@@ -45,14 +51,14 @@ use TencentCloud\Common\AbstractModel;
 class RoGroup extends AbstractModel
 {
     /**
-     * @var string 只读组ID
-     */
-    public $RoGroupId;
-
-    /**
      * @var string 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组
      */
     public $RoGroupMode;
+
+    /**
+     * @var string 只读组ID
+     */
+    public $RoGroupId;
 
     /**
      * @var string 只读组名称
@@ -83,15 +89,33 @@ class RoGroup extends AbstractModel
      * @var integer 权重值
      */
     public $Weight;
+
     /**
-     * @param string $RoGroupId 只读组ID
+     * @var array 只读组中的只读实例详情
+     */
+    public $RoInstances;
+
+    /**
+     * @var string 只读组的内网IP
+     */
+    public $Vip;
+
+    /**
+     * @var integer 只读组的内网端口号
+     */
+    public $Vport;
+    /**
      * @param string $RoGroupMode 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组
+     * @param string $RoGroupId 只读组ID
      * @param string $RoGroupName 只读组名称
      * @param integer $RoOfflineDelay 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值值，只读实例将被隔离。可选值：1-启用；0-不启用
      * @param integer $RoMaxDelayTime 延迟阀值
      * @param integer $MinRoInGroup 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除
      * @param string $WeightMode 读写权重分配模式，可选值：system-系统自动分配；custom-自定义
      * @param integer $Weight 权重值
+     * @param array $RoInstances 只读组中的只读实例详情
+     * @param string $Vip 只读组的内网IP
+     * @param integer $Vport 只读组的内网端口号
      */
     function __construct()
     {
@@ -105,12 +129,12 @@ class RoGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RoGroupId",$param) and $param["RoGroupId"] !== null) {
-            $this->RoGroupId = $param["RoGroupId"];
-        }
-
         if (array_key_exists("RoGroupMode",$param) and $param["RoGroupMode"] !== null) {
             $this->RoGroupMode = $param["RoGroupMode"];
+        }
+
+        if (array_key_exists("RoGroupId",$param) and $param["RoGroupId"] !== null) {
+            $this->RoGroupId = $param["RoGroupId"];
         }
 
         if (array_key_exists("RoGroupName",$param) and $param["RoGroupName"] !== null) {
@@ -135,6 +159,23 @@ class RoGroup extends AbstractModel
 
         if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
             $this->Weight = $param["Weight"];
+        }
+
+        if (array_key_exists("RoInstances",$param) and $param["RoInstances"] !== null) {
+            $this->RoInstances = [];
+            foreach ($param["RoInstances"] as $key => $value){
+                $obj = new RoInstanceInfo();
+                $obj->deserialize($value);
+                array_push($this->RoInstances, $obj);
+            }
+        }
+
+        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
+            $this->Vip = $param["Vip"];
+        }
+
+        if (array_key_exists("Vport",$param) and $param["Vport"] !== null) {
+            $this->Vport = $param["Vport"];
         }
     }
 }

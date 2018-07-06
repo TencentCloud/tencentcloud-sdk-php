@@ -21,6 +21,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method integer getGoodsNum() 获取实例数量，默认值为1, 最小值1，最大值为100
+ * @method void setGoodsNum(integer $GoodsNum) 设置实例数量，默认值为1, 最小值1，最大值为100
+ * @method integer getMemory() 获取实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
+ * @method void setMemory(integer $Memory) 设置实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
+ * @method integer getVolume() 获取实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
+ * @method void setVolume(integer $Volume) 设置实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
  * @method string getEngineVersion() 获取MySQL版本，值包括：5.5、5.6和5.7，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的实例版本
  * @method void setEngineVersion(string $EngineVersion) 设置MySQL版本，值包括：5.5、5.6和5.7，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的实例版本
  * @method string getUniqVpcId() 获取私有网络ID，如果不传则默认选择基础网络，请使用[查询私有网络列表](/document/api/215/15778)
@@ -29,12 +35,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有网络下的子网ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)
  * @method integer getProjectId() 获取项目ID，不填为默认项目。请使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID，不填为默认项目。请使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口获取项目ID
- * @method integer getGoodsNum() 获取实例数量，默认值为1, 最小值1，最大值为100
- * @method void setGoodsNum(integer $GoodsNum) 设置实例数量，默认值为1, 最小值1，最大值为100
- * @method integer getMemory() 获取实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
- * @method void setMemory(integer $Memory) 设置实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
- * @method integer getVolume() 获取实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
- * @method void setVolume(integer $Volume) 设置实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
  * @method string getZone() 获取可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的可用区
  * @method void setZone(string $Zone) 设置可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的可用区
  * @method string getMasterInstanceId() 获取实例ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例ID，请使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872)接口查询云数据库实例ID
@@ -73,6 +73,21 @@ use TencentCloud\Common\AbstractModel;
 class CreateDBInstanceHourRequest extends AbstractModel
 {
     /**
+     * @var integer 实例数量，默认值为1, 最小值1，最大值为100
+     */
+    public $GoodsNum;
+
+    /**
+     * @var integer 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
+     */
+    public $Memory;
+
+    /**
+     * @var integer 实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
+     */
+    public $Volume;
+
+    /**
      * @var string MySQL版本，值包括：5.5、5.6和5.7，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的实例版本
      */
     public $EngineVersion;
@@ -91,21 +106,6 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @var integer 项目ID，不填为默认项目。请使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口获取项目ID
      */
     public $ProjectId;
-
-    /**
-     * @var integer 实例数量，默认值为1, 最小值1，最大值为100
-     */
-    public $GoodsNum;
-
-    /**
-     * @var integer 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
-     */
-    public $Memory;
-
-    /**
-     * @var integer 实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
-     */
-    public $Volume;
 
     /**
      * @var string 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的可用区
@@ -182,13 +182,13 @@ class CreateDBInstanceHourRequest extends AbstractModel
      */
     public $InstanceName;
     /**
+     * @param integer $GoodsNum 实例数量，默认值为1, 最小值1，最大值为100
+     * @param integer $Memory 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
+     * @param integer $Volume 实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
      * @param string $EngineVersion MySQL版本，值包括：5.5、5.6和5.7，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的实例版本
      * @param string $UniqVpcId 私有网络ID，如果不传则默认选择基础网络，请使用[查询私有网络列表](/document/api/215/15778)
      * @param string $UniqSubnetId 私有网络下的子网ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)
      * @param integer $ProjectId 项目ID，不填为默认项目。请使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口获取项目ID
-     * @param integer $GoodsNum 实例数量，默认值为1, 最小值1，最大值为100
-     * @param integer $Memory 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
-     * @param integer $Volume 实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
      * @param string $Zone 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的可用区
      * @param string $MasterInstanceId 实例ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例ID，请使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872)接口查询云数据库实例ID
      * @param string $InstanceRole 实例类型，默认为 master，支持值包括：master-表示主实例，dr-表示灾备实例，ro-表示只读实例
@@ -217,6 +217,18 @@ class CreateDBInstanceHourRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("GoodsNum",$param) and $param["GoodsNum"] !== null) {
+            $this->GoodsNum = $param["GoodsNum"];
+        }
+
+        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
+            $this->Memory = $param["Memory"];
+        }
+
+        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
+            $this->Volume = $param["Volume"];
+        }
+
         if (array_key_exists("EngineVersion",$param) and $param["EngineVersion"] !== null) {
             $this->EngineVersion = $param["EngineVersion"];
         }
@@ -231,18 +243,6 @@ class CreateDBInstanceHourRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
-        }
-
-        if (array_key_exists("GoodsNum",$param) and $param["GoodsNum"] !== null) {
-            $this->GoodsNum = $param["GoodsNum"];
-        }
-
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
-        }
-
-        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
-            $this->Volume = $param["Volume"];
         }
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {

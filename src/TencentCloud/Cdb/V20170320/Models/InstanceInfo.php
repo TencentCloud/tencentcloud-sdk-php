@@ -27,8 +27,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区信息
  * @method integer getInitFlag() 获取初始化标志
  * @method void setInitFlag(integer $InitFlag) 设置初始化标志
- * @method array getRoVipInfo() 获取只读vip信息
- * @method void setRoVipInfo(array $RoVipInfo) 设置只读vip信息
+ * @method RoVipInfo getRoVipInfo() 获取只读vip信息
+ * @method void setRoVipInfo(RoVipInfo $RoVipInfo) 设置只读vip信息
  * @method integer getMemory() 获取内存容量
  * @method void setMemory(integer $Memory) 设置内存容量
  * @method integer getStatus() 获取实例状态
@@ -61,8 +61,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployMode(integer $DeployMode) 设置可用区部署方式
  * @method integer getTaskStatus() 获取实例任务状态
  * @method void setTaskStatus(integer $TaskStatus) 设置实例任务状态
- * @method MasterInfo getMasterInfo() 获取主实例信息
- * @method void setMasterInfo(MasterInfo $MasterInfo) 设置主实例信息
  * @method string getDeviceType() 获取实例售卖机型
  * @method void setDeviceType(string $DeviceType) 设置实例售卖机型
  * @method string getEngineVersion() 获取内核版本
@@ -89,6 +87,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络描述符
  * @method string getUniqSubnetId() 获取子网描述符
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网描述符
+ * @method MasterInfo getMasterInfo() 获取主实例信息
+ * @method void setMasterInfo(MasterInfo $MasterInfo) 设置主实例信息
  */
 
 /**
@@ -112,7 +112,7 @@ class InstanceInfo extends AbstractModel
     public $InitFlag;
 
     /**
-     * @var array 只读vip信息
+     * @var RoVipInfo 只读vip信息
      */
     public $RoVipInfo;
 
@@ -197,11 +197,6 @@ class InstanceInfo extends AbstractModel
     public $TaskStatus;
 
     /**
-     * @var MasterInfo 主实例信息
-     */
-    public $MasterInfo;
-
-    /**
      * @var string 实例售卖机型
      */
     public $DeviceType;
@@ -265,11 +260,16 @@ class InstanceInfo extends AbstractModel
      * @var string 子网描述符
      */
     public $UniqSubnetId;
+
+    /**
+     * @var MasterInfo 主实例信息
+     */
+    public $MasterInfo;
     /**
      * @param integer $WanStatus 外网状态
      * @param string $Zone 可用区信息
      * @param integer $InitFlag 初始化标志
-     * @param array $RoVipInfo 只读vip信息
+     * @param RoVipInfo $RoVipInfo 只读vip信息
      * @param integer $Memory 内存容量
      * @param integer $Status 实例状态
      * @param integer $VpcId 私有网络ID
@@ -286,7 +286,6 @@ class InstanceInfo extends AbstractModel
      * @param string $DeadlineTime 到期时间
      * @param integer $DeployMode 可用区部署方式
      * @param integer $TaskStatus 实例任务状态
-     * @param MasterInfo $MasterInfo 主实例信息
      * @param string $DeviceType 实例售卖机型
      * @param string $EngineVersion 内核版本
      * @param string $InstanceName 实例名称
@@ -300,6 +299,7 @@ class InstanceInfo extends AbstractModel
      * @param integer $CdbError 实例状态
      * @param string $UniqVpcId 私有网络描述符
      * @param string $UniqSubnetId 子网描述符
+     * @param MasterInfo $MasterInfo 主实例信息
      */
     function __construct()
     {
@@ -326,12 +326,8 @@ class InstanceInfo extends AbstractModel
         }
 
         if (array_key_exists("RoVipInfo",$param) and $param["RoVipInfo"] !== null) {
-            $this->RoVipInfo = [];
-            foreach ($param["RoVipInfo"] as $key => $value){
-                $obj = new RoVipInfo();
-                $obj->deserialize($value);
-                array_push($this->RoVipInfo, $obj);
-            }
+            $this->RoVipInfo = new RoVipInfo();
+            $this->RoVipInfo->deserialize($param["RoVipInfo"]);
         }
 
         if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
@@ -404,11 +400,6 @@ class InstanceInfo extends AbstractModel
             $this->TaskStatus = $param["TaskStatus"];
         }
 
-        if (array_key_exists("MasterInfo",$param) and $param["MasterInfo"] !== null) {
-            $this->MasterInfo = new MasterInfo();
-            $this->MasterInfo->deserialize($param["MasterInfo"]);
-        }
-
         if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
             $this->DeviceType = $param["DeviceType"];
         }
@@ -464,6 +455,11 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
             $this->UniqSubnetId = $param["UniqSubnetId"];
+        }
+
+        if (array_key_exists("MasterInfo",$param) and $param["MasterInfo"] !== null) {
+            $this->MasterInfo = new MasterInfo();
+            $this->MasterInfo->deserialize($param["MasterInfo"]);
         }
     }
 }

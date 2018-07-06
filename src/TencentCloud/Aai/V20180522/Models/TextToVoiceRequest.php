@@ -25,14 +25,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setText(string $Text) 设置合成语音的源文本
  * @method string getSessionId() 获取一次请求对应一个SessionId，会原样返回
  * @method void setSessionId(string $SessionId) 设置一次请求对应一个SessionId，会原样返回
- * @method integer getProjectId() 获取项目id
- * @method void setProjectId(integer $ProjectId) 设置项目id
  * @method integer getModelType() 获取模型类型，1-默认模型
  * @method void setModelType(integer $ModelType) 设置模型类型，1-默认模型
- * @method float getVolume() 获取音量大小，暂仅支持默认值1.0
- * @method void setVolume(float $Volume) 设置音量大小，暂仅支持默认值1.0
- * @method float getSpeed() 获取语速，暂仅支持默认值1.0
- * @method void setSpeed(float $Speed) 设置语速，暂仅支持默认值1.0
+ * @method float getVolume() 获取音量大小，暂仅支持默认值1
+ * @method void setVolume(float $Volume) 设置音量大小，暂仅支持默认值1
+ * @method float getSpeed() 获取语速，暂仅支持默认值1
+ * @method void setSpeed(float $Speed) 设置语速，暂仅支持默认值1
+ * @method integer getProjectId() 获取用户自定义项目id，默认为0
+ * @method void setProjectId(integer $ProjectId) 设置用户自定义项目id，默认为0
  * @method integer getVoiceType() 获取音色，1-默认音色
  * @method void setVoiceType(integer $VoiceType) 设置音色，1-默认音色
  * @method integer getPrimaryLanguage() 获取主语言类型<li>1-中文(包括粤语)，最大300字符</li><li>2-英文，最大支持600字符</li>
@@ -57,24 +57,24 @@ class TextToVoiceRequest extends AbstractModel
     public $SessionId;
 
     /**
-     * @var integer 项目id
-     */
-    public $ProjectId;
-
-    /**
      * @var integer 模型类型，1-默认模型
      */
     public $ModelType;
 
     /**
-     * @var float 音量大小，暂仅支持默认值1.0
+     * @var float 音量大小，暂仅支持默认值1
      */
     public $Volume;
 
     /**
-     * @var float 语速，暂仅支持默认值1.0
+     * @var float 语速，暂仅支持默认值1
      */
     public $Speed;
+
+    /**
+     * @var integer 用户自定义项目id，默认为0
+     */
+    public $ProjectId;
 
     /**
      * @var integer 音色，1-默认音色
@@ -93,10 +93,10 @@ class TextToVoiceRequest extends AbstractModel
     /**
      * @param string $Text 合成语音的源文本
      * @param string $SessionId 一次请求对应一个SessionId，会原样返回
-     * @param integer $ProjectId 项目id
      * @param integer $ModelType 模型类型，1-默认模型
-     * @param float $Volume 音量大小，暂仅支持默认值1.0
-     * @param float $Speed 语速，暂仅支持默认值1.0
+     * @param float $Volume 音量大小，暂仅支持默认值1
+     * @param float $Speed 语速，暂仅支持默认值1
+     * @param integer $ProjectId 用户自定义项目id，默认为0
      * @param integer $VoiceType 音色，1-默认音色
      * @param integer $PrimaryLanguage 主语言类型<li>1-中文(包括粤语)，最大300字符</li><li>2-英文，最大支持600字符</li>
      * @param integer $SampleRate 音频采样率：暂仅支持16k
@@ -121,10 +121,6 @@ class TextToVoiceRequest extends AbstractModel
             $this->SessionId = $param["SessionId"];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
-        }
-
         if (array_key_exists("ModelType",$param) and $param["ModelType"] !== null) {
             $this->ModelType = $param["ModelType"];
         }
@@ -135,6 +131,10 @@ class TextToVoiceRequest extends AbstractModel
 
         if (array_key_exists("Speed",$param) and $param["Speed"] !== null) {
             $this->Speed = $param["Speed"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
 
         if (array_key_exists("VoiceType",$param) and $param["VoiceType"] !== null) {

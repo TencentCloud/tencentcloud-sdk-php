@@ -21,10 +21,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getClientToken() 获取用于保证请求幂等性的字符串。
- * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。
  * @method Placement getPlacement() 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
  * @method void setPlacement(Placement $Placement) 设置实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+ * @method string getClientToken() 获取用于保证请求幂等性的字符串。
+ * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。
  * @method ChargePrepaid getHostChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method void setHostChargePrepaid(ChargePrepaid $HostChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method string getHostChargeType() 获取实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
@@ -41,14 +41,14 @@ use TencentCloud\Common\AbstractModel;
 class AllocateHostsRequest extends AbstractModel
 {
     /**
-     * @var string 用于保证请求幂等性的字符串。
-     */
-    public $ClientToken;
-
-    /**
      * @var Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
     public $Placement;
+
+    /**
+     * @var string 用于保证请求幂等性的字符串。
+     */
+    public $ClientToken;
 
     /**
      * @var ChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
@@ -70,8 +70,8 @@ class AllocateHostsRequest extends AbstractModel
      */
     public $HostCount;
     /**
-     * @param string $ClientToken 用于保证请求幂等性的字符串。
      * @param Placement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     * @param string $ClientToken 用于保证请求幂等性的字符串。
      * @param ChargePrepaid $HostChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      * @param string $HostChargeType 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
      * @param string $HostType CDH实例机型，默认为：'HS1'。
@@ -89,13 +89,13 @@ class AllocateHostsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
-        }
-
         if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
             $this->Placement = new Placement();
             $this->Placement->deserialize($param["Placement"]);
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
 
         if (array_key_exists("HostChargePrepaid",$param) and $param["HostChargePrepaid"] !== null) {

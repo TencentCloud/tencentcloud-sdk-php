@@ -21,8 +21,6 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDevice() 获取设备类型
- * @method void setDevice(string $Device) 设置设备类型
  * @method string getType() 获取售卖规格描述
  * @method void setType(string $Type) 设置售卖规格描述
  * @method string getCdbType() 获取实例类型
@@ -47,6 +45,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInfo(string $Info) 设置应用场景描述
  * @method integer getStatus() 获取状态值
  * @method void setStatus(integer $Status) 设置状态值
+ * @method string getDevice() 获取设备类型
+ * @method void setDevice(string $Device) 设置设备类型
  */
 
 /**
@@ -54,11 +54,6 @@ use TencentCloud\Common\AbstractModel;
  */
 class SellConfig extends AbstractModel
 {
-    /**
-     * @var string 设备类型
-     */
-    public $Device;
-
     /**
      * @var string 售卖规格描述
      */
@@ -118,8 +113,12 @@ class SellConfig extends AbstractModel
      * @var integer 状态值
      */
     public $Status;
+
     /**
-     * @param string $Device 设备类型
+     * @var string 设备类型
+     */
+    public $Device;
+    /**
      * @param string $Type 售卖规格描述
      * @param string $CdbType 实例类型
      * @param integer $Memory 内存大小，单位为MB
@@ -132,6 +131,7 @@ class SellConfig extends AbstractModel
      * @param integer $Iops 每秒IO数量
      * @param string $Info 应用场景描述
      * @param integer $Status 状态值
+     * @param string $Device 设备类型
      */
     function __construct()
     {
@@ -145,10 +145,6 @@ class SellConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Device",$param) and $param["Device"] !== null) {
-            $this->Device = $param["Device"];
-        }
-
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
         }
@@ -195,6 +191,10 @@ class SellConfig extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Device",$param) and $param["Device"] !== null) {
+            $this->Device = $param["Device"];
         }
     }
 }

@@ -23,10 +23,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
- * @method string getDescription() 获取数据库账号的备注信息。
- * @method void setDescription(string $Description) 设置数据库账号的备注信息。
  * @method array getAccounts() 获取云数据库账号。
  * @method void setAccounts(array $Accounts) 设置云数据库账号。
+ * @method string getDescription() 获取数据库账号的备注信息。
+ * @method void setDescription(string $Description) 设置数据库账号的备注信息。
  */
 
 /**
@@ -40,18 +40,18 @@ class ModifyAccountDescriptionRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 数据库账号的备注信息。
-     */
-    public $Description;
-
-    /**
      * @var array 云数据库账号。
      */
     public $Accounts;
+
+    /**
+     * @var string 数据库账号的备注信息。
+     */
+    public $Description;
     /**
      * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @param string $Description 数据库账号的备注信息。
      * @param array $Accounts 云数据库账号。
+     * @param string $Description 数据库账号的备注信息。
      */
     function __construct()
     {
@@ -69,10 +69,6 @@ class ModifyAccountDescriptionRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
-        }
-
         if (array_key_exists("Accounts",$param) and $param["Accounts"] !== null) {
             $this->Accounts = [];
             foreach ($param["Accounts"] as $key => $value){
@@ -80,6 +76,10 @@ class ModifyAccountDescriptionRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Accounts, $obj);
             }
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

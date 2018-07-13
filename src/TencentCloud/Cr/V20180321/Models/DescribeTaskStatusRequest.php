@@ -17,33 +17,41 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getMaxPrice() 获取竞价出价
- * @method void setMaxPrice(string $MaxPrice) 设置竞价出价
- * @method string getSpotInstanceType() 获取竞价请求类型，当前仅支持类型：one-time
- * @method void setSpotInstanceType(string $SpotInstanceType) 设置竞价请求类型，当前仅支持类型：one-time
+ * @method string getModule() 获取模块名
+ * @method void setModule(string $Module) 设置模块名
+ * @method string getOperation() 获取操作名
+ * @method void setOperation(string $Operation) 设置操作名
+ * @method integer getTaskId() 获取任务ID
+ * @method void setTaskId(integer $TaskId) 设置任务ID
  */
 
 /**
- *竞价相关选项
+ *DescribeTaskStatus请求参数结构体
  */
-class SpotMarketOptions extends AbstractModel
+class DescribeTaskStatusRequest extends AbstractModel
 {
     /**
-     * @var string 竞价出价
+     * @var string 模块名
      */
-    public $MaxPrice;
+    public $Module;
 
     /**
-     * @var string 竞价请求类型，当前仅支持类型：one-time
+     * @var string 操作名
      */
-    public $SpotInstanceType;
+    public $Operation;
+
     /**
-     * @param string $MaxPrice 竞价出价
-     * @param string $SpotInstanceType 竞价请求类型，当前仅支持类型：one-time
+     * @var integer 任务ID
+     */
+    public $TaskId;
+    /**
+     * @param string $Module 模块名
+     * @param string $Operation 操作名
+     * @param integer $TaskId 任务ID
      */
     function __construct()
     {
@@ -57,12 +65,16 @@ class SpotMarketOptions extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaxPrice",$param) and $param["MaxPrice"] !== null) {
-            $this->MaxPrice = $param["MaxPrice"];
+        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
+            $this->Module = $param["Module"];
         }
 
-        if (array_key_exists("SpotInstanceType",$param) and $param["SpotInstanceType"] !== null) {
-            $this->SpotInstanceType = $param["SpotInstanceType"];
+        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
+            $this->Operation = $param["Operation"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

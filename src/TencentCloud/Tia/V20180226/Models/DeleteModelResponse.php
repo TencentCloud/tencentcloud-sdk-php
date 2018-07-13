@@ -17,33 +17,25 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Tia\V20180226\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getMaxPrice() 获取竞价出价
- * @method void setMaxPrice(string $MaxPrice) 设置竞价出价
- * @method string getSpotInstanceType() 获取竞价请求类型，当前仅支持类型：one-time
- * @method void setSpotInstanceType(string $SpotInstanceType) 设置竞价请求类型，当前仅支持类型：one-time
+ * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
- *竞价相关选项
+ *DeleteModel返回参数结构体
  */
-class SpotMarketOptions extends AbstractModel
+class DeleteModelResponse extends AbstractModel
 {
     /**
-     * @var string 竞价出价
+     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
-    public $MaxPrice;
-
+    public $RequestId;
     /**
-     * @var string 竞价请求类型，当前仅支持类型：one-time
-     */
-    public $SpotInstanceType;
-    /**
-     * @param string $MaxPrice 竞价出价
-     * @param string $SpotInstanceType 竞价请求类型，当前仅支持类型：one-time
+     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
     {
@@ -57,12 +49,8 @@ class SpotMarketOptions extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaxPrice",$param) and $param["MaxPrice"] !== null) {
-            $this->MaxPrice = $param["MaxPrice"];
-        }
-
-        if (array_key_exists("SpotInstanceType",$param) and $param["SpotInstanceType"] !== null) {
-            $this->SpotInstanceType = $param["SpotInstanceType"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

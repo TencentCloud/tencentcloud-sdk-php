@@ -17,33 +17,33 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDatabaseName() 获取数据库名
- * @method void setDatabaseName(string $DatabaseName) 设置数据库名
- * @method array getTableList() 获取数据表数组
- * @method void setTableList(array $TableList) 设置数据表数组
+ * @method integer getTaskId() 获取任务ID
+ * @method void setTaskId(integer $TaskId) 设置任务ID
+ * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
- *数据库表列表
+ *UploadFile返回参数结构体
  */
-class DatabaseTableList extends AbstractModel
+class UploadFileResponse extends AbstractModel
 {
     /**
-     * @var string 数据库名
+     * @var integer 任务ID
      */
-    public $DatabaseName;
+    public $TaskId;
 
     /**
-     * @var array 数据表数组
+     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
-    public $TableList;
+    public $RequestId;
     /**
-     * @param string $DatabaseName 数据库名
-     * @param array $TableList 数据表数组
+     * @param integer $TaskId 任务ID
+     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
     {
@@ -57,12 +57,12 @@ class DatabaseTableList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DatabaseName",$param) and $param["DatabaseName"] !== null) {
-            $this->DatabaseName = $param["DatabaseName"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
-        if (array_key_exists("TableList",$param) and $param["TableList"] !== null) {
-            $this->TableList = $param["TableList"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

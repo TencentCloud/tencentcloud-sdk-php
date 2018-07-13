@@ -17,32 +17,32 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Tia\V20180226\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getDatabaseTableCode() 获取下载位点
- * @method void setDatabaseTableCode(integer $DatabaseTableCode) 设置下载位点
+ * @method string getTiaVersion() 获取Agent版本, 用于私有集群的agent安装
+ * @method void setTiaVersion(string $TiaVersion) 设置Agent版本, 用于私有集群的agent安装
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
- *DescribeBackupDownloadDbTableCode返回参数结构体
+ *InstallAgent返回参数结构体
  */
-class DescribeBackupDownloadDbTableCodeResponse extends AbstractModel
+class InstallAgentResponse extends AbstractModel
 {
     /**
-     * @var integer 下载位点
+     * @var string Agent版本, 用于私有集群的agent安装
      */
-    public $DatabaseTableCode;
+    public $TiaVersion;
 
     /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $DatabaseTableCode 下载位点
+     * @param string $TiaVersion Agent版本, 用于私有集群的agent安装
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -57,8 +57,8 @@ class DescribeBackupDownloadDbTableCodeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DatabaseTableCode",$param) and $param["DatabaseTableCode"] !== null) {
-            $this->DatabaseTableCode = $param["DatabaseTableCode"];
+        if (array_key_exists("TiaVersion",$param) and $param["TiaVersion"] !== null) {
+            $this->TiaVersion = $param["TiaVersion"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

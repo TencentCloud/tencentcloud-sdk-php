@@ -23,8 +23,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getText() 获取合成语音的源文本
  * @method void setText(string $Text) 设置合成语音的源文本
- * @method string getSessionId() 获取一次请求对应一个SessionId，会原样返回
- * @method void setSessionId(string $SessionId) 设置一次请求对应一个SessionId，会原样返回
+ * @method string getSessionId() 获取一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复
+ * @method void setSessionId(string $SessionId) 设置一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复
  * @method integer getModelType() 获取模型类型，1-默认模型
  * @method void setModelType(integer $ModelType) 设置模型类型，1-默认模型
  * @method float getVolume() 获取音量大小，暂仅支持默认值1
@@ -52,7 +52,7 @@ class TextToVoiceRequest extends AbstractModel
     public $Text;
 
     /**
-     * @var string 一次请求对应一个SessionId，会原样返回
+     * @var string 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复
      */
     public $SessionId;
 
@@ -92,7 +92,7 @@ class TextToVoiceRequest extends AbstractModel
     public $SampleRate;
     /**
      * @param string $Text 合成语音的源文本
-     * @param string $SessionId 一次请求对应一个SessionId，会原样返回
+     * @param string $SessionId 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复
      * @param integer $ModelType 模型类型，1-默认模型
      * @param float $Volume 音量大小，暂仅支持默认值1
      * @param float $Speed 语速，暂仅支持默认值1

@@ -33,6 +33,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableMulticast(boolean $EnableMulticast) 设置是否开启组播。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method array getDnsServerSet() 获取DNS列表
+ * @method void setDnsServerSet(array $DnsServerSet) 设置DNS列表
+ * @method string getDomainName() 获取DHCP域名选项值
+ * @method void setDomainName(string $DomainName) 设置DHCP域名选项值
+ * @method string getDhcpOptionsId() 获取DHCP选项集ID
+ * @method void setDhcpOptionsId(string $DhcpOptionsId) 设置DHCP选项集ID
  */
 
 /**
@@ -69,6 +75,21 @@ class Vpc extends AbstractModel
      * @var string 创建时间。
      */
     public $CreatedTime;
+
+    /**
+     * @var array DNS列表
+     */
+    public $DnsServerSet;
+
+    /**
+     * @var string DHCP域名选项值
+     */
+    public $DomainName;
+
+    /**
+     * @var string DHCP选项集ID
+     */
+    public $DhcpOptionsId;
     /**
      * @param string $VpcName Vpc名称。
      * @param string $VpcId VPC实例ID，例如：vpc-azd4dt1c。
@@ -76,6 +97,9 @@ class Vpc extends AbstractModel
      * @param boolean $IsDefault 是否默认VPC。
      * @param boolean $EnableMulticast 是否开启组播。
      * @param string $CreatedTime 创建时间。
+     * @param array $DnsServerSet DNS列表
+     * @param string $DomainName DHCP域名选项值
+     * @param string $DhcpOptionsId DHCP选项集ID
      */
     function __construct()
     {
@@ -111,6 +135,18 @@ class Vpc extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("DnsServerSet",$param) and $param["DnsServerSet"] !== null) {
+            $this->DnsServerSet = $param["DnsServerSet"];
+        }
+
+        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
+            $this->DomainName = $param["DomainName"];
+        }
+
+        if (array_key_exists("DhcpOptionsId",$param) and $param["DhcpOptionsId"] !== null) {
+            $this->DhcpOptionsId = $param["DhcpOptionsId"];
         }
     }
 }

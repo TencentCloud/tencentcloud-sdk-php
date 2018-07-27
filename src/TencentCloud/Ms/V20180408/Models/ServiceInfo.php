@@ -27,6 +27,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCallbackUrl(string $CallbackUrl) 设置任务处理完成后的反向通知回调地址,通知为POST请求，post信息{ItemId:"xxxduuyt-ugusg"}
  * @method string getSubmitSource() 获取提交来源 YYB-应用宝 RDM-rdm MC-控制台 MAC_TOOL-mac工具 WIN_TOOL-window工具
  * @method void setSubmitSource(string $SubmitSource) 设置提交来源 YYB-应用宝 RDM-rdm MC-控制台 MAC_TOOL-mac工具 WIN_TOOL-window工具
+ * @method integer getPlanId() 获取加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。
+ * @method void setPlanId(integer $PlanId) 设置加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。
  */
 
 /**
@@ -48,10 +50,16 @@ class ServiceInfo extends AbstractModel
      * @var string 提交来源 YYB-应用宝 RDM-rdm MC-控制台 MAC_TOOL-mac工具 WIN_TOOL-window工具
      */
     public $SubmitSource;
+
+    /**
+     * @var integer 加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。
+     */
+    public $PlanId;
     /**
      * @param string $ServiceEdition 服务版本，基础版basic,专业版Professional
      * @param string $CallbackUrl 任务处理完成后的反向通知回调地址,通知为POST请求，post信息{ItemId:"xxxduuyt-ugusg"}
      * @param string $SubmitSource 提交来源 YYB-应用宝 RDM-rdm MC-控制台 MAC_TOOL-mac工具 WIN_TOOL-window工具
+     * @param integer $PlanId 加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。
      */
     function __construct()
     {
@@ -75,6 +83,10 @@ class ServiceInfo extends AbstractModel
 
         if (array_key_exists("SubmitSource",$param) and $param["SubmitSource"] !== null) {
             $this->SubmitSource = $param["SubmitSource"];
+        }
+
+        if (array_key_exists("PlanId",$param) and $param["PlanId"] !== null) {
+            $this->PlanId = $param["PlanId"];
         }
     }
 }

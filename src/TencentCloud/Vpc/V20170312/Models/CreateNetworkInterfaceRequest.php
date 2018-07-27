@@ -25,10 +25,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method string getNetworkInterfaceName() 获取弹性网卡名称，最大长度不能超过60个字节。
  * @method void setNetworkInterfaceName(string $NetworkInterfaceName) 设置弹性网卡名称，最大长度不能超过60个字节。
- * @method string getNetworkInterfaceDescription() 获取弹性网卡描述，可任意命名，但不得超过60个字符。
- * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) 设置弹性网卡描述，可任意命名，但不得超过60个字符。
  * @method string getSubnetId() 获取弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
  * @method void setSubnetId(string $SubnetId) 设置弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
+ * @method string getNetworkInterfaceDescription() 获取弹性网卡描述，可任意命名，但不得超过60个字符。
+ * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) 设置弹性网卡描述，可任意命名，但不得超过60个字符。
  * @method integer getSecondaryPrivateIpAddressCount() 获取新申请的内网IP地址个数。
  * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) 设置新申请的内网IP地址个数。
  * @method array getSecurityGroupIds() 获取指定绑定的安全组，例如：['sg-1dd51d']。
@@ -53,14 +53,14 @@ class CreateNetworkInterfaceRequest extends AbstractModel
     public $NetworkInterfaceName;
 
     /**
-     * @var string 弹性网卡描述，可任意命名，但不得超过60个字符。
-     */
-    public $NetworkInterfaceDescription;
-
-    /**
      * @var string 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
      */
     public $SubnetId;
+
+    /**
+     * @var string 弹性网卡描述，可任意命名，但不得超过60个字符。
+     */
+    public $NetworkInterfaceDescription;
 
     /**
      * @var integer 新申请的内网IP地址个数。
@@ -79,8 +79,8 @@ class CreateNetworkInterfaceRequest extends AbstractModel
     /**
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param string $NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
-     * @param string $NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
      * @param string $SubnetId 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
+     * @param string $NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
      * @param integer $SecondaryPrivateIpAddressCount 新申请的内网IP地址个数。
      * @param array $SecurityGroupIds 指定绑定的安全组，例如：['sg-1dd51d']。
      * @param array $PrivateIpAddresses 指定内网IP信息。
@@ -105,12 +105,12 @@ class CreateNetworkInterfaceRequest extends AbstractModel
             $this->NetworkInterfaceName = $param["NetworkInterfaceName"];
         }
 
-        if (array_key_exists("NetworkInterfaceDescription",$param) and $param["NetworkInterfaceDescription"] !== null) {
-            $this->NetworkInterfaceDescription = $param["NetworkInterfaceDescription"];
-        }
-
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("NetworkInterfaceDescription",$param) and $param["NetworkInterfaceDescription"] !== null) {
+            $this->NetworkInterfaceDescription = $param["NetworkInterfaceDescription"];
         }
 
         if (array_key_exists("SecondaryPrivateIpAddressCount",$param) and $param["SecondaryPrivateIpAddressCount"] !== null) {

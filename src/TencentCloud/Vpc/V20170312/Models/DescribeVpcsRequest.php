@@ -25,12 +25,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcIds(array $VpcIds) 设置VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - Boolean - （过滤条件）是否默认VPC。</li>
+<li>is-default - String - （过滤条件）是否默认VPC。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>cidr-block - String - （过滤条件）vpc的cidr。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - Boolean - （过滤条件）是否默认VPC。</li>
+<li>is-default - String - （过滤条件）是否默认VPC。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>cidr-block - String - （过滤条件）vpc的cidr。</li>
  * @method string getOffset() 获取偏移量
@@ -52,7 +52,7 @@ class DescribeVpcsRequest extends AbstractModel
     /**
      * @var array 过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - Boolean - （过滤条件）是否默认VPC。</li>
+<li>is-default - String - （过滤条件）是否默认VPC。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>cidr-block - String - （过滤条件）vpc的cidr。</li>
      */
@@ -71,7 +71,7 @@ class DescribeVpcsRequest extends AbstractModel
      * @param array $VpcIds VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - Boolean - （过滤条件）是否默认VPC。</li>
+<li>is-default - String - （过滤条件）是否默认VPC。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>cidr-block - String - （过滤条件）vpc的cidr。</li>
      * @param string $Offset 偏移量

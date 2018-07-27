@@ -23,10 +23,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getTaskTemplateName() 获取任务模板名称
  * @method void setTaskTemplateName(string $TaskTemplateName) 设置任务模板名称
- * @method string getTaskTemplateDescription() 获取任务模板描述
- * @method void setTaskTemplateDescription(string $TaskTemplateDescription) 设置任务模板描述
  * @method Task getTaskTemplateInfo() 获取任务模板内容，参数要求与任务一致
  * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) 设置任务模板内容，参数要求与任务一致
+ * @method string getTaskTemplateDescription() 获取任务模板描述
+ * @method void setTaskTemplateDescription(string $TaskTemplateDescription) 设置任务模板描述
  */
 
 /**
@@ -40,18 +40,18 @@ class CreateTaskTemplateRequest extends AbstractModel
     public $TaskTemplateName;
 
     /**
-     * @var string 任务模板描述
-     */
-    public $TaskTemplateDescription;
-
-    /**
      * @var Task 任务模板内容，参数要求与任务一致
      */
     public $TaskTemplateInfo;
+
+    /**
+     * @var string 任务模板描述
+     */
+    public $TaskTemplateDescription;
     /**
      * @param string $TaskTemplateName 任务模板名称
-     * @param string $TaskTemplateDescription 任务模板描述
      * @param Task $TaskTemplateInfo 任务模板内容，参数要求与任务一致
+     * @param string $TaskTemplateDescription 任务模板描述
      */
     function __construct()
     {
@@ -69,13 +69,13 @@ class CreateTaskTemplateRequest extends AbstractModel
             $this->TaskTemplateName = $param["TaskTemplateName"];
         }
 
-        if (array_key_exists("TaskTemplateDescription",$param) and $param["TaskTemplateDescription"] !== null) {
-            $this->TaskTemplateDescription = $param["TaskTemplateDescription"];
-        }
-
         if (array_key_exists("TaskTemplateInfo",$param) and $param["TaskTemplateInfo"] !== null) {
             $this->TaskTemplateInfo = new Task();
             $this->TaskTemplateInfo->deserialize($param["TaskTemplateInfo"]);
+        }
+
+        if (array_key_exists("TaskTemplateDescription",$param) and $param["TaskTemplateDescription"] !== null) {
+            $this->TaskTemplateDescription = $param["TaskTemplateDescription"];
         }
     }
 }

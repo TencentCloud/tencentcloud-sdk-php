@@ -21,8 +21,6 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getTags() 获取与云盘绑定的标签，云盘未绑定标签则取值为空。
- * @method void setTags(array $Tags) 设置与云盘绑定的标签，云盘未绑定标签则取值为空。
  * @method string getDiskId() 获取云硬盘ID。
  * @method void setDiskId(string $DiskId) 设置云硬盘ID。
  * @method string getDiskUsage() 获取云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
@@ -69,6 +67,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReturnFailCode(integer $ReturnFailCode) 设置预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
  * @method array getAutoSnapshotPolicyIds() 获取云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
  * @method void setAutoSnapshotPolicyIds(array $AutoSnapshotPolicyIds) 设置云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+ * @method array getTags() 获取与云盘绑定的标签，云盘未绑定标签则取值为空。
+ * @method void setTags(array $Tags) 设置与云盘绑定的标签，云盘未绑定标签则取值为空。
+ * @method boolean getDeleteWithInstance() 获取云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
+ * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
  */
 
 /**
@@ -76,11 +78,6 @@ use TencentCloud\Common\AbstractModel;
  */
 class Disk extends AbstractModel
 {
-    /**
-     * @var array 与云盘绑定的标签，云盘未绑定标签则取值为空。
-     */
-    public $Tags;
-
     /**
      * @var string 云硬盘ID。
      */
@@ -195,8 +192,17 @@ class Disk extends AbstractModel
      * @var array 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
      */
     public $AutoSnapshotPolicyIds;
+
     /**
-     * @param array $Tags 与云盘绑定的标签，云盘未绑定标签则取值为空。
+     * @var array 与云盘绑定的标签，云盘未绑定标签则取值为空。
+     */
+    public $Tags;
+
+    /**
+     * @var boolean 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
+     */
+    public $DeleteWithInstance;
+    /**
      * @param string $DiskId 云硬盘ID。
      * @param string $DiskUsage 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
      * @param string $DiskChargeType 付费模式。取值范围：<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：后付费，即按量计费。
@@ -220,6 +226,8 @@ class Disk extends AbstractModel
      * @param boolean $IsReturnable 判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还<br><li>false:不支持主动退还。
      * @param integer $ReturnFailCode 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
      * @param array $AutoSnapshotPolicyIds 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+     * @param array $Tags 与云盘绑定的标签，云盘未绑定标签则取值为空。
+     * @param boolean $DeleteWithInstance 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
      */
     function __construct()
     {
@@ -233,15 +241,6 @@ class Disk extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
-                $obj = new Tag();
-                $obj->deserialize($value);
-                array_push($this->Tags, $obj);
-            }
-        }
-
         if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
             $this->DiskId = $param["DiskId"];
         }
@@ -333,6 +332,19 @@ class Disk extends AbstractModel
 
         if (array_key_exists("AutoSnapshotPolicyIds",$param) and $param["AutoSnapshotPolicyIds"] !== null) {
             $this->AutoSnapshotPolicyIds = $param["AutoSnapshotPolicyIds"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("DeleteWithInstance",$param) and $param["DeleteWithInstance"] !== null) {
+            $this->DeleteWithInstance = $param["DeleteWithInstance"];
         }
     }
 }

@@ -21,12 +21,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProjectId() 获取项目id，默认0。可在qcloud控制台项目管理页面查询到。
- * @method void setProjectId(string $ProjectId) 设置项目id，默认0。可在qcloud控制台项目管理页面查询到。
  * @method string getGroupName() 获取安全组名称，可任意命名，但不得超过60个字符。
  * @method void setGroupName(string $GroupName) 设置安全组名称，可任意命名，但不得超过60个字符。
  * @method string getGroupDescription() 获取安全组备注，最多100个字符。
  * @method void setGroupDescription(string $GroupDescription) 设置安全组备注，最多100个字符。
+ * @method string getProjectId() 获取项目id，默认0。可在qcloud控制台项目管理页面查询到。
+ * @method void setProjectId(string $ProjectId) 设置项目id，默认0。可在qcloud控制台项目管理页面查询到。
  */
 
 /**
@@ -34,11 +34,6 @@ use TencentCloud\Common\AbstractModel;
  */
 class CreateSecurityGroupRequest extends AbstractModel
 {
-    /**
-     * @var string 项目id，默认0。可在qcloud控制台项目管理页面查询到。
-     */
-    public $ProjectId;
-
     /**
      * @var string 安全组名称，可任意命名，但不得超过60个字符。
      */
@@ -48,10 +43,15 @@ class CreateSecurityGroupRequest extends AbstractModel
      * @var string 安全组备注，最多100个字符。
      */
     public $GroupDescription;
+
     /**
-     * @param string $ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * @var string 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     */
+    public $ProjectId;
+    /**
      * @param string $GroupName 安全组名称，可任意命名，但不得超过60个字符。
      * @param string $GroupDescription 安全组备注，最多100个字符。
+     * @param string $ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
      */
     function __construct()
     {
@@ -65,16 +65,16 @@ class CreateSecurityGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
-        }
-
         if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
             $this->GroupName = $param["GroupName"];
         }
 
         if (array_key_exists("GroupDescription",$param) and $param["GroupDescription"] !== null) {
             $this->GroupDescription = $param["GroupDescription"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

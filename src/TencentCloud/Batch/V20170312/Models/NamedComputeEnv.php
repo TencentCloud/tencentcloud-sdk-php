@@ -23,14 +23,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getEnvName() 获取计算环境名称
  * @method void setEnvName(string $EnvName) 设置计算环境名称
- * @method string getEnvDescription() 获取计算环境描述
- * @method void setEnvDescription(string $EnvDescription) 设置计算环境描述
  * @method string getEnvType() 获取计算环境管理类型
  * @method void setEnvType(string $EnvType) 设置计算环境管理类型
  * @method EnvData getEnvData() 获取计算环境具体参数
  * @method void setEnvData(EnvData $EnvData) 设置计算环境具体参数
  * @method integer getDesiredComputeNodeCount() 获取计算节点期望个数
  * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) 设置计算节点期望个数
+ * @method string getEnvDescription() 获取计算环境描述
+ * @method void setEnvDescription(string $EnvDescription) 设置计算环境描述
  * @method array getMountDataDisks() 获取数据盘挂载选项
  * @method void setMountDataDisks(array $MountDataDisks) 设置数据盘挂载选项
  * @method array getAuthentications() 获取授权信息
@@ -56,11 +56,6 @@ class NamedComputeEnv extends AbstractModel
     public $EnvName;
 
     /**
-     * @var string 计算环境描述
-     */
-    public $EnvDescription;
-
-    /**
      * @var string 计算环境管理类型
      */
     public $EnvType;
@@ -74,6 +69,11 @@ class NamedComputeEnv extends AbstractModel
      * @var integer 计算节点期望个数
      */
     public $DesiredComputeNodeCount;
+
+    /**
+     * @var string 计算环境描述
+     */
+    public $EnvDescription;
 
     /**
      * @var array 数据盘挂载选项
@@ -106,10 +106,10 @@ class NamedComputeEnv extends AbstractModel
     public $ActionIfComputeNodeInactive;
     /**
      * @param string $EnvName 计算环境名称
-     * @param string $EnvDescription 计算环境描述
      * @param string $EnvType 计算环境管理类型
      * @param EnvData $EnvData 计算环境具体参数
      * @param integer $DesiredComputeNodeCount 计算节点期望个数
+     * @param string $EnvDescription 计算环境描述
      * @param array $MountDataDisks 数据盘挂载选项
      * @param array $Authentications 授权信息
      * @param array $InputMappings 输入映射信息
@@ -133,10 +133,6 @@ class NamedComputeEnv extends AbstractModel
             $this->EnvName = $param["EnvName"];
         }
 
-        if (array_key_exists("EnvDescription",$param) and $param["EnvDescription"] !== null) {
-            $this->EnvDescription = $param["EnvDescription"];
-        }
-
         if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
             $this->EnvType = $param["EnvType"];
         }
@@ -148,6 +144,10 @@ class NamedComputeEnv extends AbstractModel
 
         if (array_key_exists("DesiredComputeNodeCount",$param) and $param["DesiredComputeNodeCount"] !== null) {
             $this->DesiredComputeNodeCount = $param["DesiredComputeNodeCount"];
+        }
+
+        if (array_key_exists("EnvDescription",$param) and $param["EnvDescription"] !== null) {
+            $this->EnvDescription = $param["EnvDescription"];
         }
 
         if (array_key_exists("MountDataDisks",$param) and $param["MountDataDisks"] !== null) {

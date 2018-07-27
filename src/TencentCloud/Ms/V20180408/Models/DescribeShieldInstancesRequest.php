@@ -92,7 +92,7 @@ class DescribeShieldInstancesRequest extends AbstractModel
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
-                $obj = new Filters();
+                $obj = new Filter();
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }

@@ -27,12 +27,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceTypes(array $InstanceTypes) 设置实例类型，可取值：1-主实例，2-灾备实例，3-只读实例
  * @method array getVips() 获取实例的内网IP地址
  * @method void setVips(array $Vips) 设置实例的内网IP地址
- * @method array getStatus() 获取实例状态，可取值：0-创建中，1-运行中，4-删除中，5-隔离中
- * @method void setStatus(array $Status) 设置实例状态，可取值：0-创建中，1-运行中，4-删除中，5-隔离中
+ * @method array getStatus() 获取实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
+ * @method void setStatus(array $Status) 设置实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
  * @method integer getOffset() 获取记录偏移量，默认值为0
  * @method void setOffset(integer $Offset) 设置记录偏移量，默认值为0
- * @method integer getLimit() 获取单次请求返回的数量，默认值为20，最大值为100
- * @method void setLimit(integer $Limit) 设置单次请求返回的数量，默认值为20，最大值为100
+ * @method integer getLimit() 获取单次请求返回的数量，默认值为20，最大值为2000
+ * @method void setLimit(integer $Limit) 设置单次请求返回的数量，默认值为20，最大值为2000
  * @method string getSecurityGroupId() 获取安全组ID
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组ID
  * @method array getPayTypes() 获取付费类型，可取值：0-包年包月，1-小时计费
@@ -94,7 +94,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $Vips;
 
     /**
-     * @var array 实例状态，可取值：0-创建中，1-运行中，4-删除中，5-隔离中
+     * @var array 实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
      */
     public $Status;
 
@@ -104,7 +104,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 单次请求返回的数量，默认值为20，最大值为100
+     * @var integer 单次请求返回的数量，默认值为20，最大值为2000
      */
     public $Limit;
 
@@ -206,9 +206,9 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param integer $ProjectId 项目ID，可使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口查询项目ID
      * @param array $InstanceTypes 实例类型，可取值：1-主实例，2-灾备实例，3-只读实例
      * @param array $Vips 实例的内网IP地址
-     * @param array $Status 实例状态，可取值：0-创建中，1-运行中，4-删除中，5-隔离中
+     * @param array $Status 实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
      * @param integer $Offset 记录偏移量，默认值为0
-     * @param integer $Limit 单次请求返回的数量，默认值为20，最大值为100
+     * @param integer $Limit 单次请求返回的数量，默认值为20，最大值为2000
      * @param string $SecurityGroupId 安全组ID
      * @param array $PayTypes 付费类型，可取值：0-包年包月，1-小时计费
      * @param array $InstanceNames 实例名称

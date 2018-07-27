@@ -41,6 +41,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置实例所属安全组
  * @method EnhancedService getEnhancedService() 获取增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
  * @method void setEnhancedService(EnhancedService $EnhancedService) 设置增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
+ * @method string getInstanceChargeType() 获取CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
+ * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取实例的市场相关选项，如竞价实例相关参数
+ * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置实例的市场相关选项，如竞价实例相关参数
  */
 
 /**
@@ -97,6 +101,16 @@ class EnvData extends AbstractModel
      * @var EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
      */
     public $EnhancedService;
+
+    /**
+     * @var string CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
+     */
+    public $InstanceChargeType;
+
+    /**
+     * @var InstanceMarketOptionsRequest 实例的市场相关选项，如竞价实例相关参数
+     */
+    public $InstanceMarketOptions;
     /**
      * @param string $InstanceType CVM实例类型
      * @param string $ImageId CVM镜像ID
@@ -108,6 +122,8 @@ class EnvData extends AbstractModel
      * @param LoginSettings $LoginSettings 实例登录设置
      * @param array $SecurityGroupIds 实例所属安全组
      * @param EnhancedService $EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
+     * @param string $InstanceChargeType CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
+     * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数
      */
     function __construct()
     {
@@ -169,6 +185,15 @@ class EnvData extends AbstractModel
         if (array_key_exists("EnhancedService",$param) and $param["EnhancedService"] !== null) {
             $this->EnhancedService = new EnhancedService();
             $this->EnhancedService->deserialize($param["EnhancedService"]);
+        }
+
+        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
+            $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("InstanceMarketOptions",$param) and $param["InstanceMarketOptions"] !== null) {
+            $this->InstanceMarketOptions = new InstanceMarketOptionsRequest();
+            $this->InstanceMarketOptions->deserialize($param["InstanceMarketOptions"]);
         }
     }
 }

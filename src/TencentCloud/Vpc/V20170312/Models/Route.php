@@ -21,16 +21,18 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getRouteId() 获取路由策略ID。
- * @method void setRouteId(integer $RouteId) 设置路由策略ID。
  * @method string getDestinationCidrBlock() 获取目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
  * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
  * @method string getGatewayType() 获取下一跳类型，目前我们支持的类型有：CVM：公网网关类型的云主机；VPN：vpn网关； DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；SSLVPN：sslvpn网关；NAT：nat网关; NORMAL_CVM：普通云主机。
  * @method void setGatewayType(string $GatewayType) 设置下一跳类型，目前我们支持的类型有：CVM：公网网关类型的云主机；VPN：vpn网关； DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；SSLVPN：sslvpn网关；NAT：nat网关; NORMAL_CVM：普通云主机。
  * @method string getGatewayId() 获取下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
  * @method void setGatewayId(string $GatewayId) 设置下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
+ * @method integer getRouteId() 获取路由策略ID。
+ * @method void setRouteId(integer $RouteId) 设置路由策略ID。
  * @method string getRouteDescription() 获取路由策略描述。
  * @method void setRouteDescription(string $RouteDescription) 设置路由策略描述。
+ * @method boolean getEnabled() 获取是否启用
+ * @method void setEnabled(boolean $Enabled) 设置是否启用
  */
 
 /**
@@ -38,11 +40,6 @@ use TencentCloud\Common\AbstractModel;
  */
 class Route extends AbstractModel
 {
-    /**
-     * @var integer 路由策略ID。
-     */
-    public $RouteId;
-
     /**
      * @var string 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      */
@@ -59,15 +56,26 @@ class Route extends AbstractModel
     public $GatewayId;
 
     /**
+     * @var integer 路由策略ID。
+     */
+    public $RouteId;
+
+    /**
      * @var string 路由策略描述。
      */
     public $RouteDescription;
+
     /**
-     * @param integer $RouteId 路由策略ID。
+     * @var boolean 是否启用
+     */
+    public $Enabled;
+    /**
      * @param string $DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      * @param string $GatewayType 下一跳类型，目前我们支持的类型有：CVM：公网网关类型的云主机；VPN：vpn网关； DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；SSLVPN：sslvpn网关；NAT：nat网关; NORMAL_CVM：普通云主机。
      * @param string $GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
+     * @param integer $RouteId 路由策略ID。
      * @param string $RouteDescription 路由策略描述。
+     * @param boolean $Enabled 是否启用
      */
     function __construct()
     {
@@ -81,10 +89,6 @@ class Route extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteId",$param) and $param["RouteId"] !== null) {
-            $this->RouteId = $param["RouteId"];
-        }
-
         if (array_key_exists("DestinationCidrBlock",$param) and $param["DestinationCidrBlock"] !== null) {
             $this->DestinationCidrBlock = $param["DestinationCidrBlock"];
         }
@@ -97,8 +101,16 @@ class Route extends AbstractModel
             $this->GatewayId = $param["GatewayId"];
         }
 
+        if (array_key_exists("RouteId",$param) and $param["RouteId"] !== null) {
+            $this->RouteId = $param["RouteId"];
+        }
+
         if (array_key_exists("RouteDescription",$param) and $param["RouteDescription"] !== null) {
             $this->RouteDescription = $param["RouteDescription"];
+        }
+
+        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
+            $this->Enabled = $param["Enabled"];
         }
     }
 }

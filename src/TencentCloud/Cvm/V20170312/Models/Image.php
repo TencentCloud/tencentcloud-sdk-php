@@ -21,6 +21,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method string getImageId() 获取镜像ID
+ * @method void setImageId(string $ImageId) 设置镜像ID
+ * @method string getOsName() 获取镜像操作系统
+ * @method void setOsName(string $OsName) 设置镜像操作系统
+ * @method string getImageType() 获取镜像类型
+ * @method void setImageType(string $ImageType) 设置镜像类型
  * @method string getCreatedTime() 获取镜像创建时间
  * @method void setCreatedTime(string $CreatedTime) 设置镜像创建时间
  * @method string getImageName() 获取镜像名称
@@ -33,12 +39,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArchitecture(string $Architecture) 设置镜像架构
  * @method string getImageState() 获取镜像状态
  * @method void setImageState(string $ImageState) 设置镜像状态
- * @method string getImageId() 获取镜像ID
- * @method void setImageId(string $ImageId) 设置镜像ID
- * @method string getOsName() 获取镜像操作系统
- * @method void setOsName(string $OsName) 设置镜像操作系统
- * @method string getImageType() 获取镜像类型
- * @method void setImageType(string $ImageType) 设置镜像类型
  * @method string getPlatform() 获取镜像来源平台
  * @method void setPlatform(string $Platform) 设置镜像来源平台
  * @method string getImageCreator() 获取镜像创建者
@@ -52,6 +52,21 @@ use TencentCloud\Common\AbstractModel;
  */
 class Image extends AbstractModel
 {
+    /**
+     * @var string 镜像ID
+     */
+    public $ImageId;
+
+    /**
+     * @var string 镜像操作系统
+     */
+    public $OsName;
+
+    /**
+     * @var string 镜像类型
+     */
+    public $ImageType;
+
     /**
      * @var string 镜像创建时间
      */
@@ -83,21 +98,6 @@ class Image extends AbstractModel
     public $ImageState;
 
     /**
-     * @var string 镜像ID
-     */
-    public $ImageId;
-
-    /**
-     * @var string 镜像操作系统
-     */
-    public $OsName;
-
-    /**
-     * @var string 镜像类型
-     */
-    public $ImageType;
-
-    /**
      * @var string 镜像来源平台
      */
     public $Platform;
@@ -112,15 +112,15 @@ class Image extends AbstractModel
      */
     public $ImageSource;
     /**
+     * @param string $ImageId 镜像ID
+     * @param string $OsName 镜像操作系统
+     * @param string $ImageType 镜像类型
      * @param string $CreatedTime 镜像创建时间
      * @param string $ImageName 镜像名称
      * @param string $ImageDescription 镜像描述
      * @param integer $ImageSize 镜像大小
      * @param string $Architecture 镜像架构
      * @param string $ImageState 镜像状态
-     * @param string $ImageId 镜像ID
-     * @param string $OsName 镜像操作系统
-     * @param string $ImageType 镜像类型
      * @param string $Platform 镜像来源平台
      * @param string $ImageCreator 镜像创建者
      * @param string $ImageSource 镜像来源
@@ -137,6 +137,18 @@ class Image extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
+        }
+
+        if (array_key_exists("OsName",$param) and $param["OsName"] !== null) {
+            $this->OsName = $param["OsName"];
+        }
+
+        if (array_key_exists("ImageType",$param) and $param["ImageType"] !== null) {
+            $this->ImageType = $param["ImageType"];
+        }
+
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
         }
@@ -159,18 +171,6 @@ class Image extends AbstractModel
 
         if (array_key_exists("ImageState",$param) and $param["ImageState"] !== null) {
             $this->ImageState = $param["ImageState"];
-        }
-
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
-        }
-
-        if (array_key_exists("OsName",$param) and $param["OsName"] !== null) {
-            $this->OsName = $param["OsName"];
-        }
-
-        if (array_key_exists("ImageType",$param) and $param["ImageType"] !== null) {
-            $this->ImageType = $param["ImageType"];
         }
 
         if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {

@@ -33,6 +33,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskTime(integer $TaskTime) 设置加固的提交时间
  * @method string getItemId() 获取任务唯一标识
  * @method void setItemId(string $ItemId) 设置任务唯一标识
+ * @method string getServiceEdition() 获取加固版本，basic基础版，professional专业版
+ * @method void setServiceEdition(string $ServiceEdition) 设置加固版本，basic基础版，professional专业版
  */
 
 /**
@@ -69,6 +71,11 @@ class ShieldInfo extends AbstractModel
      * @var string 任务唯一标识
      */
     public $ItemId;
+
+    /**
+     * @var string 加固版本，basic基础版，professional专业版
+     */
+    public $ServiceEdition;
     /**
      * @param integer $ShieldCode 加固结果的返回码
      * @param integer $ShieldSize 加固后app的大小
@@ -76,6 +83,7 @@ class ShieldInfo extends AbstractModel
      * @param string $AppUrl 加固后的APP下载地址
      * @param integer $TaskTime 加固的提交时间
      * @param string $ItemId 任务唯一标识
+     * @param string $ServiceEdition 加固版本，basic基础版，professional专业版
      */
     function __construct()
     {
@@ -111,6 +119,10 @@ class ShieldInfo extends AbstractModel
 
         if (array_key_exists("ItemId",$param) and $param["ItemId"] !== null) {
             $this->ItemId = $param["ItemId"];
+        }
+
+        if (array_key_exists("ServiceEdition",$param) and $param["ServiceEdition"] !== null) {
+            $this->ServiceEdition = $param["ServiceEdition"];
         }
     }
 }

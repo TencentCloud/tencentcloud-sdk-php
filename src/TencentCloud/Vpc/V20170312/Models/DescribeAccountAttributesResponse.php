@@ -21,8 +21,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getAccountAttributeSet() 获取用户账号私有属性对象
- * @method void setAccountAttributeSet(array $AccountAttributeSet) 设置用户账号私有属性对象
+ * @method array getAccountAttributeSet() 获取用户账号属性对象
+ * @method void setAccountAttributeSet(array $AccountAttributeSet) 设置用户账号属性对象
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -33,7 +33,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccountAttributesResponse extends AbstractModel
 {
     /**
-     * @var array 用户账号私有属性对象
+     * @var array 用户账号属性对象
      */
     public $AccountAttributeSet;
 
@@ -42,7 +42,7 @@ class DescribeAccountAttributesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $AccountAttributeSet 用户账号私有属性对象
+     * @param array $AccountAttributeSet 用户账号属性对象
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()

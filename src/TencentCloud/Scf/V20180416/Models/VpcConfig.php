@@ -17,33 +17,33 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace TencentCloud\Ms\V20180408\Models;
+namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取需要过滤的字段
- * @method void setName(string $Name) 设置需要过滤的字段
- * @method string getValue() 获取需要过滤字段的值
- * @method void setValue(string $Value) 设置需要过滤字段的值
+ * @method string getVpcId() 获取私有网络 的 id
+ * @method void setVpcId(string $VpcId) 设置私有网络 的 id
+ * @method string getSubnetId() 获取子网的 id
+ * @method void setSubnetId(string $SubnetId) 设置子网的 id
  */
 
 /**
- *筛选数据结构
+ *私有网络参数配置
  */
-class Filters extends AbstractModel
+class VpcConfig extends AbstractModel
 {
     /**
-     * @var string 需要过滤的字段
+     * @var string 私有网络 的 id
      */
-    public $Name;
+    public $VpcId;
 
     /**
-     * @var string 需要过滤字段的值
+     * @var string 子网的 id
      */
-    public $Value;
+    public $SubnetId;
     /**
-     * @param string $Name 需要过滤的字段
-     * @param string $Value 需要过滤字段的值
+     * @param string $VpcId 私有网络 的 id
+     * @param string $SubnetId 子网的 id
      */
     function __construct()
     {
@@ -57,12 +57,12 @@ class Filters extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

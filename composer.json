@@ -1,5 +1,5 @@
 {
-    "name": "aaronwu/tencentcloud-sdk-php",
+    "name": "aaronwu/tencentcloudsdk-php",
     "description": "For self use Fork from TencentCloudApi php sdk",
     "type": "library",
     "homepage": "https://github.com/TencentCloud/tencentcloud-sdk-php",

@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置协议, 取值: TCP,UDP, ICMP。
  * @method string getPort() 获取端口(all, 离散port,  range)。
  * @method void setPort(string $Port) 设置端口(all, 离散port,  range)。
- * @method array getServiceTemplate() 获取协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
- * @method void setServiceTemplate(array $ServiceTemplate) 设置协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
+ * @method ServiceTemplateSpecification getServiceTemplate() 获取协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
+ * @method void setServiceTemplate(ServiceTemplateSpecification $ServiceTemplate) 设置协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
  * @method string getCidrBlock() 获取网段或IP(互斥)。
  * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)。
  * @method string getSecurityGroupId() 获取已绑定安全组的网段或IP。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置已绑定安全组的网段或IP。
- * @method string getAddressTemplate() 获取IP地址ID或者ID地址组ID。
- * @method void setAddressTemplate(string $AddressTemplate) 设置IP地址ID或者ID地址组ID。
+ * @method AddressTemplateSpecification getAddressTemplate() 获取IP地址ID或者ID地址组ID。
+ * @method void setAddressTemplate(AddressTemplateSpecification $AddressTemplate) 设置IP地址ID或者ID地址组ID。
  * @method string getAction() 获取ACCEPT 或 DROP。
  * @method void setAction(string $Action) 设置ACCEPT 或 DROP。
  * @method string getPolicyDescription() 获取安全组规则描述。
@@ -59,7 +59,7 @@ class SecurityGroupPolicy extends AbstractModel
     public $Port;
 
     /**
-     * @var array 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
+     * @var ServiceTemplateSpecification 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
      */
     public $ServiceTemplate;
 
@@ -74,7 +74,7 @@ class SecurityGroupPolicy extends AbstractModel
     public $SecurityGroupId;
 
     /**
-     * @var string IP地址ID或者ID地址组ID。
+     * @var AddressTemplateSpecification IP地址ID或者ID地址组ID。
      */
     public $AddressTemplate;
 
@@ -91,10 +91,10 @@ class SecurityGroupPolicy extends AbstractModel
      * @param integer $PolicyIndex 安全组规则索引号。
      * @param string $Protocol 协议, 取值: TCP,UDP, ICMP。
      * @param string $Port 端口(all, 离散port,  range)。
-     * @param array $ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
+     * @param ServiceTemplateSpecification $ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
      * @param string $CidrBlock 网段或IP(互斥)。
      * @param string $SecurityGroupId 已绑定安全组的网段或IP。
-     * @param string $AddressTemplate IP地址ID或者ID地址组ID。
+     * @param AddressTemplateSpecification $AddressTemplate IP地址ID或者ID地址组ID。
      * @param string $Action ACCEPT 或 DROP。
      * @param string $PolicyDescription 安全组规则描述。
      */
@@ -123,7 +123,8 @@ class SecurityGroupPolicy extends AbstractModel
         }
 
         if (array_key_exists("ServiceTemplate",$param) and $param["ServiceTemplate"] !== null) {
-            $this->ServiceTemplate = $param["ServiceTemplate"];
+            $this->ServiceTemplate = new ServiceTemplateSpecification();
+            $this->ServiceTemplate->deserialize($param["ServiceTemplate"]);
         }
 
         if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
@@ -135,7 +136,8 @@ class SecurityGroupPolicy extends AbstractModel
         }
 
         if (array_key_exists("AddressTemplate",$param) and $param["AddressTemplate"] !== null) {
-            $this->AddressTemplate = $param["AddressTemplate"];
+            $this->AddressTemplate = new AddressTemplateSpecification();
+            $this->AddressTemplate->deserialize($param["AddressTemplate"]);
         }
 
         if (array_key_exists("Action",$param) and $param["Action"] !== null) {

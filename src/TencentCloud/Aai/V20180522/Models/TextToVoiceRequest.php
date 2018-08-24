@@ -24,18 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复
  * @method integer getModelType() 获取模型类型，1-默认模型
  * @method void setModelType(integer $ModelType) 设置模型类型，1-默认模型
- * @method float getVolume() 获取音量大小，暂仅支持默认值1
- * @method void setVolume(float $Volume) 设置音量大小，暂仅支持默认值1
- * @method float getSpeed() 获取语速，暂仅支持默认值1
- * @method void setSpeed(float $Speed) 设置语速，暂仅支持默认值1
- * @method integer getProjectId() 获取用户自定义项目id，默认为0
- * @method void setProjectId(integer $ProjectId) 设置用户自定义项目id，默认为0
- * @method integer getVoiceType() 获取音色，1-默认音色
- * @method void setVoiceType(integer $VoiceType) 设置音色，1-默认音色
- * @method integer getPrimaryLanguage() 获取主语言类型<li>1-中文(包括粤语)，最大300字符</li><li>2-英文，最大支持600字符</li>
- * @method void setPrimaryLanguage(integer $PrimaryLanguage) 设置主语言类型<li>1-中文(包括粤语)，最大300字符</li><li>2-英文，最大支持600字符</li>
- * @method integer getSampleRate() 获取音频采样率：暂仅支持16k
- * @method void setSampleRate(integer $SampleRate) 设置音频采样率：暂仅支持16k
+ * @method float getVolume() 获取音量大小，范围：[0，10]，分别对应10个等级的音量，默认为0
+ * @method void setVolume(float $Volume) 设置音量大小，范围：[0，10]，分别对应10个等级的音量，默认为0
+ * @method float getSpeed() 获取语速，范围：[-2，2]，分别对应不同语速：0.6倍，0.8倍，1.0倍，1.2倍，1.5倍，默认为0
+ * @method void setSpeed(float $Speed) 设置语速，范围：[-2，2]，分别对应不同语速：0.6倍，0.8倍，1.0倍，1.2倍，1.5倍，默认为0
+ * @method integer getProjectId() 获取项目id，用户自定义，默认为0
+ * @method void setProjectId(integer $ProjectId) 设置项目id，用户自定义，默认为0
+ * @method integer getVoiceType() 获取音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
+ * @method void setVoiceType(integer $VoiceType) 设置音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
+ * @method integer getPrimaryLanguage() 获取主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
+ * @method void setPrimaryLanguage(integer $PrimaryLanguage) 设置主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
+ * @method integer getSampleRate() 获取音频采样率，16000：16k，8000：8k，默认16k
+ * @method void setSampleRate(integer $SampleRate) 设置音频采样率，16000：16k，8000：8k，默认16k
  */
 
 /**
@@ -59,44 +59,44 @@ class TextToVoiceRequest extends AbstractModel
     public $ModelType;
 
     /**
-     * @var float 音量大小，暂仅支持默认值1
+     * @var float 音量大小，范围：[0，10]，分别对应10个等级的音量，默认为0
      */
     public $Volume;
 
     /**
-     * @var float 语速，暂仅支持默认值1
+     * @var float 语速，范围：[-2，2]，分别对应不同语速：0.6倍，0.8倍，1.0倍，1.2倍，1.5倍，默认为0
      */
     public $Speed;
 
     /**
-     * @var integer 用户自定义项目id，默认为0
+     * @var integer 项目id，用户自定义，默认为0
      */
     public $ProjectId;
 
     /**
-     * @var integer 音色，1-默认音色
+     * @var integer 音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
      */
     public $VoiceType;
 
     /**
-     * @var integer 主语言类型<li>1-中文(包括粤语)，最大300字符</li><li>2-英文，最大支持600字符</li>
+     * @var integer 主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
      */
     public $PrimaryLanguage;
 
     /**
-     * @var integer 音频采样率：暂仅支持16k
+     * @var integer 音频采样率，16000：16k，8000：8k，默认16k
      */
     public $SampleRate;
     /**
      * @param string $Text 合成语音的源文本
      * @param string $SessionId 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复
      * @param integer $ModelType 模型类型，1-默认模型
-     * @param float $Volume 音量大小，暂仅支持默认值1
-     * @param float $Speed 语速，暂仅支持默认值1
-     * @param integer $ProjectId 用户自定义项目id，默认为0
-     * @param integer $VoiceType 音色，1-默认音色
-     * @param integer $PrimaryLanguage 主语言类型<li>1-中文(包括粤语)，最大300字符</li><li>2-英文，最大支持600字符</li>
-     * @param integer $SampleRate 音频采样率：暂仅支持16k
+     * @param float $Volume 音量大小，范围：[0，10]，分别对应10个等级的音量，默认为0
+     * @param float $Speed 语速，范围：[-2，2]，分别对应不同语速：0.6倍，0.8倍，1.0倍，1.2倍，1.5倍，默认为0
+     * @param integer $ProjectId 项目id，用户自定义，默认为0
+     * @param integer $VoiceType 音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
+     * @param integer $PrimaryLanguage 主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
+     * @param integer $SampleRate 音频采样率，16000：16k，8000：8k，默认16k
      */
     function __construct()
     {

@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置内网IP描述信息。
  * @method boolean getIsWanIpBlocked() 获取公网IP是否被封堵。
  * @method void setIsWanIpBlocked(boolean $IsWanIpBlocked) 设置公网IP是否被封堵。
+ * @method string getState() 获取IP状态：
+PENDING：生产中
+MIGRATING：迁移中
+DELETING：删除中
+AVAILABLE：可用的
+ * @method void setState(string $State) 设置IP状态：
+PENDING：生产中
+MIGRATING：迁移中
+DELETING：删除中
+AVAILABLE：可用的
  */
 
 /**
@@ -66,6 +76,15 @@ class PrivateIpAddressSpecification extends AbstractModel
      * @var boolean 公网IP是否被封堵。
      */
     public $IsWanIpBlocked;
+
+    /**
+     * @var string IP状态：
+PENDING：生产中
+MIGRATING：迁移中
+DELETING：删除中
+AVAILABLE：可用的
+     */
+    public $State;
     /**
      * @param string $PrivateIpAddress 内网IP地址。
      * @param boolean $Primary 是否是主IP。
@@ -73,6 +92,11 @@ class PrivateIpAddressSpecification extends AbstractModel
      * @param string $AddressId EIP实例ID，例如：eip-11112222。
      * @param string $Description 内网IP描述信息。
      * @param boolean $IsWanIpBlocked 公网IP是否被封堵。
+     * @param string $State IP状态：
+PENDING：生产中
+MIGRATING：迁移中
+DELETING：删除中
+AVAILABLE：可用的
      */
     function __construct()
     {
@@ -108,6 +132,10 @@ class PrivateIpAddressSpecification extends AbstractModel
 
         if (array_key_exists("IsWanIpBlocked",$param) and $param["IsWanIpBlocked"] !== null) {
             $this->IsWanIpBlocked = $param["IsWanIpBlocked"];
+        }
+
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
         }
     }
 }

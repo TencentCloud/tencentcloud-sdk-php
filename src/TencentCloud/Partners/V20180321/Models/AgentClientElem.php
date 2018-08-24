@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientUin(string $ClientUin) 设置代客账号ID
  * @method integer getApplyTime() 获取代客申请时间戳
  * @method void setApplyTime(integer $ApplyTime) 设置代客申请时间戳
- * @method string getClientFlag() 获取代客类型，可能值为a/b
- * @method void setClientFlag(string $ClientFlag) 设置代客类型，可能值为a/b
+ * @method string getClientFlag() 获取代客类型，可能值为a/b/c
+ * @method void setClientFlag(string $ClientFlag) 设置代客类型，可能值为a/b/c
  * @method string getMail() 获取代客邮箱，打码显示
  * @method void setMail(string $Mail) 设置代客邮箱，打码显示
  * @method string getPhone() 获取代客手机，打码显示
@@ -35,7 +35,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *描述代客信息
+ *描述待审核代客信息
  */
 class AgentClientElem extends AbstractModel
 {
@@ -55,7 +55,7 @@ class AgentClientElem extends AbstractModel
     public $ApplyTime;
 
     /**
-     * @var string 代客类型，可能值为a/b
+     * @var string 代客类型，可能值为a/b/c
      */
     public $ClientFlag;
 
@@ -77,7 +77,7 @@ class AgentClientElem extends AbstractModel
      * @param string $Uin 代理商账号ID
      * @param string $ClientUin 代客账号ID
      * @param integer $ApplyTime 代客申请时间戳
-     * @param string $ClientFlag 代客类型，可能值为a/b
+     * @param string $ClientFlag 代客类型，可能值为a/b/c
      * @param string $Mail 代客邮箱，打码显示
      * @param string $Phone 代客手机，打码显示
      * @param integer $HasOverdueBill 0表示不欠费，1表示欠费

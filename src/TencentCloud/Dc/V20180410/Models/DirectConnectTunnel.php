@@ -23,13 +23,33 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDirectConnectId() 获取物理专线ID
  * @method void setDirectConnectId(string $DirectConnectId) 设置物理专线ID
  * @method string getState() 获取专线通道状态
+AVAILABLE:就绪或者已连接
+PENDING:申请中
+ALLOCATING:配置中
+ALLOCATED:配置完成
+ALTERING:修改中
+DELETING:删除中
+DELETED:删除完成
+COMFIRMING:待接受
+REJECTED:拒绝
  * @method void setState(string $State) 设置专线通道状态
+AVAILABLE:就绪或者已连接
+PENDING:申请中
+ALLOCATING:配置中
+ALLOCATED:配置完成
+ALTERING:修改中
+DELETING:删除中
+DELETED:删除完成
+COMFIRMING:待接受
+REJECTED:拒绝
  * @method string getDirectConnectOwnerAccount() 获取物理专线的拥有者，开发商账号 ID
  * @method void setDirectConnectOwnerAccount(string $DirectConnectOwnerAccount) 设置物理专线的拥有者，开发商账号 ID
  * @method string getOwnerAccount() 获取专线通道的拥有者，开发商账号 ID
  * @method void setOwnerAccount(string $OwnerAccount) 设置专线通道的拥有者，开发商账号 ID
- * @method string getNetworkType() 获取网络类型，分别为VPC、BMVPC VPC：私有网络 BMVPC：黑石网络
- * @method void setNetworkType(string $NetworkType) 设置网络类型，分别为VPC、BMVPC VPC：私有网络 BMVPC：黑石网络
+ * @method string getNetworkType() 获取网络类型，分别为VPC、BMVPC、CCN
+ VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
+ * @method void setNetworkType(string $NetworkType) 设置网络类型，分别为VPC、BMVPC、CCN
+ VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
  * @method string getNetworkRegion() 获取VPC地域
  * @method void setNetworkRegion(string $NetworkRegion) 设置VPC地域
  * @method string getVpcId() 获取私有网络统一 ID 或者黑石网络统一 ID
@@ -73,6 +93,15 @@ class DirectConnectTunnel extends AbstractModel
 
     /**
      * @var string 专线通道状态
+AVAILABLE:就绪或者已连接
+PENDING:申请中
+ALLOCATING:配置中
+ALLOCATED:配置完成
+ALTERING:修改中
+DELETING:删除中
+DELETED:删除完成
+COMFIRMING:待接受
+REJECTED:拒绝
      */
     public $State;
 
@@ -87,7 +116,8 @@ class DirectConnectTunnel extends AbstractModel
     public $OwnerAccount;
 
     /**
-     * @var string 网络类型，分别为VPC、BMVPC VPC：私有网络 BMVPC：黑石网络
+     * @var string 网络类型，分别为VPC、BMVPC、CCN
+ VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
      */
     public $NetworkType;
 
@@ -154,9 +184,19 @@ class DirectConnectTunnel extends AbstractModel
      * @param string $DirectConnectTunnelId 专线通道ID
      * @param string $DirectConnectId 物理专线ID
      * @param string $State 专线通道状态
+AVAILABLE:就绪或者已连接
+PENDING:申请中
+ALLOCATING:配置中
+ALLOCATED:配置完成
+ALTERING:修改中
+DELETING:删除中
+DELETED:删除完成
+COMFIRMING:待接受
+REJECTED:拒绝
      * @param string $DirectConnectOwnerAccount 物理专线的拥有者，开发商账号 ID
      * @param string $OwnerAccount 专线通道的拥有者，开发商账号 ID
-     * @param string $NetworkType 网络类型，分别为VPC、BMVPC VPC：私有网络 BMVPC：黑石网络
+     * @param string $NetworkType 网络类型，分别为VPC、BMVPC、CCN
+ VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
      * @param string $NetworkRegion VPC地域
      * @param string $VpcId 私有网络统一 ID 或者黑石网络统一 ID
      * @param string $DirectConnectGatewayId 专线网关 ID

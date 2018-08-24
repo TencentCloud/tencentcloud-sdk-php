@@ -26,12 +26,14 @@ use TencentCloud\Common\AbstractModel;
 共享专线时这里需要填写共享专线的开发商账号 ID
  * @method void setDirectConnectOwnerAccount(string $DirectConnectOwnerAccount) 设置物理专线 owner，缺省为当前客户（物理专线 owner）
 共享专线时这里需要填写共享专线的开发商账号 ID
- * @method string getNetworkType() 获取网络类型，分别为VPC、BMVPC
+ * @method string getNetworkType() 获取网络类型，分别为VPC、BMVPC，CCN，默认是VPC
 VPC：私有网络
 BMVPC：黑石网络
- * @method void setNetworkType(string $NetworkType) 设置网络类型，分别为VPC、BMVPC
+CCN：云联网
+ * @method void setNetworkType(string $NetworkType) 设置网络类型，分别为VPC、BMVPC，CCN，默认是VPC
 VPC：私有网络
 BMVPC：黑石网络
+CCN：云联网
  * @method string getNetworkRegion() 获取网络地域
  * @method void setNetworkRegion(string $NetworkRegion) 设置网络地域
  * @method string getVpcId() 获取私有网络统一 ID 或者黑石网络统一 ID
@@ -48,8 +50,8 @@ STATIC：静态
  * @method void setRouteType(string $RouteType) 设置BGP ：BGP路由
 STATIC：静态
 默认为 BGP 路由
- * @method BgpPeer getBgpPeer() 获取BgpPeer，用户侧bgp信息，包括asn和AuthKey
- * @method void setBgpPeer(BgpPeer $BgpPeer) 设置BgpPeer，用户侧bgp信息，包括asn和AuthKey
+ * @method BgpPeer getBgpPeer() 获取BgpPeer，用户侧bgp信息，包括Asn和AuthKey
+ * @method void setBgpPeer(BgpPeer $BgpPeer) 设置BgpPeer，用户侧bgp信息，包括Asn和AuthKey
  * @method array getRouteFilterPrefixes() 获取静态路由，用户IDC的网段地址
  * @method void setRouteFilterPrefixes(array $RouteFilterPrefixes) 设置静态路由，用户IDC的网段地址
  * @method integer getVlan() 获取vlan，范围：0 ~ 3000
@@ -86,9 +88,10 @@ class CreateDirectConnectTunnelRequest extends AbstractModel
     public $DirectConnectOwnerAccount;
 
     /**
-     * @var string 网络类型，分别为VPC、BMVPC
+     * @var string 网络类型，分别为VPC、BMVPC，CCN，默认是VPC
 VPC：私有网络
 BMVPC：黑石网络
+CCN：云联网
      */
     public $NetworkType;
 
@@ -121,7 +124,7 @@ STATIC：静态
     public $RouteType;
 
     /**
-     * @var BgpPeer BgpPeer，用户侧bgp信息，包括asn和AuthKey
+     * @var BgpPeer BgpPeer，用户侧bgp信息，包括Asn和AuthKey
      */
     public $BgpPeer;
 
@@ -151,9 +154,10 @@ STATIC：静态
      * @param string $DirectConnectTunnelName 专线通道名称
      * @param string $DirectConnectOwnerAccount 物理专线 owner，缺省为当前客户（物理专线 owner）
 共享专线时这里需要填写共享专线的开发商账号 ID
-     * @param string $NetworkType 网络类型，分别为VPC、BMVPC
+     * @param string $NetworkType 网络类型，分别为VPC、BMVPC，CCN，默认是VPC
 VPC：私有网络
 BMVPC：黑石网络
+CCN：云联网
      * @param string $NetworkRegion 网络地域
      * @param string $VpcId 私有网络统一 ID 或者黑石网络统一 ID
      * @param string $DirectConnectGatewayId 专线网关 ID，例如 dcg-d545ddf
@@ -162,7 +166,7 @@ BMVPC：黑石网络
      * @param string $RouteType BGP ：BGP路由
 STATIC：静态
 默认为 BGP 路由
-     * @param BgpPeer $BgpPeer BgpPeer，用户侧bgp信息，包括asn和AuthKey
+     * @param BgpPeer $BgpPeer BgpPeer，用户侧bgp信息，包括Asn和AuthKey
      * @param array $RouteFilterPrefixes 静态路由，用户IDC的网段地址
      * @param integer $Vlan vlan，范围：0 ~ 3000
 0：不开启子接口

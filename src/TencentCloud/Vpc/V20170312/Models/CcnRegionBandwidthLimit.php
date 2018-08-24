@@ -1,0 +1,65 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Vpc\V20170312\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * @method string getRegion() 获取地域，例如：ap-guangzhou
+ * @method void setRegion(string $Region) 设置地域，例如：ap-guangzhou
+ * @method integer getBandwidthLimit() 获取出带宽上限，单位：Mbps
+ * @method void setBandwidthLimit(integer $BandwidthLimit) 设置出带宽上限，单位：Mbps
+ */
+
+/**
+ *云联网（CCN）地域出带宽上限
+ */
+class CcnRegionBandwidthLimit extends AbstractModel
+{
+    /**
+     * @var string 地域，例如：ap-guangzhou
+     */
+    public $Region;
+
+    /**
+     * @var integer 出带宽上限，单位：Mbps
+     */
+    public $BandwidthLimit;
+    /**
+     * @param string $Region 地域，例如：ap-guangzhou
+     * @param integer $BandwidthLimit 出带宽上限，单位：Mbps
+     */
+    function __construct()
+    {
+
+    }
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("BandwidthLimit",$param) and $param["BandwidthLimit"] !== null) {
+            $this->BandwidthLimit = $param["BandwidthLimit"];
+        }
+    }
+}

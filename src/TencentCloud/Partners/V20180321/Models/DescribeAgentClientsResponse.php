@@ -18,8 +18,8 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getAgentClientSet() 获取代客列表
- * @method void setAgentClientSet(array $AgentClientSet) 设置代客列表
+ * @method array getAgentClientSet() 获取待审核代客列表
+ * @method void setAgentClientSet(array $AgentClientSet) 设置待审核代客列表
  * @method integer getTotalCount() 获取符合条件的代客总数
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的代客总数
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAgentClientsResponse extends AbstractModel
 {
     /**
-     * @var array 代客列表
+     * @var array 待审核代客列表
      */
     public $AgentClientSet;
 
@@ -46,7 +46,7 @@ class DescribeAgentClientsResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $AgentClientSet 代客列表
+     * @param array $AgentClientSet 待审核代客列表
      * @param integer $TotalCount 符合条件的代客总数
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */

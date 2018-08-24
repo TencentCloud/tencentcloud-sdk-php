@@ -24,12 +24,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddressName(string $AddressName) 设置`EIP`名称。
  * @method string getAddressStatus() 获取`EIP`状态。
  * @method void setAddressStatus(string $AddressStatus) 设置`EIP`状态。
- * @method string getAddressIp() 获取弹性外网IP
- * @method void setAddressIp(string $AddressIp) 设置弹性外网IP
- * @method string getBindedResourceId() 获取绑定的资源实例`ID`。可能是一个`CVM`，`NAT`，或是弹性网卡。
- * @method void setBindedResourceId(string $BindedResourceId) 设置绑定的资源实例`ID`。可能是一个`CVM`，`NAT`，或是弹性网卡。
+ * @method string getAddressIp() 获取外网IP地址
+ * @method void setAddressIp(string $AddressIp) 设置外网IP地址
+ * @method string getInstanceId() 获取绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
+ * @method void setInstanceId(string $InstanceId) 设置绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
  * @method string getCreatedTime() 获取创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+ * @method string getNetworkInterfaceId() 获取绑定的弹性网卡ID
+ * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置绑定的弹性网卡ID
+ * @method string getPrivateAddressIp() 获取绑定的资源内网ip
+ * @method void setPrivateAddressIp(string $PrivateAddressIp) 设置绑定的资源内网ip
+ * @method boolean getIsArrears() 获取资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
+ * @method void setIsArrears(boolean $IsArrears) 设置资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
+ * @method boolean getIsBlocked() 获取资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+ * @method void setIsBlocked(boolean $IsBlocked) 设置资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+ * @method boolean getIsEipDirectConnection() 获取eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+ * @method void setIsEipDirectConnection(boolean $IsEipDirectConnection) 设置eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+ * @method string getAddressType() 获取eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+ * @method void setAddressType(string $AddressType) 设置eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
  */
 
 /**
@@ -53,26 +65,62 @@ class Address extends AbstractModel
     public $AddressStatus;
 
     /**
-     * @var string 弹性外网IP
+     * @var string 外网IP地址
      */
     public $AddressIp;
 
     /**
-     * @var string 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`，或是弹性网卡。
+     * @var string 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
      */
-    public $BindedResourceId;
+    public $InstanceId;
 
     /**
      * @var string 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public $CreatedTime;
+
+    /**
+     * @var string 绑定的弹性网卡ID
+     */
+    public $NetworkInterfaceId;
+
+    /**
+     * @var string 绑定的资源内网ip
+     */
+    public $PrivateAddressIp;
+
+    /**
+     * @var boolean 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
+     */
+    public $IsArrears;
+
+    /**
+     * @var boolean 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+     */
+    public $IsBlocked;
+
+    /**
+     * @var boolean eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+     */
+    public $IsEipDirectConnection;
+
+    /**
+     * @var string eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+     */
+    public $AddressType;
     /**
      * @param string $AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      * @param string $AddressName `EIP`名称。
      * @param string $AddressStatus `EIP`状态。
-     * @param string $AddressIp 弹性外网IP
-     * @param string $BindedResourceId 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`，或是弹性网卡。
+     * @param string $AddressIp 外网IP地址
+     * @param string $InstanceId 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
      * @param string $CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * @param string $NetworkInterfaceId 绑定的弹性网卡ID
+     * @param string $PrivateAddressIp 绑定的资源内网ip
+     * @param boolean $IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
+     * @param boolean $IsBlocked 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+     * @param boolean $IsEipDirectConnection eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+     * @param string $AddressType eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
      */
     function __construct()
     {
@@ -102,12 +150,36 @@ class Address extends AbstractModel
             $this->AddressIp = $param["AddressIp"];
         }
 
-        if (array_key_exists("BindedResourceId",$param) and $param["BindedResourceId"] !== null) {
-            $this->BindedResourceId = $param["BindedResourceId"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("NetworkInterfaceId",$param) and $param["NetworkInterfaceId"] !== null) {
+            $this->NetworkInterfaceId = $param["NetworkInterfaceId"];
+        }
+
+        if (array_key_exists("PrivateAddressIp",$param) and $param["PrivateAddressIp"] !== null) {
+            $this->PrivateAddressIp = $param["PrivateAddressIp"];
+        }
+
+        if (array_key_exists("IsArrears",$param) and $param["IsArrears"] !== null) {
+            $this->IsArrears = $param["IsArrears"];
+        }
+
+        if (array_key_exists("IsBlocked",$param) and $param["IsBlocked"] !== null) {
+            $this->IsBlocked = $param["IsBlocked"];
+        }
+
+        if (array_key_exists("IsEipDirectConnection",$param) and $param["IsEipDirectConnection"] !== null) {
+            $this->IsEipDirectConnection = $param["IsEipDirectConnection"];
+        }
+
+        if (array_key_exists("AddressType",$param) and $param["AddressType"] !== null) {
+            $this->AddressType = $param["AddressType"];
         }
     }
 }

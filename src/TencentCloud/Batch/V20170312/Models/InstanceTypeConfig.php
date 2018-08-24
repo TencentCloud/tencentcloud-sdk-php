@@ -18,33 +18,32 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getZone() 获取可用区。
- * @method void setZone(string $Zone) 设置可用区。
+ * @method integer getMem() 获取内存容量，单位：`GB`。
+ * @method void setMem(integer $Mem) 设置内存容量，单位：`GB`。
+ * @method integer getCpu() 获取CPU核数，单位：核。
+ * @method void setCpu(integer $Cpu) 设置CPU核数，单位：核。
  * @method string getInstanceType() 获取实例机型。
  * @method void setInstanceType(string $InstanceType) 设置实例机型。
+ * @method string getZone() 获取可用区。
+ * @method void setZone(string $Zone) 设置可用区。
  * @method string getInstanceFamily() 获取实例机型系列。
  * @method void setInstanceFamily(string $InstanceFamily) 设置实例机型系列。
- * @method integer getGPU() 获取GPU核数，单位：核。
- * @method void setGPU(integer $GPU) 设置GPU核数，单位：核。
- * @method integer getCPU() 获取CPU核数，单位：核。
- * @method void setCPU(integer $CPU) 设置CPU核数，单位：核。
- * @method integer getMemory() 获取内存容量，单位：`GB`。
- * @method void setMemory(integer $Memory) 设置内存容量，单位：`GB`。
- * @method string getCbsSupport() 获取是否支持云硬盘。取值范围：<br><li>`TRUE`：表示支持云硬盘；<br><li>`FALSE`：表示不支持云硬盘。
- * @method void setCbsSupport(string $CbsSupport) 设置是否支持云硬盘。取值范围：<br><li>`TRUE`：表示支持云硬盘；<br><li>`FALSE`：表示不支持云硬盘。
- * @method string getInstanceTypeState() 获取机型状态。取值范围：<br><li>`AVAILABLE`：表示机型可用；<br><li>`UNAVAILABLE`：表示机型不可用。
- * @method void setInstanceTypeState(string $InstanceTypeState) 设置机型状态。取值范围：<br><li>`AVAILABLE`：表示机型可用；<br><li>`UNAVAILABLE`：表示机型不可用。
  */
 
 /**
- *描述实例机型配置信息
+ *批量计算可用的InstanceTypeConfig信息
  */
 class InstanceTypeConfig extends AbstractModel
 {
     /**
-     * @var string 可用区。
+     * @var integer 内存容量，单位：`GB`。
      */
-    public $Zone;
+    public $Mem;
+
+    /**
+     * @var integer CPU核数，单位：核。
+     */
+    public $Cpu;
 
     /**
      * @var string 实例机型。
@@ -52,43 +51,20 @@ class InstanceTypeConfig extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var string 可用区。
+     */
+    public $Zone;
+
+    /**
      * @var string 实例机型系列。
      */
     public $InstanceFamily;
-
     /**
-     * @var integer GPU核数，单位：核。
-     */
-    public $GPU;
-
-    /**
-     * @var integer CPU核数，单位：核。
-     */
-    public $CPU;
-
-    /**
-     * @var integer 内存容量，单位：`GB`。
-     */
-    public $Memory;
-
-    /**
-     * @var string 是否支持云硬盘。取值范围：<br><li>`TRUE`：表示支持云硬盘；<br><li>`FALSE`：表示不支持云硬盘。
-     */
-    public $CbsSupport;
-
-    /**
-     * @var string 机型状态。取值范围：<br><li>`AVAILABLE`：表示机型可用；<br><li>`UNAVAILABLE`：表示机型不可用。
-     */
-    public $InstanceTypeState;
-    /**
-     * @param string $Zone 可用区。
+     * @param integer $Mem 内存容量，单位：`GB`。
+     * @param integer $Cpu CPU核数，单位：核。
      * @param string $InstanceType 实例机型。
+     * @param string $Zone 可用区。
      * @param string $InstanceFamily 实例机型系列。
-     * @param integer $GPU GPU核数，单位：核。
-     * @param integer $CPU CPU核数，单位：核。
-     * @param integer $Memory 内存容量，单位：`GB`。
-     * @param string $CbsSupport 是否支持云硬盘。取值范围：<br><li>`TRUE`：表示支持云硬盘；<br><li>`FALSE`：表示不支持云硬盘。
-     * @param string $InstanceTypeState 机型状态。取值范围：<br><li>`AVAILABLE`：表示机型可用；<br><li>`UNAVAILABLE`：表示机型不可用。
      */
     function __construct()
     {
@@ -102,36 +78,24 @@ class InstanceTypeConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists("Mem",$param) and $param["Mem"] !== null) {
+            $this->Mem = $param["Mem"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
         }
 
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
         if (array_key_exists("InstanceFamily",$param) and $param["InstanceFamily"] !== null) {
             $this->InstanceFamily = $param["InstanceFamily"];
-        }
-
-        if (array_key_exists("GPU",$param) and $param["GPU"] !== null) {
-            $this->GPU = $param["GPU"];
-        }
-
-        if (array_key_exists("CPU",$param) and $param["CPU"] !== null) {
-            $this->CPU = $param["CPU"];
-        }
-
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
-        }
-
-        if (array_key_exists("CbsSupport",$param) and $param["CbsSupport"] !== null) {
-            $this->CbsSupport = $param["CbsSupport"];
-        }
-
-        if (array_key_exists("InstanceTypeState",$param) and $param["InstanceTypeState"] !== null) {
-            $this->InstanceTypeState = $param["InstanceTypeState"];
         }
     }
 }

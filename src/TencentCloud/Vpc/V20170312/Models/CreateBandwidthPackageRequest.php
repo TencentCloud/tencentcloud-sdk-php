@@ -1,0 +1,89 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Vpc\V20170312\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * @method string getNetworkType() 获取带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
+ * @method void setNetworkType(string $NetworkType) 设置带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
+ * @method string getChargeType() 获取带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
+ * @method void setChargeType(string $ChargeType) 设置带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
+ * @method string getBandwidthPackageName() 获取带宽包名字
+ * @method void setBandwidthPackageName(string $BandwidthPackageName) 设置带宽包名字
+ * @method integer getBandwidthPackageCount() 获取带宽包数量(非上移账户只能填1)
+ * @method void setBandwidthPackageCount(integer $BandwidthPackageCount) 设置带宽包数量(非上移账户只能填1)
+ */
+
+/**
+ *CreateBandwidthPackage请求参数结构体
+ */
+class CreateBandwidthPackageRequest extends AbstractModel
+{
+    /**
+     * @var string 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
+     */
+    public $NetworkType;
+
+    /**
+     * @var string 带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
+     */
+    public $ChargeType;
+
+    /**
+     * @var string 带宽包名字
+     */
+    public $BandwidthPackageName;
+
+    /**
+     * @var integer 带宽包数量(非上移账户只能填1)
+     */
+    public $BandwidthPackageCount;
+    /**
+     * @param string $NetworkType 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
+     * @param string $ChargeType 带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
+     * @param string $BandwidthPackageName 带宽包名字
+     * @param integer $BandwidthPackageCount 带宽包数量(非上移账户只能填1)
+     */
+    function __construct()
+    {
+
+    }
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
+            $this->NetworkType = $param["NetworkType"];
+        }
+
+        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
+            $this->ChargeType = $param["ChargeType"];
+        }
+
+        if (array_key_exists("BandwidthPackageName",$param) and $param["BandwidthPackageName"] !== null) {
+            $this->BandwidthPackageName = $param["BandwidthPackageName"];
+        }
+
+        if (array_key_exists("BandwidthPackageCount",$param) and $param["BandwidthPackageCount"] !== null) {
+            $this->BandwidthPackageCount = $param["BandwidthPackageCount"];
+        }
+    }
+}

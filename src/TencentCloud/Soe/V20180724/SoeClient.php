@@ -15,29 +15,28 @@
  * limitations under the License.
  */
 
-namespace TencentCloud\Cr\V20180321;
+namespace TencentCloud\Soe\V20180724;
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Cr\V20180321\Models as Models;
+use TencentCloud\Soe\V20180724\Models as Models;
 
 /**
-* @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 客户调用该接口查看任务执行状态。输入任务ID，输出任务执行状态或者结果
-* @method Models\DownloadReportResponse DownloadReport(Models\DownloadReportRequest $req) 客户调用该接口下载指定日期的催收报告
-* @method Models\UploadFileResponse UploadFile(Models\UploadFileRequest $req) 客户通过调用该接口上传需催收文档，格式需为excel格式。接口返回任务ID。
+* @method Models\InitOralProcessResponse InitOralProcess(Models\InitOralProcessRequest $req) 初始化发音评估过程，每一轮评估前进行调用。语音输入模式分为流式模式和非流式模式，流式模式支持数据分片传输，可以加快评估响应速度。评估模式分为词模式和句子模式，词模式会标注每个音节的详细信息；句子模式会有完整度和流利度的评估。
+* @method Models\TransmitOralProcessResponse TransmitOralProcess(Models\TransmitOralProcessRequest $req) 传输音频数据，必须在完成发音评估初始化接口只有，且SessonId要与初始化接口保持一致。分片传输时，尽量保证SeqId顺序传输。当使用mp3格式时目前仅支持16k采样率16bit单声道编码方式。
  */
 
-class CrClient extends AbstractClient
+class SoeClient extends AbstractClient
 {
     /**
      * @var string 产品默认域名
      */
-    protected $endpoint = "cr.tencentcloudapi.com";
+    protected $endpoint = "soe.tencentcloudapi.com";
 
     /**
      * @var string api版本号
      */
-    protected $version = "2018-03-21";
+    protected $version = "2018-07-24";
 
     /**
      * CvmClient constructor.
@@ -52,7 +51,7 @@ class CrClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("cr")."\\"."V20180321\\Models"."\\".ucfirst($action)."Response";
+        $respClass = "TencentCloud"."\\".ucfirst("soe")."\\"."V20180724\\Models"."\\".ucfirst($action)."Response";
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

@@ -14,48 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cr\V20180321\Models;
+namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDailyReportUrl() 获取日报下载地址
- * @method void setDailyReportUrl(string $DailyReportUrl) 设置日报下载地址
- * @method string getResultReportUrl() 获取结果下载地址
- * @method void setResultReportUrl(string $ResultReportUrl) 设置结果下载地址
- * @method string getDetailReportUrl() 获取明细下载地址
- * @method void setDetailReportUrl(string $DetailReportUrl) 设置明细下载地址
+ * @method integer getTxValidationCode() 获取状态码
+ * @method void setTxValidationCode(integer $TxValidationCode) 设置状态码
+ * @method string getTxValidationMsg() 获取消息
+ * @method void setTxValidationMsg(string $TxValidationMsg) 设置消息
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
- *DownloadReport返回参数结构体
+ *GetInvokeTx返回参数结构体
  */
-class DownloadReportResponse extends AbstractModel
+class GetInvokeTxResponse extends AbstractModel
 {
     /**
-     * @var string 日报下载地址
+     * @var integer 状态码
      */
-    public $DailyReportUrl;
+    public $TxValidationCode;
 
     /**
-     * @var string 结果下载地址
+     * @var string 消息
      */
-    public $ResultReportUrl;
-
-    /**
-     * @var string 明细下载地址
-     */
-    public $DetailReportUrl;
+    public $TxValidationMsg;
 
     /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
-     * @param string $DailyReportUrl 日报下载地址
-     * @param string $ResultReportUrl 结果下载地址
-     * @param string $DetailReportUrl 明细下载地址
+     * @param integer $TxValidationCode 状态码
+     * @param string $TxValidationMsg 消息
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -70,16 +62,12 @@ class DownloadReportResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DailyReportUrl",$param) and $param["DailyReportUrl"] !== null) {
-            $this->DailyReportUrl = $param["DailyReportUrl"];
+        if (array_key_exists("TxValidationCode",$param) and $param["TxValidationCode"] !== null) {
+            $this->TxValidationCode = $param["TxValidationCode"];
         }
 
-        if (array_key_exists("ResultReportUrl",$param) and $param["ResultReportUrl"] !== null) {
-            $this->ResultReportUrl = $param["ResultReportUrl"];
-        }
-
-        if (array_key_exists("DetailReportUrl",$param) and $param["DetailReportUrl"] !== null) {
-            $this->DetailReportUrl = $param["DetailReportUrl"];
+        if (array_key_exists("TxValidationMsg",$param) and $param["TxValidationMsg"] !== null) {
+            $this->TxValidationMsg = $param["TxValidationMsg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

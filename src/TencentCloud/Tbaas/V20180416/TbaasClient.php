@@ -15,29 +15,29 @@
  * limitations under the License.
  */
 
-namespace TencentCloud\Cr\V20180321;
+namespace TencentCloud\Tbaas\V20180416;
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Cr\V20180321\Models as Models;
+use TencentCloud\Tbaas\V20180416\Models as Models;
 
 /**
-* @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 客户调用该接口查看任务执行状态。输入任务ID，输出任务执行状态或者结果
-* @method Models\DownloadReportResponse DownloadReport(Models\DownloadReportRequest $req) 客户调用该接口下载指定日期的催收报告
-* @method Models\UploadFileResponse UploadFile(Models\UploadFileRequest $req) 客户通过调用该接口上传需催收文档，格式需为excel格式。接口返回任务ID。
+* @method Models\GetInvokeTxResponse GetInvokeTx(Models\GetInvokeTxRequest $req) Invoke异步调用结果查询
+* @method Models\InvokeResponse Invoke(Models\InvokeRequest $req) 新增交易
+* @method Models\QueryResponse Query(Models\QueryRequest $req) 查询交易
  */
 
-class CrClient extends AbstractClient
+class TbaasClient extends AbstractClient
 {
     /**
      * @var string 产品默认域名
      */
-    protected $endpoint = "cr.tencentcloudapi.com";
+    protected $endpoint = "tbaas.tencentcloudapi.com";
 
     /**
      * @var string api版本号
      */
-    protected $version = "2018-03-21";
+    protected $version = "2018-04-16";
 
     /**
      * CvmClient constructor.
@@ -52,7 +52,7 @@ class CrClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("cr")."\\"."V20180321\\Models"."\\".ucfirst($action)."Response";
+        $respClass = "TencentCloud"."\\".ucfirst("tbaas")."\\"."V20180416\\Models"."\\".ucfirst($action)."Response";
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

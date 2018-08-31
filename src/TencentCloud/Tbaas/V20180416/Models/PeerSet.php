@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCreatedTime() 获取镜像分享时间
- * @method void setCreatedTime(string $CreatedTime) 设置镜像分享时间
- * @method string getAccountId() 获取镜像分享的账户ID
- * @method void setAccountId(string $AccountId) 设置镜像分享的账户ID
+ * @method string getPeerName() 获取节点名称
+ * @method void setPeerName(string $PeerName) 设置节点名称
+ * @method string getOrgName() 获取组织名称
+ * @method void setOrgName(string $OrgName) 设置组织名称
  */
 
 /**
- *镜像分享信息结构
+ *PeerSet
  */
-class SharePermission extends AbstractModel
+class PeerSet extends AbstractModel
 {
     /**
-     * @var string 镜像分享时间
+     * @var string 节点名称
      */
-    public $CreatedTime;
+    public $PeerName;
 
     /**
-     * @var string 镜像分享的账户ID
+     * @var string 组织名称
      */
-    public $AccountId;
+    public $OrgName;
     /**
-     * @param string $CreatedTime 镜像分享时间
-     * @param string $AccountId 镜像分享的账户ID
+     * @param string $PeerName 节点名称
+     * @param string $OrgName 组织名称
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class SharePermission extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists("PeerName",$param) and $param["PeerName"] !== null) {
+            $this->PeerName = $param["PeerName"];
         }
 
-        if (array_key_exists("AccountId",$param) and $param["AccountId"] !== null) {
-            $this->AccountId = $param["AccountId"];
+        if (array_key_exists("OrgName",$param) and $param["OrgName"] !== null) {
+            $this->OrgName = $param["OrgName"];
         }
     }
 }

@@ -14,48 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cr\V20180321\Models;
+namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDailyReportUrl() 获取日报下载地址
- * @method void setDailyReportUrl(string $DailyReportUrl) 设置日报下载地址
- * @method string getResultReportUrl() 获取结果下载地址
- * @method void setResultReportUrl(string $ResultReportUrl) 设置结果下载地址
- * @method string getDetailReportUrl() 获取明细下载地址
- * @method void setDetailReportUrl(string $DetailReportUrl) 设置明细下载地址
+ * @method string getTaskId() 获取任务 ID
+ * @method void setTaskId(string $TaskId) 设置任务 ID
+ * @method integer getTaskStatus() 获取任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
+ * @method void setTaskStatus(integer $TaskStatus) 设置任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
- *DownloadReport返回参数结构体
+ *DescribeMultiDevTask返回参数结构体
  */
-class DownloadReportResponse extends AbstractModel
+class DescribeMultiDevTaskResponse extends AbstractModel
 {
     /**
-     * @var string 日报下载地址
+     * @var string 任务 ID
      */
-    public $DailyReportUrl;
+    public $TaskId;
 
     /**
-     * @var string 结果下载地址
+     * @var integer 任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
      */
-    public $ResultReportUrl;
-
-    /**
-     * @var string 明细下载地址
-     */
-    public $DetailReportUrl;
+    public $TaskStatus;
 
     /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
-     * @param string $DailyReportUrl 日报下载地址
-     * @param string $ResultReportUrl 结果下载地址
-     * @param string $DetailReportUrl 明细下载地址
+     * @param string $TaskId 任务 ID
+     * @param integer $TaskStatus 任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -70,16 +62,12 @@ class DownloadReportResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DailyReportUrl",$param) and $param["DailyReportUrl"] !== null) {
-            $this->DailyReportUrl = $param["DailyReportUrl"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
-        if (array_key_exists("ResultReportUrl",$param) and $param["ResultReportUrl"] !== null) {
-            $this->ResultReportUrl = $param["ResultReportUrl"];
-        }
-
-        if (array_key_exists("DetailReportUrl",$param) and $param["DetailReportUrl"] !== null) {
-            $this->DetailReportUrl = $param["DetailReportUrl"];
+        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
+            $this->TaskStatus = $param["TaskStatus"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

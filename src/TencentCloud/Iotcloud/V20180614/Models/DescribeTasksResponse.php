@@ -14,48 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cr\V20180321\Models;
+namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDailyReportUrl() 获取日报下载地址
- * @method void setDailyReportUrl(string $DailyReportUrl) 设置日报下载地址
- * @method string getResultReportUrl() 获取结果下载地址
- * @method void setResultReportUrl(string $ResultReportUrl) 设置结果下载地址
- * @method string getDetailReportUrl() 获取明细下载地址
- * @method void setDetailReportUrl(string $DetailReportUrl) 设置明细下载地址
+ * @method integer getTotalCount() 获取用户一个月内创建的任务总数
+ * @method void setTotalCount(integer $TotalCount) 设置用户一个月内创建的任务总数
+ * @method array getTasks() 获取此页任务对象的数组，按创建时间排序
+ * @method void setTasks(array $Tasks) 设置此页任务对象的数组，按创建时间排序
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
- *DownloadReport返回参数结构体
+ *DescribeTasks返回参数结构体
  */
-class DownloadReportResponse extends AbstractModel
+class DescribeTasksResponse extends AbstractModel
 {
     /**
-     * @var string 日报下载地址
+     * @var integer 用户一个月内创建的任务总数
      */
-    public $DailyReportUrl;
+    public $TotalCount;
 
     /**
-     * @var string 结果下载地址
+     * @var array 此页任务对象的数组，按创建时间排序
      */
-    public $ResultReportUrl;
-
-    /**
-     * @var string 明细下载地址
-     */
-    public $DetailReportUrl;
+    public $Tasks;
 
     /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
-     * @param string $DailyReportUrl 日报下载地址
-     * @param string $ResultReportUrl 结果下载地址
-     * @param string $DetailReportUrl 明细下载地址
+     * @param integer $TotalCount 用户一个月内创建的任务总数
+     * @param array $Tasks 此页任务对象的数组，按创建时间排序
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -70,16 +62,17 @@ class DownloadReportResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DailyReportUrl",$param) and $param["DailyReportUrl"] !== null) {
-            $this->DailyReportUrl = $param["DailyReportUrl"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("ResultReportUrl",$param) and $param["ResultReportUrl"] !== null) {
-            $this->ResultReportUrl = $param["ResultReportUrl"];
-        }
-
-        if (array_key_exists("DetailReportUrl",$param) and $param["DetailReportUrl"] !== null) {
-            $this->DetailReportUrl = $param["DetailReportUrl"];
+        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
+            $this->Tasks = [];
+            foreach ($param["Tasks"] as $key => $value){
+                $obj = new TaskInfo();
+                $obj->deserialize($value);
+                array_push($this->Tasks, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

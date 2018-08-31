@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageCreator(string $ImageCreator) 设置镜像创建者
  * @method string getImageSource() 获取镜像来源
  * @method void setImageSource(string $ImageSource) 设置镜像来源
+ * @method integer getSyncPercent() 获取同步百分比
+ * @method void setSyncPercent(integer $SyncPercent) 设置同步百分比
+ * @method boolean getIsSupportCloudinit() 获取镜像是否支持cloud-init
+ * @method void setIsSupportCloudinit(boolean $IsSupportCloudinit) 设置镜像是否支持cloud-init
  */
 
 /**
@@ -108,6 +112,16 @@ class Image extends AbstractModel
      * @var string 镜像来源
      */
     public $ImageSource;
+
+    /**
+     * @var integer 同步百分比
+     */
+    public $SyncPercent;
+
+    /**
+     * @var boolean 镜像是否支持cloud-init
+     */
+    public $IsSupportCloudinit;
     /**
      * @param string $ImageId 镜像ID
      * @param string $OsName 镜像操作系统
@@ -121,6 +135,8 @@ class Image extends AbstractModel
      * @param string $Platform 镜像来源平台
      * @param string $ImageCreator 镜像创建者
      * @param string $ImageSource 镜像来源
+     * @param integer $SyncPercent 同步百分比
+     * @param boolean $IsSupportCloudinit 镜像是否支持cloud-init
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class Image extends AbstractModel
 
         if (array_key_exists("ImageSource",$param) and $param["ImageSource"] !== null) {
             $this->ImageSource = $param["ImageSource"];
+        }
+
+        if (array_key_exists("SyncPercent",$param) and $param["SyncPercent"] !== null) {
+            $this->SyncPercent = $param["SyncPercent"];
+        }
+
+        if (array_key_exists("IsSupportCloudinit",$param) and $param["IsSupportCloudinit"] !== null) {
+            $this->IsSupportCloudinit = $param["IsSupportCloudinit"];
         }
     }
 }

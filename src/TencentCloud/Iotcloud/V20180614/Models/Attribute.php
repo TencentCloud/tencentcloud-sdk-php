@@ -14,33 +14,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCreatedTime() 获取镜像分享时间
- * @method void setCreatedTime(string $CreatedTime) 设置镜像分享时间
- * @method string getAccountId() 获取镜像分享的账户ID
- * @method void setAccountId(string $AccountId) 设置镜像分享的账户ID
+ * @method array getTags() 获取属性列表
+ * @method void setTags(array $Tags) 设置属性列表
  */
 
 /**
- *镜像分享信息结构
+ *设备属性
  */
-class SharePermission extends AbstractModel
+class Attribute extends AbstractModel
 {
     /**
-     * @var string 镜像分享时间
+     * @var array 属性列表
      */
-    public $CreatedTime;
-
+    public $Tags;
     /**
-     * @var string 镜像分享的账户ID
-     */
-    public $AccountId;
-    /**
-     * @param string $CreatedTime 镜像分享时间
-     * @param string $AccountId 镜像分享的账户ID
+     * @param array $Tags 属性列表
      */
     function __construct()
     {
@@ -54,12 +46,13 @@ class SharePermission extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
-        }
-
-        if (array_key_exists("AccountId",$param) and $param["AccountId"] !== null) {
-            $this->AccountId = $param["AccountId"];
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new DeviceTag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

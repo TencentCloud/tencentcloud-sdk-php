@@ -14,33 +14,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCreatedTime() 获取镜像分享时间
- * @method void setCreatedTime(string $CreatedTime) 设置镜像分享时间
- * @method string getAccountId() 获取镜像分享的账户ID
- * @method void setAccountId(string $AccountId) 设置镜像分享的账户ID
+ * @method string getDesired() 获取设备影子的期望状态，格式为 Json 对象序列化之后的字符串
+ * @method void setDesired(string $Desired) 设置设备影子的期望状态，格式为 Json 对象序列化之后的字符串
  */
 
 /**
- *镜像分享信息结构
+ *批量更新设备影子任务
  */
-class SharePermission extends AbstractModel
+class BatchUpdateShadow extends AbstractModel
 {
     /**
-     * @var string 镜像分享时间
+     * @var string 设备影子的期望状态，格式为 Json 对象序列化之后的字符串
      */
-    public $CreatedTime;
-
+    public $Desired;
     /**
-     * @var string 镜像分享的账户ID
-     */
-    public $AccountId;
-    /**
-     * @param string $CreatedTime 镜像分享时间
-     * @param string $AccountId 镜像分享的账户ID
+     * @param string $Desired 设备影子的期望状态，格式为 Json 对象序列化之后的字符串
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class SharePermission extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
-        }
-
-        if (array_key_exists("AccountId",$param) and $param["AccountId"] !== null) {
-            $this->AccountId = $param["AccountId"];
+        if (array_key_exists("Desired",$param) and $param["Desired"] !== null) {
+            $this->Desired = $param["Desired"];
         }
     }
 }

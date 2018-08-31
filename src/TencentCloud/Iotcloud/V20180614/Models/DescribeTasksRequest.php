@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCreatedTime() 获取镜像分享时间
- * @method void setCreatedTime(string $CreatedTime) 设置镜像分享时间
- * @method string getAccountId() 获取镜像分享的账户ID
- * @method void setAccountId(string $AccountId) 设置镜像分享的账户ID
+ * @method integer getOffset() 获取分页偏移，从0开始
+ * @method void setOffset(integer $Offset) 设置分页偏移，从0开始
+ * @method integer getLimit() 获取分页的大小，数值范围 1-250
+ * @method void setLimit(integer $Limit) 设置分页的大小，数值范围 1-250
  */
 
 /**
- *镜像分享信息结构
+ *DescribeTasks请求参数结构体
  */
-class SharePermission extends AbstractModel
+class DescribeTasksRequest extends AbstractModel
 {
     /**
-     * @var string 镜像分享时间
+     * @var integer 分页偏移，从0开始
      */
-    public $CreatedTime;
+    public $Offset;
 
     /**
-     * @var string 镜像分享的账户ID
+     * @var integer 分页的大小，数值范围 1-250
      */
-    public $AccountId;
+    public $Limit;
     /**
-     * @param string $CreatedTime 镜像分享时间
-     * @param string $AccountId 镜像分享的账户ID
+     * @param integer $Offset 分页偏移，从0开始
+     * @param integer $Limit 分页的大小，数值范围 1-250
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class SharePermission extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
 
-        if (array_key_exists("AccountId",$param) and $param["AccountId"] !== null) {
-            $this->AccountId = $param["AccountId"];
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

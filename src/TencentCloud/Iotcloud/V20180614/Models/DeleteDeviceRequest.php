@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCreatedTime() 获取镜像分享时间
- * @method void setCreatedTime(string $CreatedTime) 设置镜像分享时间
- * @method string getAccountId() 获取镜像分享的账户ID
- * @method void setAccountId(string $AccountId) 设置镜像分享的账户ID
+ * @method string getProductId() 获取设备所属的产品 ID
+ * @method void setProductId(string $ProductId) 设置设备所属的产品 ID
+ * @method string getDeviceName() 获取需要删除的设备名称
+ * @method void setDeviceName(string $DeviceName) 设置需要删除的设备名称
  */
 
 /**
- *镜像分享信息结构
+ *DeleteDevice请求参数结构体
  */
-class SharePermission extends AbstractModel
+class DeleteDeviceRequest extends AbstractModel
 {
     /**
-     * @var string 镜像分享时间
+     * @var string 设备所属的产品 ID
      */
-    public $CreatedTime;
+    public $ProductId;
 
     /**
-     * @var string 镜像分享的账户ID
+     * @var string 需要删除的设备名称
      */
-    public $AccountId;
+    public $DeviceName;
     /**
-     * @param string $CreatedTime 镜像分享时间
-     * @param string $AccountId 镜像分享的账户ID
+     * @param string $ProductId 设备所属的产品 ID
+     * @param string $DeviceName 需要删除的设备名称
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class SharePermission extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
 
-        if (array_key_exists("AccountId",$param) and $param["AccountId"] !== null) {
-            $this->AccountId = $param["AccountId"];
+        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
+            $this->DeviceName = $param["DeviceName"];
         }
     }
 }

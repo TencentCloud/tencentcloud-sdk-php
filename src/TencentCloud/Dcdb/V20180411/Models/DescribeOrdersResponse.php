@@ -63,12 +63,7 @@ class DescribeOrdersResponse extends AbstractModel
             return;
         }
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = [];
-            foreach ($param["TotalCount"] as $key => $value){
-                $obj = new int64();
-                $obj->deserialize($value);
-                array_push($this->TotalCount, $obj);
-            }
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("Deals",$param) and $param["Deals"] !== null) {

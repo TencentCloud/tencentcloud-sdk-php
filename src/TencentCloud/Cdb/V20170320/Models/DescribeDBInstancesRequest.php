@@ -243,12 +243,7 @@ class DescribeDBInstancesRequest extends AbstractModel
         }
 
         if (array_key_exists("InstanceTypes",$param) and $param["InstanceTypes"] !== null) {
-            $this->InstanceTypes = [];
-            foreach ($param["InstanceTypes"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->InstanceTypes, $obj);
-            }
+            $this->InstanceTypes = $param["InstanceTypes"];
         }
 
         if (array_key_exists("Vips",$param) and $param["Vips"] !== null) {
@@ -256,12 +251,7 @@ class DescribeDBInstancesRequest extends AbstractModel
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = [];
-            foreach ($param["Status"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->Status, $obj);
-            }
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
@@ -277,12 +267,7 @@ class DescribeDBInstancesRequest extends AbstractModel
         }
 
         if (array_key_exists("PayTypes",$param) and $param["PayTypes"] !== null) {
-            $this->PayTypes = [];
-            foreach ($param["PayTypes"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->PayTypes, $obj);
-            }
+            $this->PayTypes = $param["PayTypes"];
         }
 
         if (array_key_exists("InstanceNames",$param) and $param["InstanceNames"] !== null) {
@@ -290,12 +275,7 @@ class DescribeDBInstancesRequest extends AbstractModel
         }
 
         if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
-            $this->TaskStatus = [];
-            foreach ($param["TaskStatus"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->TaskStatus, $obj);
-            }
+            $this->TaskStatus = $param["TaskStatus"];
         }
 
         if (array_key_exists("EngineVersions",$param) and $param["EngineVersions"] !== null) {
@@ -303,39 +283,19 @@ class DescribeDBInstancesRequest extends AbstractModel
         }
 
         if (array_key_exists("VpcIds",$param) and $param["VpcIds"] !== null) {
-            $this->VpcIds = [];
-            foreach ($param["VpcIds"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->VpcIds, $obj);
-            }
+            $this->VpcIds = $param["VpcIds"];
         }
 
         if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
-            $this->ZoneIds = [];
-            foreach ($param["ZoneIds"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->ZoneIds, $obj);
-            }
+            $this->ZoneIds = $param["ZoneIds"];
         }
 
         if (array_key_exists("SubnetIds",$param) and $param["SubnetIds"] !== null) {
-            $this->SubnetIds = [];
-            foreach ($param["SubnetIds"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->SubnetIds, $obj);
-            }
+            $this->SubnetIds = $param["SubnetIds"];
         }
 
         if (array_key_exists("CdbErrors",$param) and $param["CdbErrors"] !== null) {
-            $this->CdbErrors = [];
-            foreach ($param["CdbErrors"] as $key => $value){
-                $obj = new int64();
-                $obj->deserialize($value);
-                array_push($this->CdbErrors, $obj);
-            }
+            $this->CdbErrors = $param["CdbErrors"];
         }
 
         if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {

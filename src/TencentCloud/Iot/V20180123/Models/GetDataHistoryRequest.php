@@ -111,12 +111,7 @@ class GetDataHistoryRequest extends AbstractModel
         }
 
         if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = [];
-            foreach ($param["Size"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->Size, $obj);
-            }
+            $this->Size = $param["Size"];
         }
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {

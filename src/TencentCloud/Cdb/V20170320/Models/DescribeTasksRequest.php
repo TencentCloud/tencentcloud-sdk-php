@@ -111,21 +111,11 @@ class DescribeTasksRequest extends AbstractModel
         }
 
         if (array_key_exists("TaskTypes",$param) and $param["TaskTypes"] !== null) {
-            $this->TaskTypes = [];
-            foreach ($param["TaskTypes"] as $key => $value){
-                $obj = new int64();
-                $obj->deserialize($value);
-                array_push($this->TaskTypes, $obj);
-            }
+            $this->TaskTypes = $param["TaskTypes"];
         }
 
         if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
-            $this->TaskStatus = [];
-            foreach ($param["TaskStatus"] as $key => $value){
-                $obj = new int64();
-                $obj->deserialize($value);
-                array_push($this->TaskStatus, $obj);
-            }
+            $this->TaskStatus = $param["TaskStatus"];
         }
 
         if (array_key_exists("StartTimeBegin",$param) and $param["StartTimeBegin"] !== null) {

@@ -143,12 +143,7 @@ class DescribeTaskInfoRequest extends AbstractModel
         }
 
         if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
-            $this->TaskStatus = [];
-            foreach ($param["TaskStatus"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->TaskStatus, $obj);
-            }
+            $this->TaskStatus = $param["TaskStatus"];
         }
 
         if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
@@ -172,12 +167,7 @@ class DescribeTaskInfoRequest extends AbstractModel
         }
 
         if (array_key_exists("TaskTypeIds",$param) and $param["TaskTypeIds"] !== null) {
-            $this->TaskTypeIds = [];
-            foreach ($param["TaskTypeIds"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->TaskTypeIds, $obj);
-            }
+            $this->TaskTypeIds = $param["TaskTypeIds"];
         }
     }
 }

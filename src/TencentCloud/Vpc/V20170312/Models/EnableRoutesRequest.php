@@ -59,12 +59,7 @@ class EnableRoutesRequest extends AbstractModel
         }
 
         if (array_key_exists("RouteIds",$param) and $param["RouteIds"] !== null) {
-            $this->RouteIds = [];
-            foreach ($param["RouteIds"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->RouteIds, $obj);
-            }
+            $this->RouteIds = $param["RouteIds"];
         }
     }
 }

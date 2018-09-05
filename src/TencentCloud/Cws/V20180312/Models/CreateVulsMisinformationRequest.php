@@ -47,12 +47,7 @@ class CreateVulsMisinformationRequest extends AbstractModel
             return;
         }
         if (array_key_exists("VulIds",$param) and $param["VulIds"] !== null) {
-            $this->VulIds = [];
-            foreach ($param["VulIds"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->VulIds, $obj);
-            }
+            $this->VulIds = $param["VulIds"];
         }
     }
 }

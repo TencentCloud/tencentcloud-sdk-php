@@ -71,12 +71,7 @@ class DescribeMonitorsRequest extends AbstractModel
             return;
         }
         if (array_key_exists("MonitorIds",$param) and $param["MonitorIds"] !== null) {
-            $this->MonitorIds = [];
-            foreach ($param["MonitorIds"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->MonitorIds, $obj);
-            }
+            $this->MonitorIds = $param["MonitorIds"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

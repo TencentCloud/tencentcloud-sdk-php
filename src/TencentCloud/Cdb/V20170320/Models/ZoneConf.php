@@ -71,12 +71,7 @@ class ZoneConf extends AbstractModel
             return;
         }
         if (array_key_exists("DeployMode",$param) and $param["DeployMode"] !== null) {
-            $this->DeployMode = [];
-            foreach ($param["DeployMode"] as $key => $value){
-                $obj = new int64();
-                $obj->deserialize($value);
-                array_push($this->DeployMode, $obj);
-            }
+            $this->DeployMode = $param["DeployMode"];
         }
 
         if (array_key_exists("MasterZone",$param) and $param["MasterZone"] !== null) {

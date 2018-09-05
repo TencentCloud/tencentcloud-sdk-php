@@ -71,12 +71,7 @@ class DescribeSitesRequest extends AbstractModel
             return;
         }
         if (array_key_exists("SiteIds",$param) and $param["SiteIds"] !== null) {
-            $this->SiteIds = [];
-            foreach ($param["SiteIds"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->SiteIds, $obj);
-            }
+            $this->SiteIds = $param["SiteIds"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

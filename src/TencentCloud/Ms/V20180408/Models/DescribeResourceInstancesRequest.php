@@ -87,12 +87,7 @@ class DescribeResourceInstancesRequest extends AbstractModel
             return;
         }
         if (array_key_exists("Pids",$param) and $param["Pids"] !== null) {
-            $this->Pids = [];
-            foreach ($param["Pids"] as $key => $value){
-                $obj = new uint64();
-                $obj->deserialize($value);
-                array_push($this->Pids, $obj);
-            }
+            $this->Pids = $param["Pids"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

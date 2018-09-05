@@ -167,12 +167,7 @@ class NormalQueryItem extends AbstractModel
         }
 
         if (array_key_exists("CallsGrids",$param) and $param["CallsGrids"] !== null) {
-            $this->CallsGrids = [];
-            foreach ($param["CallsGrids"] as $key => $value){
-                $obj = new int64();
-                $obj->deserialize($value);
-                array_push($this->CallsGrids, $obj);
-            }
+            $this->CallsGrids = $param["CallsGrids"];
         }
 
         if (array_key_exists("CostTime",$param) and $param["CostTime"] !== null) {

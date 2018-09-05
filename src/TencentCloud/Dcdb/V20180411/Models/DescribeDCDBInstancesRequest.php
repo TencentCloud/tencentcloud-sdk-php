@@ -139,21 +139,11 @@ class DescribeDCDBInstancesRequest extends AbstractModel
         }
 
         if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
-            $this->ProjectIds = [];
-            foreach ($param["ProjectIds"] as $key => $value){
-                $obj = new int64();
-                $obj->deserialize($value);
-                array_push($this->ProjectIds, $obj);
-            }
+            $this->ProjectIds = $param["ProjectIds"];
         }
 
         if (array_key_exists("IsFilterVpc",$param) and $param["IsFilterVpc"] !== null) {
-            $this->IsFilterVpc = [];
-            foreach ($param["IsFilterVpc"] as $key => $value){
-                $obj = new int64();
-                $obj->deserialize($value);
-                array_push($this->IsFilterVpc, $obj);
-            }
+            $this->IsFilterVpc = $param["IsFilterVpc"];
         }
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {

@@ -18,8 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getReplicationMode() 获取第二个从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
- * @method void setReplicationMode(string $ReplicationMode) 设置第二个从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
+ * @method string getReplicationMode() 获取第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
+ * @method void setReplicationMode(string $ReplicationMode) 设置第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
  * @method string getZone() 获取第二个从库可用区的正式名称，如ap-shanghai-1
  * @method void setZone(string $Zone) 设置第二个从库可用区的正式名称，如ap-shanghai-1
  * @method string getVip() 获取第二个从库内网IP地址
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class BackupConfig extends AbstractModel
 {
     /**
-     * @var string 第二个从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
+     * @var string 第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
      */
     public $ReplicationMode;
 
@@ -53,7 +53,7 @@ class BackupConfig extends AbstractModel
      */
     public $Vport;
     /**
-     * @param string $ReplicationMode 第二个从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
+     * @param string $ReplicationMode 第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
      * @param string $Zone 第二个从库可用区的正式名称，如ap-shanghai-1
      * @param string $Vip 第二个从库内网IP地址
      * @param string $Vport 第二个从库访问端口

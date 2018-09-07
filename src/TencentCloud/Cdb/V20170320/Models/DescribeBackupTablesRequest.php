@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchTable(string $SearchTable) 设置要查询的数据表名前缀。
  * @method integer getOffset() 获取分页偏移。
  * @method void setOffset(integer $Offset) 设置分页偏移。
- * @method integer getLimit() 获取分页大小，最大值为2000。
- * @method void setLimit(integer $Limit) 设置分页大小，最大值为2000。
+ * @method integer getLimit() 获取分页大小，最小值为1，最大值为2000。
+ * @method void setLimit(integer $Limit) 设置分页大小，最小值为1，最大值为2000。
  */
 
 /**
@@ -63,7 +63,7 @@ class DescribeBackupTablesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 分页大小，最大值为2000。
+     * @var integer 分页大小，最小值为1，最大值为2000。
      */
     public $Limit;
     /**
@@ -72,7 +72,7 @@ class DescribeBackupTablesRequest extends AbstractModel
      * @param string $DatabaseName 指定的数据库名。
      * @param string $SearchTable 要查询的数据表名前缀。
      * @param integer $Offset 分页偏移。
-     * @param integer $Limit 分页大小，最大值为2000。
+     * @param integer $Limit 分页大小，最小值为1，最大值为2000。
      */
     function __construct()
     {

@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSoInfo(SoInfo $SoInfo) 设置So文件信息
  * @method integer getAntiVMP() 获取vmp，0关闭，1开启
  * @method void setAntiVMP(integer $AntiVMP) 设置vmp，0关闭，1开启
- * @method string getSoType() 获取保护so的强度，
- * @method void setSoType(string $SoType) 设置保护so的强度，
+ * @method array getSoType() 获取保护so的强度，
+ * @method void setSoType(array $SoType) 设置保护so的强度，
  * @method integer getAntiLogLeak() 获取防日志泄漏，0关闭，1开启
  * @method void setAntiLogLeak(integer $AntiLogLeak) 设置防日志泄漏，0关闭，1开启
  * @method integer getAntiQemuRoot() 获取root检测，0关闭，1开启
@@ -108,7 +108,7 @@ class PlanInfo extends AbstractModel
     public $AntiVMP;
 
     /**
-     * @var string 保护so的强度，
+     * @var array 保护so的强度，
      */
     public $SoType;
 
@@ -147,7 +147,7 @@ class PlanInfo extends AbstractModel
      * @param integer $DexSig Dex签名校验，0关闭，1开启
      * @param SoInfo $SoInfo So文件信息
      * @param integer $AntiVMP vmp，0关闭，1开启
-     * @param string $SoType 保护so的强度，
+     * @param array $SoType 保护so的强度，
      * @param integer $AntiLogLeak 防日志泄漏，0关闭，1开启
      * @param integer $AntiQemuRoot root检测，0关闭，1开启
      * @param integer $AntiAssets 资源防篡改，0关闭，1开启

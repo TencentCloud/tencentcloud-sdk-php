@@ -18,22 +18,18 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method Application getApplication() 获取应用程序信息
+ * @method void setApplication(Application $Application) 设置应用程序信息
  * @method string getTaskName() 获取任务名称，在一个作业内部唯一
  * @method void setTaskName(string $TaskName) 设置任务名称，在一个作业内部唯一
  * @method integer getTaskInstanceNum() 获取任务实例运行个数
  * @method void setTaskInstanceNum(integer $TaskInstanceNum) 设置任务实例运行个数
- * @method Application getApplication() 获取应用程序信息
- * @method void setApplication(Application $Application) 设置应用程序信息
- * @method RedirectInfo getRedirectInfo() 获取重定向信息
- * @method void setRedirectInfo(RedirectInfo $RedirectInfo) 设置重定向信息
- * @method integer getMaxRetryCount() 获取任务失败后的最大重试次数，默认为0
- * @method void setMaxRetryCount(integer $MaxRetryCount) 设置任务失败后的最大重试次数，默认为0
- * @method integer getTimeout() 获取任务启动后的超时时间，单位秒，默认为3600秒
- * @method void setTimeout(integer $Timeout) 设置任务启动后的超时时间，单位秒，默认为3600秒
  * @method AnonymousComputeEnv getComputeEnv() 获取运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
  * @method void setComputeEnv(AnonymousComputeEnv $ComputeEnv) 设置运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
  * @method string getEnvId() 获取计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
  * @method void setEnvId(string $EnvId) 设置计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+ * @method RedirectInfo getRedirectInfo() 获取重定向信息
+ * @method void setRedirectInfo(RedirectInfo $RedirectInfo) 设置重定向信息
  * @method RedirectLocalInfo getRedirectLocalInfo() 获取重定向本地信息
  * @method void setRedirectLocalInfo(RedirectLocalInfo $RedirectLocalInfo) 设置重定向本地信息
  * @method array getInputMappings() 获取输入映射
@@ -48,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthentications(array $Authentications) 设置授权信息
  * @method string getFailedAction() 获取TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
  * @method void setFailedAction(string $FailedAction) 设置TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+ * @method integer getMaxRetryCount() 获取任务失败后的最大重试次数，默认为0
+ * @method void setMaxRetryCount(integer $MaxRetryCount) 设置任务失败后的最大重试次数，默认为0
+ * @method integer getTimeout() 获取任务启动后的超时时间，单位秒，默认为3600秒
+ * @method void setTimeout(integer $Timeout) 设置任务启动后的超时时间，单位秒，默认为3600秒
  */
 
 /**
@@ -55,6 +55,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class Task extends AbstractModel
 {
+    /**
+     * @var Application 应用程序信息
+     */
+    public $Application;
+
     /**
      * @var string 任务名称，在一个作业内部唯一
      */
@@ -66,26 +71,6 @@ class Task extends AbstractModel
     public $TaskInstanceNum;
 
     /**
-     * @var Application 应用程序信息
-     */
-    public $Application;
-
-    /**
-     * @var RedirectInfo 重定向信息
-     */
-    public $RedirectInfo;
-
-    /**
-     * @var integer 任务失败后的最大重试次数，默认为0
-     */
-    public $MaxRetryCount;
-
-    /**
-     * @var integer 任务启动后的超时时间，单位秒，默认为3600秒
-     */
-    public $Timeout;
-
-    /**
      * @var AnonymousComputeEnv 运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
      */
     public $ComputeEnv;
@@ -94,6 +79,11 @@ class Task extends AbstractModel
      * @var string 计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
      */
     public $EnvId;
+
+    /**
+     * @var RedirectInfo 重定向信息
+     */
+    public $RedirectInfo;
 
     /**
      * @var RedirectLocalInfo 重定向本地信息
@@ -129,15 +119,23 @@ class Task extends AbstractModel
      * @var string TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
      */
     public $FailedAction;
+
     /**
+     * @var integer 任务失败后的最大重试次数，默认为0
+     */
+    public $MaxRetryCount;
+
+    /**
+     * @var integer 任务启动后的超时时间，单位秒，默认为3600秒
+     */
+    public $Timeout;
+    /**
+     * @param Application $Application 应用程序信息
      * @param string $TaskName 任务名称，在一个作业内部唯一
      * @param integer $TaskInstanceNum 任务实例运行个数
-     * @param Application $Application 应用程序信息
-     * @param RedirectInfo $RedirectInfo 重定向信息
-     * @param integer $MaxRetryCount 任务失败后的最大重试次数，默认为0
-     * @param integer $Timeout 任务启动后的超时时间，单位秒，默认为3600秒
      * @param AnonymousComputeEnv $ComputeEnv 运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
      * @param string $EnvId 计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+     * @param RedirectInfo $RedirectInfo 重定向信息
      * @param RedirectLocalInfo $RedirectLocalInfo 重定向本地信息
      * @param array $InputMappings 输入映射
      * @param array $OutputMappings 输出映射
@@ -145,6 +143,8 @@ class Task extends AbstractModel
      * @param array $EnvVars 自定义环境变量
      * @param array $Authentications 授权信息
      * @param string $FailedAction TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+     * @param integer $MaxRetryCount 任务失败后的最大重试次数，默认为0
+     * @param integer $Timeout 任务启动后的超时时间，单位秒，默认为3600秒
      */
     function __construct()
     {
@@ -158,30 +158,17 @@ class Task extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Application",$param) and $param["Application"] !== null) {
+            $this->Application = new Application();
+            $this->Application->deserialize($param["Application"]);
+        }
+
         if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
             $this->TaskName = $param["TaskName"];
         }
 
         if (array_key_exists("TaskInstanceNum",$param) and $param["TaskInstanceNum"] !== null) {
             $this->TaskInstanceNum = $param["TaskInstanceNum"];
-        }
-
-        if (array_key_exists("Application",$param) and $param["Application"] !== null) {
-            $this->Application = new Application();
-            $this->Application->deserialize($param["Application"]);
-        }
-
-        if (array_key_exists("RedirectInfo",$param) and $param["RedirectInfo"] !== null) {
-            $this->RedirectInfo = new RedirectInfo();
-            $this->RedirectInfo->deserialize($param["RedirectInfo"]);
-        }
-
-        if (array_key_exists("MaxRetryCount",$param) and $param["MaxRetryCount"] !== null) {
-            $this->MaxRetryCount = $param["MaxRetryCount"];
-        }
-
-        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
-            $this->Timeout = $param["Timeout"];
         }
 
         if (array_key_exists("ComputeEnv",$param) and $param["ComputeEnv"] !== null) {
@@ -191,6 +178,11 @@ class Task extends AbstractModel
 
         if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
             $this->EnvId = $param["EnvId"];
+        }
+
+        if (array_key_exists("RedirectInfo",$param) and $param["RedirectInfo"] !== null) {
+            $this->RedirectInfo = new RedirectInfo();
+            $this->RedirectInfo->deserialize($param["RedirectInfo"]);
         }
 
         if (array_key_exists("RedirectLocalInfo",$param) and $param["RedirectLocalInfo"] !== null) {
@@ -245,6 +237,14 @@ class Task extends AbstractModel
 
         if (array_key_exists("FailedAction",$param) and $param["FailedAction"] !== null) {
             $this->FailedAction = $param["FailedAction"];
+        }
+
+        if (array_key_exists("MaxRetryCount",$param) and $param["MaxRetryCount"] !== null) {
+            $this->MaxRetryCount = $param["MaxRetryCount"];
+        }
+
+        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
+            $this->Timeout = $param["Timeout"];
         }
     }
 }

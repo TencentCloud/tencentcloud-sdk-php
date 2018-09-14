@@ -18,14 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getJobName() 获取作业名称
- * @method void setJobName(string $JobName) 设置作业名称
- * @method integer getPriority() 获取作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
- * @method void setPriority(integer $Priority) 设置作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
  * @method array getTasks() 获取任务信息
  * @method void setTasks(array $Tasks) 设置任务信息
+ * @method string getJobName() 获取作业名称
+ * @method void setJobName(string $JobName) 设置作业名称
  * @method string getJobDescription() 获取作业描述
  * @method void setJobDescription(string $JobDescription) 设置作业描述
+ * @method integer getPriority() 获取作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+ * @method void setPriority(integer $Priority) 设置作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
  * @method array getDependences() 获取依赖信息
  * @method void setDependences(array $Dependences) 设置依赖信息
  * @method array getNotifications() 获取通知信息
@@ -42,24 +42,24 @@ use TencentCloud\Common\AbstractModel;
 class Job extends AbstractModel
 {
     /**
-     * @var string 作业名称
-     */
-    public $JobName;
-
-    /**
-     * @var integer 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
-     */
-    public $Priority;
-
-    /**
      * @var array 任务信息
      */
     public $Tasks;
 
     /**
+     * @var string 作业名称
+     */
+    public $JobName;
+
+    /**
      * @var string 作业描述
      */
     public $JobDescription;
+
+    /**
+     * @var integer 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+     */
+    public $Priority;
 
     /**
      * @var array 依赖信息
@@ -81,10 +81,10 @@ class Job extends AbstractModel
      */
     public $StateIfCreateCvmFailed;
     /**
-     * @param string $JobName 作业名称
-     * @param integer $Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
      * @param array $Tasks 任务信息
+     * @param string $JobName 作业名称
      * @param string $JobDescription 作业描述
+     * @param integer $Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
      * @param array $Dependences 依赖信息
      * @param array $Notifications 通知信息
      * @param string $TaskExecutionDependOn 对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
@@ -102,14 +102,6 @@ class Job extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobName",$param) and $param["JobName"] !== null) {
-            $this->JobName = $param["JobName"];
-        }
-
-        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
-            $this->Priority = $param["Priority"];
-        }
-
         if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
             $this->Tasks = [];
             foreach ($param["Tasks"] as $key => $value){
@@ -119,8 +111,16 @@ class Job extends AbstractModel
             }
         }
 
+        if (array_key_exists("JobName",$param) and $param["JobName"] !== null) {
+            $this->JobName = $param["JobName"];
+        }
+
         if (array_key_exists("JobDescription",$param) and $param["JobDescription"] !== null) {
             $this->JobDescription = $param["JobDescription"];
+        }
+
+        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
+            $this->Priority = $param["Priority"];
         }
 
         if (array_key_exists("Dependences",$param) and $param["Dependences"] !== null) {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间，时间格式如：2016-01-01 23:59:59。
  * @method integer getOffset() 获取分页参数 , 偏移量 , 默认值为0。
  * @method void setOffset(integer $Offset) 设置分页参数 , 偏移量 , 默认值为0。
- * @method integer getLimit() 获取分页参数 , 单次请求返回的数量 , 默认值为20。
- * @method void setLimit(integer $Limit) 设置分页参数 , 单次请求返回的数量 , 默认值为20。
+ * @method integer getLimit() 获取分页参数 , 单次请求返回的数量 , 默认值为20，最小值为1，最大值为100。
+ * @method void setLimit(integer $Limit) 设置分页参数 , 单次请求返回的数量 , 默认值为20，最小值为1，最大值为100。
  */
 
 /**
@@ -56,7 +56,7 @@ class DescribeDBImportRecordsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 分页参数 , 单次请求返回的数量 , 默认值为20。
+     * @var integer 分页参数 , 单次请求返回的数量 , 默认值为20，最小值为1，最大值为100。
      */
     public $Limit;
     /**
@@ -64,7 +64,7 @@ class DescribeDBImportRecordsRequest extends AbstractModel
      * @param string $StartTime 开始时间，时间格式如：2016-01-01 00:00:01。
      * @param string $EndTime 结束时间，时间格式如：2016-01-01 23:59:59。
      * @param integer $Offset 分页参数 , 偏移量 , 默认值为0。
-     * @param integer $Limit 分页参数 , 单次请求返回的数量 , 默认值为20。
+     * @param integer $Limit 分页参数 , 单次请求返回的数量 , 默认值为20，最小值为1，最大值为100。
      */
     function __construct()
     {

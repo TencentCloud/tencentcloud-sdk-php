@@ -18,10 +18,10 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDirectConnectTunnelId() 获取专线通道ID
- * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) 设置专线通道ID
- * @method string getDirectConnectTunnelName() 获取专线通道名称
- * @method void setDirectConnectTunnelName(string $DirectConnectTunnelName) 设置专线通道名称
+ * @method string getDirectConnectTunnelId() 获取专用通道ID
+ * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) 设置专用通道ID
+ * @method string getDirectConnectTunnelName() 获取专用通道名称
+ * @method void setDirectConnectTunnelName(string $DirectConnectTunnelName) 设置专用通道名称
  * @method BgpPeer getBgpPeer() 获取用户侧BGP，包括Asn，AuthKey
  * @method void setBgpPeer(BgpPeer $BgpPeer) 设置用户侧BGP，包括Asn，AuthKey
  * @method array getRouteFilterPrefixes() 获取用户侧网段地址
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTencentAddress(string $TencentAddress) 设置腾讯侧互联IP
  * @method string getCustomerAddress() 获取用户侧互联IP
  * @method void setCustomerAddress(string $CustomerAddress) 设置用户侧互联IP
- * @method integer getBandwidth() 获取专线通道带宽值，单位为M。
- * @method void setBandwidth(integer $Bandwidth) 设置专线通道带宽值，单位为M。
+ * @method integer getBandwidth() 获取专用通道带宽值，单位为M。
+ * @method void setBandwidth(integer $Bandwidth) 设置专用通道带宽值，单位为M。
  */
 
 /**
@@ -40,12 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 专线通道ID
+     * @var string 专用通道ID
      */
     public $DirectConnectTunnelId;
 
     /**
-     * @var string 专线通道名称
+     * @var string 专用通道名称
      */
     public $DirectConnectTunnelName;
 
@@ -70,17 +70,17 @@ class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
     public $CustomerAddress;
 
     /**
-     * @var integer 专线通道带宽值，单位为M。
+     * @var integer 专用通道带宽值，单位为M。
      */
     public $Bandwidth;
     /**
-     * @param string $DirectConnectTunnelId 专线通道ID
-     * @param string $DirectConnectTunnelName 专线通道名称
+     * @param string $DirectConnectTunnelId 专用通道ID
+     * @param string $DirectConnectTunnelName 专用通道名称
      * @param BgpPeer $BgpPeer 用户侧BGP，包括Asn，AuthKey
      * @param array $RouteFilterPrefixes 用户侧网段地址
      * @param string $TencentAddress 腾讯侧互联IP
      * @param string $CustomerAddress 用户侧互联IP
-     * @param integer $Bandwidth 专线通道带宽值，单位为M。
+     * @param integer $Bandwidth 专用通道带宽值，单位为M。
      */
     function __construct()
     {

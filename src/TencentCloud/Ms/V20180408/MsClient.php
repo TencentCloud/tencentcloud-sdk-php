@@ -23,6 +23,7 @@ use TencentCloud\Ms\V20180408\Models as Models;
 
 /**
 * @method Models\CreateBindInstanceResponse CreateBindInstance(Models\CreateBindInstanceRequest $req) 将应用和资源进行绑定
+* @method Models\CreateResourceInstancesResponse CreateResourceInstances(Models\CreateResourceInstancesRequest $req) 用户可以使用该接口自建资源，只支持白名单用户
 * @method Models\CreateScanInstancesResponse CreateScanInstances(Models\CreateScanInstancesRequest $req) 用户通过该接口批量提交应用进行应用扫描，扫描后需通过DescribeScanResults接口查询扫描结果
 * @method Models\CreateShieldInstanceResponse CreateShieldInstance(Models\CreateShieldInstanceRequest $req) 用户通过该接口提交应用进行应用加固，加固后需通过DescribeShieldResult接口查询加固结果
 * @method Models\CreateShieldPlanInstanceResponse CreateShieldPlanInstance(Models\CreateShieldPlanInstanceRequest $req) 对资源进行策略新增

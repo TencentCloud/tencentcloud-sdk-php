@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getDirectConnectId() 获取专线 ID，例如：dc-kd7d06of
  * @method void setDirectConnectId(string $DirectConnectId) 设置专线 ID，例如：dc-kd7d06of
- * @method string getDirectConnectTunnelName() 获取专线通道名称
- * @method void setDirectConnectTunnelName(string $DirectConnectTunnelName) 设置专线通道名称
+ * @method string getDirectConnectTunnelName() 获取专用通道名称
+ * @method void setDirectConnectTunnelName(string $DirectConnectTunnelName) 设置专用通道名称
  * @method string getDirectConnectOwnerAccount() 获取物理专线 owner，缺省为当前客户（物理专线 owner）
 共享专线时这里需要填写共享专线的开发商账号 ID
  * @method void setDirectConnectOwnerAccount(string $DirectConnectOwnerAccount) 设置物理专线 owner，缺省为当前客户（物理专线 owner）
@@ -77,7 +77,7 @@ class CreateDirectConnectTunnelRequest extends AbstractModel
     public $DirectConnectId;
 
     /**
-     * @var string 专线通道名称
+     * @var string 专用通道名称
      */
     public $DirectConnectTunnelName;
 
@@ -151,7 +151,7 @@ STATIC：静态
     public $CustomerAddress;
     /**
      * @param string $DirectConnectId 专线 ID，例如：dc-kd7d06of
-     * @param string $DirectConnectTunnelName 专线通道名称
+     * @param string $DirectConnectTunnelName 专用通道名称
      * @param string $DirectConnectOwnerAccount 物理专线 owner，缺省为当前客户（物理专线 owner）
 共享专线时这里需要填写共享专线的开发商账号 ID
      * @param string $NetworkType 网络类型，分别为VPC、BMVPC，CCN，默认是VPC

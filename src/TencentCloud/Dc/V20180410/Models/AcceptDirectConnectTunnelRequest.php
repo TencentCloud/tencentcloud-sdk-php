@@ -18,8 +18,8 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDirectConnectTunnelId() 获取物理专线拥有者接受共享专线通道申请
- * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) 设置物理专线拥有者接受共享专线通道申请
+ * @method string getDirectConnectTunnelId() 获取物理专线拥有者接受共享专用通道申请
+ * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) 设置物理专线拥有者接受共享专用通道申请
  */
 
 /**
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
 class AcceptDirectConnectTunnelRequest extends AbstractModel
 {
     /**
-     * @var string 物理专线拥有者接受共享专线通道申请
+     * @var string 物理专线拥有者接受共享专用通道申请
      */
     public $DirectConnectTunnelId;
     /**
-     * @param string $DirectConnectTunnelId 物理专线拥有者接受共享专线通道申请
+     * @param string $DirectConnectTunnelId 物理专线拥有者接受共享专用通道申请
      */
     function __construct()
     {

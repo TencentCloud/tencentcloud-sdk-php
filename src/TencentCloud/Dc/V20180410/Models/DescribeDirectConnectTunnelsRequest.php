@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getFilters() 获取过滤条件:
 参数不支持同时指定DirectConnectTunnelIds和Filters。
-<li> direct-connect-tunnel-name, 专线通道名称。</li>
-<li> direct-connect-tunnel-id, 专线通道实例ID，如dcx-abcdefgh。</li>
+<li> direct-connect-tunnel-name, 专用通道名称。</li>
+<li> direct-connect-tunnel-id, 专用通道实例ID，如dcx-abcdefgh。</li>
 <li>direct-connect-id, 物理专线实例ID，如，dc-abcdefgh。</li>
  * @method void setFilters(array $Filters) 设置过滤条件:
 参数不支持同时指定DirectConnectTunnelIds和Filters。
-<li> direct-connect-tunnel-name, 专线通道名称。</li>
-<li> direct-connect-tunnel-id, 专线通道实例ID，如dcx-abcdefgh。</li>
+<li> direct-connect-tunnel-name, 专用通道名称。</li>
+<li> direct-connect-tunnel-id, 专用通道实例ID，如dcx-abcdefgh。</li>
 <li>direct-connect-id, 物理专线实例ID，如，dc-abcdefgh。</li>
- * @method array getDirectConnectTunnelIds() 获取专线通道 ID数组
- * @method void setDirectConnectTunnelIds(array $DirectConnectTunnelIds) 设置专线通道 ID数组
+ * @method array getDirectConnectTunnelIds() 获取专用通道 ID数组
+ * @method void setDirectConnectTunnelIds(array $DirectConnectTunnelIds) 设置专用通道 ID数组
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100
@@ -44,14 +44,14 @@ class DescribeDirectConnectTunnelsRequest extends AbstractModel
     /**
      * @var array 过滤条件:
 参数不支持同时指定DirectConnectTunnelIds和Filters。
-<li> direct-connect-tunnel-name, 专线通道名称。</li>
-<li> direct-connect-tunnel-id, 专线通道实例ID，如dcx-abcdefgh。</li>
+<li> direct-connect-tunnel-name, 专用通道名称。</li>
+<li> direct-connect-tunnel-id, 专用通道实例ID，如dcx-abcdefgh。</li>
 <li>direct-connect-id, 物理专线实例ID，如，dc-abcdefgh。</li>
      */
     public $Filters;
 
     /**
-     * @var array 专线通道 ID数组
+     * @var array 专用通道 ID数组
      */
     public $DirectConnectTunnelIds;
 
@@ -67,10 +67,10 @@ class DescribeDirectConnectTunnelsRequest extends AbstractModel
     /**
      * @param array $Filters 过滤条件:
 参数不支持同时指定DirectConnectTunnelIds和Filters。
-<li> direct-connect-tunnel-name, 专线通道名称。</li>
-<li> direct-connect-tunnel-id, 专线通道实例ID，如dcx-abcdefgh。</li>
+<li> direct-connect-tunnel-name, 专用通道名称。</li>
+<li> direct-connect-tunnel-id, 专用通道实例ID，如dcx-abcdefgh。</li>
 <li>direct-connect-id, 物理专线实例ID，如，dc-abcdefgh。</li>
-     * @param array $DirectConnectTunnelIds 专线通道 ID数组
+     * @param array $DirectConnectTunnelIds 专用通道 ID数组
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认为20，最大值为100
      */

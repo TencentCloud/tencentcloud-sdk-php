@@ -18,10 +18,10 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getDirectConnectTunnelSet() 获取专线通道列表
- * @method void setDirectConnectTunnelSet(array $DirectConnectTunnelSet) 设置专线通道列表
- * @method integer getTotalCount() 获取符合专线通道数量。
- * @method void setTotalCount(integer $TotalCount) 设置符合专线通道数量。
+ * @method array getDirectConnectTunnelSet() 获取专用通道列表
+ * @method void setDirectConnectTunnelSet(array $DirectConnectTunnelSet) 设置专用通道列表
+ * @method integer getTotalCount() 获取符合专用通道数量。
+ * @method void setTotalCount(integer $TotalCount) 设置符合专用通道数量。
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDirectConnectTunnelsResponse extends AbstractModel
 {
     /**
-     * @var array 专线通道列表
+     * @var array 专用通道列表
      */
     public $DirectConnectTunnelSet;
 
     /**
-     * @var integer 符合专线通道数量。
+     * @var integer 符合专用通道数量。
      */
     public $TotalCount;
 
@@ -46,8 +46,8 @@ class DescribeDirectConnectTunnelsResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $DirectConnectTunnelSet 专线通道列表
-     * @param integer $TotalCount 符合专线通道数量。
+     * @param array $DirectConnectTunnelSet 专用通道列表
+     * @param integer $TotalCount 符合专用通道数量。
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchKey(string $SearchKey) 设置搜索的关键字，支持模糊搜索。多个关键字使用换行符（'\n'）分割。
  * @method array getProjectIds() 获取按项目 ID 查询
  * @method void setProjectIds(array $ProjectIds) 设置按项目 ID 查询
- * @method array getIsFilterVpc() 获取是否根据 VPC 网络来搜索，0 为否，1 为是
- * @method void setIsFilterVpc(array $IsFilterVpc) 设置是否根据 VPC 网络来搜索，0 为否，1 为是
+ * @method boolean getIsFilterVpc() 获取是否根据 VPC 网络来搜索
+ * @method void setIsFilterVpc(boolean $IsFilterVpc) 设置是否根据 VPC 网络来搜索
  * @method string getVpcId() 获取私有网络 ID， IsFilterVpc 为 1 时有效
  * @method void setVpcId(string $VpcId) 设置私有网络 ID， IsFilterVpc 为 1 时有效
  * @method string getSubnetId() 获取私有网络的子网 ID， IsFilterVpc 为 1 时有效
@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为 0
  * @method integer getLimit() 获取返回数量，默认为 10，最大值为 100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为 10，最大值为 100。
+ * @method integer getExclusterType() 获取1非独享集群，2独享集群， 0全部
+ * @method void setExclusterType(integer $ExclusterType) 设置1非独享集群，2独享集群， 0全部
+ * @method boolean getIsFilterExcluster() 获取标识是否使用ExclusterType字段, false不使用，true使用
+ * @method void setIsFilterExcluster(boolean $IsFilterExcluster) 设置标识是否使用ExclusterType字段, false不使用，true使用
  */
 
 /**
@@ -68,7 +72,7 @@ class DescribeDCDBInstancesRequest extends AbstractModel
     public $ProjectIds;
 
     /**
-     * @var array 是否根据 VPC 网络来搜索，0 为否，1 为是
+     * @var boolean 是否根据 VPC 网络来搜索
      */
     public $IsFilterVpc;
 
@@ -101,18 +105,30 @@ class DescribeDCDBInstancesRequest extends AbstractModel
      * @var integer 返回数量，默认为 10，最大值为 100。
      */
     public $Limit;
+
+    /**
+     * @var integer 1非独享集群，2独享集群， 0全部
+     */
+    public $ExclusterType;
+
+    /**
+     * @var boolean 标识是否使用ExclusterType字段, false不使用，true使用
+     */
+    public $IsFilterExcluster;
     /**
      * @param array $InstanceIds 按照一个或者多个实例 ID 查询。实例 ID 形如：dcdbt-2t4cf98d
      * @param string $SearchName 搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。
      * @param string $SearchKey 搜索的关键字，支持模糊搜索。多个关键字使用换行符（'\n'）分割。
      * @param array $ProjectIds 按项目 ID 查询
-     * @param array $IsFilterVpc 是否根据 VPC 网络来搜索，0 为否，1 为是
+     * @param boolean $IsFilterVpc 是否根据 VPC 网络来搜索
      * @param string $VpcId 私有网络 ID， IsFilterVpc 为 1 时有效
      * @param string $SubnetId 私有网络的子网 ID， IsFilterVpc 为 1 时有效
      * @param string $OrderBy 排序字段， projectId， createtime， instancename 三者之一
      * @param string $OrderByType 排序类型， desc 或者 asc
      * @param integer $Offset 偏移量，默认为 0
      * @param integer $Limit 返回数量，默认为 10，最大值为 100。
+     * @param integer $ExclusterType 1非独享集群，2独享集群， 0全部
+     * @param boolean $IsFilterExcluster 标识是否使用ExclusterType字段, false不使用，true使用
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class DescribeDCDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("ExclusterType",$param) and $param["ExclusterType"] !== null) {
+            $this->ExclusterType = $param["ExclusterType"];
+        }
+
+        if (array_key_exists("IsFilterExcluster",$param) and $param["IsFilterExcluster"] !== null) {
+            $this->IsFilterExcluster = $param["IsFilterExcluster"];
         }
     }
 }

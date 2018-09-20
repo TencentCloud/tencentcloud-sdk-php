@@ -20,14 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getPersonId() 获取用户ID
  * @method void setPersonId(integer $PersonId) 设置用户ID
- * @method string getPersonPicture() 获取人脸图片，这里返回的是图片内容的Base64编码
- * @method void setPersonPicture(string $PersonPicture) 设置人脸图片，这里返回的是图片内容的Base64编码
+ * @method string getPersonPicture() 获取人脸图片Base64内容，已弃用，返回默认空值
+ * @method void setPersonPicture(string $PersonPicture) 设置人脸图片Base64内容，已弃用，返回默认空值
  * @method integer getGender() 获取性别：0男1女
  * @method void setGender(integer $Gender) 设置性别：0男1女
  * @method integer getAge() 获取年龄
  * @method void setAge(integer $Age) 设置年龄
  * @method integer getPersonType() 获取身份类型：0-普通顾客，1~10黑名单，11~20白名单，11店员
  * @method void setPersonType(integer $PersonType) 设置身份类型：0-普通顾客，1~10黑名单，11~20白名单，11店员
+ * @method string getPersonPictureUrl() 获取人脸图片Url，在有效期内可以访问下载
+ * @method void setPersonPictureUrl(string $PersonPictureUrl) 设置人脸图片Url，在有效期内可以访问下载
  */
 
 /**
@@ -41,7 +43,7 @@ class PersonInfo extends AbstractModel
     public $PersonId;
 
     /**
-     * @var string 人脸图片，这里返回的是图片内容的Base64编码
+     * @var string 人脸图片Base64内容，已弃用，返回默认空值
      */
     public $PersonPicture;
 
@@ -59,12 +61,18 @@ class PersonInfo extends AbstractModel
      * @var integer 身份类型：0-普通顾客，1~10黑名单，11~20白名单，11店员
      */
     public $PersonType;
+
+    /**
+     * @var string 人脸图片Url，在有效期内可以访问下载
+     */
+    public $PersonPictureUrl;
     /**
      * @param integer $PersonId 用户ID
-     * @param string $PersonPicture 人脸图片，这里返回的是图片内容的Base64编码
+     * @param string $PersonPicture 人脸图片Base64内容，已弃用，返回默认空值
      * @param integer $Gender 性别：0男1女
      * @param integer $Age 年龄
      * @param integer $PersonType 身份类型：0-普通顾客，1~10黑名单，11~20白名单，11店员
+     * @param string $PersonPictureUrl 人脸图片Url，在有效期内可以访问下载
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class PersonInfo extends AbstractModel
 
         if (array_key_exists("PersonType",$param) and $param["PersonType"] !== null) {
             $this->PersonType = $param["PersonType"];
+        }
+
+        if (array_key_exists("PersonPictureUrl",$param) and $param["PersonPictureUrl"] !== null) {
+            $this->PersonPictureUrl = $param["PersonPictureUrl"];
         }
     }
 }

@@ -60,6 +60,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(string $Uin) 设置UIN
  * @method array getShardDetail() 获取分片详情
  * @method void setShardDetail(array $ShardDetail) 设置分片详情
+ * @method integer getNodeCount() 获取节点数，2 为一主一从， 3 为一主二从
+ * @method void setNodeCount(integer $NodeCount) 设置节点数，2 为一主一从， 3 为一主二从
+ * @method integer getIsTmp() 获取临时实例标记，0 为非临时实例
+ * @method void setIsTmp(integer $IsTmp) 设置临时实例标记，0 为非临时实例
+ * @method string getExclusterId() 获取独享集群Id，为空表示非独享集群实例
+ * @method void setExclusterId(string $ExclusterId) 设置独享集群Id，为空表示非独享集群实例
+ * @method string getUniqueVpcId() 获取字符串型的私有网络Id
+ * @method void setUniqueVpcId(string $UniqueVpcId) 设置字符串型的私有网络Id
+ * @method string getUniqueSubnetId() 获取字符串型的私有网络子网Id
+ * @method void setUniqueSubnetId(string $UniqueSubnetId) 设置字符串型的私有网络子网Id
+ * @method integer getId() 获取数字实例Id（过时字段，请勿依赖该值）
+ * @method void setId(integer $Id) 设置数字实例Id（过时字段，请勿依赖该值）
+ * @method string getWanDomain() 获取外网访问的域名，公网可解析
+ * @method void setWanDomain(string $WanDomain) 设置外网访问的域名，公网可解析
+ * @method string getWanVip() 获取外网 IP 地址，公网可访问
+ * @method void setWanVip(string $WanVip) 设置外网 IP 地址，公网可访问
+ * @method integer getWanPort() 获取外网端口
+ * @method void setWanPort(integer $WanPort) 设置外网端口
+ * @method integer getPid() 获取产品类型 Id（过时字段，请勿依赖该值）
+ * @method void setPid(integer $Pid) 设置产品类型 Id（过时字段，请勿依赖该值）
+ * @method string getUpdateTime() 获取实例最后更新时间，格式为 2006-01-02 15:04:05
+ * @method void setUpdateTime(string $UpdateTime) 设置实例最后更新时间，格式为 2006-01-02 15:04:05
+ * @method string getDbEngine() 获取数据库引擎
+ * @method void setDbEngine(string $DbEngine) 设置数据库引擎
+ * @method string getDbVersion() 获取数据库引擎版本
+ * @method void setDbVersion(string $DbVersion) 设置数据库引擎版本
+ * @method string getPaymode() 获取付费模式
+ * @method void setPaymode(string $Paymode) 设置付费模式
+ * @method integer getLocker() 获取实例处于异步任务状态时，表示异步任务流程ID
+ * @method void setLocker(integer $Locker) 设置实例处于异步任务状态时，表示异步任务流程ID
  */
 
 /**
@@ -171,6 +201,81 @@ class DCDBInstanceInfo extends AbstractModel
      * @var array 分片详情
      */
     public $ShardDetail;
+
+    /**
+     * @var integer 节点数，2 为一主一从， 3 为一主二从
+     */
+    public $NodeCount;
+
+    /**
+     * @var integer 临时实例标记，0 为非临时实例
+     */
+    public $IsTmp;
+
+    /**
+     * @var string 独享集群Id，为空表示非独享集群实例
+     */
+    public $ExclusterId;
+
+    /**
+     * @var string 字符串型的私有网络Id
+     */
+    public $UniqueVpcId;
+
+    /**
+     * @var string 字符串型的私有网络子网Id
+     */
+    public $UniqueSubnetId;
+
+    /**
+     * @var integer 数字实例Id（过时字段，请勿依赖该值）
+     */
+    public $Id;
+
+    /**
+     * @var string 外网访问的域名，公网可解析
+     */
+    public $WanDomain;
+
+    /**
+     * @var string 外网 IP 地址，公网可访问
+     */
+    public $WanVip;
+
+    /**
+     * @var integer 外网端口
+     */
+    public $WanPort;
+
+    /**
+     * @var integer 产品类型 Id（过时字段，请勿依赖该值）
+     */
+    public $Pid;
+
+    /**
+     * @var string 实例最后更新时间，格式为 2006-01-02 15:04:05
+     */
+    public $UpdateTime;
+
+    /**
+     * @var string 数据库引擎
+     */
+    public $DbEngine;
+
+    /**
+     * @var string 数据库引擎版本
+     */
+    public $DbVersion;
+
+    /**
+     * @var string 付费模式
+     */
+    public $Paymode;
+
+    /**
+     * @var integer 实例处于异步任务状态时，表示异步任务流程ID
+     */
+    public $Locker;
     /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
@@ -193,6 +298,21 @@ class DCDBInstanceInfo extends AbstractModel
      * @param string $IsolatedTimestamp 隔离时间
      * @param string $Uin UIN
      * @param array $ShardDetail 分片详情
+     * @param integer $NodeCount 节点数，2 为一主一从， 3 为一主二从
+     * @param integer $IsTmp 临时实例标记，0 为非临时实例
+     * @param string $ExclusterId 独享集群Id，为空表示非独享集群实例
+     * @param string $UniqueVpcId 字符串型的私有网络Id
+     * @param string $UniqueSubnetId 字符串型的私有网络子网Id
+     * @param integer $Id 数字实例Id（过时字段，请勿依赖该值）
+     * @param string $WanDomain 外网访问的域名，公网可解析
+     * @param string $WanVip 外网 IP 地址，公网可访问
+     * @param integer $WanPort 外网端口
+     * @param integer $Pid 产品类型 Id（过时字段，请勿依赖该值）
+     * @param string $UpdateTime 实例最后更新时间，格式为 2006-01-02 15:04:05
+     * @param string $DbEngine 数据库引擎
+     * @param string $DbVersion 数据库引擎版本
+     * @param string $Paymode 付费模式
+     * @param integer $Locker 实例处于异步任务状态时，表示异步任务流程ID
      */
     function __construct()
     {
@@ -293,6 +413,66 @@ class DCDBInstanceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ShardDetail, $obj);
             }
+        }
+
+        if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {
+            $this->NodeCount = $param["NodeCount"];
+        }
+
+        if (array_key_exists("IsTmp",$param) and $param["IsTmp"] !== null) {
+            $this->IsTmp = $param["IsTmp"];
+        }
+
+        if (array_key_exists("ExclusterId",$param) and $param["ExclusterId"] !== null) {
+            $this->ExclusterId = $param["ExclusterId"];
+        }
+
+        if (array_key_exists("UniqueVpcId",$param) and $param["UniqueVpcId"] !== null) {
+            $this->UniqueVpcId = $param["UniqueVpcId"];
+        }
+
+        if (array_key_exists("UniqueSubnetId",$param) and $param["UniqueSubnetId"] !== null) {
+            $this->UniqueSubnetId = $param["UniqueSubnetId"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("WanDomain",$param) and $param["WanDomain"] !== null) {
+            $this->WanDomain = $param["WanDomain"];
+        }
+
+        if (array_key_exists("WanVip",$param) and $param["WanVip"] !== null) {
+            $this->WanVip = $param["WanVip"];
+        }
+
+        if (array_key_exists("WanPort",$param) and $param["WanPort"] !== null) {
+            $this->WanPort = $param["WanPort"];
+        }
+
+        if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
+            $this->Pid = $param["Pid"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("DbEngine",$param) and $param["DbEngine"] !== null) {
+            $this->DbEngine = $param["DbEngine"];
+        }
+
+        if (array_key_exists("DbVersion",$param) and $param["DbVersion"] !== null) {
+            $this->DbVersion = $param["DbVersion"];
+        }
+
+        if (array_key_exists("Paymode",$param) and $param["Paymode"] !== null) {
+            $this->Paymode = $param["Paymode"];
+        }
+
+        if (array_key_exists("Locker",$param) and $param["Locker"] !== null) {
+            $this->Locker = $param["Locker"];
         }
     }
 }

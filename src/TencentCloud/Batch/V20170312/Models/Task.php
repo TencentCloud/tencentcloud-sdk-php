@@ -220,7 +220,7 @@ class Task extends AbstractModel
         if (array_key_exists("EnvVars",$param) and $param["EnvVars"] !== null) {
             $this->EnvVars = [];
             foreach ($param["EnvVars"] as $key => $value){
-                $obj = new Authentication();
+                $obj = new EnvVar();
                 $obj->deserialize($value);
                 array_push($this->EnvVars, $obj);
             }
@@ -229,7 +229,7 @@ class Task extends AbstractModel
         if (array_key_exists("Authentications",$param) and $param["Authentications"] !== null) {
             $this->Authentications = [];
             foreach ($param["Authentications"] as $key => $value){
-                $obj = new EnvVar();
+                $obj = new Authentication();
                 $obj->deserialize($value);
                 array_push($this->Authentications, $obj);
             }

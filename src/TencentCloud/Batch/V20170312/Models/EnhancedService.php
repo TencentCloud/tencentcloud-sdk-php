@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method RunSecurityServiceEnabled getSecurityService() 获取开启云安全服务。若不指定该参数，则默认开启云安全服务。
  * @method void setSecurityService(RunSecurityServiceEnabled $SecurityService) 设置开启云安全服务。若不指定该参数，则默认开启云安全服务。
- * @method RunMonitorServiceEnabled getMonitorService() 获取开启云安全服务。若不指定该参数，则默认开启云监控服务。
- * @method void setMonitorService(RunMonitorServiceEnabled $MonitorService) 设置开启云安全服务。若不指定该参数，则默认开启云监控服务。
+ * @method RunMonitorServiceEnabled getMonitorService() 获取开启云监控服务。若不指定该参数，则默认开启云监控服务。
+ * @method void setMonitorService(RunMonitorServiceEnabled $MonitorService) 设置开启云监控服务。若不指定该参数，则默认开启云监控服务。
  */
 
 /**
@@ -35,12 +35,12 @@ class EnhancedService extends AbstractModel
     public $SecurityService;
 
     /**
-     * @var RunMonitorServiceEnabled 开启云安全服务。若不指定该参数，则默认开启云监控服务。
+     * @var RunMonitorServiceEnabled 开启云监控服务。若不指定该参数，则默认开启云监控服务。
      */
     public $MonitorService;
     /**
      * @param RunSecurityServiceEnabled $SecurityService 开启云安全服务。若不指定该参数，则默认开启云安全服务。
-     * @param RunMonitorServiceEnabled $MonitorService 开启云安全服务。若不指定该参数，则默认开启云监控服务。
+     * @param RunMonitorServiceEnabled $MonitorService 开启云监控服务。若不指定该参数，则默认开启云监控服务。
      */
     function __construct()
     {

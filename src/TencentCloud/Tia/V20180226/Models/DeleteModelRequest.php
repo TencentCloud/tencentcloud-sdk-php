@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置要删除的模型名称
  * @method string getCluster() 获取要删除的模型所在的集群名称
  * @method void setCluster(string $Cluster) 设置要删除的模型所在的集群名称
+ * @method string getServType() 获取模型类型
+ * @method void setServType(string $ServType) 设置模型类型
  */
 
 /**
@@ -38,9 +40,15 @@ class DeleteModelRequest extends AbstractModel
      * @var string 要删除的模型所在的集群名称
      */
     public $Cluster;
+
+    /**
+     * @var string 模型类型
+     */
+    public $ServType;
     /**
      * @param string $Name 要删除的模型名称
      * @param string $Cluster 要删除的模型所在的集群名称
+     * @param string $ServType 模型类型
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteModelRequest extends AbstractModel
 
         if (array_key_exists("Cluster",$param) and $param["Cluster"] !== null) {
             $this->Cluster = $param["Cluster"];
+        }
+
+        if (array_key_exists("ServType",$param) and $param["ServType"] !== null) {
+            $this->ServType = $param["ServType"];
         }
     }
 }

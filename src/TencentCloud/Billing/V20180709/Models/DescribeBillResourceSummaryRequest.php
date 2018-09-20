@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取数量
- * @method void setLimit(integer $Limit) 设置数量
+ * @method integer getLimit() 获取数量，最大值为1000
+ * @method void setLimit(integer $Limit) 设置数量，最大值为1000
  * @method string getPeriodType() 获取周期类型，byUsedTime按计费周期/byPayTime按扣费周期
  * @method void setPeriodType(string $PeriodType) 设置周期类型，byUsedTime按计费周期/byPayTime按扣费周期
  * @method string getMonth() 获取月份，格式为yyyy-mm
@@ -39,7 +39,7 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 数量
+     * @var integer 数量，最大值为1000
      */
     public $Limit;
 
@@ -54,7 +54,7 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     public $Month;
     /**
      * @param integer $Offset 偏移量
-     * @param integer $Limit 数量
+     * @param integer $Limit 数量，最大值为1000
      * @param string $PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期
      * @param string $Month 月份，格式为yyyy-mm
      */

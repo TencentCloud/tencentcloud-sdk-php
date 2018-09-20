@@ -18,6 +18,20 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method string getInstanceId() 获取实例 ID，形如：dcdbt-ow728lmc。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：dcdbt-ow728lmc。
+ * @method integer getType() 获取请求日志类型。1-binlog，2-冷备，3-errlog，4-slowlog。
+ * @method void setType(integer $Type) 设置请求日志类型。1-binlog，2-冷备，3-errlog，4-slowlog。
+ * @method integer getTotal() 获取请求日志总数
+ * @method void setTotal(integer $Total) 设置请求日志总数
+ * @method array getFiles() 获取日志文件列表
+ * @method void setFiles(array $Files) 设置日志文件列表
+ * @method string getVpcPrefix() 获取如果是VPC网络的实例，做用本前缀加上URI为下载地址
+ * @method void setVpcPrefix(string $VpcPrefix) 设置如果是VPC网络的实例，做用本前缀加上URI为下载地址
+ * @method string getNormalPrefix() 获取如果是普通网络的实例，做用本前缀加上URI为下载地址
+ * @method void setNormalPrefix(string $NormalPrefix) 设置如果是普通网络的实例，做用本前缀加上URI为下载地址
+ * @method string getShardId() 获取分片 ID，形如：shard-7noic7tv
+ * @method void setShardId(string $ShardId) 设置分片 ID，形如：shard-7noic7tv
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -28,10 +42,52 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBLogFilesResponse extends AbstractModel
 {
     /**
+     * @var string 实例 ID，形如：dcdbt-ow728lmc。
+     */
+    public $InstanceId;
+
+    /**
+     * @var integer 请求日志类型。1-binlog，2-冷备，3-errlog，4-slowlog。
+     */
+    public $Type;
+
+    /**
+     * @var integer 请求日志总数
+     */
+    public $Total;
+
+    /**
+     * @var array 日志文件列表
+     */
+    public $Files;
+
+    /**
+     * @var string 如果是VPC网络的实例，做用本前缀加上URI为下载地址
+     */
+    public $VpcPrefix;
+
+    /**
+     * @var string 如果是普通网络的实例，做用本前缀加上URI为下载地址
+     */
+    public $NormalPrefix;
+
+    /**
+     * @var string 分片 ID，形如：shard-7noic7tv
+     */
+    public $ShardId;
+
+    /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
+     * @param string $InstanceId 实例 ID，形如：dcdbt-ow728lmc。
+     * @param integer $Type 请求日志类型。1-binlog，2-冷备，3-errlog，4-slowlog。
+     * @param integer $Total 请求日志总数
+     * @param array $Files 日志文件列表
+     * @param string $VpcPrefix 如果是VPC网络的实例，做用本前缀加上URI为下载地址
+     * @param string $NormalPrefix 如果是普通网络的实例，做用本前缀加上URI为下载地址
+     * @param string $ShardId 分片 ID，形如：shard-7noic7tv
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -46,6 +102,39 @@ class DescribeDBLogFilesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("Files",$param) and $param["Files"] !== null) {
+            $this->Files = [];
+            foreach ($param["Files"] as $key => $value){
+                $obj = new LogFileInfo();
+                $obj->deserialize($value);
+                array_push($this->Files, $obj);
+            }
+        }
+
+        if (array_key_exists("VpcPrefix",$param) and $param["VpcPrefix"] !== null) {
+            $this->VpcPrefix = $param["VpcPrefix"];
+        }
+
+        if (array_key_exists("NormalPrefix",$param) and $param["NormalPrefix"] !== null) {
+            $this->NormalPrefix = $param["NormalPrefix"];
+        }
+
+        if (array_key_exists("ShardId",$param) and $param["ShardId"] !== null) {
+            $this->ShardId = $param["ShardId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
  * @method integer getLimit() 获取Limit:每页的数据项，最大100，超过100会被强制指定为100
  * @method void setLimit(integer $Limit) 设置Limit:每页的数据项，最大100，超过100会被强制指定为100
+ * @method integer getPictureExpires() 获取图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+ * @method void setPictureExpires(integer $PictureExpires) 设置图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
  */
 
 /**
@@ -66,6 +68,11 @@ class DescribePersonVisitInfoRequest extends AbstractModel
      * @var integer Limit:每页的数据项，最大100，超过100会被强制指定为100
      */
     public $Limit;
+
+    /**
+     * @var integer 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+     */
+    public $PictureExpires;
     /**
      * @param string $CompanyId 公司ID
      * @param integer $ShopId 门店ID
@@ -73,6 +80,7 @@ class DescribePersonVisitInfoRequest extends AbstractModel
      * @param string $EndDate 结束日期，格式yyyy-MM-dd
      * @param integer $Offset 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      * @param integer $Limit Limit:每页的数据项，最大100，超过100会被强制指定为100
+     * @param integer $PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribePersonVisitInfoRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("PictureExpires",$param) and $param["PictureExpires"] !== null) {
+            $this->PictureExpires = $param["PictureExpires"];
         }
     }
 }

@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(string $Uin) 设置创建任务的Uin
  * @method boolean getDebug() 获取创建任务的Debug模式
  * @method void setDebug(boolean $Debug) 设置创建任务的Debug模式
+ * @method array getRuntimeConf() 获取Runtime的额外配置信息
+ * @method void setRuntimeConf(array $RuntimeConf) 设置Runtime的额外配置信息
+ * @method string getId() 获取任务Id
+ * @method void setId(string $Id) 设置任务Id
  */
 
 /**
@@ -171,6 +175,16 @@ class Job extends AbstractModel
      * @var boolean 创建任务的Debug模式
      */
     public $Debug;
+
+    /**
+     * @var array Runtime的额外配置信息
+     */
+    public $RuntimeConf;
+
+    /**
+     * @var string 任务Id
+     */
+    public $Id;
     /**
      * @param string $Name 任务名称
      * @param string $CreateTime 任务创建时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
@@ -193,6 +207,8 @@ class Job extends AbstractModel
      * @param integer $AppId 创建任务的AppId
      * @param string $Uin 创建任务的Uin
      * @param boolean $Debug 创建任务的Debug模式
+     * @param array $RuntimeConf Runtime的额外配置信息
+     * @param string $Id 任务Id
      */
     function __construct()
     {
@@ -288,6 +304,14 @@ class Job extends AbstractModel
 
         if (array_key_exists("Debug",$param) and $param["Debug"] !== null) {
             $this->Debug = $param["Debug"];
+        }
+
+        if (array_key_exists("RuntimeConf",$param) and $param["RuntimeConf"] !== null) {
+            $this->RuntimeConf = $param["RuntimeConf"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

@@ -20,20 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getName() 获取模型名称
  * @method void setName(string $Name) 设置模型名称
- * @method string getCluster() 获取指定集群的名称
- * @method void setCluster(string $Cluster) 设置指定集群的名称
  * @method string getModel() 获取要部署模型的路径名
  * @method void setModel(string $Model) 设置要部署模型的路径名
  * @method string getDescription() 获取关于模型的描述
  * @method void setDescription(string $Description) 设置关于模型的描述
+ * @method string getCluster() 获取指定集群的名称（集群模式下必填）
+ * @method void setCluster(string $Cluster) 设置指定集群的名称（集群模式下必填）
  * @method string getRuntimeVersion() 获取运行环境镜像的标签
  * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行环境镜像的标签
- * @method integer getReplicas() 获取要部署的模型副本数目
- * @method void setReplicas(integer $Replicas) 设置要部署的模型副本数目
- * @method string getExpose() 获取暴露外网或内网，默认暴露外网
- * @method void setExpose(string $Expose) 设置暴露外网或内网，默认暴露外网
- * @method string getServType() 获取要部署模型的机器配置
- * @method void setServType(string $ServType) 设置要部署模型的机器配置
+ * @method integer getReplicas() 获取要部署的模型副本数目（集群模式下选填）
+ * @method void setReplicas(integer $Replicas) 设置要部署的模型副本数目（集群模式下选填）
+ * @method string getExpose() 获取暴露外网或内网，默认暴露外网（集群模式下选填）
+ * @method void setExpose(string $Expose) 设置暴露外网或内网，默认暴露外网（集群模式下选填）
+ * @method string getServType() 获取部署模式（无服务器函数模式/集群模式）
+ * @method void setServType(string $ServType) 设置部署模式（无服务器函数模式/集群模式）
+ * @method array getRuntimeConf() 获取部署模型的其他配置信息
+ * @method void setRuntimeConf(array $RuntimeConf) 设置部署模型的其他配置信息
  */
 
 /**
@@ -47,11 +49,6 @@ class CreateModelRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 指定集群的名称
-     */
-    public $Cluster;
-
-    /**
      * @var string 要部署模型的路径名
      */
     public $Model;
@@ -62,33 +59,44 @@ class CreateModelRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var string 指定集群的名称（集群模式下必填）
+     */
+    public $Cluster;
+
+    /**
      * @var string 运行环境镜像的标签
      */
     public $RuntimeVersion;
 
     /**
-     * @var integer 要部署的模型副本数目
+     * @var integer 要部署的模型副本数目（集群模式下选填）
      */
     public $Replicas;
 
     /**
-     * @var string 暴露外网或内网，默认暴露外网
+     * @var string 暴露外网或内网，默认暴露外网（集群模式下选填）
      */
     public $Expose;
 
     /**
-     * @var string 要部署模型的机器配置
+     * @var string 部署模式（无服务器函数模式/集群模式）
      */
     public $ServType;
+
+    /**
+     * @var array 部署模型的其他配置信息
+     */
+    public $RuntimeConf;
     /**
      * @param string $Name 模型名称
-     * @param string $Cluster 指定集群的名称
      * @param string $Model 要部署模型的路径名
      * @param string $Description 关于模型的描述
+     * @param string $Cluster 指定集群的名称（集群模式下必填）
      * @param string $RuntimeVersion 运行环境镜像的标签
-     * @param integer $Replicas 要部署的模型副本数目
-     * @param string $Expose 暴露外网或内网，默认暴露外网
-     * @param string $ServType 要部署模型的机器配置
+     * @param integer $Replicas 要部署的模型副本数目（集群模式下选填）
+     * @param string $Expose 暴露外网或内网，默认暴露外网（集群模式下选填）
+     * @param string $ServType 部署模式（无服务器函数模式/集群模式）
+     * @param array $RuntimeConf 部署模型的其他配置信息
      */
     function __construct()
     {
@@ -106,16 +114,16 @@ class CreateModelRequest extends AbstractModel
             $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("Cluster",$param) and $param["Cluster"] !== null) {
-            $this->Cluster = $param["Cluster"];
-        }
-
         if (array_key_exists("Model",$param) and $param["Model"] !== null) {
             $this->Model = $param["Model"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Cluster",$param) and $param["Cluster"] !== null) {
+            $this->Cluster = $param["Cluster"];
         }
 
         if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
@@ -132,6 +140,10 @@ class CreateModelRequest extends AbstractModel
 
         if (array_key_exists("ServType",$param) and $param["ServType"] !== null) {
             $this->ServType = $param["ServType"];
+        }
+
+        if (array_key_exists("RuntimeConf",$param) and $param["RuntimeConf"] !== null) {
+            $this->RuntimeConf = $param["RuntimeConf"];
         }
     }
 }

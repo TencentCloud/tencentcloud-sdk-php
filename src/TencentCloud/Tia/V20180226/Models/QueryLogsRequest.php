@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置查询日志的结束时间
  * @method integer getLimit() 获取单次要返回的日志条数
  * @method void setLimit(integer $Limit) 设置单次要返回的日志条数
- * @method string getContext() 获取加载更多使用，透传上次返回的context值，获取后续的日志内容
- * @method void setContext(string $Context) 设置加载更多使用，透传上次返回的context值，获取后续的日志内容
+ * @method string getContext() 获取加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
+ * @method void setContext(string $Context) 设置加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
  */
 
 /**
@@ -63,7 +63,7 @@ class QueryLogsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 加载更多使用，透传上次返回的context值，获取后续的日志内容
+     * @var string 加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
      */
     public $Context;
     /**
@@ -72,7 +72,7 @@ class QueryLogsRequest extends AbstractModel
      * @param string $StartTime 查询日志的开始时间
      * @param string $EndTime 查询日志的结束时间
      * @param integer $Limit 单次要返回的日志条数
-     * @param string $Context 加载更多使用，透传上次返回的context值，获取后续的日志内容
+     * @param string $Context 加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
      */
     function __construct()
     {

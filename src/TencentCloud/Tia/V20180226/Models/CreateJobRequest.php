@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParameterServerCount(integer $ParameterServerCount) 设置（ScaleTier为Custom时）parameter server机器数量
  * @method boolean getDebug() 获取启动debug mode，默认为false
  * @method void setDebug(boolean $Debug) 设置启动debug mode，默认为false
+ * @method array getRuntimeConf() 获取运行任务的其他配置信息
+ * @method void setRuntimeConf(array $RuntimeConf) 设置运行任务的其他配置信息
  */
 
 /**
@@ -115,6 +117,11 @@ class CreateJobRequest extends AbstractModel
      * @var boolean 启动debug mode，默认为false
      */
     public $Debug;
+
+    /**
+     * @var array 运行任务的其他配置信息
+     */
+    public $RuntimeConf;
     /**
      * @param string $Name 任务名称
      * @param string $Cluster 运行任务的集群
@@ -129,6 +136,7 @@ class CreateJobRequest extends AbstractModel
      * @param integer $WorkerCount （ScaleTier为Custom时）worker机器数量
      * @param integer $ParameterServerCount （ScaleTier为Custom时）parameter server机器数量
      * @param boolean $Debug 启动debug mode，默认为false
+     * @param array $RuntimeConf 运行任务的其他配置信息
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class CreateJobRequest extends AbstractModel
 
         if (array_key_exists("Debug",$param) and $param["Debug"] !== null) {
             $this->Debug = $param["Debug"];
+        }
+
+        if (array_key_exists("RuntimeConf",$param) and $param["RuntimeConf"] !== null) {
+            $this->RuntimeConf = $param["RuntimeConf"];
         }
     }
 }

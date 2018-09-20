@@ -22,12 +22,18 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Youmall\V20180228\Models as Models;
 
 /**
+* @method Models\DescribeCameraPersonResponse DescribeCameraPerson(Models\DescribeCameraPersonRequest $req) 通过指定设备ID和指定时段，获取该时段内中收银台摄像设备抓取到顾客头像及身份ID
+* @method Models\DescribeFaceIdByTempIdResponse DescribeFaceIdByTempId(Models\DescribeFaceIdByTempIdRequest $req) 通过DescribeCameraPerson接口上报的收银台身份ID查询顾客的FaceID。查询最佳时间为收银台上报的次日1点后。
+* @method Models\DescribeHistoryNetworkInfoResponse DescribeHistoryNetworkInfo(Models\DescribeHistoryNetworkInfoRequest $req) 返回当前门店历史网络状态数据
+* @method Models\DescribeNetworkInfoResponse DescribeNetworkInfo(Models\DescribeNetworkInfoRequest $req) 返回当前门店最新网络状态数据
 * @method Models\DescribePersonInfoResponse DescribePersonInfo(Models\DescribePersonInfoRequest $req) 指定门店获取所有顾客详情列表，包含客户ID、图片、年龄、性别
 * @method Models\DescribePersonVisitInfoResponse DescribePersonVisitInfo(Models\DescribePersonVisitInfoRequest $req) 获取门店指定时间范围内的所有用户到访信息记录，支持的时间范围：过去365天，含当天。
 * @method Models\DescribeShopHourTrafficInfoResponse DescribeShopHourTrafficInfo(Models\DescribeShopHourTrafficInfoRequest $req) 按小时提供查询日期范围内门店的每天每小时累计客流人数数据，支持的时间范围：过去365天，含当天。
 * @method Models\DescribeShopInfoResponse DescribeShopInfo(Models\DescribeShopInfoRequest $req) 根据客户身份标识获取客户下所有的门店信息列表
 * @method Models\DescribeShopTrafficInfoResponse DescribeShopTrafficInfo(Models\DescribeShopTrafficInfoRequest $req) 按天提供查询日期范围内门店的单日累计客流人数，支持的时间范围：过去365天，含当天。
 * @method Models\DescribeZoneTrafficInfoResponse DescribeZoneTrafficInfo(Models\DescribeZoneTrafficInfoRequest $req) 按天提供查询日期范围内，客户指定门店下的所有区域（优Mall部署时已配置区域）的累计客流人次和平均停留时间。支持的时间范围：过去365天，含当天。
+* @method Models\ModifyPersonTagInfoResponse ModifyPersonTagInfo(Models\ModifyPersonTagInfoRequest $req) 标记到店顾客的身份类型，例如黑名单、白名单等
+
 * @method Models\RegisterCallbackResponse RegisterCallback(Models\RegisterCallbackRequest $req) 调用本接口在优Mall中注册自己集团的到店通知回调接口地址，接口协议为HTTP或HTTPS。注册后，若集团有特殊身份（例如老客）到店通知，优Mall后台将主动将到店信息push给该接口
  */
 

@@ -24,14 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVisitId(integer $VisitId) 设置用户到访ID
  * @method integer getInTime() 获取到访时间：Unix时间戳
  * @method void setInTime(integer $InTime) 设置到访时间：Unix时间戳
- * @method string getCapturedPicture() 获取抓拍到的头像，这里返回的是图片内容的Base64编码
- * @method void setCapturedPicture(string $CapturedPicture) 设置抓拍到的头像，这里返回的是图片内容的Base64编码
+ * @method string getCapturedPicture() 获取抓拍到的头像Base64内容，已弃用，返回默认空值
+ * @method void setCapturedPicture(string $CapturedPicture) 设置抓拍到的头像Base64内容，已弃用，返回默认空值
  * @method integer getMaskType() 获取口罩类型：0不戴口罩，1戴口罩
  * @method void setMaskType(integer $MaskType) 设置口罩类型：0不戴口罩，1戴口罩
  * @method integer getGlassType() 获取眼镜类型：0不戴眼镜，1普通眼镜 , 2墨镜
  * @method void setGlassType(integer $GlassType) 设置眼镜类型：0不戴眼镜，1普通眼镜 , 2墨镜
  * @method integer getHairType() 获取发型：0 短发,  1长发
  * @method void setHairType(integer $HairType) 设置发型：0 短发,  1长发
+ * @method string getCapturedPictureUrl() 获取抓拍到的头像Url，在有效期内可以访问下载
+ * @method void setCapturedPictureUrl(string $CapturedPictureUrl) 设置抓拍到的头像Url，在有效期内可以访问下载
  */
 
 /**
@@ -55,7 +57,7 @@ class PersonVisitInfo extends AbstractModel
     public $InTime;
 
     /**
-     * @var string 抓拍到的头像，这里返回的是图片内容的Base64编码
+     * @var string 抓拍到的头像Base64内容，已弃用，返回默认空值
      */
     public $CapturedPicture;
 
@@ -73,14 +75,20 @@ class PersonVisitInfo extends AbstractModel
      * @var integer 发型：0 短发,  1长发
      */
     public $HairType;
+
+    /**
+     * @var string 抓拍到的头像Url，在有效期内可以访问下载
+     */
+    public $CapturedPictureUrl;
     /**
      * @param integer $PersonId 用户ID
      * @param integer $VisitId 用户到访ID
      * @param integer $InTime 到访时间：Unix时间戳
-     * @param string $CapturedPicture 抓拍到的头像，这里返回的是图片内容的Base64编码
+     * @param string $CapturedPicture 抓拍到的头像Base64内容，已弃用，返回默认空值
      * @param integer $MaskType 口罩类型：0不戴口罩，1戴口罩
      * @param integer $GlassType 眼镜类型：0不戴眼镜，1普通眼镜 , 2墨镜
      * @param integer $HairType 发型：0 短发,  1长发
+     * @param string $CapturedPictureUrl 抓拍到的头像Url，在有效期内可以访问下载
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class PersonVisitInfo extends AbstractModel
 
         if (array_key_exists("HairType",$param) and $param["HairType"] !== null) {
             $this->HairType = $param["HairType"];
+        }
+
+        if (array_key_exists("CapturedPictureUrl",$param) and $param["CapturedPictureUrl"] !== null) {
+            $this->CapturedPictureUrl = $param["CapturedPictureUrl"];
         }
     }
 }

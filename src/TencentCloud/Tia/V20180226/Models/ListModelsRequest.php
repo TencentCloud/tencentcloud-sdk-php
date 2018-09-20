@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页参数，返回数量
  * @method integer getOffset() 获取分页参数，起始位置
  * @method void setOffset(integer $Offset) 设置分页参数，起始位置
+ * @method string getServType() 获取模型类型
+ * @method void setServType(string $ServType) 设置模型类型
  */
 
 /**
@@ -45,10 +47,16 @@ class ListModelsRequest extends AbstractModel
      * @var integer 分页参数，起始位置
      */
     public $Offset;
+
+    /**
+     * @var string 模型类型
+     */
+    public $ServType;
     /**
      * @param string $Cluster 部署模型的集群
      * @param integer $Limit 分页参数，返回数量
      * @param integer $Offset 分页参数，起始位置
+     * @param string $ServType 模型类型
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ListModelsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("ServType",$param) and $param["ServType"] !== null) {
+            $this->ServType = $param["ServType"];
         }
     }
 }

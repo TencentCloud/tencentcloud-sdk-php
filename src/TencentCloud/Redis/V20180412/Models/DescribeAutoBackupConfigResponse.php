@@ -14,40 +14,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Batch\V20170312\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getJobSet() 获取作业列表
- * @method void setJobSet(array $JobSet) 设置作业列表
- * @method integer getTotalCount() 获取符合条件的作业数量
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的作业数量
+ * @method integer getAutoBackupType() 获取备份类型。自动备份类型： 1 “定时回档”
+ * @method void setAutoBackupType(integer $AutoBackupType) 设置备份类型。自动备份类型： 1 “定时回档”
+ * @method array getWeekDays() 获取Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+ * @method void setWeekDays(array $WeekDays) 设置Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+ * @method string getTimePeriod() 获取时间段。
+ * @method void setTimePeriod(string $TimePeriod) 设置时间段。
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
- *DescribeJobs返回参数结构体
+ *DescribeAutoBackupConfig返回参数结构体
  */
-class DescribeJobsResponse extends AbstractModel
+class DescribeAutoBackupConfigResponse extends AbstractModel
 {
     /**
-     * @var array 作业列表
+     * @var integer 备份类型。自动备份类型： 1 “定时回档”
      */
-    public $JobSet;
+    public $AutoBackupType;
 
     /**
-     * @var integer 符合条件的作业数量
+     * @var array Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
      */
-    public $TotalCount;
+    public $WeekDays;
+
+    /**
+     * @var string 时间段。
+     */
+    public $TimePeriod;
 
     /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
-     * @param array $JobSet 作业列表
-     * @param integer $TotalCount 符合条件的作业数量
+     * @param integer $AutoBackupType 备份类型。自动备份类型： 1 “定时回档”
+     * @param array $WeekDays Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+     * @param string $TimePeriod 时间段。
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -62,17 +70,16 @@ class DescribeJobsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobSet",$param) and $param["JobSet"] !== null) {
-            $this->JobSet = [];
-            foreach ($param["JobSet"] as $key => $value){
-                $obj = new JobView();
-                $obj->deserialize($value);
-                array_push($this->JobSet, $obj);
-            }
+        if (array_key_exists("AutoBackupType",$param) and $param["AutoBackupType"] !== null) {
+            $this->AutoBackupType = $param["AutoBackupType"];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("WeekDays",$param) and $param["WeekDays"] !== null) {
+            $this->WeekDays = $param["WeekDays"];
+        }
+
+        if (array_key_exists("TimePeriod",$param) and $param["TimePeriod"] !== null) {
+            $this->TimePeriod = $param["TimePeriod"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

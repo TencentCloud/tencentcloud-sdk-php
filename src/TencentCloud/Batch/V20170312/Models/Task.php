@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFailedAction(string $FailedAction) 设置TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
  * @method integer getMaxRetryCount() 获取任务失败后的最大重试次数，默认为0
  * @method void setMaxRetryCount(integer $MaxRetryCount) 设置任务失败后的最大重试次数，默认为0
- * @method integer getTimeout() 获取任务启动后的超时时间，单位秒，默认为3600秒
- * @method void setTimeout(integer $Timeout) 设置任务启动后的超时时间，单位秒，默认为3600秒
+ * @method integer getTimeout() 获取任务启动后的超时时间，单位秒，默认为86400秒
+ * @method void setTimeout(integer $Timeout) 设置任务启动后的超时时间，单位秒，默认为86400秒
  */
 
 /**
@@ -126,7 +126,7 @@ class Task extends AbstractModel
     public $MaxRetryCount;
 
     /**
-     * @var integer 任务启动后的超时时间，单位秒，默认为3600秒
+     * @var integer 任务启动后的超时时间，单位秒，默认为86400秒
      */
     public $Timeout;
     /**
@@ -144,7 +144,7 @@ class Task extends AbstractModel
      * @param array $Authentications 授权信息
      * @param string $FailedAction TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
      * @param integer $MaxRetryCount 任务失败后的最大重试次数，默认为0
-     * @param integer $Timeout 任务启动后的超时时间，单位秒，默认为3600秒
+     * @param integer $Timeout 任务启动后的超时时间，单位秒，默认为86400秒
      */
     function __construct()
     {

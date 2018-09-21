@@ -14,40 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Batch\V20170312\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getJobSet() 获取作业列表
- * @method void setJobSet(array $JobSet) 设置作业列表
- * @method integer getTotalCount() 获取符合条件的作业数量
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的作业数量
+ * @method integer getTotalCount() 获取备份总数
+ * @method void setTotalCount(integer $TotalCount) 设置备份总数
+ * @method array getBackupSet() 获取实例的备份数组
+ * @method void setBackupSet(array $BackupSet) 设置实例的备份数组
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
- *DescribeJobs返回参数结构体
+ *DescribeInstanceBackups返回参数结构体
  */
-class DescribeJobsResponse extends AbstractModel
+class DescribeInstanceBackupsResponse extends AbstractModel
 {
     /**
-     * @var array 作业列表
-     */
-    public $JobSet;
-
-    /**
-     * @var integer 符合条件的作业数量
+     * @var integer 备份总数
      */
     public $TotalCount;
+
+    /**
+     * @var array 实例的备份数组
+     */
+    public $BackupSet;
 
     /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
-     * @param array $JobSet 作业列表
-     * @param integer $TotalCount 符合条件的作业数量
+     * @param integer $TotalCount 备份总数
+     * @param array $BackupSet 实例的备份数组
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -62,17 +62,17 @@ class DescribeJobsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobSet",$param) and $param["JobSet"] !== null) {
-            $this->JobSet = [];
-            foreach ($param["JobSet"] as $key => $value){
-                $obj = new JobView();
-                $obj->deserialize($value);
-                array_push($this->JobSet, $obj);
-            }
-        }
-
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("BackupSet",$param) and $param["BackupSet"] !== null) {
+            $this->BackupSet = [];
+            foreach ($param["BackupSet"] as $key => $value){
+                $obj = new RedisBackupSet();
+                $obj->deserialize($value);
+                array_push($this->BackupSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -14,40 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Batch\V20170312\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getJobSet() 获取作业列表
- * @method void setJobSet(array $JobSet) 设置作业列表
- * @method integer getTotalCount() 获取符合条件的作业数量
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的作业数量
+ * @method string getDealId() 获取订单ID
+ * @method void setDealId(string $DealId) 设置订单ID
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
- *DescribeJobs返回参数结构体
+ *UpgradeInstance返回参数结构体
  */
-class DescribeJobsResponse extends AbstractModel
+class UpgradeInstanceResponse extends AbstractModel
 {
     /**
-     * @var array 作业列表
+     * @var string 订单ID
      */
-    public $JobSet;
-
-    /**
-     * @var integer 符合条件的作业数量
-     */
-    public $TotalCount;
+    public $DealId;
 
     /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
-     * @param array $JobSet 作业列表
-     * @param integer $TotalCount 符合条件的作业数量
+     * @param string $DealId 订单ID
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -62,17 +54,8 @@ class DescribeJobsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobSet",$param) and $param["JobSet"] !== null) {
-            $this->JobSet = [];
-            foreach ($param["JobSet"] as $key => $value){
-                $obj = new JobView();
-                $obj->deserialize($value);
-                array_push($this->JobSet, $obj);
-            }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("DealId",$param) and $param["DealId"] !== null) {
+            $this->DealId = $param["DealId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

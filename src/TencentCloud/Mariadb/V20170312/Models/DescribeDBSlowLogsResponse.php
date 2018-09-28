@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getData() 获取慢查询日志数据
  * @method void setData(array $Data) 设置慢查询日志数据
- * @method string getLockTimeSum() 获取所有语句锁时间总和
- * @method void setLockTimeSum(string $LockTimeSum) 设置所有语句锁时间总和
- * @method string getQueryCount() 获取所有语句查询总次数
- * @method void setQueryCount(string $QueryCount) 设置所有语句查询总次数
- * @method string getTotal() 获取总记录数
- * @method void setTotal(string $Total) 设置总记录数
- * @method string getQueryTimeSum() 获取所有语句查询时间总和
- * @method void setQueryTimeSum(string $QueryTimeSum) 设置所有语句查询时间总和
+ * @method float getLockTimeSum() 获取所有语句锁时间总和
+ * @method void setLockTimeSum(float $LockTimeSum) 设置所有语句锁时间总和
+ * @method integer getQueryCount() 获取所有语句查询总次数
+ * @method void setQueryCount(integer $QueryCount) 设置所有语句查询总次数
+ * @method integer getTotal() 获取总记录数
+ * @method void setTotal(integer $Total) 设置总记录数
+ * @method float getQueryTimeSum() 获取所有语句查询时间总和
+ * @method void setQueryTimeSum(float $QueryTimeSum) 设置所有语句查询时间总和
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -43,22 +43,22 @@ class DescribeDBSlowLogsResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var string 所有语句锁时间总和
+     * @var float 所有语句锁时间总和
      */
     public $LockTimeSum;
 
     /**
-     * @var string 所有语句查询总次数
+     * @var integer 所有语句查询总次数
      */
     public $QueryCount;
 
     /**
-     * @var string 总记录数
+     * @var integer 总记录数
      */
     public $Total;
 
     /**
-     * @var string 所有语句查询时间总和
+     * @var float 所有语句查询时间总和
      */
     public $QueryTimeSum;
 
@@ -68,10 +68,10 @@ class DescribeDBSlowLogsResponse extends AbstractModel
     public $RequestId;
     /**
      * @param array $Data 慢查询日志数据
-     * @param string $LockTimeSum 所有语句锁时间总和
-     * @param string $QueryCount 所有语句查询总次数
-     * @param string $Total 总记录数
-     * @param string $QueryTimeSum 所有语句查询时间总和
+     * @param float $LockTimeSum 所有语句锁时间总和
+     * @param integer $QueryCount 所有语句查询总次数
+     * @param integer $Total 总记录数
+     * @param float $QueryTimeSum 所有语句查询时间总和
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()

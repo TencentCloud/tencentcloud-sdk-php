@@ -20,8 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getVpnGatewayIds() 获取VPN网关实例ID。形如：vpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
  * @method void setVpnGatewayIds(array $VpnGatewayIds) 设置VPN网关实例ID。形如：vpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
- * @method array getFilters() 获取过滤器对象属性
- * @method void setFilters(array $Filters) 设置过滤器对象属性
+ * @method array getFilters() 获取过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
+<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
+<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
+<li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
+<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
+<li>public-ip-address- String - （过滤条件）公网IP。</li>
+<li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
+<li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
+ * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
+<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
+<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
+<li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
+<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
+<li>public-ip-address- String - （过滤条件）公网IP。</li>
+<li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
+<li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取请求对象个数
@@ -39,7 +53,14 @@ class DescribeVpnGatewaysRequest extends AbstractModel
     public $VpnGatewayIds;
 
     /**
-     * @var array 过滤器对象属性
+     * @var array 过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
+<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
+<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
+<li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
+<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
+<li>public-ip-address- String - （过滤条件）公网IP。</li>
+<li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
+<li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
      */
     public $Filters;
 
@@ -54,7 +75,14 @@ class DescribeVpnGatewaysRequest extends AbstractModel
     public $Limit;
     /**
      * @param array $VpnGatewayIds VPN网关实例ID。形如：vpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
-     * @param array $Filters 过滤器对象属性
+     * @param array $Filters 过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
+<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
+<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
+<li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
+<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
+<li>public-ip-address- String - （过滤条件）公网IP。</li>
+<li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
+<li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
      * @param integer $Offset 偏移量
      * @param integer $Limit 请求对象个数
      */

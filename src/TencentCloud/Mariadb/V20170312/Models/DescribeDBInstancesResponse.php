@@ -18,8 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getTotalCount() 获取符合条件的实例数量
- * @method void setTotalCount(array $TotalCount) 设置符合条件的实例数量
+ * @method integer getTotalCount() 获取符合条件的实例数量
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例数量
  * @method array getInstances() 获取实例详细信息列表
  * @method void setInstances(array $Instances) 设置实例详细信息列表
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBInstancesResponse extends AbstractModel
 {
     /**
-     * @var array 符合条件的实例数量
+     * @var integer 符合条件的实例数量
      */
     public $TotalCount;
 
@@ -46,7 +46,7 @@ class DescribeDBInstancesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $TotalCount 符合条件的实例数量
+     * @param integer $TotalCount 符合条件的实例数量
      * @param array $Instances 实例详细信息列表
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */

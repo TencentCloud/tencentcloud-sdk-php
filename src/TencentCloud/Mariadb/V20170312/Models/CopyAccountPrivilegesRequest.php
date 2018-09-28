@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSrcUserName(string $SrcUserName) 设置源用户名
  * @method string getSrcHost() 获取源用户允许的访问 host
  * @method void setSrcHost(string $SrcHost) 设置源用户允许的访问 host
- * @method string getSrcReadOnly() 获取源账号的 ReadOnly 属性
- * @method void setSrcReadOnly(string $SrcReadOnly) 设置源账号的 ReadOnly 属性
  * @method string getDstUserName() 获取目的用户名
  * @method void setDstUserName(string $DstUserName) 设置目的用户名
  * @method string getDstHost() 获取目的用户允许的访问 host
  * @method void setDstHost(string $DstHost) 设置目的用户允许的访问 host
+ * @method string getSrcReadOnly() 获取源账号的 ReadOnly 属性
+ * @method void setSrcReadOnly(string $SrcReadOnly) 设置源账号的 ReadOnly 属性
  * @method string getDstReadOnly() 获取目的账号的 ReadOnly 属性
  * @method void setDstReadOnly(string $DstReadOnly) 设置目的账号的 ReadOnly 属性
  */
@@ -55,11 +55,6 @@ class CopyAccountPrivilegesRequest extends AbstractModel
     public $SrcHost;
 
     /**
-     * @var string 源账号的 ReadOnly 属性
-     */
-    public $SrcReadOnly;
-
-    /**
      * @var string 目的用户名
      */
     public $DstUserName;
@@ -70,6 +65,11 @@ class CopyAccountPrivilegesRequest extends AbstractModel
     public $DstHost;
 
     /**
+     * @var string 源账号的 ReadOnly 属性
+     */
+    public $SrcReadOnly;
+
+    /**
      * @var string 目的账号的 ReadOnly 属性
      */
     public $DstReadOnly;
@@ -77,9 +77,9 @@ class CopyAccountPrivilegesRequest extends AbstractModel
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param string $SrcUserName 源用户名
      * @param string $SrcHost 源用户允许的访问 host
-     * @param string $SrcReadOnly 源账号的 ReadOnly 属性
      * @param string $DstUserName 目的用户名
      * @param string $DstHost 目的用户允许的访问 host
+     * @param string $SrcReadOnly 源账号的 ReadOnly 属性
      * @param string $DstReadOnly 目的账号的 ReadOnly 属性
      */
     function __construct()
@@ -106,16 +106,16 @@ class CopyAccountPrivilegesRequest extends AbstractModel
             $this->SrcHost = $param["SrcHost"];
         }
 
-        if (array_key_exists("SrcReadOnly",$param) and $param["SrcReadOnly"] !== null) {
-            $this->SrcReadOnly = $param["SrcReadOnly"];
-        }
-
         if (array_key_exists("DstUserName",$param) and $param["DstUserName"] !== null) {
             $this->DstUserName = $param["DstUserName"];
         }
 
         if (array_key_exists("DstHost",$param) and $param["DstHost"] !== null) {
             $this->DstHost = $param["DstHost"];
+        }
+
+        if (array_key_exists("SrcReadOnly",$param) and $param["SrcReadOnly"] !== null) {
+            $this->SrcReadOnly = $param["SrcReadOnly"];
         }
 
         if (array_key_exists("DstReadOnly",$param) and $param["DstReadOnly"] !== null) {

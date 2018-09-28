@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewPurchasePlan(string $NewPurchasePlan) 设置计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
  * @method string getRestrictState() 获取网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
  * @method void setRestrictState(string $RestrictState) 设置网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+ * @method string getZone() 获取可用区，如：ap-guangzhou-2
+ * @method void setZone(string $Zone) 设置可用区，如：ap-guangzhou-2
  */
 
 /**
@@ -122,6 +124,11 @@ class VpnGateway extends AbstractModel
      * @var string 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
      */
     public $RestrictState;
+
+    /**
+     * @var string 可用区，如：ap-guangzhou-2
+     */
+    public $Zone;
     /**
      * @param string $VpnGatewayId 网关实例ID。
      * @param string $VpcId VPC实例ID。
@@ -137,6 +144,7 @@ class VpnGateway extends AbstractModel
      * @param boolean $IsAddressBlocked 公网IP是否被封堵。
      * @param string $NewPurchasePlan 计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
      * @param string $RestrictState 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+     * @param string $Zone 可用区，如：ap-guangzhou-2
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class VpnGateway extends AbstractModel
 
         if (array_key_exists("RestrictState",$param) and $param["RestrictState"] !== null) {
             $this->RestrictState = $param["RestrictState"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

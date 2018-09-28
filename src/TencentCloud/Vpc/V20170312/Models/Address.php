@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsEipDirectConnection(boolean $IsEipDirectConnection) 设置eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
  * @method string getAddressType() 获取eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
  * @method void setAddressType(string $AddressType) 设置eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+ * @method boolean getCascadeRelease() 获取eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+ * @method void setCascadeRelease(boolean $CascadeRelease) 设置eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
  */
 
 /**
@@ -108,6 +110,11 @@ class Address extends AbstractModel
      * @var string eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
      */
     public $AddressType;
+
+    /**
+     * @var boolean eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+     */
+    public $CascadeRelease;
     /**
      * @param string $AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      * @param string $AddressName `EIP`名称。
@@ -121,6 +128,7 @@ class Address extends AbstractModel
      * @param boolean $IsBlocked 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
      * @param boolean $IsEipDirectConnection eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
      * @param string $AddressType eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+     * @param boolean $CascadeRelease eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class Address extends AbstractModel
 
         if (array_key_exists("AddressType",$param) and $param["AddressType"] !== null) {
             $this->AddressType = $param["AddressType"];
+        }
+
+        if (array_key_exists("CascadeRelease",$param) and $param["CascadeRelease"] !== null) {
+            $this->CascadeRelease = $param["CascadeRelease"];
         }
     }
 }

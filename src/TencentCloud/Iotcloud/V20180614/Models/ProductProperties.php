@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductType(integer $ProductType) 设置产品类型，0表示正常设备，2表示NB-IoT设备，默认值是0
  * @method string getFormat() 获取数据格式，取值为json或者custom，默认值是json
  * @method void setFormat(string $Format) 设置数据格式，取值为json或者custom，默认值是json
+ * @method string getPlatform() 获取产品所属平台，默认值是0
+ * @method void setPlatform(string $Platform) 设置产品所属平台，默认值是0
+ * @method string getAppeui() 获取LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+ * @method void setAppeui(string $Appeui) 设置LoRa产品运营侧APPEUI，只有LoRa产品需要填写
  */
 
 /**
@@ -59,12 +63,24 @@ class ProductProperties extends AbstractModel
      * @var string 数据格式，取值为json或者custom，默认值是json
      */
     public $Format;
+
+    /**
+     * @var string 产品所属平台，默认值是0
+     */
+    public $Platform;
+
+    /**
+     * @var string LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+     */
+    public $Appeui;
     /**
      * @param string $ProductDescription 产品描述
      * @param string $EncryptionType 加密类型，1表示非对称加密，2表示对称加密。如不填写，默认值是1
      * @param string $Region 产品所属区域，目前只支持广州（gz）
      * @param integer $ProductType 产品类型，0表示正常设备，2表示NB-IoT设备，默认值是0
      * @param string $Format 数据格式，取值为json或者custom，默认值是json
+     * @param string $Platform 产品所属平台，默认值是0
+     * @param string $Appeui LoRa产品运营侧APPEUI，只有LoRa产品需要填写
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class ProductProperties extends AbstractModel
 
         if (array_key_exists("Format",$param) and $param["Format"] !== null) {
             $this->Format = $param["Format"];
+        }
+
+        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
+            $this->Platform = $param["Platform"];
+        }
+
+        if (array_key_exists("Appeui",$param) and $param["Appeui"] !== null) {
+            $this->Appeui = $param["Appeui"];
         }
     }
 }

@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotal(integer $Total) 设置请求日志总数
  * @method array getFiles() 获取包含uri、length、mtime（修改时间）等信息
  * @method void setFiles(array $Files) 设置包含uri、length、mtime（修改时间）等信息
- * @method string getVpcprefix() 获取如果是VPC网络的实例，做用本前缀加上URI为下载地址
- * @method void setVpcprefix(string $Vpcprefix) 设置如果是VPC网络的实例，做用本前缀加上URI为下载地址
- * @method string getNormalprefix() 获取如果是普通网络的实例，做用本前缀加上URI为下载地址
- * @method void setNormalprefix(string $Normalprefix) 设置如果是普通网络的实例，做用本前缀加上URI为下载地址
+ * @method string getVpcPrefix() 获取如果是VPC网络的实例，做用本前缀加上URI为下载地址
+ * @method void setVpcPrefix(string $VpcPrefix) 设置如果是VPC网络的实例，做用本前缀加上URI为下载地址
+ * @method string getNormalPrefix() 获取如果是普通网络的实例，做用本前缀加上URI为下载地址
+ * @method void setNormalPrefix(string $NormalPrefix) 设置如果是普通网络的实例，做用本前缀加上URI为下载地址
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -62,12 +62,12 @@ class DescribeDBLogFilesResponse extends AbstractModel
     /**
      * @var string 如果是VPC网络的实例，做用本前缀加上URI为下载地址
      */
-    public $Vpcprefix;
+    public $VpcPrefix;
 
     /**
      * @var string 如果是普通网络的实例，做用本前缀加上URI为下载地址
      */
-    public $Normalprefix;
+    public $NormalPrefix;
 
     /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -78,8 +78,8 @@ class DescribeDBLogFilesResponse extends AbstractModel
      * @param integer $Type 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
      * @param integer $Total 请求日志总数
      * @param array $Files 包含uri、length、mtime（修改时间）等信息
-     * @param string $Vpcprefix 如果是VPC网络的实例，做用本前缀加上URI为下载地址
-     * @param string $Normalprefix 如果是普通网络的实例，做用本前缀加上URI为下载地址
+     * @param string $VpcPrefix 如果是VPC网络的实例，做用本前缀加上URI为下载地址
+     * @param string $NormalPrefix 如果是普通网络的实例，做用本前缀加上URI为下载地址
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -115,12 +115,12 @@ class DescribeDBLogFilesResponse extends AbstractModel
             }
         }
 
-        if (array_key_exists("Vpcprefix",$param) and $param["Vpcprefix"] !== null) {
-            $this->Vpcprefix = $param["Vpcprefix"];
+        if (array_key_exists("VpcPrefix",$param) and $param["VpcPrefix"] !== null) {
+            $this->VpcPrefix = $param["VpcPrefix"];
         }
 
-        if (array_key_exists("Normalprefix",$param) and $param["Normalprefix"] !== null) {
-            $this->Normalprefix = $param["Normalprefix"];
+        if (array_key_exists("NormalPrefix",$param) and $param["NormalPrefix"] !== null) {
+            $this->NormalPrefix = $param["NormalPrefix"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

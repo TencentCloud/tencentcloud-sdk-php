@@ -22,18 +22,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置关联实例ID
  * @method string getInstanceRegion() 获取关联实例ID所属大区，例如：ap-guangzhou
  * @method void setInstanceRegion(string $InstanceRegion) 设置关联实例ID所属大区，例如：ap-guangzhou
- * @method string getCcnId() 获取云联网实例ID
- * @method void setCcnId(string $CcnId) 设置云联网实例ID
  * @method string getInstanceType() 获取关联实例类型，可选值：VPC、DIRECTCONNECT
  * @method void setInstanceType(string $InstanceType) 设置关联实例类型，可选值：VPC、DIRECTCONNECT
- * @method string getInstanceName() 获取关联实例名称
- * @method void setInstanceName(string $InstanceName) 设置关联实例名称
- * @method array getCidrBlock() 获取关联实例CIDR
- * @method void setCidrBlock(array $CidrBlock) 设置关联实例CIDR
  */
 
 /**
- *云联网（CCN）关联的实例（Instance）对象
+ *云联网（CCN）关联实例（Instance）对象。
  */
 class CcnInstance extends AbstractModel
 {
@@ -48,31 +42,13 @@ class CcnInstance extends AbstractModel
     public $InstanceRegion;
 
     /**
-     * @var string 云联网实例ID
-     */
-    public $CcnId;
-
-    /**
      * @var string 关联实例类型，可选值：VPC、DIRECTCONNECT
      */
     public $InstanceType;
-
-    /**
-     * @var string 关联实例名称
-     */
-    public $InstanceName;
-
-    /**
-     * @var array 关联实例CIDR
-     */
-    public $CidrBlock;
     /**
      * @param string $InstanceId 关联实例ID
      * @param string $InstanceRegion 关联实例ID所属大区，例如：ap-guangzhou
-     * @param string $CcnId 云联网实例ID
      * @param string $InstanceType 关联实例类型，可选值：VPC、DIRECTCONNECT
-     * @param string $InstanceName 关联实例名称
-     * @param array $CidrBlock 关联实例CIDR
      */
     function __construct()
     {
@@ -94,20 +70,8 @@ class CcnInstance extends AbstractModel
             $this->InstanceRegion = $param["InstanceRegion"];
         }
 
-        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
-            $this->CcnId = $param["CcnId"];
-        }
-
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
-        }
-
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
-        }
-
-        if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
-            $this->CidrBlock = $param["CidrBlock"];
         }
     }
 }

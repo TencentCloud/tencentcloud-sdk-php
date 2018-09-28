@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getTotalCount() 获取符合条件的对象数。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的对象数。
- * @method array getInstanceSet() 获取关联实例列表
- * @method void setInstanceSet(array $InstanceSet) 设置关联实例列表
+ * @method array getInstanceSet() 获取关联实例列表。
+ * @method void setInstanceSet(array $InstanceSet) 设置关联实例列表。
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -37,7 +37,7 @@ class DescribeCcnAttachedInstancesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 关联实例列表
+     * @var array 关联实例列表。
      */
     public $InstanceSet;
 
@@ -47,7 +47,7 @@ class DescribeCcnAttachedInstancesResponse extends AbstractModel
     public $RequestId;
     /**
      * @param integer $TotalCount 符合条件的对象数。
-     * @param array $InstanceSet 关联实例列表
+     * @param array $InstanceSet 关联实例列表。
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -69,7 +69,7 @@ class DescribeCcnAttachedInstancesResponse extends AbstractModel
         if (array_key_exists("InstanceSet",$param) and $param["InstanceSet"] !== null) {
             $this->InstanceSet = [];
             foreach ($param["InstanceSet"] as $key => $value){
-                $obj = new CcnInstance();
+                $obj = new CcnAttachedInstance();
                 $obj->deserialize($value);
                 array_push($this->InstanceSet, $obj);
             }

@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDealName(string $DealName) 设置订单号
  * @method string getOwnerUin() 获取所属账号
  * @method void setOwnerUin(string $OwnerUin) 设置所属账号
- * @method integer getQuantity() 获取商品数量
- * @method void setQuantity(integer $Quantity) 设置商品数量
+ * @method integer getCount() 获取商品数量
+ * @method void setCount(integer $Count) 设置商品数量
  * @method integer getFlowId() 获取关联的流程 Id，可用于查询流程执行状态
  * @method void setFlowId(integer $FlowId) 设置关联的流程 Id，可用于查询流程执行状态
  * @method array getInstanceIds() 获取只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
  * @method void setInstanceIds(array $InstanceIds) 设置只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+ * @method integer getPayMode() 获取付费模式，0后付费/1预付费
+ * @method void setPayMode(integer $PayMode) 设置付费模式，0后付费/1预付费
  */
 
 /**
@@ -48,7 +50,7 @@ class Deal extends AbstractModel
     /**
      * @var integer 商品数量
      */
-    public $Quantity;
+    public $Count;
 
     /**
      * @var integer 关联的流程 Id，可用于查询流程执行状态
@@ -59,12 +61,18 @@ class Deal extends AbstractModel
      * @var array 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
      */
     public $InstanceIds;
+
+    /**
+     * @var integer 付费模式，0后付费/1预付费
+     */
+    public $PayMode;
     /**
      * @param string $DealName 订单号
      * @param string $OwnerUin 所属账号
-     * @param integer $Quantity 商品数量
+     * @param integer $Count 商品数量
      * @param integer $FlowId 关联的流程 Id，可用于查询流程执行状态
      * @param array $InstanceIds 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+     * @param integer $PayMode 付费模式，0后付费/1预付费
      */
     function __construct()
     {
@@ -86,8 +94,8 @@ class Deal extends AbstractModel
             $this->OwnerUin = $param["OwnerUin"];
         }
 
-        if (array_key_exists("Quantity",$param) and $param["Quantity"] !== null) {
-            $this->Quantity = $param["Quantity"];
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
         }
 
         if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
@@ -96,6 +104,10 @@ class Deal extends AbstractModel
 
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
         }
     }
 }

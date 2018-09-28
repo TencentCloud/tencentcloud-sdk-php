@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置最后更新时间
  * @method integer getReadOnly() 获取只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
  * @method void setReadOnly(integer $ReadOnly) 设置只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
+ * @method integer getDelayThresh() 获取该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+ * @method void setDelayThresh(integer $DelayThresh) 设置该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
  */
 
 /**
@@ -66,6 +68,11 @@ class DBAccount extends AbstractModel
      * @var integer 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      */
     public $ReadOnly;
+
+    /**
+     * @var integer 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+     */
+    public $DelayThresh;
     /**
      * @param string $UserName 用户名
      * @param string $Host 用户可以从哪台主机登录（对应 MySQL 用户的 host 字段，UserName + Host 唯一标识一个用户，IP形式，IP段以%结尾；支持填入%；为空默认等于%）
@@ -73,6 +80,7 @@ class DBAccount extends AbstractModel
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 最后更新时间
      * @param integer $ReadOnly 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
+     * @param integer $DelayThresh 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DBAccount extends AbstractModel
 
         if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {
             $this->ReadOnly = $param["ReadOnly"];
+        }
+
+        if (array_key_exists("DelayThresh",$param) and $param["DelayThresh"] !== null) {
+            $this->DelayThresh = $param["DelayThresh"];
         }
     }
 }

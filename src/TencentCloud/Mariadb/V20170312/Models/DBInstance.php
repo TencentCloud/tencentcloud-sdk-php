@@ -52,18 +52,40 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置实例最后更新时间，格式为 2006-01-02 15:04:05
  * @method integer getAutoRenewFlag() 获取自动续费标志：0 否，1 是
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标志：0 否，1 是
- * @method integer getPid() 获取产品类型 Id
- * @method void setPid(integer $Pid) 设置产品类型 Id
  * @method string getPeriodEndTime() 获取实例到期时间，格式为 2006-01-02 15:04:05
  * @method void setPeriodEndTime(string $PeriodEndTime) 设置实例到期时间，格式为 2006-01-02 15:04:05
  * @method string getUin() 获取实例所属账号
  * @method void setUin(string $Uin) 设置实例所属账号
- * @method string getTdsqlVersion() 获取TDSQL 版本信息，如 10.1.9
- * @method void setTdsqlVersion(string $TdsqlVersion) 设置TDSQL 版本信息，如 10.1.9
+ * @method string getTdsqlVersion() 获取TDSQL 版本信息
+ * @method void setTdsqlVersion(string $TdsqlVersion) 设置TDSQL 版本信息
  * @method integer getMemory() 获取实例内存大小，单位 GB
  * @method void setMemory(integer $Memory) 设置实例内存大小，单位 GB
  * @method integer getStorage() 获取实例存储大小，单位 GB
  * @method void setStorage(integer $Storage) 设置实例存储大小，单位 GB
+ * @method string getUniqueVpcId() 获取字符串型的私有网络Id
+ * @method void setUniqueVpcId(string $UniqueVpcId) 设置字符串型的私有网络Id
+ * @method string getUniqueSubnetId() 获取字符串型的私有网络子网Id
+ * @method void setUniqueSubnetId(string $UniqueSubnetId) 设置字符串型的私有网络子网Id
+ * @method string getOriginSerialId() 获取原始实例ID（过时字段，请勿依赖该值）
+ * @method void setOriginSerialId(string $OriginSerialId) 设置原始实例ID（过时字段，请勿依赖该值）
+ * @method integer getNodeCount() 获取节点数，2为一主一从，3为一主二从
+ * @method void setNodeCount(integer $NodeCount) 设置节点数，2为一主一从，3为一主二从
+ * @method integer getIsTmp() 获取是否临时实例，0为否，非0为是
+ * @method void setIsTmp(integer $IsTmp) 设置是否临时实例，0为否，非0为是
+ * @method string getExclusterId() 获取独享集群Id，为空表示为普通实例
+ * @method void setExclusterId(string $ExclusterId) 设置独享集群Id，为空表示为普通实例
+ * @method integer getId() 获取数字实例Id（过时字段，请勿依赖该值）
+ * @method void setId(integer $Id) 设置数字实例Id（过时字段，请勿依赖该值）
+ * @method integer getPid() 获取产品类型 Id
+ * @method void setPid(integer $Pid) 设置产品类型 Id
+ * @method integer getQps() 获取最大 Qps 值
+ * @method void setQps(integer $Qps) 设置最大 Qps 值
+ * @method string getPaymode() 获取付费模式
+ * @method void setPaymode(string $Paymode) 设置付费模式
+ * @method integer getLocker() 获取实例处于异步任务时的异步任务流程ID
+ * @method void setLocker(integer $Locker) 设置实例处于异步任务时的异步任务流程ID
+ * @method string getStatusDesc() 获取实例目前运行状态描述
+ * @method void setStatusDesc(string $StatusDesc) 设置实例目前运行状态描述
  */
 
 /**
@@ -157,11 +179,6 @@ class DBInstance extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @var integer 产品类型 Id
-     */
-    public $Pid;
-
-    /**
      * @var string 实例到期时间，格式为 2006-01-02 15:04:05
      */
     public $PeriodEndTime;
@@ -172,7 +189,7 @@ class DBInstance extends AbstractModel
     public $Uin;
 
     /**
-     * @var string TDSQL 版本信息，如 10.1.9
+     * @var string TDSQL 版本信息
      */
     public $TdsqlVersion;
 
@@ -185,6 +202,66 @@ class DBInstance extends AbstractModel
      * @var integer 实例存储大小，单位 GB
      */
     public $Storage;
+
+    /**
+     * @var string 字符串型的私有网络Id
+     */
+    public $UniqueVpcId;
+
+    /**
+     * @var string 字符串型的私有网络子网Id
+     */
+    public $UniqueSubnetId;
+
+    /**
+     * @var string 原始实例ID（过时字段，请勿依赖该值）
+     */
+    public $OriginSerialId;
+
+    /**
+     * @var integer 节点数，2为一主一从，3为一主二从
+     */
+    public $NodeCount;
+
+    /**
+     * @var integer 是否临时实例，0为否，非0为是
+     */
+    public $IsTmp;
+
+    /**
+     * @var string 独享集群Id，为空表示为普通实例
+     */
+    public $ExclusterId;
+
+    /**
+     * @var integer 数字实例Id（过时字段，请勿依赖该值）
+     */
+    public $Id;
+
+    /**
+     * @var integer 产品类型 Id
+     */
+    public $Pid;
+
+    /**
+     * @var integer 最大 Qps 值
+     */
+    public $Qps;
+
+    /**
+     * @var string 付费模式
+     */
+    public $Paymode;
+
+    /**
+     * @var integer 实例处于异步任务时的异步任务流程ID
+     */
+    public $Locker;
+
+    /**
+     * @var string 实例目前运行状态描述
+     */
+    public $StatusDesc;
     /**
      * @param string $InstanceId 实例 Id，唯一标识一个 TDSQL 实例
      * @param string $InstanceName 实例名称，用户可修改
@@ -203,12 +280,23 @@ class DBInstance extends AbstractModel
      * @param string $CreateTime 实例创建时间，格式为 2006-01-02 15:04:05
      * @param string $UpdateTime 实例最后更新时间，格式为 2006-01-02 15:04:05
      * @param integer $AutoRenewFlag 自动续费标志：0 否，1 是
-     * @param integer $Pid 产品类型 Id
      * @param string $PeriodEndTime 实例到期时间，格式为 2006-01-02 15:04:05
      * @param string $Uin 实例所属账号
-     * @param string $TdsqlVersion TDSQL 版本信息，如 10.1.9
+     * @param string $TdsqlVersion TDSQL 版本信息
      * @param integer $Memory 实例内存大小，单位 GB
      * @param integer $Storage 实例存储大小，单位 GB
+     * @param string $UniqueVpcId 字符串型的私有网络Id
+     * @param string $UniqueSubnetId 字符串型的私有网络子网Id
+     * @param string $OriginSerialId 原始实例ID（过时字段，请勿依赖该值）
+     * @param integer $NodeCount 节点数，2为一主一从，3为一主二从
+     * @param integer $IsTmp 是否临时实例，0为否，非0为是
+     * @param string $ExclusterId 独享集群Id，为空表示为普通实例
+     * @param integer $Id 数字实例Id（过时字段，请勿依赖该值）
+     * @param integer $Pid 产品类型 Id
+     * @param integer $Qps 最大 Qps 值
+     * @param string $Paymode 付费模式
+     * @param integer $Locker 实例处于异步任务时的异步任务流程ID
+     * @param string $StatusDesc 实例目前运行状态描述
      */
     function __construct()
     {
@@ -290,10 +378,6 @@ class DBInstance extends AbstractModel
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
 
-        if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
-            $this->Pid = $param["Pid"];
-        }
-
         if (array_key_exists("PeriodEndTime",$param) and $param["PeriodEndTime"] !== null) {
             $this->PeriodEndTime = $param["PeriodEndTime"];
         }
@@ -312,6 +396,54 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
             $this->Storage = $param["Storage"];
+        }
+
+        if (array_key_exists("UniqueVpcId",$param) and $param["UniqueVpcId"] !== null) {
+            $this->UniqueVpcId = $param["UniqueVpcId"];
+        }
+
+        if (array_key_exists("UniqueSubnetId",$param) and $param["UniqueSubnetId"] !== null) {
+            $this->UniqueSubnetId = $param["UniqueSubnetId"];
+        }
+
+        if (array_key_exists("OriginSerialId",$param) and $param["OriginSerialId"] !== null) {
+            $this->OriginSerialId = $param["OriginSerialId"];
+        }
+
+        if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {
+            $this->NodeCount = $param["NodeCount"];
+        }
+
+        if (array_key_exists("IsTmp",$param) and $param["IsTmp"] !== null) {
+            $this->IsTmp = $param["IsTmp"];
+        }
+
+        if (array_key_exists("ExclusterId",$param) and $param["ExclusterId"] !== null) {
+            $this->ExclusterId = $param["ExclusterId"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
+            $this->Pid = $param["Pid"];
+        }
+
+        if (array_key_exists("Qps",$param) and $param["Qps"] !== null) {
+            $this->Qps = $param["Qps"];
+        }
+
+        if (array_key_exists("Paymode",$param) and $param["Paymode"] !== null) {
+            $this->Paymode = $param["Paymode"];
+        }
+
+        if (array_key_exists("Locker",$param) and $param["Locker"] !== null) {
+            $this->Locker = $param["Locker"];
+        }
+
+        if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
+            $this->StatusDesc = $param["StatusDesc"];
         }
     }
 }

@@ -20,16 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
  * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
- * @method array getInstances() 获取关联网络实例列表
- * @method void setInstances(array $Instances) 设置关联网络实例列表
- * @method string getCcnUin() 获取CCN所属UIN（根账号），默认当前账号所属UIN
- * @method void setCcnUin(string $CcnUin) 设置CCN所属UIN（根账号），默认当前账号所属UIN
+ * @method array getInstances() 获取拒绝关联实例列表。
+ * @method void setInstances(array $Instances) 设置拒绝关联实例列表。
  */
 
 /**
- *AttachCcnInstances请求参数结构体
+ *RejectAttachCcnInstances请求参数结构体
  */
-class AttachCcnInstancesRequest extends AbstractModel
+class RejectAttachCcnInstancesRequest extends AbstractModel
 {
     /**
      * @var string CCN实例ID。形如：ccn-f49l6u0z。
@@ -37,18 +35,12 @@ class AttachCcnInstancesRequest extends AbstractModel
     public $CcnId;
 
     /**
-     * @var array 关联网络实例列表
+     * @var array 拒绝关联实例列表。
      */
     public $Instances;
-
-    /**
-     * @var string CCN所属UIN（根账号），默认当前账号所属UIN
-     */
-    public $CcnUin;
     /**
      * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
-     * @param array $Instances 关联网络实例列表
-     * @param string $CcnUin CCN所属UIN（根账号），默认当前账号所属UIN
+     * @param array $Instances 拒绝关联实例列表。
      */
     function __construct()
     {
@@ -73,10 +65,6 @@ class AttachCcnInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Instances, $obj);
             }
-        }
-
-        if (array_key_exists("CcnUin",$param) and $param["CcnUin"] !== null) {
-            $this->CcnUin = $param["CcnUin"];
         }
     }
 }

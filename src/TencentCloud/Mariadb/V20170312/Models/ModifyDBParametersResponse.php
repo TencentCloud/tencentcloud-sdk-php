@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getInstanceId() 获取实例 ID，形如：tdsql-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：tdsql-ow728lmc。
- * @method array getConfig() 获取参数修改结果
- * @method void setConfig(array $Config) 设置参数修改结果
+ * @method array getResult() 获取参数修改结果
+ * @method void setResult(array $Result) 设置参数修改结果
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -39,7 +39,7 @@ class ModifyDBParametersResponse extends AbstractModel
     /**
      * @var array 参数修改结果
      */
-    public $Config;
+    public $Result;
 
     /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -47,7 +47,7 @@ class ModifyDBParametersResponse extends AbstractModel
     public $RequestId;
     /**
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc。
-     * @param array $Config 参数修改结果
+     * @param array $Result 参数修改结果
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -66,12 +66,12 @@ class ModifyDBParametersResponse extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
-            $this->Config = [];
-            foreach ($param["Config"] as $key => $value){
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = [];
+            foreach ($param["Result"] as $key => $value){
                 $obj = new ParamModifyResult();
                 $obj->deserialize($value);
-                array_push($this->Config, $obj);
+                array_push($this->Result, $obj);
             }
         }
 

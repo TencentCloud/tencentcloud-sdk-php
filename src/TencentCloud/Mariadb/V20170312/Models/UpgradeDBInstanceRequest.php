@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
  * @method boolean getAutoVoucher() 获取是否自动使用代金券进行支付，默认不使用。
  * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动使用代金券进行支付，默认不使用。
- * @method string getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券。
- * @method void setVoucherIds(string $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券。
+ * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券。
+ * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券。
  */
 
 /**
@@ -62,7 +62,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $AutoVoucher;
 
     /**
-     * @var string 代金券ID列表，目前仅支持指定一张代金券。
+     * @var array 代金券ID列表，目前仅支持指定一张代金券。
      */
     public $VoucherIds;
     /**
@@ -72,7 +72,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param integer $Storage 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
      * @param boolean $AutoVoucher 是否自动使用代金券进行支付，默认不使用。
-     * @param string $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
+     * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      */
     function __construct()
     {

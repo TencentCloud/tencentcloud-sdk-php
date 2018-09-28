@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
  * @method boolean getEnabled() 获取路由是否启用
  * @method void setEnabled(boolean $Enabled) 设置路由是否启用
+ * @method string getInstanceUin() 获取关联实例所属UIN（根账号）
+ * @method void setInstanceUin(string $InstanceUin) 设置关联实例所属UIN（根账号）
  */
 
 /**
@@ -80,6 +82,11 @@ class CcnRoute extends AbstractModel
      * @var boolean 路由是否启用
      */
     public $Enabled;
+
+    /**
+     * @var string 关联实例所属UIN（根账号）
+     */
+    public $InstanceUin;
     /**
      * @param string $RouteId 路由策略ID
      * @param string $DestinationCidrBlock 目的端
@@ -89,6 +96,7 @@ class CcnRoute extends AbstractModel
      * @param string $InstanceRegion 下一跳所属地域（关联实例所属地域）
      * @param string $UpdateTime 更新时间
      * @param boolean $Enabled 路由是否启用
+     * @param string $InstanceUin 关联实例所属UIN（根账号）
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class CcnRoute extends AbstractModel
 
         if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
             $this->Enabled = $param["Enabled"];
+        }
+
+        if (array_key_exists("InstanceUin",$param) and $param["InstanceUin"] !== null) {
+            $this->InstanceUin = $param["InstanceUin"];
         }
     }
 }

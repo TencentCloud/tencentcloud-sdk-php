@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceCert(string $DeviceCert) 设置设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数
  * @method string getDevicePrivateKey() 获取设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数
  * @method void setDevicePrivateKey(string $DevicePrivateKey) 设置设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数
+ * @method string getLoraDevEui() 获取LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
+ * @method void setLoraDevEui(string $LoraDevEui) 设置LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
@@ -56,6 +58,11 @@ class CreateDeviceResponse extends AbstractModel
     public $DevicePrivateKey;
 
     /**
+     * @var string LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
+     */
+    public $LoraDevEui;
+
+    /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
@@ -64,6 +71,7 @@ class CreateDeviceResponse extends AbstractModel
      * @param string $DevicePsk 对称加密密钥，base64编码。采用对称加密时返回该参数
      * @param string $DeviceCert 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数
      * @param string $DevicePrivateKey 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数
+     * @param string $LoraDevEui LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -92,6 +100,10 @@ class CreateDeviceResponse extends AbstractModel
 
         if (array_key_exists("DevicePrivateKey",$param) and $param["DevicePrivateKey"] !== null) {
             $this->DevicePrivateKey = $param["DevicePrivateKey"];
+        }
+
+        if (array_key_exists("LoraDevEui",$param) and $param["LoraDevEui"] !== null) {
+            $this->LoraDevEui = $param["LoraDevEui"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

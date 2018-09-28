@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMtime(integer $Mtime) 设置Log最后修改时间
  * @method integer getLength() 获取文件长度
  * @method void setLength(integer $Length) 设置文件长度
- * @method integer getUri() 获取下载Log时用到的统一资源标识符
- * @method void setUri(integer $Uri) 设置下载Log时用到的统一资源标识符
+ * @method string getUri() 获取下载Log时用到的统一资源标识符
+ * @method void setUri(string $Uri) 设置下载Log时用到的统一资源标识符
  */
 
 /**
@@ -42,13 +42,13 @@ class LogFileInfo extends AbstractModel
     public $Length;
 
     /**
-     * @var integer 下载Log时用到的统一资源标识符
+     * @var string 下载Log时用到的统一资源标识符
      */
     public $Uri;
     /**
      * @param integer $Mtime Log最后修改时间
      * @param integer $Length 文件长度
-     * @param integer $Uri 下载Log时用到的统一资源标识符
+     * @param string $Uri 下载Log时用到的统一资源标识符
      */
     function __construct()
     {

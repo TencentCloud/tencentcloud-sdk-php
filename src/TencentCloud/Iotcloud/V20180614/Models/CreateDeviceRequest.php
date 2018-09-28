@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsp(integer $Isp) 设置运营商类型，当产品是NB-IoT产品时，此字段必填。1表示中国电信，2表示中国移动，3表示中国联通
  * @method string getImei() 获取IMEI，当产品是NB-IoT产品时，此字段必填
  * @method void setImei(string $Imei) 设置IMEI，当产品是NB-IoT产品时，此字段必填
+ * @method string getLoraDevEui() 获取LoRa设备的DevEui，当创建LoRa时，此字段必填
+ * @method void setLoraDevEui(string $LoraDevEui) 设置LoRa设备的DevEui，当创建LoRa时，此字段必填
  */
 
 /**
@@ -66,6 +68,11 @@ class CreateDeviceRequest extends AbstractModel
      * @var string IMEI，当产品是NB-IoT产品时，此字段必填
      */
     public $Imei;
+
+    /**
+     * @var string LoRa设备的DevEui，当创建LoRa时，此字段必填
+     */
+    public $LoraDevEui;
     /**
      * @param string $ProductId 产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
      * @param string $DeviceName 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
@@ -73,6 +80,7 @@ class CreateDeviceRequest extends AbstractModel
      * @param string $DefinedPsk 是否使用自定义PSK，默认不使用
      * @param integer $Isp 运营商类型，当产品是NB-IoT产品时，此字段必填。1表示中国电信，2表示中国移动，3表示中国联通
      * @param string $Imei IMEI，当产品是NB-IoT产品时，此字段必填
+     * @param string $LoraDevEui LoRa设备的DevEui，当创建LoRa时，此字段必填
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class CreateDeviceRequest extends AbstractModel
 
         if (array_key_exists("Imei",$param) and $param["Imei"] !== null) {
             $this->Imei = $param["Imei"];
+        }
+
+        if (array_key_exists("LoraDevEui",$param) and $param["LoraDevEui"] !== null) {
+            $this->LoraDevEui = $param["LoraDevEui"];
         }
     }
 }

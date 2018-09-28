@@ -14,48 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotcloud\V20180614\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProductName() 获取产品名称
- * @method void setProductName(string $ProductName) 设置产品名称
- * @method string getProductId() 获取产品 ID，腾讯云生成全局唯一 ID
- * @method void setProductId(string $ProductId) 设置产品 ID，腾讯云生成全局唯一 ID
- * @method ProductProperties getProductProperties() 获取产品属性
- * @method void setProductProperties(ProductProperties $ProductProperties) 设置产品属性
+ * @method integer getFlowId() 获取异步任务流程ID
+ * @method void setFlowId(integer $FlowId) 设置异步任务流程ID
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  */
 
 /**
- *CreateProduct返回参数结构体
+ *CloneAccount返回参数结构体
  */
-class CreateProductResponse extends AbstractModel
+class CloneAccountResponse extends AbstractModel
 {
     /**
-     * @var string 产品名称
+     * @var integer 异步任务流程ID
      */
-    public $ProductName;
-
-    /**
-     * @var string 产品 ID，腾讯云生成全局唯一 ID
-     */
-    public $ProductId;
-
-    /**
-     * @var ProductProperties 产品属性
-     */
-    public $ProductProperties;
+    public $FlowId;
 
     /**
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
     /**
-     * @param string $ProductName 产品名称
-     * @param string $ProductId 产品 ID，腾讯云生成全局唯一 ID
-     * @param ProductProperties $ProductProperties 产品属性
+     * @param integer $FlowId 异步任务流程ID
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     function __construct()
@@ -70,17 +54,8 @@ class CreateProductResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
-            $this->ProductName = $param["ProductName"];
-        }
-
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
-        }
-
-        if (array_key_exists("ProductProperties",$param) and $param["ProductProperties"] !== null) {
-            $this->ProductProperties = new ProductProperties();
-            $this->ProductProperties->deserialize($param["ProductProperties"]);
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

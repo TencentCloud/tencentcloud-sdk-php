@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置需要查看设备列表的产品 ID
  * @method integer getOffset() 获取分页偏移
  * @method void setOffset(integer $Offset) 设置分页偏移
- * @method integer getLimit() 获取分页的大小，数值范围 10-250
- * @method void setLimit(integer $Limit) 设置分页的大小，数值范围 10-250
+ * @method integer getLimit() 获取分页的大小，数值范围 10-100
+ * @method void setLimit(integer $Limit) 设置分页的大小，数值范围 10-100
  * @method string getFirmwareVersion() 获取设备固件版本号，若不带此参数会返回所有固件版本的设备
  * @method void setFirmwareVersion(string $FirmwareVersion) 设置设备固件版本号，若不带此参数会返回所有固件版本的设备
  */
@@ -44,7 +44,7 @@ class DescribeDevicesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 分页的大小，数值范围 10-250
+     * @var integer 分页的大小，数值范围 10-100
      */
     public $Limit;
 
@@ -55,7 +55,7 @@ class DescribeDevicesRequest extends AbstractModel
     /**
      * @param string $ProductId 需要查看设备列表的产品 ID
      * @param integer $Offset 分页偏移
-     * @param integer $Limit 分页的大小，数值范围 10-250
+     * @param integer $Limit 分页的大小，数值范围 10-100
      * @param string $FirmwareVersion 设备固件版本号，若不带此参数会返回所有固件版本的设备
      */
     function __construct()

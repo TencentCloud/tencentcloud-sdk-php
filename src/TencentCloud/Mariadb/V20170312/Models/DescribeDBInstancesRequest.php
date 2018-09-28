@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchKey(string $SearchKey) 设置搜索的关键字，支持模糊搜索。多个关键字使用换行符（'\n'）分割。
  * @method array getProjectIds() 获取按项目 ID 查询
  * @method void setProjectIds(array $ProjectIds) 设置按项目 ID 查询
- * @method integer getIsFilterVpc() 获取是否根据 VPC 网络来搜索，0 为否，1 为是
- * @method void setIsFilterVpc(integer $IsFilterVpc) 设置是否根据 VPC 网络来搜索，0 为否，1 为是
- * @method integer getVpcId() 获取私有网络 ID， IsFilterVpc 为 1 时有效
- * @method void setVpcId(integer $VpcId) 设置私有网络 ID， IsFilterVpc 为 1 时有效
- * @method integer getSubnetId() 获取私有网络的子网 ID， IsFilterVpc 为 1 时有效
- * @method void setSubnetId(integer $SubnetId) 设置私有网络的子网 ID， IsFilterVpc 为 1 时有效
+ * @method boolean getIsFilterVpc() 获取是否根据 VPC 网络来搜索
+ * @method void setIsFilterVpc(boolean $IsFilterVpc) 设置是否根据 VPC 网络来搜索
+ * @method string getVpcId() 获取私有网络 ID， IsFilterVpc 为 1 时有效
+ * @method void setVpcId(string $VpcId) 设置私有网络 ID， IsFilterVpc 为 1 时有效
+ * @method string getSubnetId() 获取私有网络的子网 ID， IsFilterVpc 为 1 时有效
+ * @method void setSubnetId(string $SubnetId) 设置私有网络的子网 ID， IsFilterVpc 为 1 时有效
  * @method string getOrderBy() 获取排序字段， projectId， createtime， instancename 三者之一
  * @method void setOrderBy(string $OrderBy) 设置排序字段， projectId， createtime， instancename 三者之一
  * @method string getOrderByType() 获取排序类型， desc 或者 asc
@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100。
  * @method array getOriginSerialIds() 获取按 OriginSerialId 查询
  * @method void setOriginSerialIds(array $OriginSerialIds) 设置按 OriginSerialId 查询
+ * @method boolean getIsFilterExcluster() 获取标识是否使用ExclusterType字段, false不使用，true使用
+ * @method void setIsFilterExcluster(boolean $IsFilterExcluster) 设置标识是否使用ExclusterType字段, false不使用，true使用
+ * @method integer getExclusterType() 获取1非独享集群，2独享集群， 0全部
+ * @method void setExclusterType(integer $ExclusterType) 设置1非独享集群，2独享集群， 0全部
  */
 
 /**
@@ -70,17 +74,17 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $ProjectIds;
 
     /**
-     * @var integer 是否根据 VPC 网络来搜索，0 为否，1 为是
+     * @var boolean 是否根据 VPC 网络来搜索
      */
     public $IsFilterVpc;
 
     /**
-     * @var integer 私有网络 ID， IsFilterVpc 为 1 时有效
+     * @var string 私有网络 ID， IsFilterVpc 为 1 时有效
      */
     public $VpcId;
 
     /**
-     * @var integer 私有网络的子网 ID， IsFilterVpc 为 1 时有效
+     * @var string 私有网络的子网 ID， IsFilterVpc 为 1 时有效
      */
     public $SubnetId;
 
@@ -108,19 +112,31 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @var array 按 OriginSerialId 查询
      */
     public $OriginSerialIds;
+
+    /**
+     * @var boolean 标识是否使用ExclusterType字段, false不使用，true使用
+     */
+    public $IsFilterExcluster;
+
+    /**
+     * @var integer 1非独享集群，2独享集群， 0全部
+     */
+    public $ExclusterType;
     /**
      * @param array $InstanceIds 按照一个或者多个实例 ID 查询。实例 ID 形如：tdsql-ow728lmc。每次请求的实例的上限为100。
      * @param string $SearchName 搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。
      * @param string $SearchKey 搜索的关键字，支持模糊搜索。多个关键字使用换行符（'\n'）分割。
      * @param array $ProjectIds 按项目 ID 查询
-     * @param integer $IsFilterVpc 是否根据 VPC 网络来搜索，0 为否，1 为是
-     * @param integer $VpcId 私有网络 ID， IsFilterVpc 为 1 时有效
-     * @param integer $SubnetId 私有网络的子网 ID， IsFilterVpc 为 1 时有效
+     * @param boolean $IsFilterVpc 是否根据 VPC 网络来搜索
+     * @param string $VpcId 私有网络 ID， IsFilterVpc 为 1 时有效
+     * @param string $SubnetId 私有网络的子网 ID， IsFilterVpc 为 1 时有效
      * @param string $OrderBy 排序字段， projectId， createtime， instancename 三者之一
      * @param string $OrderByType 排序类型， desc 或者 asc
      * @param integer $Offset 偏移量，默认为 0
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。
      * @param array $OriginSerialIds 按 OriginSerialId 查询
+     * @param boolean $IsFilterExcluster 标识是否使用ExclusterType字段, false不使用，true使用
+     * @param integer $ExclusterType 1非独享集群，2独享集群， 0全部
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("OriginSerialIds",$param) and $param["OriginSerialIds"] !== null) {
             $this->OriginSerialIds = $param["OriginSerialIds"];
+        }
+
+        if (array_key_exists("IsFilterExcluster",$param) and $param["IsFilterExcluster"] !== null) {
+            $this->IsFilterExcluster = $param["IsFilterExcluster"];
+        }
+
+        if (array_key_exists("ExclusterType",$param) and $param["ExclusterType"] !== null) {
+            $this->ExclusterType = $param["ExclusterType"];
         }
     }
 }

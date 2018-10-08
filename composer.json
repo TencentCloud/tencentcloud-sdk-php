@@ -1,6 +1,6 @@
 {
-    "name": "tencentcloud/tencentcloud-sdk-php",
-    "description": "TencentCloudApi php sdk",
+    "name": "aaronwu/tencentcloudsdk-php",
+    "description": "For self use Fork from TencentCloudApi php sdk",
     "type": "library",
     "homepage": "https://github.com/TencentCloud/tencentcloud-sdk-php",
     "license": "Apache-2.0",

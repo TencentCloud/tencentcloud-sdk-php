@@ -18,8 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getPids() 获取资源类别id数组
- * @method void setPids(array $Pids) 设置资源类别id数组
+ * @method array getPids() 获取资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
+ * @method void setPids(array $Pids) 设置资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
  * @method array getFilters() 获取支持通过资源id，pid进行查询
  * @method void setFilters(array $Filters) 设置支持通过资源id，pid进行查询
  * @method integer getOffset() 获取偏移量，默认为0
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeResourceInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 资源类别id数组
+     * @var array 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
      */
     public $Pids;
 
@@ -67,7 +67,7 @@ class DescribeResourceInstancesRequest extends AbstractModel
      */
     public $OrderDirection;
     /**
-     * @param array $Pids 资源类别id数组
+     * @param array $Pids 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
      * @param array $Filters 支持通过资源id，pid进行查询
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 数量限制，默认为20，最大值为100。

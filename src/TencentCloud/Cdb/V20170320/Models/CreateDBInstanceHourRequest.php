@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) 设置自定义端口，端口支持范围：[ 1024-65535 ]
  * @method string getPassword() 获取设置root帐号密码，密码规则：8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
  * @method void setPassword(string $Password) 设置设置root帐号密码，密码规则：8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
- * @method array getParamList() 获取参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
- * @method void setParamList(array $ParamList) 设置参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
+ * @method array getParamList() 获取参数列表，参数格式如ParamList.0.Name=auto_increment_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
+ * @method void setParamList(array $ParamList) 设置参数列表，参数格式如ParamList.0.Name=auto_increment_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
  * @method integer getProtectMode() 获取数据复制方式，默认为0，支持值包括：0-表示异步复制，1-表示半同步复制，2-表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
  * @method void setProtectMode(integer $ProtectMode) 设置数据复制方式，默认为0，支持值包括：0-表示异步复制，1-表示半同步复制，2-表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
  * @method integer getDeployMode() 获取多可用区域，默认为0，支持值包括：0-表示单可用区，1-表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
@@ -54,12 +54,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSlaveZone(string $SlaveZone) 设置备库1的可用区ID，默认为zoneId的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
  * @method string getBackupZone() 获取备库2的可用区ID，默认为0，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
  * @method void setBackupZone(string $BackupZone) 设置备库2的可用区ID，默认为0，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
- * @method array getSecurityGroup() 获取安全组参数
- * @method void setSecurityGroup(array $SecurityGroup) 设置安全组参数
+ * @method array getSecurityGroup() 获取安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
+ * @method void setSecurityGroup(array $SecurityGroup) 设置安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
  * @method RoGroup getRoGroup() 获取只读实例信息
  * @method void setRoGroup(RoGroup $RoGroup) 设置只读实例信息
- * @method integer getAutoRenewFlag() 获取自动续费标记，值为0或1
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，值为0或1
+ * @method integer getAutoRenewFlag() 获取自动续费标记，值为0或1。购买按量计费实例该字段无意义
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，值为0或1。购买按量计费实例该字段无意义
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
  */
@@ -135,7 +135,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $Password;
 
     /**
-     * @var array 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
+     * @var array 参数列表，参数格式如ParamList.0.Name=auto_increment_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
      */
     public $ParamList;
 
@@ -160,7 +160,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $BackupZone;
 
     /**
-     * @var array 安全组参数
+     * @var array 安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
      */
     public $SecurityGroup;
 
@@ -170,7 +170,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $RoGroup;
 
     /**
-     * @var integer 自动续费标记，值为0或1
+     * @var integer 自动续费标记，值为0或1。购买按量计费实例该字段无意义
      */
     public $AutoRenewFlag;
 
@@ -192,14 +192,14 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param string $MasterRegion 主实例的可用区信息，购买灾备实例时必填
      * @param integer $Port 自定义端口，端口支持范围：[ 1024-65535 ]
      * @param string $Password 设置root帐号密码，密码规则：8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
-     * @param array $ParamList 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
+     * @param array $ParamList 参数列表，参数格式如ParamList.0.Name=auto_increment_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
      * @param integer $ProtectMode 数据复制方式，默认为0，支持值包括：0-表示异步复制，1-表示半同步复制，2-表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
      * @param integer $DeployMode 多可用区域，默认为0，支持值包括：0-表示单可用区，1-表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
      * @param string $SlaveZone 备库1的可用区ID，默认为zoneId的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
      * @param string $BackupZone 备库2的可用区ID，默认为0，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
-     * @param array $SecurityGroup 安全组参数
+     * @param array $SecurityGroup 安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
      * @param RoGroup $RoGroup 只读实例信息
-     * @param integer $AutoRenewFlag 自动续费标记，值为0或1
+     * @param integer $AutoRenewFlag 自动续费标记，值为0或1。购买按量计费实例该字段无意义
      * @param string $InstanceName 实例名称
      */
     function __construct()

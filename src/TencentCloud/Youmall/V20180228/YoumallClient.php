@@ -22,6 +22,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Youmall\V20180228\Models as Models;
 
 /**
+* @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) 创建集团门店管理员账号
+* @method Models\CreateFacePictureResponse CreateFacePicture(Models\CreateFacePictureRequest $req) 上传人脸图片
 * @method Models\DescribeCameraPersonResponse DescribeCameraPerson(Models\DescribeCameraPersonRequest $req) 通过指定设备ID和指定时段，获取该时段内中收银台摄像设备抓取到顾客头像及身份ID
 * @method Models\DescribeFaceIdByTempIdResponse DescribeFaceIdByTempId(Models\DescribeFaceIdByTempIdRequest $req) 通过DescribeCameraPerson接口上报的收银台身份ID查询顾客的FaceID。查询最佳时间为收银台上报的次日1点后。
 * @method Models\DescribeHistoryNetworkInfoResponse DescribeHistoryNetworkInfo(Models\DescribeHistoryNetworkInfoRequest $req) 返回当前门店历史网络状态数据
@@ -31,6 +33,13 @@ use TencentCloud\Youmall\V20180228\Models as Models;
 * @method Models\DescribeShopHourTrafficInfoResponse DescribeShopHourTrafficInfo(Models\DescribeShopHourTrafficInfoRequest $req) 按小时提供查询日期范围内门店的每天每小时累计客流人数数据，支持的时间范围：过去365天，含当天。
 * @method Models\DescribeShopInfoResponse DescribeShopInfo(Models\DescribeShopInfoRequest $req) 根据客户身份标识获取客户下所有的门店信息列表
 * @method Models\DescribeShopTrafficInfoResponse DescribeShopTrafficInfo(Models\DescribeShopTrafficInfoRequest $req) 按天提供查询日期范围内门店的单日累计客流人数，支持的时间范围：过去365天，含当天。
+* @method Models\DescribeTrajectoryDataResponse DescribeTrajectoryData(Models\DescribeTrajectoryDataRequest $req) 获取动线轨迹信息
+* @method Models\DescribeZoneFlowAgeInfoByZoneIdResponse DescribeZoneFlowAgeInfoByZoneId(Models\DescribeZoneFlowAgeInfoByZoneIdRequest $req) 获取指定区域人流各年龄占比
+* @method Models\DescribeZoneFlowAndStayTimeResponse DescribeZoneFlowAndStayTime(Models\DescribeZoneFlowAndStayTimeRequest $req) 获取区域人流和停留时间
+* @method Models\DescribeZoneFlowDailyByZoneIdResponse DescribeZoneFlowDailyByZoneId(Models\DescribeZoneFlowDailyByZoneIdRequest $req) 获取指定区域每日客流量
+* @method Models\DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse DescribeZoneFlowGenderAvrStayTimeByZoneId(Models\DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest $req) 获取指定区域不同年龄段男女平均停留时间
+* @method Models\DescribeZoneFlowGenderInfoByZoneIdResponse DescribeZoneFlowGenderInfoByZoneId(Models\DescribeZoneFlowGenderInfoByZoneIdRequest $req) 获取指定区域性别占比
+* @method Models\DescribeZoneFlowHourlyByZoneIdResponse DescribeZoneFlowHourlyByZoneId(Models\DescribeZoneFlowHourlyByZoneIdRequest $req) 获取指定区域分时客流量
 * @method Models\DescribeZoneTrafficInfoResponse DescribeZoneTrafficInfo(Models\DescribeZoneTrafficInfoRequest $req) 按天提供查询日期范围内，客户指定门店下的所有区域（优Mall部署时已配置区域）的累计客流人次和平均停留时间。支持的时间范围：过去365天，含当天。
 * @method Models\ModifyPersonTagInfoResponse ModifyPersonTagInfo(Models\ModifyPersonTagInfoRequest $req) 标记到店顾客的身份类型，例如黑名单、白名单等
 

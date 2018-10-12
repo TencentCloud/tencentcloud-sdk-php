@@ -18,16 +18,6 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCompanyId() 获取集团id
- * @method void setCompanyId(string $CompanyId) 设置集团id
- * @method integer getShopId() 获取店铺id
- * @method void setShopId(integer $ShopId) 设置店铺id
- * @method string getProvince() 获取店铺省份
- * @method void setProvince(string $Province) 设置店铺省份
- * @method string getCity() 获取店铺城市
- * @method void setCity(string $City) 设置店铺城市
- * @method string getShopName() 获取店铺名
- * @method void setShopName(string $ShopName) 设置店铺名
  * @method float getUpload() 获取上传带宽，单位Mb/s，-1：未知
  * @method void setUpload(float $Upload) 设置上传带宽，单位Mb/s，-1：未知
  * @method float getDownload() 获取下载带宽，单位Mb/s，-1：未知
@@ -49,35 +39,10 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *网络状态
+ *没有店铺信息的网络状态
  */
 class NetworkInfo extends AbstractModel
 {
-    /**
-     * @var string 集团id
-     */
-    public $CompanyId;
-
-    /**
-     * @var integer 店铺id
-     */
-    public $ShopId;
-
-    /**
-     * @var string 店铺省份
-     */
-    public $Province;
-
-    /**
-     * @var string 店铺城市
-     */
-    public $City;
-
-    /**
-     * @var string 店铺名
-     */
-    public $ShopName;
-
     /**
      * @var float 上传带宽，单位Mb/s，-1：未知
      */
@@ -123,11 +88,6 @@ class NetworkInfo extends AbstractModel
      */
     public $Mac;
     /**
-     * @param string $CompanyId 集团id
-     * @param integer $ShopId 店铺id
-     * @param string $Province 店铺省份
-     * @param string $City 店铺城市
-     * @param string $ShopName 店铺名
      * @param float $Upload 上传带宽，单位Mb/s，-1：未知
      * @param float $Download 下载带宽，单位Mb/s，-1：未知
      * @param float $MinRtt 最小延迟，单位ms，-1：未知
@@ -150,26 +110,6 @@ class NetworkInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CompanyId",$param) and $param["CompanyId"] !== null) {
-            $this->CompanyId = $param["CompanyId"];
-        }
-
-        if (array_key_exists("ShopId",$param) and $param["ShopId"] !== null) {
-            $this->ShopId = $param["ShopId"];
-        }
-
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
-            $this->Province = $param["Province"];
-        }
-
-        if (array_key_exists("City",$param) and $param["City"] !== null) {
-            $this->City = $param["City"];
-        }
-
-        if (array_key_exists("ShopName",$param) and $param["ShopName"] !== null) {
-            $this->ShopName = $param["ShopName"];
-        }
-
         if (array_key_exists("Upload",$param) and $param["Upload"] !== null) {
             $this->Upload = $param["Upload"];
         }

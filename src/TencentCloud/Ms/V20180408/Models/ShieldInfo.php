@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShieldSize(integer $ShieldSize) 设置加固后app的大小
  * @method string getShieldMd5() 获取加固后app的md5
  * @method void setShieldMd5(string $ShieldMd5) 设置加固后app的md5
- * @method string getAppUrl() 获取加固后的APP下载地址
- * @method void setAppUrl(string $AppUrl) 设置加固后的APP下载地址
+ * @method string getAppUrl() 获取加固后的APP下载地址，该地址有效期为20分钟，请及时下载
+ * @method void setAppUrl(string $AppUrl) 设置加固后的APP下载地址，该地址有效期为20分钟，请及时下载
  * @method integer getTaskTime() 获取加固的提交时间
  * @method void setTaskTime(integer $TaskTime) 设置加固的提交时间
  * @method string getItemId() 获取任务唯一标识
  * @method void setItemId(string $ItemId) 设置任务唯一标识
- * @method string getServiceEdition() 获取加固版本，basic基础版，professional专业版
- * @method void setServiceEdition(string $ServiceEdition) 设置加固版本，basic基础版，professional专业版
+ * @method string getServiceEdition() 获取加固版本，basic基础版，professional专业版，enterprise企业版
+ * @method void setServiceEdition(string $ServiceEdition) 设置加固版本，basic基础版，professional专业版，enterprise企业版
  */
 
 /**
@@ -55,7 +55,7 @@ class ShieldInfo extends AbstractModel
     public $ShieldMd5;
 
     /**
-     * @var string 加固后的APP下载地址
+     * @var string 加固后的APP下载地址，该地址有效期为20分钟，请及时下载
      */
     public $AppUrl;
 
@@ -70,17 +70,17 @@ class ShieldInfo extends AbstractModel
     public $ItemId;
 
     /**
-     * @var string 加固版本，basic基础版，professional专业版
+     * @var string 加固版本，basic基础版，professional专业版，enterprise企业版
      */
     public $ServiceEdition;
     /**
      * @param integer $ShieldCode 加固结果的返回码
      * @param integer $ShieldSize 加固后app的大小
      * @param string $ShieldMd5 加固后app的md5
-     * @param string $AppUrl 加固后的APP下载地址
+     * @param string $AppUrl 加固后的APP下载地址，该地址有效期为20分钟，请及时下载
      * @param integer $TaskTime 加固的提交时间
      * @param string $ItemId 任务唯一标识
-     * @param string $ServiceEdition 加固版本，basic基础版，professional专业版
+     * @param string $ServiceEdition 加固版本，basic基础版，professional专业版，enterprise企业版
      */
     function __construct()
     {

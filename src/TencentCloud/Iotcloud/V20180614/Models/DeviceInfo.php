@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastUpdateTime(integer $LastUpdateTime) 设置设备最后更新时间
  * @method string getLoraDevEui() 获取LoRa设备的dev eui
  * @method void setLoraDevEui(string $LoraDevEui) 设置LoRa设备的dev eui
+ * @method integer getLoraMoteType() 获取LoRa设备的Mote type
+ * @method void setLoraMoteType(integer $LoraMoteType) 设置LoRa设备的Mote type
  */
 
 /**
@@ -122,6 +124,11 @@ class DeviceInfo extends AbstractModel
      * @var string LoRa设备的dev eui
      */
     public $LoraDevEui;
+
+    /**
+     * @var integer LoRa设备的Mote type
+     */
+    public $LoraMoteType;
     /**
      * @param string $DeviceName 设备名
      * @param integer $Online 设备是否在线，0不在线，1在线
@@ -137,6 +144,7 @@ class DeviceInfo extends AbstractModel
      * @param integer $ConnIP IP地址
      * @param integer $LastUpdateTime 设备最后更新时间
      * @param string $LoraDevEui LoRa设备的dev eui
+     * @param integer $LoraMoteType LoRa设备的Mote type
      */
     function __construct()
     {
@@ -209,6 +217,10 @@ class DeviceInfo extends AbstractModel
 
         if (array_key_exists("LoraDevEui",$param) and $param["LoraDevEui"] !== null) {
             $this->LoraDevEui = $param["LoraDevEui"];
+        }
+
+        if (array_key_exists("LoraMoteType",$param) and $param["LoraMoteType"] !== null) {
+            $this->LoraMoteType = $param["LoraMoteType"];
         }
     }
 }

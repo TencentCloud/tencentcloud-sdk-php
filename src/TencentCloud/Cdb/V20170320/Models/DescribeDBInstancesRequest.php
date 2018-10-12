@@ -52,22 +52,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
  * @method string getOrderDirection() 获取排序方式，目前支持："ASC"或者"DESC"
  * @method void setOrderDirection(string $OrderDirection) 设置排序方式，目前支持："ASC"或者"DESC"
- * @method integer getWithSecurityGroup() 获取是否包含安全组信息
- * @method void setWithSecurityGroup(integer $WithSecurityGroup) 设置是否包含安全组信息
- * @method integer getWithExCluster() 获取是否包含独享集群信息
- * @method void setWithExCluster(integer $WithExCluster) 设置是否包含独享集群信息
+ * @method integer getWithSecurityGroup() 获取是否包含安全组信息，可取值：0-不包含，1-包含
+ * @method void setWithSecurityGroup(integer $WithSecurityGroup) 设置是否包含安全组信息，可取值：0-不包含，1-包含
+ * @method integer getWithExCluster() 获取是否包含独享集群信息，可取值：0-不包含，1-包含
+ * @method void setWithExCluster(integer $WithExCluster) 设置是否包含独享集群信息，可取值：0-不包含，1-包含
  * @method string getExClusterId() 获取独享集群ID
  * @method void setExClusterId(string $ExClusterId) 设置独享集群ID
  * @method array getInstanceIds() 获取实例ID
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID
  * @method integer getInitFlag() 获取初始化标记，可取值：0-未初始化，1-初始化
  * @method void setInitFlag(integer $InitFlag) 设置初始化标记，可取值：0-未初始化，1-初始化
- * @method integer getWithDr() 获取是否包含灾备实例
- * @method void setWithDr(integer $WithDr) 设置是否包含灾备实例
- * @method integer getWithRo() 获取是否包含只读实例
- * @method void setWithRo(integer $WithRo) 设置是否包含只读实例
- * @method integer getWithMaster() 获取是否包含主实例
- * @method void setWithMaster(integer $WithMaster) 设置是否包含主实例
+ * @method integer getWithDr() 获取是否包含灾备实例，可取值：0-不包含，1-包含
+ * @method void setWithDr(integer $WithDr) 设置是否包含灾备实例，可取值：0-不包含，1-包含
+ * @method integer getWithRo() 获取是否包含只读实例，可取值：0-不包含，1-包含
+ * @method void setWithRo(integer $WithRo) 设置是否包含只读实例，可取值：0-不包含，1-包含
+ * @method integer getWithMaster() 获取是否包含主实例，可取值：0-不包含，1-包含
+ * @method void setWithMaster(integer $WithMaster) 设置是否包含主实例，可取值：0-不包含，1-包含
  */
 
 /**
@@ -161,12 +161,12 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $OrderDirection;
 
     /**
-     * @var integer 是否包含安全组信息
+     * @var integer 是否包含安全组信息，可取值：0-不包含，1-包含
      */
     public $WithSecurityGroup;
 
     /**
-     * @var integer 是否包含独享集群信息
+     * @var integer 是否包含独享集群信息，可取值：0-不包含，1-包含
      */
     public $WithExCluster;
 
@@ -186,17 +186,17 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $InitFlag;
 
     /**
-     * @var integer 是否包含灾备实例
+     * @var integer 是否包含灾备实例，可取值：0-不包含，1-包含
      */
     public $WithDr;
 
     /**
-     * @var integer 是否包含只读实例
+     * @var integer 是否包含只读实例，可取值：0-不包含，1-包含
      */
     public $WithRo;
 
     /**
-     * @var integer 是否包含主实例
+     * @var integer 是否包含主实例，可取值：0-不包含，1-包含
      */
     public $WithMaster;
     /**
@@ -217,14 +217,14 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $CdbErrors 是否锁定标记
      * @param string $OrderBy 排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
      * @param string $OrderDirection 排序方式，目前支持："ASC"或者"DESC"
-     * @param integer $WithSecurityGroup 是否包含安全组信息
-     * @param integer $WithExCluster 是否包含独享集群信息
+     * @param integer $WithSecurityGroup 是否包含安全组信息，可取值：0-不包含，1-包含
+     * @param integer $WithExCluster 是否包含独享集群信息，可取值：0-不包含，1-包含
      * @param string $ExClusterId 独享集群ID
      * @param array $InstanceIds 实例ID
      * @param integer $InitFlag 初始化标记，可取值：0-未初始化，1-初始化
-     * @param integer $WithDr 是否包含灾备实例
-     * @param integer $WithRo 是否包含只读实例
-     * @param integer $WithMaster 是否包含主实例
+     * @param integer $WithDr 是否包含灾备实例，可取值：0-不包含，1-包含
+     * @param integer $WithRo 是否包含只读实例，可取值：0-不包含，1-包含
+     * @param integer $WithMaster 是否包含主实例，可取值：0-不包含，1-包含
      */
     function __construct()
     {

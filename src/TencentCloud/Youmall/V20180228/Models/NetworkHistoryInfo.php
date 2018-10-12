@@ -121,7 +121,7 @@ class NetworkHistoryInfo extends AbstractModel
         if (array_key_exists("Infos",$param) and $param["Infos"] !== null) {
             $this->Infos = [];
             foreach ($param["Infos"] as $key => $value){
-                $obj = new NetworkInfoNoShop();
+                $obj = new NetworkInfo();
                 $obj->deserialize($value);
                 array_push($this->Infos, $obj);
             }

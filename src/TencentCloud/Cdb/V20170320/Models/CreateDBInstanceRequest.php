@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，可选值为：0-不自动续费；1-自动续费
  * @method string getMasterRegion() 获取主实例地域信息，购买灾备实例时，该字段必填
  * @method void setMasterRegion(string $MasterRegion) 设置主实例地域信息，购买灾备实例时，该字段必填
- * @method array getSecurityGroup() 获取安全组参数
- * @method void setSecurityGroup(array $SecurityGroup) 设置安全组参数
+ * @method array getSecurityGroup() 获取安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
+ * @method void setSecurityGroup(array $SecurityGroup) 设置安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
  * @method RoGroup getRoGroup() 获取只读实例参数
  * @method void setRoGroup(RoGroup $RoGroup) 设置只读实例参数
  * @method string getInstanceName() 获取实例名称
@@ -172,7 +172,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $MasterRegion;
 
     /**
-     * @var array 安全组参数
+     * @var array 安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
      */
     public $SecurityGroup;
 
@@ -206,7 +206,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $BackupZone 备库2的可用区ID，默认为0，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
      * @param integer $AutoRenewFlag 自动续费标记，可选值为：0-不自动续费；1-自动续费
      * @param string $MasterRegion 主实例地域信息，购买灾备实例时，该字段必填
-     * @param array $SecurityGroup 安全组参数
+     * @param array $SecurityGroup 安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
      * @param RoGroup $RoGroup 只读实例参数
      * @param string $InstanceName 实例名称
      */

@@ -166,6 +166,9 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 
 * 实例被标识为自动续费后，每次在实例到期时，会自动续费一个月。
 * 支持批量操作。每次请求批量实例的上限为100。
+* @method Models\ModifyInstancesVpcAttributeResponse ModifyInstancesVpcAttribute(Models\ModifyInstancesVpcAttributeRequest $req) 本接口(ModifyInstancesVpcAttribute)用于修改实例vpc属性，如私有网络ip。
+* 此操作默认会关闭实例，完成后再启动。
+* 当指定私有网络ID和子网ID（子网必须在实例所在的可用区）与指定实例所在私有网络不一致时，会将实例迁移至指定的私有网络的子网下。执行此操作前请确保指定的实例上没有绑定[弹性网卡](https://cloud.tencent.com/document/product/576)和[负载均衡](https://cloud.tencent.com/document/product/214)。
 * @method Models\ModifyKeyPairAttributeResponse ModifyKeyPairAttribute(Models\ModifyKeyPairAttributeRequest $req) 本接口 (ModifyKeyPairAttribute) 用于修改密钥对属性。
 
 * 修改密钥对ID所指定的密钥对的名称和描述信息。

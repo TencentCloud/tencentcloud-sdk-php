@@ -1,0 +1,161 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\As\V20180419\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getAutoScalingGroupId() 获取伸缩组ID
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
+ * @method string getLaunchConfigurationId() 获取启动配置ID
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置启动配置ID
+ * @method string getLaunchConfigurationName() 获取启动配置名称
+ * @method void setLaunchConfigurationName(string $LaunchConfigurationName) 设置启动配置名称
+ * @method string getLifeCycleState() 获取生命周期状态，取值包括IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB等
+ * @method void setLifeCycleState(string $LifeCycleState) 设置生命周期状态，取值包括IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB等
+ * @method string getHealthStatus() 获取健康状态，取值包括HEALTHY和UNHEALTHY
+ * @method void setHealthStatus(string $HealthStatus) 设置健康状态，取值包括HEALTHY和UNHEALTHY
+ * @method boolean getProtectedFromScaleIn() 获取是否加入缩容保护
+ * @method void setProtectedFromScaleIn(boolean $ProtectedFromScaleIn) 设置是否加入缩容保护
+ * @method string getZone() 获取可用区
+ * @method void setZone(string $Zone) 设置可用区
+ * @method array getCreationType() 获取创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
+ * @method void setCreationType(array $CreationType) 设置创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
+ * @method string getAddTime() 获取实例加入时间
+ * @method void setAddTime(string $AddTime) 设置实例加入时间
+ */
+
+/**
+ *实例信息
+ */
+class Instance extends AbstractModel
+{
+    /**
+     * @var string 实例ID
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 伸缩组ID
+     */
+    public $AutoScalingGroupId;
+
+    /**
+     * @var string 启动配置ID
+     */
+    public $LaunchConfigurationId;
+
+    /**
+     * @var string 启动配置名称
+     */
+    public $LaunchConfigurationName;
+
+    /**
+     * @var string 生命周期状态，取值包括IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB等
+     */
+    public $LifeCycleState;
+
+    /**
+     * @var string 健康状态，取值包括HEALTHY和UNHEALTHY
+     */
+    public $HealthStatus;
+
+    /**
+     * @var boolean 是否加入缩容保护
+     */
+    public $ProtectedFromScaleIn;
+
+    /**
+     * @var string 可用区
+     */
+    public $Zone;
+
+    /**
+     * @var array 创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
+     */
+    public $CreationType;
+
+    /**
+     * @var string 实例加入时间
+     */
+    public $AddTime;
+    /**
+     * @param string $InstanceId 实例ID
+     * @param string $AutoScalingGroupId 伸缩组ID
+     * @param string $LaunchConfigurationId 启动配置ID
+     * @param string $LaunchConfigurationName 启动配置名称
+     * @param string $LifeCycleState 生命周期状态，取值包括IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB等
+     * @param string $HealthStatus 健康状态，取值包括HEALTHY和UNHEALTHY
+     * @param boolean $ProtectedFromScaleIn 是否加入缩容保护
+     * @param string $Zone 可用区
+     * @param array $CreationType 创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
+     * @param string $AddTime 实例加入时间
+     */
+    function __construct()
+    {
+
+    }
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
+            $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        }
+
+        if (array_key_exists("LaunchConfigurationId",$param) and $param["LaunchConfigurationId"] !== null) {
+            $this->LaunchConfigurationId = $param["LaunchConfigurationId"];
+        }
+
+        if (array_key_exists("LaunchConfigurationName",$param) and $param["LaunchConfigurationName"] !== null) {
+            $this->LaunchConfigurationName = $param["LaunchConfigurationName"];
+        }
+
+        if (array_key_exists("LifeCycleState",$param) and $param["LifeCycleState"] !== null) {
+            $this->LifeCycleState = $param["LifeCycleState"];
+        }
+
+        if (array_key_exists("HealthStatus",$param) and $param["HealthStatus"] !== null) {
+            $this->HealthStatus = $param["HealthStatus"];
+        }
+
+        if (array_key_exists("ProtectedFromScaleIn",$param) and $param["ProtectedFromScaleIn"] !== null) {
+            $this->ProtectedFromScaleIn = $param["ProtectedFromScaleIn"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("CreationType",$param) and $param["CreationType"] !== null) {
+            $this->CreationType = $param["CreationType"];
+        }
+
+        if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
+            $this->AddTime = $param["AddTime"];
+        }
+    }
+}

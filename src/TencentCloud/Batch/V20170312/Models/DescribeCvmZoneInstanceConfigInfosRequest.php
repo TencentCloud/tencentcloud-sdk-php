@@ -18,8 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method Filter getFilters() 获取过滤条件
- * @method void setFilters(Filter $Filters) 设置过滤条件
+ * @method array getFilters() 获取过滤条件
+ * @method void setFilters(array $Filters) 设置过滤条件
  */
 
 /**
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCvmZoneInstanceConfigInfosRequest extends AbstractModel
 {
     /**
-     * @var Filter 过滤条件
+     * @var array 过滤条件
      */
     public $Filters;
     /**
-     * @param Filter $Filters 过滤条件
+     * @param array $Filters 过滤条件
      */
     function __construct()
     {
@@ -47,8 +47,12 @@ class DescribeCvmZoneInstanceConfigInfosRequest extends AbstractModel
             return;
         }
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = new Filter();
-            $this->Filters->deserialize($param["Filters"]);
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

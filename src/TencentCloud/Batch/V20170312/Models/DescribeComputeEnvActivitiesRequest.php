@@ -18,8 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getEnvId() 获取u8ba1u7b97u73afu5883ID
- * @method void setEnvId(string $EnvId) 设置u8ba1u7b97u73afu5883ID
+ * @method string getEnvId() 获取计算环境ID
+ * @method void setEnvId(string $EnvId) 设置计算环境ID
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeComputeEnvActivitiesRequest extends AbstractModel
 {
     /**
-     * @var string u8ba1u7b97u73afu5883ID
+     * @var string 计算环境ID
      */
     public $EnvId;
 
@@ -53,7 +53,7 @@ class DescribeComputeEnvActivitiesRequest extends AbstractModel
      */
     public $Filters;
     /**
-     * @param string $EnvId u8ba1u7b97u73afu5883ID
+     * @param string $EnvId 计算环境ID
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
      * @param Filter $Filters 过滤条件

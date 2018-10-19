@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDevices(array $Devices) 设置设备列表
  * @method integer getTotal() 获取设备总数
  * @method void setTotal(integer $Total) 设置设备总数
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -42,13 +42,13 @@ class GetDevicesResponse extends AbstractModel
     public $Total;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param array $Devices 设备列表
      * @param integer $Total 设备总数
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -65,7 +65,7 @@ class GetDevicesResponse extends AbstractModel
         if (array_key_exists("Devices",$param) and $param["Devices"] !== null) {
             $this->Devices = [];
             foreach ($param["Devices"] as $key => $value){
-                $obj = new Device();
+                $obj = new DeviceEntry();
                 $obj->deserialize($value);
                 array_push($this->Devices, $obj);
             }

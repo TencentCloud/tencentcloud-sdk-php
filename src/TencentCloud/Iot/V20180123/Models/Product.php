@@ -22,8 +22,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置产品Id
  * @method string getProductKey() 获取产品Key
  * @method void setProductKey(string $ProductKey) 设置产品Key
- * @method string getProductSecret() 获取产品直连密钥
- * @method void setProductSecret(string $ProductSecret) 设置产品直连密钥
  * @method integer getAppId() 获取AppId
  * @method void setAppId(integer $AppId) 设置AppId
  * @method string getName() 获取产品名称
@@ -44,8 +42,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method Object getDataTemplate() 获取数据模版
- * @method void setDataTemplate(Object $DataTemplate) 设置数据模版
+ * @method array getDataTemplate() 获取数据模版
+ * @method void setDataTemplate(array $DataTemplate) 设置数据模版
+ * @method string getDataProtocol() 获取数据协议（native/template）
+ * @method void setDataProtocol(string $DataProtocol) 设置数据协议（native/template）
+ * @method string getUsername() 获取直连用户名
+ * @method void setUsername(string $Username) 设置直连用户名
+ * @method string getPassword() 获取直连密码
+ * @method void setPassword(string $Password) 设置直连密码
+ * @method string getCommProtocol() 获取通信方式
+ * @method void setCommProtocol(string $CommProtocol) 设置通信方式
+ * @method integer getQps() 获取qps
+ * @method void setQps(integer $Qps) 设置qps
+ * @method string getRegion() 获取地域
+ * @method void setRegion(string $Region) 设置地域
+ * @method string getDeviceType() 获取产品的设备类型
+ * @method void setDeviceType(string $DeviceType) 设置产品的设备类型
+ * @method array getAssociatedProducts() 获取关联的产品列表
+ * @method void setAssociatedProducts(array $AssociatedProducts) 设置关联的产品列表
  */
 
 /**
@@ -62,11 +76,6 @@ class Product extends AbstractModel
      * @var string 产品Key
      */
     public $ProductKey;
-
-    /**
-     * @var string 产品直连密钥
-     */
-    public $ProductSecret;
 
     /**
      * @var integer AppId
@@ -119,13 +128,52 @@ class Product extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var Object 数据模版
+     * @var array 数据模版
      */
     public $DataTemplate;
+
+    /**
+     * @var string 数据协议（native/template）
+     */
+    public $DataProtocol;
+
+    /**
+     * @var string 直连用户名
+     */
+    public $Username;
+
+    /**
+     * @var string 直连密码
+     */
+    public $Password;
+
+    /**
+     * @var string 通信方式
+     */
+    public $CommProtocol;
+
+    /**
+     * @var integer qps
+     */
+    public $Qps;
+
+    /**
+     * @var string 地域
+     */
+    public $Region;
+
+    /**
+     * @var string 产品的设备类型
+     */
+    public $DeviceType;
+
+    /**
+     * @var array 关联的产品列表
+     */
+    public $AssociatedProducts;
     /**
      * @param string $ProductId 产品Id
      * @param string $ProductKey 产品Key
-     * @param string $ProductSecret 产品直连密钥
      * @param integer $AppId AppId
      * @param string $Name 产品名称
      * @param string $Description 产品描述
@@ -136,7 +184,15 @@ class Product extends AbstractModel
      * @param string $Message 备注
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 更新时间
-     * @param Object $DataTemplate 数据模版
+     * @param array $DataTemplate 数据模版
+     * @param string $DataProtocol 数据协议（native/template）
+     * @param string $Username 直连用户名
+     * @param string $Password 直连密码
+     * @param string $CommProtocol 通信方式
+     * @param integer $Qps qps
+     * @param string $Region 地域
+     * @param string $DeviceType 产品的设备类型
+     * @param array $AssociatedProducts 关联的产品列表
      */
     function __construct()
     {
@@ -156,10 +212,6 @@ class Product extends AbstractModel
 
         if (array_key_exists("ProductKey",$param) and $param["ProductKey"] !== null) {
             $this->ProductKey = $param["ProductKey"];
-        }
-
-        if (array_key_exists("ProductSecret",$param) and $param["ProductSecret"] !== null) {
-            $this->ProductSecret = $param["ProductSecret"];
         }
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
@@ -203,8 +255,44 @@ class Product extends AbstractModel
         }
 
         if (array_key_exists("DataTemplate",$param) and $param["DataTemplate"] !== null) {
-            $this->DataTemplate = new Object();
-            $this->DataTemplate->deserialize($param["DataTemplate"]);
+            $this->DataTemplate = [];
+            foreach ($param["DataTemplate"] as $key => $value){
+                $obj = new DataTemplate();
+                $obj->deserialize($value);
+                array_push($this->DataTemplate, $obj);
+            }
+        }
+
+        if (array_key_exists("DataProtocol",$param) and $param["DataProtocol"] !== null) {
+            $this->DataProtocol = $param["DataProtocol"];
+        }
+
+        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
+            $this->Username = $param["Username"];
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("CommProtocol",$param) and $param["CommProtocol"] !== null) {
+            $this->CommProtocol = $param["CommProtocol"];
+        }
+
+        if (array_key_exists("Qps",$param) and $param["Qps"] !== null) {
+            $this->Qps = $param["Qps"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
+        }
+
+        if (array_key_exists("AssociatedProducts",$param) and $param["AssociatedProducts"] !== null) {
+            $this->AssociatedProducts = $param["AssociatedProducts"];
         }
     }
 }

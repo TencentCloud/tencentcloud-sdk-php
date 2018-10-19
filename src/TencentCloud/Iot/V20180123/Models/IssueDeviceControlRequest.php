@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getControlData() 获取控制数据（json）
  * @method void setControlData(string $ControlData) 设置控制数据（json）
+ * @method boolean getMetadata() 获取是否发送metadata字段
+ * @method void setMetadata(boolean $Metadata) 设置是否发送metadata字段
  */
 
 /**
@@ -45,10 +47,16 @@ class IssueDeviceControlRequest extends AbstractModel
      * @var string 控制数据（json）
      */
     public $ControlData;
+
+    /**
+     * @var boolean 是否发送metadata字段
+     */
+    public $Metadata;
     /**
      * @param string $ProductId 产品Id
      * @param string $DeviceName 设备名称
      * @param string $ControlData 控制数据（json）
+     * @param boolean $Metadata 是否发送metadata字段
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class IssueDeviceControlRequest extends AbstractModel
 
         if (array_key_exists("ControlData",$param) and $param["ControlData"] !== null) {
             $this->ControlData = $param["ControlData"];
+        }
+
+        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
+            $this->Metadata = $param["Metadata"];
         }
     }
 }

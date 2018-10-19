@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method Object getDeviceInfo() 获取设备信息
- * @method void setDeviceInfo(Object $DeviceInfo) 设置设备信息
+ * @method string getDeviceInfo() 获取设备信息（json）
+ * @method void setDeviceInfo(string $DeviceInfo) 设置设备信息（json）
  */
 
 /**
@@ -63,7 +63,7 @@ class Device extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var Object 设备信息
+     * @var string 设备信息（json）
      */
     public $DeviceInfo;
     /**
@@ -72,7 +72,7 @@ class Device extends AbstractModel
      * @param string $DeviceSecret 设备密钥
      * @param string $UpdateTime 更新时间
      * @param string $CreateTime 创建时间
-     * @param Object $DeviceInfo 设备信息
+     * @param string $DeviceInfo 设备信息（json）
      */
     function __construct()
     {
@@ -107,8 +107,7 @@ class Device extends AbstractModel
         }
 
         if (array_key_exists("DeviceInfo",$param) and $param["DeviceInfo"] !== null) {
-            $this->DeviceInfo = new Object();
-            $this->DeviceInfo->deserialize($param["DeviceInfo"]);
+            $this->DeviceInfo = $param["DeviceInfo"];
         }
     }
 }

@@ -18,10 +18,10 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method Object getDeviceData() 获取设备数据
- * @method void setDeviceData(Object $DeviceData) 设置设备数据
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getDeviceData() 获取设备数据
+ * @method void setDeviceData(string $DeviceData) 设置设备数据
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class GetDeviceDataResponse extends AbstractModel
 {
     /**
-     * @var Object 设备数据
+     * @var string 设备数据
      */
     public $DeviceData;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param Object $DeviceData 设备数据
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $DeviceData 设备数据
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -55,8 +55,7 @@ class GetDeviceDataResponse extends AbstractModel
             return;
         }
         if (array_key_exists("DeviceData",$param) and $param["DeviceData"] !== null) {
-            $this->DeviceData = new Object();
-            $this->DeviceData->deserialize($param["DeviceData"]);
+            $this->DeviceData = $param["DeviceData"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置产品名称
  * @method string getDescription() 获取产品描述
  * @method void setDescription(string $Description) 设置产品描述
- * @method string getDataTemplate() 获取数据模版（json）
- * @method void setDataTemplate(string $DataTemplate) 设置数据模版（json）
+ * @method array getDataTemplate() 获取数据模版
+ * @method void setDataTemplate(array $DataTemplate) 设置数据模版
  */
 
 /**
@@ -49,14 +49,14 @@ class UpdateProductRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string 数据模版（json）
+     * @var array 数据模版
      */
     public $DataTemplate;
     /**
      * @param string $ProductId 产品Id
      * @param string $Name 产品名称
      * @param string $Description 产品描述
-     * @param string $DataTemplate 数据模版（json）
+     * @param array $DataTemplate 数据模版
      */
     function __construct()
     {
@@ -83,7 +83,12 @@ class UpdateProductRequest extends AbstractModel
         }
 
         if (array_key_exists("DataTemplate",$param) and $param["DataTemplate"] !== null) {
-            $this->DataTemplate = $param["DataTemplate"];
+            $this->DataTemplate = [];
+            foreach ($param["DataTemplate"] as $key => $value){
+                $obj = new DataTemplate();
+                $obj->deserialize($value);
+                array_push($this->DataTemplate, $obj);
+            }
         }
     }
 }

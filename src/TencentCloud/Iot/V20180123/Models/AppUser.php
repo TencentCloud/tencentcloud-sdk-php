@@ -24,8 +24,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) 设置用户名
  * @method string getNickName() 获取昵称
  * @method void setNickName(string $NickName) 设置昵称
- * @method array getDevices() 获取绑定设备列表
- * @method void setDevices(array $Devices) 设置绑定设备列表
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取修改时间
@@ -53,11 +51,6 @@ class AppUser extends AbstractModel
     public $NickName;
 
     /**
-     * @var array 绑定设备列表
-     */
-    public $Devices;
-
-    /**
      * @var string 创建时间
      */
     public $CreateTime;
@@ -70,7 +63,6 @@ class AppUser extends AbstractModel
      * @param string $ApplicationId 应用Id
      * @param string $UserName 用户名
      * @param string $NickName 昵称
-     * @param array $Devices 绑定设备列表
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 修改时间
      */
@@ -96,15 +88,6 @@ class AppUser extends AbstractModel
 
         if (array_key_exists("NickName",$param) and $param["NickName"] !== null) {
             $this->NickName = $param["NickName"];
-        }
-
-        if (array_key_exists("Devices",$param) and $param["Devices"] !== null) {
-            $this->Devices = [];
-            foreach ($param["Devices"] as $key => $value){
-                $obj = new Object();
-                $obj->deserialize($value);
-                array_push($this->Devices, $obj);
-            }
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

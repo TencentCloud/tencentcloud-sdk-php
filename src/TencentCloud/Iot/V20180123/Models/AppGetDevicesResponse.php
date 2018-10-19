@@ -18,29 +18,29 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method User getUser() 获取用户信息
- * @method void setUser(User $User) 设置用户信息
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method array getDevices() 获取绑定设备列表
+ * @method void setDevices(array $Devices) 设置绑定设备列表
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *GetUser返回参数结构体
+ *AppGetDevices返回参数结构体
  */
-class GetUserResponse extends AbstractModel
+class AppGetDevicesResponse extends AbstractModel
 {
     /**
-     * @var User 用户信息
+     * @var array 绑定设备列表
      */
-    public $User;
+    public $Devices;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param User $User 用户信息
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param array $Devices 绑定设备列表
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -54,9 +54,13 @@ class GetUserResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("User",$param) and $param["User"] !== null) {
-            $this->User = new User();
-            $this->User->deserialize($param["User"]);
+        if (array_key_exists("Devices",$param) and $param["Devices"] !== null) {
+            $this->Devices = [];
+            foreach ($param["Devices"] as $key => $value){
+                $obj = new AppDevice();
+                $obj->deserialize($value);
+                array_push($this->Devices, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

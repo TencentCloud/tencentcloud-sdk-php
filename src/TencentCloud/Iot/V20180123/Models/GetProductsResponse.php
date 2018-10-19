@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProducts(array $Products) 设置Product列表
  * @method integer getTotal() 获取Product总数
  * @method void setTotal(integer $Total) 设置Product总数
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -42,13 +42,13 @@ class GetProductsResponse extends AbstractModel
     public $Total;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param array $Products Product列表
      * @param integer $Total Product总数
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -65,7 +65,7 @@ class GetProductsResponse extends AbstractModel
         if (array_key_exists("Products",$param) and $param["Products"] !== null) {
             $this->Products = [];
             foreach ($param["Products"] as $key => $value){
-                $obj = new Product();
+                $obj = new ProductEntry();
                 $obj->deserialize($value);
                 array_push($this->Products, $obj);
             }

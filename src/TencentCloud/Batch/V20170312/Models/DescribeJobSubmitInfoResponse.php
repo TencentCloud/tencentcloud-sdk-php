@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasks(array $Tasks) 设置任务信息
  * @method array getDependences() 获取依赖信息
  * @method void setDependences(array $Dependences) 设置依赖信息
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -70,7 +70,7 @@ class DescribeJobSubmitInfoResponse extends AbstractModel
     public $Dependences;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -80,7 +80,7 @@ class DescribeJobSubmitInfoResponse extends AbstractModel
      * @param integer $Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
      * @param array $Tasks 任务信息
      * @param array $Dependences 依赖信息
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

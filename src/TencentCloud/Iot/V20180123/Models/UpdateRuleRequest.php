@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置描述
  * @method RuleQuery getQuery() 获取查询
  * @method void setQuery(RuleQuery $Query) 设置查询
- * @method array getActions() 获取转发
- * @method void setActions(array $Actions) 设置转发
+ * @method array getActions() 获取转发动作列表
+ * @method void setActions(array $Actions) 设置转发动作列表
+ * @method integer getDataType() 获取数据类型（0：文本，1：二进制）
+ * @method void setDataType(integer $DataType) 设置数据类型（0：文本，1：二进制）
  */
 
 /**
@@ -56,15 +58,21 @@ class UpdateRuleRequest extends AbstractModel
     public $Query;
 
     /**
-     * @var array 转发
+     * @var array 转发动作列表
      */
     public $Actions;
+
+    /**
+     * @var integer 数据类型（0：文本，1：二进制）
+     */
+    public $DataType;
     /**
      * @param string $RuleId 规则Id
      * @param string $Name 名称
      * @param string $Description 描述
      * @param RuleQuery $Query 查询
-     * @param array $Actions 转发
+     * @param array $Actions 转发动作列表
+     * @param integer $DataType 数据类型（0：文本，1：二进制）
      */
     function __construct()
     {
@@ -98,10 +106,14 @@ class UpdateRuleRequest extends AbstractModel
         if (array_key_exists("Actions",$param) and $param["Actions"] !== null) {
             $this->Actions = [];
             foreach ($param["Actions"] as $key => $value){
-                $obj = new Object();
+                $obj = new Action();
                 $obj->deserialize($value);
                 array_push($this->Actions, $obj);
             }
+        }
+
+        if (array_key_exists("DataType",$param) and $param["DataType"] !== null) {
+            $this->DataType = $param["DataType"];
         }
     }
 }

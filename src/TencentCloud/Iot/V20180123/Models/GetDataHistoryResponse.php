@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataHistory(array $DataHistory) 设置数据历史
  * @method string getScrollId() 获取查询游标
  * @method void setScrollId(string $ScrollId) 设置查询游标
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method integer getScrollTimeout() 获取查询游标超时
+ * @method void setScrollTimeout(integer $ScrollTimeout) 设置查询游标超时
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -42,13 +44,19 @@ class GetDataHistoryResponse extends AbstractModel
     public $ScrollId;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var integer 查询游标超时
+     */
+    public $ScrollTimeout;
+
+    /**
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param array $DataHistory 数据历史
      * @param string $ScrollId 查询游标
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param integer $ScrollTimeout 查询游标超时
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -65,7 +73,7 @@ class GetDataHistoryResponse extends AbstractModel
         if (array_key_exists("DataHistory",$param) and $param["DataHistory"] !== null) {
             $this->DataHistory = [];
             foreach ($param["DataHistory"] as $key => $value){
-                $obj = new Object();
+                $obj = new DataHistoryEntry();
                 $obj->deserialize($value);
                 array_push($this->DataHistory, $obj);
             }
@@ -73,6 +81,10 @@ class GetDataHistoryResponse extends AbstractModel
 
         if (array_key_exists("ScrollId",$param) and $param["ScrollId"] !== null) {
             $this->ScrollId = $param["ScrollId"];
+        }
+
+        if (array_key_exists("ScrollTimeout",$param) and $param["ScrollTimeout"] !== null) {
+            $this->ScrollTimeout = $param["ScrollTimeout"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

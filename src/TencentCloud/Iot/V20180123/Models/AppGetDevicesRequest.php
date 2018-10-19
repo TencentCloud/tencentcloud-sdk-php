@@ -18,17 +18,21 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method string getAccessToken() 获取访问Token
+ * @method void setAccessToken(string $AccessToken) 设置访问Token
  */
 
 /**
- *对象
+ *AppGetDevices请求参数结构体
  */
-class Object extends AbstractModel
+class AppGetDevicesRequest extends AbstractModel
 {
-
     /**
-
+     * @var string 访问Token
+     */
+    public $AccessToken;
+    /**
+     * @param string $AccessToken 访问Token
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class Object extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("AccessToken",$param) and $param["AccessToken"] !== null) {
+            $this->AccessToken = $param["AccessToken"];
+        }
     }
 }

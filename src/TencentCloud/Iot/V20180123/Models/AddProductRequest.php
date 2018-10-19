@@ -22,12 +22,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
  * @method string getDescription() 获取产品描述
  * @method void setDescription(string $Description) 设置产品描述
- * @method integer getAuthType() 获取鉴权模式（1：动态令牌，推荐使用动态令牌）
- * @method void setAuthType(integer $AuthType) 设置鉴权模式（1：动态令牌，推荐使用动态令牌）
- * @method array getDataTemplate() 获取数据模版（json数组）
- * @method void setDataTemplate(array $DataTemplate) 设置数据模版（json数组）
- * @method string getDataProtocol() 获取数据协议（native表示自定义，template表示数据模板，默认值为template）
- * @method void setDataProtocol(string $DataProtocol) 设置数据协议（native表示自定义，template表示数据模板，默认值为template）
+ * @method array getDataTemplate() 获取数据模版
+ * @method void setDataTemplate(array $DataTemplate) 设置数据模版
+ * @method string getDataProtocol() 获取产品版本（native表示基础版，template表示高级版，默认值为template）
+ * @method void setDataProtocol(string $DataProtocol) 设置产品版本（native表示基础版，template表示高级版，默认值为template）
+ * @method integer getAuthType() 获取设备认证方式（1：动态令牌，2：签名直连鉴权）
+ * @method void setAuthType(integer $AuthType) 设置设备认证方式（1：动态令牌，2：签名直连鉴权）
+ * @method string getCommProtocol() 获取通信方式（other/wifi/cellular/nb-iot）
+ * @method void setCommProtocol(string $CommProtocol) 设置通信方式（other/wifi/cellular/nb-iot）
+ * @method string getDeviceType() 获取产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
+ * @method void setDeviceType(string $DeviceType) 设置产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
  */
 
 /**
@@ -46,25 +50,37 @@ class AddProductRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer 鉴权模式（1：动态令牌，推荐使用动态令牌）
-     */
-    public $AuthType;
-
-    /**
-     * @var array 数据模版（json数组）
+     * @var array 数据模版
      */
     public $DataTemplate;
 
     /**
-     * @var string 数据协议（native表示自定义，template表示数据模板，默认值为template）
+     * @var string 产品版本（native表示基础版，template表示高级版，默认值为template）
      */
     public $DataProtocol;
+
+    /**
+     * @var integer 设备认证方式（1：动态令牌，2：签名直连鉴权）
+     */
+    public $AuthType;
+
+    /**
+     * @var string 通信方式（other/wifi/cellular/nb-iot）
+     */
+    public $CommProtocol;
+
+    /**
+     * @var string 产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
+     */
+    public $DeviceType;
     /**
      * @param string $Name 产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
      * @param string $Description 产品描述
-     * @param integer $AuthType 鉴权模式（1：动态令牌，推荐使用动态令牌）
-     * @param array $DataTemplate 数据模版（json数组）
-     * @param string $DataProtocol 数据协议（native表示自定义，template表示数据模板，默认值为template）
+     * @param array $DataTemplate 数据模版
+     * @param string $DataProtocol 产品版本（native表示基础版，template表示高级版，默认值为template）
+     * @param integer $AuthType 设备认证方式（1：动态令牌，2：签名直连鉴权）
+     * @param string $CommProtocol 通信方式（other/wifi/cellular/nb-iot）
+     * @param string $DeviceType 产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
      */
     function __construct()
     {
@@ -86,16 +102,29 @@ class AddProductRequest extends AbstractModel
             $this->Description = $param["Description"];
         }
 
-        if (array_key_exists("AuthType",$param) and $param["AuthType"] !== null) {
-            $this->AuthType = $param["AuthType"];
-        }
-
         if (array_key_exists("DataTemplate",$param) and $param["DataTemplate"] !== null) {
-            $this->DataTemplate = $param["DataTemplate"];
+            $this->DataTemplate = [];
+            foreach ($param["DataTemplate"] as $key => $value){
+                $obj = new DataTemplate();
+                $obj->deserialize($value);
+                array_push($this->DataTemplate, $obj);
+            }
         }
 
         if (array_key_exists("DataProtocol",$param) and $param["DataProtocol"] !== null) {
             $this->DataProtocol = $param["DataProtocol"];
+        }
+
+        if (array_key_exists("AuthType",$param) and $param["AuthType"] !== null) {
+            $this->AuthType = $param["AuthType"];
+        }
+
+        if (array_key_exists("CommProtocol",$param) and $param["CommProtocol"] !== null) {
+            $this->CommProtocol = $param["CommProtocol"];
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
         }
     }
 }

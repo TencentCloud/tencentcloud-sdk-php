@@ -18,29 +18,29 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method User getUser() 获取用户信息
- * @method void setUser(User $User) 设置用户信息
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method AppDevice getAppDevice() 获取绑定设备信息
+ * @method void setAppDevice(AppDevice $AppDevice) 设置绑定设备信息
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *AddUser返回参数结构体
+ *AppSecureAddDevice返回参数结构体
  */
-class AddUserResponse extends AbstractModel
+class AppSecureAddDeviceResponse extends AbstractModel
 {
     /**
-     * @var User 用户信息
+     * @var AppDevice 绑定设备信息
      */
-    public $User;
+    public $AppDevice;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param User $User 用户信息
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param AppDevice $AppDevice 绑定设备信息
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -54,9 +54,9 @@ class AddUserResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("User",$param) and $param["User"] !== null) {
-            $this->User = new User();
-            $this->User->deserialize($param["User"]);
+        if (array_key_exists("AppDevice",$param) and $param["AppDevice"] !== null) {
+            $this->AppDevice = new AppDevice();
+            $this->AppDevice->deserialize($param["AppDevice"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

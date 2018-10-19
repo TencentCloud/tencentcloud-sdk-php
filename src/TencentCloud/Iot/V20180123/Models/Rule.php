@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method integer getMsgOrder() 获取消息顺序
+ * @method void setMsgOrder(integer $MsgOrder) 设置消息顺序
+ * @method integer getDataType() 获取数据类型（0：文本，1：二进制）
+ * @method void setDataType(integer $DataType) 设置数据类型（0：文本，1：二进制）
  */
 
 /**
@@ -94,6 +98,16 @@ class Rule extends AbstractModel
      * @var string 更新时间
      */
     public $UpdateTime;
+
+    /**
+     * @var integer 消息顺序
+     */
+    public $MsgOrder;
+
+    /**
+     * @var integer 数据类型（0：文本，1：二进制）
+     */
+    public $DataType;
     /**
      * @param string $RuleId 规则Id
      * @param integer $AppId AppId
@@ -105,6 +119,8 @@ class Rule extends AbstractModel
      * @param integer $Deleted 已删除
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 更新时间
+     * @param integer $MsgOrder 消息顺序
+     * @param integer $DataType 数据类型（0：文本，1：二进制）
      */
     function __construct()
     {
@@ -142,7 +158,7 @@ class Rule extends AbstractModel
         if (array_key_exists("Actions",$param) and $param["Actions"] !== null) {
             $this->Actions = [];
             foreach ($param["Actions"] as $key => $value){
-                $obj = new Object();
+                $obj = new Action();
                 $obj->deserialize($value);
                 array_push($this->Actions, $obj);
             }
@@ -162,6 +178,14 @@ class Rule extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("MsgOrder",$param) and $param["MsgOrder"] !== null) {
+            $this->MsgOrder = $param["MsgOrder"];
+        }
+
+        if (array_key_exists("DataType",$param) and $param["DataType"] !== null) {
+            $this->DataType = $param["DataType"];
         }
     }
 }

@@ -48,6 +48,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageId(string $ImageId) 设置镜像ID。
  * @method string getLaunchConfigurationStatus() 获取启动配置当前状态。取值范围：<br><li>NORMAL：正常<br><li>IMAGE_ABNORMAL：启动配置镜像异常<br><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常<br><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常<br>
  * @method void setLaunchConfigurationStatus(string $LaunchConfigurationStatus) 设置启动配置当前状态。取值范围：<br><li>NORMAL：正常<br><li>IMAGE_ABNORMAL：启动配置镜像异常<br><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常<br><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常<br>
+ * @method string getInstanceChargeType() 获取实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+ * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+ * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
  */
 
 /**
@@ -129,6 +137,18 @@ class LaunchConfiguration extends AbstractModel
      * @var string 启动配置当前状态。取值范围：<br><li>NORMAL：正常<br><li>IMAGE_ABNORMAL：启动配置镜像异常<br><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常<br><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常<br>
      */
     public $LaunchConfigurationStatus;
+
+    /**
+     * @var string 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+     */
+    public $InstanceChargeType;
+
+    /**
+     * @var InstanceMarketOptionsRequest 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+     */
+    public $InstanceMarketOptions;
     /**
      * @param integer $ProjectId 实例所属项目ID。
      * @param string $LaunchConfigurationId 启动配置ID。
@@ -145,6 +165,10 @@ class LaunchConfiguration extends AbstractModel
      * @param EnhancedService $EnhancedService 实例的增强服务启用情况与其设置。
      * @param string $ImageId 镜像ID。
      * @param string $LaunchConfigurationStatus 启动配置当前状态。取值范围：<br><li>NORMAL：正常<br><li>IMAGE_ABNORMAL：启动配置镜像异常<br><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常<br><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常<br>
+     * @param string $InstanceChargeType 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+     * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
      */
     function __construct()
     {
@@ -230,6 +254,15 @@ class LaunchConfiguration extends AbstractModel
 
         if (array_key_exists("LaunchConfigurationStatus",$param) and $param["LaunchConfigurationStatus"] !== null) {
             $this->LaunchConfigurationStatus = $param["LaunchConfigurationStatus"];
+        }
+
+        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
+            $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("InstanceMarketOptions",$param) and $param["InstanceMarketOptions"] !== null) {
+            $this->InstanceMarketOptions = new InstanceMarketOptionsRequest();
+            $this->InstanceMarketOptions->deserialize($param["InstanceMarketOptions"]);
         }
     }
 }

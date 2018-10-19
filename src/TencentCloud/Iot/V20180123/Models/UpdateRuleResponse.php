@@ -18,8 +18,10 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method Rule getRule() 获取规则
+ * @method void setRule(Rule $Rule) 设置规则
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -28,11 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class UpdateRuleResponse extends AbstractModel
 {
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var Rule 规则
+     */
+    public $Rule;
+
+    /**
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param Rule $Rule 规则
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,6 +54,11 @@ class UpdateRuleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Rule",$param) and $param["Rule"] !== null) {
+            $this->Rule = new Rule();
+            $this->Rule->deserialize($param["Rule"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

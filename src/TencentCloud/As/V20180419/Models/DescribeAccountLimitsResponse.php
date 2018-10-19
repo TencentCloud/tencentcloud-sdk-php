@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxNumberOfAutoScalingGroups(integer $MaxNumberOfAutoScalingGroups) 设置用户账户被允许创建的伸缩组最大数量
  * @method integer getNumberOfAutoScalingGroups() 获取用户账户伸缩组的当前数量
  * @method void setNumberOfAutoScalingGroups(integer $NumberOfAutoScalingGroups) 设置用户账户伸缩组的当前数量
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -56,7 +56,7 @@ class DescribeAccountLimitsResponse extends AbstractModel
     public $NumberOfAutoScalingGroups;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -64,7 +64,7 @@ class DescribeAccountLimitsResponse extends AbstractModel
      * @param integer $NumberOfLaunchConfigurations 用户账户启动配置的当前数量
      * @param integer $MaxNumberOfAutoScalingGroups 用户账户被允许创建的伸缩组最大数量
      * @param integer $NumberOfAutoScalingGroups 用户账户伸缩组的当前数量
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtectedFromScaleIn(boolean $ProtectedFromScaleIn) 设置是否加入缩容保护
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
- * @method array getCreationType() 获取创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
- * @method void setCreationType(array $CreationType) 设置创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
+ * @method string getCreationType() 获取创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
+ * @method void setCreationType(string $CreationType) 设置创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
  * @method string getAddTime() 获取实例加入时间
  * @method void setAddTime(string $AddTime) 设置实例加入时间
  */
@@ -86,7 +86,7 @@ class Instance extends AbstractModel
     public $Zone;
 
     /**
-     * @var array 创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
+     * @var string 创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
      */
     public $CreationType;
 
@@ -103,7 +103,7 @@ class Instance extends AbstractModel
      * @param string $HealthStatus 健康状态，取值包括HEALTHY和UNHEALTHY
      * @param boolean $ProtectedFromScaleIn 是否加入缩容保护
      * @param string $Zone 可用区
-     * @param array $CreationType 创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
+     * @param string $CreationType 创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
      * @param string $AddTime 实例加入时间
      */
     function __construct()

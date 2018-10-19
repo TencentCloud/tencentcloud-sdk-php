@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getStatus() 获取设备状态（inactive, online, offline）
  * @method void setStatus(string $Status) 设置设备状态（inactive, online, offline）
+ * @method string getFirstOnline() 获取首次上线时间
+ * @method void setFirstOnline(string $FirstOnline) 设置首次上线时间
+ * @method string getLastOnline() 获取最后上线时间
+ * @method void setLastOnline(string $LastOnline) 设置最后上线时间
+ * @method integer getOnlineTimes() 获取上线次数
+ * @method void setOnlineTimes(integer $OnlineTimes) 设置上线次数
  */
 
 /**
@@ -38,9 +44,27 @@ class DeviceStatus extends AbstractModel
      * @var string 设备状态（inactive, online, offline）
      */
     public $Status;
+
+    /**
+     * @var string 首次上线时间
+     */
+    public $FirstOnline;
+
+    /**
+     * @var string 最后上线时间
+     */
+    public $LastOnline;
+
+    /**
+     * @var integer 上线次数
+     */
+    public $OnlineTimes;
     /**
      * @param string $DeviceName 设备名称
      * @param string $Status 设备状态（inactive, online, offline）
+     * @param string $FirstOnline 首次上线时间
+     * @param string $LastOnline 最后上线时间
+     * @param integer $OnlineTimes 上线次数
      */
     function __construct()
     {
@@ -60,6 +84,18 @@ class DeviceStatus extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("FirstOnline",$param) and $param["FirstOnline"] !== null) {
+            $this->FirstOnline = $param["FirstOnline"];
+        }
+
+        if (array_key_exists("LastOnline",$param) and $param["LastOnline"] !== null) {
+            $this->LastOnline = $param["LastOnline"];
+        }
+
+        if (array_key_exists("OnlineTimes",$param) and $param["OnlineTimes"] !== null) {
+            $this->OnlineTimes = $param["OnlineTimes"];
         }
     }
 }

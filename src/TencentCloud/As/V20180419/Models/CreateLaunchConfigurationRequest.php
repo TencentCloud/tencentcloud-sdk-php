@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnhancedService(EnhancedService $EnhancedService) 设置增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
  * @method string getUserData() 获取经过 Base64 编码后的自定义数据，最大长度不超过16KB。
  * @method void setUserData(string $UserData) 设置经过 Base64 编码后的自定义数据，最大长度不超过16KB。
+ * @method string getInstanceChargeType() 获取实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+ * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+ * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
  */
 
 /**
@@ -101,6 +109,18 @@ class CreateLaunchConfigurationRequest extends AbstractModel
      * @var string 经过 Base64 编码后的自定义数据，最大长度不超过16KB。
      */
     public $UserData;
+
+    /**
+     * @var string 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+     */
+    public $InstanceChargeType;
+
+    /**
+     * @var InstanceMarketOptionsRequest 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+     */
+    public $InstanceMarketOptions;
     /**
      * @param string $LaunchConfigurationName 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
      * @param string $InstanceType 实例机型。不同实例机型指定了不同的资源规格，具体取值可通过调用接口 [DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749) 来获得最新的规格表或参见[实例类型](https://cloud.tencent.com/document/product/213/11518)描述。
@@ -113,6 +133,10 @@ class CreateLaunchConfigurationRequest extends AbstractModel
      * @param array $SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。若不指定该参数，则默认不绑定安全组。
      * @param EnhancedService $EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
      * @param string $UserData 经过 Base64 编码后的自定义数据，最大长度不超过16KB。
+     * @param string $InstanceChargeType 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+     * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
      */
     function __construct()
     {
@@ -177,6 +201,15 @@ class CreateLaunchConfigurationRequest extends AbstractModel
 
         if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
             $this->UserData = $param["UserData"];
+        }
+
+        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
+            $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("InstanceMarketOptions",$param) and $param["InstanceMarketOptions"] !== null) {
+            $this->InstanceMarketOptions = new InstanceMarketOptionsRequest();
+            $this->InstanceMarketOptions->deserialize($param["InstanceMarketOptions"]);
         }
     }
 }

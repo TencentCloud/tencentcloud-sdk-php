@@ -18,17 +18,29 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method string getAccessToken() 获取访问Token
+ * @method void setAccessToken(string $AccessToken) 设置访问Token
+ * @method string getDeviceSignature() 获取设备签名
+ * @method void setDeviceSignature(string $DeviceSignature) 设置设备签名
  */
 
 /**
- *GetUser请求参数结构体
+ *AppSecureAddDevice请求参数结构体
  */
-class GetUserRequest extends AbstractModel
+class AppSecureAddDeviceRequest extends AbstractModel
 {
+    /**
+     * @var string 访问Token
+     */
+    public $AccessToken;
 
     /**
-
+     * @var string 设备签名
+     */
+    public $DeviceSignature;
+    /**
+     * @param string $AccessToken 访问Token
+     * @param string $DeviceSignature 设备签名
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class GetUserRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AccessToken",$param) and $param["AccessToken"] !== null) {
+            $this->AccessToken = $param["AccessToken"];
+        }
 
+        if (array_key_exists("DeviceSignature",$param) and $param["DeviceSignature"] !== null) {
+            $this->DeviceSignature = $param["DeviceSignature"];
+        }
     }
 }

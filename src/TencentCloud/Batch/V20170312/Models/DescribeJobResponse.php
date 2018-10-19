@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskInstanceMetrics(TaskInstanceView $TaskInstanceMetrics) 设置任务实例统计指标
  * @method string getStateReason() 获取作业失败原因
  * @method void setStateReason(string $StateReason) 设置作业失败原因
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -112,7 +112,7 @@ class DescribeJobResponse extends AbstractModel
     public $StateReason;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -128,7 +128,7 @@ class DescribeJobResponse extends AbstractModel
      * @param TaskMetrics $TaskMetrics 任务统计指标
      * @param TaskInstanceView $TaskInstanceMetrics 任务实例统计指标
      * @param string $StateReason 作业失败原因
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

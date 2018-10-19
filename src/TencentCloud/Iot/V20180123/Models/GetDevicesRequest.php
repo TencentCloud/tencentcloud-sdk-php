@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移
  * @method integer getLength() 获取长度
  * @method void setLength(integer $Length) 设置长度
+ * @method string getKeyword() 获取关键字查询
+ * @method void setKeyword(string $Keyword) 设置关键字查询
  */
 
 /**
@@ -45,10 +47,16 @@ class GetDevicesRequest extends AbstractModel
      * @var integer 长度
      */
     public $Length;
+
+    /**
+     * @var string 关键字查询
+     */
+    public $Keyword;
     /**
      * @param string $ProductId 产品Id
      * @param integer $Offset 偏移
      * @param integer $Length 长度
+     * @param string $Keyword 关键字查询
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class GetDevicesRequest extends AbstractModel
 
         if (array_key_exists("Length",$param) and $param["Length"] !== null) {
             $this->Length = $param["Length"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
         }
     }
 }

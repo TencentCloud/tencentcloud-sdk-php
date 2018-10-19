@@ -20,10 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getField() 获取字段
  * @method void setField(string $Field) 设置字段
- * @method string getTopic() 获取Topic
- * @method void setTopic(string $Topic) 设置Topic
  * @method string getCondition() 获取过滤规则
  * @method void setCondition(string $Condition) 设置过滤规则
+ * @method string getTopic() 获取Topic
+ * @method void setTopic(string $Topic) 设置Topic
+ * @method string getProductId() 获取产品Id
+ * @method void setProductId(string $ProductId) 设置产品Id
  */
 
 /**
@@ -37,18 +39,24 @@ class RuleQuery extends AbstractModel
     public $Field;
 
     /**
+     * @var string 过滤规则
+     */
+    public $Condition;
+
+    /**
      * @var string Topic
      */
     public $Topic;
 
     /**
-     * @var string 过滤规则
+     * @var string 产品Id
      */
-    public $Condition;
+    public $ProductId;
     /**
      * @param string $Field 字段
-     * @param string $Topic Topic
      * @param string $Condition 过滤规则
+     * @param string $Topic Topic
+     * @param string $ProductId 产品Id
      */
     function __construct()
     {
@@ -66,12 +74,16 @@ class RuleQuery extends AbstractModel
             $this->Field = $param["Field"];
         }
 
+        if (array_key_exists("Condition",$param) and $param["Condition"] !== null) {
+            $this->Condition = $param["Condition"];
+        }
+
         if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
             $this->Topic = $param["Topic"];
         }
 
-        if (array_key_exists("Condition",$param) and $param["Condition"] !== null) {
-            $this->Condition = $param["Condition"];
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

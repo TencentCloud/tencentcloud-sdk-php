@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getRules() 获取规则列表
  * @method void setRules(array $Rules) 设置规则列表
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method integer getTotal() 获取规则总数
+ * @method void setTotal(integer $Total) 设置规则总数
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -35,12 +37,18 @@ class GetRulesResponse extends AbstractModel
     public $Rules;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var integer 规则总数
+     */
+    public $Total;
+
+    /**
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param array $Rules 规则列表
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param integer $Total 规则总数
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -61,6 +69,10 @@ class GetRulesResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);
             }
+        }
+
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

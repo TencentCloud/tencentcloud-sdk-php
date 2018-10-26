@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncrypt(string $Encrypt) 设置传入该参数用于创建加密云盘，取值固定为ENCRYPT。
  * @method array getTags() 获取云盘绑定的标签。
  * @method void setTags(array $Tags) 设置云盘绑定的标签。
+ * @method boolean getDeleteWithInstance() 获取可选参数，不传该参数则仅执行挂载操作。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
+ * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置可选参数，不传该参数则仅执行挂载操作。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
  */
 
 /**
@@ -101,6 +103,11 @@ class CreateDisksRequest extends AbstractModel
      * @var array 云盘绑定的标签。
      */
     public $Tags;
+
+    /**
+     * @var boolean 可选参数，不传该参数则仅执行挂载操作。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
+     */
+    public $DeleteWithInstance;
     /**
      * @param string $DiskType 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
      * @param string $DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
@@ -113,6 +120,7 @@ class CreateDisksRequest extends AbstractModel
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param string $Encrypt 传入该参数用于创建加密云盘，取值固定为ENCRYPT。
      * @param array $Tags 云盘绑定的标签。
+     * @param boolean $DeleteWithInstance 可选参数，不传该参数则仅执行挂载操作。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
      */
     function __construct()
     {
@@ -175,6 +183,10 @@ class CreateDisksRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("DeleteWithInstance",$param) and $param["DeleteWithInstance"] !== null) {
+            $this->DeleteWithInstance = $param["DeleteWithInstance"];
         }
     }
 }

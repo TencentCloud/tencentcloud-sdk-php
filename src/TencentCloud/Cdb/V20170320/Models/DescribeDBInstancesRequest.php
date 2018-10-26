@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVips(array $Vips) 设置实例的内网IP地址
  * @method array getStatus() 获取实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
  * @method void setStatus(array $Status) 设置实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
- * @method integer getOffset() 获取记录偏移量，默认值为0
- * @method void setOffset(integer $Offset) 设置记录偏移量，默认值为0
+ * @method integer getOffset() 获取偏移量，默认值为0
+ * @method void setOffset(integer $Offset) 设置偏移量，默认值为0
  * @method integer getLimit() 获取单次请求返回的数量，默认值为20，最大值为2000
  * @method void setLimit(integer $Limit) 设置单次请求返回的数量，默认值为20，最大值为2000
  * @method string getSecurityGroupId() 获取安全组ID
@@ -48,14 +48,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetIds(array $SubnetIds) 设置子网ID
  * @method array getCdbErrors() 获取是否锁定标记
  * @method void setCdbErrors(array $CdbErrors) 设置是否锁定标记
- * @method string getOrderBy() 获取排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
- * @method void setOrderBy(string $OrderBy) 设置排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
- * @method string getOrderDirection() 获取排序方式，目前支持："ASC"或者"DESC"
- * @method void setOrderDirection(string $OrderDirection) 设置排序方式，目前支持："ASC"或者"DESC"
- * @method integer getWithSecurityGroup() 获取是否包含安全组信息，可取值：0-不包含，1-包含
- * @method void setWithSecurityGroup(integer $WithSecurityGroup) 设置是否包含安全组信息，可取值：0-不包含，1-包含
- * @method integer getWithExCluster() 获取是否包含独享集群信息，可取值：0-不包含，1-包含
- * @method void setWithExCluster(integer $WithExCluster) 设置是否包含独享集群信息，可取值：0-不包含，1-包含
+ * @method string getOrderBy() 获取返回结果集排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
+ * @method void setOrderBy(string $OrderBy) 设置返回结果集排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
+ * @method string getOrderDirection() 获取返回结果集排序方式，目前支持："ASC"或者"DESC"
+ * @method void setOrderDirection(string $OrderDirection) 设置返回结果集排序方式，目前支持："ASC"或者"DESC"
+ * @method integer getWithSecurityGroup() 获取是否包含安全组详细信息，可取值：0-不包含，1-包含
+ * @method void setWithSecurityGroup(integer $WithSecurityGroup) 设置是否包含安全组详细信息，可取值：0-不包含，1-包含
+ * @method integer getWithExCluster() 获取是否包含独享集群详细信息，可取值：0-不包含，1-包含
+ * @method void setWithExCluster(integer $WithExCluster) 设置是否包含独享集群详细信息，可取值：0-不包含，1-包含
  * @method string getExClusterId() 获取独享集群ID
  * @method void setExClusterId(string $ExClusterId) 设置独享集群ID
  * @method array getInstanceIds() 获取实例ID
@@ -96,7 +96,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 记录偏移量，默认值为0
+     * @var integer 偏移量，默认值为0
      */
     public $Offset;
 
@@ -151,22 +151,22 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $CdbErrors;
 
     /**
-     * @var string 排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
+     * @var string 返回结果集排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
      */
     public $OrderBy;
 
     /**
-     * @var string 排序方式，目前支持："ASC"或者"DESC"
+     * @var string 返回结果集排序方式，目前支持："ASC"或者"DESC"
      */
     public $OrderDirection;
 
     /**
-     * @var integer 是否包含安全组信息，可取值：0-不包含，1-包含
+     * @var integer 是否包含安全组详细信息，可取值：0-不包含，1-包含
      */
     public $WithSecurityGroup;
 
     /**
-     * @var integer 是否包含独享集群信息，可取值：0-不包含，1-包含
+     * @var integer 是否包含独享集群详细信息，可取值：0-不包含，1-包含
      */
     public $WithExCluster;
 
@@ -204,7 +204,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $InstanceTypes 实例类型，可取值：1-主实例，2-灾备实例，3-只读实例
      * @param array $Vips 实例的内网IP地址
      * @param array $Status 实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
-     * @param integer $Offset 记录偏移量，默认值为0
+     * @param integer $Offset 偏移量，默认值为0
      * @param integer $Limit 单次请求返回的数量，默认值为20，最大值为2000
      * @param string $SecurityGroupId 安全组ID
      * @param array $PayTypes 付费类型，可取值：0-包年包月，1-小时计费
@@ -215,10 +215,10 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $ZoneIds 可用区的ID
      * @param array $SubnetIds 子网ID
      * @param array $CdbErrors 是否锁定标记
-     * @param string $OrderBy 排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
-     * @param string $OrderDirection 排序方式，目前支持："ASC"或者"DESC"
-     * @param integer $WithSecurityGroup 是否包含安全组信息，可取值：0-不包含，1-包含
-     * @param integer $WithExCluster 是否包含独享集群信息，可取值：0-不包含，1-包含
+     * @param string $OrderBy 返回结果集排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
+     * @param string $OrderDirection 返回结果集排序方式，目前支持："ASC"或者"DESC"
+     * @param integer $WithSecurityGroup 是否包含安全组详细信息，可取值：0-不包含，1-包含
+     * @param integer $WithExCluster 是否包含独享集群详细信息，可取值：0-不包含，1-包含
      * @param string $ExClusterId 独享集群ID
      * @param array $InstanceIds 实例ID
      * @param integer $InitFlag 初始化标记，可取值：0-未初始化，1-初始化

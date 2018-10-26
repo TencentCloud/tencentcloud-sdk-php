@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShopId(integer $ShopId) 设置店铺id
  * @method array getData() 获取各区域人流数目和停留时长
  * @method void setData(array $Data) 设置各区域人流数目和停留时长
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -49,14 +49,14 @@ class DescribeZoneFlowAndStayTimeResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param string $CompanyId 集团id
      * @param integer $ShopId 店铺id
      * @param array $Data 各区域人流数目和停留时长
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

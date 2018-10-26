@@ -18,10 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method First getFirst() 获取第一备机信息
- * @method void setFirst(First $First) 设置第一备机信息
- * @method First getSecond() 获取第二备机信息
- * @method void setSecond(First $Second) 设置第二备机信息
+ * @method SlaveInstanceInfo getFirst() 获取第一备机信息
+ * @method void setFirst(SlaveInstanceInfo $First) 设置第一备机信息
+ * @method SlaveInstanceInfo getSecond() 获取第二备机信息
+ * @method void setSecond(SlaveInstanceInfo $Second) 设置第二备机信息
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class SlaveInfo extends AbstractModel
 {
     /**
-     * @var First 第一备机信息
+     * @var SlaveInstanceInfo 第一备机信息
      */
     public $First;
 
     /**
-     * @var First 第二备机信息
+     * @var SlaveInstanceInfo 第二备机信息
      */
     public $Second;
     /**
-     * @param First $First 第一备机信息
-     * @param First $Second 第二备机信息
+     * @param SlaveInstanceInfo $First 第一备机信息
+     * @param SlaveInstanceInfo $Second 第二备机信息
      */
     function __construct()
     {
@@ -55,12 +55,12 @@ class SlaveInfo extends AbstractModel
             return;
         }
         if (array_key_exists("First",$param) and $param["First"] !== null) {
-            $this->First = new First();
+            $this->First = new SlaveInstanceInfo();
             $this->First->deserialize($param["First"]);
         }
 
         if (array_key_exists("Second",$param) and $param["Second"] !== null) {
-            $this->Second = new First();
+            $this->Second = new SlaveInstanceInfo();
             $this->Second->deserialize($param["Second"]);
         }
     }

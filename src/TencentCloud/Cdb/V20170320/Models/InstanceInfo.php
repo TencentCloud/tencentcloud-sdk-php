@@ -18,74 +18,74 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getWanStatus() 获取外网状态
- * @method void setWanStatus(integer $WanStatus) 设置外网状态
+ * @method integer getWanStatus() 获取外网状态，可能的返回值为：0-未开通外网；1-已开通外网
+ * @method void setWanStatus(integer $WanStatus) 设置外网状态，可能的返回值为：0-未开通外网；1-已开通外网
  * @method string getZone() 获取可用区信息
  * @method void setZone(string $Zone) 设置可用区信息
- * @method integer getInitFlag() 获取初始化标志
- * @method void setInitFlag(integer $InitFlag) 设置初始化标志
- * @method RoVipInfo getRoVipInfo() 获取只读vip信息
- * @method void setRoVipInfo(RoVipInfo $RoVipInfo) 设置只读vip信息
- * @method integer getMemory() 获取内存容量
- * @method void setMemory(integer $Memory) 设置内存容量
- * @method integer getStatus() 获取实例状态
- * @method void setStatus(integer $Status) 设置实例状态
- * @method integer getVpcId() 获取私有网络ID
- * @method void setVpcId(integer $VpcId) 设置私有网络ID
+ * @method integer getInitFlag() 获取初始化标志，可能的返回值为：0-未初始化；1-已初始化
+ * @method void setInitFlag(integer $InitFlag) 设置初始化标志，可能的返回值为：0-未初始化；1-已初始化
+ * @method RoVipInfo getRoVipInfo() 获取只读vip信息。单独开通只读实例访问的只读实例才有该字段
+ * @method void setRoVipInfo(RoVipInfo $RoVipInfo) 设置只读vip信息。单独开通只读实例访问的只读实例才有该字段
+ * @method integer getMemory() 获取内存容量，单位为MB
+ * @method void setMemory(integer $Memory) 设置内存容量，单位为MB
+ * @method integer getStatus() 获取实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
+ * @method void setStatus(integer $Status) 设置实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
+ * @method integer getVpcId() 获取私有网络ID，例如：51102
+ * @method void setVpcId(integer $VpcId) 设置私有网络ID，例如：51102
  * @method SlaveInfo getSlaveInfo() 获取备机信息
  * @method void setSlaveInfo(SlaveInfo $SlaveInfo) 设置备机信息
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method integer getVolume() 获取硬盘容量
- * @method void setVolume(integer $Volume) 设置硬盘容量
- * @method integer getAutoRenew() 获取自动续费标志
- * @method void setAutoRenew(integer $AutoRenew) 设置自动续费标志
+ * @method integer getVolume() 获取硬盘容量，单位为GB
+ * @method void setVolume(integer $Volume) 设置硬盘容量，单位为GB
+ * @method integer getAutoRenew() 获取自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
+ * @method void setAutoRenew(integer $AutoRenew) 设置自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
  * @method integer getProtectMode() 获取数据复制方式
  * @method void setProtectMode(integer $ProtectMode) 设置数据复制方式
- * @method array getRoGroups() 获取只读组信息
- * @method void setRoGroups(array $RoGroups) 设置只读组信息
- * @method integer getSubnetId() 获取子网ID
- * @method void setSubnetId(integer $SubnetId) 设置子网ID
- * @method integer getInstanceType() 获取实例类型
- * @method void setInstanceType(integer $InstanceType) 设置实例类型
+ * @method array getRoGroups() 获取只读组详细信息
+ * @method void setRoGroups(array $RoGroups) 设置只读组详细信息
+ * @method integer getSubnetId() 获取子网ID，例如：2333
+ * @method void setSubnetId(integer $SubnetId) 设置子网ID，例如：2333
+ * @method integer getInstanceType() 获取实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
+ * @method void setInstanceType(integer $InstanceType) 设置实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method string getRegion() 获取地域信息
  * @method void setRegion(string $Region) 设置地域信息
- * @method string getDeadlineTime() 获取到期时间
- * @method void setDeadlineTime(string $DeadlineTime) 设置到期时间
+ * @method string getDeadlineTime() 获取实例到期时间
+ * @method void setDeadlineTime(string $DeadlineTime) 设置实例到期时间
  * @method integer getDeployMode() 获取可用区部署方式
  * @method void setDeployMode(integer $DeployMode) 设置可用区部署方式
  * @method integer getTaskStatus() 获取实例任务状态
  * @method void setTaskStatus(integer $TaskStatus) 设置实例任务状态
- * @method MasterInfo getMasterInfo() 获取主实例信息
- * @method void setMasterInfo(MasterInfo $MasterInfo) 设置主实例信息
- * @method string getDeviceType() 获取实例售卖机型
- * @method void setDeviceType(string $DeviceType) 设置实例售卖机型
+ * @method MasterInfo getMasterInfo() 获取主实例详细信息
+ * @method void setMasterInfo(MasterInfo $MasterInfo) 设置主实例详细信息
+ * @method string getDeviceType() 获取实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
+ * @method void setDeviceType(string $DeviceType) 设置实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
  * @method string getEngineVersion() 获取内核版本
  * @method void setEngineVersion(string $EngineVersion) 设置内核版本
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method array getDrInfo() 获取灾备实例信息
- * @method void setDrInfo(array $DrInfo) 设置灾备实例信息
+ * @method array getDrInfo() 获取灾备实例详细信息
+ * @method void setDrInfo(array $DrInfo) 设置灾备实例详细信息
  * @method string getWanDomain() 获取外网域名
  * @method void setWanDomain(string $WanDomain) 设置外网域名
  * @method integer getWanPort() 获取外网端口号
  * @method void setWanPort(integer $WanPort) 设置外网端口号
- * @method integer getPayType() 获取付费类型
- * @method void setPayType(integer $PayType) 设置付费类型
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method integer getPayType() 获取付费类型，可能的返回值：0-包年包月；1-按量计费
+ * @method void setPayType(integer $PayType) 设置付费类型，可能的返回值：0-包年包月；1-按量计费
+ * @method string getCreateTime() 获取实例创建时间
+ * @method void setCreateTime(string $CreateTime) 设置实例创建时间
  * @method string getVip() 获取实例IP
  * @method void setVip(string $Vip) 设置实例IP
  * @method integer getVport() 获取端口号
  * @method void setVport(integer $Vport) 设置端口号
- * @method integer getCdbError() 获取实例状态
- * @method void setCdbError(integer $CdbError) 设置实例状态
- * @method string getUniqVpcId() 获取私有网络描述符
- * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络描述符
- * @method string getUniqSubnetId() 获取子网描述符
- * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网描述符
+ * @method integer getCdbError() 获取是否锁定标记
+ * @method void setCdbError(integer $CdbError) 设置是否锁定标记
+ * @method string getUniqVpcId() 获取私有网络描述符，例如：“vpc-5v8wn9mg”
+ * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络描述符，例如：“vpc-5v8wn9mg”
+ * @method string getUniqSubnetId() 获取子网描述符，例如：“subnet-1typ0s7d”
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网描述符，例如：“subnet-1typ0s7d”
  */
 
 /**
@@ -94,7 +94,7 @@ use TencentCloud\Common\AbstractModel;
 class InstanceInfo extends AbstractModel
 {
     /**
-     * @var integer 外网状态
+     * @var integer 外网状态，可能的返回值为：0-未开通外网；1-已开通外网
      */
     public $WanStatus;
 
@@ -104,27 +104,27 @@ class InstanceInfo extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer 初始化标志
+     * @var integer 初始化标志，可能的返回值为：0-未初始化；1-已初始化
      */
     public $InitFlag;
 
     /**
-     * @var RoVipInfo 只读vip信息
+     * @var RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
      */
     public $RoVipInfo;
 
     /**
-     * @var integer 内存容量
+     * @var integer 内存容量，单位为MB
      */
     public $Memory;
 
     /**
-     * @var integer 实例状态
+     * @var integer 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
      */
     public $Status;
 
     /**
-     * @var integer 私有网络ID
+     * @var integer 私有网络ID，例如：51102
      */
     public $VpcId;
 
@@ -139,12 +139,12 @@ class InstanceInfo extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 硬盘容量
+     * @var integer 硬盘容量，单位为GB
      */
     public $Volume;
 
     /**
-     * @var integer 自动续费标志
+     * @var integer 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
      */
     public $AutoRenew;
 
@@ -154,17 +154,17 @@ class InstanceInfo extends AbstractModel
     public $ProtectMode;
 
     /**
-     * @var array 只读组信息
+     * @var array 只读组详细信息
      */
     public $RoGroups;
 
     /**
-     * @var integer 子网ID
+     * @var integer 子网ID，例如：2333
      */
     public $SubnetId;
 
     /**
-     * @var integer 实例类型
+     * @var integer 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
      */
     public $InstanceType;
 
@@ -179,7 +179,7 @@ class InstanceInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var string 到期时间
+     * @var string 实例到期时间
      */
     public $DeadlineTime;
 
@@ -194,12 +194,12 @@ class InstanceInfo extends AbstractModel
     public $TaskStatus;
 
     /**
-     * @var MasterInfo 主实例信息
+     * @var MasterInfo 主实例详细信息
      */
     public $MasterInfo;
 
     /**
-     * @var string 实例售卖机型
+     * @var string 实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
      */
     public $DeviceType;
 
@@ -214,7 +214,7 @@ class InstanceInfo extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var array 灾备实例信息
+     * @var array 灾备实例详细信息
      */
     public $DrInfo;
 
@@ -229,12 +229,12 @@ class InstanceInfo extends AbstractModel
     public $WanPort;
 
     /**
-     * @var integer 付费类型
+     * @var integer 付费类型，可能的返回值：0-包年包月；1-按量计费
      */
     public $PayType;
 
     /**
-     * @var string 创建时间
+     * @var string 实例创建时间
      */
     public $CreateTime;
 
@@ -249,54 +249,54 @@ class InstanceInfo extends AbstractModel
     public $Vport;
 
     /**
-     * @var integer 实例状态
+     * @var integer 是否锁定标记
      */
     public $CdbError;
 
     /**
-     * @var string 私有网络描述符
+     * @var string 私有网络描述符，例如：“vpc-5v8wn9mg”
      */
     public $UniqVpcId;
 
     /**
-     * @var string 子网描述符
+     * @var string 子网描述符，例如：“subnet-1typ0s7d”
      */
     public $UniqSubnetId;
     /**
-     * @param integer $WanStatus 外网状态
+     * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网
      * @param string $Zone 可用区信息
-     * @param integer $InitFlag 初始化标志
-     * @param RoVipInfo $RoVipInfo 只读vip信息
-     * @param integer $Memory 内存容量
-     * @param integer $Status 实例状态
-     * @param integer $VpcId 私有网络ID
+     * @param integer $InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
+     * @param RoVipInfo $RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
+     * @param integer $Memory 内存容量，单位为MB
+     * @param integer $Status 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
+     * @param integer $VpcId 私有网络ID，例如：51102
      * @param SlaveInfo $SlaveInfo 备机信息
      * @param string $InstanceId 实例ID
-     * @param integer $Volume 硬盘容量
-     * @param integer $AutoRenew 自动续费标志
+     * @param integer $Volume 硬盘容量，单位为GB
+     * @param integer $AutoRenew 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
      * @param integer $ProtectMode 数据复制方式
-     * @param array $RoGroups 只读组信息
-     * @param integer $SubnetId 子网ID
-     * @param integer $InstanceType 实例类型
+     * @param array $RoGroups 只读组详细信息
+     * @param integer $SubnetId 子网ID，例如：2333
+     * @param integer $InstanceType 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
      * @param integer $ProjectId 项目ID
      * @param string $Region 地域信息
-     * @param string $DeadlineTime 到期时间
+     * @param string $DeadlineTime 实例到期时间
      * @param integer $DeployMode 可用区部署方式
      * @param integer $TaskStatus 实例任务状态
-     * @param MasterInfo $MasterInfo 主实例信息
-     * @param string $DeviceType 实例售卖机型
+     * @param MasterInfo $MasterInfo 主实例详细信息
+     * @param string $DeviceType 实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
      * @param string $EngineVersion 内核版本
      * @param string $InstanceName 实例名称
-     * @param array $DrInfo 灾备实例信息
+     * @param array $DrInfo 灾备实例详细信息
      * @param string $WanDomain 外网域名
      * @param integer $WanPort 外网端口号
-     * @param integer $PayType 付费类型
-     * @param string $CreateTime 创建时间
+     * @param integer $PayType 付费类型，可能的返回值：0-包年包月；1-按量计费
+     * @param string $CreateTime 实例创建时间
      * @param string $Vip 实例IP
      * @param integer $Vport 端口号
-     * @param integer $CdbError 实例状态
-     * @param string $UniqVpcId 私有网络描述符
-     * @param string $UniqSubnetId 子网描述符
+     * @param integer $CdbError 是否锁定标记
+     * @param string $UniqVpcId 私有网络描述符，例如：“vpc-5v8wn9mg”
+     * @param string $UniqSubnetId 子网描述符，例如：“subnet-1typ0s7d”
      */
     function __construct()
     {

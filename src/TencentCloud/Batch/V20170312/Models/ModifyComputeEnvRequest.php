@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvId(string $EnvId) 设置计算环境ID
  * @method integer getDesiredComputeNodeCount() 获取计算节点期望个数
  * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) 设置计算节点期望个数
+ * @method string getEnvName() 获取计算环境名称
+ * @method void setEnvName(string $EnvName) 设置计算环境名称
+ * @method string getEnvDescription() 获取计算环境描述
+ * @method void setEnvDescription(string $EnvDescription) 设置计算环境描述
+ * @method ComputeEnvData getEnvData() 获取计算环境属性数据
+ * @method void setEnvData(ComputeEnvData $EnvData) 设置计算环境属性数据
  */
 
 /**
@@ -38,9 +44,27 @@ class ModifyComputeEnvRequest extends AbstractModel
      * @var integer 计算节点期望个数
      */
     public $DesiredComputeNodeCount;
+
+    /**
+     * @var string 计算环境名称
+     */
+    public $EnvName;
+
+    /**
+     * @var string 计算环境描述
+     */
+    public $EnvDescription;
+
+    /**
+     * @var ComputeEnvData 计算环境属性数据
+     */
+    public $EnvData;
     /**
      * @param string $EnvId 计算环境ID
      * @param integer $DesiredComputeNodeCount 计算节点期望个数
+     * @param string $EnvName 计算环境名称
+     * @param string $EnvDescription 计算环境描述
+     * @param ComputeEnvData $EnvData 计算环境属性数据
      */
     function __construct()
     {
@@ -60,6 +84,19 @@ class ModifyComputeEnvRequest extends AbstractModel
 
         if (array_key_exists("DesiredComputeNodeCount",$param) and $param["DesiredComputeNodeCount"] !== null) {
             $this->DesiredComputeNodeCount = $param["DesiredComputeNodeCount"];
+        }
+
+        if (array_key_exists("EnvName",$param) and $param["EnvName"] !== null) {
+            $this->EnvName = $param["EnvName"];
+        }
+
+        if (array_key_exists("EnvDescription",$param) and $param["EnvDescription"] !== null) {
+            $this->EnvDescription = $param["EnvDescription"];
+        }
+
+        if (array_key_exists("EnvData",$param) and $param["EnvData"] !== null) {
+            $this->EnvData = new ComputeEnvData();
+            $this->EnvData->deserialize($param["EnvData"]);
         }
     }
 }

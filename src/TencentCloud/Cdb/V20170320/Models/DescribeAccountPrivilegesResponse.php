@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTablePrivileges(array $TablePrivileges) 设置数据库中的表权限数组。
  * @method array getColumnPrivileges() 获取数据库表中的列权限数组。
  * @method void setColumnPrivileges(array $ColumnPrivileges) 设置数据库表中的列权限数组。
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -56,7 +56,7 @@ class DescribeAccountPrivilegesResponse extends AbstractModel
     public $ColumnPrivileges;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -64,7 +64,7 @@ class DescribeAccountPrivilegesResponse extends AbstractModel
      * @param array $DatabasePrivileges 数据库权限数组。
      * @param array $TablePrivileges 数据库中的表权限数组。
      * @param array $ColumnPrivileges 数据库表中的列权限数组。
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

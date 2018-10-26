@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneName(string $ZoneName) 设置区域名称
  * @method array getData() 获取每日人流量
  * @method void setData(array $Data) 设置每日人流量
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -63,7 +63,7 @@ class DescribeZoneFlowDailyByZoneIdResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -72,7 +72,7 @@ class DescribeZoneFlowDailyByZoneIdResponse extends AbstractModel
      * @param integer $ZoneId 区域ID
      * @param string $ZoneName 区域名称
      * @param array $Data 每日人流量
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

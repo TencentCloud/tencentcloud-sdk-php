@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置与云盘绑定的标签，云盘未绑定标签则取值为空。
  * @method boolean getDeleteWithInstance() 获取云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
  * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
+ * @method integer getDifferDaysOfDeadline() 获取当前时间距离盘到期的天数（仅对预付费盘有意义）。
+ * @method void setDifferDaysOfDeadline(integer $DifferDaysOfDeadline) 设置当前时间距离盘到期的天数（仅对预付费盘有意义）。
  */
 
 /**
@@ -199,6 +201,11 @@ class Disk extends AbstractModel
      * @var boolean 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
      */
     public $DeleteWithInstance;
+
+    /**
+     * @var integer 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+     */
+    public $DifferDaysOfDeadline;
     /**
      * @param string $DiskId 云硬盘ID。
      * @param string $DiskUsage 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
@@ -225,6 +232,7 @@ class Disk extends AbstractModel
      * @param array $AutoSnapshotPolicyIds 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
      * @param array $Tags 与云盘绑定的标签，云盘未绑定标签则取值为空。
      * @param boolean $DeleteWithInstance 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
+     * @param integer $DifferDaysOfDeadline 当前时间距离盘到期的天数（仅对预付费盘有意义）。
      */
     function __construct()
     {
@@ -342,6 +350,10 @@ class Disk extends AbstractModel
 
         if (array_key_exists("DeleteWithInstance",$param) and $param["DeleteWithInstance"] !== null) {
             $this->DeleteWithInstance = $param["DeleteWithInstance"];
+        }
+
+        if (array_key_exists("DifferDaysOfDeadline",$param) and $param["DifferDaysOfDeadline"] !== null) {
+            $this->DifferDaysOfDeadline = $param["DifferDaysOfDeadline"];
         }
     }
 }

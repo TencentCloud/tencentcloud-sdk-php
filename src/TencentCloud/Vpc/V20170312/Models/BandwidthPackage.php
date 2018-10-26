@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置带宽包状态，包括'CREATING','CREATED','DELETING','DELETED'
  * @method array getResourceSet() 获取带宽包资源信息
  * @method void setResourceSet(array $ResourceSet) 设置带宽包资源信息
+ * @method integer getBandwidth() 获取带宽包限速大小。单位：Mbps，-1表示不限速。
+ * @method void setBandwidth(integer $Bandwidth) 设置带宽包限速大小。单位：Mbps，-1表示不限速。
  */
 
 /**
@@ -73,6 +75,11 @@ class BandwidthPackage extends AbstractModel
      * @var array 带宽包资源信息
      */
     public $ResourceSet;
+
+    /**
+     * @var integer 带宽包限速大小。单位：Mbps，-1表示不限速。
+     */
+    public $Bandwidth;
     /**
      * @param string $BandwidthPackageId 带宽包唯一标识Id
      * @param string $NetworkType 带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
@@ -81,6 +88,7 @@ class BandwidthPackage extends AbstractModel
      * @param string $CreatedTime 带宽包创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      * @param string $Status 带宽包状态，包括'CREATING','CREATED','DELETING','DELETED'
      * @param array $ResourceSet 带宽包资源信息
+     * @param integer $Bandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class BandwidthPackage extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceSet, $obj);
             }
+        }
+
+        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
+            $this->Bandwidth = $param["Bandwidth"];
         }
     }
 }

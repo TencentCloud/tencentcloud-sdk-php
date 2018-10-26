@@ -18,10 +18,10 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getTaskTypeList() 获取故障类型ID与对应中文名列表
- * @method void setTaskTypeList(array $TaskTypeList) 设置故障类型ID与对应中文名列表
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method array getTaskTypeSet() 获取故障类型ID与对应中文名列表
+ * @method void setTaskTypeSet(array $TaskTypeSet) 设置故障类型ID与对应中文名列表
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -32,15 +32,15 @@ class DescribeRepairTaskConstantResponse extends AbstractModel
     /**
      * @var array 故障类型ID与对应中文名列表
      */
-    public $TaskTypeList;
+    public $TaskTypeSet;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param array $TaskTypeList 故障类型ID与对应中文名列表
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param array $TaskTypeSet 故障类型ID与对应中文名列表
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DescribeRepairTaskConstantResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskTypeList",$param) and $param["TaskTypeList"] !== null) {
-            $this->TaskTypeList = [];
-            foreach ($param["TaskTypeList"] as $key => $value){
+        if (array_key_exists("TaskTypeSet",$param) and $param["TaskTypeSet"] !== null) {
+            $this->TaskTypeSet = [];
+            foreach ($param["TaskTypeSet"] as $key => $value){
                 $obj = new TaskType();
                 $obj->deserialize($value);
-                array_push($this->TaskTypeList, $obj);
+                array_push($this->TaskTypeSet, $obj);
             }
         }
 

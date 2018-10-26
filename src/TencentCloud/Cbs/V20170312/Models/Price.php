@@ -29,7 +29,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *描述了云盘的价格
+ *描述预付费或后付费云盘的价格。
  */
 class Price extends AbstractModel
 {

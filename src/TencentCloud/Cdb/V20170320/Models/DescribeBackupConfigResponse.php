@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupMethod(string $BackupMethod) 设置备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份
  * @method integer getBinlogExpireDays() 获取Binlog过期时间，单位为天
  * @method void setBinlogExpireDays(integer $BinlogExpireDays) 设置Binlog过期时间，单位为天
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -63,7 +63,7 @@ class DescribeBackupConfigResponse extends AbstractModel
     public $BinlogExpireDays;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -72,7 +72,7 @@ class DescribeBackupConfigResponse extends AbstractModel
      * @param integer $BackupExpireDays 备份过期时间，单位为天
      * @param string $BackupMethod 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份
      * @param integer $BinlogExpireDays Binlog过期时间，单位为天
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取可用区数量
- * @method void setTotalCount(integer $TotalCount) 设置可用区数量
- * @method array getZoneSet() 获取可用区列表信息
- * @method void setZoneSet(array $ZoneSet) 设置可用区列表信息
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method integer getTotalCount() 获取可用区数量。
+ * @method void setTotalCount(integer $TotalCount) 设置可用区数量。
+ * @method array getZoneSet() 获取可用区列表信息。
+ * @method void setZoneSet(array $ZoneSet) 设置可用区列表信息。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -32,23 +32,23 @@ use TencentCloud\Common\AbstractModel;
 class DescribeZonesResponse extends AbstractModel
 {
     /**
-     * @var integer 可用区数量
+     * @var integer 可用区数量。
      */
     public $TotalCount;
 
     /**
-     * @var array 可用区列表信息
+     * @var array 可用区列表信息。
      */
     public $ZoneSet;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 可用区数量
-     * @param array $ZoneSet 可用区列表信息
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param integer $TotalCount 可用区数量。
+     * @param array $ZoneSet 可用区列表信息。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

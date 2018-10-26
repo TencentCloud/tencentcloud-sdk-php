@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthPackageName(string $BandwidthPackageName) 设置带宽包名字
  * @method integer getBandwidthPackageCount() 获取带宽包数量(非上移账户只能填1)
  * @method void setBandwidthPackageCount(integer $BandwidthPackageCount) 设置带宽包数量(非上移账户只能填1)
+ * @method integer getInternetMaxBandwidth() 获取带宽包限速大小。单位：Mbps，-1表示不限速。
+ * @method void setInternetMaxBandwidth(integer $InternetMaxBandwidth) 设置带宽包限速大小。单位：Mbps，-1表示不限速。
  */
 
 /**
@@ -52,11 +54,17 @@ class CreateBandwidthPackageRequest extends AbstractModel
      * @var integer 带宽包数量(非上移账户只能填1)
      */
     public $BandwidthPackageCount;
+
+    /**
+     * @var integer 带宽包限速大小。单位：Mbps，-1表示不限速。
+     */
+    public $InternetMaxBandwidth;
     /**
      * @param string $NetworkType 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
      * @param string $ChargeType 带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
      * @param string $BandwidthPackageName 带宽包名字
      * @param integer $BandwidthPackageCount 带宽包数量(非上移账户只能填1)
+     * @param integer $InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateBandwidthPackageRequest extends AbstractModel
 
         if (array_key_exists("BandwidthPackageCount",$param) and $param["BandwidthPackageCount"] !== null) {
             $this->BandwidthPackageCount = $param["BandwidthPackageCount"];
+        }
+
+        if (array_key_exists("InternetMaxBandwidth",$param) and $param["InternetMaxBandwidth"] !== null) {
+            $this->InternetMaxBandwidth = $param["InternetMaxBandwidth"];
         }
     }
 }

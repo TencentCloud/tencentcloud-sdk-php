@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTempId(string $TempId) 设置请求的临时id
  * @method integer getFaceId() 获取临时id对应的face id
  * @method void setFaceId(integer $FaceId) 设置临时id对应的face id
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -70,7 +70,7 @@ class DescribeFaceIdByTempIdResponse extends AbstractModel
     public $FaceId;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -80,7 +80,7 @@ class DescribeFaceIdByTempIdResponse extends AbstractModel
      * @param string $PosId pos机id
      * @param string $TempId 请求的临时id
      * @param integer $FaceId 临时id对应的face id
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

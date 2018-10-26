@@ -34,8 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrimary(boolean $Primary) 设置是否是主网卡。
  * @method string getMacAddress() 获取MAC地址。
  * @method void setMacAddress(string $MacAddress) 设置MAC地址。
- * @method string getState() 获取取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
- * @method void setState(string $State) 设置取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
+ * @method string getState() 获取弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
+ * @method void setState(string $State) 设置弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
  * @method array getPrivateIpAddressSet() 获取内网IP信息。
  * @method void setPrivateIpAddressSet(array $PrivateIpAddressSet) 设置内网IP信息。
  * @method NetworkInterfaceAttachment getAttachment() 获取绑定的云服务器对象。
@@ -92,7 +102,12 @@ class NetworkInterface extends AbstractModel
     public $MacAddress;
 
     /**
-     * @var string 取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
+     * @var string 弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
      */
     public $State;
 
@@ -124,7 +139,12 @@ class NetworkInterface extends AbstractModel
      * @param array $GroupSet 绑定的安全组。
      * @param boolean $Primary 是否是主网卡。
      * @param string $MacAddress MAC地址。
-     * @param string $State 取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
+     * @param string $State 弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
      * @param array $PrivateIpAddressSet 内网IP信息。
      * @param NetworkInterfaceAttachment $Attachment 绑定的云服务器对象。
      * @param string $Zone 可用区。

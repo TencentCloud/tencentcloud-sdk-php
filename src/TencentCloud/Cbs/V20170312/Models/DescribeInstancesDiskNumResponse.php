@@ -18,12 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getAttachedDiskCount() 获取当前云服务器已挂载弹性云盘数量。
- * @method void setAttachedDiskCount(integer $AttachedDiskCount) 设置当前云服务器已挂载弹性云盘数量。
- * @method integer getMaxAttachCount() 获取当前云服务器最大可挂载弹性云盘数量。
- * @method void setMaxAttachCount(integer $MaxAttachCount) 设置当前云服务器最大可挂载弹性云盘数量。
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method array getAttachDetail() 获取各个云服务器已挂载和可挂载弹性云盘的数量。
+ * @method void setAttachDetail(array $AttachDetail) 设置各个云服务器已挂载和可挂载弹性云盘的数量。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -32,23 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstancesDiskNumResponse extends AbstractModel
 {
     /**
-     * @var integer 当前云服务器已挂载弹性云盘数量。
+     * @var array 各个云服务器已挂载和可挂载弹性云盘的数量。
      */
-    public $AttachedDiskCount;
+    public $AttachDetail;
 
     /**
-     * @var integer 当前云服务器最大可挂载弹性云盘数量。
-     */
-    public $MaxAttachCount;
-
-    /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $AttachedDiskCount 当前云服务器已挂载弹性云盘数量。
-     * @param integer $MaxAttachCount 当前云服务器最大可挂载弹性云盘数量。
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param array $AttachDetail 各个云服务器已挂载和可挂载弹性云盘的数量。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -62,12 +54,13 @@ class DescribeInstancesDiskNumResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AttachedDiskCount",$param) and $param["AttachedDiskCount"] !== null) {
-            $this->AttachedDiskCount = $param["AttachedDiskCount"];
-        }
-
-        if (array_key_exists("MaxAttachCount",$param) and $param["MaxAttachCount"] !== null) {
-            $this->MaxAttachCount = $param["MaxAttachCount"];
+        if (array_key_exists("AttachDetail",$param) and $param["AttachDetail"] !== null) {
+            $this->AttachDetail = [];
+            foreach ($param["AttachDetail"] as $key => $value){
+                $obj = new AttachDetail();
+                $obj->deserialize($value);
+                array_push($this->AttachDetail, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentNum(integer $CurrentNum) 设置置放群组内已有的云主机数量。
  * @method string getCreateTime() 获取置放群组创建时间。
  * @method void setCreateTime(string $CreateTime) 设置置放群组创建时间。
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -70,7 +70,7 @@ class CreateDisasterRecoverGroupResponse extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -80,7 +80,7 @@ class CreateDisasterRecoverGroupResponse extends AbstractModel
      * @param integer $CvmQuotaTotal 置放群组内可容纳的云主机数量。
      * @param integer $CurrentNum 置放群组内已有的云主机数量。
      * @param string $CreateTime 置放群组创建时间。
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

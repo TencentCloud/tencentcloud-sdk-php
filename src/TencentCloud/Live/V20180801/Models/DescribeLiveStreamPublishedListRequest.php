@@ -22,14 +22,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) 设置您的域名。
  * @method string getEndTime() 获取结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
-EndTime 和 StartTime 之间的间隔不能超过 30 天。
+不超过当前时间。
  * @method void setEndTime(string $EndTime) 设置结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
-EndTime 和 StartTime 之间的间隔不能超过 30 天。
+不超过当前时间。
  * @method string getStartTime() 获取起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
+和当前时间相隔不超过7天。
  * @method void setStartTime(string $StartTime) 设置起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
+和当前时间相隔不超过7天。
  * @method string getAppName() 获取直播流所属应用名称。
  * @method void setAppName(string $AppName) 设置直播流所属应用名称。
  * @method integer getPageNum() 获取取得第几页。
@@ -61,13 +63,14 @@ class DescribeLiveStreamPublishedListRequest extends AbstractModel
     /**
      * @var string 结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
-EndTime 和 StartTime 之间的间隔不能超过 30 天。
+不超过当前时间。
      */
     public $EndTime;
 
     /**
      * @var string 起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
+和当前时间相隔不超过7天。
      */
     public $StartTime;
 
@@ -94,9 +97,10 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
      * @param string $DomainName 您的域名。
      * @param string $EndTime 结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
-EndTime 和 StartTime 之间的间隔不能超过 30 天。
+不超过当前时间。
      * @param string $StartTime 起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
+和当前时间相隔不超过7天。
      * @param string $AppName 直播流所属应用名称。
      * @param integer $PageNum 取得第几页。
 默认值：1

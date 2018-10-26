@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置查询结果总数
  * @method array getShopHourTrafficInfoSet() 获取分时客流信息
  * @method void setShopHourTrafficInfoSet(array $ShopHourTrafficInfoSet) 设置分时客流信息
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -56,7 +56,7 @@ class DescribeShopHourTrafficInfoResponse extends AbstractModel
     public $ShopHourTrafficInfoSet;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -64,7 +64,7 @@ class DescribeShopHourTrafficInfoResponse extends AbstractModel
      * @param integer $ShopId 门店ID
      * @param integer $TotalCount 查询结果总数
      * @param array $ShopHourTrafficInfoSet 分时客流信息
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

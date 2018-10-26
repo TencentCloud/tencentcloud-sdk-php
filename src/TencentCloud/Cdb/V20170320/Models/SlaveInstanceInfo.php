@@ -29,9 +29,9 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *第一备机信息
+ *备机信息
  */
-class First extends AbstractModel
+class SlaveInstanceInfo extends AbstractModel
 {
     /**
      * @var integer 端口号

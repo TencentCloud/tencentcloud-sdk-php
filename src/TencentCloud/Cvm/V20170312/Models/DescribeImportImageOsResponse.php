@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImportImageOsListSupported(ImageOsList $ImportImageOsListSupported) 设置支持的导入镜像的操作系统类型。
  * @method array getImportImageOsVersionSet() 获取支持的导入镜像的操作系统版本。
  * @method void setImportImageOsVersionSet(array $ImportImageOsVersionSet) 设置支持的导入镜像的操作系统版本。
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -42,13 +42,13 @@ class DescribeImportImageOsResponse extends AbstractModel
     public $ImportImageOsVersionSet;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param ImageOsList $ImportImageOsListSupported 支持的导入镜像的操作系统类型。
      * @param array $ImportImageOsVersionSet 支持的导入镜像的操作系统版本。
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

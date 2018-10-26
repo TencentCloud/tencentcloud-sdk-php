@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSlaveConfig(SlaveConfig $SlaveConfig) 设置从库的配置信息。
  * @method BackupConfig getBackupConfig() 获取ECDB第二个从库的配置信息，只有ECDB实例才有这个字段。
  * @method void setBackupConfig(BackupConfig $BackupConfig) 设置ECDB第二个从库的配置信息，只有ECDB实例才有这个字段。
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -63,7 +63,7 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
     public $BackupConfig;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -72,7 +72,7 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
      * @param string $Zone 主库可用区的正式名称，如ap-shanghai-1。
      * @param SlaveConfig $SlaveConfig 从库的配置信息。
      * @param BackupConfig $BackupConfig ECDB第二个从库的配置信息，只有ECDB实例才有这个字段。
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

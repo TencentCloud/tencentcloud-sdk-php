@@ -29,6 +29,8 @@ class TencentCloudSDKException extends \Exception
      */
     private $requestId;
 
+    private $errorCode;
+
 
     /**
      * TencentCloudSDKException constructor.
@@ -38,7 +40,8 @@ class TencentCloudSDKException extends \Exception
      */
     public function __construct($code = "", $message = "",  $requestId = "")
     {
-        parent::__construct($code."-".$message, 0);
+        parent::__construct($message, 0);
+        $this->errorCode = $code;
         $this->requestId = $requestId;
     }
 
@@ -52,13 +55,23 @@ class TencentCloudSDKException extends \Exception
     }
 
     /**
+     * 返回错误码
+     * @return string
+     */
+    public function getErrorCode()
+    {
+        return $this->errorCode;
+    }
+
+    /**
      * 格式化输出异常码，异常信息，请求id
      * @return string
      */
     public function __toString()
     {
-        return "[".__CLASS__."]"."message:".
-            $this->getMessage()."  requestId:".$this->requestId."\n";
+        return "[".__CLASS__."]"." code:".$this->errorCode.
+            " message:".$this->getMessage().
+            " requestId:".$this->requestId;
     }
 }
 

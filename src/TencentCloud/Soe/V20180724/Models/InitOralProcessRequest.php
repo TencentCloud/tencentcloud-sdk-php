@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getSessionId() 获取语音段唯一标识，一段语音一个SessionId
  * @method void setSessionId(string $SessionId) 设置语音段唯一标识，一段语音一个SessionId
- * @method string getRefText() 获取被评估语音对应的文本
- * @method void setRefText(string $RefText) 设置被评估语音对应的文本
+ * @method string getRefText() 获取被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
+ * @method void setRefText(string $RefText) 设置被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
  * @method integer getWorkMode() 获取语音输入模式，0流式分片，1非流式一次性评估
  * @method void setWorkMode(integer $WorkMode) 设置语音输入模式，0流式分片，1非流式一次性评估
  * @method integer getEvalMode() 获取评估模式，0:词模式, 1:句子模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
  * @method void setEvalMode(integer $EvalMode) 设置评估模式，0:词模式, 1:句子模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
  * @method float getScoreCoeff() 获取评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段
  * @method void setScoreCoeff(float $ScoreCoeff) 设置评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段
+ * @method string getSoeAppId() 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+ * @method void setSoeAppId(string $SoeAppId) 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+ * @method integer getIsLongLifeSession() 获取长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
+ * @method void setIsLongLifeSession(integer $IsLongLifeSession) 设置长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
  */
 
 /**
@@ -41,7 +45,7 @@ class InitOralProcessRequest extends AbstractModel
     public $SessionId;
 
     /**
-     * @var string 被评估语音对应的文本
+     * @var string 被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
      */
     public $RefText;
 
@@ -59,12 +63,24 @@ class InitOralProcessRequest extends AbstractModel
      * @var float 评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段
      */
     public $ScoreCoeff;
+
+    /**
+     * @var string 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+     */
+    public $SoeAppId;
+
+    /**
+     * @var integer 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
+     */
+    public $IsLongLifeSession;
     /**
      * @param string $SessionId 语音段唯一标识，一段语音一个SessionId
-     * @param string $RefText 被评估语音对应的文本
+     * @param string $RefText 被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
      * @param integer $WorkMode 语音输入模式，0流式分片，1非流式一次性评估
      * @param integer $EvalMode 评估模式，0:词模式, 1:句子模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
      * @param float $ScoreCoeff 评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段
+     * @param string $SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+     * @param integer $IsLongLifeSession 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class InitOralProcessRequest extends AbstractModel
 
         if (array_key_exists("ScoreCoeff",$param) and $param["ScoreCoeff"] !== null) {
             $this->ScoreCoeff = $param["ScoreCoeff"];
+        }
+
+        if (array_key_exists("SoeAppId",$param) and $param["SoeAppId"] !== null) {
+            $this->SoeAppId = $param["SoeAppId"];
+        }
+
+        if (array_key_exists("IsLongLifeSession",$param) and $param["IsLongLifeSession"] !== null) {
+            $this->IsLongLifeSession = $param["IsLongLifeSession"];
         }
     }
 }

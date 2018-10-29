@@ -23,7 +23,7 @@ use TencentCloud\Soe\V20180724\Models as Models;
 
 /**
 * @method Models\InitOralProcessResponse InitOralProcess(Models\InitOralProcessRequest $req) 初始化发音评估过程，每一轮评估前进行调用。语音输入模式分为流式模式和非流式模式，流式模式支持数据分片传输，可以加快评估响应速度。评估模式分为词模式和句子模式，词模式会标注每个音节的详细信息；句子模式会有完整度和流利度的评估。
-* @method Models\TransmitOralProcessResponse TransmitOralProcess(Models\TransmitOralProcessRequest $req) 传输音频数据，必须在完成发音评估初始化接口之后调用，且SessonId要与初始化接口保持一致。分片传输时，尽量保证SeqId顺序传输。当使用mp3格式时目前仅支持16k采样率16bit单声道编码方式。
+* @method Models\TransmitOralProcessResponse TransmitOralProcess(Models\TransmitOralProcessRequest $req) 传输音频数据，必须在完成发音评估初始化接口之后调用，且SessonId要与初始化接口保持一致。分片传输时，尽量保证SeqId顺序传输。音频源目前仅支持16k采样率16bit单声道编码方式，如有不一致可能导致评估不准确或失败。
  */
 
 class SoeClient extends AbstractClient

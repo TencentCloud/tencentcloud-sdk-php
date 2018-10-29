@@ -18,8 +18,10 @@ namespace TencentCloud\Soe\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getSessionId() 获取语音段唯一标识，一个完整语音一个SessionId
+ * @method void setSessionId(string $SessionId) 设置语音段唯一标识，一个完整语音一个SessionId
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -28,11 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class InitOralProcessResponse extends AbstractModel
 {
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 语音段唯一标识，一个完整语音一个SessionId
+     */
+    public $SessionId;
+
+    /**
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $SessionId 语音段唯一标识，一个完整语音一个SessionId
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,6 +54,10 @@ class InitOralProcessResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

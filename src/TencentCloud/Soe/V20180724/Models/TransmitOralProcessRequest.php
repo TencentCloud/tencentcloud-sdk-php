@@ -18,20 +18,22 @@ namespace TencentCloud\Soe\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getSeqId() 获取流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，非流式模式下无意义
- * @method void setSeqId(integer $SeqId) 设置流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，非流式模式下无意义
- * @method integer getIsEnd() 获取是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义
- * @method void setIsEnd(integer $IsEnd) 设置是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义
- * @method integer getVoiceFileType() 获取语音文件类型 	1:raw, 2:wav, 3:mp3(mp3格式目前仅支持16k采样率16bit编码单声道)
- * @method void setVoiceFileType(integer $VoiceFileType) 设置语音文件类型 	1:raw, 2:wav, 3:mp3(mp3格式目前仅支持16k采样率16bit编码单声道)
- * @method integer getVoiceEncodeType() 获取语音编码类型	1:pcm
- * @method void setVoiceEncodeType(integer $VoiceEncodeType) 设置语音编码类型	1:pcm
+ * @method integer getSeqId() 获取流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1时切为非流式模式时无意义。
+ * @method void setSeqId(integer $SeqId) 设置流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1时切为非流式模式时无意义。
+ * @method integer getIsEnd() 获取是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
+ * @method void setIsEnd(integer $IsEnd) 设置是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
+ * @method integer getVoiceFileType() 获取语音文件类型 	1:raw, 2:wav, 3:mp3(三种格式目前仅支持16k采样率16bit编码单声道，如有不一致可能导致评估不准确或失败)。
+ * @method void setVoiceFileType(integer $VoiceFileType) 设置语音文件类型 	1:raw, 2:wav, 3:mp3(三种格式目前仅支持16k采样率16bit编码单声道，如有不一致可能导致评估不准确或失败)。
+ * @method integer getVoiceEncodeType() 获取语音编码类型	1:pcm。
+ * @method void setVoiceEncodeType(integer $VoiceEncodeType) 设置语音编码类型	1:pcm。
  * @method string getUserVoiceData() 获取当前数据包数据, 流式模式下数据包大小可以按需设置，数据包大小必须 >= 4K，编码格式要求为BASE64。
  * @method void setUserVoiceData(string $UserVoiceData) 设置当前数据包数据, 流式模式下数据包大小可以按需设置，数据包大小必须 >= 4K，编码格式要求为BASE64。
- * @method string getSessionId() 获取语音段唯一标识，一个完整语音一个SessionId
- * @method void setSessionId(string $SessionId) 设置语音段唯一标识，一个完整语音一个SessionId
+ * @method string getSessionId() 获取语音段唯一标识，一个完整语音一个SessionId。
+ * @method void setSessionId(string $SessionId) 设置语音段唯一标识，一个完整语音一个SessionId。
  * @method string getSoeAppId() 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
  * @method void setSoeAppId(string $SoeAppId) 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+ * @method integer getIsLongLifeSession() 获取长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
+ * @method void setIsLongLifeSession(integer $IsLongLifeSession) 设置长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
  */
 
 /**
@@ -40,22 +42,22 @@ use TencentCloud\Common\AbstractModel;
 class TransmitOralProcessRequest extends AbstractModel
 {
     /**
-     * @var integer 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，非流式模式下无意义
+     * @var integer 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1时切为非流式模式时无意义。
      */
     public $SeqId;
 
     /**
-     * @var integer 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义
+     * @var integer 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
      */
     public $IsEnd;
 
     /**
-     * @var integer 语音文件类型 	1:raw, 2:wav, 3:mp3(mp3格式目前仅支持16k采样率16bit编码单声道)
+     * @var integer 语音文件类型 	1:raw, 2:wav, 3:mp3(三种格式目前仅支持16k采样率16bit编码单声道，如有不一致可能导致评估不准确或失败)。
      */
     public $VoiceFileType;
 
     /**
-     * @var integer 语音编码类型	1:pcm
+     * @var integer 语音编码类型	1:pcm。
      */
     public $VoiceEncodeType;
 
@@ -65,7 +67,7 @@ class TransmitOralProcessRequest extends AbstractModel
     public $UserVoiceData;
 
     /**
-     * @var string 语音段唯一标识，一个完整语音一个SessionId
+     * @var string 语音段唯一标识，一个完整语音一个SessionId。
      */
     public $SessionId;
 
@@ -73,14 +75,20 @@ class TransmitOralProcessRequest extends AbstractModel
      * @var string 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
      */
     public $SoeAppId;
+
     /**
-     * @param integer $SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，非流式模式下无意义
-     * @param integer $IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义
-     * @param integer $VoiceFileType 语音文件类型 	1:raw, 2:wav, 3:mp3(mp3格式目前仅支持16k采样率16bit编码单声道)
-     * @param integer $VoiceEncodeType 语音编码类型	1:pcm
+     * @var integer 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
+     */
+    public $IsLongLifeSession;
+    /**
+     * @param integer $SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1时切为非流式模式时无意义。
+     * @param integer $IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
+     * @param integer $VoiceFileType 语音文件类型 	1:raw, 2:wav, 3:mp3(三种格式目前仅支持16k采样率16bit编码单声道，如有不一致可能导致评估不准确或失败)。
+     * @param integer $VoiceEncodeType 语音编码类型	1:pcm。
      * @param string $UserVoiceData 当前数据包数据, 流式模式下数据包大小可以按需设置，数据包大小必须 >= 4K，编码格式要求为BASE64。
-     * @param string $SessionId 语音段唯一标识，一个完整语音一个SessionId
+     * @param string $SessionId 语音段唯一标识，一个完整语音一个SessionId。
      * @param string $SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+     * @param integer $IsLongLifeSession 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class TransmitOralProcessRequest extends AbstractModel
 
         if (array_key_exists("SoeAppId",$param) and $param["SoeAppId"] !== null) {
             $this->SoeAppId = $param["SoeAppId"];
+        }
+
+        if (array_key_exists("IsLongLifeSession",$param) and $param["IsLongLifeSession"] !== null) {
+            $this->IsLongLifeSession = $param["IsLongLifeSession"];
         }
     }
 }

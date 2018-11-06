@@ -24,7 +24,10 @@ use TencentCloud\Bm\V20180423\Models as Models;
 /**
 * @method Models\BindPsaTagResponse BindPsaTag(Models\BindPsaTagRequest $req) 为预授权规则绑定标签
 * @method Models\CreatePsaRegulationResponse CreatePsaRegulation(Models\CreatePsaRegulationRequest $req) 创建预授权规则
+* @method Models\CreateSpotDeviceResponse CreateSpotDevice(Models\CreateSpotDeviceRequest $req) 创建黑石竞价实例
+* @method Models\CreateUserCmdResponse CreateUserCmd(Models\CreateUserCmdRequest $req) 创建自定义脚本
 * @method Models\DeletePsaRegulationResponse DeletePsaRegulation(Models\DeletePsaRegulationRequest $req) 删除预授权规则
+* @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 查询物理服务器，可以按照实例，业务IP等过滤
 * @method Models\DescribePsaRegulationsResponse DescribePsaRegulations(Models\DescribePsaRegulationsRequest $req) 获取预授权规则列表
 * @method Models\DescribeRepairTaskConstantResponse DescribeRepairTaskConstant(Models\DescribeRepairTaskConstantRequest $req) 维修任务配置获取
 * @method Models\DescribeTaskInfoResponse DescribeTaskInfo(Models\DescribeTaskInfoRequest $req) 获取用户维修任务列表及详细信息<br>

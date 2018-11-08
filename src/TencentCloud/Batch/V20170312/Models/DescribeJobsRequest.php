@@ -21,7 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * @method array getJobIds() 获取作业ID
  * @method void setJobIds(array $JobIds) 设置作业ID
  * @method array getFilters() 获取过滤条件
+<li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
+<li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
+<li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
  * @method void setFilters(array $Filters) 设置过滤条件
+<li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
+<li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
+<li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
@@ -40,6 +48,10 @@ class DescribeJobsRequest extends AbstractModel
 
     /**
      * @var array 过滤条件
+<li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
+<li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
+<li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
      */
     public $Filters;
 
@@ -55,6 +67,10 @@ class DescribeJobsRequest extends AbstractModel
     /**
      * @param array $JobIds 作业ID
      * @param array $Filters 过滤条件
+<li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
+<li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
+<li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
      */

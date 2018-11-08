@@ -18,8 +18,8 @@ namespace TencentCloud\Tmt\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getText() 获取待识别的文本
- * @method void setText(string $Text) 设置待识别的文本
+ * @method string getText() 获取待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败
+ * @method void setText(string $Text) 设置待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败
  * @method integer getProjectId() 获取项目id
  * @method void setProjectId(integer $ProjectId) 设置项目id
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class LanguageDetectRequest extends AbstractModel
 {
     /**
-     * @var string 待识别的文本
+     * @var string 待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败
      */
     public $Text;
 
@@ -39,7 +39,7 @@ class LanguageDetectRequest extends AbstractModel
      */
     public $ProjectId;
     /**
-     * @param string $Text 待识别的文本
+     * @param string $Text 待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败
      * @param integer $ProjectId 项目id
      */
     function __construct()

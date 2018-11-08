@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() 获取返回数量
  * @method void setLimit(integer $Limit) 设置返回数量
  * @method Filter getFilters() 获取过滤条件
+<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
  * @method void setFilters(Filter $Filters) 设置过滤条件
+<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
  */
 
 /**
@@ -50,6 +52,7 @@ class DescribeComputeEnvActivitiesRequest extends AbstractModel
 
     /**
      * @var Filter 过滤条件
+<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
      */
     public $Filters;
     /**
@@ -57,6 +60,7 @@ class DescribeComputeEnvActivitiesRequest extends AbstractModel
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
      * @param Filter $Filters 过滤条件
+<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
      */
     function __construct()
     {

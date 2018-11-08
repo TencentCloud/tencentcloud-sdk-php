@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTaskTemplateIds() 获取任务模板ID
  * @method void setTaskTemplateIds(array $TaskTemplateIds) 设置任务模板ID
  * @method array getFilters() 获取过滤条件
+<li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
  * @method void setFilters(array $Filters) 设置过滤条件
+<li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
@@ -40,6 +42,7 @@ class DescribeTaskTemplatesRequest extends AbstractModel
 
     /**
      * @var array 过滤条件
+<li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
      */
     public $Filters;
 
@@ -55,6 +58,7 @@ class DescribeTaskTemplatesRequest extends AbstractModel
     /**
      * @param array $TaskTemplateIds 任务模板ID
      * @param array $Filters 过滤条件
+<li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
      */

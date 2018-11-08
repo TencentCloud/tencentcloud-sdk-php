@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProVersionNum(integer $ProVersionNum) 设置专业版机器数。
  * @method integer getImpactedHostNum() 获取受影响的专业版主机数。
  * @method void setImpactedHostNum(integer $ImpactedHostNum) 设置受影响的专业版主机数。
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -49,14 +49,14 @@ class DescribeVulScanResultResponse extends AbstractModel
     public $ImpactedHostNum;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param integer $VulNum 漏洞数量。
      * @param integer $ProVersionNum 专业版机器数。
      * @param integer $ImpactedHostNum 受影响的专业版主机数。
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

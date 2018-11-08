@@ -21,7 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getEnvIds() 获取计算环境ID
  * @method void setEnvIds(array $EnvIds) 设置计算环境ID
  * @method array getFilters() 获取过滤条件
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
+<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
  * @method void setFilters(array $Filters) 设置过滤条件
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
+<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
@@ -40,6 +46,9 @@ class DescribeComputeEnvsRequest extends AbstractModel
 
     /**
      * @var array 过滤条件
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
+<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
      */
     public $Filters;
 
@@ -55,6 +64,9 @@ class DescribeComputeEnvsRequest extends AbstractModel
     /**
      * @param array $EnvIds 计算环境ID
      * @param array $Filters 过滤条件
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
+<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
      */

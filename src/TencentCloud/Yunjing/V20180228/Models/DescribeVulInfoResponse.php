@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCveId(string $CveId) 设置漏洞CVE。
  * @method string getReference() 获取参考链接。
  * @method void setReference(string $Reference) 设置参考链接。
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -84,7 +84,7 @@ class DescribeVulInfoResponse extends AbstractModel
     public $Reference;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -96,7 +96,7 @@ class DescribeVulInfoResponse extends AbstractModel
      * @param string $RepairPlan 修复方案。
      * @param string $CveId 漏洞CVE。
      * @param string $Reference 参考链接。
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

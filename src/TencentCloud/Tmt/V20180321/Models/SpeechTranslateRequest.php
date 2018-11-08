@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTarget(string $Target) 设置翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
  * @method integer getAudioFormat() 获取pcm : 146   amr : 33554432   mp3 : 83886080
  * @method void setAudioFormat(integer $AudioFormat) 设置pcm : 146   amr : 33554432   mp3 : 83886080
- * @method integer getSeq() 获取语音分片后的第几片
- * @method void setSeq(integer $Seq) 设置语音分片后的第几片
- * @method integer getIsEnd() 获取是否最后一片
- * @method void setIsEnd(integer $IsEnd) 设置是否最后一片
+ * @method integer getSeq() 获取语音分片的序号，从0开始
+ * @method void setSeq(integer $Seq) 设置语音分片的序号，从0开始
+ * @method integer getIsEnd() 获取是否最后一片语音分片，0-否，1-是
+ * @method void setIsEnd(integer $IsEnd) 设置是否最后一片语音分片，0-否，1-是
  * @method string getData() 获取语音分片内容的base64字符串
  * @method void setData(string $Data) 设置语音分片内容的base64字符串
- * @method integer getProjectId() 获取项目id
- * @method void setProjectId(integer $ProjectId) 设置项目id
+ * @method integer getProjectId() 获取项目id，用户可自定义
+ * @method void setProjectId(integer $ProjectId) 设置项目id，用户可自定义
  */
 
 /**
@@ -62,12 +62,12 @@ class SpeechTranslateRequest extends AbstractModel
     public $AudioFormat;
 
     /**
-     * @var integer 语音分片后的第几片
+     * @var integer 语音分片的序号，从0开始
      */
     public $Seq;
 
     /**
-     * @var integer 是否最后一片
+     * @var integer 是否最后一片语音分片，0-否，1-是
      */
     public $IsEnd;
 
@@ -77,7 +77,7 @@ class SpeechTranslateRequest extends AbstractModel
     public $Data;
 
     /**
-     * @var integer 项目id
+     * @var integer 项目id，用户可自定义
      */
     public $ProjectId;
     /**
@@ -85,10 +85,10 @@ class SpeechTranslateRequest extends AbstractModel
      * @param string $Source 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      * @param string $Target 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      * @param integer $AudioFormat pcm : 146   amr : 33554432   mp3 : 83886080
-     * @param integer $Seq 语音分片后的第几片
-     * @param integer $IsEnd 是否最后一片
+     * @param integer $Seq 语音分片的序号，从0开始
+     * @param integer $IsEnd 是否最后一片语音分片，0-否，1-是
      * @param string $Data 语音分片内容的base64字符串
-     * @param integer $ProjectId 项目id
+     * @param integer $ProjectId 项目id，用户可自定义
      */
     function __construct()
     {

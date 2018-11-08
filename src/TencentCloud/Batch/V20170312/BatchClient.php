@@ -40,6 +40,7 @@ use TencentCloud\Batch\V20170312\Models as Models;
 * @method Models\DescribeJobSubmitInfoResponse DescribeJobSubmitInfo(Models\DescribeJobSubmitInfoRequest $req) 用于查询指定作业的提交信息，其返回内容包括 JobId 和 SubmitJob 接口中作为输入参数的作业提交信息
 * @method Models\DescribeJobsResponse DescribeJobs(Models\DescribeJobsRequest $req) 用于查询若干个作业的概览信息
 * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 用于查询指定任务的详细信息，包括任务内部的任务实例信息。
+* @method Models\DescribeTaskLogsResponse DescribeTaskLogs(Models\DescribeTaskLogsRequest $req) 用于获取任务多个实例标准输出和标准错误日志。
 * @method Models\DescribeTaskTemplatesResponse DescribeTaskTemplates(Models\DescribeTaskTemplatesRequest $req) 用于查询任务模板信息
 * @method Models\ModifyComputeEnvResponse ModifyComputeEnv(Models\ModifyComputeEnvRequest $req) 用于修改计算环境属性
 * @method Models\ModifyTaskTemplateResponse ModifyTaskTemplate(Models\ModifyTaskTemplateRequest $req) 用于修改任务模板

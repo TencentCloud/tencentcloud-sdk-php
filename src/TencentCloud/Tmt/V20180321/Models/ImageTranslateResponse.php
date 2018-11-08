@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSource(string $Source) 设置源语言
  * @method string getTarget() 获取目标语言
  * @method void setTarget(string $Target) 设置目标语言
- * @method ImageRecord getImageRecord() 获取图片翻译结果
- * @method void setImageRecord(ImageRecord $ImageRecord) 设置图片翻译结果
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method ImageRecord getImageRecord() 获取图片翻译结果，翻译结果按识别的文本每一行独立翻译，后续会推出按段落划分并翻译的版本
+ * @method void setImageRecord(ImageRecord $ImageRecord) 设置图片翻译结果，翻译结果按识别的文本每一行独立翻译，后续会推出按段落划分并翻译的版本
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -51,20 +51,20 @@ class ImageTranslateResponse extends AbstractModel
     public $Target;
 
     /**
-     * @var ImageRecord 图片翻译结果
+     * @var ImageRecord 图片翻译结果，翻译结果按识别的文本每一行独立翻译，后续会推出按段落划分并翻译的版本
      */
     public $ImageRecord;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param string $SessionUuid 请求的SessionUuid返回
      * @param string $Source 源语言
      * @param string $Target 目标语言
-     * @param ImageRecord $ImageRecord 图片翻译结果
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param ImageRecord $ImageRecord 图片翻译结果，翻译结果按识别的文本每一行独立翻译，后续会推出按段落划分并翻译的版本
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

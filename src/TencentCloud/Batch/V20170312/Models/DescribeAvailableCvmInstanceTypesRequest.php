@@ -18,8 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getFilters() 获取过滤条件
- * @method void setFilters(array $Filters) 设置过滤条件
+ * @method array getFilters() 获取过滤条件。
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
+ * @method void setFilters(array $Filters) 设置过滤条件。
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
  */
 
 /**
@@ -28,11 +32,15 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAvailableCvmInstanceTypesRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件
+     * @var array 过滤条件。
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
      */
     public $Filters;
     /**
-     * @param array $Filters 过滤条件
+     * @param array $Filters 过滤条件。
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
      */
     function __construct()
     {

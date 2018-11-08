@@ -18,20 +18,22 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getOnlineMachineNum() 获取服务器在线数
- * @method void setOnlineMachineNum(integer $OnlineMachineNum) 设置服务器在线数
- * @method integer getProVersionMachineNum() 获取专业服务器数
- * @method void setProVersionMachineNum(integer $ProVersionMachineNum) 设置专业服务器数
- * @method integer getMalwareNum() 获取木马文件数
- * @method void setMalwareNum(integer $MalwareNum) 设置木马文件数
- * @method integer getNonlocalLoginNum() 获取异地登录数
- * @method void setNonlocalLoginNum(integer $NonlocalLoginNum) 设置异地登录数
- * @method integer getBruteAttackSuccessNum() 获取暴力破解成功数
- * @method void setBruteAttackSuccessNum(integer $BruteAttackSuccessNum) 设置暴力破解成功数
- * @method integer getVulNum() 获取漏洞数
- * @method void setVulNum(integer $VulNum) 设置漏洞数
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method integer getOnlineMachineNum() 获取服务器在线数。
+ * @method void setOnlineMachineNum(integer $OnlineMachineNum) 设置服务器在线数。
+ * @method integer getProVersionMachineNum() 获取专业服务器数。
+ * @method void setProVersionMachineNum(integer $ProVersionMachineNum) 设置专业服务器数。
+ * @method integer getMalwareNum() 获取木马文件数。
+ * @method void setMalwareNum(integer $MalwareNum) 设置木马文件数。
+ * @method integer getNonlocalLoginNum() 获取异地登录数。
+ * @method void setNonlocalLoginNum(integer $NonlocalLoginNum) 设置异地登录数。
+ * @method integer getBruteAttackSuccessNum() 获取暴力破解成功数。
+ * @method void setBruteAttackSuccessNum(integer $BruteAttackSuccessNum) 设置暴力破解成功数。
+ * @method integer getVulNum() 获取漏洞数。
+ * @method void setVulNum(integer $VulNum) 设置漏洞数。
+ * @method integer getBaseLineNum() 获取安全基线数。
+ * @method void setBaseLineNum(integer $BaseLineNum) 设置安全基线数。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -40,47 +42,53 @@ use TencentCloud\Common\AbstractModel;
 class DescribeOverviewStatisticsResponse extends AbstractModel
 {
     /**
-     * @var integer 服务器在线数
+     * @var integer 服务器在线数。
      */
     public $OnlineMachineNum;
 
     /**
-     * @var integer 专业服务器数
+     * @var integer 专业服务器数。
      */
     public $ProVersionMachineNum;
 
     /**
-     * @var integer 木马文件数
+     * @var integer 木马文件数。
      */
     public $MalwareNum;
 
     /**
-     * @var integer 异地登录数
+     * @var integer 异地登录数。
      */
     public $NonlocalLoginNum;
 
     /**
-     * @var integer 暴力破解成功数
+     * @var integer 暴力破解成功数。
      */
     public $BruteAttackSuccessNum;
 
     /**
-     * @var integer 漏洞数
+     * @var integer 漏洞数。
      */
     public $VulNum;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var integer 安全基线数。
+     */
+    public $BaseLineNum;
+
+    /**
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $OnlineMachineNum 服务器在线数
-     * @param integer $ProVersionMachineNum 专业服务器数
-     * @param integer $MalwareNum 木马文件数
-     * @param integer $NonlocalLoginNum 异地登录数
-     * @param integer $BruteAttackSuccessNum 暴力破解成功数
-     * @param integer $VulNum 漏洞数
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param integer $OnlineMachineNum 服务器在线数。
+     * @param integer $ProVersionMachineNum 专业服务器数。
+     * @param integer $MalwareNum 木马文件数。
+     * @param integer $NonlocalLoginNum 异地登录数。
+     * @param integer $BruteAttackSuccessNum 暴力破解成功数。
+     * @param integer $VulNum 漏洞数。
+     * @param integer $BaseLineNum 安全基线数。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ class DescribeOverviewStatisticsResponse extends AbstractModel
 
         if (array_key_exists("VulNum",$param) and $param["VulNum"] !== null) {
             $this->VulNum = $param["VulNum"];
+        }
+
+        if (array_key_exists("BaseLineNum",$param) and $param["BaseLineNum"] !== null) {
+            $this->BaseLineNum = $param["BaseLineNum"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

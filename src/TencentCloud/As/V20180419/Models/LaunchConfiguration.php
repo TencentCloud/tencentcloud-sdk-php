@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
 <br><li>SPOTPAID：竞价付费
  * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+ * @method array getInstanceTypes() 获取实例机型列表。
+ * @method void setInstanceTypes(array $InstanceTypes) 设置实例机型列表。
  */
 
 /**
@@ -149,6 +151,11 @@ class LaunchConfiguration extends AbstractModel
      * @var InstanceMarketOptionsRequest 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
      */
     public $InstanceMarketOptions;
+
+    /**
+     * @var array 实例机型列表。
+     */
+    public $InstanceTypes;
     /**
      * @param integer $ProjectId 实例所属项目ID。
      * @param string $LaunchConfigurationId 启动配置ID。
@@ -169,6 +176,7 @@ class LaunchConfiguration extends AbstractModel
 <br><li>POSTPAID_BY_HOUR：按小时后付费
 <br><li>SPOTPAID：竞价付费
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+     * @param array $InstanceTypes 实例机型列表。
      */
     function __construct()
     {
@@ -263,6 +271,10 @@ class LaunchConfiguration extends AbstractModel
         if (array_key_exists("InstanceMarketOptions",$param) and $param["InstanceMarketOptions"] !== null) {
             $this->InstanceMarketOptions = new InstanceMarketOptionsRequest();
             $this->InstanceMarketOptions->deserialize($param["InstanceMarketOptions"]);
+        }
+
+        if (array_key_exists("InstanceTypes",$param) and $param["InstanceTypes"] !== null) {
+            $this->InstanceTypes = $param["InstanceTypes"];
         }
     }
 }

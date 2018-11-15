@@ -24,6 +24,7 @@ use TencentCloud\Youmall\V20180228\Models as Models;
 /**
 * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) 创建集团门店管理员账号
 * @method Models\CreateFacePictureResponse CreateFacePicture(Models\CreateFacePictureRequest $req) 通过上传指定规格的人脸图片，创建黑名单用户或者白名单用户。
+* @method Models\DeletePersonFeatureResponse DeletePersonFeature(Models\DeletePersonFeatureRequest $req) 删除顾客特征，仅支持删除黑名单或者白名单用户特征。
 * @method Models\DescribeCameraPersonResponse DescribeCameraPerson(Models\DescribeCameraPersonRequest $req) 通过指定设备ID和指定时段，获取该时段内中收银台摄像设备抓取到顾客头像及身份ID
 * @method Models\DescribeClusterPersonArrivedMallResponse DescribeClusterPersonArrivedMall(Models\DescribeClusterPersonArrivedMallRequest $req) 输出开始时间到结束时间段内的进出场数据。按天聚合的情况下，每天多次进出场算一次，以最初进场时间为进场时间，最后离场时间为离场时间。停留时间为多次进出场的停留时间之和。
 * @method Models\DescribeClusterPersonTraceResponse DescribeClusterPersonTrace(Models\DescribeClusterPersonTraceRequest $req) 输出开始时间到结束时间段内的进出场数据。按天聚合的情况下，每天多次进出场算一次，以最初进场时间为进场时间，最后离场时间为离场时间。
@@ -51,6 +52,7 @@ use TencentCloud\Youmall\V20180228\Models as Models;
 * @method Models\DescribeZoneTrafficInfoResponse DescribeZoneTrafficInfo(Models\DescribeZoneTrafficInfoRequest $req) 按天提供查询日期范围内，客户指定门店下的所有区域（优Mall部署时已配置区域）的累计客流人次和平均停留时间。支持的时间范围：过去365天，含当天。
 * @method Models\ModifyPersonTagInfoResponse ModifyPersonTagInfo(Models\ModifyPersonTagInfoRequest $req) 标记到店顾客的身份类型，例如黑名单、白名单等
 
+* @method Models\ModifyPersonTypeResponse ModifyPersonType(Models\ModifyPersonTypeRequest $req) 修改顾客身份类型接口
 * @method Models\RegisterCallbackResponse RegisterCallback(Models\RegisterCallbackRequest $req) 调用本接口在优Mall中注册自己集团的到店通知回调接口地址，接口协议为HTTP或HTTPS。注册后，若集团有特殊身份（例如老客）到店通知，优Mall后台将主动将到店信息push给该接口
  */
 

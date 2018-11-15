@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPicture(string $Picture) 设置图片BASE编码
  * @method string getPictureName() 获取图片名称
  * @method void setPictureName(string $PictureName) 设置图片名称
+ * @method boolean getIsForceUpload() 获取是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
+ * @method void setIsForceUpload(boolean $IsForceUpload) 设置是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
  */
 
 /**
@@ -59,12 +61,18 @@ class CreateFacePictureRequest extends AbstractModel
      * @var string 图片名称
      */
     public $PictureName;
+
+    /**
+     * @var boolean 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
+     */
+    public $IsForceUpload;
     /**
      * @param string $CompanyId 集团ID
      * @param integer $ShopId 店铺ID
      * @param integer $PersonType 人物类型（0表示普通顾客，1 白名单，2 表示黑名单）
      * @param string $Picture 图片BASE编码
      * @param string $PictureName 图片名称
+     * @param boolean $IsForceUpload 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CreateFacePictureRequest extends AbstractModel
 
         if (array_key_exists("PictureName",$param) and $param["PictureName"] !== null) {
             $this->PictureName = $param["PictureName"];
+        }
+
+        if (array_key_exists("IsForceUpload",$param) and $param["IsForceUpload"] !== null) {
+            $this->IsForceUpload = $param["IsForceUpload"];
         }
     }
 }

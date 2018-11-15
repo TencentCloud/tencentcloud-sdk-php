@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPC标识
  * @method array getZoneSet() 获取可用区列表
  * @method void setZoneSet(array $ZoneSet) 设置可用区列表
+ * @method string getRetryPolicy() 获取重试策略
+ * @method void setRetryPolicy(string $RetryPolicy) 设置重试策略
  */
 
 /**
@@ -164,6 +166,11 @@ class AutoScalingGroup extends AbstractModel
      * @var array 可用区列表
      */
     public $ZoneSet;
+
+    /**
+     * @var string 重试策略
+     */
+    public $RetryPolicy;
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $AutoScalingGroupName 伸缩组名称
@@ -185,6 +192,7 @@ class AutoScalingGroup extends AbstractModel
      * @param array $TerminationPolicySet 销毁策略
      * @param string $VpcId VPC标识
      * @param array $ZoneSet 可用区列表
+     * @param string $RetryPolicy 重试策略
      */
     function __construct()
     {
@@ -281,6 +289,10 @@ class AutoScalingGroup extends AbstractModel
 
         if (array_key_exists("ZoneSet",$param) and $param["ZoneSet"] !== null) {
             $this->ZoneSet = $param["ZoneSet"];
+        }
+
+        if (array_key_exists("RetryPolicy",$param) and $param["RetryPolicy"] !== null) {
+            $this->RetryPolicy = $param["RetryPolicy"];
         }
     }
 }

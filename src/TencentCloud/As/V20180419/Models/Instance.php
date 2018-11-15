@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreationType(string $CreationType) 设置创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
  * @method string getAddTime() 获取实例加入时间
  * @method void setAddTime(string $AddTime) 设置实例加入时间
+ * @method string getInstanceType() 获取实例类型
+ * @method void setInstanceType(string $InstanceType) 设置实例类型
  */
 
 /**
@@ -94,6 +96,11 @@ class Instance extends AbstractModel
      * @var string 实例加入时间
      */
     public $AddTime;
+
+    /**
+     * @var string 实例类型
+     */
+    public $InstanceType;
     /**
      * @param string $InstanceId 实例ID
      * @param string $AutoScalingGroupId 伸缩组ID
@@ -105,6 +112,7 @@ class Instance extends AbstractModel
      * @param string $Zone 可用区
      * @param string $CreationType 创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
      * @param string $AddTime 实例加入时间
+     * @param string $InstanceType 实例类型
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
             $this->AddTime = $param["AddTime"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

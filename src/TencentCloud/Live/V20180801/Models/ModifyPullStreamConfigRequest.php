@@ -30,8 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIspId(integer $IspId) 设置运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
  * @method string getStartTime() 获取开始时间。
  * @method void setStartTime(string $StartTime) 设置开始时间。
- * @method string getEndTime() 获取结束时间。
- * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method string getEndTime() 获取结束时间，注意：
+1. 结束时间必须大于开始时间；
+2. 结束时间和开始时间必须大于当前时间；
+3. 结束时间 和 开始时间 间隔必须小于七天。
+ * @method void setEndTime(string $EndTime) 设置结束时间，注意：
+1. 结束时间必须大于开始时间；
+2. 结束时间和开始时间必须大于当前时间；
+3. 结束时间 和 开始时间 间隔必须小于七天。
  */
 
 /**
@@ -70,7 +76,10 @@ class ModifyPullStreamConfigRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 结束时间。
+     * @var string 结束时间，注意：
+1. 结束时间必须大于开始时间；
+2. 结束时间和开始时间必须大于当前时间；
+3. 结束时间 和 开始时间 间隔必须小于七天。
      */
     public $EndTime;
     /**
@@ -80,7 +89,10 @@ class ModifyPullStreamConfigRequest extends AbstractModel
      * @param integer $AreaId 区域id,1-深圳,2-上海，3-天津,4-香港。如有改动，需同时传入IspId。
      * @param integer $IspId 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
      * @param string $StartTime 开始时间。
-     * @param string $EndTime 结束时间。
+     * @param string $EndTime 结束时间，注意：
+1. 结束时间必须大于开始时间；
+2. 结束时间和开始时间必须大于当前时间；
+3. 结束时间 和 开始时间 间隔必须小于七天。
      */
     function __construct()
     {

@@ -22,16 +22,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method string getAppName() 获取直播流所属应用名称。
  * @method void setAppName(string $AppName) 设置直播流所属应用名称。
- * @method string getDomainName() 获取您的加速域名。
- * @method void setDomainName(string $DomainName) 设置您的加速域名。
- * @method string getStartTime() 获取任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
- * @method void setStartTime(string $StartTime) 设置任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
- * @method string getEndTime() 获取结束时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
- * @method void setEndTime(string $EndTime) 设置结束时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
- * @method string getRecordType() 获取录制类型。其值为“video”,“audio”，不区分大小写，默认为“video”。
- * @method void setRecordType(string $RecordType) 设置录制类型。其值为“video”,“audio”，不区分大小写，默认为“video”。
- * @method string getFileFormat() 获取录制文件格式。其值为“flv”,“hls”,”mp4”,“aac”,”mp3”，不区分大小写，默认为“flv”。
- * @method void setFileFormat(string $FileFormat) 设置录制文件格式。其值为“flv”,“hls”,”mp4”,“aac”,”mp3”，不区分大小写，默认为“flv”。
+ * @method string getDomainName() 获取推流域名。多域名推流必须设置。
+ * @method void setDomainName(string $DomainName) 设置推流域名。多域名推流必须设置。
+ * @method string getStartTime() 获取任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01。
+ * @method void setStartTime(string $StartTime) 设置任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01。
+ * @method string getEndTime() 获取任务结束时间。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
+ * @method void setEndTime(string $EndTime) 设置任务结束时间。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
+ * @method string getRecordType() 获取录制类型。不区分大小写。
+“video” : 音视频录制【默认】。
+“audio” : 纯音频录制。
+ * @method void setRecordType(string $RecordType) 设置录制类型。不区分大小写。
+“video” : 音视频录制【默认】。
+“audio” : 纯音频录制。
+ * @method string getFileFormat() 获取录制文件格式。不区分大小写。其值为：
+“flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
+ * @method void setFileFormat(string $FileFormat) 设置录制文件格式。不区分大小写。其值为：
+“flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
  * @method integer getHighlight() 获取精彩视频标志。0：普通视频【默认】；1：精彩视频。
  * @method void setHighlight(integer $Highlight) 设置精彩视频标志。0：普通视频【默认】；1：精彩视频。
  * @method integer getMixStream() 获取A+B=C混流标志。0：非A+B=C混流录制【默认】；1：标示为A+B=C混流录制。
@@ -64,27 +70,30 @@ class CreateLiveRecordRequest extends AbstractModel
     public $AppName;
 
     /**
-     * @var string 您的加速域名。
+     * @var string 推流域名。多域名推流必须设置。
      */
     public $DomainName;
 
     /**
-     * @var string 任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
+     * @var string 任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
+     * @var string 任务结束时间。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
      */
     public $EndTime;
 
     /**
-     * @var string 录制类型。其值为“video”,“audio”，不区分大小写，默认为“video”。
+     * @var string 录制类型。不区分大小写。
+“video” : 音视频录制【默认】。
+“audio” : 纯音频录制。
      */
     public $RecordType;
 
     /**
-     * @var string 录制文件格式。其值为“flv”,“hls”,”mp4”,“aac”,”mp3”，不区分大小写，默认为“flv”。
+     * @var string 录制文件格式。不区分大小写。其值为：
+“flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
      */
     public $FileFormat;
 
@@ -109,11 +118,14 @@ eg. interval=3600&storage_time=7200
     /**
      * @param string $StreamName 流名称。
      * @param string $AppName 直播流所属应用名称。
-     * @param string $DomainName 您的加速域名。
-     * @param string $StartTime 任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
-     * @param string $EndTime 结束时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
-     * @param string $RecordType 录制类型。其值为“video”,“audio”，不区分大小写，默认为“video”。
-     * @param string $FileFormat 录制文件格式。其值为“flv”,“hls”,”mp4”,“aac”,”mp3”，不区分大小写，默认为“flv”。
+     * @param string $DomainName 推流域名。多域名推流必须设置。
+     * @param string $StartTime 任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01。
+     * @param string $EndTime 任务结束时间。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
+     * @param string $RecordType 录制类型。不区分大小写。
+“video” : 音视频录制【默认】。
+“audio” : 纯音频录制。
+     * @param string $FileFormat 录制文件格式。不区分大小写。其值为：
+“flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
      * @param integer $Highlight 精彩视频标志。0：普通视频【默认】；1：精彩视频。
      * @param integer $MixStream A+B=C混流标志。0：非A+B=C混流录制【默认】；1：标示为A+B=C混流录制。
      * @param string $StreamParam 录制流参数，当前支持以下参数： 

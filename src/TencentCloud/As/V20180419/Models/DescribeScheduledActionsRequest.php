@@ -21,13 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getScheduledActionIds() 获取按照一个或者多个定时任务ID查询。实例ID形如：asst-am691zxo。每次请求的实例的上限为100。参数不支持同时指定ScheduledActionIds和Filters。
  * @method void setScheduledActionIds(array $ScheduledActionIds) 设置按照一个或者多个定时任务ID查询。实例ID形如：asst-am691zxo。每次请求的实例的上限为100。参数不支持同时指定ScheduledActionIds和Filters。
  * @method array getFilters() 获取过滤条件。
-* scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。
-* scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。
-* auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。
+<li> scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。</li>
+<li> scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。</li>
+<li> auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
-* scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。
-* scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。
-* auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。
+<li> scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。</li>
+<li> scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。</li>
+<li> auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。</li>
  * @method integer getOffset() 获取偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
@@ -46,9 +46,9 @@ class DescribeScheduledActionsRequest extends AbstractModel
 
     /**
      * @var array 过滤条件。
-* scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。
-* scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。
-* auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。
+<li> scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。</li>
+<li> scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。</li>
+<li> auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。</li>
      */
     public $Filters;
 
@@ -64,9 +64,9 @@ class DescribeScheduledActionsRequest extends AbstractModel
     /**
      * @param array $ScheduledActionIds 按照一个或者多个定时任务ID查询。实例ID形如：asst-am691zxo。每次请求的实例的上限为100。参数不支持同时指定ScheduledActionIds和Filters。
      * @param array $Filters 过滤条件。
-* scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。
-* scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。
-* auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。
+<li> scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。</li>
+<li> scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。</li>
+<li> auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。</li>
      * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param integer $Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */

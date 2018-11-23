@@ -18,36 +18,46 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCcnId() 获取云联网实例ID
- * @method void setCcnId(string $CcnId) 设置云联网实例ID
- * @method string getInstanceType() 获取关联实例类型，可选值：VPC、DIRECTCONNECT
- * @method void setInstanceType(string $InstanceType) 设置关联实例类型，可选值：VPC、DIRECTCONNECT
- * @method string getInstanceId() 获取关联实例ID
- * @method void setInstanceId(string $InstanceId) 设置关联实例ID
- * @method string getInstanceName() 获取关联实例名称
- * @method void setInstanceName(string $InstanceName) 设置关联实例名称
- * @method string getInstanceRegion() 获取关联实例所属大区，例如：ap-guangzhou
- * @method void setInstanceRegion(string $InstanceRegion) 设置关联实例所属大区，例如：ap-guangzhou
- * @method string getInstanceUin() 获取关联实例所属UIN（根账号）
- * @method void setInstanceUin(string $InstanceUin) 设置关联实例所属UIN（根账号）
- * @method array getCidrBlock() 获取关联实例CIDR
- * @method void setCidrBlock(array $CidrBlock) 设置关联实例CIDR
+ * @method string getCcnId() 获取云联网实例ID。
+ * @method void setCcnId(string $CcnId) 设置云联网实例ID。
+ * @method string getInstanceType() 获取关联实例类型：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
+ * @method void setInstanceType(string $InstanceType) 设置关联实例类型：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
+ * @method string getInstanceId() 获取关联实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置关联实例ID。
+ * @method string getInstanceName() 获取关联实例名称。
+ * @method void setInstanceName(string $InstanceName) 设置关联实例名称。
+ * @method string getInstanceRegion() 获取关联实例所属大区，例如：ap-guangzhou。
+ * @method void setInstanceRegion(string $InstanceRegion) 设置关联实例所属大区，例如：ap-guangzhou。
+ * @method string getInstanceUin() 获取关联实例所属UIN（根账号）。
+ * @method void setInstanceUin(string $InstanceUin) 设置关联实例所属UIN（根账号）。
+ * @method array getCidrBlock() 获取关联实例CIDR。
+ * @method void setCidrBlock(array $CidrBlock) 设置关联实例CIDR。
  * @method string getState() 获取关联实例状态：
-PENDING：申请中
-ACTIVE：已连接
-EXPIRED：已过期
-REJECTED：已拒绝
-DELETED：已删除
+<li>`PENDING`：申请中</li>
+<li>`ACTIVE`：已连接</li>
+<li>`EXPIRED`：已过期</li>
+<li>`REJECTED`：已拒绝</li>
+<li>`DELETED`：已删除</li>
+<li>`ATTACHING`：关联中</li>
+<li>`DETACHING`：解关联中</li>
  * @method void setState(string $State) 设置关联实例状态：
-PENDING：申请中
-ACTIVE：已连接
-EXPIRED：已过期
-REJECTED：已拒绝
-DELETED：已删除
- * @method string getAttachedTime() 获取关联时间
- * @method void setAttachedTime(string $AttachedTime) 设置关联时间
- * @method string getCcnUin() 获取云联网所属UIN（根账号）
- * @method void setCcnUin(string $CcnUin) 设置云联网所属UIN（根账号）
+<li>`PENDING`：申请中</li>
+<li>`ACTIVE`：已连接</li>
+<li>`EXPIRED`：已过期</li>
+<li>`REJECTED`：已拒绝</li>
+<li>`DELETED`：已删除</li>
+<li>`ATTACHING`：关联中</li>
+<li>`DETACHING`：解关联中</li>
+ * @method string getAttachedTime() 获取关联时间。
+ * @method void setAttachedTime(string $AttachedTime) 设置关联时间。
+ * @method string getCcnUin() 获取云联网所属UIN（根账号）。
+ * @method void setCcnUin(string $CcnUin) 设置云联网所属UIN（根账号）。
  */
 
 /**
@@ -56,75 +66,85 @@ DELETED：已删除
 class CcnAttachedInstance extends AbstractModel
 {
     /**
-     * @var string 云联网实例ID
+     * @var string 云联网实例ID。
      */
     public $CcnId;
 
     /**
-     * @var string 关联实例类型，可选值：VPC、DIRECTCONNECT
+     * @var string 关联实例类型：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
      */
     public $InstanceType;
 
     /**
-     * @var string 关联实例ID
+     * @var string 关联实例ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 关联实例名称
+     * @var string 关联实例名称。
      */
     public $InstanceName;
 
     /**
-     * @var string 关联实例所属大区，例如：ap-guangzhou
+     * @var string 关联实例所属大区，例如：ap-guangzhou。
      */
     public $InstanceRegion;
 
     /**
-     * @var string 关联实例所属UIN（根账号）
+     * @var string 关联实例所属UIN（根账号）。
      */
     public $InstanceUin;
 
     /**
-     * @var array 关联实例CIDR
+     * @var array 关联实例CIDR。
      */
     public $CidrBlock;
 
     /**
      * @var string 关联实例状态：
-PENDING：申请中
-ACTIVE：已连接
-EXPIRED：已过期
-REJECTED：已拒绝
-DELETED：已删除
+<li>`PENDING`：申请中</li>
+<li>`ACTIVE`：已连接</li>
+<li>`EXPIRED`：已过期</li>
+<li>`REJECTED`：已拒绝</li>
+<li>`DELETED`：已删除</li>
+<li>`ATTACHING`：关联中</li>
+<li>`DETACHING`：解关联中</li>
      */
     public $State;
 
     /**
-     * @var string 关联时间
+     * @var string 关联时间。
      */
     public $AttachedTime;
 
     /**
-     * @var string 云联网所属UIN（根账号）
+     * @var string 云联网所属UIN（根账号）。
      */
     public $CcnUin;
     /**
-     * @param string $CcnId 云联网实例ID
-     * @param string $InstanceType 关联实例类型，可选值：VPC、DIRECTCONNECT
-     * @param string $InstanceId 关联实例ID
-     * @param string $InstanceName 关联实例名称
-     * @param string $InstanceRegion 关联实例所属大区，例如：ap-guangzhou
-     * @param string $InstanceUin 关联实例所属UIN（根账号）
-     * @param array $CidrBlock 关联实例CIDR
+     * @param string $CcnId 云联网实例ID。
+     * @param string $InstanceType 关联实例类型：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
+     * @param string $InstanceId 关联实例ID。
+     * @param string $InstanceName 关联实例名称。
+     * @param string $InstanceRegion 关联实例所属大区，例如：ap-guangzhou。
+     * @param string $InstanceUin 关联实例所属UIN（根账号）。
+     * @param array $CidrBlock 关联实例CIDR。
      * @param string $State 关联实例状态：
-PENDING：申请中
-ACTIVE：已连接
-EXPIRED：已过期
-REJECTED：已拒绝
-DELETED：已删除
-     * @param string $AttachedTime 关联时间
-     * @param string $CcnUin 云联网所属UIN（根账号）
+<li>`PENDING`：申请中</li>
+<li>`ACTIVE`：已连接</li>
+<li>`EXPIRED`：已过期</li>
+<li>`REJECTED`：已拒绝</li>
+<li>`DELETED`：已删除</li>
+<li>`ATTACHING`：关联中</li>
+<li>`DETACHING`：解关联中</li>
+     * @param string $AttachedTime 关联时间。
+     * @param string $CcnUin 云联网所属UIN（根账号）。
      */
     function __construct()
     {

@@ -22,16 +22,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompanyId(string $CompanyId) 设置公司ID
  * @method integer getShopId() 获取门店ID
  * @method void setShopId(integer $ShopId) 设置门店ID
- * @method string getStartDate() 获取开始日期，格式yyyy-MM-dd
- * @method void setStartDate(string $StartDate) 设置开始日期，格式yyyy-MM-dd
- * @method string getEndDate() 获取结束日期，格式yyyy-MM-dd
- * @method void setEndDate(string $EndDate) 设置结束日期，格式yyyy-MM-dd
  * @method integer getOffset() 获取偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
  * @method void setOffset(integer $Offset) 设置偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
  * @method integer getLimit() 获取Limit:每页的数据项，最大100，超过100会被强制指定为100
  * @method void setLimit(integer $Limit) 设置Limit:每页的数据项，最大100，超过100会被强制指定为100
+ * @method string getStartDate() 获取开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime
+ * @method void setStartDate(string $StartDate) 设置开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime
+ * @method string getEndDate() 获取结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime
+ * @method void setEndDate(string $EndDate) 设置结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime
  * @method integer getPictureExpires() 获取图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
  * @method void setPictureExpires(integer $PictureExpires) 设置图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+ * @method string getStartDateTime() 获取开始时间，格式yyyy-MM-dd HH:mm:ss
+ * @method void setStartDateTime(string $StartDateTime) 设置开始时间，格式yyyy-MM-dd HH:mm:ss
+ * @method string getEndDateTime() 获取结束时间，格式yyyy-MM-dd HH:mm:ss
+ * @method void setEndDateTime(string $EndDateTime) 设置结束时间，格式yyyy-MM-dd HH:mm:ss
  */
 
 /**
@@ -50,16 +54,6 @@ class DescribePersonVisitInfoRequest extends AbstractModel
     public $ShopId;
 
     /**
-     * @var string 开始日期，格式yyyy-MM-dd
-     */
-    public $StartDate;
-
-    /**
-     * @var string 结束日期，格式yyyy-MM-dd
-     */
-    public $EndDate;
-
-    /**
      * @var integer 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      */
     public $Offset;
@@ -70,17 +64,39 @@ class DescribePersonVisitInfoRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime
+     */
+    public $StartDate;
+
+    /**
+     * @var string 结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime
+     */
+    public $EndDate;
+
+    /**
      * @var integer 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      */
     public $PictureExpires;
+
+    /**
+     * @var string 开始时间，格式yyyy-MM-dd HH:mm:ss
+     */
+    public $StartDateTime;
+
+    /**
+     * @var string 结束时间，格式yyyy-MM-dd HH:mm:ss
+     */
+    public $EndDateTime;
     /**
      * @param string $CompanyId 公司ID
      * @param integer $ShopId 门店ID
-     * @param string $StartDate 开始日期，格式yyyy-MM-dd
-     * @param string $EndDate 结束日期，格式yyyy-MM-dd
      * @param integer $Offset 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      * @param integer $Limit Limit:每页的数据项，最大100，超过100会被强制指定为100
+     * @param string $StartDate 开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime
+     * @param string $EndDate 结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime
      * @param integer $PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+     * @param string $StartDateTime 开始时间，格式yyyy-MM-dd HH:mm:ss
+     * @param string $EndDateTime 结束时间，格式yyyy-MM-dd HH:mm:ss
      */
     function __construct()
     {
@@ -102,14 +118,6 @@ class DescribePersonVisitInfoRequest extends AbstractModel
             $this->ShopId = $param["ShopId"];
         }
 
-        if (array_key_exists("StartDate",$param) and $param["StartDate"] !== null) {
-            $this->StartDate = $param["StartDate"];
-        }
-
-        if (array_key_exists("EndDate",$param) and $param["EndDate"] !== null) {
-            $this->EndDate = $param["EndDate"];
-        }
-
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
         }
@@ -118,8 +126,24 @@ class DescribePersonVisitInfoRequest extends AbstractModel
             $this->Limit = $param["Limit"];
         }
 
+        if (array_key_exists("StartDate",$param) and $param["StartDate"] !== null) {
+            $this->StartDate = $param["StartDate"];
+        }
+
+        if (array_key_exists("EndDate",$param) and $param["EndDate"] !== null) {
+            $this->EndDate = $param["EndDate"];
+        }
+
         if (array_key_exists("PictureExpires",$param) and $param["PictureExpires"] !== null) {
             $this->PictureExpires = $param["PictureExpires"];
+        }
+
+        if (array_key_exists("StartDateTime",$param) and $param["StartDateTime"] !== null) {
+            $this->StartDateTime = $param["StartDateTime"];
+        }
+
+        if (array_key_exists("EndDateTime",$param) and $param["EndDateTime"] !== null) {
+            $this->EndDateTime = $param["EndDateTime"];
         }
     }
 }

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceTemplate(ServiceTemplateSpecification $ServiceTemplate) 设置协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
  * @method string getCidrBlock() 获取网段或IP(互斥)。
  * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)。
- * @method string getSecurityGroupId() 获取已绑定安全组的网段或IP。
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置已绑定安全组的网段或IP。
+ * @method string getSecurityGroupId() 获取安全组实例ID，例如：sg-ohuuioma。
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如：sg-ohuuioma。
  * @method AddressTemplateSpecification getAddressTemplate() 获取IP地址ID或者ID地址组ID。
  * @method void setAddressTemplate(AddressTemplateSpecification $AddressTemplate) 设置IP地址ID或者ID地址组ID。
  * @method string getAction() 获取ACCEPT 或 DROP。
@@ -69,7 +69,7 @@ class SecurityGroupPolicy extends AbstractModel
     public $CidrBlock;
 
     /**
-     * @var string 已绑定安全组的网段或IP。
+     * @var string 安全组实例ID，例如：sg-ohuuioma。
      */
     public $SecurityGroupId;
 
@@ -93,7 +93,7 @@ class SecurityGroupPolicy extends AbstractModel
      * @param string $Port 端口(all, 离散port,  range)。
      * @param ServiceTemplateSpecification $ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
      * @param string $CidrBlock 网段或IP(互斥)。
-     * @param string $SecurityGroupId 已绑定安全组的网段或IP。
+     * @param string $SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
      * @param AddressTemplateSpecification $AddressTemplate IP地址ID或者ID地址组ID。
      * @param string $Action ACCEPT 或 DROP。
      * @param string $PolicyDescription 安全组规则描述。

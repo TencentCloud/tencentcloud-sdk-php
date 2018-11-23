@@ -18,8 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getWanStatus() 获取外网状态，可能的返回值为：0-未开通外网；1-已开通外网
- * @method void setWanStatus(integer $WanStatus) 设置外网状态，可能的返回值为：0-未开通外网；1-已开通外网
+ * @method integer getWanStatus() 获取外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
+ * @method void setWanStatus(integer $WanStatus) 设置外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
  * @method string getZone() 获取可用区信息
  * @method void setZone(string $Zone) 设置可用区信息
  * @method integer getInitFlag() 获取初始化标志，可能的返回值为：0-未初始化；1-已初始化
@@ -86,6 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络描述符，例如：“vpc-5v8wn9mg”
  * @method string getUniqSubnetId() 获取子网描述符，例如：“subnet-1typ0s7d”
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网描述符，例如：“subnet-1typ0s7d”
+ * @method string getPhysicalId() 获取物理ID
+ * @method void setPhysicalId(string $PhysicalId) 设置物理ID
  */
 
 /**
@@ -94,7 +96,7 @@ use TencentCloud\Common\AbstractModel;
 class InstanceInfo extends AbstractModel
 {
     /**
-     * @var integer 外网状态，可能的返回值为：0-未开通外网；1-已开通外网
+     * @var integer 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
     public $WanStatus;
 
@@ -262,8 +264,13 @@ class InstanceInfo extends AbstractModel
      * @var string 子网描述符，例如：“subnet-1typ0s7d”
      */
     public $UniqSubnetId;
+
     /**
-     * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网
+     * @var string 物理ID
+     */
+    public $PhysicalId;
+    /**
+     * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @param string $Zone 可用区信息
      * @param integer $InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
      * @param RoVipInfo $RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
@@ -297,6 +304,7 @@ class InstanceInfo extends AbstractModel
      * @param integer $CdbError 是否锁定标记
      * @param string $UniqVpcId 私有网络描述符，例如：“vpc-5v8wn9mg”
      * @param string $UniqSubnetId 子网描述符，例如：“subnet-1typ0s7d”
+     * @param string $PhysicalId 物理ID
      */
     function __construct()
     {
@@ -457,6 +465,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
             $this->UniqSubnetId = $param["UniqSubnetId"];
+        }
+
+        if (array_key_exists("PhysicalId",$param) and $param["PhysicalId"] !== null) {
+            $this->PhysicalId = $param["PhysicalId"];
         }
     }
 }

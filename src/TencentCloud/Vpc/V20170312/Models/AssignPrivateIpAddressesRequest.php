@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-m6dyj72l。
- * @method array getPrivateIpAddresses() 获取指定的内网IP信息。
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息。
- * @method integer getSecondaryPrivateIpAddressCount() 获取新申请的内网IP地址个数。
- * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) 设置新申请的内网IP地址个数。
+ * @method array getPrivateIpAddresses() 获取指定的内网IP信息，单次最多指定10个。
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息，单次最多指定10个。
+ * @method integer getSecondaryPrivateIpAddressCount() 获取新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+ * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) 设置新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
  */
 
 /**
@@ -37,18 +37,18 @@ class AssignPrivateIpAddressesRequest extends AbstractModel
     public $NetworkInterfaceId;
 
     /**
-     * @var array 指定的内网IP信息。
+     * @var array 指定的内网IP信息，单次最多指定10个。
      */
     public $PrivateIpAddresses;
 
     /**
-     * @var integer 新申请的内网IP地址个数。
+     * @var integer 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
      */
     public $SecondaryPrivateIpAddressCount;
     /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
-     * @param array $PrivateIpAddresses 指定的内网IP信息。
-     * @param integer $SecondaryPrivateIpAddressCount 新申请的内网IP地址个数。
+     * @param array $PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
+     * @param integer $SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
      */
     function __construct()
     {

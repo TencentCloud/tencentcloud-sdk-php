@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcs(array $Procs) 设置存储过程列表。
  * @method array getFuncs() 获取函数列表。
  * @method void setFuncs(array $Funcs) 设置函数列表。
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -70,7 +70,7 @@ class DescribeDatabaseObjectsResponse extends AbstractModel
     public $Funcs;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -80,7 +80,7 @@ class DescribeDatabaseObjectsResponse extends AbstractModel
      * @param array $Views 视图列表。
      * @param array $Procs 存储过程列表。
      * @param array $Funcs 函数列表。
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

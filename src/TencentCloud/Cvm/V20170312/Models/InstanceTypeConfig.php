@@ -30,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCPU(integer $CPU) 设置CPU核数，单位：核。
  * @method integer getMemory() 获取内存容量，单位：`GB`。
  * @method void setMemory(integer $Memory) 设置内存容量，单位：`GB`。
- * @method string getCbsSupport() 获取是否支持云硬盘。取值范围：<br><li>`TRUE`：表示支持云硬盘；<br><li>`FALSE`：表示不支持云硬盘。
- * @method void setCbsSupport(string $CbsSupport) 设置是否支持云硬盘。取值范围：<br><li>`TRUE`：表示支持云硬盘；<br><li>`FALSE`：表示不支持云硬盘。
- * @method string getInstanceTypeState() 获取机型状态。取值范围：<br><li>`AVAILABLE`：表示机型可用；<br><li>`UNAVAILABLE`：表示机型不可用。
- * @method void setInstanceTypeState(string $InstanceTypeState) 设置机型状态。取值范围：<br><li>`AVAILABLE`：表示机型可用；<br><li>`UNAVAILABLE`：表示机型不可用。
  */
 
 /**
@@ -70,16 +66,6 @@ class InstanceTypeConfig extends AbstractModel
      * @var integer 内存容量，单位：`GB`。
      */
     public $Memory;
-
-    /**
-     * @var string 是否支持云硬盘。取值范围：<br><li>`TRUE`：表示支持云硬盘；<br><li>`FALSE`：表示不支持云硬盘。
-     */
-    public $CbsSupport;
-
-    /**
-     * @var string 机型状态。取值范围：<br><li>`AVAILABLE`：表示机型可用；<br><li>`UNAVAILABLE`：表示机型不可用。
-     */
-    public $InstanceTypeState;
     /**
      * @param string $Zone 可用区。
      * @param string $InstanceType 实例机型。
@@ -87,8 +73,6 @@ class InstanceTypeConfig extends AbstractModel
      * @param integer $GPU GPU核数，单位：核。
      * @param integer $CPU CPU核数，单位：核。
      * @param integer $Memory 内存容量，单位：`GB`。
-     * @param string $CbsSupport 是否支持云硬盘。取值范围：<br><li>`TRUE`：表示支持云硬盘；<br><li>`FALSE`：表示不支持云硬盘。
-     * @param string $InstanceTypeState 机型状态。取值范围：<br><li>`AVAILABLE`：表示机型可用；<br><li>`UNAVAILABLE`：表示机型不可用。
      */
     function __construct()
     {
@@ -124,14 +108,6 @@ class InstanceTypeConfig extends AbstractModel
 
         if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
             $this->Memory = $param["Memory"];
-        }
-
-        if (array_key_exists("CbsSupport",$param) and $param["CbsSupport"] !== null) {
-            $this->CbsSupport = $param["CbsSupport"];
-        }
-
-        if (array_key_exists("InstanceTypeState",$param) and $param["InstanceTypeState"] !== null) {
-            $this->InstanceTypeState = $param["InstanceTypeState"];
         }
     }
 }

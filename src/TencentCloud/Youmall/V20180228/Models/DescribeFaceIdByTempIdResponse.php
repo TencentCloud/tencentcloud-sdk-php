@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTempId(string $TempId) 设置请求的临时id
  * @method integer getFaceId() 获取临时id对应的face id
  * @method void setFaceId(integer $FaceId) 设置临时id对应的face id
+ * @method PersonInfo getPersonInfo() 获取顾客属性信息
+ * @method void setPersonInfo(PersonInfo $PersonInfo) 设置顾客属性信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -70,6 +72,11 @@ class DescribeFaceIdByTempIdResponse extends AbstractModel
     public $FaceId;
 
     /**
+     * @var PersonInfo 顾客属性信息
+     */
+    public $PersonInfo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -80,6 +87,7 @@ class DescribeFaceIdByTempIdResponse extends AbstractModel
      * @param string $PosId pos机id
      * @param string $TempId 请求的临时id
      * @param integer $FaceId 临时id对应的face id
+     * @param PersonInfo $PersonInfo 顾客属性信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -116,6 +124,11 @@ class DescribeFaceIdByTempIdResponse extends AbstractModel
 
         if (array_key_exists("FaceId",$param) and $param["FaceId"] !== null) {
             $this->FaceId = $param["FaceId"];
+        }
+
+        if (array_key_exists("PersonInfo",$param) and $param["PersonInfo"] !== null) {
+            $this->PersonInfo = new PersonInfo();
+            $this->PersonInfo->deserialize($param["PersonInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

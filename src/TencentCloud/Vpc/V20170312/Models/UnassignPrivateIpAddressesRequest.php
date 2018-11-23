@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-m6dyj72l。
- * @method array getPrivateIpAddresses() 获取指定的内网IP信息。
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息。
+ * @method array getPrivateIpAddresses() 获取指定的内网IP信息，单次最多指定10个。
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息，单次最多指定10个。
  */
 
 /**
@@ -35,12 +35,12 @@ class UnassignPrivateIpAddressesRequest extends AbstractModel
     public $NetworkInterfaceId;
 
     /**
-     * @var array 指定的内网IP信息。
+     * @var array 指定的内网IP信息，单次最多指定10个。
      */
     public $PrivateIpAddresses;
     /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
-     * @param array $PrivateIpAddresses 指定的内网IP信息。
+     * @param array $PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
      */
     function __construct()
     {

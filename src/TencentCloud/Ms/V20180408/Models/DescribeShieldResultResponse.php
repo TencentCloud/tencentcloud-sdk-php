@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppDetailInfo(AppDetailInfo $AppDetailInfo) 设置app加固前的详细信息
  * @method ShieldInfo getShieldInfo() 获取app加固后的详细信息
  * @method void setShieldInfo(ShieldInfo $ShieldInfo) 设置app加固后的详细信息
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getStatusDesc() 获取状态描述
+ * @method void setStatusDesc(string $StatusDesc) 设置状态描述
+ * @method string getStatusRef() 获取状态指引
+ * @method void setStatusRef(string $StatusRef) 设置状态指引
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -49,14 +53,26 @@ class DescribeShieldResultResponse extends AbstractModel
     public $ShieldInfo;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 状态描述
+     */
+    public $StatusDesc;
+
+    /**
+     * @var string 状态指引
+     */
+    public $StatusRef;
+
+    /**
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param integer $TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param AppDetailInfo $AppDetailInfo app加固前的详细信息
      * @param ShieldInfo $ShieldInfo app加固后的详细信息
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $StatusDesc 状态描述
+     * @param string $StatusRef 状态指引
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -82,6 +98,14 @@ class DescribeShieldResultResponse extends AbstractModel
         if (array_key_exists("ShieldInfo",$param) and $param["ShieldInfo"] !== null) {
             $this->ShieldInfo = new ShieldInfo();
             $this->ShieldInfo->deserialize($param["ShieldInfo"]);
+        }
+
+        if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
+            $this->StatusDesc = $param["StatusDesc"];
+        }
+
+        if (array_key_exists("StatusRef",$param) and $param["StatusRef"] !== null) {
+            $this->StatusRef = $param["StatusRef"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

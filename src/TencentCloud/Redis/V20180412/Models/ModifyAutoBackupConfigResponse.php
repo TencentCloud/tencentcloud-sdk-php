@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWeekDays(array $WeekDays) 设置日期Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
  * @method string getTimePeriod() 获取时间段 00:00-01:00, 01:00-02:00...... 23:00-00:00
  * @method void setTimePeriod(string $TimePeriod) 设置时间段 00:00-01:00, 01:00-02:00...... 23:00-00:00
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -49,14 +49,14 @@ class ModifyAutoBackupConfigResponse extends AbstractModel
     public $TimePeriod;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param integer $AutoBackupType 自动备份类型： 1 “定时回档”
      * @param array $WeekDays 日期Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
      * @param string $TimePeriod 时间段 00:00-01:00, 01:00-02:00...... 23:00-00:00
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

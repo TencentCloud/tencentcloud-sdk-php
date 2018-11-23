@@ -18,32 +18,46 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDirectConnectGatewayId() 获取专线网关ID
- * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) 设置专线网关ID
- * @method string getDirectConnectGatewayName() 获取专线网关名称
- * @method void setDirectConnectGatewayName(string $DirectConnectGatewayName) 设置专线网关名称
- * @method string getVpcId() 获取VPC实例ID
- * @method void setVpcId(string $VpcId) 设置VPC实例ID
- * @method string getNetworkType() 获取关联网络类型，可选值：
-<li>VPC - 私有网络</li>
-<li>CCN - 云联网</li>
- * @method void setNetworkType(string $NetworkType) 设置关联网络类型，可选值：
-<li>VPC - 私有网络</li>
-<li>CCN - 云联网</li>
- * @method string getNetworkInstanceId() 获取<li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
-<li>NetworkType 为 NAT 时，这里传值为云联网实例ID</li>
- * @method void setNetworkInstanceId(string $NetworkInstanceId) 设置<li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
-<li>NetworkType 为 NAT 时，这里传值为云联网实例ID</li>
- * @method string getGatewayType() 获取网关类型，可选值：
-<li>NORMAL - （默认）标准型，注：云联网只支持标准型</li>
-<li>NAT - NAT型</li>NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
- * @method void setGatewayType(string $GatewayType) 设置网关类型，可选值：
-<li>NORMAL - （默认）标准型，注：云联网只支持标准型</li>
-<li>NAT - NAT型</li>NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
- * @method integer getDirectConnectTunnelCount() 获取专线通道数
- * @method void setDirectConnectTunnelCount(integer $DirectConnectTunnelCount) 设置专线通道数
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getDirectConnectGatewayId() 获取专线网关`ID`。
+ * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) 设置专线网关`ID`。
+ * @method string getDirectConnectGatewayName() 获取专线网关名称。
+ * @method void setDirectConnectGatewayName(string $DirectConnectGatewayName) 设置专线网关名称。
+ * @method string getVpcId() 获取专线网关关联`VPC`实例`ID`。
+ * @method void setVpcId(string $VpcId) 设置专线网关关联`VPC`实例`ID`。
+ * @method string getNetworkType() 获取关联网络类型：
+<li>`VPC` - 私有网络</li>
+<li>`CCN` - 云联网</li>
+ * @method void setNetworkType(string $NetworkType) 设置关联网络类型：
+<li>`VPC` - 私有网络</li>
+<li>`CCN` - 云联网</li>
+ * @method string getNetworkInstanceId() 获取关联网络实例`ID`：
+<li>`NetworkType`为`VPC`时，这里为私有网络实例`ID`</li>
+<li>`NetworkType`为`CCN`时，这里为云联网实例`ID`</li>
+ * @method void setNetworkInstanceId(string $NetworkInstanceId) 设置关联网络实例`ID`：
+<li>`NetworkType`为`VPC`时，这里为私有网络实例`ID`</li>
+<li>`NetworkType`为`CCN`时，这里为云联网实例`ID`</li>
+ * @method string getGatewayType() 获取网关类型：
+<li>NORMAL - 标准型，注：云联网只支持标准型</li>
+<li>NAT - NAT型</li>
+NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
+ * @method void setGatewayType(string $GatewayType) 设置网关类型：
+<li>NORMAL - 标准型，注：云联网只支持标准型</li>
+<li>NAT - NAT型</li>
+NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
+ * @method string getCreateTime() 获取创建时间。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间。
+ * @method string getDirectConnectGatewayIp() 获取专线网关IP。
+ * @method void setDirectConnectGatewayIp(string $DirectConnectGatewayIp) 设置专线网关IP。
+ * @method string getCcnId() 获取专线网关关联`CCN`实例`ID`。
+ * @method void setCcnId(string $CcnId) 设置专线网关关联`CCN`实例`ID`。
+ * @method string getCcnRouteType() 获取云联网路由学习类型：
+<li>`BGP` - 自动学习。</li>
+<li>`STATIC` - 静态，即用户配置。</li>
+ * @method void setCcnRouteType(string $CcnRouteType) 设置云联网路由学习类型：
+<li>`BGP` - 自动学习。</li>
+<li>`STATIC` - 静态，即用户配置。</li>
+ * @method boolean getEnableBGP() 获取是否启用BGP。
+ * @method void setEnableBGP(boolean $EnableBGP) 设置是否启用BGP。
  */
 
 /**
@@ -52,63 +66,89 @@ use TencentCloud\Common\AbstractModel;
 class DirectConnectGateway extends AbstractModel
 {
     /**
-     * @var string 专线网关ID
+     * @var string 专线网关`ID`。
      */
     public $DirectConnectGatewayId;
 
     /**
-     * @var string 专线网关名称
+     * @var string 专线网关名称。
      */
     public $DirectConnectGatewayName;
 
     /**
-     * @var string VPC实例ID
+     * @var string 专线网关关联`VPC`实例`ID`。
      */
     public $VpcId;
 
     /**
-     * @var string 关联网络类型，可选值：
-<li>VPC - 私有网络</li>
-<li>CCN - 云联网</li>
+     * @var string 关联网络类型：
+<li>`VPC` - 私有网络</li>
+<li>`CCN` - 云联网</li>
      */
     public $NetworkType;
 
     /**
-     * @var string <li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
-<li>NetworkType 为 NAT 时，这里传值为云联网实例ID</li>
+     * @var string 关联网络实例`ID`：
+<li>`NetworkType`为`VPC`时，这里为私有网络实例`ID`</li>
+<li>`NetworkType`为`CCN`时，这里为云联网实例`ID`</li>
      */
     public $NetworkInstanceId;
 
     /**
-     * @var string 网关类型，可选值：
-<li>NORMAL - （默认）标准型，注：云联网只支持标准型</li>
-<li>NAT - NAT型</li>NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
+     * @var string 网关类型：
+<li>NORMAL - 标准型，注：云联网只支持标准型</li>
+<li>NAT - NAT型</li>
+NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
      */
     public $GatewayType;
 
     /**
-     * @var integer 专线通道数
-     */
-    public $DirectConnectTunnelCount;
-
-    /**
-     * @var string 创建时间
+     * @var string 创建时间。
      */
     public $CreateTime;
+
     /**
-     * @param string $DirectConnectGatewayId 专线网关ID
-     * @param string $DirectConnectGatewayName 专线网关名称
-     * @param string $VpcId VPC实例ID
-     * @param string $NetworkType 关联网络类型，可选值：
-<li>VPC - 私有网络</li>
-<li>CCN - 云联网</li>
-     * @param string $NetworkInstanceId <li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
-<li>NetworkType 为 NAT 时，这里传值为云联网实例ID</li>
-     * @param string $GatewayType 网关类型，可选值：
-<li>NORMAL - （默认）标准型，注：云联网只支持标准型</li>
-<li>NAT - NAT型</li>NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
-     * @param integer $DirectConnectTunnelCount 专线通道数
-     * @param string $CreateTime 创建时间
+     * @var string 专线网关IP。
+     */
+    public $DirectConnectGatewayIp;
+
+    /**
+     * @var string 专线网关关联`CCN`实例`ID`。
+     */
+    public $CcnId;
+
+    /**
+     * @var string 云联网路由学习类型：
+<li>`BGP` - 自动学习。</li>
+<li>`STATIC` - 静态，即用户配置。</li>
+     */
+    public $CcnRouteType;
+
+    /**
+     * @var boolean 是否启用BGP。
+     */
+    public $EnableBGP;
+    /**
+     * @param string $DirectConnectGatewayId 专线网关`ID`。
+     * @param string $DirectConnectGatewayName 专线网关名称。
+     * @param string $VpcId 专线网关关联`VPC`实例`ID`。
+     * @param string $NetworkType 关联网络类型：
+<li>`VPC` - 私有网络</li>
+<li>`CCN` - 云联网</li>
+     * @param string $NetworkInstanceId 关联网络实例`ID`：
+<li>`NetworkType`为`VPC`时，这里为私有网络实例`ID`</li>
+<li>`NetworkType`为`CCN`时，这里为云联网实例`ID`</li>
+     * @param string $GatewayType 网关类型：
+<li>NORMAL - 标准型，注：云联网只支持标准型</li>
+<li>NAT - NAT型</li>
+NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
+     * @param string $CreateTime 创建时间。
+     * @param string $DirectConnectGatewayIp 专线网关IP。
+     * @param string $CcnId 专线网关关联`CCN`实例`ID`。
+     * @param string $CcnRouteType 云联网路由学习类型：
+<li>`BGP` - 自动学习。</li>
+<li>`STATIC` - 静态，即用户配置。</li>
+     * @param boolean $EnableBGP 是否启用BGP。
      */
     function __construct()
     {
@@ -146,12 +186,24 @@ class DirectConnectGateway extends AbstractModel
             $this->GatewayType = $param["GatewayType"];
         }
 
-        if (array_key_exists("DirectConnectTunnelCount",$param) and $param["DirectConnectTunnelCount"] !== null) {
-            $this->DirectConnectTunnelCount = $param["DirectConnectTunnelCount"];
-        }
-
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("DirectConnectGatewayIp",$param) and $param["DirectConnectGatewayIp"] !== null) {
+            $this->DirectConnectGatewayIp = $param["DirectConnectGatewayIp"];
+        }
+
+        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
+            $this->CcnId = $param["CcnId"];
+        }
+
+        if (array_key_exists("CcnRouteType",$param) and $param["CcnRouteType"] !== null) {
+            $this->CcnRouteType = $param["CcnRouteType"];
+        }
+
+        if (array_key_exists("EnableBGP",$param) and $param["EnableBGP"] !== null) {
+            $this->EnableBGP = $param["EnableBGP"];
         }
     }
 }

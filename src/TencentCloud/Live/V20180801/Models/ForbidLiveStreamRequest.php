@@ -25,11 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method string getResumeTime() 获取恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
-
-UTC 时间，格式：2018-08-08T17:37:00Z。
+注意：默认禁播90天，且最长支持禁播90天。
  * @method void setResumeTime(string $ResumeTime) 设置恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
-
-UTC 时间，格式：2018-08-08T17:37:00Z。
+注意：默认禁播90天，且最长支持禁播90天。
  */
 
 /**
@@ -54,8 +52,7 @@ class ForbidLiveStreamRequest extends AbstractModel
 
     /**
      * @var string 恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
-
-UTC 时间，格式：2018-08-08T17:37:00Z。
+注意：默认禁播90天，且最长支持禁播90天。
      */
     public $ResumeTime;
     /**
@@ -63,8 +60,7 @@ UTC 时间，格式：2018-08-08T17:37:00Z。
      * @param string $DomainName 您的加速域名。
      * @param string $StreamName 流名称。
      * @param string $ResumeTime 恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
-
-UTC 时间，格式：2018-08-08T17:37:00Z。
+注意：默认禁播90天，且最长支持禁播90天。
      */
     function __construct()
     {

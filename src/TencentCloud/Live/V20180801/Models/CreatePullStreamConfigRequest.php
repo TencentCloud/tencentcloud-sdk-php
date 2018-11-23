@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getFromUrl() 获取源Url。
  * @method void setFromUrl(string $FromUrl) 设置源Url。
- * @method string getToUrl() 获取目的Url。
- * @method void setToUrl(string $ToUrl) 设置目的Url。
+ * @method string getToUrl() 获取目的Url，目前限制该目标地址为腾讯域名。
+ * @method void setToUrl(string $ToUrl) 设置目的Url，目前限制该目标地址为腾讯域名。
  * @method integer getAreaId() 获取区域id,1-深圳,2-上海，3-天津,4-香港。
  * @method void setAreaId(integer $AreaId) 设置区域id,1-深圳,2-上海，3-天津,4-香港。
  * @method integer getIspId() 获取运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。
@@ -49,7 +49,7 @@ class CreatePullStreamConfigRequest extends AbstractModel
     public $FromUrl;
 
     /**
-     * @var string 目的Url。
+     * @var string 目的Url，目前限制该目标地址为腾讯域名。
      */
     public $ToUrl;
 
@@ -77,7 +77,7 @@ class CreatePullStreamConfigRequest extends AbstractModel
     public $EndTime;
     /**
      * @param string $FromUrl 源Url。
-     * @param string $ToUrl 目的Url。
+     * @param string $ToUrl 目的Url，目前限制该目标地址为腾讯域名。
      * @param integer $AreaId 区域id,1-深圳,2-上海，3-天津,4-香港。
      * @param integer $IspId 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。
      * @param string $StartTime 开始时间。

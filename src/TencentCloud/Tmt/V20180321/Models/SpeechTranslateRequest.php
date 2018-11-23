@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSeq(integer $Seq) 设置语音分片的序号，从0开始
  * @method integer getIsEnd() 获取是否最后一片语音分片，0-否，1-是
  * @method void setIsEnd(integer $IsEnd) 设置是否最后一片语音分片，0-否，1-是
- * @method string getData() 获取语音分片内容的base64字符串
- * @method void setData(string $Data) 设置语音分片内容的base64字符串
+ * @method string getData() 获取语音分片内容的base64字符串，音频内容应含有效并可识别的文本
+ * @method void setData(string $Data) 设置语音分片内容的base64字符串，音频内容应含有效并可识别的文本
  * @method integer getProjectId() 获取项目id，用户可自定义
  * @method void setProjectId(integer $ProjectId) 设置项目id，用户可自定义
  */
@@ -72,7 +72,7 @@ class SpeechTranslateRequest extends AbstractModel
     public $IsEnd;
 
     /**
-     * @var string 语音分片内容的base64字符串
+     * @var string 语音分片内容的base64字符串，音频内容应含有效并可识别的文本
      */
     public $Data;
 
@@ -87,7 +87,7 @@ class SpeechTranslateRequest extends AbstractModel
      * @param integer $AudioFormat pcm : 146   amr : 33554432   mp3 : 83886080
      * @param integer $Seq 语音分片的序号，从0开始
      * @param integer $IsEnd 是否最后一片语音分片，0-否，1-是
-     * @param string $Data 语音分片内容的base64字符串
+     * @param string $Data 语音分片内容的base64字符串，音频内容应含有效并可识别的文本
      * @param integer $ProjectId 项目id，用户可自定义
      */
     function __construct()

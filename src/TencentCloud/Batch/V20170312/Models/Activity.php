@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置活动开始时间
  * @method string getEndTime() 获取活动结束时间
  * @method void setEndTime(string $EndTime) 设置活动结束时间
+ * @method string getInstanceId() 获取云服务器实例ID
+ * @method void setInstanceId(string $InstanceId) 设置云服务器实例ID
  */
 
 /**
@@ -87,6 +89,11 @@ class Activity extends AbstractModel
      * @var string 活动结束时间
      */
     public $EndTime;
+
+    /**
+     * @var string 云服务器实例ID
+     */
+    public $InstanceId;
     /**
      * @param string $ActivityId 活动ID
      * @param string $ComputeNodeId 计算节点ID
@@ -97,6 +104,7 @@ class Activity extends AbstractModel
      * @param string $StateReason 状态原因
      * @param string $StartTime 活动开始时间
      * @param string $EndTime 活动结束时间
+     * @param string $InstanceId 云服务器实例ID
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class Activity extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

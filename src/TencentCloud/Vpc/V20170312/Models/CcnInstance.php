@@ -18,12 +18,18 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取关联实例ID
- * @method void setInstanceId(string $InstanceId) 设置关联实例ID
- * @method string getInstanceRegion() 获取关联实例ID所属大区，例如：ap-guangzhou
- * @method void setInstanceRegion(string $InstanceRegion) 设置关联实例ID所属大区，例如：ap-guangzhou
- * @method string getInstanceType() 获取关联实例类型，可选值：VPC、DIRECTCONNECT
- * @method void setInstanceType(string $InstanceType) 设置关联实例类型，可选值：VPC、DIRECTCONNECT
+ * @method string getInstanceId() 获取关联实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置关联实例ID。
+ * @method string getInstanceRegion() 获取关联实例ID所属大区，例如：ap-guangzhou。
+ * @method void setInstanceRegion(string $InstanceRegion) 设置关联实例ID所属大区，例如：ap-guangzhou。
+ * @method string getInstanceType() 获取关联实例类型，可选值：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
+ * @method void setInstanceType(string $InstanceType) 设置关联实例类型，可选值：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
  */
 
 /**
@@ -32,23 +38,29 @@ use TencentCloud\Common\AbstractModel;
 class CcnInstance extends AbstractModel
 {
     /**
-     * @var string 关联实例ID
+     * @var string 关联实例ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 关联实例ID所属大区，例如：ap-guangzhou
+     * @var string 关联实例ID所属大区，例如：ap-guangzhou。
      */
     public $InstanceRegion;
 
     /**
-     * @var string 关联实例类型，可选值：VPC、DIRECTCONNECT
+     * @var string 关联实例类型，可选值：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
      */
     public $InstanceType;
     /**
-     * @param string $InstanceId 关联实例ID
-     * @param string $InstanceRegion 关联实例ID所属大区，例如：ap-guangzhou
-     * @param string $InstanceType 关联实例类型，可选值：VPC、DIRECTCONNECT
+     * @param string $InstanceId 关联实例ID。
+     * @param string $InstanceRegion 关联实例ID所属大区，例如：ap-guangzhou。
+     * @param string $InstanceType 关联实例类型，可选值：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
      */
     function __construct()
     {

@@ -18,10 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRouteId() 获取路由ID
- * @method void setRouteId(string $RouteId) 设置路由ID
- * @method string getDestinationCidrBlock() 获取IDC网段
- * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置IDC网段
+ * @method string getRouteId() 获取路由ID。
+ * @method void setRouteId(string $RouteId) 设置路由ID。
+ * @method string getDestinationCidrBlock() 获取IDC网段。
+ * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置IDC网段。
+ * @method array getASPath() 获取`BGP`的`AS-Path`属性。
+ * @method void setASPath(array $ASPath) 设置`BGP`的`AS-Path`属性。
  */
 
 /**
@@ -30,17 +32,23 @@ use TencentCloud\Common\AbstractModel;
 class DirectConnectGatewayCcnRoute extends AbstractModel
 {
     /**
-     * @var string 路由ID
+     * @var string 路由ID。
      */
     public $RouteId;
 
     /**
-     * @var string IDC网段
+     * @var string IDC网段。
      */
     public $DestinationCidrBlock;
+
     /**
-     * @param string $RouteId 路由ID
-     * @param string $DestinationCidrBlock IDC网段
+     * @var array `BGP`的`AS-Path`属性。
+     */
+    public $ASPath;
+    /**
+     * @param string $RouteId 路由ID。
+     * @param string $DestinationCidrBlock IDC网段。
+     * @param array $ASPath `BGP`的`AS-Path`属性。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DirectConnectGatewayCcnRoute extends AbstractModel
 
         if (array_key_exists("DestinationCidrBlock",$param) and $param["DestinationCidrBlock"] !== null) {
             $this->DestinationCidrBlock = $param["DestinationCidrBlock"];
+        }
+
+        if (array_key_exists("ASPath",$param) and $param["ASPath"] !== null) {
+            $this->ASPath = $param["ASPath"];
         }
     }
 }

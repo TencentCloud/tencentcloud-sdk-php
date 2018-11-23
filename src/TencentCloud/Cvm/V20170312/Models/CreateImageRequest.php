@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSysprep(string $Sysprep) 设置创建Windows镜像时是否启用Sysprep
  * @method string getReboot() 获取实例处于运行中时，是否允许关机执行制作镜像任务。
  * @method void setReboot(string $Reboot) 设置实例处于运行中时，是否允许关机执行制作镜像任务。
+ * @method boolean getDryRun() 获取DryRun
+ * @method void setDryRun(boolean $DryRun) 设置DryRun
  */
 
 /**
@@ -66,6 +68,11 @@ class CreateImageRequest extends AbstractModel
      * @var string 实例处于运行中时，是否允许关机执行制作镜像任务。
      */
     public $Reboot;
+
+    /**
+     * @var boolean DryRun
+     */
+    public $DryRun;
     /**
      * @param string $InstanceId 需要制作镜像的实例ID
      * @param string $ImageName 镜像名称
@@ -73,6 +80,7 @@ class CreateImageRequest extends AbstractModel
      * @param string $ForcePoweroff 软关机失败时是否执行强制关机以制作镜像
      * @param string $Sysprep 创建Windows镜像时是否启用Sysprep
      * @param string $Reboot 实例处于运行中时，是否允许关机执行制作镜像任务。
+     * @param boolean $DryRun DryRun
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class CreateImageRequest extends AbstractModel
 
         if (array_key_exists("Reboot",$param) and $param["Reboot"] !== null) {
             $this->Reboot = $param["Reboot"];
+        }
+
+        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
+            $this->DryRun = $param["DryRun"];
         }
     }
 }

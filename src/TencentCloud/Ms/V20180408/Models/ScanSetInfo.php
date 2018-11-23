@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdInfo(AdInfo $AdInfo) 设置广告插件信息
  * @method integer getTaskTime() 获取提交扫描的时间
  * @method void setTaskTime(integer $TaskTime) 设置提交扫描的时间
+ * @method integer getStatusCode() 获取状态码，成功返回0，失败返回错误码
+ * @method void setStatusCode(integer $StatusCode) 设置状态码，成功返回0，失败返回错误码
+ * @method string getStatusDesc() 获取状态描述
+ * @method void setStatusDesc(string $StatusDesc) 设置状态描述
+ * @method string getStatusRef() 获取状态操作指引
+ * @method void setStatusRef(string $StatusRef) 设置状态操作指引
  */
 
 /**
@@ -66,6 +72,21 @@ class ScanSetInfo extends AbstractModel
      * @var integer 提交扫描的时间
      */
     public $TaskTime;
+
+    /**
+     * @var integer 状态码，成功返回0，失败返回错误码
+     */
+    public $StatusCode;
+
+    /**
+     * @var string 状态描述
+     */
+    public $StatusDesc;
+
+    /**
+     * @var string 状态操作指引
+     */
+    public $StatusRef;
     /**
      * @param integer $TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param AppDetailInfo $AppDetailInfo app信息
@@ -73,6 +94,9 @@ class ScanSetInfo extends AbstractModel
      * @param VulInfo $VulInfo 漏洞信息
      * @param AdInfo $AdInfo 广告插件信息
      * @param integer $TaskTime 提交扫描的时间
+     * @param integer $StatusCode 状态码，成功返回0，失败返回错误码
+     * @param string $StatusDesc 状态描述
+     * @param string $StatusRef 状态操作指引
      */
     function __construct()
     {
@@ -112,6 +136,18 @@ class ScanSetInfo extends AbstractModel
 
         if (array_key_exists("TaskTime",$param) and $param["TaskTime"] !== null) {
             $this->TaskTime = $param["TaskTime"];
+        }
+
+        if (array_key_exists("StatusCode",$param) and $param["StatusCode"] !== null) {
+            $this->StatusCode = $param["StatusCode"];
+        }
+
+        if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
+            $this->StatusDesc = $param["StatusDesc"];
+        }
+
+        if (array_key_exists("StatusRef",$param) and $param["StatusRef"] !== null) {
+            $this->StatusRef = $param["StatusRef"];
         }
     }
 }

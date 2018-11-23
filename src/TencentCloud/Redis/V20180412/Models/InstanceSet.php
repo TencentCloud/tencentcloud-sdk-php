@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionId(integer $RegionId) 设置地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
  * @method integer getZoneId() 获取区域id
  * @method void setZoneId(integer $ZoneId) 设置区域id
- * @method integer getVpcId() 获取vpc网络id
- * @method void setVpcId(integer $VpcId) 设置vpc网络id
- * @method integer getSubnetId() 获取vpc网络下子网id
- * @method void setSubnetId(integer $SubnetId) 设置vpc网络下子网id
+ * @method integer getVpcId() 获取vpc网络id 如：75101
+ * @method void setVpcId(integer $VpcId) 设置vpc网络id 如：75101
+ * @method integer getSubnetId() 获取vpc网络下子网id 如：46315
+ * @method void setSubnetId(integer $SubnetId) 设置vpc网络下子网id 如：46315
  * @method integer getStatus() 获取实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离
  * @method void setStatus(integer $Status) 设置实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离
  * @method string getWanIp() 获取实例vip
@@ -52,6 +52,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
  * @method string getDeadlineTime() 获取实例到期时间
  * @method void setDeadlineTime(string $DeadlineTime) 设置实例到期时间
+ * @method string getEngine() 获取引擎：社区版Redis、腾讯云CKV
+ * @method void setEngine(string $Engine) 设置引擎：社区版Redis、腾讯云CKV
+ * @method string getProductType() 获取产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
+ * @method void setProductType(string $ProductType) 设置产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
+ * @method string getUniqVpcId() 获取vpc网络id 如：vpc-fk33jsf43kgv
+ * @method void setUniqVpcId(string $UniqVpcId) 设置vpc网络id 如：vpc-fk33jsf43kgv
+ * @method string getUniqSubnetId() 获取vpc网络下子网id 如：subnet-fd3j6l35mm0
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置vpc网络下子网id 如：subnet-fd3j6l35mm0
+ * @method integer getBillingMode() 获取计费模式：0-按量计费，1-包年包月
+ * @method void setBillingMode(integer $BillingMode) 设置计费模式：0-按量计费，1-包年包月
  */
 
 /**
@@ -90,12 +100,12 @@ class InstanceSet extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer vpc网络id
+     * @var integer vpc网络id 如：75101
      */
     public $VpcId;
 
     /**
-     * @var integer vpc网络下子网id
+     * @var integer vpc网络下子网id 如：46315
      */
     public $SubnetId;
 
@@ -143,6 +153,31 @@ class InstanceSet extends AbstractModel
      * @var string 实例到期时间
      */
     public $DeadlineTime;
+
+    /**
+     * @var string 引擎：社区版Redis、腾讯云CKV
+     */
+    public $Engine;
+
+    /**
+     * @var string 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
+     */
+    public $ProductType;
+
+    /**
+     * @var string vpc网络id 如：vpc-fk33jsf43kgv
+     */
+    public $UniqVpcId;
+
+    /**
+     * @var string vpc网络下子网id 如：subnet-fd3j6l35mm0
+     */
+    public $UniqSubnetId;
+
+    /**
+     * @var integer 计费模式：0-按量计费，1-包年包月
+     */
+    public $BillingMode;
     /**
      * @param string $InstanceName 实例名称
      * @param string $InstanceId 实例串号
@@ -150,8 +185,8 @@ class InstanceSet extends AbstractModel
      * @param integer $ProjectId 项目id
      * @param integer $RegionId 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
      * @param integer $ZoneId 区域id
-     * @param integer $VpcId vpc网络id
-     * @param integer $SubnetId vpc网络下子网id
+     * @param integer $VpcId vpc网络id 如：75101
+     * @param integer $SubnetId vpc网络下子网id 如：46315
      * @param integer $Status 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离
      * @param string $WanIp 实例vip
      * @param integer $Port 实例端口号
@@ -161,6 +196,11 @@ class InstanceSet extends AbstractModel
      * @param integer $Type 实例类型，1：集群版；2：主从版
      * @param integer $AutoRenewFlag 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
      * @param string $DeadlineTime 实例到期时间
+     * @param string $Engine 引擎：社区版Redis、腾讯云CKV
+     * @param string $ProductType 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
+     * @param string $UniqVpcId vpc网络id 如：vpc-fk33jsf43kgv
+     * @param string $UniqSubnetId vpc网络下子网id 如：subnet-fd3j6l35mm0
+     * @param integer $BillingMode 计费模式：0-按量计费，1-包年包月
      */
     function __construct()
     {
@@ -240,6 +280,26 @@ class InstanceSet extends AbstractModel
 
         if (array_key_exists("DeadlineTime",$param) and $param["DeadlineTime"] !== null) {
             $this->DeadlineTime = $param["DeadlineTime"];
+        }
+
+        if (array_key_exists("Engine",$param) and $param["Engine"] !== null) {
+            $this->Engine = $param["Engine"];
+        }
+
+        if (array_key_exists("ProductType",$param) and $param["ProductType"] !== null) {
+            $this->ProductType = $param["ProductType"];
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
+        }
+
+        if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
+            $this->UniqSubnetId = $param["UniqSubnetId"];
+        }
+
+        if (array_key_exists("BillingMode",$param) and $param["BillingMode"] !== null) {
+            $this->BillingMode = $param["BillingMode"];
         }
     }
 }

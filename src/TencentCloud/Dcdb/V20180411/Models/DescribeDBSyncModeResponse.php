@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyncMode(integer $SyncMode) 设置同步模式：0 异步，1 强同步， 2 强同步可退化
  * @method integer getIsModifying() 获取是否有修改流程在执行中：1 是， 0 否。
  * @method void setIsModifying(integer $IsModifying) 设置是否有修改流程在执行中：1 是， 0 否。
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -42,13 +42,13 @@ class DescribeDBSyncModeResponse extends AbstractModel
     public $IsModifying;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param integer $SyncMode 同步模式：0 异步，1 强同步， 2 强同步可退化
      * @param integer $IsModifying 是否有修改流程在执行中：1 是， 0 否。
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

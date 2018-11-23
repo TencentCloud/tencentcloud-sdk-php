@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimitCount(integer $LimitCount) 设置剩余可用次数
  * @method integer getLimitTime() 获取到期时间
  * @method void setLimitTime(integer $LimitTime) 设置到期时间
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -63,7 +63,7 @@ class CreateScanInstancesResponse extends AbstractModel
     public $LimitTime;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -72,7 +72,7 @@ class CreateScanInstancesResponse extends AbstractModel
      * @param array $AppMd5s 提交成功的app的md5集合
      * @param integer $LimitCount 剩余可用次数
      * @param integer $LimitTime 到期时间
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

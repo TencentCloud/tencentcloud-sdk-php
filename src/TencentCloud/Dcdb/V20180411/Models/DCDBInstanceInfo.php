@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPaymode(string $Paymode) 设置付费模式
  * @method integer getLocker() 获取实例处于异步任务状态时，表示异步任务流程ID
  * @method void setLocker(integer $Locker) 设置实例处于异步任务状态时，表示异步任务流程ID
+ * @method integer getWanStatus() 获取外网状态，0-未开通；1-已开通；2-关闭；3-开通中
+ * @method void setWanStatus(integer $WanStatus) 设置外网状态，0-未开通；1-已开通；2-关闭；3-开通中
  */
 
 /**
@@ -276,6 +278,11 @@ class DCDBInstanceInfo extends AbstractModel
      * @var integer 实例处于异步任务状态时，表示异步任务流程ID
      */
     public $Locker;
+
+    /**
+     * @var integer 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
+     */
+    public $WanStatus;
     /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
@@ -313,6 +320,7 @@ class DCDBInstanceInfo extends AbstractModel
      * @param string $DbVersion 数据库引擎版本
      * @param string $Paymode 付费模式
      * @param integer $Locker 实例处于异步任务状态时，表示异步任务流程ID
+     * @param integer $WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      */
     function __construct()
     {
@@ -473,6 +481,10 @@ class DCDBInstanceInfo extends AbstractModel
 
         if (array_key_exists("Locker",$param) and $param["Locker"] !== null) {
             $this->Locker = $param["Locker"];
+        }
+
+        if (array_key_exists("WanStatus",$param) and $param["WanStatus"] !== null) {
+            $this->WanStatus = $param["WanStatus"];
         }
     }
 }

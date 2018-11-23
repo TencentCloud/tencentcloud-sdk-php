@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCount(integer $Count) 设置返回的sql日志数量。
  * @method array getSqlItems() 获取Sql日志列表。
  * @method void setSqlItems(array $SqlItems) 设置Sql日志列表。
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -70,7 +70,7 @@ class DescribeSqlLogsResponse extends AbstractModel
     public $SqlItems;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -80,7 +80,7 @@ class DescribeSqlLogsResponse extends AbstractModel
      * @param integer $Offset 返回的第一条sql日志的偏移。
      * @param integer $Count 返回的sql日志数量。
      * @param array $SqlItems Sql日志列表。
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
  * @method string getNetworkInterfaceDescription() 获取弹性网卡描述，可任意命名，但不得超过60个字符。
  * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) 设置弹性网卡描述，可任意命名，但不得超过60个字符。
- * @method integer getSecondaryPrivateIpAddressCount() 获取新申请的内网IP地址个数。
- * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) 设置新申请的内网IP地址个数。
+ * @method integer getSecondaryPrivateIpAddressCount() 获取新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+ * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) 设置新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
  * @method array getSecurityGroupIds() 获取指定绑定的安全组，例如：['sg-1dd51d']。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置指定绑定的安全组，例如：['sg-1dd51d']。
- * @method array getPrivateIpAddresses() 获取指定内网IP信息。
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定内网IP信息。
+ * @method array getPrivateIpAddresses() 获取指定的内网IP信息，单次最多指定10个。
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息，单次最多指定10个。
  */
 
 /**
@@ -60,7 +60,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
     public $NetworkInterfaceDescription;
 
     /**
-     * @var integer 新申请的内网IP地址个数。
+     * @var integer 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
      */
     public $SecondaryPrivateIpAddressCount;
 
@@ -70,7 +70,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @var array 指定内网IP信息。
+     * @var array 指定的内网IP信息，单次最多指定10个。
      */
     public $PrivateIpAddresses;
     /**
@@ -78,9 +78,9 @@ class CreateNetworkInterfaceRequest extends AbstractModel
      * @param string $NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
      * @param string $SubnetId 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
      * @param string $NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
-     * @param integer $SecondaryPrivateIpAddressCount 新申请的内网IP地址个数。
+     * @param integer $SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
      * @param array $SecurityGroupIds 指定绑定的安全组，例如：['sg-1dd51d']。
-     * @param array $PrivateIpAddresses 指定内网IP信息。
+     * @param array $PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
      */
     function __construct()
     {

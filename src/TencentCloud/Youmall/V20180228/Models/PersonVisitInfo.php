@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHairType(integer $HairType) 设置发型：0 短发,  1长发
  * @method string getCapturedPictureUrl() 获取抓拍到的头像Url，在有效期内可以访问下载
  * @method void setCapturedPictureUrl(string $CapturedPictureUrl) 设置抓拍到的头像Url，在有效期内可以访问下载
+ * @method SceneInfo getSceneInfo() 获取抓拍头像的场景图信息
+ * @method void setSceneInfo(SceneInfo $SceneInfo) 设置抓拍头像的场景图信息
  */
 
 /**
@@ -80,6 +82,11 @@ class PersonVisitInfo extends AbstractModel
      * @var string 抓拍到的头像Url，在有效期内可以访问下载
      */
     public $CapturedPictureUrl;
+
+    /**
+     * @var SceneInfo 抓拍头像的场景图信息
+     */
+    public $SceneInfo;
     /**
      * @param integer $PersonId 用户ID
      * @param integer $VisitId 用户到访ID
@@ -89,6 +96,7 @@ class PersonVisitInfo extends AbstractModel
      * @param integer $GlassType 眼镜类型：0不戴眼镜，1普通眼镜 , 2墨镜
      * @param integer $HairType 发型：0 短发,  1长发
      * @param string $CapturedPictureUrl 抓拍到的头像Url，在有效期内可以访问下载
+     * @param SceneInfo $SceneInfo 抓拍头像的场景图信息
      */
     function __construct()
     {
@@ -132,6 +140,11 @@ class PersonVisitInfo extends AbstractModel
 
         if (array_key_exists("CapturedPictureUrl",$param) and $param["CapturedPictureUrl"] !== null) {
             $this->CapturedPictureUrl = $param["CapturedPictureUrl"];
+        }
+
+        if (array_key_exists("SceneInfo",$param) and $param["SceneInfo"] !== null) {
+            $this->SceneInfo = new SceneInfo();
+            $this->SceneInfo->deserialize($param["SceneInfo"]);
         }
     }
 }

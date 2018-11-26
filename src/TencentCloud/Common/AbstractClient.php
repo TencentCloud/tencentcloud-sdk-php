@@ -161,18 +161,23 @@ abstract class AbstractClient
      */
     public function __call($action, $request)
     {
+        return $this->doRequestWithOptions($action, $request[0], array());
+    }
+
+    protected function doRequestWithOptions($action, $request, $options)
+    {
         try {
             $responseData = null;
-            $serializeRequest = $request[0]->serialize();
-            $method = $this->getPrivateMethod($request[0], "arrayMerge");
-            $serializeRequest = $method->invoke($request[0], $serializeRequest);
+            $serializeRequest = $request->serialize();
+            $method = $this->getPrivateMethod($request, "arrayMerge");
+            $serializeRequest = $method->invoke($request, $serializeRequest);
             switch ($this->profile->getSignMethod()) {
                 case ClientProfile::$SIGN_HMAC_SHA1:
                 case ClientProfile::$SIGN_HMAC_SHA256:
                     $responseData = $this->doRequest($action, $serializeRequest);
                     break;
                 case ClientProfile::$SIGN_TC3_SHA256:
-                    $responseData = $this->doRequestWithTC3($action, $request);
+                    $responseData = $this->doRequestWithTC3($action, $request, $options);
                     break;
                 default:
                     throw new TencentCloudSDKException("ClientError", "Invalid sign method");
@@ -211,7 +216,7 @@ abstract class AbstractClient
         }
     }
 
-    private function doRequestWithTC3($action, $request)
+    private function doRequestWithTC3($action, $request, $options)
     {
         $headers = array();
 
@@ -236,15 +241,20 @@ abstract class AbstractClient
         $reqmethod = $this->profile->getHttpProfile()->getReqMethod();
         if (HttpProfile::$REQ_GET == $reqmethod) {
             $headers["Content-Type"] = "application/x-www-form-urlencoded";
-            $rs = $request[0]->serialize();
-            $am = $this->getPrivateMethod($request[0], "arrayMerge");
-            $rsam = $am->invoke($request[0], $rs);
+            $rs = $request->serialize();
+            $am = $this->getPrivateMethod($request, "arrayMerge");
+            $rsam = $am->invoke($request, $rs);
             $canonicalQueryString = http_build_query($rsam);
             $payload = "";
+        } else if (isset($options["IsMultipart"]) && $options["IsMultipart"] === true) {
+            $boundary = uniqid();
+            $headers["Content-Type"] = "multipart/form-data; boundary=".$boundary;
+            $canonicalQueryString = "";
+            $payload = $this->getMultipartPayload($request, $boundary, $options);
         } else {
             $headers["Content-Type"] = "application/json";
             $canonicalQueryString = "";
-            $payload = $request[0]->toJsonString();
+            $payload = $request->toJsonString();
         }
 
         if ($this->profile->getUnsignedPayload() == true) {
@@ -290,6 +300,29 @@ abstract class AbstractClient
             $connect = $this->createConnect();
             return $connect->postRequestRaw($this->path, $headers, $payload);
         }
+    }
+
+    private function getMultipartPayload($request, $boundary, $options)
+    {
+        $body = "";
+        $params = $request->serialize();
+        foreach ($params as $key => $value) {
+            $body .= "--".$boundary."\r\n";
+            $body .= "Content-Disposition: form-data; name=\"".$key;
+            if (in_array($key, $options["BinaryParams"])) {
+                $body .= "\"; filename=\"".$key;
+            }
+            $body .= "\"\r\n";
+            if (is_array($value)) {
+                $value = json_encode($value);
+                $body .= "Content-Type: application/json\r\n";
+            }
+            $body .= "\r\n".$value."\r\n";
+        }
+        if ($body != "") {
+            $body .= "--".$boundary."--\r\n";
+        }
+        return $body;
     }
 
     /**

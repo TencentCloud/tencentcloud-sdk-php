@@ -36,6 +36,8 @@ class ClientProfile
      */
     public static $SIGN_HMAC_SHA256 = "HmacSHA256";
 
+    public static $SIGN_TC3_SHA256 = "TC3-HMAC-SHA256";
+
 
     /**
      * @var HttpProfile http相关参数
@@ -47,6 +49,11 @@ class ClientProfile
      */
     private $signMethod;
 
+    /**
+     * @var string 忽略内容签名
+     */
+    private $unsignedPayload;
+
 
     /**
      * ClientProfile constructor.
@@ -57,11 +64,12 @@ class ClientProfile
     {
         $this->signMethod = $signMethod ? $signMethod : ClientProfile::$SIGN_HMAC_SHA256;
         $this->httpProfile = $httpProfile ? $httpProfile : new HttpProfile();
+        $this->unsignedPayload = false;
     }
 
     /**
      * 设置签名算法
-     * @param string $signMethod 签名方法，目前支持SHA256，SHA1
+     * @param string $signMethod 签名方法，目前支持SHA256，SHA1, TC3
      */
     public function setSignMethod($signMethod)
     {
@@ -84,6 +92,24 @@ class ClientProfile
     public function getSignMethod()
     {
         return $this->signMethod;
+    }
+
+    /**
+     * 设置是否忽略内容签名
+     * @param bool $flag true表示忽略签名
+     */
+    public function setUnsignedPayload($flag)
+    {
+        $this->unsignedPayload = $flag;
+    }
+
+    /**
+     * 获取是否忽略内容签名标志位
+     * @return bool
+     */
+    public function getUnsignedPayload()
+    {
+        return $this->unsignedPayload;
     }
 
     /**

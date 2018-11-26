@@ -38,4 +38,12 @@ class Sign
         $signature = base64_encode(hash_hmac($signMethodMap[$signMethod], $signStr, $secretKey, true));
         return $signature;
     }
+
+    public static function signTC3($skey, $date, $service, $str2sign)
+    {
+        $dateKey = hash_hmac("SHA256", $date, "TC3".$skey, true);
+        $serviceKey = hash_hmac("SHA256", $service, $dateKey, true);
+        $reqKey = hash_hmac("SHA256", "tc3_request", $serviceKey, true);
+        return hash_hmac("SHA256", $str2sign, $reqKey);
+    }
 }

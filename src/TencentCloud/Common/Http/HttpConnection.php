@@ -67,5 +67,18 @@ class HttpConnection
         }
         return $this->client->post($uri, $options);
     }
+
+    public function postRequestRaw($uri = '', $headers = [], $body = '')
+    {
+        $options  = $this->getOptions();
+        if ($headers) {
+            $options["headers"] = $headers;
+        }
+
+        if ($body) {
+            $options["body"] = $body;
+        }
+        return $this->client->post($uri, $options);
+    }
 }
 

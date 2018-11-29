@@ -18,10 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取升级的实例Id
- * @method void setInstanceId(string $InstanceId) 设置升级的实例Id
- * @method integer getMemSize() 获取规格 单位 MB
- * @method void setMemSize(integer $MemSize) 设置规格 单位 MB
+ * @method string getInstanceId() 获取实例Id
+ * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method integer getMemSize() 获取分片大小 单位 MB
+ * @method void setMemSize(integer $MemSize) 设置分片大小 单位 MB
+ * @method integer getRedisShardNum() 获取分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+ * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+ * @method integer getRedisReplicasNum() 获取副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
  */
 
 /**
@@ -30,17 +34,29 @@ use TencentCloud\Common\AbstractModel;
 class UpgradeInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 升级的实例Id
+     * @var string 实例Id
      */
     public $InstanceId;
 
     /**
-     * @var integer 规格 单位 MB
+     * @var integer 分片大小 单位 MB
      */
     public $MemSize;
+
     /**
-     * @param string $InstanceId 升级的实例Id
-     * @param integer $MemSize 规格 单位 MB
+     * @var integer 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     */
+    public $RedisShardNum;
+
+    /**
+     * @var integer 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     */
+    public $RedisReplicasNum;
+    /**
+     * @param string $InstanceId 实例Id
+     * @param integer $MemSize 分片大小 单位 MB
+     * @param integer $RedisShardNum 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * @param integer $RedisReplicasNum 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class UpgradeInstanceRequest extends AbstractModel
 
         if (array_key_exists("MemSize",$param) and $param["MemSize"] !== null) {
             $this->MemSize = $param["MemSize"];
+        }
+
+        if (array_key_exists("RedisShardNum",$param) and $param["RedisShardNum"] !== null) {
+            $this->RedisShardNum = $param["RedisShardNum"];
+        }
+
+        if (array_key_exists("RedisReplicasNum",$param) and $param["RedisReplicasNum"] !== null) {
+            $this->RedisReplicasNum = $param["RedisReplicasNum"];
         }
     }
 }

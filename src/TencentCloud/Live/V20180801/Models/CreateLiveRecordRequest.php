@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) 设置直播流所属应用名称。
  * @method string getDomainName() 获取推流域名。多域名推流必须设置。
  * @method void setDomainName(string $DomainName) 设置推流域名。多域名推流必须设置。
- * @method string getStartTime() 获取任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01。
- * @method void setStartTime(string $StartTime) 设置任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01。
- * @method string getEndTime() 获取任务结束时间。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
- * @method void setEndTime(string $EndTime) 设置任务结束时间。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
+ * @method string getStartTime() 获取任务起始时间，中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。录制视频为精彩视频时，忽略此字段。
+ * @method void setStartTime(string $StartTime) 设置任务起始时间，中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。录制视频为精彩视频时，忽略此字段。
+ * @method string getEndTime() 获取任务结束时间，中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
+ * @method void setEndTime(string $EndTime) 设置任务结束时间，中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
  * @method string getRecordType() 获取录制类型。不区分大小写。
 “video” : 音视频录制【默认】。
 “audio” : 纯音频录制。
@@ -75,12 +75,12 @@ class CreateLiveRecordRequest extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string 任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01。
+     * @var string 任务起始时间，中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。录制视频为精彩视频时，忽略此字段。
      */
     public $StartTime;
 
     /**
-     * @var string 任务结束时间。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
+     * @var string 任务结束时间，中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
      */
     public $EndTime;
 
@@ -119,8 +119,8 @@ eg. interval=3600&storage_time=7200
      * @param string $StreamName 流名称。
      * @param string $AppName 直播流所属应用名称。
      * @param string $DomainName 推流域名。多域名推流必须设置。
-     * @param string $StartTime 任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01。
-     * @param string $EndTime 任务结束时间。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
+     * @param string $StartTime 任务起始时间，中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。录制视频为精彩视频时，忽略此字段。
+     * @param string $EndTime 任务结束时间，中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
      * @param string $RecordType 录制类型。不区分大小写。
 “video” : 音视频录制【默认】。
 “audio” : 纯音频录制。

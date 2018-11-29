@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getState() 获取实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
  * @method void setState(string $State) 设置实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
+ * @method string getQosLevel() 获取实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+ * @method void setQosLevel(string $QosLevel) 设置实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
  */
 
 /**
@@ -66,6 +68,11 @@ class CCN extends AbstractModel
      * @var string 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
      */
     public $State;
+
+    /**
+     * @var string 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+     */
+    public $QosLevel;
     /**
      * @param string $CcnId 云联网唯一ID
      * @param string $CcnName 云联网名称
@@ -73,6 +80,7 @@ class CCN extends AbstractModel
      * @param integer $InstanceCount 关联实例数量
      * @param string $CreateTime 创建时间
      * @param string $State 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
+     * @param string $QosLevel 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class CCN extends AbstractModel
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("QosLevel",$param) and $param["QosLevel"] !== null) {
+            $this->QosLevel = $param["QosLevel"];
         }
     }
 }

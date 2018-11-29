@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getPassword() 获取redis的实例密码
- * @method void setPassword(string $Password) 设置redis的实例密码
+ * @method string getName() 获取数据类型的名称
+ * @method void setName(string $Name) 设置数据类型的名称
+ * @method float getValue() 获取数据值
+ * @method void setValue(float $Value) 设置数据值
  */
 
 /**
- *ClearInstance请求参数结构体
+ *排序类型的数据结构
  */
-class ClearInstanceRequest extends AbstractModel
+class TopDetailData extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string 数据类型的名称
      */
-    public $InstanceId;
+    public $Name;
 
     /**
-     * @var string redis的实例密码
+     * @var float 数据值
      */
-    public $Password;
+    public $Value;
     /**
-     * @param string $InstanceId 实例Id
-     * @param string $Password redis的实例密码
+     * @param string $Name 数据类型的名称
+     * @param float $Value 数据值
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class ClearInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

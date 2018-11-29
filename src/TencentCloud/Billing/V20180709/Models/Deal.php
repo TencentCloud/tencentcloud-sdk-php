@@ -36,6 +36,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method integer getGoodsCategoryId() 获取产品分类ID
  * @method void setGoodsCategoryId(integer $GoodsCategoryId) 设置产品分类ID
+ * @method array getProductInfo() 获取产品详情
+ * @method void setProductInfo(array $ProductInfo) 设置产品详情
+ * @method float getTimeSpan() 获取时长
+ * @method void setTimeSpan(float $TimeSpan) 设置时长
+ * @method string getTimeUnit() 获取时间单位
+ * @method void setTimeUnit(string $TimeUnit) 设置时间单位
+ * @method string getCurrency() 获取货币单位
+ * @method void setCurrency(string $Currency) 设置货币单位
+ * @method float getPolicy() 获取折扣率
+ * @method void setPolicy(float $Policy) 设置折扣率
+ * @method float getPrice() 获取单价（分）
+ * @method void setPrice(float $Price) 设置单价（分）
+ * @method float getTotalCost() 获取原价（分）
+ * @method void setTotalCost(float $TotalCost) 设置原价（分）
  */
 
 /**
@@ -87,6 +101,41 @@ class Deal extends AbstractModel
      * @var integer 产品分类ID
      */
     public $GoodsCategoryId;
+
+    /**
+     * @var array 产品详情
+     */
+    public $ProductInfo;
+
+    /**
+     * @var float 时长
+     */
+    public $TimeSpan;
+
+    /**
+     * @var string 时间单位
+     */
+    public $TimeUnit;
+
+    /**
+     * @var string 货币单位
+     */
+    public $Currency;
+
+    /**
+     * @var float 折扣率
+     */
+    public $Policy;
+
+    /**
+     * @var float 单价（分）
+     */
+    public $Price;
+
+    /**
+     * @var float 原价（分）
+     */
+    public $TotalCost;
     /**
      * @param string $OrderId 订单号
      * @param integer $Status 订单状态
@@ -97,6 +146,13 @@ class Deal extends AbstractModel
      * @param integer $VoucherDecline 代金券抵扣金额（分）
      * @param integer $ProjectId 项目ID
      * @param integer $GoodsCategoryId 产品分类ID
+     * @param array $ProductInfo 产品详情
+     * @param float $TimeSpan 时长
+     * @param string $TimeUnit 时间单位
+     * @param string $Currency 货币单位
+     * @param float $Policy 折扣率
+     * @param float $Price 单价（分）
+     * @param float $TotalCost 原价（分）
      */
     function __construct()
     {
@@ -144,6 +200,39 @@ class Deal extends AbstractModel
 
         if (array_key_exists("GoodsCategoryId",$param) and $param["GoodsCategoryId"] !== null) {
             $this->GoodsCategoryId = $param["GoodsCategoryId"];
+        }
+
+        if (array_key_exists("ProductInfo",$param) and $param["ProductInfo"] !== null) {
+            $this->ProductInfo = [];
+            foreach ($param["ProductInfo"] as $key => $value){
+                $obj = new ProductInfo();
+                $obj->deserialize($value);
+                array_push($this->ProductInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
+            $this->TimeSpan = $param["TimeSpan"];
+        }
+
+        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
+            $this->TimeUnit = $param["TimeUnit"];
+        }
+
+        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
+            $this->Currency = $param["Currency"];
+        }
+
+        if (array_key_exists("Policy",$param) and $param["Policy"] !== null) {
+            $this->Policy = $param["Policy"];
+        }
+
+        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
+            $this->Price = $param["Price"];
+        }
+
+        if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
+            $this->TotalCost = $param["TotalCost"];
         }
     }
 }

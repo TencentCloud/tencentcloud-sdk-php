@@ -14,48 +14,56 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cr\V20180321\Models;
+namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDailyReportUrl() 获取日报下载地址
- * @method void setDailyReportUrl(string $DailyReportUrl) 设置日报下载地址
- * @method string getResultReportUrl() 获取结果下载地址
- * @method void setResultReportUrl(string $ResultReportUrl) 设置结果下载地址
- * @method string getDetailReportUrl() 获取明细下载地址
- * @method void setDetailReportUrl(string $DetailReportUrl) 设置明细下载地址
+ * @method string getInterval() 获取返回数据的时间粒度，查询时指定：
+min：1 分钟粒度
+5min：5 分钟粒度
+hour：1 小时粒度
+day：天粒度
+ * @method void setInterval(string $Interval) 设置返回数据的时间粒度，查询时指定：
+min：1 分钟粒度
+5min：5 分钟粒度
+hour：1 小时粒度
+day：天粒度
+ * @method array getData() 获取指定条件查询得到的数据明细
+ * @method void setData(array $Data) 设置指定条件查询得到的数据明细
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *DownloadReport返回参数结构体
+ *DescribeCdnData返回参数结构体
  */
-class DownloadReportResponse extends AbstractModel
+class DescribeCdnDataResponse extends AbstractModel
 {
     /**
-     * @var string 日报下载地址
+     * @var string 返回数据的时间粒度，查询时指定：
+min：1 分钟粒度
+5min：5 分钟粒度
+hour：1 小时粒度
+day：天粒度
      */
-    public $DailyReportUrl;
+    public $Interval;
 
     /**
-     * @var string 结果下载地址
+     * @var array 指定条件查询得到的数据明细
      */
-    public $ResultReportUrl;
-
-    /**
-     * @var string 明细下载地址
-     */
-    public $DetailReportUrl;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $DailyReportUrl 日报下载地址
-     * @param string $ResultReportUrl 结果下载地址
-     * @param string $DetailReportUrl 明细下载地址
+     * @param string $Interval 返回数据的时间粒度，查询时指定：
+min：1 分钟粒度
+5min：5 分钟粒度
+hour：1 小时粒度
+day：天粒度
+     * @param array $Data 指定条件查询得到的数据明细
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,16 +78,17 @@ class DownloadReportResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DailyReportUrl",$param) and $param["DailyReportUrl"] !== null) {
-            $this->DailyReportUrl = $param["DailyReportUrl"];
+        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
+            $this->Interval = $param["Interval"];
         }
 
-        if (array_key_exists("ResultReportUrl",$param) and $param["ResultReportUrl"] !== null) {
-            $this->ResultReportUrl = $param["ResultReportUrl"];
-        }
-
-        if (array_key_exists("DetailReportUrl",$param) and $param["DetailReportUrl"] !== null) {
-            $this->DetailReportUrl = $param["DetailReportUrl"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new ResourceData();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

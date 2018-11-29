@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getInstanceId() 获取待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
  * @method void setInstanceId(string $InstanceId) 设置待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
- * @method integer getLimit() 获取实例列表大小
- * @method void setLimit(integer $Limit) 设置实例列表大小
+ * @method integer getLimit() 获取实例列表大小，默认大小20
+ * @method void setLimit(integer $Limit) 设置实例列表大小，默认大小20
  * @method integer getOffset() 获取偏移量，取Limit整数倍
  * @method void setOffset(integer $Offset) 设置偏移量，取Limit整数倍
  * @method string getBeginTime() 获取开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
@@ -43,7 +43,7 @@ class DescribeInstanceBackupsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 实例列表大小
+     * @var integer 实例列表大小，默认大小20
      */
     public $Limit;
 
@@ -68,7 +68,7 @@ class DescribeInstanceBackupsRequest extends AbstractModel
     public $Status;
     /**
      * @param string $InstanceId 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
-     * @param integer $Limit 实例列表大小
+     * @param integer $Limit 实例列表大小，默认大小20
      * @param integer $Offset 偏移量，取Limit整数倍
      * @param string $BeginTime 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
      * @param string $EndTime 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。

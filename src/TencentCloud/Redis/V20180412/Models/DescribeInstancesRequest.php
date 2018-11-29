@@ -18,28 +18,32 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getLimit() 获取实例列表大小
- * @method void setLimit(integer $Limit) 设置实例列表大小
+ * @method integer getLimit() 获取实例列表的大小，参数默认值20
+ * @method void setLimit(integer $Limit) 设置实例列表的大小，参数默认值20
  * @method integer getOffset() 获取偏移量，取Limit整数倍
  * @method void setOffset(integer $Offset) 设置偏移量，取Limit整数倍
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getInstanceId() 获取实例Id，如：crs-6ubhgouj
+ * @method void setInstanceId(string $InstanceId) 设置实例Id，如：crs-6ubhgouj
  * @method string getOrderBy() 获取枚举范围： projectId,createtime,instancename,type,curDeadline
  * @method void setOrderBy(string $OrderBy) 设置枚举范围： projectId,createtime,instancename,type,curDeadline
  * @method integer getOrderType() 获取1倒序，0顺序，默认倒序
  * @method void setOrderType(integer $OrderType) 设置1倒序，0顺序，默认倒序
- * @method array getVpcIds() 获取私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络
- * @method void setVpcIds(array $VpcIds) 设置私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络
- * @method array getSubnetIds() 获取子网ID数组，数组下标从0开始
- * @method void setSubnetIds(array $SubnetIds) 设置子网ID数组，数组下标从0开始
+ * @method array getVpcIds() 获取私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
+ * @method void setVpcIds(array $VpcIds) 设置私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
+ * @method array getSubnetIds() 获取子网ID数组，数组下标从0开始，如：56854
+ * @method void setSubnetIds(array $SubnetIds) 设置子网ID数组，数组下标从0开始，如：56854
  * @method array getProjectIds() 获取项目ID 组成的数组，数组下标从0开始
  * @method void setProjectIds(array $ProjectIds) 设置项目ID 组成的数组，数组下标从0开始
  * @method string getSearchKey() 获取查找实例的ID。
  * @method void setSearchKey(string $SearchKey) 设置查找实例的ID。
- * @method array getRegionIds() 获取查询的Region的列表。
- * @method void setRegionIds(array $RegionIds) 设置查询的Region的列表。
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
+ * @method array getUniqVpcIds() 获取私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+ * @method void setUniqVpcIds(array $UniqVpcIds) 设置私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+ * @method array getUniqSubnetIds() 获取子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+ * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+ * @method array getRegionIds() 获取地域ID，已经弃用，可通过公共参数Region查询对应地域
+ * @method void setRegionIds(array $RegionIds) 设置地域ID，已经弃用，可通过公共参数Region查询对应地域
  */
 
 /**
@@ -48,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer 实例列表大小
+     * @var integer 实例列表的大小，参数默认值20
      */
     public $Limit;
 
@@ -58,7 +62,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 实例Id
+     * @var string 实例Id，如：crs-6ubhgouj
      */
     public $InstanceId;
 
@@ -73,12 +77,12 @@ class DescribeInstancesRequest extends AbstractModel
     public $OrderType;
 
     /**
-     * @var array 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络
+     * @var array 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
      */
     public $VpcIds;
 
     /**
-     * @var array 子网ID数组，数组下标从0开始
+     * @var array 子网ID数组，数组下标从0开始，如：56854
      */
     public $SubnetIds;
 
@@ -93,26 +97,38 @@ class DescribeInstancesRequest extends AbstractModel
     public $SearchKey;
 
     /**
-     * @var array 查询的Region的列表。
-     */
-    public $RegionIds;
-
-    /**
      * @var string 实例名称
      */
     public $InstanceName;
+
     /**
-     * @param integer $Limit 实例列表大小
+     * @var array 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     */
+    public $UniqVpcIds;
+
+    /**
+     * @var array 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     */
+    public $UniqSubnetIds;
+
+    /**
+     * @var array 地域ID，已经弃用，可通过公共参数Region查询对应地域
+     */
+    public $RegionIds;
+    /**
+     * @param integer $Limit 实例列表的大小，参数默认值20
      * @param integer $Offset 偏移量，取Limit整数倍
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId 实例Id，如：crs-6ubhgouj
      * @param string $OrderBy 枚举范围： projectId,createtime,instancename,type,curDeadline
      * @param integer $OrderType 1倒序，0顺序，默认倒序
-     * @param array $VpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络
-     * @param array $SubnetIds 子网ID数组，数组下标从0开始
+     * @param array $VpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
+     * @param array $SubnetIds 子网ID数组，数组下标从0开始，如：56854
      * @param array $ProjectIds 项目ID 组成的数组，数组下标从0开始
      * @param string $SearchKey 查找实例的ID。
-     * @param array $RegionIds 查询的Region的列表。
      * @param string $InstanceName 实例名称
+     * @param array $UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     * @param array $UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     * @param array $RegionIds 地域ID，已经弃用，可通过公共参数Region查询对应地域
      */
     function __construct()
     {
@@ -162,12 +178,20 @@ class DescribeInstancesRequest extends AbstractModel
             $this->SearchKey = $param["SearchKey"];
         }
 
-        if (array_key_exists("RegionIds",$param) and $param["RegionIds"] !== null) {
-            $this->RegionIds = $param["RegionIds"];
-        }
-
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("UniqVpcIds",$param) and $param["UniqVpcIds"] !== null) {
+            $this->UniqVpcIds = $param["UniqVpcIds"];
+        }
+
+        if (array_key_exists("UniqSubnetIds",$param) and $param["UniqSubnetIds"] !== null) {
+            $this->UniqSubnetIds = $param["UniqSubnetIds"];
+        }
+
+        if (array_key_exists("RegionIds",$param) and $param["RegionIds"] !== null) {
+            $this->RegionIds = $param["RegionIds"];
         }
     }
 }

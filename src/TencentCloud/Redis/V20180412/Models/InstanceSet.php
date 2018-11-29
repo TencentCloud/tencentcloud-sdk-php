@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method string getInstanceId() 获取实例串号
- * @method void setInstanceId(string $InstanceId) 设置实例串号
- * @method integer getAppid() 获取appid
- * @method void setAppid(integer $Appid) 设置appid
- * @method integer getProjectId() 获取项目id
- * @method void setProjectId(integer $ProjectId) 设置项目id
- * @method integer getRegionId() 获取地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
- * @method void setRegionId(integer $RegionId) 设置地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
+ * @method string getInstanceId() 获取实例Id
+ * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method integer getAppid() 获取用户的Appid
+ * @method void setAppid(integer $Appid) 设置用户的Appid
+ * @method integer getProjectId() 获取项目Id
+ * @method void setProjectId(integer $ProjectId) 设置项目Id
+ * @method integer getRegionId() 获取地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+ * @method void setRegionId(integer $RegionId) 设置地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
  * @method integer getZoneId() 获取区域id
  * @method void setZoneId(integer $ZoneId) 设置区域id
  * @method integer getVpcId() 获取vpc网络id 如：75101
  * @method void setVpcId(integer $VpcId) 设置vpc网络id 如：75101
  * @method integer getSubnetId() 获取vpc网络下子网id 如：46315
  * @method void setSubnetId(integer $SubnetId) 设置vpc网络下子网id 如：46315
- * @method integer getStatus() 获取实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离
- * @method void setStatus(integer $Status) 设置实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离
+ * @method integer getStatus() 获取实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
+ * @method void setStatus(integer $Status) 设置实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
  * @method string getWanIp() 获取实例vip
  * @method void setWanIp(string $WanIp) 设置实例vip
  * @method integer getPort() 获取实例端口号
@@ -46,16 +46,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(float $Size) 设置实例容量大小，单位：MB
  * @method float getSizeUsed() 获取实例当前已使用容量，单位：MB
  * @method void setSizeUsed(float $SizeUsed) 设置实例当前已使用容量，单位：MB
- * @method integer getType() 获取实例类型，1：集群版；2：主从版
- * @method void setType(integer $Type) 设置实例类型，1：集群版；2：主从版
+ * @method integer getType() 获取实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
+ * @method void setType(integer $Type) 设置实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
  * @method integer getAutoRenewFlag() 获取实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
  * @method string getDeadlineTime() 获取实例到期时间
  * @method void setDeadlineTime(string $DeadlineTime) 设置实例到期时间
  * @method string getEngine() 获取引擎：社区版Redis、腾讯云CKV
  * @method void setEngine(string $Engine) 设置引擎：社区版Redis、腾讯云CKV
- * @method string getProductType() 获取产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
- * @method void setProductType(string $ProductType) 设置产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
+ * @method string getProductType() 获取产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
+ * @method void setProductType(string $ProductType) 设置产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
  * @method string getUniqVpcId() 获取vpc网络id 如：vpc-fk33jsf43kgv
  * @method void setUniqVpcId(string $UniqVpcId) 设置vpc网络id 如：vpc-fk33jsf43kgv
  * @method string getUniqSubnetId() 获取vpc网络下子网id 如：subnet-fd3j6l35mm0
@@ -75,22 +75,22 @@ class InstanceSet extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var string 实例串号
+     * @var string 实例Id
      */
     public $InstanceId;
 
     /**
-     * @var integer appid
+     * @var integer 用户的Appid
      */
     public $Appid;
 
     /**
-     * @var integer 项目id
+     * @var integer 项目Id
      */
     public $ProjectId;
 
     /**
-     * @var integer 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
+     * @var integer 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
      */
     public $RegionId;
 
@@ -110,7 +110,7 @@ class InstanceSet extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离
+     * @var integer 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
      */
     public $Status;
 
@@ -140,7 +140,7 @@ class InstanceSet extends AbstractModel
     public $SizeUsed;
 
     /**
-     * @var integer 实例类型，1：集群版；2：主从版
+     * @var integer 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
      */
     public $Type;
 
@@ -160,7 +160,7 @@ class InstanceSet extends AbstractModel
     public $Engine;
 
     /**
-     * @var string 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
+     * @var string 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
      */
     public $ProductType;
 
@@ -180,24 +180,24 @@ class InstanceSet extends AbstractModel
     public $BillingMode;
     /**
      * @param string $InstanceName 实例名称
-     * @param string $InstanceId 实例串号
-     * @param integer $Appid appid
-     * @param integer $ProjectId 项目id
-     * @param integer $RegionId 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
+     * @param string $InstanceId 实例Id
+     * @param integer $Appid 用户的Appid
+     * @param integer $ProjectId 项目Id
+     * @param integer $RegionId 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
      * @param integer $ZoneId 区域id
      * @param integer $VpcId vpc网络id 如：75101
      * @param integer $SubnetId vpc网络下子网id 如：46315
-     * @param integer $Status 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离
+     * @param integer $Status 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
      * @param string $WanIp 实例vip
      * @param integer $Port 实例端口号
      * @param string $Createtime 实例创建时间
      * @param float $Size 实例容量大小，单位：MB
      * @param float $SizeUsed 实例当前已使用容量，单位：MB
-     * @param integer $Type 实例类型，1：集群版；2：主从版
+     * @param integer $Type 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
      * @param integer $AutoRenewFlag 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
      * @param string $DeadlineTime 实例到期时间
      * @param string $Engine 引擎：社区版Redis、腾讯云CKV
-     * @param string $ProductType 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
+     * @param string $ProductType 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
      * @param string $UniqVpcId vpc网络id 如：vpc-fk33jsf43kgv
      * @param string $UniqSubnetId vpc网络下子网id 如：subnet-fd3j6l35mm0
      * @param integer $BillingMode 计费模式：0-按量计费，1-包年包月

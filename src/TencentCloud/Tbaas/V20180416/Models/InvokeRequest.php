@@ -18,24 +18,24 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getModule() 获取模块名
- * @method void setModule(string $Module) 设置模块名
- * @method string getOperation() 获取操作名
- * @method void setOperation(string $Operation) 设置操作名
- * @method string getClusterId() 获取cluster标识
- * @method void setClusterId(string $ClusterId) 设置cluster标识
- * @method string getChaincodeName() 获取合约名称
- * @method void setChaincodeName(string $ChaincodeName) 设置合约名称
- * @method string getChannelName() 获取通道名称
- * @method void setChannelName(string $ChannelName) 设置通道名称
- * @method array getPeers() 获取使用的节点名称及对应组织名称
- * @method void setPeers(array $Peers) 设置使用的节点名称及对应组织名称
- * @method string getFuncName() 获取函数名
- * @method void setFuncName(string $FuncName) 设置函数名
- * @method array getArgs() 获取函数参数列表
- * @method void setArgs(array $Args) 设置函数参数列表
- * @method integer getAsyncFlag() 获取同步调用标识
- * @method void setAsyncFlag(integer $AsyncFlag) 设置同步调用标识
+ * @method string getModule() 获取模块名，固定字段：transaction
+ * @method void setModule(string $Module) 设置模块名，固定字段：transaction
+ * @method string getOperation() 获取操作名，固定地段：invoke
+ * @method void setOperation(string $Operation) 设置操作名，固定地段：invoke
+ * @method string getClusterId() 获取区块链网络ID，可在区块链网络详情或列表中获取
+ * @method void setClusterId(string $ClusterId) 设置区块链网络ID，可在区块链网络详情或列表中获取
+ * @method string getChaincodeName() 获取业务所属智能合约名称，可在智能合约详情或列表中获取
+ * @method void setChaincodeName(string $ChaincodeName) 设置业务所属智能合约名称，可在智能合约详情或列表中获取
+ * @method string getChannelName() 获取业务所属通道名称，可在通道详情或列表中获取
+ * @method void setChannelName(string $ChannelName) 设置业务所属通道名称，可在通道详情或列表中获取
+ * @method array getPeers() 获取对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
+ * @method void setPeers(array $Peers) 设置对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
+ * @method string getFuncName() 获取该笔交易需要调用的智能合约中的函数名称
+ * @method void setFuncName(string $FuncName) 设置该笔交易需要调用的智能合约中的函数名称
+ * @method array getArgs() 获取被调用的函数参数列表
+ * @method void setArgs(array $Args) 设置被调用的函数参数列表
+ * @method integer getAsyncFlag() 获取同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
+ * @method void setAsyncFlag(integer $AsyncFlag) 设置同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
  */
 
 /**
@@ -44,59 +44,59 @@ use TencentCloud\Common\AbstractModel;
 class InvokeRequest extends AbstractModel
 {
     /**
-     * @var string 模块名
+     * @var string 模块名，固定字段：transaction
      */
     public $Module;
 
     /**
-     * @var string 操作名
+     * @var string 操作名，固定地段：invoke
      */
     public $Operation;
 
     /**
-     * @var string cluster标识
+     * @var string 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public $ClusterId;
 
     /**
-     * @var string 合约名称
+     * @var string 业务所属智能合约名称，可在智能合约详情或列表中获取
      */
     public $ChaincodeName;
 
     /**
-     * @var string 通道名称
+     * @var string 业务所属通道名称，可在通道详情或列表中获取
      */
     public $ChannelName;
 
     /**
-     * @var array 使用的节点名称及对应组织名称
+     * @var array 对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
      */
     public $Peers;
 
     /**
-     * @var string 函数名
+     * @var string 该笔交易需要调用的智能合约中的函数名称
      */
     public $FuncName;
 
     /**
-     * @var array 函数参数列表
+     * @var array 被调用的函数参数列表
      */
     public $Args;
 
     /**
-     * @var integer 同步调用标识
+     * @var integer 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
      */
     public $AsyncFlag;
     /**
-     * @param string $Module 模块名
-     * @param string $Operation 操作名
-     * @param string $ClusterId cluster标识
-     * @param string $ChaincodeName 合约名称
-     * @param string $ChannelName 通道名称
-     * @param array $Peers 使用的节点名称及对应组织名称
-     * @param string $FuncName 函数名
-     * @param array $Args 函数参数列表
-     * @param integer $AsyncFlag 同步调用标识
+     * @param string $Module 模块名，固定字段：transaction
+     * @param string $Operation 操作名，固定地段：invoke
+     * @param string $ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
+     * @param string $ChaincodeName 业务所属智能合约名称，可在智能合约详情或列表中获取
+     * @param string $ChannelName 业务所属通道名称，可在通道详情或列表中获取
+     * @param array $Peers 对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * @param string $FuncName 该笔交易需要调用的智能合约中的函数名称
+     * @param array $Args 被调用的函数参数列表
+     * @param integer $AsyncFlag 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
      */
     function __construct()
     {

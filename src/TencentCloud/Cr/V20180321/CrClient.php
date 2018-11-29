@@ -22,8 +22,11 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cr\V20180321\Models as Models;
 
 /**
+* @method Models\ApplyBlackListResponse ApplyBlackList(Models\ApplyBlackListRequest $req) 提交黑名单申请。
+* @method Models\DescribeRecordsResponse DescribeRecords(Models\DescribeRecordsRequest $req) 查询录音，返回录音列表。
 * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 客户调用该接口查看任务执行状态。输入任务ID，输出任务执行状态或者结果
 * @method Models\DownloadReportResponse DownloadReport(Models\DownloadReportRequest $req) 客户调用该接口下载指定日期的催收报告
+* @method Models\UploadDataFileResponse UploadDataFile(Models\UploadDataFileRequest $req) 客户通过调用该接口上传需催收文档或还款文档，接口返回任务ID。
 * @method Models\UploadFileResponse UploadFile(Models\UploadFileRequest $req) 客户通过调用该接口上传需催收文档，格式需为excel格式。接口返回任务ID。
  */
 
@@ -56,5 +59,14 @@ class CrClient extends AbstractClient
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;
+    }
+
+    public function UploadDataFile($req)
+    {
+        $options = array(
+            "IsMultipart" => true,
+            "BinaryParams" => array("File"),
+        );
+        return $this->doRequestWithOptions("UploadDataFile", $req, $options);
     }
 }

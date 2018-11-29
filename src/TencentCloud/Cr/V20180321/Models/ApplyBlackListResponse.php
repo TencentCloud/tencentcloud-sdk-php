@@ -18,44 +18,20 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDailyReportUrl() 获取日报下载地址
- * @method void setDailyReportUrl(string $DailyReportUrl) 设置日报下载地址
- * @method string getResultReportUrl() 获取结果下载地址
- * @method void setResultReportUrl(string $ResultReportUrl) 设置结果下载地址
- * @method string getDetailReportUrl() 获取明细下载地址
- * @method void setDetailReportUrl(string $DetailReportUrl) 设置明细下载地址
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *DownloadReport返回参数结构体
+ *ApplyBlackList返回参数结构体
  */
-class DownloadReportResponse extends AbstractModel
+class ApplyBlackListResponse extends AbstractModel
 {
-    /**
-     * @var string 日报下载地址
-     */
-    public $DailyReportUrl;
-
-    /**
-     * @var string 结果下载地址
-     */
-    public $ResultReportUrl;
-
-    /**
-     * @var string 明细下载地址
-     */
-    public $DetailReportUrl;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $DailyReportUrl 日报下载地址
-     * @param string $ResultReportUrl 结果下载地址
-     * @param string $DetailReportUrl 明细下载地址
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,18 +46,6 @@ class DownloadReportResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DailyReportUrl",$param) and $param["DailyReportUrl"] !== null) {
-            $this->DailyReportUrl = $param["DailyReportUrl"];
-        }
-
-        if (array_key_exists("ResultReportUrl",$param) and $param["ResultReportUrl"] !== null) {
-            $this->ResultReportUrl = $param["ResultReportUrl"];
-        }
-
-        if (array_key_exists("DetailReportUrl",$param) and $param["DetailReportUrl"] !== null) {
-            $this->DetailReportUrl = $param["DetailReportUrl"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

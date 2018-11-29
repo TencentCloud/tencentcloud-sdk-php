@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFeeEndTime(string $FeeEndTime) 设置结束使用时间
  * @method array getComponentSet() 获取组件列表
  * @method void setComponentSet(array $ComponentSet) 设置组件列表
+ * @method string getPayerUin() 获取支付者UIN
+ * @method void setPayerUin(string $PayerUin) 设置支付者UIN
+ * @method string getOwnerUin() 获取使用者UIN
+ * @method void setOwnerUin(string $OwnerUin) 设置使用者UIN
+ * @method string getOperateUin() 获取操作者UIN
+ * @method void setOperateUin(string $OperateUin) 设置操作者UIN
  */
 
 /**
@@ -129,6 +135,21 @@ class BillDetail extends AbstractModel
      * @var array 组件列表
      */
     public $ComponentSet;
+
+    /**
+     * @var string 支付者UIN
+     */
+    public $PayerUin;
+
+    /**
+     * @var string 使用者UIN
+     */
+    public $OwnerUin;
+
+    /**
+     * @var string 操作者UIN
+     */
+    public $OperateUin;
     /**
      * @param string $BusinessCodeName 产品名称
      * @param string $ProductCodeName 子产品名称
@@ -145,6 +166,9 @@ class BillDetail extends AbstractModel
      * @param string $FeeBeginTime 开始使用时间
      * @param string $FeeEndTime 结束使用时间
      * @param array $ComponentSet 组件列表
+     * @param string $PayerUin 支付者UIN
+     * @param string $OwnerUin 使用者UIN
+     * @param string $OperateUin 操作者UIN
      */
     function __construct()
     {
@@ -221,6 +245,18 @@ class BillDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ComponentSet, $obj);
             }
+        }
+
+        if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
+            $this->PayerUin = $param["PayerUin"];
+        }
+
+        if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
+            $this->OwnerUin = $param["OwnerUin"];
+        }
+
+        if (array_key_exists("OperateUin",$param) and $param["OperateUin"] !== null) {
+            $this->OperateUin = $param["OperateUin"];
         }
     }
 }

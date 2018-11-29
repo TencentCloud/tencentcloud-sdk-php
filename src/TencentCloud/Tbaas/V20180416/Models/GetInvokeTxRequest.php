@@ -18,18 +18,18 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getModule() 获取模块名
- * @method void setModule(string $Module) 设置模块名
- * @method string getOperation() 获取操作名
- * @method void setOperation(string $Operation) 设置操作名
- * @method string getClusterId() 获取cluster标识
- * @method void setClusterId(string $ClusterId) 设置cluster标识
- * @method string getChannelName() 获取通道名称
- * @method void setChannelName(string $ChannelName) 设置通道名称
- * @method string getPeerName() 获取节点名称
- * @method void setPeerName(string $PeerName) 设置节点名称
- * @method string getPeerGroup() 获取节点所属组织名称
- * @method void setPeerGroup(string $PeerGroup) 设置节点所属组织名称
+ * @method string getModule() 获取模块名，固定字段：transaction
+ * @method void setModule(string $Module) 设置模块名，固定字段：transaction
+ * @method string getOperation() 获取操作名，固定地段：invoke
+ * @method void setOperation(string $Operation) 设置操作名，固定地段：invoke
+ * @method string getClusterId() 获取区块链网络ID，可在区块链网络详情或列表中获取
+ * @method void setClusterId(string $ClusterId) 设置区块链网络ID，可在区块链网络详情或列表中获取
+ * @method string getChannelName() 获取业务所属通道名称，可在通道详情或列表中获取
+ * @method void setChannelName(string $ChannelName) 设置业务所属通道名称，可在通道详情或列表中获取
+ * @method string getPeerName() 获取执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+ * @method void setPeerName(string $PeerName) 设置执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+ * @method string getPeerGroup() 获取执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+ * @method void setPeerGroup(string $PeerGroup) 设置执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
  * @method string getTxId() 获取事务ID
  * @method void setTxId(string $TxId) 设置事务ID
  */
@@ -40,32 +40,32 @@ use TencentCloud\Common\AbstractModel;
 class GetInvokeTxRequest extends AbstractModel
 {
     /**
-     * @var string 模块名
+     * @var string 模块名，固定字段：transaction
      */
     public $Module;
 
     /**
-     * @var string 操作名
+     * @var string 操作名，固定地段：invoke
      */
     public $Operation;
 
     /**
-     * @var string cluster标识
+     * @var string 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public $ClusterId;
 
     /**
-     * @var string 通道名称
+     * @var string 业务所属通道名称，可在通道详情或列表中获取
      */
     public $ChannelName;
 
     /**
-     * @var string 节点名称
+     * @var string 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
      */
     public $PeerName;
 
     /**
-     * @var string 节点所属组织名称
+     * @var string 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
      */
     public $PeerGroup;
 
@@ -74,12 +74,12 @@ class GetInvokeTxRequest extends AbstractModel
      */
     public $TxId;
     /**
-     * @param string $Module 模块名
-     * @param string $Operation 操作名
-     * @param string $ClusterId cluster标识
-     * @param string $ChannelName 通道名称
-     * @param string $PeerName 节点名称
-     * @param string $PeerGroup 节点所属组织名称
+     * @param string $Module 模块名，固定字段：transaction
+     * @param string $Operation 操作名，固定地段：invoke
+     * @param string $ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
+     * @param string $ChannelName 业务所属通道名称，可在通道详情或列表中获取
+     * @param string $PeerName 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * @param string $PeerGroup 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
      * @param string $TxId 事务ID
      */
     function __construct()

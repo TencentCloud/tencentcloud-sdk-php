@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceState(string $InstanceState) 设置实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
  * @method array getTags() 获取实例关联的标签列表。
  * @method void setTags(array $Tags) 设置实例关联的标签列表。
+ * @method string getStopChargingMode() 获取实例的关机计费模式。
+取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
+ * @method void setStopChargingMode(string $StopChargingMode) 设置实例的关机计费模式。
+取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
  */
 
 /**
@@ -185,6 +189,12 @@ class Instance extends AbstractModel
      * @var array 实例关联的标签列表。
      */
     public $Tags;
+
+    /**
+     * @var string 实例的关机计费模式。
+取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
+     */
+    public $StopChargingMode;
     /**
      * @param Placement $Placement 实例所在的位置。
      * @param string $InstanceId 实例`ID`。
@@ -209,6 +219,8 @@ class Instance extends AbstractModel
      * @param LoginSettings $LoginSettings 实例登录设置。目前只返回实例所关联的密钥。
      * @param string $InstanceState 实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
      * @param array $Tags 实例关联的标签列表。
+     * @param string $StopChargingMode 实例的关机计费模式。
+取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
      */
     function __construct()
     {
@@ -327,6 +339,10 @@ class Instance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("StopChargingMode",$param) and $param["StopChargingMode"] !== null) {
+            $this->StopChargingMode = $param["StopChargingMode"];
         }
     }
 }

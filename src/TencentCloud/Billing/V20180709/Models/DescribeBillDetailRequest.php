@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriodType(string $PeriodType) 设置周期类型，byPayTime按扣费周期/byUsedTime按计费周期
  * @method string getMonth() 获取月份，格式为yyyy-mm
  * @method void setMonth(string $Month) 设置月份，格式为yyyy-mm
+ * @method string getBeginTime() 获取周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
+ * @method void setBeginTime(string $BeginTime) 设置周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
+ * @method string getEndTime() 获取周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
+ * @method void setEndTime(string $EndTime) 设置周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
  */
 
 /**
@@ -52,11 +56,23 @@ class DescribeBillDetailRequest extends AbstractModel
      * @var string 月份，格式为yyyy-mm
      */
     public $Month;
+
+    /**
+     * @var string 周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
+     */
+    public $BeginTime;
+
+    /**
+     * @var string 周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
+     */
+    public $EndTime;
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 数量，最大值为100
      * @param string $PeriodType 周期类型，byPayTime按扣费周期/byUsedTime按计费周期
      * @param string $Month 月份，格式为yyyy-mm
+     * @param string $BeginTime 周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
+     * @param string $EndTime 周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class DescribeBillDetailRequest extends AbstractModel
 
         if (array_key_exists("Month",$param) and $param["Month"] !== null) {
             $this->Month = $param["Month"];
+        }
+
+        if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {
+            $this->BeginTime = $param["BeginTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

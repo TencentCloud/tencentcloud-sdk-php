@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsSaleout(boolean $IsSaleout) 设置可用区是否售罄
  * @method boolean getIsDefault() 获取是否为默认可用区
  * @method void setIsDefault(boolean $IsDefault) 设置是否为默认可用区
- * @method array getNetWorkType() 获取网络类型
- * @method void setNetWorkType(array $NetWorkType) 设置网络类型
+ * @method array getNetWorkType() 获取网络类型：basenet -- 基础网络；vpcnet -- VPC网络
+ * @method void setNetWorkType(array $NetWorkType) 设置网络类型：basenet -- 基础网络；vpcnet -- VPC网络
  * @method array getProductSet() 获取可用区内产品规格等信息
  * @method void setProductSet(array $ProductSet) 设置可用区内产品规格等信息
  * @method integer getOldZoneId() 获取可用区ID：如100003
@@ -60,7 +60,7 @@ class ZoneCapacityConf extends AbstractModel
     public $IsDefault;
 
     /**
-     * @var array 网络类型
+     * @var array 网络类型：basenet -- 基础网络；vpcnet -- VPC网络
      */
     public $NetWorkType;
 
@@ -78,7 +78,7 @@ class ZoneCapacityConf extends AbstractModel
      * @param string $ZoneName 可用区名称
      * @param boolean $IsSaleout 可用区是否售罄
      * @param boolean $IsDefault 是否为默认可用区
-     * @param array $NetWorkType 网络类型
+     * @param array $NetWorkType 网络类型：basenet -- 基础网络；vpcnet -- VPC网络
      * @param array $ProductSet 可用区内产品规格等信息
      * @param integer $OldZoneId 可用区ID：如100003
      */

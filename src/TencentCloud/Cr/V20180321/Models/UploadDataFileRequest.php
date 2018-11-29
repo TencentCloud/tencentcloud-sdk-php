@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileName(string $FileName) 设置文件名
  * @method string getUploadModel() 获取上传类型，不填默认催收文件，催收文件为data，还款文件为repay。
  * @method void setUploadModel(string $UploadModel) 设置上传类型，不填默认催收文件，催收文件为data，还款文件为repay。
- * @method binary getFile() 获取文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
- * @method void setFile(binary $File) 设置文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
+ * @method string getFile() 获取文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
+ * @method void setFile(string $File) 设置文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
  * @method string getFileUrl() 获取文件上传地址
  * @method void setFileUrl(string $FileUrl) 设置文件上传地址
  */
@@ -58,7 +58,7 @@ class UploadDataFileRequest extends AbstractModel
     public $UploadModel;
 
     /**
-     * @var binary 文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
+     * @var string 文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
      */
     public $File;
 
@@ -71,7 +71,7 @@ class UploadDataFileRequest extends AbstractModel
      * @param string $Operation 操作名
      * @param string $FileName 文件名
      * @param string $UploadModel 上传类型，不填默认催收文件，催收文件为data，还款文件为repay。
-     * @param binary $File 文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
+     * @param string $File 文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
      * @param string $FileUrl 文件上传地址
      */
     function __construct()
@@ -103,8 +103,7 @@ class UploadDataFileRequest extends AbstractModel
         }
 
         if (array_key_exists("File",$param) and $param["File"] !== null) {
-            $this->File = new binary();
-            $this->File->deserialize($param["File"]);
+            $this->File = $param["File"];
         }
 
         if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {

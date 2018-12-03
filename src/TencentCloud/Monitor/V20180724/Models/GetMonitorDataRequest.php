@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstances(array $Instances) 设置实例对象的维度组合
  * @method integer getPeriod() 获取监控统计周期。默认为取值为300，单位为s
  * @method void setPeriod(integer $Period) 设置监控统计周期。默认为取值为300，单位为s
- * @method string getStartTime() 获取起始时间，如 2018-01-01 00:00:00
- * @method void setStartTime(string $StartTime) 设置起始时间，如 2018-01-01 00:00:00
+ * @method string getStartTime() 获取起始时间，如2018-09-22T19:51:23+08:00
+ * @method void setStartTime(string $StartTime) 设置起始时间，如2018-09-22T19:51:23+08:00
  * @method string getEndTime() 获取结束时间，默认为当前时间。 EndTime不能小于EtartTime
  * @method void setEndTime(string $EndTime) 设置结束时间，默认为当前时间。 EndTime不能小于EtartTime
  */
@@ -58,7 +58,7 @@ class GetMonitorDataRequest extends AbstractModel
     public $Period;
 
     /**
-     * @var string 起始时间，如 2018-01-01 00:00:00
+     * @var string 起始时间，如2018-09-22T19:51:23+08:00
      */
     public $StartTime;
 
@@ -71,7 +71,7 @@ class GetMonitorDataRequest extends AbstractModel
      * @param string $MetricName 指标名称
      * @param array $Instances 实例对象的维度组合
      * @param integer $Period 监控统计周期。默认为取值为300，单位为s
-     * @param string $StartTime 起始时间，如 2018-01-01 00:00:00
+     * @param string $StartTime 起始时间，如2018-09-22T19:51:23+08:00
      * @param string $EndTime 结束时间，默认为当前时间。 EndTime不能小于EtartTime
      */
     function __construct()

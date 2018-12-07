@@ -36,6 +36,7 @@ use TencentCloud\Youmall\V20180228\Models as Models;
 
 
 * @method Models\DescribePersonInfoResponse DescribePersonInfo(Models\DescribePersonInfoRequest $req) 指定门店获取所有顾客详情列表，包含客户ID、图片、年龄、性别
+* @method Models\DescribePersonInfoByFacePictureResponse DescribePersonInfoByFacePicture(Models\DescribePersonInfoByFacePictureRequest $req) 通过上传人脸图片检索系统face id、顾客身份信息及底图
 * @method Models\DescribePersonTraceResponse DescribePersonTrace(Models\DescribePersonTraceRequest $req) 输出开始时间到结束时间段内的进出场数据。
 * @method Models\DescribePersonTraceDetailResponse DescribePersonTraceDetail(Models\DescribePersonTraceDetailRequest $req) 查询客户单次到场轨迹明细
 * @method Models\DescribePersonVisitInfoResponse DescribePersonVisitInfo(Models\DescribePersonVisitInfoRequest $req) 获取门店指定时间范围内的所有用户到访信息记录，支持的时间范围：过去365天，含当天。

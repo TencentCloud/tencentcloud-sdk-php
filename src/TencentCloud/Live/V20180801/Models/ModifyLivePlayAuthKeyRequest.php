@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthKey(string $AuthKey) 设置鉴权key。
  * @method integer getAuthDelta() 获取有效时间，单位：秒。
  * @method void setAuthDelta(integer $AuthDelta) 设置有效时间，单位：秒。
+ * @method string getAuthBackKey() 获取鉴权backkey。
+ * @method void setAuthBackKey(string $AuthBackKey) 设置鉴权backkey。
  */
 
 /**
@@ -52,11 +54,17 @@ class ModifyLivePlayAuthKeyRequest extends AbstractModel
      * @var integer 有效时间，单位：秒。
      */
     public $AuthDelta;
+
+    /**
+     * @var string 鉴权backkey。
+     */
+    public $AuthBackKey;
     /**
      * @param string $DomainName 域名。
      * @param integer $Enable 是否启用，0：关闭，1：启用。
      * @param string $AuthKey 鉴权key。
      * @param integer $AuthDelta 有效时间，单位：秒。
+     * @param string $AuthBackKey 鉴权backkey。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyLivePlayAuthKeyRequest extends AbstractModel
 
         if (array_key_exists("AuthDelta",$param) and $param["AuthDelta"] !== null) {
             $this->AuthDelta = $param["AuthDelta"];
+        }
+
+        if (array_key_exists("AuthBackKey",$param) and $param["AuthBackKey"] !== null) {
+            $this->AuthBackKey = $param["AuthBackKey"];
         }
     }
 }

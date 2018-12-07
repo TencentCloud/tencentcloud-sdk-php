@@ -36,6 +36,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
 
 + 5 分钟活跃用户数：根据日志中客户端 IP，5 分钟粒度去重统计
 + 日活跃用户数：根据日志中客户端 IP，按天粒度去重统计
+* @method Models\DescribeMapInfoResponse DescribeMapInfo(Models\DescribeMapInfoRequest $req) DescribeMapInfo 用于查询省份对应的 ID，运营商对应的 ID 信息。
 * @method Models\DescribeOriginDataResponse DescribeOriginData(Models\DescribeOriginDataRequest $req) DescribeOriginData 用于查询 CDN 实时回源监控数据，支持以下指标查询：
 
 + 回源流量（单位为 byte）
@@ -47,6 +48,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
 + 回源状态码 3XX 汇总及各 3 开头回源状态码明细（单位为 个）
 + 回源状态码 4XX 汇总及各 4 开头回源状态码明细（单位为 个）
 + 回源状态码 5XX 汇总及各 5 开头回源状态码明细（单位为 个）
+* @method Models\DescribePayTypeResponse DescribePayType(Models\DescribePayTypeRequest $req) DescribePayType 用于查询用户的计费类型，计费周期等信息。
 * @method Models\ListTopDataResponse ListTopData(Models\ListTopDataRequest $req) ListTopData 通过入参 Metric 和 Filter 组合不同，可以查询以下排序数据：
 
 + 依据总流量、总请求数对访问 URL 排序，从大至小返回 TOP 1000 URL

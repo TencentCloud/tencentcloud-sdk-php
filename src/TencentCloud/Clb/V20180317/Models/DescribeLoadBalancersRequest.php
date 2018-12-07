@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 OPEN：公网属性， INTERNAL：内网属性。
  * @method void setLoadBalancerType(string $LoadBalancerType) 设置负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
- * @method integer getForward() 获取1：应用型，0：传统型，-1：全部类型。
- * @method void setForward(integer $Forward) 设置1：应用型，0：传统型，-1：全部类型。
+ * @method integer getForward() 获取1：应用型，0：传统型。
+ * @method void setForward(integer $Forward) 设置1：应用型，0：传统型。
  * @method string getLoadBalancerName() 获取负载均衡实例名称。
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡实例名称。
  * @method string getDomain() 获取腾讯云为负载均衡实例分配的域名，应用型负载均衡该字段无意义。
@@ -69,7 +69,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $LoadBalancerType;
 
     /**
-     * @var integer 1：应用型，0：传统型，-1：全部类型。
+     * @var integer 1：应用型，0：传统型。
      */
     public $Forward;
 
@@ -136,7 +136,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param array $LoadBalancerIds 负载均衡实例 ID。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
-     * @param integer $Forward 1：应用型，0：传统型，-1：全部类型。
+     * @param integer $Forward 1：应用型，0：传统型。
      * @param string $LoadBalancerName 负载均衡实例名称。
      * @param string $Domain 腾讯云为负载均衡实例分配的域名，应用型负载均衡该字段无意义。
      * @param array $LoadBalancerVips 负载均衡实例的 VIP 地址，支持多个。

@@ -18,8 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getHealthSwitch() 获取是否开启健康检查：1（开启）、0（关闭）。默认值 1，表示打开。
- * @method void setHealthSwitch(integer $HealthSwitch) 设置是否开启健康检查：1（开启）、0（关闭）。默认值 1，表示打开。
+ * @method integer getHealthSwitch() 获取是否开启健康检查：1（开启）、0（关闭）。
+ * @method void setHealthSwitch(integer $HealthSwitch) 设置是否开启健康检查：1（开启）、0（关闭）。
  * @method integer getTimeOut() 获取健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
  * @method void setTimeOut(integer $TimeOut) 设置健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
  * @method integer getIntervalTime() 获取健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class HealthCheck extends AbstractModel
 {
     /**
-     * @var integer 是否开启健康检查：1（开启）、0（关闭）。默认值 1，表示打开。
+     * @var integer 是否开启健康检查：1（开启）、0（关闭）。
      */
     public $HealthSwitch;
 
@@ -91,7 +91,7 @@ class HealthCheck extends AbstractModel
      */
     public $HttpCheckMethod;
     /**
-     * @param integer $HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。默认值 1，表示打开。
+     * @param integer $HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。
      * @param integer $TimeOut 健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
      * @param integer $IntervalTime 健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
      * @param integer $HealthNum 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。

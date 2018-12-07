@@ -40,8 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) 设置应用型负载均衡器列表，目前长度上限为1，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
  * @method array getSubnetIds() 获取子网ID列表，VPC场景下必须指定子网
  * @method void setSubnetIds(array $SubnetIds) 设置子网ID列表，VPC场景下必须指定子网
- * @method array getTerminationPolicies() 获取销毁策略，目前长度上限为1
- * @method void setTerminationPolicies(array $TerminationPolicies) 设置销毁策略，目前长度上限为1
+ * @method array getTerminationPolicies() 获取销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE，默认取值为 OLDEST_INSTANCE。
+<br><li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。
+<br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
+ * @method void setTerminationPolicies(array $TerminationPolicies) 设置销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE，默认取值为 OLDEST_INSTANCE。
+<br><li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。
+<br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
  * @method array getZones() 获取可用区列表，基础网络场景下必须指定可用区
  * @method void setZones(array $Zones) 设置可用区列表，基础网络场景下必须指定可用区
  * @method string getRetryPolicy() 获取重试策略，取值包括 IMMEDIATE_RETRY 和 INCREMENTAL_INTERVALS，默认取值为 IMMEDIATE_RETRY。
@@ -50,6 +54,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetryPolicy(string $RetryPolicy) 设置重试策略，取值包括 IMMEDIATE_RETRY 和 INCREMENTAL_INTERVALS，默认取值为 IMMEDIATE_RETRY。
 <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。在连续失败超过一定次数（25次）后不再重试。
+ * @method string getZonesCheckPolicy() 获取可用区校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+<br><li> ALL，所有可用区（Zone）或子网（SubnetId）都可用则通过校验，否则校验报错。
+<br><li> ANY，存在任何一个可用区（Zone）或子网（SubnetId）可用则通过校验，否则校验报错。
+
+可用区或子网不可用的常见原因包括该可用区CVM实例类型售罄、该可用区CBS云盘售罄、该可用区配额不足、该子网IP不足等。
+如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
+ * @method void setZonesCheckPolicy(string $ZonesCheckPolicy) 设置可用区校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+<br><li> ALL，所有可用区（Zone）或子网（SubnetId）都可用则通过校验，否则校验报错。
+<br><li> ANY，存在任何一个可用区（Zone）或子网（SubnetId）可用则通过校验，否则校验报错。
+
+可用区或子网不可用的常见原因包括该可用区CVM实例类型售罄、该可用区CBS云盘售罄、该可用区配额不足、该子网IP不足等。
+如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
  */
 
 /**
@@ -113,7 +129,9 @@ class CreateAutoScalingGroupRequest extends AbstractModel
     public $SubnetIds;
 
     /**
-     * @var array 销毁策略，目前长度上限为1
+     * @var array 销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE，默认取值为 OLDEST_INSTANCE。
+<br><li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。
+<br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
      */
     public $TerminationPolicies;
 
@@ -128,6 +146,16 @@ class CreateAutoScalingGroupRequest extends AbstractModel
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。在连续失败超过一定次数（25次）后不再重试。
      */
     public $RetryPolicy;
+
+    /**
+     * @var string 可用区校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+<br><li> ALL，所有可用区（Zone）或子网（SubnetId）都可用则通过校验，否则校验报错。
+<br><li> ANY，存在任何一个可用区（Zone）或子网（SubnetId）可用则通过校验，否则校验报错。
+
+可用区或子网不可用的常见原因包括该可用区CVM实例类型售罄、该可用区CBS云盘售罄、该可用区配额不足、该子网IP不足等。
+如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
+     */
+    public $ZonesCheckPolicy;
     /**
      * @param string $AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      * @param string $LaunchConfigurationId 启动配置ID
@@ -140,11 +168,19 @@ class CreateAutoScalingGroupRequest extends AbstractModel
      * @param integer $ProjectId 项目ID
      * @param array $ForwardLoadBalancers 应用型负载均衡器列表，目前长度上限为1，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
      * @param array $SubnetIds 子网ID列表，VPC场景下必须指定子网
-     * @param array $TerminationPolicies 销毁策略，目前长度上限为1
+     * @param array $TerminationPolicies 销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE，默认取值为 OLDEST_INSTANCE。
+<br><li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。
+<br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
      * @param array $Zones 可用区列表，基础网络场景下必须指定可用区
      * @param string $RetryPolicy 重试策略，取值包括 IMMEDIATE_RETRY 和 INCREMENTAL_INTERVALS，默认取值为 IMMEDIATE_RETRY。
 <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。在连续失败超过一定次数（25次）后不再重试。
+     * @param string $ZonesCheckPolicy 可用区校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+<br><li> ALL，所有可用区（Zone）或子网（SubnetId）都可用则通过校验，否则校验报错。
+<br><li> ANY，存在任何一个可用区（Zone）或子网（SubnetId）可用则通过校验，否则校验报错。
+
+可用区或子网不可用的常见原因包括该可用区CVM实例类型售罄、该可用区CBS云盘售罄、该可用区配额不足、该子网IP不足等。
+如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
      */
     function __construct()
     {
@@ -217,6 +253,10 @@ class CreateAutoScalingGroupRequest extends AbstractModel
 
         if (array_key_exists("RetryPolicy",$param) and $param["RetryPolicy"] !== null) {
             $this->RetryPolicy = $param["RetryPolicy"];
+        }
+
+        if (array_key_exists("ZonesCheckPolicy",$param) and $param["ZonesCheckPolicy"] !== null) {
+            $this->ZonesCheckPolicy = $param["ZonesCheckPolicy"];
         }
     }
 }

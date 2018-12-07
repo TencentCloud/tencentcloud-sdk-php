@@ -18,8 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSSLMode() 获取认证类型，unidirectional：单向认证，mutual：双向认证
- * @method void setSSLMode(string $SSLMode) 设置认证类型，unidirectional：单向认证，mutual：双向认证
+ * @method string getSSLMode() 获取认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+ * @method void setSSLMode(string $SSLMode) 设置认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
  * @method string getCertId() 获取服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
  * @method void setCertId(string $CertId) 设置服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
  * @method string getCertCaId() 获取客户端证书的 ID，如果 SSLMode=mutual，监听器如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class CertificateInput extends AbstractModel
 {
     /**
-     * @var string 认证类型，unidirectional：单向认证，mutual：双向认证
+     * @var string 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      */
     public $SSLMode;
 
@@ -81,7 +81,7 @@ class CertificateInput extends AbstractModel
      */
     public $CertCaContent;
     /**
-     * @param string $SSLMode 认证类型，unidirectional：单向认证，mutual：双向认证
+     * @param string $SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      * @param string $CertId 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
      * @param string $CertCaId 客户端证书的 ID，如果 SSLMode=mutual，监听器如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
      * @param string $CertName 上传服务端证书的名称，如果没有 CertId，则此项必传。

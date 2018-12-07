@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getCompanyId() 获取集团ID
  * @method void setCompanyId(string $CompanyId) 设置集团ID
- * @method integer getShopId() 获取店铺ID
- * @method void setShopId(integer $ShopId) 设置店铺ID
- * @method integer getPersonType() 获取人物类型（0表示普通顾客，1 白名单，2 表示黑名单）
- * @method void setPersonType(integer $PersonType) 设置人物类型（0表示普通顾客，1 白名单，2 表示黑名单）
+ * @method integer getPersonType() 获取人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
+ * @method void setPersonType(integer $PersonType) 设置人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
  * @method string getPicture() 获取图片BASE编码
  * @method void setPicture(string $Picture) 设置图片BASE编码
  * @method string getPictureName() 获取图片名称
  * @method void setPictureName(string $PictureName) 设置图片名称
+ * @method integer getShopId() 获取店铺ID，如果不填表示操作集团身份库
+ * @method void setShopId(integer $ShopId) 设置店铺ID，如果不填表示操作集团身份库
  * @method boolean getIsForceUpload() 获取是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
  * @method void setIsForceUpload(boolean $IsForceUpload) 设置是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
  */
@@ -43,12 +43,7 @@ class CreateFacePictureRequest extends AbstractModel
     public $CompanyId;
 
     /**
-     * @var integer 店铺ID
-     */
-    public $ShopId;
-
-    /**
-     * @var integer 人物类型（0表示普通顾客，1 白名单，2 表示黑名单）
+     * @var integer 人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      */
     public $PersonType;
 
@@ -63,15 +58,20 @@ class CreateFacePictureRequest extends AbstractModel
     public $PictureName;
 
     /**
+     * @var integer 店铺ID，如果不填表示操作集团身份库
+     */
+    public $ShopId;
+
+    /**
      * @var boolean 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
      */
     public $IsForceUpload;
     /**
      * @param string $CompanyId 集团ID
-     * @param integer $ShopId 店铺ID
-     * @param integer $PersonType 人物类型（0表示普通顾客，1 白名单，2 表示黑名单）
+     * @param integer $PersonType 人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      * @param string $Picture 图片BASE编码
      * @param string $PictureName 图片名称
+     * @param integer $ShopId 店铺ID，如果不填表示操作集团身份库
      * @param boolean $IsForceUpload 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
      */
     function __construct()
@@ -90,10 +90,6 @@ class CreateFacePictureRequest extends AbstractModel
             $this->CompanyId = $param["CompanyId"];
         }
 
-        if (array_key_exists("ShopId",$param) and $param["ShopId"] !== null) {
-            $this->ShopId = $param["ShopId"];
-        }
-
         if (array_key_exists("PersonType",$param) and $param["PersonType"] !== null) {
             $this->PersonType = $param["PersonType"];
         }
@@ -104,6 +100,10 @@ class CreateFacePictureRequest extends AbstractModel
 
         if (array_key_exists("PictureName",$param) and $param["PictureName"] !== null) {
             $this->PictureName = $param["PictureName"];
+        }
+
+        if (array_key_exists("ShopId",$param) and $param["ShopId"] !== null) {
+            $this->ShopId = $param["ShopId"];
         }
 
         if (array_key_exists("IsForceUpload",$param) and $param["IsForceUpload"] !== null) {

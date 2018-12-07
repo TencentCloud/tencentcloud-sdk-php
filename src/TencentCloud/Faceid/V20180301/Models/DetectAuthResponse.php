@@ -14,40 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Yunjing\V20180228\Models;
+namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method float getOriginalPrice() 获取预支费用的原价，单位：元。
- * @method void setOriginalPrice(float $OriginalPrice) 设置预支费用的原价，单位：元。
- * @method float getDiscountPrice() 获取预支费用的折扣价，单位：元。
- * @method void setDiscountPrice(float $DiscountPrice) 设置预支费用的折扣价，单位：元。
+ * @method string getUrl() 获取用于跳转的URL。只能于微信中打开。
+ * @method void setUrl(string $Url) 设置用于跳转的URL。只能于微信中打开。
+ * @method string getBizToken() 获取业务流水号。在获取认证信息接口中作为BizToken传入
+ * @method void setBizToken(string $BizToken) 设置业务流水号。在获取认证信息接口中作为BizToken传入
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *InquiryPriceOpenProVersionPrepaid返回参数结构体
+ *DetectAuth返回参数结构体
  */
-class InquiryPriceOpenProVersionPrepaidResponse extends AbstractModel
+class DetectAuthResponse extends AbstractModel
 {
     /**
-     * @var float 预支费用的原价，单位：元。
+     * @var string 用于跳转的URL。只能于微信中打开。
      */
-    public $OriginalPrice;
+    public $Url;
 
     /**
-     * @var float 预支费用的折扣价，单位：元。
+     * @var string 业务流水号。在获取认证信息接口中作为BizToken传入
      */
-    public $DiscountPrice;
+    public $BizToken;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param float $OriginalPrice 预支费用的原价，单位：元。
-     * @param float $DiscountPrice 预支费用的折扣价，单位：元。
+     * @param string $Url 用于跳转的URL。只能于微信中打开。
+     * @param string $BizToken 业务流水号。在获取认证信息接口中作为BizToken传入
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,12 @@ class InquiryPriceOpenProVersionPrepaidResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OriginalPrice",$param) and $param["OriginalPrice"] !== null) {
-            $this->OriginalPrice = $param["OriginalPrice"];
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
 
-        if (array_key_exists("DiscountPrice",$param) and $param["DiscountPrice"] !== null) {
-            $this->DiscountPrice = $param["DiscountPrice"];
+        if (array_key_exists("BizToken",$param) and $param["BizToken"] !== null) {
+            $this->BizToken = $param["BizToken"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

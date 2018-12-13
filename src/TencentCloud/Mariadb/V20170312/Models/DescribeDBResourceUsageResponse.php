@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuUsageRate(MonitorData $CpuUsageRate) 设置CPU利用率
  * @method MonitorData getMemAvailable() 获取内存可用空间,单位GB
  * @method void setMemAvailable(MonitorData $MemAvailable) 设置内存可用空间,单位GB
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -56,7 +56,7 @@ class DescribeDBResourceUsageResponse extends AbstractModel
     public $MemAvailable;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -64,7 +64,7 @@ class DescribeDBResourceUsageResponse extends AbstractModel
      * @param MonitorData $DataDiskAvailable 磁盘可用空间,单位GB
      * @param MonitorData $CpuUsageRate CPU利用率
      * @param MonitorData $MemAvailable 内存可用空间,单位GB
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -28,8 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDevicePrivateKey(string $DevicePrivateKey) 设置设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数
  * @method string getLoraDevEui() 获取LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
  * @method void setLoraDevEui(string $LoraDevEui) 设置LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method integer getLoraMoteType() 获取LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
+ * @method void setLoraMoteType(integer $LoraMoteType) 设置LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
+ * @method string getLoraAppKey() 获取LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段
+ * @method void setLoraAppKey(string $LoraAppKey) 设置LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段
+ * @method string getLoraNwkKey() 获取LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段
+ * @method void setLoraNwkKey(string $LoraNwkKey) 设置LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -63,7 +69,22 @@ class CreateDeviceResponse extends AbstractModel
     public $LoraDevEui;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var integer LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
+     */
+    public $LoraMoteType;
+
+    /**
+     * @var string LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段
+     */
+    public $LoraAppKey;
+
+    /**
+     * @var string LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段
+     */
+    public $LoraNwkKey;
+
+    /**
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -72,7 +93,10 @@ class CreateDeviceResponse extends AbstractModel
      * @param string $DeviceCert 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数
      * @param string $DevicePrivateKey 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数
      * @param string $LoraDevEui LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param integer $LoraMoteType LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
+     * @param string $LoraAppKey LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段
+     * @param string $LoraNwkKey LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -104,6 +128,18 @@ class CreateDeviceResponse extends AbstractModel
 
         if (array_key_exists("LoraDevEui",$param) and $param["LoraDevEui"] !== null) {
             $this->LoraDevEui = $param["LoraDevEui"];
+        }
+
+        if (array_key_exists("LoraMoteType",$param) and $param["LoraMoteType"] !== null) {
+            $this->LoraMoteType = $param["LoraMoteType"];
+        }
+
+        if (array_key_exists("LoraAppKey",$param) and $param["LoraAppKey"] !== null) {
+            $this->LoraAppKey = $param["LoraAppKey"];
+        }
+
+        if (array_key_exists("LoraNwkKey",$param) and $param["LoraNwkKey"] !== null) {
+            $this->LoraNwkKey = $param["LoraNwkKey"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

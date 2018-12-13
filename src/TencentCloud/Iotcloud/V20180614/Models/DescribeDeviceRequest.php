@@ -18,21 +18,29 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getProductID() 获取产品ID
+ * @method void setProductID(string $ProductID) 设置产品ID
+ * @method string getDeviceName() 获取产品名
+ * @method void setDeviceName(string $DeviceName) 设置产品名
  */
 
 /**
- *DeleteDevice返回参数结构体
+ *DescribeDevice请求参数结构体
  */
-class DeleteDeviceResponse extends AbstractModel
+class DescribeDeviceRequest extends AbstractModel
 {
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 产品ID
      */
-    public $RequestId;
+    public $ProductID;
+
     /**
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 产品名
+     */
+    public $DeviceName;
+    /**
+     * @param string $ProductID 产品ID
+     * @param string $DeviceName 产品名
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DeleteDeviceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("ProductID",$param) and $param["ProductID"] !== null) {
+            $this->ProductID = $param["ProductID"];
+        }
+
+        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
+            $this->DeviceName = $param["DeviceName"];
         }
     }
 }

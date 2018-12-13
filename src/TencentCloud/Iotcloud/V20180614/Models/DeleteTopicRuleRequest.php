@@ -18,21 +18,21 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRuleName() 获取规则名
+ * @method void setRuleName(string $RuleName) 设置规则名
  */
 
 /**
- *DeleteDevice返回参数结构体
+ *DeleteTopicRule请求参数结构体
  */
-class DeleteDeviceResponse extends AbstractModel
+class DeleteTopicRuleRequest extends AbstractModel
 {
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 规则名
      */
-    public $RequestId;
+    public $RuleName;
     /**
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RuleName 规则名
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteDeviceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
+            $this->RuleName = $param["RuleName"];
         }
     }
 }

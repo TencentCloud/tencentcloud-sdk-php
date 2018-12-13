@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImei(string $Imei) 设置IMEI，当产品是NB-IoT产品时，此字段必填
  * @method string getLoraDevEui() 获取LoRa设备的DevEui，当创建LoRa时，此字段必填
  * @method void setLoraDevEui(string $LoraDevEui) 设置LoRa设备的DevEui，当创建LoRa时，此字段必填
+ * @method integer getLoraMoteType() 获取LoRa设备的MoteType
+ * @method void setLoraMoteType(integer $LoraMoteType) 设置LoRa设备的MoteType
+ * @method string getSkey() 获取创建LoRa设备需要skey
+ * @method void setSkey(string $Skey) 设置创建LoRa设备需要skey
  */
 
 /**
@@ -73,6 +77,16 @@ class CreateDeviceRequest extends AbstractModel
      * @var string LoRa设备的DevEui，当创建LoRa时，此字段必填
      */
     public $LoraDevEui;
+
+    /**
+     * @var integer LoRa设备的MoteType
+     */
+    public $LoraMoteType;
+
+    /**
+     * @var string 创建LoRa设备需要skey
+     */
+    public $Skey;
     /**
      * @param string $ProductId 产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
      * @param string $DeviceName 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
@@ -81,6 +95,8 @@ class CreateDeviceRequest extends AbstractModel
      * @param integer $Isp 运营商类型，当产品是NB-IoT产品时，此字段必填。1表示中国电信，2表示中国移动，3表示中国联通
      * @param string $Imei IMEI，当产品是NB-IoT产品时，此字段必填
      * @param string $LoraDevEui LoRa设备的DevEui，当创建LoRa时，此字段必填
+     * @param integer $LoraMoteType LoRa设备的MoteType
+     * @param string $Skey 创建LoRa设备需要skey
      */
     function __construct()
     {
@@ -121,6 +137,14 @@ class CreateDeviceRequest extends AbstractModel
 
         if (array_key_exists("LoraDevEui",$param) and $param["LoraDevEui"] !== null) {
             $this->LoraDevEui = $param["LoraDevEui"];
+        }
+
+        if (array_key_exists("LoraMoteType",$param) and $param["LoraMoteType"] !== null) {
+            $this->LoraMoteType = $param["LoraMoteType"];
+        }
+
+        if (array_key_exists("Skey",$param) and $param["Skey"] !== null) {
+            $this->Skey = $param["Skey"];
         }
     }
 }

@@ -20,20 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getSessionId() 获取语音段唯一标识，一段语音一个SessionId
  * @method void setSessionId(string $SessionId) 设置语音段唯一标识，一段语音一个SessionId
- * @method string getRefText() 获取被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
- * @method void setRefText(string $RefText) 设置被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
- * @method integer getWorkMode() 获取语音输入模式，0流式分片，1非流式一次性评估
- * @method void setWorkMode(integer $WorkMode) 设置语音输入模式，0流式分片，1非流式一次性评估
- * @method integer getEvalMode() 获取评估模式，0:词模式, 1:句子模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
- * @method void setEvalMode(integer $EvalMode) 设置评估模式，0:词模式, 1:句子模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
+ * @method string getRefText() 获取被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，会统一替换成空格，中文评估使用 utf-8 编码，自由说模式该值传空。
+ * @method void setRefText(string $RefText) 设置被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，会统一替换成空格，中文评估使用 utf-8 编码，自由说模式该值传空。
+ * @method integer getWorkMode() 获取语音输入模式，0：流式分片，1：非流式一次性评估
+ * @method void setWorkMode(integer $WorkMode) 设置语音输入模式，0：流式分片，1：非流式一次性评估
+ * @method integer getEvalMode() 获取评估模式，0：词模式，,1：:句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
+ * @method void setEvalMode(integer $EvalMode) 设置评估模式，0：词模式，,1：:句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
  * @method float getScoreCoeff() 获取评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段
  * @method void setScoreCoeff(float $ScoreCoeff) 设置评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段
  * @method string getSoeAppId() 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
  * @method void setSoeAppId(string $SoeAppId) 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
  * @method integer getIsLongLifeSession() 获取长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
  * @method void setIsLongLifeSession(integer $IsLongLifeSession) 设置长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
- * @method integer getStorageMode() 获取音频存储模式，0：不存储，1：存储到公共对象存储
- * @method void setStorageMode(integer $StorageMode) 设置音频存储模式，0：不存储，1：存储到公共对象存储
+ * @method integer getStorageMode() 获取音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段。
+ * @method void setStorageMode(integer $StorageMode) 设置音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段。
+ * @method integer getSentenceInfoEnabled() 获取输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
+ * @method void setSentenceInfoEnabled(integer $SentenceInfoEnabled) 设置输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
+ * @method integer getServerType() 获取评估语言，0：英文，1：中文。
+ * @method void setServerType(integer $ServerType) 设置评估语言，0：英文，1：中文。
  */
 
 /**
@@ -47,17 +51,17 @@ class InitOralProcessRequest extends AbstractModel
     public $SessionId;
 
     /**
-     * @var string 被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
+     * @var string 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，会统一替换成空格，中文评估使用 utf-8 编码，自由说模式该值传空。
      */
     public $RefText;
 
     /**
-     * @var integer 语音输入模式，0流式分片，1非流式一次性评估
+     * @var integer 语音输入模式，0：流式分片，1：非流式一次性评估
      */
     public $WorkMode;
 
     /**
-     * @var integer 评估模式，0:词模式, 1:句子模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
+     * @var integer 评估模式，0：词模式，,1：:句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
      */
     public $EvalMode;
 
@@ -77,18 +81,30 @@ class InitOralProcessRequest extends AbstractModel
     public $IsLongLifeSession;
 
     /**
-     * @var integer 音频存储模式，0：不存储，1：存储到公共对象存储
+     * @var integer 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段。
      */
     public $StorageMode;
+
+    /**
+     * @var integer 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
+     */
+    public $SentenceInfoEnabled;
+
+    /**
+     * @var integer 评估语言，0：英文，1：中文。
+     */
+    public $ServerType;
     /**
      * @param string $SessionId 语音段唯一标识，一段语音一个SessionId
-     * @param string $RefText 被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
-     * @param integer $WorkMode 语音输入模式，0流式分片，1非流式一次性评估
-     * @param integer $EvalMode 评估模式，0:词模式, 1:句子模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
+     * @param string $RefText 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，会统一替换成空格，中文评估使用 utf-8 编码，自由说模式该值传空。
+     * @param integer $WorkMode 语音输入模式，0：流式分片，1：非流式一次性评估
+     * @param integer $EvalMode 评估模式，0：词模式，,1：:句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
      * @param float $ScoreCoeff 评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段
      * @param string $SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
      * @param integer $IsLongLifeSession 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
-     * @param integer $StorageMode 音频存储模式，0：不存储，1：存储到公共对象存储
+     * @param integer $StorageMode 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段。
+     * @param integer $SentenceInfoEnabled 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
+     * @param integer $ServerType 评估语言，0：英文，1：中文。
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class InitOralProcessRequest extends AbstractModel
 
         if (array_key_exists("StorageMode",$param) and $param["StorageMode"] !== null) {
             $this->StorageMode = $param["StorageMode"];
+        }
+
+        if (array_key_exists("SentenceInfoEnabled",$param) and $param["SentenceInfoEnabled"] !== null) {
+            $this->SentenceInfoEnabled = $param["SentenceInfoEnabled"];
+        }
+
+        if (array_key_exists("ServerType",$param) and $param["ServerType"] !== null) {
+            $this->ServerType = $param["ServerType"];
         }
     }
 }

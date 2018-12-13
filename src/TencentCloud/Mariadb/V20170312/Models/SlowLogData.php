@@ -46,10 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRowsExaminedSum(integer $RowsExaminedSum) 设置扫描行数
  * @method integer getRowsSentSum() 获取发送行数
  * @method void setRowsSentSum(integer $RowsSentSum) 设置发送行数
- * @method string getTsMax() 获取首次执行时间
- * @method void setTsMax(string $TsMax) 设置首次执行时间
- * @method string getTsMin() 获取最后执行时间
- * @method void setTsMin(string $TsMin) 设置最后执行时间
+ * @method string getTsMax() 获取最后执行时间
+ * @method void setTsMax(string $TsMax) 设置最后执行时间
+ * @method string getTsMin() 获取首次执行时间
+ * @method void setTsMin(string $TsMin) 设置首次执行时间
  * @method string getUser() 获取帐号
  * @method void setUser(string $User) 设置帐号
  */
@@ -130,12 +130,12 @@ class SlowLogData extends AbstractModel
     public $RowsSentSum;
 
     /**
-     * @var string 首次执行时间
+     * @var string 最后执行时间
      */
     public $TsMax;
 
     /**
-     * @var string 最后执行时间
+     * @var string 首次执行时间
      */
     public $TsMin;
 
@@ -158,8 +158,8 @@ class SlowLogData extends AbstractModel
      * @param float $QueryTimeSum 查询时间总和
      * @param integer $RowsExaminedSum 扫描行数
      * @param integer $RowsSentSum 发送行数
-     * @param string $TsMax 首次执行时间
-     * @param string $TsMin 最后执行时间
+     * @param string $TsMax 最后执行时间
+     * @param string $TsMin 首次执行时间
      * @param string $User 帐号
      */
     function __construct()

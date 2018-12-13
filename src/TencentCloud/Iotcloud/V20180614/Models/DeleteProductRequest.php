@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getProductId() 获取需要删除的产品 ID
  * @method void setProductId(string $ProductId) 设置需要删除的产品 ID
+ * @method string getSkey() 获取删除LoRa产品需要skey
+ * @method void setSkey(string $Skey) 设置删除LoRa产品需要skey
  */
 
 /**
@@ -31,8 +33,14 @@ class DeleteProductRequest extends AbstractModel
      * @var string 需要删除的产品 ID
      */
     public $ProductId;
+
+    /**
+     * @var string 删除LoRa产品需要skey
+     */
+    public $Skey;
     /**
      * @param string $ProductId 需要删除的产品 ID
+     * @param string $Skey 删除LoRa产品需要skey
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteProductRequest extends AbstractModel
         }
         if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
             $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("Skey",$param) and $param["Skey"] !== null) {
+            $this->Skey = $param["Skey"];
         }
     }
 }

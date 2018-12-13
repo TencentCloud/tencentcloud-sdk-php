@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductName(string $ProductName) 设置产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
  * @method ProductProperties getProductProperties() 获取产品属性
  * @method void setProductProperties(ProductProperties $ProductProperties) 设置产品属性
+ * @method string getSkey() 获取创建LoRa产品需要的Skey
+ * @method void setSkey(string $Skey) 设置创建LoRa产品需要的Skey
  */
 
 /**
@@ -38,9 +40,15 @@ class CreateProductRequest extends AbstractModel
      * @var ProductProperties 产品属性
      */
     public $ProductProperties;
+
+    /**
+     * @var string 创建LoRa产品需要的Skey
+     */
+    public $Skey;
     /**
      * @param string $ProductName 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
      * @param ProductProperties $ProductProperties 产品属性
+     * @param string $Skey 创建LoRa产品需要的Skey
      */
     function __construct()
     {
@@ -61,6 +69,10 @@ class CreateProductRequest extends AbstractModel
         if (array_key_exists("ProductProperties",$param) and $param["ProductProperties"] !== null) {
             $this->ProductProperties = new ProductProperties();
             $this->ProductProperties->deserialize($param["ProductProperties"]);
+        }
+
+        if (array_key_exists("Skey",$param) and $param["Skey"] !== null) {
+            $this->Skey = $param["Skey"];
         }
     }
 }

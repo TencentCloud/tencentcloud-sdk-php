@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置语音段唯一标识，一段语音一个SessionId
  * @method string getAudioUrl() 获取保存语音音频文件下载地址
  * @method void setAudioUrl(string $AudioUrl) 设置保存语音音频文件下载地址
+ * @method array getSentenceInfoSet() 获取断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
+ * @method void setSentenceInfoSet(array $SentenceInfoSet) 设置断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -70,6 +72,11 @@ class TransmitOralProcessResponse extends AbstractModel
     public $AudioUrl;
 
     /**
+     * @var array 断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
+     */
+    public $SentenceInfoSet;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -80,6 +87,7 @@ class TransmitOralProcessResponse extends AbstractModel
      * @param array $Words 详细发音评估结果
      * @param string $SessionId 语音段唯一标识，一段语音一个SessionId
      * @param string $AudioUrl 保存语音音频文件下载地址
+     * @param array $SentenceInfoSet 断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -121,6 +129,15 @@ class TransmitOralProcessResponse extends AbstractModel
 
         if (array_key_exists("AudioUrl",$param) and $param["AudioUrl"] !== null) {
             $this->AudioUrl = $param["AudioUrl"];
+        }
+
+        if (array_key_exists("SentenceInfoSet",$param) and $param["SentenceInfoSet"] !== null) {
+            $this->SentenceInfoSet = [];
+            foreach ($param["SentenceInfoSet"] as $key => $value){
+                $obj = new SentenceInfo();
+                $obj->deserialize($value);
+                array_push($this->SentenceInfoSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

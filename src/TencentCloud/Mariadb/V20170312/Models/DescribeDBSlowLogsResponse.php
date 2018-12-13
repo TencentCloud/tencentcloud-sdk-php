@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotal(integer $Total) 设置总记录数
  * @method float getQueryTimeSum() 获取所有语句查询时间总和
  * @method void setQueryTimeSum(float $QueryTimeSum) 设置所有语句查询时间总和
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -63,7 +63,7 @@ class DescribeDBSlowLogsResponse extends AbstractModel
     public $QueryTimeSum;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -72,7 +72,7 @@ class DescribeDBSlowLogsResponse extends AbstractModel
      * @param integer $QueryCount 所有语句查询总次数
      * @param integer $Total 总记录数
      * @param float $QueryTimeSum 所有语句查询时间总和
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

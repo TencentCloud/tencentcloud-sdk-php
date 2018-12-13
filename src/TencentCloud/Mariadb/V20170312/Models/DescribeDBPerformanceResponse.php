@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsMasterSwitched(MonitorData $IsMasterSwitched) 设置是否发生主备切换，1为发生，0否
  * @method MonitorData getSlaveDelay() 获取主备延迟
  * @method void setSlaveDelay(MonitorData $SlaveDelay) 设置主备延迟
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -98,7 +98,7 @@ class DescribeDBPerformanceResponse extends AbstractModel
     public $SlaveDelay;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -112,7 +112,7 @@ class DescribeDBPerformanceResponse extends AbstractModel
      * @param MonitorData $ConnActive 活跃连接数
      * @param MonitorData $IsMasterSwitched 是否发生主备切换，1为发生，0否
      * @param MonitorData $SlaveDelay 主备延迟
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

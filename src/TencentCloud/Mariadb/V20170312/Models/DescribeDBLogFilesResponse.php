@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcPrefix(string $VpcPrefix) 设置如果是VPC网络的实例，做用本前缀加上URI为下载地址
  * @method string getNormalPrefix() 获取如果是普通网络的实例，做用本前缀加上URI为下载地址
  * @method void setNormalPrefix(string $NormalPrefix) 设置如果是普通网络的实例，做用本前缀加上URI为下载地址
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -70,7 +70,7 @@ class DescribeDBLogFilesResponse extends AbstractModel
     public $NormalPrefix;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -80,7 +80,7 @@ class DescribeDBLogFilesResponse extends AbstractModel
      * @param array $Files 包含uri、length、mtime（修改时间）等信息
      * @param string $VpcPrefix 如果是VPC网络的实例，做用本前缀加上URI为下载地址
      * @param string $NormalPrefix 如果是普通网络的实例，做用本前缀加上URI为下载地址
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

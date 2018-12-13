@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadOnly(integer $ReadOnly) 设置是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
  * @method string getDescription() 获取账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
  * @method void setDescription(string $Description) 设置账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
+ * @method integer getDelayThresh() 获取根据传入时间判断备机不可用
+ * @method void setDelayThresh(integer $DelayThresh) 设置根据传入时间判断备机不可用
  */
 
 /**
@@ -66,6 +68,11 @@ class CreateAccountRequest extends AbstractModel
      * @var string 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
      */
     public $Description;
+
+    /**
+     * @var integer 根据传入时间判断备机不可用
+     */
+    public $DelayThresh;
     /**
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param string $UserName 登录用户名，由字幕、数字、下划线和连字符组成，长度为1~32位。
@@ -73,6 +80,7 @@ class CreateAccountRequest extends AbstractModel
      * @param string $Password 账号密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
      * @param integer $ReadOnly 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      * @param string $Description 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
+     * @param integer $DelayThresh 根据传入时间判断备机不可用
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class CreateAccountRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("DelayThresh",$param) and $param["DelayThresh"] !== null) {
+            $this->DelayThresh = $param["DelayThresh"];
         }
     }
 }

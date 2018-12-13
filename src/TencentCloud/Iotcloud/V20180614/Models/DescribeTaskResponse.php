@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAllDeviceCnt(integer $AllDeviceCnt) 设置匹配到的需执行任务的设备数目
  * @method integer getDoneDeviceCnt() 获取已完成任务的设备数目
  * @method void setDoneDeviceCnt(integer $DoneDeviceCnt) 设置已完成任务的设备数目
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -119,7 +119,7 @@ class DescribeTaskResponse extends AbstractModel
     public $DoneDeviceCnt;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -136,7 +136,7 @@ class DescribeTaskResponse extends AbstractModel
      * @param integer $Percent 完成任务的设备比例
      * @param integer $AllDeviceCnt 匹配到的需执行任务的设备数目
      * @param integer $DoneDeviceCnt 已完成任务的设备数目
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

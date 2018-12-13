@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getModule() 获取模块名，固定字段：transaction
  * @method void setModule(string $Module) 设置模块名，固定字段：transaction
- * @method string getOperation() 获取操作名，固定地段：invoke
- * @method void setOperation(string $Operation) 设置操作名，固定地段：invoke
+ * @method string getOperation() 获取操作名，固定字段：query_txid
+ * @method void setOperation(string $Operation) 设置操作名，固定字段：query_txid
  * @method string getClusterId() 获取区块链网络ID，可在区块链网络详情或列表中获取
  * @method void setClusterId(string $ClusterId) 设置区块链网络ID，可在区块链网络详情或列表中获取
  * @method string getChannelName() 获取业务所属通道名称，可在通道详情或列表中获取
@@ -45,7 +45,7 @@ class GetInvokeTxRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var string 操作名，固定地段：invoke
+     * @var string 操作名，固定字段：query_txid
      */
     public $Operation;
 
@@ -75,7 +75,7 @@ class GetInvokeTxRequest extends AbstractModel
     public $TxId;
     /**
      * @param string $Module 模块名，固定字段：transaction
-     * @param string $Operation 操作名，固定地段：invoke
+     * @param string $Operation 操作名，固定字段：query_txid
      * @param string $ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      * @param string $ChannelName 业务所属通道名称，可在通道详情或列表中获取
      * @param string $PeerName 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称

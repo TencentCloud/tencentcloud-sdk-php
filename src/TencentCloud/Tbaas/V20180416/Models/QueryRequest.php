@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getModule() 获取模块名，固定字段：transaction
  * @method void setModule(string $Module) 设置模块名，固定字段：transaction
- * @method string getOperation() 获取操作名，固定地段：query
- * @method void setOperation(string $Operation) 设置操作名，固定地段：query
+ * @method string getOperation() 获取操作名，固定字段：query
+ * @method void setOperation(string $Operation) 设置操作名，固定字段：query
  * @method string getClusterId() 获取区块链网络ID，可在区块链网络详情或列表中获取
  * @method void setClusterId(string $ClusterId) 设置区块链网络ID，可在区块链网络详情或列表中获取
  * @method string getChaincodeName() 获取业务所属智能合约名称，可在智能合约详情或列表中获取
@@ -47,7 +47,7 @@ class QueryRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var string 操作名，固定地段：query
+     * @var string 操作名，固定字段：query
      */
     public $Operation;
 
@@ -82,7 +82,7 @@ class QueryRequest extends AbstractModel
     public $Args;
     /**
      * @param string $Module 模块名，固定字段：transaction
-     * @param string $Operation 操作名，固定地段：query
+     * @param string $Operation 操作名，固定字段：query
      * @param string $ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      * @param string $ChaincodeName 业务所属智能合约名称，可在智能合约详情或列表中获取
      * @param string $ChannelName 业务所属通道名称，可在通道详情或列表中获取

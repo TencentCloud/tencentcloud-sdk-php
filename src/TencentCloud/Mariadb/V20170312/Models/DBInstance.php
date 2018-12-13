@@ -86,6 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocker(integer $Locker) 设置实例处于异步任务时的异步任务流程ID
  * @method string getStatusDesc() 获取实例目前运行状态描述
  * @method void setStatusDesc(string $StatusDesc) 设置实例目前运行状态描述
+ * @method integer getWanStatus() 获取外网状态，0-未开通；1-已开通；2-关闭；3-开通中
+ * @method void setWanStatus(integer $WanStatus) 设置外网状态，0-未开通；1-已开通；2-关闭；3-开通中
  */
 
 /**
@@ -262,6 +264,11 @@ class DBInstance extends AbstractModel
      * @var string 实例目前运行状态描述
      */
     public $StatusDesc;
+
+    /**
+     * @var integer 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
+     */
+    public $WanStatus;
     /**
      * @param string $InstanceId 实例 Id，唯一标识一个 TDSQL 实例
      * @param string $InstanceName 实例名称，用户可修改
@@ -297,6 +304,7 @@ class DBInstance extends AbstractModel
      * @param string $Paymode 付费模式
      * @param integer $Locker 实例处于异步任务时的异步任务流程ID
      * @param string $StatusDesc 实例目前运行状态描述
+     * @param integer $WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      */
     function __construct()
     {
@@ -444,6 +452,10 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
             $this->StatusDesc = $param["StatusDesc"];
+        }
+
+        if (array_key_exists("WanStatus",$param) and $param["WanStatus"] !== null) {
+            $this->WanStatus = $param["WanStatus"];
         }
     }
 }

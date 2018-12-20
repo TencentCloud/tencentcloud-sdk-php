@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoGroup(RoGroup $RoGroup) 设置只读实例参数
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
+ * @method array getResourceTags() 获取实例要绑定的标签
+ * @method void setResourceTags(array $ResourceTags) 设置实例要绑定的标签
  */
 
 /**
@@ -185,6 +187,11 @@ class CreateDBInstanceRequest extends AbstractModel
      * @var string 实例名称
      */
     public $InstanceName;
+
+    /**
+     * @var array 实例要绑定的标签
+     */
+    public $ResourceTags;
     /**
      * @param integer $Memory 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
      * @param integer $Volume 实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
@@ -209,6 +216,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param array $SecurityGroup 安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
      * @param RoGroup $RoGroup 只读实例参数
      * @param string $InstanceName 实例名称
+     * @param array $ResourceTags 实例要绑定的标签
      */
     function __construct()
     {
@@ -318,6 +326,15 @@ class CreateDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

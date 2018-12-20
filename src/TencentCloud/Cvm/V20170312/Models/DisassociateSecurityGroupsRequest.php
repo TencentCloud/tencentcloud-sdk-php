@@ -18,10 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getSecurityGroupIds() 获取要解绑的`安全组ID`，类似sg-efil73jd，支持解绑多个安全组。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置要解绑的`安全组ID`，类似sg-efil73jd，支持解绑多个安全组。
- * @method array getInstanceIds() 获取被解绑的`实例ID`，类似ins-lesecurk 。
- * @method void setInstanceIds(array $InstanceIds) 设置被解绑的`实例ID`，类似ins-lesecurk 。
+ * @method array getSecurityGroupIds() 获取要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
+ * @method array getInstanceIds() 获取被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
+ * @method void setInstanceIds(array $InstanceIds) 设置被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class DisassociateSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var array 要解绑的`安全组ID`，类似sg-efil73jd，支持解绑多个安全组。
+     * @var array 要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
      */
     public $SecurityGroupIds;
 
     /**
-     * @var array 被解绑的`实例ID`，类似ins-lesecurk 。
+     * @var array 被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
      */
     public $InstanceIds;
     /**
-     * @param array $SecurityGroupIds 要解绑的`安全组ID`，类似sg-efil73jd，支持解绑多个安全组。
-     * @param array $InstanceIds 被解绑的`实例ID`，类似ins-lesecurk 。
+     * @param array $SecurityGroupIds 要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
+     * @param array $InstanceIds 被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
      */
     function __construct()
     {

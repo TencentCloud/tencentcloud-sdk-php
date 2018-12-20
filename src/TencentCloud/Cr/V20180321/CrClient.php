@@ -26,7 +26,7 @@ use TencentCloud\Cr\V20180321\Models as Models;
 * @method Models\DescribeRecordsResponse DescribeRecords(Models\DescribeRecordsRequest $req) 查询录音，返回录音列表。
 * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 客户调用该接口查看任务执行状态。输入任务ID，输出任务执行状态或者结果
 * @method Models\DownloadReportResponse DownloadReport(Models\DownloadReportRequest $req) 客户调用该接口下载指定日期的催收报告
-* @method Models\UploadDataFileResponse UploadDataFile(Models\UploadDataFileRequest $req) 客户通过调用该接口上传需催收文档或还款文档，接口返回任务ID。
+* @method Models\UploadDataFileResponse UploadDataFile(Models\UploadDataFileRequest $req) 客户通过调用该接口上传需催收文档或还款文档，接口返回数据任务ID，支持xlsx、xls、csv、zip格式，文档大小不超过50MB。
 * @method Models\UploadFileResponse UploadFile(Models\UploadFileRequest $req) 客户通过调用该接口上传需催收文档，格式需为excel格式。接口返回任务ID。
  */
 

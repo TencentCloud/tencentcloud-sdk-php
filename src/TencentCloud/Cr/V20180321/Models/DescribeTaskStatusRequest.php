@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModule(string $Module) 设置模块名
  * @method string getOperation() 获取操作名
  * @method void setOperation(string $Operation) 设置操作名
- * @method integer getTaskId() 获取任务ID
- * @method void setTaskId(integer $TaskId) 设置任务ID
+ * @method string getTaskId() 获取任务ID，形如abc-a0b1c2xyz
+ * @method void setTaskId(string $TaskId) 设置任务ID，形如abc-a0b1c2xyz
  */
 
 /**
@@ -42,13 +42,13 @@ class DescribeTaskStatusRequest extends AbstractModel
     public $Operation;
 
     /**
-     * @var integer 任务ID
+     * @var string 任务ID，形如abc-a0b1c2xyz
      */
     public $TaskId;
     /**
      * @param string $Module 模块名
      * @param string $Operation 操作名
-     * @param integer $TaskId 任务ID
+     * @param string $TaskId 任务ID，形如abc-a0b1c2xyz
      */
     function __construct()
     {

@@ -46,6 +46,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
 2. 可以指定回包只返回部分信息。
 * @method Models\ModifyClassResponse ModifyClass(Models\ModifyClassRequest $req) 修改媒体分类属性。
 * @method Models\ModifyMediaInfoResponse ModifyMediaInfo(Models\ModifyMediaInfoRequest $req) 修改媒体文件的属性，包括分类、名称、描述、标签、过期时间、打点信息、视频封面等。
+* @method Models\SearchMediaResponse SearchMedia(Models\SearchMediaRequest $req) 搜索媒体信息，支持文本模糊搜索及条件过滤。
+<li>该接口单次请求最多返回100条数据。</li>
+<li>搜索结果超过 5000条，不再支持分页查询超过 5000 部分的数据。</li>
  */
 
 class VodClient extends AbstractClient

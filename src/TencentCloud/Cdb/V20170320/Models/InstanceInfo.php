@@ -88,6 +88,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网描述符，例如：“subnet-1typ0s7d”
  * @method string getPhysicalId() 获取物理ID
  * @method void setPhysicalId(string $PhysicalId) 设置物理ID
+ * @method integer getCpu() 获取核心数
+ * @method void setCpu(integer $Cpu) 设置核心数
  */
 
 /**
@@ -269,6 +271,11 @@ class InstanceInfo extends AbstractModel
      * @var string 物理ID
      */
     public $PhysicalId;
+
+    /**
+     * @var integer 核心数
+     */
+    public $Cpu;
     /**
      * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @param string $Zone 可用区信息
@@ -305,6 +312,7 @@ class InstanceInfo extends AbstractModel
      * @param string $UniqVpcId 私有网络描述符，例如：“vpc-5v8wn9mg”
      * @param string $UniqSubnetId 子网描述符，例如：“subnet-1typ0s7d”
      * @param string $PhysicalId 物理ID
+     * @param integer $Cpu 核心数
      */
     function __construct()
     {
@@ -469,6 +477,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("PhysicalId",$param) and $param["PhysicalId"] !== null) {
             $this->PhysicalId = $param["PhysicalId"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

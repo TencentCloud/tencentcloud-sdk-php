@@ -44,6 +44,8 @@ use TencentCloud\Batch\V20170312\Models as Models;
 * @method Models\DescribeTaskTemplatesResponse DescribeTaskTemplates(Models\DescribeTaskTemplatesRequest $req) 用于查询任务模板信息
 * @method Models\ModifyComputeEnvResponse ModifyComputeEnv(Models\ModifyComputeEnvRequest $req) 用于修改计算环境属性
 * @method Models\ModifyTaskTemplateResponse ModifyTaskTemplate(Models\ModifyTaskTemplateRequest $req) 用于修改任务模板
+* @method Models\RetryJobsResponse RetryJobs(Models\RetryJobsRequest $req) 用于重试作业中失败的任务实例。
+当且仅当作业处于“FAILED”状态，支持重试操作。重试操作成功后，作业会按照“DAG”中指定的任务依赖关系，依次重试各个任务中失败的任务实例。任务实例的历史信息将被重置，如同首次运行一样，参与后续的调度和执行。
 * @method Models\SubmitJobResponse SubmitJob(Models\SubmitJobRequest $req) 用于提交一个作业
 * @method Models\TerminateComputeNodeResponse TerminateComputeNode(Models\TerminateComputeNodeRequest $req) 用于销毁计算节点。
 对于状态为CREATED、CREATION_FAILED、RUNNING和ABNORMAL的节点，允许销毁处理。

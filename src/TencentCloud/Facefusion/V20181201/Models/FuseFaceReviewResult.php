@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCodeDescription(string $CodeDescription) 设置对应子类别状态码信息描述
  * @method float getConfidence() 获取对应识别种类的置信度
  * @method void setConfidence(float $Confidence) 设置对应识别种类的置信度
- * @method string getSuggestion() 获取此字段为保留字段，目前统一返回pass。请使用FusefaceReviewDetail中的“Suggestion”字段
- * @method void setSuggestion(string $Suggestion) 设置此字段为保留字段，目前统一返回pass。请使用FusefaceReviewDetail中的“Suggestion”字段
+ * @method string getSuggestion() 获取此字段为保留字段，目前统一返回pass。
+ * @method void setSuggestion(string $Suggestion) 设置此字段为保留字段，目前统一返回pass。
  * @method array getDetailSet() 获取审核详细内容
  * @method void setDetailSet(array $DetailSet) 设置审核详细内容
  */
@@ -58,7 +58,7 @@ class FuseFaceReviewResult extends AbstractModel
     public $Confidence;
 
     /**
-     * @var string 此字段为保留字段，目前统一返回pass。请使用FusefaceReviewDetail中的“Suggestion”字段
+     * @var string 此字段为保留字段，目前统一返回pass。
      */
     public $Suggestion;
 
@@ -71,7 +71,7 @@ class FuseFaceReviewResult extends AbstractModel
      * @param string $Code 对应子类别状态码
      * @param string $CodeDescription 对应子类别状态码信息描述
      * @param float $Confidence 对应识别种类的置信度
-     * @param string $Suggestion 此字段为保留字段，目前统一返回pass。请使用FusefaceReviewDetail中的“Suggestion”字段
+     * @param string $Suggestion 此字段为保留字段，目前统一返回pass。
      * @param array $DetailSet 审核详细内容
      */
     function __construct()

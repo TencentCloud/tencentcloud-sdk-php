@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTypeName(string $TypeName) 设置机型名称。
  * @method array getLocalDiskTypeList() 获取本地磁盘规格列表。
  * @method void setLocalDiskTypeList(array $LocalDiskTypeList) 设置本地磁盘规格列表。
- * @method string getStatus() 获取实例是否售卖。
- * @method void setStatus(string $Status) 设置实例是否售卖。
+ * @method string getStatus() 获取实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
+ * @method void setStatus(string $Status) 设置实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
  * @method ItemPrice getPrice() 获取实例的售卖价格。
  * @method void setPrice(ItemPrice $Price) 设置实例的售卖价格。
  */
@@ -100,7 +100,7 @@ class InstanceTypeQuotaItem extends AbstractModel
     public $LocalDiskTypeList;
 
     /**
-     * @var string 实例是否售卖。
+     * @var string 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
      */
     public $Status;
 
@@ -119,7 +119,7 @@ class InstanceTypeQuotaItem extends AbstractModel
      * @param string $InstanceFamily 实例机型系列。
      * @param string $TypeName 机型名称。
      * @param array $LocalDiskTypeList 本地磁盘规格列表。
-     * @param string $Status 实例是否售卖。
+     * @param string $Status 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
      * @param ItemPrice $Price 实例的售卖价格。
      */
     function __construct()

@@ -18,10 +18,12 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getUrl() 获取用于跳转的URL。只能于微信中打开。
- * @method void setUrl(string $Url) 设置用于跳转的URL。只能于微信中打开。
- * @method string getBizToken() 获取业务流水号。在获取认证信息接口中作为BizToken传入
- * @method void setBizToken(string $BizToken) 设置业务流水号。在获取认证信息接口中作为BizToken传入
+ * @method string getUrl() 获取用于发起核身流程的URL，仅微信H5场景使用。
+ * @method void setUrl(string $Url) 设置用于发起核身流程的URL，仅微信H5场景使用。
+ * @method string getBizToken() 获取一次核身流程的标识，有效时间为7,200秒；
+完成核身后，可用该标识获取验证结果信息。
+ * @method void setBizToken(string $BizToken) 设置一次核身流程的标识，有效时间为7,200秒；
+完成核身后，可用该标识获取验证结果信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -32,12 +34,13 @@ use TencentCloud\Common\AbstractModel;
 class DetectAuthResponse extends AbstractModel
 {
     /**
-     * @var string 用于跳转的URL。只能于微信中打开。
+     * @var string 用于发起核身流程的URL，仅微信H5场景使用。
      */
     public $Url;
 
     /**
-     * @var string 业务流水号。在获取认证信息接口中作为BizToken传入
+     * @var string 一次核身流程的标识，有效时间为7,200秒；
+完成核身后，可用该标识获取验证结果信息。
      */
     public $BizToken;
 
@@ -46,8 +49,9 @@ class DetectAuthResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $Url 用于跳转的URL。只能于微信中打开。
-     * @param string $BizToken 业务流水号。在获取认证信息接口中作为BizToken传入
+     * @param string $Url 用于发起核身流程的URL，仅微信H5场景使用。
+     * @param string $BizToken 一次核身流程的标识，有效时间为7,200秒；
+完成核身后，可用该标识获取验证结果信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

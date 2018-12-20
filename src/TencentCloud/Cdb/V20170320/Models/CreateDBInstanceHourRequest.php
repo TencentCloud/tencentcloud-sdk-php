@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，值为0或1。购买按量计费实例该字段无意义
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
+ * @method array getResourceTags() 获取实例标签
+ * @method void setResourceTags(array $ResourceTags) 设置实例标签
  */
 
 /**
@@ -178,6 +180,11 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @var string 实例名称
      */
     public $InstanceName;
+
+    /**
+     * @var array 实例标签
+     */
+    public $ResourceTags;
     /**
      * @param integer $GoodsNum 实例数量，默认值为1, 最小值1，最大值为100
      * @param integer $Memory 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
@@ -201,6 +208,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param RoGroup $RoGroup 只读实例信息
      * @param integer $AutoRenewFlag 自动续费标记，值为0或1。购买按量计费实例该字段无意义
      * @param string $InstanceName 实例名称
+     * @param array $ResourceTags 实例标签
      */
     function __construct()
     {
@@ -306,6 +314,15 @@ class CreateDBInstanceHourRequest extends AbstractModel
 
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

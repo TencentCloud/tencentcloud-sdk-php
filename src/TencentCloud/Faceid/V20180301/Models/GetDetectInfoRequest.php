@@ -18,12 +18,14 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getBizToken() 获取业务流水号
- * @method void setBizToken(string $BizToken) 设置业务流水号
- * @method string getRuleId() 获取规则Id。
- * @method void setRuleId(string $RuleId) 设置规则Id。
- * @method string getInfoType() 获取指定需要拉取何种信息（0：全部；1：文本类；2：身份证正反面；3：截帧（最佳帧）；4：视频）。可拼接。如 134表示拉取文本类、截帧（最佳帧）、视频
- * @method void setInfoType(string $InfoType) 设置指定需要拉取何种信息（0：全部；1：文本类；2：身份证正反面；3：截帧（最佳帧）；4：视频）。可拼接。如 134表示拉取文本类、截帧（最佳帧）、视频
+ * @method string getBizToken() 获取人脸核身流程的标识，调用DetectAuth接口时生成。
+ * @method void setBizToken(string $BizToken) 设置人脸核身流程的标识，调用DetectAuth接口时生成。
+ * @method string getRuleId() 获取用于细分客户使用场景，由腾讯侧在线下对接时分配。
+ * @method void setRuleId(string $RuleId) 设置用于细分客户使用场景，由腾讯侧在线下对接时分配。
+ * @method string getInfoType() 获取指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
+如 134表示拉取文本类、视频最佳截图照片、视频。
+ * @method void setInfoType(string $InfoType) 设置指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
+如 134表示拉取文本类、视频最佳截图照片、视频。
  */
 
 /**
@@ -32,23 +34,25 @@ use TencentCloud\Common\AbstractModel;
 class GetDetectInfoRequest extends AbstractModel
 {
     /**
-     * @var string 业务流水号
+     * @var string 人脸核身流程的标识，调用DetectAuth接口时生成。
      */
     public $BizToken;
 
     /**
-     * @var string 规则Id。
+     * @var string 用于细分客户使用场景，由腾讯侧在线下对接时分配。
      */
     public $RuleId;
 
     /**
-     * @var string 指定需要拉取何种信息（0：全部；1：文本类；2：身份证正反面；3：截帧（最佳帧）；4：视频）。可拼接。如 134表示拉取文本类、截帧（最佳帧）、视频
+     * @var string 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
+如 134表示拉取文本类、视频最佳截图照片、视频。
      */
     public $InfoType;
     /**
-     * @param string $BizToken 业务流水号
-     * @param string $RuleId 规则Id。
-     * @param string $InfoType 指定需要拉取何种信息（0：全部；1：文本类；2：身份证正反面；3：截帧（最佳帧）；4：视频）。可拼接。如 134表示拉取文本类、截帧（最佳帧）、视频
+     * @param string $BizToken 人脸核身流程的标识，调用DetectAuth接口时生成。
+     * @param string $RuleId 用于细分客户使用场景，由腾讯侧在线下对接时分配。
+     * @param string $InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
+如 134表示拉取文本类、视频最佳截图照片、视频。
      */
     function __construct()
     {

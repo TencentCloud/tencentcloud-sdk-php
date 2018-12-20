@@ -18,20 +18,24 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRuleId() 获取规则Id。a-zA-Z0-9组合。最长长度32位。
- * @method void setRuleId(string $RuleId) 设置规则Id。a-zA-Z0-9组合。最长长度32位。
- * @method string getTerminalType() 获取终端类型。可选值有：weixinh5, weixinh5native, h5, tinyappsdk, iossdk, androidsdk。只有值为"weixinh5"时会返回跳转URL。
- * @method void setTerminalType(string $TerminalType) 设置终端类型。可选值有：weixinh5, weixinh5native, h5, tinyappsdk, iossdk, androidsdk。只有值为"weixinh5"时会返回跳转URL。
- * @method string getIdCard() 获取身份证号或者是客户系统内部的唯一用户id。（传uid的时候只能使用ImageBase64传的照片进行一比一）a-zA-Z0-9组合。最长长度32位。
- * @method void setIdCard(string $IdCard) 设置身份证号或者是客户系统内部的唯一用户id。（传uid的时候只能使用ImageBase64传的照片进行一比一）a-zA-Z0-9组合。最长长度32位。
+ * @method string getRuleId() 获取用于细分客户使用场景，由腾讯侧在线下对接时分配。
+ * @method void setRuleId(string $RuleId) 设置用于细分客户使用场景，由腾讯侧在线下对接时分配。
+ * @method string getTerminalType() 获取本接口不需要传递此参数。
+ * @method void setTerminalType(string $TerminalType) 设置本接口不需要传递此参数。
+ * @method string getIdCard() 获取身份标识（与公安权威库比对时必须是身份证号）。
+规则：a-zA-Z0-9组合。最长长度32位。
+ * @method void setIdCard(string $IdCard) 设置身份标识（与公安权威库比对时必须是身份证号）。
+规则：a-zA-Z0-9组合。最长长度32位。
  * @method string getName() 获取姓名。最长长度32位。
  * @method void setName(string $Name) 设置姓名。最长长度32位。
- * @method string getRedirectUrl() 获取回调地址。最长长度1024位。
- * @method void setRedirectUrl(string $RedirectUrl) 设置回调地址。最长长度1024位。
- * @method string getExtra() 获取额外参数，会在getDetectInfo时带回去。最长长度1024位。
- * @method void setExtra(string $Extra) 设置额外参数，会在getDetectInfo时带回去。最长长度1024位。
- * @method string getImageBase64() 获取用于一比一时的照片base64。此时必须传入IdCard。
- * @method void setImageBase64(string $ImageBase64) 设置用于一比一时的照片base64。此时必须传入IdCard。
+ * @method string getRedirectUrl() 获取认证结束后重定向的回调链接地址。最长长度1024位。
+ * @method void setRedirectUrl(string $RedirectUrl) 设置认证结束后重定向的回调链接地址。最长长度1024位。
+ * @method string getExtra() 获取透传字段，在获取验证结果时返回。
+ * @method void setExtra(string $Extra) 设置透传字段，在获取验证结果时返回。
+ * @method string getImageBase64() 获取用于人脸比对的照片，图片的BASE64值；
+BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+ * @method void setImageBase64(string $ImageBase64) 设置用于人脸比对的照片，图片的BASE64值；
+BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
  */
 
 /**
@@ -40,17 +44,18 @@ use TencentCloud\Common\AbstractModel;
 class DetectAuthRequest extends AbstractModel
 {
     /**
-     * @var string 规则Id。a-zA-Z0-9组合。最长长度32位。
+     * @var string 用于细分客户使用场景，由腾讯侧在线下对接时分配。
      */
     public $RuleId;
 
     /**
-     * @var string 终端类型。可选值有：weixinh5, weixinh5native, h5, tinyappsdk, iossdk, androidsdk。只有值为"weixinh5"时会返回跳转URL。
+     * @var string 本接口不需要传递此参数。
      */
     public $TerminalType;
 
     /**
-     * @var string 身份证号或者是客户系统内部的唯一用户id。（传uid的时候只能使用ImageBase64传的照片进行一比一）a-zA-Z0-9组合。最长长度32位。
+     * @var string 身份标识（与公安权威库比对时必须是身份证号）。
+规则：a-zA-Z0-9组合。最长长度32位。
      */
     public $IdCard;
 
@@ -60,27 +65,30 @@ class DetectAuthRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 回调地址。最长长度1024位。
+     * @var string 认证结束后重定向的回调链接地址。最长长度1024位。
      */
     public $RedirectUrl;
 
     /**
-     * @var string 额外参数，会在getDetectInfo时带回去。最长长度1024位。
+     * @var string 透传字段，在获取验证结果时返回。
      */
     public $Extra;
 
     /**
-     * @var string 用于一比一时的照片base64。此时必须传入IdCard。
+     * @var string 用于人脸比对的照片，图片的BASE64值；
+BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
      */
     public $ImageBase64;
     /**
-     * @param string $RuleId 规则Id。a-zA-Z0-9组合。最长长度32位。
-     * @param string $TerminalType 终端类型。可选值有：weixinh5, weixinh5native, h5, tinyappsdk, iossdk, androidsdk。只有值为"weixinh5"时会返回跳转URL。
-     * @param string $IdCard 身份证号或者是客户系统内部的唯一用户id。（传uid的时候只能使用ImageBase64传的照片进行一比一）a-zA-Z0-9组合。最长长度32位。
+     * @param string $RuleId 用于细分客户使用场景，由腾讯侧在线下对接时分配。
+     * @param string $TerminalType 本接口不需要传递此参数。
+     * @param string $IdCard 身份标识（与公安权威库比对时必须是身份证号）。
+规则：a-zA-Z0-9组合。最长长度32位。
      * @param string $Name 姓名。最长长度32位。
-     * @param string $RedirectUrl 回调地址。最长长度1024位。
-     * @param string $Extra 额外参数，会在getDetectInfo时带回去。最长长度1024位。
-     * @param string $ImageBase64 用于一比一时的照片base64。此时必须传入IdCard。
+     * @param string $RedirectUrl 认证结束后重定向的回调链接地址。最长长度1024位。
+     * @param string $Extra 透传字段，在获取验证结果时返回。
+     * @param string $ImageBase64 用于人脸比对的照片，图片的BASE64值；
+BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
      */
     function __construct()
     {

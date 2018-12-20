@@ -18,10 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getSecurityGroupIds() 获取要绑定的`安全组ID`，类似sg-efil73jd，支持绑定多个安全组。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置要绑定的`安全组ID`，类似sg-efil73jd，支持绑定多个安全组。
- * @method array getInstanceIds() 获取被绑定的`实例ID`，类似ins-lesecurk，只支持指定单个实例。
- * @method void setInstanceIds(array $InstanceIds) 设置被绑定的`实例ID`，类似ins-lesecurk，只支持指定单个实例。
+ * @method array getSecurityGroupIds() 获取要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。
+ * @method array getInstanceIds() 获取被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
+ * @method void setInstanceIds(array $InstanceIds) 设置被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class AssociateSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var array 要绑定的`安全组ID`，类似sg-efil73jd，支持绑定多个安全组。
+     * @var array 要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。
      */
     public $SecurityGroupIds;
 
     /**
-     * @var array 被绑定的`实例ID`，类似ins-lesecurk，只支持指定单个实例。
+     * @var array 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
      */
     public $InstanceIds;
     /**
-     * @param array $SecurityGroupIds 要绑定的`安全组ID`，类似sg-efil73jd，支持绑定多个安全组。
-     * @param array $InstanceIds 被绑定的`实例ID`，类似ins-lesecurk，只支持指定单个实例。
+     * @param array $SecurityGroupIds 要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。
+     * @param array $InstanceIds 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
      */
     function __construct()
     {

@@ -18,8 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStreamState() 获取流状态
- * @method void setStreamState(string $StreamState) 设置流状态
+ * @method string getStreamState() 获取流状态，
+active：活跃，
+inactive：非活跃，
+forbid：禁播。
+ * @method void setStreamState(string $StreamState) 设置流状态，
+active：活跃，
+inactive：非活跃，
+forbid：禁播。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +36,10 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLiveStreamStateResponse extends AbstractModel
 {
     /**
-     * @var string 流状态
+     * @var string 流状态，
+active：活跃，
+inactive：非活跃，
+forbid：禁播。
      */
     public $StreamState;
 
@@ -39,7 +48,10 @@ class DescribeLiveStreamStateResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $StreamState 流状态
+     * @param string $StreamState 流状态，
+active：活跃，
+inactive：非活跃，
+forbid：禁播。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

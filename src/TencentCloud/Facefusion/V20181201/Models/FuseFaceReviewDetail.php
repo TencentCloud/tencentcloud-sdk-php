@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabel(string $Label) 设置人员名称
  * @method float getConfidence() 获取对应识别label的置信度
  * @method void setConfidence(float $Confidence) 设置对应识别label的置信度
- * @method string getSuggestion() 获取对应子类审核建议: block,review,pass
- * @method void setSuggestion(string $Suggestion) 设置对应子类审核建议: block,review,pass
+ * @method string getSuggestion() 获取此字段为保留字段，目前统一返回pass。
+ * @method void setSuggestion(string $Suggestion) 设置此字段为保留字段，目前统一返回pass。
  */
 
 /**
@@ -49,14 +49,14 @@ class FuseFaceReviewDetail extends AbstractModel
     public $Confidence;
 
     /**
-     * @var string 对应子类审核建议: block,review,pass
+     * @var string 此字段为保留字段，目前统一返回pass。
      */
     public $Suggestion;
     /**
      * @param string $Field 鉴政使用字段, 为职业属性,其他审核结果对应上一级category
      * @param string $Label 人员名称
      * @param float $Confidence 对应识别label的置信度
-     * @param string $Suggestion 对应子类审核建议: block,review,pass
+     * @param string $Suggestion 此字段为保留字段，目前统一返回pass。
      */
     function __construct()
     {

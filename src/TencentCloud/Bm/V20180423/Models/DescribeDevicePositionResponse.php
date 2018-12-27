@@ -14,40 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Aai\V20180522\Models;
+namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAudio() 获取base编码的wav音频
- * @method void setAudio(string $Audio) 设置base编码的wav音频
- * @method string getSessionId() 获取一次请求对应一个SessionId
- * @method void setSessionId(string $SessionId) 设置一次请求对应一个SessionId
+ * @method integer getTotalCount() 获取返回数量
+ * @method void setTotalCount(integer $TotalCount) 设置返回数量
+ * @method array getDevicePositionInfoSet() 获取设备所在机架信息
+ * @method void setDevicePositionInfoSet(array $DevicePositionInfoSet) 设置设备所在机架信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *TextToVoice返回参数结构体
+ *DescribeDevicePosition返回参数结构体
  */
-class TextToVoiceResponse extends AbstractModel
+class DescribeDevicePositionResponse extends AbstractModel
 {
     /**
-     * @var string base编码的wav音频
+     * @var integer 返回数量
      */
-    public $Audio;
+    public $TotalCount;
 
     /**
-     * @var string 一次请求对应一个SessionId
+     * @var array 设备所在机架信息
      */
-    public $SessionId;
+    public $DevicePositionInfoSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $Audio base编码的wav音频
-     * @param string $SessionId 一次请求对应一个SessionId
+     * @param integer $TotalCount 返回数量
+     * @param array $DevicePositionInfoSet 设备所在机架信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,17 @@ class TextToVoiceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Audio",$param) and $param["Audio"] !== null) {
-            $this->Audio = $param["Audio"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists("DevicePositionInfoSet",$param) and $param["DevicePositionInfoSet"] !== null) {
+            $this->DevicePositionInfoSet = [];
+            foreach ($param["DevicePositionInfoSet"] as $key => $value){
+                $obj = new DevicePositionInfo();
+                $obj->deserialize($value);
+                array_push($this->DevicePositionInfoSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

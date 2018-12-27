@@ -23,14 +23,12 @@ use TencentCloud\Common\AbstractModel;
  * @method array getRouteIds() 获取CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
  * @method void setRouteIds(array $RouteIds) 设置CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>route-id - String -（过滤条件）路由策略ID。</li>
 <li>cidr-block - String -（过滤条件）目的端。</li>
 <li>instance-type - String -（过滤条件）下一跳类型。</li>
 <li>instance-region - String -（过滤条件）下一跳所属地域。</li>
 <li>instance-id - String -（过滤条件）下一跳实例ID。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>route-id - String -（过滤条件）路由策略ID。</li>
 <li>cidr-block - String -（过滤条件）目的端。</li>
 <li>instance-type - String -（过滤条件）下一跳类型。</li>
@@ -59,7 +57,6 @@ class DescribeCcnRoutesRequest extends AbstractModel
 
     /**
      * @var array 过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>route-id - String -（过滤条件）路由策略ID。</li>
 <li>cidr-block - String -（过滤条件）目的端。</li>
 <li>instance-type - String -（过滤条件）下一跳类型。</li>
@@ -81,7 +78,6 @@ class DescribeCcnRoutesRequest extends AbstractModel
      * @param string $CcnId CCN实例ID，形如：ccn-gree226l。
      * @param array $RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
      * @param array $Filters 过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>route-id - String -（过滤条件）路由策略ID。</li>
 <li>cidr-block - String -（过滤条件）目的端。</li>
 <li>instance-type - String -（过滤条件）下一跳类型。</li>

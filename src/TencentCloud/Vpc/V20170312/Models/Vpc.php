@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) 设置DHCP域名选项值
  * @method string getDhcpOptionsId() 获取DHCP选项集ID
  * @method void setDhcpOptionsId(string $DhcpOptionsId) 设置DHCP选项集ID
+ * @method boolean getEnableDhcp() 获取是否开启DHCP。
+ * @method void setEnableDhcp(boolean $EnableDhcp) 设置是否开启DHCP。
  */
 
 /**
@@ -87,6 +89,11 @@ class Vpc extends AbstractModel
      * @var string DHCP选项集ID
      */
     public $DhcpOptionsId;
+
+    /**
+     * @var boolean 是否开启DHCP。
+     */
+    public $EnableDhcp;
     /**
      * @param string $VpcName Vpc名称。
      * @param string $VpcId VPC实例ID，例如：vpc-azd4dt1c。
@@ -97,6 +104,7 @@ class Vpc extends AbstractModel
      * @param array $DnsServerSet DNS列表
      * @param string $DomainName DHCP域名选项值
      * @param string $DhcpOptionsId DHCP选项集ID
+     * @param boolean $EnableDhcp 是否开启DHCP。
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class Vpc extends AbstractModel
 
         if (array_key_exists("DhcpOptionsId",$param) and $param["DhcpOptionsId"] !== null) {
             $this->DhcpOptionsId = $param["DhcpOptionsId"];
+        }
+
+        if (array_key_exists("EnableDhcp",$param) and $param["EnableDhcp"] !== null) {
+            $this->EnableDhcp = $param["EnableDhcp"];
         }
     }
 }

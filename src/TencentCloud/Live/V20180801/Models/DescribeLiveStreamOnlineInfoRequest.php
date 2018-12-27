@@ -23,14 +23,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNum(integer $PageNum) 设置取得第几页。
 默认值：1
  * @method integer getPageSize() 获取分页大小。
-
 最大值：100。
-取值范围：1~100 之前的任意整数。
+取值范围：10~100 之前的任意整数。
 默认值：10
  * @method void setPageSize(integer $PageSize) 设置分页大小。
-
 最大值：100。
-取值范围：1~100 之前的任意整数。
+取值范围：10~100 之前的任意整数。
 默认值：10
  * @method integer getStatus() 获取0:未开始推流 1:正在推流 2:服务出错 3:已关闭。
  * @method void setStatus(integer $Status) 设置0:未开始推流 1:正在推流 2:服务出错 3:已关闭。
@@ -51,9 +49,8 @@ class DescribeLiveStreamOnlineInfoRequest extends AbstractModel
 
     /**
      * @var integer 分页大小。
-
 最大值：100。
-取值范围：1~100 之前的任意整数。
+取值范围：10~100 之前的任意整数。
 默认值：10
      */
     public $PageSize;
@@ -71,9 +68,8 @@ class DescribeLiveStreamOnlineInfoRequest extends AbstractModel
      * @param integer $PageNum 取得第几页。
 默认值：1
      * @param integer $PageSize 分页大小。
-
 最大值：100。
-取值范围：1~100 之前的任意整数。
+取值范围：10~100 之前的任意整数。
 默认值：10
      * @param integer $Status 0:未开始推流 1:正在推流 2:服务出错 3:已关闭。
      * @param string $StreamName 流名称。

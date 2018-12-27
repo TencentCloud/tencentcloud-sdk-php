@@ -44,16 +44,20 @@ use TencentCloud\Common\AbstractModel;
 <li>`EXPIRED`：已过期</li>
 <li>`REJECTED`：已拒绝</li>
 <li>`DELETED`：已删除</li>
+<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
 <li>`ATTACHING`：关联中</li>
 <li>`DETACHING`：解关联中</li>
+<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
  * @method void setState(string $State) 设置关联实例状态：
 <li>`PENDING`：申请中</li>
 <li>`ACTIVE`：已连接</li>
 <li>`EXPIRED`：已过期</li>
 <li>`REJECTED`：已拒绝</li>
 <li>`DELETED`：已删除</li>
+<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
 <li>`ATTACHING`：关联中</li>
 <li>`DETACHING`：解关联中</li>
+<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
  * @method string getAttachedTime() 获取关联时间。
  * @method void setAttachedTime(string $AttachedTime) 设置关联时间。
  * @method string getCcnUin() 获取云联网所属UIN（根账号）。
@@ -110,8 +114,10 @@ class CcnAttachedInstance extends AbstractModel
 <li>`EXPIRED`：已过期</li>
 <li>`REJECTED`：已拒绝</li>
 <li>`DELETED`：已删除</li>
+<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
 <li>`ATTACHING`：关联中</li>
 <li>`DETACHING`：解关联中</li>
+<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
      */
     public $State;
 
@@ -141,8 +147,10 @@ class CcnAttachedInstance extends AbstractModel
 <li>`EXPIRED`：已过期</li>
 <li>`REJECTED`：已拒绝</li>
 <li>`DELETED`：已删除</li>
+<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
 <li>`ATTACHING`：关联中</li>
 <li>`DETACHING`：解关联中</li>
+<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
      * @param string $AttachedTime 关联时间。
      * @param string $CcnUin 云联网所属UIN（根账号）。
      */

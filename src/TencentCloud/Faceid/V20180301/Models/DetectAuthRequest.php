@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 规则：a-zA-Z0-9组合。最长长度32位。
  * @method void setIdCard(string $IdCard) 设置身份标识（与公安权威库比对时必须是身份证号）。
 规则：a-zA-Z0-9组合。最长长度32位。
- * @method string getName() 获取姓名。最长长度32位。
- * @method void setName(string $Name) 设置姓名。最长长度32位。
+ * @method string getName() 获取姓名。最长长度32位。中文请使用UTF-8编码。
+ * @method void setName(string $Name) 设置姓名。最长长度32位。中文请使用UTF-8编码。
  * @method string getRedirectUrl() 获取认证结束后重定向的回调链接地址。最长长度1024位。
  * @method void setRedirectUrl(string $RedirectUrl) 设置认证结束后重定向的回调链接地址。最长长度1024位。
  * @method string getExtra() 获取透传字段，在获取验证结果时返回。
@@ -60,7 +60,7 @@ class DetectAuthRequest extends AbstractModel
     public $IdCard;
 
     /**
-     * @var string 姓名。最长长度32位。
+     * @var string 姓名。最长长度32位。中文请使用UTF-8编码。
      */
     public $Name;
 
@@ -84,7 +84,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
      * @param string $TerminalType 本接口不需要传递此参数。
      * @param string $IdCard 身份标识（与公安权威库比对时必须是身份证号）。
 规则：a-zA-Z0-9组合。最长长度32位。
-     * @param string $Name 姓名。最长长度32位。
+     * @param string $Name 姓名。最长长度32位。中文请使用UTF-8编码。
      * @param string $RedirectUrl 认证结束后重定向的回调链接地址。最长长度1024位。
      * @param string $Extra 透传字段，在获取验证结果时返回。
      * @param string $ImageBase64 用于人脸比对的照片，图片的BASE64值；

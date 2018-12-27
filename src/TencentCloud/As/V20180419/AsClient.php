@@ -27,7 +27,7 @@ use TencentCloud\As\V20180419\Models as Models;
 * @method Models\CreateAutoScalingGroupResponse CreateAutoScalingGroup(Models\CreateAutoScalingGroupRequest $req) 本接口（CreateAutoScalingGroup）用于创建伸缩组
 * @method Models\CreateLaunchConfigurationResponse CreateLaunchConfiguration(Models\CreateLaunchConfigurationRequest $req) 本接口（CreateLaunchConfiguration）用于创建新的启动配置。
 
-* 启动配置无法编辑更改。如需使用新的启动配置，只能重新创建启动配置。
+* 启动配置，可以通过 `ModifyLaunchConfigurationAttributes` 修改少量字段。如需使用新的启动配置，建议重新创建启动配置。
 
 * 每个项目最多只能创建20个启动配置，详见[使用限制](https://cloud.tencent.com/document/product/377/3120)。
 

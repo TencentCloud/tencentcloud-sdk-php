@@ -22,7 +22,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Live\V20180801\Models as Models;
 
 /**
-* @method Models\AddDelayLiveStreamResponse AddDelayLiveStream(Models\AddDelayLiveStreamRequest $req) 对流设置延播
+* @method Models\AddDelayLiveStreamResponse AddDelayLiveStream(Models\AddDelayLiveStreamRequest $req) 对流设置延播时间
+注意：如果在推流前设置延播，需要提前5分钟设置。
+
 * @method Models\AddLiveWatermarkResponse AddLiveWatermark(Models\AddLiveWatermarkRequest $req) 添加水印
 * @method Models\CreateLiveRecordResponse CreateLiveRecord(Models\CreateLiveRecordRequest $req) - 使用前提
   1. 录制文件存放于点播平台，所以用户如需使用录制功能，需首先自行开通点播服务。

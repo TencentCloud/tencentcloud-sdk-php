@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域，例如：ap-guangzhou
  * @method integer getBandwidthLimit() 获取出带宽上限，单位：Mbps
  * @method void setBandwidthLimit(integer $BandwidthLimit) 设置出带宽上限，单位：Mbps
+ * @method boolean getIsBm() 获取是否黑石地域，默认`false`。
+ * @method void setIsBm(boolean $IsBm) 设置是否黑石地域，默认`false`。
  */
 
 /**
@@ -38,9 +40,15 @@ class CcnRegionBandwidthLimit extends AbstractModel
      * @var integer 出带宽上限，单位：Mbps
      */
     public $BandwidthLimit;
+
+    /**
+     * @var boolean 是否黑石地域，默认`false`。
+     */
+    public $IsBm;
     /**
      * @param string $Region 地域，例如：ap-guangzhou
      * @param integer $BandwidthLimit 出带宽上限，单位：Mbps
+     * @param boolean $IsBm 是否黑石地域，默认`false`。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CcnRegionBandwidthLimit extends AbstractModel
 
         if (array_key_exists("BandwidthLimit",$param) and $param["BandwidthLimit"] !== null) {
             $this->BandwidthLimit = $param["BandwidthLimit"];
+        }
+
+        if (array_key_exists("IsBm",$param) and $param["IsBm"] !== null) {
+            $this->IsBm = $param["IsBm"];
         }
     }
 }

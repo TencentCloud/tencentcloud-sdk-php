@@ -18,8 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInstanceIds() 获取待查询的云主机（CVM）实例ID。参数不支持同时指定InstanceIds和Filters。
- * @method void setInstanceIds(array $InstanceIds) 设置待查询的云主机（CVM）实例ID。参数不支持同时指定InstanceIds和Filters。
+ * @method array getInstanceIds() 获取待查询云服务器（CVM）的实例ID。参数不支持同时指定InstanceIds和Filters。
+ * @method void setInstanceIds(array $InstanceIds) 设置待查询云服务器（CVM）的实例ID。参数不支持同时指定InstanceIds和Filters。
  * @method array getFilters() 获取过滤条件。
 <li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。</li>
 <li> auto-scaling-group-id - String - 是否必填：否 -（过滤条件）按照伸缩组ID过滤。</li>
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAutoScalingInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 待查询的云主机（CVM）实例ID。参数不支持同时指定InstanceIds和Filters。
+     * @var array 待查询云服务器（CVM）的实例ID。参数不支持同时指定InstanceIds和Filters。
      */
     public $InstanceIds;
 
@@ -62,7 +62,7 @@ class DescribeAutoScalingInstancesRequest extends AbstractModel
      */
     public $Limit;
     /**
-     * @param array $InstanceIds 待查询的云主机（CVM）实例ID。参数不支持同时指定InstanceIds和Filters。
+     * @param array $InstanceIds 待查询云服务器（CVM）的实例ID。参数不支持同时指定InstanceIds和Filters。
      * @param array $Filters 过滤条件。
 <li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。</li>
 <li> auto-scaling-group-id - String - 是否必填：否 -（过滤条件）按照伸缩组ID过滤。</li>

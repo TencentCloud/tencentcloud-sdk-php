@@ -28,8 +28,13 @@ use TencentCloud\Bm\V20180423\Models as Models;
 * @method Models\CreateUserCmdResponse CreateUserCmd(Models\CreateUserCmdRequest $req) 创建自定义脚本
 * @method Models\DeletePsaRegulationResponse DeletePsaRegulation(Models\DeletePsaRegulationRequest $req) 删除预授权规则
 * @method Models\DeleteUserCmdsResponse DeleteUserCmds(Models\DeleteUserCmdsRequest $req) 删除自定义脚本
+* @method Models\DescribeDeviceClassResponse DescribeDeviceClass(Models\DescribeDeviceClassRequest $req) 获取获取设备类型
+* @method Models\DescribeDeviceInventoryResponse DescribeDeviceInventory(Models\DescribeDeviceInventoryRequest $req) 查询设备库存
+* @method Models\DescribeDeviceOperationLogResponse DescribeDeviceOperationLog(Models\DescribeDeviceOperationLogRequest $req) 查询设备操作日志， 如设备重启，重装，设置密码等操作
+* @method Models\DescribeDevicePositionResponse DescribeDevicePosition(Models\DescribeDevicePositionRequest $req) 查询服务器所在的位置，如机架，上联交换机等信息
 * @method Models\DescribeDevicePriceInfoResponse DescribeDevicePriceInfo(Models\DescribeDevicePriceInfoRequest $req) 查询服务器价格信息，支持设备的批量查找，支持标准机型和弹性机型的混合查找
 * @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 查询物理服务器，可以按照实例，业务IP等过滤
+* @method Models\DescribeOsInfoResponse DescribeOsInfo(Models\DescribeOsInfoRequest $req) 查询指定机型所支持的操作系统
 * @method Models\DescribePsaRegulationsResponse DescribePsaRegulations(Models\DescribePsaRegulationsRequest $req) 获取预授权规则列表
 * @method Models\DescribeRepairTaskConstantResponse DescribeRepairTaskConstant(Models\DescribeRepairTaskConstantRequest $req) 维修任务配置获取
 * @method Models\DescribeTaskInfoResponse DescribeTaskInfo(Models\DescribeTaskInfoRequest $req) 获取用户维修任务列表及详细信息<br>
@@ -46,9 +51,11 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
 * @method Models\DescribeUserCmdTasksResponse DescribeUserCmdTasks(Models\DescribeUserCmdTasksRequest $req) 获取自定义脚本任务列表
 * @method Models\DescribeUserCmdsResponse DescribeUserCmds(Models\DescribeUserCmdsRequest $req) 获取自定义脚本信息列表
 * @method Models\ModifyDeviceAliasesResponse ModifyDeviceAliases(Models\ModifyDeviceAliasesRequest $req) 修改服务器名称
+* @method Models\ModifyDeviceAutoRenewFlagResponse ModifyDeviceAutoRenewFlag(Models\ModifyDeviceAutoRenewFlagRequest $req) 修改物理机服务器自动续费标志
 * @method Models\ModifyPayModePre2PostResponse ModifyPayModePre2Post(Models\ModifyPayModePre2PostRequest $req) 将设备的预付费模式修改为后付费计费模式，支持批量转换。（前提是客户要加入黑石物理机后付费计费的白名单，申请黑石物理机后付费可以联系腾讯云客服）
 * @method Models\ModifyPsaRegulationResponse ModifyPsaRegulation(Models\ModifyPsaRegulationRequest $req) 允许修改规则信息及关联故障类型
 * @method Models\ModifyUserCmdResponse ModifyUserCmd(Models\ModifyUserCmdRequest $req) 修改自定义脚本
+* @method Models\OfflineDevicesResponse OfflineDevices(Models\OfflineDevicesRequest $req) 用于销毁可退还的服务器
 * @method Models\RebootDevicesResponse RebootDevices(Models\RebootDevicesRequest $req) 重启机器
 * @method Models\RepairTaskControlResponse RepairTaskControl(Models\RepairTaskControlRequest $req) 此接口用于操作维修任务<br>
 入参TaskId为维修任务ID<br>
@@ -73,6 +80,7 @@ ConfirmUnRecovered（维修完成后，确认故障未恢复）<br>
 详细信息请访问：https://cloud.tencent.com/document/product/386/18190
 * @method Models\ResetDevicePasswordResponse ResetDevicePassword(Models\ResetDevicePasswordRequest $req) 重置服务器密码
 * @method Models\RunUserCmdResponse RunUserCmd(Models\RunUserCmdRequest $req) 运行自定义脚本
+* @method Models\SetOutBandVpnAuthPasswordResponse SetOutBandVpnAuthPassword(Models\SetOutBandVpnAuthPasswordRequest $req) 设置带外VPN认证用户密码
 * @method Models\UnbindPsaTagResponse UnbindPsaTag(Models\UnbindPsaTagRequest $req) 解除标签与预授权规则的绑定
  */
 

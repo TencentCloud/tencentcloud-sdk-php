@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method integer getDelayTime() 获取延播时间，单位：秒，上限：600秒。
  * @method void setDelayTime(integer $DelayTime) 设置延播时间，单位：秒，上限：600秒。
+ * @method string getExpireTime() 获取延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
+注意：默认7天后过期，且最长支持7天内生效。
+ * @method void setExpireTime(string $ExpireTime) 设置延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
+注意：默认7天后过期，且最长支持7天内生效。
  */
 
 /**
@@ -52,11 +56,19 @@ class AddDelayLiveStreamRequest extends AbstractModel
      * @var integer 延播时间，单位：秒，上限：600秒。
      */
     public $DelayTime;
+
+    /**
+     * @var string 延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
+注意：默认7天后过期，且最长支持7天内生效。
+     */
+    public $ExpireTime;
     /**
      * @param string $AppName 应用名称。
      * @param string $DomainName 您的加速域名。
      * @param string $StreamName 流名称。
      * @param integer $DelayTime 延播时间，单位：秒，上限：600秒。
+     * @param string $ExpireTime 延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
+注意：默认7天后过期，且最长支持7天内生效。
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class AddDelayLiveStreamRequest extends AbstractModel
 
         if (array_key_exists("DelayTime",$param) and $param["DelayTime"] !== null) {
             $this->DelayTime = $param["DelayTime"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
         }
     }
 }

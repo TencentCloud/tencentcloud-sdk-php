@@ -18,10 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getMarketType() 获取市场选项类型，当前只支持取值：spot
- * @method void setMarketType(string $MarketType) 设置市场选项类型，当前只支持取值：spot
  * @method SpotMarketOptions getSpotOptions() 获取竞价相关选项
  * @method void setSpotOptions(SpotMarketOptions $SpotOptions) 设置竞价相关选项
+ * @method string getMarketType() 获取市场选项类型，当前只支持取值：spot
+ * @method void setMarketType(string $MarketType) 设置市场选项类型，当前只支持取值：spot
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class InstanceMarketOptionsRequest extends AbstractModel
 {
     /**
-     * @var string 市场选项类型，当前只支持取值：spot
-     */
-    public $MarketType;
-
-    /**
      * @var SpotMarketOptions 竞价相关选项
      */
     public $SpotOptions;
+
     /**
-     * @param string $MarketType 市场选项类型，当前只支持取值：spot
+     * @var string 市场选项类型，当前只支持取值：spot
+     */
+    public $MarketType;
+    /**
      * @param SpotMarketOptions $SpotOptions 竞价相关选项
+     * @param string $MarketType 市场选项类型，当前只支持取值：spot
      */
     function __construct()
     {
@@ -54,13 +54,13 @@ class InstanceMarketOptionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MarketType",$param) and $param["MarketType"] !== null) {
-            $this->MarketType = $param["MarketType"];
-        }
-
         if (array_key_exists("SpotOptions",$param) and $param["SpotOptions"] !== null) {
             $this->SpotOptions = new SpotMarketOptions();
             $this->SpotOptions->deserialize($param["SpotOptions"]);
+        }
+
+        if (array_key_exists("MarketType",$param) and $param["MarketType"] !== null) {
+            $this->MarketType = $param["MarketType"];
         }
     }
 }

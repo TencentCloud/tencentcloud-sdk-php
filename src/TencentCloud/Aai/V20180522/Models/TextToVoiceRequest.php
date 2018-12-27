@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目id，用户自定义，默认为0
  * @method integer getVoiceType() 获取音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
  * @method void setVoiceType(integer $VoiceType) 设置音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
- * @method integer getPrimaryLanguage() 获取主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
- * @method void setPrimaryLanguage(integer $PrimaryLanguage) 设置主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
+ * @method integer getPrimaryLanguage() 获取主语言类型<li>1-中文，最大100个汉字（标点符号算一个汉子）</li><li>2-英文，最大支持400个字母（标点符号算一个字母）</li>
+ * @method void setPrimaryLanguage(integer $PrimaryLanguage) 设置主语言类型<li>1-中文，最大100个汉字（标点符号算一个汉子）</li><li>2-英文，最大支持400个字母（标点符号算一个字母）</li>
  * @method integer getSampleRate() 获取音频采样率，16000：16k，8000：8k，默认16k
  * @method void setSampleRate(integer $SampleRate) 设置音频采样率，16000：16k，8000：8k，默认16k
  */
@@ -79,7 +79,7 @@ class TextToVoiceRequest extends AbstractModel
     public $VoiceType;
 
     /**
-     * @var integer 主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
+     * @var integer 主语言类型<li>1-中文，最大100个汉字（标点符号算一个汉子）</li><li>2-英文，最大支持400个字母（标点符号算一个字母）</li>
      */
     public $PrimaryLanguage;
 
@@ -95,7 +95,7 @@ class TextToVoiceRequest extends AbstractModel
      * @param float $Speed 语速，范围：[-2，2]，分别对应不同语速：0.6倍，0.8倍，1.0倍，1.2倍，1.5倍，默认为0
      * @param integer $ProjectId 项目id，用户自定义，默认为0
      * @param integer $VoiceType 音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
-     * @param integer $PrimaryLanguage 主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
+     * @param integer $PrimaryLanguage 主语言类型<li>1-中文，最大100个汉字（标点符号算一个汉子）</li><li>2-英文，最大支持400个字母（标点符号算一个字母）</li>
      * @param integer $SampleRate 音频采样率，16000：16k，8000：8k，默认16k
      */
     function __construct()

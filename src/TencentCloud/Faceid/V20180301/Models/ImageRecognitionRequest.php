@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getIdCard() 获取身份证号
  * @method void setIdCard(string $IdCard) 设置身份证号
- * @method string getName() 获取姓名
- * @method void setName(string $Name) 设置姓名
+ * @method string getName() 获取姓名。中文请使用UTF-8编码。
+ * @method void setName(string $Name) 设置姓名。中文请使用UTF-8编码。
  * @method string getImageBase64() 获取用于人脸比对的照片，图片的BASE64值；
 BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
  * @method void setImageBase64(string $ImageBase64) 设置用于人脸比对的照片，图片的BASE64值；
@@ -41,7 +41,7 @@ class ImageRecognitionRequest extends AbstractModel
     public $IdCard;
 
     /**
-     * @var string 姓名
+     * @var string 姓名。中文请使用UTF-8编码。
      */
     public $Name;
 
@@ -57,7 +57,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     public $Optional;
     /**
      * @param string $IdCard 身份证号
-     * @param string $Name 姓名
+     * @param string $Name 姓名。中文请使用UTF-8编码。
      * @param string $ImageBase64 用于人脸比对的照片，图片的BASE64值；
 BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
      * @param string $Optional 本接口不需要传递此参数。

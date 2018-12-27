@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSG(integer $SG) 设置被安全组引用数。
  * @method integer getCLB() 获取负载均衡实例数。
  * @method void setCLB(integer $CLB) 设置负载均衡实例数。
+ * @method array getInstanceStatistics() 获取全量实例的绑定统计。
+ * @method void setInstanceStatistics(array $InstanceStatistics) 设置全量实例的绑定统计。
  */
 
 /**
@@ -66,6 +68,11 @@ class SecurityGroupAssociationStatistics extends AbstractModel
      * @var integer 负载均衡实例数。
      */
     public $CLB;
+
+    /**
+     * @var array 全量实例的绑定统计。
+     */
+    public $InstanceStatistics;
     /**
      * @param string $SecurityGroupId 安全组实例ID。
      * @param integer $CVM 云主机实例数。
@@ -73,6 +80,7 @@ class SecurityGroupAssociationStatistics extends AbstractModel
      * @param integer $ENI 弹性网卡实例数。
      * @param integer $SG 被安全组引用数。
      * @param integer $CLB 负载均衡实例数。
+     * @param array $InstanceStatistics 全量实例的绑定统计。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class SecurityGroupAssociationStatistics extends AbstractModel
 
         if (array_key_exists("CLB",$param) and $param["CLB"] !== null) {
             $this->CLB = $param["CLB"];
+        }
+
+        if (array_key_exists("InstanceStatistics",$param) and $param["InstanceStatistics"] !== null) {
+            $this->InstanceStatistics = $param["InstanceStatistics"];
         }
     }
 }

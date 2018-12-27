@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCcnName(string $CcnName) 设置CCN名称，最大长度不能超过60个字节。
  * @method string getCcnDescription() 获取CCN描述信息，最大长度不能超过100个字节。
  * @method void setCcnDescription(string $CcnDescription) 设置CCN描述信息，最大长度不能超过100个字节。
+ * @method string getQosLevel() 获取CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
+ * @method void setQosLevel(string $QosLevel) 设置CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
  */
 
 /**
@@ -38,9 +40,15 @@ class CreateCcnRequest extends AbstractModel
      * @var string CCN描述信息，最大长度不能超过100个字节。
      */
     public $CcnDescription;
+
+    /**
+     * @var string CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
+     */
+    public $QosLevel;
     /**
      * @param string $CcnName CCN名称，最大长度不能超过60个字节。
      * @param string $CcnDescription CCN描述信息，最大长度不能超过100个字节。
+     * @param string $QosLevel CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateCcnRequest extends AbstractModel
 
         if (array_key_exists("CcnDescription",$param) and $param["CcnDescription"] !== null) {
             $this->CcnDescription = $param["CcnDescription"];
+        }
+
+        if (array_key_exists("QosLevel",$param) and $param["QosLevel"] !== null) {
+            $this->QosLevel = $param["QosLevel"];
         }
     }
 }

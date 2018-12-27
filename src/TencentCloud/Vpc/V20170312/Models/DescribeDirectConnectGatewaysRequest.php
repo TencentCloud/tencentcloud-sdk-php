@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
 <li>direct-connect-gateway-ip - String - 专线网关`IP`。</li>
 <li>gateway-type - String - 网关类型，可选值：`NORMAL`（普通型）、`NAT`（NAT型）。</li>
 <li>network-type- String - 网络类型，可选值：`VPC`（私有网络类型）、`CCN`（云联网类型）。</li>
-<li>ccn-id - String - 专线网关所在私有网络`ID`。</li>
-<li>vpc-id - String - 专线网关所在云联网`ID`。</li>
+<li>ccn-id - String - 专线网关所在云联网`ID`。</li>
+<li>vpc-id - String - 专线网关所在私有网络`ID`。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定`DirectConnectGatewayIds`和`Filters`。
 <li>direct-connect-gateway-id - String - 专线网关唯一`ID`，形如：`dcg-9o233uri`。</li>
 <li>direct-connect-gateway-name - String - 专线网关名称，默认模糊查询。</li>
 <li>direct-connect-gateway-ip - String - 专线网关`IP`。</li>
 <li>gateway-type - String - 网关类型，可选值：`NORMAL`（普通型）、`NAT`（NAT型）。</li>
 <li>network-type- String - 网络类型，可选值：`VPC`（私有网络类型）、`CCN`（云联网类型）。</li>
-<li>ccn-id - String - 专线网关所在私有网络`ID`。</li>
-<li>vpc-id - String - 专线网关所在云联网`ID`。</li>
+<li>ccn-id - String - 专线网关所在云联网`ID`。</li>
+<li>vpc-id - String - 专线网关所在私有网络`ID`。</li>
  * @method integer getOffset() 获取偏移量。
  * @method void setOffset(integer $Offset) 设置偏移量。
  * @method integer getLimit() 获取返回数量。
@@ -59,8 +59,8 @@ class DescribeDirectConnectGatewaysRequest extends AbstractModel
 <li>direct-connect-gateway-ip - String - 专线网关`IP`。</li>
 <li>gateway-type - String - 网关类型，可选值：`NORMAL`（普通型）、`NAT`（NAT型）。</li>
 <li>network-type- String - 网络类型，可选值：`VPC`（私有网络类型）、`CCN`（云联网类型）。</li>
-<li>ccn-id - String - 专线网关所在私有网络`ID`。</li>
-<li>vpc-id - String - 专线网关所在云联网`ID`。</li>
+<li>ccn-id - String - 专线网关所在云联网`ID`。</li>
+<li>vpc-id - String - 专线网关所在私有网络`ID`。</li>
      */
     public $Filters;
 
@@ -81,8 +81,8 @@ class DescribeDirectConnectGatewaysRequest extends AbstractModel
 <li>direct-connect-gateway-ip - String - 专线网关`IP`。</li>
 <li>gateway-type - String - 网关类型，可选值：`NORMAL`（普通型）、`NAT`（NAT型）。</li>
 <li>network-type- String - 网络类型，可选值：`VPC`（私有网络类型）、`CCN`（云联网类型）。</li>
-<li>ccn-id - String - 专线网关所在私有网络`ID`。</li>
-<li>vpc-id - String - 专线网关所在云联网`ID`。</li>
+<li>ccn-id - String - 专线网关所在云联网`ID`。</li>
+<li>vpc-id - String - 专线网关所在私有网络`ID`。</li>
      * @param integer $Offset 偏移量。
      * @param integer $Limit 返回数量。
      */

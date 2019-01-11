@@ -51,6 +51,7 @@ use TencentCloud\Youmall\V20180228\Models as Models;
 * @method Models\DescribeZoneFlowGenderInfoByZoneIdResponse DescribeZoneFlowGenderInfoByZoneId(Models\DescribeZoneFlowGenderInfoByZoneIdRequest $req) 获取指定区域性别占比
 * @method Models\DescribeZoneFlowHourlyByZoneIdResponse DescribeZoneFlowHourlyByZoneId(Models\DescribeZoneFlowHourlyByZoneIdRequest $req) 获取指定区域分时客流量
 * @method Models\DescribeZoneTrafficInfoResponse DescribeZoneTrafficInfo(Models\DescribeZoneTrafficInfoRequest $req) 按天提供查询日期范围内，客户指定门店下的所有区域（优Mall部署时已配置区域）的累计客流人次和平均停留时间。支持的时间范围：过去365天，含当天。
+* @method Models\ModifyPersonFeatureInfoResponse ModifyPersonFeatureInfo(Models\ModifyPersonFeatureInfoRequest $req) 支持修改黑白名单类型的顾客特征
 * @method Models\ModifyPersonTagInfoResponse ModifyPersonTagInfo(Models\ModifyPersonTagInfoRequest $req) 标记到店顾客的身份类型，例如黑名单、白名单等
 
 * @method Models\ModifyPersonTypeResponse ModifyPersonType(Models\ModifyPersonTypeRequest $req) 修改顾客身份类型接口

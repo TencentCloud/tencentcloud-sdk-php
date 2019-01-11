@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFacePic(string $FacePic) 设置当次抓拍到的人脸图片base编码
  * @method integer getTime() 获取当次抓拍时间戳
  * @method void setTime(integer $Time) 设置当次抓拍时间戳
+ * @method PersonInfo getPersonInfo() 获取当前的person基本信息，图片以FacePic为准，结构体内未填
+ * @method void setPersonInfo(PersonInfo $PersonInfo) 设置当前的person基本信息，图片以FacePic为准，结构体内未填
  */
 
 /**
@@ -59,12 +61,18 @@ class CameraPersonInfo extends AbstractModel
      * @var integer 当次抓拍时间戳
      */
     public $Time;
+
+    /**
+     * @var PersonInfo 当前的person基本信息，图片以FacePic为准，结构体内未填
+     */
+    public $PersonInfo;
     /**
      * @param string $TempId 临时id，还未生成face id时返回
      * @param integer $FaceId 人脸face id
      * @param integer $IdType 确定当次返回的哪个id有效，1-FaceId，2-TempId
      * @param string $FacePic 当次抓拍到的人脸图片base编码
      * @param integer $Time 当次抓拍时间戳
+     * @param PersonInfo $PersonInfo 当前的person基本信息，图片以FacePic为准，结构体内未填
      */
     function __construct()
     {
@@ -96,6 +104,11 @@ class CameraPersonInfo extends AbstractModel
 
         if (array_key_exists("Time",$param) and $param["Time"] !== null) {
             $this->Time = $param["Time"];
+        }
+
+        if (array_key_exists("PersonInfo",$param) and $param["PersonInfo"] !== null) {
+            $this->PersonInfo = new PersonInfo();
+            $this->PersonInfo->deserialize($param["PersonInfo"]);
         }
     }
 }

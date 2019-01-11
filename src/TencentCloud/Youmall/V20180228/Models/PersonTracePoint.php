@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTraceEventTime(string $TraceEventTime) 设置轨迹事件发生时间点
  * @method string getCapPic() 获取抓拍图片
  * @method void setCapPic(string $CapPic) 设置抓拍图片
+ * @method integer getShoppingBagType() 获取购物袋类型
+ * @method void setShoppingBagType(integer $ShoppingBagType) 设置购物袋类型
+ * @method integer getShoppingBagCount() 获取购物袋数量
+ * @method void setShoppingBagCount(integer $ShoppingBagCount) 设置购物袋数量
  */
 
 /**
@@ -66,6 +70,16 @@ class PersonTracePoint extends AbstractModel
      * @var string 抓拍图片
      */
     public $CapPic;
+
+    /**
+     * @var integer 购物袋类型
+     */
+    public $ShoppingBagType;
+
+    /**
+     * @var integer 购物袋数量
+     */
+    public $ShoppingBagCount;
     /**
      * @param integer $MallAreaId 卖场区域编码
      * @param integer $ShopId 门店编码
@@ -73,6 +87,8 @@ class PersonTracePoint extends AbstractModel
      * @param integer $TraceEventType 轨迹事件
      * @param string $TraceEventTime 轨迹事件发生时间点
      * @param string $CapPic 抓拍图片
+     * @param integer $ShoppingBagType 购物袋类型
+     * @param integer $ShoppingBagCount 购物袋数量
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class PersonTracePoint extends AbstractModel
 
         if (array_key_exists("CapPic",$param) and $param["CapPic"] !== null) {
             $this->CapPic = $param["CapPic"];
+        }
+
+        if (array_key_exists("ShoppingBagType",$param) and $param["ShoppingBagType"] !== null) {
+            $this->ShoppingBagType = $param["ShoppingBagType"];
+        }
+
+        if (array_key_exists("ShoppingBagCount",$param) and $param["ShoppingBagCount"] !== null) {
+            $this->ShoppingBagCount = $param["ShoppingBagCount"];
         }
     }
 }

@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCopyingToRegions(array $CopyingToRegions) 设置快照正在跨地域复制的目的地域，默认取值为[]。
  * @method boolean getCopyFromRemote() 获取是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
  * @method void setCopyFromRemote(boolean $CopyFromRemote) 设置是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
+ * @method array getImageIds() 获取快照关联的镜像ID列表。
+ * @method void setImageIds(array $ImageIds) 设置快照关联的镜像ID列表。
  */
 
 /**
@@ -122,6 +124,11 @@ class Snapshot extends AbstractModel
      * @var boolean 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
      */
     public $CopyFromRemote;
+
+    /**
+     * @var array 快照关联的镜像ID列表。
+     */
+    public $ImageIds;
     /**
      * @param string $SnapshotId 快照ID。
      * @param Placement $Placement 快照所在的位置。
@@ -137,6 +144,7 @@ class Snapshot extends AbstractModel
      * @param boolean $IsPermanent 是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
      * @param array $CopyingToRegions 快照正在跨地域复制的目的地域，默认取值为[]。
      * @param boolean $CopyFromRemote 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
+     * @param array $ImageIds 快照关联的镜像ID列表。
      */
     function __construct()
     {
@@ -205,6 +213,10 @@ class Snapshot extends AbstractModel
 
         if (array_key_exists("CopyFromRemote",$param) and $param["CopyFromRemote"] !== null) {
             $this->CopyFromRemote = $param["CopyFromRemote"];
+        }
+
+        if (array_key_exists("ImageIds",$param) and $param["ImageIds"] !== null) {
+            $this->ImageIds = $param["ImageIds"];
         }
     }
 }

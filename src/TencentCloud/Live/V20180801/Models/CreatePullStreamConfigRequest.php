@@ -27,15 +27,23 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getIspId() 获取运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。
  * @method void setIspId(integer $IspId) 设置运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。
  * @method string getStartTime() 获取开始时间。
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
  * @method void setStartTime(string $StartTime) 设置开始时间。
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
  * @method string getEndTime() 获取结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
  * @method void setEndTime(string $EndTime) 设置结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
  */
 
 /**
@@ -65,6 +73,8 @@ class CreatePullStreamConfigRequest extends AbstractModel
 
     /**
      * @var string 开始时间。
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
      */
     public $StartTime;
 
@@ -73,6 +83,8 @@ class CreatePullStreamConfigRequest extends AbstractModel
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
      */
     public $EndTime;
     /**
@@ -81,10 +93,14 @@ class CreatePullStreamConfigRequest extends AbstractModel
      * @param integer $AreaId 区域id,1-深圳,2-上海，3-天津,4-香港。
      * @param integer $IspId 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。
      * @param string $StartTime 开始时间。
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
      * @param string $EndTime 结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
      */
     function __construct()
     {

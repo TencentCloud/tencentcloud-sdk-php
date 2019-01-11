@@ -38,6 +38,10 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
 PersonType=0时(普通顾客)，0普通顾客
 PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
+ * @method integer getVisitTimes() 获取到访次数，-1表示未知
+ * @method void setVisitTimes(integer $VisitTimes) 设置到访次数，-1表示未知
+ * @method integer getVisitDays() 获取到访天数，-1表示未知
+ * @method void setVisitDays(integer $VisitDays) 设置到访天数，-1表示未知
  */
 
 /**
@@ -82,6 +86,16 @@ PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3�
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
      */
     public $PersonSubType;
+
+    /**
+     * @var integer 到访次数，-1表示未知
+     */
+    public $VisitTimes;
+
+    /**
+     * @var integer 到访天数，-1表示未知
+     */
+    public $VisitDays;
     /**
      * @param integer $PersonId 用户ID
      * @param string $PersonPicture 人脸图片Base64内容，已弃用，返回默认空值
@@ -93,6 +107,8 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
 PersonType=0时(普通顾客)，0普通顾客
 PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
+     * @param integer $VisitTimes 到访次数，-1表示未知
+     * @param integer $VisitDays 到访天数，-1表示未知
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
 
         if (array_key_exists("PersonSubType",$param) and $param["PersonSubType"] !== null) {
             $this->PersonSubType = $param["PersonSubType"];
+        }
+
+        if (array_key_exists("VisitTimes",$param) and $param["VisitTimes"] !== null) {
+            $this->VisitTimes = $param["VisitTimes"];
+        }
+
+        if (array_key_exists("VisitDays",$param) and $param["VisitDays"] !== null) {
+            $this->VisitDays = $param["VisitDays"];
         }
     }
 }

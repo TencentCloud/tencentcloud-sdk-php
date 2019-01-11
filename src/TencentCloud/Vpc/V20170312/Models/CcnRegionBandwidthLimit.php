@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthLimit(integer $BandwidthLimit) 设置出带宽上限，单位：Mbps
  * @method boolean getIsBm() 获取是否黑石地域，默认`false`。
  * @method void setIsBm(boolean $IsBm) 设置是否黑石地域，默认`false`。
+ * @method string getDstRegion() 获取目的地域，例如：ap-shanghai
+ * @method void setDstRegion(string $DstRegion) 设置目的地域，例如：ap-shanghai
+ * @method boolean getDstIsBm() 获取目的地域是否为黑石地域，默认`false`。
+ * @method void setDstIsBm(boolean $DstIsBm) 设置目的地域是否为黑石地域，默认`false`。
  */
 
 /**
@@ -45,10 +49,22 @@ class CcnRegionBandwidthLimit extends AbstractModel
      * @var boolean 是否黑石地域，默认`false`。
      */
     public $IsBm;
+
+    /**
+     * @var string 目的地域，例如：ap-shanghai
+     */
+    public $DstRegion;
+
+    /**
+     * @var boolean 目的地域是否为黑石地域，默认`false`。
+     */
+    public $DstIsBm;
     /**
      * @param string $Region 地域，例如：ap-guangzhou
      * @param integer $BandwidthLimit 出带宽上限，单位：Mbps
      * @param boolean $IsBm 是否黑石地域，默认`false`。
+     * @param string $DstRegion 目的地域，例如：ap-shanghai
+     * @param boolean $DstIsBm 目的地域是否为黑石地域，默认`false`。
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class CcnRegionBandwidthLimit extends AbstractModel
 
         if (array_key_exists("IsBm",$param) and $param["IsBm"] !== null) {
             $this->IsBm = $param["IsBm"];
+        }
+
+        if (array_key_exists("DstRegion",$param) and $param["DstRegion"] !== null) {
+            $this->DstRegion = $param["DstRegion"];
+        }
+
+        if (array_key_exists("DstIsBm",$param) and $param["DstIsBm"] !== null) {
+            $this->DstIsBm = $param["DstIsBm"];
         }
     }
 }

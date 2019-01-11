@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginalPrice(float $OriginalPrice) 设置预付费云盘预支费用的原价，单位：元。
  * @method float getDiscountPrice() 获取预付费云盘预支费用的折扣价，单位：元。
  * @method void setDiscountPrice(float $DiscountPrice) 设置预付费云盘预支费用的折扣价，单位：元。
- * @method float getUnitPrice() 获取后付费云盘的单价，单位：元。
- * @method void setUnitPrice(float $UnitPrice) 设置后付费云盘的单价，单位：元。
+ * @method float getUnitPrice() 获取后付费云盘原单价，单位：元。
+ * @method void setUnitPrice(float $UnitPrice) 设置后付费云盘原单价，单位：元。
  * @method string getChargeUnit() 获取后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
  * @method void setChargeUnit(string $ChargeUnit) 设置后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+ * @method float getUnitPriceDiscount() 获取后付费云盘折扣单价，单位：元。
+ * @method void setUnitPriceDiscount(float $UnitPriceDiscount) 设置后付费云盘折扣单价，单位：元。
  */
 
 /**
@@ -44,7 +46,7 @@ class Price extends AbstractModel
     public $DiscountPrice;
 
     /**
-     * @var float 后付费云盘的单价，单位：元。
+     * @var float 后付费云盘原单价，单位：元。
      */
     public $UnitPrice;
 
@@ -52,11 +54,17 @@ class Price extends AbstractModel
      * @var string 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
      */
     public $ChargeUnit;
+
+    /**
+     * @var float 后付费云盘折扣单价，单位：元。
+     */
+    public $UnitPriceDiscount;
     /**
      * @param float $OriginalPrice 预付费云盘预支费用的原价，单位：元。
      * @param float $DiscountPrice 预付费云盘预支费用的折扣价，单位：元。
-     * @param float $UnitPrice 后付费云盘的单价，单位：元。
+     * @param float $UnitPrice 后付费云盘原单价，单位：元。
      * @param string $ChargeUnit 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+     * @param float $UnitPriceDiscount 后付费云盘折扣单价，单位：元。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class Price extends AbstractModel
 
         if (array_key_exists("ChargeUnit",$param) and $param["ChargeUnit"] !== null) {
             $this->ChargeUnit = $param["ChargeUnit"];
+        }
+
+        if (array_key_exists("UnitPriceDiscount",$param) and $param["UnitPriceDiscount"] !== null) {
+            $this->UnitPriceDiscount = $param["UnitPriceDiscount"];
         }
     }
 }

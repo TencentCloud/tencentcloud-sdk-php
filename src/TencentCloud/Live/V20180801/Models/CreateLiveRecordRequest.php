@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
- * @method string getAppName() 获取直播流所属应用名称。
- * @method void setAppName(string $AppName) 设置直播流所属应用名称。
+ * @method string getAppName() 获取推流App名。
+ * @method void setAppName(string $AppName) 设置推流App名。
  * @method string getDomainName() 获取推流域名。多域名推流必须设置。
  * @method void setDomainName(string $DomainName) 设置推流域名。多域名推流必须设置。
- * @method string getStartTime() 获取任务起始时间，中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。录制视频为精彩视频时，忽略此字段。
- * @method void setStartTime(string $StartTime) 设置任务起始时间，中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。录制视频为精彩视频时，忽略此字段。
- * @method string getEndTime() 获取任务结束时间，中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
- * @method void setEndTime(string $EndTime) 设置任务结束时间，中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
+ * @method string getStartTime() 获取录制开始时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+ * @method void setStartTime(string $StartTime) 设置录制开始时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+ * @method string getEndTime() 获取录制结束时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。如果通过Highlight参数，设置录制为精彩视频录制，结束时间不应超过当前时间+30分钟，如果结束时间超过当前时间+30分钟或小于当前时间，则实际结束时间为当前时间+30分钟。
+ * @method void setEndTime(string $EndTime) 设置录制结束时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。如果通过Highlight参数，设置录制为精彩视频录制，结束时间不应超过当前时间+30分钟，如果结束时间超过当前时间+30分钟或小于当前时间，则实际结束时间为当前时间+30分钟。
  * @method string getRecordType() 获取录制类型。不区分大小写。
 “video” : 音视频录制【默认】。
 “audio” : 纯音频录制。
@@ -38,19 +38,19 @@ use TencentCloud\Common\AbstractModel;
 “flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
  * @method void setFileFormat(string $FileFormat) 设置录制文件格式。不区分大小写。其值为：
 “flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
- * @method integer getHighlight() 获取精彩视频标志。0：普通视频【默认】；1：精彩视频。
- * @method void setHighlight(integer $Highlight) 设置精彩视频标志。0：普通视频【默认】；1：精彩视频。
- * @method integer getMixStream() 获取A+B=C混流标志。0：非A+B=C混流录制【默认】；1：标示为A+B=C混流录制。
- * @method void setMixStream(integer $MixStream) 设置A+B=C混流标志。0：非A+B=C混流录制【默认】；1：标示为A+B=C混流录制。
- * @method string getStreamParam() 获取录制流参数，当前支持以下参数： 
-interval 录制分片时长，单位 秒，0 - 7200
-storage_time 录制文件存储时长，单位 秒
-eg. interval=3600&storage_time=7200
+ * @method integer getHighlight() 获取开启精彩视频录制标志；0：不开启精彩视频录制【默认】；1：开启精彩视频录制。
+ * @method void setHighlight(integer $Highlight) 设置开启精彩视频录制标志；0：不开启精彩视频录制【默认】；1：开启精彩视频录制。
+ * @method integer getMixStream() 获取开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
+ * @method void setMixStream(integer $MixStream) 设置开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
+ * @method string getStreamParam() 获取录制流参数。当前支持以下参数：
+record_interval - 录制分片时长，单位 秒，1800 - 7200
+storage_time - 录制文件存储时长，单位 秒
+eg. record_interval=3600&storage_time=7200
 注：参数需要url encode。
- * @method void setStreamParam(string $StreamParam) 设置录制流参数，当前支持以下参数： 
-interval 录制分片时长，单位 秒，0 - 7200
-storage_time 录制文件存储时长，单位 秒
-eg. interval=3600&storage_time=7200
+ * @method void setStreamParam(string $StreamParam) 设置录制流参数。当前支持以下参数：
+record_interval - 录制分片时长，单位 秒，1800 - 7200
+storage_time - 录制文件存储时长，单位 秒
+eg. record_interval=3600&storage_time=7200
 注：参数需要url encode。
  */
 
@@ -65,7 +65,7 @@ class CreateLiveRecordRequest extends AbstractModel
     public $StreamName;
 
     /**
-     * @var string 直播流所属应用名称。
+     * @var string 推流App名。
      */
     public $AppName;
 
@@ -75,12 +75,12 @@ class CreateLiveRecordRequest extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string 任务起始时间，中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。录制视频为精彩视频时，忽略此字段。
+     * @var string 录制开始时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
      */
     public $StartTime;
 
     /**
-     * @var string 任务结束时间，中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
+     * @var string 录制结束时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。如果通过Highlight参数，设置录制为精彩视频录制，结束时间不应超过当前时间+30分钟，如果结束时间超过当前时间+30分钟或小于当前时间，则实际结束时间为当前时间+30分钟。
      */
     public $EndTime;
 
@@ -98,40 +98,40 @@ class CreateLiveRecordRequest extends AbstractModel
     public $FileFormat;
 
     /**
-     * @var integer 精彩视频标志。0：普通视频【默认】；1：精彩视频。
+     * @var integer 开启精彩视频录制标志；0：不开启精彩视频录制【默认】；1：开启精彩视频录制。
      */
     public $Highlight;
 
     /**
-     * @var integer A+B=C混流标志。0：非A+B=C混流录制【默认】；1：标示为A+B=C混流录制。
+     * @var integer 开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
      */
     public $MixStream;
 
     /**
-     * @var string 录制流参数，当前支持以下参数： 
-interval 录制分片时长，单位 秒，0 - 7200
-storage_time 录制文件存储时长，单位 秒
-eg. interval=3600&storage_time=7200
+     * @var string 录制流参数。当前支持以下参数：
+record_interval - 录制分片时长，单位 秒，1800 - 7200
+storage_time - 录制文件存储时长，单位 秒
+eg. record_interval=3600&storage_time=7200
 注：参数需要url encode。
      */
     public $StreamParam;
     /**
      * @param string $StreamName 流名称。
-     * @param string $AppName 直播流所属应用名称。
+     * @param string $AppName 推流App名。
      * @param string $DomainName 推流域名。多域名推流必须设置。
-     * @param string $StartTime 任务起始时间，中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。录制视频为精彩视频时，忽略此字段。
-     * @param string $EndTime 任务结束时间，中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
+     * @param string $StartTime 录制开始时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+     * @param string $EndTime 录制结束时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。如果通过Highlight参数，设置录制为精彩视频录制，结束时间不应超过当前时间+30分钟，如果结束时间超过当前时间+30分钟或小于当前时间，则实际结束时间为当前时间+30分钟。
      * @param string $RecordType 录制类型。不区分大小写。
 “video” : 音视频录制【默认】。
 “audio” : 纯音频录制。
      * @param string $FileFormat 录制文件格式。不区分大小写。其值为：
 “flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
-     * @param integer $Highlight 精彩视频标志。0：普通视频【默认】；1：精彩视频。
-     * @param integer $MixStream A+B=C混流标志。0：非A+B=C混流录制【默认】；1：标示为A+B=C混流录制。
-     * @param string $StreamParam 录制流参数，当前支持以下参数： 
-interval 录制分片时长，单位 秒，0 - 7200
-storage_time 录制文件存储时长，单位 秒
-eg. interval=3600&storage_time=7200
+     * @param integer $Highlight 开启精彩视频录制标志；0：不开启精彩视频录制【默认】；1：开启精彩视频录制。
+     * @param integer $MixStream 开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
+     * @param string $StreamParam 录制流参数。当前支持以下参数：
+record_interval - 录制分片时长，单位 秒，1800 - 7200
+storage_time - 录制文件存储时长，单位 秒
+eg. record_interval=3600&storage_time=7200
 注：参数需要url encode。
      */
     function __construct()

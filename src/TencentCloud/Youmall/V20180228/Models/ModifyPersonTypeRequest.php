@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPersonType(integer $PersonType) 设置身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
  * @method integer getPersonSubType() 获取身份子类型:
 PersonType=0时(普通顾客)，0普通顾客
-PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
+PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册会员，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
  * @method void setPersonSubType(integer $PersonSubType) 设置身份子类型:
 PersonType=0时(普通顾客)，0普通顾客
-PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
+PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册会员，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
  */
 
@@ -64,7 +64,7 @@ class ModifyPersonTypeRequest extends AbstractModel
     /**
      * @var integer 身份子类型:
 PersonType=0时(普通顾客)，0普通顾客
-PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
+PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册会员，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
      */
     public $PersonSubType;
@@ -75,7 +75,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * @param integer $PersonType 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
      * @param integer $PersonSubType 身份子类型:
 PersonType=0时(普通顾客)，0普通顾客
-PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
+PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册会员，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
      */
     function __construct()

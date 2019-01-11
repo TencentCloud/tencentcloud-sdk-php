@@ -29,9 +29,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIspName() 获取运营商名。
  * @method void setIspName(string $IspName) 设置运营商名。
  * @method string getStartTime() 获取开始时间。
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
  * @method void setStartTime(string $StartTime) 设置开始时间。
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
  * @method string getEndTime() 获取结束时间。
+
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
  * @method void setEndTime(string $EndTime) 设置结束时间。
+
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
  * @method string getStatus() 获取0无效，1初始状态，2正在运行，3拉起失败，4暂停。
  * @method void setStatus(string $Status) 设置0无效，1初始状态，2正在运行，3拉起失败，4暂停。
  */
@@ -68,11 +78,16 @@ class PullStreamConfig extends AbstractModel
 
     /**
      * @var string 开始时间。
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
      */
     public $StartTime;
 
     /**
      * @var string 结束时间。
+
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
      */
     public $EndTime;
 
@@ -87,7 +102,12 @@ class PullStreamConfig extends AbstractModel
      * @param string $AreaName 区域名。
      * @param string $IspName 运营商名。
      * @param string $StartTime 开始时间。
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
      * @param string $EndTime 结束时间。
+
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
      * @param string $Status 0无效，1初始状态，2正在运行，3拉起失败，4暂停。
      */
     function __construct()

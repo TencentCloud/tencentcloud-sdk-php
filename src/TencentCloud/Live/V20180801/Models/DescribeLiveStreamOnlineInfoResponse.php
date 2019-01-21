@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getPageNum() 获取分页的页码。
  * @method void setPageNum(integer $PageNum) 设置分页的页码。
- * @method integer getPageSize() 获取每页大小
- * @method void setPageSize(integer $PageSize) 设置每页大小
+ * @method integer getPageSize() 获取每页大小。
+ * @method void setPageSize(integer $PageSize) 设置每页大小。
  * @method integer getTotalNum() 获取符合条件的总个数。
  * @method void setTotalNum(integer $TotalNum) 设置符合条件的总个数。
  * @method integer getTotalPage() 获取总页数。
  * @method void setTotalPage(integer $TotalPage) 设置总页数。
- * @method array getStreamInfoList() 获取流信息列表
- * @method void setStreamInfoList(array $StreamInfoList) 设置流信息列表
+ * @method array getStreamInfoList() 获取流信息列表。
+ * @method void setStreamInfoList(array $StreamInfoList) 设置流信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,7 +43,7 @@ class DescribeLiveStreamOnlineInfoResponse extends AbstractModel
     public $PageNum;
 
     /**
-     * @var integer 每页大小
+     * @var integer 每页大小。
      */
     public $PageSize;
 
@@ -58,7 +58,7 @@ class DescribeLiveStreamOnlineInfoResponse extends AbstractModel
     public $TotalPage;
 
     /**
-     * @var array 流信息列表
+     * @var array 流信息列表。
      */
     public $StreamInfoList;
 
@@ -68,10 +68,10 @@ class DescribeLiveStreamOnlineInfoResponse extends AbstractModel
     public $RequestId;
     /**
      * @param integer $PageNum 分页的页码。
-     * @param integer $PageSize 每页大小
+     * @param integer $PageSize 每页大小。
      * @param integer $TotalNum 符合条件的总个数。
      * @param integer $TotalPage 总页数。
-     * @param array $StreamInfoList 流信息列表
+     * @param array $StreamInfoList 流信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

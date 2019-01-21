@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getSessionId() 获取图片唯一标识，一张图片一个SessionId；
  * @method void setSessionId(string $SessionId) 设置图片唯一标识，一张图片一个SessionId；
- * @method string getImage() 获取图片数据，需要使用base64对图片的二进制数据进行编码；
- * @method void setImage(string $Image) 设置图片数据，需要使用base64对图片的二进制数据进行编码；
+ * @method string getImage() 获取图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
+ * @method void setImage(string $Image) 设置图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
+ * @method string getHcmAppid() 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+ * @method void setHcmAppid(string $HcmAppid) 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+ * @method string getUrl() 获取图片url，与Image参数二者填一即可；
+ * @method void setUrl(string $Url) 设置图片url，与Image参数二者填一即可；
  */
 
 /**
@@ -35,12 +39,24 @@ class EvaluationRequest extends AbstractModel
     public $SessionId;
 
     /**
-     * @var string 图片数据，需要使用base64对图片的二进制数据进行编码；
+     * @var string 图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
      */
     public $Image;
+
+    /**
+     * @var string 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+     */
+    public $HcmAppid;
+
+    /**
+     * @var string 图片url，与Image参数二者填一即可；
+     */
+    public $Url;
     /**
      * @param string $SessionId 图片唯一标识，一张图片一个SessionId；
-     * @param string $Image 图片数据，需要使用base64对图片的二进制数据进行编码；
+     * @param string $Image 图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
+     * @param string $HcmAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+     * @param string $Url 图片url，与Image参数二者填一即可；
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class EvaluationRequest extends AbstractModel
 
         if (array_key_exists("Image",$param) and $param["Image"] !== null) {
             $this->Image = $param["Image"];
+        }
+
+        if (array_key_exists("HcmAppid",$param) and $param["HcmAppid"] !== null) {
+            $this->HcmAppid = $param["HcmAppid"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

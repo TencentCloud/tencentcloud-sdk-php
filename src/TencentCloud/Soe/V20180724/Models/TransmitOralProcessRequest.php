@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSoeAppId(string $SoeAppId) 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
  * @method integer getIsLongLifeSession() 获取长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
  * @method void setIsLongLifeSession(integer $IsLongLifeSession) 设置长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
+ * @method integer getIsQuery() 获取查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 的评估结果。
+ * @method void setIsQuery(integer $IsQuery) 设置查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 的评估结果。
  */
 
 /**
@@ -80,6 +82,11 @@ class TransmitOralProcessRequest extends AbstractModel
      * @var integer 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
      */
     public $IsLongLifeSession;
+
+    /**
+     * @var integer 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 的评估结果。
+     */
+    public $IsQuery;
     /**
      * @param integer $SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
      * @param integer $IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
@@ -89,6 +96,7 @@ class TransmitOralProcessRequest extends AbstractModel
      * @param string $SessionId 语音段唯一标识，一个完整语音一个SessionId。
      * @param string $SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
      * @param integer $IsLongLifeSession 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
+     * @param integer $IsQuery 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 的评估结果。
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class TransmitOralProcessRequest extends AbstractModel
 
         if (array_key_exists("IsLongLifeSession",$param) and $param["IsLongLifeSession"] !== null) {
             $this->IsLongLifeSession = $param["IsLongLifeSession"];
+        }
+
+        if (array_key_exists("IsQuery",$param) and $param["IsQuery"] !== null) {
+            $this->IsQuery = $param["IsQuery"];
         }
     }
 }

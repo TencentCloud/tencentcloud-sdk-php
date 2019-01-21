@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhone(string $Phone) 设置代客手机，打码显示
  * @method integer getHasOverdueBill() 获取0表示不欠费，1表示欠费
  * @method void setHasOverdueBill(integer $HasOverdueBill) 设置0表示不欠费，1表示欠费
+ * @method integer getStatus() 获取1:待代理商审核;2:待腾讯云审核
+ * @method void setStatus(integer $Status) 设置1:待代理商审核;2:待腾讯云审核
  */
 
 /**
@@ -73,6 +75,11 @@ class AgentClientElem extends AbstractModel
      * @var integer 0表示不欠费，1表示欠费
      */
     public $HasOverdueBill;
+
+    /**
+     * @var integer 1:待代理商审核;2:待腾讯云审核
+     */
+    public $Status;
     /**
      * @param string $Uin 代理商账号ID
      * @param string $ClientUin 代客账号ID
@@ -81,6 +88,7 @@ class AgentClientElem extends AbstractModel
      * @param string $Mail 代客邮箱，打码显示
      * @param string $Phone 代客手机，打码显示
      * @param integer $HasOverdueBill 0表示不欠费，1表示欠费
+     * @param integer $Status 1:待代理商审核;2:待腾讯云审核
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class AgentClientElem extends AbstractModel
 
         if (array_key_exists("HasOverdueBill",$param) and $param["HasOverdueBill"] !== null) {
             $this->HasOverdueBill = $param["HasOverdueBill"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

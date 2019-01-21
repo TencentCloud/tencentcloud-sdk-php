@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNum(integer $PageNum) 设置分页的页码。
  * @method integer getPageSize() 获取每页显示的条数。
  * @method void setPageSize(integer $PageSize) 设置每页显示的条数。
- * @method array getOnlineInfo() 获取正在推送流的信息列表
- * @method void setOnlineInfo(array $OnlineInfo) 设置正在推送流的信息列表
+ * @method array getOnlineInfo() 获取正在推送流的信息列表。
+ * @method void setOnlineInfo(array $OnlineInfo) 设置正在推送流的信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -58,7 +58,7 @@ class DescribeLiveStreamOnlineListResponse extends AbstractModel
     public $PageSize;
 
     /**
-     * @var array 正在推送流的信息列表
+     * @var array 正在推送流的信息列表。
      */
     public $OnlineInfo;
 
@@ -71,7 +71,7 @@ class DescribeLiveStreamOnlineListResponse extends AbstractModel
      * @param integer $TotalPage 总页数。
      * @param integer $PageNum 分页的页码。
      * @param integer $PageSize 每页显示的条数。
-     * @param array $OnlineInfo 正在推送流的信息列表
+     * @param array $OnlineInfo 正在推送流的信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

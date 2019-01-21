@@ -45,7 +45,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自保护机制，用户配置网络安全协议
+ *IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
  */
 class IKEOptionsSpecification extends AbstractModel
 {

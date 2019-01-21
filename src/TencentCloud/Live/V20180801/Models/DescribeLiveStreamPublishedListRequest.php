@@ -35,19 +35,17 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
  * @method string getAppName() 获取直播流所属应用名称。
  * @method void setAppName(string $AppName) 设置直播流所属应用名称。
  * @method integer getPageNum() 获取取得第几页。
-默认值：1
+默认值：1。
  * @method void setPageNum(integer $PageNum) 设置取得第几页。
-默认值：1
+默认值：1。
  * @method integer getPageSize() 获取分页大小。
-
 最大值：100。
 取值范围：1~100 之前的任意整数。
-默认值：10
+默认值：10。
  * @method void setPageSize(integer $PageSize) 设置分页大小。
-
 最大值：100。
 取值范围：1~100 之前的任意整数。
-默认值：10
+默认值：10。
  */
 
 /**
@@ -81,16 +79,15 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 
     /**
      * @var integer 取得第几页。
-默认值：1
+默认值：1。
      */
     public $PageNum;
 
     /**
      * @var integer 分页大小。
-
 最大值：100。
 取值范围：1~100 之前的任意整数。
-默认值：10
+默认值：10。
      */
     public $PageSize;
     /**
@@ -103,12 +100,11 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 和当前时间相隔不超过7天。
      * @param string $AppName 直播流所属应用名称。
      * @param integer $PageNum 取得第几页。
-默认值：1
+默认值：1。
      * @param integer $PageSize 分页大小。
-
 最大值：100。
 取值范围：1~100 之前的任意整数。
-默认值：10
+默认值：10。
      */
     function __construct()
     {

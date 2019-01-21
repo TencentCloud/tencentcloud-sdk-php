@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublishTimeList(array $PublishTimeList) 设置推流时间列表
  * @method string getAppName() 获取应用名称。
  * @method void setAppName(string $AppName) 设置应用名称。
+ * @method string getDomainName() 获取推流域名。
+ * @method void setDomainName(string $DomainName) 设置推流域名。
  */
 
 /**
@@ -45,10 +47,16 @@ class StreamOnlineInfo extends AbstractModel
      * @var string 应用名称。
      */
     public $AppName;
+
+    /**
+     * @var string 推流域名。
+     */
+    public $DomainName;
     /**
      * @param string $StreamName 流名称。
      * @param array $PublishTimeList 推流时间列表
      * @param string $AppName 应用名称。
+     * @param string $DomainName 推流域名。
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class StreamOnlineInfo extends AbstractModel
 
         if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
             $this->AppName = $param["AppName"];
+        }
+
+        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
+            $this->DomainName = $param["DomainName"];
         }
     }
 }

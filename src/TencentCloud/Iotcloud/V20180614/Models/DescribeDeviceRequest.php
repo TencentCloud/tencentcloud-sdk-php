@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getProductID() 获取产品ID
  * @method void setProductID(string $ProductID) 设置产品ID
- * @method string getDeviceName() 获取产品名
- * @method void setDeviceName(string $DeviceName) 设置产品名
+ * @method string getDeviceName() 获取设备名
+ * @method void setDeviceName(string $DeviceName) 设置设备名
  */
 
 /**
@@ -35,12 +35,12 @@ class DescribeDeviceRequest extends AbstractModel
     public $ProductID;
 
     /**
-     * @var string 产品名
+     * @var string 设备名
      */
     public $DeviceName;
     /**
      * @param string $ProductID 产品ID
-     * @param string $DeviceName 产品名
+     * @param string $DeviceName 设备名
      */
     function __construct()
     {

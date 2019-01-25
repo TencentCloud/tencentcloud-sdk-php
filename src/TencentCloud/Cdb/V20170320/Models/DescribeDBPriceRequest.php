@@ -18,8 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getZone() 获取可用区信息，格式如"ap-guangzhou-1"
- * @method void setZone(string $Zone) 设置可用区信息，格式如"ap-guangzhou-1"
+ * @method string getZone() 获取可用区信息，格式如"ap-guangzhou-2"。具体能设置的值请通过<a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a>接口查询。
+ * @method void setZone(string $Zone) 设置可用区信息，格式如"ap-guangzhou-2"。具体能设置的值请通过<a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a>接口查询。
  * @method integer getGoodsNum() 获取实例数量，默认值为1, 最小值1，最大值为100
  * @method void setGoodsNum(integer $GoodsNum) 设置实例数量，默认值为1, 最小值1，最大值为100
  * @method integer getMemory() 获取实例内存大小，单位：MB
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBPriceRequest extends AbstractModel
 {
     /**
-     * @var string 可用区信息，格式如"ap-guangzhou-1"
+     * @var string 可用区信息，格式如"ap-guangzhou-2"。具体能设置的值请通过<a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a>接口查询。
      */
     public $Zone;
 
@@ -81,7 +81,7 @@ class DescribeDBPriceRequest extends AbstractModel
      */
     public $ProtectMode;
     /**
-     * @param string $Zone 可用区信息，格式如"ap-guangzhou-1"
+     * @param string $Zone 可用区信息，格式如"ap-guangzhou-2"。具体能设置的值请通过<a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a>接口查询。
      * @param integer $GoodsNum 实例数量，默认值为1, 最小值1，最大值为100
      * @param integer $Memory 实例内存大小，单位：MB
      * @param integer $Volume 实例硬盘大小，单位：GB

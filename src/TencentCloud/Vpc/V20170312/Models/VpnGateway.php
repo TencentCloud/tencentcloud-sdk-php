@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setState(string $State) 设置网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
  * @method string getPublicIpAddress() 获取网关公网IP。
  * @method void setPublicIpAddress(string $PublicIpAddress) 设置网关公网IP。
- * @method string getRenewFlag() 获取网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费
- * @method void setRenewFlag(string $RenewFlag) 设置网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费
+ * @method string getRenewFlag() 获取网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
+ * @method void setRenewFlag(string $RenewFlag) 设置网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
  * @method string getInstanceChargeType() 获取网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
  * @method integer getInternetMaxBandwidthOut() 获取网关出带宽。
@@ -86,7 +86,7 @@ class VpnGateway extends AbstractModel
     public $PublicIpAddress;
 
     /**
-     * @var string 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费
+     * @var string 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
      */
     public $RenewFlag;
 
@@ -136,7 +136,7 @@ class VpnGateway extends AbstractModel
      * @param string $Type 网关实例类型：'IPSEC', 'SSL'。
      * @param string $State 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
      * @param string $PublicIpAddress 网关公网IP。
-     * @param string $RenewFlag 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费
+     * @param string $RenewFlag 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
      * @param string $InstanceChargeType 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
      * @param integer $InternetMaxBandwidthOut 网关出带宽。
      * @param string $CreatedTime 创建时间。

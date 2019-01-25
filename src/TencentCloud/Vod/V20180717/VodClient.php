@@ -84,6 +84,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
 
 接口搜索限制：
 - 搜索结果超过 5000条，不再支持分页查询超过 5000 部分的数据。
+* @method Models\SimpleHlsClipResponse SimpleHlsClip(Models\SimpleHlsClipRequest $req) 对 HLS 视频进行按时间段裁剪。
+
+注意：裁剪出来的视频与原始视频共用 ts，仅生成新的 m3u8。原始视频删除后，该裁剪视频也会被删除。
  */
 
 class VodClient extends AbstractClient

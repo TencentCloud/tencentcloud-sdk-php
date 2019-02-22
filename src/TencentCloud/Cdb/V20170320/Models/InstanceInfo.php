@@ -90,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhysicalId(string $PhysicalId) 设置物理ID
  * @method integer getCpu() 获取核心数
  * @method void setCpu(integer $Cpu) 设置核心数
+ * @method integer getQps() 获取每秒查询数量
+ * @method void setQps(integer $Qps) 设置每秒查询数量
+ * @method string getZoneName() 获取可用区中文名称
+ * @method void setZoneName(string $ZoneName) 设置可用区中文名称
  */
 
 /**
@@ -276,6 +280,16 @@ class InstanceInfo extends AbstractModel
      * @var integer 核心数
      */
     public $Cpu;
+
+    /**
+     * @var integer 每秒查询数量
+     */
+    public $Qps;
+
+    /**
+     * @var string 可用区中文名称
+     */
+    public $ZoneName;
     /**
      * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @param string $Zone 可用区信息
@@ -313,6 +327,8 @@ class InstanceInfo extends AbstractModel
      * @param string $UniqSubnetId 子网描述符，例如：“subnet-1typ0s7d”
      * @param string $PhysicalId 物理ID
      * @param integer $Cpu 核心数
+     * @param integer $Qps 每秒查询数量
+     * @param string $ZoneName 可用区中文名称
      */
     function __construct()
     {
@@ -481,6 +497,14 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
             $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("Qps",$param) and $param["Qps"] !== null) {
+            $this->Qps = $param["Qps"];
+        }
+
+        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
+            $this->ZoneName = $param["ZoneName"];
         }
     }
 }

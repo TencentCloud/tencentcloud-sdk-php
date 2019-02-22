@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getZone() 获取可用区名称。如ap-guangzhou-bls-1, 通过DescribeRegions获取
  * @method void setZone(string $Zone) 设置可用区名称。如ap-guangzhou-bls-1, 通过DescribeRegions获取
- * @method string getComputeType() 获取计算单元类型
- * @method void setComputeType(string $ComputeType) 设置计算单元类型
+ * @method string getComputeType() 获取计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
+ * @method void setComputeType(string $ComputeType) 设置计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
  * @method integer getOsTypeId() 获取操作系统类型ID
  * @method void setOsTypeId(integer $OsTypeId) 设置操作系统类型ID
  * @method string getVpcId() 获取私有网络ID
@@ -49,7 +49,7 @@ class CreateSpotDeviceRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 计算单元类型
+     * @var string 计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
      */
     public $ComputeType;
 
@@ -89,7 +89,7 @@ class CreateSpotDeviceRequest extends AbstractModel
     public $Passwd;
     /**
      * @param string $Zone 可用区名称。如ap-guangzhou-bls-1, 通过DescribeRegions获取
-     * @param string $ComputeType 计算单元类型
+     * @param string $ComputeType 计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
      * @param integer $OsTypeId 操作系统类型ID
      * @param string $VpcId 私有网络ID
      * @param string $SubnetId 子网ID

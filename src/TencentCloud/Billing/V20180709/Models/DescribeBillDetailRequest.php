@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取数量，最大值为100
  * @method void setLimit(integer $Limit) 设置数量，最大值为100
- * @method string getPeriodType() 获取周期类型，byPayTime按扣费周期/byUsedTime按计费周期
- * @method void setPeriodType(string $PeriodType) 设置周期类型，byPayTime按扣费周期/byUsedTime按计费周期
- * @method string getMonth() 获取月份，格式为yyyy-mm
- * @method void setMonth(string $Month) 设置月份，格式为yyyy-mm
- * @method string getBeginTime() 获取周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
- * @method void setBeginTime(string $BeginTime) 设置周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
- * @method string getEndTime() 获取周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
- * @method void setEndTime(string $EndTime) 设置周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
+ * @method string getPeriodType() 获取周期类型，byPayTime按扣费周期/byUsedTime按计费周期。需要与费用中心该月份账单的周期保持一致。
+ * @method void setPeriodType(string $PeriodType) 设置周期类型，byPayTime按扣费周期/byUsedTime按计费周期。需要与费用中心该月份账单的周期保持一致。
+ * @method string getMonth() 获取月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+ * @method void setMonth(string $Month) 设置月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+ * @method string getBeginTime() 获取周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+ * @method void setBeginTime(string $BeginTime) 设置周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+ * @method string getEndTime() 获取周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+ * @method void setEndTime(string $EndTime) 设置周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
  */
 
 /**
@@ -48,31 +48,31 @@ class DescribeBillDetailRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 周期类型，byPayTime按扣费周期/byUsedTime按计费周期
+     * @var string 周期类型，byPayTime按扣费周期/byUsedTime按计费周期。需要与费用中心该月份账单的周期保持一致。
      */
     public $PeriodType;
 
     /**
-     * @var string 月份，格式为yyyy-mm
+     * @var string 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public $Month;
 
     /**
-     * @var string 周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
+     * @var string 周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public $BeginTime;
 
     /**
-     * @var string 周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
+     * @var string 周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public $EndTime;
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 数量，最大值为100
-     * @param string $PeriodType 周期类型，byPayTime按扣费周期/byUsedTime按计费周期
-     * @param string $Month 月份，格式为yyyy-mm
-     * @param string $BeginTime 周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
-     * @param string $EndTime 周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
+     * @param string $PeriodType 周期类型，byPayTime按扣费周期/byUsedTime按计费周期。需要与费用中心该月份账单的周期保持一致。
+     * @param string $Month 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * @param string $BeginTime 周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * @param string $EndTime 周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     function __construct()
     {

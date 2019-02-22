@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogs(array $Logs) 设置日志内容列表
  * @method boolean getListover() 获取是否已经返回所有符合条件的日志
  * @method void setListover(boolean $Listover) 设置是否已经返回所有符合条件的日志
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -49,14 +49,14 @@ class QueryLogsResponse extends AbstractModel
     public $Listover;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param string $Context 日志查询上下文，用于加载更多日志
      * @param array $Logs 日志内容列表
      * @param boolean $Listover 是否已经返回所有符合条件的日志
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

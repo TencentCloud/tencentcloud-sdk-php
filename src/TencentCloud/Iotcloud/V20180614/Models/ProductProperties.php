@@ -20,12 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getProductDescription() 获取产品描述
  * @method void setProductDescription(string $ProductDescription) 设置产品描述
- * @method string getEncryptionType() 获取加密类型，1表示非对称加密，2表示对称加密。如不填写，默认值是1
- * @method void setEncryptionType(string $EncryptionType) 设置加密类型，1表示非对称加密，2表示对称加密。如不填写，默认值是1
+ * @method string getEncryptionType() 获取加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
+ * @method void setEncryptionType(string $EncryptionType) 设置加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
  * @method string getRegion() 获取产品所属区域，目前只支持广州（gz）
  * @method void setRegion(string $Region) 设置产品所属区域，目前只支持广州（gz）
- * @method integer getProductType() 获取产品类型，0表示正常设备，2表示NB-IoT设备，默认值是0
- * @method void setProductType(integer $ProductType) 设置产品类型，0表示正常设备，2表示NB-IoT设备，默认值是0
+ * @method integer getProductType() 获取产品类型，各个类型值代表的节点-类型如下：
+0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0
+ * @method void setProductType(integer $ProductType) 设置产品类型，各个类型值代表的节点-类型如下：
+0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0
  * @method string getFormat() 获取数据格式，取值为json或者custom，默认值是json
  * @method void setFormat(string $Format) 设置数据格式，取值为json或者custom，默认值是json
  * @method string getPlatform() 获取产品所属平台，默认值是0
@@ -36,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelId(string $ModelId) 设置产品绑定的物模型ID，-1表示不绑定
  * @method string getModelName() 获取产品绑定的物模型名称
  * @method void setModelName(string $ModelName) 设置产品绑定的物模型名称
+ * @method string getProductKey() 获取产品秘钥，suite产品才会有
+ * @method void setProductKey(string $ProductKey) 设置产品秘钥，suite产品才会有
  */
 
 /**
@@ -49,7 +53,7 @@ class ProductProperties extends AbstractModel
     public $ProductDescription;
 
     /**
-     * @var string 加密类型，1表示非对称加密，2表示对称加密。如不填写，默认值是1
+     * @var string 加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
      */
     public $EncryptionType;
 
@@ -59,7 +63,8 @@ class ProductProperties extends AbstractModel
     public $Region;
 
     /**
-     * @var integer 产品类型，0表示正常设备，2表示NB-IoT设备，默认值是0
+     * @var integer 产品类型，各个类型值代表的节点-类型如下：
+0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0
      */
     public $ProductType;
 
@@ -87,16 +92,23 @@ class ProductProperties extends AbstractModel
      * @var string 产品绑定的物模型名称
      */
     public $ModelName;
+
+    /**
+     * @var string 产品秘钥，suite产品才会有
+     */
+    public $ProductKey;
     /**
      * @param string $ProductDescription 产品描述
-     * @param string $EncryptionType 加密类型，1表示非对称加密，2表示对称加密。如不填写，默认值是1
+     * @param string $EncryptionType 加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
      * @param string $Region 产品所属区域，目前只支持广州（gz）
-     * @param integer $ProductType 产品类型，0表示正常设备，2表示NB-IoT设备，默认值是0
+     * @param integer $ProductType 产品类型，各个类型值代表的节点-类型如下：
+0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0
      * @param string $Format 数据格式，取值为json或者custom，默认值是json
      * @param string $Platform 产品所属平台，默认值是0
      * @param string $Appeui LoRa产品运营侧APPEUI，只有LoRa产品需要填写
      * @param string $ModelId 产品绑定的物模型ID，-1表示不绑定
      * @param string $ModelName 产品绑定的物模型名称
+     * @param string $ProductKey 产品秘钥，suite产品才会有
      */
     function __construct()
     {
@@ -144,6 +156,10 @@ class ProductProperties extends AbstractModel
 
         if (array_key_exists("ModelName",$param) and $param["ModelName"] !== null) {
             $this->ModelName = $param["ModelName"];
+        }
+
+        if (array_key_exists("ProductKey",$param) and $param["ProductKey"] !== null) {
+            $this->ProductKey = $param["ProductKey"];
         }
     }
 }

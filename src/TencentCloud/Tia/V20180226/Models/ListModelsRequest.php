@@ -18,14 +18,14 @@ namespace TencentCloud\Tia\V20180226\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCluster() 获取部署模型的集群
- * @method void setCluster(string $Cluster) 设置部署模型的集群
- * @method integer getLimit() 获取分页参数，返回数量
- * @method void setLimit(integer $Limit) 设置分页参数，返回数量
- * @method integer getOffset() 获取分页参数，起始位置
- * @method void setOffset(integer $Offset) 设置分页参数，起始位置
- * @method string getServType() 获取模型类型
- * @method void setServType(string $ServType) 设置模型类型
+ * @method string getCluster() 获取部署模型的集群， `集群模式` 必填
+ * @method void setCluster(string $Cluster) 设置部署模型的集群， `集群模式` 必填
+ * @method integer getLimit() 获取分页参数，返回数量上限
+ * @method void setLimit(integer $Limit) 设置分页参数，返回数量上限
+ * @method integer getOffset() 获取分页参数，分页起始位置
+ * @method void setOffset(integer $Offset) 设置分页参数，分页起始位置
+ * @method string getServType() 获取部署类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`。
+ * @method void setServType(string $ServType) 设置部署类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`。
  */
 
 /**
@@ -34,29 +34,29 @@ use TencentCloud\Common\AbstractModel;
 class ListModelsRequest extends AbstractModel
 {
     /**
-     * @var string 部署模型的集群
+     * @var string 部署模型的集群， `集群模式` 必填
      */
     public $Cluster;
 
     /**
-     * @var integer 分页参数，返回数量
+     * @var integer 分页参数，返回数量上限
      */
     public $Limit;
 
     /**
-     * @var integer 分页参数，起始位置
+     * @var integer 分页参数，分页起始位置
      */
     public $Offset;
 
     /**
-     * @var string 模型类型
+     * @var string 部署类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`。
      */
     public $ServType;
     /**
-     * @param string $Cluster 部署模型的集群
-     * @param integer $Limit 分页参数，返回数量
-     * @param integer $Offset 分页参数，起始位置
-     * @param string $ServType 模型类型
+     * @param string $Cluster 部署模型的集群， `集群模式` 必填
+     * @param integer $Limit 分页参数，返回数量上限
+     * @param integer $Offset 分页参数，分页起始位置
+     * @param string $ServType 部署类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`。
      */
     function __construct()
     {

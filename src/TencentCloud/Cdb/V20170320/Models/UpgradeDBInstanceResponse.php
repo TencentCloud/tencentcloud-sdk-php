@@ -18,8 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getDealIds() 获取订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
- * @method void setDealIds(array $DealIds) 设置订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
+ * @method array getDealIds() 获取订单ID
+ * @method void setDealIds(array $DealIds) 设置订单ID
  * @method string getAsyncRequestId() 获取异步任务的请求ID，可使用此ID查询异步任务的执行结果
  * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务的请求ID，可使用此ID查询异步任务的执行结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class UpgradeDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var array 订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
+     * @var array 订单ID
      */
     public $DealIds;
 
@@ -46,7 +46,7 @@ class UpgradeDBInstanceResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $DealIds 订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
+     * @param array $DealIds 订单ID
      * @param string $AsyncRequestId 异步任务的请求ID，可使用此ID查询异步任务的执行结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

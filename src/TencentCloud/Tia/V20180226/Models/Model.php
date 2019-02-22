@@ -44,6 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpose(string $Expose) 设置模型暴露方式
  * @method integer getReplicas() 获取部署副本数量
  * @method void setReplicas(integer $Replicas) 设置部署副本数量
+ * @method string getId() 获取模型Id
+ * @method void setId(string $Id) 设置模型Id
+ * @method string getUin() 获取创建任务的Uin
+ * @method void setUin(string $Uin) 设置创建任务的Uin
+ * @method string getDelTime() 获取模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+ * @method void setDelTime(string $DelTime) 设置模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
  */
 
 /**
@@ -128,6 +134,21 @@ class Model extends AbstractModel
      * @var integer 部署副本数量
      */
     public $Replicas;
+
+    /**
+     * @var string 模型Id
+     */
+    public $Id;
+
+    /**
+     * @var string 创建任务的Uin
+     */
+    public $Uin;
+
+    /**
+     * @var string 模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+     */
+    public $DelTime;
     /**
      * @param string $Name 模型名称
      * @param string $Description 模型描述
@@ -142,6 +163,9 @@ class Model extends AbstractModel
      * @param string $ServType 机型
      * @param string $Expose 模型暴露方式
      * @param integer $Replicas 部署副本数量
+     * @param string $Id 模型Id
+     * @param string $Uin 创建任务的Uin
+     * @param string $DelTime 模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      */
     function __construct()
     {
@@ -205,6 +229,18 @@ class Model extends AbstractModel
 
         if (array_key_exists("Replicas",$param) and $param["Replicas"] !== null) {
             $this->Replicas = $param["Replicas"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("DelTime",$param) and $param["DelTime"] !== null) {
+            $this->DelTime = $param["DelTime"];
         }
     }
 }

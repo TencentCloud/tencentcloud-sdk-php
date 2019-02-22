@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxNodePodNum(integer $MaxNodePodNum) 设置集群中每个Node上最大的Pod数量(默认为256)
  * @method integer getMaxClusterServiceNum() 获取集群最大的service数量(默认为256)
  * @method void setMaxClusterServiceNum(integer $MaxClusterServiceNum) 设置集群最大的service数量(默认为256)
- * @method boolean getIPVS() 获取是否启用IPVS(默认不开启)
- * @method void setIPVS(boolean $IPVS) 设置是否启用IPVS(默认不开启)
+ * @method boolean getIpvs() 获取是否启用IPVS(默认不开启)
+ * @method void setIpvs(boolean $Ipvs) 设置是否启用IPVS(默认不开启)
  * @method string getVpcId() 获取集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
  * @method void setVpcId(string $VpcId) 设置集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
  */
@@ -60,7 +60,7 @@ class ClusterNetworkSettings extends AbstractModel
     /**
      * @var boolean 是否启用IPVS(默认不开启)
      */
-    public $IPVS;
+    public $Ipvs;
 
     /**
      * @var string 集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
@@ -71,7 +71,7 @@ class ClusterNetworkSettings extends AbstractModel
      * @param boolean $IgnoreClusterCIDRConflict 是否忽略 ClusterCIDR 冲突错误, 默认不忽略
      * @param integer $MaxNodePodNum 集群中每个Node上最大的Pod数量(默认为256)
      * @param integer $MaxClusterServiceNum 集群最大的service数量(默认为256)
-     * @param boolean $IPVS 是否启用IPVS(默认不开启)
+     * @param boolean $Ipvs 是否启用IPVS(默认不开启)
      * @param string $VpcId 集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
      */
     function __construct()
@@ -102,8 +102,8 @@ class ClusterNetworkSettings extends AbstractModel
             $this->MaxClusterServiceNum = $param["MaxClusterServiceNum"];
         }
 
-        if (array_key_exists("IPVS",$param) and $param["IPVS"] !== null) {
-            $this->IPVS = $param["IPVS"];
+        if (array_key_exists("Ipvs",$param) and $param["Ipvs"] !== null) {
+            $this->Ipvs = $param["Ipvs"];
         }
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {

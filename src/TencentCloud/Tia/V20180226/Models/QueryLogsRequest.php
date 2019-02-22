@@ -18,18 +18,18 @@ namespace TencentCloud\Tia\V20180226\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getJobName() 获取任务名称
- * @method void setJobName(string $JobName) 设置任务名称
- * @method string getCluster() 获取集群名称
- * @method void setCluster(string $Cluster) 设置集群名称
- * @method string getStartTime() 获取查询日志的开始时间
- * @method void setStartTime(string $StartTime) 设置查询日志的开始时间
- * @method string getEndTime() 获取查询日志的结束时间
- * @method void setEndTime(string $EndTime) 设置查询日志的结束时间
- * @method integer getLimit() 获取单次要返回的日志条数
- * @method void setLimit(integer $Limit) 设置单次要返回的日志条数
- * @method string getContext() 获取加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
- * @method void setContext(string $Context) 设置加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
+ * @method string getJobName() 获取任务的名称
+ * @method void setJobName(string $JobName) 设置任务的名称
+ * @method string getCluster() 获取任务所在集群的名称
+ * @method void setCluster(string $Cluster) 设置任务所在集群的名称
+ * @method string getStartTime() 获取查询日志的开始时间，格式：2019-01-01 00:00:00
+ * @method void setStartTime(string $StartTime) 设置查询日志的开始时间，格式：2019-01-01 00:00:00
+ * @method string getEndTime() 获取查询日志的结束时间，格式：2019-01-01 00:00:00
+ * @method void setEndTime(string $EndTime) 设置查询日志的结束时间，格式：2019-01-01 00:00:00
+ * @method integer getLimit() 获取单次要返回的日志条数上限
+ * @method void setLimit(integer $Limit) 设置单次要返回的日志条数上限
+ * @method string getContext() 获取加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
+ * @method void setContext(string $Context) 设置加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
  */
 
 /**
@@ -38,41 +38,41 @@ use TencentCloud\Common\AbstractModel;
 class QueryLogsRequest extends AbstractModel
 {
     /**
-     * @var string 任务名称
+     * @var string 任务的名称
      */
     public $JobName;
 
     /**
-     * @var string 集群名称
+     * @var string 任务所在集群的名称
      */
     public $Cluster;
 
     /**
-     * @var string 查询日志的开始时间
+     * @var string 查询日志的开始时间，格式：2019-01-01 00:00:00
      */
     public $StartTime;
 
     /**
-     * @var string 查询日志的结束时间
+     * @var string 查询日志的结束时间，格式：2019-01-01 00:00:00
      */
     public $EndTime;
 
     /**
-     * @var integer 单次要返回的日志条数
+     * @var integer 单次要返回的日志条数上限
      */
     public $Limit;
 
     /**
-     * @var string 加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
+     * @var string 加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
      */
     public $Context;
     /**
-     * @param string $JobName 任务名称
-     * @param string $Cluster 集群名称
-     * @param string $StartTime 查询日志的开始时间
-     * @param string $EndTime 查询日志的结束时间
-     * @param integer $Limit 单次要返回的日志条数
-     * @param string $Context 加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
+     * @param string $JobName 任务的名称
+     * @param string $Cluster 任务所在集群的名称
+     * @param string $StartTime 查询日志的开始时间，格式：2019-01-01 00:00:00
+     * @param string $EndTime 查询日志的结束时间，格式：2019-01-01 00:00:00
+     * @param integer $Limit 单次要返回的日志条数上限
+     * @param string $Context 加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
      */
     function __construct()
     {

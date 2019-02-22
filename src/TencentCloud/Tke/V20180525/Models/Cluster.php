@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method array getClusterDescription() 获取集群描述
- * @method void setClusterDescription(array $ClusterDescription) 设置集群描述
+ * @method string getClusterDescription() 获取集群描述
+ * @method void setClusterDescription(string $ClusterDescription) 设置集群描述
  * @method string getClusterVersion() 获取集群版本（默认值为1.10.5）
  * @method void setClusterVersion(string $ClusterVersion) 设置集群版本（默认值为1.10.5）
  * @method string getClusterOs() 获取集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterType(string $ClusterType) 设置集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
  * @method ClusterNetworkSettings getClusterNetworkSettings() 获取集群网络相关参数
  * @method void setClusterNetworkSettings(ClusterNetworkSettings $ClusterNetworkSettings) 设置集群网络相关参数
+ * @method integer getClusterNodeNum() 获取集群当前node数量
+ * @method void setClusterNodeNum(integer $ClusterNodeNum) 设置集群当前node数量
  */
 
 /**
@@ -50,7 +52,7 @@ class Cluster extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var array 集群描述
+     * @var string 集群描述
      */
     public $ClusterDescription;
 
@@ -73,14 +75,20 @@ class Cluster extends AbstractModel
      * @var ClusterNetworkSettings 集群网络相关参数
      */
     public $ClusterNetworkSettings;
+
+    /**
+     * @var integer 集群当前node数量
+     */
+    public $ClusterNodeNum;
     /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
-     * @param array $ClusterDescription 集群描述
+     * @param string $ClusterDescription 集群描述
      * @param string $ClusterVersion 集群版本（默认值为1.10.5）
      * @param string $ClusterOs 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
      * @param string $ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
      * @param ClusterNetworkSettings $ClusterNetworkSettings 集群网络相关参数
+     * @param integer $ClusterNodeNum 集群当前node数量
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class Cluster extends AbstractModel
         if (array_key_exists("ClusterNetworkSettings",$param) and $param["ClusterNetworkSettings"] !== null) {
             $this->ClusterNetworkSettings = new ClusterNetworkSettings();
             $this->ClusterNetworkSettings->deserialize($param["ClusterNetworkSettings"]);
+        }
+
+        if (array_key_exists("ClusterNodeNum",$param) and $param["ClusterNodeNum"] !== null) {
+            $this->ClusterNodeNum = $param["ClusterNodeNum"];
         }
     }
 }

@@ -21,18 +21,22 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPersonId() 获取人员ID。
  * @method void setPersonId(string $PersonId) 设置人员ID。
  * @method array getImages() 获取图片 base64 数据。人员人脸总数量不可超过5张。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method void setImages(array $Images) 设置图片 base64 数据。人员人脸总数量不可超过5张。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method array getUrls() 获取图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 人员人脸总数量不可超过5张。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method void setUrls(array $Urls) 设置图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 人员人脸总数量不可超过5张。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  */
 
@@ -48,6 +52,7 @@ class CreateFaceRequest extends AbstractModel
 
     /**
      * @var array 图片 base64 数据。人员人脸总数量不可超过5张。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Images;
@@ -57,17 +62,20 @@ class CreateFaceRequest extends AbstractModel
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 人员人脸总数量不可超过5张。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Urls;
     /**
      * @param string $PersonId 人员ID。
      * @param array $Images 图片 base64 数据。人员人脸总数量不可超过5张。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param array $Urls 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 人员人脸总数量不可超过5张。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     function __construct()

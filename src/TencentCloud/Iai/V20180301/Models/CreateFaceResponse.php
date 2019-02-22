@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSucFaceNum(integer $SucFaceNum) 设置加入成功的人脸数量
  * @method array getSucFaceIds() 获取加入成功的人脸ID列表
  * @method void setSucFaceIds(array $SucFaceIds) 设置加入成功的人脸ID列表
- * @method array getRetCode() 获取每张人脸图片添加结果的返回码
- * @method void setRetCode(array $RetCode) 设置每张人脸图片添加结果的返回码
+ * @method array getRetCode() 获取每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败，其他非 0 值代表算法服务异常。
+ * @method void setRetCode(array $RetCode) 设置每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败，其他非 0 值代表算法服务异常。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -44,7 +44,7 @@ class CreateFaceResponse extends AbstractModel
     public $SucFaceIds;
 
     /**
-     * @var array 每张人脸图片添加结果的返回码
+     * @var array 每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败，其他非 0 值代表算法服务异常。
      */
     public $RetCode;
 
@@ -55,7 +55,7 @@ class CreateFaceResponse extends AbstractModel
     /**
      * @param integer $SucFaceNum 加入成功的人脸数量
      * @param array $SucFaceIds 加入成功的人脸ID列表
-     * @param array $RetCode 每张人脸图片添加结果的返回码
+     * @param array $RetCode 每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败，其他非 0 值代表算法服务异常。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

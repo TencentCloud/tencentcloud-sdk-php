@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取数量，最大值为1000
  * @method void setLimit(integer $Limit) 设置数量，最大值为1000
- * @method string getPeriodType() 获取周期类型，byUsedTime按计费周期/byPayTime按扣费周期
- * @method void setPeriodType(string $PeriodType) 设置周期类型，byUsedTime按计费周期/byPayTime按扣费周期
- * @method string getMonth() 获取月份，格式为yyyy-mm
- * @method void setMonth(string $Month) 设置月份，格式为yyyy-mm
+ * @method string getPeriodType() 获取周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。
+ * @method void setPeriodType(string $PeriodType) 设置周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。
+ * @method string getMonth() 获取月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+ * @method void setMonth(string $Month) 设置月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
  */
 
 /**
@@ -44,19 +44,19 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 周期类型，byUsedTime按计费周期/byPayTime按扣费周期
+     * @var string 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。
      */
     public $PeriodType;
 
     /**
-     * @var string 月份，格式为yyyy-mm
+     * @var string 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public $Month;
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 数量，最大值为1000
-     * @param string $PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期
-     * @param string $Month 月份，格式为yyyy-mm
+     * @param string $PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。
+     * @param string $Month 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     function __construct()
     {

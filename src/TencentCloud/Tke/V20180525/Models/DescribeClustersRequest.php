@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量,默认0
  * @method integer getLimit() 获取最大输出条数，默认20
  * @method void setLimit(integer $Limit) 设置最大输出条数，默认20
+ * @method array getFilters() 获取过滤条件,当前只支持按照单个条件ClusterName进行过滤
+ * @method void setFilters(array $Filters) 设置过滤条件,当前只支持按照单个条件ClusterName进行过滤
  */
 
 /**
@@ -48,11 +50,17 @@ class DescribeClustersRequest extends AbstractModel
      * @var integer 最大输出条数，默认20
      */
     public $Limit;
+
+    /**
+     * @var array 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+     */
+    public $Filters;
     /**
      * @param array $ClusterIds 集群ID列表(为空时，
 表示获取账号下所有集群)
      * @param integer $Offset 偏移量,默认0
      * @param integer $Limit 最大输出条数，默认20
+     * @param array $Filters 过滤条件,当前只支持按照单个条件ClusterName进行过滤
      */
     function __construct()
     {
@@ -76,6 +84,15 @@ class DescribeClustersRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

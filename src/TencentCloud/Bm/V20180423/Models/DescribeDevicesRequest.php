@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
  * @method void setLimit(integer $Limit) 设置返回数量
- * @method string getDeviceClassCode() 获取机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/17602)查询
- * @method void setDeviceClassCode(string $DeviceClassCode) 设置机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/17602)查询
+ * @method string getDeviceClassCode() 获取机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/31968)查询
+ * @method void setDeviceClassCode(string $DeviceClassCode) 设置机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/31968)查询
  * @method array getInstanceIds() 获取设备ID数组
  * @method void setInstanceIds(array $InstanceIds) 设置设备ID数组
  * @method array getWanIps() 获取外网IP数组
@@ -72,7 +72,7 @@ class DescribeDevicesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/17602)查询
+     * @var string 机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/31968)查询
      */
     public $DeviceClassCode;
 
@@ -153,7 +153,7 @@ class DescribeDevicesRequest extends AbstractModel
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
-     * @param string $DeviceClassCode 机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/17602)查询
+     * @param string $DeviceClassCode 机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/31968)查询
      * @param array $InstanceIds 设备ID数组
      * @param array $WanIps 外网IP数组
      * @param array $LanIps 内网IP数组

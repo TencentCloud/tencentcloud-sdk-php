@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getName() 获取任务名称
  * @method void setName(string $Name) 设置任务名称
- * @method string getCluster() 获取运行任务的集群
- * @method void setCluster(string $Cluster) 设置运行任务的集群
- * @method string getRuntimeVersion() 获取运行任务的环境
- * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行任务的环境
- * @method array getPackageDir() 获取挂载的路径，支持nfs,cos(cos只在tia运行环境中支持)
- * @method void setPackageDir(array $PackageDir) 设置挂载的路径，支持nfs,cos(cos只在tia运行环境中支持)
+ * @method string getCluster() 获取运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
+ * @method void setCluster(string $Cluster) 设置运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
+ * @method string getRuntimeVersion() 获取运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320)
+ * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320)
+ * @method array getPackageDir() 获取挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持
+ * @method void setPackageDir(array $PackageDir) 设置挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持
  * @method array getCommand() 获取任务启动命令
  * @method void setCommand(array $Command) 设置任务启动命令
  * @method array getArgs() 获取任务启动参数
  * @method void setArgs(array $Args) 设置任务启动参数
- * @method string getScaleTier() 获取运行任务的配置信息
- * @method void setScaleTier(string $ScaleTier) 设置运行任务的配置信息
- * @method string getMasterType() 获取（ScaleTier为Custom时）master机器类型
- * @method void setMasterType(string $MasterType) 设置（ScaleTier为Custom时）master机器类型
- * @method string getWorkerType() 获取（ScaleTier为Custom时）worker机器类型
- * @method void setWorkerType(string $WorkerType) 设置（ScaleTier为Custom时）worker机器类型
- * @method string getParameterServerType() 获取（ScaleTier为Custom时）parameter server机器类型
- * @method void setParameterServerType(string $ParameterServerType) 设置（ScaleTier为Custom时）parameter server机器类型
- * @method integer getWorkerCount() 获取（ScaleTier为Custom时）worker机器数量
- * @method void setWorkerCount(integer $WorkerCount) 设置（ScaleTier为Custom时）worker机器数量
- * @method integer getParameterServerCount() 获取（ScaleTier为Custom时）parameter server机器数量
- * @method void setParameterServerCount(integer $ParameterServerCount) 设置（ScaleTier为Custom时）parameter server机器数量
- * @method boolean getDebug() 获取启动debug mode，默认为false
- * @method void setDebug(boolean $Debug) 设置启动debug mode，默认为false
+ * @method string getScaleTier() 获取运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+ * @method void setScaleTier(string $ScaleTier) 设置运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+ * @method string getMasterType() 获取Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+ * @method void setMasterType(string $MasterType) 设置Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+ * @method string getWorkerType() 获取Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+ * @method void setWorkerType(string $WorkerType) 设置Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+ * @method string getParameterServerType() 获取Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+ * @method void setParameterServerType(string $ParameterServerType) 设置Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+ * @method integer getWorkerCount() 获取Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+ * @method void setWorkerCount(integer $WorkerCount) 设置Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+ * @method integer getParameterServerCount() 获取Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+ * @method void setParameterServerCount(integer $ParameterServerCount) 设置Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+ * @method boolean getDebug() 获取启动 debug 模式，默认为 false
+ * @method void setDebug(boolean $Debug) 设置启动 debug 模式，默认为 false
  * @method array getRuntimeConf() 获取运行任务的其他配置信息
  * @method void setRuntimeConf(array $RuntimeConf) 设置运行任务的其他配置信息
  */
@@ -59,17 +59,17 @@ class CreateJobRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 运行任务的集群
+     * @var string 运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
      */
     public $Cluster;
 
     /**
-     * @var string 运行任务的环境
+     * @var string 运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320)
      */
     public $RuntimeVersion;
 
     /**
-     * @var array 挂载的路径，支持nfs,cos(cos只在tia运行环境中支持)
+     * @var array 挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持
      */
     public $PackageDir;
 
@@ -84,37 +84,37 @@ class CreateJobRequest extends AbstractModel
     public $Args;
 
     /**
-     * @var string 运行任务的配置信息
+     * @var string 运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public $ScaleTier;
 
     /**
-     * @var string （ScaleTier为Custom时）master机器类型
+     * @var string Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public $MasterType;
 
     /**
-     * @var string （ScaleTier为Custom时）worker机器类型
+     * @var string Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public $WorkerType;
 
     /**
-     * @var string （ScaleTier为Custom时）parameter server机器类型
+     * @var string Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public $ParameterServerType;
 
     /**
-     * @var integer （ScaleTier为Custom时）worker机器数量
+     * @var integer Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public $WorkerCount;
 
     /**
-     * @var integer （ScaleTier为Custom时）parameter server机器数量
+     * @var integer Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public $ParameterServerCount;
 
     /**
-     * @var boolean 启动debug mode，默认为false
+     * @var boolean 启动 debug 模式，默认为 false
      */
     public $Debug;
 
@@ -124,18 +124,18 @@ class CreateJobRequest extends AbstractModel
     public $RuntimeConf;
     /**
      * @param string $Name 任务名称
-     * @param string $Cluster 运行任务的集群
-     * @param string $RuntimeVersion 运行任务的环境
-     * @param array $PackageDir 挂载的路径，支持nfs,cos(cos只在tia运行环境中支持)
+     * @param string $Cluster 运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
+     * @param string $RuntimeVersion 运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320)
+     * @param array $PackageDir 挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持
      * @param array $Command 任务启动命令
      * @param array $Args 任务启动参数
-     * @param string $ScaleTier 运行任务的配置信息
-     * @param string $MasterType （ScaleTier为Custom时）master机器类型
-     * @param string $WorkerType （ScaleTier为Custom时）worker机器类型
-     * @param string $ParameterServerType （ScaleTier为Custom时）parameter server机器类型
-     * @param integer $WorkerCount （ScaleTier为Custom时）worker机器数量
-     * @param integer $ParameterServerCount （ScaleTier为Custom时）parameter server机器数量
-     * @param boolean $Debug 启动debug mode，默认为false
+     * @param string $ScaleTier 运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @param string $MasterType Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @param string $WorkerType Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @param string $ParameterServerType Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @param integer $WorkerCount Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @param integer $ParameterServerCount Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @param boolean $Debug 启动 debug 模式，默认为 false
      * @param array $RuntimeConf 运行任务的其他配置信息
      */
     function __construct()

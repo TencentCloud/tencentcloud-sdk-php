@@ -44,12 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLaunchConfigurationName(string $LaunchConfigurationName) 设置启动配置名称
  * @method array getLoadBalancerIdSet() 获取传统型负载均衡器ID列表
  * @method void setLoadBalancerIdSet(array $LoadBalancerIdSet) 设置传统型负载均衡器ID列表
- * @method array getMaxSize() 获取最大实例数
- * @method void setMaxSize(array $MaxSize) 设置最大实例数
- * @method array getMinSize() 获取最小实例数
- * @method void setMinSize(array $MinSize) 设置最小实例数
- * @method array getProjectId() 获取项目ID
- * @method void setProjectId(array $ProjectId) 设置项目ID
+ * @method integer getMaxSize() 获取最大实例数
+ * @method void setMaxSize(integer $MaxSize) 设置最大实例数
+ * @method integer getMinSize() 获取最小实例数
+ * @method void setMinSize(integer $MinSize) 设置最小实例数
+ * @method integer getProjectId() 获取项目ID
+ * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method array getSubnetIdSet() 获取子网ID列表
  * @method void setSubnetIdSet(array $SubnetIdSet) 设置子网ID列表
  * @method array getTerminationPolicySet() 获取销毁策略
@@ -133,17 +133,17 @@ class AutoScalingGroup extends AbstractModel
     public $LoadBalancerIdSet;
 
     /**
-     * @var array 最大实例数
+     * @var integer 最大实例数
      */
     public $MaxSize;
 
     /**
-     * @var array 最小实例数
+     * @var integer 最小实例数
      */
     public $MinSize;
 
     /**
-     * @var array 项目ID
+     * @var integer 项目ID
      */
     public $ProjectId;
 
@@ -185,9 +185,9 @@ class AutoScalingGroup extends AbstractModel
      * @param string $LaunchConfigurationId 启动配置ID
      * @param string $LaunchConfigurationName 启动配置名称
      * @param array $LoadBalancerIdSet 传统型负载均衡器ID列表
-     * @param array $MaxSize 最大实例数
-     * @param array $MinSize 最小实例数
-     * @param array $ProjectId 项目ID
+     * @param integer $MaxSize 最大实例数
+     * @param integer $MinSize 最小实例数
+     * @param integer $ProjectId 项目ID
      * @param array $SubnetIdSet 子网ID列表
      * @param array $TerminationPolicySet 销毁策略
      * @param string $VpcId VPC标识

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getName() 获取要删除的模型名称
  * @method void setName(string $Name) 设置要删除的模型名称
- * @method string getCluster() 获取要删除的模型所在的集群名称
- * @method void setCluster(string $Cluster) 设置要删除的模型所在的集群名称
- * @method string getServType() 获取模型类型
- * @method void setServType(string $ServType) 设置模型类型
+ * @method string getCluster() 获取要删除的模型所在的集群名称，`集群模式` 必填
+ * @method void setCluster(string $Cluster) 设置要删除的模型所在的集群名称，`集群模式` 必填
+ * @method string getServType() 获取模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
+ * @method void setServType(string $ServType) 设置模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
  */
 
 /**
@@ -37,18 +37,18 @@ class DeleteModelRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 要删除的模型所在的集群名称
+     * @var string 要删除的模型所在的集群名称，`集群模式` 必填
      */
     public $Cluster;
 
     /**
-     * @var string 模型类型
+     * @var string 模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
      */
     public $ServType;
     /**
      * @param string $Name 要删除的模型名称
-     * @param string $Cluster 要删除的模型所在的集群名称
-     * @param string $ServType 模型类型
+     * @param string $Cluster 要删除的模型所在的集群名称，`集群模式` 必填
+     * @param string $ServType 模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
      */
     function __construct()
     {

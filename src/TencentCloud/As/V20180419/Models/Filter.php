@@ -31,11 +31,11 @@ use TencentCloud\Common\AbstractModel;
 >
 > 以[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)接口的`Filter`为例。若我们需要查询可用区（`zone`）为广州一区 ***并且*** 实例计费模式（`instance-charge-type`）为包年包月 ***或者*** 按量计费的实例时，可如下实现：
 ```
-Filters.1.Name=zone
-&Filters.1.Values.1=ap-guangzhou-1
-&Filters.2.Name=instance-charge-type
-&Filters.2.Values.1=PREPAID
-&Filters.3.Values.2=POSTPAID_BY_HOUR
+Filters.0.Name=zone
+&Filters.0.Values.1=ap-guangzhou-1
+&Filters.1.Name=instance-charge-type
+&Filters.1.Values.1=PREPAID
+&Filters.1.Values.2=POSTPAID_BY_HOUR
 ```
  */
 class Filter extends AbstractModel

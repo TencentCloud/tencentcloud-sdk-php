@@ -18,8 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAsyncRequestId() 获取异步任务ID，可使用[查询任务列表](https://cloud.tencent.com/document/api/236/8010)获取其执行情况。
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务ID，可使用[查询任务列表](https://cloud.tencent.com/document/api/236/8010)获取其执行情况。
+ * @method string getAsyncRequestId() 获取异步任务ID。
+ * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDBInstanceVipVportResponse extends AbstractModel
 {
     /**
-     * @var string 异步任务ID，可使用[查询任务列表](https://cloud.tencent.com/document/api/236/8010)获取其执行情况。
+     * @var string 异步任务ID。
      */
     public $AsyncRequestId;
 
@@ -39,7 +39,7 @@ class ModifyDBInstanceVipVportResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $AsyncRequestId 异步任务ID，可使用[查询任务列表](https://cloud.tencent.com/document/api/236/8010)获取其执行情况。
+     * @param string $AsyncRequestId 异步任务ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

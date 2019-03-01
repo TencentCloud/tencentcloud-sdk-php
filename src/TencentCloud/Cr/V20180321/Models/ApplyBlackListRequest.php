@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperation(string $Operation) 设置操作
  * @method array getBlackList() 获取黑名单列表
  * @method void setBlackList(array $BlackList) 设置黑名单列表
+ * @method string getInstId() 获取实例ID，不传默认为系统分配的初始实例
+ * @method void setInstId(string $InstId) 设置实例ID，不传默认为系统分配的初始实例
  */
 
 /**
@@ -45,10 +47,16 @@ class ApplyBlackListRequest extends AbstractModel
      * @var array 黑名单列表
      */
     public $BlackList;
+
+    /**
+     * @var string 实例ID，不传默认为系统分配的初始实例
+     */
+    public $InstId;
     /**
      * @param string $Module 模块
      * @param string $Operation 操作
      * @param array $BlackList 黑名单列表
+     * @param string $InstId 实例ID，不传默认为系统分配的初始实例
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class ApplyBlackListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->BlackList, $obj);
             }
+        }
+
+        if (array_key_exists("InstId",$param) and $param["InstId"] !== null) {
+            $this->InstId = $param["InstId"];
         }
     }
 }

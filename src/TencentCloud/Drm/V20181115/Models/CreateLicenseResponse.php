@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getLicense() 获取Base64 编码的许可证二进制数据。
  * @method void setLicense(string $License) 设置Base64 编码的许可证二进制数据。
+ * @method string getContentId() 获取加密内容的内容ID
+ * @method void setContentId(string $ContentId) 设置加密内容的内容ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,11 +37,17 @@ class CreateLicenseResponse extends AbstractModel
     public $License;
 
     /**
+     * @var string 加密内容的内容ID
+     */
+    public $ContentId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param string $License Base64 编码的许可证二进制数据。
+     * @param string $ContentId 加密内容的内容ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class CreateLicenseResponse extends AbstractModel
         }
         if (array_key_exists("License",$param) and $param["License"] !== null) {
             $this->License = $param["License"];
+        }
+
+        if (array_key_exists("ContentId",$param) and $param["ContentId"] !== null) {
+            $this->ContentId = $param["ContentId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

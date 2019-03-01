@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method array getIpv6AddressSet() 获取`IPv6`地址列表。
+ * @method void setIpv6AddressSet(array $Ipv6AddressSet) 设置`IPv6`地址列表。
  */
 
 /**
@@ -130,6 +132,11 @@ class NetworkInterface extends AbstractModel
      * @var string 创建时间。
      */
     public $CreatedTime;
+
+    /**
+     * @var array `IPv6`地址列表。
+     */
+    public $Ipv6AddressSet;
     /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      * @param string $NetworkInterfaceName 弹性网卡名称。
@@ -149,6 +156,7 @@ class NetworkInterface extends AbstractModel
      * @param NetworkInterfaceAttachment $Attachment 绑定的云服务器对象。
      * @param string $Zone 可用区。
      * @param string $CreatedTime 创建时间。
+     * @param array $Ipv6AddressSet `IPv6`地址列表。
      */
     function __construct()
     {
@@ -218,6 +226,15 @@ class NetworkInterface extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("Ipv6AddressSet",$param) and $param["Ipv6AddressSet"] !== null) {
+            $this->Ipv6AddressSet = [];
+            foreach ($param["Ipv6AddressSet"] as $key => $value){
+                $obj = new Ipv6Address();
+                $obj->deserialize($value);
+                array_push($this->Ipv6AddressSet, $obj);
+            }
         }
     }
 }

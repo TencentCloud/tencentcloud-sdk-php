@@ -27,9 +27,9 @@ use TencentCloud\Common\AbstractModel;
 <li>VPC - 私有网络</li>
 <li>CCN - 云联网</li>
  * @method string getNetworkInstanceId() 获取<li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
-<li>NetworkType 为 NAT 时，这里传值为云联网实例ID</li>
+<li>NetworkType 为 CCN 时，这里传值为云联网实例ID</li>
  * @method void setNetworkInstanceId(string $NetworkInstanceId) 设置<li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
-<li>NetworkType 为 NAT 时，这里传值为云联网实例ID</li>
+<li>NetworkType 为 CCN 时，这里传值为云联网实例ID</li>
  * @method string getGatewayType() 获取网关类型，可选值：
 <li>NORMAL - （默认）标准型，注：云联网只支持标准型</li>
 <li>NAT - NAT型</li>NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
@@ -57,7 +57,7 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
 
     /**
      * @var string <li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
-<li>NetworkType 为 NAT 时，这里传值为云联网实例ID</li>
+<li>NetworkType 为 CCN 时，这里传值为云联网实例ID</li>
      */
     public $NetworkInstanceId;
 
@@ -73,7 +73,7 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
 <li>VPC - 私有网络</li>
 <li>CCN - 云联网</li>
      * @param string $NetworkInstanceId <li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
-<li>NetworkType 为 NAT 时，这里传值为云联网实例ID</li>
+<li>NetworkType 为 CCN 时，这里传值为云联网实例ID</li>
      * @param string $GatewayType 网关类型，可选值：
 <li>NORMAL - （默认）标准型，注：云联网只支持标准型</li>
 <li>NAT - NAT型</li>NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关

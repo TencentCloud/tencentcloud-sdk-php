@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSellType(array $SellType) 设置售卖实例类型数组
  * @method ZoneConf getZoneConf() 获取多可用区信息
  * @method void setZoneConf(ZoneConf $ZoneConf) 设置多可用区信息
+ * @method array getDrZone() 获取可支持的灾备可用区信息
+ * @method void setDrZone(array $DrZone) 设置可支持的灾备可用区信息
  */
 
 /**
@@ -115,6 +117,11 @@ class ZoneSellConf extends AbstractModel
      * @var ZoneConf 多可用区信息
      */
     public $ZoneConf;
+
+    /**
+     * @var array 可支持的灾备可用区信息
+     */
+    public $DrZone;
     /**
      * @param integer $Status 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
      * @param string $ZoneName 可用区中文名称
@@ -129,6 +136,7 @@ class ZoneSellConf extends AbstractModel
      * @param string $Zone 可用区名称
      * @param array $SellType 售卖实例类型数组
      * @param ZoneConf $ZoneConf 多可用区信息
+     * @param array $DrZone 可支持的灾备可用区信息
      */
     function __construct()
     {
@@ -198,6 +206,10 @@ class ZoneSellConf extends AbstractModel
         if (array_key_exists("ZoneConf",$param) and $param["ZoneConf"] !== null) {
             $this->ZoneConf = new ZoneConf();
             $this->ZoneConf->deserialize($param["ZoneConf"]);
+        }
+
+        if (array_key_exists("DrZone",$param) and $param["DrZone"] !== null) {
+            $this->DrZone = $param["DrZone"];
         }
     }
 }

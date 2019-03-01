@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) 设置推流路径。
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
- * @method integer getTemplateId() 获取水印Id。
- * @method void setTemplateId(integer $TemplateId) 设置水印Id。
+ * @method integer getTemplateId() 获取水印Id，即调用[AddLiveWatermark](/document/product/267/30154)接口返回的WatermarkId。
+ * @method void setTemplateId(integer $TemplateId) 设置水印Id，即调用[AddLiveWatermark](/document/product/267/30154)接口返回的WatermarkId。
  */
 
 /**
@@ -49,14 +49,14 @@ class CreateLiveWatermarkRuleRequest extends AbstractModel
     public $StreamName;
 
     /**
-     * @var integer 水印Id。
+     * @var integer 水印Id，即调用[AddLiveWatermark](/document/product/267/30154)接口返回的WatermarkId。
      */
     public $TemplateId;
     /**
      * @param string $DomainName 推流域名。
      * @param string $AppName 推流路径。
      * @param string $StreamName 流名称。
-     * @param integer $TemplateId 水印Id。
+     * @param integer $TemplateId 水印Id，即调用[AddLiveWatermark](/document/product/267/30154)接口返回的WatermarkId。
      */
     function __construct()
     {

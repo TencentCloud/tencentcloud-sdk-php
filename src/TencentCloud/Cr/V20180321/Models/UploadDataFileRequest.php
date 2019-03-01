@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFile(string $File) 设置文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
  * @method string getFileUrl() 获取文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
  * @method void setFileUrl(string $FileUrl) 设置文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
+ * @method string getInstId() 获取实例ID，不传默认为系统分配的初始实例。
+ * @method void setInstId(string $InstId) 设置实例ID，不传默认为系统分配的初始实例。
  */
 
 /**
@@ -66,6 +68,11 @@ class UploadDataFileRequest extends AbstractModel
      * @var string 文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
      */
     public $FileUrl;
+
+    /**
+     * @var string 实例ID，不传默认为系统分配的初始实例。
+     */
+    public $InstId;
     /**
      * @param string $Module 模块名
      * @param string $Operation 操作名
@@ -73,6 +80,7 @@ class UploadDataFileRequest extends AbstractModel
      * @param string $UploadModel 上传类型，不填默认催收文件，催收文件为data，还款文件为repay。
      * @param string $File 文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
      * @param string $FileUrl 文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
+     * @param string $InstId 实例ID，不传默认为系统分配的初始实例。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class UploadDataFileRequest extends AbstractModel
 
         if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
             $this->FileUrl = $param["FileUrl"];
+        }
+
+        if (array_key_exists("InstId",$param) and $param["InstId"] !== null) {
+            $this->InstId = $param["InstId"];
         }
     }
 }

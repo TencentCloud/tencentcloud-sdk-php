@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setState(string $State) 设置实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
  * @method string getQosLevel() 获取实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
  * @method void setQosLevel(string $QosLevel) 设置实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+ * @method string getInstanceChargeType() 获取付费类型，PREPAID为预付费，POSTPAID为后付费。
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置付费类型，PREPAID为预付费，POSTPAID为后付费。
+ * @method string getBandwidthLimitType() 获取限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+ * @method void setBandwidthLimitType(string $BandwidthLimitType) 设置限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
  */
 
 /**
@@ -73,6 +77,16 @@ class CCN extends AbstractModel
      * @var string 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
      */
     public $QosLevel;
+
+    /**
+     * @var string 付费类型，PREPAID为预付费，POSTPAID为后付费。
+     */
+    public $InstanceChargeType;
+
+    /**
+     * @var string 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+     */
+    public $BandwidthLimitType;
     /**
      * @param string $CcnId 云联网唯一ID
      * @param string $CcnName 云联网名称
@@ -81,6 +95,8 @@ class CCN extends AbstractModel
      * @param string $CreateTime 创建时间
      * @param string $State 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
      * @param string $QosLevel 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+     * @param string $InstanceChargeType 付费类型，PREPAID为预付费，POSTPAID为后付费。
+     * @param string $BandwidthLimitType 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class CCN extends AbstractModel
 
         if (array_key_exists("QosLevel",$param) and $param["QosLevel"] !== null) {
             $this->QosLevel = $param["QosLevel"];
+        }
+
+        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
+            $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("BandwidthLimitType",$param) and $param["BandwidthLimitType"] !== null) {
+            $this->BandwidthLimitType = $param["BandwidthLimitType"];
         }
     }
 }

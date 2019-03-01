@@ -167,6 +167,9 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * @method Models\DescribeCustomerGatewaysResponse DescribeCustomerGateways(Models\DescribeCustomerGatewaysRequest $req) 本接口（DescribeCustomerGateways）用于查询对端网关列表。
 * @method Models\DescribeDirectConnectGatewayCcnRoutesResponse DescribeDirectConnectGatewayCcnRoutes(Models\DescribeDirectConnectGatewayCcnRoutesRequest $req) 本接口（DescribeDirectConnectGatewayCcnRoutes）用于查询专线网关的云联网路由（IDC网段）
 * @method Models\DescribeDirectConnectGatewaysResponse DescribeDirectConnectGateways(Models\DescribeDirectConnectGatewaysRequest $req) 本接口（DescribeDirectConnectGateways）用于查询专线网关。
+* @method Models\DescribeGatewayFlowMonitorDetailResponse DescribeGatewayFlowMonitorDetail(Models\DescribeGatewayFlowMonitorDetailRequest $req) 本接口（DescribeGatewayFlowMonitorDetail）用于查询网关流量监控明细。
+* 只支持单个网关实例查询。即入参 `VpnId` `DirectConnectGatewayId` `PeeringConnectionId` `NatId` 最多只支持传一个，且必须传一个。
+* 如果网关有流量，但调用本接口没有返回数据，请在控制台对应网关详情页确认是否开启网关流量监控。
 * @method Models\DescribeHaVipsResponse DescribeHaVips(Models\DescribeHaVipsRequest $req) 本接口（DescribeHaVips）用于查询高可用虚拟IP（HAVIP）列表。
 * @method Models\DescribeIp6TranslatorQuotaResponse DescribeIp6TranslatorQuota(Models\DescribeIp6TranslatorQuotaRequest $req) 查询账户在指定地域IPV6转换实例和规则的配额
 * @method Models\DescribeIp6TranslatorsResponse DescribeIp6Translators(Models\DescribeIp6TranslatorsRequest $req) 1. 该接口用于查询账户下的IPV6转换实例及其绑定的转换规则信息

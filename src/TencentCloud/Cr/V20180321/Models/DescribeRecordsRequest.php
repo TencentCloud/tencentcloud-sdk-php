@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) 设置分页参数，索引，从0开始
  * @method string getLimit() 获取分页参数，页长
  * @method void setLimit(string $Limit) 设置分页参数，页长
+ * @method string getInstId() 获取实例ID，不传默认为系统分配的初始实例
+ * @method void setInstId(string $InstId) 设置实例ID，不传默认为系统分配的初始实例
  */
 
 /**
@@ -87,6 +89,11 @@ class DescribeRecordsRequest extends AbstractModel
      * @var string 分页参数，页长
      */
     public $Limit;
+
+    /**
+     * @var string 实例ID，不传默认为系统分配的初始实例
+     */
+    public $InstId;
     /**
      * @param string $Module 模块
      * @param string $Operation 操作
@@ -97,6 +104,7 @@ class DescribeRecordsRequest extends AbstractModel
      * @param string $EndBizDate 查询结束日期
      * @param string $Offset 分页参数，索引，从0开始
      * @param string $Limit 分页参数，页长
+     * @param string $InstId 实例ID，不传默认为系统分配的初始实例
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeRecordsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("InstId",$param) and $param["InstId"] !== null) {
+            $this->InstId = $param["InstId"];
         }
     }
 }

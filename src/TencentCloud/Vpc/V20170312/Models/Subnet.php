@@ -18,14 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取VPC实例ID。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。
- * @method string getSubnetId() 获取子网实例ID，例如：subnet-bthucmmy。
- * @method void setSubnetId(string $SubnetId) 设置子网实例ID，例如：subnet-bthucmmy。
+ * @method string getVpcId() 获取`VPC`实例`ID`。
+ * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。
+ * @method string getSubnetId() 获取子网实例`ID`，例如：subnet-bthucmmy。
+ * @method void setSubnetId(string $SubnetId) 设置子网实例`ID`，例如：subnet-bthucmmy。
  * @method string getSubnetName() 获取子网名称。
  * @method void setSubnetName(string $SubnetName) 设置子网名称。
- * @method string getCidrBlock() 获取子网的CIDR。
- * @method void setCidrBlock(string $CidrBlock) 设置子网的CIDR。
+ * @method string getCidrBlock() 获取子网的 `IPv4` `CIDR`。
+ * @method void setCidrBlock(string $CidrBlock) 设置子网的 `IPv4` `CIDR`。
  * @method boolean getIsDefault() 获取是否默认子网。
  * @method void setIsDefault(boolean $IsDefault) 设置是否默认子网。
  * @method boolean getEnableBroadcast() 获取是否开启广播。
@@ -36,8 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-l2h8d7c2。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method integer getAvailableIpAddressCount() 获取可用IP数。
- * @method void setAvailableIpAddressCount(integer $AvailableIpAddressCount) 设置可用IP数。
+ * @method integer getAvailableIpAddressCount() 获取可用`IP`数。
+ * @method void setAvailableIpAddressCount(integer $AvailableIpAddressCount) 设置可用`IP`数。
+ * @method string getIpv6CidrBlock() 获取子网的 `IPv6` `CIDR`。
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置子网的 `IPv6` `CIDR`。
  */
 
 /**
@@ -46,12 +48,12 @@ use TencentCloud\Common\AbstractModel;
 class Subnet extends AbstractModel
 {
     /**
-     * @var string VPC实例ID。
+     * @var string `VPC`实例`ID`。
      */
     public $VpcId;
 
     /**
-     * @var string 子网实例ID，例如：subnet-bthucmmy。
+     * @var string 子网实例`ID`，例如：subnet-bthucmmy。
      */
     public $SubnetId;
 
@@ -61,7 +63,7 @@ class Subnet extends AbstractModel
     public $SubnetName;
 
     /**
-     * @var string 子网的CIDR。
+     * @var string 子网的 `IPv4` `CIDR`。
      */
     public $CidrBlock;
 
@@ -91,20 +93,26 @@ class Subnet extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var integer 可用IP数。
+     * @var integer 可用`IP`数。
      */
     public $AvailableIpAddressCount;
+
     /**
-     * @param string $VpcId VPC实例ID。
-     * @param string $SubnetId 子网实例ID，例如：subnet-bthucmmy。
+     * @var string 子网的 `IPv6` `CIDR`。
+     */
+    public $Ipv6CidrBlock;
+    /**
+     * @param string $VpcId `VPC`实例`ID`。
+     * @param string $SubnetId 子网实例`ID`，例如：subnet-bthucmmy。
      * @param string $SubnetName 子网名称。
-     * @param string $CidrBlock 子网的CIDR。
+     * @param string $CidrBlock 子网的 `IPv4` `CIDR`。
      * @param boolean $IsDefault 是否默认子网。
      * @param boolean $EnableBroadcast 是否开启广播。
      * @param string $Zone 可用区。
      * @param string $RouteTableId 路由表实例ID，例如：rtb-l2h8d7c2。
      * @param string $CreatedTime 创建时间。
-     * @param integer $AvailableIpAddressCount 可用IP数。
+     * @param integer $AvailableIpAddressCount 可用`IP`数。
+     * @param string $Ipv6CidrBlock 子网的 `IPv6` `CIDR`。
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class Subnet extends AbstractModel
 
         if (array_key_exists("AvailableIpAddressCount",$param) and $param["AvailableIpAddressCount"] !== null) {
             $this->AvailableIpAddressCount = $param["AvailableIpAddressCount"];
+        }
+
+        if (array_key_exists("Ipv6CidrBlock",$param) and $param["Ipv6CidrBlock"] !== null) {
+            $this->Ipv6CidrBlock = $param["Ipv6CidrBlock"];
         }
     }
 }

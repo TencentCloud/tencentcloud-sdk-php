@@ -25,6 +25,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * @method Models\ApplyUploadResponse ApplyUpload(Models\ApplyUploadRequest $req) * 该接口用于申请媒体文件（和封面文件）的上传，获取文件上传到腾讯云点播的元信息（包括上传路径、上传签名等），用于后续上传接口。
 * 上传流程请参考[服务端上传综述](https://cloud.tencent.com/document/product/266/9759#.E4.B8.8A.E4.BC.A0.E6.B5.81.E7.A8.8B)。
 * @method Models\CommitUploadResponse CommitUpload(Models\CommitUploadRequest $req) 该接口用于确认媒体文件（和封面文件）上传到腾讯云点播的结果，并存储媒体信息，返回文件的播放地址和文件 ID。
+* @method Models\ConfirmEventsResponse ConfirmEvents(Models\ConfirmEventsRequest $req) * 开发者调用拉取事件通知，获取到事件后，必须调用该接口来确认消息已经收到；
+* 开发者获取到事件句柄后，等待确认的有效时间为 30 秒，超出 30 秒会报参数错误（4000）；
+* 更多参考[服务端事件通知](https://cloud.tencent.com/document/product/266/7829)。
 * @method Models\CreateClassResponse CreateClass(Models\CreateClassRequest $req) * 用于对媒体进行分类管理；
 * 该接口不影响既有媒体的分类，如需修改媒体分类，请调用[修改媒体文件属性](/document/product/266/31762)接口。
 * 分类层次不可超过 4 层。
@@ -44,6 +47,10 @@ use TencentCloud\Vod\V20180717\Models as Models;
     7. 指定时间点截图信息（snapshotByTimeOffsetInfo）：对视频依照指定时间点截图后，各个截图的信息。
     8. 视频打点信息（keyFrameDescInfo）：对视频设置的各个打点信息。
 2. 可以指定回包只返回部分信息。
+* @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询3天之内提交的任务）
+* @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) * 该接口用于查询任务列表；
+* 当列表数据比较多时，单次接口调用无法拉取整个列表，可通过 ScrollToken 参数，分批拉取；
+* 只能查询到最近三天（72 小时）内的任务。
 * @method Models\LiveRealTimeClipResponse LiveRealTimeClip(Models\LiveRealTimeClipRequest $req) 直播即时剪辑，是指在直播过程中（即直播尚未结束时），客户可以在过往直播内容中选择一段，实时生成一个新的视频（HLS 格式），开发者可以将其立即分享出去，或者长久保存起来。
 
 腾讯云点播支持两种即时剪辑模式：
@@ -70,6 +77,23 @@ use TencentCloud\Vod\V20180717\Models as Models;
 剪辑不固化的优势在于其剪辑操作十分“轻量化”，不会产生额外的存储开销。但其不足之处在于生命周期与原始录制视频相同，且无法进一步进行转码等视频处理。
 * @method Models\ModifyClassResponse ModifyClass(Models\ModifyClassRequest $req) 修改媒体分类属性。
 * @method Models\ModifyMediaInfoResponse ModifyMediaInfo(Models\ModifyMediaInfoRequest $req) 修改媒体文件的属性，包括分类、名称、描述、标签、过期时间、打点信息、视频封面等。
+* @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) 对点播中的音视频媒体发起处理任务，功能包括：
+1. 视频转码（带水印）；
+2. 视频转动图；
+3. 对视频按指定时间点截图；
+4. 对视频采样截图；
+5. 对视频截图雪碧图；
+6. 对视频截取一张图做封面；
+7. 智能内容审核（鉴黄、鉴恐、鉴政）；
+8. 智能内容分析（标签、分类、封面）。
+* @method Models\ProcessMediaByUrlResponse ProcessMediaByUrl(Models\ProcessMediaByUrlRequest $req) 对来源为 URL 的音视频媒体发起处理任务，功能包括：
+
+1. 智能内容审核（鉴黄、鉴恐、鉴政）；
+2. 智能内容分析（标签、分类、封面）。
+* @method Models\PullEventsResponse PullEvents(Models\PullEventsRequest $req) * 该接口用于从点播服务端获取事件通知，详见[服务端事件通知](https://cloud.tencent.com/document/product/266/7829)；
+* 接口为长轮询模式，即：如果服务端存在未消费事件，则立即返回给请求方；如果服务端没有未消费事件，则后台会将请求挂起，直到有新的事件产生为止；
+* 请求最多挂起 5 秒，建议请求方将超时时间设置为 10 秒；
+* 若该接口有事件返回，调用方必须再调用[确认事件通知]接口，确认事件通知已经处理，否则该事件通知后续会再次被拉取到。
 * @method Models\SearchMediaResponse SearchMedia(Models\SearchMediaRequest $req) 搜索媒体信息，支持各种条件筛选，以及对返回结果进行排序、过滤等功能，具体包括：
 - 根据媒体文件名或描述信息进行文本模糊搜索。
 - 根据媒体分类、标签进行检索。

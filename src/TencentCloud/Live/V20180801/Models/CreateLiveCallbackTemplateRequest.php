@@ -22,16 +22,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateName(string $TemplateName) 设置模板名称。非空的字符串
  * @method string getDescription() 获取描述信息。
  * @method void setDescription(string $Description) 设置描述信息。
- * @method string getStreamBeginNotifyUrl() 获取开播回调URL。
- * @method void setStreamBeginNotifyUrl(string $StreamBeginNotifyUrl) 设置开播回调URL。
- * @method string getStreamEndNotifyUrl() 获取断流回调URL。
- * @method void setStreamEndNotifyUrl(string $StreamEndNotifyUrl) 设置断流回调URL。
- * @method string getRecordNotifyUrl() 获取录制回调URL。
- * @method void setRecordNotifyUrl(string $RecordNotifyUrl) 设置录制回调URL。
- * @method string getSnapshotNotifyUrl() 获取截图回调URL。
- * @method void setSnapshotNotifyUrl(string $SnapshotNotifyUrl) 设置截图回调URL。
- * @method string getPornCensorshipNotifyUrl() 获取鉴黄回调URL。
- * @method void setPornCensorshipNotifyUrl(string $PornCensorshipNotifyUrl) 设置鉴黄回调URL。
+ * @method string getStreamBeginNotifyUrl() 获取开播回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+ * @method void setStreamBeginNotifyUrl(string $StreamBeginNotifyUrl) 设置开播回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+ * @method string getStreamEndNotifyUrl() 获取断流回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+ * @method void setStreamEndNotifyUrl(string $StreamEndNotifyUrl) 设置断流回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+ * @method string getRecordNotifyUrl() 获取录制回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+ * @method void setRecordNotifyUrl(string $RecordNotifyUrl) 设置录制回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+ * @method string getSnapshotNotifyUrl() 获取截图回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+ * @method void setSnapshotNotifyUrl(string $SnapshotNotifyUrl) 设置截图回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+ * @method string getPornCensorshipNotifyUrl() 获取鉴黄回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32741)。
+ * @method void setPornCensorshipNotifyUrl(string $PornCensorshipNotifyUrl) 设置鉴黄回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32741)。
  */
 
 /**
@@ -50,37 +60,47 @@ class CreateLiveCallbackTemplateRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string 开播回调URL。
+     * @var string 开播回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public $StreamBeginNotifyUrl;
 
     /**
-     * @var string 断流回调URL。
+     * @var string 断流回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public $StreamEndNotifyUrl;
 
     /**
-     * @var string 录制回调URL。
+     * @var string 录制回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public $RecordNotifyUrl;
 
     /**
-     * @var string 截图回调URL。
+     * @var string 截图回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public $SnapshotNotifyUrl;
 
     /**
-     * @var string 鉴黄回调URL。
+     * @var string 鉴黄回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32741)。
      */
     public $PornCensorshipNotifyUrl;
     /**
      * @param string $TemplateName 模板名称。非空的字符串
      * @param string $Description 描述信息。
-     * @param string $StreamBeginNotifyUrl 开播回调URL。
-     * @param string $StreamEndNotifyUrl 断流回调URL。
-     * @param string $RecordNotifyUrl 录制回调URL。
-     * @param string $SnapshotNotifyUrl 截图回调URL。
-     * @param string $PornCensorshipNotifyUrl 鉴黄回调URL。
+     * @param string $StreamBeginNotifyUrl 开播回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * @param string $StreamEndNotifyUrl 断流回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * @param string $RecordNotifyUrl 录制回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * @param string $SnapshotNotifyUrl 截图回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * @param string $PornCensorshipNotifyUrl 鉴黄回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32741)。
      */
     function __construct()
     {

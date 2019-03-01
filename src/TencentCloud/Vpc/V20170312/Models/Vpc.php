@@ -18,26 +18,28 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcName() 获取Vpc名称。
- * @method void setVpcName(string $VpcName) 设置Vpc名称。
- * @method string getVpcId() 获取VPC实例ID，例如：vpc-azd4dt1c。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID，例如：vpc-azd4dt1c。
- * @method string getCidrBlock() 获取VPC的cidr，只能为10.0.0.0/16，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
- * @method void setCidrBlock(string $CidrBlock) 设置VPC的cidr，只能为10.0.0.0/16，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
- * @method boolean getIsDefault() 获取是否默认VPC。
- * @method void setIsDefault(boolean $IsDefault) 设置是否默认VPC。
+ * @method string getVpcName() 获取`VPC`名称。
+ * @method void setVpcName(string $VpcName) 设置`VPC`名称。
+ * @method string getVpcId() 获取`VPC`实例`ID`，例如：vpc-azd4dt1c。
+ * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`，例如：vpc-azd4dt1c。
+ * @method string getCidrBlock() 获取`VPC`的`IPv4` `CIDR`。
+ * @method void setCidrBlock(string $CidrBlock) 设置`VPC`的`IPv4` `CIDR`。
+ * @method boolean getIsDefault() 获取是否默认`VPC`。
+ * @method void setIsDefault(boolean $IsDefault) 设置是否默认`VPC`。
  * @method boolean getEnableMulticast() 获取是否开启组播。
  * @method void setEnableMulticast(boolean $EnableMulticast) 设置是否开启组播。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method array getDnsServerSet() 获取DNS列表
- * @method void setDnsServerSet(array $DnsServerSet) 设置DNS列表
- * @method string getDomainName() 获取DHCP域名选项值
- * @method void setDomainName(string $DomainName) 设置DHCP域名选项值
- * @method string getDhcpOptionsId() 获取DHCP选项集ID
- * @method void setDhcpOptionsId(string $DhcpOptionsId) 设置DHCP选项集ID
- * @method boolean getEnableDhcp() 获取是否开启DHCP。
- * @method void setEnableDhcp(boolean $EnableDhcp) 设置是否开启DHCP。
+ * @method array getDnsServerSet() 获取`DNS`列表。
+ * @method void setDnsServerSet(array $DnsServerSet) 设置`DNS`列表。
+ * @method string getDomainName() 获取`DHCP`域名选项值。
+ * @method void setDomainName(string $DomainName) 设置`DHCP`域名选项值。
+ * @method string getDhcpOptionsId() 获取`DHCP`选项集`ID`。
+ * @method void setDhcpOptionsId(string $DhcpOptionsId) 设置`DHCP`选项集`ID`。
+ * @method boolean getEnableDhcp() 获取是否开启`DHCP`。
+ * @method void setEnableDhcp(boolean $EnableDhcp) 设置是否开启`DHCP`。
+ * @method string getIpv6CidrBlock() 获取`VPC`的`IPv6` `CIDR`。
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置`VPC`的`IPv6` `CIDR`。
  */
 
 /**
@@ -46,22 +48,22 @@ use TencentCloud\Common\AbstractModel;
 class Vpc extends AbstractModel
 {
     /**
-     * @var string Vpc名称。
+     * @var string `VPC`名称。
      */
     public $VpcName;
 
     /**
-     * @var string VPC实例ID，例如：vpc-azd4dt1c。
+     * @var string `VPC`实例`ID`，例如：vpc-azd4dt1c。
      */
     public $VpcId;
 
     /**
-     * @var string VPC的cidr，只能为10.0.0.0/16，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
+     * @var string `VPC`的`IPv4` `CIDR`。
      */
     public $CidrBlock;
 
     /**
-     * @var boolean 是否默认VPC。
+     * @var boolean 是否默认`VPC`。
      */
     public $IsDefault;
 
@@ -76,35 +78,41 @@ class Vpc extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var array DNS列表
+     * @var array `DNS`列表。
      */
     public $DnsServerSet;
 
     /**
-     * @var string DHCP域名选项值
+     * @var string `DHCP`域名选项值。
      */
     public $DomainName;
 
     /**
-     * @var string DHCP选项集ID
+     * @var string `DHCP`选项集`ID`。
      */
     public $DhcpOptionsId;
 
     /**
-     * @var boolean 是否开启DHCP。
+     * @var boolean 是否开启`DHCP`。
      */
     public $EnableDhcp;
+
     /**
-     * @param string $VpcName Vpc名称。
-     * @param string $VpcId VPC实例ID，例如：vpc-azd4dt1c。
-     * @param string $CidrBlock VPC的cidr，只能为10.0.0.0/16，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
-     * @param boolean $IsDefault 是否默认VPC。
+     * @var string `VPC`的`IPv6` `CIDR`。
+     */
+    public $Ipv6CidrBlock;
+    /**
+     * @param string $VpcName `VPC`名称。
+     * @param string $VpcId `VPC`实例`ID`，例如：vpc-azd4dt1c。
+     * @param string $CidrBlock `VPC`的`IPv4` `CIDR`。
+     * @param boolean $IsDefault 是否默认`VPC`。
      * @param boolean $EnableMulticast 是否开启组播。
      * @param string $CreatedTime 创建时间。
-     * @param array $DnsServerSet DNS列表
-     * @param string $DomainName DHCP域名选项值
-     * @param string $DhcpOptionsId DHCP选项集ID
-     * @param boolean $EnableDhcp 是否开启DHCP。
+     * @param array $DnsServerSet `DNS`列表。
+     * @param string $DomainName `DHCP`域名选项值。
+     * @param string $DhcpOptionsId `DHCP`选项集`ID`。
+     * @param boolean $EnableDhcp 是否开启`DHCP`。
+     * @param string $Ipv6CidrBlock `VPC`的`IPv6` `CIDR`。
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class Vpc extends AbstractModel
 
         if (array_key_exists("EnableDhcp",$param) and $param["EnableDhcp"] !== null) {
             $this->EnableDhcp = $param["EnableDhcp"];
+        }
+
+        if (array_key_exists("Ipv6CidrBlock",$param) and $param["Ipv6CidrBlock"] !== null) {
+            $this->Ipv6CidrBlock = $param["Ipv6CidrBlock"];
         }
     }
 }

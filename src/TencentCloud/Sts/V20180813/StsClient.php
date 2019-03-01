@@ -23,7 +23,7 @@ use TencentCloud\Sts\V20180813\Models as Models;
 
 /**
 * @method Models\AssumeRoleResponse AssumeRole(Models\AssumeRoleRequest $req) 申请扮演角色
-* @method Models\GetFederationTokenResponse GetFederationToken(Models\GetFederationTokenRequest $req) 获取临时证书
+* @method Models\GetFederationTokenResponse GetFederationToken(Models\GetFederationTokenRequest $req) 获取联合身份临时访问凭证
  */
 
 class StsClient extends AbstractClient

@@ -32,24 +32,6 @@ use TencentCloud\Common\AbstractModel;
 3、策略中不能包含 principal 元素。
  * @method integer getDurationSeconds() 获取指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒
  * @method void setDurationSeconds(integer $DurationSeconds) 设置指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒
- * @method integer getOpenUin() 获取兼容uin名单
- * @method void setOpenUin(integer $OpenUin) 设置兼容uin名单
- * @method integer getOpenOwnerUin() 获取兼容OwnerUin名单
- * @method void setOpenOwnerUin(integer $OpenOwnerUin) 设置兼容OwnerUin名单
- * @method string getUa() 获取ua
- * @method void setUa(string $Ua) 设置ua
- * @method integer getMfa() 获取mfa
- * @method void setMfa(integer $Mfa) 设置mfa
- * @method string getInterfaceName() 获取interfaceName
- * @method void setInterfaceName(string $InterfaceName) 设置interfaceName
- * @method string getExtraInfo() 获取extraInfo
- * @method void setExtraInfo(string $ExtraInfo) 设置extraInfo
- * @method integer getThUin() 获取thUin
- * @method void setThUin(integer $ThUin) 设置thUin
- * @method integer getThOwnerUin() 获取thOwnerUin
- * @method void setThOwnerUin(integer $ThOwnerUin) 设置thOwnerUin
- * @method string getCodeMode() 获取codeMode
- * @method void setCodeMode(string $CodeMode) 设置codeMode
  */
 
 /**
@@ -75,51 +57,6 @@ class GetFederationTokenRequest extends AbstractModel
      * @var integer 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒
      */
     public $DurationSeconds;
-
-    /**
-     * @var integer 兼容uin名单
-     */
-    public $OpenUin;
-
-    /**
-     * @var integer 兼容OwnerUin名单
-     */
-    public $OpenOwnerUin;
-
-    /**
-     * @var string ua
-     */
-    public $Ua;
-
-    /**
-     * @var integer mfa
-     */
-    public $Mfa;
-
-    /**
-     * @var string interfaceName
-     */
-    public $InterfaceName;
-
-    /**
-     * @var string extraInfo
-     */
-    public $ExtraInfo;
-
-    /**
-     * @var integer thUin
-     */
-    public $ThUin;
-
-    /**
-     * @var integer thOwnerUin
-     */
-    public $ThOwnerUin;
-
-    /**
-     * @var string codeMode
-     */
-    public $CodeMode;
     /**
      * @param string $Name 联合身份用户昵称
      * @param string $Policy 策略描述
@@ -128,15 +65,6 @@ class GetFederationTokenRequest extends AbstractModel
 2、策略语法参照 CAM 策略语法。
 3、策略中不能包含 principal 元素。
      * @param integer $DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒
-     * @param integer $OpenUin 兼容uin名单
-     * @param integer $OpenOwnerUin 兼容OwnerUin名单
-     * @param string $Ua ua
-     * @param integer $Mfa mfa
-     * @param string $InterfaceName interfaceName
-     * @param string $ExtraInfo extraInfo
-     * @param integer $ThUin thUin
-     * @param integer $ThOwnerUin thOwnerUin
-     * @param string $CodeMode codeMode
      */
     function __construct()
     {
@@ -160,42 +88,6 @@ class GetFederationTokenRequest extends AbstractModel
 
         if (array_key_exists("DurationSeconds",$param) and $param["DurationSeconds"] !== null) {
             $this->DurationSeconds = $param["DurationSeconds"];
-        }
-
-        if (array_key_exists("OpenUin",$param) and $param["OpenUin"] !== null) {
-            $this->OpenUin = $param["OpenUin"];
-        }
-
-        if (array_key_exists("OpenOwnerUin",$param) and $param["OpenOwnerUin"] !== null) {
-            $this->OpenOwnerUin = $param["OpenOwnerUin"];
-        }
-
-        if (array_key_exists("Ua",$param) and $param["Ua"] !== null) {
-            $this->Ua = $param["Ua"];
-        }
-
-        if (array_key_exists("Mfa",$param) and $param["Mfa"] !== null) {
-            $this->Mfa = $param["Mfa"];
-        }
-
-        if (array_key_exists("InterfaceName",$param) and $param["InterfaceName"] !== null) {
-            $this->InterfaceName = $param["InterfaceName"];
-        }
-
-        if (array_key_exists("ExtraInfo",$param) and $param["ExtraInfo"] !== null) {
-            $this->ExtraInfo = $param["ExtraInfo"];
-        }
-
-        if (array_key_exists("ThUin",$param) and $param["ThUin"] !== null) {
-            $this->ThUin = $param["ThUin"];
-        }
-
-        if (array_key_exists("ThOwnerUin",$param) and $param["ThOwnerUin"] !== null) {
-            $this->ThOwnerUin = $param["ThOwnerUin"];
-        }
-
-        if (array_key_exists("CodeMode",$param) and $param["CodeMode"] !== null) {
-            $this->CodeMode = $param["CodeMode"];
         }
     }
 }

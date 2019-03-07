@@ -46,6 +46,14 @@ ES.S1.MEDIUM8: 2 核 8G
 ES.S1.LARGE16: 4 核 16G 
 ES.S1.2XLARGE32: 8 核 32G 
 ES.S1.4XLARGE64: 16 核 64G
+ * @method integer getMasterNodeNum() 获取专用主节点个数
+ * @method void setMasterNodeNum(integer $MasterNodeNum) 设置专用主节点个数
+ * @method string getMasterNodeType() 获取专用主节点规格
+ * @method void setMasterNodeType(string $MasterNodeType) 设置专用主节点规格
+ * @method integer getMasterNodeDiskSize() 获取专用主节点磁盘大小
+ * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) 设置专用主节点磁盘大小
+ * @method boolean getForceRestart() 获取更新配置时是否强制重启
+ * @method void setForceRestart(boolean $ForceRestart) 设置更新配置时是否强制重启
  */
 
 /**
@@ -98,6 +106,26 @@ ES.S1.2XLARGE32: 8 核 32G
 ES.S1.4XLARGE64: 16 核 64G
      */
     public $NodeType;
+
+    /**
+     * @var integer 专用主节点个数
+     */
+    public $MasterNodeNum;
+
+    /**
+     * @var string 专用主节点规格
+     */
+    public $MasterNodeType;
+
+    /**
+     * @var integer 专用主节点磁盘大小
+     */
+    public $MasterNodeDiskSize;
+
+    /**
+     * @var boolean 更新配置时是否强制重启
+     */
+    public $ForceRestart;
     /**
      * @param string $InstanceId 要操作的实例ID
      * @param string $InstanceName 修改后的实例名称, 1-50 个英文、汉字、数字、连接线-或下划线_
@@ -113,6 +141,10 @@ ES.S1.MEDIUM8: 2 核 8G
 ES.S1.LARGE16: 4 核 16G 
 ES.S1.2XLARGE32: 8 核 32G 
 ES.S1.4XLARGE64: 16 核 64G
+     * @param integer $MasterNodeNum 专用主节点个数
+     * @param string $MasterNodeType 专用主节点规格
+     * @param integer $MasterNodeDiskSize 专用主节点磁盘大小
+     * @param boolean $ForceRestart 更新配置时是否强制重启
      */
     function __construct()
     {
@@ -157,6 +189,22 @@ ES.S1.4XLARGE64: 16 核 64G
 
         if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
             $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("MasterNodeNum",$param) and $param["MasterNodeNum"] !== null) {
+            $this->MasterNodeNum = $param["MasterNodeNum"];
+        }
+
+        if (array_key_exists("MasterNodeType",$param) and $param["MasterNodeType"] !== null) {
+            $this->MasterNodeType = $param["MasterNodeType"];
+        }
+
+        if (array_key_exists("MasterNodeDiskSize",$param) and $param["MasterNodeDiskSize"] !== null) {
+            $this->MasterNodeDiskSize = $param["MasterNodeDiskSize"];
+        }
+
+        if (array_key_exists("ForceRestart",$param) and $param["ForceRestart"] !== null) {
+            $this->ForceRestart = $param["ForceRestart"];
         }
     }
 }

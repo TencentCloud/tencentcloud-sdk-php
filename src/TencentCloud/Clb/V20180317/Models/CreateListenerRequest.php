@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
  * @method array getPorts() 获取要将监听器创建到哪些端口，每个端口对应一个新的监听器
  * @method void setPorts(array $Ports) 设置要将监听器创建到哪些端口，每个端口对应一个新的监听器
- * @method string getProtocol() 获取监听器协议：HTTP | HTTPS | TCP | TCP_SSL
- * @method void setProtocol(string $Protocol) 设置监听器协议：HTTP | HTTPS | TCP | TCP_SSL
+ * @method string getProtocol() 获取监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
+ * @method void setProtocol(string $Protocol) 设置监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
  * @method array getListenerNames() 获取要创建的监听器名称列表，名称与Ports数组按序一一对应，如不需立即命名，则无需提供此参数
  * @method void setListenerNames(array $ListenerNames) 设置要创建的监听器名称列表，名称与Ports数组按序一一对应，如不需立即命名，则无需提供此参数
  * @method HealthCheck getHealthCheck() 获取健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
@@ -56,7 +56,7 @@ class CreateListenerRequest extends AbstractModel
     public $Ports;
 
     /**
-     * @var string 监听器协议：HTTP | HTTPS | TCP | TCP_SSL
+     * @var string 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
      */
     public $Protocol;
 
@@ -93,7 +93,7 @@ class CreateListenerRequest extends AbstractModel
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param array $Ports 要将监听器创建到哪些端口，每个端口对应一个新的监听器
-     * @param string $Protocol 监听器协议：HTTP | HTTPS | TCP | TCP_SSL
+     * @param string $Protocol 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
      * @param array $ListenerNames 要创建的监听器名称列表，名称与Ports数组按序一一对应，如不需立即命名，则无需提供此参数
      * @param HealthCheck $HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
      * @param CertificateInput $Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器

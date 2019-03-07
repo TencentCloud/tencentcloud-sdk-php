@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIkConfig(EsDictionaryInfo $IkConfig) 设置Ik分词器配置
  * @method MasterNodeInfo getMasterNodeInfo() 获取专用主节点配置
  * @method void setMasterNodeInfo(MasterNodeInfo $MasterNodeInfo) 设置专用主节点配置
+ * @method CosBackup getCosBackup() 获取cos自动备份配置
+ * @method void setCosBackup(CosBackup $CosBackup) 设置cos自动备份配置
+ * @method boolean getAllowCosBackup() 获取是否允许cos自动备份
+ * @method void setAllowCosBackup(boolean $AllowCosBackup) 设置是否允许cos自动备份
  */
 
 /**
@@ -241,6 +245,16 @@ class InstanceInfo extends AbstractModel
      * @var MasterNodeInfo 专用主节点配置
      */
     public $MasterNodeInfo;
+
+    /**
+     * @var CosBackup cos自动备份配置
+     */
+    public $CosBackup;
+
+    /**
+     * @var boolean 是否允许cos自动备份
+     */
+    public $AllowCosBackup;
     /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
@@ -273,6 +287,8 @@ class InstanceInfo extends AbstractModel
      * @param integer $InstanceType 实例类型（实例类型标识，当前只有1,2两种）
      * @param EsDictionaryInfo $IkConfig Ik分词器配置
      * @param MasterNodeInfo $MasterNodeInfo 专用主节点配置
+     * @param CosBackup $CosBackup cos自动备份配置
+     * @param boolean $AllowCosBackup 是否允许cos自动备份
      */
     function __construct()
     {
@@ -411,6 +427,15 @@ class InstanceInfo extends AbstractModel
         if (array_key_exists("MasterNodeInfo",$param) and $param["MasterNodeInfo"] !== null) {
             $this->MasterNodeInfo = new MasterNodeInfo();
             $this->MasterNodeInfo->deserialize($param["MasterNodeInfo"]);
+        }
+
+        if (array_key_exists("CosBackup",$param) and $param["CosBackup"] !== null) {
+            $this->CosBackup = new CosBackup();
+            $this->CosBackup->deserialize($param["CosBackup"]);
+        }
+
+        if (array_key_exists("AllowCosBackup",$param) and $param["AllowCosBackup"] !== null) {
+            $this->AllowCosBackup = $param["AllowCosBackup"];
         }
     }
 }

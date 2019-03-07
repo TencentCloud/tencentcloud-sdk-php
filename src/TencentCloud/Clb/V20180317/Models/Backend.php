@@ -27,13 +27,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getWeight() 获取后端云服务器的转发权重，取值范围：0~100，默认为 10。
  * @method void setWeight(integer $Weight) 设置后端云服务器的转发权重，取值范围：0~100，默认为 10。
  * @method array getPublicIpAddresses() 获取云服务器的外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置云服务器的外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPrivateIpAddresses() 获取云服务器的内网 IP
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置云服务器的内网 IP
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取云服务器实例名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置云服务器实例名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegisteredTime() 获取云服务器被绑定到监听器的时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegisteredTime(string $RegisteredTime) 设置云服务器被绑定到监听器的时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -63,21 +71,25 @@ class Backend extends AbstractModel
 
     /**
      * @var array 云服务器的外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIpAddresses;
 
     /**
      * @var array 云服务器的内网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivateIpAddresses;
 
     /**
      * @var string 云服务器实例名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var string 云服务器被绑定到监听器的时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegisteredTime;
     /**
@@ -86,9 +98,13 @@ class Backend extends AbstractModel
      * @param integer $Port 后端云服务器监听端口
      * @param integer $Weight 后端云服务器的转发权重，取值范围：0~100，默认为 10。
      * @param array $PublicIpAddresses 云服务器的外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PrivateIpAddresses 云服务器的内网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 云服务器实例名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegisteredTime 云服务器被绑定到监听器的时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUrl() 获取转发规则的路径。
  * @method void setUrl(string $Url) 设置转发规则的路径。
  * @method array getTargets() 获取后端机器的信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargets(array $Targets) 设置后端机器的信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -50,6 +52,7 @@ class RuleTargets extends AbstractModel
 
     /**
      * @var array 后端机器的信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Targets;
     /**
@@ -57,6 +60,7 @@ class RuleTargets extends AbstractModel
      * @param string $Domain 转发规则的域名
      * @param string $Url 转发规则的路径。
      * @param array $Targets 后端机器的信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

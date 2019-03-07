@@ -19,11 +19,17 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getInstanceId() 获取云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取后端云服务器监听端口
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置后端云服务器监听端口
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取转发目标的类型，目前仅可取值为 CVM
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置转发目标的类型，目前仅可取值为 CVM
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取后端云服务器的转发权重，取值范围：0~100，默认为 10。
  * @method void setWeight(integer $Weight) 设置后端云服务器的转发权重，取值范围：0~100，默认为 10。
  */
@@ -35,16 +41,19 @@ class Target extends AbstractModel
 {
     /**
      * @var string 云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var integer 后端云服务器监听端口
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string 转发目标的类型，目前仅可取值为 CVM
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -54,8 +63,11 @@ class Target extends AbstractModel
     public $Weight;
     /**
      * @param string $InstanceId 云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 后端云服务器监听端口
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 转发目标的类型，目前仅可取值为 CVM
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 后端云服务器的转发权重，取值范围：0~100，默认为 10。
      */
     function __construct()

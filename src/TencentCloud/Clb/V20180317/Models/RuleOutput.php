@@ -21,15 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLocationId() 获取转发规则的 ID，作为输入时无需此字段
  * @method void setLocationId(string $LocationId) 设置转发规则的 ID，作为输入时无需此字段
  * @method string getDomain() 获取转发规则的域名。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置转发规则的域名。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取转发规则的路径。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置转发规则的路径。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSessionExpireTime() 获取会话保持时间
  * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间
  * @method HealthCheck getHealthCheck() 获取健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthCheck(HealthCheck $HealthCheck) 设置健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method CertificateOutput getCertificate() 获取证书信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificate(CertificateOutput $Certificate) 设置证书信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScheduler() 获取规则的请求转发方式
  * @method void setScheduler(string $Scheduler) 设置规则的请求转发方式
  */
@@ -46,11 +54,13 @@ class RuleOutput extends AbstractModel
 
     /**
      * @var string 转发规则的域名。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @var string 转发规则的路径。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
@@ -61,11 +71,13 @@ class RuleOutput extends AbstractModel
 
     /**
      * @var HealthCheck 健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthCheck;
 
     /**
      * @var CertificateOutput 证书信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Certificate;
 
@@ -76,10 +88,14 @@ class RuleOutput extends AbstractModel
     /**
      * @param string $LocationId 转发规则的 ID，作为输入时无需此字段
      * @param string $Domain 转发规则的域名。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 转发规则的路径。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SessionExpireTime 会话保持时间
      * @param HealthCheck $HealthCheck 健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateOutput $Certificate 证书信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Scheduler 规则的请求转发方式
      */
     function __construct()

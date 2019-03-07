@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Es\V20180416\Models;
+namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取要重启的实例ID
- * @method void setInstanceId(string $InstanceId) 设置要重启的实例ID
- * @method boolean getForceRestart() 获取是否强制重启
- * @method void setForceRestart(boolean $ForceRestart) 设置是否强制重启
+ * @method integer getX() 获取横坐标
+ * @method void setX(integer $X) 设置横坐标
+ * @method integer getY() 获取纵坐标
+ * @method void setY(integer $Y) 设置纵坐标
  */
 
 /**
- *RestartInstance请求参数结构体
+ *Coord
  */
-class RestartInstanceRequest extends AbstractModel
+class Coord extends AbstractModel
 {
     /**
-     * @var string 要重启的实例ID
+     * @var integer 横坐标
      */
-    public $InstanceId;
+    public $X;
 
     /**
-     * @var boolean 是否强制重启
+     * @var integer 纵坐标
      */
-    public $ForceRestart;
+    public $Y;
     /**
-     * @param string $InstanceId 要重启的实例ID
-     * @param boolean $ForceRestart 是否强制重启
+     * @param integer $X 横坐标
+     * @param integer $Y 纵坐标
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class RestartInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("X",$param) and $param["X"] !== null) {
+            $this->X = $param["X"];
         }
 
-        if (array_key_exists("ForceRestart",$param) and $param["ForceRestart"] !== null) {
-            $this->ForceRestart = $param["ForceRestart"];
+        if (array_key_exists("Y",$param) and $param["Y"] !== null) {
+            $this->Y = $param["Y"];
         }
     }
 }

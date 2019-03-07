@@ -29,31 +29,53 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method integer getForward() 获取应用型负载均衡标识，1：应用型负载均衡，0：传统型的负载均衡。
  * @method void setForward(integer $Forward) 设置应用型负载均衡标识，1：应用型负载均衡，0：传统型的负载均衡。
  * @method string getDomain() 获取负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLoadBalancerVips() 获取负载均衡实例的 VIP 列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalancerVips(array $LoadBalancerVips) 设置负载均衡实例的 VIP 列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取负载均衡实例的状态，包括
 0：创建中，1：正常运行。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置负载均衡实例的状态，包括
 0：创建中，1：正常运行。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取负载均衡实例的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置负载均衡实例的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatusTime() 获取负载均衡实例的上次状态转换时间。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusTime(string $StatusTime) 设置负载均衡实例的上次状态转换时间。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProjectId() 获取负载均衡实例所属的项目 ID， 0 表示默认项目。
  * @method void setProjectId(integer $ProjectId) 设置负载均衡实例所属的项目 ID， 0 表示默认项目。
  * @method string getVpcId() 获取私有网络的 ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置私有网络的 ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOpenBgp() 获取高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpenBgp(integer $OpenBgp) 设置高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSnat() 获取在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnat(boolean $Snat) 设置在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsolation() 获取0：表示未被隔离，1：表示被隔离。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolation(integer $Isolation) 设置0：表示未被隔离，1：表示被隔离。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLog() 获取用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLog(string $Log) 设置用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取负载均衡实例所在的子网（仅对内网VPC型LB有意义）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置负载均衡实例所在的子网（仅对内网VPC型LB有意义）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -84,27 +106,32 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * @var string 负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @var array 负载均衡实例的 VIP 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadBalancerVips;
 
     /**
      * @var integer 负载均衡实例的状态，包括
 0：创建中，1：正常运行。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 负载均衡实例的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 负载均衡实例的上次状态转换时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusTime;
 
@@ -115,31 +142,37 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * @var string 私有网络的 ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var integer 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpenBgp;
 
     /**
      * @var boolean 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Snat;
 
     /**
      * @var integer 0：表示未被隔离，1：表示被隔离。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Isolation;
 
     /**
      * @var string 用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Log;
 
     /**
      * @var string 负载均衡实例所在的子网（仅对内网VPC型LB有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
     /**
@@ -149,18 +182,29 @@ OPEN：公网属性， INTERNAL：内网属性。
 OPEN：公网属性， INTERNAL：内网属性。
      * @param integer $Forward 应用型负载均衡标识，1：应用型负载均衡，0：传统型的负载均衡。
      * @param string $Domain 负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LoadBalancerVips 负载均衡实例的 VIP 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 负载均衡实例的状态，包括
 0：创建中，1：正常运行。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 负载均衡实例的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusTime 负载均衡实例的上次状态转换时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectId 负载均衡实例所属的项目 ID， 0 表示默认项目。
      * @param string $VpcId 私有网络的 ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OpenBgp 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Snat 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Isolation 0：表示未被隔离，1：表示被隔离。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Log 用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 负载均衡实例所在的子网（仅对内网VPC型LB有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

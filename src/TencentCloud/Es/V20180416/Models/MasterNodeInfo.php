@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMasterNodeMemSize(integer $MasterNodeMemSize) 设置专用主节点内存大小，单位GB
  * @method integer getMasterNodeDiskSize() 获取专用主节点磁盘大小，单位GB
  * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) 设置专用主节点磁盘大小，单位GB
+ * @method string getMasterNodeDiskType() 获取专用主节点磁盘类型
+ * @method void setMasterNodeDiskType(string $MasterNodeDiskType) 设置专用主节点磁盘类型
  */
 
 /**
@@ -66,6 +68,11 @@ class MasterNodeInfo extends AbstractModel
      * @var integer 专用主节点磁盘大小，单位GB
      */
     public $MasterNodeDiskSize;
+
+    /**
+     * @var string 专用主节点磁盘类型
+     */
+    public $MasterNodeDiskType;
     /**
      * @param boolean $EnableDedicatedMaster 是否启用了专用主节点
      * @param string $MasterNodeType 专用主节点规格
@@ -73,6 +80,7 @@ class MasterNodeInfo extends AbstractModel
      * @param integer $MasterNodeCpuNum 专用主节点CPU核数
      * @param integer $MasterNodeMemSize 专用主节点内存大小，单位GB
      * @param integer $MasterNodeDiskSize 专用主节点磁盘大小，单位GB
+     * @param string $MasterNodeDiskType 专用主节点磁盘类型
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class MasterNodeInfo extends AbstractModel
 
         if (array_key_exists("MasterNodeDiskSize",$param) and $param["MasterNodeDiskSize"] !== null) {
             $this->MasterNodeDiskSize = $param["MasterNodeDiskSize"];
+        }
+
+        if (array_key_exists("MasterNodeDiskType",$param) and $param["MasterNodeDiskType"] !== null) {
+            $this->MasterNodeDiskType = $param["MasterNodeDiskType"];
         }
     }
 }

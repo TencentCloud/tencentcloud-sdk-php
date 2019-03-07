@@ -37,6 +37,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
 2. 单次创建实例最大支持 100 个，实例时长最大支持 36 个月；
 3. 支持创建 MySQL5.5 、 MySQL5.6 、 MySQL5.7 版本；
 4. 支持创建主实例、只读实例、灾备实例；
+5. 当入参指定Port或ParamList时，该实例会进行初始化操作；
 * @method Models\CreateDBInstanceHourResponse CreateDBInstanceHour(Models\CreateDBInstanceHourRequest $req) 本接口(CreateDBInstanceHour)用于创建按量计费的实例，可通过传入实例规格、MySQL 版本号和数量等信息创建云数据库实例，支持主实例、灾备实例和只读实例的创建。
 
 该接口为异步接口，您还可以使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872)接口查询该实例的详细信息。当该实例的Status为1，且TaskStatus为0，表示实例已经发货成功。
@@ -45,6 +46,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
 2. 单次创建实例最大支持 100 个，实例时长最大支持 36 个月；
 3. 支持创建 MySQL5.5、MySQL5.6和MySQL5.7 版本；
 4. 支持创建主实例、灾备实例和只读实例；
+5. 当入参指定Port或ParamList时，该实例会进行初始化操作；
 * @method Models\CreateParamTemplateResponse CreateParamTemplate(Models\CreateParamTemplateRequest $req) 该接口（CreateParamTemplate）用于创建参数模板。
 * @method Models\DeleteAccountsResponse DeleteAccounts(Models\DeleteAccountsRequest $req) 本接口(DeleteAccounts)用于删除云数据库的账户。
 * @method Models\DeleteBackupResponse DeleteBackup(Models\DeleteBackupRequest $req) 本接口(DeleteBackup)用于删除数据库备份。

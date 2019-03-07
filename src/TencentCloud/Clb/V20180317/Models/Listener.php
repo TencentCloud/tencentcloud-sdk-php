@@ -25,19 +25,33 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPort() 获取监听器端口
  * @method void setPort(integer $Port) 设置监听器端口
  * @method CertificateOutput getCertificate() 获取监听器绑定的证书信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificate(CertificateOutput $Certificate) 设置监听器绑定的证书信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method HealthCheck getHealthCheck() 获取监听器的健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthCheck(HealthCheck $HealthCheck) 设置监听器的健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScheduler() 获取请求调度方式
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduler(string $Scheduler) 设置请求调度方式
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSessionExpireTime() 获取会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSniSwitch() 获取是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSniSwitch(integer $SniSwitch) 设置是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRules() 获取监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRules(array $Rules) 设置监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getListenerName() 获取监听器的名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setListenerName(string $ListenerName) 设置监听器的名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -62,36 +76,43 @@ class Listener extends AbstractModel
 
     /**
      * @var CertificateOutput 监听器绑定的证书信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Certificate;
 
     /**
      * @var HealthCheck 监听器的健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthCheck;
 
     /**
      * @var string 请求调度方式
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scheduler;
 
     /**
      * @var integer 会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionExpireTime;
 
     /**
      * @var integer 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SniSwitch;
 
     /**
      * @var array 监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rules;
 
     /**
      * @var string 监听器的名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ListenerName;
     /**
@@ -99,12 +120,19 @@ class Listener extends AbstractModel
      * @param string $Protocol 监听器协议
      * @param integer $Port 监听器端口
      * @param CertificateOutput $Certificate 监听器绑定的证书信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheck $HealthCheck 监听器的健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Scheduler 请求调度方式
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SessionExpireTime 会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SniSwitch 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Rules 监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ListenerName 监听器的名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

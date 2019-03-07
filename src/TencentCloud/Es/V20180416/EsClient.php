@@ -26,7 +26,7 @@ use TencentCloud\Es\V20180416\Models as Models;
 * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 销毁集群实例 
 * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询用户该地域下符合条件的所有实例
 * @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) 重启ES集群实例(用于系统版本更新等操作) 
-* @method Models\UpdateInstanceResponse UpdateInstance(Models\UpdateInstanceRequest $req) 对已存在的集群进行扩缩容，修改实例名称，修改配置，重置密码， 添加Kibana黑白名单等操作 
+* @method Models\UpdateInstanceResponse UpdateInstance(Models\UpdateInstanceRequest $req) 对已存在的集群进行扩缩容，修改实例名称，修改配置，重置密码， 添加Kibana黑白名单等操作
  */
 
 class EsClient extends AbstractClient

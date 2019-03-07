@@ -18,29 +18,29 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取要重启的实例ID
- * @method void setInstanceId(string $InstanceId) 设置要重启的实例ID
- * @method boolean getForceRestart() 获取是否强制重启
- * @method void setForceRestart(boolean $ForceRestart) 设置是否强制重启
+ * @method boolean getIsAutoBackup() 获取是否开启cos自动备份
+ * @method void setIsAutoBackup(boolean $IsAutoBackup) 设置是否开启cos自动备份
+ * @method string getBackupTime() 获取自动备份时间
+ * @method void setBackupTime(string $BackupTime) 设置自动备份时间
  */
 
 /**
- *RestartInstance请求参数结构体
+ *ES cos自动备份信息
  */
-class RestartInstanceRequest extends AbstractModel
+class CosBackup extends AbstractModel
 {
     /**
-     * @var string 要重启的实例ID
+     * @var boolean 是否开启cos自动备份
      */
-    public $InstanceId;
+    public $IsAutoBackup;
 
     /**
-     * @var boolean 是否强制重启
+     * @var string 自动备份时间
      */
-    public $ForceRestart;
+    public $BackupTime;
     /**
-     * @param string $InstanceId 要重启的实例ID
-     * @param boolean $ForceRestart 是否强制重启
+     * @param boolean $IsAutoBackup 是否开启cos自动备份
+     * @param string $BackupTime 自动备份时间
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class RestartInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("IsAutoBackup",$param) and $param["IsAutoBackup"] !== null) {
+            $this->IsAutoBackup = $param["IsAutoBackup"];
         }
 
-        if (array_key_exists("ForceRestart",$param) and $param["ForceRestart"] !== null) {
-            $this->ForceRestart = $param["ForceRestart"];
+        if (array_key_exists("BackupTime",$param) and $param["BackupTime"] !== null) {
+            $this->BackupTime = $param["BackupTime"];
         }
     }
 }

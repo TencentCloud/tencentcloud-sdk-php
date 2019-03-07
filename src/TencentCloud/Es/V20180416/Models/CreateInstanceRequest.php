@@ -82,6 +82,14 @@ CLOUD_SSD: SSD云硬盘
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券，1是，0否，默认不使用
  * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券
+ * @method boolean getEnableDedicatedMaster() 获取是否创建专用主节点
+ * @method void setEnableDedicatedMaster(boolean $EnableDedicatedMaster) 设置是否创建专用主节点
+ * @method integer getMasterNodeNum() 获取专用主节点个数
+ * @method void setMasterNodeNum(integer $MasterNodeNum) 设置专用主节点个数
+ * @method string getMasterNodeType() 获取专用主节点类型
+ * @method void setMasterNodeType(string $MasterNodeType) 设置专用主节点类型
+ * @method integer getMasterNodeDiskSize() 获取专用主节点磁盘大小
+ * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) 设置专用主节点磁盘大小
  */
 
 /**
@@ -184,6 +192,26 @@ CLOUD_SSD: SSD云硬盘
      * @var array 代金券ID列表，目前仅支持指定一张代金券
      */
     public $VoucherIds;
+
+    /**
+     * @var boolean 是否创建专用主节点
+     */
+    public $EnableDedicatedMaster;
+
+    /**
+     * @var integer 专用主节点个数
+     */
+    public $MasterNodeNum;
+
+    /**
+     * @var string 专用主节点类型
+     */
+    public $MasterNodeType;
+
+    /**
+     * @var integer 专用主节点磁盘大小
+     */
+    public $MasterNodeDiskSize;
     /**
      * @param string $Zone 可用区
      * @param integer $NodeNum 节点数量
@@ -217,6 +245,10 @@ CLOUD_SSD: SSD云硬盘
      * @param string $TimeUnit 计费时长单位，当前只支持“m”，表示月
      * @param integer $AutoVoucher 是否自动使用代金券，1是，0否，默认不使用
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券
+     * @param boolean $EnableDedicatedMaster 是否创建专用主节点
+     * @param integer $MasterNodeNum 专用主节点个数
+     * @param string $MasterNodeType 专用主节点类型
+     * @param integer $MasterNodeDiskSize 专用主节点磁盘大小
      */
     function __construct()
     {
@@ -292,6 +324,22 @@ CLOUD_SSD: SSD云硬盘
 
         if (array_key_exists("VoucherIds",$param) and $param["VoucherIds"] !== null) {
             $this->VoucherIds = $param["VoucherIds"];
+        }
+
+        if (array_key_exists("EnableDedicatedMaster",$param) and $param["EnableDedicatedMaster"] !== null) {
+            $this->EnableDedicatedMaster = $param["EnableDedicatedMaster"];
+        }
+
+        if (array_key_exists("MasterNodeNum",$param) and $param["MasterNodeNum"] !== null) {
+            $this->MasterNodeNum = $param["MasterNodeNum"];
+        }
+
+        if (array_key_exists("MasterNodeType",$param) and $param["MasterNodeType"] !== null) {
+            $this->MasterNodeType = $param["MasterNodeType"];
+        }
+
+        if (array_key_exists("MasterNodeDiskSize",$param) and $param["MasterNodeDiskSize"] !== null) {
+            $this->MasterNodeDiskSize = $param["MasterNodeDiskSize"];
         }
     }
 }

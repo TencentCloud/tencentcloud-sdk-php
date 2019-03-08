@@ -19,7 +19,9 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method array getTranscodeSet() 获取各规格的转码信息集合，每个元素代表一个规格的转码结果。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranscodeSet(array $TranscodeSet) 设置各规格的转码信息集合，每个元素代表一个规格的转码结果。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -29,10 +31,12 @@ class MediaTranscodeInfo extends AbstractModel
 {
     /**
      * @var array 各规格的转码信息集合，每个元素代表一个规格的转码结果。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeSet;
     /**
      * @param array $TranscodeSet 各规格的转码信息集合，每个元素代表一个规格的转码结果。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

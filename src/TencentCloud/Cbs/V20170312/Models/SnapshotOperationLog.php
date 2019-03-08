@@ -19,7 +19,9 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getOperator() 获取操作者的UIN。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperator(string $Operator) 设置操作者的UIN。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperation() 获取操作类型。取值范围：
 SNAP_OPERATION_DELETE：删除快照
 SNAP_OPERATION_ROLLBACK：回滚快照
@@ -59,6 +61,7 @@ class SnapshotOperationLog extends AbstractModel
 {
     /**
      * @var string 操作者的UIN。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operator;
 
@@ -98,6 +101,7 @@ PROCESSING :表示操作中。
     public $EndTime;
     /**
      * @param string $Operator 操作者的UIN。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Operation 操作类型。取值范围：
 SNAP_OPERATION_DELETE：删除快照
 SNAP_OPERATION_ROLLBACK：回滚快照

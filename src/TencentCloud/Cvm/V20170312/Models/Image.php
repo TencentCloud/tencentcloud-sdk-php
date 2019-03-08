@@ -43,9 +43,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getImageSource() 获取镜像来源
  * @method void setImageSource(string $ImageSource) 设置镜像来源
  * @method integer getSyncPercent() 获取同步百分比
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSyncPercent(integer $SyncPercent) 设置同步百分比
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsSupportCloudinit() 获取镜像是否支持cloud-init
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportCloudinit(boolean $IsSupportCloudinit) 设置镜像是否支持cloud-init
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -115,11 +119,13 @@ class Image extends AbstractModel
 
     /**
      * @var integer 同步百分比
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SyncPercent;
 
     /**
      * @var boolean 镜像是否支持cloud-init
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupportCloudinit;
     /**
@@ -136,7 +142,9 @@ class Image extends AbstractModel
      * @param string $ImageCreator 镜像创建者
      * @param string $ImageSource 镜像来源
      * @param integer $SyncPercent 同步百分比
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsSupportCloudinit 镜像是否支持cloud-init
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -41,11 +41,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getBeauty() 获取魅力[0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
  * @method void setBeauty(integer $Beauty) 设置魅力[0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
  * @method boolean getHat() 获取是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHat(boolean $Hat) 设置是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getMask() 获取是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMask(boolean $Mask) 设置是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method FaceHairAttributesInfo getHair() 获取头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHair(FaceHairAttributesInfo $Hair) 设置头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -99,16 +105,19 @@ class FaceAttributesInfo extends AbstractModel
 
     /**
      * @var boolean 是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Hat;
 
     /**
      * @var boolean 是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mask;
 
     /**
      * @var FaceHairAttributesInfo 头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Hair;
     /**
@@ -124,8 +133,11 @@ class FaceAttributesInfo extends AbstractModel
 建议：人脸入库选择[-20,20]的图片。
      * @param integer $Beauty 魅力[0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      * @param boolean $Hat 是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Mask 是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceHairAttributesInfo $Hair 头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceName(string $DeviceName) 设置设备名
  * @method integer getOnline() 获取设备是否在线，0不在线，1在线
  * @method void setOnline(integer $Online) 设置设备是否在线，0不在线，1在线
- * @method integer getLoginTime() 获取设备登陆时间
- * @method void setLoginTime(integer $LoginTime) 设置设备登陆时间
+ * @method integer getLoginTime() 获取设备登录时间
+ * @method void setLoginTime(integer $LoginTime) 设置设备登录时间
  * @method string getVersion() 获取设备固件版本
  * @method void setVersion(string $Version) 设置设备固件版本
  * @method integer getLastUpdateTime() 获取设备最后更新时间
@@ -68,7 +68,7 @@ class DescribeDeviceResponse extends AbstractModel
     public $Online;
 
     /**
-     * @var integer 设备登陆时间
+     * @var integer 设备登录时间
      */
     public $LoginTime;
 
@@ -139,7 +139,7 @@ class DescribeDeviceResponse extends AbstractModel
     /**
      * @param string $DeviceName 设备名
      * @param integer $Online 设备是否在线，0不在线，1在线
-     * @param integer $LoginTime 设备登陆时间
+     * @param integer $LoginTime 设备登录时间
      * @param string $Version 设备固件版本
      * @param integer $LastUpdateTime 设备最后更新时间
      * @param string $DeviceCert 设备证书

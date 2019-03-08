@@ -27,7 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getFlowId() 获取关联的流程 Id，可用于查询流程执行状态
  * @method void setFlowId(integer $FlowId) 设置关联的流程 Id，可用于查询流程执行状态
  * @method array getInstanceIds() 获取只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceIds(array $InstanceIds) 设置只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPayMode() 获取付费模式，0后付费/1预付费
  * @method void setPayMode(integer $PayMode) 设置付费模式，0后付费/1预付费
  */
@@ -59,6 +61,7 @@ class Deal extends AbstractModel
 
     /**
      * @var array 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceIds;
 
@@ -72,6 +75,7 @@ class Deal extends AbstractModel
      * @param integer $Count 商品数量
      * @param integer $FlowId 关联的流程 Id，可用于查询流程执行状态
      * @param array $InstanceIds 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PayMode 付费模式，0后付费/1预付费
      */
     function __construct()

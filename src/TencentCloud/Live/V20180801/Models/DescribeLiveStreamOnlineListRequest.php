@@ -25,10 +25,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPageNum() 获取取得第几页，默认1。
  * @method void setPageNum(integer $PageNum) 设置取得第几页，默认1。
  * @method integer getPageSize() 获取每页大小，最大100。 
-取值：1~100之前的任意整数。
+取值：10~100之间的任意整数。
 默认值：10。
  * @method void setPageSize(integer $PageSize) 设置每页大小，最大100。 
-取值：1~100之前的任意整数。
+取值：10~100之间的任意整数。
 默认值：10。
  * @method string getStreamName() 获取流名称，精确查询。
  * @method void setStreamName(string $StreamName) 设置流名称，精确查询。
@@ -56,7 +56,7 @@ class DescribeLiveStreamOnlineListRequest extends AbstractModel
 
     /**
      * @var integer 每页大小，最大100。 
-取值：1~100之前的任意整数。
+取值：10~100之间的任意整数。
 默认值：10。
      */
     public $PageSize;
@@ -70,7 +70,7 @@ class DescribeLiveStreamOnlineListRequest extends AbstractModel
      * @param string $AppName 应用名称。
      * @param integer $PageNum 取得第几页，默认1。
      * @param integer $PageSize 每页大小，最大100。 
-取值：1~100之前的任意整数。
+取值：10~100之间的任意整数。
 默认值：10。
      * @param string $StreamName 流名称，精确查询。
      */

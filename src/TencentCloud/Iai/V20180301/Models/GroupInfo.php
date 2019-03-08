@@ -23,9 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getGroupId() 获取人员库ID
  * @method void setGroupId(string $GroupId) 设置人员库ID
  * @method array getGroupExDescriptions() 获取人员库自定义描述字段
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupExDescriptions(array $GroupExDescriptions) 设置人员库自定义描述字段
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTag() 获取人员库信息备注
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(string $Tag) 设置人员库信息备注
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -45,18 +49,22 @@ class GroupInfo extends AbstractModel
 
     /**
      * @var array 人员库自定义描述字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupExDescriptions;
 
     /**
      * @var string 人员库信息备注
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
     /**
      * @param string $GroupName 人员库名称
      * @param string $GroupId 人员库ID
      * @param array $GroupExDescriptions 人员库自定义描述字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tag 人员库信息备注
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

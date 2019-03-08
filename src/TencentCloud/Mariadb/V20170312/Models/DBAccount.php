@@ -31,7 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getReadOnly() 获取只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
  * @method void setReadOnly(integer $ReadOnly) 设置只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
  * @method integer getDelayThresh() 获取该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDelayThresh(integer $DelayThresh) 设置该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -71,6 +73,7 @@ class DBAccount extends AbstractModel
 
     /**
      * @var integer 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DelayThresh;
     /**
@@ -81,6 +84,7 @@ class DBAccount extends AbstractModel
      * @param string $UpdateTime 最后更新时间
      * @param integer $ReadOnly 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      * @param integer $DelayThresh 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -27,7 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getNetworkCard() 获取网卡类型，例如：25代表25G网卡
  * @method void setNetworkCard(integer $NetworkCard) 设置网卡类型，例如：25代表25G网卡
  * @method Externals getExternals() 获取扩展属性。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExternals(Externals $Externals) 设置扩展属性。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCpu() 获取实例的CPU核数，单位：核。
  * @method void setCpu(integer $Cpu) 设置实例的CPU核数，单位：核。
  * @method integer getMemory() 获取实例内存容量，单位：`GB`。
@@ -71,6 +73,7 @@ class InstanceTypeQuotaItem extends AbstractModel
 
     /**
      * @var Externals 扩展属性。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Externals;
 
@@ -114,6 +117,7 @@ class InstanceTypeQuotaItem extends AbstractModel
      * @param string $InstanceChargeType 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付费，即只对CDH计费，不对CDH上的实例计费。
      * @param integer $NetworkCard 网卡类型，例如：25代表25G网卡
      * @param Externals $Externals 扩展属性。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cpu 实例的CPU核数，单位：核。
      * @param integer $Memory 实例内存容量，单位：`GB`。
      * @param string $InstanceFamily 实例机型系列。

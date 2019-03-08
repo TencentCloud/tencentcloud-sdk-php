@@ -39,7 +39,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaceAttributesInfo(FaceAttributesInfo $FaceAttributesInfo) 设置人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
 魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
  * @method FaceQualityInfo getFaceQualityInfo() 获取人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFaceQualityInfo(FaceQualityInfo $FaceQualityInfo) 设置人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -79,6 +81,7 @@ class FaceInfo extends AbstractModel
 
     /**
      * @var FaceQualityInfo 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FaceQualityInfo;
     /**
@@ -93,6 +96,7 @@ class FaceInfo extends AbstractModel
      * @param FaceAttributesInfo $FaceAttributesInfo 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
 魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
      * @param FaceQualityInfo $FaceQualityInfo 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -48,6 +48,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoraDevEui(string $LoraDevEui) 设置LoRa设备的dev eui
  * @method integer getLoraMoteType() 获取LoRa设备的Mote type
  * @method void setLoraMoteType(integer $LoraMoteType) 设置LoRa设备的Mote type
+ * @method integer getFirstOnlineTime() 获取首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFirstOnlineTime(integer $FirstOnlineTime) 设置首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLastOfflineTime() 获取最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastOfflineTime(integer $LastOfflineTime) 设置最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTime() 获取设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(integer $CreateTime) 设置设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLogLevel() 获取设备日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogLevel(integer $LogLevel) 设置设备日志级别
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -129,6 +145,30 @@ class DeviceInfo extends AbstractModel
      * @var integer LoRa设备的Mote type
      */
     public $LoraMoteType;
+
+    /**
+     * @var integer 首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FirstOnlineTime;
+
+    /**
+     * @var integer 最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastOfflineTime;
+
+    /**
+     * @var integer 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
+     * @var integer 设备日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogLevel;
     /**
      * @param string $DeviceName 设备名
      * @param integer $Online 设备是否在线，0不在线，1在线
@@ -145,6 +185,14 @@ class DeviceInfo extends AbstractModel
      * @param integer $LastUpdateTime 设备最后更新时间
      * @param string $LoraDevEui LoRa设备的dev eui
      * @param integer $LoraMoteType LoRa设备的Mote type
+     * @param integer $FirstOnlineTime 首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LastOfflineTime 最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTime 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LogLevel 设备日志级别
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -221,6 +269,22 @@ class DeviceInfo extends AbstractModel
 
         if (array_key_exists("LoraMoteType",$param) and $param["LoraMoteType"] !== null) {
             $this->LoraMoteType = $param["LoraMoteType"];
+        }
+
+        if (array_key_exists("FirstOnlineTime",$param) and $param["FirstOnlineTime"] !== null) {
+            $this->FirstOnlineTime = $param["FirstOnlineTime"];
+        }
+
+        if (array_key_exists("LastOfflineTime",$param) and $param["LastOfflineTime"] !== null) {
+            $this->LastOfflineTime = $param["LastOfflineTime"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("LogLevel",$param) and $param["LogLevel"] !== null) {
+            $this->LogLevel = $param["LogLevel"];
         }
     }
 }

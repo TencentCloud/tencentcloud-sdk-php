@@ -19,7 +19,9 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method array getCoverSet() 获取智能封面列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoverSet(array $CoverSet) 设置智能封面列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -29,10 +31,12 @@ class AiAnalysisTaskCoverOutput extends AbstractModel
 {
     /**
      * @var array 智能封面列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CoverSet;
     /**
      * @param array $CoverSet 智能封面列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -35,22 +35,22 @@ flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
 fluxHitRate：流量命中率，单位为 %
-statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 个
-2XX：返回 2XX 状态码汇总及各 2 开头状态码数据，单位为 个
-3XX：返回 3XX 状态码汇总及各 3 开头状态码数据，单位为 个
-4XX：返回 4XX 状态码汇总及各 4 开头状态码数据，单位为 个
-5XX：返回 5XX 状态码汇总及各 5 开头状态码数据，单位为 个
+statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 个
+2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 个
+3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 个
+4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 个
+5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 个
 支持指定具体状态码查询，若未产生过，则返回为空
  * @method void setMetric(string $Metric) 设置指定查询指标，支持的类型有：
 flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
 fluxHitRate：流量命中率，单位为 %
-statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 个
-2XX：返回 2XX 状态码汇总及各 2 开头状态码数据，单位为 个
-3XX：返回 3XX 状态码汇总及各 3 开头状态码数据，单位为 个
-4XX：返回 4XX 状态码汇总及各 4 开头状态码数据，单位为 个
-5XX：返回 5XX 状态码汇总及各 5 开头状态码数据，单位为 个
+statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 个
+2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 个
+3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 个
+4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 个
+5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 个
 支持指定具体状态码查询，若未产生过，则返回为空
  * @method array getDomains() 获取指定查询域名列表
 最多可一次性查询 30 个加速域名明细
@@ -92,6 +92,14 @@ http：指定查询 HTTP 对应指标
 https：指定查询 HTTPS 对应指标
  * @method string getDataSource() 获取指定数据源查询，白名单功能
  * @method void setDataSource(string $DataSource) 设置指定数据源查询，白名单功能
+ * @method string getIpProtocol() 获取指定IP协议查询，不填充表示查询所有协议
+all：所有协议
+ipv4：指定查询 ipv4对应指标
+ipv6：指定查询 ipv6 对应指标
+ * @method void setIpProtocol(string $IpProtocol) 设置指定IP协议查询，不填充表示查询所有协议
+all：所有协议
+ipv4：指定查询 ipv4对应指标
+ipv6：指定查询 ipv6 对应指标
  */
 
 /**
@@ -119,11 +127,11 @@ flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
 fluxHitRate：流量命中率，单位为 %
-statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 个
-2XX：返回 2XX 状态码汇总及各 2 开头状态码数据，单位为 个
-3XX：返回 3XX 状态码汇总及各 3 开头状态码数据，单位为 个
-4XX：返回 4XX 状态码汇总及各 4 开头状态码数据，单位为 个
-5XX：返回 5XX 状态码汇总及各 5 开头状态码数据，单位为 个
+statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 个
+2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 个
+3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 个
+4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 个
+5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 个
 支持指定具体状态码查询，若未产生过，则返回为空
      */
     public $Metric;
@@ -179,6 +187,14 @@ https：指定查询 HTTPS 对应指标
      * @var string 指定数据源查询，白名单功能
      */
     public $DataSource;
+
+    /**
+     * @var string 指定IP协议查询，不填充表示查询所有协议
+all：所有协议
+ipv4：指定查询 ipv4对应指标
+ipv6：指定查询 ipv6 对应指标
+     */
+    public $IpProtocol;
     /**
      * @param string $StartTime 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
 根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:00 在按 1 小时的时间粒度查询时，返回的第一个数据对应时间点为 2018-09-04 10:00:00
@@ -191,11 +207,11 @@ flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
 fluxHitRate：流量命中率，单位为 %
-statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 个
-2XX：返回 2XX 状态码汇总及各 2 开头状态码数据，单位为 个
-3XX：返回 3XX 状态码汇总及各 3 开头状态码数据，单位为 个
-4XX：返回 4XX 状态码汇总及各 4 开头状态码数据，单位为 个
-5XX：返回 5XX 状态码汇总及各 5 开头状态码数据，单位为 个
+statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 个
+2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 个
+3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 个
+4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 个
+5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 个
 支持指定具体状态码查询，若未产生过，则返回为空
      * @param array $Domains 指定查询域名列表
 最多可一次性查询 30 个加速域名明细
@@ -217,6 +233,10 @@ all：所有协议
 http：指定查询 HTTP 对应指标
 https：指定查询 HTTPS 对应指标
      * @param string $DataSource 指定数据源查询，白名单功能
+     * @param string $IpProtocol 指定IP协议查询，不填充表示查询所有协议
+all：所有协议
+ipv4：指定查询 ipv4对应指标
+ipv6：指定查询 ipv6 对应指标
      */
     function __construct()
     {
@@ -272,6 +292,10 @@ https：指定查询 HTTPS 对应指标
 
         if (array_key_exists("DataSource",$param) and $param["DataSource"] !== null) {
             $this->DataSource = $param["DataSource"];
+        }
+
+        if (array_key_exists("IpProtocol",$param) and $param["IpProtocol"] !== null) {
+            $this->IpProtocol = $param["IpProtocol"];
         }
     }
 }

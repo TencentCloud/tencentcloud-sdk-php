@@ -19,7 +19,9 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method array getSampleSnapshotSet() 获取特定规格的采样截图信息集合，每个元素代表一套相同规格的采样截图。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSampleSnapshotSet(array $SampleSnapshotSet) 设置特定规格的采样截图信息集合，每个元素代表一套相同规格的采样截图。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -29,10 +31,12 @@ class MediaSampleSnapshotInfo extends AbstractModel
 {
     /**
      * @var array 特定规格的采样截图信息集合，每个元素代表一套相同规格的采样截图。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SampleSnapshotSet;
     /**
      * @param array $SampleSnapshotSet 特定规格的采样截图信息集合，每个元素代表一套相同规格的采样截图。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

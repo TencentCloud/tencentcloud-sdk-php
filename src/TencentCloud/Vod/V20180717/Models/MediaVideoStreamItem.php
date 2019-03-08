@@ -19,15 +19,25 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method integer getBitrate() 获取视频流的码率，单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBitrate(integer $Bitrate) 设置视频流的码率，单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHeight() 获取视频流的高度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeight(integer $Height) 设置视频流的高度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWidth() 获取视频流的宽度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWidth(integer $Width) 设置视频流的宽度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCodec() 获取视频流的编码格式，例如 h264。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCodec(string $Codec) 设置视频流的编码格式，例如 h264。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFps() 获取帧率，单位：hz。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFps(integer $Fps) 设置帧率，单位：hz。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -37,34 +47,44 @@ class MediaVideoStreamItem extends AbstractModel
 {
     /**
      * @var integer 视频流的码率，单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bitrate;
 
     /**
      * @var integer 视频流的高度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
 
     /**
      * @var integer 视频流的宽度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
      * @var string 视频流的编码格式，例如 h264。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Codec;
 
     /**
      * @var integer 帧率，单位：hz。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Fps;
     /**
      * @param integer $Bitrate 视频流的码率，单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Height 视频流的高度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Width 视频流的宽度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Codec 视频流的编码格式，例如 h264。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Fps 帧率，单位：hz。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

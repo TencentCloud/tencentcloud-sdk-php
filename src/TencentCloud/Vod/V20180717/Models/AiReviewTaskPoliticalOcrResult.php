@@ -21,13 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method integer getErrCode() 获取错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrCode(integer $ErrCode) 设置错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method AiReviewPoliticalOcrTaskInput getInput() 获取内容审核 Ocr 文字鉴政任务输入。
  * @method void setInput(AiReviewPoliticalOcrTaskInput $Input) 设置内容审核 Ocr 文字鉴政任务输入。
  * @method AiReviewPoliticalOcrTaskOutput getOutput() 获取内容审核 Ocr 文字鉴政任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(AiReviewPoliticalOcrTaskOutput $Output) 设置内容审核 Ocr 文字鉴政任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -42,11 +48,13 @@ class AiReviewTaskPoliticalOcrResult extends AbstractModel
 
     /**
      * @var integer 错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
 
     /**
      * @var string 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
@@ -57,14 +65,18 @@ class AiReviewTaskPoliticalOcrResult extends AbstractModel
 
     /**
      * @var AiReviewPoliticalOcrTaskOutput 内容审核 Ocr 文字鉴政任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
     /**
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param integer $ErrCode 错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AiReviewPoliticalOcrTaskInput $Input 内容审核 Ocr 文字鉴政任务输入。
      * @param AiReviewPoliticalOcrTaskOutput $Output 内容审核 Ocr 文字鉴政任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

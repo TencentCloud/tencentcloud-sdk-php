@@ -21,13 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method integer getErrCode() 获取错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrCode(integer $ErrCode) 设置错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method SampleSnapshotTaskInput getInput() 获取对视频做采样截图任务输入。
  * @method void setInput(SampleSnapshotTaskInput $Input) 设置对视频做采样截图任务输入。
  * @method MediaSampleSnapshotItem getOutput() 获取对视频做采样截图任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(MediaSampleSnapshotItem $Output) 设置对视频做采样截图任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -42,11 +48,13 @@ class MediaProcessTaskSampleSnapshotResult extends AbstractModel
 
     /**
      * @var integer 错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
 
     /**
      * @var string 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
@@ -57,14 +65,18 @@ class MediaProcessTaskSampleSnapshotResult extends AbstractModel
 
     /**
      * @var MediaSampleSnapshotItem 对视频做采样截图任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
     /**
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param integer $ErrCode 错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleSnapshotTaskInput $Input 对视频做采样截图任务输入。
      * @param MediaSampleSnapshotItem $Output 对视频做采样截图任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

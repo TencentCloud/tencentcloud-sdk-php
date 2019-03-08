@@ -19,25 +19,45 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getUrl() 获取转动图的文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置转动图的文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDefinition() 获取转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/11701#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefinition(integer $Definition) 设置转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/11701#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainer() 获取动图格式，如 gif。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainer(string $Container) 设置动图格式，如 gif。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHeight() 获取动图的高度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeight(integer $Height) 设置动图的高度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWidth() 获取动图的宽度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWidth(integer $Width) 设置动图的宽度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBitrate() 获取动图码率，单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBitrate(integer $Bitrate) 设置动图码率，单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSize() 获取动图大小，单位：字节。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(integer $Size) 设置动图大小，单位：字节。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMd5() 获取动图的md5值。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMd5(string $Md5) 设置动图的md5值。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getStartTimeOffset() 获取动图在视频中的起始时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置动图在视频中的起始时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getEndTimeOffset() 获取动图在视频中的结束时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置动图在视频中的结束时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -47,64 +67,84 @@ class MediaAnimatedGraphicsItem extends AbstractModel
 {
     /**
      * @var string 转动图的文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
      * @var integer 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/11701#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Definition;
 
     /**
      * @var string 动图格式，如 gif。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Container;
 
     /**
      * @var integer 动图的高度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
 
     /**
      * @var integer 动图的宽度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
      * @var integer 动图码率，单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bitrate;
 
     /**
      * @var integer 动图大小，单位：字节。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
     /**
      * @var string 动图的md5值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Md5;
 
     /**
      * @var float 动图在视频中的起始时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTimeOffset;
 
     /**
      * @var float 动图在视频中的结束时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTimeOffset;
     /**
      * @param string $Url 转动图的文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Definition 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/11701#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Container 动图格式，如 gif。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Height 动图的高度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Width 动图的宽度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Bitrate 动图码率，单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Size 动图大小，单位：字节。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Md5 动图的md5值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $StartTimeOffset 动图在视频中的起始时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $EndTimeOffset 动图在视频中的结束时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

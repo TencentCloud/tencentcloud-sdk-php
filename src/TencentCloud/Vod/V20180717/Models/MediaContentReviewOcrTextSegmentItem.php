@@ -19,23 +19,35 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method float getStartTimeOffset() 获取嫌疑片段起始的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置嫌疑片段起始的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getEndTimeOffset() 获取嫌疑片段结束的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置嫌疑片段结束的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getConfidence() 获取嫌疑片段置信度。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfidence(float $Confidence) 设置嫌疑片段置信度。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestion() 获取嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestion(string $Suggestion) 设置嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKeywordSet() 获取嫌疑关键词列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeywordSet(array $KeywordSet) 设置嫌疑关键词列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAreaCoordSet() 获取嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAreaCoordSet(array $AreaCoordSet) 设置嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -45,16 +57,19 @@ class MediaContentReviewOcrTextSegmentItem extends AbstractModel
 {
     /**
      * @var float 嫌疑片段起始的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTimeOffset;
 
     /**
      * @var float 嫌疑片段结束的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTimeOffset;
 
     /**
      * @var float 嫌疑片段置信度。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Confidence;
 
@@ -63,28 +78,37 @@ class MediaContentReviewOcrTextSegmentItem extends AbstractModel
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
     /**
      * @var array 嫌疑关键词列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeywordSet;
 
     /**
      * @var array 嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AreaCoordSet;
     /**
      * @param float $StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Confidence 嫌疑片段置信度。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Suggestion 嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $KeywordSet 嫌疑关键词列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AreaCoordSet 嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

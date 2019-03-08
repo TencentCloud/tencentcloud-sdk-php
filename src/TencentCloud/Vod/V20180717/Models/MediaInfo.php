@@ -19,21 +19,37 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method MediaBasicInfo getBasicInfo() 获取基础信息。包括视频名称、大小、时长、封面图片等。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBasicInfo(MediaBasicInfo $BasicInfo) 设置基础信息。包括视频名称、大小、时长、封面图片等。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaMetaData getMetaData() 获取元信息。包括视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetaData(MediaMetaData $MetaData) 设置元信息。包括视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaTranscodeInfo getTranscodeInfo() 获取转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranscodeInfo(MediaTranscodeInfo $TranscodeInfo) 设置转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaAnimatedGraphicsInfo getAnimatedGraphicsInfo() 获取转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnimatedGraphicsInfo(MediaAnimatedGraphicsInfo $AnimatedGraphicsInfo) 设置转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaSampleSnapshotInfo getSampleSnapshotInfo() 获取采样截图信息。对视频采样截图后，相关截图信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSampleSnapshotInfo(MediaSampleSnapshotInfo $SampleSnapshotInfo) 设置采样截图信息。对视频采样截图后，相关截图信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaImageSpriteInfo getImageSpriteInfo() 获取雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageSpriteInfo(MediaImageSpriteInfo $ImageSpriteInfo) 设置雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaSnapshotByTimeOffsetInfo getSnapshotByTimeOffsetInfo() 获取指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotByTimeOffsetInfo(MediaSnapshotByTimeOffsetInfo $SnapshotByTimeOffsetInfo) 设置指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaKeyFrameDescInfo getKeyFrameDescInfo() 获取视频打点信息。对视频设置的各个打点信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyFrameDescInfo(MediaKeyFrameDescInfo $KeyFrameDescInfo) 设置视频打点信息。对视频设置的各个打点信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取媒体文件唯一标识 ID。
  * @method void setFileId(string $FileId) 设置媒体文件唯一标识 ID。
  */
@@ -45,41 +61,49 @@ class MediaInfo extends AbstractModel
 {
     /**
      * @var MediaBasicInfo 基础信息。包括视频名称、大小、时长、封面图片等。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BasicInfo;
 
     /**
      * @var MediaMetaData 元信息。包括视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetaData;
 
     /**
      * @var MediaTranscodeInfo 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeInfo;
 
     /**
      * @var MediaAnimatedGraphicsInfo 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnimatedGraphicsInfo;
 
     /**
      * @var MediaSampleSnapshotInfo 采样截图信息。对视频采样截图后，相关截图信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SampleSnapshotInfo;
 
     /**
      * @var MediaImageSpriteInfo 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageSpriteInfo;
 
     /**
      * @var MediaSnapshotByTimeOffsetInfo 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotByTimeOffsetInfo;
 
     /**
      * @var MediaKeyFrameDescInfo 视频打点信息。对视频设置的各个打点信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyFrameDescInfo;
 
@@ -89,13 +113,21 @@ class MediaInfo extends AbstractModel
     public $FileId;
     /**
      * @param MediaBasicInfo $BasicInfo 基础信息。包括视频名称、大小、时长、封面图片等。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaMetaData $MetaData 元信息。包括视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaTranscodeInfo $TranscodeInfo 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaAnimatedGraphicsInfo $AnimatedGraphicsInfo 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaSampleSnapshotInfo $SampleSnapshotInfo 采样截图信息。对视频采样截图后，相关截图信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaImageSpriteInfo $ImageSpriteInfo 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaSnapshotByTimeOffsetInfo $SnapshotByTimeOffsetInfo 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaKeyFrameDescInfo $KeyFrameDescInfo 视频打点信息。对视频设置的各个打点信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 媒体文件唯一标识 ID。
      */
     function __construct()

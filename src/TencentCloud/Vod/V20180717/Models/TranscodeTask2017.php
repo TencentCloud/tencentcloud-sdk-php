@@ -23,21 +23,35 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getErrCode() 获取错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrCode(integer $ErrCode) 设置错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取被转码文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(string $FileId) 设置被转码文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileName() 获取被转码文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置被转码文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDuration() 获取视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(integer $Duration) 设置视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCoverUrl() 获取封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoverUrl(string $CoverUrl) 设置封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPlayInfoSet() 获取视频转码后生成的播放信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlayInfoSet(array $PlayInfoSet) 设置视频转码后生成的播放信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -54,36 +68,43 @@ class TranscodeTask2017 extends AbstractModel
      * @var integer 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
 
     /**
      * @var string 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var string 被转码文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
      * @var string 被转码文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
 
     /**
      * @var integer 视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
      * @var string 封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CoverUrl;
 
     /**
      * @var array 视频转码后生成的播放信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlayInfoSet;
     /**
@@ -91,12 +112,19 @@ class TranscodeTask2017 extends AbstractModel
      * @param integer $ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 被转码文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 被转码文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Duration 视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CoverUrl 封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PlayInfoSet 视频转码后生成的播放信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

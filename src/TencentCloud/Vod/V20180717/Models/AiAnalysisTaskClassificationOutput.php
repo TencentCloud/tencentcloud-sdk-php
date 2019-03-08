@@ -19,7 +19,9 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method array getClassificationSet() 获取视频智能分类列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClassificationSet(array $ClassificationSet) 设置视频智能分类列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -29,10 +31,12 @@ class AiAnalysisTaskClassificationOutput extends AbstractModel
 {
     /**
      * @var array 视频智能分类列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClassificationSet;
     /**
      * @param array $ClassificationSet 视频智能分类列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

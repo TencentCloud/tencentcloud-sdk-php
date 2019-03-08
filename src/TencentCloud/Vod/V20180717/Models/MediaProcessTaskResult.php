@@ -33,17 +33,29 @@ use TencentCloud\Common\AbstractModel;
 <li>ImageSprites：雪碧图</li>
 <li>CoverBySnapshot：截图做封面</li>
  * @method MediaProcessTaskTranscodeResult getTranscodeTask() 获取视频转码任务的查询结果，当任务类型为 Transcode 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranscodeTask(MediaProcessTaskTranscodeResult $TranscodeTask) 设置视频转码任务的查询结果，当任务类型为 Transcode 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaProcessTaskAnimatedGraphicResult getAnimatedGraphicTask() 获取视频转动图任务的查询结果，当任务类型为 AnimatedGraphics 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnimatedGraphicTask(MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask) 设置视频转动图任务的查询结果，当任务类型为 AnimatedGraphics 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() 获取对视频按时间点截图任务的查询结果，当任务类型为 SnapshotByTimeOffset 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask) 设置对视频按时间点截图任务的查询结果，当任务类型为 SnapshotByTimeOffset 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaProcessTaskSampleSnapshotResult getSampleSnapshotTask() 获取对视频采样截图任务的查询结果，当任务类型为 SampleSnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSampleSnapshotTask(MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask) 设置对视频采样截图任务的查询结果，当任务类型为 SampleSnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaProcessTaskImageSpriteResult getImageSpriteTask() 获取对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageSpriteTask(MediaProcessTaskImageSpriteResult $ImageSpriteTask) 设置对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaProcessTaskCoverBySnapshotResult getCoverBySnapshotTask() 获取对视频截图做封面任务的查询结果，当任务类型为 CoverBySnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoverBySnapshotTask(MediaProcessTaskCoverBySnapshotResult $CoverBySnapshotTask) 设置对视频截图做封面任务的查询结果，当任务类型为 CoverBySnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -64,31 +76,37 @@ class MediaProcessTaskResult extends AbstractModel
 
     /**
      * @var MediaProcessTaskTranscodeResult 视频转码任务的查询结果，当任务类型为 Transcode 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeTask;
 
     /**
      * @var MediaProcessTaskAnimatedGraphicResult 视频转动图任务的查询结果，当任务类型为 AnimatedGraphics 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnimatedGraphicTask;
 
     /**
      * @var MediaProcessTaskSnapshotByTimeOffsetResult 对视频按时间点截图任务的查询结果，当任务类型为 SnapshotByTimeOffset 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotByTimeOffsetTask;
 
     /**
      * @var MediaProcessTaskSampleSnapshotResult 对视频采样截图任务的查询结果，当任务类型为 SampleSnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SampleSnapshotTask;
 
     /**
      * @var MediaProcessTaskImageSpriteResult 对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageSpriteTask;
 
     /**
      * @var MediaProcessTaskCoverBySnapshotResult 对视频截图做封面任务的查询结果，当任务类型为 CoverBySnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CoverBySnapshotTask;
     /**
@@ -100,11 +118,17 @@ class MediaProcessTaskResult extends AbstractModel
 <li>ImageSprites：雪碧图</li>
 <li>CoverBySnapshot：截图做封面</li>
      * @param MediaProcessTaskTranscodeResult $TranscodeTask 视频转码任务的查询结果，当任务类型为 Transcode 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask 视频转动图任务的查询结果，当任务类型为 AnimatedGraphics 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask 对视频按时间点截图任务的查询结果，当任务类型为 SnapshotByTimeOffset 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask 对视频采样截图任务的查询结果，当任务类型为 SampleSnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaProcessTaskImageSpriteResult $ImageSpriteTask 对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaProcessTaskCoverBySnapshotResult $CoverBySnapshotTask 对视频截图做封面任务的查询结果，当任务类型为 CoverBySnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

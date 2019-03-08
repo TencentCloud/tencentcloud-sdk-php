@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotNotifyUrl(string $SnapshotNotifyUrl) 设置截图回调URL。
  * @method string getPornCensorshipNotifyUrl() 获取鉴黄回调URL。
  * @method void setPornCensorshipNotifyUrl(string $PornCensorshipNotifyUrl) 设置鉴黄回调URL。
+ * @method string getCallbackKey() 获取回调key，回调URL公用，鉴权回调说明详见回调格式文档
+ * @method void setCallbackKey(string $CallbackKey) 设置回调key，回调URL公用，鉴权回调说明详见回调格式文档
  */
 
 /**
@@ -80,6 +82,11 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
      * @var string 鉴黄回调URL。
      */
     public $PornCensorshipNotifyUrl;
+
+    /**
+     * @var string 回调key，回调URL公用，鉴权回调说明详见回调格式文档
+     */
+    public $CallbackKey;
     /**
      * @param integer $TemplateId 模板Id。
      * @param string $TemplateName 模板名称。
@@ -89,6 +96,7 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
      * @param string $RecordNotifyUrl 录制回调URL。
      * @param string $SnapshotNotifyUrl 截图回调URL。
      * @param string $PornCensorshipNotifyUrl 鉴黄回调URL。
+     * @param string $CallbackKey 回调key，回调URL公用，鉴权回调说明详见回调格式文档
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
 
         if (array_key_exists("PornCensorshipNotifyUrl",$param) and $param["PornCensorshipNotifyUrl"] !== null) {
             $this->PornCensorshipNotifyUrl = $param["PornCensorshipNotifyUrl"];
+        }
+
+        if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
+            $this->CallbackKey = $param["CallbackKey"];
         }
     }
 }

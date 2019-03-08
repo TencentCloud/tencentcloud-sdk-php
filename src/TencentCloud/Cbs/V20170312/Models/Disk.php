@@ -53,27 +53,49 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getEncrypt() 获取云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
  * @method void setEncrypt(boolean $Encrypt) 设置云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
  * @method boolean getAutoRenewFlagError() 获取云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置<br><li>false：云盘自动续费标识正常。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenewFlagError(boolean $AutoRenewFlagError) 设置云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置<br><li>false：云盘自动续费标识正常。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRenewFlag() 获取自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeadlineError() 获取在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeadlineError(boolean $DeadlineError) 设置在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsReturnable() 获取判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还<br><li>false:不支持主动退还。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsReturnable(boolean $IsReturnable) 设置判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还<br><li>false:不支持主动退还。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReturnFailCode() 获取预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReturnFailCode(integer $ReturnFailCode) 设置预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAutoSnapshotPolicyIds() 获取云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoSnapshotPolicyIds(array $AutoSnapshotPolicyIds) 设置云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取与云盘绑定的标签，云盘未绑定标签则取值为空。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置与云盘绑定的标签，云盘未绑定标签则取值为空。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeleteWithInstance() 获取云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDifferDaysOfDeadline() 获取当前时间距离盘到期的天数（仅对预付费盘有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDifferDaysOfDeadline(integer $DifferDaysOfDeadline) 设置当前时间距离盘到期的天数（仅对预付费盘有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getMigrating() 获取云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中<br><li>true:表示云盘已发起类型变更，正处于迁移中。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMigrating(boolean $Migrating) 设置云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中<br><li>true:表示云盘已发起类型变更，正处于迁移中。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMigratePercent() 获取云盘类型变更的迁移进度，取值0到100。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMigratePercent(integer $MigratePercent) 设置云盘类型变更的迁移进度，取值0到100。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -168,56 +190,67 @@ class Disk extends AbstractModel
 
     /**
      * @var boolean 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置<br><li>false：云盘自动续费标识正常。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoRenewFlagError;
 
     /**
      * @var string 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewFlag;
 
     /**
      * @var boolean 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeadlineError;
 
     /**
      * @var boolean 判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还<br><li>false:不支持主动退还。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsReturnable;
 
     /**
      * @var integer 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReturnFailCode;
 
     /**
      * @var array 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoSnapshotPolicyIds;
 
     /**
      * @var array 与云盘绑定的标签，云盘未绑定标签则取值为空。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var boolean 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeleteWithInstance;
 
     /**
      * @var integer 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DifferDaysOfDeadline;
 
     /**
      * @var boolean 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中<br><li>true:表示云盘已发起类型变更，正处于迁移中。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Migrating;
 
     /**
      * @var integer 云盘类型变更的迁移进度，取值0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MigratePercent;
     /**
@@ -239,16 +272,27 @@ class Disk extends AbstractModel
      * @param integer $RollbackPercent 云盘快照回滚的进度。
      * @param boolean $Encrypt 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
      * @param boolean $AutoRenewFlagError 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置<br><li>false：云盘自动续费标识正常。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RenewFlag 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeadlineError 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsReturnable 判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还<br><li>false:不支持主动退还。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReturnFailCode 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AutoSnapshotPolicyIds 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 与云盘绑定的标签，云盘未绑定标签则取值为空。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeleteWithInstance 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DifferDaysOfDeadline 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Migrating 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中<br><li>true:表示云盘已发起类型变更，正处于迁移中。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MigratePercent 云盘类型变更的迁移进度，取值0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

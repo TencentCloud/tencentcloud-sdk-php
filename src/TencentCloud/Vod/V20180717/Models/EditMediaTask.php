@@ -23,23 +23,35 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getErrCode() 获取错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrCode(integer $ErrCode) 设置错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method EditMediaTaskInput getInput() 获取视频编辑任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInput(EditMediaTaskInput $Input) 设置视频编辑任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method EditMediaTaskOutput getOutput() 获取视频编辑任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(EditMediaTaskOutput $Output) 设置视频编辑任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProcedureTaskId() 获取若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcedureTaskId(string $ProcedureTaskId) 设置若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -56,6 +68,7 @@ class EditMediaTask extends AbstractModel
      * @var string 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -63,26 +76,31 @@ class EditMediaTask extends AbstractModel
      * @var integer 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
 
     /**
      * @var string 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var EditMediaTaskInput 视频编辑任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Input;
 
     /**
      * @var EditMediaTaskOutput 视频编辑任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
     /**
      * @var string 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProcedureTaskId;
     /**
@@ -90,13 +108,19 @@ class EditMediaTask extends AbstractModel
      * @param string $Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EditMediaTaskInput $Input 视频编辑任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EditMediaTaskOutput $Output 视频编辑任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProcedureTaskId 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

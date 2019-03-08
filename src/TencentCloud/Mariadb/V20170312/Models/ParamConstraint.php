@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEnum() 获取约束类型为enum时的可选值列表
  * @method void setEnum(string $Enum) 设置约束类型为enum时的可选值列表
  * @method ConstraintRange getRange() 获取约束类型为section时的范围
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRange(ConstraintRange $Range) 设置约束类型为section时的范围
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getString() 获取约束类型为string时的可选值列表
  * @method void setString(string $String) 设置约束类型为string时的可选值列表
  */
@@ -45,6 +47,7 @@ class ParamConstraint extends AbstractModel
 
     /**
      * @var ConstraintRange 约束类型为section时的范围
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Range;
 
@@ -56,6 +59,7 @@ class ParamConstraint extends AbstractModel
      * @param string $Type 约束类型,如枚举enum，区间section
      * @param string $Enum 约束类型为enum时的可选值列表
      * @param ConstraintRange $Range 约束类型为section时的范围
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $String 约束类型为string时的可选值列表
      */
     function __construct()

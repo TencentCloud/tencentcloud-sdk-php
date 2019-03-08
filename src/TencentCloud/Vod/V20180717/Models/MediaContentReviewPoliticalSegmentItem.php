@@ -19,31 +19,49 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method float getStartTimeOffset() 获取嫌疑片段起始的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置嫌疑片段起始的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getEndTimeOffset() 获取嫌疑片段结束的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置嫌疑片段结束的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getConfidence() 获取嫌疑片段涉政分数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfidence(float $Confidence) 设置嫌疑片段涉政分数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestion() 获取嫌疑片段鉴政结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestion(string $Suggestion) 设置嫌疑片段鉴政结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取涉政人物、违规图标名字。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置涉政人物、违规图标名字。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabel() 获取嫌疑片段鉴政结果标签。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置嫌疑片段鉴政结果标签。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAreaCoordSet() 获取涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAreaCoordSet(array $AreaCoordSet) 设置涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPicUrlExpireTimeStamp() 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPicUrlExpireTimeStamp(integer $PicUrlExpireTimeStamp) 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -53,16 +71,19 @@ class MediaContentReviewPoliticalSegmentItem extends AbstractModel
 {
     /**
      * @var float 嫌疑片段起始的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTimeOffset;
 
     /**
      * @var float 嫌疑片段结束的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTimeOffset;
 
     /**
      * @var float 嫌疑片段涉政分数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Confidence;
 
@@ -71,48 +92,63 @@ class MediaContentReviewPoliticalSegmentItem extends AbstractModel
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
     /**
      * @var string 涉政人物、违规图标名字。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 嫌疑片段鉴政结果标签。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var string 嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
      * @var array 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AreaCoordSet;
 
     /**
      * @var integer 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PicUrlExpireTimeStamp;
     /**
      * @param float $StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Confidence 嫌疑片段涉政分数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Suggestion 嫌疑片段鉴政结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 涉政人物、违规图标名字。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 嫌疑片段鉴政结果标签。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AreaCoordSet 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PicUrlExpireTimeStamp 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

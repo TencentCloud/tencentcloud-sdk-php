@@ -19,11 +19,17 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method integer getLength() 获取0：光头，1：短发，2：中发，3：长发，4：绑发
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLength(integer $Length) 设置0：光头，1：短发，2：中发，3：长发，4：绑发
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBang() 获取0：有刘海，1：无刘海
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBang(integer $Bang) 设置0：有刘海，1：无刘海
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getColor() 获取0：黑色，1：金色，2：棕色，3：灰白色
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColor(integer $Color) 设置0：黑色，1：金色，2：棕色，3：灰白色
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -33,22 +39,28 @@ class FaceHairAttributesInfo extends AbstractModel
 {
     /**
      * @var integer 0：光头，1：短发，2：中发，3：长发，4：绑发
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Length;
 
     /**
      * @var integer 0：有刘海，1：无刘海
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bang;
 
     /**
      * @var integer 0：黑色，1：金色，2：棕色，3：灰白色
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Color;
     /**
      * @param integer $Length 0：光头，1：短发，2：中发，3：长发，4：绑发
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Bang 0：有刘海，1：无刘海
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Color 0：黑色，1：金色，2：棕色，3：灰白色
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

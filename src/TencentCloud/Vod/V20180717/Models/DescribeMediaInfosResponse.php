@@ -19,9 +19,13 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method array getMediaInfoSet() 获取媒体文件信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMediaInfoSet(array $MediaInfoSet) 设置媒体文件信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNotExistFileIdSet() 获取不存在的文件 ID 列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotExistFileIdSet(array $NotExistFileIdSet) 设置不存在的文件 ID 列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,11 +37,13 @@ class DescribeMediaInfosResponse extends AbstractModel
 {
     /**
      * @var array 媒体文件信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MediaInfoSet;
 
     /**
      * @var array 不存在的文件 ID 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotExistFileIdSet;
 
@@ -47,7 +53,9 @@ class DescribeMediaInfosResponse extends AbstractModel
     public $RequestId;
     /**
      * @param array $MediaInfoSet 媒体文件信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NotExistFileIdSet 不存在的文件 ID 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

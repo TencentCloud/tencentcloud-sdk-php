@@ -29,9 +29,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCurrentNum() 获取分散置放群组内云主机当前数量。
  * @method void setCurrentNum(integer $CurrentNum) 设置分散置放群组内云主机当前数量。
  * @method array getInstanceIds() 获取分散置放群组内，云主机id列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceIds(array $InstanceIds) 设置分散置放群组内，云主机id列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取分散置放群组创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置分散置放群组创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -66,11 +70,13 @@ class DisasterRecoverGroup extends AbstractModel
 
     /**
      * @var array 分散置放群组内，云主机id列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceIds;
 
     /**
      * @var string 分散置放群组创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
     /**
@@ -80,7 +86,9 @@ class DisasterRecoverGroup extends AbstractModel
      * @param integer $CvmQuotaTotal 分散置放群组内最大容纳云主机数量。
      * @param integer $CurrentNum 分散置放群组内云主机当前数量。
      * @param array $InstanceIds 分散置放群组内，云主机id列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 分散置放群组创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -19,15 +19,19 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method float getConfidence() 获取视频暴恐评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfidence(float $Confidence) 设置视频暴恐评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestion() 获取暴恐结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestion(string $Suggestion) 设置暴恐结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabel() 获取视频暴恐结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
@@ -37,6 +41,7 @@ use TencentCloud\Common\AbstractModel;
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置视频暴恐结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
@@ -46,8 +51,11 @@ use TencentCloud\Common\AbstractModel;
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSegmentSet() 获取有暴恐嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentSet(array $SegmentSet) 设置有暴恐嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -57,6 +65,7 @@ class AiReviewTerrorismTaskOutput extends AbstractModel
 {
     /**
      * @var float 视频暴恐评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Confidence;
 
@@ -65,6 +74,7 @@ class AiReviewTerrorismTaskOutput extends AbstractModel
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
@@ -78,19 +88,23 @@ class AiReviewTerrorismTaskOutput extends AbstractModel
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var array 有暴恐嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentSet;
     /**
      * @param float $Confidence 视频暴恐评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Suggestion 暴恐结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 视频暴恐结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
@@ -100,7 +114,9 @@ class AiReviewTerrorismTaskOutput extends AbstractModel
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SegmentSet 有暴恐嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

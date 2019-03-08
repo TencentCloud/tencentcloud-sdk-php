@@ -35,19 +35,33 @@ use TencentCloud\Common\AbstractModel;
 <li>Political.Asr：Asr 文字鉴政</li>
 <li>Political.Ocr：Ocr 文字鉴政</li>
  * @method AiReviewTaskPornResult getPornTask() 获取视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPornTask(AiReviewTaskPornResult $PornTask) 设置视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method AiReviewTaskTerrorismResult getTerrorismTask() 获取视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTerrorismTask(AiReviewTaskTerrorismResult $TerrorismTask) 设置视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method AiReviewTaskPoliticalResult getPoliticalTask() 获取视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Political 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPoliticalTask(AiReviewTaskPoliticalResult $PoliticalTask) 设置视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Political 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method AiReviewTaskPornAsrResult getPornAsrTask() 获取视频内容审核 Asr 文字鉴黄任务的查询结果，当任务类型为 Porn.Asr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPornAsrTask(AiReviewTaskPornAsrResult $PornAsrTask) 设置视频内容审核 Asr 文字鉴黄任务的查询结果，当任务类型为 Porn.Asr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method AiReviewTaskPornOcrResult getPornOcrTask() 获取视频内容审核 Ocr 文字鉴黄任务的查询结果，当任务类型为 Porn.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPornOcrTask(AiReviewTaskPornOcrResult $PornOcrTask) 设置视频内容审核 Ocr 文字鉴黄任务的查询结果，当任务类型为 Porn.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method AiReviewTaskPoliticalAsrResult getPoliticalAsrTask() 获取视频内容审核 Asr 文字鉴政任务的查询结果，当任务类型为 Political.Asr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPoliticalAsrTask(AiReviewTaskPoliticalAsrResult $PoliticalAsrTask) 设置视频内容审核 Asr 文字鉴政任务的查询结果，当任务类型为 Political.Asr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method AiReviewTaskPoliticalOcrResult getPoliticalOcrTask() 获取视频内容审核 Ocr 文字鉴政任务的查询结果，当任务类型为 Political.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPoliticalOcrTask(AiReviewTaskPoliticalOcrResult $PoliticalOcrTask) 设置视频内容审核 Ocr 文字鉴政任务的查询结果，当任务类型为 Political.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -69,36 +83,43 @@ class AiContentReviewResult extends AbstractModel
 
     /**
      * @var AiReviewTaskPornResult 视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PornTask;
 
     /**
      * @var AiReviewTaskTerrorismResult 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TerrorismTask;
 
     /**
      * @var AiReviewTaskPoliticalResult 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Political 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PoliticalTask;
 
     /**
      * @var AiReviewTaskPornAsrResult 视频内容审核 Asr 文字鉴黄任务的查询结果，当任务类型为 Porn.Asr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PornAsrTask;
 
     /**
      * @var AiReviewTaskPornOcrResult 视频内容审核 Ocr 文字鉴黄任务的查询结果，当任务类型为 Porn.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PornOcrTask;
 
     /**
      * @var AiReviewTaskPoliticalAsrResult 视频内容审核 Asr 文字鉴政任务的查询结果，当任务类型为 Political.Asr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PoliticalAsrTask;
 
     /**
      * @var AiReviewTaskPoliticalOcrResult 视频内容审核 Ocr 文字鉴政任务的查询结果，当任务类型为 Political.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PoliticalOcrTask;
     /**
@@ -111,12 +132,19 @@ class AiContentReviewResult extends AbstractModel
 <li>Political.Asr：Asr 文字鉴政</li>
 <li>Political.Ocr：Ocr 文字鉴政</li>
      * @param AiReviewTaskPornResult $PornTask 视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AiReviewTaskTerrorismResult $TerrorismTask 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AiReviewTaskPoliticalResult $PoliticalTask 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Political 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AiReviewTaskPornAsrResult $PornAsrTask 视频内容审核 Asr 文字鉴黄任务的查询结果，当任务类型为 Porn.Asr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AiReviewTaskPornOcrResult $PornOcrTask 视频内容审核 Ocr 文字鉴黄任务的查询结果，当任务类型为 Porn.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AiReviewTaskPoliticalAsrResult $PoliticalAsrTask 视频内容审核 Asr 文字鉴政任务的查询结果，当任务类型为 Political.Asr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AiReviewTaskPoliticalOcrResult $PoliticalOcrTask 视频内容审核 Ocr 文字鉴政任务的查询结果，当任务类型为 Political.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

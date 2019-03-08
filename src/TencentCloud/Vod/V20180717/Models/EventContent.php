@@ -47,27 +47,49 @@ use TencentCloud\Common\AbstractModel;
 <li>CreateImageSpriteComplete：视频截取雪碧图完成；</li>
 <li>CreateSnapshotByTimeOffsetComplete：视频按时间点截图完成。</li>
  * @method FileUploadTask getFileUploadEvent() 获取视频上传完成事件，当事件类型为 NewFileUpload 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileUploadEvent(FileUploadTask $FileUploadEvent) 设置视频上传完成事件，当事件类型为 NewFileUpload 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method ProcedureTask getProcedureStateChangeEvent() 获取任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcedureStateChangeEvent(ProcedureTask $ProcedureStateChangeEvent) 设置任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method FileDeleteTask getFileDeleteEvent() 获取文件删除事件，当事件类型为 FileDeleted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileDeleteEvent(FileDeleteTask $FileDeleteEvent) 设置文件删除事件，当事件类型为 FileDeleted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method PullFileTask getPullCompleteEvent() 获取视频转拉完成事件，当事件类型为 PullComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPullCompleteEvent(PullFileTask $PullCompleteEvent) 设置视频转拉完成事件，当事件类型为 PullComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method EditMediaTask getEditMediaCompleteEvent() 获取视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEditMediaCompleteEvent(EditMediaTask $EditMediaCompleteEvent) 设置视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method WechatPublishTask getWechatPublishComplete() 获取微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWechatPublishComplete(WechatPublishTask $WechatPublishComplete) 设置微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method TranscodeTask2017 getTranscodeCompleteEvent() 获取视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranscodeCompleteEvent(TranscodeTask2017 $TranscodeCompleteEvent) 设置视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method ConcatTask2017 getConcatCompleteEvent() 获取视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConcatCompleteEvent(ConcatTask2017 $ConcatCompleteEvent) 设置视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method ClipTask2017 getClipCompleteEvent() 获取视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClipCompleteEvent(ClipTask2017 $ClipCompleteEvent) 设置视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method CreateImageSpriteTask2017 getCreateImageSpriteCompleteEvent() 获取视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateImageSpriteCompleteEvent(CreateImageSpriteTask2017 $CreateImageSpriteCompleteEvent) 设置视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetCompleteEvent() 获取视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotByTimeOffsetCompleteEvent(SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetCompleteEvent) 设置视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -99,56 +121,67 @@ class EventContent extends AbstractModel
 
     /**
      * @var FileUploadTask 视频上传完成事件，当事件类型为 NewFileUpload 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileUploadEvent;
 
     /**
      * @var ProcedureTask 任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProcedureStateChangeEvent;
 
     /**
      * @var FileDeleteTask 文件删除事件，当事件类型为 FileDeleted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileDeleteEvent;
 
     /**
      * @var PullFileTask 视频转拉完成事件，当事件类型为 PullComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PullCompleteEvent;
 
     /**
      * @var EditMediaTask 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EditMediaCompleteEvent;
 
     /**
      * @var WechatPublishTask 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WechatPublishComplete;
 
     /**
      * @var TranscodeTask2017 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeCompleteEvent;
 
     /**
      * @var ConcatTask2017 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConcatCompleteEvent;
 
     /**
      * @var ClipTask2017 视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClipCompleteEvent;
 
     /**
      * @var CreateImageSpriteTask2017 视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateImageSpriteCompleteEvent;
 
     /**
      * @var SnapshotByTimeOffsetTask2017 视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotByTimeOffsetCompleteEvent;
     /**
@@ -167,16 +200,27 @@ class EventContent extends AbstractModel
 <li>CreateImageSpriteComplete：视频截取雪碧图完成；</li>
 <li>CreateSnapshotByTimeOffsetComplete：视频按时间点截图完成。</li>
      * @param FileUploadTask $FileUploadEvent 视频上传完成事件，当事件类型为 NewFileUpload 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcedureTask $ProcedureStateChangeEvent 任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FileDeleteTask $FileDeleteEvent 文件删除事件，当事件类型为 FileDeleted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PullFileTask $PullCompleteEvent 视频转拉完成事件，当事件类型为 PullComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EditMediaTask $EditMediaCompleteEvent 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param WechatPublishTask $WechatPublishComplete 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeTask2017 $TranscodeCompleteEvent 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ConcatTask2017 $ConcatCompleteEvent 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ClipTask2017 $ClipCompleteEvent 视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateImageSpriteTask2017 $CreateImageSpriteCompleteEvent 视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetCompleteEvent 视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

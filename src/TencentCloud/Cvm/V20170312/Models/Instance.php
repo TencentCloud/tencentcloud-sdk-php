@@ -41,7 +41,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getPrivateIpAddresses() 获取实例主网卡的内网`IP`列表。
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置实例主网卡的内网`IP`列表。
  * @method array getPublicIpAddresses() 获取实例主网卡的公网`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置实例主网卡的公网`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method InternetAccessible getInternetAccessible() 获取实例带宽信息。
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置实例带宽信息。
  * @method VirtualPrivateCloud getVirtualPrivateCloud() 获取实例所属虚拟私有网络信息。
@@ -132,6 +134,7 @@ class Instance extends AbstractModel
 
     /**
      * @var array 实例主网卡的公网`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIpAddresses;
 
@@ -208,6 +211,7 @@ class Instance extends AbstractModel
      * @param array $DataDisks 实例数据盘信息。只包含随实例购买的数据盘。
      * @param array $PrivateIpAddresses 实例主网卡的内网`IP`列表。
      * @param array $PublicIpAddresses 实例主网卡的公网`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param InternetAccessible $InternetAccessible 实例带宽信息。
      * @param VirtualPrivateCloud $VirtualPrivateCloud 实例所属虚拟私有网络信息。
      * @param string $ImageId 生产实例所使用的镜像`ID`。

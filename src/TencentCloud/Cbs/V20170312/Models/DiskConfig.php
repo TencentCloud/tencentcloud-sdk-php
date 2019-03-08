@@ -33,9 +33,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getZone() 获取所在[可用区](/document/api/213/9452#zone)。
  * @method void setZone(string $Zone) 设置所在[可用区](/document/api/213/9452#zone)。
  * @method string getDeviceClass() 获取实例机型。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceClass(string $DeviceClass) 设置实例机型。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceFamily() 获取实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceFamily(string $InstanceFamily) 设置实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -80,11 +84,13 @@ class DiskConfig extends AbstractModel
 
     /**
      * @var string 实例机型。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceClass;
 
     /**
      * @var string 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceFamily;
     /**
@@ -96,7 +102,9 @@ class DiskConfig extends AbstractModel
      * @param integer $MinDiskSize 最小可配置云盘大小，单位GB。
      * @param string $Zone 所在[可用区](/document/api/213/9452#zone)。
      * @param string $DeviceClass 实例机型。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceFamily 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

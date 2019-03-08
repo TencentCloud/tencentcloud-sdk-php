@@ -19,11 +19,17 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getFileType() 获取文件类型，例如 mp4、flv 等。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileType(string $FileType) 设置文件类型，例如 mp4、flv 等。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取媒体文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(string $FileId) 设置媒体文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileUrl() 获取媒体文件播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileUrl(string $FileUrl) 设置媒体文件播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -33,22 +39,28 @@ class EditMediaTaskOutput extends AbstractModel
 {
     /**
      * @var string 文件类型，例如 mp4、flv 等。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileType;
 
     /**
      * @var string 媒体文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
      * @var string 媒体文件播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileUrl;
     /**
      * @param string $FileType 文件类型，例如 mp4、flv 等。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 媒体文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileUrl 媒体文件播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

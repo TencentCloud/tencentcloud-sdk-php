@@ -19,27 +19,49 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method integer getSize() 获取上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(integer $Size) 设置上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainer() 获取容器类型，例如 m4a，mp4 等。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainer(string $Container) 设置容器类型，例如 m4a，mp4 等。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBitrate() 获取视频流码率平均值与音频流码率平均值之和，单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBitrate(integer $Bitrate) 设置视频流码率平均值与音频流码率平均值之和，单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHeight() 获取视频流高度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeight(integer $Height) 设置视频流高度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWidth() 获取视频流宽度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWidth(integer $Width) 设置视频流宽度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDuration() 获取视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(float $Duration) 设置视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRotate() 获取视频拍摄时的选择角度，单位：度。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRotate(integer $Rotate) 设置视频拍摄时的选择角度，单位：度。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVideoStreamSet() 获取视频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoStreamSet(array $VideoStreamSet) 设置视频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAudioStreamSet() 获取音频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioStreamSet(array $AudioStreamSet) 设置音频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getVideoDuration() 获取视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoDuration(float $VideoDuration) 设置视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getAudioDuration() 获取音频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioDuration(float $AudioDuration) 设置音频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -49,70 +71,92 @@ class MediaMetaData extends AbstractModel
 {
     /**
      * @var integer 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
     /**
      * @var string 容器类型，例如 m4a，mp4 等。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Container;
 
     /**
      * @var integer 视频流码率平均值与音频流码率平均值之和，单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bitrate;
 
     /**
      * @var integer 视频流高度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
 
     /**
      * @var integer 视频流宽度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
      * @var float 视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
      * @var integer 视频拍摄时的选择角度，单位：度。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rotate;
 
     /**
      * @var array 视频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoStreamSet;
 
     /**
      * @var array 音频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioStreamSet;
 
     /**
      * @var float 视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoDuration;
 
     /**
      * @var float 音频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioDuration;
     /**
      * @param integer $Size 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Container 容器类型，例如 m4a，mp4 等。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Bitrate 视频流码率平均值与音频流码率平均值之和，单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Height 视频流高度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Width 视频流宽度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Duration 视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Rotate 视频拍摄时的选择角度，单位：度。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VideoStreamSet 视频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AudioStreamSet 音频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $VideoDuration 视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $AudioDuration 音频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

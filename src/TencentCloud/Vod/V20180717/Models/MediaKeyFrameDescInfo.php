@@ -19,7 +19,9 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method array getKeyFrameDescSet() 获取视频打点信息数组。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyFrameDescSet(array $KeyFrameDescSet) 设置视频打点信息数组。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -29,10 +31,12 @@ class MediaKeyFrameDescInfo extends AbstractModel
 {
     /**
      * @var array 视频打点信息数组。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyFrameDescSet;
     /**
      * @param array $KeyFrameDescSet 视频打点信息数组。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

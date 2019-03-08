@@ -33,7 +33,9 @@ use TencentCloud\Common\AbstractModel;
 <li>对于依照时间点截图，该值表示指定视频第几秒的截图作为封面</li>
 <li>对于依照百分比截图，该值表示使用视频百分之多少的截图作为封面</li>
  * @method array getWatermarkSet() 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -62,6 +64,7 @@ class CoverBySnapshotTaskInput extends AbstractModel
 
     /**
      * @var array 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WatermarkSet;
     /**
@@ -73,6 +76,7 @@ class CoverBySnapshotTaskInput extends AbstractModel
 <li>对于依照时间点截图，该值表示指定视频第几秒的截图作为封面</li>
 <li>对于依照百分比截图，该值表示使用视频百分之多少的截图作为封面</li>
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

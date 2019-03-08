@@ -39,7 +39,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAutoScalingGroupAbstractSet() 获取启动配置关联的伸缩组。
  * @method void setAutoScalingGroupAbstractSet(array $AutoScalingGroupAbstractSet) 设置启动配置关联的伸缩组。
  * @method string getUserData() 获取自定义数据。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserData(string $UserData) 设置自定义数据。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取启动配置创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置启动配置创建时间。
  * @method EnhancedService getEnhancedService() 获取实例的增强服务启用情况与其设置。
@@ -55,7 +57,9 @@ use TencentCloud\Common\AbstractModel;
 <br><li>POSTPAID_BY_HOUR：按小时后付费
 <br><li>SPOTPAID：竞价付费
  * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstanceTypes() 获取实例机型列表。
  * @method void setInstanceTypes(array $InstanceTypes) 设置实例机型列表。
  */
@@ -117,6 +121,7 @@ class LaunchConfiguration extends AbstractModel
 
     /**
      * @var string 自定义数据。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserData;
 
@@ -149,6 +154,7 @@ class LaunchConfiguration extends AbstractModel
 
     /**
      * @var InstanceMarketOptionsRequest 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceMarketOptions;
 
@@ -168,6 +174,7 @@ class LaunchConfiguration extends AbstractModel
      * @param array $SecurityGroupIds 实例所属安全组。
      * @param array $AutoScalingGroupAbstractSet 启动配置关联的伸缩组。
      * @param string $UserData 自定义数据。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 启动配置创建时间。
      * @param EnhancedService $EnhancedService 实例的增强服务启用情况与其设置。
      * @param string $ImageId 镜像ID。
@@ -176,6 +183,7 @@ class LaunchConfiguration extends AbstractModel
 <br><li>POSTPAID_BY_HOUR：按小时后付费
 <br><li>SPOTPAID：竞价付费
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceTypes 实例机型列表。
      */
     function __construct()

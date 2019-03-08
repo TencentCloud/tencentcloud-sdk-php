@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * @method ResourceUsageMonitorSet getMaster() 获取主节点资源使用情况监控数据
  * @method void setMaster(ResourceUsageMonitorSet $Master) 设置主节点资源使用情况监控数据
  * @method ResourceUsageMonitorSet getSlave1() 获取备机1资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlave1(ResourceUsageMonitorSet $Slave1) 设置备机1资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
  * @method ResourceUsageMonitorSet getSlave2() 获取备机2资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlave2(ResourceUsageMonitorSet $Slave2) 设置备机2资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,11 +44,13 @@ class DescribeDBResourceUsageDetailsResponse extends AbstractModel
 
     /**
      * @var ResourceUsageMonitorSet 备机1资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Slave1;
 
     /**
      * @var ResourceUsageMonitorSet 备机2资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Slave2;
 
@@ -55,7 +61,9 @@ class DescribeDBResourceUsageDetailsResponse extends AbstractModel
     /**
      * @param ResourceUsageMonitorSet $Master 主节点资源使用情况监控数据
      * @param ResourceUsageMonitorSet $Slave1 备机1资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceUsageMonitorSet $Slave2 备机2资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

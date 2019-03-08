@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelId(string $ModelId) 设置产品绑定的物模型ID，-1表示不绑定
  * @method string getModelName() 获取产品绑定的物模型名称
  * @method void setModelName(string $ModelName) 设置产品绑定的物模型名称
- * @method string getProductKey() 获取产品秘钥，suite产品才会有
- * @method void setProductKey(string $ProductKey) 设置产品秘钥，suite产品才会有
+ * @method string getProductKey() 获取产品密钥，suite产品才会有
+ * @method void setProductKey(string $ProductKey) 设置产品密钥，suite产品才会有
  */
 
 /**
@@ -94,7 +94,7 @@ class ProductProperties extends AbstractModel
     public $ModelName;
 
     /**
-     * @var string 产品秘钥，suite产品才会有
+     * @var string 产品密钥，suite产品才会有
      */
     public $ProductKey;
     /**
@@ -108,7 +108,7 @@ class ProductProperties extends AbstractModel
      * @param string $Appeui LoRa产品运营侧APPEUI，只有LoRa产品需要填写
      * @param string $ModelId 产品绑定的物模型ID，-1表示不绑定
      * @param string $ModelName 产品绑定的物模型名称
-     * @param string $ProductKey 产品秘钥，suite产品才会有
+     * @param string $ProductKey 产品密钥，suite产品才会有
      */
     function __construct()
     {

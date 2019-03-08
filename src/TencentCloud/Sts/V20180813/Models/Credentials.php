@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getToken() 获取token
  * @method void setToken(string $Token) 设置token
- * @method string getTmpSecretId() 获取临时证书秘钥ID
- * @method void setTmpSecretId(string $TmpSecretId) 设置临时证书秘钥ID
- * @method string getTmpSecretKey() 获取临时证书秘钥Key
- * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时证书秘钥Key
+ * @method string getTmpSecretId() 获取临时证书密钥ID
+ * @method void setTmpSecretId(string $TmpSecretId) 设置临时证书密钥ID
+ * @method string getTmpSecretKey() 获取临时证书密钥Key
+ * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时证书密钥Key
  */
 
 /**
@@ -37,18 +37,18 @@ class Credentials extends AbstractModel
     public $Token;
 
     /**
-     * @var string 临时证书秘钥ID
+     * @var string 临时证书密钥ID
      */
     public $TmpSecretId;
 
     /**
-     * @var string 临时证书秘钥Key
+     * @var string 临时证书密钥Key
      */
     public $TmpSecretKey;
     /**
      * @param string $Token token
-     * @param string $TmpSecretId 临时证书秘钥ID
-     * @param string $TmpSecretKey 临时证书秘钥Key
+     * @param string $TmpSecretId 临时证书密钥ID
+     * @param string $TmpSecretKey 临时证书密钥Key
      */
     function __construct()
     {

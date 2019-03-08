@@ -19,15 +19,25 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method float getOriginalPrice() 获取预付费云盘预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalPrice(float $OriginalPrice) 设置预付费云盘预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDiscountPrice() 获取预付费云盘预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscountPrice(float $DiscountPrice) 设置预付费云盘预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getUnitPrice() 获取后付费云盘原单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnitPrice(float $UnitPrice) 设置后付费云盘原单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChargeUnit() 获取后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeUnit(string $ChargeUnit) 设置后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getUnitPriceDiscount() 获取后付费云盘折扣单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnitPriceDiscount(float $UnitPriceDiscount) 设置后付费云盘折扣单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -37,34 +47,44 @@ class Price extends AbstractModel
 {
     /**
      * @var float 预付费云盘预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalPrice;
 
     /**
      * @var float 预付费云盘预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscountPrice;
 
     /**
      * @var float 后付费云盘原单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnitPrice;
 
     /**
      * @var string 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeUnit;
 
     /**
      * @var float 后付费云盘折扣单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnitPriceDiscount;
     /**
      * @param float $OriginalPrice 预付费云盘预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DiscountPrice 预付费云盘预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $UnitPrice 后付费云盘原单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChargeUnit 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $UnitPriceDiscount 后付费云盘折扣单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

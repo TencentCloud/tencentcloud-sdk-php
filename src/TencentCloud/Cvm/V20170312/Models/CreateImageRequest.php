@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataDiskIds(array $DataDiskIds) 设置实例需要制作镜像的数据盘Id
  * @method array getSnapshotIds() 获取需要制作镜像的快照Id,必须包含一个系统盘快照
  * @method void setSnapshotIds(array $SnapshotIds) 设置需要制作镜像的快照Id,必须包含一个系统盘快照
- * @method boolean getDryRun() 获取DryRun
- * @method void setDryRun(boolean $DryRun) 设置DryRun
+ * @method boolean getDryRun() 获取检测请求的合法性，但不会对操作的资源产生任何影响
+ * @method void setDryRun(boolean $DryRun) 设置检测请求的合法性，但不会对操作的资源产生任何影响
  */
 
 /**
@@ -84,7 +84,7 @@ class CreateImageRequest extends AbstractModel
     public $SnapshotIds;
 
     /**
-     * @var boolean DryRun
+     * @var boolean 检测请求的合法性，但不会对操作的资源产生任何影响
      */
     public $DryRun;
     /**
@@ -96,7 +96,7 @@ class CreateImageRequest extends AbstractModel
      * @param string $Reboot 实例处于运行中时，是否允许关机执行制作镜像任务。
      * @param array $DataDiskIds 实例需要制作镜像的数据盘Id
      * @param array $SnapshotIds 需要制作镜像的快照Id,必须包含一个系统盘快照
-     * @param boolean $DryRun DryRun
+     * @param boolean $DryRun 检测请求的合法性，但不会对操作的资源产生任何影响
      */
     function __construct()
     {

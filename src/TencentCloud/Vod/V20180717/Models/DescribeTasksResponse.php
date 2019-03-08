@@ -19,9 +19,13 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method array getTaskSet() 获取任务概要列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskSet(array $TaskSet) 设置任务概要列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScrollToken() 获取翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScrollToken(string $ScrollToken) 设置翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,11 +37,13 @@ class DescribeTasksResponse extends AbstractModel
 {
     /**
      * @var array 任务概要列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskSet;
 
     /**
      * @var string 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScrollToken;
 
@@ -47,7 +53,9 @@ class DescribeTasksResponse extends AbstractModel
     public $RequestId;
     /**
      * @param array $TaskSet 任务概要列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScrollToken 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

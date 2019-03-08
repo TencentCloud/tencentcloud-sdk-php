@@ -29,7 +29,9 @@ use TencentCloud\Common\AbstractModel;
 <li>review。</li>
 <li>block。</li>
  * @method array getSegmentSet() 获取Ocr 文字有涉政、敏感嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentSet(array $SegmentSet) 设置Ocr 文字有涉政、敏感嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -52,6 +54,7 @@ class AiReviewPoliticalOcrTaskOutput extends AbstractModel
 
     /**
      * @var array Ocr 文字有涉政、敏感嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentSet;
     /**
@@ -61,6 +64,7 @@ class AiReviewPoliticalOcrTaskOutput extends AbstractModel
 <li>review。</li>
 <li>block。</li>
      * @param array $SegmentSet Ocr 文字有涉政、敏感嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

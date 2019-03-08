@@ -19,27 +19,35 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method float getConfidence() 获取视频鉴黄评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfidence(float $Confidence) 设置视频鉴黄评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestion() 获取鉴黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestion(string $Suggestion) 设置鉴黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabel() 获取视频鉴黄结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
 <li>intimacy：亲密行为。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置视频鉴黄结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
 <li>intimacy：亲密行为。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSegmentSet() 获取有涉黄嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentSet(array $SegmentSet) 设置有涉黄嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -49,6 +57,7 @@ class AiReviewPornTaskOutput extends AbstractModel
 {
     /**
      * @var float 视频鉴黄评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Confidence;
 
@@ -57,6 +66,7 @@ class AiReviewPornTaskOutput extends AbstractModel
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
@@ -66,25 +76,31 @@ class AiReviewPornTaskOutput extends AbstractModel
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
 <li>intimacy：亲密行为。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var array 有涉黄嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentSet;
     /**
      * @param float $Confidence 视频鉴黄评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Suggestion 鉴黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 视频鉴黄结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
 <li>intimacy：亲密行为。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SegmentSet 有涉黄嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

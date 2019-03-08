@@ -19,9 +19,13 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getCoverUrl() 获取智能封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoverUrl(string $CoverUrl) 设置智能封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getConfidence() 获取智能封面的可信度，取值范围是 0 到 100。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfidence(float $Confidence) 设置智能封面的可信度，取值范围是 0 到 100。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -31,16 +35,20 @@ class MediaAiAnalysisCoverItem extends AbstractModel
 {
     /**
      * @var string 智能封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CoverUrl;
 
     /**
      * @var float 智能封面的可信度，取值范围是 0 到 100。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Confidence;
     /**
      * @param string $CoverUrl 智能封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Confidence 智能封面的可信度，取值范围是 0 到 100。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

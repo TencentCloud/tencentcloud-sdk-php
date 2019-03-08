@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method integer getErrCode() 获取错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrCode(integer $ErrCode) 设置错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method CoverBySnapshotTaskInput getInput() 获取对视频截图做封面任务的输入。
  * @method void setInput(CoverBySnapshotTaskInput $Input) 设置对视频截图做封面任务的输入。
  * @method CoverBySnapshotTaskOutput getOutput() 获取对视频截图做封面任务的输出。
@@ -42,11 +46,13 @@ class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
 
     /**
      * @var integer 错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
 
     /**
      * @var string 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
@@ -62,7 +68,9 @@ class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
     /**
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param integer $ErrCode 错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverBySnapshotTaskInput $Input 对视频截图做封面任务的输入。
      * @param CoverBySnapshotTaskOutput $Output 对视频截图做封面任务的输出。
      */

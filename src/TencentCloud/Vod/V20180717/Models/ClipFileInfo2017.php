@@ -21,17 +21,27 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getErrCode() 获取错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrCode(integer $ErrCode) 设置错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMessage() 获取错误描述。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(float $Message) 设置错误描述。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取输出目标文件的文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(string $FileId) 设置输出目标文件的文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileUrl() 获取输出目标文件的文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileUrl(string $FileUrl) 设置输出目标文件的文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileType() 获取输出目标文件的文件类型。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileType(string $FileType) 设置输出目标文件的文件类型。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -43,36 +53,46 @@ class ClipFileInfo2017 extends AbstractModel
      * @var integer 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
 
     /**
      * @var float 错误描述。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var string 输出目标文件的文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
      * @var string 输出目标文件的文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileUrl;
 
     /**
      * @var string 输出目标文件的文件类型。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileType;
     /**
      * @param integer $ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Message 错误描述。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 输出目标文件的文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileUrl 输出目标文件的文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileType 输出目标文件的文件类型。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

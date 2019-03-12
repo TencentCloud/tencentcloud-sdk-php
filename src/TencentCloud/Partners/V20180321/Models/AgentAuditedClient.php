@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setThisMonthAmt(integer $ThisMonthAmt) 设置本月消费金额
  * @method integer getHasOverdueBill() 获取是否欠费,0：不欠费；1：欠费
  * @method void setHasOverdueBill(integer $HasOverdueBill) 设置是否欠费,0：不欠费；1：欠费
+ * @method string getClientType() 获取客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+ * @method void setClientType(string $ClientType) 设置客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+ * @method string getProjectType() 获取项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+ * @method void setProjectType(string $ProjectType) 设置项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
  */
 
 /**
@@ -101,6 +105,16 @@ class AgentAuditedClient extends AbstractModel
      * @var integer 是否欠费,0：不欠费；1：欠费
      */
     public $HasOverdueBill;
+
+    /**
+     * @var string 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     */
+    public $ClientType;
+
+    /**
+     * @var string 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+     */
+    public $ProjectType;
     /**
      * @param string $Uin 代理商账号ID
      * @param string $ClientUin 代客账号ID
@@ -113,6 +127,8 @@ class AgentAuditedClient extends AbstractModel
      * @param integer $LastMonthAmt 上月消费金额
      * @param integer $ThisMonthAmt 本月消费金额
      * @param integer $HasOverdueBill 是否欠费,0：不欠费；1：欠费
+     * @param string $ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     * @param string $ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class AgentAuditedClient extends AbstractModel
 
         if (array_key_exists("HasOverdueBill",$param) and $param["HasOverdueBill"] !== null) {
             $this->HasOverdueBill = $param["HasOverdueBill"];
+        }
+
+        if (array_key_exists("ClientType",$param) and $param["ClientType"] !== null) {
+            $this->ClientType = $param["ClientType"];
+        }
+
+        if (array_key_exists("ProjectType",$param) and $param["ProjectType"] !== null) {
+            $this->ProjectType = $param["ProjectType"];
         }
     }
 }

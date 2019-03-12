@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取限制数目
  * @method void setLimit(integer $Limit) 设置限制数目
+ * @method string getClientType() 获取客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+ * @method void setClientType(string $ClientType) 设置客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+ * @method string getProjectType() 获取项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+ * @method void setProjectType(string $ProjectType) 设置项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
  */
 
 /**
@@ -87,6 +91,16 @@ class DescribeAgentAuditedClientsRequest extends AbstractModel
      * @var integer 限制数目
      */
     public $Limit;
+
+    /**
+     * @var string 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     */
+    public $ClientType;
+
+    /**
+     * @var string 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+     */
+    public $ProjectType;
     /**
      * @param string $ClientUin 客户账号ID
      * @param string $ClientName 客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
@@ -97,6 +111,8 @@ class DescribeAgentAuditedClientsRequest extends AbstractModel
      * @param string $ClientRemark 客户备注
      * @param integer $Offset 偏移量
      * @param integer $Limit 限制数目
+     * @param string $ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     * @param string $ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class DescribeAgentAuditedClientsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("ClientType",$param) and $param["ClientType"] !== null) {
+            $this->ClientType = $param["ClientType"];
+        }
+
+        if (array_key_exists("ProjectType",$param) and $param["ProjectType"] !== null) {
+            $this->ProjectType = $param["ProjectType"];
         }
     }
 }

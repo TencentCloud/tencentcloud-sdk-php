@@ -65,7 +65,7 @@ use TencentCloud\As\V20180419\Models as Models;
 
 * 可以根据定时任务ID、定时任务名称或者伸缩组ID等信息来查询定时任务的详细信息。过滤信息详细请见过滤器`Filter`。
 * 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的定时任务。
-* @method Models\DetachInstancesResponse DetachInstances(Models\DetachInstancesRequest $req) 本接口（DettachInstances）用于从伸缩组移出 CVM 实例，本接口不会被销毁实例。
+* @method Models\DetachInstancesResponse DetachInstances(Models\DetachInstancesRequest $req) 本接口（DetachInstances）用于从伸缩组移出 CVM 实例，本接口不会销毁实例。
 * @method Models\DisableAutoScalingGroupResponse DisableAutoScalingGroup(Models\DisableAutoScalingGroupRequest $req) 本接口（DisableAutoScalingGroup）用于停用指定伸缩组。
 * @method Models\EnableAutoScalingGroupResponse EnableAutoScalingGroup(Models\EnableAutoScalingGroupRequest $req) 本接口（EnableAutoScalingGroup）用于启用指定伸缩组。
 * @method Models\ModifyAutoScalingGroupResponse ModifyAutoScalingGroup(Models\ModifyAutoScalingGroupRequest $req) 本接口（ModifyAutoScalingGroup）用于修改伸缩组。

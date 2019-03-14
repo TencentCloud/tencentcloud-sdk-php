@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerType(integer $ServerType) 设置评估语言，0：英文，1：中文。
  * @method integer getIsAsync() 获取异步模式标识，0：同步模式，1：异步模式。
  * @method void setIsAsync(integer $IsAsync) 设置异步模式标识，0：同步模式，1：异步模式。
+ * @method integer getTextMode() 获取输入文本模式，0: 普通文本，1: 音素结构文本
+ * @method void setTextMode(integer $TextMode) 设置输入文本模式，0: 普通文本，1: 音素结构文本
  */
 
 /**
@@ -101,6 +103,11 @@ class InitOralProcessRequest extends AbstractModel
      * @var integer 异步模式标识，0：同步模式，1：异步模式。
      */
     public $IsAsync;
+
+    /**
+     * @var integer 输入文本模式，0: 普通文本，1: 音素结构文本
+     */
+    public $TextMode;
     /**
      * @param string $SessionId 语音段唯一标识，一段语音一个SessionId
      * @param string $RefText 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。
@@ -113,6 +120,7 @@ class InitOralProcessRequest extends AbstractModel
      * @param integer $SentenceInfoEnabled 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
      * @param integer $ServerType 评估语言，0：英文，1：中文。
      * @param integer $IsAsync 异步模式标识，0：同步模式，1：异步模式。
+     * @param integer $TextMode 输入文本模式，0: 普通文本，1: 音素结构文本
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class InitOralProcessRequest extends AbstractModel
 
         if (array_key_exists("IsAsync",$param) and $param["IsAsync"] !== null) {
             $this->IsAsync = $param["IsAsync"];
+        }
+
+        if (array_key_exists("TextMode",$param) and $param["TextMode"] !== null) {
+            $this->TextMode = $param["TextMode"];
         }
     }
 }

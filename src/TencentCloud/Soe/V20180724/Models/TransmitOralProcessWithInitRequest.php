@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAsync(integer $IsAsync) 设置异步模式标识，0：同步模式，1：异步模式。
  * @method integer getIsQuery() 获取查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 评估结果。
  * @method void setIsQuery(integer $IsQuery) 设置查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 评估结果。
+ * @method integer getTextMode() 获取输入文本模式，0: 普通文本，1: 音素结构文本
+ * @method void setTextMode(integer $TextMode) 设置输入文本模式，0: 普通文本，1: 音素结构文本
  */
 
 /**
@@ -136,6 +138,11 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
      * @var integer 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 评估结果。
      */
     public $IsQuery;
+
+    /**
+     * @var integer 输入文本模式，0: 普通文本，1: 音素结构文本
+     */
+    public $TextMode;
     /**
      * @param integer $SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
      * @param integer $IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
@@ -153,6 +160,7 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
      * @param integer $ServerType 评估语言，0：英文，1：中文。
      * @param integer $IsAsync 异步模式标识，0：同步模式，1：异步模式。
      * @param integer $IsQuery 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 评估结果。
+     * @param integer $TextMode 输入文本模式，0: 普通文本，1: 音素结构文本
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
 
         if (array_key_exists("IsQuery",$param) and $param["IsQuery"] !== null) {
             $this->IsQuery = $param["IsQuery"];
+        }
+
+        if (array_key_exists("TextMode",$param) and $param["TextMode"] !== null) {
+            $this->TextMode = $param["TextMode"];
         }
     }
 }

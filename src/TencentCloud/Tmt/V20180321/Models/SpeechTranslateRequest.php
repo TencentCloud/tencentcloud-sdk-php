@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(string $Data) 设置语音分片内容的base64字符串，音频内容应含有效并可识别的文本
  * @method integer getProjectId() 获取项目id，用户可自定义
  * @method void setProjectId(integer $ProjectId) 设置项目id，用户可自定义
+ * @method string getMode() 获取识别模式，不填则由调用放进行vad(静音检测)，填bvad则由服务放进行vad，前者适合段语音翻译（收到所有语音分片后翻译），后者适合长语音翻译（在完成一个断句识别后就会返回部分结果）
+ * @method void setMode(string $Mode) 设置识别模式，不填则由调用放进行vad(静音检测)，填bvad则由服务放进行vad，前者适合段语音翻译（收到所有语音分片后翻译），后者适合长语音翻译（在完成一个断句识别后就会返回部分结果）
  */
 
 /**
@@ -80,6 +82,11 @@ class SpeechTranslateRequest extends AbstractModel
      * @var integer 项目id，用户可自定义
      */
     public $ProjectId;
+
+    /**
+     * @var string 识别模式，不填则由调用放进行vad(静音检测)，填bvad则由服务放进行vad，前者适合段语音翻译（收到所有语音分片后翻译），后者适合长语音翻译（在完成一个断句识别后就会返回部分结果）
+     */
+    public $Mode;
     /**
      * @param string $SessionUuid 一段完整的语音对应一个SessionUuid
      * @param string $Source 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
@@ -89,6 +96,7 @@ class SpeechTranslateRequest extends AbstractModel
      * @param integer $IsEnd 是否最后一片语音分片，0-否，1-是
      * @param string $Data 语音分片内容的base64字符串，音频内容应含有效并可识别的文本
      * @param integer $ProjectId 项目id，用户可自定义
+     * @param string $Mode 识别模式，不填则由调用放进行vad(静音检测)，填bvad则由服务放进行vad，前者适合段语音翻译（收到所有语音分片后翻译），后者适合长语音翻译（在完成一个断句识别后就会返回部分结果）
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class SpeechTranslateRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
     }
 }

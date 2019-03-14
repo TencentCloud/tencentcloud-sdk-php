@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionUuid(string $SessionUuid) 设置唯一id，返回时原样返回
  * @method string getScene() 获取doc:文档扫描
  * @method void setScene(string $Scene) 设置doc:文档扫描
- * @method string getData() 获取图片数据的Base64字符串
- * @method void setData(string $Data) 设置图片数据的Base64字符串
+ * @method string getData() 获取图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩
+ * @method void setData(string $Data) 设置图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩
  * @method string getSource() 获取源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
  * @method void setSource(string $Source) 设置源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
  * @method string getTarget() 获取目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
@@ -48,7 +48,7 @@ class ImageTranslateRequest extends AbstractModel
     public $Scene;
 
     /**
-     * @var string 图片数据的Base64字符串
+     * @var string 图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩
      */
     public $Data;
 
@@ -69,7 +69,7 @@ class ImageTranslateRequest extends AbstractModel
     /**
      * @param string $SessionUuid 唯一id，返回时原样返回
      * @param string $Scene doc:文档扫描
-     * @param string $Data 图片数据的Base64字符串
+     * @param string $Data 图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩
      * @param string $Source 源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      * @param string $Target 目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      * @param integer $ProjectId 项目id

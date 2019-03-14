@@ -18,18 +18,18 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStatus() 获取任务校验状态
- * @method void setStatus(string $Status) 设置任务校验状态
+ * @method string getStatus() 获取任务校验状态： starting(开始中)，running(校验中)，finished(校验完成)
+ * @method void setStatus(string $Status) 设置任务校验状态： starting(开始中)，running(校验中)，finished(校验完成)
  * @method integer getErrorCode() 获取任务校验结果代码
  * @method void setErrorCode(integer $ErrorCode) 设置任务校验结果代码
  * @method string getErrorMessage() 获取提示信息
  * @method void setErrorMessage(string $ErrorMessage) 设置提示信息
  * @method array getStepInfo() 获取任务执行步骤描述
  * @method void setStepInfo(array $StepInfo) 设置任务执行步骤描述
- * @method integer getCheckFlag() 获取校验标志
- * @method void setCheckFlag(integer $CheckFlag) 设置校验标志
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method integer getCheckFlag() 获取校验标志：0（尚未校验成功） ， 1（校验成功）
+ * @method void setCheckFlag(integer $CheckFlag) 设置校验标志：0（尚未校验成功） ， 1（校验成功）
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSyncCheckJobResponse extends AbstractModel
 {
     /**
-     * @var string 任务校验状态
+     * @var string 任务校验状态： starting(开始中)，running(校验中)，finished(校验完成)
      */
     public $Status;
 
@@ -58,21 +58,21 @@ class DescribeSyncCheckJobResponse extends AbstractModel
     public $StepInfo;
 
     /**
-     * @var integer 校验标志
+     * @var integer 校验标志：0（尚未校验成功） ， 1（校验成功）
      */
     public $CheckFlag;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $Status 任务校验状态
+     * @param string $Status 任务校验状态： starting(开始中)，running(校验中)，finished(校验完成)
      * @param integer $ErrorCode 任务校验结果代码
      * @param string $ErrorMessage 提示信息
      * @param array $StepInfo 任务执行步骤描述
-     * @param integer $CheckFlag 校验标志
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param integer $CheckFlag 校验标志：0（尚未校验成功） ， 1（校验成功）
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

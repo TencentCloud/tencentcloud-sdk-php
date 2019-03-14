@@ -27,7 +27,7 @@ use TencentCloud\Tmt\V20180321\Models as Models;
 * @method Models\SpeechTranslateResponse SpeechTranslate(Models\SpeechTranslateRequest $req) 本接口提供音频内文字识别 + 翻译功能，目前开放中到英的语音翻译服务。
 待识别和翻译的音频文件可以是 pcm、mp3、amr和speex 格式，音频内语音清晰，采用流式传输和翻译的方式。
 
-* @method Models\TextTranslateResponse TextTranslate(Models\TextTranslateRequest $req) 提供中文到英文、英文到中文的等多种语言的文本内容翻译服务， 经过大数据语料库、多种解码算法、翻译引擎深度优化，在新闻文章、生活口语等不同语言场景中都有深厚积累，翻译结果专业评价处于行业顶级水平。
+* @method Models\TextTranslateResponse TextTranslate(Models\TextTranslateRequest $req) 提供中文到英文、英文到中文的等多种语言的文本内容翻译服务， 经过大数据语料库、多种解码算法、翻译引擎深度优化，在新闻文章、生活口语等不同语言场景中都有深厚积累，翻译结果专业评价处于行业领先水平。
  */
 
 class TmtClient extends AbstractClient

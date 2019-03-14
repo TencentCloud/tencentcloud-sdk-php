@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSource(string $Source) 设置源语言
  * @method string getTarget() 获取目标语言
  * @method void setTarget(string $Target) 设置目标语言
+ * @method integer getVadSeq() 获取当请求的Mode参数填写bvad是，启动VadSeq。此时Seq会被设置为后台vad（静音检测）后的新序号，而VadSeq代表客户端原始Seq值
+ * @method void setVadSeq(integer $VadSeq) 设置当请求的Mode参数填写bvad是，启动VadSeq。此时Seq会被设置为后台vad（静音检测）后的新序号，而VadSeq代表客户端原始Seq值
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -77,6 +79,11 @@ class SpeechTranslateResponse extends AbstractModel
     public $Target;
 
     /**
+     * @var integer 当请求的Mode参数填写bvad是，启动VadSeq。此时Seq会被设置为后台vad（静音检测）后的新序号，而VadSeq代表客户端原始Seq值
+     */
+    public $VadSeq;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -88,6 +95,7 @@ class SpeechTranslateResponse extends AbstractModel
      * @param integer $Seq 第几个语音分片
      * @param string $Source 源语言
      * @param string $Target 目标语言
+     * @param integer $VadSeq 当请求的Mode参数填写bvad是，启动VadSeq。此时Seq会被设置为后台vad（静音检测）后的新序号，而VadSeq代表客户端原始Seq值
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -128,6 +136,10 @@ class SpeechTranslateResponse extends AbstractModel
 
         if (array_key_exists("Target",$param) and $param["Target"] !== null) {
             $this->Target = $param["Target"];
+        }
+
+        if (array_key_exists("VadSeq",$param) and $param["VadSeq"] !== null) {
+            $this->VadSeq = $param["VadSeq"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

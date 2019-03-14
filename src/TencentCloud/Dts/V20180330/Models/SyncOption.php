@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyncObject(integer $SyncObject) 设置同步对象，1-整个实例，2-指定库表
  * @method integer getRunMode() 获取同步开始设置，1-立即开始
  * @method void setRunMode(integer $RunMode) 设置同步开始设置，1-立即开始
- * @method integer getSyncType() 获取同步模式， 3-增量同步
- * @method void setSyncType(integer $SyncType) 设置同步模式， 3-增量同步
- * @method integer getConsistencyType() 获取数据一致性检测， 1-不配置
- * @method void setConsistencyType(integer $ConsistencyType) 设置数据一致性检测， 1-不配置
+ * @method integer getSyncType() 获取同步模式， 3-全量且增量同步
+ * @method void setSyncType(integer $SyncType) 设置同步模式， 3-全量且增量同步
+ * @method integer getConsistencyType() 获取数据一致性检测， 1-无需配置
+ * @method void setConsistencyType(integer $ConsistencyType) 设置数据一致性检测， 1-无需配置
  */
 
 /**
@@ -44,19 +44,19 @@ class SyncOption extends AbstractModel
     public $RunMode;
 
     /**
-     * @var integer 同步模式， 3-增量同步
+     * @var integer 同步模式， 3-全量且增量同步
      */
     public $SyncType;
 
     /**
-     * @var integer 数据一致性检测， 1-不配置
+     * @var integer 数据一致性检测， 1-无需配置
      */
     public $ConsistencyType;
     /**
      * @param integer $SyncObject 同步对象，1-整个实例，2-指定库表
      * @param integer $RunMode 同步开始设置，1-立即开始
-     * @param integer $SyncType 同步模式， 3-增量同步
-     * @param integer $ConsistencyType 数据一致性检测， 1-不配置
+     * @param integer $SyncType 同步模式， 3-全量且增量同步
+     * @param integer $ConsistencyType 数据一致性检测， 1-无需配置
      */
     function __construct()
     {

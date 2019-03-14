@@ -24,8 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置修改后的实例名称, 1-50 个英文、汉字、数字、连接线-或下划线_
  * @method integer getNodeNum() 获取横向扩缩容后的节点个数
  * @method void setNodeNum(integer $NodeNum) 设置横向扩缩容后的节点个数
- * @method string getEsConfig() 获取修改后的配置项, JSON格式字符串
- * @method void setEsConfig(string $EsConfig) 设置修改后的配置项, JSON格式字符串
+ * @method string getEsConfig() 获取修改后的配置项, JSON格式字符串。当前仅支持以下配置项：
+action.destructive_requires_name
+indices.fielddata.cache.size
+indices.query.bool.max_clause_count
+ * @method void setEsConfig(string $EsConfig) 设置修改后的配置项, JSON格式字符串。当前仅支持以下配置项：
+action.destructive_requires_name
+indices.fielddata.cache.size
+indices.query.bool.max_clause_count
  * @method string getPassword() 获取重置后的Kibana密码, 8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号
  * @method void setPassword(string $Password) 设置重置后的Kibana密码, 8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号
  * @method EsAcl getEsAcl() 获取修改后的访问控制列表
@@ -48,12 +54,14 @@ ES.S1.2XLARGE32: 8 核 32G
 ES.S1.4XLARGE64: 16 核 64G
  * @method integer getMasterNodeNum() 获取专用主节点个数
  * @method void setMasterNodeNum(integer $MasterNodeNum) 设置专用主节点个数
- * @method string getMasterNodeType() 获取专用主节点规格
- * @method void setMasterNodeType(string $MasterNodeType) 设置专用主节点规格
- * @method integer getMasterNodeDiskSize() 获取专用主节点磁盘大小
- * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) 设置专用主节点磁盘大小
+ * @method string getMasterNodeType() 获取专用主节点规格，与NodeType支持的规格相同
+ * @method void setMasterNodeType(string $MasterNodeType) 设置专用主节点规格，与NodeType支持的规格相同
+ * @method integer getMasterNodeDiskSize() 获取专用主节点磁盘大小， 单位GB（系统默认配置为50GB,暂不支持自定义）
+ * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) 设置专用主节点磁盘大小， 单位GB（系统默认配置为50GB,暂不支持自定义）
  * @method boolean getForceRestart() 获取更新配置时是否强制重启
  * @method void setForceRestart(boolean $ForceRestart) 设置更新配置时是否强制重启
+ * @method CosBackup getCosBackup() 获取COS自动备份信息
+ * @method void setCosBackup(CosBackup $CosBackup) 设置COS自动备份信息
  */
 
 /**
@@ -77,7 +85,10 @@ class UpdateInstanceRequest extends AbstractModel
     public $NodeNum;
 
     /**
-     * @var string 修改后的配置项, JSON格式字符串
+     * @var string 修改后的配置项, JSON格式字符串。当前仅支持以下配置项：
+action.destructive_requires_name
+indices.fielddata.cache.size
+indices.query.bool.max_clause_count
      */
     public $EsConfig;
 
@@ -113,12 +124,12 @@ ES.S1.4XLARGE64: 16 核 64G
     public $MasterNodeNum;
 
     /**
-     * @var string 专用主节点规格
+     * @var string 专用主节点规格，与NodeType支持的规格相同
      */
     public $MasterNodeType;
 
     /**
-     * @var integer 专用主节点磁盘大小
+     * @var integer 专用主节点磁盘大小， 单位GB（系统默认配置为50GB,暂不支持自定义）
      */
     public $MasterNodeDiskSize;
 
@@ -126,11 +137,19 @@ ES.S1.4XLARGE64: 16 核 64G
      * @var boolean 更新配置时是否强制重启
      */
     public $ForceRestart;
+
+    /**
+     * @var CosBackup COS自动备份信息
+     */
+    public $CosBackup;
     /**
      * @param string $InstanceId 要操作的实例ID
      * @param string $InstanceName 修改后的实例名称, 1-50 个英文、汉字、数字、连接线-或下划线_
      * @param integer $NodeNum 横向扩缩容后的节点个数
-     * @param string $EsConfig 修改后的配置项, JSON格式字符串
+     * @param string $EsConfig 修改后的配置项, JSON格式字符串。当前仅支持以下配置项：
+action.destructive_requires_name
+indices.fielddata.cache.size
+indices.query.bool.max_clause_count
      * @param string $Password 重置后的Kibana密码, 8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号
      * @param EsAcl $EsAcl 修改后的访问控制列表
      * @param integer $DiskSize 磁盘大小,单位GB
@@ -142,9 +161,10 @@ ES.S1.LARGE16: 4 核 16G
 ES.S1.2XLARGE32: 8 核 32G 
 ES.S1.4XLARGE64: 16 核 64G
      * @param integer $MasterNodeNum 专用主节点个数
-     * @param string $MasterNodeType 专用主节点规格
-     * @param integer $MasterNodeDiskSize 专用主节点磁盘大小
+     * @param string $MasterNodeType 专用主节点规格，与NodeType支持的规格相同
+     * @param integer $MasterNodeDiskSize 专用主节点磁盘大小， 单位GB（系统默认配置为50GB,暂不支持自定义）
      * @param boolean $ForceRestart 更新配置时是否强制重启
+     * @param CosBackup $CosBackup COS自动备份信息
      */
     function __construct()
     {
@@ -205,6 +225,11 @@ ES.S1.4XLARGE64: 16 核 64G
 
         if (array_key_exists("ForceRestart",$param) and $param["ForceRestart"] !== null) {
             $this->ForceRestart = $param["ForceRestart"];
+        }
+
+        if (array_key_exists("CosBackup",$param) and $param["CosBackup"] !== null) {
+            $this->CosBackup = new CosBackup();
+            $this->CosBackup->deserialize($param["CosBackup"]);
         }
     }
 }

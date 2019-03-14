@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区
  * @method integer getNodeNum() 获取节点数量
  * @method void setNodeNum(integer $NodeNum) 设置节点数量
- * @method string getEsVersion() 获取实例版本,当前只支持5.6.4
- * @method void setEsVersion(string $EsVersion) 设置实例版本,当前只支持5.6.4
+ * @method string getEsVersion() 获取实例版本,支持"5.6.4"、"6.4.3"
+ * @method void setEsVersion(string $EsVersion) 设置实例版本,支持"5.6.4"、"6.4.3"
  * @method string getNodeType() 获取节点规格： 
 ES.S1.SMALL2: 1核2G
 ES.S1.MEDIUM4: 2核4G
@@ -64,16 +64,10 @@ RENEW_FLAG_MANUAL：不自动续费，用户手动续费
 RENEW_FLAG_AUTO：自动续费
 RENEW_FLAG_MANUAL：不自动续费，用户手动续费
 如不传递该参数，普通用于默认不自动续费，SVIP用户自动续费
- * @method string getDiskType() 获取节点存储类型,取值范围:  
-LOCAL_BASIC: 本地硬盘  
-LOCAL_SSD: 本地SSD硬盘，默认值  
-CLOUD_BASIC: 普通云硬盘  
+ * @method string getDiskType() 获取节点存储类型,取值范围:    
 CLOUD_PREMIUM: 高硬能云硬盘  
 CLOUD_SSD: SSD云硬盘
- * @method void setDiskType(string $DiskType) 设置节点存储类型,取值范围:  
-LOCAL_BASIC: 本地硬盘  
-LOCAL_SSD: 本地SSD硬盘，默认值  
-CLOUD_BASIC: 普通云硬盘  
+ * @method void setDiskType(string $DiskType) 设置节点存储类型,取值范围:    
 CLOUD_PREMIUM: 高硬能云硬盘  
 CLOUD_SSD: SSD云硬盘
  * @method string getTimeUnit() 获取计费时长单位，当前只支持“m”，表示月
@@ -86,10 +80,12 @@ CLOUD_SSD: SSD云硬盘
  * @method void setEnableDedicatedMaster(boolean $EnableDedicatedMaster) 设置是否创建专用主节点
  * @method integer getMasterNodeNum() 获取专用主节点个数
  * @method void setMasterNodeNum(integer $MasterNodeNum) 设置专用主节点个数
- * @method string getMasterNodeType() 获取专用主节点类型
- * @method void setMasterNodeType(string $MasterNodeType) 设置专用主节点类型
- * @method integer getMasterNodeDiskSize() 获取专用主节点磁盘大小
- * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) 设置专用主节点磁盘大小
+ * @method string getMasterNodeType() 获取专用主节点类型，与NodeType支持的规格相同
+ * @method void setMasterNodeType(string $MasterNodeType) 设置专用主节点类型，与NodeType支持的规格相同
+ * @method integer getMasterNodeDiskSize() 获取专用主节点磁盘大小，单位GB（系统默认配置50GB，暂不支持自定义）
+ * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) 设置专用主节点磁盘大小，单位GB（系统默认配置50GB，暂不支持自定义）
+ * @method string getClusterNameInConf() 获取配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
+ * @method void setClusterNameInConf(string $ClusterNameInConf) 设置配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
  */
 
 /**
@@ -108,7 +104,7 @@ class CreateInstanceRequest extends AbstractModel
     public $NodeNum;
 
     /**
-     * @var string 实例版本,当前只支持5.6.4
+     * @var string 实例版本,支持"5.6.4"、"6.4.3"
      */
     public $EsVersion;
 
@@ -169,10 +165,7 @@ RENEW_FLAG_MANUAL：不自动续费，用户手动续费
     public $RenewFlag;
 
     /**
-     * @var string 节点存储类型,取值范围:  
-LOCAL_BASIC: 本地硬盘  
-LOCAL_SSD: 本地SSD硬盘，默认值  
-CLOUD_BASIC: 普通云硬盘  
+     * @var string 节点存储类型,取值范围:    
 CLOUD_PREMIUM: 高硬能云硬盘  
 CLOUD_SSD: SSD云硬盘
      */
@@ -204,18 +197,23 @@ CLOUD_SSD: SSD云硬盘
     public $MasterNodeNum;
 
     /**
-     * @var string 专用主节点类型
+     * @var string 专用主节点类型，与NodeType支持的规格相同
      */
     public $MasterNodeType;
 
     /**
-     * @var integer 专用主节点磁盘大小
+     * @var integer 专用主节点磁盘大小，单位GB（系统默认配置50GB，暂不支持自定义）
      */
     public $MasterNodeDiskSize;
+
+    /**
+     * @var string 配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
+     */
+    public $ClusterNameInConf;
     /**
      * @param string $Zone 可用区
      * @param integer $NodeNum 节点数量
-     * @param string $EsVersion 实例版本,当前只支持5.6.4
+     * @param string $EsVersion 实例版本,支持"5.6.4"、"6.4.3"
      * @param string $NodeType 节点规格： 
 ES.S1.SMALL2: 1核2G
 ES.S1.MEDIUM4: 2核4G
@@ -236,10 +234,7 @@ POSTPAID_BY_HOUR：按小时后付费，默认值
 RENEW_FLAG_AUTO：自动续费
 RENEW_FLAG_MANUAL：不自动续费，用户手动续费
 如不传递该参数，普通用于默认不自动续费，SVIP用户自动续费
-     * @param string $DiskType 节点存储类型,取值范围:  
-LOCAL_BASIC: 本地硬盘  
-LOCAL_SSD: 本地SSD硬盘，默认值  
-CLOUD_BASIC: 普通云硬盘  
+     * @param string $DiskType 节点存储类型,取值范围:    
 CLOUD_PREMIUM: 高硬能云硬盘  
 CLOUD_SSD: SSD云硬盘
      * @param string $TimeUnit 计费时长单位，当前只支持“m”，表示月
@@ -247,8 +242,9 @@ CLOUD_SSD: SSD云硬盘
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券
      * @param boolean $EnableDedicatedMaster 是否创建专用主节点
      * @param integer $MasterNodeNum 专用主节点个数
-     * @param string $MasterNodeType 专用主节点类型
-     * @param integer $MasterNodeDiskSize 专用主节点磁盘大小
+     * @param string $MasterNodeType 专用主节点类型，与NodeType支持的规格相同
+     * @param integer $MasterNodeDiskSize 专用主节点磁盘大小，单位GB（系统默认配置50GB，暂不支持自定义）
+     * @param string $ClusterNameInConf 配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
      */
     function __construct()
     {
@@ -340,6 +336,10 @@ CLOUD_SSD: SSD云硬盘
 
         if (array_key_exists("MasterNodeDiskSize",$param) and $param["MasterNodeDiskSize"] !== null) {
             $this->MasterNodeDiskSize = $param["MasterNodeDiskSize"];
+        }
+
+        if (array_key_exists("ClusterNameInConf",$param) and $param["ClusterNameInConf"] !== null) {
+            $this->ClusterNameInConf = $param["ClusterNameInConf"];
         }
     }
 }

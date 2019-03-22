@@ -18,8 +18,10 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method Trigger getTriggerInfo() 获取触发器信息
+ * @method void setTriggerInfo(Trigger $TriggerInfo) 设置触发器信息
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -28,11 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class CreateTriggerResponse extends AbstractModel
 {
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var Trigger 触发器信息
+     */
+    public $TriggerInfo;
+
+    /**
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param Trigger $TriggerInfo 触发器信息
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,6 +54,11 @@ class CreateTriggerResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TriggerInfo",$param) and $param["TriggerInfo"] !== null) {
+            $this->TriggerInfo = new Trigger();
+            $this->TriggerInfo->deserialize($param["TriggerInfo"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

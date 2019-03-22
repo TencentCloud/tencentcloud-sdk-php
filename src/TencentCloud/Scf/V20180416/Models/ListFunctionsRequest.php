@@ -28,6 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数据长度，默认值为 20
  * @method string getSearchKey() 获取支持FunctionName模糊匹配
  * @method void setSearchKey(string $SearchKey) 设置支持FunctionName模糊匹配
+ * @method string getDescription() 获取函数描述，支持模糊搜索
+ * @method void setDescription(string $Description) 设置函数描述，支持模糊搜索
+ * @method array getFilters() 获取过滤条件。
+- tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+
+每次请求的Filters的上限为10，Filter.Values的上限为5。
+ * @method void setFilters(array $Filters) 设置过滤条件。
+- tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+
+每次请求的Filters的上限为10，Filter.Values的上限为5。
  */
 
 /**
@@ -59,12 +69,30 @@ class ListFunctionsRequest extends AbstractModel
      * @var string 支持FunctionName模糊匹配
      */
     public $SearchKey;
+
+    /**
+     * @var string 函数描述，支持模糊搜索
+     */
+    public $Description;
+
+    /**
+     * @var array 过滤条件。
+- tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+
+每次请求的Filters的上限为10，Filter.Values的上限为5。
+     */
+    public $Filters;
     /**
      * @param string $Order 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
      * @param string $Orderby 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime, FunctionName
      * @param integer $Offset 数据偏移量，默认值为 0
      * @param integer $Limit 返回数据长度，默认值为 20
      * @param string $SearchKey 支持FunctionName模糊匹配
+     * @param string $Description 函数描述，支持模糊搜索
+     * @param array $Filters 过滤条件。
+- tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+
+每次请求的Filters的上限为10，Filter.Values的上限为5。
      */
     function __construct()
     {
@@ -96,6 +124,19 @@ class ListFunctionsRequest extends AbstractModel
 
         if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
             $this->SearchKey = $param["SearchKey"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

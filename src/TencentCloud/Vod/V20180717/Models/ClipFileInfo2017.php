@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
 <li>0：成功；</li>
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getMessage() 获取错误描述。
+ * @method string getMessage() 获取错误描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMessage(float $Message) 设置错误描述。
+ * @method void setMessage(string $Message) 设置错误描述。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取输出目标文件的文件 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -58,7 +58,7 @@ class ClipFileInfo2017 extends AbstractModel
     public $ErrCode;
 
     /**
-     * @var float 错误描述。
+     * @var string 错误描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
@@ -85,7 +85,7 @@ class ClipFileInfo2017 extends AbstractModel
 <li>0：成功；</li>
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Message 错误描述。
+     * @param string $Message 错误描述。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 输出目标文件的文件 ID。
 注意：此字段可能返回 null，表示取不到有效值。

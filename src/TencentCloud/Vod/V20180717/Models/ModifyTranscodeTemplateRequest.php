@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getDefinition() 获取转码模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置转码模板唯一标识。
- * @method string getContainer() 获取封装格式，可选值：mp4、flv、hls、mp3、flac、ogg。其中，mp3、flac、ogg 为纯音频文件。
- * @method void setContainer(string $Container) 设置封装格式，可选值：mp4、flv、hls、mp3、flac、ogg。其中，mp3、flac、ogg 为纯音频文件。
+ * @method string getContainer() 获取封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
+ * @method void setContainer(string $Container) 设置封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
  * @method string getName() 获取转码模板名称，长度限制：64 个字符。
  * @method void setName(string $Name) 设置转码模板名称，长度限制：64 个字符。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字节。
@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoveAudio(integer $RemoveAudio) 设置是否去除音频数据，可选值：
 <li>0：保留</li>
 <li>1：去除</li>
- * @method VideoTemplateInfo getVideoTemplate() 获取视频流配置参数。
- * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) 设置视频流配置参数。
- * @method AudioTemplateInfo getAudioTemplate() 获取音频流配置参数。
- * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) 设置音频流配置参数。
+ * @method VideoTemplateInfoForUpdate getVideoTemplate() 获取视频流配置参数。
+ * @method void setVideoTemplate(VideoTemplateInfoForUpdate $VideoTemplate) 设置视频流配置参数。
+ * @method AudioTemplateInfoForUpdate getAudioTemplate() 获取音频流配置参数。
+ * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) 设置音频流配置参数。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
@@ -57,7 +57,7 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
     public $Definition;
 
     /**
-     * @var string 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg。其中，mp3、flac、ogg 为纯音频文件。
+     * @var string 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      */
     public $Container;
 
@@ -86,12 +86,12 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
     public $RemoveAudio;
 
     /**
-     * @var VideoTemplateInfo 视频流配置参数。
+     * @var VideoTemplateInfoForUpdate 视频流配置参数。
      */
     public $VideoTemplate;
 
     /**
-     * @var AudioTemplateInfo 音频流配置参数。
+     * @var AudioTemplateInfoForUpdate 音频流配置参数。
      */
     public $AudioTemplate;
 
@@ -101,7 +101,7 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
     public $SubAppId;
     /**
      * @param integer $Definition 转码模板唯一标识。
-     * @param string $Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg。其中，mp3、flac、ogg 为纯音频文件。
+     * @param string $Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      * @param string $Name 转码模板名称，长度限制：64 个字符。
      * @param string $Comment 模板描述信息，长度限制：256 个字节。
      * @param integer $RemoveVideo 是否去除视频数据，可选值：
@@ -110,8 +110,8 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
      * @param integer $RemoveAudio 是否去除音频数据，可选值：
 <li>0：保留</li>
 <li>1：去除</li>
-     * @param VideoTemplateInfo $VideoTemplate 视频流配置参数。
-     * @param AudioTemplateInfo $AudioTemplate 音频流配置参数。
+     * @param VideoTemplateInfoForUpdate $VideoTemplate 视频流配置参数。
+     * @param AudioTemplateInfoForUpdate $AudioTemplate 音频流配置参数。
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
@@ -151,12 +151,12 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
         }
 
         if (array_key_exists("VideoTemplate",$param) and $param["VideoTemplate"] !== null) {
-            $this->VideoTemplate = new VideoTemplateInfo();
+            $this->VideoTemplate = new VideoTemplateInfoForUpdate();
             $this->VideoTemplate->deserialize($param["VideoTemplate"]);
         }
 
         if (array_key_exists("AudioTemplate",$param) and $param["AudioTemplate"] !== null) {
-            $this->AudioTemplate = new AudioTemplateInfo();
+            $this->AudioTemplate = new AudioTemplateInfoForUpdate();
             $this->AudioTemplate->deserialize($param["AudioTemplate"]);
         }
 

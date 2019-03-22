@@ -66,9 +66,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEditMediaCompleteEvent(EditMediaTask $EditMediaCompleteEvent) 设置视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method WechatPublishTask getWechatPublishComplete() 获取微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+ * @method WechatPublishTask getWechatPublishCompleteEvent() 获取微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWechatPublishComplete(WechatPublishTask $WechatPublishComplete) 设置微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+ * @method void setWechatPublishCompleteEvent(WechatPublishTask $WechatPublishCompleteEvent) 设置微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method TranscodeTask2017 getTranscodeCompleteEvent() 获取视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -153,7 +153,7 @@ class EventContent extends AbstractModel
      * @var WechatPublishTask 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $WechatPublishComplete;
+    public $WechatPublishCompleteEvent;
 
     /**
      * @var TranscodeTask2017 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
@@ -209,7 +209,7 @@ class EventContent extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EditMediaTask $EditMediaCompleteEvent 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WechatPublishTask $WechatPublishComplete 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+     * @param WechatPublishTask $WechatPublishCompleteEvent 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeTask2017 $TranscodeCompleteEvent 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -267,9 +267,9 @@ class EventContent extends AbstractModel
             $this->EditMediaCompleteEvent->deserialize($param["EditMediaCompleteEvent"]);
         }
 
-        if (array_key_exists("WechatPublishComplete",$param) and $param["WechatPublishComplete"] !== null) {
-            $this->WechatPublishComplete = new WechatPublishTask();
-            $this->WechatPublishComplete->deserialize($param["WechatPublishComplete"]);
+        if (array_key_exists("WechatPublishCompleteEvent",$param) and $param["WechatPublishCompleteEvent"] !== null) {
+            $this->WechatPublishCompleteEvent = new WechatPublishTask();
+            $this->WechatPublishCompleteEvent->deserialize($param["WechatPublishCompleteEvent"]);
         }
 
         if (array_key_exists("TranscodeCompleteEvent",$param) and $param["TranscodeCompleteEvent"] !== null) {

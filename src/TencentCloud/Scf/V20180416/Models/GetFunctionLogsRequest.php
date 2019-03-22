@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置数据的偏移量，Offset+Limit不能大于10000
  * @method integer getLimit() 获取返回数据的长度，Offset+Limit不能大于10000
  * @method void setLimit(integer $Limit) 设置返回数据的长度，Offset+Limit不能大于10000
- * @method string getOrder() 获取以升序还是降序的方式对日志进行排序，可选值 desc和 acs
- * @method void setOrder(string $Order) 设置以升序还是降序的方式对日志进行排序，可选值 desc和 acs
- * @method string getOrderBy() 获取根据某个字段排序日志,支持以下字段：startTime、functionName、requestId、duration和 memUsage
- * @method void setOrderBy(string $OrderBy) 设置根据某个字段排序日志,支持以下字段：startTime、functionName、requestId、duration和 memUsage
- * @method Filter getFilter() 获取日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
- * @method void setFilter(Filter $Filter) 设置日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
+ * @method string getOrder() 获取以升序还是降序的方式对日志进行排序，可选值 desc和 asc
+ * @method void setOrder(string $Order) 设置以升序还是降序的方式对日志进行排序，可选值 desc和 asc
+ * @method string getOrderBy() 获取根据某个字段排序日志,支持以下字段：function_name, duration, mem_usage, start_time
+ * @method void setOrderBy(string $OrderBy) 设置根据某个字段排序日志,支持以下字段：function_name, duration, mem_usage, start_time
+ * @method LogFilter getFilter() 获取日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
+ * @method void setFilter(LogFilter $Filter) 设置日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
  * @method string getQualifier() 获取函数的版本
  * @method void setQualifier(string $Qualifier) 设置函数的版本
  * @method string getFunctionRequestId() 获取执行该函数对应的requestId
@@ -61,17 +61,17 @@ class GetFunctionLogsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 以升序还是降序的方式对日志进行排序，可选值 desc和 acs
+     * @var string 以升序还是降序的方式对日志进行排序，可选值 desc和 asc
      */
     public $Order;
 
     /**
-     * @var string 根据某个字段排序日志,支持以下字段：startTime、functionName、requestId、duration和 memUsage
+     * @var string 根据某个字段排序日志,支持以下字段：function_name, duration, mem_usage, start_time
      */
     public $OrderBy;
 
     /**
-     * @var Filter 日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
+     * @var LogFilter 日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
      */
     public $Filter;
 
@@ -98,9 +98,9 @@ class GetFunctionLogsRequest extends AbstractModel
      * @param string $FunctionName 函数的名称
      * @param integer $Offset 数据的偏移量，Offset+Limit不能大于10000
      * @param integer $Limit 返回数据的长度，Offset+Limit不能大于10000
-     * @param string $Order 以升序还是降序的方式对日志进行排序，可选值 desc和 acs
-     * @param string $OrderBy 根据某个字段排序日志,支持以下字段：startTime、functionName、requestId、duration和 memUsage
-     * @param Filter $Filter 日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
+     * @param string $Order 以升序还是降序的方式对日志进行排序，可选值 desc和 asc
+     * @param string $OrderBy 根据某个字段排序日志,支持以下字段：function_name, duration, mem_usage, start_time
+     * @param LogFilter $Filter 日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
      * @param string $Qualifier 函数的版本
      * @param string $FunctionRequestId 执行该函数对应的requestId
      * @param string $StartTime 查询的具体日期，例如：2017-05-16 20:00:00，只能与endtime相差一天之内
@@ -139,7 +139,7 @@ class GetFunctionLogsRequest extends AbstractModel
         }
 
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
-            $this->Filter = new Filter();
+            $this->Filter = new LogFilter();
             $this->Filter->deserialize($param["Filter"]);
         }
 

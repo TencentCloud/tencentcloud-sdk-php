@@ -18,9 +18,9 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method MediaAiAnalysisTagItem getTagSet() 获取视频智能标签列表。
+ * @method array getTagSet() 获取视频智能标签列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTagSet(MediaAiAnalysisTagItem $TagSet) 设置视频智能标签列表。
+ * @method void setTagSet(array $TagSet) 设置视频智能标签列表。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
 class AiAnalysisTaskTagOutput extends AbstractModel
 {
     /**
-     * @var MediaAiAnalysisTagItem 视频智能标签列表。
+     * @var array 视频智能标签列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
     /**
-     * @param MediaAiAnalysisTagItem $TagSet 视频智能标签列表。
+     * @param array $TagSet 视频智能标签列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -51,8 +51,12 @@ class AiAnalysisTaskTagOutput extends AbstractModel
             return;
         }
         if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
-            $this->TagSet = new MediaAiAnalysisTagItem();
-            $this->TagSet->deserialize($param["TagSet"]);
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new MediaAiAnalysisTagItem();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

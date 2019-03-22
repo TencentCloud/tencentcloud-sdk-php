@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItemString(string $ItemString) 设置识别的算式
  * @method ItemCoord getItemCoord() 获取识别的算式在图片上的位置信息
  * @method void setItemCoord(ItemCoord $ItemCoord) 设置识别的算式在图片上的位置信息
+ * @method string getAnswer() 获取推荐的答案
+ * @method void setAnswer(string $Answer) 设置推荐的答案
  */
 
 /**
@@ -45,10 +47,16 @@ class Item extends AbstractModel
      * @var ItemCoord 识别的算式在图片上的位置信息
      */
     public $ItemCoord;
+
+    /**
+     * @var string 推荐的答案
+     */
+    public $Answer;
     /**
      * @param string $Item 识别的算式是否正确
      * @param string $ItemString 识别的算式
      * @param ItemCoord $ItemCoord 识别的算式在图片上的位置信息
+     * @param string $Answer 推荐的答案
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class Item extends AbstractModel
         if (array_key_exists("ItemCoord",$param) and $param["ItemCoord"] !== null) {
             $this->ItemCoord = new ItemCoord();
             $this->ItemCoord->deserialize($param["ItemCoord"]);
+        }
+
+        if (array_key_exists("Answer",$param) and $param["Answer"] !== null) {
+            $this->Answer = $param["Answer"];
         }
     }
 }

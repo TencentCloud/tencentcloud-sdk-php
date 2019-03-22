@@ -31,9 +31,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDuration() 获取通话时长。
  * @method void setDuration(integer $Duration) 设置通话时长。
  * @method string getProductId() 获取产品ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(string $ProductId) 设置产品ID。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordCosUrl() 获取录音下载链接。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordCosUrl(string $RecordCosUrl) 设置录音下载链接。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -73,11 +77,13 @@ class SingleRecord extends AbstractModel
 
     /**
      * @var string 产品ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductId;
 
     /**
      * @var string 录音下载链接。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordCosUrl;
     /**
@@ -88,7 +94,9 @@ class SingleRecord extends AbstractModel
      * @param string $Direction 呼叫方向，O为呼出，I为呼入。
      * @param integer $Duration 通话时长。
      * @param string $ProductId 产品ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordCosUrl 录音下载链接。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

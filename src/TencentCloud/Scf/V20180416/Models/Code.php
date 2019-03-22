@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZipFile(string $ZipFile) 设置包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
  * @method string getCosBucketRegion() 获取对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
  * @method void setCosBucketRegion(string $CosBucketRegion) 设置对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
+ * @method string getDemoId() 获取如果是通过Demo创建的话，需要传入DemoId
+ * @method void setDemoId(string $DemoId) 设置如果是通过Demo创建的话，需要传入DemoId
+ * @method string getTempCosObjectName() 获取如果是从TempCos创建的话，需要传入TempCosObjectName
+ * @method void setTempCosObjectName(string $TempCosObjectName) 设置如果是从TempCos创建的话，需要传入TempCosObjectName
  */
 
 /**
@@ -52,11 +56,23 @@ class Code extends AbstractModel
      * @var string 对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
      */
     public $CosBucketRegion;
+
+    /**
+     * @var string 如果是通过Demo创建的话，需要传入DemoId
+     */
+    public $DemoId;
+
+    /**
+     * @var string 如果是从TempCos创建的话，需要传入TempCosObjectName
+     */
+    public $TempCosObjectName;
     /**
      * @param string $CosBucketName 对象存储桶名称
      * @param string $CosObjectName 对象存储对象路径
      * @param string $ZipFile 包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
      * @param string $CosBucketRegion 对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
+     * @param string $DemoId 如果是通过Demo创建的话，需要传入DemoId
+     * @param string $TempCosObjectName 如果是从TempCos创建的话，需要传入TempCosObjectName
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class Code extends AbstractModel
 
         if (array_key_exists("CosBucketRegion",$param) and $param["CosBucketRegion"] !== null) {
             $this->CosBucketRegion = $param["CosBucketRegion"];
+        }
+
+        if (array_key_exists("DemoId",$param) and $param["DemoId"] !== null) {
+            $this->DemoId = $param["DemoId"];
+        }
+
+        if (array_key_exists("TempCosObjectName",$param) and $param["TempCosObjectName"] !== null) {
+            $this->TempCosObjectName = $param["TempCosObjectName"];
         }
     }
 }

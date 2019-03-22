@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthSwitch(integer $HealthSwitch) 设置是否开始对接收机的健康检查。0：关闭，非0：开启。
  * @method integer getHealthNum() 获取健康阈值。
  * @method void setHealthNum(integer $HealthNum) 设置健康阈值。
- * @method integer getUnhealthNum() 获取不健康阀值。
- * @method void setUnhealthNum(integer $UnhealthNum) 设置不健康阀值。
+ * @method integer getUnhealthNum() 获取不健康阈值。
+ * @method void setUnhealthNum(integer $UnhealthNum) 设置不健康阈值。
  * @method integer getIntervalTime() 获取检查间隔。
  * @method void setIntervalTime(integer $IntervalTime) 设置检查间隔。
  * @method string getHttpCheckDomain() 获取检查域名。
@@ -84,7 +84,7 @@ class TrafficMirror extends AbstractModel
     public $HealthNum;
 
     /**
-     * @var integer 不健康阀值。
+     * @var integer 不健康阈值。
      */
     public $UnhealthNum;
 
@@ -129,7 +129,7 @@ class TrafficMirror extends AbstractModel
      * @param string $LoadBalancerType 接收机负载均衡方式。wrr，ip_hash，wlc。
      * @param integer $HealthSwitch 是否开始对接收机的健康检查。0：关闭，非0：开启。
      * @param integer $HealthNum 健康阈值。
-     * @param integer $UnhealthNum 不健康阀值。
+     * @param integer $UnhealthNum 不健康阈值。
      * @param integer $IntervalTime 检查间隔。
      * @param string $HttpCheckDomain 检查域名。
      * @param string $HttpCheckPath 检查目录。

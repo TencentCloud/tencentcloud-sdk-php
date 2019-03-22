@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVodTaskId(string $VodTaskId) 设置剪辑固化后的视频任务流 ID。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MediaMetaData getMetaData() 获取剪辑后的视频元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetaData(MediaMetaData $MetaData) 设置剪辑后的视频元信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -55,6 +59,12 @@ class LiveRealTimeClipResponse extends AbstractModel
     public $VodTaskId;
 
     /**
+     * @var MediaMetaData 剪辑后的视频元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MetaData;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +73,8 @@ class LiveRealTimeClipResponse extends AbstractModel
      * @param string $FileId 剪辑固化后的视频的媒体文件的唯一标识。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VodTaskId 剪辑固化后的视频任务流 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaMetaData $MetaData 剪辑后的视频元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -88,6 +100,11 @@ class LiveRealTimeClipResponse extends AbstractModel
 
         if (array_key_exists("VodTaskId",$param) and $param["VodTaskId"] !== null) {
             $this->VodTaskId = $param["VodTaskId"];
+        }
+
+        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+            $this->MetaData = new MediaMetaData();
+            $this->MetaData->deserialize($param["MetaData"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

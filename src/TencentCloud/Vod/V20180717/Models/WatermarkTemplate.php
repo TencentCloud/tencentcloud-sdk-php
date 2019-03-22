@@ -48,9 +48,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageTemplate(ImageWatermarkTemplate $ImageTemplate) 设置图片水印模板，仅当 Type 为 image，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TextWatermarkTemplate getTextTemplate() 获取文字水印模板，仅当 Type 为 text，该字段有值。
+ * @method TextWatermarkTemplateInput getTextTemplate() 获取文字水印模板，仅当 Type 为 text，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTextTemplate(TextWatermarkTemplate $TextTemplate) 设置文字水印模板，仅当 Type 为 text，该字段有值。
+ * @method void setTextTemplate(TextWatermarkTemplateInput $TextTemplate) 设置文字水印模板，仅当 Type 为 text，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
@@ -117,7 +117,7 @@ class WatermarkTemplate extends AbstractModel
     public $ImageTemplate;
 
     /**
-     * @var TextWatermarkTemplate 文字水印模板，仅当 Type 为 text，该字段有值。
+     * @var TextWatermarkTemplateInput 文字水印模板，仅当 Type 为 text，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TextTemplate;
@@ -156,7 +156,7 @@ class WatermarkTemplate extends AbstractModel
 <li>当字符串以 px 结尾，表示水印 Top 为视频高度指定像素的位置，如 100px 表示 Top 为 100 像素。</li>
      * @param ImageWatermarkTemplate $ImageTemplate 图片水印模板，仅当 Type 为 image，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TextWatermarkTemplate $TextTemplate 文字水印模板，仅当 Type 为 text，该字段有值。
+     * @param TextWatermarkTemplateInput $TextTemplate 文字水印模板，仅当 Type 为 text，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
@@ -208,7 +208,7 @@ class WatermarkTemplate extends AbstractModel
         }
 
         if (array_key_exists("TextTemplate",$param) and $param["TextTemplate"] !== null) {
-            $this->TextTemplate = new TextWatermarkTemplate();
+            $this->TextTemplate = new TextWatermarkTemplateInput();
             $this->TextTemplate->deserialize($param["TextTemplate"]);
         }
 

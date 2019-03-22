@@ -25,17 +25,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
  * @method string getCoordinateOrigin() 获取原点位置，可选值：
-<li>topLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
-<li>topRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
-<li>bottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
-<li>bottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-目前，当 Type 为 image，该字段仅支持 topLeft。
+<li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
+<li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
+<li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
+<li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
+目前，当 Type 为 image，该字段仅支持 TopLeft。
  * @method void setCoordinateOrigin(string $CoordinateOrigin) 设置原点位置，可选值：
-<li>topLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
-<li>topRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
-<li>bottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
-<li>bottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-目前，当 Type 为 image，该字段仅支持 topLeft。
+<li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
+<li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
+<li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
+<li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
+目前，当 Type 为 image，该字段仅支持 TopLeft。
  * @method string getXPos() 获取水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Left 为视频宽度指定百分比的位置，如 10% 表示 Left 为视频宽度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Left 为视频宽度指定像素的位置，如 100px 表示 Left 为 100 像素。</li>
@@ -48,10 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setYPos(string $YPos) 设置水印原点距离视频图像坐标原点的垂直位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Top 为视频高度指定百分比的位置，如 10% 表示 Top 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Top 为视频高度指定像素的位置，如 100px 表示 Top 为 100 像素。</li>
- * @method ImageWatermarkInput getImageTemplate() 获取图片水印模板，该字段仅对图片水印模板有效。
- * @method void setImageTemplate(ImageWatermarkInput $ImageTemplate) 设置图片水印模板，该字段仅对图片水印模板有效。
- * @method TextWatermarkTemplate getTextTemplate() 获取文字水印模板，该字段仅对文字水印模板有效。
- * @method void setTextTemplate(TextWatermarkTemplate $TextTemplate) 设置文字水印模板，该字段仅对文字水印模板有效。
+ * @method ImageWatermarkInputForUpdate getImageTemplate() 获取图片水印模板，该字段仅对图片水印模板有效。
+ * @method void setImageTemplate(ImageWatermarkInputForUpdate $ImageTemplate) 设置图片水印模板，该字段仅对图片水印模板有效。
+ * @method TextWatermarkTemplateInputForUpdate getTextTemplate() 获取文字水印模板，该字段仅对文字水印模板有效。
+ * @method void setTextTemplate(TextWatermarkTemplateInputForUpdate $TextTemplate) 设置文字水印模板，该字段仅对文字水印模板有效。
+ * @method SvgWatermarkInputForUpdate getSvgTemplate() 获取SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
+ * @method void setSvgTemplate(SvgWatermarkInputForUpdate $SvgTemplate) 设置SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
@@ -78,11 +80,11 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
 
     /**
      * @var string 原点位置，可选值：
-<li>topLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
-<li>topRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
-<li>bottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
-<li>bottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-目前，当 Type 为 image，该字段仅支持 topLeft。
+<li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
+<li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
+<li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
+<li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
+目前，当 Type 为 image，该字段仅支持 TopLeft。
      */
     public $CoordinateOrigin;
 
@@ -101,14 +103,19 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
     public $YPos;
 
     /**
-     * @var ImageWatermarkInput 图片水印模板，该字段仅对图片水印模板有效。
+     * @var ImageWatermarkInputForUpdate 图片水印模板，该字段仅对图片水印模板有效。
      */
     public $ImageTemplate;
 
     /**
-     * @var TextWatermarkTemplate 文字水印模板，该字段仅对文字水印模板有效。
+     * @var TextWatermarkTemplateInputForUpdate 文字水印模板，该字段仅对文字水印模板有效。
      */
     public $TextTemplate;
+
+    /**
+     * @var SvgWatermarkInputForUpdate SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
+     */
+    public $SvgTemplate;
 
     /**
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
@@ -119,19 +126,20 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
      * @param string $Name 水印模板名称，长度限制：64 个字符。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
      * @param string $CoordinateOrigin 原点位置，可选值：
-<li>topLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
-<li>topRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
-<li>bottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
-<li>bottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-目前，当 Type 为 image，该字段仅支持 topLeft。
+<li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
+<li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
+<li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
+<li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
+目前，当 Type 为 image，该字段仅支持 TopLeft。
      * @param string $XPos 水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Left 为视频宽度指定百分比的位置，如 10% 表示 Left 为视频宽度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Left 为视频宽度指定像素的位置，如 100px 表示 Left 为 100 像素。</li>
      * @param string $YPos 水印原点距离视频图像坐标原点的垂直位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Top 为视频高度指定百分比的位置，如 10% 表示 Top 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Top 为视频高度指定像素的位置，如 100px 表示 Top 为 100 像素。</li>
-     * @param ImageWatermarkInput $ImageTemplate 图片水印模板，该字段仅对图片水印模板有效。
-     * @param TextWatermarkTemplate $TextTemplate 文字水印模板，该字段仅对文字水印模板有效。
+     * @param ImageWatermarkInputForUpdate $ImageTemplate 图片水印模板，该字段仅对图片水印模板有效。
+     * @param TextWatermarkTemplateInputForUpdate $TextTemplate 文字水印模板，该字段仅对文字水印模板有效。
+     * @param SvgWatermarkInputForUpdate $SvgTemplate SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
@@ -171,13 +179,18 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
         }
 
         if (array_key_exists("ImageTemplate",$param) and $param["ImageTemplate"] !== null) {
-            $this->ImageTemplate = new ImageWatermarkInput();
+            $this->ImageTemplate = new ImageWatermarkInputForUpdate();
             $this->ImageTemplate->deserialize($param["ImageTemplate"]);
         }
 
         if (array_key_exists("TextTemplate",$param) and $param["TextTemplate"] !== null) {
-            $this->TextTemplate = new TextWatermarkTemplate();
+            $this->TextTemplate = new TextWatermarkTemplateInputForUpdate();
             $this->TextTemplate->deserialize($param["TextTemplate"]);
+        }
+
+        if (array_key_exists("SvgTemplate",$param) and $param["SvgTemplate"] !== null) {
+            $this->SvgTemplate = new SvgWatermarkInputForUpdate();
+            $this->SvgTemplate->deserialize($param["SvgTemplate"]);
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

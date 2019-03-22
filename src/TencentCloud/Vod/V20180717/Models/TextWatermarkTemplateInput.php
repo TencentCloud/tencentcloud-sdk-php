@@ -37,7 +37,7 @@ use TencentCloud\Common\AbstractModel;
 /**
  *文字水印模板
  */
-class TextWatermarkTemplate extends AbstractModel
+class TextWatermarkTemplateInput extends AbstractModel
 {
     /**
      * @var string 字体类型，目前仅支持 arial.ttf。

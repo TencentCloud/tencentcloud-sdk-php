@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoverBySnapshotTaskSet(array $CoverBySnapshotTaskSet) 设置对视频截图做封面任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAdaptiveDynamicStreamingTaskSet() 获取对视频转自适应码流任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdaptiveDynamicStreamingTaskSet(array $AdaptiveDynamicStreamingTaskSet) 设置对视频转自适应码流任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -84,6 +88,12 @@ class MediaProcessTaskInput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CoverBySnapshotTaskSet;
+
+    /**
+     * @var array 对视频转自适应码流任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdaptiveDynamicStreamingTaskSet;
     /**
      * @param array $TranscodeTaskSet 视频转码任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -96,6 +106,8 @@ class MediaProcessTaskInput extends AbstractModel
      * @param array $ImageSpriteTaskSet 对视频截雪碧图任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CoverBySnapshotTaskSet 对视频截图做封面任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AdaptiveDynamicStreamingTaskSet 对视频转自适应码流任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -161,6 +173,15 @@ class MediaProcessTaskInput extends AbstractModel
                 $obj = new CoverBySnapshotTaskInput();
                 $obj->deserialize($value);
                 array_push($this->CoverBySnapshotTaskSet, $obj);
+            }
+        }
+
+        if (array_key_exists("AdaptiveDynamicStreamingTaskSet",$param) and $param["AdaptiveDynamicStreamingTaskSet"] !== null) {
+            $this->AdaptiveDynamicStreamingTaskSet = [];
+            foreach ($param["AdaptiveDynamicStreamingTaskSet"] as $key => $value){
+                $obj = new AdaptiveDynamicStreamingTaskInput();
+                $obj->deserialize($value);
+                array_push($this->AdaptiveDynamicStreamingTaskSet, $obj);
             }
         }
     }

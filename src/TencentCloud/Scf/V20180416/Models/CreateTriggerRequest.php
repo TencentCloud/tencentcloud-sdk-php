@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionName(string $FunctionName) 设置新建触发器绑定的函数名称
  * @method string getTriggerName() 获取新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是其他触发器，见具体触发器绑定参数的说明
  * @method void setTriggerName(string $TriggerName) 设置新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是其他触发器，见具体触发器绑定参数的说明
- * @method string getType() 获取触发器类型，目前支持 cos 、cmq、 timers、 ckafka类型
- * @method void setType(string $Type) 设置触发器类型，目前支持 cos 、cmq、 timers、 ckafka类型
+ * @method string getType() 获取触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
+ * @method void setType(string $Type) 设置触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
  * @method string getTriggerDesc() 获取触发器对应的参数，如果是 timer 类型的触发器其内容是 Linux cron 表达式，如果是其他触发器，见具体触发器说明
  * @method void setTriggerDesc(string $TriggerDesc) 设置触发器对应的参数，如果是 timer 类型的触发器其内容是 Linux cron 表达式，如果是其他触发器，见具体触发器说明
  * @method string getQualifier() 获取函数的版本
  * @method void setQualifier(string $Qualifier) 设置函数的版本
+ * @method string getEnable() 获取触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
+ * @method void setEnable(string $Enable) 设置触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
  */
 
 /**
@@ -46,7 +48,7 @@ class CreateTriggerRequest extends AbstractModel
     public $TriggerName;
 
     /**
-     * @var string 触发器类型，目前支持 cos 、cmq、 timers、 ckafka类型
+     * @var string 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
      */
     public $Type;
 
@@ -59,12 +61,18 @@ class CreateTriggerRequest extends AbstractModel
      * @var string 函数的版本
      */
     public $Qualifier;
+
+    /**
+     * @var string 触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
+     */
+    public $Enable;
     /**
      * @param string $FunctionName 新建触发器绑定的函数名称
      * @param string $TriggerName 新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是其他触发器，见具体触发器绑定参数的说明
-     * @param string $Type 触发器类型，目前支持 cos 、cmq、 timers、 ckafka类型
+     * @param string $Type 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
      * @param string $TriggerDesc 触发器对应的参数，如果是 timer 类型的触发器其内容是 Linux cron 表达式，如果是其他触发器，见具体触发器说明
      * @param string $Qualifier 函数的版本
+     * @param string $Enable 触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CreateTriggerRequest extends AbstractModel
 
         if (array_key_exists("Qualifier",$param) and $param["Qualifier"] !== null) {
             $this->Qualifier = $param["Qualifier"];
+        }
+
+        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
+            $this->Enable = $param["Enable"];
         }
     }
 }

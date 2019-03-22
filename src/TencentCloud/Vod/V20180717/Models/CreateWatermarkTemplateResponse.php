@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getDefinition() 获取水印模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置水印模板唯一标识。
- * @method string getImageUrl() 获取水印图片地址，仅当 Type 为 image，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageUrl(string $ImageUrl) 设置水印图片地址，仅当 Type 为 image，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getImageUrl() 获取水印图片地址，仅当 Type 为 image，该字段有效。
+ * @method void setImageUrl(string $ImageUrl) 设置水印图片地址，仅当 Type 为 image，该字段有效。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,8 +37,7 @@ class CreateWatermarkTemplateResponse extends AbstractModel
     public $Definition;
 
     /**
-     * @var string 水印图片地址，仅当 Type 为 image，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 水印图片地址，仅当 Type 为 image，该字段有效。
      */
     public $ImageUrl;
 
@@ -50,8 +47,7 @@ class CreateWatermarkTemplateResponse extends AbstractModel
     public $RequestId;
     /**
      * @param integer $Definition 水印模板唯一标识。
-     * @param string $ImageUrl 水印图片地址，仅当 Type 为 image，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ImageUrl 水印图片地址，仅当 Type 为 image，该字段有效。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

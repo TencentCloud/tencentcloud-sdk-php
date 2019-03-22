@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerName(string $TriggerName) 设置触发器名称
  * @method string getAddTime() 获取触发器创建时间
  * @method void setAddTime(string $AddTime) 设置触发器创建时间
+ * @method integer getEnable() 获取使能开关
+ * @method void setEnable(integer $Enable) 设置使能开关
+ * @method string getCustomArgument() 获取客户自定义参数
+ * @method void setCustomArgument(string $CustomArgument) 设置客户自定义参数
  */
 
 /**
@@ -59,12 +63,24 @@ class Trigger extends AbstractModel
      * @var string 触发器创建时间
      */
     public $AddTime;
+
+    /**
+     * @var integer 使能开关
+     */
+    public $Enable;
+
+    /**
+     * @var string 客户自定义参数
+     */
+    public $CustomArgument;
     /**
      * @param string $ModTime 触发器最后修改时间
      * @param string $Type 触发器类型
      * @param string $TriggerDesc 触发器详细配置
      * @param string $TriggerName 触发器名称
      * @param string $AddTime 触发器创建时间
+     * @param integer $Enable 使能开关
+     * @param string $CustomArgument 客户自定义参数
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class Trigger extends AbstractModel
 
         if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
             $this->AddTime = $param["AddTime"];
+        }
+
+        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
+            $this->Enable = $param["Enable"];
+        }
+
+        if (array_key_exists("CustomArgument",$param) and $param["CustomArgument"] !== null) {
+            $this->CustomArgument = $param["CustomArgument"];
         }
     }
 }

@@ -56,8 +56,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespace(string $Namespace) 设置函数的命名空间
  * @method string getRole() 获取函数绑定的角色
  * @method void setRole(string $Role) 设置函数绑定的角色
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getInstallDependency() 获取是否自动安装依赖
+ * @method void setInstallDependency(string $InstallDependency) 设置是否自动安装依赖
+ * @method string getStatus() 获取函数状态
+ * @method void setStatus(string $Status) 设置函数状态
+ * @method string getStatusDesc() 获取状态描述
+ * @method void setStatusDesc(string $StatusDesc) 设置状态描述
+ * @method string getClsLogsetId() 获取日志投递到的Cls日志集
+ * @method void setClsLogsetId(string $ClsLogsetId) 设置日志投递到的Cls日志集
+ * @method string getClsTopicId() 获取日志投递到的Cls Topic
+ * @method void setClsTopicId(string $ClsTopicId) 设置日志投递到的Cls Topic
+ * @method string getFunctionId() 获取函数ID
+ * @method void setFunctionId(string $FunctionId) 设置函数ID
+ * @method array getTags() 获取函数的标签列表
+ * @method void setTags(array $Tags) 设置函数的标签列表
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -161,7 +175,42 @@ class GetFunctionResponse extends AbstractModel
     public $Role;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 是否自动安装依赖
+     */
+    public $InstallDependency;
+
+    /**
+     * @var string 函数状态
+     */
+    public $Status;
+
+    /**
+     * @var string 状态描述
+     */
+    public $StatusDesc;
+
+    /**
+     * @var string 日志投递到的Cls日志集
+     */
+    public $ClsLogsetId;
+
+    /**
+     * @var string 日志投递到的Cls Topic
+     */
+    public $ClsTopicId;
+
+    /**
+     * @var string 函数ID
+     */
+    public $FunctionId;
+
+    /**
+     * @var array 函数的标签列表
+     */
+    public $Tags;
+
+    /**
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -184,7 +233,14 @@ class GetFunctionResponse extends AbstractModel
      * @param integer $ErrNo 代码错误码
      * @param string $Namespace 函数的命名空间
      * @param string $Role 函数绑定的角色
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $InstallDependency 是否自动安装依赖
+     * @param string $Status 函数状态
+     * @param string $StatusDesc 状态描述
+     * @param string $ClsLogsetId 日志投递到的Cls日志集
+     * @param string $ClsTopicId 日志投递到的Cls Topic
+     * @param string $FunctionId 函数ID
+     * @param array $Tags 函数的标签列表
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -279,6 +335,39 @@ class GetFunctionResponse extends AbstractModel
 
         if (array_key_exists("Role",$param) and $param["Role"] !== null) {
             $this->Role = $param["Role"];
+        }
+
+        if (array_key_exists("InstallDependency",$param) and $param["InstallDependency"] !== null) {
+            $this->InstallDependency = $param["InstallDependency"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
+            $this->StatusDesc = $param["StatusDesc"];
+        }
+
+        if (array_key_exists("ClsLogsetId",$param) and $param["ClsLogsetId"] !== null) {
+            $this->ClsLogsetId = $param["ClsLogsetId"];
+        }
+
+        if (array_key_exists("ClsTopicId",$param) and $param["ClsTopicId"] !== null) {
+            $this->ClsTopicId = $param["ClsTopicId"];
+        }
+
+        if (array_key_exists("FunctionId",$param) and $param["FunctionId"] !== null) {
+            $this->FunctionId = $param["FunctionId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

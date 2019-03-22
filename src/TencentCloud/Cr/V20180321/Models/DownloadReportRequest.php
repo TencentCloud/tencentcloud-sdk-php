@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperation(string $Operation) 设置操作名
  * @method string getReportDate() 获取报告日期
  * @method void setReportDate(string $ReportDate) 设置报告日期
+ * @method string getInstId() 获取实例ID，不传默认为系统分配的初始实例。
+ * @method void setInstId(string $InstId) 设置实例ID，不传默认为系统分配的初始实例。
  */
 
 /**
@@ -45,10 +47,16 @@ class DownloadReportRequest extends AbstractModel
      * @var string 报告日期
      */
     public $ReportDate;
+
+    /**
+     * @var string 实例ID，不传默认为系统分配的初始实例。
+     */
+    public $InstId;
     /**
      * @param string $Module 模块名
      * @param string $Operation 操作名
      * @param string $ReportDate 报告日期
+     * @param string $InstId 实例ID，不传默认为系统分配的初始实例。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DownloadReportRequest extends AbstractModel
 
         if (array_key_exists("ReportDate",$param) and $param["ReportDate"] !== null) {
             $this->ReportDate = $param["ReportDate"];
+        }
+
+        if (array_key_exists("InstId",$param) and $param["InstId"] !== null) {
+            $this->InstId = $param["InstId"];
         }
     }
 }

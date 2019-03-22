@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuntime(string $Runtime) 设置函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
  * @method VpcConfig getVpcConfig() 获取函数的私有网络配置
  * @method void setVpcConfig(VpcConfig $VpcConfig) 设置函数的私有网络配置
+ * @method string getClsLogsetId() 获取函数日志投递到的CLS LogsetID
+ * @method void setClsLogsetId(string $ClsLogsetId) 设置函数日志投递到的CLS LogsetID
+ * @method string getClsTopicId() 获取函数日志投递到的CLS TopicID
+ * @method void setClsTopicId(string $ClsTopicId) 设置函数日志投递到的CLS TopicID
  */
 
 /**
@@ -87,6 +91,16 @@ class CreateFunctionRequest extends AbstractModel
      * @var VpcConfig 函数的私有网络配置
      */
     public $VpcConfig;
+
+    /**
+     * @var string 函数日志投递到的CLS LogsetID
+     */
+    public $ClsLogsetId;
+
+    /**
+     * @var string 函数日志投递到的CLS TopicID
+     */
+    public $ClsTopicId;
     /**
      * @param string $FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      * @param Code $Code 函数的代码. 注意：不能同时指定Cos与ZipFile
@@ -97,6 +111,8 @@ class CreateFunctionRequest extends AbstractModel
      * @param Environment $Environment 函数的环境变量
      * @param string $Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
      * @param VpcConfig $VpcConfig 函数的私有网络配置
+     * @param string $ClsLogsetId 函数日志投递到的CLS LogsetID
+     * @param string $ClsTopicId 函数日志投递到的CLS TopicID
      */
     function __construct()
     {
@@ -147,6 +163,14 @@ class CreateFunctionRequest extends AbstractModel
         if (array_key_exists("VpcConfig",$param) and $param["VpcConfig"] !== null) {
             $this->VpcConfig = new VpcConfig();
             $this->VpcConfig->deserialize($param["VpcConfig"]);
+        }
+
+        if (array_key_exists("ClsLogsetId",$param) and $param["ClsLogsetId"] !== null) {
+            $this->ClsLogsetId = $param["ClsLogsetId"];
+        }
+
+        if (array_key_exists("ClsTopicId",$param) and $param["ClsTopicId"] !== null) {
+            $this->ClsTopicId = $param["ClsTopicId"];
         }
     }
 }

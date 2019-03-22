@@ -21,7 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDefinition() 获取水印模板 ID。
  * @method void setDefinition(integer $Definition) 设置水印模板 ID。
  * @method string getTextContent() 获取文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTextContent(string $TextContent) 设置文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSvgContent() 获取SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSvgContent(string $SvgContent) 设置SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -36,11 +42,21 @@ class WatermarkInput extends AbstractModel
 
     /**
      * @var string 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TextContent;
+
+    /**
+     * @var string SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SvgContent;
     /**
      * @param integer $Definition 水印模板 ID。
      * @param string $TextContent 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SvgContent SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +76,10 @@ class WatermarkInput extends AbstractModel
 
         if (array_key_exists("TextContent",$param) and $param["TextContent"] !== null) {
             $this->TextContent = $param["TextContent"];
+        }
+
+        if (array_key_exists("SvgContent",$param) and $param["SvgContent"] !== null) {
+            $this->SvgContent = $param["SvgContent"];
         }
     }
 }

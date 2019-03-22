@@ -18,11 +18,11 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getErrCode() 获取错误码
+ * @method integer getErrCode() 获取错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrCode(string $ErrCode) 设置错误码
+ * @method void setErrCode(integer $ErrCode) 设置错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class SnapshotByTimeOffset2017 extends AbstractModel
 {
     /**
-     * @var string 错误码
+     * @var integer 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -61,7 +61,7 @@ class SnapshotByTimeOffset2017 extends AbstractModel
      */
     public $Url;
     /**
-     * @param string $ErrCode 错误码
+     * @param integer $ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。

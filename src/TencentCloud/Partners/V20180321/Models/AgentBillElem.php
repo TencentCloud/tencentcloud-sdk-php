@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAmt(integer $Amt) 设置支付金额，单位分
  * @method string getPayerMode() 获取agentpay：代付；selfpay：自付
  * @method void setPayerMode(string $PayerMode) 设置agentpay：代付；selfpay：自付
+ * @method string getClientType() 获取客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientType(string $ClientType) 设置客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProjectType() 获取项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectType(string $ProjectType) 设置项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -94,6 +102,18 @@ class AgentBillElem extends AbstractModel
      * @var string agentpay：代付；selfpay：自付
      */
     public $PayerMode;
+
+    /**
+     * @var string 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientType;
+
+    /**
+     * @var string 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectType;
     /**
      * @param string $Uin 代理商账号ID
      * @param string $OrderId 订单号，仅对预付费账单有意义
@@ -105,6 +125,10 @@ class AgentBillElem extends AbstractModel
      * @param string $SettleMonth 支付月份
      * @param integer $Amt 支付金额，单位分
      * @param string $PayerMode agentpay：代付；selfpay：自付
+     * @param string $ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -156,6 +180,14 @@ class AgentBillElem extends AbstractModel
 
         if (array_key_exists("PayerMode",$param) and $param["PayerMode"] !== null) {
             $this->PayerMode = $param["PayerMode"];
+        }
+
+        if (array_key_exists("ClientType",$param) and $param["ClientType"] !== null) {
+            $this->ClientType = $param["ClientType"];
+        }
+
+        if (array_key_exists("ProjectType",$param) and $param["ProjectType"] !== null) {
+            $this->ProjectType = $param["ProjectType"];
         }
     }
 }

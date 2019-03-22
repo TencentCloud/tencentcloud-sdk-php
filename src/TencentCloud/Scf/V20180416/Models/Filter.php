@@ -18,21 +18,31 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRetCode() 获取filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，无输入则返回所有日志。
- * @method void setRetCode(string $RetCode) 设置filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，无输入则返回所有日志。
+ * @method string getName() 获取需要过滤的字段。
+ * @method void setName(string $Name) 设置需要过滤的字段。
+ * @method array getValues() 获取字段的过滤值。
+ * @method void setValues(array $Values) 设置字段的过滤值。
  */
 
 /**
- *日志过滤条件，用于区分正确与错误日志
+ *描述键值对过滤器，用于条件过滤查询。例如过滤ID、名称、状态等
+若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，无输入则返回所有日志。
+     * @var string 需要过滤的字段。
      */
-    public $RetCode;
+    public $Name;
+
     /**
-     * @param string $RetCode filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，无输入则返回所有日志。
+     * @var array 字段的过滤值。
+     */
+    public $Values;
+    /**
+     * @param string $Name 需要过滤的字段。
+     * @param array $Values 字段的过滤值。
      */
     function __construct()
     {
@@ -46,8 +56,12 @@ class Filter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RetCode",$param) and $param["RetCode"] !== null) {
-            $this->RetCode = $param["RetCode"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

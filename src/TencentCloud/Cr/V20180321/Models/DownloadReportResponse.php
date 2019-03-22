@@ -18,12 +18,30 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDailyReportUrl() 获取日报下载地址
- * @method void setDailyReportUrl(string $DailyReportUrl) 设置日报下载地址
- * @method string getResultReportUrl() 获取结果下载地址
- * @method void setResultReportUrl(string $ResultReportUrl) 设置结果下载地址
- * @method string getDetailReportUrl() 获取明细下载地址
- * @method void setDetailReportUrl(string $DetailReportUrl) 设置明细下载地址
+ * @method string getDailyReportUrl() 获取催收日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDailyReportUrl(string $DailyReportUrl) 设置催收日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResultReportUrl() 获取催收结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResultReportUrl(string $ResultReportUrl) 设置催收结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDetailReportUrl() 获取催收明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDetailReportUrl(string $DetailReportUrl) 设置催收明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCallbackDailyReportUrl() 获取回访日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCallbackDailyReportUrl(string $CallbackDailyReportUrl) 设置回访日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCallbackResultReportUrl() 获取回访结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCallbackResultReportUrl(string $CallbackResultReportUrl) 设置回访结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCallbackDetailReportUrl() 获取回访明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCallbackDetailReportUrl(string $CallbackDetailReportUrl) 设置回访明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -34,28 +52,58 @@ use TencentCloud\Common\AbstractModel;
 class DownloadReportResponse extends AbstractModel
 {
     /**
-     * @var string 日报下载地址
+     * @var string 催收日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DailyReportUrl;
 
     /**
-     * @var string 结果下载地址
+     * @var string 催收结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultReportUrl;
 
     /**
-     * @var string 明细下载地址
+     * @var string 催收明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetailReportUrl;
+
+    /**
+     * @var string 回访日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CallbackDailyReportUrl;
+
+    /**
+     * @var string 回访结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CallbackResultReportUrl;
+
+    /**
+     * @var string 回访明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CallbackDetailReportUrl;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $DailyReportUrl 日报下载地址
-     * @param string $ResultReportUrl 结果下载地址
-     * @param string $DetailReportUrl 明细下载地址
+     * @param string $DailyReportUrl 催收日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResultReportUrl 催收结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DetailReportUrl 催收明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CallbackDailyReportUrl 回访日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CallbackResultReportUrl 回访结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CallbackDetailReportUrl 回访明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -80,6 +128,18 @@ class DownloadReportResponse extends AbstractModel
 
         if (array_key_exists("DetailReportUrl",$param) and $param["DetailReportUrl"] !== null) {
             $this->DetailReportUrl = $param["DetailReportUrl"];
+        }
+
+        if (array_key_exists("CallbackDailyReportUrl",$param) and $param["CallbackDailyReportUrl"] !== null) {
+            $this->CallbackDailyReportUrl = $param["CallbackDailyReportUrl"];
+        }
+
+        if (array_key_exists("CallbackResultReportUrl",$param) and $param["CallbackResultReportUrl"] !== null) {
+            $this->CallbackResultReportUrl = $param["CallbackResultReportUrl"];
+        }
+
+        if (array_key_exists("CallbackDetailReportUrl",$param) and $param["CallbackDetailReportUrl"] !== null) {
+            $this->CallbackDetailReportUrl = $param["CallbackDetailReportUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

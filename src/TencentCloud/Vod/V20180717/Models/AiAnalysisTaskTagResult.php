@@ -30,9 +30,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method AiAnalysisTaskTagInput getInput() 获取智能标签任务输入。
  * @method void setInput(AiAnalysisTaskTagInput $Input) 设置智能标签任务输入。
- * @method array getOutput() 获取智能标签任务输出。
+ * @method AiAnalysisTaskTagOutput getOutput() 获取智能标签任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutput(array $Output) 设置智能标签任务输出。
+ * @method void setOutput(AiAnalysisTaskTagOutput $Output) 设置智能标签任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -64,7 +64,7 @@ class AiAnalysisTaskTagResult extends AbstractModel
     public $Input;
 
     /**
-     * @var array 智能标签任务输出。
+     * @var AiAnalysisTaskTagOutput 智能标签任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
@@ -75,7 +75,7 @@ class AiAnalysisTaskTagResult extends AbstractModel
      * @param string $Message 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskTagInput $Input 智能标签任务输入。
-     * @param array $Output 智能标签任务输出。
+     * @param AiAnalysisTaskTagOutput $Output 智能标签任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -108,12 +108,8 @@ class AiAnalysisTaskTagResult extends AbstractModel
         }
 
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
-            $this->Output = [];
-            foreach ($param["Output"] as $key => $value){
-                $obj = new AiAnalysisTaskTagOutput();
-                $obj->deserialize($value);
-                array_push($this->Output, $obj);
-            }
+            $this->Output = new AiAnalysisTaskTagOutput();
+            $this->Output->deserialize($param["Output"]);
         }
     }
 }

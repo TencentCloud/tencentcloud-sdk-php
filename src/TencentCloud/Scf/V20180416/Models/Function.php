@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionId(string $FunctionId) 设置函数ID
  * @method string getNamespace() 获取命名空间
  * @method void setNamespace(string $Namespace) 设置命名空间
+ * @method string getStatus() 获取函数状态
+ * @method void setStatus(string $Status) 设置函数状态
+ * @method string getStatusDesc() 获取函数状态详情
+ * @method void setStatusDesc(string $StatusDesc) 设置函数状态详情
+ * @method string getDescription() 获取函数描述
+ * @method void setDescription(string $Description) 设置函数描述
+ * @method array getTags() 获取函数标签
+ * @method void setTags(array $Tags) 设置函数标签
  */
 
 /**
@@ -66,6 +74,26 @@ class Function extends AbstractModel
      * @var string 命名空间
      */
     public $Namespace;
+
+    /**
+     * @var string 函数状态
+     */
+    public $Status;
+
+    /**
+     * @var string 函数状态详情
+     */
+    public $StatusDesc;
+
+    /**
+     * @var string 函数描述
+     */
+    public $Description;
+
+    /**
+     * @var array 函数标签
+     */
+    public $Tags;
     /**
      * @param string $ModTime 修改时间
      * @param string $AddTime 创建时间
@@ -73,6 +101,10 @@ class Function extends AbstractModel
      * @param string $FunctionName 函数名称
      * @param string $FunctionId 函数ID
      * @param string $Namespace 命名空间
+     * @param string $Status 函数状态
+     * @param string $StatusDesc 函数状态详情
+     * @param string $Description 函数描述
+     * @param array $Tags 函数标签
      */
     function __construct()
     {
@@ -108,6 +140,27 @@ class Function extends AbstractModel
 
         if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
             $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
+            $this->StatusDesc = $param["StatusDesc"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

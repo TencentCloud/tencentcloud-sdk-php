@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosObjectName(string $CosObjectName) 设置对象存储对象路径
  * @method string getZipFile() 获取包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
  * @method void setZipFile(string $ZipFile) 设置包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
- * @method string getCosBucketRegion() 获取对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
- * @method void setCosBucketRegion(string $CosBucketRegion) 设置对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
+ * @method string getCosBucketRegion() 获取对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
+ * @method void setCosBucketRegion(string $CosBucketRegion) 设置对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
  */
 
 /**
@@ -63,7 +63,7 @@ class UpdateFunctionCodeRequest extends AbstractModel
     public $ZipFile;
 
     /**
-     * @var string 对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
+     * @var string 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
      */
     public $CosBucketRegion;
     /**
@@ -72,7 +72,7 @@ class UpdateFunctionCodeRequest extends AbstractModel
      * @param string $CosBucketName 对象存储桶名称
      * @param string $CosObjectName 对象存储对象路径
      * @param string $ZipFile 包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
-     * @param string $CosBucketRegion 对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
+     * @param string $CosBucketRegion 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
      */
     function __construct()
     {

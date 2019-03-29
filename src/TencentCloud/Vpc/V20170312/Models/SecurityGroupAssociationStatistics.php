@@ -119,7 +119,12 @@ class SecurityGroupAssociationStatistics extends AbstractModel
         }
 
         if (array_key_exists("InstanceStatistics",$param) and $param["InstanceStatistics"] !== null) {
-            $this->InstanceStatistics = $param["InstanceStatistics"];
+            $this->InstanceStatistics = [];
+            foreach ($param["InstanceStatistics"] as $key => $value){
+                $obj = new InstanceStatistic();
+                $obj->deserialize($value);
+                array_push($this->InstanceStatistics, $obj);
+            }
         }
     }
 }

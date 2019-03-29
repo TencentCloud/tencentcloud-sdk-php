@@ -15,32 +15,27 @@
  * limitations under the License.
  */
 
-namespace TencentCloud\Billing\V20180709;
+namespace TencentCloud\Emr\V20190103;
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Billing\V20180709\Models as Models;
+use TencentCloud\Emr\V20190103\Models as Models;
 
 /**
-* @method Models\DescribeAccountBalanceResponse DescribeAccountBalance(Models\DescribeAccountBalanceRequest $req) 获取云账户余额信息。
-* @method Models\DescribeBillDetailResponse DescribeBillDetail(Models\DescribeBillDetailRequest $req) 查询账单明细数据
-* @method Models\DescribeBillResourceSummaryResponse DescribeBillResourceSummary(Models\DescribeBillResourceSummaryRequest $req) 查询账单资源汇总数据
-* @method Models\DescribeDealsByCondResponse DescribeDealsByCond(Models\DescribeDealsByCondRequest $req) 查询订单
-* @method Models\DescribeDosageDetailByDateResponse DescribeDosageDetailByDate(Models\DescribeDosageDetailByDateRequest $req) 按日期获取产品用量明细
-* @method Models\PayDealsResponse PayDeals(Models\PayDealsRequest $req) 支付订单
+* @method Models\InquiryPriceCreateInstanceResponse InquiryPriceCreateInstance(Models\InquiryPriceCreateInstanceRequest $req) 创建实例询价
  */
 
-class BillingClient extends AbstractClient
+class EmrClient extends AbstractClient
 {
     /**
      * @var string 产品默认域名
      */
-    protected $endpoint = "billing.tencentcloudapi.com";
+    protected $endpoint = "emr.tencentcloudapi.com";
 
     /**
      * @var string api版本号
      */
-    protected $version = "2018-07-09";
+    protected $version = "2019-01-03";
 
     /**
      * CvmClient constructor.
@@ -55,7 +50,7 @@ class BillingClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("billing")."\\"."V20180709\\Models"."\\".ucfirst($action)."Response";
+        $respClass = "TencentCloud"."\\".ucfirst("emr")."\\"."V20190103\\Models"."\\".ucfirst($action)."Response";
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

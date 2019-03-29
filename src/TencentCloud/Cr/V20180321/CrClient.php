@@ -30,9 +30,12 @@ use TencentCloud\Cr\V20180321\Models as Models;
 * @method Models\DescribeRecordsResponse DescribeRecords(Models\DescribeRecordsRequest $req) 用于获取指定案件的录音地址，次日早上8:00后可查询前日录音。
 * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 根据上传文件接口的输出参数DataResId，获取相关上传结果。
 * @method Models\DownloadReportResponse DownloadReport(Models\DownloadReportRequest $req) 用于下载当日催收和回访结果报表。当日23:00后，可获取当日催收结果，次日00:30后，可获取昨日回访结果。
-* @method Models\UploadDataFileResponse UploadDataFile(Models\UploadDataFileRequest $req) 该接口包含上传：
-1、入催文件 — 用于每天入催文件的上传；
-2、还款文件 — 实时上传当前已还款客户，用于还款客户的实时停催；
+* @method Models\UploadDataFileResponse UploadDataFile(Models\UploadDataFileRequest $req) <p>该接口包含上传下列文件：</p>
+<ol style="margin-bottom:10px;">
+  <li>入催文件：用于每天入催文件的上传</li>
+  <li>回访文件：用于每天贷中回访文件的上传</li>
+  <li>还款文件：实时上传当前已还款客户，用于还款客户的实时停催</li>
+</ol>
 接口返回数据任务ID，支持xlsx、xls、csv、zip格式，文档大小不超过50MB。
 * @method Models\UploadFileResponse UploadFile(Models\UploadFileRequest $req) 客户通过调用该接口上传需催收文档，格式需为excel格式。接口返回任务ID。
  */

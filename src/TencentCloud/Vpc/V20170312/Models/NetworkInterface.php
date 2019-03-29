@@ -49,7 +49,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getPrivateIpAddressSet() 获取内网IP信息。
  * @method void setPrivateIpAddressSet(array $PrivateIpAddressSet) 设置内网IP信息。
  * @method NetworkInterfaceAttachment getAttachment() 获取绑定的云服务器对象。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttachment(NetworkInterfaceAttachment $Attachment) 设置绑定的云服务器对象。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取可用区。
  * @method void setZone(string $Zone) 设置可用区。
  * @method string getCreatedTime() 获取创建时间。
@@ -120,6 +122,7 @@ class NetworkInterface extends AbstractModel
 
     /**
      * @var NetworkInterfaceAttachment 绑定的云服务器对象。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Attachment;
 
@@ -154,6 +157,7 @@ class NetworkInterface extends AbstractModel
 <li>`DELETING`：删除中</li>
      * @param array $PrivateIpAddressSet 内网IP信息。
      * @param NetworkInterfaceAttachment $Attachment 绑定的云服务器对象。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 可用区。
      * @param string $CreatedTime 创建时间。
      * @param array $Ipv6AddressSet `IPv6`地址列表。

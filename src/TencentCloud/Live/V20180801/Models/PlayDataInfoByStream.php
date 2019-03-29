@@ -18,29 +18,29 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPushDomainName() 获取推流域名。
- * @method void setPushDomainName(string $PushDomainName) 设置推流域名。
- * @method string getPlayDomainName() 获取播放域名。
- * @method void setPlayDomainName(string $PlayDomainName) 设置播放域名。
+ * @method string getStreamName() 获取流名称。
+ * @method void setStreamName(string $StreamName) 设置流名称。
+ * @method float getTotalFlux() 获取总流量（单位MB）。
+ * @method void setTotalFlux(float $TotalFlux) 设置总流量（单位MB）。
  */
 
 /**
- *DeleteLiveDomainStrategy请求参数结构体
+ *流维度的播放信息
  */
-class DeleteLiveDomainStrategyRequest extends AbstractModel
+class PlayDataInfoByStream extends AbstractModel
 {
     /**
-     * @var string 推流域名。
+     * @var string 流名称。
      */
-    public $PushDomainName;
+    public $StreamName;
 
     /**
-     * @var string 播放域名。
+     * @var float 总流量（单位MB）。
      */
-    public $PlayDomainName;
+    public $TotalFlux;
     /**
-     * @param string $PushDomainName 推流域名。
-     * @param string $PlayDomainName 播放域名。
+     * @param string $StreamName 流名称。
+     * @param float $TotalFlux 总流量（单位MB）。
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DeleteLiveDomainStrategyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PushDomainName",$param) and $param["PushDomainName"] !== null) {
-            $this->PushDomainName = $param["PushDomainName"];
+        if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
+            $this->StreamName = $param["StreamName"];
         }
 
-        if (array_key_exists("PlayDomainName",$param) and $param["PlayDomainName"] !== null) {
-            $this->PlayDomainName = $param["PlayDomainName"];
+        if (array_key_exists("TotalFlux",$param) and $param["TotalFlux"] !== null) {
+            $this->TotalFlux = $param["TotalFlux"];
         }
     }
 }

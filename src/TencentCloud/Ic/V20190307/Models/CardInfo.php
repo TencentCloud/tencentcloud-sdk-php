@@ -100,8 +100,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllowArrears(integer $AllowArrears) 设置0 不需要开通达量不停卡 1 需要开通达量不停卡
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNeedSms() 获取是否开通短息
- * @method void setNeedSms(integer $NeedSms) 设置是否开通短息
+ * @method integer getNeedSms() 获取是否开通短信0:未开短信 1:开通短信
+ * @method void setNeedSms(integer $NeedSms) 设置是否开通短信0:未开短信 1:开通短信
  * @method integer getProvider() 获取服务
  * @method void setProvider(integer $Provider) 设置服务
  */
@@ -249,7 +249,7 @@ class CardInfo extends AbstractModel
     public $AllowArrears;
 
     /**
-     * @var integer 是否开通短息
+     * @var integer 是否开通短信0:未开短信 1:开通短信
      */
     public $NeedSms;
 
@@ -299,7 +299,7 @@ class CardInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AllowArrears 0 不需要开通达量不停卡 1 需要开通达量不停卡
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NeedSms 是否开通短息
+     * @param integer $NeedSms 是否开通短信0:未开短信 1:开通短信
      * @param integer $Provider 服务
      */
     function __construct()

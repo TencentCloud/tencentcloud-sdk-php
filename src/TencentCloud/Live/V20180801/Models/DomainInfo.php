@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 1-国内，2-全球，3-海外。
  * @method void setPlayType(integer $PlayType) 设置播放区域，只在Type=1时该参数有意义。
 1-国内，2-全球，3-海外。
+ * @method integer getIsDelayLive() 获取0：普通直播，
+1：慢直播。
+ * @method void setIsDelayLive(integer $IsDelayLive) 设置0：普通直播，
+1：慢直播。
  */
 
 /**
@@ -76,6 +80,12 @@ class DomainInfo extends AbstractModel
 1-国内，2-全球，3-海外。
      */
     public $PlayType;
+
+    /**
+     * @var integer 0：普通直播，
+1：慢直播。
+     */
+    public $IsDelayLive;
     /**
      * @param string $Name 直播域名
      * @param integer $Type 域名类型。0-推流，1-播放
@@ -85,6 +95,8 @@ class DomainInfo extends AbstractModel
      * @param string $TargetDomain cname对应的域名
      * @param integer $PlayType 播放区域，只在Type=1时该参数有意义。
 1-国内，2-全球，3-海外。
+     * @param integer $IsDelayLive 0：普通直播，
+1：慢直播。
      */
     function __construct()
     {
@@ -124,6 +136,10 @@ class DomainInfo extends AbstractModel
 
         if (array_key_exists("PlayType",$param) and $param["PlayType"] !== null) {
             $this->PlayType = $param["PlayType"];
+        }
+
+        if (array_key_exists("IsDelayLive",$param) and $param["IsDelayLive"] !== null) {
+            $this->IsDelayLive = $param["IsDelayLive"];
         }
     }
 }

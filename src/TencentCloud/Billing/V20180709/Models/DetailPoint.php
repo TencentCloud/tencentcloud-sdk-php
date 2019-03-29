@@ -14,25 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDomainName() 获取查询某个域名的鉴权规则
- * @method void setDomainName(string $DomainName) 设置查询某个域名的鉴权规则
+ * @method string getTime() 获取时间
+ * @method void setTime(string $Time) 设置时间
+ * @method string getValue() 获取值
+ * @method void setValue(string $Value) 设置值
  */
 
 /**
- *DescribeLiveDomainStrategys请求参数结构体
+ *由时间和值组成的数据结构
  */
-class DescribeLiveDomainStrategysRequest extends AbstractModel
+class DetailPoint extends AbstractModel
 {
     /**
-     * @var string 查询某个域名的鉴权规则
+     * @var string 时间
      */
-    public $DomainName;
+    public $Time;
+
     /**
-     * @param string $DomainName 查询某个域名的鉴权规则
+     * @var string 值
+     */
+    public $Value;
+    /**
+     * @param string $Time 时间
+     * @param string $Value 值
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeLiveDomainStrategysRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
+            $this->Time = $param["Time"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

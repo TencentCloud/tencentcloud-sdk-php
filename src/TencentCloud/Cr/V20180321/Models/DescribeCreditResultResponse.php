@@ -18,28 +18,8 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getResultCode() 获取呼叫结果，取值范围：
-<li>NON：接通
-<li>DBU：号码忙
-<li>DRF：不在服务区
-<li>ANA：欠费未接听
-<li>REJ：拒接
-<li>SHU：关机
-<li>NAN：空号
-<li>HAL：停机
-<li>DAD：未接听
-<li>EXE：其他异常
- * @method void setResultCode(string $ResultCode) 设置呼叫结果，取值范围：
-<li>NON：接通
-<li>DBU：号码忙
-<li>DRF：不在服务区
-<li>ANA：欠费未接听
-<li>REJ：拒接
-<li>SHU：关机
-<li>NAN：空号
-<li>HAL：停机
-<li>DAD：未接听
-<li>EXE：其他异常
+ * @method string getResultCode() 获取<p>呼叫结果，取值范围：</p><ul style="margin-bottom:0px;"><li>NON：接通</li><li>DBU：号码忙</li><li>DRF：不在服务区</li><li>ANA：欠费未接听</li><li>REJ：拒接</li><li>SHU：关机</li><li>NAN：空号</li><li>HAL：停机</li><li>DAD：未接听</li><li>EXE：其他异常</li></ul>
+ * @method void setResultCode(string $ResultCode) 设置<p>呼叫结果，取值范围：</p><ul style="margin-bottom:0px;"><li>NON：接通</li><li>DBU：号码忙</li><li>DRF：不在服务区</li><li>ANA：欠费未接听</li><li>REJ：拒接</li><li>SHU：关机</li><li>NAN：空号</li><li>HAL：停机</li><li>DAD：未接听</li><li>EXE：其他异常</li></ul>
  * @method string getClientCode() 获取客户标识代码，多个标识码以英文逗号分隔，ResultCode为NON时才有。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientCode(string $ClientCode) 设置客户标识代码，多个标识码以英文逗号分隔，ResultCode为NON时才有。
@@ -66,17 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCreditResultResponse extends AbstractModel
 {
     /**
-     * @var string 呼叫结果，取值范围：
-<li>NON：接通
-<li>DBU：号码忙
-<li>DRF：不在服务区
-<li>ANA：欠费未接听
-<li>REJ：拒接
-<li>SHU：关机
-<li>NAN：空号
-<li>HAL：停机
-<li>DAD：未接听
-<li>EXE：其他异常
+     * @var string <p>呼叫结果，取值范围：</p><ul style="margin-bottom:0px;"><li>NON：接通</li><li>DBU：号码忙</li><li>DRF：不在服务区</li><li>ANA：欠费未接听</li><li>REJ：拒接</li><li>SHU：关机</li><li>NAN：空号</li><li>HAL：停机</li><li>DAD：未接听</li><li>EXE：其他异常</li></ul>
      */
     public $ResultCode;
 
@@ -113,17 +83,7 @@ class DescribeCreditResultResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $ResultCode 呼叫结果，取值范围：
-<li>NON：接通
-<li>DBU：号码忙
-<li>DRF：不在服务区
-<li>ANA：欠费未接听
-<li>REJ：拒接
-<li>SHU：关机
-<li>NAN：空号
-<li>HAL：停机
-<li>DAD：未接听
-<li>EXE：其他异常
+     * @param string $ResultCode <p>呼叫结果，取值范围：</p><ul style="margin-bottom:0px;"><li>NON：接通</li><li>DBU：号码忙</li><li>DRF：不在服务区</li><li>ANA：欠费未接听</li><li>REJ：拒接</li><li>SHU：关机</li><li>NAN：空号</li><li>HAL：停机</li><li>DAD：未接听</li><li>EXE：其他异常</li></ul>
      * @param string $ClientCode 客户标识代码，多个标识码以英文逗号分隔，ResultCode为NON时才有。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RingStartTime 开始振铃时间，ResultCode为NON或DAD时才有此字段。

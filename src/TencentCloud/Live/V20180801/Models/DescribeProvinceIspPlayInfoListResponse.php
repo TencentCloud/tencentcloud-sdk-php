@@ -18,20 +18,36 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method array getDataInfoList() 获取播放信息列表。
+ * @method void setDataInfoList(array $DataInfoList) 设置播放信息列表。
+ * @method string getStatType() 获取统计的类型，和输入参数保持一致。
+ * @method void setStatType(string $StatType) 设置统计的类型，和输入参数保持一致。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *DeleteLiveDomainStrategy返回参数结构体
+ *DescribeProvinceIspPlayInfoList返回参数结构体
  */
-class DeleteLiveDomainStrategyResponse extends AbstractModel
+class DescribeProvinceIspPlayInfoListResponse extends AbstractModel
 {
+    /**
+     * @var array 播放信息列表。
+     */
+    public $DataInfoList;
+
+    /**
+     * @var string 统计的类型，和输入参数保持一致。
+     */
+    public $StatType;
+
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
+     * @param array $DataInfoList 播放信息列表。
+     * @param string $StatType 统计的类型，和输入参数保持一致。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,19 @@ class DeleteLiveDomainStrategyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DataInfoList",$param) and $param["DataInfoList"] !== null) {
+            $this->DataInfoList = [];
+            foreach ($param["DataInfoList"] as $key => $value){
+                $obj = new PlayStatInfo();
+                $obj->deserialize($value);
+                array_push($this->DataInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("StatType",$param) and $param["StatType"] !== null) {
+            $this->StatType = $param["StatType"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

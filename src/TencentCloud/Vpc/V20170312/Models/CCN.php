@@ -33,9 +33,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getQosLevel() 获取实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
  * @method void setQosLevel(string $QosLevel) 设置实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
  * @method string getInstanceChargeType() 获取付费类型，PREPAID为预付费，POSTPAID为后付费。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置付费类型，PREPAID为预付费，POSTPAID为后付费。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBandwidthLimitType() 获取限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBandwidthLimitType(string $BandwidthLimitType) 设置限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -80,11 +84,13 @@ class CCN extends AbstractModel
 
     /**
      * @var string 付费类型，PREPAID为预付费，POSTPAID为后付费。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceChargeType;
 
     /**
      * @var string 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BandwidthLimitType;
     /**
@@ -96,7 +102,9 @@ class CCN extends AbstractModel
      * @param string $State 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
      * @param string $QosLevel 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
      * @param string $InstanceChargeType 付费类型，PREPAID为预付费，POSTPAID为后付费。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BandwidthLimitType 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

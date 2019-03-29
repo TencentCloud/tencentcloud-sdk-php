@@ -42,9 +42,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTerrorismTask(AiReviewTaskTerrorismResult $TerrorismTask) 设置视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AiReviewTaskPoliticalResult getPoliticalTask() 获取视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Political 时有效。
+ * @method AiReviewTaskPoliticalResult getPoliticalTask() 获取视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPoliticalTask(AiReviewTaskPoliticalResult $PoliticalTask) 设置视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Political 时有效。
+ * @method void setPoliticalTask(AiReviewTaskPoliticalResult $PoliticalTask) 设置视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method AiReviewTaskPornAsrResult getPornAsrTask() 获取视频内容审核 Asr 文字鉴黄任务的查询结果，当任务类型为 Porn.Asr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -94,7 +94,7 @@ class AiContentReviewResult extends AbstractModel
     public $TerrorismTask;
 
     /**
-     * @var AiReviewTaskPoliticalResult 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Political 时有效。
+     * @var AiReviewTaskPoliticalResult 视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PoliticalTask;
@@ -135,7 +135,7 @@ class AiContentReviewResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiReviewTaskTerrorismResult $TerrorismTask 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiReviewTaskPoliticalResult $PoliticalTask 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Political 时有效。
+     * @param AiReviewTaskPoliticalResult $PoliticalTask 视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiReviewTaskPornAsrResult $PornAsrTask 视频内容审核 Asr 文字鉴黄任务的查询结果，当任务类型为 Porn.Asr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。

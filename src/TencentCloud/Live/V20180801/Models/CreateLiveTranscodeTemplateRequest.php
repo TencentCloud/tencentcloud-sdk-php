@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioBitrate(integer $AudioBitrate) 设置音频码率：默认0。0-500
  * @method string getDescription() 获取模板描述。
  * @method void setDescription(string $Description) 设置模板描述。
- * @method integer getWidth() 获取高，默认0。
- * @method void setWidth(integer $Width) 设置高，默认0。
+ * @method integer getWidth() 获取款，默认0。
+ * @method void setWidth(integer $Width) 设置款，默认0。
  * @method integer getNeedVideo() 获取是否保留视频，0：否，1：是。默认1。
 注意：当前该参数未生效，待后续支持！
  * @method void setNeedVideo(integer $NeedVideo) 设置是否保留视频，0：否，1：是。默认1。
@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
 注意：当前该参数未生效，待后续支持！
  * @method void setNeedAudio(integer $NeedAudio) 设置是否保留音频，0：否，1：是。默认1。
 注意：当前该参数未生效，待后续支持！
- * @method integer getHeight() 获取宽，默认0。
- * @method void setHeight(integer $Height) 设置宽，默认0。
+ * @method integer getHeight() 获取高，默认0。
+ * @method void setHeight(integer $Height) 设置高，默认0。
  * @method integer getFps() 获取帧率，默认0。
  * @method void setFps(integer $Fps) 设置帧率，默认0。
  * @method integer getGop() 获取关键帧间隔，单位：秒。默认原始的间隔
@@ -102,7 +102,7 @@ class CreateLiveTranscodeTemplateRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer 高，默认0。
+     * @var integer 款，默认0。
      */
     public $Width;
 
@@ -119,7 +119,7 @@ class CreateLiveTranscodeTemplateRequest extends AbstractModel
     public $NeedAudio;
 
     /**
-     * @var integer 宽，默认0。
+     * @var integer 高，默认0。
      */
     public $Height;
 
@@ -167,12 +167,12 @@ baseline/main/high。默认baseline
 注意：当前该参数未生效，待后续支持！
      * @param integer $AudioBitrate 音频码率：默认0。0-500
      * @param string $Description 模板描述。
-     * @param integer $Width 高，默认0。
+     * @param integer $Width 款，默认0。
      * @param integer $NeedVideo 是否保留视频，0：否，1：是。默认1。
 注意：当前该参数未生效，待后续支持！
      * @param integer $NeedAudio 是否保留音频，0：否，1：是。默认1。
 注意：当前该参数未生效，待后续支持！
-     * @param integer $Height 宽，默认0。
+     * @param integer $Height 高，默认0。
      * @param integer $Fps 帧率，默认0。
      * @param integer $Gop 关键帧间隔，单位：秒。默认原始的间隔
      * @param integer $Rotate 是否旋转，0：否，1：是。默认0。

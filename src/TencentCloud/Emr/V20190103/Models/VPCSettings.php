@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPushDomainName() 获取推流域名。
- * @method void setPushDomainName(string $PushDomainName) 设置推流域名。
- * @method string getPlayDomainName() 获取播放域名。
- * @method void setPlayDomainName(string $PlayDomainName) 设置播放域名。
+ * @method string getVpcId() 获取VPC ID
+ * @method void setVpcId(string $VpcId) 设置VPC ID
+ * @method string getSubnetId() 获取Subnet ID
+ * @method void setSubnetId(string $SubnetId) 设置Subnet ID
  */
 
 /**
- *CreateLiveDomainStrategy请求参数结构体
+ *VPC 参数
  */
-class CreateLiveDomainStrategyRequest extends AbstractModel
+class VPCSettings extends AbstractModel
 {
     /**
-     * @var string 推流域名。
+     * @var string VPC ID
      */
-    public $PushDomainName;
+    public $VpcId;
 
     /**
-     * @var string 播放域名。
+     * @var string Subnet ID
      */
-    public $PlayDomainName;
+    public $SubnetId;
     /**
-     * @param string $PushDomainName 推流域名。
-     * @param string $PlayDomainName 播放域名。
+     * @param string $VpcId VPC ID
+     * @param string $SubnetId Subnet ID
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class CreateLiveDomainStrategyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PushDomainName",$param) and $param["PushDomainName"] !== null) {
-            $this->PushDomainName = $param["PushDomainName"];
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
 
-        if (array_key_exists("PlayDomainName",$param) and $param["PlayDomainName"] !== null) {
-            $this->PlayDomainName = $param["PlayDomainName"];
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

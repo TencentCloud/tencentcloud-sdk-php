@@ -88,6 +88,14 @@ use TencentCloud\Common\AbstractModel;
 <li>Change：只要任务流中每个子任务的状态发生变化，都进行事件通知；</li>
 <li>None：不接受该任务流回调。</li>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 250 个字符。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 250 个字符。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -181,6 +189,18 @@ class ProcedureTask extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TasksNotifyMode;
+
+    /**
+     * @var string 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 250 个字符。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionContext;
+
+    /**
+     * @var string 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionId;
     /**
      * @param string $TaskId 视频处理任务 ID。
      * @param string $Status 任务流状态，取值：
@@ -216,6 +236,10 @@ class ProcedureTask extends AbstractModel
 <li>Finish：只有当任务流全部执行完毕时，才发起一次事件通知；</li>
 <li>Change：只要任务流中每个子任务的状态发生变化，都进行事件通知；</li>
 <li>None：不接受该任务流回调。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 250 个字符。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -296,6 +320,14 @@ class ProcedureTask extends AbstractModel
 
         if (array_key_exists("TasksNotifyMode",$param) and $param["TasksNotifyMode"] !== null) {
             $this->TasksNotifyMode = $param["TasksNotifyMode"];
+        }
+
+        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
+            $this->SessionContext = $param["SessionContext"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
         }
     }
 }

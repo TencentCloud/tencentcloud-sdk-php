@@ -37,9 +37,11 @@ use TencentCloud\Iai\V20180301\Models as Models;
 >
 - 创建人员完成后，生效时间一般不超过 1 秒，极端情况最多不超过 5 秒，之后您可以进行[人脸搜索](https://cloud.tencent.com/document/product/867/32798)或[人脸验证](https://cloud.tencent.com/document/product/867/32806)。
 * @method Models\DeleteFaceResponse DeleteFace(Models\DeleteFaceRequest $req) 删除一个人员下的人脸图片。如果该人员只有一张人脸图片，则返回错误。
-* @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除该人员库及包含的所有的人员。若某人员同时存在多个人员库中，该人员不会被删除，但属于该人员库中的自定义描述字段信息会被删除。注：删除人员库的操作为异步执行，删除单张人脸时间约为10ms，即一小时内可以删除36万张。删除期间，无法向该人员库添加人员。
-* @method Models\DeletePersonResponse DeletePerson(Models\DeletePersonRequest $req) 删除该人员信息，此操作会导致所有人员库均删除此人员。
-* @method Models\DeletePersonFromGroupResponse DeletePersonFromGroup(Models\DeletePersonFromGroupRequest $req) 从某人员库中删除人员，此操作仅影响该人员库。
+* @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除该人员库及包含的所有的人员。同时，人员对应的所有人脸信息将被删除。若某人员同时存在多个人员库中，该人员不会被删除，但属于该人员库中的自定义描述字段信息会被删除。
+
+注：删除人员库的操作为异步执行，删除单张人脸时间约为10ms，即一小时内可以删除36万张。删除期间，无法向该人员库添加人员。
+* @method Models\DeletePersonResponse DeletePerson(Models\DeletePersonRequest $req) 删除该人员信息，此操作会导致所有人员库均删除此人员。同时，该人员的所有人脸信息将被删除。
+* @method Models\DeletePersonFromGroupResponse DeletePersonFromGroup(Models\DeletePersonFromGroupRequest $req) 从某人员库中删除人员，此操作仅影响该人员库。若该人员仅存在于指定的人员库中，该人员将被删除，其所有的人脸信息也将被删除。
 * @method Models\DetectFaceResponse DetectFace(Models\DetectFaceRequest $req) 检测给定图片中的人脸（Face）的位置、相应的面部属性和人脸质量信息，位置包括 (x，y，w，h)，面部属性包括性别（gender）、年龄（age）、表情（expression）、魅力（beauty）、眼镜（glass）、发型（hair）、口罩（mask）和姿态 (pitch，roll，yaw)，人脸质量信息包括整体质量分（score）、模糊分（sharpness）、光照分（brightness）和五官遮挡分（completeness）。
 
  

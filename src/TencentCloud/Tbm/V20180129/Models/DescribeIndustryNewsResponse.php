@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewsSet(array $NewsSet) 设置文章列表
  * @method array getDateCountSet() 获取按天统计的数量列表
  * @method void setDateCountSet(array $DateCountSet) 设置按天统计的数量列表
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -63,7 +63,7 @@ class DescribeIndustryNewsResponse extends AbstractModel
     public $DateCountSet;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -72,7 +72,7 @@ class DescribeIndustryNewsResponse extends AbstractModel
      * @param integer $AdverseCount 总计疑似负面数量
      * @param array $NewsSet 文章列表
      * @param array $DateCountSet 按天统计的数量列表
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

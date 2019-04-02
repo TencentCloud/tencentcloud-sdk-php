@@ -56,7 +56,16 @@ catch(TencentCloudSDKException $e) {
     echo $e;
 }
 ```
-# 更多示例
+
+## 更多示例
+
 您可以在[github](https://github.com/tencentcloud/tencentcloud-sdk-php)中examples目录下找到更详细的示例。
+
+# 相关配置
+
+## 代理
+
+如果是有代理的环境下，需要设置系统环境变量 `https_proxy` ，否则可能无法正常调用，抛出连接超时的异常。
+
 # 旧版SDK
 新版SDK兼容旧版SDK。旧版本的SDK存放于QcloudApi目录，但不再维护更新，推荐使用新版SDK。

@@ -18,8 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTemplateName() 获取模板名称。非空的字符串
- * @method void setTemplateName(string $TemplateName) 设置模板名称。非空的字符串
+ * @method string getTemplateName() 获取模板名称。非空的字符串。
+ * @method void setTemplateName(string $TemplateName) 设置模板名称。非空的字符串。
  * @method integer getCosAppId() 获取Cos AppId。
  * @method void setCosAppId(integer $CosAppId) 设置Cos AppId。
  * @method string getCosBucket() 获取Cos Bucket名称。
@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置描述信息。
  * @method integer getSnapshotInterval() 获取截图间隔，单位s，默认10s。
  * @method void setSnapshotInterval(integer $SnapshotInterval) 设置截图间隔，单位s，默认10s。
- * @method integer getWidth() 获取截图宽度。默认：0（原始高）
- * @method void setWidth(integer $Width) 设置截图宽度。默认：0（原始高）
- * @method integer getHeight() 获取截图高度。默认：0（原始宽）
- * @method void setHeight(integer $Height) 设置截图高度。默认：0（原始宽）
- * @method integer getPornFlag() 获取是否开启鉴黄，0：不开启，1：开启。默认：0.
- * @method void setPornFlag(integer $PornFlag) 设置是否开启鉴黄，0：不开启，1：开启。默认：0.
+ * @method integer getWidth() 获取截图宽度。默认：0（原始宽）。
+ * @method void setWidth(integer $Width) 设置截图宽度。默认：0（原始宽）。
+ * @method integer getHeight() 获取截图高度。默认：0（原始高）。
+ * @method void setHeight(integer $Height) 设置截图高度。默认：0（原始高）。
+ * @method integer getPornFlag() 获取是否开启鉴黄，0：不开启，1：开启。默认：0。
+ * @method void setPornFlag(integer $PornFlag) 设置是否开启鉴黄，0：不开启，1：开启。默认：0。
  */
 
 /**
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateLiveSnapshotTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 模板名称。非空的字符串
+     * @var string 模板名称。非空的字符串。
      */
     public $TemplateName;
 
@@ -74,29 +74,29 @@ class CreateLiveSnapshotTemplateRequest extends AbstractModel
     public $SnapshotInterval;
 
     /**
-     * @var integer 截图宽度。默认：0（原始高）
+     * @var integer 截图宽度。默认：0（原始宽）。
      */
     public $Width;
 
     /**
-     * @var integer 截图高度。默认：0（原始宽）
+     * @var integer 截图高度。默认：0（原始高）。
      */
     public $Height;
 
     /**
-     * @var integer 是否开启鉴黄，0：不开启，1：开启。默认：0.
+     * @var integer 是否开启鉴黄，0：不开启，1：开启。默认：0。
      */
     public $PornFlag;
     /**
-     * @param string $TemplateName 模板名称。非空的字符串
+     * @param string $TemplateName 模板名称。非空的字符串。
      * @param integer $CosAppId Cos AppId。
      * @param string $CosBucket Cos Bucket名称。
      * @param string $CosRegion Cos地区。
      * @param string $Description 描述信息。
      * @param integer $SnapshotInterval 截图间隔，单位s，默认10s。
-     * @param integer $Width 截图宽度。默认：0（原始高）
-     * @param integer $Height 截图高度。默认：0（原始宽）
-     * @param integer $PornFlag 是否开启鉴黄，0：不开启，1：开启。默认：0.
+     * @param integer $Width 截图宽度。默认：0（原始宽）。
+     * @param integer $Height 截图高度。默认：0（原始高）。
+     * @param integer $PornFlag 是否开启鉴黄，0：不开启，1：开启。默认：0。
      */
     function __construct()
     {

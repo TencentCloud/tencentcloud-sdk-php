@@ -18,28 +18,36 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTemplateId() 获取模板ID。
- * @method void setTemplateId(integer $TemplateId) 设置模板ID。
+ * @method array getLogInfoList() 获取日志信息列表。
+ * @method void setLogInfoList(array $LogInfoList) 设置日志信息列表。
+ * @method integer getTotalNum() 获取总条数。
+ * @method void setTotalNum(integer $TotalNum) 设置总条数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *CreateLiveCallbackTemplate返回参数结构体
+ *DescribeLogDownloadList返回参数结构体
  */
-class CreateLiveCallbackTemplateResponse extends AbstractModel
+class DescribeLogDownloadListResponse extends AbstractModel
 {
     /**
-     * @var integer 模板ID。
+     * @var array 日志信息列表。
      */
-    public $TemplateId;
+    public $LogInfoList;
+
+    /**
+     * @var integer 总条数。
+     */
+    public $TotalNum;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $TemplateId 模板ID。
+     * @param array $LogInfoList 日志信息列表。
+     * @param integer $TotalNum 总条数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class CreateLiveCallbackTemplateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists("LogInfoList",$param) and $param["LogInfoList"] !== null) {
+            $this->LogInfoList = [];
+            foreach ($param["LogInfoList"] as $key => $value){
+                $obj = new LogInfo();
+                $obj->deserialize($value);
+                array_push($this->LogInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalNum",$param) and $param["TotalNum"] !== null) {
+            $this->TotalNum = $param["TotalNum"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -18,8 +18,8 @@ namespace TencentCloud\Aai\V20180522\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAudio() 获取base64编码的wav音频
- * @method void setAudio(string $Audio) 设置base64编码的wav音频
+ * @method string getAudio() 获取base64编码的wav音频数据
+ * @method void setAudio(string $Audio) 设置base64编码的wav音频数据
  * @method string getSessionId() 获取一次请求对应一个SessionId
  * @method void setSessionId(string $SessionId) 设置一次请求对应一个SessionId
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class TextToVoiceResponse extends AbstractModel
 {
     /**
-     * @var string base64编码的wav音频
+     * @var string base64编码的wav音频数据
      */
     public $Audio;
 
@@ -46,7 +46,7 @@ class TextToVoiceResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $Audio base64编码的wav音频
+     * @param string $Audio base64编码的wav音频数据
      * @param string $SessionId 一次请求对应一个SessionId
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

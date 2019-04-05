@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) 设置推流域名。
  * @method string getAppName() 获取推流路径。
  * @method void setAppName(string $AppName) 设置推流路径。
- * @method integer getTemplateId() 获取模板ID
- * @method void setTemplateId(integer $TemplateId) 设置模板ID
+ * @method integer getTemplateId() 获取模板ID。
+ * @method void setTemplateId(integer $TemplateId) 设置模板ID。
  */
 
 /**
@@ -42,13 +42,13 @@ class CreateLiveCallbackRuleRequest extends AbstractModel
     public $AppName;
 
     /**
-     * @var integer 模板ID
+     * @var integer 模板ID。
      */
     public $TemplateId;
     /**
      * @param string $DomainName 推流域名。
      * @param string $AppName 推流路径。
-     * @param integer $TemplateId 模板ID
+     * @param integer $TemplateId 模板ID。
      */
     function __construct()
     {

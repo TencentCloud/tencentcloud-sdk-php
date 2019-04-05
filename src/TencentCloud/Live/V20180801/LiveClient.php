@@ -105,6 +105,7 @@ use TencentCloud\Live\V20180801\Models as Models;
 * @method Models\DescribeLiveWatermarkResponse DescribeLiveWatermark(Models\DescribeLiveWatermarkRequest $req) 获取单个水印信息
 * @method Models\DescribeLiveWatermarkRulesResponse DescribeLiveWatermarkRules(Models\DescribeLiveWatermarkRulesRequest $req) 获取水印规则列表
 * @method Models\DescribeLiveWatermarksResponse DescribeLiveWatermarks(Models\DescribeLiveWatermarksRequest $req) 查询水印列表
+* @method Models\DescribeLogDownloadListResponse DescribeLogDownloadList(Models\DescribeLogDownloadListRequest $req) 批量获取日志URL。
 * @method Models\DescribeProIspPlaySumInfoListResponse DescribeProIspPlaySumInfoList(Models\DescribeProIspPlaySumInfoListRequest $req) 查询某段时间内每个省份每个运营商的平均每秒流量，总流量，总请求数信息。
 * @method Models\DescribeProvinceIspPlayInfoListResponse DescribeProvinceIspPlayInfoList(Models\DescribeProvinceIspPlayInfoListRequest $req) 查询某省份某运营商下行播放数据，包括带宽，流量，请求数，并发连接数信息。
 * @method Models\DescribePullStreamConfigsResponse DescribePullStreamConfigs(Models\DescribePullStreamConfigsRequest $req) 查询拉流配置

@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostIp(string $HostIp) 设置cdh实例ip
  * @method HostResource getHostResource() 获取cdh实例资源信息
  * @method void setHostResource(HostResource $HostResource) 设置cdh实例资源信息
+ * @method string getCageId() 获取专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCageId(string $CageId) 设置专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -108,6 +112,12 @@ class HostItem extends AbstractModel
      * @var HostResource cdh实例资源信息
      */
     public $HostResource;
+
+    /**
+     * @var string 专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CageId;
     /**
      * @param Placement $Placement cdh实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      * @param string $HostId cdh实例id
@@ -121,6 +131,8 @@ class HostItem extends AbstractModel
      * @param string $HostState cdh实例状态
      * @param string $HostIp cdh实例ip
      * @param HostResource $HostResource cdh实例资源信息
+     * @param string $CageId 专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -182,6 +194,10 @@ class HostItem extends AbstractModel
         if (array_key_exists("HostResource",$param) and $param["HostResource"] !== null) {
             $this->HostResource = new HostResource();
             $this->HostResource->deserialize($param["HostResource"]);
+        }
+
+        if (array_key_exists("CageId",$param) and $param["CageId"] !== null) {
+            $this->CageId = $param["CageId"];
         }
     }
 }

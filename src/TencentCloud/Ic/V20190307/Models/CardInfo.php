@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkappid(string $Sdkappid) 设置应用id
  * @method integer getTeleoperator() 获取运营商编号
  * @method void setTeleoperator(integer $Teleoperator) 设置运营商编号
- * @method integer getCardStatus() 获取卡片状态
- * @method void setCardStatus(integer $CardStatus) 设置卡片状态
+ * @method integer getCardStatus() 获取卡片状态 1:未激活 2：激活 3：停卡 5：销卡
+ * @method void setCardStatus(integer $CardStatus) 设置卡片状态 1:未激活 2：激活 3：停卡 5：销卡
  * @method integer getNetworkStatus() 获取网络状态
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkStatus(integer $NetworkStatus) 设置网络状态
@@ -145,7 +145,7 @@ class CardInfo extends AbstractModel
     public $Teleoperator;
 
     /**
-     * @var integer 卡片状态
+     * @var integer 卡片状态 1:未激活 2：激活 3：停卡 5：销卡
      */
     public $CardStatus;
 
@@ -267,7 +267,7 @@ class CardInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Sdkappid 应用id
      * @param integer $Teleoperator 运营商编号
-     * @param integer $CardStatus 卡片状态
+     * @param integer $CardStatus 卡片状态 1:未激活 2：激活 3：停卡 5：销卡
      * @param integer $NetworkStatus 网络状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActivitedTime 激活时间

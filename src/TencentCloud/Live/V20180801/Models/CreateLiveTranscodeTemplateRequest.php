@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getTemplateName() 获取模板名称，例：900 900p 仅支持字母和数字的组合。
  * @method void setTemplateName(string $TemplateName) 设置模板名称，例：900 900p 仅支持字母和数字的组合。
- * @method integer getVideoBitrate() 获取视频码率。
- * @method void setVideoBitrate(integer $VideoBitrate) 设置视频码率。
+ * @method integer getVideoBitrate() 获取视频码率。范围：100-8000。
+ * @method void setVideoBitrate(integer $VideoBitrate) 设置视频码率。范围：100-8000。
  * @method string getVcodec() 获取视频编码：h264/h265，默认h264。
 注意：当前该参数未生效，待后续支持！
  * @method void setVcodec(string $Vcodec) 设置视频编码：h264/h265，默认h264。
@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
 注意：当前该参数未生效，待后续支持！
  * @method void setAcodec(string $Acodec) 设置音频编码：aac，默认原始音频格式。
 注意：当前该参数未生效，待后续支持！
- * @method integer getAudioBitrate() 获取音频码率：默认0。0-500
- * @method void setAudioBitrate(integer $AudioBitrate) 设置音频码率：默认0。0-500
+ * @method integer getAudioBitrate() 获取音频码率：默认0。0-500。
+ * @method void setAudioBitrate(integer $AudioBitrate) 设置音频码率：默认0。0-500。
  * @method string getDescription() 获取模板描述。
  * @method void setDescription(string $Description) 设置模板描述。
- * @method integer getWidth() 获取款，默认0。
- * @method void setWidth(integer $Width) 设置款，默认0。
+ * @method integer getWidth() 获取宽，默认0。
+ * @method void setWidth(integer $Width) 设置宽，默认0。
  * @method integer getNeedVideo() 获取是否保留视频，0：否，1：是。默认1。
 注意：当前该参数未生效，待后续支持！
  * @method void setNeedVideo(integer $NeedVideo) 设置是否保留视频，0：否，1：是。默认1。
@@ -75,7 +75,7 @@ class CreateLiveTranscodeTemplateRequest extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var integer 视频码率。
+     * @var integer 视频码率。范围：100-8000。
      */
     public $VideoBitrate;
 
@@ -92,7 +92,7 @@ class CreateLiveTranscodeTemplateRequest extends AbstractModel
     public $Acodec;
 
     /**
-     * @var integer 音频码率：默认0。0-500
+     * @var integer 音频码率：默认0。0-500。
      */
     public $AudioBitrate;
 
@@ -102,7 +102,7 @@ class CreateLiveTranscodeTemplateRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer 款，默认0。
+     * @var integer 宽，默认0。
      */
     public $Width;
 
@@ -160,14 +160,14 @@ baseline/main/high。默认baseline
     public $FpsToOrig;
     /**
      * @param string $TemplateName 模板名称，例：900 900p 仅支持字母和数字的组合。
-     * @param integer $VideoBitrate 视频码率。
+     * @param integer $VideoBitrate 视频码率。范围：100-8000。
      * @param string $Vcodec 视频编码：h264/h265，默认h264。
 注意：当前该参数未生效，待后续支持！
      * @param string $Acodec 音频编码：aac，默认原始音频格式。
 注意：当前该参数未生效，待后续支持！
-     * @param integer $AudioBitrate 音频码率：默认0。0-500
+     * @param integer $AudioBitrate 音频码率：默认0。0-500。
      * @param string $Description 模板描述。
-     * @param integer $Width 款，默认0。
+     * @param integer $Width 宽，默认0。
      * @param integer $NeedVideo 是否保留视频，0：否，1：是。默认1。
 注意：当前该参数未生效，待后续支持！
      * @param integer $NeedAudio 是否保留音频，0：否，1：是。默认1。

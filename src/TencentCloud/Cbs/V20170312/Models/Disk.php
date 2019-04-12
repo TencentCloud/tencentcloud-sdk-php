@@ -96,6 +96,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMigratePercent(integer $MigratePercent) 设置云盘类型变更的迁移进度，取值0到100。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getShareable() 获取云盘是否为共享型云盘。
+ * @method void setShareable(boolean $Shareable) 设置云盘是否为共享型云盘。
+ * @method array getInstanceIdList() 获取对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
+ * @method void setInstanceIdList(array $InstanceIdList) 设置对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
  */
 
 /**
@@ -253,6 +257,16 @@ class Disk extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MigratePercent;
+
+    /**
+     * @var boolean 云盘是否为共享型云盘。
+     */
+    public $Shareable;
+
+    /**
+     * @var array 对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
+     */
+    public $InstanceIdList;
     /**
      * @param string $DiskId 云硬盘ID。
      * @param string $DiskUsage 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
@@ -293,6 +307,8 @@ class Disk extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MigratePercent 云盘类型变更的迁移进度，取值0到100。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Shareable 云盘是否为共享型云盘。
+     * @param array $InstanceIdList 对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
      */
     function __construct()
     {
@@ -422,6 +438,14 @@ class Disk extends AbstractModel
 
         if (array_key_exists("MigratePercent",$param) and $param["MigratePercent"] !== null) {
             $this->MigratePercent = $param["MigratePercent"];
+        }
+
+        if (array_key_exists("Shareable",$param) and $param["Shareable"] !== null) {
+            $this->Shareable = $param["Shareable"];
+        }
+
+        if (array_key_exists("InstanceIdList",$param) and $param["InstanceIdList"] !== null) {
+            $this->InstanceIdList = $param["InstanceIdList"];
         }
     }
 }

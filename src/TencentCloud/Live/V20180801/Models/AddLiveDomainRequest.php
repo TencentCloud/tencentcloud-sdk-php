@@ -18,12 +18,26 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDomainName() 获取域名名称
- * @method void setDomainName(string $DomainName) 设置域名名称
- * @method integer getDomainType() 获取域名类型。0-推流域名，1-播放域名
- * @method void setDomainType(integer $DomainType) 设置域名类型。0-推流域名，1-播放域名
- * @method integer getPlayType() 获取拉流域名类型。1-国内；2-全球；3-境外
- * @method void setPlayType(integer $PlayType) 设置拉流域名类型。1-国内；2-全球；3-境外
+ * @method string getDomainName() 获取域名名称。
+ * @method void setDomainName(string $DomainName) 设置域名名称。
+ * @method integer getDomainType() 获取域名类型，
+0：推流域名，
+1：播放域名。
+ * @method void setDomainType(integer $DomainType) 设置域名类型，
+0：推流域名，
+1：播放域名。
+ * @method integer getPlayType() 获取拉流域名类型：
+1：国内，
+2：全球，
+3：境外。
+ * @method void setPlayType(integer $PlayType) 设置拉流域名类型：
+1：国内，
+2：全球，
+3：境外。
+ * @method integer getIsDelayLive() 获取默认 0 ：普通直播，
+1：慢直播。
+ * @method void setIsDelayLive(integer $IsDelayLive) 设置默认 0 ：普通直播，
+1：慢直播。
  */
 
 /**
@@ -32,23 +46,41 @@ use TencentCloud\Common\AbstractModel;
 class AddLiveDomainRequest extends AbstractModel
 {
     /**
-     * @var string 域名名称
+     * @var string 域名名称。
      */
     public $DomainName;
 
     /**
-     * @var integer 域名类型。0-推流域名，1-播放域名
+     * @var integer 域名类型，
+0：推流域名，
+1：播放域名。
      */
     public $DomainType;
 
     /**
-     * @var integer 拉流域名类型。1-国内；2-全球；3-境外
+     * @var integer 拉流域名类型：
+1：国内，
+2：全球，
+3：境外。
      */
     public $PlayType;
+
     /**
-     * @param string $DomainName 域名名称
-     * @param integer $DomainType 域名类型。0-推流域名，1-播放域名
-     * @param integer $PlayType 拉流域名类型。1-国内；2-全球；3-境外
+     * @var integer 默认 0 ：普通直播，
+1：慢直播。
+     */
+    public $IsDelayLive;
+    /**
+     * @param string $DomainName 域名名称。
+     * @param integer $DomainType 域名类型，
+0：推流域名，
+1：播放域名。
+     * @param integer $PlayType 拉流域名类型：
+1：国内，
+2：全球，
+3：境外。
+     * @param integer $IsDelayLive 默认 0 ：普通直播，
+1：慢直播。
      */
     function __construct()
     {
@@ -72,6 +104,10 @@ class AddLiveDomainRequest extends AbstractModel
 
         if (array_key_exists("PlayType",$param) and $param["PlayType"] !== null) {
             $this->PlayType = $param["PlayType"];
+        }
+
+        if (array_key_exists("IsDelayLive",$param) and $param["IsDelayLive"] !== null) {
+            $this->IsDelayLive = $param["IsDelayLive"];
         }
     }
 }

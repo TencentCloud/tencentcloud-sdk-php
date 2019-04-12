@@ -64,6 +64,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCashPayAmount(string $CashPayAmount) 设置现金账户支付金额，单位为元
  * @method string getIncentivePayAmount() 获取赠送账户支付金额，单位为元
  * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送账户支付金额，单位为元
+ * @method string getExtendField3() 获取扩展字段3
+ * @method void setExtendField3(string $ExtendField3) 设置扩展字段3
+ * @method string getExtendField4() 获取扩展字段4
+ * @method void setExtendField4(string $ExtendField4) 设置扩展字段4
+ * @method string getExtendField5() 获取扩展字段5
+ * @method void setExtendField5(string $ExtendField5) 设置扩展字段5
  */
 
 /**
@@ -185,6 +191,21 @@ class BillResourceSummary extends AbstractModel
      * @var string 赠送账户支付金额，单位为元
      */
     public $IncentivePayAmount;
+
+    /**
+     * @var string 扩展字段3
+     */
+    public $ExtendField3;
+
+    /**
+     * @var string 扩展字段4
+     */
+    public $ExtendField4;
+
+    /**
+     * @var string 扩展字段5
+     */
+    public $ExtendField5;
     /**
      * @param string $BusinessCodeName 产品
      * @param string $ProductCodeName 子产品
@@ -209,6 +230,9 @@ class BillResourceSummary extends AbstractModel
      * @param string $VoucherPayAmount 代金券支付金额，单位为元
      * @param string $CashPayAmount 现金账户支付金额，单位为元
      * @param string $IncentivePayAmount 赠送账户支付金额，单位为元
+     * @param string $ExtendField3 扩展字段3
+     * @param string $ExtendField4 扩展字段4
+     * @param string $ExtendField5 扩展字段5
      */
     function __construct()
     {
@@ -312,6 +336,18 @@ class BillResourceSummary extends AbstractModel
 
         if (array_key_exists("IncentivePayAmount",$param) and $param["IncentivePayAmount"] !== null) {
             $this->IncentivePayAmount = $param["IncentivePayAmount"];
+        }
+
+        if (array_key_exists("ExtendField3",$param) and $param["ExtendField3"] !== null) {
+            $this->ExtendField3 = $param["ExtendField3"];
+        }
+
+        if (array_key_exists("ExtendField4",$param) and $param["ExtendField4"] !== null) {
+            $this->ExtendField4 = $param["ExtendField4"];
+        }
+
+        if (array_key_exists("ExtendField5",$param) and $param["ExtendField5"] !== null) {
+            $this->ExtendField5 = $param["ExtendField5"];
         }
     }
 }

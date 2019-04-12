@@ -25,15 +25,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDiskId() 获取数据盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。
  * @method void setDiskId(string $DiskId) 设置数据盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。
  * @method boolean getDeleteWithInstance() 获取数据盘是否随子机销毁。取值范围：
-<li>TRUE：子机销毁时，销毁数据盘
+<li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘
 <li>FALSE：子机销毁时，保留数据盘<br>
 默认取值：TRUE<br>
 该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置数据盘是否随子机销毁。取值范围：
-<li>TRUE：子机销毁时，销毁数据盘
+<li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘
 <li>FALSE：子机销毁时，保留数据盘<br>
 默认取值：TRUE<br>
 该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -58,10 +60,11 @@ class DataDisk extends AbstractModel
 
     /**
      * @var boolean 数据盘是否随子机销毁。取值范围：
-<li>TRUE：子机销毁时，销毁数据盘
+<li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘
 <li>FALSE：子机销毁时，保留数据盘<br>
 默认取值：TRUE<br>
 该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeleteWithInstance;
     /**
@@ -69,10 +72,11 @@ class DataDisk extends AbstractModel
      * @param string $DiskType 数据盘类型。数据盘类型限制详见[CVM实例配置](/document/product/213/2177)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><br>默认取值：LOCAL_BASIC。<br><br>该参数对`ResizeInstanceDisk`接口无效。
      * @param string $DiskId 数据盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。
      * @param boolean $DeleteWithInstance 数据盘是否随子机销毁。取值范围：
-<li>TRUE：子机销毁时，销毁数据盘
+<li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘
 <li>FALSE：子机销毁时，保留数据盘<br>
 默认取值：TRUE<br>
 该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

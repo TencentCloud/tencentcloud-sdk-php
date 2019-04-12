@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置第二个从库可用区的正式名称，如ap-shanghai-1
  * @method string getVip() 获取第二个从库内网IP地址
  * @method void setVip(string $Vip) 设置第二个从库内网IP地址
- * @method string getVport() 获取第二个从库访问端口
- * @method void setVport(string $Vport) 设置第二个从库访问端口
+ * @method integer getVport() 获取第二个从库访问端口
+ * @method void setVport(integer $Vport) 设置第二个从库访问端口
  */
 
 /**
@@ -49,14 +49,14 @@ class BackupConfig extends AbstractModel
     public $Vip;
 
     /**
-     * @var string 第二个从库访问端口
+     * @var integer 第二个从库访问端口
      */
     public $Vport;
     /**
      * @param string $ReplicationMode 第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
      * @param string $Zone 第二个从库可用区的正式名称，如ap-shanghai-1
      * @param string $Vip 第二个从库内网IP地址
-     * @param string $Vport 第二个从库访问端口
+     * @param integer $Vport 第二个从库访问端口
      */
     function __construct()
     {

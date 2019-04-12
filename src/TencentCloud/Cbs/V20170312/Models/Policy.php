@@ -18,8 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getDayOfWeek() 获取选定周一到周日中需要创建快照的日期，取值范围：[0, 6]。0表示周一触发，依此类推。
- * @method void setDayOfWeek(array $DayOfWeek) 设置选定周一到周日中需要创建快照的日期，取值范围：[0, 6]。0表示周一触发，依此类推。
+ * @method array getDayOfWeek() 获取指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
+ * @method void setDayOfWeek(array $DayOfWeek) 设置指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
  * @method array getHour() 获取指定定期快照策略的触发时间。单位为小时，取值范围：[0, 23]。00:00 ~ 23:00 共 24 个时间点可选，1表示 01:00，依此类推。
  * @method void setHour(array $Hour) 设置指定定期快照策略的触发时间。单位为小时，取值范围：[0, 23]。00:00 ~ 23:00 共 24 个时间点可选，1表示 01:00，依此类推。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class Policy extends AbstractModel
 {
     /**
-     * @var array 选定周一到周日中需要创建快照的日期，取值范围：[0, 6]。0表示周一触发，依此类推。
+     * @var array 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
      */
     public $DayOfWeek;
 
@@ -39,7 +39,7 @@ class Policy extends AbstractModel
      */
     public $Hour;
     /**
-     * @param array $DayOfWeek 选定周一到周日中需要创建快照的日期，取值范围：[0, 6]。0表示周一触发，依此类推。
+     * @param array $DayOfWeek 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
      * @param array $Hour 指定定期快照策略的触发时间。单位为小时，取值范围：[0, 23]。00:00 ~ 23:00 共 24 个时间点可选，1表示 01:00，依此类推。
      */
     function __construct()

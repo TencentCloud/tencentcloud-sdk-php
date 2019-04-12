@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
  * @method string getBackupMethod() 获取目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
  * @method void setBackupMethod(string $BackupMethod) 设置目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
+ * @method array getBackupDBTableList() 获取需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
+例：如果需要备份 db1 库的 tb1、tb2表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]
+ * @method void setBackupDBTableList(array $BackupDBTableList) 设置需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
+例：如果需要备份 db1 库的 tb1、tb2表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]
  */
 
 /**
@@ -38,9 +42,17 @@ class CreateBackupRequest extends AbstractModel
      * @var string 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
      */
     public $BackupMethod;
+
+    /**
+     * @var array 需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
+例：如果需要备份 db1 库的 tb1、tb2表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]
+     */
+    public $BackupDBTableList;
     /**
      * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
      * @param string $BackupMethod 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
+     * @param array $BackupDBTableList 需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
+例：如果需要备份 db1 库的 tb1、tb2表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]
      */
     function __construct()
     {
@@ -60,6 +72,15 @@ class CreateBackupRequest extends AbstractModel
 
         if (array_key_exists("BackupMethod",$param) and $param["BackupMethod"] !== null) {
             $this->BackupMethod = $param["BackupMethod"];
+        }
+
+        if (array_key_exists("BackupDBTableList",$param) and $param["BackupDBTableList"] !== null) {
+            $this->BackupDBTableList = [];
+            foreach ($param["BackupDBTableList"] as $key => $value){
+                $obj = new BackupItem();
+                $obj->deserialize($value);
+                array_push($this->BackupDBTableList, $obj);
+            }
         }
     }
 }

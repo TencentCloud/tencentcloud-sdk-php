@@ -18,8 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceType() 获取CVM实例类型，不能与InstanceTypes同时出现。
- * @method void setInstanceType(string $InstanceType) 设置CVM实例类型，不能与InstanceTypes同时出现。
+ * @method string getInstanceType() 获取CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
+ * @method void setInstanceType(string $InstanceType) 设置CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
  * @method string getImageId() 获取CVM镜像ID
  * @method void setImageId(string $ImageId) 设置CVM镜像ID
  * @method SystemDisk getSystemDisk() 获取实例系统盘配置信息
@@ -42,8 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
  * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取实例的市场相关选项，如竞价实例相关参数
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置实例的市场相关选项，如竞价实例相关参数
- * @method array getInstanceTypes() 获取CVM实例类型列表，不能与InstanceType同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
- * @method void setInstanceTypes(array $InstanceTypes) 设置CVM实例类型列表，不能与InstanceType同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
+ * @method array getInstanceTypes() 获取CVM实例类型列表，不能与InstanceType和InstanceTypeOptions同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
+ * @method void setInstanceTypes(array $InstanceTypes) 设置CVM实例类型列表，不能与InstanceType和InstanceTypeOptions同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
+ * @method InstanceTypeOptions getInstanceTypeOptions() 获取CVM实例机型配置。不能与InstanceType和InstanceTypes同时出现。
+ * @method void setInstanceTypeOptions(InstanceTypeOptions $InstanceTypeOptions) 设置CVM实例机型配置。不能与InstanceType和InstanceTypes同时出现。
  */
 
 /**
@@ -52,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class EnvData extends AbstractModel
 {
     /**
-     * @var string CVM实例类型，不能与InstanceTypes同时出现。
+     * @var string CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
      */
     public $InstanceType;
 
@@ -112,11 +114,16 @@ class EnvData extends AbstractModel
     public $InstanceMarketOptions;
 
     /**
-     * @var array CVM实例类型列表，不能与InstanceType同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
+     * @var array CVM实例类型列表，不能与InstanceType和InstanceTypeOptions同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
      */
     public $InstanceTypes;
+
     /**
-     * @param string $InstanceType CVM实例类型，不能与InstanceTypes同时出现。
+     * @var InstanceTypeOptions CVM实例机型配置。不能与InstanceType和InstanceTypes同时出现。
+     */
+    public $InstanceTypeOptions;
+    /**
+     * @param string $InstanceType CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
      * @param string $ImageId CVM镜像ID
      * @param SystemDisk $SystemDisk 实例系统盘配置信息
      * @param array $DataDisks 实例数据盘配置信息
@@ -128,7 +135,8 @@ class EnvData extends AbstractModel
      * @param EnhancedService $EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
      * @param string $InstanceChargeType CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数
-     * @param array $InstanceTypes CVM实例类型列表，不能与InstanceType同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
+     * @param array $InstanceTypes CVM实例类型列表，不能与InstanceType和InstanceTypeOptions同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
+     * @param InstanceTypeOptions $InstanceTypeOptions CVM实例机型配置。不能与InstanceType和InstanceTypes同时出现。
      */
     function __construct()
     {
@@ -203,6 +211,11 @@ class EnvData extends AbstractModel
 
         if (array_key_exists("InstanceTypes",$param) and $param["InstanceTypes"] !== null) {
             $this->InstanceTypes = $param["InstanceTypes"];
+        }
+
+        if (array_key_exists("InstanceTypeOptions",$param) and $param["InstanceTypeOptions"] !== null) {
+            $this->InstanceTypeOptions = new InstanceTypeOptions();
+            $this->InstanceTypeOptions->deserialize($param["InstanceTypeOptions"]);
         }
     }
 }

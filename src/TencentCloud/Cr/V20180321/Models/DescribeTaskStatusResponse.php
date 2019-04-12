@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getTaskResult() 获取任务结果
  * @method void setTaskResult(string $TaskResult) 设置任务结果
- * @method string getTaskType() 获取任务类型，001为报告下载，002为数据上传，003为还款数据上传。
- * @method void setTaskType(string $TaskType) 设置任务类型，001为报告下载，002为数据上传，003为还款数据上传。
+ * @method string getTaskType() 获取<p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
+ * @method void setTaskType(string $TaskType) 设置<p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -37,7 +37,7 @@ class DescribeTaskStatusResponse extends AbstractModel
     public $TaskResult;
 
     /**
-     * @var string 任务类型，001为报告下载，002为数据上传，003为还款数据上传。
+     * @var string <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
      */
     public $TaskType;
 
@@ -47,7 +47,7 @@ class DescribeTaskStatusResponse extends AbstractModel
     public $RequestId;
     /**
      * @param string $TaskResult 任务结果
-     * @param string $TaskType 任务类型，001为报告下载，002为数据上传，003为还款数据上传。
+     * @param string $TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

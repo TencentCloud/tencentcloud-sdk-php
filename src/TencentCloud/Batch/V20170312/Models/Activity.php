@@ -35,9 +35,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStartTime() 获取活动开始时间
  * @method void setStartTime(string $StartTime) 设置活动开始时间
  * @method string getEndTime() 获取活动结束时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置活动结束时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取云服务器实例ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置云服务器实例ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -87,11 +91,13 @@ class Activity extends AbstractModel
 
     /**
      * @var string 活动结束时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var string 云服务器实例ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
     /**
@@ -104,7 +110,9 @@ class Activity extends AbstractModel
      * @param string $StateReason 状态原因
      * @param string $StartTime 活动开始时间
      * @param string $EndTime 活动结束时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 云服务器实例ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

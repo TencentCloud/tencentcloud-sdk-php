@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxRetryCount(integer $MaxRetryCount) 设置任务失败后的最大重试次数，默认为0
  * @method integer getTimeout() 获取任务启动后的超时时间，单位秒，默认为86400秒
  * @method void setTimeout(integer $Timeout) 设置任务启动后的超时时间，单位秒，默认为86400秒
+ * @method integer getMaxConcurrentNum() 获取任务最大并发数限制，默认没有限制。
+ * @method void setMaxConcurrentNum(integer $MaxConcurrentNum) 设置任务最大并发数限制，默认没有限制。
  */
 
 /**
@@ -129,6 +131,11 @@ class Task extends AbstractModel
      * @var integer 任务启动后的超时时间，单位秒，默认为86400秒
      */
     public $Timeout;
+
+    /**
+     * @var integer 任务最大并发数限制，默认没有限制。
+     */
+    public $MaxConcurrentNum;
     /**
      * @param Application $Application 应用程序信息
      * @param string $TaskName 任务名称，在一个作业内部唯一
@@ -145,6 +152,7 @@ class Task extends AbstractModel
      * @param string $FailedAction TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
      * @param integer $MaxRetryCount 任务失败后的最大重试次数，默认为0
      * @param integer $Timeout 任务启动后的超时时间，单位秒，默认为86400秒
+     * @param integer $MaxConcurrentNum 任务最大并发数限制，默认没有限制。
      */
     function __construct()
     {
@@ -245,6 +253,10 @@ class Task extends AbstractModel
 
         if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
             $this->Timeout = $param["Timeout"];
+        }
+
+        if (array_key_exists("MaxConcurrentNum",$param) and $param["MaxConcurrentNum"] !== null) {
+            $this->MaxConcurrentNum = $param["MaxConcurrentNum"];
         }
     }
 }

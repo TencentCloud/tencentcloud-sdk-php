@@ -48,9 +48,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMask(boolean $Mask) 设置是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method FaceHairAttributesInfo getHair() 获取头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+ * @method FaceHairAttributesInfo getHair() 获取头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHair(FaceHairAttributesInfo $Hair) 设置头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+ * @method void setHair(FaceHairAttributesInfo $Hair) 设置头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEyeOpen() 获取双眼是否睁开 [true,false]。只要有超过一只眼睛闭眼，就返回false。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEyeOpen(boolean $EyeOpen) 设置双眼是否睁开 [true,false]。只要有超过一只眼睛闭眼，就返回false。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -116,10 +120,16 @@ class FaceAttributesInfo extends AbstractModel
     public $Mask;
 
     /**
-     * @var FaceHairAttributesInfo 头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+     * @var FaceHairAttributesInfo 头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Hair;
+
+    /**
+     * @var boolean 双眼是否睁开 [true,false]。只要有超过一只眼睛闭眼，就返回false。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EyeOpen;
     /**
      * @param integer $Gender 性别 [0(female)~100(male)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      * @param integer $Age 年龄 [0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
@@ -136,7 +146,9 @@ class FaceAttributesInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Mask 是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FaceHairAttributesInfo $Hair 头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+     * @param FaceHairAttributesInfo $Hair 头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EyeOpen 双眼是否睁开 [true,false]。只要有超过一只眼睛闭眼，就返回false。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -194,6 +206,10 @@ class FaceAttributesInfo extends AbstractModel
         if (array_key_exists("Hair",$param) and $param["Hair"] !== null) {
             $this->Hair = new FaceHairAttributesInfo();
             $this->Hair->deserialize($param["Hair"]);
+        }
+
+        if (array_key_exists("EyeOpen",$param) and $param["EyeOpen"] !== null) {
+            $this->EyeOpen = $param["EyeOpen"];
         }
     }
 }

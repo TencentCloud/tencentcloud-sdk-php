@@ -76,6 +76,30 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置负载均衡实例所在的子网（仅对内网VPC型LB有意义）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取负载均衡实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置负载均衡实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSecureGroups() 获取负载均衡实例的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecureGroups(array $SecureGroups) 设置负载均衡实例的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method TargetRegionInfo getTargetRegionInfo() 获取负载均衡实例绑定的后端设备的基本信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) 设置负载均衡实例绑定的后端设备的基本信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAnycastZone() 获取anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAnycastZone(string $AnycastZone) 设置anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAddressIPVersion() 获取IP版本，ipv4 | ipv6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAddressIPVersion(string $AddressIPVersion) 设置IP版本，ipv4 | ipv6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNumericalVpcId() 获取数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNumericalVpcId(integer $NumericalVpcId) 设置数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -175,6 +199,42 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
+
+    /**
+     * @var array 负载均衡实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
+     * @var array 负载均衡实例的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecureGroups;
+
+    /**
+     * @var TargetRegionInfo 负载均衡实例绑定的后端设备的基本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetRegionInfo;
+
+    /**
+     * @var string anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AnycastZone;
+
+    /**
+     * @var string IP版本，ipv4 | ipv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AddressIPVersion;
+
+    /**
+     * @var integer 数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NumericalVpcId;
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
@@ -204,6 +264,18 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $Log 用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 负载均衡实例所在的子网（仅对内网VPC型LB有意义）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 负载均衡实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SecureGroups 负载均衡实例的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetRegionInfo $TargetRegionInfo 负载均衡实例绑定的后端设备的基本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AnycastZone anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AddressIPVersion IP版本，ipv4 | ipv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NumericalVpcId 数值形式的私有网络 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -280,6 +352,36 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("SecureGroups",$param) and $param["SecureGroups"] !== null) {
+            $this->SecureGroups = $param["SecureGroups"];
+        }
+
+        if (array_key_exists("TargetRegionInfo",$param) and $param["TargetRegionInfo"] !== null) {
+            $this->TargetRegionInfo = new TargetRegionInfo();
+            $this->TargetRegionInfo->deserialize($param["TargetRegionInfo"]);
+        }
+
+        if (array_key_exists("AnycastZone",$param) and $param["AnycastZone"] !== null) {
+            $this->AnycastZone = $param["AnycastZone"];
+        }
+
+        if (array_key_exists("AddressIPVersion",$param) and $param["AddressIPVersion"] !== null) {
+            $this->AddressIPVersion = $param["AddressIPVersion"];
+        }
+
+        if (array_key_exists("NumericalVpcId",$param) and $param["NumericalVpcId"] !== null) {
+            $this->NumericalVpcId = $param["NumericalVpcId"];
         }
     }
 }

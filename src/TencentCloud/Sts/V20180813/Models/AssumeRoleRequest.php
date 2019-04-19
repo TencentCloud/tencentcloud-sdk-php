@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleArn(string $RoleArn) 设置角色的资源描述。例如：qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName
  * @method string getRoleSessionName() 获取临时会话名称，由用户自定义名称
  * @method void setRoleSessionName(string $RoleSessionName) 设置临时会话名称，由用户自定义名称
- * @method integer getDurationSeconds() 获取指定临时证书的有效期，单位：秒，默认 1800 秒，最长可设定有效期为 7200 秒
- * @method void setDurationSeconds(integer $DurationSeconds) 设置指定临时证书的有效期，单位：秒，默认 1800 秒，最长可设定有效期为 7200 秒
+ * @method integer getDurationSeconds() 获取指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
+ * @method void setDurationSeconds(integer $DurationSeconds) 设置指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
  */
 
 /**
@@ -42,13 +42,13 @@ class AssumeRoleRequest extends AbstractModel
     public $RoleSessionName;
 
     /**
-     * @var integer 指定临时证书的有效期，单位：秒，默认 1800 秒，最长可设定有效期为 7200 秒
+     * @var integer 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
      */
     public $DurationSeconds;
     /**
      * @param string $RoleArn 角色的资源描述。例如：qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName
      * @param string $RoleSessionName 临时会话名称，由用户自定义名称
-     * @param integer $DurationSeconds 指定临时证书的有效期，单位：秒，默认 1800 秒，最长可设定有效期为 7200 秒
+     * @param integer $DurationSeconds 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
      */
     function __construct()
     {

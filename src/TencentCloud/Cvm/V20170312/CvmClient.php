@@ -87,6 +87,9 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 
 * 可以根据实例`ID`、实例名称或者实例计费模式等信息来查询实例的详细信息。过滤信息详细请见过滤器`Filter`。
 * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的实例。
+* @method Models\DescribeInstancesOperationLimitResponse DescribeInstancesOperationLimit(Models\DescribeInstancesOperationLimitRequest $req) 本接口（DescribeInstancesOperationLimit）用于查询实例操作限制。
+
+* 目前支持调整配置操作限制次数查询。
 * @method Models\DescribeInstancesStatusResponse DescribeInstancesStatus(Models\DescribeInstancesStatusRequest $req) 本接口 (DescribeInstancesStatus) 用于查询一个或多个实例的状态。
 
 * 可以根据实例`ID`来查询实例的状态。

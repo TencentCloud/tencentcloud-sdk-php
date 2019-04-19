@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostType(string $HostType) 设置CDH实例机型，默认为：'HS1'。
  * @method integer getHostCount() 获取购买CDH实例数量。
  * @method void setHostCount(integer $HostCount) 设置购买CDH实例数量。
+ * @method array getTagSpecification() 获取标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
+ * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
  */
 
 /**
@@ -66,6 +68,11 @@ class AllocateHostsRequest extends AbstractModel
      * @var integer 购买CDH实例数量。
      */
     public $HostCount;
+
+    /**
+     * @var array 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
+     */
+    public $TagSpecification;
     /**
      * @param Placement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      * @param string $ClientToken 用于保证请求幂等性的字符串。
@@ -73,6 +80,7 @@ class AllocateHostsRequest extends AbstractModel
      * @param string $HostChargeType 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
      * @param string $HostType CDH实例机型，默认为：'HS1'。
      * @param integer $HostCount 购买CDH实例数量。
+     * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
      */
     function __construct()
     {
@@ -110,6 +118,15 @@ class AllocateHostsRequest extends AbstractModel
 
         if (array_key_exists("HostCount",$param) and $param["HostCount"] !== null) {
             $this->HostCount = $param["HostCount"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = [];
+            foreach ($param["TagSpecification"] as $key => $value){
+                $obj = new TagSpecification();
+                $obj->deserialize($value);
+                array_push($this->TagSpecification, $obj);
+            }
         }
     }
 }

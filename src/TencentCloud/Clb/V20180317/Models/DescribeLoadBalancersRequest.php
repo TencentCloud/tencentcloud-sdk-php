@@ -50,6 +50,8 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setProjectId(integer $ProjectId) 设置负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
  * @method integer getWithRs() 获取查询的负载均衡是否绑定后端服务器，0：没有绑定云服务器，1：绑定云服务器，-1：查询全部。
  * @method void setWithRs(integer $WithRs) 设置查询的负载均衡是否绑定后端服务器，0：没有绑定云服务器，1：绑定云服务器，-1：查询全部。
+ * @method string getVpcId() 获取负载均衡实例所属网络，如 vpc-bhqkbhdx
+ * @method void setVpcId(string $VpcId) 设置负载均衡实例所属网络，如 vpc-bhqkbhdx
  */
 
 /**
@@ -132,6 +134,11 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @var integer 查询的负载均衡是否绑定后端服务器，0：没有绑定云服务器，1：绑定云服务器，-1：查询全部。
      */
     public $WithRs;
+
+    /**
+     * @var string 负载均衡实例所属网络，如 vpc-bhqkbhdx
+     */
+    public $VpcId;
     /**
      * @param array $LoadBalancerIds 负载均衡实例 ID。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
@@ -149,6 +156,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $SearchKey 搜索字段，模糊匹配名称、域名、VIP。
      * @param integer $ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
      * @param integer $WithRs 查询的负载均衡是否绑定后端服务器，0：没有绑定云服务器，1：绑定云服务器，-1：查询全部。
+     * @param string $VpcId 负载均衡实例所属网络，如 vpc-bhqkbhdx
      */
     function __construct()
     {
@@ -220,6 +228,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("WithRs",$param) and $param["WithRs"] !== null) {
             $this->WithRs = $param["WithRs"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
     }
 }

@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthCheck(HealthCheck $HealthCheck) 设置监听器的健康检查信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduler() 获取请求调度方式
+ * @method string getScheduler() 获取请求的调度方式
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduler(string $Scheduler) 设置请求调度方式
+ * @method void setScheduler(string $Scheduler) 设置请求的调度方式
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSessionExpireTime() 获取会话保持时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -87,7 +87,7 @@ class Listener extends AbstractModel
     public $HealthCheck;
 
     /**
-     * @var string 请求调度方式
+     * @var string 请求的调度方式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scheduler;
@@ -123,7 +123,7 @@ class Listener extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheck $HealthCheck 监听器的健康检查信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Scheduler 请求调度方式
+     * @param string $Scheduler 请求的调度方式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SessionExpireTime 会话保持时间
 注意：此字段可能返回 null，表示取不到有效值。

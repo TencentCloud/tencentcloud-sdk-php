@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeers(array $Peers) 设置对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
  * @method string getFuncName() 获取该笔交易需要调用的智能合约中的函数名称
  * @method void setFuncName(string $FuncName) 设置该笔交易需要调用的智能合约中的函数名称
+ * @method string getGroupName() 获取调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+ * @method void setGroupName(string $GroupName) 设置调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
  * @method array getArgs() 获取被调用的函数参数列表
  * @method void setArgs(array $Args) 设置被调用的函数参数列表
  * @method integer getAsyncFlag() 获取同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
@@ -79,6 +81,11 @@ class InvokeRequest extends AbstractModel
     public $FuncName;
 
     /**
+     * @var string 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+     */
+    public $GroupName;
+
+    /**
      * @var array 被调用的函数参数列表
      */
     public $Args;
@@ -95,6 +102,7 @@ class InvokeRequest extends AbstractModel
      * @param string $ChannelName 业务所属通道名称，可在通道详情或列表中获取
      * @param array $Peers 对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
      * @param string $FuncName 该笔交易需要调用的智能合约中的函数名称
+     * @param string $GroupName 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
      * @param array $Args 被调用的函数参数列表
      * @param integer $AsyncFlag 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
      */
@@ -141,6 +149,10 @@ class InvokeRequest extends AbstractModel
 
         if (array_key_exists("FuncName",$param) and $param["FuncName"] !== null) {
             $this->FuncName = $param["FuncName"];
+        }
+
+        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
+            $this->GroupName = $param["GroupName"];
         }
 
         if (array_key_exists("Args",$param) and $param["Args"] !== null) {

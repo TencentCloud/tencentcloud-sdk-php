@@ -24,6 +24,7 @@ use TencentCloud\Live\V20180801\Models as Models;
 /**
 * @method Models\AddDelayLiveStreamResponse AddDelayLiveStream(Models\AddDelayLiveStreamRequest $req) 对流设置延播时间
 注意：如果在推流前设置延播，需要提前5分钟设置。
+目前该接口只支持流粒度的，域名及应用粒度功能支持当前开发中。
 
 * @method Models\AddLiveDomainResponse AddLiveDomain(Models\AddLiveDomainRequest $req) 添加域名，一次只能提交一个域名。域名必须已备案。
 * @method Models\AddLiveWatermarkResponse AddLiveWatermark(Models\AddLiveWatermarkRequest $req) 添加水印，成功返回水印id后，需要调用[CreateLiveWatermarkRule](/document/product/267/32629)接口将水印id绑定到流使用。

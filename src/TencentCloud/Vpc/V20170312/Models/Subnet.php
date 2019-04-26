@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAvailableIpAddressCount(integer $AvailableIpAddressCount) 设置可用`IP`数。
  * @method string getIpv6CidrBlock() 获取子网的 `IPv6` `CIDR`。
  * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置子网的 `IPv6` `CIDR`。
+ * @method string getNetworkAclId() 获取关联`ACL`ID
+ * @method void setNetworkAclId(string $NetworkAclId) 设置关联`ACL`ID
+ * @method boolean getIsRemoteVpcSnat() 获取是否为 `SNAT` 地址池子网。
+ * @method void setIsRemoteVpcSnat(boolean $IsRemoteVpcSnat) 设置是否为 `SNAT` 地址池子网。
  */
 
 /**
@@ -101,6 +105,16 @@ class Subnet extends AbstractModel
      * @var string 子网的 `IPv6` `CIDR`。
      */
     public $Ipv6CidrBlock;
+
+    /**
+     * @var string 关联`ACL`ID
+     */
+    public $NetworkAclId;
+
+    /**
+     * @var boolean 是否为 `SNAT` 地址池子网。
+     */
+    public $IsRemoteVpcSnat;
     /**
      * @param string $VpcId `VPC`实例`ID`。
      * @param string $SubnetId 子网实例`ID`，例如：subnet-bthucmmy。
@@ -113,6 +127,8 @@ class Subnet extends AbstractModel
      * @param string $CreatedTime 创建时间。
      * @param integer $AvailableIpAddressCount 可用`IP`数。
      * @param string $Ipv6CidrBlock 子网的 `IPv6` `CIDR`。
+     * @param string $NetworkAclId 关联`ACL`ID
+     * @param boolean $IsRemoteVpcSnat 是否为 `SNAT` 地址池子网。
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class Subnet extends AbstractModel
 
         if (array_key_exists("Ipv6CidrBlock",$param) and $param["Ipv6CidrBlock"] !== null) {
             $this->Ipv6CidrBlock = $param["Ipv6CidrBlock"];
+        }
+
+        if (array_key_exists("NetworkAclId",$param) and $param["NetworkAclId"] !== null) {
+            $this->NetworkAclId = $param["NetworkAclId"];
+        }
+
+        if (array_key_exists("IsRemoteVpcSnat",$param) and $param["IsRemoteVpcSnat"] !== null) {
+            $this->IsRemoteVpcSnat = $param["IsRemoteVpcSnat"];
         }
     }
 }

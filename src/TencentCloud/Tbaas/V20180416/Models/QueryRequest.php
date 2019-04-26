@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeers(array $Peers) 设置执行该查询交易的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
  * @method string getFuncName() 获取该笔交易查询需要调用的智能合约中的函数名称
  * @method void setFuncName(string $FuncName) 设置该笔交易查询需要调用的智能合约中的函数名称
+ * @method string getGroupName() 获取调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+ * @method void setGroupName(string $GroupName) 设置调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
  * @method array getArgs() 获取被调用的函数参数列表
  * @method void setArgs(array $Args) 设置被调用的函数参数列表
  */
@@ -77,6 +79,11 @@ class QueryRequest extends AbstractModel
     public $FuncName;
 
     /**
+     * @var string 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+     */
+    public $GroupName;
+
+    /**
      * @var array 被调用的函数参数列表
      */
     public $Args;
@@ -88,6 +95,7 @@ class QueryRequest extends AbstractModel
      * @param string $ChannelName 业务所属通道名称，可在通道详情或列表中获取
      * @param array $Peers 执行该查询交易的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
      * @param string $FuncName 该笔交易查询需要调用的智能合约中的函数名称
+     * @param string $GroupName 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
      * @param array $Args 被调用的函数参数列表
      */
     function __construct()
@@ -133,6 +141,10 @@ class QueryRequest extends AbstractModel
 
         if (array_key_exists("FuncName",$param) and $param["FuncName"] !== null) {
             $this->FuncName = $param["FuncName"];
+        }
+
+        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
+            $this->GroupName = $param["GroupName"];
         }
 
         if (array_key_exists("Args",$param) and $param["Args"] !== null) {

@@ -18,12 +18,16 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getOperation() 获取修改实例操作，如填写：rename（表示实例重命名）
- * @method void setOperation(string $Operation) 设置修改实例操作，如填写：rename（表示实例重命名）
+ * @method string getOperation() 获取修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
+ * @method void setOperation(string $Operation) 设置修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getInstanceName() 获取实例的新名称
  * @method void setInstanceName(string $InstanceName) 设置实例的新名称
+ * @method integer getProjectId() 获取项目Id
+ * @method void setProjectId(integer $ProjectId) 设置项目Id
+ * @method integer getAutoRenew() 获取自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+ * @method void setAutoRenew(integer $AutoRenew) 设置自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
  */
 
 /**
@@ -32,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 修改实例操作，如填写：rename（表示实例重命名）
+     * @var string 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
      */
     public $Operation;
 
@@ -45,10 +49,22 @@ class ModifyInstanceRequest extends AbstractModel
      * @var string 实例的新名称
      */
     public $InstanceName;
+
     /**
-     * @param string $Operation 修改实例操作，如填写：rename（表示实例重命名）
+     * @var integer 项目Id
+     */
+    public $ProjectId;
+
+    /**
+     * @var integer 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     */
+    public $AutoRenew;
+    /**
+     * @param string $Operation 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
      * @param string $InstanceId 实例Id
      * @param string $InstanceName 实例的新名称
+     * @param integer $ProjectId 项目Id
+     * @param integer $AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class ModifyInstanceRequest extends AbstractModel
 
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
+            $this->AutoRenew = $param["AutoRenew"];
         }
     }
 }

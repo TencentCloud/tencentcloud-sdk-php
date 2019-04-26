@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstanceTypes() 获取实例机型列表。
  * @method void setInstanceTypes(array $InstanceTypes) 设置实例机型列表。
+ * @method array getInstanceTags() 获取标签列表。
+ * @method void setInstanceTags(array $InstanceTags) 设置标签列表。
  */
 
 /**
@@ -162,6 +164,11 @@ class LaunchConfiguration extends AbstractModel
      * @var array 实例机型列表。
      */
     public $InstanceTypes;
+
+    /**
+     * @var array 标签列表。
+     */
+    public $InstanceTags;
     /**
      * @param integer $ProjectId 实例所属项目ID。
      * @param string $LaunchConfigurationId 启动配置ID。
@@ -185,6 +192,7 @@ class LaunchConfiguration extends AbstractModel
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceTypes 实例机型列表。
+     * @param array $InstanceTags 标签列表。
      */
     function __construct()
     {
@@ -283,6 +291,15 @@ class LaunchConfiguration extends AbstractModel
 
         if (array_key_exists("InstanceTypes",$param) and $param["InstanceTypes"] !== null) {
             $this->InstanceTypes = $param["InstanceTypes"];
+        }
+
+        if (array_key_exists("InstanceTags",$param) and $param["InstanceTags"] !== null) {
+            $this->InstanceTags = [];
+            foreach ($param["InstanceTags"] as $key => $value){
+                $obj = new InstanceTag();
+                $obj->deserialize($value);
+                array_push($this->InstanceTags, $obj);
+            }
         }
     }
 }

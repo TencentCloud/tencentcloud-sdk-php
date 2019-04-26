@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatetime(string $Createtime) 设置实例创建时间
  * @method float getSize() 获取实例容量大小，单位：MB
  * @method void setSize(float $Size) 设置实例容量大小，单位：MB
- * @method float getSizeUsed() 获取实例当前已使用容量，单位：MB
- * @method void setSizeUsed(float $SizeUsed) 设置实例当前已使用容量，单位：MB
+ * @method float getSizeUsed() 获取该字段已废弃
+ * @method void setSizeUsed(float $SizeUsed) 设置该字段已废弃
  * @method integer getType() 获取实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
  * @method void setType(integer $Type) 设置实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
  * @method integer getAutoRenewFlag() 获取实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
@@ -62,6 +62,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置vpc网络下子网id 如：subnet-fd3j6l35mm0
  * @method integer getBillingMode() 获取计费模式：0-按量计费，1-包年包月
  * @method void setBillingMode(integer $BillingMode) 设置计费模式：0-按量计费，1-包年包月
+ * @method string getInstanceTitle() 获取实例运行状态描述：如”实例运行中“
+ * @method void setInstanceTitle(string $InstanceTitle) 设置实例运行状态描述：如”实例运行中“
+ * @method string getOfflineTime() 获取计划下线时间
+ * @method void setOfflineTime(string $OfflineTime) 设置计划下线时间
+ * @method integer getSubStatus() 获取流程中的实例，返回子状态
+ * @method void setSubStatus(integer $SubStatus) 设置流程中的实例，返回子状态
+ * @method array getTags() 获取反亲和性标签
+ * @method void setTags(array $Tags) 设置反亲和性标签
+ * @method array getInstanceNode() 获取实例节点信息
+ * @method void setInstanceNode(array $InstanceNode) 设置实例节点信息
+ * @method integer getRedisShardSize() 获取分片大小
+ * @method void setRedisShardSize(integer $RedisShardSize) 设置分片大小
+ * @method integer getRedisShardNum() 获取分片数量
+ * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量
+ * @method integer getRedisReplicasNum() 获取副本数量
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置副本数量
+ * @method integer getPriceId() 获取计费Id
+ * @method void setPriceId(integer $PriceId) 设置计费Id
+ * @method string getCloseTime() 获取隔离时间
+ * @method void setCloseTime(string $CloseTime) 设置隔离时间
+ * @method integer getSlaveReadWeight() 获取从节点读取权重
+ * @method void setSlaveReadWeight(integer $SlaveReadWeight) 设置从节点读取权重
+ * @method array getInstanceTags() 获取实例关联的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceTags(array $InstanceTags) 设置实例关联的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProjectName() 获取项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectName(string $ProjectName) 设置项目名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -135,7 +165,7 @@ class InstanceSet extends AbstractModel
     public $Size;
 
     /**
-     * @var float 实例当前已使用容量，单位：MB
+     * @var float 该字段已废弃
      */
     public $SizeUsed;
 
@@ -178,6 +208,73 @@ class InstanceSet extends AbstractModel
      * @var integer 计费模式：0-按量计费，1-包年包月
      */
     public $BillingMode;
+
+    /**
+     * @var string 实例运行状态描述：如”实例运行中“
+     */
+    public $InstanceTitle;
+
+    /**
+     * @var string 计划下线时间
+     */
+    public $OfflineTime;
+
+    /**
+     * @var integer 流程中的实例，返回子状态
+     */
+    public $SubStatus;
+
+    /**
+     * @var array 反亲和性标签
+     */
+    public $Tags;
+
+    /**
+     * @var array 实例节点信息
+     */
+    public $InstanceNode;
+
+    /**
+     * @var integer 分片大小
+     */
+    public $RedisShardSize;
+
+    /**
+     * @var integer 分片数量
+     */
+    public $RedisShardNum;
+
+    /**
+     * @var integer 副本数量
+     */
+    public $RedisReplicasNum;
+
+    /**
+     * @var integer 计费Id
+     */
+    public $PriceId;
+
+    /**
+     * @var string 隔离时间
+     */
+    public $CloseTime;
+
+    /**
+     * @var integer 从节点读取权重
+     */
+    public $SlaveReadWeight;
+
+    /**
+     * @var array 实例关联的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceTags;
+
+    /**
+     * @var string 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectName;
     /**
      * @param string $InstanceName 实例名称
      * @param string $InstanceId 实例Id
@@ -192,7 +289,7 @@ class InstanceSet extends AbstractModel
      * @param integer $Port 实例端口号
      * @param string $Createtime 实例创建时间
      * @param float $Size 实例容量大小，单位：MB
-     * @param float $SizeUsed 实例当前已使用容量，单位：MB
+     * @param float $SizeUsed 该字段已废弃
      * @param integer $Type 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
      * @param integer $AutoRenewFlag 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
      * @param string $DeadlineTime 实例到期时间
@@ -201,6 +298,21 @@ class InstanceSet extends AbstractModel
      * @param string $UniqVpcId vpc网络id 如：vpc-fk33jsf43kgv
      * @param string $UniqSubnetId vpc网络下子网id 如：subnet-fd3j6l35mm0
      * @param integer $BillingMode 计费模式：0-按量计费，1-包年包月
+     * @param string $InstanceTitle 实例运行状态描述：如”实例运行中“
+     * @param string $OfflineTime 计划下线时间
+     * @param integer $SubStatus 流程中的实例，返回子状态
+     * @param array $Tags 反亲和性标签
+     * @param array $InstanceNode 实例节点信息
+     * @param integer $RedisShardSize 分片大小
+     * @param integer $RedisShardNum 分片数量
+     * @param integer $RedisReplicasNum 副本数量
+     * @param integer $PriceId 计费Id
+     * @param string $CloseTime 隔离时间
+     * @param integer $SlaveReadWeight 从节点读取权重
+     * @param array $InstanceTags 实例关联的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectName 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -300,6 +412,68 @@ class InstanceSet extends AbstractModel
 
         if (array_key_exists("BillingMode",$param) and $param["BillingMode"] !== null) {
             $this->BillingMode = $param["BillingMode"];
+        }
+
+        if (array_key_exists("InstanceTitle",$param) and $param["InstanceTitle"] !== null) {
+            $this->InstanceTitle = $param["InstanceTitle"];
+        }
+
+        if (array_key_exists("OfflineTime",$param) and $param["OfflineTime"] !== null) {
+            $this->OfflineTime = $param["OfflineTime"];
+        }
+
+        if (array_key_exists("SubStatus",$param) and $param["SubStatus"] !== null) {
+            $this->SubStatus = $param["SubStatus"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = $param["Tags"];
+        }
+
+        if (array_key_exists("InstanceNode",$param) and $param["InstanceNode"] !== null) {
+            $this->InstanceNode = [];
+            foreach ($param["InstanceNode"] as $key => $value){
+                $obj = new InstanceNode();
+                $obj->deserialize($value);
+                array_push($this->InstanceNode, $obj);
+            }
+        }
+
+        if (array_key_exists("RedisShardSize",$param) and $param["RedisShardSize"] !== null) {
+            $this->RedisShardSize = $param["RedisShardSize"];
+        }
+
+        if (array_key_exists("RedisShardNum",$param) and $param["RedisShardNum"] !== null) {
+            $this->RedisShardNum = $param["RedisShardNum"];
+        }
+
+        if (array_key_exists("RedisReplicasNum",$param) and $param["RedisReplicasNum"] !== null) {
+            $this->RedisReplicasNum = $param["RedisReplicasNum"];
+        }
+
+        if (array_key_exists("PriceId",$param) and $param["PriceId"] !== null) {
+            $this->PriceId = $param["PriceId"];
+        }
+
+        if (array_key_exists("CloseTime",$param) and $param["CloseTime"] !== null) {
+            $this->CloseTime = $param["CloseTime"];
+        }
+
+        if (array_key_exists("SlaveReadWeight",$param) and $param["SlaveReadWeight"] !== null) {
+            $this->SlaveReadWeight = $param["SlaveReadWeight"];
+        }
+
+        if (array_key_exists("InstanceTags",$param) and $param["InstanceTags"] !== null) {
+            $this->InstanceTags = [];
+            foreach ($param["InstanceTags"] as $key => $value){
+                $obj = new InstanceTagInfo();
+                $obj->deserialize($value);
+                array_push($this->InstanceTags, $obj);
+            }
+        }
+
+        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
+            $this->ProjectName = $param["ProjectName"];
         }
     }
 }

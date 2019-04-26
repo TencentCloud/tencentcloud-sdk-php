@@ -21,15 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
-<li>Description：智能描述</li>
-<li>Highlight：智能精彩片断</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
  * @method void setType(string $Type) 设置任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
-<li>Description：智能描述</li>
-<li>Highlight：智能精彩片断</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
  * @method AiAnalysisTaskClassificationResult getClassificationTask() 获取视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
@@ -44,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagTask(AiAnalysisTaskTagResult $TagTask) 设置视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiAnalysisTaskFrameTagResult getFrameTagTask() 获取视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFrameTagTask(AiAnalysisTaskFrameTagResult $FrameTagTask) 设置视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -55,8 +55,6 @@ class AiAnalysisResult extends AbstractModel
      * @var string 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
-<li>Description：智能描述</li>
-<li>Highlight：智能精彩片断</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
      */
@@ -79,12 +77,16 @@ class AiAnalysisResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagTask;
+
+    /**
+     * @var AiAnalysisTaskFrameTagResult 视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FrameTagTask;
     /**
      * @param string $Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
-<li>Description：智能描述</li>
-<li>Highlight：智能精彩片断</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
      * @param AiAnalysisTaskClassificationResult $ClassificationTask 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
@@ -92,6 +94,8 @@ class AiAnalysisResult extends AbstractModel
      * @param AiAnalysisTaskCoverResult $CoverTask 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskTagResult $TagTask 视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiAnalysisTaskFrameTagResult $FrameTagTask 视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -123,6 +127,11 @@ class AiAnalysisResult extends AbstractModel
         if (array_key_exists("TagTask",$param) and $param["TagTask"] !== null) {
             $this->TagTask = new AiAnalysisTaskTagResult();
             $this->TagTask->deserialize($param["TagTask"]);
+        }
+
+        if (array_key_exists("FrameTagTask",$param) and $param["FrameTagTask"] !== null) {
+            $this->FrameTagTask = new AiAnalysisTaskFrameTagResult();
+            $this->FrameTagTask->deserialize($param["FrameTagTask"]);
         }
     }
 }

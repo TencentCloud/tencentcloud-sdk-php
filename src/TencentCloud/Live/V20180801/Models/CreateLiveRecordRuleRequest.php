@@ -20,12 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getDomainName() 获取推流域名。
  * @method void setDomainName(string $DomainName) 设置推流域名。
+ * @method integer getTemplateId() 获取模板Id。
+ * @method void setTemplateId(integer $TemplateId) 设置模板Id。
  * @method string getAppName() 获取推流路径。
  * @method void setAppName(string $AppName) 设置推流路径。
  * @method string getStreamName() 获取流名称。
+注：如果本参数设置为非空字符串，规则将只对此推流起作用。
  * @method void setStreamName(string $StreamName) 设置流名称。
- * @method integer getTemplateId() 获取模板Id。
- * @method void setTemplateId(integer $TemplateId) 设置模板Id。
+注：如果本参数设置为非空字符串，规则将只对此推流起作用。
  */
 
 /**
@@ -39,24 +41,26 @@ class CreateLiveRecordRuleRequest extends AbstractModel
     public $DomainName;
 
     /**
+     * @var integer 模板Id。
+     */
+    public $TemplateId;
+
+    /**
      * @var string 推流路径。
      */
     public $AppName;
 
     /**
      * @var string 流名称。
+注：如果本参数设置为非空字符串，规则将只对此推流起作用。
      */
     public $StreamName;
-
-    /**
-     * @var integer 模板Id。
-     */
-    public $TemplateId;
     /**
      * @param string $DomainName 推流域名。
+     * @param integer $TemplateId 模板Id。
      * @param string $AppName 推流路径。
      * @param string $StreamName 流名称。
-     * @param integer $TemplateId 模板Id。
+注：如果本参数设置为非空字符串，规则将只对此推流起作用。
      */
     function __construct()
     {
@@ -74,16 +78,16 @@ class CreateLiveRecordRuleRequest extends AbstractModel
             $this->DomainName = $param["DomainName"];
         }
 
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
+        }
+
         if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
             $this->AppName = $param["AppName"];
         }
 
         if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
             $this->StreamName = $param["StreamName"];
-        }
-
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

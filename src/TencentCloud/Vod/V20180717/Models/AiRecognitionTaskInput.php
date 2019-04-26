@@ -23,7 +23,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *AI 视频内容识别输入参数类型
+ *视频内容识别输入参数类型
  */
 class AiRecognitionTaskInput extends AbstractModel
 {

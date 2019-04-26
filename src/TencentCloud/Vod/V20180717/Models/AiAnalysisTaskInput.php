@@ -18,8 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getDefinition() 获取视频内容分析模板 ID ，固定为 10，同时进行智能分类、智能标签分析、智能封面分析。
- * @method void setDefinition(integer $Definition) 设置视频内容分析模板 ID ，固定为 10，同时进行智能分类、智能标签分析、智能封面分析。
+ * @method integer getDefinition() 获取视频内容分析模板 ID。
+ * @method void setDefinition(integer $Definition) 设置视频内容分析模板 ID。
  */
 
 /**
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
 class AiAnalysisTaskInput extends AbstractModel
 {
     /**
-     * @var integer 视频内容分析模板 ID ，固定为 10，同时进行智能分类、智能标签分析、智能封面分析。
+     * @var integer 视频内容分析模板 ID。
      */
     public $Definition;
     /**
-     * @param integer $Definition 视频内容分析模板 ID ，固定为 10，同时进行智能分类、智能标签分析、智能封面分析。
+     * @param integer $Definition 视频内容分析模板 ID。
      */
     function __construct()
     {

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeerGroup(string $PeerGroup) 设置执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
  * @method string getTxId() 获取事务ID
  * @method void setTxId(string $TxId) 设置事务ID
+ * @method string getGroupName() 获取调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+ * @method void setGroupName(string $GroupName) 设置调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
  */
 
 /**
@@ -73,6 +75,11 @@ class GetInvokeTxRequest extends AbstractModel
      * @var string 事务ID
      */
     public $TxId;
+
+    /**
+     * @var string 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+     */
+    public $GroupName;
     /**
      * @param string $Module 模块名，固定字段：transaction
      * @param string $Operation 操作名，固定字段：query_txid
@@ -81,6 +88,7 @@ class GetInvokeTxRequest extends AbstractModel
      * @param string $PeerName 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
      * @param string $PeerGroup 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
      * @param string $TxId 事务ID
+     * @param string $GroupName 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class GetInvokeTxRequest extends AbstractModel
 
         if (array_key_exists("TxId",$param) and $param["TxId"] !== null) {
             $this->TxId = $param["TxId"];
+        }
+
+        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
+            $this->GroupName = $param["GroupName"];
         }
     }
 }

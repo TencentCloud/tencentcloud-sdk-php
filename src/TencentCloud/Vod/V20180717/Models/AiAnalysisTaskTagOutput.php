@@ -19,9 +19,7 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method array getTagSet() 获取视频智能标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置视频智能标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -31,12 +29,10 @@ class AiAnalysisTaskTagOutput extends AbstractModel
 {
     /**
      * @var array 视频智能标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
     /**
      * @param array $TagSet 视频智能标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -44,6 +44,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
  * @method array getRegionIds() 获取地域ID，已经弃用，可通过公共参数Region查询对应地域
  * @method void setRegionIds(array $RegionIds) 设置地域ID，已经弃用，可通过公共参数Region查询对应地域
+ * @method array getStatus() 获取实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+ * @method void setStatus(array $Status) 设置实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+ * @method integer getTypeVersion() 获取类型版本：1-单机版,2-主从版,3-集群版
+ * @method void setTypeVersion(integer $TypeVersion) 设置类型版本：1-单机版,2-主从版,3-集群版
+ * @method string getEngineName() 获取引擎信息：Redis-2.8，Redis-4.0，CKV
+ * @method void setEngineName(string $EngineName) 设置引擎信息：Redis-2.8，Redis-4.0，CKV
+ * @method array getAutoRenew() 获取续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+ * @method void setAutoRenew(array $AutoRenew) 设置续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+ * @method string getBillingMode() 获取计费模式：postpaid-按量计费；prepaid-包年包月
+ * @method void setBillingMode(string $BillingMode) 设置计费模式：postpaid-按量计费；prepaid-包年包月
+ * @method integer getType() 获取实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；7-Redis 4.0集群版
+ * @method void setType(integer $Type) 设置实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；7-Redis 4.0集群版
+ * @method array getSearchKeys() 获取搜索关键词：支持实例Id、实例名称、完整IP
+ * @method void setSearchKeys(array $SearchKeys) 设置搜索关键词：支持实例Id、实例名称、完整IP
  */
 
 /**
@@ -115,6 +129,41 @@ class DescribeInstancesRequest extends AbstractModel
      * @var array 地域ID，已经弃用，可通过公共参数Region查询对应地域
      */
     public $RegionIds;
+
+    /**
+     * @var array 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+     */
+    public $Status;
+
+    /**
+     * @var integer 类型版本：1-单机版,2-主从版,3-集群版
+     */
+    public $TypeVersion;
+
+    /**
+     * @var string 引擎信息：Redis-2.8，Redis-4.0，CKV
+     */
+    public $EngineName;
+
+    /**
+     * @var array 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     */
+    public $AutoRenew;
+
+    /**
+     * @var string 计费模式：postpaid-按量计费；prepaid-包年包月
+     */
+    public $BillingMode;
+
+    /**
+     * @var integer 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；7-Redis 4.0集群版
+     */
+    public $Type;
+
+    /**
+     * @var array 搜索关键词：支持实例Id、实例名称、完整IP
+     */
+    public $SearchKeys;
     /**
      * @param integer $Limit 实例列表的大小，参数默认值20
      * @param integer $Offset 偏移量，取Limit整数倍
@@ -129,6 +178,13 @@ class DescribeInstancesRequest extends AbstractModel
      * @param array $UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
      * @param array $UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
      * @param array $RegionIds 地域ID，已经弃用，可通过公共参数Region查询对应地域
+     * @param array $Status 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+     * @param integer $TypeVersion 类型版本：1-单机版,2-主从版,3-集群版
+     * @param string $EngineName 引擎信息：Redis-2.8，Redis-4.0，CKV
+     * @param array $AutoRenew 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * @param string $BillingMode 计费模式：postpaid-按量计费；prepaid-包年包月
+     * @param integer $Type 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；7-Redis 4.0集群版
+     * @param array $SearchKeys 搜索关键词：支持实例Id、实例名称、完整IP
      */
     function __construct()
     {
@@ -192,6 +248,34 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("RegionIds",$param) and $param["RegionIds"] !== null) {
             $this->RegionIds = $param["RegionIds"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("TypeVersion",$param) and $param["TypeVersion"] !== null) {
+            $this->TypeVersion = $param["TypeVersion"];
+        }
+
+        if (array_key_exists("EngineName",$param) and $param["EngineName"] !== null) {
+            $this->EngineName = $param["EngineName"];
+        }
+
+        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
+            $this->AutoRenew = $param["AutoRenew"];
+        }
+
+        if (array_key_exists("BillingMode",$param) and $param["BillingMode"] !== null) {
+            $this->BillingMode = $param["BillingMode"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("SearchKeys",$param) and $param["SearchKeys"] !== null) {
+            $this->SearchKeys = $param["SearchKeys"];
         }
     }
 }

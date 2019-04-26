@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemSize(integer $MemSize) 设置实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
  * @method integer getGoodsNum() 获取实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
  * @method void setGoodsNum(integer $GoodsNum) 设置实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
- * @method integer getPeriod() 获取购买时长，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
- * @method void setPeriod(integer $Period) 设置购买时长，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+ * @method integer getPeriod() 获取购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+ * @method void setPeriod(integer $Period) 设置购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
  * @method string getPassword() 获取实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种
  * @method void setPassword(string $Password) 设置实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种
  * @method integer getBillingMode() 获取付费方式:0-按量计费，1-包年包月。
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
  * @method integer getProjectId() 获取项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准
  * @method void setProjectId(integer $ProjectId) 设置项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准
- * @method integer getAutoRenew() 获取自动续费表示。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
- * @method void setAutoRenew(integer $AutoRenew) 设置自动续费表示。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+ * @method integer getAutoRenew() 获取自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+ * @method void setAutoRenew(integer $AutoRenew) 设置自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
  * @method array getSecurityGroupIdList() 获取安全组id数组
  * @method void setSecurityGroupIdList(array $SecurityGroupIdList) 设置安全组id数组
  * @method integer getVPort() 获取用户自定义的端口 不填则默认为6379
@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
  * @method boolean getReplicasReadonly() 获取是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
  * @method void setReplicasReadonly(boolean $ReplicasReadonly) 设置是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+ * @method string getInstanceName() 获取实例名称
+ * @method void setInstanceName(string $InstanceName) 设置实例名称
  */
 
 /**
@@ -78,7 +80,7 @@ class CreateInstancesRequest extends AbstractModel
     public $GoodsNum;
 
     /**
-     * @var integer 购买时长，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+     * @var integer 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      */
     public $Period;
 
@@ -108,7 +110,7 @@ class CreateInstancesRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 自动续费表示。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * @var integer 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      */
     public $AutoRenew;
 
@@ -136,23 +138,29 @@ class CreateInstancesRequest extends AbstractModel
      * @var boolean 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
     public $ReplicasReadonly;
+
+    /**
+     * @var string 实例名称
+     */
+    public $InstanceName;
     /**
      * @param integer $ZoneId 实例所属的可用区id
      * @param integer $TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，7 – Redis4.0集群版，
      * @param integer $MemSize 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
      * @param integer $GoodsNum 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
-     * @param integer $Period 购买时长，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+     * @param integer $Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      * @param string $Password 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种
      * @param integer $BillingMode 付费方式:0-按量计费，1-包年包月。
      * @param string $VpcId 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
      * @param string $SubnetId 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
      * @param integer $ProjectId 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准
-     * @param integer $AutoRenew 自动续费表示。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * @param integer $AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      * @param array $SecurityGroupIdList 安全组id数组
      * @param integer $VPort 用户自定义的端口 不填则默认为6379
      * @param integer $RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      * @param integer $RedisReplicasNum 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      * @param boolean $ReplicasReadonly 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * @param string $InstanceName 实例名称
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class CreateInstancesRequest extends AbstractModel
 
         if (array_key_exists("ReplicasReadonly",$param) and $param["ReplicasReadonly"] !== null) {
             $this->ReplicasReadonly = $param["ReplicasReadonly"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
         }
     }
 }

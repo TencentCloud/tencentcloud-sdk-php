@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) 设置视频内容分析任务的执行状态与结果。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAiRecognitionResultSet() 获取视频内容识别任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) 设置视频内容识别任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTasksPriority() 获取任务流的优先级，取值范围为 [-10, 10]。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTasksPriority(integer $TasksPriority) 设置任务流的优先级，取值范围为 [-10, 10]。
@@ -176,6 +180,12 @@ class ProcedureTask extends AbstractModel
     public $AiAnalysisResultSet;
 
     /**
+     * @var array 视频内容识别任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AiRecognitionResultSet;
+
+    /**
      * @var integer 任务流的优先级，取值范围为 [-10, 10]。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -229,6 +239,8 @@ class ProcedureTask extends AbstractModel
      * @param array $AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TasksPriority 任务流的优先级，取值范围为 [-10, 10]。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -311,6 +323,15 @@ class ProcedureTask extends AbstractModel
                 $obj = new AiAnalysisResult();
                 $obj->deserialize($value);
                 array_push($this->AiAnalysisResultSet, $obj);
+            }
+        }
+
+        if (array_key_exists("AiRecognitionResultSet",$param) and $param["AiRecognitionResultSet"] !== null) {
+            $this->AiRecognitionResultSet = [];
+            foreach ($param["AiRecognitionResultSet"] as $key => $value){
+                $obj = new AiRecognitionResult();
+                $obj->deserialize($value);
+                array_push($this->AiRecognitionResultSet, $obj);
             }
         }
 

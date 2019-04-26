@@ -19,13 +19,9 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getClassification() 获取智能分类的类别名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClassification(string $Classification) 设置智能分类的类别名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getConfidence() 获取智能分类的可信度，取值范围是 0 到 100。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfidence(float $Confidence) 设置智能分类的可信度，取值范围是 0 到 100。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -35,20 +31,16 @@ class MediaAiAnalysisClassificationItem extends AbstractModel
 {
     /**
      * @var string 智能分类的类别名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Classification;
 
     /**
      * @var float 智能分类的可信度，取值范围是 0 到 100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Confidence;
     /**
      * @param string $Classification 智能分类的类别名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Confidence 智能分类的可信度，取值范围是 0 到 100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

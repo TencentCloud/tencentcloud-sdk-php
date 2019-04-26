@@ -25,7 +25,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *登陆设置
+ *登录设置
  */
 class LoginSettings extends AbstractModel
 {

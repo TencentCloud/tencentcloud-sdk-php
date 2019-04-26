@@ -19,13 +19,9 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getTag() 获取标签名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(string $Tag) 设置标签名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getConfidence() 获取标签的可信度，取值范围是 0 到 100。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfidence(float $Confidence) 设置标签的可信度，取值范围是 0 到 100。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -35,20 +31,16 @@ class MediaAiAnalysisTagItem extends AbstractModel
 {
     /**
      * @var string 标签名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
     /**
      * @var float 标签的可信度，取值范围是 0 到 100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Confidence;
     /**
      * @param string $Tag 标签名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Confidence 标签的可信度，取值范围是 0 到 100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

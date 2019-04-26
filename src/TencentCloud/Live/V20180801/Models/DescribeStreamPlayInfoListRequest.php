@@ -18,13 +18,13 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStartTime() 获取开始时间，北京时间，
+ * @method string getStartTime() 获取开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 当前时间 和 开始时间 间隔不超过30天。
- * @method void setStartTime(string $StartTime) 设置开始时间，北京时间，
+ * @method void setStartTime(string $StartTime) 设置开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 当前时间 和 开始时间 间隔不超过30天。
- * @method string getEndTime() 获取结束时间，北京时间，
+ * @method string getEndTime() 获取结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 结束时间 和 开始时间  必须在同一天内。
- * @method void setEndTime(string $EndTime) 设置结束时间，北京时间，
+ * @method void setEndTime(string $EndTime) 设置结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 结束时间 和 开始时间  必须在同一天内。
  * @method string getPlayDomain() 获取播放域名，
 若不填，则为查询所有播放域名的在线流数据。
@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 若不填，则为查询总体播放数据。
  * @method void setStreamName(string $StreamName) 设置流名称，精确匹配。
 若不填，则为查询总体播放数据。
+ * @method string getAppName() 获取播放路径，精确匹配，不支持。
+若不填，则为查询总体播放数据。
+ * @method void setAppName(string $AppName) 设置播放路径，精确匹配，不支持。
+若不填，则为查询总体播放数据。
  */
 
 /**
@@ -42,13 +46,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeStreamPlayInfoListRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间，北京时间，
+     * @var string 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 当前时间 和 开始时间 间隔不超过30天。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间，北京时间，
+     * @var string 结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 结束时间 和 开始时间  必须在同一天内。
      */
     public $EndTime;
@@ -64,14 +68,22 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
 若不填，则为查询总体播放数据。
      */
     public $StreamName;
+
     /**
-     * @param string $StartTime 开始时间，北京时间，
+     * @var string 播放路径，精确匹配，不支持。
+若不填，则为查询总体播放数据。
+     */
+    public $AppName;
+    /**
+     * @param string $StartTime 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 当前时间 和 开始时间 间隔不超过30天。
-     * @param string $EndTime 结束时间，北京时间，
+     * @param string $EndTime 结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 结束时间 和 开始时间  必须在同一天内。
      * @param string $PlayDomain 播放域名，
 若不填，则为查询所有播放域名的在线流数据。
      * @param string $StreamName 流名称，精确匹配。
+若不填，则为查询总体播放数据。
+     * @param string $AppName 播放路径，精确匹配，不支持。
 若不填，则为查询总体播放数据。
      */
     function __construct()
@@ -100,6 +112,10 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
 
         if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
             $this->StreamName = $param["StreamName"];
+        }
+
+        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
+            $this->AppName = $param["AppName"];
         }
     }
 }

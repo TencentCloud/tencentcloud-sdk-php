@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 支持的图片格式：PNG、JPG、JPEG，暂不支持GIF格式。
 支持的图片大小：所下载图片经Base64编码后不超过3M。图片下载时间不超过3秒。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
+ * @method string getScene() 获取保留字段。
+ * @method void setScene(string $Scene) 设置保留字段。
  */
 
 /**
@@ -56,6 +58,11 @@ class GeneralBasicOCRRequest extends AbstractModel
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
      */
     public $ImageUrl;
+
+    /**
+     * @var string 保留字段。
+     */
+    public $Scene;
     /**
      * @param string $ImageBase64 图片的BASE64值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持GIF格式。
@@ -65,6 +72,7 @@ class GeneralBasicOCRRequest extends AbstractModel
 支持的图片格式：PNG、JPG、JPEG，暂不支持GIF格式。
 支持的图片大小：所下载图片经Base64编码后不超过3M。图片下载时间不超过3秒。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
+     * @param string $Scene 保留字段。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class GeneralBasicOCRRequest extends AbstractModel
 
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
+            $this->Scene = $param["Scene"];
         }
     }
 }

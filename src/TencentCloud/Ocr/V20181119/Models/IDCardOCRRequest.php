@@ -38,16 +38,28 @@ use TencentCloud\Common\AbstractModel;
 BACK为身份证有国徽的一面（反面）
  * @method void setCardSide(string $CardSide) 设置FRONT为身份证有照片的一面（正面）
 BACK为身份证有国徽的一面（反面）
- * @method string getConfig() 获取可选字段，根据需要选择是否请求对应字段。目前包含的字段为：
-CropIdCard-身份证照片裁剪，
-CropPortrait-人像照片裁剪，
-CopyWarn-复印件告警，
-ReshootWarn-翻拍告警。
- * @method void setConfig(string $Config) 设置可选字段，根据需要选择是否请求对应字段。目前包含的字段为：
-CropIdCard-身份证照片裁剪，
-CropPortrait-人像照片裁剪，
-CopyWarn-复印件告警，
-ReshootWarn-翻拍告警。
+ * @method string getConfig() 获取可选字段，根据需要选择是否请求对应字段。
+目前包含的字段为：
+CropIdCard-身份证照片裁剪，bool类型，
+CropPortrait-人像照片裁剪，bool类型，
+CopyWarn-复印件告警，bool类型，
+ReshootWarn-翻拍告警，bool类型。
+
+SDK设置方式参考：
+Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
+API 3.0 Explorer设置方式参考：
+Config = {"CropIdCard":true,"CropPortrait":true}
+ * @method void setConfig(string $Config) 设置可选字段，根据需要选择是否请求对应字段。
+目前包含的字段为：
+CropIdCard-身份证照片裁剪，bool类型，
+CropPortrait-人像照片裁剪，bool类型，
+CopyWarn-复印件告警，bool类型，
+ReshootWarn-翻拍告警，bool类型。
+
+SDK设置方式参考：
+Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
+API 3.0 Explorer设置方式参考：
+Config = {"CropIdCard":true,"CropPortrait":true}
  */
 
 /**
@@ -78,11 +90,17 @@ BACK为身份证有国徽的一面（反面）
     public $CardSide;
 
     /**
-     * @var string 可选字段，根据需要选择是否请求对应字段。目前包含的字段为：
-CropIdCard-身份证照片裁剪，
-CropPortrait-人像照片裁剪，
-CopyWarn-复印件告警，
-ReshootWarn-翻拍告警。
+     * @var string 可选字段，根据需要选择是否请求对应字段。
+目前包含的字段为：
+CropIdCard-身份证照片裁剪，bool类型，
+CropPortrait-人像照片裁剪，bool类型，
+CopyWarn-复印件告警，bool类型，
+ReshootWarn-翻拍告警，bool类型。
+
+SDK设置方式参考：
+Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
+API 3.0 Explorer设置方式参考：
+Config = {"CropIdCard":true,"CropPortrait":true}
      */
     public $Config;
     /**
@@ -96,11 +114,17 @@ ReshootWarn-翻拍告警。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
      * @param string $CardSide FRONT为身份证有照片的一面（正面）
 BACK为身份证有国徽的一面（反面）
-     * @param string $Config 可选字段，根据需要选择是否请求对应字段。目前包含的字段为：
-CropIdCard-身份证照片裁剪，
-CropPortrait-人像照片裁剪，
-CopyWarn-复印件告警，
-ReshootWarn-翻拍告警。
+     * @param string $Config 可选字段，根据需要选择是否请求对应字段。
+目前包含的字段为：
+CropIdCard-身份证照片裁剪，bool类型，
+CropPortrait-人像照片裁剪，bool类型，
+CopyWarn-复印件告警，bool类型，
+ReshootWarn-翻拍告警，bool类型。
+
+SDK设置方式参考：
+Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
+API 3.0 Explorer设置方式参考：
+Config = {"CropIdCard":true,"CropPortrait":true}
      */
     function __construct()
     {

@@ -92,6 +92,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataDiskCount(integer $DataDiskCount) 设置数据盘数量，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/10968)返回值
  * @method array getTags() 获取绑定的标签列表
  * @method void setTags(array $Tags) 设置绑定的标签列表
+ * @method string getFileSystem() 获取指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
+ * @method void setFileSystem(string $FileSystem) 设置指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
  */
 
 /**
@@ -279,6 +281,11 @@ class BuyDevicesRequest extends AbstractModel
      * @var array 绑定的标签列表
      */
     public $Tags;
+
+    /**
+     * @var string 指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
+     */
+    public $FileSystem;
     /**
      * @param string $Zone 可用区ID。通过接口[查询地域以及可用区(DescribeRegions)](https://cloud.tencent.com/document/api/386/6634)获取可用区信息
      * @param integer $OsTypeId 部署服务器的操作系统ID。通过接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/api/386/31964)获取操作系统信息
@@ -317,6 +324,7 @@ class BuyDevicesRequest extends AbstractModel
      * @param integer $DataDiskTypeId 数据盘ID，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/10968)返回值
      * @param integer $DataDiskCount 数据盘数量，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/10968)返回值
      * @param array $Tags 绑定的标签列表
+     * @param string $FileSystem 指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
      */
     function __construct()
     {
@@ -477,6 +485,10 @@ class BuyDevicesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("FileSystem",$param) and $param["FileSystem"] !== null) {
+            $this->FileSystem = $param["FileSystem"];
         }
     }
 }

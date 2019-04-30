@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量,默认0
  * @method integer getLimit() 获取最大输出条数，默认20
  * @method void setLimit(integer $Limit) 设置最大输出条数，默认20
- * @method string getInstanceIds() 获取需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
- * @method void setInstanceIds(string $InstanceIds) 设置需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
+ * @method array getInstanceIds() 获取需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
+ * @method void setInstanceIds(array $InstanceIds) 设置需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
  */
 
 /**
@@ -49,14 +49,14 @@ class DescribeClusterInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
+     * @var array 需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
      */
     public $InstanceIds;
     /**
      * @param string $ClusterId 集群ID
      * @param integer $Offset 偏移量,默认0
      * @param integer $Limit 最大输出条数，默认20
-     * @param string $InstanceIds 需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
+     * @param array $InstanceIds 需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
      */
     function __construct()
     {

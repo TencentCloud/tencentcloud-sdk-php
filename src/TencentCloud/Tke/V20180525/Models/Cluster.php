@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterNetworkSettings(ClusterNetworkSettings $ClusterNetworkSettings) 设置集群网络相关参数
  * @method integer getClusterNodeNum() 获取集群当前node数量
  * @method void setClusterNodeNum(integer $ClusterNodeNum) 设置集群当前node数量
+ * @method integer getProjectId() 获取集群所属的项目ID
+ * @method void setProjectId(integer $ProjectId) 设置集群所属的项目ID
  */
 
 /**
@@ -80,6 +82,11 @@ class Cluster extends AbstractModel
      * @var integer 集群当前node数量
      */
     public $ClusterNodeNum;
+
+    /**
+     * @var integer 集群所属的项目ID
+     */
+    public $ProjectId;
     /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
@@ -89,6 +96,7 @@ class Cluster extends AbstractModel
      * @param string $ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
      * @param ClusterNetworkSettings $ClusterNetworkSettings 集群网络相关参数
      * @param integer $ClusterNodeNum 集群当前node数量
+     * @param integer $ProjectId 集群所属的项目ID
      */
     function __construct()
     {
@@ -133,6 +141,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("ClusterNodeNum",$param) and $param["ClusterNodeNum"] !== null) {
             $this->ClusterNodeNum = $param["ClusterNodeNum"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

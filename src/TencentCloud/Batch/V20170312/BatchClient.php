@@ -36,6 +36,7 @@ use TencentCloud\Batch\V20170312\Models as Models;
 * @method Models\DescribeComputeEnvCreateInfosResponse DescribeComputeEnvCreateInfos(Models\DescribeComputeEnvCreateInfosRequest $req) 用于查看计算环境创建信息列表，包括名称、描述、类型、环境参数、通知及期望节点数等。
 * @method Models\DescribeComputeEnvsResponse DescribeComputeEnvs(Models\DescribeComputeEnvsRequest $req) 用于查看计算环境列表
 * @method Models\DescribeCvmZoneInstanceConfigInfosResponse DescribeCvmZoneInstanceConfigInfos(Models\DescribeCvmZoneInstanceConfigInfosRequest $req) 获取批量计算可用区机型配置信息
+* @method Models\DescribeInstanceCategoriesResponse DescribeInstanceCategories(Models\DescribeInstanceCategoriesRequest $req) 目前对CVM现有实例族划分为四类，每一类包含若干实例族。该接口用于查询实例分类信息。
 * @method Models\DescribeJobResponse DescribeJob(Models\DescribeJobRequest $req) 用于查看一个作业的详细信息，包括内部任务（Task）和依赖（Dependence）信息。
 * @method Models\DescribeJobSubmitInfoResponse DescribeJobSubmitInfo(Models\DescribeJobSubmitInfoRequest $req) 用于查询指定作业的提交信息，其返回内容包括 JobId 和 SubmitJob 接口中作为输入参数的作业提交信息
 * @method Models\DescribeJobsResponse DescribeJobs(Models\DescribeJobsRequest $req) 用于查询若干个作业的概览信息

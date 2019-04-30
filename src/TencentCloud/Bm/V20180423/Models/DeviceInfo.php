@@ -24,14 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络ID
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
- * @method integer getDeviceStatus() 获取设备状态ID
- * @method void setDeviceStatus(integer $DeviceStatus) 设置设备状态ID
- * @method integer getOperateStatus() 获取设备操作状态
- * @method void setOperateStatus(integer $OperateStatus) 设置设备操作状态
- * @method integer getOsTypeId() 获取操作系统ID
- * @method void setOsTypeId(integer $OsTypeId) 设置操作系统ID
- * @method integer getRaidId() 获取RAID类型ID
- * @method void setRaidId(integer $RaidId) 设置RAID类型ID
+ * @method integer getDeviceStatus() 获取设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
+ * @method void setDeviceStatus(integer $DeviceStatus) 设置设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
+ * @method integer getOperateStatus() 获取设备操作状态ID，取值：
+<li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
+ * @method void setOperateStatus(integer $OperateStatus) 设置设备操作状态ID，取值：
+<li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
+ * @method integer getOsTypeId() 获取操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
+ * @method void setOsTypeId(integer $OsTypeId) 设置操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
+ * @method integer getRaidId() 获取RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
+ * @method void setRaidId(integer $RaidId) 设置RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
  * @method string getAlias() 获取设备别名
  * @method void setAlias(string $Alias) 设置设备别名
  * @method integer getAppId() 获取AppId
@@ -89,22 +91,23 @@ class DeviceInfo extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer 设备状态ID
+     * @var integer 设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
      */
     public $DeviceStatus;
 
     /**
-     * @var integer 设备操作状态
+     * @var integer 设备操作状态ID，取值：
+<li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
      */
     public $OperateStatus;
 
     /**
-     * @var integer 操作系统ID
+     * @var integer 操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
      */
     public $OsTypeId;
 
     /**
-     * @var integer RAID类型ID
+     * @var integer RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
      */
     public $RaidId;
 
@@ -196,10 +199,11 @@ class DeviceInfo extends AbstractModel
      * @param string $InstanceId 设备唯一ID
      * @param string $VpcId 私有网络ID
      * @param string $SubnetId 子网ID
-     * @param integer $DeviceStatus 设备状态ID
-     * @param integer $OperateStatus 设备操作状态
-     * @param integer $OsTypeId 操作系统ID
-     * @param integer $RaidId RAID类型ID
+     * @param integer $DeviceStatus 设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
+     * @param integer $OperateStatus 设备操作状态ID，取值：
+<li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
+     * @param integer $OsTypeId 操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
+     * @param integer $RaidId RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
      * @param string $Alias 设备别名
      * @param integer $AppId AppId
      * @param string $Zone 可用区

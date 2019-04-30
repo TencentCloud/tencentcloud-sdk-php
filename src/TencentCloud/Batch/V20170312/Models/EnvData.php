@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSystemDisk(SystemDisk $SystemDisk) 设置实例系统盘配置信息
  * @method array getDataDisks() 获取实例数据盘配置信息
  * @method void setDataDisks(array $DataDisks) 设置实例数据盘配置信息
- * @method VirtualPrivateCloud getVirtualPrivateCloud() 获取私有网络相关信息配置
- * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) 设置私有网络相关信息配置
+ * @method VirtualPrivateCloud getVirtualPrivateCloud() 获取私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。
+ * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) 设置私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。
  * @method InternetAccessible getInternetAccessible() 获取公网带宽相关信息设置
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置公网带宽相关信息设置
  * @method string getInstanceName() 获取CVM实例显示名称
@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceTypes(array $InstanceTypes) 设置CVM实例类型列表，不能与InstanceType和InstanceTypeOptions同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
  * @method InstanceTypeOptions getInstanceTypeOptions() 获取CVM实例机型配置。不能与InstanceType和InstanceTypes同时出现。
  * @method void setInstanceTypeOptions(InstanceTypeOptions $InstanceTypeOptions) 设置CVM实例机型配置。不能与InstanceType和InstanceTypes同时出现。
+ * @method array getZones() 获取可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
+ * @method void setZones(array $Zones) 设置可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
+ * @method array getVirtualPrivateClouds() 获取私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
+ * @method void setVirtualPrivateClouds(array $VirtualPrivateClouds) 设置私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
  */
 
 /**
@@ -74,7 +78,7 @@ class EnvData extends AbstractModel
     public $DataDisks;
 
     /**
-     * @var VirtualPrivateCloud 私有网络相关信息配置
+     * @var VirtualPrivateCloud 私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。
      */
     public $VirtualPrivateCloud;
 
@@ -122,12 +126,22 @@ class EnvData extends AbstractModel
      * @var InstanceTypeOptions CVM实例机型配置。不能与InstanceType和InstanceTypes同时出现。
      */
     public $InstanceTypeOptions;
+
+    /**
+     * @var array 可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
+     */
+    public $Zones;
+
+    /**
+     * @var array 私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
+     */
+    public $VirtualPrivateClouds;
     /**
      * @param string $InstanceType CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
      * @param string $ImageId CVM镜像ID
      * @param SystemDisk $SystemDisk 实例系统盘配置信息
      * @param array $DataDisks 实例数据盘配置信息
-     * @param VirtualPrivateCloud $VirtualPrivateCloud 私有网络相关信息配置
+     * @param VirtualPrivateCloud $VirtualPrivateCloud 私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。
      * @param InternetAccessible $InternetAccessible 公网带宽相关信息设置
      * @param string $InstanceName CVM实例显示名称
      * @param LoginSettings $LoginSettings 实例登录设置
@@ -137,6 +151,8 @@ class EnvData extends AbstractModel
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数
      * @param array $InstanceTypes CVM实例类型列表，不能与InstanceType和InstanceTypeOptions同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
      * @param InstanceTypeOptions $InstanceTypeOptions CVM实例机型配置。不能与InstanceType和InstanceTypes同时出现。
+     * @param array $Zones 可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
+     * @param array $VirtualPrivateClouds 私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
      */
     function __construct()
     {
@@ -216,6 +232,19 @@ class EnvData extends AbstractModel
         if (array_key_exists("InstanceTypeOptions",$param) and $param["InstanceTypeOptions"] !== null) {
             $this->InstanceTypeOptions = new InstanceTypeOptions();
             $this->InstanceTypeOptions->deserialize($param["InstanceTypeOptions"]);
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("VirtualPrivateClouds",$param) and $param["VirtualPrivateClouds"] !== null) {
+            $this->VirtualPrivateClouds = [];
+            foreach ($param["VirtualPrivateClouds"] as $key => $value){
+                $obj = new VirtualPrivateCloud();
+                $obj->deserialize($value);
+                array_push($this->VirtualPrivateClouds, $obj);
+            }
         }
     }
 }

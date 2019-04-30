@@ -100,6 +100,7 @@ ConfirmUnRecovered（维修完成后，确认故障未恢复）<br>
 * @method Models\RunUserCmdResponse RunUserCmd(Models\RunUserCmdRequest $req) 运行自定义脚本
 * @method Models\SetOutBandVpnAuthPasswordResponse SetOutBandVpnAuthPassword(Models\SetOutBandVpnAuthPasswordRequest $req) 设置带外VPN认证用户密码
 * @method Models\ShutdownDevicesResponse ShutdownDevices(Models\ShutdownDevicesRequest $req) 关闭服务器
+* @method Models\StartDevicesResponse StartDevices(Models\StartDevicesRequest $req) 开启服务器
 * @method Models\UnbindPsaTagResponse UnbindPsaTag(Models\UnbindPsaTagRequest $req) 解除标签与预授权规则的绑定
  */
 

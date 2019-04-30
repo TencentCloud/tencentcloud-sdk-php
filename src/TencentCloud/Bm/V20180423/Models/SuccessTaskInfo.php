@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置运行脚本的设备ID
  * @method integer getTaskId() 获取黑石异步任务ID
  * @method void setTaskId(integer $TaskId) 设置黑石异步任务ID
+ * @method string getCmdTaskId() 获取黑石自定义脚本运行任务ID
+ * @method void setCmdTaskId(string $CmdTaskId) 设置黑石自定义脚本运行任务ID
  */
 
 /**
@@ -38,9 +40,15 @@ class SuccessTaskInfo extends AbstractModel
      * @var integer 黑石异步任务ID
      */
     public $TaskId;
+
+    /**
+     * @var string 黑石自定义脚本运行任务ID
+     */
+    public $CmdTaskId;
     /**
      * @param string $InstanceId 运行脚本的设备ID
      * @param integer $TaskId 黑石异步任务ID
+     * @param string $CmdTaskId 黑石自定义脚本运行任务ID
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class SuccessTaskInfo extends AbstractModel
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("CmdTaskId",$param) and $param["CmdTaskId"] !== null) {
+            $this->CmdTaskId = $param["CmdTaskId"];
         }
     }
 }

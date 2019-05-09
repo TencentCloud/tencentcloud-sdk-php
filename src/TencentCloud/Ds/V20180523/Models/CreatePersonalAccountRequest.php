@@ -18,10 +18,10 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getModule() 获取模块名
- * @method void setModule(string $Module) 设置模块名
- * @method string getOperation() 获取操作名
- * @method void setOperation(string $Operation) 设置操作名
+ * @method string getModule() 获取模块名AccountMng
+ * @method void setModule(string $Module) 设置模块名AccountMng
+ * @method string getOperation() 获取操作名CreatePersonalAccount
+ * @method void setOperation(string $Operation) 设置操作名CreatePersonalAccount
  * @method string getName() 获取个人用户姓名
  * @method void setName(string $Name) 设置个人用户姓名
  * @method integer getIdentType() 获取个人用户证件类型。0代表身份证
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class CreatePersonalAccountRequest extends AbstractModel
 {
     /**
-     * @var string 模块名
+     * @var string 模块名AccountMng
      */
     public $Module;
 
     /**
-     * @var string 操作名
+     * @var string 操作名CreatePersonalAccount
      */
     public $Operation;
 
@@ -67,8 +67,8 @@ class CreatePersonalAccountRequest extends AbstractModel
      */
     public $MobilePhone;
     /**
-     * @param string $Module 模块名
-     * @param string $Operation 操作名
+     * @param string $Module 模块名AccountMng
+     * @param string $Operation 操作名CreatePersonalAccount
      * @param string $Name 个人用户姓名
      * @param integer $IdentType 个人用户证件类型。0代表身份证
      * @param string $IdentNo 个人用户证件号码

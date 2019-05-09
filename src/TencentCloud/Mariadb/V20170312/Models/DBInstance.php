@@ -98,6 +98,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAuditSupported(integer $IsAuditSupported) 设置该实例是否支持审计。1-支持；0-不支持
  * @method string getMachine() 获取机器型号
  * @method void setMachine(string $Machine) 设置机器型号
+ * @method integer getIsEncryptSupported() 获取是否支持数据加密。1-支持；0-不支持
+ * @method void setIsEncryptSupported(integer $IsEncryptSupported) 设置是否支持数据加密。1-支持；0-不支持
  */
 
 /**
@@ -292,6 +294,11 @@ class DBInstance extends AbstractModel
      * @var string 机器型号
      */
     public $Machine;
+
+    /**
+     * @var integer 是否支持数据加密。1-支持；0-不支持
+     */
+    public $IsEncryptSupported;
     /**
      * @param string $InstanceId 实例 Id，唯一标识一个 TDSQL 实例
      * @param string $InstanceName 实例名称，用户可修改
@@ -333,6 +340,7 @@ class DBInstance extends AbstractModel
      * @param integer $WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      * @param integer $IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
      * @param string $Machine 机器型号
+     * @param integer $IsEncryptSupported 是否支持数据加密。1-支持；0-不支持
      */
     function __construct()
     {
@@ -492,6 +500,10 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("Machine",$param) and $param["Machine"] !== null) {
             $this->Machine = $param["Machine"];
+        }
+
+        if (array_key_exists("IsEncryptSupported",$param) and $param["IsEncryptSupported"] !== null) {
+            $this->IsEncryptSupported = $param["IsEncryptSupported"];
         }
     }
 }

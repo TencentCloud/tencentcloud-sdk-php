@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLength(integer $Length) 设置文件长度
  * @method string getUri() 获取下载Log时用到的统一资源标识符
  * @method void setUri(string $Uri) 设置下载Log时用到的统一资源标识符
+ * @method string getFileName() 获取文件名
+ * @method void setFileName(string $FileName) 设置文件名
  */
 
 /**
@@ -45,10 +47,16 @@ class LogFileInfo extends AbstractModel
      * @var string 下载Log时用到的统一资源标识符
      */
     public $Uri;
+
+    /**
+     * @var string 文件名
+     */
+    public $FileName;
     /**
      * @param integer $Mtime Log最后修改时间
      * @param integer $Length 文件长度
      * @param string $Uri 下载Log时用到的统一资源标识符
+     * @param string $FileName 文件名
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class LogFileInfo extends AbstractModel
 
         if (array_key_exists("Uri",$param) and $param["Uri"] !== null) {
             $this->Uri = $param["Uri"];
+        }
+
+        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
+            $this->FileName = $param["FileName"];
         }
     }
 }

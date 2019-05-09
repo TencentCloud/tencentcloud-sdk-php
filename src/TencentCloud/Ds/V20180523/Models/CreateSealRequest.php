@@ -18,14 +18,16 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getModule() 获取模块名
- * @method void setModule(string $Module) 设置模块名
- * @method string getOperation() 获取操作名
- * @method void setOperation(string $Operation) 设置操作名
+ * @method string getModule() 获取模块名SealMng
+ * @method void setModule(string $Module) 设置模块名SealMng
+ * @method string getOperation() 获取操作名CreateSeal
+ * @method void setOperation(string $Operation) 设置操作名CreateSeal
  * @method string getAccountResId() 获取帐号ID
  * @method void setAccountResId(string $AccountResId) 设置帐号ID
  * @method string getImgUrl() 获取签章链接，图片必须为png格式
  * @method void setImgUrl(string $ImgUrl) 设置签章链接，图片必须为png格式
+ * @method string getImgData() 获取图片数据，base64编码
+ * @method void setImgData(string $ImgData) 设置图片数据，base64编码
  */
 
 /**
@@ -34,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateSealRequest extends AbstractModel
 {
     /**
-     * @var string 模块名
+     * @var string 模块名SealMng
      */
     public $Module;
 
     /**
-     * @var string 操作名
+     * @var string 操作名CreateSeal
      */
     public $Operation;
 
@@ -52,11 +54,17 @@ class CreateSealRequest extends AbstractModel
      * @var string 签章链接，图片必须为png格式
      */
     public $ImgUrl;
+
     /**
-     * @param string $Module 模块名
-     * @param string $Operation 操作名
+     * @var string 图片数据，base64编码
+     */
+    public $ImgData;
+    /**
+     * @param string $Module 模块名SealMng
+     * @param string $Operation 操作名CreateSeal
      * @param string $AccountResId 帐号ID
      * @param string $ImgUrl 签章链接，图片必须为png格式
+     * @param string $ImgData 图片数据，base64编码
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateSealRequest extends AbstractModel
 
         if (array_key_exists("ImgUrl",$param) and $param["ImgUrl"] !== null) {
             $this->ImgUrl = $param["ImgUrl"];
+        }
+
+        if (array_key_exists("ImgData",$param) and $param["ImgData"] !== null) {
+            $this->ImgData = $param["ImgData"];
         }
     }
 }

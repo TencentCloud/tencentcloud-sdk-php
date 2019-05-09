@@ -18,19 +18,19 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getSegmentSet() 获取语音全文识别结果集。
- * @method void setSegmentSet(array $SegmentSet) 设置语音全文识别结果集。
+ * @method array getSegmentSet() 获取语音全文识别片段列表。
+ * @method void setSegmentSet(array $SegmentSet) 设置语音全文识别片段列表。
  * @method string getSubtitleUrl() 获取字幕文件 Url。
  * @method void setSubtitleUrl(string $SubtitleUrl) 设置字幕文件 Url。
  */
 
 /**
- *语音全文识别输出。
+ *语音全文识别结果。
  */
 class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel
 {
     /**
-     * @var array 语音全文识别结果集。
+     * @var array 语音全文识别片段列表。
      */
     public $SegmentSet;
 
@@ -39,7 +39,7 @@ class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel
      */
     public $SubtitleUrl;
     /**
-     * @param array $SegmentSet 语音全文识别结果集。
+     * @param array $SegmentSet 语音全文识别片段列表。
      * @param string $SubtitleUrl 字幕文件 Url。
      */
     function __construct()

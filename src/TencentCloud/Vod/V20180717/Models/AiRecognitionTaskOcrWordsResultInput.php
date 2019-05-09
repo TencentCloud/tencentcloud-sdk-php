@@ -18,21 +18,21 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getDefinition() 获取用户自定义文本识别模板 ID。
- * @method void setDefinition(integer $Definition) 设置用户自定义文本识别模板 ID。
+ * @method integer getDefinition() 获取文本关键词识别模板 ID。
+ * @method void setDefinition(integer $Definition) 设置文本关键词识别模板 ID。
  */
 
 /**
- *用户自定义文本识别输入。
+ *文本关键词识别输入。
  */
 class AiRecognitionTaskOcrWordsResultInput extends AbstractModel
 {
     /**
-     * @var integer 用户自定义文本识别模板 ID。
+     * @var integer 文本关键词识别模板 ID。
      */
     public $Definition;
     /**
-     * @param integer $Definition 用户自定义文本识别模板 ID。
+     * @param integer $Definition 文本关键词识别模板 ID。
      */
     function __construct()
     {

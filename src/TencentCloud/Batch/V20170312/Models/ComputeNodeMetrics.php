@@ -18,20 +18,20 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSubmittedCount() 获取已经完成提交的计算节点数量
- * @method void setSubmittedCount(string $SubmittedCount) 设置已经完成提交的计算节点数量
- * @method string getCreatingCount() 获取创建中的计算节点数量
- * @method void setCreatingCount(string $CreatingCount) 设置创建中的计算节点数量
- * @method string getCreationFailedCount() 获取创建失败的计算节点数量
- * @method void setCreationFailedCount(string $CreationFailedCount) 设置创建失败的计算节点数量
- * @method string getCreatedCount() 获取完成创建的计算节点数量
- * @method void setCreatedCount(string $CreatedCount) 设置完成创建的计算节点数量
- * @method string getRunningCount() 获取运行中的计算节点数量
- * @method void setRunningCount(string $RunningCount) 设置运行中的计算节点数量
- * @method string getDeletingCount() 获取销毁中的计算节点数量
- * @method void setDeletingCount(string $DeletingCount) 设置销毁中的计算节点数量
- * @method string getAbnormalCount() 获取异常的计算节点数量
- * @method void setAbnormalCount(string $AbnormalCount) 设置异常的计算节点数量
+ * @method integer getSubmittedCount() 获取已经完成提交的计算节点数量
+ * @method void setSubmittedCount(integer $SubmittedCount) 设置已经完成提交的计算节点数量
+ * @method integer getCreatingCount() 获取创建中的计算节点数量
+ * @method void setCreatingCount(integer $CreatingCount) 设置创建中的计算节点数量
+ * @method integer getCreationFailedCount() 获取创建失败的计算节点数量
+ * @method void setCreationFailedCount(integer $CreationFailedCount) 设置创建失败的计算节点数量
+ * @method integer getCreatedCount() 获取完成创建的计算节点数量
+ * @method void setCreatedCount(integer $CreatedCount) 设置完成创建的计算节点数量
+ * @method integer getRunningCount() 获取运行中的计算节点数量
+ * @method void setRunningCount(integer $RunningCount) 设置运行中的计算节点数量
+ * @method integer getDeletingCount() 获取销毁中的计算节点数量
+ * @method void setDeletingCount(integer $DeletingCount) 设置销毁中的计算节点数量
+ * @method integer getAbnormalCount() 获取异常的计算节点数量
+ * @method void setAbnormalCount(integer $AbnormalCount) 设置异常的计算节点数量
  */
 
 /**
@@ -40,47 +40,47 @@ use TencentCloud\Common\AbstractModel;
 class ComputeNodeMetrics extends AbstractModel
 {
     /**
-     * @var string 已经完成提交的计算节点数量
+     * @var integer 已经完成提交的计算节点数量
      */
     public $SubmittedCount;
 
     /**
-     * @var string 创建中的计算节点数量
+     * @var integer 创建中的计算节点数量
      */
     public $CreatingCount;
 
     /**
-     * @var string 创建失败的计算节点数量
+     * @var integer 创建失败的计算节点数量
      */
     public $CreationFailedCount;
 
     /**
-     * @var string 完成创建的计算节点数量
+     * @var integer 完成创建的计算节点数量
      */
     public $CreatedCount;
 
     /**
-     * @var string 运行中的计算节点数量
+     * @var integer 运行中的计算节点数量
      */
     public $RunningCount;
 
     /**
-     * @var string 销毁中的计算节点数量
+     * @var integer 销毁中的计算节点数量
      */
     public $DeletingCount;
 
     /**
-     * @var string 异常的计算节点数量
+     * @var integer 异常的计算节点数量
      */
     public $AbnormalCount;
     /**
-     * @param string $SubmittedCount 已经完成提交的计算节点数量
-     * @param string $CreatingCount 创建中的计算节点数量
-     * @param string $CreationFailedCount 创建失败的计算节点数量
-     * @param string $CreatedCount 完成创建的计算节点数量
-     * @param string $RunningCount 运行中的计算节点数量
-     * @param string $DeletingCount 销毁中的计算节点数量
-     * @param string $AbnormalCount 异常的计算节点数量
+     * @param integer $SubmittedCount 已经完成提交的计算节点数量
+     * @param integer $CreatingCount 创建中的计算节点数量
+     * @param integer $CreationFailedCount 创建失败的计算节点数量
+     * @param integer $CreatedCount 完成创建的计算节点数量
+     * @param integer $RunningCount 运行中的计算节点数量
+     * @param integer $DeletingCount 销毁中的计算节点数量
+     * @param integer $AbnormalCount 异常的计算节点数量
      */
     function __construct()
     {

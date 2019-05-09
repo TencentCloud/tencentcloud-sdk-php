@@ -44,8 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginSerialIds(array $OriginSerialIds) 设置按 OriginSerialId 查询
  * @method boolean getIsFilterExcluster() 获取标识是否使用ExclusterType字段, false不使用，true使用
  * @method void setIsFilterExcluster(boolean $IsFilterExcluster) 设置标识是否使用ExclusterType字段, false不使用，true使用
- * @method integer getExclusterType() 获取1非独享集群，2独享集群， 0全部
- * @method void setExclusterType(integer $ExclusterType) 设置1非独享集群，2独享集群， 0全部
+ * @method integer getExclusterType() 获取实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
+ * @method void setExclusterType(integer $ExclusterType) 设置实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
+ * @method array getExclusterIds() 获取按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
+ * @method void setExclusterIds(array $ExclusterIds) 设置按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
  */
 
 /**
@@ -119,9 +121,14 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $IsFilterExcluster;
 
     /**
-     * @var integer 1非独享集群，2独享集群， 0全部
+     * @var integer 实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
      */
     public $ExclusterType;
+
+    /**
+     * @var array 按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
+     */
+    public $ExclusterIds;
     /**
      * @param array $InstanceIds 按照一个或者多个实例 ID 查询。实例 ID 形如：tdsql-ow728lmc。每次请求的实例的上限为100。
      * @param string $SearchName 搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。
@@ -136,7 +143,8 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。
      * @param array $OriginSerialIds 按 OriginSerialId 查询
      * @param boolean $IsFilterExcluster 标识是否使用ExclusterType字段, false不使用，true使用
-     * @param integer $ExclusterType 1非独享集群，2独享集群， 0全部
+     * @param integer $ExclusterType 实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
+     * @param array $ExclusterIds 按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("ExclusterType",$param) and $param["ExclusterType"] !== null) {
             $this->ExclusterType = $param["ExclusterType"];
+        }
+
+        if (array_key_exists("ExclusterIds",$param) and $param["ExclusterIds"] !== null) {
+            $this->ExclusterIds = $param["ExclusterIds"];
         }
     }
 }

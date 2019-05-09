@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportCloudinit(boolean $IsSupportCloudinit) 设置镜像是否支持cloud-init
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSnapshotSet() 获取镜像关联的快照信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSnapshotSet(array $SnapshotSet) 设置镜像关联的快照信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -128,6 +132,12 @@ class Image extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupportCloudinit;
+
+    /**
+     * @var array 镜像关联的快照信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SnapshotSet;
     /**
      * @param string $ImageId 镜像ID
      * @param string $OsName 镜像操作系统
@@ -144,6 +154,8 @@ class Image extends AbstractModel
      * @param integer $SyncPercent 同步百分比
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsSupportCloudinit 镜像是否支持cloud-init
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SnapshotSet 镜像关联的快照信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -212,6 +224,15 @@ class Image extends AbstractModel
 
         if (array_key_exists("IsSupportCloudinit",$param) and $param["IsSupportCloudinit"] !== null) {
             $this->IsSupportCloudinit = $param["IsSupportCloudinit"];
+        }
+
+        if (array_key_exists("SnapshotSet",$param) and $param["SnapshotSet"] !== null) {
+            $this->SnapshotSet = [];
+            foreach ($param["SnapshotSet"] as $key => $value){
+                $obj = new Snapshot();
+                $obj->deserialize($value);
+                array_push($this->SnapshotSet, $obj);
+            }
         }
     }
 }

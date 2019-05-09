@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setXPosition(integer $XPosition) 设置显示位置,X轴偏移。
  * @method integer getYPosition() 获取显示位置,Y轴偏移。
  * @method void setYPosition(integer $YPosition) 设置显示位置,Y轴偏移。
+ * @method integer getWidth() 获取水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+ * @method void setWidth(integer $Width) 设置水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+ * @method integer getHeight() 获取水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+ * @method void setHeight(integer $Height) 设置水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
  */
 
 /**
@@ -52,11 +56,23 @@ class AddLiveWatermarkRequest extends AbstractModel
      * @var integer 显示位置,Y轴偏移。
      */
     public $YPosition;
+
+    /**
+     * @var integer 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     */
+    public $Width;
+
+    /**
+     * @var integer 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     */
+    public $Height;
     /**
      * @param string $PictureUrl 水印图片url。
      * @param string $WatermarkName 水印名称。
      * @param integer $XPosition 显示位置,X轴偏移。
      * @param integer $YPosition 显示位置,Y轴偏移。
+     * @param integer $Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     * @param integer $Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class AddLiveWatermarkRequest extends AbstractModel
 
         if (array_key_exists("YPosition",$param) and $param["YPosition"] !== null) {
             $this->YPosition = $param["YPosition"];
+        }
+
+        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
+            $this->Width = $param["Width"];
+        }
+
+        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
+            $this->Height = $param["Height"];
         }
     }
 }

@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置转动图的文件地址。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDefinition() 获取转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/11701#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+ * @method integer getDefinition() 获取转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefinition(integer $Definition) 设置转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/11701#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+ * @method void setDefinition(integer $Definition) 设置转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainer() 获取动图格式，如 gif。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -72,7 +72,7 @@ class MediaAnimatedGraphicsItem extends AbstractModel
     public $Url;
 
     /**
-     * @var integer 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/11701#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * @var integer 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Definition;
@@ -127,7 +127,7 @@ class MediaAnimatedGraphicsItem extends AbstractModel
     /**
      * @param string $Url 转动图的文件地址。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Definition 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/11701#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * @param integer $Definition 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Container 动图格式，如 gif。
 注意：此字段可能返回 null，表示取不到有效值。

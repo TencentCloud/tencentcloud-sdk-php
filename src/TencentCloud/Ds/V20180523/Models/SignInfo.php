@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageData(string $ImageData) 设置签名图片，优先级比SealId高
  * @method integer getCertType() 获取默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
  * @method void setCertType(integer $CertType) 设置默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+ * @method string getSignLocation() 获取签名域的标签值
+ * @method void setSignLocation(string $SignLocation) 设置签名域的标签值
  */
 
 /**
@@ -66,6 +68,11 @@ class SignInfo extends AbstractModel
      * @var integer 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      */
     public $CertType;
+
+    /**
+     * @var string 签名域的标签值
+     */
+    public $SignLocation;
     /**
      * @param string $AccountResId 账户ID
      * @param string $AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
@@ -73,6 +80,7 @@ class SignInfo extends AbstractModel
      * @param string $SealId 签章ID
      * @param string $ImageData 签名图片，优先级比SealId高
      * @param integer $CertType 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     * @param string $SignLocation 签名域的标签值
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class SignInfo extends AbstractModel
 
         if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
             $this->CertType = $param["CertType"];
+        }
+
+        if (array_key_exists("SignLocation",$param) and $param["SignLocation"] !== null) {
+            $this->SignLocation = $param["SignLocation"];
         }
     }
 }

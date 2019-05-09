@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) 设置视频内容审核类型任务参数。
  * @method AiAnalysisTaskInput getAiAnalysisTask() 获取视频内容分析类型任务参数。
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) 设置视频内容分析类型任务参数。
+ * @method AiRecognitionTaskInput getAiRecognitionTask() 获取视频内容识别类型任务参数。
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置视频内容识别类型任务参数。
  * @method integer getTasksPriority() 获取任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
  * @method void setTasksPriority(integer $TasksPriority) 设置任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
  * @method string getTasksNotifyMode() 获取任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
@@ -64,6 +66,11 @@ class ProcessMediaRequest extends AbstractModel
     public $AiAnalysisTask;
 
     /**
+     * @var AiRecognitionTaskInput 视频内容识别类型任务参数。
+     */
+    public $AiRecognitionTask;
+
+    /**
      * @var integer 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      */
     public $TasksPriority;
@@ -92,6 +99,7 @@ class ProcessMediaRequest extends AbstractModel
      * @param MediaProcessTaskInput $MediaProcessTask 视频处理类型任务参数。
      * @param AiContentReviewTaskInput $AiContentReviewTask 视频内容审核类型任务参数。
      * @param AiAnalysisTaskInput $AiAnalysisTask 视频内容分析类型任务参数。
+     * @param AiRecognitionTaskInput $AiRecognitionTask 视频内容识别类型任务参数。
      * @param integer $TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      * @param string $TasksNotifyMode 任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 250 个字符。
@@ -127,6 +135,11 @@ class ProcessMediaRequest extends AbstractModel
         if (array_key_exists("AiAnalysisTask",$param) and $param["AiAnalysisTask"] !== null) {
             $this->AiAnalysisTask = new AiAnalysisTaskInput();
             $this->AiAnalysisTask->deserialize($param["AiAnalysisTask"]);
+        }
+
+        if (array_key_exists("AiRecognitionTask",$param) and $param["AiRecognitionTask"] !== null) {
+            $this->AiRecognitionTask = new AiRecognitionTaskInput();
+            $this->AiRecognitionTask->deserialize($param["AiRecognitionTask"]);
         }
 
         if (array_key_exists("TasksPriority",$param) and $param["TasksPriority"] !== null) {

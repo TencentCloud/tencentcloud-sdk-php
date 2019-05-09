@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getUrl() 获取播放地址。
  * @method void setUrl(string $Url) 设置播放地址。
- * @method integer getDefinition() 获取转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/11701#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
- * @method void setDefinition(integer $Definition) 设置转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/11701#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+ * @method integer getDefinition() 获取转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+ * @method void setDefinition(integer $Definition) 设置转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
  * @method integer getBitrate() 获取视频流码率平均值与音频流码率平均值之和， 单位：bps。
  * @method void setBitrate(integer $Bitrate) 设置视频流码率平均值与音频流码率平均值之和， 单位：bps。
  * @method integer getHeight() 获取视频流高度的最大值，单位：px。
@@ -41,7 +41,7 @@ class TranscodePlayInfo2017 extends AbstractModel
     public $Url;
 
     /**
-     * @var integer 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/11701#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * @var integer 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
      */
     public $Definition;
 
@@ -61,7 +61,7 @@ class TranscodePlayInfo2017 extends AbstractModel
     public $Width;
     /**
      * @param string $Url 播放地址。
-     * @param integer $Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/11701#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * @param integer $Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
      * @param integer $Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
      * @param integer $Height 视频流高度的最大值，单位：px。
      * @param integer $Width 视频流宽度的最大值，单位：px。

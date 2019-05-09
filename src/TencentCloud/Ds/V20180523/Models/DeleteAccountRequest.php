@@ -18,10 +18,10 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getModule() 获取模块名
- * @method void setModule(string $Module) 设置模块名
- * @method string getOperation() 获取操作名
- * @method void setOperation(string $Operation) 设置操作名
+ * @method string getModule() 获取模块名AccountMng
+ * @method void setModule(string $Module) 设置模块名AccountMng
+ * @method string getOperation() 获取操作名DeleteAccount
+ * @method void setOperation(string $Operation) 设置操作名DeleteAccount
  * @method array getAccountList() 获取帐号ID列表
  * @method void setAccountList(array $AccountList) 设置帐号ID列表
  */
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DeleteAccountRequest extends AbstractModel
 {
     /**
-     * @var string 模块名
+     * @var string 模块名AccountMng
      */
     public $Module;
 
     /**
-     * @var string 操作名
+     * @var string 操作名DeleteAccount
      */
     public $Operation;
 
@@ -46,8 +46,8 @@ class DeleteAccountRequest extends AbstractModel
      */
     public $AccountList;
     /**
-     * @param string $Module 模块名
-     * @param string $Operation 操作名
+     * @param string $Module 模块名AccountMng
+     * @param string $Operation 操作名DeleteAccount
      * @param array $AccountList 帐号ID列表
      */
     function __construct()

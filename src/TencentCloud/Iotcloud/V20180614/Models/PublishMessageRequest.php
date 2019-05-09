@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method integer getQos() 获取服务质量等级，取值为0， 1
- * @method void setQos(integer $Qos) 设置服务质量等级，取值为0， 1
+ * @method integer getQos() 获取服务质量等级，取值为0或1
+ * @method void setQos(integer $Qos) 设置服务质量等级，取值为0或1
  */
 
 /**
@@ -56,7 +56,7 @@ class PublishMessageRequest extends AbstractModel
     public $DeviceName;
 
     /**
-     * @var integer 服务质量等级，取值为0， 1
+     * @var integer 服务质量等级，取值为0或1
      */
     public $Qos;
     /**
@@ -64,7 +64,7 @@ class PublishMessageRequest extends AbstractModel
      * @param string $Payload 消息内容
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
-     * @param integer $Qos 服务质量等级，取值为0， 1
+     * @param integer $Qos 服务质量等级，取值为0或1
      */
     function __construct()
     {

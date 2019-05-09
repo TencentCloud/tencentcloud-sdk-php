@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoraMoteType(integer $LoraMoteType) 设置LoRa设备的MoteType
  * @method string getSkey() 获取创建LoRa设备需要skey
  * @method void setSkey(string $Skey) 设置创建LoRa设备需要skey
+ * @method string getLoraAppKey() 获取LoRa设备的AppKey
+ * @method void setLoraAppKey(string $LoraAppKey) 设置LoRa设备的AppKey
  */
 
 /**
@@ -87,6 +89,11 @@ class CreateDeviceRequest extends AbstractModel
      * @var string 创建LoRa设备需要skey
      */
     public $Skey;
+
+    /**
+     * @var string LoRa设备的AppKey
+     */
+    public $LoraAppKey;
     /**
      * @param string $ProductId 产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
      * @param string $DeviceName 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
@@ -97,6 +104,7 @@ class CreateDeviceRequest extends AbstractModel
      * @param string $LoraDevEui LoRa设备的DevEui，当创建LoRa时，此字段必填
      * @param integer $LoraMoteType LoRa设备的MoteType
      * @param string $Skey 创建LoRa设备需要skey
+     * @param string $LoraAppKey LoRa设备的AppKey
      */
     function __construct()
     {
@@ -145,6 +153,10 @@ class CreateDeviceRequest extends AbstractModel
 
         if (array_key_exists("Skey",$param) and $param["Skey"] !== null) {
             $this->Skey = $param["Skey"];
+        }
+
+        if (array_key_exists("LoraAppKey",$param) and $param["LoraAppKey"] !== null) {
+            $this->LoraAppKey = $param["LoraAppKey"];
         }
     }
 }

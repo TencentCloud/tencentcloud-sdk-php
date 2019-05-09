@@ -18,29 +18,29 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getWord() 获取文本识别词。
- * @method void setWord(string $Word) 设置文本识别词。
- * @method array getSegmentSet() 获取文本文字识别结果集。
- * @method void setSegmentSet(array $SegmentSet) 设置文本文字识别结果集。
+ * @method string getWord() 获取文本关键词。
+ * @method void setWord(string $Word) 设置文本关键词。
+ * @method array getSegmentSet() 获取文本关键出现的片段列表。
+ * @method void setSegmentSet(array $SegmentSet) 设置文本关键出现的片段列表。
  */
 
 /**
- *用户自定义文本识别结果。
+ *文本关键词识别结果。
  */
 class AiRecognitionTaskOcrWordsResultItem extends AbstractModel
 {
     /**
-     * @var string 文本识别词。
+     * @var string 文本关键词。
      */
     public $Word;
 
     /**
-     * @var array 文本文字识别结果集。
+     * @var array 文本关键出现的片段列表。
      */
     public $SegmentSet;
     /**
-     * @param string $Word 文本识别词。
-     * @param array $SegmentSet 文本文字识别结果集。
+     * @param string $Word 文本关键词。
+     * @param array $SegmentSet 文本关键出现的片段列表。
      */
     function __construct()
     {

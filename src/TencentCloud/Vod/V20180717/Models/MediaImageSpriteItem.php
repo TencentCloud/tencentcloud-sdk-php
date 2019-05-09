@@ -18,9 +18,9 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getDefinition() 获取雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/11702#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+ * @method integer getDefinition() 获取雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefinition(integer $Definition) 设置雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/11702#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+ * @method void setDefinition(integer $Definition) 设置雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHeight() 获取雪碧图小图的高度。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class MediaImageSpriteItem extends AbstractModel
 {
     /**
-     * @var integer 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/11702#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * @var integer 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Definition;
@@ -85,7 +85,7 @@ class MediaImageSpriteItem extends AbstractModel
      */
     public $WebVttUrl;
     /**
-     * @param integer $Definition 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/11702#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * @param integer $Definition 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Height 雪碧图小图的高度。
 注意：此字段可能返回 null，表示取不到有效值。

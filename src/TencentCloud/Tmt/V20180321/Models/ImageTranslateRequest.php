@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSource(string $Source) 设置源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
  * @method string getTarget() 获取目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
  * @method void setTarget(string $Target) 设置目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
- * @method integer getProjectId() 获取项目id
- * @method void setProjectId(integer $ProjectId) 设置项目id
+ * @method integer getProjectId() 获取项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
+ * @method void setProjectId(integer $ProjectId) 设置项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
  */
 
 /**
@@ -63,7 +63,7 @@ class ImageTranslateRequest extends AbstractModel
     public $Target;
 
     /**
-     * @var integer 项目id
+     * @var integer 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      */
     public $ProjectId;
     /**
@@ -72,7 +72,7 @@ class ImageTranslateRequest extends AbstractModel
      * @param string $Data 图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩
      * @param string $Source 源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      * @param string $Target 目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
-     * @param integer $ProjectId 项目id
+     * @param integer $ProjectId 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      */
     function __construct()
     {

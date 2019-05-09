@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始日期，格式yyyy-mm-dd
  * @method string getEndTime() 获取结束日期，格式yyyy-mm-dd
  * @method void setEndTime(string $EndTime) 设置结束日期，格式yyyy-mm-dd
+ * @method string getMetricName() 获取拉取的指标名，支持的值为：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
+ * @method void setMetricName(string $MetricName) 设置拉取的指标名，支持的值为：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
  */
 
 /**
@@ -45,10 +47,16 @@ class DescribeDBPerformanceRequest extends AbstractModel
      * @var string 结束日期，格式yyyy-mm-dd
      */
     public $EndTime;
+
+    /**
+     * @var string 拉取的指标名，支持的值为：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
+     */
+    public $MetricName;
     /**
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc。
      * @param string $StartTime 开始日期，格式yyyy-mm-dd
      * @param string $EndTime 结束日期，格式yyyy-mm-dd
+     * @param string $MetricName 拉取的指标名，支持的值为：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeDBPerformanceRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
+            $this->MetricName = $param["MetricName"];
         }
     }
 }

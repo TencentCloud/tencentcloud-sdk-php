@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置绑定的弹性网卡ID
  * @method string getPrivateAddressIp() 获取绑定的资源内网ip
  * @method void setPrivateAddressIp(string $PrivateAddressIp) 设置绑定的资源内网ip
- * @method boolean getIsArrears() 获取资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
- * @method void setIsArrears(boolean $IsArrears) 设置资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
+ * @method boolean getIsArrears() 获取资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
+ * @method void setIsArrears(boolean $IsArrears) 设置资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
  * @method boolean getIsBlocked() 获取资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
  * @method void setIsBlocked(boolean $IsBlocked) 设置资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
  * @method boolean getIsEipDirectConnection() 获取eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
@@ -92,7 +92,7 @@ class Address extends AbstractModel
     public $PrivateAddressIp;
 
     /**
-     * @var boolean 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
+     * @var boolean 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
      */
     public $IsArrears;
 
@@ -124,7 +124,7 @@ class Address extends AbstractModel
      * @param string $CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      * @param string $NetworkInterfaceId 绑定的弹性网卡ID
      * @param string $PrivateAddressIp 绑定的资源内网ip
-     * @param boolean $IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
+     * @param boolean $IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
      * @param boolean $IsBlocked 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
      * @param boolean $IsEipDirectConnection eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
      * @param string $AddressType eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
  * @method integer getOffset() 获取SQL日志偏移。
  * @method void setOffset(integer $Offset) 设置SQL日志偏移。
- * @method integer getLimit() 获取拉取数量（0-1000，为0时拉取总数信息）。
- * @method void setLimit(integer $Limit) 设置拉取数量（0-1000，为0时拉取总数信息）。
+ * @method integer getLimit() 获取拉取数量（0-10000，为0时拉取总数信息）。
+ * @method void setLimit(integer $Limit) 设置拉取数量（0-10000，为0时拉取总数信息）。
  */
 
 /**
@@ -42,13 +42,13 @@ class DescribeSqlLogsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 拉取数量（0-1000，为0时拉取总数信息）。
+     * @var integer 拉取数量（0-10000，为0时拉取总数信息）。
      */
     public $Limit;
     /**
      * @param string $InstanceId 实例 ID，形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      * @param integer $Offset SQL日志偏移。
-     * @param integer $Limit 拉取数量（0-1000，为0时拉取总数信息）。
+     * @param integer $Limit 拉取数量（0-10000，为0时拉取总数信息）。
      */
     function __construct()
     {

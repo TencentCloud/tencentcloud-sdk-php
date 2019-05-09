@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getTotalCount() 获取返回的配置数量
  * @method void setTotalCount(integer $TotalCount) 设置返回的配置数量
- * @method DBBackupTimeConfig getItems() 获取实例备份时间配置信息
+ * @method array getItems() 获取实例备份时间配置信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setItems(DBBackupTimeConfig $Items) 设置实例备份时间配置信息
+ * @method void setItems(array $Items) 设置实例备份时间配置信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -39,7 +39,7 @@ class DescribeBackupTimeResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var DBBackupTimeConfig 实例备份时间配置信息
+     * @var array 实例备份时间配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
@@ -50,7 +50,7 @@ class DescribeBackupTimeResponse extends AbstractModel
     public $RequestId;
     /**
      * @param integer $TotalCount 返回的配置数量
-     * @param DBBackupTimeConfig $Items 实例备份时间配置信息
+     * @param array $Items 实例备份时间配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -71,8 +71,12 @@ class DescribeBackupTimeResponse extends AbstractModel
         }
 
         if (array_key_exists("Items",$param) and $param["Items"] !== null) {
-            $this->Items = new DBBackupTimeConfig();
-            $this->Items->deserialize($param["Items"]);
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new DBBackupTimeConfig();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

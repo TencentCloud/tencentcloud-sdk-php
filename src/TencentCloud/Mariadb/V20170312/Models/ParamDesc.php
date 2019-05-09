@@ -22,14 +22,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParam(string $Param) 设置参数名字
  * @method string getValue() 获取当前参数值
  * @method void setValue(string $Value) 设置当前参数值
- * @method string getSetValue() 获取设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
+ * @method string getSetValue() 获取设置过的值，参数生效后，该值和value一样。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSetValue(string $SetValue) 设置设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
+ * @method void setSetValue(string $SetValue) 设置设置过的值，参数生效后，该值和value一样。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefault() 获取系统默认值
  * @method void setDefault(string $Default) 设置系统默认值
  * @method ParamConstraint getConstraint() 获取参数限制
  * @method void setConstraint(ParamConstraint $Constraint) 设置参数限制
+ * @method boolean getHaveSetValue() 获取是否有设置过值，false:没有设置过值，true:有设置过值。
+ * @method void setHaveSetValue(boolean $HaveSetValue) 设置是否有设置过值，false:没有设置过值，true:有设置过值。
  */
 
 /**
@@ -48,7 +50,7 @@ class ParamDesc extends AbstractModel
     public $Value;
 
     /**
-     * @var string 设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
+     * @var string 设置过的值，参数生效后，该值和value一样。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SetValue;
@@ -62,13 +64,19 @@ class ParamDesc extends AbstractModel
      * @var ParamConstraint 参数限制
      */
     public $Constraint;
+
+    /**
+     * @var boolean 是否有设置过值，false:没有设置过值，true:有设置过值。
+     */
+    public $HaveSetValue;
     /**
      * @param string $Param 参数名字
      * @param string $Value 当前参数值
-     * @param string $SetValue 设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
+     * @param string $SetValue 设置过的值，参数生效后，该值和value一样。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Default 系统默认值
      * @param ParamConstraint $Constraint 参数限制
+     * @param boolean $HaveSetValue 是否有设置过值，false:没有设置过值，true:有设置过值。
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class ParamDesc extends AbstractModel
         if (array_key_exists("Constraint",$param) and $param["Constraint"] !== null) {
             $this->Constraint = new ParamConstraint();
             $this->Constraint->deserialize($param["Constraint"]);
+        }
+
+        if (array_key_exists("HaveSetValue",$param) and $param["HaveSetValue"] !== null) {
+            $this->HaveSetValue = $param["HaveSetValue"];
         }
     }
 }

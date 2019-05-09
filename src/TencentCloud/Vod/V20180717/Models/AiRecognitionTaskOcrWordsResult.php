@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) 设置错误码，0：成功，其他值：失败。
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
- * @method AiRecognitionTaskOcrWordsResultInput getInput() 获取用户自定义文本识别任务输入信息。
- * @method void setInput(AiRecognitionTaskOcrWordsResultInput $Input) 设置用户自定义文本识别任务输入信息。
- * @method AiRecognitionTaskOcrWordsResultOutput getOutput() 获取用户自定义文本识别任务输出信息。
+ * @method AiRecognitionTaskOcrWordsResultInput getInput() 获取文本关键词识别任务输入信息。
+ * @method void setInput(AiRecognitionTaskOcrWordsResultInput $Input) 设置文本关键词识别任务输入信息。
+ * @method AiRecognitionTaskOcrWordsResultOutput getOutput() 获取文本关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutput(AiRecognitionTaskOcrWordsResultOutput $Output) 设置用户自定义文本识别任务输出信息。
+ * @method void setOutput(AiRecognitionTaskOcrWordsResultOutput $Output) 设置文本关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
- *用户自定义文本识别结果。
+ *文本关键识别结果。
  */
 class AiRecognitionTaskOcrWordsResult extends AbstractModel
 {
@@ -53,12 +53,12 @@ class AiRecognitionTaskOcrWordsResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiRecognitionTaskOcrWordsResultInput 用户自定义文本识别任务输入信息。
+     * @var AiRecognitionTaskOcrWordsResultInput 文本关键词识别任务输入信息。
      */
     public $Input;
 
     /**
-     * @var AiRecognitionTaskOcrWordsResultOutput 用户自定义文本识别任务输出信息。
+     * @var AiRecognitionTaskOcrWordsResultOutput 文本关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
@@ -66,8 +66,8 @@ class AiRecognitionTaskOcrWordsResult extends AbstractModel
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param integer $ErrCode 错误码，0：成功，其他值：失败。
      * @param string $Message 错误信息。
-     * @param AiRecognitionTaskOcrWordsResultInput $Input 用户自定义文本识别任务输入信息。
-     * @param AiRecognitionTaskOcrWordsResultOutput $Output 用户自定义文本识别任务输出信息。
+     * @param AiRecognitionTaskOcrWordsResultInput $Input 文本关键词识别任务输入信息。
+     * @param AiRecognitionTaskOcrWordsResultOutput $Output 文本关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

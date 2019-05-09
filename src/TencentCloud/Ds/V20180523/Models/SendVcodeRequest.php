@@ -18,10 +18,10 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getModule() 获取模块名
- * @method void setModule(string $Module) 设置模块名
- * @method string getOperation() 获取操作名
- * @method void setOperation(string $Operation) 设置操作名
+ * @method string getModule() 获取模块名VerifyCode
+ * @method void setModule(string $Module) 设置模块名VerifyCode
+ * @method string getOperation() 获取操作名SendVcode
+ * @method void setOperation(string $Operation) 设置操作名SendVcode
  * @method string getContractResId() 获取合同ID
  * @method void setContractResId(string $ContractResId) 设置合同ID
  * @method string getAccountResId() 获取帐号ID
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class SendVcodeRequest extends AbstractModel
 {
     /**
-     * @var string 模块名
+     * @var string 模块名VerifyCode
      */
     public $Module;
 
     /**
-     * @var string 操作名
+     * @var string 操作名SendVcode
      */
     public $Operation;
 
@@ -53,8 +53,8 @@ class SendVcodeRequest extends AbstractModel
      */
     public $AccountResId;
     /**
-     * @param string $Module 模块名
-     * @param string $Operation 操作名
+     * @param string $Module 模块名VerifyCode
+     * @param string $Operation 操作名SendVcode
      * @param string $ContractResId 合同ID
      * @param string $AccountResId 帐号ID
      */

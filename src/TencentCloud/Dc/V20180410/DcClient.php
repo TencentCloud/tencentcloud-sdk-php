@@ -23,9 +23,19 @@ use TencentCloud\Dc\V20180410\Models as Models;
 
 /**
 * @method Models\AcceptDirectConnectTunnelResponse AcceptDirectConnectTunnel(Models\AcceptDirectConnectTunnelRequest $req) 接受专用通道申请
+* @method Models\CreateDirectConnectResponse CreateDirectConnect(Models\CreateDirectConnectRequest $req) 申请物理专线接入。
+调用该接口时，请注意：
+账号要进行实名认证，否则不允许申请物理专线；
+若账户下存在欠费状态的物理专线，则不能申请更多的物理专线。
 * @method Models\CreateDirectConnectTunnelResponse CreateDirectConnectTunnel(Models\CreateDirectConnectTunnelRequest $req) 用于创建专用通道的接口
+* @method Models\DeleteDirectConnectResponse DeleteDirectConnect(Models\DeleteDirectConnectRequest $req) 删除物理专线。
+只能删除处于状态的物理专线。
 * @method Models\DeleteDirectConnectTunnelResponse DeleteDirectConnectTunnel(Models\DeleteDirectConnectTunnelRequest $req) 删除专用通道
+* @method Models\DescribeAccessPointsResponse DescribeAccessPoints(Models\DescribeAccessPointsRequest $req) 查询物理专线接入点
+
 * @method Models\DescribeDirectConnectTunnelsResponse DescribeDirectConnectTunnels(Models\DescribeDirectConnectTunnelsRequest $req) 用于查询专用通道列表。
+* @method Models\DescribeDirectConnectsResponse DescribeDirectConnects(Models\DescribeDirectConnectsRequest $req) 查询物理专线列表。
+* @method Models\ModifyDirectConnectAttributeResponse ModifyDirectConnectAttribute(Models\ModifyDirectConnectAttributeRequest $req) 修改物理专线的属性。
 * @method Models\ModifyDirectConnectTunnelAttributeResponse ModifyDirectConnectTunnelAttribute(Models\ModifyDirectConnectTunnelAttributeRequest $req) 修改专用通道属性
 * @method Models\RejectDirectConnectTunnelResponse RejectDirectConnectTunnel(Models\RejectDirectConnectTunnelRequest $req) 拒绝专用通道申请
  */

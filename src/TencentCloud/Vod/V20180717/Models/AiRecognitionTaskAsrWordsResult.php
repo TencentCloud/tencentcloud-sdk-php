@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) 设置错误码，0：成功，其他值：失败。
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
- * @method AiRecognitionTaskAsrWordsResultInput getInput() 获取用户自定义语音识别任务输入信息。
- * @method void setInput(AiRecognitionTaskAsrWordsResultInput $Input) 设置用户自定义语音识别任务输入信息。
- * @method AiRecognitionTaskAsrWordsResultOutput getOutput() 获取用户自定义语音识别任务输出信息。
+ * @method AiRecognitionTaskAsrWordsResultInput getInput() 获取语音关键词识别任务输入信息。
+ * @method void setInput(AiRecognitionTaskAsrWordsResultInput $Input) 设置语音关键词识别任务输入信息。
+ * @method AiRecognitionTaskAsrWordsResultOutput getOutput() 获取语音关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutput(AiRecognitionTaskAsrWordsResultOutput $Output) 设置用户自定义语音识别任务输出信息。
+ * @method void setOutput(AiRecognitionTaskAsrWordsResultOutput $Output) 设置语音关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
- *用户自定义语音识别结果。
+ *语音关键词识别结果。
  */
 class AiRecognitionTaskAsrWordsResult extends AbstractModel
 {
@@ -53,12 +53,12 @@ class AiRecognitionTaskAsrWordsResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiRecognitionTaskAsrWordsResultInput 用户自定义语音识别任务输入信息。
+     * @var AiRecognitionTaskAsrWordsResultInput 语音关键词识别任务输入信息。
      */
     public $Input;
 
     /**
-     * @var AiRecognitionTaskAsrWordsResultOutput 用户自定义语音识别任务输出信息。
+     * @var AiRecognitionTaskAsrWordsResultOutput 语音关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
@@ -66,8 +66,8 @@ class AiRecognitionTaskAsrWordsResult extends AbstractModel
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param integer $ErrCode 错误码，0：成功，其他值：失败。
      * @param string $Message 错误信息。
-     * @param AiRecognitionTaskAsrWordsResultInput $Input 用户自定义语音识别任务输入信息。
-     * @param AiRecognitionTaskAsrWordsResultOutput $Output 用户自定义语音识别任务输出信息。
+     * @param AiRecognitionTaskAsrWordsResultInput $Input 语音关键词识别任务输入信息。
+     * @param AiRecognitionTaskAsrWordsResultOutput $Output 语音关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

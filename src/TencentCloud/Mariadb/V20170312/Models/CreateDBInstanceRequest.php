@@ -40,14 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动使用代金券进行支付，默认不使用。
  * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券。
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券。
- * @method string getVpcId() 获取虚拟私有网络 ID，不传或传 0 表示创建为基础网络
- * @method void setVpcId(string $VpcId) 设置虚拟私有网络 ID，不传或传 0 表示创建为基础网络
- * @method string getSubnetId() 获取虚拟私有网络子网 ID，VpcId 不为0时必填
- * @method void setSubnetId(string $SubnetId) 设置虚拟私有网络子网 ID，VpcId 不为0时必填
+ * @method string getVpcId() 获取虚拟私有网络 ID，不传表示创建为基础网络
+ * @method void setVpcId(string $VpcId) 设置虚拟私有网络 ID，不传表示创建为基础网络
+ * @method string getSubnetId() 获取虚拟私有网络子网 ID，VpcId 不为空时必填
+ * @method void setSubnetId(string $SubnetId) 设置虚拟私有网络子网 ID，VpcId 不为空时必填
  * @method integer getProjectId() 获取项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
  * @method void setProjectId(integer $ProjectId) 设置项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
- * @method string getDbVersionId() 获取数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
- * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
+ * @method string getDbVersionId() 获取数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
+ * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
  */
 
 /**
@@ -99,12 +99,12 @@ class CreateDBInstanceRequest extends AbstractModel
     public $VoucherIds;
 
     /**
-     * @var string 虚拟私有网络 ID，不传或传 0 表示创建为基础网络
+     * @var string 虚拟私有网络 ID，不传表示创建为基础网络
      */
     public $VpcId;
 
     /**
-     * @var string 虚拟私有网络子网 ID，VpcId 不为0时必填
+     * @var string 虚拟私有网络子网 ID，VpcId 不为空时必填
      */
     public $SubnetId;
 
@@ -114,7 +114,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
+     * @var string 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
      */
     public $DbVersionId;
     /**
@@ -129,10 +129,10 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $Count 欲购买的数量，默认查询购买1个实例的价格。
      * @param boolean $AutoVoucher 是否自动使用代金券进行支付，默认不使用。
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
-     * @param string $VpcId 虚拟私有网络 ID，不传或传 0 表示创建为基础网络
-     * @param string $SubnetId 虚拟私有网络子网 ID，VpcId 不为0时必填
+     * @param string $VpcId 虚拟私有网络 ID，不传表示创建为基础网络
+     * @param string $SubnetId 虚拟私有网络子网 ID，VpcId 不为空时必填
      * @param integer $ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
-     * @param string $DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
+     * @param string $DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
      */
     function __construct()
     {

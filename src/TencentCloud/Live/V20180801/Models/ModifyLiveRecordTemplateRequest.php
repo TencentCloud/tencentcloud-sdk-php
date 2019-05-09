@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMp4Param(RecordParam $Mp4Param) 设置Mp4录制参数，开启Mp4录制时设置。
  * @method RecordParam getAacParam() 获取Aac录制参数，开启Aac录制时设置。
  * @method void setAacParam(RecordParam $AacParam) 设置Aac录制参数，开启Aac录制时设置。
+ * @method HlsSpecialParam getHlsSpecialParam() 获取HLS录制定制参数
+ * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) 设置HLS录制定制参数
  */
 
 /**
@@ -73,6 +75,11 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
      * @var RecordParam Aac录制参数，开启Aac录制时设置。
      */
     public $AacParam;
+
+    /**
+     * @var HlsSpecialParam HLS录制定制参数
+     */
+    public $HlsSpecialParam;
     /**
      * @param integer $TemplateId 模板Id。
      * @param string $TemplateName 模板名称。
@@ -81,6 +88,7 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
      * @param RecordParam $HlsParam Hls录制参数，开启hls录制时设置。
      * @param RecordParam $Mp4Param Mp4录制参数，开启Mp4录制时设置。
      * @param RecordParam $AacParam Aac录制参数，开启Aac录制时设置。
+     * @param HlsSpecialParam $HlsSpecialParam HLS录制定制参数
      */
     function __construct()
     {
@@ -124,6 +132,11 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
         if (array_key_exists("AacParam",$param) and $param["AacParam"] !== null) {
             $this->AacParam = new RecordParam();
             $this->AacParam->deserialize($param["AacParam"]);
+        }
+
+        if (array_key_exists("HlsSpecialParam",$param) and $param["HlsSpecialParam"] !== null) {
+            $this->HlsSpecialParam = new HlsSpecialParam();
+            $this->HlsSpecialParam->deserialize($param["HlsSpecialParam"]);
         }
     }
 }

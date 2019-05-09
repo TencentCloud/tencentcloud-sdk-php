@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * @method PerformanceMonitorSet getMaster() 获取主节点性能监控数据
  * @method void setMaster(PerformanceMonitorSet $Master) 设置主节点性能监控数据
  * @method PerformanceMonitorSet getSlave1() 获取备机1性能监控数据
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlave1(PerformanceMonitorSet $Slave1) 设置备机1性能监控数据
+注意：此字段可能返回 null，表示取不到有效值。
  * @method PerformanceMonitorSet getSlave2() 获取备机2性能监控数据，如果实例是一主一从，则没有该字段
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlave2(PerformanceMonitorSet $Slave2) 设置备机2性能监控数据，如果实例是一主一从，则没有该字段
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,11 +44,13 @@ class DescribeDBPerformanceDetailsResponse extends AbstractModel
 
     /**
      * @var PerformanceMonitorSet 备机1性能监控数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Slave1;
 
     /**
      * @var PerformanceMonitorSet 备机2性能监控数据，如果实例是一主一从，则没有该字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Slave2;
 
@@ -55,7 +61,9 @@ class DescribeDBPerformanceDetailsResponse extends AbstractModel
     /**
      * @param PerformanceMonitorSet $Master 主节点性能监控数据
      * @param PerformanceMonitorSet $Slave1 备机1性能监控数据
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PerformanceMonitorSet $Slave2 备机2性能监控数据，如果实例是一主一从，则没有该字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

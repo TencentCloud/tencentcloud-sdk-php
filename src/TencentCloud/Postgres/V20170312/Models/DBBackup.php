@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) 设置文件大小(K)
  * @method integer getStrategy() 获取策略（0-实例备份；1-多库备份）
  * @method void setStrategy(integer $Strategy) 设置策略（0-实例备份；1-多库备份）
- * @method integer getWay() 获取类型（0-定时；1-临时）
- * @method void setWay(integer $Way) 设置类型（0-定时；1-临时）
- * @method integer getType() 获取备份方式（1-完整；2-日志；3-差异）
- * @method void setType(integer $Type) 设置备份方式（1-完整；2-日志；3-差异）
- * @method integer getStatus() 获取状态（0-创建中；1-成功；2-失败）
- * @method void setStatus(integer $Status) 设置状态（0-创建中；1-成功；2-失败）
+ * @method integer getWay() 获取类型（0-定时）
+ * @method void setWay(integer $Way) 设置类型（0-定时）
+ * @method integer getType() 获取备份方式（1-完整）
+ * @method void setType(integer $Type) 设置备份方式（1-完整）
+ * @method integer getStatus() 获取状态（1-创建中；2-成功；3-失败）
+ * @method void setStatus(integer $Status) 设置状态（1-创建中；2-成功；3-失败）
  * @method array getDbList() 获取DB列表
  * @method void setDbList(array $DbList) 设置DB列表
  * @method string getInternalAddr() 获取内网下载地址
@@ -73,17 +73,17 @@ class DBBackup extends AbstractModel
     public $Strategy;
 
     /**
-     * @var integer 类型（0-定时；1-临时）
+     * @var integer 类型（0-定时）
      */
     public $Way;
 
     /**
-     * @var integer 备份方式（1-完整；2-日志；3-差异）
+     * @var integer 备份方式（1-完整）
      */
     public $Type;
 
     /**
-     * @var integer 状态（0-创建中；1-成功；2-失败）
+     * @var integer 状态（1-创建中；2-成功；3-失败）
      */
     public $Status;
 
@@ -107,9 +107,9 @@ class DBBackup extends AbstractModel
      * @param string $EndTime 文件生成的结束时间
      * @param integer $Size 文件大小(K)
      * @param integer $Strategy 策略（0-实例备份；1-多库备份）
-     * @param integer $Way 类型（0-定时；1-临时）
-     * @param integer $Type 备份方式（1-完整；2-日志；3-差异）
-     * @param integer $Status 状态（0-创建中；1-成功；2-失败）
+     * @param integer $Way 类型（0-定时）
+     * @param integer $Type 备份方式（1-完整）
+     * @param integer $Status 状态（1-创建中；2-成功；3-失败）
      * @param array $DbList DB列表
      * @param string $InternalAddr 内网下载地址
      * @param string $ExternalAddr 外网下载地址

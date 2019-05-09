@@ -18,10 +18,10 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getModule() 获取模块名
- * @method void setModule(string $Module) 设置模块名
- * @method string getOperation() 获取操作名
- * @method void setOperation(string $Operation) 设置操作名
+ * @method string getModule() 获取模块名ContractMng
+ * @method void setModule(string $Module) 设置模块名ContractMng
+ * @method string getOperation() 获取操作名SignContractByKeyword
+ * @method void setOperation(string $Operation) 设置操作名SignContractByKeyword
  * @method string getContractResId() 获取合同ID
  * @method void setContractResId(string $ContractResId) 设置合同ID
  * @method string getAccountResId() 获取账户ID
@@ -30,10 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthorizationTime(string $AuthorizationTime) 设置授权时间，格式为年月日时分秒，例20160801095509
  * @method string getPosition() 获取授权IP地址
  * @method void setPosition(string $Position) 设置授权IP地址
+ * @method SignKeyword getSignKeyword() 获取签署关键字，偏移坐标原点为关键字中心
+ * @method void setSignKeyword(SignKeyword $SignKeyword) 设置签署关键字，偏移坐标原点为关键字中心
  * @method string getSealResId() 获取签章ID
  * @method void setSealResId(string $SealResId) 设置签章ID
- * @method SignKeyword getSignKeyword() 获取签署关键字，坐标和范围不得超过合同文件边界
- * @method void setSignKeyword(SignKeyword $SignKeyword) 设置签署关键字，坐标和范围不得超过合同文件边界
+ * @method integer getCertType() 获取选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+ * @method void setCertType(integer $CertType) 设置选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+ * @method string getImageData() 获取签名图片，base64编码
+ * @method void setImageData(string $ImageData) 设置签名图片，base64编码
  */
 
 /**
@@ -42,12 +46,12 @@ use TencentCloud\Common\AbstractModel;
 class SignContractByKeywordRequest extends AbstractModel
 {
     /**
-     * @var string 模块名
+     * @var string 模块名ContractMng
      */
     public $Module;
 
     /**
-     * @var string 操作名
+     * @var string 操作名SignContractByKeyword
      */
     public $Operation;
 
@@ -72,23 +76,35 @@ class SignContractByKeywordRequest extends AbstractModel
     public $Position;
 
     /**
+     * @var SignKeyword 签署关键字，偏移坐标原点为关键字中心
+     */
+    public $SignKeyword;
+
+    /**
      * @var string 签章ID
      */
     public $SealResId;
 
     /**
-     * @var SignKeyword 签署关键字，坐标和范围不得超过合同文件边界
+     * @var integer 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      */
-    public $SignKeyword;
+    public $CertType;
+
     /**
-     * @param string $Module 模块名
-     * @param string $Operation 操作名
+     * @var string 签名图片，base64编码
+     */
+    public $ImageData;
+    /**
+     * @param string $Module 模块名ContractMng
+     * @param string $Operation 操作名SignContractByKeyword
      * @param string $ContractResId 合同ID
      * @param string $AccountResId 账户ID
      * @param string $AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
      * @param string $Position 授权IP地址
+     * @param SignKeyword $SignKeyword 签署关键字，偏移坐标原点为关键字中心
      * @param string $SealResId 签章ID
-     * @param SignKeyword $SignKeyword 签署关键字，坐标和范围不得超过合同文件边界
+     * @param integer $CertType 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     * @param string $ImageData 签名图片，base64编码
      */
     function __construct()
     {
@@ -126,13 +142,21 @@ class SignContractByKeywordRequest extends AbstractModel
             $this->Position = $param["Position"];
         }
 
+        if (array_key_exists("SignKeyword",$param) and $param["SignKeyword"] !== null) {
+            $this->SignKeyword = new SignKeyword();
+            $this->SignKeyword->deserialize($param["SignKeyword"]);
+        }
+
         if (array_key_exists("SealResId",$param) and $param["SealResId"] !== null) {
             $this->SealResId = $param["SealResId"];
         }
 
-        if (array_key_exists("SignKeyword",$param) and $param["SignKeyword"] !== null) {
-            $this->SignKeyword = new SignKeyword();
-            $this->SignKeyword->deserialize($param["SignKeyword"]);
+        if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
+            $this->CertType = $param["CertType"];
+        }
+
+        if (array_key_exists("ImageData",$param) and $param["ImageData"] !== null) {
+            $this->ImageData = $param["ImageData"];
         }
     }
 }

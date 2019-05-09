@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置截图任务 ID。
  * @method string getFileId() 获取截图文件 ID。
  * @method void setFileId(string $FileId) 设置截图文件 ID。
- * @method integer getDefinition() 获取截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/11702#.E6.8C.87.E5.AE.9A.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
- * @method void setDefinition(integer $Definition) 设置截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/11702#.E6.8C.87.E5.AE.9A.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+ * @method integer getDefinition() 获取截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+ * @method void setDefinition(integer $Definition) 设置截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
  * @method array getSnapshotInfoSet() 获取截图结果信息。
  * @method void setSnapshotInfoSet(array $SnapshotInfoSet) 设置截图结果信息。
  */
@@ -44,7 +44,7 @@ class SnapshotByTimeOffsetTask2017 extends AbstractModel
     public $FileId;
 
     /**
-     * @var integer 截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/11702#.E6.8C.87.E5.AE.9A.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * @var integer 截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      */
     public $Definition;
 
@@ -55,7 +55,7 @@ class SnapshotByTimeOffsetTask2017 extends AbstractModel
     /**
      * @param string $TaskId 截图任务 ID。
      * @param string $FileId 截图文件 ID。
-     * @param integer $Definition 截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/11702#.E6.8C.87.E5.AE.9A.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * @param integer $Definition 截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      * @param array $SnapshotInfoSet 截图结果信息。
      */
     function __construct()

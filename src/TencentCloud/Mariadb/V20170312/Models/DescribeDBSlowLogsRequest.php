@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置排序指标，取值为query_time_sum或者query_count
  * @method string getOrderByType() 获取排序类型，desc或者asc
  * @method void setOrderByType(string $OrderByType) 设置排序类型，desc或者asc
+ * @method integer getSlave() 获取是否查询从机的慢查询，0-主机; 1-从机
+ * @method void setSlave(integer $Slave) 设置是否查询从机的慢查询，0-主机; 1-从机
  */
 
 /**
@@ -80,6 +82,11 @@ class DescribeDBSlowLogsRequest extends AbstractModel
      * @var string 排序类型，desc或者asc
      */
     public $OrderByType;
+
+    /**
+     * @var integer 是否查询从机的慢查询，0-主机; 1-从机
+     */
+    public $Slave;
     /**
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc。
      * @param integer $Offset 从结果的第几条数据开始返回
@@ -89,6 +96,7 @@ class DescribeDBSlowLogsRequest extends AbstractModel
      * @param string $Db 要查询的具体数据库名称
      * @param string $OrderBy 排序指标，取值为query_time_sum或者query_count
      * @param string $OrderByType 排序类型，desc或者asc
+     * @param integer $Slave 是否查询从机的慢查询，0-主机; 1-从机
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeDBSlowLogsRequest extends AbstractModel
 
         if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
             $this->OrderByType = $param["OrderByType"];
+        }
+
+        if (array_key_exists("Slave",$param) and $param["Slave"] !== null) {
+            $this->Slave = $param["Slave"];
         }
     }
 }

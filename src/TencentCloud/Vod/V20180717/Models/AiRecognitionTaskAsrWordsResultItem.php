@@ -18,29 +18,29 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getWord() 获取语音识别词。
- * @method void setWord(string $Word) 设置语音识别词。
- * @method array getSegmentSet() 获取用户自定义语音识别结果集。
- * @method void setSegmentSet(array $SegmentSet) 设置用户自定义语音识别结果集。
+ * @method string getWord() 获取语音关键词。
+ * @method void setWord(string $Word) 设置语音关键词。
+ * @method array getSegmentSet() 获取语音关键词出现的时间片段列表。
+ * @method void setSegmentSet(array $SegmentSet) 设置语音关键词出现的时间片段列表。
  */
 
 /**
- *用户自定义语音识别结果。
+ *语音关键词识别结果。
  */
 class AiRecognitionTaskAsrWordsResultItem extends AbstractModel
 {
     /**
-     * @var string 语音识别词。
+     * @var string 语音关键词。
      */
     public $Word;
 
     /**
-     * @var array 用户自定义语音识别结果集。
+     * @var array 语音关键词出现的时间片段列表。
      */
     public $SegmentSet;
     /**
-     * @param string $Word 语音识别词。
-     * @param array $SegmentSet 用户自定义语音识别结果集。
+     * @param string $Word 语音关键词。
+     * @param array $SegmentSet 语音关键词出现的时间片段列表。
      */
     function __construct()
     {

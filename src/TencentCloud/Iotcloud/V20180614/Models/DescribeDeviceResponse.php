@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoraDevEui(string $LoraDevEui) 设置Lora设备的dev eui
  * @method integer getLoraMoteType() 获取Lora设备的mote type
  * @method void setLoraMoteType(integer $LoraMoteType) 设置Lora设备的mote type
+ * @method integer getLogLevel() 获取设备的sdk日志等级
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogLevel(integer $LogLevel) 设置设备的sdk日志等级
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -133,6 +137,12 @@ class DescribeDeviceResponse extends AbstractModel
     public $LoraMoteType;
 
     /**
+     * @var integer 设备的sdk日志等级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogLevel;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -152,6 +162,8 @@ class DescribeDeviceResponse extends AbstractModel
      * @param string $NbiotDeviceID NB IoT运营商处的DeviceID
      * @param string $LoraDevEui Lora设备的dev eui
      * @param integer $LoraMoteType Lora设备的mote type
+     * @param integer $LogLevel 设备的sdk日志等级
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -229,6 +241,10 @@ class DescribeDeviceResponse extends AbstractModel
 
         if (array_key_exists("LoraMoteType",$param) and $param["LoraMoteType"] !== null) {
             $this->LoraMoteType = $param["LoraMoteType"];
+        }
+
+        if (array_key_exists("LogLevel",$param) and $param["LogLevel"] !== null) {
+            $this->LogLevel = $param["LogLevel"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

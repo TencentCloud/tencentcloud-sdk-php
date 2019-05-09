@@ -24,28 +24,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDb(string $Db) 设置数据库名称
  * @method string getFingerPrint() 获取抽象的SQL语句
  * @method void setFingerPrint(string $FingerPrint) 设置抽象的SQL语句
- * @method float getLockTimeAvg() 获取平均的锁时间
- * @method void setLockTimeAvg(float $LockTimeAvg) 设置平均的锁时间
- * @method float getLockTimeMax() 获取最大锁时间
- * @method void setLockTimeMax(float $LockTimeMax) 设置最大锁时间
- * @method float getLockTimeMin() 获取最小锁时间
- * @method void setLockTimeMin(float $LockTimeMin) 设置最小锁时间
- * @method float getLockTimeSum() 获取锁时间总和
- * @method void setLockTimeSum(float $LockTimeSum) 设置锁时间总和
- * @method integer getQueryCount() 获取查询次数
- * @method void setQueryCount(integer $QueryCount) 设置查询次数
- * @method float getQueryTimeAvg() 获取平均查询时间
- * @method void setQueryTimeAvg(float $QueryTimeAvg) 设置平均查询时间
- * @method float getQueryTimeMax() 获取最大查询时间
- * @method void setQueryTimeMax(float $QueryTimeMax) 设置最大查询时间
- * @method float getQueryTimeMin() 获取最小查询时间
- * @method void setQueryTimeMin(float $QueryTimeMin) 设置最小查询时间
- * @method float getQueryTimeSum() 获取查询时间总和
- * @method void setQueryTimeSum(float $QueryTimeSum) 设置查询时间总和
- * @method integer getRowsExaminedSum() 获取扫描行数
- * @method void setRowsExaminedSum(integer $RowsExaminedSum) 设置扫描行数
- * @method integer getRowsSentSum() 获取发送行数
- * @method void setRowsSentSum(integer $RowsSentSum) 设置发送行数
+ * @method string getLockTimeAvg() 获取平均的锁时间
+ * @method void setLockTimeAvg(string $LockTimeAvg) 设置平均的锁时间
+ * @method string getLockTimeMax() 获取最大锁时间
+ * @method void setLockTimeMax(string $LockTimeMax) 设置最大锁时间
+ * @method string getLockTimeMin() 获取最小锁时间
+ * @method void setLockTimeMin(string $LockTimeMin) 设置最小锁时间
+ * @method string getLockTimeSum() 获取锁时间总和
+ * @method void setLockTimeSum(string $LockTimeSum) 设置锁时间总和
+ * @method string getQueryCount() 获取查询次数
+ * @method void setQueryCount(string $QueryCount) 设置查询次数
+ * @method string getQueryTimeAvg() 获取平均查询时间
+ * @method void setQueryTimeAvg(string $QueryTimeAvg) 设置平均查询时间
+ * @method string getQueryTimeMax() 获取最大查询时间
+ * @method void setQueryTimeMax(string $QueryTimeMax) 设置最大查询时间
+ * @method string getQueryTimeMin() 获取最小查询时间
+ * @method void setQueryTimeMin(string $QueryTimeMin) 设置最小查询时间
+ * @method string getQueryTimeSum() 获取查询时间总和
+ * @method void setQueryTimeSum(string $QueryTimeSum) 设置查询时间总和
+ * @method string getRowsExaminedSum() 获取扫描行数
+ * @method void setRowsExaminedSum(string $RowsExaminedSum) 设置扫描行数
+ * @method string getRowsSentSum() 获取发送行数
+ * @method void setRowsSentSum(string $RowsSentSum) 设置发送行数
  * @method string getTsMax() 获取最后执行时间
  * @method void setTsMax(string $TsMax) 设置最后执行时间
  * @method string getTsMin() 获取首次执行时间
@@ -75,57 +75,57 @@ class SlowLogData extends AbstractModel
     public $FingerPrint;
 
     /**
-     * @var float 平均的锁时间
+     * @var string 平均的锁时间
      */
     public $LockTimeAvg;
 
     /**
-     * @var float 最大锁时间
+     * @var string 最大锁时间
      */
     public $LockTimeMax;
 
     /**
-     * @var float 最小锁时间
+     * @var string 最小锁时间
      */
     public $LockTimeMin;
 
     /**
-     * @var float 锁时间总和
+     * @var string 锁时间总和
      */
     public $LockTimeSum;
 
     /**
-     * @var integer 查询次数
+     * @var string 查询次数
      */
     public $QueryCount;
 
     /**
-     * @var float 平均查询时间
+     * @var string 平均查询时间
      */
     public $QueryTimeAvg;
 
     /**
-     * @var float 最大查询时间
+     * @var string 最大查询时间
      */
     public $QueryTimeMax;
 
     /**
-     * @var float 最小查询时间
+     * @var string 最小查询时间
      */
     public $QueryTimeMin;
 
     /**
-     * @var float 查询时间总和
+     * @var string 查询时间总和
      */
     public $QueryTimeSum;
 
     /**
-     * @var integer 扫描行数
+     * @var string 扫描行数
      */
     public $RowsExaminedSum;
 
     /**
-     * @var integer 发送行数
+     * @var string 发送行数
      */
     public $RowsSentSum;
 
@@ -147,17 +147,17 @@ class SlowLogData extends AbstractModel
      * @param string $CheckSum 语句校验和，用于查询详情
      * @param string $Db 数据库名称
      * @param string $FingerPrint 抽象的SQL语句
-     * @param float $LockTimeAvg 平均的锁时间
-     * @param float $LockTimeMax 最大锁时间
-     * @param float $LockTimeMin 最小锁时间
-     * @param float $LockTimeSum 锁时间总和
-     * @param integer $QueryCount 查询次数
-     * @param float $QueryTimeAvg 平均查询时间
-     * @param float $QueryTimeMax 最大查询时间
-     * @param float $QueryTimeMin 最小查询时间
-     * @param float $QueryTimeSum 查询时间总和
-     * @param integer $RowsExaminedSum 扫描行数
-     * @param integer $RowsSentSum 发送行数
+     * @param string $LockTimeAvg 平均的锁时间
+     * @param string $LockTimeMax 最大锁时间
+     * @param string $LockTimeMin 最小锁时间
+     * @param string $LockTimeSum 锁时间总和
+     * @param string $QueryCount 查询次数
+     * @param string $QueryTimeAvg 平均查询时间
+     * @param string $QueryTimeMax 最大查询时间
+     * @param string $QueryTimeMin 最小查询时间
+     * @param string $QueryTimeSum 查询时间总和
+     * @param string $RowsExaminedSum 扫描行数
+     * @param string $RowsSentSum 发送行数
      * @param string $TsMax 最后执行时间
      * @param string $TsMin 首次执行时间
      * @param string $User 帐号

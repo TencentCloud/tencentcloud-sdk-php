@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置当前状态。0：未使用，1:使用中。
  * @method string getCreateTime() 获取添加时间。
  * @method void setCreateTime(string $CreateTime) 设置添加时间。
+ * @method integer getWidth() 获取水印宽
+ * @method void setWidth(integer $Width) 设置水印宽
+ * @method integer getHeight() 获取水印高
+ * @method void setHeight(integer $Height) 设置水印高
  */
 
 /**
@@ -74,6 +78,16 @@ class WatermarkInfo extends AbstractModel
      * @var string 添加时间。
      */
     public $CreateTime;
+
+    /**
+     * @var integer 水印宽
+     */
+    public $Width;
+
+    /**
+     * @var integer 水印高
+     */
+    public $Height;
     /**
      * @param integer $WatermarkId 水印ID。
      * @param string $PictureUrl 水印图片url。
@@ -82,6 +96,8 @@ class WatermarkInfo extends AbstractModel
      * @param string $WatermarkName 水印名称。
      * @param integer $Status 当前状态。0：未使用，1:使用中。
      * @param string $CreateTime 添加时间。
+     * @param integer $Width 水印宽
+     * @param integer $Height 水印高
      */
     function __construct()
     {
@@ -121,6 +137,14 @@ class WatermarkInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
+            $this->Width = $param["Width"];
+        }
+
+        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
+            $this->Height = $param["Height"];
         }
     }
 }

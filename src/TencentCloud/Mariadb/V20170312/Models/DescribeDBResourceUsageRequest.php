@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始日期，格式yyyy-mm-dd
  * @method string getEndTime() 获取结束日期，格式yyyy-mm-dd
  * @method void setEndTime(string $EndTime) 设置结束日期，格式yyyy-mm-dd
+ * @method string getMetricName() 获取拉取的指标名称，支持的值为：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate
+ * @method void setMetricName(string $MetricName) 设置拉取的指标名称，支持的值为：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate
  */
 
 /**
@@ -45,10 +47,16 @@ class DescribeDBResourceUsageRequest extends AbstractModel
      * @var string 结束日期，格式yyyy-mm-dd
      */
     public $EndTime;
+
+    /**
+     * @var string 拉取的指标名称，支持的值为：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate
+     */
+    public $MetricName;
     /**
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc。
      * @param string $StartTime 开始日期，格式yyyy-mm-dd
      * @param string $EndTime 结束日期，格式yyyy-mm-dd
+     * @param string $MetricName 拉取的指标名称，支持的值为：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeDBResourceUsageRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
+            $this->MetricName = $param["MetricName"];
         }
     }
 }

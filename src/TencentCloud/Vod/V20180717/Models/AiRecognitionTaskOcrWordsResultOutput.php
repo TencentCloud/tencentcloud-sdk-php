@@ -18,21 +18,21 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getResultSet() 获取用户自定义文本识别结果集。
- * @method void setResultSet(array $ResultSet) 设置用户自定义文本识别结果集。
+ * @method array getResultSet() 获取文本关键词识别结果集。
+ * @method void setResultSet(array $ResultSet) 设置文本关键词识别结果集。
  */
 
 /**
- *用户自定义文本识别输出。
+ *文本关键词识别输出。
  */
 class AiRecognitionTaskOcrWordsResultOutput extends AbstractModel
 {
     /**
-     * @var array 用户自定义文本识别结果集。
+     * @var array 文本关键词识别结果集。
      */
     public $ResultSet;
     /**
-     * @param array $ResultSet 用户自定义文本识别结果集。
+     * @param array $ResultSet 文本关键词识别结果集。
      */
     function __construct()
     {

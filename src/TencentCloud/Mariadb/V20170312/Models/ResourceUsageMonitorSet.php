@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuUsageRate(MonitorData $CpuUsageRate) 设置CPU利用率
  * @method MonitorData getMemAvailable() 获取内存可用空间,单位GB
  * @method void setMemAvailable(MonitorData $MemAvailable) 设置内存可用空间,单位GB
- * @method MonitorIntData getDataDiskAvailable() 获取磁盘可用空间,单位GB
- * @method void setDataDiskAvailable(MonitorIntData $DataDiskAvailable) 设置磁盘可用空间,单位GB
+ * @method MonitorData getDataDiskAvailable() 获取磁盘可用空间,单位GB
+ * @method void setDataDiskAvailable(MonitorData $DataDiskAvailable) 设置磁盘可用空间,单位GB
  */
 
 /**
@@ -49,14 +49,14 @@ class ResourceUsageMonitorSet extends AbstractModel
     public $MemAvailable;
 
     /**
-     * @var MonitorIntData 磁盘可用空间,单位GB
+     * @var MonitorData 磁盘可用空间,单位GB
      */
     public $DataDiskAvailable;
     /**
      * @param MonitorData $BinlogDiskAvailable binlog日志磁盘可用空间,单位GB
      * @param MonitorData $CpuUsageRate CPU利用率
      * @param MonitorData $MemAvailable 内存可用空间,单位GB
-     * @param MonitorIntData $DataDiskAvailable 磁盘可用空间,单位GB
+     * @param MonitorData $DataDiskAvailable 磁盘可用空间,单位GB
      */
     function __construct()
     {
@@ -86,7 +86,7 @@ class ResourceUsageMonitorSet extends AbstractModel
         }
 
         if (array_key_exists("DataDiskAvailable",$param) and $param["DataDiskAvailable"] !== null) {
-            $this->DataDiskAvailable = new MonitorIntData();
+            $this->DataDiskAvailable = new MonitorData();
             $this->DataDiskAvailable->deserialize($param["DataDiskAvailable"]);
         }
     }

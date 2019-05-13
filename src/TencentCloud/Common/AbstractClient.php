@@ -275,8 +275,9 @@ abstract class AbstractClient
                             $signedHeaders."\n".
                             $payloadHash;
         $algo = "TC3-HMAC-SHA256";
-        date_default_timezone_set('UTC');
-        $date = date("Y-m-d", $headers["X-TC-Timestamp"]);
+        // date_default_timezone_set('UTC');
+        // $date = date("Y-m-d", $headers["X-TC-Timestamp"]);
+        $date = gmdate("Y-m-d", $headers["X-TC-Timestamp"]);
         $service = explode(".", $endpoint)[0];
         $credentialScope = $date."/".$service."/tc3_request";
         $hashedCanonicalRequest = hash("SHA256", $canonicalRequest);

@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceFamily(string $InstanceFamily) 设置实例机型系列。
  * @method string getTypeName() 获取机型名称。
  * @method void setTypeName(string $TypeName) 设置机型名称。
- * @method array getLocalDiskTypeList() 获取本地磁盘规格列表。
- * @method void setLocalDiskTypeList(array $LocalDiskTypeList) 设置本地磁盘规格列表。
+ * @method array getLocalDiskTypeList() 获取本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
+ * @method void setLocalDiskTypeList(array $LocalDiskTypeList) 设置本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
  * @method string getStatus() 获取实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
  * @method void setStatus(string $Status) 设置实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
  * @method ItemPrice getPrice() 获取实例的售卖价格。
@@ -98,7 +98,7 @@ class InstanceTypeQuotaItem extends AbstractModel
     public $TypeName;
 
     /**
-     * @var array 本地磁盘规格列表。
+     * @var array 本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
      */
     public $LocalDiskTypeList;
 
@@ -122,7 +122,7 @@ class InstanceTypeQuotaItem extends AbstractModel
      * @param integer $Memory 实例内存容量，单位：`GB`。
      * @param string $InstanceFamily 实例机型系列。
      * @param string $TypeName 机型名称。
-     * @param array $LocalDiskTypeList 本地磁盘规格列表。
+     * @param array $LocalDiskTypeList 本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
      * @param string $Status 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
      * @param ItemPrice $Price 实例的售卖价格。
      */

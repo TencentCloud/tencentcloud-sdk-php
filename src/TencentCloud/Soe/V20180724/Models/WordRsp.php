@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPronFluency(float $PronFluency) 设置单词发音流利度，取值范围[0, 1]
  * @method string getWord() 获取当前词
  * @method void setWord(string $Word) 设置当前词
- * @method integer getMatchTag() 获取当前词与输入语句的匹配情况，0:匹配单词、1：新增单词、2：缺少单词
- * @method void setMatchTag(integer $MatchTag) 设置当前词与输入语句的匹配情况，0:匹配单词、1：新增单词、2：缺少单词
+ * @method integer getMatchTag() 获取当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
+ * @method void setMatchTag(integer $MatchTag) 设置当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
  * @method array getPhoneInfos() 获取音节评估详情
  * @method void setPhoneInfos(array $PhoneInfos) 设置音节评估详情
  */
@@ -65,7 +65,7 @@ class WordRsp extends AbstractModel
     public $Word;
 
     /**
-     * @var integer 当前词与输入语句的匹配情况，0:匹配单词、1：新增单词、2：缺少单词
+     * @var integer 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      */
     public $MatchTag;
 
@@ -79,7 +79,7 @@ class WordRsp extends AbstractModel
      * @param float $PronAccuracy 单词发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
      * @param float $PronFluency 单词发音流利度，取值范围[0, 1]
      * @param string $Word 当前词
-     * @param integer $MatchTag 当前词与输入语句的匹配情况，0:匹配单词、1：新增单词、2：缺少单词
+     * @param integer $MatchTag 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      * @param array $PhoneInfos 音节评估详情
      */
     function __construct()

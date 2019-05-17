@@ -18,29 +18,29 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRegion() 获取Target所属地域
- * @method void setRegion(string $Region) 设置Target所属地域
- * @method string getVpcId() 获取Target所属VPC网络
- * @method void setVpcId(string $VpcId) 设置Target所属VPC网络
+ * @method string getRegion() 获取Target所属地域，如 ap-guangzhou
+ * @method void setRegion(string $Region) 设置Target所属地域，如 ap-guangzhou
+ * @method string getVpcId() 获取Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
+ * @method void setVpcId(string $VpcId) 设置Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
  */
 
 /**
- *负载均衡实例所绑定的后端信息，包括所属地域、所属VPC网络。
+ *负载均衡实例所绑定的后端服务的信息，包括所属地域、所属网络。
  */
 class TargetRegionInfo extends AbstractModel
 {
     /**
-     * @var string Target所属地域
+     * @var string Target所属地域，如 ap-guangzhou
      */
     public $Region;
 
     /**
-     * @var string Target所属VPC网络
+     * @var string Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
      */
     public $VpcId;
     /**
-     * @param string $Region Target所属地域
-     * @param string $VpcId Target所属VPC网络
+     * @param string $Region Target所属地域，如 ap-guangzhou
+     * @param string $VpcId Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
      */
     function __construct()
     {

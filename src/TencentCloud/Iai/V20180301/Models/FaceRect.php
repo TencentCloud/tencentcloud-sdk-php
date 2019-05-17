@@ -18,10 +18,10 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getX() 获取人脸框左上角纵坐标。 
+ * @method integer getX() 获取人脸框左上角横坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
- * @method void setX(integer $X) 设置人脸框左上角纵坐标。 
+ * @method void setX(integer $X) 设置人脸框左上角横坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
  * @method integer getY() 获取人脸框左上角纵坐标。 
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class FaceRect extends AbstractModel
 {
     /**
-     * @var integer 人脸框左上角纵坐标。 
+     * @var integer 人脸框左上角横坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
      */
@@ -65,7 +65,7 @@ class FaceRect extends AbstractModel
      */
     public $Height;
     /**
-     * @param integer $X 人脸框左上角纵坐标。 
+     * @param integer $X 人脸框左上角横坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
      * @param integer $Y 人脸框左上角纵坐标。 

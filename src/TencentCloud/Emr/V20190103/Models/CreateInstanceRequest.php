@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeSpan(integer $TimeSpan) 设置时间长度
  * @method string getTimeUnit() 获取时间单位
  * @method void setTimeUnit(string $TimeUnit) 设置时间单位
- * @method LoginSettings getLoginSettings() 获取登陆配置
- * @method void setLoginSettings(LoginSettings $LoginSettings) 设置登陆配置
+ * @method LoginSettings getLoginSettings() 获取登录配置
+ * @method void setLoginSettings(LoginSettings $LoginSettings) 设置登录配置
  * @method string getClientToken() 获取客户端Token
  * @method void setClientToken(string $ClientToken) 设置客户端Token
  * @method COSSettings getCOSSettings() 获取COS设置参数
@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreExecutedFileSettings(PreExecuteFileSettings $PreExecutedFileSettings) 设置预执行脚本设置
  * @method integer getAutoRenew() 获取自动续费
  * @method void setAutoRenew(integer $AutoRenew) 设置自动续费
+ * @method string getNeedMasterWan() 获取是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+ * @method void setNeedMasterWan(string $NeedMasterWan) 设置是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
  */
 
 /**
@@ -108,7 +110,7 @@ class CreateInstanceRequest extends AbstractModel
     public $TimeUnit;
 
     /**
-     * @var LoginSettings 登陆配置
+     * @var LoginSettings 登录配置
      */
     public $LoginSettings;
 
@@ -136,6 +138,11 @@ class CreateInstanceRequest extends AbstractModel
      * @var integer 自动续费
      */
     public $AutoRenew;
+
+    /**
+     * @var string 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+     */
+    public $NeedMasterWan;
     /**
      * @param integer $ProductId 产品ID
      * @param VPCSettings $VPCSettings VPC设置参数
@@ -147,12 +154,13 @@ class CreateInstanceRequest extends AbstractModel
      * @param Placement $Placement 集群位置信息
      * @param integer $TimeSpan 时间长度
      * @param string $TimeUnit 时间单位
-     * @param LoginSettings $LoginSettings 登陆配置
+     * @param LoginSettings $LoginSettings 登录配置
      * @param string $ClientToken 客户端Token
      * @param COSSettings $COSSettings COS设置参数
      * @param string $SgId 安全组ID
      * @param PreExecuteFileSettings $PreExecutedFileSettings 预执行脚本设置
      * @param integer $AutoRenew 自动续费
+     * @param string $NeedMasterWan 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
      */
     function __construct()
     {
@@ -234,6 +242,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
             $this->AutoRenew = $param["AutoRenew"];
+        }
+
+        if (array_key_exists("NeedMasterWan",$param) and $param["NeedMasterWan"] !== null) {
+            $this->NeedMasterWan = $param["NeedMasterWan"];
         }
     }
 }

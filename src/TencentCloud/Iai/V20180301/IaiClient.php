@@ -30,12 +30,8 @@ use TencentCloud\Iai\V20180301\Models as Models;
 若您需要判断图片中人脸的具体身份信息，如是否是身份证上对应的人，建议使用[人脸核身·云智慧眼](https://cloud.tencent.com/product/facein)产品。
 * @method Models\CopyPersonResponse CopyPerson(Models\CopyPersonRequest $req) 将已存在于某人员库的人员复制到其他人员库，该人员的描述信息不会被复制。单个人员最多只能同时存在100个人员库中。
 * @method Models\CreateFaceResponse CreateFace(Models\CreateFaceRequest $req) 将一组人脸图片添加到一个人员中。一个人员最多允许包含 5 张图片。若该人员存在多个人员库中，所有人员库中该人员图片均会增加。
->
-- 增加人脸完成后，生效时间一般不超过 1 秒，极端情况最多不超过 5 秒，之后您可以进行[人脸搜索](https://cloud.tencent.com/document/product/867/32798)或[人脸验证](https://cloud.tencent.com/document/product/867/32806)。
 * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) 用于创建一个空的人员库，如果人员库已存在返回错误。可根据需要创建自定义描述字段，用于辅助描述该人员库下的人员信息。1个APPID下最多创建2万个人员库（Group）、最多包含1000万张人脸（Face），单个人员库（Group）最多包含100万张人脸（Face）。
 * @method Models\CreatePersonResponse CreatePerson(Models\CreatePersonRequest $req) 创建人员，添加人脸、姓名、性别及其他相关信息。
->
-- 创建人员完成后，生效时间一般不超过 1 秒，极端情况最多不超过 5 秒，之后您可以进行[人脸搜索](https://cloud.tencent.com/document/product/867/32798)或[人脸验证](https://cloud.tencent.com/document/product/867/32806)。
 * @method Models\DeleteFaceResponse DeleteFace(Models\DeleteFaceRequest $req) 删除一个人员下的人脸图片。如果该人员只有一张人脸图片，则返回错误。
 * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除该人员库及包含的所有的人员。同时，人员对应的所有人脸信息将被删除。若某人员同时存在多个人员库中，该人员不会被删除，但属于该人员库中的自定义描述字段信息会被删除。
 

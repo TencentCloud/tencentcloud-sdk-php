@@ -18,8 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getUid() 获取子用户 ID
- * @method void setUid(integer $Uid) 设置子用户 ID
+ * @method integer getUid() 获取子用户 UID
+ * @method void setUid(integer $Uid) 设置子用户 UID
  * @method integer getGroupId() 获取用户组 ID
  * @method void setGroupId(integer $GroupId) 设置用户组 ID
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class GroupIdOfUidInfo extends AbstractModel
 {
     /**
-     * @var integer 子用户 ID
+     * @var integer 子用户 UID
      */
     public $Uid;
 
@@ -39,7 +39,7 @@ class GroupIdOfUidInfo extends AbstractModel
      */
     public $GroupId;
     /**
-     * @param integer $Uid 子用户 ID
+     * @param integer $Uid 子用户 UID
      * @param integer $GroupId 用户组 ID
      */
     function __construct()

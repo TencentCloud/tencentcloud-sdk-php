@@ -18,8 +18,8 @@ namespace TencentCloud\Cim\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getSdkAppids() 获取表示appid对应的SdkAppid的数据
- * @method void setSdkAppids(array $SdkAppids) 设置表示appid对应的SdkAppid的数据
+ * @method array getSdkAppids() 获取表示 appid 对应的 SdkAppid 的数据
+ * @method void setSdkAppids(array $SdkAppids) 设置表示 appid 对应的 SdkAppid 的数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSdkAppidResponse extends AbstractModel
 {
     /**
-     * @var array 表示appid对应的SdkAppid的数据
+     * @var array 表示 appid 对应的 SdkAppid 的数据
      */
     public $SdkAppids;
 
@@ -39,7 +39,7 @@ class DescribeSdkAppidResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $SdkAppids 表示appid对应的SdkAppid的数据
+     * @param array $SdkAppids 表示 appid 对应的 SdkAppid 的数据
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

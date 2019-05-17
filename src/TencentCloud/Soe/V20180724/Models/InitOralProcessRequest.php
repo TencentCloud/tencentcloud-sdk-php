@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getSessionId() 获取语音段唯一标识，一段语音一个SessionId
  * @method void setSessionId(string $SessionId) 设置语音段唯一标识，一段语音一个SessionId
- * @method string getRefText() 获取被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。
- * @method void setRefText(string $RefText) 设置被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。
+ * @method string getRefText() 获取被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
+ * @method void setRefText(string $RefText) 设置被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
  * @method integer getWorkMode() 获取语音输入模式，0：流式分片，1：非流式一次性评估
  * @method void setWorkMode(integer $WorkMode) 设置语音输入模式，0：流式分片，1：非流式一次性评估
  * @method integer getEvalMode() 获取评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSentenceInfoEnabled(integer $SentenceInfoEnabled) 设置输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
  * @method integer getServerType() 获取评估语言，0：英文，1：中文。
  * @method void setServerType(integer $ServerType) 设置评估语言，0：英文，1：中文。
- * @method integer getIsAsync() 获取异步模式标识，0：同步模式，1：异步模式。
- * @method void setIsAsync(integer $IsAsync) 设置异步模式标识，0：同步模式，1：异步模式。
- * @method integer getTextMode() 获取输入文本模式，0: 普通文本，1: 音素结构文本
- * @method void setTextMode(integer $TextMode) 设置输入文本模式，0: 普通文本，1: 音素结构文本
+ * @method integer getIsAsync() 获取异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
+ * @method void setIsAsync(integer $IsAsync) 设置异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
+ * @method integer getTextMode() 获取输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。
+ * @method void setTextMode(integer $TextMode) 设置输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。
  */
 
 /**
@@ -55,7 +55,7 @@ class InitOralProcessRequest extends AbstractModel
     public $SessionId;
 
     /**
-     * @var string 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。
+     * @var string 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
      */
     public $RefText;
 
@@ -100,17 +100,17 @@ class InitOralProcessRequest extends AbstractModel
     public $ServerType;
 
     /**
-     * @var integer 异步模式标识，0：同步模式，1：异步模式。
+     * @var integer 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
      */
     public $IsAsync;
 
     /**
-     * @var integer 输入文本模式，0: 普通文本，1: 音素结构文本
+     * @var integer 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。
      */
     public $TextMode;
     /**
      * @param string $SessionId 语音段唯一标识，一段语音一个SessionId
-     * @param string $RefText 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。
+     * @param string $RefText 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
      * @param integer $WorkMode 语音输入模式，0：流式分片，1：非流式一次性评估
      * @param integer $EvalMode 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
      * @param float $ScoreCoeff 评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段
@@ -119,8 +119,8 @@ class InitOralProcessRequest extends AbstractModel
      * @param integer $StorageMode 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段。
      * @param integer $SentenceInfoEnabled 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
      * @param integer $ServerType 评估语言，0：英文，1：中文。
-     * @param integer $IsAsync 异步模式标识，0：同步模式，1：异步模式。
-     * @param integer $TextMode 输入文本模式，0: 普通文本，1: 音素结构文本
+     * @param integer $IsAsync 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
+     * @param integer $TextMode 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。
      */
     function __construct()
     {

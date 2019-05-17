@@ -18,30 +18,38 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取姓名（正面）
- * @method void setName(string $Name) 设置姓名（正面）
- * @method string getSex() 获取性别（正面）
- * @method void setSex(string $Sex) 设置性别（正面）
- * @method string getNation() 获取民族（正面）
- * @method void setNation(string $Nation) 设置民族（正面）
- * @method string getBirth() 获取出生日期（正面）
- * @method void setBirth(string $Birth) 设置出生日期（正面）
- * @method string getAddress() 获取地址（正面）
- * @method void setAddress(string $Address) 设置地址（正面）
- * @method string getIdNum() 获取身份证号（正面）
- * @method void setIdNum(string $IdNum) 设置身份证号（正面）
- * @method string getAuthority() 获取发证机关（反面）
- * @method void setAuthority(string $Authority) 设置发证机关（反面）
- * @method string getValidDate() 获取证件有效期（反面）
- * @method void setValidDate(string $ValidDate) 设置证件有效期（反面）
+ * @method string getName() 获取姓名（人像面）
+ * @method void setName(string $Name) 设置姓名（人像面）
+ * @method string getSex() 获取性别（人像面）
+ * @method void setSex(string $Sex) 设置性别（人像面）
+ * @method string getNation() 获取民族（人像面）
+ * @method void setNation(string $Nation) 设置民族（人像面）
+ * @method string getBirth() 获取出生日期（人像面）
+ * @method void setBirth(string $Birth) 设置出生日期（人像面）
+ * @method string getAddress() 获取地址（人像面）
+ * @method void setAddress(string $Address) 设置地址（人像面）
+ * @method string getIdNum() 获取身份证号（人像面）
+ * @method void setIdNum(string $IdNum) 设置身份证号（人像面）
+ * @method string getAuthority() 获取发证机关（国徽面）
+ * @method void setAuthority(string $Authority) 设置发证机关（国徽面）
+ * @method string getValidDate() 获取证件有效期（国徽面）
+ * @method void setValidDate(string $ValidDate) 设置证件有效期（国徽面）
  * @method string getAdvancedInfo() 获取扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3。目前支持的扩展字段为：
-IdCard身份证照片，请求CropIdCard时返回；
-Portrait人像照片，请求CropPortrait时返回；
-WarnInfos告警信息（Code告警码，Msg告警信息），识别出翻拍件或复印件时返回。
+IdCard，身份证照片，请求 CropIdCard 时返回；
+Portrait，人像照片，请求 CropPortrait 时返回；
+WarnInfos，告警信息（Code - 告警码，Msg - 告警信息内容），识别出翻拍件或复印件时返回。
+
+Code 告警码列表和释义：
+-9103	身份证翻拍告警，
+-9102	身份证复印件告警。
  * @method void setAdvancedInfo(string $AdvancedInfo) 设置扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3。目前支持的扩展字段为：
-IdCard身份证照片，请求CropIdCard时返回；
-Portrait人像照片，请求CropPortrait时返回；
-WarnInfos告警信息（Code告警码，Msg告警信息），识别出翻拍件或复印件时返回。
+IdCard，身份证照片，请求 CropIdCard 时返回；
+Portrait，人像照片，请求 CropPortrait 时返回；
+WarnInfos，告警信息（Code - 告警码，Msg - 告警信息内容），识别出翻拍件或复印件时返回。
+
+Code 告警码列表和释义：
+-9103	身份证翻拍告警，
+-9102	身份证复印件告警。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -52,50 +60,54 @@ WarnInfos告警信息（Code告警码，Msg告警信息），识别出翻拍件�
 class IDCardOCRResponse extends AbstractModel
 {
     /**
-     * @var string 姓名（正面）
+     * @var string 姓名（人像面）
      */
     public $Name;
 
     /**
-     * @var string 性别（正面）
+     * @var string 性别（人像面）
      */
     public $Sex;
 
     /**
-     * @var string 民族（正面）
+     * @var string 民族（人像面）
      */
     public $Nation;
 
     /**
-     * @var string 出生日期（正面）
+     * @var string 出生日期（人像面）
      */
     public $Birth;
 
     /**
-     * @var string 地址（正面）
+     * @var string 地址（人像面）
      */
     public $Address;
 
     /**
-     * @var string 身份证号（正面）
+     * @var string 身份证号（人像面）
      */
     public $IdNum;
 
     /**
-     * @var string 发证机关（反面）
+     * @var string 发证机关（国徽面）
      */
     public $Authority;
 
     /**
-     * @var string 证件有效期（反面）
+     * @var string 证件有效期（国徽面）
      */
     public $ValidDate;
 
     /**
      * @var string 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3。目前支持的扩展字段为：
-IdCard身份证照片，请求CropIdCard时返回；
-Portrait人像照片，请求CropPortrait时返回；
-WarnInfos告警信息（Code告警码，Msg告警信息），识别出翻拍件或复印件时返回。
+IdCard，身份证照片，请求 CropIdCard 时返回；
+Portrait，人像照片，请求 CropPortrait 时返回；
+WarnInfos，告警信息（Code - 告警码，Msg - 告警信息内容），识别出翻拍件或复印件时返回。
+
+Code 告警码列表和释义：
+-9103	身份证翻拍告警，
+-9102	身份证复印件告警。
      */
     public $AdvancedInfo;
 
@@ -104,18 +116,22 @@ WarnInfos告警信息（Code告警码，Msg告警信息），识别出翻拍件�
      */
     public $RequestId;
     /**
-     * @param string $Name 姓名（正面）
-     * @param string $Sex 性别（正面）
-     * @param string $Nation 民族（正面）
-     * @param string $Birth 出生日期（正面）
-     * @param string $Address 地址（正面）
-     * @param string $IdNum 身份证号（正面）
-     * @param string $Authority 发证机关（反面）
-     * @param string $ValidDate 证件有效期（反面）
+     * @param string $Name 姓名（人像面）
+     * @param string $Sex 性别（人像面）
+     * @param string $Nation 民族（人像面）
+     * @param string $Birth 出生日期（人像面）
+     * @param string $Address 地址（人像面）
+     * @param string $IdNum 身份证号（人像面）
+     * @param string $Authority 发证机关（国徽面）
+     * @param string $ValidDate 证件有效期（国徽面）
      * @param string $AdvancedInfo 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3。目前支持的扩展字段为：
-IdCard身份证照片，请求CropIdCard时返回；
-Portrait人像照片，请求CropPortrait时返回；
-WarnInfos告警信息（Code告警码，Msg告警信息），识别出翻拍件或复印件时返回。
+IdCard，身份证照片，请求 CropIdCard 时返回；
+Portrait，人像照片，请求 CropPortrait 时返回；
+WarnInfos，告警信息（Code - 告警码，Msg - 告警信息内容），识别出翻拍件或复印件时返回。
+
+Code 告警码列表和释义：
+-9103	身份证翻拍告警，
+-9102	身份证复印件告警。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

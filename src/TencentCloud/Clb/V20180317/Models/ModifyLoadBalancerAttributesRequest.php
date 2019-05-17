@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡的唯一ID
  * @method string getLoadBalancerName() 获取负载均衡实例名称
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡实例名称
+ * @method TargetRegionInfo getTargetRegionInfo() 获取负载均衡绑定的后端服务的地域信息
+ * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) 设置负载均衡绑定的后端服务的地域信息
  */
 
 /**
@@ -38,9 +40,15 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
      * @var string 负载均衡实例名称
      */
     public $LoadBalancerName;
+
+    /**
+     * @var TargetRegionInfo 负载均衡绑定的后端服务的地域信息
+     */
+    public $TargetRegionInfo;
     /**
      * @param string $LoadBalancerId 负载均衡的唯一ID
      * @param string $LoadBalancerName 负载均衡实例名称
+     * @param TargetRegionInfo $TargetRegionInfo 负载均衡绑定的后端服务的地域信息
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
 
         if (array_key_exists("LoadBalancerName",$param) and $param["LoadBalancerName"] !== null) {
             $this->LoadBalancerName = $param["LoadBalancerName"];
+        }
+
+        if (array_key_exists("TargetRegionInfo",$param) and $param["TargetRegionInfo"] !== null) {
+            $this->TargetRegionInfo = new TargetRegionInfo();
+            $this->TargetRegionInfo->deserialize($param["TargetRegionInfo"]);
         }
     }
 }

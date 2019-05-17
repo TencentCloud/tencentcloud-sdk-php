@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneName(string $ZoneName) 设置可用区描述，例如，广州三区
  * @method string getZoneId() 获取可用区ID
  * @method void setZoneId(string $ZoneId) 设置可用区ID
- * @method string getZoneState() 获取可用区状态
- * @method void setZoneState(string $ZoneState) 设置可用区状态
+ * @method string getZoneState() 获取可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
+ * @method void setZoneState(string $ZoneState) 设置可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
  */
 
 /**
@@ -49,14 +49,14 @@ class ZoneInfo extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string 可用区状态
+     * @var string 可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
      */
     public $ZoneState;
     /**
      * @param string $Zone 可用区名称，例如，ap-guangzhou-3
      * @param string $ZoneName 可用区描述，例如，广州三区
      * @param string $ZoneId 可用区ID
-     * @param string $ZoneState 可用区状态
+     * @param string $ZoneState 可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
      */
     function __construct()
     {

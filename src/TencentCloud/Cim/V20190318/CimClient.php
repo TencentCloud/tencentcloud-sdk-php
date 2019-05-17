@@ -22,7 +22,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cim\V20190318\Models as Models;
 
 /**
-* @method Models\DescribeSdkAppidResponse DescribeSdkAppid(Models\DescribeSdkAppidRequest $req) 获取云通信IM中腾讯云账号对应的sdkappid
+* @method Models\DescribeSdkAppidResponse DescribeSdkAppid(Models\DescribeSdkAppidRequest $req) 获取云通信IM中腾讯云账号对应的SDKAppID
  */
 
 class CimClient extends AbstractClient

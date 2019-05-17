@@ -33,7 +33,7 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
  */
 
 /**
- *TextDetection
+ *文字识别结果
  */
 class TextDetection extends AbstractModel
 {

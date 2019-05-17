@@ -25,7 +25,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *Coord
+ *坐标
  */
 class Coord extends AbstractModel
 {

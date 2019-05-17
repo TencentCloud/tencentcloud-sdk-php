@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddTime(string $AddTime) 设置实例加入时间
  * @method string getInstanceType() 获取实例类型
  * @method void setInstanceType(string $InstanceType) 设置实例类型
+ * @method integer getVersionNumber() 获取版本号
+ * @method void setVersionNumber(integer $VersionNumber) 设置版本号
  */
 
 /**
@@ -101,6 +103,11 @@ class Instance extends AbstractModel
      * @var string 实例类型
      */
     public $InstanceType;
+
+    /**
+     * @var integer 版本号
+     */
+    public $VersionNumber;
     /**
      * @param string $InstanceId 实例ID
      * @param string $AutoScalingGroupId 伸缩组ID
@@ -113,6 +120,7 @@ class Instance extends AbstractModel
      * @param string $CreationType 创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
      * @param string $AddTime 实例加入时间
      * @param string $InstanceType 实例类型
+     * @param integer $VersionNumber 版本号
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("VersionNumber",$param) and $param["VersionNumber"] !== null) {
+            $this->VersionNumber = $param["VersionNumber"];
         }
     }
 }

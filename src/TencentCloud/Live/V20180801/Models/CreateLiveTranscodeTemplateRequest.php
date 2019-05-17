@@ -37,13 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getWidth() 获取宽，默认0。
  * @method void setWidth(integer $Width) 设置宽，默认0。
  * @method integer getNeedVideo() 获取是否保留视频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
  * @method void setNeedVideo(integer $NeedVideo) 设置是否保留视频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
  * @method integer getNeedAudio() 获取是否保留音频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
  * @method void setNeedAudio(integer $NeedAudio) 设置是否保留音频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
  * @method integer getHeight() 获取高，默认0。
  * @method void setHeight(integer $Height) 设置高，默认0。
  * @method integer getFps() 获取帧率，默认0。
@@ -108,13 +104,11 @@ class CreateLiveTranscodeTemplateRequest extends AbstractModel
 
     /**
      * @var integer 是否保留视频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
      */
     public $NeedVideo;
 
     /**
      * @var integer 是否保留音频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
      */
     public $NeedAudio;
 
@@ -169,9 +163,7 @@ baseline/main/high。默认baseline
      * @param string $Description 模板描述。
      * @param integer $Width 宽，默认0。
      * @param integer $NeedVideo 是否保留视频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
      * @param integer $NeedAudio 是否保留音频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
      * @param integer $Height 高，默认0。
      * @param integer $Fps 帧率，默认0。
      * @param integer $Gop 关键帧间隔，单位：秒。默认原始的间隔

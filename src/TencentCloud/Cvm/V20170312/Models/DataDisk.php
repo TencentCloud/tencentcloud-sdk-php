@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 默认取值：TRUE<br>
 该参数目前仅用于 `RunInstances` 接口。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSnapshotId() 获取数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSnapshotId(string $SnapshotId) 设置数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -67,6 +71,12 @@ class DataDisk extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeleteWithInstance;
+
+    /**
+     * @var string 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SnapshotId;
     /**
      * @param integer $DiskSize 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
      * @param string $DiskType 数据盘类型。数据盘类型限制详见[CVM实例配置](/document/product/213/2177)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><br>默认取值：LOCAL_BASIC。<br><br>该参数对`ResizeInstanceDisk`接口无效。
@@ -76,6 +86,8 @@ class DataDisk extends AbstractModel
 <li>FALSE：子机销毁时，保留数据盘<br>
 默认取值：TRUE<br>
 该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SnapshotId 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -104,6 +116,10 @@ class DataDisk extends AbstractModel
 
         if (array_key_exists("DeleteWithInstance",$param) and $param["DeleteWithInstance"] !== null) {
             $this->DeleteWithInstance = $param["DeleteWithInstance"];
+        }
+
+        if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
+            $this->SnapshotId = $param["SnapshotId"];
         }
     }
 }

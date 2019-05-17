@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getFaceProfile() 获取描述脸型轮廓的 21 点。
  * @method void setFaceProfile(array $FaceProfile) 设置描述脸型轮廓的 21 点。
- * @method array getLeftEye() 获取描述左测眼睛轮廓的 8 点。
- * @method void setLeftEye(array $LeftEye) 设置描述左测眼睛轮廓的 8 点。
- * @method array getRightEye() 获取描述右测眼睛轮廓的 8 点。
- * @method void setRightEye(array $RightEye) 设置描述右测眼睛轮廓的 8 点。
- * @method array getLeftEyeBrow() 获取描述左测眉毛轮廓的 8 点。
- * @method void setLeftEyeBrow(array $LeftEyeBrow) 设置描述左测眉毛轮廓的 8 点。
- * @method array getRightEyeBrow() 获取描述右测眉毛轮廓的 8 点。
- * @method void setRightEyeBrow(array $RightEyeBrow) 设置描述右测眉毛轮廓的 8 点。
+ * @method array getLeftEye() 获取描述左侧眼睛轮廓的 8 点。
+ * @method void setLeftEye(array $LeftEye) 设置描述左侧眼睛轮廓的 8 点。
+ * @method array getRightEye() 获取描述右侧眼睛轮廓的 8 点。
+ * @method void setRightEye(array $RightEye) 设置描述右侧眼睛轮廓的 8 点。
+ * @method array getLeftEyeBrow() 获取描述左侧眉毛轮廓的 8 点。
+ * @method void setLeftEyeBrow(array $LeftEyeBrow) 设置描述左侧眉毛轮廓的 8 点。
+ * @method array getRightEyeBrow() 获取描述右侧眉毛轮廓的 8 点。
+ * @method void setRightEyeBrow(array $RightEyeBrow) 设置描述右侧眉毛轮廓的 8 点。
  * @method array getMouth() 获取描述嘴巴轮廓的 22 点。
  * @method void setMouth(array $Mouth) 设置描述嘴巴轮廓的 22 点。
  * @method array getNose() 获取描述鼻子轮廓的 13 点。
@@ -49,22 +49,22 @@ class FaceShape extends AbstractModel
     public $FaceProfile;
 
     /**
-     * @var array 描述左测眼睛轮廓的 8 点。
+     * @var array 描述左侧眼睛轮廓的 8 点。
      */
     public $LeftEye;
 
     /**
-     * @var array 描述右测眼睛轮廓的 8 点。
+     * @var array 描述右侧眼睛轮廓的 8 点。
      */
     public $RightEye;
 
     /**
-     * @var array 描述左测眉毛轮廓的 8 点。
+     * @var array 描述左侧眉毛轮廓的 8 点。
      */
     public $LeftEyeBrow;
 
     /**
-     * @var array 描述右测眉毛轮廓的 8 点。
+     * @var array 描述右侧眉毛轮廓的 8 点。
      */
     public $RightEyeBrow;
 
@@ -89,10 +89,10 @@ class FaceShape extends AbstractModel
     public $RightPupil;
     /**
      * @param array $FaceProfile 描述脸型轮廓的 21 点。
-     * @param array $LeftEye 描述左测眼睛轮廓的 8 点。
-     * @param array $RightEye 描述右测眼睛轮廓的 8 点。
-     * @param array $LeftEyeBrow 描述左测眉毛轮廓的 8 点。
-     * @param array $RightEyeBrow 描述右测眉毛轮廓的 8 点。
+     * @param array $LeftEye 描述左侧眼睛轮廓的 8 点。
+     * @param array $RightEye 描述右侧眼睛轮廓的 8 点。
+     * @param array $LeftEyeBrow 描述左侧眉毛轮廓的 8 点。
+     * @param array $RightEyeBrow 描述右侧眉毛轮廓的 8 点。
      * @param array $Mouth 描述嘴巴轮廓的 22 点。
      * @param array $Nose 描述鼻子轮廓的 13 点。
      * @param array $LeftPupil 左瞳孔轮廓的 1 个点。

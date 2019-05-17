@@ -18,8 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getUin() 获取子用户用户 ID
- * @method void setUin(integer $Uin) 设置子用户用户 ID
+ * @method integer getUin() 获取子用户 UIN
+ * @method void setUin(integer $Uin) 设置子用户 UIN
  * @method string getName() 获取子用户用户名
  * @method void setName(string $Name) 设置子用户用户名
  * @method string getPassword() 获取如果输入参数组合为自动生成随机密码，则返回生成的密码
@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretId(string $SecretId) 设置子用户密钥 ID
  * @method string getSecretKey() 获取子用户密钥 Key
  * @method void setSecretKey(string $SecretKey) 设置子用户密钥 Key
+ * @method integer getUid() 获取子用户 UID
+ * @method void setUid(integer $Uid) 设置子用户 UID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class AddUserResponse extends AbstractModel
 {
     /**
-     * @var integer 子用户用户 ID
+     * @var integer 子用户 UIN
      */
     public $Uin;
 
@@ -63,15 +65,21 @@ class AddUserResponse extends AbstractModel
     public $SecretKey;
 
     /**
+     * @var integer 子用户 UID
+     */
+    public $Uid;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $Uin 子用户用户 ID
+     * @param integer $Uin 子用户 UIN
      * @param string $Name 子用户用户名
      * @param string $Password 如果输入参数组合为自动生成随机密码，则返回生成的密码
      * @param string $SecretId 子用户密钥 ID
      * @param string $SecretKey 子用户密钥 Key
+     * @param integer $Uid 子用户 UID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -104,6 +112,10 @@ class AddUserResponse extends AbstractModel
 
         if (array_key_exists("SecretKey",$param) and $param["SecretKey"] !== null) {
             $this->SecretKey = $param["SecretKey"];
+        }
+
+        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
+            $this->Uid = $param["Uid"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

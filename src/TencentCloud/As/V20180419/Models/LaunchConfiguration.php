@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceTypes(array $InstanceTypes) 设置实例机型列表。
  * @method array getInstanceTags() 获取标签列表。
  * @method void setInstanceTags(array $InstanceTags) 设置标签列表。
+ * @method integer getVersionNumber() 获取版本号。
+ * @method void setVersionNumber(integer $VersionNumber) 设置版本号。
+ * @method string getUpdatedTime() 获取更新时间
+ * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间
  */
 
 /**
@@ -169,6 +173,16 @@ class LaunchConfiguration extends AbstractModel
      * @var array 标签列表。
      */
     public $InstanceTags;
+
+    /**
+     * @var integer 版本号。
+     */
+    public $VersionNumber;
+
+    /**
+     * @var string 更新时间
+     */
+    public $UpdatedTime;
     /**
      * @param integer $ProjectId 实例所属项目ID。
      * @param string $LaunchConfigurationId 启动配置ID。
@@ -193,6 +207,8 @@ class LaunchConfiguration extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceTypes 实例机型列表。
      * @param array $InstanceTags 标签列表。
+     * @param integer $VersionNumber 版本号。
+     * @param string $UpdatedTime 更新时间
      */
     function __construct()
     {
@@ -300,6 +316,14 @@ class LaunchConfiguration extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InstanceTags, $obj);
             }
+        }
+
+        if (array_key_exists("VersionNumber",$param) and $param["VersionNumber"] !== null) {
+            $this->VersionNumber = $param["VersionNumber"];
+        }
+
+        if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
+            $this->UpdatedTime = $param["UpdatedTime"];
         }
     }
 }

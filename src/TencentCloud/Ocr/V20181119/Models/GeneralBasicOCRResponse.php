@@ -18,8 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getTextDetections() 获取检测到的文本信息，具体内容请点击左侧链接
- * @method void setTextDetections(array $TextDetections) 设置检测到的文本信息，具体内容请点击左侧链接
+ * @method array getTextDetections() 获取检测到的文本信息，具体内容请点击左侧链接。
+ * @method void setTextDetections(array $TextDetections) 设置检测到的文本信息，具体内容请点击左侧链接。
  * @method string getLanguage() 获取检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
 返回结果含义为：zh-中英混合，jap-日文，kor-韩文。
  * @method void setLanguage(string $Language) 设置检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class GeneralBasicOCRResponse extends AbstractModel
 {
     /**
-     * @var array 检测到的文本信息，具体内容请点击左侧链接
+     * @var array 检测到的文本信息，具体内容请点击左侧链接。
      */
     public $TextDetections;
 
@@ -49,7 +49,7 @@ class GeneralBasicOCRResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $TextDetections 检测到的文本信息，具体内容请点击左侧链接
+     * @param array $TextDetections 检测到的文本信息，具体内容请点击左侧链接。
      * @param string $Language 检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
 返回结果含义为：zh-中英混合，jap-日文，kor-韩文。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

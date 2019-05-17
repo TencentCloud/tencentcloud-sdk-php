@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecName(string $SpecName) 设置规格名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMultiDisks() 获取多云盘参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMultiDisks(array $MultiDisks) 设置多云盘参数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -104,6 +108,12 @@ class NodeSpec extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpecName;
+
+    /**
+     * @var array 多云盘参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MultiDisks;
     /**
      * @param integer $Memory 内存容量,单位为M
 注意：此字段可能返回 null，表示取不到有效值。
@@ -120,6 +130,8 @@ class NodeSpec extends AbstractModel
      * @param integer $StorageType 存储类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpecName 规格名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MultiDisks 多云盘参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,15 @@ class NodeSpec extends AbstractModel
 
         if (array_key_exists("SpecName",$param) and $param["SpecName"] !== null) {
             $this->SpecName = $param["SpecName"];
+        }
+
+        if (array_key_exists("MultiDisks",$param) and $param["MultiDisks"] !== null) {
+            $this->MultiDisks = [];
+            foreach ($param["MultiDisks"] as $key => $value){
+                $obj = new MultiDisk();
+                $obj->deserialize($value);
+                array_push($this->MultiDisks, $obj);
+            }
         }
     }
 }

@@ -36,6 +36,9 @@ class ClientProfile
      */
     public static $SIGN_HMAC_SHA256 = "HmacSHA256";
 
+    /**
+     * @var string 签名V3
+     */
     public static $SIGN_TC3_SHA256 = "TC3-HMAC-SHA256";
 
 
@@ -62,7 +65,7 @@ class ClientProfile
      */
     public function __construct($signMethod = null, $httpProfile = null)
     {
-        $this->signMethod = $signMethod ? $signMethod : ClientProfile::$SIGN_HMAC_SHA256;
+        $this->signMethod = $signMethod ? $signMethod : ClientProfile::$SIGN_TC3_SHA256;
         $this->httpProfile = $httpProfile ? $httpProfile : new HttpProfile();
         $this->unsignedPayload = false;
     }

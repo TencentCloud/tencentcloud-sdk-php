@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChargePeriod(integer $ChargePeriod) 设置包年包月购买时长,单位:月
  * @method string getRenewFlag() 获取自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
  * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
- * @method string getNodeType() 获取节点规格:  ES.S1.SMALL2 : 1核2G  ES.S1.MEDIUM4 : 2核4G  ES.S1.MEDIUM8 : 2核8G  ES.S1.LARGE16 : 4核16G  ES.S1.2XLARGE32 : 8核32G  ES.S1.3XLARGE32 : 12核32G  ES.S1.6XLARGE32 : 24核32G
- * @method void setNodeType(string $NodeType) 设置节点规格:  ES.S1.SMALL2 : 1核2G  ES.S1.MEDIUM4 : 2核4G  ES.S1.MEDIUM8 : 2核8G  ES.S1.LARGE16 : 4核16G  ES.S1.2XLARGE32 : 8核32G  ES.S1.3XLARGE32 : 12核32G  ES.S1.6XLARGE32 : 24核32G
+ * @method string getNodeType() 获取节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method void setNodeType(string $NodeType) 设置节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
  * @method integer getNodeNum() 获取节点个数
  * @method void setNodeNum(integer $NodeNum) 设置节点个数
  * @method integer getCpuNum() 获取节点CPU核数
@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosBackup(CosBackup $CosBackup) 设置cos自动备份配置
  * @method boolean getAllowCosBackup() 获取是否允许cos自动备份
  * @method void setAllowCosBackup(boolean $AllowCosBackup) 设置是否允许cos自动备份
+ * @method array getTagList() 获取实例拥有的标签列表
+ * @method void setTagList(array $TagList) 设置实例拥有的标签列表
+ * @method string getLicenseType() 获取License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+ * @method void setLicenseType(string $LicenseType) 设置License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
  */
 
 /**
@@ -152,7 +156,7 @@ class InstanceInfo extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var string 节点规格:  ES.S1.SMALL2 : 1核2G  ES.S1.MEDIUM4 : 2核4G  ES.S1.MEDIUM8 : 2核8G  ES.S1.LARGE16 : 4核16G  ES.S1.2XLARGE32 : 8核32G  ES.S1.3XLARGE32 : 12核32G  ES.S1.6XLARGE32 : 24核32G
+     * @var string 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public $NodeType;
 
@@ -255,6 +259,16 @@ class InstanceInfo extends AbstractModel
      * @var boolean 是否允许cos自动备份
      */
     public $AllowCosBackup;
+
+    /**
+     * @var array 实例拥有的标签列表
+     */
+    public $TagList;
+
+    /**
+     * @var string License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+     */
+    public $LicenseType;
     /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
@@ -268,7 +282,7 @@ class InstanceInfo extends AbstractModel
      * @param string $ChargeType 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
      * @param integer $ChargePeriod 包年包月购买时长,单位:月
      * @param string $RenewFlag 自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
-     * @param string $NodeType 节点规格:  ES.S1.SMALL2 : 1核2G  ES.S1.MEDIUM4 : 2核4G  ES.S1.MEDIUM8 : 2核8G  ES.S1.LARGE16 : 4核16G  ES.S1.2XLARGE32 : 8核32G  ES.S1.3XLARGE32 : 12核32G  ES.S1.6XLARGE32 : 24核32G
+     * @param string $NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      * @param integer $NodeNum 节点个数
      * @param integer $CpuNum 节点CPU核数
      * @param integer $MemSize 节点内存大小，单位GB
@@ -289,6 +303,8 @@ class InstanceInfo extends AbstractModel
      * @param MasterNodeInfo $MasterNodeInfo 专用主节点配置
      * @param CosBackup $CosBackup cos自动备份配置
      * @param boolean $AllowCosBackup 是否允许cos自动备份
+     * @param array $TagList 实例拥有的标签列表
+     * @param string $LicenseType License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
      */
     function __construct()
     {
@@ -436,6 +452,19 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("AllowCosBackup",$param) and $param["AllowCosBackup"] !== null) {
             $this->AllowCosBackup = $param["AllowCosBackup"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
+        }
+
+        if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
+            $this->LicenseType = $param["LicenseType"];
         }
     }
 }

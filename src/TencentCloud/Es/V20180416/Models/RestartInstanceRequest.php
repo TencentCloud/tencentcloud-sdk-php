@@ -18,10 +18,10 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取要重启的实例ID
- * @method void setInstanceId(string $InstanceId) 设置要重启的实例ID
- * @method boolean getForceRestart() 获取是否强制重启
- * @method void setForceRestart(boolean $ForceRestart) 设置是否强制重启
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method boolean getForceRestart() 获取是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
+ * @method void setForceRestart(boolean $ForceRestart) 设置是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class RestartInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 要重启的实例ID
+     * @var string 实例ID
      */
     public $InstanceId;
 
     /**
-     * @var boolean 是否强制重启
+     * @var boolean 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
      */
     public $ForceRestart;
     /**
-     * @param string $InstanceId 要重启的实例ID
-     * @param boolean $ForceRestart 是否强制重启
+     * @param string $InstanceId 实例ID
+     * @param boolean $ForceRestart 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
      */
     function __construct()
     {

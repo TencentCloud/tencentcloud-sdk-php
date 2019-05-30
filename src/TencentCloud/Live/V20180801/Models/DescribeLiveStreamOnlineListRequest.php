@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getDomainName() 获取推流域名。
  * @method void setDomainName(string $DomainName) 设置推流域名。
- * @method string getAppName() 获取应用名称。
- * @method void setAppName(string $AppName) 设置应用名称。
+ * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+ * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
  * @method integer getPageNum() 获取取得第几页，默认1。
  * @method void setPageNum(integer $PageNum) 设置取得第几页，默认1。
  * @method integer getPageSize() 获取每页大小，最大100。 
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置每页大小，最大100。 
 取值：10~100之间的任意整数。
 默认值：10。
- * @method string getStreamName() 获取流名称，精确查询。
- * @method void setStreamName(string $StreamName) 设置流名称，精确查询。
+ * @method string getStreamName() 获取流名称，用于精确查询。
+ * @method void setStreamName(string $StreamName) 设置流名称，用于精确查询。
  */
 
 /**
@@ -45,7 +45,7 @@ class DescribeLiveStreamOnlineListRequest extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string 应用名称。
+     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public $AppName;
 
@@ -62,17 +62,17 @@ class DescribeLiveStreamOnlineListRequest extends AbstractModel
     public $PageSize;
 
     /**
-     * @var string 流名称，精确查询。
+     * @var string 流名称，用于精确查询。
      */
     public $StreamName;
     /**
      * @param string $DomainName 推流域名。
-     * @param string $AppName 应用名称。
+     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      * @param integer $PageNum 取得第几页，默认1。
      * @param integer $PageSize 每页大小，最大100。 
 取值：10~100之间的任意整数。
 默认值：10。
-     * @param string $StreamName 流名称，精确查询。
+     * @param string $StreamName 流名称，用于精确查询。
      */
     function __construct()
     {

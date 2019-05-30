@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取人物名称，长度限制：20 个字符。
  * @method void setName(string $Name) 设置人物名称，长度限制：20 个字符。
  * @method array getFaceContents() 获取人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
+注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
  * @method void setFaceContents(array $FaceContents) 设置人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
+注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
  * @method array getUsages() 获取人物应用场景，可选值：
 1. Recognition：用于内容识别，等价于 Recognition.Face。
 2. Review：用于内容审核，等价于 Review.Face。
@@ -54,6 +56,7 @@ class CreatePersonSampleRequest extends AbstractModel
 
     /**
      * @var array 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
+注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
      */
     public $FaceContents;
 
@@ -84,6 +87,7 @@ class CreatePersonSampleRequest extends AbstractModel
     /**
      * @param string $Name 人物名称，长度限制：20 个字符。
      * @param array $FaceContents 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
+注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
      * @param array $Usages 人物应用场景，可选值：
 1. Recognition：用于内容识别，等价于 Recognition.Face。
 2. Review：用于内容审核，等价于 Review.Face。

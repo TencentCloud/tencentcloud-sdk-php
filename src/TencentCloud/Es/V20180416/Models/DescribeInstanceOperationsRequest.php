@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getInstanceId() 获取集群实例ID
  * @method void setInstanceId(string $InstanceId) 设置集群实例ID
- * @method string getStartTime() 获取起始时间
- * @method void setStartTime(string $StartTime) 设置起始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getStartTime() 获取起始时间, e.g. "2019-03-07 16:30:39"
+ * @method void setStartTime(string $StartTime) 设置起始时间, e.g. "2019-03-07 16:30:39"
+ * @method string getEndTime() 获取结束时间, e.g. "2019-03-30 20:18:03"
+ * @method void setEndTime(string $EndTime) 设置结束时间, e.g. "2019-03-30 20:18:03"
  * @method integer getOffset() 获取分页起始值
  * @method void setOffset(integer $Offset) 设置分页起始值
  * @method integer getLimit() 获取分页大小
@@ -41,12 +41,12 @@ class DescribeInstanceOperationsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 起始时间
+     * @var string 起始时间, e.g. "2019-03-07 16:30:39"
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间, e.g. "2019-03-30 20:18:03"
      */
     public $EndTime;
 
@@ -61,8 +61,8 @@ class DescribeInstanceOperationsRequest extends AbstractModel
     public $Limit;
     /**
      * @param string $InstanceId 集群实例ID
-     * @param string $StartTime 起始时间
-     * @param string $EndTime 结束时间
+     * @param string $StartTime 起始时间, e.g. "2019-03-07 16:30:39"
+     * @param string $EndTime 结束时间, e.g. "2019-03-30 20:18:03"
      * @param integer $Offset 分页起始值
      * @param integer $Limit 分页大小
      */

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSource(string $Source) 设置环境来源。包含以下取值：
 <li>miniapp：微信小程序</li>
 <li>qcloud ：腾讯云</li>
- * @method string getAlias() 获取备注名
- * @method void setAlias(string $Alias) 设置备注名
+ * @method string getAlias() 获取环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+ * @method void setAlias(string $Alias) 设置环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取最后修改时间
@@ -46,33 +46,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorages(array $Storages) 设置存储列表
  * @method array getFunctions() 获取函数列表
  * @method void setFunctions(array $Functions) 设置函数列表
- * @method string getPackageId() 获取套餐ID。包含以下取值：
-<li>baisc ：表示基础版</li>
-<li>professional ：表示专业版</li>
-<li>business ： 表示企业版</li>
-<li>flagship：表示旗舰版</li>
-<li>supremacy：表示至尊版</li>
+ * @method string getPackageId() 获取tcb产品套餐ID，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPackageId(string $PackageId) 设置套餐ID。包含以下取值：
-<li>baisc ：表示基础版</li>
-<li>professional ：表示专业版</li>
-<li>business ： 表示企业版</li>
-<li>flagship：表示旗舰版</li>
-<li>supremacy：表示至尊版</li>
+ * @method void setPackageId(string $PackageId) 设置tcb产品套餐ID，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPackageName() 获取套餐中文名称。包含以下取值：
-<li>基础版</li>
-<li>专业版</li>
-<li>企业版</li>
-<li>旗舰版</li>
-<li>至尊版</li>
+ * @method string getPackageName() 获取套餐中文名称，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPackageName(string $PackageName) 设置套餐中文名称。包含以下取值：
-<li>基础版</li>
-<li>专业版</li>
-<li>企业版</li>
-<li>旗舰版</li>
-<li>至尊版</li>
+ * @method void setPackageName(string $PackageName) 设置套餐中文名称，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -94,7 +74,7 @@ class EnvInfo extends AbstractModel
     public $Source;
 
     /**
-     * @var string 备注名
+     * @var string 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
      */
     public $Alias;
 
@@ -132,23 +112,13 @@ class EnvInfo extends AbstractModel
     public $Functions;
 
     /**
-     * @var string 套餐ID。包含以下取值：
-<li>baisc ：表示基础版</li>
-<li>professional ：表示专业版</li>
-<li>business ： 表示企业版</li>
-<li>flagship：表示旗舰版</li>
-<li>supremacy：表示至尊版</li>
+     * @var string tcb产品套餐ID，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageId;
 
     /**
-     * @var string 套餐中文名称。包含以下取值：
-<li>基础版</li>
-<li>专业版</li>
-<li>企业版</li>
-<li>旗舰版</li>
-<li>至尊版</li>
+     * @var string 套餐中文名称，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageName;
@@ -157,7 +127,7 @@ class EnvInfo extends AbstractModel
      * @param string $Source 环境来源。包含以下取值：
 <li>miniapp：微信小程序</li>
 <li>qcloud ：腾讯云</li>
-     * @param string $Alias 备注名
+     * @param string $Alias 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 最后修改时间
      * @param string $Status 环境状态。包含以下取值：
@@ -167,19 +137,9 @@ class EnvInfo extends AbstractModel
      * @param array $Databases 数据库列表
      * @param array $Storages 存储列表
      * @param array $Functions 函数列表
-     * @param string $PackageId 套餐ID。包含以下取值：
-<li>baisc ：表示基础版</li>
-<li>professional ：表示专业版</li>
-<li>business ： 表示企业版</li>
-<li>flagship：表示旗舰版</li>
-<li>supremacy：表示至尊版</li>
+     * @param string $PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PackageName 套餐中文名称。包含以下取值：
-<li>基础版</li>
-<li>专业版</li>
-<li>企业版</li>
-<li>旗舰版</li>
-<li>至尊版</li>
+     * @param string $PackageName 套餐中文名称，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

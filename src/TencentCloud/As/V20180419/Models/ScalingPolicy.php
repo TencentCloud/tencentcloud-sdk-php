@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScalingPolicyName(string $ScalingPolicyName) 设置告警触发策略名称。
  * @method string getAdjustmentType() 获取告警触发后，期望实例数修改方式。取值 ：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
  * @method void setAdjustmentType(string $AdjustmentType) 设置告警触发后，期望实例数修改方式。取值 ：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
- * @method string getAdjustmentValue() 获取告警触发后，期望实例数的调整值。
- * @method void setAdjustmentValue(string $AdjustmentValue) 设置告警触发后，期望实例数的调整值。
+ * @method integer getAdjustmentValue() 获取告警触发后，期望实例数的调整值。
+ * @method void setAdjustmentValue(integer $AdjustmentValue) 设置告警触发后，期望实例数的调整值。
  * @method integer getCooldown() 获取冷却时间。
  * @method void setCooldown(integer $Cooldown) 设置冷却时间。
  * @method MetricAlarm getMetricAlarm() 获取告警监控指标。
@@ -62,7 +62,7 @@ class ScalingPolicy extends AbstractModel
     public $AdjustmentType;
 
     /**
-     * @var string 告警触发后，期望实例数的调整值。
+     * @var integer 告警触发后，期望实例数的调整值。
      */
     public $AdjustmentValue;
 
@@ -85,7 +85,7 @@ class ScalingPolicy extends AbstractModel
      * @param string $AutoScalingPolicyId 告警触发策略ID。
      * @param string $ScalingPolicyName 告警触发策略名称。
      * @param string $AdjustmentType 告警触发后，期望实例数修改方式。取值 ：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
-     * @param string $AdjustmentValue 告警触发后，期望实例数的调整值。
+     * @param integer $AdjustmentValue 告警触发后，期望实例数的调整值。
      * @param integer $Cooldown 冷却时间。
      * @param MetricAlarm $MetricAlarm 告警监控指标。
      * @param array $NotificationUserGroupIds 通知组ID，即为用户组ID集合。

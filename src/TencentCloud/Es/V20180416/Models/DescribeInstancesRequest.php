@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getZone() 获取集群实例所属可用区，不传则默认所有可用区
  * @method void setZone(string $Zone) 设置集群实例所属可用区，不传则默认所有可用区
- * @method array getInstanceIds() 获取一个或多个集群实例ID
- * @method void setInstanceIds(array $InstanceIds) 设置一个或多个集群实例ID
- * @method array getInstanceNames() 获取一个或多个集群实例名称
- * @method void setInstanceNames(array $InstanceNames) 设置一个或多个集群实例名称
+ * @method array getInstanceIds() 获取集群实例ID列表
+ * @method void setInstanceIds(array $InstanceIds) 设置集群实例ID列表
+ * @method array getInstanceNames() 获取集群实例名称列表
+ * @method void setInstanceNames(array $InstanceNames) 设置集群实例名称列表
  * @method integer getOffset() 获取分页起始值, 默认值0
  * @method void setOffset(integer $Offset) 设置分页起始值, 默认值0
  * @method integer getLimit() 获取分页大小，默认值20
  * @method void setLimit(integer $Limit) 设置分页大小，默认值20
- * @method integer getOrderByKey() 获取排序字段：1，实例ID；2，实例名称；3，可用区；4，创建时间，若orderKey未传递则按创建时间降序排序
- * @method void setOrderByKey(integer $OrderByKey) 设置排序字段：1，实例ID；2，实例名称；3，可用区；4，创建时间，若orderKey未传递则按创建时间降序排序
- * @method integer getOrderByType() 获取排序方式：0，升序；1，降序；若传递了orderByKey未传递orderByType, 则默认升序
- * @method void setOrderByType(integer $OrderByType) 设置排序方式：0，升序；1，降序；若传递了orderByKey未传递orderByType, 则默认升序
+ * @method integer getOrderByKey() 获取排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
+ * @method void setOrderByKey(integer $OrderByKey) 设置排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
+ * @method integer getOrderByType() 获取排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
+ * @method void setOrderByType(integer $OrderByType) 设置排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
  */
 
 /**
@@ -45,12 +45,12 @@ class DescribeInstancesRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var array 一个或多个集群实例ID
+     * @var array 集群实例ID列表
      */
     public $InstanceIds;
 
     /**
-     * @var array 一个或多个集群实例名称
+     * @var array 集群实例名称列表
      */
     public $InstanceNames;
 
@@ -65,22 +65,22 @@ class DescribeInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 排序字段：1，实例ID；2，实例名称；3，可用区；4，创建时间，若orderKey未传递则按创建时间降序排序
+     * @var integer 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
      */
     public $OrderByKey;
 
     /**
-     * @var integer 排序方式：0，升序；1，降序；若传递了orderByKey未传递orderByType, 则默认升序
+     * @var integer 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
      */
     public $OrderByType;
     /**
      * @param string $Zone 集群实例所属可用区，不传则默认所有可用区
-     * @param array $InstanceIds 一个或多个集群实例ID
-     * @param array $InstanceNames 一个或多个集群实例名称
+     * @param array $InstanceIds 集群实例ID列表
+     * @param array $InstanceNames 集群实例名称列表
      * @param integer $Offset 分页起始值, 默认值0
      * @param integer $Limit 分页大小，默认值20
-     * @param integer $OrderByKey 排序字段：1，实例ID；2，实例名称；3，可用区；4，创建时间，若orderKey未传递则按创建时间降序排序
-     * @param integer $OrderByType 排序方式：0，升序；1，降序；若传递了orderByKey未传递orderByType, 则默认升序
+     * @param integer $OrderByKey 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
+     * @param integer $OrderByType 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method string getDomainName() 获取您的加速域名。
  * @method void setDomainName(string $DomainName) 设置您的加速域名。
- * @method string getAppName() 获取应用名称。
- * @method void setAppName(string $AppName) 设置应用名称。
+ * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+ * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
  */
 
 /**
@@ -42,13 +42,13 @@ class DropLiveStreamRequest extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string 应用名称。
+     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public $AppName;
     /**
      * @param string $StreamName 流名称。
      * @param string $DomainName 您的加速域名。
-     * @param string $AppName 应用名称。
+     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     function __construct()
     {

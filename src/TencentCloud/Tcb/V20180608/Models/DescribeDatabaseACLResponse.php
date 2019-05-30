@@ -19,15 +19,15 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getAclTag() 获取权限标签。取值范围：
-<li> READONLY ： 公有读，私有写 </li>
-<li> PRIVATE  ：私有读写 </li>
-<li> ADMINWRITE ： 仅管理员可写 </li>
-<li> ADMINONLY ： 仅管理员可操作 </li>
+<li> READONLY：所有用户可读，仅创建者和管理员可写</li>
+<li> PRIVATE：仅创建者及管理员可读写</li>
+<li> ADMINWRITE：所有用户可读，仅管理员可写</li>
+<li> ADMINONLY：仅管理员可读写</li>
  * @method void setAclTag(string $AclTag) 设置权限标签。取值范围：
-<li> READONLY ： 公有读，私有写 </li>
-<li> PRIVATE  ：私有读写 </li>
-<li> ADMINWRITE ： 仅管理员可写 </li>
-<li> ADMINONLY ： 仅管理员可操作 </li>
+<li> READONLY：所有用户可读，仅创建者和管理员可写</li>
+<li> PRIVATE：仅创建者及管理员可读写</li>
+<li> ADMINWRITE：所有用户可读，仅管理员可写</li>
+<li> ADMINONLY：仅管理员可读写</li>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,10 +39,10 @@ class DescribeDatabaseACLResponse extends AbstractModel
 {
     /**
      * @var string 权限标签。取值范围：
-<li> READONLY ： 公有读，私有写 </li>
-<li> PRIVATE  ：私有读写 </li>
-<li> ADMINWRITE ： 仅管理员可写 </li>
-<li> ADMINONLY ： 仅管理员可操作 </li>
+<li> READONLY：所有用户可读，仅创建者和管理员可写</li>
+<li> PRIVATE：仅创建者及管理员可读写</li>
+<li> ADMINWRITE：所有用户可读，仅管理员可写</li>
+<li> ADMINONLY：仅管理员可读写</li>
      */
     public $AclTag;
 
@@ -52,10 +52,10 @@ class DescribeDatabaseACLResponse extends AbstractModel
     public $RequestId;
     /**
      * @param string $AclTag 权限标签。取值范围：
-<li> READONLY ： 公有读，私有写 </li>
-<li> PRIVATE  ：私有读写 </li>
-<li> ADMINWRITE ： 仅管理员可写 </li>
-<li> ADMINONLY ： 仅管理员可操作 </li>
+<li> READONLY：所有用户可读，仅创建者和管理员可写</li>
+<li> PRIVATE：仅创建者及管理员可读写</li>
+<li> ADMINWRITE：所有用户可读，仅管理员可写</li>
+<li> ADMINONLY：仅管理员可读写</li>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

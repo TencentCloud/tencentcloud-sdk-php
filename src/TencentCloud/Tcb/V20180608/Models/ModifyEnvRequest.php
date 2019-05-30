@@ -18,8 +18,8 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getEnvId() 获取环境唯一标识
- * @method void setEnvId(string $EnvId) 设置环境唯一标识
+ * @method string getEnvId() 获取环境ID
+ * @method void setEnvId(string $EnvId) 设置环境ID
  * @method string getAlias() 获取环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
  * @method void setAlias(string $Alias) 设置环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyEnvRequest extends AbstractModel
 {
     /**
-     * @var string 环境唯一标识
+     * @var string 环境ID
      */
     public $EnvId;
 
@@ -39,7 +39,7 @@ class ModifyEnvRequest extends AbstractModel
      */
     public $Alias;
     /**
-     * @param string $EnvId 环境唯一标识
+     * @param string $EnvId 环境ID
      * @param string $Alias 环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
      */
     function __construct()

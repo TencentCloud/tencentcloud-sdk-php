@@ -31,7 +31,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *文本识别结果
+ *英文识别结果
  */
 class TextDetectionEn extends AbstractModel
 {

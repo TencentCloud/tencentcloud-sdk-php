@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientType(string $ClientType) 设置客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
  * @method string getProjectType() 获取项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
  * @method void setProjectType(string $ProjectType) 设置项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+ * @method string getSalesUin() 获取业务员ID
+ * @method void setSalesUin(string $SalesUin) 设置业务员ID
+ * @method string getSalesName() 获取业务员姓名（模糊查询）
+ * @method void setSalesName(string $SalesName) 设置业务员姓名（模糊查询）
  */
 
 /**
@@ -101,6 +105,16 @@ class DescribeAgentAuditedClientsRequest extends AbstractModel
      * @var string 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
      */
     public $ProjectType;
+
+    /**
+     * @var string 业务员ID
+     */
+    public $SalesUin;
+
+    /**
+     * @var string 业务员姓名（模糊查询）
+     */
+    public $SalesName;
     /**
      * @param string $ClientUin 客户账号ID
      * @param string $ClientName 客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
@@ -113,6 +127,8 @@ class DescribeAgentAuditedClientsRequest extends AbstractModel
      * @param integer $Limit 限制数目
      * @param string $ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
      * @param string $ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+     * @param string $SalesUin 业务员ID
+     * @param string $SalesName 业务员姓名（模糊查询）
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class DescribeAgentAuditedClientsRequest extends AbstractModel
 
         if (array_key_exists("ProjectType",$param) and $param["ProjectType"] !== null) {
             $this->ProjectType = $param["ProjectType"];
+        }
+
+        if (array_key_exists("SalesUin",$param) and $param["SalesUin"] !== null) {
+            $this->SalesUin = $param["SalesUin"];
+        }
+
+        if (array_key_exists("SalesName",$param) and $param["SalesName"] !== null) {
+            $this->SalesName = $param["SalesName"];
         }
     }
 }

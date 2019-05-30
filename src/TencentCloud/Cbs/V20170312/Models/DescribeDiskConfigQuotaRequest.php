@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getInquiryType() 获取查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
  * @method void setInquiryType(string $InquiryType) 设置查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
- * @method array getZones() 获取查询一个或多个[可用区](/document/api/213/9452#zone)下的配置。
- * @method void setZones(array $Zones) 设置查询一个或多个[可用区](/document/api/213/9452#zone)下的配置。
+ * @method array getZones() 获取查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
+ * @method void setZones(array $Zones) 设置查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
  * @method string getDiskChargeType() 获取付费模式。取值范围：<br><li>PREPAID：预付费<br><li>POSTPAID_BY_HOUR：后付费。
  * @method void setDiskChargeType(string $DiskChargeType) 设置付费模式。取值范围：<br><li>PREPAID：预付费<br><li>POSTPAID_BY_HOUR：后付费。
  * @method array getDiskTypes() 获取硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
@@ -47,7 +47,7 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
     public $InquiryType;
 
     /**
-     * @var array 查询一个或多个[可用区](/document/api/213/9452#zone)下的配置。
+     * @var array 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
      */
     public $Zones;
 
@@ -82,7 +82,7 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
     public $Memory;
     /**
      * @param string $InquiryType 查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
-     * @param array $Zones 查询一个或多个[可用区](/document/api/213/9452#zone)下的配置。
+     * @param array $Zones 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
      * @param string $DiskChargeType 付费模式。取值范围：<br><li>PREPAID：预付费<br><li>POSTPAID_BY_HOUR：后付费。
      * @param array $DiskTypes 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
      * @param string $DiskUsage 系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。

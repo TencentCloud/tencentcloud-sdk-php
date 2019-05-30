@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotificationMetadata(string $NotificationMetadata) 设置通知目标的附加信息
  * @method string getCreatedTime() 获取创建时间
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间
- * @method string getNotificationTarget() 获取通知目标
- * @method void setNotificationTarget(string $NotificationTarget) 设置通知目标
+ * @method NotificationTarget getNotificationTarget() 获取通知目标
+ * @method void setNotificationTarget(NotificationTarget $NotificationTarget) 设置通知目标
  */
 
 /**
@@ -84,7 +84,7 @@ class LifecycleHook extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var string 通知目标
+     * @var NotificationTarget 通知目标
      */
     public $NotificationTarget;
     /**
@@ -96,7 +96,7 @@ class LifecycleHook extends AbstractModel
      * @param string $LifecycleTransition 生命周期挂钩适用场景
      * @param string $NotificationMetadata 通知目标的附加信息
      * @param string $CreatedTime 创建时间
-     * @param string $NotificationTarget 通知目标
+     * @param NotificationTarget $NotificationTarget 通知目标
      */
     function __construct()
     {
@@ -143,7 +143,8 @@ class LifecycleHook extends AbstractModel
         }
 
         if (array_key_exists("NotificationTarget",$param) and $param["NotificationTarget"] !== null) {
-            $this->NotificationTarget = $param["NotificationTarget"];
+            $this->NotificationTarget = new NotificationTarget();
+            $this->NotificationTarget->deserialize($param["NotificationTarget"]);
         }
     }
 }

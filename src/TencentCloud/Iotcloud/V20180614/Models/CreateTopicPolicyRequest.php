@@ -18,14 +18,14 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProductID() 获取产品ID
- * @method void setProductID(string $ProductID) 设置产品ID
+ * @method string getProductID() 获取产品自身id
+ * @method void setProductID(string $ProductID) 设置产品自身id
  * @method string getTopicName() 获取Topic名称
  * @method void setTopicName(string $TopicName) 设置Topic名称
  * @method integer getPrivilege() 获取Topic权限，1发布，2订阅，3订阅和发布
  * @method void setPrivilege(integer $Privilege) 设置Topic权限，1发布，2订阅，3订阅和发布
- * @method BrokerSubscribe getBrokerSubscribe() 获取代理订阅信息
- * @method void setBrokerSubscribe(BrokerSubscribe $BrokerSubscribe) 设置代理订阅信息
+ * @method BrokerSubscribe getBrokerSubscribe() 获取代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的id和设备信息。
+ * @method void setBrokerSubscribe(BrokerSubscribe $BrokerSubscribe) 设置代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的id和设备信息。
  */
 
 /**
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateTopicPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 产品ID
+     * @var string 产品自身id
      */
     public $ProductID;
 
@@ -49,14 +49,14 @@ class CreateTopicPolicyRequest extends AbstractModel
     public $Privilege;
 
     /**
-     * @var BrokerSubscribe 代理订阅信息
+     * @var BrokerSubscribe 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的id和设备信息。
      */
     public $BrokerSubscribe;
     /**
-     * @param string $ProductID 产品ID
+     * @param string $ProductID 产品自身id
      * @param string $TopicName Topic名称
      * @param integer $Privilege Topic权限，1发布，2订阅，3订阅和发布
-     * @param BrokerSubscribe $BrokerSubscribe 代理订阅信息
+     * @param BrokerSubscribe $BrokerSubscribe 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的id和设备信息。
      */
     function __construct()
     {

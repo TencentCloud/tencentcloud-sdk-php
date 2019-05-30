@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetricName(string $MetricName) 设置指标名称，可选字段如下：<br><li>CPU_UTILIZATION：CPU利用率</li><li>MEM_UTILIZATION：内存利用率</li><li>LAN_TRAFFIC_OUT：内网出带宽</li><li>LAN_TRAFFIC_IN：内网入带宽</li><li>WAN_TRAFFIC_OUT：外网出带宽</li><li>WAN_TRAFFIC_IN：外网入带宽</li>
  * @method integer getThreshold() 获取告警阈值：<br><li>CPU_UTILIZATION：[1, 100]，单位：%</li><li>MEM_UTILIZATION：[1, 100]，单位：%</li><li>LAN_TRAFFIC_OUT：>0，单位：Mbps </li><li>LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>WAN_TRAFFIC_IN：>0，单位：Mbps</li>
  * @method void setThreshold(integer $Threshold) 设置告警阈值：<br><li>CPU_UTILIZATION：[1, 100]，单位：%</li><li>MEM_UTILIZATION：[1, 100]，单位：%</li><li>LAN_TRAFFIC_OUT：>0，单位：Mbps </li><li>LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>WAN_TRAFFIC_IN：>0，单位：Mbps</li>
- * @method integer getPeriod() 获取时间周期。单位：秒
- * @method void setPeriod(integer $Period) 设置时间周期。单位：秒
+ * @method integer getPeriod() 获取时间周期，单位：秒，取值枚举值为60、300。
+ * @method void setPeriod(integer $Period) 设置时间周期，单位：秒，取值枚举值为60、300。
  * @method integer getContinuousTime() 获取重复次数。取值范围 [1, 10]
  * @method void setContinuousTime(integer $ContinuousTime) 设置重复次数。取值范围 [1, 10]
  * @method string getStatistic() 获取统计类型，可选字段如下：<br><li>AVERAGE：平均值</li><li>MAXIMUM：最大值<li>MINIMUM：最小值</li><br> 默认取值：AVERAGE
@@ -53,7 +53,7 @@ class MetricAlarm extends AbstractModel
     public $Threshold;
 
     /**
-     * @var integer 时间周期。单位：秒
+     * @var integer 时间周期，单位：秒，取值枚举值为60、300。
      */
     public $Period;
 
@@ -70,7 +70,7 @@ class MetricAlarm extends AbstractModel
      * @param string $ComparisonOperator 比较运算符，可选值：<br><li>GREATER_THAN：大于</li><li>GREATER_THAN_OR_EQUAL_TO：大于或等于</li><li>LESS_THAN：小于</li><li> LESS_THAN_OR_EQUAL_TO：小于或等于</li><li> EQUAL_TO：等于</li> <li>NOT_EQUAL_TO：不等于</li>
      * @param string $MetricName 指标名称，可选字段如下：<br><li>CPU_UTILIZATION：CPU利用率</li><li>MEM_UTILIZATION：内存利用率</li><li>LAN_TRAFFIC_OUT：内网出带宽</li><li>LAN_TRAFFIC_IN：内网入带宽</li><li>WAN_TRAFFIC_OUT：外网出带宽</li><li>WAN_TRAFFIC_IN：外网入带宽</li>
      * @param integer $Threshold 告警阈值：<br><li>CPU_UTILIZATION：[1, 100]，单位：%</li><li>MEM_UTILIZATION：[1, 100]，单位：%</li><li>LAN_TRAFFIC_OUT：>0，单位：Mbps </li><li>LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>WAN_TRAFFIC_IN：>0，单位：Mbps</li>
-     * @param integer $Period 时间周期。单位：秒
+     * @param integer $Period 时间周期，单位：秒，取值枚举值为60、300。
      * @param integer $ContinuousTime 重复次数。取值范围 [1, 10]
      * @param string $Statistic 统计类型，可选字段如下：<br><li>AVERAGE：平均值</li><li>MAXIMUM：最大值<li>MINIMUM：最小值</li><br> 默认取值：AVERAGE
      */

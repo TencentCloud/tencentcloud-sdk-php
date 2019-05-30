@@ -18,10 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAppName() 获取应用名称。
- * @method void setAppName(string $AppName) 设置应用名称。
- * @method string getDomainName() 获取您的加速域名。
- * @method void setDomainName(string $DomainName) 设置您的加速域名。
+ * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+ * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+ * @method string getDomainName() 获取推流域名。
+ * @method void setDomainName(string $DomainName) 设置推流域名。
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
  */
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class ResumeDelayLiveStreamRequest extends AbstractModel
 {
     /**
-     * @var string 应用名称。
+     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
      */
     public $AppName;
 
     /**
-     * @var string 您的加速域名。
+     * @var string 推流域名。
      */
     public $DomainName;
 
@@ -46,8 +46,8 @@ class ResumeDelayLiveStreamRequest extends AbstractModel
      */
     public $StreamName;
     /**
-     * @param string $AppName 应用名称。
-     * @param string $DomainName 您的加速域名。
+     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+     * @param string $DomainName 推流域名。
      * @param string $StreamName 流名称。
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method boolean getIsAutoBackup() 获取是否开启cos自动备份
  * @method void setIsAutoBackup(boolean $IsAutoBackup) 设置是否开启cos自动备份
- * @method string getBackupTime() 获取自动备份时间
- * @method void setBackupTime(string $BackupTime) 设置自动备份时间
+ * @method string getBackupTime() 获取自动备份执行时间（精确到小时）, e.g. "22:00"
+ * @method void setBackupTime(string $BackupTime) 设置自动备份执行时间（精确到小时）, e.g. "22:00"
  */
 
 /**
@@ -35,12 +35,12 @@ class CosBackup extends AbstractModel
     public $IsAutoBackup;
 
     /**
-     * @var string 自动备份时间
+     * @var string 自动备份执行时间（精确到小时）, e.g. "22:00"
      */
     public $BackupTime;
     /**
      * @param boolean $IsAutoBackup 是否开启cos自动备份
-     * @param string $BackupTime 自动备份时间
+     * @param string $BackupTime 自动备份执行时间（精确到小时）, e.g. "22:00"
      */
     function __construct()
     {

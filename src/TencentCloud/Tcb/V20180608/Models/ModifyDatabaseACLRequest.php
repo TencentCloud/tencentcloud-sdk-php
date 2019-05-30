@@ -23,15 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCollectionName() 获取集合名称
  * @method void setCollectionName(string $CollectionName) 设置集合名称
  * @method string getAclTag() 获取权限标签。取值范围：
-<li> READONLY ： 公有读，私有写 </li>
-<li> PRIVATE  ：私有读写 </li>
-<li> ADMINWRITE ： 仅管理员可写 </li>
-<li> ADMINONLY ： 仅管理员可操作 </li>
+<li> READONLY：所有用户可读，仅创建者和管理员可写</li>
+<li> PRIVATE：仅创建者及管理员可读写</li>
+<li> ADMINWRITE：所有用户可读，仅管理员可写</li>
+<li> ADMINONLY：仅管理员可读写</li>
  * @method void setAclTag(string $AclTag) 设置权限标签。取值范围：
-<li> READONLY ： 公有读，私有写 </li>
-<li> PRIVATE  ：私有读写 </li>
-<li> ADMINWRITE ： 仅管理员可写 </li>
-<li> ADMINONLY ： 仅管理员可操作 </li>
+<li> READONLY：所有用户可读，仅创建者和管理员可写</li>
+<li> PRIVATE：仅创建者及管理员可读写</li>
+<li> ADMINWRITE：所有用户可读，仅管理员可写</li>
+<li> ADMINONLY：仅管理员可读写</li>
  */
 
 /**
@@ -51,20 +51,20 @@ class ModifyDatabaseACLRequest extends AbstractModel
 
     /**
      * @var string 权限标签。取值范围：
-<li> READONLY ： 公有读，私有写 </li>
-<li> PRIVATE  ：私有读写 </li>
-<li> ADMINWRITE ： 仅管理员可写 </li>
-<li> ADMINONLY ： 仅管理员可操作 </li>
+<li> READONLY：所有用户可读，仅创建者和管理员可写</li>
+<li> PRIVATE：仅创建者及管理员可读写</li>
+<li> ADMINWRITE：所有用户可读，仅管理员可写</li>
+<li> ADMINONLY：仅管理员可读写</li>
      */
     public $AclTag;
     /**
      * @param string $EnvId 环境ID
      * @param string $CollectionName 集合名称
      * @param string $AclTag 权限标签。取值范围：
-<li> READONLY ： 公有读，私有写 </li>
-<li> PRIVATE  ：私有读写 </li>
-<li> ADMINWRITE ： 仅管理员可写 </li>
-<li> ADMINONLY ： 仅管理员可操作 </li>
+<li> READONLY：所有用户可读，仅创建者和管理员可写</li>
+<li> PRIVATE：仅创建者及管理员可读写</li>
+<li> ADMINWRITE：所有用户可读，仅管理员可写</li>
+<li> ADMINONLY：仅管理员可读写</li>
      */
     function __construct()
     {

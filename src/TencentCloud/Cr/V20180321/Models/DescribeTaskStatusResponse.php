@@ -18,10 +18,14 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTaskResult() 获取任务结果
- * @method void setTaskResult(string $TaskResult) 设置任务结果
- * @method string getTaskType() 获取<p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
- * @method void setTaskType(string $TaskType) 设置<p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
+ * @method string getTaskResult() 获取任务结果，例如上传成功时返回“File Uploading Task Success.”
+ * @method void setTaskResult(string $TaskResult) 设置任务结果，例如上传成功时返回“File Uploading Task Success.”
+ * @method string getTaskType() 获取<p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+ * @method void setTaskType(string $TaskType) 设置<p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+ * @method string getTaskFileUrl() 获取过滤文件下载链接，有过滤数据时才存在。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskFileUrl(string $TaskFileUrl) 设置过滤文件下载链接，有过滤数据时才存在。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -32,22 +36,30 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTaskStatusResponse extends AbstractModel
 {
     /**
-     * @var string 任务结果
+     * @var string 任务结果，例如上传成功时返回“File Uploading Task Success.”
      */
     public $TaskResult;
 
     /**
-     * @var string <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
+     * @var string <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
      */
     public $TaskType;
+
+    /**
+     * @var string 过滤文件下载链接，有过滤数据时才存在。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskFileUrl;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $TaskResult 任务结果
-     * @param string $TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
+     * @param string $TaskResult 任务结果，例如上传成功时返回“File Uploading Task Success.”
+     * @param string $TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+     * @param string $TaskFileUrl 过滤文件下载链接，有过滤数据时才存在。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +80,10 @@ class DescribeTaskStatusResponse extends AbstractModel
 
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
             $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("TaskFileUrl",$param) and $param["TaskFileUrl"] !== null) {
+            $this->TaskFileUrl = $param["TaskFileUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

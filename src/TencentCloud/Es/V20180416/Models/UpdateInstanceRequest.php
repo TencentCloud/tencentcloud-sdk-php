@@ -18,48 +18,30 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取要操作的实例ID
- * @method void setInstanceId(string $InstanceId) 设置要操作的实例ID
- * @method string getInstanceName() 获取修改后的实例名称, 1-50 个英文、汉字、数字、连接线-或下划线_
- * @method void setInstanceName(string $InstanceName) 设置修改后的实例名称, 1-50 个英文、汉字、数字、连接线-或下划线_
- * @method integer getNodeNum() 获取横向扩缩容后的节点个数
- * @method void setNodeNum(integer $NodeNum) 设置横向扩缩容后的节点个数
- * @method string getEsConfig() 获取修改后的配置项, JSON格式字符串。当前仅支持以下配置项：
-action.destructive_requires_name
-indices.fielddata.cache.size
-indices.query.bool.max_clause_count
- * @method void setEsConfig(string $EsConfig) 设置修改后的配置项, JSON格式字符串。当前仅支持以下配置项：
-action.destructive_requires_name
-indices.fielddata.cache.size
-indices.query.bool.max_clause_count
- * @method string getPassword() 获取重置后的Kibana密码, 8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号
- * @method void setPassword(string $Password) 设置重置后的Kibana密码, 8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号
- * @method EsAcl getEsAcl() 获取修改后的访问控制列表
- * @method void setEsAcl(EsAcl $EsAcl) 设置修改后的访问控制列表
- * @method integer getDiskSize() 获取磁盘大小,单位GB
- * @method void setDiskSize(integer $DiskSize) 设置磁盘大小,单位GB
- * @method string getNodeType() 获取节点规格: 
-ES.S1.SMALL2: 1 核 2G
-ES.S1.MEDIUM4: 2 核 4G 
-ES.S1.MEDIUM8: 2 核 8G 
-ES.S1.LARGE16: 4 核 16G 
-ES.S1.2XLARGE32: 8 核 32G 
-ES.S1.4XLARGE64: 16 核 64G
- * @method void setNodeType(string $NodeType) 设置节点规格: 
-ES.S1.SMALL2: 1 核 2G
-ES.S1.MEDIUM4: 2 核 4G 
-ES.S1.MEDIUM8: 2 核 8G 
-ES.S1.LARGE16: 4 核 16G 
-ES.S1.2XLARGE32: 8 核 32G 
-ES.S1.4XLARGE64: 16 核 64G
- * @method integer getMasterNodeNum() 获取专用主节点个数
- * @method void setMasterNodeNum(integer $MasterNodeNum) 设置专用主节点个数
- * @method string getMasterNodeType() 获取专用主节点规格，与NodeType支持的规格相同
- * @method void setMasterNodeType(string $MasterNodeType) 设置专用主节点规格，与NodeType支持的规格相同
- * @method integer getMasterNodeDiskSize() 获取专用主节点磁盘大小， 单位GB（系统默认配置为50GB,暂不支持自定义）
- * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) 设置专用主节点磁盘大小， 单位GB（系统默认配置为50GB,暂不支持自定义）
- * @method boolean getForceRestart() 获取更新配置时是否强制重启
- * @method void setForceRestart(boolean $ForceRestart) 设置更新配置时是否强制重启
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceName() 获取实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
+ * @method void setInstanceName(string $InstanceName) 设置实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
+ * @method integer getNodeNum() 获取节点个数（2-50个）
+ * @method void setNodeNum(integer $NodeNum) 设置节点个数（2-50个）
+ * @method string getEsConfig() 获取配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+ * @method void setEsConfig(string $EsConfig) 设置配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+ * @method string getPassword() 获取默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
+ * @method void setPassword(string $Password) 设置默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
+ * @method EsAcl getEsAcl() 获取访问控制列表
+ * @method void setEsAcl(EsAcl $EsAcl) 设置访问控制列表
+ * @method integer getDiskSize() 获取磁盘大小（单位GB）
+ * @method void setDiskSize(integer $DiskSize) 设置磁盘大小（单位GB）
+ * @method string getNodeType() 获取节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method void setNodeType(string $NodeType) 设置节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method integer getMasterNodeNum() 获取专用主节点个数（只支持3个或5个）
+ * @method void setMasterNodeNum(integer $MasterNodeNum) 设置专用主节点个数（只支持3个或5个）
+ * @method string getMasterNodeType() 获取专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method void setMasterNodeType(string $MasterNodeType) 设置专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method integer getMasterNodeDiskSize() 获取专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
+ * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) 设置专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
+ * @method boolean getForceRestart() 获取更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
+ * @method void setForceRestart(boolean $ForceRestart) 设置更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
  * @method CosBackup getCosBackup() 获取COS自动备份信息
  * @method void setCosBackup(CosBackup $CosBackup) 设置COS自动备份信息
  */
@@ -70,71 +52,62 @@ ES.S1.4XLARGE64: 16 核 64G
 class UpdateInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 要操作的实例ID
+     * @var string 实例ID
      */
     public $InstanceId;
 
     /**
-     * @var string 修改后的实例名称, 1-50 个英文、汉字、数字、连接线-或下划线_
+     * @var string 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      */
     public $InstanceName;
 
     /**
-     * @var integer 横向扩缩容后的节点个数
+     * @var integer 节点个数（2-50个）
      */
     public $NodeNum;
 
     /**
-     * @var string 修改后的配置项, JSON格式字符串。当前仅支持以下配置项：
-action.destructive_requires_name
-indices.fielddata.cache.size
-indices.query.bool.max_clause_count
+     * @var string 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
      */
     public $EsConfig;
 
     /**
-     * @var string 重置后的Kibana密码, 8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号
+     * @var string 默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
      */
     public $Password;
 
     /**
-     * @var EsAcl 修改后的访问控制列表
+     * @var EsAcl 访问控制列表
      */
     public $EsAcl;
 
     /**
-     * @var integer 磁盘大小,单位GB
+     * @var integer 磁盘大小（单位GB）
      */
     public $DiskSize;
 
     /**
-     * @var string 节点规格: 
-ES.S1.SMALL2: 1 核 2G
-ES.S1.MEDIUM4: 2 核 4G 
-ES.S1.MEDIUM8: 2 核 8G 
-ES.S1.LARGE16: 4 核 16G 
-ES.S1.2XLARGE32: 8 核 32G 
-ES.S1.4XLARGE64: 16 核 64G
+     * @var string 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public $NodeType;
 
     /**
-     * @var integer 专用主节点个数
+     * @var integer 专用主节点个数（只支持3个或5个）
      */
     public $MasterNodeNum;
 
     /**
-     * @var string 专用主节点规格，与NodeType支持的规格相同
+     * @var string 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public $MasterNodeType;
 
     /**
-     * @var integer 专用主节点磁盘大小， 单位GB（系统默认配置为50GB,暂不支持自定义）
+     * @var integer 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
      */
     public $MasterNodeDiskSize;
 
     /**
-     * @var boolean 更新配置时是否强制重启
+     * @var boolean 更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
      */
     public $ForceRestart;
 
@@ -143,27 +116,18 @@ ES.S1.4XLARGE64: 16 核 64G
      */
     public $CosBackup;
     /**
-     * @param string $InstanceId 要操作的实例ID
-     * @param string $InstanceName 修改后的实例名称, 1-50 个英文、汉字、数字、连接线-或下划线_
-     * @param integer $NodeNum 横向扩缩容后的节点个数
-     * @param string $EsConfig 修改后的配置项, JSON格式字符串。当前仅支持以下配置项：
-action.destructive_requires_name
-indices.fielddata.cache.size
-indices.query.bool.max_clause_count
-     * @param string $Password 重置后的Kibana密码, 8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号
-     * @param EsAcl $EsAcl 修改后的访问控制列表
-     * @param integer $DiskSize 磁盘大小,单位GB
-     * @param string $NodeType 节点规格: 
-ES.S1.SMALL2: 1 核 2G
-ES.S1.MEDIUM4: 2 核 4G 
-ES.S1.MEDIUM8: 2 核 8G 
-ES.S1.LARGE16: 4 核 16G 
-ES.S1.2XLARGE32: 8 核 32G 
-ES.S1.4XLARGE64: 16 核 64G
-     * @param integer $MasterNodeNum 专用主节点个数
-     * @param string $MasterNodeType 专用主节点规格，与NodeType支持的规格相同
-     * @param integer $MasterNodeDiskSize 专用主节点磁盘大小， 单位GB（系统默认配置为50GB,暂不支持自定义）
-     * @param boolean $ForceRestart 更新配置时是否强制重启
+     * @param string $InstanceId 实例ID
+     * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
+     * @param integer $NodeNum 节点个数（2-50个）
+     * @param string $EsConfig 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+     * @param string $Password 默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
+     * @param EsAcl $EsAcl 访问控制列表
+     * @param integer $DiskSize 磁盘大小（单位GB）
+     * @param string $NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @param integer $MasterNodeNum 专用主节点个数（只支持3个或5个）
+     * @param string $MasterNodeType 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @param integer $MasterNodeDiskSize 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
+     * @param boolean $ForceRestart 更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
      * @param CosBackup $CosBackup COS自动备份信息
      */
     function __construct()

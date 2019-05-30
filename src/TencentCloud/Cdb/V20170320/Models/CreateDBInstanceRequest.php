@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployMode(integer $DeployMode) 设置多可用区域，默认为0，支持值包括：0-表示单可用区，1-表示多可用区
  * @method string getSlaveZone() 获取备库1的可用区信息，默认为zone的值
  * @method void setSlaveZone(string $SlaveZone) 设置备库1的可用区信息，默认为zone的值
- * @method array getParamList() 获取参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询实例的可设置参数列表](https://cloud.tencent.com/document/api/236/20411)查询支持设置的参数
- * @method void setParamList(array $ParamList) 设置参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询实例的可设置参数列表](https://cloud.tencent.com/document/api/236/20411)查询支持设置的参数
+ * @method array getParamList() 获取参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662)查询支持设置的参数
+ * @method void setParamList(array $ParamList) 设置参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662)查询支持设置的参数
  * @method string getBackupZone() 获取备库2的可用区ID，默认为0，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
  * @method void setBackupZone(string $BackupZone) 设置备库2的可用区ID，默认为0，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
  * @method integer getAutoRenewFlag() 获取自动续费标记，可选值为：0-不自动续费；1-自动续费
@@ -154,7 +154,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $SlaveZone;
 
     /**
-     * @var array 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询实例的可设置参数列表](https://cloud.tencent.com/document/api/236/20411)查询支持设置的参数
+     * @var array 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662)查询支持设置的参数
      */
     public $ParamList;
 
@@ -209,7 +209,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $ProtectMode 数据复制方式，默认为0，支持值包括：0-表示异步复制，1-表示半同步复制，2-表示强同步复制
      * @param integer $DeployMode 多可用区域，默认为0，支持值包括：0-表示单可用区，1-表示多可用区
      * @param string $SlaveZone 备库1的可用区信息，默认为zone的值
-     * @param array $ParamList 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询实例的可设置参数列表](https://cloud.tencent.com/document/api/236/20411)查询支持设置的参数
+     * @param array $ParamList 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662)查询支持设置的参数
      * @param string $BackupZone 备库2的可用区ID，默认为0，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
      * @param integer $AutoRenewFlag 自动续费标记，可选值为：0-不自动续费；1-自动续费
      * @param string $MasterRegion 主实例地域信息，购买灾备实例时，该字段必填

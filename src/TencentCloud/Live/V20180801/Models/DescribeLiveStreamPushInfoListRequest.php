@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getPushDomain() 获取推流域名。
  * @method void setPushDomain(string $PushDomain) 设置推流域名。
- * @method string getAppName() 获取推流路径。
- * @method void setAppName(string $AppName) 设置推流路径。
+ * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+ * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为live。
  * @method integer getPageNum() 获取页数，
 范围[1,10000]，
 默认值：1。
@@ -47,7 +47,7 @@ class DescribeLiveStreamPushInfoListRequest extends AbstractModel
     public $PushDomain;
 
     /**
-     * @var string 推流路径。
+     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
      */
     public $AppName;
 
@@ -66,7 +66,7 @@ class DescribeLiveStreamPushInfoListRequest extends AbstractModel
     public $PageSize;
     /**
      * @param string $PushDomain 推流域名。
-     * @param string $AppName 推流路径。
+     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
      * @param integer $PageNum 页数，
 范围[1,10000]，
 默认值：1。

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSysUsrlocalSpace(integer $SysUsrlocalSpace) 设置Usrlocal分区大小
  * @method integer getSysDataSpace() 获取data分区大小
  * @method void setSysDataSpace(integer $SysDataSpace) 设置data分区大小
+ * @method array getDeviceDiskSizeInfoSet() 获取硬盘大小详情
+ * @method void setDeviceDiskSizeInfoSet(array $DeviceDiskSizeInfoSet) 设置硬盘大小详情
  */
 
 /**
@@ -73,6 +75,11 @@ class DevicePartition extends AbstractModel
      * @var integer data分区大小
      */
     public $SysDataSpace;
+
+    /**
+     * @var array 硬盘大小详情
+     */
+    public $DeviceDiskSizeInfoSet;
     /**
      * @param integer $SystemDiskSize 系统盘大小
      * @param integer $DataDiskSize 数据盘大小
@@ -81,6 +88,7 @@ class DevicePartition extends AbstractModel
      * @param integer $SysSwaporuefiSpace Swaporuefi分区大小
      * @param integer $SysUsrlocalSpace Usrlocal分区大小
      * @param integer $SysDataSpace data分区大小
+     * @param array $DeviceDiskSizeInfoSet 硬盘大小详情
      */
     function __construct()
     {
@@ -120,6 +128,15 @@ class DevicePartition extends AbstractModel
 
         if (array_key_exists("SysDataSpace",$param) and $param["SysDataSpace"] !== null) {
             $this->SysDataSpace = $param["SysDataSpace"];
+        }
+
+        if (array_key_exists("DeviceDiskSizeInfoSet",$param) and $param["DeviceDiskSizeInfoSet"] !== null) {
+            $this->DeviceDiskSizeInfoSet = [];
+            foreach ($param["DeviceDiskSizeInfoSet"] as $key => $value){
+                $obj = new DeviceDiskSizeInfo();
+                $obj->deserialize($value);
+                array_push($this->DeviceDiskSizeInfoSet, $obj);
+            }
         }
     }
 }

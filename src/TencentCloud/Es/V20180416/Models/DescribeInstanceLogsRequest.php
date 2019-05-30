@@ -20,20 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getInstanceId() 获取集群实例ID
  * @method void setInstanceId(string $InstanceId) 设置集群实例ID
- * @method integer getLogType() 获取日志类型
- * @method void setLogType(integer $LogType) 设置日志类型
- * @method string getSearchKey() 获取搜索词
- * @method void setSearchKey(string $SearchKey) 设置搜索词
- * @method string getStartTime() 获取日志开始时间
- * @method void setStartTime(string $StartTime) 设置日志开始时间
- * @method string getEndTime() 获取日志结束时间
- * @method void setEndTime(string $EndTime) 设置日志结束时间
- * @method integer getOffset() 获取分页起始值
- * @method void setOffset(integer $Offset) 设置分页起始值
- * @method integer getLimit() 获取分页大小
- * @method void setLimit(integer $Limit) 设置分页大小
- * @method integer getOrderByType() 获取时间排序方式
- * @method void setOrderByType(integer $OrderByType) 设置时间排序方式
+ * @method integer getLogType() 获取日志类型，默认值为1
+<li>1, 主日志</li>
+<li>2, 搜索慢日志</li>
+<li>3, 索引慢日志</li>
+<li>4, GC日志</li>
+ * @method void setLogType(integer $LogType) 设置日志类型，默认值为1
+<li>1, 主日志</li>
+<li>2, 搜索慢日志</li>
+<li>3, 索引慢日志</li>
+<li>4, GC日志</li>
+ * @method string getSearchKey() 获取搜索词，支持LUCENE语法，如 level:WARN、ip:1.1.1.1、message:test-index等
+ * @method void setSearchKey(string $SearchKey) 设置搜索词，支持LUCENE语法，如 level:WARN、ip:1.1.1.1、message:test-index等
+ * @method string getStartTime() 获取日志开始时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
+ * @method void setStartTime(string $StartTime) 设置日志开始时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
+ * @method string getEndTime() 获取日志结束时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
+ * @method void setEndTime(string $EndTime) 设置日志结束时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
+ * @method integer getOffset() 获取分页起始值, 默认值为0
+ * @method void setOffset(integer $Offset) 设置分页起始值, 默认值为0
+ * @method integer getLimit() 获取分页大小，默认值为100，最大值100
+ * @method void setLimit(integer $Limit) 设置分页大小，默认值为100，最大值100
+ * @method integer getOrderByType() 获取时间排序方式，默认值为0
+<li>0, 降序</li>
+<li>1, 升序</li>
+ * @method void setOrderByType(integer $OrderByType) 设置时间排序方式，默认值为0
+<li>0, 降序</li>
+<li>1, 升序</li>
  */
 
 /**
@@ -47,48 +59,60 @@ class DescribeInstanceLogsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 日志类型
+     * @var integer 日志类型，默认值为1
+<li>1, 主日志</li>
+<li>2, 搜索慢日志</li>
+<li>3, 索引慢日志</li>
+<li>4, GC日志</li>
      */
     public $LogType;
 
     /**
-     * @var string 搜索词
+     * @var string 搜索词，支持LUCENE语法，如 level:WARN、ip:1.1.1.1、message:test-index等
      */
     public $SearchKey;
 
     /**
-     * @var string 日志开始时间
+     * @var string 日志开始时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
      */
     public $StartTime;
 
     /**
-     * @var string 日志结束时间
+     * @var string 日志结束时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
      */
     public $EndTime;
 
     /**
-     * @var integer 分页起始值
+     * @var integer 分页起始值, 默认值为0
      */
     public $Offset;
 
     /**
-     * @var integer 分页大小
+     * @var integer 分页大小，默认值为100，最大值100
      */
     public $Limit;
 
     /**
-     * @var integer 时间排序方式
+     * @var integer 时间排序方式，默认值为0
+<li>0, 降序</li>
+<li>1, 升序</li>
      */
     public $OrderByType;
     /**
      * @param string $InstanceId 集群实例ID
-     * @param integer $LogType 日志类型
-     * @param string $SearchKey 搜索词
-     * @param string $StartTime 日志开始时间
-     * @param string $EndTime 日志结束时间
-     * @param integer $Offset 分页起始值
-     * @param integer $Limit 分页大小
-     * @param integer $OrderByType 时间排序方式
+     * @param integer $LogType 日志类型，默认值为1
+<li>1, 主日志</li>
+<li>2, 搜索慢日志</li>
+<li>3, 索引慢日志</li>
+<li>4, GC日志</li>
+     * @param string $SearchKey 搜索词，支持LUCENE语法，如 level:WARN、ip:1.1.1.1、message:test-index等
+     * @param string $StartTime 日志开始时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
+     * @param string $EndTime 日志结束时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
+     * @param integer $Offset 分页起始值, 默认值为0
+     * @param integer $Limit 分页大小，默认值为100，最大值100
+     * @param integer $OrderByType 时间排序方式，默认值为0
+<li>0, 降序</li>
+<li>1, 升序</li>
      */
     function __construct()
     {

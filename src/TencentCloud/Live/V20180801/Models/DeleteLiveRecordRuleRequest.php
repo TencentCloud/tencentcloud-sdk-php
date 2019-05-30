@@ -18,12 +18,18 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDomainName() 获取推流域名。域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配
- * @method void setDomainName(string $DomainName) 设置推流域名。域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配
- * @method string getAppName() 获取推流路径。域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配
- * @method void setAppName(string $AppName) 设置推流路径。域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配
- * @method string getStreamName() 获取流名称。域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配
- * @method void setStreamName(string $StreamName) 设置流名称。域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配
+ * @method string getDomainName() 获取推流域名。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+ * @method void setDomainName(string $DomainName) 设置推流域名。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+ * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+ * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+ * @method string getStreamName() 获取流名称。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+ * @method void setStreamName(string $StreamName) 设置流名称。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
  */
 
 /**
@@ -32,23 +38,29 @@ use TencentCloud\Common\AbstractModel;
 class DeleteLiveRecordRuleRequest extends AbstractModel
 {
     /**
-     * @var string 推流域名。域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配
+     * @var string 推流域名。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
      */
     public $DomainName;
 
     /**
-     * @var string 推流路径。域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配
+     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
      */
     public $AppName;
 
     /**
-     * @var string 流名称。域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配
+     * @var string 流名称。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
      */
     public $StreamName;
     /**
-     * @param string $DomainName 推流域名。域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配
-     * @param string $AppName 推流路径。域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配
-     * @param string $StreamName 流名称。域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配
+     * @param string $DomainName 推流域名。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+     * @param string $StreamName 流名称。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
      */
     function __construct()
     {

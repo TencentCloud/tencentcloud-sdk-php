@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置图片唯一标识，一张图片一个SessionId；
  * @method string getImage() 获取图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
  * @method void setImage(string $Image) 设置图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
- * @method string getHcmAppid() 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
- * @method void setHcmAppid(string $HcmAppid) 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+ * @method string getHcmAppid() 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+ * @method void setHcmAppid(string $HcmAppid) 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
  * @method string getUrl() 获取图片url，与Image参数二者填一即可；
  * @method void setUrl(string $Url) 设置图片url，与Image参数二者填一即可；
+ * @method boolean getSupportHorizontalImage() 获取横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
+ * @method void setSupportHorizontalImage(boolean $SupportHorizontalImage) 设置横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
+ * @method boolean getRejectNonArithmeticImage() 获取拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
+ * @method void setRejectNonArithmeticImage(boolean $RejectNonArithmeticImage) 设置拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
  */
 
 /**
@@ -44,7 +48,7 @@ class EvaluationRequest extends AbstractModel
     public $Image;
 
     /**
-     * @var string 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+     * @var string 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
      */
     public $HcmAppid;
 
@@ -52,11 +56,23 @@ class EvaluationRequest extends AbstractModel
      * @var string 图片url，与Image参数二者填一即可；
      */
     public $Url;
+
+    /**
+     * @var boolean 横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
+     */
+    public $SupportHorizontalImage;
+
+    /**
+     * @var boolean 拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
+     */
+    public $RejectNonArithmeticImage;
     /**
      * @param string $SessionId 图片唯一标识，一张图片一个SessionId；
      * @param string $Image 图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
-     * @param string $HcmAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+     * @param string $HcmAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
      * @param string $Url 图片url，与Image参数二者填一即可；
+     * @param boolean $SupportHorizontalImage 横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
+     * @param boolean $RejectNonArithmeticImage 拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class EvaluationRequest extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("SupportHorizontalImage",$param) and $param["SupportHorizontalImage"] !== null) {
+            $this->SupportHorizontalImage = $param["SupportHorizontalImage"];
+        }
+
+        if (array_key_exists("RejectNonArithmeticImage",$param) and $param["RejectNonArithmeticImage"] !== null) {
+            $this->RejectNonArithmeticImage = $param["RejectNonArithmeticImage"];
         }
     }
 }

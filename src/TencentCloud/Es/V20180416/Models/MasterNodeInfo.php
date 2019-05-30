@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method boolean getEnableDedicatedMaster() 获取是否启用了专用主节点
  * @method void setEnableDedicatedMaster(boolean $EnableDedicatedMaster) 设置是否启用了专用主节点
- * @method string getMasterNodeType() 获取专用主节点规格
- * @method void setMasterNodeType(string $MasterNodeType) 设置专用主节点规格
+ * @method string getMasterNodeType() 获取专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method void setMasterNodeType(string $MasterNodeType) 设置专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
  * @method integer getMasterNodeNum() 获取专用主节点个数
  * @method void setMasterNodeNum(integer $MasterNodeNum) 设置专用主节点个数
  * @method integer getMasterNodeCpuNum() 获取专用主节点CPU核数
@@ -45,7 +45,7 @@ class MasterNodeInfo extends AbstractModel
     public $EnableDedicatedMaster;
 
     /**
-     * @var string 专用主节点规格
+     * @var string 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public $MasterNodeType;
 
@@ -75,7 +75,7 @@ class MasterNodeInfo extends AbstractModel
     public $MasterNodeDiskType;
     /**
      * @param boolean $EnableDedicatedMaster 是否启用了专用主节点
-     * @param string $MasterNodeType 专用主节点规格
+     * @param string $MasterNodeType 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      * @param integer $MasterNodeNum 专用主节点个数
      * @param integer $MasterNodeCpuNum 专用主节点CPU核数
      * @param integer $MasterNodeMemSize 专用主节点内存大小，单位GB

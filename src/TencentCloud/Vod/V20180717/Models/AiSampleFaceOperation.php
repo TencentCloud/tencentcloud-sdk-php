@@ -25,9 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFaceContents() 获取人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合。
 <li>当 Type为add 或 reset 时，该字段必填；</li>
 <li>数组长度限制：5 张图片。</li>
+注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
  * @method void setFaceContents(array $FaceContents) 设置人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合。
 <li>当 Type为add 或 reset 时，该字段必填；</li>
 <li>数组长度限制：5 张图片。</li>
+注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
  */
 
 /**
@@ -49,6 +51,7 @@ class AiSampleFaceOperation extends AbstractModel
      * @var array 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合。
 <li>当 Type为add 或 reset 时，该字段必填；</li>
 <li>数组长度限制：5 张图片。</li>
+注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
      */
     public $FaceContents;
     /**
@@ -57,6 +60,7 @@ class AiSampleFaceOperation extends AbstractModel
      * @param array $FaceContents 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合。
 <li>当 Type为add 或 reset 时，该字段必填；</li>
 <li>数组长度限制：5 张图片。</li>
+注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
      */
     function __construct()
     {

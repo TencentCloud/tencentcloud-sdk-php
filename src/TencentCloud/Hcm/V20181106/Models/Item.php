@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItemString(string $ItemString) 设置识别的算式
  * @method ItemCoord getItemCoord() 获取识别的算式在图片上的位置信息
  * @method void setItemCoord(ItemCoord $ItemCoord) 设置识别的算式在图片上的位置信息
- * @method string getAnswer() 获取推荐的答案
- * @method void setAnswer(string $Answer) 设置推荐的答案
+ * @method string getAnswer() 获取推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
+ * @method void setAnswer(string $Answer) 设置推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
+ * @method string getExpressionType() 获取算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExpressionType(string $ExpressionType) 设置算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -49,14 +53,22 @@ class Item extends AbstractModel
     public $ItemCoord;
 
     /**
-     * @var string 推荐的答案
+     * @var string 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
      */
     public $Answer;
+
+    /**
+     * @var string 算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExpressionType;
     /**
      * @param string $Item 识别的算式是否正确
      * @param string $ItemString 识别的算式
      * @param ItemCoord $ItemCoord 识别的算式在图片上的位置信息
-     * @param string $Answer 推荐的答案
+     * @param string $Answer 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
+     * @param string $ExpressionType 算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -85,6 +97,10 @@ class Item extends AbstractModel
 
         if (array_key_exists("Answer",$param) and $param["Answer"] !== null) {
             $this->Answer = $param["Answer"];
+        }
+
+        if (array_key_exists("ExpressionType",$param) and $param["ExpressionType"] !== null) {
+            $this->ExpressionType = $param["ExpressionType"];
         }
     }
 }

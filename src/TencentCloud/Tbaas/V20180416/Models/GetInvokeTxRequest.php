@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeerName(string $PeerName) 设置执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
  * @method string getPeerGroup() 获取执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
  * @method void setPeerGroup(string $PeerGroup) 设置执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
- * @method string getTxId() 获取事务ID
- * @method void setTxId(string $TxId) 设置事务ID
+ * @method string getTxId() 获取交易ID
+ * @method void setTxId(string $TxId) 设置交易ID
  * @method string getGroupName() 获取调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
  * @method void setGroupName(string $GroupName) 设置调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
  */
@@ -72,7 +72,7 @@ class GetInvokeTxRequest extends AbstractModel
     public $PeerGroup;
 
     /**
-     * @var string 事务ID
+     * @var string 交易ID
      */
     public $TxId;
 
@@ -87,7 +87,7 @@ class GetInvokeTxRequest extends AbstractModel
      * @param string $ChannelName 业务所属通道名称，可在通道详情或列表中获取
      * @param string $PeerName 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
      * @param string $PeerGroup 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
-     * @param string $TxId 事务ID
+     * @param string $TxId 交易ID
      * @param string $GroupName 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     function __construct()

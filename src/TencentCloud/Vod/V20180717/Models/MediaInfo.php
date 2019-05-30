@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyFrameDescInfo(MediaKeyFrameDescInfo $KeyFrameDescInfo) 设置视频打点信息。对视频设置的各个打点信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MediaAdaptiveDynamicStreamingInfo getAdaptiveDynamicStreamingInfo() 获取转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdaptiveDynamicStreamingInfo(MediaAdaptiveDynamicStreamingInfo $AdaptiveDynamicStreamingInfo) 设置转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取媒体文件唯一标识 ID。
  * @method void setFileId(string $FileId) 设置媒体文件唯一标识 ID。
  */
@@ -108,6 +112,12 @@ class MediaInfo extends AbstractModel
     public $KeyFrameDescInfo;
 
     /**
+     * @var MediaAdaptiveDynamicStreamingInfo 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdaptiveDynamicStreamingInfo;
+
+    /**
      * @var string 媒体文件唯一标识 ID。
      */
     public $FileId;
@@ -127,6 +137,8 @@ class MediaInfo extends AbstractModel
      * @param MediaSnapshotByTimeOffsetInfo $SnapshotByTimeOffsetInfo 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaKeyFrameDescInfo $KeyFrameDescInfo 视频打点信息。对视频设置的各个打点信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaAdaptiveDynamicStreamingInfo $AdaptiveDynamicStreamingInfo 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 媒体文件唯一标识 ID。
      */
@@ -180,6 +192,11 @@ class MediaInfo extends AbstractModel
         if (array_key_exists("KeyFrameDescInfo",$param) and $param["KeyFrameDescInfo"] !== null) {
             $this->KeyFrameDescInfo = new MediaKeyFrameDescInfo();
             $this->KeyFrameDescInfo->deserialize($param["KeyFrameDescInfo"]);
+        }
+
+        if (array_key_exists("AdaptiveDynamicStreamingInfo",$param) and $param["AdaptiveDynamicStreamingInfo"] !== null) {
+            $this->AdaptiveDynamicStreamingInfo = new MediaAdaptiveDynamicStreamingInfo();
+            $this->AdaptiveDynamicStreamingInfo->deserialize($param["AdaptiveDynamicStreamingInfo"]);
         }
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {

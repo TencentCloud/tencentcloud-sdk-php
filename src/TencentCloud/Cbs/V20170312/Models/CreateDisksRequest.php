@@ -40,8 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncrypt(string $Encrypt) 设置传入该参数用于创建加密云盘，取值固定为ENCRYPT。
  * @method array getTags() 获取云盘绑定的标签。
  * @method void setTags(array $Tags) 设置云盘绑定的标签。
- * @method boolean getDeleteWithInstance() 获取可选参数。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
- * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置可选参数。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
  * @method boolean getShareable() 获取可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
  * @method void setShareable(boolean $Shareable) 设置可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
  */
@@ -107,11 +105,6 @@ class CreateDisksRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var boolean 可选参数。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
-     */
-    public $DeleteWithInstance;
-
-    /**
      * @var boolean 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
      */
     public $Shareable;
@@ -127,7 +120,6 @@ class CreateDisksRequest extends AbstractModel
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param string $Encrypt 传入该参数用于创建加密云盘，取值固定为ENCRYPT。
      * @param array $Tags 云盘绑定的标签。
-     * @param boolean $DeleteWithInstance 可选参数。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
      * @param boolean $Shareable 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
      */
     function __construct()
@@ -191,10 +183,6 @@ class CreateDisksRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
-        }
-
-        if (array_key_exists("DeleteWithInstance",$param) and $param["DeleteWithInstance"] !== null) {
-            $this->DeleteWithInstance = $param["DeleteWithInstance"];
         }
 
         if (array_key_exists("Shareable",$param) and $param["Shareable"] !== null) {

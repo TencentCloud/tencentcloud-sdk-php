@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method string getActivityId() 获取伸缩活动ID
+ * @method void setActivityId(string $ActivityId) 设置伸缩活动ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -28,10 +30,16 @@ use TencentCloud\Common\AbstractModel;
 class AttachInstancesResponse extends AbstractModel
 {
     /**
+     * @var string 伸缩活动ID
+     */
+    public $ActivityId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
+     * @param string $ActivityId 伸缩活动ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,10 @@ class AttachInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
+            $this->ActivityId = $param["ActivityId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

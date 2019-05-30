@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getUid() 获取子用户 UID
  * @method void setUid(integer $Uid) 设置子用户 UID
- * @method integer getRp() 获取每页数量。
- * @method void setRp(integer $Rp) 设置每页数量。
- * @method integer getPage() 获取页码。
- * @method void setPage(integer $Page) 设置页码。
+ * @method integer getRp() 获取每页数量。默认为20。
+ * @method void setRp(integer $Rp) 设置每页数量。默认为20。
+ * @method integer getPage() 获取页码。默认为1。
+ * @method void setPage(integer $Page) 设置页码。默认为1。
  */
 
 /**
@@ -37,18 +37,18 @@ class ListGroupsForUserRequest extends AbstractModel
     public $Uid;
 
     /**
-     * @var integer 每页数量。
+     * @var integer 每页数量。默认为20。
      */
     public $Rp;
 
     /**
-     * @var integer 页码。
+     * @var integer 页码。默认为1。
      */
     public $Page;
     /**
      * @param integer $Uid 子用户 UID
-     * @param integer $Rp 每页数量。
-     * @param integer $Page 页码。
+     * @param integer $Rp 每页数量。默认为20。
+     * @param integer $Page 页码。默认为1。
      */
     function __construct()
     {

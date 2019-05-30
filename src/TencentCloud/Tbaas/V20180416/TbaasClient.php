@@ -22,7 +22,10 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tbaas\V20180416\Models as Models;
 
 /**
+* @method Models\GetBlockListResponse GetBlockList(Models\GetBlockListRequest $req) 查看当前网络下的所有区块列表，分页展示
+* @method Models\GetClusterSummaryResponse GetClusterSummary(Models\GetClusterSummaryRequest $req) 获取区块链网络概要
 * @method Models\GetInvokeTxResponse GetInvokeTx(Models\GetInvokeTxRequest $req) Invoke异步调用结果查询
+* @method Models\GetLatesdTransactionListResponse GetLatesdTransactionList(Models\GetLatesdTransactionListRequest $req) 获取最新交易列表
 * @method Models\InvokeResponse Invoke(Models\InvokeRequest $req) 新增交易
 * @method Models\QueryResponse Query(Models\QueryRequest $req) 查询交易
  */

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
- * @method string getAppName() 获取推流App名。
- * @method void setAppName(string $AppName) 设置推流App名。
+ * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+ * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
  * @method string getDomainName() 获取推流域名。多域名推流必须设置。
  * @method void setDomainName(string $DomainName) 设置推流域名。多域名推流必须设置。
  * @method string getStartTime() 获取录制开始时间。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
@@ -77,7 +77,7 @@ class CreateLiveRecordRequest extends AbstractModel
     public $StreamName;
 
     /**
-     * @var string 推流App名。
+     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public $AppName;
 
@@ -135,7 +135,7 @@ eg. record_interval=3600&storage_time=2592000
     public $StreamParam;
     /**
      * @param string $StreamName 流名称。
-     * @param string $AppName 推流App名。
+     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      * @param string $DomainName 推流域名。多域名推流必须设置。
      * @param string $StartTime 录制开始时间。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
 定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。

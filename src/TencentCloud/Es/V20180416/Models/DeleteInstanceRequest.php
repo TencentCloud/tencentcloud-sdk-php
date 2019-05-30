@@ -18,8 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取要销毁的实例ID
- * @method void setInstanceId(string $InstanceId) 设置要销毁的实例ID
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
  */
 
 /**
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
 class DeleteInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 要销毁的实例ID
+     * @var string 实例ID
      */
     public $InstanceId;
     /**
-     * @param string $InstanceId 要销毁的实例ID
+     * @param string $InstanceId 实例ID
      */
     function __construct()
     {

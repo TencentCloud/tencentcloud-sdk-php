@@ -18,10 +18,12 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTxValidationCode() 获取状态码
- * @method void setTxValidationCode(integer $TxValidationCode) 设置状态码
- * @method string getTxValidationMsg() 获取消息
- * @method void setTxValidationMsg(string $TxValidationMsg) 设置消息
+ * @method integer getTxValidationCode() 获取交易执行状态码
+ * @method void setTxValidationCode(integer $TxValidationCode) 设置交易执行状态码
+ * @method string getTxValidationMsg() 获取交易执行消息
+ * @method void setTxValidationMsg(string $TxValidationMsg) 设置交易执行消息
+ * @method integer getBlockId() 获取交易所在区块ID
+ * @method void setBlockId(integer $BlockId) 设置交易所在区块ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -32,22 +34,28 @@ use TencentCloud\Common\AbstractModel;
 class GetInvokeTxResponse extends AbstractModel
 {
     /**
-     * @var integer 状态码
+     * @var integer 交易执行状态码
      */
     public $TxValidationCode;
 
     /**
-     * @var string 消息
+     * @var string 交易执行消息
      */
     public $TxValidationMsg;
+
+    /**
+     * @var integer 交易所在区块ID
+     */
+    public $BlockId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $TxValidationCode 状态码
-     * @param string $TxValidationMsg 消息
+     * @param integer $TxValidationCode 交易执行状态码
+     * @param string $TxValidationMsg 交易执行消息
+     * @param integer $BlockId 交易所在区块ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,10 @@ class GetInvokeTxResponse extends AbstractModel
 
         if (array_key_exists("TxValidationMsg",$param) and $param["TxValidationMsg"] !== null) {
             $this->TxValidationMsg = $param["TxValidationMsg"];
+        }
+
+        if (array_key_exists("BlockId",$param) and $param["BlockId"] !== null) {
+            $this->BlockId = $param["BlockId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

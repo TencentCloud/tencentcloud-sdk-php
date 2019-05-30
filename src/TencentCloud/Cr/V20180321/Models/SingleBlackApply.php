@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlackValue(string $BlackValue) 设置黑名单值，BlackType为01时，填写11位手机号码。
  * @method string getBlackDescription() 获取备注。
  * @method void setBlackDescription(string $BlackDescription) 设置备注。
+ * @method string getBlackValidDate() 获取黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
+ * @method void setBlackValidDate(string $BlackValidDate) 设置黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
  */
 
 /**
@@ -52,11 +54,17 @@ class SingleBlackApply extends AbstractModel
      * @var string 备注。
      */
     public $BlackDescription;
+
+    /**
+     * @var string 黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
+     */
+    public $BlackValidDate;
     /**
      * @param string $BlackType 黑名单类型，01代表手机号码。
      * @param string $OperationType 操作类型，A为新增，D为删除。
      * @param string $BlackValue 黑名单值，BlackType为01时，填写11位手机号码。
      * @param string $BlackDescription 备注。
+     * @param string $BlackValidDate 黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class SingleBlackApply extends AbstractModel
 
         if (array_key_exists("BlackDescription",$param) and $param["BlackDescription"] !== null) {
             $this->BlackDescription = $param["BlackDescription"];
+        }
+
+        if (array_key_exists("BlackValidDate",$param) and $param["BlackValidDate"] !== null) {
+            $this->BlackValidDate = $param["BlackValidDate"];
         }
     }
 }

@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeout(integer $Timeout) 设置任务启动后的超时时间，单位秒，默认为86400秒
  * @method integer getMaxConcurrentNum() 获取任务最大并发数限制，默认没有限制。
  * @method void setMaxConcurrentNum(integer $MaxConcurrentNum) 设置任务最大并发数限制，默认没有限制。
+ * @method boolean getRestartComputeNode() 获取任务完成后，重启计算节点。适用于指定计算环境执行任务。
+ * @method void setRestartComputeNode(boolean $RestartComputeNode) 设置任务完成后，重启计算节点。适用于指定计算环境执行任务。
  */
 
 /**
@@ -136,6 +138,11 @@ class Task extends AbstractModel
      * @var integer 任务最大并发数限制，默认没有限制。
      */
     public $MaxConcurrentNum;
+
+    /**
+     * @var boolean 任务完成后，重启计算节点。适用于指定计算环境执行任务。
+     */
+    public $RestartComputeNode;
     /**
      * @param Application $Application 应用程序信息
      * @param string $TaskName 任务名称，在一个作业内部唯一
@@ -153,6 +160,7 @@ class Task extends AbstractModel
      * @param integer $MaxRetryCount 任务失败后的最大重试次数，默认为0
      * @param integer $Timeout 任务启动后的超时时间，单位秒，默认为86400秒
      * @param integer $MaxConcurrentNum 任务最大并发数限制，默认没有限制。
+     * @param boolean $RestartComputeNode 任务完成后，重启计算节点。适用于指定计算环境执行任务。
      */
     function __construct()
     {
@@ -257,6 +265,10 @@ class Task extends AbstractModel
 
         if (array_key_exists("MaxConcurrentNum",$param) and $param["MaxConcurrentNum"] !== null) {
             $this->MaxConcurrentNum = $param["MaxConcurrentNum"];
+        }
+
+        if (array_key_exists("RestartComputeNode",$param) and $param["RestartComputeNode"] !== null) {
+            $this->RestartComputeNode = $param["RestartComputeNode"];
         }
     }
 }

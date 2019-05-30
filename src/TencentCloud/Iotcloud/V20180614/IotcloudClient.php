@@ -35,6 +35,7 @@ use TencentCloud\Iotcloud\V20180614\Models as Models;
 * @method Models\DeleteProductResponse DeleteProduct(Models\DeleteProductRequest $req) 本接口（DeleteProduct）用于删除一个物联网通信产品。
 * @method Models\DeleteTopicRuleResponse DeleteTopicRule(Models\DeleteTopicRuleRequest $req) 本接口（DeleteTopicRule）用于删除规则
 * @method Models\DescribeDeviceResponse DescribeDevice(Models\DescribeDeviceRequest $req) 本接口（DescribeDevice）用于查看设备信息
+* @method Models\DescribeDeviceClientKeyResponse DescribeDeviceClientKey(Models\DescribeDeviceClientKeyRequest $req) 获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次
 * @method Models\DescribeDeviceShadowResponse DescribeDeviceShadow(Models\DescribeDeviceShadowRequest $req) 本接口（DescribeDeviceShadow）用于查询虚拟设备信息。
 * @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 本接口（DescribeDevices）用于查询物联网通信设备的设备列表。
 * @method Models\DescribeLoraDeviceResponse DescribeLoraDevice(Models\DescribeLoraDeviceRequest $req) 获取lora类型设备的详细信息
@@ -49,6 +50,7 @@ use TencentCloud\Iotcloud\V20180614\Models as Models;
 * @method Models\PublishMessageResponse PublishMessage(Models\PublishMessageRequest $req) 本接口（PublishMessage）用于向某个主题发消息。
 * @method Models\PublishToDeviceResponse PublishToDevice(Models\PublishToDeviceRequest $req) 服务器端下发消息给lora类型的设备
 * @method Models\ReplaceTopicRuleResponse ReplaceTopicRule(Models\ReplaceTopicRuleRequest $req) 本接口（ReplaceTopicRule）用于修改替换规则
+* @method Models\ResetDeviceStateResponse ResetDeviceState(Models\ResetDeviceStateRequest $req) 重置设备的连接状态
 * @method Models\UpdateDeviceShadowResponse UpdateDeviceShadow(Models\UpdateDeviceShadowRequest $req) 本接口（UpdateDeviceShadow）用于更新虚拟设备信息。
 * @method Models\UpdateTopicPolicyResponse UpdateTopicPolicy(Models\UpdateTopicPolicyRequest $req) 本接口（UpdateTopicPolicy）用于更新Topic信息
  */

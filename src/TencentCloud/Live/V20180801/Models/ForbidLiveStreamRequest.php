@@ -18,8 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAppName() 获取应用名称。
- * @method void setAppName(string $AppName) 设置应用名称。
+ * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+ * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
  * @method string getDomainName() 获取您的加速域名。
  * @method void setDomainName(string $DomainName) 设置您的加速域名。
  * @method string getStreamName() 获取流名称。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ForbidLiveStreamRequest extends AbstractModel
 {
     /**
-     * @var string 应用名称。
+     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public $AppName;
 
@@ -56,7 +56,7 @@ class ForbidLiveStreamRequest extends AbstractModel
      */
     public $ResumeTime;
     /**
-     * @param string $AppName 应用名称。
+     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      * @param string $DomainName 您的加速域名。
      * @param string $StreamName 流名称。
      * @param string $ResumeTime 恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。

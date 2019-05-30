@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) 设置自定义端口，端口支持范围：[ 1024-65535 ]
  * @method string getPassword() 获取设置root帐号密码，密码规则：8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
  * @method void setPassword(string $Password) 设置设置root帐号密码，密码规则：8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
- * @method array getParamList() 获取参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询实例的可设置参数列表](https://cloud.tencent.com/document/api/236/20411)查询支持设置的参数
- * @method void setParamList(array $ParamList) 设置参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询实例的可设置参数列表](https://cloud.tencent.com/document/api/236/20411)查询支持设置的参数
+ * @method array getParamList() 获取参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662)查询支持设置的参数
+ * @method void setParamList(array $ParamList) 设置参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662)查询支持设置的参数
  * @method integer getProtectMode() 获取数据复制方式，默认为0，支持值包括：0-表示异步复制，1-表示半同步复制，2-表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
  * @method void setProtectMode(integer $ProtectMode) 设置数据复制方式，默认为0，支持值包括：0-表示异步复制，1-表示半同步复制，2-表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
  * @method integer getDeployMode() 获取多可用区域，默认为0，支持值包括：0-表示单可用区，1-表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
@@ -137,7 +137,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $Password;
 
     /**
-     * @var array 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询实例的可设置参数列表](https://cloud.tencent.com/document/api/236/20411)查询支持设置的参数
+     * @var array 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662)查询支持设置的参数
      */
     public $ParamList;
 
@@ -199,7 +199,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param string $MasterRegion 主实例的可用区信息，购买灾备实例时必填
      * @param integer $Port 自定义端口，端口支持范围：[ 1024-65535 ]
      * @param string $Password 设置root帐号密码，密码规则：8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
-     * @param array $ParamList 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询实例的可设置参数列表](https://cloud.tencent.com/document/api/236/20411)查询支持设置的参数
+     * @param array $ParamList 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662)查询支持设置的参数
      * @param integer $ProtectMode 数据复制方式，默认为0，支持值包括：0-表示异步复制，1-表示半同步复制，2-表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
      * @param integer $DeployMode 多可用区域，默认为0，支持值包括：0-表示单可用区，1-表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
      * @param string $SlaveZone 备库1的可用区ID，默认为zoneId的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义

@@ -18,8 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTxid() 获取交易编号
- * @method void setTxid(string $Txid) 设置交易编号
+ * @method string getTxid() 获取交易ID
+ * @method void setTxid(string $Txid) 设置交易ID
  * @method string getEvents() 获取交易执行结果
  * @method void setEvents(string $Events) 设置交易执行结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class InvokeResponse extends AbstractModel
 {
     /**
-     * @var string 交易编号
+     * @var string 交易ID
      */
     public $Txid;
 
@@ -46,7 +46,7 @@ class InvokeResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $Txid 交易编号
+     * @param string $Txid 交易ID
      * @param string $Events 交易执行结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

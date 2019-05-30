@@ -75,9 +75,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAliases() 获取设备名称列表
  * @method void setAliases(array $Aliases) 设置设备名称列表
  * @method integer getCpuId() 获取CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
  * @method void setCpuId(integer $CpuId) 设置CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
  * @method integer getContainRaidCard() 获取是否有RAID卡，取值：1(有) 0(无)，自定义机型需要传入
  * @method void setContainRaidCard(integer $ContainRaidCard) 设置是否有RAID卡，取值：1(有) 0(无)，自定义机型需要传入
  * @method integer getMemSize() 获取内存大小，单位为G，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/10968)返回值
@@ -243,7 +243,7 @@ class BuyDevicesRequest extends AbstractModel
 
     /**
      * @var integer CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
      */
     public $CpuId;
 
@@ -316,7 +316,7 @@ class BuyDevicesRequest extends AbstractModel
      * @param array $LanIps 指定的内网IP列表，不指定时自动分配
      * @param array $Aliases 设备名称列表
      * @param integer $CpuId CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
      * @param integer $ContainRaidCard 是否有RAID卡，取值：1(有) 0(无)，自定义机型需要传入
      * @param integer $MemSize 内存大小，单位为G，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/10968)返回值
      * @param integer $SystemDiskTypeId 系统盘ID，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/10968)返回值

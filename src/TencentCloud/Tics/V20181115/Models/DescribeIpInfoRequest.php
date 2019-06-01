@@ -18,8 +18,8 @@ namespace TencentCloud\Tics\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getKey() 获取要查询的域名
- * @method void setKey(string $Key) 设置要查询的域名
+ * @method string getKey() 获取要查询的IP
+ * @method void setKey(string $Key) 设置要查询的IP
  * @method integer getOption() 获取附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
  * @method void setOption(integer $Option) 设置附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeIpInfoRequest extends AbstractModel
 {
     /**
-     * @var string 要查询的域名
+     * @var string 要查询的IP
      */
     public $Key;
 
@@ -39,7 +39,7 @@ class DescribeIpInfoRequest extends AbstractModel
      */
     public $Option;
     /**
-     * @param string $Key 要查询的域名
+     * @param string $Key 要查询的IP
      * @param integer $Option 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
      */
     function __construct()

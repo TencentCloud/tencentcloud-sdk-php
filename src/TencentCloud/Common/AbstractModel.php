@@ -107,7 +107,12 @@ abstract class AbstractModel
 
     public function toJsonString()
     {
-        return json_encode($this->serialize(), JSON_UNESCAPED_UNICODE);
+        $r = $this->serialize();
+        // it is an object rather than an array
+        if (empty($r)) {
+            return "{}";
+        }
+        return json_encode($r, JSON_UNESCAPED_UNICODE);
     }
 
     public function __call($member, $param)

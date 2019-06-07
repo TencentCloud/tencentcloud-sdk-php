@@ -46,6 +46,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
  * @method string getAddTimestamp() 获取创建时间戳。
  * @method void setAddTimestamp(string $AddTimestamp) 设置创建时间戳。
+ * @method integer getCustomHealthSwitch() 获取是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
+ * @method void setCustomHealthSwitch(integer $CustomHealthSwitch) 设置是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
+ * @method string getInputType() 获取自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。
+ * @method void setInputType(string $InputType) 设置自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。
+ * @method integer getLineSeparatorType() 获取探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
+ * @method void setLineSeparatorType(integer $LineSeparatorType) 设置探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
+ * @method string getHealthRequest() 获取自定义探测请求内容。
+ * @method void setHealthRequest(string $HealthRequest) 设置自定义探测请求内容。
+ * @method string getHealthResponse() 获取自定义探测返回内容。
+ * @method void setHealthResponse(string $HealthResponse) 设置自定义探测返回内容。
+ * @method integer getToaFlag() 获取是否开启toa：1（开启）、0（关闭）。
+ * @method void setToaFlag(integer $ToaFlag) 设置是否开启toa：1（开启）、0（关闭）。
+ * @method string getBalanceMode() 获取转发后端服务器调度类型。
+ * @method void setBalanceMode(string $BalanceMode) 设置转发后端服务器调度类型。
  */
 
 /**
@@ -123,6 +137,41 @@ class L4ListenerInfo extends AbstractModel
      * @var string 创建时间戳。
      */
     public $AddTimestamp;
+
+    /**
+     * @var integer 是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
+     */
+    public $CustomHealthSwitch;
+
+    /**
+     * @var string 自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。
+     */
+    public $InputType;
+
+    /**
+     * @var integer 探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
+     */
+    public $LineSeparatorType;
+
+    /**
+     * @var string 自定义探测请求内容。
+     */
+    public $HealthRequest;
+
+    /**
+     * @var string 自定义探测返回内容。
+     */
+    public $HealthResponse;
+
+    /**
+     * @var integer 是否开启toa：1（开启）、0（关闭）。
+     */
+    public $ToaFlag;
+
+    /**
+     * @var string 转发后端服务器调度类型。
+     */
+    public $BalanceMode;
     /**
      * @param string $ListenerId 监听器ID。
      * @param string $ListenerName 用户自定义的监听器名称。
@@ -138,6 +187,13 @@ class L4ListenerInfo extends AbstractModel
      * @param integer $UnhealthNum 负载均衡监听器不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发不正常，可选值：2-10，单位：次。
      * @param integer $Status 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      * @param string $AddTimestamp 创建时间戳。
+     * @param integer $CustomHealthSwitch 是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
+     * @param string $InputType 自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。
+     * @param integer $LineSeparatorType 探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
+     * @param string $HealthRequest 自定义探测请求内容。
+     * @param string $HealthResponse 自定义探测返回内容。
+     * @param integer $ToaFlag 是否开启toa：1（开启）、0（关闭）。
+     * @param string $BalanceMode 转发后端服务器调度类型。
      */
     function __construct()
     {
@@ -205,6 +261,34 @@ class L4ListenerInfo extends AbstractModel
 
         if (array_key_exists("AddTimestamp",$param) and $param["AddTimestamp"] !== null) {
             $this->AddTimestamp = $param["AddTimestamp"];
+        }
+
+        if (array_key_exists("CustomHealthSwitch",$param) and $param["CustomHealthSwitch"] !== null) {
+            $this->CustomHealthSwitch = $param["CustomHealthSwitch"];
+        }
+
+        if (array_key_exists("InputType",$param) and $param["InputType"] !== null) {
+            $this->InputType = $param["InputType"];
+        }
+
+        if (array_key_exists("LineSeparatorType",$param) and $param["LineSeparatorType"] !== null) {
+            $this->LineSeparatorType = $param["LineSeparatorType"];
+        }
+
+        if (array_key_exists("HealthRequest",$param) and $param["HealthRequest"] !== null) {
+            $this->HealthRequest = $param["HealthRequest"];
+        }
+
+        if (array_key_exists("HealthResponse",$param) and $param["HealthResponse"] !== null) {
+            $this->HealthResponse = $param["HealthResponse"];
+        }
+
+        if (array_key_exists("ToaFlag",$param) and $param["ToaFlag"] !== null) {
+            $this->ToaFlag = $param["ToaFlag"];
+        }
+
+        if (array_key_exists("BalanceMode",$param) and $param["BalanceMode"] !== null) {
+            $this->BalanceMode = $param["BalanceMode"];
         }
     }
 }

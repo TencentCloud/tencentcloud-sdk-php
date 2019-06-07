@@ -18,10 +18,10 @@ namespace TencentCloud\Msp\V20180319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStatus() 获取任务状态
- * @method void setStatus(string $Status) 设置任务状态
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method string getStatus() 获取任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
+ * @method void setStatus(string $Status) 设置任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
+ * @method string getTaskId() 获取任务ID，例如msp-jitoh33n
+ * @method void setTaskId(string $TaskId) 设置任务ID，例如msp-jitoh33n
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class ModifyMigrationTaskStatusRequest extends AbstractModel
 {
     /**
-     * @var string 任务状态
+     * @var string 任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
      */
     public $Status;
 
     /**
-     * @var string 任务ID
+     * @var string 任务ID，例如msp-jitoh33n
      */
     public $TaskId;
     /**
-     * @param string $Status 任务状态
-     * @param string $TaskId 任务ID
+     * @param string $Status 任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
+     * @param string $TaskId 任务ID，例如msp-jitoh33n
      */
     function __construct()
     {

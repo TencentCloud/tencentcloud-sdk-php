@@ -70,8 +70,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBzL4Metrics(string $BzL4Metrics) 设置保障型网关四层计费指标
  * @method string getBzL7Metrics() 获取保障型网关七层计费指标
  * @method void setBzL7Metrics(string $BzL7Metrics) 设置保障型网关七层计费指标
- * @method string getIspId() 获取Isp类型。5:腾讯CAP;7:内网。
- * @method void setIspId(string $IspId) 设置Isp类型。5:腾讯CAP;7:内网。
  */
 
 /**
@@ -208,11 +206,6 @@ class LoadBalancer extends AbstractModel
      * @var string 保障型网关七层计费指标
      */
     public $BzL7Metrics;
-
-    /**
-     * @var string Isp类型。5:腾讯CAP;7:内网。
-     */
-    public $IspId;
     /**
      * @param string $LoadBalancerId 负载均衡器ID
      * @param integer $ProjectId 项目ID，通过v2/DescribeProject 接口获得
@@ -240,7 +233,6 @@ class LoadBalancer extends AbstractModel
      * @param string $BzPayMode 保障型网关计费形式
      * @param string $BzL4Metrics 保障型网关四层计费指标
      * @param string $BzL7Metrics 保障型网关七层计费指标
-     * @param string $IspId Isp类型。5:腾讯CAP;7:内网。
      */
     function __construct()
     {
@@ -356,10 +348,6 @@ class LoadBalancer extends AbstractModel
 
         if (array_key_exists("BzL7Metrics",$param) and $param["BzL7Metrics"] !== null) {
             $this->BzL7Metrics = $param["BzL7Metrics"];
-        }
-
-        if (array_key_exists("IspId",$param) and $param["IspId"] !== null) {
-            $this->IspId = $param["IspId"];
         }
     }
 }

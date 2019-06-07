@@ -21,7 +21,8 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskType() 获取任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
-<li>WechatPublish：微信发布任务。</li>
+<li>WechatPublish：微信发布任务；</li>
+<li>ComposeMedia：制作媒体文件任务。</li>
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>
 <li>SnapshotByTimeOffset：视频截图任务；</li>
@@ -31,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskType(string $TaskType) 设置任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
-<li>WechatPublish：微信发布任务。</li>
+<li>WechatPublish：微信发布任务；</li>
+<li>ComposeMedia：制作媒体文件任务。</li>
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>
 <li>SnapshotByTimeOffset：视频截图任务；</li>
@@ -84,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateImageSpriteTask(CreateImageSpriteTask2017 $CreateImageSpriteTask) 设置截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ComposeMediaTask getComposeMediaTask() 获取制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setComposeMediaTask(ComposeMediaTask $ComposeMediaTask) 设置制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -97,7 +103,8 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @var string 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
-<li>WechatPublish：微信发布任务。</li>
+<li>WechatPublish：微信发布任务；</li>
+<li>ComposeMedia：制作媒体文件任务。</li>
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>
 <li>SnapshotByTimeOffset：视频截图任务；</li>
@@ -179,6 +186,12 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $CreateImageSpriteTask;
 
     /**
+     * @var ComposeMediaTask 制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ComposeMediaTask;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -186,7 +199,8 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param string $TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
-<li>WechatPublish：微信发布任务。</li>
+<li>WechatPublish：微信发布任务；</li>
+<li>ComposeMedia：制作媒体文件任务。</li>
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>
 <li>SnapshotByTimeOffset：视频截图任务；</li>
@@ -215,6 +229,8 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param ClipTask2017 $ClipTask 视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateImageSpriteTask2017 $CreateImageSpriteTask 截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ComposeMediaTask $ComposeMediaTask 制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -288,6 +304,11 @@ class DescribeTaskDetailResponse extends AbstractModel
         if (array_key_exists("CreateImageSpriteTask",$param) and $param["CreateImageSpriteTask"] !== null) {
             $this->CreateImageSpriteTask = new CreateImageSpriteTask2017();
             $this->CreateImageSpriteTask->deserialize($param["CreateImageSpriteTask"]);
+        }
+
+        if (array_key_exists("ComposeMediaTask",$param) and $param["ComposeMediaTask"] !== null) {
+            $this->ComposeMediaTask = new ComposeMediaTask();
+            $this->ComposeMediaTask->deserialize($param["ComposeMediaTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

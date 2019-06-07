@@ -20,11 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getCodec() 获取音频流的编码格式，可选值：
 <li>libfdk_aac：适合 mp4 文件。</li>
-<li>libmp3lame：适合 mp3 文件。</li>
 默认值：libfdk_aac。
  * @method void setCodec(string $Codec) 设置音频流的编码格式，可选值：
 <li>libfdk_aac：适合 mp4 文件。</li>
-<li>libmp3lame：适合 mp3 文件。</li>
 默认值：libfdk_aac。
  * @method integer getSampleRate() 获取音频流的采样率，可选值：
 <li>16000</li>
@@ -58,7 +56,6 @@ class OutputAudioStream extends AbstractModel
     /**
      * @var string 音频流的编码格式，可选值：
 <li>libfdk_aac：适合 mp4 文件。</li>
-<li>libmp3lame：适合 mp3 文件。</li>
 默认值：libfdk_aac。
      */
     public $Codec;
@@ -84,7 +81,6 @@ class OutputAudioStream extends AbstractModel
     /**
      * @param string $Codec 音频流的编码格式，可选值：
 <li>libfdk_aac：适合 mp4 文件。</li>
-<li>libmp3lame：适合 mp3 文件。</li>
 默认值：libfdk_aac。
      * @param integer $SampleRate 音频流的采样率，可选值：
 <li>16000</li>

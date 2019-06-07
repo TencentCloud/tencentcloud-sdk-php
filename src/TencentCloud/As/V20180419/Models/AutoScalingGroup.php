@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetryPolicy(string $RetryPolicy) 设置重试策略
  * @method string getInActivityStatus() 获取伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
  * @method void setInActivityStatus(string $InActivityStatus) 设置伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
+ * @method array getTags() 获取伸缩组标签列表
+ * @method void setTags(array $Tags) 设置伸缩组标签列表
  */
 
 /**
@@ -178,6 +180,11 @@ class AutoScalingGroup extends AbstractModel
      * @var string 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
      */
     public $InActivityStatus;
+
+    /**
+     * @var array 伸缩组标签列表
+     */
+    public $Tags;
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $AutoScalingGroupName 伸缩组名称
@@ -201,6 +208,7 @@ class AutoScalingGroup extends AbstractModel
      * @param array $ZoneSet 可用区列表
      * @param string $RetryPolicy 重试策略
      * @param string $InActivityStatus 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
+     * @param array $Tags 伸缩组标签列表
      */
     function __construct()
     {
@@ -305,6 +313,15 @@ class AutoScalingGroup extends AbstractModel
 
         if (array_key_exists("InActivityStatus",$param) and $param["InActivityStatus"] !== null) {
             $this->InActivityStatus = $param["InActivityStatus"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

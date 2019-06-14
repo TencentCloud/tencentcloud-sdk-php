@@ -22,7 +22,6 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tbp\V20190311\Models as Models;
 
 /**
-* @method Models\PostAudioResponse PostAudio(Models\PostAudioRequest $req) 机器人会话接口，接收音频信息，传递给后台机器人
 * @method Models\PostTextResponse PostText(Models\PostTextRequest $req) 机器人会话接口，接收文本信息，传递给后台机器人
 * @method Models\ResetResponse Reset(Models\ResetRequest $req) 对当前机器人的会话状态进行复位
  */

@@ -30,9 +30,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) 设置错误信息。
  * @method string getFileId() 获取转拉上传完成后生成的视频 ID。
  * @method void setFileId(string $FileId) 设置转拉上传完成后生成的视频 ID。
- * @method string getMediaBasicInfo() 获取上传完成后生成的媒体文件基础信息。
+ * @method MediaBasicInfo getMediaBasicInfo() 获取转拉完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMediaBasicInfo(string $MediaBasicInfo) 设置上传完成后生成的媒体文件基础信息。
+ * @method void setMediaBasicInfo(MediaBasicInfo $MediaBasicInfo) 设置转拉完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileUrl() 获取转拉上传完成后生成的播放地址。
  * @method void setFileUrl(string $FileUrl) 设置转拉上传完成后生成的播放地址。
@@ -68,7 +68,7 @@ class PullFileTask extends AbstractModel
     public $FileId;
 
     /**
-     * @var string 上传完成后生成的媒体文件基础信息。
+     * @var MediaBasicInfo 转拉完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MediaBasicInfo;
@@ -89,7 +89,7 @@ class PullFileTask extends AbstractModel
 <li>其他值：失败。</li>
      * @param string $Message 错误信息。
      * @param string $FileId 转拉上传完成后生成的视频 ID。
-     * @param string $MediaBasicInfo 上传完成后生成的媒体文件基础信息。
+     * @param MediaBasicInfo $MediaBasicInfo 转拉完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileUrl 转拉上传完成后生成的播放地址。
      * @param string $ProcedureTaskId 若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
@@ -123,7 +123,8 @@ class PullFileTask extends AbstractModel
         }
 
         if (array_key_exists("MediaBasicInfo",$param) and $param["MediaBasicInfo"] !== null) {
-            $this->MediaBasicInfo = $param["MediaBasicInfo"];
+            $this->MediaBasicInfo = new MediaBasicInfo();
+            $this->MediaBasicInfo->deserialize($param["MediaBasicInfo"]);
         }
 
         if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {

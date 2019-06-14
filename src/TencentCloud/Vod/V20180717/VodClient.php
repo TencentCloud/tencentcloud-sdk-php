@@ -98,6 +98,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 7. 对点播中的多个流进行剪辑，然后拼接，生成一个新的视频。
 
 对于生成的新视频，还可以指定生成后的视频是否要执行任务流。
+* @method Models\ExecuteFunctionResponse ExecuteFunction(Models\ExecuteFunctionRequest $req) 本接口仅用于定制开发的特殊场景，除非云点播客服人员主动告知您需要使用本接口，其它情况请勿调用。
 * @method Models\LiveRealTimeClipResponse LiveRealTimeClip(Models\LiveRealTimeClipRequest $req) 直播即时剪辑，是指在直播过程中（即直播尚未结束时），客户可以在过往直播内容中选择一段，实时生成一个新的视频（HLS 格式），开发者可以将其立即分享出去，或者长久保存起来。
 
 腾讯云点播支持两种即时剪辑模式：
@@ -157,6 +158,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * 接口为长轮询模式，即：如果服务端存在未消费事件，则立即返回给请求方；如果服务端没有未消费事件，则后台会将请求挂起，直到有新的事件产生为止；
 * 请求最多挂起 5 秒，建议请求方将超时时间设置为 10 秒；
 * 若该接口有事件返回，调用方必须再调用[确认事件通知](https://cloud.tencent.com/document/product/266/33434)接口，确认事件通知已经处理，否则该事件通知后续会再次被拉取到。
+* @method Models\PushUrlCacheResponse PushUrlCache(Models\PushUrlCacheRequest $req) 1. 预热指定的 URL 列表。
+2. URL 的域名必须已在云点播中注册。
+3. 单次请求最多指定20个 URL。
 * @method Models\ResetProcedureTemplateResponse ResetProcedureTemplate(Models\ResetProcedureTemplateRequest $req) 重新设置已存在的任务流模板的任务内容
 * @method Models\SearchMediaResponse SearchMedia(Models\SearchMediaRequest $req) 搜索媒体信息，支持各种条件筛选，以及对返回结果进行排序、过滤等功能，具体包括：
 - 根据媒体文件名或描述信息进行文本模糊搜索。

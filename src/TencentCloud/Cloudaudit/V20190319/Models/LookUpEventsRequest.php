@@ -24,8 +24,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置开始时间
  * @method array getLookupAttributes() 获取检索条件
  * @method void setLookupAttributes(array $LookupAttributes) 设置检索条件
- * @method integer getIsApiV3() 获取是否调用新的查询接口
- * @method void setIsApiV3(integer $IsApiV3) 设置是否调用新的查询接口
  * @method integer getMaxResults() 获取返回日志的最大条数
  * @method void setMaxResults(integer $MaxResults) 设置返回日志的最大条数
  * @method string getNextToken() 获取查看更多日志的凭证
@@ -53,11 +51,6 @@ class LookUpEventsRequest extends AbstractModel
     public $LookupAttributes;
 
     /**
-     * @var integer 是否调用新的查询接口
-     */
-    public $IsApiV3;
-
-    /**
      * @var integer 返回日志的最大条数
      */
     public $MaxResults;
@@ -70,7 +63,6 @@ class LookUpEventsRequest extends AbstractModel
      * @param integer $EndTime 结束时间
      * @param integer $StartTime 开始时间
      * @param array $LookupAttributes 检索条件
-     * @param integer $IsApiV3 是否调用新的查询接口
      * @param integer $MaxResults 返回日志的最大条数
      * @param string $NextToken 查看更多日志的凭证
      */
@@ -101,10 +93,6 @@ class LookUpEventsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->LookupAttributes, $obj);
             }
-        }
-
-        if (array_key_exists("IsApiV3",$param) and $param["IsApiV3"] !== null) {
-            $this->IsApiV3 = $param["IsApiV3"];
         }
 
         if (array_key_exists("MaxResults",$param) and $param["MaxResults"] !== null) {

@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCmqRegion(string $CmqRegion) 设置队列所在的地域。可以通过ListCmqEnableRegion获取支持的cmq地域。如果IsEnableCmqNotify值是1的话，此值属于必填字段。
  * @method integer getIsCreateNewQueue() 获取是否创建新的队列。1：是，0：否。如果IsEnableCmqNotify值是1的话，此值属于必填字段。
  * @method void setIsCreateNewQueue(integer $IsCreateNewQueue) 设置是否创建新的队列。1：是，0：否。如果IsEnableCmqNotify值是1的话，此值属于必填字段。
- * @method string getLogFilePrefix() 获取日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。可以不填，默认以账号ID做为日志前缀。
- * @method void setLogFilePrefix(string $LogFilePrefix) 设置日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。可以不填，默认以账号ID做为日志前缀。
+ * @method string getLogFilePrefix() 获取日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。可以不填，默认以账号ID作为日志前缀。
+ * @method void setLogFilePrefix(string $LogFilePrefix) 设置日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。可以不填，默认以账号ID作为日志前缀。
  */
 
 /**
@@ -91,7 +91,7 @@ class CreateAuditRequest extends AbstractModel
     public $IsCreateNewQueue;
 
     /**
-     * @var string 日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。可以不填，默认以账号ID做为日志前缀。
+     * @var string 日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。可以不填，默认以账号ID作为日志前缀。
      */
     public $LogFilePrefix;
     /**
@@ -104,7 +104,7 @@ class CreateAuditRequest extends AbstractModel
      * @param string $CmqQueueName 队列名称。队列名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。如果IsEnableCmqNotify值是1的话，此值属于必填字段。如果不是新创建的队列，云审计不会去校验该队列是否真的存在，请谨慎填写，避免日志通知不成功，导致您的数据丢失。
      * @param string $CmqRegion 队列所在的地域。可以通过ListCmqEnableRegion获取支持的cmq地域。如果IsEnableCmqNotify值是1的话，此值属于必填字段。
      * @param integer $IsCreateNewQueue 是否创建新的队列。1：是，0：否。如果IsEnableCmqNotify值是1的话，此值属于必填字段。
-     * @param string $LogFilePrefix 日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。可以不填，默认以账号ID做为日志前缀。
+     * @param string $LogFilePrefix 日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。可以不填，默认以账号ID作为日志前缀。
      */
     function __construct()
     {

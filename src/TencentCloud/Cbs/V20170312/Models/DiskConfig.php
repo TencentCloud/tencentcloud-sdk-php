@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxDiskSize(integer $MaxDiskSize) 设置最大可配置云盘大小，单位GB。
  * @method integer getMinDiskSize() 获取最小可配置云盘大小，单位GB。
  * @method void setMinDiskSize(integer $MinDiskSize) 设置最小可配置云盘大小，单位GB。
- * @method string getZone() 获取所在[可用区](/document/api/213/9452#zone)。
- * @method void setZone(string $Zone) 设置所在[可用区](/document/api/213/9452#zone)。
+ * @method string getZone() 获取云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
+ * @method void setZone(string $Zone) 设置云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
  * @method string getDeviceClass() 获取实例机型。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceClass(string $DeviceClass) 设置实例机型。
@@ -78,7 +78,7 @@ class DiskConfig extends AbstractModel
     public $MinDiskSize;
 
     /**
-     * @var string 所在[可用区](/document/api/213/9452#zone)。
+     * @var string 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
      */
     public $Zone;
 
@@ -100,7 +100,7 @@ class DiskConfig extends AbstractModel
      * @param string $DiskChargeType 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
      * @param integer $MaxDiskSize 最大可配置云盘大小，单位GB。
      * @param integer $MinDiskSize 最小可配置云盘大小，单位GB。
-     * @param string $Zone 所在[可用区](/document/api/213/9452#zone)。
+     * @param string $Zone 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
      * @param string $DeviceClass 实例机型。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceFamily 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)

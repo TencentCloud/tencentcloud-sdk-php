@@ -19,10 +19,10 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getName() 获取映射查询类别：
-ips：运营商映射查询
+isp：运营商映射查询
 district：省份映射查询
  * @method void setName(string $Name) 设置映射查询类别：
-ips：运营商映射查询
+isp：运营商映射查询
 district：省份映射查询
  */
 
@@ -33,13 +33,13 @@ class DescribeMapInfoRequest extends AbstractModel
 {
     /**
      * @var string 映射查询类别：
-ips：运营商映射查询
+isp：运营商映射查询
 district：省份映射查询
      */
     public $Name;
     /**
      * @param string $Name 映射查询类别：
-ips：运营商映射查询
+isp：运营商映射查询
 district：省份映射查询
      */
     function __construct()

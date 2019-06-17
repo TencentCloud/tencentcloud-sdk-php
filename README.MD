@@ -22,7 +22,7 @@
     > require 'vendor/autoload.php';
 
 ## 通过源码包安装
-1. 前往 [Github 代码托管地址](https://github.com/tencentcloud/tencentcloud-sdk-php) 下载源码压缩包。
+1. 前往 [Github 代码托管地址](https://github.com/tencentcloud/tencentcloud-sdk-php) 克隆源码。注意：必须使用`git clone`的方式，直接下载源码包将不会包含必要的依赖文件。
 2. 解压源码包到您项目合适的位置。
 3. 添加以下引用代码，引用方法可参考示例。
     > require_once '../TCloudAutoLoader.php';

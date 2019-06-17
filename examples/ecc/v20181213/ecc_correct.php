@@ -15,7 +15,7 @@ use TencentCloud\Common\Profile\HttpProfile;
 
 try {
     // 实例化一个证书对象，入参需要传入腾讯云账户secretId，secretKey
-    $cred = new Credential("", "");
+    $cred = new Credential("AKIDq9MQI1PuGTUJvOQpmW8kFYihT2PZ9QJ6", "jGeqqfHm7GDxYxBGD6tXzEHBtRn041mL");
     //$cred = new Credential(getenv("TENCENTCLOUD_SECRET_ID"), getenv("TENCENTCLOUD_SECRET_KEY"));
 
     // 实例化一个http选项，可选的，没有特殊需求可以跳过
@@ -29,14 +29,13 @@ try {
     $clientProfile->setSignMethod("HmacSHA256");  // 指定签名算法(默认为HmacSHA256)
     $clientProfile->setHttpProfile($httpProfile);
 
-    // 实例化要请求产品(以cvm为例)的client对象,clientProfile是可选的
     $client = new EccClient($cred, "ap-shanghai", $clientProfile);
 
     // 实例化一个ecc实例信息查询请求对象,每个接口都会对应一个request对象。
-      $req = new ECCRequest();
-      $req->Content = "this composition content";
+    $req = new ECCRequest();
+    $req->Content = "this composition content";
 
-     $resp = $client->ECC($req);
+    $resp = $client->ECC($req);
 
     // 输出json格式的字符串回包
     print_r($resp->toJsonString());

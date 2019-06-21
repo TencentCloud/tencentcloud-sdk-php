@@ -32,12 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpeed(float $Speed) 设置语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>输入除以上整数之外的其他参数不生效，按默认值处理。
  * @method integer getProjectId() 获取项目id，用户自定义，默认为0。
  * @method void setProjectId(integer $ProjectId) 设置项目id，用户自定义，默认为0。
- * @method integer getVoiceType() 获取音色<li>0-亲和女声默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
- * @method void setVoiceType(integer $VoiceType) 设置音色<li>0-亲和女声默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+ * @method integer getVoiceType() 获取音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+ * @method void setVoiceType(integer $VoiceType) 设置音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
  * @method integer getPrimaryLanguage() 获取主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
  * @method void setPrimaryLanguage(integer $PrimaryLanguage) 设置主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
  * @method integer getSampleRate() 获取音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
  * @method void setSampleRate(integer $SampleRate) 设置音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
+ * @method string getCodec() 获取返回音频格式，可取值：wav（默认），mp3
+ * @method void setCodec(string $Codec) 设置返回音频格式，可取值：wav（默认），mp3
  */
 
 /**
@@ -77,7 +79,7 @@ class TextToVoiceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 音色<li>0-亲和女声默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+     * @var integer 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
      */
     public $VoiceType;
 
@@ -90,6 +92,11 @@ class TextToVoiceRequest extends AbstractModel
      * @var integer 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
      */
     public $SampleRate;
+
+    /**
+     * @var string 返回音频格式，可取值：wav（默认），mp3
+     */
+    public $Codec;
     /**
      * @param string $Text 合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符
      * @param string $SessionId 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
@@ -98,9 +105,10 @@ class TextToVoiceRequest extends AbstractModel
 输入除以上整数之外的其他参数不生效，按默认值处理。
      * @param float $Speed 语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>输入除以上整数之外的其他参数不生效，按默认值处理。
      * @param integer $ProjectId 项目id，用户自定义，默认为0。
-     * @param integer $VoiceType 音色<li>0-亲和女声默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+     * @param integer $VoiceType 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
      * @param integer $PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
      * @param integer $SampleRate 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
+     * @param string $Codec 返回音频格式，可取值：wav（默认），mp3
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ class TextToVoiceRequest extends AbstractModel
 
         if (array_key_exists("SampleRate",$param) and $param["SampleRate"] !== null) {
             $this->SampleRate = $param["SampleRate"];
+        }
+
+        if (array_key_exists("Codec",$param) and $param["Codec"] !== null) {
+            $this->Codec = $param["Codec"];
         }
     }
 }

@@ -24,7 +24,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置姓名
  * @method string getBankCard() 获取银行卡
  * @method void setBankCard(string $BankCard) 设置银行卡
- * @method integer getCertType() 获取证件类型（不填默认0）
+ * @method integer getCertType() 获取证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。（不填默认0）
 0 身份证
 1 军官证
 2 护照
@@ -33,7 +33,7 @@ use TencentCloud\Common\AbstractModel;
 5 警官证
 6 士兵证
 7 其它证件
- * @method void setCertType(integer $CertType) 设置证件类型（不填默认0）
+ * @method void setCertType(integer $CertType) 设置证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。（不填默认0）
 0 身份证
 1 军官证
 2 护照
@@ -65,7 +65,7 @@ class BankCardVerificationRequest extends AbstractModel
     public $BankCard;
 
     /**
-     * @var integer 证件类型（不填默认0）
+     * @var integer 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。（不填默认0）
 0 身份证
 1 军官证
 2 护照
@@ -80,7 +80,7 @@ class BankCardVerificationRequest extends AbstractModel
      * @param string $IdCard 身份证号
      * @param string $Name 姓名
      * @param string $BankCard 银行卡
-     * @param integer $CertType 证件类型（不填默认0）
+     * @param integer $CertType 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。（不填默认0）
 0 身份证
 1 军官证
 2 护照

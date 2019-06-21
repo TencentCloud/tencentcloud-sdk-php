@@ -23,15 +23,13 @@ use TencentCloud\Cms\V20190321\Models as Models;
 
 /**
 * @method Models\AudioModerationResponse AudioModeration(Models\AudioModerationRequest $req) 音频内容检测（Audio Moderation, AM）服务使用了波形分析、声纹分析等技术，能识别涉黄、涉政、涉恐等违规音频，同时支持用户配置音频黑库，打击自定义的违规内容。
-
-通过API直接上传音频即可进行检测，对于高危部分直接屏蔽，可疑部分人工复审，从而节省审核人力，释放业务风险。
+* @method Models\CreateTextSampleResponse CreateTextSample(Models\CreateTextSampleRequest $req) 新增文本类型样本库
+* @method Models\DeleteTextSampleResponse DeleteTextSample(Models\DeleteTextSampleRequest $req) 删除文字样本库，暂时只支持单个删除
 * @method Models\DescribeModerationOverviewResponse DescribeModerationOverview(Models\DescribeModerationOverviewRequest $req) 根据日期，渠道和服务类型查询识别结果概览数据
+* @method Models\DescribeTextSampleResponse DescribeTextSample(Models\DescribeTextSampleRequest $req) 支持批量查询文字样本库
 * @method Models\ImageModerationResponse ImageModeration(Models\ImageModerationRequest $req) 图片内容检测服务（Image Moderation, IM）能自动扫描图片，识别涉黄、涉恐、涉政、涉毒等有害内容，同时支持用户配置图片黑名单，打击自定义的违规图片。
-通过API获取检测的标签及置信度，可直接采信高置信度的结果，人工复审低置信度的结果，从而降低人工成本，提高审核效率。
 * @method Models\TextModerationResponse TextModeration(Models\TextModerationRequest $req) 文本内容检测（Text Moderation）服务使用了深度学习技术，识别涉黄、涉政、涉恐等有害内容，同时支持用户配置词库，打击自定义的违规文本。
-通过API接口，能检测内容的危险等级，对于高危部分直接过滤，可疑部分人工复审，从而节省审核人力，释放业务风险。
 * @method Models\VideoModerationResponse VideoModeration(Models\VideoModerationRequest $req) 视频内容检测（Video Moderation, VM）服务能识别涉黄、涉政、涉恐等违规视频，同时支持用户配置视频黑库，打击自定义的违规内容。
-通过API直接上传视频即可进行检测，对于高危部分直接过滤，可疑部分人工复审，从而节省审核人力，释放业务风险。
  */
 
 class CmsClient extends AbstractClient

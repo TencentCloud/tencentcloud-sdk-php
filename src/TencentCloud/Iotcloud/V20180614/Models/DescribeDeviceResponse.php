@@ -52,6 +52,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogLevel(integer $LogLevel) 设置设备的sdk日志等级
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFirstOnlineTime() 获取首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFirstOnlineTime(integer $FirstOnlineTime) 设置首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLastOfflineTime() 获取最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastOfflineTime(integer $LastOfflineTime) 设置最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTime() 获取设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(integer $CreateTime) 设置设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCertState() 获取设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCertState(integer $CertState) 设置设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableState() 获取设备启用状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableState(integer $EnableState) 设置设备启用状态
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -143,6 +163,36 @@ class DescribeDeviceResponse extends AbstractModel
     public $LogLevel;
 
     /**
+     * @var integer 首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FirstOnlineTime;
+
+    /**
+     * @var integer 最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastOfflineTime;
+
+    /**
+     * @var integer 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
+     * @var integer 设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CertState;
+
+    /**
+     * @var integer 设备启用状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableState;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -163,6 +213,16 @@ class DescribeDeviceResponse extends AbstractModel
      * @param string $LoraDevEui Lora设备的dev eui
      * @param integer $LoraMoteType Lora设备的mote type
      * @param integer $LogLevel 设备的sdk日志等级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FirstOnlineTime 首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LastOfflineTime 最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTime 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CertState 设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableState 设备启用状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -245,6 +305,26 @@ class DescribeDeviceResponse extends AbstractModel
 
         if (array_key_exists("LogLevel",$param) and $param["LogLevel"] !== null) {
             $this->LogLevel = $param["LogLevel"];
+        }
+
+        if (array_key_exists("FirstOnlineTime",$param) and $param["FirstOnlineTime"] !== null) {
+            $this->FirstOnlineTime = $param["FirstOnlineTime"];
+        }
+
+        if (array_key_exists("LastOfflineTime",$param) and $param["LastOfflineTime"] !== null) {
+            $this->LastOfflineTime = $param["LastOfflineTime"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("CertState",$param) and $param["CertState"] !== null) {
+            $this->CertState = $param["CertState"];
+        }
+
+        if (array_key_exists("EnableState",$param) and $param["EnableState"] !== null) {
+            $this->EnableState = $param["EnableState"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -94,6 +94,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQps(integer $Qps) 设置每秒查询数量
  * @method string getZoneName() 获取可用区中文名称
  * @method void setZoneName(string $ZoneName) 设置可用区中文名称
+ * @method string getDeviceClass() 获取物理机型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceClass(string $DeviceClass) 设置物理机型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -290,6 +294,12 @@ class InstanceInfo extends AbstractModel
      * @var string 可用区中文名称
      */
     public $ZoneName;
+
+    /**
+     * @var string 物理机型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceClass;
     /**
      * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @param string $Zone 可用区信息
@@ -329,6 +339,8 @@ class InstanceInfo extends AbstractModel
      * @param integer $Cpu 核心数
      * @param integer $Qps 每秒查询数量
      * @param string $ZoneName 可用区中文名称
+     * @param string $DeviceClass 物理机型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -505,6 +517,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
             $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("DeviceClass",$param) and $param["DeviceClass"] !== null) {
+            $this->DeviceClass = $param["DeviceClass"];
         }
     }
 }

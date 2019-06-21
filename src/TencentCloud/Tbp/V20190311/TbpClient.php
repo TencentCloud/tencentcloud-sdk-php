@@ -22,8 +22,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tbp\V20190311\Models as Models;
 
 /**
-* @method Models\PostTextResponse PostText(Models\PostTextRequest $req) 机器人会话接口，接收文本信息，传递给后台机器人
 * @method Models\ResetResponse Reset(Models\ResetRequest $req) 对当前机器人的会话状态进行复位
+* @method Models\TextProcessResponse TextProcess(Models\TextProcessRequest $req) 接收调用侧的文本输入，返回应答文本。
+* @method Models\TextResetResponse TextReset(Models\TextResetRequest $req) 会话重置接口
  */
 
 class TbpClient extends AbstractClient

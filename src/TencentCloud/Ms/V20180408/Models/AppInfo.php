@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppSize(integer $AppSize) 设置app的大小
  * @method string getFileName() 获取app的文件名，指定后加固后的文件名是{FileName}_legu.apk
  * @method void setFileName(string $FileName) 设置app的文件名，指定后加固后的文件名是{FileName}_legu.apk
- * @method string getAppPkgName() 获取app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
- * @method void setAppPkgName(string $AppPkgName) 设置app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
+ * @method string getAppPkgName() 获取app的包名，需要正确的传递此字段
+ * @method void setAppPkgName(string $AppPkgName) 设置app的包名，需要正确的传递此字段
  * @method string getAppVersion() 获取app的版本号
  * @method void setAppVersion(string $AppVersion) 设置app的版本号
  * @method string getAppIconUrl() 获取app的图标url
@@ -62,7 +62,7 @@ class AppInfo extends AbstractModel
     public $FileName;
 
     /**
-     * @var string app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
+     * @var string app的包名，需要正确的传递此字段
      */
     public $AppPkgName;
 
@@ -85,7 +85,7 @@ class AppInfo extends AbstractModel
      * @param string $AppMd5 app的md5，需要正确传递
      * @param integer $AppSize app的大小
      * @param string $FileName app的文件名，指定后加固后的文件名是{FileName}_legu.apk
-     * @param string $AppPkgName app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
+     * @param string $AppPkgName app的包名，需要正确的传递此字段
      * @param string $AppVersion app的版本号
      * @param string $AppIconUrl app的图标url
      * @param string $AppName app的名称

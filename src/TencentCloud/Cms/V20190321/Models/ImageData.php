@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 20007：谩骂 
 24001：暴恐
 21000：综合
+ * @method ImageHotDetect getHotDetect() 获取图片性感详情
+ * @method void setHotDetect(ImageHotDetect $HotDetect) 设置图片性感详情
  * @method ImageIllegalDetect getIllegalDetect() 获取图片违法详情
  * @method void setIllegalDetect(ImageIllegalDetect $IllegalDetect) 设置图片违法详情
  * @method ImagePolityDetect getPolityDetect() 获取图片涉政详情
@@ -71,6 +73,11 @@ class ImageData extends AbstractModel
     public $EvilType;
 
     /**
+     * @var ImageHotDetect 图片性感详情
+     */
+    public $HotDetect;
+
+    /**
      * @var ImageIllegalDetect 图片违法详情
      */
     public $IllegalDetect;
@@ -104,6 +111,7 @@ class ImageData extends AbstractModel
 20007：谩骂 
 24001：暴恐
 21000：综合
+     * @param ImageHotDetect $HotDetect 图片性感详情
      * @param ImageIllegalDetect $IllegalDetect 图片违法详情
      * @param ImagePolityDetect $PolityDetect 图片涉政详情
      * @param ImagePornDetect $PornDetect 图片涉黄详情
@@ -128,6 +136,11 @@ class ImageData extends AbstractModel
 
         if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
             $this->EvilType = $param["EvilType"];
+        }
+
+        if (array_key_exists("HotDetect",$param) and $param["HotDetect"] !== null) {
+            $this->HotDetect = new ImageHotDetect();
+            $this->HotDetect->deserialize($param["HotDetect"]);
         }
 
         if (array_key_exists("IllegalDetect",$param) and $param["IllegalDetect"] !== null) {

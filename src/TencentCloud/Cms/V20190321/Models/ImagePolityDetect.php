@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaceNames(array $FaceNames) 设置命中的人脸名称
  * @method array getKeywords() 获取关键词明细
  * @method void setKeywords(array $Keywords) 设置关键词明细
+ * @method array getPolityItems() 获取命中的政治物品名称
+ * @method void setPolityItems(array $PolityItems) 设置命中的政治物品名称
  * @method integer getScore() 获取政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
  * @method void setScore(integer $Score) 设置政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
  */
@@ -77,6 +79,11 @@ class ImagePolityDetect extends AbstractModel
     public $Keywords;
 
     /**
+     * @var array 命中的政治物品名称
+     */
+    public $PolityItems;
+
+    /**
      * @var integer 政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
      */
     public $Score;
@@ -92,6 +99,7 @@ class ImagePolityDetect extends AbstractModel
      * @param integer $HitFlag 处置判定  0：正常 1：可疑
      * @param array $FaceNames 命中的人脸名称
      * @param array $Keywords 关键词明细
+     * @param array $PolityItems 命中的政治物品名称
      * @param integer $Score 政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
      */
     function __construct()
@@ -120,6 +128,10 @@ class ImagePolityDetect extends AbstractModel
 
         if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
             $this->Keywords = $param["Keywords"];
+        }
+
+        if (array_key_exists("PolityItems",$param) and $param["PolityItems"] !== null) {
+            $this->PolityItems = $param["PolityItems"];
         }
 
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {

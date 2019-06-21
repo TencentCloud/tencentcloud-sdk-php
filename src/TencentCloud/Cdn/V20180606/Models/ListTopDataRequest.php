@@ -23,19 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndTime() 获取查询结束日期，如：2018-09-10 00:00:00
  * @method void setEndTime(string $EndTime) 设置查询结束日期，如：2018-09-10 00:00:00
  * @method string getMetric() 获取排序对象，支持以下几种形式：
-Url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request（白名单功能）
-Path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request
+Url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
+Path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
 District：省份排序，支持的 Filter 为 flux、request
 Isp：运营商排序，支持的 Filter 为 flux、request
 Host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
-originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
+originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
  * @method void setMetric(string $Metric) 设置排序对象，支持以下几种形式：
-Url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request（白名单功能）
-Path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request
+Url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
+Path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
 District：省份排序，支持的 Filter 为 flux、request
 Isp：运营商排序，支持的 Filter 为 flux、request
 Host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
-originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
+originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
  * @method string getFilter() 获取排序使用的指标名称：
 flux：Metric 为 host 时指代访问流量，originHost 时指代回源流量
 bandwidth：Metric 为 host 时指代访问带宽，originHost 时指代回源带宽
@@ -97,12 +97,12 @@ class ListTopDataRequest extends AbstractModel
 
     /**
      * @var string 排序对象，支持以下几种形式：
-Url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request（白名单功能）
-Path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request
+Url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
+Path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
 District：省份排序，支持的 Filter 为 flux、request
 Isp：运营商排序，支持的 Filter 为 flux、request
 Host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
-originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
+originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
      */
     public $Metric;
 
@@ -150,12 +150,12 @@ Metric 为 Url、Path、District、Isp，Filter 为 flux、reqeust 时，可设�
      * @param string $StartTime 查询起始日期，如：2018-09-09 00:00:00
      * @param string $EndTime 查询结束日期，如：2018-09-10 00:00:00
      * @param string $Metric 排序对象，支持以下几种形式：
-Url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request（白名单功能）
-Path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request
+Url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
+Path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
 District：省份排序，支持的 Filter 为 flux、request
 Isp：运营商排序，支持的 Filter 为 flux、request
 Host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
-originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
+originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
      * @param string $Filter 排序使用的指标名称：
 flux：Metric 为 host 时指代访问流量，originHost 时指代回源流量
 bandwidth：Metric 为 host 时指代访问带宽，originHost 时指代回源带宽

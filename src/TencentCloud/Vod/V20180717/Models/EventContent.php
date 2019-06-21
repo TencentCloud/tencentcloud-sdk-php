@@ -62,9 +62,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileDeleteEvent(FileDeleteTask $FileDeleteEvent) 设置文件删除事件，当事件类型为 FileDeleted 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PullFileTask getPullCompleteEvent() 获取视频转拉完成事件，当事件类型为 PullComplete 时有效。
+ * @method PullUploadTask getPullCompleteEvent() 获取视频转拉完成事件，当事件类型为 PullComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPullCompleteEvent(PullFileTask $PullCompleteEvent) 设置视频转拉完成事件，当事件类型为 PullComplete 时有效。
+ * @method void setPullCompleteEvent(PullUploadTask $PullCompleteEvent) 设置视频转拉完成事件，当事件类型为 PullComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method EditMediaTask getEditMediaCompleteEvent() 获取视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -148,7 +148,7 @@ class EventContent extends AbstractModel
     public $FileDeleteEvent;
 
     /**
-     * @var PullFileTask 视频转拉完成事件，当事件类型为 PullComplete 时有效。
+     * @var PullUploadTask 视频转拉完成事件，当事件类型为 PullComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PullCompleteEvent;
@@ -223,7 +223,7 @@ class EventContent extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileDeleteTask $FileDeleteEvent 文件删除事件，当事件类型为 FileDeleted 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PullFileTask $PullCompleteEvent 视频转拉完成事件，当事件类型为 PullComplete 时有效。
+     * @param PullUploadTask $PullCompleteEvent 视频转拉完成事件，当事件类型为 PullComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EditMediaTask $EditMediaCompleteEvent 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -278,7 +278,7 @@ class EventContent extends AbstractModel
         }
 
         if (array_key_exists("PullCompleteEvent",$param) and $param["PullCompleteEvent"] !== null) {
-            $this->PullCompleteEvent = new PullFileTask();
+            $this->PullCompleteEvent = new PullUploadTask();
             $this->PullCompleteEvent->deserialize($param["PullCompleteEvent"]);
         }
 

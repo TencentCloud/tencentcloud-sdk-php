@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatusDesc(string $StatusDesc) 设置状态描述
  * @method string getStatusRef() 获取状态操作指引
  * @method void setStatusRef(string $StatusRef) 设置状态操作指引
+ * @method ScanPermissionList getPermissionInfo() 获取系统权限信息
+ * @method void setPermissionInfo(ScanPermissionList $PermissionInfo) 设置系统权限信息
+ * @method ScanSensitiveList getSensitiveInfo() 获取敏感词列表
+ * @method void setSensitiveInfo(ScanSensitiveList $SensitiveInfo) 设置敏感词列表
  */
 
 /**
@@ -87,6 +91,16 @@ class ScanSetInfo extends AbstractModel
      * @var string 状态操作指引
      */
     public $StatusRef;
+
+    /**
+     * @var ScanPermissionList 系统权限信息
+     */
+    public $PermissionInfo;
+
+    /**
+     * @var ScanSensitiveList 敏感词列表
+     */
+    public $SensitiveInfo;
     /**
      * @param integer $TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param AppDetailInfo $AppDetailInfo app信息
@@ -97,6 +111,8 @@ class ScanSetInfo extends AbstractModel
      * @param integer $StatusCode 状态码，成功返回0，失败返回错误码
      * @param string $StatusDesc 状态描述
      * @param string $StatusRef 状态操作指引
+     * @param ScanPermissionList $PermissionInfo 系统权限信息
+     * @param ScanSensitiveList $SensitiveInfo 敏感词列表
      */
     function __construct()
     {
@@ -148,6 +164,16 @@ class ScanSetInfo extends AbstractModel
 
         if (array_key_exists("StatusRef",$param) and $param["StatusRef"] !== null) {
             $this->StatusRef = $param["StatusRef"];
+        }
+
+        if (array_key_exists("PermissionInfo",$param) and $param["PermissionInfo"] !== null) {
+            $this->PermissionInfo = new ScanPermissionList();
+            $this->PermissionInfo->deserialize($param["PermissionInfo"]);
+        }
+
+        if (array_key_exists("SensitiveInfo",$param) and $param["SensitiveInfo"] !== null) {
+            $this->SensitiveInfo = new ScanSensitiveList();
+            $this->SensitiveInfo->deserialize($param["SensitiveInfo"]);
         }
     }
 }

@@ -18,8 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getFontType() 获取字体类型，目前仅支持 arial.ttf。
- * @method void setFontType(string $FontType) 设置字体类型，目前仅支持 arial.ttf。
+ * @method string getFontType() 获取字体类型，目前可以支持两种：
+<li>simkai.ttf：可以支持中文和英文；</li>
+<li>arial.ttf：仅支持英文。</li>
+ * @method void setFontType(string $FontType) 设置字体类型，目前可以支持两种：
+<li>simkai.ttf：可以支持中文和英文；</li>
+<li>arial.ttf：仅支持英文。</li>
  * @method string getFontSize() 获取字体大小，格式：Npx，N 为数值。
  * @method void setFontSize(string $FontSize) 设置字体大小，格式：Npx，N 为数值。
  * @method string getFontColor() 获取字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（黑色）。
@@ -38,7 +42,9 @@ use TencentCloud\Common\AbstractModel;
 class TextWatermarkTemplateInputForUpdate extends AbstractModel
 {
     /**
-     * @var string 字体类型，目前仅支持 arial.ttf。
+     * @var string 字体类型，目前可以支持两种：
+<li>simkai.ttf：可以支持中文和英文；</li>
+<li>arial.ttf：仅支持英文。</li>
      */
     public $FontType;
 
@@ -59,7 +65,9 @@ class TextWatermarkTemplateInputForUpdate extends AbstractModel
      */
     public $FontAlpha;
     /**
-     * @param string $FontType 字体类型，目前仅支持 arial.ttf。
+     * @param string $FontType 字体类型，目前可以支持两种：
+<li>simkai.ttf：可以支持中文和英文；</li>
+<li>arial.ttf：仅支持英文。</li>
      * @param string $FontSize 字体大小，格式：Npx，N 为数值。
      * @param string $FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（黑色）。
      * @param float $FontAlpha 文字透明度，取值范围：(0, 1]

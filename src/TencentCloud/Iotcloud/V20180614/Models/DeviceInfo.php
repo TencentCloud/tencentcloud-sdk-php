@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertState(integer $CertState) 设置设备证书获取状态, 1 已获取过设备密钥，0 未获取过设备密钥
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableState() 获取设备可用状态，0禁用，1启用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableState(integer $EnableState) 设置设备可用状态，0禁用，1启用
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -179,6 +183,12 @@ class DeviceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertState;
+
+    /**
+     * @var integer 设备可用状态，0禁用，1启用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableState;
     /**
      * @param string $DeviceName 设备名
      * @param integer $Online 设备是否在线，0不在线，1在线
@@ -204,6 +214,8 @@ class DeviceInfo extends AbstractModel
      * @param integer $LogLevel 设备日志级别
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CertState 设备证书获取状态, 1 已获取过设备密钥，0 未获取过设备密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableState 设备可用状态，0禁用，1启用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -301,6 +313,10 @@ class DeviceInfo extends AbstractModel
 
         if (array_key_exists("CertState",$param) and $param["CertState"] !== null) {
             $this->CertState = $param["CertState"];
+        }
+
+        if (array_key_exists("EnableState",$param) and $param["EnableState"] !== null) {
+            $this->EnableState = $param["EnableState"];
         }
     }
 }

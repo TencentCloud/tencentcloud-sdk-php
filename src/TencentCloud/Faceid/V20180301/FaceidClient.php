@@ -22,6 +22,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Faceid\V20180301\Models as Models;
 
 /**
+* @method Models\BankCard2EVerificationResponse BankCard2EVerification(Models\BankCard2EVerificationRequest $req) 银行卡二要素核验
+* @method Models\BankCard4EVerificationResponse BankCard4EVerification(Models\BankCard4EVerificationRequest $req) 银行卡四要素核验
 * @method Models\BankCardVerificationResponse BankCardVerification(Models\BankCardVerificationRequest $req) 银行卡核验
 * @method Models\DetectAuthResponse DetectAuth(Models\DetectAuthRequest $req) 每次调用人脸核身SaaS化服务前，需先调用本接口获取BizToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
 * @method Models\GetActionSequenceResponse GetActionSequence(Models\GetActionSequenceRequest $req) 使用动作活体检测模式前，需调用本接口获取动作顺序。

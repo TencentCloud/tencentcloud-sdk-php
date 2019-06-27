@@ -30,16 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(string $Tag) 设置人员库信息备注
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFaceModelVersion() 获取人脸识别服务所用的算法模型版本
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别服务所用的算法模型版本
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreationTimestamp() 获取Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreationTimestamp(string $CreationTimestamp) 设置Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -68,30 +58,12 @@ class GroupInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
-
-    /**
-     * @var string 人脸识别服务所用的算法模型版本
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $FaceModelVersion;
-
-    /**
-     * @var string Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CreationTimestamp;
     /**
      * @param string $GroupName 人员库名称
      * @param string $GroupId 人员库ID
      * @param array $GroupExDescriptions 人员库自定义描述字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tag 人员库信息备注
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FaceModelVersion 人脸识别服务所用的算法模型版本
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreationTimestamp Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -120,14 +92,6 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
 
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = $param["Tag"];
-        }
-
-        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
-            $this->FaceModelVersion = $param["FaceModelVersion"];
-        }
-
-        if (array_key_exists("CreationTimestamp",$param) and $param["CreationTimestamp"] !== null) {
-            $this->CreationTimestamp = $param["CreationTimestamp"];
         }
     }
 }

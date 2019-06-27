@@ -98,6 +98,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComposeMediaCompleteEvent(ComposeMediaTask $ComposeMediaCompleteEvent) 设置制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method WechatMiniProgramPublishTask getWechatMiniProgramPublishCompleteEvent() 获取微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWechatMiniProgramPublishCompleteEvent(WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent) 设置微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -200,6 +204,12 @@ class EventContent extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComposeMediaCompleteEvent;
+
+    /**
+     * @var WechatMiniProgramPublishTask 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WechatMiniProgramPublishCompleteEvent;
     /**
      * @param string $EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      * @param string $EventType <b>支持事件类型：</b>
@@ -240,6 +250,8 @@ class EventContent extends AbstractModel
      * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetCompleteEvent 视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ComposeMediaTask $ComposeMediaCompleteEvent 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -320,6 +332,11 @@ class EventContent extends AbstractModel
         if (array_key_exists("ComposeMediaCompleteEvent",$param) and $param["ComposeMediaCompleteEvent"] !== null) {
             $this->ComposeMediaCompleteEvent = new ComposeMediaTask();
             $this->ComposeMediaCompleteEvent->deserialize($param["ComposeMediaCompleteEvent"]);
+        }
+
+        if (array_key_exists("WechatMiniProgramPublishCompleteEvent",$param) and $param["WechatMiniProgramPublishCompleteEvent"] !== null) {
+            $this->WechatMiniProgramPublishCompleteEvent = new WechatMiniProgramPublishTask();
+            $this->WechatMiniProgramPublishCompleteEvent->deserialize($param["WechatMiniProgramPublishCompleteEvent"]);
         }
     }
 }

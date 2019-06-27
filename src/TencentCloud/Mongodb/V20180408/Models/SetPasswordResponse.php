@@ -14,40 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Mongodb\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取新增的实例个数。
- * @method void setTotalCount(integer $TotalCount) 设置新增的实例个数。
- * @method array getRouteTableSet() 获取路由表对象。
- * @method void setRouteTableSet(array $RouteTableSet) 设置路由表对象。
+ * @method integer getFlowId() 获取返回的异步任务ID
+ * @method void setFlowId(integer $FlowId) 设置返回的异步任务ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *CreateRoutes返回参数结构体
+ *SetPassword返回参数结构体
  */
-class CreateRoutesResponse extends AbstractModel
+class SetPasswordResponse extends AbstractModel
 {
     /**
-     * @var integer 新增的实例个数。
+     * @var integer 返回的异步任务ID
      */
-    public $TotalCount;
-
-    /**
-     * @var array 路由表对象。
-     */
-    public $RouteTableSet;
+    public $FlowId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 新增的实例个数。
-     * @param array $RouteTableSet 路由表对象。
+     * @param integer $FlowId 返回的异步任务ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,8 @@ class CreateRoutesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("RouteTableSet",$param) and $param["RouteTableSet"] !== null) {
-            $this->RouteTableSet = [];
-            foreach ($param["RouteTableSet"] as $key => $value){
-                $obj = new RouteTable();
-                $obj->deserialize($value);
-                array_push($this->RouteTableSet, $obj);
-            }
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

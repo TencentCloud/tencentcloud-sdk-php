@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) 设置周期开始时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
  * @method string getEndTime() 获取周期结束时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
  * @method void setEndTime(string $EndTime) 设置周期结束时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+ * @method integer getNeedRecordNum() 获取是否需要访问列表的总记录数，用于前端分页
+1-表示需要， 0-表示不需要
+ * @method void setNeedRecordNum(integer $NeedRecordNum) 设置是否需要访问列表的总记录数，用于前端分页
+1-表示需要， 0-表示不需要
  */
 
 /**
@@ -66,6 +70,12 @@ class DescribeBillDetailRequest extends AbstractModel
      * @var string 周期结束时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public $EndTime;
+
+    /**
+     * @var integer 是否需要访问列表的总记录数，用于前端分页
+1-表示需要， 0-表示不需要
+     */
+    public $NeedRecordNum;
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 数量，最大值为100
@@ -73,6 +83,8 @@ class DescribeBillDetailRequest extends AbstractModel
      * @param string $Month 月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      * @param string $BeginTime 周期开始时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      * @param string $EndTime 周期结束时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * @param integer $NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
+1-表示需要， 0-表示不需要
      */
     function __construct()
     {
@@ -108,6 +120,10 @@ class DescribeBillDetailRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("NeedRecordNum",$param) and $param["NeedRecordNum"] !== null) {
+            $this->NeedRecordNum = $param["NeedRecordNum"];
         }
     }
 }

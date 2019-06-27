@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutput(ComposeMediaOutput $Output) 设置输出的媒体文件信息。
  * @method Canvas getCanvas() 获取制作视频文件时使用的画布。
  * @method void setCanvas(Canvas $Canvas) 设置制作视频文件时使用的画布。
+ * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+ * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 
 /**
@@ -45,10 +47,16 @@ class ComposeMediaRequest extends AbstractModel
      * @var Canvas 制作视频文件时使用的画布。
      */
     public $Canvas;
+
+    /**
+     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     */
+    public $SubAppId;
     /**
      * @param array $Tracks 输入的媒体轨道列表，包括视频、音频、图片等素材组成的多个轨道信息。输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐，时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面；音频素材进行混音。
      * @param ComposeMediaOutput $Output 输出的媒体文件信息。
      * @param Canvas $Canvas 制作视频文件时使用的画布。
+     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -79,6 +87,10 @@ class ComposeMediaRequest extends AbstractModel
         if (array_key_exists("Canvas",$param) and $param["Canvas"] !== null) {
             $this->Canvas = new Canvas();
             $this->Canvas->deserialize($param["Canvas"]);
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

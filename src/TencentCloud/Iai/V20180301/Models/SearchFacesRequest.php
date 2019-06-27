@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method integer getMaxFaceNum() 获取最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
 MaxFaceNum用于，当待识别图片包含多张人脸时，要搜索的人脸数量。 
-当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索。
+当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索（N为待搜索的人脸数）。
  * @method void setMaxFaceNum(integer $MaxFaceNum) 设置最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
 MaxFaceNum用于，当待识别图片包含多张人脸时，要搜索的人脸数量。 
-当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索。
+当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索（N为待搜索的人脸数）。
  * @method integer getMinFaceSize() 获取人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
  * @method void setMinFaceSize(integer $MinFaceSize) 设置人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
  * @method integer getMaxPersonNum() 获取被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
@@ -70,7 +70,7 @@ class SearchFacesRequest extends AbstractModel
     /**
      * @var integer 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
 MaxFaceNum用于，当待识别图片包含多张人脸时，要搜索的人脸数量。 
-当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索。
+当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索（N为待搜索的人脸数）。
      */
     public $MaxFaceNum;
 
@@ -93,7 +93,7 @@ MaxFaceNum用于，当待识别图片包含多张人脸时，要搜索的人脸�
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param integer $MaxFaceNum 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
 MaxFaceNum用于，当待识别图片包含多张人脸时，要搜索的人脸数量。 
-当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索。
+当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索（N为待搜索的人脸数）。
      * @param integer $MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
      * @param integer $MaxPersonNum 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
 例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。

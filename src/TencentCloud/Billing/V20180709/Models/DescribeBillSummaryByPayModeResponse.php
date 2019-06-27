@@ -14,40 +14,44 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取新增的实例个数。
- * @method void setTotalCount(integer $TotalCount) 设置新增的实例个数。
- * @method array getRouteTableSet() 获取路由表对象。
- * @method void setRouteTableSet(array $RouteTableSet) 设置路由表对象。
+ * @method integer getReady() 获取数据是否准备好，0未准备好，1准备好
+ * @method void setReady(integer $Ready) 设置数据是否准备好，0未准备好，1准备好
+ * @method array getSummaryOverview() 获取各付费模式花费分布详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSummaryOverview(array $SummaryOverview) 设置各付费模式花费分布详情
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *CreateRoutes返回参数结构体
+ *DescribeBillSummaryByPayMode返回参数结构体
  */
-class CreateRoutesResponse extends AbstractModel
+class DescribeBillSummaryByPayModeResponse extends AbstractModel
 {
     /**
-     * @var integer 新增的实例个数。
+     * @var integer 数据是否准备好，0未准备好，1准备好
      */
-    public $TotalCount;
+    public $Ready;
 
     /**
-     * @var array 路由表对象。
+     * @var array 各付费模式花费分布详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RouteTableSet;
+    public $SummaryOverview;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 新增的实例个数。
-     * @param array $RouteTableSet 路由表对象。
+     * @param integer $Ready 数据是否准备好，0未准备好，1准备好
+     * @param array $SummaryOverview 各付费模式花费分布详情
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,16 +66,16 @@ class CreateRoutesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Ready",$param) and $param["Ready"] !== null) {
+            $this->Ready = $param["Ready"];
         }
 
-        if (array_key_exists("RouteTableSet",$param) and $param["RouteTableSet"] !== null) {
-            $this->RouteTableSet = [];
-            foreach ($param["RouteTableSet"] as $key => $value){
-                $obj = new RouteTable();
+        if (array_key_exists("SummaryOverview",$param) and $param["SummaryOverview"] !== null) {
+            $this->SummaryOverview = [];
+            foreach ($param["SummaryOverview"] as $key => $value){
+                $obj = new PayModeSummaryOverviewItem();
                 $obj->deserialize($value);
-                array_push($this->RouteTableSet, $obj);
+                array_push($this->SummaryOverview, $obj);
             }
         }
 

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableDhcp(boolean $EnableDhcp) 设置是否开启`DHCP`。
  * @method string getIpv6CidrBlock() 获取`VPC`的`IPv6` `CIDR`。
  * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置`VPC`的`IPv6` `CIDR`。
+ * @method array getTagSet() 获取标签键值对
+ * @method void setTagSet(array $TagSet) 设置标签键值对
  */
 
 /**
@@ -101,6 +103,11 @@ class Vpc extends AbstractModel
      * @var string `VPC`的`IPv6` `CIDR`。
      */
     public $Ipv6CidrBlock;
+
+    /**
+     * @var array 标签键值对
+     */
+    public $TagSet;
     /**
      * @param string $VpcName `VPC`名称。
      * @param string $VpcId `VPC`实例`ID`，例如：vpc-azd4dt1c。
@@ -113,6 +120,7 @@ class Vpc extends AbstractModel
      * @param string $DhcpOptionsId `DHCP`选项集`ID`。
      * @param boolean $EnableDhcp 是否开启`DHCP`。
      * @param string $Ipv6CidrBlock `VPC`的`IPv6` `CIDR`。
+     * @param array $TagSet 标签键值对
      */
     function __construct()
     {
@@ -168,6 +176,15 @@ class Vpc extends AbstractModel
 
         if (array_key_exists("Ipv6CidrBlock",$param) and $param["Ipv6CidrBlock"] !== null) {
             $this->Ipv6CidrBlock = $param["Ipv6CidrBlock"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

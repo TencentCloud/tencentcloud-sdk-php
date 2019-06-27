@@ -24,6 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleSessionName(string $RoleSessionName) 设置临时会话名称，由用户自定义名称
  * @method integer getDurationSeconds() 获取指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
  * @method void setDurationSeconds(integer $DurationSeconds) 设置指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
+ * @method string getPolicy() 获取策略描述
+注意：
+1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照云 API 规范再 urlencode 一次）。
+2、策略语法参照 CAM 策略语法。
+3、策略中不能包含 principal 元素。
+ * @method void setPolicy(string $Policy) 设置策略描述
+注意：
+1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照云 API 规范再 urlencode 一次）。
+2、策略语法参照 CAM 策略语法。
+3、策略中不能包含 principal 元素。
  */
 
 /**
@@ -45,10 +55,24 @@ class AssumeRoleRequest extends AbstractModel
      * @var integer 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
      */
     public $DurationSeconds;
+
+    /**
+     * @var string 策略描述
+注意：
+1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照云 API 规范再 urlencode 一次）。
+2、策略语法参照 CAM 策略语法。
+3、策略中不能包含 principal 元素。
+     */
+    public $Policy;
     /**
      * @param string $RoleArn 角色的资源描述。例如：qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName
      * @param string $RoleSessionName 临时会话名称，由用户自定义名称
      * @param integer $DurationSeconds 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
+     * @param string $Policy 策略描述
+注意：
+1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照云 API 规范再 urlencode 一次）。
+2、策略语法参照 CAM 策略语法。
+3、策略中不能包含 principal 元素。
      */
     function __construct()
     {
@@ -72,6 +96,10 @@ class AssumeRoleRequest extends AbstractModel
 
         if (array_key_exists("DurationSeconds",$param) and $param["DurationSeconds"] !== null) {
             $this->DurationSeconds = $param["DurationSeconds"];
+        }
+
+        if (array_key_exists("Policy",$param) and $param["Policy"] !== null) {
+            $this->Policy = $param["Policy"];
         }
     }
 }

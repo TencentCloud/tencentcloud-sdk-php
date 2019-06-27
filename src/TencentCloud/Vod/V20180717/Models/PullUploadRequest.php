@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
 <li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.mp4``` ，扩展名为 mp4，支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。</li>
  * @method string getMediaName() 获取媒体名称。
  * @method void setMediaName(string $MediaName) 设置媒体名称。
- * @method string getCoverUrl() 获取要拉取的视频封面 URL。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.jpg``` ，扩展名为 jpg，支持的扩展名详见[封面类型](https://cloud.tencent.com/document/product/266/9760#.E5.B0.81.E9.9D.A2.E7.B1.BB.E5.9E.8B)。</li>
- * @method void setCoverUrl(string $CoverUrl) 设置要拉取的视频封面 URL。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.jpg``` ，扩展名为 jpg，支持的扩展名详见[封面类型](https://cloud.tencent.com/document/product/266/9760#.E5.B0.81.E9.9D.A2.E7.B1.BB.E5.9E.8B)。</li>
+ * @method string getCoverUrl() 获取要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
+ * @method void setCoverUrl(string $CoverUrl) 设置要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
  * @method string getProcedure() 获取媒体后续任务操作，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。
  * @method void setProcedure(string $Procedure) 设置媒体后续任务操作，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。
  * @method string getExpireTime() 获取媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
@@ -67,8 +65,7 @@ class PullUploadRequest extends AbstractModel
     public $MediaName;
 
     /**
-     * @var string 要拉取的视频封面 URL。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.jpg``` ，扩展名为 jpg，支持的扩展名详见[封面类型](https://cloud.tencent.com/document/product/266/9760#.E5.B0.81.E9.9D.A2.E7.B1.BB.E5.9E.8B)。</li>
+     * @var string 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
      */
     public $CoverUrl;
 
@@ -113,8 +110,7 @@ class PullUploadRequest extends AbstractModel
      * @param string $MediaUrl 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
 <li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.mp4``` ，扩展名为 mp4，支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。</li>
      * @param string $MediaName 媒体名称。
-     * @param string $CoverUrl 要拉取的视频封面 URL。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.jpg``` ，扩展名为 jpg，支持的扩展名详见[封面类型](https://cloud.tencent.com/document/product/266/9760#.E5.B0.81.E9.9D.A2.E7.B1.BB.E5.9E.8B)。</li>
+     * @param string $CoverUrl 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
      * @param string $Procedure 媒体后续任务操作，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。
      * @param string $ExpireTime 媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param string $StorageRegion 指定上传园区，仅适用于对上传地域有特殊需求的用户。目前支持的园区：

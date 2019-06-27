@@ -23,6 +23,7 @@ use TencentCloud\Sts\V20180813\Models as Models;
 
 /**
 * @method Models\AssumeRoleResponse AssumeRole(Models\AssumeRoleRequest $req) 申请扮演角色
+* @method Models\AssumeRoleWithSAMLResponse AssumeRoleWithSAML(Models\AssumeRoleWithSAMLRequest $req) 本接口（AssumeRoleWithSAML）用于根据 SAML 断言申请角色临时凭证。
 * @method Models\GetFederationTokenResponse GetFederationToken(Models\GetFederationTokenRequest $req) 获取联合身份临时访问凭证
  */
 

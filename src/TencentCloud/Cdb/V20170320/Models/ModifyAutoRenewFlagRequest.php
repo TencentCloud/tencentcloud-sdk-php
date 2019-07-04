@@ -18,10 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInstanceIds() 获取实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
- * @method void setInstanceIds(array $InstanceIds) 设置实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
- * @method integer getAutoRenew() 获取自动续费标记，可取值的有：0-不自动续费，1-自动续费。
- * @method void setAutoRenew(integer $AutoRenew) 设置自动续费标记，可取值的有：0-不自动续费，1-自动续费。
+ * @method array getInstanceIds() 获取实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method integer getAutoRenew() 获取自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
+ * @method void setAutoRenew(integer $AutoRenew) 设置自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAutoRenewFlagRequest extends AbstractModel
 {
     /**
-     * @var array 实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @var array 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public $InstanceIds;
 
     /**
-     * @var integer 自动续费标记，可取值的有：0-不自动续费，1-自动续费。
+     * @var integer 自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
      */
     public $AutoRenew;
     /**
-     * @param array $InstanceIds 实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @param integer $AutoRenew 自动续费标记，可取值的有：0-不自动续费，1-自动续费。
+     * @param array $InstanceIds 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param integer $AutoRenew 自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
      */
     function __construct()
     {

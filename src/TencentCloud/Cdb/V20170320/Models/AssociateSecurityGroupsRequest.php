@@ -18,10 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSecurityGroupId() 获取安全组Id。
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组Id。
- * @method array getInstanceIds() 获取实例ID列表，一个或者多个实例Id组成的数组。
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表，一个或者多个实例Id组成的数组。
+ * @method string getSecurityGroupId() 获取安全组 ID。
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组 ID。
+ * @method array getInstanceIds() 获取实例 ID 列表，一个或者多个实例 ID 组成的数组。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表，一个或者多个实例 ID 组成的数组。
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class AssociateSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string 安全组Id。
+     * @var string 安全组 ID。
      */
     public $SecurityGroupId;
 
     /**
-     * @var array 实例ID列表，一个或者多个实例Id组成的数组。
+     * @var array 实例 ID 列表，一个或者多个实例 ID 组成的数组。
      */
     public $InstanceIds;
     /**
-     * @param string $SecurityGroupId 安全组Id。
-     * @param array $InstanceIds 实例ID列表，一个或者多个实例Id组成的数组。
+     * @param string $SecurityGroupId 安全组 ID。
+     * @param array $InstanceIds 实例 ID 列表，一个或者多个实例 ID 组成的数组。
      */
     function __construct()
     {

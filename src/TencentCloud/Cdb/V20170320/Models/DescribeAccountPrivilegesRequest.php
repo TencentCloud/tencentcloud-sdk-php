@@ -18,8 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method string getUser() 获取数据库的账号名称。
  * @method void setUser(string $User) 设置数据库的账号名称。
  * @method string getHost() 获取数据库的账号域名。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccountPrivilegesRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @var string 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public $InstanceId;
 
@@ -46,7 +46,7 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
      */
     public $Host;
     /**
-     * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param string $User 数据库的账号名称。
      * @param string $Host 数据库的账号域名。
      */

@@ -18,10 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
- * @method array getSecurityGroupIds() 获取要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
+ * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method array getSecurityGroupIds() 获取要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @var string 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public $InstanceId;
 
     /**
-     * @var array 要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
+     * @var array 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
      */
     public $SecurityGroupIds;
     /**
-     * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @param array $SecurityGroupIds 要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
+     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param array $SecurityGroupIds 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
      */
     function __construct()
     {

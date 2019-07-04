@@ -18,8 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getEngineVersion() 获取mysql版本，目前支持["5.1", "5.5", "5.6", "5.7"]
- * @method void setEngineVersion(string $EngineVersion) 设置mysql版本，目前支持["5.1", "5.5", "5.6", "5.7"]
+ * @method string getEngineVersion() 获取mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
+ * @method void setEngineVersion(string $EngineVersion) 设置mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
  */
 
 /**
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDefaultParamsRequest extends AbstractModel
 {
     /**
-     * @var string mysql版本，目前支持["5.1", "5.5", "5.6", "5.7"]
+     * @var string mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
      */
     public $EngineVersion;
     /**
-     * @param string $EngineVersion mysql版本，目前支持["5.1", "5.5", "5.6", "5.7"]
+     * @param string $EngineVersion mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
      */
     function __construct()
     {

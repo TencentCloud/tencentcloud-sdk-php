@@ -18,16 +18,16 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAction() 获取策略，ACCEPT或者DROP
- * @method void setAction(string $Action) 设置策略，ACCEPT或者DROP
- * @method string getCidrIp() 获取目的Ip或Ip段，例如172.16.0.0/12
- * @method void setCidrIp(string $CidrIp) 设置目的Ip或Ip段，例如172.16.0.0/12
+ * @method string getAction() 获取策略，ACCEPT 或者 DROP
+ * @method void setAction(string $Action) 设置策略，ACCEPT 或者 DROP
+ * @method string getCidrIp() 获取目的 IP 或 IP 段，例如172.16.0.0/12
+ * @method void setCidrIp(string $CidrIp) 设置目的 IP 或 IP 段，例如172.16.0.0/12
  * @method string getPortRange() 获取端口或者端口范围
  * @method void setPortRange(string $PortRange) 设置端口或者端口范围
- * @method string getIpProtocol() 获取网络协议，支持udp、tcp等
- * @method void setIpProtocol(string $IpProtocol) 设置网络协议，支持udp、tcp等
- * @method string getDir() 获取规则限定的方向，进站规则为OUTPUT
- * @method void setDir(string $Dir) 设置规则限定的方向，进站规则为OUTPUT
+ * @method string getIpProtocol() 获取网络协议，支持 UDP、TCP等
+ * @method void setIpProtocol(string $IpProtocol) 设置网络协议，支持 UDP、TCP等
+ * @method string getDir() 获取规则限定的方向，进站规则为 OUTPUT
+ * @method void setDir(string $Dir) 设置规则限定的方向，进站规则为 OUTPUT
  */
 
 /**
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class Outbound extends AbstractModel
 {
     /**
-     * @var string 策略，ACCEPT或者DROP
+     * @var string 策略，ACCEPT 或者 DROP
      */
     public $Action;
 
     /**
-     * @var string 目的Ip或Ip段，例如172.16.0.0/12
+     * @var string 目的 IP 或 IP 段，例如172.16.0.0/12
      */
     public $CidrIp;
 
@@ -51,20 +51,20 @@ class Outbound extends AbstractModel
     public $PortRange;
 
     /**
-     * @var string 网络协议，支持udp、tcp等
+     * @var string 网络协议，支持 UDP、TCP等
      */
     public $IpProtocol;
 
     /**
-     * @var string 规则限定的方向，进站规则为OUTPUT
+     * @var string 规则限定的方向，进站规则为 OUTPUT
      */
     public $Dir;
     /**
-     * @param string $Action 策略，ACCEPT或者DROP
-     * @param string $CidrIp 目的Ip或Ip段，例如172.16.0.0/12
+     * @param string $Action 策略，ACCEPT 或者 DROP
+     * @param string $CidrIp 目的 IP 或 IP 段，例如172.16.0.0/12
      * @param string $PortRange 端口或者端口范围
-     * @param string $IpProtocol 网络协议，支持udp、tcp等
-     * @param string $Dir 规则限定的方向，进站规则为OUTPUT
+     * @param string $IpProtocol 网络协议，支持 UDP、TCP等
+     * @param string $Dir 规则限定的方向，进站规则为 OUTPUT
      */
     function __construct()
     {

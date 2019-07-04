@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getKeyId() 获取CMK全局唯一标识符
  * @method void setKeyId(string $KeyId) 设置CMK全局唯一标识符
- * @method string getKeySpec() 获取指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。默认为AES_256
- * @method void setKeySpec(string $KeySpec) 设置指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。默认为AES_256
+ * @method string getKeySpec() 获取指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。
+ * @method void setKeySpec(string $KeySpec) 设置指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。
  * @method integer getNumberOfBytes() 获取生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024
  * @method void setNumberOfBytes(integer $NumberOfBytes) 设置生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024
  * @method string getEncryptionContext() 获取key/value对的json字符串，如果使用该字段，则返回的DataKey在解密时需要填入相同的字符串
@@ -39,7 +39,7 @@ class GenerateDataKeyRequest extends AbstractModel
     public $KeyId;
 
     /**
-     * @var string 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。默认为AES_256
+     * @var string 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。
      */
     public $KeySpec;
 
@@ -54,7 +54,7 @@ class GenerateDataKeyRequest extends AbstractModel
     public $EncryptionContext;
     /**
      * @param string $KeyId CMK全局唯一标识符
-     * @param string $KeySpec 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。默认为AES_256
+     * @param string $KeySpec 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。
      * @param integer $NumberOfBytes 生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024
      * @param string $EncryptionContext key/value对的json字符串，如果使用该字段，则返回的DataKey在解密时需要填入相同的字符串
      */

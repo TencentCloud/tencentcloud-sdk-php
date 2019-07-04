@@ -22,6 +22,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
 <li>WechatPublish：微信发布任务；</li>
+<li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>ComposeMedia：制作媒体文件任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
 
@@ -35,6 +36,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
 <li>WechatPublish：微信发布任务；</li>
+<li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>ComposeMedia：制作媒体文件任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
 
@@ -98,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateImageSpriteTask(CreateImageSpriteTask2017 $CreateImageSpriteTask) 设置截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() 获取微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask $WechatMiniProgramPublishTask) 设置微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -112,6 +118,7 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
 <li>WechatPublish：微信发布任务；</li>
+<li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>ComposeMedia：制作媒体文件任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
 
@@ -208,6 +215,12 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $CreateImageSpriteTask;
 
     /**
+     * @var WechatMiniProgramPublishTask 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WechatMiniProgramPublishTask;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -216,6 +229,7 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
 <li>WechatPublish：微信发布任务；</li>
+<li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>ComposeMedia：制作媒体文件任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
 
@@ -251,6 +265,8 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param ClipTask2017 $ClipTask 视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateImageSpriteTask2017 $CreateImageSpriteTask 截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishTask 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -334,6 +350,11 @@ class DescribeTaskDetailResponse extends AbstractModel
         if (array_key_exists("CreateImageSpriteTask",$param) and $param["CreateImageSpriteTask"] !== null) {
             $this->CreateImageSpriteTask = new CreateImageSpriteTask2017();
             $this->CreateImageSpriteTask->deserialize($param["CreateImageSpriteTask"]);
+        }
+
+        if (array_key_exists("WechatMiniProgramPublishTask",$param) and $param["WechatMiniProgramPublishTask"] !== null) {
+            $this->WechatMiniProgramPublishTask = new WechatMiniProgramPublishTask();
+            $this->WechatMiniProgramPublishTask->deserialize($param["WechatMiniProgramPublishTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

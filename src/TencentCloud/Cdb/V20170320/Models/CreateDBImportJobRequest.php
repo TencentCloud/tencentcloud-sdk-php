@@ -18,14 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
- * @method void setInstanceId(string $InstanceId) 设置实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method string getInstanceId() 获取实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method string getFileName() 获取文件名称。该文件是指用户已上传到腾讯云的文件。
  * @method void setFileName(string $FileName) 设置文件名称。该文件是指用户已上传到腾讯云的文件。
  * @method string getUser() 获取云数据库的用户名。
  * @method void setUser(string $User) 设置云数据库的用户名。
- * @method string getPassword() 获取云数据库实例User账号的密码。
- * @method void setPassword(string $Password) 设置云数据库实例User账号的密码。
+ * @method string getPassword() 获取云数据库实例 User 账号的密码。
+ * @method void setPassword(string $Password) 设置云数据库实例 User 账号的密码。
  * @method string getDbName() 获取导入的目标数据库名，不传表示不指定数据库。
  * @method void setDbName(string $DbName) 设置导入的目标数据库名，不传表示不指定数据库。
  */
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDBImportJobRequest extends AbstractModel
 {
     /**
-     * @var string 实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @var string 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public $InstanceId;
 
@@ -51,7 +51,7 @@ class CreateDBImportJobRequest extends AbstractModel
     public $User;
 
     /**
-     * @var string 云数据库实例User账号的密码。
+     * @var string 云数据库实例 User 账号的密码。
      */
     public $Password;
 
@@ -60,10 +60,10 @@ class CreateDBImportJobRequest extends AbstractModel
      */
     public $DbName;
     /**
-     * @param string $InstanceId 实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @param string $InstanceId 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param string $FileName 文件名称。该文件是指用户已上传到腾讯云的文件。
      * @param string $User 云数据库的用户名。
-     * @param string $Password 云数据库实例User账号的密码。
+     * @param string $Password 云数据库实例 User 账号的密码。
      * @param string $DbName 导入的目标数据库名，不传表示不指定数据库。
      */
     function __construct()

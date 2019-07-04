@@ -18,12 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInstanceIds() 获取实例列表
- * @method void setInstanceIds(array $InstanceIds) 设置实例列表
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取每页返回多少个标签
- * @method void setLimit(integer $Limit) 设置每页返回多少个标签
+ * @method array getInstanceIds() 获取实例列表。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例列表。
+ * @method integer getOffset() 获取偏移量。
+ * @method void setOffset(integer $Offset) 设置偏移量。
+ * @method integer getLimit() 获取每页返回多少个标签。
+ * @method void setLimit(integer $Limit) 设置每页返回多少个标签。
  */
 
 /**
@@ -32,23 +32,23 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTagsOfInstanceIdsRequest extends AbstractModel
 {
     /**
-     * @var array 实例列表
+     * @var array 实例列表。
      */
     public $InstanceIds;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量。
      */
     public $Offset;
 
     /**
-     * @var integer 每页返回多少个标签
+     * @var integer 每页返回多少个标签。
      */
     public $Limit;
     /**
-     * @param array $InstanceIds 实例列表
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 每页返回多少个标签
+     * @param array $InstanceIds 实例列表。
+     * @param integer $Offset 偏移量。
+     * @param integer $Limit 每页返回多少个标签。
      */
     function __construct()
     {

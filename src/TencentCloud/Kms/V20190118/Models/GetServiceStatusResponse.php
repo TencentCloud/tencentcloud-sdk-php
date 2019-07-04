@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method boolean getServiceEnabled() 获取KMS服务是否开通， true 表示已开通
  * @method void setServiceEnabled(boolean $ServiceEnabled) 设置KMS服务是否开通， true 表示已开通
+ * @method integer getInvalidType() 获取服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInvalidType(integer $InvalidType) 设置服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,11 +39,19 @@ class GetServiceStatusResponse extends AbstractModel
     public $ServiceEnabled;
 
     /**
+     * @var integer 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InvalidType;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param boolean $ServiceEnabled KMS服务是否开通， true 表示已开通
+     * @param integer $InvalidType 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +68,10 @@ class GetServiceStatusResponse extends AbstractModel
         }
         if (array_key_exists("ServiceEnabled",$param) and $param["ServiceEnabled"] !== null) {
             $this->ServiceEnabled = $param["ServiceEnabled"];
+        }
+
+        if (array_key_exists("InvalidType",$param) and $param["InvalidType"] !== null) {
+            $this->InvalidType = $param["InvalidType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

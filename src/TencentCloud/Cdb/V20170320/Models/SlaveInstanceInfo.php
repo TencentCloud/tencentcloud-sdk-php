@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVport(integer $Vport) 设置端口号
  * @method string getRegion() 获取地域信息
  * @method void setRegion(string $Region) 设置地域信息
- * @method string getVip() 获取虚拟Ip信息
- * @method void setVip(string $Vip) 设置虚拟Ip信息
+ * @method string getVip() 获取虚拟 IP 信息
+ * @method void setVip(string $Vip) 设置虚拟 IP 信息
  * @method string getZone() 获取可用区信息
  * @method void setZone(string $Zone) 设置可用区信息
  */
@@ -44,7 +44,7 @@ class SlaveInstanceInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var string 虚拟Ip信息
+     * @var string 虚拟 IP 信息
      */
     public $Vip;
 
@@ -55,7 +55,7 @@ class SlaveInstanceInfo extends AbstractModel
     /**
      * @param integer $Vport 端口号
      * @param string $Region 地域信息
-     * @param string $Vip 虚拟Ip信息
+     * @param string $Vip 虚拟 IP 信息
      * @param string $Zone 可用区信息
      */
     function __construct()

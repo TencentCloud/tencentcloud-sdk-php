@@ -18,12 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method array getReplaceTags() 获取要增加或修改的标签
- * @method void setReplaceTags(array $ReplaceTags) 设置要增加或修改的标签
- * @method array getDeleteTags() 获取要删除的标签
- * @method void setDeleteTags(array $DeleteTags) 设置要删除的标签
+ * @method string getInstanceId() 获取实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method array getReplaceTags() 获取要增加或修改的标签。
+ * @method void setReplaceTags(array $ReplaceTags) 设置要增加或修改的标签。
+ * @method array getDeleteTags() 获取要删除的标签。
+ * @method void setDeleteTags(array $DeleteTags) 设置要删除的标签。
  */
 
 /**
@@ -32,23 +32,23 @@ use TencentCloud\Common\AbstractModel;
 class ModifyInstanceTagRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var array 要增加或修改的标签
+     * @var array 要增加或修改的标签。
      */
     public $ReplaceTags;
 
     /**
-     * @var array 要删除的标签
+     * @var array 要删除的标签。
      */
     public $DeleteTags;
     /**
-     * @param string $InstanceId 实例ID
-     * @param array $ReplaceTags 要增加或修改的标签
-     * @param array $DeleteTags 要删除的标签
+     * @param string $InstanceId 实例 ID。
+     * @param array $ReplaceTags 要增加或修改的标签。
+     * @param array $DeleteTags 要删除的标签。
      */
     function __construct()
     {

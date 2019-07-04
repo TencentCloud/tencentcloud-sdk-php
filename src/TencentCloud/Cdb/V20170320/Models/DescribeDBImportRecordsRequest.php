@@ -18,16 +18,16 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method string getStartTime() 获取开始时间，时间格式如：2016-01-01 00:00:01。
  * @method void setStartTime(string $StartTime) 设置开始时间，时间格式如：2016-01-01 00:00:01。
  * @method string getEndTime() 获取结束时间，时间格式如：2016-01-01 23:59:59。
  * @method void setEndTime(string $EndTime) 设置结束时间，时间格式如：2016-01-01 23:59:59。
- * @method integer getOffset() 获取分页参数 , 偏移量 , 默认值为0。
- * @method void setOffset(integer $Offset) 设置分页参数 , 偏移量 , 默认值为0。
- * @method integer getLimit() 获取分页参数 , 单次请求返回的数量 , 默认值为20，最小值为1，最大值为100。
- * @method void setLimit(integer $Limit) 设置分页参数 , 单次请求返回的数量 , 默认值为20，最小值为1，最大值为100。
+ * @method integer getOffset() 获取分页参数，偏移量，默认值为0。
+ * @method void setOffset(integer $Offset) 设置分页参数，偏移量，默认值为0。
+ * @method integer getLimit() 获取分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
+ * @method void setLimit(integer $Limit) 设置分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
  */
 
 /**
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBImportRecordsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @var string 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public $InstanceId;
 
@@ -51,20 +51,20 @@ class DescribeDBImportRecordsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 分页参数 , 偏移量 , 默认值为0。
+     * @var integer 分页参数，偏移量，默认值为0。
      */
     public $Offset;
 
     /**
-     * @var integer 分页参数 , 单次请求返回的数量 , 默认值为20，最小值为1，最大值为100。
+     * @var integer 分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
      */
     public $Limit;
     /**
-     * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param string $StartTime 开始时间，时间格式如：2016-01-01 00:00:01。
      * @param string $EndTime 结束时间，时间格式如：2016-01-01 23:59:59。
-     * @param integer $Offset 分页参数 , 偏移量 , 默认值为0。
-     * @param integer $Limit 分页参数 , 单次请求返回的数量 , 默认值为20，最小值为1，最大值为100。
+     * @param integer $Offset 分页参数，偏移量，默认值为0。
+     * @param integer $Limit 分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
      */
     function __construct()
     {

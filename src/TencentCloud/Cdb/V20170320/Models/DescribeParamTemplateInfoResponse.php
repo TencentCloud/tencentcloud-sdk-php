@@ -18,8 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTemplateId() 获取参数模板Id。
- * @method void setTemplateId(integer $TemplateId) 设置参数模板Id。
+ * @method integer getTemplateId() 获取参数模板 ID。
+ * @method void setTemplateId(integer $TemplateId) 设置参数模板 ID。
  * @method string getName() 获取参数模板名称。
  * @method void setName(string $Name) 设置参数模板名称。
  * @method string getEngineVersion() 获取参数模板描述
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeParamTemplateInfoResponse extends AbstractModel
 {
     /**
-     * @var integer 参数模板Id。
+     * @var integer 参数模板 ID。
      */
     public $TemplateId;
 
@@ -67,7 +67,7 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TemplateId 参数模板Id。
+     * @param integer $TemplateId 参数模板 ID。
      * @param string $Name 参数模板名称。
      * @param string $EngineVersion 参数模板描述
      * @param integer $TotalCount 参数模板中的参数数量

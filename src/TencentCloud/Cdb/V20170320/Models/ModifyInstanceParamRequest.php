@@ -18,10 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInstanceIds() 获取实例短Id列表。
- * @method void setInstanceIds(array $InstanceIds) 设置实例短Id列表。
- * @method array getParamList() 获取要修改的参数列表。每一个元素是name和currentValue的组合。name是参数名，currentValue是要修改成的值。
- * @method void setParamList(array $ParamList) 设置要修改的参数列表。每一个元素是name和currentValue的组合。name是参数名，currentValue是要修改成的值。
+ * @method array getInstanceIds() 获取实例短 ID 列表。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例短 ID 列表。
+ * @method array getParamList() 获取要修改的参数列表。每一个元素是 Name 和 CurrentValue 的组合。Name 是参数名，CurrentValue 是要修改成的值。
+ * @method void setParamList(array $ParamList) 设置要修改的参数列表。每一个元素是 Name 和 CurrentValue 的组合。Name 是参数名，CurrentValue 是要修改成的值。
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class ModifyInstanceParamRequest extends AbstractModel
 {
     /**
-     * @var array 实例短Id列表。
+     * @var array 实例短 ID 列表。
      */
     public $InstanceIds;
 
     /**
-     * @var array 要修改的参数列表。每一个元素是name和currentValue的组合。name是参数名，currentValue是要修改成的值。
+     * @var array 要修改的参数列表。每一个元素是 Name 和 CurrentValue 的组合。Name 是参数名，CurrentValue 是要修改成的值。
      */
     public $ParamList;
     /**
-     * @param array $InstanceIds 实例短Id列表。
-     * @param array $ParamList 要修改的参数列表。每一个元素是name和currentValue的组合。name是参数名，currentValue是要修改成的值。
+     * @param array $InstanceIds 实例短 ID 列表。
+     * @param array $ParamList 要修改的参数列表。每一个元素是 Name 和 CurrentValue 的组合。Name 是参数名，CurrentValue 是要修改成的值。
      */
     function __construct()
     {

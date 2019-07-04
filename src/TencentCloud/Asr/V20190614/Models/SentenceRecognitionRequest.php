@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceFormat(string $VoiceFormat) 设置识别音频的音频格式（支持mp3,wav）。
  * @method string getUsrAudioKey() 获取用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
  * @method void setUsrAudioKey(string $UsrAudioKey) 设置用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
- * @method string getUrl() 获取语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时间长度要小于60s。
- * @method void setUrl(string $Url) 设置语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时间长度要小于60s。
- * @method string getData() 获取语音数据，当SourceType 值为1时必须填写，当SourceType 值为0可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于600kB。
- * @method void setData(string $Data) 设置语音数据，当SourceType 值为1时必须填写，当SourceType 值为0可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于600kB。
- * @method integer getDataLen() 获取数据长度，当 SourceType 值为1时必须填写，当 SourceType 值为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
- * @method void setDataLen(integer $DataLen) 设置数据长度，当 SourceType 值为1时必须填写，当 SourceType 值为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
+ * @method string getUrl() 获取语音 URL，公网可下载。当 SourceType 值为 0（语音 URL上传） 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时间长度要小于60s。
+ * @method void setUrl(string $Url) 设置语音 URL，公网可下载。当 SourceType 值为 0（语音 URL上传） 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时间长度要小于60s。
+ * @method string getData() 获取语音数据，当SourceType 值为1（本地语音数据上传）时必须填写，当SourceType 值为0（语音 URL上传）可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于600KB。
+ * @method void setData(string $Data) 设置语音数据，当SourceType 值为1（本地语音数据上传）时必须填写，当SourceType 值为0（语音 URL上传）可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于600KB。
+ * @method integer getDataLen() 获取数据长度，单位为字节。当 SourceType 值为1（本地语音数据上传）时必须填写，当 SourceType 值为0（语音 URL上传）可不写（此数据长度为数据未进行base64编码时的数据长度）。
+ * @method void setDataLen(integer $DataLen) 设置数据长度，单位为字节。当 SourceType 值为1（本地语音数据上传）时必须填写，当 SourceType 值为0（语音 URL上传）可不写（此数据长度为数据未进行base64编码时的数据长度）。
  */
 
 /**
@@ -74,17 +74,17 @@ class SentenceRecognitionRequest extends AbstractModel
     public $UsrAudioKey;
 
     /**
-     * @var string 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时间长度要小于60s。
+     * @var string 语音 URL，公网可下载。当 SourceType 值为 0（语音 URL上传） 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时间长度要小于60s。
      */
     public $Url;
 
     /**
-     * @var string 语音数据，当SourceType 值为1时必须填写，当SourceType 值为0可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于600kB。
+     * @var string 语音数据，当SourceType 值为1（本地语音数据上传）时必须填写，当SourceType 值为0（语音 URL上传）可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于600KB。
      */
     public $Data;
 
     /**
-     * @var integer 数据长度，当 SourceType 值为1时必须填写，当 SourceType 值为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
+     * @var integer 数据长度，单位为字节。当 SourceType 值为1（本地语音数据上传）时必须填写，当 SourceType 值为0（语音 URL上传）可不写（此数据长度为数据未进行base64编码时的数据长度）。
      */
     public $DataLen;
     /**
@@ -94,9 +94,9 @@ class SentenceRecognitionRequest extends AbstractModel
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
      * @param string $VoiceFormat 识别音频的音频格式（支持mp3,wav）。
      * @param string $UsrAudioKey 用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
-     * @param string $Url 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时间长度要小于60s。
-     * @param string $Data 语音数据，当SourceType 值为1时必须填写，当SourceType 值为0可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于600kB。
-     * @param integer $DataLen 数据长度，当 SourceType 值为1时必须填写，当 SourceType 值为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
+     * @param string $Url 语音 URL，公网可下载。当 SourceType 值为 0（语音 URL上传） 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时间长度要小于60s。
+     * @param string $Data 语音数据，当SourceType 值为1（本地语音数据上传）时必须填写，当SourceType 值为0（语音 URL上传）可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于600KB。
+     * @param integer $DataLen 数据长度，单位为字节。当 SourceType 值为1（本地语音数据上传）时必须填写，当 SourceType 值为0（语音 URL上传）可不写（此数据长度为数据未进行base64编码时的数据长度）。
      */
     function __construct()
     {

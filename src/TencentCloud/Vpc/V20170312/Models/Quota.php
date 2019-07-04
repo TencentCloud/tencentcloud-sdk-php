@@ -27,7 +27,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *描述了配额信息
+ *描述配额信息
  */
 class Quota extends AbstractModel
 {

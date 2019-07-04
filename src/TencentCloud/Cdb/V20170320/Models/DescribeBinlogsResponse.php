@@ -18,10 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取符合查询条件的日志文件总数
- * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的日志文件总数
- * @method array getItems() 获取符合查询条件的二进制日志文件详情
- * @method void setItems(array $Items) 设置符合查询条件的二进制日志文件详情
+ * @method integer getTotalCount() 获取符合查询条件的日志文件总数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的日志文件总数。
+ * @method array getItems() 获取符合查询条件的二进制日志文件详情。
+ * @method void setItems(array $Items) 设置符合查询条件的二进制日志文件详情。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBinlogsResponse extends AbstractModel
 {
     /**
-     * @var integer 符合查询条件的日志文件总数
+     * @var integer 符合查询条件的日志文件总数。
      */
     public $TotalCount;
 
     /**
-     * @var array 符合查询条件的二进制日志文件详情
+     * @var array 符合查询条件的二进制日志文件详情。
      */
     public $Items;
 
@@ -46,8 +46,8 @@ class DescribeBinlogsResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 符合查询条件的日志文件总数
-     * @param array $Items 符合查询条件的二进制日志文件详情
+     * @param integer $TotalCount 符合查询条件的日志文件总数。
+     * @param array $Items 符合查询条件的二进制日志文件详情。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

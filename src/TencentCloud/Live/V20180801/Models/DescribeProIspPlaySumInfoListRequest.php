@@ -28,20 +28,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
- * @method string getStatType() 获取统计的类型，可选值包括”Province”，”Isp”
- * @method void setStatType(string $StatType) 设置统计的类型，可选值包括”Province”，”Isp”
+ * @method string getStatType() 获取统计的类型，可选值包括”Province”，”Isp”。
+ * @method void setStatType(string $StatType) 设置统计的类型，可选值包括”Province”，”Isp”。
  * @method array getPlayDomains() 获取不填则为总体数据。
  * @method void setPlayDomains(array $PlayDomains) 设置不填则为总体数据。
  * @method integer getPageNum() 获取页号，
 范围是[1,1000]，
-默认值是1
+默认值是1。
  * @method void setPageNum(integer $PageNum) 设置页号，
 范围是[1,1000]，
-默认值是1
+默认值是1。
  * @method integer getPageSize() 获取每页个数，范围是[1,1000]，
-默认值是20
+默认值是20。
  * @method void setPageSize(integer $PageSize) 设置每页个数，范围是[1,1000]，
-默认值是20
+默认值是20。
  */
 
 /**
@@ -63,7 +63,7 @@ class DescribeProIspPlaySumInfoListRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 统计的类型，可选值包括”Province”，”Isp”
+     * @var string 统计的类型，可选值包括”Province”，”Isp”。
      */
     public $StatType;
 
@@ -75,13 +75,13 @@ class DescribeProIspPlaySumInfoListRequest extends AbstractModel
     /**
      * @var integer 页号，
 范围是[1,1000]，
-默认值是1
+默认值是1。
      */
     public $PageNum;
 
     /**
      * @var integer 每页个数，范围是[1,1000]，
-默认值是20
+默认值是20。
      */
     public $PageSize;
     /**
@@ -90,13 +90,13 @@ class DescribeProIspPlaySumInfoListRequest extends AbstractModel
      * @param string $EndTime 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
-     * @param string $StatType 统计的类型，可选值包括”Province”，”Isp”
+     * @param string $StatType 统计的类型，可选值包括”Province”，”Isp”。
      * @param array $PlayDomains 不填则为总体数据。
      * @param integer $PageNum 页号，
 范围是[1,1000]，
-默认值是1
+默认值是1。
      * @param integer $PageSize 每页个数，范围是[1,1000]，
-默认值是20
+默认值是20。
      */
     function __construct()
     {

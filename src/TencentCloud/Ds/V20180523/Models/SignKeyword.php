@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffsetCoordX(string $OffsetCoordX) 设置X轴偏移坐标
  * @method string getOffsetCoordY() 获取Y轴偏移坐标
  * @method void setOffsetCoordY(string $OffsetCoordY) 设置Y轴偏移坐标
- * @method string getImageWidth() 获取签章突破宽度
- * @method void setImageWidth(string $ImageWidth) 设置签章突破宽度
+ * @method string getImageWidth() 获取签章图片宽度
+ * @method void setImageWidth(string $ImageWidth) 设置签章图片宽度
  * @method string getImageHeight() 获取签章图片高度
  * @method void setImageHeight(string $ImageHeight) 设置签章图片高度
  */
@@ -51,7 +51,7 @@ class SignKeyword extends AbstractModel
     public $OffsetCoordY;
 
     /**
-     * @var string 签章突破宽度
+     * @var string 签章图片宽度
      */
     public $ImageWidth;
 
@@ -63,7 +63,7 @@ class SignKeyword extends AbstractModel
      * @param string $Keyword 关键字
      * @param string $OffsetCoordX X轴偏移坐标
      * @param string $OffsetCoordY Y轴偏移坐标
-     * @param string $ImageWidth 签章突破宽度
+     * @param string $ImageWidth 签章图片宽度
      * @param string $ImageHeight 签章图片高度
      */
     function __construct()

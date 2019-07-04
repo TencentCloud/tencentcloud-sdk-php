@@ -18,12 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取每页返回多少个标签
- * @method void setLimit(integer $Limit) 设置每页返回多少个标签
- * @method array getRows() 获取实例标签信息
- * @method void setRows(array $Rows) 设置实例标签信息
+ * @method integer getOffset() 获取偏移量。
+ * @method void setOffset(integer $Offset) 设置偏移量。
+ * @method integer getLimit() 获取每页返回多少个标签。
+ * @method void setLimit(integer $Limit) 设置每页返回多少个标签。
+ * @method array getRows() 获取实例标签信息。
+ * @method void setRows(array $Rows) 设置实例标签信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTagsOfInstanceIdsResponse extends AbstractModel
 {
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量。
      */
     public $Offset;
 
     /**
-     * @var integer 每页返回多少个标签
+     * @var integer 每页返回多少个标签。
      */
     public $Limit;
 
     /**
-     * @var array 实例标签信息
+     * @var array 实例标签信息。
      */
     public $Rows;
 
@@ -53,9 +53,9 @@ class DescribeTagsOfInstanceIdsResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 每页返回多少个标签
-     * @param array $Rows 实例标签信息
+     * @param integer $Offset 偏移量。
+     * @param integer $Limit 每页返回多少个标签。
+     * @param array $Rows 实例标签信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

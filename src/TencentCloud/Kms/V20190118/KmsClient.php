@@ -22,6 +22,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Kms\V20190118\Models as Models;
 
 /**
+* @method Models\CancelKeyDeletionResponse CancelKeyDeletion(Models\CancelKeyDeletionRequest $req) 取消CMK的计划删除操作
 * @method Models\CreateKeyResponse CreateKey(Models\CreateKeyRequest $req) 创建用户管理数据密钥的主密钥CMK（Custom Master Key）。
 * @method Models\DecryptResponse Decrypt(Models\DecryptRequest $req) 本接口用于解密密文，得到明文数据。
 * @method Models\DescribeKeyResponse DescribeKey(Models\DescribeKeyRequest $req) 用于获取指定KeyId的主密钥属性详情信息。
@@ -39,6 +40,7 @@ use TencentCloud\Kms\V20190118\Models as Models;
 * @method Models\ListKeyDetailResponse ListKeyDetail(Models\ListKeyDetailRequest $req) 根据指定Offset和Limit获取主密钥列表详情。
 * @method Models\ListKeysResponse ListKeys(Models\ListKeysRequest $req) 列出账号下面的密钥列表（KeyId信息）。
 * @method Models\ReEncryptResponse ReEncrypt(Models\ReEncryptRequest $req) 使用指定CMK对密文重新加密。
+* @method Models\ScheduleKeyDeletionResponse ScheduleKeyDeletion(Models\ScheduleKeyDeletionRequest $req) CMK计划删除接口，用于指定CMK删除的时间，可选时间区间为[7,30]天
 * @method Models\UpdateAliasResponse UpdateAlias(Models\UpdateAliasRequest $req) 用于修改CMK的别名。
 * @method Models\UpdateKeyDescriptionResponse UpdateKeyDescription(Models\UpdateKeyDescriptionRequest $req) 该接口用于对指定的cmk修改描述信息。
  */

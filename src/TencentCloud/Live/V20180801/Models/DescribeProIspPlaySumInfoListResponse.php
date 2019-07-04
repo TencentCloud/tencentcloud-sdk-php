@@ -24,18 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalRequest(integer $TotalRequest) 设置总请求数。
  * @method string getStatType() 获取统计的类型。
  * @method void setStatType(string $StatType) 设置统计的类型。
- * @method integer getPageSize() 获取每页的记录数
- * @method void setPageSize(integer $PageSize) 设置每页的记录数
- * @method integer getPageNum() 获取页号
- * @method void setPageNum(integer $PageNum) 设置页号
- * @method integer getTotalNum() 获取总记录数
- * @method void setTotalNum(integer $TotalNum) 设置总记录数
- * @method integer getTotalPage() 获取总页数
- * @method void setTotalPage(integer $TotalPage) 设置总页数
- * @method array getDataInfoList() 获取省份或运营商汇总数据列表
- * @method void setDataInfoList(array $DataInfoList) 设置省份或运营商汇总数据列表
- * @method float getAvgFluxPerSecond() 获取平均带宽
- * @method void setAvgFluxPerSecond(float $AvgFluxPerSecond) 设置平均带宽
+ * @method integer getPageSize() 获取每页的记录数。
+ * @method void setPageSize(integer $PageSize) 设置每页的记录数。
+ * @method integer getPageNum() 获取页号。
+ * @method void setPageNum(integer $PageNum) 设置页号。
+ * @method integer getTotalNum() 获取总记录数。
+ * @method void setTotalNum(integer $TotalNum) 设置总记录数。
+ * @method integer getTotalPage() 获取总页数。
+ * @method void setTotalPage(integer $TotalPage) 设置总页数。
+ * @method array getDataInfoList() 获取省份或运营商汇总数据列表。
+ * @method void setDataInfoList(array $DataInfoList) 设置省份或运营商汇总数据列表。
+ * @method float getAvgFluxPerSecond() 获取平均带宽。
+ * @method void setAvgFluxPerSecond(float $AvgFluxPerSecond) 设置平均带宽。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,32 +61,32 @@ class DescribeProIspPlaySumInfoListResponse extends AbstractModel
     public $StatType;
 
     /**
-     * @var integer 每页的记录数
+     * @var integer 每页的记录数。
      */
     public $PageSize;
 
     /**
-     * @var integer 页号
+     * @var integer 页号。
      */
     public $PageNum;
 
     /**
-     * @var integer 总记录数
+     * @var integer 总记录数。
      */
     public $TotalNum;
 
     /**
-     * @var integer 总页数
+     * @var integer 总页数。
      */
     public $TotalPage;
 
     /**
-     * @var array 省份或运营商汇总数据列表
+     * @var array 省份或运营商汇总数据列表。
      */
     public $DataInfoList;
 
     /**
-     * @var float 平均带宽
+     * @var float 平均带宽。
      */
     public $AvgFluxPerSecond;
 
@@ -98,12 +98,12 @@ class DescribeProIspPlaySumInfoListResponse extends AbstractModel
      * @param float $TotalFlux 总流量。
      * @param integer $TotalRequest 总请求数。
      * @param string $StatType 统计的类型。
-     * @param integer $PageSize 每页的记录数
-     * @param integer $PageNum 页号
-     * @param integer $TotalNum 总记录数
-     * @param integer $TotalPage 总页数
-     * @param array $DataInfoList 省份或运营商汇总数据列表
-     * @param float $AvgFluxPerSecond 平均带宽
+     * @param integer $PageSize 每页的记录数。
+     * @param integer $PageNum 页号。
+     * @param integer $TotalNum 总记录数。
+     * @param integer $TotalPage 总页数。
+     * @param array $DataInfoList 省份或运营商汇总数据列表。
+     * @param float $AvgFluxPerSecond 平均带宽。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

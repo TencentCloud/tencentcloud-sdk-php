@@ -27,10 +27,10 @@ use TencentCloud\Common\AbstractModel;
 取值范围:300-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
  * @method integer getStorageTime() 获取录制存储时长。
-单位秒，取值范围： 0-5184000。
+单位秒，取值范围： 0-93312000。
 0表示永久存储。
  * @method void setStorageTime(integer $StorageTime) 设置录制存储时长。
-单位秒，取值范围： 0-5184000。
+单位秒，取值范围： 0-93312000。
 0表示永久存储。
  * @method integer getEnable() 获取是否开启当前格式录制，0 否 1是。默认值0。
  * @method void setEnable(integer $Enable) 设置是否开启当前格式录制，0 否 1是。默认值0。
@@ -51,7 +51,7 @@ class RecordParam extends AbstractModel
 
     /**
      * @var integer 录制存储时长。
-单位秒，取值范围： 0-5184000。
+单位秒，取值范围： 0-93312000。
 0表示永久存储。
      */
     public $StorageTime;
@@ -66,7 +66,7 @@ class RecordParam extends AbstractModel
 取值范围:300-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      * @param integer $StorageTime 录制存储时长。
-单位秒，取值范围： 0-5184000。
+单位秒，取值范围： 0-93312000。
 0表示永久存储。
      * @param integer $Enable 是否开启当前格式录制，0 否 1是。默认值0。
      */

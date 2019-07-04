@@ -18,8 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+ * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
  * @method string getStartTime() 获取开始时间，格式为：2017-07-12 10:29:20。
  * @method void setStartTime(string $StartTime) 设置开始时间，格式为：2017-07-12 10:29:20。
  * @method string getSearchDatabase() 获取要查询的数据库名前缀。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBackupDatabasesRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+     * @var string 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
     public $InstanceId;
 
@@ -60,7 +60,7 @@ class DescribeBackupDatabasesRequest extends AbstractModel
      */
     public $Limit;
     /**
-     * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      * @param string $StartTime 开始时间，格式为：2017-07-12 10:29:20。
      * @param string $SearchDatabase 要查询的数据库名前缀。
      * @param integer $Offset 分页偏移量。

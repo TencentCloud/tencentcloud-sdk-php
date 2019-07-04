@@ -18,10 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取符合条件的记录数
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的记录数
- * @method array getItems() 获取参数修改记录
- * @method void setItems(array $Items) 设置参数修改记录
+ * @method integer getTotalCount() 获取符合条件的记录数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的记录数。
+ * @method array getItems() 获取参数修改记录。
+ * @method void setItems(array $Items) 设置参数修改记录。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstanceParamRecordsResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的记录数
+     * @var integer 符合条件的记录数。
      */
     public $TotalCount;
 
     /**
-     * @var array 参数修改记录
+     * @var array 参数修改记录。
      */
     public $Items;
 
@@ -46,8 +46,8 @@ class DescribeInstanceParamRecordsResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 符合条件的记录数
-     * @param array $Items 参数修改记录
+     * @param integer $TotalCount 符合条件的记录数。
+     * @param array $Items 参数修改记录。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

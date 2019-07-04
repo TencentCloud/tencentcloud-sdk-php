@@ -18,8 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getInstances() 获取用于回档的实例详情信息
- * @method void setInstances(array $Instances) 设置用于回档的实例详情信息
+ * @method array getInstances() 获取用于回档的实例详情信息。
+ * @method void setInstances(array $Instances) 设置用于回档的实例详情信息。
  */
 
 /**
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
 class StartBatchRollbackRequest extends AbstractModel
 {
     /**
-     * @var array 用于回档的实例详情信息
+     * @var array 用于回档的实例详情信息。
      */
     public $Instances;
     /**
-     * @param array $Instances 用于回档的实例详情信息
+     * @param array $Instances 用于回档的实例详情信息。
      */
     function __construct()
     {

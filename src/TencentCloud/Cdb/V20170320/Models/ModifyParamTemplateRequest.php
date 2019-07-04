@@ -18,8 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTemplateId() 获取模板Id。
- * @method void setTemplateId(integer $TemplateId) 设置模板Id。
+ * @method integer getTemplateId() 获取模板 ID。
+ * @method void setTemplateId(integer $TemplateId) 设置模板 ID。
  * @method string getName() 获取模板名称。
  * @method void setName(string $Name) 设置模板名称。
  * @method string getDescription() 获取模板描述。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyParamTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 模板Id。
+     * @var integer 模板 ID。
      */
     public $TemplateId;
 
@@ -53,7 +53,7 @@ class ModifyParamTemplateRequest extends AbstractModel
      */
     public $ParamList;
     /**
-     * @param integer $TemplateId 模板Id。
+     * @param integer $TemplateId 模板 ID。
      * @param string $Name 模板名称。
      * @param string $Description 模板描述。
      * @param array $ParamList 参数列表。

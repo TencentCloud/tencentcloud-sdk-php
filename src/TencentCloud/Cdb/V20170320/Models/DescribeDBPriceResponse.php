@@ -18,10 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPrice() 获取实例价格，单位：分（人民币）
- * @method void setPrice(integer $Price) 设置实例价格，单位：分（人民币）
- * @method integer getOriginalPrice() 获取实例原价，单位：分（人民币）
- * @method void setOriginalPrice(integer $OriginalPrice) 设置实例原价，单位：分（人民币）
+ * @method integer getPrice() 获取实例价格，单位：分（人民币）。
+ * @method void setPrice(integer $Price) 设置实例价格，单位：分（人民币）。
+ * @method integer getOriginalPrice() 获取实例原价，单位：分（人民币）。
+ * @method void setOriginalPrice(integer $OriginalPrice) 设置实例原价，单位：分（人民币）。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBPriceResponse extends AbstractModel
 {
     /**
-     * @var integer 实例价格，单位：分（人民币）
+     * @var integer 实例价格，单位：分（人民币）。
      */
     public $Price;
 
     /**
-     * @var integer 实例原价，单位：分（人民币）
+     * @var integer 实例原价，单位：分（人民币）。
      */
     public $OriginalPrice;
 
@@ -46,8 +46,8 @@ class DescribeDBPriceResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $Price 实例价格，单位：分（人民币）
-     * @param integer $OriginalPrice 实例原价，单位：分（人民币）
+     * @param integer $Price 实例价格，单位：分（人民币）。
+     * @param integer $OriginalPrice 实例原价，单位：分（人民币）。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置密钥创建时间
  * @method string getDescription() 获取CMK的描述
  * @method void setDescription(string $Description) 设置CMK的描述
- * @method string getKeyState() 获取CMK的状态， Enabled 或者 Disabled 或者 Deleted
- * @method void setKeyState(string $KeyState) 设置CMK的状态， Enabled 或者 Disabled 或者 Deleted
+ * @method string getKeyState() 获取CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
+ * @method void setKeyState(string $KeyState) 设置CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
  * @method string getKeyUsage() 获取CMK用途，当前是 ENCRYPT_DECRYPT
  * @method void setKeyUsage(string $KeyUsage) 设置CMK用途，当前是 ENCRYPT_DECRYPT
  * @method integer getType() 获取CMK类型，当前为 1 普通类型
@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwner(string $Owner) 设置CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
  * @method integer getNextRotateTime() 获取在密钥轮换开启状态下，下次轮换的时间
  * @method void setNextRotateTime(integer $NextRotateTime) 设置在密钥轮换开启状态下，下次轮换的时间
+ * @method integer getDeletionDate() 获取计划删除的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeletionDate(integer $DeletionDate) 设置计划删除的时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -68,7 +72,7 @@ class KeyMetadata extends AbstractModel
     public $Description;
 
     /**
-     * @var string CMK的状态， Enabled 或者 Disabled 或者 Deleted
+     * @var string CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
      */
     public $KeyState;
 
@@ -101,18 +105,26 @@ class KeyMetadata extends AbstractModel
      * @var integer 在密钥轮换开启状态下，下次轮换的时间
      */
     public $NextRotateTime;
+
+    /**
+     * @var integer 计划删除的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeletionDate;
     /**
      * @param string $KeyId CMK的全局唯一标识
      * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名
      * @param integer $CreateTime 密钥创建时间
      * @param string $Description CMK的描述
-     * @param string $KeyState CMK的状态， Enabled 或者 Disabled 或者 Deleted
+     * @param string $KeyState CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
      * @param string $KeyUsage CMK用途，当前是 ENCRYPT_DECRYPT
      * @param integer $Type CMK类型，当前为 1 普通类型
      * @param integer $CreatorUin 创建者
      * @param boolean $KeyRotationEnabled 是否开启了密钥轮换功能
      * @param string $Owner CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
      * @param integer $NextRotateTime 在密钥轮换开启状态下，下次轮换的时间
+     * @param integer $DeletionDate 计划删除的时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -168,6 +180,10 @@ class KeyMetadata extends AbstractModel
 
         if (array_key_exists("NextRotateTime",$param) and $param["NextRotateTime"] !== null) {
             $this->NextRotateTime = $param["NextRotateTime"];
+        }
+
+        if (array_key_exists("DeletionDate",$param) and $param["DeletionDate"] !== null) {
+            $this->DeletionDate = $param["DeletionDate"];
         }
     }
 }

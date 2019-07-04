@@ -18,56 +18,56 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getProjectId() 获取项目ID，可使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口查询项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID，可使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口查询项目ID
- * @method array getInstanceTypes() 获取实例类型，可取值：1-主实例，2-灾备实例，3-只读实例
- * @method void setInstanceTypes(array $InstanceTypes) 设置实例类型，可取值：1-主实例，2-灾备实例，3-只读实例
- * @method array getVips() 获取实例的内网IP地址
- * @method void setVips(array $Vips) 设置实例的内网IP地址
- * @method array getStatus() 获取实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
- * @method void setStatus(array $Status) 设置实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
- * @method integer getOffset() 获取偏移量，默认值为0
- * @method void setOffset(integer $Offset) 设置偏移量，默认值为0
- * @method integer getLimit() 获取单次请求返回的数量，默认值为20，最大值为2000
- * @method void setLimit(integer $Limit) 设置单次请求返回的数量，默认值为20，最大值为2000
- * @method string getSecurityGroupId() 获取安全组ID
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组ID
- * @method array getPayTypes() 获取付费类型，可取值：0-包年包月，1-小时计费
- * @method void setPayTypes(array $PayTypes) 设置付费类型，可取值：0-包年包月，1-小时计费
- * @method array getInstanceNames() 获取实例名称
- * @method void setInstanceNames(array $InstanceNames) 设置实例名称
- * @method array getTaskStatus() 获取实例任务状态，可能取值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中<br>15-升级待切换<br>16-升级切换中<br>17-升级切换完成
- * @method void setTaskStatus(array $TaskStatus) 设置实例任务状态，可能取值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中<br>15-升级待切换<br>16-升级切换中<br>17-升级切换完成
- * @method array getEngineVersions() 获取实例数据库引擎版本，可能取值：5.1、5.5、5.6和5.7
- * @method void setEngineVersions(array $EngineVersions) 设置实例数据库引擎版本，可能取值：5.1、5.5、5.6和5.7
- * @method array getVpcIds() 获取私有网络的ID
- * @method void setVpcIds(array $VpcIds) 设置私有网络的ID
- * @method array getZoneIds() 获取可用区的ID
- * @method void setZoneIds(array $ZoneIds) 设置可用区的ID
- * @method array getSubnetIds() 获取子网ID
- * @method void setSubnetIds(array $SubnetIds) 设置子网ID
- * @method array getCdbErrors() 获取是否锁定标记
- * @method void setCdbErrors(array $CdbErrors) 设置是否锁定标记
- * @method string getOrderBy() 获取返回结果集排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
- * @method void setOrderBy(string $OrderBy) 设置返回结果集排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
- * @method string getOrderDirection() 获取返回结果集排序方式，目前支持："ASC"或者"DESC"
- * @method void setOrderDirection(string $OrderDirection) 设置返回结果集排序方式，目前支持："ASC"或者"DESC"
- * @method integer getWithSecurityGroup() 获取是否包含安全组详细信息，可取值：0-不包含，1-包含
- * @method void setWithSecurityGroup(integer $WithSecurityGroup) 设置是否包含安全组详细信息，可取值：0-不包含，1-包含
- * @method integer getWithExCluster() 获取是否包含独享集群详细信息，可取值：0-不包含，1-包含
- * @method void setWithExCluster(integer $WithExCluster) 设置是否包含独享集群详细信息，可取值：0-不包含，1-包含
- * @method string getExClusterId() 获取独享集群ID
- * @method void setExClusterId(string $ExClusterId) 设置独享集群ID
- * @method array getInstanceIds() 获取实例ID
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID
- * @method integer getInitFlag() 获取初始化标记，可取值：0-未初始化，1-初始化
- * @method void setInitFlag(integer $InitFlag) 设置初始化标记，可取值：0-未初始化，1-初始化
- * @method integer getWithDr() 获取是否包含灾备实例，可取值：0-不包含，1-包含
- * @method void setWithDr(integer $WithDr) 设置是否包含灾备实例，可取值：0-不包含，1-包含
- * @method integer getWithRo() 获取是否包含只读实例，可取值：0-不包含，1-包含
- * @method void setWithRo(integer $WithRo) 设置是否包含只读实例，可取值：0-不包含，1-包含
- * @method integer getWithMaster() 获取是否包含主实例，可取值：0-不包含，1-包含
- * @method void setWithMaster(integer $WithMaster) 设置是否包含主实例，可取值：0-不包含，1-包含
+ * @method integer getProjectId() 获取项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
+ * @method void setProjectId(integer $ProjectId) 设置项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
+ * @method array getInstanceTypes() 获取实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
+ * @method void setInstanceTypes(array $InstanceTypes) 设置实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
+ * @method array getVips() 获取实例的内网 IP 地址。
+ * @method void setVips(array $Vips) 设置实例的内网 IP 地址。
+ * @method array getStatus() 获取实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 隔离中（可在回收站恢复开机）
+ * @method void setStatus(array $Status) 设置实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 隔离中（可在回收站恢复开机）
+ * @method integer getOffset() 获取偏移量，默认值为 0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认值为 0。
+ * @method integer getLimit() 获取单次请求返回的数量，默认值为 20，最大值为 2000。
+ * @method void setLimit(integer $Limit) 设置单次请求返回的数量，默认值为 20，最大值为 2000。
+ * @method string getSecurityGroupId() 获取安全组 ID。
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组 ID。
+ * @method array getPayTypes() 获取付费类型，可取值：0 - 包年包月，1 - 小时计费。
+ * @method void setPayTypes(array $PayTypes) 设置付费类型，可取值：0 - 包年包月，1 - 小时计费。
+ * @method array getInstanceNames() 获取实例名称。
+ * @method void setInstanceNames(array $InstanceNames) 设置实例名称。
+ * @method array getTaskStatus() 获取实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成
+ * @method void setTaskStatus(array $TaskStatus) 设置实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成
+ * @method array getEngineVersions() 获取实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
+ * @method void setEngineVersions(array $EngineVersions) 设置实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
+ * @method array getVpcIds() 获取私有网络的 ID。
+ * @method void setVpcIds(array $VpcIds) 设置私有网络的 ID。
+ * @method array getZoneIds() 获取可用区的 ID。
+ * @method void setZoneIds(array $ZoneIds) 设置可用区的 ID。
+ * @method array getSubnetIds() 获取子网 ID。
+ * @method void setSubnetIds(array $SubnetIds) 设置子网 ID。
+ * @method array getCdbErrors() 获取是否锁定标记。
+ * @method void setCdbErrors(array $CdbErrors) 设置是否锁定标记。
+ * @method string getOrderBy() 获取返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
+ * @method void setOrderBy(string $OrderBy) 设置返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
+ * @method string getOrderDirection() 获取返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
+ * @method void setOrderDirection(string $OrderDirection) 设置返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
+ * @method integer getWithSecurityGroup() 获取是否包含安全组详细信息，可取值：0 - 不包含，1 - 包含。
+ * @method void setWithSecurityGroup(integer $WithSecurityGroup) 设置是否包含安全组详细信息，可取值：0 - 不包含，1 - 包含。
+ * @method integer getWithExCluster() 获取是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
+ * @method void setWithExCluster(integer $WithExCluster) 设置是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
+ * @method string getExClusterId() 获取独享集群 ID。
+ * @method void setExClusterId(string $ExClusterId) 设置独享集群 ID。
+ * @method array getInstanceIds() 获取实例 ID。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例 ID。
+ * @method integer getInitFlag() 获取初始化标记，可取值：0 - 未初始化，1 - 初始化。
+ * @method void setInitFlag(integer $InitFlag) 设置初始化标记，可取值：0 - 未初始化，1 - 初始化。
+ * @method integer getWithDr() 获取是否包含灾备实例，可取值：0 - 不包含，1 - 包含。
+ * @method void setWithDr(integer $WithDr) 设置是否包含灾备实例，可取值：0 - 不包含，1 - 包含。
+ * @method integer getWithRo() 获取是否包含只读实例，可取值：0 - 不包含，1 - 包含。
+ * @method void setWithRo(integer $WithRo) 设置是否包含只读实例，可取值：0 - 不包含，1 - 包含。
+ * @method integer getWithMaster() 获取是否包含主实例，可取值：0 - 不包含，1 - 包含。
+ * @method void setWithMaster(integer $WithMaster) 设置是否包含主实例，可取值：0 - 不包含，1 - 包含。
  */
 
 /**
@@ -76,155 +76,155 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer 项目ID，可使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口查询项目ID
+     * @var integer 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
      */
     public $ProjectId;
 
     /**
-     * @var array 实例类型，可取值：1-主实例，2-灾备实例，3-只读实例
+     * @var array 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
      */
     public $InstanceTypes;
 
     /**
-     * @var array 实例的内网IP地址
+     * @var array 实例的内网 IP 地址。
      */
     public $Vips;
 
     /**
-     * @var array 实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
+     * @var array 实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 隔离中（可在回收站恢复开机）
      */
     public $Status;
 
     /**
-     * @var integer 偏移量，默认值为0
+     * @var integer 偏移量，默认值为 0。
      */
     public $Offset;
 
     /**
-     * @var integer 单次请求返回的数量，默认值为20，最大值为2000
+     * @var integer 单次请求返回的数量，默认值为 20，最大值为 2000。
      */
     public $Limit;
 
     /**
-     * @var string 安全组ID
+     * @var string 安全组 ID。
      */
     public $SecurityGroupId;
 
     /**
-     * @var array 付费类型，可取值：0-包年包月，1-小时计费
+     * @var array 付费类型，可取值：0 - 包年包月，1 - 小时计费。
      */
     public $PayTypes;
 
     /**
-     * @var array 实例名称
+     * @var array 实例名称。
      */
     public $InstanceNames;
 
     /**
-     * @var array 实例任务状态，可能取值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中<br>15-升级待切换<br>16-升级切换中<br>17-升级切换完成
+     * @var array 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成
      */
     public $TaskStatus;
 
     /**
-     * @var array 实例数据库引擎版本，可能取值：5.1、5.5、5.6和5.7
+     * @var array 实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
      */
     public $EngineVersions;
 
     /**
-     * @var array 私有网络的ID
+     * @var array 私有网络的 ID。
      */
     public $VpcIds;
 
     /**
-     * @var array 可用区的ID
+     * @var array 可用区的 ID。
      */
     public $ZoneIds;
 
     /**
-     * @var array 子网ID
+     * @var array 子网 ID。
      */
     public $SubnetIds;
 
     /**
-     * @var array 是否锁定标记
+     * @var array 是否锁定标记。
      */
     public $CdbErrors;
 
     /**
-     * @var string 返回结果集排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
+     * @var string 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
      */
     public $OrderBy;
 
     /**
-     * @var string 返回结果集排序方式，目前支持："ASC"或者"DESC"
+     * @var string 返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
      */
     public $OrderDirection;
 
     /**
-     * @var integer 是否包含安全组详细信息，可取值：0-不包含，1-包含
+     * @var integer 是否包含安全组详细信息，可取值：0 - 不包含，1 - 包含。
      */
     public $WithSecurityGroup;
 
     /**
-     * @var integer 是否包含独享集群详细信息，可取值：0-不包含，1-包含
+     * @var integer 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
      */
     public $WithExCluster;
 
     /**
-     * @var string 独享集群ID
+     * @var string 独享集群 ID。
      */
     public $ExClusterId;
 
     /**
-     * @var array 实例ID
+     * @var array 实例 ID。
      */
     public $InstanceIds;
 
     /**
-     * @var integer 初始化标记，可取值：0-未初始化，1-初始化
+     * @var integer 初始化标记，可取值：0 - 未初始化，1 - 初始化。
      */
     public $InitFlag;
 
     /**
-     * @var integer 是否包含灾备实例，可取值：0-不包含，1-包含
+     * @var integer 是否包含灾备实例，可取值：0 - 不包含，1 - 包含。
      */
     public $WithDr;
 
     /**
-     * @var integer 是否包含只读实例，可取值：0-不包含，1-包含
+     * @var integer 是否包含只读实例，可取值：0 - 不包含，1 - 包含。
      */
     public $WithRo;
 
     /**
-     * @var integer 是否包含主实例，可取值：0-不包含，1-包含
+     * @var integer 是否包含主实例，可取值：0 - 不包含，1 - 包含。
      */
     public $WithMaster;
     /**
-     * @param integer $ProjectId 项目ID，可使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口查询项目ID
-     * @param array $InstanceTypes 实例类型，可取值：1-主实例，2-灾备实例，3-只读实例
-     * @param array $Vips 实例的内网IP地址
-     * @param array $Status 实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
-     * @param integer $Offset 偏移量，默认值为0
-     * @param integer $Limit 单次请求返回的数量，默认值为20，最大值为2000
-     * @param string $SecurityGroupId 安全组ID
-     * @param array $PayTypes 付费类型，可取值：0-包年包月，1-小时计费
-     * @param array $InstanceNames 实例名称
-     * @param array $TaskStatus 实例任务状态，可能取值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中<br>15-升级待切换<br>16-升级切换中<br>17-升级切换完成
-     * @param array $EngineVersions 实例数据库引擎版本，可能取值：5.1、5.5、5.6和5.7
-     * @param array $VpcIds 私有网络的ID
-     * @param array $ZoneIds 可用区的ID
-     * @param array $SubnetIds 子网ID
-     * @param array $CdbErrors 是否锁定标记
-     * @param string $OrderBy 返回结果集排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
-     * @param string $OrderDirection 返回结果集排序方式，目前支持："ASC"或者"DESC"
-     * @param integer $WithSecurityGroup 是否包含安全组详细信息，可取值：0-不包含，1-包含
-     * @param integer $WithExCluster 是否包含独享集群详细信息，可取值：0-不包含，1-包含
-     * @param string $ExClusterId 独享集群ID
-     * @param array $InstanceIds 实例ID
-     * @param integer $InitFlag 初始化标记，可取值：0-未初始化，1-初始化
-     * @param integer $WithDr 是否包含灾备实例，可取值：0-不包含，1-包含
-     * @param integer $WithRo 是否包含只读实例，可取值：0-不包含，1-包含
-     * @param integer $WithMaster 是否包含主实例，可取值：0-不包含，1-包含
+     * @param integer $ProjectId 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
+     * @param array $InstanceTypes 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
+     * @param array $Vips 实例的内网 IP 地址。
+     * @param array $Status 实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 隔离中（可在回收站恢复开机）
+     * @param integer $Offset 偏移量，默认值为 0。
+     * @param integer $Limit 单次请求返回的数量，默认值为 20，最大值为 2000。
+     * @param string $SecurityGroupId 安全组 ID。
+     * @param array $PayTypes 付费类型，可取值：0 - 包年包月，1 - 小时计费。
+     * @param array $InstanceNames 实例名称。
+     * @param array $TaskStatus 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成
+     * @param array $EngineVersions 实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
+     * @param array $VpcIds 私有网络的 ID。
+     * @param array $ZoneIds 可用区的 ID。
+     * @param array $SubnetIds 子网 ID。
+     * @param array $CdbErrors 是否锁定标记。
+     * @param string $OrderBy 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
+     * @param string $OrderDirection 返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
+     * @param integer $WithSecurityGroup 是否包含安全组详细信息，可取值：0 - 不包含，1 - 包含。
+     * @param integer $WithExCluster 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
+     * @param string $ExClusterId 独享集群 ID。
+     * @param array $InstanceIds 实例 ID。
+     * @param integer $InitFlag 初始化标记，可取值：0 - 未初始化，1 - 初始化。
+     * @param integer $WithDr 是否包含灾备实例，可取值：0 - 不包含，1 - 包含。
+     * @param integer $WithRo 是否包含只读实例，可取值：0 - 不包含，1 - 包含。
+     * @param integer $WithMaster 是否包含主实例，可取值：0 - 不包含，1 - 包含。
      */
     function __construct()
     {

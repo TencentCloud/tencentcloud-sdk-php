@@ -180,6 +180,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * @method Models\SimpleHlsClipResponse SimpleHlsClip(Models\SimpleHlsClipRequest $req) 对 HLS 视频进行按时间段裁剪。
 
 注意：裁剪出来的视频与原始视频共用 ts，仅生成新的 m3u8。原始视频删除后，该裁剪视频也会被删除。
+* @method Models\WeChatMiniProgramPublishResponse WeChatMiniProgramPublish(Models\WeChatMiniProgramPublishRequest $req) 将点播视频发布到微信小程序，供微信小程序播放器播放。
  */
 
 class VodClient extends AbstractClient

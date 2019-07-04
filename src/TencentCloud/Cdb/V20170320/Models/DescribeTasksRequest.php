@@ -18,22 +18,22 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值
- * @method string getAsyncRequestId() 获取异步任务请求ID，执行 CDB 相关操作返回的 AsyncRequestId
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务请求ID，执行 CDB 相关操作返回的 AsyncRequestId
- * @method array getTaskTypes() 获取任务类型，不传值则查询所有任务类型，可能的值：1-数据库回档；2-SQL操作；3-数据导入；5-参数设置；6-初始化；7-重启；8-开启GTID；9-只读实例升级；10-数据库批量回档；11-主实例升级；12-删除库表；13-切换为主实例；
- * @method void setTaskTypes(array $TaskTypes) 设置任务类型，不传值则查询所有任务类型，可能的值：1-数据库回档；2-SQL操作；3-数据导入；5-参数设置；6-初始化；7-重启；8-开启GTID；9-只读实例升级；10-数据库批量回档；11-主实例升级；12-删除库表；13-切换为主实例；
- * @method array getTaskStatus() 获取任务状态，不传值则查询所有任务状态，可能的值：-1-未定义；0-初始化; 1-运行中；2-执行成功；3-执行失败；4-已终止；5-已删除；6-已暂停；
- * @method void setTaskStatus(array $TaskStatus) 设置任务状态，不传值则查询所有任务状态，可能的值：-1-未定义；0-初始化; 1-运行中；2-执行成功；3-执行失败；4-已终止；5-已删除；6-已暂停；
- * @method string getStartTimeBegin() 获取第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01
- * @method void setStartTimeBegin(string $StartTimeBegin) 设置第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01
- * @method string getStartTimeEnd() 获取最后一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01
- * @method void setStartTimeEnd(string $StartTimeEnd) 设置最后一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01
- * @method integer getOffset() 获取记录偏移量，默认值为0
- * @method void setOffset(integer $Offset) 设置记录偏移量，默认值为0
- * @method integer getLimit() 获取单次请求返回的数量，默认值为20，最大值为100
- * @method void setLimit(integer $Limit) 设置单次请求返回的数量，默认值为20，最大值为100
+ * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+ * @method string getAsyncRequestId() 获取异步任务请求 ID，执行 CDB 相关操作返回的 AsyncRequestId。
+ * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务请求 ID，执行 CDB 相关操作返回的 AsyncRequestId。
+ * @method array getTaskTypes() 获取任务类型，不传值则查询所有任务类型，可能的值：1-数据库回档；2-SQL操作；3-数据导入；5-参数设置；6-初始化；7-重启；8-开启GTID；9-只读实例升级；10-数据库批量回档；11-主实例升级；12-删除库表；13-切换为主实例。
+ * @method void setTaskTypes(array $TaskTypes) 设置任务类型，不传值则查询所有任务类型，可能的值：1-数据库回档；2-SQL操作；3-数据导入；5-参数设置；6-初始化；7-重启；8-开启GTID；9-只读实例升级；10-数据库批量回档；11-主实例升级；12-删除库表；13-切换为主实例。
+ * @method array getTaskStatus() 获取任务状态，不传值则查询所有任务状态，可能的值：-1-未定义；0-初始化; 1-运行中；2-执行成功；3-执行失败；4-已终止；5-已删除；6-已暂停。
+ * @method void setTaskStatus(array $TaskStatus) 设置任务状态，不传值则查询所有任务状态，可能的值：-1-未定义；0-初始化; 1-运行中；2-执行成功；3-执行失败；4-已终止；5-已删除；6-已暂停。
+ * @method string getStartTimeBegin() 获取第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
+ * @method void setStartTimeBegin(string $StartTimeBegin) 设置第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
+ * @method string getStartTimeEnd() 获取最后一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
+ * @method void setStartTimeEnd(string $StartTimeEnd) 设置最后一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
+ * @method integer getOffset() 获取记录偏移量，默认值为0。
+ * @method void setOffset(integer $Offset) 设置记录偏移量，默认值为0。
+ * @method integer getLimit() 获取单次请求返回的数量，默认值为20，最大值为100。
+ * @method void setLimit(integer $Limit) 设置单次请求返回的数量，默认值为20，最大值为100。
  */
 
 /**
@@ -42,53 +42,53 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTasksRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值
+     * @var string 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
     public $InstanceId;
 
     /**
-     * @var string 异步任务请求ID，执行 CDB 相关操作返回的 AsyncRequestId
+     * @var string 异步任务请求 ID，执行 CDB 相关操作返回的 AsyncRequestId。
      */
     public $AsyncRequestId;
 
     /**
-     * @var array 任务类型，不传值则查询所有任务类型，可能的值：1-数据库回档；2-SQL操作；3-数据导入；5-参数设置；6-初始化；7-重启；8-开启GTID；9-只读实例升级；10-数据库批量回档；11-主实例升级；12-删除库表；13-切换为主实例；
+     * @var array 任务类型，不传值则查询所有任务类型，可能的值：1-数据库回档；2-SQL操作；3-数据导入；5-参数设置；6-初始化；7-重启；8-开启GTID；9-只读实例升级；10-数据库批量回档；11-主实例升级；12-删除库表；13-切换为主实例。
      */
     public $TaskTypes;
 
     /**
-     * @var array 任务状态，不传值则查询所有任务状态，可能的值：-1-未定义；0-初始化; 1-运行中；2-执行成功；3-执行失败；4-已终止；5-已删除；6-已暂停；
+     * @var array 任务状态，不传值则查询所有任务状态，可能的值：-1-未定义；0-初始化; 1-运行中；2-执行成功；3-执行失败；4-已终止；5-已删除；6-已暂停。
      */
     public $TaskStatus;
 
     /**
-     * @var string 第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01
+     * @var string 第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
      */
     public $StartTimeBegin;
 
     /**
-     * @var string 最后一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01
+     * @var string 最后一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
      */
     public $StartTimeEnd;
 
     /**
-     * @var integer 记录偏移量，默认值为0
+     * @var integer 记录偏移量，默认值为0。
      */
     public $Offset;
 
     /**
-     * @var integer 单次请求返回的数量，默认值为20，最大值为100
+     * @var integer 单次请求返回的数量，默认值为20，最大值为100。
      */
     public $Limit;
     /**
-     * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值
-     * @param string $AsyncRequestId 异步任务请求ID，执行 CDB 相关操作返回的 AsyncRequestId
-     * @param array $TaskTypes 任务类型，不传值则查询所有任务类型，可能的值：1-数据库回档；2-SQL操作；3-数据导入；5-参数设置；6-初始化；7-重启；8-开启GTID；9-只读实例升级；10-数据库批量回档；11-主实例升级；12-删除库表；13-切换为主实例；
-     * @param array $TaskStatus 任务状态，不传值则查询所有任务状态，可能的值：-1-未定义；0-初始化; 1-运行中；2-执行成功；3-执行失败；4-已终止；5-已删除；6-已暂停；
-     * @param string $StartTimeBegin 第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01
-     * @param string $StartTimeEnd 最后一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01
-     * @param integer $Offset 记录偏移量，默认值为0
-     * @param integer $Limit 单次请求返回的数量，默认值为20，最大值为100
+     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+     * @param string $AsyncRequestId 异步任务请求 ID，执行 CDB 相关操作返回的 AsyncRequestId。
+     * @param array $TaskTypes 任务类型，不传值则查询所有任务类型，可能的值：1-数据库回档；2-SQL操作；3-数据导入；5-参数设置；6-初始化；7-重启；8-开启GTID；9-只读实例升级；10-数据库批量回档；11-主实例升级；12-删除库表；13-切换为主实例。
+     * @param array $TaskStatus 任务状态，不传值则查询所有任务状态，可能的值：-1-未定义；0-初始化; 1-运行中；2-执行成功；3-执行失败；4-已终止；5-已删除；6-已暂停。
+     * @param string $StartTimeBegin 第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
+     * @param string $StartTimeEnd 最后一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
+     * @param integer $Offset 记录偏移量，默认值为0。
+     * @param integer $Limit 单次请求返回的数量，默认值为20，最大值为100。
      */
     function __construct()
     {

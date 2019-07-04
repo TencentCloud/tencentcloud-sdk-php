@@ -36,8 +36,10 @@ use TencentCloud\Common\AbstractModel;
 若不填，则为查询总体播放数据。
  * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
 若不填，则为查询总体播放数据。
+注意：按AppName查询，需要联系客服同学提单支持。
  * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
 若不填，则为查询总体播放数据。
+注意：按AppName查询，需要联系客服同学提单支持。
  */
 
 /**
@@ -72,6 +74,7 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
     /**
      * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
 若不填，则为查询总体播放数据。
+注意：按AppName查询，需要联系客服同学提单支持。
      */
     public $AppName;
     /**
@@ -85,6 +88,7 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
 若不填，则为查询总体播放数据。
      * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
 若不填，则为查询总体播放数据。
+注意：按AppName查询，需要联系客服同学提单支持。
      */
     function __construct()
     {

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 1：慢直播。
  * @method HlsSpecialParam getHlsSpecialParam() 获取HLS录制定制参数
  * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) 设置HLS录制定制参数
+ * @method RecordParam getMp3Param() 获取Mp3录制参数。
+ * @method void setMp3Param(RecordParam $Mp3Param) 设置Mp3录制参数。
  */
 
 /**
@@ -90,6 +92,11 @@ class RecordTemplateInfo extends AbstractModel
      * @var HlsSpecialParam HLS录制定制参数
      */
     public $HlsSpecialParam;
+
+    /**
+     * @var RecordParam Mp3录制参数。
+     */
+    public $Mp3Param;
     /**
      * @param integer $TemplateId 模板Id。
      * @param string $TemplateName 模板名称。
@@ -101,6 +108,7 @@ class RecordTemplateInfo extends AbstractModel
      * @param integer $IsDelayLive 0：普通直播，
 1：慢直播。
      * @param HlsSpecialParam $HlsSpecialParam HLS录制定制参数
+     * @param RecordParam $Mp3Param Mp3录制参数。
      */
     function __construct()
     {
@@ -153,6 +161,11 @@ class RecordTemplateInfo extends AbstractModel
         if (array_key_exists("HlsSpecialParam",$param) and $param["HlsSpecialParam"] !== null) {
             $this->HlsSpecialParam = new HlsSpecialParam();
             $this->HlsSpecialParam->deserialize($param["HlsSpecialParam"]);
+        }
+
+        if (array_key_exists("Mp3Param",$param) and $param["Mp3Param"] !== null) {
+            $this->Mp3Param = new RecordParam();
+            $this->Mp3Param->deserialize($param["Mp3Param"]);
         }
     }
 }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRole(integer $Role) 设置根据创建者角色筛选，默认 0 表示用户自己创建的cmk， 1 表示授权其它云产品自动创建的cmk
  * @method integer getOrderType() 获取根据CMK创建时间排序， 0 表示按照降序排序，1表示按照升序排序
  * @method void setOrderType(integer $OrderType) 设置根据CMK创建时间排序， 0 表示按照降序排序，1表示按照升序排序
- * @method integer getKeyState() 获取根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK
- * @method void setKeyState(integer $KeyState) 设置根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK
+ * @method integer getKeyState() 获取根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3表示查询PendingDelete CMK(处于计划删除状态的Key)
+ * @method void setKeyState(integer $KeyState) 设置根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3表示查询PendingDelete CMK(处于计划删除状态的Key)
  * @method string getSearchKeyAlias() 获取根据KeyId或者Alias进行模糊匹配查询
  * @method void setSearchKeyAlias(string $SearchKeyAlias) 设置根据KeyId或者Alias进行模糊匹配查询
  */
@@ -58,7 +58,7 @@ class ListKeyDetailRequest extends AbstractModel
     public $OrderType;
 
     /**
-     * @var integer 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK
+     * @var integer 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3表示查询PendingDelete CMK(处于计划删除状态的Key)
      */
     public $KeyState;
 
@@ -71,7 +71,7 @@ class ListKeyDetailRequest extends AbstractModel
      * @param integer $Limit 含义跟 SQL 查询的 Limit 一致，表示本次获最多获取 Limit 个元素。缺省值为10，最大值为200
      * @param integer $Role 根据创建者角色筛选，默认 0 表示用户自己创建的cmk， 1 表示授权其它云产品自动创建的cmk
      * @param integer $OrderType 根据CMK创建时间排序， 0 表示按照降序排序，1表示按照升序排序
-     * @param integer $KeyState 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK
+     * @param integer $KeyState 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3表示查询PendingDelete CMK(处于计划删除状态的Key)
      * @param string $SearchKeyAlias 根据KeyId或者Alias进行模糊匹配查询
      */
     function __construct()

@@ -18,92 +18,104 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getType() 获取转发目标的类型，目前仅可取值为 CVM
- * @method void setType(string $Type) 设置转发目标的类型，目前仅可取值为 CVM
- * @method string getInstanceId() 获取云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
- * @method void setInstanceId(string $InstanceId) 设置云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
- * @method integer getPort() 获取后端云服务器监听端口
- * @method void setPort(integer $Port) 设置后端云服务器监听端口
- * @method integer getWeight() 获取后端云服务器的转发权重，取值范围：0~100，默认为 10。
- * @method void setWeight(integer $Weight) 设置后端云服务器的转发权重，取值范围：0~100，默认为 10。
- * @method array getPublicIpAddresses() 获取云服务器的外网 IP
+ * @method string getType() 获取后端服务的类型，可取：CVM、ENI（即将支持）
+ * @method void setType(string $Type) 设置后端服务的类型，可取：CVM、ENI（即将支持）
+ * @method string getInstanceId() 获取后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+ * @method void setInstanceId(string $InstanceId) 设置后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+ * @method integer getPort() 获取后端服务的监听端口
+ * @method void setPort(integer $Port) 设置后端服务的监听端口
+ * @method integer getWeight() 获取后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+ * @method void setWeight(integer $Weight) 设置后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+ * @method array getPublicIpAddresses() 获取后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置云服务器的外网 IP
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPrivateIpAddresses() 获取云服务器的内网 IP
+ * @method array getPrivateIpAddresses() 获取后端服务的内网 IP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置云服务器的内网 IP
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置后端服务的内网 IP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceName() 获取云服务器实例名称
+ * @method string getInstanceName() 获取后端服务的实例名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceName(string $InstanceName) 设置云服务器实例名称
+ * @method void setInstanceName(string $InstanceName) 设置后端服务的实例名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegisteredTime() 获取云服务器被绑定到监听器的时间
+ * @method string getRegisteredTime() 获取后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegisteredTime(string $RegisteredTime) 设置云服务器被绑定到监听器的时间
+ * @method void setRegisteredTime(string $RegisteredTime) 设置后端服务被绑定的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEniId() 获取弹性网卡唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEniId(string $EniId) 设置弹性网卡唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
- *监听器后端绑定机器的详细信息
+ *监听器绑定的后端服务的详细信息
  */
 class Backend extends AbstractModel
 {
     /**
-     * @var string 转发目标的类型，目前仅可取值为 CVM
+     * @var string 后端服务的类型，可取：CVM、ENI（即将支持）
      */
     public $Type;
 
     /**
-     * @var string 云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+     * @var string 后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
      */
     public $InstanceId;
 
     /**
-     * @var integer 后端云服务器监听端口
+     * @var integer 后端服务的监听端口
      */
     public $Port;
 
     /**
-     * @var integer 后端云服务器的转发权重，取值范围：0~100，默认为 10。
+     * @var integer 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      */
     public $Weight;
 
     /**
-     * @var array 云服务器的外网 IP
+     * @var array 后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIpAddresses;
 
     /**
-     * @var array 云服务器的内网 IP
+     * @var array 后端服务的内网 IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivateIpAddresses;
 
     /**
-     * @var string 云服务器实例名称
+     * @var string 后端服务的实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
-     * @var string 云服务器被绑定到监听器的时间
+     * @var string 后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegisteredTime;
+
     /**
-     * @param string $Type 转发目标的类型，目前仅可取值为 CVM
-     * @param string $InstanceId 云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
-     * @param integer $Port 后端云服务器监听端口
-     * @param integer $Weight 后端云服务器的转发权重，取值范围：0~100，默认为 10。
-     * @param array $PublicIpAddresses 云服务器的外网 IP
+     * @var string 弹性网卡唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PrivateIpAddresses 云服务器的内网 IP
+     */
+    public $EniId;
+    /**
+     * @param string $Type 后端服务的类型，可取：CVM、ENI（即将支持）
+     * @param string $InstanceId 后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+     * @param integer $Port 后端服务的监听端口
+     * @param integer $Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+     * @param array $PublicIpAddresses 后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceName 云服务器实例名称
+     * @param array $PrivateIpAddresses 后端服务的内网 IP
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RegisteredTime 云服务器被绑定到监听器的时间
+     * @param string $InstanceName 后端服务的实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegisteredTime 后端服务被绑定的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EniId 弹性网卡唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class Backend extends AbstractModel
 
         if (array_key_exists("RegisteredTime",$param) and $param["RegisteredTime"] !== null) {
             $this->RegisteredTime = $param["RegisteredTime"];
+        }
+
+        if (array_key_exists("EniId",$param) and $param["EniId"] !== null) {
+            $this->EniId = $param["EniId"];
         }
     }
 }

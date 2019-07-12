@@ -22,6 +22,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Gme\V20180711\Models as Models;
 
 /**
+* @method Models\DescribeFilterResultResponse DescribeFilterResult(Models\DescribeFilterResultRequest $req) 根据应用ID和文件ID查询识别结果
 * @method Models\DescribeFilterResultListResponse DescribeFilterResultList(Models\DescribeFilterResultListRequest $req) 根据日期查询识别结果列表
 * @method Models\VoiceFilterResponse VoiceFilter(Models\VoiceFilterRequest $req) 本接口用于识别涉黄、涉政等违规音频，成功会回调配置在应用的回调地址。回调示例如下：
 {"BizId":0,"FileId":"test_file_id","FileName":"test_file_name","FileUrl":"test_file_url","OpenId":"test_open_id","TimeStamp":"0000-00-00 00:00:00","Data":[{"Type":1,"Word":"xx"}]}

@@ -18,8 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTemplateId() 获取参数模板ID。
- * @method void setTemplateId(integer $TemplateId) 设置参数模板ID。
+ * @method integer getTemplateId() 获取参数模板 ID。
+ * @method void setTemplateId(integer $TemplateId) 设置参数模板 ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateParamTemplateResponse extends AbstractModel
 {
     /**
-     * @var integer 参数模板ID。
+     * @var integer 参数模板 ID。
      */
     public $TemplateId;
 
@@ -39,7 +39,7 @@ class CreateParamTemplateResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TemplateId 参数模板ID。
+     * @param integer $TemplateId 参数模板 ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

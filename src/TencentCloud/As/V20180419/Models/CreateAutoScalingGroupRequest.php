@@ -48,12 +48,14 @@ use TencentCloud\Common\AbstractModel;
 <br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
  * @method array getZones() 获取可用区列表，基础网络场景下必须指定可用区
  * @method void setZones(array $Zones) 设置可用区列表，基础网络场景下必须指定可用区
- * @method string getRetryPolicy() 获取重试策略，取值包括 IMMEDIATE_RETRY 和 INCREMENTAL_INTERVALS，默认取值为 IMMEDIATE_RETRY。
+ * @method string getRetryPolicy() 获取重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
 <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。
- * @method void setRetryPolicy(string $RetryPolicy) 设置重试策略，取值包括 IMMEDIATE_RETRY 和 INCREMENTAL_INTERVALS，默认取值为 IMMEDIATE_RETRY。
+<br><li> NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。
+ * @method void setRetryPolicy(string $RetryPolicy) 设置重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
 <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。
+<br><li> NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。
  * @method string getZonesCheckPolicy() 获取可用区校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
 <br><li> ALL，所有可用区（Zone）或子网（SubnetId）都可用则通过校验，否则校验报错。
 <br><li> ANY，存在任何一个可用区（Zone）或子网（SubnetId）可用则通过校验，否则校验报错。
@@ -68,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
 如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
  * @method array getTags() 获取标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
  * @method void setTags(array $Tags) 设置标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
+ * @method ServiceSettings getServiceSettings() 获取服务设置，包括云监控不健康替换等服务设置。
+ * @method void setServiceSettings(ServiceSettings $ServiceSettings) 设置服务设置，包括云监控不健康替换等服务设置。
  */
 
 /**
@@ -143,9 +147,10 @@ class CreateAutoScalingGroupRequest extends AbstractModel
     public $Zones;
 
     /**
-     * @var string 重试策略，取值包括 IMMEDIATE_RETRY 和 INCREMENTAL_INTERVALS，默认取值为 IMMEDIATE_RETRY。
+     * @var string 重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
 <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。
+<br><li> NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。
      */
     public $RetryPolicy;
 
@@ -163,6 +168,11 @@ class CreateAutoScalingGroupRequest extends AbstractModel
      * @var array 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
      */
     public $Tags;
+
+    /**
+     * @var ServiceSettings 服务设置，包括云监控不健康替换等服务设置。
+     */
+    public $ServiceSettings;
     /**
      * @param string $AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      * @param string $LaunchConfigurationId 启动配置ID
@@ -179,9 +189,10 @@ class CreateAutoScalingGroupRequest extends AbstractModel
 <br><li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。
 <br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
      * @param array $Zones 可用区列表，基础网络场景下必须指定可用区
-     * @param string $RetryPolicy 重试策略，取值包括 IMMEDIATE_RETRY 和 INCREMENTAL_INTERVALS，默认取值为 IMMEDIATE_RETRY。
+     * @param string $RetryPolicy 重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
 <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。
+<br><li> NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。
      * @param string $ZonesCheckPolicy 可用区校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
 <br><li> ALL，所有可用区（Zone）或子网（SubnetId）都可用则通过校验，否则校验报错。
 <br><li> ANY，存在任何一个可用区（Zone）或子网（SubnetId）可用则通过校验，否则校验报错。
@@ -189,6 +200,7 @@ class CreateAutoScalingGroupRequest extends AbstractModel
 可用区或子网不可用的常见原因包括该可用区CVM实例类型售罄、该可用区CBS云盘售罄、该可用区配额不足、该子网IP不足等。
 如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
      * @param array $Tags 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
+     * @param ServiceSettings $ServiceSettings 服务设置，包括云监控不健康替换等服务设置。
      */
     function __construct()
     {
@@ -274,6 +286,11 @@ class CreateAutoScalingGroupRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("ServiceSettings",$param) and $param["ServiceSettings"] !== null) {
+            $this->ServiceSettings = new ServiceSettings();
+            $this->ServiceSettings->deserialize($param["ServiceSettings"]);
         }
     }
 }

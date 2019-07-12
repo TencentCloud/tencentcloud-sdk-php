@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Clb\V20180317\Models;
+namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取负载均衡实例 ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
- * @method string getListenerId() 获取要删除的监听器 ID
- * @method void setListenerId(string $ListenerId) 设置要删除的监听器 ID
+ * @method integer getBizId() 获取应用ID
+ * @method void setBizId(integer $BizId) 设置应用ID
+ * @method string getFileId() 获取文件ID
+ * @method void setFileId(string $FileId) 设置文件ID
  */
 
 /**
- *DeleteListener请求参数结构体
+ *DescribeFilterResult请求参数结构体
  */
-class DeleteListenerRequest extends AbstractModel
+class DescribeFilterResultRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例 ID
+     * @var integer 应用ID
      */
-    public $LoadBalancerId;
+    public $BizId;
 
     /**
-     * @var string 要删除的监听器 ID
+     * @var string 文件ID
      */
-    public $ListenerId;
+    public $FileId;
     /**
-     * @param string $LoadBalancerId 负载均衡实例 ID
-     * @param string $ListenerId 要删除的监听器 ID
+     * @param integer $BizId 应用ID
+     * @param string $FileId 文件ID
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DeleteListenerRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
+            $this->BizId = $param["BizId"];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
     }
 }

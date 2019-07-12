@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getLoadBalancerId() 获取负载均衡实例 ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
- * @method string getListenerId() 获取应用型负载均衡监听器 ID
- * @method void setListenerId(string $ListenerId) 设置应用型负载均衡监听器 ID
+ * @method string getListenerId() 获取负载均衡监听器 ID
+ * @method void setListenerId(string $ListenerId) 设置负载均衡监听器 ID
  * @method string getLocationId() 获取要修改的转发规则的 ID。
  * @method void setLocationId(string $LocationId) 设置要修改的转发规则的 ID。
  * @method string getUrl() 获取转发规则的新的转发路径，如不需修改Url，则不需提供此参数
  * @method void setUrl(string $Url) 设置转发规则的新的转发路径，如不需修改Url，则不需提供此参数
  * @method HealthCheck getHealthCheck() 获取健康检查信息
  * @method void setHealthCheck(HealthCheck $HealthCheck) 设置健康检查信息
- * @method string getScheduler() 获取规则的请求转发方式
- * @method void setScheduler(string $Scheduler) 设置规则的请求转发方式
+ * @method string getScheduler() 获取规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
+ * @method void setScheduler(string $Scheduler) 设置规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
  * @method integer getSessionExpireTime() 获取会话保持时间
  * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间
+ * @method string getForwardType() 获取负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS
+ * @method void setForwardType(string $ForwardType) 设置负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS
  */
 
 /**
@@ -45,7 +49,7 @@ class ModifyRuleRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var string 应用型负载均衡监听器 ID
+     * @var string 负载均衡监听器 ID
      */
     public $ListenerId;
 
@@ -65,7 +69,8 @@ class ModifyRuleRequest extends AbstractModel
     public $HealthCheck;
 
     /**
-     * @var string 规则的请求转发方式
+     * @var string 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
      */
     public $Scheduler;
 
@@ -73,14 +78,21 @@ class ModifyRuleRequest extends AbstractModel
      * @var integer 会话保持时间
      */
     public $SessionExpireTime;
+
+    /**
+     * @var string 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS
+     */
+    public $ForwardType;
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
-     * @param string $ListenerId 应用型负载均衡监听器 ID
+     * @param string $ListenerId 负载均衡监听器 ID
      * @param string $LocationId 要修改的转发规则的 ID。
      * @param string $Url 转发规则的新的转发路径，如不需修改Url，则不需提供此参数
      * @param HealthCheck $HealthCheck 健康检查信息
-     * @param string $Scheduler 规则的请求转发方式
+     * @param string $Scheduler 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
      * @param integer $SessionExpireTime 会话保持时间
+     * @param string $ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS
      */
     function __construct()
     {
@@ -121,6 +133,10 @@ class ModifyRuleRequest extends AbstractModel
 
         if (array_key_exists("SessionExpireTime",$param) and $param["SessionExpireTime"] !== null) {
             $this->SessionExpireTime = $param["SessionExpireTime"];
+        }
+
+        if (array_key_exists("ForwardType",$param) and $param["ForwardType"] !== null) {
+            $this->ForwardType = $param["ForwardType"];
         }
     }
 }

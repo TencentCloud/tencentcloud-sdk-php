@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageId(string $ImageId) 设置操作系统镜像ID
  * @method string getPassword() 获取重装系统密码设置
  * @method void setPassword(string $Password) 设置重装系统密码设置
- * @method string getKeyId() 获取重装系统，关联秘钥设置
- * @method void setKeyId(string $KeyId) 设置重装系统，关联秘钥设置
+ * @method string getKeyId() 获取重装系统，关联密钥设置
+ * @method void setKeyId(string $KeyId) 设置重装系统，关联密钥设置
  * @method string getSgId() 获取安全组设置
  * @method void setSgId(string $SgId) 设置安全组设置
  * @method string getInstanceImportMode() 获取云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
@@ -67,7 +67,7 @@ class AddInstancesRequest extends AbstractModel
     public $Password;
 
     /**
-     * @var string 重装系统，关联秘钥设置
+     * @var string 重装系统，关联密钥设置
      */
     public $KeyId;
 
@@ -86,7 +86,7 @@ class AddInstancesRequest extends AbstractModel
      * @param string $OsName 操作系统名称
      * @param string $ImageId 操作系统镜像ID
      * @param string $Password 重装系统密码设置
-     * @param string $KeyId 重装系统，关联秘钥设置
+     * @param string $KeyId 重装系统，关联密钥设置
      * @param string $SgId 安全组设置
      * @param string $InstanceImportMode 云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
      */

@@ -18,8 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTaskId() 获取请求ID，即接口返回的RequestId
- * @method void setTaskId(string $TaskId) 设置请求ID，即接口返回的RequestId
+ * @method string getTaskId() 获取请求ID，即接口返回的 RequestId 参数
+ * @method void setTaskId(string $TaskId) 设置请求ID，即接口返回的 RequestId 参数
  */
 
 /**
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTaskStatusRequest extends AbstractModel
 {
     /**
-     * @var string 请求ID，即接口返回的RequestId
+     * @var string 请求ID，即接口返回的 RequestId 参数
      */
     public $TaskId;
     /**
-     * @param string $TaskId 请求ID，即接口返回的RequestId
+     * @param string $TaskId 请求ID，即接口返回的 RequestId 参数
      */
     function __construct()
     {

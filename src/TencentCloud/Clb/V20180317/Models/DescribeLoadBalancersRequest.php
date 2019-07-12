@@ -24,38 +24,40 @@ use TencentCloud\Common\AbstractModel;
 OPEN：公网属性， INTERNAL：内网属性。
  * @method void setLoadBalancerType(string $LoadBalancerType) 设置负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
- * @method integer getForward() 获取1：应用型，0：传统型。
- * @method void setForward(integer $Forward) 设置1：应用型，0：传统型。
- * @method string getLoadBalancerName() 获取负载均衡实例名称。
- * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡实例名称。
- * @method string getDomain() 获取腾讯云为负载均衡实例分配的域名，应用型负载均衡该字段无意义。
- * @method void setDomain(string $Domain) 设置腾讯云为负载均衡实例分配的域名，应用型负载均衡该字段无意义。
+ * @method integer getForward() 获取负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例
+ * @method void setForward(integer $Forward) 设置负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例
+ * @method string getLoadBalancerName() 获取负载均衡实例的名称。
+ * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡实例的名称。
+ * @method string getDomain() 获取腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
+ * @method void setDomain(string $Domain) 设置腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
  * @method array getLoadBalancerVips() 获取负载均衡实例的 VIP 地址，支持多个。
  * @method void setLoadBalancerVips(array $LoadBalancerVips) 设置负载均衡实例的 VIP 地址，支持多个。
- * @method array getBackendPublicIps() 获取后端云服务器的外网 IP。
- * @method void setBackendPublicIps(array $BackendPublicIps) 设置后端云服务器的外网 IP。
- * @method array getBackendPrivateIps() 获取后端云服务器的内网 IP。
- * @method void setBackendPrivateIps(array $BackendPrivateIps) 设置后端云服务器的内网 IP。
+ * @method array getBackendPublicIps() 获取负载均衡绑定的后端服务的外网 IP。
+ * @method void setBackendPublicIps(array $BackendPublicIps) 设置负载均衡绑定的后端服务的外网 IP。
+ * @method array getBackendPrivateIps() 获取负载均衡绑定的后端服务的内网 IP。
+ * @method void setBackendPrivateIps(array $BackendPrivateIps) 设置负载均衡绑定的后端服务的内网 IP。
  * @method integer getOffset() 获取数据偏移量，默认为 0。
  * @method void setOffset(integer $Offset) 设置数据偏移量，默认为 0。
- * @method integer getLimit() 获取返回负载均衡个数，默认为 20。
- * @method void setLimit(integer $Limit) 设置返回负载均衡个数，默认为 20。
- * @method string getOrderBy() 获取排序字段，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
- * @method void setOrderBy(string $OrderBy) 设置排序字段，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
+ * @method integer getLimit() 获取返回负载均衡实例的个数，默认为 20。
+ * @method void setLimit(integer $Limit) 设置返回负载均衡实例的个数，默认为 20。
+ * @method string getOrderBy() 获取排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
+ * @method void setOrderBy(string $OrderBy) 设置排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
  * @method integer getOrderType() 获取1：倒序，0：顺序，默认按照创建时间倒序。
  * @method void setOrderType(integer $OrderType) 设置1：倒序，0：顺序，默认按照创建时间倒序。
  * @method string getSearchKey() 获取搜索字段，模糊匹配名称、域名、VIP。
  * @method void setSearchKey(string $SearchKey) 设置搜索字段，模糊匹配名称、域名、VIP。
  * @method integer getProjectId() 获取负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
  * @method void setProjectId(integer $ProjectId) 设置负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
- * @method integer getWithRs() 获取查询的负载均衡是否绑定后端服务器，0：没有绑定云服务器，1：绑定云服务器，-1：查询全部。
- * @method void setWithRs(integer $WithRs) 设置查询的负载均衡是否绑定后端服务器，0：没有绑定云服务器，1：绑定云服务器，-1：查询全部。
+ * @method integer getWithRs() 获取负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
+ * @method void setWithRs(integer $WithRs) 设置负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
  * @method string getVpcId() 获取负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
 基础网络不支持通过VpcId查询。
  * @method void setVpcId(string $VpcId) 设置负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
 基础网络不支持通过VpcId查询。
  * @method string getSecurityGroup() 获取安全组ID，如 sg-m1cc9123
  * @method void setSecurityGroup(string $SecurityGroup) 设置安全组ID，如 sg-m1cc9123
+ * @method string getMasterZone() 获取主可用区ID，如 ："100001" （对应的是广州一区）
+ * @method void setMasterZone(string $MasterZone) 设置主可用区ID，如 ："100001" （对应的是广州一区）
  */
 
 /**
@@ -75,17 +77,17 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $LoadBalancerType;
 
     /**
-     * @var integer 1：应用型，0：传统型。
+     * @var integer 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例
      */
     public $Forward;
 
     /**
-     * @var string 负载均衡实例名称。
+     * @var string 负载均衡实例的名称。
      */
     public $LoadBalancerName;
 
     /**
-     * @var string 腾讯云为负载均衡实例分配的域名，应用型负载均衡该字段无意义。
+     * @var string 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
      */
     public $Domain;
 
@@ -95,12 +97,12 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $LoadBalancerVips;
 
     /**
-     * @var array 后端云服务器的外网 IP。
+     * @var array 负载均衡绑定的后端服务的外网 IP。
      */
     public $BackendPublicIps;
 
     /**
-     * @var array 后端云服务器的内网 IP。
+     * @var array 负载均衡绑定的后端服务的内网 IP。
      */
     public $BackendPrivateIps;
 
@@ -110,12 +112,12 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $Offset;
 
     /**
-     * @var integer 返回负载均衡个数，默认为 20。
+     * @var integer 返回负载均衡实例的个数，默认为 20。
      */
     public $Limit;
 
     /**
-     * @var string 排序字段，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
+     * @var string 排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
      */
     public $OrderBy;
 
@@ -135,7 +137,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $ProjectId;
 
     /**
-     * @var integer 查询的负载均衡是否绑定后端服务器，0：没有绑定云服务器，1：绑定云服务器，-1：查询全部。
+     * @var integer 负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
      */
     public $WithRs;
 
@@ -149,26 +151,32 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @var string 安全组ID，如 sg-m1cc9123
      */
     public $SecurityGroup;
+
+    /**
+     * @var string 主可用区ID，如 ："100001" （对应的是广州一区）
+     */
+    public $MasterZone;
     /**
      * @param array $LoadBalancerIds 负载均衡实例 ID。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
-     * @param integer $Forward 1：应用型，0：传统型。
-     * @param string $LoadBalancerName 负载均衡实例名称。
-     * @param string $Domain 腾讯云为负载均衡实例分配的域名，应用型负载均衡该字段无意义。
+     * @param integer $Forward 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例
+     * @param string $LoadBalancerName 负载均衡实例的名称。
+     * @param string $Domain 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
      * @param array $LoadBalancerVips 负载均衡实例的 VIP 地址，支持多个。
-     * @param array $BackendPublicIps 后端云服务器的外网 IP。
-     * @param array $BackendPrivateIps 后端云服务器的内网 IP。
+     * @param array $BackendPublicIps 负载均衡绑定的后端服务的外网 IP。
+     * @param array $BackendPrivateIps 负载均衡绑定的后端服务的内网 IP。
      * @param integer $Offset 数据偏移量，默认为 0。
-     * @param integer $Limit 返回负载均衡个数，默认为 20。
-     * @param string $OrderBy 排序字段，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
+     * @param integer $Limit 返回负载均衡实例的个数，默认为 20。
+     * @param string $OrderBy 排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
      * @param integer $OrderType 1：倒序，0：顺序，默认按照创建时间倒序。
      * @param string $SearchKey 搜索字段，模糊匹配名称、域名、VIP。
      * @param integer $ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
-     * @param integer $WithRs 查询的负载均衡是否绑定后端服务器，0：没有绑定云服务器，1：绑定云服务器，-1：查询全部。
+     * @param integer $WithRs 负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
      * @param string $VpcId 负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
 基础网络不支持通过VpcId查询。
      * @param string $SecurityGroup 安全组ID，如 sg-m1cc9123
+     * @param string $MasterZone 主可用区ID，如 ："100001" （对应的是广州一区）
      */
     function __construct()
     {
@@ -248,6 +256,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
             $this->SecurityGroup = $param["SecurityGroup"];
+        }
+
+        if (array_key_exists("MasterZone",$param) and $param["MasterZone"] !== null) {
+            $this->MasterZone = $param["MasterZone"];
         }
     }
 }

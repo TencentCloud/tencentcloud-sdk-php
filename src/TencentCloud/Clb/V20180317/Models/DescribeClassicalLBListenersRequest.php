@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getLoadBalancerId() 获取负载均衡实例 ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
- * @method array getListenerIds() 获取负载均衡监听器ID列表， 范围[1-65535]
- * @method void setListenerIds(array $ListenerIds) 设置负载均衡监听器ID列表， 范围[1-65535]
+ * @method array getListenerIds() 获取负载均衡监听器ID列表
+ * @method void setListenerIds(array $ListenerIds) 设置负载均衡监听器ID列表
  * @method string getProtocol() 获取负载均衡监听的协议, 'TCP', 'UDP', 'HTTP', 'HTTPS'
  * @method void setProtocol(string $Protocol) 设置负载均衡监听的协议, 'TCP', 'UDP', 'HTTP', 'HTTPS'
- * @method integer getListenerPort() 获取负载均衡监听端口
- * @method void setListenerPort(integer $ListenerPort) 设置负载均衡监听端口
+ * @method integer getListenerPort() 获取负载均衡监听端口， 范围[1-65535]
+ * @method void setListenerPort(integer $ListenerPort) 设置负载均衡监听端口， 范围[1-65535]
  * @method integer getStatus() 获取监听器的状态，0 表示创建中，1 表示运行中
  * @method void setStatus(integer $Status) 设置监听器的状态，0 表示创建中，1 表示运行中
  */
@@ -41,7 +41,7 @@ class DescribeClassicalLBListenersRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var array 负载均衡监听器ID列表， 范围[1-65535]
+     * @var array 负载均衡监听器ID列表
      */
     public $ListenerIds;
 
@@ -51,7 +51,7 @@ class DescribeClassicalLBListenersRequest extends AbstractModel
     public $Protocol;
 
     /**
-     * @var integer 负载均衡监听端口
+     * @var integer 负载均衡监听端口， 范围[1-65535]
      */
     public $ListenerPort;
 
@@ -61,9 +61,9 @@ class DescribeClassicalLBListenersRequest extends AbstractModel
     public $Status;
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
-     * @param array $ListenerIds 负载均衡监听器ID列表， 范围[1-65535]
+     * @param array $ListenerIds 负载均衡监听器ID列表
      * @param string $Protocol 负载均衡监听的协议, 'TCP', 'UDP', 'HTTP', 'HTTPS'
-     * @param integer $ListenerPort 负载均衡监听端口
+     * @param integer $ListenerPort 负载均衡监听端口， 范围[1-65535]
      * @param integer $Status 监听器的状态，0 表示创建中，1 表示运行中
      */
     function __construct()

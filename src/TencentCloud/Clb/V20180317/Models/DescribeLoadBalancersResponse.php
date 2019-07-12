@@ -18,8 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取满足过滤条件的负载均衡实例总数。
- * @method void setTotalCount(integer $TotalCount) 设置满足过滤条件的负载均衡实例总数。
+ * @method integer getTotalCount() 获取满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
+ * @method void setTotalCount(integer $TotalCount) 设置满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
  * @method array getLoadBalancerSet() 获取返回的负载均衡实例数组。
  * @method void setLoadBalancerSet(array $LoadBalancerSet) 设置返回的负载均衡实例数组。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLoadBalancersResponse extends AbstractModel
 {
     /**
-     * @var integer 满足过滤条件的负载均衡实例总数。
+     * @var integer 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
      */
     public $TotalCount;
 
@@ -46,7 +46,7 @@ class DescribeLoadBalancersResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 满足过滤条件的负载均衡实例总数。
+     * @param integer $TotalCount 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
      * @param array $LoadBalancerSet 返回的负载均衡实例数组。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

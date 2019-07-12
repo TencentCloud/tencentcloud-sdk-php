@@ -28,8 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheck(HealthCheck $HealthCheck) 设置健康检查信息
  * @method CertificateInput getCertificate() 获取证书信息
  * @method void setCertificate(CertificateInput $Certificate) 设置证书信息
- * @method string getScheduler() 获取规则的请求转发方式
- * @method void setScheduler(string $Scheduler) 设置规则的请求转发方式
+ * @method string getScheduler() 获取规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
+ * @method void setScheduler(string $Scheduler) 设置规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
+ * @method string getForwardType() 获取负载均衡与后端服务之间的转发协议，目前支持 HTTP
+ * @method void setForwardType(string $ForwardType) 设置负载均衡与后端服务之间的转发协议，目前支持 HTTP
  */
 
 /**
@@ -63,16 +67,24 @@ class RuleInput extends AbstractModel
     public $Certificate;
 
     /**
-     * @var string 规则的请求转发方式
+     * @var string 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
      */
     public $Scheduler;
+
+    /**
+     * @var string 负载均衡与后端服务之间的转发协议，目前支持 HTTP
+     */
+    public $ForwardType;
     /**
      * @param string $Domain 转发规则的域名。
      * @param string $Url 转发规则的路径。
      * @param integer $SessionExpireTime 会话保持时间
      * @param HealthCheck $HealthCheck 健康检查信息
      * @param CertificateInput $Certificate 证书信息
-     * @param string $Scheduler 规则的请求转发方式
+     * @param string $Scheduler 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
+     * @param string $ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP
      */
     function __construct()
     {
@@ -110,6 +122,10 @@ class RuleInput extends AbstractModel
 
         if (array_key_exists("Scheduler",$param) and $param["Scheduler"] !== null) {
             $this->Scheduler = $param["Scheduler"];
+        }
+
+        if (array_key_exists("ForwardType",$param) and $param["ForwardType"] !== null) {
+            $this->ForwardType = $param["ForwardType"];
         }
     }
 }

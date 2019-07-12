@@ -14,33 +14,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getWatermarkId() 获取水印ID。
- * @method void setWatermarkId(integer $WatermarkId) 设置水印ID。
- * @method integer getStatus() 获取状态。0：停用，1:启用
- * @method void setStatus(integer $Status) 设置状态。0：停用，1:启用
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *SetLiveWatermarkStatus请求参数结构体
+ *OfflineIsolatedInstances返回参数结构体
  */
-class SetLiveWatermarkStatusRequest extends AbstractModel
+class OfflineIsolatedInstancesResponse extends AbstractModel
 {
     /**
-     * @var integer 水印ID。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $WatermarkId;
-
+    public $RequestId;
     /**
-     * @var integer 状态。0：停用，1:启用
-     */
-    public $Status;
-    /**
-     * @param integer $WatermarkId 水印ID。
-     * @param integer $Status 状态。0：停用，1:启用
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class SetLiveWatermarkStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WatermarkId",$param) and $param["WatermarkId"] !== null) {
-            $this->WatermarkId = $param["WatermarkId"];
-        }
-
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

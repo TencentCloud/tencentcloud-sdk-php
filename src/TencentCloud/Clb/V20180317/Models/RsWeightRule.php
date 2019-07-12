@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置目标规则的域名，提供LocationId参数时本参数不生效
  * @method string getUrl() 获取目标规则的URL，提供LocationId参数时本参数不生效
  * @method void setUrl(string $Url) 设置目标规则的URL，提供LocationId参数时本参数不生效
- * @method integer getWeight() 获取后端云服务器新的转发权重，取值范围：0~100。
- * @method void setWeight(integer $Weight) 设置后端云服务器新的转发权重，取值范围：0~100。
+ * @method integer getWeight() 获取后端服务新的转发权重，取值范围：0~100。
+ * @method void setWeight(integer $Weight) 设置后端服务新的转发权重，取值范围：0~100。
  */
 
 /**
@@ -63,7 +63,7 @@ class RsWeightRule extends AbstractModel
     public $Url;
 
     /**
-     * @var integer 后端云服务器新的转发权重，取值范围：0~100。
+     * @var integer 后端服务新的转发权重，取值范围：0~100。
      */
     public $Weight;
     /**
@@ -72,7 +72,7 @@ class RsWeightRule extends AbstractModel
      * @param array $Targets 要修改权重的后端机器列表
      * @param string $Domain 目标规则的域名，提供LocationId参数时本参数不生效
      * @param string $Url 目标规则的URL，提供LocationId参数时本参数不生效
-     * @param integer $Weight 后端云服务器新的转发权重，取值范围：0~100。
+     * @param integer $Weight 后端服务新的转发权重，取值范围：0~100。
      */
     function __construct()
     {

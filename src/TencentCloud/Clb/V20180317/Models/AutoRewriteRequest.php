@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getLoadBalancerId() 获取负载均衡实例ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID
- * @method string getListenerId() 获取监听器ID
- * @method void setListenerId(string $ListenerId) 设置监听器ID
- * @method array getDomains() 获取需要重定向的域名
- * @method void setDomains(array $Domains) 设置需要重定向的域名
+ * @method string getListenerId() 获取HTTPS:443监听器的ID
+ * @method void setListenerId(string $ListenerId) 设置HTTPS:443监听器的ID
+ * @method array getDomains() 获取HTTPS:443监听器下需要重定向的域名
+ * @method void setDomains(array $Domains) 设置HTTPS:443监听器下需要重定向的域名
  */
 
 /**
@@ -37,18 +37,18 @@ class AutoRewriteRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var string 监听器ID
+     * @var string HTTPS:443监听器的ID
      */
     public $ListenerId;
 
     /**
-     * @var array 需要重定向的域名
+     * @var array HTTPS:443监听器下需要重定向的域名
      */
     public $Domains;
     /**
      * @param string $LoadBalancerId 负载均衡实例ID
-     * @param string $ListenerId 监听器ID
-     * @param array $Domains 需要重定向的域名
+     * @param string $ListenerId HTTPS:443监听器的ID
+     * @param array $Domains HTTPS:443监听器下需要重定向的域名
      */
     function __construct()
     {

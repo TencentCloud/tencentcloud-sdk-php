@@ -18,57 +18,73 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+ * @method integer getPort() 获取后端服务的监听端口
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+ * @method void setPort(integer $Port) 设置后端服务的监听端口
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPort() 获取后端云服务器监听端口
+ * @method string getType() 获取后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPort(integer $Port) 设置后端云服务器监听端口
+ * @method void setType(string $Type) 设置后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取转发目标的类型，目前仅可取值为 CVM
+ * @method string getInstanceId() 获取绑定CVM时需要传入此参数，代表CVM的唯一 ID，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。
+注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置转发目标的类型，目前仅可取值为 CVM
+ * @method void setInstanceId(string $InstanceId) 设置绑定CVM时需要传入此参数，代表CVM的唯一 ID，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。
+注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWeight() 获取后端云服务器的转发权重，取值范围：0~100，默认为 10。
- * @method void setWeight(integer $Weight) 设置后端云服务器的转发权重，取值范围：0~100，默认为 10。
+ * @method integer getWeight() 获取后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+ * @method void setWeight(integer $Weight) 设置后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+ * @method string getEniIp() 获取绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEniIp(string $EniIp) 设置绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
- *转发目标，即绑定在负载均衡上的后端机器
+ *转发目标，即绑定在负载均衡上的后端服务
  */
 class Target extends AbstractModel
 {
     /**
-     * @var string 云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $InstanceId;
-
-    /**
-     * @var integer 后端云服务器监听端口
+     * @var integer 后端服务的监听端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
-     * @var string 转发目标的类型，目前仅可取值为 CVM
+     * @var string 后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var integer 后端云服务器的转发权重，取值范围：0~100，默认为 10。
+     * @var string 绑定CVM时需要传入此参数，代表CVM的唯一 ID，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。
+注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
+
+    /**
+     * @var integer 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      */
     public $Weight;
+
     /**
-     * @param string $InstanceId 云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+     * @var string 绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Port 后端云服务器监听端口
+     */
+    public $EniIp;
+    /**
+     * @param integer $Port 后端服务的监听端口
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 转发目标的类型，目前仅可取值为 CVM
+     * @param string $Type 后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Weight 后端云服务器的转发权重，取值范围：0~100，默认为 10。
+     * @param string $InstanceId 绑定CVM时需要传入此参数，代表CVM的唯一 ID，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。
+注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+     * @param string $EniIp 绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -82,10 +98,6 @@ class Target extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
         if (array_key_exists("Port",$param) and $param["Port"] !== null) {
             $this->Port = $param["Port"];
         }
@@ -94,8 +106,16 @@ class Target extends AbstractModel
             $this->Type = $param["Type"];
         }
 
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
         if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
             $this->Weight = $param["Weight"];
+        }
+
+        if (array_key_exists("EniIp",$param) and $param["EniIp"] !== null) {
+            $this->EniIp = $param["EniIp"];
         }
     }
 }

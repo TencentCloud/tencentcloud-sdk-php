@@ -26,11 +26,11 @@ use TencentCloud\Common\AbstractModel;
 OPEN：公网属性， INTERNAL：内网属性。
  * @method void setLoadBalancerType(string $LoadBalancerType) 设置负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
- * @method integer getForward() 获取应用型负载均衡标识，1：应用型负载均衡，0：传统型的负载均衡。
- * @method void setForward(integer $Forward) 设置应用型负载均衡标识，1：应用型负载均衡，0：传统型的负载均衡。
- * @method string getDomain() 获取负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+ * @method integer getForward() 获取负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
+ * @method void setForward(integer $Forward) 设置负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
+ * @method string getDomain() 获取负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDomain(string $Domain) 设置负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+ * @method void setDomain(string $Domain) 设置负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLoadBalancerVips() 获取负载均衡实例的 VIP 列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -100,6 +100,38 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNumericalVpcId(integer $NumericalVpcId) 设置数值形式的私有网络 ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVipIsp() 获取负载均衡IP地址所属的ISP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVipIsp(string $VipIsp) 设置负载均衡IP地址所属的ISP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ZoneInfo getMasterZone() 获取主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMasterZone(ZoneInfo $MasterZone) 设置主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getBackupZoneSet() 获取备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupZoneSet(array $BackupZoneSet) 设置备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsolatedTime() 获取负载均衡实例被隔离的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsolatedTime(string $IsolatedTime) 设置负载均衡实例被隔离的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExpireTime() 获取负载均衡实例的过期时间，仅对预付费负载均衡生效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExpireTime(string $ExpireTime) 设置负载均衡实例的过期时间，仅对预付费负载均衡生效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChargeType() 获取负载均衡实例的计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChargeType(string $ChargeType) 设置负载均衡实例的计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method InternetAccessible getNetworkAttributes() 获取负载均衡实例的网络属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetworkAttributes(InternetAccessible $NetworkAttributes) 设置负载均衡实例的网络属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method LBChargePrepaid getPrepaidAttributes() 获取负载均衡实例的预付费相关属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrepaidAttributes(LBChargePrepaid $PrepaidAttributes) 设置负载均衡实例的预付费相关属性
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -124,12 +156,12 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $LoadBalancerType;
 
     /**
-     * @var integer 应用型负载均衡标识，1：应用型负载均衡，0：传统型的负载均衡。
+     * @var integer 负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
      */
     public $Forward;
 
     /**
-     * @var string 负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+     * @var string 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
@@ -235,13 +267,61 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NumericalVpcId;
+
+    /**
+     * @var string 负载均衡IP地址所属的ISP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VipIsp;
+
+    /**
+     * @var ZoneInfo 主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MasterZone;
+
+    /**
+     * @var array 备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BackupZoneSet;
+
+    /**
+     * @var string 负载均衡实例被隔离的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsolatedTime;
+
+    /**
+     * @var string 负载均衡实例的过期时间，仅对预付费负载均衡生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExpireTime;
+
+    /**
+     * @var string 负载均衡实例的计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChargeType;
+
+    /**
+     * @var InternetAccessible 负载均衡实例的网络属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetworkAttributes;
+
+    /**
+     * @var LBChargePrepaid 负载均衡实例的预付费相关属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PrepaidAttributes;
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
-     * @param integer $Forward 应用型负载均衡标识，1：应用型负载均衡，0：传统型的负载均衡。
-     * @param string $Domain 负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+     * @param integer $Forward 负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
+     * @param string $Domain 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LoadBalancerVips 负载均衡实例的 VIP 列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -276,6 +356,22 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $AddressIPVersion IP版本，ipv4 | ipv6
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NumericalVpcId 数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VipIsp 负载均衡IP地址所属的ISP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneInfo $MasterZone 主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $BackupZoneSet 备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsolatedTime 负载均衡实例被隔离的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExpireTime 负载均衡实例的过期时间，仅对预付费负载均衡生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChargeType 负载均衡实例的计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InternetAccessible $NetworkAttributes 负载均衡实例的网络属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LBChargePrepaid $PrepaidAttributes 负载均衡实例的预付费相关属性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -382,6 +478,46 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("NumericalVpcId",$param) and $param["NumericalVpcId"] !== null) {
             $this->NumericalVpcId = $param["NumericalVpcId"];
+        }
+
+        if (array_key_exists("VipIsp",$param) and $param["VipIsp"] !== null) {
+            $this->VipIsp = $param["VipIsp"];
+        }
+
+        if (array_key_exists("MasterZone",$param) and $param["MasterZone"] !== null) {
+            $this->MasterZone = new ZoneInfo();
+            $this->MasterZone->deserialize($param["MasterZone"]);
+        }
+
+        if (array_key_exists("BackupZoneSet",$param) and $param["BackupZoneSet"] !== null) {
+            $this->BackupZoneSet = [];
+            foreach ($param["BackupZoneSet"] as $key => $value){
+                $obj = new ZoneInfo();
+                $obj->deserialize($value);
+                array_push($this->BackupZoneSet, $obj);
+            }
+        }
+
+        if (array_key_exists("IsolatedTime",$param) and $param["IsolatedTime"] !== null) {
+            $this->IsolatedTime = $param["IsolatedTime"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
+            $this->ChargeType = $param["ChargeType"];
+        }
+
+        if (array_key_exists("NetworkAttributes",$param) and $param["NetworkAttributes"] !== null) {
+            $this->NetworkAttributes = new InternetAccessible();
+            $this->NetworkAttributes->deserialize($param["NetworkAttributes"]);
+        }
+
+        if (array_key_exists("PrepaidAttributes",$param) and $param["PrepaidAttributes"] !== null) {
+            $this->PrepaidAttributes = new LBChargePrepaid();
+            $this->PrepaidAttributes->deserialize($param["PrepaidAttributes"]);
         }
     }
 }

@@ -18,8 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getLoadBalancerIds() 获取由负载均衡实例统一 ID 组成的数组。
- * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置由负载均衡实例统一 ID 组成的数组。
+ * @method array getLoadBalancerIds() 获取由负载均衡实例唯一 ID 组成的数组。
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置由负载均衡实例唯一 ID 组成的数组。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateLoadBalancerResponse extends AbstractModel
 {
     /**
-     * @var array 由负载均衡实例统一 ID 组成的数组。
+     * @var array 由负载均衡实例唯一 ID 组成的数组。
      */
     public $LoadBalancerIds;
 
@@ -39,7 +39,7 @@ class CreateLoadBalancerResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $LoadBalancerIds 由负载均衡实例统一 ID 组成的数组。
+     * @param array $LoadBalancerIds 由负载均衡实例唯一 ID 组成的数组。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

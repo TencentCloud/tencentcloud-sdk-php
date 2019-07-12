@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersionNumber(integer $VersionNumber) 设置版本号。
  * @method string getUpdatedTime() 获取更新时间
  * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间
+ * @method string getCamRoleName() 获取CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+ * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
  */
 
 /**
@@ -183,6 +185,11 @@ class LaunchConfiguration extends AbstractModel
      * @var string 更新时间
      */
     public $UpdatedTime;
+
+    /**
+     * @var string CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     */
+    public $CamRoleName;
     /**
      * @param integer $ProjectId 实例所属项目ID。
      * @param string $LaunchConfigurationId 启动配置ID。
@@ -209,6 +216,7 @@ class LaunchConfiguration extends AbstractModel
      * @param array $InstanceTags 标签列表。
      * @param integer $VersionNumber 版本号。
      * @param string $UpdatedTime 更新时间
+     * @param string $CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
      */
     function __construct()
     {
@@ -324,6 +332,10 @@ class LaunchConfiguration extends AbstractModel
 
         if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
             $this->UpdatedTime = $param["UpdatedTime"];
+        }
+
+        if (array_key_exists("CamRoleName",$param) and $param["CamRoleName"] !== null) {
+            $this->CamRoleName = $param["CamRoleName"];
         }
     }
 }

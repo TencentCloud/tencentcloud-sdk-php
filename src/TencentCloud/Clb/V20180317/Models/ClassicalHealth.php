@@ -18,12 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getIP() 获取云服务器内网 IP
- * @method void setIP(string $IP) 设置云服务器内网 IP
- * @method integer getPort() 获取云服务器端口
- * @method void setPort(integer $Port) 设置云服务器端口
- * @method integer getListenerPort() 获取负载均衡监听端口
- * @method void setListenerPort(integer $ListenerPort) 设置负载均衡监听端口
+ * @method string getIP() 获取后端服务的内网 IP
+ * @method void setIP(string $IP) 设置后端服务的内网 IP
+ * @method integer getPort() 获取后端服务的端口
+ * @method void setPort(integer $Port) 设置后端服务的端口
+ * @method integer getListenerPort() 获取负载均衡的监听端口
+ * @method void setListenerPort(integer $ListenerPort) 设置负载均衡的监听端口
  * @method string getProtocol() 获取转发协议
  * @method void setProtocol(string $Protocol) 设置转发协议
  * @method integer getHealthStatus() 获取健康检查结果，1 表示健康，0 表示不健康
@@ -31,22 +31,22 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *传统型负载均衡健康状态信息
+ *传统型负载均衡后端服务的健康状态
  */
 class ClassicalHealth extends AbstractModel
 {
     /**
-     * @var string 云服务器内网 IP
+     * @var string 后端服务的内网 IP
      */
     public $IP;
 
     /**
-     * @var integer 云服务器端口
+     * @var integer 后端服务的端口
      */
     public $Port;
 
     /**
-     * @var integer 负载均衡监听端口
+     * @var integer 负载均衡的监听端口
      */
     public $ListenerPort;
 
@@ -60,9 +60,9 @@ class ClassicalHealth extends AbstractModel
      */
     public $HealthStatus;
     /**
-     * @param string $IP 云服务器内网 IP
-     * @param integer $Port 云服务器端口
-     * @param integer $ListenerPort 负载均衡监听端口
+     * @param string $IP 后端服务的内网 IP
+     * @param integer $Port 后端服务的端口
+     * @param integer $ListenerPort 负载均衡的监听端口
      * @param string $Protocol 转发协议
      * @param integer $HealthStatus 健康检查结果，1 表示健康，0 表示不健康
      */

@@ -22,18 +22,34 @@ use TencentCloud\Common\AbstractModel;
 OPEN：公网属性， INTERNAL：内网属性。
  * @method void setLoadBalancerType(string $LoadBalancerType) 设置负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
- * @method integer getForward() 获取负载均衡实例。1：应用型，0：传统型，默认为应用型负载均衡实例。
- * @method void setForward(integer $Forward) 设置负载均衡实例。1：应用型，0：传统型，默认为应用型负载均衡实例。
- * @method string getLoadBalancerName() 获取负载均衡实例的名称，只用来创建一个的时候生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
-注意：如果名称与系统中已有负载均衡实例的名称重复的话，则系统将会自动生成此次创建的负载均衡实例的名称。
- * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡实例的名称，只用来创建一个的时候生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
-注意：如果名称与系统中已有负载均衡实例的名称重复的话，则系统将会自动生成此次创建的负载均衡实例的名称。
- * @method string getVpcId() 获取负载均衡后端实例所属网络 ID，可以通过 DescribeVpcEx 接口获取。 不填则默认为基础网络。
- * @method void setVpcId(string $VpcId) 设置负载均衡后端实例所属网络 ID，可以通过 DescribeVpcEx 接口获取。 不填则默认为基础网络。
- * @method string getSubnetId() 获取在私有网络内购买内网负载均衡实例的时候需要指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其他情况不用填写该字段。
- * @method void setSubnetId(string $SubnetId) 设置在私有网络内购买内网负载均衡实例的时候需要指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其他情况不用填写该字段。
- * @method integer getProjectId() 获取负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不填则属于默认项目。
- * @method void setProjectId(integer $ProjectId) 设置负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不填则属于默认项目。
+ * @method integer getForward() 获取负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
+ * @method void setForward(integer $Forward) 设置负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
+ * @method string getLoadBalancerName() 获取负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
+注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
+ * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
+注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
+ * @method string getVpcId() 获取负载均衡后端目标设备所属的网络 ID，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
+ * @method void setVpcId(string $VpcId) 设置负载均衡后端目标设备所属的网络 ID，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
+ * @method string getSubnetId() 获取在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
+ * @method void setSubnetId(string $SubnetId) 设置在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
+ * @method integer getProjectId() 获取负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
+ * @method void setProjectId(integer $ProjectId) 设置负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
+ * @method string getAddressIPVersion() 获取IP版本，IPV4 | IPV6，默认值 IPV4。
+ * @method void setAddressIPVersion(string $AddressIPVersion) 设置IP版本，IPV4 | IPV6，默认值 IPV4。
+ * @method integer getNumber() 获取创建负载均衡的个数
+ * @method void setNumber(integer $Number) 设置创建负载均衡的个数
+ * @method string getMasterZoneId() 获取设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
+ * @method void setMasterZoneId(string $MasterZoneId) 设置设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
+ * @method string getZoneId() 获取可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+ * @method void setZoneId(string $ZoneId) 设置可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+ * @method string getAnycastZone() 获取Anycast的发布域，可取 ZONE_A 或 ZONE_B
+ * @method void setAnycastZone(string $AnycastZone) 设置Anycast的发布域，可取 ZONE_A 或 ZONE_B
+ * @method InternetAccessible getInternetAccessible() 获取负载均衡的网络计费方式，此参数仅对带宽上移用户生效
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置负载均衡的网络计费方式，此参数仅对带宽上移用户生效
+ * @method string getVipIsp() 获取CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
+ * @method void setVipIsp(string $VipIsp) 设置CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
  */
 
 /**
@@ -48,39 +64,83 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $LoadBalancerType;
 
     /**
-     * @var integer 负载均衡实例。1：应用型，0：传统型，默认为应用型负载均衡实例。
+     * @var integer 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
      */
     public $Forward;
 
     /**
-     * @var string 负载均衡实例的名称，只用来创建一个的时候生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
-注意：如果名称与系统中已有负载均衡实例的名称重复的话，则系统将会自动生成此次创建的负载均衡实例的名称。
+     * @var string 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
+注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
      */
     public $LoadBalancerName;
 
     /**
-     * @var string 负载均衡后端实例所属网络 ID，可以通过 DescribeVpcEx 接口获取。 不填则默认为基础网络。
+     * @var string 负载均衡后端目标设备所属的网络 ID，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
      */
     public $VpcId;
 
     /**
-     * @var string 在私有网络内购买内网负载均衡实例的时候需要指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其他情况不用填写该字段。
+     * @var string 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
      */
     public $SubnetId;
 
     /**
-     * @var integer 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不填则属于默认项目。
+     * @var integer 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
      */
     public $ProjectId;
+
+    /**
+     * @var string IP版本，IPV4 | IPV6，默认值 IPV4。
+     */
+    public $AddressIPVersion;
+
+    /**
+     * @var integer 创建负载均衡的个数
+     */
+    public $Number;
+
+    /**
+     * @var string 设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
+     */
+    public $MasterZoneId;
+
+    /**
+     * @var string 可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     */
+    public $ZoneId;
+
+    /**
+     * @var string Anycast的发布域，可取 ZONE_A 或 ZONE_B
+     */
+    public $AnycastZone;
+
+    /**
+     * @var InternetAccessible 负载均衡的网络计费方式，此参数仅对带宽上移用户生效
+     */
+    public $InternetAccessible;
+
+    /**
+     * @var string CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
+     */
+    public $VipIsp;
     /**
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
-     * @param integer $Forward 负载均衡实例。1：应用型，0：传统型，默认为应用型负载均衡实例。
-     * @param string $LoadBalancerName 负载均衡实例的名称，只用来创建一个的时候生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
-注意：如果名称与系统中已有负载均衡实例的名称重复的话，则系统将会自动生成此次创建的负载均衡实例的名称。
-     * @param string $VpcId 负载均衡后端实例所属网络 ID，可以通过 DescribeVpcEx 接口获取。 不填则默认为基础网络。
-     * @param string $SubnetId 在私有网络内购买内网负载均衡实例的时候需要指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其他情况不用填写该字段。
-     * @param integer $ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不填则属于默认项目。
+     * @param integer $Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
+     * @param string $LoadBalancerName 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
+注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
+     * @param string $VpcId 负载均衡后端目标设备所属的网络 ID，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
+     * @param string $SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
+     * @param integer $ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
+     * @param string $AddressIPVersion IP版本，IPV4 | IPV6，默认值 IPV4。
+     * @param integer $Number 创建负载均衡的个数
+     * @param string $MasterZoneId 设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
+     * @param string $ZoneId 可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     * @param string $AnycastZone Anycast的发布域，可取 ZONE_A 或 ZONE_B
+     * @param InternetAccessible $InternetAccessible 负载均衡的网络计费方式，此参数仅对带宽上移用户生效
+     * @param string $VipIsp CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
      */
     function __construct()
     {
@@ -116,6 +176,35 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("AddressIPVersion",$param) and $param["AddressIPVersion"] !== null) {
+            $this->AddressIPVersion = $param["AddressIPVersion"];
+        }
+
+        if (array_key_exists("Number",$param) and $param["Number"] !== null) {
+            $this->Number = $param["Number"];
+        }
+
+        if (array_key_exists("MasterZoneId",$param) and $param["MasterZoneId"] !== null) {
+            $this->MasterZoneId = $param["MasterZoneId"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("AnycastZone",$param) and $param["AnycastZone"] !== null) {
+            $this->AnycastZone = $param["AnycastZone"];
+        }
+
+        if (array_key_exists("InternetAccessible",$param) and $param["InternetAccessible"] !== null) {
+            $this->InternetAccessible = new InternetAccessible();
+            $this->InternetAccessible->deserialize($param["InternetAccessible"]);
+        }
+
+        if (array_key_exists("VipIsp",$param) and $param["VipIsp"] !== null) {
+            $this->VipIsp = $param["VipIsp"];
         }
     }
 }

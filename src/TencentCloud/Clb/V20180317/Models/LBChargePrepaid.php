@@ -14,40 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getType() 获取过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+ * @method string getRenewFlag() 获取续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(integer $Type) 设置过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+ * @method void setRenewFlag(string $RenewFlag) 设置续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWord() 获取过滤命中关键词
+ * @method integer getPeriod() 获取周期，表示多少个月（保留字段）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWord(string $Word) 设置过滤命中关键词
+ * @method void setPeriod(integer $Period) 设置周期，表示多少个月（保留字段）
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
- *过滤结果
+ *lb实例包年包月相关配置属性
  */
-class VoiceFilter extends AbstractModel
+class LBChargePrepaid extends AbstractModel
 {
     /**
-     * @var integer 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+     * @var string 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Type;
+    public $RenewFlag;
 
     /**
-     * @var string 过滤命中关键词
+     * @var integer 周期，表示多少个月（保留字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Word;
+    public $Period;
     /**
-     * @param integer $Type 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+     * @param string $RenewFlag 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Word 过滤命中关键词
+     * @param integer $Period 周期，表示多少个月（保留字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +62,12 @@ class VoiceFilter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
         }
 
-        if (array_key_exists("Word",$param) and $param["Word"] !== null) {
-            $this->Word = $param["Word"];
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
     }
 }

@@ -14,33 +14,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Clb\V20180317\Models;
+namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取后端实例ID
- * @method void setInstanceId(string $InstanceId) 设置后端实例ID
- * @method integer getWeight() 获取权重，取值范围 [0, 100]
- * @method void setWeight(integer $Weight) 设置权重，取值范围 [0, 100]
+ * @method array getInstanceIds() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  */
 
 /**
- *传统型负载均衡的后端信息
+ *OfflineIsolatedInstances请求参数结构体
  */
-class ClassicalTargetInfo extends AbstractModel
+class OfflineIsolatedInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 后端实例ID
+     * @var array 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
-    public $InstanceId;
-
+    public $InstanceIds;
     /**
-     * @var integer 权重，取值范围 [0, 100]
-     */
-    public $Weight;
-    /**
-     * @param string $InstanceId 后端实例ID
-     * @param integer $Weight 权重，取值范围 [0, 100]
+     * @param array $InstanceIds 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class ClassicalTargetInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
-        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
-            $this->Weight = $param["Weight"];
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
         }
     }
 }

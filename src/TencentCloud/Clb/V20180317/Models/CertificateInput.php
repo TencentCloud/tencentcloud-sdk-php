@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSSLMode(string $SSLMode) 设置认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
  * @method string getCertId() 获取服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
  * @method void setCertId(string $CertId) 设置服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
- * @method string getCertCaId() 获取客户端证书的 ID，如果 SSLMode=mutual，监听器如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
- * @method void setCertCaId(string $CertCaId) 设置客户端证书的 ID，如果 SSLMode=mutual，监听器如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
+ * @method string getCertCaId() 获取客户端证书的 ID，当监听器采用双向认证，即 SSLMode=mutual 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
+ * @method void setCertCaId(string $CertCaId) 设置客户端证书的 ID，当监听器采用双向认证，即 SSLMode=mutual 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
  * @method string getCertName() 获取上传服务端证书的名称，如果没有 CertId，则此项必传。
  * @method void setCertName(string $CertName) 设置上传服务端证书的名称，如果没有 CertId，则此项必传。
  * @method string getCertKey() 获取上传服务端证书的 key，如果没有 CertId，则此项必传。
@@ -52,7 +52,7 @@ class CertificateInput extends AbstractModel
     public $CertId;
 
     /**
-     * @var string 客户端证书的 ID，如果 SSLMode=mutual，监听器如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
+     * @var string 客户端证书的 ID，当监听器采用双向认证，即 SSLMode=mutual 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
      */
     public $CertCaId;
 
@@ -83,7 +83,7 @@ class CertificateInput extends AbstractModel
     /**
      * @param string $SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      * @param string $CertId 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
-     * @param string $CertCaId 客户端证书的 ID，如果 SSLMode=mutual，监听器如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
+     * @param string $CertCaId 客户端证书的 ID，当监听器采用双向认证，即 SSLMode=mutual 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
      * @param string $CertName 上传服务端证书的名称，如果没有 CertId，则此项必传。
      * @param string $CertKey 上传服务端证书的 key，如果没有 CertId，则此项必传。
      * @param string $CertContent 上传服务端证书的内容，如果没有 CertId，则此项必传。

@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInActivityStatus(string $InActivityStatus) 设置伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
  * @method array getTags() 获取伸缩组标签列表
  * @method void setTags(array $Tags) 设置伸缩组标签列表
+ * @method ServiceSettings getServiceSettings() 获取服务设置
+ * @method void setServiceSettings(ServiceSettings $ServiceSettings) 设置服务设置
  */
 
 /**
@@ -185,6 +187,11 @@ class AutoScalingGroup extends AbstractModel
      * @var array 伸缩组标签列表
      */
     public $Tags;
+
+    /**
+     * @var ServiceSettings 服务设置
+     */
+    public $ServiceSettings;
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $AutoScalingGroupName 伸缩组名称
@@ -209,6 +216,7 @@ class AutoScalingGroup extends AbstractModel
      * @param string $RetryPolicy 重试策略
      * @param string $InActivityStatus 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
      * @param array $Tags 伸缩组标签列表
+     * @param ServiceSettings $ServiceSettings 服务设置
      */
     function __construct()
     {
@@ -322,6 +330,11 @@ class AutoScalingGroup extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("ServiceSettings",$param) and $param["ServiceSettings"] !== null) {
+            $this->ServiceSettings = new ServiceSettings();
+            $this->ServiceSettings->deserialize($param["ServiceSettings"]);
         }
     }
 }

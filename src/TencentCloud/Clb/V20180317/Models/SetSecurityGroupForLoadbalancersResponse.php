@@ -18,29 +18,21 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLoadBalancerId() 获取负载均衡实例 ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
- * @method string getListenerId() 获取要删除的监听器 ID
- * @method void setListenerId(string $ListenerId) 设置要删除的监听器 ID
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *DeleteListener请求参数结构体
+ *SetSecurityGroupForLoadbalancers返回参数结构体
  */
-class DeleteListenerRequest extends AbstractModel
+class SetSecurityGroupForLoadbalancersResponse extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例 ID
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $LoadBalancerId;
-
+    public $RequestId;
     /**
-     * @var string 要删除的监听器 ID
-     */
-    public $ListenerId;
-    /**
-     * @param string $LoadBalancerId 负载均衡实例 ID
-     * @param string $ListenerId 要删除的监听器 ID
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class DeleteListenerRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
-        }
-
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

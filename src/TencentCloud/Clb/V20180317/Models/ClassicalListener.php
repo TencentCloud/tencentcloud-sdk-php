@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置监听器协议类型
  * @method integer getSessionExpire() 获取会话保持时间
  * @method void setSessionExpire(integer $SessionExpire) 设置会话保持时间
- * @method integer getHealthSwitch() 获取是否开启了检查：1（开启）、0（关闭）
- * @method void setHealthSwitch(integer $HealthSwitch) 设置是否开启了检查：1（开启）、0（关闭）
+ * @method integer getHealthSwitch() 获取是否开启了健康检查：1（开启）、0（关闭）
+ * @method void setHealthSwitch(integer $HealthSwitch) 设置是否开启了健康检查：1（开启）、0（关闭）
  * @method integer getTimeOut() 获取响应超时时间
  * @method void setTimeOut(integer $TimeOut) 设置响应超时时间
  * @method integer getIntervalTime() 获取检查间隔
@@ -40,18 +40,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthNum(integer $HealthNum) 设置健康阈值
  * @method integer getUnhealthNum() 获取不健康阈值
  * @method void setUnhealthNum(integer $UnhealthNum) 设置不健康阈值
- * @method string getHttpHash() 获取公网固定IP型的 HTTP、HTTPS 协议监听器的轮询方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
- * @method void setHttpHash(string $HttpHash) 设置公网固定IP型的 HTTP、HTTPS 协议监听器的轮询方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
- * @method integer getHttpCode() 获取公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
- * @method void setHttpCode(integer $HttpCode) 设置公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
- * @method string getHttpCheckPath() 获取公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查路径
- * @method void setHttpCheckPath(string $HttpCheckPath) 设置公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查路径
- * @method string getSSLMode() 获取公网固定IP型的 HTTPS 协议监听器的认证方式
- * @method void setSSLMode(string $SSLMode) 设置公网固定IP型的 HTTPS 协议监听器的认证方式
- * @method string getCertId() 获取公网固定IP型的 HTTPS 协议监听器服务端证书 ID
- * @method void setCertId(string $CertId) 设置公网固定IP型的 HTTPS 协议监听器服务端证书 ID
- * @method string getCertCaId() 获取公网固定IP型的 HTTPS 协议监听器客户端证书 ID
- * @method void setCertCaId(string $CertCaId) 设置公网固定IP型的 HTTPS 协议监听器客户端证书 ID
+ * @method string getHttpHash() 获取传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+ * @method void setHttpHash(string $HttpHash) 设置传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+ * @method integer getHttpCode() 获取传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+ * @method void setHttpCode(integer $HttpCode) 设置传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+ * @method string getHttpCheckPath() 获取传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
+ * @method void setHttpCheckPath(string $HttpCheckPath) 设置传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
+ * @method string getSSLMode() 获取传统型公网负载均衡的 HTTPS 监听器的认证方式
+ * @method void setSSLMode(string $SSLMode) 设置传统型公网负载均衡的 HTTPS 监听器的认证方式
+ * @method string getCertId() 获取传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
+ * @method void setCertId(string $CertId) 设置传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
+ * @method string getCertCaId() 获取传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
+ * @method void setCertCaId(string $CertCaId) 设置传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
  * @method integer getStatus() 获取监听器的状态，0 表示创建中，1 表示运行中
  * @method void setStatus(integer $Status) 设置监听器的状态，0 表示创建中，1 表示运行中
  */
@@ -92,7 +92,7 @@ class ClassicalListener extends AbstractModel
     public $SessionExpire;
 
     /**
-     * @var integer 是否开启了检查：1（开启）、0（关闭）
+     * @var integer 是否开启了健康检查：1（开启）、0（关闭）
      */
     public $HealthSwitch;
 
@@ -117,32 +117,32 @@ class ClassicalListener extends AbstractModel
     public $UnhealthNum;
 
     /**
-     * @var string 公网固定IP型的 HTTP、HTTPS 协议监听器的轮询方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+     * @var string 传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
      */
     public $HttpHash;
 
     /**
-     * @var integer 公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+     * @var integer 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
      */
     public $HttpCode;
 
     /**
-     * @var string 公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查路径
+     * @var string 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
      */
     public $HttpCheckPath;
 
     /**
-     * @var string 公网固定IP型的 HTTPS 协议监听器的认证方式
+     * @var string 传统型公网负载均衡的 HTTPS 监听器的认证方式
      */
     public $SSLMode;
 
     /**
-     * @var string 公网固定IP型的 HTTPS 协议监听器服务端证书 ID
+     * @var string 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
      */
     public $CertId;
 
     /**
-     * @var string 公网固定IP型的 HTTPS 协议监听器客户端证书 ID
+     * @var string 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
      */
     public $CertCaId;
 
@@ -157,17 +157,17 @@ class ClassicalListener extends AbstractModel
      * @param string $ListenerName 监听器名称
      * @param string $Protocol 监听器协议类型
      * @param integer $SessionExpire 会话保持时间
-     * @param integer $HealthSwitch 是否开启了检查：1（开启）、0（关闭）
+     * @param integer $HealthSwitch 是否开启了健康检查：1（开启）、0（关闭）
      * @param integer $TimeOut 响应超时时间
      * @param integer $IntervalTime 检查间隔
      * @param integer $HealthNum 健康阈值
      * @param integer $UnhealthNum 不健康阈值
-     * @param string $HttpHash 公网固定IP型的 HTTP、HTTPS 协议监听器的轮询方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
-     * @param integer $HttpCode 公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
-     * @param string $HttpCheckPath 公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查路径
-     * @param string $SSLMode 公网固定IP型的 HTTPS 协议监听器的认证方式
-     * @param string $CertId 公网固定IP型的 HTTPS 协议监听器服务端证书 ID
-     * @param string $CertCaId 公网固定IP型的 HTTPS 协议监听器客户端证书 ID
+     * @param string $HttpHash 传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+     * @param integer $HttpCode 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+     * @param string $HttpCheckPath 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
+     * @param string $SSLMode 传统型公网负载均衡的 HTTPS 监听器的认证方式
+     * @param string $CertId 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
+     * @param string $CertCaId 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
      * @param integer $Status 监听器的状态，0 表示创建中，1 表示运行中
      */
     function __construct()

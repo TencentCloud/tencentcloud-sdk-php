@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认值为 0。
  * @method integer getLimit() 获取单次请求返回的数量，默认值为 20，最大值为 2000。
  * @method void setLimit(integer $Limit) 设置单次请求返回的数量，默认值为 20，最大值为 2000。
- * @method string getSecurityGroupId() 获取安全组 ID。
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组 ID。
+ * @method string getSecurityGroupId() 获取安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
  * @method array getPayTypes() 获取付费类型，可取值：0 - 包年包月，1 - 小时计费。
  * @method void setPayTypes(array $PayTypes) 设置付费类型，可取值：0 - 包年包月，1 - 小时计费。
  * @method array getInstanceNames() 获取实例名称。
@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
  * @method string getOrderDirection() 获取返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
  * @method void setOrderDirection(string $OrderDirection) 设置返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
- * @method integer getWithSecurityGroup() 获取是否包含安全组详细信息，可取值：0 - 不包含，1 - 包含。
- * @method void setWithSecurityGroup(integer $WithSecurityGroup) 设置是否包含安全组详细信息，可取值：0 - 不包含，1 - 包含。
+ * @method integer getWithSecurityGroup() 获取是否以安全组 ID 为过滤条件。
+ * @method void setWithSecurityGroup(integer $WithSecurityGroup) 设置是否以安全组 ID 为过滤条件。
  * @method integer getWithExCluster() 获取是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
  * @method void setWithExCluster(integer $WithExCluster) 设置是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
  * @method string getExClusterId() 获取独享集群 ID。
@@ -106,7 +106,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 安全组 ID。
+     * @var string 安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
      */
     public $SecurityGroupId;
 
@@ -161,7 +161,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $OrderDirection;
 
     /**
-     * @var integer 是否包含安全组详细信息，可取值：0 - 不包含，1 - 包含。
+     * @var integer 是否以安全组 ID 为过滤条件。
      */
     public $WithSecurityGroup;
 
@@ -206,7 +206,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $Status 实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 隔离中（可在回收站恢复开机）
      * @param integer $Offset 偏移量，默认值为 0。
      * @param integer $Limit 单次请求返回的数量，默认值为 20，最大值为 2000。
-     * @param string $SecurityGroupId 安全组 ID。
+     * @param string $SecurityGroupId 安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
      * @param array $PayTypes 付费类型，可取值：0 - 包年包月，1 - 小时计费。
      * @param array $InstanceNames 实例名称。
      * @param array $TaskStatus 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成
@@ -217,7 +217,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $CdbErrors 是否锁定标记。
      * @param string $OrderBy 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
      * @param string $OrderDirection 返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
-     * @param integer $WithSecurityGroup 是否包含安全组详细信息，可取值：0 - 不包含，1 - 包含。
+     * @param integer $WithSecurityGroup 是否以安全组 ID 为过滤条件。
      * @param integer $WithExCluster 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
      * @param string $ExClusterId 独享集群 ID。
      * @param array $InstanceIds 实例 ID。

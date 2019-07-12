@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置参数模板名称。
  * @method string getDescription() 获取参数模板描述。
  * @method void setDescription(string $Description) 设置参数模板描述。
- * @method string getEngineVersion() 获取mysql版本。
- * @method void setEngineVersion(string $EngineVersion) 设置mysql版本。
- * @method integer getTemplateId() 获取源参数模板ID。
- * @method void setTemplateId(integer $TemplateId) 设置源参数模板ID。
+ * @method string getEngineVersion() 获取MySQL 版本号。
+ * @method void setEngineVersion(string $EngineVersion) 设置MySQL 版本号。
+ * @method integer getTemplateId() 获取源参数模板 ID。
+ * @method void setTemplateId(integer $TemplateId) 设置源参数模板 ID。
  * @method array getParamList() 获取参数列表。
  * @method void setParamList(array $ParamList) 设置参数列表。
  */
@@ -46,12 +46,12 @@ class CreateParamTemplateRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string mysql版本。
+     * @var string MySQL 版本号。
      */
     public $EngineVersion;
 
     /**
-     * @var integer 源参数模板ID。
+     * @var integer 源参数模板 ID。
      */
     public $TemplateId;
 
@@ -62,8 +62,8 @@ class CreateParamTemplateRequest extends AbstractModel
     /**
      * @param string $Name 参数模板名称。
      * @param string $Description 参数模板描述。
-     * @param string $EngineVersion mysql版本。
-     * @param integer $TemplateId 源参数模板ID。
+     * @param string $EngineVersion MySQL 版本号。
+     * @param integer $TemplateId 源参数模板 ID。
      * @param array $ParamList 参数列表。
      */
     function __construct()

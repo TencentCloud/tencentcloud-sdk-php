@@ -18,18 +18,18 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getBizId() 获取应用id
- * @method void setBizId(integer $BizId) 设置应用id
- * @method string getFileId() 获取文件id，表示文件唯一id
- * @method void setFileId(string $FileId) 设置文件id，表示文件唯一id
+ * @method integer getBizId() 获取应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
+ * @method void setBizId(integer $BizId) 设置应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
+ * @method string getFileId() 获取文件ID，表示文件唯一id
+ * @method void setFileId(string $FileId) 设置文件ID，表示文件唯一id
  * @method string getFileName() 获取文件名
  * @method void setFileName(string $FileName) 设置文件名
- * @method string getFileUrl() 获取文件内容url，FileUrl和FileContent二选一
- * @method void setFileUrl(string $FileUrl) 设置文件内容url，FileUrl和FileContent二选一
+ * @method string getFileUrl() 获取文件url，urlencode编码，FileUrl和FileContent二选一
+ * @method void setFileUrl(string $FileUrl) 设置文件url，urlencode编码，FileUrl和FileContent二选一
  * @method string getFileContent() 获取文件内容，base64编码，FileUrl和FileContent二选一
  * @method void setFileContent(string $FileContent) 设置文件内容，base64编码，FileUrl和FileContent二选一
- * @method string getOpenId() 获取用户id
- * @method void setOpenId(string $OpenId) 设置用户id
+ * @method string getOpenId() 获取用户ID
+ * @method void setOpenId(string $OpenId) 设置用户ID
  */
 
 /**
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class VoiceFilterRequest extends AbstractModel
 {
     /**
-     * @var integer 应用id
+     * @var integer 应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
      */
     public $BizId;
 
     /**
-     * @var string 文件id，表示文件唯一id
+     * @var string 文件ID，表示文件唯一id
      */
     public $FileId;
 
@@ -53,7 +53,7 @@ class VoiceFilterRequest extends AbstractModel
     public $FileName;
 
     /**
-     * @var string 文件内容url，FileUrl和FileContent二选一
+     * @var string 文件url，urlencode编码，FileUrl和FileContent二选一
      */
     public $FileUrl;
 
@@ -63,16 +63,16 @@ class VoiceFilterRequest extends AbstractModel
     public $FileContent;
 
     /**
-     * @var string 用户id
+     * @var string 用户ID
      */
     public $OpenId;
     /**
-     * @param integer $BizId 应用id
-     * @param string $FileId 文件id，表示文件唯一id
+     * @param integer $BizId 应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
+     * @param string $FileId 文件ID，表示文件唯一id
      * @param string $FileName 文件名
-     * @param string $FileUrl 文件内容url，FileUrl和FileContent二选一
+     * @param string $FileUrl 文件url，urlencode编码，FileUrl和FileContent二选一
      * @param string $FileContent 文件内容，base64编码，FileUrl和FileContent二选一
-     * @param string $OpenId 用户id
+     * @param string $OpenId 用户ID
      */
     function __construct()
     {

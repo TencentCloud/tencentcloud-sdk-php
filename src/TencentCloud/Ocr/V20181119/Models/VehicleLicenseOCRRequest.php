@@ -36,42 +36,16 @@ use TencentCloud\Common\AbstractModel;
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
- * @method string getScene() 获取保留字段。
- * @method void setScene(string $Scene) 设置保留字段。
- * @method string getLanguageType() 获取识别语言类型。
-支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
-可选值：
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha
-可选值分别表示：
-中英文混合、自动识别、日语、韩语、
-西班牙语、法语、德语、葡萄牙语、
-越南语、马来语、俄语、意大利语、
-荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
- * @method void setLanguageType(string $LanguageType) 设置识别语言类型。
-支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
-可选值：
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha
-可选值分别表示：
-中英文混合、自动识别、日语、韩语、
-西班牙语、法语、德语、葡萄牙语、
-越南语、马来语、俄语、意大利语、
-荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
+ * @method string getCardSide() 获取FRONT 为行驶证主页正面（有红色印章的一面），
+BACK 为行驶证副页正面（有号码号牌的一面）。
+ * @method void setCardSide(string $CardSide) 设置FRONT 为行驶证主页正面（有红色印章的一面），
+BACK 为行驶证副页正面（有号码号牌的一面）。
  */
 
 /**
- *GeneralBasicOCR请求参数结构体
+ *VehicleLicenseOCR请求参数结构体
  */
-class GeneralBasicOCRRequest extends AbstractModel
+class VehicleLicenseOCRRequest extends AbstractModel
 {
     /**
      * @var string 图片的 Base64 值。
@@ -91,27 +65,10 @@ class GeneralBasicOCRRequest extends AbstractModel
     public $ImageUrl;
 
     /**
-     * @var string 保留字段。
+     * @var string FRONT 为行驶证主页正面（有红色印章的一面），
+BACK 为行驶证副页正面（有号码号牌的一面）。
      */
-    public $Scene;
-
-    /**
-     * @var string 识别语言类型。
-支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
-可选值：
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha
-可选值分别表示：
-中英文混合、自动识别、日语、韩语、
-西班牙语、法语、德语、葡萄牙语、
-越南语、马来语、俄语、意大利语、
-荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
-     */
-    public $LanguageType;
+    public $CardSide;
     /**
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
@@ -122,21 +79,8 @@ nor\hun\tha
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
-     * @param string $Scene 保留字段。
-     * @param string $LanguageType 识别语言类型。
-支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
-可选值：
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha
-可选值分别表示：
-中英文混合、自动识别、日语、韩语、
-西班牙语、法语、德语、葡萄牙语、
-越南语、马来语、俄语、意大利语、
-荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
+     * @param string $CardSide FRONT 为行驶证主页正面（有红色印章的一面），
+BACK 为行驶证副页正面（有号码号牌的一面）。
      */
     function __construct()
     {
@@ -158,12 +102,8 @@ nor\hun\tha
             $this->ImageUrl = $param["ImageUrl"];
         }
 
-        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
-            $this->Scene = $param["Scene"];
-        }
-
-        if (array_key_exists("LanguageType",$param) and $param["LanguageType"] !== null) {
-            $this->LanguageType = $param["LanguageType"];
+        if (array_key_exists("CardSide",$param) and $param["CardSide"] !== null) {
+            $this->CardSide = $param["CardSide"];
         }
     }
 }

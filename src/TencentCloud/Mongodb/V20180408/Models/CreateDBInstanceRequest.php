@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置实例内存大小，单位：GB
  * @method integer getVolume() 获取实例硬盘大小，单位：GB
  * @method void setVolume(integer $Volume) 设置实例硬盘大小，单位：GB
- * @method string getMongoVersion() 获取版本号，当前仅支持 MONGO_3_WT
- * @method void setMongoVersion(string $MongoVersion) 设置版本号，当前仅支持 MONGO_3_WT
+ * @method string getMongoVersion() 获取版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
+ * @method void setMongoVersion(string $MongoVersion) 设置版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
  * @method string getMachineCode() 获取机器类型，GIO：高IO版；TGIO：高IO万兆
  * @method void setMachineCode(string $MachineCode) 设置机器类型，GIO：高IO版；TGIO：高IO万兆
  * @method integer getGoodsNum() 获取实例数量，默认值为1, 最小值1，最大值为10
@@ -67,7 +67,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $Volume;
 
     /**
-     * @var string 版本号，当前仅支持 MONGO_3_WT
+     * @var string 版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
      */
     public $MongoVersion;
 
@@ -119,7 +119,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $SecondaryNum 每个副本集内从节点个数
      * @param integer $Memory 实例内存大小，单位：GB
      * @param integer $Volume 实例硬盘大小，单位：GB
-     * @param string $MongoVersion 版本号，当前仅支持 MONGO_3_WT
+     * @param string $MongoVersion 版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
      * @param string $MachineCode 机器类型，GIO：高IO版；TGIO：高IO万兆
      * @param integer $GoodsNum 实例数量，默认值为1, 最小值1，最大值为10
      * @param string $Zone 实例所属区域名称，格式如：ap-guangzhou-2

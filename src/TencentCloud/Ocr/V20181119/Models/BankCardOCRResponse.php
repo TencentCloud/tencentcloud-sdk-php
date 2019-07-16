@@ -14,40 +14,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mongodb\V20180408\Models;
+namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDealId() 获取订单ID
- * @method void setDealId(string $DealId) 设置订单ID
- * @method array getInstanceIds() 获取创建的实例ID列表
- * @method void setInstanceIds(array $InstanceIds) 设置创建的实例ID列表
+ * @method string getCardNo() 获取卡号
+ * @method void setCardNo(string $CardNo) 设置卡号
+ * @method string getBankInfo() 获取银行信息
+ * @method void setBankInfo(string $BankInfo) 设置银行信息
+ * @method string getValidDate() 获取有效期
+ * @method void setValidDate(string $ValidDate) 设置有效期
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *CreateDBInstance返回参数结构体
+ *BankCardOCR返回参数结构体
  */
-class CreateDBInstanceResponse extends AbstractModel
+class BankCardOCRResponse extends AbstractModel
 {
     /**
-     * @var string 订单ID
+     * @var string 卡号
      */
-    public $DealId;
+    public $CardNo;
 
     /**
-     * @var array 创建的实例ID列表
+     * @var string 银行信息
      */
-    public $InstanceIds;
+    public $BankInfo;
+
+    /**
+     * @var string 有效期
+     */
+    public $ValidDate;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $DealId 订单ID
-     * @param array $InstanceIds 创建的实例ID列表
+     * @param string $CardNo 卡号
+     * @param string $BankInfo 银行信息
+     * @param string $ValidDate 有效期
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +70,16 @@ class CreateDBInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DealId",$param) and $param["DealId"] !== null) {
-            $this->DealId = $param["DealId"];
+        if (array_key_exists("CardNo",$param) and $param["CardNo"] !== null) {
+            $this->CardNo = $param["CardNo"];
         }
 
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists("BankInfo",$param) and $param["BankInfo"] !== null) {
+            $this->BankInfo = $param["BankInfo"];
+        }
+
+        if (array_key_exists("ValidDate",$param) and $param["ValidDate"] !== null) {
+            $this->ValidDate = $param["ValidDate"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

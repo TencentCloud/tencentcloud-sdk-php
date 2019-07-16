@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReplicateSetNum(integer $ReplicateSetNum) 设置副本集个数，1为单副本集实例，大于1为分片集群实例，最大不超过10
  * @method integer getSecondaryNum() 获取每个副本集内从节点个数，目前只支持从节点数为2
  * @method void setSecondaryNum(integer $SecondaryNum) 设置每个副本集内从节点个数，目前只支持从节点数为2
- * @method string getEngineVersion() 获取MongoDB引擎版本，值包括：MONGO_2、MONGO_3_MMAP、MONGO_3_WT 、MONGO_3_ROCKS和MONGO_36_WT
- * @method void setEngineVersion(string $EngineVersion) 设置MongoDB引擎版本，值包括：MONGO_2、MONGO_3_MMAP、MONGO_3_WT 、MONGO_3_ROCKS和MONGO_36_WT
+ * @method string getEngineVersion() 获取MongoDB引擎版本，值包括MONGO_3_WT 、MONGO_3_ROCKS和MONGO_36_WT
+ * @method void setEngineVersion(string $EngineVersion) 设置MongoDB引擎版本，值包括MONGO_3_WT 、MONGO_3_ROCKS和MONGO_36_WT
  * @method string getMachine() 获取实例类型，GIO：高IO版；TGIO：高IO万兆
  * @method void setMachine(string $Machine) 设置实例类型，GIO：高IO版；TGIO：高IO万兆
  * @method integer getGoodsNum() 获取实例数量，默认值为1, 最小值1，最大值为10
@@ -76,7 +76,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $SecondaryNum;
 
     /**
-     * @var string MongoDB引擎版本，值包括：MONGO_2、MONGO_3_MMAP、MONGO_3_WT 、MONGO_3_ROCKS和MONGO_36_WT
+     * @var string MongoDB引擎版本，值包括MONGO_3_WT 、MONGO_3_ROCKS和MONGO_36_WT
      */
     public $EngineVersion;
 
@@ -134,7 +134,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param integer $Volume 实例硬盘大小，单位：GB
      * @param integer $ReplicateSetNum 副本集个数，1为单副本集实例，大于1为分片集群实例，最大不超过10
      * @param integer $SecondaryNum 每个副本集内从节点个数，目前只支持从节点数为2
-     * @param string $EngineVersion MongoDB引擎版本，值包括：MONGO_2、MONGO_3_MMAP、MONGO_3_WT 、MONGO_3_ROCKS和MONGO_36_WT
+     * @param string $EngineVersion MongoDB引擎版本，值包括MONGO_3_WT 、MONGO_3_ROCKS和MONGO_36_WT
      * @param string $Machine 实例类型，GIO：高IO版；TGIO：高IO万兆
      * @param integer $GoodsNum 实例数量，默认值为1, 最小值1，最大值为10
      * @param string $Zone 可用区信息，格式如：ap-guangzhou-2

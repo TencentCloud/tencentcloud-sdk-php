@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartDate(string $StartDate) 设置开始时间，格式为 年-月-日，如: 2018-07-11
  * @method string getEndDate() 获取结束时间，格式为 年-月-日，如: 2018-07-11
  * @method void setEndDate(string $EndDate) 设置结束时间，格式为 年-月-日，如: 2018-07-11
- * @method integer getOffset() 获取偏移量, 默认0
- * @method void setOffset(integer $Offset) 设置偏移量, 默认0
- * @method integer getLimit() 获取限制数目	, 默认10, 最大100
- * @method void setLimit(integer $Limit) 设置限制数目	, 默认10, 最大100
+ * @method integer getOffset() 获取偏移量，默认值为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。
+ * @method integer getLimit() 获取返回数量，默认值为10，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认值为10，最大值为100。
  */
 
 /**
@@ -51,20 +51,20 @@ class DescribeFilterResultListRequest extends AbstractModel
     public $EndDate;
 
     /**
-     * @var integer 偏移量, 默认0
+     * @var integer 偏移量，默认值为0。
      */
     public $Offset;
 
     /**
-     * @var integer 限制数目	, 默认10, 最大100
+     * @var integer 返回数量，默认值为10，最大值为100。
      */
     public $Limit;
     /**
      * @param integer $BizId 应用ID
      * @param string $StartDate 开始时间，格式为 年-月-日，如: 2018-07-11
      * @param string $EndDate 结束时间，格式为 年-月-日，如: 2018-07-11
-     * @param integer $Offset 偏移量, 默认0
-     * @param integer $Limit 限制数目	, 默认10, 最大100
+     * @param integer $Offset 偏移量，默认值为0。
+     * @param integer $Limit 返回数量，默认值为10，最大值为100。
      */
     function __construct()
     {

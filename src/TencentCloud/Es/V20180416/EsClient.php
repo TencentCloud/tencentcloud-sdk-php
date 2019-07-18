@@ -39,6 +39,8 @@ use TencentCloud\Es\V20180416\Models as Models;
 - EsAcl：修改访问控制列表
 - CosBackUp: 设置集群COS自动备份信息
 以上参数组合只能传递一种，多传或少传均会导致请求失败
+* @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) 升级ES集群版本
+* @method Models\UpgradeLicenseResponse UpgradeLicense(Models\UpgradeLicenseRequest $req) 升级ES商业特性
  */
 
 class EsClient extends AbstractClient

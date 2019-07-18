@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method boolean getEnableAllText() 获取输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
+ * @method void setEnableAllText(boolean $EnableAllText) 设置输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
  * @method boolean getEnableKeyword() 获取输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。
  * @method void setEnableKeyword(boolean $EnableKeyword) 设置输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。
  * @method boolean getEnableVadInfo() 获取输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat）
@@ -31,6 +33,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class Function extends AbstractModel
 {
+    /**
+     * @var boolean 输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
+     */
+    public $EnableAllText;
+
     /**
      * @var boolean 输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。
      */
@@ -46,6 +53,7 @@ class Function extends AbstractModel
      */
     public $EnableVolume;
     /**
+     * @param boolean $EnableAllText 输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
      * @param boolean $EnableKeyword 输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。
      * @param boolean $EnableVadInfo 输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat）
      * @param boolean $EnableVolume 输出音频音量信息标识，当设置为 true 时，会输出当前音频音量信息。
@@ -62,6 +70,10 @@ class Function extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("EnableAllText",$param) and $param["EnableAllText"] !== null) {
+            $this->EnableAllText = $param["EnableAllText"];
+        }
+
         if (array_key_exists("EnableKeyword",$param) and $param["EnableKeyword"] !== null) {
             $this->EnableKeyword = $param["EnableKeyword"];
         }

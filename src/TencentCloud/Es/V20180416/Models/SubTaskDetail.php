@@ -24,6 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResult(boolean $Result) 设置子任务结果
  * @method string getErrMsg() 获取子任务错误信息
  * @method void setErrMsg(string $ErrMsg) 设置子任务错误信息
+ * @method string getType() 获取子任务类型
+ * @method void setType(string $Type) 设置子任务类型
+ * @method integer getStatus() 获取子任务状态，0处理中 1成功 -1失败
+ * @method void setStatus(integer $Status) 设置子任务状态，0处理中 1成功 -1失败
+ * @method array getFailedIndices() 获取升级检查失败的索引名
+ * @method void setFailedIndices(array $FailedIndices) 设置升级检查失败的索引名
+ * @method string getFinishTime() 获取子任务结束时间
+ * @method void setFinishTime(string $FinishTime) 设置子任务结束时间
+ * @method integer getLevel() 获取子任务等级，1警告 2失败
+ * @method void setLevel(integer $Level) 设置子任务等级，1警告 2失败
  */
 
 /**
@@ -45,10 +55,40 @@ class SubTaskDetail extends AbstractModel
      * @var string 子任务错误信息
      */
     public $ErrMsg;
+
+    /**
+     * @var string 子任务类型
+     */
+    public $Type;
+
+    /**
+     * @var integer 子任务状态，0处理中 1成功 -1失败
+     */
+    public $Status;
+
+    /**
+     * @var array 升级检查失败的索引名
+     */
+    public $FailedIndices;
+
+    /**
+     * @var string 子任务结束时间
+     */
+    public $FinishTime;
+
+    /**
+     * @var integer 子任务等级，1警告 2失败
+     */
+    public $Level;
     /**
      * @param string $Name 子任务名
      * @param boolean $Result 子任务结果
      * @param string $ErrMsg 子任务错误信息
+     * @param string $Type 子任务类型
+     * @param integer $Status 子任务状态，0处理中 1成功 -1失败
+     * @param array $FailedIndices 升级检查失败的索引名
+     * @param string $FinishTime 子任务结束时间
+     * @param integer $Level 子任务等级，1警告 2失败
      */
     function __construct()
     {
@@ -72,6 +112,26 @@ class SubTaskDetail extends AbstractModel
 
         if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
             $this->ErrMsg = $param["ErrMsg"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("FailedIndices",$param) and $param["FailedIndices"] !== null) {
+            $this->FailedIndices = $param["FailedIndices"];
+        }
+
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = $param["FinishTime"];
+        }
+
+        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
+            $this->Level = $param["Level"];
         }
     }
 }

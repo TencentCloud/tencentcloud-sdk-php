@@ -27,7 +27,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *ik插件词典新
+ *ik插件词典信息
  */
 class DictInfo extends AbstractModel
 {

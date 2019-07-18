@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVocabAnalysisDetailInfo(array $VocabAnalysisDetailInfo) 设置返回词汇库中的单词出现的详细时间信息。
  * @method array getVocabAnalysisStatInfo() 获取返回词汇库中的单词出现的次数信息。
  * @method void setVocabAnalysisStatInfo(array $VocabAnalysisStatInfo) 设置返回词汇库中的单词出现的次数信息。
+ * @method string getAllTexts() 获取返回音频全部文本。
+ * @method void setAllTexts(string $AllTexts) 设置返回音频全部文本。
  * @method integer getJobId() 获取音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
  * @method void setJobId(integer $JobId) 设置音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
  * @method float getProgress() 获取返回的当前处理进度。
@@ -62,6 +64,11 @@ class DescribeAudioTaskResponse extends AbstractModel
     public $VocabAnalysisStatInfo;
 
     /**
+     * @var string 返回音频全部文本。
+     */
+    public $AllTexts;
+
+    /**
      * @var integer 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      */
     public $JobId;
@@ -85,6 +92,7 @@ class DescribeAudioTaskResponse extends AbstractModel
      * @param array $Texts 返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
      * @param array $VocabAnalysisDetailInfo 返回词汇库中的单词出现的详细时间信息。
      * @param array $VocabAnalysisStatInfo 返回词汇库中的单词出现的次数信息。
+     * @param string $AllTexts 返回音频全部文本。
      * @param integer $JobId 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      * @param float $Progress 返回的当前处理进度。
      * @param integer $TotalCount 结果总数
@@ -132,6 +140,10 @@ class DescribeAudioTaskResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VocabAnalysisStatInfo, $obj);
             }
+        }
+
+        if (array_key_exists("AllTexts",$param) and $param["AllTexts"] !== null) {
+            $this->AllTexts = $param["AllTexts"];
         }
 
         if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {

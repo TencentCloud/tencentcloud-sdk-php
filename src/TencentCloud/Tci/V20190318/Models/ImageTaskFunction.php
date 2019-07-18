@@ -18,24 +18,24 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method boolean getEnableActionClass() 获取大教室场景肢体动作识别选项
- * @method void setEnableActionClass(boolean $EnableActionClass) 设置大教室场景肢体动作识别选项
+ * @method boolean getEnableActionClass() 获取大教室场景学生肢体动作识别选项
+ * @method void setEnableActionClass(boolean $EnableActionClass) 设置大教室场景学生肢体动作识别选项
  * @method boolean getEnableFaceDetect() 获取人脸检测选项
  * @method void setEnableFaceDetect(boolean $EnableFaceDetect) 设置人脸检测选项
  * @method boolean getEnableFaceExpression() 获取人脸表情识别选项
  * @method void setEnableFaceExpression(boolean $EnableFaceExpression) 设置人脸表情识别选项
  * @method boolean getEnableFaceIdentify() 获取人脸检索选项
  * @method void setEnableFaceIdentify(boolean $EnableFaceIdentify) 设置人脸检索选项
- * @method boolean getEnableGesture() 获取动作选项
- * @method void setEnableGesture(boolean $EnableGesture) 设置动作选项
- * @method boolean getEnableHandTracking() 获取手势选项
- * @method void setEnableHandTracking(boolean $EnableHandTracking) 设置手势选项
+ * @method boolean getEnableGesture() 获取手势选项
+ * @method void setEnableGesture(boolean $EnableGesture) 设置手势选项
+ * @method boolean getEnableHandTracking() 获取优图手势选项（该功能尚未支持）
+ * @method void setEnableHandTracking(boolean $EnableHandTracking) 设置优图手势选项（该功能尚未支持）
  * @method boolean getEnableLightJudge() 获取光照选项
  * @method void setEnableLightJudge(boolean $EnableLightJudge) 设置光照选项
- * @method boolean getEnableStudentBodyMovements() 获取学生动作选项
- * @method void setEnableStudentBodyMovements(boolean $EnableStudentBodyMovements) 设置学生动作选项
- * @method boolean getEnableTeacherBodyMovements() 获取教师动作选项
- * @method void setEnableTeacherBodyMovements(boolean $EnableTeacherBodyMovements) 设置教师动作选项
+ * @method boolean getEnableStudentBodyMovements() 获取小班课场景学生肢体动作识别选项
+ * @method void setEnableStudentBodyMovements(boolean $EnableStudentBodyMovements) 设置小班课场景学生肢体动作识别选项
+ * @method boolean getEnableTeacherBodyMovements() 获取教师动作选项（该功能尚未支持）
+ * @method void setEnableTeacherBodyMovements(boolean $EnableTeacherBodyMovements) 设置教师动作选项（该功能尚未支持）
  */
 
 /**
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class ImageTaskFunction extends AbstractModel
 {
     /**
-     * @var boolean 大教室场景肢体动作识别选项
+     * @var boolean 大教室场景学生肢体动作识别选项
      */
     public $EnableActionClass;
 
@@ -64,12 +64,12 @@ class ImageTaskFunction extends AbstractModel
     public $EnableFaceIdentify;
 
     /**
-     * @var boolean 动作选项
+     * @var boolean 手势选项
      */
     public $EnableGesture;
 
     /**
-     * @var boolean 手势选项
+     * @var boolean 优图手势选项（该功能尚未支持）
      */
     public $EnableHandTracking;
 
@@ -79,24 +79,24 @@ class ImageTaskFunction extends AbstractModel
     public $EnableLightJudge;
 
     /**
-     * @var boolean 学生动作选项
+     * @var boolean 小班课场景学生肢体动作识别选项
      */
     public $EnableStudentBodyMovements;
 
     /**
-     * @var boolean 教师动作选项
+     * @var boolean 教师动作选项（该功能尚未支持）
      */
     public $EnableTeacherBodyMovements;
     /**
-     * @param boolean $EnableActionClass 大教室场景肢体动作识别选项
+     * @param boolean $EnableActionClass 大教室场景学生肢体动作识别选项
      * @param boolean $EnableFaceDetect 人脸检测选项
      * @param boolean $EnableFaceExpression 人脸表情识别选项
      * @param boolean $EnableFaceIdentify 人脸检索选项
-     * @param boolean $EnableGesture 动作选项
-     * @param boolean $EnableHandTracking 手势选项
+     * @param boolean $EnableGesture 手势选项
+     * @param boolean $EnableHandTracking 优图手势选项（该功能尚未支持）
      * @param boolean $EnableLightJudge 光照选项
-     * @param boolean $EnableStudentBodyMovements 学生动作选项
-     * @param boolean $EnableTeacherBodyMovements 教师动作选项
+     * @param boolean $EnableStudentBodyMovements 小班课场景学生肢体动作识别选项
+     * @param boolean $EnableTeacherBodyMovements 教师动作选项（该功能尚未支持）
      */
     function __construct()
     {

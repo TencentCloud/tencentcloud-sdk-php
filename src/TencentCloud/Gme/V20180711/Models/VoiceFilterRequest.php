@@ -18,10 +18,10 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getBizId() 获取应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
- * @method void setBizId(integer $BizId) 设置应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
- * @method string getFileId() 获取文件ID，表示文件唯一id
- * @method void setFileId(string $FileId) 设置文件ID，表示文件唯一id
+ * @method integer getBizId() 获取应用ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+ * @method void setBizId(integer $BizId) 设置应用ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+ * @method string getFileId() 获取文件ID，表示文件唯一ID
+ * @method void setFileId(string $FileId) 设置文件ID，表示文件唯一ID
  * @method string getFileName() 获取文件名
  * @method void setFileName(string $FileName) 设置文件名
  * @method string getFileUrl() 获取文件url，urlencode编码，FileUrl和FileContent二选一
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class VoiceFilterRequest extends AbstractModel
 {
     /**
-     * @var integer 应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
+     * @var integer 应用ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      */
     public $BizId;
 
     /**
-     * @var string 文件ID，表示文件唯一id
+     * @var string 文件ID，表示文件唯一ID
      */
     public $FileId;
 
@@ -67,8 +67,8 @@ class VoiceFilterRequest extends AbstractModel
      */
     public $OpenId;
     /**
-     * @param integer $BizId 应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
-     * @param string $FileId 文件ID，表示文件唯一id
+     * @param integer $BizId 应用ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+     * @param string $FileId 文件ID，表示文件唯一ID
      * @param string $FileName 文件名
      * @param string $FileUrl 文件url，urlencode编码，FileUrl和FileContent二选一
      * @param string $FileContent 文件内容，base64编码，FileUrl和FileContent二选一

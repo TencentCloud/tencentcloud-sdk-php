@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVocabAnalysisDetailInfo(array $VocabAnalysisDetailInfo) 设置返回词汇库中的单词出现的详细时间信息。
  * @method array getVocabAnalysisStatInfo() 获取返回词汇库中的单词出现的次数信息。
  * @method void setVocabAnalysisStatInfo(array $VocabAnalysisStatInfo) 设置返回词汇库中的单词出现的次数信息。
+ * @method string getAllTexts() 获取音频全部文本。
+ * @method void setAllTexts(string $AllTexts) 设置音频全部文本。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,6 +58,11 @@ class TransmitAudioStreamResponse extends AbstractModel
     public $VocabAnalysisStatInfo;
 
     /**
+     * @var string 音频全部文本。
+     */
+    public $AllTexts;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -64,6 +71,7 @@ class TransmitAudioStreamResponse extends AbstractModel
      * @param array $Texts 返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
      * @param array $VocabAnalysisDetailInfo 返回词汇库中的单词出现的详细时间信息。
      * @param array $VocabAnalysisStatInfo 返回词汇库中的单词出现的次数信息。
+     * @param string $AllTexts 音频全部文本。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -108,6 +116,10 @@ class TransmitAudioStreamResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VocabAnalysisStatInfo, $obj);
             }
+        }
+
+        if (array_key_exists("AllTexts",$param) and $param["AllTexts"] !== null) {
+            $this->AllTexts = $param["AllTexts"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

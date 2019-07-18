@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getFileContent() 获取输入分析对象内容
  * @method void setFileContent(string $FileContent) 设置输入分析对象内容
- * @method string getFileType() 获取输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
- * @method void setFileType(string $FileType) 设置输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
+ * @method string getFileType() 获取输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
+ * @method void setFileType(string $FileType) 设置输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
  * @method ImageTaskFunction getFunctions() 获取任务控制选项
  * @method void setFunctions(ImageTaskFunction $Functions) 设置任务控制选项
  * @method array getLightStandardSet() 获取光照标准列表
  * @method void setLightStandardSet(array $LightStandardSet) 设置光照标准列表
- * @method integer getFrameInterval() 获取抽帧的时间间隔，单位毫秒，默认值1000。
- * @method void setFrameInterval(integer $FrameInterval) 设置抽帧的时间间隔，单位毫秒，默认值1000。
+ * @method integer getFrameInterval() 获取抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
+ * @method void setFrameInterval(integer $FrameInterval) 设置抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
  * @method array getLibrarySet() 获取查询人员库列表
  * @method void setLibrarySet(array $LibrarySet) 设置查询人员库列表
  * @method integer getMaxVideoDuration() 获取最大的视频长度，单位毫秒，默认值为两小时
  * @method void setMaxVideoDuration(integer $MaxVideoDuration) 设置最大的视频长度，单位毫秒，默认值为两小时
- * @method float getSimThreshold() 获取人脸识别中的相似度阈值，默认值为0.89
- * @method void setSimThreshold(float $SimThreshold) 设置人脸识别中的相似度阈值，默认值为0.89
+ * @method float getSimThreshold() 获取人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
+ * @method void setSimThreshold(float $SimThreshold) 设置人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
  */
 
 /**
@@ -47,7 +47,7 @@ class SubmitImageTaskRequest extends AbstractModel
     public $FileContent;
 
     /**
-     * @var string 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
+     * @var string 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
      */
     public $FileType;
 
@@ -62,7 +62,7 @@ class SubmitImageTaskRequest extends AbstractModel
     public $LightStandardSet;
 
     /**
-     * @var integer 抽帧的时间间隔，单位毫秒，默认值1000。
+     * @var integer 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
      */
     public $FrameInterval;
 
@@ -77,18 +77,18 @@ class SubmitImageTaskRequest extends AbstractModel
     public $MaxVideoDuration;
 
     /**
-     * @var float 人脸识别中的相似度阈值，默认值为0.89
+     * @var float 人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
      */
     public $SimThreshold;
     /**
      * @param string $FileContent 输入分析对象内容
-     * @param string $FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
+     * @param string $FileType 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
      * @param ImageTaskFunction $Functions 任务控制选项
      * @param array $LightStandardSet 光照标准列表
-     * @param integer $FrameInterval 抽帧的时间间隔，单位毫秒，默认值1000。
+     * @param integer $FrameInterval 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
      * @param array $LibrarySet 查询人员库列表
      * @param integer $MaxVideoDuration 最大的视频长度，单位毫秒，默认值为两小时
-     * @param float $SimThreshold 人脸识别中的相似度阈值，默认值为0.89
+     * @param float $SimThreshold 人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
      */
     function __construct()
     {

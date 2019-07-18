@@ -18,19 +18,19 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method DetailInfo getVocabDetailInfo() 获取词汇库中的单词出现在该音频中的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
- * @method void setVocabDetailInfo(DetailInfo $VocabDetailInfo) 设置词汇库中的单词出现在该音频中的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
+ * @method array getVocabDetailInfo() 获取词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
+ * @method void setVocabDetailInfo(array $VocabDetailInfo) 设置词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
  * @method string getVocabLibName() 获取词汇库名
  * @method void setVocabLibName(string $VocabLibName) 设置词汇库名
  */
 
 /**
- *词汇库中的单词出现在音频中的起始时间和结束时间信息
+ *词汇库中的单词出现在音频中的那个句子的起始时间和结束时间信息
  */
 class VocabDetailInfomation extends AbstractModel
 {
     /**
-     * @var DetailInfo 词汇库中的单词出现在该音频中的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
+     * @var array 词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
      */
     public $VocabDetailInfo;
 
@@ -39,7 +39,7 @@ class VocabDetailInfomation extends AbstractModel
      */
     public $VocabLibName;
     /**
-     * @param DetailInfo $VocabDetailInfo 词汇库中的单词出现在该音频中的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
+     * @param array $VocabDetailInfo 词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
      * @param string $VocabLibName 词汇库名
      */
     function __construct()
@@ -55,8 +55,12 @@ class VocabDetailInfomation extends AbstractModel
             return;
         }
         if (array_key_exists("VocabDetailInfo",$param) and $param["VocabDetailInfo"] !== null) {
-            $this->VocabDetailInfo = new DetailInfo();
-            $this->VocabDetailInfo->deserialize($param["VocabDetailInfo"]);
+            $this->VocabDetailInfo = [];
+            foreach ($param["VocabDetailInfo"] as $key => $value){
+                $obj = new DetailInfo();
+                $obj->deserialize($value);
+                array_push($this->VocabDetailInfo, $obj);
+            }
         }
 
         if (array_key_exists("VocabLibName",$param) and $param["VocabLibName"] !== null) {

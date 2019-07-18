@@ -18,13 +18,13 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method MediaBasicInfo getBasicInfo() 获取基础信息。包括视频名称、大小、时长、封面图片等。
+ * @method MediaBasicInfo getBasicInfo() 获取基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBasicInfo(MediaBasicInfo $BasicInfo) 设置基础信息。包括视频名称、大小、时长、封面图片等。
+ * @method void setBasicInfo(MediaBasicInfo $BasicInfo) 设置基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaMetaData getMetaData() 获取元信息。包括视频流信息、音频流信息等。
+ * @method MediaMetaData getMetaData() 获取元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetaData(MediaMetaData $MetaData) 设置元信息。包括视频流信息、音频流信息等。
+ * @method void setMetaData(MediaMetaData $MetaData) 设置元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaTranscodeInfo getTranscodeInfo() 获取转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,13 +64,13 @@ use TencentCloud\Common\AbstractModel;
 class MediaInfo extends AbstractModel
 {
     /**
-     * @var MediaBasicInfo 基础信息。包括视频名称、大小、时长、封面图片等。
+     * @var MediaBasicInfo 基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BasicInfo;
 
     /**
-     * @var MediaMetaData 元信息。包括视频流信息、音频流信息等。
+     * @var MediaMetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetaData;
@@ -122,9 +122,9 @@ class MediaInfo extends AbstractModel
      */
     public $FileId;
     /**
-     * @param MediaBasicInfo $BasicInfo 基础信息。包括视频名称、大小、时长、封面图片等。
+     * @param MediaBasicInfo $BasicInfo 基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaMetaData $MetaData 元信息。包括视频流信息、音频流信息等。
+     * @param MediaMetaData $MetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaTranscodeInfo $TranscodeInfo 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
 注意：此字段可能返回 null，表示取不到有效值。

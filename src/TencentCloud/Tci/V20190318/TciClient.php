@@ -28,6 +28,7 @@ use TencentCloud\Tci\V20190318\Models as Models;
 * @method Models\CheckFacePhotoResponse CheckFacePhoto(Models\CheckFacePhotoRequest $req) 检查人脸图片是否合法
 * @method Models\CreateFaceResponse CreateFace(Models\CreateFaceRequest $req) 创建人脸
 * @method Models\CreateLibraryResponse CreateLibrary(Models\CreateLibraryRequest $req) 创建人员库
+* @method Models\CreatePersonResponse CreatePerson(Models\CreatePersonRequest $req) 创建人员
 * @method Models\CreateVocabResponse CreateVocab(Models\CreateVocabRequest $req) 创建词汇
 * @method Models\CreateVocabLibResponse CreateVocabLib(Models\CreateVocabLibRequest $req) 建立词汇库
 * @method Models\DeleteFaceResponse DeleteFace(Models\DeleteFaceRequest $req) 删除人脸
@@ -51,6 +52,7 @@ use TencentCloud\Tci\V20190318\Models as Models;
 * @method Models\ModifyPersonResponse ModifyPerson(Models\ModifyPersonRequest $req) 修改人员信息
 * @method Models\SubmitAudioTaskResponse SubmitAudioTask(Models\SubmitAudioTaskRequest $req) 音频任务提交接口
 * @method Models\SubmitCheckAttendanceTaskResponse SubmitCheckAttendanceTask(Models\SubmitCheckAttendanceTaskRequest $req) 提交人员考勤任务
+* @method Models\SubmitConversationTaskResponse SubmitConversationTask(Models\SubmitConversationTaskRequest $req) 对话任务分析接口
 * @method Models\SubmitDoubleVideoHighlightsResponse SubmitDoubleVideoHighlights(Models\SubmitDoubleVideoHighlightsRequest $req) 发起双路视频生成精彩集锦接口。该接口可以通过客户传入的学生音视频及老师视频两路Url，自动生成一堂课程的精彩集锦。需要通过SubmitDoubleVideoHighlights接口获取生成结果。
 * @method Models\SubmitHighlightsResponse SubmitHighlights(Models\SubmitHighlightsRequest $req) 发起视频生成精彩集锦接口。该接口可以通过客户传入的课程音频数据及相关策略（如微笑抽取，专注抽取等），自动生成一堂课程的精彩集锦。需要通过QueryHighlightResult接口获取生成结果。
 * @method Models\SubmitImageTaskResponse SubmitImageTask(Models\SubmitImageTaskRequest $req) 提交图像分析任务

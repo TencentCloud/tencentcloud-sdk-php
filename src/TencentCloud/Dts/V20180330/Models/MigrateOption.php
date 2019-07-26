@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMigrateType(integer $MigrateType) 设置数据迁移类型，值包括：1-结构迁移,2-全量迁移,3-全量+增量迁移
  * @method integer getMigrateObject() 获取迁移对象，1-整个实例，2-指定库表
  * @method void setMigrateObject(integer $MigrateObject) 设置迁移对象，1-整个实例，2-指定库表
- * @method integer getConsistencyType() 获取数据对比类型，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
- * @method void setConsistencyType(integer $ConsistencyType) 设置数据对比类型，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
+ * @method integer getConsistencyType() 获取抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
+ * @method void setConsistencyType(integer $ConsistencyType) 设置抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
  * @method integer getIsOverrideRoot() 获取是否用源库Root账户覆盖目标库，值包括：0-不覆盖，1-覆盖，选择库表或者结构迁移时应该为0
  * @method void setIsOverrideRoot(integer $IsOverrideRoot) 设置是否用源库Root账户覆盖目标库，值包括：0-不覆盖，1-覆盖，选择库表或者结构迁移时应该为0
  * @method string getExternParams() 获取不同数据库用到的额外参数.以JSON格式描述. 
@@ -45,6 +45,7 @@ MongoDB可定义如下的参数:
 	'SrcAuthFlag': "1", 
 	'SrcAuthMechanism':"SCRAM-SHA-1"
 }
+MySQL暂不支持额外参数设置。
  * @method void setExternParams(string $ExternParams) 设置不同数据库用到的额外参数.以JSON格式描述. 
 Redis可定义如下的参数: 
 { 
@@ -60,8 +61,9 @@ MongoDB可定义如下的参数:
 	'SrcAuthFlag': "1", 
 	'SrcAuthMechanism':"SCRAM-SHA-1"
 }
- * @method ConsistencyParams getConsistencyParams() 获取抽样检验时的抽样参数
- * @method void setConsistencyParams(ConsistencyParams $ConsistencyParams) 设置抽样检验时的抽样参数
+MySQL暂不支持额外参数设置。
+ * @method ConsistencyParams getConsistencyParams() 获取仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
+ * @method void setConsistencyParams(ConsistencyParams $ConsistencyParams) 设置仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
  */
 
 /**
@@ -90,7 +92,7 @@ class MigrateOption extends AbstractModel
     public $MigrateObject;
 
     /**
-     * @var integer 数据对比类型，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
+     * @var integer 抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
      */
     public $ConsistencyType;
 
@@ -115,11 +117,12 @@ MongoDB可定义如下的参数:
 	'SrcAuthFlag': "1", 
 	'SrcAuthMechanism':"SCRAM-SHA-1"
 }
+MySQL暂不支持额外参数设置。
      */
     public $ExternParams;
 
     /**
-     * @var ConsistencyParams 抽样检验时的抽样参数
+     * @var ConsistencyParams 仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
      */
     public $ConsistencyParams;
     /**
@@ -127,7 +130,7 @@ MongoDB可定义如下的参数:
      * @param string $ExpectTime 期望执行时间，当runMode=2时，该字段必填，时间格式：yyyy-mm-dd hh:mm:ss
      * @param integer $MigrateType 数据迁移类型，值包括：1-结构迁移,2-全量迁移,3-全量+增量迁移
      * @param integer $MigrateObject 迁移对象，1-整个实例，2-指定库表
-     * @param integer $ConsistencyType 数据对比类型，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
+     * @param integer $ConsistencyType 抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
      * @param integer $IsOverrideRoot 是否用源库Root账户覆盖目标库，值包括：0-不覆盖，1-覆盖，选择库表或者结构迁移时应该为0
      * @param string $ExternParams 不同数据库用到的额外参数.以JSON格式描述. 
 Redis可定义如下的参数: 
@@ -144,7 +147,8 @@ MongoDB可定义如下的参数:
 	'SrcAuthFlag': "1", 
 	'SrcAuthMechanism':"SCRAM-SHA-1"
 }
-     * @param ConsistencyParams $ConsistencyParams 抽样检验时的抽样参数
+MySQL暂不支持额外参数设置。
+     * @param ConsistencyParams $ConsistencyParams 仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
      */
     function __construct()
     {

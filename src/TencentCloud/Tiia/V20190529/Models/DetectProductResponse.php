@@ -14,36 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Clb\V20180317\Models;
+namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getListeners() 获取监听器后端绑定的机器信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setListeners(array $Listeners) 设置监听器后端绑定的机器信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getProducts() 获取商品识别结果数组
+ * @method void setProducts(array $Products) 设置商品识别结果数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *DescribeTargets返回参数结构体
+ *DetectProduct返回参数结构体
  */
-class DescribeTargetsResponse extends AbstractModel
+class DetectProductResponse extends AbstractModel
 {
     /**
-     * @var array 监听器后端绑定的机器信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 商品识别结果数组
      */
-    public $Listeners;
+    public $Products;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param array $Listeners 监听器后端绑定的机器信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Products 商品识别结果数组
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,12 +54,12 @@ class DescribeTargetsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Listeners",$param) and $param["Listeners"] !== null) {
-            $this->Listeners = [];
-            foreach ($param["Listeners"] as $key => $value){
-                $obj = new ListenerBackend();
+        if (array_key_exists("Products",$param) and $param["Products"] !== null) {
+            $this->Products = [];
+            foreach ($param["Products"] as $key => $value){
+                $obj = new Product();
                 $obj->deserialize($value);
-                array_push($this->Listeners, $obj);
+                array_push($this->Products, $obj);
             }
         }
 

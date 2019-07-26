@@ -18,16 +18,16 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取目标实例Id
- * @method void setInstanceId(string $InstanceId) 设置目标实例Id
- * @method string getIp() 获取目标实例vip
- * @method void setIp(string $Ip) 设置目标实例vip
- * @method integer getPort() 获取目标实例vport
- * @method void setPort(integer $Port) 设置目标实例vport
- * @method string getRegion() 获取目标实例Id
- * @method void setRegion(string $Region) 设置目标实例Id
- * @method integer getReadOnly() 获取只读开关
- * @method void setReadOnly(integer $ReadOnly) 设置只读开关
+ * @method string getInstanceId() 获取目标实例Id，如cdb-jd92ijd8
+ * @method void setInstanceId(string $InstanceId) 设置目标实例Id，如cdb-jd92ijd8
+ * @method string getIp() 获取目标实例vip。已废弃，无需填写
+ * @method void setIp(string $Ip) 设置目标实例vip。已废弃，无需填写
+ * @method integer getPort() 获取目标实例vport。已废弃，无需填写
+ * @method void setPort(integer $Port) 设置目标实例vport。已废弃，无需填写
+ * @method string getRegion() 获取目标实例地域，如ap-guangzhou
+ * @method void setRegion(string $Region) 设置目标实例地域，如ap-guangzhou
+ * @method integer getReadOnly() 获取目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
+ * @method void setReadOnly(integer $ReadOnly) 设置目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
  */
 
 /**
@@ -36,35 +36,35 @@ use TencentCloud\Common\AbstractModel;
 class DstInfo extends AbstractModel
 {
     /**
-     * @var string 目标实例Id
+     * @var string 目标实例Id，如cdb-jd92ijd8
      */
     public $InstanceId;
 
     /**
-     * @var string 目标实例vip
+     * @var string 目标实例vip。已废弃，无需填写
      */
     public $Ip;
 
     /**
-     * @var integer 目标实例vport
+     * @var integer 目标实例vport。已废弃，无需填写
      */
     public $Port;
 
     /**
-     * @var string 目标实例Id
+     * @var string 目标实例地域，如ap-guangzhou
      */
     public $Region;
 
     /**
-     * @var integer 只读开关
+     * @var integer 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
      */
     public $ReadOnly;
     /**
-     * @param string $InstanceId 目标实例Id
-     * @param string $Ip 目标实例vip
-     * @param integer $Port 目标实例vport
-     * @param string $Region 目标实例Id
-     * @param integer $ReadOnly 只读开关
+     * @param string $InstanceId 目标实例Id，如cdb-jd92ijd8
+     * @param string $Ip 目标实例vip。已废弃，无需填写
+     * @param integer $Port 目标实例vport。已废弃，无需填写
+     * @param string $Region 目标实例地域，如ap-guangzhou
+     * @param integer $ReadOnly 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
      */
     function __construct()
     {

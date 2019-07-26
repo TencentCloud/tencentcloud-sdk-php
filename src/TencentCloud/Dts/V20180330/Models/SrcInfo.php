@@ -18,8 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAccessKey() 获取阿里云AccessKey
- * @method void setAccessKey(string $AccessKey) 设置阿里云AccessKey
+ * @method string getAccessKey() 获取阿里云AccessKey。源库是阿里云RDS5.6适用
+ * @method void setAccessKey(string $AccessKey) 设置阿里云AccessKey。源库是阿里云RDS5.6适用
  * @method string getIp() 获取实例的IP地址
  * @method void setIp(string $Ip) 设置实例的IP地址
  * @method integer getPort() 获取实例的端口
@@ -28,24 +28,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUser(string $User) 设置实例的用户名
  * @method string getPassword() 获取实例的密码
  * @method void setPassword(string $Password) 设置实例的密码
- * @method string getRdsInstanceId() 获取阿里云rds实例id
- * @method void setRdsInstanceId(string $RdsInstanceId) 设置阿里云rds实例id
- * @method string getCvmInstanceId() 获取CVM实例短ID，格式如：ins-olgl89y8，与云主机控制台页面显示的实例ID相同，如果是CVM自建实例或者通过自建VPN接入的公网实例，需要传递此字段
- * @method void setCvmInstanceId(string $CvmInstanceId) 设置CVM实例短ID，格式如：ins-olgl89y8，与云主机控制台页面显示的实例ID相同，如果是CVM自建实例或者通过自建VPN接入的公网实例，需要传递此字段
- * @method string getUniqDcgId() 获取专线网关ID
- * @method void setUniqDcgId(string $UniqDcgId) 设置专线网关ID
- * @method string getVpcId() 获取私有网络ID，和原来的数字vpcId对应，需要调vpc的接口去转换
- * @method void setVpcId(string $VpcId) 设置私有网络ID，和原来的数字vpcId对应，需要调vpc的接口去转换
- * @method string getSubnetId() 获取私有网络下的子网ID, 和原来的数字子网ID对应，需要调用vpc的接口去转换
- * @method void setSubnetId(string $SubnetId) 设置私有网络下的子网ID, 和原来的数字子网ID对应，需要调用vpc的接口去转换
- * @method string getUniqVpnGwId() 获取系统分配的VPN网关ID
- * @method void setUniqVpnGwId(string $UniqVpnGwId) 设置系统分配的VPN网关ID
- * @method string getInstanceId() 获取实例短Id
- * @method void setInstanceId(string $InstanceId) 设置实例短Id
+ * @method string getRdsInstanceId() 获取阿里云RDS实例ID。源库是阿里云RDS5.6适用
+ * @method void setRdsInstanceId(string $RdsInstanceId) 设置阿里云RDS实例ID。源库是阿里云RDS5.6适用
+ * @method string getCvmInstanceId() 获取CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
+ * @method void setCvmInstanceId(string $CvmInstanceId) 设置CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
+ * @method string getUniqDcgId() 获取专线网关ID，格式如：dcg-0rxtqqxb
+ * @method void setUniqDcgId(string $UniqDcgId) 设置专线网关ID，格式如：dcg-0rxtqqxb
+ * @method string getVpcId() 获取私有网络ID，格式如：vpc-92jblxto
+ * @method void setVpcId(string $VpcId) 设置私有网络ID，格式如：vpc-92jblxto
+ * @method string getSubnetId() 获取私有网络下的子网ID，格式如：subnet-3paxmkdz
+ * @method void setSubnetId(string $SubnetId) 设置私有网络下的子网ID，格式如：subnet-3paxmkdz
+ * @method string getUniqVpnGwId() 获取VPN网关ID，格式如：vpngw-9ghexg7q
+ * @method void setUniqVpnGwId(string $UniqVpnGwId) 设置VPN网关ID，格式如：vpngw-9ghexg7q
+ * @method string getInstanceId() 获取数据库实例ID,格式如：cdb-powiqx8q
+ * @method void setInstanceId(string $InstanceId) 设置数据库实例ID,格式如：cdb-powiqx8q
  * @method string getRegion() 获取地域英文名，如：ap-guangzhou
  * @method void setRegion(string $Region) 设置地域英文名，如：ap-guangzhou
- * @method string getSupplier() 获取服务提供商，如:aliyun,others
- * @method void setSupplier(string $Supplier) 设置服务提供商，如:aliyun,others
+ * @method string getSupplier() 获取当实例为RDS实例时，填写为aliyun, 其他情况均填写others
+ * @method void setSupplier(string $Supplier) 设置当实例为RDS实例时，填写为aliyun, 其他情况均填写others
  */
 
 /**
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class SrcInfo extends AbstractModel
 {
     /**
-     * @var string 阿里云AccessKey
+     * @var string 阿里云AccessKey。源库是阿里云RDS5.6适用
      */
     public $AccessKey;
 
@@ -79,37 +79,37 @@ class SrcInfo extends AbstractModel
     public $Password;
 
     /**
-     * @var string 阿里云rds实例id
+     * @var string 阿里云RDS实例ID。源库是阿里云RDS5.6适用
      */
     public $RdsInstanceId;
 
     /**
-     * @var string CVM实例短ID，格式如：ins-olgl89y8，与云主机控制台页面显示的实例ID相同，如果是CVM自建实例或者通过自建VPN接入的公网实例，需要传递此字段
+     * @var string CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
      */
     public $CvmInstanceId;
 
     /**
-     * @var string 专线网关ID
+     * @var string 专线网关ID，格式如：dcg-0rxtqqxb
      */
     public $UniqDcgId;
 
     /**
-     * @var string 私有网络ID，和原来的数字vpcId对应，需要调vpc的接口去转换
+     * @var string 私有网络ID，格式如：vpc-92jblxto
      */
     public $VpcId;
 
     /**
-     * @var string 私有网络下的子网ID, 和原来的数字子网ID对应，需要调用vpc的接口去转换
+     * @var string 私有网络下的子网ID，格式如：subnet-3paxmkdz
      */
     public $SubnetId;
 
     /**
-     * @var string 系统分配的VPN网关ID
+     * @var string VPN网关ID，格式如：vpngw-9ghexg7q
      */
     public $UniqVpnGwId;
 
     /**
-     * @var string 实例短Id
+     * @var string 数据库实例ID,格式如：cdb-powiqx8q
      */
     public $InstanceId;
 
@@ -119,24 +119,24 @@ class SrcInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var string 服务提供商，如:aliyun,others
+     * @var string 当实例为RDS实例时，填写为aliyun, 其他情况均填写others
      */
     public $Supplier;
     /**
-     * @param string $AccessKey 阿里云AccessKey
+     * @param string $AccessKey 阿里云AccessKey。源库是阿里云RDS5.6适用
      * @param string $Ip 实例的IP地址
      * @param integer $Port 实例的端口
      * @param string $User 实例的用户名
      * @param string $Password 实例的密码
-     * @param string $RdsInstanceId 阿里云rds实例id
-     * @param string $CvmInstanceId CVM实例短ID，格式如：ins-olgl89y8，与云主机控制台页面显示的实例ID相同，如果是CVM自建实例或者通过自建VPN接入的公网实例，需要传递此字段
-     * @param string $UniqDcgId 专线网关ID
-     * @param string $VpcId 私有网络ID，和原来的数字vpcId对应，需要调vpc的接口去转换
-     * @param string $SubnetId 私有网络下的子网ID, 和原来的数字子网ID对应，需要调用vpc的接口去转换
-     * @param string $UniqVpnGwId 系统分配的VPN网关ID
-     * @param string $InstanceId 实例短Id
+     * @param string $RdsInstanceId 阿里云RDS实例ID。源库是阿里云RDS5.6适用
+     * @param string $CvmInstanceId CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
+     * @param string $UniqDcgId 专线网关ID，格式如：dcg-0rxtqqxb
+     * @param string $VpcId 私有网络ID，格式如：vpc-92jblxto
+     * @param string $SubnetId 私有网络下的子网ID，格式如：subnet-3paxmkdz
+     * @param string $UniqVpnGwId VPN网关ID，格式如：vpngw-9ghexg7q
+     * @param string $InstanceId 数据库实例ID,格式如：cdb-powiqx8q
      * @param string $Region 地域英文名，如：ap-guangzhou
-     * @param string $Supplier 服务提供商，如:aliyun,others
+     * @param string $Supplier 当实例为RDS实例时，填写为aliyun, 其他情况均填写others
      */
     function __construct()
     {

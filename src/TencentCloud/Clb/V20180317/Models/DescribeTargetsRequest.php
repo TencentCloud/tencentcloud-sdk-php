@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerIds(array $ListenerIds) 设置监听器 ID列表
  * @method string getProtocol() 获取监听器协议类型
  * @method void setProtocol(string $Protocol) 设置监听器协议类型
- * @method integer getPort() 获取负载均衡监听器端口
- * @method void setPort(integer $Port) 设置负载均衡监听器端口
+ * @method integer getPort() 获取监听器端口
+ * @method void setPort(integer $Port) 设置监听器端口
  */
 
 /**
@@ -49,14 +49,14 @@ class DescribeTargetsRequest extends AbstractModel
     public $Protocol;
 
     /**
-     * @var integer 负载均衡监听器端口
+     * @var integer 监听器端口
      */
     public $Port;
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param array $ListenerIds 监听器 ID列表
      * @param string $Protocol 监听器协议类型
-     * @param integer $Port 负载均衡监听器端口
+     * @param integer $Port 监听器端口
      */
     function __construct()
     {

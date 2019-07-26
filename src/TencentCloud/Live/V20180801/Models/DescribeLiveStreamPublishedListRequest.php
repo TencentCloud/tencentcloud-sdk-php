@@ -18,22 +18,24 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDomainName() 获取您的域名。
- * @method void setDomainName(string $DomainName) 设置您的域名。
+ * @method string getDomainName() 获取您的推流域名。
+ * @method void setDomainName(string $DomainName) 设置您的推流域名。
  * @method string getEndTime() 获取结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
 不超过当前时间。
+注意：EndTime和StartTime相差不可超过30天。
  * @method void setEndTime(string $EndTime) 设置结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
 不超过当前时间。
+注意：EndTime和StartTime相差不可超过30天。
  * @method string getStartTime() 获取起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
-和当前时间相隔不超过7天。
+最长支持查询60天内数据。
  * @method void setStartTime(string $StartTime) 设置起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
-和当前时间相隔不超过7天。
- * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
- * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+最长支持查询60天内数据。
+ * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
+ * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
  * @method integer getPageNum() 获取取得第几页。
 默认值：1。
  * @method void setPageNum(integer $PageNum) 设置取得第几页。
@@ -46,6 +48,8 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 最大值：100。
 取值范围：1~100 之前的任意整数。
 默认值：10。
+ * @method string getStreamName() 获取流名称，支持模糊匹配。
+ * @method void setStreamName(string $StreamName) 设置流名称，支持模糊匹配。
  */
 
 /**
@@ -54,7 +58,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 class DescribeLiveStreamPublishedListRequest extends AbstractModel
 {
     /**
-     * @var string 您的域名。
+     * @var string 您的推流域名。
      */
     public $DomainName;
 
@@ -62,18 +66,19 @@ class DescribeLiveStreamPublishedListRequest extends AbstractModel
      * @var string 结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
 不超过当前时间。
+注意：EndTime和StartTime相差不可超过30天。
      */
     public $EndTime;
 
     /**
      * @var string 起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
-和当前时间相隔不超过7天。
+最长支持查询60天内数据。
      */
     public $StartTime;
 
     /**
-     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
      */
     public $AppName;
 
@@ -90,21 +95,28 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 默认值：10。
      */
     public $PageSize;
+
     /**
-     * @param string $DomainName 您的域名。
+     * @var string 流名称，支持模糊匹配。
+     */
+    public $StreamName;
+    /**
+     * @param string $DomainName 您的推流域名。
      * @param string $EndTime 结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
 不超过当前时间。
+注意：EndTime和StartTime相差不可超过30天。
      * @param string $StartTime 起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
-和当前时间相隔不超过7天。
-     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+最长支持查询60天内数据。
+     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
      * @param integer $PageNum 取得第几页。
 默认值：1。
      * @param integer $PageSize 分页大小。
 最大值：100。
 取值范围：1~100 之前的任意整数。
 默认值：10。
+     * @param string $StreamName 流名称，支持模糊匹配。
      */
     function __construct()
     {
@@ -140,6 +152,10 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
+            $this->StreamName = $param["StreamName"];
         }
     }
 }

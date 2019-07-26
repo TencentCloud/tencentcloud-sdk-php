@@ -22,19 +22,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobName(string $JobName) 设置数据迁移任务名称
  * @method MigrateOption getMigrateOption() 获取迁移任务配置选项
  * @method void setMigrateOption(MigrateOption $MigrateOption) 设置迁移任务配置选项
- * @method string getSrcDatabaseType() 获取源实例数据库类型:mysql,redis,mongodb
- * @method void setSrcDatabaseType(string $SrcDatabaseType) 设置源实例数据库类型:mysql,redis,mongodb
- * @method string getSrcAccessType() 获取源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
- * @method void setSrcAccessType(string $SrcAccessType) 设置源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+ * @method string getSrcDatabaseType() 获取源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
+ * @method void setSrcDatabaseType(string $SrcDatabaseType) 设置源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
+ * @method string getSrcAccessType() 获取源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
+ * @method void setSrcAccessType(string $SrcAccessType) 设置源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
  * @method SrcInfo getSrcInfo() 获取源实例信息，具体内容跟迁移任务类型相关
  * @method void setSrcInfo(SrcInfo $SrcInfo) 设置源实例信息，具体内容跟迁移任务类型相关
- * @method string getDstDatabaseType() 获取目标实例数据库类型,mysql,redis,mongodb
- * @method void setDstDatabaseType(string $DstDatabaseType) 设置目标实例数据库类型,mysql,redis,mongodb
- * @method string getDstAccessType() 获取目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
- * @method void setDstAccessType(string $DstAccessType) 设置目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
+ * @method string getDstDatabaseType() 获取目标实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
+ * @method void setDstDatabaseType(string $DstDatabaseType) 设置目标实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
+ * @method string getDstAccessType() 获取目标实例接入类型，目前支持：cdb（腾讯云数据库实例）
+ * @method void setDstAccessType(string $DstAccessType) 设置目标实例接入类型，目前支持：cdb（腾讯云数据库实例）
  * @method DstInfo getDstInfo() 获取目标实例信息
  * @method void setDstInfo(DstInfo $DstInfo) 设置目标实例信息
- * @method string getDatabaseInfo() 获取需要迁移的源数据库表信息，用json格式的字符串描述。
+ * @method string getDatabaseInfo() 获取需要迁移的源数据库表信息，用json格式的字符串描述。当MigrateOption.MigrateObject配置为2（指定库表迁移）时必填。
 对于database-table两级结构的数据库：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
 对于database-schema-table三级结构：
@@ -43,7 +43,7 @@ Table:[table1,table2]},{Database:db1,Schema:s2
 Table:[table1,table2]},{Database:db2,Schema:s1
 Table:[table1,table2]},{Database:db3},{Database:db4
 Schema:s1}]
- * @method void setDatabaseInfo(string $DatabaseInfo) 设置需要迁移的源数据库表信息，用json格式的字符串描述。
+ * @method void setDatabaseInfo(string $DatabaseInfo) 设置需要迁移的源数据库表信息，用json格式的字符串描述。当MigrateOption.MigrateObject配置为2（指定库表迁移）时必填。
 对于database-table两级结构的数据库：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
 对于database-schema-table三级结构：
@@ -70,12 +70,12 @@ class CreateMigrateJobRequest extends AbstractModel
     public $MigrateOption;
 
     /**
-     * @var string 源实例数据库类型:mysql,redis,mongodb
+     * @var string 源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
      */
     public $SrcDatabaseType;
 
     /**
-     * @var string 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+     * @var string 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
      */
     public $SrcAccessType;
 
@@ -85,12 +85,12 @@ class CreateMigrateJobRequest extends AbstractModel
     public $SrcInfo;
 
     /**
-     * @var string 目标实例数据库类型,mysql,redis,mongodb
+     * @var string 目标实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
      */
     public $DstDatabaseType;
 
     /**
-     * @var string 目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
+     * @var string 目标实例接入类型，目前支持：cdb（腾讯云数据库实例）
      */
     public $DstAccessType;
 
@@ -100,7 +100,7 @@ class CreateMigrateJobRequest extends AbstractModel
     public $DstInfo;
 
     /**
-     * @var string 需要迁移的源数据库表信息，用json格式的字符串描述。
+     * @var string 需要迁移的源数据库表信息，用json格式的字符串描述。当MigrateOption.MigrateObject配置为2（指定库表迁移）时必填。
 对于database-table两级结构的数据库：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
 对于database-schema-table三级结构：
@@ -114,13 +114,13 @@ Schema:s1}]
     /**
      * @param string $JobName 数据迁移任务名称
      * @param MigrateOption $MigrateOption 迁移任务配置选项
-     * @param string $SrcDatabaseType 源实例数据库类型:mysql,redis,mongodb
-     * @param string $SrcAccessType 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+     * @param string $SrcDatabaseType 源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
+     * @param string $SrcAccessType 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
      * @param SrcInfo $SrcInfo 源实例信息，具体内容跟迁移任务类型相关
-     * @param string $DstDatabaseType 目标实例数据库类型,mysql,redis,mongodb
-     * @param string $DstAccessType 目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
+     * @param string $DstDatabaseType 目标实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
+     * @param string $DstAccessType 目标实例接入类型，目前支持：cdb（腾讯云数据库实例）
      * @param DstInfo $DstInfo 目标实例信息
-     * @param string $DatabaseInfo 需要迁移的源数据库表信息，用json格式的字符串描述。
+     * @param string $DatabaseInfo 需要迁移的源数据库表信息，用json格式的字符串描述。当MigrateOption.MigrateObject配置为2（指定库表迁移）时必填。
 对于database-table两级结构的数据库：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
 对于database-schema-table三级结构：

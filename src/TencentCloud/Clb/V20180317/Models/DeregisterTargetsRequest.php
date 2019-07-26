@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID，格式如 lb-12345678
  * @method string getListenerId() 获取监听器 ID，格式如 lbl-12345678
  * @method void setListenerId(string $ListenerId) 设置监听器 ID，格式如 lbl-12345678
- * @method array getTargets() 获取要解绑的后端机器列表，数组长度最大支持20
- * @method void setTargets(array $Targets) 设置要解绑的后端机器列表，数组长度最大支持20
+ * @method array getTargets() 获取要解绑的后端服务列表，数组长度最大支持20
+ * @method void setTargets(array $Targets) 设置要解绑的后端服务列表，数组长度最大支持20
  * @method string getLocationId() 获取转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
  * @method void setLocationId(string $LocationId) 设置转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
  * @method string getDomain() 获取目标规则的域名，提供LocationId参数时本参数不生效
@@ -48,7 +48,7 @@ class DeregisterTargetsRequest extends AbstractModel
     public $ListenerId;
 
     /**
-     * @var array 要解绑的后端机器列表，数组长度最大支持20
+     * @var array 要解绑的后端服务列表，数组长度最大支持20
      */
     public $Targets;
 
@@ -69,7 +69,7 @@ class DeregisterTargetsRequest extends AbstractModel
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID，格式如 lb-12345678
      * @param string $ListenerId 监听器 ID，格式如 lbl-12345678
-     * @param array $Targets 要解绑的后端机器列表，数组长度最大支持20
+     * @param array $Targets 要解绑的后端服务列表，数组长度最大支持20
      * @param string $LocationId 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
      * @param string $Domain 目标规则的域名，提供LocationId参数时本参数不生效
      * @param string $Url 目标规则的URL，提供LocationId参数时本参数不生效

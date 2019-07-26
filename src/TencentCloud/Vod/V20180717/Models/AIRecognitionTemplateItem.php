@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeadTailConfigure(HeadTailConfigureInfo $HeadTailConfigure) 设置头尾识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SegmentConfigureInfo getSegmentConfigure() 获取拆条识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSegmentConfigure(SegmentConfigureInfo $SegmentConfigure) 设置拆条识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method FaceConfigureInfo getFaceConfigure() 获取人脸识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFaceConfigure(FaceConfigureInfo $FaceConfigure) 设置人脸识别控制参数。
@@ -87,6 +91,12 @@ class AIRecognitionTemplateItem extends AbstractModel
     public $HeadTailConfigure;
 
     /**
+     * @var SegmentConfigureInfo 拆条识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SegmentConfigure;
+
+    /**
      * @var FaceConfigureInfo 人脸识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -142,6 +152,8 @@ class AIRecognitionTemplateItem extends AbstractModel
      * @param string $Comment 视频内容识别模板描述信息。
      * @param HeadTailConfigureInfo $HeadTailConfigure 头尾识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param SegmentConfigureInfo $SegmentConfigure 拆条识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceConfigureInfo $FaceConfigure 人脸识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrFullTextConfigureInfo $OcrFullTextConfigure 文本全文识别控制参数。
@@ -185,6 +197,11 @@ class AIRecognitionTemplateItem extends AbstractModel
         if (array_key_exists("HeadTailConfigure",$param) and $param["HeadTailConfigure"] !== null) {
             $this->HeadTailConfigure = new HeadTailConfigureInfo();
             $this->HeadTailConfigure->deserialize($param["HeadTailConfigure"]);
+        }
+
+        if (array_key_exists("SegmentConfigure",$param) and $param["SegmentConfigure"] !== null) {
+            $this->SegmentConfigure = new SegmentConfigureInfo();
+            $this->SegmentConfigure->deserialize($param["SegmentConfigure"]);
         }
 
         if (array_key_exists("FaceConfigure",$param) and $param["FaceConfigure"] !== null) {

@@ -18,10 +18,16 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getNerTokens() 获取命名实体识别结果
- * @method void setNerTokens(array $NerTokens) 设置命名实体识别结果
- * @method array getPosTokens() 获取分词&词性标注结果
- * @method void setPosTokens(array $PosTokens) 设置分词&词性标注结果
+ * @method array getNerTokens() 获取命名实体识别结果。取值范围：
+<li>PER：表示人名</li>
+<li>LOC：表示地名</li>
+<li>ORG：表示机构团体名</li>
+ * @method void setNerTokens(array $NerTokens) 设置命名实体识别结果。取值范围：
+<li>PER：表示人名</li>
+<li>LOC：表示地名</li>
+<li>ORG：表示机构团体名</li>
+ * @method array getPosTokens() 获取分词&词性标注结果（词性表请参见附录）
+ * @method void setPosTokens(array $PosTokens) 设置分词&词性标注结果（词性表请参见附录）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -32,12 +38,15 @@ use TencentCloud\Common\AbstractModel;
 class LexicalAnalysisResponse extends AbstractModel
 {
     /**
-     * @var array 命名实体识别结果
+     * @var array 命名实体识别结果。取值范围：
+<li>PER：表示人名</li>
+<li>LOC：表示地名</li>
+<li>ORG：表示机构团体名</li>
      */
     public $NerTokens;
 
     /**
-     * @var array 分词&词性标注结果
+     * @var array 分词&词性标注结果（词性表请参见附录）
      */
     public $PosTokens;
 
@@ -46,8 +55,11 @@ class LexicalAnalysisResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $NerTokens 命名实体识别结果
-     * @param array $PosTokens 分词&词性标注结果
+     * @param array $NerTokens 命名实体识别结果。取值范围：
+<li>PER：表示人名</li>
+<li>LOC：表示地名</li>
+<li>ORG：表示机构团体名</li>
+     * @param array $PosTokens 分词&词性标注结果（词性表请参见附录）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

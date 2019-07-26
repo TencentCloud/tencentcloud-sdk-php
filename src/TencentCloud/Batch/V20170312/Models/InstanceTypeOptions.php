@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCPU(integer $CPU) 设置CPU核数。
  * @method integer getMemory() 获取内存值，单位GB。
  * @method void setMemory(integer $Memory) 设置内存值，单位GB。
- * @method array getInstanceCategories() 获取实例机型类别，可选参数：“ALL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
- * @method void setInstanceCategories(array $InstanceCategories) 设置实例机型类别，可选参数：“ALL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
+ * @method array getInstanceCategories() 获取实例机型类别，可选参数：“ALL”、“GENERAL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
+ * @method void setInstanceCategories(array $InstanceCategories) 设置实例机型类别，可选参数：“ALL”、“GENERAL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
  */
 
 /**
@@ -42,13 +42,13 @@ class InstanceTypeOptions extends AbstractModel
     public $Memory;
 
     /**
-     * @var array 实例机型类别，可选参数：“ALL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
+     * @var array 实例机型类别，可选参数：“ALL”、“GENERAL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
      */
     public $InstanceCategories;
     /**
      * @param integer $CPU CPU核数。
      * @param integer $Memory 内存值，单位GB。
-     * @param array $InstanceCategories 实例机型类别，可选参数：“ALL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
+     * @param array $InstanceCategories 实例机型类别，可选参数：“ALL”、“GENERAL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
      */
     function __construct()
     {

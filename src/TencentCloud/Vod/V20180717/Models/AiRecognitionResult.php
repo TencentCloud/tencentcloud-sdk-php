@@ -34,6 +34,18 @@ use TencentCloud\Common\AbstractModel;
 <li>OcrFullTextRecognition：文本全文识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
+ * @method AiRecognitionTaskHeadTailResult getHeadTailTask() 获取视频片头片尾识别结果，当 Type 为
+ HeadTailRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHeadTailTask(AiRecognitionTaskHeadTailResult $HeadTailTask) 设置视频片头片尾识别结果，当 Type 为
+ HeadTailRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiRecognitionTaskSegmentResult getSegmentTask() 获取视频拆条识别结果，当 Type 为
+ SegmentRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSegmentTask(AiRecognitionTaskSegmentResult $SegmentTask) 设置视频拆条识别结果，当 Type 为
+ SegmentRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method AiRecognitionTaskFaceResult getFaceTask() 获取人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,12 +76,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOcrFullTextTask(AiRecognitionTaskOcrFullTextResult $OcrFullTextTask) 设置文本全文识别结果，当 Type 为
  OcrFullTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AiRecognitionTaskHeadTailResult getHeadTailTask() 获取视频片头片尾识别结果，当 Type 为
- HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeadTailTask(AiRecognitionTaskHeadTailResult $HeadTailTask) 设置视频片头片尾识别结果，当 Type 为
- HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AiRecognitionTaskObjectResult getObjectTask() 获取物体识别结果，当 Type 为
  ObjectRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -94,6 +100,20 @@ class AiRecognitionResult extends AbstractModel
 <li>ObjectRecognition：物体识别。</li>
      */
     public $Type;
+
+    /**
+     * @var AiRecognitionTaskHeadTailResult 视频片头片尾识别结果，当 Type 为
+ HeadTailRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HeadTailTask;
+
+    /**
+     * @var AiRecognitionTaskSegmentResult 视频拆条识别结果，当 Type 为
+ SegmentRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SegmentTask;
 
     /**
      * @var AiRecognitionTaskFaceResult 人脸识别结果，当 Type 为 
@@ -131,13 +151,6 @@ class AiRecognitionResult extends AbstractModel
     public $OcrFullTextTask;
 
     /**
-     * @var AiRecognitionTaskHeadTailResult 视频片头片尾识别结果，当 Type 为
- HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $HeadTailTask;
-
-    /**
      * @var AiRecognitionTaskObjectResult 物体识别结果，当 Type 为
  ObjectRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -152,6 +165,12 @@ class AiRecognitionResult extends AbstractModel
 <li>OcrFullTextRecognition：文本全文识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
+     * @param AiRecognitionTaskHeadTailResult $HeadTailTask 视频片头片尾识别结果，当 Type 为
+ HeadTailRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiRecognitionTaskSegmentResult $SegmentTask 视频拆条识别结果，当 Type 为
+ SegmentRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTaskFaceResult $FaceTask 人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -166,9 +185,6 @@ class AiRecognitionResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTaskOcrFullTextResult $OcrFullTextTask 文本全文识别结果，当 Type 为
  OcrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiRecognitionTaskHeadTailResult $HeadTailTask 视频片头片尾识别结果，当 Type 为
- HeadTailRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTaskObjectResult $ObjectTask 物体识别结果，当 Type 为
  ObjectRecognition 时有效。
@@ -188,6 +204,16 @@ class AiRecognitionResult extends AbstractModel
         }
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("HeadTailTask",$param) and $param["HeadTailTask"] !== null) {
+            $this->HeadTailTask = new AiRecognitionTaskHeadTailResult();
+            $this->HeadTailTask->deserialize($param["HeadTailTask"]);
+        }
+
+        if (array_key_exists("SegmentTask",$param) and $param["SegmentTask"] !== null) {
+            $this->SegmentTask = new AiRecognitionTaskSegmentResult();
+            $this->SegmentTask->deserialize($param["SegmentTask"]);
         }
 
         if (array_key_exists("FaceTask",$param) and $param["FaceTask"] !== null) {
@@ -213,11 +239,6 @@ class AiRecognitionResult extends AbstractModel
         if (array_key_exists("OcrFullTextTask",$param) and $param["OcrFullTextTask"] !== null) {
             $this->OcrFullTextTask = new AiRecognitionTaskOcrFullTextResult();
             $this->OcrFullTextTask->deserialize($param["OcrFullTextTask"]);
-        }
-
-        if (array_key_exists("HeadTailTask",$param) and $param["HeadTailTask"] !== null) {
-            $this->HeadTailTask = new AiRecognitionTaskHeadTailResult();
-            $this->HeadTailTask->deserialize($param["HeadTailTask"]);
         }
 
         if (array_key_exists("ObjectTask",$param) and $param["ObjectTask"] !== null) {

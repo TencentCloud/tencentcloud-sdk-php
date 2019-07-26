@@ -72,6 +72,16 @@ use TencentCloud\Common\AbstractModel;
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFillType() 获取填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
+<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
+<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
+默认值：black 。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFillType(string $FillType) 设置填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
+<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
+<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
+默认值：black 。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -129,6 +139,15 @@ class VideoTemplateInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
+
+    /**
+     * @var string 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
+<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
+<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
+默认值：black 。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FillType;
     /**
      * @param string $Codec 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
@@ -156,6 +175,11 @@ class VideoTemplateInfo extends AbstractModel
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
+<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
+<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
+默认值：black 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -192,6 +216,10 @@ class VideoTemplateInfo extends AbstractModel
 
         if (array_key_exists("Height",$param) and $param["Height"] !== null) {
             $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
+            $this->FillType = $param["FillType"];
         }
     }
 }

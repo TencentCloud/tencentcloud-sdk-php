@@ -24,18 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobName(string $JobName) 设置数据迁移任务名称
  * @method MigrateOption getMigrateOption() 获取迁移任务配置选项
  * @method void setMigrateOption(MigrateOption $MigrateOption) 设置迁移任务配置选项
- * @method string getSrcDatabaseType() 获取源实例数据库类型:mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
- * @method void setSrcDatabaseType(string $SrcDatabaseType) 设置源实例数据库类型:mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
- * @method string getSrcAccessType() 获取源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
- * @method void setSrcAccessType(string $SrcAccessType) 设置源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+ * @method string getSrcDatabaseType() 获取源实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
+ * @method void setSrcDatabaseType(string $SrcDatabaseType) 设置源实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
+ * @method string getSrcAccessType() 获取源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
+ * @method void setSrcAccessType(string $SrcAccessType) 设置源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
  * @method SrcInfo getSrcInfo() 获取源实例信息，具体内容跟迁移任务类型相关
  * @method void setSrcInfo(SrcInfo $SrcInfo) 设置源实例信息，具体内容跟迁移任务类型相关
- * @method string getDstDatabaseType() 获取目标实例数据库类型,mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
- * @method void setDstDatabaseType(string $DstDatabaseType) 设置目标实例数据库类型,mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
- * @method string getDstAccessType() 获取源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
- * @method void setDstAccessType(string $DstAccessType) 设置源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
- * @method DstInfo getDstInfo() 获取目的实例信息
- * @method void setDstInfo(DstInfo $DstInfo) 设置目的实例信息
+ * @method string getDstDatabaseType() 获取目标实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
+ * @method void setDstDatabaseType(string $DstDatabaseType) 设置目标实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
+ * @method string getDstAccessType() 获取目标实例接入类型，目前支持：cdb(腾讯云数据库实例)
+ * @method void setDstAccessType(string $DstAccessType) 设置目标实例接入类型，目前支持：cdb(腾讯云数据库实例)
+ * @method DstInfo getDstInfo() 获取目标实例信息
+ * @method void setDstInfo(DstInfo $DstInfo) 设置目标实例信息
  * @method string getDatabaseInfo() 获取需要迁移的源数据库表信息，如果需要迁移的是整个实例，该字段为[]
  * @method void setDatabaseInfo(string $DatabaseInfo) 设置需要迁移的源数据库表信息，如果需要迁移的是整个实例，该字段为[]
  * @method string getCreateTime() 获取任务创建(提交)时间
@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置任务开始执行时间
  * @method string getEndTime() 获取任务执行结束时间
  * @method void setEndTime(string $EndTime) 设置任务执行结束时间
- * @method integer getStatus() 获取任务状态,取值为：1-创建中(Creating),2-创建完成(Created),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,6-准备运行(ReadyRun),7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-中止中（Stoping）,12-完成中（Completing）
- * @method void setStatus(integer $Status) 设置任务状态,取值为：1-创建中(Creating),2-创建完成(Created),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,6-准备运行(ReadyRun),7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-中止中（Stoping）,12-完成中（Completing）
+ * @method integer getStatus() 获取任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stoping）,12-完成中（Completing）
+ * @method void setStatus(integer $Status) 设置任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stoping）,12-完成中（Completing）
  * @method MigrateDetailInfo getDetail() 获取任务详情
  * @method void setDetail(MigrateDetailInfo $Detail) 设置任务详情
  */
@@ -71,12 +71,12 @@ class MigrateJobInfo extends AbstractModel
     public $MigrateOption;
 
     /**
-     * @var string 源实例数据库类型:mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+     * @var string 源实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
      */
     public $SrcDatabaseType;
 
     /**
-     * @var string 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+     * @var string 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
      */
     public $SrcAccessType;
 
@@ -86,17 +86,17 @@ class MigrateJobInfo extends AbstractModel
     public $SrcInfo;
 
     /**
-     * @var string 目标实例数据库类型,mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+     * @var string 目标实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
      */
     public $DstDatabaseType;
 
     /**
-     * @var string 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+     * @var string 目标实例接入类型，目前支持：cdb(腾讯云数据库实例)
      */
     public $DstAccessType;
 
     /**
-     * @var DstInfo 目的实例信息
+     * @var DstInfo 目标实例信息
      */
     public $DstInfo;
 
@@ -121,7 +121,7 @@ class MigrateJobInfo extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 任务状态,取值为：1-创建中(Creating),2-创建完成(Created),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,6-准备运行(ReadyRun),7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-中止中（Stoping）,12-完成中（Completing）
+     * @var integer 任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stoping）,12-完成中（Completing）
      */
     public $Status;
 
@@ -133,17 +133,17 @@ class MigrateJobInfo extends AbstractModel
      * @param string $JobId 数据迁移任务ID
      * @param string $JobName 数据迁移任务名称
      * @param MigrateOption $MigrateOption 迁移任务配置选项
-     * @param string $SrcDatabaseType 源实例数据库类型:mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
-     * @param string $SrcAccessType 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+     * @param string $SrcDatabaseType 源实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
+     * @param string $SrcAccessType 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
      * @param SrcInfo $SrcInfo 源实例信息，具体内容跟迁移任务类型相关
-     * @param string $DstDatabaseType 目标实例数据库类型,mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
-     * @param string $DstAccessType 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
-     * @param DstInfo $DstInfo 目的实例信息
+     * @param string $DstDatabaseType 目标实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
+     * @param string $DstAccessType 目标实例接入类型，目前支持：cdb(腾讯云数据库实例)
+     * @param DstInfo $DstInfo 目标实例信息
      * @param string $DatabaseInfo 需要迁移的源数据库表信息，如果需要迁移的是整个实例，该字段为[]
      * @param string $CreateTime 任务创建(提交)时间
      * @param string $StartTime 任务开始执行时间
      * @param string $EndTime 任务执行结束时间
-     * @param integer $Status 任务状态,取值为：1-创建中(Creating),2-创建完成(Created),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,6-准备运行(ReadyRun),7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-中止中（Stoping）,12-完成中（Completing）
+     * @param integer $Status 任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stoping）,12-完成中（Completing）
      * @param MigrateDetailInfo $Detail 任务详情
      */
     function __construct()

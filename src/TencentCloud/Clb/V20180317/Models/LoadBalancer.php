@@ -132,6 +132,14 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrepaidAttributes(LBChargePrepaid $PrepaidAttributes) 设置负载均衡实例的预付费相关属性
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogSetId() 获取负载均衡日志服务(CLS)的日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogSetId(string $LogSetId) 设置负载均衡日志服务(CLS)的日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogTopicId() 获取负载均衡日志服务(CLS)的日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogTopicId(string $LogTopicId) 设置负载均衡日志服务(CLS)的日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -315,6 +323,18 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrepaidAttributes;
+
+    /**
+     * @var string 负载均衡日志服务(CLS)的日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogSetId;
+
+    /**
+     * @var string 负载均衡日志服务(CLS)的日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogTopicId;
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
@@ -372,6 +392,10 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param InternetAccessible $NetworkAttributes 负载均衡实例的网络属性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LBChargePrepaid $PrepaidAttributes 负载均衡实例的预付费相关属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogSetId 负载均衡日志服务(CLS)的日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogTopicId 负载均衡日志服务(CLS)的日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -518,6 +542,14 @@ OPEN：公网属性， INTERNAL：内网属性。
         if (array_key_exists("PrepaidAttributes",$param) and $param["PrepaidAttributes"] !== null) {
             $this->PrepaidAttributes = new LBChargePrepaid();
             $this->PrepaidAttributes->deserialize($param["PrepaidAttributes"]);
+        }
+
+        if (array_key_exists("LogSetId",$param) and $param["LogSetId"] !== null) {
+            $this->LogSetId = $param["LogSetId"];
+        }
+
+        if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
+            $this->LogTopicId = $param["LogTopicId"];
         }
     }
 }

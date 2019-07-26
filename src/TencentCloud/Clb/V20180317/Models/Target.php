@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置后端服务的监听端口
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）
+ * @method string getType() 获取后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）；作为入参时，目前本参数暂不生效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）
+ * @method void setType(string $Type) 设置后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）；作为入参时，目前本参数暂不生效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取绑定CVM时需要传入此参数，代表CVM的唯一 ID，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。
 注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取后端服务的转发权重，取值范围：[0, 100]，默认为 10。
  * @method void setWeight(integer $Weight) 设置后端服务的转发权重，取值范围：[0, 100]，默认为 10。
- * @method string getEniIp() 获取绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
+ * @method string getEniIp() 获取绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。注意：绑定弹性网卡需要先提交工单开白名单使用。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEniIp(string $EniIp) 设置绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
+ * @method void setEniIp(string $EniIp) 设置绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。注意：绑定弹性网卡需要先提交工单开白名单使用。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -52,7 +52,7 @@ class Target extends AbstractModel
     public $Port;
 
     /**
-     * @var string 后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）
+     * @var string 后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）；作为入参时，目前本参数暂不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -70,20 +70,20 @@ class Target extends AbstractModel
     public $Weight;
 
     /**
-     * @var string 绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
+     * @var string 绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。注意：绑定弹性网卡需要先提交工单开白名单使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EniIp;
     /**
      * @param integer $Port 后端服务的监听端口
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）
+     * @param string $Type 后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）；作为入参时，目前本参数暂不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 绑定CVM时需要传入此参数，代表CVM的唯一 ID，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。
 注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
-     * @param string $EniIp 绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
+     * @param string $EniIp 绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。注意：绑定弹性网卡需要先提交工单开白名单使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

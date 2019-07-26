@@ -34,22 +34,22 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setSubnetId(string $SubnetId) 设置在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
  * @method integer getProjectId() 获取负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
  * @method void setProjectId(integer $ProjectId) 设置负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
- * @method string getAddressIPVersion() 获取IP版本，IPV4 | IPV6，默认值 IPV4。
- * @method void setAddressIPVersion(string $AddressIPVersion) 设置IP版本，IPV4 | IPV6，默认值 IPV4。
- * @method integer getNumber() 获取创建负载均衡的个数
- * @method void setNumber(integer $Number) 设置创建负载均衡的个数
- * @method string getMasterZoneId() 获取设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
-注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
- * @method void setMasterZoneId(string $MasterZoneId) 设置设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
-注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
- * @method string getZoneId() 获取可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
- * @method void setZoneId(string $ZoneId) 设置可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
- * @method string getAnycastZone() 获取Anycast的发布域，可取 ZONE_A 或 ZONE_B
- * @method void setAnycastZone(string $AnycastZone) 设置Anycast的发布域，可取 ZONE_A 或 ZONE_B
- * @method InternetAccessible getInternetAccessible() 获取负载均衡的网络计费方式，此参数仅对带宽上移用户生效
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置负载均衡的网络计费方式，此参数仅对带宽上移用户生效
- * @method string getVipIsp() 获取CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
- * @method void setVipIsp(string $VipIsp) 设置CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
+ * @method string getAddressIPVersion() 获取仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
+ * @method void setAddressIPVersion(string $AddressIPVersion) 设置仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
+ * @method integer getNumber() 获取创建负载均衡的个数，默认值 1。
+ * @method void setNumber(integer $Number) 设置创建负载均衡的个数，默认值 1。
+ * @method string getMasterZoneId() 获取仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
+ * @method void setMasterZoneId(string $MasterZoneId) 设置仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
+ * @method string getZoneId() 获取仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+ * @method void setZoneId(string $ZoneId) 设置仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+ * @method string getAnycastZone() 获取仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
+ * @method void setAnycastZone(string $AnycastZone) 设置仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
+ * @method InternetAccessible getInternetAccessible() 获取仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
+ * @method array getTags() 获取购买负载均衡同时，给负载均衡打上标签
+ * @method void setTags(array $Tags) 设置购买负载均衡同时，给负载均衡打上标签
  */
 
 /**
@@ -90,40 +90,40 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $ProjectId;
 
     /**
-     * @var string IP版本，IPV4 | IPV6，默认值 IPV4。
+     * @var string 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
      */
     public $AddressIPVersion;
 
     /**
-     * @var integer 创建负载均衡的个数
+     * @var integer 创建负载均衡的个数，默认值 1。
      */
     public $Number;
 
     /**
-     * @var string 设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
-注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
+     * @var string 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
      */
     public $MasterZoneId;
 
     /**
-     * @var string 可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     * @var string 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
      */
     public $ZoneId;
 
     /**
-     * @var string Anycast的发布域，可取 ZONE_A 或 ZONE_B
+     * @var string 仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
      */
     public $AnycastZone;
 
     /**
-     * @var InternetAccessible 负载均衡的网络计费方式，此参数仅对带宽上移用户生效
+     * @var InternetAccessible 仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
      */
     public $InternetAccessible;
 
     /**
-     * @var string CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
+     * @var array 购买负载均衡同时，给负载均衡打上标签
      */
-    public $VipIsp;
+    public $Tags;
     /**
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
@@ -133,14 +133,14 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $VpcId 负载均衡后端目标设备所属的网络 ID，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
      * @param string $SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
      * @param integer $ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
-     * @param string $AddressIPVersion IP版本，IPV4 | IPV6，默认值 IPV4。
-     * @param integer $Number 创建负载均衡的个数
-     * @param string $MasterZoneId 设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
-注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
-     * @param string $ZoneId 可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
-     * @param string $AnycastZone Anycast的发布域，可取 ZONE_A 或 ZONE_B
-     * @param InternetAccessible $InternetAccessible 负载均衡的网络计费方式，此参数仅对带宽上移用户生效
-     * @param string $VipIsp CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
+     * @param string $AddressIPVersion 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
+     * @param integer $Number 创建负载均衡的个数，默认值 1。
+     * @param string $MasterZoneId 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
+     * @param string $ZoneId 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     * @param string $AnycastZone 仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
+     * @param InternetAccessible $InternetAccessible 仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
+     * @param array $Tags 购买负载均衡同时，给负载均衡打上标签
      */
     function __construct()
     {
@@ -203,8 +203,13 @@ OPEN：公网属性， INTERNAL：内网属性。
             $this->InternetAccessible->deserialize($param["InternetAccessible"]);
         }
 
-        if (array_key_exists("VipIsp",$param) and $param["VipIsp"] !== null) {
-            $this->VipIsp = $param["VipIsp"];
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

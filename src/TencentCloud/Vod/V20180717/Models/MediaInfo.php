@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdaptiveDynamicStreamingInfo(MediaAdaptiveDynamicStreamingInfo $AdaptiveDynamicStreamingInfo) 设置转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MediaMiniProgramReviewInfo getMiniProgramReviewInfo() 获取小程序审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMiniProgramReviewInfo(MediaMiniProgramReviewInfo $MiniProgramReviewInfo) 设置小程序审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取媒体文件唯一标识 ID。
  * @method void setFileId(string $FileId) 设置媒体文件唯一标识 ID。
  */
@@ -118,6 +122,12 @@ class MediaInfo extends AbstractModel
     public $AdaptiveDynamicStreamingInfo;
 
     /**
+     * @var MediaMiniProgramReviewInfo 小程序审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MiniProgramReviewInfo;
+
+    /**
      * @var string 媒体文件唯一标识 ID。
      */
     public $FileId;
@@ -139,6 +149,8 @@ class MediaInfo extends AbstractModel
      * @param MediaKeyFrameDescInfo $KeyFrameDescInfo 视频打点信息。对视频设置的各个打点信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaAdaptiveDynamicStreamingInfo $AdaptiveDynamicStreamingInfo 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaMiniProgramReviewInfo $MiniProgramReviewInfo 小程序审核信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 媒体文件唯一标识 ID。
      */
@@ -197,6 +209,11 @@ class MediaInfo extends AbstractModel
         if (array_key_exists("AdaptiveDynamicStreamingInfo",$param) and $param["AdaptiveDynamicStreamingInfo"] !== null) {
             $this->AdaptiveDynamicStreamingInfo = new MediaAdaptiveDynamicStreamingInfo();
             $this->AdaptiveDynamicStreamingInfo->deserialize($param["AdaptiveDynamicStreamingInfo"]);
+        }
+
+        if (array_key_exists("MiniProgramReviewInfo",$param) and $param["MiniProgramReviewInfo"] !== null) {
+            $this->MiniProgramReviewInfo = new MediaMiniProgramReviewInfo();
+            $this->MiniProgramReviewInfo->deserialize($param["MiniProgramReviewInfo"]);
         }
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {

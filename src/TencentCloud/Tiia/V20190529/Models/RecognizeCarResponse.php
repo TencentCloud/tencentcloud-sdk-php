@@ -14,36 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Clb\V20180317\Models;
+namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getListeners() 获取监听器后端绑定的机器信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setListeners(array $Listeners) 设置监听器后端绑定的机器信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCarCoords() 获取汽车的四个矩形顶点坐标
+ * @method void setCarCoords(array $CarCoords) 设置汽车的四个矩形顶点坐标
+ * @method array getCarTags() 获取车辆属性识别的结果数组
+ * @method void setCarTags(array $CarTags) 设置车辆属性识别的结果数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *DescribeTargets返回参数结构体
+ *RecognizeCar返回参数结构体
  */
-class DescribeTargetsResponse extends AbstractModel
+class RecognizeCarResponse extends AbstractModel
 {
     /**
-     * @var array 监听器后端绑定的机器信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 汽车的四个矩形顶点坐标
      */
-    public $Listeners;
+    public $CarCoords;
+
+    /**
+     * @var array 车辆属性识别的结果数组
+     */
+    public $CarTags;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param array $Listeners 监听器后端绑定的机器信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CarCoords 汽车的四个矩形顶点坐标
+     * @param array $CarTags 车辆属性识别的结果数组
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,12 +62,21 @@ class DescribeTargetsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Listeners",$param) and $param["Listeners"] !== null) {
-            $this->Listeners = [];
-            foreach ($param["Listeners"] as $key => $value){
-                $obj = new ListenerBackend();
+        if (array_key_exists("CarCoords",$param) and $param["CarCoords"] !== null) {
+            $this->CarCoords = [];
+            foreach ($param["CarCoords"] as $key => $value){
+                $obj = new Coord();
                 $obj->deserialize($value);
-                array_push($this->Listeners, $obj);
+                array_push($this->CarCoords, $obj);
+            }
+        }
+
+        if (array_key_exists("CarTags",$param) and $param["CarTags"] !== null) {
+            $this->CarTags = [];
+            foreach ($param["CarTags"] as $key => $value){
+                $obj = new CarTagItem();
+                $obj->deserialize($value);
+                array_push($this->CarTags, $obj);
             }
         }
 

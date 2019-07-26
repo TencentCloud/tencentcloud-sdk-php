@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
  * @method string getListenerId() 获取负载均衡监听器 ID
  * @method void setListenerId(string $ListenerId) 设置负载均衡监听器 ID
- * @method integer getWeight() 获取后端云服务器新的转发权重，取值范围：0~100。
- * @method void setWeight(integer $Weight) 设置后端云服务器新的转发权重，取值范围：0~100。
  * @method string getLocationId() 获取转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
  * @method void setLocationId(string $LocationId) 设置转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
  * @method string getDomain() 获取目标规则的域名，提供LocationId参数时本参数不生效
  * @method void setDomain(string $Domain) 设置目标规则的域名，提供LocationId参数时本参数不生效
  * @method string getUrl() 获取目标规则的URL，提供LocationId参数时本参数不生效
  * @method void setUrl(string $Url) 设置目标规则的URL，提供LocationId参数时本参数不生效
- * @method array getTargets() 获取要修改权重的后端机器列表
- * @method void setTargets(array $Targets) 设置要修改权重的后端机器列表
+ * @method array getTargets() 获取要修改权重的后端服务列表
+ * @method void setTargets(array $Targets) 设置要修改权重的后端服务列表
+ * @method integer getWeight() 获取后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+ * @method void setWeight(integer $Weight) 设置后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
  */
 
 /**
@@ -50,11 +50,6 @@ class ModifyTargetWeightRequest extends AbstractModel
     public $ListenerId;
 
     /**
-     * @var integer 后端云服务器新的转发权重，取值范围：0~100。
-     */
-    public $Weight;
-
-    /**
      * @var string 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
      */
     public $LocationId;
@@ -70,17 +65,22 @@ class ModifyTargetWeightRequest extends AbstractModel
     public $Url;
 
     /**
-     * @var array 要修改权重的后端机器列表
+     * @var array 要修改权重的后端服务列表
      */
     public $Targets;
+
+    /**
+     * @var integer 后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+     */
+    public $Weight;
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param string $ListenerId 负载均衡监听器 ID
-     * @param integer $Weight 后端云服务器新的转发权重，取值范围：0~100。
      * @param string $LocationId 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
      * @param string $Domain 目标规则的域名，提供LocationId参数时本参数不生效
      * @param string $Url 目标规则的URL，提供LocationId参数时本参数不生效
-     * @param array $Targets 要修改权重的后端机器列表
+     * @param array $Targets 要修改权重的后端服务列表
+     * @param integer $Weight 后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
      */
     function __construct()
     {
@@ -102,10 +102,6 @@ class ModifyTargetWeightRequest extends AbstractModel
             $this->ListenerId = $param["ListenerId"];
         }
 
-        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
-            $this->Weight = $param["Weight"];
-        }
-
         if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {
             $this->LocationId = $param["LocationId"];
         }
@@ -125,6 +121,10 @@ class ModifyTargetWeightRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Targets, $obj);
             }
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
         }
     }
 }

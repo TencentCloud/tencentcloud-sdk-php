@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTips(string $Tips) 设置参数说明
  * @method array getTextValue() 获取参数可取值
  * @method void setTextValue(array $TextValue) 设置参数可取值
+ * @method integer getStatus() 获取参数状态, 1: 修改中， 2：修改完成
+ * @method void setStatus(integer $Status) 设置参数状态, 1: 修改中， 2：修改完成
  */
 
 /**
@@ -73,6 +75,11 @@ class InstanceTextParam extends AbstractModel
      * @var array 参数可取值
      */
     public $TextValue;
+
+    /**
+     * @var integer 参数状态, 1: 修改中， 2：修改完成
+     */
+    public $Status;
     /**
      * @param string $ParamName 参数名
      * @param string $ValueType 参数类型：text
@@ -81,6 +88,7 @@ class InstanceTextParam extends AbstractModel
      * @param string $CurrentValue 当前运行参数值
      * @param string $Tips 参数说明
      * @param array $TextValue 参数可取值
+     * @param integer $Status 参数状态, 1: 修改中， 2：修改完成
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class InstanceTextParam extends AbstractModel
 
         if (array_key_exists("TextValue",$param) and $param["TextValue"] !== null) {
             $this->TextValue = $param["TextValue"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

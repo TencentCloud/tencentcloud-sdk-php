@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(string $InstanceType) 设置实例类型
  * @method integer getVersionNumber() 获取版本号
  * @method void setVersionNumber(integer $VersionNumber) 设置版本号
+ * @method string getAutoScalingGroupName() 获取伸缩组名称
+ * @method void setAutoScalingGroupName(string $AutoScalingGroupName) 设置伸缩组名称
  */
 
 /**
@@ -108,6 +110,11 @@ class Instance extends AbstractModel
      * @var integer 版本号
      */
     public $VersionNumber;
+
+    /**
+     * @var string 伸缩组名称
+     */
+    public $AutoScalingGroupName;
     /**
      * @param string $InstanceId 实例ID
      * @param string $AutoScalingGroupId 伸缩组ID
@@ -121,6 +128,7 @@ class Instance extends AbstractModel
      * @param string $AddTime 实例加入时间
      * @param string $InstanceType 实例类型
      * @param integer $VersionNumber 版本号
+     * @param string $AutoScalingGroupName 伸缩组名称
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("VersionNumber",$param) and $param["VersionNumber"] !== null) {
             $this->VersionNumber = $param["VersionNumber"];
+        }
+
+        if (array_key_exists("AutoScalingGroupName",$param) and $param["AutoScalingGroupName"] !== null) {
+            $this->AutoScalingGroupName = $param["AutoScalingGroupName"];
         }
     }
 }

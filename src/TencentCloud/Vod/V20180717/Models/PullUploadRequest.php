@@ -30,16 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcedure(string $Procedure) 设置媒体后续任务操作，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。
  * @method string getExpireTime() 获取媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method void setExpireTime(string $ExpireTime) 设置媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method string getStorageRegion() 获取指定上传园区，目前支持的园区：
-<li>ap-chongqing：重庆园区，</li>
-<li>ap-beijing：北京园区，</li>
-<li>ap-shanghai：上海园区。</li>
-注意：不填此参数默认上传至重庆园区。
- * @method void setStorageRegion(string $StorageRegion) 设置指定上传园区，目前支持的园区：
-<li>ap-chongqing：重庆园区，</li>
-<li>ap-beijing：北京园区，</li>
-<li>ap-shanghai：上海园区。</li>
-注意：不填此参数默认上传至重庆园区。
+ * @method string getStorageRegion() 获取指定上传园区，仅适用于对上传地域有特殊需求的用户（目前仅支持北京、上海和重庆园区）。
+ * @method void setStorageRegion(string $StorageRegion) 设置指定上传园区，仅适用于对上传地域有特殊需求的用户（目前仅支持北京、上海和重庆园区）。
  * @method integer getClassId() 获取分类ID，用于对媒体进行分类管理，可通过[创建分类](https://cloud.tencent.com/document/product/266/7812)接口，创建分类，获得分类 ID。
  * @method void setClassId(integer $ClassId) 设置分类ID，用于对媒体进行分类管理，可通过[创建分类](https://cloud.tencent.com/document/product/266/7812)接口，创建分类，获得分类 ID。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。
@@ -82,11 +74,7 @@ class PullUploadRequest extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @var string 指定上传园区，目前支持的园区：
-<li>ap-chongqing：重庆园区，</li>
-<li>ap-beijing：北京园区，</li>
-<li>ap-shanghai：上海园区。</li>
-注意：不填此参数默认上传至重庆园区。
+     * @var string 指定上传园区，仅适用于对上传地域有特殊需求的用户（目前仅支持北京、上海和重庆园区）。
      */
     public $StorageRegion;
 
@@ -116,11 +104,7 @@ class PullUploadRequest extends AbstractModel
      * @param string $CoverUrl 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
      * @param string $Procedure 媒体后续任务操作，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。
      * @param string $ExpireTime 媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param string $StorageRegion 指定上传园区，目前支持的园区：
-<li>ap-chongqing：重庆园区，</li>
-<li>ap-beijing：北京园区，</li>
-<li>ap-shanghai：上海园区。</li>
-注意：不填此参数默认上传至重庆园区。
+     * @param string $StorageRegion 指定上传园区，仅适用于对上传地域有特殊需求的用户（目前仅支持北京、上海和重庆园区）。
      * @param integer $ClassId 分类ID，用于对媒体进行分类管理，可通过[创建分类](https://cloud.tencent.com/document/product/266/7812)接口，创建分类，获得分类 ID。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。

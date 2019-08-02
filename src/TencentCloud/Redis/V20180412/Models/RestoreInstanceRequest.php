@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getInstanceId() 获取待操作的实例ID，可通过 DescribeRedis 接口返回值中的 redisId 获取。
  * @method void setInstanceId(string $InstanceId) 设置待操作的实例ID，可通过 DescribeRedis 接口返回值中的 redisId 获取。
- * @method string getPassword() 获取实例密码，恢复实例时，需要校验实例密码
- * @method void setPassword(string $Password) 设置实例密码，恢复实例时，需要校验实例密码
  * @method string getBackupId() 获取备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
  * @method void setBackupId(string $BackupId) 设置备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
+ * @method string getPassword() 获取实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
+ * @method void setPassword(string $Password) 设置实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
  */
 
 /**
@@ -37,18 +37,18 @@ class RestoreInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 实例密码，恢复实例时，需要校验实例密码
-     */
-    public $Password;
-
-    /**
      * @var string 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
      */
     public $BackupId;
+
+    /**
+     * @var string 实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
+     */
+    public $Password;
     /**
      * @param string $InstanceId 待操作的实例ID，可通过 DescribeRedis 接口返回值中的 redisId 获取。
-     * @param string $Password 实例密码，恢复实例时，需要校验实例密码
      * @param string $BackupId 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
+     * @param string $Password 实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
      */
     function __construct()
     {
@@ -66,12 +66,12 @@ class RestoreInstanceRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
-        }
-
         if (array_key_exists("BackupId",$param) and $param["BackupId"] !== null) {
             $this->BackupId = $param["BackupId"];
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
         }
     }
 }

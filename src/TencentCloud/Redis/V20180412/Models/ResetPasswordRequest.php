@@ -18,10 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPassword() 获取重置的密码
- * @method void setPassword(string $Password) 设置重置的密码
  * @method string getInstanceId() 获取Redis实例ID
  * @method void setInstanceId(string $InstanceId) 设置Redis实例ID
+ * @method string getPassword() 获取重置的密码（切换为免密实例时，可不传；其他情况必传）
+ * @method void setPassword(string $Password) 设置重置的密码（切换为免密实例时，可不传；其他情况必传）
+ * @method boolean getNoAuth() 获取是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
+ * @method void setNoAuth(boolean $NoAuth) 设置是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
  */
 
 /**
@@ -30,17 +32,23 @@ use TencentCloud\Common\AbstractModel;
 class ResetPasswordRequest extends AbstractModel
 {
     /**
-     * @var string 重置的密码
+     * @var string Redis实例ID
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 重置的密码（切换为免密实例时，可不传；其他情况必传）
      */
     public $Password;
 
     /**
-     * @var string Redis实例ID
+     * @var boolean 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
      */
-    public $InstanceId;
+    public $NoAuth;
     /**
-     * @param string $Password 重置的密码
      * @param string $InstanceId Redis实例ID
+     * @param string $Password 重置的密码（切换为免密实例时，可不传；其他情况必传）
+     * @param boolean $NoAuth 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
      */
     function __construct()
     {
@@ -54,12 +62,16 @@ class ResetPasswordRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("NoAuth",$param) and $param["NoAuth"] !== null) {
+            $this->NoAuth = $param["NoAuth"];
         }
     }
 }

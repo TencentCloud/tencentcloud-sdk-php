@@ -18,8 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTaskId() 获取任务ID
- * @method void setTaskId(integer $TaskId) 设置任务ID
+ * @method integer getTaskId() 获取任务ID（修改密码时的任务ID，如果时切换免密码或者非免密码实例，则无需关注此返回值）
+ * @method void setTaskId(integer $TaskId) 设置任务ID（修改密码时的任务ID，如果时切换免密码或者非免密码实例，则无需关注此返回值）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ResetPasswordResponse extends AbstractModel
 {
     /**
-     * @var integer 任务ID
+     * @var integer 任务ID（修改密码时的任务ID，如果时切换免密码或者非免密码实例，则无需关注此返回值）
      */
     public $TaskId;
 
@@ -39,7 +39,7 @@ class ResetPasswordResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TaskId 任务ID
+     * @param integer $TaskId 任务ID（修改密码时的任务ID，如果时切换免密码或者非免密码实例，则无需关注此返回值）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

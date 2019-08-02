@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTips(string $Tips) 设置参数说明
  * @method array getEnumValue() 获取参数可取值
  * @method void setEnumValue(array $EnumValue) 设置参数可取值
+ * @method integer getStatus() 获取参数状态, 1: 修改中， 2：修改完成
+ * @method void setStatus(integer $Status) 设置参数状态, 1: 修改中， 2：修改完成
  */
 
 /**
@@ -73,6 +75,11 @@ class InstanceEnumParam extends AbstractModel
      * @var array 参数可取值
      */
     public $EnumValue;
+
+    /**
+     * @var integer 参数状态, 1: 修改中， 2：修改完成
+     */
+    public $Status;
     /**
      * @param string $ParamName 参数名
      * @param string $ValueType 参数类型：enum
@@ -81,6 +88,7 @@ class InstanceEnumParam extends AbstractModel
      * @param string $CurrentValue 当前运行参数值
      * @param string $Tips 参数说明
      * @param array $EnumValue 参数可取值
+     * @param integer $Status 参数状态, 1: 修改中， 2：修改完成
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class InstanceEnumParam extends AbstractModel
 
         if (array_key_exists("EnumValue",$param) and $param["EnumValue"] !== null) {
             $this->EnumValue = $param["EnumValue"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

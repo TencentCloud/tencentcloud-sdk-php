@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIPVS(boolean $IPVS) 设置是否启用IPVS
  * @method boolean getAsEnabled() 获取是否启用集群节点扩缩容
  * @method void setAsEnabled(boolean $AsEnabled) 设置是否启用集群节点扩缩容
+ * @method string getContainerRuntime() 获取集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
+ * @method void setContainerRuntime(string $ContainerRuntime) 设置集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
  */
 
 /**
@@ -38,9 +40,15 @@ class ClusterAdvancedSettings extends AbstractModel
      * @var boolean 是否启用集群节点扩缩容
      */
     public $AsEnabled;
+
+    /**
+     * @var string 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
+     */
+    public $ContainerRuntime;
     /**
      * @param boolean $IPVS 是否启用IPVS
      * @param boolean $AsEnabled 是否启用集群节点扩缩容
+     * @param string $ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ClusterAdvancedSettings extends AbstractModel
 
         if (array_key_exists("AsEnabled",$param) and $param["AsEnabled"] !== null) {
             $this->AsEnabled = $param["AsEnabled"];
+        }
+
+        if (array_key_exists("ContainerRuntime",$param) and $param["ContainerRuntime"] !== null) {
+            $this->ContainerRuntime = $param["ContainerRuntime"];
         }
     }
 }

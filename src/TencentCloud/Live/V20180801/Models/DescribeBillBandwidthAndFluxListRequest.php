@@ -24,16 +24,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
  * @method array getPlayDomains() 获取直播播放域名，若不填，表示总体数据。
  * @method void setPlayDomains(array $PlayDomains) 设置直播播放域名，若不填，表示总体数据。
- * @method string getMainlandOrOversea() 获取国内还是国外，若不填，表示国内+国外。
- * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置国内还是国外，若不填，表示国内+国外。
+ * @method string getMainlandOrOversea() 获取可选值：
+Mainland：查询国内数据，
+Oversea：则查询国外数据。
+默认：查询国内+国外的数据。
+ * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置可选值：
+Mainland：查询国内数据，
+Oversea：则查询国外数据。
+默认：查询国内+国外的数据。
  * @method integer getGranularity() 获取数据粒度，支持如下粒度：
-5：5分钟粒度，默认值（跨度不支持超过1天）；
-60：1小时粒度（跨度不支持超过一个月）；
+5：5分钟粒度，（跨度不支持超过1天），
+60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
+默认值：5。
  * @method void setGranularity(integer $Granularity) 设置数据粒度，支持如下粒度：
-5：5分钟粒度，默认值（跨度不支持超过1天）；
-60：1小时粒度（跨度不支持超过一个月）；
+5：5分钟粒度，（跨度不支持超过1天），
+60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
+默认值：5。
  */
 
 /**
@@ -57,26 +65,34 @@ class DescribeBillBandwidthAndFluxListRequest extends AbstractModel
     public $PlayDomains;
 
     /**
-     * @var string 国内还是国外，若不填，表示国内+国外。
+     * @var string 可选值：
+Mainland：查询国内数据，
+Oversea：则查询国外数据。
+默认：查询国内+国外的数据。
      */
     public $MainlandOrOversea;
 
     /**
      * @var integer 数据粒度，支持如下粒度：
-5：5分钟粒度，默认值（跨度不支持超过1天）；
-60：1小时粒度（跨度不支持超过一个月）；
+5：5分钟粒度，（跨度不支持超过1天），
+60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
+默认值：5。
      */
     public $Granularity;
     /**
      * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
      * @param array $PlayDomains 直播播放域名，若不填，表示总体数据。
-     * @param string $MainlandOrOversea 国内还是国外，若不填，表示国内+国外。
+     * @param string $MainlandOrOversea 可选值：
+Mainland：查询国内数据，
+Oversea：则查询国外数据。
+默认：查询国内+国外的数据。
      * @param integer $Granularity 数据粒度，支持如下粒度：
-5：5分钟粒度，默认值（跨度不支持超过1天）；
-60：1小时粒度（跨度不支持超过一个月）；
+5：5分钟粒度，（跨度不支持超过1天），
+60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
+默认值：5。
      */
     function __construct()
     {

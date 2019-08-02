@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComment(string $Comment) 设置视频内容识别模板描述信息，长度限制：256 个字符。
  * @method HeadTailConfigureInfo getHeadTailConfigure() 获取视频片头片尾识别控制参数。
  * @method void setHeadTailConfigure(HeadTailConfigureInfo $HeadTailConfigure) 设置视频片头片尾识别控制参数。
+ * @method SegmentConfigureInfo getSegmentConfigure() 获取视频拆条识别控制参数。
+ * @method void setSegmentConfigure(SegmentConfigureInfo $SegmentConfigure) 设置视频拆条识别控制参数。
  * @method FaceConfigureInfo getFaceConfigure() 获取人脸识别控制参数。
  * @method void setFaceConfigure(FaceConfigureInfo $FaceConfigure) 设置人脸识别控制参数。
  * @method OcrFullTextConfigureInfo getOcrFullTextConfigure() 获取文本全文识别控制参数。
@@ -61,6 +63,11 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
      * @var HeadTailConfigureInfo 视频片头片尾识别控制参数。
      */
     public $HeadTailConfigure;
+
+    /**
+     * @var SegmentConfigureInfo 视频拆条识别控制参数。
+     */
+    public $SegmentConfigure;
 
     /**
      * @var FaceConfigureInfo 人脸识别控制参数。
@@ -105,6 +112,7 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
      * @param string $Name 视频内容识别模板名称，长度限制：64 个字符。
      * @param string $Comment 视频内容识别模板描述信息，长度限制：256 个字符。
      * @param HeadTailConfigureInfo $HeadTailConfigure 视频片头片尾识别控制参数。
+     * @param SegmentConfigureInfo $SegmentConfigure 视频拆条识别控制参数。
      * @param FaceConfigureInfo $FaceConfigure 人脸识别控制参数。
      * @param OcrFullTextConfigureInfo $OcrFullTextConfigure 文本全文识别控制参数。
      * @param OcrWordsConfigureInfo $OcrWordsConfigure 文本关键词识别控制参数。
@@ -137,6 +145,11 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
         if (array_key_exists("HeadTailConfigure",$param) and $param["HeadTailConfigure"] !== null) {
             $this->HeadTailConfigure = new HeadTailConfigureInfo();
             $this->HeadTailConfigure->deserialize($param["HeadTailConfigure"]);
+        }
+
+        if (array_key_exists("SegmentConfigure",$param) and $param["SegmentConfigure"] !== null) {
+            $this->SegmentConfigure = new SegmentConfigureInfo();
+            $this->SegmentConfigure->deserialize($param["SegmentConfigure"]);
         }
 
         if (array_key_exists("FaceConfigure",$param) and $param["FaceConfigure"] !== null) {

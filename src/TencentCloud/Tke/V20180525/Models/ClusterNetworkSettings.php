@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpvs(boolean $Ipvs) 设置是否启用IPVS(默认不开启)
  * @method string getVpcId() 获取集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
  * @method void setVpcId(string $VpcId) 设置集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
+ * @method boolean getCni() 获取网络插件是否启用CNI(默认开启)
+ * @method void setCni(boolean $Cni) 设置网络插件是否启用CNI(默认开启)
  */
 
 /**
@@ -66,6 +68,11 @@ class ClusterNetworkSettings extends AbstractModel
      * @var string 集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
      */
     public $VpcId;
+
+    /**
+     * @var boolean 网络插件是否启用CNI(默认开启)
+     */
+    public $Cni;
     /**
      * @param string $ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      * @param boolean $IgnoreClusterCIDRConflict 是否忽略 ClusterCIDR 冲突错误, 默认不忽略
@@ -73,6 +80,7 @@ class ClusterNetworkSettings extends AbstractModel
      * @param integer $MaxClusterServiceNum 集群最大的service数量(默认为256)
      * @param boolean $Ipvs 是否启用IPVS(默认不开启)
      * @param string $VpcId 集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
+     * @param boolean $Cni 网络插件是否启用CNI(默认开启)
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ClusterNetworkSettings extends AbstractModel
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("Cni",$param) and $param["Cni"] !== null) {
+            $this->Cni = $param["Cni"];
         }
     }
 }

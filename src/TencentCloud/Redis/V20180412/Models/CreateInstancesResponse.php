@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getDealId() 获取交易的Id
  * @method void setDealId(string $DealId) 设置交易的Id
+ * @method array getInstanceIds() 获取实例ID(该字段灰度中，部分地域不可见)
+ * @method void setInstanceIds(array $InstanceIds) 设置实例ID(该字段灰度中，部分地域不可见)
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,11 +37,17 @@ class CreateInstancesResponse extends AbstractModel
     public $DealId;
 
     /**
+     * @var array 实例ID(该字段灰度中，部分地域不可见)
+     */
+    public $InstanceIds;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param string $DealId 交易的Id
+     * @param array $InstanceIds 实例ID(该字段灰度中，部分地域不可见)
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class CreateInstancesResponse extends AbstractModel
         }
         if (array_key_exists("DealId",$param) and $param["DealId"] !== null) {
             $this->DealId = $param["DealId"];
+        }
+
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -45,13 +45,13 @@ zh\auto\jap\kor\
 spa\fre\ger\por\
 vie\may\rus\ita\
 hol\swe\fin\dan\
-nor\hun\tha
+nor\hun\tha\lat
 可选值分别表示：
 中英文混合、自动识别、日语、韩语、
 西班牙语、法语、德语、葡萄牙语、
 越南语、马来语、俄语、意大利语、
 荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
+挪威语、匈牙利语、泰语、拉丁语系。
  * @method void setLanguageType(string $LanguageType) 设置识别语言类型。
 支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
 可选值：
@@ -59,13 +59,13 @@ zh\auto\jap\kor\
 spa\fre\ger\por\
 vie\may\rus\ita\
 hol\swe\fin\dan\
-nor\hun\tha
+nor\hun\tha\lat
 可选值分别表示：
 中英文混合、自动识别、日语、韩语、
 西班牙语、法语、德语、葡萄牙语、
 越南语、马来语、俄语、意大利语、
 荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
+挪威语、匈牙利语、泰语、拉丁语系。
  */
 
 /**
@@ -103,13 +103,13 @@ zh\auto\jap\kor\
 spa\fre\ger\por\
 vie\may\rus\ita\
 hol\swe\fin\dan\
-nor\hun\tha
+nor\hun\tha\lat
 可选值分别表示：
 中英文混合、自动识别、日语、韩语、
 西班牙语、法语、德语、葡萄牙语、
 越南语、马来语、俄语、意大利语、
 荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
+挪威语、匈牙利语、泰语、拉丁语系。
      */
     public $LanguageType;
     /**
@@ -130,13 +130,13 @@ zh\auto\jap\kor\
 spa\fre\ger\por\
 vie\may\rus\ita\
 hol\swe\fin\dan\
-nor\hun\tha
+nor\hun\tha\lat
 可选值分别表示：
 中英文混合、自动识别、日语、韩语、
 西班牙语、法语、德语、葡萄牙语、
 越南语、马来语、俄语、意大利语、
 荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
+挪威语、匈牙利语、泰语、拉丁语系。
      */
     function __construct()
     {

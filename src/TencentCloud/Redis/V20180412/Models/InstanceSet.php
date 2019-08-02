@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectName(string $ProjectName) 设置项目名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getNoAuth() 获取是否为免密实例，true-免密实例；false-非免密实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNoAuth(boolean $NoAuth) 设置是否为免密实例，true-免密实例；false-非免密实例
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -275,6 +279,12 @@ class InstanceSet extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectName;
+
+    /**
+     * @var boolean 是否为免密实例，true-免密实例；false-非免密实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NoAuth;
     /**
      * @param string $InstanceName 实例名称
      * @param string $InstanceId 实例Id
@@ -312,6 +322,8 @@ class InstanceSet extends AbstractModel
      * @param array $InstanceTags 实例关联的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectName 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $NoAuth 是否为免密实例，true-免密实例；false-非免密实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -474,6 +486,10 @@ class InstanceSet extends AbstractModel
 
         if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
             $this->ProjectName = $param["ProjectName"];
+        }
+
+        if (array_key_exists("NoAuth",$param) and $param["NoAuth"] !== null) {
+            $this->NoAuth = $param["NoAuth"];
         }
     }
 }

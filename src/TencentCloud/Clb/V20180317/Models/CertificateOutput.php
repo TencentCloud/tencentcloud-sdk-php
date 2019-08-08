@@ -18,8 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSSLMode() 获取认证类型，unidirectional：单向认证，mutual：双向认证
- * @method void setSSLMode(string $SSLMode) 设置认证类型，unidirectional：单向认证，mutual：双向认证
+ * @method string getSSLMode() 获取认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+ * @method void setSSLMode(string $SSLMode) 设置认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
  * @method string getCertId() 获取服务端证书的 ID。
  * @method void setCertId(string $CertId) 设置服务端证书的 ID。
  * @method string getCertCaId() 获取客户端证书的 ID。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CertificateOutput extends AbstractModel
 {
     /**
-     * @var string 认证类型，unidirectional：单向认证，mutual：双向认证
+     * @var string 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      */
     public $SSLMode;
 
@@ -49,7 +49,7 @@ class CertificateOutput extends AbstractModel
      */
     public $CertCaId;
     /**
-     * @param string $SSLMode 认证类型，unidirectional：单向认证，mutual：双向认证
+     * @param string $SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      * @param string $CertId 服务端证书的 ID。
      * @param string $CertCaId 客户端证书的 ID。
 注意：此字段可能返回 null，表示取不到有效值。

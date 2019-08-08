@@ -27,6 +27,7 @@ use TencentCloud\Bmvpc\V20180625\Models as Models;
 * @method Models\BindEipsToNatGatewayResponse BindEipsToNatGateway(Models\BindEipsToNatGatewayRequest $req) NAT网关绑定EIP接口，可将EIP绑定到NAT网关，该EIP作为访问外网的源IP地址，将流量发送到Internet
 * @method Models\BindIpsToNatGatewayResponse BindIpsToNatGateway(Models\BindIpsToNatGatewayRequest $req) 可用于将子网的部分IP绑定到NAT网关
 * @method Models\BindSubnetsToNatGatewayResponse BindSubnetsToNatGateway(Models\BindSubnetsToNatGatewayRequest $req) NAT网关绑定子网后，该子网内全部IP可出公网
+* @method Models\CreateCustomerGatewayResponse CreateCustomerGateway(Models\CreateCustomerGatewayRequest $req) 本接口（CreateCustomerGateway）用于创建对端网关。
 * @method Models\CreateDockerSubnetWithVlanResponse CreateDockerSubnetWithVlan(Models\CreateDockerSubnetWithVlanRequest $req) 创建黑石Docker子网， 如果不指定VlanId，将会分配2000--2999范围的VlanId; 子网会关闭分布式网关
 * @method Models\CreateHostedInterfaceResponse CreateHostedInterface(Models\CreateHostedInterfaceRequest $req) 本接口（CreateHostedInterface）用于黑石托管机器加入带VLANID不为5的子网。
 
@@ -69,11 +70,14 @@ use TencentCloud\Bmvpc\V20180625\Models as Models;
 * @method Models\DescribeSubnetByHostedDeviceResponse DescribeSubnetByHostedDevice(Models\DescribeSubnetByHostedDeviceRequest $req) 托管可以加入物理机子网，虚拟子网，DOCKER子网，通过此接口可以查询托管加入的子网。
 * @method Models\DescribeSubnetsResponse DescribeSubnets(Models\DescribeSubnetsRequest $req) 本接口（DescribeSubnets）用于查询黑石子网列表。
 * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 根据任务ID，获取任务的执行状态
+* @method Models\DescribeVpcPeerConnectionsResponse DescribeVpcPeerConnections(Models\DescribeVpcPeerConnectionsRequest $req) 获取对等连接列表
 * @method Models\DescribeVpcQuotaResponse DescribeVpcQuota(Models\DescribeVpcQuotaRequest $req) 本接口（DescribeVpcQuota）用于查询用户VPC相关配额限制。
 * @method Models\DescribeVpcResourceResponse DescribeVpcResource(Models\DescribeVpcResourceRequest $req) 查询黑石私有网络关联资源
 * @method Models\DescribeVpcViewResponse DescribeVpcView(Models\DescribeVpcViewRequest $req) 本接口（DescribeVpcView）用于查询VPC网络拓扑视图。
 * @method Models\DescribeVpcsResponse DescribeVpcs(Models\DescribeVpcsRequest $req) 本接口（DescribeVpcs）用于查询私有网络列表。
 本接口不传参数时，返回默认排序下的前20条VPC信息。
+* @method Models\DescribeVpnConnectionsResponse DescribeVpnConnections(Models\DescribeVpnConnectionsRequest $req)  本接口（DescribeVpnConnections）查询VPN通道列表。
+* @method Models\DescribeVpnGatewaysResponse DescribeVpnGateways(Models\DescribeVpnGatewaysRequest $req) 本接口（DescribeVpnGateways）用于查询VPN网关列表。
 * @method Models\DownloadCustomerGatewayConfigurationResponse DownloadCustomerGatewayConfiguration(Models\DownloadCustomerGatewayConfigurationRequest $req) 本接口(DownloadCustomerGatewayConfiguration)用于下载VPN通道配置。
 * @method Models\ModifyCustomerGatewayAttributeResponse ModifyCustomerGatewayAttribute(Models\ModifyCustomerGatewayAttributeRequest $req) 本接口（ModifyCustomerGatewayAttribute）用于修改对端网关信息。
 * @method Models\ModifyRoutePolicyResponse ModifyRoutePolicy(Models\ModifyRoutePolicyRequest $req) 修改自定义路由

@@ -18,8 +18,10 @@ namespace TencentCloud\Aai\V20180522\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getText() 获取合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符。包含空格等字符时需要url encode再传输。
- * @method void setText(string $Text) 设置合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符。包含空格等字符时需要url encode再传输。
+ * @method string getText() 获取合成语音的源文本，按UTF-8编码统一计算。
+中文最大支持100个汉字（全角标点符号算一个汉字）；英文最大支持400个字母（半角标点符号算一个字母）。包含空格等字符时需要url encode再传输。
+ * @method void setText(string $Text) 设置合成语音的源文本，按UTF-8编码统一计算。
+中文最大支持100个汉字（全角标点符号算一个汉字）；英文最大支持400个字母（半角标点符号算一个字母）。包含空格等字符时需要url encode再传输。
  * @method string getSessionId() 获取一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
  * @method void setSessionId(string $SessionId) 设置一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
  * @method integer getModelType() 获取模型类型，1-默认模型。
@@ -48,7 +50,8 @@ use TencentCloud\Common\AbstractModel;
 class TextToVoiceRequest extends AbstractModel
 {
     /**
-     * @var string 合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符。包含空格等字符时需要url encode再传输。
+     * @var string 合成语音的源文本，按UTF-8编码统一计算。
+中文最大支持100个汉字（全角标点符号算一个汉字）；英文最大支持400个字母（半角标点符号算一个字母）。包含空格等字符时需要url encode再传输。
      */
     public $Text;
 
@@ -98,7 +101,8 @@ class TextToVoiceRequest extends AbstractModel
      */
     public $Codec;
     /**
-     * @param string $Text 合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符。包含空格等字符时需要url encode再传输。
+     * @param string $Text 合成语音的源文本，按UTF-8编码统一计算。
+中文最大支持100个汉字（全角标点符号算一个汉字）；英文最大支持400个字母（半角标点符号算一个字母）。包含空格等字符时需要url encode再传输。
      * @param string $SessionId 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
      * @param integer $ModelType 模型类型，1-默认模型。
      * @param float $Volume 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。

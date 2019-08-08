@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getHealthSwitch() 获取是否开启健康检查：1（开启）、0（关闭）。
  * @method void setHealthSwitch(integer $HealthSwitch) 设置是否开启健康检查：1（开启）、0（关闭）。
- * @method integer getTimeOut() 获取健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
+ * @method integer getTimeOut() 获取健康检查的响应超时时间（仅适用于四层监听器），可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeOut(integer $TimeOut) 设置健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
+ * @method void setTimeOut(integer $TimeOut) 设置健康检查的响应超时时间（仅适用于四层监听器），可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIntervalTime() 获取健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -92,7 +92,7 @@ class HealthCheck extends AbstractModel
     public $HealthSwitch;
 
     /**
-     * @var integer 健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
+     * @var integer 健康检查的响应超时时间（仅适用于四层监听器），可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeOut;
@@ -177,7 +177,7 @@ class HealthCheck extends AbstractModel
     public $HttpVersion;
     /**
      * @param integer $HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。
-     * @param integer $TimeOut 健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
+     * @param integer $TimeOut 健康检查的响应超时时间（仅适用于四层监听器），可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IntervalTime 健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。

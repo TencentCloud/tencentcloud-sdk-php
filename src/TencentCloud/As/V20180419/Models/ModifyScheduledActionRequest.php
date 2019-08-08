@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
  * @method string getEndTime() 获取定时任务的结束时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br>此参数与`Recurrence`需要同时指定，到达结束时间之后，定时任务将不再生效。
  * @method void setEndTime(string $EndTime) 设置定时任务的结束时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br>此参数与`Recurrence`需要同时指定，到达结束时间之后，定时任务将不再生效。
- * @method string getRecurrence() 获取定时任务的重复方式。为标准[Cron](https://zh.wikipedia.org/wiki/Cron)格式<br>此参数与`EndTime`需要同时指定。
- * @method void setRecurrence(string $Recurrence) 设置定时任务的重复方式。为标准[Cron](https://zh.wikipedia.org/wiki/Cron)格式<br>此参数与`EndTime`需要同时指定。
+ * @method string getRecurrence() 获取定时任务的重复方式。为标准 Cron 格式<br>此参数与`EndTime`需要同时指定。
+ * @method void setRecurrence(string $Recurrence) 设置定时任务的重复方式。为标准 Cron 格式<br>此参数与`EndTime`需要同时指定。
  */
 
 /**
@@ -77,7 +77,7 @@ class ModifyScheduledActionRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 定时任务的重复方式。为标准[Cron](https://zh.wikipedia.org/wiki/Cron)格式<br>此参数与`EndTime`需要同时指定。
+     * @var string 定时任务的重复方式。为标准 Cron 格式<br>此参数与`EndTime`需要同时指定。
      */
     public $Recurrence;
     /**
@@ -88,7 +88,7 @@ class ModifyScheduledActionRequest extends AbstractModel
      * @param integer $DesiredCapacity 当定时任务触发时，设置的伸缩组期望实例数。
      * @param string $StartTime 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
      * @param string $EndTime 定时任务的结束时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br>此参数与`Recurrence`需要同时指定，到达结束时间之后，定时任务将不再生效。
-     * @param string $Recurrence 定时任务的重复方式。为标准[Cron](https://zh.wikipedia.org/wiki/Cron)格式<br>此参数与`EndTime`需要同时指定。
+     * @param string $Recurrence 定时任务的重复方式。为标准 Cron 格式<br>此参数与`EndTime`需要同时指定。
      */
     function __construct()
     {

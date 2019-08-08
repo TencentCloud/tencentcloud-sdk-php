@@ -40,12 +40,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置私有网络下的子网ID，格式如：subnet-3paxmkdz
  * @method string getUniqVpnGwId() 获取VPN网关ID，格式如：vpngw-9ghexg7q
  * @method void setUniqVpnGwId(string $UniqVpnGwId) 设置VPN网关ID，格式如：vpngw-9ghexg7q
- * @method string getInstanceId() 获取数据库实例ID,格式如：cdb-powiqx8q
- * @method void setInstanceId(string $InstanceId) 设置数据库实例ID,格式如：cdb-powiqx8q
+ * @method string getInstanceId() 获取数据库实例ID，格式如：cdb-powiqx8q
+ * @method void setInstanceId(string $InstanceId) 设置数据库实例ID，格式如：cdb-powiqx8q
  * @method string getRegion() 获取地域英文名，如：ap-guangzhou
  * @method void setRegion(string $Region) 设置地域英文名，如：ap-guangzhou
  * @method string getSupplier() 获取当实例为RDS实例时，填写为aliyun, 其他情况均填写others
  * @method void setSupplier(string $Supplier) 设置当实例为RDS实例时，填写为aliyun, 其他情况均填写others
+ * @method string getCcnId() 获取云联网ID，如：ccn-afp6kltc
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCcnId(string $CcnId) 设置云联网ID，如：ccn-afp6kltc
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -109,7 +113,7 @@ class SrcInfo extends AbstractModel
     public $UniqVpnGwId;
 
     /**
-     * @var string 数据库实例ID,格式如：cdb-powiqx8q
+     * @var string 数据库实例ID，格式如：cdb-powiqx8q
      */
     public $InstanceId;
 
@@ -122,6 +126,12 @@ class SrcInfo extends AbstractModel
      * @var string 当实例为RDS实例时，填写为aliyun, 其他情况均填写others
      */
     public $Supplier;
+
+    /**
+     * @var string 云联网ID，如：ccn-afp6kltc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CcnId;
     /**
      * @param string $AccessKey 阿里云AccessKey。源库是阿里云RDS5.6适用
      * @param string $Ip 实例的IP地址
@@ -134,9 +144,11 @@ class SrcInfo extends AbstractModel
      * @param string $VpcId 私有网络ID，格式如：vpc-92jblxto
      * @param string $SubnetId 私有网络下的子网ID，格式如：subnet-3paxmkdz
      * @param string $UniqVpnGwId VPN网关ID，格式如：vpngw-9ghexg7q
-     * @param string $InstanceId 数据库实例ID,格式如：cdb-powiqx8q
+     * @param string $InstanceId 数据库实例ID，格式如：cdb-powiqx8q
      * @param string $Region 地域英文名，如：ap-guangzhou
      * @param string $Supplier 当实例为RDS实例时，填写为aliyun, 其他情况均填写others
+     * @param string $CcnId 云联网ID，如：ccn-afp6kltc
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -204,6 +216,10 @@ class SrcInfo extends AbstractModel
 
         if (array_key_exists("Supplier",$param) and $param["Supplier"] !== null) {
             $this->Supplier = $param["Supplier"];
+        }
+
+        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
+            $this->CcnId = $param["CcnId"];
         }
     }
 }

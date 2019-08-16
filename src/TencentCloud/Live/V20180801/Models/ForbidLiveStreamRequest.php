@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
 注意：默认禁播90天，且最长支持禁播90天。
  * @method void setResumeTime(string $ResumeTime) 设置恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
 注意：默认禁播90天，且最长支持禁播90天。
+ * @method string getReason() 获取禁推原因。
+注明：请务必填写禁推原因，防止误操作。
+长度限制：2048字节。
+ * @method void setReason(string $Reason) 设置禁推原因。
+注明：请务必填写禁推原因，防止误操作。
+长度限制：2048字节。
  */
 
 /**
@@ -55,12 +61,22 @@ class ForbidLiveStreamRequest extends AbstractModel
 注意：默认禁播90天，且最长支持禁播90天。
      */
     public $ResumeTime;
+
+    /**
+     * @var string 禁推原因。
+注明：请务必填写禁推原因，防止误操作。
+长度限制：2048字节。
+     */
+    public $Reason;
     /**
      * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      * @param string $DomainName 您的加速域名。
      * @param string $StreamName 流名称。
      * @param string $ResumeTime 恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
 注意：默认禁播90天，且最长支持禁播90天。
+     * @param string $Reason 禁推原因。
+注明：请务必填写禁推原因，防止误操作。
+长度限制：2048字节。
      */
     function __construct()
     {
@@ -88,6 +104,10 @@ class ForbidLiveStreamRequest extends AbstractModel
 
         if (array_key_exists("ResumeTime",$param) and $param["ResumeTime"] !== null) {
             $this->ResumeTime = $param["ResumeTime"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
     }
 }

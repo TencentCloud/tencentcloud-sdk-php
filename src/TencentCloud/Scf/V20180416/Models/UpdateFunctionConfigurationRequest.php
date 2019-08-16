@@ -30,8 +30,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuntime(string $Runtime) 设置函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
  * @method Environment getEnvironment() 获取函数的环境变量
  * @method void setEnvironment(Environment $Environment) 设置函数的环境变量
+ * @method string getNamespace() 获取函数所属命名空间
+ * @method void setNamespace(string $Namespace) 设置函数所属命名空间
  * @method VpcConfig getVpcConfig() 获取函数的私有网络配置
  * @method void setVpcConfig(VpcConfig $VpcConfig) 设置函数的私有网络配置
+ * @method string getRole() 获取函数绑定的角色
+ * @method void setRole(string $Role) 设置函数绑定的角色
+ * @method string getClsLogsetId() 获取日志投递到的cls日志集ID
+ * @method void setClsLogsetId(string $ClsLogsetId) 设置日志投递到的cls日志集ID
+ * @method string getClsTopicId() 获取日志投递到的cls Topic ID
+ * @method void setClsTopicId(string $ClsTopicId) 设置日志投递到的cls Topic ID
+ * @method string getPublish() 获取在更新时是否同步发布新版本，默认为：FALSE，不发布
+ * @method void setPublish(string $Publish) 设置在更新时是否同步发布新版本，默认为：FALSE，不发布
  */
 
 /**
@@ -70,9 +80,34 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $Environment;
 
     /**
+     * @var string 函数所属命名空间
+     */
+    public $Namespace;
+
+    /**
      * @var VpcConfig 函数的私有网络配置
      */
     public $VpcConfig;
+
+    /**
+     * @var string 函数绑定的角色
+     */
+    public $Role;
+
+    /**
+     * @var string 日志投递到的cls日志集ID
+     */
+    public $ClsLogsetId;
+
+    /**
+     * @var string 日志投递到的cls Topic ID
+     */
+    public $ClsTopicId;
+
+    /**
+     * @var string 在更新时是否同步发布新版本，默认为：FALSE，不发布
+     */
+    public $Publish;
     /**
      * @param string $FunctionName 要修改的函数名称
      * @param string $Description 函数描述。最大支持 1000 个英文字母、数字、空格、逗号和英文句号，支持中文
@@ -80,7 +115,12 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param integer $Timeout 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
      * @param string $Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
      * @param Environment $Environment 函数的环境变量
+     * @param string $Namespace 函数所属命名空间
      * @param VpcConfig $VpcConfig 函数的私有网络配置
+     * @param string $Role 函数绑定的角色
+     * @param string $ClsLogsetId 日志投递到的cls日志集ID
+     * @param string $ClsTopicId 日志投递到的cls Topic ID
+     * @param string $Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
      */
     function __construct()
     {
@@ -119,9 +159,29 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
             $this->Environment->deserialize($param["Environment"]);
         }
 
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
         if (array_key_exists("VpcConfig",$param) and $param["VpcConfig"] !== null) {
             $this->VpcConfig = new VpcConfig();
             $this->VpcConfig->deserialize($param["VpcConfig"]);
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
+        }
+
+        if (array_key_exists("ClsLogsetId",$param) and $param["ClsLogsetId"] !== null) {
+            $this->ClsLogsetId = $param["ClsLogsetId"];
+        }
+
+        if (array_key_exists("ClsTopicId",$param) and $param["ClsTopicId"] !== null) {
+            $this->ClsTopicId = $param["ClsTopicId"];
+        }
+
+        if (array_key_exists("Publish",$param) and $param["Publish"] !== null) {
+            $this->Publish = $param["Publish"];
         }
     }
 }

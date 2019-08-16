@@ -27,7 +27,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *http返回码数据信息
+ *HTTP返回码数据信息
  */
 class HttpCodeValue extends AbstractModel
 {

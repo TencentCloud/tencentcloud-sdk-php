@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
 1-深圳，
 2-上海，
 3-天津，
-4-香港。
+4-中国香港。
  * @method void setAreaId(integer $AreaId) 设置区域id：
 1-深圳，
 2-上海，
 3-天津，
-4-香港。
+4-中国香港。
  * @method integer getIspId() 获取运营商id：
 1-电信，
 2-移动，
@@ -84,7 +84,7 @@ class CreatePullStreamConfigRequest extends AbstractModel
 1-深圳，
 2-上海，
 3-天津，
-4-香港。
+4-中国香港。
      */
     public $AreaId;
 
@@ -121,7 +121,7 @@ class CreatePullStreamConfigRequest extends AbstractModel
 1-深圳，
 2-上海，
 3-天津，
-4-香港。
+4-中国香港。
      * @param integer $IspId 运营商id：
 1-电信，
 2-移动，

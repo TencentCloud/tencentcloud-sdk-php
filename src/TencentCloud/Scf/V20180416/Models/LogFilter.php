@@ -18,8 +18,20 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRetCode() 获取filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，无输入则返回所有日志。
- * @method void setRetCode(string $RetCode) 设置filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，无输入则返回所有日志。
+ * @method string getRetCode() 获取filter.RetCode的取值有：
+not0 表示只返回错误日志，
+is0 表示只返回正确日志，
+TimeLimitExceeded 返回函数调用发生超时的日志，
+ResourceLimitExceeded 返回函数调用发生资源超限的日志，
+UserCodeException 返回函数调用发生用户代码错误的日志，
+无输入则返回所有日志。
+ * @method void setRetCode(string $RetCode) 设置filter.RetCode的取值有：
+not0 表示只返回错误日志，
+is0 表示只返回正确日志，
+TimeLimitExceeded 返回函数调用发生超时的日志，
+ResourceLimitExceeded 返回函数调用发生资源超限的日志，
+UserCodeException 返回函数调用发生用户代码错误的日志，
+无输入则返回所有日志。
  */
 
 /**
@@ -28,11 +40,23 @@ use TencentCloud\Common\AbstractModel;
 class LogFilter extends AbstractModel
 {
     /**
-     * @var string filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，无输入则返回所有日志。
+     * @var string filter.RetCode的取值有：
+not0 表示只返回错误日志，
+is0 表示只返回正确日志，
+TimeLimitExceeded 返回函数调用发生超时的日志，
+ResourceLimitExceeded 返回函数调用发生资源超限的日志，
+UserCodeException 返回函数调用发生用户代码错误的日志，
+无输入则返回所有日志。
      */
     public $RetCode;
     /**
-     * @param string $RetCode filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，无输入则返回所有日志。
+     * @param string $RetCode filter.RetCode的取值有：
+not0 表示只返回错误日志，
+is0 表示只返回正确日志，
+TimeLimitExceeded 返回函数调用发生超时的日志，
+ResourceLimitExceeded 返回函数调用发生资源超限的日志，
+UserCodeException 返回函数调用发生用户代码错误的日志，
+无输入则返回所有日志。
      */
     function __construct()
     {

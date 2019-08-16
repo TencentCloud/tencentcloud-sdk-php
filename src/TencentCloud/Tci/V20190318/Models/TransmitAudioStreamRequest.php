@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsEnd(integer $IsEnd) 设置是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
  * @method integer getLang() 获取音频源的语言，默认0为英文，1为中文
  * @method void setLang(integer $Lang) 设置音频源的语言，默认0为英文，1为中文
+ * @method integer getStorageMode() 获取是否临时保存 音频链接
+ * @method void setStorageMode(integer $StorageMode) 设置是否临时保存 音频链接
  * @method array getVocabLibNameList() 获取识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
  * @method void setVocabLibNameList(array $VocabLibNameList) 设置识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
  */
@@ -84,6 +86,11 @@ class TransmitAudioStreamRequest extends AbstractModel
     public $Lang;
 
     /**
+     * @var integer 是否临时保存 音频链接
+     */
+    public $StorageMode;
+
+    /**
      * @var array 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      */
     public $VocabLibNameList;
@@ -96,6 +103,7 @@ class TransmitAudioStreamRequest extends AbstractModel
      * @param integer $VoiceFileType 语音文件类型 	1: raw, 2: wav, 3: mp3 (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
      * @param integer $IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
      * @param integer $Lang 音频源的语言，默认0为英文，1为中文
+     * @param integer $StorageMode 是否临时保存 音频链接
      * @param array $VocabLibNameList 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      */
     function __construct()
@@ -141,6 +149,10 @@ class TransmitAudioStreamRequest extends AbstractModel
 
         if (array_key_exists("Lang",$param) and $param["Lang"] !== null) {
             $this->Lang = $param["Lang"];
+        }
+
+        if (array_key_exists("StorageMode",$param) and $param["StorageMode"] !== null) {
+            $this->StorageMode = $param["StorageMode"];
         }
 
         if (array_key_exists("VocabLibNameList",$param) and $param["VocabLibNameList"] !== null) {

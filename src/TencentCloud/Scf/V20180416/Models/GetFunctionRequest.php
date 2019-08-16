@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionName(string $FunctionName) 设置需要获取详情的函数名称
  * @method string getQualifier() 获取函数的版本号
  * @method void setQualifier(string $Qualifier) 设置函数的版本号
+ * @method string getNamespace() 获取函数所属命名空间
+ * @method void setNamespace(string $Namespace) 设置函数所属命名空间
  * @method string getShowCode() 获取是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
  * @method void setShowCode(string $ShowCode) 设置是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
  */
@@ -42,12 +44,18 @@ class GetFunctionRequest extends AbstractModel
     public $Qualifier;
 
     /**
+     * @var string 函数所属命名空间
+     */
+    public $Namespace;
+
+    /**
      * @var string 是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
      */
     public $ShowCode;
     /**
      * @param string $FunctionName 需要获取详情的函数名称
      * @param string $Qualifier 函数的版本号
+     * @param string $Namespace 函数所属命名空间
      * @param string $ShowCode 是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
      */
     function __construct()
@@ -68,6 +76,10 @@ class GetFunctionRequest extends AbstractModel
 
         if (array_key_exists("Qualifier",$param) and $param["Qualifier"] !== null) {
             $this->Qualifier = $param["Qualifier"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
         }
 
         if (array_key_exists("ShowCode",$param) and $param["ShowCode"] !== null) {

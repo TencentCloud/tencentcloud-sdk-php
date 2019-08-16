@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemUsage(integer $MemUsage) 设置函数执行时消耗实际内存大小，单位为 Byte
  * @method string getLog() 获取函数执行过程中的日志输出
  * @method void setLog(string $Log) 设置函数执行过程中的日志输出
+ * @method string getLevel() 获取日志等级
+ * @method void setLevel(string $Level) 设置日志等级
+ * @method string getSource() 获取日志来源
+ * @method void setSource(string $Source) 设置日志来源
  */
 
 /**
@@ -94,6 +98,16 @@ class FunctionLog extends AbstractModel
      * @var string 函数执行过程中的日志输出
      */
     public $Log;
+
+    /**
+     * @var string 日志等级
+     */
+    public $Level;
+
+    /**
+     * @var string 日志来源
+     */
+    public $Source;
     /**
      * @param string $FunctionName 函数的名称
      * @param string $RetMsg 函数执行完成后的返回值
@@ -105,6 +119,8 @@ class FunctionLog extends AbstractModel
      * @param integer $BillDuration 函数计费时间，根据 duration 向上取最近的 100ms，单位为ms
      * @param integer $MemUsage 函数执行时消耗实际内存大小，单位为 Byte
      * @param string $Log 函数执行过程中的日志输出
+     * @param string $Level 日志等级
+     * @param string $Source 日志来源
      */
     function __construct()
     {
@@ -156,6 +172,14 @@ class FunctionLog extends AbstractModel
 
         if (array_key_exists("Log",$param) and $param["Log"] !== null) {
             $this->Log = $param["Log"];
+        }
+
+        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
+            $this->Level = $param["Level"];
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
         }
     }
 }

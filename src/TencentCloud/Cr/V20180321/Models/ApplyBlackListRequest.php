@@ -18,10 +18,10 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getModule() 获取模块
- * @method void setModule(string $Module) 设置模块
- * @method string getOperation() 获取操作
- * @method void setOperation(string $Operation) 设置操作
+ * @method string getModule() 获取模块名，本接口取值：account
+ * @method void setModule(string $Module) 设置模块名，本接口取值：account
+ * @method string getOperation() 获取操作名，本接口取值：ApplyBlackList
+ * @method void setOperation(string $Operation) 设置操作名，本接口取值：ApplyBlackList
  * @method array getBlackList() 获取黑名单列表
  * @method void setBlackList(array $BlackList) 设置黑名单列表
  * @method string getInstId() 获取实例ID，不传默认为系统分配的初始实例
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class ApplyBlackListRequest extends AbstractModel
 {
     /**
-     * @var string 模块
+     * @var string 模块名，本接口取值：account
      */
     public $Module;
 
     /**
-     * @var string 操作
+     * @var string 操作名，本接口取值：ApplyBlackList
      */
     public $Operation;
 
@@ -53,8 +53,8 @@ class ApplyBlackListRequest extends AbstractModel
      */
     public $InstId;
     /**
-     * @param string $Module 模块
-     * @param string $Operation 操作
+     * @param string $Module 模块名，本接口取值：account
+     * @param string $Operation 操作名，本接口取值：ApplyBlackList
      * @param array $BlackList 黑名单列表
      * @param string $InstId 实例ID，不传默认为系统分配的初始实例
      */

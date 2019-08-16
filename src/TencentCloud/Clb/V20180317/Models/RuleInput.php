@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
  * @method string getForwardType() 获取负载均衡与后端服务之间的转发协议，目前支持 HTTP
  * @method void setForwardType(string $ForwardType) 设置负载均衡与后端服务之间的转发协议，目前支持 HTTP
+ * @method boolean getDefaultServer() 获取是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+ * @method void setDefaultServer(boolean $DefaultServer) 设置是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+ * @method boolean getHttp2() 获取是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+ * @method void setHttp2(boolean $Http2) 设置是否开启Http2，注意，只用HTTPS域名才能开启Http2。
  */
 
 /**
@@ -76,6 +80,16 @@ class RuleInput extends AbstractModel
      * @var string 负载均衡与后端服务之间的转发协议，目前支持 HTTP
      */
     public $ForwardType;
+
+    /**
+     * @var boolean 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+     */
+    public $DefaultServer;
+
+    /**
+     * @var boolean 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+     */
+    public $Http2;
     /**
      * @param string $Domain 转发规则的域名。长度限制为：1~80。
      * @param string $Url 转发规则的路径。长度限制为：1~200。
@@ -85,6 +99,8 @@ class RuleInput extends AbstractModel
      * @param string $Scheduler 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
      * @param string $ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP
+     * @param boolean $DefaultServer 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+     * @param boolean $Http2 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
      */
     function __construct()
     {
@@ -126,6 +142,14 @@ class RuleInput extends AbstractModel
 
         if (array_key_exists("ForwardType",$param) and $param["ForwardType"] !== null) {
             $this->ForwardType = $param["ForwardType"];
+        }
+
+        if (array_key_exists("DefaultServer",$param) and $param["DefaultServer"] !== null) {
+            $this->DefaultServer = $param["DefaultServer"];
+        }
+
+        if (array_key_exists("Http2",$param) and $param["Http2"] !== null) {
+            $this->Http2 = $param["Http2"];
         }
     }
 }

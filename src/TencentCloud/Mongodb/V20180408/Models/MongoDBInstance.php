@@ -25,7 +25,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *关联实例信息实例信息
+ *实例信息
  */
 class MongoDBInstance extends AbstractModel
 {

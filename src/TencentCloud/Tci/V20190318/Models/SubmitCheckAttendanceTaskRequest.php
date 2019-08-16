@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileType(string $FileType) 设置视频流类型，vod_url表示点播URL，live_url表示直播URL，默认vod_url
  * @method array getLibraryIds() 获取人员库 ID列表
  * @method void setLibraryIds(array $LibraryIds) 设置人员库 ID列表
- * @method float getAttendanceThreshold() 获取确定出勤阀值；默认为0.92
- * @method void setAttendanceThreshold(float $AttendanceThreshold) 设置确定出勤阀值；默认为0.92
- * @method boolean getEnableStranger() 获取是否开启陌生人模式，开启后才会推送陌生人事件，默认不开启
- * @method void setEnableStranger(boolean $EnableStranger) 设置是否开启陌生人模式，开启后才会推送陌生人事件，默认不开启
+ * @method float getAttendanceThreshold() 获取确定出勤阈值；默认为0.92
+ * @method void setAttendanceThreshold(float $AttendanceThreshold) 设置确定出勤阈值；默认为0.92
+ * @method boolean getEnableStranger() 获取是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
+ * @method void setEnableStranger(boolean $EnableStranger) 设置是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
  * @method integer getEndTime() 获取考勤结束时间（到视频的第几秒结束考勤），单位秒；默认为900 
 对于直播场景，使用绝对时间戳，单位秒，默认当前时间往后12小时
  * @method void setEndTime(integer $EndTime) 设置考勤结束时间（到视频的第几秒结束考勤），单位秒；默认为900 
@@ -63,12 +63,12 @@ class SubmitCheckAttendanceTaskRequest extends AbstractModel
     public $LibraryIds;
 
     /**
-     * @var float 确定出勤阀值；默认为0.92
+     * @var float 确定出勤阈值；默认为0.92
      */
     public $AttendanceThreshold;
 
     /**
-     * @var boolean 是否开启陌生人模式，开启后才会推送陌生人事件，默认不开启
+     * @var boolean 是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
      */
     public $EnableStranger;
 
@@ -97,8 +97,8 @@ class SubmitCheckAttendanceTaskRequest extends AbstractModel
      * @param string $FileContent 输入数据
      * @param string $FileType 视频流类型，vod_url表示点播URL，live_url表示直播URL，默认vod_url
      * @param array $LibraryIds 人员库 ID列表
-     * @param float $AttendanceThreshold 确定出勤阀值；默认为0.92
-     * @param boolean $EnableStranger 是否开启陌生人模式，开启后才会推送陌生人事件，默认不开启
+     * @param float $AttendanceThreshold 确定出勤阈值；默认为0.92
+     * @param boolean $EnableStranger 是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
      * @param integer $EndTime 考勤结束时间（到视频的第几秒结束考勤），单位秒；默认为900 
 对于直播场景，使用绝对时间戳，单位秒，默认当前时间往后12小时
      * @param string $NoticeUrl 通知回调地址，要求方法为post，application/json格式

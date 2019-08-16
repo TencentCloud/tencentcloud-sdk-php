@@ -24,8 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFromUrl(string $FromUrl) 设置源Url。
  * @method string getToUrl() 获取目的Url。
  * @method void setToUrl(string $ToUrl) 设置目的Url。
- * @method integer getAreaId() 获取区域id,1-深圳,2-上海，3-天津,4-香港。如有改动，需同时传入IspId。
- * @method void setAreaId(integer $AreaId) 设置区域id,1-深圳,2-上海，3-天津,4-香港。如有改动，需同时传入IspId。
+ * @method integer getAreaId() 获取区域id：
+1-深圳，
+2-上海，
+3-天津，
+4-中国香港。
+如有改动，需同时传入IspId。
+ * @method void setAreaId(integer $AreaId) 设置区域id：
+1-深圳，
+2-上海，
+3-天津，
+4-中国香港。
+如有改动，需同时传入IspId。
  * @method integer getIspId() 获取运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
  * @method void setIspId(integer $IspId) 设置运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
  * @method string getStartTime() 获取开始时间。
@@ -71,7 +81,12 @@ class ModifyPullStreamConfigRequest extends AbstractModel
     public $ToUrl;
 
     /**
-     * @var integer 区域id,1-深圳,2-上海，3-天津,4-香港。如有改动，需同时传入IspId。
+     * @var integer 区域id：
+1-深圳，
+2-上海，
+3-天津，
+4-中国香港。
+如有改动，需同时传入IspId。
      */
     public $AreaId;
 
@@ -101,7 +116,12 @@ class ModifyPullStreamConfigRequest extends AbstractModel
      * @param string $ConfigId 配置id。
      * @param string $FromUrl 源Url。
      * @param string $ToUrl 目的Url。
-     * @param integer $AreaId 区域id,1-深圳,2-上海，3-天津,4-香港。如有改动，需同时传入IspId。
+     * @param integer $AreaId 区域id：
+1-深圳，
+2-上海，
+3-天津，
+4-中国香港。
+如有改动，需同时传入IspId。
      * @param integer $IspId 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
      * @param string $StartTime 开始时间。
 使用UTC格式时间，

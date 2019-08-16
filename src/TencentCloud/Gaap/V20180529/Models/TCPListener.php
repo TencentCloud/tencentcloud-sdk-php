@@ -32,8 +32,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerType(string $RealServerType) 设置监听器绑定源站类型
  * @method string getProtocol() 获取监听器协议， TCP
  * @method void setProtocol(string $Protocol) 设置监听器协议， TCP
- * @method integer getListenerStatus() 获取监听器状态
- * @method void setListenerStatus(integer $ListenerStatus) 设置监听器状态
+ * @method integer getListenerStatus() 获取监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
+ * @method void setListenerStatus(integer $ListenerStatus) 设置监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
  * @method string getScheduler() 获取监听器源站访问策略，其中：
 rr，轮询；
 wrr，加权轮询；
@@ -103,7 +113,12 @@ class TCPListener extends AbstractModel
     public $Protocol;
 
     /**
-     * @var integer 监听器状态
+     * @var integer 监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
      */
     public $ListenerStatus;
 
@@ -157,7 +172,12 @@ lc，最小连接数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealServerType 监听器绑定源站类型
      * @param string $Protocol 监听器协议， TCP
-     * @param integer $ListenerStatus 监听器状态
+     * @param integer $ListenerStatus 监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
      * @param string $Scheduler 监听器源站访问策略，其中：
 rr，轮询；
 wrr，加权轮询；

@@ -22,7 +22,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Trtc\V20190722\Models as Models;
 
 /**
-* @method Models\DissloveRoomResponse DissloveRoom(Models\DissloveRoomRequest $req) 接口说明：把房间所有用户从房间踢出，解散房间。
+* @method Models\DissolveRoomResponse DissolveRoom(Models\DissolveRoomRequest $req) 接口说明：把房间所有用户从房间踢出，解散房间。
 * @method Models\KickOutUserResponse KickOutUser(Models\KickOutUserRequest $req) 接口说明：将用户从房间踢出。
  */
 

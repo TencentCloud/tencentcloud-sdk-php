@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLibraryId(string $LibraryId) 设置人员库唯一标识符
  * @method string getPersonName() 获取人员名称
  * @method void setPersonName(string $PersonName) 设置人员名称
+ * @method array getImages() 获取图片数据 base64 字符串，与 Urls 参数选择一个输入
+ * @method void setImages(array $Images) 设置图片数据 base64 字符串，与 Urls 参数选择一个输入
  * @method string getJobNumber() 获取人员工作号码
  * @method void setJobNumber(string $JobNumber) 设置人员工作号码
  * @method string getMail() 获取人员邮箱
@@ -34,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhoneNumber(string $PhoneNumber) 设置人员电话号码
  * @method string getStudentNumber() 获取人员学生号码
  * @method void setStudentNumber(string $StudentNumber) 设置人员学生号码
+ * @method array getUrls() 获取图片下载地址，与 Images 参数选择一个输入
+ * @method void setUrls(array $Urls) 设置图片下载地址，与 Images 参数选择一个输入
  */
 
 /**
@@ -50,6 +54,11 @@ class CreatePersonRequest extends AbstractModel
      * @var string 人员名称
      */
     public $PersonName;
+
+    /**
+     * @var array 图片数据 base64 字符串，与 Urls 参数选择一个输入
+     */
+    public $Images;
 
     /**
      * @var string 人员工作号码
@@ -80,15 +89,22 @@ class CreatePersonRequest extends AbstractModel
      * @var string 人员学生号码
      */
     public $StudentNumber;
+
+    /**
+     * @var array 图片下载地址，与 Images 参数选择一个输入
+     */
+    public $Urls;
     /**
      * @param string $LibraryId 人员库唯一标识符
      * @param string $PersonName 人员名称
+     * @param array $Images 图片数据 base64 字符串，与 Urls 参数选择一个输入
      * @param string $JobNumber 人员工作号码
      * @param string $Mail 人员邮箱
      * @param integer $Male 人员性别，0：未知 1：男性，2：女性
      * @param string $PersonId 自定义人员 ID，注意不能使用 tci_person_ 前缀
      * @param string $PhoneNumber 人员电话号码
      * @param string $StudentNumber 人员学生号码
+     * @param array $Urls 图片下载地址，与 Images 参数选择一个输入
      */
     function __construct()
     {
@@ -108,6 +124,10 @@ class CreatePersonRequest extends AbstractModel
 
         if (array_key_exists("PersonName",$param) and $param["PersonName"] !== null) {
             $this->PersonName = $param["PersonName"];
+        }
+
+        if (array_key_exists("Images",$param) and $param["Images"] !== null) {
+            $this->Images = $param["Images"];
         }
 
         if (array_key_exists("JobNumber",$param) and $param["JobNumber"] !== null) {
@@ -132,6 +152,10 @@ class CreatePersonRequest extends AbstractModel
 
         if (array_key_exists("StudentNumber",$param) and $param["StudentNumber"] !== null) {
             $this->StudentNumber = $param["StudentNumber"];
+        }
+
+        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
+            $this->Urls = $param["Urls"];
         }
     }
 }

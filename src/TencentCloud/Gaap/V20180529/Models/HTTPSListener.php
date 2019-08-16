@@ -24,10 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerName(string $ListenerName) 设置监听器名称
  * @method integer getPort() 获取监听器端口
  * @method void setPort(integer $Port) 设置监听器端口
- * @method string getProtocol() 获取监听器协议， HTTP
- * @method void setProtocol(string $Protocol) 设置监听器协议， HTTP
- * @method integer getListenerStatus() 获取监听器状态
- * @method void setListenerStatus(integer $ListenerStatus) 设置监听器状态
+ * @method string getProtocol() 获取监听器协议， 值为：HTTP
+ * @method void setProtocol(string $Protocol) 设置监听器协议， 值为：HTTP
+ * @method integer getListenerStatus() 获取监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
+ * @method void setListenerStatus(integer $ListenerStatus) 设置监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
  * @method string getCertificateId() 获取监听器服务器SSL证书ID
  * @method void setCertificateId(string $CertificateId) 设置监听器服务器SSL证书ID
  * @method string getForwardProtocol() 获取监听器后端转发源站协议
@@ -77,12 +87,17 @@ class HTTPSListener extends AbstractModel
     public $Port;
 
     /**
-     * @var string 监听器协议， HTTP
+     * @var string 监听器协议， 值为：HTTP
      */
     public $Protocol;
 
     /**
-     * @var integer 监听器状态
+     * @var integer 监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
      */
     public $ListenerStatus;
 
@@ -130,8 +145,13 @@ class HTTPSListener extends AbstractModel
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
      * @param integer $Port 监听器端口
-     * @param string $Protocol 监听器协议， HTTP
-     * @param integer $ListenerStatus 监听器状态
+     * @param string $Protocol 监听器协议， 值为：HTTP
+     * @param integer $ListenerStatus 监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
      * @param string $CertificateId 监听器服务器SSL证书ID
      * @param string $ForwardProtocol 监听器后端转发源站协议
      * @param integer $CreateTime 监听器创建时间，Unix时间戳

@@ -25,9 +25,9 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *DissloveRoom请求参数结构体
+ *DissolveRoom请求参数结构体
  */
-class DissloveRoomRequest extends AbstractModel
+class DissolveRoomRequest extends AbstractModel
 {
     /**
      * @var integer TRTC的SDKAppId。

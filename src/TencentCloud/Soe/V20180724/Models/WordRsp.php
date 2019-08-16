@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMatchTag(integer $MatchTag) 设置当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
  * @method array getPhoneInfos() 获取音节评估详情
  * @method void setPhoneInfos(array $PhoneInfos) 设置音节评估详情
+ * @method string getReferenceWord() 获取参考词，目前为保留字段。
+ * @method void setReferenceWord(string $ReferenceWord) 设置参考词，目前为保留字段。
  */
 
 /**
@@ -73,6 +75,11 @@ class WordRsp extends AbstractModel
      * @var array 音节评估详情
      */
     public $PhoneInfos;
+
+    /**
+     * @var string 参考词，目前为保留字段。
+     */
+    public $ReferenceWord;
     /**
      * @param integer $MemBeginTime 当前单词语音起始时间点，单位为ms
      * @param integer $MemEndTime 当前单词语音终止时间点，单位为ms
@@ -81,6 +88,7 @@ class WordRsp extends AbstractModel
      * @param string $Word 当前词
      * @param integer $MatchTag 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      * @param array $PhoneInfos 音节评估详情
+     * @param string $ReferenceWord 参考词，目前为保留字段。
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class WordRsp extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PhoneInfos, $obj);
             }
+        }
+
+        if (array_key_exists("ReferenceWord",$param) and $param["ReferenceWord"] !== null) {
+            $this->ReferenceWord = $param["ReferenceWord"];
         }
     }
 }

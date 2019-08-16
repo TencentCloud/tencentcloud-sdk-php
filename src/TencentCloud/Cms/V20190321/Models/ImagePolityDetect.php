@@ -21,19 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getEvilType() 获取恶意类型
 100：正常 
 20001：政治
-20002：色情 
-20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
  * @method void setEvilType(integer $EvilType) 设置恶意类型
 100：正常 
 20001：政治
-20002：色情 
-20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
  * @method integer getHitFlag() 获取处置判定  0：正常 1：可疑
  * @method void setHitFlag(integer $HitFlag) 设置处置判定  0：正常 1：可疑
  * @method array getFaceNames() 获取命中的人脸名称
@@ -55,11 +45,6 @@ class ImagePolityDetect extends AbstractModel
      * @var integer 恶意类型
 100：正常 
 20001：政治
-20002：色情 
-20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
      */
     public $EvilType;
 
@@ -91,11 +76,6 @@ class ImagePolityDetect extends AbstractModel
      * @param integer $EvilType 恶意类型
 100：正常 
 20001：政治
-20002：色情 
-20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
      * @param integer $HitFlag 处置判定  0：正常 1：可疑
      * @param array $FaceNames 命中的人脸名称
      * @param array $Keywords 关键词明细

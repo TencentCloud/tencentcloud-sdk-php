@@ -18,8 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCode() 获取http code，可选值包括400,403,404,500,502,503,504
- * @method void setCode(string $Code) 设置http code，可选值包括400,403,404,500,502,503,504
+ * @method string getCode() 获取HTTP code，可选值包括400,403,404,500,502,503,504
+ * @method void setCode(string $Code) 设置HTTP code，可选值包括400,403,404,500,502,503,504
  * @method integer getNum() 获取总次数
  * @method void setNum(integer $Num) 设置总次数
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class PlayCodeTotalInfo extends AbstractModel
 {
     /**
-     * @var string http code，可选值包括400,403,404,500,502,503,504
+     * @var string HTTP code，可选值包括400,403,404,500,502,503,504
      */
     public $Code;
 
@@ -39,7 +39,7 @@ class PlayCodeTotalInfo extends AbstractModel
      */
     public $Num;
     /**
-     * @param string $Code http code，可选值包括400,403,404,500,502,503,504
+     * @param string $Code HTTP code，可选值包括400,403,404,500,502,503,504
      * @param integer $Num 总次数
      */
     function __construct()

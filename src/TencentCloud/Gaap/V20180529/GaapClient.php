@@ -25,7 +25,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
 * @method Models\AddRealServersResponse AddRealServers(Models\AddRealServersRequest $req) 添加源站(服务器)信息，支持IP或域名
 * @method Models\BindListenerRealServersResponse BindListenerRealServers(Models\BindListenerRealServersRequest $req) 本接口（BindListenerRealServers）用于TCP/UDP监听器绑定解绑源站。
 注意：本接口会解绑之前绑定的源站，绑定本次调用所选择的源站。例如：原来绑定的源站为A，B，C，本次调用的选择绑定的源站为C，D，E，那么调用后所绑定的源站为C，D，E。
-* @method Models\BindRuleRealServersResponse BindRuleRealServers(Models\BindRuleRealServersRequest $req) 该接口用于7层监听器转发规则绑定源站。
+* @method Models\BindRuleRealServersResponse BindRuleRealServers(Models\BindRuleRealServersRequest $req) 该接口用于7层监听器的转发规则绑定源站。注意：本接口会解绑之前绑定的源站，绑定本次调用所选择的源站。
 * @method Models\CheckProxyCreateResponse CheckProxyCreate(Models\CheckProxyCreateRequest $req) 本接口(CheckProxyCreate)用于查询能否创建指定配置的加速通道。
 * @method Models\CloseProxiesResponse CloseProxies(Models\CloseProxiesRequest $req) 本接口（CloseProxies）用于关闭通道。通道关闭后，不再产生流量，但每天仍然收取通道基础配置费用。
 * @method Models\CloseSecurityPolicyResponse CloseSecurityPolicy(Models\CloseSecurityPolicyRequest $req) 关闭安全策略

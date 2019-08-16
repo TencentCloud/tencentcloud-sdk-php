@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method boolean getIPVS() 获取是否启用IPVS
  * @method void setIPVS(boolean $IPVS) 设置是否启用IPVS
- * @method boolean getAsEnabled() 获取是否启用集群节点扩缩容
- * @method void setAsEnabled(boolean $AsEnabled) 设置是否启用集群节点扩缩容
+ * @method boolean getAsEnabled() 获取是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
+ * @method void setAsEnabled(boolean $AsEnabled) 设置是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
  * @method string getContainerRuntime() 获取集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
  * @method void setContainerRuntime(string $ContainerRuntime) 设置集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
  */
@@ -37,7 +37,7 @@ class ClusterAdvancedSettings extends AbstractModel
     public $IPVS;
 
     /**
-     * @var boolean 是否启用集群节点扩缩容
+     * @var boolean 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      */
     public $AsEnabled;
 
@@ -47,7 +47,7 @@ class ClusterAdvancedSettings extends AbstractModel
     public $ContainerRuntime;
     /**
      * @param boolean $IPVS 是否启用IPVS
-     * @param boolean $AsEnabled 是否启用集群节点扩缩容
+     * @param boolean $AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      * @param string $ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
      */
     function __construct()

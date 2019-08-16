@@ -18,24 +18,24 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getModule() 获取模块
- * @method void setModule(string $Module) 设置模块
- * @method string getOperation() 获取操作
- * @method void setOperation(string $Operation) 设置操作
+ * @method string getModule() 获取模块名，本接口取值：Record
+ * @method void setModule(string $Module) 设置模块名，本接口取值：Record
+ * @method string getOperation() 获取操作名，本接口取值：List
+ * @method void setOperation(string $Operation) 设置操作名，本接口取值：List
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getAccountNum() 获取案件编号
  * @method void setAccountNum(string $AccountNum) 设置案件编号
  * @method string getCalledPhone() 获取被叫号码
  * @method void setCalledPhone(string $CalledPhone) 设置被叫号码
- * @method string getStartBizDate() 获取查询起始日期
- * @method void setStartBizDate(string $StartBizDate) 设置查询起始日期
- * @method string getEndBizDate() 获取查询结束日期
- * @method void setEndBizDate(string $EndBizDate) 设置查询结束日期
- * @method string getOffset() 获取分页参数，索引，从0开始
- * @method void setOffset(string $Offset) 设置分页参数，索引，从0开始
- * @method string getLimit() 获取分页参数，页长
- * @method void setLimit(string $Limit) 设置分页参数，页长
+ * @method string getStartBizDate() 获取查询起始日期，格式为YYYY-MM-DD
+ * @method void setStartBizDate(string $StartBizDate) 设置查询起始日期，格式为YYYY-MM-DD
+ * @method string getEndBizDate() 获取查询结束日期，格式为YYYY-MM-DD
+ * @method void setEndBizDate(string $EndBizDate) 设置查询结束日期，格式为YYYY-MM-DD
+ * @method string getOffset() 获取分页参数，索引，默认为0
+ * @method void setOffset(string $Offset) 设置分页参数，索引，默认为0
+ * @method string getLimit() 获取分页参数，页长，默认为20
+ * @method void setLimit(string $Limit) 设置分页参数，页长，默认为20
  * @method string getInstId() 获取实例ID，不传默认为系统分配的初始实例
  * @method void setInstId(string $InstId) 设置实例ID，不传默认为系统分配的初始实例
  */
@@ -46,12 +46,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRecordsRequest extends AbstractModel
 {
     /**
-     * @var string 模块
+     * @var string 模块名，本接口取值：Record
      */
     public $Module;
 
     /**
-     * @var string 操作
+     * @var string 操作名，本接口取值：List
      */
     public $Operation;
 
@@ -71,22 +71,22 @@ class DescribeRecordsRequest extends AbstractModel
     public $CalledPhone;
 
     /**
-     * @var string 查询起始日期
+     * @var string 查询起始日期，格式为YYYY-MM-DD
      */
     public $StartBizDate;
 
     /**
-     * @var string 查询结束日期
+     * @var string 查询结束日期，格式为YYYY-MM-DD
      */
     public $EndBizDate;
 
     /**
-     * @var string 分页参数，索引，从0开始
+     * @var string 分页参数，索引，默认为0
      */
     public $Offset;
 
     /**
-     * @var string 分页参数，页长
+     * @var string 分页参数，页长，默认为20
      */
     public $Limit;
 
@@ -95,15 +95,15 @@ class DescribeRecordsRequest extends AbstractModel
      */
     public $InstId;
     /**
-     * @param string $Module 模块
-     * @param string $Operation 操作
+     * @param string $Module 模块名，本接口取值：Record
+     * @param string $Operation 操作名，本接口取值：List
      * @param string $ProductId 产品ID
      * @param string $AccountNum 案件编号
      * @param string $CalledPhone 被叫号码
-     * @param string $StartBizDate 查询起始日期
-     * @param string $EndBizDate 查询结束日期
-     * @param string $Offset 分页参数，索引，从0开始
-     * @param string $Limit 分页参数，页长
+     * @param string $StartBizDate 查询起始日期，格式为YYYY-MM-DD
+     * @param string $EndBizDate 查询结束日期，格式为YYYY-MM-DD
+     * @param string $Offset 分页参数，索引，默认为0
+     * @param string $Limit 分页参数，页长，默认为20
      * @param string $InstId 实例ID，不传默认为系统分配的初始实例
      */
     function __construct()

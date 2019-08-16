@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableStudentBodyMovements(boolean $EnableStudentBodyMovements) 设置小班课场景学生肢体动作识别选项
  * @method boolean getEnableTeacherBodyMovements() 获取教师动作选项（该功能尚未支持）
  * @method void setEnableTeacherBodyMovements(boolean $EnableTeacherBodyMovements) 设置教师动作选项（该功能尚未支持）
+ * @method boolean getEnableTeacherOutScreen() 获取判断老师是否在屏幕中
+ * @method void setEnableTeacherOutScreen(boolean $EnableTeacherOutScreen) 设置判断老师是否在屏幕中
  */
 
 /**
@@ -87,6 +89,11 @@ class ImageTaskFunction extends AbstractModel
      * @var boolean 教师动作选项（该功能尚未支持）
      */
     public $EnableTeacherBodyMovements;
+
+    /**
+     * @var boolean 判断老师是否在屏幕中
+     */
+    public $EnableTeacherOutScreen;
     /**
      * @param boolean $EnableActionClass 大教室场景学生肢体动作识别选项
      * @param boolean $EnableFaceDetect 人脸检测选项
@@ -97,6 +104,7 @@ class ImageTaskFunction extends AbstractModel
      * @param boolean $EnableLightJudge 光照选项
      * @param boolean $EnableStudentBodyMovements 小班课场景学生肢体动作识别选项
      * @param boolean $EnableTeacherBodyMovements 教师动作选项（该功能尚未支持）
+     * @param boolean $EnableTeacherOutScreen 判断老师是否在屏幕中
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class ImageTaskFunction extends AbstractModel
 
         if (array_key_exists("EnableTeacherBodyMovements",$param) and $param["EnableTeacherBodyMovements"] !== null) {
             $this->EnableTeacherBodyMovements = $param["EnableTeacherBodyMovements"];
+        }
+
+        if (array_key_exists("EnableTeacherOutScreen",$param) and $param["EnableTeacherOutScreen"] !== null) {
+            $this->EnableTeacherOutScreen = $param["EnableTeacherOutScreen"];
         }
     }
 }

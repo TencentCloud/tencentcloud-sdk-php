@@ -18,36 +18,36 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getJobId() 获取任务标识符
- * @method void setJobId(integer $JobId) 设置任务标识符
- * @method array getNotRegisteredSet() 获取没有注册的人的ID列表
- * @method void setNotRegisteredSet(array $NotRegisteredSet) 设置没有注册的人的ID列表
+ * @method array getImageResults() 获取图像任务直接返回结果，包括：FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、TimeInfo
+ * @method void setImageResults(array $ImageResults) 设置图像任务直接返回结果，包括：FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、TimeInfo
+ * @method integer getTaskId() 获取任务ID
+ * @method void setTaskId(integer $TaskId) 设置任务ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *CheckAttendance返回参数结构体
+ *SubmitOneByOneClassTask返回参数结构体
  */
-class CheckAttendanceResponse extends AbstractModel
+class SubmitOneByOneClassTaskResponse extends AbstractModel
 {
     /**
-     * @var integer 任务标识符
+     * @var array 图像任务直接返回结果，包括：FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、TimeInfo
      */
-    public $JobId;
+    public $ImageResults;
 
     /**
-     * @var array 没有注册的人的ID列表
+     * @var integer 任务ID
      */
-    public $NotRegisteredSet;
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $JobId 任务标识符
-     * @param array $NotRegisteredSet 没有注册的人的ID列表
+     * @param array $ImageResults 图像任务直接返回结果，包括：FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、TimeInfo
+     * @param integer $TaskId 任务ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,17 @@ class CheckAttendanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("ImageResults",$param) and $param["ImageResults"] !== null) {
+            $this->ImageResults = [];
+            foreach ($param["ImageResults"] as $key => $value){
+                $obj = new ImageTaskResult();
+                $obj->deserialize($value);
+                array_push($this->ImageResults, $obj);
+            }
         }
 
-        if (array_key_exists("NotRegisteredSet",$param) and $param["NotRegisteredSet"] !== null) {
-            $this->NotRegisteredSet = $param["NotRegisteredSet"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

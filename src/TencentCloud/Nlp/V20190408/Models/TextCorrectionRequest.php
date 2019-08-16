@@ -18,8 +18,8 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getText() 获取待纠错的文本（仅支持UTF-8格式，不超过200字）
- * @method void setText(string $Text) 设置待纠错的文本（仅支持UTF-8格式，不超过200字）
+ * @method string getText() 获取待纠错的文本（仅支持UTF-8格式，不超过2000字）
+ * @method void setText(string $Text) 设置待纠错的文本（仅支持UTF-8格式，不超过2000字）
  */
 
 /**
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
 class TextCorrectionRequest extends AbstractModel
 {
     /**
-     * @var string 待纠错的文本（仅支持UTF-8格式，不超过200字）
+     * @var string 待纠错的文本（仅支持UTF-8格式，不超过2000字）
      */
     public $Text;
     /**
-     * @param string $Text 待纠错的文本（仅支持UTF-8格式，不超过200字）
+     * @param string $Text 待纠错的文本（仅支持UTF-8格式，不超过2000字）
      */
     function __construct()
     {

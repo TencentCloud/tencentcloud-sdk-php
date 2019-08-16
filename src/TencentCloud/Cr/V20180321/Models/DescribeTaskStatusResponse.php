@@ -18,10 +18,10 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTaskResult() 获取任务结果，例如上传成功时返回“File Uploading Task Success.”
- * @method void setTaskResult(string $TaskResult) 设置任务结果，例如上传成功时返回“File Uploading Task Success.”
- * @method string getTaskType() 获取<p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
- * @method void setTaskType(string $TaskType) 设置<p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+ * @method string getTaskResult() 获取<p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
+ * @method void setTaskResult(string $TaskResult) 设置<p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
+ * @method string getTaskType() 获取<p>任务类型：</p><ul style="margin-bottom:0px;"><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+ * @method void setTaskType(string $TaskType) 设置<p>任务类型：</p><ul style="margin-bottom:0px;"><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
  * @method string getTaskFileUrl() 获取过滤文件下载链接，有过滤数据时才存在。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskFileUrl(string $TaskFileUrl) 设置过滤文件下载链接，有过滤数据时才存在。
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTaskStatusResponse extends AbstractModel
 {
     /**
-     * @var string 任务结果，例如上传成功时返回“File Uploading Task Success.”
+     * @var string <p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
      */
     public $TaskResult;
 
     /**
-     * @var string <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+     * @var string <p>任务类型：</p><ul style="margin-bottom:0px;"><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
      */
     public $TaskType;
 
@@ -56,8 +56,8 @@ class DescribeTaskStatusResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $TaskResult 任务结果，例如上传成功时返回“File Uploading Task Success.”
-     * @param string $TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+     * @param string $TaskResult <p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
+     * @param string $TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
      * @param string $TaskFileUrl 过滤文件下载链接，有过滤数据时才存在。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStudentBodyMovement(BodyMovementResult $StudentBodyMovement) 设置学生肢体动作识别结果
  * @method BodyMovementResult getTeacherBodyMovement() 获取老师肢体动作识别结果
  * @method void setTeacherBodyMovement(BodyMovementResult $TeacherBodyMovement) 设置老师肢体动作识别结果
+ * @method TeacherOutScreenResult getTeacherOutScreen() 获取教师是否在屏幕内判断结果
+ * @method void setTeacherOutScreen(TeacherOutScreenResult $TeacherOutScreen) 设置教师是否在屏幕内判断结果
  * @method TimeInfoResult getTimeInfo() 获取时间统计结果
  * @method void setTimeInfo(TimeInfoResult $TimeInfo) 设置时间统计结果
  */
@@ -105,6 +107,11 @@ class ImageTaskResult extends AbstractModel
     public $TeacherBodyMovement;
 
     /**
+     * @var TeacherOutScreenResult 教师是否在屏幕内判断结果
+     */
+    public $TeacherOutScreen;
+
+    /**
      * @var TimeInfoResult 时间统计结果
      */
     public $TimeInfo;
@@ -120,6 +127,7 @@ class ImageTaskResult extends AbstractModel
      * @param LightResult $Light 光照识别结果
      * @param BodyMovementResult $StudentBodyMovement 学生肢体动作识别结果
      * @param BodyMovementResult $TeacherBodyMovement 老师肢体动作识别结果
+     * @param TeacherOutScreenResult $TeacherOutScreen 教师是否在屏幕内判断结果
      * @param TimeInfoResult $TimeInfo 时间统计结果
      */
     function __construct()
@@ -187,6 +195,11 @@ class ImageTaskResult extends AbstractModel
         if (array_key_exists("TeacherBodyMovement",$param) and $param["TeacherBodyMovement"] !== null) {
             $this->TeacherBodyMovement = new BodyMovementResult();
             $this->TeacherBodyMovement->deserialize($param["TeacherBodyMovement"]);
+        }
+
+        if (array_key_exists("TeacherOutScreen",$param) and $param["TeacherOutScreen"] !== null) {
+            $this->TeacherOutScreen = new TeacherOutScreenResult();
+            $this->TeacherOutScreen->deserialize($param["TeacherOutScreen"]);
         }
 
         if (array_key_exists("TimeInfo",$param) and $param["TimeInfo"] !== null) {

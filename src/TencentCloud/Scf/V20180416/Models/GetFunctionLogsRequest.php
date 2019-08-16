@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置根据某个字段排序日志,支持以下字段：function_name, duration, mem_usage, start_time
  * @method LogFilter getFilter() 获取日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
  * @method void setFilter(LogFilter $Filter) 设置日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
+ * @method string getNamespace() 获取函数的命名空间
+ * @method void setNamespace(string $Namespace) 设置函数的命名空间
  * @method string getQualifier() 获取函数的版本
  * @method void setQualifier(string $Qualifier) 设置函数的版本
  * @method string getFunctionRequestId() 获取执行该函数对应的requestId
@@ -38,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置查询的具体日期，例如：2017-05-16 20:00:00，只能与endtime相差一天之内
  * @method string getEndTime() 获取查询的具体日期，例如：2017-05-16 20:59:59，只能与startTime相差一天之内
  * @method void setEndTime(string $EndTime) 设置查询的具体日期，例如：2017-05-16 20:59:59，只能与startTime相差一天之内
+ * @method LogSearchContext getSearchContext() 获取服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+ * @method void setSearchContext(LogSearchContext $SearchContext) 设置服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
  */
 
 /**
@@ -76,6 +80,11 @@ class GetFunctionLogsRequest extends AbstractModel
     public $Filter;
 
     /**
+     * @var string 函数的命名空间
+     */
+    public $Namespace;
+
+    /**
      * @var string 函数的版本
      */
     public $Qualifier;
@@ -94,6 +103,11 @@ class GetFunctionLogsRequest extends AbstractModel
      * @var string 查询的具体日期，例如：2017-05-16 20:59:59，只能与startTime相差一天之内
      */
     public $EndTime;
+
+    /**
+     * @var LogSearchContext 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+     */
+    public $SearchContext;
     /**
      * @param string $FunctionName 函数的名称
      * @param integer $Offset 数据的偏移量，Offset+Limit不能大于10000
@@ -101,10 +115,12 @@ class GetFunctionLogsRequest extends AbstractModel
      * @param string $Order 以升序还是降序的方式对日志进行排序，可选值 desc和 asc
      * @param string $OrderBy 根据某个字段排序日志,支持以下字段：function_name, duration, mem_usage, start_time
      * @param LogFilter $Filter 日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
+     * @param string $Namespace 函数的命名空间
      * @param string $Qualifier 函数的版本
      * @param string $FunctionRequestId 执行该函数对应的requestId
      * @param string $StartTime 查询的具体日期，例如：2017-05-16 20:00:00，只能与endtime相差一天之内
      * @param string $EndTime 查询的具体日期，例如：2017-05-16 20:59:59，只能与startTime相差一天之内
+     * @param LogSearchContext $SearchContext 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
      */
     function __construct()
     {
@@ -143,6 +159,10 @@ class GetFunctionLogsRequest extends AbstractModel
             $this->Filter->deserialize($param["Filter"]);
         }
 
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
         if (array_key_exists("Qualifier",$param) and $param["Qualifier"] !== null) {
             $this->Qualifier = $param["Qualifier"];
         }
@@ -157,6 +177,11 @@ class GetFunctionLogsRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("SearchContext",$param) and $param["SearchContext"] !== null) {
+            $this->SearchContext = new LogSearchContext();
+            $this->SearchContext->deserialize($param["SearchContext"]);
         }
     }
 }

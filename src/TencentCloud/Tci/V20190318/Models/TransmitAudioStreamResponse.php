@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVocabAnalysisStatInfo(array $VocabAnalysisStatInfo) 设置返回词汇库中的单词出现的次数信息。
  * @method string getAllTexts() 获取音频全部文本。
  * @method void setAllTexts(string $AllTexts) 设置音频全部文本。
+ * @method string getAudioUrl() 获取临时保存的音频链接
+ * @method void setAudioUrl(string $AudioUrl) 设置临时保存的音频链接
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -63,6 +65,11 @@ class TransmitAudioStreamResponse extends AbstractModel
     public $AllTexts;
 
     /**
+     * @var string 临时保存的音频链接
+     */
+    public $AudioUrl;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -72,6 +79,7 @@ class TransmitAudioStreamResponse extends AbstractModel
      * @param array $VocabAnalysisDetailInfo 返回词汇库中的单词出现的详细时间信息。
      * @param array $VocabAnalysisStatInfo 返回词汇库中的单词出现的次数信息。
      * @param string $AllTexts 音频全部文本。
+     * @param string $AudioUrl 临时保存的音频链接
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -120,6 +128,10 @@ class TransmitAudioStreamResponse extends AbstractModel
 
         if (array_key_exists("AllTexts",$param) and $param["AllTexts"] !== null) {
             $this->AllTexts = $param["AllTexts"];
+        }
+
+        if (array_key_exists("AudioUrl",$param) and $param["AudioUrl"] !== null) {
+            $this->AudioUrl = $param["AudioUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

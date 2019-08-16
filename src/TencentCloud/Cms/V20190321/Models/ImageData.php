@@ -26,6 +26,7 @@ use TencentCloud\Common\AbstractModel;
 20002：色情 
 20006：涉毒违法
 20007：谩骂 
+20103：性感
 24001：暴恐
 21000：综合
  * @method void setEvilType(integer $EvilType) 设置恶意类型
@@ -34,12 +35,15 @@ use TencentCloud\Common\AbstractModel;
 20002：色情 
 20006：涉毒违法
 20007：谩骂 
+20103：性感
 24001：暴恐
 21000：综合
  * @method ImageHotDetect getHotDetect() 获取图片性感详情
  * @method void setHotDetect(ImageHotDetect $HotDetect) 设置图片性感详情
  * @method ImageIllegalDetect getIllegalDetect() 获取图片违法详情
  * @method void setIllegalDetect(ImageIllegalDetect $IllegalDetect) 设置图片违法详情
+ * @method OCRDetect getOCRDetect() 获取图片OCR详情
+ * @method void setOCRDetect(OCRDetect $OCRDetect) 设置图片OCR详情
  * @method ImagePolityDetect getPolityDetect() 获取图片涉政详情
  * @method void setPolityDetect(ImagePolityDetect $PolityDetect) 设置图片涉政详情
  * @method ImagePornDetect getPornDetect() 获取图片涉黄详情
@@ -67,6 +71,7 @@ class ImageData extends AbstractModel
 20002：色情 
 20006：涉毒违法
 20007：谩骂 
+20103：性感
 24001：暴恐
 21000：综合
      */
@@ -81,6 +86,11 @@ class ImageData extends AbstractModel
      * @var ImageIllegalDetect 图片违法详情
      */
     public $IllegalDetect;
+
+    /**
+     * @var OCRDetect 图片OCR详情
+     */
+    public $OCRDetect;
 
     /**
      * @var ImagePolityDetect 图片涉政详情
@@ -109,10 +119,12 @@ class ImageData extends AbstractModel
 20002：色情 
 20006：涉毒违法
 20007：谩骂 
+20103：性感
 24001：暴恐
 21000：综合
      * @param ImageHotDetect $HotDetect 图片性感详情
      * @param ImageIllegalDetect $IllegalDetect 图片违法详情
+     * @param OCRDetect $OCRDetect 图片OCR详情
      * @param ImagePolityDetect $PolityDetect 图片涉政详情
      * @param ImagePornDetect $PornDetect 图片涉黄详情
      * @param Similar $Similar 图片相似度详情
@@ -146,6 +158,11 @@ class ImageData extends AbstractModel
         if (array_key_exists("IllegalDetect",$param) and $param["IllegalDetect"] !== null) {
             $this->IllegalDetect = new ImageIllegalDetect();
             $this->IllegalDetect->deserialize($param["IllegalDetect"]);
+        }
+
+        if (array_key_exists("OCRDetect",$param) and $param["OCRDetect"] !== null) {
+            $this->OCRDetect = new OCRDetect();
+            $this->OCRDetect->deserialize($param["OCRDetect"]);
         }
 
         if (array_key_exists("PolityDetect",$param) and $param["PolityDetect"] !== null) {

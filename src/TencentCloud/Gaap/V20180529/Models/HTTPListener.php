@@ -28,8 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置监听器创建时间，Unix时间戳
  * @method string getProtocol() 获取监听器协议
  * @method void setProtocol(string $Protocol) 设置监听器协议
- * @method integer getListenerStatus() 获取监听器状态
- * @method void setListenerStatus(integer $ListenerStatus) 设置监听器状态
+ * @method integer getListenerStatus() 获取监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
+ * @method void setListenerStatus(integer $ListenerStatus) 设置监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
  */
 
 /**
@@ -63,7 +73,12 @@ class HTTPListener extends AbstractModel
     public $Protocol;
 
     /**
-     * @var integer 监听器状态
+     * @var integer 监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
      */
     public $ListenerStatus;
     /**
@@ -72,7 +87,12 @@ class HTTPListener extends AbstractModel
      * @param integer $Port 监听器端口
      * @param integer $CreateTime 监听器创建时间，Unix时间戳
      * @param string $Protocol 监听器协议
-     * @param integer $ListenerStatus 监听器状态
+     * @param integer $ListenerStatus 监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
      */
     function __construct()
     {

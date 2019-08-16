@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getRealServerId() 获取源站id
  * @method void setRealServerId(string $RealServerId) 设置源站id
- * @method integer getRealServerWeight() 获取源站权重
- * @method void setRealServerWeight(integer $RealServerWeight) 设置源站权重
  * @method integer getRealServerPort() 获取源站端口
  * @method void setRealServerPort(integer $RealServerPort) 设置源站端口
  * @method string getRealServerIP() 获取源站IP
  * @method void setRealServerIP(string $RealServerIP) 设置源站IP
+ * @method integer getRealServerWeight() 获取源站权重
+ * @method void setRealServerWeight(integer $RealServerWeight) 设置源站权重
  */
 
 /**
@@ -39,11 +39,6 @@ class RealServerBindSetReq extends AbstractModel
     public $RealServerId;
 
     /**
-     * @var integer 源站权重
-     */
-    public $RealServerWeight;
-
-    /**
      * @var integer 源站端口
      */
     public $RealServerPort;
@@ -52,11 +47,16 @@ class RealServerBindSetReq extends AbstractModel
      * @var string 源站IP
      */
     public $RealServerIP;
+
+    /**
+     * @var integer 源站权重
+     */
+    public $RealServerWeight;
     /**
      * @param string $RealServerId 源站id
-     * @param integer $RealServerWeight 源站权重
      * @param integer $RealServerPort 源站端口
      * @param string $RealServerIP 源站IP
+     * @param integer $RealServerWeight 源站权重
      */
     function __construct()
     {
@@ -74,16 +74,16 @@ class RealServerBindSetReq extends AbstractModel
             $this->RealServerId = $param["RealServerId"];
         }
 
-        if (array_key_exists("RealServerWeight",$param) and $param["RealServerWeight"] !== null) {
-            $this->RealServerWeight = $param["RealServerWeight"];
-        }
-
         if (array_key_exists("RealServerPort",$param) and $param["RealServerPort"] !== null) {
             $this->RealServerPort = $param["RealServerPort"];
         }
 
         if (array_key_exists("RealServerIP",$param) and $param["RealServerIP"] !== null) {
             $this->RealServerIP = $param["RealServerIP"];
+        }
+
+        if (array_key_exists("RealServerWeight",$param) and $param["RealServerWeight"] !== null) {
+            $this->RealServerWeight = $param["RealServerWeight"];
         }
     }
 }

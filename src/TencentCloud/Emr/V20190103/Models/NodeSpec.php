@@ -50,9 +50,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecName(string $SpecName) 设置规格名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getMultiDisks() 获取多云盘参数
+ * @method array getMultiDisks() 获取多盘数据
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMultiDisks(array $MultiDisks) 设置多云盘参数
+ * @method void setMultiDisks(array $MultiDisks) 设置多盘数据
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -110,7 +110,7 @@ class NodeSpec extends AbstractModel
     public $SpecName;
 
     /**
-     * @var array 多云盘参数
+     * @var array 多盘数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MultiDisks;
@@ -131,7 +131,7 @@ class NodeSpec extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpecName 规格名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $MultiDisks 多云盘参数
+     * @param array $MultiDisks 多盘数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

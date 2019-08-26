@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImages(array $Images) 设置快照关联的镜像列表。
  * @method integer getImageCount() 获取快照关联的镜像个数。
  * @method void setImageCount(integer $ImageCount) 设置快照关联的镜像个数。
+ * @method string getSnapshotType() 获取快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+ * @method void setSnapshotType(string $SnapshotType) 设置快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
  */
 
 /**
@@ -136,6 +138,11 @@ class Snapshot extends AbstractModel
      * @var integer 快照关联的镜像个数。
      */
     public $ImageCount;
+
+    /**
+     * @var string 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+     */
+    public $SnapshotType;
     /**
      * @param string $SnapshotId 快照ID。
      * @param Placement $Placement 快照所在的位置。
@@ -153,6 +160,7 @@ class Snapshot extends AbstractModel
      * @param boolean $CopyFromRemote 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
      * @param array $Images 快照关联的镜像列表。
      * @param integer $ImageCount 快照关联的镜像个数。
+     * @param string $SnapshotType 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
      */
     function __construct()
     {
@@ -234,6 +242,10 @@ class Snapshot extends AbstractModel
 
         if (array_key_exists("ImageCount",$param) and $param["ImageCount"] !== null) {
             $this->ImageCount = $param["ImageCount"];
+        }
+
+        if (array_key_exists("SnapshotType",$param) and $param["SnapshotType"] !== null) {
+            $this->SnapshotType = $param["SnapshotType"];
         }
     }
 }

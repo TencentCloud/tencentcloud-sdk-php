@@ -18,8 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getIdCard() 获取身份证号
- * @method void setIdCard(string $IdCard) 设置身份证号
+ * @method string getIdCard() 获取开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
+ * @method void setIdCard(string $IdCard) 设置开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
  * @method string getName() 获取姓名
  * @method void setName(string $Name) 设置姓名
  * @method string getBankCard() 获取银行卡
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class BankCardVerificationRequest extends AbstractModel
 {
     /**
-     * @var string 身份证号
+     * @var string 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
      */
     public $IdCard;
 
@@ -77,7 +77,7 @@ class BankCardVerificationRequest extends AbstractModel
      */
     public $CertType;
     /**
-     * @param string $IdCard 身份证号
+     * @param string $IdCard 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
      * @param string $Name 姓名
      * @param string $BankCard 银行卡
      * @param integer $CertType 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。（不填默认0）

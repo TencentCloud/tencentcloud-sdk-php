@@ -44,11 +44,11 @@ use TencentCloud\Common\AbstractModel;
 提取人脸属性信息较为耗时，如不需要人脸属性信息，建议关闭此项功能，加快人脸检测速度。
  * @method integer getNeedQualityDetection() 获取是否开启质量检测。0 为关闭，1 为开启。默认为 0。 
 非 1 值均视为不进行质量检测。
-最多返回面积最大的 5 张人脸质量分信息，超过 5 张人脸（第 6 张及以后的人脸）的 FaceQualityInfo不具备参考意义。  
+最多返回面积最大的 30 张人脸质量分信息，超过 30 张人脸（第 31 张及以后的人脸）的 FaceQualityInfo不具备参考意义。  
 建议：人脸入库操作建议开启此功能。
  * @method void setNeedQualityDetection(integer $NeedQualityDetection) 设置是否开启质量检测。0 为关闭，1 为开启。默认为 0。 
 非 1 值均视为不进行质量检测。
-最多返回面积最大的 5 张人脸质量分信息，超过 5 张人脸（第 6 张及以后的人脸）的 FaceQualityInfo不具备参考意义。  
+最多返回面积最大的 30 张人脸质量分信息，超过 30 张人脸（第 31 张及以后的人脸）的 FaceQualityInfo不具备参考意义。  
 建议：人脸入库操作建议开启此功能。
  */
 
@@ -92,7 +92,7 @@ class DetectFaceRequest extends AbstractModel
     /**
      * @var integer 是否开启质量检测。0 为关闭，1 为开启。默认为 0。 
 非 1 值均视为不进行质量检测。
-最多返回面积最大的 5 张人脸质量分信息，超过 5 张人脸（第 6 张及以后的人脸）的 FaceQualityInfo不具备参考意义。  
+最多返回面积最大的 30 张人脸质量分信息，超过 30 张人脸（第 31 张及以后的人脸）的 FaceQualityInfo不具备参考意义。  
 建议：人脸入库操作建议开启此功能。
      */
     public $NeedQualityDetection;
@@ -111,7 +111,7 @@ class DetectFaceRequest extends AbstractModel
 提取人脸属性信息较为耗时，如不需要人脸属性信息，建议关闭此项功能，加快人脸检测速度。
      * @param integer $NeedQualityDetection 是否开启质量检测。0 为关闭，1 为开启。默认为 0。 
 非 1 值均视为不进行质量检测。
-最多返回面积最大的 5 张人脸质量分信息，超过 5 张人脸（第 6 张及以后的人脸）的 FaceQualityInfo不具备参考意义。  
+最多返回面积最大的 30 张人脸质量分信息，超过 30 张人脸（第 31 张及以后的人脸）的 FaceQualityInfo不具备参考意义。  
 建议：人脸入库操作建议开启此功能。
      */
     function __construct()

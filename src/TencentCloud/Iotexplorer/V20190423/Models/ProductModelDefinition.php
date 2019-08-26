@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(integer $UpdateTime) 设置更新时间，秒级时间戳
  * @method integer getCreateTime() 获取创建时间，秒级时间戳
  * @method void setCreateTime(integer $CreateTime) 设置创建时间，秒级时间戳
+ * @method string getCategoryModel() 获取产品所属分类的模型快照（产品创建时刻的）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCategoryModel(string $CategoryModel) 设置产品所属分类的模型快照（产品创建时刻的）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -52,11 +56,19 @@ class ProductModelDefinition extends AbstractModel
      * @var integer 创建时间，秒级时间戳
      */
     public $CreateTime;
+
+    /**
+     * @var string 产品所属分类的模型快照（产品创建时刻的）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CategoryModel;
     /**
      * @param string $ProductId 产品ID
      * @param string $ModelDefine 模型定义
      * @param integer $UpdateTime 更新时间，秒级时间戳
      * @param integer $CreateTime 创建时间，秒级时间戳
+     * @param string $CategoryModel 产品所属分类的模型快照（产品创建时刻的）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class ProductModelDefinition extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("CategoryModel",$param) and $param["CategoryModel"] !== null) {
+            $this->CategoryModel = $param["CategoryModel"];
         }
     }
 }

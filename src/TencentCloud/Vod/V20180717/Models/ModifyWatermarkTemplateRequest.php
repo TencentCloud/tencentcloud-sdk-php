@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageTemplate(ImageWatermarkInputForUpdate $ImageTemplate) 设置图片水印模板，该字段仅对图片水印模板有效。
  * @method TextWatermarkTemplateInputForUpdate getTextTemplate() 获取文字水印模板，该字段仅对文字水印模板有效。
  * @method void setTextTemplate(TextWatermarkTemplateInputForUpdate $TextTemplate) 设置文字水印模板，该字段仅对文字水印模板有效。
- * @method SvgWatermarkInputForUpdate getSvgTemplate() 获取SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
- * @method void setSvgTemplate(SvgWatermarkInputForUpdate $SvgTemplate) 设置SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
+ * @method SvgWatermarkInputForUpdate getSvgTemplate() 获取SVG 水印模板，该字段仅对 SVG 水印模板有效。
+ * @method void setSvgTemplate(SvgWatermarkInputForUpdate $SvgTemplate) 设置SVG 水印模板，该字段仅对 SVG 水印模板有效。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
@@ -113,7 +113,7 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
     public $TextTemplate;
 
     /**
-     * @var SvgWatermarkInputForUpdate SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
+     * @var SvgWatermarkInputForUpdate SVG 水印模板，该字段仅对 SVG 水印模板有效。
      */
     public $SvgTemplate;
 
@@ -139,7 +139,7 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
 <li>当字符串以 px 结尾，表示水印 YPos 为指定像素，如 100px 表示 YPos 为 100 像素。</li>
      * @param ImageWatermarkInputForUpdate $ImageTemplate 图片水印模板，该字段仅对图片水印模板有效。
      * @param TextWatermarkTemplateInputForUpdate $TextTemplate 文字水印模板，该字段仅对文字水印模板有效。
-     * @param SvgWatermarkInputForUpdate $SvgTemplate SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
+     * @param SvgWatermarkInputForUpdate $SvgTemplate SVG 水印模板，该字段仅对 SVG 水印模板有效。
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(integer $TemplateId) 设置模板Id。
  * @method string getTemplateName() 获取模板名称。
  * @method void setTemplateName(string $TemplateName) 设置模板名称。
- * @method integer getSnapshotInterval() 获取截图时间间隔。5-300
- * @method void setSnapshotInterval(integer $SnapshotInterval) 设置截图时间间隔。5-300
+ * @method integer getSnapshotInterval() 获取截图时间间隔。5-300秒。
+ * @method void setSnapshotInterval(integer $SnapshotInterval) 设置截图时间间隔。5-300秒。
  * @method integer getWidth() 获取截图宽度。0-3000 0原始宽度并适配原始比例
  * @method void setWidth(integer $Width) 设置截图宽度。0-3000 0原始宽度并适配原始比例
  * @method integer getHeight() 获取截图高度。0-2000 0原始高度并适配原始比例
@@ -56,7 +56,7 @@ class SnapshotTemplateInfo extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var integer 截图时间间隔。5-300
+     * @var integer 截图时间间隔。5-300秒。
      */
     public $SnapshotInterval;
 
@@ -97,7 +97,7 @@ class SnapshotTemplateInfo extends AbstractModel
     /**
      * @param integer $TemplateId 模板Id。
      * @param string $TemplateName 模板名称。
-     * @param integer $SnapshotInterval 截图时间间隔。5-300
+     * @param integer $SnapshotInterval 截图时间间隔。5-300秒。
      * @param integer $Width 截图宽度。0-3000 0原始宽度并适配原始比例
      * @param integer $Height 截图高度。0-2000 0原始高度并适配原始比例
      * @param integer $PornFlag 是否开启鉴黄，0：不开启，1：开启。

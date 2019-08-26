@@ -30,14 +30,20 @@ use TencentCloud\Common\AbstractModel;
 1：国内，
 2：全球，
 3：境外。
+默认值：1。
  * @method void setPlayType(integer $PlayType) 设置拉流域名类型：
 1：国内，
 2：全球，
 3：境外。
- * @method integer getIsDelayLive() 获取默认 0 ：普通直播，
-1：慢直播。
- * @method void setIsDelayLive(integer $IsDelayLive) 设置默认 0 ：普通直播，
-1：慢直播。
+默认值：1。
+ * @method integer getIsDelayLive() 获取是否是慢直播：
+0： 普通直播，
+1 ：慢直播 。
+默认值： 0。
+ * @method void setIsDelayLive(integer $IsDelayLive) 设置是否是慢直播：
+0： 普通直播，
+1 ：慢直播 。
+默认值： 0。
  */
 
 /**
@@ -62,12 +68,15 @@ class AddLiveDomainRequest extends AbstractModel
 1：国内，
 2：全球，
 3：境外。
+默认值：1。
      */
     public $PlayType;
 
     /**
-     * @var integer 默认 0 ：普通直播，
-1：慢直播。
+     * @var integer 是否是慢直播：
+0： 普通直播，
+1 ：慢直播 。
+默认值： 0。
      */
     public $IsDelayLive;
     /**
@@ -79,8 +88,11 @@ class AddLiveDomainRequest extends AbstractModel
 1：国内，
 2：全球，
 3：境外。
-     * @param integer $IsDelayLive 默认 0 ：普通直播，
-1：慢直播。
+默认值：1。
+     * @param integer $IsDelayLive 是否是慢直播：
+0： 普通直播，
+1 ：慢直播 。
+默认值： 0。
      */
     function __construct()
     {

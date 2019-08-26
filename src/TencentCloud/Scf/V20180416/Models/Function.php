@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置函数描述
  * @method array getTags() 获取函数标签
  * @method void setTags(array $Tags) 设置函数标签
+ * @method string getType() 获取函数类型，取值为 HTTP 或者 Event
+ * @method void setType(string $Type) 设置函数类型，取值为 HTTP 或者 Event
  */
 
 /**
@@ -94,6 +96,11 @@ class Function extends AbstractModel
      * @var array 函数标签
      */
     public $Tags;
+
+    /**
+     * @var string 函数类型，取值为 HTTP 或者 Event
+     */
+    public $Type;
     /**
      * @param string $ModTime 修改时间
      * @param string $AddTime 创建时间
@@ -105,6 +112,7 @@ class Function extends AbstractModel
      * @param string $StatusDesc 函数状态详情
      * @param string $Description 函数描述
      * @param array $Tags 函数标签
+     * @param string $Type 函数类型，取值为 HTTP 或者 Event
      */
     function __construct()
     {
@@ -161,6 +169,10 @@ class Function extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

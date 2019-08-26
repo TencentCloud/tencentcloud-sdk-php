@@ -18,6 +18,12 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method array getFailedInstanceIds() 获取失败的节点ID
+ * @method void setFailedInstanceIds(array $FailedInstanceIds) 设置失败的节点ID
+ * @method array getSuccInstanceIds() 获取成功的节点ID
+ * @method void setSuccInstanceIds(array $SuccInstanceIds) 设置成功的节点ID
+ * @method array getTimeoutInstanceIds() 获取超时未返回出来节点的ID(可能失败，也可能成功)
+ * @method void setTimeoutInstanceIds(array $TimeoutInstanceIds) 设置超时未返回出来节点的ID(可能失败，也可能成功)
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -28,10 +34,28 @@ use TencentCloud\Common\AbstractModel;
 class AddExistedInstancesResponse extends AbstractModel
 {
     /**
+     * @var array 失败的节点ID
+     */
+    public $FailedInstanceIds;
+
+    /**
+     * @var array 成功的节点ID
+     */
+    public $SuccInstanceIds;
+
+    /**
+     * @var array 超时未返回出来节点的ID(可能失败，也可能成功)
+     */
+    public $TimeoutInstanceIds;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
+     * @param array $FailedInstanceIds 失败的节点ID
+     * @param array $SuccInstanceIds 成功的节点ID
+     * @param array $TimeoutInstanceIds 超时未返回出来节点的ID(可能失败，也可能成功)
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +70,18 @@ class AddExistedInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("FailedInstanceIds",$param) and $param["FailedInstanceIds"] !== null) {
+            $this->FailedInstanceIds = $param["FailedInstanceIds"];
+        }
+
+        if (array_key_exists("SuccInstanceIds",$param) and $param["SuccInstanceIds"] !== null) {
+            $this->SuccInstanceIds = $param["SuccInstanceIds"];
+        }
+
+        if (array_key_exists("TimeoutInstanceIds",$param) and $param["TimeoutInstanceIds"] !== null) {
+            $this->TimeoutInstanceIds = $param["TimeoutInstanceIds"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

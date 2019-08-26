@@ -18,12 +18,14 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getModule() 获取模块名
- * @method void setModule(string $Module) 设置模块名
- * @method string getOperation() 获取操作名
- * @method void setOperation(string $Operation) 设置操作名
- * @method string getTaskId() 获取任务ID，形如abc-a0b1c2xyz
- * @method void setTaskId(string $TaskId) 设置任务ID，形如abc-a0b1c2xyz
+ * @method string getModule() 获取模块名，本接口取值：Task
+ * @method void setModule(string $Module) 设置模块名，本接口取值：Task
+ * @method string getOperation() 获取操作名，本接口取值：DescribeTaskStatus
+ * @method void setOperation(string $Operation) 设置操作名，本接口取值：DescribeTaskStatus
+ * @method string getTaskId() 获取任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123
+ * @method void setTaskId(string $TaskId) 设置任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123
+ * @method string getInstId() 获取实例ID，不传默认为系统分配的初始实例。
+ * @method void setInstId(string $InstId) 设置实例ID，不传默认为系统分配的初始实例。
  */
 
 /**
@@ -32,23 +34,29 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTaskStatusRequest extends AbstractModel
 {
     /**
-     * @var string 模块名
+     * @var string 模块名，本接口取值：Task
      */
     public $Module;
 
     /**
-     * @var string 操作名
+     * @var string 操作名，本接口取值：DescribeTaskStatus
      */
     public $Operation;
 
     /**
-     * @var string 任务ID，形如abc-a0b1c2xyz
+     * @var string 任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123
      */
     public $TaskId;
+
     /**
-     * @param string $Module 模块名
-     * @param string $Operation 操作名
-     * @param string $TaskId 任务ID，形如abc-a0b1c2xyz
+     * @var string 实例ID，不传默认为系统分配的初始实例。
+     */
+    public $InstId;
+    /**
+     * @param string $Module 模块名，本接口取值：Task
+     * @param string $Operation 操作名，本接口取值：DescribeTaskStatus
+     * @param string $TaskId 任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123
+     * @param string $InstId 实例ID，不传默认为系统分配的初始实例。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeTaskStatusRequest extends AbstractModel
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("InstId",$param) and $param["InstId"] !== null) {
+            $this->InstId = $param["InstId"];
         }
     }
 }

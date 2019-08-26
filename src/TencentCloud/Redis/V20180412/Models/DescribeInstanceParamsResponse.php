@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIntegerParam(array $InstanceIntegerParam) 设置实例整型参数
  * @method array getInstanceTextParam() 获取实例字符型参数
  * @method void setInstanceTextParam(array $InstanceTextParam) 设置实例字符型参数
+ * @method array getInstanceMultiParam() 获取实例多选项型参数
+ * @method void setInstanceMultiParam(array $InstanceMultiParam) 设置实例多选项型参数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,6 +58,11 @@ class DescribeInstanceParamsResponse extends AbstractModel
     public $InstanceTextParam;
 
     /**
+     * @var array 实例多选项型参数
+     */
+    public $InstanceMultiParam;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -64,6 +71,7 @@ class DescribeInstanceParamsResponse extends AbstractModel
      * @param array $InstanceEnumParam 实例枚举类型参数
      * @param array $InstanceIntegerParam 实例整型参数
      * @param array $InstanceTextParam 实例字符型参数
+     * @param array $InstanceMultiParam 实例多选项型参数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -106,6 +114,15 @@ class DescribeInstanceParamsResponse extends AbstractModel
                 $obj = new InstanceTextParam();
                 $obj->deserialize($value);
                 array_push($this->InstanceTextParam, $obj);
+            }
+        }
+
+        if (array_key_exists("InstanceMultiParam",$param) and $param["InstanceMultiParam"] !== null) {
+            $this->InstanceMultiParam = [];
+            foreach ($param["InstanceMultiParam"] as $key => $value){
+                $obj = new InstanceMultiParam();
+                $obj->deserialize($value);
+                array_push($this->InstanceMultiParam, $obj);
             }
         }
 

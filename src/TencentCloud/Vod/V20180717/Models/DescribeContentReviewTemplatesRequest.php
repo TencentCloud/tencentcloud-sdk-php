@@ -18,12 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getDefinitions() 获取内容审核模板唯一标识过滤条件，数组长度限制：50。
- * @method void setDefinitions(array $Definitions) 设置内容审核模板唯一标识过滤条件，数组长度限制：50。
+ * @method array getDefinitions() 获取内容审核模板唯一标识过滤条件，数组长度限制：100。
+ * @method void setDefinitions(array $Definitions) 设置内容审核模板唯一标识过滤条件，数组长度限制：100。
  * @method integer getOffset() 获取分页偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
- * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：50。
- * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：50。
+ * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
+ * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeContentReviewTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 内容审核模板唯一标识过滤条件，数组长度限制：50。
+     * @var array 内容审核模板唯一标识过滤条件，数组长度限制：100。
      */
     public $Definitions;
 
@@ -44,7 +44,7 @@ class DescribeContentReviewTemplatesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 返回记录条数，默认值：10，最大值：50。
+     * @var integer 返回记录条数，默认值：10，最大值：100。
      */
     public $Limit;
 
@@ -53,9 +53,9 @@ class DescribeContentReviewTemplatesRequest extends AbstractModel
      */
     public $SubAppId;
     /**
-     * @param array $Definitions 内容审核模板唯一标识过滤条件，数组长度限制：50。
+     * @param array $Definitions 内容审核模板唯一标识过滤条件，数组长度限制：100。
      * @param integer $Offset 分页偏移量，默认值：0。
-     * @param integer $Limit 返回记录条数，默认值：10，最大值：50。
+     * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()

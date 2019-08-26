@@ -50,9 +50,9 @@ use TencentCloud\Common\AbstractModel;
 <br><li>SPOTPAID：竞价付费
  * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
- * @method array getInstanceTypes() 获取实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。
+ * @method array getInstanceTypes() 获取实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
 `InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
- * @method void setInstanceTypes(array $InstanceTypes) 设置实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。
+ * @method void setInstanceTypes(array $InstanceTypes) 设置实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
 `InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
  * @method string getInstanceTypesCheckPolicy() 获取实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
 <br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
@@ -146,7 +146,7 @@ class CreateLaunchConfigurationRequest extends AbstractModel
     public $InstanceMarketOptions;
 
     /**
-     * @var array 实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。
+     * @var array 实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
 `InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
      */
     public $InstanceTypes;
@@ -187,7 +187,7 @@ class CreateLaunchConfigurationRequest extends AbstractModel
 <br><li>POSTPAID_BY_HOUR：按小时后付费
 <br><li>SPOTPAID：竞价付费
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
-     * @param array $InstanceTypes 实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。
+     * @param array $InstanceTypes 实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
 `InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
      * @param string $InstanceTypesCheckPolicy 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
 <br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。

@@ -36,10 +36,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuntime(string $Runtime) 设置函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
  * @method VpcConfig getVpcConfig() 获取函数的私有网络配置
  * @method void setVpcConfig(VpcConfig $VpcConfig) 设置函数的私有网络配置
+ * @method string getNamespace() 获取函数所属命名空间
+ * @method void setNamespace(string $Namespace) 设置函数所属命名空间
+ * @method string getRole() 获取函数绑定的角色
+ * @method void setRole(string $Role) 设置函数绑定的角色
  * @method string getClsLogsetId() 获取函数日志投递到的CLS LogsetID
  * @method void setClsLogsetId(string $ClsLogsetId) 设置函数日志投递到的CLS LogsetID
  * @method string getClsTopicId() 获取函数日志投递到的CLS TopicID
  * @method void setClsTopicId(string $ClsTopicId) 设置函数日志投递到的CLS TopicID
+ * @method string getType() 获取函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
+ * @method void setType(string $Type) 设置函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
+ * @method string getCodeSource() 获取CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
+ * @method void setCodeSource(string $CodeSource) 设置CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
  */
 
 /**
@@ -93,6 +101,16 @@ class CreateFunctionRequest extends AbstractModel
     public $VpcConfig;
 
     /**
+     * @var string 函数所属命名空间
+     */
+    public $Namespace;
+
+    /**
+     * @var string 函数绑定的角色
+     */
+    public $Role;
+
+    /**
      * @var string 函数日志投递到的CLS LogsetID
      */
     public $ClsLogsetId;
@@ -101,6 +119,16 @@ class CreateFunctionRequest extends AbstractModel
      * @var string 函数日志投递到的CLS TopicID
      */
     public $ClsTopicId;
+
+    /**
+     * @var string 函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
+     */
+    public $Type;
+
+    /**
+     * @var string CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
+     */
+    public $CodeSource;
     /**
      * @param string $FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      * @param Code $Code 函数的代码. 注意：不能同时指定Cos与ZipFile
@@ -111,8 +139,12 @@ class CreateFunctionRequest extends AbstractModel
      * @param Environment $Environment 函数的环境变量
      * @param string $Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
      * @param VpcConfig $VpcConfig 函数的私有网络配置
+     * @param string $Namespace 函数所属命名空间
+     * @param string $Role 函数绑定的角色
      * @param string $ClsLogsetId 函数日志投递到的CLS LogsetID
      * @param string $ClsTopicId 函数日志投递到的CLS TopicID
+     * @param string $Type 函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
+     * @param string $CodeSource CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
      */
     function __construct()
     {
@@ -165,12 +197,28 @@ class CreateFunctionRequest extends AbstractModel
             $this->VpcConfig->deserialize($param["VpcConfig"]);
         }
 
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
+        }
+
         if (array_key_exists("ClsLogsetId",$param) and $param["ClsLogsetId"] !== null) {
             $this->ClsLogsetId = $param["ClsLogsetId"];
         }
 
         if (array_key_exists("ClsTopicId",$param) and $param["ClsTopicId"] !== null) {
             $this->ClsTopicId = $param["ClsTopicId"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("CodeSource",$param) and $param["CodeSource"] !== null) {
+            $this->CodeSource = $param["CodeSource"];
         }
     }
 }

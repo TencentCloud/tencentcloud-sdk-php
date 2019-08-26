@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数据长度，默认值为 20
  * @method string getSearchKey() 获取支持FunctionName模糊匹配
  * @method void setSearchKey(string $SearchKey) 设置支持FunctionName模糊匹配
+ * @method string getNamespace() 获取命名空间
+ * @method void setNamespace(string $Namespace) 设置命名空间
  * @method string getDescription() 获取函数描述，支持模糊搜索
  * @method void setDescription(string $Description) 设置函数描述，支持模糊搜索
  * @method array getFilters() 获取过滤条件。
@@ -71,6 +73,11 @@ class ListFunctionsRequest extends AbstractModel
     public $SearchKey;
 
     /**
+     * @var string 命名空间
+     */
+    public $Namespace;
+
+    /**
      * @var string 函数描述，支持模糊搜索
      */
     public $Description;
@@ -88,6 +95,7 @@ class ListFunctionsRequest extends AbstractModel
      * @param integer $Offset 数据偏移量，默认值为 0
      * @param integer $Limit 返回数据长度，默认值为 20
      * @param string $SearchKey 支持FunctionName模糊匹配
+     * @param string $Namespace 命名空间
      * @param string $Description 函数描述，支持模糊搜索
      * @param array $Filters 过滤条件。
 - tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
@@ -124,6 +132,10 @@ class ListFunctionsRequest extends AbstractModel
 
         if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
             $this->SearchKey = $param["SearchKey"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

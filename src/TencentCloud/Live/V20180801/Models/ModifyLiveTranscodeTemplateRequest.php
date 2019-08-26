@@ -58,6 +58,8 @@ baseline/main/high。
  * @method void setHeightToOrig(integer $HeightToOrig) 设置是否不超过原始高。0：否，1：是。默认0。
  * @method integer getFpsToOrig() 获取是否不超过原始帧率。0：否，1：是。默认0。
  * @method void setFpsToOrig(integer $FpsToOrig) 设置是否不超过原始帧率。0：否，1：是。默认0。
+ * @method float getAdaptBitratePercent() 获取急速高清相比VideoBitrate少多少码率，0.1到0.5
+ * @method void setAdaptBitratePercent(float $AdaptBitratePercent) 设置急速高清相比VideoBitrate少多少码率，0.1到0.5
  */
 
 /**
@@ -152,6 +154,11 @@ baseline/main/high。
      * @var integer 是否不超过原始帧率。0：否，1：是。默认0。
      */
     public $FpsToOrig;
+
+    /**
+     * @var float 急速高清相比VideoBitrate少多少码率，0.1到0.5
+     */
+    public $AdaptBitratePercent;
     /**
      * @param integer $TemplateId 模板Id。
      * @param string $Vcodec 视频编码：
@@ -173,6 +180,7 @@ baseline/main/high。
      * @param integer $BitrateToOrig 是否不超过原始码率。0：否，1：是。默认0。
      * @param integer $HeightToOrig 是否不超过原始高。0：否，1：是。默认0。
      * @param integer $FpsToOrig 是否不超过原始帧率。0：否，1：是。默认0。
+     * @param float $AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ baseline/main/high。
 
         if (array_key_exists("FpsToOrig",$param) and $param["FpsToOrig"] !== null) {
             $this->FpsToOrig = $param["FpsToOrig"];
+        }
+
+        if (array_key_exists("AdaptBitratePercent",$param) and $param["AdaptBitratePercent"] !== null) {
+            $this->AdaptBitratePercent = $param["AdaptBitratePercent"];
         }
     }
 }

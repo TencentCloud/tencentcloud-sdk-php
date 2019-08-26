@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getFunctionName() 获取要删除的函数名称
  * @method void setFunctionName(string $FunctionName) 设置要删除的函数名称
+ * @method string getNamespace() 获取函数所属命名空间
+ * @method void setNamespace(string $Namespace) 设置函数所属命名空间
  */
 
 /**
@@ -31,8 +33,14 @@ class DeleteFunctionRequest extends AbstractModel
      * @var string 要删除的函数名称
      */
     public $FunctionName;
+
+    /**
+     * @var string 函数所属命名空间
+     */
+    public $Namespace;
     /**
      * @param string $FunctionName 要删除的函数名称
+     * @param string $Namespace 函数所属命名空间
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteFunctionRequest extends AbstractModel
         }
         if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
             $this->FunctionName = $param["FunctionName"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
         }
     }
 }

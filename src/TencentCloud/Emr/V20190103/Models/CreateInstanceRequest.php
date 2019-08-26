@@ -46,12 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCOSSettings(COSSettings $COSSettings) 设置COS设置参数
  * @method string getSgId() 获取安全组ID
  * @method void setSgId(string $SgId) 设置安全组ID
- * @method PreExecuteFileSettings getPreExecutedFileSettings() 获取预执行脚本设置
- * @method void setPreExecutedFileSettings(PreExecuteFileSettings $PreExecutedFileSettings) 设置预执行脚本设置
+ * @method array getPreExecutedFileSettings() 获取预执行脚本设置
+ * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) 设置预执行脚本设置
  * @method integer getAutoRenew() 获取自动续费
  * @method void setAutoRenew(integer $AutoRenew) 设置自动续费
  * @method string getNeedMasterWan() 获取是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
  * @method void setNeedMasterWan(string $NeedMasterWan) 设置是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+ * @method integer getRemoteLoginAtCreate() 获取是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+ * @method void setRemoteLoginAtCreate(integer $RemoteLoginAtCreate) 设置是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
  */
 
 /**
@@ -130,7 +132,7 @@ class CreateInstanceRequest extends AbstractModel
     public $SgId;
 
     /**
-     * @var PreExecuteFileSettings 预执行脚本设置
+     * @var array 预执行脚本设置
      */
     public $PreExecutedFileSettings;
 
@@ -143,6 +145,11 @@ class CreateInstanceRequest extends AbstractModel
      * @var string 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
      */
     public $NeedMasterWan;
+
+    /**
+     * @var integer 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+     */
+    public $RemoteLoginAtCreate;
     /**
      * @param integer $ProductId 产品ID
      * @param VPCSettings $VPCSettings VPC设置参数
@@ -158,9 +165,10 @@ class CreateInstanceRequest extends AbstractModel
      * @param string $ClientToken 客户端Token
      * @param COSSettings $COSSettings COS设置参数
      * @param string $SgId 安全组ID
-     * @param PreExecuteFileSettings $PreExecutedFileSettings 预执行脚本设置
+     * @param array $PreExecutedFileSettings 预执行脚本设置
      * @param integer $AutoRenew 自动续费
      * @param string $NeedMasterWan 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+     * @param integer $RemoteLoginAtCreate 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
      */
     function __construct()
     {
@@ -236,8 +244,12 @@ class CreateInstanceRequest extends AbstractModel
         }
 
         if (array_key_exists("PreExecutedFileSettings",$param) and $param["PreExecutedFileSettings"] !== null) {
-            $this->PreExecutedFileSettings = new PreExecuteFileSettings();
-            $this->PreExecutedFileSettings->deserialize($param["PreExecutedFileSettings"]);
+            $this->PreExecutedFileSettings = [];
+            foreach ($param["PreExecutedFileSettings"] as $key => $value){
+                $obj = new PreExecuteFileSettings();
+                $obj->deserialize($value);
+                array_push($this->PreExecutedFileSettings, $obj);
+            }
         }
 
         if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
@@ -246,6 +258,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("NeedMasterWan",$param) and $param["NeedMasterWan"] !== null) {
             $this->NeedMasterWan = $param["NeedMasterWan"];
+        }
+
+        if (array_key_exists("RemoteLoginAtCreate",$param) and $param["RemoteLoginAtCreate"] !== null) {
+            $this->RemoteLoginAtCreate = $param["RemoteLoginAtCreate"];
         }
     }
 }

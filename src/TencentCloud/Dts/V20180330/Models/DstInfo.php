@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getInstanceId() 获取目标实例Id，如cdb-jd92ijd8
  * @method void setInstanceId(string $InstanceId) 设置目标实例Id，如cdb-jd92ijd8
+ * @method string getRegion() 获取目标实例地域，如ap-guangzhou
+ * @method void setRegion(string $Region) 设置目标实例地域，如ap-guangzhou
  * @method string getIp() 获取目标实例vip。已废弃，无需填写
  * @method void setIp(string $Ip) 设置目标实例vip。已废弃，无需填写
  * @method integer getPort() 获取目标实例vport。已废弃，无需填写
  * @method void setPort(integer $Port) 设置目标实例vport。已废弃，无需填写
- * @method string getRegion() 获取目标实例地域，如ap-guangzhou
- * @method void setRegion(string $Region) 设置目标实例地域，如ap-guangzhou
  * @method integer getReadOnly() 获取目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
  * @method void setReadOnly(integer $ReadOnly) 设置目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
  */
@@ -41,6 +41,11 @@ class DstInfo extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string 目标实例地域，如ap-guangzhou
+     */
+    public $Region;
+
+    /**
      * @var string 目标实例vip。已废弃，无需填写
      */
     public $Ip;
@@ -51,19 +56,14 @@ class DstInfo extends AbstractModel
     public $Port;
 
     /**
-     * @var string 目标实例地域，如ap-guangzhou
-     */
-    public $Region;
-
-    /**
      * @var integer 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
      */
     public $ReadOnly;
     /**
      * @param string $InstanceId 目标实例Id，如cdb-jd92ijd8
+     * @param string $Region 目标实例地域，如ap-guangzhou
      * @param string $Ip 目标实例vip。已废弃，无需填写
      * @param integer $Port 目标实例vport。已废弃，无需填写
-     * @param string $Region 目标实例地域，如ap-guangzhou
      * @param integer $ReadOnly 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
      */
     function __construct()
@@ -82,16 +82,16 @@ class DstInfo extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
         if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
             $this->Ip = $param["Ip"];
         }
 
         if (array_key_exists("Port",$param) and $param["Port"] !== null) {
             $this->Port = $param["Port"];
-        }
-
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
         }
 
         if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {

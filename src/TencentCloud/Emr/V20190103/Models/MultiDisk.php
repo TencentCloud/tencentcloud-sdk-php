@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskType(string $DiskType) 设置云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
  * @method integer getVolume() 获取云盘大小
  * @method void setVolume(integer $Volume) 设置云盘大小
+ * @method integer getCount() 获取该类型云盘个数
+ * @method void setCount(integer $Count) 设置该类型云盘个数
  */
 
 /**
@@ -38,9 +40,15 @@ class MultiDisk extends AbstractModel
      * @var integer 云盘大小
      */
     public $Volume;
+
+    /**
+     * @var integer 该类型云盘个数
+     */
+    public $Count;
     /**
      * @param string $DiskType 云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
      * @param integer $Volume 云盘大小
+     * @param integer $Count 该类型云盘个数
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class MultiDisk extends AbstractModel
 
         if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
             $this->Volume = $param["Volume"];
+        }
+
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
         }
     }
 }

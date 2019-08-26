@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageResult(StandardImageResult $ImageResult) 设置图像分析结果
  * @method StandardVideoResult getVideoResult() 获取视频分析结果
  * @method void setVideoResult(StandardVideoResult $VideoResult) 设置视频分析结果
+ * @method string getStatus() 获取任务状态
+ * @method void setStatus(string $Status) 设置任务状态
  * @method integer getTaskId() 获取任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
  * @method void setTaskId(integer $TaskId) 设置任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,6 +53,11 @@ class DescribeAITaskResultResponse extends AbstractModel
     public $VideoResult;
 
     /**
+     * @var string 任务状态
+     */
+    public $Status;
+
+    /**
      * @var integer 任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      */
     public $TaskId;
@@ -63,6 +70,7 @@ class DescribeAITaskResultResponse extends AbstractModel
      * @param StandardAudioResult $AudioResult 音频分析结果
      * @param StandardImageResult $ImageResult 图像分析结果
      * @param StandardVideoResult $VideoResult 视频分析结果
+     * @param string $Status 任务状态
      * @param integer $TaskId 任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -91,6 +99,10 @@ class DescribeAITaskResultResponse extends AbstractModel
         if (array_key_exists("VideoResult",$param) and $param["VideoResult"] !== null) {
             $this->VideoResult = new StandardVideoResult();
             $this->VideoResult->deserialize($param["VideoResult"]);
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {

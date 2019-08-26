@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 <li>arial.ttf：仅支持英文。</li>
  * @method string getFontSize() 获取字体大小，格式：Npx，N 为数值。
  * @method void setFontSize(string $FontSize) 设置字体大小，格式：Npx，N 为数值。
- * @method string getFontColor() 获取字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（黑色）。
- * @method void setFontColor(string $FontColor) 设置字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（黑色）。
+ * @method string getFontColor() 获取字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
+ * @method void setFontColor(string $FontColor) 设置字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
  * @method float getFontAlpha() 获取文字透明度，取值范围：(0, 1]
 <li>0：完全透明</li>
 <li>1：完全不透明</li>
@@ -56,7 +56,7 @@ class TextWatermarkTemplateInput extends AbstractModel
     public $FontSize;
 
     /**
-     * @var string 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（黑色）。
+     * @var string 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
      */
     public $FontColor;
 
@@ -72,7 +72,7 @@ class TextWatermarkTemplateInput extends AbstractModel
 <li>simkai.ttf：可以支持中文和英文；</li>
 <li>arial.ttf：仅支持英文。</li>
      * @param string $FontSize 字体大小，格式：Npx，N 为数值。
-     * @param string $FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（黑色）。
+     * @param string $FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
      * @param float $FontAlpha 文字透明度，取值范围：(0, 1]
 <li>0：完全透明</li>
 <li>1：完全不透明</li>

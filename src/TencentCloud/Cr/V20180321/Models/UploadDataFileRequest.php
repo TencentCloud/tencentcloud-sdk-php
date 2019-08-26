@@ -18,14 +18,14 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getModule() 获取模块名
- * @method void setModule(string $Module) 设置模块名
- * @method string getOperation() 获取操作名
- * @method void setOperation(string $Operation) 设置操作名
+ * @method string getModule() 获取模块名，本接口取值：Data
+ * @method void setModule(string $Module) 设置模块名，本接口取值：Data
+ * @method string getOperation() 获取操作名，本接口取值：Upload
+ * @method void setOperation(string $Operation) 设置操作名，本接口取值：Upload
  * @method string getFileName() 获取文件名
  * @method void setFileName(string $FileName) 设置文件名
- * @method string getUploadModel() 获取<p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：催收文件</li><li>repay：还款文件</li><li>callback：回访文件</li></ul>
- * @method void setUploadModel(string $UploadModel) 设置<p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：催收文件</li><li>repay：还款文件</li><li>callback：回访文件</li></ul>
+ * @method string getUploadModel() 获取<p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：入催文件</li><li>repay：还款文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li></ul>
+ * @method void setUploadModel(string $UploadModel) 设置<p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：入催文件</li><li>repay：还款文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li></ul>
  * @method string getFile() 获取文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
  * @method void setFile(string $File) 设置文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
  * @method string getFileUrl() 获取文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
@@ -40,12 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class UploadDataFileRequest extends AbstractModel
 {
     /**
-     * @var string 模块名
+     * @var string 模块名，本接口取值：Data
      */
     public $Module;
 
     /**
-     * @var string 操作名
+     * @var string 操作名，本接口取值：Upload
      */
     public $Operation;
 
@@ -55,7 +55,7 @@ class UploadDataFileRequest extends AbstractModel
     public $FileName;
 
     /**
-     * @var string <p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：催收文件</li><li>repay：还款文件</li><li>callback：回访文件</li></ul>
+     * @var string <p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：入催文件</li><li>repay：还款文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li></ul>
      */
     public $UploadModel;
 
@@ -74,10 +74,10 @@ class UploadDataFileRequest extends AbstractModel
      */
     public $InstId;
     /**
-     * @param string $Module 模块名
-     * @param string $Operation 操作名
+     * @param string $Module 模块名，本接口取值：Data
+     * @param string $Operation 操作名，本接口取值：Upload
      * @param string $FileName 文件名
-     * @param string $UploadModel <p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：催收文件</li><li>repay：还款文件</li><li>callback：回访文件</li></ul>
+     * @param string $UploadModel <p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：入催文件</li><li>repay：还款文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li></ul>
      * @param string $File 文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
      * @param string $FileUrl 文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
      * @param string $InstId 实例ID，不传默认为系统分配的初始实例。

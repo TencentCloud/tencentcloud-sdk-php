@@ -65,7 +65,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *TextVehicleFront
+ *行驶证主页正面的识别结果
  */
 class TextVehicleFront extends AbstractModel
 {

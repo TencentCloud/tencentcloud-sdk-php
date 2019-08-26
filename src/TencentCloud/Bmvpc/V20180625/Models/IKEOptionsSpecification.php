@@ -18,8 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPropoEncryAlgorithm() 获取加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
- * @method void setPropoEncryAlgorithm(string $PropoEncryAlgorithm) 设置加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
+ * @method string getPropoEncryAlgorithm() 获取加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
+ * @method void setPropoEncryAlgorithm(string $PropoEncryAlgorithm) 设置加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
  * @method string getPropoAuthenAlgorithm() 获取认证算法：可选值：'MD5', 'SHA1'，默认为MD5
  * @method void setPropoAuthenAlgorithm(string $PropoAuthenAlgorithm) 设置认证算法：可选值：'MD5', 'SHA1'，默认为MD5
  * @method string getExchangeMode() 获取协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class IKEOptionsSpecification extends AbstractModel
 {
     /**
-     * @var string 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
+     * @var string 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
      */
     public $PropoEncryAlgorithm;
 
@@ -109,7 +109,7 @@ class IKEOptionsSpecification extends AbstractModel
      */
     public $IKEVersion;
     /**
-     * @param string $PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
+     * @param string $PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
      * @param string $PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，默认为MD5
      * @param string $ExchangeMode 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
      * @param string $LocalIdentity 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS

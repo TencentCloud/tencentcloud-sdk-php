@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置扩容实例ID
  * @method integer getPayMode() 获取付费类型
  * @method void setPayMode(integer $PayMode) 设置付费类型
- * @method PreExecuteFileSettings getPreExecutedFileSettings() 获取预执行脚本设置
- * @method void setPreExecutedFileSettings(PreExecuteFileSettings $PreExecutedFileSettings) 设置预执行脚本设置
+ * @method array getPreExecutedFileSettings() 获取预执行脚本设置
+ * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) 设置预执行脚本设置
  * @method integer getTaskCount() 获取扩容Task节点数量
  * @method void setTaskCount(integer $TaskCount) 设置扩容Task节点数量
  * @method integer getCoreCount() 获取扩容Core节点数量
@@ -67,7 +67,7 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var PreExecuteFileSettings 预执行脚本设置
+     * @var array 预执行脚本设置
      */
     public $PreExecutedFileSettings;
 
@@ -86,7 +86,7 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param integer $TimeSpan 时间长度
      * @param string $InstanceId 扩容实例ID
      * @param integer $PayMode 付费类型
-     * @param PreExecuteFileSettings $PreExecutedFileSettings 预执行脚本设置
+     * @param array $PreExecutedFileSettings 预执行脚本设置
      * @param integer $TaskCount 扩容Task节点数量
      * @param integer $CoreCount 扩容Core节点数量
      */
@@ -123,8 +123,12 @@ class ScaleOutInstanceRequest extends AbstractModel
         }
 
         if (array_key_exists("PreExecutedFileSettings",$param) and $param["PreExecutedFileSettings"] !== null) {
-            $this->PreExecutedFileSettings = new PreExecuteFileSettings();
-            $this->PreExecutedFileSettings->deserialize($param["PreExecutedFileSettings"]);
+            $this->PreExecutedFileSettings = [];
+            foreach ($param["PreExecutedFileSettings"] as $key => $value){
+                $obj = new PreExecuteFileSettings();
+                $obj->deserialize($value);
+                array_push($this->PreExecutedFileSettings, $obj);
+            }
         }
 
         if (array_key_exists("TaskCount",$param) and $param["TaskCount"] !== null) {

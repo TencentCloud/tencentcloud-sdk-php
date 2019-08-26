@@ -60,6 +60,10 @@ baseline/main/high。
  * @method void setTemplateName(string $TemplateName) 设置模板名称
  * @method string getDescription() 获取模板描述
  * @method void setDescription(string $Description) 设置模板描述
+ * @method integer getAiTransCode() 获取是否是急速高清模板，0：否，1：是。默认0。
+ * @method void setAiTransCode(integer $AiTransCode) 设置是否是急速高清模板，0：否，1：是。默认0。
+ * @method float getAdaptBitratePercent() 获取急速高清相比VideoBitrate少多少码率，0.1到0.5
+ * @method void setAdaptBitratePercent(float $AdaptBitratePercent) 设置急速高清相比VideoBitrate少多少码率，0.1到0.5
  */
 
 /**
@@ -159,6 +163,16 @@ baseline/main/high。
      * @var string 模板描述
      */
     public $Description;
+
+    /**
+     * @var integer 是否是急速高清模板，0：否，1：是。默认0。
+     */
+    public $AiTransCode;
+
+    /**
+     * @var float 急速高清相比VideoBitrate少多少码率，0.1到0.5
+     */
+    public $AdaptBitratePercent;
     /**
      * @param string $Vcodec 视频编码：
 h264/h265。
@@ -181,6 +195,8 @@ baseline/main/high。
      * @param integer $TemplateId 模板Id。
      * @param string $TemplateName 模板名称
      * @param string $Description 模板描述
+     * @param integer $AiTransCode 是否是急速高清模板，0：否，1：是。默认0。
+     * @param float $AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
      */
     function __construct()
     {
@@ -264,6 +280,14 @@ baseline/main/high。
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("AiTransCode",$param) and $param["AiTransCode"] !== null) {
+            $this->AiTransCode = $param["AiTransCode"];
+        }
+
+        if (array_key_exists("AdaptBitratePercent",$param) and $param["AdaptBitratePercent"] !== null) {
+            $this->AdaptBitratePercent = $param["AdaptBitratePercent"];
         }
     }
 }

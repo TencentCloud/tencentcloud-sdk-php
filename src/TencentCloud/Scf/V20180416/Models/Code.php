@@ -30,6 +30,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDemoId(string $DemoId) 设置如果是通过Demo创建的话，需要传入DemoId
  * @method string getTempCosObjectName() 获取如果是从TempCos创建的话，需要传入TempCosObjectName
  * @method void setTempCosObjectName(string $TempCosObjectName) 设置如果是从TempCos创建的话，需要传入TempCosObjectName
+ * @method string getGitUrl() 获取Git地址
+ * @method void setGitUrl(string $GitUrl) 设置Git地址
+ * @method string getGitUserName() 获取Git用户名
+ * @method void setGitUserName(string $GitUserName) 设置Git用户名
+ * @method string getGitPassword() 获取Git密码
+ * @method void setGitPassword(string $GitPassword) 设置Git密码
+ * @method string getGitPasswordSecret() 获取加密后的Git密码，一般无需指定
+ * @method void setGitPasswordSecret(string $GitPasswordSecret) 设置加密后的Git密码，一般无需指定
+ * @method string getGitBranch() 获取Git分支
+ * @method void setGitBranch(string $GitBranch) 设置Git分支
+ * @method string getGitDirectory() 获取代码在Git仓库中的路径
+ * @method void setGitDirectory(string $GitDirectory) 设置代码在Git仓库中的路径
+ * @method string getGitCommitId() 获取指定要拉取的版本
+ * @method void setGitCommitId(string $GitCommitId) 设置指定要拉取的版本
+ * @method string getGitUserNameSecret() 获取加密后的Git用户名，一般无需指定
+ * @method void setGitUserNameSecret(string $GitUserNameSecret) 设置加密后的Git用户名，一般无需指定
  */
 
 /**
@@ -66,6 +82,46 @@ class Code extends AbstractModel
      * @var string 如果是从TempCos创建的话，需要传入TempCosObjectName
      */
     public $TempCosObjectName;
+
+    /**
+     * @var string Git地址
+     */
+    public $GitUrl;
+
+    /**
+     * @var string Git用户名
+     */
+    public $GitUserName;
+
+    /**
+     * @var string Git密码
+     */
+    public $GitPassword;
+
+    /**
+     * @var string 加密后的Git密码，一般无需指定
+     */
+    public $GitPasswordSecret;
+
+    /**
+     * @var string Git分支
+     */
+    public $GitBranch;
+
+    /**
+     * @var string 代码在Git仓库中的路径
+     */
+    public $GitDirectory;
+
+    /**
+     * @var string 指定要拉取的版本
+     */
+    public $GitCommitId;
+
+    /**
+     * @var string 加密后的Git用户名，一般无需指定
+     */
+    public $GitUserNameSecret;
     /**
      * @param string $CosBucketName 对象存储桶名称
      * @param string $CosObjectName 对象存储对象路径
@@ -73,6 +129,14 @@ class Code extends AbstractModel
      * @param string $CosBucketRegion 对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
      * @param string $DemoId 如果是通过Demo创建的话，需要传入DemoId
      * @param string $TempCosObjectName 如果是从TempCos创建的话，需要传入TempCosObjectName
+     * @param string $GitUrl Git地址
+     * @param string $GitUserName Git用户名
+     * @param string $GitPassword Git密码
+     * @param string $GitPasswordSecret 加密后的Git密码，一般无需指定
+     * @param string $GitBranch Git分支
+     * @param string $GitDirectory 代码在Git仓库中的路径
+     * @param string $GitCommitId 指定要拉取的版本
+     * @param string $GitUserNameSecret 加密后的Git用户名，一般无需指定
      */
     function __construct()
     {
@@ -108,6 +172,38 @@ class Code extends AbstractModel
 
         if (array_key_exists("TempCosObjectName",$param) and $param["TempCosObjectName"] !== null) {
             $this->TempCosObjectName = $param["TempCosObjectName"];
+        }
+
+        if (array_key_exists("GitUrl",$param) and $param["GitUrl"] !== null) {
+            $this->GitUrl = $param["GitUrl"];
+        }
+
+        if (array_key_exists("GitUserName",$param) and $param["GitUserName"] !== null) {
+            $this->GitUserName = $param["GitUserName"];
+        }
+
+        if (array_key_exists("GitPassword",$param) and $param["GitPassword"] !== null) {
+            $this->GitPassword = $param["GitPassword"];
+        }
+
+        if (array_key_exists("GitPasswordSecret",$param) and $param["GitPasswordSecret"] !== null) {
+            $this->GitPasswordSecret = $param["GitPasswordSecret"];
+        }
+
+        if (array_key_exists("GitBranch",$param) and $param["GitBranch"] !== null) {
+            $this->GitBranch = $param["GitBranch"];
+        }
+
+        if (array_key_exists("GitDirectory",$param) and $param["GitDirectory"] !== null) {
+            $this->GitDirectory = $param["GitDirectory"];
+        }
+
+        if (array_key_exists("GitCommitId",$param) and $param["GitCommitId"] !== null) {
+            $this->GitCommitId = $param["GitCommitId"];
+        }
+
+        if (array_key_exists("GitUserNameSecret",$param) and $param["GitUserNameSecret"] !== null) {
+            $this->GitUserNameSecret = $param["GitUserNameSecret"];
         }
     }
 }

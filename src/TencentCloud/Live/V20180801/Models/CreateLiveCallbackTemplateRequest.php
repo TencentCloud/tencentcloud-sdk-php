@@ -18,10 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTemplateName() 获取模板名称。非空的字符串
- * @method void setTemplateName(string $TemplateName) 设置模板名称。非空的字符串
+ * @method string getTemplateName() 获取模板名称，非空的字符串。
+长度上限：255字节。
+ * @method void setTemplateName(string $TemplateName) 设置模板名称，非空的字符串。
+长度上限：255字节。
  * @method string getDescription() 获取描述信息。
+长度上限：1024字节。
  * @method void setDescription(string $Description) 设置描述信息。
+长度上限：1024字节。
  * @method string getStreamBeginNotifyUrl() 获取开播回调URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
  * @method void setStreamBeginNotifyUrl(string $StreamBeginNotifyUrl) 设置开播回调URL，
@@ -52,12 +56,14 @@ use TencentCloud\Common\AbstractModel;
 class CreateLiveCallbackTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 模板名称。非空的字符串
+     * @var string 模板名称，非空的字符串。
+长度上限：255字节。
      */
     public $TemplateName;
 
     /**
      * @var string 描述信息。
+长度上限：1024字节。
      */
     public $Description;
 
@@ -96,8 +102,10 @@ class CreateLiveCallbackTemplateRequest extends AbstractModel
      */
     public $CallbackKey;
     /**
-     * @param string $TemplateName 模板名称。非空的字符串
+     * @param string $TemplateName 模板名称，非空的字符串。
+长度上限：255字节。
      * @param string $Description 描述信息。
+长度上限：1024字节。
      * @param string $StreamBeginNotifyUrl 开播回调URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
      * @param string $StreamEndNotifyUrl 断流回调URL，

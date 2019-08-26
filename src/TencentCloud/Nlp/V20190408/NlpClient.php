@@ -71,7 +71,7 @@ use TencentCloud\Nlp\V20190408\Models as Models;
 - 新闻领域分类体系，包括37个一级分类类目，285个二级分类，已应用于腾讯新闻的文章分类。
 
 更多垂直领域的分类体系即将推出，敬请期待。
-* @method Models\TextCorrectionResponse TextCorrection(Models\TextCorrectionRequest $req) 提供对中文文本的自动纠错功能，能够识别输入文本中的错误片段，定位错误并给出正确的文本结果。目前仅支持短文本的自动纠错，长文本的自动纠错也即将推出。
+* @method Models\TextCorrectionResponse TextCorrection(Models\TextCorrectionRequest $req) 提供对中文文本的自动纠错功能，能够识别输入文本中的错误片段，定位错误并给出正确的文本结果；支持长度不超过2000字的长文本纠错。
 
 此功能是基于千亿级大规模互联网语料和LSTM、BERT等深度神经网络模型进行训练，并持续迭代更新，以保证效果不断提升，是搜索引擎、语音识别、内容审核等功能更好运行的基础之一。 
 * @method Models\WordEmbeddingResponse WordEmbedding(Models\WordEmbeddingRequest $req) 词向量接口能够将输入的词语映射成一个固定维度的词向量，用来表示这个词语的语义特征。词向量是很多自然语言处理技术的基础，能够显著提高它们的效果。

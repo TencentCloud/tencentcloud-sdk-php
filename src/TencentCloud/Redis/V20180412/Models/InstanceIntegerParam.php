@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMin(string $Min) 设置参数最小值
  * @method string getMax() 获取参数最大值
  * @method void setMax(string $Max) 设置参数最大值
+ * @method integer getStatus() 获取参数状态, 1: 修改中， 2：修改完成
+ * @method void setStatus(integer $Status) 设置参数状态, 1: 修改中， 2：修改完成
  */
 
 /**
@@ -80,6 +82,11 @@ class InstanceIntegerParam extends AbstractModel
      * @var string 参数最大值
      */
     public $Max;
+
+    /**
+     * @var integer 参数状态, 1: 修改中， 2：修改完成
+     */
+    public $Status;
     /**
      * @param string $ParamName 参数名
      * @param string $ValueType 参数类型：integer
@@ -89,6 +96,7 @@ class InstanceIntegerParam extends AbstractModel
      * @param string $Tips 参数说明
      * @param string $Min 参数最小值
      * @param string $Max 参数最大值
+     * @param integer $Status 参数状态, 1: 修改中， 2：修改完成
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class InstanceIntegerParam extends AbstractModel
 
         if (array_key_exists("Max",$param) and $param["Max"] !== null) {
             $this->Max = $param["Max"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

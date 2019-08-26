@@ -18,18 +18,32 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getFunctionName() 获取函数名
- * @method void setFunctionName(string $FunctionName) 设置函数名
+ * @method string getFunctionName() 获取要复制的函数的名称
+ * @method void setFunctionName(string $FunctionName) 设置要复制的函数的名称
  * @method string getNewFunctionName() 获取新函数的名称
  * @method void setNewFunctionName(string $NewFunctionName) 设置新函数的名称
- * @method string getNamespace() 获取命名空间，默认为default
- * @method void setNamespace(string $Namespace) 设置命名空间，默认为default
+ * @method string getNamespace() 获取要复制的函数所在的命名空间，默认为default
+ * @method void setNamespace(string $Namespace) 设置要复制的函数所在的命名空间，默认为default
  * @method string getTargetNamespace() 获取将函数复制到的命名空间，默认为default
  * @method void setTargetNamespace(string $TargetNamespace) 设置将函数复制到的命名空间，默认为default
- * @method string getDescription() 获取函数描述
- * @method void setDescription(string $Description) 设置函数描述
+ * @method string getDescription() 获取新函数的描述
+ * @method void setDescription(string $Description) 设置新函数的描述
  * @method string getTargetRegion() 获取要将函数复制到的地域，不填则默认为当前地域
  * @method void setTargetRegion(string $TargetRegion) 设置要将函数复制到的地域，不填则默认为当前地域
+ * @method boolean getOverride() 获取如果目标Namespace下已有同名函数，是否覆盖，默认为否
+（注意：如果选择覆盖，会导致同名函数被删除，请慎重操作）
+TRUE：覆盖同名函数
+FALSE：不覆盖同名函数
+ * @method void setOverride(boolean $Override) 设置如果目标Namespace下已有同名函数，是否覆盖，默认为否
+（注意：如果选择覆盖，会导致同名函数被删除，请慎重操作）
+TRUE：覆盖同名函数
+FALSE：不覆盖同名函数
+ * @method boolean getCopyConfiguration() 获取是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
+TRUE：复制函数配置
+FALSE：不复制函数配置
+ * @method void setCopyConfiguration(boolean $CopyConfiguration) 设置是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
+TRUE：复制函数配置
+FALSE：不复制函数配置
  */
 
 /**
@@ -38,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class CopyFunctionRequest extends AbstractModel
 {
     /**
-     * @var string 函数名
+     * @var string 要复制的函数的名称
      */
     public $FunctionName;
 
@@ -48,7 +62,7 @@ class CopyFunctionRequest extends AbstractModel
     public $NewFunctionName;
 
     /**
-     * @var string 命名空间，默认为default
+     * @var string 要复制的函数所在的命名空间，默认为default
      */
     public $Namespace;
 
@@ -58,7 +72,7 @@ class CopyFunctionRequest extends AbstractModel
     public $TargetNamespace;
 
     /**
-     * @var string 函数描述
+     * @var string 新函数的描述
      */
     public $Description;
 
@@ -66,13 +80,35 @@ class CopyFunctionRequest extends AbstractModel
      * @var string 要将函数复制到的地域，不填则默认为当前地域
      */
     public $TargetRegion;
+
     /**
-     * @param string $FunctionName 函数名
+     * @var boolean 如果目标Namespace下已有同名函数，是否覆盖，默认为否
+（注意：如果选择覆盖，会导致同名函数被删除，请慎重操作）
+TRUE：覆盖同名函数
+FALSE：不覆盖同名函数
+     */
+    public $Override;
+
+    /**
+     * @var boolean 是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
+TRUE：复制函数配置
+FALSE：不复制函数配置
+     */
+    public $CopyConfiguration;
+    /**
+     * @param string $FunctionName 要复制的函数的名称
      * @param string $NewFunctionName 新函数的名称
-     * @param string $Namespace 命名空间，默认为default
+     * @param string $Namespace 要复制的函数所在的命名空间，默认为default
      * @param string $TargetNamespace 将函数复制到的命名空间，默认为default
-     * @param string $Description 函数描述
+     * @param string $Description 新函数的描述
      * @param string $TargetRegion 要将函数复制到的地域，不填则默认为当前地域
+     * @param boolean $Override 如果目标Namespace下已有同名函数，是否覆盖，默认为否
+（注意：如果选择覆盖，会导致同名函数被删除，请慎重操作）
+TRUE：覆盖同名函数
+FALSE：不覆盖同名函数
+     * @param boolean $CopyConfiguration 是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
+TRUE：复制函数配置
+FALSE：不复制函数配置
      */
     function __construct()
     {
@@ -108,6 +144,14 @@ class CopyFunctionRequest extends AbstractModel
 
         if (array_key_exists("TargetRegion",$param) and $param["TargetRegion"] !== null) {
             $this->TargetRegion = $param["TargetRegion"];
+        }
+
+        if (array_key_exists("Override",$param) and $param["Override"] !== null) {
+            $this->Override = $param["Override"];
+        }
+
+        if (array_key_exists("CopyConfiguration",$param) and $param["CopyConfiguration"] !== null) {
+            $this->CopyConfiguration = $param["CopyConfiguration"];
         }
     }
 }

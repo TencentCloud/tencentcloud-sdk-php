@@ -18,12 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getExpress() 获取表情
- * @method void setExpress(string $Express) 设置表情
- * @method float getRatio() 获取表情所占比例
- * @method void setRatio(float $Ratio) 设置表情所占比例
  * @method integer getCount() 获取出现次数
  * @method void setCount(integer $Count) 设置出现次数
+ * @method string getExpress() 获取表情
+ * @method void setExpress(string $Express) 设置表情
+ * @method float getRatio() 获取该表情时长占所有表情时长的比例
+ * @method void setRatio(float $Ratio) 设置该表情时长占所有表情时长的比例
+ * @method float getRatioUseDuration() 获取该表情时长占视频总时长的比例
+ * @method void setRatioUseDuration(float $RatioUseDuration) 设置该表情时长占视频总时长的比例
  */
 
 /**
@@ -32,23 +34,29 @@ use TencentCloud\Common\AbstractModel;
 class ExpressRatioStatistic extends AbstractModel
 {
     /**
+     * @var integer 出现次数
+     */
+    public $Count;
+
+    /**
      * @var string 表情
      */
     public $Express;
 
     /**
-     * @var float 表情所占比例
+     * @var float 该表情时长占所有表情时长的比例
      */
     public $Ratio;
 
     /**
-     * @var integer 出现次数
+     * @var float 该表情时长占视频总时长的比例
      */
-    public $Count;
+    public $RatioUseDuration;
     /**
-     * @param string $Express 表情
-     * @param float $Ratio 表情所占比例
      * @param integer $Count 出现次数
+     * @param string $Express 表情
+     * @param float $Ratio 该表情时长占所有表情时长的比例
+     * @param float $RatioUseDuration 该表情时长占视频总时长的比例
      */
     function __construct()
     {
@@ -62,6 +70,10 @@ class ExpressRatioStatistic extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
+        }
+
         if (array_key_exists("Express",$param) and $param["Express"] !== null) {
             $this->Express = $param["Express"];
         }
@@ -70,8 +82,8 @@ class ExpressRatioStatistic extends AbstractModel
             $this->Ratio = $param["Ratio"];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists("RatioUseDuration",$param) and $param["RatioUseDuration"] !== null) {
+            $this->RatioUseDuration = $param["RatioUseDuration"];
         }
     }
 }

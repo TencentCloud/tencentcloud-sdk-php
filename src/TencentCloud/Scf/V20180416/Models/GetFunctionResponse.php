@@ -70,6 +70,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionId(string $FunctionId) 设置函数ID
  * @method array getTags() 获取函数的标签列表
  * @method void setTags(array $Tags) 设置函数的标签列表
+ * @method EipOutConfig getEipConfig() 获取EipConfig配置
+ * @method void setEipConfig(EipOutConfig $EipConfig) 设置EipConfig配置
+ * @method AccessInfo getAccessInfo() 获取域名信息
+ * @method void setAccessInfo(AccessInfo $AccessInfo) 设置域名信息
+ * @method string getType() 获取函数类型，取值为HTTP或者Event
+ * @method void setType(string $Type) 设置函数类型，取值为HTTP或者Event
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -210,6 +216,21 @@ class GetFunctionResponse extends AbstractModel
     public $Tags;
 
     /**
+     * @var EipOutConfig EipConfig配置
+     */
+    public $EipConfig;
+
+    /**
+     * @var AccessInfo 域名信息
+     */
+    public $AccessInfo;
+
+    /**
+     * @var string 函数类型，取值为HTTP或者Event
+     */
+    public $Type;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -240,6 +261,9 @@ class GetFunctionResponse extends AbstractModel
      * @param string $ClsTopicId 日志投递到的Cls Topic
      * @param string $FunctionId 函数ID
      * @param array $Tags 函数的标签列表
+     * @param EipOutConfig $EipConfig EipConfig配置
+     * @param AccessInfo $AccessInfo 域名信息
+     * @param string $Type 函数类型，取值为HTTP或者Event
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -368,6 +392,20 @@ class GetFunctionResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("EipConfig",$param) and $param["EipConfig"] !== null) {
+            $this->EipConfig = new EipOutConfig();
+            $this->EipConfig->deserialize($param["EipConfig"]);
+        }
+
+        if (array_key_exists("AccessInfo",$param) and $param["AccessInfo"] !== null) {
+            $this->AccessInfo = new AccessInfo();
+            $this->AccessInfo->deserialize($param["AccessInfo"]);
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

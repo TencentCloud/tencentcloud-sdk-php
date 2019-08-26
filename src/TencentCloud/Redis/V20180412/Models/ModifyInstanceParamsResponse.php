@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method boolean getChanged() 获取修改是否成功。
  * @method void setChanged(boolean $Changed) 设置修改是否成功。
+ * @method integer getTaskId() 获取任务ID
+ * @method void setTaskId(integer $TaskId) 设置任务ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,11 +37,17 @@ class ModifyInstanceParamsResponse extends AbstractModel
     public $Changed;
 
     /**
+     * @var integer 任务ID
+     */
+    public $TaskId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param boolean $Changed 修改是否成功。
+     * @param integer $TaskId 任务ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class ModifyInstanceParamsResponse extends AbstractModel
         }
         if (array_key_exists("Changed",$param) and $param["Changed"] !== null) {
             $this->Changed = $param["Changed"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

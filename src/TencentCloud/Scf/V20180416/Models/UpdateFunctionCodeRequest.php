@@ -28,8 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosObjectName(string $CosObjectName) 设置对象存储对象路径
  * @method string getZipFile() 获取包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
  * @method void setZipFile(string $ZipFile) 设置包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
+ * @method string getNamespace() 获取函数所属命名空间
+ * @method void setNamespace(string $Namespace) 设置函数所属命名空间
  * @method string getCosBucketRegion() 获取对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
  * @method void setCosBucketRegion(string $CosBucketRegion) 设置对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
+ * @method string getEnvId() 获取函数所属环境
+ * @method void setEnvId(string $EnvId) 设置函数所属环境
+ * @method string getPublish() 获取在更新时是否同步发布新版本，默认为：FALSE，不发布
+ * @method void setPublish(string $Publish) 设置在更新时是否同步发布新版本，默认为：FALSE，不发布
  */
 
 /**
@@ -63,16 +69,34 @@ class UpdateFunctionCodeRequest extends AbstractModel
     public $ZipFile;
 
     /**
+     * @var string 函数所属命名空间
+     */
+    public $Namespace;
+
+    /**
      * @var string 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
      */
     public $CosBucketRegion;
+
+    /**
+     * @var string 函数所属环境
+     */
+    public $EnvId;
+
+    /**
+     * @var string 在更新时是否同步发布新版本，默认为：FALSE，不发布
+     */
+    public $Publish;
     /**
      * @param string $Handler 函数处理方法名称。名称格式支持“文件名称.函数名称”形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
      * @param string $FunctionName 要修改的函数名称
      * @param string $CosBucketName 对象存储桶名称
      * @param string $CosObjectName 对象存储对象路径
      * @param string $ZipFile 包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
+     * @param string $Namespace 函数所属命名空间
      * @param string $CosBucketRegion 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
+     * @param string $EnvId 函数所属环境
+     * @param string $Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
      */
     function __construct()
     {
@@ -106,8 +130,20 @@ class UpdateFunctionCodeRequest extends AbstractModel
             $this->ZipFile = $param["ZipFile"];
         }
 
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
         if (array_key_exists("CosBucketRegion",$param) and $param["CosBucketRegion"] !== null) {
             $this->CosBucketRegion = $param["CosBucketRegion"];
+        }
+
+        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
+            $this->EnvId = $param["EnvId"];
+        }
+
+        if (array_key_exists("Publish",$param) and $param["Publish"] !== null) {
+            $this->Publish = $param["Publish"];
         }
     }
 }

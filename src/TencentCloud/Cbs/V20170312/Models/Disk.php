@@ -100,6 +100,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShareable(boolean $Shareable) 设置云盘是否为共享型云盘。
  * @method array getInstanceIdList() 获取对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
  * @method void setInstanceIdList(array $InstanceIdList) 设置对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
+ * @method string getAttachDeviceId() 获取云硬盘挂载目标设备的ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttachDeviceId(string $AttachDeviceId) 设置云硬盘挂载目标设备的ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAttachDeviceType() 获取云硬盘挂载目标设备的类型，目前包括CVM和POD
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttachDeviceType(string $AttachDeviceType) 设置云硬盘挂载目标设备的类型，目前包括CVM和POD
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -267,6 +275,18 @@ class Disk extends AbstractModel
      * @var array 对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
      */
     public $InstanceIdList;
+
+    /**
+     * @var string 云硬盘挂载目标设备的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttachDeviceId;
+
+    /**
+     * @var string 云硬盘挂载目标设备的类型，目前包括CVM和POD
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttachDeviceType;
     /**
      * @param string $DiskId 云硬盘ID。
      * @param string $DiskUsage 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
@@ -309,6 +329,10 @@ class Disk extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Shareable 云盘是否为共享型云盘。
      * @param array $InstanceIdList 对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
+     * @param string $AttachDeviceId 云硬盘挂载目标设备的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AttachDeviceType 云硬盘挂载目标设备的类型，目前包括CVM和POD
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -446,6 +470,14 @@ class Disk extends AbstractModel
 
         if (array_key_exists("InstanceIdList",$param) and $param["InstanceIdList"] !== null) {
             $this->InstanceIdList = $param["InstanceIdList"];
+        }
+
+        if (array_key_exists("AttachDeviceId",$param) and $param["AttachDeviceId"] !== null) {
+            $this->AttachDeviceId = $param["AttachDeviceId"];
+        }
+
+        if (array_key_exists("AttachDeviceType",$param) and $param["AttachDeviceType"] !== null) {
+            $this->AttachDeviceType = $param["AttachDeviceType"];
         }
     }
 }

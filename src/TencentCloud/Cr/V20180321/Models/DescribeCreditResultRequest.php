@@ -18,18 +18,18 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getModule() 获取模块
- * @method void setModule(string $Module) 设置模块
- * @method string getOperation() 获取操作
- * @method void setOperation(string $Operation) 设置操作
+ * @method string getModule() 获取模块名，本接口取值：Credit
+ * @method void setModule(string $Module) 设置模块名，本接口取值：Credit
+ * @method string getOperation() 获取操作名，本接口取值：Get
+ * @method void setOperation(string $Operation) 设置操作名，本接口取值：Get
  * @method string getInstId() 获取实例ID
  * @method void setInstId(string $InstId) 设置实例ID
  * @method string getProductId() 获取产品ID，形如P******。
  * @method void setProductId(string $ProductId) 设置产品ID，形如P******。
  * @method string getCaseId() 获取信审任务ID
  * @method void setCaseId(string $CaseId) 设置信审任务ID
- * @method string getRequestDate() 获取请求日期
- * @method void setRequestDate(string $RequestDate) 设置请求日期
+ * @method string getRequestDate() 获取请求日期，格式为YYYY-MM-DD
+ * @method void setRequestDate(string $RequestDate) 设置请求日期，格式为YYYY-MM-DD
  */
 
 /**
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCreditResultRequest extends AbstractModel
 {
     /**
-     * @var string 模块
+     * @var string 模块名，本接口取值：Credit
      */
     public $Module;
 
     /**
-     * @var string 操作
+     * @var string 操作名，本接口取值：Get
      */
     public $Operation;
 
@@ -63,16 +63,16 @@ class DescribeCreditResultRequest extends AbstractModel
     public $CaseId;
 
     /**
-     * @var string 请求日期
+     * @var string 请求日期，格式为YYYY-MM-DD
      */
     public $RequestDate;
     /**
-     * @param string $Module 模块
-     * @param string $Operation 操作
+     * @param string $Module 模块名，本接口取值：Credit
+     * @param string $Operation 操作名，本接口取值：Get
      * @param string $InstId 实例ID
      * @param string $ProductId 产品ID，形如P******。
      * @param string $CaseId 信审任务ID
-     * @param string $RequestDate 请求日期
+     * @param string $RequestDate 请求日期，格式为YYYY-MM-DD
      */
     function __construct()
     {

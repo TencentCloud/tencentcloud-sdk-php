@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 1：慢直播。
  * @method void setIsDelayLive(integer $IsDelayLive) 设置0：普通直播，
 1：慢直播。
+ * @method string getCurrentCName() 获取当前客户使用的cname信息
+ * @method void setCurrentCName(string $CurrentCName) 设置当前客户使用的cname信息
  */
 
 /**
@@ -86,6 +88,11 @@ class DomainInfo extends AbstractModel
 1：慢直播。
      */
     public $IsDelayLive;
+
+    /**
+     * @var string 当前客户使用的cname信息
+     */
+    public $CurrentCName;
     /**
      * @param string $Name 直播域名
      * @param integer $Type 域名类型。0-推流，1-播放
@@ -97,6 +104,7 @@ class DomainInfo extends AbstractModel
 1-国内，2-全球，3-海外。
      * @param integer $IsDelayLive 0：普通直播，
 1：慢直播。
+     * @param string $CurrentCName 当前客户使用的cname信息
      */
     function __construct()
     {
@@ -140,6 +148,10 @@ class DomainInfo extends AbstractModel
 
         if (array_key_exists("IsDelayLive",$param) and $param["IsDelayLive"] !== null) {
             $this->IsDelayLive = $param["IsDelayLive"];
+        }
+
+        if (array_key_exists("CurrentCName",$param) and $param["CurrentCName"] !== null) {
+            $this->CurrentCName = $param["CurrentCName"];
         }
     }
 }

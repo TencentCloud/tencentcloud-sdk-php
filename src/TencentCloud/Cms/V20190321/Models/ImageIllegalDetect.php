@@ -20,20 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getEvilType() 获取恶意类型
 100：正常 
-20001：政治
-20002：色情 
 20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
  * @method void setEvilType(integer $EvilType) 设置恶意类型
 100：正常 
-20001：政治
-20002：色情 
 20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
  * @method integer getHitFlag() 获取处置判定 0：正常 1：可疑
  * @method void setHitFlag(integer $HitFlag) 设置处置判定 0：正常 1：可疑
  * @method array getKeywords() 获取关键词明细
@@ -52,12 +42,7 @@ class ImageIllegalDetect extends AbstractModel
     /**
      * @var integer 恶意类型
 100：正常 
-20001：政治
-20002：色情 
 20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
      */
     public $EvilType;
 
@@ -83,12 +68,7 @@ class ImageIllegalDetect extends AbstractModel
     /**
      * @param integer $EvilType 恶意类型
 100：正常 
-20001：政治
-20002：色情 
 20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
      * @param integer $HitFlag 处置判定 0：正常 1：可疑
      * @param array $Keywords 关键词明细
      * @param array $Labels 违法标签：返回违法特征中文描述，如赌桌，枪支

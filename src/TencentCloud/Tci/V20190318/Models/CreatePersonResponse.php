@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method array getFaceInfoSet() 获取人脸操作结果信息
+ * @method void setFaceInfoSet(array $FaceInfoSet) 设置人脸操作结果信息
  * @method string getLibraryId() 获取人员库唯一标识符
  * @method void setLibraryId(string $LibraryId) 设置人员库唯一标识符
  * @method string getPersonId() 获取人员唯一标识符
@@ -33,6 +35,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class CreatePersonResponse extends AbstractModel
 {
+    /**
+     * @var array 人脸操作结果信息
+     */
+    public $FaceInfoSet;
+
     /**
      * @var string 人员库唯一标识符
      */
@@ -53,6 +60,7 @@ class CreatePersonResponse extends AbstractModel
      */
     public $RequestId;
     /**
+     * @param array $FaceInfoSet 人脸操作结果信息
      * @param string $LibraryId 人员库唯一标识符
      * @param string $PersonId 人员唯一标识符
      * @param string $PersonName 人员名称
@@ -70,6 +78,15 @@ class CreatePersonResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("FaceInfoSet",$param) and $param["FaceInfoSet"] !== null) {
+            $this->FaceInfoSet = [];
+            foreach ($param["FaceInfoSet"] as $key => $value){
+                $obj = new FaceInfo();
+                $obj->deserialize($value);
+                array_push($this->FaceInfoSet, $obj);
+            }
+        }
+
         if (array_key_exists("LibraryId",$param) and $param["LibraryId"] !== null) {
             $this->LibraryId = $param["LibraryId"];
         }

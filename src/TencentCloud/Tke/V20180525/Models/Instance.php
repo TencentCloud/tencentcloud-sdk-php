@@ -18,8 +18,6 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method InstanceAdvancedSettings getInstanceAdvanceSettings() 获取实例的附加信息
- * @method void setInstanceAdvanceSettings(InstanceAdvancedSettings $InstanceAdvanceSettings) 设置实例的附加信息
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getInstanceRole() 获取节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER
@@ -35,11 +33,6 @@ use TencentCloud\Common\AbstractModel;
  */
 class Instance extends AbstractModel
 {
-    /**
-     * @var InstanceAdvancedSettings 实例的附加信息
-     */
-    public $InstanceAdvanceSettings;
-
     /**
      * @var string 实例ID
      */
@@ -60,7 +53,6 @@ class Instance extends AbstractModel
      */
     public $InstanceState;
     /**
-     * @param InstanceAdvancedSettings $InstanceAdvanceSettings 实例的附加信息
      * @param string $InstanceId 实例ID
      * @param string $InstanceRole 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER
      * @param string $FailedReason 实例异常(或者处于初始化中)的原因
@@ -78,11 +70,6 @@ class Instance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceAdvanceSettings",$param) and $param["InstanceAdvanceSettings"] !== null) {
-            $this->InstanceAdvanceSettings = new InstanceAdvancedSettings();
-            $this->InstanceAdvanceSettings->deserialize($param["InstanceAdvanceSettings"]);
-        }
-
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
         }

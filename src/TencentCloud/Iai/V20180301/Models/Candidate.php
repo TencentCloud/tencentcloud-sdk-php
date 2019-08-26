@@ -34,6 +34,18 @@ use TencentCloud\Common\AbstractModel;
 若人脸均为类似自拍照（人脸质量较好）， 
 误识率百分之一对应分数为60分，误识率千分之一对应分数为70分，误识率万分之一对应分数为80分。 
 建议分数不要超过90分。您可以根据实际情况选择合适的分数。
+ * @method string getPersonName() 获取人员名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPersonName(string $PersonName) 设置人员名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getGender() 获取人员性别
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGender(integer $Gender) 设置人员性别
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPersonGroupInfos() 获取包含此人员的人员库及描述字段内容列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPersonGroupInfos(array $PersonGroupInfos) 设置包含此人员的人员库及描述字段内容列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -60,6 +72,24 @@ class Candidate extends AbstractModel
 建议分数不要超过90分。您可以根据实际情况选择合适的分数。
      */
     public $Score;
+
+    /**
+     * @var string 人员名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PersonName;
+
+    /**
+     * @var integer 人员性别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Gender;
+
+    /**
+     * @var array 包含此人员的人员库及描述字段内容列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PersonGroupInfos;
     /**
      * @param string $PersonId 人员ID
      * @param string $FaceId 人脸ID
@@ -69,6 +99,12 @@ class Candidate extends AbstractModel
 若人脸均为类似自拍照（人脸质量较好）， 
 误识率百分之一对应分数为60分，误识率千分之一对应分数为70分，误识率万分之一对应分数为80分。 
 建议分数不要超过90分。您可以根据实际情况选择合适的分数。
+     * @param string $PersonName 人员名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Gender 人员性别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PersonGroupInfos 包含此人员的人员库及描述字段内容列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -92,6 +128,23 @@ class Candidate extends AbstractModel
 
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {
             $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("PersonName",$param) and $param["PersonName"] !== null) {
+            $this->PersonName = $param["PersonName"];
+        }
+
+        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
+            $this->Gender = $param["Gender"];
+        }
+
+        if (array_key_exists("PersonGroupInfos",$param) and $param["PersonGroupInfos"] !== null) {
+            $this->PersonGroupInfos = [];
+            foreach ($param["PersonGroupInfos"] as $key => $value){
+                $obj = new PersonGroupInfo();
+                $obj->deserialize($value);
+                array_push($this->PersonGroupInfos, $obj);
+            }
         }
     }
 }

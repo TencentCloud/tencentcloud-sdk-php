@@ -38,16 +38,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method array getForwardLoadBalancers() 获取应用型负载均衡器列表，目前长度上限为5，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
  * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) 设置应用型负载均衡器列表，目前长度上限为5，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
- * @method array getSubnetIds() 获取子网ID列表，VPC场景下必须指定子网
- * @method void setSubnetIds(array $SubnetIds) 设置子网ID列表，VPC场景下必须指定子网
+ * @method array getSubnetIds() 获取子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
+ * @method void setSubnetIds(array $SubnetIds) 设置子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
  * @method array getTerminationPolicies() 获取销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE，默认取值为 OLDEST_INSTANCE。
 <br><li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。
 <br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
  * @method void setTerminationPolicies(array $TerminationPolicies) 设置销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE，默认取值为 OLDEST_INSTANCE。
 <br><li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。
 <br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
- * @method array getZones() 获取可用区列表，基础网络场景下必须指定可用区
- * @method void setZones(array $Zones) 设置可用区列表，基础网络场景下必须指定可用区
+ * @method array getZones() 获取可用区列表，基础网络场景下必须指定可用区。多个可用区以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
+ * @method void setZones(array $Zones) 设置可用区列表，基础网络场景下必须指定可用区。多个可用区以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
  * @method string getRetryPolicy() 获取重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
 <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。
@@ -130,7 +130,7 @@ class CreateAutoScalingGroupRequest extends AbstractModel
     public $ForwardLoadBalancers;
 
     /**
-     * @var array 子网ID列表，VPC场景下必须指定子网
+     * @var array 子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
      */
     public $SubnetIds;
 
@@ -142,7 +142,7 @@ class CreateAutoScalingGroupRequest extends AbstractModel
     public $TerminationPolicies;
 
     /**
-     * @var array 可用区列表，基础网络场景下必须指定可用区
+     * @var array 可用区列表，基础网络场景下必须指定可用区。多个可用区以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
      */
     public $Zones;
 
@@ -184,11 +184,11 @@ class CreateAutoScalingGroupRequest extends AbstractModel
      * @param array $LoadBalancerIds 传统负载均衡器ID列表，目前长度上限为5，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
      * @param integer $ProjectId 项目ID
      * @param array $ForwardLoadBalancers 应用型负载均衡器列表，目前长度上限为5，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
-     * @param array $SubnetIds 子网ID列表，VPC场景下必须指定子网
+     * @param array $SubnetIds 子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
      * @param array $TerminationPolicies 销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE，默认取值为 OLDEST_INSTANCE。
 <br><li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。
 <br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
-     * @param array $Zones 可用区列表，基础网络场景下必须指定可用区
+     * @param array $Zones 可用区列表，基础网络场景下必须指定可用区。多个可用区以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
      * @param string $RetryPolicy 重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
 <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。

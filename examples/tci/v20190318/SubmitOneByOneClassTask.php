@@ -4,8 +4,8 @@ require_once '../../../TCloudAutoLoader.php';
 use TencentCloud\Tci\V20190318\TciClient;
 
 // 导入要请求接口对应的Request类
-use TencentCloud\Tci\V20190318\Models\AIAssistantRequest;
-use TencentCloud\Tci\V20190318\Models\AIAssistant;
+use TencentCloud\Tci\V20190318\Models\SubmitOneByOneClassTaskRequest;
+use TencentCloud\Tci\V20190318\Models\SubmitOneByOneClassTask;
 
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
@@ -32,16 +32,15 @@ try {
     $client = new TciClient($cred, "", $clientProfile);
 
     // 实例化一个ecc实例信息查询请求对象,每个接口都会对应一个request对象。
-    $req = new AIAssistantRequest();
-    $req->LibraryName="testfxh2";
-    $req->FileContent = "https%3A%2F%2Fedu-test-1253131631.cos.ap-guangzhou.myqcloud.com%2Faieduautotest%2Fautotest_vedio.mp4";
+    $req = new SubmitOneByOneClassTaskRequest();
+    $req->FileContent = "https://edu-test-1253131631.cos.ap-guangzhou.myqcloud.com/aieduautotest/autotest_vedio.mp4";
     $req->FileType = "vod_url";
-    $req->LibrarySet=["tci_library_156403897035611372834"];
-    $req->VoiceEncodeType=1;
-    $req->Lang=0;
-    $req->VoiceFileType=10;
-    $req->VocabLibNameList=["testlib2"];
-    $resp = $client->AIAssistant($req);
+    $req->Lang = 0;
+    $req->LibrarySet = ["library_15603955264181591716"];
+    $req->VocabLibNameList = ["testlib2"];
+    $req->VoiceEncodeType = 1;
+    $req->VoiceFileType = 10;
+    $resp = $client->SubmitOneByOneClassTask($req);
 
     // 输出json格式的字符串回包
     print_r($resp->toJsonString());

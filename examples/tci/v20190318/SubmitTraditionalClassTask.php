@@ -4,8 +4,8 @@ require_once '../../../TCloudAutoLoader.php';
 use TencentCloud\Tci\V20190318\TciClient;
 
 // 导入要请求接口对应的Request类
-use TencentCloud\Tci\V20190318\Models\CreatePersonRequest;
-use TencentCloud\Tci\V20190318\Models\CreatePerson;
+use TencentCloud\Tci\V20190318\Models\SubmitTraditionalClassTaskRequest;
+use TencentCloud\Tci\V20190318\Models\SubmitTraditionalClassTask;
 
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
@@ -32,14 +32,11 @@ try {
     $client = new TciClient($cred, "", $clientProfile);
 
     // 实例化一个ecc实例信息查询请求对象,每个接口都会对应一个request对象。
-    $req = new CreatePersonRequest();
-    $req->LibraryId="tci_library_156403897035611372834";
-    $req->PersonName="fxh";
-    $req->JobNumber="3512635";
-    $req->StudentNumber="3628642364";
-    $req->Male=1;
-    $req->Mail="79322391@qq.com";
-    $resp = $client->CreatePerson($req);
+    $req = new SubmitTraditionalClassTaskRequest();
+    $req->FileContent="https://edu-test-1253131631.cos.ap-guangzhou.myqcloud.com/aieduautotest/autotest_vedio.mp4";
+    $req->FileType="vod_url";
+    $req->LibrarySet=["library_15603955264181591716"];
+    $resp = $client->SubmitTraditionalClassTask($req);
 
     // 输出json格式的字符串回包
     print_r($resp->toJsonString());

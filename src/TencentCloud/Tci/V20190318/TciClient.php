@@ -65,7 +65,8 @@ use TencentCloud\Tci\V20190318\Models as Models;
  | timestamp | uint64 | 识别到人脸的绝对时间戳，单位ms | 
  | image_url | string | 识别到人脸的事件抓图的下载地址，不长期保存，需要请及时下载 | 
 * @method Models\SubmitConversationTaskResponse SubmitConversationTask(Models\SubmitConversationTaskRequest $req) 对话任务分析接口
-* @method Models\SubmitDoubleVideoHighlightsResponse SubmitDoubleVideoHighlights(Models\SubmitDoubleVideoHighlightsRequest $req) 发起双路视频生成精彩集锦接口。该接口可以通过客户传入的学生音视频及老师视频两路Url，自动生成一堂课程的精彩集锦。需要通过SubmitDoubleVideoHighlights接口获取生成结果。
+* @method Models\SubmitDoubleVideoHighlightsResponse SubmitDoubleVideoHighlights(Models\SubmitDoubleVideoHighlightsRequest $req) 发起双路视频生成精彩集锦接口。该接口可以通过客户传入的学生音视频及老师视频两路Url，自动生成一堂课程的精彩集锦。需要通过DescribeHighlightResult
+接口获取生成结果。
 * @method Models\SubmitFullBodyClassTaskResponse SubmitFullBodyClassTask(Models\SubmitFullBodyClassTaskRequest $req) **传统课堂授课任务**：在此场景中，老师为站立授课，有白板或投影供老师展示课程内容，摄像头可以拍摄到老师的半身或者全身。拍摄视频为一路全局画面，且背景不动，要求画面稳定清晰。通过此接口可分析老师授课的行为及语音，以支持AI评教。  
   
 **提供的功能接口有：**老师人脸识别、老师表情识别、老师肢体动作识别、语音识别。  可分析的指标维度包括：身份识别、正脸、侧脸、人脸坐标、人脸尺寸、高兴、中性、高兴、中性、惊讶、厌恶、恐惧、愤怒、蔑视、悲伤、正面讲解、写板书、指黑板、语音转文字、发音时长、非发音时长、音量、语速、指定关键词的使用等

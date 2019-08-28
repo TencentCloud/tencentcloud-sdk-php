@@ -18,16 +18,18 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getImage() 获取图片 base64 数据（图片的宽高比请接近3:4，不符合宽高比的图片返回的分值不具备参考意义）。
+ * @method string getImage() 获取图片 base64 数据，base64 编码后大小不可超过5M（图片的宽高比请接近3:4，不符合宽高比的图片返回的分值不具备参考意义）。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setImage(string $Image) 设置图片 base64 数据（图片的宽高比请接近3:4，不符合宽高比的图片返回的分值不具备参考意义）。
+ * @method void setImage(string $Image) 设置图片 base64 数据，base64 编码后大小不可超过5M（图片的宽高比请接近3:4，不符合宽高比的图片返回的分值不具备参考意义）。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method string getUrl() 获取图片的 Url 。图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+ * @method string getUrl() 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。 
 （图片的宽高比请接近 3:4，不符合宽高比的图片返回的分值不具备参考意义） 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setUrl(string $Url) 设置图片的 Url 。图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+ * @method void setUrl(string $Url) 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。 
 （图片的宽高比请接近 3:4，不符合宽高比的图片返回的分值不具备参考意义） 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
@@ -40,13 +42,14 @@ use TencentCloud\Common\AbstractModel;
 class DetectLiveFaceRequest extends AbstractModel
 {
     /**
-     * @var string 图片 base64 数据（图片的宽高比请接近3:4，不符合宽高比的图片返回的分值不具备参考意义）。
+     * @var string 图片 base64 数据，base64 编码后大小不可超过5M（图片的宽高比请接近3:4，不符合宽高比的图片返回的分值不具备参考意义）。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Image;
 
     /**
-     * @var string 图片的 Url 。图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * @var string 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。 
 （图片的宽高比请接近 3:4，不符合宽高比的图片返回的分值不具备参考意义） 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
@@ -54,9 +57,10 @@ class DetectLiveFaceRequest extends AbstractModel
      */
     public $Url;
     /**
-     * @param string $Image 图片 base64 数据（图片的宽高比请接近3:4，不符合宽高比的图片返回的分值不具备参考意义）。
+     * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M（图片的宽高比请接近3:4，不符合宽高比的图片返回的分值不具备参考意义）。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param string $Url 图片的 Url 。图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * @param string $Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。 
 （图片的宽高比请接近 3:4，不符合宽高比的图片返回的分值不具备参考意义） 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。

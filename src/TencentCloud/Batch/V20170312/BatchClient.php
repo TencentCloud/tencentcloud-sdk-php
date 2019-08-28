@@ -23,6 +23,7 @@ use TencentCloud\Batch\V20170312\Models as Models;
 
 /**
 * @method Models\CreateComputeEnvResponse CreateComputeEnv(Models\CreateComputeEnvRequest $req) 用于创建计算环境
+* @method Models\CreateCpmComputeEnvResponse CreateCpmComputeEnv(Models\CreateCpmComputeEnvRequest $req) 创建黑石计算环境
 * @method Models\CreateTaskTemplateResponse CreateTaskTemplate(Models\CreateTaskTemplateRequest $req) 用于创建任务模板
 * @method Models\DeleteComputeEnvResponse DeleteComputeEnv(Models\DeleteComputeEnvRequest $req) 用于删除计算环境
 * @method Models\DeleteJobResponse DeleteJob(Models\DeleteJobRequest $req) 用于删除作业记录。

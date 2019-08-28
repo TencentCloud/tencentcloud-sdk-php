@@ -20,13 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getMode() 获取检测模式。0 为检测所有出现的人脸， 1 为检测面积最大的人脸。默认为 0。最多返回 10 张人脸的五官定位（人脸关键点）具体信息。
  * @method void setMode(integer $Mode) 设置检测模式。0 为检测所有出现的人脸， 1 为检测面积最大的人脸。默认为 0。最多返回 10 张人脸的五官定位（人脸关键点）具体信息。
- * @method string getImage() 获取图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setImage(string $Image) 设置图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method string getUrl() 获取图片的 Url、Image必须提供一个，如果都提供，只使用 Url。  
+ * @method string getImage() 获取图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+ * @method void setImage(string $Image) 设置图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+ * @method string getUrl() 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setUrl(string $Url) 设置图片的 Url、Image必须提供一个，如果都提供，只使用 Url。  
+ * @method void setUrl(string $Url) 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -49,12 +53,14 @@ class AnalyzeFaceRequest extends AbstractModel
     public $Mode;
 
     /**
-     * @var string 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @var string 图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Image;
 
     /**
-     * @var string 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。  
+     * @var string 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -69,8 +75,10 @@ class AnalyzeFaceRequest extends AbstractModel
     public $FaceModelVersion;
     /**
      * @param integer $Mode 检测模式。0 为检测所有出现的人脸， 1 为检测面积最大的人脸。默认为 0。最多返回 10 张人脸的五官定位（人脸关键点）具体信息。
-     * @param string $Image 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param string $Url 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。  
+     * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @param string $Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。

@@ -28,21 +28,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGender(integer $Gender) 设置0代表未填写，1代表男性，2代表女性。
  * @method array getPersonExDescriptionInfos() 获取人员描述字段内容，key-value。[0，60]个字符，可修改，可重复。
  * @method void setPersonExDescriptionInfos(array $PersonExDescriptionInfos) 设置人员描述字段内容，key-value。[0，60]个字符，可修改，可重复。
- * @method string getImage() 获取图片 base64 数据。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+ * @method string getImage() 获取图片 base64 数据，base64 编码后大小不可超过5M。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setImage(string $Image) 设置图片 base64 数据。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+ * @method void setImage(string $Image) 设置图片 base64 数据，base64 编码后大小不可超过5M。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method string getUrl() 获取图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
+ * @method string getUrl() 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setUrl(string $Url) 设置图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
+ * @method void setUrl(string $Url) 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  */
 
@@ -77,17 +75,16 @@ class CreatePersonRequest extends AbstractModel
     public $PersonExDescriptionInfos;
 
     /**
-     * @var string 图片 base64 数据。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+     * @var string 图片 base64 数据，base64 编码后大小不可超过5M。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Image;
 
     /**
-     * @var string 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
+     * @var string 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Url;
@@ -97,13 +94,12 @@ class CreatePersonRequest extends AbstractModel
      * @param string $PersonId 人员ID，单个腾讯云账号下不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
      * @param integer $Gender 0代表未填写，1代表男性，2代表女性。
      * @param array $PersonExDescriptionInfos 人员描述字段内容，key-value。[0，60]个字符，可修改，可重复。
-     * @param string $Image 图片 base64 数据。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+     * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param string $Url 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
+     * @param string $Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     function __construct()

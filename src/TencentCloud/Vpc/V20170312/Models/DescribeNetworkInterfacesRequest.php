@@ -29,6 +29,8 @@ use TencentCloud\Common\AbstractModel;
 <li>network-interface-name - String - （过滤条件）网卡实例名称。</li>
 <li>network-interface-description - String - （过滤条件）网卡实例描述。</li>
 <li>address-ip - String - （过滤条件）内网IPv4地址。</li>
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。</li>
@@ -38,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 <li>network-interface-name - String - （过滤条件）网卡实例名称。</li>
 <li>network-interface-description - String - （过滤条件）网卡实例描述。</li>
 <li>address-ip - String - （过滤条件）内网IPv4地址。</li>
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。</li>
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
@@ -64,6 +68,8 @@ class DescribeNetworkInterfacesRequest extends AbstractModel
 <li>network-interface-name - String - （过滤条件）网卡实例名称。</li>
 <li>network-interface-description - String - （过滤条件）网卡实例描述。</li>
 <li>address-ip - String - （过滤条件）内网IPv4地址。</li>
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。</li>
      */
     public $Filters;
 
@@ -87,6 +93,8 @@ class DescribeNetworkInterfacesRequest extends AbstractModel
 <li>network-interface-name - String - （过滤条件）网卡实例名称。</li>
 <li>network-interface-description - String - （过滤条件）网卡实例描述。</li>
 <li>address-ip - String - （过滤条件）内网IPv4地址。</li>
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。</li>
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      */

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExclusterType(integer $ExclusterType) 设置1非独享集群，2独享集群， 0全部
  * @method boolean getIsFilterExcluster() 获取标识是否使用ExclusterType字段, false不使用，true使用
  * @method void setIsFilterExcluster(boolean $IsFilterExcluster) 设置标识是否使用ExclusterType字段, false不使用，true使用
+ * @method array getExclusterIds() 获取独享集群ID
+ * @method void setExclusterIds(array $ExclusterIds) 设置独享集群ID
  */
 
 /**
@@ -115,6 +117,11 @@ class DescribeDCDBInstancesRequest extends AbstractModel
      * @var boolean 标识是否使用ExclusterType字段, false不使用，true使用
      */
     public $IsFilterExcluster;
+
+    /**
+     * @var array 独享集群ID
+     */
+    public $ExclusterIds;
     /**
      * @param array $InstanceIds 按照一个或者多个实例 ID 查询。实例 ID 形如：dcdbt-2t4cf98d
      * @param string $SearchName 搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。
@@ -129,6 +136,7 @@ class DescribeDCDBInstancesRequest extends AbstractModel
      * @param integer $Limit 返回数量，默认为 10，最大值为 100。
      * @param integer $ExclusterType 1非独享集群，2独享集群， 0全部
      * @param boolean $IsFilterExcluster 标识是否使用ExclusterType字段, false不使用，true使用
+     * @param array $ExclusterIds 独享集群ID
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class DescribeDCDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("IsFilterExcluster",$param) and $param["IsFilterExcluster"] !== null) {
             $this->IsFilterExcluster = $param["IsFilterExcluster"];
+        }
+
+        if (array_key_exists("ExclusterIds",$param) and $param["ExclusterIds"] !== null) {
+            $this->ExclusterIds = $param["ExclusterIds"];
         }
     }
 }

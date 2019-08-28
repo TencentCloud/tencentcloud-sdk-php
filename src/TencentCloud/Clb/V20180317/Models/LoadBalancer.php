@@ -144,6 +144,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddressIPv6(string $AddressIPv6) 设置负载均衡实例的IPv6地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ExtraInfo getExtraInfo() 获取暂做保留，一般用户无需关注。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtraInfo(ExtraInfo $ExtraInfo) 设置暂做保留，一般用户无需关注。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -345,6 +349,12 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddressIPv6;
+
+    /**
+     * @var ExtraInfo 暂做保留，一般用户无需关注。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtraInfo;
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
@@ -408,6 +418,8 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $LogTopicId 负载均衡日志服务(CLS)的日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddressIPv6 负载均衡实例的IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtraInfo $ExtraInfo 暂做保留，一般用户无需关注。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -566,6 +578,11 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("AddressIPv6",$param) and $param["AddressIPv6"] !== null) {
             $this->AddressIPv6 = $param["AddressIPv6"];
+        }
+
+        if (array_key_exists("ExtraInfo",$param) and $param["ExtraInfo"] !== null) {
+            $this->ExtraInfo = new ExtraInfo();
+            $this->ExtraInfo->deserialize($param["ExtraInfo"]);
         }
     }
 }

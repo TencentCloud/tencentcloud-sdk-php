@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 表示获取账号下所有集群)
  * @method integer getOffset() 获取偏移量,默认0
  * @method void setOffset(integer $Offset) 设置偏移量,默认0
- * @method integer getLimit() 获取最大输出条数，默认20
- * @method void setLimit(integer $Limit) 设置最大输出条数，默认20
+ * @method integer getLimit() 获取最大输出条数，默认20，最大为100
+ * @method void setLimit(integer $Limit) 设置最大输出条数，默认20，最大为100
  * @method array getFilters() 获取过滤条件,当前只支持按照单个条件ClusterName进行过滤
  * @method void setFilters(array $Filters) 设置过滤条件,当前只支持按照单个条件ClusterName进行过滤
  */
@@ -47,7 +47,7 @@ class DescribeClustersRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 最大输出条数，默认20
+     * @var integer 最大输出条数，默认20，最大为100
      */
     public $Limit;
 
@@ -59,7 +59,7 @@ class DescribeClustersRequest extends AbstractModel
      * @param array $ClusterIds 集群ID列表(为空时，
 表示获取账号下所有集群)
      * @param integer $Offset 偏移量,默认0
-     * @param integer $Limit 最大输出条数，默认20
+     * @param integer $Limit 最大输出条数，默认20，最大为100
      * @param array $Filters 过滤条件,当前只支持按照单个条件ClusterName进行过滤
      */
     function __construct()

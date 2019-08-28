@@ -23,7 +23,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 
 /**
 * @method Models\ApplyUploadResponse ApplyUpload(Models\ApplyUploadRequest $req) * 该接口用于申请媒体文件（和封面文件）的上传，获取文件上传到云点播的元信息（包括上传路径、上传签名等），用于后续上传接口。
-* 上传流程请参考[服务端上传综述](https://cloud.tencent.com/document/product/266/9759)。
+* 上传流程请参考 [服务端上传综述](/document/product/266/9759)。
 * @method Models\CommitUploadResponse CommitUpload(Models\CommitUploadRequest $req) 该接口用于确认媒体文件（和封面文件）上传到腾讯云点播的结果，并存储媒体信息，返回文件的播放地址和文件 ID。
 * @method Models\ComposeMediaResponse ComposeMedia(Models\ComposeMediaRequest $req) 该接口用于制作媒体文件，可以
 

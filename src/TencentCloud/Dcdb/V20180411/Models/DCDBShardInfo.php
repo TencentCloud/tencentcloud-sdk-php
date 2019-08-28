@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemoryUsage(float $MemoryUsage) 设置内存使用率，单位为 %
  * @method integer getShardId() 获取数字分片Id（过时字段，请勿依赖该值）
  * @method void setShardId(integer $ShardId) 设置数字分片Id（过时字段，请勿依赖该值）
+ * @method integer getPid() 获取产品ProductID
+ * @method void setPid(integer $Pid) 设置产品ProductID
+ * @method string getProxyVersion() 获取Proxy版本
+ * @method void setProxyVersion(string $ProxyVersion) 设置Proxy版本
  */
 
 /**
@@ -150,6 +154,16 @@ class DCDBShardInfo extends AbstractModel
      * @var integer 数字分片Id（过时字段，请勿依赖该值）
      */
     public $ShardId;
+
+    /**
+     * @var integer 产品ProductID
+     */
+    public $Pid;
+
+    /**
+     * @var string Proxy版本
+     */
+    public $ProxyVersion;
     /**
      * @param string $InstanceId 所属实例Id
      * @param string $ShardSerialId 分片SQL透传Id，用于将sql透传到指定分片执行
@@ -169,6 +183,8 @@ class DCDBShardInfo extends AbstractModel
      * @param float $StorageUsage 存储使用率，单位为 %
      * @param float $MemoryUsage 内存使用率，单位为 %
      * @param integer $ShardId 数字分片Id（过时字段，请勿依赖该值）
+     * @param integer $Pid 产品ProductID
+     * @param string $ProxyVersion Proxy版本
      */
     function __construct()
     {
@@ -252,6 +268,14 @@ class DCDBShardInfo extends AbstractModel
 
         if (array_key_exists("ShardId",$param) and $param["ShardId"] !== null) {
             $this->ShardId = $param["ShardId"];
+        }
+
+        if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
+            $this->Pid = $param["Pid"];
+        }
+
+        if (array_key_exists("ProxyVersion",$param) and $param["ProxyVersion"] !== null) {
+            $this->ProxyVersion = $param["ProxyVersion"];
         }
     }
 }

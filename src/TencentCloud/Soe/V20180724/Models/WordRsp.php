@@ -18,10 +18,10 @@ namespace TencentCloud\Soe\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getMemBeginTime() 获取当前单词语音起始时间点，单位为ms
- * @method void setMemBeginTime(integer $MemBeginTime) 设置当前单词语音起始时间点，单位为ms
- * @method integer getMemEndTime() 获取当前单词语音终止时间点，单位为ms
- * @method void setMemEndTime(integer $MemEndTime) 设置当前单词语音终止时间点，单位为ms
+ * @method integer getMemBeginTime() 获取当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
+ * @method void setMemBeginTime(integer $MemBeginTime) 设置当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
+ * @method integer getMemEndTime() 获取当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
+ * @method void setMemEndTime(integer $MemEndTime) 设置当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
  * @method float getPronAccuracy() 获取单词发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
  * @method void setPronAccuracy(float $PronAccuracy) 设置单词发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
  * @method float getPronFluency() 获取单词发音流利度，取值范围[0, 1]
@@ -42,12 +42,12 @@ use TencentCloud\Common\AbstractModel;
 class WordRsp extends AbstractModel
 {
     /**
-     * @var integer 当前单词语音起始时间点，单位为ms
+     * @var integer 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
      */
     public $MemBeginTime;
 
     /**
-     * @var integer 当前单词语音终止时间点，单位为ms
+     * @var integer 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
      */
     public $MemEndTime;
 
@@ -81,8 +81,8 @@ class WordRsp extends AbstractModel
      */
     public $ReferenceWord;
     /**
-     * @param integer $MemBeginTime 当前单词语音起始时间点，单位为ms
-     * @param integer $MemEndTime 当前单词语音终止时间点，单位为ms
+     * @param integer $MemBeginTime 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
+     * @param integer $MemEndTime 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
      * @param float $PronAccuracy 单词发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
      * @param float $PronFluency 单词发音流利度，取值范围[0, 1]
      * @param string $Word 当前词

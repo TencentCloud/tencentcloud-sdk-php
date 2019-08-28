@@ -20,12 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method integer getOffset() 获取偏移量,默认0
- * @method void setOffset(integer $Offset) 设置偏移量,默认0
- * @method integer getLimit() 获取最大输出条数，默认20
- * @method void setLimit(integer $Limit) 设置最大输出条数，默认20
- * @method array getInstanceIds() 获取需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
- * @method void setInstanceIds(array $InstanceIds) 设置需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
+ * @method integer getOffset() 获取偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+ * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+ * @method array getInstanceIds() 获取需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
+ * @method void setInstanceIds(array $InstanceIds) 设置需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
+ * @method string getInstanceRole() 获取节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
+ * @method void setInstanceRole(string $InstanceRole) 设置节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
  */
 
 /**
@@ -39,24 +41,30 @@ class DescribeClusterInstancesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var integer 偏移量,默认0
+     * @var integer 偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public $Offset;
 
     /**
-     * @var integer 最大输出条数，默认20
+     * @var integer 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public $Limit;
 
     /**
-     * @var array 需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
+     * @var array 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
      */
     public $InstanceIds;
+
+    /**
+     * @var string 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
+     */
+    public $InstanceRole;
     /**
      * @param string $ClusterId 集群ID
-     * @param integer $Offset 偏移量,默认0
-     * @param integer $Limit 最大输出条数，默认20
-     * @param array $InstanceIds 需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
+     * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * @param integer $Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * @param array $InstanceIds 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
+     * @param string $InstanceRole 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeClusterInstancesRequest extends AbstractModel
 
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("InstanceRole",$param) and $param["InstanceRole"] !== null) {
+            $this->InstanceRole = $param["InstanceRole"];
         }
     }
 }

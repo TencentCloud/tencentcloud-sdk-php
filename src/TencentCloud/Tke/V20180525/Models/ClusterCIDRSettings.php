@@ -18,14 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getClusterCIDR() 获取用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
- * @method void setClusterCIDR(string $ClusterCIDR) 设置用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+ * @method string getClusterCIDR() 获取用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
+ * @method void setClusterCIDR(string $ClusterCIDR) 设置用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
  * @method boolean getIgnoreClusterCIDRConflict() 获取是否忽略 ClusterCIDR 冲突错误, 默认不忽略
  * @method void setIgnoreClusterCIDRConflict(boolean $IgnoreClusterCIDRConflict) 设置是否忽略 ClusterCIDR 冲突错误, 默认不忽略
- * @method integer getMaxNodePodNum() 获取集群中每个Node上最大的Pod数量
- * @method void setMaxNodePodNum(integer $MaxNodePodNum) 设置集群中每个Node上最大的Pod数量
- * @method integer getMaxClusterServiceNum() 获取集群最大的service数量
- * @method void setMaxClusterServiceNum(integer $MaxClusterServiceNum) 设置集群最大的service数量
+ * @method integer getMaxNodePodNum() 获取集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
+ * @method void setMaxNodePodNum(integer $MaxNodePodNum) 设置集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
+ * @method integer getMaxClusterServiceNum() 获取集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
+ * @method void setMaxClusterServiceNum(integer $MaxClusterServiceNum) 设置集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
  */
 
 /**
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ClusterCIDRSettings extends AbstractModel
 {
     /**
-     * @var string 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+     * @var string 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
      */
     public $ClusterCIDR;
 
@@ -44,19 +44,19 @@ class ClusterCIDRSettings extends AbstractModel
     public $IgnoreClusterCIDRConflict;
 
     /**
-     * @var integer 集群中每个Node上最大的Pod数量
+     * @var integer 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
      */
     public $MaxNodePodNum;
 
     /**
-     * @var integer 集群最大的service数量
+     * @var integer 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
      */
     public $MaxClusterServiceNum;
     /**
-     * @param string $ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+     * @param string $ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
      * @param boolean $IgnoreClusterCIDRConflict 是否忽略 ClusterCIDR 冲突错误, 默认不忽略
-     * @param integer $MaxNodePodNum 集群中每个Node上最大的Pod数量
-     * @param integer $MaxClusterServiceNum 集群最大的service数量
+     * @param integer $MaxNodePodNum 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
+     * @param integer $MaxClusterServiceNum 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
      */
     function __construct()
     {

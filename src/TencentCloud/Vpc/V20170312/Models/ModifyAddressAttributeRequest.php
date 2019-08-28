@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddressId(string $AddressId) 设置标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
  * @method string getAddressName() 获取修改后的 EIP 名称。长度上限为20个字符。
  * @method void setAddressName(string $AddressName) 设置修改后的 EIP 名称。长度上限为20个字符。
+ * @method string getEipDirectConnection() 获取设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
+ * @method void setEipDirectConnection(string $EipDirectConnection) 设置设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
  */
 
 /**
@@ -38,9 +40,15 @@ class ModifyAddressAttributeRequest extends AbstractModel
      * @var string 修改后的 EIP 名称。长度上限为20个字符。
      */
     public $AddressName;
+
+    /**
+     * @var string 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
+     */
+    public $EipDirectConnection;
     /**
      * @param string $AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
      * @param string $AddressName 修改后的 EIP 名称。长度上限为20个字符。
+     * @param string $EipDirectConnection 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyAddressAttributeRequest extends AbstractModel
 
         if (array_key_exists("AddressName",$param) and $param["AddressName"] !== null) {
             $this->AddressName = $param["AddressName"];
+        }
+
+        if (array_key_exists("EipDirectConnection",$param) and $param["EipDirectConnection"] !== null) {
+            $this->EipDirectConnection = $param["EipDirectConnection"];
         }
     }
 }

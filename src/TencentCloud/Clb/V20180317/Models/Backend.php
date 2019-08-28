@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getType() 获取后端服务的类型，可取：CVM、ENI（即将支持）
  * @method void setType(string $Type) 设置后端服务的类型，可取：CVM、ENI（即将支持）
- * @method string getInstanceId() 获取后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
- * @method void setInstanceId(string $InstanceId) 设置后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+ * @method string getInstanceId() 获取后端服务的唯一 ID，如 ins-abcd1234
+ * @method void setInstanceId(string $InstanceId) 设置后端服务的唯一 ID，如 ins-abcd1234
  * @method integer getPort() 获取后端服务的监听端口
  * @method void setPort(integer $Port) 设置后端服务的监听端口
  * @method integer getWeight() 获取后端服务的转发权重，取值范围：[0, 100]，默认为 10。
@@ -42,9 +42,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegisteredTime(string $RegisteredTime) 设置后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEniId() 获取弹性网卡唯一ID
+ * @method string getEniId() 获取弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEniId(string $EniId) 设置弹性网卡唯一ID
+ * @method void setEniId(string $EniId) 设置弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -59,7 +59,7 @@ class Backend extends AbstractModel
     public $Type;
 
     /**
-     * @var string 后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+     * @var string 后端服务的唯一 ID，如 ins-abcd1234
      */
     public $InstanceId;
 
@@ -98,13 +98,13 @@ class Backend extends AbstractModel
     public $RegisteredTime;
 
     /**
-     * @var string 弹性网卡唯一ID
+     * @var string 弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EniId;
     /**
      * @param string $Type 后端服务的类型，可取：CVM、ENI（即将支持）
-     * @param string $InstanceId 后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+     * @param string $InstanceId 后端服务的唯一 ID，如 ins-abcd1234
      * @param integer $Port 后端服务的监听端口
      * @param integer $Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      * @param array $PublicIpAddresses 后端服务的外网 IP
@@ -115,7 +115,7 @@ class Backend extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegisteredTime 后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EniId 弹性网卡唯一ID
+     * @param string $EniId 弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

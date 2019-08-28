@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterCIDRSettings(ClusterCIDRSettings $ClusterCIDRSettings) 设置集群容器网络配置信息
  * @method string getClusterType() 获取集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
  * @method void setClusterType(string $ClusterType) 设置集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
- * @method array getRunInstancesForNode() 获取CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
- * @method void setRunInstancesForNode(array $RunInstancesForNode) 设置CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
+ * @method array getRunInstancesForNode() 获取CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
+ * @method void setRunInstancesForNode(array $RunInstancesForNode) 设置CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
  * @method ClusterBasicSettings getClusterBasicSettings() 获取集群的基本配置信息
  * @method void setClusterBasicSettings(ClusterBasicSettings $ClusterBasicSettings) 设置集群的基本配置信息
  * @method ClusterAdvancedSettings getClusterAdvancedSettings() 获取集群高级配置信息
  * @method void setClusterAdvancedSettings(ClusterAdvancedSettings $ClusterAdvancedSettings) 设置集群高级配置信息
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取节点高级配置信息
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置节点高级配置信息
- * @method array getExistedInstancesForNode() 获取已存在实例的配置信息
- * @method void setExistedInstancesForNode(array $ExistedInstancesForNode) 设置已存在实例的配置信息
+ * @method array getExistedInstancesForNode() 获取已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
+ * @method void setExistedInstancesForNode(array $ExistedInstancesForNode) 设置已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
  */
 
 /**
@@ -50,7 +50,7 @@ class CreateClusterRequest extends AbstractModel
     public $ClusterType;
 
     /**
-     * @var array CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
+     * @var array CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
      */
     public $RunInstancesForNode;
 
@@ -70,17 +70,17 @@ class CreateClusterRequest extends AbstractModel
     public $InstanceAdvancedSettings;
 
     /**
-     * @var array 已存在实例的配置信息
+     * @var array 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
      */
     public $ExistedInstancesForNode;
     /**
      * @param ClusterCIDRSettings $ClusterCIDRSettings 集群容器网络配置信息
      * @param string $ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
-     * @param array $RunInstancesForNode CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
+     * @param array $RunInstancesForNode CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
      * @param ClusterBasicSettings $ClusterBasicSettings 集群的基本配置信息
      * @param ClusterAdvancedSettings $ClusterAdvancedSettings 集群高级配置信息
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 节点高级配置信息
-     * @param array $ExistedInstancesForNode 已存在实例的配置信息
+     * @param array $ExistedInstancesForNode 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
      */
     function __construct()
     {

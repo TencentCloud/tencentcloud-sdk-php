@@ -23,8 +23,8 @@ use TencentCloud\Tbp\V20190311\Models as Models;
 
 /**
 * @method Models\ResetResponse Reset(Models\ResetRequest $req) 对当前机器人的会话状态进行复位
-* @method Models\TextProcessResponse TextProcess(Models\TextProcessRequest $req) 接收调用侧的文本输入，返回应答文本。
-* @method Models\TextResetResponse TextReset(Models\TextResetRequest $req) 会话重置接口
+* @method Models\TextProcessResponse TextProcess(Models\TextProcessRequest $req) 接收调用侧的文本输入，返回应答文本。已废弃，推荐使用最新版TextProcess接口。
+* @method Models\TextResetResponse TextReset(Models\TextResetRequest $req) 会话重置接口。已废弃，推荐使用最新版TextReset接口。
  */
 
 class TbpClient extends AbstractClient

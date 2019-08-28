@@ -24,13 +24,17 @@ use TencentCloud\Common\AbstractModel;
 此参数用于控制处理待检测图片中的人脸个数，值越小，处理速度越快。
  * @method integer getMinFaceSize() 获取人脸长和宽的最小尺寸，单位为像素。默认为40。低于此尺寸的人脸不会被检测。
  * @method void setMinFaceSize(integer $MinFaceSize) 设置人脸长和宽的最小尺寸，单位为像素。默认为40。低于此尺寸的人脸不会被检测。
- * @method string getImage() 获取图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setImage(string $Image) 设置图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method string getUrl() 获取图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+ * @method string getImage() 获取图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+ * @method void setImage(string $Image) 设置图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+ * @method string getUrl() 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setUrl(string $Url) 设置图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+ * @method void setUrl(string $Url) 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -50,6 +54,12 @@ use TencentCloud\Common\AbstractModel;
 非 1 值均视为不进行质量检测。
 最多返回面积最大的 30 张人脸质量分信息，超过 30 张人脸（第 31 张及以后的人脸）的 FaceQualityInfo不具备参考意义。  
 建议：人脸入库操作建议开启此功能。
+ * @method string getFaceModelVersion() 获取人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
+默认为"2.0"。 
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用最新版本。
+ * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
+默认为"2.0"。 
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用最新版本。
  */
 
 /**
@@ -69,12 +79,14 @@ class DetectFaceRequest extends AbstractModel
     public $MinFaceSize;
 
     /**
-     * @var string 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @var string 图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Image;
 
     /**
-     * @var string 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * @var string 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -96,12 +108,21 @@ class DetectFaceRequest extends AbstractModel
 建议：人脸入库操作建议开启此功能。
      */
     public $NeedQualityDetection;
+
+    /**
+     * @var string 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
+默认为"2.0"。 
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用最新版本。
+     */
+    public $FaceModelVersion;
     /**
      * @param integer $MaxFaceNum 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为120。 
 此参数用于控制处理待检测图片中的人脸个数，值越小，处理速度越快。
      * @param integer $MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为40。低于此尺寸的人脸不会被检测。
-     * @param string $Image 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param string $Url 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @param string $Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -113,6 +134,9 @@ class DetectFaceRequest extends AbstractModel
 非 1 值均视为不进行质量检测。
 最多返回面积最大的 30 张人脸质量分信息，超过 30 张人脸（第 31 张及以后的人脸）的 FaceQualityInfo不具备参考意义。  
 建议：人脸入库操作建议开启此功能。
+     * @param string $FaceModelVersion 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
+默认为"2.0"。 
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用最新版本。
      */
     function __construct()
     {
@@ -148,6 +172,10 @@ class DetectFaceRequest extends AbstractModel
 
         if (array_key_exists("NeedQualityDetection",$param) and $param["NeedQualityDetection"] !== null) {
             $this->NeedQualityDetection = $param["NeedQualityDetection"];
+        }
+
+        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
+            $this->FaceModelVersion = $param["FaceModelVersion"];
         }
     }
 }

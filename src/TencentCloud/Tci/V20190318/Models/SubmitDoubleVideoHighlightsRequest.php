@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrameInterval(integer $FrameInterval) 设置视频处理的抽帧间隔，单位毫秒。建议留空。
  * @method array getPersonIds() 获取旧版本需要匹配的人员信息列表。
  * @method void setPersonIds(array $PersonIds) 设置旧版本需要匹配的人员信息列表。
- * @method integer getSimThreshold() 获取人脸检索的相似度阈值，默认值0.89。建议留空。
- * @method void setSimThreshold(integer $SimThreshold) 设置人脸检索的相似度阈值，默认值0.89。建议留空。
+ * @method float getSimThreshold() 获取人脸检索的相似度阈值，默认值0.89。建议留空。
+ * @method void setSimThreshold(float $SimThreshold) 设置人脸检索的相似度阈值，默认值0.89。建议留空。
  * @method string getTeacherFileContent() 获取老师视频url
  * @method void setTeacherFileContent(string $TeacherFileContent) 设置老师视频url
  */
@@ -72,7 +72,7 @@ class SubmitDoubleVideoHighlightsRequest extends AbstractModel
     public $PersonIds;
 
     /**
-     * @var integer 人脸检索的相似度阈值，默认值0.89。建议留空。
+     * @var float 人脸检索的相似度阈值，默认值0.89。建议留空。
      */
     public $SimThreshold;
 
@@ -87,7 +87,7 @@ class SubmitDoubleVideoHighlightsRequest extends AbstractModel
      * @param array $PersonInfoList 需要匹配的人员信息列表。
      * @param integer $FrameInterval 视频处理的抽帧间隔，单位毫秒。建议留空。
      * @param array $PersonIds 旧版本需要匹配的人员信息列表。
-     * @param integer $SimThreshold 人脸检索的相似度阈值，默认值0.89。建议留空。
+     * @param float $SimThreshold 人脸检索的相似度阈值，默认值0.89。建议留空。
      * @param string $TeacherFileContent 老师视频url
      */
     function __construct()

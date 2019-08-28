@@ -18,34 +18,38 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getImageA() 获取A 图片 base64 数据。
+ * @method string getImageA() 获取A 图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setImageA(string $ImageA) 设置A 图片 base64 数据。
+ * @method void setImageA(string $ImageA) 设置A 图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method string getImageB() 获取B 图片 base64 数据。
+ * @method string getImageB() 获取B 图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setImageB(string $ImageB) 设置B 图片 base64 数据。
+ * @method void setImageB(string $ImageB) 设置B 图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method string getUrlA() 获取A 图片的 Url 。A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+ * @method string getUrlA() 获取A 图片的 Url ，对应图片 base64 编码后大小不可超过5M。
+A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setUrlA(string $UrlA) 设置A 图片的 Url 。A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+ * @method void setUrlA(string $UrlA) 设置A 图片的 Url ，对应图片 base64 编码后大小不可超过5M。
+A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method string getUrlB() 获取B 图片的 Url 。B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+ * @method string getUrlB() 获取B 图片的 Url ，对应图片 base64 编码后大小不可超过5M。
+B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setUrlB(string $UrlB) 设置B 图片的 Url 。B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+ * @method void setUrlB(string $UrlB) 设置B 图片的 Url ，对应图片 base64 编码后大小不可超过5M。
+B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
@@ -58,21 +62,22 @@ use TencentCloud\Common\AbstractModel;
 class CompareFaceRequest extends AbstractModel
 {
     /**
-     * @var string A 图片 base64 数据。
+     * @var string A 图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $ImageA;
 
     /**
-     * @var string B 图片 base64 数据。
+     * @var string B 图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $ImageB;
 
     /**
-     * @var string A 图片的 Url 。A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * @var string A 图片的 Url ，对应图片 base64 编码后大小不可超过5M。
+A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
@@ -81,7 +86,8 @@ class CompareFaceRequest extends AbstractModel
     public $UrlA;
 
     /**
-     * @var string B 图片的 Url 。B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * @var string B 图片的 Url ，对应图片 base64 编码后大小不可超过5M。
+B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
@@ -89,18 +95,20 @@ class CompareFaceRequest extends AbstractModel
      */
     public $UrlB;
     /**
-     * @param string $ImageA A 图片 base64 数据。
+     * @param string $ImageA A 图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param string $ImageB B 图片 base64 数据。
+     * @param string $ImageB B 图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param string $UrlA A 图片的 Url 。A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * @param string $UrlA A 图片的 Url ，对应图片 base64 编码后大小不可超过5M。
+A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param string $UrlB B 图片的 Url 。B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * @param string $UrlB B 图片的 Url ，对应图片 base64 编码后大小不可超过5M。
+B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。

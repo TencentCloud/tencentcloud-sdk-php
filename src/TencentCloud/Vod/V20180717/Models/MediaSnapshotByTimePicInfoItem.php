@@ -18,9 +18,9 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method float getTimeOffset() 获取该张截图对应视频文件中的时间偏移，单位：秒。
+ * @method float getTimeOffset() 获取该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeOffset(float $TimeOffset) 设置该张截图对应视频文件中的时间偏移，单位：秒。
+ * @method void setTimeOffset(float $TimeOffset) 设置该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取该张截图的 URL 地址。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class MediaSnapshotByTimePicInfoItem extends AbstractModel
 {
     /**
-     * @var float 该张截图对应视频文件中的时间偏移，单位：秒。
+     * @var float 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeOffset;
@@ -55,7 +55,7 @@ class MediaSnapshotByTimePicInfoItem extends AbstractModel
      */
     public $WaterMarkDefinition;
     /**
-     * @param float $TimeOffset 该张截图对应视频文件中的时间偏移，单位：秒。
+     * @param float $TimeOffset 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 该张截图的 URL 地址。
 注意：此字段可能返回 null，表示取不到有效值。

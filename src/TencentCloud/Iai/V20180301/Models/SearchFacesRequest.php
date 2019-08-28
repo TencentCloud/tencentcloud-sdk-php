@@ -20,13 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getGroupIds() 获取希望搜索的人员库列表，上限100个。
  * @method void setGroupIds(array $GroupIds) 设置希望搜索的人员库列表，上限100个。
- * @method string getImage() 获取图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setImage(string $Image) 设置图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method string getUrl() 获取图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
+ * @method string getImage() 获取图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+ * @method void setImage(string $Image) 设置图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+ * @method string getUrl() 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setUrl(string $Url) 设置图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
+ * @method void setUrl(string $Url) 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -59,12 +63,14 @@ class SearchFacesRequest extends AbstractModel
     public $GroupIds;
 
     /**
-     * @var string 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @var string 图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Image;
 
     /**
-     * @var string 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
+     * @var string 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -96,8 +102,10 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     public $NeedPersonInfo;
     /**
      * @param array $GroupIds 希望搜索的人员库列表，上限100个。
-     * @param string $Image 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param string $Url 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
+     * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @param string $Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。

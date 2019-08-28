@@ -38,13 +38,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputText(string $InputText) 设置原始的用户说法。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResponseText() 获取机器人回答。
+ * @method string getSessionAttributes() 获取透传字段，由用户自定义的WebService服务返回。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResponseText(string $ResponseText) 设置机器人回答。
+ * @method void setSessionAttributes(string $SessionAttributes) 设置透传字段，由用户自定义的WebService服务返回。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSessionAttributes() 获取透传字段，由endpoint服务返回。
+ * @method string getResponseText() 获取机器人对话的应答文本。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSessionAttributes(string $SessionAttributes) 设置透传字段，由endpoint服务返回。
+ * @method void setResponseText(string $ResponseText) 设置机器人对话的应答文本。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -86,16 +86,16 @@ class TextResetResponse extends AbstractModel
     public $InputText;
 
     /**
-     * @var string 机器人回答。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ResponseText;
-
-    /**
-     * @var string 透传字段，由endpoint服务返回。
+     * @var string 透传字段，由用户自定义的WebService服务返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionAttributes;
+
+    /**
+     * @var string 机器人对话的应答文本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResponseText;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -112,9 +112,9 @@ class TextResetResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InputText 原始的用户说法。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResponseText 机器人回答。
+     * @param string $SessionAttributes 透传字段，由用户自定义的WebService服务返回。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SessionAttributes 透传字段，由endpoint服务返回。
+     * @param string $ResponseText 机器人对话的应答文本。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -155,12 +155,12 @@ class TextResetResponse extends AbstractModel
             $this->InputText = $param["InputText"];
         }
 
-        if (array_key_exists("ResponseText",$param) and $param["ResponseText"] !== null) {
-            $this->ResponseText = $param["ResponseText"];
-        }
-
         if (array_key_exists("SessionAttributes",$param) and $param["SessionAttributes"] !== null) {
             $this->SessionAttributes = $param["SessionAttributes"];
+        }
+
+        if (array_key_exists("ResponseText",$param) and $param["ResponseText"] !== null) {
+            $this->ResponseText = $param["ResponseText"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

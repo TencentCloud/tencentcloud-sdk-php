@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputText(string $InputText) 设置请求的文本。
  * @method string getBotEnv() 获取机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
  * @method void setBotEnv(string $BotEnv) 设置机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
- * @method string getSessionAttributes() 获取透传字段，透传给endpoint服务。
- * @method void setSessionAttributes(string $SessionAttributes) 设置透传字段，透传给endpoint服务。
+ * @method string getSessionAttributes() 获取透传字段，透传给用户自定义的WebService服务。
+ * @method void setSessionAttributes(string $SessionAttributes) 设置透传字段，透传给用户自定义的WebService服务。
  */
 
 /**
@@ -56,7 +56,7 @@ class TextProcessRequest extends AbstractModel
     public $BotEnv;
 
     /**
-     * @var string 透传字段，透传给endpoint服务。
+     * @var string 透传字段，透传给用户自定义的WebService服务。
      */
     public $SessionAttributes;
     /**
@@ -64,7 +64,7 @@ class TextProcessRequest extends AbstractModel
      * @param string $TerminalId 终端标识，每个终端(或线程)对应一个，区分并发多用户。
      * @param string $InputText 请求的文本。
      * @param string $BotEnv 机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
-     * @param string $SessionAttributes 透传字段，透传给endpoint服务。
+     * @param string $SessionAttributes 透传字段，透传给用户自定义的WebService服务。
      */
     function __construct()
     {

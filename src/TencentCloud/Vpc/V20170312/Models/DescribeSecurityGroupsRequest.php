@@ -21,11 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * @method array getSecurityGroupIds() 获取安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
+<li>security-group-id - String - （过滤条件）安全组ID。</li>
 <li>project-id - Integer - （过滤条件）项目id。</li>
 <li>security-group-name - String - （过滤条件）安全组名称。</li>
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
+<li>security-group-id - String - （过滤条件）安全组ID。</li>
 <li>project-id - Integer - （过滤条件）项目id。</li>
 <li>security-group-name - String - （过滤条件）安全组名称。</li>
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。</li>
  * @method string getOffset() 获取偏移量。
  * @method void setOffset(string $Offset) 设置偏移量。
  * @method string getLimit() 获取返回数量。
@@ -44,8 +50,11 @@ class DescribeSecurityGroupsRequest extends AbstractModel
 
     /**
      * @var array 过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
+<li>security-group-id - String - （过滤条件）安全组ID。</li>
 <li>project-id - Integer - （过滤条件）项目id。</li>
 <li>security-group-name - String - （过滤条件）安全组名称。</li>
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。</li>
      */
     public $Filters;
 
@@ -61,8 +70,11 @@ class DescribeSecurityGroupsRequest extends AbstractModel
     /**
      * @param array $SecurityGroupIds 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
+<li>security-group-id - String - （过滤条件）安全组ID。</li>
 <li>project-id - Integer - （过滤条件）项目id。</li>
 <li>security-group-name - String - （过滤条件）安全组名称。</li>
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。</li>
      * @param string $Offset 偏移量。
      * @param string $Limit 返回数量。
      */

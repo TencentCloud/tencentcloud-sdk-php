@@ -14,25 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getMiniProgramReviewList() 获取审核信息列表。
- * @method void setMiniProgramReviewList(array $MiniProgramReviewList) 设置审核信息列表。
+ * @method string getProductId() 获取产品ID
+ * @method void setProductId(string $ProductId) 设置产品ID
+ * @method string getDeviceName() 获取设备名
+ * @method void setDeviceName(string $DeviceName) 设置设备名
  */
 
 /**
- *小程序审核信息
+ *DescribeDevice请求参数结构体
  */
-class MediaMiniProgramReviewInfo extends AbstractModel
+class DescribeDeviceRequest extends AbstractModel
 {
     /**
-     * @var array 审核信息列表。
+     * @var string 产品ID
      */
-    public $MiniProgramReviewList;
+    public $ProductId;
+
     /**
-     * @param array $MiniProgramReviewList 审核信息列表。
+     * @var string 设备名
+     */
+    public $DeviceName;
+    /**
+     * @param string $ProductId 产品ID
+     * @param string $DeviceName 设备名
      */
     function __construct()
     {
@@ -46,13 +54,12 @@ class MediaMiniProgramReviewInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MiniProgramReviewList",$param) and $param["MiniProgramReviewList"] !== null) {
-            $this->MiniProgramReviewList = [];
-            foreach ($param["MiniProgramReviewList"] as $key => $value){
-                $obj = new MediaMiniProgramReviewInfoItem();
-                $obj->deserialize($value);
-                array_push($this->MiniProgramReviewList, $obj);
-            }
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
+            $this->DeviceName = $param["DeviceName"];
         }
     }
 }

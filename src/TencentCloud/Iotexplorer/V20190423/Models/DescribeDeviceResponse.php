@@ -14,36 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getResult() 获取成功时为命名空间ID，失败为null
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(string $Result) 设置成功时为命名空间ID，失败为null
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method DeviceInfo getDevice() 获取设备信息
+ * @method void setDevice(DeviceInfo $Device) 设置设备信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *CreateNamespace返回参数结构体
+ *DescribeDevice返回参数结构体
  */
-class CreateNamespaceResponse extends AbstractModel
+class DescribeDeviceResponse extends AbstractModel
 {
     /**
-     * @var string 成功时为命名空间ID，失败为null
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var DeviceInfo 设备信息
      */
-    public $Result;
+    public $Device;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $Result 成功时为命名空间ID，失败为null
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceInfo $Device 设备信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +54,9 @@ class CreateNamespaceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("Device",$param) and $param["Device"] !== null) {
+            $this->Device = new DeviceInfo();
+            $this->Device->deserialize($param["Device"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealTotalCost(string $RealTotalCost) 设置实际花费
  * @method string getRealTotalCostRatio() 获取费用所占百分比，两位小数
  * @method void setRealTotalCostRatio(string $RealTotalCostRatio) 设置费用所占百分比，两位小数
- * @method array getDetail() 获取按交易类型汇总消费详情
- * @method void setDetail(array $Detail) 设置按交易类型汇总消费详情
+ * @method array getDetail() 获取按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
+ * @method void setDetail(array $Detail) 设置按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
  */
 
 /**
@@ -56,7 +56,7 @@ class PayModeSummaryOverviewItem extends AbstractModel
     public $RealTotalCostRatio;
 
     /**
-     * @var array 按交易类型汇总消费详情
+     * @var array 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
      */
     public $Detail;
     /**
@@ -64,7 +64,7 @@ class PayModeSummaryOverviewItem extends AbstractModel
      * @param string $PayModeName 付费模式名称
      * @param string $RealTotalCost 实际花费
      * @param string $RealTotalCostRatio 费用所占百分比，两位小数
-     * @param array $Detail 按交易类型汇总消费详情
+     * @param array $Detail 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
      */
     function __construct()
     {

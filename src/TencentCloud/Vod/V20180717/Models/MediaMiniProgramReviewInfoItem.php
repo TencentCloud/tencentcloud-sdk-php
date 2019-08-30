@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReviewResult(string $ReviewResult) 设置小程序视频发布状态：
 <li>Pass：成功。</li>
 <li>Rejected：未通过。</li>
- * @method MediaMiniProgramReviewElem getReviewSummery() 获取小程序审核元素。
+ * @method array getReviewSummery() 获取小程序审核元素。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReviewSummery(MediaMiniProgramReviewElem $ReviewSummery) 设置小程序审核元素。
+ * @method void setReviewSummery(array $ReviewSummery) 设置小程序审核元素。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -67,7 +67,7 @@ class MediaMiniProgramReviewInfoItem extends AbstractModel
     public $ReviewResult;
 
     /**
-     * @var MediaMiniProgramReviewElem 小程序审核元素。
+     * @var array 小程序审核元素。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReviewSummery;
@@ -79,7 +79,7 @@ class MediaMiniProgramReviewInfoItem extends AbstractModel
      * @param string $ReviewResult 小程序视频发布状态：
 <li>Pass：成功。</li>
 <li>Rejected：未通过。</li>
-     * @param MediaMiniProgramReviewElem $ReviewSummery 小程序审核元素。
+     * @param array $ReviewSummery 小程序审核元素。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -112,8 +112,12 @@ class MediaMiniProgramReviewInfoItem extends AbstractModel
         }
 
         if (array_key_exists("ReviewSummery",$param) and $param["ReviewSummery"] !== null) {
-            $this->ReviewSummery = new MediaMiniProgramReviewElem();
-            $this->ReviewSummery->deserialize($param["ReviewSummery"]);
+            $this->ReviewSummery = [];
+            foreach ($param["ReviewSummery"] as $key => $value){
+                $obj = new MediaMiniProgramReviewElem();
+                $obj->deserialize($value);
+                array_push($this->ReviewSummery, $obj);
+            }
         }
     }
 }

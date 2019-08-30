@@ -14,25 +14,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getMiniProgramReviewList() 获取审核信息列表。
- * @method void setMiniProgramReviewList(array $MiniProgramReviewList) 设置审核信息列表。
+ * @method array getAutoScalingGroupIds() 获取伸缩组ID列表
+ * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) 设置伸缩组ID列表
  */
 
 /**
- *小程序审核信息
+ *DescribeAutoScalingGroupLastActivities请求参数结构体
  */
-class MediaMiniProgramReviewInfo extends AbstractModel
+class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
 {
     /**
-     * @var array 审核信息列表。
+     * @var array 伸缩组ID列表
      */
-    public $MiniProgramReviewList;
+    public $AutoScalingGroupIds;
     /**
-     * @param array $MiniProgramReviewList 审核信息列表。
+     * @param array $AutoScalingGroupIds 伸缩组ID列表
      */
     function __construct()
     {
@@ -46,13 +46,8 @@ class MediaMiniProgramReviewInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MiniProgramReviewList",$param) and $param["MiniProgramReviewList"] !== null) {
-            $this->MiniProgramReviewList = [];
-            foreach ($param["MiniProgramReviewList"] as $key => $value){
-                $obj = new MediaMiniProgramReviewInfoItem();
-                $obj->deserialize($value);
-                array_push($this->MiniProgramReviewList, $obj);
-            }
+        if (array_key_exists("AutoScalingGroupIds",$param) and $param["AutoScalingGroupIds"] !== null) {
+            $this->AutoScalingGroupIds = $param["AutoScalingGroupIds"];
         }
     }
 }

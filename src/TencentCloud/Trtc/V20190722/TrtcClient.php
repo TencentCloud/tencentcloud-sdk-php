@@ -22,8 +22,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Trtc\V20190722\Models as Models;
 
 /**
-* @method Models\DissolveRoomResponse DissolveRoom(Models\DissolveRoomRequest $req) 接口说明：把房间所有用户从房间踢出，解散房间。
-* @method Models\KickOutUserResponse KickOutUser(Models\KickOutUserRequest $req) 接口说明：将用户从房间踢出。
+* @method Models\DissolveRoomResponse DissolveRoom(Models\DissolveRoomRequest $req) 接口说明：把房间所有用户从房间踢出，解散房间。支持 TRTC SDK 6.6及以上版本，包括Android、iOS、Windows 和 macOS。
+* @method Models\KickOutUserResponse KickOutUser(Models\KickOutUserRequest $req) 接口说明：将用户从房间踢出。支持 TRTC SDK 6.6及以上版本，包括Android、iOS、Windows 和 macOS。
  */
 
 class TrtcClient extends AbstractClient

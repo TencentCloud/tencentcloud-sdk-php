@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 当证书类型为CA/SSL证书时，该参数填写证书内容，格式为pem。
  * @method string getCertificateAlias() 获取证书名称
  * @method void setCertificateAlias(string $CertificateAlias) 设置证书名称
- * @method string getCertificateKey() 获取秘钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
- * @method void setCertificateKey(string $CertificateKey) 设置秘钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
+ * @method string getCertificateKey() 获取密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
+ * @method void setCertificateKey(string $CertificateKey) 设置密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
  */
 
 /**
@@ -70,7 +70,7 @@ class CreateCertificateRequest extends AbstractModel
     public $CertificateAlias;
 
     /**
-     * @var string 秘钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
+     * @var string 密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
      */
     public $CertificateKey;
     /**
@@ -84,7 +84,7 @@ class CreateCertificateRequest extends AbstractModel
 当证书类型为基础认证配置时，该参数填写用户名/密码对。格式：“用户名：密码”，例如：root:FSGdT。其中密码使用htpasswd或者openssl，例如：openssl passwd -crypt 123456。
 当证书类型为CA/SSL证书时，该参数填写证书内容，格式为pem。
      * @param string $CertificateAlias 证书名称
-     * @param string $CertificateKey 秘钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
+     * @param string $CertificateKey 密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
      */
     function __construct()
     {

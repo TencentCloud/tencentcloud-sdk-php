@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置起始偏移量
  * @method string getNamespaceId() 获取命名空间ID，不传入时查询全量
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID，不传入时查询全量
+ * @method array getNamespaceResourceTypeList() 获取查询资源类型列表
+ * @method void setNamespaceResourceTypeList(array $NamespaceResourceTypeList) 设置查询资源类型列表
  */
 
 /**
@@ -59,12 +61,18 @@ class DescribeSimpleNamespacesRequest extends AbstractModel
      * @var string 命名空间ID，不传入时查询全量
      */
     public $NamespaceId;
+
+    /**
+     * @var array 查询资源类型列表
+     */
+    public $NamespaceResourceTypeList;
     /**
      * @param array $NamespaceIdList 命名空间ID列表，不传入时查询全量
      * @param string $ClusterId 集群ID，不传入时查询全量
      * @param integer $Limit 每页条数
      * @param integer $Offset 起始偏移量
      * @param string $NamespaceId 命名空间ID，不传入时查询全量
+     * @param array $NamespaceResourceTypeList 查询资源类型列表
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeSimpleNamespacesRequest extends AbstractModel
 
         if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
             $this->NamespaceId = $param["NamespaceId"];
+        }
+
+        if (array_key_exists("NamespaceResourceTypeList",$param) and $param["NamespaceResourceTypeList"] !== null) {
+            $this->NamespaceResourceTypeList = $param["NamespaceResourceTypeList"];
         }
     }
 }

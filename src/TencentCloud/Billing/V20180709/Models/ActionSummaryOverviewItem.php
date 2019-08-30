@@ -18,8 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getActionType() 获取交易类型
- * @method void setActionType(string $ActionType) 设置交易类型
+ * @method string getActionType() 获取交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
+ * @method void setActionType(string $ActionType) 设置交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
  * @method string getActionTypeName() 获取交易类型名称
  * @method void setActionTypeName(string $ActionTypeName) 设置交易类型名称
  * @method string getRealTotalCost() 获取实际花费
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ActionSummaryOverviewItem extends AbstractModel
 {
     /**
-     * @var string 交易类型
+     * @var string 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
      */
     public $ActionType;
 
@@ -53,7 +53,7 @@ class ActionSummaryOverviewItem extends AbstractModel
      */
     public $RealTotalCostRatio;
     /**
-     * @param string $ActionType 交易类型
+     * @param string $ActionType 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
      * @param string $ActionTypeName 交易类型名称
      * @param string $RealTotalCost 实际花费
      * @param string $RealTotalCostRatio 费用所占百分比，两位小数

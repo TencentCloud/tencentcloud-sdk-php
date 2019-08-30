@@ -18,12 +18,12 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getBusinessCodeName() 获取产品
- * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品
- * @method string getProductCodeName() 获取子产品
- * @method void setProductCodeName(string $ProductCodeName) 设置子产品
- * @method string getPayModeName() 获取计费模式
- * @method void setPayModeName(string $PayModeName) 设置计费模式
+ * @method string getBusinessCodeName() 获取产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+ * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+ * @method string getProductCodeName() 获取子产品：云产品子类，如云服务器CVM-标准型S1
+ * @method void setProductCodeName(string $ProductCodeName) 设置子产品：云产品子类，如云服务器CVM-标准型S1
+ * @method string getPayModeName() 获取计费模式：包年包月和按量计费
+ * @method void setPayModeName(string $PayModeName) 设置计费模式：包年包月和按量计费
  * @method string getProjectName() 获取项目
  * @method void setProjectName(string $ProjectName) 设置项目
  * @method string getRegionName() 获取地域
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置资源实例ID
  * @method string getResourceName() 获取资源实例名称
  * @method void setResourceName(string $ResourceName) 设置资源实例名称
- * @method string getActionTypeName() 获取交易类型
- * @method void setActionTypeName(string $ActionTypeName) 设置交易类型
+ * @method string getActionTypeName() 获取交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
+ * @method void setActionTypeName(string $ActionTypeName) 设置交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
  * @method string getOrderId() 获取订单ID
  * @method void setOrderId(string $OrderId) 设置订单ID
  * @method string getPayTime() 获取扣费时间
@@ -78,17 +78,17 @@ use TencentCloud\Common\AbstractModel;
 class BillResourceSummary extends AbstractModel
 {
     /**
-     * @var string 产品
+     * @var string 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
     public $BusinessCodeName;
 
     /**
-     * @var string 子产品
+     * @var string 子产品：云产品子类，如云服务器CVM-标准型S1
      */
     public $ProductCodeName;
 
     /**
-     * @var string 计费模式
+     * @var string 计费模式：包年包月和按量计费
      */
     public $PayModeName;
 
@@ -118,7 +118,7 @@ class BillResourceSummary extends AbstractModel
     public $ResourceName;
 
     /**
-     * @var string 交易类型
+     * @var string 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
      */
     public $ActionTypeName;
 
@@ -207,15 +207,15 @@ class BillResourceSummary extends AbstractModel
      */
     public $ExtendField5;
     /**
-     * @param string $BusinessCodeName 产品
-     * @param string $ProductCodeName 子产品
-     * @param string $PayModeName 计费模式
+     * @param string $BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+     * @param string $ProductCodeName 子产品：云产品子类，如云服务器CVM-标准型S1
+     * @param string $PayModeName 计费模式：包年包月和按量计费
      * @param string $ProjectName 项目
      * @param string $RegionName 地域
      * @param string $ZoneName 可用区
      * @param string $ResourceId 资源实例ID
      * @param string $ResourceName 资源实例名称
-     * @param string $ActionTypeName 交易类型
+     * @param string $ActionTypeName 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
      * @param string $OrderId 订单ID
      * @param string $PayTime 扣费时间
      * @param string $FeeBeginTime 开始使用时间

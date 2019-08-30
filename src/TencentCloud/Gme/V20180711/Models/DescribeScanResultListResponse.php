@@ -14,35 +14,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getResult() 获取成功时为命名空间ID，失败为null
+ * @method array getData() 获取要查询的语音检测任务的结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(string $Result) 设置成功时为命名空间ID，失败为null
+ * @method void setData(array $Data) 设置要查询的语音检测任务的结果
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *CreateNamespace返回参数结构体
+ *DescribeScanResultList返回参数结构体
  */
-class CreateNamespaceResponse extends AbstractModel
+class DescribeScanResultListResponse extends AbstractModel
 {
     /**
-     * @var string 成功时为命名空间ID，失败为null
+     * @var array 要查询的语音检测任务的结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Result;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $Result 成功时为命名空间ID，失败为null
+     * @param array $Data 要查询的语音检测任务的结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -58,8 +58,13 @@ class CreateNamespaceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new DescribeScanResult();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

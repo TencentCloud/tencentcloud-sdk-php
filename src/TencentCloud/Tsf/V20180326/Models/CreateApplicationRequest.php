@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationLogConfig(string $ApplicationLogConfig) 设置应用日志配置项，废弃参数
  * @method string getMicroserviceType() 获取应用微服务类型
  * @method void setMicroserviceType(string $MicroserviceType) 设置应用微服务类型
+ * @method string getApplicationResourceType() 获取应有资源类型
+ * @method void setApplicationResourceType(string $ApplicationResourceType) 设置应有资源类型
  */
 
 /**
@@ -59,12 +61,18 @@ class CreateApplicationRequest extends AbstractModel
      * @var string 应用微服务类型
      */
     public $MicroserviceType;
+
+    /**
+     * @var string 应有资源类型
+     */
+    public $ApplicationResourceType;
     /**
      * @param string $ApplicationName 应用名称
      * @param string $ApplicationType 应用类型
      * @param string $ApplicationDesc 应用描述
      * @param string $ApplicationLogConfig 应用日志配置项，废弃参数
      * @param string $MicroserviceType 应用微服务类型
+     * @param string $ApplicationResourceType 应有资源类型
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CreateApplicationRequest extends AbstractModel
 
         if (array_key_exists("MicroserviceType",$param) and $param["MicroserviceType"] !== null) {
             $this->MicroserviceType = $param["MicroserviceType"];
+        }
+
+        if (array_key_exists("ApplicationResourceType",$param) and $param["ApplicationResourceType"] !== null) {
+            $this->ApplicationResourceType = $param["ApplicationResourceType"];
         }
     }
 }

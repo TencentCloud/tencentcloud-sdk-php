@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method array getGroupResourceTypeList() 获取部署组资源类型列表
+ * @method void setGroupResourceTypeList(array $GroupResourceTypeList) 设置部署组资源类型列表
  */
 
 /**
@@ -80,6 +82,11 @@ class DescribeGroupsRequest extends AbstractModel
      * @var string 集群ID
      */
     public $ClusterId;
+
+    /**
+     * @var array 部署组资源类型列表
+     */
+    public $GroupResourceTypeList;
     /**
      * @param string $SearchWord 搜索字段
      * @param string $ApplicationId 应用ID
@@ -89,6 +96,7 @@ class DescribeGroupsRequest extends AbstractModel
      * @param integer $Limit 分页个数
      * @param string $NamespaceId 命名空间ID
      * @param string $ClusterId 集群ID
+     * @param array $GroupResourceTypeList 部署组资源类型列表
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeGroupsRequest extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("GroupResourceTypeList",$param) and $param["GroupResourceTypeList"] !== null) {
+            $this->GroupResourceTypeList = $param["GroupResourceTypeList"];
         }
     }
 }

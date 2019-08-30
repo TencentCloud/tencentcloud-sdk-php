@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhone(string $Phone) 设置当前音节
  * @method boolean getStress() 获取当前音节是否应为重音
  * @method void setStress(boolean $Stress) 设置当前音节是否应为重音
- * @method string getReferencePhone() 获取参考音素，在单词诊断模式下，代表标准
-音素
- * @method void setReferencePhone(string $ReferencePhone) 设置参考音素，在单词诊断模式下，代表标准
-音素
+ * @method string getReferencePhone() 获取参考音素，在单词诊断模式下，代表标准音素
+ * @method void setReferencePhone(string $ReferencePhone) 设置参考音素，在单词诊断模式下，代表标准音素
  * @method integer getMatchTag() 获取当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
  * @method void setMatchTag(integer $MatchTag) 设置当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
  */
@@ -74,8 +72,7 @@ class PhoneInfo extends AbstractModel
     public $Stress;
 
     /**
-     * @var string 参考音素，在单词诊断模式下，代表标准
-音素
+     * @var string 参考音素，在单词诊断模式下，代表标准音素
      */
     public $ReferencePhone;
 
@@ -90,8 +87,7 @@ class PhoneInfo extends AbstractModel
      * @param boolean $DetectedStress 当前音节是否检测为重音
      * @param string $Phone 当前音节
      * @param boolean $Stress 当前音节是否应为重音
-     * @param string $ReferencePhone 参考音素，在单词诊断模式下，代表标准
-音素
+     * @param string $ReferencePhone 参考音素，在单词诊断模式下，代表标准音素
      * @param integer $MatchTag 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      */
     function __construct()

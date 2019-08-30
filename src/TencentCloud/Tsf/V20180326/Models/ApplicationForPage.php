@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationResourceType() 获取应用资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationResourceType(string $ApplicationResourceType) 设置应用资源类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -104,6 +108,12 @@ class ApplicationForPage extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
+
+    /**
+     * @var string 应用资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationResourceType;
     /**
      * @param string $ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -120,6 +130,8 @@ class ApplicationForPage extends AbstractModel
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationResourceType 应用资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,10 @@ class ApplicationForPage extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("ApplicationResourceType",$param) and $param["ApplicationResourceType"] !== null) {
+            $this->ApplicationResourceType = $param["ApplicationResourceType"];
         }
     }
 }

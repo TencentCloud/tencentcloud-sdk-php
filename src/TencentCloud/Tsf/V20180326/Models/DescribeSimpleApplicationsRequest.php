@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置起始偏移量
  * @method string getMicroserviceType() 获取微服务类型
  * @method void setMicroserviceType(string $MicroserviceType) 设置微服务类型
+ * @method array getApplicationResourceTypeList() 获取资源类型数组
+ * @method void setApplicationResourceTypeList(array $ApplicationResourceTypeList) 设置资源类型数组
  */
 
 /**
@@ -59,12 +61,18 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
      * @var string 微服务类型
      */
     public $MicroserviceType;
+
+    /**
+     * @var array 资源类型数组
+     */
+    public $ApplicationResourceTypeList;
     /**
      * @param array $ApplicationIdList 应用ID列表
      * @param string $ApplicationType 应用类型
      * @param integer $Limit 每页条数
      * @param integer $Offset 起始偏移量
      * @param string $MicroserviceType 微服务类型
+     * @param array $ApplicationResourceTypeList 资源类型数组
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
 
         if (array_key_exists("MicroserviceType",$param) and $param["MicroserviceType"] !== null) {
             $this->MicroserviceType = $param["MicroserviceType"];
+        }
+
+        if (array_key_exists("ApplicationResourceTypeList",$param) and $param["ApplicationResourceTypeList"] !== null) {
+            $this->ApplicationResourceTypeList = $param["ApplicationResourceTypeList"];
         }
     }
 }

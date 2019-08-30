@@ -18,18 +18,18 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getBusinessCodeName() 获取产品名称
- * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称
- * @method string getProductCodeName() 获取子产品名称
- * @method void setProductCodeName(string $ProductCodeName) 设置子产品名称
- * @method string getPayModeName() 获取计费模式
- * @method void setPayModeName(string $PayModeName) 设置计费模式
- * @method string getProjectName() 获取项目
- * @method void setProjectName(string $ProjectName) 设置项目
- * @method string getRegionName() 获取区域
- * @method void setRegionName(string $RegionName) 设置区域
- * @method string getZoneName() 获取可用区
- * @method void setZoneName(string $ZoneName) 设置可用区
+ * @method string getBusinessCodeName() 获取产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+ * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+ * @method string getProductCodeName() 获取子产品名称：云产品子类，如云服务器CVM-标准型S1
+ * @method void setProductCodeName(string $ProductCodeName) 设置子产品名称：云产品子类，如云服务器CVM-标准型S1
+ * @method string getPayModeName() 获取计费模式：包年包月和按量计费
+ * @method void setPayModeName(string $PayModeName) 设置计费模式：包年包月和按量计费
+ * @method string getProjectName() 获取项目:资源所属项目
+ * @method void setProjectName(string $ProjectName) 设置项目:资源所属项目
+ * @method string getRegionName() 获取区域：资源所属地域，如华南地区（广州）
+ * @method void setRegionName(string $RegionName) 设置区域：资源所属地域，如华南地区（广州）
+ * @method string getZoneName() 获取可用区：资源所属可用区，如广州三区
+ * @method void setZoneName(string $ZoneName) 设置可用区：资源所属可用区，如广州三区
  * @method string getResourceId() 获取资源实例ID
  * @method void setResourceId(string $ResourceId) 设置资源实例ID
  * @method string getResourceName() 获取实例名称
@@ -62,32 +62,32 @@ use TencentCloud\Common\AbstractModel;
 class BillDetail extends AbstractModel
 {
     /**
-     * @var string 产品名称
+     * @var string 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
     public $BusinessCodeName;
 
     /**
-     * @var string 子产品名称
+     * @var string 子产品名称：云产品子类，如云服务器CVM-标准型S1
      */
     public $ProductCodeName;
 
     /**
-     * @var string 计费模式
+     * @var string 计费模式：包年包月和按量计费
      */
     public $PayModeName;
 
     /**
-     * @var string 项目
+     * @var string 项目:资源所属项目
      */
     public $ProjectName;
 
     /**
-     * @var string 区域
+     * @var string 区域：资源所属地域，如华南地区（广州）
      */
     public $RegionName;
 
     /**
-     * @var string 可用区
+     * @var string 可用区：资源所属可用区，如广州三区
      */
     public $ZoneName;
 
@@ -151,12 +151,12 @@ class BillDetail extends AbstractModel
      */
     public $OperateUin;
     /**
-     * @param string $BusinessCodeName 产品名称
-     * @param string $ProductCodeName 子产品名称
-     * @param string $PayModeName 计费模式
-     * @param string $ProjectName 项目
-     * @param string $RegionName 区域
-     * @param string $ZoneName 可用区
+     * @param string $BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+     * @param string $ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1
+     * @param string $PayModeName 计费模式：包年包月和按量计费
+     * @param string $ProjectName 项目:资源所属项目
+     * @param string $RegionName 区域：资源所属地域，如华南地区（广州）
+     * @param string $ZoneName 可用区：资源所属可用区，如广州三区
      * @param string $ResourceId 资源实例ID
      * @param string $ResourceName 实例名称
      * @param string $ActionTypeName 交易类型

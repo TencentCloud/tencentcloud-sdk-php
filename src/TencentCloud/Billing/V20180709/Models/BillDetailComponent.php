@@ -18,12 +18,12 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getComponentCodeName() 获取组件名称
- * @method void setComponentCodeName(string $ComponentCodeName) 设置组件名称
- * @method string getItemCodeName() 获取组件类型名称
- * @method void setItemCodeName(string $ItemCodeName) 设置组件类型名称
- * @method string getSinglePrice() 获取组件刊例价
- * @method void setSinglePrice(string $SinglePrice) 设置组件刊例价
+ * @method string getComponentCodeName() 获取组件类型:资源组件类型的名称，如内存、硬盘等
+ * @method void setComponentCodeName(string $ComponentCodeName) 设置组件类型:资源组件类型的名称，如内存、硬盘等
+ * @method string getItemCodeName() 获取组件名称:资源组件的名称，如云数据库MySQL-内存等
+ * @method void setItemCodeName(string $ItemCodeName) 设置组件名称:资源组件的名称，如云数据库MySQL-内存等
+ * @method string getSinglePrice() 获取组件刊例价:资源组件的原始价格，保持原始粒度
+ * @method void setSinglePrice(string $SinglePrice) 设置组件刊例价:资源组件的原始价格，保持原始粒度
  * @method string getSpecifiedPrice() 获取组件指定价
  * @method void setSpecifiedPrice(string $SpecifiedPrice) 设置组件指定价
  * @method string getPriceUnit() 获取价格单位
@@ -58,17 +58,17 @@ use TencentCloud\Common\AbstractModel;
 class BillDetailComponent extends AbstractModel
 {
     /**
-     * @var string 组件名称
+     * @var string 组件类型:资源组件类型的名称，如内存、硬盘等
      */
     public $ComponentCodeName;
 
     /**
-     * @var string 组件类型名称
+     * @var string 组件名称:资源组件的名称，如云数据库MySQL-内存等
      */
     public $ItemCodeName;
 
     /**
-     * @var string 组件刊例价
+     * @var string 组件刊例价:资源组件的原始价格，保持原始粒度
      */
     public $SinglePrice;
 
@@ -137,9 +137,9 @@ class BillDetailComponent extends AbstractModel
      */
     public $IncentivePayAmount;
     /**
-     * @param string $ComponentCodeName 组件名称
-     * @param string $ItemCodeName 组件类型名称
-     * @param string $SinglePrice 组件刊例价
+     * @param string $ComponentCodeName 组件类型:资源组件类型的名称，如内存、硬盘等
+     * @param string $ItemCodeName 组件名称:资源组件的名称，如云数据库MySQL-内存等
+     * @param string $SinglePrice 组件刊例价:资源组件的原始价格，保持原始粒度
      * @param string $SpecifiedPrice 组件指定价
      * @param string $PriceUnit 价格单位
      * @param string $UsedAmount 组件用量

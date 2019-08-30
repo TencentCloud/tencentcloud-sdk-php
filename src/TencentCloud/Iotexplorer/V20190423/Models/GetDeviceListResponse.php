@@ -14,35 +14,47 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getResult() 获取成功时为命名空间ID，失败为null
+ * @method array getDevices() 获取返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(string $Result) 设置成功时为命名空间ID，失败为null
+ * @method void setDevices(array $Devices) 设置返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotal() 获取产品下的设备总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotal(integer $Total) 设置产品下的设备总数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *CreateNamespace返回参数结构体
+ *GetDeviceList返回参数结构体
  */
-class CreateNamespaceResponse extends AbstractModel
+class GetDeviceListResponse extends AbstractModel
 {
     /**
-     * @var string 成功时为命名空间ID，失败为null
+     * @var array 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Result;
+    public $Devices;
+
+    /**
+     * @var integer 产品下的设备总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Total;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $Result 成功时为命名空间ID，失败为null
+     * @param array $Devices 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Total 产品下的设备总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -58,8 +70,17 @@ class CreateNamespaceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("Devices",$param) and $param["Devices"] !== null) {
+            $this->Devices = [];
+            foreach ($param["Devices"] as $key => $value){
+                $obj = new DeviceInfo();
+                $obj->deserialize($value);
+                array_push($this->Devices, $obj);
+            }
+        }
+
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -14,36 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getResult() 获取成功时为命名空间ID，失败为null
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(string $Result) 设置成功时为命名空间ID，失败为null
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getActivitySet() 获取符合条件的伸缩活动信息集合。说明：伸缩组伸缩活动不存在的则不返回，如传50个伸缩组ID，返回45条数据，说明其中有5个伸缩组伸缩活动不存在。
+ * @method void setActivitySet(array $ActivitySet) 设置符合条件的伸缩活动信息集合。说明：伸缩组伸缩活动不存在的则不返回，如传50个伸缩组ID，返回45条数据，说明其中有5个伸缩组伸缩活动不存在。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *CreateNamespace返回参数结构体
+ *DescribeAutoScalingGroupLastActivities返回参数结构体
  */
-class CreateNamespaceResponse extends AbstractModel
+class DescribeAutoScalingGroupLastActivitiesResponse extends AbstractModel
 {
     /**
-     * @var string 成功时为命名空间ID，失败为null
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 符合条件的伸缩活动信息集合。说明：伸缩组伸缩活动不存在的则不返回，如传50个伸缩组ID，返回45条数据，说明其中有5个伸缩组伸缩活动不存在。
      */
-    public $Result;
+    public $ActivitySet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $Result 成功时为命名空间ID，失败为null
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ActivitySet 符合条件的伸缩活动信息集合。说明：伸缩组伸缩活动不存在的则不返回，如传50个伸缩组ID，返回45条数据，说明其中有5个伸缩组伸缩活动不存在。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +54,13 @@ class CreateNamespaceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("ActivitySet",$param) and $param["ActivitySet"] !== null) {
+            $this->ActivitySet = [];
+            foreach ($param["ActivitySet"] as $key => $value){
+                $obj = new Activity();
+                $obj->deserialize($value);
+                array_push($this->ActivitySet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

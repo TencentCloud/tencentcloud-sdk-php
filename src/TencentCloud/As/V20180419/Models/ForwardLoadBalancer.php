@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerId(string $ListenerId) 设置应用型负载均衡监听器 ID
  * @method array getTargetAttributes() 获取目标规则属性列表
  * @method void setTargetAttributes(array $TargetAttributes) 设置目标规则属性列表
- * @method string getLocationId() 获取转发规则ID
- * @method void setLocationId(string $LocationId) 设置转发规则ID
+ * @method string getLocationId() 获取转发规则ID，注意：针对七层监听器此参数必填
+ * @method void setLocationId(string $LocationId) 设置转发规则ID，注意：针对七层监听器此参数必填
  */
 
 /**
@@ -49,14 +49,14 @@ class ForwardLoadBalancer extends AbstractModel
     public $TargetAttributes;
 
     /**
-     * @var string 转发规则ID
+     * @var string 转发规则ID，注意：针对七层监听器此参数必填
      */
     public $LocationId;
     /**
      * @param string $LoadBalancerId 负载均衡器ID
      * @param string $ListenerId 应用型负载均衡监听器 ID
      * @param array $TargetAttributes 目标规则属性列表
-     * @param string $LocationId 转发规则ID
+     * @param string $LocationId 转发规则ID，注意：针对七层监听器此参数必填
      */
     function __construct()
     {

@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getDetectedText() 获取识别出的文本行内容
  * @method void setDetectedText(string $DetectedText) 设置识别出的文本行内容
- * @method boolean getResult() 获取结果
- * @method void setResult(boolean $Result) 设置结果
- * @method integer getConfidence() 获取保留字段，暂无意义
- * @method void setConfidence(integer $Confidence) 设置保留字段，暂无意义
- * @method array getPolygon() 获取文本行坐标，以四个顶点坐标表示（预留字段，目前不支持）
+ * @method boolean getResult() 获取算式运算结果
+ * @method void setResult(boolean $Result) 设置算式运算结果
+ * @method integer getConfidence() 获取保留字段，暂不支持
+ * @method void setConfidence(integer $Confidence) 设置保留字段，暂不支持
+ * @method array getPolygon() 获取文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolygon(array $Polygon) 设置文本行坐标，以四个顶点坐标表示（预留字段，目前不支持）
+ * @method void setPolygon(array $Polygon) 设置文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAdvancedInfo() 获取此字段为扩展字段
- * @method void setAdvancedInfo(string $AdvancedInfo) 设置此字段为扩展字段
+ * @method string getAdvancedInfo() 获取保留字段，暂不支持
+ * @method void setAdvancedInfo(string $AdvancedInfo) 设置保留字段，暂不支持
  */
 
 /**
@@ -43,32 +43,32 @@ class TextArithmetic extends AbstractModel
     public $DetectedText;
 
     /**
-     * @var boolean 结果
+     * @var boolean 算式运算结果
      */
     public $Result;
 
     /**
-     * @var integer 保留字段，暂无意义
+     * @var integer 保留字段，暂不支持
      */
     public $Confidence;
 
     /**
-     * @var array 文本行坐标，以四个顶点坐标表示（预留字段，目前不支持）
+     * @var array 文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Polygon;
 
     /**
-     * @var string 此字段为扩展字段
+     * @var string 保留字段，暂不支持
      */
     public $AdvancedInfo;
     /**
      * @param string $DetectedText 识别出的文本行内容
-     * @param boolean $Result 结果
-     * @param integer $Confidence 保留字段，暂无意义
-     * @param array $Polygon 文本行坐标，以四个顶点坐标表示（预留字段，目前不支持）
+     * @param boolean $Result 算式运算结果
+     * @param integer $Confidence 保留字段，暂不支持
+     * @param array $Polygon 文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AdvancedInfo 此字段为扩展字段
+     * @param string $AdvancedInfo 保留字段，暂不支持
      */
     function __construct()
     {

@@ -34,6 +34,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMicroserviceType(string $MicroserviceType) 设置应用微服务类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationDesc() 获取ApplicationDesc
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationDesc(string $ApplicationDesc) 设置ApplicationDesc
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProgLang() 获取ProgLang
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProgLang(string $ProgLang) 设置ProgLang
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationResourceType() 获取ApplicationResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationResourceType(string $ApplicationResourceType) 设置ApplicationResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取CreateTime
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置CreateTime
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdateTime() 获取UpdateTime
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateTime(string $UpdateTime) 设置UpdateTime
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -64,6 +84,36 @@ class SimpleApplication extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MicroserviceType;
+
+    /**
+     * @var string ApplicationDesc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationDesc;
+
+    /**
+     * @var string ProgLang
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProgLang;
+
+    /**
+     * @var string ApplicationResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationResourceType;
+
+    /**
+     * @var string CreateTime
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
+     * @var string UpdateTime
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateTime;
     /**
      * @param string $ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -72,6 +122,16 @@ class SimpleApplication extends AbstractModel
      * @param string $ApplicationType 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MicroserviceType 应用微服务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationDesc ApplicationDesc
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProgLang ProgLang
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationResourceType ApplicationResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime CreateTime
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateTime UpdateTime
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +160,26 @@ class SimpleApplication extends AbstractModel
 
         if (array_key_exists("MicroserviceType",$param) and $param["MicroserviceType"] !== null) {
             $this->MicroserviceType = $param["MicroserviceType"];
+        }
+
+        if (array_key_exists("ApplicationDesc",$param) and $param["ApplicationDesc"] !== null) {
+            $this->ApplicationDesc = $param["ApplicationDesc"];
+        }
+
+        if (array_key_exists("ProgLang",$param) and $param["ProgLang"] !== null) {
+            $this->ProgLang = $param["ProgLang"];
+        }
+
+        if (array_key_exists("ApplicationResourceType",$param) and $param["ApplicationResourceType"] !== null) {
+            $this->ApplicationResourceType = $param["ApplicationResourceType"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

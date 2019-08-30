@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
  * @method string getNamespaceDesc() 获取命名空间描述
  * @method void setNamespaceDesc(string $NamespaceDesc) 设置命名空间描述
+ * @method string getNamespaceResourceType() 获取命名空间资源类型(默认值为DEF)
+ * @method void setNamespaceResourceType(string $NamespaceResourceType) 设置命名空间资源类型(默认值为DEF)
  */
 
 /**
@@ -45,10 +47,16 @@ class CreateNamespaceRequest extends AbstractModel
      * @var string 命名空间描述
      */
     public $NamespaceDesc;
+
+    /**
+     * @var string 命名空间资源类型(默认值为DEF)
+     */
+    public $NamespaceResourceType;
     /**
      * @param string $ClusterId 集群ID
      * @param string $NamespaceName 命名空间名称
      * @param string $NamespaceDesc 命名空间描述
+     * @param string $NamespaceResourceType 命名空间资源类型(默认值为DEF)
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CreateNamespaceRequest extends AbstractModel
 
         if (array_key_exists("NamespaceDesc",$param) and $param["NamespaceDesc"] !== null) {
             $this->NamespaceDesc = $param["NamespaceDesc"];
+        }
+
+        if (array_key_exists("NamespaceResourceType",$param) and $param["NamespaceResourceType"] !== null) {
+            $this->NamespaceResourceType = $param["NamespaceResourceType"];
         }
     }
 }

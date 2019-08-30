@@ -18,14 +18,50 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getAddressCount() 获取申请 EIP 数量，默认值为1。
- * @method void setAddressCount(integer $AddressCount) 设置申请 EIP 数量，默认值为1。
- * @method string getInternetServiceProvider() 获取运营商名称，可选值[BGP|CTCC|CMCC|CUCC]，默认BGP。
- * @method void setInternetServiceProvider(string $InternetServiceProvider) 设置运营商名称，可选值[BGP|CTCC|CMCC|CUCC]，默认BGP。
- * @method string getAddressType() 获取EIP类型，EIP|AnycastEIP，默认EIP。
- * @method void setAddressType(string $AddressType) 设置EIP类型，EIP|AnycastEIP，默认EIP。
- * @method string getAnycastZone() 获取Anycast发布域，ANYCAST_ZONE_A|ANYCAST_ZONE_B，默认为当前地域可选的任一发布域。
- * @method void setAnycastZone(string $AnycastZone) 设置Anycast发布域，ANYCAST_ZONE_A|ANYCAST_ZONE_B，默认为当前地域可选的任一发布域。
+ * @method integer getAddressCount() 获取EIP数量。默认值：1。
+ * @method void setAddressCount(integer $AddressCount) 设置EIP数量。默认值：1。
+ * @method string getInternetServiceProvider() 获取EIP线路类型。默认值：BGP。
+<ul style="margin:0"><li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li>
+<li>CTCC：中国电信</li>
+<li>CUCC：中国联通</li></ul>注意：仅部分地域支持静态单线IP。</li></ul>
+ * @method void setInternetServiceProvider(string $InternetServiceProvider) 设置EIP线路类型。默认值：BGP。
+<ul style="margin:0"><li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li>
+<li>CTCC：中国电信</li>
+<li>CUCC：中国联通</li></ul>注意：仅部分地域支持静态单线IP。</li></ul>
+ * @method string getInternetChargeType() 获取EIP计费方式。
+<ul style="margin:0"><li>已开通带宽上移白名单的用户，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费（需额外开通共享带宽包白名单）</li>
+<li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
+<li>未开通带宽上移白名单的用户，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul>
+ * @method void setInternetChargeType(string $InternetChargeType) 设置EIP计费方式。
+<ul style="margin:0"><li>已开通带宽上移白名单的用户，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费（需额外开通共享带宽包白名单）</li>
+<li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
+<li>未开通带宽上移白名单的用户，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul>
+ * @method integer getInternetMaxBandwidthOut() 获取EIP出带宽上限，单位：Mbps。
+<ul style="margin:0"><li>已开通带宽上移白名单的用户，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 1000 Mbps</li>
+<li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
+<li>未开通带宽上移白名单的用户，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置EIP出带宽上限，单位：Mbps。
+<ul style="margin:0"><li>已开通带宽上移白名单的用户，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 1000 Mbps</li>
+<li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
+<li>未开通带宽上移白名单的用户，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
+ * @method string getAddressType() 获取EIP类型。默认值：EIP。
+<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
+ * @method void setAddressType(string $AddressType) 设置EIP类型。默认值：EIP。
+<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
+ * @method string getAnycastZone() 获取Anycast发布域。
+<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：海外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
+ * @method void setAnycastZone(string $AnycastZone) 设置Anycast发布域。
+<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：海外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
+ * @method boolean getApplicableForCLB() 获取AnycastEIP是否用于绑定负载均衡。
+<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
+<li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
+ * @method void setApplicableForCLB(boolean $ApplicableForCLB) 设置AnycastEIP是否用于绑定负载均衡。
+<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
+<li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
  */
 
 /**
@@ -34,29 +70,77 @@ use TencentCloud\Common\AbstractModel;
 class AllocateAddressesRequest extends AbstractModel
 {
     /**
-     * @var integer 申请 EIP 数量，默认值为1。
+     * @var integer EIP数量。默认值：1。
      */
     public $AddressCount;
 
     /**
-     * @var string 运营商名称，可选值[BGP|CTCC|CMCC|CUCC]，默认BGP。
+     * @var string EIP线路类型。默认值：BGP。
+<ul style="margin:0"><li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li>
+<li>CTCC：中国电信</li>
+<li>CUCC：中国联通</li></ul>注意：仅部分地域支持静态单线IP。</li></ul>
      */
     public $InternetServiceProvider;
 
     /**
-     * @var string EIP类型，EIP|AnycastEIP，默认EIP。
+     * @var string EIP计费方式。
+<ul style="margin:0"><li>已开通带宽上移白名单的用户，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费（需额外开通共享带宽包白名单）</li>
+<li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
+<li>未开通带宽上移白名单的用户，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul>
+     */
+    public $InternetChargeType;
+
+    /**
+     * @var integer EIP出带宽上限，单位：Mbps。
+<ul style="margin:0"><li>已开通带宽上移白名单的用户，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 1000 Mbps</li>
+<li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
+<li>未开通带宽上移白名单的用户，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
+     */
+    public $InternetMaxBandwidthOut;
+
+    /**
+     * @var string EIP类型。默认值：EIP。
+<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
      */
     public $AddressType;
 
     /**
-     * @var string Anycast发布域，ANYCAST_ZONE_A|ANYCAST_ZONE_B，默认为当前地域可选的任一发布域。
+     * @var string Anycast发布域。
+<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：海外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
      */
     public $AnycastZone;
+
     /**
-     * @param integer $AddressCount 申请 EIP 数量，默认值为1。
-     * @param string $InternetServiceProvider 运营商名称，可选值[BGP|CTCC|CMCC|CUCC]，默认BGP。
-     * @param string $AddressType EIP类型，EIP|AnycastEIP，默认EIP。
-     * @param string $AnycastZone Anycast发布域，ANYCAST_ZONE_A|ANYCAST_ZONE_B，默认为当前地域可选的任一发布域。
+     * @var boolean AnycastEIP是否用于绑定负载均衡。
+<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
+<li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
+     */
+    public $ApplicableForCLB;
+    /**
+     * @param integer $AddressCount EIP数量。默认值：1。
+     * @param string $InternetServiceProvider EIP线路类型。默认值：BGP。
+<ul style="margin:0"><li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li>
+<li>CTCC：中国电信</li>
+<li>CUCC：中国联通</li></ul>注意：仅部分地域支持静态单线IP。</li></ul>
+     * @param string $InternetChargeType EIP计费方式。
+<ul style="margin:0"><li>已开通带宽上移白名单的用户，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费（需额外开通共享带宽包白名单）</li>
+<li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
+<li>未开通带宽上移白名单的用户，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul>
+     * @param integer $InternetMaxBandwidthOut EIP出带宽上限，单位：Mbps。
+<ul style="margin:0"><li>已开通带宽上移白名单的用户，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 1000 Mbps</li>
+<li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
+<li>未开通带宽上移白名单的用户，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
+     * @param string $AddressType EIP类型。默认值：EIP。
+<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
+     * @param string $AnycastZone Anycast发布域。
+<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：海外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
+     * @param boolean $ApplicableForCLB AnycastEIP是否用于绑定负载均衡。
+<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
+<li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
      */
     function __construct()
     {
@@ -78,12 +162,24 @@ class AllocateAddressesRequest extends AbstractModel
             $this->InternetServiceProvider = $param["InternetServiceProvider"];
         }
 
+        if (array_key_exists("InternetChargeType",$param) and $param["InternetChargeType"] !== null) {
+            $this->InternetChargeType = $param["InternetChargeType"];
+        }
+
+        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
+            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
+        }
+
         if (array_key_exists("AddressType",$param) and $param["AddressType"] !== null) {
             $this->AddressType = $param["AddressType"];
         }
 
         if (array_key_exists("AnycastZone",$param) and $param["AnycastZone"] !== null) {
             $this->AnycastZone = $param["AnycastZone"];
+        }
+
+        if (array_key_exists("ApplicableForCLB",$param) and $param["ApplicableForCLB"] !== null) {
+            $this->ApplicableForCLB = $param["ApplicableForCLB"];
         }
     }
 }

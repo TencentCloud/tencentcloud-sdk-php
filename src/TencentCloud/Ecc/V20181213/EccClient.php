@@ -22,10 +22,11 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ecc\V20181213\Models as Models;
 
 /**
+* @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 异步任务结果查询接口
 * @method Models\ECCResponse ECC(Models\ECCRequest $req) 接口请求域名： ecc.tencentcloudapi.com 
 纯文本英语作文批改
 * @method Models\EHOCRResponse EHOCR(Models\EHOCRRequest $req) https://ecc.tencentcloudapi.com/?Action=EHOCR
-作文识别
+图像识别批改接口
  */
 
 class EccClient extends AbstractClient

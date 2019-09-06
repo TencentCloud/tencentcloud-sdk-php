@@ -24,12 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTitle(string $Title) 设置作文题目，可选参数
  * @method string getGrade() 获取年级标准， 默认以cet4为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及cet4和cet6 分别表示 英语4级和6级。
  * @method void setGrade(string $Grade) 设置年级标准， 默认以cet4为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及cet4和cet6 分别表示 英语4级和6级。
- * @method string getOutline() 获取作文提纲，可选参数，作文的写作要求。
- * @method void setOutline(string $Outline) 设置作文提纲，可选参数，作文的写作要求。
- * @method string getModelSubject() 获取范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
- * @method void setModelSubject(string $ModelSubject) 设置范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
+ * @method string getRequirement() 获取作文提纲，可选参数，作文的写作要求。
+ * @method void setRequirement(string $Requirement) 设置作文提纲，可选参数，作文的写作要求。
+ * @method string getModelTitle() 获取范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
+ * @method void setModelTitle(string $ModelTitle) 设置范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
  * @method string getModelContent() 获取范文内容，可选参数，同上，范文的正文部分。
  * @method void setModelContent(string $ModelContent) 设置范文内容，可选参数，同上，范文的正文部分。
+ * @method string getEccAppid() 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
+ * @method void setEccAppid(string $EccAppid) 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
+ * @method integer getIsAsync() 获取异步模式标识，0：同步模式，1：异步模式，默认为同步模式
+ * @method void setIsAsync(integer $IsAsync) 设置异步模式标识，0：同步模式，1：异步模式，默认为同步模式
+ * @method string getSessionId() 获取图像识别唯一标识，一次识别一个 SessionId。当传入此前识别接口使用过的 SessionId，则本次批改按图像批改价格收费；如使用了识别接口且本次没有传入 SessionId，则需要加取文本批改的费用；如果直接使用文本批改接口，则只收取文本批改的费用
+ * @method void setSessionId(string $SessionId) 设置图像识别唯一标识，一次识别一个 SessionId。当传入此前识别接口使用过的 SessionId，则本次批改按图像批改价格收费；如使用了识别接口且本次没有传入 SessionId，则需要加取文本批改的费用；如果直接使用文本批改接口，则只收取文本批改的费用
  */
 
 /**
@@ -55,24 +61,42 @@ class ECCRequest extends AbstractModel
     /**
      * @var string 作文提纲，可选参数，作文的写作要求。
      */
-    public $Outline;
+    public $Requirement;
 
     /**
      * @var string 范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
      */
-    public $ModelSubject;
+    public $ModelTitle;
 
     /**
      * @var string 范文内容，可选参数，同上，范文的正文部分。
      */
     public $ModelContent;
+
+    /**
+     * @var string 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
+     */
+    public $EccAppid;
+
+    /**
+     * @var integer 异步模式标识，0：同步模式，1：异步模式，默认为同步模式
+     */
+    public $IsAsync;
+
+    /**
+     * @var string 图像识别唯一标识，一次识别一个 SessionId。当传入此前识别接口使用过的 SessionId，则本次批改按图像批改价格收费；如使用了识别接口且本次没有传入 SessionId，则需要加取文本批改的费用；如果直接使用文本批改接口，则只收取文本批改的费用
+     */
+    public $SessionId;
     /**
      * @param string $Content 作文文本，必填
      * @param string $Title 作文题目，可选参数
      * @param string $Grade 年级标准， 默认以cet4为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及cet4和cet6 分别表示 英语4级和6级。
-     * @param string $Outline 作文提纲，可选参数，作文的写作要求。
-     * @param string $ModelSubject 范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
+     * @param string $Requirement 作文提纲，可选参数，作文的写作要求。
+     * @param string $ModelTitle 范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
      * @param string $ModelContent 范文内容，可选参数，同上，范文的正文部分。
+     * @param string $EccAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
+     * @param integer $IsAsync 异步模式标识，0：同步模式，1：异步模式，默认为同步模式
+     * @param string $SessionId 图像识别唯一标识，一次识别一个 SessionId。当传入此前识别接口使用过的 SessionId，则本次批改按图像批改价格收费；如使用了识别接口且本次没有传入 SessionId，则需要加取文本批改的费用；如果直接使用文本批改接口，则只收取文本批改的费用
      */
     function __construct()
     {
@@ -98,16 +122,28 @@ class ECCRequest extends AbstractModel
             $this->Grade = $param["Grade"];
         }
 
-        if (array_key_exists("Outline",$param) and $param["Outline"] !== null) {
-            $this->Outline = $param["Outline"];
+        if (array_key_exists("Requirement",$param) and $param["Requirement"] !== null) {
+            $this->Requirement = $param["Requirement"];
         }
 
-        if (array_key_exists("ModelSubject",$param) and $param["ModelSubject"] !== null) {
-            $this->ModelSubject = $param["ModelSubject"];
+        if (array_key_exists("ModelTitle",$param) and $param["ModelTitle"] !== null) {
+            $this->ModelTitle = $param["ModelTitle"];
         }
 
         if (array_key_exists("ModelContent",$param) and $param["ModelContent"] !== null) {
             $this->ModelContent = $param["ModelContent"];
+        }
+
+        if (array_key_exists("EccAppid",$param) and $param["EccAppid"] !== null) {
+            $this->EccAppid = $param["EccAppid"];
+        }
+
+        if (array_key_exists("IsAsync",$param) and $param["IsAsync"] !== null) {
+            $this->IsAsync = $param["IsAsync"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
         }
     }
 }

@@ -18,10 +18,12 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取项目 名字
- * @method void setName(string $Name) 设置项目 名字
- * @method float getScore() 获取该项得分
- * @method void setScore(float $Score) 设置该项得分
+ * @method string getName() 获取维度名字
+ * @method void setName(string $Name) 设置维度名字
+ * @method float getScore() 获取维度得分
+ * @method void setScore(float $Score) 设置维度得分
+ * @method float getPercentage() 获取维度分数占比
+ * @method void setPercentage(float $Percentage) 设置维度分数占比
  */
 
 /**
@@ -30,17 +32,23 @@ use TencentCloud\Common\AbstractModel;
 class Aspect extends AbstractModel
 {
     /**
-     * @var string 项目 名字
+     * @var string 维度名字
      */
     public $Name;
 
     /**
-     * @var float 该项得分
+     * @var float 维度得分
      */
     public $Score;
+
     /**
-     * @param string $Name 项目 名字
-     * @param float $Score 该项得分
+     * @var float 维度分数占比
+     */
+    public $Percentage;
+    /**
+     * @param string $Name 维度名字
+     * @param float $Score 维度得分
+     * @param float $Percentage 维度分数占比
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class Aspect extends AbstractModel
 
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {
             $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("Percentage",$param) and $param["Percentage"] !== null) {
+            $this->Percentage = $param["Percentage"];
         }
     }
 }

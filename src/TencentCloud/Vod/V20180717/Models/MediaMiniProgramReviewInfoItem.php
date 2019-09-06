@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReviewResult(string $ReviewResult) 设置小程序视频发布状态：
 <li>Pass：成功。</li>
 <li>Rejected：未通过。</li>
- * @method array getReviewSummery() 获取小程序审核元素。
+ * @method array getReviewSummary() 获取小程序审核元素。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReviewSummery(array $ReviewSummery) 设置小程序审核元素。
+ * @method void setReviewSummary(array $ReviewSummary) 设置小程序审核元素。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -70,7 +70,7 @@ class MediaMiniProgramReviewInfoItem extends AbstractModel
      * @var array 小程序审核元素。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ReviewSummery;
+    public $ReviewSummary;
     /**
      * @param integer $Definition 模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。
      * @param MediaMetaData $MetaData 视频元信息。
@@ -79,7 +79,7 @@ class MediaMiniProgramReviewInfoItem extends AbstractModel
      * @param string $ReviewResult 小程序视频发布状态：
 <li>Pass：成功。</li>
 <li>Rejected：未通过。</li>
-     * @param array $ReviewSummery 小程序审核元素。
+     * @param array $ReviewSummary 小程序审核元素。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -111,12 +111,12 @@ class MediaMiniProgramReviewInfoItem extends AbstractModel
             $this->ReviewResult = $param["ReviewResult"];
         }
 
-        if (array_key_exists("ReviewSummery",$param) and $param["ReviewSummery"] !== null) {
-            $this->ReviewSummery = [];
-            foreach ($param["ReviewSummery"] as $key => $value){
+        if (array_key_exists("ReviewSummary",$param) and $param["ReviewSummary"] !== null) {
+            $this->ReviewSummary = [];
+            foreach ($param["ReviewSummary"] as $key => $value){
                 $obj = new MediaMiniProgramReviewElem();
                 $obj->deserialize($value);
-                array_push($this->ReviewSummery, $obj);
+                array_push($this->ReviewSummary, $obj);
             }
         }
     }

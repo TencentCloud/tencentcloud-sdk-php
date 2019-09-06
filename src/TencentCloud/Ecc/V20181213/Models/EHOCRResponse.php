@@ -18,8 +18,8 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method CompostionContext getData() 获取识别后的作文内容
- * @method void setData(CompostionContext $Data) 设置识别后的作文内容
+ * @method CompostionContext getData() 获取接口返回数据
+ * @method void setData(CompostionContext $Data) 设置接口返回数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class EHOCRResponse extends AbstractModel
 {
     /**
-     * @var CompostionContext 识别后的作文内容
+     * @var CompostionContext 接口返回数据
      */
     public $Data;
 
@@ -39,7 +39,7 @@ class EHOCRResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param CompostionContext $Data 识别后的作文内容
+     * @param CompostionContext $Data 接口返回数据
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

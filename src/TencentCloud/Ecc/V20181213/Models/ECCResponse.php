@@ -19,7 +19,13 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method CorrectData getData() 获取整体的批改结果
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(CorrectData $Data) 设置整体的批改结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskId() 获取任务 id，用于查询接口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskId(string $TaskId) 设置任务 id，用于查询接口
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -31,8 +37,15 @@ class ECCResponse extends AbstractModel
 {
     /**
      * @var CorrectData 整体的批改结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
+
+    /**
+     * @var string 任务 id，用于查询接口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,6 +53,9 @@ class ECCResponse extends AbstractModel
     public $RequestId;
     /**
      * @param CorrectData $Data 整体的批改结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskId 任务 id，用于查询接口
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -57,6 +73,10 @@ class ECCResponse extends AbstractModel
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = new CorrectData();
             $this->Data->deserialize($param["Data"]);
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) 设置视频流配置参数，当 RemoveVideo 为 0，该字段必填。
  * @method AudioTemplateInfo getAudioTemplate() 获取音频流配置参数，当 RemoveAudio 为 0，该字段必填。
  * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) 设置音频流配置参数，当 RemoveAudio 为 0，该字段必填。
+ * @method TEHDConfig getTEHDConfig() 获取极速高清转码参数，需联系商务架构师开通后才能使用。
+ * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置极速高清转码参数，需联系商务架构师开通后才能使用。
  */
 
 /**
@@ -91,6 +93,11 @@ class CreateTranscodeTemplateRequest extends AbstractModel
      * @var AudioTemplateInfo 音频流配置参数，当 RemoveAudio 为 0，该字段必填。
      */
     public $AudioTemplate;
+
+    /**
+     * @var TEHDConfig 极速高清转码参数，需联系商务架构师开通后才能使用。
+     */
+    public $TEHDConfig;
     /**
      * @param string $Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      * @param string $Name 转码模板名称，长度限制：64 个字符。
@@ -105,6 +112,7 @@ class CreateTranscodeTemplateRequest extends AbstractModel
 默认值：0。
      * @param VideoTemplateInfo $VideoTemplate 视频流配置参数，当 RemoveVideo 为 0，该字段必填。
      * @param AudioTemplateInfo $AudioTemplate 音频流配置参数，当 RemoveAudio 为 0，该字段必填。
+     * @param TEHDConfig $TEHDConfig 极速高清转码参数，需联系商务架构师开通后才能使用。
      */
     function __construct()
     {
@@ -146,6 +154,11 @@ class CreateTranscodeTemplateRequest extends AbstractModel
         if (array_key_exists("AudioTemplate",$param) and $param["AudioTemplate"] !== null) {
             $this->AudioTemplate = new AudioTemplateInfo();
             $this->AudioTemplate->deserialize($param["AudioTemplate"]);
+        }
+
+        if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
+            $this->TEHDConfig = new TEHDConfig();
+            $this->TEHDConfig->deserialize($param["TEHDConfig"]);
         }
     }
 }

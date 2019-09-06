@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
 取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
  * @method void setStopChargingMode(string $StopChargingMode) 设置实例的关机计费模式。
 取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
+ * @method string getUuid() 获取实例全局唯一ID
+ * @method void setUuid(string $Uuid) 设置实例全局唯一ID
  */
 
 /**
@@ -198,6 +200,11 @@ class Instance extends AbstractModel
 取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
      */
     public $StopChargingMode;
+
+    /**
+     * @var string 实例全局唯一ID
+     */
+    public $Uuid;
     /**
      * @param Placement $Placement 实例所在的位置。
      * @param string $InstanceId 实例`ID`。
@@ -225,6 +232,7 @@ class Instance extends AbstractModel
      * @param array $Tags 实例关联的标签列表。
      * @param string $StopChargingMode 实例的关机计费模式。
 取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
+     * @param string $Uuid 实例全局唯一ID
      */
     function __construct()
     {
@@ -347,6 +355,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("StopChargingMode",$param) and $param["StopChargingMode"] !== null) {
             $this->StopChargingMode = $param["StopChargingMode"];
+        }
+
+        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
+            $this->Uuid = $param["Uuid"];
         }
     }
 }

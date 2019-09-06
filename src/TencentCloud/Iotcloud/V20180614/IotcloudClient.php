@@ -22,6 +22,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Iotcloud\V20180614\Models as Models;
 
 /**
+* @method Models\BindDevicesResponse BindDevices(Models\BindDevicesRequest $req) 本接口（BindDevices）用于网关设备批量绑定子设备
 * @method Models\CancelTaskResponse CancelTask(Models\CancelTaskRequest $req) 本接口（CancelTask）用于取消一个未被调度的任务。
 * @method Models\CreateDeviceResponse CreateDevice(Models\CreateDeviceRequest $req) 本接口（CreateDevice）用于新建一个物联网通信设备。
 * @method Models\CreateLoraDeviceResponse CreateLoraDevice(Models\CreateLoraDeviceRequest $req) 创建lora类型的设备
@@ -51,6 +52,8 @@ use TencentCloud\Iotcloud\V20180614\Models as Models;
 * @method Models\PublishToDeviceResponse PublishToDevice(Models\PublishToDeviceRequest $req) 服务器端下发消息给lora类型的设备
 * @method Models\ReplaceTopicRuleResponse ReplaceTopicRule(Models\ReplaceTopicRuleRequest $req) 本接口（ReplaceTopicRule）用于修改替换规则
 * @method Models\ResetDeviceStateResponse ResetDeviceState(Models\ResetDeviceStateRequest $req) 重置设备的连接状态
+* @method Models\UnbindDevicesResponse UnbindDevices(Models\UnbindDevicesRequest $req) 本接口（UnbindDevices）用于网关设备批量解绑子设备
+* @method Models\UpdateDeviceAvailableStateResponse UpdateDeviceAvailableState(Models\UpdateDeviceAvailableStateRequest $req) 启用或者禁用设备
 * @method Models\UpdateDeviceShadowResponse UpdateDeviceShadow(Models\UpdateDeviceShadowRequest $req) 本接口（UpdateDeviceShadow）用于更新虚拟设备信息。
 * @method Models\UpdateTopicPolicyResponse UpdateTopicPolicy(Models\UpdateTopicPolicyRequest $req) 本接口（UpdateTopicPolicy）用于更新Topic信息
  */

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReplace(string $Replace) 设置替换成 的单词
  * @method string getMessage() 获取提示信息
  * @method void setMessage(string $Message) 设置提示信息
+ * @method array getErrorPosition() 获取维度单词位置，在句子的第几个到第几个单词之间
+ * @method void setErrorPosition(array $ErrorPosition) 设置维度单词位置，在句子的第几个到第几个单词之间
+ * @method array getErrorCoordinates() 获取维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
+ * @method void setErrorCoordinates(array $ErrorCoordinates) 设置维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
  */
 
 /**
@@ -59,12 +63,24 @@ class SentenceSuggest extends AbstractModel
      * @var string 提示信息
      */
     public $Message;
+
+    /**
+     * @var array 维度单词位置，在句子的第几个到第几个单词之间
+     */
+    public $ErrorPosition;
+
+    /**
+     * @var array 维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
+     */
+    public $ErrorCoordinates;
     /**
      * @param string $Type 类型
      * @param string $ErrorType 错误类型
      * @param string $Origin 原始单词
      * @param string $Replace 替换成 的单词
      * @param string $Message 提示信息
+     * @param array $ErrorPosition 维度单词位置，在句子的第几个到第几个单词之间
+     * @param array $ErrorCoordinates 维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
      */
     function __construct()
     {
@@ -96,6 +112,19 @@ class SentenceSuggest extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("ErrorPosition",$param) and $param["ErrorPosition"] !== null) {
+            $this->ErrorPosition = $param["ErrorPosition"];
+        }
+
+        if (array_key_exists("ErrorCoordinates",$param) and $param["ErrorCoordinates"] !== null) {
+            $this->ErrorCoordinates = [];
+            foreach ($param["ErrorCoordinates"] as $key => $value){
+                $obj = new ErrorCoordinate();
+                $obj->deserialize($value);
+                array_push($this->ErrorCoordinates, $obj);
+            }
         }
     }
 }

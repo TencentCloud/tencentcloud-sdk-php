@@ -41,9 +41,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStartTime() 获取开始时间。
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
+格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method void setStartTime(string $StartTime) 设置开始时间。
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
+格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method string getEndTime() 获取结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
@@ -51,6 +53,7 @@ use TencentCloud\Common\AbstractModel;
 
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
+格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method void setEndTime(string $EndTime) 设置结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
@@ -58,6 +61,7 @@ use TencentCloud\Common\AbstractModel;
 
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
+格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  */
 
 /**
@@ -99,6 +103,7 @@ class ModifyPullStreamConfigRequest extends AbstractModel
      * @var string 开始时间。
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
+格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public $StartTime;
 
@@ -110,6 +115,7 @@ class ModifyPullStreamConfigRequest extends AbstractModel
 
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
+格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public $EndTime;
     /**
@@ -126,6 +132,7 @@ class ModifyPullStreamConfigRequest extends AbstractModel
      * @param string $StartTime 开始时间。
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
+格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param string $EndTime 结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
@@ -133,6 +140,7 @@ class ModifyPullStreamConfigRequest extends AbstractModel
 
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
+格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     function __construct()
     {

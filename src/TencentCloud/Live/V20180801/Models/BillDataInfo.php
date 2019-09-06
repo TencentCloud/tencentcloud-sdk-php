@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidth(float $Bandwidth) 设置带宽，单位是Mbps。
  * @method float getFlux() 获取流量，单位是MB。
  * @method void setFlux(float $Flux) 设置流量，单位是MB。
+ * @method string getPeakTime() 获取峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
+ * @method void setPeakTime(string $PeakTime) 设置峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
  */
 
 /**
@@ -45,10 +47,16 @@ class BillDataInfo extends AbstractModel
      * @var float 流量，单位是MB。
      */
     public $Flux;
+
+    /**
+     * @var string 峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
+     */
+    public $PeakTime;
     /**
      * @param string $Time 时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param float $Bandwidth 带宽，单位是Mbps。
      * @param float $Flux 流量，单位是MB。
+     * @param string $PeakTime 峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class BillDataInfo extends AbstractModel
 
         if (array_key_exists("Flux",$param) and $param["Flux"] !== null) {
             $this->Flux = $param["Flux"];
+        }
+
+        if (array_key_exists("PeakTime",$param) and $param["PeakTime"] !== null) {
+            $this->PeakTime = $param["PeakTime"];
         }
     }
 }

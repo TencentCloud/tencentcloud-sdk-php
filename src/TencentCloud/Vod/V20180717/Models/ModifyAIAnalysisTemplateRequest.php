@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCoverConfigure(CoverConfigureInfoForUpdate $CoverConfigure) 设置智能封面任务控制参数。
  * @method FrameTagConfigureInfoForUpdate getFrameTagConfigure() 获取智能按帧标签任务控制参数。
  * @method void setFrameTagConfigure(FrameTagConfigureInfoForUpdate $FrameTagConfigure) 设置智能按帧标签任务控制参数。
+ * @method HighlightsConfigureInfoForUpdate getHighlightConfigure() 获取智能精彩集锦任务控制参数。
+ * @method void setHighlightConfigure(HighlightsConfigureInfoForUpdate $HighlightConfigure) 设置智能精彩集锦任务控制参数。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
@@ -77,6 +79,11 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
     public $FrameTagConfigure;
 
     /**
+     * @var HighlightsConfigureInfoForUpdate 智能精彩集锦任务控制参数。
+     */
+    public $HighlightConfigure;
+
+    /**
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
@@ -88,6 +95,7 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
      * @param TagConfigureInfoForUpdate $TagConfigure 智能标签任务控制参数。
      * @param CoverConfigureInfoForUpdate $CoverConfigure 智能封面任务控制参数。
      * @param FrameTagConfigureInfoForUpdate $FrameTagConfigure 智能按帧标签任务控制参数。
+     * @param HighlightsConfigureInfoForUpdate $HighlightConfigure 智能精彩集锦任务控制参数。
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
@@ -132,6 +140,11 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
         if (array_key_exists("FrameTagConfigure",$param) and $param["FrameTagConfigure"] !== null) {
             $this->FrameTagConfigure = new FrameTagConfigureInfoForUpdate();
             $this->FrameTagConfigure->deserialize($param["FrameTagConfigure"]);
+        }
+
+        if (array_key_exists("HighlightConfigure",$param) and $param["HighlightConfigure"] !== null) {
+            $this->HighlightConfigure = new HighlightsConfigureInfoForUpdate();
+            $this->HighlightConfigure->deserialize($param["HighlightConfigure"]);
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

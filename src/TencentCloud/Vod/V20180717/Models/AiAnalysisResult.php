@@ -23,11 +23,13 @@ use TencentCloud\Common\AbstractModel;
 <li>Cover：智能封面</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
+<li>Highlight：智能精彩集锦</li>
  * @method void setType(string $Type) 设置任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
+<li>Highlight：智能精彩集锦</li>
  * @method AiAnalysisTaskClassificationResult getClassificationTask() 获取视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClassificationTask(AiAnalysisTaskClassificationResult $ClassificationTask) 设置视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
@@ -44,9 +46,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrameTagTask(AiAnalysisTaskFrameTagResult $FrameTagTask) 设置视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getHighlightsTask() 获取视频内容分析智能按集锦任务的查询结果，当任务类型为 Highlight 时有效。
+ * @method AiAnalysisTaskHighlightResult getHighlightTask() 获取视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHighlightsTask(array $HighlightsTask) 设置视频内容分析智能按集锦任务的查询结果，当任务类型为 Highlight 时有效。
+ * @method void setHighlightTask(AiAnalysisTaskHighlightResult $HighlightTask) 设置视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -61,6 +63,7 @@ class AiAnalysisResult extends AbstractModel
 <li>Cover：智能封面</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
+<li>Highlight：智能精彩集锦</li>
      */
     public $Type;
 
@@ -89,16 +92,17 @@ class AiAnalysisResult extends AbstractModel
     public $FrameTagTask;
 
     /**
-     * @var array 视频内容分析智能按集锦任务的查询结果，当任务类型为 Highlight 时有效。
+     * @var AiAnalysisTaskHighlightResult 视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $HighlightsTask;
+    public $HighlightTask;
     /**
      * @param string $Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
+<li>Highlight：智能精彩集锦</li>
      * @param AiAnalysisTaskClassificationResult $ClassificationTask 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskCoverResult $CoverTask 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
@@ -107,7 +111,7 @@ class AiAnalysisResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskFrameTagResult $FrameTagTask 视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $HighlightsTask 视频内容分析智能按集锦任务的查询结果，当任务类型为 Highlight 时有效。
+     * @param AiAnalysisTaskHighlightResult $HighlightTask 视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -146,13 +150,9 @@ class AiAnalysisResult extends AbstractModel
             $this->FrameTagTask->deserialize($param["FrameTagTask"]);
         }
 
-        if (array_key_exists("HighlightsTask",$param) and $param["HighlightsTask"] !== null) {
-            $this->HighlightsTask = [];
-            foreach ($param["HighlightsTask"] as $key => $value){
-                $obj = new AiAnalysisTaskHighlightResult();
-                $obj->deserialize($value);
-                array_push($this->HighlightsTask, $obj);
-            }
+        if (array_key_exists("HighlightTask",$param) and $param["HighlightTask"] !== null) {
+            $this->HighlightTask = new AiAnalysisTaskHighlightResult();
+            $this->HighlightTask->deserialize($param["HighlightTask"]);
         }
     }
 }

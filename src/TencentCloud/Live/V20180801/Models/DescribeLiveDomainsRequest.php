@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNum(integer $PageNum) 设置取第几页，范围：1~100000。默认1
  * @method integer getIsDelayLive() 获取0 普通直播 1慢直播 默认0
  * @method void setIsDelayLive(integer $IsDelayLive) 设置0 普通直播 1慢直播 默认0
+ * @method string getDomainPrefix() 获取域名前缀
+ * @method void setDomainPrefix(string $DomainPrefix) 设置域名前缀
  */
 
 /**
@@ -59,12 +61,18 @@ class DescribeLiveDomainsRequest extends AbstractModel
      * @var integer 0 普通直播 1慢直播 默认0
      */
     public $IsDelayLive;
+
+    /**
+     * @var string 域名前缀
+     */
+    public $DomainPrefix;
     /**
      * @param integer $DomainStatus 域名状态过滤。0-停用，1-启用
      * @param integer $DomainType 域名类型过滤。0-推流，1-播放
      * @param integer $PageSize 分页大小，范围：10~100。默认10
      * @param integer $PageNum 取第几页，范围：1~100000。默认1
      * @param integer $IsDelayLive 0 普通直播 1慢直播 默认0
+     * @param string $DomainPrefix 域名前缀
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeLiveDomainsRequest extends AbstractModel
 
         if (array_key_exists("IsDelayLive",$param) and $param["IsDelayLive"] !== null) {
             $this->IsDelayLive = $param["IsDelayLive"];
+        }
+
+        if (array_key_exists("DomainPrefix",$param) and $param["DomainPrefix"] !== null) {
+            $this->DomainPrefix = $param["DomainPrefix"];
         }
     }
 }

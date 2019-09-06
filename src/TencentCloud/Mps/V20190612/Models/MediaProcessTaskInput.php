@@ -19,29 +19,15 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method array getTranscodeTaskSet() 获取视频转码任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranscodeTaskSet(array $TranscodeTaskSet) 设置视频转码任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAnimatedGraphicTaskSet() 获取视频转动图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnimatedGraphicTaskSet(array $AnimatedGraphicTaskSet) 设置视频转动图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSnapshotByTimeOffsetTaskSet() 获取对视频按时间点截图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotByTimeOffsetTaskSet(array $SnapshotByTimeOffsetTaskSet) 设置对视频按时间点截图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSampleSnapshotTaskSet() 获取对视频采样截图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSampleSnapshotTaskSet(array $SampleSnapshotTaskSet) 设置对视频采样截图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getImageSpriteTaskSet() 获取对视频截雪碧图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageSpriteTaskSet(array $ImageSpriteTaskSet) 设置对视频截雪碧图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAdaptiveDynamicStreamingTaskSet() 获取对视频转自适应码流任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdaptiveDynamicStreamingTaskSet(array $AdaptiveDynamicStreamingTaskSet) 设置对视频转自适应码流任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -51,52 +37,34 @@ class MediaProcessTaskInput extends AbstractModel
 {
     /**
      * @var array 视频转码任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeTaskSet;
 
     /**
      * @var array 视频转动图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnimatedGraphicTaskSet;
 
     /**
      * @var array 对视频按时间点截图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotByTimeOffsetTaskSet;
 
     /**
      * @var array 对视频采样截图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SampleSnapshotTaskSet;
 
     /**
      * @var array 对视频截雪碧图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageSpriteTaskSet;
-
-    /**
-     * @var array 对视频转自适应码流任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $AdaptiveDynamicStreamingTaskSet;
     /**
      * @param array $TranscodeTaskSet 视频转码任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AnimatedGraphicTaskSet 视频转动图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SnapshotByTimeOffsetTaskSet 对视频按时间点截图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SampleSnapshotTaskSet 对视频采样截图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ImageSpriteTaskSet 对视频截雪碧图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AdaptiveDynamicStreamingTaskSet 对视频转自适应码流任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -152,15 +120,6 @@ class MediaProcessTaskInput extends AbstractModel
                 $obj = new ImageSpriteTaskInput();
                 $obj->deserialize($value);
                 array_push($this->ImageSpriteTaskSet, $obj);
-            }
-        }
-
-        if (array_key_exists("AdaptiveDynamicStreamingTaskSet",$param) and $param["AdaptiveDynamicStreamingTaskSet"] !== null) {
-            $this->AdaptiveDynamicStreamingTaskSet = [];
-            foreach ($param["AdaptiveDynamicStreamingTaskSet"] as $key => $value){
-                $obj = new AdaptiveDynamicStreamingTaskInput();
-                $obj->deserialize($value);
-                array_push($this->AdaptiveDynamicStreamingTaskSet, $obj);
             }
         }
     }

@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainerType(string $ContainerType) 设置封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式板；</li>
 <li>PureAudio：纯音频格式，只能包含音频流的封装格式。</li>
+ * @method string getTEHDType() 获取极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
+ * @method void setTEHDType(string $TEHDType) 设置极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
  * @method integer getOffset() 获取分页偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
@@ -63,6 +69,13 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
     public $ContainerType;
 
     /**
+     * @var string 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
+     */
+    public $TEHDType;
+
+    /**
      * @var integer 分页偏移量，默认值：0。
      */
     public $Offset;
@@ -79,6 +92,9 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
      * @param string $ContainerType 封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式板；</li>
 <li>PureAudio：纯音频格式，只能包含音频流的封装格式。</li>
+     * @param string $TEHDType 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
      */
@@ -104,6 +120,10 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
 
         if (array_key_exists("ContainerType",$param) and $param["ContainerType"] !== null) {
             $this->ContainerType = $param["ContainerType"];
+        }
+
+        if (array_key_exists("TEHDType",$param) and $param["TEHDType"] !== null) {
+            $this->TEHDType = $param["TEHDType"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

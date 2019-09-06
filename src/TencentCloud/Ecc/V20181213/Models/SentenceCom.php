@@ -18,29 +18,29 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getSuggestions() 获取点评内容
- * @method void setSuggestions(array $Suggestions) 设置点评内容
- * @method SentenceItem getSentence() 获取点评的句子信息
- * @method void setSentence(SentenceItem $Sentence) 设置点评的句子信息
+ * @method array getSuggestions() 获取句子错误纠正信息
+ * @method void setSuggestions(array $Suggestions) 设置句子错误纠正信息
+ * @method SentenceItem getSentence() 获取句子信息
+ * @method void setSentence(SentenceItem $Sentence) 设置句子信息
  */
 
 /**
- *句子点评
+ *批改结果按句点评的详细信息
  */
 class SentenceCom extends AbstractModel
 {
     /**
-     * @var array 点评内容
+     * @var array 句子错误纠正信息
      */
     public $Suggestions;
 
     /**
-     * @var SentenceItem 点评的句子信息
+     * @var SentenceItem 句子信息
      */
     public $Sentence;
     /**
-     * @param array $Suggestions 点评内容
-     * @param SentenceItem $Sentence 点评的句子信息
+     * @param array $Suggestions 句子错误纠正信息
+     * @param SentenceItem $Sentence 句子信息
      */
     function __construct()
     {

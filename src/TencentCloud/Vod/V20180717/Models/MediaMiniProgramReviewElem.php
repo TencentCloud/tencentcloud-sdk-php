@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
 <li>review：疑似违规。</li>
- * @method string getConfidence() 获取审核结果置信度。取值 0~100。
- * @method void setConfidence(string $Confidence) 设置审核结果置信度。取值 0~100。
+ * @method float getConfidence() 获取审核结果置信度。取值 0~100。
+ * @method void setConfidence(float $Confidence) 设置审核结果置信度。取值 0~100。
  */
 
 /**
@@ -72,7 +72,7 @@ class MediaMiniProgramReviewElem extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string 审核结果置信度。取值 0~100。
+     * @var float 审核结果置信度。取值 0~100。
      */
     public $Confidence;
     /**
@@ -88,7 +88,7 @@ class MediaMiniProgramReviewElem extends AbstractModel
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
 <li>review：疑似违规。</li>
-     * @param string $Confidence 审核结果置信度。取值 0~100。
+     * @param float $Confidence 审核结果置信度。取值 0~100。
      */
     function __construct()
     {

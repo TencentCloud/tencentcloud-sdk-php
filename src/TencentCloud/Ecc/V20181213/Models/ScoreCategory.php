@@ -18,14 +18,18 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method Aspect getWords() 获取词汇项
- * @method void setWords(Aspect $Words) 设置词汇项
- * @method Aspect getSentences() 获取句子项
- * @method void setSentences(Aspect $Sentences) 设置句子项
- * @method Aspect getStructure() 获取篇章结构
- * @method void setStructure(Aspect $Structure) 设置篇章结构
- * @method Aspect getContent() 获取内容
- * @method void setContent(Aspect $Content) 设置内容
+ * @method Aspect getWords() 获取词汇维度
+ * @method void setWords(Aspect $Words) 设置词汇维度
+ * @method Aspect getSentences() 获取句子维度
+ * @method void setSentences(Aspect $Sentences) 设置句子维度
+ * @method Aspect getStructure() 获取篇章结构维度
+ * @method void setStructure(Aspect $Structure) 设置篇章结构维度
+ * @method Aspect getContent() 获取内容维度
+ * @method void setContent(Aspect $Content) 设置内容维度
+ * @method float getScore() 获取维度得分
+ * @method void setScore(float $Score) 设置维度得分
+ * @method float getPercentage() 获取维度分数占比
+ * @method void setPercentage(float $Percentage) 设置维度分数占比
  */
 
 /**
@@ -34,29 +38,41 @@ use TencentCloud\Common\AbstractModel;
 class ScoreCategory extends AbstractModel
 {
     /**
-     * @var Aspect 词汇项
+     * @var Aspect 词汇维度
      */
     public $Words;
 
     /**
-     * @var Aspect 句子项
+     * @var Aspect 句子维度
      */
     public $Sentences;
 
     /**
-     * @var Aspect 篇章结构
+     * @var Aspect 篇章结构维度
      */
     public $Structure;
 
     /**
-     * @var Aspect 内容
+     * @var Aspect 内容维度
      */
     public $Content;
+
     /**
-     * @param Aspect $Words 词汇项
-     * @param Aspect $Sentences 句子项
-     * @param Aspect $Structure 篇章结构
-     * @param Aspect $Content 内容
+     * @var float 维度得分
+     */
+    public $Score;
+
+    /**
+     * @var float 维度分数占比
+     */
+    public $Percentage;
+    /**
+     * @param Aspect $Words 词汇维度
+     * @param Aspect $Sentences 句子维度
+     * @param Aspect $Structure 篇章结构维度
+     * @param Aspect $Content 内容维度
+     * @param float $Score 维度得分
+     * @param float $Percentage 维度分数占比
      */
     function __construct()
     {
@@ -88,6 +104,14 @@ class ScoreCategory extends AbstractModel
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = new Aspect();
             $this->Content->deserialize($param["Content"]);
+        }
+
+        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
+            $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("Percentage",$param) and $param["Percentage"] !== null) {
+            $this->Percentage = $param["Percentage"];
         }
     }
 }

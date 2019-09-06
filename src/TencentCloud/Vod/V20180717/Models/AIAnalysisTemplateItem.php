@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrameTagConfigure(FrameTagConfigureInfo $FrameTagConfigure) 设置智能按帧标签任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method HighlightsConfigureInfo getHighlightConfigure() 获取智能精彩集锦任务控制参数。
+ * @method void setHighlightConfigure(HighlightsConfigureInfo $HighlightConfigure) 设置智能精彩集锦任务控制参数。
  * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
@@ -91,6 +93,11 @@ class AIAnalysisTemplateItem extends AbstractModel
     public $FrameTagConfigure;
 
     /**
+     * @var HighlightsConfigureInfo 智能精彩集锦任务控制参数。
+     */
+    public $HighlightConfigure;
+
+    /**
      * @var string 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public $CreateTime;
@@ -111,6 +118,7 @@ class AIAnalysisTemplateItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FrameTagConfigureInfo $FrameTagConfigure 智能按帧标签任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param HighlightsConfigureInfo $HighlightConfigure 智能精彩集锦任务控制参数。
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
@@ -156,6 +164,11 @@ class AIAnalysisTemplateItem extends AbstractModel
         if (array_key_exists("FrameTagConfigure",$param) and $param["FrameTagConfigure"] !== null) {
             $this->FrameTagConfigure = new FrameTagConfigureInfo();
             $this->FrameTagConfigure->deserialize($param["FrameTagConfigure"]);
+        }
+
+        if (array_key_exists("HighlightConfigure",$param) and $param["HighlightConfigure"] !== null) {
+            $this->HighlightConfigure = new HighlightsConfigureInfo();
+            $this->HighlightConfigure->deserialize($param["HighlightConfigure"]);
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

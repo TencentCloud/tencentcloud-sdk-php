@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置需要制作镜像的实例ID
  * @method string getImageDescription() 获取镜像描述
  * @method void setImageDescription(string $ImageDescription) 设置镜像描述
- * @method string getForcePoweroff() 获取软关机失败时是否执行强制关机以制作镜像
- * @method void setForcePoweroff(string $ForcePoweroff) 设置软关机失败时是否执行强制关机以制作镜像
+ * @method string getForcePoweroff() 获取是否执行强制关机以制作镜像。
+取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+ * @method void setForcePoweroff(string $ForcePoweroff) 设置是否执行强制关机以制作镜像。
+取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
  * @method string getSysprep() 获取创建Windows镜像时是否启用Sysprep
  * @method void setSysprep(string $Sysprep) 设置创建Windows镜像时是否启用Sysprep
- * @method string getReboot() 获取实例处于运行中时，是否允许关机执行制作镜像任务。
- * @method void setReboot(string $Reboot) 设置实例处于运行中时，是否允许关机执行制作镜像任务。
  * @method array getDataDiskIds() 获取实例需要制作镜像的数据盘Id
  * @method void setDataDiskIds(array $DataDiskIds) 设置实例需要制作镜像的数据盘Id
- * @method array getSnapshotIds() 获取需要制作镜像的快照Id,必须包含一个系统盘快照
- * @method void setSnapshotIds(array $SnapshotIds) 设置需要制作镜像的快照Id,必须包含一个系统盘快照
+ * @method array getSnapshotIds() 获取需要制作镜像的快照ID,必须包含一个系统盘快照
+ * @method void setSnapshotIds(array $SnapshotIds) 设置需要制作镜像的快照ID,必须包含一个系统盘快照
  * @method boolean getDryRun() 获取检测请求的合法性，但不会对操作的资源产生任何影响
  * @method void setDryRun(boolean $DryRun) 设置检测请求的合法性，但不会对操作的资源产生任何影响
  */
@@ -59,7 +59,8 @@ class CreateImageRequest extends AbstractModel
     public $ImageDescription;
 
     /**
-     * @var string 软关机失败时是否执行强制关机以制作镜像
+     * @var string 是否执行强制关机以制作镜像。
+取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
      */
     public $ForcePoweroff;
 
@@ -69,17 +70,12 @@ class CreateImageRequest extends AbstractModel
     public $Sysprep;
 
     /**
-     * @var string 实例处于运行中时，是否允许关机执行制作镜像任务。
-     */
-    public $Reboot;
-
-    /**
      * @var array 实例需要制作镜像的数据盘Id
      */
     public $DataDiskIds;
 
     /**
-     * @var array 需要制作镜像的快照Id,必须包含一个系统盘快照
+     * @var array 需要制作镜像的快照ID,必须包含一个系统盘快照
      */
     public $SnapshotIds;
 
@@ -91,11 +87,11 @@ class CreateImageRequest extends AbstractModel
      * @param string $ImageName 镜像名称
      * @param string $InstanceId 需要制作镜像的实例ID
      * @param string $ImageDescription 镜像描述
-     * @param string $ForcePoweroff 软关机失败时是否执行强制关机以制作镜像
+     * @param string $ForcePoweroff 是否执行强制关机以制作镜像。
+取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
      * @param string $Sysprep 创建Windows镜像时是否启用Sysprep
-     * @param string $Reboot 实例处于运行中时，是否允许关机执行制作镜像任务。
      * @param array $DataDiskIds 实例需要制作镜像的数据盘Id
-     * @param array $SnapshotIds 需要制作镜像的快照Id,必须包含一个系统盘快照
+     * @param array $SnapshotIds 需要制作镜像的快照ID,必须包含一个系统盘快照
      * @param boolean $DryRun 检测请求的合法性，但不会对操作的资源产生任何影响
      */
     function __construct()
@@ -128,10 +124,6 @@ class CreateImageRequest extends AbstractModel
 
         if (array_key_exists("Sysprep",$param) and $param["Sysprep"] !== null) {
             $this->Sysprep = $param["Sysprep"];
-        }
-
-        if (array_key_exists("Reboot",$param) and $param["Reboot"] !== null) {
-            $this->Reboot = $param["Reboot"];
         }
 
         if (array_key_exists("DataDiskIds",$param) and $param["DataDiskIds"] !== null) {

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEipName(string $EipName) 设置EIP名称
  * @method string getEip() 获取EIP地址
  * @method void setEip(string $Eip) 设置EIP地址
- * @method integer getIspId() 获取运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：香港
- * @method void setIspId(integer $IspId) 设置运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：香港
+ * @method integer getIspId() 获取运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：中国香港
+ * @method void setIspId(integer $IspId) 设置运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：中国香港
  * @method integer getStatus() 获取状态 0：创建中； 1：绑定中； 2：已绑定； 3：解绑中； 4：未绑定； 6：下线中； 9：创建失败
  * @method void setStatus(integer $Status) 设置状态 0：创建中； 1：绑定中； 2：已绑定； 3：解绑中； 4：未绑定； 6：下线中； 9：创建失败
  * @method integer getArrears() 获取是否欠费隔离 1： 欠费隔离； 0： 正常。处在欠费隔离情况下的EIP不能进行任何管理操作。
@@ -97,7 +97,7 @@ class EipInfo extends AbstractModel
     public $Eip;
 
     /**
-     * @var integer 运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：香港
+     * @var integer 运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：中国香港
      */
     public $IspId;
 
@@ -224,7 +224,7 @@ class EipInfo extends AbstractModel
      * @param string $EipId EIP实例ID
      * @param string $EipName EIP名称
      * @param string $Eip EIP地址
-     * @param integer $IspId 运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：香港
+     * @param integer $IspId 运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：中国香港
      * @param integer $Status 状态 0：创建中； 1：绑定中； 2：已绑定； 3：解绑中； 4：未绑定； 6：下线中； 9：创建失败
      * @param integer $Arrears 是否欠费隔离 1： 欠费隔离； 0： 正常。处在欠费隔离情况下的EIP不能进行任何管理操作。
      * @param string $InstanceId EIP所绑定的服务器实例ID，未绑定则为空

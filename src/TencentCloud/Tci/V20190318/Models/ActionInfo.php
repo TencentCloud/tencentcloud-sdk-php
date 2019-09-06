@@ -18,14 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method ActionType getBodyPosture() 获取躯体动作识别结果
- * @method void setBodyPosture(ActionType $BodyPosture) 设置躯体动作识别结果
- * @method ActionType getHandup() 获取举手识别结果
- * @method void setHandup(ActionType $Handup) 设置举手识别结果
- * @method ActionType getLookHead() 获取是否低头识别结果
- * @method void setLookHead(ActionType $LookHead) 设置是否低头识别结果
- * @method ActionType getWriting() 获取是否写字识别结果
- * @method void setWriting(ActionType $Writing) 设置是否写字识别结果
+ * @method ActionType getBodyPosture() 获取躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
+ * @method void setBodyPosture(ActionType $BodyPosture) 设置躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
+ * @method ActionType getHandup() 获取举手识别结果，包含举手（hand）和未检测到举手（nothand）
+ * @method void setHandup(ActionType $Handup) 设置举手识别结果，包含举手（hand）和未检测到举手（nothand）
+ * @method ActionType getLookHead() 获取是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead）
+ * @method void setLookHead(ActionType $LookHead) 设置是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead）
+ * @method ActionType getWriting() 获取是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead）
+ * @method void setWriting(ActionType $Writing) 设置是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead）
  * @method integer getHeight() 获取动作图像高度
  * @method void setHeight(integer $Height) 设置动作图像高度
  * @method integer getLeft() 获取动作出现图像的左侧起始坐标位置
@@ -42,22 +42,22 @@ use TencentCloud\Common\AbstractModel;
 class ActionInfo extends AbstractModel
 {
     /**
-     * @var ActionType 躯体动作识别结果
+     * @var ActionType 躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
      */
     public $BodyPosture;
 
     /**
-     * @var ActionType 举手识别结果
+     * @var ActionType 举手识别结果，包含举手（hand）和未检测到举手（nothand）
      */
     public $Handup;
 
     /**
-     * @var ActionType 是否低头识别结果
+     * @var ActionType 是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead）
      */
     public $LookHead;
 
     /**
-     * @var ActionType 是否写字识别结果
+     * @var ActionType 是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead）
      */
     public $Writing;
 
@@ -81,10 +81,10 @@ class ActionInfo extends AbstractModel
      */
     public $Width;
     /**
-     * @param ActionType $BodyPosture 躯体动作识别结果
-     * @param ActionType $Handup 举手识别结果
-     * @param ActionType $LookHead 是否低头识别结果
-     * @param ActionType $Writing 是否写字识别结果
+     * @param ActionType $BodyPosture 躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
+     * @param ActionType $Handup 举手识别结果，包含举手（hand）和未检测到举手（nothand）
+     * @param ActionType $LookHead 是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead）
+     * @param ActionType $Writing 是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead）
      * @param integer $Height 动作图像高度
      * @param integer $Left 动作出现图像的左侧起始坐标位置
      * @param integer $Top 动作出现图像的上侧起始侧坐标位置

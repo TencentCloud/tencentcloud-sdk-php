@@ -18,14 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getFileContent() 获取输入分析对象内容，仅支持url，暂不支持直接上传base64图片
- * @method void setFileContent(string $FileContent) 设置输入分析对象内容，仅支持url，暂不支持直接上传base64图片
- * @method string getFileType() 获取输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
- * @method void setFileType(string $FileType) 设置输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
+ * @method string getFileContent() 获取输入分析对象内容，输入数据格式参考FileType参数释义
+ * @method void setFileContent(string $FileContent) 设置输入分析对象内容，输入数据格式参考FileType参数释义
+ * @method string getFileType() 获取输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture：图片二进制数据的BASE64编码
+ * @method void setFileType(string $FileType) 设置输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture：图片二进制数据的BASE64编码
  * @method array getLibrarySet() 获取查询人员库列表，可填写学生们的注册照所在人员库
  * @method void setLibrarySet(array $LibrarySet) 设置查询人员库列表，可填写学生们的注册照所在人员库
- * @method integer getMaxVideoDuration() 获取直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
- * @method void setMaxVideoDuration(integer $MaxVideoDuration) 设置直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+ * @method integer getMaxVideoDuration() 获取视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+ * @method void setMaxVideoDuration(integer $MaxVideoDuration) 设置视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
  */
 
 /**
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class SubmitTraditionalClassTaskRequest extends AbstractModel
 {
     /**
-     * @var string 输入分析对象内容，仅支持url，暂不支持直接上传base64图片
+     * @var string 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public $FileContent;
 
     /**
-     * @var string 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
+     * @var string 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture：图片二进制数据的BASE64编码
      */
     public $FileType;
 
@@ -49,14 +49,14 @@ class SubmitTraditionalClassTaskRequest extends AbstractModel
     public $LibrarySet;
 
     /**
-     * @var integer 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+     * @var integer 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public $MaxVideoDuration;
     /**
-     * @param string $FileContent 输入分析对象内容，仅支持url，暂不支持直接上传base64图片
-     * @param string $FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
+     * @param string $FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
+     * @param string $FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture：图片二进制数据的BASE64编码
      * @param array $LibrarySet 查询人员库列表，可填写学生们的注册照所在人员库
-     * @param integer $MaxVideoDuration 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+     * @param integer $MaxVideoDuration 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     function __construct()
     {

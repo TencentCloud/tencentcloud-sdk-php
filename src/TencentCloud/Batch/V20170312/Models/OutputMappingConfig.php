@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScene(string $Scene) 设置存储类型，仅支持COS
  * @method integer getWorkerNum() 获取并行worker数量
  * @method void setWorkerNum(integer $WorkerNum) 设置并行worker数量
- * @method integer getWorkerPartSize() 获取worker分块大小
- * @method void setWorkerPartSize(integer $WorkerPartSize) 设置worker分块大小
+ * @method integer getWorkerPartSize() 获取worker分块大小，单位MB
+ * @method void setWorkerPartSize(integer $WorkerPartSize) 设置worker分块大小，单位MB
  */
 
 /**
@@ -42,13 +42,13 @@ class OutputMappingConfig extends AbstractModel
     public $WorkerNum;
 
     /**
-     * @var integer worker分块大小
+     * @var integer worker分块大小，单位MB
      */
     public $WorkerPartSize;
     /**
      * @param string $Scene 存储类型，仅支持COS
      * @param integer $WorkerNum 并行worker数量
-     * @param integer $WorkerPartSize worker分块大小
+     * @param integer $WorkerPartSize worker分块大小，单位MB
      */
     function __construct()
     {

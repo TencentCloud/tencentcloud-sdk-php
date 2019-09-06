@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHandTracking(HandTrackingResult $HandTracking) 设置手势分类结果
  * @method LightResult getLight() 获取光照识别结果
  * @method void setLight(LightResult $Light) 设置光照识别结果
- * @method BodyMovementResult getStudentBodyMovement() 获取学生肢体动作识别结果
- * @method void setStudentBodyMovement(BodyMovementResult $StudentBodyMovement) 设置学生肢体动作识别结果
+ * @method StudentBodyMovementResult getStudentBodyMovement() 获取学生肢体动作识别结果
+ * @method void setStudentBodyMovement(StudentBodyMovementResult $StudentBodyMovement) 设置学生肢体动作识别结果
  * @method BodyMovementResult getTeacherBodyMovement() 获取老师肢体动作识别结果
  * @method void setTeacherBodyMovement(BodyMovementResult $TeacherBodyMovement) 设置老师肢体动作识别结果
  * @method TeacherOutScreenResult getTeacherOutScreen() 获取教师是否在屏幕内判断结果
@@ -97,7 +97,7 @@ class ImageTaskResult extends AbstractModel
     public $Light;
 
     /**
-     * @var BodyMovementResult 学生肢体动作识别结果
+     * @var StudentBodyMovementResult 学生肢体动作识别结果
      */
     public $StudentBodyMovement;
 
@@ -125,7 +125,7 @@ class ImageTaskResult extends AbstractModel
      * @param GestureResult $Gesture 动作分类结果
      * @param HandTrackingResult $HandTracking 手势分类结果
      * @param LightResult $Light 光照识别结果
-     * @param BodyMovementResult $StudentBodyMovement 学生肢体动作识别结果
+     * @param StudentBodyMovementResult $StudentBodyMovement 学生肢体动作识别结果
      * @param BodyMovementResult $TeacherBodyMovement 老师肢体动作识别结果
      * @param TeacherOutScreenResult $TeacherOutScreen 教师是否在屏幕内判断结果
      * @param TimeInfoResult $TimeInfo 时间统计结果
@@ -188,7 +188,7 @@ class ImageTaskResult extends AbstractModel
         }
 
         if (array_key_exists("StudentBodyMovement",$param) and $param["StudentBodyMovement"] !== null) {
-            $this->StudentBodyMovement = new BodyMovementResult();
+            $this->StudentBodyMovement = new StudentBodyMovementResult();
             $this->StudentBodyMovement->deserialize($param["StudentBodyMovement"]);
         }
 

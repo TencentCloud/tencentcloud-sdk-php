@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getDirection() 获取正脸或侧脸的消息
  * @method void setDirection(string $Direction) 设置正脸或侧脸的消息
- * @method float getPitch() 获取Pitch
- * @method void setPitch(float $Pitch) 设置Pitch
- * @method float getRoll() 获取Roll
- * @method void setRoll(float $Roll) 设置Roll
- * @method float getYaw() 获取角度信息选填
- * @method void setYaw(float $Yaw) 设置角度信息选填
+ * @method float getPitch() 获取围绕Z轴旋转角度，俯仰角
+ * @method void setPitch(float $Pitch) 设置围绕Z轴旋转角度，俯仰角
+ * @method float getRoll() 获取围绕X轴旋转角度，翻滚角
+ * @method void setRoll(float $Roll) 设置围绕X轴旋转角度，翻滚角
+ * @method float getYaw() 获取围绕Y轴旋转角度，偏航角
+ * @method void setYaw(float $Yaw) 设置围绕Y轴旋转角度，偏航角
  */
 
 /**
@@ -39,24 +39,24 @@ class FacePoseResult extends AbstractModel
     public $Direction;
 
     /**
-     * @var float Pitch
+     * @var float 围绕Z轴旋转角度，俯仰角
      */
     public $Pitch;
 
     /**
-     * @var float Roll
+     * @var float 围绕X轴旋转角度，翻滚角
      */
     public $Roll;
 
     /**
-     * @var float 角度信息选填
+     * @var float 围绕Y轴旋转角度，偏航角
      */
     public $Yaw;
     /**
      * @param string $Direction 正脸或侧脸的消息
-     * @param float $Pitch Pitch
-     * @param float $Roll Roll
-     * @param float $Yaw 角度信息选填
+     * @param float $Pitch 围绕Z轴旋转角度，俯仰角
+     * @param float $Roll 围绕X轴旋转角度，翻滚角
+     * @param float $Yaw 围绕Y轴旋转角度，偏航角
      */
     function __construct()
     {

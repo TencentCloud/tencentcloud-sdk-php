@@ -18,8 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLightLevel() 获取光照程度
- * @method void setLightLevel(string $LightLevel) 设置光照程度
+ * @method string getLightLevel() 获取光照程度，参考提交任务时的LightStandard指定的Name参数
+ * @method void setLightLevel(string $LightLevel) 设置光照程度，参考提交任务时的LightStandard指定的Name参数
  * @method float getLightValue() 获取光照亮度
  * @method void setLightValue(float $LightValue) 设置光照亮度
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class LightResult extends AbstractModel
 {
     /**
-     * @var string 光照程度
+     * @var string 光照程度，参考提交任务时的LightStandard指定的Name参数
      */
     public $LightLevel;
 
@@ -39,7 +39,7 @@ class LightResult extends AbstractModel
      */
     public $LightValue;
     /**
-     * @param string $LightLevel 光照程度
+     * @param string $LightLevel 光照程度，参考提交任务时的LightStandard指定的Name参数
      * @param float $LightValue 光照亮度
      */
     function __construct()

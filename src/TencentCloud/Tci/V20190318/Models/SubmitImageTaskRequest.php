@@ -18,8 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getFileContent() 获取输入分析对象内容
- * @method void setFileContent(string $FileContent) 设置输入分析对象内容
+ * @method string getFileContent() 获取输入分析对象内容，输入数据格式参考FileType参数释义
+ * @method void setFileContent(string $FileContent) 设置输入分析对象内容，输入数据格式参考FileType参数释义
  * @method string getFileType() 获取输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
  * @method void setFileType(string $FileType) 设置输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
  * @method ImageTaskFunction getFunctions() 获取任务控制选项
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrameInterval(integer $FrameInterval) 设置抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
  * @method array getLibrarySet() 获取查询人员库列表
  * @method void setLibrarySet(array $LibrarySet) 设置查询人员库列表
- * @method integer getMaxVideoDuration() 获取最大的视频长度，单位毫秒，默认值为两小时
- * @method void setMaxVideoDuration(integer $MaxVideoDuration) 设置最大的视频长度，单位毫秒，默认值为两小时
+ * @method integer getMaxVideoDuration() 获取视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+ * @method void setMaxVideoDuration(integer $MaxVideoDuration) 设置视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
  * @method float getSimThreshold() 获取人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
  * @method void setSimThreshold(float $SimThreshold) 设置人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
  */
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class SubmitImageTaskRequest extends AbstractModel
 {
     /**
-     * @var string 输入分析对象内容
+     * @var string 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public $FileContent;
 
@@ -72,7 +72,7 @@ class SubmitImageTaskRequest extends AbstractModel
     public $LibrarySet;
 
     /**
-     * @var integer 最大的视频长度，单位毫秒，默认值为两小时
+     * @var integer 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public $MaxVideoDuration;
 
@@ -81,13 +81,13 @@ class SubmitImageTaskRequest extends AbstractModel
      */
     public $SimThreshold;
     /**
-     * @param string $FileContent 输入分析对象内容
+     * @param string $FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      * @param string $FileType 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
      * @param ImageTaskFunction $Functions 任务控制选项
      * @param array $LightStandardSet 光照标准列表
      * @param integer $FrameInterval 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
      * @param array $LibrarySet 查询人员库列表
-     * @param integer $MaxVideoDuration 最大的视频长度，单位毫秒，默认值为两小时
+     * @param integer $MaxVideoDuration 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      * @param float $SimThreshold 人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
      */
     function __construct()

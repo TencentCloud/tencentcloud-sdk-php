@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppid(integer $Appid) 设置用户的Appid
  * @method integer getProjectId() 获取项目Id
  * @method void setProjectId(integer $ProjectId) 设置项目Id
- * @method integer getRegionId() 获取地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
- * @method void setRegionId(integer $RegionId) 设置地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+ * @method integer getRegionId() 获取地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+ * @method void setRegionId(integer $RegionId) 设置地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
  * @method integer getZoneId() 获取区域id
  * @method void setZoneId(integer $ZoneId) 设置区域id
  * @method integer getVpcId() 获取vpc网络id 如：75101
@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(float $Size) 设置实例容量大小，单位：MB
  * @method float getSizeUsed() 获取该字段已废弃
  * @method void setSizeUsed(float $SizeUsed) 设置该字段已废弃
- * @method integer getType() 获取实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
- * @method void setType(integer $Type) 设置实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
+ * @method integer getType() 获取实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版；
+ * @method void setType(integer $Type) 设置实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版；
  * @method integer getAutoRenewFlag() 获取实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
  * @method string getDeadlineTime() 获取实例到期时间
@@ -124,7 +124,7 @@ class InstanceSet extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * @var integer 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
      */
     public $RegionId;
 
@@ -174,7 +174,7 @@ class InstanceSet extends AbstractModel
     public $SizeUsed;
 
     /**
-     * @var integer 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
+     * @var integer 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版；
      */
     public $Type;
 
@@ -290,7 +290,7 @@ class InstanceSet extends AbstractModel
      * @param string $InstanceId 实例Id
      * @param integer $Appid 用户的Appid
      * @param integer $ProjectId 项目Id
-     * @param integer $RegionId 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * @param integer $RegionId 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
      * @param integer $ZoneId 区域id
      * @param integer $VpcId vpc网络id 如：75101
      * @param integer $SubnetId vpc网络下子网id 如：46315
@@ -300,7 +300,7 @@ class InstanceSet extends AbstractModel
      * @param string $Createtime 实例创建时间
      * @param float $Size 实例容量大小，单位：MB
      * @param float $SizeUsed 该字段已废弃
-     * @param integer $Type 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
+     * @param integer $Type 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版；
      * @param integer $AutoRenewFlag 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
      * @param string $DeadlineTime 实例到期时间
      * @param string $Engine 引擎：社区版Redis、腾讯云CKV

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method float getConfidence() 获取表情置信度
  * @method void setConfidence(float $Confidence) 设置表情置信度
- * @method string getExpression() 获取表情识别结果
- * @method void setExpression(string $Expression) 设置表情识别结果
+ * @method string getExpression() 获取表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视"
+ * @method void setExpression(string $Expression) 设置表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视"
  */
 
 /**
@@ -35,12 +35,12 @@ class FaceExpressionResult extends AbstractModel
     public $Confidence;
 
     /**
-     * @var string 表情识别结果
+     * @var string 表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视"
      */
     public $Expression;
     /**
      * @param float $Confidence 表情置信度
-     * @param string $Expression 表情识别结果
+     * @param string $Expression 表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视"
      */
     function __construct()
     {

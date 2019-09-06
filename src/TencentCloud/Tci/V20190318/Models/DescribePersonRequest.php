@@ -18,10 +18,10 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPersonId() 获取人员唯一标识符
- * @method void setPersonId(string $PersonId) 设置人员唯一标识符
  * @method string getLibraryId() 获取人员库唯一标识符
  * @method void setLibraryId(string $LibraryId) 设置人员库唯一标识符
+ * @method string getPersonId() 获取人员唯一标识符
+ * @method void setPersonId(string $PersonId) 设置人员唯一标识符
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribePersonRequest extends AbstractModel
 {
     /**
-     * @var string 人员唯一标识符
-     */
-    public $PersonId;
-
-    /**
      * @var string 人员库唯一标识符
      */
     public $LibraryId;
+
     /**
-     * @param string $PersonId 人员唯一标识符
+     * @var string 人员唯一标识符
+     */
+    public $PersonId;
+    /**
      * @param string $LibraryId 人员库唯一标识符
+     * @param string $PersonId 人员唯一标识符
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DescribePersonRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
-        }
-
         if (array_key_exists("LibraryId",$param) and $param["LibraryId"] !== null) {
             $this->LibraryId = $param["LibraryId"];
+        }
+
+        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
+            $this->PersonId = $param["PersonId"];
         }
     }
 }

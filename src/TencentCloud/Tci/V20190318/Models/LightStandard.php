@@ -25,7 +25,12 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *光照标准
+ *光照标准，结构的相关示例为：
+{
+    "Name":"dark"，
+    "Range":[0,30]
+}
+当光照的区间落入在0到30的范围时，就会命中dark的光照标准
  */
 class LightStandard extends AbstractModel
 {

@@ -24,8 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHeight(integer $Height) 设置识别结果高度
  * @method integer getLeft() 获取识别结果左坐标
  * @method void setLeft(integer $Left) 设置识别结果左坐标
- * @method string getMovements() 获取动作识别结果
- * @method void setMovements(string $Movements) 设置动作识别结果
+ * @method string getMovements() 获取老师动作识别结果，包含
+1、teach_on_positive_attitude 正面讲解
+2、point_to_the_blackboard 指黑板
+3、writing_blackboard 写板书
+4、other 其他
+ * @method void setMovements(string $Movements) 设置老师动作识别结果，包含
+1、teach_on_positive_attitude 正面讲解
+2、point_to_the_blackboard 指黑板
+3、writing_blackboard 写板书
+4、other 其他
  * @method integer getTop() 获取识别结果顶坐标
  * @method void setTop(integer $Top) 设置识别结果顶坐标
  * @method integer getWidth() 获取识别结果宽度
@@ -33,7 +41,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *BodyMovementResult
+ *老师肢体动作识别结果
  */
 class BodyMovementResult extends AbstractModel
 {
@@ -53,7 +61,11 @@ class BodyMovementResult extends AbstractModel
     public $Left;
 
     /**
-     * @var string 动作识别结果
+     * @var string 老师动作识别结果，包含
+1、teach_on_positive_attitude 正面讲解
+2、point_to_the_blackboard 指黑板
+3、writing_blackboard 写板书
+4、other 其他
      */
     public $Movements;
 
@@ -70,7 +82,11 @@ class BodyMovementResult extends AbstractModel
      * @param float $Confidence 置信度
      * @param integer $Height 识别结果高度
      * @param integer $Left 识别结果左坐标
-     * @param string $Movements 动作识别结果
+     * @param string $Movements 老师动作识别结果，包含
+1、teach_on_positive_attitude 正面讲解
+2、point_to_the_blackboard 指黑板
+3、writing_blackboard 写板书
+4、other 其他
      * @param integer $Top 识别结果顶坐标
      * @param integer $Width 识别结果宽度
      */

@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getScanDetail() 获取语音检测详情
  * @method void setScanDetail(array $ScanDetail) 设置语音检测详情
+ * @method string getRoomId() 获取gme实时语音房间id，透传任务传入时的RoomId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRoomId(string $RoomId) 设置gme实时语音房间id，透传任务传入时的RoomId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOpenId() 获取gme实时语音用户id，透传任务传入时的OpenId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOpenId(string $OpenId) 设置gme实时语音用户id，透传任务传入时的OpenId
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -58,6 +66,18 @@ class ScanPiece extends AbstractModel
      * @var array 语音检测详情
      */
     public $ScanDetail;
+
+    /**
+     * @var string gme实时语音房间id，透传任务传入时的RoomId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RoomId;
+
+    /**
+     * @var string gme实时语音用户id，透传任务传入时的OpenId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OpenId;
     /**
      * @param string $DumpUrl 流检测时返回，音频转存地址，保留30min
 注意：此字段可能返回 null，表示取不到有效值。
@@ -65,6 +85,10 @@ class ScanPiece extends AbstractModel
      * @param string $MainType 违规主要类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ScanDetail 语音检测详情
+     * @param string $RoomId gme实时语音房间id，透传任务传入时的RoomId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OpenId gme实时语音用户id，透传任务传入时的OpenId
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -97,6 +121,14 @@ class ScanPiece extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ScanDetail, $obj);
             }
+        }
+
+        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
+            $this->RoomId = $param["RoomId"];
+        }
+
+        if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
+            $this->OpenId = $param["OpenId"];
         }
     }
 }

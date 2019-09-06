@@ -18,16 +18,16 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getFileContent() 获取输入分析对象内容
- * @method void setFileContent(string $FileContent) 设置输入分析对象内容
- * @method string getFileType() 获取输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,audio_url: 音频文件
- * @method void setFileType(string $FileType) 设置输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,audio_url: 音频文件
+ * @method string getFileContent() 获取输入分析对象内容，输入数据格式参考FileType参数释义
+ * @method void setFileContent(string $FileContent) 设置输入分析对象内容，输入数据格式参考FileType参数释义
+ * @method string getFileType() 获取输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，audio_url: 音频文件，picture：图片二进制数据的BASE64编码
+ * @method void setFileType(string $FileType) 设置输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，audio_url: 音频文件，picture：图片二进制数据的BASE64编码
  * @method integer getLang() 获取音频源的语言，默认0为英文，1为中文
  * @method void setLang(integer $Lang) 设置音频源的语言，默认0为英文，1为中文
  * @method array getLibrarySet() 获取查询人员库列表
  * @method void setLibrarySet(array $LibrarySet) 设置查询人员库列表
- * @method integer getMaxVideoDuration() 获取直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
- * @method void setMaxVideoDuration(integer $MaxVideoDuration) 设置直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+ * @method integer getMaxVideoDuration() 获取视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+ * @method void setMaxVideoDuration(integer $MaxVideoDuration) 设置视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
  * @method integer getTemplate() 获取标准化模板选择：0：AI助教基础版本，1：AI评教基础版本，2：AI评教标准版本。AI 助教基础版本功能包括：人脸检索、人脸检测、人脸表情识别、学生动作选项，音频信息分析，微笑识别。AI 评教基础版本功能包括：人脸检索、人脸检测、人脸表情识别、音频信息分析。AI 评教标准版功能包括人脸检索、人脸检测、人脸表情识别、手势识别、音频信息分析、音频关键词分析、视频精彩集锦分析。
  * @method void setTemplate(integer $Template) 设置标准化模板选择：0：AI助教基础版本，1：AI评教基础版本，2：AI评教标准版本。AI 助教基础版本功能包括：人脸检索、人脸检测、人脸表情识别、学生动作选项，音频信息分析，微笑识别。AI 评教基础版本功能包括：人脸检索、人脸检测、人脸表情识别、音频信息分析。AI 评教标准版功能包括人脸检索、人脸检测、人脸表情识别、手势识别、音频信息分析、音频关键词分析、视频精彩集锦分析。
  * @method array getVocabLibNameList() 获取识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
@@ -44,12 +44,12 @@ use TencentCloud\Common\AbstractModel;
 class AIAssistantRequest extends AbstractModel
 {
     /**
-     * @var string 输入分析对象内容
+     * @var string 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public $FileContent;
 
     /**
-     * @var string 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,audio_url: 音频文件
+     * @var string 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，audio_url: 音频文件，picture：图片二进制数据的BASE64编码
      */
     public $FileType;
 
@@ -64,7 +64,7 @@ class AIAssistantRequest extends AbstractModel
     public $LibrarySet;
 
     /**
-     * @var integer 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+     * @var integer 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public $MaxVideoDuration;
 
@@ -88,11 +88,11 @@ class AIAssistantRequest extends AbstractModel
      */
     public $VoiceFileType;
     /**
-     * @param string $FileContent 输入分析对象内容
-     * @param string $FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,audio_url: 音频文件
+     * @param string $FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
+     * @param string $FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，audio_url: 音频文件，picture：图片二进制数据的BASE64编码
      * @param integer $Lang 音频源的语言，默认0为英文，1为中文
      * @param array $LibrarySet 查询人员库列表
-     * @param integer $MaxVideoDuration 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+     * @param integer $MaxVideoDuration 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      * @param integer $Template 标准化模板选择：0：AI助教基础版本，1：AI评教基础版本，2：AI评教标准版本。AI 助教基础版本功能包括：人脸检索、人脸检测、人脸表情识别、学生动作选项，音频信息分析，微笑识别。AI 评教基础版本功能包括：人脸检索、人脸检测、人脸表情识别、音频信息分析。AI 评教标准版功能包括人脸检索、人脸检测、人脸表情识别、手势识别、音频信息分析、音频关键词分析、视频精彩集锦分析。
      * @param array $VocabLibNameList 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      * @param integer $VoiceEncodeType 语音编码类型 1:pcm

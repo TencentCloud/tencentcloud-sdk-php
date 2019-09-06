@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataId(string $DataId) 设置数据的唯一ID
  * @method string getUrl() 获取数据文件的url，为 urlencode 编码，流式则为拉流地址
  * @method void setUrl(string $Url) 设置数据文件的url，为 urlencode 编码，流式则为拉流地址
+ * @method string getRoomId() 获取gme实时语音房间id，通过gme实时语音进行语音分析时输入
+ * @method void setRoomId(string $RoomId) 设置gme实时语音房间id，通过gme实时语音进行语音分析时输入
+ * @method string getOpenId() 获取gme实时语音用户id，通过gme实时语音进行语音分析时输入
+ * @method void setOpenId(string $OpenId) 设置gme实时语音用户id，通过gme实时语音进行语音分析时输入
  */
 
 /**
@@ -38,9 +42,21 @@ class Task extends AbstractModel
      * @var string 数据文件的url，为 urlencode 编码，流式则为拉流地址
      */
     public $Url;
+
+    /**
+     * @var string gme实时语音房间id，通过gme实时语音进行语音分析时输入
+     */
+    public $RoomId;
+
+    /**
+     * @var string gme实时语音用户id，通过gme实时语音进行语音分析时输入
+     */
+    public $OpenId;
     /**
      * @param string $DataId 数据的唯一ID
      * @param string $Url 数据文件的url，为 urlencode 编码，流式则为拉流地址
+     * @param string $RoomId gme实时语音房间id，通过gme实时语音进行语音分析时输入
+     * @param string $OpenId gme实时语音用户id，通过gme实时语音进行语音分析时输入
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class Task extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
+            $this->RoomId = $param["RoomId"];
+        }
+
+        if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
+            $this->OpenId = $param["OpenId"];
         }
     }
 }

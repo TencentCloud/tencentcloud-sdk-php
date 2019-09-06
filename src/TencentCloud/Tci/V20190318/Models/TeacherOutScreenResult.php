@@ -18,8 +18,10 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getClass() 获取动作识别结果
- * @method void setClass(string $Class) 设置动作识别结果
+ * @method string getClass() 获取动作识别结果，InScreen：在屏幕内
+OutScreen：不在屏幕内
+ * @method void setClass(string $Class) 设置动作识别结果，InScreen：在屏幕内
+OutScreen：不在屏幕内
  * @method integer getHeight() 获取识别结果高度
  * @method void setHeight(integer $Height) 设置识别结果高度
  * @method integer getLeft() 获取识别结果左坐标
@@ -36,7 +38,8 @@ use TencentCloud\Common\AbstractModel;
 class TeacherOutScreenResult extends AbstractModel
 {
     /**
-     * @var string 动作识别结果
+     * @var string 动作识别结果，InScreen：在屏幕内
+OutScreen：不在屏幕内
      */
     public $Class;
 
@@ -60,7 +63,8 @@ class TeacherOutScreenResult extends AbstractModel
      */
     public $Width;
     /**
-     * @param string $Class 动作识别结果
+     * @param string $Class 动作识别结果，InScreen：在屏幕内
+OutScreen：不在屏幕内
      * @param integer $Height 识别结果高度
      * @param integer $Left 识别结果左坐标
      * @param integer $Top 识别结果顶坐标

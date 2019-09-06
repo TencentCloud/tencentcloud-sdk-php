@@ -18,12 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method string getLibraryId() 获取人员库唯一标识符
+ * @method void setLibraryId(string $LibraryId) 设置人员库唯一标识符
  * @method string getPersonId() 获取人员唯一标识符
  * @method void setPersonId(string $PersonId) 设置人员唯一标识符
  * @method string getJobNumber() 获取人员工作号码
  * @method void setJobNumber(string $JobNumber) 设置人员工作号码
- * @method string getLibraryId() 获取人员库唯一标识符
- * @method void setLibraryId(string $LibraryId) 设置人员库唯一标识符
  * @method string getMail() 获取人员邮箱
  * @method void setMail(string $Mail) 设置人员邮箱
  * @method integer getMale() 获取人员性别
@@ -42,6 +42,11 @@ use TencentCloud\Common\AbstractModel;
 class ModifyPersonRequest extends AbstractModel
 {
     /**
+     * @var string 人员库唯一标识符
+     */
+    public $LibraryId;
+
+    /**
      * @var string 人员唯一标识符
      */
     public $PersonId;
@@ -50,11 +55,6 @@ class ModifyPersonRequest extends AbstractModel
      * @var string 人员工作号码
      */
     public $JobNumber;
-
-    /**
-     * @var string 人员库唯一标识符
-     */
-    public $LibraryId;
 
     /**
      * @var string 人员邮箱
@@ -81,9 +81,9 @@ class ModifyPersonRequest extends AbstractModel
      */
     public $StudentNumber;
     /**
+     * @param string $LibraryId 人员库唯一标识符
      * @param string $PersonId 人员唯一标识符
      * @param string $JobNumber 人员工作号码
-     * @param string $LibraryId 人员库唯一标识符
      * @param string $Mail 人员邮箱
      * @param integer $Male 人员性别
      * @param string $PersonName 人员名称
@@ -102,16 +102,16 @@ class ModifyPersonRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("LibraryId",$param) and $param["LibraryId"] !== null) {
+            $this->LibraryId = $param["LibraryId"];
+        }
+
         if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
             $this->PersonId = $param["PersonId"];
         }
 
         if (array_key_exists("JobNumber",$param) and $param["JobNumber"] !== null) {
             $this->JobNumber = $param["JobNumber"];
-        }
-
-        if (array_key_exists("LibraryId",$param) and $param["LibraryId"] !== null) {
-            $this->LibraryId = $param["LibraryId"];
         }
 
         if (array_key_exists("Mail",$param) and $param["Mail"] !== null) {

@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBindTypes(array $BindTypes) 设置绑定类型，-1：未绑定，0：物理机，1：nat网关，2：虚拟IP, 3:托管机器
  * @method integer getExclusiveTag() 获取独占标志，0：共享，1：独占
  * @method void setExclusiveTag(integer $ExclusiveTag) 设置独占标志，0：共享，1：独占
- * @method integer getAclId() 获取EIP ACL实例ID
- * @method void setAclId(integer $AclId) 设置EIP ACL实例ID
+ * @method string getAclId() 获取EIP ACL实例ID
+ * @method void setAclId(string $AclId) 设置EIP ACL实例ID
  * @method integer getBindAcl() 获取搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定
  * @method void setBindAcl(integer $BindAcl) 设置搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定
  */
@@ -121,7 +121,7 @@ class DescribeEipsRequest extends AbstractModel
     public $ExclusiveTag;
 
     /**
-     * @var integer EIP ACL实例ID
+     * @var string EIP ACL实例ID
      */
     public $AclId;
 
@@ -143,7 +143,7 @@ class DescribeEipsRequest extends AbstractModel
      * @param string $VpcId EIP归属VpcId，例如vpc-k7j1t2x1
      * @param array $BindTypes 绑定类型，-1：未绑定，0：物理机，1：nat网关，2：虚拟IP, 3:托管机器
      * @param integer $ExclusiveTag 独占标志，0：共享，1：独占
-     * @param integer $AclId EIP ACL实例ID
+     * @param string $AclId EIP ACL实例ID
      * @param integer $BindAcl 搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定
      */
     function __construct()

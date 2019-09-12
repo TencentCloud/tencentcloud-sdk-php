@@ -29,6 +29,7 @@ use TencentCloud\Faceid\V20180301\Models as Models;
 * @method Models\GetActionSequenceResponse GetActionSequence(Models\GetActionSequenceRequest $req) 使用动作活体检测模式前，需调用本接口获取动作顺序。
 * @method Models\GetDetectInfoResponse GetDetectInfo(Models\GetDetectInfoRequest $req) 完成验证后，用BizToken调用本接口获取结果信息，BizToken生成后三天内（3\*24\*3,600秒）可多次拉取。
 * @method Models\GetLiveCodeResponse GetLiveCode(Models\GetLiveCodeRequest $req) 使用数字活体检测模式前，需调用本接口获取数字验证码。
+* @method Models\IdCardOCRVerificationResponse IdCardOCRVerification(Models\IdCardOCRVerificationRequest $req) 本接口用于校验姓名和身份证号的真实性和一致性，您可以通过输入姓名和身份证号或传入身份证人像面照片提供所需验证信息。
 * @method Models\IdCardVerificationResponse IdCardVerification(Models\IdCardVerificationRequest $req) 传入姓名和身份证号，校验两者的真实性和一致性。
 * @method Models\ImageRecognitionResponse ImageRecognition(Models\ImageRecognitionRequest $req) 传入照片和身份信息，判断该照片与公安权威库的证件照是否属于同一个人。
 * @method Models\LivenessResponse Liveness(Models\LivenessRequest $req) 活体检测

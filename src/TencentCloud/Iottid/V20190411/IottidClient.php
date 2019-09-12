@@ -22,13 +22,14 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Iottid\V20190411\Models as Models;
 
 /**
-* @method Models\AuthTestTidResponse AuthTestTid(Models\AuthTestTidRequest $req) 单向认证测试TID
-* @method Models\BurnTidNotifyResponse BurnTidNotify(Models\BurnTidNotifyRequest $req) 安全芯片TID烧录回执
-* @method Models\DeliverTidNotifyResponse DeliverTidNotify(Models\DeliverTidNotifyRequest $req) 安全芯片为载体的TID空发回执，绑定TID与订单号。
-* @method Models\DeliverTidsResponse DeliverTids(Models\DeliverTidsRequest $req) 设备服务商请求空发产品订单的TID信息
-* @method Models\DescribePermissionResponse DescribePermission(Models\DescribePermissionRequest $req) 查询企业用户TID平台控制台权限
-* @method Models\DownloadTidsResponse DownloadTids(Models\DownloadTidsRequest $req) 下载芯片订单的TID
-* @method Models\VerifyChipBurnInfoResponse VerifyChipBurnInfo(Models\VerifyChipBurnInfoRequest $req) 下载控制台验证芯片烧录信息，保证TID与中心信息一致
+* @method Models\AuthTestTidResponse AuthTestTid(Models\AuthTestTidRequest $req) 单向认证测试TID 
+* @method Models\BurnTidNotifyResponse BurnTidNotify(Models\BurnTidNotifyRequest $req) 安全芯片TID烧录回执 
+* @method Models\DeliverTidNotifyResponse DeliverTidNotify(Models\DeliverTidNotifyRequest $req) 安全芯片为载体的TID空发回执，绑定TID与订单号。 
+* @method Models\DeliverTidsResponse DeliverTids(Models\DeliverTidsRequest $req) 设备服务商请求空发产品订单的TID信息 
+* @method Models\DescribeAvailableLibCountResponse DescribeAvailableLibCount(Models\DescribeAvailableLibCountRequest $req) 查询指定订单的可空发的白盒秘钥数量
+* @method Models\DescribePermissionResponse DescribePermission(Models\DescribePermissionRequest $req) 查询企业用户TID平台控制台权限 
+* @method Models\DownloadTidsResponse DownloadTids(Models\DownloadTidsRequest $req) 下载芯片订单的TID 
+* @method Models\VerifyChipBurnInfoResponse VerifyChipBurnInfo(Models\VerifyChipBurnInfoRequest $req) 下载控制台验证芯片烧录信息，保证TID与中心信息一致 
  */
 
 class IottidClient extends AbstractClient

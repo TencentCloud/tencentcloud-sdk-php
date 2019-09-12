@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络ID，形如vpc-xxx。创建托管空集群时必传。
  * @method integer getProjectId() 获取集群内新增资源所属项目ID。
  * @method void setProjectId(integer $ProjectId) 设置集群内新增资源所属项目ID。
+ * @method array getTagSpecification() 获取标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
+ * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
+ * @method string getOsCustomizeType() 获取容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+ * @method void setOsCustomizeType(string $OsCustomizeType) 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
  */
 
 /**
@@ -66,6 +70,16 @@ class ClusterBasicSettings extends AbstractModel
      * @var integer 集群内新增资源所属项目ID。
      */
     public $ProjectId;
+
+    /**
+     * @var array 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
+     */
+    public $TagSpecification;
+
+    /**
+     * @var string 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     */
+    public $OsCustomizeType;
     /**
      * @param string $ClusterOs 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
      * @param string $ClusterVersion 集群版本,默认值为1.10.5
@@ -73,6 +87,8 @@ class ClusterBasicSettings extends AbstractModel
      * @param string $ClusterDescription 集群描述
      * @param string $VpcId 私有网络ID，形如vpc-xxx。创建托管空集群时必传。
      * @param integer $ProjectId 集群内新增资源所属项目ID。
+     * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
+     * @param string $OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
      */
     function __construct()
     {
@@ -108,6 +124,19 @@ class ClusterBasicSettings extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = [];
+            foreach ($param["TagSpecification"] as $key => $value){
+                $obj = new TagSpecification();
+                $obj->deserialize($value);
+                array_push($this->TagSpecification, $obj);
+            }
+        }
+
+        if (array_key_exists("OsCustomizeType",$param) and $param["OsCustomizeType"] !== null) {
+            $this->OsCustomizeType = $param["OsCustomizeType"];
         }
     }
 }

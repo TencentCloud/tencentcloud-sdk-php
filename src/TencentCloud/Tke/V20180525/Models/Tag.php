@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iottid\V20190411\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getOrderId() 获取订单ID
- * @method void setOrderId(string $OrderId) 设置订单ID
- * @method integer getQuantity() 获取数量，1~100
- * @method void setQuantity(integer $Quantity) 设置数量，1~100
+ * @method string getKey() 获取标签键
+ * @method void setKey(string $Key) 设置标签键
+ * @method string getValue() 获取标签值
+ * @method void setValue(string $Value) 设置标签值
  */
 
 /**
- *DeliverTids请求参数结构体
+ *标签绑定的资源类型，当前支持类型："cluster"
  */
-class DeliverTidsRequest extends AbstractModel
+class Tag extends AbstractModel
 {
     /**
-     * @var string 订单ID
+     * @var string 标签键
      */
-    public $OrderId;
+    public $Key;
 
     /**
-     * @var integer 数量，1~100
+     * @var string 标签值
      */
-    public $Quantity;
+    public $Value;
     /**
-     * @param string $OrderId 订单ID
-     * @param integer $Quantity 数量，1~100
+     * @param string $Key 标签键
+     * @param string $Value 标签值
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DeliverTidsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
-            $this->OrderId = $param["OrderId"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
         }
 
-        if (array_key_exists("Quantity",$param) and $param["Quantity"] !== null) {
-            $this->Quantity = $param["Quantity"];
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

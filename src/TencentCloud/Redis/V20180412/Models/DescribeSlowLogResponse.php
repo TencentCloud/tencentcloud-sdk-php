@@ -14,48 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iottid\V20190411\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method boolean getPass() 获取验证结果
- * @method void setPass(boolean $Pass) 设置验证结果
- * @method integer getVerifiedTimes() 获取已验证次数
- * @method void setVerifiedTimes(integer $VerifiedTimes) 设置已验证次数
- * @method integer getLeftTimes() 获取剩余验证次数
- * @method void setLeftTimes(integer $LeftTimes) 设置剩余验证次数
+ * @method integer getTotalCount() 获取慢查询总数
+ * @method void setTotalCount(integer $TotalCount) 设置慢查询总数
+ * @method array getInstanceSlowlogDetail() 获取慢查询详情
+ * @method void setInstanceSlowlogDetail(array $InstanceSlowlogDetail) 设置慢查询详情
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *VerifyChipBurnInfo返回参数结构体
+ *DescribeSlowLog返回参数结构体
  */
-class VerifyChipBurnInfoResponse extends AbstractModel
+class DescribeSlowLogResponse extends AbstractModel
 {
     /**
-     * @var boolean 验证结果
+     * @var integer 慢查询总数
      */
-    public $Pass;
+    public $TotalCount;
 
     /**
-     * @var integer 已验证次数
+     * @var array 慢查询详情
      */
-    public $VerifiedTimes;
-
-    /**
-     * @var integer 剩余验证次数
-     */
-    public $LeftTimes;
+    public $InstanceSlowlogDetail;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param boolean $Pass 验证结果
-     * @param integer $VerifiedTimes 已验证次数
-     * @param integer $LeftTimes 剩余验证次数
+     * @param integer $TotalCount 慢查询总数
+     * @param array $InstanceSlowlogDetail 慢查询详情
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,16 +62,17 @@ class VerifyChipBurnInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Pass",$param) and $param["Pass"] !== null) {
-            $this->Pass = $param["Pass"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("VerifiedTimes",$param) and $param["VerifiedTimes"] !== null) {
-            $this->VerifiedTimes = $param["VerifiedTimes"];
-        }
-
-        if (array_key_exists("LeftTimes",$param) and $param["LeftTimes"] !== null) {
-            $this->LeftTimes = $param["LeftTimes"];
+        if (array_key_exists("InstanceSlowlogDetail",$param) and $param["InstanceSlowlogDetail"] !== null) {
+            $this->InstanceSlowlogDetail = [];
+            foreach ($param["InstanceSlowlogDetail"] as $key => $value){
+                $obj = new InstanceSlowlogDetail();
+                $obj->deserialize($value);
+                array_push($this->InstanceSlowlogDetail, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

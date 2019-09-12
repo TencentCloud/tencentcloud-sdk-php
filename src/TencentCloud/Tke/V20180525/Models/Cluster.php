@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterNodeNum(integer $ClusterNodeNum) 设置集群当前node数量
  * @method integer getProjectId() 获取集群所属的项目ID
  * @method void setProjectId(integer $ProjectId) 设置集群所属的项目ID
+ * @method array getTagSpecification() 获取标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -87,6 +91,12 @@ class Cluster extends AbstractModel
      * @var integer 集群所属的项目ID
      */
     public $ProjectId;
+
+    /**
+     * @var array 标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagSpecification;
     /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
@@ -97,6 +107,8 @@ class Cluster extends AbstractModel
      * @param ClusterNetworkSettings $ClusterNetworkSettings 集群网络相关参数
      * @param integer $ClusterNodeNum 集群当前node数量
      * @param integer $ProjectId 集群所属的项目ID
+     * @param array $TagSpecification 标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -145,6 +157,15 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = [];
+            foreach ($param["TagSpecification"] as $key => $value){
+                $obj = new TagSpecification();
+                $obj->deserialize($value);
+                array_push($this->TagSpecification, $obj);
+            }
         }
     }
 }

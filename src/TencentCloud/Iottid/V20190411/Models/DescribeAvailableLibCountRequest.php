@@ -18,29 +18,21 @@ namespace TencentCloud\Iottid\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getOrderId() 获取订单ID
- * @method void setOrderId(string $OrderId) 设置订单ID
- * @method integer getQuantity() 获取数量，1~100
- * @method void setQuantity(integer $Quantity) 设置数量，1~100
+ * @method string getOrderId() 获取订单编号
+ * @method void setOrderId(string $OrderId) 设置订单编号
  */
 
 /**
- *DeliverTids请求参数结构体
+ *DescribeAvailableLibCount请求参数结构体
  */
-class DeliverTidsRequest extends AbstractModel
+class DescribeAvailableLibCountRequest extends AbstractModel
 {
     /**
-     * @var string 订单ID
+     * @var string 订单编号
      */
     public $OrderId;
-
     /**
-     * @var integer 数量，1~100
-     */
-    public $Quantity;
-    /**
-     * @param string $OrderId 订单ID
-     * @param integer $Quantity 数量，1~100
+     * @param string $OrderId 订单编号
      */
     function __construct()
     {
@@ -56,10 +48,6 @@ class DeliverTidsRequest extends AbstractModel
         }
         if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
             $this->OrderId = $param["OrderId"];
-        }
-
-        if (array_key_exists("Quantity",$param) and $param["Quantity"] !== null) {
-            $this->Quantity = $param["Quantity"];
         }
     }
 }

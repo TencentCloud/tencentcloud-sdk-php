@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Emr\V20190103\Models;
+namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method array getSharePermissionSet() 获取快照的分享信息的集合
+ * @method void setSharePermissionSet(array $SharePermissionSet) 设置快照的分享信息的集合
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *TerminateTasks返回参数结构体
+ *DescribeSnapshotSharePermission返回参数结构体
  */
-class TerminateTasksResponse extends AbstractModel
+class DescribeSnapshotSharePermissionResponse extends AbstractModel
 {
+    /**
+     * @var array 快照的分享信息的集合
+     */
+    public $SharePermissionSet;
+
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
+     * @param array $SharePermissionSet 快照的分享信息的集合
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,15 @@ class TerminateTasksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SharePermissionSet",$param) and $param["SharePermissionSet"] !== null) {
+            $this->SharePermissionSet = [];
+            foreach ($param["SharePermissionSet"] as $key => $value){
+                $obj = new SharePermission();
+                $obj->deserialize($value);
+                array_push($this->SharePermissionSet, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

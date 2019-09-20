@@ -18,37 +18,33 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getText() 获取待分析的文本（仅支持UTF-8格式，不超过500字）
- * @method void setText(string $Text) 设置待分析的文本（仅支持UTF-8格式，不超过500字）
- * @method integer getFlag() 获取词法分析模式（默认取1值）：
-1、高精度（具备混合粒度分词能力）；
-2、高性能；
- * @method void setFlag(integer $Flag) 设置词法分析模式（默认取1值）：
-1、高精度（具备混合粒度分词能力）；
-2、高性能；
+ * @method string getText() 获取待审核的文本（仅支持UTF-8格式，不超过2000字）
+ * @method void setText(string $Text) 设置待审核的文本（仅支持UTF-8格式，不超过2000字）
+ * @method integer getFlag() 获取文本审核模式（默认取1值）：
+1、全领域审核
+ * @method void setFlag(integer $Flag) 设置文本审核模式（默认取1值）：
+1、全领域审核
  */
 
 /**
- *LexicalAnalysis请求参数结构体
+ *TextApproval请求参数结构体
  */
-class LexicalAnalysisRequest extends AbstractModel
+class TextApprovalRequest extends AbstractModel
 {
     /**
-     * @var string 待分析的文本（仅支持UTF-8格式，不超过500字）
+     * @var string 待审核的文本（仅支持UTF-8格式，不超过2000字）
      */
     public $Text;
 
     /**
-     * @var integer 词法分析模式（默认取1值）：
-1、高精度（具备混合粒度分词能力）；
-2、高性能；
+     * @var integer 文本审核模式（默认取1值）：
+1、全领域审核
      */
     public $Flag;
     /**
-     * @param string $Text 待分析的文本（仅支持UTF-8格式，不超过500字）
-     * @param integer $Flag 词法分析模式（默认取1值）：
-1、高精度（具备混合粒度分词能力）；
-2、高性能；
+     * @param string $Text 待审核的文本（仅支持UTF-8格式，不超过2000字）
+     * @param integer $Flag 文本审核模式（默认取1值）：
+1、全领域审核
      */
     function __construct()
     {

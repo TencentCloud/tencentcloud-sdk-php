@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getText() 获取待处理的文本（仅支持UTF-8格式，不超过2000字）
  * @method void setText(string $Text) 设置待处理的文本（仅支持UTF-8格式，不超过2000字）
+ * @method integer getNum() 获取指定关键词个数上限（默认值为5）
+ * @method void setNum(integer $Num) 设置指定关键词个数上限（默认值为5）
  */
 
 /**
@@ -31,8 +33,14 @@ class KeywordsExtractionRequest extends AbstractModel
      * @var string 待处理的文本（仅支持UTF-8格式，不超过2000字）
      */
     public $Text;
+
+    /**
+     * @var integer 指定关键词个数上限（默认值为5）
+     */
+    public $Num;
     /**
      * @param string $Text 待处理的文本（仅支持UTF-8格式，不超过2000字）
+     * @param integer $Num 指定关键词个数上限（默认值为5）
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class KeywordsExtractionRequest extends AbstractModel
         }
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {
             $this->Text = $param["Text"];
+        }
+
+        if (array_key_exists("Num",$param) and $param["Num"] !== null) {
+            $this->Num = $param["Num"];
         }
     }
 }

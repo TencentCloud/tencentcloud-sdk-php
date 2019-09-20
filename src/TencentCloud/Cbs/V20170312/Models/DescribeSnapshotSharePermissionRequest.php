@@ -14,33 +14,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Emr\V20190103\Models;
+namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取退单集群ID
- * @method void setInstanceId(string $InstanceId) 设置退单集群ID
- * @method array getResourceIds() 获取资源资源ID
- * @method void setResourceIds(array $ResourceIds) 设置资源资源ID
+ * @method string getSnapshotId() 获取要查询快照的ID。可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。
+ * @method void setSnapshotId(string $SnapshotId) 设置要查询快照的ID。可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。
  */
 
 /**
- *退单请求描述描述
+ *DescribeSnapshotSharePermission请求参数结构体
  */
-class TerminateResult extends AbstractModel
+class DescribeSnapshotSharePermissionRequest extends AbstractModel
 {
     /**
-     * @var string 退单集群ID
+     * @var string 要查询快照的ID。可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。
      */
-    public $InstanceId;
-
+    public $SnapshotId;
     /**
-     * @var array 资源资源ID
-     */
-    public $ResourceIds;
-    /**
-     * @param string $InstanceId 退单集群ID
-     * @param array $ResourceIds 资源资源ID
+     * @param string $SnapshotId 要查询快照的ID。可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class TerminateResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
-        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
-            $this->ResourceIds = $param["ResourceIds"];
+        if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
+            $this->SnapshotId = $param["SnapshotId"];
         }
     }
 }

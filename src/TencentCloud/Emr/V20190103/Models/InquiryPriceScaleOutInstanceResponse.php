@@ -18,8 +18,22 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method InquiryPriceResult getResult() 获取扩容价格
- * @method void setResult(InquiryPriceResult $Result) 设置扩容价格
+ * @method string getOriginalCost() 获取刊例价
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginalCost(string $OriginalCost) 设置刊例价
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDiscountCost() 获取折扣价格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiscountCost(string $DiscountCost) 设置折扣价格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUnit() 获取单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnit(string $Unit) 设置单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method PriceResource getPriceSpec() 获取询价配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPriceSpec(PriceResource $PriceSpec) 设置询价配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,16 +44,42 @@ use TencentCloud\Common\AbstractModel;
 class InquiryPriceScaleOutInstanceResponse extends AbstractModel
 {
     /**
-     * @var InquiryPriceResult 扩容价格
+     * @var string 刊例价
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Result;
+    public $OriginalCost;
+
+    /**
+     * @var string 折扣价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiscountCost;
+
+    /**
+     * @var string 单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Unit;
+
+    /**
+     * @var PriceResource 询价配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PriceSpec;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param InquiryPriceResult $Result 扩容价格
+     * @param string $OriginalCost 刊例价
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DiscountCost 折扣价格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Unit 单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PriceResource $PriceSpec 询价配置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +94,21 @@ class InquiryPriceScaleOutInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new InquiryPriceResult();
-            $this->Result->deserialize($param["Result"]);
+        if (array_key_exists("OriginalCost",$param) and $param["OriginalCost"] !== null) {
+            $this->OriginalCost = $param["OriginalCost"];
+        }
+
+        if (array_key_exists("DiscountCost",$param) and $param["DiscountCost"] !== null) {
+            $this->DiscountCost = $param["DiscountCost"];
+        }
+
+        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
+            $this->Unit = $param["Unit"];
+        }
+
+        if (array_key_exists("PriceSpec",$param) and $param["PriceSpec"] !== null) {
+            $this->PriceSpec = new PriceResource();
+            $this->PriceSpec->deserialize($param["PriceSpec"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

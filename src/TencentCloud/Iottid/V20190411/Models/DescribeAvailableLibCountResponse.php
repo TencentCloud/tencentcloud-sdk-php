@@ -18,8 +18,8 @@ namespace TencentCloud\Iottid\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getQuantity() 获取可空发的白盒秘钥数量
- * @method void setQuantity(integer $Quantity) 设置可空发的白盒秘钥数量
+ * @method integer getQuantity() 获取可空发的白盒密钥数量
+ * @method void setQuantity(integer $Quantity) 设置可空发的白盒密钥数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAvailableLibCountResponse extends AbstractModel
 {
     /**
-     * @var integer 可空发的白盒秘钥数量
+     * @var integer 可空发的白盒密钥数量
      */
     public $Quantity;
 
@@ -39,7 +39,7 @@ class DescribeAvailableLibCountResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $Quantity 可空发的白盒秘钥数量
+     * @param integer $Quantity 可空发的白盒密钥数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

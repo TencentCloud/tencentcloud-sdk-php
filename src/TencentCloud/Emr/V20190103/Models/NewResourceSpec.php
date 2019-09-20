@@ -18,46 +18,41 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getCommonCount() 获取Common节点数量
- * @method void setCommonCount(integer $CommonCount) 设置Common节点数量
- * @method NodeSpec getMasterResourceSpec() 获取描述Master节点资源
- * @method void setMasterResourceSpec(NodeSpec $MasterResourceSpec) 设置描述Master节点资源
- * @method NodeSpec getCoreResourceSpec() 获取描述Core节点资源
- * @method void setCoreResourceSpec(NodeSpec $CoreResourceSpec) 设置描述Core节点资源
- * @method NodeSpec getTaskResourceSpec() 获取描述Task节点资源
- * @method void setTaskResourceSpec(NodeSpec $TaskResourceSpec) 设置描述Task节点资源
+ * @method Resource getMasterResourceSpec() 获取描述Master节点资源
+ * @method void setMasterResourceSpec(Resource $MasterResourceSpec) 设置描述Master节点资源
+ * @method Resource getCoreResourceSpec() 获取描述Core节点资源
+ * @method void setCoreResourceSpec(Resource $CoreResourceSpec) 设置描述Core节点资源
+ * @method Resource getTaskResourceSpec() 获取描述Task节点资源
+ * @method void setTaskResourceSpec(Resource $TaskResourceSpec) 设置描述Task节点资源
  * @method integer getMasterCount() 获取Master节点数量
  * @method void setMasterCount(integer $MasterCount) 设置Master节点数量
  * @method integer getCoreCount() 获取Core节点数量
  * @method void setCoreCount(integer $CoreCount) 设置Core节点数量
  * @method integer getTaskCount() 获取Task节点数量
  * @method void setTaskCount(integer $TaskCount) 设置Task节点数量
- * @method NodeSpec getCommonResourceSpec() 获取描述Common节点资源
- * @method void setCommonResourceSpec(NodeSpec $CommonResourceSpec) 设置描述Common节点资源
+ * @method Resource getCommonResourceSpec() 获取描述Common节点资源
+ * @method void setCommonResourceSpec(Resource $CommonResourceSpec) 设置描述Common节点资源
+ * @method integer getCommonCount() 获取Common节点数量
+ * @method void setCommonCount(integer $CommonCount) 设置Common节点数量
  */
 
 /**
  *资源描述
  */
-class ResourceSpec extends AbstractModel
+class NewResourceSpec extends AbstractModel
 {
     /**
-     * @var integer Common节点数量
-     */
-    public $CommonCount;
-
-    /**
-     * @var NodeSpec 描述Master节点资源
+     * @var Resource 描述Master节点资源
      */
     public $MasterResourceSpec;
 
     /**
-     * @var NodeSpec 描述Core节点资源
+     * @var Resource 描述Core节点资源
      */
     public $CoreResourceSpec;
 
     /**
-     * @var NodeSpec 描述Task节点资源
+     * @var Resource 描述Task节点资源
      */
     public $TaskResourceSpec;
 
@@ -77,18 +72,23 @@ class ResourceSpec extends AbstractModel
     public $TaskCount;
 
     /**
-     * @var NodeSpec 描述Common节点资源
+     * @var Resource 描述Common节点资源
      */
     public $CommonResourceSpec;
+
     /**
-     * @param integer $CommonCount Common节点数量
-     * @param NodeSpec $MasterResourceSpec 描述Master节点资源
-     * @param NodeSpec $CoreResourceSpec 描述Core节点资源
-     * @param NodeSpec $TaskResourceSpec 描述Task节点资源
+     * @var integer Common节点数量
+     */
+    public $CommonCount;
+    /**
+     * @param Resource $MasterResourceSpec 描述Master节点资源
+     * @param Resource $CoreResourceSpec 描述Core节点资源
+     * @param Resource $TaskResourceSpec 描述Task节点资源
      * @param integer $MasterCount Master节点数量
      * @param integer $CoreCount Core节点数量
      * @param integer $TaskCount Task节点数量
-     * @param NodeSpec $CommonResourceSpec 描述Common节点资源
+     * @param Resource $CommonResourceSpec 描述Common节点资源
+     * @param integer $CommonCount Common节点数量
      */
     function __construct()
     {
@@ -102,22 +102,18 @@ class ResourceSpec extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CommonCount",$param) and $param["CommonCount"] !== null) {
-            $this->CommonCount = $param["CommonCount"];
-        }
-
         if (array_key_exists("MasterResourceSpec",$param) and $param["MasterResourceSpec"] !== null) {
-            $this->MasterResourceSpec = new NodeSpec();
+            $this->MasterResourceSpec = new Resource();
             $this->MasterResourceSpec->deserialize($param["MasterResourceSpec"]);
         }
 
         if (array_key_exists("CoreResourceSpec",$param) and $param["CoreResourceSpec"] !== null) {
-            $this->CoreResourceSpec = new NodeSpec();
+            $this->CoreResourceSpec = new Resource();
             $this->CoreResourceSpec->deserialize($param["CoreResourceSpec"]);
         }
 
         if (array_key_exists("TaskResourceSpec",$param) and $param["TaskResourceSpec"] !== null) {
-            $this->TaskResourceSpec = new NodeSpec();
+            $this->TaskResourceSpec = new Resource();
             $this->TaskResourceSpec->deserialize($param["TaskResourceSpec"]);
         }
 
@@ -134,8 +130,12 @@ class ResourceSpec extends AbstractModel
         }
 
         if (array_key_exists("CommonResourceSpec",$param) and $param["CommonResourceSpec"] !== null) {
-            $this->CommonResourceSpec = new NodeSpec();
+            $this->CommonResourceSpec = new Resource();
             $this->CommonResourceSpec->deserialize($param["CommonResourceSpec"]);
+        }
+
+        if (array_key_exists("CommonCount",$param) and $param["CommonCount"] !== null) {
+            $this->CommonCount = $param["CommonCount"];
         }
     }
 }

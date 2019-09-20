@@ -18,30 +18,30 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPath() 获取脚本在COS上路径
- * @method void setPath(string $Path) 设置脚本在COS上路径
+ * @method string getPath() 获取脚本在COS上路径，已废弃
+ * @method void setPath(string $Path) 设置脚本在COS上路径，已废弃
  * @method array getArgs() 获取执行脚本参数
  * @method void setArgs(array $Args) 设置执行脚本参数
- * @method string getBucket() 获取COS的Bucket名称
- * @method void setBucket(string $Bucket) 设置COS的Bucket名称
- * @method string getRegion() 获取COS的Region名称
- * @method void setRegion(string $Region) 设置COS的Region名称
- * @method string getDomain() 获取COS的Domain数据
- * @method void setDomain(string $Domain) 设置COS的Domain数据
+ * @method string getBucket() 获取COS的Bucket名称，已废弃
+ * @method void setBucket(string $Bucket) 设置COS的Bucket名称，已废弃
+ * @method string getRegion() 获取COS的Region名称，已废弃
+ * @method void setRegion(string $Region) 设置COS的Region名称，已废弃
+ * @method string getDomain() 获取COS的Domain数据，已废弃
+ * @method void setDomain(string $Domain) 设置COS的Domain数据，已废弃
  * @method integer getRunOrder() 获取执行顺序
  * @method void setRunOrder(integer $RunOrder) 设置执行顺序
  * @method string getWhenRun() 获取resourceAfter 或 clusterAfter
  * @method void setWhenRun(string $WhenRun) 设置resourceAfter 或 clusterAfter
- * @method string getCosFileName() 获取脚本文件名
- * @method void setCosFileName(string $CosFileName) 设置脚本文件名
+ * @method string getCosFileName() 获取脚本文件名，已废弃
+ * @method void setCosFileName(string $CosFileName) 设置脚本文件名，已废弃
  * @method string getCosFileURI() 获取脚本的cos地址
  * @method void setCosFileURI(string $CosFileURI) 设置脚本的cos地址
  * @method string getCosSecretId() 获取cos的SecretId
  * @method void setCosSecretId(string $CosSecretId) 设置cos的SecretId
  * @method string getCosSecretKey() 获取Cos的SecretKey
  * @method void setCosSecretKey(string $CosSecretKey) 设置Cos的SecretKey
- * @method string getAppId() 获取cos的appid
- * @method void setAppId(string $AppId) 设置cos的appid
+ * @method string getAppId() 获取cos的appid，已废弃
+ * @method void setAppId(string $AppId) 设置cos的appid，已废弃
  */
 
 /**
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class PreExecuteFileSettings extends AbstractModel
 {
     /**
-     * @var string 脚本在COS上路径
+     * @var string 脚本在COS上路径，已废弃
      */
     public $Path;
 
@@ -60,17 +60,17 @@ class PreExecuteFileSettings extends AbstractModel
     public $Args;
 
     /**
-     * @var string COS的Bucket名称
+     * @var string COS的Bucket名称，已废弃
      */
     public $Bucket;
 
     /**
-     * @var string COS的Region名称
+     * @var string COS的Region名称，已废弃
      */
     public $Region;
 
     /**
-     * @var string COS的Domain数据
+     * @var string COS的Domain数据，已废弃
      */
     public $Domain;
 
@@ -85,7 +85,7 @@ class PreExecuteFileSettings extends AbstractModel
     public $WhenRun;
 
     /**
-     * @var string 脚本文件名
+     * @var string 脚本文件名，已废弃
      */
     public $CosFileName;
 
@@ -105,22 +105,22 @@ class PreExecuteFileSettings extends AbstractModel
     public $CosSecretKey;
 
     /**
-     * @var string cos的appid
+     * @var string cos的appid，已废弃
      */
     public $AppId;
     /**
-     * @param string $Path 脚本在COS上路径
+     * @param string $Path 脚本在COS上路径，已废弃
      * @param array $Args 执行脚本参数
-     * @param string $Bucket COS的Bucket名称
-     * @param string $Region COS的Region名称
-     * @param string $Domain COS的Domain数据
+     * @param string $Bucket COS的Bucket名称，已废弃
+     * @param string $Region COS的Region名称，已废弃
+     * @param string $Domain COS的Domain数据，已废弃
      * @param integer $RunOrder 执行顺序
      * @param string $WhenRun resourceAfter 或 clusterAfter
-     * @param string $CosFileName 脚本文件名
+     * @param string $CosFileName 脚本文件名，已废弃
      * @param string $CosFileURI 脚本的cos地址
      * @param string $CosSecretId cos的SecretId
      * @param string $CosSecretKey Cos的SecretKey
-     * @param string $AppId cos的appid
+     * @param string $AppId cos的appid，已废弃
      */
     function __construct()
     {

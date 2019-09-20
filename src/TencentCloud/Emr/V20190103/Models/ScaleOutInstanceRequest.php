@@ -18,8 +18,6 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getClientToken() 获取Token
- * @method void setClientToken(string $ClientToken) 设置Token
  * @method string getTimeUnit() 获取时间单位
  * @method void setTimeUnit(string $TimeUnit) 设置时间单位
  * @method integer getTimeSpan() 获取时间长度
@@ -28,12 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置扩容实例ID
  * @method integer getPayMode() 获取付费类型
  * @method void setPayMode(integer $PayMode) 设置付费类型
+ * @method string getClientToken() 获取Token
+ * @method void setClientToken(string $ClientToken) 设置Token
  * @method array getPreExecutedFileSettings() 获取预执行脚本设置
  * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) 设置预执行脚本设置
  * @method integer getTaskCount() 获取扩容Task节点数量
  * @method void setTaskCount(integer $TaskCount) 设置扩容Task节点数量
  * @method integer getCoreCount() 获取扩容Core节点数量
  * @method void setCoreCount(integer $CoreCount) 设置扩容Core节点数量
+ * @method array getUnNecessaryNodeList() 获取扩容时不需要安装的进程
+ * @method void setUnNecessaryNodeList(array $UnNecessaryNodeList) 设置扩容时不需要安装的进程
  */
 
 /**
@@ -41,11 +43,6 @@ use TencentCloud\Common\AbstractModel;
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
-    /**
-     * @var string Token
-     */
-    public $ClientToken;
-
     /**
      * @var string 时间单位
      */
@@ -67,6 +64,11 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $PayMode;
 
     /**
+     * @var string Token
+     */
+    public $ClientToken;
+
+    /**
      * @var array 预执行脚本设置
      */
     public $PreExecutedFileSettings;
@@ -80,15 +82,21 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @var integer 扩容Core节点数量
      */
     public $CoreCount;
+
     /**
-     * @param string $ClientToken Token
+     * @var array 扩容时不需要安装的进程
+     */
+    public $UnNecessaryNodeList;
+    /**
      * @param string $TimeUnit 时间单位
      * @param integer $TimeSpan 时间长度
      * @param string $InstanceId 扩容实例ID
      * @param integer $PayMode 付费类型
+     * @param string $ClientToken Token
      * @param array $PreExecutedFileSettings 预执行脚本设置
      * @param integer $TaskCount 扩容Task节点数量
      * @param integer $CoreCount 扩容Core节点数量
+     * @param array $UnNecessaryNodeList 扩容时不需要安装的进程
      */
     function __construct()
     {
@@ -102,10 +110,6 @@ class ScaleOutInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
-        }
-
         if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
             $this->TimeUnit = $param["TimeUnit"];
         }
@@ -120,6 +124,10 @@ class ScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
 
         if (array_key_exists("PreExecutedFileSettings",$param) and $param["PreExecutedFileSettings"] !== null) {
@@ -137,6 +145,10 @@ class ScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("CoreCount",$param) and $param["CoreCount"] !== null) {
             $this->CoreCount = $param["CoreCount"];
+        }
+
+        if (array_key_exists("UnNecessaryNodeList",$param) and $param["UnNecessaryNodeList"] !== null) {
+            $this->UnNecessaryNodeList = $param["UnNecessaryNodeList"];
         }
     }
 }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateKey(string $PrivateKey) 设置私钥
  * @method string getPsk() 获取共享密钥
  * @method void setPsk(string $Psk) 设置共享密钥
- * @method string getDownloadUrl() 获取软加固白盒秘钥下载地址
- * @method void setDownloadUrl(string $DownloadUrl) 设置软加固白盒秘钥下载地址
+ * @method string getDownloadUrl() 获取软加固白盒密钥下载地址
+ * @method void setDownloadUrl(string $DownloadUrl) 设置软加固白盒密钥下载地址
  * @method string getDeviceCode() 获取软加固设备标识码
  * @method void setDeviceCode(string $DeviceCode) 设置软加固设备标识码
  */
@@ -58,7 +58,7 @@ class TidKeysInfo extends AbstractModel
     public $Psk;
 
     /**
-     * @var string 软加固白盒秘钥下载地址
+     * @var string 软加固白盒密钥下载地址
      */
     public $DownloadUrl;
 
@@ -71,7 +71,7 @@ class TidKeysInfo extends AbstractModel
      * @param string $PublicKey 公钥
      * @param string $PrivateKey 私钥
      * @param string $Psk 共享密钥
-     * @param string $DownloadUrl 软加固白盒秘钥下载地址
+     * @param string $DownloadUrl 软加固白盒密钥下载地址
      * @param string $DeviceCode 软加固设备标识码
      */
     function __construct()

@@ -44,6 +44,10 @@ BLOCK：违规
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisgustResult(DisgustResult $DisgustResult) 设置恶心内容识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TextResult getTextResult() 获取文字识别结果。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTextResult(TextResult $TextResult) 设置文字识别结果。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -91,6 +95,12 @@ BLOCK：违规
     public $DisgustResult;
 
     /**
+     * @var TextResult 文字识别结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TextResult;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -107,6 +117,8 @@ BLOCK：违规
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extra 透传字段，透传简单信息。
      * @param DisgustResult $DisgustResult 恶心内容识别结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TextResult $TextResult 文字识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -148,6 +160,11 @@ BLOCK：违规
         if (array_key_exists("DisgustResult",$param) and $param["DisgustResult"] !== null) {
             $this->DisgustResult = new DisgustResult();
             $this->DisgustResult->deserialize($param["DisgustResult"]);
+        }
+
+        if (array_key_exists("TextResult",$param) and $param["TextResult"] !== null) {
+            $this->TextResult = new TextResult();
+            $this->TextResult->deserialize($param["TextResult"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

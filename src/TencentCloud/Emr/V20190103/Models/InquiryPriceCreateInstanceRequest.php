@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeUnit(string $TimeUnit) 设置时间单位
  * @method integer getTimeSpan() 获取时间长度
  * @method void setTimeSpan(integer $TimeSpan) 设置时间长度
- * @method ResourceSpec getResourceSpec() 获取询价资源描述
- * @method void setResourceSpec(ResourceSpec $ResourceSpec) 设置询价资源描述
+ * @method NewResourceSpec getResourceSpec() 获取询价资源描述
+ * @method void setResourceSpec(NewResourceSpec $ResourceSpec) 设置询价资源描述
  * @method string getCurrency() 获取货币种类
  * @method void setCurrency(string $Currency) 设置货币种类
  * @method integer getPayMode() 获取计费类型
@@ -54,7 +54,7 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
     public $TimeSpan;
 
     /**
-     * @var ResourceSpec 询价资源描述
+     * @var NewResourceSpec 询价资源描述
      */
     public $ResourceSpec;
 
@@ -90,7 +90,7 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
     /**
      * @param string $TimeUnit 时间单位
      * @param integer $TimeSpan 时间长度
-     * @param ResourceSpec $ResourceSpec 询价资源描述
+     * @param NewResourceSpec $ResourceSpec 询价资源描述
      * @param string $Currency 货币种类
      * @param integer $PayMode 计费类型
      * @param integer $SupportHA 是否支持HA， 1 支持，0 不支持
@@ -119,7 +119,7 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
         }
 
         if (array_key_exists("ResourceSpec",$param) and $param["ResourceSpec"] !== null) {
-            $this->ResourceSpec = new ResourceSpec();
+            $this->ResourceSpec = new NewResourceSpec();
             $this->ResourceSpec->deserialize($param["ResourceSpec"]);
         }
 

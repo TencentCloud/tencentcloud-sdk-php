@@ -18,12 +18,12 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getLogOnCosPath() 获取日志存储在COS上的路径
- * @method void setLogOnCosPath(string $LogOnCosPath) 设置日志存储在COS上的路径
  * @method string getCosSecretId() 获取COS SecretId
  * @method void setCosSecretId(string $CosSecretId) 设置COS SecretId
  * @method string getCosSecretKey() 获取COS SecrectKey
  * @method void setCosSecretKey(string $CosSecretKey) 设置COS SecrectKey
+ * @method string getLogOnCosPath() 获取日志存储在COS上的路径
+ * @method void setLogOnCosPath(string $LogOnCosPath) 设置日志存储在COS上的路径
  */
 
 /**
@@ -31,11 +31,6 @@ use TencentCloud\Common\AbstractModel;
  */
 class COSSettings extends AbstractModel
 {
-    /**
-     * @var string 日志存储在COS上的路径
-     */
-    public $LogOnCosPath;
-
     /**
      * @var string COS SecretId
      */
@@ -45,10 +40,15 @@ class COSSettings extends AbstractModel
      * @var string COS SecrectKey
      */
     public $CosSecretKey;
+
     /**
-     * @param string $LogOnCosPath 日志存储在COS上的路径
+     * @var string 日志存储在COS上的路径
+     */
+    public $LogOnCosPath;
+    /**
      * @param string $CosSecretId COS SecretId
      * @param string $CosSecretKey COS SecrectKey
+     * @param string $LogOnCosPath 日志存储在COS上的路径
      */
     function __construct()
     {
@@ -62,16 +62,16 @@ class COSSettings extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LogOnCosPath",$param) and $param["LogOnCosPath"] !== null) {
-            $this->LogOnCosPath = $param["LogOnCosPath"];
-        }
-
         if (array_key_exists("CosSecretId",$param) and $param["CosSecretId"] !== null) {
             $this->CosSecretId = $param["CosSecretId"];
         }
 
         if (array_key_exists("CosSecretKey",$param) and $param["CosSecretKey"] !== null) {
             $this->CosSecretKey = $param["CosSecretKey"];
+        }
+
+        if (array_key_exists("LogOnCosPath",$param) and $param["LogOnCosPath"] !== null) {
+            $this->LogOnCosPath = $param["LogOnCosPath"];
         }
     }
 }

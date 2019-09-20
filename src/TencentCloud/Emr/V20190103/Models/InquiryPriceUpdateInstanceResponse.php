@@ -39,9 +39,9 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *InquiryPriceCreateInstance返回参数结构体
+ *InquiryPriceUpdateInstance返回参数结构体
  */
-class InquiryPriceCreateInstanceResponse extends AbstractModel
+class InquiryPriceUpdateInstanceResponse extends AbstractModel
 {
     /**
      * @var float 刊例价

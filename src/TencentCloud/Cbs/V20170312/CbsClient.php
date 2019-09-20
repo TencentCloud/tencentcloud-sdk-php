@@ -77,6 +77,7 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 
 可根据快照ID过滤。快照ID形如：snap-a1kmcp13。
 
+* @method Models\DescribeSnapshotSharePermissionResponse DescribeSnapshotSharePermission(Models\DescribeSnapshotSharePermissionRequest $req) 本接口（DescribeSnapshotSharePermission）用于查询快照的分享信息。
 * @method Models\DescribeSnapshotsResponse DescribeSnapshots(Models\DescribeSnapshotsRequest $req) 本接口（DescribeSnapshots）用于查询快照的详细信息。
 
 * 根据快照ID、创建快照的云硬盘ID、创建快照的云硬盘类型等对结果进行过滤，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
@@ -103,11 +104,26 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 * @method Models\ModifyDiskAttributesResponse ModifyDiskAttributes(Models\ModifyDiskAttributesRequest $req) * 只支持修改弹性云盘的项目ID。随云主机创建的云硬盘项目ID与云主机联动。可以通过[DescribeDisks](/document/product/362/16315)接口查询，见输出参数中Portable字段解释。
 * “云硬盘名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行云盘管理操作的依据。
 * 支持批量操作，如果传入多个云盘ID，则所有云盘修改为同一属性。如果存在不允许操作的云盘，则操作不执行，以特定错误码返回。
+* @method Models\ModifyDisksChargeTypeResponse ModifyDisksChargeType(Models\ModifyDisksChargeTypeRequest $req) 接口请求域名： cbs.tencentcloudapi.com 。
+
+本接口 (ModifyDisksChargeType) 用于切换云盘的计费模式。
+
+只支持从 POSTPAID_BY_HOUR 计费模式切换为PREPAID计费模式。
+非弹性云盘不支持此接口，请通过修改实例计费模式接口将实例连同非弹性云盘一起转换。
+默认接口请求频率限制：10次/秒。
+
 * @method Models\ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(Models\ModifyDisksRenewFlagRequest $req) 本接口（ModifyDisksRenewFlag）用于修改云硬盘续费标识，支持批量修改。
 * @method Models\ModifySnapshotAttributeResponse ModifySnapshotAttribute(Models\ModifySnapshotAttributeRequest $req) 本接口（ModifySnapshotAttribute）用于修改指定快照的属性。
 
 * 当前仅支持修改快照名称及将非永久快照修改为永久快照。
 * “快照名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行快照管理操作的依据。
+* @method Models\ModifySnapshotsSharePermissionResponse ModifySnapshotsSharePermission(Models\ModifySnapshotsSharePermissionRequest $req) 本接口（ModifySnapshotsSharePermission）用于修改快照分享信息。
+
+分享快照后，被分享账户可以通过该快照创建云硬盘。
+* 每个快照最多可分享给50个账户。
+* 分享快照无法更改名称，描述，仅可用于创建云硬盘。
+* 只支持分享到对方账户相同地域。
+* 仅支持分享数据盘快照。
 * @method Models\RenewDiskResponse RenewDisk(Models\RenewDiskRequest $req) 本接口（RenewDisk）用于续费云硬盘。
 
 * 只支持预付费的云硬盘。云硬盘类型可以通过[DescribeDisks](/document/product/362/16315)接口查询，见输出参数中DiskChargeType字段解释。

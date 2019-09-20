@@ -18,8 +18,12 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method ClusterInfoResult getResult() 获取实例数量
- * @method void setResult(ClusterInfoResult $Result) 设置实例数量
+ * @method integer getTotalCnt() 获取实例数量
+ * @method void setTotalCnt(integer $TotalCnt) 设置实例数量
+ * @method array getClusterList() 获取集群实例信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterList(array $ClusterList) 设置集群实例信息列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,16 +34,24 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstancesResponse extends AbstractModel
 {
     /**
-     * @var ClusterInfoResult 实例数量
+     * @var integer 实例数量
      */
-    public $Result;
+    public $TotalCnt;
+
+    /**
+     * @var array 集群实例信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param ClusterInfoResult $Result 实例数量
+     * @param integer $TotalCnt 实例数量
+     * @param array $ClusterList 集群实例信息列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +66,17 @@ class DescribeInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new ClusterInfoResult();
-            $this->Result->deserialize($param["Result"]);
+        if (array_key_exists("TotalCnt",$param) and $param["TotalCnt"] !== null) {
+            $this->TotalCnt = $param["TotalCnt"];
+        }
+
+        if (array_key_exists("ClusterList",$param) and $param["ClusterList"] !== null) {
+            $this->ClusterList = [];
+            foreach ($param["ClusterList"] as $key => $value){
+                $obj = new ClusterInstancesInfo();
+                $obj->deserialize($value);
+                array_push($this->ClusterList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

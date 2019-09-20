@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageCount(integer $ImageCount) 设置快照关联的镜像个数。
  * @method string getSnapshotType() 获取快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
  * @method void setSnapshotType(string $SnapshotType) 设置快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+ * @method integer getShareReference() 获取快照当前被共享数
+ * @method void setShareReference(integer $ShareReference) 设置快照当前被共享数
  */
 
 /**
@@ -143,6 +145,11 @@ class Snapshot extends AbstractModel
      * @var string 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
      */
     public $SnapshotType;
+
+    /**
+     * @var integer 快照当前被共享数
+     */
+    public $ShareReference;
     /**
      * @param string $SnapshotId 快照ID。
      * @param Placement $Placement 快照所在的位置。
@@ -161,6 +168,7 @@ class Snapshot extends AbstractModel
      * @param array $Images 快照关联的镜像列表。
      * @param integer $ImageCount 快照关联的镜像个数。
      * @param string $SnapshotType 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+     * @param integer $ShareReference 快照当前被共享数
      */
     function __construct()
     {
@@ -246,6 +254,10 @@ class Snapshot extends AbstractModel
 
         if (array_key_exists("SnapshotType",$param) and $param["SnapshotType"] !== null) {
             $this->SnapshotType = $param["SnapshotType"];
+        }
+
+        if (array_key_exists("ShareReference",$param) and $param["ShareReference"] !== null) {
+            $this->ShareReference = $param["ShareReference"];
         }
     }
 }

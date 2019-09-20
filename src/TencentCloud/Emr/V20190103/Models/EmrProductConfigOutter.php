@@ -18,144 +18,144 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getSoftInfo() 获取集群软件信息
+ * @method array getSoftInfo() 获取软件信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSoftInfo(array $SoftInfo) 设置集群软件信息
+ * @method void setSoftInfo(array $SoftInfo) 设置软件信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMasterNodeSize() 获取master节点数量
+ * @method integer getMasterNodeSize() 获取Master节点个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMasterNodeSize(integer $MasterNodeSize) 设置master节点数量
+ * @method void setMasterNodeSize(integer $MasterNodeSize) 设置Master节点个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCoreNodeSize() 获取core节点数量
+ * @method integer getCoreNodeSize() 获取Core节点个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCoreNodeSize(integer $CoreNodeSize) 设置core节点数量
+ * @method void setCoreNodeSize(integer $CoreNodeSize) 设置Core节点个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskNodeSize() 获取task节点数量
+ * @method integer getTaskNodeSize() 获取Task节点个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskNodeSize(integer $TaskNodeSize) 设置task节点数量
+ * @method void setTaskNodeSize(integer $TaskNodeSize) 设置Task节点个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getComNodeSize() 获取common节点数量
+ * @method integer getComNodeSize() 获取Common节点个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComNodeSize(integer $ComNodeSize) 设置common节点数量
+ * @method void setComNodeSize(integer $ComNodeSize) 设置Common节点个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method NodeSpec getMasterResourceSpec() 获取master规格
+ * @method OutterResource getMasterResource() 获取Master节点资源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMasterResourceSpec(NodeSpec $MasterResourceSpec) 设置master规格
+ * @method void setMasterResource(OutterResource $MasterResource) 设置Master节点资源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method NodeSpec getCoreResourceSpec() 获取core规格
+ * @method OutterResource getCoreResource() 获取Core节点资源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCoreResourceSpec(NodeSpec $CoreResourceSpec) 设置core规格
+ * @method void setCoreResource(OutterResource $CoreResource) 设置Core节点资源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method NodeSpec getTaskResourceSpec() 获取task规格
+ * @method OutterResource getTaskResource() 获取Task节点资源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskResourceSpec(NodeSpec $TaskResourceSpec) 设置task规格
+ * @method void setTaskResource(OutterResource $TaskResource) 设置Task节点资源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method NodeSpec getCommonResourceSpec() 获取common规格
+ * @method OutterResource getComResource() 获取Common节点资源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCommonResourceSpec(NodeSpec $CommonResourceSpec) 设置common规格
+ * @method void setComResource(OutterResource $ComResource) 设置Common节点资源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getOncos() 获取是否使用COS
+ * @method boolean getOnCos() 获取是否使用COS
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOncos(boolean $Oncos) 设置是否使用COS
+ * @method void setOnCos(boolean $OnCos) 设置是否使用COS
 注意：此字段可能返回 null，表示取不到有效值。
- * @method COSSettings getCOSSettings() 获取COS配置
+ * @method integer getChargeType() 获取收费类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCOSSettings(COSSettings $COSSettings) 设置COS配置
+ * @method void setChargeType(integer $ChargeType) 设置收费类型
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
- *集群的config信息
+ *EMR产品配置
  */
-class EMRProductConfigSettings extends AbstractModel
+class EmrProductConfigOutter extends AbstractModel
 {
     /**
-     * @var array 集群软件信息
+     * @var array 软件信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SoftInfo;
 
     /**
-     * @var integer master节点数量
+     * @var integer Master节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MasterNodeSize;
 
     /**
-     * @var integer core节点数量
+     * @var integer Core节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CoreNodeSize;
 
     /**
-     * @var integer task节点数量
+     * @var integer Task节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskNodeSize;
 
     /**
-     * @var integer common节点数量
+     * @var integer Common节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComNodeSize;
 
     /**
-     * @var NodeSpec master规格
+     * @var OutterResource Master节点资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $MasterResourceSpec;
+    public $MasterResource;
 
     /**
-     * @var NodeSpec core规格
+     * @var OutterResource Core节点资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $CoreResourceSpec;
+    public $CoreResource;
 
     /**
-     * @var NodeSpec task规格
+     * @var OutterResource Task节点资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TaskResourceSpec;
+    public $TaskResource;
 
     /**
-     * @var NodeSpec common规格
+     * @var OutterResource Common节点资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $CommonResourceSpec;
+    public $ComResource;
 
     /**
      * @var boolean 是否使用COS
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Oncos;
+    public $OnCos;
 
     /**
-     * @var COSSettings COS配置
+     * @var integer 收费类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $COSSettings;
+    public $ChargeType;
     /**
-     * @param array $SoftInfo 集群软件信息
+     * @param array $SoftInfo 软件信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MasterNodeSize master节点数量
+     * @param integer $MasterNodeSize Master节点个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CoreNodeSize core节点数量
+     * @param integer $CoreNodeSize Core节点个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskNodeSize task节点数量
+     * @param integer $TaskNodeSize Task节点个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ComNodeSize common节点数量
+     * @param integer $ComNodeSize Common节点个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeSpec $MasterResourceSpec master规格
+     * @param OutterResource $MasterResource Master节点资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeSpec $CoreResourceSpec core规格
+     * @param OutterResource $CoreResource Core节点资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeSpec $TaskResourceSpec task规格
+     * @param OutterResource $TaskResource Task节点资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeSpec $CommonResourceSpec common规格
+     * @param OutterResource $ComResource Common节点资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Oncos 是否使用COS
+     * @param boolean $OnCos 是否使用COS
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param COSSettings $COSSettings COS配置
+     * @param integer $ChargeType 收费类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -190,33 +190,32 @@ class EMRProductConfigSettings extends AbstractModel
             $this->ComNodeSize = $param["ComNodeSize"];
         }
 
-        if (array_key_exists("MasterResourceSpec",$param) and $param["MasterResourceSpec"] !== null) {
-            $this->MasterResourceSpec = new NodeSpec();
-            $this->MasterResourceSpec->deserialize($param["MasterResourceSpec"]);
+        if (array_key_exists("MasterResource",$param) and $param["MasterResource"] !== null) {
+            $this->MasterResource = new OutterResource();
+            $this->MasterResource->deserialize($param["MasterResource"]);
         }
 
-        if (array_key_exists("CoreResourceSpec",$param) and $param["CoreResourceSpec"] !== null) {
-            $this->CoreResourceSpec = new NodeSpec();
-            $this->CoreResourceSpec->deserialize($param["CoreResourceSpec"]);
+        if (array_key_exists("CoreResource",$param) and $param["CoreResource"] !== null) {
+            $this->CoreResource = new OutterResource();
+            $this->CoreResource->deserialize($param["CoreResource"]);
         }
 
-        if (array_key_exists("TaskResourceSpec",$param) and $param["TaskResourceSpec"] !== null) {
-            $this->TaskResourceSpec = new NodeSpec();
-            $this->TaskResourceSpec->deserialize($param["TaskResourceSpec"]);
+        if (array_key_exists("TaskResource",$param) and $param["TaskResource"] !== null) {
+            $this->TaskResource = new OutterResource();
+            $this->TaskResource->deserialize($param["TaskResource"]);
         }
 
-        if (array_key_exists("CommonResourceSpec",$param) and $param["CommonResourceSpec"] !== null) {
-            $this->CommonResourceSpec = new NodeSpec();
-            $this->CommonResourceSpec->deserialize($param["CommonResourceSpec"]);
+        if (array_key_exists("ComResource",$param) and $param["ComResource"] !== null) {
+            $this->ComResource = new OutterResource();
+            $this->ComResource->deserialize($param["ComResource"]);
         }
 
-        if (array_key_exists("Oncos",$param) and $param["Oncos"] !== null) {
-            $this->Oncos = $param["Oncos"];
+        if (array_key_exists("OnCos",$param) and $param["OnCos"] !== null) {
+            $this->OnCos = $param["OnCos"];
         }
 
-        if (array_key_exists("COSSettings",$param) and $param["COSSettings"] !== null) {
-            $this->COSSettings = new COSSettings();
-            $this->COSSettings->deserialize($param["COSSettings"]);
+        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
+            $this->ChargeType = $param["ChargeType"];
         }
     }
 }

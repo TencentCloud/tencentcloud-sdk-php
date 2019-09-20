@@ -18,14 +18,18 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method float getScore() 获取两张图片中人脸的相似度分数。 
-若需要验证两张图片中人脸是否为同一人，则误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。  
-一般超过80分则可认定为同一人。 
+ * @method float getScore() 获取两张图片中人脸的相似度分数。
+不同算法版本返回的相似度分数不同。 
+若需要验证两张图片中人脸是否为同一人，3.0版本误识率千分之一对应分数为40分，误识率万分之一对应分数为50分，误识率十万分之一对应分数为60分。  一般超过50分则可认定为同一人。 
+2.0版本误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。 一般超过80分则可认定为同一人。 
 若需要验证两张图片中的人脸是否为同一人，建议使用人脸验证接口。
- * @method void setScore(float $Score) 设置两张图片中人脸的相似度分数。 
-若需要验证两张图片中人脸是否为同一人，则误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。  
-一般超过80分则可认定为同一人。 
+ * @method void setScore(float $Score) 设置两张图片中人脸的相似度分数。
+不同算法版本返回的相似度分数不同。 
+若需要验证两张图片中人脸是否为同一人，3.0版本误识率千分之一对应分数为40分，误识率万分之一对应分数为50分，误识率十万分之一对应分数为60分。  一般超过50分则可认定为同一人。 
+2.0版本误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。 一般超过80分则可认定为同一人。 
 若需要验证两张图片中的人脸是否为同一人，建议使用人脸验证接口。
+ * @method string getFaceModelVersion() 获取人脸识别所用的算法模型版本。
+ * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别所用的算法模型版本。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,22 +40,30 @@ use TencentCloud\Common\AbstractModel;
 class CompareFaceResponse extends AbstractModel
 {
     /**
-     * @var float 两张图片中人脸的相似度分数。 
-若需要验证两张图片中人脸是否为同一人，则误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。  
-一般超过80分则可认定为同一人。 
+     * @var float 两张图片中人脸的相似度分数。
+不同算法版本返回的相似度分数不同。 
+若需要验证两张图片中人脸是否为同一人，3.0版本误识率千分之一对应分数为40分，误识率万分之一对应分数为50分，误识率十万分之一对应分数为60分。  一般超过50分则可认定为同一人。 
+2.0版本误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。 一般超过80分则可认定为同一人。 
 若需要验证两张图片中的人脸是否为同一人，建议使用人脸验证接口。
      */
     public $Score;
+
+    /**
+     * @var string 人脸识别所用的算法模型版本。
+     */
+    public $FaceModelVersion;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param float $Score 两张图片中人脸的相似度分数。 
-若需要验证两张图片中人脸是否为同一人，则误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。  
-一般超过80分则可认定为同一人。 
+     * @param float $Score 两张图片中人脸的相似度分数。
+不同算法版本返回的相似度分数不同。 
+若需要验证两张图片中人脸是否为同一人，3.0版本误识率千分之一对应分数为40分，误识率万分之一对应分数为50分，误识率十万分之一对应分数为60分。  一般超过50分则可认定为同一人。 
+2.0版本误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。 一般超过80分则可认定为同一人。 
 若需要验证两张图片中的人脸是否为同一人，建议使用人脸验证接口。
+     * @param string $FaceModelVersion 人脸识别所用的算法模型版本。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +80,10 @@ class CompareFaceResponse extends AbstractModel
         }
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {
             $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
+            $this->FaceModelVersion = $param["FaceModelVersion"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

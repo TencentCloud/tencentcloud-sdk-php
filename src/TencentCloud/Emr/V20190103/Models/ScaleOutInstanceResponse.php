@@ -18,8 +18,16 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method ScaleOutInstanceResult getResult() 获取扩容结果
- * @method void setResult(ScaleOutInstanceResult $Result) 设置扩容结果
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method array getDealNames() 获取订单号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDealNames(array $DealNames) 设置订单号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClientToken() 获取token
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientToken(string $ClientToken) 设置token
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,16 +38,32 @@ use TencentCloud\Common\AbstractModel;
 class ScaleOutInstanceResponse extends AbstractModel
 {
     /**
-     * @var ScaleOutInstanceResult 扩容结果
+     * @var string 实例ID
      */
-    public $Result;
+    public $InstanceId;
+
+    /**
+     * @var array 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DealNames;
+
+    /**
+     * @var string token
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientToken;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param ScaleOutInstanceResult $Result 扩容结果
+     * @param string $InstanceId 实例ID
+     * @param array $DealNames 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClientToken token
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +78,16 @@ class ScaleOutInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new ScaleOutInstanceResult();
-            $this->Result->deserialize($param["Result"]);
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("DealNames",$param) and $param["DealNames"] !== null) {
+            $this->DealNames = $param["DealNames"];
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

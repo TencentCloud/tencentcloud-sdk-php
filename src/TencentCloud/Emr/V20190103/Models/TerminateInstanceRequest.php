@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getInstanceId() 获取被销毁的实例ID
  * @method void setInstanceId(string $InstanceId) 设置被销毁的实例ID
+ * @method array getResourceIds() 获取销毁节点ID
+ * @method void setResourceIds(array $ResourceIds) 设置销毁节点ID
  */
 
 /**
@@ -31,8 +33,14 @@ class TerminateInstanceRequest extends AbstractModel
      * @var string 被销毁的实例ID
      */
     public $InstanceId;
+
+    /**
+     * @var array 销毁节点ID
+     */
+    public $ResourceIds;
     /**
      * @param string $InstanceId 被销毁的实例ID
+     * @param array $ResourceIds 销毁节点ID
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class TerminateInstanceRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
+            $this->ResourceIds = $param["ResourceIds"];
         }
     }
 }

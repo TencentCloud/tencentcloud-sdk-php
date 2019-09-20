@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVPCSettings(VPCSettings $VPCSettings) 设置VPC设置参数
  * @method array getSoftware() 获取软件列表
  * @method void setSoftware(array $Software) 设置软件列表
- * @method ResourceSpec getResourceSpec() 获取资源描述
- * @method void setResourceSpec(ResourceSpec $ResourceSpec) 设置资源描述
+ * @method NewResourceSpec getResourceSpec() 获取资源描述
+ * @method void setResourceSpec(NewResourceSpec $ResourceSpec) 设置资源描述
  * @method integer getSupportHA() 获取支持HA
  * @method void setSupportHA(integer $SupportHA) 设置支持HA
  * @method string getInstanceName() 获取实例名称
@@ -40,8 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeUnit(string $TimeUnit) 设置时间单位
  * @method LoginSettings getLoginSettings() 获取登录配置
  * @method void setLoginSettings(LoginSettings $LoginSettings) 设置登录配置
- * @method string getClientToken() 获取客户端Token
- * @method void setClientToken(string $ClientToken) 设置客户端Token
  * @method COSSettings getCOSSettings() 获取COS设置参数
  * @method void setCOSSettings(COSSettings $COSSettings) 设置COS设置参数
  * @method string getSgId() 获取安全组ID
@@ -50,10 +48,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) 设置预执行脚本设置
  * @method integer getAutoRenew() 获取自动续费
  * @method void setAutoRenew(integer $AutoRenew) 设置自动续费
+ * @method string getClientToken() 获取客户端Token
+ * @method void setClientToken(string $ClientToken) 设置客户端Token
  * @method string getNeedMasterWan() 获取是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
  * @method void setNeedMasterWan(string $NeedMasterWan) 设置是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
  * @method integer getRemoteLoginAtCreate() 获取是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
  * @method void setRemoteLoginAtCreate(integer $RemoteLoginAtCreate) 设置是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+ * @method integer getCheckSecurity() 获取是否开启安全集群，0表示不开启，非0表示开启
+ * @method void setCheckSecurity(integer $CheckSecurity) 设置是否开启安全集群，0表示不开启，非0表示开启
+ * @method string getExtendFsField() 获取访问外部文件系统
+ * @method void setExtendFsField(string $ExtendFsField) 设置访问外部文件系统
  */
 
 /**
@@ -77,7 +81,7 @@ class CreateInstanceRequest extends AbstractModel
     public $Software;
 
     /**
-     * @var ResourceSpec 资源描述
+     * @var NewResourceSpec 资源描述
      */
     public $ResourceSpec;
 
@@ -117,11 +121,6 @@ class CreateInstanceRequest extends AbstractModel
     public $LoginSettings;
 
     /**
-     * @var string 客户端Token
-     */
-    public $ClientToken;
-
-    /**
      * @var COSSettings COS设置参数
      */
     public $COSSettings;
@@ -142,6 +141,11 @@ class CreateInstanceRequest extends AbstractModel
     public $AutoRenew;
 
     /**
+     * @var string 客户端Token
+     */
+    public $ClientToken;
+
+    /**
      * @var string 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
      */
     public $NeedMasterWan;
@@ -150,11 +154,21 @@ class CreateInstanceRequest extends AbstractModel
      * @var integer 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
      */
     public $RemoteLoginAtCreate;
+
+    /**
+     * @var integer 是否开启安全集群，0表示不开启，非0表示开启
+     */
+    public $CheckSecurity;
+
+    /**
+     * @var string 访问外部文件系统
+     */
+    public $ExtendFsField;
     /**
      * @param integer $ProductId 产品ID
      * @param VPCSettings $VPCSettings VPC设置参数
      * @param array $Software 软件列表
-     * @param ResourceSpec $ResourceSpec 资源描述
+     * @param NewResourceSpec $ResourceSpec 资源描述
      * @param integer $SupportHA 支持HA
      * @param string $InstanceName 实例名称
      * @param integer $PayMode 计费类型
@@ -162,13 +176,15 @@ class CreateInstanceRequest extends AbstractModel
      * @param integer $TimeSpan 时间长度
      * @param string $TimeUnit 时间单位
      * @param LoginSettings $LoginSettings 登录配置
-     * @param string $ClientToken 客户端Token
      * @param COSSettings $COSSettings COS设置参数
      * @param string $SgId 安全组ID
      * @param array $PreExecutedFileSettings 预执行脚本设置
      * @param integer $AutoRenew 自动续费
+     * @param string $ClientToken 客户端Token
      * @param string $NeedMasterWan 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
      * @param integer $RemoteLoginAtCreate 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+     * @param integer $CheckSecurity 是否开启安全集群，0表示不开启，非0表示开启
+     * @param string $ExtendFsField 访问外部文件系统
      */
     function __construct()
     {
@@ -196,7 +212,7 @@ class CreateInstanceRequest extends AbstractModel
         }
 
         if (array_key_exists("ResourceSpec",$param) and $param["ResourceSpec"] !== null) {
-            $this->ResourceSpec = new ResourceSpec();
+            $this->ResourceSpec = new NewResourceSpec();
             $this->ResourceSpec->deserialize($param["ResourceSpec"]);
         }
 
@@ -230,10 +246,6 @@ class CreateInstanceRequest extends AbstractModel
             $this->LoginSettings->deserialize($param["LoginSettings"]);
         }
 
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
-        }
-
         if (array_key_exists("COSSettings",$param) and $param["COSSettings"] !== null) {
             $this->COSSettings = new COSSettings();
             $this->COSSettings->deserialize($param["COSSettings"]);
@@ -256,12 +268,24 @@ class CreateInstanceRequest extends AbstractModel
             $this->AutoRenew = $param["AutoRenew"];
         }
 
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
+        }
+
         if (array_key_exists("NeedMasterWan",$param) and $param["NeedMasterWan"] !== null) {
             $this->NeedMasterWan = $param["NeedMasterWan"];
         }
 
         if (array_key_exists("RemoteLoginAtCreate",$param) and $param["RemoteLoginAtCreate"] !== null) {
             $this->RemoteLoginAtCreate = $param["RemoteLoginAtCreate"];
+        }
+
+        if (array_key_exists("CheckSecurity",$param) and $param["CheckSecurity"] !== null) {
+            $this->CheckSecurity = $param["CheckSecurity"];
+        }
+
+        if (array_key_exists("ExtendFsField",$param) and $param["ExtendFsField"] !== null) {
+            $this->ExtendFsField = $param["ExtendFsField"];
         }
     }
 }

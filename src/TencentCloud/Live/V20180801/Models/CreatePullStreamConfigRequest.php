@@ -22,23 +22,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFromUrl(string $FromUrl) 设置源Url。目前可支持直播流及点播文件。
  * @method string getToUrl() 获取目的Url，目前限制该目标地址为腾讯域名。
  * @method void setToUrl(string $ToUrl) 设置目的Url，目前限制该目标地址为腾讯域名。
- * @method integer getAreaId() 获取区域id：
+ * @method integer getAreaId() 获取选择完成转拉推的服务所在区域:
 1-深圳，
 2-上海，
 3-天津，
 4-中国香港。
- * @method void setAreaId(integer $AreaId) 设置区域id：
+ * @method void setAreaId(integer $AreaId) 设置选择完成转拉推的服务所在区域:
 1-深圳，
 2-上海，
 3-天津，
 4-中国香港。
- * @method integer getIspId() 获取运营商id：
+ * @method integer getIspId() 获取选择完成转拉推服务使用的运营商网络：
 1-电信，
 2-移动，
 3-联通，
 4-其他。
 注：AreaId为4的时候,IspId只能为其他。
- * @method void setIspId(integer $IspId) 设置运营商id：
+ * @method void setIspId(integer $IspId) 设置选择完成转拉推服务使用的运营商网络：
 1-电信，
 2-移动，
 3-联通，
@@ -84,7 +84,7 @@ class CreatePullStreamConfigRequest extends AbstractModel
     public $ToUrl;
 
     /**
-     * @var integer 区域id：
+     * @var integer 选择完成转拉推的服务所在区域:
 1-深圳，
 2-上海，
 3-天津，
@@ -93,7 +93,7 @@ class CreatePullStreamConfigRequest extends AbstractModel
     public $AreaId;
 
     /**
-     * @var integer 运营商id：
+     * @var integer 选择完成转拉推服务使用的运营商网络：
 1-电信，
 2-移动，
 3-联通，
@@ -123,12 +123,12 @@ class CreatePullStreamConfigRequest extends AbstractModel
     /**
      * @param string $FromUrl 源Url。目前可支持直播流及点播文件。
      * @param string $ToUrl 目的Url，目前限制该目标地址为腾讯域名。
-     * @param integer $AreaId 区域id：
+     * @param integer $AreaId 选择完成转拉推的服务所在区域:
 1-深圳，
 2-上海，
 3-天津，
 4-中国香港。
-     * @param integer $IspId 运营商id：
+     * @param integer $IspId 选择完成转拉推服务使用的运营商网络：
 1-电信，
 2-移动，
 3-联通，

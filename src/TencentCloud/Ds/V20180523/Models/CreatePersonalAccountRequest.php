@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperation(string $Operation) 设置操作名CreatePersonalAccount
  * @method string getName() 获取个人用户姓名
  * @method void setName(string $Name) 设置个人用户姓名
- * @method integer getIdentType() 获取个人用户证件类型。0代表身份证
- * @method void setIdentType(integer $IdentType) 设置个人用户证件类型。0代表身份证
+ * @method integer getIdentType() 获取个人用户证件类型，0代表身份证，详情请见常见问题
+ * @method void setIdentType(integer $IdentType) 设置个人用户证件类型，0代表身份证，详情请见常见问题
  * @method string getIdentNo() 获取个人用户证件号码
  * @method void setIdentNo(string $IdentNo) 设置个人用户证件号码
  * @method string getMobilePhone() 获取个人用户手机号
@@ -53,7 +53,7 @@ class CreatePersonalAccountRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 个人用户证件类型。0代表身份证
+     * @var integer 个人用户证件类型，0代表身份证，详情请见常见问题
      */
     public $IdentType;
 
@@ -70,7 +70,7 @@ class CreatePersonalAccountRequest extends AbstractModel
      * @param string $Module 模块名AccountMng
      * @param string $Operation 操作名CreatePersonalAccount
      * @param string $Name 个人用户姓名
-     * @param integer $IdentType 个人用户证件类型。0代表身份证
+     * @param integer $IdentType 个人用户证件类型，0代表身份证，详情请见常见问题
      * @param string $IdentNo 个人用户证件号码
      * @param string $MobilePhone 个人用户手机号
      */

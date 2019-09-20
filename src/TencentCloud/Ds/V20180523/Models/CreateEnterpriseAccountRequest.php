@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperation(string $Operation) 设置操作名CreateEnterpriseAccount
  * @method string getName() 获取企业用户名称
  * @method void setName(string $Name) 设置企业用户名称
- * @method integer getIdentType() 获取企业用户证件类型，8代表营业执照
- * @method void setIdentType(integer $IdentType) 设置企业用户证件类型，8代表营业执照
+ * @method integer getIdentType() 获取企业用户证件类型，8代表营业执照，详情请见常见问题
+ * @method void setIdentType(integer $IdentType) 设置企业用户证件类型，8代表营业执照，详情请见常见问题
  * @method string getIdentNo() 获取企业用户营业执照号码
  * @method void setIdentNo(string $IdentNo) 设置企业用户营业执照号码
  * @method string getMobilePhone() 获取企业联系人手机号
@@ -61,7 +61,7 @@ class CreateEnterpriseAccountRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 企业用户证件类型，8代表营业执照
+     * @var integer 企业用户证件类型，8代表营业执照，详情请见常见问题
      */
     public $IdentType;
 
@@ -98,7 +98,7 @@ class CreateEnterpriseAccountRequest extends AbstractModel
      * @param string $Module 模块名AccountMng
      * @param string $Operation 操作名CreateEnterpriseAccount
      * @param string $Name 企业用户名称
-     * @param integer $IdentType 企业用户证件类型，8代表营业执照
+     * @param integer $IdentType 企业用户证件类型，8代表营业执照，详情请见常见问题
      * @param string $IdentNo 企业用户营业执照号码
      * @param string $MobilePhone 企业联系人手机号
      * @param string $TransactorName 经办人姓名

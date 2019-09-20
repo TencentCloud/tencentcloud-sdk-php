@@ -99,6 +99,8 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 
 * 密钥对是通过一种算法生成的一对密钥，在生成的密钥对中，一个向外界公开，称为公钥；另一个用户自己保留，称为私钥。密钥对的公钥内容可以通过这个接口查询，但私钥内容系统不保留。
 * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口(DescribeRegions)用于查询地域信息。
+* @method Models\DescribeReservedInstancesResponse DescribeReservedInstances(Models\DescribeReservedInstancesRequest $req) 本接口(DescribeReservedInstances)可提供列出用户已购买的预留实例
+* @method Models\DescribeReservedInstancesOfferingsResponse DescribeReservedInstancesOfferings(Models\DescribeReservedInstancesOfferingsRequest $req) 本接口(DescribeReservedInstancesOfferings)供用户列出可购买的预留实例配置
 * @method Models\DescribeZoneInstanceConfigInfosResponse DescribeZoneInstanceConfigInfos(Models\DescribeZoneInstanceConfigInfosRequest $req) 本接口(DescribeZoneInstanceConfigInfos) 获取可用区的机型信息。
 * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 本接口(DescribeZones)用于查询可用区信息。
 * @method Models\DisassociateInstancesKeyPairsResponse DisassociateInstancesKeyPairs(Models\DisassociateInstancesKeyPairsRequest $req) 本接口 (DisassociateInstancesKeyPairs) 用于解除实例的密钥绑定关系。
@@ -183,6 +185,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 修改密钥对ID所指定的密钥对的名称和描述信息。
 * 密钥对名称不能和已经存在的密钥对的名称重复。
 * 密钥对ID是密钥对的唯一标识，不可修改。
+* @method Models\PurchaseReservedInstancesOfferingResponse PurchaseReservedInstancesOffering(Models\PurchaseReservedInstancesOfferingRequest $req) 本接口(PurchaseReservedInstancesOffering)用于用户购买一个或者多个指定配置的预留实例
 * @method Models\RebootInstancesResponse RebootInstances(Models\RebootInstancesRequest $req) 本接口 (RebootInstances) 用于重启实例。
 
 * 只有状态为`RUNNING`的实例才可以进行此操作。

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInitiator(string $Initiator) 设置合同发起方帐号ID
  * @method string getRemarks() 获取备注
  * @method void setRemarks(string $Remarks) 设置备注
- * @method string getExpireTime() 获取过期时间
- * @method void setExpireTime(string $ExpireTime) 设置过期时间
+ * @method string getExpireTime() 获取合同长时间未签署的过期时间
+ * @method void setExpireTime(string $ExpireTime) 设置合同长时间未签署的过期时间
  */
 
 /**
@@ -77,7 +77,7 @@ class CreateContractByUploadRequest extends AbstractModel
     public $Remarks;
 
     /**
-     * @var string 过期时间
+     * @var string 合同长时间未签署的过期时间
      */
     public $ExpireTime;
     /**
@@ -88,7 +88,7 @@ class CreateContractByUploadRequest extends AbstractModel
      * @param string $ContractName 合同名称
      * @param string $Initiator 合同发起方帐号ID
      * @param string $Remarks 备注
-     * @param string $ExpireTime 过期时间
+     * @param string $ExpireTime 合同长时间未签署的过期时间
      */
     function __construct()
     {

@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHttp2(boolean $Http2) 设置是否开启Http2
  * @method string getForwardType() 获取负载均衡与后端服务之间的转发协议
  * @method void setForwardType(string $ForwardType) 设置负载均衡与后端服务之间的转发协议
+ * @method string getCreateTime() 获取转发规则的创建时间
+ * @method void setCreateTime(string $CreateTime) 设置转发规则的创建时间
  */
 
 /**
@@ -137,6 +139,11 @@ class RuleOutput extends AbstractModel
      * @var string 负载均衡与后端服务之间的转发协议
      */
     public $ForwardType;
+
+    /**
+     * @var string 转发规则的创建时间
+     */
+    public $CreateTime;
     /**
      * @param string $LocationId 转发规则的 ID
      * @param string $Domain 转发规则的域名。
@@ -157,6 +164,7 @@ class RuleOutput extends AbstractModel
      * @param boolean $DefaultServer 是否作为默认域名
      * @param boolean $Http2 是否开启Http2
      * @param string $ForwardType 负载均衡与后端服务之间的转发协议
+     * @param string $CreateTime 转发规则的创建时间
      */
     function __construct()
     {
@@ -227,6 +235,10 @@ class RuleOutput extends AbstractModel
 
         if (array_key_exists("ForwardType",$param) and $param["ForwardType"] !== null) {
             $this->ForwardType = $param["ForwardType"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

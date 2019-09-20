@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 OPEN：公网属性， INTERNAL：内网属性。
  * @method void setLoadBalancerType(string $LoadBalancerType) 设置负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
- * @method integer getForward() 获取负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例
- * @method void setForward(integer $Forward) 设置负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例
+ * @method integer getForward() 获取负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
+ * @method void setForward(integer $Forward) 设置负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
  * @method string getLoadBalancerName() 获取负载均衡实例的名称。
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡实例的名称。
  * @method string getDomain() 获取腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
@@ -50,10 +50,10 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setProjectId(integer $ProjectId) 设置负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
  * @method integer getWithRs() 获取负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
  * @method void setWithRs(integer $WithRs) 设置负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
- * @method string getVpcId() 获取负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
-基础网络不支持通过VpcId查询。
- * @method void setVpcId(string $VpcId) 设置负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
-基础网络不支持通过VpcId查询。
+ * @method string getVpcId() 获取负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+基础网络可传入'0'。
+ * @method void setVpcId(string $VpcId) 设置负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+基础网络可传入'0'。
  * @method string getSecurityGroup() 获取安全组ID，如 sg-m1cc9123
  * @method void setSecurityGroup(string $SecurityGroup) 设置安全组ID，如 sg-m1cc9123
  * @method string getMasterZone() 获取主可用区ID，如 ："100001" （对应的是广州一区）
@@ -77,7 +77,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $LoadBalancerType;
 
     /**
-     * @var integer 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例
+     * @var integer 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
      */
     public $Forward;
 
@@ -142,8 +142,8 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $WithRs;
 
     /**
-     * @var string 负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
-基础网络不支持通过VpcId查询。
+     * @var string 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+基础网络可传入'0'。
      */
     public $VpcId;
 
@@ -160,7 +160,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param array $LoadBalancerIds 负载均衡实例 ID。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
-     * @param integer $Forward 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例
+     * @param integer $Forward 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $Domain 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
      * @param array $LoadBalancerVips 负载均衡实例的 VIP 地址，支持多个。
@@ -173,8 +173,8 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $SearchKey 搜索字段，模糊匹配名称、域名、VIP。
      * @param integer $ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
      * @param integer $WithRs 负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
-     * @param string $VpcId 负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
-基础网络不支持通过VpcId查询。
+     * @param string $VpcId 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+基础网络可传入'0'。
      * @param string $SecurityGroup 安全组ID，如 sg-m1cc9123
      * @param string $MasterZone 主可用区ID，如 ："100001" （对应的是广州一区）
      */

@@ -148,6 +148,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraInfo(ExtraInfo $ExtraInfo) 设置暂做保留，一般用户无需关注。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getLoadBalancerPassToTarget() 获取是否默认放通来自CLB的流量。开启默认放通（true）：只验证CLB上的安全组；不开启默认放通（false）：需同时验证CLB和后端实例上的安全组。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) 设置是否默认放通来自CLB的流量。开启默认放通（true）：只验证CLB上的安全组；不开启默认放通（false）：需同时验证CLB和后端实例上的安全组。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -355,6 +359,12 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraInfo;
+
+    /**
+     * @var boolean 是否默认放通来自CLB的流量。开启默认放通（true）：只验证CLB上的安全组；不开启默认放通（false）：需同时验证CLB和后端实例上的安全组。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LoadBalancerPassToTarget;
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
@@ -420,6 +430,8 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $AddressIPv6 负载均衡实例的IPv6地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraInfo $ExtraInfo 暂做保留，一般用户无需关注。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $LoadBalancerPassToTarget 是否默认放通来自CLB的流量。开启默认放通（true）：只验证CLB上的安全组；不开启默认放通（false）：需同时验证CLB和后端实例上的安全组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -583,6 +595,10 @@ OPEN：公网属性， INTERNAL：内网属性。
         if (array_key_exists("ExtraInfo",$param) and $param["ExtraInfo"] !== null) {
             $this->ExtraInfo = new ExtraInfo();
             $this->ExtraInfo->deserialize($param["ExtraInfo"]);
+        }
+
+        if (array_key_exists("LoadBalancerPassToTarget",$param) and $param["LoadBalancerPassToTarget"] !== null) {
+            $this->LoadBalancerPassToTarget = $param["LoadBalancerPassToTarget"];
         }
     }
 }

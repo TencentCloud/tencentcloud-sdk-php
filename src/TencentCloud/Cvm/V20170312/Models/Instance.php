@@ -72,6 +72,24 @@ use TencentCloud\Common\AbstractModel;
 取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
  * @method string getUuid() 获取实例全局唯一ID
  * @method void setUuid(string $Uuid) 设置实例全局唯一ID
+ * @method string getLatestOperation() 获取实例的最新操作。例：StopInstances、ResetInstance。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLatestOperation(string $LatestOperation) 设置实例的最新操作。例：StopInstances、ResetInstance。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLatestOperationState() 获取实例的最新操作状态。取值范围：<br>
+<li>SUCCESS：表示操作成功<br>
+<li>OPERATING：表示操作执行中<br>
+<li>FAILED：表示操作失败
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLatestOperationState(string $LatestOperationState) 设置实例的最新操作状态。取值范围：<br>
+<li>SUCCESS：表示操作成功<br>
+<li>OPERATING：表示操作执行中<br>
+<li>FAILED：表示操作失败
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLatestOperationRequestId() 获取实例最新操作的唯一请求 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLatestOperationRequestId(string $LatestOperationRequestId) 设置实例最新操作的唯一请求 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -205,6 +223,27 @@ class Instance extends AbstractModel
      * @var string 实例全局唯一ID
      */
     public $Uuid;
+
+    /**
+     * @var string 实例的最新操作。例：StopInstances、ResetInstance。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LatestOperation;
+
+    /**
+     * @var string 实例的最新操作状态。取值范围：<br>
+<li>SUCCESS：表示操作成功<br>
+<li>OPERATING：表示操作执行中<br>
+<li>FAILED：表示操作失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LatestOperationState;
+
+    /**
+     * @var string 实例最新操作的唯一请求 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LatestOperationRequestId;
     /**
      * @param Placement $Placement 实例所在的位置。
      * @param string $InstanceId 实例`ID`。
@@ -233,6 +272,15 @@ class Instance extends AbstractModel
      * @param string $StopChargingMode 实例的关机计费模式。
 取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
      * @param string $Uuid 实例全局唯一ID
+     * @param string $LatestOperation 实例的最新操作。例：StopInstances、ResetInstance。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LatestOperationState 实例的最新操作状态。取值范围：<br>
+<li>SUCCESS：表示操作成功<br>
+<li>OPERATING：表示操作执行中<br>
+<li>FAILED：表示操作失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LatestOperationRequestId 实例最新操作的唯一请求 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -359,6 +407,18 @@ class Instance extends AbstractModel
 
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
             $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("LatestOperation",$param) and $param["LatestOperation"] !== null) {
+            $this->LatestOperation = $param["LatestOperation"];
+        }
+
+        if (array_key_exists("LatestOperationState",$param) and $param["LatestOperationState"] !== null) {
+            $this->LatestOperationState = $param["LatestOperationState"];
+        }
+
+        if (array_key_exists("LatestOperationRequestId",$param) and $param["LatestOperationRequestId"] !== null) {
+            $this->LatestOperationRequestId = $param["LatestOperationRequestId"];
         }
     }
 }

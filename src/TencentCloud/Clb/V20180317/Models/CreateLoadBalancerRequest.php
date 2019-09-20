@@ -28,8 +28,8 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
 注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
- * @method string getVpcId() 获取负载均衡后端目标设备所属的网络 ID，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
- * @method void setVpcId(string $VpcId) 设置负载均衡后端目标设备所属的网络 ID，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
+ * @method string getVpcId() 获取负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
+ * @method void setVpcId(string $VpcId) 设置负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
  * @method string getSubnetId() 获取在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
  * @method void setSubnetId(string $SubnetId) 设置在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
  * @method integer getProjectId() 获取负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
@@ -75,7 +75,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $LoadBalancerName;
 
     /**
-     * @var string 负载均衡后端目标设备所属的网络 ID，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
+     * @var string 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
      */
     public $VpcId;
 
@@ -130,7 +130,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param integer $Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
      * @param string $LoadBalancerName 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
 注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
-     * @param string $VpcId 负载均衡后端目标设备所属的网络 ID，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
+     * @param string $VpcId 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
      * @param string $SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
      * @param integer $ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
      * @param string $AddressIPVersion 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。

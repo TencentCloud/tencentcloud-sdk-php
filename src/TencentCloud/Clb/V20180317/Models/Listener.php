@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setListenerName(string $ListenerName) 设置监听器的名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取监听器的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置监听器的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -115,6 +119,12 @@ class Listener extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ListenerName;
+
+    /**
+     * @var string 监听器的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
     /**
      * @param string $ListenerId 负载均衡监听器 ID
      * @param string $Protocol 监听器协议
@@ -132,6 +142,8 @@ class Listener extends AbstractModel
      * @param array $Rules 监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ListenerName 监听器的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 监听器的创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -191,6 +203,10 @@ class Listener extends AbstractModel
 
         if (array_key_exists("ListenerName",$param) and $param["ListenerName"] !== null) {
             $this->ListenerName = $param["ListenerName"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcedureTaskId(string $ProcedureTaskId) 设置若视频上传时指定了视频处理流程，则该字段为流程任务 ID。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MediaMetaData getMetaData() 获取元信息。包括大小、时长、视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetaData(MediaMetaData $MetaData) 设置元信息。包括大小、时长、视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -48,10 +52,18 @@ class FileUploadTask extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProcedureTaskId;
+
+    /**
+     * @var MediaMetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MetaData;
     /**
      * @param string $FileId 文件唯一 ID。
      * @param MediaBasicInfo $MediaBasicInfo 上传完成后生成的媒体文件基础信息。
      * @param string $ProcedureTaskId 若视频上传时指定了视频处理流程，则该字段为流程任务 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaMetaData $MetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -77,6 +89,11 @@ class FileUploadTask extends AbstractModel
 
         if (array_key_exists("ProcedureTaskId",$param) and $param["ProcedureTaskId"] !== null) {
             $this->ProcedureTaskId = $param["ProcedureTaskId"];
+        }
+
+        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+            $this->MetaData = new MediaMetaData();
+            $this->MetaData->deserialize($param["MetaData"]);
         }
     }
 }

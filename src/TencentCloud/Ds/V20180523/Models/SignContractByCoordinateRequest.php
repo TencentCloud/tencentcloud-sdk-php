@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPosition(string $Position) 设置授权IP地址
  * @method array getSignLocations() 获取签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
  * @method void setSignLocations(array $SignLocations) 设置签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
- * @method string getSealResId() 获取印章ID
- * @method void setSealResId(string $SealResId) 设置印章ID
+ * @method string getSealResId() 获取签章ID
+ * @method void setSealResId(string $SealResId) 设置签章ID
  * @method integer getCertType() 获取选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
  * @method void setCertType(integer $CertType) 设置选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
  * @method string getImageData() 获取签名图片，base64编码
@@ -81,7 +81,7 @@ class SignContractByCoordinateRequest extends AbstractModel
     public $SignLocations;
 
     /**
-     * @var string 印章ID
+     * @var string 签章ID
      */
     public $SealResId;
 
@@ -102,7 +102,7 @@ class SignContractByCoordinateRequest extends AbstractModel
      * @param string $AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
      * @param string $Position 授权IP地址
      * @param array $SignLocations 签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
-     * @param string $SealResId 印章ID
+     * @param string $SealResId 签章ID
      * @param integer $CertType 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      * @param string $ImageData 签名图片，base64编码
      */

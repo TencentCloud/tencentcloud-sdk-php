@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置目标规则的URL，提供LocationId参数时本参数不生效
  * @method array getTargets() 获取要修改权重的后端服务列表
  * @method void setTargets(array $Targets) 设置要修改权重的后端服务列表
- * @method integer getWeight() 获取后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
- * @method void setWeight(integer $Weight) 设置后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+ * @method integer getWeight() 获取后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+ * @method void setWeight(integer $Weight) 设置后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
  */
 
 /**
@@ -70,7 +70,7 @@ class ModifyTargetWeightRequest extends AbstractModel
     public $Targets;
 
     /**
-     * @var integer 后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+     * @var integer 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
      */
     public $Weight;
     /**
@@ -80,7 +80,7 @@ class ModifyTargetWeightRequest extends AbstractModel
      * @param string $Domain 目标规则的域名，提供LocationId参数时本参数不生效
      * @param string $Url 目标规则的URL，提供LocationId参数时本参数不生效
      * @param array $Targets 要修改权重的后端服务列表
-     * @param integer $Weight 后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+     * @param integer $Weight 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
      */
     function __construct()
     {

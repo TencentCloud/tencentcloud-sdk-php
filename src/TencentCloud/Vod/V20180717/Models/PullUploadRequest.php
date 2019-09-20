@@ -19,9 +19,9 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getMediaUrl() 获取要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.mp4``` ，扩展名为 mp4，支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。</li>
+支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
  * @method void setMediaUrl(string $MediaUrl) 设置要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.mp4``` ，扩展名为 mp4，支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。</li>
+支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
  * @method string getMediaName() 获取媒体名称。
  * @method void setMediaName(string $MediaName) 设置媒体名称。
  * @method string getCoverUrl() 获取要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
@@ -49,7 +49,7 @@ class PullUploadRequest extends AbstractModel
 {
     /**
      * @var string 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.mp4``` ，扩展名为 mp4，支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。</li>
+支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
      */
     public $MediaUrl;
 
@@ -99,7 +99,7 @@ class PullUploadRequest extends AbstractModel
     public $SubAppId;
     /**
      * @param string $MediaUrl 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.mp4``` ，扩展名为 mp4，支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。</li>
+支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
      * @param string $MediaName 媒体名称。
      * @param string $CoverUrl 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
      * @param string $Procedure 媒体后续任务操作，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。

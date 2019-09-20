@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method string getFileId() 获取文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
+ * @method void setFileId(string $FileId) 设置文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
  * @method string getSegmentUrl() 获取视频拆条片段 Url。
  * @method void setSegmentUrl(string $SegmentUrl) 设置视频拆条片段 Url。
  * @method float getConfidence() 获取拆条片段置信度。取值：0~100。
@@ -37,6 +39,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class AiRecognitionTaskSegmentSegmentItem extends AbstractModel
 {
+    /**
+     * @var string 文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
+     */
+    public $FileId;
+
     /**
      * @var string 视频拆条片段 Url。
      */
@@ -67,6 +74,7 @@ class AiRecognitionTaskSegmentSegmentItem extends AbstractModel
      */
     public $SpecialInfo;
     /**
+     * @param string $FileId 文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
      * @param string $SegmentUrl 视频拆条片段 Url。
      * @param float $Confidence 拆条片段置信度。取值：0~100。
      * @param float $StartTimeOffset 拆条片段起始的偏移时间，单位：秒。
@@ -86,6 +94,10 @@ class AiRecognitionTaskSegmentSegmentItem extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
+        }
+
         if (array_key_exists("SegmentUrl",$param) and $param["SegmentUrl"] !== null) {
             $this->SegmentUrl = $param["SegmentUrl"];
         }

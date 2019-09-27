@@ -46,12 +46,14 @@ use TencentCloud\Common\AbstractModel;
 <li>10：实例迁移中</li>
 <li>11：只读</li>
 <li>12：重启中</li>
- * @method integer getOffset() 获取偏移量，默认为 0
- * @method void setOffset(integer $Offset) 设置偏移量，默认为 0
- * @method integer getLimit() 获取返回数量，默认为50
- * @method void setLimit(integer $Limit) 设置返回数量，默认为50
+ * @method integer getOffset() 获取页数，默认为 0
+ * @method void setOffset(integer $Offset) 设置页数，默认为 0
+ * @method integer getLimit() 获取页大小，默认为50
+ * @method void setLimit(integer $Limit) 设置页大小，默认为50
  * @method array getInstanceIdSet() 获取一个或者多个实例ID。实例ID，格式如：mssql-si2823jyl
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置一个或者多个实例ID。实例ID，格式如：mssql-si2823jyl
+ * @method integer getPayMode() 获取付费类型检索 1-包年包月，0-按量计费
+ * @method void setPayMode(integer $PayMode) 设置付费类型检索 1-包年包月，0-按量计费
  */
 
 /**
@@ -82,12 +84,12 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 偏移量，默认为 0
+     * @var integer 页数，默认为 0
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为50
+     * @var integer 页大小，默认为50
      */
     public $Limit;
 
@@ -95,6 +97,11 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @var array 一个或者多个实例ID。实例ID，格式如：mssql-si2823jyl
      */
     public $InstanceIdSet;
+
+    /**
+     * @var integer 付费类型检索 1-包年包月，0-按量计费
+     */
+    public $PayMode;
     /**
      * @param integer $ProjectId 项目ID
      * @param integer $Status 实例状态。取值范围：
@@ -110,9 +117,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 <li>10：实例迁移中</li>
 <li>11：只读</li>
 <li>12：重启中</li>
-     * @param integer $Offset 偏移量，默认为 0
-     * @param integer $Limit 返回数量，默认为50
+     * @param integer $Offset 页数，默认为 0
+     * @param integer $Limit 页大小，默认为50
      * @param array $InstanceIdSet 一个或者多个实例ID。实例ID，格式如：mssql-si2823jyl
+     * @param integer $PayMode 付费类型检索 1-包年包月，0-按量计费
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("InstanceIdSet",$param) and $param["InstanceIdSet"] !== null) {
             $this->InstanceIdSet = $param["InstanceIdSet"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
         }
     }
 }

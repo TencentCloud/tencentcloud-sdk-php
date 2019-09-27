@@ -20,6 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getRealTotalCost() 获取总花费
  * @method void setRealTotalCost(string $RealTotalCost) 设置总花费
+ * @method string getVoucherPayAmount() 获取代金券金额
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置代金券金额
+ * @method string getIncentivePayAmount() 获取赠送金金额
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送金金额
+ * @method string getCashPayAmount() 获取现金金额
+ * @method void setCashPayAmount(string $CashPayAmount) 设置现金金额
  */
 
 /**
@@ -31,8 +37,26 @@ class BusinessSummaryTotal extends AbstractModel
      * @var string 总花费
      */
     public $RealTotalCost;
+
+    /**
+     * @var string 代金券金额
+     */
+    public $VoucherPayAmount;
+
+    /**
+     * @var string 赠送金金额
+     */
+    public $IncentivePayAmount;
+
+    /**
+     * @var string 现金金额
+     */
+    public $CashPayAmount;
     /**
      * @param string $RealTotalCost 总花费
+     * @param string $VoucherPayAmount 代金券金额
+     * @param string $IncentivePayAmount 赠送金金额
+     * @param string $CashPayAmount 现金金额
      */
     function __construct()
     {
@@ -48,6 +72,18 @@ class BusinessSummaryTotal extends AbstractModel
         }
         if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
             $this->RealTotalCost = $param["RealTotalCost"];
+        }
+
+        if (array_key_exists("VoucherPayAmount",$param) and $param["VoucherPayAmount"] !== null) {
+            $this->VoucherPayAmount = $param["VoucherPayAmount"];
+        }
+
+        if (array_key_exists("IncentivePayAmount",$param) and $param["IncentivePayAmount"] !== null) {
+            $this->IncentivePayAmount = $param["IncentivePayAmount"];
+        }
+
+        if (array_key_exists("CashPayAmount",$param) and $param["CashPayAmount"] !== null) {
+            $this->CashPayAmount = $param["CashPayAmount"];
         }
     }
 }

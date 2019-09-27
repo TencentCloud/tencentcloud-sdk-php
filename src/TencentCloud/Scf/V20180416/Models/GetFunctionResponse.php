@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessInfo(AccessInfo $AccessInfo) 设置域名信息
  * @method string getType() 获取函数类型，取值为HTTP或者Event
  * @method void setType(string $Type) 设置函数类型，取值为HTTP或者Event
+ * @method string getL5Enable() 获取是否启用L5
+ * @method void setL5Enable(string $L5Enable) 设置是否启用L5
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -231,6 +233,11 @@ class GetFunctionResponse extends AbstractModel
     public $Type;
 
     /**
+     * @var string 是否启用L5
+     */
+    public $L5Enable;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -264,6 +271,7 @@ class GetFunctionResponse extends AbstractModel
      * @param EipOutConfig $EipConfig EipConfig配置
      * @param AccessInfo $AccessInfo 域名信息
      * @param string $Type 函数类型，取值为HTTP或者Event
+     * @param string $L5Enable 是否启用L5
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -406,6 +414,10 @@ class GetFunctionResponse extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("L5Enable",$param) and $param["L5Enable"] !== null) {
+            $this->L5Enable = $param["L5Enable"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

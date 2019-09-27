@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternalAddr(string $InternalAddr) 设置内网下载地址
  * @method string getExternalAddr() 获取外网下载地址
  * @method void setExternalAddr(string $ExternalAddr) 设置外网下载地址
+ * @method integer getStatus() 获取状态（1成功 2失败）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置状态（1成功 2失败）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -73,6 +77,12 @@ class SlowlogInfo extends AbstractModel
      * @var string 外网下载地址
      */
     public $ExternalAddr;
+
+    /**
+     * @var integer 状态（1成功 2失败）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
     /**
      * @param integer $Id 慢查询日志文件唯一标识
      * @param string $StartTime 文件生成的开始时间
@@ -81,6 +91,8 @@ class SlowlogInfo extends AbstractModel
      * @param integer $Count 文件中log条数
      * @param string $InternalAddr 内网下载地址
      * @param string $ExternalAddr 外网下载地址
+     * @param integer $Status 状态（1成功 2失败）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +132,10 @@ class SlowlogInfo extends AbstractModel
 
         if (array_key_exists("ExternalAddr",$param) and $param["ExternalAddr"] !== null) {
             $this->ExternalAddr = $param["ExternalAddr"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

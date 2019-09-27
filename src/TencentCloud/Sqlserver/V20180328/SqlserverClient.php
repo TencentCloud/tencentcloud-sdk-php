@@ -60,6 +60,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
 * @method Models\RestoreInstanceResponse RestoreInstance(Models\RestoreInstanceRequest $req) 本接口（RestoreInstance）用于根据备份文件恢复实例。
 * @method Models\RollbackInstanceResponse RollbackInstance(Models\RollbackInstanceRequest $req) 本接口（RollbackInstance）用于回档实例
 * @method Models\RunMigrationResponse RunMigration(Models\RunMigrationRequest $req) 本接口（RunMigration）用于启动迁移任务，开始迁移
+* @method Models\TerminateDBInstanceResponse TerminateDBInstance(Models\TerminateDBInstanceRequest $req) 本接口(TerminateDBInstance)用于主动销毁按量计费实例。
 * @method Models\UpgradeDBInstanceResponse UpgradeDBInstance(Models\UpgradeDBInstanceRequest $req) 本接口（UpgradeDBInstance）用于升级实例
  */
 

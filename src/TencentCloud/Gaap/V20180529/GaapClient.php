@@ -34,7 +34,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
 该接口仅支持version3.0的通道。
 * @method Models\CreateHTTPListenerResponse CreateHTTPListener(Models\CreateHTTPListenerRequest $req) 该接口（CreateHTTPListener）用于在通道实例下创建HTTP协议类型的监听器。
 * @method Models\CreateHTTPSListenerResponse CreateHTTPSListener(Models\CreateHTTPSListenerRequest $req) 该接口（CreateHTTPSListener）用于在通道实例下创建HTTPS协议类型的监听器。
-* @method Models\CreateProxyResponse CreateProxy(Models\CreateProxyRequest $req) 本接口（CreateProxy）用于创建一个指定配置的加速通道。
+* @method Models\CreateProxyResponse CreateProxy(Models\CreateProxyRequest $req) 本接口（CreateProxy）用于创建/复制一个指定配置的加速通道。当复制通道时，需要设置新通道的基本配置参数，并设置ClonedProxyId来指定被复制的通道。
 * @method Models\CreateProxyGroupResponse CreateProxyGroup(Models\CreateProxyGroupRequest $req) 本接口（CreateProxyGroup）用于创建通道组。
 * @method Models\CreateProxyGroupDomainResponse CreateProxyGroupDomain(Models\CreateProxyGroupDomainRequest $req) 本接口（CreateProxyGroupDomain）用于创建通道组域名，并开启域名解析。
 * @method Models\CreateRuleResponse CreateRule(Models\CreateRuleRequest $req) 该接口（CreateRule）用于创建HTTP/HTTPS监听器转发规则。
@@ -60,7 +60,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
 * @method Models\DescribeHTTPListenersResponse DescribeHTTPListeners(Models\DescribeHTTPListenersRequest $req) 该接口（DescribeHTTPListeners）用来查询HTTP监听器信息。
 * @method Models\DescribeHTTPSListenersResponse DescribeHTTPSListeners(Models\DescribeHTTPSListenersRequest $req) 本接口（DescribeHTTPSListeners）用来查询HTTPS监听器信息。
 * @method Models\DescribeListenerRealServersResponse DescribeListenerRealServers(Models\DescribeListenerRealServersRequest $req) 该接口（DescribeListenerRealServers）用于查询TCP/UDP监听器源站列表，包括该监听器已经绑定的源站列表以及可以绑定的源站列表。
-* @method Models\DescribeListenerStatisticsResponse DescribeListenerStatistics(Models\DescribeListenerStatisticsRequest $req) 该接口用于查询监听器统计数据，包括出入带宽，出入包量，并发数据。支持300, 3600和86400的细粒度，取值为细粒度范围内最大值。
+* @method Models\DescribeListenerStatisticsResponse DescribeListenerStatistics(Models\DescribeListenerStatisticsRequest $req) 该接口用于查询监听器统计数据，包括出入带宽，出入包量，并发数据。支持300秒, 3600秒和86400秒的细粒度，取值为细粒度范围内最大值。
 * @method Models\DescribeProxiesResponse DescribeProxies(Models\DescribeProxiesRequest $req) 本接口（DescribeProxies）用于查询通道实例列表。
 * @method Models\DescribeProxiesStatusResponse DescribeProxiesStatus(Models\DescribeProxiesStatusRequest $req) 本接口（DescribeProxiesStatus）用于查询通道状态列表。
 * @method Models\DescribeProxyAndStatisticsListenersResponse DescribeProxyAndStatisticsListeners(Models\DescribeProxyAndStatisticsListenersRequest $req) 该接口为内部接口，用于查询可以获取统计数据的通道和监听器信息

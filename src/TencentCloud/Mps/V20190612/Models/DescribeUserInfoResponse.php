@@ -29,11 +29,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPaymentType() 获取用户付费类型，取值：
 <li>DailyPayment：日结付费 ；</li>
 <li>MonthlyPayment：月结付费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPaymentType(string $PaymentType) 设置用户付费类型，取值：
 <li>DailyPayment：日结付费 ；</li>
 <li>MonthlyPayment：月结付费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOldMpsUser() 获取是否是旧版视频处理用户，取值：
+<li>0：否 ；</li>
+<li>1：是。</li>
+ * @method void setOldMpsUser(integer $OldMpsUser) 设置是否是旧版视频处理用户，取值：
+<li>0：否 ；</li>
+<li>1：是。</li>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -55,9 +59,15 @@ class DescribeUserInfoResponse extends AbstractModel
      * @var string 用户付费类型，取值：
 <li>DailyPayment：日结付费 ；</li>
 <li>MonthlyPayment：月结付费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PaymentType;
+
+    /**
+     * @var integer 是否是旧版视频处理用户，取值：
+<li>0：否 ；</li>
+<li>1：是。</li>
+     */
+    public $OldMpsUser;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -71,7 +81,9 @@ class DescribeUserInfoResponse extends AbstractModel
      * @param string $PaymentType 用户付费类型，取值：
 <li>DailyPayment：日结付费 ；</li>
 <li>MonthlyPayment：月结付费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OldMpsUser 是否是旧版视频处理用户，取值：
+<li>0：否 ；</li>
+<li>1：是。</li>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +104,10 @@ class DescribeUserInfoResponse extends AbstractModel
 
         if (array_key_exists("PaymentType",$param) and $param["PaymentType"] !== null) {
             $this->PaymentType = $param["PaymentType"];
+        }
+
+        if (array_key_exists("OldMpsUser",$param) and $param["OldMpsUser"] !== null) {
+            $this->OldMpsUser = $param["OldMpsUser"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

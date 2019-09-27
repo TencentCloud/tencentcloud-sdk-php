@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置内存大小，单位：GB
  * @method integer getStorage() 获取实例容量大小，单位：GB。
  * @method void setStorage(integer $Storage) 设置实例容量大小，单位：GB。
- * @method string getInstanceChargeType() 获取计费类型，当前只支持预付费，即包年包月，取值为PREPAID。默认值为PREPAID
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置计费类型，当前只支持预付费，即包年包月，取值为PREPAID。默认值为PREPAID
+ * @method string getInstanceChargeType() 获取计费类型，取值支持 PREPAID，POSTPAID。
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置计费类型，取值支持 PREPAID，POSTPAID。
  * @method integer getPeriod() 获取购买时长，单位：月。取值为1到48，默认为1
  * @method void setPeriod(integer $Period) 设置购买时长，单位：月。取值为1到48，默认为1
  * @method integer getGoodsNum() 获取一次性购买的实例数量。取值1-100，默认取值为1
  * @method void setGoodsNum(integer $GoodsNum) 设置一次性购买的实例数量。取值1-100，默认取值为1
- * @method string getDBVersion() 获取sqlserver版本，目前只支持：2008R2（SQL Server 2008 R2），2012SP3（SQL Server 2012），2016SP1（SQL Server 2016 SP1）两种版本。默认为2008R2版本
- * @method void setDBVersion(string $DBVersion) 设置sqlserver版本，目前只支持：2008R2（SQL Server 2008 R2），2012SP3（SQL Server 2012），2016SP1（SQL Server 2016 SP1）两种版本。默认为2008R2版本
+ * @method string getDBVersion() 获取sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。默认为2008R2版本
+ * @method void setDBVersion(string $DBVersion) 设置sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。默认为2008R2版本
  */
 
 /**
@@ -55,7 +55,7 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
     public $Storage;
 
     /**
-     * @var string 计费类型，当前只支持预付费，即包年包月，取值为PREPAID。默认值为PREPAID
+     * @var string 计费类型，取值支持 PREPAID，POSTPAID。
      */
     public $InstanceChargeType;
 
@@ -70,17 +70,17 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
     public $GoodsNum;
 
     /**
-     * @var string sqlserver版本，目前只支持：2008R2（SQL Server 2008 R2），2012SP3（SQL Server 2012），2016SP1（SQL Server 2016 SP1）两种版本。默认为2008R2版本
+     * @var string sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。默认为2008R2版本
      */
     public $DBVersion;
     /**
      * @param string $Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
      * @param integer $Memory 内存大小，单位：GB
      * @param integer $Storage 实例容量大小，单位：GB。
-     * @param string $InstanceChargeType 计费类型，当前只支持预付费，即包年包月，取值为PREPAID。默认值为PREPAID
+     * @param string $InstanceChargeType 计费类型，取值支持 PREPAID，POSTPAID。
      * @param integer $Period 购买时长，单位：月。取值为1到48，默认为1
      * @param integer $GoodsNum 一次性购买的实例数量。取值1-100，默认取值为1
-     * @param string $DBVersion sqlserver版本，目前只支持：2008R2（SQL Server 2008 R2），2012SP3（SQL Server 2012），2016SP1（SQL Server 2016 SP1）两种版本。默认为2008R2版本
+     * @param string $DBVersion sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。默认为2008R2版本
      */
     function __construct()
     {

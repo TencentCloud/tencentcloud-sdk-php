@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealTotalCostRatio(string $RealTotalCostRatio) 设置费用所占百分比，两位小数
  * @method array getDetail() 获取按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
  * @method void setDetail(array $Detail) 设置按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
+ * @method string getCashPayAmount() 获取现金金额
+ * @method void setCashPayAmount(string $CashPayAmount) 设置现金金额
+ * @method string getIncentivePayAmount() 获取赠送金金额
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送金金额
+ * @method string getVoucherPayAmount() 获取代金券金额
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置代金券金额
  */
 
 /**
@@ -59,12 +65,30 @@ class PayModeSummaryOverviewItem extends AbstractModel
      * @var array 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
      */
     public $Detail;
+
+    /**
+     * @var string 现金金额
+     */
+    public $CashPayAmount;
+
+    /**
+     * @var string 赠送金金额
+     */
+    public $IncentivePayAmount;
+
+    /**
+     * @var string 代金券金额
+     */
+    public $VoucherPayAmount;
     /**
      * @param string $PayMode 付费模式
      * @param string $PayModeName 付费模式名称
      * @param string $RealTotalCost 实际花费
      * @param string $RealTotalCostRatio 费用所占百分比，两位小数
      * @param array $Detail 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
+     * @param string $CashPayAmount 现金金额
+     * @param string $IncentivePayAmount 赠送金金额
+     * @param string $VoucherPayAmount 代金券金额
      */
     function __construct()
     {
@@ -101,6 +125,18 @@ class PayModeSummaryOverviewItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Detail, $obj);
             }
+        }
+
+        if (array_key_exists("CashPayAmount",$param) and $param["CashPayAmount"] !== null) {
+            $this->CashPayAmount = $param["CashPayAmount"];
+        }
+
+        if (array_key_exists("IncentivePayAmount",$param) and $param["IncentivePayAmount"] !== null) {
+            $this->IncentivePayAmount = $param["IncentivePayAmount"];
+        }
+
+        if (array_key_exists("VoucherPayAmount",$param) and $param["VoucherPayAmount"] !== null) {
+            $this->VoucherPayAmount = $param["VoucherPayAmount"];
         }
     }
 }

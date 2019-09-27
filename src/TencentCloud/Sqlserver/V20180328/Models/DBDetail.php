@@ -18,8 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取实例id
- * @method void setName(string $Name) 设置实例id
+ * @method string getName() 获取数据库名称
+ * @method void setName(string $Name) 设置数据库名称
  * @method string getCharset() 获取字符集
  * @method void setCharset(string $Charset) 设置字符集
  * @method string getRemark() 获取备注
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DBDetail extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string 数据库名称
      */
     public $Name;
 
@@ -74,7 +74,7 @@ class DBDetail extends AbstractModel
      */
     public $InternalStatus;
     /**
-     * @param string $Name 实例id
+     * @param string $Name 数据库名称
      * @param string $Charset 字符集
      * @param string $Remark 备注
      * @param string $CreateTime 数据库创建时间

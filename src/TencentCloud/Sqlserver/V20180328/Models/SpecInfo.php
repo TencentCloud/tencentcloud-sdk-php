@@ -40,8 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQPS(integer $QPS) 设置此规格对应的QPS大小
  * @method string getSuitInfo() 获取此规格的中文描述信息
  * @method void setSuitInfo(string $SuitInfo) 设置此规格的中文描述信息
- * @method integer getPid() 获取此规格对应的Pid
- * @method void setPid(integer $Pid) 设置此规格对应的Pid
+ * @method integer getPid() 获取此规格对应的包年包月Pid
+ * @method void setPid(integer $Pid) 设置此规格对应的包年包月Pid
+ * @method array getPostPid() 获取此规格对应的按量计费Pid列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPostPid(array $PostPid) 设置此规格对应的按量计费Pid列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayModeStatus() 获取此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
+ * @method void setPayModeStatus(string $PayModeStatus) 设置此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
  */
 
 /**
@@ -105,9 +111,20 @@ class SpecInfo extends AbstractModel
     public $SuitInfo;
 
     /**
-     * @var integer 此规格对应的Pid
+     * @var integer 此规格对应的包年包月Pid
      */
     public $Pid;
+
+    /**
+     * @var array 此规格对应的按量计费Pid列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PostPid;
+
+    /**
+     * @var string 此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
+     */
+    public $PayModeStatus;
     /**
      * @param integer $SpecId 实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例
      * @param string $MachineType 机型ID
@@ -120,7 +137,10 @@ class SpecInfo extends AbstractModel
      * @param integer $MaxStorage 此规格下最大的磁盘大小，单位GB
      * @param integer $QPS 此规格对应的QPS大小
      * @param string $SuitInfo 此规格的中文描述信息
-     * @param integer $Pid 此规格对应的Pid
+     * @param integer $Pid 此规格对应的包年包月Pid
+     * @param array $PostPid 此规格对应的按量计费Pid列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PayModeStatus 此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
      */
     function __construct()
     {
@@ -180,6 +200,14 @@ class SpecInfo extends AbstractModel
 
         if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
             $this->Pid = $param["Pid"];
+        }
+
+        if (array_key_exists("PostPid",$param) and $param["PostPid"] !== null) {
+            $this->PostPid = $param["PostPid"];
+        }
+
+        if (array_key_exists("PayModeStatus",$param) and $param["PayModeStatus"] !== null) {
+            $this->PayModeStatus = $param["PayModeStatus"];
         }
     }
 }

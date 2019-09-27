@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputDir(string $OutputDir) 设置视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致，即`{inputDir}`。
  * @method MediaProcessTaskInput getMediaProcessTask() 获取视频处理类型任务参数。
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) 设置视频处理类型任务参数。
- * @method integer getTaskPriority() 获取任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
- * @method void setTaskPriority(integer $TaskPriority) 设置任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+ * @method integer getTaskPriority() 获取工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+ * @method void setTaskPriority(integer $TaskPriority) 设置工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知信息，不填代表不获取事件通知。
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知信息，不填代表不获取事件通知。
  */
@@ -72,7 +72,7 @@ class ResetWorkflowRequest extends AbstractModel
     public $MediaProcessTask;
 
     /**
-     * @var integer 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * @var integer 工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      */
     public $TaskPriority;
 
@@ -87,7 +87,7 @@ class ResetWorkflowRequest extends AbstractModel
      * @param TaskOutputStorage $OutputStorage 视频处理的文件输出配置。不填则继承 Trigger 中的存储位置。
      * @param string $OutputDir 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致，即`{inputDir}`。
      * @param MediaProcessTaskInput $MediaProcessTask 视频处理类型任务参数。
-     * @param integer $TaskPriority 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * @param integer $TaskPriority 工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      */
     function __construct()

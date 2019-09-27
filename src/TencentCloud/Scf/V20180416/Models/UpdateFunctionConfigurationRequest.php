@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClsTopicId(string $ClsTopicId) 设置日志投递到的cls Topic ID
  * @method string getPublish() 获取在更新时是否同步发布新版本，默认为：FALSE，不发布
  * @method void setPublish(string $Publish) 设置在更新时是否同步发布新版本，默认为：FALSE，不发布
+ * @method string getL5Enable() 获取是否开启L5访问能力，TRUE 为开启，FALSE为关闭
+ * @method void setL5Enable(string $L5Enable) 设置是否开启L5访问能力，TRUE 为开启，FALSE为关闭
  */
 
 /**
@@ -108,6 +110,11 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @var string 在更新时是否同步发布新版本，默认为：FALSE，不发布
      */
     public $Publish;
+
+    /**
+     * @var string 是否开启L5访问能力，TRUE 为开启，FALSE为关闭
+     */
+    public $L5Enable;
     /**
      * @param string $FunctionName 要修改的函数名称
      * @param string $Description 函数描述。最大支持 1000 个英文字母、数字、空格、逗号和英文句号，支持中文
@@ -121,6 +128,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param string $ClsLogsetId 日志投递到的cls日志集ID
      * @param string $ClsTopicId 日志投递到的cls Topic ID
      * @param string $Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
+     * @param string $L5Enable 是否开启L5访问能力，TRUE 为开启，FALSE为关闭
      */
     function __construct()
     {
@@ -182,6 +190,10 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
 
         if (array_key_exists("Publish",$param) and $param["Publish"] !== null) {
             $this->Publish = $param["Publish"];
+        }
+
+        if (array_key_exists("L5Enable",$param) and $param["L5Enable"] !== null) {
+            $this->L5Enable = $param["L5Enable"];
         }
     }
 }

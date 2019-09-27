@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置实例内存大小，单位GB
  * @method integer getStorage() 获取实例磁盘大小，单位GB
  * @method void setStorage(integer $Storage) 设置实例磁盘大小，单位GB
- * @method string getInstanceChargeType() 获取付费模式，目前只支持预付费，其值为PREPAID。可不填，默认值为PREPAID
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置付费模式，目前只支持预付费，其值为PREPAID。可不填，默认值为PREPAID
+ * @method string getInstanceChargeType() 获取付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method integer getGoodsNum() 获取本次购买几个实例，默认值为1。取值不超过10
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券；1 - 是，0 - 否，默认不使用
  * @method array getVoucherIds() 获取代金券ID数组，目前单个订单只能使用一张
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID数组，目前单个订单只能使用一张
- * @method string getDBVersion() 获取数据库版本号，目前取值有2012SP3，表示SQL Server 2012；2008R2，表示SQL Server 2008 R2；2016SP1，表示SQL Server 2016 SP1。每个地域支持售卖的版本可能不一样，可以通过DescribeZones接口来拉取每个地域可售卖的版本信息。不填的话，默认为版本2008R2
- * @method void setDBVersion(string $DBVersion) 设置数据库版本号，目前取值有2012SP3，表示SQL Server 2012；2008R2，表示SQL Server 2008 R2；2016SP1，表示SQL Server 2016 SP1。每个地域支持售卖的版本可能不一样，可以通过DescribeZones接口来拉取每个地域可售卖的版本信息。不填的话，默认为版本2008R2
+ * @method string getDBVersion() 获取sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。
+ * @method void setDBVersion(string $DBVersion) 设置sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。
  */
 
 /**
@@ -65,7 +65,7 @@ class CreateDBInstancesRequest extends AbstractModel
     public $Storage;
 
     /**
-     * @var string 付费模式，目前只支持预付费，其值为PREPAID。可不填，默认值为PREPAID
+     * @var string 付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
      */
     public $InstanceChargeType;
 
@@ -105,14 +105,14 @@ class CreateDBInstancesRequest extends AbstractModel
     public $VoucherIds;
 
     /**
-     * @var string 数据库版本号，目前取值有2012SP3，表示SQL Server 2012；2008R2，表示SQL Server 2008 R2；2016SP1，表示SQL Server 2016 SP1。每个地域支持售卖的版本可能不一样，可以通过DescribeZones接口来拉取每个地域可售卖的版本信息。不填的话，默认为版本2008R2
+     * @var string sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。
      */
     public $DBVersion;
     /**
      * @param string $Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      * @param integer $Memory 实例内存大小，单位GB
      * @param integer $Storage 实例磁盘大小，单位GB
-     * @param string $InstanceChargeType 付费模式，目前只支持预付费，其值为PREPAID。可不填，默认值为PREPAID
+     * @param string $InstanceChargeType 付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
      * @param integer $ProjectId 项目ID
      * @param integer $GoodsNum 本次购买几个实例，默认值为1。取值不超过10
      * @param string $SubnetId VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置
@@ -120,7 +120,7 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param integer $Period 购买实例周期，默认取值为1，表示一个月。取值不超过48
      * @param integer $AutoVoucher 是否自动使用代金券；1 - 是，0 - 否，默认不使用
      * @param array $VoucherIds 代金券ID数组，目前单个订单只能使用一张
-     * @param string $DBVersion 数据库版本号，目前取值有2012SP3，表示SQL Server 2012；2008R2，表示SQL Server 2008 R2；2016SP1，表示SQL Server 2016 SP1。每个地域支持售卖的版本可能不一样，可以通过DescribeZones接口来拉取每个地域可售卖的版本信息。不填的话，默认为版本2008R2
+     * @param string $DBVersion sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。
      */
     function __construct()
     {

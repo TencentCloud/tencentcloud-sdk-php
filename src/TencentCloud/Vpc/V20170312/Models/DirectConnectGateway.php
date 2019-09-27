@@ -58,6 +58,8 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
 <li>`STATIC` - 静态，即用户配置。</li>
  * @method boolean getEnableBGP() 获取是否启用BGP。
  * @method void setEnableBGP(boolean $EnableBGP) 设置是否启用BGP。
+ * @method boolean getEnableBGPCommunity() 获取开启和关闭BGP的community属性。
+ * @method void setEnableBGPCommunity(boolean $EnableBGPCommunity) 设置开启和关闭BGP的community属性。
  */
 
 /**
@@ -128,6 +130,11 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
      * @var boolean 是否启用BGP。
      */
     public $EnableBGP;
+
+    /**
+     * @var boolean 开启和关闭BGP的community属性。
+     */
+    public $EnableBGPCommunity;
     /**
      * @param string $DirectConnectGatewayId 专线网关`ID`。
      * @param string $DirectConnectGatewayName 专线网关名称。
@@ -149,6 +156,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
 <li>`BGP` - 自动学习。</li>
 <li>`STATIC` - 静态，即用户配置。</li>
      * @param boolean $EnableBGP 是否启用BGP。
+     * @param boolean $EnableBGPCommunity 开启和关闭BGP的community属性。
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
 
         if (array_key_exists("EnableBGP",$param) and $param["EnableBGP"] !== null) {
             $this->EnableBGP = $param["EnableBGP"];
+        }
+
+        if (array_key_exists("EnableBGPCommunity",$param) and $param["EnableBGPCommunity"] !== null) {
+            $this->EnableBGPCommunity = $param["EnableBGPCommunity"];
         }
     }
 }

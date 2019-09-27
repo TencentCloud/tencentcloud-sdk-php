@@ -66,10 +66,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceTags(array $InstanceTags) 设置标签列表。
  * @method integer getVersionNumber() 获取版本号。
  * @method void setVersionNumber(integer $VersionNumber) 设置版本号。
- * @method string getUpdatedTime() 获取更新时间
- * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间
+ * @method string getUpdatedTime() 获取更新时间。
+ * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间。
  * @method string getCamRoleName() 获取CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
  * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+ * @method string getLastOperationInstanceTypesCheckPolicy() 获取上次操作时，InstanceTypesCheckPolicy 取值。
+ * @method void setLastOperationInstanceTypesCheckPolicy(string $LastOperationInstanceTypesCheckPolicy) 设置上次操作时，InstanceTypesCheckPolicy 取值。
  */
 
 /**
@@ -182,7 +184,7 @@ class LaunchConfiguration extends AbstractModel
     public $VersionNumber;
 
     /**
-     * @var string 更新时间
+     * @var string 更新时间。
      */
     public $UpdatedTime;
 
@@ -190,6 +192,11 @@ class LaunchConfiguration extends AbstractModel
      * @var string CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
      */
     public $CamRoleName;
+
+    /**
+     * @var string 上次操作时，InstanceTypesCheckPolicy 取值。
+     */
+    public $LastOperationInstanceTypesCheckPolicy;
     /**
      * @param integer $ProjectId 实例所属项目ID。
      * @param string $LaunchConfigurationId 启动配置ID。
@@ -215,8 +222,9 @@ class LaunchConfiguration extends AbstractModel
      * @param array $InstanceTypes 实例机型列表。
      * @param array $InstanceTags 标签列表。
      * @param integer $VersionNumber 版本号。
-     * @param string $UpdatedTime 更新时间
+     * @param string $UpdatedTime 更新时间。
      * @param string $CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * @param string $LastOperationInstanceTypesCheckPolicy 上次操作时，InstanceTypesCheckPolicy 取值。
      */
     function __construct()
     {
@@ -336,6 +344,10 @@ class LaunchConfiguration extends AbstractModel
 
         if (array_key_exists("CamRoleName",$param) and $param["CamRoleName"] !== null) {
             $this->CamRoleName = $param["CamRoleName"];
+        }
+
+        if (array_key_exists("LastOperationInstanceTypesCheckPolicy",$param) and $param["LastOperationInstanceTypesCheckPolicy"] !== null) {
+            $this->LastOperationInstanceTypesCheckPolicy = $param["LastOperationInstanceTypesCheckPolicy"];
         }
     }
 }

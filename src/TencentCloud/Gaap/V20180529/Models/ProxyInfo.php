@@ -46,6 +46,7 @@ CLOSED，已关闭；
 ADJUSTING，配置变更中；
 ISOLATING，隔离中（欠费触发）；
 ISOLATED，已隔离（欠费触发）；
+CLONING，复制中；
 UNKNOWN，未知状态。
  * @method void setStatus(string $Status) 设置通道状态。其中：
 RUNNING，运行中；
@@ -57,6 +58,7 @@ CLOSED，已关闭；
 ADJUSTING，配置变更中；
 ISOLATING，隔离中（欠费触发）；
 ISOLATED，已隔离（欠费触发）；
+CLONING，复制中；
 UNKNOWN，未知状态。
  * @method string getDomain() 获取接入域名。
  * @method void setDomain(string $Domain) 设置接入域名。
@@ -153,6 +155,7 @@ CLOSED，已关闭；
 ADJUSTING，配置变更中；
 ISOLATING，隔离中（欠费触发）；
 ISOLATED，已隔离（欠费触发）；
+CLONING，复制中；
 UNKNOWN，未知状态。
      */
     public $Status;
@@ -242,6 +245,7 @@ CLOSED，已关闭；
 ADJUSTING，配置变更中；
 ISOLATING，隔离中（欠费触发）；
 ISOLATED，已隔离（欠费触发）；
+CLONING，复制中；
 UNKNOWN，未知状态。
      * @param string $Domain 接入域名。
      * @param string $IP 接入IP。

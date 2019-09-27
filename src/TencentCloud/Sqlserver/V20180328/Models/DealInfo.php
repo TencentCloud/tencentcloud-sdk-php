@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
  * @method string getOwnerUin() 获取所属账号
  * @method void setOwnerUin(string $OwnerUin) 设置所属账号
+ * @method string getInstanceChargeType() 获取实例付费类型
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例付费类型
  */
 
 /**
@@ -59,12 +61,18 @@ class DealInfo extends AbstractModel
      * @var string 所属账号
      */
     public $OwnerUin;
+
+    /**
+     * @var string 实例付费类型
+     */
+    public $InstanceChargeType;
     /**
      * @param string $DealName 订单名
      * @param integer $Count 商品数量
      * @param integer $FlowId 关联的流程 Id，可用于查询流程执行状态
      * @param array $InstanceIdSet 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
      * @param string $OwnerUin 所属账号
+     * @param string $InstanceChargeType 实例付费类型
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DealInfo extends AbstractModel
 
         if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
             $this->OwnerUin = $param["OwnerUin"];
+        }
+
+        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
+            $this->InstanceChargeType = $param["InstanceChargeType"];
         }
     }
 }

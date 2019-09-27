@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置通道所在的通道组ID，当在通道组中创建通道时必带，否则忽略该字段。
  * @method array getTagSet() 获取通道需要添加的标签列表。
  * @method void setTagSet(array $TagSet) 设置通道需要添加的标签列表。
+ * @method string getClonedProxyId() 获取被复制的通道ID。只有处于运行中状态的通道可以被复制。
+当设置该参数时，表示复制该通道。
+ * @method void setClonedProxyId(string $ClonedProxyId) 设置被复制的通道ID。只有处于运行中状态的通道可以被复制。
+当设置该参数时，表示复制该通道。
  */
 
 /**
@@ -90,6 +94,12 @@ class CreateProxyRequest extends AbstractModel
      * @var array 通道需要添加的标签列表。
      */
     public $TagSet;
+
+    /**
+     * @var string 被复制的通道ID。只有处于运行中状态的通道可以被复制。
+当设置该参数时，表示复制该通道。
+     */
+    public $ClonedProxyId;
     /**
      * @param integer $ProjectId 通道的项目ID。
      * @param string $ProxyName 通道名称。
@@ -101,6 +111,8 @@ class CreateProxyRequest extends AbstractModel
 更多详细信息请参阅：如何保证幂等性。
      * @param string $GroupId 通道所在的通道组ID，当在通道组中创建通道时必带，否则忽略该字段。
      * @param array $TagSet 通道需要添加的标签列表。
+     * @param string $ClonedProxyId 被复制的通道ID。只有处于运行中状态的通道可以被复制。
+当设置该参数时，表示复制该通道。
      */
     function __construct()
     {
@@ -153,6 +165,10 @@ class CreateProxyRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("ClonedProxyId",$param) and $param["ClonedProxyId"] !== null) {
+            $this->ClonedProxyId = $param["ClonedProxyId"];
         }
     }
 }

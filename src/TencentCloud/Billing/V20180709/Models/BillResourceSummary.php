@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getBusinessCodeName() 获取产品名称：云产品大类，如云服务器CVM、云数据库MySQL
  * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称：云产品大类，如云服务器CVM、云数据库MySQL
- * @method string getProductCodeName() 获取子产品：云产品子类，如云服务器CVM-标准型S1
- * @method void setProductCodeName(string $ProductCodeName) 设置子产品：云产品子类，如云服务器CVM-标准型S1
+ * @method string getProductCodeName() 获取子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+ * @method void setProductCodeName(string $ProductCodeName) 设置子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
  * @method string getPayModeName() 获取计费模式：包年包月和按量计费
  * @method void setPayModeName(string $PayModeName) 设置计费模式：包年包月和按量计费
  * @method string getProjectName() 获取项目
@@ -70,6 +70,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtendField4(string $ExtendField4) 设置扩展字段4
  * @method string getExtendField5() 获取扩展字段5
  * @method void setExtendField5(string $ExtendField5) 设置扩展字段5
+ * @method array getTags() 获取Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayerUin() 获取付款方uin
+ * @method void setPayerUin(string $PayerUin) 设置付款方uin
+ * @method string getOwnerUin() 获取资源所有者uin,无值则返回"-"
+ * @method void setOwnerUin(string $OwnerUin) 设置资源所有者uin,无值则返回"-"
+ * @method string getOperateUin() 获取操作者uin,无值则返回"-"
+ * @method void setOperateUin(string $OperateUin) 设置操作者uin,无值则返回"-"
  */
 
 /**
@@ -83,7 +93,7 @@ class BillResourceSummary extends AbstractModel
     public $BusinessCodeName;
 
     /**
-     * @var string 子产品：云产品子类，如云服务器CVM-标准型S1
+     * @var string 子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
      */
     public $ProductCodeName;
 
@@ -206,9 +216,30 @@ class BillResourceSummary extends AbstractModel
      * @var string 扩展字段5
      */
     public $ExtendField5;
+
+    /**
+     * @var array Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
+     * @var string 付款方uin
+     */
+    public $PayerUin;
+
+    /**
+     * @var string 资源所有者uin,无值则返回"-"
+     */
+    public $OwnerUin;
+
+    /**
+     * @var string 操作者uin,无值则返回"-"
+     */
+    public $OperateUin;
     /**
      * @param string $BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
-     * @param string $ProductCodeName 子产品：云产品子类，如云服务器CVM-标准型S1
+     * @param string $ProductCodeName 子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
      * @param string $PayModeName 计费模式：包年包月和按量计费
      * @param string $ProjectName 项目
      * @param string $RegionName 地域
@@ -233,6 +264,11 @@ class BillResourceSummary extends AbstractModel
      * @param string $ExtendField3 扩展字段3
      * @param string $ExtendField4 扩展字段4
      * @param string $ExtendField5 扩展字段5
+     * @param array $Tags Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PayerUin 付款方uin
+     * @param string $OwnerUin 资源所有者uin,无值则返回"-"
+     * @param string $OperateUin 操作者uin,无值则返回"-"
      */
     function __construct()
     {
@@ -348,6 +384,27 @@ class BillResourceSummary extends AbstractModel
 
         if (array_key_exists("ExtendField5",$param) and $param["ExtendField5"] !== null) {
             $this->ExtendField5 = $param["ExtendField5"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new BillTagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
+            $this->PayerUin = $param["PayerUin"];
+        }
+
+        if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
+            $this->OwnerUin = $param["OwnerUin"];
+        }
+
+        if (array_key_exists("OperateUin",$param) and $param["OperateUin"] !== null) {
+            $this->OperateUin = $param["OperateUin"];
         }
     }
 }

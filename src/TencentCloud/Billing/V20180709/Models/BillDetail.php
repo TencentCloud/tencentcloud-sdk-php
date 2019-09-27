@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwnerUin(string $OwnerUin) 设置使用者UIN
  * @method string getOperateUin() 获取操作者UIN
  * @method void setOperateUin(string $OperateUin) 设置操作者UIN
+ * @method array getTags() 获取Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -150,6 +154,12 @@ class BillDetail extends AbstractModel
      * @var string 操作者UIN
      */
     public $OperateUin;
+
+    /**
+     * @var array Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
     /**
      * @param string $BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      * @param string $ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1
@@ -169,6 +179,8 @@ class BillDetail extends AbstractModel
      * @param string $PayerUin 支付者UIN
      * @param string $OwnerUin 使用者UIN
      * @param string $OperateUin 操作者UIN
+     * @param array $Tags Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -257,6 +269,15 @@ class BillDetail extends AbstractModel
 
         if (array_key_exists("OperateUin",$param) and $param["OperateUin"] !== null) {
             $this->OperateUin = $param["OperateUin"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new BillTagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

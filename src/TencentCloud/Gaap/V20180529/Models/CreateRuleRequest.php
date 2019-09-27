@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 不传递该字段时表示使用对应监听器的ForwardProtocol。
  * @method void setForwardProtocol(string $ForwardProtocol) 设置加速通道转发到源站的协议类型：支持HTTP或HTTPS。
 不传递该字段时表示使用对应监听器的ForwardProtocol。
+ * @method string getForwardHost() 获取加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+ * @method void setForwardHost(string $ForwardHost) 设置加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
  */
 
 /**
@@ -83,6 +85,11 @@ class CreateRuleRequest extends AbstractModel
 不传递该字段时表示使用对应监听器的ForwardProtocol。
      */
     public $ForwardProtocol;
+
+    /**
+     * @var string 加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+     */
+    public $ForwardHost;
     /**
      * @param string $ListenerId 7层监听器ID
      * @param string $Domain 转发规则的域名
@@ -93,6 +100,7 @@ class CreateRuleRequest extends AbstractModel
      * @param RuleCheckParams $CheckParams 源站健康检查相关参数
      * @param string $ForwardProtocol 加速通道转发到源站的协议类型：支持HTTP或HTTPS。
 不传递该字段时表示使用对应监听器的ForwardProtocol。
+     * @param string $ForwardHost 加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class CreateRuleRequest extends AbstractModel
 
         if (array_key_exists("ForwardProtocol",$param) and $param["ForwardProtocol"] !== null) {
             $this->ForwardProtocol = $param["ForwardProtocol"];
+        }
+
+        if (array_key_exists("ForwardHost",$param) and $param["ForwardHost"] !== null) {
+            $this->ForwardHost = $param["ForwardHost"];
         }
     }
 }

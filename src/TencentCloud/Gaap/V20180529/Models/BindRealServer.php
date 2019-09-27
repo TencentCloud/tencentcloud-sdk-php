@@ -24,22 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerIP(string $RealServerIP) 设置源站IP或者域名
  * @method integer getRealServerWeight() 获取该源站所占权重
  * @method void setRealServerWeight(integer $RealServerWeight) 设置该源站所占权重
- * @method integer getRealServerStatus() 获取源站状态，异常状态包括IP连接不上和域名解析失败（源站为域名）。其中：
-0，源站正常；
-1，IP异常；
-2，域名解析异常。
+ * @method integer getRealServerStatus() 获取源站健康检查状态，其中：
+0，正常；
+1，异常。
+未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRealServerStatus(integer $RealServerStatus) 设置源站状态，异常状态包括IP连接不上和域名解析失败（源站为域名）。其中：
-0，源站正常；
-1，IP异常；
-2，域名解析异常。
+ * @method void setRealServerStatus(integer $RealServerStatus) 设置源站健康检查状态，其中：
+0，正常；
+1，异常。
+未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRealServerPort() 获取源站的端口号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealServerPort(integer $RealServerPort) 设置源站的端口号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDownIPList() 获取当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。
- * @method void setDownIPList(array $DownIPList) 设置当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。
+ * @method array getDownIPList() 获取当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
+ * @method void setDownIPList(array $DownIPList) 设置当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
  */
 
 /**
@@ -63,10 +63,10 @@ class BindRealServer extends AbstractModel
     public $RealServerWeight;
 
     /**
-     * @var integer 源站状态，异常状态包括IP连接不上和域名解析失败（源站为域名）。其中：
-0，源站正常；
-1，IP异常；
-2，域名解析异常。
+     * @var integer 源站健康检查状态，其中：
+0，正常；
+1，异常。
+未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealServerStatus;
@@ -78,21 +78,21 @@ class BindRealServer extends AbstractModel
     public $RealServerPort;
 
     /**
-     * @var array 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。
+     * @var array 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
      */
     public $DownIPList;
     /**
      * @param string $RealServerId 源站ID
      * @param string $RealServerIP 源站IP或者域名
      * @param integer $RealServerWeight 该源站所占权重
-     * @param integer $RealServerStatus 源站状态，异常状态包括IP连接不上和域名解析失败（源站为域名）。其中：
-0，源站正常；
-1，IP异常；
-2，域名解析异常。
+     * @param integer $RealServerStatus 源站健康检查状态，其中：
+0，正常；
+1，异常。
+未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RealServerPort 源站的端口号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DownIPList 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。
+     * @param array $DownIPList 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
      */
     function __construct()
     {

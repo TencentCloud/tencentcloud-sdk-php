@@ -27,13 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getMetricNames() 获取统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency
  * @method void setMetricNames(array $MetricNames) 设置统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency
  * @method integer getGranularity() 获取监控粒度，目前支持60，300，3600，86400，单位：秒。
-当时间范围不超过1天，支持最小粒度60秒；
-当时间范围不超过7天，支持最小粒度3600秒；
-当时间范围不超过30天，支持最小粒度86400秒。
+当时间范围不超过3天，支持最小粒度60秒；
+当时间范围不超过7天，支持最小粒度300秒；
+当时间范围不超过30天，支持最小粒度3600秒。
  * @method void setGranularity(integer $Granularity) 设置监控粒度，目前支持60，300，3600，86400，单位：秒。
-当时间范围不超过1天，支持最小粒度60秒；
-当时间范围不超过7天，支持最小粒度3600秒；
-当时间范围不超过30天，支持最小粒度86400秒。
+当时间范围不超过3天，支持最小粒度60秒；
+当时间范围不超过7天，支持最小粒度300秒；
+当时间范围不超过30天，支持最小粒度3600秒。
  */
 
 /**
@@ -63,9 +63,9 @@ class DescribeProxyStatisticsRequest extends AbstractModel
 
     /**
      * @var integer 监控粒度，目前支持60，300，3600，86400，单位：秒。
-当时间范围不超过1天，支持最小粒度60秒；
-当时间范围不超过7天，支持最小粒度3600秒；
-当时间范围不超过30天，支持最小粒度86400秒。
+当时间范围不超过3天，支持最小粒度60秒；
+当时间范围不超过7天，支持最小粒度300秒；
+当时间范围不超过30天，支持最小粒度3600秒。
      */
     public $Granularity;
     /**
@@ -74,9 +74,9 @@ class DescribeProxyStatisticsRequest extends AbstractModel
      * @param string $EndTime 结束时间(2019-03-25 12:00:00)
      * @param array $MetricNames 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency
      * @param integer $Granularity 监控粒度，目前支持60，300，3600，86400，单位：秒。
-当时间范围不超过1天，支持最小粒度60秒；
-当时间范围不超过7天，支持最小粒度3600秒；
-当时间范围不超过30天，支持最小粒度86400秒。
+当时间范围不超过3天，支持最小粒度60秒；
+当时间范围不超过7天，支持最小粒度300秒；
+当时间范围不超过30天，支持最小粒度3600秒。
      */
     function __construct()
     {

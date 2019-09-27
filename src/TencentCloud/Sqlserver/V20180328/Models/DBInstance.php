@@ -66,6 +66,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置实例所在可用区名称，如 ap-guangzhou-1
  * @method string getBackupTime() 获取备份时间点
  * @method void setBackupTime(string $BackupTime) 设置备份时间点
+ * @method integer getPayMode() 获取实例付费模式， 0-按量计费，1-包年包月
+ * @method void setPayMode(integer $PayMode) 设置实例付费模式， 0-按量计费，1-包年包月
+ * @method string getUid() 获取实例唯一UID
+ * @method void setUid(string $Uid) 设置实例唯一UID
+ * @method integer getCpu() 获取实例cpu核心数
+ * @method void setCpu(integer $Cpu) 设置实例cpu核心数
+ * @method string getVersion() 获取实例版本代号
+ * @method void setVersion(string $Version) 设置实例版本代号
+ * @method string getType() 获取物理机代号
+ * @method void setType(string $Type) 设置物理机代号
+ * @method integer getPid() 获取计费ID
+ * @method void setPid(integer $Pid) 设置计费ID
  */
 
 /**
@@ -192,6 +204,36 @@ class DBInstance extends AbstractModel
      * @var string 备份时间点
      */
     public $BackupTime;
+
+    /**
+     * @var integer 实例付费模式， 0-按量计费，1-包年包月
+     */
+    public $PayMode;
+
+    /**
+     * @var string 实例唯一UID
+     */
+    public $Uid;
+
+    /**
+     * @var integer 实例cpu核心数
+     */
+    public $Cpu;
+
+    /**
+     * @var string 实例版本代号
+     */
+    public $Version;
+
+    /**
+     * @var string 物理机代号
+     */
+    public $Type;
+
+    /**
+     * @var integer 计费ID
+     */
+    public $Pid;
     /**
      * @param string $InstanceId 实例ID
      * @param string $Name 实例名称
@@ -217,6 +259,12 @@ class DBInstance extends AbstractModel
      * @param string $Region 实例所在地域名称，如 ap-guangzhou
      * @param string $Zone 实例所在可用区名称，如 ap-guangzhou-1
      * @param string $BackupTime 备份时间点
+     * @param integer $PayMode 实例付费模式， 0-按量计费，1-包年包月
+     * @param string $Uid 实例唯一UID
+     * @param integer $Cpu 实例cpu核心数
+     * @param string $Version 实例版本代号
+     * @param string $Type 物理机代号
+     * @param integer $Pid 计费ID
      */
     function __construct()
     {
@@ -324,6 +372,30 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("BackupTime",$param) and $param["BackupTime"] !== null) {
             $this->BackupTime = $param["BackupTime"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
+            $this->Uid = $param["Uid"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
+            $this->Pid = $param["Pid"];
         }
     }
 }

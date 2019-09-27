@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvId(string $EnvId) 设置函数所属环境
  * @method string getPublish() 获取在更新时是否同步发布新版本，默认为：FALSE，不发布
  * @method void setPublish(string $Publish) 设置在更新时是否同步发布新版本，默认为：FALSE，不发布
+ * @method Code getCode() 获取函数代码
+ * @method void setCode(Code $Code) 设置函数代码
+ * @method string getCodeSource() 获取代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+ * @method void setCodeSource(string $CodeSource) 设置代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
  */
 
 /**
@@ -87,6 +91,16 @@ class UpdateFunctionCodeRequest extends AbstractModel
      * @var string 在更新时是否同步发布新版本，默认为：FALSE，不发布
      */
     public $Publish;
+
+    /**
+     * @var Code 函数代码
+     */
+    public $Code;
+
+    /**
+     * @var string 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+     */
+    public $CodeSource;
     /**
      * @param string $Handler 函数处理方法名称。名称格式支持“文件名称.函数名称”形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
      * @param string $FunctionName 要修改的函数名称
@@ -97,6 +111,8 @@ class UpdateFunctionCodeRequest extends AbstractModel
      * @param string $CosBucketRegion 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
      * @param string $EnvId 函数所属环境
      * @param string $Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
+     * @param Code $Code 函数代码
+     * @param string $CodeSource 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
      */
     function __construct()
     {
@@ -144,6 +160,15 @@ class UpdateFunctionCodeRequest extends AbstractModel
 
         if (array_key_exists("Publish",$param) and $param["Publish"] !== null) {
             $this->Publish = $param["Publish"];
+        }
+
+        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
+            $this->Code = new Code();
+            $this->Code->deserialize($param["Code"]);
+        }
+
+        if (array_key_exists("CodeSource",$param) and $param["CodeSource"] !== null) {
+            $this->CodeSource = $param["CodeSource"];
         }
     }
 }

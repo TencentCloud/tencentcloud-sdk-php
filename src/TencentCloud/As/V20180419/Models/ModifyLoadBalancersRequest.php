@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置传统负载均衡器ID列表，目前长度上限为5，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
  * @method array getForwardLoadBalancers() 获取应用型负载均衡器列表，目前长度上限为5，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
  * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) 设置应用型负载均衡器列表，目前长度上限为5，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+ * @method string getLoadBalancersCheckPolicy() 获取负载均衡器校验策略，取值包括 ALL 和 DIFF，默认取值为 ALL。
+<br><li> ALL，所有负载均衡器都合法则通过校验，否则校验报错。
+<br><li> DIFF，仅校验负载均衡器参数中实际变化的部分，如果合法则通过校验，否则校验报错。
+ * @method void setLoadBalancersCheckPolicy(string $LoadBalancersCheckPolicy) 设置负载均衡器校验策略，取值包括 ALL 和 DIFF，默认取值为 ALL。
+<br><li> ALL，所有负载均衡器都合法则通过校验，否则校验报错。
+<br><li> DIFF，仅校验负载均衡器参数中实际变化的部分，如果合法则通过校验，否则校验报错。
  */
 
 /**
@@ -45,10 +51,20 @@ class ModifyLoadBalancersRequest extends AbstractModel
      * @var array 应用型负载均衡器列表，目前长度上限为5，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
      */
     public $ForwardLoadBalancers;
+
+    /**
+     * @var string 负载均衡器校验策略，取值包括 ALL 和 DIFF，默认取值为 ALL。
+<br><li> ALL，所有负载均衡器都合法则通过校验，否则校验报错。
+<br><li> DIFF，仅校验负载均衡器参数中实际变化的部分，如果合法则通过校验，否则校验报错。
+     */
+    public $LoadBalancersCheckPolicy;
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param array $LoadBalancerIds 传统负载均衡器ID列表，目前长度上限为5，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
      * @param array $ForwardLoadBalancers 应用型负载均衡器列表，目前长度上限为5，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+     * @param string $LoadBalancersCheckPolicy 负载均衡器校验策略，取值包括 ALL 和 DIFF，默认取值为 ALL。
+<br><li> ALL，所有负载均衡器都合法则通过校验，否则校验报错。
+<br><li> DIFF，仅校验负载均衡器参数中实际变化的部分，如果合法则通过校验，否则校验报错。
      */
     function __construct()
     {
@@ -77,6 +93,10 @@ class ModifyLoadBalancersRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ForwardLoadBalancers, $obj);
             }
+        }
+
+        if (array_key_exists("LoadBalancersCheckPolicy",$param) and $param["LoadBalancersCheckPolicy"] !== null) {
+            $this->LoadBalancersCheckPolicy = $param["LoadBalancersCheckPolicy"];
         }
     }
 }

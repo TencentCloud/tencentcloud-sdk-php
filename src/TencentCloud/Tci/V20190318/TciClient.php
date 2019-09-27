@@ -64,6 +64,7 @@ use TencentCloud\Tci\V20190318\Models as Models;
  | libid | String | 识别到的人员所在的库ID，如果是陌生人则返回空串 | 
  | timestamp | uint64 | 识别到人脸的绝对时间戳，单位ms | 
  | image_url | string | 识别到人脸的事件抓图的下载地址，不长期保存，需要请及时下载 | 
+* @method Models\SubmitCheckAttendanceTaskPlusResponse SubmitCheckAttendanceTaskPlus(Models\SubmitCheckAttendanceTaskPlusRequest $req) 支持多路视频流，提交高级人员考勤任务
 * @method Models\SubmitConversationTaskResponse SubmitConversationTask(Models\SubmitConversationTaskRequest $req) 对话任务分析接口
 * @method Models\SubmitDoubleVideoHighlightsResponse SubmitDoubleVideoHighlights(Models\SubmitDoubleVideoHighlightsRequest $req) 发起双路视频生成精彩集锦接口。该接口可以通过客户传入的学生音视频及老师视频两路Url，自动生成一堂课程的精彩集锦。需要通过DescribeHighlightResult
 接口获取生成结果。
@@ -76,6 +77,7 @@ use TencentCloud\Tci\V20190318\Models as Models;
 **结果查询方式：**图像任务直接返回结果，点播及直播任务通过DescribeAITaskResult查询结果。
 * @method Models\SubmitHighlightsResponse SubmitHighlights(Models\SubmitHighlightsRequest $req) 发起视频生成精彩集锦接口。该接口可以通过客户传入的课程音频数据及相关策略（如微笑抽取，专注抽取等），自动生成一堂课程的精彩集锦。需要通过QueryHighlightResult接口获取生成结果。
 * @method Models\SubmitImageTaskResponse SubmitImageTask(Models\SubmitImageTaskRequest $req) 提交图像分析任务
+* @method Models\SubmitImageTaskPlusResponse SubmitImageTaskPlus(Models\SubmitImageTaskPlusRequest $req) 高级图像分析任务，开放了图像任务里的所有开关，可以根据场景深度定制图像分析任务。支持的图像类别有，图片链接、图片二进制数据、点播链接和直播链接。
 * @method Models\SubmitOneByOneClassTaskResponse SubmitOneByOneClassTask(Models\SubmitOneByOneClassTaskRequest $req) **提交在线1对1课堂任务**  
 对于在线1对1课堂，老师通过视频向学生授课，并且学生人数为1人。通过上传学生端的图像信息，可以获取学生的听课情况分析。 具体指一路全局画面且背景不动，有1位学生的头像或上半身的画面，要求画面稳定清晰。
   

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileType(string $FileType) 设置输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,picture: 图片二进制数据的BASE64编码
  * @method array getLibrarySet() 获取查询人员库列表，可填写学生们的注册照所在人员库
  * @method void setLibrarySet(array $LibrarySet) 设置查询人员库列表，可填写学生们的注册照所在人员库
- * @method integer getMaxVideoDuration() 获取视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
- * @method void setMaxVideoDuration(integer $MaxVideoDuration) 设置视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+ * @method integer getMaxVideoDuration() 获取视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+ * @method void setMaxVideoDuration(integer $MaxVideoDuration) 设置视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
  */
 
 /**
@@ -49,14 +49,14 @@ class SubmitOpenClassTaskRequest extends AbstractModel
     public $LibrarySet;
 
     /**
-     * @var integer 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+     * @var integer 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public $MaxVideoDuration;
     /**
      * @param string $FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      * @param string $FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,picture: 图片二进制数据的BASE64编码
      * @param array $LibrarySet 查询人员库列表，可填写学生们的注册照所在人员库
-     * @param integer $MaxVideoDuration 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+     * @param integer $MaxVideoDuration 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     function __construct()
     {

@@ -18,8 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getFileContent() 获取输入分析对象内容，输入数据格式参考FileType参数释义
- * @method void setFileContent(string $FileContent) 设置输入分析对象内容，输入数据格式参考FileType参数释义
+ * @method array getFileContent() 获取输入分析对象内容，输入数据格式参考FileType参数释义
+ * @method void setFileContent(array $FileContent) 设置输入分析对象内容，输入数据格式参考FileType参数释义
  * @method string getFileType() 获取输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
  * @method void setFileType(string $FileType) 设置输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
  * @method ImageTaskFunction getFunctions() 获取任务控制选项
@@ -37,12 +37,12 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *SubmitImageTask请求参数结构体
+ *SubmitImageTaskPlus请求参数结构体
  */
-class SubmitImageTaskRequest extends AbstractModel
+class SubmitImageTaskPlusRequest extends AbstractModel
 {
     /**
-     * @var string 输入分析对象内容，输入数据格式参考FileType参数释义
+     * @var array 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public $FileContent;
 
@@ -81,7 +81,7 @@ class SubmitImageTaskRequest extends AbstractModel
      */
     public $SimThreshold;
     /**
-     * @param string $FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
+     * @param array $FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      * @param string $FileType 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
      * @param ImageTaskFunction $Functions 任务控制选项
      * @param array $LightStandardSet 光照标准列表

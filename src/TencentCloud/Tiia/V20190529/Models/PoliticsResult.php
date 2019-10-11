@@ -46,18 +46,18 @@ Type为DNA时：
 75到90，Suggestion建议为REVIEW
 90到100，Suggestion建议为BLOCK
 Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+0到70，Suggestion建议为PASS
+70到80，Suggestion建议为REVIEW
+80到100，Suggestion建议为BLOCK
  * @method void setConfidence(integer $Confidence) 设置图像涉政的分数，0-100之间，分数越高涉政几率越大。
 Type为DNA时：
 0到75，Suggestion建议为PASS
 75到90，Suggestion建议为REVIEW
 90到100，Suggestion建议为BLOCK
 Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+0到70，Suggestion建议为PASS
+70到80，Suggestion建议为REVIEW
+80到100，Suggestion建议为BLOCK
  * @method array getFaceResults() 获取Type取值为‘FACE’时，人脸识别的结果列表。基于图片中实际检测到的人脸数，返回数组最大值不超过5个。
  * @method void setFaceResults(array $FaceResults) 设置Type取值为‘FACE’时，人脸识别的结果列表。基于图片中实际检测到的人脸数，返回数组最大值不超过5个。
  * @method string getType() 获取取值'DNA' 或‘FACE’。DNA表示结论和置信度来自图像指纹，FACE表示结论和置信度来自人脸识别。
@@ -101,9 +101,9 @@ Type为DNA时：
 75到90，Suggestion建议为REVIEW
 90到100，Suggestion建议为BLOCK
 Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+0到70，Suggestion建议为PASS
+70到80，Suggestion建议为REVIEW
+80到100，Suggestion建议为BLOCK
      */
     public $Confidence;
 
@@ -139,9 +139,9 @@ Type为DNA时：
 75到90，Suggestion建议为REVIEW
 90到100，Suggestion建议为BLOCK
 Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+0到70，Suggestion建议为PASS
+70到80，Suggestion建议为REVIEW
+80到100，Suggestion建议为BLOCK
      * @param array $FaceResults Type取值为‘FACE’时，人脸识别的结果列表。基于图片中实际检测到的人脸数，返回数组最大值不超过5个。
      * @param string $Type 取值'DNA' 或‘FACE’。DNA表示结论和置信度来自图像指纹，FACE表示结论和置信度来自人脸识别。
      * @param string $AdvancedInfo 鉴政识别返回的详细标签后期开放。

@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置实例名称。
  * @method array getResourceTags() 获取实例标签信息。
  * @method void setResourceTags(array $ResourceTags) 设置实例标签信息。
+ * @method string getDeployGroupId() 获取置放群组 ID。
+ * @method void setDeployGroupId(string $DeployGroupId) 设置置放群组 ID。
  */
 
 /**
@@ -185,6 +187,11 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @var array 实例标签信息。
      */
     public $ResourceTags;
+
+    /**
+     * @var string 置放群组 ID。
+     */
+    public $DeployGroupId;
     /**
      * @param integer $GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      * @param integer $Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
@@ -209,6 +216,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param integer $AutoRenewFlag 购买按量计费实例该字段无意义。
      * @param string $InstanceName 实例名称。
      * @param array $ResourceTags 实例标签信息。
+     * @param string $DeployGroupId 置放群组 ID。
      */
     function __construct()
     {
@@ -323,6 +331,10 @@ class CreateDBInstanceHourRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("DeployGroupId",$param) and $param["DeployGroupId"] !== null) {
+            $this->DeployGroupId = $param["DeployGroupId"];
         }
     }
 }

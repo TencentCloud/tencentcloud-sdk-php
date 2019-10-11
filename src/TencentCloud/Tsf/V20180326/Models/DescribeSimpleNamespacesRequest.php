@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID，不传入时查询全量
  * @method array getNamespaceResourceTypeList() 获取查询资源类型列表
  * @method void setNamespaceResourceTypeList(array $NamespaceResourceTypeList) 设置查询资源类型列表
+ * @method string getSearchWord() 获取通过id和name进行过滤
+ * @method void setSearchWord(string $SearchWord) 设置通过id和name进行过滤
+ * @method array getNamespaceTypeList() 获取查询的命名空间类型列表
+ * @method void setNamespaceTypeList(array $NamespaceTypeList) 设置查询的命名空间类型列表
  */
 
 /**
@@ -66,6 +70,16 @@ class DescribeSimpleNamespacesRequest extends AbstractModel
      * @var array 查询资源类型列表
      */
     public $NamespaceResourceTypeList;
+
+    /**
+     * @var string 通过id和name进行过滤
+     */
+    public $SearchWord;
+
+    /**
+     * @var array 查询的命名空间类型列表
+     */
+    public $NamespaceTypeList;
     /**
      * @param array $NamespaceIdList 命名空间ID列表，不传入时查询全量
      * @param string $ClusterId 集群ID，不传入时查询全量
@@ -73,6 +87,8 @@ class DescribeSimpleNamespacesRequest extends AbstractModel
      * @param integer $Offset 起始偏移量
      * @param string $NamespaceId 命名空间ID，不传入时查询全量
      * @param array $NamespaceResourceTypeList 查询资源类型列表
+     * @param string $SearchWord 通过id和name进行过滤
+     * @param array $NamespaceTypeList 查询的命名空间类型列表
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class DescribeSimpleNamespacesRequest extends AbstractModel
 
         if (array_key_exists("NamespaceResourceTypeList",$param) and $param["NamespaceResourceTypeList"] !== null) {
             $this->NamespaceResourceTypeList = $param["NamespaceResourceTypeList"];
+        }
+
+        if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
+            $this->SearchWord = $param["SearchWord"];
+        }
+
+        if (array_key_exists("NamespaceTypeList",$param) and $param["NamespaceTypeList"] !== null) {
+            $this->NamespaceTypeList = $param["NamespaceTypeList"];
         }
     }
 }

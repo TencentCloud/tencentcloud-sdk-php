@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMicroserviceType(string $MicroserviceType) 设置微服务类型
  * @method array getApplicationResourceTypeList() 获取资源类型数组
  * @method void setApplicationResourceTypeList(array $ApplicationResourceTypeList) 设置资源类型数组
+ * @method string getSearchWord() 获取通过id和name进行关键词过滤
+ * @method void setSearchWord(string $SearchWord) 设置通过id和name进行关键词过滤
  */
 
 /**
@@ -66,6 +68,11 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
      * @var array 资源类型数组
      */
     public $ApplicationResourceTypeList;
+
+    /**
+     * @var string 通过id和name进行关键词过滤
+     */
+    public $SearchWord;
     /**
      * @param array $ApplicationIdList 应用ID列表
      * @param string $ApplicationType 应用类型
@@ -73,6 +80,7 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
      * @param integer $Offset 起始偏移量
      * @param string $MicroserviceType 微服务类型
      * @param array $ApplicationResourceTypeList 资源类型数组
+     * @param string $SearchWord 通过id和name进行关键词过滤
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
 
         if (array_key_exists("ApplicationResourceTypeList",$param) and $param["ApplicationResourceTypeList"] !== null) {
             $this->ApplicationResourceTypeList = $param["ApplicationResourceTypeList"];
+        }
+
+        if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
+            $this->SearchWord = $param["SearchWord"];
         }
     }
 }

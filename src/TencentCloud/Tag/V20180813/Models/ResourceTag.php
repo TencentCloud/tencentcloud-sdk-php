@@ -43,7 +43,7 @@ use TencentCloud\Common\AbstractModel;
 /**
  *资源标签
  */
-class ResourcesTag extends AbstractModel
+class ResourceTag extends AbstractModel
 {
     /**
      * @var string 资源所在地域

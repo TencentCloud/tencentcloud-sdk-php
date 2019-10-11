@@ -27,7 +27,7 @@ use TencentCloud\Common\AbstractModel;
 /**
  *tag过滤数组多个是与的关系
  */
-class TagFilters extends AbstractModel
+class TagFilter extends AbstractModel
 {
     /**
      * @var string 标签键

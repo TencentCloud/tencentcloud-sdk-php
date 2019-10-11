@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询偏移量，默认为0
  * @method integer getLimit() 获取分页个数，默认为20， 取值应为1~50
  * @method void setLimit(integer $Limit) 设置分页个数，默认为20， 取值应为1~50
+ * @method string getSearchWord() 获取对id和name进行关键词过滤
+ * @method void setSearchWord(string $SearchWord) 设置对id和name进行关键词过滤
  */
 
 /**
@@ -52,11 +54,17 @@ class DescribeSimpleClustersRequest extends AbstractModel
      * @var integer 分页个数，默认为20， 取值应为1~50
      */
     public $Limit;
+
+    /**
+     * @var string 对id和name进行关键词过滤
+     */
+    public $SearchWord;
     /**
      * @param array $ClusterIdList 需要查询的集群ID列表，不填或不传入时查询所有内容
      * @param string $ClusterType 需要查询的集群类型，不填或不传入时查询所有内容
      * @param integer $Offset 查询偏移量，默认为0
      * @param integer $Limit 分页个数，默认为20， 取值应为1~50
+     * @param string $SearchWord 对id和name进行关键词过滤
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeSimpleClustersRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
+            $this->SearchWord = $param["SearchWord"];
         }
     }
 }

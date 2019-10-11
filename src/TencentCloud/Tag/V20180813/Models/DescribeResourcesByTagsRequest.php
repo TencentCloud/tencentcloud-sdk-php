@@ -105,7 +105,7 @@ class DescribeResourcesByTagsRequest extends AbstractModel
         if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
             $this->TagFilters = [];
             foreach ($param["TagFilters"] as $key => $value){
-                $obj = new TagFilters();
+                $obj = new TagFilter();
                 $obj->deserialize($value);
                 array_push($this->TagFilters, $obj);
             }

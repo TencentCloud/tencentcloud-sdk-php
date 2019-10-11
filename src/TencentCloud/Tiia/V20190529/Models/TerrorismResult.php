@@ -44,18 +44,18 @@ Type为LABEL时：
 86到91，Suggestion建议为REVIEW
 91到100，Suggestion建议为BLOCK
 Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+0到70，Suggestion建议为PASS
+70到80，Suggestion建议为REVIEW
+80到100，Suggestion建议为BLOCK
  * @method void setConfidence(integer $Confidence) 设置图像涉恐的分数，0-100之间，分数越高涉恐几率越大。
 Type为LABEL时：
 0到86，Suggestion建议为PASS
 86到91，Suggestion建议为REVIEW
 91到100，Suggestion建议为BLOCK
 Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+0到70，Suggestion建议为PASS
+70到80，Suggestion建议为REVIEW
+80到100，Suggestion建议为BLOCK
  * @method array getFaceResults() 获取Type取值为‘FACE’时，人脸识别的结果列表。基于图片中实际检测到的人脸数，返回数组最大值不超过5个。
  * @method void setFaceResults(array $FaceResults) 设置Type取值为‘FACE’时，人脸识别的结果列表。基于图片中实际检测到的人脸数，返回数组最大值不超过5个。
  * @method string getAdvancedInfo() 获取暴恐识别返回的详细标签后期开放。
@@ -98,9 +98,9 @@ Type为LABEL时：
 86到91，Suggestion建议为REVIEW
 91到100，Suggestion建议为BLOCK
 Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+0到70，Suggestion建议为PASS
+70到80，Suggestion建议为REVIEW
+80到100，Suggestion建议为BLOCK
      */
     public $Confidence;
 
@@ -135,9 +135,9 @@ Type为LABEL时：
 86到91，Suggestion建议为REVIEW
 91到100，Suggestion建议为BLOCK
 Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+0到70，Suggestion建议为PASS
+70到80，Suggestion建议为REVIEW
+80到100，Suggestion建议为BLOCK
      * @param array $FaceResults Type取值为‘FACE’时，人脸识别的结果列表。基于图片中实际检测到的人脸数，返回数组最大值不超过5个。
      * @param string $AdvancedInfo 暴恐识别返回的详细标签后期开放。
      * @param string $Type 取值'LABEL' 或‘FACE’，LABEL表示结论和置信度来自标签分类，FACE表示结论和置信度来自人脸识别。

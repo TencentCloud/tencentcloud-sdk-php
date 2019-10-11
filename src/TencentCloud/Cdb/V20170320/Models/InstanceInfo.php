@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getInitFlag() 获取初始化标志，可能的返回值为：0-未初始化；1-已初始化
  * @method void setInitFlag(integer $InitFlag) 设置初始化标志，可能的返回值为：0-未初始化；1-已初始化
  * @method RoVipInfo getRoVipInfo() 获取只读vip信息。单独开通只读实例访问的只读实例才有该字段
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoVipInfo(RoVipInfo $RoVipInfo) 设置只读vip信息。单独开通只读实例访问的只读实例才有该字段
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMemory() 获取内存容量，单位为MB
  * @method void setMemory(integer $Memory) 设置内存容量，单位为MB
  * @method integer getStatus() 获取实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
@@ -33,7 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getVpcId() 获取私有网络ID，例如：51102
  * @method void setVpcId(integer $VpcId) 设置私有网络ID，例如：51102
  * @method SlaveInfo getSlaveInfo() 获取备机信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlaveInfo(SlaveInfo $SlaveInfo) 设置备机信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method integer getVolume() 获取硬盘容量，单位为GB
@@ -43,7 +47,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProtectMode() 获取数据复制方式
  * @method void setProtectMode(integer $ProtectMode) 设置数据复制方式
  * @method array getRoGroups() 获取只读组详细信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoGroups(array $RoGroups) 设置只读组详细信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSubnetId() 获取子网ID，例如：2333
  * @method void setSubnetId(integer $SubnetId) 设置子网ID，例如：2333
  * @method integer getInstanceType() 获取实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
@@ -59,7 +65,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTaskStatus() 获取实例任务状态
  * @method void setTaskStatus(integer $TaskStatus) 设置实例任务状态
  * @method MasterInfo getMasterInfo() 获取主实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMasterInfo(MasterInfo $MasterInfo) 设置主实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceType() 获取实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
  * @method void setDeviceType(string $DeviceType) 设置实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
  * @method string getEngineVersion() 获取内核版本
@@ -67,7 +75,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
  * @method array getDrInfo() 获取灾备实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDrInfo(array $DrInfo) 设置灾备实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWanDomain() 获取外网域名
  * @method void setWanDomain(string $WanDomain) 设置外网域名
  * @method integer getWanPort() 获取外网端口号
@@ -122,6 +132,7 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoVipInfo;
 
@@ -142,6 +153,7 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var SlaveInfo 备机信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlaveInfo;
 
@@ -167,6 +179,7 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var array 只读组详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoGroups;
 
@@ -207,6 +220,7 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var MasterInfo 主实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MasterInfo;
 
@@ -227,6 +241,7 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var array 灾备实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DrInfo;
 
@@ -305,15 +320,18 @@ class InstanceInfo extends AbstractModel
      * @param string $Zone 可用区信息
      * @param integer $InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
      * @param RoVipInfo $RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Memory 内存容量，单位为MB
      * @param integer $Status 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
      * @param integer $VpcId 私有网络ID，例如：51102
      * @param SlaveInfo $SlaveInfo 备机信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID
      * @param integer $Volume 硬盘容量，单位为GB
      * @param integer $AutoRenew 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
      * @param integer $ProtectMode 数据复制方式
      * @param array $RoGroups 只读组详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubnetId 子网ID，例如：2333
      * @param integer $InstanceType 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
      * @param integer $ProjectId 项目ID
@@ -322,10 +340,12 @@ class InstanceInfo extends AbstractModel
      * @param integer $DeployMode 可用区部署方式
      * @param integer $TaskStatus 实例任务状态
      * @param MasterInfo $MasterInfo 主实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceType 实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
      * @param string $EngineVersion 内核版本
      * @param string $InstanceName 实例名称
      * @param array $DrInfo 灾备实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WanDomain 外网域名
      * @param integer $WanPort 外网端口号
      * @param integer $PayType 付费类型，可能的返回值：0-包年包月；1-按量计费

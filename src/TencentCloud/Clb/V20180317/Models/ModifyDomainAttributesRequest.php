@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getLoadBalancerId() 获取负载均衡实例 ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
- * @method string getListenerId() 获取应用型负载均衡监听器 ID
- * @method void setListenerId(string $ListenerId) 设置应用型负载均衡监听器 ID
+ * @method string getListenerId() 获取负载均衡监听器 ID
+ * @method void setListenerId(string $ListenerId) 设置负载均衡监听器 ID
  * @method string getDomain() 获取域名（必须是已经创建的转发规则下的域名）
  * @method void setDomain(string $Domain) 设置域名（必须是已经创建的转发规则下的域名）
  * @method string getNewDomain() 获取要修改的新域名
@@ -45,7 +45,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var string 应用型负载均衡监听器 ID
+     * @var string 负载均衡监听器 ID
      */
     public $ListenerId;
 
@@ -75,7 +75,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $DefaultServer;
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
-     * @param string $ListenerId 应用型负载均衡监听器 ID
+     * @param string $ListenerId 负载均衡监听器 ID
      * @param string $Domain 域名（必须是已经创建的转发规则下的域名）
      * @param string $NewDomain 要修改的新域名
      * @param CertificateInput $Certificate 域名相关的证书信息，注意，仅对启用SNI的监听器适用。

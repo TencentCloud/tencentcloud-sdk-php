@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAction(string $Action) 设置ACCEPT 或 DROP。
  * @method string getPolicyDescription() 获取安全组规则描述。
  * @method void setPolicyDescription(string $PolicyDescription) 设置安全组规则描述。
+ * @method string getModifyTime() 获取安全组最近修改时间。
+ * @method void setModifyTime(string $ModifyTime) 设置安全组最近修改时间。
  */
 
 /**
@@ -87,6 +89,11 @@ class SecurityGroupPolicy extends AbstractModel
      * @var string 安全组规则描述。
      */
     public $PolicyDescription;
+
+    /**
+     * @var string 安全组最近修改时间。
+     */
+    public $ModifyTime;
     /**
      * @param integer $PolicyIndex 安全组规则索引号。
      * @param string $Protocol 协议, 取值: TCP,UDP, ICMP。
@@ -97,6 +104,7 @@ class SecurityGroupPolicy extends AbstractModel
      * @param AddressTemplateSpecification $AddressTemplate IP地址ID或者ID地址组ID。
      * @param string $Action ACCEPT 或 DROP。
      * @param string $PolicyDescription 安全组规则描述。
+     * @param string $ModifyTime 安全组最近修改时间。
      */
     function __construct()
     {
@@ -146,6 +154,10 @@ class SecurityGroupPolicy extends AbstractModel
 
         if (array_key_exists("PolicyDescription",$param) and $param["PolicyDescription"] !== null) {
             $this->PolicyDescription = $param["PolicyDescription"];
+        }
+
+        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
+            $this->ModifyTime = $param["ModifyTime"];
         }
     }
 }

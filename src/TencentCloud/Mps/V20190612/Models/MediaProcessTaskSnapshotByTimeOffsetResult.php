@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
- * @method integer getErrCode() 获取错误码，0：成功，其他值：失败。
- * @method void setErrCode(integer $ErrCode) 设置错误码，0：成功，其他值：失败。
+ * @method integer getErrCode() 获取错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
+ * @method void setErrCode(integer $ErrCode) 设置错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
  * @method SnapshotByTimeOffsetTaskInput getInput() 获取对视频按指定时间点截图任务输入。
@@ -43,7 +49,10 @@ class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 错误码，0：成功，其他值：失败。
+     * @var integer 错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
      */
     public $ErrCode;
 
@@ -64,7 +73,10 @@ class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel
     public $Output;
     /**
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
-     * @param integer $ErrCode 错误码，0：成功，其他值：失败。
+     * @param integer $ErrCode 错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
      * @param string $Message 错误信息。
      * @param SnapshotByTimeOffsetTaskInput $Input 对视频按指定时间点截图任务输入。
      * @param MediaSnapshotByTimeOffsetItem $Output 对视频按指定时间点截图任务输出。

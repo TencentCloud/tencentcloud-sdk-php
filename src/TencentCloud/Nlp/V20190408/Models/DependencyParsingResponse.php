@@ -18,8 +18,38 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getDpTokens() 获取句法依存分析结果
- * @method void setDpTokens(array $DpTokens) 设置句法依存分析结果
+ * @method array getDpTokens() 获取句法依存分析结果，其中句法依存关系的类型包括：
+<li>主谓关系，eg: 我送她一束花 (我 <-- 送)
+<li>动宾关系，eg: 我送她一束花 (送 --> 花)
+<li>间宾关系，eg: 我送她一束花 (送 --> 她)
+<li>前置宾语，eg: 他什么书都读 (书 <-- 读)
+<li>兼语，eg: 他请我吃饭 (请 --> 我)
+<li>定中关系，eg: 红苹果 (红 <-- 苹果)
+<li>状中结构，eg: 非常美丽 (非常 <-- 美丽)
+<li>动补结构，eg: 做完了作业 (做 --> 完)
+<li>并列关系，eg: 大山和大海 (大山 --> 大海)
+<li>介宾关系，eg: 在贸易区内 (在 --> 内)
+<li>左附加关系，eg: 大山和大海 (和 <-- 大海)
+<li>右附加关系，eg: 孩子们 (孩子 --> 们)
+<li>独立结构，eg: 两个单句在结构上彼此独立
+<li>标点符号，eg: 。
+<li>核心关系，eg: 整个句子的核心
+ * @method void setDpTokens(array $DpTokens) 设置句法依存分析结果，其中句法依存关系的类型包括：
+<li>主谓关系，eg: 我送她一束花 (我 <-- 送)
+<li>动宾关系，eg: 我送她一束花 (送 --> 花)
+<li>间宾关系，eg: 我送她一束花 (送 --> 她)
+<li>前置宾语，eg: 他什么书都读 (书 <-- 读)
+<li>兼语，eg: 他请我吃饭 (请 --> 我)
+<li>定中关系，eg: 红苹果 (红 <-- 苹果)
+<li>状中结构，eg: 非常美丽 (非常 <-- 美丽)
+<li>动补结构，eg: 做完了作业 (做 --> 完)
+<li>并列关系，eg: 大山和大海 (大山 --> 大海)
+<li>介宾关系，eg: 在贸易区内 (在 --> 内)
+<li>左附加关系，eg: 大山和大海 (和 <-- 大海)
+<li>右附加关系，eg: 孩子们 (孩子 --> 们)
+<li>独立结构，eg: 两个单句在结构上彼此独立
+<li>标点符号，eg: 。
+<li>核心关系，eg: 整个句子的核心
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +60,22 @@ use TencentCloud\Common\AbstractModel;
 class DependencyParsingResponse extends AbstractModel
 {
     /**
-     * @var array 句法依存分析结果
+     * @var array 句法依存分析结果，其中句法依存关系的类型包括：
+<li>主谓关系，eg: 我送她一束花 (我 <-- 送)
+<li>动宾关系，eg: 我送她一束花 (送 --> 花)
+<li>间宾关系，eg: 我送她一束花 (送 --> 她)
+<li>前置宾语，eg: 他什么书都读 (书 <-- 读)
+<li>兼语，eg: 他请我吃饭 (请 --> 我)
+<li>定中关系，eg: 红苹果 (红 <-- 苹果)
+<li>状中结构，eg: 非常美丽 (非常 <-- 美丽)
+<li>动补结构，eg: 做完了作业 (做 --> 完)
+<li>并列关系，eg: 大山和大海 (大山 --> 大海)
+<li>介宾关系，eg: 在贸易区内 (在 --> 内)
+<li>左附加关系，eg: 大山和大海 (和 <-- 大海)
+<li>右附加关系，eg: 孩子们 (孩子 --> 们)
+<li>独立结构，eg: 两个单句在结构上彼此独立
+<li>标点符号，eg: 。
+<li>核心关系，eg: 整个句子的核心
      */
     public $DpTokens;
 
@@ -39,7 +84,22 @@ class DependencyParsingResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $DpTokens 句法依存分析结果
+     * @param array $DpTokens 句法依存分析结果，其中句法依存关系的类型包括：
+<li>主谓关系，eg: 我送她一束花 (我 <-- 送)
+<li>动宾关系，eg: 我送她一束花 (送 --> 花)
+<li>间宾关系，eg: 我送她一束花 (送 --> 她)
+<li>前置宾语，eg: 他什么书都读 (书 <-- 读)
+<li>兼语，eg: 他请我吃饭 (请 --> 我)
+<li>定中关系，eg: 红苹果 (红 <-- 苹果)
+<li>状中结构，eg: 非常美丽 (非常 <-- 美丽)
+<li>动补结构，eg: 做完了作业 (做 --> 完)
+<li>并列关系，eg: 大山和大海 (大山 --> 大海)
+<li>介宾关系，eg: 在贸易区内 (在 --> 内)
+<li>左附加关系，eg: 大山和大海 (和 <-- 大海)
+<li>右附加关系，eg: 孩子们 (孩子 --> 们)
+<li>独立结构，eg: 两个单句在结构上彼此独立
+<li>标点符号，eg: 。
+<li>核心关系，eg: 整个句子的核心
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

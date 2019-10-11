@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 20103：性感
 24001：暴恐
 21000：综合
+ * @method CodeDetect getCodeDetect() 获取图片二维码详情
+ * @method void setCodeDetect(CodeDetect $CodeDetect) 设置图片二维码详情
  * @method ImageHotDetect getHotDetect() 获取图片性感详情
  * @method void setHotDetect(ImageHotDetect $HotDetect) 设置图片性感详情
  * @method ImageIllegalDetect getIllegalDetect() 获取图片违法详情
@@ -76,6 +78,11 @@ class ImageData extends AbstractModel
 21000：综合
      */
     public $EvilType;
+
+    /**
+     * @var CodeDetect 图片二维码详情
+     */
+    public $CodeDetect;
 
     /**
      * @var ImageHotDetect 图片性感详情
@@ -122,6 +129,7 @@ class ImageData extends AbstractModel
 20103：性感
 24001：暴恐
 21000：综合
+     * @param CodeDetect $CodeDetect 图片二维码详情
      * @param ImageHotDetect $HotDetect 图片性感详情
      * @param ImageIllegalDetect $IllegalDetect 图片违法详情
      * @param OCRDetect $OCRDetect 图片OCR详情
@@ -148,6 +156,11 @@ class ImageData extends AbstractModel
 
         if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
             $this->EvilType = $param["EvilType"];
+        }
+
+        if (array_key_exists("CodeDetect",$param) and $param["CodeDetect"] !== null) {
+            $this->CodeDetect = new CodeDetect();
+            $this->CodeDetect->deserialize($param["CodeDetect"]);
         }
 
         if (array_key_exists("HotDetect",$param) and $param["HotDetect"] !== null) {

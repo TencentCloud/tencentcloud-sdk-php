@@ -28,13 +28,15 @@ use TencentCloud\Common\AbstractModel;
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getErrCode() 获取错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+ * @method integer getErrCode() 获取错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrCode(integer $ErrCode) 设置错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+ * @method void setErrCode(integer $ErrCode) 设置错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -81,9 +83,10 @@ class EditMediaTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+     * @var integer 错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
@@ -129,9 +132,10 @@ class EditMediaTask extends AbstractModel
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ErrCode 错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+     * @param integer $ErrCode 错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。

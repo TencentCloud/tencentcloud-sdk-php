@@ -23,19 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getErrCode() 获取错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
- * @method void setErrCode(integer $ErrCode) 设置错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+ * @method integer getErrCode() 获取错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
+ * @method void setErrCode(integer $ErrCode) 设置错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
  * @method string getFileId() 获取转拉上传完成后生成的视频 ID。
@@ -68,15 +66,14 @@ class PullUploadTask extends AbstractModel
      * @var string 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var integer 错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+     * @var integer 错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
      */
     public $ErrCode;
 
@@ -120,11 +117,10 @@ class PullUploadTask extends AbstractModel
      * @param string $Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ErrCode 错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+     * @param integer $ErrCode 错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
      * @param string $Message 错误信息。
      * @param string $FileId 转拉上传完成后生成的视频 ID。
      * @param MediaBasicInfo $MediaBasicInfo 转拉完成后生成的媒体文件基础信息。

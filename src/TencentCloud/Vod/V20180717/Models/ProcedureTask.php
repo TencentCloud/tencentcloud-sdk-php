@@ -26,17 +26,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
- * @method integer getErrCode() 获取错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+ * @method integer getErrCode() 获取已弃用，请使用各个具体任务的 ErrCode。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrCode(integer $ErrCode) 设置错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+ * @method void setErrCode(integer $ErrCode) 设置已弃用，请使用各个具体任务的 ErrCode。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMessage() 获取错误信息。
+ * @method string getMessage() 获取已弃用，请使用各个具体任务的 Message。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMessage(string $Message) 设置错误信息。
+ * @method void setMessage(string $Message) 设置已弃用，请使用各个具体任务的 Message。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取媒体文件 ID
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 FileId；</li>
@@ -120,15 +116,13 @@ class ProcedureTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+     * @var integer 已弃用，请使用各个具体任务的 ErrCode。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
 
     /**
-     * @var string 错误信息。
+     * @var string 已弃用，请使用各个具体任务的 Message。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
@@ -216,11 +210,9 @@ class ProcedureTask extends AbstractModel
      * @param string $Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-     * @param integer $ErrCode 错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+     * @param integer $ErrCode 已弃用，请使用各个具体任务的 ErrCode。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Message 错误信息。
+     * @param string $Message 已弃用，请使用各个具体任务的 Message。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 媒体文件 ID
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 FileId；</li>

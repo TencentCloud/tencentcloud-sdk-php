@@ -18,8 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCallbackUrl() 获取回调url
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调url
+ * @method string getCallbackUrl() 获取回调URL，音频识别结果将以POST请求方式发送到此地址
+ * @method void setCallbackUrl(string $CallbackUrl) 设置回调URL，音频识别结果将以POST请求方式发送到此地址
  * @method string getFileContent() 获取音频内容的base64
  * @method void setFileContent(string $FileContent) 设置音频内容的base64
  * @method string getFileMD5() 获取音频文件的MD5值
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class AudioModerationRequest extends AbstractModel
 {
     /**
-     * @var string 回调url
+     * @var string 回调URL，音频识别结果将以POST请求方式发送到此地址
      */
     public $CallbackUrl;
 
@@ -53,7 +53,7 @@ class AudioModerationRequest extends AbstractModel
      */
     public $FileUrl;
     /**
-     * @param string $CallbackUrl 回调url
+     * @param string $CallbackUrl 回调URL，音频识别结果将以POST请求方式发送到此地址
      * @param string $FileContent 音频内容的base64
      * @param string $FileMD5 音频文件的MD5值
      * @param string $FileUrl 音频内容Url ，其中FileUrl和FileContent二选一

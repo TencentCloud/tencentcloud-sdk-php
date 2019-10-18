@@ -20,6 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getName() 获取任务流名字。
  * @method void setName(string $Name) 设置任务流名字。
+ * @method string getType() 获取任务流模板类型，取值范围：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
+ * @method void setType(string $Type) 设置任务流模板类型，取值范围：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
  * @method MediaProcessTaskInput getMediaProcessTask() 获取视频处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) 设置视频处理类型任务参数。
@@ -51,6 +57,13 @@ class ProcedureTemplate extends AbstractModel
      * @var string 任务流名字。
      */
     public $Name;
+
+    /**
+     * @var string 任务流模板类型，取值范围：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
+     */
+    public $Type;
 
     /**
      * @var MediaProcessTaskInput 视频处理类型任务参数。
@@ -87,6 +100,9 @@ class ProcedureTemplate extends AbstractModel
     public $UpdateTime;
     /**
      * @param string $Name 任务流名字。
+     * @param string $Type 任务流模板类型，取值范围：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
      * @param MediaProcessTaskInput $MediaProcessTask 视频处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiContentReviewTaskInput $AiContentReviewTask AI 智能内容审核类型任务参数。
@@ -112,6 +128,10 @@ class ProcedureTemplate extends AbstractModel
         }
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("MediaProcessTask",$param) and $param["MediaProcessTask"] !== null) {

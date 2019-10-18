@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSalesName(string $SalesName) 设置业务员姓名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMail() 获取代客邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMail(string $Mail) 设置代客邮箱
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -135,6 +139,12 @@ class AgentAuditedClient extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SalesName;
+
+    /**
+     * @var string 代客邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Mail;
     /**
      * @param string $Uin 代理商账号ID
      * @param string $ClientUin 代客账号ID
@@ -152,6 +162,8 @@ class AgentAuditedClient extends AbstractModel
      * @param string $SalesUin 业务员ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SalesName 业务员姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Mail 代客邮箱
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -224,6 +236,10 @@ class AgentAuditedClient extends AbstractModel
 
         if (array_key_exists("SalesName",$param) and $param["SalesName"] !== null) {
             $this->SalesName = $param["SalesName"];
+        }
+
+        if (array_key_exists("Mail",$param) and $param["Mail"] !== null) {
+            $this->Mail = $param["Mail"];
         }
     }
 }

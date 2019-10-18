@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置密钥创建时间
  * @method string getDescription() 获取CMK的描述
  * @method void setDescription(string $Description) 设置CMK的描述
- * @method string getKeyState() 获取CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
- * @method void setKeyState(string $KeyState) 设置CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
+ * @method string getKeyState() 获取CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
+ * @method void setKeyState(string $KeyState) 设置CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
  * @method string getKeyUsage() 获取CMK用途，当前是 ENCRYPT_DECRYPT
  * @method void setKeyUsage(string $KeyUsage) 设置CMK用途，当前是 ENCRYPT_DECRYPT
- * @method integer getType() 获取CMK类型，当前为 1 普通类型
- * @method void setType(integer $Type) 设置CMK类型，当前为 1 普通类型
+ * @method integer getType() 获取CMK类型，2 表示符合FIPS标准，4表示符合国密标准
+ * @method void setType(integer $Type) 设置CMK类型，2 表示符合FIPS标准，4表示符合国密标准
  * @method integer getCreatorUin() 获取创建者
  * @method void setCreatorUin(integer $CreatorUin) 设置创建者
  * @method boolean getKeyRotationEnabled() 获取是否开启了密钥轮换功能
@@ -43,6 +43,14 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDeletionDate() 获取计划删除的时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeletionDate(integer $DeletionDate) 设置计划删除的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOrigin() 获取CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrigin(string $Origin) 设置CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getValidTo() 获取在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValidTo(integer $ValidTo) 设置在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -72,7 +80,7 @@ class KeyMetadata extends AbstractModel
     public $Description;
 
     /**
-     * @var string CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
+     * @var string CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
      */
     public $KeyState;
 
@@ -82,7 +90,7 @@ class KeyMetadata extends AbstractModel
     public $KeyUsage;
 
     /**
-     * @var integer CMK类型，当前为 1 普通类型
+     * @var integer CMK类型，2 表示符合FIPS标准，4表示符合国密标准
      */
     public $Type;
 
@@ -111,19 +119,35 @@ class KeyMetadata extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeletionDate;
+
+    /**
+     * @var string CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Origin;
+
+    /**
+     * @var integer 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ValidTo;
     /**
      * @param string $KeyId CMK的全局唯一标识
      * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名
      * @param integer $CreateTime 密钥创建时间
      * @param string $Description CMK的描述
-     * @param string $KeyState CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
+     * @param string $KeyState CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
      * @param string $KeyUsage CMK用途，当前是 ENCRYPT_DECRYPT
-     * @param integer $Type CMK类型，当前为 1 普通类型
+     * @param integer $Type CMK类型，2 表示符合FIPS标准，4表示符合国密标准
      * @param integer $CreatorUin 创建者
      * @param boolean $KeyRotationEnabled 是否开启了密钥轮换功能
      * @param string $Owner CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
      * @param integer $NextRotateTime 在密钥轮换开启状态下，下次轮换的时间
      * @param integer $DeletionDate 计划删除的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Origin CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ValidTo 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -184,6 +208,14 @@ class KeyMetadata extends AbstractModel
 
         if (array_key_exists("DeletionDate",$param) and $param["DeletionDate"] !== null) {
             $this->DeletionDate = $param["DeletionDate"];
+        }
+
+        if (array_key_exists("Origin",$param) and $param["Origin"] !== null) {
+            $this->Origin = $param["Origin"];
+        }
+
+        if (array_key_exists("ValidTo",$param) and $param["ValidTo"] !== null) {
+            $this->ValidTo = $param["ValidTo"];
         }
     }
 }

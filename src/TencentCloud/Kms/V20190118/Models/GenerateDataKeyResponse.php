@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyId(string $KeyId) 设置CMK的全局唯一标识
  * @method string getPlaintext() 获取生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文
  * @method void setPlaintext(string $Plaintext) 设置生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文
- * @method string getCiphertextBlob() 获取DataKey加密后的密文，用户需要自行保存密文
- * @method void setCiphertextBlob(string $CiphertextBlob) 设置DataKey加密后的密文，用户需要自行保存密文
+ * @method string getCiphertextBlob() 获取DataKey加密后经过base64编码的密文，用户需要自行保存密文
+ * @method void setCiphertextBlob(string $CiphertextBlob) 设置DataKey加密后经过base64编码的密文，用户需要自行保存密文
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -44,7 +44,7 @@ class GenerateDataKeyResponse extends AbstractModel
     public $Plaintext;
 
     /**
-     * @var string DataKey加密后的密文，用户需要自行保存密文
+     * @var string DataKey加密后经过base64编码的密文，用户需要自行保存密文
      */
     public $CiphertextBlob;
 
@@ -55,7 +55,7 @@ class GenerateDataKeyResponse extends AbstractModel
     /**
      * @param string $KeyId CMK的全局唯一标识
      * @param string $Plaintext 生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文
-     * @param string $CiphertextBlob DataKey加密后的密文，用户需要自行保存密文
+     * @param string $CiphertextBlob DataKey加密后经过base64编码的密文，用户需要自行保存密文
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

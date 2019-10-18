@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAreaCoordSet(array $AreaCoordSet) 设置嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUrl() 获取嫌疑图片 URL （图片不会永久存储，到达
+PicUrlExpireTime 时间点后图片将被删除）。
+ * @method void setUrl(string $Url) 设置嫌疑图片 URL （图片不会永久存储，到达
+PicUrlExpireTime 时间点后图片将被删除）。
+ * @method integer getPicUrlExpireTime() 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+ * @method void setPicUrlExpireTime(integer $PicUrlExpireTime) 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  */
 
 /**
@@ -93,6 +99,17 @@ class MediaContentReviewOcrTextSegmentItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AreaCoordSet;
+
+    /**
+     * @var string 嫌疑图片 URL （图片不会永久存储，到达
+PicUrlExpireTime 时间点后图片将被删除）。
+     */
+    public $Url;
+
+    /**
+     * @var integer 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     */
+    public $PicUrlExpireTime;
     /**
      * @param float $StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -109,6 +126,9 @@ class MediaContentReviewOcrTextSegmentItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AreaCoordSet 嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Url 嫌疑图片 URL （图片不会永久存储，到达
+PicUrlExpireTime 时间点后图片将被删除）。
+     * @param integer $PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     function __construct()
     {
@@ -144,6 +164,14 @@ class MediaContentReviewOcrTextSegmentItem extends AbstractModel
 
         if (array_key_exists("AreaCoordSet",$param) and $param["AreaCoordSet"] !== null) {
             $this->AreaCoordSet = $param["AreaCoordSet"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("PicUrlExpireTime",$param) and $param["PicUrlExpireTime"] !== null) {
+            $this->PicUrlExpireTime = $param["PicUrlExpireTime"];
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceTemplate(ServiceTemplateSpecification $ServiceTemplate) 设置协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
  * @method string getCidrBlock() 获取网段或IP(互斥)。
  * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)。
+ * @method string getIpv6CidrBlock() 获取网段或IPv6(互斥)。
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置网段或IPv6(互斥)。
  * @method string getSecurityGroupId() 获取安全组实例ID，例如：sg-ohuuioma。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如：sg-ohuuioma。
  * @method AddressTemplateSpecification getAddressTemplate() 获取IP地址ID或者ID地址组ID。
@@ -71,6 +73,11 @@ class SecurityGroupPolicy extends AbstractModel
     public $CidrBlock;
 
     /**
+     * @var string 网段或IPv6(互斥)。
+     */
+    public $Ipv6CidrBlock;
+
+    /**
      * @var string 安全组实例ID，例如：sg-ohuuioma。
      */
     public $SecurityGroupId;
@@ -100,6 +107,7 @@ class SecurityGroupPolicy extends AbstractModel
      * @param string $Port 端口(all, 离散port,  range)。
      * @param ServiceTemplateSpecification $ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
      * @param string $CidrBlock 网段或IP(互斥)。
+     * @param string $Ipv6CidrBlock 网段或IPv6(互斥)。
      * @param string $SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
      * @param AddressTemplateSpecification $AddressTemplate IP地址ID或者ID地址组ID。
      * @param string $Action ACCEPT 或 DROP。
@@ -137,6 +145,10 @@ class SecurityGroupPolicy extends AbstractModel
 
         if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
             $this->CidrBlock = $param["CidrBlock"];
+        }
+
+        if (array_key_exists("Ipv6CidrBlock",$param) and $param["Ipv6CidrBlock"] !== null) {
+            $this->Ipv6CidrBlock = $param["Ipv6CidrBlock"];
         }
 
         if (array_key_exists("SecurityGroupId",$param) and $param["SecurityGroupId"] !== null) {

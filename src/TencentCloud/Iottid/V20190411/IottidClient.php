@@ -29,6 +29,7 @@ use TencentCloud\Iottid\V20190411\Models as Models;
 * @method Models\DescribeAvailableLibCountResponse DescribeAvailableLibCount(Models\DescribeAvailableLibCountRequest $req) 查询指定订单的可空发的白盒密钥数量
 * @method Models\DescribePermissionResponse DescribePermission(Models\DescribePermissionRequest $req) 查询企业用户TID平台控制台权限 
 * @method Models\DownloadTidsResponse DownloadTids(Models\DownloadTidsRequest $req) 下载芯片订单的TID 
+* @method Models\UploadDeviceUniqueCodeResponse UploadDeviceUniqueCode(Models\UploadDeviceUniqueCodeRequest $req) 上传硬件唯一标识码，是软加固设备身份参数。本接口如遇到错误数据，则所有当次上传数据失效。
 * @method Models\VerifyChipBurnInfoResponse VerifyChipBurnInfo(Models\VerifyChipBurnInfoRequest $req) 下载控制台验证芯片烧录信息，保证TID与中心信息一致 
  */
 

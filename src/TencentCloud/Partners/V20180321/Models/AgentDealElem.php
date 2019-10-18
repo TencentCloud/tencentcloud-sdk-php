@@ -102,6 +102,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayerMode(string $PayerMode) 设置支付方式，0：自付；1：代付
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getActivityId() 获取活动ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setActivityId(string $ActivityId) 设置活动ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -242,6 +246,12 @@ class AgentDealElem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayerMode;
+
+    /**
+     * @var string 活动ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ActivityId;
     /**
      * @param string $DealId 订单自增 ID
      * @param string $DealName 订单号
@@ -284,6 +294,8 @@ class AgentDealElem extends AbstractModel
      * @param string $SalesUin 业务员账号ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayerMode 支付方式，0：自付；1：代付
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ActivityId 活动ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -389,6 +401,10 @@ class AgentDealElem extends AbstractModel
 
         if (array_key_exists("PayerMode",$param) and $param["PayerMode"] !== null) {
             $this->PayerMode = $param["PayerMode"];
+        }
+
+        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
+            $this->ActivityId = $param["ActivityId"];
         }
     }
 }

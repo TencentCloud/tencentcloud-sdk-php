@@ -19,41 +19,29 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method float getStartTimeOffset() 获取嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getEndTimeOffset() 获取嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getConfidence() 获取嫌疑片段涉黄分数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfidence(float $Confidence) 设置嫌疑片段涉黄分数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabel() 获取嫌疑片段鉴黄结果标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置嫌疑片段鉴黄结果标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestion() 获取嫌疑片段鉴黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestion(string $Suggestion) 设置嫌疑片段鉴黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPicUrlExpireTimeStamp() 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPicUrlExpireTimeStamp(integer $PicUrlExpireTimeStamp) 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPicUrlExpireTimeStamp() 获取该字段已废弃，请使用 PicUrlExpireTime。
+ * @method void setPicUrlExpireTimeStamp(integer $PicUrlExpireTimeStamp) 设置该字段已废弃，请使用 PicUrlExpireTime。
+ * @method string getPicUrlExpireTime() 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  */
 
 /**
@@ -63,25 +51,21 @@ class MediaContentReviewSegmentItem extends AbstractModel
 {
     /**
      * @var float 嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTimeOffset;
 
     /**
      * @var float 嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTimeOffset;
 
     /**
      * @var float 嫌疑片段涉黄分数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Confidence;
 
     /**
      * @var string 嫌疑片段鉴黄结果标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
@@ -90,41 +74,37 @@ class MediaContentReviewSegmentItem extends AbstractModel
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
     /**
      * @var string 嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
-     * @var integer 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 该字段已废弃，请使用 PicUrlExpireTime。
      */
     public $PicUrlExpireTimeStamp;
+
+    /**
+     * @var string 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     */
+    public $PicUrlExpireTime;
     /**
      * @param float $StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Confidence 嫌疑片段涉黄分数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 嫌疑片段鉴黄结果标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Suggestion 嫌疑片段鉴黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PicUrlExpireTimeStamp 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PicUrlExpireTimeStamp 该字段已废弃，请使用 PicUrlExpireTime。
+     * @param string $PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     function __construct()
     {
@@ -164,6 +144,10 @@ class MediaContentReviewSegmentItem extends AbstractModel
 
         if (array_key_exists("PicUrlExpireTimeStamp",$param) and $param["PicUrlExpireTimeStamp"] !== null) {
             $this->PicUrlExpireTimeStamp = $param["PicUrlExpireTimeStamp"];
+        }
+
+        if (array_key_exists("PicUrlExpireTime",$param) and $param["PicUrlExpireTime"] !== null) {
+            $this->PicUrlExpireTime = $param["PicUrlExpireTime"];
         }
     }
 }

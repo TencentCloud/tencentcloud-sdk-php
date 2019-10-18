@@ -25,6 +25,7 @@ use TencentCloud\Partners\V20180321\Models as Models;
 * @method Models\AgentPayDealsResponse AgentPayDeals(Models\AgentPayDealsRequest $req) 代理商支付订单接口，支持自付/代付
 * @method Models\AgentTransferMoneyResponse AgentTransferMoney(Models\AgentTransferMoneyRequest $req) 为合作伙伴提供转账给客户能力。仅支持合作伙伴为自己名下客户转账。
 * @method Models\AuditApplyClientResponse AuditApplyClient(Models\AuditApplyClientRequest $req) 代理商可以审核其名下申请中代客
+* @method Models\CreatePayRelationForClientResponse CreatePayRelationForClient(Models\CreatePayRelationForClientRequest $req) 合作伙伴为客户创建强代付关系
 * @method Models\DescribeAgentAuditedClientsResponse DescribeAgentAuditedClients(Models\DescribeAgentAuditedClientsRequest $req) 查询已审核客户列表
 * @method Models\DescribeAgentBillsResponse DescribeAgentBills(Models\DescribeAgentBillsRequest $req) 代理商可查询自己及名下代客所有业务明细
 * @method Models\DescribeAgentClientsResponse DescribeAgentClients(Models\DescribeAgentClientsRequest $req) 代理商可查询自己名下待审核客户列表
@@ -34,6 +35,7 @@ use TencentCloud\Partners\V20180321\Models as Models;
 * @method Models\DescribeRebateInfosResponse DescribeRebateInfos(Models\DescribeRebateInfosRequest $req) 代理商可查询自己名下全部返佣信息
 * @method Models\DescribeSalesmansResponse DescribeSalesmans(Models\DescribeSalesmansRequest $req) 代理商查询名下业务员列表信息
 * @method Models\ModifyClientRemarkResponse ModifyClientRemark(Models\ModifyClientRemarkRequest $req) 代理商可以对名下客户添加备注、修改备注
+* @method Models\RemovePayRelationForClientResponse RemovePayRelationForClient(Models\RemovePayRelationForClientRequest $req) 合作伙伴为客户消除强代付关系
  */
 
 class PartnersClient extends AbstractClient

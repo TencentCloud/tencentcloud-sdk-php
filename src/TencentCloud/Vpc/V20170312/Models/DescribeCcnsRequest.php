@@ -25,11 +25,15 @@ use TencentCloud\Common\AbstractModel;
 <li>ccn-name - String - （过滤条件）CCN名称。</li>
 <li>ccn-description - String - （过滤条件）CCN描述。</li>
 <li>state - String - （过滤条件）实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。</li>
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例：查询绑定了标签的CCN列表。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定CcnIds和Filters。
 <li>ccn-id - String - （过滤条件）CCN唯一ID，形如：vpc-f49l6u0z。</li>
 <li>ccn-name - String - （过滤条件）CCN名称。</li>
 <li>ccn-description - String - （过滤条件）CCN描述。</li>
 <li>state - String - （过滤条件）实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。</li>
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例：查询绑定了标签的CCN列表。</li>
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
@@ -56,6 +60,8 @@ class DescribeCcnsRequest extends AbstractModel
 <li>ccn-name - String - （过滤条件）CCN名称。</li>
 <li>ccn-description - String - （过滤条件）CCN描述。</li>
 <li>state - String - （过滤条件）实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。</li>
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例：查询绑定了标签的CCN列表。</li>
      */
     public $Filters;
 
@@ -85,6 +91,8 @@ class DescribeCcnsRequest extends AbstractModel
 <li>ccn-name - String - （过滤条件）CCN名称。</li>
 <li>ccn-description - String - （过滤条件）CCN描述。</li>
 <li>state - String - （过滤条件）实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。</li>
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例：查询绑定了标签的CCN列表。</li>
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
      * @param string $OrderField 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`

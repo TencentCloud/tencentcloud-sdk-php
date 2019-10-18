@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) 设置主机InstanceId列表
  * @method string getInstanceDeleteMode() 获取集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
  * @method void setInstanceDeleteMode(string $InstanceDeleteMode) 设置集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
+ * @method boolean getForceDelete() 获取是否强制删除(当节点在初始化时，可以指定参数为TRUE)
+ * @method void setForceDelete(boolean $ForceDelete) 设置是否强制删除(当节点在初始化时，可以指定参数为TRUE)
  */
 
 /**
@@ -45,10 +47,16 @@ class DeleteClusterInstancesRequest extends AbstractModel
      * @var string 集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
      */
     public $InstanceDeleteMode;
+
+    /**
+     * @var boolean 是否强制删除(当节点在初始化时，可以指定参数为TRUE)
+     */
+    public $ForceDelete;
     /**
      * @param string $ClusterId 集群ID
      * @param array $InstanceIds 主机InstanceId列表
      * @param string $InstanceDeleteMode 集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
+     * @param boolean $ForceDelete 是否强制删除(当节点在初始化时，可以指定参数为TRUE)
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DeleteClusterInstancesRequest extends AbstractModel
 
         if (array_key_exists("InstanceDeleteMode",$param) and $param["InstanceDeleteMode"] !== null) {
             $this->InstanceDeleteMode = $param["InstanceDeleteMode"];
+        }
+
+        if (array_key_exists("ForceDelete",$param) and $param["ForceDelete"] !== null) {
+            $this->ForceDelete = $param["ForceDelete"];
         }
     }
 }

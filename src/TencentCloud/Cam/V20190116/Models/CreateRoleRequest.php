@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getRoleName() 获取角色名称
  * @method void setRoleName(string $RoleName) 设置角色名称
- * @method string getPolicyDocument() 获取策略文档
- * @method void setPolicyDocument(string $PolicyDocument) 设置策略文档
+ * @method string getPolicyDocument() 获取策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
+ * @method void setPolicyDocument(string $PolicyDocument) 设置策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
  * @method string getDescription() 获取角色描述
  * @method void setDescription(string $Description) 设置角色描述
  * @method integer getConsoleLogin() 获取是否允许登录
@@ -39,7 +39,7 @@ class CreateRoleRequest extends AbstractModel
     public $RoleName;
 
     /**
-     * @var string 策略文档
+     * @var string 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
      */
     public $PolicyDocument;
 
@@ -54,7 +54,7 @@ class CreateRoleRequest extends AbstractModel
     public $ConsoleLogin;
     /**
      * @param string $RoleName 角色名称
-     * @param string $PolicyDocument 策略文档
+     * @param string $PolicyDocument 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
      * @param string $Description 角色描述
      * @param integer $ConsoleLogin 是否允许登录
      */

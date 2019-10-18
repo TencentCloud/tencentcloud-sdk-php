@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectType(string $ProjectType) 设置项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getActivityId() 获取活动ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setActivityId(string $ActivityId) 设置活动ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -114,6 +118,12 @@ class AgentBillElem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectType;
+
+    /**
+     * @var string 活动ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ActivityId;
     /**
      * @param string $Uin 代理商账号ID
      * @param string $OrderId 订单号，仅对预付费账单有意义
@@ -128,6 +138,8 @@ class AgentBillElem extends AbstractModel
      * @param string $ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ActivityId 活动ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -188,6 +200,10 @@ class AgentBillElem extends AbstractModel
 
         if (array_key_exists("ProjectType",$param) and $param["ProjectType"] !== null) {
             $this->ProjectType = $param["ProjectType"];
+        }
+
+        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
+            $this->ActivityId = $param["ActivityId"];
         }
     }
 }

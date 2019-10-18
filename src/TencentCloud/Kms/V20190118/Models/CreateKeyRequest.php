@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置CMK 的描述，最大1024字节
  * @method string getKeyUsage() 获取指定key的用途。目前，仅支持"ENCRYPT_DECRYPT"，默认为  "ENCRYPT_DECRYPT"，即key用于加密和解密
  * @method void setKeyUsage(string $KeyUsage) 设置指定key的用途。目前，仅支持"ENCRYPT_DECRYPT"，默认为  "ENCRYPT_DECRYPT"，即key用于加密和解密
- * @method integer getType() 获取指定key类型，1为当前地域默认类型，默认为1，且当前只支持该类型
- * @method void setType(integer $Type) 设置指定key类型，1为当前地域默认类型，默认为1，且当前只支持该类型
+ * @method integer getType() 获取指定key类型，默认为1，1表示默认类型，由KMS创建CMK密钥，2 表示EXTERNAL 类型，该类型需要用户导入密钥材料，参考 GetParametersForImport 和 ImportKeyMaterial 接口
+ * @method void setType(integer $Type) 设置指定key类型，默认为1，1表示默认类型，由KMS创建CMK密钥，2 表示EXTERNAL 类型，该类型需要用户导入密钥材料，参考 GetParametersForImport 和 ImportKeyMaterial 接口
  */
 
 /**
@@ -49,14 +49,14 @@ class CreateKeyRequest extends AbstractModel
     public $KeyUsage;
 
     /**
-     * @var integer 指定key类型，1为当前地域默认类型，默认为1，且当前只支持该类型
+     * @var integer 指定key类型，默认为1，1表示默认类型，由KMS创建CMK密钥，2 表示EXTERNAL 类型，该类型需要用户导入密钥材料，参考 GetParametersForImport 和 ImportKeyMaterial 接口
      */
     public $Type;
     /**
      * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字母数字 - _ 的组合。以 kms- 作为前缀的用于云产品使用，Alias 不可重复。
      * @param string $Description CMK 的描述，最大1024字节
      * @param string $KeyUsage 指定key的用途。目前，仅支持"ENCRYPT_DECRYPT"，默认为  "ENCRYPT_DECRYPT"，即key用于加密和解密
-     * @param integer $Type 指定key类型，1为当前地域默认类型，默认为1，且当前只支持该类型
+     * @param integer $Type 指定key类型，默认为1，1表示默认类型，由KMS创建CMK密钥，2 表示EXTERNAL 类型，该类型需要用户导入密钥材料，参考 GetParametersForImport 和 ImportKeyMaterial 接口
      */
     function __construct()
     {

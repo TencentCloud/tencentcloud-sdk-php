@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUser(string $User) 设置实例的用户名
  * @method string getPassword() 获取实例的密码
  * @method void setPassword(string $Password) 设置实例的密码
- * @method string getRdsInstanceId() 获取阿里云RDS实例ID。源库是阿里云RDS5.6适用
- * @method void setRdsInstanceId(string $RdsInstanceId) 设置阿里云RDS实例ID。源库是阿里云RDS5.6适用
+ * @method string getRdsInstanceId() 获取阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
+ * @method void setRdsInstanceId(string $RdsInstanceId) 设置阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
  * @method string getCvmInstanceId() 获取CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
  * @method void setCvmInstanceId(string $CvmInstanceId) 设置CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
  * @method string getUniqDcgId() 获取专线网关ID，格式如：dcg-0rxtqqxb
@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCcnId(string $CcnId) 设置云联网ID，如：ccn-afp6kltc
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineVersion() 获取数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
+ * @method void setEngineVersion(string $EngineVersion) 设置数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
  */
 
 /**
@@ -83,7 +85,7 @@ class SrcInfo extends AbstractModel
     public $Password;
 
     /**
-     * @var string 阿里云RDS实例ID。源库是阿里云RDS5.6适用
+     * @var string 阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
      */
     public $RdsInstanceId;
 
@@ -132,13 +134,18 @@ class SrcInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CcnId;
+
+    /**
+     * @var string 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
+     */
+    public $EngineVersion;
     /**
      * @param string $AccessKey 阿里云AccessKey。源库是阿里云RDS5.6适用
      * @param string $Ip 实例的IP地址
      * @param integer $Port 实例的端口
      * @param string $User 实例的用户名
      * @param string $Password 实例的密码
-     * @param string $RdsInstanceId 阿里云RDS实例ID。源库是阿里云RDS5.6适用
+     * @param string $RdsInstanceId 阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
      * @param string $CvmInstanceId CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
      * @param string $UniqDcgId 专线网关ID，格式如：dcg-0rxtqqxb
      * @param string $VpcId 私有网络ID，格式如：vpc-92jblxto
@@ -149,6 +156,7 @@ class SrcInfo extends AbstractModel
      * @param string $Supplier 当实例为RDS实例时，填写为aliyun, 其他情况均填写others
      * @param string $CcnId 云联网ID，如：ccn-afp6kltc
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineVersion 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
      */
     function __construct()
     {
@@ -220,6 +228,10 @@ class SrcInfo extends AbstractModel
 
         if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
             $this->CcnId = $param["CcnId"];
+        }
+
+        if (array_key_exists("EngineVersion",$param) and $param["EngineVersion"] !== null) {
+            $this->EngineVersion = $param["EngineVersion"];
         }
     }
 }

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputText(string $InputText) 设置请求的文本。
  * @method string getSessionAttributes() 获取透传字段，透传给用户自定义的WebService服务。
  * @method void setSessionAttributes(string $SessionAttributes) 设置透传字段，透传给用户自定义的WebService服务。
- * @method string getPlatformType() 获取平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount}。
- * @method void setPlatformType(string $PlatformType) 设置平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount}。
+ * @method string getPlatformType() 获取平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
+ * @method void setPlatformType(string $PlatformType) 设置平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
  */
 
 /**
@@ -63,7 +63,7 @@ class TextProcessRequest extends AbstractModel
     public $SessionAttributes;
 
     /**
-     * @var string 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount}。
+     * @var string 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
      */
     public $PlatformType;
     /**
@@ -72,7 +72,7 @@ class TextProcessRequest extends AbstractModel
      * @param string $TerminalId 终端标识，每个终端(或线程)对应一个，区分并发多用户。
      * @param string $InputText 请求的文本。
      * @param string $SessionAttributes 透传字段，透传给用户自定义的WebService服务。
-     * @param string $PlatformType 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount}。
+     * @param string $PlatformType 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
      */
     function __construct()
     {

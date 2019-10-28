@@ -22,12 +22,20 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Gme\V20180711\Models as Models;
 
 /**
+* @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 本接口(CreateApp)用于创建一个GME应用
+* @method Models\DescribeAppStatisticsResponse DescribeAppStatistics(Models\DescribeAppStatisticsRequest $req) 本接口(DescribeAppStatistics)用户获取某个GME应用的用量数据。包括实时语音，离线语音，语音过滤等。最长查询周期为最近30天。
 * @method Models\DescribeFilterResultResponse DescribeFilterResult(Models\DescribeFilterResultRequest $req) 根据应用ID和文件ID查询识别结果
 * @method Models\DescribeFilterResultListResponse DescribeFilterResultList(Models\DescribeFilterResultListRequest $req) 根据日期查询识别结果列表
 * @method Models\DescribeScanResultListResponse DescribeScanResultList(Models\DescribeScanResultListRequest $req) 本接口(DescribeScanResultList)用于查询语音检测结果，查询任务列表最多支持100个。
 <p style="color:red">如果在提交语音检测任务时未设置 Callback 字段，则需要通过本接口获取检测结果</p>
-* @method Models\ScanVoiceResponse ScanVoice(Models\ScanVoiceRequest $req) 本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。
+* @method Models\ModifyAppStatusResponse ModifyAppStatus(Models\ModifyAppStatusRequest $req) 本接口(ModifyAppStatus)用于修改应用总开关状态。
+* @method Models\ScanVoiceResponse ScanVoice(Models\ScanVoiceRequest $req) 本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。使用前请您登录[控制台 - 服务配置](https://console.cloud.tencent.com/gamegme/conf)开启语音分析服务。
 </br></br>
+
+<h4><b>功能试用说明：</b></h4>
+<li>打开前往<a href="https://console.cloud.tencent.com/gamegme/tryout">控制台 - 产品试用</a>免费试用语音分析服务。</li>
+</br>
+
 <h4><b>接口功能说明：</b></h4>
 <li>支持对语音流或语音文件进行检测，判断其中是否包含违规内容。</li>
 <li>支持设置回调地址 Callback 获取检测结果，同时支持通过接口(查询语音检测结果)主动轮询获取检测结果。</li>
@@ -67,7 +75,7 @@ use TencentCloud\Gme\V20180711\Models as Models;
 <p>ad :广告</p>
 <p>terrorism:暴恐</p>
 <p>contraband :违禁</p>
-<p>customized:自定义词库</p>
+<p>customized:自定义词库。目前白名单开放，如有需要请<a href="https://cloud.tencent.com/apply/p/8809fjcik56">联系我们</a>。</p>
 </td>
 </tr>
 </tbody>
@@ -104,14 +112,8 @@ use TencentCloud\Gme\V20180711\Models as Models;
 	</ul>
 </ul>
 
-<ul>
-<li>
-回调请求 Body 的字段说明见结构：
-<a href="https://cloud.tencent.com/document/api/607/35375#DescribeScanResult" target="_blank">DescribeScanResult</a>
-</li>
-</ul>
-
-<li>回调示例如下<font color="red">（详细字段说明见上述表格中 Data 字段说明）</font>：</li>
+<li>回调示例如下<font color="red">（详细字段说明见结构：
+<a href="https://cloud.tencent.com/document/api/607/35375#DescribeScanResult" target="_blank">DescribeScanResult</a>）</font>：</li>
 <pre><code>{
 	"Code": 0,
 	"DataId": "1400000000_test_data_id",
@@ -125,6 +127,7 @@ use TencentCloud\Gme\V20180711\Models as Models;
 		"MainType": "abuse",
 		"RoomId": "123",
 		"OpenId": "xxx",
+		"Info":"",
 		"ScanDetail": [{
 			"EndTime": 1110,
 			"KeyWord": "xxx",

@@ -18,16 +18,22 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getEngineModelType() 获取引擎类型。8k_0：电话 8k 通用模型；16k_0：16k 通用模型；8k_6: 电话场景下单声道话者分离模型。
- * @method void setEngineModelType(string $EngineModelType) 设置引擎类型。8k_0：电话 8k 通用模型；16k_0：16k 通用模型；8k_6: 电话场景下单声道话者分离模型。
+ * @method string getEngineModelType() 获取引擎类型。
+8k_0：电话 8k 通用模型；
+16k_0：16k 通用模型；
+8k_6: 电话场景下单声道话者分离模型。
+ * @method void setEngineModelType(string $EngineModelType) 设置引擎类型。
+8k_0：电话 8k 通用模型；
+16k_0：16k 通用模型；
+8k_6: 电话场景下单声道话者分离模型。
  * @method integer getChannelNum() 获取语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
  * @method void setChannelNum(integer $ChannelNum) 设置语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
  * @method integer getResTextFormat() 获取识别结果文本编码方式。0：UTF-8。
  * @method void setResTextFormat(integer $ResTextFormat) 设置识别结果文本编码方式。0：UTF-8。
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method void setSourceType(integer $SourceType) 设置语音数据来源。0：语音 URL；1：语音数据（post body）。
- * @method string getCallbackUrl() 获取回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。
+ * @method string getCallbackUrl() 获取回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
+ * @method void setCallbackUrl(string $CallbackUrl) 设置回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
  * @method string getUrl() 获取语音的URL地址，需要公网可下载。长度小于2048字节，当 source_type 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
  * @method void setUrl(string $Url) 设置语音的URL地址，需要公网可下载。长度小于2048字节，当 source_type 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
  * @method string getData() 获取语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于5MB。
@@ -42,7 +48,10 @@ use TencentCloud\Common\AbstractModel;
 class CreateRecTaskRequest extends AbstractModel
 {
     /**
-     * @var string 引擎类型。8k_0：电话 8k 通用模型；16k_0：16k 通用模型；8k_6: 电话场景下单声道话者分离模型。
+     * @var string 引擎类型。
+8k_0：电话 8k 通用模型；
+16k_0：16k 通用模型；
+8k_6: 电话场景下单声道话者分离模型。
      */
     public $EngineModelType;
 
@@ -62,7 +71,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $SourceType;
 
     /**
-     * @var string 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。
+     * @var string 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
      */
     public $CallbackUrl;
 
@@ -81,11 +90,14 @@ class CreateRecTaskRequest extends AbstractModel
      */
     public $DataLen;
     /**
-     * @param string $EngineModelType 引擎类型。8k_0：电话 8k 通用模型；16k_0：16k 通用模型；8k_6: 电话场景下单声道话者分离模型。
+     * @param string $EngineModelType 引擎类型。
+8k_0：电话 8k 通用模型；
+16k_0：16k 通用模型；
+8k_6: 电话场景下单声道话者分离模型。
      * @param integer $ChannelNum 语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
      * @param integer $ResTextFormat 识别结果文本编码方式。0：UTF-8。
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
-     * @param string $CallbackUrl 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。
+     * @param string $CallbackUrl 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
      * @param string $Url 语音的URL地址，需要公网可下载。长度小于2048字节，当 source_type 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
      * @param string $Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于5MB。
      * @param integer $DataLen 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。

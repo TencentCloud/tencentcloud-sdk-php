@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method AllMuteSlice getAllMuteSlice() 获取如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
+ * @method void setAllMuteSlice(AllMuteSlice $AllMuteSlice) 设置如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
  * @method ASRStat getAsrStat() 获取返回的当前音频的统计信息。当进度为100时返回。
  * @method void setAsrStat(ASRStat $AsrStat) 设置返回的当前音频的统计信息。当进度为100时返回。
  * @method array getTexts() 获取返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
@@ -43,6 +45,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeAudioTaskResponse extends AbstractModel
 {
+    /**
+     * @var AllMuteSlice 如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
+     */
+    public $AllMuteSlice;
+
     /**
      * @var ASRStat 返回的当前音频的统计信息。当进度为100时返回。
      */
@@ -88,6 +95,7 @@ class DescribeAudioTaskResponse extends AbstractModel
      */
     public $RequestId;
     /**
+     * @param AllMuteSlice $AllMuteSlice 如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
      * @param ASRStat $AsrStat 返回的当前音频的统计信息。当进度为100时返回。
      * @param array $Texts 返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
      * @param array $VocabAnalysisDetailInfo 返回词汇库中的单词出现的详细时间信息。
@@ -110,6 +118,11 @@ class DescribeAudioTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AllMuteSlice",$param) and $param["AllMuteSlice"] !== null) {
+            $this->AllMuteSlice = new AllMuteSlice();
+            $this->AllMuteSlice->deserialize($param["AllMuteSlice"]);
+        }
+
         if (array_key_exists("AsrStat",$param) and $param["AsrStat"] !== null) {
             $this->AsrStat = new ASRStat();
             $this->AsrStat->deserialize($param["AsrStat"]);

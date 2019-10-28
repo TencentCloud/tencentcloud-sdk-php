@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableAllText(boolean $EnableAllText) 设置输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
  * @method boolean getEnableKeyword() 获取输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。
  * @method void setEnableKeyword(boolean $EnableKeyword) 设置输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。
+ * @method boolean getEnableMuteDetect() 获取静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。
+ * @method void setEnableMuteDetect(boolean $EnableMuteDetect) 设置静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。
  * @method boolean getEnableVadInfo() 获取输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat）
  * @method void setEnableVadInfo(boolean $EnableVadInfo) 设置输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat）
  * @method boolean getEnableVolume() 获取输出音频音量信息标识，当设置为 true 时，会输出当前音频音量信息。
@@ -44,6 +46,11 @@ class Function extends AbstractModel
     public $EnableKeyword;
 
     /**
+     * @var boolean 静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。
+     */
+    public $EnableMuteDetect;
+
+    /**
      * @var boolean 输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat）
      */
     public $EnableVadInfo;
@@ -55,6 +62,7 @@ class Function extends AbstractModel
     /**
      * @param boolean $EnableAllText 输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
      * @param boolean $EnableKeyword 输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。
+     * @param boolean $EnableMuteDetect 静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。
      * @param boolean $EnableVadInfo 输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat）
      * @param boolean $EnableVolume 输出音频音量信息标识，当设置为 true 时，会输出当前音频音量信息。
      */
@@ -76,6 +84,10 @@ class Function extends AbstractModel
 
         if (array_key_exists("EnableKeyword",$param) and $param["EnableKeyword"] !== null) {
             $this->EnableKeyword = $param["EnableKeyword"];
+        }
+
+        if (array_key_exists("EnableMuteDetect",$param) and $param["EnableMuteDetect"] !== null) {
+            $this->EnableMuteDetect = $param["EnableMuteDetect"];
         }
 
         if (array_key_exists("EnableVadInfo",$param) and $param["EnableVadInfo"] !== null) {

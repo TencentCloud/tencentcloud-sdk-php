@@ -62,12 +62,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) 设置实例 ID。
  * @method integer getInitFlag() 获取初始化标记，可取值：0 - 未初始化，1 - 初始化。
  * @method void setInitFlag(integer $InitFlag) 设置初始化标记，可取值：0 - 未初始化，1 - 初始化。
- * @method integer getWithDr() 获取是否包含灾备实例，可取值：0 - 不包含，1 - 包含。
- * @method void setWithDr(integer $WithDr) 设置是否包含灾备实例，可取值：0 - 不包含，1 - 包含。
- * @method integer getWithRo() 获取是否包含只读实例，可取值：0 - 不包含，1 - 包含。
- * @method void setWithRo(integer $WithRo) 设置是否包含只读实例，可取值：0 - 不包含，1 - 包含。
- * @method integer getWithMaster() 获取是否包含主实例，可取值：0 - 不包含，1 - 包含。
- * @method void setWithMaster(integer $WithMaster) 设置是否包含主实例，可取值：0 - 不包含，1 - 包含。
+ * @method integer getWithDr() 获取是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
+ * @method void setWithDr(integer $WithDr) 设置是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
+ * @method integer getWithRo() 获取是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+ * @method void setWithRo(integer $WithRo) 设置是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+ * @method integer getWithMaster() 获取是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+ * @method void setWithMaster(integer $WithMaster) 设置是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
  */
 
 /**
@@ -186,17 +186,17 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $InitFlag;
 
     /**
-     * @var integer 是否包含灾备实例，可取值：0 - 不包含，1 - 包含。
+     * @var integer 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
      */
     public $WithDr;
 
     /**
-     * @var integer 是否包含只读实例，可取值：0 - 不包含，1 - 包含。
+     * @var integer 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
      */
     public $WithRo;
 
     /**
-     * @var integer 是否包含主实例，可取值：0 - 不包含，1 - 包含。
+     * @var integer 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
      */
     public $WithMaster;
     /**
@@ -222,9 +222,9 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param string $ExClusterId 独享集群 ID。
      * @param array $InstanceIds 实例 ID。
      * @param integer $InitFlag 初始化标记，可取值：0 - 未初始化，1 - 初始化。
-     * @param integer $WithDr 是否包含灾备实例，可取值：0 - 不包含，1 - 包含。
-     * @param integer $WithRo 是否包含只读实例，可取值：0 - 不包含，1 - 包含。
-     * @param integer $WithMaster 是否包含主实例，可取值：0 - 不包含，1 - 包含。
+     * @param integer $WithDr 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
+     * @param integer $WithRo 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+     * @param integer $WithMaster 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
      */
     function __construct()
     {

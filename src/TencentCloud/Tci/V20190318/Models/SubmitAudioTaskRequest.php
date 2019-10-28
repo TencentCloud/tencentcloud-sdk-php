@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctions(Function $Functions) 设置功能开关列表，表示是否需要打开相应的功能，返回相应的信息
  * @method string getFileType() 获取视频文件类型，默认点播，直播填 live_url
  * @method void setFileType(string $FileType) 设置视频文件类型，默认点播，直播填 live_url
+ * @method integer getMuteThreshold() 获取静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
+ * @method void setMuteThreshold(integer $MuteThreshold) 设置静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
  * @method array getVocabLibNameList() 获取识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
  * @method void setVocabLibNameList(array $VocabLibNameList) 设置识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
  */
@@ -70,6 +72,11 @@ class SubmitAudioTaskRequest extends AbstractModel
     public $FileType;
 
     /**
+     * @var integer 静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
+     */
+    public $MuteThreshold;
+
+    /**
      * @var array 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      */
     public $VocabLibNameList;
@@ -80,6 +87,7 @@ class SubmitAudioTaskRequest extends AbstractModel
      * @param integer $VoiceFileType 语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
      * @param Function $Functions 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      * @param string $FileType 视频文件类型，默认点播，直播填 live_url
+     * @param integer $MuteThreshold 静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
      * @param array $VocabLibNameList 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      */
     function __construct()
@@ -117,6 +125,10 @@ class SubmitAudioTaskRequest extends AbstractModel
 
         if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
             $this->FileType = $param["FileType"];
+        }
+
+        if (array_key_exists("MuteThreshold",$param) and $param["MuteThreshold"] !== null) {
+            $this->MuteThreshold = $param["MuteThreshold"];
         }
 
         if (array_key_exists("VocabLibNameList",$param) and $param["VocabLibNameList"] !== null) {

@@ -18,8 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getBizId() 获取应用ID，登录控制台创建应用得到的AppID。
- * @method void setBizId(integer $BizId) 设置应用ID，登录控制台创建应用得到的AppID。
+ * @method integer getBizId() 获取应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+ * @method void setBizId(integer $BizId) 设置应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
  * @method array getScenes() 获取语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
  * @method void setScenes(array $Scenes) 设置语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
  * @method boolean getLive() 获取是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class ScanVoiceRequest extends AbstractModel
 {
     /**
-     * @var integer 应用ID，登录控制台创建应用得到的AppID。
+     * @var integer 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      */
     public $BizId;
 
@@ -66,7 +66,7 @@ class ScanVoiceRequest extends AbstractModel
      */
     public $Callback;
     /**
-     * @param integer $BizId 应用ID，登录控制台创建应用得到的AppID。
+     * @param integer $BizId 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      * @param array $Scenes 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
      * @param boolean $Live 是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。
      * @param array $Tasks 语音检测任务列表，列表最多支持100个检测任务。结构体中包含：

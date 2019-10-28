@@ -18,12 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method array getAbsenceSetInLibs() 获取缺失人员的ID列表(只针对请求中的libids字段)
+ * @method void setAbsenceSetInLibs(array $AbsenceSetInLibs) 设置缺失人员的ID列表(只针对请求中的libids字段)
  * @method array getAttendanceSet() 获取确定出勤人员列表
  * @method void setAttendanceSet(array $AttendanceSet) 设置确定出勤人员列表
  * @method array getSuspectedSet() 获取疑似出勤人员列表
  * @method void setSuspectedSet(array $SuspectedSet) 设置疑似出勤人员列表
- * @method array getAbsenceSet() 获取缺失人员的ID列表
- * @method void setAbsenceSet(array $AbsenceSet) 设置缺失人员的ID列表
+ * @method array getAbsenceSet() 获取缺失人员的ID列表(只针对请求中的personids字段)
+ * @method void setAbsenceSet(array $AbsenceSet) 设置缺失人员的ID列表(只针对请求中的personids字段)
  * @method integer getProgress() 获取请求处理进度
  * @method void setProgress(integer $Progress) 设置请求处理进度
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -36,6 +38,11 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAttendanceResultResponse extends AbstractModel
 {
     /**
+     * @var array 缺失人员的ID列表(只针对请求中的libids字段)
+     */
+    public $AbsenceSetInLibs;
+
+    /**
      * @var array 确定出勤人员列表
      */
     public $AttendanceSet;
@@ -46,7 +53,7 @@ class DescribeAttendanceResultResponse extends AbstractModel
     public $SuspectedSet;
 
     /**
-     * @var array 缺失人员的ID列表
+     * @var array 缺失人员的ID列表(只针对请求中的personids字段)
      */
     public $AbsenceSet;
 
@@ -60,9 +67,10 @@ class DescribeAttendanceResultResponse extends AbstractModel
      */
     public $RequestId;
     /**
+     * @param array $AbsenceSetInLibs 缺失人员的ID列表(只针对请求中的libids字段)
      * @param array $AttendanceSet 确定出勤人员列表
      * @param array $SuspectedSet 疑似出勤人员列表
-     * @param array $AbsenceSet 缺失人员的ID列表
+     * @param array $AbsenceSet 缺失人员的ID列表(只针对请求中的personids字段)
      * @param integer $Progress 请求处理进度
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -78,6 +86,15 @@ class DescribeAttendanceResultResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AbsenceSetInLibs",$param) and $param["AbsenceSetInLibs"] !== null) {
+            $this->AbsenceSetInLibs = [];
+            foreach ($param["AbsenceSetInLibs"] as $key => $value){
+                $obj = new AbsenceInfo();
+                $obj->deserialize($value);
+                array_push($this->AbsenceSetInLibs, $obj);
+            }
+        }
+
         if (array_key_exists("AttendanceSet",$param) and $param["AttendanceSet"] !== null) {
             $this->AttendanceSet = [];
             foreach ($param["AttendanceSet"] as $key => $value){

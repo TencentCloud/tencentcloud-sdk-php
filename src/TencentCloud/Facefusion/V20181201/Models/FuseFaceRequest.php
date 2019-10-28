@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelId(string $ModelId) 设置素材 ID，请在人脸融合控制台查看。
  * @method string getRspImgType() 获取返回图像方式（url 或 base64) ，二选一。url有效期为30天。
  * @method void setRspImgType(string $RspImgType) 设置返回图像方式（url 或 base64) ，二选一。url有效期为30天。
- * @method array getMergeInfos() 获取人脸图片和待被融合的素材模板图的人脸位置信息。
- * @method void setMergeInfos(array $MergeInfos) 设置人脸图片和待被融合的素材模板图的人脸位置信息。
+ * @method array getMergeInfos() 获取用户人脸图片、素材模板图的人脸位置信息。
+ * @method void setMergeInfos(array $MergeInfos) 设置用户人脸图片、素材模板图的人脸位置信息。
  * @method integer getFuseProfileDegree() 获取脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
 若此参数不填写，则使用人脸融合控制台中脸型参数数值。
  * @method void setFuseProfileDegree(integer $FuseProfileDegree) 设置脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
@@ -57,7 +57,7 @@ class FuseFaceRequest extends AbstractModel
     public $RspImgType;
 
     /**
-     * @var array 人脸图片和待被融合的素材模板图的人脸位置信息。
+     * @var array 用户人脸图片、素材模板图的人脸位置信息。
      */
     public $MergeInfos;
 
@@ -76,7 +76,7 @@ class FuseFaceRequest extends AbstractModel
      * @param string $ProjectId 活动 ID，请在人脸融合控制台查看。
      * @param string $ModelId 素材 ID，请在人脸融合控制台查看。
      * @param string $RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
-     * @param array $MergeInfos 人脸图片和待被融合的素材模板图的人脸位置信息。
+     * @param array $MergeInfos 用户人脸图片、素材模板图的人脸位置信息。
      * @param integer $FuseProfileDegree 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
 若此参数不填写，则使用人脸融合控制台中脸型参数数值。
      * @param integer $FuseFaceDegree 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 

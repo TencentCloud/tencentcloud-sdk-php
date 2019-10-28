@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置AI 内容识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method WechatMiniProgramPublishTaskInput getMiniProgramPublishTask() 获取微信小程序发布任务参数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMiniProgramPublishTask(WechatMiniProgramPublishTaskInput $MiniProgramPublishTask) 设置微信小程序发布任务参数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
@@ -90,6 +94,12 @@ class ProcedureTemplate extends AbstractModel
     public $AiRecognitionTask;
 
     /**
+     * @var WechatMiniProgramPublishTaskInput 微信小程序发布任务参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MiniProgramPublishTask;
+
+    /**
      * @var string 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public $CreateTime;
@@ -110,6 +120,8 @@ class ProcedureTemplate extends AbstractModel
      * @param AiAnalysisTaskInput $AiAnalysisTask AI 智能内容分析类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTaskInput $AiRecognitionTask AI 内容识别类型任务参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WechatMiniProgramPublishTaskInput $MiniProgramPublishTask 微信小程序发布任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
@@ -152,6 +164,11 @@ class ProcedureTemplate extends AbstractModel
         if (array_key_exists("AiRecognitionTask",$param) and $param["AiRecognitionTask"] !== null) {
             $this->AiRecognitionTask = new AiRecognitionTaskInput();
             $this->AiRecognitionTask->deserialize($param["AiRecognitionTask"]);
+        }
+
+        if (array_key_exists("MiniProgramPublishTask",$param) and $param["MiniProgramPublishTask"] !== null) {
+            $this->MiniProgramPublishTask = new WechatMiniProgramPublishTaskInput();
+            $this->MiniProgramPublishTask->deserialize($param["MiniProgramPublishTask"]);
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

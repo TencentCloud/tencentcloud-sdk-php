@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBotEnv(string $BotEnv) 设置机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
  * @method string getTerminalId() 获取终端标识，每个终端(或线程)对应一个，区分并发多用户。
  * @method void setTerminalId(string $TerminalId) 设置终端标识，每个终端(或线程)对应一个，区分并发多用户。
- * @method string getPlatformType() 获取平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount}。
- * @method void setPlatformType(string $PlatformType) 设置平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount}。
+ * @method string getPlatformType() 获取平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
+ * @method void setPlatformType(string $PlatformType) 设置平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
  */
 
 /**
@@ -49,14 +49,14 @@ class TextResetRequest extends AbstractModel
     public $TerminalId;
 
     /**
-     * @var string 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount}。
+     * @var string 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
      */
     public $PlatformType;
     /**
      * @param string $BotId 机器人标识，用于定义抽象机器人。
      * @param string $BotEnv 机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
      * @param string $TerminalId 终端标识，每个终端(或线程)对应一个，区分并发多用户。
-     * @param string $PlatformType 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount}。
+     * @param string $PlatformType 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
      */
     function __construct()
     {

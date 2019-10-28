@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProvinceName(string $ProvinceName) 设置省份。
  * @method string getIspName() 获取运营商。
  * @method void setIspName(string $IspName) 设置运营商。
+ * @method integer getCode2xx() 获取错误码为2开头的次数。
+ * @method void setCode2xx(integer $Code2xx) 设置错误码为2开头的次数。
+ * @method integer getCode3xx() 获取错误码为3开头的次数。
+ * @method void setCode3xx(integer $Code3xx) 设置错误码为3开头的次数。
  * @method integer getCode4xx() 获取错误码为4开头的次数。
  * @method void setCode4xx(integer $Code4xx) 设置错误码为4开头的次数。
  * @method integer getCode5xx() 获取错误码为5开头的次数。
@@ -44,6 +48,16 @@ class ProIspPlayCodeDataInfo extends AbstractModel
     public $IspName;
 
     /**
+     * @var integer 错误码为2开头的次数。
+     */
+    public $Code2xx;
+
+    /**
+     * @var integer 错误码为3开头的次数。
+     */
+    public $Code3xx;
+
+    /**
      * @var integer 错误码为4开头的次数。
      */
     public $Code4xx;
@@ -55,6 +69,8 @@ class ProIspPlayCodeDataInfo extends AbstractModel
     /**
      * @param string $ProvinceName 省份。
      * @param string $IspName 运营商。
+     * @param integer $Code2xx 错误码为2开头的次数。
+     * @param integer $Code3xx 错误码为3开头的次数。
      * @param integer $Code4xx 错误码为4开头的次数。
      * @param integer $Code5xx 错误码为5开头的次数。
      */
@@ -76,6 +92,14 @@ class ProIspPlayCodeDataInfo extends AbstractModel
 
         if (array_key_exists("IspName",$param) and $param["IspName"] !== null) {
             $this->IspName = $param["IspName"];
+        }
+
+        if (array_key_exists("Code2xx",$param) and $param["Code2xx"] !== null) {
+            $this->Code2xx = $param["Code2xx"];
+        }
+
+        if (array_key_exists("Code3xx",$param) and $param["Code3xx"] !== null) {
+            $this->Code3xx = $param["Code3xx"];
         }
 
         if (array_key_exists("Code4xx",$param) and $param["Code4xx"] !== null) {

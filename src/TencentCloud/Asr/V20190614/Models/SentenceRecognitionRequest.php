@@ -22,8 +22,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
  * @method integer getSubServiceType() 获取子服务类型。2： 一句话识别。
  * @method void setSubServiceType(integer $SubServiceType) 设置子服务类型。2： 一句话识别。
- * @method string getEngSerViceType() 获取引擎类型。8k：电话 8k 中文普通话通用；16k：16k 中文普通话通用；16k_en：16k 英语；16k_ca：16k 粤语。
- * @method void setEngSerViceType(string $EngSerViceType) 设置引擎类型。8k：电话 8k 中文普通话通用；16k：16k 中文普通话通用；16k_en：16k 英语；16k_ca：16k 粤语。
+ * @method string getEngSerViceType() 获取引擎类型。
+8k：电话 8k 中文普通话通用；
+16k：16k 中文普通话通用；
+16k_en：16k 英语；
+16k_ca：16k 粤语。
+ * @method void setEngSerViceType(string $EngSerViceType) 设置引擎类型。
+8k：电话 8k 中文普通话通用；
+16k：16k 中文普通话通用；
+16k_en：16k 英语；
+16k_ca：16k 粤语。
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method void setSourceType(integer $SourceType) 设置语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method string getVoiceFormat() 获取识别音频的音频格式。mp3、wav。
@@ -54,7 +62,11 @@ class SentenceRecognitionRequest extends AbstractModel
     public $SubServiceType;
 
     /**
-     * @var string 引擎类型。8k：电话 8k 中文普通话通用；16k：16k 中文普通话通用；16k_en：16k 英语；16k_ca：16k 粤语。
+     * @var string 引擎类型。
+8k：电话 8k 中文普通话通用；
+16k：16k 中文普通话通用；
+16k_en：16k 英语；
+16k_ca：16k 粤语。
      */
     public $EngSerViceType;
 
@@ -90,7 +102,11 @@ class SentenceRecognitionRequest extends AbstractModel
     /**
      * @param integer $ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      * @param integer $SubServiceType 子服务类型。2： 一句话识别。
-     * @param string $EngSerViceType 引擎类型。8k：电话 8k 中文普通话通用；16k：16k 中文普通话通用；16k_en：16k 英语；16k_ca：16k 粤语。
+     * @param string $EngSerViceType 引擎类型。
+8k：电话 8k 中文普通话通用；
+16k：16k 中文普通话通用；
+16k_en：16k 英语；
+16k_ca：16k 粤语。
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
      * @param string $VoiceFormat 识别音频的音频格式。mp3、wav。
      * @param string $UsrAudioKey 用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。

@@ -18,16 +18,16 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDayTime() 获取起始时间，北京时间，
-格式：yyyymmdd。
-注意：当前只支持查询近30天内某天的详细数据。
- * @method void setDayTime(string $DayTime) 设置起始时间，北京时间，
-格式：yyyymmdd。
-注意：当前只支持查询近30天内某天的详细数据。
  * @method string getPushDomain() 获取推流域名。
  * @method void setPushDomain(string $PushDomain) 设置推流域名。
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
+ * @method string getDayTime() 获取查询时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内某天的详细数据。
+ * @method void setDayTime(string $DayTime) 设置查询时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内某天的详细数据。
  * @method integer getPageNum() 获取页数，默认1，
 不超过100页。
  * @method void setPageNum(integer $PageNum) 设置页数，默认1，
@@ -36,6 +36,18 @@ use TencentCloud\Common\AbstractModel;
 范围：[10,1000]。
  * @method void setPageSize(integer $PageSize) 设置每页个数，默认20，
 范围：[10,1000]。
+ * @method string getStartDayTime() 获取起始天时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内的详细数据。
+ * @method void setStartDayTime(string $StartDayTime) 设置起始天时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内的详细数据。
+ * @method string getEndDayTime() 获取结束天时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+ * @method void setEndDayTime(string $EndDayTime) 设置结束天时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
  */
 
 /**
@@ -43,13 +55,6 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
 {
-    /**
-     * @var string 起始时间，北京时间，
-格式：yyyymmdd。
-注意：当前只支持查询近30天内某天的详细数据。
-     */
-    public $DayTime;
-
     /**
      * @var string 推流域名。
      */
@@ -59,6 +64,13 @@ class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
      * @var string 流名称。
      */
     public $StreamName;
+
+    /**
+     * @var string 查询时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内某天的详细数据。
+     */
+    public $DayTime;
 
     /**
      * @var integer 页数，默认1，
@@ -71,16 +83,36 @@ class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
 范围：[10,1000]。
      */
     public $PageSize;
+
     /**
-     * @param string $DayTime 起始时间，北京时间，
+     * @var string 起始天时间，北京时间，
 格式：yyyymmdd。
-注意：当前只支持查询近30天内某天的详细数据。
+注意：支持查询近3个月内的详细数据。
+     */
+    public $StartDayTime;
+
+    /**
+     * @var string 结束天时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+     */
+    public $EndDayTime;
+    /**
      * @param string $PushDomain 推流域名。
      * @param string $StreamName 流名称。
+     * @param string $DayTime 查询时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内某天的详细数据。
      * @param integer $PageNum 页数，默认1，
 不超过100页。
      * @param integer $PageSize 每页个数，默认20，
 范围：[10,1000]。
+     * @param string $StartDayTime 起始天时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内的详细数据。
+     * @param string $EndDayTime 结束天时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
      */
     function __construct()
     {
@@ -94,10 +126,6 @@ class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DayTime",$param) and $param["DayTime"] !== null) {
-            $this->DayTime = $param["DayTime"];
-        }
-
         if (array_key_exists("PushDomain",$param) and $param["PushDomain"] !== null) {
             $this->PushDomain = $param["PushDomain"];
         }
@@ -106,12 +134,24 @@ class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
             $this->StreamName = $param["StreamName"];
         }
 
+        if (array_key_exists("DayTime",$param) and $param["DayTime"] !== null) {
+            $this->DayTime = $param["DayTime"];
+        }
+
         if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
             $this->PageNum = $param["PageNum"];
         }
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("StartDayTime",$param) and $param["StartDayTime"] !== null) {
+            $this->StartDayTime = $param["StartDayTime"];
+        }
+
+        if (array_key_exists("EndDayTime",$param) and $param["EndDayTime"] !== null) {
+            $this->EndDayTime = $param["EndDayTime"];
         }
     }
 }

@@ -18,8 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getBizId() 获取应用 ID，在控制台统一创建。
- * @method void setBizId(integer $BizId) 设置应用 ID，在控制台统一创建。
+ * @method integer getBizId() 获取应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+ * @method void setBizId(integer $BizId) 设置应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
  * @method array getTaskIdList() 获取查询的任务 ID 列表，任务 ID 列表最多支持 100 个。
  * @method void setTaskIdList(array $TaskIdList) 设置查询的任务 ID 列表，任务 ID 列表最多支持 100 个。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeScanResultListRequest extends AbstractModel
 {
     /**
-     * @var integer 应用 ID，在控制台统一创建。
+     * @var integer 应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      */
     public $BizId;
 
@@ -39,7 +39,7 @@ class DescribeScanResultListRequest extends AbstractModel
      */
     public $TaskIdList;
     /**
-     * @param integer $BizId 应用 ID，在控制台统一创建。
+     * @param integer $BizId 应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      * @param array $TaskIdList 查询的任务 ID 列表，任务 ID 列表最多支持 100 个。
      */
     function __construct()

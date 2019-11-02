@@ -42,6 +42,26 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
 人员人脸总数量不可超过5张。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+ * @method float getFaceMatchThreshold() 获取只有和该人员已有的人脸相似度超过FaceMatchThreshold值的人脸，才能增加人脸成功。 
+默认值60分。取值范围[0,100] 。
+ * @method void setFaceMatchThreshold(float $FaceMatchThreshold) 设置只有和该人员已有的人脸相似度超过FaceMatchThreshold值的人脸，才能增加人脸成功。 
+默认值60分。取值范围[0,100] 。
+ * @method integer getQualityControl() 获取图片质量控制。 
+0: 不进行控制； 
+1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
+2: 一般的质量要求，图像存在偏亮，偏暗，模糊或一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，至少其中三种的情况； 
+3: 较高的质量要求，图像存在偏亮，偏暗，一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，其中一到两种的情况； 
+4: 很高的质量要求，各个维度均为最好或最多在某一维度上存在轻微问题； 
+默认 0。 
+若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+ * @method void setQualityControl(integer $QualityControl) 设置图片质量控制。 
+0: 不进行控制； 
+1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
+2: 一般的质量要求，图像存在偏亮，偏暗，模糊或一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，至少其中三种的情况； 
+3: 较高的质量要求，图像存在偏亮，偏暗，一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，其中一到两种的情况； 
+4: 很高的质量要求，各个维度均为最好或最多在某一维度上存在轻微问题； 
+默认 0。 
+若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
  */
 
 /**
@@ -72,6 +92,24 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
      */
     public $Urls;
+
+    /**
+     * @var float 只有和该人员已有的人脸相似度超过FaceMatchThreshold值的人脸，才能增加人脸成功。 
+默认值60分。取值范围[0,100] 。
+     */
+    public $FaceMatchThreshold;
+
+    /**
+     * @var integer 图片质量控制。 
+0: 不进行控制； 
+1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
+2: 一般的质量要求，图像存在偏亮，偏暗，模糊或一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，至少其中三种的情况； 
+3: 较高的质量要求，图像存在偏亮，偏暗，一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，其中一到两种的情况； 
+4: 很高的质量要求，各个维度均为最好或最多在某一维度上存在轻微问题； 
+默认 0。 
+若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+     */
+    public $QualityControl;
     /**
      * @param string $PersonId 人员ID。
      * @param array $Images 图片 base64 数据，base64 编码后大小不可超过5M。
@@ -85,6 +123,16 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
 人员人脸总数量不可超过5张。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+     * @param float $FaceMatchThreshold 只有和该人员已有的人脸相似度超过FaceMatchThreshold值的人脸，才能增加人脸成功。 
+默认值60分。取值范围[0,100] 。
+     * @param integer $QualityControl 图片质量控制。 
+0: 不进行控制； 
+1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
+2: 一般的质量要求，图像存在偏亮，偏暗，模糊或一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，至少其中三种的情况； 
+3: 较高的质量要求，图像存在偏亮，偏暗，一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，其中一到两种的情况； 
+4: 很高的质量要求，各个维度均为最好或最多在某一维度上存在轻微问题； 
+默认 0。 
+若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
      */
     function __construct()
     {
@@ -108,6 +156,14 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
         if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
             $this->Urls = $param["Urls"];
+        }
+
+        if (array_key_exists("FaceMatchThreshold",$param) and $param["FaceMatchThreshold"] !== null) {
+            $this->FaceMatchThreshold = $param["FaceMatchThreshold"];
+        }
+
+        if (array_key_exists("QualityControl",$param) and $param["QualityControl"] !== null) {
+            $this->QualityControl = $param["QualityControl"];
         }
     }
 }

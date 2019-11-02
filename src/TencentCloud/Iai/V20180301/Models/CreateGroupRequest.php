@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
 可在对应人员描述字段中填写内容，登记该人员的学号、工号、手机号等信息。
  * @method string getTag() 获取人员库信息备注，[0，40]个字符。
  * @method void setTag(string $Tag) 设置人员库信息备注，[0，40]个字符。
+ * @method string getFaceModelVersion() 获取人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
+默认为"2.0"。
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
+ * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
+默认为"2.0"。
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
  */
 
 /**
@@ -70,6 +76,13 @@ class CreateGroupRequest extends AbstractModel
      * @var string 人员库信息备注，[0，40]个字符。
      */
     public $Tag;
+
+    /**
+     * @var string 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
+默认为"2.0"。
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
+     */
+    public $FaceModelVersion;
     /**
      * @param string $GroupName 人员库名称，[1,60]个字符，可修改，不可重复。
      * @param string $GroupId 人员库 ID，不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
@@ -81,6 +94,9 @@ class CreateGroupRequest extends AbstractModel
 则该人员库下所有人员将拥有名为“学号”、“工号”、“手机号”的描述字段， 
 可在对应人员描述字段中填写内容，登记该人员的学号、工号、手机号等信息。
      * @param string $Tag 人员库信息备注，[0，40]个字符。
+     * @param string $FaceModelVersion 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
+默认为"2.0"。
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
      */
     function __construct()
     {
@@ -108,6 +124,10 @@ class CreateGroupRequest extends AbstractModel
 
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
+            $this->FaceModelVersion = $param["FaceModelVersion"];
         }
     }
 }

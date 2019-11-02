@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResults(array $Results) 设置识别结果。
  * @method integer getFaceNum() 获取搜索的人员库中包含的人脸数。
  * @method void setFaceNum(integer $FaceNum) 设置搜索的人员库中包含的人脸数。
+ * @method string getFaceModelVersion() 获取人脸识别所用的算法模型版本。
+ * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别所用的算法模型版本。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,12 +44,18 @@ class SearchFacesResponse extends AbstractModel
     public $FaceNum;
 
     /**
+     * @var string 人脸识别所用的算法模型版本。
+     */
+    public $FaceModelVersion;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param array $Results 识别结果。
      * @param integer $FaceNum 搜索的人员库中包含的人脸数。
+     * @param string $FaceModelVersion 人脸识别所用的算法模型版本。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,10 @@ class SearchFacesResponse extends AbstractModel
 
         if (array_key_exists("FaceNum",$param) and $param["FaceNum"] !== null) {
             $this->FaceNum = $param["FaceNum"];
+        }
+
+        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
+            $this->FaceModelVersion = $param["FaceModelVersion"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

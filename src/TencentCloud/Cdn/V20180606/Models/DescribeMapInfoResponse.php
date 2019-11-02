@@ -20,6 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getMapInfoList() 获取映射关系数组。
  * @method void setMapInfoList(array $MapInfoList) 设置映射关系数组。
+ * @method array getServerRegionRelation() 获取服务端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServerRegionRelation(array $ServerRegionRelation) 设置服务端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getClientRegionRelation() 获取客户端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientRegionRelation(array $ClientRegionRelation) 设置客户端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,11 +43,27 @@ class DescribeMapInfoResponse extends AbstractModel
     public $MapInfoList;
 
     /**
+     * @var array 服务端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServerRegionRelation;
+
+    /**
+     * @var array 客户端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientRegionRelation;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param array $MapInfoList 映射关系数组。
+     * @param array $ServerRegionRelation 服务端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ClientRegionRelation 客户端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -60,6 +84,24 @@ class DescribeMapInfoResponse extends AbstractModel
                 $obj = new MapInfo();
                 $obj->deserialize($value);
                 array_push($this->MapInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("ServerRegionRelation",$param) and $param["ServerRegionRelation"] !== null) {
+            $this->ServerRegionRelation = [];
+            foreach ($param["ServerRegionRelation"] as $key => $value){
+                $obj = new RegionMapRelation();
+                $obj->deserialize($value);
+                array_push($this->ServerRegionRelation, $obj);
+            }
+        }
+
+        if (array_key_exists("ClientRegionRelation",$param) and $param["ClientRegionRelation"] !== null) {
+            $this->ClientRegionRelation = [];
+            foreach ($param["ClientRegionRelation"] as $key => $value){
+                $obj = new RegionMapRelation();
+                $obj->deserialize($value);
+                array_push($this->ClientRegionRelation, $obj);
             }
         }
 

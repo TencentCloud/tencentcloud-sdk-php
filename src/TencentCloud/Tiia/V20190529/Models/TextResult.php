@@ -38,10 +38,20 @@ use TencentCloud\Common\AbstractModel;
 PASS：正常
 REVIEW：疑似
 BLOCK：违规
+
+Suggestion由Type决定：
+Type为 NOTEXT/NORMAL 时，Suggestion为PASS；
+Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
+其他情况下Suggestion为REVIEW。
  * @method void setSuggestion(string $Suggestion) 设置识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
 BLOCK：违规
+
+Suggestion由Type决定：
+Type为 NOTEXT/NORMAL 时，Suggestion为PASS；
+Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
+其他情况下Suggestion为REVIEW。
  * @method integer getConfidence() 获取算法对于识别结果的置信度，0-100之间，值越高，表示对于结论越确定。
  * @method void setConfidence(integer $Confidence) 设置算法对于识别结果的置信度，0-100之间，值越高，表示对于结论越确定。
  * @method array getKeywords() 获取识别到的关键词数组
@@ -98,6 +108,11 @@ class TextResult extends AbstractModel
 PASS：正常
 REVIEW：疑似
 BLOCK：违规
+
+Suggestion由Type决定：
+Type为 NOTEXT/NORMAL 时，Suggestion为PASS；
+Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
+其他情况下Suggestion为REVIEW。
      */
     public $Suggestion;
 
@@ -143,6 +158,11 @@ OTHERS：其他
 PASS：正常
 REVIEW：疑似
 BLOCK：违规
+
+Suggestion由Type决定：
+Type为 NOTEXT/NORMAL 时，Suggestion为PASS；
+Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
+其他情况下Suggestion为REVIEW。
      * @param integer $Confidence 算法对于识别结果的置信度，0-100之间，值越高，表示对于结论越确定。
      * @param array $Keywords 识别到的关键词数组
      * @param string $Type 图片中是否包含敏感文本内容。

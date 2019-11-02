@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getVideoBitrate() 获取视频码率。范围：100-8000。
  * @method void setVideoBitrate(integer $VideoBitrate) 设置视频码率。范围：100-8000。
  * @method string getVcodec() 获取视频编码：h264/h265，默认h264。
-注意：当前该参数未生效，待后续支持！
  * @method void setVcodec(string $Vcodec) 设置视频编码：h264/h265，默认h264。
-注意：当前该参数未生效，待后续支持！
  * @method string getAcodec() 获取音频编码：aac，默认原始音频格式。
-注意：当前该参数未生效，待后续支持！
  * @method void setAcodec(string $Acodec) 设置音频编码：aac，默认原始音频格式。
-注意：当前该参数未生效，待后续支持！
  * @method integer getAudioBitrate() 获取音频码率：默认0。0-500。
  * @method void setAudioBitrate(integer $AudioBitrate) 设置音频码率：默认0。0-500。
  * @method string getDescription() 获取模板描述。
@@ -81,13 +77,11 @@ class CreateLiveTranscodeTemplateRequest extends AbstractModel
 
     /**
      * @var string 视频编码：h264/h265，默认h264。
-注意：当前该参数未生效，待后续支持！
      */
     public $Vcodec;
 
     /**
      * @var string 音频编码：aac，默认原始音频格式。
-注意：当前该参数未生效，待后续支持！
      */
     public $Acodec;
 
@@ -170,9 +164,7 @@ baseline/main/high。默认baseline
      * @param string $TemplateName 模板名称，例：900 900p 仅支持字母和数字的组合。
      * @param integer $VideoBitrate 视频码率。范围：100-8000。
      * @param string $Vcodec 视频编码：h264/h265，默认h264。
-注意：当前该参数未生效，待后续支持！
      * @param string $Acodec 音频编码：aac，默认原始音频格式。
-注意：当前该参数未生效，待后续支持！
      * @param integer $AudioBitrate 音频码率：默认0。0-500。
      * @param string $Description 模板描述。
      * @param integer $Width 宽，默认0。

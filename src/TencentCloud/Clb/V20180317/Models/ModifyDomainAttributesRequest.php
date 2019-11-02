@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewDomain(string $NewDomain) 设置要修改的新域名
  * @method CertificateInput getCertificate() 获取域名相关的证书信息，注意，仅对启用SNI的监听器适用。
  * @method void setCertificate(CertificateInput $Certificate) 设置域名相关的证书信息，注意，仅对启用SNI的监听器适用。
- * @method boolean getHttp2() 获取是否开启Http2，注意，只用HTTPS域名才能开启Http2。
- * @method void setHttp2(boolean $Http2) 设置是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+ * @method boolean getHttp2() 获取是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+ * @method void setHttp2(boolean $Http2) 设置是否开启Http2，注意，只有HTTPS域名才能开启Http2。
  * @method boolean getDefaultServer() 获取是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
  * @method void setDefaultServer(boolean $DefaultServer) 设置是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
  */
@@ -65,7 +65,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $Certificate;
 
     /**
-     * @var boolean 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+     * @var boolean 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      */
     public $Http2;
 
@@ -79,7 +79,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
      * @param string $Domain 域名（必须是已经创建的转发规则下的域名）
      * @param string $NewDomain 要修改的新域名
      * @param CertificateInput $Certificate 域名相关的证书信息，注意，仅对启用SNI的监听器适用。
-     * @param boolean $Http2 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+     * @param boolean $Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      * @param boolean $DefaultServer 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
      */
     function __construct()

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPercent(integer $Percent) 设置预热百分比。
  * @method string getCreateTime() 获取预热任务提交时间。
  * @method void setCreateTime(string $CreateTime) 设置预热任务提交时间。
+ * @method string getArea() 获取预热区域，mainland，overseas或global。
+ * @method void setArea(string $Area) 设置预热区域，mainland，overseas或global。
  */
 
 /**
@@ -59,12 +61,18 @@ class PushTask extends AbstractModel
      * @var string 预热任务提交时间。
      */
     public $CreateTime;
+
+    /**
+     * @var string 预热区域，mainland，overseas或global。
+     */
+    public $Area;
     /**
      * @param string $TaskId 预热任务Id，前十位为时间戳。
      * @param string $Url 预热Url。
      * @param string $Status 预热任务状态，fail表示失败，done表示成功，process表示预热中。
      * @param integer $Percent 预热百分比。
      * @param string $CreateTime 预热任务提交时间。
+     * @param string $Area 预热区域，mainland，overseas或global。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class PushTask extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

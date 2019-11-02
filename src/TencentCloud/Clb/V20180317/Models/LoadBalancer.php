@@ -148,6 +148,14 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraInfo(ExtraInfo $ExtraInfo) 设置暂做保留，一般用户无需关注。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsDDos() 获取是否可绑定高防包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsDDos(boolean $IsDDos) 设置是否可绑定高防包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConfigId() 获取负载均衡维度的个性化配置ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigId(string $ConfigId) 设置负载均衡维度的个性化配置ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -355,6 +363,18 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraInfo;
+
+    /**
+     * @var boolean 是否可绑定高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsDDos;
+
+    /**
+     * @var string 负载均衡维度的个性化配置ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigId;
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
@@ -420,6 +440,10 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $AddressIPv6 负载均衡实例的IPv6地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraInfo $ExtraInfo 暂做保留，一般用户无需关注。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsDDos 是否可绑定高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConfigId 负载均衡维度的个性化配置ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -583,6 +607,14 @@ OPEN：公网属性， INTERNAL：内网属性。
         if (array_key_exists("ExtraInfo",$param) and $param["ExtraInfo"] !== null) {
             $this->ExtraInfo = new ExtraInfo();
             $this->ExtraInfo->deserialize($param["ExtraInfo"]);
+        }
+
+        if (array_key_exists("IsDDos",$param) and $param["IsDDos"] !== null) {
+            $this->IsDDos = $param["IsDDos"];
+        }
+
+        if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
+            $this->ConfigId = $param["ConfigId"];
         }
     }
 }

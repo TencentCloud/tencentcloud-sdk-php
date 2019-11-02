@@ -32,6 +32,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 * @method Models\DutyPaidProofOCRResponse DutyPaidProofOCR(Models\DutyPaidProofOCRRequest $req) 本接口支持对完税证明的税号、纳税人识别号、纳税人名称、金额合计大写、金额合计小写、填发日期、税务机关、填票人等关键字段的识别。
 * @method Models\EduPaperOCRResponse EduPaperOCR(Models\EduPaperOCRRequest $req) 本接口支持数学试题内容的识别和结构化输出，包括通用文本解析和小学/初中/高中数学公式解析能力（包括91种题型，180种符号）。
 * @method Models\EnglishOCRResponse EnglishOCR(Models\EnglishOCRRequest $req) 本接口支持图像英文文字的检测和识别，返回文字框位置与文字内容。支持多场景、任意版面下的英文、字母、数字和常见字符的识别，同时覆盖英文印刷体和英文手写体识别。
+* @method Models\EnterpriseLicenseOCRResponse EnterpriseLicenseOCR(Models\EnterpriseLicenseOCRRequest $req) 本接口支持智能化识别各类企业登记证书、许可证书、企业执照、三证合一类证书，结构化输出统一社会信用代码、公司名称、法定代表人、公司地址、注册资金、企业类型、经营范围等关键字段。
 * @method Models\EstateCertOCRResponse EstateCertOCR(Models\EstateCertOCRRequest $req) 本接口支持不动产权证关键字段的识别，包括使用期限、面积、用途、权利性质、权利类型、坐落、共有情况、权利人、权利其他状况等。
 
 
@@ -47,6 +48,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 * @method Models\GeneralHandwritingOCRResponse GeneralHandwritingOCR(Models\GeneralHandwritingOCRRequest $req) 本接口支持图片内手写体文字的检测和识别，针对手写字体无规则、字迹潦草、模糊等特点进行了识别能力的增强。
 * @method Models\IDCardOCRResponse IDCardOCR(Models\IDCardOCRRequest $req) 本接口支持中国大陆居民二代身份证正反面所有字段的识别，包括姓名、性别、民族、出生日期、住址、公民身份证号、签发机关、有效期限；具备身份证照片、人像照片的裁剪功能和翻拍、PS、复印件告警功能，以及边框和框内遮挡告警、临时身份证告警和身份证有效期不合法告警等扩展功能。
 * @method Models\InstitutionOCRResponse InstitutionOCR(Models\InstitutionOCRRequest $req) 本接口支持事业单位法人证书关键字段识别，包括注册号、有效期、住所、名称、法定代表人等。
+* @method Models\InsuranceBillOCRResponse InsuranceBillOCR(Models\InsuranceBillOCRRequest $req) 本接口支持病案首页、费用清单、结算单、医疗发票四种保险理赔单据的文本识别和结构化输出。
 * @method Models\InvoiceGeneralOCRResponse InvoiceGeneralOCR(Models\InvoiceGeneralOCRRequest $req) 本接口支持对通用机打发票的发票代码、发票号码、日期、购买方识别号、销售方识别号、校验码、小写金额等关键字段的识别。
 * @method Models\LicensePlateOCRResponse LicensePlateOCR(Models\LicensePlateOCRRequest $req) 本接口支持对中国大陆机动车车牌的自动定位和识别，返回地域编号和车牌号信息。
 * @method Models\MLIDCardOCRResponse MLIDCardOCR(Models\MLIDCardOCRRequest $req) 本接口支持马来西亚身份证识别，识别字段包括身份证号、姓名、性别、地址；具备身份证人像照片的裁剪功能和翻拍、复印件告警功能。

@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method string getFaceModelVersion() 获取人脸识别所用的算法模型版本。
+ * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别所用的算法模型版本。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -28,10 +30,16 @@ use TencentCloud\Common\AbstractModel;
 class CreateGroupResponse extends AbstractModel
 {
     /**
+     * @var string 人脸识别所用的算法模型版本。
+     */
+    public $FaceModelVersion;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
+     * @param string $FaceModelVersion 人脸识别所用的算法模型版本。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,10 @@ class CreateGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
+            $this->FaceModelVersion = $param["FaceModelVersion"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

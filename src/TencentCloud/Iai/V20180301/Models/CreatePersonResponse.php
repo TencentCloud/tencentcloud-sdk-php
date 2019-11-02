@@ -20,6 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getFaceId() 获取人脸图片唯一标识。
  * @method void setFaceId(string $FaceId) 设置人脸图片唯一标识。
+ * @method FaceRect getFaceRect() 获取检测出的人脸框的位置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFaceRect(FaceRect $FaceRect) 设置检测出的人脸框的位置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSimilarPersonId() 获取疑似同一人的PersonId。 
+当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+ * @method void setSimilarPersonId(string $SimilarPersonId) 设置疑似同一人的PersonId。 
+当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+ * @method string getFaceModelVersion() 获取人脸识别所用的算法模型版本。
+ * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别所用的算法模型版本。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,11 +45,33 @@ class CreatePersonResponse extends AbstractModel
     public $FaceId;
 
     /**
+     * @var FaceRect 检测出的人脸框的位置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FaceRect;
+
+    /**
+     * @var string 疑似同一人的PersonId。 
+当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+     */
+    public $SimilarPersonId;
+
+    /**
+     * @var string 人脸识别所用的算法模型版本。
+     */
+    public $FaceModelVersion;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param string $FaceId 人脸图片唯一标识。
+     * @param FaceRect $FaceRect 检测出的人脸框的位置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SimilarPersonId 疑似同一人的PersonId。 
+当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+     * @param string $FaceModelVersion 人脸识别所用的算法模型版本。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +88,19 @@ class CreatePersonResponse extends AbstractModel
         }
         if (array_key_exists("FaceId",$param) and $param["FaceId"] !== null) {
             $this->FaceId = $param["FaceId"];
+        }
+
+        if (array_key_exists("FaceRect",$param) and $param["FaceRect"] !== null) {
+            $this->FaceRect = new FaceRect();
+            $this->FaceRect->deserialize($param["FaceRect"]);
+        }
+
+        if (array_key_exists("SimilarPersonId",$param) and $param["SimilarPersonId"] !== null) {
+            $this->SimilarPersonId = $param["SimilarPersonId"];
+        }
+
+        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
+            $this->FaceModelVersion = $param["FaceModelVersion"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

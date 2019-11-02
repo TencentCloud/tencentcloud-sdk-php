@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrice(string $Price) 设置票价
  * @method string getSeatCategory() 获取席别
  * @method void setSeatCategory(string $SeatCategory) 设置席别
+ * @method string getID() 获取身份证号
+ * @method void setID(string $ID) 设置身份证号
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -91,6 +93,11 @@ class TrainTicketOCRResponse extends AbstractModel
     public $SeatCategory;
 
     /**
+     * @var string 身份证号
+     */
+    public $ID;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -104,6 +111,7 @@ class TrainTicketOCRResponse extends AbstractModel
      * @param string $Name 姓名
      * @param string $Price 票价
      * @param string $SeatCategory 席别
+     * @param string $ID 身份证号
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -152,6 +160,10 @@ class TrainTicketOCRResponse extends AbstractModel
 
         if (array_key_exists("SeatCategory",$param) and $param["SeatCategory"] !== null) {
             $this->SeatCategory = $param["SeatCategory"];
+        }
+
+        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
+            $this->ID = $param["ID"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getListenerId() 获取负载均衡监听器 ID
  * @method void setListenerId(string $ListenerId) 设置负载均衡监听器 ID
- * @method string getLocationId() 获取转发规则的ID
- * @method void setLocationId(string $LocationId) 设置转发规则的ID
  * @method array getTargets() 获取要修改权重的后端机器列表
  * @method void setTargets(array $Targets) 设置要修改权重的后端机器列表
+ * @method string getLocationId() 获取转发规则的ID，七层规则时需要此参数，4层规则不需要
+ * @method void setLocationId(string $LocationId) 设置转发规则的ID，七层规则时需要此参数，4层规则不需要
  * @method string getDomain() 获取目标规则的域名，提供LocationId参数时本参数不生效
  * @method void setDomain(string $Domain) 设置目标规则的域名，提供LocationId参数时本参数不生效
  * @method string getUrl() 获取目标规则的URL，提供LocationId参数时本参数不生效
@@ -43,14 +43,14 @@ class RsWeightRule extends AbstractModel
     public $ListenerId;
 
     /**
-     * @var string 转发规则的ID
-     */
-    public $LocationId;
-
-    /**
      * @var array 要修改权重的后端机器列表
      */
     public $Targets;
+
+    /**
+     * @var string 转发规则的ID，七层规则时需要此参数，4层规则不需要
+     */
+    public $LocationId;
 
     /**
      * @var string 目标规则的域名，提供LocationId参数时本参数不生效
@@ -68,8 +68,8 @@ class RsWeightRule extends AbstractModel
     public $Weight;
     /**
      * @param string $ListenerId 负载均衡监听器 ID
-     * @param string $LocationId 转发规则的ID
      * @param array $Targets 要修改权重的后端机器列表
+     * @param string $LocationId 转发规则的ID，七层规则时需要此参数，4层规则不需要
      * @param string $Domain 目标规则的域名，提供LocationId参数时本参数不生效
      * @param string $Url 目标规则的URL，提供LocationId参数时本参数不生效
      * @param integer $Weight 后端服务新的转发权重，取值范围：0~100。
@@ -90,10 +90,6 @@ class RsWeightRule extends AbstractModel
             $this->ListenerId = $param["ListenerId"];
         }
 
-        if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {
-            $this->LocationId = $param["LocationId"];
-        }
-
         if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
             $this->Targets = [];
             foreach ($param["Targets"] as $key => $value){
@@ -101,6 +97,10 @@ class RsWeightRule extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Targets, $obj);
             }
+        }
+
+        if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {
+            $this->LocationId = $param["LocationId"];
         }
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {

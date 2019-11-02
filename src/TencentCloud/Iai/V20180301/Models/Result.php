@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCandidates(array $Candidates) 设置识别出的最相似候选人
  * @method FaceRect getFaceRect() 获取检测出的人脸框位置
  * @method void setFaceRect(FaceRect $FaceRect) 设置检测出的人脸框位置
+ * @method integer getRetCode() 获取检测出的人脸图片状态返回码。0 表示正常。 
+-1601代表不符合图片质量控制要求，此时Candidate内容为空。
+ * @method void setRetCode(integer $RetCode) 设置检测出的人脸图片状态返回码。0 表示正常。 
+-1601代表不符合图片质量控制要求，此时Candidate内容为空。
  */
 
 /**
@@ -38,9 +42,17 @@ class Result extends AbstractModel
      * @var FaceRect 检测出的人脸框位置
      */
     public $FaceRect;
+
+    /**
+     * @var integer 检测出的人脸图片状态返回码。0 表示正常。 
+-1601代表不符合图片质量控制要求，此时Candidate内容为空。
+     */
+    public $RetCode;
     /**
      * @param array $Candidates 识别出的最相似候选人
      * @param FaceRect $FaceRect 检测出的人脸框位置
+     * @param integer $RetCode 检测出的人脸图片状态返回码。0 表示正常。 
+-1601代表不符合图片质量控制要求，此时Candidate内容为空。
      */
     function __construct()
     {
@@ -66,6 +78,10 @@ class Result extends AbstractModel
         if (array_key_exists("FaceRect",$param) and $param["FaceRect"] !== null) {
             $this->FaceRect = new FaceRect();
             $this->FaceRect->deserialize($param["FaceRect"]);
+        }
+
+        if (array_key_exists("RetCode",$param) and $param["RetCode"] !== null) {
+            $this->RetCode = $param["RetCode"];
         }
     }
 }

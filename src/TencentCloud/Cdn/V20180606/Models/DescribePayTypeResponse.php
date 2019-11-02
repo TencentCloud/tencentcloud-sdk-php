@@ -21,9 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPayType() 获取计费类型：
 flux：流量计费
 bandwidth：带宽计费
+如果修改过计费方式，表示下次生效的计费类型，否则表示当前计费类型。
  * @method void setPayType(string $PayType) 设置计费类型：
 flux：流量计费
 bandwidth：带宽计费
+如果修改过计费方式，表示下次生效的计费类型，否则表示当前计费类型。
  * @method string getBillingCycle() 获取计费周期：
 day：日结计费
 month：月结计费
@@ -42,6 +44,18 @@ day95：日 95 带宽计费，月结模式
 month95：月95带宽计费，月结模式
 sum：总流量计费，日结与月结均有流量计费模式
 max：峰值带宽计费，日结模式
+ * @method string getRegionType() 获取地区计费方式，仅在查询中国境外 CDN 计费方式时可用
+all：表示全地区统一计费
+multiple：表示分地区计费。
+ * @method void setRegionType(string $RegionType) 设置地区计费方式，仅在查询中国境外 CDN 计费方式时可用
+all：表示全地区统一计费
+multiple：表示分地区计费。
+ * @method string getCurrentPayType() 获取当前计费类型：
+flux：流量计费
+bandwidth：带宽计费
+ * @method void setCurrentPayType(string $CurrentPayType) 设置当前计费类型：
+flux：流量计费
+bandwidth：带宽计费
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -55,6 +69,7 @@ class DescribePayTypeResponse extends AbstractModel
      * @var string 计费类型：
 flux：流量计费
 bandwidth：带宽计费
+如果修改过计费方式，表示下次生效的计费类型，否则表示当前计费类型。
      */
     public $PayType;
 
@@ -76,6 +91,20 @@ max：峰值带宽计费，日结模式
     public $StatType;
 
     /**
+     * @var string 地区计费方式，仅在查询中国境外 CDN 计费方式时可用
+all：表示全地区统一计费
+multiple：表示分地区计费。
+     */
+    public $RegionType;
+
+    /**
+     * @var string 当前计费类型：
+flux：流量计费
+bandwidth：带宽计费
+     */
+    public $CurrentPayType;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -83,6 +112,7 @@ max：峰值带宽计费，日结模式
      * @param string $PayType 计费类型：
 flux：流量计费
 bandwidth：带宽计费
+如果修改过计费方式，表示下次生效的计费类型，否则表示当前计费类型。
      * @param string $BillingCycle 计费周期：
 day：日结计费
 month：月结计费
@@ -92,6 +122,12 @@ day95：日 95 带宽计费，月结模式
 month95：月95带宽计费，月结模式
 sum：总流量计费，日结与月结均有流量计费模式
 max：峰值带宽计费，日结模式
+     * @param string $RegionType 地区计费方式，仅在查询中国境外 CDN 计费方式时可用
+all：表示全地区统一计费
+multiple：表示分地区计费。
+     * @param string $CurrentPayType 当前计费类型：
+flux：流量计费
+bandwidth：带宽计费
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -116,6 +152,14 @@ max：峰值带宽计费，日结模式
 
         if (array_key_exists("StatType",$param) and $param["StatType"] !== null) {
             $this->StatType = $param["StatType"];
+        }
+
+        if (array_key_exists("RegionType",$param) and $param["RegionType"] !== null) {
+            $this->RegionType = $param["RegionType"];
+        }
+
+        if (array_key_exists("CurrentPayType",$param) and $param["CurrentPayType"] !== null) {
+            $this->CurrentPayType = $param["CurrentPayType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

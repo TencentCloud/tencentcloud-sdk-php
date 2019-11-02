@@ -18,23 +18,23 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStartTime() 获取查询起始日期，如：2018-09-09 00:00:00
- * @method void setStartTime(string $StartTime) 设置查询起始日期，如：2018-09-09 00:00:00
- * @method string getEndTime() 获取查询结束日期，如：2018-09-10 00:00:00
- * @method void setEndTime(string $EndTime) 设置查询结束日期，如：2018-09-10 00:00:00
+ * @method string getStartTime() 获取查询起始日期，如：2018-09-09 00:00:00。目前只支持按天粒度的数据查询，只取入参中的天数信息。
+ * @method void setStartTime(string $StartTime) 设置查询起始日期，如：2018-09-09 00:00:00。目前只支持按天粒度的数据查询，只取入参中的天数信息。
+ * @method string getEndTime() 获取查询结束日期，如：2018-09-10 00:00:00。目前只支持按天粒度的数据查询，只取入参中的天数信息。例如，要查询2018-09-10的数据，输入StartTime=2018-09-10 00:00:00，EndTime=2018-09-10 00:00:00即可。
+ * @method void setEndTime(string $EndTime) 设置查询结束日期，如：2018-09-10 00:00:00。目前只支持按天粒度的数据查询，只取入参中的天数信息。例如，要查询2018-09-10的数据，输入StartTime=2018-09-10 00:00:00，EndTime=2018-09-10 00:00:00即可。
  * @method string getMetric() 获取排序对象，支持以下几种形式：
-Url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
-Path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
-District：省份排序，支持的 Filter 为 flux、request
-Isp：运营商排序，支持的 Filter 为 flux、request
-Host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
+url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
+path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
+district：省份、国家/地区排序，支持的 Filter 为 flux、request
+isp：运营商排序，支持的 Filter 为 flux、request
+host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
 originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
  * @method void setMetric(string $Metric) 设置排序对象，支持以下几种形式：
-Url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
-Path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
-District：省份排序，支持的 Filter 为 flux、request
-Isp：运营商排序，支持的 Filter 为 flux、request
-Host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
+url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
+path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
+district：省份、国家/地区排序，支持的 Filter 为 flux、request
+isp：运营商排序，支持的 Filter 为 flux、request
+host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
 originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
  * @method string getFilter() 获取排序使用的指标名称：
 flux：Metric 为 host 时指代访问流量，originHost 时指代回源流量
@@ -72,12 +72,24 @@ OriginStatusCode：指定回源状态码统计，在 Code 参数中填充指定�
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
  * @method void setProject(integer $Project) 设置指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
- * @method boolean getDetail() 获取多域名查询时，默认（false)返回所有域名汇总排序结果
+ * @method boolean getDetail() 获取多域名查询时，默认（false)返回所有域名汇总排序结果
 Metric 为 Url、Path、District、Isp，Filter 为 flux、reqeust 时，可设置为 true，返回每一个 Domain 的排序数据
- * @method void setDetail(boolean $Detail) 设置多域名查询时，默认（false)返回所有域名汇总排序结果
+ * @method void setDetail(boolean $Detail) 设置多域名查询时，默认（false)返回所有域名汇总排序结果
 Metric 为 Url、Path、District、Isp，Filter 为 flux、reqeust 时，可设置为 true，返回每一个 Domain 的排序数据
  * @method string getCode() 获取Filter 为 statusCode、OriginStatusCode 时，填充指定状态码查询排序结果
  * @method void setCode(string $Code) 设置Filter 为 statusCode、OriginStatusCode 时，填充指定状态码查询排序结果
+ * @method string getArea() 获取指定服务地域查询，不填充表示查询中国境内 CDN 数据
+mainland：指定查询中国境内 CDN 数据
+overseas：指定查询中国境外 CDN 数据，支持的 Metric 为 url、district、host、originHost，当 Metric 为 originHost 时仅支持 flux、request、bandwidth Filter
+ * @method void setArea(string $Area) 设置指定服务地域查询，不填充表示查询中国境内 CDN 数据
+mainland：指定查询中国境内 CDN 数据
+overseas：指定查询中国境外 CDN 数据，支持的 Metric 为 url、district、host、originHost，当 Metric 为 originHost 时仅支持 flux、request、bandwidth Filter
+ * @method string getAreaType() 获取查询中国境外CDN数据，且仅当 Metric 为 District 或 Host 时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas，且 Metric 是 District 或 Host 时可用）
+server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
+client：指定查询客户端地区（用户请求终端所在地区）数据，当 Metric 为 host 时仅支持 flux、request、bandwidth Filter
+ * @method void setAreaType(string $AreaType) 设置查询中国境外CDN数据，且仅当 Metric 为 District 或 Host 时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas，且 Metric 是 District 或 Host 时可用）
+server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
+client：指定查询客户端地区（用户请求终端所在地区）数据，当 Metric 为 host 时仅支持 flux、request、bandwidth Filter
  */
 
 /**
@@ -86,22 +98,22 @@ Metric 为 Url、Path、District、Isp，Filter 为 flux、reqeust 时，可设�
 class ListTopDataRequest extends AbstractModel
 {
     /**
-     * @var string 查询起始日期，如：2018-09-09 00:00:00
+     * @var string 查询起始日期，如：2018-09-09 00:00:00。目前只支持按天粒度的数据查询，只取入参中的天数信息。
      */
     public $StartTime;
 
     /**
-     * @var string 查询结束日期，如：2018-09-10 00:00:00
+     * @var string 查询结束日期，如：2018-09-10 00:00:00。目前只支持按天粒度的数据查询，只取入参中的天数信息。例如，要查询2018-09-10的数据，输入StartTime=2018-09-10 00:00:00，EndTime=2018-09-10 00:00:00即可。
      */
     public $EndTime;
 
     /**
      * @var string 排序对象，支持以下几种形式：
-Url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
-Path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
-District：省份排序，支持的 Filter 为 flux、request
-Isp：运营商排序，支持的 Filter 为 flux、request
-Host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
+url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
+path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
+district：省份、国家/地区排序，支持的 Filter 为 flux、request
+isp：运营商排序，支持的 Filter 为 flux、request
+host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
 originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
      */
     public $Metric;
@@ -137,7 +149,7 @@ OriginStatusCode：指定回源状态码统计，在 Code 参数中填充指定�
     public $Project;
 
     /**
-     * @var boolean 多域名查询时，默认（false)返回所有域名汇总排序结果
+     * @var boolean 多域名查询时，默认（false)返回所有域名汇总排序结果
 Metric 为 Url、Path、District、Isp，Filter 为 flux、reqeust 时，可设置为 true，返回每一个 Domain 的排序数据
      */
     public $Detail;
@@ -146,15 +158,29 @@ Metric 为 Url、Path、District、Isp，Filter 为 flux、reqeust 时，可设�
      * @var string Filter 为 statusCode、OriginStatusCode 时，填充指定状态码查询排序结果
      */
     public $Code;
+
     /**
-     * @param string $StartTime 查询起始日期，如：2018-09-09 00:00:00
-     * @param string $EndTime 查询结束日期，如：2018-09-10 00:00:00
+     * @var string 指定服务地域查询，不填充表示查询中国境内 CDN 数据
+mainland：指定查询中国境内 CDN 数据
+overseas：指定查询中国境外 CDN 数据，支持的 Metric 为 url、district、host、originHost，当 Metric 为 originHost 时仅支持 flux、request、bandwidth Filter
+     */
+    public $Area;
+
+    /**
+     * @var string 查询中国境外CDN数据，且仅当 Metric 为 District 或 Host 时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas，且 Metric 是 District 或 Host 时可用）
+server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
+client：指定查询客户端地区（用户请求终端所在地区）数据，当 Metric 为 host 时仅支持 flux、request、bandwidth Filter
+     */
+    public $AreaType;
+    /**
+     * @param string $StartTime 查询起始日期，如：2018-09-09 00:00:00。目前只支持按天粒度的数据查询，只取入参中的天数信息。
+     * @param string $EndTime 查询结束日期，如：2018-09-10 00:00:00。目前只支持按天粒度的数据查询，只取入参中的天数信息。例如，要查询2018-09-10的数据，输入StartTime=2018-09-10 00:00:00，EndTime=2018-09-10 00:00:00即可。
      * @param string $Metric 排序对象，支持以下几种形式：
-Url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
-Path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
-District：省份排序，支持的 Filter 为 flux、request
-Isp：运营商排序，支持的 Filter 为 flux、request
-Host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
+url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
+path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
+district：省份、国家/地区排序，支持的 Filter 为 flux、request
+isp：运营商排序，支持的 Filter 为 flux、request
+host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
 originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
      * @param string $Filter 排序使用的指标名称：
 flux：Metric 为 host 时指代访问流量，originHost 时指代回源流量
@@ -174,9 +200,15 @@ OriginStatusCode：指定回源状态码统计，在 Code 参数中填充指定�
      * @param array $Domains 指定查询域名列表，最多可一次性查询 30 个加速域名明细
      * @param integer $Project 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
-     * @param boolean $Detail 多域名查询时，默认（false)返回所有域名汇总排序结果
+     * @param boolean $Detail 多域名查询时，默认（false)返回所有域名汇总排序结果
 Metric 为 Url、Path、District、Isp，Filter 为 flux、reqeust 时，可设置为 true，返回每一个 Domain 的排序数据
      * @param string $Code Filter 为 statusCode、OriginStatusCode 时，填充指定状态码查询排序结果
+     * @param string $Area 指定服务地域查询，不填充表示查询中国境内 CDN 数据
+mainland：指定查询中国境内 CDN 数据
+overseas：指定查询中国境外 CDN 数据，支持的 Metric 为 url、district、host、originHost，当 Metric 为 originHost 时仅支持 flux、request、bandwidth Filter
+     * @param string $AreaType 查询中国境外CDN数据，且仅当 Metric 为 District 或 Host 时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas，且 Metric 是 District 或 Host 时可用）
+server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
+client：指定查询客户端地区（用户请求终端所在地区）数据，当 Metric 为 host 时仅支持 flux、request、bandwidth Filter
      */
     function __construct()
     {
@@ -220,6 +252,14 @@ Metric 为 Url、Path、District、Isp，Filter 为 flux、reqeust 时，可设�
 
         if (array_key_exists("Code",$param) and $param["Code"] !== null) {
             $this->Code = $param["Code"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("AreaType",$param) and $param["AreaType"] !== null) {
+            $this->AreaType = $param["AreaType"];
         }
     }
 }

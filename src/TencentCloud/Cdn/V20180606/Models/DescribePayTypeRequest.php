@@ -18,7 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method string getArea() 获取指定服务地域查询，不填充表示查询中国境内 CDN 计费方式
+mainland：指定查询中国境内 CDN 计费方式
+overseas：指定查询中国境外 CDN 计费方式
+ * @method void setArea(string $Area) 设置指定服务地域查询，不填充表示查询中国境内 CDN 计费方式
+mainland：指定查询中国境内 CDN 计费方式
+overseas：指定查询中国境外 CDN 计费方式
  */
 
 /**
@@ -26,9 +31,16 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribePayTypeRequest extends AbstractModel
 {
-
     /**
-
+     * @var string 指定服务地域查询，不填充表示查询中国境内 CDN 计费方式
+mainland：指定查询中国境内 CDN 计费方式
+overseas：指定查询中国境外 CDN 计费方式
+     */
+    public $Area;
+    /**
+     * @param string $Area 指定服务地域查询，不填充表示查询中国境内 CDN 计费方式
+mainland：指定查询中国境内 CDN 计费方式
+overseas：指定查询中国境外 CDN 计费方式
      */
     function __construct()
     {
@@ -42,6 +54,8 @@ class DescribePayTypeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
+        }
     }
 }

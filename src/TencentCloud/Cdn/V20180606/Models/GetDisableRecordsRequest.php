@@ -18,10 +18,10 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getStartTime() 获取开始时间，如：2018-12-12 10:24:00。
+ * @method void setStartTime(string $StartTime) 设置开始时间，如：2018-12-12 10:24:00。
+ * @method string getEndTime() 获取结束时间，如：2018-12-14 10:24:00。
+ * @method void setEndTime(string $EndTime) 设置结束时间，如：2018-12-14 10:24:00。
  * @method string getUrl() 获取指定 URL 查询
  * @method void setUrl(string $Url) 设置指定 URL 查询
  * @method string getStatus() 获取URL 当前状态
@@ -30,6 +30,10 @@ enable：当前为可用状态，已解禁，可正常访问
  * @method void setStatus(string $Status) 设置URL 当前状态
 disable：当前仍为禁用状态，访问返回 403
 enable：当前为可用状态，已解禁，可正常访问
+ * @method integer getOffset() 获取分页查询偏移量，默认为 0 （第一页）。
+ * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0 （第一页）。
+ * @method integer getLimit() 获取分页查询限制数目，默认为20。
+ * @method void setLimit(integer $Limit) 设置分页查询限制数目，默认为20。
  */
 
 /**
@@ -38,12 +42,12 @@ enable：当前为可用状态，已解禁，可正常访问
 class GetDisableRecordsRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间
+     * @var string 开始时间，如：2018-12-12 10:24:00。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间，如：2018-12-14 10:24:00。
      */
     public $EndTime;
 
@@ -58,13 +62,25 @@ disable：当前仍为禁用状态，访问返回 403
 enable：当前为可用状态，已解禁，可正常访问
      */
     public $Status;
+
     /**
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
+     * @var integer 分页查询偏移量，默认为 0 （第一页）。
+     */
+    public $Offset;
+
+    /**
+     * @var integer 分页查询限制数目，默认为20。
+     */
+    public $Limit;
+    /**
+     * @param string $StartTime 开始时间，如：2018-12-12 10:24:00。
+     * @param string $EndTime 结束时间，如：2018-12-14 10:24:00。
      * @param string $Url 指定 URL 查询
      * @param string $Status URL 当前状态
 disable：当前仍为禁用状态，访问返回 403
 enable：当前为可用状态，已解禁，可正常访问
+     * @param integer $Offset 分页查询偏移量，默认为 0 （第一页）。
+     * @param integer $Limit 分页查询限制数目，默认为20。
      */
     function __construct()
     {
@@ -92,6 +108,14 @@ enable：当前为可用状态，已解禁，可正常访问
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

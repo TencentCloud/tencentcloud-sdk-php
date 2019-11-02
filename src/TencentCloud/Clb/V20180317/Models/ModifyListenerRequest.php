@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 分别表示按权重轮询、最小连接数， 默认为 WRR。
  * @method void setScheduler(string $Scheduler) 设置监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。
+ * @method integer getSniSwitch() 获取是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
+ * @method void setSniSwitch(integer $SniSwitch) 设置是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
  */
 
 /**
@@ -76,6 +78,11 @@ class ModifyListenerRequest extends AbstractModel
 分别表示按权重轮询、最小连接数， 默认为 WRR。
      */
     public $Scheduler;
+
+    /**
+     * @var integer 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
+     */
+    public $SniSwitch;
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param string $ListenerId 负载均衡监听器 ID
@@ -85,6 +92,7 @@ class ModifyListenerRequest extends AbstractModel
      * @param CertificateInput $Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
      * @param string $Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。
+     * @param integer $SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
      */
     function __construct()
     {
@@ -126,6 +134,10 @@ class ModifyListenerRequest extends AbstractModel
 
         if (array_key_exists("Scheduler",$param) and $param["Scheduler"] !== null) {
             $this->Scheduler = $param["Scheduler"];
+        }
+
+        if (array_key_exists("SniSwitch",$param) and $param["SniSwitch"] !== null) {
+            $this->SniSwitch = $param["SniSwitch"];
         }
     }
 }

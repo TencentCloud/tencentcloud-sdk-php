@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefaultServer(boolean $DefaultServer) 设置是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
  * @method boolean getHttp2() 获取是否开启Http2，注意，只用HTTPS域名才能开启Http2。
  * @method void setHttp2(boolean $Http2) 设置是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+ * @method string getTargetType() 获取后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+ * @method void setTargetType(string $TargetType) 设置后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
  */
 
 /**
@@ -90,6 +92,11 @@ class RuleInput extends AbstractModel
      * @var boolean 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
      */
     public $Http2;
+
+    /**
+     * @var string 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+     */
+    public $TargetType;
     /**
      * @param string $Domain 转发规则的域名。长度限制为：1~80。
      * @param string $Url 转发规则的路径。长度限制为：1~200。
@@ -101,6 +108,7 @@ class RuleInput extends AbstractModel
      * @param string $ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP
      * @param boolean $DefaultServer 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
      * @param boolean $Http2 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+     * @param string $TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
      */
     function __construct()
     {
@@ -150,6 +158,10 @@ class RuleInput extends AbstractModel
 
         if (array_key_exists("Http2",$param) and $param["Http2"] !== null) {
             $this->Http2 = $param["Http2"];
+        }
+
+        if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
+            $this->TargetType = $param["TargetType"];
         }
     }
 }

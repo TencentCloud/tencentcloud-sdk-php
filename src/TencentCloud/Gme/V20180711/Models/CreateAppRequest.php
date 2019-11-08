@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) 设置应用名称
  * @method integer getProjectId() 获取腾讯云项目id，默认为0，表示默认项目
  * @method void setProjectId(integer $ProjectId) 设置腾讯云项目id，默认为0，表示默认项目
- * @method array getEngineList() 获取需要支持的引擎列表，取值android, ios, uinty, cocos, unreal, windows。默认全选。
- * @method void setEngineList(array $EngineList) 设置需要支持的引擎列表，取值android, ios, uinty, cocos, unreal, windows。默认全选。
- * @method array getRegionList() 获取服务区域列表, 默认为空数组. 取值: mainland(美), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选
- * @method void setRegionList(array $RegionList) 设置服务区域列表, 默认为空数组. 取值: mainland(美), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选
+ * @method array getEngineList() 获取需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
+ * @method void setEngineList(array $EngineList) 设置需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
+ * @method array getRegionList() 获取服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
+ * @method void setRegionList(array $RegionList) 设置服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
  * @method RealtimeSpeechConf getRealtimeSpeechConf() 获取实时语音服务配置数据
  * @method void setRealtimeSpeechConf(RealtimeSpeechConf $RealtimeSpeechConf) 设置实时语音服务配置数据
- * @method VoiceMessageConf getVoiceMessageConf() 获取离线语音服务配置数据
- * @method void setVoiceMessageConf(VoiceMessageConf $VoiceMessageConf) 设置离线语音服务配置数据
- * @method VoiceFilterConf getVoiceFilterConf() 获取语音过滤服务配置数据
- * @method void setVoiceFilterConf(VoiceFilterConf $VoiceFilterConf) 设置语音过滤服务配置数据
+ * @method VoiceMessageConf getVoiceMessageConf() 获取语音消息及转文本服务配置数据
+ * @method void setVoiceMessageConf(VoiceMessageConf $VoiceMessageConf) 设置语音消息及转文本服务配置数据
+ * @method VoiceFilterConf getVoiceFilterConf() 获取语音分析服务配置数据
+ * @method void setVoiceFilterConf(VoiceFilterConf $VoiceFilterConf) 设置语音分析服务配置数据
  * @method array getTags() 获取需要添加的标签列表
  * @method void setTags(array $Tags) 设置需要添加的标签列表
  */
@@ -52,12 +52,12 @@ class CreateAppRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array 需要支持的引擎列表，取值android, ios, uinty, cocos, unreal, windows。默认全选。
+     * @var array 需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
      */
     public $EngineList;
 
     /**
-     * @var array 服务区域列表, 默认为空数组. 取值: mainland(美), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选
+     * @var array 服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
      */
     public $RegionList;
 
@@ -67,12 +67,12 @@ class CreateAppRequest extends AbstractModel
     public $RealtimeSpeechConf;
 
     /**
-     * @var VoiceMessageConf 离线语音服务配置数据
+     * @var VoiceMessageConf 语音消息及转文本服务配置数据
      */
     public $VoiceMessageConf;
 
     /**
-     * @var VoiceFilterConf 语音过滤服务配置数据
+     * @var VoiceFilterConf 语音分析服务配置数据
      */
     public $VoiceFilterConf;
 
@@ -83,11 +83,11 @@ class CreateAppRequest extends AbstractModel
     /**
      * @param string $AppName 应用名称
      * @param integer $ProjectId 腾讯云项目id，默认为0，表示默认项目
-     * @param array $EngineList 需要支持的引擎列表，取值android, ios, uinty, cocos, unreal, windows。默认全选。
-     * @param array $RegionList 服务区域列表, 默认为空数组. 取值: mainland(美), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选
+     * @param array $EngineList 需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
+     * @param array $RegionList 服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
      * @param RealtimeSpeechConf $RealtimeSpeechConf 实时语音服务配置数据
-     * @param VoiceMessageConf $VoiceMessageConf 离线语音服务配置数据
-     * @param VoiceFilterConf $VoiceFilterConf 语音过滤服务配置数据
+     * @param VoiceMessageConf $VoiceMessageConf 语音消息及转文本服务配置数据
+     * @param VoiceFilterConf $VoiceFilterConf 语音分析服务配置数据
      * @param array $Tags 需要添加的标签列表
      */
     function __construct()

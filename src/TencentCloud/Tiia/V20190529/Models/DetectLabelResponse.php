@@ -18,8 +18,18 @@ namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getLabels() 获取标签结果数组。
- * @method void setLabels(array $Labels) 设置标签结果数组。
+ * @method array getLabels() 获取Web网络版标签结果数组。如未选择WEB场景，则为空。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabels(array $Labels) 设置Web网络版标签结果数组。如未选择WEB场景，则为空。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCameraLabels() 获取Camera摄像头版标签结果数组。如未选择CAMERA场景，则为空。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCameraLabels(array $CameraLabels) 设置Camera摄像头版标签结果数组。如未选择CAMERA场景，则为空。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAlbumLabels() 获取Album相册版标签结果数组。如未选择ALBUM场景，则为空。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlbumLabels(array $AlbumLabels) 设置Album相册版标签结果数组。如未选择ALBUM场景，则为空。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,16 +40,34 @@ use TencentCloud\Common\AbstractModel;
 class DetectLabelResponse extends AbstractModel
 {
     /**
-     * @var array 标签结果数组。
+     * @var array Web网络版标签结果数组。如未选择WEB场景，则为空。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
+
+    /**
+     * @var array Camera摄像头版标签结果数组。如未选择CAMERA场景，则为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CameraLabels;
+
+    /**
+     * @var array Album相册版标签结果数组。如未选择ALBUM场景，则为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlbumLabels;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param array $Labels 标签结果数组。
+     * @param array $Labels Web网络版标签结果数组。如未选择WEB场景，则为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CameraLabels Camera摄像头版标签结果数组。如未选择CAMERA场景，则为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AlbumLabels Album相册版标签结果数组。如未选择ALBUM场景，则为空。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -60,6 +88,24 @@ class DetectLabelResponse extends AbstractModel
                 $obj = new DetectLabelItem();
                 $obj->deserialize($value);
                 array_push($this->Labels, $obj);
+            }
+        }
+
+        if (array_key_exists("CameraLabels",$param) and $param["CameraLabels"] !== null) {
+            $this->CameraLabels = [];
+            foreach ($param["CameraLabels"] as $key => $value){
+                $obj = new DetectLabelItem();
+                $obj->deserialize($value);
+                array_push($this->CameraLabels, $obj);
+            }
+        }
+
+        if (array_key_exists("AlbumLabels",$param) and $param["AlbumLabels"] !== null) {
+            $this->AlbumLabels = [];
+            foreach ($param["AlbumLabels"] as $key => $value){
+                $obj = new DetectLabelItem();
+                $obj->deserialize($value);
+                array_push($this->AlbumLabels, $obj);
             }
         }
 

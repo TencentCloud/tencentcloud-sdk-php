@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
  * @method string getName() 获取分散置放群组名称，长度1-60个字符，支持中、英文。
  * @method void setName(string $Name) 设置分散置放群组名称，长度1-60个字符，支持中、英文。
- * @method integer getCvmQuotaTotal() 获取置放群组内可容纳的云主机数量。
- * @method void setCvmQuotaTotal(integer $CvmQuotaTotal) 设置置放群组内可容纳的云主机数量。
- * @method integer getCurrentNum() 获取置放群组内已有的云主机数量。
- * @method void setCurrentNum(integer $CurrentNum) 设置置放群组内已有的云主机数量。
+ * @method integer getCvmQuotaTotal() 获取置放群组内可容纳的云服务器数量。
+ * @method void setCvmQuotaTotal(integer $CvmQuotaTotal) 设置置放群组内可容纳的云服务器数量。
+ * @method integer getCurrentNum() 获取置放群组内已有的云服务器数量。
+ * @method void setCurrentNum(integer $CurrentNum) 设置置放群组内已有的云服务器数量。
  * @method string getCreateTime() 获取置放群组创建时间。
  * @method void setCreateTime(string $CreateTime) 设置置放群组创建时间。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -55,12 +55,12 @@ class CreateDisasterRecoverGroupResponse extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 置放群组内可容纳的云主机数量。
+     * @var integer 置放群组内可容纳的云服务器数量。
      */
     public $CvmQuotaTotal;
 
     /**
-     * @var integer 置放群组内已有的云主机数量。
+     * @var integer 置放群组内已有的云服务器数量。
      */
     public $CurrentNum;
 
@@ -77,8 +77,8 @@ class CreateDisasterRecoverGroupResponse extends AbstractModel
      * @param string $DisasterRecoverGroupId 分散置放群组ID列表。
      * @param string $Type 分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
      * @param string $Name 分散置放群组名称，长度1-60个字符，支持中、英文。
-     * @param integer $CvmQuotaTotal 置放群组内可容纳的云主机数量。
-     * @param integer $CurrentNum 置放群组内已有的云主机数量。
+     * @param integer $CvmQuotaTotal 置放群组内可容纳的云服务器数量。
+     * @param integer $CurrentNum 置放群组内已有的云服务器数量。
      * @param string $CreateTime 置放群组创建时间。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

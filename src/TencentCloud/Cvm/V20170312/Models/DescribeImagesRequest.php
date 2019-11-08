@@ -23,17 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFilters() 获取过滤条件，每次请求的`Filters`的上限为0，`Filters.Values`的上限为5。参数不可以同时指定`ImageIds`和`Filters`。详细的过滤条件如下：
 <li> image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤</li>
 <li> image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
-    PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
+    PRIVATE_IMAGE: 私有镜像 (本账户创建的镜像) 
     PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
-    MARKET_IMAGE: 服务市场 (服务市场提供的镜像) 
-   SHARED_IMAGE: 共享镜像(其他账户共享给本帐户的镜像) 。</li>
+   SHARED_IMAGE: 共享镜像(其他账户共享给本账户的镜像) 。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，每次请求的`Filters`的上限为0，`Filters.Values`的上限为5。参数不可以同时指定`ImageIds`和`Filters`。详细的过滤条件如下：
 <li> image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤</li>
 <li> image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
-    PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
+    PRIVATE_IMAGE: 私有镜像 (本账户创建的镜像) 
     PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
-    MARKET_IMAGE: 服务市场 (服务市场提供的镜像) 
-   SHARED_IMAGE: 共享镜像(其他账户共享给本帐户的镜像) 。</li>
+   SHARED_IMAGE: 共享镜像(其他账户共享给本账户的镜像) 。</li>
  * @method integer getOffset() 获取偏移量，默认为0。关于Offset详见[API简介](/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset详见[API简介](/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)。
  * @method integer getLimit() 获取数量限制，默认为20，最大值为100。关于Limit详见[API简介](/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)。
@@ -56,10 +54,9 @@ class DescribeImagesRequest extends AbstractModel
      * @var array 过滤条件，每次请求的`Filters`的上限为0，`Filters.Values`的上限为5。参数不可以同时指定`ImageIds`和`Filters`。详细的过滤条件如下：
 <li> image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤</li>
 <li> image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
-    PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
+    PRIVATE_IMAGE: 私有镜像 (本账户创建的镜像) 
     PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
-    MARKET_IMAGE: 服务市场 (服务市场提供的镜像) 
-   SHARED_IMAGE: 共享镜像(其他账户共享给本帐户的镜像) 。</li>
+   SHARED_IMAGE: 共享镜像(其他账户共享给本账户的镜像) 。</li>
      */
     public $Filters;
 
@@ -82,10 +79,9 @@ class DescribeImagesRequest extends AbstractModel
      * @param array $Filters 过滤条件，每次请求的`Filters`的上限为0，`Filters.Values`的上限为5。参数不可以同时指定`ImageIds`和`Filters`。详细的过滤条件如下：
 <li> image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤</li>
 <li> image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
-    PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
+    PRIVATE_IMAGE: 私有镜像 (本账户创建的镜像) 
     PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
-    MARKET_IMAGE: 服务市场 (服务市场提供的镜像) 
-   SHARED_IMAGE: 共享镜像(其他账户共享给本帐户的镜像) 。</li>
+   SHARED_IMAGE: 共享镜像(其他账户共享给本账户的镜像) 。</li>
      * @param integer $Offset 偏移量，默认为0。关于Offset详见[API简介](/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)。
      * @param integer $Limit 数量限制，默认为20，最大值为100。关于Limit详见[API简介](/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)。
      * @param string $InstanceType 实例类型，如 `S1.SMALL1`

@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置服务创建时间戳
  * @method RealtimeSpeechConf getRealtimeSpeechConf() 获取实时语音服务配置数据
  * @method void setRealtimeSpeechConf(RealtimeSpeechConf $RealtimeSpeechConf) 设置实时语音服务配置数据
- * @method VoiceMessageConf getVoiceMessageConf() 获取语音消息服务配置数据
- * @method void setVoiceMessageConf(VoiceMessageConf $VoiceMessageConf) 设置语音消息服务配置数据
- * @method VoiceFilterConf getVoiceFilterConf() 获取语音过滤服务配置数据
- * @method void setVoiceFilterConf(VoiceFilterConf $VoiceFilterConf) 设置语音过滤服务配置数据
+ * @method VoiceMessageConf getVoiceMessageConf() 获取语音消息及转文本服务配置数据
+ * @method void setVoiceMessageConf(VoiceMessageConf $VoiceMessageConf) 设置语音消息及转文本服务配置数据
+ * @method VoiceFilterConf getVoiceFilterConf() 获取语音分析服务配置数据
+ * @method void setVoiceFilterConf(VoiceFilterConf $VoiceFilterConf) 设置语音分析服务配置数据
  */
 
 /**
@@ -72,12 +72,12 @@ class CreateAppResponse extends AbstractModel
     public $RealtimeSpeechConf;
 
     /**
-     * @var VoiceMessageConf 语音消息服务配置数据
+     * @var VoiceMessageConf 语音消息及转文本服务配置数据
      */
     public $VoiceMessageConf;
 
     /**
-     * @var VoiceFilterConf 语音过滤服务配置数据
+     * @var VoiceFilterConf 语音分析服务配置数据
      */
     public $VoiceFilterConf;
     /**
@@ -87,8 +87,8 @@ class CreateAppResponse extends AbstractModel
      * @param string $SecretKey 应用密钥，GME SDK初始化时使用
      * @param integer $CreateTime 服务创建时间戳
      * @param RealtimeSpeechConf $RealtimeSpeechConf 实时语音服务配置数据
-     * @param VoiceMessageConf $VoiceMessageConf 语音消息服务配置数据
-     * @param VoiceFilterConf $VoiceFilterConf 语音过滤服务配置数据
+     * @param VoiceMessageConf $VoiceMessageConf 语音消息及转文本服务配置数据
+     * @param VoiceFilterConf $VoiceFilterConf 语音分析服务配置数据
      */
     function __construct()
     {

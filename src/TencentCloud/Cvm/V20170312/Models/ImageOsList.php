@@ -29,7 +29,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *支持的操作系统类型，根据windows和linux分类。
+ *支持的操作系统类型，根据windows和Linux分类。
  */
 class ImageOsList extends AbstractModel
 {

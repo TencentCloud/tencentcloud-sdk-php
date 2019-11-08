@@ -20,6 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getNames() 获取任务流模板名字过滤条件，数组长度限制：100。
  * @method void setNames(array $Names) 设置任务流模板名字过滤条件，数组长度限制：100。
+ * @method string getType() 获取任务流模板类型过滤条件，可选值：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
+ * @method void setType(string $Type) 设置任务流模板类型过滤条件，可选值：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
  * @method integer getOffset() 获取分页偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
@@ -39,6 +45,13 @@ class DescribeProcedureTemplatesRequest extends AbstractModel
     public $Names;
 
     /**
+     * @var string 任务流模板类型过滤条件，可选值：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
+     */
+    public $Type;
+
+    /**
      * @var integer 分页偏移量，默认值：0。
      */
     public $Offset;
@@ -54,6 +67,9 @@ class DescribeProcedureTemplatesRequest extends AbstractModel
     public $SubAppId;
     /**
      * @param array $Names 任务流模板名字过滤条件，数组长度限制：100。
+     * @param string $Type 任务流模板类型过滤条件，可选值：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
@@ -72,6 +88,10 @@ class DescribeProcedureTemplatesRequest extends AbstractModel
         }
         if (array_key_exists("Names",$param) and $param["Names"] !== null) {
             $this->Names = $param["Names"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

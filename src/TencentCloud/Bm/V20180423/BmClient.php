@@ -22,6 +22,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Bm\V20180423\Models as Models;
 
 /**
+* @method Models\AttachCamRoleResponse AttachCamRole(Models\AttachCamRoleRequest $req) 服务器绑定CAM角色，该角色授权访问黑石物理服务器服务，为黑石物理服务器提供了访问资源的权限，如请求服务器的临时证书
 * @method Models\BindPsaTagResponse BindPsaTag(Models\BindPsaTagRequest $req) 为预授权规则绑定标签
 * @method Models\BuyDevicesResponse BuyDevices(Models\BuyDevicesRequest $req) 购买黑石物理机
 * @method Models\CreateCustomImageResponse CreateCustomImage(Models\CreateCustomImageRequest $req) 创建自定义镜像<br>
@@ -64,6 +65,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
 * @method Models\DescribeUserCmdTaskInfoResponse DescribeUserCmdTaskInfo(Models\DescribeUserCmdTaskInfoRequest $req) 获取自定义脚本任务详细信息
 * @method Models\DescribeUserCmdTasksResponse DescribeUserCmdTasks(Models\DescribeUserCmdTasksRequest $req) 获取自定义脚本任务列表
 * @method Models\DescribeUserCmdsResponse DescribeUserCmds(Models\DescribeUserCmdsRequest $req) 获取自定义脚本信息列表
+* @method Models\DetachCamRoleResponse DetachCamRole(Models\DetachCamRoleRequest $req) 服务器绑定CAM角色
 * @method Models\ModifyCustomImageAttributeResponse ModifyCustomImageAttribute(Models\ModifyCustomImageAttributeRequest $req) 用于修改自定义镜像名或描述
 * @method Models\ModifyDeviceAliasesResponse ModifyDeviceAliases(Models\ModifyDeviceAliasesRequest $req) 修改服务器名称
 * @method Models\ModifyDeviceAutoRenewFlagResponse ModifyDeviceAutoRenewFlag(Models\ModifyDeviceAutoRenewFlagRequest $req) 修改物理机服务器自动续费标志

@@ -62,7 +62,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
 + 依据总流量、总请求数对客户端运营商排序，从大至小返回运营商列表
 + 依据总流量、峰值带宽、总请求数、平均命中率、2XX/3XX/4XX/5XX 状态码对域名排序，从大至小返回域名列表
 + 依据总回源流量、回源峰值带宽、总回源请求数、平均回源失败率、2XX/3XX/4XX/5XX 回源状态码对域名排序，从大至小返回域名列表
-* @method Models\PurgePathCacheResponse PurgePathCache(Models\PurgePathCacheRequest $req) PurgeUrlsCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
+* @method Models\PurgePathCacheResponse PurgePathCache(Models\PurgePathCacheRequest $req) PurgePathCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
 * @method Models\PurgeUrlsCacheResponse PurgeUrlsCache(Models\PurgeUrlsCacheRequest $req) PurgeUrlsCache 用于批量刷新Url，一次提交将返回一个刷新任务id。
 * @method Models\PushUrlsCacheResponse PushUrlsCache(Models\PushUrlsCacheRequest $req) PushUrlsCache 用于将指定 URL 资源列表加载至 CDN 节点，默认情况下每次调用可提交 20 条 URL，每日一共可提交 1000 条。
  */

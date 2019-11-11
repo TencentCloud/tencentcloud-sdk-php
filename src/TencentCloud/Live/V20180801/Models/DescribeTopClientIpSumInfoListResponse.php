@@ -18,16 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPageNum() 获取页号，
-范围是[1,1000]，
-默认值是1。
- * @method void setPageNum(integer $PageNum) 设置页号，
-范围是[1,1000]，
-默认值是1。
- * @method integer getPageSize() 获取每页个数，范围是[1,1000]，
-默认值是20。
- * @method void setPageSize(integer $PageSize) 设置每页个数，范围是[1,1000]，
-默认值是20。
+ * @method integer getPageNum() 获取页号，范围是[1,1000]，默认值是1。
+ * @method void setPageNum(integer $PageNum) 设置页号，范围是[1,1000]，默认值是1。
+ * @method integer getPageSize() 获取每页个数，范围是[1,1000]，默认值是20。
+ * @method void setPageSize(integer $PageSize) 设置每页个数，范围是[1,1000]，默认值是20。
  * @method string getOrderParam() 获取排序指标，可选值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
  * @method void setOrderParam(string $OrderParam) 设置排序指标，可选值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
  * @method integer getTotalNum() 获取记录总数。
@@ -46,15 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTopClientIpSumInfoListResponse extends AbstractModel
 {
     /**
-     * @var integer 页号，
-范围是[1,1000]，
-默认值是1。
+     * @var integer 页号，范围是[1,1000]，默认值是1。
      */
     public $PageNum;
 
     /**
-     * @var integer 每页个数，范围是[1,1000]，
-默认值是20。
+     * @var integer 每页个数，范围是[1,1000]，默认值是20。
      */
     public $PageSize;
 
@@ -83,11 +74,8 @@ class DescribeTopClientIpSumInfoListResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $PageNum 页号，
-范围是[1,1000]，
-默认值是1。
-     * @param integer $PageSize 每页个数，范围是[1,1000]，
-默认值是20。
+     * @param integer $PageNum 页号，范围是[1,1000]，默认值是1。
+     * @param integer $PageSize 每页个数，范围是[1,1000]，默认值是20。
      * @param string $OrderParam 排序指标，可选值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
      * @param integer $TotalNum 记录总数。
      * @param integer $TotalPage 记录总页数。

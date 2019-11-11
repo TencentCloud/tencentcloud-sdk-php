@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCode4xx(integer $TotalCode4xx) 设置状态码为4开头的总次数。
  * @method integer getTotalCode5xx() 获取状态码为5开头的总次数。
  * @method void setTotalCode5xx(integer $TotalCode5xx) 设置状态码为5开头的总次数。
- * @method array getTotalCodeList() 获取各状态码的总次数，暂时支持400,403,404,500,502,503,504。
- * @method void setTotalCodeList(array $TotalCodeList) 设置各状态码的总次数，暂时支持400,403,404,500,502,503,504。
+ * @method array getTotalCodeList() 获取各状态码的总次数。
+ * @method void setTotalCodeList(array $TotalCodeList) 设置各状态码的总次数。
  * @method integer getPageNum() 获取页号。
  * @method void setPageNum(integer $PageNum) 设置页号。
  * @method integer getPageSize() 获取每页大小。
@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalPage(integer $TotalPage) 设置总页数。
  * @method integer getTotalNum() 获取总记录数。
  * @method void setTotalNum(integer $TotalNum) 设置总记录数。
+ * @method integer getTotalCode2xx() 获取状态码为2开头的总次数。
+ * @method void setTotalCode2xx(integer $TotalCode2xx) 设置状态码为2开头的总次数。
+ * @method integer getTotalCode3xx() 获取状态码为3开头的总次数。
+ * @method void setTotalCode3xx(integer $TotalCode3xx) 设置状态码为3开头的总次数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -66,7 +70,7 @@ class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel
     public $TotalCode5xx;
 
     /**
-     * @var array 各状态码的总次数，暂时支持400,403,404,500,502,503,504。
+     * @var array 各状态码的总次数。
      */
     public $TotalCodeList;
 
@@ -91,6 +95,16 @@ class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel
     public $TotalNum;
 
     /**
+     * @var integer 状态码为2开头的总次数。
+     */
+    public $TotalCode2xx;
+
+    /**
+     * @var integer 状态码为3开头的总次数。
+     */
+    public $TotalCode3xx;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -99,11 +113,13 @@ class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel
      * @param integer $TotalCodeAll 所有状态码的加和的次数。
      * @param integer $TotalCode4xx 状态码为4开头的总次数。
      * @param integer $TotalCode5xx 状态码为5开头的总次数。
-     * @param array $TotalCodeList 各状态码的总次数，暂时支持400,403,404,500,502,503,504。
+     * @param array $TotalCodeList 各状态码的总次数。
      * @param integer $PageNum 页号。
      * @param integer $PageSize 每页大小。
      * @param integer $TotalPage 总页数。
      * @param integer $TotalNum 总记录数。
+     * @param integer $TotalCode2xx 状态码为2开头的总次数。
+     * @param integer $TotalCode3xx 状态码为3开头的总次数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -162,6 +178,14 @@ class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel
 
         if (array_key_exists("TotalNum",$param) and $param["TotalNum"] !== null) {
             $this->TotalNum = $param["TotalNum"];
+        }
+
+        if (array_key_exists("TotalCode2xx",$param) and $param["TotalCode2xx"] !== null) {
+            $this->TotalCode2xx = $param["TotalCode2xx"];
+        }
+
+        if (array_key_exists("TotalCode3xx",$param) and $param["TotalCode3xx"] !== null) {
+            $this->TotalCode3xx = $param["TotalCode3xx"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

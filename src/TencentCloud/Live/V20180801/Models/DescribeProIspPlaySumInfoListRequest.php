@@ -28,20 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
- * @method string getStatType() 获取统计的类型，可选值包括”Province”，”Isp”。
- * @method void setStatType(string $StatType) 设置统计的类型，可选值包括”Province”，”Isp”。
+ * @method string getStatType() 获取统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
+ * @method void setStatType(string $StatType) 设置统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
  * @method array getPlayDomains() 获取不填则为总体数据。
  * @method void setPlayDomains(array $PlayDomains) 设置不填则为总体数据。
- * @method integer getPageNum() 获取页号，
-范围是[1,1000]，
-默认值是1。
- * @method void setPageNum(integer $PageNum) 设置页号，
-范围是[1,1000]，
-默认值是1。
- * @method integer getPageSize() 获取每页个数，范围是[1,1000]，
-默认值是20。
- * @method void setPageSize(integer $PageSize) 设置每页个数，范围是[1,1000]，
-默认值是20。
+ * @method integer getPageNum() 获取页号，范围是[1,1000]，默认值是1。
+ * @method void setPageNum(integer $PageNum) 设置页号，范围是[1,1000]，默认值是1。
+ * @method integer getPageSize() 获取每页个数，范围是[1,1000]，默认值是20。
+ * @method void setPageSize(integer $PageSize) 设置每页个数，范围是[1,1000]，默认值是20。
+ * @method string getMainlandOrOversea() 获取地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+ * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+ * @method string getOutLanguage() 获取输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
+ * @method void setOutLanguage(string $OutLanguage) 设置输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
  */
 
 /**
@@ -63,7 +61,7 @@ class DescribeProIspPlaySumInfoListRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 统计的类型，可选值包括”Province”，”Isp”。
+     * @var string 统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
      */
     public $StatType;
 
@@ -73,30 +71,36 @@ class DescribeProIspPlaySumInfoListRequest extends AbstractModel
     public $PlayDomains;
 
     /**
-     * @var integer 页号，
-范围是[1,1000]，
-默认值是1。
+     * @var integer 页号，范围是[1,1000]，默认值是1。
      */
     public $PageNum;
 
     /**
-     * @var integer 每页个数，范围是[1,1000]，
-默认值是20。
+     * @var integer 每页个数，范围是[1,1000]，默认值是20。
      */
     public $PageSize;
+
+    /**
+     * @var string 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     */
+    public $MainlandOrOversea;
+
+    /**
+     * @var string 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
+     */
+    public $OutLanguage;
     /**
      * @param string $StartTime 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
      * @param string $EndTime 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
-     * @param string $StatType 统计的类型，可选值包括”Province”，”Isp”。
+     * @param string $StatType 统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
      * @param array $PlayDomains 不填则为总体数据。
-     * @param integer $PageNum 页号，
-范围是[1,1000]，
-默认值是1。
-     * @param integer $PageSize 每页个数，范围是[1,1000]，
-默认值是20。
+     * @param integer $PageNum 页号，范围是[1,1000]，默认值是1。
+     * @param integer $PageSize 每页个数，范围是[1,1000]，默认值是20。
+     * @param string $MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     * @param string $OutLanguage 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
      */
     function __construct()
     {
@@ -132,6 +136,14 @@ class DescribeProIspPlaySumInfoListRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("MainlandOrOversea",$param) and $param["MainlandOrOversea"] !== null) {
+            $this->MainlandOrOversea = $param["MainlandOrOversea"];
+        }
+
+        if (array_key_exists("OutLanguage",$param) and $param["OutLanguage"] !== null) {
+            $this->OutLanguage = $param["OutLanguage"];
         }
     }
 }

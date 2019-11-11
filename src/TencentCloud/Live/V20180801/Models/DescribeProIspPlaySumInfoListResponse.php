@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalNum(integer $TotalNum) 设置总记录数。
  * @method integer getTotalPage() 获取总页数。
  * @method void setTotalPage(integer $TotalPage) 设置总页数。
- * @method array getDataInfoList() 获取省份或运营商汇总数据列表。
- * @method void setDataInfoList(array $DataInfoList) 设置省份或运营商汇总数据列表。
+ * @method array getDataInfoList() 获取省份，运营商，国家或地区汇总数据列表。
+ * @method void setDataInfoList(array $DataInfoList) 设置省份，运营商，国家或地区汇总数据列表。
  * @method float getAvgFluxPerSecond() 获取平均带宽。
  * @method void setAvgFluxPerSecond(float $AvgFluxPerSecond) 设置平均带宽。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -81,7 +81,7 @@ class DescribeProIspPlaySumInfoListResponse extends AbstractModel
     public $TotalPage;
 
     /**
-     * @var array 省份或运营商汇总数据列表。
+     * @var array 省份，运营商，国家或地区汇总数据列表。
      */
     public $DataInfoList;
 
@@ -102,7 +102,7 @@ class DescribeProIspPlaySumInfoListResponse extends AbstractModel
      * @param integer $PageNum 页号。
      * @param integer $TotalNum 总记录数。
      * @param integer $TotalPage 总页数。
-     * @param array $DataInfoList 省份或运营商汇总数据列表。
+     * @param array $DataInfoList 省份，运营商，国家或地区汇总数据列表。
      * @param float $AvgFluxPerSecond 平均带宽。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

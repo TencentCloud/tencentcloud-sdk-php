@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalRequest(integer $TotalRequest) 设置总请求数。
  * @method integer getTotalFailedRequest() 获取总失败请求数。
  * @method void setTotalFailedRequest(integer $TotalFailedRequest) 设置总失败请求数。
+ * @method string getCountryArea() 获取客户端所在国家。
+ * @method void setCountryArea(string $CountryArea) 设置客户端所在国家。
  */
 
 /**
@@ -59,12 +61,18 @@ class ClientIpPlaySumInfo extends AbstractModel
      * @var integer 总失败请求数。
      */
     public $TotalFailedRequest;
+
+    /**
+     * @var string 客户端所在国家。
+     */
+    public $CountryArea;
     /**
      * @param string $ClientIp 客户端ip，点分型。
      * @param string $Province 客户端所在省份。
      * @param float $TotalFlux 总流量。
      * @param integer $TotalRequest 总请求数。
      * @param integer $TotalFailedRequest 总失败请求数。
+     * @param string $CountryArea 客户端所在国家。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ClientIpPlaySumInfo extends AbstractModel
 
         if (array_key_exists("TotalFailedRequest",$param) and $param["TotalFailedRequest"] !== null) {
             $this->TotalFailedRequest = $param["TotalFailedRequest"];
+        }
+
+        if (array_key_exists("CountryArea",$param) and $param["CountryArea"] !== null) {
+            $this->CountryArea = $param["CountryArea"];
         }
     }
 }

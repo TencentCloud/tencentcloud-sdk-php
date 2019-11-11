@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatType(string $StatType) 设置是，可选值包括”4xx”,”5xx”，支持”4xx,5xx”等这种混合模式。
  * @method array getPlayDomains() 获取播放域名列表。
  * @method void setPlayDomains(array $PlayDomains) 设置播放域名列表。
+ * @method string getMainlandOrOversea() 获取地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+ * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
  */
 
 /**
@@ -71,6 +73,11 @@ class DescribePlayErrorCodeDetailInfoListRequest extends AbstractModel
      * @var array 播放域名列表。
      */
     public $PlayDomains;
+
+    /**
+     * @var string 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     */
+    public $MainlandOrOversea;
     /**
      * @param string $StartTime 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
@@ -81,6 +88,7 @@ class DescribePlayErrorCodeDetailInfoListRequest extends AbstractModel
 1-1分钟粒度。
      * @param string $StatType 是，可选值包括”4xx”,”5xx”，支持”4xx,5xx”等这种混合模式。
      * @param array $PlayDomains 播放域名列表。
+     * @param string $MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
      */
     function __construct()
     {
@@ -112,6 +120,10 @@ class DescribePlayErrorCodeDetailInfoListRequest extends AbstractModel
 
         if (array_key_exists("PlayDomains",$param) and $param["PlayDomains"] !== null) {
             $this->PlayDomains = $param["PlayDomains"];
+        }
+
+        if (array_key_exists("MainlandOrOversea",$param) and $param["MainlandOrOversea"] !== null) {
+            $this->MainlandOrOversea = $param["MainlandOrOversea"];
         }
     }
 }

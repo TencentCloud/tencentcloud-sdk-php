@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method string getCountryAreaName() 获取国家或地区。
+ * @method void setCountryAreaName(string $CountryAreaName) 设置国家或地区。
  * @method string getProvinceName() 获取省份。
  * @method void setProvinceName(string $ProvinceName) 设置省份。
  * @method string getIspName() 获取运营商。
@@ -37,6 +39,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class ProIspPlayCodeDataInfo extends AbstractModel
 {
+    /**
+     * @var string 国家或地区。
+     */
+    public $CountryAreaName;
+
     /**
      * @var string 省份。
      */
@@ -67,6 +74,7 @@ class ProIspPlayCodeDataInfo extends AbstractModel
      */
     public $Code5xx;
     /**
+     * @param string $CountryAreaName 国家或地区。
      * @param string $ProvinceName 省份。
      * @param string $IspName 运营商。
      * @param integer $Code2xx 错误码为2开头的次数。
@@ -86,6 +94,10 @@ class ProIspPlayCodeDataInfo extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("CountryAreaName",$param) and $param["CountryAreaName"] !== null) {
+            $this->CountryAreaName = $param["CountryAreaName"];
+        }
+
         if (array_key_exists("ProvinceName",$param) and $param["ProvinceName"] !== null) {
             $this->ProvinceName = $param["ProvinceName"];
         }

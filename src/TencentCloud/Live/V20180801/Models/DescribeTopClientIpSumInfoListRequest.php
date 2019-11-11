@@ -26,18 +26,16 @@ use TencentCloud\Common\AbstractModel;
 时间跨度在（0,4小时]，支持最近1天数据查询。
  * @method array getPlayDomains() 获取播放域名，默认为不填，表示求总体数据。
  * @method void setPlayDomains(array $PlayDomains) 设置播放域名，默认为不填，表示求总体数据。
- * @method integer getPageNum() 获取页号，
-范围是[1,1000]，
-默认值是1。
- * @method void setPageNum(integer $PageNum) 设置页号，
-范围是[1,1000]，
-默认值是1。
- * @method integer getPageSize() 获取每页个数，范围是[1,1000]，
-默认值是20。
- * @method void setPageSize(integer $PageSize) 设置每页个数，范围是[1,1000]，
-默认值是20。
- * @method string getOrderParam() 获取排序指标，可选值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
- * @method void setOrderParam(string $OrderParam) 设置排序指标，可选值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
+ * @method integer getPageNum() 获取页号，范围是[1,1000]，默认值是1。
+ * @method void setPageNum(integer $PageNum) 设置页号，范围是[1,1000]，默认值是1。
+ * @method integer getPageSize() 获取每页个数，范围是[1,1000]，默认值是20。
+ * @method void setPageSize(integer $PageSize) 设置每页个数，范围是[1,1000]，默认值是20。
+ * @method string getOrderParam() 获取排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。
+ * @method void setOrderParam(string $OrderParam) 设置排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。
+ * @method string getMainlandOrOversea() 获取地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+ * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+ * @method string getOutLanguage() 获取输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
+ * @method void setOutLanguage(string $OutLanguage) 设置输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
  */
 
 /**
@@ -62,33 +60,39 @@ class DescribeTopClientIpSumInfoListRequest extends AbstractModel
     public $PlayDomains;
 
     /**
-     * @var integer 页号，
-范围是[1,1000]，
-默认值是1。
+     * @var integer 页号，范围是[1,1000]，默认值是1。
      */
     public $PageNum;
 
     /**
-     * @var integer 每页个数，范围是[1,1000]，
-默认值是20。
+     * @var integer 每页个数，范围是[1,1000]，默认值是20。
      */
     public $PageSize;
 
     /**
-     * @var string 排序指标，可选值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
+     * @var string 排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。
      */
     public $OrderParam;
+
+    /**
+     * @var string 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     */
+    public $MainlandOrOversea;
+
+    /**
+     * @var string 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
+     */
+    public $OutLanguage;
     /**
      * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS
 时间跨度在（0,4小时]，支持最近1天数据查询。
      * @param array $PlayDomains 播放域名，默认为不填，表示求总体数据。
-     * @param integer $PageNum 页号，
-范围是[1,1000]，
-默认值是1。
-     * @param integer $PageSize 每页个数，范围是[1,1000]，
-默认值是20。
-     * @param string $OrderParam 排序指标，可选值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
+     * @param integer $PageNum 页号，范围是[1,1000]，默认值是1。
+     * @param integer $PageSize 每页个数，范围是[1,1000]，默认值是20。
+     * @param string $OrderParam 排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。
+     * @param string $MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     * @param string $OutLanguage 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
      */
     function __construct()
     {
@@ -124,6 +128,14 @@ class DescribeTopClientIpSumInfoListRequest extends AbstractModel
 
         if (array_key_exists("OrderParam",$param) and $param["OrderParam"] !== null) {
             $this->OrderParam = $param["OrderParam"];
+        }
+
+        if (array_key_exists("MainlandOrOversea",$param) and $param["MainlandOrOversea"] !== null) {
+            $this->MainlandOrOversea = $param["MainlandOrOversea"];
+        }
+
+        if (array_key_exists("OutLanguage",$param) and $param["OutLanguage"] !== null) {
+            $this->OutLanguage = $param["OutLanguage"];
         }
     }
 }

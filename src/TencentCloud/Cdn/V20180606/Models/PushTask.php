@@ -18,61 +18,85 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTaskId() 获取预热任务Id，前十位为时间戳。
- * @method void setTaskId(string $TaskId) 设置预热任务Id，前十位为时间戳。
- * @method string getUrl() 获取预热Url。
- * @method void setUrl(string $Url) 设置预热Url。
- * @method string getStatus() 获取预热任务状态，fail表示失败，done表示成功，process表示预热中。
- * @method void setStatus(string $Status) 设置预热任务状态，fail表示失败，done表示成功，process表示预热中。
- * @method integer getPercent() 获取预热百分比。
- * @method void setPercent(integer $Percent) 设置预热百分比。
- * @method string getCreateTime() 获取预热任务提交时间。
- * @method void setCreateTime(string $CreateTime) 设置预热任务提交时间。
- * @method string getArea() 获取预热区域，mainland，overseas或global。
- * @method void setArea(string $Area) 设置预热区域，mainland，overseas或global。
+ * @method string getTaskId() 获取预热任务 ID
+ * @method void setTaskId(string $TaskId) 设置预热任务 ID
+ * @method string getUrl() 获取预热 URL
+ * @method void setUrl(string $Url) 设置预热 URL
+ * @method string getStatus() 获取预热任务状态
+fail：预热失败
+done：预热成功
+process：预热中
+ * @method void setStatus(string $Status) 设置预热任务状态
+fail：预热失败
+done：预热成功
+process：预热中
+ * @method integer getPercent() 获取预热进度百分比
+ * @method void setPercent(integer $Percent) 设置预热进度百分比
+ * @method string getCreateTime() 获取预热任务提交时间
+ * @method void setCreateTime(string $CreateTime) 设置预热任务提交时间
+ * @method string getArea() 获取预热区域
+mainland：境内
+overseas：境外
+global：全球
+ * @method void setArea(string $Area) 设置预热区域
+mainland：境内
+overseas：境外
+global：全球
  */
 
 /**
- *预热任务日志详情。
+ *预热任务详情
  */
 class PushTask extends AbstractModel
 {
     /**
-     * @var string 预热任务Id，前十位为时间戳。
+     * @var string 预热任务 ID
      */
     public $TaskId;
 
     /**
-     * @var string 预热Url。
+     * @var string 预热 URL
      */
     public $Url;
 
     /**
-     * @var string 预热任务状态，fail表示失败，done表示成功，process表示预热中。
+     * @var string 预热任务状态
+fail：预热失败
+done：预热成功
+process：预热中
      */
     public $Status;
 
     /**
-     * @var integer 预热百分比。
+     * @var integer 预热进度百分比
      */
     public $Percent;
 
     /**
-     * @var string 预热任务提交时间。
+     * @var string 预热任务提交时间
      */
     public $CreateTime;
 
     /**
-     * @var string 预热区域，mainland，overseas或global。
+     * @var string 预热区域
+mainland：境内
+overseas：境外
+global：全球
      */
     public $Area;
     /**
-     * @param string $TaskId 预热任务Id，前十位为时间戳。
-     * @param string $Url 预热Url。
-     * @param string $Status 预热任务状态，fail表示失败，done表示成功，process表示预热中。
-     * @param integer $Percent 预热百分比。
-     * @param string $CreateTime 预热任务提交时间。
-     * @param string $Area 预热区域，mainland，overseas或global。
+     * @param string $TaskId 预热任务 ID
+     * @param string $Url 预热 URL
+     * @param string $Status 预热任务状态
+fail：预热失败
+done：预热成功
+process：预热中
+     * @param integer $Percent 预热进度百分比
+     * @param string $CreateTime 预热任务提交时间
+     * @param string $Area 预热区域
+mainland：境内
+overseas：境外
+global：全球
      */
     function __construct()
     {

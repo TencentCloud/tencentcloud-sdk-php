@@ -18,12 +18,10 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getResult() 获取认证结果码。
+ * @method string getResult() 获取认证结果码
+收费结果码：
 '0': '认证通过'
 '-1': '认证未通过'
-'-2': '姓名校验不通过'
-'-3': '身份证号码有误'
-'-4': '银行卡号码有误'
 '-5': '持卡人信息有误'
 '-6': '未开通无卡支付'
 '-7': '此卡被没收'
@@ -36,13 +34,15 @@ use TencentCloud\Common\AbstractModel;
 '-14': '受限制的卡'
 '-15': '密码错误次数超限'
 '-16': '发卡行不支持此交易'
+不收费结果码：
+'-2': '姓名校验不通过'
+'-3': '身份证号码有误'
+'-4': '银行卡号码有误'
 '-17': '服务繁忙'
- * @method void setResult(string $Result) 设置认证结果码。
+ * @method void setResult(string $Result) 设置认证结果码
+收费结果码：
 '0': '认证通过'
 '-1': '认证未通过'
-'-2': '姓名校验不通过'
-'-3': '身份证号码有误'
-'-4': '银行卡号码有误'
 '-5': '持卡人信息有误'
 '-6': '未开通无卡支付'
 '-7': '此卡被没收'
@@ -55,6 +55,10 @@ use TencentCloud\Common\AbstractModel;
 '-14': '受限制的卡'
 '-15': '密码错误次数超限'
 '-16': '发卡行不支持此交易'
+不收费结果码：
+'-2': '姓名校验不通过'
+'-3': '身份证号码有误'
+'-4': '银行卡号码有误'
 '-17': '服务繁忙'
  * @method string getDescription() 获取认证结果信息。
  * @method void setDescription(string $Description) 设置认证结果信息。
@@ -68,12 +72,10 @@ use TencentCloud\Common\AbstractModel;
 class BankCardVerificationResponse extends AbstractModel
 {
     /**
-     * @var string 认证结果码。
+     * @var string 认证结果码
+收费结果码：
 '0': '认证通过'
 '-1': '认证未通过'
-'-2': '姓名校验不通过'
-'-3': '身份证号码有误'
-'-4': '银行卡号码有误'
 '-5': '持卡人信息有误'
 '-6': '未开通无卡支付'
 '-7': '此卡被没收'
@@ -86,6 +88,10 @@ class BankCardVerificationResponse extends AbstractModel
 '-14': '受限制的卡'
 '-15': '密码错误次数超限'
 '-16': '发卡行不支持此交易'
+不收费结果码：
+'-2': '姓名校验不通过'
+'-3': '身份证号码有误'
+'-4': '银行卡号码有误'
 '-17': '服务繁忙'
      */
     public $Result;
@@ -100,12 +106,10 @@ class BankCardVerificationResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $Result 认证结果码。
+     * @param string $Result 认证结果码
+收费结果码：
 '0': '认证通过'
 '-1': '认证未通过'
-'-2': '姓名校验不通过'
-'-3': '身份证号码有误'
-'-4': '银行卡号码有误'
 '-5': '持卡人信息有误'
 '-6': '未开通无卡支付'
 '-7': '此卡被没收'
@@ -118,6 +122,10 @@ class BankCardVerificationResponse extends AbstractModel
 '-14': '受限制的卡'
 '-15': '密码错误次数超限'
 '-16': '发卡行不支持此交易'
+不收费结果码：
+'-2': '姓名校验不通过'
+'-3': '身份证号码有误'
+'-4': '银行卡号码有误'
 '-17': '服务繁忙'
      * @param string $Description 认证结果信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

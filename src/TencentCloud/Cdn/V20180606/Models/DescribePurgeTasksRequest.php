@@ -18,22 +18,42 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPurgeType() 获取查询刷新类型。url：查询 url 刷新记录；path：查询目录刷新记录。
- * @method void setPurgeType(string $PurgeType) 设置查询刷新类型。url：查询 url 刷新记录；path：查询目录刷新记录。
- * @method string getStartTime() 获取开始时间，如2018-08-08 00:00:00。
- * @method void setStartTime(string $StartTime) 设置开始时间，如2018-08-08 00:00:00。
- * @method string getEndTime() 获取结束时间，如2018-08-08 23:59:59。
- * @method void setEndTime(string $EndTime) 设置结束时间，如2018-08-08 23:59:59。
- * @method string getTaskId() 获取提交时返回的任务 Id，查询时 TaskId 和起始时间必须指定一项。
- * @method void setTaskId(string $TaskId) 设置提交时返回的任务 Id，查询时 TaskId 和起始时间必须指定一项。
- * @method integer getOffset() 获取分页查询偏移量，默认为 0 （第一页）。
- * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0 （第一页）。
- * @method integer getLimit() 获取分页查询限制数目，默认为20。
- * @method void setLimit(integer $Limit) 设置分页查询限制数目，默认为20。
- * @method string getKeyword() 获取查询关键字，请输入域名或 http(s):// 开头完整 URL。
- * @method void setKeyword(string $Keyword) 设置查询关键字，请输入域名或 http(s):// 开头完整 URL。
- * @method string getStatus() 获取查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
- * @method void setStatus(string $Status) 设置查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
+ * @method string getPurgeType() 获取指定刷新类型查询
+url：url 刷新记录
+path：目录刷新记录
+ * @method void setPurgeType(string $PurgeType) 设置指定刷新类型查询
+url：url 刷新记录
+path：目录刷新记录
+ * @method string getStartTime() 获取根据时间区间查询时，填充开始时间，如 2018-08-08 00:00:00
+ * @method void setStartTime(string $StartTime) 设置根据时间区间查询时，填充开始时间，如 2018-08-08 00:00:00
+ * @method string getEndTime() 获取根据时间区间查询时，填充结束时间，如 2018-08-08 23:59:59
+ * @method void setEndTime(string $EndTime) 设置根据时间区间查询时，填充结束时间，如 2018-08-08 23:59:59
+ * @method string getTaskId() 获取根据任务 ID 查询时，填充任务 ID
+查询时任务 ID 与起始时间必须填充一项
+ * @method void setTaskId(string $TaskId) 设置根据任务 ID 查询时，填充任务 ID
+查询时任务 ID 与起始时间必须填充一项
+ * @method integer getOffset() 获取分页查询偏移量，默认为 0 （第一页）
+ * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0 （第一页）
+ * @method integer getLimit() 获取分页查询限制数目，默认为 20
+ * @method void setLimit(integer $Limit) 设置分页查询限制数目，默认为 20
+ * @method string getKeyword() 获取支持域名过滤，或 http(s):// 开头完整 URL 过滤
+ * @method void setKeyword(string $Keyword) 设置支持域名过滤，或 http(s):// 开头完整 URL 过滤
+ * @method string getStatus() 获取指定任务状态查询
+fail：刷新失败
+done：刷新成功
+process：刷新中
+ * @method void setStatus(string $Status) 设置指定任务状态查询
+fail：刷新失败
+done：刷新成功
+process：刷新中
+ * @method string getArea() 获取指定刷新地域查询
+mainland：境内
+overseas：境外
+global：全球
+ * @method void setArea(string $Area) 设置指定刷新地域查询
+mainland：境内
+overseas：境外
+global：全球
  */
 
 /**
@@ -42,53 +62,77 @@ use TencentCloud\Common\AbstractModel;
 class DescribePurgeTasksRequest extends AbstractModel
 {
     /**
-     * @var string 查询刷新类型。url：查询 url 刷新记录；path：查询目录刷新记录。
+     * @var string 指定刷新类型查询
+url：url 刷新记录
+path：目录刷新记录
      */
     public $PurgeType;
 
     /**
-     * @var string 开始时间，如2018-08-08 00:00:00。
+     * @var string 根据时间区间查询时，填充开始时间，如 2018-08-08 00:00:00
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间，如2018-08-08 23:59:59。
+     * @var string 根据时间区间查询时，填充结束时间，如 2018-08-08 23:59:59
      */
     public $EndTime;
 
     /**
-     * @var string 提交时返回的任务 Id，查询时 TaskId 和起始时间必须指定一项。
+     * @var string 根据任务 ID 查询时，填充任务 ID
+查询时任务 ID 与起始时间必须填充一项
      */
     public $TaskId;
 
     /**
-     * @var integer 分页查询偏移量，默认为 0 （第一页）。
+     * @var integer 分页查询偏移量，默认为 0 （第一页）
      */
     public $Offset;
 
     /**
-     * @var integer 分页查询限制数目，默认为20。
+     * @var integer 分页查询限制数目，默认为 20
      */
     public $Limit;
 
     /**
-     * @var string 查询关键字，请输入域名或 http(s):// 开头完整 URL。
+     * @var string 支持域名过滤，或 http(s):// 开头完整 URL 过滤
      */
     public $Keyword;
 
     /**
-     * @var string 查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
+     * @var string 指定任务状态查询
+fail：刷新失败
+done：刷新成功
+process：刷新中
      */
     public $Status;
+
     /**
-     * @param string $PurgeType 查询刷新类型。url：查询 url 刷新记录；path：查询目录刷新记录。
-     * @param string $StartTime 开始时间，如2018-08-08 00:00:00。
-     * @param string $EndTime 结束时间，如2018-08-08 23:59:59。
-     * @param string $TaskId 提交时返回的任务 Id，查询时 TaskId 和起始时间必须指定一项。
-     * @param integer $Offset 分页查询偏移量，默认为 0 （第一页）。
-     * @param integer $Limit 分页查询限制数目，默认为20。
-     * @param string $Keyword 查询关键字，请输入域名或 http(s):// 开头完整 URL。
-     * @param string $Status 查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
+     * @var string 指定刷新地域查询
+mainland：境内
+overseas：境外
+global：全球
+     */
+    public $Area;
+    /**
+     * @param string $PurgeType 指定刷新类型查询
+url：url 刷新记录
+path：目录刷新记录
+     * @param string $StartTime 根据时间区间查询时，填充开始时间，如 2018-08-08 00:00:00
+     * @param string $EndTime 根据时间区间查询时，填充结束时间，如 2018-08-08 23:59:59
+     * @param string $TaskId 根据任务 ID 查询时，填充任务 ID
+查询时任务 ID 与起始时间必须填充一项
+     * @param integer $Offset 分页查询偏移量，默认为 0 （第一页）
+     * @param integer $Limit 分页查询限制数目，默认为 20
+     * @param string $Keyword 支持域名过滤，或 http(s):// 开头完整 URL 过滤
+     * @param string $Status 指定任务状态查询
+fail：刷新失败
+done：刷新成功
+process：刷新中
+     * @param string $Area 指定刷新地域查询
+mainland：境内
+overseas：境外
+global：全球
      */
     function __construct()
     {
@@ -132,6 +176,10 @@ class DescribePurgeTasksRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserReceiveTime(string $UserReceiveTime) 设置用户实际接收到短信的时间
  * @method string getNationCode() 获取国家（或地区）码
  * @method void setNationCode(string $NationCode) 设置国家（或地区）码
- * @method string getPurePhoneNumber() 获取手机号码（ e.164 标准）
- * @method void setPurePhoneNumber(string $PurePhoneNumber) 设置手机号码（ e.164 标准）
- * @method string getPhoneNumber() 获取手机号码
- * @method void setPhoneNumber(string $PhoneNumber) 设置手机号码
+ * @method string getPurePhoneNumber() 获取手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+ * @method void setPurePhoneNumber(string $PurePhoneNumber) 设置手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+ * @method string getPhoneNumber() 获取手机号码，普通格式，示例如：13711112222
+ * @method void setPhoneNumber(string $PhoneNumber) 设置手机号码，普通格式，示例如：13711112222
  * @method string getSerialNo() 获取本次发送标识 ID
  * @method void setSerialNo(string $SerialNo) 设置本次发送标识 ID
  * @method string getReportStatus() 获取实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）
@@ -50,12 +50,12 @@ class PullSmsSendStatus extends AbstractModel
     public $NationCode;
 
     /**
-     * @var string 手机号码（ e.164 标准）
+     * @var string 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
      */
     public $PurePhoneNumber;
 
     /**
-     * @var string 手机号码
+     * @var string 手机号码，普通格式，示例如：13711112222
      */
     public $PhoneNumber;
 
@@ -76,8 +76,8 @@ class PullSmsSendStatus extends AbstractModel
     /**
      * @param string $UserReceiveTime 用户实际接收到短信的时间
      * @param string $NationCode 国家（或地区）码
-     * @param string $PurePhoneNumber 手机号码（ e.164 标准）
-     * @param string $PhoneNumber 手机号码
+     * @param string $PurePhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+     * @param string $PhoneNumber 手机号码，普通格式，示例如：13711112222
      * @param string $SerialNo 本次发送标识 ID
      * @param string $ReportStatus 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）
      * @param string $Description 用户接收短信状态描述

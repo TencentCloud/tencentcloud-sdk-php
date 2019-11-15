@@ -18,47 +18,68 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTaskId() 获取刷新任务ID。
- * @method void setTaskId(string $TaskId) 设置刷新任务ID。
- * @method string getUrl() 获取刷新Url。
- * @method void setUrl(string $Url) 设置刷新Url。
- * @method string getStatus() 获取刷新任务状态，fail表示失败，done表示成功，process表示刷新中。
- * @method void setStatus(string $Status) 设置刷新任务状态，fail表示失败，done表示成功，process表示刷新中。
- * @method string getPurgeType() 获取刷新类型，url表示url刷新，path表示目录刷新。
- * @method void setPurgeType(string $PurgeType) 设置刷新类型，url表示url刷新，path表示目录刷新。
- * @method string getFlushType() 获取刷新资源方式，flush代表刷新更新资源，delete代表刷新全部资源。
- * @method void setFlushType(string $FlushType) 设置刷新资源方式，flush代表刷新更新资源，delete代表刷新全部资源。
+ * @method string getTaskId() 获取刷新任务 ID
+ * @method void setTaskId(string $TaskId) 设置刷新任务 ID
+ * @method string getUrl() 获取刷新 URL
+ * @method void setUrl(string $Url) 设置刷新 URL
+ * @method string getStatus() 获取刷新任务状态
+fail：刷新失败
+done：刷新成功
+process：刷新中
+ * @method void setStatus(string $Status) 设置刷新任务状态
+fail：刷新失败
+done：刷新成功
+process：刷新中
+ * @method string getPurgeType() 获取刷新类型
+url：URL 刷新
+path：目录刷新
+ * @method void setPurgeType(string $PurgeType) 设置刷新类型
+url：URL 刷新
+path：目录刷新
+ * @method string getFlushType() 获取刷新方式
+flush：刷新更新资源（仅目录刷新时有此类型）
+delete：刷新全部资源
+ * @method void setFlushType(string $FlushType) 设置刷新方式
+flush：刷新更新资源（仅目录刷新时有此类型）
+delete：刷新全部资源
  * @method string getCreateTime() 获取刷新任务提交时间
  * @method void setCreateTime(string $CreateTime) 设置刷新任务提交时间
  */
 
 /**
- *刷新任务日志详情
+ *刷新任务详情
  */
 class PurgeTask extends AbstractModel
 {
     /**
-     * @var string 刷新任务ID。
+     * @var string 刷新任务 ID
      */
     public $TaskId;
 
     /**
-     * @var string 刷新Url。
+     * @var string 刷新 URL
      */
     public $Url;
 
     /**
-     * @var string 刷新任务状态，fail表示失败，done表示成功，process表示刷新中。
+     * @var string 刷新任务状态
+fail：刷新失败
+done：刷新成功
+process：刷新中
      */
     public $Status;
 
     /**
-     * @var string 刷新类型，url表示url刷新，path表示目录刷新。
+     * @var string 刷新类型
+url：URL 刷新
+path：目录刷新
      */
     public $PurgeType;
 
     /**
-     * @var string 刷新资源方式，flush代表刷新更新资源，delete代表刷新全部资源。
+     * @var string 刷新方式
+flush：刷新更新资源（仅目录刷新时有此类型）
+delete：刷新全部资源
      */
     public $FlushType;
 
@@ -67,11 +88,18 @@ class PurgeTask extends AbstractModel
      */
     public $CreateTime;
     /**
-     * @param string $TaskId 刷新任务ID。
-     * @param string $Url 刷新Url。
-     * @param string $Status 刷新任务状态，fail表示失败，done表示成功，process表示刷新中。
-     * @param string $PurgeType 刷新类型，url表示url刷新，path表示目录刷新。
-     * @param string $FlushType 刷新资源方式，flush代表刷新更新资源，delete代表刷新全部资源。
+     * @param string $TaskId 刷新任务 ID
+     * @param string $Url 刷新 URL
+     * @param string $Status 刷新任务状态
+fail：刷新失败
+done：刷新成功
+process：刷新中
+     * @param string $PurgeType 刷新类型
+url：URL 刷新
+path：目录刷新
+     * @param string $FlushType 刷新方式
+flush：刷新更新资源（仅目录刷新时有此类型）
+delete：刷新全部资源
      * @param string $CreateTime 刷新任务提交时间
      */
     function __construct()

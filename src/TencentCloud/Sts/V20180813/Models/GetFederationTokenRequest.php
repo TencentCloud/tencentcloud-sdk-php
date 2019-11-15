@@ -18,8 +18,8 @@ namespace TencentCloud\Sts\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取联合身份用户昵称
- * @method void setName(string $Name) 设置联合身份用户昵称
+ * @method string getName() 获取调用方英文名称，由字母组成。
+ * @method void setName(string $Name) 设置调用方英文名称，由字母组成。
  * @method string getPolicy() 获取策略描述
 注意：
 1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照云 API 规范再 urlencode 一次）。
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照云 API 规范再 urlencode 一次）。
 2、策略语法参照 CAM 策略语法。
 3、策略中不能包含 principal 元素。
- * @method integer getDurationSeconds() 获取指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒
- * @method void setDurationSeconds(integer $DurationSeconds) 设置指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒
+ * @method integer getDurationSeconds() 获取指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
+ * @method void setDurationSeconds(integer $DurationSeconds) 设置指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
  */
 
 /**
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class GetFederationTokenRequest extends AbstractModel
 {
     /**
-     * @var string 联合身份用户昵称
+     * @var string 调用方英文名称，由字母组成。
      */
     public $Name;
 
@@ -54,17 +54,17 @@ class GetFederationTokenRequest extends AbstractModel
     public $Policy;
 
     /**
-     * @var integer 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒
+     * @var integer 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
      */
     public $DurationSeconds;
     /**
-     * @param string $Name 联合身份用户昵称
+     * @param string $Name 调用方英文名称，由字母组成。
      * @param string $Policy 策略描述
 注意：
 1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照云 API 规范再 urlencode 一次）。
 2、策略语法参照 CAM 策略语法。
 3、策略中不能包含 principal 元素。
-     * @param integer $DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒
+     * @param integer $DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
      */
     function __construct()
     {

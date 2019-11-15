@@ -28,8 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSampleSnapshotTaskSet(array $SampleSnapshotTaskSet) 设置对视频采样截图任务列表。
  * @method array getImageSpriteTaskSet() 获取对视频截雪碧图任务列表。
  * @method void setImageSpriteTaskSet(array $ImageSpriteTaskSet) 设置对视频截雪碧图任务列表。
- * @method array getAdaptiveDynamicStreamingTaskSet() 获取对视频转自适应码流任务列表。
- * @method void setAdaptiveDynamicStreamingTaskSet(array $AdaptiveDynamicStreamingTaskSet) 设置对视频转自适应码流任务列表。
  */
 
 /**
@@ -61,18 +59,12 @@ class MediaProcessTaskInput extends AbstractModel
      * @var array 对视频截雪碧图任务列表。
      */
     public $ImageSpriteTaskSet;
-
-    /**
-     * @var array 对视频转自适应码流任务列表。
-     */
-    public $AdaptiveDynamicStreamingTaskSet;
     /**
      * @param array $TranscodeTaskSet 视频转码任务列表。
      * @param array $AnimatedGraphicTaskSet 视频转动图任务列表。
      * @param array $SnapshotByTimeOffsetTaskSet 对视频按时间点截图任务列表。
      * @param array $SampleSnapshotTaskSet 对视频采样截图任务列表。
      * @param array $ImageSpriteTaskSet 对视频截雪碧图任务列表。
-     * @param array $AdaptiveDynamicStreamingTaskSet 对视频转自适应码流任务列表。
      */
     function __construct()
     {
@@ -128,15 +120,6 @@ class MediaProcessTaskInput extends AbstractModel
                 $obj = new ImageSpriteTaskInput();
                 $obj->deserialize($value);
                 array_push($this->ImageSpriteTaskSet, $obj);
-            }
-        }
-
-        if (array_key_exists("AdaptiveDynamicStreamingTaskSet",$param) and $param["AdaptiveDynamicStreamingTaskSet"] !== null) {
-            $this->AdaptiveDynamicStreamingTaskSet = [];
-            foreach ($param["AdaptiveDynamicStreamingTaskSet"] as $key => $value){
-                $obj = new AdaptiveDynamicStreamingTaskInput();
-                $obj->deserialize($value);
-                array_push($this->AdaptiveDynamicStreamingTaskSet, $obj);
             }
         }
     }

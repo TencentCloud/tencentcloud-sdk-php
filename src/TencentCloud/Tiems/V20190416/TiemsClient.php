@@ -22,13 +22,19 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tiems\V20190416\Models as Models;
 
 /**
+* @method Models\CreateJobResponse CreateJob(Models\CreateJobRequest $req) 创建任务
+* @method Models\CreateRuntimeResponse CreateRuntime(Models\CreateRuntimeRequest $req) 创建运行环境
 * @method Models\CreateServiceResponse CreateService(Models\CreateServiceRequest $req) 创建服务
 * @method Models\CreateServiceConfigResponse CreateServiceConfig(Models\CreateServiceConfigRequest $req) 创建服务配置
+* @method Models\DeleteJobResponse DeleteJob(Models\DeleteJobRequest $req) 删除任务
+* @method Models\DeleteRuntimeResponse DeleteRuntime(Models\DeleteRuntimeRequest $req) 删除运行环境
 * @method Models\DeleteServiceResponse DeleteService(Models\DeleteServiceRequest $req) 删除服务
 * @method Models\DeleteServiceConfigResponse DeleteServiceConfig(Models\DeleteServiceConfigRequest $req) 删除服务配置
+* @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 获取节点列表
 * @method Models\DescribeRuntimesResponse DescribeRuntimes(Models\DescribeRuntimesRequest $req) 描述服务运行环境
 * @method Models\DescribeServiceConfigsResponse DescribeServiceConfigs(Models\DescribeServiceConfigsRequest $req) 描述服务配置
 * @method Models\DescribeServicesResponse DescribeServices(Models\DescribeServicesRequest $req) 描述服务
+* @method Models\UpdateJobResponse UpdateJob(Models\UpdateJobRequest $req) 更新任务
 * @method Models\UpdateServiceResponse UpdateService(Models\UpdateServiceRequest $req) 更新服务
  */
 

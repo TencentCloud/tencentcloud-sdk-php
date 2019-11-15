@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleId(string $RuleId) 设置用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
  * @method string getInfoType() 获取指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
 如 134表示拉取文本类、视频最佳截图照片、视频。
+默认值：0
  * @method void setInfoType(string $InfoType) 设置指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
 如 134表示拉取文本类、视频最佳截图照片、视频。
+默认值：0
  */
 
 /**
@@ -46,6 +48,7 @@ class GetDetectInfoRequest extends AbstractModel
     /**
      * @var string 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
 如 134表示拉取文本类、视频最佳截图照片、视频。
+默认值：0
      */
     public $InfoType;
     /**
@@ -53,6 +56,7 @@ class GetDetectInfoRequest extends AbstractModel
      * @param string $RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
      * @param string $InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
 如 134表示拉取文本类、视频最佳截图照片、视频。
+默认值：0
      */
     function __construct()
     {

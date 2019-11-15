@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplicas(array $Replicas) 设置副本名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMessage() 获取运行状态对额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMessage(string $Message) 设置运行状态对额外信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -65,6 +69,12 @@ class ServiceStatus extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Replicas;
+
+    /**
+     * @var string 运行状态对额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Message;
     /**
      * @param integer $DesiredReplicas 预期副本数
      * @param integer $CurrentReplicas 当前副本数
@@ -72,6 +82,8 @@ class ServiceStatus extends AbstractModel
      * @param array $Conditions 服务处于当前状态的原因集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Replicas 副本名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Message 运行状态对额外信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -109,6 +121,10 @@ class ServiceStatus extends AbstractModel
 
         if (array_key_exists("Replicas",$param) and $param["Replicas"] !== null) {
             $this->Replicas = $param["Replicas"];
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
     }
 }

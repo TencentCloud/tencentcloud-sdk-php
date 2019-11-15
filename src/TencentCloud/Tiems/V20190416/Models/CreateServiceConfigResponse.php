@@ -18,8 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method ServiceConfig getServiceConfig() 获取服务配置
- * @method void setServiceConfig(ServiceConfig $ServiceConfig) 设置服务配置
+ * @method Config getServiceConfig() 获取服务配置
+ * @method void setServiceConfig(Config $ServiceConfig) 设置服务配置
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateServiceConfigResponse extends AbstractModel
 {
     /**
-     * @var ServiceConfig 服务配置
+     * @var Config 服务配置
      */
     public $ServiceConfig;
 
@@ -39,7 +39,7 @@ class CreateServiceConfigResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param ServiceConfig $ServiceConfig 服务配置
+     * @param Config $ServiceConfig 服务配置
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -55,7 +55,7 @@ class CreateServiceConfigResponse extends AbstractModel
             return;
         }
         if (array_key_exists("ServiceConfig",$param) and $param["ServiceConfig"] !== null) {
-            $this->ServiceConfig = new ServiceConfig();
+            $this->ServiceConfig = new Config();
             $this->ServiceConfig->deserialize($param["ServiceConfig"]);
         }
 

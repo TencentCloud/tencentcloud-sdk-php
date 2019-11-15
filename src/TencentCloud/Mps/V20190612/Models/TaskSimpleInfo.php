@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getTaskId() 获取任务 ID。
  * @method void setTaskId(string $TaskId) 设置任务 ID。
- * @method string getTaskType() 获取任务类型，目前仅支持 WorkflowTask。
- * @method void setTaskType(string $TaskType) 设置任务类型，目前仅支持 WorkflowTask。
+ * @method string getTaskType() 获取任务类型，包含：
+<li> WorkflowTask：工作流处理任务；</li>
+<li> LiveProcessTask：直播处理任务。</li>
+ * @method void setTaskType(string $TaskType) 设置任务类型，包含：
+<li> WorkflowTask：工作流处理任务；</li>
+<li> LiveProcessTask：直播处理任务。</li>
  * @method string getCreateTime() 获取任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method void setCreateTime(string $CreateTime) 设置任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method string getBeginProcessTime() 获取任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未开始，该字段为：0000-00-00T00:00:00Z。
@@ -41,7 +45,9 @@ class TaskSimpleInfo extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string 任务类型，目前仅支持 WorkflowTask。
+     * @var string 任务类型，包含：
+<li> WorkflowTask：工作流处理任务；</li>
+<li> LiveProcessTask：直播处理任务。</li>
      */
     public $TaskType;
 
@@ -61,7 +67,9 @@ class TaskSimpleInfo extends AbstractModel
     public $FinishTime;
     /**
      * @param string $TaskId 任务 ID。
-     * @param string $TaskType 任务类型，目前仅支持 WorkflowTask。
+     * @param string $TaskType 任务类型，包含：
+<li> WorkflowTask：工作流处理任务；</li>
+<li> LiveProcessTask：直播处理任务。</li>
      * @param string $CreateTime 任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param string $BeginProcessTime 任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未开始，该字段为：0000-00-00T00:00:00Z。
      * @param string $FinishTime 任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未完成，该字段为：0000-00-00T00:00:00Z。

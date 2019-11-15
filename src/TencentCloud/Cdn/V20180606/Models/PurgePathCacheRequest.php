@@ -18,10 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getPaths() 获取要刷新的目录列表，必须包含协议头部。
- * @method void setPaths(array $Paths) 设置要刷新的目录列表，必须包含协议头部。
- * @method string getFlushType() 获取刷新类型，flush 代表刷新有更新的资源，delete 表示刷新全部资源。
- * @method void setFlushType(string $FlushType) 设置刷新类型，flush 代表刷新有更新的资源，delete 表示刷新全部资源。
+ * @method array getPaths() 获取目录列表，需要包含协议头部 http:// 或 https://
+ * @method void setPaths(array $Paths) 设置目录列表，需要包含协议头部 http:// 或 https://
+ * @method string getFlushType() 获取刷新类型
+flush：刷新产生更新的资源
+delete：刷新全部资源
+ * @method void setFlushType(string $FlushType) 设置刷新类型
+flush：刷新产生更新的资源
+delete：刷新全部资源
  */
 
 /**
@@ -30,17 +34,21 @@ use TencentCloud\Common\AbstractModel;
 class PurgePathCacheRequest extends AbstractModel
 {
     /**
-     * @var array 要刷新的目录列表，必须包含协议头部。
+     * @var array 目录列表，需要包含协议头部 http:// 或 https://
      */
     public $Paths;
 
     /**
-     * @var string 刷新类型，flush 代表刷新有更新的资源，delete 表示刷新全部资源。
+     * @var string 刷新类型
+flush：刷新产生更新的资源
+delete：刷新全部资源
      */
     public $FlushType;
     /**
-     * @param array $Paths 要刷新的目录列表，必须包含协议头部。
-     * @param string $FlushType 刷新类型，flush 代表刷新有更新的资源，delete 表示刷新全部资源。
+     * @param array $Paths 目录列表，需要包含协议头部 http:// 或 https://
+     * @param string $FlushType 刷新类型
+flush：刷新产生更新的资源
+delete：刷新全部资源
      */
     function __construct()
     {

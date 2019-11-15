@@ -22,18 +22,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间，如2018-08-08 00:00:00。
  * @method string getEndTime() 获取结束时间，如2018-08-08 23:59:59。
  * @method void setEndTime(string $EndTime) 设置结束时间，如2018-08-08 23:59:59。
- * @method string getTaskId() 获取提交时返回的任务 Id，查询时 TaskId 和起始时间必须指定一项。
- * @method void setTaskId(string $TaskId) 设置提交时返回的任务 Id，查询时 TaskId 和起始时间必须指定一项。
- * @method string getKeyword() 获取查询关键字，请输入域名或 http(s):// 开头完整 URL。
- * @method void setKeyword(string $Keyword) 设置查询关键字，请输入域名或 http(s):// 开头完整 URL。
- * @method integer getOffset() 获取分页查询偏移量，默认为 0 （第一页）。
- * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0 （第一页）。
- * @method integer getLimit() 获取分页查询限制数目，默认为20。
- * @method void setLimit(integer $Limit) 设置分页查询限制数目，默认为20。
- * @method string getArea() 获取查询刷新记录指定地区。mainland：中国大陆。
- * @method void setArea(string $Area) 设置查询刷新记录指定地区。mainland：中国大陆。
- * @method string getStatus() 获取查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
- * @method void setStatus(string $Status) 设置查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
+ * @method string getTaskId() 获取指定任务 ID 查询
+TaskId 和起始时间必须指定一项
+ * @method void setTaskId(string $TaskId) 设置指定任务 ID 查询
+TaskId 和起始时间必须指定一项
+ * @method string getKeyword() 获取查询关键字，请输入域名或 http(s):// 开头完整 URL
+ * @method void setKeyword(string $Keyword) 设置查询关键字，请输入域名或 http(s):// 开头完整 URL
+ * @method integer getOffset() 获取分页查询偏移量，默认为 0 （第一页）
+ * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0 （第一页）
+ * @method integer getLimit() 获取分页查询限制数目，默认为 20
+ * @method void setLimit(integer $Limit) 设置分页查询限制数目，默认为 20
+ * @method string getArea() 获取指定地区查询预热纪录
+mainland：境内
+overseas：境外
+global：全球
+ * @method void setArea(string $Area) 设置指定地区查询预热纪录
+mainland：境内
+overseas：境外
+global：全球
+ * @method string getStatus() 获取指定任务状态查询
+fail：预热失败
+done：预热成功
+process：预热中
+ * @method void setStatus(string $Status) 设置指定任务状态查询
+fail：预热失败
+done：预热成功
+process：预热中
  */
 
 /**
@@ -52,43 +66,57 @@ class DescribePushTasksRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 提交时返回的任务 Id，查询时 TaskId 和起始时间必须指定一项。
+     * @var string 指定任务 ID 查询
+TaskId 和起始时间必须指定一项
      */
     public $TaskId;
 
     /**
-     * @var string 查询关键字，请输入域名或 http(s):// 开头完整 URL。
+     * @var string 查询关键字，请输入域名或 http(s):// 开头完整 URL
      */
     public $Keyword;
 
     /**
-     * @var integer 分页查询偏移量，默认为 0 （第一页）。
+     * @var integer 分页查询偏移量，默认为 0 （第一页）
      */
     public $Offset;
 
     /**
-     * @var integer 分页查询限制数目，默认为20。
+     * @var integer 分页查询限制数目，默认为 20
      */
     public $Limit;
 
     /**
-     * @var string 查询刷新记录指定地区。mainland：中国大陆。
+     * @var string 指定地区查询预热纪录
+mainland：境内
+overseas：境外
+global：全球
      */
     public $Area;
 
     /**
-     * @var string 查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
+     * @var string 指定任务状态查询
+fail：预热失败
+done：预热成功
+process：预热中
      */
     public $Status;
     /**
      * @param string $StartTime 开始时间，如2018-08-08 00:00:00。
      * @param string $EndTime 结束时间，如2018-08-08 23:59:59。
-     * @param string $TaskId 提交时返回的任务 Id，查询时 TaskId 和起始时间必须指定一项。
-     * @param string $Keyword 查询关键字，请输入域名或 http(s):// 开头完整 URL。
-     * @param integer $Offset 分页查询偏移量，默认为 0 （第一页）。
-     * @param integer $Limit 分页查询限制数目，默认为20。
-     * @param string $Area 查询刷新记录指定地区。mainland：中国大陆。
-     * @param string $Status 查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
+     * @param string $TaskId 指定任务 ID 查询
+TaskId 和起始时间必须指定一项
+     * @param string $Keyword 查询关键字，请输入域名或 http(s):// 开头完整 URL
+     * @param integer $Offset 分页查询偏移量，默认为 0 （第一页）
+     * @param integer $Limit 分页查询限制数目，默认为 20
+     * @param string $Area 指定地区查询预热纪录
+mainland：境内
+overseas：境外
+global：全球
+     * @param string $Status 指定任务状态查询
+fail：预热失败
+done：预热成功
+process：预热中
      */
     function __construct()
     {

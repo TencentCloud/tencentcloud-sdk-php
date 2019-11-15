@@ -18,8 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTaskType() 获取任务类型，目前仅有取值 WorkflowTask。
- * @method void setTaskType(string $TaskType) 设置任务类型，目前仅有取值 WorkflowTask。
+ * @method string getTaskType() 获取任务类型，目前取值有：
+<li>WorkflowTask：视频工作流处理任务。</li>
+<li>LiveStreamProcessTask：直播流处理任务。</li>
+ * @method void setTaskType(string $TaskType) 设置任务类型，目前取值有：
+<li>WorkflowTask：视频工作流处理任务。</li>
+<li>LiveStreamProcessTask：直播流处理任务。</li>
  * @method string getStatus() 获取任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -37,6 +41,10 @@ use TencentCloud\Common\AbstractModel;
  * @method WorkflowTask getWorkflowTask() 获取视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkflowTask(WorkflowTask $WorkflowTask) 设置视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method LiveStreamProcessTask getLiveStreamProcessTask() 获取直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLiveStreamProcessTask(LiveStreamProcessTask $LiveStreamProcessTask) 设置直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -58,7 +66,9 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTaskDetailResponse extends AbstractModel
 {
     /**
-     * @var string 任务类型，目前仅有取值 WorkflowTask。
+     * @var string 任务类型，目前取值有：
+<li>WorkflowTask：视频工作流处理任务。</li>
+<li>LiveStreamProcessTask：直播流处理任务。</li>
      */
     public $TaskType;
 
@@ -92,6 +102,12 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $WorkflowTask;
 
     /**
+     * @var LiveStreamProcessTask 直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LiveStreamProcessTask;
+
+    /**
      * @var TaskNotifyConfig 任务的事件通知信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -117,7 +133,9 @@ class DescribeTaskDetailResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $TaskType 任务类型，目前仅有取值 WorkflowTask。
+     * @param string $TaskType 任务类型，目前取值有：
+<li>WorkflowTask：视频工作流处理任务。</li>
+<li>LiveStreamProcessTask：直播流处理任务。</li>
      * @param string $Status 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -126,6 +144,8 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param string $BeginProcessTime 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param string $FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param WorkflowTask $WorkflowTask 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LiveStreamProcessTask $LiveStreamProcessTask 直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -169,6 +189,11 @@ class DescribeTaskDetailResponse extends AbstractModel
         if (array_key_exists("WorkflowTask",$param) and $param["WorkflowTask"] !== null) {
             $this->WorkflowTask = new WorkflowTask();
             $this->WorkflowTask->deserialize($param["WorkflowTask"]);
+        }
+
+        if (array_key_exists("LiveStreamProcessTask",$param) and $param["LiveStreamProcessTask"] !== null) {
+            $this->LiveStreamProcessTask = new LiveStreamProcessTask();
+            $this->LiveStreamProcessTask->deserialize($param["LiveStreamProcessTask"]);
         }
 
         if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionAttributes(string $SessionAttributes) 设置透传字段，透传给用户自定义的WebService服务。
  * @method string getPlatformType() 获取平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
  * @method void setPlatformType(string $PlatformType) 设置平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
+ * @method string getPlatformId() 获取当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
+ * @method void setPlatformId(string $PlatformId) 设置当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
  */
 
 /**
@@ -66,6 +68,11 @@ class TextProcessRequest extends AbstractModel
      * @var string 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
      */
     public $PlatformType;
+
+    /**
+     * @var string 当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
+     */
+    public $PlatformId;
     /**
      * @param string $BotId 机器人标识，用于定义抽象机器人。
      * @param string $BotEnv 机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
@@ -73,6 +80,7 @@ class TextProcessRequest extends AbstractModel
      * @param string $InputText 请求的文本。
      * @param string $SessionAttributes 透传字段，透传给用户自定义的WebService服务。
      * @param string $PlatformType 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
+     * @param string $PlatformId 当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class TextProcessRequest extends AbstractModel
 
         if (array_key_exists("PlatformType",$param) and $param["PlatformType"] !== null) {
             $this->PlatformType = $param["PlatformType"];
+        }
+
+        if (array_key_exists("PlatformId",$param) and $param["PlatformId"] !== null) {
+            $this->PlatformId = $param["PlatformId"];
         }
     }
 }

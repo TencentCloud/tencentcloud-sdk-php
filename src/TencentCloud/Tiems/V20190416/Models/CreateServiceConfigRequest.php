@@ -24,14 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuntime(string $Runtime) 设置运行环境
  * @method string getModelUri() 获取模型地址，支持cos路径，格式为 cos://bucket名-appid.cos.region名.myqcloud.com/模型文件夹路径。为模型文件的上一层文件夹地址。
  * @method void setModelUri(string $ModelUri) 设置模型地址，支持cos路径，格式为 cos://bucket名-appid.cos.region名.myqcloud.com/模型文件夹路径。为模型文件的上一层文件夹地址。
- * @method integer getCpu() 获取处理器配置, 单位为1/1000核；范围[100, 256000]
- * @method void setCpu(integer $Cpu) 设置处理器配置, 单位为1/1000核；范围[100, 256000]
- * @method integer getMemory() 获取内存配置, 单位为1M；范围[100, 256000]
- * @method void setMemory(integer $Memory) 设置内存配置, 单位为1M；范围[100, 256000]
- * @method integer getTflopUnits() 获取GPU算力配置，单位为1/100 tflops，范围 [0, 256000]
- * @method void setTflopUnits(integer $TflopUnits) 设置GPU算力配置，单位为1/100 tflops，范围 [0, 256000]
- * @method integer getGpuMemory() 获取显存配置, 单位为1M，范围 [0, 256000]
- * @method void setGpuMemory(integer $GpuMemory) 设置显存配置, 单位为1M，范围 [0, 256000]
+ * @method string getDescription() 获取配置描述
+ * @method void setDescription(string $Description) 设置配置描述
  */
 
 /**
@@ -55,32 +49,14 @@ class CreateServiceConfigRequest extends AbstractModel
     public $ModelUri;
 
     /**
-     * @var integer 处理器配置, 单位为1/1000核；范围[100, 256000]
+     * @var string 配置描述
      */
-    public $Cpu;
-
-    /**
-     * @var integer 内存配置, 单位为1M；范围[100, 256000]
-     */
-    public $Memory;
-
-    /**
-     * @var integer GPU算力配置，单位为1/100 tflops，范围 [0, 256000]
-     */
-    public $TflopUnits;
-
-    /**
-     * @var integer 显存配置, 单位为1M，范围 [0, 256000]
-     */
-    public $GpuMemory;
+    public $Description;
     /**
      * @param string $Name 配置名称
      * @param string $Runtime 运行环境
      * @param string $ModelUri 模型地址，支持cos路径，格式为 cos://bucket名-appid.cos.region名.myqcloud.com/模型文件夹路径。为模型文件的上一层文件夹地址。
-     * @param integer $Cpu 处理器配置, 单位为1/1000核；范围[100, 256000]
-     * @param integer $Memory 内存配置, 单位为1M；范围[100, 256000]
-     * @param integer $TflopUnits GPU算力配置，单位为1/100 tflops，范围 [0, 256000]
-     * @param integer $GpuMemory 显存配置, 单位为1M，范围 [0, 256000]
+     * @param string $Description 配置描述
      */
     function __construct()
     {
@@ -106,20 +82,8 @@ class CreateServiceConfigRequest extends AbstractModel
             $this->ModelUri = $param["ModelUri"];
         }
 
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = $param["Cpu"];
-        }
-
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
-        }
-
-        if (array_key_exists("TflopUnits",$param) and $param["TflopUnits"] !== null) {
-            $this->TflopUnits = $param["TflopUnits"];
-        }
-
-        if (array_key_exists("GpuMemory",$param) and $param["GpuMemory"] !== null) {
-            $this->GpuMemory = $param["GpuMemory"];
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

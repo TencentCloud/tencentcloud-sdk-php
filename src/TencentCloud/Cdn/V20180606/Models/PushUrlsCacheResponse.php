@@ -18,8 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTaskId() 获取此批次提交任务对应的 Id，值唯一
- * @method void setTaskId(string $TaskId) 设置此批次提交任务对应的 Id，值唯一
+ * @method string getTaskId() 获取此批提交的任务 ID
+ * @method void setTaskId(string $TaskId) 设置此批提交的任务 ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class PushUrlsCacheResponse extends AbstractModel
 {
     /**
-     * @var string 此批次提交任务对应的 Id，值唯一
+     * @var string 此批提交的任务 ID
      */
     public $TaskId;
 
@@ -39,7 +39,7 @@ class PushUrlsCacheResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $TaskId 此批次提交任务对应的 Id，值唯一
+     * @param string $TaskId 此批提交的任务 ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

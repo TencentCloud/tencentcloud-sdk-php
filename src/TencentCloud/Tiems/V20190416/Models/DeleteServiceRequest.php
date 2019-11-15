@@ -18,8 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getServiceId() 获取服务Id
- * @method void setServiceId(integer $ServiceId) 设置服务Id
+ * @method string getServiceId() 获取服务Id
+ * @method void setServiceId(string $ServiceId) 设置服务Id
  */
 
 /**
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
 class DeleteServiceRequest extends AbstractModel
 {
     /**
-     * @var integer 服务Id
+     * @var string 服务Id
      */
     public $ServiceId;
     /**
-     * @param integer $ServiceId 服务Id
+     * @param string $ServiceId 服务Id
      */
     function __construct()
     {

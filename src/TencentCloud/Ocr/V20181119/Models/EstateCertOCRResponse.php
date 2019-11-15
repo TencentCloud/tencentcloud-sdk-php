@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOther(string $Other) 设置权利其他状况，多行会用换行符\n连接。
  * @method float getAngle() 获取图片旋转角度
  * @method void setAngle(float $Angle) 设置图片旋转角度
+ * @method string getNumber() 获取不动产权号
+ * @method void setNumber(string $Number) 设置不动产权号
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -105,6 +107,11 @@ class EstateCertOCRResponse extends AbstractModel
     public $Angle;
 
     /**
+     * @var string 不动产权号
+     */
+    public $Number;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -120,6 +127,7 @@ class EstateCertOCRResponse extends AbstractModel
      * @param string $Term 使用期限
      * @param string $Other 权利其他状况，多行会用换行符\n连接。
      * @param float $Angle 图片旋转角度
+     * @param string $Number 不动产权号
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -176,6 +184,10 @@ class EstateCertOCRResponse extends AbstractModel
 
         if (array_key_exists("Angle",$param) and $param["Angle"] !== null) {
             $this->Angle = $param["Angle"];
+        }
+
+        if (array_key_exists("Number",$param) and $param["Number"] !== null) {
+            $this->Number = $param["Number"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

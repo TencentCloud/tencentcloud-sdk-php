@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) 设置输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
  * @method string getOrderField() 获取排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
  * @method void setOrderField(string $OrderField) 设置排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
+ * @method boolean getPageByName() 获取是否按照配置名分页
+ * @method void setPageByName(boolean $PageByName) 设置是否按照配置名分页
  */
 
 /**
@@ -59,12 +61,18 @@ class DescribeServiceConfigsRequest extends AbstractModel
      * @var string 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
      */
     public $OrderField;
+
+    /**
+     * @var boolean 是否按照配置名分页
+     */
+    public $PageByName;
     /**
      * @param array $Filters 筛选选项，支持按照name等进行筛选
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认为20，最大值为1000
      * @param string $Order 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
      * @param string $OrderField 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
+     * @param boolean $PageByName 是否按照配置名分页
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class DescribeServiceConfigsRequest extends AbstractModel
 
         if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
             $this->OrderField = $param["OrderField"];
+        }
+
+        if (array_key_exists("PageByName",$param) and $param["PageByName"] !== null) {
+            $this->PageByName = $param["PageByName"];
         }
     }
 }

@@ -18,10 +18,22 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getUrls() 获取URL 列表，提交时需要包含协议头部（http:// 或 https://）
- * @method void setUrls(array $Urls) 设置URL 列表，提交时需要包含协议头部（http:// 或 https://）
- * @method string getUserAgent() 获取预热请求回源时 HTTP 请求的 User-Agent 头部，默认为 TencentCdn
- * @method void setUserAgent(string $UserAgent) 设置预热请求回源时 HTTP 请求的 User-Agent 头部，默认为 TencentCdn
+ * @method array getUrls() 获取URL 列表，需要包含协议头部 http:// 或 https://
+ * @method void setUrls(array $Urls) 设置URL 列表，需要包含协议头部 http:// 或 https://
+ * @method string getUserAgent() 获取指定预热请求回源时 HTTP 请求的 User-Agent 头部
+默认为 TencentCdn
+ * @method void setUserAgent(string $UserAgent) 设置指定预热请求回源时 HTTP 请求的 User-Agent 头部
+默认为 TencentCdn
+ * @method string getArea() 获取预热生效区域
+mainland：预热至境内节点
+overseas：预热至境外节点
+global：预热全球节点
+不填充情况下，默认为 mainland， URL 中域名必须在对应区域启用了加速服务才能提交对应区域的预热任务
+ * @method void setArea(string $Area) 设置预热生效区域
+mainland：预热至境内节点
+overseas：预热至境外节点
+global：预热全球节点
+不填充情况下，默认为 mainland， URL 中域名必须在对应区域启用了加速服务才能提交对应区域的预热任务
  */
 
 /**
@@ -30,17 +42,33 @@ use TencentCloud\Common\AbstractModel;
 class PushUrlsCacheRequest extends AbstractModel
 {
     /**
-     * @var array URL 列表，提交时需要包含协议头部（http:// 或 https://）
+     * @var array URL 列表，需要包含协议头部 http:// 或 https://
      */
     public $Urls;
 
     /**
-     * @var string 预热请求回源时 HTTP 请求的 User-Agent 头部，默认为 TencentCdn
+     * @var string 指定预热请求回源时 HTTP 请求的 User-Agent 头部
+默认为 TencentCdn
      */
     public $UserAgent;
+
     /**
-     * @param array $Urls URL 列表，提交时需要包含协议头部（http:// 或 https://）
-     * @param string $UserAgent 预热请求回源时 HTTP 请求的 User-Agent 头部，默认为 TencentCdn
+     * @var string 预热生效区域
+mainland：预热至境内节点
+overseas：预热至境外节点
+global：预热全球节点
+不填充情况下，默认为 mainland， URL 中域名必须在对应区域启用了加速服务才能提交对应区域的预热任务
+     */
+    public $Area;
+    /**
+     * @param array $Urls URL 列表，需要包含协议头部 http:// 或 https://
+     * @param string $UserAgent 指定预热请求回源时 HTTP 请求的 User-Agent 头部
+默认为 TencentCdn
+     * @param string $Area 预热生效区域
+mainland：预热至境内节点
+overseas：预热至境外节点
+global：预热全球节点
+不填充情况下，默认为 mainland， URL 中域名必须在对应区域启用了加速服务才能提交对应区域的预热任务
      */
     function __construct()
     {
@@ -60,6 +88,10 @@ class PushUrlsCacheRequest extends AbstractModel
 
         if (array_key_exists("UserAgent",$param) and $param["UserAgent"] !== null) {
             $this->UserAgent = $param["UserAgent"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

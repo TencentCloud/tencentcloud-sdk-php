@@ -18,12 +18,11 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getResult() 获取认证结果码。
+ * @method string getResult() 获取认证结果码
+计费结果码：
   '0': '认证通过'
   '-1': '认证未通过'
-  '-2': '姓名校验不通过'
-  '-3': '银行卡号码有误'
-  '-4': '持卡人信息有误'
+ '-4': '持卡人信息有误'
   '-5': '未开通无卡支付'
   '-6': '此卡被没收'
   '-7': '无效卡号'
@@ -35,13 +34,15 @@ use TencentCloud\Common\AbstractModel;
   '-13': '受限制的卡'
   '-14': '密码错误次数超限'
   '-15': '发卡行不支持此交易'
+不计费结果码：
+  '-2': '姓名校验不通过'
+  '-3': '银行卡号码有误'
   '-16': '服务繁忙'
- * @method void setResult(string $Result) 设置认证结果码。
+ * @method void setResult(string $Result) 设置认证结果码
+计费结果码：
   '0': '认证通过'
   '-1': '认证未通过'
-  '-2': '姓名校验不通过'
-  '-3': '银行卡号码有误'
-  '-4': '持卡人信息有误'
+ '-4': '持卡人信息有误'
   '-5': '未开通无卡支付'
   '-6': '此卡被没收'
   '-7': '无效卡号'
@@ -53,6 +54,9 @@ use TencentCloud\Common\AbstractModel;
   '-13': '受限制的卡'
   '-14': '密码错误次数超限'
   '-15': '发卡行不支持此交易'
+不计费结果码：
+  '-2': '姓名校验不通过'
+  '-3': '银行卡号码有误'
   '-16': '服务繁忙'
  * @method string getDescription() 获取认证结果信息。
  * @method void setDescription(string $Description) 设置认证结果信息。
@@ -66,12 +70,11 @@ use TencentCloud\Common\AbstractModel;
 class BankCard2EVerificationResponse extends AbstractModel
 {
     /**
-     * @var string 认证结果码。
+     * @var string 认证结果码
+计费结果码：
   '0': '认证通过'
   '-1': '认证未通过'
-  '-2': '姓名校验不通过'
-  '-3': '银行卡号码有误'
-  '-4': '持卡人信息有误'
+ '-4': '持卡人信息有误'
   '-5': '未开通无卡支付'
   '-6': '此卡被没收'
   '-7': '无效卡号'
@@ -83,6 +86,9 @@ class BankCard2EVerificationResponse extends AbstractModel
   '-13': '受限制的卡'
   '-14': '密码错误次数超限'
   '-15': '发卡行不支持此交易'
+不计费结果码：
+  '-2': '姓名校验不通过'
+  '-3': '银行卡号码有误'
   '-16': '服务繁忙'
      */
     public $Result;
@@ -97,12 +103,11 @@ class BankCard2EVerificationResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $Result 认证结果码。
+     * @param string $Result 认证结果码
+计费结果码：
   '0': '认证通过'
   '-1': '认证未通过'
-  '-2': '姓名校验不通过'
-  '-3': '银行卡号码有误'
-  '-4': '持卡人信息有误'
+ '-4': '持卡人信息有误'
   '-5': '未开通无卡支付'
   '-6': '此卡被没收'
   '-7': '无效卡号'
@@ -114,6 +119,9 @@ class BankCard2EVerificationResponse extends AbstractModel
   '-13': '受限制的卡'
   '-14': '密码错误次数超限'
   '-15': '发卡行不支持此交易'
+不计费结果码：
+  '-2': '姓名校验不通过'
+  '-3': '银行卡号码有误'
   '-16': '服务繁忙'
      * @param string $Description 认证结果信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

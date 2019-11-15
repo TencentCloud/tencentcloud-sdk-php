@@ -65,7 +65,7 @@ class DescribeServiceConfigsResponse extends AbstractModel
         if (array_key_exists("ServiceConfigs",$param) and $param["ServiceConfigs"] !== null) {
             $this->ServiceConfigs = [];
             foreach ($param["ServiceConfigs"] as $key => $value){
-                $obj = new ServiceConfig();
+                $obj = new Config();
                 $obj->deserialize($value);
                 array_push($this->ServiceConfigs, $obj);
             }

@@ -26,24 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhone(string $Phone) 设置手机号码
  * @method string getIdCard() 获取开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
  * @method void setIdCard(string $IdCard) 设置开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
- * @method integer getCertType() 获取证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。（不填默认0）
-0 身份证
-1 军官证
-2 护照
-3 港澳证
-4 台胞证
-5 警官证
-6 士兵证
-7 其它证件
- * @method void setCertType(integer $CertType) 设置证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。（不填默认0）
-0 身份证
-1 军官证
-2 护照
-3 港澳证
-4 台胞证
-5 警官证
-6 士兵证
-7 其它证件
+ * @method integer getCertType() 获取证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
+ * @method void setCertType(integer $CertType) 设置证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
  */
 
 /**
@@ -72,15 +58,8 @@ class BankCard4EVerificationRequest extends AbstractModel
     public $IdCard;
 
     /**
-     * @var integer 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。（不填默认0）
-0 身份证
-1 军官证
-2 护照
-3 港澳证
-4 台胞证
-5 警官证
-6 士兵证
-7 其它证件
+     * @var integer 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
      */
     public $CertType;
     /**
@@ -88,15 +67,8 @@ class BankCard4EVerificationRequest extends AbstractModel
      * @param string $BankCard 银行卡
      * @param string $Phone 手机号码
      * @param string $IdCard 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
-     * @param integer $CertType 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。（不填默认0）
-0 身份证
-1 军官证
-2 护照
-3 港澳证
-4 台胞证
-5 警官证
-6 士兵证
-7 其它证件
+     * @param integer $CertType 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
      */
     function __construct()
     {

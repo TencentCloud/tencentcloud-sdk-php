@@ -18,10 +18,12 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getId() 获取服务ID
- * @method void setId(integer $Id) 设置服务ID
+ * @method string getId() 获取服务ID
+ * @method void setId(string $Id) 设置服务ID
  * @method string getCluster() 获取运行集群
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCluster(string $Cluster) 设置运行集群
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取服务名称
  * @method void setName(string $Name) 设置服务名称
  * @method string getRuntime() 获取运行环境
@@ -32,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) 设置处理器配置, 单位为1/1000核
  * @method integer getMemory() 获取内存配置, 单位为1M
  * @method void setMemory(integer $Memory) 设置内存配置, 单位为1M
- * @method integer getTflopUnits() 获取处理器配置, 单位为1/100 tflops
- * @method void setTflopUnits(integer $TflopUnits) 设置处理器配置, 单位为1/100 tflops
+ * @method integer getGpu() 获取GPU 配置, 单位为1/1000 卡
+ * @method void setGpu(integer $Gpu) 设置GPU 配置, 单位为1/1000 卡
  * @method integer getGpuMemory() 获取显存配置, 单位为1M
  * @method void setGpuMemory(integer $GpuMemory) 设置显存配置, 单位为1M
  * @method string getCreateTime() 获取创建时间
@@ -46,32 +48,59 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScaler(Scaler $Scaler) 设置弹性伸缩配置
  * @method ServiceStatus getStatus() 获取服务状态
  * @method void setStatus(ServiceStatus $Status) 设置服务状态
- * @method string getServingIp() 获取服务地址
- * @method void setServingIp(string $ServingIp) 设置服务地址
  * @method string getAccessToken() 获取访问密钥
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessToken(string $AccessToken) 设置访问密钥
- * @method integer getServiceConfigId() 获取服务配置Id
- * @method void setServiceConfigId(integer $ServiceConfigId) 设置服务配置Id
- * @method string getServiceConfigName() 获取服务配置名
- * @method void setServiceConfigName(string $ServiceConfigName) 设置服务配置名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConfigId() 获取服务配置Id
+ * @method void setConfigId(string $ConfigId) 设置服务配置Id
+ * @method string getConfigName() 获取服务配置名
+ * @method void setConfigName(string $ConfigName) 设置服务配置名
  * @method integer getServeSeconds() 获取服务运行时长
  * @method void setServeSeconds(integer $ServeSeconds) 设置服务运行时长
- * @method string getServiceConfigVersion() 获取配置版本
- * @method void setServiceConfigVersion(string $ServiceConfigVersion) 设置配置版本
+ * @method string getConfigVersion() 获取配置版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigVersion(string $ConfigVersion) 设置配置版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceGroupId() 获取服务使用资源组 Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置服务使用资源组 Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getExposes() 获取暴露方式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExposes(array $Exposes) 设置暴露方式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegion() 获取Region 名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegion(string $Region) 设置Region 名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceGroupName() 获取服务使用资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置服务使用资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGpuType() 获取GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGpuType(string $GpuType) 设置GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
  *模型服务
  */
-class Service extends AbstractModel
+class ModelService extends AbstractModel
 {
     /**
-     * @var integer 服务ID
+     * @var string 服务ID
      */
     public $Id;
 
     /**
      * @var string 运行集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cluster;
 
@@ -101,9 +130,9 @@ class Service extends AbstractModel
     public $Memory;
 
     /**
-     * @var integer 处理器配置, 单位为1/100 tflops
+     * @var integer GPU 配置, 单位为1/1000 卡
      */
-    public $TflopUnits;
+    public $Gpu;
 
     /**
      * @var integer 显存配置, 单位为1M
@@ -136,24 +165,20 @@ class Service extends AbstractModel
     public $Status;
 
     /**
-     * @var string 服务地址
-     */
-    public $ServingIp;
-
-    /**
      * @var string 访问密钥
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessToken;
 
     /**
-     * @var integer 服务配置Id
+     * @var string 服务配置Id
      */
-    public $ServiceConfigId;
+    public $ConfigId;
 
     /**
      * @var string 服务配置名
      */
-    public $ServiceConfigName;
+    public $ConfigName;
 
     /**
      * @var integer 服务运行时长
@@ -162,29 +187,80 @@ class Service extends AbstractModel
 
     /**
      * @var string 配置版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ServiceConfigVersion;
+    public $ConfigVersion;
+
     /**
-     * @param integer $Id 服务ID
+     * @var string 服务使用资源组 Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceGroupId;
+
+    /**
+     * @var array 暴露方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Exposes;
+
+    /**
+     * @var string Region 名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Region;
+
+    /**
+     * @var string 服务使用资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceGroupName;
+
+    /**
+     * @var string 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
+     * @var string GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GpuType;
+    /**
+     * @param string $Id 服务ID
      * @param string $Cluster 运行集群
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 服务名称
      * @param string $Runtime 运行环境
      * @param string $ModelUri 模型地址
      * @param integer $Cpu 处理器配置, 单位为1/1000核
      * @param integer $Memory 内存配置, 单位为1M
-     * @param integer $TflopUnits 处理器配置, 单位为1/100 tflops
+     * @param integer $Gpu GPU 配置, 单位为1/1000 卡
      * @param integer $GpuMemory 显存配置, 单位为1M
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 更新时间
      * @param string $ScaleMode 支持AUTO, MANUAL
      * @param Scaler $Scaler 弹性伸缩配置
      * @param ServiceStatus $Status 服务状态
-     * @param string $ServingIp 服务地址
      * @param string $AccessToken 访问密钥
-     * @param integer $ServiceConfigId 服务配置Id
-     * @param string $ServiceConfigName 服务配置名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConfigId 服务配置Id
+     * @param string $ConfigName 服务配置名
      * @param integer $ServeSeconds 服务运行时长
-     * @param string $ServiceConfigVersion 配置版本
+     * @param string $ConfigVersion 配置版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroupId 服务使用资源组 Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Exposes 暴露方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Region Region 名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroupName 服务使用资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GpuType GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -226,8 +302,8 @@ class Service extends AbstractModel
             $this->Memory = $param["Memory"];
         }
 
-        if (array_key_exists("TflopUnits",$param) and $param["TflopUnits"] !== null) {
-            $this->TflopUnits = $param["TflopUnits"];
+        if (array_key_exists("Gpu",$param) and $param["Gpu"] !== null) {
+            $this->Gpu = $param["Gpu"];
         }
 
         if (array_key_exists("GpuMemory",$param) and $param["GpuMemory"] !== null) {
@@ -256,28 +332,53 @@ class Service extends AbstractModel
             $this->Status->deserialize($param["Status"]);
         }
 
-        if (array_key_exists("ServingIp",$param) and $param["ServingIp"] !== null) {
-            $this->ServingIp = $param["ServingIp"];
-        }
-
         if (array_key_exists("AccessToken",$param) and $param["AccessToken"] !== null) {
             $this->AccessToken = $param["AccessToken"];
         }
 
-        if (array_key_exists("ServiceConfigId",$param) and $param["ServiceConfigId"] !== null) {
-            $this->ServiceConfigId = $param["ServiceConfigId"];
+        if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
+            $this->ConfigId = $param["ConfigId"];
         }
 
-        if (array_key_exists("ServiceConfigName",$param) and $param["ServiceConfigName"] !== null) {
-            $this->ServiceConfigName = $param["ServiceConfigName"];
+        if (array_key_exists("ConfigName",$param) and $param["ConfigName"] !== null) {
+            $this->ConfigName = $param["ConfigName"];
         }
 
         if (array_key_exists("ServeSeconds",$param) and $param["ServeSeconds"] !== null) {
             $this->ServeSeconds = $param["ServeSeconds"];
         }
 
-        if (array_key_exists("ServiceConfigVersion",$param) and $param["ServiceConfigVersion"] !== null) {
-            $this->ServiceConfigVersion = $param["ServiceConfigVersion"];
+        if (array_key_exists("ConfigVersion",$param) and $param["ConfigVersion"] !== null) {
+            $this->ConfigVersion = $param["ConfigVersion"];
+        }
+
+        if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
+            $this->ResourceGroupId = $param["ResourceGroupId"];
+        }
+
+        if (array_key_exists("Exposes",$param) and $param["Exposes"] !== null) {
+            $this->Exposes = [];
+            foreach ($param["Exposes"] as $key => $value){
+                $obj = new Expose();
+                $obj->deserialize($value);
+                array_push($this->Exposes, $obj);
+            }
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("GpuType",$param) and $param["GpuType"] !== null) {
+            $this->GpuType = $param["GpuType"];
         }
     }
 }

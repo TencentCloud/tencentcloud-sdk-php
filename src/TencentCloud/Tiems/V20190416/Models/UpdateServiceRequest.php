@@ -18,16 +18,20 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getServiceId() 获取服务Id
- * @method void setServiceId(integer $ServiceId) 设置服务Id
+ * @method string getServiceId() 获取服务Id
+ * @method void setServiceId(string $ServiceId) 设置服务Id
  * @method Scaler getScaler() 获取扩缩容配置
  * @method void setScaler(Scaler $Scaler) 设置扩缩容配置
- * @method integer getServiceConfigId() 获取服务配置Id
- * @method void setServiceConfigId(integer $ServiceConfigId) 设置服务配置Id
+ * @method string getServiceConfigId() 获取服务配置Id
+ * @method void setServiceConfigId(string $ServiceConfigId) 设置服务配置Id
  * @method string getScaleMode() 获取支持AUTO, MANUAL，分别表示自动扩缩容，手动扩缩容
  * @method void setScaleMode(string $ScaleMode) 设置支持AUTO, MANUAL，分别表示自动扩缩容，手动扩缩容
  * @method string getServiceAction() 获取支持STOP(停止) RESUME(重启)
  * @method void setServiceAction(string $ServiceAction) 设置支持STOP(停止) RESUME(重启)
+ * @method string getDescription() 获取备注
+ * @method void setDescription(string $Description) 设置备注
+ * @method string getGpuType() 获取GPU卡类型
+ * @method void setGpuType(string $GpuType) 设置GPU卡类型
  */
 
 /**
@@ -36,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class UpdateServiceRequest extends AbstractModel
 {
     /**
-     * @var integer 服务Id
+     * @var string 服务Id
      */
     public $ServiceId;
 
@@ -46,7 +50,7 @@ class UpdateServiceRequest extends AbstractModel
     public $Scaler;
 
     /**
-     * @var integer 服务配置Id
+     * @var string 服务配置Id
      */
     public $ServiceConfigId;
 
@@ -59,12 +63,24 @@ class UpdateServiceRequest extends AbstractModel
      * @var string 支持STOP(停止) RESUME(重启)
      */
     public $ServiceAction;
+
     /**
-     * @param integer $ServiceId 服务Id
+     * @var string 备注
+     */
+    public $Description;
+
+    /**
+     * @var string GPU卡类型
+     */
+    public $GpuType;
+    /**
+     * @param string $ServiceId 服务Id
      * @param Scaler $Scaler 扩缩容配置
-     * @param integer $ServiceConfigId 服务配置Id
+     * @param string $ServiceConfigId 服务配置Id
      * @param string $ScaleMode 支持AUTO, MANUAL，分别表示自动扩缩容，手动扩缩容
      * @param string $ServiceAction 支持STOP(停止) RESUME(重启)
+     * @param string $Description 备注
+     * @param string $GpuType GPU卡类型
      */
     function __construct()
     {
@@ -97,6 +113,14 @@ class UpdateServiceRequest extends AbstractModel
 
         if (array_key_exists("ServiceAction",$param) and $param["ServiceAction"] !== null) {
             $this->ServiceAction = $param["ServiceAction"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("GpuType",$param) and $param["GpuType"] !== null) {
+            $this->GpuType = $param["GpuType"];
         }
     }
 }

@@ -18,9 +18,9 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getPurgeLogs() 获取刷新历史记录
+ * @method array getPurgeLogs() 获取详细刷新记录
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPurgeLogs(array $PurgeLogs) 设置刷新历史记录
+ * @method void setPurgeLogs(array $PurgeLogs) 设置详细刷新记录
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取任务总数，用于分页
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribePurgeTasksResponse extends AbstractModel
 {
     /**
-     * @var array 刷新历史记录
+     * @var array 详细刷新记录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PurgeLogs;
@@ -52,7 +52,7 @@ class DescribePurgeTasksResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $PurgeLogs 刷新历史记录
+     * @param array $PurgeLogs 详细刷新记录
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 任务总数，用于分页
 注意：此字段可能返回 null，表示取不到有效值。

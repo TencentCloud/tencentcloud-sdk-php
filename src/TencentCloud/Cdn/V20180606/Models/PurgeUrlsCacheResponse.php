@@ -18,8 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTaskId() 获取刷新任务Id，前十位为提交任务时的UTC时间。
- * @method void setTaskId(string $TaskId) 设置刷新任务Id，前十位为提交任务时的UTC时间。
+ * @method string getTaskId() 获取刷新任务 ID，同一批次提交的 URL 共用一个任务 ID
+ * @method void setTaskId(string $TaskId) 设置刷新任务 ID，同一批次提交的 URL 共用一个任务 ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class PurgeUrlsCacheResponse extends AbstractModel
 {
     /**
-     * @var string 刷新任务Id，前十位为提交任务时的UTC时间。
+     * @var string 刷新任务 ID，同一批次提交的 URL 共用一个任务 ID
      */
     public $TaskId;
 
@@ -39,7 +39,7 @@ class PurgeUrlsCacheResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $TaskId 刷新任务Id，前十位为提交任务时的UTC时间。
+     * @param string $TaskId 刷新任务 ID，同一批次提交的 URL 共用一个任务 ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

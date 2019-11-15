@@ -18,8 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getServiceConfigId() 获取服务配置Id (deprecated)
- * @method void setServiceConfigId(integer $ServiceConfigId) 设置服务配置Id (deprecated)
+ * @method string getServiceConfigId() 获取服务配置Id
+ * @method void setServiceConfigId(string $ServiceConfigId) 设置服务配置Id
  * @method string getServiceConfigName() 获取服务配置名称
  * @method void setServiceConfigName(string $ServiceConfigName) 设置服务配置名称
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteServiceConfigRequest extends AbstractModel
 {
     /**
-     * @var integer 服务配置Id (deprecated)
+     * @var string 服务配置Id
      */
     public $ServiceConfigId;
 
@@ -39,7 +39,7 @@ class DeleteServiceConfigRequest extends AbstractModel
      */
     public $ServiceConfigName;
     /**
-     * @param integer $ServiceConfigId 服务配置Id (deprecated)
+     * @param string $ServiceConfigId 服务配置Id
      * @param string $ServiceConfigName 服务配置名称
      */
     function __construct()

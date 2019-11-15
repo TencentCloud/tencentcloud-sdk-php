@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMediaProcessResultSet() 获取视频处理任务的执行状态与结果。
  * @method void setMediaProcessResultSet(array $MediaProcessResultSet) 设置视频处理任务的执行状态与结果。
+ * @method array getAiContentReviewResultSet() 获取视频内容审核任务的执行状态与结果。
+ * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) 设置视频内容审核任务的执行状态与结果。
+ * @method array getAiRecognitionResultSet() 获取视频内容识别任务的执行状态与结果。
+ * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) 设置视频内容识别任务的执行状态与结果。
  */
 
 /**
@@ -85,6 +89,16 @@ class WorkflowTask extends AbstractModel
      * @var array 视频处理任务的执行状态与结果。
      */
     public $MediaProcessResultSet;
+
+    /**
+     * @var array 视频内容审核任务的执行状态与结果。
+     */
+    public $AiContentReviewResultSet;
+
+    /**
+     * @var array 视频内容识别任务的执行状态与结果。
+     */
+    public $AiRecognitionResultSet;
     /**
      * @param string $TaskId 视频处理任务 ID。
      * @param string $Status 任务流状态，取值：
@@ -97,6 +111,8 @@ class WorkflowTask extends AbstractModel
      * @param MediaMetaData $MetaData 原始视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MediaProcessResultSet 视频处理任务的执行状态与结果。
+     * @param array $AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
+     * @param array $AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
      */
     function __construct()
     {
@@ -142,6 +158,24 @@ class WorkflowTask extends AbstractModel
                 $obj = new MediaProcessTaskResult();
                 $obj->deserialize($value);
                 array_push($this->MediaProcessResultSet, $obj);
+            }
+        }
+
+        if (array_key_exists("AiContentReviewResultSet",$param) and $param["AiContentReviewResultSet"] !== null) {
+            $this->AiContentReviewResultSet = [];
+            foreach ($param["AiContentReviewResultSet"] as $key => $value){
+                $obj = new AiContentReviewResult();
+                $obj->deserialize($value);
+                array_push($this->AiContentReviewResultSet, $obj);
+            }
+        }
+
+        if (array_key_exists("AiRecognitionResultSet",$param) and $param["AiRecognitionResultSet"] !== null) {
+            $this->AiRecognitionResultSet = [];
+            foreach ($param["AiRecognitionResultSet"] as $key => $value){
+                $obj = new AiRecognitionResult();
+                $obj->deserialize($value);
+                array_push($this->AiRecognitionResultSet, $obj);
             }
         }
     }

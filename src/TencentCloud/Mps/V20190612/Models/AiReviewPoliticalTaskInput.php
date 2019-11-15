@@ -18,17 +18,21 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method integer getDefinition() 获取鉴政模板 ID。
+ * @method void setDefinition(integer $Definition) 设置鉴政模板 ID。
  */
 
 /**
- *DescribeUserInfo请求参数结构体
+ *内容审核鉴政任务输入参数类型
  */
-class DescribeUserInfoRequest extends AbstractModel
+class AiReviewPoliticalTaskInput extends AbstractModel
 {
-
     /**
-
+     * @var integer 鉴政模板 ID。
+     */
+    public $Definition;
+    /**
+     * @param integer $Definition 鉴政模板 ID。
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeUserInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
+        }
     }
 }

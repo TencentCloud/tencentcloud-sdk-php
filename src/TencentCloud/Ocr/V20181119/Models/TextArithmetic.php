@@ -24,12 +24,38 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResult(boolean $Result) 设置算式运算结果
  * @method integer getConfidence() 获取保留字段，暂不支持
  * @method void setConfidence(integer $Confidence) 设置保留字段，暂不支持
- * @method array getPolygon() 获取文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
+ * @method array getPolygon() 获取原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolygon(array $Polygon) 设置文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
+ * @method void setPolygon(array $Polygon) 设置原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAdvancedInfo() 获取保留字段，暂不支持
  * @method void setAdvancedInfo(string $AdvancedInfo) 设置保留字段，暂不支持
+ * @method ItemCoord getItemCoord() 获取文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+ * @method void setItemCoord(ItemCoord $ItemCoord) 设置文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+ * @method string getExpressionType() 获取算式题型编号：
+‘1’: 加减乘除四则
+‘2’: 加减乘除已知结果求运算因子
+‘3’: 判断大小
+‘4’: 约等于估算
+‘5’: 带余数除法
+‘6’: 分数四则运算
+‘7’: 单位换算
+‘8’: 竖式加减法
+‘9’: 竖式乘除法
+‘10’: 脱式计算
+‘11’: 解方程
+ * @method void setExpressionType(string $ExpressionType) 设置算式题型编号：
+‘1’: 加减乘除四则
+‘2’: 加减乘除已知结果求运算因子
+‘3’: 判断大小
+‘4’: 约等于估算
+‘5’: 带余数除法
+‘6’: 分数四则运算
+‘7’: 单位换算
+‘8’: 竖式加减法
+‘9’: 竖式乘除法
+‘10’: 脱式计算
+‘11’: 解方程
  */
 
 /**
@@ -53,7 +79,7 @@ class TextArithmetic extends AbstractModel
     public $Confidence;
 
     /**
-     * @var array 文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
+     * @var array 原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Polygon;
@@ -62,13 +88,47 @@ class TextArithmetic extends AbstractModel
      * @var string 保留字段，暂不支持
      */
     public $AdvancedInfo;
+
+    /**
+     * @var ItemCoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     */
+    public $ItemCoord;
+
+    /**
+     * @var string 算式题型编号：
+‘1’: 加减乘除四则
+‘2’: 加减乘除已知结果求运算因子
+‘3’: 判断大小
+‘4’: 约等于估算
+‘5’: 带余数除法
+‘6’: 分数四则运算
+‘7’: 单位换算
+‘8’: 竖式加减法
+‘9’: 竖式乘除法
+‘10’: 脱式计算
+‘11’: 解方程
+     */
+    public $ExpressionType;
     /**
      * @param string $DetectedText 识别出的文本行内容
      * @param boolean $Result 算式运算结果
      * @param integer $Confidence 保留字段，暂不支持
-     * @param array $Polygon 文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
+     * @param array $Polygon 原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdvancedInfo 保留字段，暂不支持
+     * @param ItemCoord $ItemCoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     * @param string $ExpressionType 算式题型编号：
+‘1’: 加减乘除四则
+‘2’: 加减乘除已知结果求运算因子
+‘3’: 判断大小
+‘4’: 约等于估算
+‘5’: 带余数除法
+‘6’: 分数四则运算
+‘7’: 单位换算
+‘8’: 竖式加减法
+‘9’: 竖式乘除法
+‘10’: 脱式计算
+‘11’: 解方程
      */
     function __construct()
     {
@@ -105,6 +165,15 @@ class TextArithmetic extends AbstractModel
 
         if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
             $this->AdvancedInfo = $param["AdvancedInfo"];
+        }
+
+        if (array_key_exists("ItemCoord",$param) and $param["ItemCoord"] !== null) {
+            $this->ItemCoord = new ItemCoord();
+            $this->ItemCoord->deserialize($param["ItemCoord"]);
+        }
+
+        if (array_key_exists("ExpressionType",$param) and $param["ExpressionType"] !== null) {
+            $this->ExpressionType = $param["ExpressionType"];
         }
     }
 }

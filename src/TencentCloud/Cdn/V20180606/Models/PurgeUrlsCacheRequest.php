@@ -18,8 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getUrls() 获取要刷新的Url列表，必须包含协议头部。
- * @method void setUrls(array $Urls) 设置要刷新的Url列表，必须包含协议头部。
+ * @method array getUrls() 获取URL 列表，需要包含协议头部 http:// 或 https://
+ * @method void setUrls(array $Urls) 设置URL 列表，需要包含协议头部 http:// 或 https://
  */
 
 /**
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
 class PurgeUrlsCacheRequest extends AbstractModel
 {
     /**
-     * @var array 要刷新的Url列表，必须包含协议头部。
+     * @var array URL 列表，需要包含协议头部 http:// 或 https://
      */
     public $Urls;
     /**
-     * @param array $Urls 要刷新的Url列表，必须包含协议头部。
+     * @param array $Urls URL 列表，需要包含协议头部 http:// 或 https://
      */
     function __construct()
     {

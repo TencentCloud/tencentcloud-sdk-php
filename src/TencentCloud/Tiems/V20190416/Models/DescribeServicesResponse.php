@@ -65,7 +65,7 @@ class DescribeServicesResponse extends AbstractModel
         if (array_key_exists("Services",$param) and $param["Services"] !== null) {
             $this->Services = [];
             foreach ($param["Services"] as $key => $value){
-                $obj = new Service();
+                $obj = new ModelService();
                 $obj->deserialize($value);
                 array_push($this->Services, $obj);
             }

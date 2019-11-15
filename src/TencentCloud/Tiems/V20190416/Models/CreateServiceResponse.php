@@ -18,8 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method Service getService() 获取服务
- * @method void setService(Service $Service) 设置服务
+ * @method ModelService getService() 获取服务
+ * @method void setService(ModelService $Service) 设置服务
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateServiceResponse extends AbstractModel
 {
     /**
-     * @var Service 服务
+     * @var ModelService 服务
      */
     public $Service;
 
@@ -39,7 +39,7 @@ class CreateServiceResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param Service $Service 服务
+     * @param ModelService $Service 服务
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -55,7 +55,7 @@ class CreateServiceResponse extends AbstractModel
             return;
         }
         if (array_key_exists("Service",$param) and $param["Service"] !== null) {
-            $this->Service = new Service();
+            $this->Service = new ModelService();
             $this->Service->deserialize($param["Service"]);
         }
 

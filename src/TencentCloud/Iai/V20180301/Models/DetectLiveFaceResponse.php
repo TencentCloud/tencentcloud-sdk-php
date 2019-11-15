@@ -19,7 +19,15 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method float getScore() 获取活体打分，取值范围 [0,100]，分数一般落于[80, 100]区间内，0分也为常见值。推荐相大于 87 时可判断为活体。可根据具体场景自行调整阈值。
+本字段当且仅当FaceModelVersion为2.0时才具备参考意义。
  * @method void setScore(float $Score) 设置活体打分，取值范围 [0,100]，分数一般落于[80, 100]区间内，0分也为常见值。推荐相大于 87 时可判断为活体。可根据具体场景自行调整阈值。
+本字段当且仅当FaceModelVersion为2.0时才具备参考意义。
+ * @method string getFaceModelVersion() 获取人脸识别所用的算法模型版本。
+ * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别所用的算法模型版本。
+ * @method boolean getIsLiveness() 获取活体检测是否通过。
+本字段只有FaceModelVersion为3.0时才具备参考意义。
+ * @method void setIsLiveness(boolean $IsLiveness) 设置活体检测是否通过。
+本字段只有FaceModelVersion为3.0时才具备参考意义。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -31,8 +39,20 @@ class DetectLiveFaceResponse extends AbstractModel
 {
     /**
      * @var float 活体打分，取值范围 [0,100]，分数一般落于[80, 100]区间内，0分也为常见值。推荐相大于 87 时可判断为活体。可根据具体场景自行调整阈值。
+本字段当且仅当FaceModelVersion为2.0时才具备参考意义。
      */
     public $Score;
+
+    /**
+     * @var string 人脸识别所用的算法模型版本。
+     */
+    public $FaceModelVersion;
+
+    /**
+     * @var boolean 活体检测是否通过。
+本字段只有FaceModelVersion为3.0时才具备参考意义。
+     */
+    public $IsLiveness;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,6 +60,10 @@ class DetectLiveFaceResponse extends AbstractModel
     public $RequestId;
     /**
      * @param float $Score 活体打分，取值范围 [0,100]，分数一般落于[80, 100]区间内，0分也为常见值。推荐相大于 87 时可判断为活体。可根据具体场景自行调整阈值。
+本字段当且仅当FaceModelVersion为2.0时才具备参考意义。
+     * @param string $FaceModelVersion 人脸识别所用的算法模型版本。
+     * @param boolean $IsLiveness 活体检测是否通过。
+本字段只有FaceModelVersion为3.0时才具备参考意义。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +80,14 @@ class DetectLiveFaceResponse extends AbstractModel
         }
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {
             $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
+            $this->FaceModelVersion = $param["FaceModelVersion"];
+        }
+
+        if (array_key_exists("IsLiveness",$param) and $param["IsLiveness"] !== null) {
+            $this->IsLiveness = $param["IsLiveness"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

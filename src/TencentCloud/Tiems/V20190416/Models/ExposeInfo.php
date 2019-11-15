@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExposeType(string $ExposeType) 设置暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
  * @method string getIp() 获取暴露Ip。暴露方式为 EXTERNAL 为外网 Ip，暴露方式为 VPC 时为指定 Vpc 下的Vip
  * @method void setIp(string $Ip) 设置暴露Ip。暴露方式为 EXTERNAL 为外网 Ip，暴露方式为 VPC 时为指定 Vpc 下的Vip
- * @method string getUnVpcId() 获取暴露方式为 VPC 时，打通的私有网络Id
+ * @method string getVpcId() 获取暴露方式为 VPC 时，打通的私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnVpcId(string $UnVpcId) 设置暴露方式为 VPC 时，打通的私有网络Id
+ * @method void setVpcId(string $VpcId) 设置暴露方式为 VPC 时，打通的私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUnSubnetId() 获取暴露方式为 VPC 时，打通的子网Id
+ * @method string getSubnetId() 获取暴露方式为 VPC 时，打通的子网Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnSubnetId(string $UnSubnetId) 设置暴露方式为 VPC 时，打通的子网Id
+ * @method void setSubnetId(string $SubnetId) 设置暴露方式为 VPC 时，打通的子网Id
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
- *服务暴露方式
+ *暴露信息
  */
-class Expose extends AbstractModel
+class ExposeInfo extends AbstractModel
 {
     /**
      * @var string 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
@@ -51,19 +51,19 @@ class Expose extends AbstractModel
      * @var string 暴露方式为 VPC 时，打通的私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $UnVpcId;
+    public $VpcId;
 
     /**
      * @var string 暴露方式为 VPC 时，打通的子网Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $UnSubnetId;
+    public $SubnetId;
     /**
      * @param string $ExposeType 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
      * @param string $Ip 暴露Ip。暴露方式为 EXTERNAL 为外网 Ip，暴露方式为 VPC 时为指定 Vpc 下的Vip
-     * @param string $UnVpcId 暴露方式为 VPC 时，打通的私有网络Id
+     * @param string $VpcId 暴露方式为 VPC 时，打通的私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UnSubnetId 暴露方式为 VPC 时，打通的子网Id
+     * @param string $SubnetId 暴露方式为 VPC 时，打通的子网Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -86,12 +86,12 @@ class Expose extends AbstractModel
             $this->Ip = $param["Ip"];
         }
 
-        if (array_key_exists("UnVpcId",$param) and $param["UnVpcId"] !== null) {
-            $this->UnVpcId = $param["UnVpcId"];
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
 
-        if (array_key_exists("UnSubnetId",$param) and $param["UnSubnetId"] !== null) {
-            $this->UnSubnetId = $param["UnSubnetId"];
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

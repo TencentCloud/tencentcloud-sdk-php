@@ -359,7 +359,7 @@ class ModelService extends AbstractModel
         if (array_key_exists("Exposes",$param) and $param["Exposes"] !== null) {
             $this->Exposes = [];
             foreach ($param["Exposes"] as $key => $value){
-                $obj = new Expose();
+                $obj = new ExposeInfo();
                 $obj->deserialize($value);
                 array_push($this->Exposes, $obj);
             }

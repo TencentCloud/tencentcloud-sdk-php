@@ -40,13 +40,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置策略备注
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOperateOwnerUin() 获取策略关联操作者主张号
+ * @method string getOperateOwnerUin() 获取策略关联操作者主张号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperateOwnerUin(integer $OperateOwnerUin) 设置策略关联操作者主张号
+ * @method void setOperateOwnerUin(string $OperateOwnerUin) 设置策略关联操作者主张号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOperateUin() 获取策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+ * @method string getOperateUin() 获取策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperateUin(integer $OperateUin) 设置策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+ * @method void setOperateUin(string $OperateUin) 设置策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOperateUinType() 获取UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -95,13 +95,13 @@ class AttachPolicyInfo extends AbstractModel
     public $Remark;
 
     /**
-     * @var integer 策略关联操作者主张号
+     * @var string 策略关联操作者主张号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateOwnerUin;
 
     /**
-     * @var integer 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+     * @var string 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateUin;
@@ -123,9 +123,9 @@ class AttachPolicyInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 策略备注
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OperateOwnerUin 策略关联操作者主张号
+     * @param string $OperateOwnerUin 策略关联操作者主张号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OperateUin 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+     * @param string $OperateUin 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OperateUinType UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。

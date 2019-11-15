@@ -34,6 +34,7 @@ use TencentCloud\Tiems\V20190416\Models as Models;
 * @method Models\DescribeRuntimesResponse DescribeRuntimes(Models\DescribeRuntimesRequest $req) 描述服务运行环境
 * @method Models\DescribeServiceConfigsResponse DescribeServiceConfigs(Models\DescribeServiceConfigsRequest $req) 描述服务配置
 * @method Models\DescribeServicesResponse DescribeServices(Models\DescribeServicesRequest $req) 描述服务
+* @method Models\ExposeServiceResponse ExposeService(Models\ExposeServiceRequest $req) 暴露服务
 * @method Models\UpdateJobResponse UpdateJob(Models\UpdateJobRequest $req) 更新任务
 * @method Models\UpdateServiceResponse UpdateService(Models\UpdateServiceRequest $req) 更新服务
  */

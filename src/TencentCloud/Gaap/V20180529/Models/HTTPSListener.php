@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientCertificateAlias(string $ClientCertificateAlias) 设置客户端CA证书别名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPolyClientCertificateAliasInfo() 获取多客户端CA证书别名信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolyClientCertificateAliasInfo(array $PolyClientCertificateAliasInfo) 设置多客户端CA证书别名信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -141,6 +145,12 @@ class HTTPSListener extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientCertificateAlias;
+
+    /**
+     * @var array 多客户端CA证书别名信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PolyClientCertificateAliasInfo;
     /**
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
@@ -164,6 +174,8 @@ class HTTPSListener extends AbstractModel
 1，双向认证。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientCertificateAlias 客户端CA证书别名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PolyClientCertificateAliasInfo 多客户端CA证书别名信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -224,6 +236,15 @@ class HTTPSListener extends AbstractModel
 
         if (array_key_exists("ClientCertificateAlias",$param) and $param["ClientCertificateAlias"] !== null) {
             $this->ClientCertificateAlias = $param["ClientCertificateAlias"];
+        }
+
+        if (array_key_exists("PolyClientCertificateAliasInfo",$param) and $param["PolyClientCertificateAliasInfo"] !== null) {
+            $this->PolyClientCertificateAliasInfo = [];
+            foreach ($param["PolyClientCertificateAliasInfo"] as $key => $value){
+                $obj = new CertificateAliasInfo();
+                $obj->deserialize($value);
+                array_push($this->PolyClientCertificateAliasInfo, $obj);
+            }
         }
     }
 }

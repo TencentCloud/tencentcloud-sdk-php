@@ -24,12 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyId(string $ProxyId) 设置通道ID， 若为单通道监听器，此项必须填写
  * @method string getListenerName() 获取修改后的监听器名称
  * @method void setListenerName(string $ListenerName) 设置修改后的监听器名称
- * @method string getForwardProtocol() 获取监听器后端转发源站协议类型
- * @method void setForwardProtocol(string $ForwardProtocol) 设置监听器后端转发源站协议类型
+ * @method string getForwardProtocol() 获取监听器后端转发与源站之间的协议类型
+ * @method void setForwardProtocol(string $ForwardProtocol) 设置监听器后端转发与源站之间的协议类型
  * @method string getCertificateId() 获取修改后的监听器服务器证书ID
  * @method void setCertificateId(string $CertificateId) 设置修改后的监听器服务器证书ID
- * @method string getClientCertificateId() 获取修改后的监听器客户端证书ID
- * @method void setClientCertificateId(string $ClientCertificateId) 设置修改后的监听器客户端证书ID
+ * @method string getClientCertificateId() 获取修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
+ * @method void setClientCertificateId(string $ClientCertificateId) 设置修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
+ * @method array getPolyClientCertificateIds() 获取新字段,修改后的监听器客户端证书ID
+ * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) 设置新字段,修改后的监听器客户端证书ID
  */
 
 /**
@@ -53,7 +55,7 @@ class ModifyHTTPSListenerAttributeRequest extends AbstractModel
     public $ListenerName;
 
     /**
-     * @var string 监听器后端转发源站协议类型
+     * @var string 监听器后端转发与源站之间的协议类型
      */
     public $ForwardProtocol;
 
@@ -63,16 +65,22 @@ class ModifyHTTPSListenerAttributeRequest extends AbstractModel
     public $CertificateId;
 
     /**
-     * @var string 修改后的监听器客户端证书ID
+     * @var string 修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
      */
     public $ClientCertificateId;
+
+    /**
+     * @var array 新字段,修改后的监听器客户端证书ID
+     */
+    public $PolyClientCertificateIds;
     /**
      * @param string $ListenerId 监听器ID
      * @param string $ProxyId 通道ID， 若为单通道监听器，此项必须填写
      * @param string $ListenerName 修改后的监听器名称
-     * @param string $ForwardProtocol 监听器后端转发源站协议类型
+     * @param string $ForwardProtocol 监听器后端转发与源站之间的协议类型
      * @param string $CertificateId 修改后的监听器服务器证书ID
-     * @param string $ClientCertificateId 修改后的监听器客户端证书ID
+     * @param string $ClientCertificateId 修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
+     * @param array $PolyClientCertificateIds 新字段,修改后的监听器客户端证书ID
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ModifyHTTPSListenerAttributeRequest extends AbstractModel
 
         if (array_key_exists("ClientCertificateId",$param) and $param["ClientCertificateId"] !== null) {
             $this->ClientCertificateId = $param["ClientCertificateId"];
+        }
+
+        if (array_key_exists("PolyClientCertificateIds",$param) and $param["PolyClientCertificateIds"] !== null) {
+            $this->PolyClientCertificateIds = $param["PolyClientCertificateIds"];
         }
     }
 }

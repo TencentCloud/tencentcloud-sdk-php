@@ -96,6 +96,10 @@ UNKNOWN，未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签列表，不存在标签时，该字段为空列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSupportSecurity() 获取是否支持安全组配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSupportSecurity(integer $SupportSecurity) 设置是否支持安全组配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -225,6 +229,12 @@ UNKNOWN，未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
+
+    /**
+     * @var integer 是否支持安全组配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SupportSecurity;
     /**
      * @param string $InstanceId （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -264,6 +274,8 @@ UNKNOWN，未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ForwardIP 通道转发IP
      * @param array $TagSet 标签列表，不存在标签时，该字段为空列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SupportSecurity 是否支持安全组配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -367,6 +379,10 @@ UNKNOWN，未知状态。
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("SupportSecurity",$param) and $param["SupportSecurity"] !== null) {
+            $this->SupportSecurity = $param["SupportSecurity"];
         }
     }
 }

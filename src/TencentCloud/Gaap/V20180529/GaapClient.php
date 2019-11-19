@@ -32,6 +32,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
 * @method Models\CreateCertificateResponse CreateCertificate(Models\CreateCertificateRequest $req) 本接口（CreateCertificate）用于创建Gaap相关证书和配置文件，包括基础认证配置文件，客户端CA证书，服务器SSL证书，Gaap SSL证书以及源站CA证书。
 * @method Models\CreateDomainResponse CreateDomain(Models\CreateDomainRequest $req) 本接口（CreateDomain）用于创建HTTP/HTTPS监听器的访问域名，客户端请求通过访问该域名来请求后端业务。
 该接口仅支持version3.0的通道。
+* @method Models\CreateDomainErrorPageInfoResponse CreateDomainErrorPageInfo(Models\CreateDomainErrorPageInfoRequest $req) 定制域名指定错误码的错误响应
 * @method Models\CreateHTTPListenerResponse CreateHTTPListener(Models\CreateHTTPListenerRequest $req) 该接口（CreateHTTPListener）用于在通道实例下创建HTTP协议类型的监听器。
 * @method Models\CreateHTTPSListenerResponse CreateHTTPSListener(Models\CreateHTTPSListenerRequest $req) 该接口（CreateHTTPSListener）用于在通道实例下创建HTTPS协议类型的监听器。
 * @method Models\CreateProxyResponse CreateProxy(Models\CreateProxyRequest $req) 本接口（CreateProxy）用于创建/复制一个指定配置的加速通道。当复制通道时，需要设置新通道的基本配置参数，并设置ClonedProxyId来指定被复制的通道。
@@ -44,6 +45,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
 * @method Models\CreateUDPListenersResponse CreateUDPListeners(Models\CreateUDPListenersRequest $req) 该接口（CreateUDPListeners）用于批量创建单通道或者通道组的UDP协议类型的监听器。
 * @method Models\DeleteCertificateResponse DeleteCertificate(Models\DeleteCertificateRequest $req) 本接口（DeleteCertificate）用于删除证书。
 * @method Models\DeleteDomainResponse DeleteDomain(Models\DeleteDomainRequest $req) 本接口（DeleteDomain）仅适用于7层监听器，用于删除该监听器下对应域名及域名下的所有规则，所有已绑定源站的规则将自动解绑。
+* @method Models\DeleteDomainErrorPageInfoResponse DeleteDomainErrorPageInfo(Models\DeleteDomainErrorPageInfoRequest $req) 删除域名的定制错误
 * @method Models\DeleteListenersResponse DeleteListeners(Models\DeleteListenersRequest $req) 该接口（DeleteListeners）用于批量删除通道或通道组的监听器，包括4/7层监听器。
 * @method Models\DeleteProxyGroupResponse DeleteProxyGroup(Models\DeleteProxyGroupRequest $req) 本接口（DeleteProxyGroup）用于删除通道组。
 * @method Models\DeleteRuleResponse DeleteRule(Models\DeleteRuleRequest $req) 该接口（DeleteRule）用于删除HTTP/HTTPS监听器的转发规则。
@@ -55,6 +57,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
 * @method Models\DescribeCertificatesResponse DescribeCertificates(Models\DescribeCertificatesRequest $req) 本接口（DescribeCertificates）用来查询可以使用的证书列表。
 * @method Models\DescribeCountryAreaMappingResponse DescribeCountryAreaMapping(Models\DescribeCountryAreaMappingRequest $req) 本接口（DescribeCountryAreaMapping）用于获取国家地区编码映射表。
 * @method Models\DescribeDestRegionsResponse DescribeDestRegions(Models\DescribeDestRegionsRequest $req) 本接口（DescribeDestRegions）用于查询源站区域，即源站服务器所在区域。
+* @method Models\DescribeDomainErrorPageInfoResponse DescribeDomainErrorPageInfo(Models\DescribeDomainErrorPageInfoRequest $req) 查询目前订制域名的错误响应
 * @method Models\DescribeGroupAndStatisticsProxyResponse DescribeGroupAndStatisticsProxy(Models\DescribeGroupAndStatisticsProxyRequest $req) 该接口为内部接口，用于查询可以获取统计数据的通道组和通道信息
 * @method Models\DescribeGroupDomainConfigResponse DescribeGroupDomainConfig(Models\DescribeGroupDomainConfigRequest $req) 本接口（DescribeGroupDomainConfig）用于获取通道组域名解析配置详情。
 * @method Models\DescribeHTTPListenersResponse DescribeHTTPListeners(Models\DescribeHTTPListenersRequest $req) 该接口（DescribeHTTPListeners）用来查询HTTP监听器信息。

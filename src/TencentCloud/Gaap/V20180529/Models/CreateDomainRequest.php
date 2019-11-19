@@ -25,9 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCertificateId() 获取服务器证书，用于客户端与GAAP的HTTPS的交互。
  * @method void setCertificateId(string $CertificateId) 设置服务器证书，用于客户端与GAAP的HTTPS的交互。
  * @method string getClientCertificateId() 获取客户端CA证书，用于客户端与GAAP的HTTPS的交互。
-仅当采用双向认证的方式时，需要设置该字段。
+仅当采用双向认证的方式时，需要设置该字段或PolyClientCertificateIds字段。
  * @method void setClientCertificateId(string $ClientCertificateId) 设置客户端CA证书，用于客户端与GAAP的HTTPS的交互。
-仅当采用双向认证的方式时，需要设置该字段。
+仅当采用双向认证的方式时，需要设置该字段或PolyClientCertificateIds字段。
+ * @method array getPolyClientCertificateIds() 获取客户端CA证书，用于客户端与GAAP的HTTPS的交互。
+仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
+ * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) 设置客户端CA证书，用于客户端与GAAP的HTTPS的交互。
+仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
  */
 
 /**
@@ -52,15 +56,23 @@ class CreateDomainRequest extends AbstractModel
 
     /**
      * @var string 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
-仅当采用双向认证的方式时，需要设置该字段。
+仅当采用双向认证的方式时，需要设置该字段或PolyClientCertificateIds字段。
      */
     public $ClientCertificateId;
+
+    /**
+     * @var array 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
+仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
+     */
+    public $PolyClientCertificateIds;
     /**
      * @param string $ListenerId 监听器ID。
      * @param string $Domain 需要创建的域名，一个监听器下最大支持100个域名。
      * @param string $CertificateId 服务器证书，用于客户端与GAAP的HTTPS的交互。
      * @param string $ClientCertificateId 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
-仅当采用双向认证的方式时，需要设置该字段。
+仅当采用双向认证的方式时，需要设置该字段或PolyClientCertificateIds字段。
+     * @param array $PolyClientCertificateIds 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
+仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
      */
     function __construct()
     {
@@ -88,6 +100,10 @@ class CreateDomainRequest extends AbstractModel
 
         if (array_key_exists("ClientCertificateId",$param) and $param["ClientCertificateId"] !== null) {
             $this->ClientCertificateId = $param["ClientCertificateId"];
+        }
+
+        if (array_key_exists("PolyClientCertificateIds",$param) and $param["PolyClientCertificateIds"] !== null) {
+            $this->PolyClientCertificateIds = $param["PolyClientCertificateIds"];
         }
     }
 }

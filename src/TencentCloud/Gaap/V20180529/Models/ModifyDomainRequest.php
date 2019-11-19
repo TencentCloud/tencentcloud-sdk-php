@@ -32,14 +32,22 @@ use TencentCloud\Common\AbstractModel;
 不带该字段时，表示使用原证书；
 携带该字段时并且CertificateId=default，表示使用监听器证书；
 其他情况，使用该CertificateId指定的证书。
- * @method string getClientCertificateId() 获取客户端CA证书ID，，仅适用于version3.0的通道。其中：
-不带该字段时，表示使用原证书；
+ * @method string getClientCertificateId() 获取客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和PolyClientCertificateIds时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
-其他情况，使用该ClientCertificateId指定的证书。
- * @method void setClientCertificateId(string $ClientCertificateId) 设置客户端CA证书ID，，仅适用于version3.0的通道。其中：
-不带该字段时，表示使用原证书；
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+ * @method void setClientCertificateId(string $ClientCertificateId) 设置客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和PolyClientCertificateIds时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
-其他情况，使用该ClientCertificateId指定的证书。
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+ * @method array getPolyClientCertificateIds() 获取客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和ClientCertificateId时，表示使用原证书；
+携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+ * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) 设置客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和ClientCertificateId时，表示使用原证书；
+携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
  */
 
 /**
@@ -71,12 +79,20 @@ class ModifyDomainRequest extends AbstractModel
     public $CertificateId;
 
     /**
-     * @var string 客户端CA证书ID，，仅适用于version3.0的通道。其中：
-不带该字段时，表示使用原证书；
+     * @var string 客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和PolyClientCertificateIds时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
-其他情况，使用该ClientCertificateId指定的证书。
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
      */
     public $ClientCertificateId;
+
+    /**
+     * @var array 客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和ClientCertificateId时，表示使用原证书；
+携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+     */
+    public $PolyClientCertificateIds;
     /**
      * @param string $ListenerId 7层监听器ID
      * @param string $OldDomain 修改前的域名信息
@@ -85,10 +101,14 @@ class ModifyDomainRequest extends AbstractModel
 不带该字段时，表示使用原证书；
 携带该字段时并且CertificateId=default，表示使用监听器证书；
 其他情况，使用该CertificateId指定的证书。
-     * @param string $ClientCertificateId 客户端CA证书ID，，仅适用于version3.0的通道。其中：
-不带该字段时，表示使用原证书；
+     * @param string $ClientCertificateId 客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和PolyClientCertificateIds时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
-其他情况，使用该ClientCertificateId指定的证书。
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+     * @param array $PolyClientCertificateIds 客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和ClientCertificateId时，表示使用原证书；
+携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
      */
     function __construct()
     {
@@ -120,6 +140,10 @@ class ModifyDomainRequest extends AbstractModel
 
         if (array_key_exists("ClientCertificateId",$param) and $param["ClientCertificateId"] !== null) {
             $this->ClientCertificateId = $param["ClientCertificateId"];
+        }
+
+        if (array_key_exists("PolyClientCertificateIds",$param) and $param["PolyClientCertificateIds"] !== null) {
+            $this->PolyClientCertificateIds = $param["PolyClientCertificateIds"];
         }
     }
 }

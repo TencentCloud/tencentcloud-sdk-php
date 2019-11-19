@@ -36,8 +36,10 @@ use TencentCloud\Common\AbstractModel;
 0，单向认证；
 1，双向认证。
 默认使用单向认证。
- * @method string getClientCertificateId() 获取客户端CA证书ID，仅当双向认证时设置该参数。
- * @method void setClientCertificateId(string $ClientCertificateId) 设置客户端CA证书ID，仅当双向认证时设置该参数。
+ * @method string getClientCertificateId() 获取客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
+ * @method void setClientCertificateId(string $ClientCertificateId) 设置客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
+ * @method array getPolyClientCertificateIds() 获取新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
+ * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) 设置新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
  */
 
 /**
@@ -79,9 +81,14 @@ class CreateHTTPSListenerRequest extends AbstractModel
     public $AuthType;
 
     /**
-     * @var string 客户端CA证书ID，仅当双向认证时设置该参数。
+     * @var string 客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
      */
     public $ClientCertificateId;
+
+    /**
+     * @var array 新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
+     */
+    public $PolyClientCertificateIds;
     /**
      * @param string $ListenerName 监听器名称
      * @param integer $Port 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
@@ -92,7 +99,8 @@ class CreateHTTPSListenerRequest extends AbstractModel
 0，单向认证；
 1，双向认证。
 默认使用单向认证。
-     * @param string $ClientCertificateId 客户端CA证书ID，仅当双向认证时设置该参数。
+     * @param string $ClientCertificateId 客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
+     * @param array $PolyClientCertificateIds 新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class CreateHTTPSListenerRequest extends AbstractModel
 
         if (array_key_exists("ClientCertificateId",$param) and $param["ClientCertificateId"] !== null) {
             $this->ClientCertificateId = $param["ClientCertificateId"];
+        }
+
+        if (array_key_exists("PolyClientCertificateIds",$param) and $param["PolyClientCertificateIds"] !== null) {
+            $this->PolyClientCertificateIds = $param["PolyClientCertificateIds"];
         }
     }
 }

@@ -28,10 +28,14 @@ use TencentCloud\Common\AbstractModel;
 当CertificateId=default时，表示使用监听器的证书。
  * @method string getClientCertificateId() 获取新的客户端证书ID。其中：
 当ClientCertificateId=default时，表示使用监听器的证书。
-仅当采用双向认证方式时，需要设置该参数。
+仅当采用双向认证方式时，需要设置该参数或者PolyClientCertificateIds。
  * @method void setClientCertificateId(string $ClientCertificateId) 设置新的客户端证书ID。其中：
 当ClientCertificateId=default时，表示使用监听器的证书。
-仅当采用双向认证方式时，需要设置该参数。
+仅当采用双向认证方式时，需要设置该参数或者PolyClientCertificateIds。
+ * @method array getPolyClientCertificateIds() 获取新的多客户端证书ID列表。其中：
+仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
+ * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) 设置新的多客户端证书ID列表。其中：
+仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
  */
 
 /**
@@ -58,9 +62,15 @@ class ModifyCertificateRequest extends AbstractModel
     /**
      * @var string 新的客户端证书ID。其中：
 当ClientCertificateId=default时，表示使用监听器的证书。
-仅当采用双向认证方式时，需要设置该参数。
+仅当采用双向认证方式时，需要设置该参数或者PolyClientCertificateIds。
      */
     public $ClientCertificateId;
+
+    /**
+     * @var array 新的多客户端证书ID列表。其中：
+仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
+     */
+    public $PolyClientCertificateIds;
     /**
      * @param string $ListenerId 监听器实例ID
      * @param string $Domain 需要修改证书的域名
@@ -68,7 +78,9 @@ class ModifyCertificateRequest extends AbstractModel
 当CertificateId=default时，表示使用监听器的证书。
      * @param string $ClientCertificateId 新的客户端证书ID。其中：
 当ClientCertificateId=default时，表示使用监听器的证书。
-仅当采用双向认证方式时，需要设置该参数。
+仅当采用双向认证方式时，需要设置该参数或者PolyClientCertificateIds。
+     * @param array $PolyClientCertificateIds 新的多客户端证书ID列表。其中：
+仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class ModifyCertificateRequest extends AbstractModel
 
         if (array_key_exists("ClientCertificateId",$param) and $param["ClientCertificateId"] !== null) {
             $this->ClientCertificateId = $param["ClientCertificateId"];
+        }
+
+        if (array_key_exists("PolyClientCertificateIds",$param) and $param["PolyClientCertificateIds"] !== null) {
+            $this->PolyClientCertificateIds = $param["PolyClientCertificateIds"];
         }
     }
 }

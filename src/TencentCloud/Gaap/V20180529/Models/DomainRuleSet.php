@@ -90,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealServerCertificateDomain(string $RealServerCertificateDomain) 设置源站认证域名。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPolyClientCertificateAliasInfo() 获取多客户端证书时，返回多个证书的id和列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolyClientCertificateAliasInfo(array $PolyClientCertificateAliasInfo) 设置多客户端证书时，返回多个证书的id和列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -196,6 +200,12 @@ class DomainRuleSet extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealServerCertificateDomain;
+
+    /**
+     * @var array 多客户端证书时，返回多个证书的id和列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PolyClientCertificateAliasInfo;
     /**
      * @param string $Domain 转发规则域名。
      * @param array $RuleSet 该域名对应的转发规则列表。
@@ -232,6 +242,8 @@ class DomainRuleSet extends AbstractModel
      * @param string $GaapCertificateAlias 该域名对应通道认证证书名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealServerCertificateDomain 源站认证域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PolyClientCertificateAliasInfo 多客户端证书时，返回多个证书的id和列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -313,6 +325,15 @@ class DomainRuleSet extends AbstractModel
 
         if (array_key_exists("RealServerCertificateDomain",$param) and $param["RealServerCertificateDomain"] !== null) {
             $this->RealServerCertificateDomain = $param["RealServerCertificateDomain"];
+        }
+
+        if (array_key_exists("PolyClientCertificateAliasInfo",$param) and $param["PolyClientCertificateAliasInfo"] !== null) {
+            $this->PolyClientCertificateAliasInfo = [];
+            foreach ($param["PolyClientCertificateAliasInfo"] as $key => $value){
+                $obj = new CertificateAliasInfo();
+                $obj->deserialize($value);
+                array_push($this->PolyClientCertificateAliasInfo, $obj);
+            }
         }
     }
 }

@@ -42,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) 设置视频内容审核类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AiAnalysisTaskInput getAiAnalysisTask() 获取视频内容分析类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) 设置视频内容分析类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AiRecognitionTaskInput getAiRecognitionTask() 获取视频内容识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置视频内容识别类型任务参数。
@@ -110,12 +106,6 @@ class WorkflowInfo extends AbstractModel
     public $AiContentReviewTask;
 
     /**
-     * @var AiAnalysisTaskInput 视频内容分析类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $AiAnalysisTask;
-
-    /**
      * @var AiRecognitionTaskInput 视频内容识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -158,8 +148,6 @@ class WorkflowInfo extends AbstractModel
      * @param MediaProcessTaskInput $MediaProcessTask 视频处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiContentReviewTaskInput $AiContentReviewTask 视频内容审核类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiAnalysisTaskInput $AiAnalysisTask 视频内容分析类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTaskInput $AiRecognitionTask 视频内容识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -212,11 +200,6 @@ class WorkflowInfo extends AbstractModel
         if (array_key_exists("AiContentReviewTask",$param) and $param["AiContentReviewTask"] !== null) {
             $this->AiContentReviewTask = new AiContentReviewTaskInput();
             $this->AiContentReviewTask->deserialize($param["AiContentReviewTask"]);
-        }
-
-        if (array_key_exists("AiAnalysisTask",$param) and $param["AiAnalysisTask"] !== null) {
-            $this->AiAnalysisTask = new AiAnalysisTaskInput();
-            $this->AiAnalysisTask->deserialize($param["AiAnalysisTask"]);
         }
 
         if (array_key_exists("AiRecognitionTask",$param) and $param["AiRecognitionTask"] !== null) {

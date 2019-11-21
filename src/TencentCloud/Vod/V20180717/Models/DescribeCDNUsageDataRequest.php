@@ -23,15 +23,29 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndTime() 获取结束日期，需大于开始日期，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method void setEndTime(string $EndTime) 设置结束日期，需大于开始日期，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method string getDataType() 获取CDN 统计数据类型，有效值：
-<li>Flux：流量，单位为byte。</li>
-<li>Bandwidth：带宽，单位为bps。</li>
+<li>Flux：流量，单位为 byte。</li>
+<li>Bandwidth：带宽，单位为 bps。</li>
  * @method void setDataType(string $DataType) 设置CDN 统计数据类型，有效值：
-<li>Flux：流量，单位为byte。</li>
-<li>Bandwidth：带宽，单位为bps。</li>
+<li>Flux：流量，单位为 byte。</li>
+<li>Bandwidth：带宽，单位为 bps。</li>
+ * @method integer getDataInterval() 获取用量数据的时间粒度，单位：分钟，取值有：
+<li>5：5 分钟粒度，返回指定查询时间内5分钟粒度的明细数据。</li>
+<li>60：小时粒度，返回指定查询时间内1小时粒度的数据。</li>
+<li>1440：天粒度，返回指定查询时间内1天粒度的数据。</li>
+默认值为1440，返回天粒度的数据。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
+ * @method void setDataInterval(integer $DataInterval) 设置用量数据的时间粒度，单位：分钟，取值有：
+<li>5：5 分钟粒度，返回指定查询时间内5分钟粒度的明细数据。</li>
+<li>60：小时粒度，返回指定查询时间内1小时粒度的数据。</li>
+<li>1440：天粒度，返回指定查询时间内1天粒度的数据。</li>
+默认值为1440，返回天粒度的数据。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
+ * @method array getDomainNames() 获取域名列表。一次最多查询20个域名的用量数据。可以指定多个域名，查询这些域名叠加的用量数据。默认返回所有域名叠加的用量数据。
+ * @method void setDomainNames(array $DomainNames) 设置域名列表。一次最多查询20个域名的用量数据。可以指定多个域名，查询这些域名叠加的用量数据。默认返回所有域名叠加的用量数据。
  * @method integer getSubAppId() 获取点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计，此时时间粒度只支持天粒度。
  * @method void setSubAppId(integer $SubAppId) 设置点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计，此时时间粒度只支持天粒度。
  */
 
 /**
@@ -51,24 +65,46 @@ class DescribeCDNUsageDataRequest extends AbstractModel
 
     /**
      * @var string CDN 统计数据类型，有效值：
-<li>Flux：流量，单位为byte。</li>
-<li>Bandwidth：带宽，单位为bps。</li>
+<li>Flux：流量，单位为 byte。</li>
+<li>Bandwidth：带宽，单位为 bps。</li>
      */
     public $DataType;
 
     /**
-     * @var integer 点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * @var integer 用量数据的时间粒度，单位：分钟，取值有：
+<li>5：5 分钟粒度，返回指定查询时间内5分钟粒度的明细数据。</li>
+<li>60：小时粒度，返回指定查询时间内1小时粒度的数据。</li>
+<li>1440：天粒度，返回指定查询时间内1天粒度的数据。</li>
+默认值为1440，返回天粒度的数据。
 当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
+     */
+    public $DataInterval;
+
+    /**
+     * @var array 域名列表。一次最多查询20个域名的用量数据。可以指定多个域名，查询这些域名叠加的用量数据。默认返回所有域名叠加的用量数据。
+     */
+    public $DomainNames;
+
+    /**
+     * @var integer 点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计，此时时间粒度只支持天粒度。
      */
     public $SubAppId;
     /**
      * @param string $StartTime 起始日期，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param string $EndTime 结束日期，需大于开始日期，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param string $DataType CDN 统计数据类型，有效值：
-<li>Flux：流量，单位为byte。</li>
-<li>Bandwidth：带宽，单位为bps。</li>
-     * @param integer $SubAppId 点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+<li>Flux：流量，单位为 byte。</li>
+<li>Bandwidth：带宽，单位为 bps。</li>
+     * @param integer $DataInterval 用量数据的时间粒度，单位：分钟，取值有：
+<li>5：5 分钟粒度，返回指定查询时间内5分钟粒度的明细数据。</li>
+<li>60：小时粒度，返回指定查询时间内1小时粒度的数据。</li>
+<li>1440：天粒度，返回指定查询时间内1天粒度的数据。</li>
+默认值为1440，返回天粒度的数据。
 当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
+     * @param array $DomainNames 域名列表。一次最多查询20个域名的用量数据。可以指定多个域名，查询这些域名叠加的用量数据。默认返回所有域名叠加的用量数据。
+     * @param integer $SubAppId 点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计，此时时间粒度只支持天粒度。
      */
     function __construct()
     {
@@ -92,6 +128,14 @@ class DescribeCDNUsageDataRequest extends AbstractModel
 
         if (array_key_exists("DataType",$param) and $param["DataType"] !== null) {
             $this->DataType = $param["DataType"];
+        }
+
+        if (array_key_exists("DataInterval",$param) and $param["DataInterval"] !== null) {
+            $this->DataInterval = $param["DataInterval"];
+        }
+
+        if (array_key_exists("DomainNames",$param) and $param["DomainNames"] !== null) {
+            $this->DomainNames = $param["DomainNames"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

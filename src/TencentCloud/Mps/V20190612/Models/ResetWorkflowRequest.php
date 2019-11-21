@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputDir(string $OutputDir) 设置视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致，即`{inputDir}`。
  * @method MediaProcessTaskInput getMediaProcessTask() 获取视频处理类型任务参数。
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) 设置视频处理类型任务参数。
+ * @method AiClassificationTaskInput getAiContentReviewTask() 获取视频内容审核类型任务参数。
+ * @method void setAiContentReviewTask(AiClassificationTaskInput $AiContentReviewTask) 设置视频内容审核类型任务参数。
+ * @method AiRecognitionTaskInput getAiRecognitionTask() 获取视频内容识别类型任务参数。
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置视频内容识别类型任务参数。
  * @method integer getTaskPriority() 获取工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
  * @method void setTaskPriority(integer $TaskPriority) 设置工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知信息，不填代表不获取事件通知。
@@ -72,6 +76,16 @@ class ResetWorkflowRequest extends AbstractModel
     public $MediaProcessTask;
 
     /**
+     * @var AiClassificationTaskInput 视频内容审核类型任务参数。
+     */
+    public $AiContentReviewTask;
+
+    /**
+     * @var AiRecognitionTaskInput 视频内容识别类型任务参数。
+     */
+    public $AiRecognitionTask;
+
+    /**
      * @var integer 工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      */
     public $TaskPriority;
@@ -87,6 +101,8 @@ class ResetWorkflowRequest extends AbstractModel
      * @param TaskOutputStorage $OutputStorage 视频处理的文件输出配置。不填则继承 Trigger 中的存储位置。
      * @param string $OutputDir 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致，即`{inputDir}`。
      * @param MediaProcessTaskInput $MediaProcessTask 视频处理类型任务参数。
+     * @param AiClassificationTaskInput $AiContentReviewTask 视频内容审核类型任务参数。
+     * @param AiRecognitionTaskInput $AiRecognitionTask 视频内容识别类型任务参数。
      * @param integer $TaskPriority 工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      */
@@ -127,6 +143,16 @@ class ResetWorkflowRequest extends AbstractModel
         if (array_key_exists("MediaProcessTask",$param) and $param["MediaProcessTask"] !== null) {
             $this->MediaProcessTask = new MediaProcessTaskInput();
             $this->MediaProcessTask->deserialize($param["MediaProcessTask"]);
+        }
+
+        if (array_key_exists("AiContentReviewTask",$param) and $param["AiContentReviewTask"] !== null) {
+            $this->AiContentReviewTask = new AiClassificationTaskInput();
+            $this->AiContentReviewTask->deserialize($param["AiContentReviewTask"]);
+        }
+
+        if (array_key_exists("AiRecognitionTask",$param) and $param["AiRecognitionTask"] !== null) {
+            $this->AiRecognitionTask = new AiRecognitionTaskInput();
+            $this->AiRecognitionTask->deserialize($param["AiRecognitionTask"]);
         }
 
         if (array_key_exists("TaskPriority",$param) and $param["TaskPriority"] !== null) {

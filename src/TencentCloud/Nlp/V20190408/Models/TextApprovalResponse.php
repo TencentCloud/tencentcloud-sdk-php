@@ -18,8 +18,46 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getEvilTokens() 获取文本审核输出结果
- * @method void setEvilTokens(array $EvilTokens) 设置文本审核输出结果
+ * @method array getEvilTokens() 获取文本审核输出结果列表，列表每个元素包含以下信息：
+
+EvilFlag（文本恶意等级）：
+0、正常；
+1、恶意；
+2、可疑送审
+
+EvilType（文本恶意类型）：
+0、正常；
+1、政治；
+2、色情；
+3、辱骂/低俗；
+4、暴恐/毒品；
+5、广告/灌水；
+6、迷信/邪教；
+7、其他违法（如跨站追杀/恶意竞争等）；
+8、综合；
+9、联系方式/链接
+
+EvilKeywords（恶意关键词组）
+ * @method void setEvilTokens(array $EvilTokens) 设置文本审核输出结果列表，列表每个元素包含以下信息：
+
+EvilFlag（文本恶意等级）：
+0、正常；
+1、恶意；
+2、可疑送审
+
+EvilType（文本恶意类型）：
+0、正常；
+1、政治；
+2、色情；
+3、辱骂/低俗；
+4、暴恐/毒品；
+5、广告/灌水；
+6、迷信/邪教；
+7、其他违法（如跨站追杀/恶意竞争等）；
+8、综合；
+9、联系方式/链接
+
+EvilKeywords（恶意关键词组）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +68,26 @@ use TencentCloud\Common\AbstractModel;
 class TextApprovalResponse extends AbstractModel
 {
     /**
-     * @var array 文本审核输出结果
+     * @var array 文本审核输出结果列表，列表每个元素包含以下信息：
+
+EvilFlag（文本恶意等级）：
+0、正常；
+1、恶意；
+2、可疑送审
+
+EvilType（文本恶意类型）：
+0、正常；
+1、政治；
+2、色情；
+3、辱骂/低俗；
+4、暴恐/毒品；
+5、广告/灌水；
+6、迷信/邪教；
+7、其他违法（如跨站追杀/恶意竞争等）；
+8、综合；
+9、联系方式/链接
+
+EvilKeywords（恶意关键词组）
      */
     public $EvilTokens;
 
@@ -39,7 +96,26 @@ class TextApprovalResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $EvilTokens 文本审核输出结果
+     * @param array $EvilTokens 文本审核输出结果列表，列表每个元素包含以下信息：
+
+EvilFlag（文本恶意等级）：
+0、正常；
+1、恶意；
+2、可疑送审
+
+EvilType（文本恶意类型）：
+0、正常；
+1、政治；
+2、色情；
+3、辱骂/低俗；
+4、暴恐/毒品；
+5、广告/灌水；
+6、迷信/邪教；
+7、其他违法（如跨站追杀/恶意竞争等）；
+8、综合；
+9、联系方式/链接
+
+EvilKeywords（恶意关键词组）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

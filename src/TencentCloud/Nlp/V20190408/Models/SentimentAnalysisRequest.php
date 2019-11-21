@@ -21,15 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getText() 获取待分析的文本（仅支持UTF-8格式，不超过200字）
  * @method void setText(string $Text) 设置待分析的文本（仅支持UTF-8格式，不超过200字）
  * @method integer getFlag() 获取文本所属类型（默认取4值）：
-1、电商
-2、APP
-3、美食
-4、酒店和其他
+1、商品评论类
+2、社交类
+3、美食酒店类
+4、通用领域类
  * @method void setFlag(integer $Flag) 设置文本所属类型（默认取4值）：
-1、电商
-2、APP
-3、美食
-4、酒店和其他
+1、商品评论类
+2、社交类
+3、美食酒店类
+4、通用领域类
  */
 
 /**
@@ -44,19 +44,19 @@ class SentimentAnalysisRequest extends AbstractModel
 
     /**
      * @var integer 文本所属类型（默认取4值）：
-1、电商
-2、APP
-3、美食
-4、酒店和其他
+1、商品评论类
+2、社交类
+3、美食酒店类
+4、通用领域类
      */
     public $Flag;
     /**
      * @param string $Text 待分析的文本（仅支持UTF-8格式，不超过200字）
      * @param integer $Flag 文本所属类型（默认取4值）：
-1、电商
-2、APP
-3、美食
-4、酒店和其他
+1、商品评论类
+2、社交类
+3、美食酒店类
+4、通用领域类
      */
     function __construct()
     {

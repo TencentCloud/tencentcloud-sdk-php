@@ -28,6 +28,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSvgContent(string $SvgContent) 设置SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getStartTimeOffset() 获取水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
+<li>不填或填0，表示水印从画面开始就出现；</li>
+<li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
+<li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
+ * @method void setStartTimeOffset(float $StartTimeOffset) 设置水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
+<li>不填或填0，表示水印从画面开始就出现；</li>
+<li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
+<li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
+ * @method float getEndTimeOffset() 获取水印的结束时间偏移，单位：秒。
+<li>不填或填0，表示水印持续到画面结束；</li>
+<li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
+<li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
+ * @method void setEndTimeOffset(float $EndTimeOffset) 设置水印的结束时间偏移，单位：秒。
+<li>不填或填0，表示水印持续到画面结束；</li>
+<li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
+<li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
  */
 
 /**
@@ -51,12 +67,36 @@ class WatermarkInput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SvgContent;
+
+    /**
+     * @var float 水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
+<li>不填或填0，表示水印从画面开始就出现；</li>
+<li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
+<li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
+     */
+    public $StartTimeOffset;
+
+    /**
+     * @var float 水印的结束时间偏移，单位：秒。
+<li>不填或填0，表示水印持续到画面结束；</li>
+<li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
+<li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
+     */
+    public $EndTimeOffset;
     /**
      * @param integer $Definition 水印模板 ID。
      * @param string $TextContent 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SvgContent SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $StartTimeOffset 水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
+<li>不填或填0，表示水印从画面开始就出现；</li>
+<li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
+<li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
+     * @param float $EndTimeOffset 水印的结束时间偏移，单位：秒。
+<li>不填或填0，表示水印持续到画面结束；</li>
+<li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
+<li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
      */
     function __construct()
     {
@@ -80,6 +120,14 @@ class WatermarkInput extends AbstractModel
 
         if (array_key_exists("SvgContent",$param) and $param["SvgContent"] !== null) {
             $this->SvgContent = $param["SvgContent"];
+        }
+
+        if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
+            $this->StartTimeOffset = $param["StartTimeOffset"];
+        }
+
+        if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
+            $this->EndTimeOffset = $param["EndTimeOffset"];
         }
     }
 }

@@ -18,8 +18,8 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getText() 获取待分类的文本（仅支持UTF-8格式，不超过2000字）
- * @method void setText(string $Text) 设置待分类的文本（仅支持UTF-8格式，不超过2000字）
+ * @method string getText() 获取待分类的文本（仅支持UTF-8格式，不超过10000字）
+ * @method void setText(string $Text) 设置待分类的文本（仅支持UTF-8格式，不超过10000字）
  * @method integer getFlag() 获取领域分类体系（默认取1值）：
 1、通用领域
 2、新闻领域
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class TextClassificationRequest extends AbstractModel
 {
     /**
-     * @var string 待分类的文本（仅支持UTF-8格式，不超过2000字）
+     * @var string 待分类的文本（仅支持UTF-8格式，不超过10000字）
      */
     public $Text;
 
@@ -45,7 +45,7 @@ class TextClassificationRequest extends AbstractModel
      */
     public $Flag;
     /**
-     * @param string $Text 待分类的文本（仅支持UTF-8格式，不超过2000字）
+     * @param string $Text 待分类的文本（仅支持UTF-8格式，不超过10000字）
      * @param integer $Flag 领域分类体系（默认取1值）：
 1、通用领域
 2、新闻领域

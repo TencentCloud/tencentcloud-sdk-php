@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置挂载点状态（1：打开；2：关闭）
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method integer getVpcType() 获取VPC网络类型
+ * @method void setVpcType(integer $VpcType) 设置VPC网络类型
  */
 
 /**
@@ -73,6 +75,11 @@ class MountPoint extends AbstractModel
      * @var string 创建时间
      */
     public $CreateTime;
+
+    /**
+     * @var integer VPC网络类型
+     */
+    public $VpcType;
     /**
      * @param string $MountPointId 挂载点ID
      * @param string $MountPointName 挂载点名称
@@ -81,6 +88,7 @@ class MountPoint extends AbstractModel
      * @param string $VpcId VPC网络ID
      * @param integer $Status 挂载点状态（1：打开；2：关闭）
      * @param string $CreateTime 创建时间
+     * @param integer $VpcType VPC网络类型
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class MountPoint extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("VpcType",$param) and $param["VpcType"] !== null) {
+            $this->VpcType = $param["VpcType"];
         }
     }
 }

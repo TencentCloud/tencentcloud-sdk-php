@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserIdentity(string $UserIdentity) 设置用户证书标识，用于标识用户证书，要求由纯小写字母组成，长度小于10
  * @method string getApplicant() 获取证书申请实体，使用腾讯云账号实名认证的名称
  * @method void setApplicant(string $Applicant) 设置证书申请实体，使用腾讯云账号实名认证的名称
- * @method string getIdentityNum() 获取证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入企业营业执照；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码
- * @method void setIdentityNum(string $IdentityNum) 设置证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入企业营业执照；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码
+ * @method string getIdentityNum() 获取证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入“0”；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码
+ * @method void setIdentityNum(string $IdentityNum) 设置证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入“0”；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码
  * @method string getCsrData() 获取csr p10证书文件。需要用户根据文档生成证书的CSR文件
  * @method void setCsrData(string $CsrData) 设置csr p10证书文件。需要用户根据文档生成证书的CSR文件
  * @method string getNotes() 获取证书备注信息
@@ -74,7 +74,7 @@ class ApplyUserCertRequest extends AbstractModel
     public $Applicant;
 
     /**
-     * @var string 证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入企业营业执照；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码
+     * @var string 证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入“0”；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码
      */
     public $IdentityNum;
 
@@ -94,7 +94,7 @@ class ApplyUserCertRequest extends AbstractModel
      * @param string $GroupName 申请证书的组织名称，可以在组织管理列表中获取当前组织的名称
      * @param string $UserIdentity 用户证书标识，用于标识用户证书，要求由纯小写字母组成，长度小于10
      * @param string $Applicant 证书申请实体，使用腾讯云账号实名认证的名称
-     * @param string $IdentityNum 证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入企业营业执照；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码
+     * @param string $IdentityNum 证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入“0”；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码
      * @param string $CsrData csr p10证书文件。需要用户根据文档生成证书的CSR文件
      * @param string $Notes 证书备注信息
      */

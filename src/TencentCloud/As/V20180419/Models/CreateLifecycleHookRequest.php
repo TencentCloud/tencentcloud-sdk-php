@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getAutoScalingGroupId() 获取伸缩组ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
- * @method string getLifecycleHookName() 获取生命周期挂钩名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超128个字节。
- * @method void setLifecycleHookName(string $LifecycleHookName) 设置生命周期挂钩名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超128个字节。
- * @method string getLifecycleTransition() 获取进行生命周期挂钩的场景，取值范围包括“INSTANCE_LAUNCHING”和“INSTANCE_TERMINATING”
- * @method void setLifecycleTransition(string $LifecycleTransition) 设置进行生命周期挂钩的场景，取值范围包括“INSTANCE_LAUNCHING”和“INSTANCE_TERMINATING”
- * @method string getDefaultResult() 获取定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是“CONTINUE”或“ABANDON”，默认值为“CONTINUE”
- * @method void setDefaultResult(string $DefaultResult) 设置定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是“CONTINUE”或“ABANDON”，默认值为“CONTINUE”
+ * @method string getLifecycleHookName() 获取生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字节。
+ * @method void setLifecycleHookName(string $LifecycleHookName) 设置生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字节。
+ * @method string getLifecycleTransition() 获取进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING
+ * @method void setLifecycleTransition(string $LifecycleTransition) 设置进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING
+ * @method string getDefaultResult() 获取定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是 CONTINUE 或 ABANDON，默认值为 CONTINUE
+ * @method void setDefaultResult(string $DefaultResult) 设置定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是 CONTINUE 或 ABANDON，默认值为 CONTINUE
  * @method integer getHeartbeatTimeout() 获取生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到3600秒，默认值为300秒
  * @method void setHeartbeatTimeout(integer $HeartbeatTimeout) 设置生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到3600秒，默认值为300秒
- * @method string getNotificationMetadata() 获取弹性伸缩向通知目标发送的附加信息，默认值为''。最大长度不能超过1024个字节。
- * @method void setNotificationMetadata(string $NotificationMetadata) 设置弹性伸缩向通知目标发送的附加信息，默认值为''。最大长度不能超过1024个字节。
+ * @method string getNotificationMetadata() 获取弹性伸缩向通知目标发送的附加信息，默认值为空字符串“”。最大长度不能超过1024个字节。
+ * @method void setNotificationMetadata(string $NotificationMetadata) 设置弹性伸缩向通知目标发送的附加信息，默认值为空字符串“”。最大长度不能超过1024个字节。
  * @method NotificationTarget getNotificationTarget() 获取通知目标
  * @method void setNotificationTarget(NotificationTarget $NotificationTarget) 设置通知目标
  */
@@ -45,17 +45,17 @@ class CreateLifecycleHookRequest extends AbstractModel
     public $AutoScalingGroupId;
 
     /**
-     * @var string 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超128个字节。
+     * @var string 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字节。
      */
     public $LifecycleHookName;
 
     /**
-     * @var string 进行生命周期挂钩的场景，取值范围包括“INSTANCE_LAUNCHING”和“INSTANCE_TERMINATING”
+     * @var string 进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING
      */
     public $LifecycleTransition;
 
     /**
-     * @var string 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是“CONTINUE”或“ABANDON”，默认值为“CONTINUE”
+     * @var string 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是 CONTINUE 或 ABANDON，默认值为 CONTINUE
      */
     public $DefaultResult;
 
@@ -65,7 +65,7 @@ class CreateLifecycleHookRequest extends AbstractModel
     public $HeartbeatTimeout;
 
     /**
-     * @var string 弹性伸缩向通知目标发送的附加信息，默认值为''。最大长度不能超过1024个字节。
+     * @var string 弹性伸缩向通知目标发送的附加信息，默认值为空字符串“”。最大长度不能超过1024个字节。
      */
     public $NotificationMetadata;
 
@@ -75,11 +75,11 @@ class CreateLifecycleHookRequest extends AbstractModel
     public $NotificationTarget;
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
-     * @param string $LifecycleHookName 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超128个字节。
-     * @param string $LifecycleTransition 进行生命周期挂钩的场景，取值范围包括“INSTANCE_LAUNCHING”和“INSTANCE_TERMINATING”
-     * @param string $DefaultResult 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是“CONTINUE”或“ABANDON”，默认值为“CONTINUE”
+     * @param string $LifecycleHookName 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字节。
+     * @param string $LifecycleTransition 进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING
+     * @param string $DefaultResult 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是 CONTINUE 或 ABANDON，默认值为 CONTINUE
      * @param integer $HeartbeatTimeout 生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到3600秒，默认值为300秒
-     * @param string $NotificationMetadata 弹性伸缩向通知目标发送的附加信息，默认值为''。最大长度不能超过1024个字节。
+     * @param string $NotificationMetadata 弹性伸缩向通知目标发送的附加信息，默认值为空字符串“”。最大长度不能超过1024个字节。
      * @param NotificationTarget $NotificationTarget 通知目标
      */
     function __construct()

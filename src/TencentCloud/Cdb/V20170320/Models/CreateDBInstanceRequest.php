@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceTags(array $ResourceTags) 设置实例标签信息。
  * @method string getDeployGroupId() 获取置放群组 ID。
  * @method void setDeployGroupId(string $DeployGroupId) 设置置放群组 ID。
+ * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+ * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  */
 
 /**
@@ -199,6 +201,11 @@ class CreateDBInstanceRequest extends AbstractModel
      * @var string 置放群组 ID。
      */
     public $DeployGroupId;
+
+    /**
+     * @var string 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     */
+    public $ClientToken;
     /**
      * @param integer $Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      * @param integer $Volume 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
@@ -225,6 +232,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $InstanceName 实例名称。
      * @param array $ResourceTags 实例标签信息。
      * @param string $DeployGroupId 置放群组 ID。
+     * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     function __construct()
     {
@@ -347,6 +355,10 @@ class CreateDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("DeployGroupId",$param) and $param["DeployGroupId"] !== null) {
             $this->DeployGroupId = $param["DeployGroupId"];
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
     }
 }

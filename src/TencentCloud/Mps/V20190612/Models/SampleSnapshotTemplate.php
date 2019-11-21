@@ -72,6 +72,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+ * @method string getFillType() 获取填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
+<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
+<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
+<li>black：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
+<li>black：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>
+默认值：black 。
+ * @method void setFillType(string $FillType) 设置填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
+<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
+<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
+<li>black：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
+<li>black：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>
+默认值：black 。
  */
 
 /**
@@ -153,6 +165,16 @@ class SampleSnapshotTemplate extends AbstractModel
      * @var string 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public $UpdateTime;
+
+    /**
+     * @var string 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
+<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
+<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
+<li>black：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
+<li>black：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>
+默认值：black 。
+     */
+    public $FillType;
     /**
      * @param integer $Definition 采样截图模板唯一标识。
      * @param string $Type 模板类型，取值范围：
@@ -181,6 +203,12 @@ class SampleSnapshotTemplate extends AbstractModel
      * @param integer $SampleInterval 采样间隔。
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @param string $FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
+<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
+<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
+<li>black：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
+<li>black：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>
+默认值：black 。
      */
     function __construct()
     {
@@ -240,6 +268,10 @@ class SampleSnapshotTemplate extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
+            $this->FillType = $param["FillType"];
         }
     }
 }

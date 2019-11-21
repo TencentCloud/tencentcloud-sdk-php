@@ -42,7 +42,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPublicIpAddresses() 获取实例主网卡的公网IP列表。
 注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置实例主网卡的公网IP列表。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -119,6 +121,7 @@ class ExistedInstance extends AbstractModel
     /**
      * @var array 实例主网卡的公网IP列表。
 注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIpAddresses;
 
@@ -173,6 +176,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
      * @param array $PrivateIpAddresses 实例主网卡的内网IP列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PublicIpAddresses 实例主网卡的公网IP列表。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。

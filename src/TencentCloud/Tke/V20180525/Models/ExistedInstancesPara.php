@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnhancedService(EnhancedService $EnhancedService) 设置增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
  * @method LoginSettings getLoginSettings() 获取节点登录信息（目前仅支持使用Password或者单个KeyIds）
  * @method void setLoginSettings(LoginSettings $LoginSettings) 设置节点登录信息（目前仅支持使用Password或者单个KeyIds）
- * @method array getSecurityGroupIds() 获取实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+ * @method array getSecurityGroupIds() 获取实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+ * @method string getHostName() 获取重装系统时，可以指定修改实例的HostName。
+ * @method void setHostName(string $HostName) 设置重装系统时，可以指定修改实例的HostName。
  */
 
 /**
@@ -56,15 +58,21 @@ class ExistedInstancesPara extends AbstractModel
     public $LoginSettings;
 
     /**
-     * @var array 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+     * @var array 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
      */
     public $SecurityGroupIds;
+
+    /**
+     * @var string 重装系统时，可以指定修改实例的HostName。
+     */
+    public $HostName;
     /**
      * @param array $InstanceIds 集群ID
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 实例额外需要设置参数信息
      * @param EnhancedService $EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
      * @param LoginSettings $LoginSettings 节点登录信息（目前仅支持使用Password或者单个KeyIds）
-     * @param array $SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+     * @param array $SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+     * @param string $HostName 重装系统时，可以指定修改实例的HostName。
      */
     function __construct()
     {
@@ -99,6 +107,10 @@ class ExistedInstancesPara extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
+            $this->HostName = $param["HostName"];
         }
     }
 }

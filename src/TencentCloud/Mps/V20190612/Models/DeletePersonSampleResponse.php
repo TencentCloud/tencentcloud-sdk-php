@@ -18,21 +18,21 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getDefinition() 获取视频内容分析模板 ID。
- * @method void setDefinition(integer $Definition) 设置视频内容分析模板 ID。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *AI 视频智能分析输入参数类型
+ *DeletePersonSample返回参数结构体
  */
-class AiAnalysisTaskInput extends AbstractModel
+class DeletePersonSampleResponse extends AbstractModel
 {
     /**
-     * @var integer 视频内容分析模板 ID。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $Definition;
+    public $RequestId;
     /**
-     * @param integer $Definition 视频内容分析模板 ID。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class AiAnalysisTaskInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

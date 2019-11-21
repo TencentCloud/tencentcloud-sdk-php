@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getText() 获取待分析的文本（仅支持UTF-8格式，不超过500字）
  * @method void setText(string $Text) 设置待分析的文本（仅支持UTF-8格式，不超过500字）
- * @method integer getFlag() 获取词法分析模式（默认取1值）：
-1、高精度（具备混合粒度分词能力）；
-2、高性能；
- * @method void setFlag(integer $Flag) 设置词法分析模式（默认取1值）：
-1、高精度（具备混合粒度分词能力）；
-2、高性能；
+ * @method integer getFlag() 获取词法分析模式（默认取2值）：
+1、高精度（混合粒度分词能力）；
+2、高性能（单粒度分词能力）；
+ * @method void setFlag(integer $Flag) 设置词法分析模式（默认取2值）：
+1、高精度（混合粒度分词能力）；
+2、高性能（单粒度分词能力）；
  */
 
 /**
@@ -39,16 +39,16 @@ class LexicalAnalysisRequest extends AbstractModel
     public $Text;
 
     /**
-     * @var integer 词法分析模式（默认取1值）：
-1、高精度（具备混合粒度分词能力）；
-2、高性能；
+     * @var integer 词法分析模式（默认取2值）：
+1、高精度（混合粒度分词能力）；
+2、高性能（单粒度分词能力）；
      */
     public $Flag;
     /**
      * @param string $Text 待分析的文本（仅支持UTF-8格式，不超过500字）
-     * @param integer $Flag 词法分析模式（默认取1值）：
-1、高精度（具备混合粒度分词能力）；
-2、高性能；
+     * @param integer $Flag 词法分析模式（默认取2值）：
+1、高精度（混合粒度分词能力）；
+2、高性能（单粒度分词能力）；
      */
     function __construct()
     {

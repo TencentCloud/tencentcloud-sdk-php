@@ -18,8 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method string getMediaName() 获取输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
+ * @method void setMediaName(string $MediaName) 设置输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
  * @method string getType() 获取输出文件格式，可选值：mp4、hls。默认是 mp4。
  * @method void setType(string $Type) 设置输出文件格式，可选值：mp4、hls。默认是 mp4。
+ * @method integer getClassId() 获取分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+<li>默认值：0，表示其他分类。</li>
+ * @method void setClassId(integer $ClassId) 设置分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+<li>默认值：0，表示其他分类。</li>
  * @method string getExpireTime() 获取输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method void setExpireTime(string $ExpireTime) 设置输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  */
@@ -30,16 +36,30 @@ use TencentCloud\Common\AbstractModel;
 class EditMediaOutputConfig extends AbstractModel
 {
     /**
+     * @var string 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
+     */
+    public $MediaName;
+
+    /**
      * @var string 输出文件格式，可选值：mp4、hls。默认是 mp4。
      */
     public $Type;
+
+    /**
+     * @var integer 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+<li>默认值：0，表示其他分类。</li>
+     */
+    public $ClassId;
 
     /**
      * @var string 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public $ExpireTime;
     /**
+     * @param string $MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
      * @param string $Type 输出文件格式，可选值：mp4、hls。默认是 mp4。
+     * @param integer $ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+<li>默认值：0，表示其他分类。</li>
      * @param string $ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     function __construct()
@@ -54,8 +74,16 @@ class EditMediaOutputConfig extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MediaName",$param) and $param["MediaName"] !== null) {
+            $this->MediaName = $param["MediaName"];
+        }
+
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("ClassId",$param) and $param["ClassId"] !== null) {
+            $this->ClassId = $param["ClassId"];
         }
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {

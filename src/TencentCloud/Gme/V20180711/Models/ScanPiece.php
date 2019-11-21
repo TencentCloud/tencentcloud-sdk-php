@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInfo(string $Info) 设置备注
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOffset() 获取流检测时分片在流中的偏移时间，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOffset(integer $Offset) 设置流检测时分片在流中的偏移时间，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDuration() 获取流检测时分片时长
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDuration(integer $Duration) 设置流检测时分片时长
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -88,6 +96,18 @@ class ScanPiece extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Info;
+
+    /**
+     * @var integer 流检测时分片在流中的偏移时间，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Offset;
+
+    /**
+     * @var integer 流检测时分片时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Duration;
     /**
      * @param string $DumpUrl 流检测时返回，音频转存地址，保留30min
 注意：此字段可能返回 null，表示取不到有效值。
@@ -100,6 +120,10 @@ class ScanPiece extends AbstractModel
      * @param string $OpenId gme实时语音用户id，透传任务传入时的OpenId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Info 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Offset 流检测时分片在流中的偏移时间，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Duration 流检测时分片时长
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -145,6 +169,14 @@ class ScanPiece extends AbstractModel
 
         if (array_key_exists("Info",$param) and $param["Info"] !== null) {
             $this->Info = $param["Info"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
+            $this->Duration = $param["Duration"];
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPC网络ID
  * @method integer getMountPointStatus() 获取挂载点状态（1：打开；2：关闭）
  * @method void setMountPointStatus(integer $MountPointStatus) 设置挂载点状态（1：打开；2：关闭）
+ * @method integer getVpcType() 获取VPC网络类型（1：CVM；2：黑石1.0；3：黑石2.0）
+ * @method void setVpcType(integer $VpcType) 设置VPC网络类型（1：CVM；2：黑石1.0；3：黑石2.0）
  */
 
 /**
@@ -59,12 +61,18 @@ class CreateMountPointRequest extends AbstractModel
      * @var integer 挂载点状态（1：打开；2：关闭）
      */
     public $MountPointStatus;
+
+    /**
+     * @var integer VPC网络类型（1：CVM；2：黑石1.0；3：黑石2.0）
+     */
+    public $VpcType;
     /**
      * @param string $MountPointName 挂载点名称
      * @param string $FileSystemId 文件系统ID
      * @param string $AccessGroupId 权限组ID
      * @param string $VpcId VPC网络ID
      * @param integer $MountPointStatus 挂载点状态（1：打开；2：关闭）
+     * @param integer $VpcType VPC网络类型（1：CVM；2：黑石1.0；3：黑石2.0）
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CreateMountPointRequest extends AbstractModel
 
         if (array_key_exists("MountPointStatus",$param) and $param["MountPointStatus"] !== null) {
             $this->MountPointStatus = $param["MountPointStatus"];
+        }
+
+        if (array_key_exists("VpcType",$param) and $param["VpcType"] !== null) {
+            $this->VpcType = $param["VpcType"];
         }
     }
 }

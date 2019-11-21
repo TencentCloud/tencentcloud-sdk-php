@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadlineTime(string $DeadlineTime) 设置实例到期时间
  * @method integer getDeployMode() 获取可用区部署方式
  * @method void setDeployMode(integer $DeployMode) 设置可用区部署方式
- * @method integer getTaskStatus() 获取实例任务状态
- * @method void setTaskStatus(integer $TaskStatus) 设置实例任务状态
+ * @method integer getTaskStatus() 获取实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
+ * @method void setTaskStatus(integer $TaskStatus) 设置实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
  * @method MasterInfo getMasterInfo() 获取主实例详细信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMasterInfo(MasterInfo $MasterInfo) 设置主实例详细信息
@@ -214,7 +214,7 @@ class InstanceInfo extends AbstractModel
     public $DeployMode;
 
     /**
-     * @var integer 实例任务状态
+     * @var integer 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
      */
     public $TaskStatus;
 
@@ -338,7 +338,7 @@ class InstanceInfo extends AbstractModel
      * @param string $Region 地域信息
      * @param string $DeadlineTime 实例到期时间
      * @param integer $DeployMode 可用区部署方式
-     * @param integer $TaskStatus 实例任务状态
+     * @param integer $TaskStatus 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
      * @param MasterInfo $MasterInfo 主实例详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceType 实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版

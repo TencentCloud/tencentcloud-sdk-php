@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getDefinition() 获取指定时间点截图模板 ID。
  * @method void setDefinition(integer $Definition) 设置指定时间点截图模板 ID。
- * @method array getTimeOffsetSet() 获取截图时间点列表，单位为<font color=red>毫秒</font>。
- * @method void setTimeOffsetSet(array $TimeOffsetSet) 设置截图时间点列表，单位为<font color=red>毫秒</font>。
+ * @method array getTimeOffsetSet() 获取截图时间点列表，单位为<font color=red>秒</font>。
+ * @method void setTimeOffsetSet(array $TimeOffsetSet) 设置截图时间点列表，单位为<font color=red>秒</font>。
  * @method array getWatermarkSet() 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
@@ -49,7 +49,7 @@ class SnapshotByTimeOffsetTaskInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var array 截图时间点列表，单位为<font color=red>毫秒</font>。
+     * @var array 截图时间点列表，单位为<font color=red>秒</font>。
      */
     public $TimeOffsetSet;
 
@@ -77,7 +77,7 @@ class SnapshotByTimeOffsetTaskInput extends AbstractModel
     public $ObjectNumberFormat;
     /**
      * @param integer $Definition 指定时间点截图模板 ID。
-     * @param array $TimeOffsetSet 截图时间点列表，单位为<font color=red>毫秒</font>。
+     * @param array $TimeOffsetSet 截图时间点列表，单位为<font color=red>秒</font>。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskOutputStorage $OutputStorage 时间点截图后文件的目标存储，不填则继承上层的 OutputStorage 值。

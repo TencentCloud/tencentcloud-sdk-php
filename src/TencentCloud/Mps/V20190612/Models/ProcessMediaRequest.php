@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputDir(string $OutputDir) 设置视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
  * @method MediaProcessTaskInput getMediaProcessTask() 获取视频处理类型任务参数。
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) 设置视频处理类型任务参数。
+ * @method AiContentReviewTaskInput getAiContentReviewTask() 获取视频内容审核类型任务参数。
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) 设置视频内容审核类型任务参数。
+ * @method AiRecognitionTaskInput getAiRecognitionTask() 获取视频内容识别类型任务参数。
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置视频内容识别类型任务参数。
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知信息，不填代表不获取事件通知。
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知信息，不填代表不获取事件通知。
  * @method integer getTasksPriority() 获取任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
@@ -62,6 +66,16 @@ class ProcessMediaRequest extends AbstractModel
     public $MediaProcessTask;
 
     /**
+     * @var AiContentReviewTaskInput 视频内容审核类型任务参数。
+     */
+    public $AiContentReviewTask;
+
+    /**
+     * @var AiRecognitionTaskInput 视频内容识别类型任务参数。
+     */
+    public $AiRecognitionTask;
+
+    /**
      * @var TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      */
     public $TaskNotifyConfig;
@@ -85,6 +99,8 @@ class ProcessMediaRequest extends AbstractModel
      * @param TaskOutputStorage $OutputStorage 视频处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
      * @param string $OutputDir 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
      * @param MediaProcessTaskInput $MediaProcessTask 视频处理类型任务参数。
+     * @param AiContentReviewTaskInput $AiContentReviewTask 视频内容审核类型任务参数。
+     * @param AiRecognitionTaskInput $AiRecognitionTask 视频内容识别类型任务参数。
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      * @param integer $TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
@@ -119,6 +135,16 @@ class ProcessMediaRequest extends AbstractModel
         if (array_key_exists("MediaProcessTask",$param) and $param["MediaProcessTask"] !== null) {
             $this->MediaProcessTask = new MediaProcessTaskInput();
             $this->MediaProcessTask->deserialize($param["MediaProcessTask"]);
+        }
+
+        if (array_key_exists("AiContentReviewTask",$param) and $param["AiContentReviewTask"] !== null) {
+            $this->AiContentReviewTask = new AiContentReviewTaskInput();
+            $this->AiContentReviewTask->deserialize($param["AiContentReviewTask"]);
+        }
+
+        if (array_key_exists("AiRecognitionTask",$param) and $param["AiRecognitionTask"] !== null) {
+            $this->AiRecognitionTask = new AiRecognitionTaskInput();
+            $this->AiRecognitionTask->deserialize($param["AiRecognitionTask"]);
         }
 
         if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {

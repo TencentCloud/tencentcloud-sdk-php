@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
  * @method string getLastOperationInstanceTypesCheckPolicy() 获取上次操作时，InstanceTypesCheckPolicy 取值。
  * @method void setLastOperationInstanceTypesCheckPolicy(string $LastOperationInstanceTypesCheckPolicy) 设置上次操作时，InstanceTypesCheckPolicy 取值。
+ * @method HostNameSettings getHostNameSettings() 获取云服务器主机名（HostName）的相关设置。
+ * @method void setHostNameSettings(HostNameSettings $HostNameSettings) 设置云服务器主机名（HostName）的相关设置。
  */
 
 /**
@@ -197,6 +199,11 @@ class LaunchConfiguration extends AbstractModel
      * @var string 上次操作时，InstanceTypesCheckPolicy 取值。
      */
     public $LastOperationInstanceTypesCheckPolicy;
+
+    /**
+     * @var HostNameSettings 云服务器主机名（HostName）的相关设置。
+     */
+    public $HostNameSettings;
     /**
      * @param integer $ProjectId 实例所属项目ID。
      * @param string $LaunchConfigurationId 启动配置ID。
@@ -225,6 +232,7 @@ class LaunchConfiguration extends AbstractModel
      * @param string $UpdatedTime 更新时间。
      * @param string $CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
      * @param string $LastOperationInstanceTypesCheckPolicy 上次操作时，InstanceTypesCheckPolicy 取值。
+     * @param HostNameSettings $HostNameSettings 云服务器主机名（HostName）的相关设置。
      */
     function __construct()
     {
@@ -348,6 +356,11 @@ class LaunchConfiguration extends AbstractModel
 
         if (array_key_exists("LastOperationInstanceTypesCheckPolicy",$param) and $param["LastOperationInstanceTypesCheckPolicy"] !== null) {
             $this->LastOperationInstanceTypesCheckPolicy = $param["LastOperationInstanceTypesCheckPolicy"];
+        }
+
+        if (array_key_exists("HostNameSettings",$param) and $param["HostNameSettings"] !== null) {
+            $this->HostNameSettings = new HostNameSettings();
+            $this->HostNameSettings->deserialize($param["HostNameSettings"]);
         }
     }
 }

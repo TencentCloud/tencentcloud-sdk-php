@@ -32,6 +32,7 @@ use TencentCloud\Tbaas\V20180416\Models as Models;
 * @method Models\GetLatesdTransactionListResponse GetLatesdTransactionList(Models\GetLatesdTransactionListRequest $req) 获取最新交易列表
 * @method Models\GetTransByHashHandlerResponse GetTransByHashHandler(Models\GetTransByHashHandlerRequest $req) Bcos根据交易哈希查看交易详细信息
 * @method Models\GetTransListHandlerResponse GetTransListHandler(Models\GetTransListHandlerRequest $req) Bcos分页查询当前群组的交易信息列表
+* @method Models\GetTransactionDetailForUserResponse GetTransactionDetailForUser(Models\GetTransactionDetailForUserRequest $req) 获取交易详情
 * @method Models\InvokeResponse Invoke(Models\InvokeRequest $req) 新增交易
 * @method Models\QueryResponse Query(Models\QueryRequest $req) 查询交易
 * @method Models\SendTransactionHandlerResponse SendTransactionHandler(Models\SendTransactionHandlerRequest $req) Bcos发送交易

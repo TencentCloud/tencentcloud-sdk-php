@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceTags(array $InstanceTags) 设置标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
  * @method string getCamRoleName() 获取CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
  * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+ * @method HostNameSettings getHostNameSettings() 获取云服务器主机名（HostName）的相关设置。
+ * @method void setHostNameSettings(HostNameSettings $HostNameSettings) 设置云服务器主机名（HostName）的相关设置。
  */
 
 /**
@@ -170,6 +172,11 @@ class CreateLaunchConfigurationRequest extends AbstractModel
      * @var string CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
      */
     public $CamRoleName;
+
+    /**
+     * @var HostNameSettings 云服务器主机名（HostName）的相关设置。
+     */
+    public $HostNameSettings;
     /**
      * @param string $LaunchConfigurationName 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
@@ -197,6 +204,7 @@ class CreateLaunchConfigurationRequest extends AbstractModel
 如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
      * @param array $InstanceTags 标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
      * @param string $CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * @param HostNameSettings $HostNameSettings 云服务器主机名（HostName）的相关设置。
      */
     function __construct()
     {
@@ -291,6 +299,11 @@ class CreateLaunchConfigurationRequest extends AbstractModel
 
         if (array_key_exists("CamRoleName",$param) and $param["CamRoleName"] !== null) {
             $this->CamRoleName = $param["CamRoleName"];
+        }
+
+        if (array_key_exists("HostNameSettings",$param) and $param["HostNameSettings"] !== null) {
+            $this->HostNameSettings = new HostNameSettings();
+            $this->HostNameSettings->deserialize($param["HostNameSettings"]);
         }
     }
 }

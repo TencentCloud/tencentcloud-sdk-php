@@ -65,6 +65,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
 * @method Models\RenewInstanceResponse RenewInstance(Models\RenewInstanceRequest $req) 续费实例
 * @method Models\ResetPasswordResponse ResetPassword(Models\ResetPasswordRequest $req) 重置密码
 * @method Models\RestoreInstanceResponse RestoreInstance(Models\RestoreInstanceRequest $req) 恢复 CRS 实例
+* @method Models\StartupInstanceResponse StartupInstance(Models\StartupInstanceRequest $req) 实例解隔离
 * @method Models\SwitchInstanceVipResponse SwitchInstanceVip(Models\SwitchInstanceVipRequest $req) 在通过DTS支持跨可用区灾备的场景中，通过该接口交换实例VIP完成实例灾备切换。交换VIP后目标实例可写，源和目标实例VIP互换，同时源与目标实例间DTS同步任务断开
 * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) 升级实例
  */

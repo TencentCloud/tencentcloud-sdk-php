@@ -18,17 +18,17 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDailyReportUrl() 获取催收日报下载地址
+ * @method string getDailyReportUrl() 获取到期/逾期提醒日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDailyReportUrl(string $DailyReportUrl) 设置催收日报下载地址
+ * @method void setDailyReportUrl(string $DailyReportUrl) 设置到期/逾期提醒日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResultReportUrl() 获取催收结果下载地址
+ * @method string getResultReportUrl() 获取到期/逾期提醒结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResultReportUrl(string $ResultReportUrl) 设置催收结果下载地址
+ * @method void setResultReportUrl(string $ResultReportUrl) 设置到期/逾期提醒结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDetailReportUrl() 获取催收明细下载地址
+ * @method string getDetailReportUrl() 获取到期/逾期提醒明细下载地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDetailReportUrl(string $DetailReportUrl) 设置催收明细下载地址
+ * @method void setDetailReportUrl(string $DetailReportUrl) 设置到期/逾期提醒明细下载地址
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCallbackDailyReportUrl() 获取回访日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,19 +52,19 @@ use TencentCloud\Common\AbstractModel;
 class DownloadReportResponse extends AbstractModel
 {
     /**
-     * @var string 催收日报下载地址
+     * @var string 到期/逾期提醒日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DailyReportUrl;
 
     /**
-     * @var string 催收结果下载地址
+     * @var string 到期/逾期提醒结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultReportUrl;
 
     /**
-     * @var string 催收明细下载地址
+     * @var string 到期/逾期提醒明细下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetailReportUrl;
@@ -92,11 +92,11 @@ class DownloadReportResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $DailyReportUrl 催收日报下载地址
+     * @param string $DailyReportUrl 到期/逾期提醒日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResultReportUrl 催收结果下载地址
+     * @param string $ResultReportUrl 到期/逾期提醒结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DetailReportUrl 催收明细下载地址
+     * @param string $DetailReportUrl 到期/逾期提醒明细下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CallbackDailyReportUrl 回访日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。

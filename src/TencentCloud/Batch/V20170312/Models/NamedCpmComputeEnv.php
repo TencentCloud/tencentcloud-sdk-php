@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) 设置计算节点期望个数
  * @method string getEnvDescription() 获取计算环境描述
  * @method void setEnvDescription(string $EnvDescription) 设置计算环境描述
- * @method string getEnvType() 获取计算环境管理类型
- * @method void setEnvType(string $EnvType) 设置计算环境管理类型
+ * @method string getEnvType() 获取计算环境管理类型， 取值MANAGED。
+ * @method void setEnvType(string $EnvType) 设置计算环境管理类型， 取值MANAGED。
  * @method array getAuthentications() 获取授权信息
  * @method void setAuthentications(array $Authentications) 设置授权信息
  * @method array getInputMappings() 获取输入映射信息
@@ -64,7 +64,7 @@ class NamedCpmComputeEnv extends AbstractModel
     public $EnvDescription;
 
     /**
-     * @var string 计算环境管理类型
+     * @var string 计算环境管理类型， 取值MANAGED。
      */
     public $EnvType;
 
@@ -92,7 +92,7 @@ class NamedCpmComputeEnv extends AbstractModel
      * @param EnvDataCpm $EnvData 计算环境具体参数
      * @param integer $DesiredComputeNodeCount 计算节点期望个数
      * @param string $EnvDescription 计算环境描述
-     * @param string $EnvType 计算环境管理类型
+     * @param string $EnvType 计算环境管理类型， 取值MANAGED。
      * @param array $Authentications 授权信息
      * @param array $InputMappings 输入映射信息
      * @param Notification $Notifications 通知信息

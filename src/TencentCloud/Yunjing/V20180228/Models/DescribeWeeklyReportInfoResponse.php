@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBruteAttackSuccessNum(integer $BruteAttackSuccessNum) 设置密码破解成功数。
  * @method integer getVulNum() 获取漏洞数。
  * @method void setVulNum(integer $VulNum) 设置漏洞数。
+ * @method string getDownloadUrl() 获取导出文件下载地址。
+ * @method void setDownloadUrl(string $DownloadUrl) 设置导出文件下载地址。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -121,6 +123,11 @@ class DescribeWeeklyReportInfoResponse extends AbstractModel
     public $VulNum;
 
     /**
+     * @var string 导出文件下载地址。
+     */
+    public $DownloadUrl;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -140,6 +147,7 @@ class DescribeWeeklyReportInfoResponse extends AbstractModel
      * @param integer $NonlocalLoginNum 异地登录数。
      * @param integer $BruteAttackSuccessNum 密码破解成功数。
      * @param integer $VulNum 漏洞数。
+     * @param string $DownloadUrl 导出文件下载地址。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -200,6 +208,10 @@ class DescribeWeeklyReportInfoResponse extends AbstractModel
 
         if (array_key_exists("VulNum",$param) and $param["VulNum"] !== null) {
             $this->VulNum = $param["VulNum"];
+        }
+
+        if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
+            $this->DownloadUrl = $param["DownloadUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
  * @method string getQuuid() 获取CVM或BM机器唯一Uuid。
  * @method void setQuuid(string $Quuid) 设置CVM或BM机器唯一Uuid。
- * @method integer getVulNum() 获取漏洞数，非专业版将返回：0。
- * @method void setVulNum(integer $VulNum) 设置漏洞数，非专业版将返回：0。
+ * @method integer getVulNum() 获取漏洞数。
+ * @method void setVulNum(integer $VulNum) 设置漏洞数。
  * @method string getMachineIp() 获取主机IP。
  * @method void setMachineIp(string $MachineIp) 设置主机IP。
  * @method boolean getIsProVersion() 获取是否是专业版。
@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) 设置主机状态。
 <li>POSTPAY: 表示后付费，即按量计费  </li>
 <li>PREPAY: 表示预付费，即包年包月</li>
+ * @method integer getMalwareNum() 获取木马数。
+ * @method void setMalwareNum(integer $MalwareNum) 设置木马数。
+ * @method array getTag() 获取标签信息
+ * @method void setTag(array $Tag) 设置标签信息
  */
 
 /**
@@ -85,7 +89,7 @@ class Machine extends AbstractModel
     public $Quuid;
 
     /**
-     * @var integer 漏洞数，非专业版将返回：0。
+     * @var integer 漏洞数。
      */
     public $VulNum;
 
@@ -112,6 +116,16 @@ class Machine extends AbstractModel
 <li>PREPAY: 表示预付费，即包年包月</li>
      */
     public $PayMode;
+
+    /**
+     * @var integer 木马数。
+     */
+    public $MalwareNum;
+
+    /**
+     * @var array 标签信息
+     */
+    public $Tag;
     /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
@@ -120,7 +134,7 @@ class Machine extends AbstractModel
 <li>ONLINE: 在线</li>
      * @param string $Uuid 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
      * @param string $Quuid CVM或BM机器唯一Uuid。
-     * @param integer $VulNum 漏洞数，非专业版将返回：0。
+     * @param integer $VulNum 漏洞数。
      * @param string $MachineIp 主机IP。
      * @param boolean $IsProVersion 是否是专业版。
 <li>true： 是</li>
@@ -129,6 +143,8 @@ class Machine extends AbstractModel
      * @param string $PayMode 主机状态。
 <li>POSTPAY: 表示后付费，即按量计费  </li>
 <li>PREPAY: 表示预付费，即包年包月</li>
+     * @param integer $MalwareNum 木马数。
+     * @param array $Tag 标签信息
      */
     function __construct()
     {
@@ -180,6 +196,19 @@ class Machine extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("MalwareNum",$param) and $param["MalwareNum"] !== null) {
+            $this->MalwareNum = $param["MalwareNum"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new MachineTag();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
         }
     }
 }

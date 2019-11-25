@@ -25,9 +25,9 @@ use TencentCloud\Cws\V20180312\Models as Models;
 * @method Models\CreateMonitorsResponse CreateMonitors(Models\CreateMonitorsRequest $req) 本接口（CreateMonitors）用于新增一个或多个站点的监测任务。
 * @method Models\CreateSitesResponse CreateSites(Models\CreateSitesRequest $req) 本接口（CreateSites）用于新增一个或多个站点。
 * @method Models\CreateSitesScansResponse CreateSitesScans(Models\CreateSitesScansRequest $req) 本接口（CreateSitesScans）用于新增一个或多个站点的单次扫描任务。
-* @method Models\CreateVulsMisinformationResponse CreateVulsMisinformation(Models\CreateVulsMisinformationRequest $req) 本接口（CreateVulsMisinformation）用于新增一个或多个漏洞误报信息。
+* @method Models\CreateVulsMisinformationResponse CreateVulsMisinformation(Models\CreateVulsMisinformationRequest $req) 本接口（CreateVulsMisinformation）可以用于新增一个或多个漏洞误报信息。
 * @method Models\CreateVulsReportResponse CreateVulsReport(Models\CreateVulsReportRequest $req) 本接口 (CreateVulsReport) 用于生成漏洞报告并返回下载链接。
-* @method Models\DeleteMonitorsResponse DeleteMonitors(Models\DeleteMonitorsRequest $req) 本接口 (DeleteMonitors) 用于删除监控任务。
+* @method Models\DeleteMonitorsResponse DeleteMonitors(Models\DeleteMonitorsRequest $req) 本接口 (DeleteMonitors) 用于删除用户监控任务。
 * @method Models\DeleteSitesResponse DeleteSites(Models\DeleteSitesRequest $req) 本接口 (DeleteSites) 用于删除站点。
 * @method Models\DescribeConfigResponse DescribeConfig(Models\DescribeConfigRequest $req) 本接口 (DescribeConfig) 用于查询用户配置的详细信息。
 * @method Models\DescribeMonitorsResponse DescribeMonitors(Models\DescribeMonitorsRequest $req) 本接口 (DescribeMonitors) 用于查询一个或多个监控任务的详细信息。

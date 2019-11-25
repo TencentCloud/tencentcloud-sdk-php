@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getNumber() 获取新增站点数。
  * @method void setNumber(integer $Number) 设置新增站点数。
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method array getSites() 获取站点数组
+ * @method void setSites(array $Sites) 设置站点数组
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -35,12 +37,18 @@ class CreateSitesResponse extends AbstractModel
     public $Number;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var array 站点数组
+     */
+    public $Sites;
+
+    /**
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param integer $Number 新增站点数。
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param array $Sites 站点数组
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -56,6 +64,15 @@ class CreateSitesResponse extends AbstractModel
         }
         if (array_key_exists("Number",$param) and $param["Number"] !== null) {
             $this->Number = $param["Number"];
+        }
+
+        if (array_key_exists("Sites",$param) and $param["Sites"] !== null) {
+            $this->Sites = [];
+            foreach ($param["Sites"] as $key => $value){
+                $obj = new MiniSite();
+                $obj->deserialize($value);
+                array_push($this->Sites, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

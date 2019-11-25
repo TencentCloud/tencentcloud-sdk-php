@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProVersionNum(integer $ProVersionNum) 设置专业版机器数。
  * @method integer getImpactedHostNum() 获取受影响的专业版主机数。
  * @method void setImpactedHostNum(integer $ImpactedHostNum) 设置受影响的专业版主机数。
+ * @method integer getHostNum() 获取主机总数。
+ * @method void setHostNum(integer $HostNum) 设置主机总数。
+ * @method integer getBasicVersionNum() 获取基础版机器数。
+ * @method void setBasicVersionNum(integer $BasicVersionNum) 设置基础版机器数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,6 +53,16 @@ class DescribeVulScanResultResponse extends AbstractModel
     public $ImpactedHostNum;
 
     /**
+     * @var integer 主机总数。
+     */
+    public $HostNum;
+
+    /**
+     * @var integer 基础版机器数。
+     */
+    public $BasicVersionNum;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -56,6 +70,8 @@ class DescribeVulScanResultResponse extends AbstractModel
      * @param integer $VulNum 漏洞数量。
      * @param integer $ProVersionNum 专业版机器数。
      * @param integer $ImpactedHostNum 受影响的专业版主机数。
+     * @param integer $HostNum 主机总数。
+     * @param integer $BasicVersionNum 基础版机器数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -80,6 +96,14 @@ class DescribeVulScanResultResponse extends AbstractModel
 
         if (array_key_exists("ImpactedHostNum",$param) and $param["ImpactedHostNum"] !== null) {
             $this->ImpactedHostNum = $param["ImpactedHostNum"];
+        }
+
+        if (array_key_exists("HostNum",$param) and $param["HostNum"] !== null) {
+            $this->HostNum = $param["HostNum"];
+        }
+
+        if (array_key_exists("BasicVersionNum",$param) and $param["BasicVersionNum"] !== null) {
+            $this->BasicVersionNum = $param["BasicVersionNum"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -22,7 +22,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cr\V20180321\Models as Models;
 
 /**
-* @method Models\ApplyBlackListResponse ApplyBlackList(Models\ApplyBlackListRequest $req) 提交黑名单后，黑名单中有效期内的号码将停止拨打，适用于提醒、催收、回访场景。
+* @method Models\ApplyBlackListResponse ApplyBlackList(Models\ApplyBlackListRequest $req) 提交黑名单后，黑名单中有效期内的号码将停止拨打，适用于到期/逾期提醒、回访场景。
 * @method Models\ApplyCreditAuditResponse ApplyCreditAudit(Models\ApplyCreditAuditRequest $req) 提交信审外呼申请，返回当次请求日期。
 * @method Models\DescribeCreditResultResponse DescribeCreditResult(Models\DescribeCreditResultRequest $req) 根据信审任务ID和请求日期，获取相关信审结果。
 * @method Models\DescribeRecordsResponse DescribeRecords(Models\DescribeRecordsRequest $req) 用于获取指定案件的录音地址，次日早上8:00后可查询前日录音。
@@ -33,10 +33,10 @@ use TencentCloud\Cr\V20180321\Models as Models;
 * @method Models\DownloadReportResponse DownloadReport(Models\DownloadReportRequest $req) 用于下载当日催收和回访结果报表。当日23:00后，可获取当日催收结果，次日00:30后，可获取昨日回访结果。
 * @method Models\UploadDataFileResponse UploadDataFile(Models\UploadDataFileRequest $req) <p>该接口包含上传下列文件：</p>
 <ol style="margin-bottom:10px;">
-  <li>入催文件：用于每天入催文件的上传</li>
-  <li>还款文件：实时上传当前已还款客户，用于还款客户的实时停催</li>
+  <li>到期/逾期提醒文件：用于每天到期/逾期提醒文件的上传</li>
+  <li>到期/逾期提醒停拨文件：用于实时上传到期/逾期提醒停拨文件，文件中的清单实时停拨</li>
   <li>回访文件：用于每天贷中回访文件的上传</li>
-  <li>回访停拨文件：实时上传回访停拨名单文件，文件中的名单实时停拨</li>
+  <li>回访停拨文件：用于实时上传回访停拨文件，文件中的清单实时停拨</li>
 </ol>
 接口返回数据任务ID，支持xlsx、xls、csv、zip格式，文档大小不超过50MB。
 * @method Models\UploadFileResponse UploadFile(Models\UploadFileRequest $req) 客户通过调用该接口上传需催收文档，格式需为excel格式。接口返回任务ID。

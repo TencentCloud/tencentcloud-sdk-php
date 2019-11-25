@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置漏洞描述。
  * @method integer getVulId() 获取漏洞种类ID。
  * @method void setVulId(integer $VulId) 设置漏洞种类ID。
+ * @method boolean getIsProVersion() 获取是否为专业版。
+ * @method void setIsProVersion(boolean $IsProVersion) 设置是否为专业版。
  */
 
 /**
@@ -89,6 +91,11 @@ class ImpactedHost extends AbstractModel
      * @var integer 漏洞种类ID。
      */
     public $VulId;
+
+    /**
+     * @var boolean 是否为专业版。
+     */
+    public $IsProVersion;
     /**
      * @param integer $Id 漏洞ID。
      * @param string $MachineIp 主机IP。
@@ -101,6 +108,7 @@ class ImpactedHost extends AbstractModel
      * @param string $Uuid 云镜客户端唯一标识UUID。
      * @param string $Description 漏洞描述。
      * @param integer $VulId 漏洞种类ID。
+     * @param boolean $IsProVersion 是否为专业版。
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class ImpactedHost extends AbstractModel
 
         if (array_key_exists("VulId",$param) and $param["VulId"] !== null) {
             $this->VulId = $param["VulId"];
+        }
+
+        if (array_key_exists("IsProVersion",$param) and $param["IsProVersion"] !== null) {
+            $this->IsProVersion = $param["IsProVersion"];
         }
     }
 }

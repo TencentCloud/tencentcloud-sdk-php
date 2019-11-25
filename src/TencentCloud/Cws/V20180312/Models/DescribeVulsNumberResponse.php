@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSites(array $Sites) 设置已验证的网站列表。
  * @method array getImpactSites() 获取受影响的网站列表。
  * @method void setImpactSites(array $ImpactSites) 设置受影响的网站列表。
- * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
@@ -91,7 +91,7 @@ class DescribeVulsNumberResponse extends AbstractModel
     public $ImpactSites;
 
     /**
-     * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
@@ -104,7 +104,7 @@ class DescribeVulsNumberResponse extends AbstractModel
      * @param integer $PageCount 扫描页面总数。
      * @param array $Sites 已验证的网站列表。
      * @param array $ImpactSites 受影响的网站列表。
-     * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyVersion(string $KeyVersion) 设置水印Key的版本号
  * @method integer getOpenStatus() 获取是否开启，取值[0（没有开启），1（已开启）]
  * @method void setOpenStatus(integer $OpenStatus) 设置是否开启，取值[0（没有开启），1（已开启）]
- * @method string getCreateTime() 获取秘钥生成时间
- * @method void setCreateTime(string $CreateTime) 设置秘钥生成时间
+ * @method string getCreateTime() 获取密钥生成时间
+ * @method void setCreateTime(string $CreateTime) 设置密钥生成时间
  */
 
 /**
@@ -56,7 +56,7 @@ class WaterPrintKey extends AbstractModel
     public $OpenStatus;
 
     /**
-     * @var string 秘钥生成时间
+     * @var string 密钥生成时间
      */
     public $CreateTime;
     /**
@@ -64,7 +64,7 @@ class WaterPrintKey extends AbstractModel
      * @param string $KeyContent 水印Key值
      * @param string $KeyVersion 水印Key的版本号
      * @param integer $OpenStatus 是否开启，取值[0（没有开启），1（已开启）]
-     * @param string $CreateTime 秘钥生成时间
+     * @param string $CreateTime 密钥生成时间
      */
     function __construct()
     {

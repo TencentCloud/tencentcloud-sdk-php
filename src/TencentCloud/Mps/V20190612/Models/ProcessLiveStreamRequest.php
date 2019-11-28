@@ -28,10 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputDir(string $OutputDir) 设置直播流处理生成的文件输出的目标目录，如`/movie/201909/`，如果不填为 `/` 目录。
  * @method AiContentReviewTaskInput getAiContentReviewTask() 获取视频内容审核类型任务参数。
  * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) 设置视频内容审核类型任务参数。
- * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
- * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+ * @method AiRecognitionTaskInput getAiRecognitionTask() 获取视频内容识别类型任务参数。
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置视频内容识别类型任务参数。
  * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+ * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+ * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
  */
 
 /**
@@ -65,22 +67,28 @@ class ProcessLiveStreamRequest extends AbstractModel
     public $AiContentReviewTask;
 
     /**
-     * @var string 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * @var AiRecognitionTaskInput 视频内容识别类型任务参数。
      */
-    public $SessionContext;
+    public $AiRecognitionTask;
 
     /**
      * @var string 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public $SessionId;
+
+    /**
+     * @var string 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     */
+    public $SessionContext;
     /**
      * @param string $Url 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
      * @param LiveStreamTaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息，用于指定直播流处理的结果。
      * @param TaskOutputStorage $OutputStorage 直播流处理输出文件的目标存储。如处理有文件输出，该参数为必填项。
      * @param string $OutputDir 直播流处理生成的文件输出的目标目录，如`/movie/201909/`，如果不填为 `/` 目录。
      * @param AiContentReviewTaskInput $AiContentReviewTask 视频内容审核类型任务参数。
-     * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * @param AiRecognitionTaskInput $AiRecognitionTask 视频内容识别类型任务参数。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     function __construct()
     {
@@ -117,12 +125,17 @@ class ProcessLiveStreamRequest extends AbstractModel
             $this->AiContentReviewTask->deserialize($param["AiContentReviewTask"]);
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists("AiRecognitionTask",$param) and $param["AiRecognitionTask"] !== null) {
+            $this->AiRecognitionTask = new AiRecognitionTaskInput();
+            $this->AiRecognitionTask->deserialize($param["AiRecognitionTask"]);
         }
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
+            $this->SessionContext = $param["SessionContext"];
         }
     }
 }

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAdvancedInfo() 获取保留字段，暂不支持
  * @method void setAdvancedInfo(string $AdvancedInfo) 设置保留字段，暂不支持
- * @method ItemCoord getItemCoord() 获取文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
- * @method void setItemCoord(ItemCoord $ItemCoord) 设置文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+ * @method ItemCoord getItemCoord() 获取文本行旋转纠正之后在图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+ * @method void setItemCoord(ItemCoord $ItemCoord) 设置文本行旋转纠正之后在图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
  * @method string getExpressionType() 获取算式题型编号：
 ‘1’: 加减乘除四则
 ‘2’: 加减乘除已知结果求运算因子
@@ -90,7 +90,7 @@ class TextArithmetic extends AbstractModel
     public $AdvancedInfo;
 
     /**
-     * @var ItemCoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     * @var ItemCoord 文本行旋转纠正之后在图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
      */
     public $ItemCoord;
 
@@ -116,7 +116,7 @@ class TextArithmetic extends AbstractModel
      * @param array $Polygon 原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdvancedInfo 保留字段，暂不支持
-     * @param ItemCoord $ItemCoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     * @param ItemCoord $ItemCoord 文本行旋转纠正之后在图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
      * @param string $ExpressionType 算式题型编号：
 ‘1’: 加减乘除四则
 ‘2’: 加减乘除已知结果求运算因子

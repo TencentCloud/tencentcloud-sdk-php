@@ -28,13 +28,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置黑/白名单类型；取值[white(白名单)，black(黑名单)]
  * @method array getIpList() 获取黑/白名单的IP数组
  * @method void setIpList(array $IpList) 设置黑/白名单的IP数组
- * @method string getProtocol() 获取可选字段，代表CC防护类型，取值[http（http协议的CC防护），https（https协议的CC防护）]；当不填时，默认为http协议的CC防护；当填写https时还需要填写Domain和RuleId字段；
- * @method void setProtocol(string $Protocol) 设置可选字段，代表CC防护类型，取值[http（http协议的CC防护），https（https协议的CC防护）]；当不填时，默认为http协议的CC防护；当填写https时还需要填写Domain和RuleId字段；
- * @method string getDomain() 获取可选字段，表示https协议的7层转发规则域名（通过获取7层转发规则接口可以获取域名），只有当Protocol字段为https时才必须填写此字段；
- * @method void setDomain(string $Domain) 设置可选字段，表示https协议的7层转发规则域名（通过获取7层转发规则接口可以获取域名），只有当Protocol字段为https时才必须填写此字段；
- * @method string getRuleId() 获取可选字段，表示https协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID），
+ * @method string getProtocol() 获取可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写Domain和RuleId字段；
+ * @method void setProtocol(string $Protocol) 设置可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写Domain和RuleId字段；
+ * @method string getDomain() 获取可选字段，表示HTTPS协议的7层转发规则域名（通过获取7层转发规则接口可以获取域名），只有当Protocol字段为https时才必须填写此字段；
+ * @method void setDomain(string $Domain) 设置可选字段，表示HTTPS协议的7层转发规则域名（通过获取7层转发规则接口可以获取域名），只有当Protocol字段为https时才必须填写此字段；
+ * @method string getRuleId() 获取可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID），
 当Method为delete时，不用填写此字段；
- * @method void setRuleId(string $RuleId) 设置可选字段，表示https协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID），
+ * @method void setRuleId(string $RuleId) 设置可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID），
 当Method为delete时，不用填写此字段；
  */
 
@@ -69,17 +69,17 @@ class ModifyCCIpAllowDenyRequest extends AbstractModel
     public $IpList;
 
     /**
-     * @var string 可选字段，代表CC防护类型，取值[http（http协议的CC防护），https（https协议的CC防护）]；当不填时，默认为http协议的CC防护；当填写https时还需要填写Domain和RuleId字段；
+     * @var string 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写Domain和RuleId字段；
      */
     public $Protocol;
 
     /**
-     * @var string 可选字段，表示https协议的7层转发规则域名（通过获取7层转发规则接口可以获取域名），只有当Protocol字段为https时才必须填写此字段；
+     * @var string 可选字段，表示HTTPS协议的7层转发规则域名（通过获取7层转发规则接口可以获取域名），只有当Protocol字段为https时才必须填写此字段；
      */
     public $Domain;
 
     /**
-     * @var string 可选字段，表示https协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID），
+     * @var string 可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID），
 当Method为delete时，不用填写此字段；
      */
     public $RuleId;
@@ -89,9 +89,9 @@ class ModifyCCIpAllowDenyRequest extends AbstractModel
      * @param string $Method add表示添加，delete表示删除
      * @param string $Type 黑/白名单类型；取值[white(白名单)，black(黑名单)]
      * @param array $IpList 黑/白名单的IP数组
-     * @param string $Protocol 可选字段，代表CC防护类型，取值[http（http协议的CC防护），https（https协议的CC防护）]；当不填时，默认为http协议的CC防护；当填写https时还需要填写Domain和RuleId字段；
-     * @param string $Domain 可选字段，表示https协议的7层转发规则域名（通过获取7层转发规则接口可以获取域名），只有当Protocol字段为https时才必须填写此字段；
-     * @param string $RuleId 可选字段，表示https协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID），
+     * @param string $Protocol 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写Domain和RuleId字段；
+     * @param string $Domain 可选字段，表示HTTPS协议的7层转发规则域名（通过获取7层转发规则接口可以获取域名），只有当Protocol字段为https时才必须填写此字段；
+     * @param string $RuleId 可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID），
 当Method为delete时，不用填写此字段；
      */
     function __construct()

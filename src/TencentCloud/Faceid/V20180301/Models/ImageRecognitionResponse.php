@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSim(float $Sim) 设置相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
  * @method string getResult() 获取业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
  * @method void setResult(string $Result) 设置业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
- * @method string getDescription() 获取业务错误描述
- * @method void setDescription(string $Description) 设置业务错误描述
+ * @method string getDescription() 获取业务结果描述。
+ * @method void setDescription(string $Description) 设置业务结果描述。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -44,7 +44,7 @@ class ImageRecognitionResponse extends AbstractModel
     public $Result;
 
     /**
-     * @var string 业务错误描述
+     * @var string 业务结果描述。
      */
     public $Description;
 
@@ -55,7 +55,7 @@ class ImageRecognitionResponse extends AbstractModel
     /**
      * @param float $Sim 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
      * @param string $Result 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
-     * @param string $Description 业务错误描述
+     * @param string $Description 业务结果描述。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

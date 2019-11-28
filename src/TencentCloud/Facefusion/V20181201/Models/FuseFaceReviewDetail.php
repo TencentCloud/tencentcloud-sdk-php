@@ -18,14 +18,26 @@ namespace TencentCloud\Facefusion\V20181201\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getField() 获取鉴政使用字段, 为职业属性,其他审核结果对应上一级category
- * @method void setField(string $Field) 设置鉴政使用字段, 为职业属性,其他审核结果对应上一级category
+ * @method string getField() 获取保留字段
+ * @method void setField(string $Field) 设置保留字段
  * @method string getLabel() 获取人员名称
  * @method void setLabel(string $Label) 设置人员名称
- * @method float getConfidence() 获取对应识别label的置信度
- * @method void setConfidence(float $Confidence) 设置对应识别label的置信度
- * @method string getSuggestion() 获取此字段为保留字段，目前统一返回pass。
- * @method void setSuggestion(string $Suggestion) 设置此字段为保留字段，目前统一返回pass。
+ * @method float getConfidence() 获取对应识别label的置信度，分数越高意味涉政可能性越大。 
+0到70，Suggestion建议为PASS； 
+70到80，Suggestion建议为REVIEW； 
+80到100，Suggestion建议为BLOCK。
+ * @method void setConfidence(float $Confidence) 设置对应识别label的置信度，分数越高意味涉政可能性越大。 
+0到70，Suggestion建议为PASS； 
+70到80，Suggestion建议为REVIEW； 
+80到100，Suggestion建议为BLOCK。
+ * @method string getSuggestion() 获取识别场景的审核结论：  
+PASS：正常 
+REVIEW：疑似  
+BLOCK：违规
+ * @method void setSuggestion(string $Suggestion) 设置识别场景的审核结论：  
+PASS：正常 
+REVIEW：疑似  
+BLOCK：违规
  */
 
 /**
@@ -34,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class FuseFaceReviewDetail extends AbstractModel
 {
     /**
-     * @var string 鉴政使用字段, 为职业属性,其他审核结果对应上一级category
+     * @var string 保留字段
      */
     public $Field;
 
@@ -44,19 +56,31 @@ class FuseFaceReviewDetail extends AbstractModel
     public $Label;
 
     /**
-     * @var float 对应识别label的置信度
+     * @var float 对应识别label的置信度，分数越高意味涉政可能性越大。 
+0到70，Suggestion建议为PASS； 
+70到80，Suggestion建议为REVIEW； 
+80到100，Suggestion建议为BLOCK。
      */
     public $Confidence;
 
     /**
-     * @var string 此字段为保留字段，目前统一返回pass。
+     * @var string 识别场景的审核结论：  
+PASS：正常 
+REVIEW：疑似  
+BLOCK：违规
      */
     public $Suggestion;
     /**
-     * @param string $Field 鉴政使用字段, 为职业属性,其他审核结果对应上一级category
+     * @param string $Field 保留字段
      * @param string $Label 人员名称
-     * @param float $Confidence 对应识别label的置信度
-     * @param string $Suggestion 此字段为保留字段，目前统一返回pass。
+     * @param float $Confidence 对应识别label的置信度，分数越高意味涉政可能性越大。 
+0到70，Suggestion建议为PASS； 
+70到80，Suggestion建议为REVIEW； 
+80到100，Suggestion建议为BLOCK。
+     * @param string $Suggestion 识别场景的审核结论：  
+PASS：正常 
+REVIEW：疑似  
+BLOCK：违规
      */
     function __construct()
     {

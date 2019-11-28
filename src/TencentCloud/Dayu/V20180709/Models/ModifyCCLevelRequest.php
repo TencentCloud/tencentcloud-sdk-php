@@ -18,18 +18,16 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+ * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+ * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method string getId() 获取资源ID
  * @method void setId(string $Id) 设置资源ID
  * @method string getLevel() 获取CC防护等级，取值[default(正常), loose(宽松), strict(严格)];
  * @method void setLevel(string $Level) 设置CC防护等级，取值[default(正常), loose(宽松), strict(严格)];
- * @method string getProtocol() 获取可选字段，代表CC防护类型，取值[http（http协议的CC防护），https（https协议的CC防护）]；当不填时，默认为http协议的CC防护；当填写https时还需要填写RuleId字段；
- * @method void setProtocol(string $Protocol) 设置可选字段，代表CC防护类型，取值[http（http协议的CC防护），https（https协议的CC防护）]；当不填时，默认为http协议的CC防护；当填写https时还需要填写RuleId字段；
- * @method string getRuleId() 获取可选字段，表示https协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
-当Protocol=https时必须填写；
- * @method void setRuleId(string $RuleId) 设置可选字段，表示https协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
-当Protocol=https时必须填写；
+ * @method string getProtocol() 获取可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
+ * @method void setProtocol(string $Protocol) 设置可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
+ * @method string getRuleId() 获取表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
+ * @method void setRuleId(string $RuleId) 设置表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
  */
 
 /**
@@ -38,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyCCLevelRequest extends AbstractModel
 {
     /**
-     * @var string 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * @var string 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public $Business;
 
@@ -53,22 +51,20 @@ class ModifyCCLevelRequest extends AbstractModel
     public $Level;
 
     /**
-     * @var string 可选字段，代表CC防护类型，取值[http（http协议的CC防护），https（https协议的CC防护）]；当不填时，默认为http协议的CC防护；当填写https时还需要填写RuleId字段；
+     * @var string 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
      */
     public $Protocol;
 
     /**
-     * @var string 可选字段，表示https协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
-当Protocol=https时必须填写；
+     * @var string 表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
      */
     public $RuleId;
     /**
-     * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param string $Id 资源ID
      * @param string $Level CC防护等级，取值[default(正常), loose(宽松), strict(严格)];
-     * @param string $Protocol 可选字段，代表CC防护类型，取值[http（http协议的CC防护），https（https协议的CC防护）]；当不填时，默认为http协议的CC防护；当填写https时还需要填写RuleId字段；
-     * @param string $RuleId 可选字段，表示https协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
-当Protocol=https时必须填写；
+     * @param string $Protocol 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
+     * @param string $RuleId 表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
      */
     function __construct()
     {

@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(string $Id) 设置资源ID
  * @method string getRuleId() 获取规则ID
  * @method void setRuleId(string $RuleId) 设置规则ID
- * @method integer getCertType() 获取证书类型，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]
- * @method void setCertType(integer $CertType) 设置证书类型，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]
+ * @method integer getCertType() 获取证书类型，当为协议为HTTPS协议时必须填，取值[2(腾讯云托管证书)]
+ * @method void setCertType(integer $CertType) 设置证书类型，当为协议为HTTPS协议时必须填，取值[2(腾讯云托管证书)]
  * @method string getSSLId() 获取当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
  * @method void setSSLId(string $SSLId) 设置当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
  * @method string getCert() 获取当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
  * @method void setCert(string $Cert) 设置当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
- * @method string getPrivateKey() 获取当证书来源为自有证书时，此字段必须填写证书秘钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
- * @method void setPrivateKey(string $PrivateKey) 设置当证书来源为自有证书时，此字段必须填写证书秘钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+ * @method string getPrivateKey() 获取当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+ * @method void setPrivateKey(string $PrivateKey) 设置当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
  */
 
 /**
@@ -55,7 +55,7 @@ class CreateL7RuleCertRequest extends AbstractModel
     public $RuleId;
 
     /**
-     * @var integer 证书类型，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]
+     * @var integer 证书类型，当为协议为HTTPS协议时必须填，取值[2(腾讯云托管证书)]
      */
     public $CertType;
 
@@ -70,17 +70,17 @@ class CreateL7RuleCertRequest extends AbstractModel
     public $Cert;
 
     /**
-     * @var string 当证书来源为自有证书时，此字段必须填写证书秘钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+     * @var string 当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      */
     public $PrivateKey;
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param string $Id 资源ID
      * @param string $RuleId 规则ID
-     * @param integer $CertType 证书类型，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]
+     * @param integer $CertType 证书类型，当为协议为HTTPS协议时必须填，取值[2(腾讯云托管证书)]
      * @param string $SSLId 当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
      * @param string $Cert 当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
-     * @param string $PrivateKey 当证书来源为自有证书时，此字段必须填写证书秘钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+     * @param string $PrivateKey 当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      */
     function __construct()
     {

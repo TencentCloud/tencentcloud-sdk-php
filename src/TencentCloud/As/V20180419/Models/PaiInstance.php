@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getDomainName() 获取实例域名
  * @method void setDomainName(string $DomainName) 设置实例域名
+ * @method string getPaiMateUrl() 获取PAI管理页面URL
+ * @method void setPaiMateUrl(string $PaiMateUrl) 设置PAI管理页面URL
  */
 
 /**
@@ -38,9 +40,15 @@ class PaiInstance extends AbstractModel
      * @var string 实例域名
      */
     public $DomainName;
+
+    /**
+     * @var string PAI管理页面URL
+     */
+    public $PaiMateUrl;
     /**
      * @param string $InstanceId 实例ID
      * @param string $DomainName 实例域名
+     * @param string $PaiMateUrl PAI管理页面URL
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class PaiInstance extends AbstractModel
 
         if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
             $this->DomainName = $param["DomainName"];
+        }
+
+        if (array_key_exists("PaiMateUrl",$param) and $param["PaiMateUrl"] !== null) {
+            $this->PaiMateUrl = $param["PaiMateUrl"];
         }
     }
 }

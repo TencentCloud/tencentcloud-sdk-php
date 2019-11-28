@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSSLId(string $SSLId) 设置当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
  * @method string getCert() 获取当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
  * @method void setCert(string $Cert) 设置当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
- * @method string getPrivateKey() 获取当证书来源为自有证书时，此字段必须填写证书秘钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
- * @method void setPrivateKey(string $PrivateKey) 设置当证书来源为自有证书时，此字段必须填写证书秘钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+ * @method string getPrivateKey() 获取当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+ * @method void setPrivateKey(string $PrivateKey) 设置当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
  * @method string getRuleName() 获取规则描述
  * @method void setRuleName(string $RuleName) 设置规则描述
  * @method integer getStatus() 获取规则状态，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
@@ -117,7 +117,7 @@ class L7RuleEntry extends AbstractModel
     public $Cert;
 
     /**
-     * @var string 当证书来源为自有证书时，此字段必须填写证书秘钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+     * @var string 当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      */
     public $PrivateKey;
 
@@ -162,7 +162,7 @@ class L7RuleEntry extends AbstractModel
      * @param integer $CertType 证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0
      * @param string $SSLId 当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
      * @param string $Cert 当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
-     * @param string $PrivateKey 当证书来源为自有证书时，此字段必须填写证书秘钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+     * @param string $PrivateKey 当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      * @param string $RuleName 规则描述
      * @param integer $Status 规则状态，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
      * @param integer $CCStatus cc防护状态，取值[0(关闭), 1(开启)]

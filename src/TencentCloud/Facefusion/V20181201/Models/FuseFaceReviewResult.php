@@ -18,16 +18,16 @@ namespace TencentCloud\Facefusion\V20181201\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCategory() 获取对应的类别名称 porn, politics, terror
- * @method void setCategory(string $Category) 设置对应的类别名称 porn, politics, terror
- * @method string getCode() 获取对应子类别状态码
- * @method void setCode(string $Code) 设置对应子类别状态码
- * @method string getCodeDescription() 获取对应子类别状态码信息描述
- * @method void setCodeDescription(string $CodeDescription) 设置对应子类别状态码信息描述
- * @method float getConfidence() 获取对应识别种类的置信度
- * @method void setConfidence(float $Confidence) 设置对应识别种类的置信度
- * @method string getSuggestion() 获取此字段为保留字段，目前统一返回pass。
- * @method void setSuggestion(string $Suggestion) 设置此字段为保留字段，目前统一返回pass。
+ * @method string getCategory() 获取保留字段
+ * @method void setCategory(string $Category) 设置保留字段
+ * @method string getCode() 获取状态码， 0为处理成功，其他值为处理失败
+ * @method void setCode(string $Code) 设置状态码， 0为处理成功，其他值为处理失败
+ * @method string getCodeDescription() 获取对应状态码信息描述
+ * @method void setCodeDescription(string $CodeDescription) 设置对应状态码信息描述
+ * @method float getConfidence() 获取保留字段
+ * @method void setConfidence(float $Confidence) 设置保留字段
+ * @method string getSuggestion() 获取保留字段
+ * @method void setSuggestion(string $Suggestion) 设置保留字段
  * @method array getDetailSet() 获取审核详细内容
  * @method void setDetailSet(array $DetailSet) 设置审核详细内容
  */
@@ -38,27 +38,27 @@ use TencentCloud\Common\AbstractModel;
 class FuseFaceReviewResult extends AbstractModel
 {
     /**
-     * @var string 对应的类别名称 porn, politics, terror
+     * @var string 保留字段
      */
     public $Category;
 
     /**
-     * @var string 对应子类别状态码
+     * @var string 状态码， 0为处理成功，其他值为处理失败
      */
     public $Code;
 
     /**
-     * @var string 对应子类别状态码信息描述
+     * @var string 对应状态码信息描述
      */
     public $CodeDescription;
 
     /**
-     * @var float 对应识别种类的置信度
+     * @var float 保留字段
      */
     public $Confidence;
 
     /**
-     * @var string 此字段为保留字段，目前统一返回pass。
+     * @var string 保留字段
      */
     public $Suggestion;
 
@@ -67,11 +67,11 @@ class FuseFaceReviewResult extends AbstractModel
      */
     public $DetailSet;
     /**
-     * @param string $Category 对应的类别名称 porn, politics, terror
-     * @param string $Code 对应子类别状态码
-     * @param string $CodeDescription 对应子类别状态码信息描述
-     * @param float $Confidence 对应识别种类的置信度
-     * @param string $Suggestion 此字段为保留字段，目前统一返回pass。
+     * @param string $Category 保留字段
+     * @param string $Code 状态码， 0为处理成功，其他值为处理失败
+     * @param string $CodeDescription 对应状态码信息描述
+     * @param float $Confidence 保留字段
+     * @param string $Suggestion 保留字段
      * @param array $DetailSet 审核详细内容
      */
     function __construct()

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method array getRuleList() 获取规则列表
  * @method void setRuleList(array $RuleList) 设置规则列表
- * @method array getIpList() 获取Ip列表
- * @method void setIpList(array $IpList) 设置Ip列表
+ * @method array getIpList() 获取IP列表
+ * @method void setIpList(array $IpList) 设置IP列表
  * @method string getProtocol() 获取cc防护类型，取值[http，https]
  * @method void setProtocol(string $Protocol) 设置cc防护类型，取值[http，https]
  * @method string getRuleId() 获取可选字段，表示https的CC防护域名对应的转发规则ID;
@@ -90,7 +90,7 @@ class CCPolicy extends AbstractModel
     public $RuleList;
 
     /**
-     * @var array Ip列表
+     * @var array IP列表
      */
     public $IpList;
 
@@ -117,7 +117,7 @@ class CCPolicy extends AbstractModel
      * @param integer $Switch 生效开关
      * @param string $CreateTime 创建时间
      * @param array $RuleList 规则列表
-     * @param array $IpList Ip列表
+     * @param array $IpList IP列表
      * @param string $Protocol cc防护类型，取值[http，https]
      * @param string $RuleId 可选字段，表示https的CC防护域名对应的转发规则ID;
      * @param string $Domain https的CC防护域名

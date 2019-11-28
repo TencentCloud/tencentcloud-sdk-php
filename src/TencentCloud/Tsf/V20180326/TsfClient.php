@@ -45,6 +45,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
 * @method Models\DeleteServerlessGroupResponse DeleteServerlessGroup(Models\DeleteServerlessGroupRequest $req) 删除Serverless部署组
 * @method Models\DeployContainerGroupResponse DeployContainerGroup(Models\DeployContainerGroupRequest $req) 部署容器应用
 * @method Models\DeployGroupResponse DeployGroup(Models\DeployGroupRequest $req) 部署虚拟机部署组应用
+* @method Models\DeployServerlessGroupResponse DeployServerlessGroup(Models\DeployServerlessGroupRequest $req) 部署Serverless应用
 * @method Models\DescribeApplicationResponse DescribeApplication(Models\DescribeApplicationRequest $req) 获取应用详情
 * @method Models\DescribeApplicationAttributeResponse DescribeApplicationAttribute(Models\DescribeApplicationAttributeRequest $req) 获取应用列表其它字段，如实例数量信息等
 * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) 获取应用列表

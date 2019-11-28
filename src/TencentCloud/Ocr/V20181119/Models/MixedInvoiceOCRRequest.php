@@ -36,6 +36,30 @@ use TencentCloud\Common\AbstractModel;
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+ * @method array getTypes() 获取需要识别的票据类型列表，为空或不填表示识别全部类型。
+0：出租车发票
+1：定额发票
+2：火车票
+3：增值税发票
+5：机票行程单
+8：通用机打发票
+9：汽车票
+10：轮船票
+11：增值税发票（卷票 ）
+12：购车发票
+13：过路过桥费发票
+ * @method void setTypes(array $Types) 设置需要识别的票据类型列表，为空或不填表示识别全部类型。
+0：出租车发票
+1：定额发票
+2：火车票
+3：增值税发票
+5：机票行程单
+8：通用机打发票
+9：汽车票
+10：轮船票
+11：增值税发票（卷票 ）
+12：购车发票
+13：过路过桥费发票
  */
 
 /**
@@ -59,6 +83,22 @@ class MixedInvoiceOCRRequest extends AbstractModel
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      */
     public $ImageUrl;
+
+    /**
+     * @var array 需要识别的票据类型列表，为空或不填表示识别全部类型。
+0：出租车发票
+1：定额发票
+2：火车票
+3：增值税发票
+5：机票行程单
+8：通用机打发票
+9：汽车票
+10：轮船票
+11：增值税发票（卷票 ）
+12：购车发票
+13：过路过桥费发票
+     */
+    public $Types;
     /**
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
@@ -69,6 +109,18 @@ class MixedInvoiceOCRRequest extends AbstractModel
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * @param array $Types 需要识别的票据类型列表，为空或不填表示识别全部类型。
+0：出租车发票
+1：定额发票
+2：火车票
+3：增值税发票
+5：机票行程单
+8：通用机打发票
+9：汽车票
+10：轮船票
+11：增值税发票（卷票 ）
+12：购车发票
+13：过路过桥费发票
      */
     function __construct()
     {
@@ -88,6 +140,10 @@ class MixedInvoiceOCRRequest extends AbstractModel
 
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("Types",$param) and $param["Types"] !== null) {
+            $this->Types = $param["Types"];
         }
     }
 }

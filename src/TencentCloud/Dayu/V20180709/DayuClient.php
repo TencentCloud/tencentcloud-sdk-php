@@ -60,6 +60,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
 * @method Models\DescribeDDoSUsedStatisResponse DescribeDDoSUsedStatis(Models\DescribeDDoSUsedStatisRequest $req) 统计用户的高防资源的使用天数和DDoS攻击防护次数
 * @method Models\DescribeInsurePacksResponse DescribeInsurePacks(Models\DescribeInsurePacksRequest $req) 获取保险包套餐列表
 * @method Models\DescribeIpBlockListResponse DescribeIpBlockList(Models\DescribeIpBlockListRequest $req) 获取IP封堵列表
+* @method Models\DescribeIpUnBlockListResponse DescribeIpUnBlockList(Models\DescribeIpUnBlockListRequest $req) 获取IP解封记录
 * @method Models\DescribeL4HealthConfigResponse DescribeL4HealthConfig(Models\DescribeL4HealthConfigRequest $req) 导出四层健康检查配置
 * @method Models\DescribeL4RulesErrHealthResponse DescribeL4RulesErrHealth(Models\DescribeL4RulesErrHealthRequest $req) 获取L4转发规则健康检查异常结果
 * @method Models\DescribeL7HealthConfigResponse DescribeL7HealthConfig(Models\DescribeL7HealthConfigRequest $req) 导出七层健康检查配置

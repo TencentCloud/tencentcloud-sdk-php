@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterStatus() 获取集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
  * @method void setClusterStatus(string $ClusterStatus) 设置集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
+ * @method string getProperty() 获取集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProperty(string $Property) 设置集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -104,6 +108,12 @@ class Cluster extends AbstractModel
      * @var string 集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
      */
     public $ClusterStatus;
+
+    /**
+     * @var string 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Property;
     /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
@@ -117,6 +127,8 @@ class Cluster extends AbstractModel
      * @param array $TagSpecification 标签描述列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterStatus 集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
+     * @param string $Property 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -178,6 +190,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("ClusterStatus",$param) and $param["ClusterStatus"] !== null) {
             $this->ClusterStatus = $param["ClusterStatus"];
+        }
+
+        if (array_key_exists("Property",$param) and $param["Property"] !== null) {
+            $this->Property = $param["Property"];
         }
     }
 }

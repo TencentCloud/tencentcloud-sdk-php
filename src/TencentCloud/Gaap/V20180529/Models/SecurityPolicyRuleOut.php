@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置要匹配的协议类型（TCP/UDP）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPolicyId() 获取安全策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolicyId(string $PolicyId) 设置安全策略ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -72,6 +76,12 @@ class SecurityPolicyRuleOut extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
+
+    /**
+     * @var string 安全策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PolicyId;
     /**
      * @param string $Action 策略：允许（ACCEPT）或拒绝（DROP）
      * @param string $SourceCidr 请求来源Ip或Ip段
@@ -80,6 +90,8 @@ class SecurityPolicyRuleOut extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleId 规则ID
      * @param string $Protocol 要匹配的协议类型（TCP/UDP）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PolicyId 安全策略ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,10 @@ class SecurityPolicyRuleOut extends AbstractModel
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
         }
     }
 }

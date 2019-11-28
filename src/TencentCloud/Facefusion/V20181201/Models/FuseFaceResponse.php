@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getFusedImage() 获取RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
  * @method void setFusedImage(string $FusedImage) 设置RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+ * @method array getReviewResultSet() 获取鉴政结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReviewResultSet(array $ReviewResultSet) 设置鉴政结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,11 +39,19 @@ class FuseFaceResponse extends AbstractModel
     public $FusedImage;
 
     /**
+     * @var array 鉴政结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReviewResultSet;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param string $FusedImage RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+     * @param array $ReviewResultSet 鉴政结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +68,15 @@ class FuseFaceResponse extends AbstractModel
         }
         if (array_key_exists("FusedImage",$param) and $param["FusedImage"] !== null) {
             $this->FusedImage = $param["FusedImage"];
+        }
+
+        if (array_key_exists("ReviewResultSet",$param) and $param["ReviewResultSet"] !== null) {
+            $this->ReviewResultSet = [];
+            foreach ($param["ReviewResultSet"] as $key => $value){
+                $obj = new FuseFaceReviewResult();
+                $obj->deserialize($value);
+                array_push($this->ReviewResultSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

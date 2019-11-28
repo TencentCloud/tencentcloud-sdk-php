@@ -18,8 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾）
+ * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包）
+ * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包）
  * @method string getId() 获取资源实例ID
  * @method void setId(string $Id) 设置资源实例ID
  * @method string getMetricName() 获取指标名，取值：
@@ -34,8 +34,8 @@ pkg表示包速率；
  * @method void setStartTime(string $StartTime) 设置统计开始时间，秒部分保持为0，分钟部分为5的倍数
  * @method string getEndTime() 获取统计结束时间，秒部分保持为0，分钟部分为5的倍数
  * @method void setEndTime(string $EndTime) 设置统计结束时间，秒部分保持为0，分钟部分为5的倍数
- * @method array getIpList() 获取资源的IP；当不填写时，默认统计资源实例的所有IP；资源实例有多个IP（比如高防IP专业版）时，统计方式是求和；
- * @method void setIpList(array $IpList) 设置资源的IP；当不填写时，默认统计资源实例的所有IP；资源实例有多个IP（比如高防IP专业版）时，统计方式是求和；
+ * @method array getIpList() 获取资源的IP（当Business为bgp-multip时必填，且仅支持一个IP）；当不填写时，默认统计资源实例的所有IP；资源实例有多个IP（比如高防IP专业版）时，统计方式是求和；
+ * @method void setIpList(array $IpList) 设置资源的IP（当Business为bgp-multip时必填，且仅支持一个IP）；当不填写时，默认统计资源实例的所有IP；资源实例有多个IP（比如高防IP专业版）时，统计方式是求和；
  */
 
 /**
@@ -44,7 +44,7 @@ pkg表示包速率；
 class DescribeTransmitStatisRequest extends AbstractModel
 {
     /**
-     * @var string 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾）
+     * @var string 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包）
      */
     public $Business;
 
@@ -76,11 +76,11 @@ pkg表示包速率；
     public $EndTime;
 
     /**
-     * @var array 资源的IP；当不填写时，默认统计资源实例的所有IP；资源实例有多个IP（比如高防IP专业版）时，统计方式是求和；
+     * @var array 资源的IP（当Business为bgp-multip时必填，且仅支持一个IP）；当不填写时，默认统计资源实例的所有IP；资源实例有多个IP（比如高防IP专业版）时，统计方式是求和；
      */
     public $IpList;
     /**
-     * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾）
+     * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包）
      * @param string $Id 资源实例ID
      * @param string $MetricName 指标名，取值：
 traffic表示流量带宽；
@@ -88,7 +88,7 @@ pkg表示包速率；
      * @param integer $Period 统计时间粒度（300表示5分钟；3600表示小时；86400表示天）
      * @param string $StartTime 统计开始时间，秒部分保持为0，分钟部分为5的倍数
      * @param string $EndTime 统计结束时间，秒部分保持为0，分钟部分为5的倍数
-     * @param array $IpList 资源的IP；当不填写时，默认统计资源实例的所有IP；资源实例有多个IP（比如高防IP专业版）时，统计方式是求和；
+     * @param array $IpList 资源的IP（当Business为bgp-multip时必填，且仅支持一个IP）；当不填写时，默认统计资源实例的所有IP；资源实例有多个IP（比如高防IP专业版）时，统计方式是求和；
      */
     function __construct()
     {

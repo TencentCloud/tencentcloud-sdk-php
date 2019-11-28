@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginSettings(LoginSettings $LoginSettings) 设置节点登录信息（目前仅支持使用Password或者单个KeyIds）
  * @method array getSecurityGroupIds() 获取实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+ * @method string getHostName() 获取重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
+ * @method void setHostName(string $HostName) 设置重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
  */
 
 /**
@@ -66,6 +68,11 @@ class AddExistedInstancesRequest extends AbstractModel
      * @var array 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
      */
     public $SecurityGroupIds;
+
+    /**
+     * @var string 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
+     */
+    public $HostName;
     /**
      * @param string $ClusterId 集群ID
      * @param array $InstanceIds 实例列表
@@ -73,6 +80,7 @@ class AddExistedInstancesRequest extends AbstractModel
      * @param EnhancedService $EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
      * @param LoginSettings $LoginSettings 节点登录信息（目前仅支持使用Password或者单个KeyIds）
      * @param array $SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+     * @param string $HostName 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
      */
     function __construct()
     {
@@ -111,6 +119,10 @@ class AddExistedInstancesRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
+            $this->HostName = $param["HostName"];
         }
     }
 }

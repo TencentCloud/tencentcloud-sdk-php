@@ -22,9 +22,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Faceid\V20180301\Models as Models;
 
 /**
-* @method Models\BankCard2EVerificationResponse BankCard2EVerification(Models\BankCard2EVerificationRequest $req) 输入银行卡号、姓名，校验信息的真实性和一致性。
-* @method Models\BankCard4EVerificationResponse BankCard4EVerification(Models\BankCard4EVerificationRequest $req) 输入银行卡号、姓名、开户证件号、开户手机号，校验信息的真实性和一致性。
-* @method Models\BankCardVerificationResponse BankCardVerification(Models\BankCardVerificationRequest $req) 银行卡三要素核验，输入银行卡号、姓名、开户证件号，校验信息的真实性和一致性。
+* @method Models\BankCard2EVerificationResponse BankCard2EVerification(Models\BankCard2EVerificationRequest $req) 本接口用于校验姓名和银行卡号的真实性和一致性。
+* @method Models\BankCard4EVerificationResponse BankCard4EVerification(Models\BankCard4EVerificationRequest $req) 本接口用于输入银行卡号、姓名、开户证件号、开户手机号，校验信息的真实性和一致性。
+* @method Models\BankCardVerificationResponse BankCardVerification(Models\BankCardVerificationRequest $req) 本接口用于银行卡号、姓名、开户证件号信息的真实性和一致性。
 * @method Models\DetectAuthResponse DetectAuth(Models\DetectAuthRequest $req) 每次调用人脸核身SaaS化服务前，需先调用本接口获取BizToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
 * @method Models\GetActionSequenceResponse GetActionSequence(Models\GetActionSequenceRequest $req) 使用动作活体检测模式前，需调用本接口获取动作顺序。
 * @method Models\GetDetectInfoResponse GetDetectInfo(Models\GetDetectInfoRequest $req) 完成验证后，用BizToken调用本接口获取结果信息，BizToken生成后三天内（3\*24\*3,600秒）可多次拉取。
@@ -35,6 +35,8 @@ use TencentCloud\Faceid\V20180301\Models as Models;
 * @method Models\LivenessResponse Liveness(Models\LivenessRequest $req) 活体检测
 * @method Models\LivenessCompareResponse LivenessCompare(Models\LivenessCompareRequest $req) 传入视频和照片，先判断视频中是否为真人，判断为真人后，再判断该视频中的人与上传照片是否属于同一个人。
 * @method Models\LivenessRecognitionResponse LivenessRecognition(Models\LivenessRecognitionRequest $req) 传入视频和身份信息，先判断视频中是否为真人，判断为真人后，再判断该视频中的人与公安权威库的证件照是否属于同一个人。
+* @method Models\MinorsVerificationResponse MinorsVerification(Models\MinorsVerificationRequest $req) 传入手机号或者姓名和身份证号，判断该信息是否已实名认证且年满18周岁。
+* @method Models\PhoneVerificationResponse PhoneVerification(Models\PhoneVerificationRequest $req) 本接口用于校验手机号、姓名和身份证号的真实性和一致性。
  */
 
 class FaceidClient extends AbstractClient

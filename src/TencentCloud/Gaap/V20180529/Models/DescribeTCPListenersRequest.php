@@ -18,10 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProxyId() 获取通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
- * @method void setProxyId(string $ProxyId) 设置通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
- * @method string getListenerId() 获取过滤条件，根据监听器ID精确查询
- * @method void setListenerId(string $ListenerId) 设置过滤条件，根据监听器ID精确查询
+ * @method string getProxyId() 获取过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
+ * @method void setProxyId(string $ProxyId) 设置过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
+ * @method string getListenerId() 获取过滤条件，根据监听器ID精确查询。
+当设置了ProxyId时，会检查该监听器是否归属于该通道。
+当设置了GroupId时，会检查该监听器是否归属于该通道组。
+ * @method void setListenerId(string $ListenerId) 设置过滤条件，根据监听器ID精确查询。
+当设置了ProxyId时，会检查该监听器是否归属于该通道。
+当设置了GroupId时，会检查该监听器是否归属于该通道组。
  * @method string getListenerName() 获取过滤条件，根据监听器名称精确查询
  * @method void setListenerName(string $ListenerName) 设置过滤条件，根据监听器名称精确查询
  * @method integer getPort() 获取过滤条件，根据监听器端口精确查询
@@ -30,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取限制数量，默认为20
  * @method void setLimit(integer $Limit) 设置限制数量，默认为20
- * @method string getGroupId() 获取通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
- * @method void setGroupId(string $GroupId) 设置通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+ * @method string getGroupId() 获取过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
+ * @method void setGroupId(string $GroupId) 设置过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
  * @method string getSearchValue() 获取过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
  * @method void setSearchValue(string $SearchValue) 设置过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
  */
@@ -42,12 +46,14 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTCPListenersRequest extends AbstractModel
 {
     /**
-     * @var string 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * @var string 过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
      */
     public $ProxyId;
 
     /**
-     * @var string 过滤条件，根据监听器ID精确查询
+     * @var string 过滤条件，根据监听器ID精确查询。
+当设置了ProxyId时，会检查该监听器是否归属于该通道。
+当设置了GroupId时，会检查该监听器是否归属于该通道组。
      */
     public $ListenerId;
 
@@ -72,7 +78,7 @@ class DescribeTCPListenersRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * @var string 过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
      */
     public $GroupId;
 
@@ -81,13 +87,15 @@ class DescribeTCPListenersRequest extends AbstractModel
      */
     public $SearchValue;
     /**
-     * @param string $ProxyId 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
-     * @param string $ListenerId 过滤条件，根据监听器ID精确查询
+     * @param string $ProxyId 过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
+     * @param string $ListenerId 过滤条件，根据监听器ID精确查询。
+当设置了ProxyId时，会检查该监听器是否归属于该通道。
+当设置了GroupId时，会检查该监听器是否归属于该通道组。
      * @param string $ListenerName 过滤条件，根据监听器名称精确查询
      * @param integer $Port 过滤条件，根据监听器端口精确查询
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 限制数量，默认为20
-     * @param string $GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * @param string $GroupId 过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
      * @param string $SearchValue 过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
      */
     function __construct()

@@ -79,7 +79,9 @@ use TencentCloud\Gaap\V20180529\Models as Models;
 * @method Models\DescribeResourcesByTagResponse DescribeResourcesByTag(Models\DescribeResourcesByTagRequest $req) 本接口（DescribeResourcesByTag）用于根据标签来查询对应的资源信息，包括通道，通道组和源站。
 * @method Models\DescribeRuleRealServersResponse DescribeRuleRealServers(Models\DescribeRuleRealServersRequest $req) 本接口（DescribeRuleRealServers）用于查询转发规则相关的源站信息， 包括该规则可绑定的源站信息和已绑定的源站信息。
 * @method Models\DescribeRulesResponse DescribeRules(Models\DescribeRulesRequest $req) 本接口（DescribeRules）用于查询监听器下的所有规则信息，包括规则域名，路径以及该规则下所绑定的源站列表。当通道版本为3.0时，该接口会返回该域名对应的高级认证配置信息。
+* @method Models\DescribeRulesByRuleIdsResponse DescribeRulesByRuleIds(Models\DescribeRulesByRuleIdsRequest $req) 本接口（DescribeRulesByRuleIds）用于根据规则ID拉取规则信息列表。支持一个或者多个规则信息的拉取。一次最多支持10个规则信息的拉取。
 * @method Models\DescribeSecurityPolicyDetailResponse DescribeSecurityPolicyDetail(Models\DescribeSecurityPolicyDetailRequest $req) 获取安全策略详情
+* @method Models\DescribeSecurityRulesResponse DescribeSecurityRules(Models\DescribeSecurityRulesRequest $req) 本接口（DescribeSecurityRules）用于根据安全规则ID查询安全规则详情列表。支持一个或多个安全规则的查询。一次最多支持20个安全规则的查询。
 * @method Models\DescribeTCPListenersResponse DescribeTCPListeners(Models\DescribeTCPListenersRequest $req) 该接口（DescribeTCPListeners）用于查询单通道或者通道组下的TCP监听器信息。
 * @method Models\DescribeUDPListenersResponse DescribeUDPListeners(Models\DescribeUDPListenersRequest $req) 该接口（DescribeUDPListeners）用于查询单通道或者通道组下的UDP监听器信息
 * @method Models\DestroyProxiesResponse DestroyProxies(Models\DestroyProxiesRequest $req) 本接口（DestroyProxies）用于销毁。通道销毁后，不再产生任何费用。

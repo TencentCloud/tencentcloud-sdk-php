@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(integer $Duration) 设置流检测时分片时长
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPieceStartTime() 获取分片开始检测时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPieceStartTime(integer $PieceStartTime) 设置分片开始检测时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -108,6 +112,12 @@ class ScanPiece extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
+
+    /**
+     * @var integer 分片开始检测时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PieceStartTime;
     /**
      * @param string $DumpUrl 流检测时返回，音频转存地址，保留30min
 注意：此字段可能返回 null，表示取不到有效值。
@@ -124,6 +134,8 @@ class ScanPiece extends AbstractModel
      * @param integer $Offset 流检测时分片在流中的偏移时间，单位毫秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Duration 流检测时分片时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PieceStartTime 分片开始检测时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -177,6 +189,10 @@ class ScanPiece extends AbstractModel
 
         if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
             $this->Duration = $param["Duration"];
+        }
+
+        if (array_key_exists("PieceStartTime",$param) and $param["PieceStartTime"] !== null) {
+            $this->PieceStartTime = $param["PieceStartTime"];
         }
     }
 }

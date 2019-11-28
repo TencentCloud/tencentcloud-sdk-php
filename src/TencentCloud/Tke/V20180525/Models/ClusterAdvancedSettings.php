@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsEnabled(boolean $AsEnabled) 设置是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
  * @method string getContainerRuntime() 获取集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
  * @method void setContainerRuntime(string $ContainerRuntime) 设置集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
- * @method string getNodeNameType() 获取集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip）
- * @method void setNodeNameType(string $NodeNameType) 设置集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip）
+ * @method string getNodeNameType() 获取集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
+ * @method void setNodeNameType(string $NodeNameType) 设置集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
  */
 
 /**
@@ -49,14 +49,14 @@ class ClusterAdvancedSettings extends AbstractModel
     public $ContainerRuntime;
 
     /**
-     * @var string 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip）
+     * @var string 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
      */
     public $NodeNameType;
     /**
      * @param boolean $IPVS 是否启用IPVS
      * @param boolean $AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      * @param string $ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
-     * @param string $NodeNameType 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip）
+     * @param string $NodeNameType 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
      */
     function __construct()
     {

@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 -3: 非法姓名（长度、格式等不正确）
 -4: 证件库服务异常
 -5: 证件库中无此身份证记录
- * @method string getDescription() 获取认证结果信息。
- * @method void setDescription(string $Description) 设置认证结果信息。
+ * @method string getDescription() 获取业务结果描述。
+ * @method void setDescription(string $Description) 设置业务结果描述。
  * @method string getName() 获取用于验证的姓名
  * @method void setName(string $Name) 设置用于验证的姓名
  * @method string getIdCard() 获取用于验证的身份证号
@@ -81,7 +81,7 @@ class IdCardOCRVerificationResponse extends AbstractModel
     public $Result;
 
     /**
-     * @var string 认证结果信息。
+     * @var string 业务结果描述。
      */
     public $Description;
 
@@ -133,7 +133,7 @@ class IdCardOCRVerificationResponse extends AbstractModel
 -3: 非法姓名（长度、格式等不正确）
 -4: 证件库服务异常
 -5: 证件库中无此身份证记录
-     * @param string $Description 认证结果信息。
+     * @param string $Description 业务结果描述。
      * @param string $Name 用于验证的姓名
      * @param string $IdCard 用于验证的身份证号
      * @param string $Sex OCR得到的性别

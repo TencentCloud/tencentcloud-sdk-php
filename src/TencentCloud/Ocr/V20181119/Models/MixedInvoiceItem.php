@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getCode() 获取识别结果。
 OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
-FailedOperation.UnKnowError： 表示识别失败；
+FailedOperation.UnKnowError：表示识别失败；
 其它错误码见各个票据接口的定义。
  * @method void setCode(string $Code) 设置识别结果。
 OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
-FailedOperation.UnKnowError： 表示识别失败；
+FailedOperation.UnKnowError：表示识别失败；
 其它错误码见各个票据接口的定义。
  * @method integer getType() 获取识别出的图片所属的票据类型。
 -1：未知类型
@@ -32,34 +32,26 @@ FailedOperation.UnKnowError： 表示识别失败；
 1：定额发票
 2：火车票
 3：增值税发票
-4：客运限额发票（仅支持类型检测，不支持识别）
 5：机票行程单
-6：酒店账单（仅支持类型检测，不支持识别）
-7：完税证明
 8：通用机打发票
 9：汽车票
 10：轮船票
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
-14：购物小票（仅支持类型检测，不支持识别）
  * @method void setType(integer $Type) 设置识别出的图片所属的票据类型。
 -1：未知类型
 0：出租车发票
 1：定额发票
 2：火车票
 3：增值税发票
-4：客运限额发票（仅支持类型检测，不支持识别）
 5：机票行程单
-6：酒店账单（仅支持类型检测，不支持识别）
-7：完税证明
 8：通用机打发票
 9：汽车票
 10：轮船票
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
-14：购物小票（仅支持类型检测，不支持识别）
  * @method Rect getRect() 获取识别出的图片在混贴票据图片中的位置信息。
  * @method void setRect(Rect $Rect) 设置识别出的图片在混贴票据图片中的位置信息。
  * @method float getAngle() 获取识别出的图片在混贴票据图片中的旋转角度。
@@ -76,7 +68,7 @@ class MixedInvoiceItem extends AbstractModel
     /**
      * @var string 识别结果。
 OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
-FailedOperation.UnKnowError： 表示识别失败；
+FailedOperation.UnKnowError：表示识别失败；
 其它错误码见各个票据接口的定义。
      */
     public $Code;
@@ -88,17 +80,13 @@ FailedOperation.UnKnowError： 表示识别失败；
 1：定额发票
 2：火车票
 3：增值税发票
-4：客运限额发票（仅支持类型检测，不支持识别）
 5：机票行程单
-6：酒店账单（仅支持类型检测，不支持识别）
-7：完税证明
 8：通用机打发票
 9：汽车票
 10：轮船票
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
-14：购物小票（仅支持类型检测，不支持识别）
      */
     public $Type;
 
@@ -119,7 +107,7 @@ FailedOperation.UnKnowError： 表示识别失败；
     /**
      * @param string $Code 识别结果。
 OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
-FailedOperation.UnKnowError： 表示识别失败；
+FailedOperation.UnKnowError：表示识别失败；
 其它错误码见各个票据接口的定义。
      * @param integer $Type 识别出的图片所属的票据类型。
 -1：未知类型
@@ -127,17 +115,13 @@ FailedOperation.UnKnowError： 表示识别失败；
 1：定额发票
 2：火车票
 3：增值税发票
-4：客运限额发票（仅支持类型检测，不支持识别）
 5：机票行程单
-6：酒店账单（仅支持类型检测，不支持识别）
-7：完税证明
 8：通用机打发票
 9：汽车票
 10：轮船票
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
-14：购物小票（仅支持类型检测，不支持识别）
      * @param Rect $Rect 识别出的图片在混贴票据图片中的位置信息。
      * @param float $Angle 识别出的图片在混贴票据图片中的旋转角度。
      * @param array $SingleInvoiceInfos 识别到的内容。

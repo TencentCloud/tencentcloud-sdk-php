@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceCert(string $DeviceCert) 设置设备证书
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLogLevel() 获取日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogLevel(integer $LogLevel) 设置日志级别
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -98,6 +102,12 @@ class DeviceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceCert;
+
+    /**
+     * @var integer 日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogLevel;
     /**
      * @param string $DeviceName 设备名
      * @param integer $Status 0: 离线, 1: 在线, 2: 获取失败, 3 未激活
@@ -112,6 +122,8 @@ class DeviceInfo extends AbstractModel
      * @param string $Version 设备固件版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceCert 设备证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LogLevel 日志级别
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -156,6 +168,10 @@ class DeviceInfo extends AbstractModel
 
         if (array_key_exists("DeviceCert",$param) and $param["DeviceCert"] !== null) {
             $this->DeviceCert = $param["DeviceCert"];
+        }
+
+        if (array_key_exists("LogLevel",$param) and $param["LogLevel"] !== null) {
+            $this->LogLevel = $param["LogLevel"];
         }
     }
 }

@@ -47,7 +47,9 @@ Width : Height建议取值在[1, 2.5]之间，超过这个范围可能会影响�
 • 长宽比：长边：短边<5； 
 接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
  * @method string getImageBase64() 获取图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
  * @method void setImageBase64(string $ImageBase64) 设置图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
  */
 
 /**
@@ -83,6 +85,7 @@ Width : Height建议取值在[1, 2.5]之间，超过这个范围可能会影响�
 
     /**
      * @var string 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
      */
     public $ImageBase64;
     /**
@@ -101,6 +104,7 @@ Width : Height建议取值在[1, 2.5]之间，超过这个范围可能会影响�
 • 长宽比：长边：短边<5； 
 接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
      * @param string $ImageBase64 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
      */
     function __construct()
     {

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
+ * @method string getDeviceId() 获取设备ID，该字段有值将代替 ProductId/DeviceName
+ * @method void setDeviceId(string $DeviceId) 设置设备ID，该字段有值将代替 ProductId/DeviceName
  */
 
 /**
@@ -38,9 +40,15 @@ class DescribeDeviceDataRequest extends AbstractModel
      * @var string 设备名称
      */
     public $DeviceName;
+
+    /**
+     * @var string 设备ID，该字段有值将代替 ProductId/DeviceName
+     */
+    public $DeviceId;
     /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
+     * @param string $DeviceId 设备ID，该字段有值将代替 ProductId/DeviceName
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeDeviceDataRequest extends AbstractModel
 
         if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
             $this->DeviceName = $param["DeviceName"];
+        }
+
+        if (array_key_exists("DeviceId",$param) and $param["DeviceId"] !== null) {
+            $this->DeviceId = $param["DeviceId"];
         }
     }
 }

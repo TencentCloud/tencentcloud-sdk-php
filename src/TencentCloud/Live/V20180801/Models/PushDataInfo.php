@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
 例："H264"。
  * @method string getResolution() 获取分辨率。
  * @method void setResolution(string $Resolution) 设置分辨率。
+ * @method integer getAsampleRate() 获取采样率。
+ * @method void setAsampleRate(integer $AsampleRate) 设置采样率。
  */
 
 /**
@@ -121,6 +123,11 @@ class PushDataInfo extends AbstractModel
      * @var string 分辨率。
      */
     public $Resolution;
+
+    /**
+     * @var integer 采样率。
+     */
+    public $AsampleRate;
     /**
      * @param string $StreamName 流名称。
      * @param string $AppName 推流路径。
@@ -137,6 +144,7 @@ class PushDataInfo extends AbstractModel
      * @param string $Vcodec 视频编码格式，
 例："H264"。
      * @param string $Resolution 分辨率。
+     * @param integer $AsampleRate 采样率。
      */
     function __construct()
     {
@@ -200,6 +208,10 @@ class PushDataInfo extends AbstractModel
 
         if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
             $this->Resolution = $param["Resolution"];
+        }
+
+        if (array_key_exists("AsampleRate",$param) and $param["AsampleRate"] !== null) {
+            $this->AsampleRate = $param["AsampleRate"];
         }
     }
 }

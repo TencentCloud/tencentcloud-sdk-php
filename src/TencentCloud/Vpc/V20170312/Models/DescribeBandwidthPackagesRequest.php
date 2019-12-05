@@ -18,8 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getBandwidthPackageIds() 获取带宽包Id，支持批量
- * @method void setBandwidthPackageIds(array $BandwidthPackageIds) 设置带宽包Id，支持批量
+ * @method array getBandwidthPackageIds() 获取带宽包唯一ID列表
+ * @method void setBandwidthPackageIds(array $BandwidthPackageIds) 设置带宽包唯一ID列表
  * @method array getFilters() 获取每次请求的`Filters`的上限为10。参数不支持同时指定`BandwidthPackageIds`和`Filters`。详细的过滤条件如下：
 <li> bandwidth-package_id - String - 是否必填：否 - （过滤条件）按照带宽包的唯一标识ID过滤。</li>
 <li> bandwidth-package-name - String - 是否必填：否 - （过滤条件）按照 带宽包名称过滤。不支持模糊过滤。</li>
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBandwidthPackagesRequest extends AbstractModel
 {
     /**
-     * @var array 带宽包Id，支持批量
+     * @var array 带宽包唯一ID列表
      */
     public $BandwidthPackageIds;
 
@@ -74,7 +74,7 @@ class DescribeBandwidthPackagesRequest extends AbstractModel
      */
     public $Limit;
     /**
-     * @param array $BandwidthPackageIds 带宽包Id，支持批量
+     * @param array $BandwidthPackageIds 带宽包唯一ID列表
      * @param array $Filters 每次请求的`Filters`的上限为10。参数不支持同时指定`BandwidthPackageIds`和`Filters`。详细的过滤条件如下：
 <li> bandwidth-package_id - String - 是否必填：否 - （过滤条件）按照带宽包的唯一标识ID过滤。</li>
 <li> bandwidth-package-name - String - 是否必填：否 - （过滤条件）按照 带宽包名称过滤。不支持模糊过滤。</li>

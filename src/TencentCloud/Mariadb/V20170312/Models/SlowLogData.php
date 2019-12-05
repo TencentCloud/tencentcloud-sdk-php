@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTsMin(string $TsMin) 设置首次执行时间
  * @method string getUser() 获取帐号
  * @method void setUser(string $User) 设置帐号
+ * @method string getExampleSql() 获取样例Sql
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExampleSql(string $ExampleSql) 设置样例Sql
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -143,6 +147,12 @@ class SlowLogData extends AbstractModel
      * @var string 帐号
      */
     public $User;
+
+    /**
+     * @var string 样例Sql
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExampleSql;
     /**
      * @param string $CheckSum 语句校验和，用于查询详情
      * @param string $Db 数据库名称
@@ -161,6 +171,8 @@ class SlowLogData extends AbstractModel
      * @param string $TsMax 最后执行时间
      * @param string $TsMin 首次执行时间
      * @param string $User 帐号
+     * @param string $ExampleSql 样例Sql
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -240,6 +252,10 @@ class SlowLogData extends AbstractModel
 
         if (array_key_exists("User",$param) and $param["User"] !== null) {
             $this->User = $param["User"];
+        }
+
+        if (array_key_exists("ExampleSql",$param) and $param["ExampleSql"] !== null) {
+            $this->ExampleSql = $param["ExampleSql"];
         }
     }
 }

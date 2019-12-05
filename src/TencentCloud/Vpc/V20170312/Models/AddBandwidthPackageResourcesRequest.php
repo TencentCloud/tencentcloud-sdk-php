@@ -18,14 +18,16 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getResourceIds() 获取资源Id，形如'eip-xxxx', 'lb-xxxx'
- * @method void setResourceIds(array $ResourceIds) 设置资源Id，形如'eip-xxxx', 'lb-xxxx'
+ * @method array getResourceIds() 获取资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
+ * @method void setResourceIds(array $ResourceIds) 设置资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
  * @method string getBandwidthPackageId() 获取带宽包唯一标识ID，形如'bwp-xxxx'
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包唯一标识ID，形如'bwp-xxxx'
- * @method string getNetworkType() 获取带宽包类型，包括'BGP', 'SINGLEISP', 'ANYCAST'
- * @method void setNetworkType(string $NetworkType) 设置带宽包类型，包括'BGP', 'SINGLEISP', 'ANYCAST'
+ * @method string getNetworkType() 获取带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
+ * @method void setNetworkType(string $NetworkType) 设置带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
  * @method string getResourceType() 获取资源类型，包括'Address', 'LoadBalance'
  * @method void setResourceType(string $ResourceType) 设置资源类型，包括'Address', 'LoadBalance'
+ * @method string getProtocol() 获取带宽包协议类型。当前支持'ipv4'和'ipv6'协议类型。
+ * @method void setProtocol(string $Protocol) 设置带宽包协议类型。当前支持'ipv4'和'ipv6'协议类型。
  */
 
 /**
@@ -34,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class AddBandwidthPackageResourcesRequest extends AbstractModel
 {
     /**
-     * @var array 资源Id，形如'eip-xxxx', 'lb-xxxx'
+     * @var array 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
      */
     public $ResourceIds;
 
@@ -44,7 +46,7 @@ class AddBandwidthPackageResourcesRequest extends AbstractModel
     public $BandwidthPackageId;
 
     /**
-     * @var string 带宽包类型，包括'BGP', 'SINGLEISP', 'ANYCAST'
+     * @var string 带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
      */
     public $NetworkType;
 
@@ -52,11 +54,17 @@ class AddBandwidthPackageResourcesRequest extends AbstractModel
      * @var string 资源类型，包括'Address', 'LoadBalance'
      */
     public $ResourceType;
+
     /**
-     * @param array $ResourceIds 资源Id，形如'eip-xxxx', 'lb-xxxx'
+     * @var string 带宽包协议类型。当前支持'ipv4'和'ipv6'协议类型。
+     */
+    public $Protocol;
+    /**
+     * @param array $ResourceIds 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
      * @param string $BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'
-     * @param string $NetworkType 带宽包类型，包括'BGP', 'SINGLEISP', 'ANYCAST'
+     * @param string $NetworkType 带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
      * @param string $ResourceType 资源类型，包括'Address', 'LoadBalance'
+     * @param string $Protocol 带宽包协议类型。当前支持'ipv4'和'ipv6'协议类型。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class AddBandwidthPackageResourcesRequest extends AbstractModel
 
         if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
             $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
         }
     }
 }

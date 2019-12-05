@@ -22,6 +22,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Dayu\V20180709\Models as Models;
 
 /**
+* @method Models\CreateBasicDDoSAlarmThresholdResponse CreateBasicDDoSAlarmThreshold(Models\CreateBasicDDoSAlarmThresholdRequest $req) 设置基础防护的DDoS告警阈值，只支持基础防护产品
 * @method Models\CreateCCSelfDefinePolicyResponse CreateCCSelfDefinePolicy(Models\CreateCCSelfDefinePolicyRequest $req) 创建CC自定义策略
 * @method Models\CreateDDoSPolicyResponse CreateDDoSPolicy(Models\CreateDDoSPolicyRequest $req) 添加DDoS高级策略
 * @method Models\CreateDDoSPolicyCaseResponse CreateDDoSPolicyCase(Models\CreateDDoSPolicyCaseRequest $req) 添加策略场景
@@ -41,12 +42,13 @@ use TencentCloud\Dayu\V20180709\Models as Models;
 * @method Models\DeleteL7RulesResponse DeleteL7Rules(Models\DeleteL7RulesRequest $req) 删除七层转发规则
 * @method Models\DescribeActionLogResponse DescribeActionLog(Models\DescribeActionLogRequest $req) 获取操作日志
 * @method Models\DescribeBaradDataResponse DescribeBaradData(Models\DescribeBaradDataRequest $req) 为大禹子产品提供从巴拉多获取指标统计数据的接口
+* @method Models\DescribeBasicDeviceThresholdResponse DescribeBasicDeviceThreshold(Models\DescribeBasicDeviceThresholdRequest $req) 获取基础防护黑洞阈值
 * @method Models\DescribeCCEvListResponse DescribeCCEvList(Models\DescribeCCEvListRequest $req) 获取CC攻击事件列表
 * @method Models\DescribeCCIpAllowDenyResponse DescribeCCIpAllowDeny(Models\DescribeCCIpAllowDenyRequest $req) 获取CC的IP黑白名单
 * @method Models\DescribeCCTrendResponse DescribeCCTrend(Models\DescribeCCTrendRequest $req) 获取CC攻击指标数据，包括总请求峰值(QPS)和攻击请求(QPS)
 * @method Models\DescribeCCUrlAllowResponse DescribeCCUrlAllow(Models\DescribeCCUrlAllowRequest $req) 获取CC的Url白名单
 * @method Models\DescribeDDoSCountResponse DescribeDDoSCount(Models\DescribeDDoSCountRequest $req) 获取DDoS攻击占比分析
-* @method Models\DescribeDDoSDefendStatusResponse DescribeDDoSDefendStatus(Models\DescribeDDoSDefendStatusRequest $req) 获取DDoS防护状态，支持产品：基础防护，独享包，共享包，高防IP，高防IP专业版；
+* @method Models\DescribeDDoSDefendStatusResponse DescribeDDoSDefendStatus(Models\DescribeDDoSDefendStatusRequest $req) 获取DDoS防护状态（临时关闭状态），支持产品：基础防护，独享包，共享包，高防IP，高防IP专业版；调用此接口是获取当前是否有设置临时关闭DDoS防护状态，如果有设置会返回临时关闭的时长等参数。
 * @method Models\DescribeDDoSEvInfoResponse DescribeDDoSEvInfo(Models\DescribeDDoSEvInfoRequest $req) 获取DDoS攻击事件详情
 * @method Models\DescribeDDoSEvListResponse DescribeDDoSEvList(Models\DescribeDDoSEvListRequest $req) 获取DDoS攻击事件列表
 * @method Models\DescribeDDoSIpLogResponse DescribeDDoSIpLog(Models\DescribeDDoSIpLogRequest $req) 获取DDoSIP攻击日志
@@ -58,6 +60,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
 * @method Models\DescribeDDoSPolicyResponse DescribeDDoSPolicy(Models\DescribeDDoSPolicyRequest $req) 获取DDoS高级策略
 * @method Models\DescribeDDoSTrendResponse DescribeDDoSTrend(Models\DescribeDDoSTrendRequest $req) 获取DDoS攻击流量带宽和攻击包速率数据
 * @method Models\DescribeDDoSUsedStatisResponse DescribeDDoSUsedStatis(Models\DescribeDDoSUsedStatisRequest $req) 统计用户的高防资源的使用天数和DDoS攻击防护次数
+* @method Models\DescribeIPProductInfoResponse DescribeIPProductInfo(Models\DescribeIPProductInfoRequest $req) 获取独享包或共享包IP对应的云资产信息，只支持独享包和共享包的IP
 * @method Models\DescribeInsurePacksResponse DescribeInsurePacks(Models\DescribeInsurePacksRequest $req) 获取保险包套餐列表
 * @method Models\DescribeIpBlockListResponse DescribeIpBlockList(Models\DescribeIpBlockListRequest $req) 获取IP封堵列表
 * @method Models\DescribeIpUnBlockListResponse DescribeIpUnBlockList(Models\DescribeIpUnBlockListRequest $req) 获取IP解封记录
@@ -85,7 +88,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
 * @method Models\ModifyCCThresholdResponse ModifyCCThreshold(Models\ModifyCCThresholdRequest $req) 修改CC的防护阈值
 * @method Models\ModifyCCUrlAllowResponse ModifyCCUrlAllow(Models\ModifyCCUrlAllowRequest $req) 添加或删除CC的URL白名单
 * @method Models\ModifyDDoSAIStatusResponse ModifyDDoSAIStatus(Models\ModifyDDoSAIStatusRequest $req) 读取或修改DDoS的AI防护状态
-* @method Models\ModifyDDoSDefendStatusResponse ModifyDDoSDefendStatus(Models\ModifyDDoSDefendStatusRequest $req) 开启或关闭DDoS防护状态
+* @method Models\ModifyDDoSDefendStatusResponse ModifyDDoSDefendStatus(Models\ModifyDDoSDefendStatusRequest $req) 开启或关闭DDoS防护状态，调用此接口允许临时关闭DDoS防护一段时间，等时间到了会自动开启DDoS防护；
 * @method Models\ModifyDDoSLevelResponse ModifyDDoSLevel(Models\ModifyDDoSLevelRequest $req) 读取或修改DDoS的防护等级
 * @method Models\ModifyDDoSPolicyResponse ModifyDDoSPolicy(Models\ModifyDDoSPolicyRequest $req) 修改DDoS高级策略
 * @method Models\ModifyDDoSPolicyCaseResponse ModifyDDoSPolicyCase(Models\ModifyDDoSPolicyCaseRequest $req) 修改策略场景
@@ -99,6 +102,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
 * @method Models\ModifyL4RulesResponse ModifyL4Rules(Models\ModifyL4RulesRequest $req) 修改L4转发规则
 * @method Models\ModifyL7RulesResponse ModifyL7Rules(Models\ModifyL7RulesRequest $req) 修改L7转发规则
 * @method Models\ModifyResBindDDoSPolicyResponse ModifyResBindDDoSPolicy(Models\ModifyResBindDDoSPolicyRequest $req) 资源实例绑定DDoS高级策略
+* @method Models\ModifyResourceRenewFlagResponse ModifyResourceRenewFlag(Models\ModifyResourceRenewFlagRequest $req) 修改资源自动续费标记
  */
 
 class DayuClient extends AbstractClient

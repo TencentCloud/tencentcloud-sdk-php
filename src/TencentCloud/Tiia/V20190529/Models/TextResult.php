@@ -67,6 +67,8 @@ DRUGS：涉毒
 CURSE：谩骂
 TERRORISM：暴恐
 OTHERS：其他
+
+本服务利用微信团队提供的算法，可以准确识别图片中是否包含二维码。当图片中存在二维码时，分类为ADS，关键词输出为“二维码”。
  * @method void setType(string $Type) 设置图片中是否包含敏感文本内容。
 包含：
 NOTEXT：无文本
@@ -78,12 +80,14 @@ DRUGS：涉毒
 CURSE：谩骂
 TERRORISM：暴恐
 OTHERS：其他
+
+本服务利用微信团队提供的算法，可以准确识别图片中是否包含二维码。当图片中存在二维码时，分类为ADS，关键词输出为“二维码”。
  * @method string getAdvancedInfo() 获取预留字段，后期用于展示更多识别信息。
  * @method void setAdvancedInfo(string $AdvancedInfo) 设置预留字段，后期用于展示更多识别信息。
  */
 
 /**
- *色情识别结果。
+ *图像文本内容审核结果。
  */
 class TextResult extends AbstractModel
 {
@@ -138,6 +142,8 @@ DRUGS：涉毒
 CURSE：谩骂
 TERRORISM：暴恐
 OTHERS：其他
+
+本服务利用微信团队提供的算法，可以准确识别图片中是否包含二维码。当图片中存在二维码时，分类为ADS，关键词输出为“二维码”。
      */
     public $Type;
 
@@ -176,6 +182,8 @@ DRUGS：涉毒
 CURSE：谩骂
 TERRORISM：暴恐
 OTHERS：其他
+
+本服务利用微信团队提供的算法，可以准确识别图片中是否包含二维码。当图片中存在二维码时，分类为ADS，关键词输出为“二维码”。
      * @param string $AdvancedInfo 预留字段，后期用于展示更多识别信息。
      */
     function __construct()

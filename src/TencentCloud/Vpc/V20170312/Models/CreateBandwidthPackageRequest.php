@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthPackageCount(integer $BandwidthPackageCount) 设置带宽包数量(非上移账户只能填1)
  * @method integer getInternetMaxBandwidth() 获取带宽包限速大小。单位：Mbps，-1表示不限速。
  * @method void setInternetMaxBandwidth(integer $InternetMaxBandwidth) 设置带宽包限速大小。单位：Mbps，-1表示不限速。
+ * @method array getTags() 获取需要关联的标签列表。
+ * @method void setTags(array $Tags) 设置需要关联的标签列表。
+ * @method string getProtocol() 获取带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
+ * @method void setProtocol(string $Protocol) 设置带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
  */
 
 /**
@@ -59,12 +63,24 @@ class CreateBandwidthPackageRequest extends AbstractModel
      * @var integer 带宽包限速大小。单位：Mbps，-1表示不限速。
      */
     public $InternetMaxBandwidth;
+
+    /**
+     * @var array 需要关联的标签列表。
+     */
+    public $Tags;
+
+    /**
+     * @var string 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
+     */
+    public $Protocol;
     /**
      * @param string $NetworkType 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
      * @param string $ChargeType 带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
      * @param string $BandwidthPackageName 带宽包名字
      * @param integer $BandwidthPackageCount 带宽包数量(非上移账户只能填1)
      * @param integer $InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
+     * @param array $Tags 需要关联的标签列表。
+     * @param string $Protocol 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
      */
     function __construct()
     {
@@ -96,6 +112,19 @@ class CreateBandwidthPackageRequest extends AbstractModel
 
         if (array_key_exists("InternetMaxBandwidth",$param) and $param["InternetMaxBandwidth"] !== null) {
             $this->InternetMaxBandwidth = $param["InternetMaxBandwidth"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
         }
     }
 }

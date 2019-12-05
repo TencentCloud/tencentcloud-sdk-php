@@ -90,9 +90,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealServerCertificateDomain(string $RealServerCertificateDomain) 设置源站认证域名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPolyClientCertificateAliasInfo() 获取多客户端证书时，返回多个证书的id和列表
+ * @method array getPolyClientCertificateAliasInfo() 获取多客户端证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolyClientCertificateAliasInfo(array $PolyClientCertificateAliasInfo) 设置多客户端证书时，返回多个证书的id和列表
+ * @method void setPolyClientCertificateAliasInfo(array $PolyClientCertificateAliasInfo) 设置多客户端证书时，返回多个证书的id和别名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPolyRealServerCertificateAliasInfo() 获取多源站证书时，返回多个证书的id和别名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolyRealServerCertificateAliasInfo(array $PolyRealServerCertificateAliasInfo) 设置多源站证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -202,10 +206,16 @@ class DomainRuleSet extends AbstractModel
     public $RealServerCertificateDomain;
 
     /**
-     * @var array 多客户端证书时，返回多个证书的id和列表
+     * @var array 多客户端证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolyClientCertificateAliasInfo;
+
+    /**
+     * @var array 多源站证书时，返回多个证书的id和别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PolyRealServerCertificateAliasInfo;
     /**
      * @param string $Domain 转发规则域名。
      * @param array $RuleSet 该域名对应的转发规则列表。
@@ -243,7 +253,9 @@ class DomainRuleSet extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealServerCertificateDomain 源站认证域名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PolyClientCertificateAliasInfo 多客户端证书时，返回多个证书的id和列表
+     * @param array $PolyClientCertificateAliasInfo 多客户端证书时，返回多个证书的id和别名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PolyRealServerCertificateAliasInfo 多源站证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -333,6 +345,15 @@ class DomainRuleSet extends AbstractModel
                 $obj = new CertificateAliasInfo();
                 $obj->deserialize($value);
                 array_push($this->PolyClientCertificateAliasInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("PolyRealServerCertificateAliasInfo",$param) and $param["PolyRealServerCertificateAliasInfo"] !== null) {
+            $this->PolyRealServerCertificateAliasInfo = [];
+            foreach ($param["PolyRealServerCertificateAliasInfo"] as $key => $value){
+                $obj = new CertificateAliasInfo();
+                $obj->deserialize($value);
+                array_push($this->PolyRealServerCertificateAliasInfo, $obj);
             }
         }
     }

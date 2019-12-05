@@ -18,8 +18,22 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getMetricName() 获取指标名（connum表示TCP连接数；new_conn表示新增TCP连接数；intraffic表示入流量；outtraffic表示出流量）
- * @method void setMetricName(string $MetricName) 设置指标名（connum表示TCP连接数；new_conn表示新增TCP连接数；intraffic表示入流量；outtraffic表示出流量）
+ * @method string getMetricName() 获取指标名（connum表示TCP活跃连接数；
+new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
+intraffic表示入流量；
+outtraffic表示出流量；
+alltraffic表示出流量和入流量之和；
+inpkg表示入包速率；
+outpkg表示出包速率；）
+ * @method void setMetricName(string $MetricName) 设置指标名（connum表示TCP活跃连接数；
+new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
+intraffic表示入流量；
+outtraffic表示出流量；
+alltraffic表示出流量和入流量之和；
+inpkg表示入包速率；
+outpkg表示出包速率；）
  * @method array getData() 获取值数组
  * @method void setData(array $Data) 设置值数组
  * @method integer getCount() 获取值数组的大小
@@ -32,7 +46,14 @@ use TencentCloud\Common\AbstractModel;
 class BaradData extends AbstractModel
 {
     /**
-     * @var string 指标名（connum表示TCP连接数；new_conn表示新增TCP连接数；intraffic表示入流量；outtraffic表示出流量）
+     * @var string 指标名（connum表示TCP活跃连接数；
+new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
+intraffic表示入流量；
+outtraffic表示出流量；
+alltraffic表示出流量和入流量之和；
+inpkg表示入包速率；
+outpkg表示出包速率；）
      */
     public $MetricName;
 
@@ -46,7 +67,14 @@ class BaradData extends AbstractModel
      */
     public $Count;
     /**
-     * @param string $MetricName 指标名（connum表示TCP连接数；new_conn表示新增TCP连接数；intraffic表示入流量；outtraffic表示出流量）
+     * @param string $MetricName 指标名（connum表示TCP活跃连接数；
+new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
+intraffic表示入流量；
+outtraffic表示出流量；
+alltraffic表示出流量和入流量之和；
+inpkg表示入包速率；
+outpkg表示出包速率；）
      * @param array $Data 值数组
      * @param integer $Count 值数组的大小
      */

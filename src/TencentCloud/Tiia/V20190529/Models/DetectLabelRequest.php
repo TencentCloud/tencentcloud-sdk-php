@@ -35,7 +35,9 @@ use TencentCloud\Common\AbstractModel;
 • 长宽比：长边：短边<5； 
 接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
  * @method string getImageBase64() 获取图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
  * @method void setImageBase64(string $ImageBase64) 设置图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
  * @method array getScenes() 获取本次调用支持的识别场景，可选值如下：
 WEB，针对网络图片优化;
 CAMERA，针对手机摄像头拍摄图片优化;
@@ -71,6 +73,7 @@ class DetectLabelRequest extends AbstractModel
 
     /**
      * @var string 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
      */
     public $ImageBase64;
 
@@ -94,6 +97,7 @@ ALBUM，针对手机相册、网盘产品优化;
 • 长宽比：长边：短边<5； 
 接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
      * @param string $ImageBase64 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
      * @param array $Scenes 本次调用支持的识别场景，可选值如下：
 WEB，针对网络图片优化;
 CAMERA，针对手机摄像头拍摄图片优化;

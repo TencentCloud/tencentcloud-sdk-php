@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 签名信息可登录[短信控制台](https://console.cloud.tencent.com/sms/smslist) 查看。
  * @method array getTemplateParamSet() 获取模板参数，若无模板参数，则设置为空。
  * @method void setTemplateParamSet(array $TemplateParamSet) 设置模板参数，若无模板参数，则设置为空。
- * @method integer getExtendCode() 获取短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
- * @method void setExtendCode(integer $ExtendCode) 设置短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
+ * @method string getExtendCode() 获取短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
+ * @method void setExtendCode(string $ExtendCode) 设置短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
  * @method string getSessionContext() 获取用户的 session 内容，可以携带用户侧ID等上下文信息,server 会原样返回
  * @method void setSessionContext(string $SessionContext) 设置用户的 session 内容，可以携带用户侧ID等上下文信息,server 会原样返回
  * @method string getSenderId() 获取国际/港澳台短信senderid，国内短信填空。
@@ -72,7 +72,7 @@ class SendSmsRequest extends AbstractModel
     public $TemplateParamSet;
 
     /**
-     * @var integer 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
+     * @var string 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
      */
     public $ExtendCode;
 
@@ -93,7 +93,7 @@ class SendSmsRequest extends AbstractModel
      * @param string $Sign 短信签名内容，使用 UTF-8 编码，必须填写已审核通过的签名
 签名信息可登录[短信控制台](https://console.cloud.tencent.com/sms/smslist) 查看。
      * @param array $TemplateParamSet 模板参数，若无模板参数，则设置为空。
-     * @param integer $ExtendCode 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
+     * @param string $ExtendCode 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
      * @param string $SessionContext 用户的 session 内容，可以携带用户侧ID等上下文信息,server 会原样返回
      * @param string $SenderId 国际/港澳台短信senderid，国内短信填空。
 默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogUrl(string $LogUrl) 设置日志Url。
  * @method string getLogTime() 获取日志生成时间
  * @method void setLogTime(string $LogTime) 设置日志生成时间
+ * @method integer getFileSize() 获取文件大小
+ * @method void setFileSize(integer $FileSize) 设置文件大小
  */
 
 /**
@@ -45,10 +47,16 @@ class LogInfo extends AbstractModel
      * @var string 日志生成时间
      */
     public $LogTime;
+
+    /**
+     * @var integer 文件大小
+     */
+    public $FileSize;
     /**
      * @param string $LogName 日志名称。
      * @param string $LogUrl 日志Url。
      * @param string $LogTime 日志生成时间
+     * @param integer $FileSize 文件大小
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class LogInfo extends AbstractModel
 
         if (array_key_exists("LogTime",$param) and $param["LogTime"] !== null) {
             $this->LogTime = $param["LogTime"];
+        }
+
+        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
+            $this->FileSize = $param["FileSize"];
         }
     }
 }

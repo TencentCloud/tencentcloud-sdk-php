@@ -18,18 +18,18 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProductName() 获取产品名称
- * @method void setProductName(string $ProductName) 设置产品名称
- * @method integer getCategoryId() 获取产品分组模板ID
- * @method void setCategoryId(integer $CategoryId) 设置产品分组模板ID
- * @method integer getProductType() 获取产品类型
- * @method void setProductType(integer $ProductType) 设置产品类型
- * @method string getEncryptionType() 获取加密类型
- * @method void setEncryptionType(string $EncryptionType) 设置加密类型
- * @method string getNetType() 获取连接类型
- * @method void setNetType(string $NetType) 设置连接类型
- * @method integer getDataProtocol() 获取数据协议
- * @method void setDataProtocol(integer $DataProtocol) 设置数据协议
+ * @method string getProductName() 获取产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
+ * @method void setProductName(string $ProductName) 设置产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
+ * @method integer getCategoryId() 获取产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
+ * @method void setCategoryId(integer $CategoryId) 设置产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
+ * @method integer getProductType() 获取产品类型 填写 ( 0 普通产品 )
+ * @method void setProductType(integer $ProductType) 设置产品类型 填写 ( 0 普通产品 )
+ * @method string getEncryptionType() 获取加密类型 加密类型，1表示证书认证，2表示签名认证。
+ * @method void setEncryptionType(string $EncryptionType) 设置加密类型 加密类型，1表示证书认证，2表示签名认证。
+ * @method string getNetType() 获取连接类型 可以填写 wifi cellular else
+ * @method void setNetType(string $NetType) 设置连接类型 可以填写 wifi cellular else
+ * @method integer getDataProtocol() 获取数据协议 (1 使用物模型)
+ * @method void setDataProtocol(integer $DataProtocol) 设置数据协议 (1 使用物模型)
  * @method string getProductDesc() 获取产品描述
  * @method void setProductDesc(string $ProductDesc) 设置产品描述
  * @method string getProjectId() 获取产品的项目ID
@@ -42,32 +42,32 @@ use TencentCloud\Common\AbstractModel;
 class CreateStudioProductRequest extends AbstractModel
 {
     /**
-     * @var string 产品名称
+     * @var string 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
      */
     public $ProductName;
 
     /**
-     * @var integer 产品分组模板ID
+     * @var integer 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
      */
     public $CategoryId;
 
     /**
-     * @var integer 产品类型
+     * @var integer 产品类型 填写 ( 0 普通产品 )
      */
     public $ProductType;
 
     /**
-     * @var string 加密类型
+     * @var string 加密类型 加密类型，1表示证书认证，2表示签名认证。
      */
     public $EncryptionType;
 
     /**
-     * @var string 连接类型
+     * @var string 连接类型 可以填写 wifi cellular else
      */
     public $NetType;
 
     /**
-     * @var integer 数据协议
+     * @var integer 数据协议 (1 使用物模型)
      */
     public $DataProtocol;
 
@@ -81,12 +81,12 @@ class CreateStudioProductRequest extends AbstractModel
      */
     public $ProjectId;
     /**
-     * @param string $ProductName 产品名称
-     * @param integer $CategoryId 产品分组模板ID
-     * @param integer $ProductType 产品类型
-     * @param string $EncryptionType 加密类型
-     * @param string $NetType 连接类型
-     * @param integer $DataProtocol 数据协议
+     * @param string $ProductName 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
+     * @param integer $CategoryId 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
+     * @param integer $ProductType 产品类型 填写 ( 0 普通产品 )
+     * @param string $EncryptionType 加密类型 加密类型，1表示证书认证，2表示签名认证。
+     * @param string $NetType 连接类型 可以填写 wifi cellular else
+     * @param integer $DataProtocol 数据协议 (1 使用物模型)
      * @param string $ProductDesc 产品描述
      * @param string $ProjectId 产品的项目ID
      */

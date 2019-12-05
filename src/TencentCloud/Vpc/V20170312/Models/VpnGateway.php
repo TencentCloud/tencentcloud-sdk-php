@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRestrictState(string $RestrictState) 设置网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
  * @method string getZone() 获取可用区，如：ap-guangzhou-2
  * @method void setZone(string $Zone) 设置可用区，如：ap-guangzhou-2
+ * @method array getVpnGatewayQuotaSet() 获取网关带宽配额信息
+ * @method void setVpnGatewayQuotaSet(array $VpnGatewayQuotaSet) 设置网关带宽配额信息
  */
 
 /**
@@ -129,6 +131,11 @@ class VpnGateway extends AbstractModel
      * @var string 可用区，如：ap-guangzhou-2
      */
     public $Zone;
+
+    /**
+     * @var array 网关带宽配额信息
+     */
+    public $VpnGatewayQuotaSet;
     /**
      * @param string $VpnGatewayId 网关实例ID。
      * @param string $VpcId VPC实例ID。
@@ -145,6 +152,7 @@ class VpnGateway extends AbstractModel
      * @param string $NewPurchasePlan 计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
      * @param string $RestrictState 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
      * @param string $Zone 可用区，如：ap-guangzhou-2
+     * @param array $VpnGatewayQuotaSet 网关带宽配额信息
      */
     function __construct()
     {
@@ -216,6 +224,15 @@ class VpnGateway extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("VpnGatewayQuotaSet",$param) and $param["VpnGatewayQuotaSet"] !== null) {
+            $this->VpnGatewayQuotaSet = [];
+            foreach ($param["VpnGatewayQuotaSet"] as $key => $value){
+                $obj = new VpnGatewayQuota();
+                $obj->deserialize($value);
+                array_push($this->VpnGatewayQuotaSet, $obj);
+            }
         }
     }
 }

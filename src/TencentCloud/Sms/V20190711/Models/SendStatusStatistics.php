@@ -18,12 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getBillingStatistics() 获取短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
- * @method void setBillingStatistics(integer $BillingStatistics) 设置短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
- * @method integer getRequestStatistics() 获取短信提交量统计
- * @method void setRequestStatistics(integer $RequestStatistics) 设置短信提交量统计
- * @method integer getRequestSuccessStatistics() 获取短信提交成功量统计
- * @method void setRequestSuccessStatistics(integer $RequestSuccessStatistics) 设置短信提交成功量统计
+ * @method integer getFeeCount() 获取短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
+ * @method void setFeeCount(integer $FeeCount) 设置短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
+ * @method integer getRequestCount() 获取短信提交量统计
+ * @method void setRequestCount(integer $RequestCount) 设置短信提交量统计
+ * @method integer getRequestSuccessCount() 获取短信提交成功量统计
+ * @method void setRequestSuccessCount(integer $RequestSuccessCount) 设置短信提交成功量统计
  */
 
 /**
@@ -34,21 +34,21 @@ class SendStatusStatistics extends AbstractModel
     /**
      * @var integer 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
      */
-    public $BillingStatistics;
+    public $FeeCount;
 
     /**
      * @var integer 短信提交量统计
      */
-    public $RequestStatistics;
+    public $RequestCount;
 
     /**
      * @var integer 短信提交成功量统计
      */
-    public $RequestSuccessStatistics;
+    public $RequestSuccessCount;
     /**
-     * @param integer $BillingStatistics 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
-     * @param integer $RequestStatistics 短信提交量统计
-     * @param integer $RequestSuccessStatistics 短信提交成功量统计
+     * @param integer $FeeCount 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
+     * @param integer $RequestCount 短信提交量统计
+     * @param integer $RequestSuccessCount 短信提交成功量统计
      */
     function __construct()
     {
@@ -62,16 +62,16 @@ class SendStatusStatistics extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BillingStatistics",$param) and $param["BillingStatistics"] !== null) {
-            $this->BillingStatistics = $param["BillingStatistics"];
+        if (array_key_exists("FeeCount",$param) and $param["FeeCount"] !== null) {
+            $this->FeeCount = $param["FeeCount"];
         }
 
-        if (array_key_exists("RequestStatistics",$param) and $param["RequestStatistics"] !== null) {
-            $this->RequestStatistics = $param["RequestStatistics"];
+        if (array_key_exists("RequestCount",$param) and $param["RequestCount"] !== null) {
+            $this->RequestCount = $param["RequestCount"];
         }
 
-        if (array_key_exists("RequestSuccessStatistics",$param) and $param["RequestSuccessStatistics"] !== null) {
-            $this->RequestSuccessStatistics = $param["RequestSuccessStatistics"];
+        if (array_key_exists("RequestSuccessCount",$param) and $param["RequestSuccessCount"] !== null) {
+            $this->RequestSuccessCount = $param["RequestSuccessCount"];
         }
     }
 }

@@ -18,8 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSendDateTime() 获取拉取起始时间，UNIX 时间戳（时间：秒）
- * @method void setSendDateTime(string $SendDateTime) 设置拉取起始时间，UNIX 时间戳（时间：秒）
+ * @method integer getSendDateTime() 获取拉取起始时间，UNIX 时间戳（时间：秒）
+ * @method void setSendDateTime(integer $SendDateTime) 设置拉取起始时间，UNIX 时间戳（时间：秒）
  * @method integer getOffset() 获取偏移量
 注：目前固定设置为0
  * @method void setOffset(integer $Offset) 设置偏移量
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class PullSmsReplyStatusByPhoneNumberRequest extends AbstractModel
 {
     /**
-     * @var string 拉取起始时间，UNIX 时间戳（时间：秒）
+     * @var integer 拉取起始时间，UNIX 时间戳（时间：秒）
      */
     public $SendDateTime;
 
@@ -63,7 +63,7 @@ class PullSmsReplyStatusByPhoneNumberRequest extends AbstractModel
      */
     public $SmsSdkAppid;
     /**
-     * @param string $SendDateTime 拉取起始时间，UNIX 时间戳（时间：秒）
+     * @param integer $SendDateTime 拉取起始时间，UNIX 时间戳（时间：秒）
      * @param integer $Offset 偏移量
 注：目前固定设置为0
      * @param integer $Limit 拉取最大条数，最多 100

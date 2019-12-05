@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getFilters() 获取过滤条件。
 <li>vpc-id - String - （过滤条件）VPC实例ID。</li>
-<li>vm-ip - String - （过滤条件）基础网络云主机IP。</li>
+<li>vm-ip - String - （过滤条件）基础网络云服务器IP。</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>vpc-id - String - （过滤条件）VPC实例ID。</li>
-<li>vm-ip - String - （过滤条件）基础网络云主机IP。</li>
+<li>vm-ip - String - （过滤条件）基础网络云服务器IP。</li>
  * @method string getOffset() 获取偏移量
  * @method void setOffset(string $Offset) 设置偏移量
  * @method string getLimit() 获取返回数量
@@ -38,7 +38,7 @@ class DescribeClassicLinkInstancesRequest extends AbstractModel
     /**
      * @var array 过滤条件。
 <li>vpc-id - String - （过滤条件）VPC实例ID。</li>
-<li>vm-ip - String - （过滤条件）基础网络云主机IP。</li>
+<li>vm-ip - String - （过滤条件）基础网络云服务器IP。</li>
      */
     public $Filters;
 
@@ -54,7 +54,7 @@ class DescribeClassicLinkInstancesRequest extends AbstractModel
     /**
      * @param array $Filters 过滤条件。
 <li>vpc-id - String - （过滤条件）VPC实例ID。</li>
-<li>vm-ip - String - （过滤条件）基础网络云主机IP。</li>
+<li>vm-ip - String - （过滤条件）基础网络云服务器IP。</li>
      * @param string $Offset 偏移量
      * @param string $Limit 返回数量
      */

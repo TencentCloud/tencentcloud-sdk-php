@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
  * @method SecurityGroupPolicySet getSecurityGroupPolicySet() 获取安全组规则集合。 SecurityGroupPolicySet对象必须同时指定新的出（Egress）入（Ingress）站规则。 SecurityGroupPolicy对象不支持自定义索引（PolicyIndex）。
  * @method void setSecurityGroupPolicySet(SecurityGroupPolicySet $SecurityGroupPolicySet) 设置安全组规则集合。 SecurityGroupPolicySet对象必须同时指定新的出（Egress）入（Ingress）站规则。 SecurityGroupPolicy对象不支持自定义索引（PolicyIndex）。
+ * @method boolean getSortPolicys() 获取排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。
+ * @method void setSortPolicys(boolean $SortPolicys) 设置排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。
  */
 
 /**
@@ -38,9 +40,15 @@ class ModifySecurityGroupPoliciesRequest extends AbstractModel
      * @var SecurityGroupPolicySet 安全组规则集合。 SecurityGroupPolicySet对象必须同时指定新的出（Egress）入（Ingress）站规则。 SecurityGroupPolicy对象不支持自定义索引（PolicyIndex）。
      */
     public $SecurityGroupPolicySet;
+
+    /**
+     * @var boolean 排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。
+     */
+    public $SortPolicys;
     /**
      * @param string $SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      * @param SecurityGroupPolicySet $SecurityGroupPolicySet 安全组规则集合。 SecurityGroupPolicySet对象必须同时指定新的出（Egress）入（Ingress）站规则。 SecurityGroupPolicy对象不支持自定义索引（PolicyIndex）。
+     * @param boolean $SortPolicys 排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。
      */
     function __construct()
     {
@@ -61,6 +69,10 @@ class ModifySecurityGroupPoliciesRequest extends AbstractModel
         if (array_key_exists("SecurityGroupPolicySet",$param) and $param["SecurityGroupPolicySet"] !== null) {
             $this->SecurityGroupPolicySet = new SecurityGroupPolicySet();
             $this->SecurityGroupPolicySet->deserialize($param["SecurityGroupPolicySet"]);
+        }
+
+        if (array_key_exists("SortPolicys",$param) and $param["SortPolicys"] !== null) {
+            $this->SortPolicys = $param["SortPolicys"];
         }
     }
 }

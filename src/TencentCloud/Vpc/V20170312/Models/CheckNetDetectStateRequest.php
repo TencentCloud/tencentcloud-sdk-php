@@ -25,25 +25,25 @@ VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 NAT：NAT网关；
-NORMAL_CVM：普通云主机；
+NORMAL_CVM：普通云服务器；
  * @method void setNextHopType(string $NextHopType) 设置下一跳类型，目前我们支持的类型有：
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 NAT：NAT网关；
-NORMAL_CVM：普通云主机；
+NORMAL_CVM：普通云服务器；
  * @method string getNextHopDestination() 获取下一跳目的网关，取值与“下一跳类型”相关：
 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
-下一跳类型为NORMAL_CVM，取值云主机IPv4地址，形如：10.0.0.12；
+下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
  * @method void setNextHopDestination(string $NextHopDestination) 设置下一跳目的网关，取值与“下一跳类型”相关：
 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
-下一跳类型为NORMAL_CVM，取值云主机IPv4地址，形如：10.0.0.12；
+下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
  * @method string getNetDetectId() 获取网络探测实例ID。形如：netd-12345678。
  * @method void setNetDetectId(string $NetDetectId) 设置网络探测实例ID。形如：netd-12345678。
  * @method string getVpcId() 获取`VPC`实例`ID`。形如：`vpc-12345678`
@@ -70,7 +70,7 @@ VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 NAT：NAT网关；
-NORMAL_CVM：普通云主机；
+NORMAL_CVM：普通云服务器；
      */
     public $NextHopType;
 
@@ -80,7 +80,7 @@ NORMAL_CVM：普通云主机；
 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
-下一跳类型为NORMAL_CVM，取值云主机IPv4地址，形如：10.0.0.12；
+下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
      */
     public $NextHopDestination;
 
@@ -110,13 +110,13 @@ VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 NAT：NAT网关；
-NORMAL_CVM：普通云主机；
+NORMAL_CVM：普通云服务器；
      * @param string $NextHopDestination 下一跳目的网关，取值与“下一跳类型”相关：
 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
-下一跳类型为NORMAL_CVM，取值云主机IPv4地址，形如：10.0.0.12；
+下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
      * @param string $NetDetectId 网络探测实例ID。形如：netd-12345678。
      * @param string $VpcId `VPC`实例`ID`。形如：`vpc-12345678`
      * @param string $SubnetId 子网实例ID。形如：subnet-12345678。

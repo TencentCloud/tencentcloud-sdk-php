@@ -23,16 +23,18 @@ use TencentCloud\Common\AbstractModel;
  * @method string getId() 获取资源实例ID
  * @method void setId(string $Id) 设置资源实例ID
  * @method string getMetricName() 获取指标名，取值：
-connum表示总TCP连接数（新建TCP连接数与活跃TCP连接数的和）；
+connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
 intraffic表示入流量；
 outtraffic表示出流量；
 alltraffic表示出流量和入流量之和；
 inpkg表示入包速率；
 outpkg表示出包速率；
  * @method void setMetricName(string $MetricName) 设置指标名，取值：
-connum表示总TCP连接数（新建TCP连接数与活跃TCP连接数的和）；
+connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
 intraffic表示入流量；
 outtraffic表示出流量；
 alltraffic表示出流量和入流量之和；
@@ -75,8 +77,9 @@ class DescribeBaradDataRequest extends AbstractModel
 
     /**
      * @var string 指标名，取值：
-connum表示总TCP连接数（新建TCP连接数与活跃TCP连接数的和）；
+connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
 intraffic表示入流量；
 outtraffic表示出流量；
 alltraffic表示出流量和入流量之和；
@@ -121,8 +124,9 @@ avg表示均值；
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾）
      * @param string $Id 资源实例ID
      * @param string $MetricName 指标名，取值：
-connum表示总TCP连接数（新建TCP连接数与活跃TCP连接数的和）；
+connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
 intraffic表示入流量；
 outtraffic表示出流量；
 alltraffic表示出流量和入流量之和；

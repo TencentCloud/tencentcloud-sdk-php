@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getId() 获取资源ID
  * @method void setId(string $Id) 设置资源ID
  * @method integer getThreshold() 获取DDoS清洗阈值，取值[0, 60, 80, 100, 150, 200, 250, 300, 400, 500, 700, 1000];
+当设置值为0时，表示采用默认值；
  * @method void setThreshold(integer $Threshold) 设置DDoS清洗阈值，取值[0, 60, 80, 100, 150, 200, 250, 300, 400, 500, 700, 1000];
+当设置值为0时，表示采用默认值；
  */
 
 /**
@@ -43,12 +45,14 @@ class ModifyDDoSThresholdRequest extends AbstractModel
 
     /**
      * @var integer DDoS清洗阈值，取值[0, 60, 80, 100, 150, 200, 250, 300, 400, 500, 700, 1000];
+当设置值为0时，表示采用默认值；
      */
     public $Threshold;
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param string $Id 资源ID
      * @param integer $Threshold DDoS清洗阈值，取值[0, 60, 80, 100, 150, 200, 250, 300, 400, 500, 700, 1000];
+当设置值为0时，表示采用默认值；
      */
     function __construct()
     {

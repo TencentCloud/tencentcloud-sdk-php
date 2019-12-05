@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 1：慢直播。
  * @method string getCurrentCName() 获取当前客户使用的cname信息
  * @method void setCurrentCName(string $CurrentCName) 设置当前客户使用的cname信息
+ * @method integer getRentTag() 获取是否租用域名
+ * @method void setRentTag(integer $RentTag) 设置是否租用域名
+ * @method string getRentExpireTime() 获取租用域名过期时间
+ * @method void setRentExpireTime(string $RentExpireTime) 设置租用域名过期时间
  */
 
 /**
@@ -93,6 +97,16 @@ class DomainInfo extends AbstractModel
      * @var string 当前客户使用的cname信息
      */
     public $CurrentCName;
+
+    /**
+     * @var integer 是否租用域名
+     */
+    public $RentTag;
+
+    /**
+     * @var string 租用域名过期时间
+     */
+    public $RentExpireTime;
     /**
      * @param string $Name 直播域名
      * @param integer $Type 域名类型。0-推流，1-播放
@@ -105,6 +119,8 @@ class DomainInfo extends AbstractModel
      * @param integer $IsDelayLive 0：普通直播，
 1：慢直播。
      * @param string $CurrentCName 当前客户使用的cname信息
+     * @param integer $RentTag 是否租用域名
+     * @param string $RentExpireTime 租用域名过期时间
      */
     function __construct()
     {
@@ -152,6 +168,14 @@ class DomainInfo extends AbstractModel
 
         if (array_key_exists("CurrentCName",$param) and $param["CurrentCName"] !== null) {
             $this->CurrentCName = $param["CurrentCName"];
+        }
+
+        if (array_key_exists("RentTag",$param) and $param["RentTag"] !== null) {
+            $this->RentTag = $param["RentTag"];
+        }
+
+        if (array_key_exists("RentExpireTime",$param) and $param["RentExpireTime"] !== null) {
+            $this->RentExpireTime = $param["RentExpireTime"];
         }
     }
 }

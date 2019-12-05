@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpv6AddressSet(array $Ipv6AddressSet) 设置`IPv6`地址列表。
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
+ * @method integer getEniType() 获取网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+ * @method void setEniType(integer $EniType) 设置网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
  */
 
 /**
@@ -147,6 +149,11 @@ class NetworkInterface extends AbstractModel
      * @var array 标签键值对。
      */
     public $TagSet;
+
+    /**
+     * @var integer 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+     */
+    public $EniType;
     /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      * @param string $NetworkInterfaceName 弹性网卡名称。
@@ -169,6 +176,7 @@ class NetworkInterface extends AbstractModel
      * @param string $CreatedTime 创建时间。
      * @param array $Ipv6AddressSet `IPv6`地址列表。
      * @param array $TagSet 标签键值对。
+     * @param integer $EniType 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
      */
     function __construct()
     {
@@ -256,6 +264,10 @@ class NetworkInterface extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("EniType",$param) and $param["EniType"] !== null) {
+            $this->EniType = $param["EniType"];
         }
     }
 }

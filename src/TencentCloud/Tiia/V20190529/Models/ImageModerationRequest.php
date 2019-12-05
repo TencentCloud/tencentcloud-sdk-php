@@ -51,7 +51,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExtra() 获取透传字段，透传简单信息。
  * @method void setExtra(string $Extra) 设置透传字段，透传简单信息。
  * @method string getImageBase64() 获取图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
  * @method void setImageBase64(string $ImageBase64) 设置图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
  */
 
 /**
@@ -93,6 +95,7 @@ class ImageModerationRequest extends AbstractModel
 
     /**
      * @var string 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
      */
     public $ImageBase64;
     /**
@@ -113,6 +116,7 @@ class ImageModerationRequest extends AbstractModel
      * @param string $Config 预留字段，后期用于展示更多识别信息。
      * @param string $Extra 透传字段，透传简单信息。
      * @param string $ImageBase64 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
      */
     function __construct()
     {

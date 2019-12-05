@@ -18,8 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getQuotaSet() 获取带宽包配额数据结构
- * @method void setQuotaSet(array $QuotaSet) 设置带宽包配额数据结构
+ * @method array getQuotaSet() 获取带宽包配额详细信息
+ * @method void setQuotaSet(array $QuotaSet) 设置带宽包配额详细信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBandwidthPackageQuotaResponse extends AbstractModel
 {
     /**
-     * @var array 带宽包配额数据结构
+     * @var array 带宽包配额详细信息
      */
     public $QuotaSet;
 
@@ -39,7 +39,7 @@ class DescribeBandwidthPackageQuotaResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $QuotaSet 带宽包配额数据结构
+     * @param array $QuotaSet 带宽包配额详细信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

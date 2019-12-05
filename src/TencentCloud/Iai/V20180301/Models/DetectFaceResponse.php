@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageWidth(integer $ImageWidth) 设置请求的图片宽度。
  * @method integer getImageHeight() 获取请求的图片高度。
  * @method void setImageHeight(integer $ImageHeight) 设置请求的图片高度。
- * @method array getFaceInfos() 获取人脸信息列表。
- * @method void setFaceInfos(array $FaceInfos) 设置人脸信息列表。
+ * @method array getFaceInfos() 获取人脸信息列表。包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。
+ * @method void setFaceInfos(array $FaceInfos) 设置人脸信息列表。包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。
  * @method string getFaceModelVersion() 获取人脸识别所用的算法模型版本。
  * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别所用的算法模型版本。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,7 +46,7 @@ class DetectFaceResponse extends AbstractModel
     public $ImageHeight;
 
     /**
-     * @var array 人脸信息列表。
+     * @var array 人脸信息列表。包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。
      */
     public $FaceInfos;
 
@@ -62,7 +62,7 @@ class DetectFaceResponse extends AbstractModel
     /**
      * @param integer $ImageWidth 请求的图片宽度。
      * @param integer $ImageHeight 请求的图片高度。
-     * @param array $FaceInfos 人脸信息列表。
+     * @param array $FaceInfos 人脸信息列表。包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。
      * @param string $FaceModelVersion 人脸识别所用的算法模型版本。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

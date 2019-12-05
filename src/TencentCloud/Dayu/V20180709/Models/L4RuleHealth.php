@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(integer $Enable) 设置=1表示开启；=0表示关闭
  * @method integer getTimeOut() 获取响应超时时间，单位秒
  * @method void setTimeOut(integer $TimeOut) 设置响应超时时间，单位秒
- * @method integer getInterval() 获取检测间隔时间，单位秒
- * @method void setInterval(integer $Interval) 设置检测间隔时间，单位秒
+ * @method integer getInterval() 获取检测间隔时间，单位秒，必须要大于响应超时时间
+ * @method void setInterval(integer $Interval) 设置检测间隔时间，单位秒，必须要大于响应超时时间
  * @method integer getKickNum() 获取不健康阈值，单位次
  * @method void setKickNum(integer $KickNum) 设置不健康阈值，单位次
  * @method integer getAliveNum() 获取健康阈值，单位次
@@ -53,7 +53,7 @@ class L4RuleHealth extends AbstractModel
     public $TimeOut;
 
     /**
-     * @var integer 检测间隔时间，单位秒
+     * @var integer 检测间隔时间，单位秒，必须要大于响应超时时间
      */
     public $Interval;
 
@@ -70,7 +70,7 @@ class L4RuleHealth extends AbstractModel
      * @param string $RuleId 规则ID
      * @param integer $Enable =1表示开启；=0表示关闭
      * @param integer $TimeOut 响应超时时间，单位秒
-     * @param integer $Interval 检测间隔时间，单位秒
+     * @param integer $Interval 检测间隔时间，单位秒，必须要大于响应超时时间
      * @param integer $KickNum 不健康阈值，单位次
      * @param integer $AliveNum 健康阈值，单位次
      */

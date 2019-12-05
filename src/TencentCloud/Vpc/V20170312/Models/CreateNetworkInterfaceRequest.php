@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置指定绑定的安全组，例如：['sg-1dd51d']。
  * @method array getPrivateIpAddresses() 获取指定的内网IP信息，单次最多指定10个。
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息，单次最多指定10个。
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  */
 
 /**
@@ -73,6 +75,11 @@ class CreateNetworkInterfaceRequest extends AbstractModel
      * @var array 指定的内网IP信息，单次最多指定10个。
      */
     public $PrivateIpAddresses;
+
+    /**
+     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     */
+    public $Tags;
     /**
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param string $NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
@@ -81,6 +88,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
      * @param integer $SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
      * @param array $SecurityGroupIds 指定绑定的安全组，例如：['sg-1dd51d']。
      * @param array $PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
+     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     function __construct()
     {
@@ -124,6 +132,15 @@ class CreateNetworkInterfaceRequest extends AbstractModel
                 $obj = new PrivateIpAddressSpecification();
                 $obj->deserialize($value);
                 array_push($this->PrivateIpAddresses, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
             }
         }
     }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包唯一标识ID，形如'bwp-xxxx'
  * @method string getResourceType() 获取资源类型，包括‘Address’, ‘LoadBalance’
  * @method void setResourceType(string $ResourceType) 设置资源类型，包括‘Address’, ‘LoadBalance’
- * @method array getResourceIds() 获取资源Id，形如'eip-xxxx', 'lb-xxxx'
- * @method void setResourceIds(array $ResourceIds) 设置资源Id，形如'eip-xxxx', 'lb-xxxx'
+ * @method array getResourceIds() 获取资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
+ * @method void setResourceIds(array $ResourceIds) 设置资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
  */
 
 /**
@@ -42,13 +42,13 @@ class RemoveBandwidthPackageResourcesRequest extends AbstractModel
     public $ResourceType;
 
     /**
-     * @var array 资源Id，形如'eip-xxxx', 'lb-xxxx'
+     * @var array 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
      */
     public $ResourceIds;
     /**
      * @param string $BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'
      * @param string $ResourceType 资源类型，包括‘Address’, ‘LoadBalance’
-     * @param array $ResourceIds 资源Id，形如'eip-xxxx', 'lb-xxxx'
+     * @param array $ResourceIds 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
      */
     function __construct()
     {

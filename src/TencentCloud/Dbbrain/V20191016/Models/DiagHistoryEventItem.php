@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间。
  * @method integer getEventId() 获取事件 ID 。
  * @method void setEventId(integer $EventId) 设置事件 ID 。
- * @method integer getSeverity() 获取严重程度。
- * @method void setSeverity(integer $Severity) 设置严重程度。
+ * @method integer getSeverity() 获取严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
+ * @method void setSeverity(integer $Severity) 设置严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
  * @method string getOutline() 获取概要。
  * @method void setOutline(string $Outline) 设置概要。
  * @method string getDiagItem() 获取诊断项。
@@ -72,7 +72,7 @@ class DiagHistoryEventItem extends AbstractModel
     public $EventId;
 
     /**
-     * @var integer 严重程度。
+     * @var integer 严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
      */
     public $Severity;
 
@@ -108,7 +108,7 @@ class DiagHistoryEventItem extends AbstractModel
      * @param string $EndTime 结束时间。
      * @param string $StartTime 开始时间。
      * @param integer $EventId 事件 ID 。
-     * @param integer $Severity 严重程度。
+     * @param integer $Severity 严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
      * @param string $Outline 概要。
      * @param string $DiagItem 诊断项。
      * @param string $InstanceId 实例 ID 。

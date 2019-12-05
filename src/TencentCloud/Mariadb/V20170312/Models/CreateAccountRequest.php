@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getInstanceId() 获取实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
- * @method string getUserName() 获取登录用户名，由字幕、数字、下划线和连字符组成，长度为1~32位。
- * @method void setUserName(string $UserName) 设置登录用户名，由字幕、数字、下划线和连字符组成，长度为1~32位。
+ * @method string getUserName() 获取登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
+ * @method void setUserName(string $UserName) 设置登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
  * @method string getHost() 获取可以登录的主机，与mysql 账号的 host 格式一致，可以支持通配符，例如 %，10.%，10.20.%。
  * @method void setHost(string $Host) 设置可以登录的主机，与mysql 账号的 host 格式一致，可以支持通配符，例如 %，10.%，10.20.%。
  * @method string getPassword() 获取账号密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
@@ -45,7 +45,7 @@ class CreateAccountRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 登录用户名，由字幕、数字、下划线和连字符组成，长度为1~32位。
+     * @var string 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
      */
     public $UserName;
 
@@ -75,7 +75,7 @@ class CreateAccountRequest extends AbstractModel
     public $DelayThresh;
     /**
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
-     * @param string $UserName 登录用户名，由字幕、数字、下划线和连字符组成，长度为1~32位。
+     * @param string $UserName 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
      * @param string $Host 可以登录的主机，与mysql 账号的 host 格式一致，可以支持通配符，例如 %，10.%，10.20.%。
      * @param string $Password 账号密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
      * @param integer $ReadOnly 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。

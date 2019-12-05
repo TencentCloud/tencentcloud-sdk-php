@@ -64,6 +64,8 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
  * @method float getFaceMatchThreshold() 获取出参Score中，只有超过FaceMatchThreshold值的结果才会返回。默认为0。
  * @method void setFaceMatchThreshold(float $FaceMatchThreshold) 设置出参Score中，只有超过FaceMatchThreshold值的结果才会返回。默认为0。
+ * @method integer getNeedPersonInfo() 获取是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
+ * @method void setNeedPersonInfo(integer $NeedPersonInfo) 设置是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
  */
 
 /**
@@ -125,6 +127,11 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
      * @var float 出参Score中，只有超过FaceMatchThreshold值的结果才会返回。默认为0。
      */
     public $FaceMatchThreshold;
+
+    /**
+     * @var integer 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
+     */
+    public $NeedPersonInfo;
     /**
      * @param array $GroupIds 希望搜索的人员库列表，上限10个。
      * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。
@@ -149,6 +156,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 默认 0。 
 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
      * @param float $FaceMatchThreshold 出参Score中，只有超过FaceMatchThreshold值的结果才会返回。默认为0。
+     * @param integer $NeedPersonInfo 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 
         if (array_key_exists("FaceMatchThreshold",$param) and $param["FaceMatchThreshold"] !== null) {
             $this->FaceMatchThreshold = $param["FaceMatchThreshold"];
+        }
+
+        if (array_key_exists("NeedPersonInfo",$param) and $param["NeedPersonInfo"] !== null) {
+            $this->NeedPersonInfo = $param["NeedPersonInfo"];
         }
     }
 }

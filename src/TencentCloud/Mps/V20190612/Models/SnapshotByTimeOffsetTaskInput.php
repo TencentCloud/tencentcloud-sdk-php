@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTimeOffsetSet() 获取截图时间点列表，单位为<font color=red>秒</font>。
  * @method void setTimeOffsetSet(array $TimeOffsetSet) 设置截图时间点列表，单位为<font color=red>秒</font>。
  * @method array getWatermarkSet() 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TaskOutputStorage getOutputStorage() 获取时间点截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置时间点截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
@@ -55,7 +53,6 @@ class SnapshotByTimeOffsetTaskInput extends AbstractModel
 
     /**
      * @var array 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WatermarkSet;
 
@@ -79,7 +76,6 @@ class SnapshotByTimeOffsetTaskInput extends AbstractModel
      * @param integer $Definition 指定时间点截图模板 ID。
      * @param array $TimeOffsetSet 截图时间点列表，单位为<font color=red>秒</font>。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskOutputStorage $OutputStorage 时间点截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutputObjectPath 时间点截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`。

@@ -18,14 +18,18 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getEngineModelType() 获取引擎类型。
-8k_0：电话 8k 通用模型，可用于双声道音频的识别；
-8k_6：电话 8k 话者分离模型，仅用于单声道；
-16k_0：16k 通用模型。
- * @method void setEngineModelType(string $EngineModelType) 设置引擎类型。
-8k_0：电话 8k 通用模型，可用于双声道音频的识别；
-8k_6：电话 8k 话者分离模型，仅用于单声道；
-16k_0：16k 通用模型。
+ * @method string getEngineModelType() 获取引擎模型类型。
+8k_0：电话 8k 中文普通话通用，可用于双声道音频的识别；
+8k_6：电话 8k 中文普通话话者分离，仅用于单声道；
+16k_0：16k 中文普通话通用；
+16k_en：16k 英语；
+16k_ca：16k 粤语。
+ * @method void setEngineModelType(string $EngineModelType) 设置引擎模型类型。
+8k_0：电话 8k 中文普通话通用，可用于双声道音频的识别；
+8k_6：电话 8k 中文普通话话者分离，仅用于单声道；
+16k_0：16k 中文普通话通用；
+16k_en：16k 英语；
+16k_ca：16k 粤语。
  * @method integer getChannelNum() 获取语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
  * @method void setChannelNum(integer $ChannelNum) 设置语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
  * @method integer getResTextFormat() 获取识别结果文本编码方式。0：UTF-8。
@@ -48,10 +52,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateRecTaskRequest extends AbstractModel
 {
     /**
-     * @var string 引擎类型。
-8k_0：电话 8k 通用模型，可用于双声道音频的识别；
-8k_6：电话 8k 话者分离模型，仅用于单声道；
-16k_0：16k 通用模型。
+     * @var string 引擎模型类型。
+8k_0：电话 8k 中文普通话通用，可用于双声道音频的识别；
+8k_6：电话 8k 中文普通话话者分离，仅用于单声道；
+16k_0：16k 中文普通话通用；
+16k_en：16k 英语；
+16k_ca：16k 粤语。
      */
     public $EngineModelType;
 
@@ -90,10 +96,12 @@ class CreateRecTaskRequest extends AbstractModel
      */
     public $DataLen;
     /**
-     * @param string $EngineModelType 引擎类型。
-8k_0：电话 8k 通用模型，可用于双声道音频的识别；
-8k_6：电话 8k 话者分离模型，仅用于单声道；
-16k_0：16k 通用模型。
+     * @param string $EngineModelType 引擎模型类型。
+8k_0：电话 8k 中文普通话通用，可用于双声道音频的识别；
+8k_6：电话 8k 中文普通话话者分离，仅用于单声道；
+16k_0：16k 中文普通话通用；
+16k_en：16k 英语；
+16k_ca：16k 粤语。
      * @param integer $ChannelNum 语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
      * @param integer $ResTextFormat 识别结果文本编码方式。0：UTF-8。
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。

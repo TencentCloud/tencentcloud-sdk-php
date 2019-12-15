@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDefinition() 获取采样截图模板 ID。
  * @method void setDefinition(integer $Definition) 设置采样截图模板 ID。
  * @method array getWatermarkSet() 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TaskOutputStorage getOutputStorage() 获取采样截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置采样截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
@@ -48,7 +46,6 @@ class SampleSnapshotTaskInput extends AbstractModel
 
     /**
      * @var array 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WatermarkSet;
 
@@ -71,7 +68,6 @@ class SampleSnapshotTaskInput extends AbstractModel
     /**
      * @param integer $Definition 采样截图模板 ID。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskOutputStorage $OutputStorage 采样截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutputObjectPath 采样截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。

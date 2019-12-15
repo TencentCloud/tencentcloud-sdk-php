@@ -22,8 +22,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Gme\V20180711\Models as Models;
 
 /**
-* @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 本接口(CreateApp)用于创建一个GME应用
-* @method Models\DescribeAppStatisticsResponse DescribeAppStatistics(Models\DescribeAppStatisticsRequest $req) 本接口(DescribeAppStatistics)用于获取某个GME应用的用量数据。包括实时语音，离线语音，语音过滤等。最长查询周期为最近30天。
+* @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 本接口(CreateApp)用于创建一个GME应用。
+* @method Models\DescribeAppStatisticsResponse DescribeAppStatistics(Models\DescribeAppStatisticsRequest $req) 本接口(DescribeAppStatistics)用于获取某个GME应用的用量数据。包括实时语音，语音消息及转文本，语音分析等。最长查询周期为最近30天。
 * @method Models\DescribeFilterResultResponse DescribeFilterResult(Models\DescribeFilterResultRequest $req) 根据应用ID和文件ID查询识别结果
 * @method Models\DescribeFilterResultListResponse DescribeFilterResultList(Models\DescribeFilterResultListRequest $req) 根据日期查询识别结果列表
 * @method Models\DescribeScanResultListResponse DescribeScanResultList(Models\DescribeScanResultListRequest $req) 本接口(DescribeScanResultList)用于查询语音检测结果，查询任务列表最多支持100个。

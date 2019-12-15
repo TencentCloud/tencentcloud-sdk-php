@@ -18,8 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getBizId() 获取应用id，创建应用后由后台生成并返回。
- * @method void setBizId(integer $BizId) 设置应用id，创建应用后由后台生成并返回。
+ * @method integer getBizId() 获取应用ID，创建应用后由后台生成并返回。
+ * @method void setBizId(integer $BizId) 设置应用ID，创建应用后由后台生成并返回。
  * @method string getStatus() 获取应用状态，取值：open/close
  * @method void setStatus(string $Status) 设置应用状态，取值：open/close
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAppStatusRequest extends AbstractModel
 {
     /**
-     * @var integer 应用id，创建应用后由后台生成并返回。
+     * @var integer 应用ID，创建应用后由后台生成并返回。
      */
     public $BizId;
 
@@ -39,7 +39,7 @@ class ModifyAppStatusRequest extends AbstractModel
      */
     public $Status;
     /**
-     * @param integer $BizId 应用id，创建应用后由后台生成并返回。
+     * @param integer $BizId 应用ID，创建应用后由后台生成并返回。
      * @param string $Status 应用状态，取值：open/close
      */
     function __construct()

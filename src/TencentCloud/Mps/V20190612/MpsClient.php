@@ -22,6 +22,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mps\V20190612\Models as Models;
 
 /**
+* @method Models\CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(Models\CreateAIAnalysisTemplateRequest $req) 创建用户自定义内容分析模板，数量上限：50。
 * @method Models\CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(Models\CreateAIRecognitionTemplateRequest $req) 创建用户自定义内容识别模板，数量上限：50。
 * @method Models\CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplate(Models\CreateAnimatedGraphicsTemplateRequest $req) 创建用户自定义转动图模板，数量上限：16。
 * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) 创建用户自定义内容审核模板，数量上限：50。
@@ -40,9 +41,13 @@ use TencentCloud\Mps\V20190612\Models as Models;
 5. 对视频截图雪碧图；
 6. 对视频转自适应码流；
 7. 智能内容审核（鉴黄、鉴恐、鉴政）；
-8. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
+8. 智能内容分析（标签、分类、封面、按帧标签）；
+9. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
 
 注意：创建工作流成功后是禁用状态，需要手动启用。
+* @method Models\DeleteAIAnalysisTemplateResponse DeleteAIAnalysisTemplate(Models\DeleteAIAnalysisTemplateRequest $req) 删除用户自定义内容分析模板。
+
+注意：模板 ID 为 10000 以下的为系统预置模板，不允许删除。
 * @method Models\DeleteAIRecognitionTemplateResponse DeleteAIRecognitionTemplate(Models\DeleteAIRecognitionTemplateRequest $req) 删除用户自定义内容识别模板。
 * @method Models\DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplate(Models\DeleteAnimatedGraphicsTemplateRequest $req) 删除用户自定义转动图模板。
 * @method Models\DeleteContentReviewTemplateResponse DeleteContentReviewTemplate(Models\DeleteContentReviewTemplateRequest $req) 删除用户自定义内容审核模板。
@@ -54,6 +59,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 * @method Models\DeleteWatermarkTemplateResponse DeleteWatermarkTemplate(Models\DeleteWatermarkTemplateRequest $req) 删除用户自定义水印模板。
 * @method Models\DeleteWordSamplesResponse DeleteWordSamples(Models\DeleteWordSamplesRequest $req) 该接口用于批量删除关键词样本。
 * @method Models\DeleteWorkflowResponse DeleteWorkflow(Models\DeleteWorkflowRequest $req) 删除工作流。对于已启用的工作流，需要禁用后才能删除。
+* @method Models\DescribeAIAnalysisTemplatesResponse DescribeAIAnalysisTemplates(Models\DescribeAIAnalysisTemplatesRequest $req) 根据内容分析模板唯一标识，获取内容分析模板详情列表。返回结果包含符合条件的所有用户自定义内容分析模板及系统预置视频内容分析模板
 * @method Models\DescribeAIRecognitionTemplatesResponse DescribeAIRecognitionTemplates(Models\DescribeAIRecognitionTemplatesRequest $req) 根据内容识别模板唯一标识，获取内容识别模板详情列表。返回结果包含符合条件的所有用户自定义内容识别模板及系统预置视频内容识别模板
 * @method Models\DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(Models\DescribeAnimatedGraphicsTemplatesRequest $req) 查询转动图模板列表，支持根据条件，分页查询。
 * @method Models\DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(Models\DescribeContentReviewTemplatesRequest $req) 根据内容审核模板唯一标识，获取内容审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置内容审核模板。
@@ -71,6 +77,9 @@ use TencentCloud\Mps\V20190612\Models as Models;
 * @method Models\DescribeWorkflowsResponse DescribeWorkflows(Models\DescribeWorkflowsRequest $req) 根据工作流 ID，获取工作流详情列表。
 * @method Models\DisableWorkflowResponse DisableWorkflow(Models\DisableWorkflowRequest $req) 禁用工作流。
 * @method Models\EnableWorkflowResponse EnableWorkflow(Models\EnableWorkflowRequest $req) 启用工作流。
+* @method Models\ModifyAIAnalysisTemplateResponse ModifyAIAnalysisTemplate(Models\ModifyAIAnalysisTemplateRequest $req) 修改用户自定义内容分析模板。
+
+注意：模板 ID 10000 以下的为系统预置模板，不允许修改。
 * @method Models\ModifyAIRecognitionTemplateResponse ModifyAIRecognitionTemplate(Models\ModifyAIRecognitionTemplateRequest $req) 修改用户自定义内容识别模板。
 * @method Models\ModifyAnimatedGraphicsTemplateResponse ModifyAnimatedGraphicsTemplate(Models\ModifyAnimatedGraphicsTemplateRequest $req) 修改用户自定义转动图模板。
 * @method Models\ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(Models\ModifyContentReviewTemplateRequest $req) 修改用户自定义内容审核模板。
@@ -98,7 +107,8 @@ use TencentCloud\Mps\V20190612\Models as Models;
 5. 对视频截图雪碧图；
 6. 对视频转自适应码流；
 7. 智能内容审核（鉴黄、鉴恐、鉴政）；
-8. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
+8. 智能内容分析（标签、分类、封面、按帧标签）；
+9. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
 * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) 重新设置一个已经存在且处于禁用状态的工作流。
  */
 

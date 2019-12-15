@@ -19,17 +19,11 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method PornImgReviewTemplateInfo getImgReviewInfo() 获取画面鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImgReviewInfo(PornImgReviewTemplateInfo $ImgReviewInfo) 设置画面鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PornAsrReviewTemplateInfo getAsrReviewInfo() 获取语音鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrReviewInfo(PornAsrReviewTemplateInfo $AsrReviewInfo) 设置语音鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PornOcrReviewTemplateInfo getOcrReviewInfo() 获取文本鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrReviewInfo(PornOcrReviewTemplateInfo $OcrReviewInfo) 设置文本鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -39,28 +33,22 @@ class PornConfigureInfo extends AbstractModel
 {
     /**
      * @var PornImgReviewTemplateInfo 画面鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImgReviewInfo;
 
     /**
      * @var PornAsrReviewTemplateInfo 语音鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsrReviewInfo;
 
     /**
      * @var PornOcrReviewTemplateInfo 文本鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrReviewInfo;
     /**
      * @param PornImgReviewTemplateInfo $ImgReviewInfo 画面鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PornAsrReviewTemplateInfo $AsrReviewInfo 语音鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PornOcrReviewTemplateInfo $OcrReviewInfo 文本鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

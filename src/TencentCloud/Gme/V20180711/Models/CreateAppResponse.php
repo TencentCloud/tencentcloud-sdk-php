@@ -18,12 +18,12 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getBizId() 获取应用id，由后台自动生成。
- * @method void setBizId(integer $BizId) 设置应用id，由后台自动生成。
+ * @method integer getBizId() 获取应用ID，由后台自动生成。
+ * @method void setBizId(integer $BizId) 设置应用ID，由后台自动生成。
  * @method string getAppName() 获取应用名称，透传输入参数的AppName
  * @method void setAppName(string $AppName) 设置应用名称，透传输入参数的AppName
- * @method integer getProjectId() 获取项目id，透传输入的ProjectId
- * @method void setProjectId(integer $ProjectId) 设置项目id，透传输入的ProjectId
+ * @method integer getProjectId() 获取项目ID，透传输入的ProjectId
+ * @method void setProjectId(integer $ProjectId) 设置项目ID，透传输入的ProjectId
  * @method string getSecretKey() 获取应用密钥，GME SDK初始化时使用
  * @method void setSecretKey(string $SecretKey) 设置应用密钥，GME SDK初始化时使用
  * @method integer getCreateTime() 获取服务创建时间戳
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAppResponse extends AbstractModel
 {
     /**
-     * @var integer 应用id，由后台自动生成。
+     * @var integer 应用ID，由后台自动生成。
      */
     public $BizId;
 
@@ -52,7 +52,7 @@ class CreateAppResponse extends AbstractModel
     public $AppName;
 
     /**
-     * @var integer 项目id，透传输入的ProjectId
+     * @var integer 项目ID，透传输入的ProjectId
      */
     public $ProjectId;
 
@@ -81,9 +81,9 @@ class CreateAppResponse extends AbstractModel
      */
     public $VoiceFilterConf;
     /**
-     * @param integer $BizId 应用id，由后台自动生成。
+     * @param integer $BizId 应用ID，由后台自动生成。
      * @param string $AppName 应用名称，透传输入参数的AppName
-     * @param integer $ProjectId 项目id，透传输入的ProjectId
+     * @param integer $ProjectId 项目ID，透传输入的ProjectId
      * @param string $SecretKey 应用密钥，GME SDK初始化时使用
      * @param integer $CreateTime 服务创建时间戳
      * @param RealtimeSpeechConf $RealtimeSpeechConf 实时语音服务配置数据

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 输入除以上整数之外的其他参数不生效，按默认值处理。
  * @method void setVolume(float $Volume) 设置音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
 输入除以上整数之外的其他参数不生效，按默认值处理。
- * @method float getSpeed() 获取语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>输入除以上整数之外的其他参数不生效，按默认值处理。
- * @method void setSpeed(float $Speed) 设置语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>输入除以上整数之外的其他参数不生效，按默认值处理。
+ * @method float getSpeed() 获取语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更细化的语速，可以保留小数点后一位，例如0.5 1.1 1.8等。<br>
+ * @method void setSpeed(float $Speed) 设置语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更细化的语速，可以保留小数点后一位，例如0.5 1.1 1.8等。<br>
  * @method integer getProjectId() 获取项目id，用户自定义，默认为0。
  * @method void setProjectId(integer $ProjectId) 设置项目id，用户自定义，默认为0。
  * @method integer getVoiceType() 获取音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
@@ -72,7 +72,7 @@ class TextToVoiceRequest extends AbstractModel
     public $Volume;
 
     /**
-     * @var float 语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>输入除以上整数之外的其他参数不生效，按默认值处理。
+     * @var float 语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更细化的语速，可以保留小数点后一位，例如0.5 1.1 1.8等。<br>
      */
     public $Speed;
 
@@ -107,7 +107,7 @@ class TextToVoiceRequest extends AbstractModel
      * @param integer $ModelType 模型类型，1-默认模型。
      * @param float $Volume 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
 输入除以上整数之外的其他参数不生效，按默认值处理。
-     * @param float $Speed 语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>输入除以上整数之外的其他参数不生效，按默认值处理。
+     * @param float $Speed 语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更细化的语速，可以保留小数点后一位，例如0.5 1.1 1.8等。<br>
      * @param integer $ProjectId 项目id，用户自定义，默认为0。
      * @param integer $VoiceType 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
      * @param integer $PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>

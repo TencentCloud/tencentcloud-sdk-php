@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStartTime() 获取起始时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method void setStartTime(string $StartTime) 设置起始时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method string getEndTime() 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS
-时间跨度在（0,4小时]，支持最近1天数据查询。
+时间跨度在[0,4小时]，支持最近1天数据查询。
  * @method void setEndTime(string $EndTime) 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS
-时间跨度在（0,4小时]，支持最近1天数据查询。
+时间跨度在[0,4小时]，支持最近1天数据查询。
  * @method string getTopIndex() 获取峰值指标，可选值包括”Domain”，”StreamId”。
  * @method void setTopIndex(string $TopIndex) 设置峰值指标，可选值包括”Domain”，”StreamId”。
  * @method array getPlayDomains() 获取播放域名，默认为不填，表示求总体数据。
@@ -54,7 +54,7 @@ class DescribeVisitTopSumInfoListRequest extends AbstractModel
 
     /**
      * @var string 结束时间点，格式为yyyy-mm-dd HH:MM:SS
-时间跨度在（0,4小时]，支持最近1天数据查询。
+时间跨度在[0,4小时]，支持最近1天数据查询。
      */
     public $EndTime;
 
@@ -88,7 +88,7 @@ class DescribeVisitTopSumInfoListRequest extends AbstractModel
     /**
      * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS
-时间跨度在（0,4小时]，支持最近1天数据查询。
+时间跨度在[0,4小时]，支持最近1天数据查询。
      * @param string $TopIndex 峰值指标，可选值包括”Domain”，”StreamId”。
      * @param array $PlayDomains 播放域名，默认为不填，表示求总体数据。
      * @param integer $PageNum 页号，

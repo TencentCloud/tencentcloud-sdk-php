@@ -18,9 +18,9 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getErrorPageSet() 获取订制错误响应配置集
+ * @method array getErrorPageSet() 获取定制错误响应配置集
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrorPageSet(array $ErrorPageSet) 设置订制错误响应配置集
+ * @method void setErrorPageSet(array $ErrorPageSet) 设置定制错误响应配置集
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDomainErrorPageInfoResponse extends AbstractModel
 {
     /**
-     * @var array 订制错误响应配置集
+     * @var array 定制错误响应配置集
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorPageSet;
@@ -42,7 +42,7 @@ class DescribeDomainErrorPageInfoResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $ErrorPageSet 订制错误响应配置集
+     * @param array $ErrorPageSet 定制错误响应配置集
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

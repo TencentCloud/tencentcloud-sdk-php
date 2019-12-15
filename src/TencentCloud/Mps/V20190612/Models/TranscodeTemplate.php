@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getContainer() 获取封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
  * @method void setContainer(string $Container) 设置封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
  * @method string getName() 获取转码模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置转码模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComment() 获取模板描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComment(string $Comment) 设置模板描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取模板类型，取值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
@@ -49,13 +45,9 @@ use TencentCloud\Common\AbstractModel;
 <li>0：保留；</li>
 <li>1：去除。</li>
  * @method VideoTemplateInfo getVideoTemplate() 获取视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) 设置视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AudioTemplateInfo getAudioTemplate() 获取音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) 设置音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TEHDConfig getTEHDConfig() 获取极速高清转码参数，需联系商务架构师开通后才能使用。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置极速高清转码参数，需联系商务架构师开通后才能使用。
@@ -89,13 +81,11 @@ class TranscodeTemplate extends AbstractModel
 
     /**
      * @var string 转码模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 模板描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comment;
 
@@ -122,13 +112,11 @@ class TranscodeTemplate extends AbstractModel
 
     /**
      * @var VideoTemplateInfo 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoTemplate;
 
     /**
      * @var AudioTemplateInfo 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioTemplate;
 
@@ -158,9 +146,7 @@ class TranscodeTemplate extends AbstractModel
      * @param string $Definition 转码模板唯一标识。
      * @param string $Container 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
      * @param string $Name 转码模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Comment 模板描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 模板类型，取值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
@@ -171,9 +157,7 @@ class TranscodeTemplate extends AbstractModel
 <li>0：保留；</li>
 <li>1：去除。</li>
      * @param VideoTemplateInfo $VideoTemplate 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioTemplateInfo $AudioTemplate 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TEHDConfig $TEHDConfig 极速高清转码参数，需联系商务架构师开通后才能使用。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerType 封装格式过滤条件，可选值：

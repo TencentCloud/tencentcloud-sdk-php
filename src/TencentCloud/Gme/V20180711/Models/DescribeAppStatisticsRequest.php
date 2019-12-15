@@ -18,8 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getBizId() 获取GME应用id
- * @method void setBizId(integer $BizId) 设置GME应用id
+ * @method integer getBizId() 获取GME应用ID
+ * @method void setBizId(integer $BizId) 设置GME应用ID
  * @method string getStartDate() 获取数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
  * @method void setStartDate(string $StartDate) 设置数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
  * @method string getEndDate() 获取数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAppStatisticsRequest extends AbstractModel
 {
     /**
-     * @var integer GME应用id
+     * @var integer GME应用ID
      */
     public $BizId;
 
@@ -53,7 +53,7 @@ class DescribeAppStatisticsRequest extends AbstractModel
      */
     public $Services;
     /**
-     * @param integer $BizId GME应用id
+     * @param integer $BizId GME应用ID
      * @param string $StartDate 数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
      * @param string $EndDate 数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
      * @param array $Services 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter

@@ -42,8 +42,16 @@ BLOCK：违规
  * @method void setConfidence(integer $Confidence) 设置算法对于Suggestion的置信度，0-100之间，值越高，表示对于Suggestion越确定。
  * @method string getAdvancedInfo() 获取预留字段，后期用于展示更多识别信息。
  * @method void setAdvancedInfo(string $AdvancedInfo) 设置预留字段，后期用于展示更多识别信息。
- * @method string getType() 获取取值'LABEL‘，LABEL表示结论和置信度来自标签分类。
- * @method void setType(string $Type) 设置取值'LABEL‘，LABEL表示结论和置信度来自标签分类。
+ * @method string getType() 获取色情识别类型：
+PORN：色情
+HOT：性感
+NORMAL：正常
+FAIL：识别失败
+ * @method void setType(string $Type) 设置色情识别类型：
+PORN：色情
+HOT：性感
+NORMAL：正常
+FAIL：识别失败
  */
 
 /**
@@ -84,7 +92,11 @@ BLOCK：违规
     public $AdvancedInfo;
 
     /**
-     * @var string 取值'LABEL‘，LABEL表示结论和置信度来自标签分类。
+     * @var string 色情识别类型：
+PORN：色情
+HOT：性感
+NORMAL：正常
+FAIL：识别失败
      */
     public $Type;
     /**
@@ -100,7 +112,11 @@ REVIEW：疑似
 BLOCK：违规
      * @param integer $Confidence 算法对于Suggestion的置信度，0-100之间，值越高，表示对于Suggestion越确定。
      * @param string $AdvancedInfo 预留字段，后期用于展示更多识别信息。
-     * @param string $Type 取值'LABEL‘，LABEL表示结论和置信度来自标签分类。
+     * @param string $Type 色情识别类型：
+PORN：色情
+HOT：性感
+NORMAL：正常
+FAIL：识别失败
      */
     function __construct()
     {

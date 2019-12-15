@@ -19,9 +19,7 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method TerrorismImgReviewTemplateInfo getImgReviewInfo() 获取画面鉴恐任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) 设置画面鉴恐任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -31,12 +29,10 @@ class TerrorismConfigureInfo extends AbstractModel
 {
     /**
      * @var TerrorismImgReviewTemplateInfo 画面鉴恐任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImgReviewInfo;
     /**
      * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo 画面鉴恐任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

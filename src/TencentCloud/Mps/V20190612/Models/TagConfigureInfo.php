@@ -18,21 +18,29 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getDefinition() 获取智能分类模板 ID。
- * @method void setDefinition(integer $Definition) 设置智能分类模板 ID。
+ * @method string getSwitch() 获取智能标签任务开关，可选值：
+<li>ON：开启智能标签任务；</li>
+<li>OFF：关闭智能标签任务。</li>
+ * @method void setSwitch(string $Switch) 设置智能标签任务开关，可选值：
+<li>ON：开启智能标签任务；</li>
+<li>OFF：关闭智能标签任务。</li>
  */
 
 /**
- *智能分类任务输入参数类型
+ *智能标签任务控制参数
  */
-class AiClassificationTaskInput extends AbstractModel
+class TagConfigureInfo extends AbstractModel
 {
     /**
-     * @var integer 智能分类模板 ID。
+     * @var string 智能标签任务开关，可选值：
+<li>ON：开启智能标签任务；</li>
+<li>OFF：关闭智能标签任务。</li>
      */
-    public $Definition;
+    public $Switch;
     /**
-     * @param integer $Definition 智能分类模板 ID。
+     * @param string $Switch 智能标签任务开关，可选值：
+<li>ON：开启智能标签任务；</li>
+<li>OFF：关闭智能标签任务。</li>
      */
     function __construct()
     {
@@ -46,8 +54,8 @@ class AiClassificationTaskInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalBandwidth(float $TotalBandwidth) 设置实时总带宽。
  * @method float getTotalFlux() 获取实时总流量。
  * @method void setTotalFlux(float $TotalFlux) 设置实时总流量。
- * @method integer getTotalRequest() 获取TotalRequest。
- * @method void setTotalRequest(integer $TotalRequest) 设置TotalRequest。
+ * @method integer getTotalRequest() 获取总请求数。
+ * @method void setTotalRequest(integer $TotalRequest) 设置总请求数。
  * @method integer getTotalOnline() 获取实时总连接数。
  * @method void setTotalOnline(integer $TotalOnline) 设置实时总连接数。
  * @method array getDomainInfoList() 获取分域名的数据情况。
@@ -55,7 +55,7 @@ class DescribeLiveDomainPlayInfoListResponse extends AbstractModel
     public $TotalFlux;
 
     /**
-     * @var integer TotalRequest。
+     * @var integer 总请求数。
      */
     public $TotalRequest;
 
@@ -77,7 +77,7 @@ class DescribeLiveDomainPlayInfoListResponse extends AbstractModel
      * @param string $Time 数据时间，格式为yyyy-mm-dd HH:MM:SS。
      * @param float $TotalBandwidth 实时总带宽。
      * @param float $TotalFlux 实时总流量。
-     * @param integer $TotalRequest TotalRequest。
+     * @param integer $TotalRequest 总请求数。
      * @param integer $TotalOnline 实时总连接数。
      * @param array $DomainInfoList 分域名的数据情况。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

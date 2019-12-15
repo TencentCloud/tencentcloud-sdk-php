@@ -38,9 +38,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSetHeaders(array $SetHeaders) 设置需要设置的响应头
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBody() 获取设置的响应体(不包括 http头)
+ * @method string getBody() 获取设置的响应体(不包括 HTTP头)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBody(string $Body) 设置设置的响应体(不包括 http头)
+ * @method void setBody(string $Body) 设置设置的响应体(不包括 HTTP头)
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -88,7 +88,7 @@ class DomainErrorPageInfo extends AbstractModel
     public $SetHeaders;
 
     /**
-     * @var string 设置的响应体(不包括 http头)
+     * @var string 设置的响应体(不包括 HTTP头)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Body;
@@ -103,7 +103,7 @@ class DomainErrorPageInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SetHeaders 需要设置的响应头
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Body 设置的响应体(不包括 http头)
+     * @param string $Body 设置的响应体(不包括 HTTP头)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置（旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCreateTime() 获取创建时间，采用unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
- * @method void setCreateTime(integer $CreateTime) 设置创建时间，采用unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
+ * @method integer getCreateTime() 获取创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
+ * @method void setCreateTime(integer $CreateTime) 设置创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
  * @method integer getProjectId() 获取项目ID。
  * @method void setProjectId(integer $ProjectId) 设置项目ID。
  * @method string getProxyName() 获取通道名称。
@@ -114,7 +114,7 @@ class ProxyInfo extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 创建时间，采用unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
+     * @var integer 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
      */
     public $CreateTime;
 
@@ -238,7 +238,7 @@ UNKNOWN，未知状态。
     /**
      * @param string $InstanceId （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CreateTime 创建时间，采用unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
+     * @param integer $CreateTime 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
      * @param integer $ProjectId 项目ID。
      * @param string $ProxyName 通道名称。
      * @param string $AccessRegion 接入地域。

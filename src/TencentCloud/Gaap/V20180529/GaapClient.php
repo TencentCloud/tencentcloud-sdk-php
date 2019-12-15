@@ -57,7 +57,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
 * @method Models\DescribeCertificatesResponse DescribeCertificates(Models\DescribeCertificatesRequest $req) 本接口（DescribeCertificates）用来查询可以使用的证书列表。
 * @method Models\DescribeCountryAreaMappingResponse DescribeCountryAreaMapping(Models\DescribeCountryAreaMappingRequest $req) 本接口（DescribeCountryAreaMapping）用于获取国家地区编码映射表。
 * @method Models\DescribeDestRegionsResponse DescribeDestRegions(Models\DescribeDestRegionsRequest $req) 本接口（DescribeDestRegions）用于查询源站区域，即源站服务器所在区域。
-* @method Models\DescribeDomainErrorPageInfoResponse DescribeDomainErrorPageInfo(Models\DescribeDomainErrorPageInfoRequest $req) 查询目前订制域名的错误响应
+* @method Models\DescribeDomainErrorPageInfoResponse DescribeDomainErrorPageInfo(Models\DescribeDomainErrorPageInfoRequest $req) 查询目前定制域名的错误响应
 * @method Models\DescribeGroupAndStatisticsProxyResponse DescribeGroupAndStatisticsProxy(Models\DescribeGroupAndStatisticsProxyRequest $req) 该接口为内部接口，用于查询可以获取统计数据的通道组和通道信息
 * @method Models\DescribeGroupDomainConfigResponse DescribeGroupDomainConfig(Models\DescribeGroupDomainConfigRequest $req) 本接口（DescribeGroupDomainConfig）用于获取通道组域名解析配置详情。
 * @method Models\DescribeHTTPListenersResponse DescribeHTTPListeners(Models\DescribeHTTPListenersRequest $req) 该接口（DescribeHTTPListeners）用来查询HTTP监听器信息。

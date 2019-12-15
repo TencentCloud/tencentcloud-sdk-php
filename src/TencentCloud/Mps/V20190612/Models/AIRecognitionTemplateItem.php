@@ -25,25 +25,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getComment() 获取视频内容识别模板描述信息。
  * @method void setComment(string $Comment) 设置视频内容识别模板描述信息。
  * @method FaceConfigureInfo getFaceConfigure() 获取人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFaceConfigure(FaceConfigureInfo $FaceConfigure) 设置人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OcrFullTextConfigureInfo getOcrFullTextConfigure() 获取文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrFullTextConfigure(OcrFullTextConfigureInfo $OcrFullTextConfigure) 设置文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OcrWordsConfigureInfo getOcrWordsConfigure() 获取文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrWordsConfigure(OcrWordsConfigureInfo $OcrWordsConfigure) 设置文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AsrFullTextConfigureInfo getAsrFullTextConfigure() 获取语音全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfo $AsrFullTextConfigure) 设置语音全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AsrWordsConfigureInfo getAsrWordsConfigure() 获取语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) 设置语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
@@ -72,31 +62,26 @@ class AIRecognitionTemplateItem extends AbstractModel
 
     /**
      * @var FaceConfigureInfo 人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FaceConfigure;
 
     /**
      * @var OcrFullTextConfigureInfo 文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrFullTextConfigure;
 
     /**
      * @var OcrWordsConfigureInfo 文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrWordsConfigure;
 
     /**
      * @var AsrFullTextConfigureInfo 语音全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsrFullTextConfigure;
 
     /**
      * @var AsrWordsConfigureInfo 语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsrWordsConfigure;
 
@@ -114,15 +99,10 @@ class AIRecognitionTemplateItem extends AbstractModel
      * @param string $Name 视频内容识别模板名称。
      * @param string $Comment 视频内容识别模板描述信息。
      * @param FaceConfigureInfo $FaceConfigure 人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrFullTextConfigureInfo $OcrFullTextConfigure 文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrWordsConfigureInfo $OcrWordsConfigure 文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrFullTextConfigureInfo $AsrFullTextConfigure 语音全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrWordsConfigureInfo $AsrWordsConfigure 语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */

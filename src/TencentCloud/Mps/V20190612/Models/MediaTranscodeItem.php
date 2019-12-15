@@ -39,13 +39,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMd5() 获取视频的 md5 值。
  * @method void setMd5(string $Md5) 设置视频的 md5 值。
  * @method array getAudioStreamSet() 获取音频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioStreamSet(array $AudioStreamSet) 设置音频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVideoStreamSet() 获取视频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoStreamSet(array $VideoStreamSet) 设置视频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -105,13 +101,11 @@ class MediaTranscodeItem extends AbstractModel
 
     /**
      * @var array 音频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioStreamSet;
 
     /**
      * @var array 视频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoStreamSet;
     /**
@@ -126,9 +120,7 @@ class MediaTranscodeItem extends AbstractModel
      * @param string $Container 容器类型，例如 m4a，mp4 等。
      * @param string $Md5 视频的 md5 值。
      * @param array $AudioStreamSet 音频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VideoStreamSet 视频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

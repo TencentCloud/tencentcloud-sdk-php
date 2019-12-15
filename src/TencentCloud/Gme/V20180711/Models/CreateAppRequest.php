@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getAppName() 获取应用名称
  * @method void setAppName(string $AppName) 设置应用名称
- * @method integer getProjectId() 获取腾讯云项目id，默认为0，表示默认项目
- * @method void setProjectId(integer $ProjectId) 设置腾讯云项目id，默认为0，表示默认项目
- * @method array getEngineList() 获取需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
- * @method void setEngineList(array $EngineList) 设置需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
- * @method array getRegionList() 获取服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
- * @method void setRegionList(array $RegionList) 设置服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
+ * @method integer getProjectId() 获取腾讯云项目ID，默认为0，表示默认项目
+ * @method void setProjectId(integer $ProjectId) 设置腾讯云项目ID，默认为0，表示默认项目
+ * @method array getEngineList() 获取需要支持的引擎列表，默认全选。
+ * @method void setEngineList(array $EngineList) 设置需要支持的引擎列表，默认全选。
+ * @method array getRegionList() 获取服务区域列表，默认全选。
+ * @method void setRegionList(array $RegionList) 设置服务区域列表，默认全选。
  * @method RealtimeSpeechConf getRealtimeSpeechConf() 获取实时语音服务配置数据
  * @method void setRealtimeSpeechConf(RealtimeSpeechConf $RealtimeSpeechConf) 设置实时语音服务配置数据
  * @method VoiceMessageConf getVoiceMessageConf() 获取语音消息及转文本服务配置数据
@@ -47,17 +47,17 @@ class CreateAppRequest extends AbstractModel
     public $AppName;
 
     /**
-     * @var integer 腾讯云项目id，默认为0，表示默认项目
+     * @var integer 腾讯云项目ID，默认为0，表示默认项目
      */
     public $ProjectId;
 
     /**
-     * @var array 需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
+     * @var array 需要支持的引擎列表，默认全选。
      */
     public $EngineList;
 
     /**
-     * @var array 服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
+     * @var array 服务区域列表，默认全选。
      */
     public $RegionList;
 
@@ -82,9 +82,9 @@ class CreateAppRequest extends AbstractModel
     public $Tags;
     /**
      * @param string $AppName 应用名称
-     * @param integer $ProjectId 腾讯云项目id，默认为0，表示默认项目
-     * @param array $EngineList 需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
-     * @param array $RegionList 服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
+     * @param integer $ProjectId 腾讯云项目ID，默认为0，表示默认项目
+     * @param array $EngineList 需要支持的引擎列表，默认全选。
+     * @param array $RegionList 服务区域列表，默认全选。
      * @param RealtimeSpeechConf $RealtimeSpeechConf 实时语音服务配置数据
      * @param VoiceMessageConf $VoiceMessageConf 语音消息及转文本服务配置数据
      * @param VoiceFilterConf $VoiceFilterConf 语音分析服务配置数据

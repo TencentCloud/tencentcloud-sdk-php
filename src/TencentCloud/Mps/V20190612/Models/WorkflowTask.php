@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMediaProcessResultSet(array $MediaProcessResultSet) 设置视频处理任务的执行状态与结果。
  * @method array getAiContentReviewResultSet() 获取视频内容审核任务的执行状态与结果。
  * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) 设置视频内容审核任务的执行状态与结果。
+ * @method array getAiAnalysisResultSet() 获取视频内容分析任务的执行状态与结果。
+ * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) 设置视频内容分析任务的执行状态与结果。
  * @method array getAiRecognitionResultSet() 获取视频内容识别任务的执行状态与结果。
  * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) 设置视频内容识别任务的执行状态与结果。
  */
@@ -96,6 +98,11 @@ class WorkflowTask extends AbstractModel
     public $AiContentReviewResultSet;
 
     /**
+     * @var array 视频内容分析任务的执行状态与结果。
+     */
+    public $AiAnalysisResultSet;
+
+    /**
      * @var array 视频内容识别任务的执行状态与结果。
      */
     public $AiRecognitionResultSet;
@@ -112,6 +119,7 @@ class WorkflowTask extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MediaProcessResultSet 视频处理任务的执行状态与结果。
      * @param array $AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
+     * @param array $AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
      * @param array $AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
      */
     function __construct()
@@ -167,6 +175,15 @@ class WorkflowTask extends AbstractModel
                 $obj = new AiContentReviewResult();
                 $obj->deserialize($value);
                 array_push($this->AiContentReviewResultSet, $obj);
+            }
+        }
+
+        if (array_key_exists("AiAnalysisResultSet",$param) and $param["AiAnalysisResultSet"] !== null) {
+            $this->AiAnalysisResultSet = [];
+            foreach ($param["AiAnalysisResultSet"] as $key => $value){
+                $obj = new AiAnalysisResult();
+                $obj->deserialize($value);
+                array_push($this->AiAnalysisResultSet, $obj);
             }
         }
 

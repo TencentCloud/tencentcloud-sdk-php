@@ -25,7 +25,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *描述了了实例的计费模式
+ *描述了实例的计费模式
  */
 class InstanceChargePrepaid extends AbstractModel
 {

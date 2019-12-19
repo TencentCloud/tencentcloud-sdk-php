@@ -23,9 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getActivityId() 获取伸缩活动ID。
  * @method void setActivityId(string $ActivityId) 设置伸缩活动ID。
  * @method string getActivityType() 获取伸缩活动类型。取值如下：<br>
-<li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例）
+<li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例
+<li>START_INSTANCES：开启实例
+<li>STOP_INSTANCES：关闭实例
  * @method void setActivityType(string $ActivityType) 设置伸缩活动类型。取值如下：<br>
-<li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例）
+<li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例
+<li>START_INSTANCES：开启实例
+<li>STOP_INSTANCES：关闭实例
  * @method string getStatusCode() 获取伸缩活动状态。取值如下：<br>
 <li>INIT：初始化中
 <li>RUNNING：运行中
@@ -75,7 +79,9 @@ class Activity extends AbstractModel
 
     /**
      * @var string 伸缩活动类型。取值如下：<br>
-<li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例）
+<li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例
+<li>START_INSTANCES：开启实例
+<li>STOP_INSTANCES：关闭实例
      */
     public $ActivityType;
 
@@ -133,7 +139,9 @@ class Activity extends AbstractModel
      * @param string $AutoScalingGroupId 伸缩组ID。
      * @param string $ActivityId 伸缩活动ID。
      * @param string $ActivityType 伸缩活动类型。取值如下：<br>
-<li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例）
+<li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例
+<li>START_INSTANCES：开启实例
+<li>STOP_INSTANCES：关闭实例
      * @param string $StatusCode 伸缩活动状态。取值如下：<br>
 <li>INIT：初始化中
 <li>RUNNING：运行中

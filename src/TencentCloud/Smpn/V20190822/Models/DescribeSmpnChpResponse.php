@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Yunsou\V20191115\Models;
+namespace TencentCloud\Smpn\V20190822\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method SearchResult getData() 获取检索结果
- * @method void setData(SearchResult $Data) 设置检索结果
+ * @method CHPResponse getResponseData() 获取终端骚扰保护回应
+ * @method void setResponseData(CHPResponse $ResponseData) 设置终端骚扰保护回应
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *DataSearch返回参数结构体
+ *DescribeSmpnChp返回参数结构体
  */
-class DataSearchResponse extends AbstractModel
+class DescribeSmpnChpResponse extends AbstractModel
 {
     /**
-     * @var SearchResult 检索结果
+     * @var CHPResponse 终端骚扰保护回应
      */
-    public $Data;
+    public $ResponseData;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param SearchResult $Data 检索结果
+     * @param CHPResponse $ResponseData 终端骚扰保护回应
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +54,9 @@ class DataSearchResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new SearchResult();
-            $this->Data->deserialize($param["Data"]);
+        if (array_key_exists("ResponseData",$param) and $param["ResponseData"] !== null) {
+            $this->ResponseData = new CHPResponse();
+            $this->ResponseData->deserialize($param["ResponseData"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

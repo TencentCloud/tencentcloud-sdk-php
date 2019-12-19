@@ -14,25 +14,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Yunsou\V20191115\Models;
+namespace TencentCloud\Smpn\V20190822\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSegStr() 获取分词
- * @method void setSegStr(string $SegStr) 设置分词
+ * @method string getPhoneNumber() 获取电话号码
+ * @method void setPhoneNumber(string $PhoneNumber) 设置电话号码
  */
 
 /**
- *SearchResultSeg
+ *虚假号码识别请求
  */
-class SearchResultSeg extends AbstractModel
+class FNRRequest extends AbstractModel
 {
     /**
-     * @var string 分词
+     * @var string 电话号码
      */
-    public $SegStr;
+    public $PhoneNumber;
     /**
-     * @param string $SegStr 分词
+     * @param string $PhoneNumber 电话号码
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class SearchResultSeg extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SegStr",$param) and $param["SegStr"] !== null) {
-            $this->SegStr = $param["SegStr"];
+        if (array_key_exists("PhoneNumber",$param) and $param["PhoneNumber"] !== null) {
+            $this->PhoneNumber = $param["PhoneNumber"];
         }
     }
 }

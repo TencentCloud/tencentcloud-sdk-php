@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Yunsou\V20191115\Models;
+namespace TencentCloud\Smpn\V20190822\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method DataManipulationResult getData() 获取数据操作结果
- * @method void setData(DataManipulationResult $Data) 设置数据操作结果
+ * @method MRLResponse getResponseData() 获取恶意标记等级回应内容
+ * @method void setResponseData(MRLResponse $ResponseData) 设置恶意标记等级回应内容
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *DataManipulation返回参数结构体
+ *DescribeSmpnMrl返回参数结构体
  */
-class DataManipulationResponse extends AbstractModel
+class DescribeSmpnMrlResponse extends AbstractModel
 {
     /**
-     * @var DataManipulationResult 数据操作结果
+     * @var MRLResponse 恶意标记等级回应内容
      */
-    public $Data;
+    public $ResponseData;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param DataManipulationResult $Data 数据操作结果
+     * @param MRLResponse $ResponseData 恶意标记等级回应内容
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +54,9 @@ class DataManipulationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new DataManipulationResult();
-            $this->Data->deserialize($param["Data"]);
+        if (array_key_exists("ResponseData",$param) and $param["ResponseData"] !== null) {
+            $this->ResponseData = new MRLResponse();
+            $this->ResponseData->deserialize($param["ResponseData"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

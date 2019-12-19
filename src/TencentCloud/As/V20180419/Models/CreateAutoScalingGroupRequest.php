@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
  * @method ServiceSettings getServiceSettings() 获取服务设置，包括云监控不健康替换等服务设置。
  * @method void setServiceSettings(ServiceSettings $ServiceSettings) 设置服务设置，包括云监控不健康替换等服务设置。
+ * @method integer getIpv6AddressCount() 获取实例具有IPv6地址数量的配置，取值包括 0、1，默认值为0。
+ * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置实例具有IPv6地址数量的配置，取值包括 0、1，默认值为0。
  */
 
 /**
@@ -173,6 +175,11 @@ class CreateAutoScalingGroupRequest extends AbstractModel
      * @var ServiceSettings 服务设置，包括云监控不健康替换等服务设置。
      */
     public $ServiceSettings;
+
+    /**
+     * @var integer 实例具有IPv6地址数量的配置，取值包括 0、1，默认值为0。
+     */
+    public $Ipv6AddressCount;
     /**
      * @param string $AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      * @param string $LaunchConfigurationId 启动配置ID
@@ -201,6 +208,7 @@ class CreateAutoScalingGroupRequest extends AbstractModel
 如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
      * @param array $Tags 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
      * @param ServiceSettings $ServiceSettings 服务设置，包括云监控不健康替换等服务设置。
+     * @param integer $Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括 0、1，默认值为0。
      */
     function __construct()
     {
@@ -291,6 +299,10 @@ class CreateAutoScalingGroupRequest extends AbstractModel
         if (array_key_exists("ServiceSettings",$param) and $param["ServiceSettings"] !== null) {
             $this->ServiceSettings = new ServiceSettings();
             $this->ServiceSettings->deserialize($param["ServiceSettings"]);
+        }
+
+        if (array_key_exists("Ipv6AddressCount",$param) and $param["Ipv6AddressCount"] !== null) {
+            $this->Ipv6AddressCount = $param["Ipv6AddressCount"];
         }
     }
 }

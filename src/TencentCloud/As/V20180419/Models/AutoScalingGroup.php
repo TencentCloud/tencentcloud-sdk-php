@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置伸缩组标签列表
  * @method ServiceSettings getServiceSettings() 获取服务设置
  * @method void setServiceSettings(ServiceSettings $ServiceSettings) 设置服务设置
+ * @method integer getIpv6AddressCount() 获取实例具有IPv6地址数量的配置
+ * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置实例具有IPv6地址数量的配置
  */
 
 /**
@@ -192,6 +194,11 @@ class AutoScalingGroup extends AbstractModel
      * @var ServiceSettings 服务设置
      */
     public $ServiceSettings;
+
+    /**
+     * @var integer 实例具有IPv6地址数量的配置
+     */
+    public $Ipv6AddressCount;
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $AutoScalingGroupName 伸缩组名称
@@ -217,6 +224,7 @@ class AutoScalingGroup extends AbstractModel
      * @param string $InActivityStatus 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
      * @param array $Tags 伸缩组标签列表
      * @param ServiceSettings $ServiceSettings 服务设置
+     * @param integer $Ipv6AddressCount 实例具有IPv6地址数量的配置
      */
     function __construct()
     {
@@ -335,6 +343,10 @@ class AutoScalingGroup extends AbstractModel
         if (array_key_exists("ServiceSettings",$param) and $param["ServiceSettings"] !== null) {
             $this->ServiceSettings = new ServiceSettings();
             $this->ServiceSettings->deserialize($param["ServiceSettings"]);
+        }
+
+        if (array_key_exists("Ipv6AddressCount",$param) and $param["Ipv6AddressCount"] !== null) {
+            $this->Ipv6AddressCount = $param["Ipv6AddressCount"];
         }
     }
 }

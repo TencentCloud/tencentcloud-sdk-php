@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInitScript(string $InitScript) 设置启动脚本的base64编码字符串。
  * @method array getZones() 获取可用区列表。
  * @method void setZones(array $Zones) 设置可用区列表。
- * @method string getVpcId() 获取VpcId。
- * @method void setVpcId(string $VpcId) 设置VpcId。
+ * @method string getVpcId() 获取VPC ID。
+ * @method void setVpcId(string $VpcId) 设置VPC ID。
  * @method array getSubnetIds() 获取子网列表。
  * @method void setSubnetIds(array $SubnetIds) 设置子网列表。
  * @method string getInstanceName() 获取实例显示名称。
@@ -68,7 +68,7 @@ class CreatePaiInstanceRequest extends AbstractModel
     public $Zones;
 
     /**
-     * @var string VpcId。
+     * @var string VPC ID。
      */
     public $VpcId;
 
@@ -106,7 +106,7 @@ class CreatePaiInstanceRequest extends AbstractModel
      * @param InternetAccessible $InternetAccessible 公网带宽相关信息设置。
      * @param string $InitScript 启动脚本的base64编码字符串。
      * @param array $Zones 可用区列表。
-     * @param string $VpcId VpcId。
+     * @param string $VpcId VPC ID。
      * @param array $SubnetIds 子网列表。
      * @param string $InstanceName 实例显示名称。
      * @param array $InstanceTypes 实例机型列表。

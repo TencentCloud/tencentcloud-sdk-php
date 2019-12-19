@@ -15,29 +15,31 @@
  * limitations under the License.
  */
 
-namespace TencentCloud\Yunsou\V20191115;
+namespace TencentCloud\Smpn\V20190822;
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Yunsou\V20191115\Models as Models;
+use TencentCloud\Smpn\V20190822\Models as Models;
 
 /**
-* @method Models\DataManipulationResponse DataManipulation(Models\DataManipulationRequest $req) 上传云搜数据的API接口。
-
-* @method Models\DataSearchResponse DataSearch(Models\DataSearchRequest $req) 用于检索云搜中的数据。
+* @method Models\CreateSmpnEpaResponse CreateSmpnEpa(Models\CreateSmpnEpaRequest $req) 企业号码认证
+* @method Models\DescribeSmpnChpResponse DescribeSmpnChp(Models\DescribeSmpnChpRequest $req) 查询号码的标记和标记次数
+* @method Models\DescribeSmpnFnrResponse DescribeSmpnFnr(Models\DescribeSmpnFnrRequest $req) 虚假号码识别
+* @method Models\DescribeSmpnMhmResponse DescribeSmpnMhm(Models\DescribeSmpnMhmRequest $req) 号码营销监控
+* @method Models\DescribeSmpnMrlResponse DescribeSmpnMrl(Models\DescribeSmpnMrlRequest $req) 查询号码恶意标记等级
  */
 
-class YunsouClient extends AbstractClient
+class SmpnClient extends AbstractClient
 {
     /**
      * @var string 产品默认域名
      */
-    protected $endpoint = "yunsou.tencentcloudapi.com";
+    protected $endpoint = "smpn.tencentcloudapi.com";
 
     /**
      * @var string api版本号
      */
-    protected $version = "2019-11-15";
+    protected $version = "2019-08-22";
 
     /**
      * CvmClient constructor.
@@ -52,7 +54,7 @@ class YunsouClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("yunsou")."\\"."V20191115\\Models"."\\".ucfirst($action)."Response";
+        $respClass = "TencentCloud"."\\".ucfirst("smpn")."\\"."V20190822\\Models"."\\".ucfirst($action)."Response";
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

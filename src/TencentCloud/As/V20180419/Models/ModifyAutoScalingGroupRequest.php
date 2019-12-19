@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
 如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
  * @method ServiceSettings getServiceSettings() 获取服务设置，包括云监控不健康替换等服务设置。
  * @method void setServiceSettings(ServiceSettings $ServiceSettings) 设置服务设置，包括云监控不健康替换等服务设置。
+ * @method integer getIpv6AddressCount() 获取实例具有IPv6地址数量的配置，取值包括0、1。
+ * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置实例具有IPv6地址数量的配置，取值包括0、1。
  */
 
 /**
@@ -159,6 +161,11 @@ class ModifyAutoScalingGroupRequest extends AbstractModel
      * @var ServiceSettings 服务设置，包括云监控不健康替换等服务设置。
      */
     public $ServiceSettings;
+
+    /**
+     * @var integer 实例具有IPv6地址数量的配置，取值包括0、1。
+     */
+    public $Ipv6AddressCount;
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
@@ -185,6 +192,7 @@ class ModifyAutoScalingGroupRequest extends AbstractModel
 可用区或子网不可用的常见原因包括该可用区CVM实例类型售罄、该可用区CBS云盘售罄、该可用区配额不足、该子网IP不足等。
 如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
      * @param ServiceSettings $ServiceSettings 服务设置，包括云监控不健康替换等服务设置。
+     * @param integer $Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括0、1。
      */
     function __construct()
     {
@@ -257,6 +265,10 @@ class ModifyAutoScalingGroupRequest extends AbstractModel
         if (array_key_exists("ServiceSettings",$param) and $param["ServiceSettings"] !== null) {
             $this->ServiceSettings = new ServiceSettings();
             $this->ServiceSettings->deserialize($param["ServiceSettings"]);
+        }
+
+        if (array_key_exists("Ipv6AddressCount",$param) and $param["Ipv6AddressCount"] !== null) {
+            $this->Ipv6AddressCount = $param["Ipv6AddressCount"];
         }
     }
 }

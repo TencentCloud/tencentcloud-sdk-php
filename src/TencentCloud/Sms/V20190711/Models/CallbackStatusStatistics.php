@@ -18,24 +18,24 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getCallbackCount() 获取短信回执量统计
- * @method void setCallbackCount(integer $CallbackCount) 设置短信回执量统计
- * @method integer getRequestSuccessCount() 获取短信提交成功量统计
- * @method void setRequestSuccessCount(integer $RequestSuccessCount) 设置短信提交成功量统计
- * @method integer getCallbackFailCount() 获取短信回执失败量统计
- * @method void setCallbackFailCount(integer $CallbackFailCount) 设置短信回执失败量统计
- * @method integer getCallbackSuccessCount() 获取短信回执成功量统计
- * @method void setCallbackSuccessCount(integer $CallbackSuccessCount) 设置短信回执成功量统计
- * @method integer getInternalErrorCount() 获取运营商内部错误统计
- * @method void setInternalErrorCount(integer $InternalErrorCount) 设置运营商内部错误统计
- * @method integer getInvalidNumberCount() 获取号码无效或空号统计
- * @method void setInvalidNumberCount(integer $InvalidNumberCount) 设置号码无效或空号统计
- * @method integer getShutdownErrorCount() 获取停机、关机等错误统计
- * @method void setShutdownErrorCount(integer $ShutdownErrorCount) 设置停机、关机等错误统计
- * @method integer getBlackListCount() 获取号码拉入黑名单统计
- * @method void setBlackListCount(integer $BlackListCount) 设置号码拉入黑名单统计
- * @method integer getFrequencyLimitCount() 获取运营商频率限制统计
- * @method void setFrequencyLimitCount(integer $FrequencyLimitCount) 设置运营商频率限制统计
+ * @method integer getCallbackCount() 获取短信回执量统计。
+ * @method void setCallbackCount(integer $CallbackCount) 设置短信回执量统计。
+ * @method integer getRequestSuccessCount() 获取短信提交成功量统计。
+ * @method void setRequestSuccessCount(integer $RequestSuccessCount) 设置短信提交成功量统计。
+ * @method integer getCallbackFailCount() 获取短信回执失败量统计。
+ * @method void setCallbackFailCount(integer $CallbackFailCount) 设置短信回执失败量统计。
+ * @method integer getCallbackSuccessCount() 获取短信回执成功量统计。
+ * @method void setCallbackSuccessCount(integer $CallbackSuccessCount) 设置短信回执成功量统计。
+ * @method integer getInternalErrorCount() 获取运营商内部错误统计。
+ * @method void setInternalErrorCount(integer $InternalErrorCount) 设置运营商内部错误统计。
+ * @method integer getInvalidNumberCount() 获取号码无效或空号统计。
+ * @method void setInvalidNumberCount(integer $InvalidNumberCount) 设置号码无效或空号统计。
+ * @method integer getShutdownErrorCount() 获取停机、关机等错误统计。
+ * @method void setShutdownErrorCount(integer $ShutdownErrorCount) 设置停机、关机等错误统计。
+ * @method integer getBlackListCount() 获取号码拉入黑名单统计。
+ * @method void setBlackListCount(integer $BlackListCount) 设置号码拉入黑名单统计。
+ * @method integer getFrequencyLimitCount() 获取运营商频率限制统计。
+ * @method void setFrequencyLimitCount(integer $FrequencyLimitCount) 设置运营商频率限制统计。
  */
 
 /**
@@ -44,59 +44,59 @@ use TencentCloud\Common\AbstractModel;
 class CallbackStatusStatistics extends AbstractModel
 {
     /**
-     * @var integer 短信回执量统计
+     * @var integer 短信回执量统计。
      */
     public $CallbackCount;
 
     /**
-     * @var integer 短信提交成功量统计
+     * @var integer 短信提交成功量统计。
      */
     public $RequestSuccessCount;
 
     /**
-     * @var integer 短信回执失败量统计
+     * @var integer 短信回执失败量统计。
      */
     public $CallbackFailCount;
 
     /**
-     * @var integer 短信回执成功量统计
+     * @var integer 短信回执成功量统计。
      */
     public $CallbackSuccessCount;
 
     /**
-     * @var integer 运营商内部错误统计
+     * @var integer 运营商内部错误统计。
      */
     public $InternalErrorCount;
 
     /**
-     * @var integer 号码无效或空号统计
+     * @var integer 号码无效或空号统计。
      */
     public $InvalidNumberCount;
 
     /**
-     * @var integer 停机、关机等错误统计
+     * @var integer 停机、关机等错误统计。
      */
     public $ShutdownErrorCount;
 
     /**
-     * @var integer 号码拉入黑名单统计
+     * @var integer 号码拉入黑名单统计。
      */
     public $BlackListCount;
 
     /**
-     * @var integer 运营商频率限制统计
+     * @var integer 运营商频率限制统计。
      */
     public $FrequencyLimitCount;
     /**
-     * @param integer $CallbackCount 短信回执量统计
-     * @param integer $RequestSuccessCount 短信提交成功量统计
-     * @param integer $CallbackFailCount 短信回执失败量统计
-     * @param integer $CallbackSuccessCount 短信回执成功量统计
-     * @param integer $InternalErrorCount 运营商内部错误统计
-     * @param integer $InvalidNumberCount 号码无效或空号统计
-     * @param integer $ShutdownErrorCount 停机、关机等错误统计
-     * @param integer $BlackListCount 号码拉入黑名单统计
-     * @param integer $FrequencyLimitCount 运营商频率限制统计
+     * @param integer $CallbackCount 短信回执量统计。
+     * @param integer $RequestSuccessCount 短信提交成功量统计。
+     * @param integer $CallbackFailCount 短信回执失败量统计。
+     * @param integer $CallbackSuccessCount 短信回执成功量统计。
+     * @param integer $InternalErrorCount 运营商内部错误统计。
+     * @param integer $InvalidNumberCount 号码无效或空号统计。
+     * @param integer $ShutdownErrorCount 停机、关机等错误统计。
+     * @param integer $BlackListCount 号码拉入黑名单统计。
+     * @param integer $FrequencyLimitCount 运营商频率限制统计。
      */
     function __construct()
     {

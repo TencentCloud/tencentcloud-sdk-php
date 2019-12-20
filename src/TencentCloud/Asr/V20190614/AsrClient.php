@@ -27,7 +27,7 @@ use TencentCloud\Asr\V20190614\Models as Models;
 <br>• 接口支持wav、mp3、silk、amr、m4a等主流音频格式
 <br>• 支持语音 URL 和本地语音文件两种请求方式
 <br>• 本地语音文件上传的文件不能大于5MB，语音 URL的音频时长不能长于1小时
-<br>• 目前仅支持中文普通话
+<br>• 支持中文普通话、英语和粤语。
 <br>• 支持回调或轮询的方式获取结果，结果获取请参考[ 录音文件识别结果查询](https://cloud.tencent.com/document/product/1093/37822)。
 * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 在调用录音文件识别请求接口后，有回调和轮询两种方式获取识别结果。
 <br>• 当采用回调方式时，识别完成后会将结果通过 POST 请求的形式通知到用户在请求时填写的回调 URL，具体请参见[ 录音识别结果回调 ](https://cloud.tencent.com/document/product/1093/37139#callback)。

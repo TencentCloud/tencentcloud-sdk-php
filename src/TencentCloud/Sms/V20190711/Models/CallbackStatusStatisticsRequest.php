@@ -18,22 +18,22 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getStartDateTime() 获取开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时
- * @method void setStartDateTime(integer $StartDateTime) 设置开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时
- * @method integer getEndDataTime() 获取结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
-注：EndDataTime 必须大于StartDateTime
- * @method void setEndDataTime(integer $EndDataTime) 设置结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
-注：EndDataTime 必须大于StartDateTime
- * @method string getSmsSdkAppid() 获取短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
- * @method void setSmsSdkAppid(string $SmsSdkAppid) 设置短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
- * @method integer getLimit() 获取最大上限
-注：目前固定设置为0
- * @method void setLimit(integer $Limit) 设置最大上限
-注：目前固定设置为0
- * @method integer getOffset() 获取偏移量
-注：目前固定设置为0
- * @method void setOffset(integer $Offset) 设置偏移量
-注：目前固定设置为0
+ * @method integer getStartDateTime() 获取开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时。
+ * @method void setStartDateTime(integer $StartDateTime) 设置开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时。
+ * @method integer getEndDataTime() 获取结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时。
+注：EndDataTime 必须大于 StartDateTime。
+ * @method void setEndDataTime(integer $EndDataTime) 设置结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时。
+注：EndDataTime 必须大于 StartDateTime。
+ * @method string getSmsSdkAppid() 获取短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
+ * @method void setSmsSdkAppid(string $SmsSdkAppid) 设置短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
+ * @method integer getLimit() 获取最大上限。
+注：目前固定设置为0。
+ * @method void setLimit(integer $Limit) 设置最大上限。
+注：目前固定设置为0。
+ * @method integer getOffset() 获取偏移量。
+注：目前固定设置为0。
+ * @method void setOffset(integer $Offset) 设置偏移量。
+注：目前固定设置为0。
  */
 
 /**
@@ -42,41 +42,41 @@ use TencentCloud\Common\AbstractModel;
 class CallbackStatusStatisticsRequest extends AbstractModel
 {
     /**
-     * @var integer 开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时
+     * @var integer 开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时。
      */
     public $StartDateTime;
 
     /**
-     * @var integer 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
-注：EndDataTime 必须大于StartDateTime
+     * @var integer 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时。
+注：EndDataTime 必须大于 StartDateTime。
      */
     public $EndDataTime;
 
     /**
-     * @var string 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * @var string 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
      */
     public $SmsSdkAppid;
 
     /**
-     * @var integer 最大上限
-注：目前固定设置为0
+     * @var integer 最大上限。
+注：目前固定设置为0。
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量
-注：目前固定设置为0
+     * @var integer 偏移量。
+注：目前固定设置为0。
      */
     public $Offset;
     /**
-     * @param integer $StartDateTime 开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时
-     * @param integer $EndDataTime 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
-注：EndDataTime 必须大于StartDateTime
-     * @param string $SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
-     * @param integer $Limit 最大上限
-注：目前固定设置为0
-     * @param integer $Offset 偏移量
-注：目前固定设置为0
+     * @param integer $StartDateTime 开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时。
+     * @param integer $EndDataTime 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时。
+注：EndDataTime 必须大于 StartDateTime。
+     * @param string $SmsSdkAppid 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
+     * @param integer $Limit 最大上限。
+注：目前固定设置为0。
+     * @param integer $Offset 偏移量。
+注：目前固定设置为0。
      */
     function __construct()
     {

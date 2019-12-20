@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getConn() 获取tcp连接数
  * @method void setConn(array $Conn) 设置tcp连接数
- * @method array getPackageIn() 获取网卡入包量
- * @method void setPackageIn(array $PackageIn) 设置网卡入包量
- * @method array getPackageOut() 获取网卡出包量
- * @method void setPackageOut(array $PackageOut) 设置网卡出包量
- * @method array getFlowIn() 获取入流量，单位：KB
- * @method void setFlowIn(array $FlowIn) 设置入流量，单位：KB
- * @method array getFlowOut() 获取出流量，单位：KB
- * @method void setFlowOut(array $FlowOut) 设置出流量，单位：KB
+ * @method array getPackageIn() 获取网卡入包量，单位：个/秒
+ * @method void setPackageIn(array $PackageIn) 设置网卡入包量，单位：个/秒
+ * @method array getPackageOut() 获取网卡出包量，单位：个/秒
+ * @method void setPackageOut(array $PackageOut) 设置网卡出包量，单位：个/秒
+ * @method array getFlowIn() 获取入流量，单位：kbps
+ * @method void setFlowIn(array $FlowIn) 设置入流量，单位：kbps
+ * @method array getFlowOut() 获取出流量，单位：kbps
+ * @method void setFlowOut(array $FlowOut) 设置出流量，单位：kbps
  */
 
 /**
@@ -41,30 +41,30 @@ class DeviceNetInfo extends AbstractModel
     public $Conn;
 
     /**
-     * @var array 网卡入包量
+     * @var array 网卡入包量，单位：个/秒
      */
     public $PackageIn;
 
     /**
-     * @var array 网卡出包量
+     * @var array 网卡出包量，单位：个/秒
      */
     public $PackageOut;
 
     /**
-     * @var array 入流量，单位：KB
+     * @var array 入流量，单位：kbps
      */
     public $FlowIn;
 
     /**
-     * @var array 出流量，单位：KB
+     * @var array 出流量，单位：kbps
      */
     public $FlowOut;
     /**
      * @param array $Conn tcp连接数
-     * @param array $PackageIn 网卡入包量
-     * @param array $PackageOut 网卡出包量
-     * @param array $FlowIn 入流量，单位：KB
-     * @param array $FlowOut 出流量，单位：KB
+     * @param array $PackageIn 网卡入包量，单位：个/秒
+     * @param array $PackageOut 网卡出包量，单位：个/秒
+     * @param array $FlowIn 入流量，单位：kbps
+     * @param array $FlowOut 出流量，单位：kbps
      */
     function __construct()
     {

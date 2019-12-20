@@ -22,16 +22,16 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Sms\V20190711\Models as Models;
 
 /**
-* @method Models\CallbackStatusStatisticsResponse CallbackStatusStatistics(Models\CallbackStatusStatisticsRequest $req) 统计用户回执的数据
-* @method Models\PullSmsReplyStatusResponse PullSmsReplyStatus(Models\PullSmsReplyStatusRequest $req) 拉取短信回复状态
-* @method Models\PullSmsReplyStatusByPhoneNumberResponse PullSmsReplyStatusByPhoneNumber(Models\PullSmsReplyStatusByPhoneNumberRequest $req) 拉取单个号码短信回复状态
-* @method Models\PullSmsSendStatusResponse PullSmsSendStatus(Models\PullSmsSendStatusRequest $req) 拉取短信下发状态
-* @method Models\PullSmsSendStatusByPhoneNumberResponse PullSmsSendStatusByPhoneNumber(Models\PullSmsSendStatusByPhoneNumberRequest $req) 拉取单个号码短信下发状态
+* @method Models\CallbackStatusStatisticsResponse CallbackStatusStatistics(Models\CallbackStatusStatisticsRequest $req) 统计用户回执的数据。
+* @method Models\PullSmsReplyStatusResponse PullSmsReplyStatus(Models\PullSmsReplyStatusRequest $req) 拉取短信回复状态。
+* @method Models\PullSmsReplyStatusByPhoneNumberResponse PullSmsReplyStatusByPhoneNumber(Models\PullSmsReplyStatusByPhoneNumberRequest $req) 拉取单个号码短信回复状态。
+* @method Models\PullSmsSendStatusResponse PullSmsSendStatus(Models\PullSmsSendStatusRequest $req) 拉取短信下发状态。
+* @method Models\PullSmsSendStatusByPhoneNumberResponse PullSmsSendStatusByPhoneNumber(Models\PullSmsSendStatusByPhoneNumberRequest $req) 拉取单个号码短信下发状态。
 * @method Models\SendSmsResponse SendSms(Models\SendSmsRequest $req) 短信发送接口，用户给用户发短信验证码、通知类短信或营销短信。
 
 
-* @method Models\SendStatusStatisticsResponse SendStatusStatistics(Models\SendStatusStatisticsRequest $req) 统计用户发送短信的数据
-* @method Models\SmsPackagesStatisticsResponse SmsPackagesStatistics(Models\SmsPackagesStatisticsRequest $req) 用户套餐包信息统计
+* @method Models\SendStatusStatisticsResponse SendStatusStatistics(Models\SendStatusStatisticsRequest $req) 统计用户发送短信的数据。
+* @method Models\SmsPackagesStatisticsResponse SmsPackagesStatistics(Models\SmsPackagesStatisticsRequest $req) 用户套餐包信息统计。
  */
 
 class SmsClient extends AbstractClient

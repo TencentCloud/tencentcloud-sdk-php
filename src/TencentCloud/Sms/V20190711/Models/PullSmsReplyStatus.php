@@ -18,18 +18,20 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getExtendCode() 获取短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
- * @method void setExtendCode(string $ExtendCode) 设置短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
- * @method string getNationCode() 获取国家（或地区）码
- * @method void setNationCode(string $NationCode) 设置国家（或地区）码
- * @method string getPhoneNumber() 获取手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
- * @method void setPhoneNumber(string $PhoneNumber) 设置手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
- * @method string getSign() 获取短信签名
- * @method void setSign(string $Sign) 设置短信签名
- * @method string getReplyContent() 获取用户回复的内容
- * @method void setReplyContent(string $ReplyContent) 设置用户回复的内容
- * @method string getReplyTime() 获取回复时间(例如：2019-10-08 17:18:37)
- * @method void setReplyTime(string $ReplyTime) 设置回复时间(例如：2019-10-08 17:18:37)
+ * @method string getExtendCode() 获取短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
+ * @method void setExtendCode(string $ExtendCode) 设置短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
+ * @method string getNationCode() 获取国家（或地区）码。
+ * @method void setNationCode(string $NationCode) 设置国家（或地区）码。
+ * @method string getPhoneNumber() 获取手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+ * @method void setPhoneNumber(string $PhoneNumber) 设置手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+ * @method string getSign() 获取短信签名。
+ * @method void setSign(string $Sign) 设置短信签名。
+ * @method string getReplyContent() 获取用户回复的内容。
+ * @method void setReplyContent(string $ReplyContent) 设置用户回复的内容。
+ * @method string getReplyTime() 获取回复时间（例如：2019-10-08 17:18:37）。
+ * @method void setReplyTime(string $ReplyTime) 设置回复时间（例如：2019-10-08 17:18:37）。
+ * @method integer getReplyUnixTime() 获取回复时间，UNIX 时间戳（单位：秒）。
+ * @method void setReplyUnixTime(integer $ReplyUnixTime) 设置回复时间，UNIX 时间戳（单位：秒）。
  */
 
 /**
@@ -38,41 +40,47 @@ use TencentCloud\Common\AbstractModel;
 class PullSmsReplyStatus extends AbstractModel
 {
     /**
-     * @var string 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
+     * @var string 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
      */
     public $ExtendCode;
 
     /**
-     * @var string 国家（或地区）码
+     * @var string 国家（或地区）码。
      */
     public $NationCode;
 
     /**
-     * @var string 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+     * @var string 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
      */
     public $PhoneNumber;
 
     /**
-     * @var string 短信签名
+     * @var string 短信签名。
      */
     public $Sign;
 
     /**
-     * @var string 用户回复的内容
+     * @var string 用户回复的内容。
      */
     public $ReplyContent;
 
     /**
-     * @var string 回复时间(例如：2019-10-08 17:18:37)
+     * @var string 回复时间（例如：2019-10-08 17:18:37）。
      */
     public $ReplyTime;
+
     /**
-     * @param string $ExtendCode 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
-     * @param string $NationCode 国家（或地区）码
-     * @param string $PhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
-     * @param string $Sign 短信签名
-     * @param string $ReplyContent 用户回复的内容
-     * @param string $ReplyTime 回复时间(例如：2019-10-08 17:18:37)
+     * @var integer 回复时间，UNIX 时间戳（单位：秒）。
+     */
+    public $ReplyUnixTime;
+    /**
+     * @param string $ExtendCode 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
+     * @param string $NationCode 国家（或地区）码。
+     * @param string $PhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+     * @param string $Sign 短信签名。
+     * @param string $ReplyContent 用户回复的内容。
+     * @param string $ReplyTime 回复时间（例如：2019-10-08 17:18:37）。
+     * @param integer $ReplyUnixTime 回复时间，UNIX 时间戳（单位：秒）。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class PullSmsReplyStatus extends AbstractModel
 
         if (array_key_exists("ReplyTime",$param) and $param["ReplyTime"] !== null) {
             $this->ReplyTime = $param["ReplyTime"];
+        }
+
+        if (array_key_exists("ReplyUnixTime",$param) and $param["ReplyUnixTime"] !== null) {
+            $this->ReplyUnixTime = $param["ReplyUnixTime"];
         }
     }
 }

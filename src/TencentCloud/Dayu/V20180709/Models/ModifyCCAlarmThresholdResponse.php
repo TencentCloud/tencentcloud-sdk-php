@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Sms\V20190711\Models;
+namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getPullSmsReplyStatusSet() 获取回复状态响应集合。
- * @method void setPullSmsReplyStatusSet(array $PullSmsReplyStatusSet) 设置回复状态响应集合。
+ * @method SuccessCode getSuccess() 获取成功码
+ * @method void setSuccess(SuccessCode $Success) 设置成功码
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *PullSmsReplyStatus返回参数结构体
+ *ModifyCCAlarmThreshold返回参数结构体
  */
-class PullSmsReplyStatusResponse extends AbstractModel
+class ModifyCCAlarmThresholdResponse extends AbstractModel
 {
     /**
-     * @var array 回复状态响应集合。
+     * @var SuccessCode 成功码
      */
-    public $PullSmsReplyStatusSet;
+    public $Success;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param array $PullSmsReplyStatusSet 回复状态响应集合。
+     * @param SuccessCode $Success 成功码
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +54,9 @@ class PullSmsReplyStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PullSmsReplyStatusSet",$param) and $param["PullSmsReplyStatusSet"] !== null) {
-            $this->PullSmsReplyStatusSet = [];
-            foreach ($param["PullSmsReplyStatusSet"] as $key => $value){
-                $obj = new PullSmsReplyStatus();
-                $obj->deserialize($value);
-                array_push($this->PullSmsReplyStatusSet, $obj);
-            }
+        if (array_key_exists("Success",$param) and $param["Success"] !== null) {
+            $this->Success = new SuccessCode();
+            $this->Success->deserialize($param["Success"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

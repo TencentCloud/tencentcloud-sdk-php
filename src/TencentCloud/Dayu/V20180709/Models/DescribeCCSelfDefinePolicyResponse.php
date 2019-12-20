@@ -14,32 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Sms\V20190711\Models;
+namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getPullSmsReplyStatusSet() 获取回复状态响应集合。
- * @method void setPullSmsReplyStatusSet(array $PullSmsReplyStatusSet) 设置回复状态响应集合。
+ * @method integer getTotal() 获取自定义规则总数
+ * @method void setTotal(integer $Total) 设置自定义规则总数
+ * @method array getPolicys() 获取策略列表
+ * @method void setPolicys(array $Policys) 设置策略列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *PullSmsReplyStatus返回参数结构体
+ *DescribeCCSelfDefinePolicy返回参数结构体
  */
-class PullSmsReplyStatusResponse extends AbstractModel
+class DescribeCCSelfDefinePolicyResponse extends AbstractModel
 {
     /**
-     * @var array 回复状态响应集合。
+     * @var integer 自定义规则总数
      */
-    public $PullSmsReplyStatusSet;
+    public $Total;
+
+    /**
+     * @var array 策略列表
+     */
+    public $Policys;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param array $PullSmsReplyStatusSet 回复状态响应集合。
+     * @param integer $Total 自定义规则总数
+     * @param array $Policys 策略列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,12 +62,16 @@ class PullSmsReplyStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PullSmsReplyStatusSet",$param) and $param["PullSmsReplyStatusSet"] !== null) {
-            $this->PullSmsReplyStatusSet = [];
-            foreach ($param["PullSmsReplyStatusSet"] as $key => $value){
-                $obj = new PullSmsReplyStatus();
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("Policys",$param) and $param["Policys"] !== null) {
+            $this->Policys = [];
+            foreach ($param["Policys"] as $key => $value){
+                $obj = new CCPolicy();
                 $obj->deserialize($value);
-                array_push($this->PullSmsReplyStatusSet, $obj);
+                array_push($this->Policys, $obj);
             }
         }
 

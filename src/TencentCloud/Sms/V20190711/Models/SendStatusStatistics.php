@@ -18,12 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getFeeCount() 获取短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
- * @method void setFeeCount(integer $FeeCount) 设置短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
- * @method integer getRequestCount() 获取短信提交量统计
- * @method void setRequestCount(integer $RequestCount) 设置短信提交量统计
- * @method integer getRequestSuccessCount() 获取短信提交成功量统计
- * @method void setRequestSuccessCount(integer $RequestSuccessCount) 设置短信提交成功量统计
+ * @method integer getFeeCount() 获取短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条。
+ * @method void setFeeCount(integer $FeeCount) 设置短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条。
+ * @method integer getRequestCount() 获取短信提交量统计。
+ * @method void setRequestCount(integer $RequestCount) 设置短信提交量统计。
+ * @method integer getRequestSuccessCount() 获取短信提交成功量统计。
+ * @method void setRequestSuccessCount(integer $RequestSuccessCount) 设置短信提交成功量统计。
  */
 
 /**
@@ -32,23 +32,23 @@ use TencentCloud\Common\AbstractModel;
 class SendStatusStatistics extends AbstractModel
 {
     /**
-     * @var integer 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
+     * @var integer 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条。
      */
     public $FeeCount;
 
     /**
-     * @var integer 短信提交量统计
+     * @var integer 短信提交量统计。
      */
     public $RequestCount;
 
     /**
-     * @var integer 短信提交成功量统计
+     * @var integer 短信提交成功量统计。
      */
     public $RequestSuccessCount;
     /**
-     * @param integer $FeeCount 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
-     * @param integer $RequestCount 短信提交量统计
-     * @param integer $RequestSuccessCount 短信提交成功量统计
+     * @param integer $FeeCount 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条。
+     * @param integer $RequestCount 短信提交量统计。
+     * @param integer $RequestSuccessCount 短信提交成功量统计。
      */
     function __construct()
     {

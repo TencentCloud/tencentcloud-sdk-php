@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getInstanceIds() 获取实例列表。
  * @method void setInstanceIds(array $InstanceIds) 设置实例列表。
- * @method integer getOffset() 获取偏移量。
- * @method void setOffset(integer $Offset) 设置偏移量。
- * @method integer getLimit() 获取每页返回多少个标签。
- * @method void setLimit(integer $Limit) 设置每页返回多少个标签。
+ * @method integer getOffset() 获取分页偏移量。
+ * @method void setOffset(integer $Offset) 设置分页偏移量。
+ * @method integer getLimit() 获取分页大小。
+ * @method void setLimit(integer $Limit) 设置分页大小。
  */
 
 /**
@@ -37,18 +37,18 @@ class DescribeTagsOfInstanceIdsRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var integer 偏移量。
+     * @var integer 分页偏移量。
      */
     public $Offset;
 
     /**
-     * @var integer 每页返回多少个标签。
+     * @var integer 分页大小。
      */
     public $Limit;
     /**
      * @param array $InstanceIds 实例列表。
-     * @param integer $Offset 偏移量。
-     * @param integer $Limit 每页返回多少个标签。
+     * @param integer $Offset 分页偏移量。
+     * @param integer $Limit 分页大小。
      */
     function __construct()
     {

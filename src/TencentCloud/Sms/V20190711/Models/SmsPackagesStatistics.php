@@ -18,20 +18,26 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPackageCreateTime() 获取套餐包创建时间
- * @method void setPackageCreateTime(string $PackageCreateTime) 设置套餐包创建时间
- * @method string getPackageEffectiveTime() 获取套餐包生效时间
- * @method void setPackageEffectiveTime(string $PackageEffectiveTime) 设置套餐包生效时间
- * @method string getPackageExpiredTime() 获取套餐包过期时间
- * @method void setPackageExpiredTime(string $PackageExpiredTime) 设置套餐包过期时间
- * @method integer getAmountOfPackage() 获取套餐包条数
- * @method void setAmountOfPackage(integer $AmountOfPackage) 设置套餐包条数
- * @method integer getTypeOfPackage() 获取0表示赠送套餐包，1表示购买套餐包
- * @method void setTypeOfPackage(integer $TypeOfPackage) 设置0表示赠送套餐包，1表示购买套餐包
- * @method integer getPackageId() 获取套餐包 ID
- * @method void setPackageId(integer $PackageId) 设置套餐包 ID
- * @method integer getCurrentUsage() 获取当前使用量
- * @method void setCurrentUsage(integer $CurrentUsage) 设置当前使用量
+ * @method string getPackageCreateTime() 获取套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。
+ * @method void setPackageCreateTime(string $PackageCreateTime) 设置套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。
+ * @method integer getPackageCreateUnixTime() 获取套餐包创建时间，UNIX 时间戳（单位：秒）。
+ * @method void setPackageCreateUnixTime(integer $PackageCreateUnixTime) 设置套餐包创建时间，UNIX 时间戳（单位：秒）。
+ * @method string getPackageEffectiveTime() 获取套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。
+ * @method void setPackageEffectiveTime(string $PackageEffectiveTime) 设置套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。
+ * @method integer getPackageEffectiveUnixTime() 获取套餐包生效时间，UNIX 时间戳（单位：秒）。
+ * @method void setPackageEffectiveUnixTime(integer $PackageEffectiveUnixTime) 设置套餐包生效时间，UNIX 时间戳（单位：秒）。
+ * @method string getPackageExpiredTime() 获取套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。
+ * @method void setPackageExpiredTime(string $PackageExpiredTime) 设置套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。
+ * @method integer getPackageExpiredUnixTime() 获取套餐包过期时间，UNIX 时间戳（单位：秒）。
+ * @method void setPackageExpiredUnixTime(integer $PackageExpiredUnixTime) 设置套餐包过期时间，UNIX 时间戳（单位：秒）。
+ * @method integer getAmountOfPackage() 获取套餐包条数。
+ * @method void setAmountOfPackage(integer $AmountOfPackage) 设置套餐包条数。
+ * @method integer getTypeOfPackage() 获取0表示赠送套餐包，1表示购买套餐包。
+ * @method void setTypeOfPackage(integer $TypeOfPackage) 设置0表示赠送套餐包，1表示购买套餐包。
+ * @method integer getPackageId() 获取套餐包 ID。
+ * @method void setPackageId(integer $PackageId) 设置套餐包 ID。
+ * @method integer getCurrentUsage() 获取当前使用量。
+ * @method void setCurrentUsage(integer $CurrentUsage) 设置当前使用量。
  */
 
 /**
@@ -40,47 +46,65 @@ use TencentCloud\Common\AbstractModel;
 class SmsPackagesStatistics extends AbstractModel
 {
     /**
-     * @var string 套餐包创建时间
+     * @var string 套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。
      */
     public $PackageCreateTime;
 
     /**
-     * @var string 套餐包生效时间
+     * @var integer 套餐包创建时间，UNIX 时间戳（单位：秒）。
+     */
+    public $PackageCreateUnixTime;
+
+    /**
+     * @var string 套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。
      */
     public $PackageEffectiveTime;
 
     /**
-     * @var string 套餐包过期时间
+     * @var integer 套餐包生效时间，UNIX 时间戳（单位：秒）。
+     */
+    public $PackageEffectiveUnixTime;
+
+    /**
+     * @var string 套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。
      */
     public $PackageExpiredTime;
 
     /**
-     * @var integer 套餐包条数
+     * @var integer 套餐包过期时间，UNIX 时间戳（单位：秒）。
+     */
+    public $PackageExpiredUnixTime;
+
+    /**
+     * @var integer 套餐包条数。
      */
     public $AmountOfPackage;
 
     /**
-     * @var integer 0表示赠送套餐包，1表示购买套餐包
+     * @var integer 0表示赠送套餐包，1表示购买套餐包。
      */
     public $TypeOfPackage;
 
     /**
-     * @var integer 套餐包 ID
+     * @var integer 套餐包 ID。
      */
     public $PackageId;
 
     /**
-     * @var integer 当前使用量
+     * @var integer 当前使用量。
      */
     public $CurrentUsage;
     /**
-     * @param string $PackageCreateTime 套餐包创建时间
-     * @param string $PackageEffectiveTime 套餐包生效时间
-     * @param string $PackageExpiredTime 套餐包过期时间
-     * @param integer $AmountOfPackage 套餐包条数
-     * @param integer $TypeOfPackage 0表示赠送套餐包，1表示购买套餐包
-     * @param integer $PackageId 套餐包 ID
-     * @param integer $CurrentUsage 当前使用量
+     * @param string $PackageCreateTime 套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。
+     * @param integer $PackageCreateUnixTime 套餐包创建时间，UNIX 时间戳（单位：秒）。
+     * @param string $PackageEffectiveTime 套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。
+     * @param integer $PackageEffectiveUnixTime 套餐包生效时间，UNIX 时间戳（单位：秒）。
+     * @param string $PackageExpiredTime 套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。
+     * @param integer $PackageExpiredUnixTime 套餐包过期时间，UNIX 时间戳（单位：秒）。
+     * @param integer $AmountOfPackage 套餐包条数。
+     * @param integer $TypeOfPackage 0表示赠送套餐包，1表示购买套餐包。
+     * @param integer $PackageId 套餐包 ID。
+     * @param integer $CurrentUsage 当前使用量。
      */
     function __construct()
     {
@@ -98,12 +122,24 @@ class SmsPackagesStatistics extends AbstractModel
             $this->PackageCreateTime = $param["PackageCreateTime"];
         }
 
+        if (array_key_exists("PackageCreateUnixTime",$param) and $param["PackageCreateUnixTime"] !== null) {
+            $this->PackageCreateUnixTime = $param["PackageCreateUnixTime"];
+        }
+
         if (array_key_exists("PackageEffectiveTime",$param) and $param["PackageEffectiveTime"] !== null) {
             $this->PackageEffectiveTime = $param["PackageEffectiveTime"];
         }
 
+        if (array_key_exists("PackageEffectiveUnixTime",$param) and $param["PackageEffectiveUnixTime"] !== null) {
+            $this->PackageEffectiveUnixTime = $param["PackageEffectiveUnixTime"];
+        }
+
         if (array_key_exists("PackageExpiredTime",$param) and $param["PackageExpiredTime"] !== null) {
             $this->PackageExpiredTime = $param["PackageExpiredTime"];
+        }
+
+        if (array_key_exists("PackageExpiredUnixTime",$param) and $param["PackageExpiredUnixTime"] !== null) {
+            $this->PackageExpiredUnixTime = $param["PackageExpiredUnixTime"];
         }
 
         if (array_key_exists("AmountOfPackage",$param) and $param["AmountOfPackage"] !== null) {

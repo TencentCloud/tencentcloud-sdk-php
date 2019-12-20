@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeepEnable(integer $KeepEnable) 设置会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
  * @method string getRuleId() 获取规则ID
  * @method void setRuleId(string $RuleId) 设置规则ID
- * @method integer getCertType() 获取证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0
- * @method void setCertType(integer $CertType) 设置证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0
+ * @method integer getCertType() 获取证书来源，当转发协议为https时必须填，取值[2(腾讯云托管证书)]，当转发协议为http时也可以填0
+ * @method void setCertType(integer $CertType) 设置证书来源，当转发协议为https时必须填，取值[2(腾讯云托管证书)]，当转发协议为http时也可以填0
  * @method string getSSLId() 获取当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
  * @method void setSSLId(string $SSLId) 设置当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
  * @method string getCert() 获取当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
@@ -48,12 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置规则状态，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
  * @method integer getCCStatus() 获取cc防护状态，取值[0(关闭), 1(开启)]
  * @method void setCCStatus(integer $CCStatus) 设置cc防护状态，取值[0(关闭), 1(开启)]
- * @method integer getCCEnable() 获取https的CC防护状态，取值[0(关闭), 1(开启)]
- * @method void setCCEnable(integer $CCEnable) 设置https的CC防护状态，取值[0(关闭), 1(开启)]
- * @method integer getCCThreshold() 获取https的CC防护阈值
- * @method void setCCThreshold(integer $CCThreshold) 设置https的CC防护阈值
- * @method string getCCLevel() 获取https的CC防护等级
- * @method void setCCLevel(string $CCLevel) 设置https的CC防护等级
+ * @method integer getCCEnable() 获取HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)]
+ * @method void setCCEnable(integer $CCEnable) 设置HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)]
+ * @method integer getCCThreshold() 获取HTTPS协议的CC防护阈值
+ * @method void setCCThreshold(integer $CCThreshold) 设置HTTPS协议的CC防护阈值
+ * @method string getCCLevel() 获取HTTPS协议的CC防护等级
+ * @method void setCCLevel(string $CCLevel) 设置HTTPS协议的CC防护等级
  */
 
 /**
@@ -102,7 +102,7 @@ class L7RuleEntry extends AbstractModel
     public $RuleId;
 
     /**
-     * @var integer 证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0
+     * @var integer 证书来源，当转发协议为https时必须填，取值[2(腾讯云托管证书)]，当转发协议为http时也可以填0
      */
     public $CertType;
 
@@ -137,17 +137,17 @@ class L7RuleEntry extends AbstractModel
     public $CCStatus;
 
     /**
-     * @var integer https的CC防护状态，取值[0(关闭), 1(开启)]
+     * @var integer HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)]
      */
     public $CCEnable;
 
     /**
-     * @var integer https的CC防护阈值
+     * @var integer HTTPS协议的CC防护阈值
      */
     public $CCThreshold;
 
     /**
-     * @var string https的CC防护等级
+     * @var string HTTPS协议的CC防护等级
      */
     public $CCLevel;
     /**
@@ -159,16 +159,16 @@ class L7RuleEntry extends AbstractModel
      * @param integer $LbType 负载均衡方式，取值[1(加权轮询)]
      * @param integer $KeepEnable 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
      * @param string $RuleId 规则ID
-     * @param integer $CertType 证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0
+     * @param integer $CertType 证书来源，当转发协议为https时必须填，取值[2(腾讯云托管证书)]，当转发协议为http时也可以填0
      * @param string $SSLId 当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
      * @param string $Cert 当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      * @param string $PrivateKey 当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      * @param string $RuleName 规则描述
      * @param integer $Status 规则状态，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
      * @param integer $CCStatus cc防护状态，取值[0(关闭), 1(开启)]
-     * @param integer $CCEnable https的CC防护状态，取值[0(关闭), 1(开启)]
-     * @param integer $CCThreshold https的CC防护阈值
-     * @param string $CCLevel https的CC防护等级
+     * @param integer $CCEnable HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)]
+     * @param integer $CCThreshold HTTPS协议的CC防护阈值
+     * @param string $CCLevel HTTPS协议的CC防护等级
      */
     function __construct()
     {

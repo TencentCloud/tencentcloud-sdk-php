@@ -18,8 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method SendStatusStatistics getSendStatusStatistics() 获取发送数据统计响应包体
- * @method void setSendStatusStatistics(SendStatusStatistics $SendStatusStatistics) 设置发送数据统计响应包体
+ * @method SendStatusStatistics getSendStatusStatistics() 获取发送数据统计响应包体。
+ * @method void setSendStatusStatistics(SendStatusStatistics $SendStatusStatistics) 设置发送数据统计响应包体。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class SendStatusStatisticsResponse extends AbstractModel
 {
     /**
-     * @var SendStatusStatistics 发送数据统计响应包体
+     * @var SendStatusStatistics 发送数据统计响应包体。
      */
     public $SendStatusStatistics;
 
@@ -39,7 +39,7 @@ class SendStatusStatisticsResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param SendStatusStatistics $SendStatusStatistics 发送数据统计响应包体
+     * @param SendStatusStatistics $SendStatusStatistics 发送数据统计响应包体。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -43,10 +43,14 @@ use TencentCloud\Dayu\V20180709\Models as Models;
 * @method Models\DescribeActionLogResponse DescribeActionLog(Models\DescribeActionLogRequest $req) 获取操作日志
 * @method Models\DescribeBaradDataResponse DescribeBaradData(Models\DescribeBaradDataRequest $req) 为大禹子产品提供从巴拉多获取指标统计数据的接口
 * @method Models\DescribeBasicDeviceThresholdResponse DescribeBasicDeviceThreshold(Models\DescribeBasicDeviceThresholdRequest $req) 获取基础防护黑洞阈值
+* @method Models\DescribeCCAlarmThresholdResponse DescribeCCAlarmThreshold(Models\DescribeCCAlarmThresholdRequest $req) 获取高防包、高防IP、高防IP专业版、棋牌盾产品设置CC攻击的告警通知阈值
 * @method Models\DescribeCCEvListResponse DescribeCCEvList(Models\DescribeCCEvListRequest $req) 获取CC攻击事件列表
 * @method Models\DescribeCCIpAllowDenyResponse DescribeCCIpAllowDeny(Models\DescribeCCIpAllowDenyRequest $req) 获取CC的IP黑白名单
+* @method Models\DescribeCCSelfDefinePolicyResponse DescribeCCSelfDefinePolicy(Models\DescribeCCSelfDefinePolicyRequest $req) 获取CC自定义策略
 * @method Models\DescribeCCTrendResponse DescribeCCTrend(Models\DescribeCCTrendRequest $req) 获取CC攻击指标数据，包括总请求峰值(QPS)和攻击请求(QPS)
 * @method Models\DescribeCCUrlAllowResponse DescribeCCUrlAllow(Models\DescribeCCUrlAllowRequest $req) 获取CC的Url白名单
+* @method Models\DescribeDDoSAlarmThresholdResponse DescribeDDoSAlarmThreshold(Models\DescribeDDoSAlarmThresholdRequest $req) 获取高防包、高防IP、高防IP专业版、棋牌盾产品设置DDoS攻击的告警通知阈值
+* @method Models\DescribeDDoSAttackSourceResponse DescribeDDoSAttackSource(Models\DescribeDDoSAttackSourceRequest $req) 获取DDoS攻击源列表
 * @method Models\DescribeDDoSCountResponse DescribeDDoSCount(Models\DescribeDDoSCountRequest $req) 获取DDoS攻击占比分析
 * @method Models\DescribeDDoSDefendStatusResponse DescribeDDoSDefendStatus(Models\DescribeDDoSDefendStatusRequest $req) 获取DDoS防护状态（临时关闭状态），支持产品：基础防护，独享包，共享包，高防IP，高防IP专业版；调用此接口是获取当前是否有设置临时关闭DDoS防护状态，如果有设置会返回临时关闭的时长等参数。
 * @method Models\DescribeDDoSEvInfoResponse DescribeDDoSEvInfo(Models\DescribeDDoSEvInfoRequest $req) 获取DDoS攻击事件详情
@@ -80,6 +84,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
 * @method Models\DescribleL4RulesResponse DescribleL4Rules(Models\DescribleL4RulesRequest $req) 获取四层转发规则
 * @method Models\DescribleL7RulesResponse DescribleL7Rules(Models\DescribleL7RulesRequest $req) 获取七层转发规则
 * @method Models\DescribleRegionCountResponse DescribleRegionCount(Models\DescribleRegionCountRequest $req) 获取地域的资源实例数
+* @method Models\ModifyCCAlarmThresholdResponse ModifyCCAlarmThreshold(Models\ModifyCCAlarmThresholdRequest $req) 为高防包、高防IP、高防IP专业版、棋牌盾产品设置CC攻击的告警通知阈值
 * @method Models\ModifyCCHostProtectionResponse ModifyCCHostProtection(Models\ModifyCCHostProtectionRequest $req) 开启或关闭CC域名防护
 * @method Models\ModifyCCIpAllowDenyResponse ModifyCCIpAllowDeny(Models\ModifyCCIpAllowDenyRequest $req) 添加或删除CC的IP黑白名单
 * @method Models\ModifyCCLevelResponse ModifyCCLevel(Models\ModifyCCLevelRequest $req) 修改CC防护等级
@@ -88,6 +93,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
 * @method Models\ModifyCCThresholdResponse ModifyCCThreshold(Models\ModifyCCThresholdRequest $req) 修改CC的防护阈值
 * @method Models\ModifyCCUrlAllowResponse ModifyCCUrlAllow(Models\ModifyCCUrlAllowRequest $req) 添加或删除CC的URL白名单
 * @method Models\ModifyDDoSAIStatusResponse ModifyDDoSAIStatus(Models\ModifyDDoSAIStatusRequest $req) 读取或修改DDoS的AI防护状态
+* @method Models\ModifyDDoSAlarmThresholdResponse ModifyDDoSAlarmThreshold(Models\ModifyDDoSAlarmThresholdRequest $req) 为高防包、高防IP、高防IP专业版、棋牌盾等产品设置DDoS攻击的告警通知阈值
 * @method Models\ModifyDDoSDefendStatusResponse ModifyDDoSDefendStatus(Models\ModifyDDoSDefendStatusRequest $req) 开启或关闭DDoS防护状态，调用此接口允许临时关闭DDoS防护一段时间，等时间到了会自动开启DDoS防护；
 * @method Models\ModifyDDoSLevelResponse ModifyDDoSLevel(Models\ModifyDDoSLevelRequest $req) 读取或修改DDoS的防护等级
 * @method Models\ModifyDDoSPolicyResponse ModifyDDoSPolicy(Models\ModifyDDoSPolicyRequest $req) 修改DDoS高级策略

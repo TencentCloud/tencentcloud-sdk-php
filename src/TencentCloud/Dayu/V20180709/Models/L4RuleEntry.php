@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceList(array $SourceList) 设置回源列表
  * @method integer getLbType() 获取负载均衡方式，取值[1(加权轮询)，2(源IP hash)]
  * @method void setLbType(integer $LbType) 设置负载均衡方式，取值[1(加权轮询)，2(源IP hash)]
- * @method integer getKeepEnable() 获取会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
- * @method void setKeepEnable(integer $KeepEnable) 设置会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
+ * @method integer getKeepEnable() 获取会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]；
+ * @method void setKeepEnable(integer $KeepEnable) 设置会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]；
  * @method string getRuleId() 获取规则ID
  * @method void setRuleId(string $RuleId) 设置规则ID
  * @method string getRuleName() 获取规则描述
@@ -83,7 +83,7 @@ class L4RuleEntry extends AbstractModel
     public $LbType;
 
     /**
-     * @var integer 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
+     * @var integer 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]；
      */
     public $KeepEnable;
 
@@ -109,7 +109,7 @@ class L4RuleEntry extends AbstractModel
      * @param integer $KeepTime 会话保持时间，单位秒
      * @param array $SourceList 回源列表
      * @param integer $LbType 负载均衡方式，取值[1(加权轮询)，2(源IP hash)]
-     * @param integer $KeepEnable 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
+     * @param integer $KeepEnable 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]；
      * @param string $RuleId 规则ID
      * @param string $RuleName 规则描述
      * @param integer $RemoveSwitch 移除水印状态，取值[0(关闭)，1(开启)]

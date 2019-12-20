@@ -14,25 +14,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+ * @method integer getAlarmThreshold() 获取CC告警阈值
+ * @method void setAlarmThreshold(integer $AlarmThreshold) 设置CC告警阈值
  */
 
 /**
- *DescribeBackupConfig请求参数结构体
+ *CC告警阈值
  */
-class DescribeBackupConfigRequest extends AbstractModel
+class CCAlarmThreshold extends AbstractModel
 {
     /**
-     * @var string 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * @var integer CC告警阈值
      */
-    public $InstanceId;
+    public $AlarmThreshold;
     /**
-     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * @param integer $AlarmThreshold CC告警阈值
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeBackupConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("AlarmThreshold",$param) and $param["AlarmThreshold"] !== null) {
+            $this->AlarmThreshold = $param["AlarmThreshold"];
         }
     }
 }

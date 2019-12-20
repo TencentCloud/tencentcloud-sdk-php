@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getName() 获取策略名称
  * @method void setName(string $Name) 设置策略名称
- * @method string getSmode() 获取匹配模式
- * @method void setSmode(string $Smode) 设置匹配模式
+ * @method string getSmode() 获取匹配模式，取值[matching(匹配模式), speedlimit(限速模式)]
+ * @method void setSmode(string $Smode) 设置匹配模式，取值[matching(匹配模式), speedlimit(限速模式)]
  * @method string getSetId() 获取策略id
  * @method void setSetId(string $SetId) 设置策略id
  * @method integer getFrequency() 获取每分钟限制的次数
  * @method void setFrequency(integer $Frequency) 设置每分钟限制的次数
- * @method string getExeMode() 获取执行策略模式，拦截或者验证码
- * @method void setExeMode(string $ExeMode) 设置执行策略模式，拦截或者验证码
+ * @method string getExeMode() 获取执行策略模式，拦截或者验证码，取值[alg（验证码）, drop（拦截）]
+ * @method void setExeMode(string $ExeMode) 设置执行策略模式，拦截或者验证码，取值[alg（验证码）, drop（拦截）]
  * @method integer getSwitch() 获取生效开关
  * @method void setSwitch(integer $Switch) 设置生效开关
  * @method string getCreateTime() 获取创建时间
@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpList(array $IpList) 设置IP列表
  * @method string getProtocol() 获取cc防护类型，取值[http，https]
  * @method void setProtocol(string $Protocol) 设置cc防护类型，取值[http，https]
- * @method string getRuleId() 获取可选字段，表示https的CC防护域名对应的转发规则ID;
- * @method void setRuleId(string $RuleId) 设置可选字段，表示https的CC防护域名对应的转发规则ID;
- * @method string getDomain() 获取https的CC防护域名
- * @method void setDomain(string $Domain) 设置https的CC防护域名
+ * @method string getRuleId() 获取可选字段，表示HTTPS的CC防护域名对应的转发规则ID;
+ * @method void setRuleId(string $RuleId) 设置可选字段，表示HTTPS的CC防护域名对应的转发规则ID;
+ * @method string getDomain() 获取HTTPS的CC防护域名
+ * @method void setDomain(string $Domain) 设置HTTPS的CC防护域名
  */
 
 /**
@@ -55,7 +55,7 @@ class CCPolicy extends AbstractModel
     public $Name;
 
     /**
-     * @var string 匹配模式
+     * @var string 匹配模式，取值[matching(匹配模式), speedlimit(限速模式)]
      */
     public $Smode;
 
@@ -70,7 +70,7 @@ class CCPolicy extends AbstractModel
     public $Frequency;
 
     /**
-     * @var string 执行策略模式，拦截或者验证码
+     * @var string 执行策略模式，拦截或者验证码，取值[alg（验证码）, drop（拦截）]
      */
     public $ExeMode;
 
@@ -100,27 +100,27 @@ class CCPolicy extends AbstractModel
     public $Protocol;
 
     /**
-     * @var string 可选字段，表示https的CC防护域名对应的转发规则ID;
+     * @var string 可选字段，表示HTTPS的CC防护域名对应的转发规则ID;
      */
     public $RuleId;
 
     /**
-     * @var string https的CC防护域名
+     * @var string HTTPS的CC防护域名
      */
     public $Domain;
     /**
      * @param string $Name 策略名称
-     * @param string $Smode 匹配模式
+     * @param string $Smode 匹配模式，取值[matching(匹配模式), speedlimit(限速模式)]
      * @param string $SetId 策略id
      * @param integer $Frequency 每分钟限制的次数
-     * @param string $ExeMode 执行策略模式，拦截或者验证码
+     * @param string $ExeMode 执行策略模式，拦截或者验证码，取值[alg（验证码）, drop（拦截）]
      * @param integer $Switch 生效开关
      * @param string $CreateTime 创建时间
      * @param array $RuleList 规则列表
      * @param array $IpList IP列表
      * @param string $Protocol cc防护类型，取值[http，https]
-     * @param string $RuleId 可选字段，表示https的CC防护域名对应的转发规则ID;
-     * @param string $Domain https的CC防护域名
+     * @param string $RuleId 可选字段，表示HTTPS的CC防护域名对应的转发规则ID;
+     * @param string $Domain HTTPS的CC防护域名
      */
     function __construct()
     {

@@ -18,8 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getPullSmsReplyStatusSet() 获取回复状态响应集合
- * @method void setPullSmsReplyStatusSet(array $PullSmsReplyStatusSet) 设置回复状态响应集合
+ * @method array getPullSmsReplyStatusSet() 获取回复状态响应集合。
+ * @method void setPullSmsReplyStatusSet(array $PullSmsReplyStatusSet) 设置回复状态响应集合。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class PullSmsReplyStatusByPhoneNumberResponse extends AbstractModel
 {
     /**
-     * @var array 回复状态响应集合
+     * @var array 回复状态响应集合。
      */
     public $PullSmsReplyStatusSet;
 
@@ -39,7 +39,7 @@ class PullSmsReplyStatusByPhoneNumberResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $PullSmsReplyStatusSet 回复状态响应集合
+     * @param array $PullSmsReplyStatusSet 回复状态响应集合。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

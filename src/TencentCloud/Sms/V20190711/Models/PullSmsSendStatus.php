@@ -18,20 +18,22 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getUserReceiveTime() 获取用户实际接收到短信的时间
- * @method void setUserReceiveTime(string $UserReceiveTime) 设置用户实际接收到短信的时间
- * @method string getNationCode() 获取国家（或地区）码
- * @method void setNationCode(string $NationCode) 设置国家（或地区）码
- * @method string getPurePhoneNumber() 获取手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
- * @method void setPurePhoneNumber(string $PurePhoneNumber) 设置手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
- * @method string getPhoneNumber() 获取手机号码，普通格式，示例如：13711112222
- * @method void setPhoneNumber(string $PhoneNumber) 设置手机号码，普通格式，示例如：13711112222
- * @method string getSerialNo() 获取本次发送标识 ID
- * @method void setSerialNo(string $SerialNo) 设置本次发送标识 ID
- * @method string getReportStatus() 获取实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）
- * @method void setReportStatus(string $ReportStatus) 设置实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）
- * @method string getDescription() 获取用户接收短信状态描述
- * @method void setDescription(string $Description) 设置用户接收短信状态描述
+ * @method string getUserReceiveTime() 获取用户实际接收到短信的时间。
+ * @method void setUserReceiveTime(string $UserReceiveTime) 设置用户实际接收到短信的时间。
+ * @method integer getUserReceiveUnixTime() 获取用户实际接收到短信的时间，UNIX 时间戳（单位：秒）。
+ * @method void setUserReceiveUnixTime(integer $UserReceiveUnixTime) 设置用户实际接收到短信的时间，UNIX 时间戳（单位：秒）。
+ * @method string getNationCode() 获取国家（或地区）码。
+ * @method void setNationCode(string $NationCode) 设置国家（或地区）码。
+ * @method string getPurePhoneNumber() 获取手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+ * @method void setPurePhoneNumber(string $PurePhoneNumber) 设置手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+ * @method string getPhoneNumber() 获取手机号码，普通格式，示例如：13711112222。
+ * @method void setPhoneNumber(string $PhoneNumber) 设置手机号码，普通格式，示例如：13711112222。
+ * @method string getSerialNo() 获取本次发送标识 ID。
+ * @method void setSerialNo(string $SerialNo) 设置本次发送标识 ID。
+ * @method string getReportStatus() 获取实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）。
+ * @method void setReportStatus(string $ReportStatus) 设置实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）。
+ * @method string getDescription() 获取用户接收短信状态描述。
+ * @method void setDescription(string $Description) 设置用户接收短信状态描述。
  */
 
 /**
@@ -40,47 +42,53 @@ use TencentCloud\Common\AbstractModel;
 class PullSmsSendStatus extends AbstractModel
 {
     /**
-     * @var string 用户实际接收到短信的时间
+     * @var string 用户实际接收到短信的时间。
      */
     public $UserReceiveTime;
 
     /**
-     * @var string 国家（或地区）码
+     * @var integer 用户实际接收到短信的时间，UNIX 时间戳（单位：秒）。
+     */
+    public $UserReceiveUnixTime;
+
+    /**
+     * @var string 国家（或地区）码。
      */
     public $NationCode;
 
     /**
-     * @var string 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+     * @var string 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
      */
     public $PurePhoneNumber;
 
     /**
-     * @var string 手机号码，普通格式，示例如：13711112222
+     * @var string 手机号码，普通格式，示例如：13711112222。
      */
     public $PhoneNumber;
 
     /**
-     * @var string 本次发送标识 ID
+     * @var string 本次发送标识 ID。
      */
     public $SerialNo;
 
     /**
-     * @var string 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）
+     * @var string 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）。
      */
     public $ReportStatus;
 
     /**
-     * @var string 用户接收短信状态描述
+     * @var string 用户接收短信状态描述。
      */
     public $Description;
     /**
-     * @param string $UserReceiveTime 用户实际接收到短信的时间
-     * @param string $NationCode 国家（或地区）码
-     * @param string $PurePhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
-     * @param string $PhoneNumber 手机号码，普通格式，示例如：13711112222
-     * @param string $SerialNo 本次发送标识 ID
-     * @param string $ReportStatus 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）
-     * @param string $Description 用户接收短信状态描述
+     * @param string $UserReceiveTime 用户实际接收到短信的时间。
+     * @param integer $UserReceiveUnixTime 用户实际接收到短信的时间，UNIX 时间戳（单位：秒）。
+     * @param string $NationCode 国家（或地区）码。
+     * @param string $PurePhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+     * @param string $PhoneNumber 手机号码，普通格式，示例如：13711112222。
+     * @param string $SerialNo 本次发送标识 ID。
+     * @param string $ReportStatus 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）。
+     * @param string $Description 用户接收短信状态描述。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class PullSmsSendStatus extends AbstractModel
         }
         if (array_key_exists("UserReceiveTime",$param) and $param["UserReceiveTime"] !== null) {
             $this->UserReceiveTime = $param["UserReceiveTime"];
+        }
+
+        if (array_key_exists("UserReceiveUnixTime",$param) and $param["UserReceiveUnixTime"] !== null) {
+            $this->UserReceiveUnixTime = $param["UserReceiveUnixTime"];
         }
 
         if (array_key_exists("NationCode",$param) and $param["NationCode"] !== null) {

@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
 "Key":"url"时，"Value":值表示URL;
 "Key":"domain"时， "Value":值表示域名;
 "Key":"type"时，"Value":值表示黑白名单类型(white为白名单，block为黑名单);
-"Key":"protocol"时，"Value":值表示CC的防护类型(http防护或https域名防护);
+"Key":"protocol"时，"Value":值表示CC的防护类型(HTTP防护或HTTPS域名防护);
  * @method void setRecordList(array $RecordList) 设置返回黑/白名单的记录，
 "Key":"url"时，"Value":值表示URL;
 "Key":"domain"时， "Value":值表示域名;
 "Key":"type"时，"Value":值表示黑白名单类型(white为白名单，block为黑名单);
-"Key":"protocol"时，"Value":值表示CC的防护类型(http防护或https域名防护);
+"Key":"protocol"时，"Value":值表示CC的防护类型(HTTP防护或HTTPS域名防护);
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,7 +56,7 @@ class DescribeCCUrlAllowResponse extends AbstractModel
 "Key":"url"时，"Value":值表示URL;
 "Key":"domain"时， "Value":值表示域名;
 "Key":"type"时，"Value":值表示黑白名单类型(white为白名单，block为黑名单);
-"Key":"protocol"时，"Value":值表示CC的防护类型(http防护或https域名防护);
+"Key":"protocol"时，"Value":值表示CC的防护类型(HTTP防护或HTTPS域名防护);
      */
     public $RecordList;
 
@@ -71,7 +71,7 @@ class DescribeCCUrlAllowResponse extends AbstractModel
 "Key":"url"时，"Value":值表示URL;
 "Key":"domain"时， "Value":值表示域名;
 "Key":"type"时，"Value":值表示黑白名单类型(white为白名单，block为黑名单);
-"Key":"protocol"时，"Value":值表示CC的防护类型(http防护或https域名防护);
+"Key":"protocol"时，"Value":值表示CC的防护类型(HTTP防护或HTTPS域名防护);
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

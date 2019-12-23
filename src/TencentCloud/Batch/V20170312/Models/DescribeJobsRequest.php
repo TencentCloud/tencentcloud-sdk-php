@@ -18,18 +18,20 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getJobIds() 获取作业ID
- * @method void setJobIds(array $JobIds) 设置作业ID
+ * @method array getJobIds() 获取作业ID列表，与Filters参数不能同时指定。
+ * @method void setJobIds(array $JobIds) 设置作业ID列表，与Filters参数不能同时指定。
  * @method array getFilters() 获取过滤条件
 <li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
 <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
 <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+与JobIds参数不能同时指定。
  * @method void setFilters(array $Filters) 设置过滤条件
 <li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
 <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
 <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+与JobIds参数不能同时指定。
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
@@ -42,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeJobsRequest extends AbstractModel
 {
     /**
-     * @var array 作业ID
+     * @var array 作业ID列表，与Filters参数不能同时指定。
      */
     public $JobIds;
 
@@ -52,6 +54,7 @@ class DescribeJobsRequest extends AbstractModel
 <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
 <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+与JobIds参数不能同时指定。
      */
     public $Filters;
 
@@ -65,12 +68,13 @@ class DescribeJobsRequest extends AbstractModel
      */
     public $Limit;
     /**
-     * @param array $JobIds 作业ID
+     * @param array $JobIds 作业ID列表，与Filters参数不能同时指定。
      * @param array $Filters 过滤条件
 <li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
 <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
 <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+与JobIds参数不能同时指定。
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
      */

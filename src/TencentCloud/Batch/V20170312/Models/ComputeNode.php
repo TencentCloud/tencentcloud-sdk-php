@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置实例内网IP
  * @method array getPublicIpAddresses() 获取实例公网IP
  * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置实例公网IP
+ * @method string getResourceType() 获取计算环境资源类型，当前为CVM和CPM（黑石）
+ * @method void setResourceType(string $ResourceType) 设置计算环境资源类型，当前为CVM和CPM（黑石）
  */
 
 /**
@@ -94,6 +96,11 @@ class ComputeNode extends AbstractModel
      * @var array 实例公网IP
      */
     public $PublicIpAddresses;
+
+    /**
+     * @var string 计算环境资源类型，当前为CVM和CPM（黑石）
+     */
+    public $ResourceType;
     /**
      * @param string $ComputeNodeId 计算节点ID
      * @param string $ComputeNodeInstanceId 计算节点实例ID，对于CVM场景，即为CVM的InstanceId
@@ -105,6 +112,7 @@ class ComputeNode extends AbstractModel
      * @param string $AgentVersion Batch Agent 版本
      * @param array $PrivateIpAddresses 实例内网IP
      * @param array $PublicIpAddresses 实例公网IP
+     * @param string $ResourceType 计算环境资源类型，当前为CVM和CPM（黑石）
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class ComputeNode extends AbstractModel
 
         if (array_key_exists("PublicIpAddresses",$param) and $param["PublicIpAddresses"] !== null) {
             $this->PublicIpAddresses = $param["PublicIpAddresses"];
+        }
+
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
         }
     }
 }

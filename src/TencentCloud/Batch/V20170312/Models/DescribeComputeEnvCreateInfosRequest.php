@@ -18,16 +18,18 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getEnvIds() 获取计算环境ID
- * @method void setEnvIds(array $EnvIds) 设置计算环境ID
+ * @method array getEnvIds() 获取计算环境ID列表，与Filters参数不能同时指定。
+ * @method void setEnvIds(array $EnvIds) 设置计算环境ID列表，与Filters参数不能同时指定。
  * @method array getFilters() 获取过滤条件
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
 <li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
 <li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
+与EnvIds参数不能同时指定。
  * @method void setFilters(array $Filters) 设置过滤条件
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
 <li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
 <li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
+与EnvIds参数不能同时指定。
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
@@ -40,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeComputeEnvCreateInfosRequest extends AbstractModel
 {
     /**
-     * @var array 计算环境ID
+     * @var array 计算环境ID列表，与Filters参数不能同时指定。
      */
     public $EnvIds;
 
@@ -49,6 +51,7 @@ class DescribeComputeEnvCreateInfosRequest extends AbstractModel
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
 <li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
 <li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
+与EnvIds参数不能同时指定。
      */
     public $Filters;
 
@@ -62,11 +65,12 @@ class DescribeComputeEnvCreateInfosRequest extends AbstractModel
      */
     public $Limit;
     /**
-     * @param array $EnvIds 计算环境ID
+     * @param array $EnvIds 计算环境ID列表，与Filters参数不能同时指定。
      * @param array $Filters 过滤条件
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
 <li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
 <li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
+与EnvIds参数不能同时指定。
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
      */

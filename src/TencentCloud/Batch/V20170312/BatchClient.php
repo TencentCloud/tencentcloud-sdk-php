@@ -36,6 +36,7 @@ use TencentCloud\Batch\V20170312\Models as Models;
 * @method Models\DescribeComputeEnvCreateInfoResponse DescribeComputeEnvCreateInfo(Models\DescribeComputeEnvCreateInfoRequest $req) 查看计算环境的创建信息。
 * @method Models\DescribeComputeEnvCreateInfosResponse DescribeComputeEnvCreateInfos(Models\DescribeComputeEnvCreateInfosRequest $req) 用于查看计算环境创建信息列表，包括名称、描述、类型、环境参数、通知及期望节点数等。
 * @method Models\DescribeComputeEnvsResponse DescribeComputeEnvs(Models\DescribeComputeEnvsRequest $req) 用于查看计算环境列表
+* @method Models\DescribeCpmOsInfoResponse DescribeCpmOsInfo(Models\DescribeCpmOsInfoRequest $req) 创建黑石计算环境时，查询批量计算环境支持的黑石操作系统信息
 * @method Models\DescribeCvmZoneInstanceConfigInfosResponse DescribeCvmZoneInstanceConfigInfos(Models\DescribeCvmZoneInstanceConfigInfosRequest $req) 获取批量计算可用区机型配置信息
 * @method Models\DescribeInstanceCategoriesResponse DescribeInstanceCategories(Models\DescribeInstanceCategoriesRequest $req) 目前对CVM现有实例族分类，每一类包含若干实例族。该接口用于查询实例分类信息。
 * @method Models\DescribeJobResponse DescribeJob(Models\DescribeJobRequest $req) 用于查看一个作业的详细信息，包括内部任务（Task）和依赖（Dependence）信息。

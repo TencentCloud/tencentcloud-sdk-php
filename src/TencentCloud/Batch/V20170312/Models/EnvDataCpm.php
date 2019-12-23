@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeSpan(integer $TimeSpan) 设置购买时长。
  * @method integer getRaidId() 获取RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
  * @method void setRaidId(integer $RaidId) 设置RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
- * @method integer getOsTypeId() 获取部署服务器的操作系统ID。通过黑石接口[DescribeOsInfo]( https://cloud.tencent.com/document/product/386/32902)查询操作系统信息。
- * @method void setOsTypeId(integer $OsTypeId) 设置部署服务器的操作系统ID。通过黑石接口[DescribeOsInfo]( https://cloud.tencent.com/document/product/386/32902)查询操作系统信息。
+ * @method integer getOsTypeId() 获取部署服务器的操作系统ID。通过批量计算接口DescribeCpmOsInfo查询操作系统信息。
+ * @method void setOsTypeId(integer $OsTypeId) 设置部署服务器的操作系统ID。通过批量计算接口DescribeCpmOsInfo查询操作系统信息。
  * @method array getVirtualPrivateClouds() 获取黑石VPC列表，目前仅支持一个VPC。
  * @method void setVirtualPrivateClouds(array $VirtualPrivateClouds) 设置黑石VPC列表，目前仅支持一个VPC。
  * @method integer getNeedSecurityAgent() 获取是否安装安全Agent，取值：1(安装) 0(不安装)，默认取值0。
@@ -93,7 +93,7 @@ class EnvDataCpm extends AbstractModel
     public $RaidId;
 
     /**
-     * @var integer 部署服务器的操作系统ID。通过黑石接口[DescribeOsInfo]( https://cloud.tencent.com/document/product/386/32902)查询操作系统信息。
+     * @var integer 部署服务器的操作系统ID。通过批量计算接口DescribeCpmOsInfo查询操作系统信息。
      */
     public $OsTypeId;
 
@@ -177,7 +177,7 @@ class EnvDataCpm extends AbstractModel
      * @param string $TimeUnit 购买时长单位，取值：m(月)。
      * @param integer $TimeSpan 购买时长。
      * @param integer $RaidId RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
-     * @param integer $OsTypeId 部署服务器的操作系统ID。通过黑石接口[DescribeOsInfo]( https://cloud.tencent.com/document/product/386/32902)查询操作系统信息。
+     * @param integer $OsTypeId 部署服务器的操作系统ID。通过批量计算接口DescribeCpmOsInfo查询操作系统信息。
      * @param array $VirtualPrivateClouds 黑石VPC列表，目前仅支持一个VPC。
      * @param integer $NeedSecurityAgent 是否安装安全Agent，取值：1(安装) 0(不安装)，默认取值0。
      * @param integer $NeedMonitorAgent 是否安装监控Agent，取值：1(安装) 0(不安装)，默认取值0。

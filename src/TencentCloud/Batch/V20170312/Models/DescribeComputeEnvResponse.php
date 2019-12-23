@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) 设置计算节点期望个数
  * @method string getEnvType() 获取计算环境类型
  * @method void setEnvType(string $EnvType) 设置计算环境类型
+ * @method string getResourceType() 获取计算环境资源类型，当前为CVM和CPM（黑石）
+ * @method void setResourceType(string $ResourceType) 设置计算环境资源类型，当前为CVM和CPM（黑石）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -84,6 +86,11 @@ class DescribeComputeEnvResponse extends AbstractModel
     public $EnvType;
 
     /**
+     * @var string 计算环境资源类型，当前为CVM和CPM（黑石）
+     */
+    public $ResourceType;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -96,6 +103,7 @@ class DescribeComputeEnvResponse extends AbstractModel
      * @param ComputeNodeMetrics $ComputeNodeMetrics 计算节点统计指标
      * @param integer $DesiredComputeNodeCount 计算节点期望个数
      * @param string $EnvType 计算环境类型
+     * @param string $ResourceType 计算环境资源类型，当前为CVM和CPM（黑石）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -147,6 +155,10 @@ class DescribeComputeEnvResponse extends AbstractModel
 
         if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
             $this->EnvType = $param["EnvType"];
+        }
+
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -3,7 +3,7 @@ require_once '../../../TCloudAutoLoader.php';
 // 导入对应产品模块的client
 use TencentCloud\Sms\v20190711\SmsClient;
 // 导入要请求接口对应的Request类
-use TencentCloud\Sms\v20190711\Models\PullSmsSendStatusRequest;
+use TencentCloud\Sms\v20190711\Models\PullSmsReplyStatusRequest;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
 // 导入可选配置类
@@ -36,7 +36,7 @@ try {
     $client = new SmsClient($cred, "ap-shanghai", $clientProfile);
 
     // 实例化一个 sms 发送短信请求对象,每个接口都会对应一个request对象。
-    $req = new PullSmsSendStatusRequest();
+    $req = new PullSmsReplyStatusRequest();
 
     /* 填充请求参数,这里request对象的成员变量即对应接口的入参
      * 你可以通过官网接口文档或跳转到request对象的定义处查看请求参数的定义
@@ -53,7 +53,7 @@ try {
 
     // 通过client对象调用DescribeInstances方法发起请求。注意请求方法名与请求对象是对应的
     // 返回的resp是一个DescribeInstancesResponse类的实例，与请求对象对应
-    $resp = $client->PullSmsSendStatus($req);
+    $resp = $client->PullSmsReplyStatus($req);
 
     // 输出json格式的字符串回包
     print_r($resp->toJsonString());

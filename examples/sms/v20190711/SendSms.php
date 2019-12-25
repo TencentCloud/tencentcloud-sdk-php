@@ -12,7 +12,7 @@ use TencentCloud\Common\Profile\HttpProfile;
 
 try {
     // 实例化一个证书对象，入参需要传入腾讯云账户secretId，secretKey
-    $cred = new Credential("AKIDKSXXLumHF0Zy8BTgCfEkdfdYd2HRGbhO", "ofaSHUlU9eLxUI1dBbovq8C4i7GB8uWp");
+    $cred = new Credential("", "");
     //$cred = new Credential(getenv("TENCENTCLOUD_SECRET_ID"), getenv("TENCENTCLOUD_SECRET_KEY"));
 
     // 实例化一个http选项，可选的，没有特殊需求可以跳过
@@ -34,10 +34,10 @@ try {
 
     // 填充请求参数,这里request对象的成员变量即对应接口的入参
     // 你可以通过官网接口文档或跳转到request对象的定义处查看请求参数的定义
-    $req->SmsSdkAppid = "1400274116";
-    $req->Sign = "thirteen";
+    $req->SmsSdkAppid = "1400787878";
+    $req->Sign = "xxx";
     $req->ExtendCode = "0";
-    $req->PhoneNumberSet = array("+8615291996532");
+    $req->PhoneNumberSet = array("+8615298898989");
     $req->SenderId = "xxx";
     $req->SessionContext = "xxx";
     $req->TemplateID = "449739";

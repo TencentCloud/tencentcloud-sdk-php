@@ -34,8 +34,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageSize(integer $ImageSize) 设置镜像大小
  * @method string getArchitecture() 获取镜像架构
  * @method void setArchitecture(string $Architecture) 设置镜像架构
- * @method string getImageState() 获取镜像状态
- * @method void setImageState(string $ImageState) 设置镜像状态
+ * @method string getImageState() 获取镜像状态:
+CREATING-创建中
+NORMAL-正常
+CREATEFAILED-创建失败
+USING-使用中
+SYNCING-同步中
+IMPORTING-导入中
+IMPORTFAILED-导入失败
+ * @method void setImageState(string $ImageState) 设置镜像状态:
+CREATING-创建中
+NORMAL-正常
+CREATEFAILED-创建失败
+USING-使用中
+SYNCING-同步中
+IMPORTING-导入中
+IMPORTFAILED-导入失败
  * @method string getPlatform() 获取镜像来源平台
  * @method void setPlatform(string $Platform) 设置镜像来源平台
  * @method string getImageCreator() 获取镜像创建者
@@ -102,7 +116,14 @@ class Image extends AbstractModel
     public $Architecture;
 
     /**
-     * @var string 镜像状态
+     * @var string 镜像状态:
+CREATING-创建中
+NORMAL-正常
+CREATEFAILED-创建失败
+USING-使用中
+SYNCING-同步中
+IMPORTING-导入中
+IMPORTFAILED-导入失败
      */
     public $ImageState;
 
@@ -147,7 +168,14 @@ class Image extends AbstractModel
      * @param string $ImageDescription 镜像描述
      * @param integer $ImageSize 镜像大小
      * @param string $Architecture 镜像架构
-     * @param string $ImageState 镜像状态
+     * @param string $ImageState 镜像状态:
+CREATING-创建中
+NORMAL-正常
+CREATEFAILED-创建失败
+USING-使用中
+SYNCING-同步中
+IMPORTING-导入中
+IMPORTFAILED-导入失败
      * @param string $Platform 镜像来源平台
      * @param string $ImageCreator 镜像创建者
      * @param string $ImageSource 镜像来源

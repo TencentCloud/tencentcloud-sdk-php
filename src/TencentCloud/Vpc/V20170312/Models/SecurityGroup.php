@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDefault(boolean $IsDefault) 设置是否是默认安全组，默认安全组不支持删除。
  * @method string getCreatedTime() 获取安全组创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置安全组创建时间。
+ * @method array getTagSet() 获取标签键值对。
+ * @method void setTagSet(array $TagSet) 设置标签键值对。
  */
 
 /**
@@ -66,6 +68,11 @@ class SecurityGroup extends AbstractModel
      * @var string 安全组创建时间。
      */
     public $CreatedTime;
+
+    /**
+     * @var array 标签键值对。
+     */
+    public $TagSet;
     /**
      * @param string $SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
      * @param string $SecurityGroupName 安全组名称，可任意命名，但不得超过60个字符。
@@ -73,6 +80,7 @@ class SecurityGroup extends AbstractModel
      * @param string $ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
      * @param boolean $IsDefault 是否是默认安全组，默认安全组不支持删除。
      * @param string $CreatedTime 安全组创建时间。
+     * @param array $TagSet 标签键值对。
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class SecurityGroup extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

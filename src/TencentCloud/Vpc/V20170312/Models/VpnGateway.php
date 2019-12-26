@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区，如：ap-guangzhou-2
  * @method array getVpnGatewayQuotaSet() 获取网关带宽配额信息
  * @method void setVpnGatewayQuotaSet(array $VpnGatewayQuotaSet) 设置网关带宽配额信息
+ * @method string getVersion() 获取网关实例版本信息
+ * @method void setVersion(string $Version) 设置网关实例版本信息
  */
 
 /**
@@ -136,6 +138,11 @@ class VpnGateway extends AbstractModel
      * @var array 网关带宽配额信息
      */
     public $VpnGatewayQuotaSet;
+
+    /**
+     * @var string 网关实例版本信息
+     */
+    public $Version;
     /**
      * @param string $VpnGatewayId 网关实例ID。
      * @param string $VpcId VPC实例ID。
@@ -153,6 +160,7 @@ class VpnGateway extends AbstractModel
      * @param string $RestrictState 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
      * @param string $Zone 可用区，如：ap-guangzhou-2
      * @param array $VpnGatewayQuotaSet 网关带宽配额信息
+     * @param string $Version 网关实例版本信息
      */
     function __construct()
     {
@@ -233,6 +241,10 @@ class VpnGateway extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VpnGatewayQuotaSet, $obj);
             }
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
         }
     }
 }

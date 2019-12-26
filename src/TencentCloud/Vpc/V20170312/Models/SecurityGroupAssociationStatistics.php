@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getSecurityGroupId() 获取安全组实例ID。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID。
- * @method integer getCVM() 获取云主机实例数。
- * @method void setCVM(integer $CVM) 设置云主机实例数。
+ * @method integer getCVM() 获取云服务器实例数。
+ * @method void setCVM(integer $CVM) 设置云服务器实例数。
  * @method integer getCDB() 获取数据库实例数。
  * @method void setCDB(integer $CDB) 设置数据库实例数。
  * @method integer getENI() 获取弹性网卡实例数。
@@ -45,7 +45,7 @@ class SecurityGroupAssociationStatistics extends AbstractModel
     public $SecurityGroupId;
 
     /**
-     * @var integer 云主机实例数。
+     * @var integer 云服务器实例数。
      */
     public $CVM;
 
@@ -75,7 +75,7 @@ class SecurityGroupAssociationStatistics extends AbstractModel
     public $InstanceStatistics;
     /**
      * @param string $SecurityGroupId 安全组实例ID。
-     * @param integer $CVM 云主机实例数。
+     * @param integer $CVM 云服务器实例数。
      * @param integer $CDB 数据库实例数。
      * @param integer $ENI 弹性网卡实例数。
      * @param integer $SG 被安全组引用数。

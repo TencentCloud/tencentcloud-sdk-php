@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`UNBIND`：未绑定</li>
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method string getBusiness() 获取使用havip的业务标识。
+ * @method void setBusiness(string $Business) 设置使用havip的业务标识。
  */
 
 /**
@@ -100,6 +102,11 @@ class HaVip extends AbstractModel
      * @var string 创建时间。
      */
     public $CreatedTime;
+
+    /**
+     * @var string 使用havip的业务标识。
+     */
+    public $Business;
     /**
      * @param string $HaVipId `HAVIP`的`ID`，是`HAVIP`的唯一标识。
      * @param string $HaVipName `HAVIP`名称。
@@ -113,6 +120,7 @@ class HaVip extends AbstractModel
 <li>`AVAILABLE`：运行中</li>
 <li>`UNBIND`：未绑定</li>
      * @param string $CreatedTime 创建时间。
+     * @param string $Business 使用havip的业务标识。
      */
     function __construct()
     {
@@ -164,6 +172,10 @@ class HaVip extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
+            $this->Business = $param["Business"];
         }
     }
 }

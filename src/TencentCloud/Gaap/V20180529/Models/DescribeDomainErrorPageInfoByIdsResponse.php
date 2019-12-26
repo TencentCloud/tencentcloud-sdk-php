@@ -14,40 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getEniQuantity() 获取弹性网卡配额
- * @method void setEniQuantity(integer $EniQuantity) 设置弹性网卡配额
- * @method integer getEniPrivateIpAddressQuantity() 获取每个弹性网卡可以分配的IP配额
- * @method void setEniPrivateIpAddressQuantity(integer $EniPrivateIpAddressQuantity) 设置每个弹性网卡可以分配的IP配额
+ * @method array getErrorPageSet() 获取定制错误响应配置集
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setErrorPageSet(array $ErrorPageSet) 设置定制错误响应配置集
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *DescribeNetworkInterfaceLimit返回参数结构体
+ *DescribeDomainErrorPageInfoByIds返回参数结构体
  */
-class DescribeNetworkInterfaceLimitResponse extends AbstractModel
+class DescribeDomainErrorPageInfoByIdsResponse extends AbstractModel
 {
     /**
-     * @var integer 弹性网卡配额
+     * @var array 定制错误响应配置集
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $EniQuantity;
-
-    /**
-     * @var integer 每个弹性网卡可以分配的IP配额
-     */
-    public $EniPrivateIpAddressQuantity;
+    public $ErrorPageSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $EniQuantity 弹性网卡配额
-     * @param integer $EniPrivateIpAddressQuantity 每个弹性网卡可以分配的IP配额
+     * @param array $ErrorPageSet 定制错误响应配置集
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +58,13 @@ class DescribeNetworkInterfaceLimitResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EniQuantity",$param) and $param["EniQuantity"] !== null) {
-            $this->EniQuantity = $param["EniQuantity"];
-        }
-
-        if (array_key_exists("EniPrivateIpAddressQuantity",$param) and $param["EniPrivateIpAddressQuantity"] !== null) {
-            $this->EniPrivateIpAddressQuantity = $param["EniPrivateIpAddressQuantity"];
+        if (array_key_exists("ErrorPageSet",$param) and $param["ErrorPageSet"] !== null) {
+            $this->ErrorPageSet = [];
+            foreach ($param["ErrorPageSet"] as $key => $value){
+                $obj = new DomainErrorPageInfo();
+                $obj->deserialize($value);
+                array_push($this->ErrorPageSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

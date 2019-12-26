@@ -76,15 +76,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestOperation(string $LatestOperation) 设置实例的最新操作。例：StopInstances、ResetInstance。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLatestOperationState() 获取实例的最新操作状态。取值范围：<br>
-<li>SUCCESS：表示操作成功<br>
-<li>OPERATING：表示操作执行中<br>
-<li>FAILED：表示操作失败
+ * @method string getLatestOperationState() 获取实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功<br><li>OPERATING：表示操作执行中<br><li>FAILED：表示操作失败
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLatestOperationState(string $LatestOperationState) 设置实例的最新操作状态。取值范围：<br>
-<li>SUCCESS：表示操作成功<br>
-<li>OPERATING：表示操作执行中<br>
-<li>FAILED：表示操作失败
+ * @method void setLatestOperationState(string $LatestOperationState) 设置实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功<br><li>OPERATING：表示操作执行中<br><li>FAILED：表示操作失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLatestOperationRequestId() 获取实例最新操作的唯一请求 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -231,10 +225,7 @@ class Instance extends AbstractModel
     public $LatestOperation;
 
     /**
-     * @var string 实例的最新操作状态。取值范围：<br>
-<li>SUCCESS：表示操作成功<br>
-<li>OPERATING：表示操作执行中<br>
-<li>FAILED：表示操作失败
+     * @var string 实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功<br><li>OPERATING：表示操作执行中<br><li>FAILED：表示操作失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestOperationState;
@@ -274,10 +265,7 @@ class Instance extends AbstractModel
      * @param string $Uuid 实例全局唯一ID
      * @param string $LatestOperation 实例的最新操作。例：StopInstances、ResetInstance。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LatestOperationState 实例的最新操作状态。取值范围：<br>
-<li>SUCCESS：表示操作成功<br>
-<li>OPERATING：表示操作执行中<br>
-<li>FAILED：表示操作失败
+     * @param string $LatestOperationState 实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功<br><li>OPERATING：表示操作执行中<br><li>FAILED：表示操作失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestOperationRequestId 实例最新操作的唯一请求 ID。
 注意：此字段可能返回 null，表示取不到有效值。

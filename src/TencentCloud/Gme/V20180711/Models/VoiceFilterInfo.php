@@ -18,21 +18,21 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getBizId() 获取应用id
+ * @method integer getBizId() 获取应用ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBizId(integer $BizId) 设置应用id
+ * @method void setBizId(integer $BizId) 设置应用ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFileId() 获取文件id，表示文件唯一id
+ * @method string getFileId() 获取文件ID，表示文件唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileId(string $FileId) 设置文件id，表示文件唯一id
+ * @method void setFileId(string $FileId) 设置文件ID，表示文件唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileName() 获取文件名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置文件名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOpenId() 获取用户id
+ * @method string getOpenId() 获取用户ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOpenId(string $OpenId) 设置用户id
+ * @method void setOpenId(string $OpenId) 设置用户ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimestamp() 获取数据创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,13 +50,13 @@ use TencentCloud\Common\AbstractModel;
 class VoiceFilterInfo extends AbstractModel
 {
     /**
-     * @var integer 应用id
+     * @var integer 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BizId;
 
     /**
-     * @var string 文件id，表示文件唯一id
+     * @var string 文件ID，表示文件唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
@@ -68,7 +68,7 @@ class VoiceFilterInfo extends AbstractModel
     public $FileName;
 
     /**
-     * @var string 用户id
+     * @var string 用户ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpenId;
@@ -85,13 +85,13 @@ class VoiceFilterInfo extends AbstractModel
      */
     public $Data;
     /**
-     * @param integer $BizId 应用id
+     * @param integer $BizId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FileId 文件id，表示文件唯一id
+     * @param string $FileId 文件ID，表示文件唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 文件名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OpenId 用户id
+     * @param string $OpenId 用户ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Timestamp 数据创建时间
 注意：此字段可能返回 null，表示取不到有效值。

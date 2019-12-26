@@ -32,14 +32,18 @@ use TencentCloud\Common\AbstractModel;
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
  * @method void setScheduler(string $Scheduler) 设置规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
- * @method string getForwardType() 获取负载均衡与后端服务之间的转发协议，目前支持 HTTP
- * @method void setForwardType(string $ForwardType) 设置负载均衡与后端服务之间的转发协议，目前支持 HTTP
+ * @method string getForwardType() 获取负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC
+ * @method void setForwardType(string $ForwardType) 设置负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC
  * @method boolean getDefaultServer() 获取是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
  * @method void setDefaultServer(boolean $DefaultServer) 设置是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
- * @method boolean getHttp2() 获取是否开启Http2，注意，只用HTTPS域名才能开启Http2。
- * @method void setHttp2(boolean $Http2) 设置是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+ * @method boolean getHttp2() 获取是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+ * @method void setHttp2(boolean $Http2) 设置是否开启Http2，注意，只有HTTPS域名才能开启Http2。
  * @method string getTargetType() 获取后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
  * @method void setTargetType(string $TargetType) 设置后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+ * @method string getTrpcCallee() 获取TRPC被调服务器路由，ForwardType为TRPC时必填
+ * @method void setTrpcCallee(string $TrpcCallee) 设置TRPC被调服务器路由，ForwardType为TRPC时必填
+ * @method string getTrpcFunc() 获取TRPC调用服务接口，ForwardType为TRPC时必填
+ * @method void setTrpcFunc(string $TrpcFunc) 设置TRPC调用服务接口，ForwardType为TRPC时必填
  */
 
 /**
@@ -79,7 +83,7 @@ class RuleInput extends AbstractModel
     public $Scheduler;
 
     /**
-     * @var string 负载均衡与后端服务之间的转发协议，目前支持 HTTP
+     * @var string 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC
      */
     public $ForwardType;
 
@@ -89,7 +93,7 @@ class RuleInput extends AbstractModel
     public $DefaultServer;
 
     /**
-     * @var boolean 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+     * @var boolean 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      */
     public $Http2;
 
@@ -97,6 +101,16 @@ class RuleInput extends AbstractModel
      * @var string 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
      */
     public $TargetType;
+
+    /**
+     * @var string TRPC被调服务器路由，ForwardType为TRPC时必填
+     */
+    public $TrpcCallee;
+
+    /**
+     * @var string TRPC调用服务接口，ForwardType为TRPC时必填
+     */
+    public $TrpcFunc;
     /**
      * @param string $Domain 转发规则的域名。长度限制为：1~80。
      * @param string $Url 转发规则的路径。长度限制为：1~200。
@@ -105,10 +119,12 @@ class RuleInput extends AbstractModel
      * @param CertificateInput $Certificate 证书信息
      * @param string $Scheduler 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
-     * @param string $ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP
+     * @param string $ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC
      * @param boolean $DefaultServer 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
-     * @param boolean $Http2 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+     * @param boolean $Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      * @param string $TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+     * @param string $TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填
+     * @param string $TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填
      */
     function __construct()
     {
@@ -162,6 +178,14 @@ class RuleInput extends AbstractModel
 
         if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
             $this->TargetType = $param["TargetType"];
+        }
+
+        if (array_key_exists("TrpcCallee",$param) and $param["TrpcCallee"] !== null) {
+            $this->TrpcCallee = $param["TrpcCallee"];
+        }
+
+        if (array_key_exists("TrpcFunc",$param) and $param["TrpcFunc"] !== null) {
+            $this->TrpcFunc = $param["TrpcFunc"];
         }
     }
 }

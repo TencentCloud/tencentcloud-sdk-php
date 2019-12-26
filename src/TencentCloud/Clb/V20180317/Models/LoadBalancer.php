@@ -156,6 +156,26 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigId(string $ConfigId) 设置负载均衡维度的个性化配置ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getLoadBalancerPassToTarget() 获取后端服务是否放通来自LB的流量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) 设置后端服务是否放通来自LB的流量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ExclusiveCluster getExclusiveCluster() 获取内网独占集群
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) 设置内网独占集群
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIPv6Mode() 获取IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIPv6Mode(string $IPv6Mode) 设置IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSnatPro() 获取是否开启SnatPro
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSnatPro(boolean $SnatPro) 设置是否开启SnatPro
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSnatIps() 获取开启SnatPro负载均衡后，SnatIp列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSnatIps(array $SnatIps) 设置开启SnatPro负载均衡后，SnatIp列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -375,6 +395,36 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigId;
+
+    /**
+     * @var boolean 后端服务是否放通来自LB的流量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LoadBalancerPassToTarget;
+
+    /**
+     * @var ExclusiveCluster 内网独占集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExclusiveCluster;
+
+    /**
+     * @var string IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IPv6Mode;
+
+    /**
+     * @var boolean 是否开启SnatPro
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SnatPro;
+
+    /**
+     * @var array 开启SnatPro负载均衡后，SnatIp列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SnatIps;
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
@@ -444,6 +494,16 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param boolean $IsDDos 是否可绑定高防包
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigId 负载均衡维度的个性化配置ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $LoadBalancerPassToTarget 后端服务是否放通来自LB的流量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExclusiveCluster $ExclusiveCluster 内网独占集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IPv6Mode IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SnatPro 是否开启SnatPro
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SnatIps 开启SnatPro负载均衡后，SnatIp列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -615,6 +675,32 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
             $this->ConfigId = $param["ConfigId"];
+        }
+
+        if (array_key_exists("LoadBalancerPassToTarget",$param) and $param["LoadBalancerPassToTarget"] !== null) {
+            $this->LoadBalancerPassToTarget = $param["LoadBalancerPassToTarget"];
+        }
+
+        if (array_key_exists("ExclusiveCluster",$param) and $param["ExclusiveCluster"] !== null) {
+            $this->ExclusiveCluster = new ExclusiveCluster();
+            $this->ExclusiveCluster->deserialize($param["ExclusiveCluster"]);
+        }
+
+        if (array_key_exists("IPv6Mode",$param) and $param["IPv6Mode"] !== null) {
+            $this->IPv6Mode = $param["IPv6Mode"];
+        }
+
+        if (array_key_exists("SnatPro",$param) and $param["SnatPro"] !== null) {
+            $this->SnatPro = $param["SnatPro"];
+        }
+
+        if (array_key_exists("SnatIps",$param) and $param["SnatIps"] !== null) {
+            $this->SnatIps = [];
+            foreach ($param["SnatIps"] as $key => $value){
+                $obj = new SnatIp();
+                $obj->deserialize($value);
+                array_push($this->SnatIps, $obj);
+            }
         }
     }
 }

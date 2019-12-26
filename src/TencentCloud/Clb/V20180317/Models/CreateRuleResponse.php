@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method array getLocationIds() 获取创建的转发规则的唯一标识数组
+ * @method void setLocationIds(array $LocationIds) 设置创建的转发规则的唯一标识数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -28,10 +30,16 @@ use TencentCloud\Common\AbstractModel;
 class CreateRuleResponse extends AbstractModel
 {
     /**
+     * @var array 创建的转发规则的唯一标识数组
+     */
+    public $LocationIds;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
+     * @param array $LocationIds 创建的转发规则的唯一标识数组
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,10 @@ class CreateRuleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("LocationIds",$param) and $param["LocationIds"] !== null) {
+            $this->LocationIds = $param["LocationIds"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

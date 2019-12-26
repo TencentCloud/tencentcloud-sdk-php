@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableState(integer $EnableState) 设置设备启用状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLabels() 获取设备标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabels(array $Labels) 设置设备标签
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -193,6 +197,12 @@ class DescribeDeviceResponse extends AbstractModel
     public $EnableState;
 
     /**
+     * @var array 设备标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Labels;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -223,6 +233,8 @@ class DescribeDeviceResponse extends AbstractModel
      * @param integer $CertState 设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableState 设备启用状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Labels 设备标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -325,6 +337,15 @@ class DescribeDeviceResponse extends AbstractModel
 
         if (array_key_exists("EnableState",$param) and $param["EnableState"] !== null) {
             $this->EnableState = $param["EnableState"];
+        }
+
+        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+            $this->Labels = [];
+            foreach ($param["Labels"] as $key => $value){
+                $obj = new DeviceLabel();
+                $obj->deserialize($value);
+                array_push($this->Labels, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

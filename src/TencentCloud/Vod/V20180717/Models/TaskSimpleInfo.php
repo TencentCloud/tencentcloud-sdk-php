@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFinishTime(string $FinishTime) 设置任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未完成，该字段为空。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求。
+ * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求。
+ * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息。
+ * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息。
  */
 
 /**
@@ -92,6 +96,16 @@ class TaskSimpleInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FinishTime;
+
+    /**
+     * @var string 用于去重的识别码，如果七天内曾有过相同的识别码的请求。
+     */
+    public $SessionId;
+
+    /**
+     * @var string 来源上下文，用于透传用户请求信息。
+     */
+    public $SessionContext;
     /**
      * @param string $TaskId 任务 ID。
      * @param string $TaskType 任务类型，取值：
@@ -109,6 +123,8 @@ class TaskSimpleInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FinishTime 任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未完成，该字段为空。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求。
+     * @param string $SessionContext 来源上下文，用于透传用户请求信息。
      */
     function __construct()
     {
@@ -140,6 +156,14 @@ class TaskSimpleInfo extends AbstractModel
 
         if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
             $this->FinishTime = $param["FinishTime"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
+            $this->SessionContext = $param["SessionContext"];
         }
     }
 }

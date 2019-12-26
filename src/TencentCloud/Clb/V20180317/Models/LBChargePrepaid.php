@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(string $RenewFlag) 设置续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPeriod() 获取周期，表示多少个月（保留字段）
+ * @method integer getPeriod() 获取购买时长，单位：月
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPeriod(integer $Period) 设置周期，表示多少个月（保留字段）
+ * @method void setPeriod(integer $Period) 设置购买时长，单位：月
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -40,14 +40,14 @@ class LBChargePrepaid extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var integer 周期，表示多少个月（保留字段）
+     * @var integer 购买时长，单位：月
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Period;
     /**
      * @param string $RenewFlag 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Period 周期，表示多少个月（保留字段）
+     * @param integer $Period 购买时长，单位：月
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

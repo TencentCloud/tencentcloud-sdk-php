@@ -37,7 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method TranscodeTaskInput getInput() 获取转码任务的输入。
  * @method void setInput(TranscodeTaskInput $Input) 设置转码任务的输入。
  * @method MediaTranscodeItem getOutput() 获取转码任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(MediaTranscodeItem $Output) 设置转码任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -72,6 +74,7 @@ class MediaProcessTaskTranscodeResult extends AbstractModel
 
     /**
      * @var MediaTranscodeItem 转码任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
     /**
@@ -85,6 +88,7 @@ class MediaProcessTaskTranscodeResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeTaskInput $Input 转码任务的输入。
      * @param MediaTranscodeItem $Output 转码任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

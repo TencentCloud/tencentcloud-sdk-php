@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setState(string $State) 设置虚拟设备的状态，JSON字符串格式，由desired结构组成
  * @method integer getShadowVersion() 获取当前版本号，需要和后台的version保持一致，才能更新成功
  * @method void setShadowVersion(integer $ShadowVersion) 设置当前版本号，需要和后台的version保持一致，才能更新成功
+ * @method string getPrefix() 获取下发delta消息的topic前缀，可选类型: "$shadow","$template"。不填写默认"$shadow"。
+ * @method void setPrefix(string $Prefix) 设置下发delta消息的topic前缀，可选类型: "$shadow","$template"。不填写默认"$shadow"。
  */
 
 /**
@@ -52,11 +54,17 @@ class UpdateDeviceShadowRequest extends AbstractModel
      * @var integer 当前版本号，需要和后台的version保持一致，才能更新成功
      */
     public $ShadowVersion;
+
+    /**
+     * @var string 下发delta消息的topic前缀，可选类型: "$shadow","$template"。不填写默认"$shadow"。
+     */
+    public $Prefix;
     /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $State 虚拟设备的状态，JSON字符串格式，由desired结构组成
      * @param integer $ShadowVersion 当前版本号，需要和后台的version保持一致，才能更新成功
+     * @param string $Prefix 下发delta消息的topic前缀，可选类型: "$shadow","$template"。不填写默认"$shadow"。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class UpdateDeviceShadowRequest extends AbstractModel
 
         if (array_key_exists("ShadowVersion",$param) and $param["ShadowVersion"] !== null) {
             $this->ShadowVersion = $param["ShadowVersion"];
+        }
+
+        if (array_key_exists("Prefix",$param) and $param["Prefix"] !== null) {
+            $this->Prefix = $param["Prefix"];
         }
     }
 }

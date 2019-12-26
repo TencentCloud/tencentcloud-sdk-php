@@ -18,8 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getEventHandles() 获取事件句柄，数组长度限制：16。
- * @method void setEventHandles(array $EventHandles) 设置事件句柄，数组长度限制：16。
+ * @method array getEventHandles() 获取事件句柄，即 [拉取事件通知](/document/product/266/33433) 接口输出参数中的 EventSet. EventHandle 字段。
+数组长度限制：16。
+ * @method void setEventHandles(array $EventHandles) 设置事件句柄，即 [拉取事件通知](/document/product/266/33433) 接口输出参数中的 EventSet. EventHandle 字段。
+数组长度限制：16。
+ * @method string getExtInfo() 获取保留字段，特殊用途时使用。
+ * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
@@ -30,16 +34,24 @@ use TencentCloud\Common\AbstractModel;
 class ConfirmEventsRequest extends AbstractModel
 {
     /**
-     * @var array 事件句柄，数组长度限制：16。
+     * @var array 事件句柄，即 [拉取事件通知](/document/product/266/33433) 接口输出参数中的 EventSet. EventHandle 字段。
+数组长度限制：16。
      */
     public $EventHandles;
+
+    /**
+     * @var string 保留字段，特殊用途时使用。
+     */
+    public $ExtInfo;
 
     /**
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
     /**
-     * @param array $EventHandles 事件句柄，数组长度限制：16。
+     * @param array $EventHandles 事件句柄，即 [拉取事件通知](/document/product/266/33433) 接口输出参数中的 EventSet. EventHandle 字段。
+数组长度限制：16。
+     * @param string $ExtInfo 保留字段，特殊用途时使用。
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
@@ -56,6 +68,10 @@ class ConfirmEventsRequest extends AbstractModel
         }
         if (array_key_exists("EventHandles",$param) and $param["EventHandles"] !== null) {
             $this->EventHandles = $param["EventHandles"];
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

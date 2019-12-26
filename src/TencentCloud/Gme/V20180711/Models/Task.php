@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataId(string $DataId) 设置数据的唯一ID
  * @method string getUrl() 获取数据文件的url，为 urlencode 编码，流式则为拉流地址
  * @method void setUrl(string $Url) 设置数据文件的url，为 urlencode 编码，流式则为拉流地址
- * @method string getRoomId() 获取gme实时语音房间id，通过gme实时语音进行语音分析时输入
- * @method void setRoomId(string $RoomId) 设置gme实时语音房间id，通过gme实时语音进行语音分析时输入
- * @method string getOpenId() 获取gme实时语音用户id，通过gme实时语音进行语音分析时输入
- * @method void setOpenId(string $OpenId) 设置gme实时语音用户id，通过gme实时语音进行语音分析时输入
+ * @method string getRoomId() 获取gme实时语音房间ID，通过gme实时语音进行语音分析时输入
+ * @method void setRoomId(string $RoomId) 设置gme实时语音房间ID，通过gme实时语音进行语音分析时输入
+ * @method string getOpenId() 获取gme实时语音用户ID，通过gme实时语音进行语音分析时输入
+ * @method void setOpenId(string $OpenId) 设置gme实时语音用户ID，通过gme实时语音进行语音分析时输入
  */
 
 /**
@@ -44,19 +44,19 @@ class Task extends AbstractModel
     public $Url;
 
     /**
-     * @var string gme实时语音房间id，通过gme实时语音进行语音分析时输入
+     * @var string gme实时语音房间ID，通过gme实时语音进行语音分析时输入
      */
     public $RoomId;
 
     /**
-     * @var string gme实时语音用户id，通过gme实时语音进行语音分析时输入
+     * @var string gme实时语音用户ID，通过gme实时语音进行语音分析时输入
      */
     public $OpenId;
     /**
      * @param string $DataId 数据的唯一ID
      * @param string $Url 数据文件的url，为 urlencode 编码，流式则为拉流地址
-     * @param string $RoomId gme实时语音房间id，通过gme实时语音进行语音分析时输入
-     * @param string $OpenId gme实时语音用户id，通过gme实时语音进行语音分析时输入
+     * @param string $RoomId gme实时语音房间ID，通过gme实时语音进行语音分析时输入
+     * @param string $OpenId gme实时语音用户ID，通过gme实时语音进行语音分析时输入
      */
     function __construct()
     {

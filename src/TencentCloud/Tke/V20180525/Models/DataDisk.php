@@ -24,12 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileSystem(string $FileSystem) 设置文件系统
  * @method integer getDiskSize() 获取云盘大小(G）
  * @method void setDiskSize(integer $DiskSize) 设置云盘大小(G）
- * @method boolean getAutuFormatAndMount() 获取是否自动化格式盘并挂载
- * @method void setAutuFormatAndMount(boolean $AutuFormatAndMount) 设置是否自动化格式盘并挂载
- * @method array getMountTarget() 获取挂载目录
- * @method void setMountTarget(array $MountTarget) 设置挂载目录
- * @method array getDiskId() 获取云盘ID
- * @method void setDiskId(array $DiskId) 设置云盘ID
+ * @method boolean getAutoFormatAndMount() 获取是否自动化格式盘并挂载
+ * @method void setAutoFormatAndMount(boolean $AutoFormatAndMount) 设置是否自动化格式盘并挂载
+ * @method string getMountTarget() 获取挂载目录
+ * @method void setMountTarget(string $MountTarget) 设置挂载目录
  */
 
 /**
@@ -55,24 +53,18 @@ class DataDisk extends AbstractModel
     /**
      * @var boolean 是否自动化格式盘并挂载
      */
-    public $AutuFormatAndMount;
+    public $AutoFormatAndMount;
 
     /**
-     * @var array 挂载目录
+     * @var string 挂载目录
      */
     public $MountTarget;
-
-    /**
-     * @var array 云盘ID
-     */
-    public $DiskId;
     /**
      * @param string $DiskType 云盘类型
      * @param string $FileSystem 文件系统
      * @param integer $DiskSize 云盘大小(G）
-     * @param boolean $AutuFormatAndMount 是否自动化格式盘并挂载
-     * @param array $MountTarget 挂载目录
-     * @param array $DiskId 云盘ID
+     * @param boolean $AutoFormatAndMount 是否自动化格式盘并挂载
+     * @param string $MountTarget 挂载目录
      */
     function __construct()
     {
@@ -98,16 +90,12 @@ class DataDisk extends AbstractModel
             $this->DiskSize = $param["DiskSize"];
         }
 
-        if (array_key_exists("AutuFormatAndMount",$param) and $param["AutuFormatAndMount"] !== null) {
-            $this->AutuFormatAndMount = $param["AutuFormatAndMount"];
+        if (array_key_exists("AutoFormatAndMount",$param) and $param["AutoFormatAndMount"] !== null) {
+            $this->AutoFormatAndMount = $param["AutoFormatAndMount"];
         }
 
         if (array_key_exists("MountTarget",$param) and $param["MountTarget"] !== null) {
             $this->MountTarget = $param["MountTarget"];
-        }
-
-        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
-            $this->DiskId = $param["DiskId"];
         }
     }
 }

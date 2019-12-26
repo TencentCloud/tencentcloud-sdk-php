@@ -18,8 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProductId() 获取产品Id
- * @method void setProductId(string $ProductId) 设置产品Id
+ * @method string getProductId() 获取产品ID
+ * @method void setProductId(string $ProductId) 设置产品ID
  * @method array getDeviceNames() 获取设备名称
  * @method void setDeviceNames(array $DeviceNames) 设置设备名称
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ResetDeviceStateRequest extends AbstractModel
 {
     /**
-     * @var string 产品Id
+     * @var string 产品ID
      */
     public $ProductId;
 
@@ -39,7 +39,7 @@ class ResetDeviceStateRequest extends AbstractModel
      */
     public $DeviceNames;
     /**
-     * @param string $ProductId 产品Id
+     * @param string $ProductId 产品ID
      * @param array $DeviceNames 设备名称
      */
     function __construct()

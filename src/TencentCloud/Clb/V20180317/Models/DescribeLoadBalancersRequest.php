@@ -38,8 +38,8 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setBackendPrivateIps(array $BackendPrivateIps) 设置负载均衡绑定的后端服务的内网 IP。
  * @method integer getOffset() 获取数据偏移量，默认为 0。
  * @method void setOffset(integer $Offset) 设置数据偏移量，默认为 0。
- * @method integer getLimit() 获取返回负载均衡实例的个数，默认为 20。
- * @method void setLimit(integer $Limit) 设置返回负载均衡实例的个数，默认为 20。
+ * @method integer getLimit() 获取返回负载均衡实例的数量，默认为20，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回负载均衡实例的数量，默认为20，最大值为100。
  * @method string getOrderBy() 获取排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
  * @method void setOrderBy(string $OrderBy) 设置排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
  * @method integer getOrderType() 获取1：倒序，0：顺序，默认按照创建时间倒序。
@@ -112,7 +112,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $Offset;
 
     /**
-     * @var integer 返回负载均衡实例的个数，默认为 20。
+     * @var integer 返回负载均衡实例的数量，默认为20，最大值为100。
      */
     public $Limit;
 
@@ -167,7 +167,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param array $BackendPublicIps 负载均衡绑定的后端服务的外网 IP。
      * @param array $BackendPrivateIps 负载均衡绑定的后端服务的内网 IP。
      * @param integer $Offset 数据偏移量，默认为 0。
-     * @param integer $Limit 返回负载均衡实例的个数，默认为 20。
+     * @param integer $Limit 返回负载均衡实例的数量，默认为20，最大值为100。
      * @param string $OrderBy 排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
      * @param integer $OrderType 1：倒序，0：顺序，默认按照创建时间倒序。
      * @param string $SearchKey 搜索字段，模糊匹配名称、域名、VIP。

@@ -58,6 +58,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForwardType(string $ForwardType) 设置负载均衡与后端服务之间的转发协议
  * @method string getCreateTime() 获取转发规则的创建时间
  * @method void setCreateTime(string $CreateTime) 设置转发规则的创建时间
+ * @method string getTargetType() 获取后端服务器类型
+ * @method void setTargetType(string $TargetType) 设置后端服务器类型
+ * @method BasicTargetGroupInfo getTargetGroup() 获取绑定的目标组基本信息；当规则绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetGroup(BasicTargetGroupInfo $TargetGroup) 设置绑定的目标组基本信息；当规则绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWafDomainId() 获取WAF实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWafDomainId(string $WafDomainId) 设置WAF实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTrpcCallee() 获取TRPC被调服务器路由，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTrpcCallee(string $TrpcCallee) 设置TRPC被调服务器路由，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTrpcFunc() 获取TRPC调用服务接口，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTrpcFunc(string $TrpcFunc) 设置TRPC调用服务接口，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -144,6 +162,35 @@ class RuleOutput extends AbstractModel
      * @var string 转发规则的创建时间
      */
     public $CreateTime;
+
+    /**
+     * @var string 后端服务器类型
+     */
+    public $TargetType;
+
+    /**
+     * @var BasicTargetGroupInfo 绑定的目标组基本信息；当规则绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetGroup;
+
+    /**
+     * @var string WAF实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WafDomainId;
+
+    /**
+     * @var string TRPC被调服务器路由，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TrpcCallee;
+
+    /**
+     * @var string TRPC调用服务接口，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TrpcFunc;
     /**
      * @param string $LocationId 转发规则的 ID
      * @param string $Domain 转发规则的域名。
@@ -165,6 +212,15 @@ class RuleOutput extends AbstractModel
      * @param boolean $Http2 是否开启Http2
      * @param string $ForwardType 负载均衡与后端服务之间的转发协议
      * @param string $CreateTime 转发规则的创建时间
+     * @param string $TargetType 后端服务器类型
+     * @param BasicTargetGroupInfo $TargetGroup 绑定的目标组基本信息；当规则绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WafDomainId WAF实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TrpcFunc TRPC调用服务接口，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -239,6 +295,27 @@ class RuleOutput extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
+            $this->TargetType = $param["TargetType"];
+        }
+
+        if (array_key_exists("TargetGroup",$param) and $param["TargetGroup"] !== null) {
+            $this->TargetGroup = new BasicTargetGroupInfo();
+            $this->TargetGroup->deserialize($param["TargetGroup"]);
+        }
+
+        if (array_key_exists("WafDomainId",$param) and $param["WafDomainId"] !== null) {
+            $this->WafDomainId = $param["WafDomainId"];
+        }
+
+        if (array_key_exists("TrpcCallee",$param) and $param["TrpcCallee"] !== null) {
+            $this->TrpcCallee = $param["TrpcCallee"];
+        }
+
+        if (array_key_exists("TrpcFunc",$param) and $param["TrpcFunc"] !== null) {
+            $this->TrpcFunc = $param["TrpcFunc"];
         }
     }
 }

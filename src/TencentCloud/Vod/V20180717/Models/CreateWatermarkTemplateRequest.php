@@ -20,10 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getType() 获取水印类型，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li>
  * @method void setType(string $Type) 设置水印类型，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li>
  * @method string getName() 获取水印模板名称，长度限制：64 个字符。
  * @method void setName(string $Name) 设置水印模板名称，长度限制：64 个字符。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
@@ -33,13 +35,13 @@ use TencentCloud\Common\AbstractModel;
 <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
 <li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
 <li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-默认值：TopLeft。目前，当 Type 为 image，该字段仅支持 TopLeft。
+默认值：TopLeft。
  * @method void setCoordinateOrigin(string $CoordinateOrigin) 设置原点位置，可选值：
 <li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
 <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
 <li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
 <li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-默认值：TopLeft。目前，当 Type 为 image，该字段仅支持 TopLeft。
+默认值：TopLeft。
  * @method string getXPos() 获取水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 XPos 为视频宽度指定百分比，如 10% 表示 XPos 为视频宽度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 XPos 为指定像素，如 100px 表示 XPos 为 100 像素。</li>
@@ -74,7 +76,8 @@ class CreateWatermarkTemplateRequest extends AbstractModel
     /**
      * @var string 水印类型，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li>
      */
     public $Type;
 
@@ -94,7 +97,7 @@ class CreateWatermarkTemplateRequest extends AbstractModel
 <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
 <li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
 <li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-默认值：TopLeft。目前，当 Type 为 image，该字段仅支持 TopLeft。
+默认值：TopLeft。
      */
     public $CoordinateOrigin;
 
@@ -136,7 +139,8 @@ class CreateWatermarkTemplateRequest extends AbstractModel
     /**
      * @param string $Type 水印类型，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li>
      * @param string $Name 水印模板名称，长度限制：64 个字符。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
      * @param string $CoordinateOrigin 原点位置，可选值：
@@ -144,7 +148,7 @@ class CreateWatermarkTemplateRequest extends AbstractModel
 <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
 <li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
 <li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-默认值：TopLeft。目前，当 Type 为 image，该字段仅支持 TopLeft。
+默认值：TopLeft。
      * @param string $XPos 水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 XPos 为视频宽度指定百分比，如 10% 表示 XPos 为视频宽度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 XPos 为指定像素，如 100px 表示 XPos 为 100 像素。</li>

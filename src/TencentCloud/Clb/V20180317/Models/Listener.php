@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndPort(integer $EndPort) 设置端口段结束端口
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTargetType() 获取后端服务器类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetType(string $TargetType) 设置后端服务器类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BasicTargetGroupInfo getTargetGroup() 获取绑定的目标组基本信息；当监听器绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetGroup(BasicTargetGroupInfo $TargetGroup) 设置绑定的目标组基本信息；当监听器绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -135,6 +143,18 @@ class Listener extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndPort;
+
+    /**
+     * @var string 后端服务器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetType;
+
+    /**
+     * @var BasicTargetGroupInfo 绑定的目标组基本信息；当监听器绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetGroup;
     /**
      * @param string $ListenerId 负载均衡监听器 ID
      * @param string $Protocol 监听器协议
@@ -156,6 +176,10 @@ class Listener extends AbstractModel
      * @param string $CreateTime 监听器的创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndPort 端口段结束端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetType 后端服务器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BasicTargetGroupInfo $TargetGroup 绑定的目标组基本信息；当监听器绑定目标组时，会返回该字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -223,6 +247,15 @@ class Listener extends AbstractModel
 
         if (array_key_exists("EndPort",$param) and $param["EndPort"] !== null) {
             $this->EndPort = $param["EndPort"];
+        }
+
+        if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
+            $this->TargetType = $param["TargetType"];
+        }
+
+        if (array_key_exists("TargetGroup",$param) and $param["TargetGroup"] !== null) {
+            $this->TargetGroup = new BasicTargetGroupInfo();
+            $this->TargetGroup->deserialize($param["TargetGroup"]);
         }
     }
 }

@@ -18,8 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProductId() 获取产品id
- * @method void setProductId(string $ProductId) 设置产品id
+ * @method string getProductId() 获取产品ID
+ * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method integer getPort() 获取LoRa 设备端口
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class PublishAsDeviceRequest extends AbstractModel
 {
     /**
-     * @var string 产品id
+     * @var string 产品ID
      */
     public $ProductId;
 
@@ -53,7 +53,7 @@ class PublishAsDeviceRequest extends AbstractModel
      */
     public $Payload;
     /**
-     * @param string $ProductId 产品id
+     * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param integer $Port LoRa 设备端口
      * @param string $Payload 消息内容

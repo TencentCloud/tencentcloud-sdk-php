@@ -28,10 +28,38 @@ use TencentCloud\Common\AbstractModel;
 <li>Custom：用户自定义模板。</li>
  * @method string getName() 获取雪碧图模板名称。
  * @method void setName(string $Name) 设置雪碧图模板名称。
- * @method integer getWidth() 获取雪碧图中小图的宽度。
- * @method void setWidth(integer $Width) 设置雪碧图中小图的宽度。
- * @method integer getHeight() 获取雪碧图中小图的高度。
- * @method void setHeight(integer $Height) 设置雪碧图中小图的高度。
+ * @method integer getWidth() 获取雪碧图中小图的宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+<li>当 Width、Height 均为 0，则分辨率同源；</li>
+<li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
+<li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
+<li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+默认值：0。
+ * @method void setWidth(integer $Width) 设置雪碧图中小图的宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+<li>当 Width、Height 均为 0，则分辨率同源；</li>
+<li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
+<li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
+<li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+默认值：0。
+ * @method integer getHeight() 获取雪碧图中小图的高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+<li>当 Width、Height 均为 0，则分辨率同源；</li>
+<li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
+<li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
+<li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+默认值：0。
+ * @method void setHeight(integer $Height) 设置雪碧图中小图的高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+<li>当 Width、Height 均为 0，则分辨率同源；</li>
+<li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
+<li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
+<li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+默认值：0。
+ * @method string getResolutionAdaptive() 获取分辨率自适应，可选值：
+<li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
+<li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+默认值：open。
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) 设置分辨率自适应，可选值：
+<li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
+<li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+默认值：open。
  * @method string getSampleType() 获取采样类型。
  * @method void setSampleType(string $SampleType) 设置采样类型。
  * @method integer getSampleInterval() 获取采样间隔。
@@ -77,14 +105,32 @@ class ImageSpriteTemplate extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 雪碧图中小图的宽度。
+     * @var integer 雪碧图中小图的宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+<li>当 Width、Height 均为 0，则分辨率同源；</li>
+<li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
+<li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
+<li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+默认值：0。
      */
     public $Width;
 
     /**
-     * @var integer 雪碧图中小图的高度。
+     * @var integer 雪碧图中小图的高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+<li>当 Width、Height 均为 0，则分辨率同源；</li>
+<li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
+<li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
+<li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+默认值：0。
      */
     public $Height;
+
+    /**
+     * @var string 分辨率自适应，可选值：
+<li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
+<li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+默认值：open。
+     */
+    public $ResolutionAdaptive;
 
     /**
      * @var string 采样类型。
@@ -129,8 +175,22 @@ class ImageSpriteTemplate extends AbstractModel
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
      * @param string $Name 雪碧图模板名称。
-     * @param integer $Width 雪碧图中小图的宽度。
-     * @param integer $Height 雪碧图中小图的高度。
+     * @param integer $Width 雪碧图中小图的宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+<li>当 Width、Height 均为 0，则分辨率同源；</li>
+<li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
+<li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
+<li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+默认值：0。
+     * @param integer $Height 雪碧图中小图的高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+<li>当 Width、Height 均为 0，则分辨率同源；</li>
+<li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
+<li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
+<li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+默认值：0。
+     * @param string $ResolutionAdaptive 分辨率自适应，可选值：
+<li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
+<li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+默认值：open。
      * @param string $SampleType 采样类型。
      * @param integer $SampleInterval 采样间隔。
      * @param integer $RowCount 雪碧图中小图的行数。
@@ -172,6 +232,10 @@ class ImageSpriteTemplate extends AbstractModel
 
         if (array_key_exists("Height",$param) and $param["Height"] !== null) {
             $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
+            $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
         }
 
         if (array_key_exists("SampleType",$param) and $param["SampleType"] !== null) {

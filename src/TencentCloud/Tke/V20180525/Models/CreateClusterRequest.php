@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置节点高级配置信息
  * @method array getExistedInstancesForNode() 获取已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
  * @method void setExistedInstancesForNode(array $ExistedInstancesForNode) 设置已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
+ * @method array getInstanceDataDiskMountSettings() 获取CVM类型和其对应的数据盘挂载配置信息
+ * @method void setInstanceDataDiskMountSettings(array $InstanceDataDiskMountSettings) 设置CVM类型和其对应的数据盘挂载配置信息
  */
 
 /**
@@ -73,6 +75,11 @@ class CreateClusterRequest extends AbstractModel
      * @var array 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
      */
     public $ExistedInstancesForNode;
+
+    /**
+     * @var array CVM类型和其对应的数据盘挂载配置信息
+     */
+    public $InstanceDataDiskMountSettings;
     /**
      * @param ClusterCIDRSettings $ClusterCIDRSettings 集群容器网络配置信息
      * @param string $ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
@@ -81,6 +88,7 @@ class CreateClusterRequest extends AbstractModel
      * @param ClusterAdvancedSettings $ClusterAdvancedSettings 集群高级配置信息
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 节点高级配置信息
      * @param array $ExistedInstancesForNode 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
+     * @param array $InstanceDataDiskMountSettings CVM类型和其对应的数据盘挂载配置信息
      */
     function __construct()
     {
@@ -133,6 +141,15 @@ class CreateClusterRequest extends AbstractModel
                 $obj = new ExistedInstancesForNode();
                 $obj->deserialize($value);
                 array_push($this->ExistedInstancesForNode, $obj);
+            }
+        }
+
+        if (array_key_exists("InstanceDataDiskMountSettings",$param) and $param["InstanceDataDiskMountSettings"] !== null) {
+            $this->InstanceDataDiskMountSettings = [];
+            foreach ($param["InstanceDataDiskMountSettings"] as $key => $value){
+                $obj = new InstanceDataDiskMountSetting();
+                $obj->deserialize($value);
+                array_push($this->InstanceDataDiskMountSettings, $obj);
             }
         }
     }

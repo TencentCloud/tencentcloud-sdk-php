@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotcloud\V20180614\Models;
+namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取过滤键的名称
- * @method void setName(string $Name) 设置过滤键的名称
- * @method array getValues() 获取一个或者多个过滤值
- * @method void setValues(array $Values) 设置一个或者多个过滤值
+ * @method string getTargetGroupId() 获取目标组ID
+ * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID
+ * @method string getTargetGroupName() 获取目标组名称
+ * @method void setTargetGroupName(string $TargetGroupName) 设置目标组名称
  */
 
 /**
- *描述键值对过滤器，用于条件过滤查询。例如过滤ID、名称、状态等
+ *监听器或者转发规则绑定的目标组基本信息
  */
-class Filter extends AbstractModel
+class BasicTargetGroupInfo extends AbstractModel
 {
     /**
-     * @var string 过滤键的名称
+     * @var string 目标组ID
      */
-    public $Name;
+    public $TargetGroupId;
 
     /**
-     * @var array 一个或者多个过滤值
+     * @var string 目标组名称
      */
-    public $Values;
+    public $TargetGroupName;
     /**
-     * @param string $Name 过滤键的名称
-     * @param array $Values 一个或者多个过滤值
+     * @param string $TargetGroupId 目标组ID
+     * @param string $TargetGroupName 目标组名称
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Filter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("TargetGroupId",$param) and $param["TargetGroupId"] !== null) {
+            $this->TargetGroupId = $param["TargetGroupId"];
         }
 
-        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
-            $this->Values = $param["Values"];
+        if (array_key_exists("TargetGroupName",$param) and $param["TargetGroupName"] !== null) {
+            $this->TargetGroupName = $param["TargetGroupName"];
         }
     }
 }

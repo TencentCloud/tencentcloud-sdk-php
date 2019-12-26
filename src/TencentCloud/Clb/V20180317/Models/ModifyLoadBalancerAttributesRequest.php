@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡实例名称
  * @method TargetRegionInfo getTargetRegionInfo() 获取负载均衡绑定的后端服务的地域信息
  * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) 设置负载均衡绑定的后端服务的地域信息
- * @method InternetAccessible getInternetChargeInfo() 获取网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
- * @method void setInternetChargeInfo(InternetAccessible $InternetChargeInfo) 设置网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
+ * @method InternetAccessible getInternetChargeInfo() 获取网络计费相关参数
+ * @method void setInternetChargeInfo(InternetAccessible $InternetChargeInfo) 设置网络计费相关参数
  */
 
 /**
@@ -49,14 +49,14 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
     public $TargetRegionInfo;
 
     /**
-     * @var InternetAccessible 网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
+     * @var InternetAccessible 网络计费相关参数
      */
     public $InternetChargeInfo;
     /**
      * @param string $LoadBalancerId 负载均衡的唯一ID
      * @param string $LoadBalancerName 负载均衡实例名称
      * @param TargetRegionInfo $TargetRegionInfo 负载均衡绑定的后端服务的地域信息
-     * @param InternetAccessible $InternetChargeInfo 网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
+     * @param InternetAccessible $InternetChargeInfo 网络计费相关参数
      */
     function __construct()
     {

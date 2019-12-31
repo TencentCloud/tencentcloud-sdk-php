@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的SDKAppId。
  * @method integer getRoomId() 获取房间号。
  * @method void setRoomId(integer $RoomId) 设置房间号。
- * @method array getUserIds() 获取要踢的用户列表，最多10个。
- * @method void setUserIds(array $UserIds) 设置要踢的用户列表，最多10个。
+ * @method array getUserIds() 获取要移出的用户列表，最多10个。
+ * @method void setUserIds(array $UserIds) 设置要移出的用户列表，最多10个。
  */
 
 /**
- *KickOutUser请求参数结构体
+ *RemoveUser请求参数结构体
  */
-class KickOutUserRequest extends AbstractModel
+class RemoveUserRequest extends AbstractModel
 {
     /**
      * @var integer TRTC的SDKAppId。
@@ -42,13 +42,13 @@ class KickOutUserRequest extends AbstractModel
     public $RoomId;
 
     /**
-     * @var array 要踢的用户列表，最多10个。
+     * @var array 要移出的用户列表，最多10个。
      */
     public $UserIds;
     /**
      * @param integer $SdkAppId TRTC的SDKAppId。
      * @param integer $RoomId 房间号。
-     * @param array $UserIds 要踢的用户列表，最多10个。
+     * @param array $UserIds 要移出的用户列表，最多10个。
      */
     function __construct()
     {

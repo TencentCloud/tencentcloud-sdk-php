@@ -18,8 +18,8 @@ namespace TencentCloud\Ic\V20190307\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getIccid() 获取卡片id
- * @method void setIccid(string $Iccid) 设置卡片id
+ * @method string getIccid() 获取卡片ID
+ * @method void setIccid(string $Iccid) 设置卡片ID
  * @method string getMsisdn() 获取卡电话号码
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsisdn(string $Msisdn) 设置卡电话号码
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImei(string $Imei) 设置卡imei
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSdkappid() 获取应用id
- * @method void setSdkappid(string $Sdkappid) 设置应用id
+ * @method string getSdkappid() 获取应用ID
+ * @method void setSdkappid(string $Sdkappid) 设置应用ID
  * @method integer getTeleoperator() 获取运营商编号
  * @method void setTeleoperator(integer $Teleoperator) 设置运营商编号
  * @method integer getCardStatus() 获取卡片状态 1:未激活 2：激活 3：停卡 5：销卡
@@ -52,9 +52,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(string $ProductId) 设置套餐类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPoolId() 获取流量池id
+ * @method string getPoolId() 获取流量池ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPoolId(string $PoolId) 设置流量池id
+ * @method void setPoolId(string $PoolId) 设置流量池ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDataUsedInPeriod() 获取周期套餐流量使用
 注意：此字段可能返回 null，表示取不到有效值。
@@ -84,9 +84,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsActivated(integer $IsActivated) 设置激活被回调标志
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrderId() 获取订单id
+ * @method string getOrderId() 获取订单ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrderId(string $OrderId) 设置订单id
+ * @method void setOrderId(string $OrderId) 设置订单ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoRenew() 获取是否自动续费
 注意：此字段可能返回 null，表示取不到有效值。
@@ -112,7 +112,7 @@ use TencentCloud\Common\AbstractModel;
 class CardInfo extends AbstractModel
 {
     /**
-     * @var string 卡片id
+     * @var string 卡片ID
      */
     public $Iccid;
 
@@ -135,7 +135,7 @@ class CardInfo extends AbstractModel
     public $Imei;
 
     /**
-     * @var string 应用id
+     * @var string 应用ID
      */
     public $Sdkappid;
 
@@ -173,7 +173,7 @@ class CardInfo extends AbstractModel
     public $ProductId;
 
     /**
-     * @var string 流量池id
+     * @var string 流量池ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PoolId;
@@ -225,7 +225,7 @@ class CardInfo extends AbstractModel
     public $IsActivated;
 
     /**
-     * @var string 订单id
+     * @var string 订单ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrderId;
@@ -258,14 +258,14 @@ class CardInfo extends AbstractModel
      */
     public $Provider;
     /**
-     * @param string $Iccid 卡片id
+     * @param string $Iccid 卡片ID
      * @param string $Msisdn 卡电话号码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Imsi 卡imsi
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Imei 卡imei
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Sdkappid 应用id
+     * @param string $Sdkappid 应用ID
      * @param integer $Teleoperator 运营商编号
      * @param integer $CardStatus 卡片状态 1:未激活 2：激活 3：停卡 5：销卡
      * @param integer $NetworkStatus 网络状态
@@ -275,7 +275,7 @@ class CardInfo extends AbstractModel
      * @param integer $Type 资费类型，1 单卡，2 流量池
      * @param string $ProductId 套餐类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PoolId 流量池id
+     * @param string $PoolId 流量池ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DataUsedInPeriod 周期套餐流量使用
 注意：此字段可能返回 null，表示取不到有效值。
@@ -291,7 +291,7 @@ class CardInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsActivated 激活被回调标志
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OrderId 订单id
+     * @param string $OrderId 订单ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRenew 是否自动续费
 注意：此字段可能返回 null，表示取不到有效值。

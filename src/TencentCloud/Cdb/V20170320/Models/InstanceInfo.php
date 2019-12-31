@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceClass(string $DeviceClass) 设置物理机型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeployGroupId() 获取置放群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployGroupId(string $DeployGroupId) 设置置放群组ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -315,6 +319,12 @@ class InstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceClass;
+
+    /**
+     * @var string 置放群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployGroupId;
     /**
      * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @param string $Zone 可用区信息
@@ -360,6 +370,8 @@ class InstanceInfo extends AbstractModel
      * @param integer $Qps 每秒查询数量
      * @param string $ZoneName 可用区中文名称
      * @param string $DeviceClass 物理机型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeployGroupId 置放群组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -541,6 +553,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("DeviceClass",$param) and $param["DeviceClass"] !== null) {
             $this->DeviceClass = $param["DeviceClass"];
+        }
+
+        if (array_key_exists("DeployGroupId",$param) and $param["DeployGroupId"] !== null) {
+            $this->DeployGroupId = $param["DeployGroupId"];
         }
     }
 }

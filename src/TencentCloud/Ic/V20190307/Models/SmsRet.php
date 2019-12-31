@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCode(string $Code) 设置该iccid请求状态
  * @method string getMsg() 获取短信发送返回信息
  * @method void setMsg(string $Msg) 设置短信发送返回信息
- * @method string getIccid() 获取卡片id
- * @method void setIccid(string $Iccid) 设置卡片id
- * @method string getSid() 获取流水id
- * @method void setSid(string $Sid) 设置流水id
+ * @method string getIccid() 获取卡片ID
+ * @method void setIccid(string $Iccid) 设置卡片ID
+ * @method string getSid() 获取流水ID
+ * @method void setSid(string $Sid) 设置流水ID
  */
 
 /**
@@ -44,19 +44,19 @@ class SmsRet extends AbstractModel
     public $Msg;
 
     /**
-     * @var string 卡片id
+     * @var string 卡片ID
      */
     public $Iccid;
 
     /**
-     * @var string 流水id
+     * @var string 流水ID
      */
     public $Sid;
     /**
      * @param string $Code 该iccid请求状态
      * @param string $Msg 短信发送返回信息
-     * @param string $Iccid 卡片id
-     * @param string $Sid 流水id
+     * @param string $Iccid 卡片ID
+     * @param string $Sid 流水ID
      */
     function __construct()
     {

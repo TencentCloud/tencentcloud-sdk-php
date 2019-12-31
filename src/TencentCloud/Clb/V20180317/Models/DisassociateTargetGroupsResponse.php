@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Trtc\V20190722\Models;
+namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *DissolveRoom返回参数结构体
+ *DisassociateTargetGroups返回参数结构体
  */
-class DissolveRoomResponse extends AbstractModel
+class DisassociateTargetGroupsResponse extends AbstractModel
 {
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

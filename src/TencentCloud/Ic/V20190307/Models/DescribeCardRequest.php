@@ -18,10 +18,10 @@ namespace TencentCloud\Ic\V20190307\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getSdkappid() 获取应用id
- * @method void setSdkappid(integer $Sdkappid) 设置应用id
- * @method string getIccid() 获取卡片id
- * @method void setIccid(string $Iccid) 设置卡片id
+ * @method integer getSdkappid() 获取应用ID
+ * @method void setSdkappid(integer $Sdkappid) 设置应用ID
+ * @method string getIccid() 获取卡片ID
+ * @method void setIccid(string $Iccid) 设置卡片ID
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCardRequest extends AbstractModel
 {
     /**
-     * @var integer 应用id
+     * @var integer 应用ID
      */
     public $Sdkappid;
 
     /**
-     * @var string 卡片id
+     * @var string 卡片ID
      */
     public $Iccid;
     /**
-     * @param integer $Sdkappid 应用id
-     * @param string $Iccid 卡片id
+     * @param integer $Sdkappid 应用ID
+     * @param string $Iccid 卡片ID
      */
     function __construct()
     {

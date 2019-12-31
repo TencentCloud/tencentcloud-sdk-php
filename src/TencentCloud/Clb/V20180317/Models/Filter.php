@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Trtc\V20190722\Models;
+namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getSdkAppId() 获取TRTC的SDKAppId。
- * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的SDKAppId。
- * @method integer getRoomId() 获取房间号。
- * @method void setRoomId(integer $RoomId) 设置房间号。
+ * @method string getName() 获取过滤器的名称
+ * @method void setName(string $Name) 设置过滤器的名称
+ * @method array getValues() 获取过滤器的值数组
+ * @method void setValues(array $Values) 设置过滤器的值数组
  */
 
 /**
- *DissolveRoom请求参数结构体
+ *过滤器条件
  */
-class DissolveRoomRequest extends AbstractModel
+class Filter extends AbstractModel
 {
     /**
-     * @var integer TRTC的SDKAppId。
+     * @var string 过滤器的名称
      */
-    public $SdkAppId;
+    public $Name;
 
     /**
-     * @var integer 房间号。
+     * @var array 过滤器的值数组
      */
-    public $RoomId;
+    public $Values;
     /**
-     * @param integer $SdkAppId TRTC的SDKAppId。
-     * @param integer $RoomId 房间号。
+     * @param string $Name 过滤器的名称
+     * @param array $Values 过滤器的值数组
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DissolveRoomRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
-            $this->RoomId = $param["RoomId"];
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

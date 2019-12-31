@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenew(integer $AutoRenew) 设置自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
  * @method array getSecurityGroupIdList() 获取安全组id数组
  * @method void setSecurityGroupIdList(array $SecurityGroupIdList) 设置安全组id数组
- * @method integer getVPort() 获取用户自定义的端口 不填则默认为6379
- * @method void setVPort(integer $VPort) 设置用户自定义的端口 不填则默认为6379
+ * @method integer getVPort() 获取用户自定义的端口 不填则默认为6379，范围[1024,65535]
+ * @method void setVPort(integer $VPort) 设置用户自定义的端口 不填则默认为6379，范围[1024,65535]
  * @method integer getRedisShardNum() 获取实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
  * @method void setRedisShardNum(integer $RedisShardNum) 设置实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
  * @method integer getRedisReplicasNum() 获取实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
@@ -122,7 +122,7 @@ class CreateInstancesRequest extends AbstractModel
     public $SecurityGroupIdList;
 
     /**
-     * @var integer 用户自定义的端口 不填则默认为6379
+     * @var integer 用户自定义的端口 不填则默认为6379，范围[1024,65535]
      */
     public $VPort;
 
@@ -163,7 +163,7 @@ class CreateInstancesRequest extends AbstractModel
      * @param integer $ProjectId 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准
      * @param integer $AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      * @param array $SecurityGroupIdList 安全组id数组
-     * @param integer $VPort 用户自定义的端口 不填则默认为6379
+     * @param integer $VPort 用户自定义的端口 不填则默认为6379，范围[1024,65535]
      * @param integer $RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
      * @param integer $RedisReplicasNum 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      * @param boolean $ReplicasReadonly 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写

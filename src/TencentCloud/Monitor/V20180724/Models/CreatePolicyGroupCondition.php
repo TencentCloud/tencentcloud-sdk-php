@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmNotifyType(integer $AlarmNotifyType) 设置告警发送收敛类型。0连续告警，1指数告警
  * @method integer getAlarmNotifyPeriod() 获取告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
  * @method void setAlarmNotifyPeriod(integer $AlarmNotifyPeriod) 设置告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
- * @method integer getCalcType() 获取比较类型，范围0-6，分别对应[>,<,>=,<=,==,!=,!]。如果指标有配置默认比较类型值可以不填。
- * @method void setCalcType(integer $CalcType) 设置比较类型，范围0-6，分别对应[>,<,>=,<=,==,!=,!]。如果指标有配置默认比较类型值可以不填。
+ * @method integer getCalcType() 获取比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
+ * @method void setCalcType(integer $CalcType) 设置比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
  * @method float getCalcValue() 获取比较的值，如果指标不必须CalcValue可不填
  * @method void setCalcValue(float $CalcValue) 设置比较的值，如果指标不必须CalcValue可不填
- * @method integer getCalcPeriod() 获取Storm检测周期单位秒，若指标有默认值可不填
- * @method void setCalcPeriod(integer $CalcPeriod) 设置Storm检测周期单位秒，若指标有默认值可不填
+ * @method integer getCalcPeriod() 获取数据聚合周期(单位秒)，若指标有默认值可不填
+ * @method void setCalcPeriod(integer $CalcPeriod) 设置数据聚合周期(单位秒)，若指标有默认值可不填
  * @method integer getContinuePeriod() 获取持续几个检测周期触发规则会告警
  * @method void setContinuePeriod(integer $ContinuePeriod) 设置持续几个检测周期触发规则会告警
  * @method integer getRuleId() 获取如果通过模版创建，需要传入模版中该指标的对应RuleId
@@ -57,7 +57,7 @@ class CreatePolicyGroupCondition extends AbstractModel
     public $AlarmNotifyPeriod;
 
     /**
-     * @var integer 比较类型，范围0-6，分别对应[>,<,>=,<=,==,!=,!]。如果指标有配置默认比较类型值可以不填。
+     * @var integer 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
      */
     public $CalcType;
 
@@ -67,7 +67,7 @@ class CreatePolicyGroupCondition extends AbstractModel
     public $CalcValue;
 
     /**
-     * @var integer Storm检测周期单位秒，若指标有默认值可不填
+     * @var integer 数据聚合周期(单位秒)，若指标有默认值可不填
      */
     public $CalcPeriod;
 
@@ -84,9 +84,9 @@ class CreatePolicyGroupCondition extends AbstractModel
      * @param integer $MetricId 指标Id
      * @param integer $AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
      * @param integer $AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
-     * @param integer $CalcType 比较类型，范围0-6，分别对应[>,<,>=,<=,==,!=,!]。如果指标有配置默认比较类型值可以不填。
+     * @param integer $CalcType 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
      * @param float $CalcValue 比较的值，如果指标不必须CalcValue可不填
-     * @param integer $CalcPeriod Storm检测周期单位秒，若指标有默认值可不填
+     * @param integer $CalcPeriod 数据聚合周期(单位秒)，若指标有默认值可不填
      * @param integer $ContinuePeriod 持续几个检测周期触发规则会告警
      * @param integer $RuleId 如果通过模版创建，需要传入模版中该指标的对应RuleId
      */

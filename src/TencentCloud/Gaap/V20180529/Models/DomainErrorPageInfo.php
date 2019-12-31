@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBody(string $Body) 设置设置的响应体(不包括 HTTP头)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取规则状态,0为成功
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置规则状态,0为成功
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -92,6 +96,12 @@ class DomainErrorPageInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Body;
+
+    /**
+     * @var integer 规则状态,0为成功
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
     /**
      * @param string $ErrorPageId 错误定制响应的配置ID
      * @param string $ListenerId 监听器ID
@@ -104,6 +114,8 @@ class DomainErrorPageInfo extends AbstractModel
      * @param array $SetHeaders 需要设置的响应头
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Body 设置的响应体(不包括 HTTP头)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 规则状态,0为成功
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -153,6 +165,10 @@ class DomainErrorPageInfo extends AbstractModel
 
         if (array_key_exists("Body",$param) and $param["Body"] !== null) {
             $this->Body = $param["Body"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

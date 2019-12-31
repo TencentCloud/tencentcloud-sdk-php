@@ -18,12 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method integer getTotal() 获取符合条件的记录总数。
+ * @method void setTotal(integer $Total) 设置符合条件的记录总数。
  * @method array getItems() 获取返回列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItems(array $Items) 设置返回列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotal() 获取符合条件的记录总数
- * @method void setTotal(integer $Total) 设置符合条件的记录总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -34,24 +34,24 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDeployGroupListResponse extends AbstractModel
 {
     /**
+     * @var integer 符合条件的记录总数。
+     */
+    public $Total;
+
+    /**
      * @var array 返回列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
 
     /**
-     * @var integer 符合条件的记录总数
-     */
-    public $Total;
-
-    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
+     * @param integer $Total 符合条件的记录总数。
      * @param array $Items 返回列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Total 符合条件的记录总数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,6 +66,10 @@ class DescribeDeployGroupListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
         if (array_key_exists("Items",$param) and $param["Items"] !== null) {
             $this->Items = [];
             foreach ($param["Items"] as $key => $value){
@@ -73,10 +77,6 @@ class DescribeDeployGroupListResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
-        }
-
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

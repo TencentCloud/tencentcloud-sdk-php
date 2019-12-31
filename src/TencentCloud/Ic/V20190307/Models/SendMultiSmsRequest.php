@@ -18,12 +18,12 @@ namespace TencentCloud\Ic\V20190307\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSdkappid() 获取应用id
- * @method void setSdkappid(string $Sdkappid) 设置应用id
+ * @method string getSdkappid() 获取应用ID
+ * @method void setSdkappid(string $Sdkappid) 设置应用ID
  * @method array getIccids() 获取卡片列表
  * @method void setIccids(array $Iccids) 设置卡片列表
- * @method string getContent() 获取短信内容
- * @method void setContent(string $Content) 设置短信内容
+ * @method string getContent() 获取短信内容 长度限制 70
+ * @method void setContent(string $Content) 设置短信内容 长度限制 70
  */
 
 /**
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class SendMultiSmsRequest extends AbstractModel
 {
     /**
-     * @var string 应用id
+     * @var string 应用ID
      */
     public $Sdkappid;
 
@@ -42,13 +42,13 @@ class SendMultiSmsRequest extends AbstractModel
     public $Iccids;
 
     /**
-     * @var string 短信内容
+     * @var string 短信内容 长度限制 70
      */
     public $Content;
     /**
-     * @param string $Sdkappid 应用id
+     * @param string $Sdkappid 应用ID
      * @param array $Iccids 卡片列表
-     * @param string $Content 短信内容
+     * @param string $Content 短信内容 长度限制 70
      */
     function __construct()
     {

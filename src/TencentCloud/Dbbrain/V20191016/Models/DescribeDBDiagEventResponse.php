@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutline(string $Outline) 设置概要。
  * @method string getProblem() 获取诊断出的问题。
  * @method void setProblem(string $Problem) 设置诊断出的问题。
- * @method integer getSeverity() 获取严重程度。
- * @method void setSeverity(integer $Severity) 设置严重程度。
+ * @method integer getSeverity() 获取严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。
+ * @method void setSeverity(integer $Severity) 设置严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。
  * @method string getStartTime() 获取开始时间
  * @method void setStartTime(string $StartTime) 设置开始时间
  * @method string getSuggestions() 获取建议。
@@ -82,7 +82,7 @@ class DescribeDBDiagEventResponse extends AbstractModel
     public $Problem;
 
     /**
-     * @var integer 严重程度。
+     * @var integer 严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。
      */
     public $Severity;
 
@@ -118,7 +118,7 @@ class DescribeDBDiagEventResponse extends AbstractModel
      * @param string $Explanation 事件详情。
      * @param string $Outline 概要。
      * @param string $Problem 诊断出的问题。
-     * @param integer $Severity 严重程度。
+     * @param integer $Severity 严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。
      * @param string $StartTime 开始时间
      * @param string $Suggestions 建议。
      * @param string $Metric 保留字段。

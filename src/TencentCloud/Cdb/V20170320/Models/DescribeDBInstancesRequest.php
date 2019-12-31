@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWithRo(integer $WithRo) 设置是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
  * @method integer getWithMaster() 获取是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
  * @method void setWithMaster(integer $WithMaster) 设置是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+ * @method array getDeployGroupIds() 获取置放群组ID列表。
+ * @method void setDeployGroupIds(array $DeployGroupIds) 设置置放群组ID列表。
  */
 
 /**
@@ -199,6 +201,11 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @var integer 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
      */
     public $WithMaster;
+
+    /**
+     * @var array 置放群组ID列表。
+     */
+    public $DeployGroupIds;
     /**
      * @param integer $ProjectId 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
      * @param array $InstanceTypes 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
@@ -225,6 +232,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param integer $WithDr 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
      * @param integer $WithRo 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
      * @param integer $WithMaster 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+     * @param array $DeployGroupIds 置放群组ID列表。
      */
     function __construct()
     {
@@ -336,6 +344,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("WithMaster",$param) and $param["WithMaster"] !== null) {
             $this->WithMaster = $param["WithMaster"];
+        }
+
+        if (array_key_exists("DeployGroupIds",$param) and $param["DeployGroupIds"] !== null) {
+            $this->DeployGroupIds = $param["DeployGroupIds"];
         }
     }
 }

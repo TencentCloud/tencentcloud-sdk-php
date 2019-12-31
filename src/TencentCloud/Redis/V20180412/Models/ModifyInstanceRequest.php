@@ -20,14 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getOperation() 获取修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
  * @method void setOperation(string $Operation) 设置修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getInstanceName() 获取实例的新名称
- * @method void setInstanceName(string $InstanceName) 设置实例的新名称
+ * @method array getInstanceIds() 获取实例Id
+ * @method void setInstanceIds(array $InstanceIds) 设置实例Id
+ * @method array getInstanceNames() 获取实例的新名称
+ * @method void setInstanceNames(array $InstanceNames) 设置实例的新名称
  * @method integer getProjectId() 获取项目Id
  * @method void setProjectId(integer $ProjectId) 设置项目Id
- * @method integer getAutoRenew() 获取自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
- * @method void setAutoRenew(integer $AutoRenew) 设置自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+ * @method array getAutoRenews() 获取自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+ * @method void setAutoRenews(array $AutoRenews) 设置自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+ * @method string getInstanceId() 获取已经废弃
+ * @method void setInstanceId(string $InstanceId) 设置已经废弃
+ * @method string getInstanceName() 获取已经废弃
+ * @method void setInstanceName(string $InstanceName) 设置已经废弃
+ * @method integer getAutoRenew() 获取已经废弃
+ * @method void setAutoRenew(integer $AutoRenew) 设置已经废弃
  */
 
 /**
@@ -41,14 +47,14 @@ class ModifyInstanceRequest extends AbstractModel
     public $Operation;
 
     /**
-     * @var string 实例Id
+     * @var array 实例Id
      */
-    public $InstanceId;
+    public $InstanceIds;
 
     /**
-     * @var string 实例的新名称
+     * @var array 实例的新名称
      */
-    public $InstanceName;
+    public $InstanceNames;
 
     /**
      * @var integer 项目Id
@@ -56,15 +62,33 @@ class ModifyInstanceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * @var array 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     */
+    public $AutoRenews;
+
+    /**
+     * @var string 已经废弃
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 已经废弃
+     */
+    public $InstanceName;
+
+    /**
+     * @var integer 已经废弃
      */
     public $AutoRenew;
     /**
      * @param string $Operation 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
-     * @param string $InstanceId 实例Id
-     * @param string $InstanceName 实例的新名称
+     * @param array $InstanceIds 实例Id
+     * @param array $InstanceNames 实例的新名称
      * @param integer $ProjectId 项目Id
-     * @param integer $AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * @param array $AutoRenews 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * @param string $InstanceId 已经废弃
+     * @param string $InstanceName 已经废弃
+     * @param integer $AutoRenew 已经废弃
      */
     function __construct()
     {
@@ -82,16 +106,28 @@ class ModifyInstanceRequest extends AbstractModel
             $this->Operation = $param["Operation"];
         }
 
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("InstanceNames",$param) and $param["InstanceNames"] !== null) {
+            $this->InstanceNames = $param["InstanceNames"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("AutoRenews",$param) and $param["AutoRenews"] !== null) {
+            $this->AutoRenews = $param["AutoRenews"];
+        }
+
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
-        }
-
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
         }
 
         if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {

@@ -24,10 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployGroupName(string $DeployGroupName) 设置置放群组名称。
  * @method string getCreateTime() 获取创建时间。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
- * @method string getDescription() 获取置放群组描述。
- * @method void setDescription(string $Description) 设置置放群组描述。
  * @method integer getQuota() 获取置放群组实例配额。
  * @method void setQuota(integer $Quota) 设置置放群组实例配额。
+ * @method string getAffinity() 获取置放群组亲和性策略。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAffinity(string $Affinity) 设置置放群组亲和性策略。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLimitNum() 获取置放群组亲和性策略1的限制实例个数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLimitNum(integer $LimitNum) 设置置放群组亲和性策略1的限制实例个数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取置放群组详细信息。
+ * @method void setDescription(string $Description) 设置置放群组详细信息。
  */
 
 /**
@@ -51,20 +59,36 @@ class DeployGroupInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string 置放群组描述。
-     */
-    public $Description;
-
-    /**
      * @var integer 置放群组实例配额。
      */
     public $Quota;
+
+    /**
+     * @var string 置放群组亲和性策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Affinity;
+
+    /**
+     * @var integer 置放群组亲和性策略1的限制实例个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LimitNum;
+
+    /**
+     * @var string 置放群组详细信息。
+     */
+    public $Description;
     /**
      * @param string $DeployGroupId 置放群组 ID。
      * @param string $DeployGroupName 置放群组名称。
      * @param string $CreateTime 创建时间。
-     * @param string $Description 置放群组描述。
      * @param integer $Quota 置放群组实例配额。
+     * @param string $Affinity 置放群组亲和性策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LimitNum 置放群组亲和性策略1的限制实例个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 置放群组详细信息。
      */
     function __construct()
     {
@@ -90,12 +114,20 @@ class DeployGroupInfo extends AbstractModel
             $this->CreateTime = $param["CreateTime"];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
-        }
-
         if (array_key_exists("Quota",$param) and $param["Quota"] !== null) {
             $this->Quota = $param["Quota"];
+        }
+
+        if (array_key_exists("Affinity",$param) and $param["Affinity"] !== null) {
+            $this->Affinity = $param["Affinity"];
+        }
+
+        if (array_key_exists("LimitNum",$param) and $param["LimitNum"] !== null) {
+            $this->LimitNum = $param["LimitNum"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

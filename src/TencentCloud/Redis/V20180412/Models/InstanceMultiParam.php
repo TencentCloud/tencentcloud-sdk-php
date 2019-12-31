@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentValue(string $CurrentValue) 设置当前运行参数值
  * @method string getTips() 获取参数说明
  * @method void setTips(string $Tips) 设置参数说明
- * @method string getEnumValue() 获取参数说明
- * @method void setEnumValue(string $EnumValue) 设置参数说明
+ * @method array getEnumValue() 获取参数说明
+ * @method void setEnumValue(array $EnumValue) 设置参数说明
  * @method integer getStatus() 获取参数状态, 1: 修改中， 2：修改完成
  * @method void setStatus(integer $Status) 设置参数状态, 1: 修改中， 2：修改完成
  */
@@ -72,7 +72,7 @@ class InstanceMultiParam extends AbstractModel
     public $Tips;
 
     /**
-     * @var string 参数说明
+     * @var array 参数说明
      */
     public $EnumValue;
 
@@ -87,7 +87,7 @@ class InstanceMultiParam extends AbstractModel
      * @param string $DefaultValue 参数默认值
      * @param string $CurrentValue 当前运行参数值
      * @param string $Tips 参数说明
-     * @param string $EnumValue 参数说明
+     * @param array $EnumValue 参数说明
      * @param integer $Status 参数状态, 1: 修改中， 2：修改完成
      */
     function __construct()

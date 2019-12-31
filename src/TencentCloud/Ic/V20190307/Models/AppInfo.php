@@ -18,8 +18,8 @@ namespace TencentCloud\Ic\V20190307\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSdkappid() 获取应用id
- * @method void setSdkappid(string $Sdkappid) 设置应用id
+ * @method string getSdkappid() 获取应用ID
+ * @method void setSdkappid(string $Sdkappid) 设置应用ID
  * @method string getAppkey() 获取应用key
  * @method void setAppkey(string $Appkey) 设置应用key
  * @method string getCloudAppid() 获取用户appid
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class AppInfo extends AbstractModel
 {
     /**
-     * @var string 应用id
+     * @var string 应用ID
      */
     public $Sdkappid;
 
@@ -84,7 +84,7 @@ class AppInfo extends AbstractModel
      */
     public $Uin;
     /**
-     * @param string $Sdkappid 应用id
+     * @param string $Sdkappid 应用ID
      * @param string $Appkey 应用key
      * @param string $CloudAppid 用户appid
      * @param string $Name 应用名称

@@ -18,8 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getModule() 获取接口模块名，当前接口取值policy
- * @method void setModule(string $Module) 设置接口模块名，当前接口取值policy
+ * @method string getModule() 获取接口模块名，当前接口取值monitor
+ * @method void setModule(string $Module) 设置接口模块名，当前接口取值monitor
  * @method integer getStartTime() 获取起始时间，默认一天前的时间戳
  * @method void setStartTime(integer $StartTime) 设置起始时间，默认一天前的时间戳
  * @method integer getEndTime() 获取结束时间，默认当前时间戳
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccidentEventListRequest extends AbstractModel
 {
     /**
-     * @var string 接口模块名，当前接口取值policy
+     * @var string 接口模块名，当前接口取值monitor
      */
     public $Module;
 
@@ -109,7 +109,7 @@ class DescribeAccidentEventListRequest extends AbstractModel
      */
     public $AffectResource;
     /**
-     * @param string $Module 接口模块名，当前接口取值policy
+     * @param string $Module 接口模块名，当前接口取值monitor
      * @param integer $StartTime 起始时间，默认一天前的时间戳
      * @param integer $EndTime 结束时间，默认当前时间戳
      * @param integer $Limit 每页返回的数量，默认20

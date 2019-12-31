@@ -18,8 +18,8 @@ namespace TencentCloud\Ic\V20190307\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getSdkappid() 获取应用id
- * @method void setSdkappid(string $Sdkappid) 设置应用id
+ * @method string getSdkappid() 获取应用ID
+ * @method void setSdkappid(string $Sdkappid) 设置应用ID
  * @method integer getOffset() 获取偏移值
  * @method void setOffset(integer $Offset) 设置偏移值
  * @method integer getLimit() 获取列表限制
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCardsRequest extends AbstractModel
 {
     /**
-     * @var string 应用id
+     * @var string 应用ID
      */
     public $Sdkappid;
 
@@ -46,7 +46,7 @@ class DescribeCardsRequest extends AbstractModel
      */
     public $Limit;
     /**
-     * @param string $Sdkappid 应用id
+     * @param string $Sdkappid 应用ID
      * @param integer $Offset 偏移值
      * @param integer $Limit 列表限制
      */

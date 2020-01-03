@@ -18,10 +18,10 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getWidth() 获取流画面宽，取值范围[1,3000]
- * @method void setWidth(integer $Width) 设置流画面宽，取值范围[1,3000]
- * @method integer getHeight() 获取流画面高，取值范围[1,3000]
- * @method void setHeight(integer $Height) 设置流画面高，取值范围[1,3000]
+ * @method integer getWidth() 获取流画面宽，取值范围[2,3000]
+ * @method void setWidth(integer $Width) 设置流画面宽，取值范围[2,3000]
+ * @method integer getHeight() 获取流画面高，取值范围[2,3000]
+ * @method void setHeight(integer $Height) 设置流画面高，取值范围[2,3000]
  * @method integer getX() 获取当前画面左上角顶点相对于Canvas左上角顶点的x轴偏移量，默认为0，取值范围[0,3000]
  * @method void setX(integer $X) 设置当前画面左上角顶点相对于Canvas左上角顶点的x轴偏移量，默认为0，取值范围[0,3000]
  * @method integer getY() 获取当前画面左上角顶点相对于Canvas左上角顶点的y轴偏移量，默认为0， 取值范围[0,3000]
@@ -38,12 +38,12 @@ z轴确定了重叠画面的遮盖顺序，z轴值大的画面处于顶层
 class LayoutParams extends AbstractModel
 {
     /**
-     * @var integer 流画面宽，取值范围[1,3000]
+     * @var integer 流画面宽，取值范围[2,3000]
      */
     public $Width;
 
     /**
-     * @var integer 流画面高，取值范围[1,3000]
+     * @var integer 流画面高，取值范围[2,3000]
      */
     public $Height;
 
@@ -63,8 +63,8 @@ z轴确定了重叠画面的遮盖顺序，z轴值大的画面处于顶层
      */
     public $ZOrder;
     /**
-     * @param integer $Width 流画面宽，取值范围[1,3000]
-     * @param integer $Height 流画面高，取值范围[1,3000]
+     * @param integer $Width 流画面宽，取值范围[2,3000]
+     * @param integer $Height 流画面高，取值范围[2,3000]
      * @param integer $X 当前画面左上角顶点相对于Canvas左上角顶点的x轴偏移量，默认为0，取值范围[0,3000]
      * @param integer $Y 当前画面左上角顶点相对于Canvas左上角顶点的y轴偏移量，默认为0， 取值范围[0,3000]
      * @param integer $ZOrder 画面z轴位置，默认为0

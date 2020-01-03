@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenew(integer $AutoRenew) 设置是否自动续费，1：自动续费，0：不自动续费
  * @method array getDBInstanceNetInfo() 获取实例网络连接信息
  * @method void setDBInstanceNetInfo(array $DBInstanceNetInfo) 设置实例网络连接信息
+ * @method string getType() 获取机器类型
+ * @method void setType(string $Type) 设置机器类型
  */
 
 /**
@@ -185,6 +187,11 @@ class DBInstance extends AbstractModel
      * @var array 实例网络连接信息
      */
     public $DBInstanceNetInfo;
+
+    /**
+     * @var string 机器类型
+     */
+    public $Type;
     /**
      * @param string $Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      * @param string $Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
@@ -209,6 +216,7 @@ class DBInstance extends AbstractModel
      * @param string $PayType 计费模式，1、prepaid（包年包月,预付费）；2、postpaid（按量计费，后付费）
      * @param integer $AutoRenew 是否自动续费，1：自动续费，0：不自动续费
      * @param array $DBInstanceNetInfo 实例网络连接信息
+     * @param string $Type 机器类型
      */
     function __construct()
     {
@@ -317,6 +325,10 @@ class DBInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DBInstanceNetInfo, $obj);
             }
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

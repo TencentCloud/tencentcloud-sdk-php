@@ -24,6 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvoiceCode(string $InvoiceCode) 设置发票代码
  * @method string getRate() 获取大写金额
  * @method void setRate(string $Rate) 设置大写金额
+ * @method string getRateNum() 获取小写金额
+ * @method void setRateNum(string $RateNum) 设置小写金额
+ * @method string getInvoiceType() 获取发票消费类型
+ * @method void setInvoiceType(string $InvoiceType) 设置发票消费类型
+ * @method string getProvince() 获取省
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProvince(string $Province) 设置省
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCity() 获取市
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCity(string $City) 设置市
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHasStamp() 获取是否有公司印章（1有 0无 空为识别不出）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHasStamp(string $HasStamp) 设置是否有公司印章（1有 0无 空为识别不出）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,6 +65,34 @@ class QuotaInvoiceOCRResponse extends AbstractModel
     public $Rate;
 
     /**
+     * @var string 小写金额
+     */
+    public $RateNum;
+
+    /**
+     * @var string 发票消费类型
+     */
+    public $InvoiceType;
+
+    /**
+     * @var string 省
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Province;
+
+    /**
+     * @var string 市
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $City;
+
+    /**
+     * @var string 是否有公司印章（1有 0无 空为识别不出）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HasStamp;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -56,6 +100,14 @@ class QuotaInvoiceOCRResponse extends AbstractModel
      * @param string $InvoiceNum 发票号码
      * @param string $InvoiceCode 发票代码
      * @param string $Rate 大写金额
+     * @param string $RateNum 小写金额
+     * @param string $InvoiceType 发票消费类型
+     * @param string $Province 省
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $City 市
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HasStamp 是否有公司印章（1有 0无 空为识别不出）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -80,6 +132,26 @@ class QuotaInvoiceOCRResponse extends AbstractModel
 
         if (array_key_exists("Rate",$param) and $param["Rate"] !== null) {
             $this->Rate = $param["Rate"];
+        }
+
+        if (array_key_exists("RateNum",$param) and $param["RateNum"] !== null) {
+            $this->RateNum = $param["RateNum"];
+        }
+
+        if (array_key_exists("InvoiceType",$param) and $param["InvoiceType"] !== null) {
+            $this->InvoiceType = $param["InvoiceType"];
+        }
+
+        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
+            $this->Province = $param["Province"];
+        }
+
+        if (array_key_exists("City",$param) and $param["City"] !== null) {
+            $this->City = $param["City"];
+        }
+
+        if (array_key_exists("HasStamp",$param) and $param["HasStamp"] !== null) {
+            $this->HasStamp = $param["HasStamp"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

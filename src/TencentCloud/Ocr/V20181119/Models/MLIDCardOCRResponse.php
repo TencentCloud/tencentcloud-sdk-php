@@ -34,6 +34,24 @@ use TencentCloud\Common\AbstractModel;
 -9102	证照复印件告警
  * @method string getImage() 获取证件图片
  * @method void setImage(string $Image) 设置证件图片
+ * @method string getAdvancedInfo() 获取扩展字段:
+{
+    ID:{
+        Confidence:0.9999
+    },
+    Name:{
+        Confidence:0.9996
+    }
+}
+ * @method void setAdvancedInfo(string $AdvancedInfo) 设置扩展字段:
+{
+    ID:{
+        Confidence:0.9999
+    },
+    Name:{
+        Confidence:0.9996
+    }
+}
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -76,6 +94,19 @@ class MLIDCardOCRResponse extends AbstractModel
     public $Image;
 
     /**
+     * @var string 扩展字段:
+{
+    ID:{
+        Confidence:0.9999
+    },
+    Name:{
+        Confidence:0.9996
+    }
+}
+     */
+    public $AdvancedInfo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -88,6 +119,15 @@ class MLIDCardOCRResponse extends AbstractModel
 -9103	证照翻拍告警
 -9102	证照复印件告警
      * @param string $Image 证件图片
+     * @param string $AdvancedInfo 扩展字段:
+{
+    ID:{
+        Confidence:0.9999
+    },
+    Name:{
+        Confidence:0.9996
+    }
+}
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -124,6 +164,10 @@ class MLIDCardOCRResponse extends AbstractModel
 
         if (array_key_exists("Image",$param) and $param["Image"] !== null) {
             $this->Image = $param["Image"];
+        }
+
+        if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
+            $this->AdvancedInfo = $param["AdvancedInfo"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

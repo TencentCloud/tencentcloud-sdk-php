@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemoryRequested(integer $MemoryRequested) 设置当前 Memory 申请使用量
  * @method integer getGpuRequested() 获取当前 Gpu 申请使用量
  * @method void setGpuRequested(integer $GpuRequested) 设置当前 Gpu 申请使用量
+ * @method string getRsgAsGroupId() 获取节点所在伸缩组 ID
+ * @method void setRsgAsGroupId(string $RsgAsGroupId) 设置节点所在伸缩组 ID
  */
 
 /**
@@ -150,6 +152,11 @@ class Instance extends AbstractModel
      * @var integer 当前 Gpu 申请使用量
      */
     public $GpuRequested;
+
+    /**
+     * @var string 节点所在伸缩组 ID
+     */
+    public $RsgAsGroupId;
     /**
      * @param string $Id 节点 ID
      * @param string $Zone 节点所在地区
@@ -169,6 +176,7 @@ class Instance extends AbstractModel
      * @param integer $CpuRequested 当前 Cpu 申请使用量
      * @param integer $MemoryRequested 当前 Memory 申请使用量
      * @param integer $GpuRequested 当前 Gpu 申请使用量
+     * @param string $RsgAsGroupId 节点所在伸缩组 ID
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("GpuRequested",$param) and $param["GpuRequested"] !== null) {
             $this->GpuRequested = $param["GpuRequested"];
+        }
+
+        if (array_key_exists("RsgAsGroupId",$param) and $param["RsgAsGroupId"] !== null) {
+            $this->RsgAsGroupId = $param["RsgAsGroupId"];
         }
     }
 }

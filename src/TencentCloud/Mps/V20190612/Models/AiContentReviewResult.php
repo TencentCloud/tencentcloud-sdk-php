@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 <li>Porn.Voice：声音鉴黄</li>
 <li>Political.Asr：Asr 文字鉴政</li>
 <li>Political.Ocr：Ocr 文字鉴政</li>
+ * @method float getSampleRate() 获取采样频率，即对视频每秒截取进行审核的帧数。
+ * @method void setSampleRate(float $SampleRate) 设置采样频率，即对视频每秒截取进行审核的帧数。
+ * @method float getDuration() 获取审核的视频时长，单位：秒。
+ * @method void setDuration(float $Duration) 设置审核的视频时长，单位：秒。
  * @method AiReviewTaskPornResult getPornTask() 获取视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPornTask(AiReviewTaskPornResult $PornTask) 设置视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
@@ -83,6 +87,16 @@ class AiContentReviewResult extends AbstractModel
 <li>Political.Ocr：Ocr 文字鉴政</li>
      */
     public $Type;
+
+    /**
+     * @var float 采样频率，即对视频每秒截取进行审核的帧数。
+     */
+    public $SampleRate;
+
+    /**
+     * @var float 审核的视频时长，单位：秒。
+     */
+    public $Duration;
 
     /**
      * @var AiReviewTaskPornResult 视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
@@ -135,6 +149,8 @@ class AiContentReviewResult extends AbstractModel
 <li>Porn.Voice：声音鉴黄</li>
 <li>Political.Asr：Asr 文字鉴政</li>
 <li>Political.Ocr：Ocr 文字鉴政</li>
+     * @param float $SampleRate 采样频率，即对视频每秒截取进行审核的帧数。
+     * @param float $Duration 审核的视频时长，单位：秒。
      * @param AiReviewTaskPornResult $PornTask 视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiReviewTaskTerrorismResult $TerrorismTask 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
@@ -164,6 +180,14 @@ class AiContentReviewResult extends AbstractModel
         }
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("SampleRate",$param) and $param["SampleRate"] !== null) {
+            $this->SampleRate = $param["SampleRate"];
+        }
+
+        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
+            $this->Duration = $param["Duration"];
         }
 
         if (array_key_exists("PornTask",$param) and $param["PornTask"] !== null) {

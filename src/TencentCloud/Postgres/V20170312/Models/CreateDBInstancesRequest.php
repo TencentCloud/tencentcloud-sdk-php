@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络ID。
  * @method string getSubnetId() 获取私有网络子网ID。
  * @method void setSubnetId(string $SubnetId) 设置私有网络子网ID。
+ * @method integer getAutoRenewFlag() 获取续费标记：0-正常续费（默认）；1-自动续费；
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置续费标记：0-正常续费（默认）；1-自动续费；
  */
 
 /**
@@ -108,6 +110,11 @@ class CreateDBInstancesRequest extends AbstractModel
      * @var string 私有网络子网ID。
      */
     public $SubnetId;
+
+    /**
+     * @var integer 续费标记：0-正常续费（默认）；1-自动续费；
+     */
+    public $AutoRenewFlag;
     /**
      * @param string $SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
      * @param string $DBVersion PostgreSQL内核版本，目前只支持：9.3.5、9.5.4两种版本。
@@ -121,6 +128,7 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      * @param string $VpcId 私有网络ID。
      * @param string $SubnetId 私有网络子网ID。
+     * @param integer $AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费；
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class CreateDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
     }
 }

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQps(integer $Qps) 设置该规格的预估QPS
  * @method integer getPid() 获取该规格对应的计费ID
  * @method void setPid(integer $Pid) 设置该规格对应的计费ID
+ * @method string getType() 获取机器类型
+ * @method void setType(string $Type) 设置机器类型
  */
 
 /**
@@ -87,6 +89,11 @@ class SpecItemInfo extends AbstractModel
      * @var integer 该规格对应的计费ID
      */
     public $Pid;
+
+    /**
+     * @var string 机器类型
+     */
+    public $Type;
     /**
      * @param string $SpecCode 规格ID
      * @param string $Version PostgreSQL的内核版本编号
@@ -97,6 +104,7 @@ class SpecItemInfo extends AbstractModel
      * @param integer $MinStorage 该规格所支持最小存储容量，单位：GB
      * @param integer $Qps 该规格的预估QPS
      * @param integer $Pid 该规格对应的计费ID
+     * @param string $Type 机器类型
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class SpecItemInfo extends AbstractModel
 
         if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
             $this->Pid = $param["Pid"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

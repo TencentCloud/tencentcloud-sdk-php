@@ -29,11 +29,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getHttpsCrt() 获取证书内容。
  * @method void setHttpsCrt(string $HttpsCrt) 设置证书内容。
  * @method integer getCertType() 获取证书类型。
-0：腾讯云托管证书
-1：用户添加证书。
+0：用户添加证书，
+1：腾讯云托管证书。
  * @method void setCertType(integer $CertType) 设置证书类型。
-0：腾讯云托管证书
-1：用户添加证书。
+0：用户添加证书，
+1：腾讯云托管证书。
  * @method string getCertExpireTime() 获取证书过期时间，UTC格式。
  * @method void setCertExpireTime(string $CertExpireTime) 设置证书过期时间，UTC格式。
  * @method string getDomainName() 获取使用此证书的域名名称。
@@ -74,8 +74,8 @@ class DomainCertInfo extends AbstractModel
 
     /**
      * @var integer 证书类型。
-0：腾讯云托管证书
-1：用户添加证书。
+0：用户添加证书，
+1：腾讯云托管证书。
      */
     public $CertType;
 
@@ -100,8 +100,8 @@ class DomainCertInfo extends AbstractModel
      * @param string $CreateTime 创建时间，UTC格式。
      * @param string $HttpsCrt 证书内容。
      * @param integer $CertType 证书类型。
-0：腾讯云托管证书
-1：用户添加证书。
+0：用户添加证书，
+1：腾讯云托管证书。
      * @param string $CertExpireTime 证书过期时间，UTC格式。
      * @param string $DomainName 使用此证书的域名名称。
      * @param integer $Status 证书状态

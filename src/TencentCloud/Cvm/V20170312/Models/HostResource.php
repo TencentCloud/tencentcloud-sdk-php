@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskTotal(integer $DiskTotal) 设置cdh实例总磁盘大小（单位为:GiB）
  * @method integer getDiskAvailable() 获取cdh实例可用磁盘大小（单位为:GiB）
  * @method void setDiskAvailable(integer $DiskAvailable) 设置cdh实例可用磁盘大小（单位为:GiB）
+ * @method string getDiskType() 获取cdh实例磁盘类型
+ * @method void setDiskType(string $DiskType) 设置cdh实例磁盘类型
  */
 
 /**
@@ -66,6 +68,11 @@ class HostResource extends AbstractModel
      * @var integer cdh实例可用磁盘大小（单位为:GiB）
      */
     public $DiskAvailable;
+
+    /**
+     * @var string cdh实例磁盘类型
+     */
+    public $DiskType;
     /**
      * @param integer $CpuTotal cdh实例总cpu核数
      * @param integer $CpuAvailable cdh实例可用cpu核数
@@ -73,6 +80,7 @@ class HostResource extends AbstractModel
      * @param float $MemAvailable cdh实例可用内存大小（单位为:GiB）
      * @param integer $DiskTotal cdh实例总磁盘大小（单位为:GiB）
      * @param integer $DiskAvailable cdh实例可用磁盘大小（单位为:GiB）
+     * @param string $DiskType cdh实例磁盘类型
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class HostResource extends AbstractModel
 
         if (array_key_exists("DiskAvailable",$param) and $param["DiskAvailable"] !== null) {
             $this->DiskAvailable = $param["DiskAvailable"];
+        }
+
+        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
+            $this->DiskType = $param["DiskType"];
         }
     }
 }

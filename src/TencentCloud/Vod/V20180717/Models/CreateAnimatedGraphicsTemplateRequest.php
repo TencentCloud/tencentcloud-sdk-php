@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method integer getFps() 获取帧率，取值范围：[1, 30]，单位：Hz。
+ * @method void setFps(integer $Fps) 设置帧率，取值范围：[1, 30]，单位：Hz。
  * @method integer getWidth() 获取动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
@@ -30,20 +32,26 @@ use TencentCloud\Common\AbstractModel;
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
- * @method integer getHeight() 获取视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+ * @method integer getHeight() 获取动图高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
- * @method void setHeight(integer $Height) 设置视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+ * @method void setHeight(integer $Height) 设置动图高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
- * @method integer getFps() 获取帧率，取值范围：[1, 30]，单位：Hz。
- * @method void setFps(integer $Fps) 设置帧率，取值范围：[1, 30]，单位：Hz。
+ * @method string getResolutionAdaptive() 获取分辨率自适应，可选值：
+<li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
+<li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+默认值：open。
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) 设置分辨率自适应，可选值：
+<li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
+<li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+默认值：open。
  * @method string getFormat() 获取动图格式，取值为 gif 和 webp。默认为 gif。
  * @method void setFormat(string $Format) 设置动图格式，取值为 gif 和 webp。默认为 gif。
  * @method float getQuality() 获取图片质量，取值范围：[1, 100]，默认值为 75。
@@ -62,6 +70,11 @@ use TencentCloud\Common\AbstractModel;
 class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
 {
     /**
+     * @var integer 帧率，取值范围：[1, 30]，单位：Hz。
+     */
+    public $Fps;
+
+    /**
      * @var integer 动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
@@ -72,7 +85,7 @@ class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
     public $Width;
 
     /**
-     * @var integer 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * @var integer 动图高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -82,9 +95,12 @@ class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
     public $Height;
 
     /**
-     * @var integer 帧率，取值范围：[1, 30]，单位：Hz。
+     * @var string 分辨率自适应，可选值：
+<li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
+<li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+默认值：open。
      */
-    public $Fps;
+    public $ResolutionAdaptive;
 
     /**
      * @var string 动图格式，取值为 gif 和 webp。默认为 gif。
@@ -111,19 +127,23 @@ class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
      */
     public $SubAppId;
     /**
+     * @param integer $Fps 帧率，取值范围：[1, 30]，单位：Hz。
      * @param integer $Width 动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
-     * @param integer $Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * @param integer $Height 动图高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
-     * @param integer $Fps 帧率，取值范围：[1, 30]，单位：Hz。
+     * @param string $ResolutionAdaptive 分辨率自适应，可选值：
+<li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
+<li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+默认值：open。
      * @param string $Format 动图格式，取值为 gif 和 webp。默认为 gif。
      * @param float $Quality 图片质量，取值范围：[1, 100]，默认值为 75。
      * @param string $Name 转动图模板名称，长度限制：64 个字符。
@@ -142,6 +162,10 @@ class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Fps",$param) and $param["Fps"] !== null) {
+            $this->Fps = $param["Fps"];
+        }
+
         if (array_key_exists("Width",$param) and $param["Width"] !== null) {
             $this->Width = $param["Width"];
         }
@@ -150,8 +174,8 @@ class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
             $this->Height = $param["Height"];
         }
 
-        if (array_key_exists("Fps",$param) and $param["Fps"] !== null) {
-            $this->Fps = $param["Fps"];
+        if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
+            $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
         }
 
         if (array_key_exists("Format",$param) and $param["Format"] !== null) {

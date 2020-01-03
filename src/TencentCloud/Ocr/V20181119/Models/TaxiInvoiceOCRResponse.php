@@ -32,6 +32,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGetOffTime(string $GetOffTime) 设置下车时间
  * @method string getDistance() 获取里程
  * @method void setDistance(string $Distance) 设置里程
+ * @method string getLocation() 获取发票所在地
+ * @method void setLocation(string $Location) 设置发票所在地
+ * @method string getPlateNumber() 获取车牌号
+ * @method void setPlateNumber(string $PlateNumber) 设置车牌号
+ * @method string getInvoiceType() 获取发票消费类型
+ * @method void setInvoiceType(string $InvoiceType) 设置发票消费类型
+ * @method string getProvince() 获取省
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProvince(string $Province) 设置省
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCity() 获取市
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCity(string $City) 设置市
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -77,6 +91,33 @@ class TaxiInvoiceOCRResponse extends AbstractModel
     public $Distance;
 
     /**
+     * @var string 发票所在地
+     */
+    public $Location;
+
+    /**
+     * @var string 车牌号
+     */
+    public $PlateNumber;
+
+    /**
+     * @var string 发票消费类型
+     */
+    public $InvoiceType;
+
+    /**
+     * @var string 省
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Province;
+
+    /**
+     * @var string 市
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $City;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -88,6 +129,13 @@ class TaxiInvoiceOCRResponse extends AbstractModel
      * @param string $GetOnTime 上车时间
      * @param string $GetOffTime 下车时间
      * @param string $Distance 里程
+     * @param string $Location 发票所在地
+     * @param string $PlateNumber 车牌号
+     * @param string $InvoiceType 发票消费类型
+     * @param string $Province 省
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $City 市
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -128,6 +176,26 @@ class TaxiInvoiceOCRResponse extends AbstractModel
 
         if (array_key_exists("Distance",$param) and $param["Distance"] !== null) {
             $this->Distance = $param["Distance"];
+        }
+
+        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+            $this->Location = $param["Location"];
+        }
+
+        if (array_key_exists("PlateNumber",$param) and $param["PlateNumber"] !== null) {
+            $this->PlateNumber = $param["PlateNumber"];
+        }
+
+        if (array_key_exists("InvoiceType",$param) and $param["InvoiceType"] !== null) {
+            $this->InvoiceType = $param["InvoiceType"];
+        }
+
+        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
+            $this->Province = $param["Province"];
+        }
+
+        if (array_key_exists("City",$param) and $param["City"] !== null) {
+            $this->City = $param["City"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

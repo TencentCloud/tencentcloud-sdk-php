@@ -26,6 +26,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackInfo(TextVehicleBack $BackInfo) 设置行驶证副页正面的识别结果，CardSide 为 BACK。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRecognizeWarnCode() 获取告警码	告警码消息	                                                告警码说明
+-9102	WARN_DRIVER_LICENSE_COPY_CARD	        复印件告警
+-9103	WARN_DRIVER_LICENSE_SCREENED_CARD	翻拍件告警
+-9106	WARN_DRIVER_LICENSE_PS_CARD	                ps告警
+注：告警码可以同时存在多个
+ * @method void setRecognizeWarnCode(array $RecognizeWarnCode) 设置告警码	告警码消息	                                                告警码说明
+-9102	WARN_DRIVER_LICENSE_COPY_CARD	        复印件告警
+-9103	WARN_DRIVER_LICENSE_SCREENED_CARD	翻拍件告警
+-9106	WARN_DRIVER_LICENSE_PS_CARD	                ps告警
+注：告警码可以同时存在多个
+ * @method array getRecognizeWarnMsg() 获取告警码说明
+注：告警信息可以同时存在多个
+ * @method void setRecognizeWarnMsg(array $RecognizeWarnMsg) 设置告警码说明
+注：告警信息可以同时存在多个
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -48,6 +62,21 @@ class VehicleLicenseOCRResponse extends AbstractModel
     public $BackInfo;
 
     /**
+     * @var array 告警码	告警码消息	                                                告警码说明
+-9102	WARN_DRIVER_LICENSE_COPY_CARD	        复印件告警
+-9103	WARN_DRIVER_LICENSE_SCREENED_CARD	翻拍件告警
+-9106	WARN_DRIVER_LICENSE_PS_CARD	                ps告警
+注：告警码可以同时存在多个
+     */
+    public $RecognizeWarnCode;
+
+    /**
+     * @var array 告警码说明
+注：告警信息可以同时存在多个
+     */
+    public $RecognizeWarnMsg;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -56,6 +85,13 @@ class VehicleLicenseOCRResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TextVehicleBack $BackInfo 行驶证副页正面的识别结果，CardSide 为 BACK。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RecognizeWarnCode 告警码	告警码消息	                                                告警码说明
+-9102	WARN_DRIVER_LICENSE_COPY_CARD	        复印件告警
+-9103	WARN_DRIVER_LICENSE_SCREENED_CARD	翻拍件告警
+-9106	WARN_DRIVER_LICENSE_PS_CARD	                ps告警
+注：告警码可以同时存在多个
+     * @param array $RecognizeWarnMsg 告警码说明
+注：告警信息可以同时存在多个
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -78,6 +114,14 @@ class VehicleLicenseOCRResponse extends AbstractModel
         if (array_key_exists("BackInfo",$param) and $param["BackInfo"] !== null) {
             $this->BackInfo = new TextVehicleBack();
             $this->BackInfo->deserialize($param["BackInfo"]);
+        }
+
+        if (array_key_exists("RecognizeWarnCode",$param) and $param["RecognizeWarnCode"] !== null) {
+            $this->RecognizeWarnCode = $param["RecognizeWarnCode"];
+        }
+
+        if (array_key_exists("RecognizeWarnMsg",$param) and $param["RecognizeWarnMsg"] !== null) {
+            $this->RecognizeWarnMsg = $param["RecognizeWarnMsg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

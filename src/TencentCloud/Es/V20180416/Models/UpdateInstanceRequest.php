@@ -22,28 +22,50 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getInstanceName() 获取实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
  * @method void setInstanceName(string $InstanceName) 设置实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
- * @method integer getNodeNum() 获取节点个数（2-50个）
- * @method void setNodeNum(integer $NodeNum) 设置节点个数（2-50个）
+ * @method integer getNodeNum() 获取已废弃请使用NodeInfoList
+节点个数（2-50个）
+ * @method void setNodeNum(integer $NodeNum) 设置已废弃请使用NodeInfoList
+节点个数（2-50个）
  * @method string getEsConfig() 获取配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
  * @method void setEsConfig(string $EsConfig) 设置配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
  * @method string getPassword() 获取默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
  * @method void setPassword(string $Password) 设置默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
  * @method EsAcl getEsAcl() 获取访问控制列表
  * @method void setEsAcl(EsAcl $EsAcl) 设置访问控制列表
- * @method integer getDiskSize() 获取磁盘大小（单位GB）
- * @method void setDiskSize(integer $DiskSize) 设置磁盘大小（单位GB）
- * @method string getNodeType() 获取节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
- * @method void setNodeType(string $NodeType) 设置节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
- * @method integer getMasterNodeNum() 获取专用主节点个数（只支持3个或5个）
- * @method void setMasterNodeNum(integer $MasterNodeNum) 设置专用主节点个数（只支持3个或5个）
- * @method string getMasterNodeType() 获取专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
- * @method void setMasterNodeType(string $MasterNodeType) 设置专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
- * @method integer getMasterNodeDiskSize() 获取专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
- * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) 设置专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
+ * @method integer getDiskSize() 获取已废弃请使用NodeInfoList
+磁盘大小（单位GB）
+ * @method void setDiskSize(integer $DiskSize) 设置已废弃请使用NodeInfoList
+磁盘大小（单位GB）
+ * @method string getNodeType() 获取已废弃请使用NodeInfoList
+节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method void setNodeType(string $NodeType) 设置已废弃请使用NodeInfoList
+节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method integer getMasterNodeNum() 获取已废弃请使用NodeInfoList
+专用主节点个数（只支持3个或5个）
+ * @method void setMasterNodeNum(integer $MasterNodeNum) 设置已废弃请使用NodeInfoList
+专用主节点个数（只支持3个或5个）
+ * @method string getMasterNodeType() 获取已废弃请使用NodeInfoList
+专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method void setMasterNodeType(string $MasterNodeType) 设置已废弃请使用NodeInfoList
+专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method integer getMasterNodeDiskSize() 获取已废弃请使用NodeInfoList
+专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
+ * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) 设置已废弃请使用NodeInfoList
+专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
  * @method boolean getForceRestart() 获取更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
  * @method void setForceRestart(boolean $ForceRestart) 设置更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
  * @method CosBackup getCosBackup() 获取COS自动备份信息
  * @method void setCosBackup(CosBackup $CosBackup) 设置COS自动备份信息
+ * @method array getNodeInfoList() 获取节点信息列表，可以只传递要更新的节点及其对应的规格信息。支持的操作包括<li>修改一种节点的个数</li><li>修改一种节点的节点规格及磁盘大小</li><li>增加一种节点类型（需要同时指定该节点的类型，个数，规格，磁盘等信息）</li>上述操作一次只能进行一种，且磁盘类型不支持修改
+ * @method void setNodeInfoList(array $NodeInfoList) 设置节点信息列表，可以只传递要更新的节点及其对应的规格信息。支持的操作包括<li>修改一种节点的个数</li><li>修改一种节点的节点规格及磁盘大小</li><li>增加一种节点类型（需要同时指定该节点的类型，个数，规格，磁盘等信息）</li>上述操作一次只能进行一种，且磁盘类型不支持修改
+ * @method string getPublicAccess() 获取公网访问状态
+ * @method void setPublicAccess(string $PublicAccess) 设置公网访问状态
+ * @method EsPublicAcl getEsPublicAcl() 获取公网访问控制列表
+ * @method void setEsPublicAcl(EsPublicAcl $EsPublicAcl) 设置公网访问控制列表
+ * @method string getKibanaPublicAccess() 获取Kibana公网访问状态
+ * @method void setKibanaPublicAccess(string $KibanaPublicAccess) 设置Kibana公网访问状态
+ * @method string getKibanaPrivateAccess() 获取Kibana内网访问状态
+ * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) 设置Kibana内网访问状态
  */
 
 /**
@@ -62,7 +84,8 @@ class UpdateInstanceRequest extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer 节点个数（2-50个）
+     * @var integer 已废弃请使用NodeInfoList
+节点个数（2-50个）
      */
     public $NodeNum;
 
@@ -82,27 +105,32 @@ class UpdateInstanceRequest extends AbstractModel
     public $EsAcl;
 
     /**
-     * @var integer 磁盘大小（单位GB）
+     * @var integer 已废弃请使用NodeInfoList
+磁盘大小（单位GB）
      */
     public $DiskSize;
 
     /**
-     * @var string 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @var string 已废弃请使用NodeInfoList
+节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public $NodeType;
 
     /**
-     * @var integer 专用主节点个数（只支持3个或5个）
+     * @var integer 已废弃请使用NodeInfoList
+专用主节点个数（只支持3个或5个）
      */
     public $MasterNodeNum;
 
     /**
-     * @var string 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @var string 已废弃请使用NodeInfoList
+专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public $MasterNodeType;
 
     /**
-     * @var integer 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
+     * @var integer 已废弃请使用NodeInfoList
+专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
      */
     public $MasterNodeDiskSize;
 
@@ -115,20 +143,56 @@ class UpdateInstanceRequest extends AbstractModel
      * @var CosBackup COS自动备份信息
      */
     public $CosBackup;
+
+    /**
+     * @var array 节点信息列表，可以只传递要更新的节点及其对应的规格信息。支持的操作包括<li>修改一种节点的个数</li><li>修改一种节点的节点规格及磁盘大小</li><li>增加一种节点类型（需要同时指定该节点的类型，个数，规格，磁盘等信息）</li>上述操作一次只能进行一种，且磁盘类型不支持修改
+     */
+    public $NodeInfoList;
+
+    /**
+     * @var string 公网访问状态
+     */
+    public $PublicAccess;
+
+    /**
+     * @var EsPublicAcl 公网访问控制列表
+     */
+    public $EsPublicAcl;
+
+    /**
+     * @var string Kibana公网访问状态
+     */
+    public $KibanaPublicAccess;
+
+    /**
+     * @var string Kibana内网访问状态
+     */
+    public $KibanaPrivateAccess;
     /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
-     * @param integer $NodeNum 节点个数（2-50个）
+     * @param integer $NodeNum 已废弃请使用NodeInfoList
+节点个数（2-50个）
      * @param string $EsConfig 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
      * @param string $Password 默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
      * @param EsAcl $EsAcl 访问控制列表
-     * @param integer $DiskSize 磁盘大小（单位GB）
-     * @param string $NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
-     * @param integer $MasterNodeNum 专用主节点个数（只支持3个或5个）
-     * @param string $MasterNodeType 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
-     * @param integer $MasterNodeDiskSize 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
+     * @param integer $DiskSize 已废弃请使用NodeInfoList
+磁盘大小（单位GB）
+     * @param string $NodeType 已废弃请使用NodeInfoList
+节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @param integer $MasterNodeNum 已废弃请使用NodeInfoList
+专用主节点个数（只支持3个或5个）
+     * @param string $MasterNodeType 已废弃请使用NodeInfoList
+专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @param integer $MasterNodeDiskSize 已废弃请使用NodeInfoList
+专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
      * @param boolean $ForceRestart 更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
      * @param CosBackup $CosBackup COS自动备份信息
+     * @param array $NodeInfoList 节点信息列表，可以只传递要更新的节点及其对应的规格信息。支持的操作包括<li>修改一种节点的个数</li><li>修改一种节点的节点规格及磁盘大小</li><li>增加一种节点类型（需要同时指定该节点的类型，个数，规格，磁盘等信息）</li>上述操作一次只能进行一种，且磁盘类型不支持修改
+     * @param string $PublicAccess 公网访问状态
+     * @param EsPublicAcl $EsPublicAcl 公网访问控制列表
+     * @param string $KibanaPublicAccess Kibana公网访问状态
+     * @param string $KibanaPrivateAccess Kibana内网访问状态
      */
     function __construct()
     {
@@ -194,6 +258,32 @@ class UpdateInstanceRequest extends AbstractModel
         if (array_key_exists("CosBackup",$param) and $param["CosBackup"] !== null) {
             $this->CosBackup = new CosBackup();
             $this->CosBackup->deserialize($param["CosBackup"]);
+        }
+
+        if (array_key_exists("NodeInfoList",$param) and $param["NodeInfoList"] !== null) {
+            $this->NodeInfoList = [];
+            foreach ($param["NodeInfoList"] as $key => $value){
+                $obj = new NodeInfo();
+                $obj->deserialize($value);
+                array_push($this->NodeInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("PublicAccess",$param) and $param["PublicAccess"] !== null) {
+            $this->PublicAccess = $param["PublicAccess"];
+        }
+
+        if (array_key_exists("EsPublicAcl",$param) and $param["EsPublicAcl"] !== null) {
+            $this->EsPublicAcl = new EsPublicAcl();
+            $this->EsPublicAcl->deserialize($param["EsPublicAcl"]);
+        }
+
+        if (array_key_exists("KibanaPublicAccess",$param) and $param["KibanaPublicAccess"] !== null) {
+            $this->KibanaPublicAccess = $param["KibanaPublicAccess"];
+        }
+
+        if (array_key_exists("KibanaPrivateAccess",$param) and $param["KibanaPrivateAccess"] !== null) {
+            $this->KibanaPrivateAccess = $param["KibanaPrivateAccess"];
         }
     }
 }

@@ -19,15 +19,21 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method integer getCertType() 获取证书类型。0-用户添加证书；1-腾讯云托管证书。
+注意：当证书类型为0时，HttpsCrt和HttpsKey必选；
+当证书类型为1时，优先使用CloudCertId对应证书，若CloudCertId为空则使用HttpsCrt和HttpsKey。
  * @method void setCertType(integer $CertType) 设置证书类型。0-用户添加证书；1-腾讯云托管证书。
+注意：当证书类型为0时，HttpsCrt和HttpsKey必选；
+当证书类型为1时，优先使用CloudCertId对应证书，若CloudCertId为空则使用HttpsCrt和HttpsKey。
+ * @method string getCertName() 获取证书名称。
+ * @method void setCertName(string $CertName) 设置证书名称。
  * @method string getHttpsCrt() 获取证书内容，即公钥。
  * @method void setHttpsCrt(string $HttpsCrt) 设置证书内容，即公钥。
  * @method string getHttpsKey() 获取私钥。
  * @method void setHttpsKey(string $HttpsKey) 设置私钥。
- * @method string getCertName() 获取证书名称。
- * @method void setCertName(string $CertName) 设置证书名称。
  * @method string getDescription() 获取描述。
  * @method void setDescription(string $Description) 设置描述。
+ * @method string getCloudCertId() 获取腾讯云证书托管ID。
+ * @method void setCloudCertId(string $CloudCertId) 设置腾讯云证书托管ID。
  */
 
 /**
@@ -37,8 +43,15 @@ class CreateLiveCertRequest extends AbstractModel
 {
     /**
      * @var integer 证书类型。0-用户添加证书；1-腾讯云托管证书。
+注意：当证书类型为0时，HttpsCrt和HttpsKey必选；
+当证书类型为1时，优先使用CloudCertId对应证书，若CloudCertId为空则使用HttpsCrt和HttpsKey。
      */
     public $CertType;
+
+    /**
+     * @var string 证书名称。
+     */
+    public $CertName;
 
     /**
      * @var string 证书内容，即公钥。
@@ -51,20 +64,23 @@ class CreateLiveCertRequest extends AbstractModel
     public $HttpsKey;
 
     /**
-     * @var string 证书名称。
-     */
-    public $CertName;
-
-    /**
      * @var string 描述。
      */
     public $Description;
+
+    /**
+     * @var string 腾讯云证书托管ID。
+     */
+    public $CloudCertId;
     /**
      * @param integer $CertType 证书类型。0-用户添加证书；1-腾讯云托管证书。
+注意：当证书类型为0时，HttpsCrt和HttpsKey必选；
+当证书类型为1时，优先使用CloudCertId对应证书，若CloudCertId为空则使用HttpsCrt和HttpsKey。
+     * @param string $CertName 证书名称。
      * @param string $HttpsCrt 证书内容，即公钥。
      * @param string $HttpsKey 私钥。
-     * @param string $CertName 证书名称。
      * @param string $Description 描述。
+     * @param string $CloudCertId 腾讯云证书托管ID。
      */
     function __construct()
     {
@@ -82,6 +98,10 @@ class CreateLiveCertRequest extends AbstractModel
             $this->CertType = $param["CertType"];
         }
 
+        if (array_key_exists("CertName",$param) and $param["CertName"] !== null) {
+            $this->CertName = $param["CertName"];
+        }
+
         if (array_key_exists("HttpsCrt",$param) and $param["HttpsCrt"] !== null) {
             $this->HttpsCrt = $param["HttpsCrt"];
         }
@@ -90,12 +110,12 @@ class CreateLiveCertRequest extends AbstractModel
             $this->HttpsKey = $param["HttpsKey"];
         }
 
-        if (array_key_exists("CertName",$param) and $param["CertName"] !== null) {
-            $this->CertName = $param["CertName"];
-        }
-
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("CloudCertId",$param) and $param["CloudCertId"] !== null) {
+            $this->CloudCertId = $param["CloudCertId"];
         }
     }
 }

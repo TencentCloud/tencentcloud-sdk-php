@@ -66,8 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEsVersion(string $EsVersion) 设置ES版本号
  * @method string getEsConfig() 获取ES配置项
  * @method void setEsConfig(string $EsConfig) 设置ES配置项
- * @method EsAcl getEsAcl() 获取ES访问控制配置
- * @method void setEsAcl(EsAcl $EsAcl) 设置ES访问控制配置
+ * @method EsAcl getEsAcl() 获取Kibana访问控制配置
+ * @method void setEsAcl(EsAcl $EsAcl) 设置Kibana访问控制配置
  * @method string getCreateTime() 获取实例创建时间
  * @method void setCreateTime(string $CreateTime) 设置实例创建时间
  * @method string getUpdateTime() 获取实例最后修改操作时间
@@ -88,6 +88,72 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagList(array $TagList) 设置实例拥有的标签列表
  * @method string getLicenseType() 获取License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
  * @method void setLicenseType(string $LicenseType) 设置License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+ * @method boolean getEnableHotWarmMode() 获取是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableHotWarmMode(boolean $EnableHotWarmMode) 设置是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWarmNodeType() 获取冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWarmNodeType(string $WarmNodeType) 设置冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWarmNodeNum() 获取冷节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWarmNodeNum(integer $WarmNodeNum) 设置冷节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWarmCpuNum() 获取冷节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWarmCpuNum(integer $WarmCpuNum) 设置冷节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWarmMemSize() 获取冷节点内存内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWarmMemSize(integer $WarmMemSize) 设置冷节点内存内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWarmDiskType() 获取冷节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWarmDiskType(string $WarmDiskType) 设置冷节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWarmDiskSize() 获取冷节点磁盘大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWarmDiskSize(integer $WarmDiskSize) 设置冷节点磁盘大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNodeInfoList() 获取集群节点信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeInfoList(array $NodeInfoList) 设置集群节点信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEsPublicUrl() 获取Es公网地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEsPublicUrl(string $EsPublicUrl) 设置Es公网地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMultiZoneInfo() 获取多可用区网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMultiZoneInfo(array $MultiZoneInfo) 设置多可用区网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDeployMode() 获取部署模式<li>0：单可用区</li><li>1：多可用区</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployMode(integer $DeployMode) 设置部署模式<li>0：单可用区</li><li>1：多可用区</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPublicAccess() 获取ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicAccess(string $PublicAccess) 设置ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method EsAcl getEsPublicAcl() 获取ES公网访问控制配置
+ * @method void setEsPublicAcl(EsAcl $EsPublicAcl) 设置ES公网访问控制配置
+ * @method string getKibanaPrivateUrl() 获取Kibana内网地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKibanaPrivateUrl(string $KibanaPrivateUrl) 设置Kibana内网地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKibanaPublicAccess() 获取Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKibanaPublicAccess(string $KibanaPublicAccess) 设置Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKibanaPrivateAccess() 获取Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) 设置Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSecurityType() 获取6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityType(integer $SecurityType) 设置6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -216,7 +282,7 @@ class InstanceInfo extends AbstractModel
     public $EsConfig;
 
     /**
-     * @var EsAcl ES访问控制配置
+     * @var EsAcl Kibana访问控制配置
      */
     public $EsAcl;
 
@@ -269,6 +335,107 @@ class InstanceInfo extends AbstractModel
      * @var string License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
      */
     public $LicenseType;
+
+    /**
+     * @var boolean 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableHotWarmMode;
+
+    /**
+     * @var string 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WarmNodeType;
+
+    /**
+     * @var integer 冷节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WarmNodeNum;
+
+    /**
+     * @var integer 冷节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WarmCpuNum;
+
+    /**
+     * @var integer 冷节点内存内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WarmMemSize;
+
+    /**
+     * @var string 冷节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WarmDiskType;
+
+    /**
+     * @var integer 冷节点磁盘大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WarmDiskSize;
+
+    /**
+     * @var array 集群节点信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeInfoList;
+
+    /**
+     * @var string Es公网地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EsPublicUrl;
+
+    /**
+     * @var array 多可用区网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MultiZoneInfo;
+
+    /**
+     * @var integer 部署模式<li>0：单可用区</li><li>1：多可用区</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployMode;
+
+    /**
+     * @var string ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicAccess;
+
+    /**
+     * @var EsAcl ES公网访问控制配置
+     */
+    public $EsPublicAcl;
+
+    /**
+     * @var string Kibana内网地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KibanaPrivateUrl;
+
+    /**
+     * @var string Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KibanaPublicAccess;
+
+    /**
+     * @var string Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KibanaPrivateAccess;
+
+    /**
+     * @var integer 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityType;
     /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
@@ -294,7 +461,7 @@ class InstanceInfo extends AbstractModel
      * @param string $KibanaUrl Kibana访问url
      * @param string $EsVersion ES版本号
      * @param string $EsConfig ES配置项
-     * @param EsAcl $EsAcl ES访问控制配置
+     * @param EsAcl $EsAcl Kibana访问控制配置
      * @param string $CreateTime 实例创建时间
      * @param string $UpdateTime 实例最后修改操作时间
      * @param string $Deadline 实例到期时间
@@ -305,6 +472,39 @@ class InstanceInfo extends AbstractModel
      * @param boolean $AllowCosBackup 是否允许cos自动备份
      * @param array $TagList 实例拥有的标签列表
      * @param string $LicenseType License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+     * @param boolean $EnableHotWarmMode 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WarmNodeType 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WarmNodeNum 冷节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WarmCpuNum 冷节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WarmMemSize 冷节点内存内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WarmDiskType 冷节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WarmDiskSize 冷节点磁盘大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NodeInfoList 集群节点信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EsPublicUrl Es公网地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MultiZoneInfo 多可用区网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DeployMode 部署模式<li>0：单可用区</li><li>1：多可用区</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PublicAccess ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EsAcl $EsPublicAcl ES公网访问控制配置
+     * @param string $KibanaPrivateUrl Kibana内网地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KibanaPublicAccess Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KibanaPrivateAccess Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -465,6 +665,85 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
             $this->LicenseType = $param["LicenseType"];
+        }
+
+        if (array_key_exists("EnableHotWarmMode",$param) and $param["EnableHotWarmMode"] !== null) {
+            $this->EnableHotWarmMode = $param["EnableHotWarmMode"];
+        }
+
+        if (array_key_exists("WarmNodeType",$param) and $param["WarmNodeType"] !== null) {
+            $this->WarmNodeType = $param["WarmNodeType"];
+        }
+
+        if (array_key_exists("WarmNodeNum",$param) and $param["WarmNodeNum"] !== null) {
+            $this->WarmNodeNum = $param["WarmNodeNum"];
+        }
+
+        if (array_key_exists("WarmCpuNum",$param) and $param["WarmCpuNum"] !== null) {
+            $this->WarmCpuNum = $param["WarmCpuNum"];
+        }
+
+        if (array_key_exists("WarmMemSize",$param) and $param["WarmMemSize"] !== null) {
+            $this->WarmMemSize = $param["WarmMemSize"];
+        }
+
+        if (array_key_exists("WarmDiskType",$param) and $param["WarmDiskType"] !== null) {
+            $this->WarmDiskType = $param["WarmDiskType"];
+        }
+
+        if (array_key_exists("WarmDiskSize",$param) and $param["WarmDiskSize"] !== null) {
+            $this->WarmDiskSize = $param["WarmDiskSize"];
+        }
+
+        if (array_key_exists("NodeInfoList",$param) and $param["NodeInfoList"] !== null) {
+            $this->NodeInfoList = [];
+            foreach ($param["NodeInfoList"] as $key => $value){
+                $obj = new NodeInfo();
+                $obj->deserialize($value);
+                array_push($this->NodeInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("EsPublicUrl",$param) and $param["EsPublicUrl"] !== null) {
+            $this->EsPublicUrl = $param["EsPublicUrl"];
+        }
+
+        if (array_key_exists("MultiZoneInfo",$param) and $param["MultiZoneInfo"] !== null) {
+            $this->MultiZoneInfo = [];
+            foreach ($param["MultiZoneInfo"] as $key => $value){
+                $obj = new ZoneDetail();
+                $obj->deserialize($value);
+                array_push($this->MultiZoneInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("DeployMode",$param) and $param["DeployMode"] !== null) {
+            $this->DeployMode = $param["DeployMode"];
+        }
+
+        if (array_key_exists("PublicAccess",$param) and $param["PublicAccess"] !== null) {
+            $this->PublicAccess = $param["PublicAccess"];
+        }
+
+        if (array_key_exists("EsPublicAcl",$param) and $param["EsPublicAcl"] !== null) {
+            $this->EsPublicAcl = new EsAcl();
+            $this->EsPublicAcl->deserialize($param["EsPublicAcl"]);
+        }
+
+        if (array_key_exists("KibanaPrivateUrl",$param) and $param["KibanaPrivateUrl"] !== null) {
+            $this->KibanaPrivateUrl = $param["KibanaPrivateUrl"];
+        }
+
+        if (array_key_exists("KibanaPublicAccess",$param) and $param["KibanaPublicAccess"] !== null) {
+            $this->KibanaPublicAccess = $param["KibanaPublicAccess"];
+        }
+
+        if (array_key_exists("KibanaPrivateAccess",$param) and $param["KibanaPrivateAccess"] !== null) {
+            $this->KibanaPrivateAccess = $param["KibanaPrivateAccess"];
+        }
+
+        if (array_key_exists("SecurityType",$param) and $param["SecurityType"] !== null) {
+            $this->SecurityType = $param["SecurityType"];
         }
     }
 }

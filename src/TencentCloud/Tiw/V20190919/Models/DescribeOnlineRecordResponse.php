@@ -31,11 +31,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取录制任务状态
 - PREPARED: 表示录制正在准备中（进房/启动录制服务等操作）
 - RECORDING: 表示录制已开始
-- FINISHED: 表示录制完成
+- PAUSED: 表示录制已暂停
+- STOPPED: 表示录制已停止，正在处理并上传视频
+- FINISHED: 表示视频处理并上传完成，成功生成录制结果
  * @method void setStatus(string $Status) 设置录制任务状态
 - PREPARED: 表示录制正在准备中（进房/启动录制服务等操作）
 - RECORDING: 表示录制已开始
-- FINISHED: 表示录制完成
+- PAUSED: 表示录制已暂停
+- STOPPED: 表示录制已停止，正在处理并上传视频
+- FINISHED: 表示视频处理并上传完成，成功生成录制结果
  * @method integer getRoomId() 获取房间号
  * @method void setRoomId(integer $RoomId) 设置房间号
  * @method string getGroupId() 获取白板的群组 Id
@@ -80,7 +84,9 @@ class DescribeOnlineRecordResponse extends AbstractModel
      * @var string 录制任务状态
 - PREPARED: 表示录制正在准备中（进房/启动录制服务等操作）
 - RECORDING: 表示录制已开始
-- FINISHED: 表示录制完成
+- PAUSED: 表示录制已暂停
+- STOPPED: 表示录制已停止，正在处理并上传视频
+- FINISHED: 表示视频处理并上传完成，成功生成录制结果
      */
     public $Status;
 
@@ -142,7 +148,9 @@ class DescribeOnlineRecordResponse extends AbstractModel
      * @param string $Status 录制任务状态
 - PREPARED: 表示录制正在准备中（进房/启动录制服务等操作）
 - RECORDING: 表示录制已开始
-- FINISHED: 表示录制完成
+- PAUSED: 表示录制已暂停
+- STOPPED: 表示录制已停止，正在处理并上传视频
+- FINISHED: 表示视频处理并上传完成，成功生成录制结果
      * @param integer $RoomId 房间号
      * @param string $GroupId 白板的群组 Id
      * @param string $RecordUserId 录制用户Id

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method Canvas getCanvas() 获取混流画布参数
  * @method void setCanvas(Canvas $Canvas) 设置混流画布参数
- * @method StreamLayout getInputStreamList() 获取流布局参数
- * @method void setInputStreamList(StreamLayout $InputStreamList) 设置流布局参数
+ * @method array getInputStreamList() 获取流布局参数
+ * @method void setInputStreamList(array $InputStreamList) 设置流布局参数
  */
 
 /**
@@ -35,12 +35,12 @@ class CustomLayout extends AbstractModel
     public $Canvas;
 
     /**
-     * @var StreamLayout 流布局参数
+     * @var array 流布局参数
      */
     public $InputStreamList;
     /**
      * @param Canvas $Canvas 混流画布参数
-     * @param StreamLayout $InputStreamList 流布局参数
+     * @param array $InputStreamList 流布局参数
      */
     function __construct()
     {
@@ -60,8 +60,12 @@ class CustomLayout extends AbstractModel
         }
 
         if (array_key_exists("InputStreamList",$param) and $param["InputStreamList"] !== null) {
-            $this->InputStreamList = new StreamLayout();
-            $this->InputStreamList->deserialize($param["InputStreamList"]);
+            $this->InputStreamList = [];
+            foreach ($param["InputStreamList"] as $key => $value){
+                $obj = new StreamLayout();
+                $obj->deserialize($value);
+                array_push($this->InputStreamList, $obj);
+            }
         }
     }
 }

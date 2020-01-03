@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCheckOnly(boolean $CheckOnly) 设置是否只做升级检查，默认值为false
  * @method string getLicenseType() 获取目标商业特性版本：<li>oss 开源版</li><li>basic 基础版</li>当前仅在5.6.4升级6.x版本时使用，默认值为basic
  * @method void setLicenseType(string $LicenseType) 设置目标商业特性版本：<li>oss 开源版</li><li>basic 基础版</li>当前仅在5.6.4升级6.x版本时使用，默认值为basic
+ * @method integer getBasicSecurityType() 获取6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+ * @method void setBasicSecurityType(integer $BasicSecurityType) 设置6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
  */
 
 /**
@@ -52,11 +54,17 @@ class UpgradeInstanceRequest extends AbstractModel
      * @var string 目标商业特性版本：<li>oss 开源版</li><li>basic 基础版</li>当前仅在5.6.4升级6.x版本时使用，默认值为basic
      */
     public $LicenseType;
+
+    /**
+     * @var integer 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     */
+    public $BasicSecurityType;
     /**
      * @param string $InstanceId 实例ID
      * @param string $EsVersion 目标ES版本
      * @param boolean $CheckOnly 是否只做升级检查，默认值为false
      * @param string $LicenseType 目标商业特性版本：<li>oss 开源版</li><li>basic 基础版</li>当前仅在5.6.4升级6.x版本时使用，默认值为basic
+     * @param integer $BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class UpgradeInstanceRequest extends AbstractModel
 
         if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
             $this->LicenseType = $param["LicenseType"];
+        }
+
+        if (array_key_exists("BasicSecurityType",$param) and $param["BasicSecurityType"] !== null) {
+            $this->BasicSecurityType = $param["BasicSecurityType"];
         }
     }
 }

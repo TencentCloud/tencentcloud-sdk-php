@@ -28,12 +28,9 @@ use TencentCloud\Es\V20180416\Models as Models;
 * @method Models\DescribeInstanceOperationsResponse DescribeInstanceOperations(Models\DescribeInstanceOperationsRequest $req) 查询实例指定条件下的操作记录
 * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询用户该地域下符合条件的所有实例
 * @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) 重启ES集群实例(用于系统版本更新等操作) 
-* @method Models\UpdateInstanceResponse UpdateInstance(Models\UpdateInstanceRequest $req) 对集群进行扩缩容，修改实例名称，修改配置，重置密码， 添加Kibana黑白名单等操作。参数中InstanceId为必传参数，ForceRestart为选填参数，剩余参数传递组合及含义如下：
+* @method Models\UpdateInstanceResponse UpdateInstance(Models\UpdateInstanceRequest $req) 对集群进行节点规格变更，修改实例名称，修改配置，重置密码， 添加Kibana黑白名单等操作。参数中InstanceId为必传参数，ForceRestart为选填参数，剩余参数传递组合及含义如下：
 - InstanceName：修改实例名称(仅用于标识实例)
-- NodeNum：集群数据节点横向扩缩容
-- NodeType, DiskSize：集群数据节点纵向扩缩容
-- MasterNodeNum: 集群专用主节点横向扩缩容
-- MasterNodeType, MasterNodeDiskSize: 集群专用主节点纵向扩缩容
+- NodeInfoList: 修改节点配置（节点横向扩缩容，纵向扩缩容，增加主节点，增加冷节点等）
 - EsConfig：修改集群配置
 - Password：修改默认用户elastic的密码
 - EsAcl：修改访问控制列表

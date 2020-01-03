@@ -14,25 +14,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Nlp\V20190408\Models;
+namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getText() 获取待审核的文本（仅支持UTF-8格式，不超过2000字）
- * @method void setText(string $Text) 设置待审核的文本（仅支持UTF-8格式，不超过2000字）
+ * @method integer getSdkAppId() 获取应用的SdkAppId
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用的SdkAppId
  */
 
 /**
- *ContentApproval请求参数结构体
+ *DescribeOnlineRecordCallback请求参数结构体
  */
-class ContentApprovalRequest extends AbstractModel
+class DescribeOnlineRecordCallbackRequest extends AbstractModel
 {
     /**
-     * @var string 待审核的文本（仅支持UTF-8格式，不超过2000字）
+     * @var integer 应用的SdkAppId
      */
-    public $Text;
+    public $SdkAppId;
     /**
-     * @param string $Text 待审核的文本（仅支持UTF-8格式，不超过2000字）
+     * @param integer $SdkAppId 应用的SdkAppId
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class ContentApprovalRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
+        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
+            $this->SdkAppId = $param["SdkAppId"];
         }
     }
 }

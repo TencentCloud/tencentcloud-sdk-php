@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置运行状态对额外信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getReplicaInfos() 获取副本信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReplicaInfos(array $ReplicaInfos) 设置副本信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -75,6 +79,12 @@ class ServiceStatus extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
+
+    /**
+     * @var array 副本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReplicaInfos;
     /**
      * @param integer $DesiredReplicas 预期副本数
      * @param integer $CurrentReplicas 当前副本数
@@ -84,6 +94,8 @@ class ServiceStatus extends AbstractModel
      * @param array $Replicas 副本名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 运行状态对额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ReplicaInfos 副本信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -125,6 +137,15 @@ class ServiceStatus extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("ReplicaInfos",$param) and $param["ReplicaInfos"] !== null) {
+            $this->ReplicaInfos = [];
+            foreach ($param["ReplicaInfos"] as $key => $value){
+                $obj = new ReplicaInfo();
+                $obj->deserialize($value);
+                array_push($this->ReplicaInfos, $obj);
+            }
         }
     }
 }

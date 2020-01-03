@@ -50,6 +50,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogLevel(integer $LogLevel) 设置日志级别
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDevAddr() 获取LoRaWAN 设备地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDevAddr(string $DevAddr) 设置LoRaWAN 设备地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppKey() 获取LoRaWAN 应用密钥
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppKey(string $AppKey) 设置LoRaWAN 应用密钥
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDevEUI() 获取LoRaWAN 设备唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDevEUI(string $DevEUI) 设置LoRaWAN 设备唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppSKey() 获取LoRaWAN 应用会话密钥
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppSKey(string $AppSKey) 设置LoRaWAN 应用会话密钥
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNwkSKey() 获取LoRaWAN 网络会话密钥
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNwkSKey(string $NwkSKey) 设置LoRaWAN 网络会话密钥
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -108,6 +128,36 @@ class DeviceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogLevel;
+
+    /**
+     * @var string LoRaWAN 设备地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DevAddr;
+
+    /**
+     * @var string LoRaWAN 应用密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppKey;
+
+    /**
+     * @var string LoRaWAN 设备唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DevEUI;
+
+    /**
+     * @var string LoRaWAN 应用会话密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppSKey;
+
+    /**
+     * @var string LoRaWAN 网络会话密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NwkSKey;
     /**
      * @param string $DeviceName 设备名
      * @param integer $Status 0: 离线, 1: 在线, 2: 获取失败, 3 未激活
@@ -124,6 +174,16 @@ class DeviceInfo extends AbstractModel
      * @param string $DeviceCert 设备证书
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LogLevel 日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DevAddr LoRaWAN 设备地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppKey LoRaWAN 应用密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DevEUI LoRaWAN 设备唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppSKey LoRaWAN 应用会话密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NwkSKey LoRaWAN 网络会话密钥
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -172,6 +232,26 @@ class DeviceInfo extends AbstractModel
 
         if (array_key_exists("LogLevel",$param) and $param["LogLevel"] !== null) {
             $this->LogLevel = $param["LogLevel"];
+        }
+
+        if (array_key_exists("DevAddr",$param) and $param["DevAddr"] !== null) {
+            $this->DevAddr = $param["DevAddr"];
+        }
+
+        if (array_key_exists("AppKey",$param) and $param["AppKey"] !== null) {
+            $this->AppKey = $param["AppKey"];
+        }
+
+        if (array_key_exists("DevEUI",$param) and $param["DevEUI"] !== null) {
+            $this->DevEUI = $param["DevEUI"];
+        }
+
+        if (array_key_exists("AppSKey",$param) and $param["AppSKey"] !== null) {
+            $this->AppSKey = $param["AppSKey"];
+        }
+
+        if (array_key_exists("NwkSKey",$param) and $param["NwkSKey"] !== null) {
+            $this->NwkSKey = $param["NwkSKey"];
         }
     }
 }

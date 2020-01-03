@@ -21,21 +21,29 @@ use TencentCloud\Common\AbstractModel;
  * @method string getId() 获取任务 Id
  * @method void setId(string $Id) 设置任务 Id
  * @method string getCluster() 获取集群名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCluster(string $Cluster) 设置集群名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取Region 名
  * @method void setRegion(string $Region) 设置Region 名
  * @method string getName() 获取任务名称
  * @method void setName(string $Name) 设置任务名称
  * @method string getRuntime() 获取Worker 使用的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuntime(string $Runtime) 设置Worker 使用的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取任务描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置任务描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigId() 获取配置 Id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigId(string $ConfigId) 设置配置 Id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method PredictInput getPredictInput() 获取预测输入
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPredictInput(PredictInput $PredictInput) 设置预测输入
+注意：此字段可能返回 null，表示取不到有效值。
  * @method JobStatus getStatus() 获取任务状态
  * @method void setStatus(JobStatus $Status) 设置任务状态
  * @method string getCreateTime() 获取任务创建时间
@@ -88,6 +96,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigVersion(string $ConfigVersion) 设置配置版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getJobType() 获取Job类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobType(string $JobType) 设置Job类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method QuantizationInput getQuantizationInput() 获取量化输入
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQuantizationInput(QuantizationInput $QuantizationInput) 设置量化输入
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -102,6 +118,7 @@ class Job extends AbstractModel
 
     /**
      * @var string 集群名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cluster;
 
@@ -117,6 +134,7 @@ class Job extends AbstractModel
 
     /**
      * @var string Worker 使用的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Runtime;
 
@@ -128,11 +146,13 @@ class Job extends AbstractModel
 
     /**
      * @var string 配置 Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigId;
 
     /**
      * @var PredictInput 预测输入
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PredictInput;
 
@@ -217,16 +237,32 @@ class Job extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigVersion;
+
+    /**
+     * @var string Job类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobType;
+
+    /**
+     * @var QuantizationInput 量化输入
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QuantizationInput;
     /**
      * @param string $Id 任务 Id
      * @param string $Cluster 集群名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region Region 名
      * @param string $Name 任务名称
      * @param string $Runtime Worker 使用的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 任务描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigId 配置 Id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PredictInput $PredictInput 预测输入
+注意：此字段可能返回 null，表示取不到有效值。
      * @param JobStatus $Status 任务状态
      * @param string $CreateTime 任务创建时间
      * @param string $StartTime 任务开始时间
@@ -252,6 +288,10 @@ class Job extends AbstractModel
      * @param string $ConfigName 配置名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigVersion 配置版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $JobType Job类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QuantizationInput $QuantizationInput 量化输入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -354,6 +394,15 @@ class Job extends AbstractModel
 
         if (array_key_exists("ConfigVersion",$param) and $param["ConfigVersion"] !== null) {
             $this->ConfigVersion = $param["ConfigVersion"];
+        }
+
+        if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
+            $this->JobType = $param["JobType"];
+        }
+
+        if (array_key_exists("QuantizationInput",$param) and $param["QuantizationInput"] !== null) {
+            $this->QuantizationInput = new QuantizationInput();
+            $this->QuantizationInput->deserialize($param["QuantizationInput"]);
         }
     }
 }

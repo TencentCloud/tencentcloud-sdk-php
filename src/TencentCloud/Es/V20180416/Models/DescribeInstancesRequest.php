@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderByKey(integer $OrderByKey) 设置排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
  * @method integer getOrderByType() 获取排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
  * @method void setOrderByType(integer $OrderByType) 设置排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
+ * @method array getTagList() 获取节点标签信息列表
+ * @method void setTagList(array $TagList) 设置节点标签信息列表
+ * @method array getIpList() 获取私有网络vip列表
+ * @method void setIpList(array $IpList) 设置私有网络vip列表
  */
 
 /**
@@ -73,6 +77,16 @@ class DescribeInstancesRequest extends AbstractModel
      * @var integer 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
      */
     public $OrderByType;
+
+    /**
+     * @var array 节点标签信息列表
+     */
+    public $TagList;
+
+    /**
+     * @var array 私有网络vip列表
+     */
+    public $IpList;
     /**
      * @param string $Zone 集群实例所属可用区，不传则默认所有可用区
      * @param array $InstanceIds 集群实例ID列表
@@ -81,6 +95,8 @@ class DescribeInstancesRequest extends AbstractModel
      * @param integer $Limit 分页大小，默认值20
      * @param integer $OrderByKey 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
      * @param integer $OrderByType 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
+     * @param array $TagList 节点标签信息列表
+     * @param array $IpList 私有网络vip列表
      */
     function __construct()
     {
@@ -120,6 +136,19 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
             $this->OrderByType = $param["OrderByType"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
+        }
+
+        if (array_key_exists("IpList",$param) and $param["IpList"] !== null) {
+            $this->IpList = $param["IpList"];
         }
     }
 }

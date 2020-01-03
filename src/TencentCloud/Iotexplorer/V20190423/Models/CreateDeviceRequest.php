@@ -22,6 +22,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置产品ID。
  * @method string getDeviceName() 获取设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
  * @method void setDeviceName(string $DeviceName) 设置设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
+ * @method string getDevAddr() 获取LoRaWAN 设备地址
+ * @method void setDevAddr(string $DevAddr) 设置LoRaWAN 设备地址
+ * @method string getAppKey() 获取LoRaWAN 应用密钥
+ * @method void setAppKey(string $AppKey) 设置LoRaWAN 应用密钥
+ * @method string getDevEUI() 获取LoRaWAN 设备唯一标识
+ * @method void setDevEUI(string $DevEUI) 设置LoRaWAN 设备唯一标识
+ * @method string getAppSKey() 获取LoRaWAN 应用会话密钥
+ * @method void setAppSKey(string $AppSKey) 设置LoRaWAN 应用会话密钥
+ * @method string getNwkSKey() 获取LoRaWAN 网络会话密钥
+ * @method void setNwkSKey(string $NwkSKey) 设置LoRaWAN 网络会话密钥
  */
 
 /**
@@ -38,9 +48,39 @@ class CreateDeviceRequest extends AbstractModel
      * @var string 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
      */
     public $DeviceName;
+
+    /**
+     * @var string LoRaWAN 设备地址
+     */
+    public $DevAddr;
+
+    /**
+     * @var string LoRaWAN 应用密钥
+     */
+    public $AppKey;
+
+    /**
+     * @var string LoRaWAN 设备唯一标识
+     */
+    public $DevEUI;
+
+    /**
+     * @var string LoRaWAN 应用会话密钥
+     */
+    public $AppSKey;
+
+    /**
+     * @var string LoRaWAN 网络会话密钥
+     */
+    public $NwkSKey;
     /**
      * @param string $ProductId 产品ID。
      * @param string $DeviceName 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
+     * @param string $DevAddr LoRaWAN 设备地址
+     * @param string $AppKey LoRaWAN 应用密钥
+     * @param string $DevEUI LoRaWAN 设备唯一标识
+     * @param string $AppSKey LoRaWAN 应用会话密钥
+     * @param string $NwkSKey LoRaWAN 网络会话密钥
      */
     function __construct()
     {
@@ -60,6 +100,26 @@ class CreateDeviceRequest extends AbstractModel
 
         if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
             $this->DeviceName = $param["DeviceName"];
+        }
+
+        if (array_key_exists("DevAddr",$param) and $param["DevAddr"] !== null) {
+            $this->DevAddr = $param["DevAddr"];
+        }
+
+        if (array_key_exists("AppKey",$param) and $param["AppKey"] !== null) {
+            $this->AppKey = $param["AppKey"];
+        }
+
+        if (array_key_exists("DevEUI",$param) and $param["DevEUI"] !== null) {
+            $this->DevEUI = $param["DevEUI"];
+        }
+
+        if (array_key_exists("AppSKey",$param) and $param["AppSKey"] !== null) {
+            $this->AppSKey = $param["AppSKey"];
+        }
+
+        if (array_key_exists("NwkSKey",$param) and $param["NwkSKey"] !== null) {
+            $this->NwkSKey = $param["NwkSKey"];
         }
     }
 }

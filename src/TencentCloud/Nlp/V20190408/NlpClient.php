@@ -26,19 +26,6 @@ use TencentCloud\Nlp\V20190408\Models as Models;
 * @method Models\ChatBotResponse ChatBot(Models\ChatBotRequest $req) 闲聊服务基于腾讯领先的NLP引擎能力、数据运算能力和千亿级互联网语料数据的支持，同时集成了广泛的知识问答能力，可实现上百种自定义属性配置，以及儿童语言风格及说话方式，从而让聊天变得更睿智、简单和有趣。
 
 
-* @method Models\ContentApprovalResponse ContentApproval(Models\ContentApprovalRequest $req) （该接口即将下线，请使用升级接口：文本审核）
-
-文本审核接口能够识别文本信息中的色情、政治等有害内容，帮助用户及时、精准地防范违规风险，可用于内容审核、敏感信息过滤、舆情监控等场景。
-
-该功能基于10万级大规模敏感词库，结合多种文本对抗方法、政策权威指令等，并运用了深度学习技术，高效识别高危有害内容。同时我们会根据大规模语料和实时反误杀系统，不断更新迭代，确保效果持续提升。
-
-文本审核接口目前提供以下三个功能：
-
-1、文本恶意级别：将文本分为3个级别，包括正常、恶意、可疑送审；
-
-2、文本恶意类型：把文本分为9个类别，包括正常、政治、色情、辱骂/低俗、暴恐/毒品、广告/灌水、迷信/邪教、其他违法、综合；
-
-3、恶意关键词：文本中所有涉嫌恶意的关键词。
 * @method Models\DependencyParsingResponse DependencyParsing(Models\DependencyParsingRequest $req) 句法依存分析接口能够分析出句子中词与词之间的相互依存关系，并揭示其句法结构，包括主谓关系、动宾关系、核心关系等等，可用于提取句子主干、提取句子核心词等，在机器翻译、自动问答、知识抽取等领域都有很好的应用。
 * @method Models\DescribeEntityResponse DescribeEntity(Models\DescribeEntityRequest $req) 输入实体名称，返回实体相关的信息如实体别名、实体英文名、实体详细信息、相关实体等。
 * @method Models\DescribeRelationResponse DescribeRelation(Models\DescribeRelationRequest $req) 输入两个实体，返回两个实体间的关系，例如马化腾与腾讯公司不仅是相关实体，二者还存在隶属关系（马化腾属于腾讯公司）。

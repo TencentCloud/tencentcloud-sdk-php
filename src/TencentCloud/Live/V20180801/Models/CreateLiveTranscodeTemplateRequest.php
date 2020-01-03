@@ -58,10 +58,10 @@ baseline/main/high。默认baseline
  * @method void setHeightToOrig(integer $HeightToOrig) 设置是否不超过原始高，0：否，1：是。默认0。
  * @method integer getFpsToOrig() 获取是否不超过原始帧率，0：否，1：是。默认0。
  * @method void setFpsToOrig(integer $FpsToOrig) 设置是否不超过原始帧率，0：否，1：是。默认0。
- * @method integer getAiTransCode() 获取是否是急速高清模板，0：否，1：是。默认0。
- * @method void setAiTransCode(integer $AiTransCode) 设置是否是急速高清模板，0：否，1：是。默认0。
- * @method float getAdaptBitratePercent() 获取急速高清相比VideoBitrate少多少码率，0.1到0.5
- * @method void setAdaptBitratePercent(float $AdaptBitratePercent) 设置急速高清相比VideoBitrate少多少码率，0.1到0.5
+ * @method integer getAiTransCode() 获取是否是极速高清模板，0：否，1：是。默认0。
+ * @method void setAiTransCode(integer $AiTransCode) 设置是否是极速高清模板，0：否，1：是。默认0。
+ * @method float getAdaptBitratePercent() 获取极速高清相比VideoBitrate少多少码率，0.1到0.5
+ * @method void setAdaptBitratePercent(float $AdaptBitratePercent) 设置极速高清相比VideoBitrate少多少码率，0.1到0.5
  */
 
 /**
@@ -158,12 +158,12 @@ baseline/main/high。默认baseline
     public $FpsToOrig;
 
     /**
-     * @var integer 是否是急速高清模板，0：否，1：是。默认0。
+     * @var integer 是否是极速高清模板，0：否，1：是。默认0。
      */
     public $AiTransCode;
 
     /**
-     * @var float 急速高清相比VideoBitrate少多少码率，0.1到0.5
+     * @var float 极速高清相比VideoBitrate少多少码率，0.1到0.5
      */
     public $AdaptBitratePercent;
     /**
@@ -187,8 +187,8 @@ baseline/main/high。默认baseline
      * @param integer $BitrateToOrig 是否不超过原始码率，0：否，1：是。默认0。
      * @param integer $HeightToOrig 是否不超过原始高，0：否，1：是。默认0。
      * @param integer $FpsToOrig 是否不超过原始帧率，0：否，1：是。默认0。
-     * @param integer $AiTransCode 是否是急速高清模板，0：否，1：是。默认0。
-     * @param float $AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
+     * @param integer $AiTransCode 是否是极速高清模板，0：否，1：是。默认0。
+     * @param float $AdaptBitratePercent 极速高清相比VideoBitrate少多少码率，0.1到0.5
      */
     function __construct()
     {

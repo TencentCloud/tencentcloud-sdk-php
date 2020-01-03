@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置客户的SdkAppId
  * @method integer getRoomId() 获取需要录制的房间号
  * @method void setRoomId(integer $RoomId) 设置需要录制的房间号
- * @method string getRecordUserId() 获取用于实时录制服务进房的用户Id，格式为"tic_record_user_${RoomId}_${Random}"，其中 ${RoomId} 与录制房间号对应，${Random}为一个随机字符串。
+ * @method string getRecordUserId() 获取用于实时录制服务进房的用户Id，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId}` 与录制房间号对应，`${Random}`为一个随机字符串。
 实时录制服务会使用这个用户Id进房进行录制房间内的音视频与白板，为了防止进房冲突，请保证此 用户Id不重复
- * @method void setRecordUserId(string $RecordUserId) 设置用于实时录制服务进房的用户Id，格式为"tic_record_user_${RoomId}_${Random}"，其中 ${RoomId} 与录制房间号对应，${Random}为一个随机字符串。
+ * @method void setRecordUserId(string $RecordUserId) 设置用于实时录制服务进房的用户Id，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId}` 与录制房间号对应，`${Random}`为一个随机字符串。
 实时录制服务会使用这个用户Id进房进行录制房间内的音视频与白板，为了防止进房冲突，请保证此 用户Id不重复
  * @method string getRecordUserSig() 获取与RecordUserId对应的签名
  * @method void setRecordUserSig(string $RecordUserSig) 设置与RecordUserId对应的签名
@@ -68,7 +68,7 @@ class StartOnlineRecordRequest extends AbstractModel
     public $RoomId;
 
     /**
-     * @var string 用于实时录制服务进房的用户Id，格式为"tic_record_user_${RoomId}_${Random}"，其中 ${RoomId} 与录制房间号对应，${Random}为一个随机字符串。
+     * @var string 用于实时录制服务进房的用户Id，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId}` 与录制房间号对应，`${Random}`为一个随机字符串。
 实时录制服务会使用这个用户Id进房进行录制房间内的音视频与白板，为了防止进房冲突，请保证此 用户Id不重复
      */
     public $RecordUserId;
@@ -115,7 +115,7 @@ MIX_STREAM - 混流功能
     /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param integer $RoomId 需要录制的房间号
-     * @param string $RecordUserId 用于实时录制服务进房的用户Id，格式为"tic_record_user_${RoomId}_${Random}"，其中 ${RoomId} 与录制房间号对应，${Random}为一个随机字符串。
+     * @param string $RecordUserId 用于实时录制服务进房的用户Id，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId}` 与录制房间号对应，`${Random}`为一个随机字符串。
 实时录制服务会使用这个用户Id进房进行录制房间内的音视频与白板，为了防止进房冲突，请保证此 用户Id不重复
      * @param string $RecordUserSig 与RecordUserId对应的签名
      * @param string $GroupId 白板的 IM 群组 Id，默认同房间号

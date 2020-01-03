@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置备注
  * @method string getGpuType() 获取GPU卡类型
  * @method void setGpuType(string $GpuType) 设置GPU卡类型
+ * @method integer getCpu() 获取处理器配置，单位为 1/1000 核
+ * @method void setCpu(integer $Cpu) 设置处理器配置，单位为 1/1000 核
+ * @method integer getMemory() 获取内存配置，单位为1M
+ * @method void setMemory(integer $Memory) 设置内存配置，单位为1M
+ * @method integer getGpu() 获取显卡配置，单位为 1/1000 卡
+ * @method void setGpu(integer $Gpu) 设置显卡配置，单位为 1/1000 卡
  */
 
 /**
@@ -73,6 +79,21 @@ class UpdateServiceRequest extends AbstractModel
      * @var string GPU卡类型
      */
     public $GpuType;
+
+    /**
+     * @var integer 处理器配置，单位为 1/1000 核
+     */
+    public $Cpu;
+
+    /**
+     * @var integer 内存配置，单位为1M
+     */
+    public $Memory;
+
+    /**
+     * @var integer 显卡配置，单位为 1/1000 卡
+     */
+    public $Gpu;
     /**
      * @param string $ServiceId 服务Id
      * @param Scaler $Scaler 扩缩容配置
@@ -81,6 +102,9 @@ class UpdateServiceRequest extends AbstractModel
      * @param string $ServiceAction 支持STOP(停止) RESUME(重启)
      * @param string $Description 备注
      * @param string $GpuType GPU卡类型
+     * @param integer $Cpu 处理器配置，单位为 1/1000 核
+     * @param integer $Memory 内存配置，单位为1M
+     * @param integer $Gpu 显卡配置，单位为 1/1000 卡
      */
     function __construct()
     {
@@ -121,6 +145,18 @@ class UpdateServiceRequest extends AbstractModel
 
         if (array_key_exists("GpuType",$param) and $param["GpuType"] !== null) {
             $this->GpuType = $param["GpuType"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
+            $this->Memory = $param["Memory"];
+        }
+
+        if (array_key_exists("Gpu",$param) and $param["Gpu"] !== null) {
+            $this->Gpu = $param["Gpu"];
         }
     }
 }

@@ -18,19 +18,19 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getType() 获取视频处理对象的类型，现在仅支持 COS。
- * @method void setType(string $Type) 设置视频处理对象的类型，现在仅支持 COS。
+ * @method string getType() 获取输入来源对象的类型，现在仅支持 COS。
+ * @method void setType(string $Type) 设置输入来源对象的类型，现在仅支持 COS。
  * @method CosInputInfo getCosInputInfo() 获取当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
  * @method void setCosInputInfo(CosInputInfo $CosInputInfo) 设置当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
  */
 
 /**
- *视频处理输入对象信息。
+ *视频处理的输入对象信息。
  */
 class MediaInputInfo extends AbstractModel
 {
     /**
-     * @var string 视频处理对象的类型，现在仅支持 COS。
+     * @var string 输入来源对象的类型，现在仅支持 COS。
      */
     public $Type;
 
@@ -39,7 +39,7 @@ class MediaInputInfo extends AbstractModel
      */
     public $CosInputInfo;
     /**
-     * @param string $Type 视频处理对象的类型，现在仅支持 COS。
+     * @param string $Type 输入来源对象的类型，现在仅支持 COS。
      * @param CosInputInfo $CosInputInfo 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
      */
     function __construct()

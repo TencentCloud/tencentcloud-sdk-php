@@ -30,6 +30,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置暴露方式为 VPC 时，打通的子网Id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGateWayServiceId() 获取GATEWAY 服务id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGateWayServiceId(string $GateWayServiceId) 设置GATEWAY 服务id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGateWayAPIId() 获取GATEWAY api id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGateWayAPIId(string $GateWayAPIId) 设置GATEWAY api id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGateWayDomain() 获取GATEWAY domain，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGateWayDomain(string $GateWayDomain) 设置GATEWAY domain，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -58,12 +70,36 @@ class ExposeInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
+
+    /**
+     * @var string GATEWAY 服务id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GateWayServiceId;
+
+    /**
+     * @var string GATEWAY api id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GateWayAPIId;
+
+    /**
+     * @var string GATEWAY domain，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GateWayDomain;
     /**
      * @param string $ExposeType 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
      * @param string $Ip 暴露Ip。暴露方式为 EXTERNAL 为外网 Ip，暴露方式为 VPC 时为指定 Vpc 下的Vip
      * @param string $VpcId 暴露方式为 VPC 时，打通的私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 暴露方式为 VPC 时，打通的子网Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GateWayServiceId GATEWAY 服务id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GateWayAPIId GATEWAY api id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GateWayDomain GATEWAY domain，ExposeType = GATEWAY 时返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -92,6 +128,18 @@ class ExposeInfo extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("GateWayServiceId",$param) and $param["GateWayServiceId"] !== null) {
+            $this->GateWayServiceId = $param["GateWayServiceId"];
+        }
+
+        if (array_key_exists("GateWayAPIId",$param) and $param["GateWayAPIId"] !== null) {
+            $this->GateWayAPIId = $param["GateWayAPIId"];
+        }
+
+        if (array_key_exists("GateWayDomain",$param) and $param["GateWayDomain"] !== null) {
+            $this->GateWayDomain = $param["GateWayDomain"];
         }
     }
 }

@@ -71,7 +71,7 @@ Windows实例密码必须12~30位，不能以“/”开头且不包括用户名�
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

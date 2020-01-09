@@ -41,22 +41,10 @@ use TencentCloud\Ssm\V20190923\Models as Models;
 
 class SsmClient extends AbstractClient
 {
-    /**
-     * @var string 产品默认域名
-     */
     protected $endpoint = "ssm.tencentcloudapi.com";
 
-    /**
-     * @var string api版本号
-     */
     protected $version = "2019-09-23";
 
-    /**
-     * CvmClient constructor.
-     * @param Credential $credential 认证类实例
-     * @param string $region 地域
-     * @param ClientProfile $profile client配置
-     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

@@ -67,7 +67,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

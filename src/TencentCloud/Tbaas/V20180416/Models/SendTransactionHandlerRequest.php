@@ -24,8 +24,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperation(string $Operation) 设置操作名，固定字段：send_transaction
  * @method string getGroupPk() 获取群组编号
  * @method void setGroupPk(string $GroupPk) 设置群组编号
- * @method string getKeyUser() 获取私钥用户编号
- * @method void setKeyUser(string $KeyUser) 设置私钥用户编号
  * @method integer getContractId() 获取合约编号
  * @method void setContractId(integer $ContractId) 设置合约编号
  * @method string getFuncName() 获取合约方法名
@@ -55,11 +53,6 @@ class SendTransactionHandlerRequest extends AbstractModel
     public $GroupPk;
 
     /**
-     * @var string 私钥用户编号
-     */
-    public $KeyUser;
-
-    /**
      * @var integer 合约编号
      */
     public $ContractId;
@@ -77,7 +70,6 @@ class SendTransactionHandlerRequest extends AbstractModel
      * @param string $Module 模块名，固定字段：transaction
      * @param string $Operation 操作名，固定字段：send_transaction
      * @param string $GroupPk 群组编号
-     * @param string $KeyUser 私钥用户编号
      * @param integer $ContractId 合约编号
      * @param string $FuncName 合约方法名
      * @param array $FuncParam 合约方法入参
@@ -87,7 +79,7 @@ class SendTransactionHandlerRequest extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {
@@ -104,10 +96,6 @@ class SendTransactionHandlerRequest extends AbstractModel
 
         if (array_key_exists("GroupPk",$param) and $param["GroupPk"] !== null) {
             $this->GroupPk = $param["GroupPk"];
-        }
-
-        if (array_key_exists("KeyUser",$param) and $param["KeyUser"] !== null) {
-            $this->KeyUser = $param["KeyUser"];
         }
 
         if (array_key_exists("ContractId",$param) and $param["ContractId"] !== null) {

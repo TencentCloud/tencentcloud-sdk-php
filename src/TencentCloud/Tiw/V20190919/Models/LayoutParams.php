@@ -75,7 +75,7 @@ z轴确定了重叠画面的遮盖顺序，z轴值大的画面处于顶层
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

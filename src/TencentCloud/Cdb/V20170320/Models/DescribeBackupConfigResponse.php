@@ -18,16 +18,18 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getStartTimeMin() 获取备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。
- * @method void setStartTimeMin(integer $StartTimeMin) 设置备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。
- * @method integer getStartTimeMax() 获取备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。
- * @method void setStartTimeMax(integer $StartTimeMax) 设置备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。
- * @method integer getBackupExpireDays() 获取备份过期时间，单位为天。
- * @method void setBackupExpireDays(integer $BackupExpireDays) 设置备份过期时间，单位为天。
+ * @method integer getStartTimeMin() 获取自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+ * @method void setStartTimeMin(integer $StartTimeMin) 设置自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+ * @method integer getStartTimeMax() 获取自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+ * @method void setStartTimeMax(integer $StartTimeMax) 设置自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+ * @method integer getBackupExpireDays() 获取备份文件保留时间，单位为天。
+ * @method void setBackupExpireDays(integer $BackupExpireDays) 设置备份文件保留时间，单位为天。
  * @method string getBackupMethod() 获取备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
  * @method void setBackupMethod(string $BackupMethod) 设置备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
- * @method integer getBinlogExpireDays() 获取Binlog 过期时间，单位为天。
- * @method void setBinlogExpireDays(integer $BinlogExpireDays) 设置Binlog 过期时间，单位为天。
+ * @method integer getBinlogExpireDays() 获取Binlog 文件保留时间，单位为天。
+ * @method void setBinlogExpireDays(integer $BinlogExpireDays) 设置Binlog 文件保留时间，单位为天。
+ * @method CommonTimeWindow getBackupTimeWindow() 获取实例自动备份的时间窗。
+ * @method void setBackupTimeWindow(CommonTimeWindow $BackupTimeWindow) 设置实例自动备份的时间窗。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,17 +40,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBackupConfigResponse extends AbstractModel
 {
     /**
-     * @var integer 备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。
+     * @var integer 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
      */
     public $StartTimeMin;
 
     /**
-     * @var integer 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。
+     * @var integer 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
      */
     public $StartTimeMax;
 
     /**
-     * @var integer 备份过期时间，单位为天。
+     * @var integer 备份文件保留时间，单位为天。
      */
     public $BackupExpireDays;
 
@@ -58,20 +60,26 @@ class DescribeBackupConfigResponse extends AbstractModel
     public $BackupMethod;
 
     /**
-     * @var integer Binlog 过期时间，单位为天。
+     * @var integer Binlog 文件保留时间，单位为天。
      */
     public $BinlogExpireDays;
+
+    /**
+     * @var CommonTimeWindow 实例自动备份的时间窗。
+     */
+    public $BackupTimeWindow;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $StartTimeMin 备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。
-     * @param integer $StartTimeMax 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。
-     * @param integer $BackupExpireDays 备份过期时间，单位为天。
+     * @param integer $StartTimeMin 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+     * @param integer $StartTimeMax 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+     * @param integer $BackupExpireDays 备份文件保留时间，单位为天。
      * @param string $BackupMethod 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
-     * @param integer $BinlogExpireDays Binlog 过期时间，单位为天。
+     * @param integer $BinlogExpireDays Binlog 文件保留时间，单位为天。
+     * @param CommonTimeWindow $BackupTimeWindow 实例自动备份的时间窗。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -79,7 +87,7 @@ class DescribeBackupConfigResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {
@@ -104,6 +112,11 @@ class DescribeBackupConfigResponse extends AbstractModel
 
         if (array_key_exists("BinlogExpireDays",$param) and $param["BinlogExpireDays"] !== null) {
             $this->BinlogExpireDays = $param["BinlogExpireDays"];
+        }
+
+        if (array_key_exists("BackupTimeWindow",$param) and $param["BackupTimeWindow"] !== null) {
+            $this->BackupTimeWindow = new CommonTimeWindow();
+            $this->BackupTimeWindow->deserialize($param["BackupTimeWindow"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

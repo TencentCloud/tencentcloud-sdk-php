@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployGroupName(string $DeployGroupName) 设置置放群组名称，最长不能超过60个字符。
  * @method string getDescription() 获取置放群组描述，最长不能超过200个字符。
  * @method void setDescription(string $Description) 设置置放群组描述，最长不能超过200个字符。
- * @method array getAffinity() 获取置放群组的亲和性策略。
- * @method void setAffinity(array $Affinity) 设置置放群组的亲和性策略。
- * @method integer getLimitNum() 获取置放群组亲和性策略1的实例限制个数。
- * @method void setLimitNum(integer $LimitNum) 设置置放群组亲和性策略1的实例限制个数。
+ * @method array getAffinity() 获取置放群组的亲和性策略，目前仅支持取值为1，策略1表示同台物理机上限制实例的个数。
+ * @method void setAffinity(array $Affinity) 设置置放群组的亲和性策略，目前仅支持取值为1，策略1表示同台物理机上限制实例的个数。
+ * @method integer getLimitNum() 获取置放群组亲和性策略1中同台物理机上实例的限制个数。
+ * @method void setLimitNum(integer $LimitNum) 设置置放群组亲和性策略1中同台物理机上实例的限制个数。
  */
 
 /**
@@ -44,26 +44,26 @@ class CreateDeployGroupRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var array 置放群组的亲和性策略。
+     * @var array 置放群组的亲和性策略，目前仅支持取值为1，策略1表示同台物理机上限制实例的个数。
      */
     public $Affinity;
 
     /**
-     * @var integer 置放群组亲和性策略1的实例限制个数。
+     * @var integer 置放群组亲和性策略1中同台物理机上实例的限制个数。
      */
     public $LimitNum;
     /**
      * @param string $DeployGroupName 置放群组名称，最长不能超过60个字符。
      * @param string $Description 置放群组描述，最长不能超过200个字符。
-     * @param array $Affinity 置放群组的亲和性策略。
-     * @param integer $LimitNum 置放群组亲和性策略1的实例限制个数。
+     * @param array $Affinity 置放群组的亲和性策略，目前仅支持取值为1，策略1表示同台物理机上限制实例的个数。
+     * @param integer $LimitNum 置放群组亲和性策略1中同台物理机上实例的限制个数。
      */
     function __construct()
     {
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

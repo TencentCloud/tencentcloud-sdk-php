@@ -115,7 +115,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

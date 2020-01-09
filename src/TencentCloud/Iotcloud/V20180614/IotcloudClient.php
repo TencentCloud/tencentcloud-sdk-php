@@ -60,22 +60,10 @@ use TencentCloud\Iotcloud\V20180614\Models as Models;
 
 class IotcloudClient extends AbstractClient
 {
-    /**
-     * @var string 产品默认域名
-     */
     protected $endpoint = "iotcloud.tencentcloudapi.com";
 
-    /**
-     * @var string api版本号
-     */
     protected $version = "2018-06-14";
 
-    /**
-     * CvmClient constructor.
-     * @param Credential $credential 认证类实例
-     * @param string $region 地域
-     * @param ClientProfile $profile client配置
-     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

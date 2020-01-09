@@ -92,22 +92,10 @@ use TencentCloud\Tiia\V20190529\Models as Models;
 
 class TiiaClient extends AbstractClient
 {
-    /**
-     * @var string 产品默认域名
-     */
     protected $endpoint = "tiia.tencentcloudapi.com";
 
-    /**
-     * @var string api版本号
-     */
     protected $version = "2019-05-29";
 
-    /**
-     * CvmClient constructor.
-     * @param Credential $credential 认证类实例
-     * @param string $region 地域
-     * @param ClientProfile $profile client配置
-     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

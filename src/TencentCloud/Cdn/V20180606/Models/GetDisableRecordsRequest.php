@@ -87,7 +87,7 @@ enable：当前为可用状态，已解禁，可正常访问
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

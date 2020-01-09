@@ -59,7 +59,7 @@ WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

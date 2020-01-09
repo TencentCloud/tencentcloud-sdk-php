@@ -163,7 +163,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

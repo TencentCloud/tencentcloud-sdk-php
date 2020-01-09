@@ -151,7 +151,7 @@ key的值表示攻击事件类型，其中Key为"UNKNOWNFLOOD"，表示未知的
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

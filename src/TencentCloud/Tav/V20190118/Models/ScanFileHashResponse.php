@@ -71,7 +71,7 @@ virus_state文状件态：0文件不存在、1白、2黑、3未知、4感染性�
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

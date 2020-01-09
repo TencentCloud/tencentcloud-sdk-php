@@ -119,7 +119,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -119,7 +119,7 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -83,7 +83,7 @@ outpkg表示出包速率；）
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

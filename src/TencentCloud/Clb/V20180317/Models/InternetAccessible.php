@@ -71,7 +71,7 @@ BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支�
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

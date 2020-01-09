@@ -91,7 +91,7 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -123,7 +123,7 @@ type=by_user根据用户id 查订单 。
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

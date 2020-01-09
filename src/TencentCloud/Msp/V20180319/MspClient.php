@@ -33,22 +33,10 @@ use TencentCloud\Msp\V20180319\Models as Models;
 
 class MspClient extends AbstractClient
 {
-    /**
-     * @var string 产品默认域名
-     */
     protected $endpoint = "msp.tencentcloudapi.com";
 
-    /**
-     * @var string api版本号
-     */
     protected $version = "2018-03-19";
 
-    /**
-     * CvmClient constructor.
-     * @param Credential $credential 认证类实例
-     * @param string $region 地域
-     * @param ClientProfile $profile client配置
-     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

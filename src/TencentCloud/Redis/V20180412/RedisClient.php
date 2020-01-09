@@ -72,22 +72,10 @@ use TencentCloud\Redis\V20180412\Models as Models;
 
 class RedisClient extends AbstractClient
 {
-    /**
-     * @var string 产品默认域名
-     */
     protected $endpoint = "redis.tencentcloudapi.com";
 
-    /**
-     * @var string api版本号
-     */
     protected $version = "2018-04-12";
 
-    /**
-     * CvmClient constructor.
-     * @param Credential $credential 认证类实例
-     * @param string $region 地域
-     * @param ClientProfile $profile client配置
-     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

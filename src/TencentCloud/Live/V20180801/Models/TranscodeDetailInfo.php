@@ -127,7 +127,7 @@ topspeed_H265 =》极速高清-H265。
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -26,7 +26,7 @@ use TencentCloud\Tbaas\V20180416\Models as Models;
 * @method Models\BlockByNumberHandlerResponse BlockByNumberHandler(Models\BlockByNumberHandlerRequest $req) Bcos根据块高查询区块信息
 * @method Models\DownloadUserCertResponse DownloadUserCert(Models\DownloadUserCertRequest $req) 下载用户证书
 * @method Models\GetBlockListResponse GetBlockList(Models\GetBlockListRequest $req) 查看当前网络下的所有区块列表，分页展示
-* @method Models\GetBlockListHandlerResponse GetBlockListHandler(Models\GetBlockListHandlerRequest $req) bcos分页查询当前群组下的区块列表
+* @method Models\GetBlockListHandlerResponse GetBlockListHandler(Models\GetBlockListHandlerRequest $req) Bcos分页查询当前群组下的区块列表
 * @method Models\GetClusterSummaryResponse GetClusterSummary(Models\GetClusterSummaryRequest $req) 获取区块链网络概要
 * @method Models\GetInvokeTxResponse GetInvokeTx(Models\GetInvokeTxRequest $req) Invoke异步调用结果查询
 * @method Models\GetLatesdTransactionListResponse GetLatesdTransactionList(Models\GetLatesdTransactionListRequest $req) 获取最新交易列表
@@ -41,22 +41,10 @@ use TencentCloud\Tbaas\V20180416\Models as Models;
 
 class TbaasClient extends AbstractClient
 {
-    /**
-     * @var string 产品默认域名
-     */
     protected $endpoint = "tbaas.tencentcloudapi.com";
 
-    /**
-     * @var string api版本号
-     */
     protected $version = "2018-04-16";
 
-    /**
-     * CvmClient constructor.
-     * @param Credential $credential 认证类实例
-     * @param string $region 地域
-     * @param ClientProfile $profile client配置
-     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

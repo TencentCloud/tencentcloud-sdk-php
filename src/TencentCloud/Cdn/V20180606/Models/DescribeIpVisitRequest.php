@@ -91,7 +91,7 @@ day：天粒度，查询时间区间大于 1 天时，默认返回天粒度活�
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -43,7 +43,7 @@ UTC 格式，例如：2018-06-29T19:00:00Z。
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

@@ -67,7 +67,7 @@ scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

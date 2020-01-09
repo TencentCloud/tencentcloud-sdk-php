@@ -79,7 +79,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

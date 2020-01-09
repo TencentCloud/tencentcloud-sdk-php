@@ -91,7 +91,7 @@ createMode：1 表示按业务权限创建的策略，其他值表示可以查�
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

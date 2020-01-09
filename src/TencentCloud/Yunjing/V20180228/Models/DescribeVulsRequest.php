@@ -87,7 +87,7 @@ Status过滤条件值只能取其一，不能是“或”逻辑。
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

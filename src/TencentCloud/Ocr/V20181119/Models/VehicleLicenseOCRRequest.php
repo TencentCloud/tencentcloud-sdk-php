@@ -87,7 +87,7 @@ BACK 为行驶证副页正面（有号码号牌的一面）。
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

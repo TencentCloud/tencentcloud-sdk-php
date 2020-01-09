@@ -95,7 +95,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

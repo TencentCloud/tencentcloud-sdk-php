@@ -143,7 +143,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

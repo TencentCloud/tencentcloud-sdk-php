@@ -63,7 +63,7 @@ Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

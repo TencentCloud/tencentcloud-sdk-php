@@ -24,15 +24,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployGroupName(string $DeployGroupName) 设置置放群组名称。
  * @method string getCreateTime() 获取创建时间。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
- * @method integer getQuota() 获取置放群组实例配额。
- * @method void setQuota(integer $Quota) 设置置放群组实例配额。
- * @method string getAffinity() 获取置放群组亲和性策略。
+ * @method integer getQuota() 获取置放群组实例配额，表示一个置放群组中可容纳的最大实例数目。
+ * @method void setQuota(integer $Quota) 设置置放群组实例配额，表示一个置放群组中可容纳的最大实例数目。
+ * @method string getAffinity() 获取置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAffinity(string $Affinity) 设置置放群组亲和性策略。
+ * @method void setAffinity(string $Affinity) 设置置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLimitNum() 获取置放群组亲和性策略1的限制实例个数。
+ * @method integer getLimitNum() 获取置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLimitNum(integer $LimitNum) 设置置放群组亲和性策略1的限制实例个数。
+ * @method void setLimitNum(integer $LimitNum) 设置置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取置放群组详细信息。
  * @method void setDescription(string $Description) 设置置放群组详细信息。
@@ -59,18 +59,18 @@ class DeployGroupInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer 置放群组实例配额。
+     * @var integer 置放群组实例配额，表示一个置放群组中可容纳的最大实例数目。
      */
     public $Quota;
 
     /**
-     * @var string 置放群组亲和性策略。
+     * @var string 置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Affinity;
 
     /**
-     * @var integer 置放群组亲和性策略1的限制实例个数。
+     * @var integer 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LimitNum;
@@ -83,10 +83,10 @@ class DeployGroupInfo extends AbstractModel
      * @param string $DeployGroupId 置放群组 ID。
      * @param string $DeployGroupName 置放群组名称。
      * @param string $CreateTime 创建时间。
-     * @param integer $Quota 置放群组实例配额。
-     * @param string $Affinity 置放群组亲和性策略。
+     * @param integer $Quota 置放群组实例配额，表示一个置放群组中可容纳的最大实例数目。
+     * @param string $Affinity 置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LimitNum 置放群组亲和性策略1的限制实例个数。
+     * @param integer $LimitNum 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 置放群组详细信息。
      */
@@ -95,7 +95,7 @@ class DeployGroupInfo extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

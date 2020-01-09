@@ -27,22 +27,10 @@ use TencentCloud\Cim\V20190318\Models as Models;
 
 class CimClient extends AbstractClient
 {
-    /**
-     * @var string 产品默认域名
-     */
     protected $endpoint = "cim.tencentcloudapi.com";
 
-    /**
-     * @var string api版本号
-     */
     protected $version = "2019-03-18";
 
-    /**
-     * CvmClient constructor.
-     * @param Credential $credential 认证类实例
-     * @param string $region 地域
-     * @param ClientProfile $profile client配置
-     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

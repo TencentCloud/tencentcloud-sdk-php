@@ -111,7 +111,7 @@ Width : Height建议取值在[1, 2.5]之间，超过这个范围可能会影响�
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

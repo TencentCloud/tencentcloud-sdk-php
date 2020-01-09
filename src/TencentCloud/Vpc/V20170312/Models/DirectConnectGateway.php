@@ -163,7 +163,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

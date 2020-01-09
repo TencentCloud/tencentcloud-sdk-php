@@ -215,7 +215,7 @@ client：指定查询客户端地区（用户请求终端所在地区）数据�
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

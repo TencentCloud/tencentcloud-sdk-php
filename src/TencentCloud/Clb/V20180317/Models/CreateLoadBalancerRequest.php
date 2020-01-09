@@ -139,7 +139,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

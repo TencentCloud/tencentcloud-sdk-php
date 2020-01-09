@@ -69,22 +69,10 @@ use TencentCloud\Cam\V20190116\Models as Models;
 
 class CamClient extends AbstractClient
 {
-    /**
-     * @var string 产品默认域名
-     */
     protected $endpoint = "cam.tencentcloudapi.com";
 
-    /**
-     * @var string api版本号
-     */
     protected $version = "2019-01-16";
 
-    /**
-     * CvmClient constructor.
-     * @param Credential $credential 认证类实例
-     * @param string $region 地域
-     * @param ClientProfile $profile client配置
-     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

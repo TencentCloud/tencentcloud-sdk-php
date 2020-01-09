@@ -199,7 +199,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

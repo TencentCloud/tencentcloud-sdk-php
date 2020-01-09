@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlockNumber(integer $BlockNumber) 设置区块高度
  * @method string getBlockTimestamp() 获取区块时间戳
  * @method void setBlockTimestamp(string $BlockTimestamp) 设置区块时间戳
- * @method string getSealer() 获取打包节点id
- * @method void setSealer(string $Sealer) 设置打包节点id
+ * @method string getSealer() 获取打包节点ID
+ * @method void setSealer(string $Sealer) 设置打包节点ID
  * @method integer getSealerIndex() 获取打包节点索引
  * @method void setSealerIndex(integer $SealerIndex) 设置打包节点索引
  * @method string getCreateTime() 获取记录保存时间
@@ -37,7 +37,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *bcos区块对象
+ *Bcos区块对象
  */
 class BcosBlockObj extends AbstractModel
 {
@@ -57,7 +57,7 @@ class BcosBlockObj extends AbstractModel
     public $BlockTimestamp;
 
     /**
-     * @var string 打包节点id
+     * @var string 打包节点ID
      */
     public $Sealer;
 
@@ -84,7 +84,7 @@ class BcosBlockObj extends AbstractModel
      * @param string $BlockHash 区块哈希
      * @param integer $BlockNumber 区块高度
      * @param string $BlockTimestamp 区块时间戳
-     * @param string $Sealer 打包节点id
+     * @param string $Sealer 打包节点ID
      * @param integer $SealerIndex 打包节点索引
      * @param string $CreateTime 记录保存时间
      * @param integer $TransCount 交易数量
@@ -95,7 +95,7 @@ class BcosBlockObj extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

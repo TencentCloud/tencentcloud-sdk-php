@@ -87,7 +87,7 @@ Key为"LogMessage"时，Value值为Ip日志内容
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

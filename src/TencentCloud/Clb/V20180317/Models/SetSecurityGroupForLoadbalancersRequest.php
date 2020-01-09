@@ -59,7 +59,7 @@ DEL 解绑安全组
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

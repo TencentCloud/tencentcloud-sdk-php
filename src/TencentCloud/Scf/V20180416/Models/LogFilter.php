@@ -63,7 +63,7 @@ UserCodeException 返回函数调用发生用户代码错误的日志，
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

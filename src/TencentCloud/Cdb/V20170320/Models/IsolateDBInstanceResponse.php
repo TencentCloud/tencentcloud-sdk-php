@@ -18,9 +18,9 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAsyncRequestId() 获取异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+ * @method string getAsyncRequestId() 获取异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。(该返回字段目前已废弃，可以通过 DescribeDBInstances 接口查询实例的隔离状态)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+ * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。(该返回字段目前已废弃，可以通过 DescribeDBInstances 接口查询实例的隔离状态)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class IsolateDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var string 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+     * @var string 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。(该返回字段目前已废弃，可以通过 DescribeDBInstances 接口查询实例的隔离状态)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsyncRequestId;
@@ -42,7 +42,7 @@ class IsolateDBInstanceResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+     * @param string $AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。(该返回字段目前已废弃，可以通过 DescribeDBInstances 接口查询实例的隔离状态)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -51,7 +51,7 @@ class IsolateDBInstanceResponse extends AbstractModel
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

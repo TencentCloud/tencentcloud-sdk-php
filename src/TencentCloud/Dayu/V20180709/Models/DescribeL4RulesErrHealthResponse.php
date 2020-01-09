@@ -87,7 +87,7 @@ SourceIp表示源站IP，SourcePort表示源站端口，AbnormalStatTime表示�
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

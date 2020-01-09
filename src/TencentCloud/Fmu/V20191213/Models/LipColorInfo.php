@@ -31,7 +31,7 @@ ModelId 和 RGBA 两个参数只需提供一个，若都提供只使用 ModelId�
  */
 
 /**
- *唇色信息。
+ *唇色信息
  */
 class LipColorInfo extends AbstractModel
 {
@@ -63,7 +63,7 @@ ModelId 和 RGBA 两个参数只需提供一个，若都提供只使用 ModelId�
 
     }
     /**
-     * 内部实现，用户禁止调用
+     * For internal only. DO NOT USE IT.
      */
     public function deserialize($param)
     {

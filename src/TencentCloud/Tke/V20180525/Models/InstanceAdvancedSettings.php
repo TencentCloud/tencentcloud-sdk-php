@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) 设置节点Label数组
  * @method array getDataDisks() 获取数据盘相关信息
  * @method void setDataDisks(array $DataDisks) 设置数据盘相关信息
+ * @method InstanceExtraArgs getExtraArgs() 获取节点相关的自定义参数信息
+ * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) 设置节点相关的自定义参数信息
  */
 
 /**
@@ -66,6 +68,11 @@ class InstanceAdvancedSettings extends AbstractModel
      * @var array 数据盘相关信息
      */
     public $DataDisks;
+
+    /**
+     * @var InstanceExtraArgs 节点相关的自定义参数信息
+     */
+    public $ExtraArgs;
     /**
      * @param string $MountTarget 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
      * @param string $DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
@@ -73,6 +80,7 @@ class InstanceAdvancedSettings extends AbstractModel
      * @param integer $Unschedulable 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
      * @param array $Labels 节点Label数组
      * @param array $DataDisks 数据盘相关信息
+     * @param InstanceExtraArgs $ExtraArgs 节点相关的自定义参数信息
      */
     function __construct()
     {
@@ -118,6 +126,11 @@ class InstanceAdvancedSettings extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DataDisks, $obj);
             }
+        }
+
+        if (array_key_exists("ExtraArgs",$param) and $param["ExtraArgs"] !== null) {
+            $this->ExtraArgs = new InstanceExtraArgs();
+            $this->ExtraArgs->deserialize($param["ExtraArgs"]);
         }
     }
 }

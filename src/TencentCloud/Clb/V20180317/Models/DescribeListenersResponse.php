@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getListeners() 获取监听器列表
  * @method void setListeners(array $Listeners) 设置监听器列表
+ * @method integer getTotalCount() 获取总的监听器个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置总的监听器个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,11 +39,19 @@ class DescribeListenersResponse extends AbstractModel
     public $Listeners;
 
     /**
+     * @var integer 总的监听器个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param array $Listeners 监听器列表
+     * @param integer $TotalCount 总的监听器个数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +73,10 @@ class DescribeListenersResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Listeners, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

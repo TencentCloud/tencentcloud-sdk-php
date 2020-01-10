@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) 设置负载均衡绑定的后端服务的地域信息
  * @method InternetAccessible getInternetChargeInfo() 获取网络计费相关参数
  * @method void setInternetChargeInfo(InternetAccessible $InternetChargeInfo) 设置网络计费相关参数
+ * @method boolean getLoadBalancerPassToTarget() 获取Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+ * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) 设置Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
  */
 
 /**
@@ -52,11 +54,17 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
      * @var InternetAccessible 网络计费相关参数
      */
     public $InternetChargeInfo;
+
+    /**
+     * @var boolean Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+     */
+    public $LoadBalancerPassToTarget;
     /**
      * @param string $LoadBalancerId 负载均衡的唯一ID
      * @param string $LoadBalancerName 负载均衡实例名称
      * @param TargetRegionInfo $TargetRegionInfo 负载均衡绑定的后端服务的地域信息
      * @param InternetAccessible $InternetChargeInfo 网络计费相关参数
+     * @param boolean $LoadBalancerPassToTarget Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
      */
     function __construct()
     {
@@ -86,6 +94,10 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
         if (array_key_exists("InternetChargeInfo",$param) and $param["InternetChargeInfo"] !== null) {
             $this->InternetChargeInfo = new InternetAccessible();
             $this->InternetChargeInfo->deserialize($param["InternetChargeInfo"]);
+        }
+
+        if (array_key_exists("LoadBalancerPassToTarget",$param) and $param["LoadBalancerPassToTarget"] !== null) {
+            $this->LoadBalancerPassToTarget = $param["LoadBalancerPassToTarget"];
         }
     }
 }

@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
  * @method HostNameSettings getHostNameSettings() 获取云服务器主机名（HostName）的相关设置。
  * @method void setHostNameSettings(HostNameSettings $HostNameSettings) 设置云服务器主机名（HostName）的相关设置。
+ * @method array getInstanceNameSettings() 获取云服务器实例名（InstanceName）的相关设置。
+ * @method void setInstanceNameSettings(array $InstanceNameSettings) 设置云服务器实例名（InstanceName）的相关设置。
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  */
 
 /**
@@ -171,6 +175,16 @@ class UpgradeLaunchConfigurationRequest extends AbstractModel
      * @var HostNameSettings 云服务器主机名（HostName）的相关设置。
      */
     public $HostNameSettings;
+
+    /**
+     * @var array 云服务器实例名（InstanceName）的相关设置。
+     */
+    public $InstanceNameSettings;
+
+    /**
+     * @var InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     */
+    public $InstanceChargePrepaid;
     /**
      * @param string $LaunchConfigurationId 启动配置ID。
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
@@ -197,6 +211,8 @@ class UpgradeLaunchConfigurationRequest extends AbstractModel
      * @param array $InstanceTags 标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
      * @param string $CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
      * @param HostNameSettings $HostNameSettings 云服务器主机名（HostName）的相关设置。
+     * @param array $InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
+     * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      */
     function __construct()
     {
@@ -296,6 +312,20 @@ class UpgradeLaunchConfigurationRequest extends AbstractModel
         if (array_key_exists("HostNameSettings",$param) and $param["HostNameSettings"] !== null) {
             $this->HostNameSettings = new HostNameSettings();
             $this->HostNameSettings->deserialize($param["HostNameSettings"]);
+        }
+
+        if (array_key_exists("InstanceNameSettings",$param) and $param["InstanceNameSettings"] !== null) {
+            $this->InstanceNameSettings = [];
+            foreach ($param["InstanceNameSettings"] as $key => $value){
+                $obj = new InstanceNameSettings();
+                $obj->deserialize($value);
+                array_push($this->InstanceNameSettings, $obj);
+            }
+        }
+
+        if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {
+            $this->InstanceChargePrepaid = new InstanceChargePrepaid();
+            $this->InstanceChargePrepaid->deserialize($param["InstanceChargePrepaid"]);
         }
     }
 }

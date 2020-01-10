@@ -35,7 +35,7 @@ BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支�
  */
 
 /**
- *网络计费方式，最大出带宽
+ *网络计费模式，最大出带宽
  */
 class InternetAccessible extends AbstractModel
 {

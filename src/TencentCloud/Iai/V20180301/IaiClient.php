@@ -89,6 +89,10 @@ use TencentCloud\Iai\V20180301\Models as Models;
 若EndTimestamp符合您预期，请您尽快发起人员查重请求，否则导致可能需要更多处理时间。
 
 若预估时间超过5小时，则无法使用人员查重功能。
+* @method Models\GetCheckSimilarPersonJobIdListResponse GetCheckSimilarPersonJobIdList(Models\GetCheckSimilarPersonJobIdListRequest $req) 获取人员查重任务列表，按任务创建时间逆序（最新的在前面）。
+
+只保留最近1年的数据。
+* @method Models\GetGroupInfoResponse GetGroupInfo(Models\GetGroupInfoRequest $req) 获取人员库信息。
 * @method Models\GetGroupListResponse GetGroupList(Models\GetGroupListRequest $req) 获取人员库列表。
 * @method Models\GetPersonBaseInfoResponse GetPersonBaseInfo(Models\GetPersonBaseInfoRequest $req) 获取指定人员的信息，包括姓名、性别、人脸等。
 * @method Models\GetPersonGroupInfoResponse GetPersonGroupInfo(Models\GetPersonGroupInfoRequest $req) 获取指定人员的信息，包括加入的人员库、描述内容等。

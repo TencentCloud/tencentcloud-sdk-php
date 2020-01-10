@@ -35,7 +35,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *bcos交易信息对象
+ *Bcos交易信息对象
  */
 class BcosTransInfo extends AbstractModel
 {

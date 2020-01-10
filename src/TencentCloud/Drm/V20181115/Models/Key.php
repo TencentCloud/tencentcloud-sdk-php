@@ -18,14 +18,18 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTrack() 获取加密track类型。
- * @method void setTrack(string $Track) 设置加密track类型。
+ * @method string getTrack() 获取加密track类型。Widevine支持SD、HD、UHD1、UHD2、AUDIO。Fairplay只支持HD。
+ * @method void setTrack(string $Track) 设置加密track类型。Widevine支持SD、HD、UHD1、UHD2、AUDIO。Fairplay只支持HD。
  * @method string getKeyId() 获取密钥ID。
  * @method void setKeyId(string $KeyId) 设置密钥ID。
  * @method string getKey() 获取原始Key使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
  * @method void setKey(string $Key) 设置原始Key使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
  * @method string getIv() 获取原始IV使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
  * @method void setIv(string $Iv) 设置原始IV使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
+ * @method integer getInsertTimestamp() 获取该key生成时的时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInsertTimestamp(integer $InsertTimestamp) 设置该key生成时的时间戳
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -34,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class Key extends AbstractModel
 {
     /**
-     * @var string 加密track类型。
+     * @var string 加密track类型。Widevine支持SD、HD、UHD1、UHD2、AUDIO。Fairplay只支持HD。
      */
     public $Track;
 
@@ -52,11 +56,19 @@ class Key extends AbstractModel
      * @var string 原始IV使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
      */
     public $Iv;
+
     /**
-     * @param string $Track 加密track类型。
+     * @var integer 该key生成时的时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InsertTimestamp;
+    /**
+     * @param string $Track 加密track类型。Widevine支持SD、HD、UHD1、UHD2、AUDIO。Fairplay只支持HD。
      * @param string $KeyId 密钥ID。
      * @param string $Key 原始Key使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
      * @param string $Iv 原始IV使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
+     * @param integer $InsertTimestamp 该key生成时的时间戳
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class Key extends AbstractModel
 
         if (array_key_exists("Iv",$param) and $param["Iv"] !== null) {
             $this->Iv = $param["Iv"];
+        }
+
+        if (array_key_exists("InsertTimestamp",$param) and $param["InsertTimestamp"] !== null) {
+            $this->InsertTimestamp = $param["InsertTimestamp"];
         }
     }
 }

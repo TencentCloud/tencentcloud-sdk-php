@@ -50,6 +50,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCashPayAmount(string $CashPayAmount) 设置现金支付金额
  * @method string getIncentivePayAmount() 获取赠送账户支付金额
  * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送账户支付金额
+ * @method string getItemCode() 获取组件类型代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setItemCode(string $ItemCode) 设置组件类型代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getComponentCode() 获取组件名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setComponentCode(string $ComponentCode) 设置组件名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContractPrice() 获取合同价
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContractPrice(string $ContractPrice) 设置合同价
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -136,6 +148,24 @@ class BillDetailComponent extends AbstractModel
      * @var string 赠送账户支付金额
      */
     public $IncentivePayAmount;
+
+    /**
+     * @var string 组件类型代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ItemCode;
+
+    /**
+     * @var string 组件名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ComponentCode;
+
+    /**
+     * @var string 合同价
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContractPrice;
     /**
      * @param string $ComponentCodeName 组件类型:资源组件类型的名称，如内存、硬盘等
      * @param string $ItemCodeName 组件名称:资源组件的名称，如云数据库MySQL-内存等
@@ -153,6 +183,12 @@ class BillDetailComponent extends AbstractModel
      * @param string $VoucherPayAmount 代金券支付金额
      * @param string $CashPayAmount 现金支付金额
      * @param string $IncentivePayAmount 赠送账户支付金额
+     * @param string $ItemCode 组件类型代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ComponentCode 组件名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContractPrice 合同价
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -228,6 +264,18 @@ class BillDetailComponent extends AbstractModel
 
         if (array_key_exists("IncentivePayAmount",$param) and $param["IncentivePayAmount"] !== null) {
             $this->IncentivePayAmount = $param["IncentivePayAmount"];
+        }
+
+        if (array_key_exists("ItemCode",$param) and $param["ItemCode"] !== null) {
+            $this->ItemCode = $param["ItemCode"];
+        }
+
+        if (array_key_exists("ComponentCode",$param) and $param["ComponentCode"] !== null) {
+            $this->ComponentCode = $param["ComponentCode"];
+        }
+
+        if (array_key_exists("ContractPrice",$param) and $param["ContractPrice"] !== null) {
+            $this->ContractPrice = $param["ContractPrice"];
         }
     }
 }

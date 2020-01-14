@@ -24,6 +24,7 @@ use TencentCloud\Tbaas\V20180416\Models as Models;
 /**
 * @method Models\ApplyUserCertResponse ApplyUserCert(Models\ApplyUserCertRequest $req) 申请用户证书
 * @method Models\BlockByNumberHandlerResponse BlockByNumberHandler(Models\BlockByNumberHandlerRequest $req) Bcos根据块高查询区块信息
+* @method Models\DeployDynamicContractHandlerResponse DeployDynamicContractHandler(Models\DeployDynamicContractHandlerRequest $req) 动态部署合约
 * @method Models\DownloadUserCertResponse DownloadUserCert(Models\DownloadUserCertRequest $req) 下载用户证书
 * @method Models\GetBlockListResponse GetBlockList(Models\GetBlockListRequest $req) 查看当前网络下的所有区块列表，分页展示
 * @method Models\GetBlockListHandlerResponse GetBlockListHandler(Models\GetBlockListHandlerRequest $req) Bcos分页查询当前群组下的区块列表
@@ -38,6 +39,7 @@ use TencentCloud\Tbaas\V20180416\Models as Models;
 * @method Models\QueryResponse Query(Models\QueryRequest $req) 查询交易
 * @method Models\SendTransactionHandlerResponse SendTransactionHandler(Models\SendTransactionHandlerRequest $req) Bcos发送交易
 * @method Models\SrvInvokeResponse SrvInvoke(Models\SrvInvokeRequest $req) trustsql服务统一接口
+* @method Models\TransByDynamicContractHandlerResponse TransByDynamicContractHandler(Models\TransByDynamicContractHandlerRequest $req) 根据动态部署的合约发送交易
  */
 
 class TbaasClient extends AbstractClient

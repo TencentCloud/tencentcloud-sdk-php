@@ -18,10 +18,10 @@ namespace TencentCloud\Wss\V20180426\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取总数量
- * @method void setTotalCount(integer $TotalCount) 设置总数量
- * @method array getCertificateSet() 获取列表
- * @method void setCertificateSet(array $CertificateSet) 设置列表
+ * @method integer getTotalCount() 获取总数量。
+ * @method void setTotalCount(integer $TotalCount) 设置总数量。
+ * @method array getCertificateSet() 获取列表。
+ * @method void setCertificateSet(array $CertificateSet) 设置列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCertListResponse extends AbstractModel
 {
     /**
-     * @var integer 总数量
+     * @var integer 总数量。
      */
     public $TotalCount;
 
     /**
-     * @var array 列表
+     * @var array 列表。
      */
     public $CertificateSet;
 
@@ -46,8 +46,8 @@ class DescribeCertListResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 总数量
-     * @param array $CertificateSet 列表
+     * @param integer $TotalCount 总数量。
+     * @param array $CertificateSet 列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

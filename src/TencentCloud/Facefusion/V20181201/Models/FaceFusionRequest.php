@@ -29,7 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPornDetect() 获取历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
  * @method void setPornDetect(integer $PornDetect) 设置历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
  * @method integer getCelebrityIdentify() 获取0表示不需要鉴政，1表示需要鉴政。默认值为0。
+请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
  * @method void setCelebrityIdentify(integer $CelebrityIdentify) 设置0表示不需要鉴政，1表示需要鉴政。默认值为0。
+请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
  */
 
 /**
@@ -64,6 +66,7 @@ class FaceFusionRequest extends AbstractModel
 
     /**
      * @var integer 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
      */
     public $CelebrityIdentify;
     /**
@@ -73,6 +76,7 @@ class FaceFusionRequest extends AbstractModel
      * @param string $RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
      * @param integer $PornDetect 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
      * @param integer $CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
      */
     function __construct()
     {

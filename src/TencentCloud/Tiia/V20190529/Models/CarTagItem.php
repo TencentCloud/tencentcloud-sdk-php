@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfidence(integer $Confidence) 设置置信度，0-100
  * @method integer getYear() 获取年份，没识别出年份的时候返回0
  * @method void setYear(integer $Year) 设置年份，没识别出年份的时候返回0
+ * @method array getCarLocation() 获取车辆在图片中的坐标信息
+ * @method void setCarLocation(array $CarLocation) 设置车辆在图片中的坐标信息
  */
 
 /**
@@ -66,6 +68,11 @@ class CarTagItem extends AbstractModel
      * @var integer 年份，没识别出年份的时候返回0
      */
     public $Year;
+
+    /**
+     * @var array 车辆在图片中的坐标信息
+     */
+    public $CarLocation;
     /**
      * @param string $Serial 车系
      * @param string $Brand 车辆品牌
@@ -73,6 +80,7 @@ class CarTagItem extends AbstractModel
      * @param string $Color 车辆颜色
      * @param integer $Confidence 置信度，0-100
      * @param integer $Year 年份，没识别出年份的时候返回0
+     * @param array $CarLocation 车辆在图片中的坐标信息
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class CarTagItem extends AbstractModel
 
         if (array_key_exists("Year",$param) and $param["Year"] !== null) {
             $this->Year = $param["Year"];
+        }
+
+        if (array_key_exists("CarLocation",$param) and $param["CarLocation"] !== null) {
+            $this->CarLocation = [];
+            foreach ($param["CarLocation"] as $key => $value){
+                $obj = new Coord();
+                $obj->deserialize($value);
+                array_push($this->CarLocation, $obj);
+            }
         }
     }
 }

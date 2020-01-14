@@ -42,6 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取每页行数，默认为10
  * @method void setLimit(integer $Limit) 设置每页行数，默认为10
+ * @method Filter getFilters() 获取过滤条件，参数不支持同时指定FlowLogIds和Filters。
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
+ * @method void setFilters(Filter $Filters) 设置过滤条件，参数不支持同时指定FlowLogIds和Filters。
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
  */
 
 /**
@@ -108,6 +114,13 @@ class DescribeFlowLogsRequest extends AbstractModel
      * @var integer 每页行数，默认为10
      */
     public $Limit;
+
+    /**
+     * @var Filter 过滤条件，参数不支持同时指定FlowLogIds和Filters。
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
+     */
+    public $Filters;
     /**
      * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID
      * @param string $FlowLogId 流日志唯一ID
@@ -121,6 +134,9 @@ class DescribeFlowLogsRequest extends AbstractModel
      * @param string $OrderDirection 升序（asc）还是降序（desc）,默认：desc
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 每页行数，默认为10
+     * @param Filter $Filters 过滤条件，参数不支持同时指定FlowLogIds和Filters。
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
      */
     function __construct()
     {
@@ -180,6 +196,11 @@ class DescribeFlowLogsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = new Filter();
+            $this->Filters->deserialize($param["Filters"]);
         }
     }
 }

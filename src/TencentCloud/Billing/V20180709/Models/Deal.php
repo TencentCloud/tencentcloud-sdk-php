@@ -50,6 +50,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrice(float $Price) 设置单价（分）
  * @method float getTotalCost() 获取原价（分）
  * @method void setTotalCost(float $TotalCost) 设置原价（分）
+ * @method string getProductCode() 获取产品编码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductCode(string $ProductCode) 设置产品编码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubProductCode() 获取子产品编码
+ * @method void setSubProductCode(string $SubProductCode) 设置子产品编码
  */
 
 /**
@@ -136,6 +142,17 @@ class Deal extends AbstractModel
      * @var float 原价（分）
      */
     public $TotalCost;
+
+    /**
+     * @var string 产品编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductCode;
+
+    /**
+     * @var string 子产品编码
+     */
+    public $SubProductCode;
     /**
      * @param string $OrderId 订单号
      * @param integer $Status 订单状态
@@ -153,6 +170,9 @@ class Deal extends AbstractModel
      * @param float $Policy 折扣率
      * @param float $Price 单价（分）
      * @param float $TotalCost 原价（分）
+     * @param string $ProductCode 产品编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubProductCode 子产品编码
      */
     function __construct()
     {
@@ -233,6 +253,14 @@ class Deal extends AbstractModel
 
         if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
             $this->TotalCost = $param["TotalCost"];
+        }
+
+        if (array_key_exists("ProductCode",$param) and $param["ProductCode"] !== null) {
+            $this->ProductCode = $param["ProductCode"];
+        }
+
+        if (array_key_exists("SubProductCode",$param) and $param["SubProductCode"] !== null) {
+            $this->SubProductCode = $param["SubProductCode"];
         }
     }
 }

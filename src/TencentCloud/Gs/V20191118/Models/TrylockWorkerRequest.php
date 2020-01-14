@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGameRegion(string $GameRegion) 设置游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
  * @method integer getSetNo() 获取资源池编号，1表示共用，2表示测试
  * @method void setSetNo(integer $SetNo) 设置资源池编号，1表示共用，2表示测试
+ * @method string getUserIp() 获取游戏用户IP，用于就近调度，例如125.127.178.228
+ * @method void setUserIp(string $UserIp) 设置游戏用户IP，用于就近调度，例如125.127.178.228
  */
 
 /**
@@ -52,11 +54,17 @@ class TrylockWorkerRequest extends AbstractModel
      * @var integer 资源池编号，1表示共用，2表示测试
      */
     public $SetNo;
+
+    /**
+     * @var string 游戏用户IP，用于就近调度，例如125.127.178.228
+     */
+    public $UserIp;
     /**
      * @param string $UserId 游戏用户ID
      * @param string $GameId 游戏ID
      * @param string $GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
      * @param integer $SetNo 资源池编号，1表示共用，2表示测试
+     * @param string $UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class TrylockWorkerRequest extends AbstractModel
 
         if (array_key_exists("SetNo",$param) and $param["SetNo"] !== null) {
             $this->SetNo = $param["SetNo"];
+        }
+
+        if (array_key_exists("UserIp",$param) and $param["UserIp"] !== null) {
+            $this->UserIp = $param["UserIp"];
         }
     }
 }

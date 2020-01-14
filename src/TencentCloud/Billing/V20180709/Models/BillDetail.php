@@ -58,6 +58,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置Tag 信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBusinessCode() 获取商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBusinessCode(string $BusinessCode) 设置商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductCode() 获取子商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductCode(string $ProductCode) 设置子商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getActionType() 获取交易类型代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setActionType(string $ActionType) 设置交易类型代码
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -160,6 +172,24 @@ class BillDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
+
+    /**
+     * @var string 商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BusinessCode;
+
+    /**
+     * @var string 子商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductCode;
+
+    /**
+     * @var string 交易类型代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ActionType;
     /**
      * @param string $BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      * @param string $ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1
@@ -180,6 +210,12 @@ class BillDetail extends AbstractModel
      * @param string $OwnerUin 使用者UIN
      * @param string $OperateUin 操作者UIN
      * @param array $Tags Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BusinessCode 商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductCode 子商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ActionType 交易类型代码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -278,6 +314,18 @@ class BillDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
+            $this->BusinessCode = $param["BusinessCode"];
+        }
+
+        if (array_key_exists("ProductCode",$param) and $param["ProductCode"] !== null) {
+            $this->ProductCode = $param["ProductCode"];
+        }
+
+        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
+            $this->ActionType = $param["ActionType"];
         }
     }
 }

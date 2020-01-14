@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包唯一标识ID
  * @method string getBandwidthPackageName() 获取带宽包名称
  * @method void setBandwidthPackageName(string $BandwidthPackageName) 设置带宽包名称
+ * @method string getChargeType() 获取带宽包计费模式
+ * @method void setChargeType(string $ChargeType) 设置带宽包计费模式
  */
 
 /**
@@ -38,9 +40,15 @@ class ModifyBandwidthPackageAttributeRequest extends AbstractModel
      * @var string 带宽包名称
      */
     public $BandwidthPackageName;
+
+    /**
+     * @var string 带宽包计费模式
+     */
+    public $ChargeType;
     /**
      * @param string $BandwidthPackageId 带宽包唯一标识ID
      * @param string $BandwidthPackageName 带宽包名称
+     * @param string $ChargeType 带宽包计费模式
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyBandwidthPackageAttributeRequest extends AbstractModel
 
         if (array_key_exists("BandwidthPackageName",$param) and $param["BandwidthPackageName"] !== null) {
             $this->BandwidthPackageName = $param["BandwidthPackageName"];
+        }
+
+        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
+            $this->ChargeType = $param["ChargeType"];
         }
     }
 }

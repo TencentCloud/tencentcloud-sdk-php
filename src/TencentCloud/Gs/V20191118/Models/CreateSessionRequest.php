@@ -24,16 +24,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置游戏用户ID
  * @method string getGameId() 获取游戏ID
  * @method void setGameId(string $GameId) 设置游戏ID
- * @method string getGameRegion() 获取游戏区域
- * @method void setGameRegion(string $GameRegion) 设置游戏区域
+ * @method string getGameRegion() 获取游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
+ * @method void setGameRegion(string $GameRegion) 设置游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
  * @method string getGameParas() 获取游戏参数
  * @method void setGameParas(string $GameParas) 设置游戏参数
- * @method string getResolution() 获取分辨率
- * @method void setResolution(string $Resolution) 设置分辨率
- * @method string getImageUrl() 获取背景图url
- * @method void setImageUrl(string $ImageUrl) 设置背景图url
- * @method integer getSetNo() 获取资源池编号
- * @method void setSetNo(integer $SetNo) 设置资源池编号
+ * @method string getResolution() 获取分辨率,，可设置为1080p或720p
+ * @method void setResolution(string $Resolution) 设置分辨率,，可设置为1080p或720p
+ * @method string getImageUrl() 获取背景图url，格式为png或jpeg，宽高1920*1080
+ * @method void setImageUrl(string $ImageUrl) 设置背景图url，格式为png或jpeg，宽高1920*1080
+ * @method integer getSetNo() 获取资源池编号，1表示正式，2表示测试
+ * @method void setSetNo(integer $SetNo) 设置资源池编号，1表示正式，2表示测试
+ * @method integer getBitrate() 获取单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
+ * @method void setBitrate(integer $Bitrate) 设置单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
+ * @method integer getMaxBitrate() 获取单位Mbps，动态调整最大码率
+ * @method void setMaxBitrate(integer $MaxBitrate) 设置单位Mbps，动态调整最大码率
+ * @method integer getMinBitrate() 获取单位Mbps，动态调整最小码率
+ * @method void setMinBitrate(integer $MinBitrate) 设置单位Mbps，动态调整最小码率
+ * @method integer getFps() 获取帧率，可设置为30、45或60
+ * @method void setFps(integer $Fps) 设置帧率，可设置为30、45或60
+ * @method string getUserIp() 获取游戏用户IP，用于就近调度，例如125.127.178.228
+ * @method void setUserIp(string $UserIp) 设置游戏用户IP，用于就近调度，例如125.127.178.228
  */
 
 /**
@@ -57,7 +67,7 @@ class CreateSessionRequest extends AbstractModel
     public $GameId;
 
     /**
-     * @var string 游戏区域
+     * @var string 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
      */
     public $GameRegion;
 
@@ -67,28 +77,58 @@ class CreateSessionRequest extends AbstractModel
     public $GameParas;
 
     /**
-     * @var string 分辨率
+     * @var string 分辨率,，可设置为1080p或720p
      */
     public $Resolution;
 
     /**
-     * @var string 背景图url
+     * @var string 背景图url，格式为png或jpeg，宽高1920*1080
      */
     public $ImageUrl;
 
     /**
-     * @var integer 资源池编号
+     * @var integer 资源池编号，1表示正式，2表示测试
      */
     public $SetNo;
+
+    /**
+     * @var integer 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
+     */
+    public $Bitrate;
+
+    /**
+     * @var integer 单位Mbps，动态调整最大码率
+     */
+    public $MaxBitrate;
+
+    /**
+     * @var integer 单位Mbps，动态调整最小码率
+     */
+    public $MinBitrate;
+
+    /**
+     * @var integer 帧率，可设置为30、45或60
+     */
+    public $Fps;
+
+    /**
+     * @var string 游戏用户IP，用于就近调度，例如125.127.178.228
+     */
+    public $UserIp;
     /**
      * @param string $ClientSession 客户端session信息，从JSSDK请求中获得
      * @param string $UserId 游戏用户ID
      * @param string $GameId 游戏ID
-     * @param string $GameRegion 游戏区域
+     * @param string $GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
      * @param string $GameParas 游戏参数
-     * @param string $Resolution 分辨率
-     * @param string $ImageUrl 背景图url
-     * @param integer $SetNo 资源池编号
+     * @param string $Resolution 分辨率,，可设置为1080p或720p
+     * @param string $ImageUrl 背景图url，格式为png或jpeg，宽高1920*1080
+     * @param integer $SetNo 资源池编号，1表示正式，2表示测试
+     * @param integer $Bitrate 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
+     * @param integer $MaxBitrate 单位Mbps，动态调整最大码率
+     * @param integer $MinBitrate 单位Mbps，动态调整最小码率
+     * @param integer $Fps 帧率，可设置为30、45或60
+     * @param string $UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
      */
     function __construct()
     {
@@ -132,6 +172,26 @@ class CreateSessionRequest extends AbstractModel
 
         if (array_key_exists("SetNo",$param) and $param["SetNo"] !== null) {
             $this->SetNo = $param["SetNo"];
+        }
+
+        if (array_key_exists("Bitrate",$param) and $param["Bitrate"] !== null) {
+            $this->Bitrate = $param["Bitrate"];
+        }
+
+        if (array_key_exists("MaxBitrate",$param) and $param["MaxBitrate"] !== null) {
+            $this->MaxBitrate = $param["MaxBitrate"];
+        }
+
+        if (array_key_exists("MinBitrate",$param) and $param["MinBitrate"] !== null) {
+            $this->MinBitrate = $param["MinBitrate"];
+        }
+
+        if (array_key_exists("Fps",$param) and $param["Fps"] !== null) {
+            $this->Fps = $param["Fps"];
+        }
+
+        if (array_key_exists("UserIp",$param) and $param["UserIp"] !== null) {
+            $this->UserIp = $param["UserIp"];
         }
     }
 }

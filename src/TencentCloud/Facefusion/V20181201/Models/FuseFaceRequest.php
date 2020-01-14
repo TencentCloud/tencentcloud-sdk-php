@@ -35,7 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFuseFaceDegree(integer $FuseFaceDegree) 设置五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
 若此参数不填写，则使用人脸融合控制台中五官参数数值。
  * @method integer getCelebrityIdentify() 获取0表示不需要鉴政，1表示需要鉴政。默认值为0。
+请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
  * @method void setCelebrityIdentify(integer $CelebrityIdentify) 设置0表示不需要鉴政，1表示需要鉴政。默认值为0。
+请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
  */
 
 /**
@@ -77,6 +79,7 @@ class FuseFaceRequest extends AbstractModel
 
     /**
      * @var integer 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
      */
     public $CelebrityIdentify;
     /**
@@ -89,6 +92,7 @@ class FuseFaceRequest extends AbstractModel
      * @param integer $FuseFaceDegree 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
 若此参数不填写，则使用人脸融合控制台中五官参数数值。
      * @param integer $CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
      */
     function __construct()
     {

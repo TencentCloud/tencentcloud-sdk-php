@@ -22,9 +22,15 @@ use TencentCloud\Common\AbstractModel;
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method void setImage(string $Image) 设置图片 base64 数据，base64 编码后大小不可超过5M。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method string getUrl() 获取图片 base64 数据，base64 编码后大小不可超过5M。 
+ * @method string getUrl() 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。 
+Url、Image必须提供一个，如果都提供，只使用 Url。  
+图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。  
+非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setUrl(string $Url) 设置图片 base64 数据，base64 编码后大小不可超过5M。 
+ * @method void setUrl(string $Url) 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。 
+Url、Image必须提供一个，如果都提供，只使用 Url。  
+图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。  
+非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method integer getWhitening() 获取美白程度，取值范围[0,100]。0不美白，100代表最高程度。默认值30。
  * @method void setWhitening(integer $Whitening) 设置美白程度，取值范围[0,100]。0不美白，100代表最高程度。默认值30。
@@ -48,7 +54,10 @@ class BeautifyPicRequest extends AbstractModel
     public $Image;
 
     /**
-     * @var string 图片 base64 数据，base64 编码后大小不可超过5M。 
+     * @var string 图片的 Url 。对应图片 base64 编码后大小不可超过5M。 
+Url、Image必须提供一个，如果都提供，只使用 Url。  
+图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。  
+非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Url;
@@ -75,7 +84,10 @@ class BeautifyPicRequest extends AbstractModel
     /**
      * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param string $Url 图片 base64 数据，base64 编码后大小不可超过5M。 
+     * @param string $Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。 
+Url、Image必须提供一个，如果都提供，只使用 Url。  
+图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。  
+非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param integer $Whitening 美白程度，取值范围[0,100]。0不美白，100代表最高程度。默认值30。
      * @param integer $Smoothing 磨皮程度，取值范围[0,100]。0不磨皮，100代表最高程度。默认值10。

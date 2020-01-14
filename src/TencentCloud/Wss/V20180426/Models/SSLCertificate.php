@@ -86,9 +86,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectInfo(SSLProjectInfo $ProjectInfo) 设置项目信息，ProjectId：项目ID，OwnerUin：项目所属的 uin（默认项目为0），Name：项目名称，CreatorUin：创建项目的 uin，CreateTime：项目创建时间，Info：项目说明
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getId() 获取证书Id
+ * @method string getId() 获取证书ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(string $Id) 设置证书Id
+ * @method void setId(string $Id) 设置证书ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSubjectAltName() 获取证书包含的多个域名（包含主域名）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -125,7 +125,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *获取证书列表（SSLCertificate）返回参数键为CertificateSet的内容
+ *获取证书列表（SSLCertificate）返回参数键为 CertificateSet 的内容。
  */
 class SSLCertificate extends AbstractModel
 {
@@ -232,7 +232,7 @@ class SSLCertificate extends AbstractModel
     public $ProjectInfo;
 
     /**
-     * @var string 证书Id
+     * @var string 证书ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
@@ -319,7 +319,7 @@ class SSLCertificate extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SSLProjectInfo $ProjectInfo 项目信息，ProjectId：项目ID，OwnerUin：项目所属的 uin（默认项目为0），Name：项目名称，CreatorUin：创建项目的 uin，CreateTime：项目创建时间，Info：项目说明
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Id 证书Id
+     * @param string $Id 证书ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubjectAltName 证书包含的多个域名（包含主域名）
 注意：此字段可能返回 null，表示取不到有效值。

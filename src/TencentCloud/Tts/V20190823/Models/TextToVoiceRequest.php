@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpeed(float $Speed) 设置语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更细化的语速，可以保留小数点后一位，例如0.5 1.1 1.8等。<br>
  * @method integer getProjectId() 获取项目id，用户自定义，默认为0。
  * @method void setProjectId(integer $ProjectId) 设置项目id，用户自定义，默认为0。
- * @method integer getVoiceType() 获取音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
- * @method void setVoiceType(integer $VoiceType) 设置音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+ * @method integer getVoiceType() 获取音色<li>0-云小宁，亲和女声(默认)</li><li>1-云小奇，亲和男声</li><li>2-云小晚，成熟男声</li><li>4-云小叶，温暖女声</li><li>5-云小欣，情感女声</li><li>6-云小龙，情感男声</li><li>1000-智侠、情感男声（新）</li><li>1001-智瑜，情感女声（新）</li><li>1002-智聆，通用女声（新）</li><li>1003-智美，客服女声（新）</li><li>1050-WeJack，英文男声（新）</li><li>1051-WeRose，英文女声（新）</li>
+ * @method void setVoiceType(integer $VoiceType) 设置音色<li>0-云小宁，亲和女声(默认)</li><li>1-云小奇，亲和男声</li><li>2-云小晚，成熟男声</li><li>4-云小叶，温暖女声</li><li>5-云小欣，情感女声</li><li>6-云小龙，情感男声</li><li>1000-智侠、情感男声（新）</li><li>1001-智瑜，情感女声（新）</li><li>1002-智聆，通用女声（新）</li><li>1003-智美，客服女声（新）</li><li>1050-WeJack，英文男声（新）</li><li>1051-WeRose，英文女声（新）</li>
  * @method integer getPrimaryLanguage() 获取主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
  * @method void setPrimaryLanguage(integer $PrimaryLanguage) 设置主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
  * @method integer getSampleRate() 获取音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
@@ -82,7 +82,7 @@ class TextToVoiceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+     * @var integer 音色<li>0-云小宁，亲和女声(默认)</li><li>1-云小奇，亲和男声</li><li>2-云小晚，成熟男声</li><li>4-云小叶，温暖女声</li><li>5-云小欣，情感女声</li><li>6-云小龙，情感男声</li><li>1000-智侠、情感男声（新）</li><li>1001-智瑜，情感女声（新）</li><li>1002-智聆，通用女声（新）</li><li>1003-智美，客服女声（新）</li><li>1050-WeJack，英文男声（新）</li><li>1051-WeRose，英文女声（新）</li>
      */
     public $VoiceType;
 
@@ -109,7 +109,7 @@ class TextToVoiceRequest extends AbstractModel
 输入除以上整数之外的其他参数不生效，按默认值处理。
      * @param float $Speed 语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更细化的语速，可以保留小数点后一位，例如0.5 1.1 1.8等。<br>
      * @param integer $ProjectId 项目id，用户自定义，默认为0。
-     * @param integer $VoiceType 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+     * @param integer $VoiceType 音色<li>0-云小宁，亲和女声(默认)</li><li>1-云小奇，亲和男声</li><li>2-云小晚，成熟男声</li><li>4-云小叶，温暖女声</li><li>5-云小欣，情感女声</li><li>6-云小龙，情感男声</li><li>1000-智侠、情感男声（新）</li><li>1001-智瑜，情感女声（新）</li><li>1002-智聆，通用女声（新）</li><li>1003-智美，客服女声（新）</li><li>1050-WeJack，英文男声（新）</li><li>1051-WeRose，英文女声（新）</li>
      * @param integer $PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
      * @param integer $SampleRate 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
      * @param string $Codec 返回音频格式，可取值：wav（默认），mp3

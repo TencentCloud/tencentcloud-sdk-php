@@ -18,10 +18,10 @@ namespace TencentCloud\Wss\V20180426\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getId() 获取证书 ID，即通过 GetList 拿到的证书列表的 ID 字段
- * @method void setId(string $Id) 设置证书 ID，即通过 GetList 拿到的证书列表的 ID 字段
- * @method string getModuleType() 获取模块名称，应填ssl
- * @method void setModuleType(string $ModuleType) 设置模块名称，应填ssl
+ * @method string getId() 获取证书 ID，即通过 GetList 拿到的证书列表的 ID 字段。
+ * @method void setId(string $Id) 设置证书 ID，即通过 GetList 拿到的证书列表的 ID 字段。
+ * @method string getModuleType() 获取模块名称，应填 ssl。
+ * @method void setModuleType(string $ModuleType) 设置模块名称，应填 ssl。
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class DeleteCertRequest extends AbstractModel
 {
     /**
-     * @var string 证书 ID，即通过 GetList 拿到的证书列表的 ID 字段
+     * @var string 证书 ID，即通过 GetList 拿到的证书列表的 ID 字段。
      */
     public $Id;
 
     /**
-     * @var string 模块名称，应填ssl
+     * @var string 模块名称，应填 ssl。
      */
     public $ModuleType;
     /**
-     * @param string $Id 证书 ID，即通过 GetList 拿到的证书列表的 ID 字段
-     * @param string $ModuleType 模块名称，应填ssl
+     * @param string $Id 证书 ID，即通过 GetList 拿到的证书列表的 ID 字段。
+     * @param string $ModuleType 模块名称，应填 ssl。
      */
     function __construct()
     {

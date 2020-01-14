@@ -18,22 +18,22 @@ namespace TencentCloud\Wss\V20180426\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getModuleType() 获取模块名称，应填ssl
- * @method void setModuleType(string $ModuleType) 设置模块名称，应填ssl
- * @method integer getOffset() 获取页数，默认第一页
- * @method void setOffset(integer $Offset) 设置页数，默认第一页
- * @method integer getLimit() 获取每页条数，默认每页20条
- * @method void setLimit(integer $Limit) 设置每页条数，默认每页20条
- * @method string getSearchKey() 获取搜索关键字
- * @method void setSearchKey(string $SearchKey) 设置搜索关键字
- * @method string getCertType() 获取证书类型（目前支持:CA=客户端证书,SVR=服务器证书）
- * @method void setCertType(string $CertType) 设置证书类型（目前支持:CA=客户端证书,SVR=服务器证书）
- * @method string getId() 获取证书id
- * @method void setId(string $Id) 设置证书id
- * @method string getWithCert() 获取是否同时获取证书内容
- * @method void setWithCert(string $WithCert) 设置是否同时获取证书内容
- * @method string getAltDomain() 获取如传，则只返回可以给该域名使用的证书
- * @method void setAltDomain(string $AltDomain) 设置如传，则只返回可以给该域名使用的证书
+ * @method string getModuleType() 获取模块名称，应填 ssl。
+ * @method void setModuleType(string $ModuleType) 设置模块名称，应填 ssl。
+ * @method integer getOffset() 获取页数，默认第一页。
+ * @method void setOffset(integer $Offset) 设置页数，默认第一页。
+ * @method integer getLimit() 获取每页条数，默认每页20条。
+ * @method void setLimit(integer $Limit) 设置每页条数，默认每页20条。
+ * @method string getSearchKey() 获取搜索关键字。
+ * @method void setSearchKey(string $SearchKey) 设置搜索关键字。
+ * @method string getCertType() 获取证书类型（目前支持:CA=客户端证书,SVR=服务器证书）。
+ * @method void setCertType(string $CertType) 设置证书类型（目前支持:CA=客户端证书,SVR=服务器证书）。
+ * @method string getId() 获取证书ID。
+ * @method void setId(string $Id) 设置证书ID。
+ * @method string getWithCert() 获取是否同时获取证书内容。
+ * @method void setWithCert(string $WithCert) 设置是否同时获取证书内容。
+ * @method string getAltDomain() 获取如传，则只返回可以给该域名使用的证书。
+ * @method void setAltDomain(string $AltDomain) 设置如传，则只返回可以给该域名使用的证书。
  */
 
 /**
@@ -42,53 +42,53 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCertListRequest extends AbstractModel
 {
     /**
-     * @var string 模块名称，应填ssl
+     * @var string 模块名称，应填 ssl。
      */
     public $ModuleType;
 
     /**
-     * @var integer 页数，默认第一页
+     * @var integer 页数，默认第一页。
      */
     public $Offset;
 
     /**
-     * @var integer 每页条数，默认每页20条
+     * @var integer 每页条数，默认每页20条。
      */
     public $Limit;
 
     /**
-     * @var string 搜索关键字
+     * @var string 搜索关键字。
      */
     public $SearchKey;
 
     /**
-     * @var string 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）
+     * @var string 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）。
      */
     public $CertType;
 
     /**
-     * @var string 证书id
+     * @var string 证书ID。
      */
     public $Id;
 
     /**
-     * @var string 是否同时获取证书内容
+     * @var string 是否同时获取证书内容。
      */
     public $WithCert;
 
     /**
-     * @var string 如传，则只返回可以给该域名使用的证书
+     * @var string 如传，则只返回可以给该域名使用的证书。
      */
     public $AltDomain;
     /**
-     * @param string $ModuleType 模块名称，应填ssl
-     * @param integer $Offset 页数，默认第一页
-     * @param integer $Limit 每页条数，默认每页20条
-     * @param string $SearchKey 搜索关键字
-     * @param string $CertType 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）
-     * @param string $Id 证书id
-     * @param string $WithCert 是否同时获取证书内容
-     * @param string $AltDomain 如传，则只返回可以给该域名使用的证书
+     * @param string $ModuleType 模块名称，应填 ssl。
+     * @param integer $Offset 页数，默认第一页。
+     * @param integer $Limit 每页条数，默认每页20条。
+     * @param string $SearchKey 搜索关键字。
+     * @param string $CertType 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）。
+     * @param string $Id 证书ID。
+     * @param string $WithCert 是否同时获取证书内容。
+     * @param string $AltDomain 如传，则只返回可以给该域名使用的证书。
      */
     function __construct()
     {

@@ -18,18 +18,18 @@ namespace TencentCloud\Wss\V20180426\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCert() 获取证书内容
- * @method void setCert(string $Cert) 设置证书内容
- * @method string getCertType() 获取证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书）
- * @method void setCertType(string $CertType) 设置证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书）
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method string getModuleType() 获取模块名称，应填ssl
- * @method void setModuleType(string $ModuleType) 设置模块名称，应填ssl
- * @method string getKey() 获取证书私钥，certType=SVR 时必填
- * @method void setKey(string $Key) 设置证书私钥，certType=SVR 时必填
- * @method string getAlias() 获取证书备注
- * @method void setAlias(string $Alias) 设置证书备注
+ * @method string getCert() 获取证书内容。
+ * @method void setCert(string $Cert) 设置证书内容。
+ * @method string getCertType() 获取证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书）。
+ * @method void setCertType(string $CertType) 设置证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书）。
+ * @method string getProjectId() 获取项目ID，详见用户指南的 [项目与标签](https://cloud.tencent.com/document/product/598/32738)。
+ * @method void setProjectId(string $ProjectId) 设置项目ID，详见用户指南的 [项目与标签](https://cloud.tencent.com/document/product/598/32738)。
+ * @method string getModuleType() 获取模块名称，应填 ssl。
+ * @method void setModuleType(string $ModuleType) 设置模块名称，应填 ssl。
+ * @method string getKey() 获取证书私钥，certType=SVR 时必填。
+ * @method void setKey(string $Key) 设置证书私钥，certType=SVR 时必填。
+ * @method string getAlias() 获取证书备注。
+ * @method void setAlias(string $Alias) 设置证书备注。
  */
 
 /**
@@ -38,41 +38,41 @@ use TencentCloud\Common\AbstractModel;
 class UploadCertRequest extends AbstractModel
 {
     /**
-     * @var string 证书内容
+     * @var string 证书内容。
      */
     public $Cert;
 
     /**
-     * @var string 证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书）
+     * @var string 证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书）。
      */
     public $CertType;
 
     /**
-     * @var string 项目ID
+     * @var string 项目ID，详见用户指南的 [项目与标签](https://cloud.tencent.com/document/product/598/32738)。
      */
     public $ProjectId;
 
     /**
-     * @var string 模块名称，应填ssl
+     * @var string 模块名称，应填 ssl。
      */
     public $ModuleType;
 
     /**
-     * @var string 证书私钥，certType=SVR 时必填
+     * @var string 证书私钥，certType=SVR 时必填。
      */
     public $Key;
 
     /**
-     * @var string 证书备注
+     * @var string 证书备注。
      */
     public $Alias;
     /**
-     * @param string $Cert 证书内容
-     * @param string $CertType 证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书）
-     * @param string $ProjectId 项目ID
-     * @param string $ModuleType 模块名称，应填ssl
-     * @param string $Key 证书私钥，certType=SVR 时必填
-     * @param string $Alias 证书备注
+     * @param string $Cert 证书内容。
+     * @param string $CertType 证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书）。
+     * @param string $ProjectId 项目ID，详见用户指南的 [项目与标签](https://cloud.tencent.com/document/product/598/32738)。
+     * @param string $ModuleType 模块名称，应填 ssl。
+     * @param string $Key 证书私钥，certType=SVR 时必填。
+     * @param string $Alias 证书备注。
      */
     function __construct()
     {

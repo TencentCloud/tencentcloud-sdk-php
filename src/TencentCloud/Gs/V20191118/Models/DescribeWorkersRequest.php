@@ -18,8 +18,8 @@ namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getSetNo() 获取资源池编号，值为2的幂，1表示共用，2表示测试
- * @method void setSetNo(integer $SetNo) 设置资源池编号，值为2的幂，1表示共用，2表示测试
+ * @method integer getSetNo() 获取资源池编号，1表示正式，2表示测试
+ * @method void setSetNo(integer $SetNo) 设置资源池编号，1表示正式，2表示测试
  */
 
 /**
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
 class DescribeWorkersRequest extends AbstractModel
 {
     /**
-     * @var integer 资源池编号，值为2的幂，1表示共用，2表示测试
+     * @var integer 资源池编号，1表示正式，2表示测试
      */
     public $SetNo;
     /**
-     * @param integer $SetNo 资源池编号，值为2的幂，1表示共用，2表示测试
+     * @param integer $SetNo 资源池编号，1表示正式，2表示测试
      */
     function __construct()
     {

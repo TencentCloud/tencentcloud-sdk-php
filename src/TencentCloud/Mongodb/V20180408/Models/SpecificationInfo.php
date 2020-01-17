@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域信息
  * @method string getZone() 获取可用区信息
  * @method void setZone(string $Zone) 设置可用区信息
- * @method array getSpecItem() 获取售卖规格信息
- * @method void setSpecItem(array $SpecItem) 设置售卖规格信息
+ * @method array getSpecItems() 获取售卖规格信息
+ * @method void setSpecItems(array $SpecItems) 设置售卖规格信息
  */
 
 /**
@@ -44,11 +44,11 @@ class SpecificationInfo extends AbstractModel
     /**
      * @var array 售卖规格信息
      */
-    public $SpecItem;
+    public $SpecItems;
     /**
      * @param string $Region 地域信息
      * @param string $Zone 可用区信息
-     * @param array $SpecItem 售卖规格信息
+     * @param array $SpecItems 售卖规格信息
      */
     function __construct()
     {
@@ -70,12 +70,12 @@ class SpecificationInfo extends AbstractModel
             $this->Zone = $param["Zone"];
         }
 
-        if (array_key_exists("SpecItem",$param) and $param["SpecItem"] !== null) {
-            $this->SpecItem = [];
-            foreach ($param["SpecItem"] as $key => $value){
+        if (array_key_exists("SpecItems",$param) and $param["SpecItems"] !== null) {
+            $this->SpecItems = [];
+            foreach ($param["SpecItems"] as $key => $value){
                 $obj = new SpecItem();
                 $obj->deserialize($value);
-                array_push($this->SpecItem, $obj);
+                array_push($this->SpecItems, $obj);
             }
         }
     }

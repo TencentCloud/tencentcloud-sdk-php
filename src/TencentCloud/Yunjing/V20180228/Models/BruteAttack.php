@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineName(string $MachineName) 设置主机名称。
  * @method string getUuid() 获取云镜客户端唯一标识UUID。
  * @method void setUuid(string $Uuid) 设置云镜客户端唯一标识UUID。
+ * @method boolean getIsProVersion() 获取是否专业版。
+ * @method void setIsProVersion(boolean $IsProVersion) 设置是否专业版。
+ * @method string getBanStatus() 获取阻断状态。
+ * @method void setBanStatus(string $BanStatus) 设置阻断状态。
+ * @method string getQuuid() 获取机器UUID
+ * @method void setQuuid(string $Quuid) 设置机器UUID
  */
 
 /**
@@ -117,6 +123,21 @@ class BruteAttack extends AbstractModel
      * @var string 云镜客户端唯一标识UUID。
      */
     public $Uuid;
+
+    /**
+     * @var boolean 是否专业版。
+     */
+    public $IsProVersion;
+
+    /**
+     * @var string 阻断状态。
+     */
+    public $BanStatus;
+
+    /**
+     * @var string 机器UUID
+     */
+    public $Quuid;
     /**
      * @param integer $Id 事件ID。
      * @param string $MachineIp 主机IP。
@@ -133,6 +154,9 @@ class BruteAttack extends AbstractModel
      * @param string $CreateTime 发生时间。
      * @param string $MachineName 主机名称。
      * @param string $Uuid 云镜客户端唯一标识UUID。
+     * @param boolean $IsProVersion 是否专业版。
+     * @param string $BanStatus 阻断状态。
+     * @param string $Quuid 机器UUID
      */
     function __construct()
     {
@@ -192,6 +216,18 @@ class BruteAttack extends AbstractModel
 
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
             $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("IsProVersion",$param) and $param["IsProVersion"] !== null) {
+            $this->IsProVersion = $param["IsProVersion"];
+        }
+
+        if (array_key_exists("BanStatus",$param) and $param["BanStatus"] !== null) {
+            $this->BanStatus = $param["BanStatus"];
+        }
+
+        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
+            $this->Quuid = $param["Quuid"];
         }
     }
 }

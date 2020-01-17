@@ -18,14 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPolicyId() 获取策略 id
- * @method void setPolicyId(integer $PolicyId) 设置策略 id
+ * @method integer getPolicyId() 获取策略ID
+ * @method void setPolicyId(integer $PolicyId) 设置策略ID
  * @method string getPolicyName() 获取策略名
  * @method void setPolicyName(string $PolicyName) 设置策略名
  * @method string getDescription() 获取策略描述
  * @method void setDescription(string $Description) 设置策略描述
- * @method string getPolicyDocument() 获取策略文档
- * @method void setPolicyDocument(string $PolicyDocument) 设置策略文档
+ * @method string getPolicyDocument() 获取策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
+ * @method void setPolicyDocument(string $PolicyDocument) 设置策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
  */
 
 /**
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class UpdatePolicyRequest extends AbstractModel
 {
     /**
-     * @var integer 策略 id
+     * @var integer 策略ID
      */
     public $PolicyId;
 
@@ -49,14 +49,14 @@ class UpdatePolicyRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string 策略文档
+     * @var string 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
      */
     public $PolicyDocument;
     /**
-     * @param integer $PolicyId 策略 id
+     * @param integer $PolicyId 策略ID
      * @param string $PolicyName 策略名
      * @param string $Description 策略描述
-     * @param string $PolicyDocument 策略文档
+     * @param string $PolicyDocument 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
      */
     function __construct()
     {

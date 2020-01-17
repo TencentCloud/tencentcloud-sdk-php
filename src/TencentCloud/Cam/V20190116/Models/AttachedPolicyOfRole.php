@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateMode() 获取策略创建方式，1表示按产品功能或项目权限创建，其他表示按策略语法创建
  * @method void setCreateMode(integer $CreateMode) 设置策略创建方式，1表示按产品功能或项目权限创建，其他表示按策略语法创建
+ * @method integer getDeactived() 获取是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeactived(integer $Deactived) 设置是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -62,6 +66,12 @@ class AttachedPolicyOfRole extends AbstractModel
      * @var integer 策略创建方式，1表示按产品功能或项目权限创建，其他表示按策略语法创建
      */
     public $CreateMode;
+
+    /**
+     * @var integer 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Deactived;
     /**
      * @param integer $PolicyId 策略ID
      * @param string $PolicyName 策略名称
@@ -69,6 +79,8 @@ class AttachedPolicyOfRole extends AbstractModel
      * @param string $PolicyType 策略类型，User表示自定义策略，QCS表示预设策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateMode 策略创建方式，1表示按产品功能或项目权限创建，其他表示按策略语法创建
+     * @param integer $Deactived 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -100,6 +112,10 @@ class AttachedPolicyOfRole extends AbstractModel
 
         if (array_key_exists("CreateMode",$param) and $param["CreateMode"] !== null) {
             $this->CreateMode = $param["CreateMode"];
+        }
+
+        if (array_key_exists("Deactived",$param) and $param["Deactived"] !== null) {
+            $this->Deactived = $param["Deactived"];
         }
     }
 }

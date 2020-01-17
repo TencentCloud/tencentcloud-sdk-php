@@ -112,6 +112,7 @@ use TencentCloud\Yunjing\V20180228\Models as Models;
 * @method Models\ModifyAutoOpenProVersionConfigResponse ModifyAutoOpenProVersionConfig(Models\ModifyAutoOpenProVersionConfigRequest $req) 本接口 (ModifyAutoOpenProVersionConfig) 用于设置新增主机自动开通专业版配置。
 * @method Models\ModifyLoginWhiteListResponse ModifyLoginWhiteList(Models\ModifyLoginWhiteListRequest $req) 编辑白名单规则
 * @method Models\ModifyProVersionRenewFlagResponse ModifyProVersionRenewFlag(Models\ModifyProVersionRenewFlagRequest $req) 本接口 (ModifyProVersionRenewFlag) 用于修改专业版包年包月续费标识。
+* @method Models\OpenProVersionResponse OpenProVersion(Models\OpenProVersionRequest $req) 本接口 (OpenProVersion) 用于开通专业版。
 * @method Models\OpenProVersionPrepaidResponse OpenProVersionPrepaid(Models\OpenProVersionPrepaidRequest $req) 本接口 (OpenProVersionPrepaid) 用于开通专业版(包年包月)。
 * @method Models\RecoverMalwaresResponse RecoverMalwares(Models\RecoverMalwaresRequest $req) 本接口（RecoverMalwares）用于批量恢复已经被隔离的木马文件。
 * @method Models\RenewProVersionResponse RenewProVersion(Models\RenewProVersionRequest $req) 本接口 (RenewProVersion) 用于续费专业版(包年包月)。

@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVolume(integer $Volume) 设置硬盘容量，单位为GB
  * @method integer getAutoRenew() 获取自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
  * @method void setAutoRenew(integer $AutoRenew) 设置自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
- * @method integer getProtectMode() 获取数据复制方式
- * @method void setProtectMode(integer $ProtectMode) 设置数据复制方式
+ * @method integer getProtectMode() 获取数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
+ * @method void setProtectMode(integer $ProtectMode) 设置数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
  * @method array getRoGroups() 获取只读组详细信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoGroups(array $RoGroups) 设置只读组详细信息
@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域信息
  * @method string getDeadlineTime() 获取实例到期时间
  * @method void setDeadlineTime(string $DeadlineTime) 设置实例到期时间
- * @method integer getDeployMode() 获取可用区部署方式
- * @method void setDeployMode(integer $DeployMode) 设置可用区部署方式
+ * @method integer getDeployMode() 获取可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
+ * @method void setDeployMode(integer $DeployMode) 设置可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
  * @method integer getTaskStatus() 获取实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
  * @method void setTaskStatus(integer $TaskStatus) 设置实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
  * @method MasterInfo getMasterInfo() 获取主实例详细信息
@@ -177,7 +177,7 @@ class InstanceInfo extends AbstractModel
     public $AutoRenew;
 
     /**
-     * @var integer 数据复制方式
+     * @var integer 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
      */
     public $ProtectMode;
 
@@ -213,7 +213,7 @@ class InstanceInfo extends AbstractModel
     public $DeadlineTime;
 
     /**
-     * @var integer 可用区部署方式
+     * @var integer 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
      */
     public $DeployMode;
 
@@ -339,7 +339,7 @@ class InstanceInfo extends AbstractModel
      * @param string $InstanceId 实例ID
      * @param integer $Volume 硬盘容量，单位为GB
      * @param integer $AutoRenew 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
-     * @param integer $ProtectMode 数据复制方式
+     * @param integer $ProtectMode 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
      * @param array $RoGroups 只读组详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubnetId 子网ID，例如：2333
@@ -347,7 +347,7 @@ class InstanceInfo extends AbstractModel
      * @param integer $ProjectId 项目ID
      * @param string $Region 地域信息
      * @param string $DeadlineTime 实例到期时间
-     * @param integer $DeployMode 可用区部署方式
+     * @param integer $DeployMode 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
      * @param integer $TaskStatus 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
      * @param MasterInfo $MasterInfo 主实例详细信息
 注意：此字段可能返回 null，表示取不到有效值。

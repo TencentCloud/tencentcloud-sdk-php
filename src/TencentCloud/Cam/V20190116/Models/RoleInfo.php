@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置角色的最近一次时间
  * @method integer getConsoleLogin() 获取角色是否允许登录
  * @method void setConsoleLogin(integer $ConsoleLogin) 设置角色是否允许登录
+ * @method string getRoleType() 获取角色类型，取user或system
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRoleType(string $RoleType) 设置角色类型，取user或system
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -73,6 +77,12 @@ class RoleInfo extends AbstractModel
      * @var integer 角色是否允许登录
      */
     public $ConsoleLogin;
+
+    /**
+     * @var string 角色类型，取user或system
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RoleType;
     /**
      * @param string $RoleId 角色ID
      * @param string $RoleName 角色名称
@@ -81,6 +91,8 @@ class RoleInfo extends AbstractModel
      * @param string $AddTime 角色的创建时间
      * @param string $UpdateTime 角色的最近一次时间
      * @param integer $ConsoleLogin 角色是否允许登录
+     * @param string $RoleType 角色类型，取user或system
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +132,10 @@ class RoleInfo extends AbstractModel
 
         if (array_key_exists("ConsoleLogin",$param) and $param["ConsoleLogin"] !== null) {
             $this->ConsoleLogin = $param["ConsoleLogin"];
+        }
+
+        if (array_key_exists("RoleType",$param) and $param["RoleType"] !== null) {
+            $this->RoleType = $param["RoleType"];
         }
     }
 }

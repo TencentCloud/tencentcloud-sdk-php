@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置每一张雪碧图大图里小图的数量。
  * @method array getImagePathSet() 获取每一张雪碧图大图的路径。
  * @method void setImagePathSet(array $ImagePathSet) 设置每一张雪碧图大图的路径。
- * @method string getWebVttPath() 获取雪碧图子图位置与时间关系的 WebVtt 文件路径。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在在雪碧大图里的坐标位置，一般被播放器用于实现预览。
- * @method void setWebVttPath(string $WebVttPath) 设置雪碧图子图位置与时间关系的 WebVtt 文件路径。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+ * @method string getWebVttPath() 获取雪碧图子图位置与时间关系的 WebVtt 文件路径。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+ * @method void setWebVttPath(string $WebVttPath) 设置雪碧图子图位置与时间关系的 WebVtt 文件路径。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
  * @method TaskOutputStorage getStorage() 获取雪碧图文件的存储位置。
  * @method void setStorage(TaskOutputStorage $Storage) 设置雪碧图文件的存储位置。
  */
@@ -65,7 +65,7 @@ class MediaImageSpriteItem extends AbstractModel
     public $ImagePathSet;
 
     /**
-     * @var string 雪碧图子图位置与时间关系的 WebVtt 文件路径。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+     * @var string 雪碧图子图位置与时间关系的 WebVtt 文件路径。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
      */
     public $WebVttPath;
 
@@ -79,7 +79,7 @@ class MediaImageSpriteItem extends AbstractModel
      * @param integer $Width 雪碧图小图的宽度。
      * @param integer $TotalCount 每一张雪碧图大图里小图的数量。
      * @param array $ImagePathSet 每一张雪碧图大图的路径。
-     * @param string $WebVttPath 雪碧图子图位置与时间关系的 WebVtt 文件路径。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+     * @param string $WebVttPath 雪碧图子图位置与时间关系的 WebVtt 文件路径。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
      * @param TaskOutputStorage $Storage 雪碧图文件的存储位置。
      */
     function __construct()

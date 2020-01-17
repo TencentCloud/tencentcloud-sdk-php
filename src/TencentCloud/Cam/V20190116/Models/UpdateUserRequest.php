@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置子用户备注
  * @method integer getConsoleLogin() 获取子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
  * @method void setConsoleLogin(integer $ConsoleLogin) 设置子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
- * @method string getPassword() 获取子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大写小字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大写小字母、数字和特殊字符。
- * @method void setPassword(string $Password) 设置子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大写小字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大写小字母、数字和特殊字符。
+ * @method string getPassword() 获取子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。
+ * @method void setPassword(string $Password) 设置子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。
  * @method integer getNeedResetPassword() 获取子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
  * @method void setNeedResetPassword(integer $NeedResetPassword) 设置子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
  * @method string getPhoneNum() 获取手机号
@@ -57,7 +57,7 @@ class UpdateUserRequest extends AbstractModel
     public $ConsoleLogin;
 
     /**
-     * @var string 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大写小字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大写小字母、数字和特殊字符。
+     * @var string 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。
      */
     public $Password;
 
@@ -84,7 +84,7 @@ class UpdateUserRequest extends AbstractModel
      * @param string $Name 子用户用户名
      * @param string $Remark 子用户备注
      * @param integer $ConsoleLogin 子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
-     * @param string $Password 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大写小字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大写小字母、数字和特殊字符。
+     * @param string $Password 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。
      * @param integer $NeedResetPassword 子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
      * @param string $PhoneNum 手机号
      * @param string $CountryCode 区号

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOplogSize(integer $OplogSize) 设置分片Oplog大小，单位为MB
  * @method integer getSecondaryNum() 获取分片从节点数
  * @method void setSecondaryNum(integer $SecondaryNum) 设置分片从节点数
- * @method string getRealReplicaSetId() 获取分片物理id
- * @method void setRealReplicaSetId(string $RealReplicaSetId) 设置分片物理id
+ * @method string getRealReplicaSetId() 获取分片物理ID
+ * @method void setRealReplicaSetId(string $RealReplicaSetId) 设置分片物理ID
  */
 
 /**
@@ -77,7 +77,7 @@ class MongodbShardInfo extends AbstractModel
     public $SecondaryNum;
 
     /**
-     * @var string 分片物理id
+     * @var string 分片物理ID
      */
     public $RealReplicaSetId;
     /**
@@ -88,7 +88,7 @@ class MongodbShardInfo extends AbstractModel
      * @param integer $Volume 分片磁盘规格，单位为MB
      * @param integer $OplogSize 分片Oplog大小，单位为MB
      * @param integer $SecondaryNum 分片从节点数
-     * @param string $RealReplicaSetId 分片物理id
+     * @param string $RealReplicaSetId 分片物理ID
      */
     function __construct()
     {

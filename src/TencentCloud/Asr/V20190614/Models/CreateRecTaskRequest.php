@@ -19,15 +19,15 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method string getEngineModelType() 获取引擎模型类型。
-8k_0：电话 8k 中文普通话通用，可用于双声道音频的识别；
-8k_6：电话 8k 中文普通话话者分离，仅用于单声道；
-16k_0：16k 中文普通话通用；
+8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
+8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
+16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
 16k_ca：16k 粤语。
  * @method void setEngineModelType(string $EngineModelType) 设置引擎模型类型。
-8k_0：电话 8k 中文普通话通用，可用于双声道音频的识别；
-8k_6：电话 8k 中文普通话话者分离，仅用于单声道；
-16k_0：16k 中文普通话通用；
+8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
+8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
+16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
 16k_ca：16k 粤语。
  * @method integer getChannelNum() 获取语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(string $Data) 设置语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于5MB。
  * @method integer getDataLen() 获取数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
  * @method void setDataLen(integer $DataLen) 设置数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
+ * @method string getHotwordId() 获取热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+ * @method void setHotwordId(string $HotwordId) 设置热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
  */
 
 /**
@@ -53,9 +55,9 @@ class CreateRecTaskRequest extends AbstractModel
 {
     /**
      * @var string 引擎模型类型。
-8k_0：电话 8k 中文普通话通用，可用于双声道音频的识别；
-8k_6：电话 8k 中文普通话话者分离，仅用于单声道；
-16k_0：16k 中文普通话通用；
+8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
+8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
+16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
 16k_ca：16k 粤语。
      */
@@ -95,11 +97,16 @@ class CreateRecTaskRequest extends AbstractModel
      * @var integer 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
      */
     public $DataLen;
+
+    /**
+     * @var string 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+     */
+    public $HotwordId;
     /**
      * @param string $EngineModelType 引擎模型类型。
-8k_0：电话 8k 中文普通话通用，可用于双声道音频的识别；
-8k_6：电话 8k 中文普通话话者分离，仅用于单声道；
-16k_0：16k 中文普通话通用；
+8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
+8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
+16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
 16k_ca：16k 粤语。
      * @param integer $ChannelNum 语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
@@ -109,6 +116,7 @@ class CreateRecTaskRequest extends AbstractModel
      * @param string $Url 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
      * @param string $Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于5MB。
      * @param integer $DataLen 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
+     * @param string $HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
      */
     function __construct()
     {
@@ -152,6 +160,10 @@ class CreateRecTaskRequest extends AbstractModel
 
         if (array_key_exists("DataLen",$param) and $param["DataLen"] !== null) {
             $this->DataLen = $param["DataLen"];
+        }
+
+        if (array_key_exists("HotwordId",$param) and $param["HotwordId"] !== null) {
+            $this->HotwordId = $param["HotwordId"];
         }
     }
 }

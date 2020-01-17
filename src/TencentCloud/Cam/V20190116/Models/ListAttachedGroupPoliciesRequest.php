@@ -18,8 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTargetGroupId() 获取用户组 id
- * @method void setTargetGroupId(integer $TargetGroupId) 设置用户组 id
+ * @method integer getTargetGroupId() 获取用户组ID
+ * @method void setTargetGroupId(integer $TargetGroupId) 设置用户组ID
  * @method integer getPage() 获取页码，默认值是 1，从 1 开始
  * @method void setPage(integer $Page) 设置页码，默认值是 1，从 1 开始
  * @method integer getRp() 获取每页大小，默认值是 20
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ListAttachedGroupPoliciesRequest extends AbstractModel
 {
     /**
-     * @var integer 用户组 id
+     * @var integer 用户组ID
      */
     public $TargetGroupId;
 
@@ -46,7 +46,7 @@ class ListAttachedGroupPoliciesRequest extends AbstractModel
      */
     public $Rp;
     /**
-     * @param integer $TargetGroupId 用户组 id
+     * @param integer $TargetGroupId 用户组ID
      * @param integer $Page 页码，默认值是 1，从 1 开始
      * @param integer $Rp 每页大小，默认值是 20
      */

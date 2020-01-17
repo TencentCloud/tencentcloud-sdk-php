@@ -27,6 +27,9 @@ addTime：策略创建时间
 type：1 表示自定义策略，2 表示预设策略 
 description：策略描述 
 createMode：1 表示按业务权限创建的策略，其他值表示可以查看策略语法和通过策略语法更新策略
+Attachments: 关联的用户数
+ServiceType: 策略关联的产品
+IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
  * @method void setList(array $List) 设置策略数组，数组每个成员包括 policyId、policyName、addTime、type、description、 createMode 字段。其中： 
 policyId：策略 id 
 policyName：策略名
@@ -34,6 +37,9 @@ addTime：策略创建时间
 type：1 表示自定义策略，2 表示预设策略 
 description：策略描述 
 createMode：1 表示按业务权限创建的策略，其他值表示可以查看策略语法和通过策略语法更新策略
+Attachments: 关联的用户数
+ServiceType: 策略关联的产品
+IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
  * @method array getServiceTypeList() 获取保留字段
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceTypeList(array $ServiceTypeList) 设置保留字段
@@ -60,6 +66,9 @@ addTime：策略创建时间
 type：1 表示自定义策略，2 表示预设策略 
 description：策略描述 
 createMode：1 表示按业务权限创建的策略，其他值表示可以查看策略语法和通过策略语法更新策略
+Attachments: 关联的用户数
+ServiceType: 策略关联的产品
+IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
      */
     public $List;
 
@@ -82,6 +91,9 @@ addTime：策略创建时间
 type：1 表示自定义策略，2 表示预设策略 
 description：策略描述 
 createMode：1 表示按业务权限创建的策略，其他值表示可以查看策略语法和通过策略语法更新策略
+Attachments: 关联的用户数
+ServiceType: 策略关联的产品
+IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
      * @param array $ServiceTypeList 保留字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

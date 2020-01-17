@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComponentVersion(string $ComponentVersion) 设置组件版本号。
  * @method string getComponentType() 获取组件类型。
 <li>SYSTEM：系统组件</li>
-<li>WEB：WEB组件</li>
+<li>WEB：Web组件</li>
  * @method void setComponentType(string $ComponentType) 设置组件类型。
 <li>SYSTEM：系统组件</li>
-<li>WEB：WEB组件</li>
+<li>WEB：Web组件</li>
  * @method string getComponentName() 获取组件名称。
  * @method void setComponentName(string $ComponentName) 设置组件名称。
  * @method string getModifyTime() 获取组件检测更新时间。
@@ -73,7 +73,7 @@ class Component extends AbstractModel
     /**
      * @var string 组件类型。
 <li>SYSTEM：系统组件</li>
-<li>WEB：WEB组件</li>
+<li>WEB：Web组件</li>
      */
     public $ComponentType;
 
@@ -94,7 +94,7 @@ class Component extends AbstractModel
      * @param string $ComponentVersion 组件版本号。
      * @param string $ComponentType 组件类型。
 <li>SYSTEM：系统组件</li>
-<li>WEB：WEB组件</li>
+<li>WEB：Web组件</li>
      * @param string $ComponentName 组件名称。
      * @param string $ModifyTime 组件检测更新时间。
      */

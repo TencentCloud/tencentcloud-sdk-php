@@ -25,9 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMachineStatus() 获取主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
+<li>MACHINE_STOPPED: 已关机</li>
  * @method void setMachineStatus(string $MachineStatus) 设置主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
+<li>MACHINE_STOPPED: 已关机</li>
  * @method string getUuid() 获取云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
  * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
  * @method string getQuuid() 获取CVM或BM机器唯一Uuid。
@@ -75,6 +77,7 @@ class Machine extends AbstractModel
      * @var string 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
+<li>MACHINE_STOPPED: 已关机</li>
      */
     public $MachineStatus;
 
@@ -132,6 +135,7 @@ class Machine extends AbstractModel
      * @param string $MachineStatus 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
+<li>MACHINE_STOPPED: 已关机</li>
      * @param string $Uuid 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
      * @param string $Quuid CVM或BM机器唯一Uuid。
      * @param integer $VulNum 漏洞数。

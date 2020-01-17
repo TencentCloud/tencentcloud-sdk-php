@@ -18,14 +18,14 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getQuuid() 获取云主机ID
- * @method void setQuuid(string $Quuid) 设置云主机ID
+ * @method string getQuuid() 获取云服务器ID
+ * @method void setQuuid(string $Quuid) 设置云服务器ID
  * @method integer getTagId() 获取标签ID
  * @method void setTagId(integer $TagId) 设置标签ID
- * @method string getMRegion() 获取主机地区
- * @method void setMRegion(string $MRegion) 设置主机地区
- * @method string getMArea() 获取主机地区类型(CVM|BM)
- * @method void setMArea(string $MArea) 设置主机地区类型(CVM|BM)
+ * @method string getMRegion() 获取云服务器地区
+ * @method void setMRegion(string $MRegion) 设置云服务器地区
+ * @method string getMArea() 获取云服务器类型(CVM|BM)
+ * @method void setMArea(string $MArea) 设置云服务器类型(CVM|BM)
  */
 
 /**
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class AddMachineTagRequest extends AbstractModel
 {
     /**
-     * @var string 云主机ID
+     * @var string 云服务器ID
      */
     public $Quuid;
 
@@ -44,19 +44,19 @@ class AddMachineTagRequest extends AbstractModel
     public $TagId;
 
     /**
-     * @var string 主机地区
+     * @var string 云服务器地区
      */
     public $MRegion;
 
     /**
-     * @var string 主机地区类型(CVM|BM)
+     * @var string 云服务器类型(CVM|BM)
      */
     public $MArea;
     /**
-     * @param string $Quuid 云主机ID
+     * @param string $Quuid 云服务器ID
      * @param integer $TagId 标签ID
-     * @param string $MRegion 主机地区
-     * @param string $MArea 主机地区类型(CVM|BM)
+     * @param string $MRegion 云服务器地区
+     * @param string $MArea 云服务器类型(CVM|BM)
      */
     function __construct()
     {

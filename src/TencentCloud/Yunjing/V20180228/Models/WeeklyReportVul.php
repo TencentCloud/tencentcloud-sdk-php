@@ -23,11 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVulName() 获取漏洞名称。
  * @method void setVulName(string $VulName) 设置漏洞名称。
  * @method string getVulType() 获取漏洞类型。
-<li> WEB : WEB漏洞</li>
+<li> WEB : Web漏洞</li>
 <li> SYSTEM :系统组件漏洞</li>
 <li> BASELINE : 安全基线</li>
  * @method void setVulType(string $VulType) 设置漏洞类型。
-<li> WEB : WEB漏洞</li>
+<li> WEB : Web漏洞</li>
 <li> SYSTEM :系统组件漏洞</li>
 <li> BASELINE : 安全基线</li>
  * @method string getDescription() 获取漏洞描述。
@@ -61,7 +61,7 @@ class WeeklyReportVul extends AbstractModel
 
     /**
      * @var string 漏洞类型。
-<li> WEB : WEB漏洞</li>
+<li> WEB : Web漏洞</li>
 <li> SYSTEM :系统组件漏洞</li>
 <li> BASELINE : 安全基线</li>
      */
@@ -88,7 +88,7 @@ class WeeklyReportVul extends AbstractModel
      * @param string $MachineIp 主机内网IP。
      * @param string $VulName 漏洞名称。
      * @param string $VulType 漏洞类型。
-<li> WEB : WEB漏洞</li>
+<li> WEB : Web漏洞</li>
 <li> SYSTEM :系统组件漏洞</li>
 <li> BASELINE : 安全基线</li>
      * @param string $Description 漏洞描述。

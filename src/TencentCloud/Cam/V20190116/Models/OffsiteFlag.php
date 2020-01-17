@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotifyEmail(integer $NotifyEmail) 设置邮箱通知
  * @method integer getNotifyWechat() 获取微信通知
  * @method void setNotifyWechat(integer $NotifyWechat) 设置微信通知
+ * @method integer getTips() 获取提示
+ * @method void setTips(integer $Tips) 设置提示
  */
 
 /**
@@ -52,11 +54,17 @@ class OffsiteFlag extends AbstractModel
      * @var integer 微信通知
      */
     public $NotifyWechat;
+
+    /**
+     * @var integer 提示
+     */
+    public $Tips;
     /**
      * @param integer $VerifyFlag 验证标识
      * @param integer $NotifyPhone 手机通知
      * @param integer $NotifyEmail 邮箱通知
      * @param integer $NotifyWechat 微信通知
+     * @param integer $Tips 提示
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class OffsiteFlag extends AbstractModel
 
         if (array_key_exists("NotifyWechat",$param) and $param["NotifyWechat"] !== null) {
             $this->NotifyWechat = $param["NotifyWechat"];
+        }
+
+        if (array_key_exists("Tips",$param) and $param["Tips"] !== null) {
+            $this->Tips = $param["Tips"];
         }
     }
 }

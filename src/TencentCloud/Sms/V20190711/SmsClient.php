@@ -22,7 +22,13 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Sms\V20190711\Models as Models;
 
 /**
+* @method Models\AddSmsSignResponse AddSmsSign(Models\AddSmsSignRequest $req) 添加短信签名
+* @method Models\AddSmsTemplateResponse AddSmsTemplate(Models\AddSmsTemplateRequest $req) 添加短信模板
 * @method Models\CallbackStatusStatisticsResponse CallbackStatusStatistics(Models\CallbackStatusStatisticsRequest $req) 统计用户回执的数据。
+* @method Models\DeleteSmsSignResponse DeleteSmsSign(Models\DeleteSmsSignRequest $req) 删除短信签名
+* @method Models\DeleteSmsTemplateResponse DeleteSmsTemplate(Models\DeleteSmsTemplateRequest $req) 删除短信模板
+* @method Models\ModifySmsSignResponse ModifySmsSign(Models\ModifySmsSignRequest $req) 修改短信签名
+* @method Models\ModifySmsTemplateResponse ModifySmsTemplate(Models\ModifySmsTemplateRequest $req) 修改短信模板
 * @method Models\PullSmsReplyStatusResponse PullSmsReplyStatus(Models\PullSmsReplyStatusRequest $req) 拉取短信回复状态。
 * @method Models\PullSmsReplyStatusByPhoneNumberResponse PullSmsReplyStatusByPhoneNumber(Models\PullSmsReplyStatusByPhoneNumberRequest $req) 拉取单个号码短信回复状态。
 * @method Models\PullSmsSendStatusResponse PullSmsSendStatus(Models\PullSmsSendStatusRequest $req) 拉取短信下发状态。

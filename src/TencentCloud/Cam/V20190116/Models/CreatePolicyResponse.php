@@ -18,8 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getPolicyId() 获取新增策略id
- * @method void setPolicyId(integer $PolicyId) 设置新增策略id
+ * @method integer getPolicyId() 获取新增策略ID
+ * @method void setPolicyId(integer $PolicyId) 设置新增策略ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreatePolicyResponse extends AbstractModel
 {
     /**
-     * @var integer 新增策略id
+     * @var integer 新增策略ID
      */
     public $PolicyId;
 
@@ -39,7 +39,7 @@ class CreatePolicyResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $PolicyId 新增策略id
+     * @param integer $PolicyId 新增策略ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

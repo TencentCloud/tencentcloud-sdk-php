@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBucket(string $Bucket) 设置工作流绑定的 COS Bucket 名，如 TopRankVideo-125xxx88。
  * @method string getRegion() 获取工作流绑定的 COS Bucket 所属园区，如 ap-chongiqng。
  * @method void setRegion(string $Region) 设置工作流绑定的 COS Bucket 所属园区，如 ap-chongiqng。
- * @method string getDir() 获取工作流绑定的输入路径目录，如`/movie/201907/`，不填代表根目录`/`。
- * @method void setDir(string $Dir) 设置工作流绑定的输入路径目录，如`/movie/201907/`，不填代表根目录`/`。
+ * @method string getDir() 获取工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。
+ * @method void setDir(string $Dir) 设置工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。
  * @method array getFormats() 获取工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。
  * @method void setFormats(array $Formats) 设置工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。
  */
@@ -44,7 +44,7 @@ class CosFileUploadTrigger extends AbstractModel
     public $Region;
 
     /**
-     * @var string 工作流绑定的输入路径目录，如`/movie/201907/`，不填代表根目录`/`。
+     * @var string 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。
      */
     public $Dir;
 
@@ -55,7 +55,7 @@ class CosFileUploadTrigger extends AbstractModel
     /**
      * @param string $Bucket 工作流绑定的 COS Bucket 名，如 TopRankVideo-125xxx88。
      * @param string $Region 工作流绑定的 COS Bucket 所属园区，如 ap-chongiqng。
-     * @param string $Dir 工作流绑定的输入路径目录，如`/movie/201907/`，不填代表根目录`/`。
+     * @param string $Dir 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。
      * @param array $Formats 工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。
      */
     function __construct()

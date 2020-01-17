@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyDocument(string $PolicyDocument) 设置策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
  * @method string getDescription() 获取角色描述
  * @method void setDescription(string $Description) 设置角色描述
- * @method integer getConsoleLogin() 获取是否允许登录
- * @method void setConsoleLogin(integer $ConsoleLogin) 设置是否允许登录
+ * @method integer getConsoleLogin() 获取是否允许登录 1 为允许 0 为不允许
+ * @method void setConsoleLogin(integer $ConsoleLogin) 设置是否允许登录 1 为允许 0 为不允许
  */
 
 /**
@@ -49,14 +49,14 @@ class CreateRoleRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer 是否允许登录
+     * @var integer 是否允许登录 1 为允许 0 为不允许
      */
     public $ConsoleLogin;
     /**
      * @param string $RoleName 角色名称
      * @param string $PolicyDocument 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
      * @param string $Description 角色描述
-     * @param integer $ConsoleLogin 是否允许登录
+     * @param integer $ConsoleLogin 是否允许登录 1 为允许 0 为不允许
      */
     function __construct()
     {

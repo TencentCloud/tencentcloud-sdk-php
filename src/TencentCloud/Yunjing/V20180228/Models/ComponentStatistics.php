@@ -25,10 +25,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getComponentName() 获取组件名称。
  * @method void setComponentName(string $ComponentName) 设置组件名称。
  * @method string getComponentType() 获取组件类型。
-<li>WEB：web组件</li>
+<li>WEB：Web组件</li>
 <li>SYSTEM：系统组件</li>
  * @method void setComponentType(string $ComponentType) 设置组件类型。
-<li>WEB：web组件</li>
+<li>WEB：Web组件</li>
 <li>SYSTEM：系统组件</li>
  * @method string getDescription() 获取组件描述。
  * @method void setDescription(string $Description) 设置组件描述。
@@ -56,7 +56,7 @@ class ComponentStatistics extends AbstractModel
 
     /**
      * @var string 组件类型。
-<li>WEB：web组件</li>
+<li>WEB：Web组件</li>
 <li>SYSTEM：系统组件</li>
      */
     public $ComponentType;
@@ -70,7 +70,7 @@ class ComponentStatistics extends AbstractModel
      * @param integer $MachineNum 主机数量。
      * @param string $ComponentName 组件名称。
      * @param string $ComponentType 组件类型。
-<li>WEB：web组件</li>
+<li>WEB：Web组件</li>
 <li>SYSTEM：系统组件</li>
      * @param string $Description 组件描述。
      */

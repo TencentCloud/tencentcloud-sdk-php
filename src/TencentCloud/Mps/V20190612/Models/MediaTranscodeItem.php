@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置转码后文件的目标存储。
  * @method string getPath() 获取转码后的视频文件路径。
  * @method void setPath(string $Path) 设置转码后的视频文件路径。
- * @method integer getDefinition() 获取转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
- * @method void setDefinition(integer $Definition) 设置转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+ * @method integer getDefinition() 获取转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/862/37042)。
+ * @method void setDefinition(integer $Definition) 设置转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/862/37042)。
  * @method integer getBitrate() 获取视频流码率平均值与音频流码率平均值之和， 单位：bps。
  * @method void setBitrate(integer $Bitrate) 设置视频流码率平均值与音频流码率平均值之和， 单位：bps。
  * @method integer getHeight() 获取视频流高度的最大值，单位：px。
@@ -60,7 +60,7 @@ class MediaTranscodeItem extends AbstractModel
     public $Path;
 
     /**
-     * @var integer 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * @var integer 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/862/37042)。
      */
     public $Definition;
 
@@ -111,7 +111,7 @@ class MediaTranscodeItem extends AbstractModel
     /**
      * @param TaskOutputStorage $OutputStorage 转码后文件的目标存储。
      * @param string $Path 转码后的视频文件路径。
-     * @param integer $Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * @param integer $Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/862/37042)。
      * @param integer $Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
      * @param integer $Height 视频流高度的最大值，单位：px。
      * @param integer $Width 视频流宽度的最大值，单位：px。

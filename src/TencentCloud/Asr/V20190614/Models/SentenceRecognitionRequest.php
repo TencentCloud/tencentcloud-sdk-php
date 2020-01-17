@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
  * @method integer getSubServiceType() 获取子服务类型。2： 一句话识别。
  * @method void setSubServiceType(integer $SubServiceType) 设置子服务类型。2： 一句话识别。
- * @method string getEngSerViceType() 获取引擎类型。
-8k：电话 8k 中文普通话通用；
-16k：16k 中文普通话通用；
+ * @method string getEngSerViceType() 获取引擎模型类型。
+8k_zh：电话 8k 中文普通话通用；
+16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
 16k_ca：16k 粤语。
- * @method void setEngSerViceType(string $EngSerViceType) 设置引擎类型。
-8k：电话 8k 中文普通话通用；
-16k：16k 中文普通话通用；
+ * @method void setEngSerViceType(string $EngSerViceType) 设置引擎模型类型。
+8k_zh：电话 8k 中文普通话通用；
+16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
 16k_ca：16k 粤语。
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(string $Data) 设置语音数据，当SourceType 值为1（本地语音数据上传）时必须填写，当SourceType 值为0（语音 URL上传）可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于600KB。
  * @method integer getDataLen() 获取数据长度，单位为字节。当 SourceType 值为1（本地语音数据上传）时必须填写，当 SourceType 值为0（语音 URL上传）可不写（此数据长度为数据未进行base64编码时的数据长度）。
  * @method void setDataLen(integer $DataLen) 设置数据长度，单位为字节。当 SourceType 值为1（本地语音数据上传）时必须填写，当 SourceType 值为0（语音 URL上传）可不写（此数据长度为数据未进行base64编码时的数据长度）。
+ * @method string getHotwordId() 获取热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+ * @method void setHotwordId(string $HotwordId) 设置热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
  */
 
 /**
@@ -62,9 +64,9 @@ class SentenceRecognitionRequest extends AbstractModel
     public $SubServiceType;
 
     /**
-     * @var string 引擎类型。
-8k：电话 8k 中文普通话通用；
-16k：16k 中文普通话通用；
+     * @var string 引擎模型类型。
+8k_zh：电话 8k 中文普通话通用；
+16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
 16k_ca：16k 粤语。
      */
@@ -99,12 +101,17 @@ class SentenceRecognitionRequest extends AbstractModel
      * @var integer 数据长度，单位为字节。当 SourceType 值为1（本地语音数据上传）时必须填写，当 SourceType 值为0（语音 URL上传）可不写（此数据长度为数据未进行base64编码时的数据长度）。
      */
     public $DataLen;
+
+    /**
+     * @var string 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+     */
+    public $HotwordId;
     /**
      * @param integer $ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      * @param integer $SubServiceType 子服务类型。2： 一句话识别。
-     * @param string $EngSerViceType 引擎类型。
-8k：电话 8k 中文普通话通用；
-16k：16k 中文普通话通用；
+     * @param string $EngSerViceType 引擎模型类型。
+8k_zh：电话 8k 中文普通话通用；
+16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
 16k_ca：16k 粤语。
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
@@ -113,6 +120,7 @@ class SentenceRecognitionRequest extends AbstractModel
      * @param string $Url 语音 URL，公网可下载。当 SourceType 值为 0（语音 URL上传） 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时间长度要小于60s。
      * @param string $Data 语音数据，当SourceType 值为1（本地语音数据上传）时必须填写，当SourceType 值为0（语音 URL上传）可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于600KB。
      * @param integer $DataLen 数据长度，单位为字节。当 SourceType 值为1（本地语音数据上传）时必须填写，当 SourceType 值为0（语音 URL上传）可不写（此数据长度为数据未进行base64编码时的数据长度）。
+     * @param string $HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
      */
     function __construct()
     {
@@ -160,6 +168,10 @@ class SentenceRecognitionRequest extends AbstractModel
 
         if (array_key_exists("DataLen",$param) and $param["DataLen"] !== null) {
             $this->DataLen = $param["DataLen"];
+        }
+
+        if (array_key_exists("HotwordId",$param) and $param["HotwordId"] !== null) {
+            $this->HotwordId = $param["HotwordId"];
         }
     }
 }

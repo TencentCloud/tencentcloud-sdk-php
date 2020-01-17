@@ -75,18 +75,18 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
  * @method void setDetail(boolean $Detail) 设置多域名查询时，默认（false)返回多个域名的汇总数据
 可按需指定为 true，返回每一个 Domain 的明细数据（statusCode 指标暂不支持）
  * @method integer getIsp() 获取查询中国境内CDN数据时，指定运营商查询，不填充表示查询所有运营商
-运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
+运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定运营商查询时，不可同时指定省份、IP协议查询
  * @method void setIsp(integer $Isp) 设置查询中国境内CDN数据时，指定运营商查询，不填充表示查询所有运营商
-运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
+运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定运营商查询时，不可同时指定省份、IP协议查询
  * @method integer getDistrict() 获取查询中国境内CDN数据时，指定省份查询，不填充表示查询所有省份
 查询中国境外CDN数据时，指定国家/地区查询，不填充表示查询所有国家/地区
-省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定（中国境内）省份查询时，不可同时指定运营商、IP协议查询
  * @method void setDistrict(integer $District) 设置查询中国境内CDN数据时，指定省份查询，不填充表示查询所有省份
 查询中国境外CDN数据时，指定国家/地区查询，不填充表示查询所有国家/地区
-省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定（中国境内）省份查询时，不可同时指定运营商、IP协议查询
  * @method string getProtocol() 获取指定协议查询，不填充表示查询所有协议
 all：所有协议
@@ -185,7 +185,7 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
 
     /**
      * @var integer 查询中国境内CDN数据时，指定运营商查询，不填充表示查询所有运营商
-运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
+运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定运营商查询时，不可同时指定省份、IP协议查询
      */
     public $Isp;
@@ -193,7 +193,7 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
     /**
      * @var integer 查询中国境内CDN数据时，指定省份查询，不填充表示查询所有省份
 查询中国境外CDN数据时，指定国家/地区查询，不填充表示查询所有国家/地区
-省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定（中国境内）省份查询时，不可同时指定运营商、IP协议查询
      */
     public $District;
@@ -263,11 +263,11 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
      * @param boolean $Detail 多域名查询时，默认（false)返回多个域名的汇总数据
 可按需指定为 true，返回每一个 Domain 的明细数据（statusCode 指标暂不支持）
      * @param integer $Isp 查询中国境内CDN数据时，指定运营商查询，不填充表示查询所有运营商
-运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
+运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定运营商查询时，不可同时指定省份、IP协议查询
      * @param integer $District 查询中国境内CDN数据时，指定省份查询，不填充表示查询所有省份
 查询中国境外CDN数据时，指定国家/地区查询，不填充表示查询所有国家/地区
-省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定（中国境内）省份查询时，不可同时指定运营商、IP协议查询
      * @param string $Protocol 指定协议查询，不填充表示查询所有协议
 all：所有协议

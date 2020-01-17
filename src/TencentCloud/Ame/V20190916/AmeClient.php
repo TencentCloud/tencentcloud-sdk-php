@@ -26,6 +26,7 @@ use TencentCloud\Ame\V20190916\Models as Models;
 * @method Models\DescribeLyricResponse DescribeLyric(Models\DescribeLyricRequest $req) 根据接口的模式及歌曲ID来取得歌词信息。
 * @method Models\DescribeMusicResponse DescribeMusic(Models\DescribeMusicRequest $req) 根据接口的模式及歌曲ID来取得对应权限的歌曲播放地址等信息。
 * @method Models\DescribeStationsResponse DescribeStations(Models\DescribeStationsRequest $req) 获取素材库列表时使用
+* @method Models\ReportDataResponse ReportData(Models\ReportDataRequest $req) 客户上报用户数据功能，为了更好的为用户提供优质服务
  */
 
 class AmeClient extends AbstractClient

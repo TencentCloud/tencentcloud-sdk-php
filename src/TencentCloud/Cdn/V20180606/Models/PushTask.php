@@ -42,6 +42,10 @@ global：全球
 mainland：境内
 overseas：境外
 global：全球
+ * @method string getUpdateTime() 获取预热任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateTime(string $UpdateTime) 设置预热任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -84,6 +88,12 @@ overseas：境外
 global：全球
      */
     public $Area;
+
+    /**
+     * @var string 预热任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateTime;
     /**
      * @param string $TaskId 预热任务 ID
      * @param string $Url 预热 URL
@@ -97,6 +107,8 @@ process：预热中
 mainland：境内
 overseas：境外
 global：全球
+     * @param string $UpdateTime 预热任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -132,6 +144,10 @@ global：全球
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

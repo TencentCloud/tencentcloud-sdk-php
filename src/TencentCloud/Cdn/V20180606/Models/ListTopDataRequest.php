@@ -18,10 +18,22 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStartTime() 获取查询起始日期，如：2018-09-09 00:00:00。目前只支持按天粒度的数据查询，只取入参中的天数信息。
- * @method void setStartTime(string $StartTime) 设置查询起始日期，如：2018-09-09 00:00:00。目前只支持按天粒度的数据查询，只取入参中的天数信息。
- * @method string getEndTime() 获取查询结束日期，如：2018-09-10 00:00:00。目前只支持按天粒度的数据查询，只取入参中的天数信息。例如，要查询2018-09-10的数据，输入StartTime=2018-09-10 00:00:00，EndTime=2018-09-10 00:00:00即可。
- * @method void setEndTime(string $EndTime) 设置查询结束日期，如：2018-09-10 00:00:00。目前只支持按天粒度的数据查询，只取入参中的天数信息。例如，要查询2018-09-10的数据，输入StartTime=2018-09-10 00:00:00，EndTime=2018-09-10 00:00:00即可。
+ * @method string getStartTime() 获取查询起始日期，如：2018-09-09
+仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
+返回大于等于起始日期当天 00:00:00 点产生的数据
+仅支持 90 天内数据查询
+ * @method void setStartTime(string $StartTime) 设置查询起始日期，如：2018-09-09
+仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
+返回大于等于起始日期当天 00:00:00 点产生的数据
+仅支持 90 天内数据查询
+ * @method string getEndTime() 获取查询结束日期，如：2018-09-10
+仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
+返回小于等于结束日期当天 23:59:59 产生的数据
+EndTime 需要大于等于 StartTime
+ * @method void setEndTime(string $EndTime) 设置查询结束日期，如：2018-09-10
+仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
+返回小于等于结束日期当天 23:59:59 产生的数据
+EndTime 需要大于等于 StartTime
  * @method string getMetric() 获取排序对象，支持以下几种形式：
 url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
 path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
@@ -98,12 +110,18 @@ client：指定查询客户端地区（用户请求终端所在地区）数据�
 class ListTopDataRequest extends AbstractModel
 {
     /**
-     * @var string 查询起始日期，如：2018-09-09 00:00:00。目前只支持按天粒度的数据查询，只取入参中的天数信息。
+     * @var string 查询起始日期，如：2018-09-09
+仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
+返回大于等于起始日期当天 00:00:00 点产生的数据
+仅支持 90 天内数据查询
      */
     public $StartTime;
 
     /**
-     * @var string 查询结束日期，如：2018-09-10 00:00:00。目前只支持按天粒度的数据查询，只取入参中的天数信息。例如，要查询2018-09-10的数据，输入StartTime=2018-09-10 00:00:00，EndTime=2018-09-10 00:00:00即可。
+     * @var string 查询结束日期，如：2018-09-10
+仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
+返回小于等于结束日期当天 23:59:59 产生的数据
+EndTime 需要大于等于 StartTime
      */
     public $EndTime;
 
@@ -173,8 +191,14 @@ client：指定查询客户端地区（用户请求终端所在地区）数据�
      */
     public $AreaType;
     /**
-     * @param string $StartTime 查询起始日期，如：2018-09-09 00:00:00。目前只支持按天粒度的数据查询，只取入参中的天数信息。
-     * @param string $EndTime 查询结束日期，如：2018-09-10 00:00:00。目前只支持按天粒度的数据查询，只取入参中的天数信息。例如，要查询2018-09-10的数据，输入StartTime=2018-09-10 00:00:00，EndTime=2018-09-10 00:00:00即可。
+     * @param string $StartTime 查询起始日期，如：2018-09-09
+仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
+返回大于等于起始日期当天 00:00:00 点产生的数据
+仅支持 90 天内数据查询
+     * @param string $EndTime 查询结束日期，如：2018-09-10
+仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
+返回小于等于结束日期当天 23:59:59 产生的数据
+EndTime 需要大于等于 StartTime
      * @param string $Metric 排序对象，支持以下几种形式：
 url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
 path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）

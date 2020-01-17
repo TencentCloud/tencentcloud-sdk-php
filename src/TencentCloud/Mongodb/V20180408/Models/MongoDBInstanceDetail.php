@@ -102,8 +102,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(integer $InstanceType) 设置实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
  * @method string getInstanceStatusDesc() 获取实例状态描述
  * @method void setInstanceStatusDesc(string $InstanceStatusDesc) 设置实例状态描述
- * @method string getRealInstanceId() 获取实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
- * @method void setRealInstanceId(string $RealInstanceId) 设置实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+ * @method string getRealInstanceId() 获取实例对应的物理实例ID，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+ * @method void setRealInstanceId(string $RealInstanceId) 设置实例对应的物理实例ID，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
  */
 
 /**
@@ -302,7 +302,7 @@ class MongoDBInstanceDetail extends AbstractModel
     public $InstanceStatusDesc;
 
     /**
-     * @var string 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+     * @var string 实例对应的物理实例ID，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
      */
     public $RealInstanceId;
     /**
@@ -348,7 +348,7 @@ class MongoDBInstanceDetail extends AbstractModel
      * @param integer $Protocol 协议信息，可能的返回值：1-mongodb，2-dynamodb
      * @param integer $InstanceType 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
      * @param string $InstanceStatusDesc 实例状态描述
-     * @param string $RealInstanceId 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+     * @param string $RealInstanceId 实例对应的物理实例ID，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
      */
     function __construct()
     {

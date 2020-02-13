@@ -18,8 +18,12 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDetectedText() 获取识别出的文本行内容
- * @method void setDetectedText(string $DetectedText) 设置识别出的文本行内容
+ * @method string getItem() 获取识别出的字段名称（关键字）
+ * @method void setItem(string $Item) 设置识别出的字段名称（关键字）
+ * @method string getDetectedText() 获取识别出的字段名称对应的值，也就是字段Item对应的字符串结果
+ * @method void setDetectedText(string $DetectedText) 设置识别出的字段名称对应的值，也就是字段Item对应的字符串结果
+ * @method ItemCoord getItemcoord() 获取文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+ * @method void setItemcoord(ItemCoord $Itemcoord) 设置文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
  */
 
 /**
@@ -28,11 +32,23 @@ use TencentCloud\Common\AbstractModel;
 class TextEduPaper extends AbstractModel
 {
     /**
-     * @var string 识别出的文本行内容
+     * @var string 识别出的字段名称（关键字）
+     */
+    public $Item;
+
+    /**
+     * @var string 识别出的字段名称对应的值，也就是字段Item对应的字符串结果
      */
     public $DetectedText;
+
     /**
-     * @param string $DetectedText 识别出的文本行内容
+     * @var ItemCoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     */
+    public $Itemcoord;
+    /**
+     * @param string $Item 识别出的字段名称（关键字）
+     * @param string $DetectedText 识别出的字段名称对应的值，也就是字段Item对应的字符串结果
+     * @param ItemCoord $Itemcoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
      */
     function __construct()
     {
@@ -46,8 +62,17 @@ class TextEduPaper extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Item",$param) and $param["Item"] !== null) {
+            $this->Item = $param["Item"];
+        }
+
         if (array_key_exists("DetectedText",$param) and $param["DetectedText"] !== null) {
             $this->DetectedText = $param["DetectedText"];
+        }
+
+        if (array_key_exists("Itemcoord",$param) and $param["Itemcoord"] !== null) {
+            $this->Itemcoord = new ItemCoord();
+            $this->Itemcoord->deserialize($param["Itemcoord"]);
         }
     }
 }

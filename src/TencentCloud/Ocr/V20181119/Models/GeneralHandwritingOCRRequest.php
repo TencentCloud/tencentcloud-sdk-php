@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+ * @method string getScene() 获取场景字段，默认不用填写。
+可选值:only_hw  表示只输出手写体识别结果，过滤印刷体。
+ * @method void setScene(string $Scene) 设置场景字段，默认不用填写。
+可选值:only_hw  表示只输出手写体识别结果，过滤印刷体。
  */
 
 /**
@@ -59,6 +63,12 @@ class GeneralHandwritingOCRRequest extends AbstractModel
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      */
     public $ImageUrl;
+
+    /**
+     * @var string 场景字段，默认不用填写。
+可选值:only_hw  表示只输出手写体识别结果，过滤印刷体。
+     */
+    public $Scene;
     /**
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
@@ -69,6 +79,8 @@ class GeneralHandwritingOCRRequest extends AbstractModel
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * @param string $Scene 场景字段，默认不用填写。
+可选值:only_hw  表示只输出手写体识别结果，过滤印刷体。
      */
     function __construct()
     {
@@ -88,6 +100,10 @@ class GeneralHandwritingOCRRequest extends AbstractModel
 
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
+            $this->Scene = $param["Scene"];
         }
     }
 }

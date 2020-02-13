@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchWord(string $SearchWord) 设置通过id和name进行过滤
  * @method array getNamespaceTypeList() 获取查询的命名空间类型列表
  * @method void setNamespaceTypeList(array $NamespaceTypeList) 设置查询的命名空间类型列表
+ * @method string getNamespaceName() 获取通过命名空间名精确过滤
+ * @method void setNamespaceName(string $NamespaceName) 设置通过命名空间名精确过滤
+ * @method string getIsDefault() 获取通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
+ * @method void setIsDefault(string $IsDefault) 设置通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
  */
 
 /**
@@ -80,6 +84,16 @@ class DescribeSimpleNamespacesRequest extends AbstractModel
      * @var array 查询的命名空间类型列表
      */
     public $NamespaceTypeList;
+
+    /**
+     * @var string 通过命名空间名精确过滤
+     */
+    public $NamespaceName;
+
+    /**
+     * @var string 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
+     */
+    public $IsDefault;
     /**
      * @param array $NamespaceIdList 命名空间ID列表，不传入时查询全量
      * @param string $ClusterId 集群ID，不传入时查询全量
@@ -89,6 +103,8 @@ class DescribeSimpleNamespacesRequest extends AbstractModel
      * @param array $NamespaceResourceTypeList 查询资源类型列表
      * @param string $SearchWord 通过id和name进行过滤
      * @param array $NamespaceTypeList 查询的命名空间类型列表
+     * @param string $NamespaceName 通过命名空间名精确过滤
+     * @param string $IsDefault 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class DescribeSimpleNamespacesRequest extends AbstractModel
 
         if (array_key_exists("NamespaceTypeList",$param) and $param["NamespaceTypeList"] !== null) {
             $this->NamespaceTypeList = $param["NamespaceTypeList"];
+        }
+
+        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
+            $this->NamespaceName = $param["NamespaceName"];
+        }
+
+        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
+            $this->IsDefault = $param["IsDefault"];
         }
     }
 }

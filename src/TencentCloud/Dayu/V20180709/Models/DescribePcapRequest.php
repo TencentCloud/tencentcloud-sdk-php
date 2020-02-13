@@ -18,8 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；shield表示棋牌盾）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；shield表示棋牌盾）
+ * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+ * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method string getId() 获取资源实例ID
  * @method void setId(string $Id) 设置资源实例ID
  * @method string getStartTime() 获取攻击事件的开始时间，格式为"2018-08-28 07:00:00"
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribePcapRequest extends AbstractModel
 {
     /**
-     * @var string 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；shield表示棋牌盾）
+     * @var string 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public $Business;
 
@@ -60,7 +60,7 @@ class DescribePcapRequest extends AbstractModel
      */
     public $Ip;
     /**
-     * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；shield表示棋牌盾）
+     * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param string $Id 资源实例ID
      * @param string $StartTime 攻击事件的开始时间，格式为"2018-08-28 07:00:00"
      * @param string $EndTime 攻击事件的结束时间，格式为"2018-08-28 07:02:00"

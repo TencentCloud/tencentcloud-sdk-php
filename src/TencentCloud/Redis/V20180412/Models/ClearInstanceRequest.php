@@ -18,8 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getPassword() 获取redis的实例密码（免密实例不需要传密码，非免密实例必传）
  * @method void setPassword(string $Password) 设置redis的实例密码（免密实例不需要传密码，非免密实例必传）
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ClearInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string 实例ID
      */
     public $InstanceId;
 
@@ -39,7 +39,7 @@ class ClearInstanceRequest extends AbstractModel
      */
     public $Password;
     /**
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId 实例ID
      * @param string $Password redis的实例密码（免密实例不需要传密码，非免密实例必传）
      */
     function __construct()

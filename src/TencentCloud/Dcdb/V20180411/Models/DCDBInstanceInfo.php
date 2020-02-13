@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method integer getAppId() 获取APPID
- * @method void setAppId(integer $AppId) 设置APPID
+ * @method integer getAppId() 获取AppID
+ * @method void setAppId(integer $AppId) 设置AppID
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method string getRegion() 获取地域
@@ -64,22 +64,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeCount(integer $NodeCount) 设置节点数，2 为一主一从， 3 为一主二从
  * @method integer getIsTmp() 获取临时实例标记，0 为非临时实例
  * @method void setIsTmp(integer $IsTmp) 设置临时实例标记，0 为非临时实例
- * @method string getExclusterId() 获取独享集群Id，为空表示非独享集群实例
- * @method void setExclusterId(string $ExclusterId) 设置独享集群Id，为空表示非独享集群实例
- * @method string getUniqueVpcId() 获取字符串型的私有网络Id
- * @method void setUniqueVpcId(string $UniqueVpcId) 设置字符串型的私有网络Id
- * @method string getUniqueSubnetId() 获取字符串型的私有网络子网Id
- * @method void setUniqueSubnetId(string $UniqueSubnetId) 设置字符串型的私有网络子网Id
- * @method integer getId() 获取数字实例Id（过时字段，请勿依赖该值）
- * @method void setId(integer $Id) 设置数字实例Id（过时字段，请勿依赖该值）
+ * @method string getExclusterId() 获取独享集群ID，为空表示非独享集群实例
+ * @method void setExclusterId(string $ExclusterId) 设置独享集群ID，为空表示非独享集群实例
+ * @method string getUniqueVpcId() 获取字符串型的私有网络ID
+ * @method void setUniqueVpcId(string $UniqueVpcId) 设置字符串型的私有网络ID
+ * @method string getUniqueSubnetId() 获取字符串型的私有网络子网ID
+ * @method void setUniqueSubnetId(string $UniqueSubnetId) 设置字符串型的私有网络子网ID
+ * @method integer getId() 获取数字实例ID（过时字段，请勿依赖该值）
+ * @method void setId(integer $Id) 设置数字实例ID（过时字段，请勿依赖该值）
  * @method string getWanDomain() 获取外网访问的域名，公网可解析
  * @method void setWanDomain(string $WanDomain) 设置外网访问的域名，公网可解析
  * @method string getWanVip() 获取外网 IP 地址，公网可访问
  * @method void setWanVip(string $WanVip) 设置外网 IP 地址，公网可访问
  * @method integer getWanPort() 获取外网端口
  * @method void setWanPort(integer $WanPort) 设置外网端口
- * @method integer getPid() 获取产品类型 Id（过时字段，请勿依赖该值）
- * @method void setPid(integer $Pid) 设置产品类型 Id（过时字段，请勿依赖该值）
+ * @method integer getPid() 获取产品类型 ID（过时字段，请勿依赖该值）
+ * @method void setPid(integer $Pid) 设置产品类型 ID（过时字段，请勿依赖该值）
  * @method string getUpdateTime() 获取实例最后更新时间，格式为 2006-01-02 15:04:05
  * @method void setUpdateTime(string $UpdateTime) 设置实例最后更新时间，格式为 2006-01-02 15:04:05
  * @method string getDbEngine() 获取数据库引擎
@@ -114,7 +114,7 @@ class DCDBInstanceInfo extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer APPID
+     * @var integer AppID
      */
     public $AppId;
 
@@ -219,22 +219,22 @@ class DCDBInstanceInfo extends AbstractModel
     public $IsTmp;
 
     /**
-     * @var string 独享集群Id，为空表示非独享集群实例
+     * @var string 独享集群ID，为空表示非独享集群实例
      */
     public $ExclusterId;
 
     /**
-     * @var string 字符串型的私有网络Id
+     * @var string 字符串型的私有网络ID
      */
     public $UniqueVpcId;
 
     /**
-     * @var string 字符串型的私有网络子网Id
+     * @var string 字符串型的私有网络子网ID
      */
     public $UniqueSubnetId;
 
     /**
-     * @var integer 数字实例Id（过时字段，请勿依赖该值）
+     * @var integer 数字实例ID（过时字段，请勿依赖该值）
      */
     public $Id;
 
@@ -254,7 +254,7 @@ class DCDBInstanceInfo extends AbstractModel
     public $WanPort;
 
     /**
-     * @var integer 产品类型 Id（过时字段，请勿依赖该值）
+     * @var integer 产品类型 ID（过时字段，请勿依赖该值）
      */
     public $Pid;
 
@@ -296,7 +296,7 @@ class DCDBInstanceInfo extends AbstractModel
     /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
-     * @param integer $AppId APPID
+     * @param integer $AppId AppID
      * @param integer $ProjectId 项目ID
      * @param string $Region 地域
      * @param string $Zone 可用区
@@ -317,14 +317,14 @@ class DCDBInstanceInfo extends AbstractModel
      * @param array $ShardDetail 分片详情
      * @param integer $NodeCount 节点数，2 为一主一从， 3 为一主二从
      * @param integer $IsTmp 临时实例标记，0 为非临时实例
-     * @param string $ExclusterId 独享集群Id，为空表示非独享集群实例
-     * @param string $UniqueVpcId 字符串型的私有网络Id
-     * @param string $UniqueSubnetId 字符串型的私有网络子网Id
-     * @param integer $Id 数字实例Id（过时字段，请勿依赖该值）
+     * @param string $ExclusterId 独享集群ID，为空表示非独享集群实例
+     * @param string $UniqueVpcId 字符串型的私有网络ID
+     * @param string $UniqueSubnetId 字符串型的私有网络子网ID
+     * @param integer $Id 数字实例ID（过时字段，请勿依赖该值）
      * @param string $WanDomain 外网访问的域名，公网可解析
      * @param string $WanVip 外网 IP 地址，公网可访问
      * @param integer $WanPort 外网端口
-     * @param integer $Pid 产品类型 Id（过时字段，请勿依赖该值）
+     * @param integer $Pid 产品类型 ID（过时字段，请勿依赖该值）
      * @param string $UpdateTime 实例最后更新时间，格式为 2006-01-02 15:04:05
      * @param string $DbEngine 数据库引擎
      * @param string $DbVersion 数据库引擎版本

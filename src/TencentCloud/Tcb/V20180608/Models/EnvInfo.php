@@ -34,11 +34,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置最后修改时间
  * @method string getStatus() 获取环境状态。包含以下取值：
 <li>NORMAL：正常可用</li>
-<li>HALTED：停服，用量超限或后台封禁</li>
 <li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
  * @method void setStatus(string $Status) 设置环境状态。包含以下取值：
 <li>NORMAL：正常可用</li>
-<li>HALTED：停服，用量超限或后台封禁</li>
 <li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
  * @method array getDatabases() 获取数据库列表
  * @method void setDatabases(array $Databases) 设置数据库列表
@@ -53,6 +51,18 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPackageName() 获取套餐中文名称，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageName(string $PackageName) 设置套餐中文名称，参考DescribePackages接口的返回值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLogServices() 获取云日志服务列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogServices(array $LogServices) 设置云日志服务列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getStaticStorages() 获取静态资源信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStaticStorages(array $StaticStorages) 设置静态资源信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsAutoDegrade() 获取是否到期自动降为免费版
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsAutoDegrade(boolean $IsAutoDegrade) 设置是否到期自动降为免费版
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -91,7 +101,6 @@ class EnvInfo extends AbstractModel
     /**
      * @var string 环境状态。包含以下取值：
 <li>NORMAL：正常可用</li>
-<li>HALTED：停服，用量超限或后台封禁</li>
 <li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
      */
     public $Status;
@@ -122,6 +131,24 @@ class EnvInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageName;
+
+    /**
+     * @var array 云日志服务列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogServices;
+
+    /**
+     * @var array 静态资源信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StaticStorages;
+
+    /**
+     * @var boolean 是否到期自动降为免费版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsAutoDegrade;
     /**
      * @param string $EnvId 账户下该环境唯一标识
      * @param string $Source 环境来源。包含以下取值：
@@ -132,7 +159,6 @@ class EnvInfo extends AbstractModel
      * @param string $UpdateTime 最后修改时间
      * @param string $Status 环境状态。包含以下取值：
 <li>NORMAL：正常可用</li>
-<li>HALTED：停服，用量超限或后台封禁</li>
 <li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
      * @param array $Databases 数据库列表
      * @param array $Storages 存储列表
@@ -140,6 +166,12 @@ class EnvInfo extends AbstractModel
      * @param string $PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageName 套餐中文名称，参考DescribePackages接口的返回值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $LogServices 云日志服务列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $StaticStorages 静态资源信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsAutoDegrade 是否到期自动降为免费版
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -211,6 +243,28 @@ class EnvInfo extends AbstractModel
 
         if (array_key_exists("PackageName",$param) and $param["PackageName"] !== null) {
             $this->PackageName = $param["PackageName"];
+        }
+
+        if (array_key_exists("LogServices",$param) and $param["LogServices"] !== null) {
+            $this->LogServices = [];
+            foreach ($param["LogServices"] as $key => $value){
+                $obj = new LogServiceInfo();
+                $obj->deserialize($value);
+                array_push($this->LogServices, $obj);
+            }
+        }
+
+        if (array_key_exists("StaticStorages",$param) and $param["StaticStorages"] !== null) {
+            $this->StaticStorages = [];
+            foreach ($param["StaticStorages"] as $key => $value){
+                $obj = new StaticStorageInfo();
+                $obj->deserialize($value);
+                array_push($this->StaticStorages, $obj);
+            }
+        }
+
+        if (array_key_exists("IsAutoDegrade",$param) and $param["IsAutoDegrade"] !== null) {
+            $this->IsAutoDegrade = $param["IsAutoDegrade"];
         }
     }
 }

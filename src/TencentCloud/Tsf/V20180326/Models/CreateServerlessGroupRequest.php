@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationId(string $ApplicationId) 设置分组所属应用ID
  * @method string getGroupName() 获取分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
  * @method void setGroupName(string $GroupName) 设置分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
- * @method string getPkgId() 获取程序包Id
- * @method void setPkgId(string $PkgId) 设置程序包Id
- * @method VpcConfig getVpcConfig() 获取VpcConfig对象
- * @method void setVpcConfig(VpcConfig $VpcConfig) 设置VpcConfig对象
+ * @method string getNamespaceId() 获取分组所属名字空间ID
+ * @method void setNamespaceId(string $NamespaceId) 设置分组所属名字空间ID
+ * @method string getClusterId() 获取分组所属集群ID
+ * @method void setClusterId(string $ClusterId) 设置分组所属集群ID
  */
 
 /**
@@ -44,19 +44,19 @@ class CreateServerlessGroupRequest extends AbstractModel
     public $GroupName;
 
     /**
-     * @var string 程序包Id
+     * @var string 分组所属名字空间ID
      */
-    public $PkgId;
+    public $NamespaceId;
 
     /**
-     * @var VpcConfig VpcConfig对象
+     * @var string 分组所属集群ID
      */
-    public $VpcConfig;
+    public $ClusterId;
     /**
      * @param string $ApplicationId 分组所属应用ID
      * @param string $GroupName 分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
-     * @param string $PkgId 程序包Id
-     * @param VpcConfig $VpcConfig VpcConfig对象
+     * @param string $NamespaceId 分组所属名字空间ID
+     * @param string $ClusterId 分组所属集群ID
      */
     function __construct()
     {
@@ -78,13 +78,12 @@ class CreateServerlessGroupRequest extends AbstractModel
             $this->GroupName = $param["GroupName"];
         }
 
-        if (array_key_exists("PkgId",$param) and $param["PkgId"] !== null) {
-            $this->PkgId = $param["PkgId"];
+        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
+            $this->NamespaceId = $param["NamespaceId"];
         }
 
-        if (array_key_exists("VpcConfig",$param) and $param["VpcConfig"] !== null) {
-            $this->VpcConfig = new VpcConfig();
-            $this->VpcConfig->deserialize($param["VpcConfig"]);
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

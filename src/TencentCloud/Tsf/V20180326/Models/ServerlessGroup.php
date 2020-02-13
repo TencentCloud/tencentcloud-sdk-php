@@ -70,6 +70,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgVersion(string $PkgVersion) 设置程序包版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMemory() 获取所需实例内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMemory(string $Memory) 设置所需实例内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceRequest() 获取要求最小实例数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceRequest(integer $InstanceRequest) 设置要求最小实例数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStartupParameters() 获取部署组启动参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartupParameters(string $StartupParameters) 设置部署组启动参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationId() 获取应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationId(string $ApplicationId) 设置应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceCount() 获取部署组实例数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceCount(integer $InstanceCount) 设置部署组实例数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -154,6 +174,36 @@ class ServerlessGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PkgVersion;
+
+    /**
+     * @var string 所需实例内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Memory;
+
+    /**
+     * @var integer 要求最小实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceRequest;
+
+    /**
+     * @var string 部署组启动参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartupParameters;
+
+    /**
+     * @var string 应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationId;
+
+    /**
+     * @var integer 部署组实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceCount;
     /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -180,6 +230,16 @@ class ServerlessGroup extends AbstractModel
      * @param string $SubnetId vpc 子网ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PkgVersion 程序包版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Memory 所需实例内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceRequest 要求最小实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StartupParameters 部署组启动参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationId 应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceCount 部署组实例数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +304,26 @@ class ServerlessGroup extends AbstractModel
 
         if (array_key_exists("PkgVersion",$param) and $param["PkgVersion"] !== null) {
             $this->PkgVersion = $param["PkgVersion"];
+        }
+
+        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
+            $this->Memory = $param["Memory"];
+        }
+
+        if (array_key_exists("InstanceRequest",$param) and $param["InstanceRequest"] !== null) {
+            $this->InstanceRequest = $param["InstanceRequest"];
+        }
+
+        if (array_key_exists("StartupParameters",$param) and $param["StartupParameters"] !== null) {
+            $this->StartupParameters = $param["StartupParameters"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
+        }
+
+        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
+            $this->InstanceCount = $param["InstanceCount"];
         }
     }
 }

@@ -20,16 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getApplicationName() 获取应用名称
  * @method void setApplicationName(string $ApplicationName) 设置应用名称
- * @method string getApplicationType() 获取应用类型
- * @method void setApplicationType(string $ApplicationType) 设置应用类型
+ * @method string getApplicationType() 获取应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
+ * @method void setApplicationType(string $ApplicationType) 设置应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
+ * @method string getMicroserviceType() 获取应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
+ * @method void setMicroserviceType(string $MicroserviceType) 设置应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
  * @method string getApplicationDesc() 获取应用描述
  * @method void setApplicationDesc(string $ApplicationDesc) 设置应用描述
  * @method string getApplicationLogConfig() 获取应用日志配置项，废弃参数
  * @method void setApplicationLogConfig(string $ApplicationLogConfig) 设置应用日志配置项，废弃参数
- * @method string getMicroserviceType() 获取应用微服务类型
- * @method void setMicroserviceType(string $MicroserviceType) 设置应用微服务类型
- * @method string getApplicationResourceType() 获取应有资源类型
- * @method void setApplicationResourceType(string $ApplicationResourceType) 设置应有资源类型
+ * @method string getApplicationResourceType() 获取应用资源类型，废弃参数
+ * @method void setApplicationResourceType(string $ApplicationResourceType) 设置应用资源类型，废弃参数
+ * @method string getApplicationRuntimeType() 获取应用runtime类型
+ * @method void setApplicationRuntimeType(string $ApplicationRuntimeType) 设置应用runtime类型
  */
 
 /**
@@ -43,9 +45,14 @@ class CreateApplicationRequest extends AbstractModel
     public $ApplicationName;
 
     /**
-     * @var string 应用类型
+     * @var string 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
      */
     public $ApplicationType;
+
+    /**
+     * @var string 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
+     */
+    public $MicroserviceType;
 
     /**
      * @var string 应用描述
@@ -58,21 +65,22 @@ class CreateApplicationRequest extends AbstractModel
     public $ApplicationLogConfig;
 
     /**
-     * @var string 应用微服务类型
-     */
-    public $MicroserviceType;
-
-    /**
-     * @var string 应有资源类型
+     * @var string 应用资源类型，废弃参数
      */
     public $ApplicationResourceType;
+
+    /**
+     * @var string 应用runtime类型
+     */
+    public $ApplicationRuntimeType;
     /**
      * @param string $ApplicationName 应用名称
-     * @param string $ApplicationType 应用类型
+     * @param string $ApplicationType 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
+     * @param string $MicroserviceType 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
      * @param string $ApplicationDesc 应用描述
      * @param string $ApplicationLogConfig 应用日志配置项，废弃参数
-     * @param string $MicroserviceType 应用微服务类型
-     * @param string $ApplicationResourceType 应有资源类型
+     * @param string $ApplicationResourceType 应用资源类型，废弃参数
+     * @param string $ApplicationRuntimeType 应用runtime类型
      */
     function __construct()
     {
@@ -94,6 +102,10 @@ class CreateApplicationRequest extends AbstractModel
             $this->ApplicationType = $param["ApplicationType"];
         }
 
+        if (array_key_exists("MicroserviceType",$param) and $param["MicroserviceType"] !== null) {
+            $this->MicroserviceType = $param["MicroserviceType"];
+        }
+
         if (array_key_exists("ApplicationDesc",$param) and $param["ApplicationDesc"] !== null) {
             $this->ApplicationDesc = $param["ApplicationDesc"];
         }
@@ -102,12 +114,12 @@ class CreateApplicationRequest extends AbstractModel
             $this->ApplicationLogConfig = $param["ApplicationLogConfig"];
         }
 
-        if (array_key_exists("MicroserviceType",$param) and $param["MicroserviceType"] !== null) {
-            $this->MicroserviceType = $param["MicroserviceType"];
-        }
-
         if (array_key_exists("ApplicationResourceType",$param) and $param["ApplicationResourceType"] !== null) {
             $this->ApplicationResourceType = $param["ApplicationResourceType"];
+        }
+
+        if (array_key_exists("ApplicationRuntimeType",$param) and $param["ApplicationRuntimeType"] !== null) {
+            $this->ApplicationRuntimeType = $param["ApplicationRuntimeType"];
         }
     }
 }

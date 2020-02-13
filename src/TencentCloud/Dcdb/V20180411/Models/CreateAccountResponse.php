@@ -18,8 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例Id，透传入参。
- * @method void setInstanceId(string $InstanceId) 设置实例Id，透传入参。
+ * @method string getInstanceId() 获取实例ID，透传入参。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，透传入参。
  * @method string getUserName() 获取用户名，透传入参。
  * @method void setUserName(string $UserName) 设置用户名，透传入参。
  * @method string getHost() 获取允许访问的 host，透传入参。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAccountResponse extends AbstractModel
 {
     /**
-     * @var string 实例Id，透传入参。
+     * @var string 实例ID，透传入参。
      */
     public $InstanceId;
 
@@ -60,7 +60,7 @@ class CreateAccountResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $InstanceId 实例Id，透传入参。
+     * @param string $InstanceId 实例ID，透传入参。
      * @param string $UserName 用户名，透传入参。
      * @param string $Host 允许访问的 host，透传入参。
      * @param integer $ReadOnly 透传入参。

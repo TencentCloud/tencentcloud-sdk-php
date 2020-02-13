@@ -18,8 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method array getPrivileges() 获取权限列表。
  * @method void setPrivileges(array $Privileges) 设置权限列表。
  * @method string getUserName() 获取数据库账号用户名
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccountPrivilegesResponse extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string 实例ID
      */
     public $InstanceId;
 
@@ -60,7 +60,7 @@ class DescribeAccountPrivilegesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId 实例ID
      * @param array $Privileges 权限列表。
      * @param string $UserName 数据库账号用户名
      * @param string $Host 数据库账号Host

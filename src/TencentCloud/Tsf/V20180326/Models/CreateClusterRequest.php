@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTsfRegionId(string $TsfRegionId) 设置集群所属TSF地域
  * @method string getTsfZoneId() 获取集群所属TSF可用区
  * @method void setTsfZoneId(string $TsfZoneId) 设置集群所属TSF可用区
+ * @method string getSubnetId() 获取私有网络子网ID
+ * @method void setSubnetId(string $SubnetId) 设置私有网络子网ID
  */
 
 /**
@@ -73,6 +75,11 @@ class CreateClusterRequest extends AbstractModel
      * @var string 集群所属TSF可用区
      */
     public $TsfZoneId;
+
+    /**
+     * @var string 私有网络子网ID
+     */
+    public $SubnetId;
     /**
      * @param string $ClusterName 集群名称
      * @param string $ClusterType 集群类型
@@ -81,6 +88,7 @@ class CreateClusterRequest extends AbstractModel
      * @param string $ClusterDesc 集群备注
      * @param string $TsfRegionId 集群所属TSF地域
      * @param string $TsfZoneId 集群所属TSF可用区
+     * @param string $SubnetId 私有网络子网ID
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("TsfZoneId",$param) and $param["TsfZoneId"] !== null) {
             $this->TsfZoneId = $param["TsfZoneId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

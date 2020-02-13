@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置所指定的删除部分。如果未填写该字段则参数无效。可选值有：
 <li>TranscodeFiles（删除转码文件）。</li>
 <li>WechatPublishFiles（删除微信发布文件）。</li>
- * @method integer getDefinition() 获取删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+ * @method integer getDefinition() 获取删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
 默认值为0，表示删除参数Type指定种类下所有的视频。
- * @method void setDefinition(integer $Definition) 设置删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+ * @method void setDefinition(integer $Definition) 设置删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
 默认值为0，表示删除参数Type指定种类下所有的视频。
  */
 
@@ -44,7 +44,7 @@ class MediaDeleteItem extends AbstractModel
     public $Type;
 
     /**
-     * @var integer 删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * @var integer 删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
 默认值为0，表示删除参数Type指定种类下所有的视频。
      */
     public $Definition;
@@ -52,7 +52,7 @@ class MediaDeleteItem extends AbstractModel
      * @param string $Type 所指定的删除部分。如果未填写该字段则参数无效。可选值有：
 <li>TranscodeFiles（删除转码文件）。</li>
 <li>WechatPublishFiles（删除微信发布文件）。</li>
-     * @param integer $Definition 删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * @param integer $Definition 删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
 默认值为0，表示删除参数Type指定种类下所有的视频。
      */
     function __construct()

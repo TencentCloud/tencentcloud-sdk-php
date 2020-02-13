@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) 设置计算节点期望个数
  * @method string getResourceType() 获取计算环境资源类型，当前为CVM和CPM（黑石）
  * @method void setResourceType(string $ResourceType) 设置计算环境资源类型，当前为CVM和CPM（黑石）
+ * @method string getNextAction() 获取下一步动作
+ * @method void setNextAction(string $NextAction) 设置下一步动作
  */
 
 /**
@@ -80,6 +82,11 @@ class ComputeEnvView extends AbstractModel
      * @var string 计算环境资源类型，当前为CVM和CPM（黑石）
      */
     public $ResourceType;
+
+    /**
+     * @var string 下一步动作
+     */
+    public $NextAction;
     /**
      * @param string $EnvId 计算环境ID
      * @param string $EnvName 计算环境名称
@@ -89,6 +96,7 @@ class ComputeEnvView extends AbstractModel
      * @param string $EnvType 计算环境类型
      * @param integer $DesiredComputeNodeCount 计算节点期望个数
      * @param string $ResourceType 计算环境资源类型，当前为CVM和CPM（黑石）
+     * @param string $NextAction 下一步动作
      */
     function __construct()
     {
@@ -134,6 +142,10 @@ class ComputeEnvView extends AbstractModel
 
         if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
             $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("NextAction",$param) and $param["NextAction"] !== null) {
+            $this->NextAction = $param["NextAction"];
         }
     }
 }

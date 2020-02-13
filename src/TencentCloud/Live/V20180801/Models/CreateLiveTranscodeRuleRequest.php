@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getDomainName() 获取播放域名。
  * @method void setDomainName(string $DomainName) 设置播放域名。
- * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
- * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+ * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填空。
+ * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填空。
  * @method string getStreamName() 获取流名称。如果只绑定域名或路径，则此处填空。
  * @method void setStreamName(string $StreamName) 设置流名称。如果只绑定域名或路径，则此处填空。
  * @method integer getTemplateId() 获取指定已有的模板Id。
@@ -39,7 +39,7 @@ class CreateLiveTranscodeRuleRequest extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @var string 推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填空。
      */
     public $AppName;
 
@@ -54,7 +54,7 @@ class CreateLiveTranscodeRuleRequest extends AbstractModel
     public $TemplateId;
     /**
      * @param string $DomainName 播放域名。
-     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填空。
      * @param string $StreamName 流名称。如果只绑定域名或路径，则此处填空。
      * @param integer $TemplateId 指定已有的模板Id。
      */

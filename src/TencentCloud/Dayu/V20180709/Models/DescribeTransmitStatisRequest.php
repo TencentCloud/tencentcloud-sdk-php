@@ -18,8 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包）
+ * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；bgp表示独享包；bgp-multip表示共享包）
+ * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；bgp表示独享包；bgp-multip表示共享包）
  * @method string getId() 获取资源实例ID
  * @method void setId(string $Id) 设置资源实例ID
  * @method string getMetricName() 获取指标名，取值：
@@ -44,7 +44,7 @@ pkg表示包速率；
 class DescribeTransmitStatisRequest extends AbstractModel
 {
     /**
-     * @var string 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包）
+     * @var string 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；bgp表示独享包；bgp-multip表示共享包）
      */
     public $Business;
 
@@ -80,7 +80,7 @@ pkg表示包速率；
      */
     public $IpList;
     /**
-     * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包）
+     * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；bgp表示独享包；bgp-multip表示共享包）
      * @param string $Id 资源实例ID
      * @param string $MetricName 指标名，取值：
 traffic表示流量带宽；

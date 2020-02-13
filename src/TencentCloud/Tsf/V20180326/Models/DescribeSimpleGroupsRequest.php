@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置部署组ID，不填写时查询全量
  * @method string getSearchWord() 获取模糊查询，部署组名称，不填写时查询全量
  * @method void setSearchWord(string $SearchWord) 设置模糊查询，部署组名称，不填写时查询全量
+ * @method string getAppMicroServiceType() 获取部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
+ * @method void setAppMicroServiceType(string $AppMicroServiceType) 设置部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
  */
 
 /**
@@ -80,6 +82,11 @@ class DescribeSimpleGroupsRequest extends AbstractModel
      * @var string 模糊查询，部署组名称，不填写时查询全量
      */
     public $SearchWord;
+
+    /**
+     * @var string 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
+     */
+    public $AppMicroServiceType;
     /**
      * @param array $GroupIdList 部署组ID列表，不填写时查询全量
      * @param string $ApplicationId 应用ID，不填写时查询全量
@@ -89,6 +96,7 @@ class DescribeSimpleGroupsRequest extends AbstractModel
      * @param integer $Offset 起始偏移量
      * @param string $GroupId 部署组ID，不填写时查询全量
      * @param string $SearchWord 模糊查询，部署组名称，不填写时查询全量
+     * @param string $AppMicroServiceType 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeSimpleGroupsRequest extends AbstractModel
 
         if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
             $this->SearchWord = $param["SearchWord"];
+        }
+
+        if (array_key_exists("AppMicroServiceType",$param) and $param["AppMicroServiceType"] !== null) {
+            $this->AppMicroServiceType = $param["AppMicroServiceType"];
         }
     }
 }

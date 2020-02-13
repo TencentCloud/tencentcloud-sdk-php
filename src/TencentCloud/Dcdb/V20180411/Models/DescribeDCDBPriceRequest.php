@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getZone() 获取欲新购实例的可用区ID。
  * @method void setZone(string $Zone) 设置欲新购实例的可用区ID。
- * @method integer getCount() 获取欲购买实例的数量，目前只支持购买1个实例
- * @method void setCount(integer $Count) 设置欲购买实例的数量，目前只支持购买1个实例
+ * @method integer getCount() 获取欲购买实例的数量，目前支持购买1-10个实例
+ * @method void setCount(integer $Count) 设置欲购买实例的数量，目前支持购买1-10个实例
  * @method integer getPeriod() 获取欲购买的时长，单位：月。
  * @method void setPeriod(integer $Period) 设置欲购买的时长，单位：月。
  * @method integer getShardNodeCount() 获取单个分片节点个数大小，可以通过 DescribeShardSpec
@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  查询实例规格获得。
  * @method integer getShardCount() 获取实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
  * @method void setShardCount(integer $ShardCount) 设置实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
+ * @method string getPaymode() 获取付费类型。postpaid：按量付费   prepaid：预付费
+ * @method void setPaymode(string $Paymode) 设置付费类型。postpaid：按量付费   prepaid：预付费
  */
 
 /**
@@ -51,7 +53,7 @@ class DescribeDCDBPriceRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer 欲购买实例的数量，目前只支持购买1个实例
+     * @var integer 欲购买实例的数量，目前支持购买1-10个实例
      */
     public $Count;
 
@@ -82,9 +84,14 @@ class DescribeDCDBPriceRequest extends AbstractModel
      * @var integer 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
      */
     public $ShardCount;
+
+    /**
+     * @var string 付费类型。postpaid：按量付费   prepaid：预付费
+     */
+    public $Paymode;
     /**
      * @param string $Zone 欲新购实例的可用区ID。
-     * @param integer $Count 欲购买实例的数量，目前只支持购买1个实例
+     * @param integer $Count 欲购买实例的数量，目前支持购买1-10个实例
      * @param integer $Period 欲购买的时长，单位：月。
      * @param integer $ShardNodeCount 单个分片节点个数大小，可以通过 DescribeShardSpec
  查询实例规格获得。
@@ -93,6 +100,7 @@ class DescribeDCDBPriceRequest extends AbstractModel
      * @param integer $ShardStorage 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      * @param integer $ShardCount 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
+     * @param string $Paymode 付费类型。postpaid：按量付费   prepaid：预付费
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeDCDBPriceRequest extends AbstractModel
 
         if (array_key_exists("ShardCount",$param) and $param["ShardCount"] !== null) {
             $this->ShardCount = $param["ShardCount"];
+        }
+
+        if (array_key_exists("Paymode",$param) and $param["Paymode"] !== null) {
+            $this->Paymode = $param["Paymode"];
         }
     }
 }

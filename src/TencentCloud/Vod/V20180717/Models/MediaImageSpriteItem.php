@@ -38,9 +38,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageUrlSet(array $ImageUrlSet) 设置每一张雪碧图大图的地址。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWebVttUrl() 获取雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+ * @method string getWebVttUrl() 获取雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWebVttUrl(string $WebVttUrl) 设置雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+ * @method void setWebVttUrl(string $WebVttUrl) 设置雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -80,7 +80,7 @@ class MediaImageSpriteItem extends AbstractModel
     public $ImageUrlSet;
 
     /**
-     * @var string 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+     * @var string 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebVttUrl;
@@ -95,7 +95,7 @@ class MediaImageSpriteItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ImageUrlSet 每一张雪碧图大图的地址。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WebVttUrl 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+     * @param string $WebVttUrl 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

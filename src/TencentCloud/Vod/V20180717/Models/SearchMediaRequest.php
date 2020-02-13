@@ -30,16 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClassIds(array $ClassIds) 设置分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。数组长度限制：10。
  * @method string getStartTime() 获取创建时间的开始时间。
 <li>大于等于开始时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
  * @method void setStartTime(string $StartTime) 设置创建时间的开始时间。
 <li>大于等于开始时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
  * @method string getEndTime() 获取创建时间的结束时间。
 <li>小于结束时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
  * @method void setEndTime(string $EndTime) 设置创建时间的结束时间。
 <li>小于结束时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
  * @method string getSourceType() 获取媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
  * @method void setSourceType(string $SourceType) 设置媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
  * @method string getStreamId() 获取推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
@@ -89,14 +89,14 @@ class SearchMediaRequest extends AbstractModel
     /**
      * @var string 创建时间的开始时间。
 <li>大于等于开始时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      */
     public $StartTime;
 
     /**
      * @var string 创建时间的结束时间。
 <li>小于结束时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      */
     public $EndTime;
 
@@ -146,10 +146,10 @@ class SearchMediaRequest extends AbstractModel
      * @param array $ClassIds 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。数组长度限制：10。
      * @param string $StartTime 创建时间的开始时间。
 <li>大于等于开始时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      * @param string $EndTime 创建时间的结束时间。
 <li>小于结束时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      * @param string $SourceType 媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
      * @param string $StreamId 推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
      * @param string $Vid 直播录制文件的唯一标识。

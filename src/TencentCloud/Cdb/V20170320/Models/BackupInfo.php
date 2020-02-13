@@ -28,16 +28,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIntranetUrl(string $IntranetUrl) 设置内网下载地址
  * @method string getInternetUrl() 获取外网下载地址
  * @method void setInternetUrl(string $InternetUrl) 设置外网下载地址
- * @method string getType() 获取日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备
- * @method void setType(string $Type) 设置日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备
+ * @method string getType() 获取日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
+ * @method void setType(string $Type) 设置日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
  * @method integer getBackupId() 获取备份子任务的ID，删除备份文件时使用
  * @method void setBackupId(integer $BackupId) 设置备份子任务的ID，删除备份文件时使用
- * @method string getStatus() 获取备份任务状态
- * @method void setStatus(string $Status) 设置备份任务状态
+ * @method string getStatus() 获取备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+ * @method void setStatus(string $Status) 设置备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
  * @method string getFinishTime() 获取备份任务的完成时间
  * @method void setFinishTime(string $FinishTime) 设置备份任务的完成时间
- * @method string getCreator() 获取备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值
- * @method void setCreator(string $Creator) 设置备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值
+ * @method string getCreator() 获取（该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
+ * @method void setCreator(string $Creator) 设置（该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
+ * @method string getStartTime() 获取备份任务的开始时间
+ * @method void setStartTime(string $StartTime) 设置备份任务的开始时间
+ * @method string getMethod() 获取备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
+ * @method void setMethod(string $Method) 设置备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
+ * @method string getWay() 获取备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
+ * @method void setWay(string $Way) 设置备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
  */
 
 /**
@@ -71,7 +77,7 @@ class BackupInfo extends AbstractModel
     public $InternetUrl;
 
     /**
-     * @var string 日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备
+     * @var string 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
      */
     public $Type;
 
@@ -81,7 +87,7 @@ class BackupInfo extends AbstractModel
     public $BackupId;
 
     /**
-     * @var string 备份任务状态
+     * @var string 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
      */
     public $Status;
 
@@ -91,20 +97,38 @@ class BackupInfo extends AbstractModel
     public $FinishTime;
 
     /**
-     * @var string 备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值
+     * @var string （该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
      */
     public $Creator;
+
+    /**
+     * @var string 备份任务的开始时间
+     */
+    public $StartTime;
+
+    /**
+     * @var string 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
+     */
+    public $Method;
+
+    /**
+     * @var string 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
+     */
+    public $Way;
     /**
      * @param string $Name 备份文件名
      * @param integer $Size 备份文件大小，单位：Byte
      * @param string $Date 备份快照时间，时间格式：2016-03-17 02:10:37
      * @param string $IntranetUrl 内网下载地址
      * @param string $InternetUrl 外网下载地址
-     * @param string $Type 日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备
+     * @param string $Type 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
      * @param integer $BackupId 备份子任务的ID，删除备份文件时使用
-     * @param string $Status 备份任务状态
+     * @param string $Status 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
      * @param string $FinishTime 备份任务的完成时间
-     * @param string $Creator 备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值
+     * @param string $Creator （该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
+     * @param string $StartTime 备份任务的开始时间
+     * @param string $Method 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
+     * @param string $Way 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
      */
     function __construct()
     {
@@ -156,6 +180,18 @@ class BackupInfo extends AbstractModel
 
         if (array_key_exists("Creator",$param) and $param["Creator"] !== null) {
             $this->Creator = $param["Creator"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
+            $this->Method = $param["Method"];
+        }
+
+        if (array_key_exists("Way",$param) and $param["Way"] !== null) {
+            $this->Way = $param["Way"];
         }
     }
 }

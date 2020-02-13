@@ -22,6 +22,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tsf\V20180326\Models as Models;
 
 /**
+* @method Models\AddClusterInstancesResponse AddClusterInstances(Models\AddClusterInstancesRequest $req) 添加云主机节点至TSF集群
 * @method Models\AddInstancesResponse AddInstances(Models\AddInstancesRequest $req) 添加云主机节点至TSF集群
 * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) 创建应用
 * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建集群

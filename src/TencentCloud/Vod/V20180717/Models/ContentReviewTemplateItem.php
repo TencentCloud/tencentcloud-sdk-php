@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) 设置鉴政控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ProhibitedConfigureInfo getProhibitedConfigure() 获取违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) 设置违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method UserDefineConfigureInfo getUserDefineConfigure() 获取用户自定义内容审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) 设置用户自定义内容审核控制参数。
@@ -48,10 +58,10 @@ use TencentCloud\Common\AbstractModel;
 <li>OFF：否。</li>
  * @method float getScreenshotInterval() 获取截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
  * @method void setScreenshotInterval(float $ScreenshotInterval) 设置截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
- * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+ * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  */
 
 /**
@@ -93,6 +103,15 @@ class ContentReviewTemplateItem extends AbstractModel
     public $PoliticalConfigure;
 
     /**
+     * @var ProhibitedConfigureInfo 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProhibitedConfigure;
+
+    /**
      * @var UserDefineConfigureInfo 用户自定义内容审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -111,12 +130,12 @@ class ContentReviewTemplateItem extends AbstractModel
     public $ScreenshotInterval;
 
     /**
-     * @var string 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @var string 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $CreateTime;
 
     /**
-     * @var string 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @var string 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $UpdateTime;
     /**
@@ -129,14 +148,19 @@ class ContentReviewTemplateItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PoliticalConfigureInfo $PoliticalConfigure 鉴政控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProhibitedConfigureInfo $ProhibitedConfigure 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UserDefineConfigureInfo $UserDefineConfigure 用户自定义内容审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReviewWallSwitch 审核结果是否进入审核墙（对审核结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
      * @param float $ScreenshotInterval 截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
-     * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     function __construct()
     {
@@ -175,6 +199,11 @@ class ContentReviewTemplateItem extends AbstractModel
         if (array_key_exists("PoliticalConfigure",$param) and $param["PoliticalConfigure"] !== null) {
             $this->PoliticalConfigure = new PoliticalConfigureInfo();
             $this->PoliticalConfigure->deserialize($param["PoliticalConfigure"]);
+        }
+
+        if (array_key_exists("ProhibitedConfigure",$param) and $param["ProhibitedConfigure"] !== null) {
+            $this->ProhibitedConfigure = new ProhibitedConfigureInfo();
+            $this->ProhibitedConfigure->deserialize($param["ProhibitedConfigure"]);
         }
 
         if (array_key_exists("UserDefineConfigure",$param) and $param["UserDefineConfigure"] !== null) {

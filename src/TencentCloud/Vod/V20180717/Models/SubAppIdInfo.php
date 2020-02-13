@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置子应用名称。
  * @method string getDescription() 获取子应用简介。
  * @method void setDescription(string $Description) 设置子应用简介。
- * @method string getCreateTime() 获取子应用创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method void setCreateTime(string $CreateTime) 设置子应用创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+ * @method string getCreateTime() 获取子应用创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setCreateTime(string $CreateTime) 设置子应用创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getStatus() 获取子应用状态，有效值：
 <li>On：启用；</li>
 <li>Off：停用。</li>
@@ -55,7 +55,7 @@ class SubAppIdInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var string 子应用创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @var string 子应用创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $CreateTime;
 
@@ -69,7 +69,7 @@ class SubAppIdInfo extends AbstractModel
      * @param integer $SubAppId 子应用 ID。
      * @param string $Name 子应用名称。
      * @param string $Description 子应用简介。
-     * @param string $CreateTime 子应用创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @param string $CreateTime 子应用创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $Status 子应用状态，有效值：
 <li>On：启用；</li>
 <li>Off：停用。</li>

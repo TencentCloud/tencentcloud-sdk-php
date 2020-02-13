@@ -18,8 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾）
+ * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+ * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method string getId() 获取资源实例ID
  * @method void setId(string $Id) 设置资源实例ID
  * @method string getMetricName() 获取指标名，取值：
@@ -66,7 +66,7 @@ avg表示均值；
 class DescribeBaradDataRequest extends AbstractModel
 {
     /**
-     * @var string 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾）
+     * @var string 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public $Business;
 
@@ -121,7 +121,7 @@ avg表示均值；
      */
     public $Ip;
     /**
-     * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾）
+     * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param string $Id 资源实例ID
      * @param string $MetricName 指标名，取值：
 connum表示TCP活跃连接数；

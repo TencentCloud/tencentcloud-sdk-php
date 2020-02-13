@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvType(string $EnvType) 设置计算环境类型
  * @method string getResourceType() 获取计算环境资源类型，当前为CVM和CPM（黑石）
  * @method void setResourceType(string $ResourceType) 设置计算环境资源类型，当前为CVM和CPM（黑石）
+ * @method string getNextAction() 获取下一步动作
+ * @method void setNextAction(string $NextAction) 设置下一步动作
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -91,6 +93,11 @@ class DescribeComputeEnvResponse extends AbstractModel
     public $ResourceType;
 
     /**
+     * @var string 下一步动作
+     */
+    public $NextAction;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -104,6 +111,7 @@ class DescribeComputeEnvResponse extends AbstractModel
      * @param integer $DesiredComputeNodeCount 计算节点期望个数
      * @param string $EnvType 计算环境类型
      * @param string $ResourceType 计算环境资源类型，当前为CVM和CPM（黑石）
+     * @param string $NextAction 下一步动作
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -159,6 +167,10 @@ class DescribeComputeEnvResponse extends AbstractModel
 
         if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
             $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("NextAction",$param) and $param["NextAction"] !== null) {
+            $this->NextAction = $param["NextAction"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

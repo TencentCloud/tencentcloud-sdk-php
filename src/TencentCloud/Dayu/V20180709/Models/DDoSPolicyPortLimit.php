@@ -18,8 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getProtocol() 获取协议，取值范围[tcp,udp,icmp,all]
- * @method void setProtocol(string $Protocol) 设置协议，取值范围[tcp,udp,icmp,all]
+ * @method string getProtocol() 获取协议，取值范围[tcp,udp,all]
+ * @method void setProtocol(string $Protocol) 设置协议，取值范围[tcp,udp,all]
  * @method integer getDPortStart() 获取开始目的端口，取值范围[0,65535]
  * @method void setDPortStart(integer $DPortStart) 设置开始目的端口，取值范围[0,65535]
  * @method integer getDPortEnd() 获取结束目的端口，取值范围[0,65535]，要求大于等于开始目的端口
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class DDoSPolicyPortLimit extends AbstractModel
 {
     /**
-     * @var string 协议，取值范围[tcp,udp,icmp,all]
+     * @var string 协议，取值范围[tcp,udp,all]
      */
     public $Protocol;
 
@@ -86,7 +86,7 @@ class DDoSPolicyPortLimit extends AbstractModel
      */
     public $Kind;
     /**
-     * @param string $Protocol 协议，取值范围[tcp,udp,icmp,all]
+     * @param string $Protocol 协议，取值范围[tcp,udp,all]
      * @param integer $DPortStart 开始目的端口，取值范围[0,65535]
      * @param integer $DPortEnd 结束目的端口，取值范围[0,65535]，要求大于等于开始目的端口
      * @param integer $SPortStart 开始源端口，取值范围[0,65535]

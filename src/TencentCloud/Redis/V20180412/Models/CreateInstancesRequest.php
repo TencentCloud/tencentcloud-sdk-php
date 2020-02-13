@@ -18,8 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getZoneId() 获取实例所属的可用区id
- * @method void setZoneId(integer $ZoneId) 设置实例所属的可用区id
+ * @method integer getZoneId() 获取实例所属的可用区ID
+ * @method void setZoneId(integer $ZoneId) 设置实例所属的可用区ID
  * @method integer getTypeId() 获取实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
  * @method void setTypeId(integer $TypeId) 设置实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
  * @method integer getMemSize() 获取实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
@@ -62,7 +62,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer 实例所属的可用区id
+     * @var integer 实例所属的可用区ID
      */
     public $ZoneId;
 
@@ -151,7 +151,7 @@ class CreateInstancesRequest extends AbstractModel
      */
     public $NoAuth;
     /**
-     * @param integer $ZoneId 实例所属的可用区id
+     * @param integer $ZoneId 实例所属的可用区ID
      * @param integer $TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
      * @param integer $MemSize 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
      * @param integer $GoodsNum 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准

@@ -18,10 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getBackupId() 获取备份Id，通过DescribeInstanceBackups接口可查
- * @method void setBackupId(string $BackupId) 设置备份Id，通过DescribeInstanceBackups接口可查
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getBackupId() 获取备份ID，通过DescribeInstanceBackups接口可查
+ * @method void setBackupId(string $BackupId) 设置备份ID，通过DescribeInstanceBackups接口可查
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBackupUrlRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string 实例ID
      */
     public $InstanceId;
 
     /**
-     * @var string 备份Id，通过DescribeInstanceBackups接口可查
+     * @var string 备份ID，通过DescribeInstanceBackups接口可查
      */
     public $BackupId;
     /**
-     * @param string $InstanceId 实例Id
-     * @param string $BackupId 备份Id，通过DescribeInstanceBackups接口可查
+     * @param string $InstanceId 实例ID
+     * @param string $BackupId 备份ID，通过DescribeInstanceBackups接口可查
      */
     function __construct()
     {

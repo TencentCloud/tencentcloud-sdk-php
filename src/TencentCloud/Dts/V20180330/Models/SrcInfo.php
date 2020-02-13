@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) 设置实例的密码
  * @method string getRdsInstanceId() 获取阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
  * @method void setRdsInstanceId(string $RdsInstanceId) 设置阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
- * @method string getCvmInstanceId() 获取CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
- * @method void setCvmInstanceId(string $CvmInstanceId) 设置CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
+ * @method string getCvmInstanceId() 获取CVM实例短ID，格式如：ins-olgl39y8，与云服务器控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
+ * @method void setCvmInstanceId(string $CvmInstanceId) 设置CVM实例短ID，格式如：ins-olgl39y8，与云服务器控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
  * @method string getUniqDcgId() 获取专线网关ID，格式如：dcg-0rxtqqxb
  * @method void setUniqDcgId(string $UniqDcgId) 设置专线网关ID，格式如：dcg-0rxtqqxb
  * @method string getVpcId() 获取私有网络ID，格式如：vpc-92jblxto
@@ -90,7 +90,7 @@ class SrcInfo extends AbstractModel
     public $RdsInstanceId;
 
     /**
-     * @var string CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
+     * @var string CVM实例短ID，格式如：ins-olgl39y8，与云服务器控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
      */
     public $CvmInstanceId;
 
@@ -146,7 +146,7 @@ class SrcInfo extends AbstractModel
      * @param string $User 实例的用户名
      * @param string $Password 实例的密码
      * @param string $RdsInstanceId 阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
-     * @param string $CvmInstanceId CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
+     * @param string $CvmInstanceId CVM实例短ID，格式如：ins-olgl39y8，与云服务器控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
      * @param string $UniqDcgId 专线网关ID，格式如：dcg-0rxtqqxb
      * @param string $VpcId 私有网络ID，格式如：vpc-92jblxto
      * @param string $SubnetId 私有网络下的子网ID，格式如：subnet-3paxmkdz

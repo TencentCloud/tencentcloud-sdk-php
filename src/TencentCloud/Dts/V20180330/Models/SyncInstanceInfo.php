@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getRegion() 获取地域英文名，如：ap-guangzhou
  * @method void setRegion(string $Region) 设置地域英文名，如：ap-guangzhou
- * @method string getInstanceId() 获取实例短Id
- * @method void setInstanceId(string $InstanceId) 设置实例短Id
+ * @method string getInstanceId() 获取实例短ID
+ * @method void setInstanceId(string $InstanceId) 设置实例短ID
  */
 
 /**
@@ -35,12 +35,12 @@ class SyncInstanceInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var string 实例短Id
+     * @var string 实例短ID
      */
     public $InstanceId;
     /**
      * @param string $Region 地域英文名，如：ap-guangzhou
-     * @param string $InstanceId 实例短Id
+     * @param string $InstanceId 实例短ID
      */
     function __construct()
     {

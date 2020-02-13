@@ -18,8 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getFlowIds() 获取异步任务Id，可通过 DescribeFlow 查询任务状态。
- * @method void setFlowIds(array $FlowIds) 设置异步任务Id，可通过 DescribeFlow 查询任务状态。
+ * @method array getFlowIds() 获取异步任务ID，可通过 DescribeFlow 查询任务状态。
+ * @method void setFlowIds(array $FlowIds) 设置异步任务ID，可通过 DescribeFlow 查询任务状态。
  * @method array getInstanceIds() 获取透传入参。
  * @method void setInstanceIds(array $InstanceIds) 设置透传入参。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class InitDCDBInstancesResponse extends AbstractModel
 {
     /**
-     * @var array 异步任务Id，可通过 DescribeFlow 查询任务状态。
+     * @var array 异步任务ID，可通过 DescribeFlow 查询任务状态。
      */
     public $FlowIds;
 
@@ -46,7 +46,7 @@ class InitDCDBInstancesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $FlowIds 异步任务Id，可通过 DescribeFlow 查询任务状态。
+     * @param array $FlowIds 异步任务ID，可通过 DescribeFlow 查询任务状态。
      * @param array $InstanceIds 透传入参。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

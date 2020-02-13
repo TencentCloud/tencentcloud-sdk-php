@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxUdpPackageLen(string $MaxUdpPackageLen) 设置UDP业务报文长度最大值，取值范围(0, 1500)，必须大于等于UDP业务报文长度最小值
  * @method string getHasVPN() 获取是否有VPN业务，取值[no（没有）, yes（有）]
  * @method void setHasVPN(string $HasVPN) 设置是否有VPN业务，取值[no（没有）, yes（有）]
+ * @method string getTcpPortList() 获取TCP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
+ * @method void setTcpPortList(string $TcpPortList) 设置TCP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
+ * @method string getUdpPortList() 获取UDP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
+ * @method void setUdpPortList(string $UdpPortList) 设置UDP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
  */
 
 /**
@@ -178,6 +182,16 @@ class CreateDDoSPolicyCaseRequest extends AbstractModel
      * @var string 是否有VPN业务，取值[no（没有）, yes（有）]
      */
     public $HasVPN;
+
+    /**
+     * @var string TCP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
+     */
+    public $TcpPortList;
+
+    /**
+     * @var string UDP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
+     */
+    public $UdpPortList;
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param string $CaseName 策略场景名，字符串长度小于64
@@ -201,6 +215,8 @@ class CreateDDoSPolicyCaseRequest extends AbstractModel
      * @param string $MinUdpPackageLen UDP业务报文长度最小值，取值范围(0, 1500)
      * @param string $MaxUdpPackageLen UDP业务报文长度最大值，取值范围(0, 1500)，必须大于等于UDP业务报文长度最小值
      * @param string $HasVPN 是否有VPN业务，取值[no（没有）, yes（有）]
+     * @param string $TcpPortList TCP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
+     * @param string $UdpPortList UDP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
      */
     function __construct()
     {
@@ -300,6 +316,14 @@ class CreateDDoSPolicyCaseRequest extends AbstractModel
 
         if (array_key_exists("HasVPN",$param) and $param["HasVPN"] !== null) {
             $this->HasVPN = $param["HasVPN"];
+        }
+
+        if (array_key_exists("TcpPortList",$param) and $param["TcpPortList"] !== null) {
+            $this->TcpPortList = $param["TcpPortList"];
+        }
+
+        if (array_key_exists("UdpPortList",$param) and $param["UdpPortList"] !== null) {
+            $this->UdpPortList = $param["UdpPortList"];
         }
     }
 }

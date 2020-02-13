@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMigrateOption(MigrateOption $MigrateOption) 设置迁移任务配置选项
  * @method string getSrcDatabaseType() 获取源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
  * @method void setSrcDatabaseType(string $SrcDatabaseType) 设置源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
- * @method string getSrcAccessType() 获取源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
- * @method void setSrcAccessType(string $SrcAccessType) 设置源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
+ * @method string getSrcAccessType() 获取源实例接入类型，值包括：extranet(外网),cvm(CVM自建实例),dcg(专线接入的实例),vpncloud(云VPN接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
+ * @method void setSrcAccessType(string $SrcAccessType) 设置源实例接入类型，值包括：extranet(外网),cvm(CVM自建实例),dcg(专线接入的实例),vpncloud(云VPN接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
  * @method SrcInfo getSrcInfo() 获取源实例信息，具体内容跟迁移任务类型相关
  * @method void setSrcInfo(SrcInfo $SrcInfo) 设置源实例信息，具体内容跟迁移任务类型相关
  * @method string getDstDatabaseType() 获取目标实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
@@ -75,7 +75,7 @@ class CreateMigrateJobRequest extends AbstractModel
     public $SrcDatabaseType;
 
     /**
-     * @var string 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
+     * @var string 源实例接入类型，值包括：extranet(外网),cvm(CVM自建实例),dcg(专线接入的实例),vpncloud(云VPN接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
      */
     public $SrcAccessType;
 
@@ -115,7 +115,7 @@ Schema:s1}]
      * @param string $JobName 数据迁移任务名称
      * @param MigrateOption $MigrateOption 迁移任务配置选项
      * @param string $SrcDatabaseType 源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
-     * @param string $SrcAccessType 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
+     * @param string $SrcAccessType 源实例接入类型，值包括：extranet(外网),cvm(CVM自建实例),dcg(专线接入的实例),vpncloud(云VPN接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
      * @param SrcInfo $SrcInfo 源实例信息，具体内容跟迁移任务类型相关
      * @param string $DstDatabaseType 目标实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
      * @param string $DstAccessType 目标实例接入类型，目前支持：cdb（腾讯云数据库实例）

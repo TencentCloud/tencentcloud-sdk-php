@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsFilterExcluster(boolean $IsFilterExcluster) 设置标识是否使用ExclusterType字段, false不使用，true使用
  * @method integer getExclusterType() 获取实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
  * @method void setExclusterType(integer $ExclusterType) 设置实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
- * @method array getExclusterIds() 获取按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
- * @method void setExclusterIds(array $ExclusterIds) 设置按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
+ * @method array getExclusterIds() 获取按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9
+ * @method void setExclusterIds(array $ExclusterIds) 设置按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9
  */
 
 /**
@@ -126,7 +126,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $ExclusterType;
 
     /**
-     * @var array 按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
+     * @var array 按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9
      */
     public $ExclusterIds;
     /**
@@ -144,7 +144,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $OriginSerialIds 按 OriginSerialId 查询
      * @param boolean $IsFilterExcluster 标识是否使用ExclusterType字段, false不使用，true使用
      * @param integer $ExclusterType 实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
-     * @param array $ExclusterIds 按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
+     * @param array $ExclusterIds 按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9
      */
     function __construct()
     {

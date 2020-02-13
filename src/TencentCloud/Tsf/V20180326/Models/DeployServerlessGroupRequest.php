@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置部署组ID
  * @method string getPkgId() 获取程序包ID
  * @method void setPkgId(string $PkgId) 设置程序包ID
- * @method VpcConfig getVpcConfig() 获取VpcConfig对象，和创建接口中对象一致
- * @method void setVpcConfig(VpcConfig $VpcConfig) 设置VpcConfig对象，和创建接口中对象一致
+ * @method string getMemory() 获取所需实例内存大小，取值为 1Gi 2Gi 4Gi 8Gi 16Gi，缺省为 1Gi，不传表示维持原态
+ * @method void setMemory(string $Memory) 设置所需实例内存大小，取值为 1Gi 2Gi 4Gi 8Gi 16Gi，缺省为 1Gi，不传表示维持原态
+ * @method integer getInstanceRequest() 获取要求最小实例数，取值范围 [1, 4]，缺省为 1，不传表示维持原态
+ * @method void setInstanceRequest(integer $InstanceRequest) 设置要求最小实例数，取值范围 [1, 4]，缺省为 1，不传表示维持原态
+ * @method string getStartupParameters() 获取部署组启动参数，不传表示维持原态
+ * @method void setStartupParameters(string $StartupParameters) 设置部署组启动参数，不传表示维持原态
  */
 
 /**
@@ -42,13 +46,25 @@ class DeployServerlessGroupRequest extends AbstractModel
     public $PkgId;
 
     /**
-     * @var VpcConfig VpcConfig对象，和创建接口中对象一致
+     * @var string 所需实例内存大小，取值为 1Gi 2Gi 4Gi 8Gi 16Gi，缺省为 1Gi，不传表示维持原态
      */
-    public $VpcConfig;
+    public $Memory;
+
+    /**
+     * @var integer 要求最小实例数，取值范围 [1, 4]，缺省为 1，不传表示维持原态
+     */
+    public $InstanceRequest;
+
+    /**
+     * @var string 部署组启动参数，不传表示维持原态
+     */
+    public $StartupParameters;
     /**
      * @param string $GroupId 部署组ID
      * @param string $PkgId 程序包ID
-     * @param VpcConfig $VpcConfig VpcConfig对象，和创建接口中对象一致
+     * @param string $Memory 所需实例内存大小，取值为 1Gi 2Gi 4Gi 8Gi 16Gi，缺省为 1Gi，不传表示维持原态
+     * @param integer $InstanceRequest 要求最小实例数，取值范围 [1, 4]，缺省为 1，不传表示维持原态
+     * @param string $StartupParameters 部署组启动参数，不传表示维持原态
      */
     function __construct()
     {
@@ -70,9 +86,16 @@ class DeployServerlessGroupRequest extends AbstractModel
             $this->PkgId = $param["PkgId"];
         }
 
-        if (array_key_exists("VpcConfig",$param) and $param["VpcConfig"] !== null) {
-            $this->VpcConfig = new VpcConfig();
-            $this->VpcConfig->deserialize($param["VpcConfig"]);
+        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
+            $this->Memory = $param["Memory"];
+        }
+
+        if (array_key_exists("InstanceRequest",$param) and $param["InstanceRequest"] !== null) {
+            $this->InstanceRequest = $param["InstanceRequest"];
+        }
+
+        if (array_key_exists("StartupParameters",$param) and $param["StartupParameters"] !== null) {
+            $this->StartupParameters = $param["StartupParameters"];
         }
     }
 }

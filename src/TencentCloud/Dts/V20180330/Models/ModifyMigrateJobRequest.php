@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobName(string $JobName) 设置数据迁移任务名称
  * @method MigrateOption getMigrateOption() 获取迁移任务配置选项
  * @method void setMigrateOption(MigrateOption $MigrateOption) 设置迁移任务配置选项
- * @method string getSrcAccessType() 获取源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
- * @method void setSrcAccessType(string $SrcAccessType) 设置源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+ * @method string getSrcAccessType() 获取源实例接入类型，值包括：extranet(外网),cvm(CVM自建实例),dcg(专线接入的实例),vpncloud(云VPN接入的实例),cdb(云上CDB实例)
+ * @method void setSrcAccessType(string $SrcAccessType) 设置源实例接入类型，值包括：extranet(外网),cvm(CVM自建实例),dcg(专线接入的实例),vpncloud(云VPN接入的实例),cdb(云上CDB实例)
  * @method SrcInfo getSrcInfo() 获取源实例信息，具体内容跟迁移任务类型相关
  * @method void setSrcInfo(SrcInfo $SrcInfo) 设置源实例信息，具体内容跟迁移任务类型相关
- * @method string getDstAccessType() 获取目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
- * @method void setDstAccessType(string $DstAccessType) 设置目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
+ * @method string getDstAccessType() 获取目标实例接入类型，值包括：extranet(外网),cvm(CVM自建实例),dcg(专线接入的实例),vpncloud(云VPN接入的实例)，cdb(云上CDB实例). 目前只支持cdb.
+ * @method void setDstAccessType(string $DstAccessType) 设置目标实例接入类型，值包括：extranet(外网),cvm(CVM自建实例),dcg(专线接入的实例),vpncloud(云VPN接入的实例)，cdb(云上CDB实例). 目前只支持cdb.
  * @method DstInfo getDstInfo() 获取目标实例信息, 其中目标实例地域不允许修改.
  * @method void setDstInfo(DstInfo $DstInfo) 设置目标实例信息, 其中目标实例地域不允许修改.
  * @method string getDatabaseInfo() 获取当选择'指定库表'迁移的时候, 需要设置待迁移的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
@@ -71,7 +71,7 @@ class ModifyMigrateJobRequest extends AbstractModel
     public $MigrateOption;
 
     /**
-     * @var string 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+     * @var string 源实例接入类型，值包括：extranet(外网),cvm(CVM自建实例),dcg(专线接入的实例),vpncloud(云VPN接入的实例),cdb(云上CDB实例)
      */
     public $SrcAccessType;
 
@@ -81,7 +81,7 @@ class ModifyMigrateJobRequest extends AbstractModel
     public $SrcInfo;
 
     /**
-     * @var string 目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
+     * @var string 目标实例接入类型，值包括：extranet(外网),cvm(CVM自建实例),dcg(专线接入的实例),vpncloud(云VPN接入的实例)，cdb(云上CDB实例). 目前只支持cdb.
      */
     public $DstAccessType;
 
@@ -105,9 +105,9 @@ class ModifyMigrateJobRequest extends AbstractModel
      * @param string $JobId 待修改的数据迁移任务ID
      * @param string $JobName 数据迁移任务名称
      * @param MigrateOption $MigrateOption 迁移任务配置选项
-     * @param string $SrcAccessType 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+     * @param string $SrcAccessType 源实例接入类型，值包括：extranet(外网),cvm(CVM自建实例),dcg(专线接入的实例),vpncloud(云VPN接入的实例),cdb(云上CDB实例)
      * @param SrcInfo $SrcInfo 源实例信息，具体内容跟迁移任务类型相关
-     * @param string $DstAccessType 目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
+     * @param string $DstAccessType 目标实例接入类型，值包括：extranet(外网),cvm(CVM自建实例),dcg(专线接入的实例),vpncloud(云VPN接入的实例)，cdb(云上CDB实例). 目前只支持cdb.
      * @param DstInfo $DstInfo 目标实例信息, 其中目标实例地域不允许修改.
      * @param string $DatabaseInfo 当选择'指定库表'迁移的时候, 需要设置待迁移的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
 

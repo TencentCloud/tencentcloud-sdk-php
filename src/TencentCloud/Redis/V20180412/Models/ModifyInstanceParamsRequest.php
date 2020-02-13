@@ -18,8 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method array getInstanceParams() 获取实例修改的参数列表
  * @method void setInstanceParams(array $InstanceParams) 设置实例修改的参数列表
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyInstanceParamsRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string 实例ID
      */
     public $InstanceId;
 
@@ -39,7 +39,7 @@ class ModifyInstanceParamsRequest extends AbstractModel
      */
     public $InstanceParams;
     /**
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId 实例ID
      * @param array $InstanceParams 实例修改的参数列表
      */
     function __construct()

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlayDomains(array $PlayDomains) 设置播放域名，默认为不填，表示求总体数据。
  * @method array getProvinceNames() 获取省份列表，默认不填，则返回各省份的数据。
  * @method void setProvinceNames(array $ProvinceNames) 设置省份列表，默认不填，则返回各省份的数据。
- * @method array getIspNames() 获取运营商列表，默认不填，则返回个运营商的数据。
- * @method void setIspNames(array $IspNames) 设置运营商列表，默认不填，则返回个运营商的数据。
+ * @method array getIspNames() 获取运营商列表，默认不填，则返回整个运营商的数据。
+ * @method void setIspNames(array $IspNames) 设置运营商列表，默认不填，则返回整个运营商的数据。
  * @method string getMainlandOrOversea() 获取国内还是国外，如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
  * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置国内还是国外，如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
  */
@@ -61,7 +61,7 @@ class DescribeGroupProIspPlayInfoListRequest extends AbstractModel
     public $ProvinceNames;
 
     /**
-     * @var array 运营商列表，默认不填，则返回个运营商的数据。
+     * @var array 运营商列表，默认不填，则返回整个运营商的数据。
      */
     public $IspNames;
 
@@ -75,7 +75,7 @@ class DescribeGroupProIspPlayInfoListRequest extends AbstractModel
 时间跨度在（0,3小时]，支持最近1个月数据查询。
      * @param array $PlayDomains 播放域名，默认为不填，表示求总体数据。
      * @param array $ProvinceNames 省份列表，默认不填，则返回各省份的数据。
-     * @param array $IspNames 运营商列表，默认不填，则返回个运营商的数据。
+     * @param array $IspNames 运营商列表，默认不填，则返回整个运营商的数据。
      * @param string $MainlandOrOversea 国内还是国外，如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
      */
     function __construct()

@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getDefinition() 获取水印模板 ID。
  * @method void setDefinition(integer $Definition) 设置水印模板 ID。
+ * @method RawWatermarkParameter getRawParameter() 获取水印自定义参数，当 Definition 填 0 时有效。
+该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
+ * @method void setRawParameter(RawWatermarkParameter $RawParameter) 设置水印自定义参数，当 Definition 填 0 时有效。
+该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
  * @method string getTextContent() 获取文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
  * @method void setTextContent(string $TextContent) 设置文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
  * @method string getSvgContent() 获取SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
@@ -53,6 +57,12 @@ class WatermarkInput extends AbstractModel
     public $Definition;
 
     /**
+     * @var RawWatermarkParameter 水印自定义参数，当 Definition 填 0 时有效。
+该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
+     */
+    public $RawParameter;
+
+    /**
      * @var string 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
      */
     public $TextContent;
@@ -79,6 +89,8 @@ class WatermarkInput extends AbstractModel
     public $EndTimeOffset;
     /**
      * @param integer $Definition 水印模板 ID。
+     * @param RawWatermarkParameter $RawParameter 水印自定义参数，当 Definition 填 0 时有效。
+该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
      * @param string $TextContent 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
      * @param string $SvgContent SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
      * @param float $StartTimeOffset 水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
@@ -104,6 +116,11 @@ class WatermarkInput extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("RawParameter",$param) and $param["RawParameter"] !== null) {
+            $this->RawParameter = new RawWatermarkParameter();
+            $this->RawParameter->deserialize($param["RawParameter"]);
         }
 
         if (array_key_exists("TextContent",$param) and $param["TextContent"] !== null) {

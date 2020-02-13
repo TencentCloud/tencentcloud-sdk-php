@@ -18,8 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getOffset() 获取分页偏移，Offset从0开始
- * @method void setOffset(integer $Offset) 设置分页偏移，Offset从0开始
+ * @method integer getOffset() 获取偏移量，Offset从0开始
+ * @method void setOffset(integer $Offset) 设置偏移量，Offset从0开始
  * @method integer getLimit() 获取分页大小，当前页面中显示的最大数量，值范围 10-250。
  * @method void setLimit(integer $Limit) 设置分页大小，当前页面中显示的最大数量，值范围 10-250。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeProductsRequest extends AbstractModel
 {
     /**
-     * @var integer 分页偏移，Offset从0开始
+     * @var integer 偏移量，Offset从0开始
      */
     public $Offset;
 
@@ -39,7 +39,7 @@ class DescribeProductsRequest extends AbstractModel
      */
     public $Limit;
     /**
-     * @param integer $Offset 分页偏移，Offset从0开始
+     * @param integer $Offset 偏移量，Offset从0开始
      * @param integer $Limit 分页大小，当前页面中显示的最大数量，值范围 10-250。
      */
     function __construct()

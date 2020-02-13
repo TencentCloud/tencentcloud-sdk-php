@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  PicUrlExpireTime 时间点后图片将被删除）。
  * @method integer getPicUrlExpireTimeStamp() 获取该字段已废弃，请使用 PicUrlExpireTime。
  * @method void setPicUrlExpireTimeStamp(integer $PicUrlExpireTimeStamp) 设置该字段已废弃，请使用 PicUrlExpireTime。
- * @method string getPicUrlExpireTime() 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method void setPicUrlExpireTime(string $PicUrlExpireTime) 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+ * @method string getPicUrlExpireTime() 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  */
 
 /**
@@ -89,7 +89,7 @@ class MediaContentReviewSegmentItem extends AbstractModel
     public $PicUrlExpireTimeStamp;
 
     /**
-     * @var string 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @var string 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $PicUrlExpireTime;
     /**
@@ -104,7 +104,7 @@ class MediaContentReviewSegmentItem extends AbstractModel
      * @param string $Url 嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
      * @param integer $PicUrlExpireTimeStamp 该字段已废弃，请使用 PicUrlExpireTime。
-     * @param string $PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @param string $PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     function __construct()
     {

@@ -19,23 +19,17 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method float getConfidence() 获取Ocr 文字涉黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfidence(float $Confidence) 设置Ocr 文字涉黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestion() 获取Ocr 文字涉黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestion(string $Suggestion) 设置Ocr 文字涉黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSegmentSet() 获取Ocr 文字有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentSet(array $SegmentSet) 设置Ocr 文字有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -45,7 +39,6 @@ class AiReviewPornOcrTaskOutput extends AbstractModel
 {
     /**
      * @var float Ocr 文字涉黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Confidence;
 
@@ -54,25 +47,20 @@ class AiReviewPornOcrTaskOutput extends AbstractModel
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
     /**
      * @var array Ocr 文字有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentSet;
     /**
      * @param float $Confidence Ocr 文字涉黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Suggestion Ocr 文字涉黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SegmentSet Ocr 文字有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

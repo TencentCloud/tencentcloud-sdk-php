@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(integer $Type) 设置实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版
  * @method array getSearchKeys() 获取搜索关键词：支持实例Id、实例名称、完整IP
  * @method void setSearchKeys(array $SearchKeys) 设置搜索关键词：支持实例Id、实例名称、完整IP
+ * @method array getTypeList() 获取内部参数，用户可忽略
+ * @method void setTypeList(array $TypeList) 设置内部参数，用户可忽略
  */
 
 /**
@@ -164,6 +166,11 @@ class DescribeInstancesRequest extends AbstractModel
      * @var array 搜索关键词：支持实例Id、实例名称、完整IP
      */
     public $SearchKeys;
+
+    /**
+     * @var array 内部参数，用户可忽略
+     */
+    public $TypeList;
     /**
      * @param integer $Limit 实例列表的大小，参数默认值20
      * @param integer $Offset 偏移量，取Limit整数倍
@@ -185,6 +192,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param string $BillingMode 计费模式：postpaid-按量计费；prepaid-包年包月
      * @param integer $Type 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版
      * @param array $SearchKeys 搜索关键词：支持实例Id、实例名称、完整IP
+     * @param array $TypeList 内部参数，用户可忽略
      */
     function __construct()
     {
@@ -276,6 +284,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("SearchKeys",$param) and $param["SearchKeys"] !== null) {
             $this->SearchKeys = $param["SearchKeys"];
+        }
+
+        if (array_key_exists("TypeList",$param) and $param["TypeList"] !== null) {
+            $this->TypeList = $param["TypeList"];
         }
     }
 }

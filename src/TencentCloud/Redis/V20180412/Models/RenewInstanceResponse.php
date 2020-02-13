@@ -18,8 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDealId() 获取交易Id
- * @method void setDealId(string $DealId) 设置交易Id
+ * @method string getDealId() 获取交易ID
+ * @method void setDealId(string $DealId) 设置交易ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class RenewInstanceResponse extends AbstractModel
 {
     /**
-     * @var string 交易Id
+     * @var string 交易ID
      */
     public $DealId;
 
@@ -39,7 +39,7 @@ class RenewInstanceResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $DealId 交易Id
+     * @param string $DealId 交易ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

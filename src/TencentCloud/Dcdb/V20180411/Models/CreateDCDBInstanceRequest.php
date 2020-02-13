@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  查询实例规格获得。
  * @method integer getShardCount() 获取实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
  * @method void setShardCount(integer $ShardCount) 设置实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
- * @method integer getCount() 获取欲购买实例的数量，目前只支持购买1个实例
- * @method void setCount(integer $Count) 设置欲购买实例的数量，目前只支持购买1个实例
+ * @method integer getCount() 获取欲购买实例的数量
+ * @method void setCount(integer $Count) 设置欲购买实例的数量
  * @method integer getProjectId() 获取项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
  * @method void setProjectId(integer $ProjectId) 设置项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
  * @method string getVpcId() 获取虚拟私有网络 ID，不传或传空表示创建为基础网络
@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动使用代金券进行支付，默认不使用。
  * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券。
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券。
+ * @method string getSecurityGroupId() 获取安全组id
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组id
+ * @method string getInstanceName() 获取实例名称， 可以通过该字段自主的设置实例的名字
+ * @method void setInstanceName(string $InstanceName) 设置实例名称， 可以通过该字段自主的设置实例的名字
  */
 
 /**
@@ -99,7 +103,7 @@ class CreateDCDBInstanceRequest extends AbstractModel
     public $ShardCount;
 
     /**
-     * @var integer 欲购买实例的数量，目前只支持购买1个实例
+     * @var integer 欲购买实例的数量
      */
     public $Count;
 
@@ -136,6 +140,16 @@ class CreateDCDBInstanceRequest extends AbstractModel
      * @var array 代金券ID列表，目前仅支持指定一张代金券。
      */
     public $VoucherIds;
+
+    /**
+     * @var string 安全组id
+     */
+    public $SecurityGroupId;
+
+    /**
+     * @var string 实例名称， 可以通过该字段自主的设置实例的名字
+     */
+    public $InstanceName;
     /**
      * @param array $Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
      * @param integer $Period 欲购买的时长，单位：月。
@@ -146,7 +160,7 @@ class CreateDCDBInstanceRequest extends AbstractModel
      * @param integer $ShardNodeCount 单个分片节点个数，可以通过 DescribeShardSpec
  查询实例规格获得。
      * @param integer $ShardCount 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
-     * @param integer $Count 欲购买实例的数量，目前只支持购买1个实例
+     * @param integer $Count 欲购买实例的数量
      * @param integer $ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
      * @param string $VpcId 虚拟私有网络 ID，不传或传空表示创建为基础网络
      * @param string $SubnetId 虚拟私有网络子网 ID，VpcId不为空时必填
@@ -157,6 +171,8 @@ class CreateDCDBInstanceRequest extends AbstractModel
 如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
      * @param boolean $AutoVoucher 是否自动使用代金券进行支付，默认不使用。
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
+     * @param string $SecurityGroupId 安全组id
+     * @param string $InstanceName 实例名称， 可以通过该字段自主的设置实例的名字
      */
     function __construct()
     {
@@ -220,6 +236,14 @@ class CreateDCDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("VoucherIds",$param) and $param["VoucherIds"] !== null) {
             $this->VoucherIds = $param["VoucherIds"];
+        }
+
+        if (array_key_exists("SecurityGroupId",$param) and $param["SecurityGroupId"] !== null) {
+            $this->SecurityGroupId = $param["SecurityGroupId"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
         }
     }
 }

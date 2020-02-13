@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() 获取画面鉴恐任务控制参数。
  * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo) 设置画面鉴恐任务控制参数。
+ * @method TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() 获取文本鉴恐任务控制参数。
+ * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo) 设置文本鉴恐任务控制参数。
  */
 
 /**
@@ -31,8 +33,14 @@ class TerrorismConfigureInfoForUpdate extends AbstractModel
      * @var TerrorismImgReviewTemplateInfoForUpdate 画面鉴恐任务控制参数。
      */
     public $ImgReviewInfo;
+
+    /**
+     * @var TerrorismOcrReviewTemplateInfoForUpdate 文本鉴恐任务控制参数。
+     */
+    public $OcrReviewInfo;
     /**
      * @param TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo 画面鉴恐任务控制参数。
+     * @param TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo 文本鉴恐任务控制参数。
      */
     function __construct()
     {
@@ -49,6 +57,11 @@ class TerrorismConfigureInfoForUpdate extends AbstractModel
         if (array_key_exists("ImgReviewInfo",$param) and $param["ImgReviewInfo"] !== null) {
             $this->ImgReviewInfo = new TerrorismImgReviewTemplateInfoForUpdate();
             $this->ImgReviewInfo->deserialize($param["ImgReviewInfo"]);
+        }
+
+        if (array_key_exists("OcrReviewInfo",$param) and $param["OcrReviewInfo"] !== null) {
+            $this->OcrReviewInfo = new TerrorismOcrReviewTemplateInfoForUpdate();
+            $this->OcrReviewInfo->deserialize($param["OcrReviewInfo"]);
         }
     }
 }

@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfidence(integer $Confidence) 设置置信度 0 - 100
  * @method array getPolygon() 获取文本行坐标，以四个顶点坐标表示
  * @method void setPolygon(array $Polygon) 设置文本行坐标，以四个顶点坐标表示
- * @method string getAdvancedInfo() 获取此字段为扩展字段
- * @method void setAdvancedInfo(string $AdvancedInfo) 设置此字段为扩展字段
+ * @method string getAdvancedInfo() 获取此字段为扩展字段。
+能返回文本行的段落信息，例如：{\"Parag\":{\"ParagNo\":2}}，
+其中ParagNo为段落行，从1开始。
+ * @method void setAdvancedInfo(string $AdvancedInfo) 设置此字段为扩展字段。
+能返回文本行的段落信息，例如：{\"Parag\":{\"ParagNo\":2}}，
+其中ParagNo为段落行，从1开始。
  */
 
 /**
@@ -49,14 +53,18 @@ class TextGeneralHandwriting extends AbstractModel
     public $Polygon;
 
     /**
-     * @var string 此字段为扩展字段
+     * @var string 此字段为扩展字段。
+能返回文本行的段落信息，例如：{\"Parag\":{\"ParagNo\":2}}，
+其中ParagNo为段落行，从1开始。
      */
     public $AdvancedInfo;
     /**
      * @param string $DetectedText 识别出的文本行内容
      * @param integer $Confidence 置信度 0 - 100
      * @param array $Polygon 文本行坐标，以四个顶点坐标表示
-     * @param string $AdvancedInfo 此字段为扩展字段
+     * @param string $AdvancedInfo 此字段为扩展字段。
+能返回文本行的段落信息，例如：{\"Parag\":{\"ParagNo\":2}}，
+其中ParagNo为段落行，从1开始。
      */
     function __construct()
     {

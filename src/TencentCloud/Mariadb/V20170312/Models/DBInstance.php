@@ -18,22 +18,22 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例 Id，唯一标识一个 TDSQL 实例
- * @method void setInstanceId(string $InstanceId) 设置实例 Id，唯一标识一个 TDSQL 实例
+ * @method string getInstanceId() 获取实例 ID，唯一标识一个 TDSQL 实例
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，唯一标识一个 TDSQL 实例
  * @method string getInstanceName() 获取实例名称，用户可修改
  * @method void setInstanceName(string $InstanceName) 设置实例名称，用户可修改
- * @method integer getAppId() 获取实例所属应用 Id
- * @method void setAppId(integer $AppId) 设置实例所属应用 Id
- * @method integer getProjectId() 获取实例所属项目 Id
- * @method void setProjectId(integer $ProjectId) 设置实例所属项目 Id
+ * @method integer getAppId() 获取实例所属应用 ID
+ * @method void setAppId(integer $AppId) 设置实例所属应用 ID
+ * @method integer getProjectId() 获取实例所属项目 ID
+ * @method void setProjectId(integer $ProjectId) 设置实例所属项目 ID
  * @method string getRegion() 获取实例所在地域名称，如 ap-shanghai
  * @method void setRegion(string $Region) 设置实例所在地域名称，如 ap-shanghai
  * @method string getZone() 获取实例所在可用区名称，如 ap-shanghai-1
  * @method void setZone(string $Zone) 设置实例所在可用区名称，如 ap-shanghai-1
- * @method integer getVpcId() 获取私有网络 Id，基础网络时为 0
- * @method void setVpcId(integer $VpcId) 设置私有网络 Id，基础网络时为 0
- * @method integer getSubnetId() 获取子网 Id，基础网络时为 0
- * @method void setSubnetId(integer $SubnetId) 设置子网 Id，基础网络时为 0
+ * @method integer getVpcId() 获取私有网络 ID，基础网络时为 0
+ * @method void setVpcId(integer $VpcId) 设置私有网络 ID，基础网络时为 0
+ * @method integer getSubnetId() 获取子网 ID，基础网络时为 0
+ * @method void setSubnetId(integer $SubnetId) 设置子网 ID，基础网络时为 0
  * @method integer getStatus() 获取实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
  * @method void setStatus(integer $Status) 设置实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
  * @method string getVip() 获取内网 IP 地址
@@ -62,22 +62,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置实例内存大小，单位 GB
  * @method integer getStorage() 获取实例存储大小，单位 GB
  * @method void setStorage(integer $Storage) 设置实例存储大小，单位 GB
- * @method string getUniqueVpcId() 获取字符串型的私有网络Id
- * @method void setUniqueVpcId(string $UniqueVpcId) 设置字符串型的私有网络Id
- * @method string getUniqueSubnetId() 获取字符串型的私有网络子网Id
- * @method void setUniqueSubnetId(string $UniqueSubnetId) 设置字符串型的私有网络子网Id
+ * @method string getUniqueVpcId() 获取字符串型的私有网络ID
+ * @method void setUniqueVpcId(string $UniqueVpcId) 设置字符串型的私有网络ID
+ * @method string getUniqueSubnetId() 获取字符串型的私有网络子网ID
+ * @method void setUniqueSubnetId(string $UniqueSubnetId) 设置字符串型的私有网络子网ID
  * @method string getOriginSerialId() 获取原始实例ID（过时字段，请勿依赖该值）
  * @method void setOriginSerialId(string $OriginSerialId) 设置原始实例ID（过时字段，请勿依赖该值）
  * @method integer getNodeCount() 获取节点数，2为一主一从，3为一主二从
  * @method void setNodeCount(integer $NodeCount) 设置节点数，2为一主一从，3为一主二从
  * @method integer getIsTmp() 获取是否临时实例，0为否，非0为是
  * @method void setIsTmp(integer $IsTmp) 设置是否临时实例，0为否，非0为是
- * @method string getExclusterId() 获取独享集群Id，为空表示为普通实例
- * @method void setExclusterId(string $ExclusterId) 设置独享集群Id，为空表示为普通实例
- * @method integer getId() 获取数字实例Id（过时字段，请勿依赖该值）
- * @method void setId(integer $Id) 设置数字实例Id（过时字段，请勿依赖该值）
- * @method integer getPid() 获取产品类型 Id
- * @method void setPid(integer $Pid) 设置产品类型 Id
+ * @method string getExclusterId() 获取独享集群ID，为空表示为普通实例
+ * @method void setExclusterId(string $ExclusterId) 设置独享集群ID，为空表示为普通实例
+ * @method integer getId() 获取数字实例ID（过时字段，请勿依赖该值）
+ * @method void setId(integer $Id) 设置数字实例ID（过时字段，请勿依赖该值）
+ * @method integer getPid() 获取产品类型 ID
+ * @method void setPid(integer $Pid) 设置产品类型 ID
  * @method integer getQps() 获取最大 Qps 值
  * @method void setQps(integer $Qps) 设置最大 Qps 值
  * @method string getPaymode() 获取付费模式
@@ -108,7 +108,7 @@ use TencentCloud\Common\AbstractModel;
 class DBInstance extends AbstractModel
 {
     /**
-     * @var string 实例 Id，唯一标识一个 TDSQL 实例
+     * @var string 实例 ID，唯一标识一个 TDSQL 实例
      */
     public $InstanceId;
 
@@ -118,12 +118,12 @@ class DBInstance extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer 实例所属应用 Id
+     * @var integer 实例所属应用 ID
      */
     public $AppId;
 
     /**
-     * @var integer 实例所属项目 Id
+     * @var integer 实例所属项目 ID
      */
     public $ProjectId;
 
@@ -138,12 +138,12 @@ class DBInstance extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer 私有网络 Id，基础网络时为 0
+     * @var integer 私有网络 ID，基础网络时为 0
      */
     public $VpcId;
 
     /**
-     * @var integer 子网 Id，基础网络时为 0
+     * @var integer 子网 ID，基础网络时为 0
      */
     public $SubnetId;
 
@@ -218,12 +218,12 @@ class DBInstance extends AbstractModel
     public $Storage;
 
     /**
-     * @var string 字符串型的私有网络Id
+     * @var string 字符串型的私有网络ID
      */
     public $UniqueVpcId;
 
     /**
-     * @var string 字符串型的私有网络子网Id
+     * @var string 字符串型的私有网络子网ID
      */
     public $UniqueSubnetId;
 
@@ -243,17 +243,17 @@ class DBInstance extends AbstractModel
     public $IsTmp;
 
     /**
-     * @var string 独享集群Id，为空表示为普通实例
+     * @var string 独享集群ID，为空表示为普通实例
      */
     public $ExclusterId;
 
     /**
-     * @var integer 数字实例Id（过时字段，请勿依赖该值）
+     * @var integer 数字实例ID（过时字段，请勿依赖该值）
      */
     public $Id;
 
     /**
-     * @var integer 产品类型 Id
+     * @var integer 产品类型 ID
      */
     public $Pid;
 
@@ -300,14 +300,14 @@ class DBInstance extends AbstractModel
      */
     public $IsEncryptSupported;
     /**
-     * @param string $InstanceId 实例 Id，唯一标识一个 TDSQL 实例
+     * @param string $InstanceId 实例 ID，唯一标识一个 TDSQL 实例
      * @param string $InstanceName 实例名称，用户可修改
-     * @param integer $AppId 实例所属应用 Id
-     * @param integer $ProjectId 实例所属项目 Id
+     * @param integer $AppId 实例所属应用 ID
+     * @param integer $ProjectId 实例所属项目 ID
      * @param string $Region 实例所在地域名称，如 ap-shanghai
      * @param string $Zone 实例所在可用区名称，如 ap-shanghai-1
-     * @param integer $VpcId 私有网络 Id，基础网络时为 0
-     * @param integer $SubnetId 子网 Id，基础网络时为 0
+     * @param integer $VpcId 私有网络 ID，基础网络时为 0
+     * @param integer $SubnetId 子网 ID，基础网络时为 0
      * @param integer $Status 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
      * @param string $Vip 内网 IP 地址
      * @param integer $Vport 内网端口
@@ -322,14 +322,14 @@ class DBInstance extends AbstractModel
      * @param string $TdsqlVersion TDSQL 版本信息
      * @param integer $Memory 实例内存大小，单位 GB
      * @param integer $Storage 实例存储大小，单位 GB
-     * @param string $UniqueVpcId 字符串型的私有网络Id
-     * @param string $UniqueSubnetId 字符串型的私有网络子网Id
+     * @param string $UniqueVpcId 字符串型的私有网络ID
+     * @param string $UniqueSubnetId 字符串型的私有网络子网ID
      * @param string $OriginSerialId 原始实例ID（过时字段，请勿依赖该值）
      * @param integer $NodeCount 节点数，2为一主一从，3为一主二从
      * @param integer $IsTmp 是否临时实例，0为否，非0为是
-     * @param string $ExclusterId 独享集群Id，为空表示为普通实例
-     * @param integer $Id 数字实例Id（过时字段，请勿依赖该值）
-     * @param integer $Pid 产品类型 Id
+     * @param string $ExclusterId 独享集群ID，为空表示为普通实例
+     * @param integer $Id 数字实例ID（过时字段，请勿依赖该值）
+     * @param integer $Pid 产品类型 ID
      * @param integer $Qps 最大 Qps 值
      * @param string $Paymode 付费模式
 注意：此字段可能返回 null，表示取不到有效值。

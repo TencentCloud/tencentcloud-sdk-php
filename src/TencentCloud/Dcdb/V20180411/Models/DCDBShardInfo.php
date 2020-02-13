@@ -58,6 +58,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPid(integer $Pid) 设置产品ProductID
  * @method string getProxyVersion() 获取Proxy版本
  * @method void setProxyVersion(string $ProxyVersion) 设置Proxy版本
+ * @method string getPaymode() 获取付费模型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPaymode(string $Paymode) 设置付费模型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getShardMasterZone() 获取分片的主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShardMasterZone(string $ShardMasterZone) 设置分片的主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getShardSlaveZones() 获取分片的从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShardSlaveZones(array $ShardSlaveZones) 设置分片的从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -164,6 +176,24 @@ class DCDBShardInfo extends AbstractModel
      * @var string Proxy版本
      */
     public $ProxyVersion;
+
+    /**
+     * @var string 付费模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Paymode;
+
+    /**
+     * @var string 分片的主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShardMasterZone;
+
+    /**
+     * @var array 分片的从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShardSlaveZones;
     /**
      * @param string $InstanceId 所属实例Id
      * @param string $ShardSerialId 分片SQL透传Id，用于将sql透传到指定分片执行
@@ -185,6 +215,12 @@ class DCDBShardInfo extends AbstractModel
      * @param integer $ShardId 数字分片Id（过时字段，请勿依赖该值）
      * @param integer $Pid 产品ProductID
      * @param string $ProxyVersion Proxy版本
+     * @param string $Paymode 付费模型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ShardMasterZone 分片的主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ShardSlaveZones 分片的从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -276,6 +312,18 @@ class DCDBShardInfo extends AbstractModel
 
         if (array_key_exists("ProxyVersion",$param) and $param["ProxyVersion"] !== null) {
             $this->ProxyVersion = $param["ProxyVersion"];
+        }
+
+        if (array_key_exists("Paymode",$param) and $param["Paymode"] !== null) {
+            $this->Paymode = $param["Paymode"];
+        }
+
+        if (array_key_exists("ShardMasterZone",$param) and $param["ShardMasterZone"] !== null) {
+            $this->ShardMasterZone = $param["ShardMasterZone"];
+        }
+
+        if (array_key_exists("ShardSlaveZones",$param) and $param["ShardSlaveZones"] !== null) {
+            $this->ShardSlaveZones = $param["ShardSlaveZones"];
         }
     }
 }

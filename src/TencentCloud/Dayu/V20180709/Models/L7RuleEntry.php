@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLbType(integer $LbType) 设置负载均衡方式，取值[1(加权轮询)]
  * @method integer getKeepEnable() 获取会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
  * @method void setKeepEnable(integer $KeepEnable) 设置会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
- * @method string getRuleId() 获取规则ID
- * @method void setRuleId(string $RuleId) 设置规则ID
+ * @method string getRuleId() 获取规则ID，当添加新规则时可以不用填写此字段；当修改或者删除规则时需要填写此字段；
+ * @method void setRuleId(string $RuleId) 设置规则ID，当添加新规则时可以不用填写此字段；当修改或者删除规则时需要填写此字段；
  * @method integer getCertType() 获取证书来源，当转发协议为https时必须填，取值[2(腾讯云托管证书)]，当转发协议为http时也可以填0
  * @method void setCertType(integer $CertType) 设置证书来源，当转发协议为https时必须填，取值[2(腾讯云托管证书)]，当转发协议为http时也可以填0
  * @method string getSSLId() 获取当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
@@ -97,7 +97,7 @@ class L7RuleEntry extends AbstractModel
     public $KeepEnable;
 
     /**
-     * @var string 规则ID
+     * @var string 规则ID，当添加新规则时可以不用填写此字段；当修改或者删除规则时需要填写此字段；
      */
     public $RuleId;
 
@@ -158,7 +158,7 @@ class L7RuleEntry extends AbstractModel
      * @param array $SourceList 回源列表
      * @param integer $LbType 负载均衡方式，取值[1(加权轮询)]
      * @param integer $KeepEnable 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
-     * @param string $RuleId 规则ID
+     * @param string $RuleId 规则ID，当添加新规则时可以不用填写此字段；当修改或者删除规则时需要填写此字段；
      * @param integer $CertType 证书来源，当转发协议为https时必须填，取值[2(腾讯云托管证书)]，当转发协议为http时也可以填0
      * @param string $SSLId 当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
      * @param string $Cert 当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)

@@ -18,12 +18,12 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAclTag() 获取权限标签。取值范围：
+ * @method string getAclTag() 获取权限标签。包含以下取值：
 <li> READONLY：所有用户可读，仅创建者和管理员可写</li>
 <li> PRIVATE：仅创建者及管理员可读写</li>
 <li> ADMINWRITE：所有用户可读，仅管理员可写</li>
 <li> ADMINONLY：仅管理员可读写</li>
- * @method void setAclTag(string $AclTag) 设置权限标签。取值范围：
+ * @method void setAclTag(string $AclTag) 设置权限标签。包含以下取值：
 <li> READONLY：所有用户可读，仅创建者和管理员可写</li>
 <li> PRIVATE：仅创建者及管理员可读写</li>
 <li> ADMINWRITE：所有用户可读，仅管理员可写</li>
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDatabaseACLResponse extends AbstractModel
 {
     /**
-     * @var string 权限标签。取值范围：
+     * @var string 权限标签。包含以下取值：
 <li> READONLY：所有用户可读，仅创建者和管理员可写</li>
 <li> PRIVATE：仅创建者及管理员可读写</li>
 <li> ADMINWRITE：所有用户可读，仅管理员可写</li>
@@ -51,7 +51,7 @@ class DescribeDatabaseACLResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $AclTag 权限标签。取值范围：
+     * @param string $AclTag 权限标签。包含以下取值：
 <li> READONLY：所有用户可读，仅创建者和管理员可写</li>
 <li> PRIVATE：仅创建者及管理员可读写</li>
 <li> ADMINWRITE：所有用户可读，仅管理员可写</li>

@@ -18,8 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取目标实例Id，如cdb-jd92ijd8
- * @method void setInstanceId(string $InstanceId) 设置目标实例Id，如cdb-jd92ijd8
+ * @method string getInstanceId() 获取目标实例ID，如cdb-jd92ijd8
+ * @method void setInstanceId(string $InstanceId) 设置目标实例ID，如cdb-jd92ijd8
  * @method string getRegion() 获取目标实例地域，如ap-guangzhou
  * @method void setRegion(string $Region) 设置目标实例地域，如ap-guangzhou
  * @method string getIp() 获取目标实例vip。已废弃，无需填写
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DstInfo extends AbstractModel
 {
     /**
-     * @var string 目标实例Id，如cdb-jd92ijd8
+     * @var string 目标实例ID，如cdb-jd92ijd8
      */
     public $InstanceId;
 
@@ -60,7 +60,7 @@ class DstInfo extends AbstractModel
      */
     public $ReadOnly;
     /**
-     * @param string $InstanceId 目标实例Id，如cdb-jd92ijd8
+     * @param string $InstanceId 目标实例ID，如cdb-jd92ijd8
      * @param string $Region 目标实例地域，如ap-guangzhou
      * @param string $Ip 目标实例vip。已废弃，无需填写
      * @param integer $Port 目标实例vport。已废弃，无需填写

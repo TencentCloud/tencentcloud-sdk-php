@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getInstanceId() 获取实例ID，形如：dcdbt-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如：dcdbt-ow728lmc。
- * @method array getShardInstanceIds() 获取分片Id列表。
- * @method void setShardInstanceIds(array $ShardInstanceIds) 设置分片Id列表。
+ * @method array getShardInstanceIds() 获取分片ID列表。
+ * @method void setShardInstanceIds(array $ShardInstanceIds) 设置分片ID列表。
  * @method integer getOffset() 获取偏移量，默认为 0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为 0
  * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。
@@ -43,7 +43,7 @@ class DescribeDCDBShardsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array 分片Id列表。
+     * @var array 分片ID列表。
      */
     public $ShardInstanceIds;
 
@@ -68,7 +68,7 @@ class DescribeDCDBShardsRequest extends AbstractModel
     public $OrderByType;
     /**
      * @param string $InstanceId 实例ID，形如：dcdbt-ow728lmc。
-     * @param array $ShardInstanceIds 分片Id列表。
+     * @param array $ShardInstanceIds 分片ID列表。
      * @param integer $Offset 偏移量，默认为 0
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。
      * @param string $OrderBy 排序字段， 目前仅支持 createtime

@@ -18,14 +18,18 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getNamespaceName() 获取命名空间名称
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
+ * @method string getClusterId() 获取集群ID
+ * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getNamespaceDesc() 获取命名空间描述
  * @method void setNamespaceDesc(string $NamespaceDesc) 设置命名空间描述
  * @method string getNamespaceResourceType() 获取命名空间资源类型(默认值为DEF)
  * @method void setNamespaceResourceType(string $NamespaceResourceType) 设置命名空间资源类型(默认值为DEF)
+ * @method string getNamespaceType() 获取是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
+ * @method void setNamespaceType(string $NamespaceType) 设置是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
+ * @method string getNamespaceId() 获取命名空间ID
+ * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
  */
 
 /**
@@ -34,14 +38,14 @@ use TencentCloud\Common\AbstractModel;
 class CreateNamespaceRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
-     */
-    public $ClusterId;
-
-    /**
      * @var string 命名空间名称
      */
     public $NamespaceName;
+
+    /**
+     * @var string 集群ID
+     */
+    public $ClusterId;
 
     /**
      * @var string 命名空间描述
@@ -52,11 +56,23 @@ class CreateNamespaceRequest extends AbstractModel
      * @var string 命名空间资源类型(默认值为DEF)
      */
     public $NamespaceResourceType;
+
     /**
-     * @param string $ClusterId 集群ID
+     * @var string 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
+     */
+    public $NamespaceType;
+
+    /**
+     * @var string 命名空间ID
+     */
+    public $NamespaceId;
+    /**
      * @param string $NamespaceName 命名空间名称
+     * @param string $ClusterId 集群ID
      * @param string $NamespaceDesc 命名空间描述
      * @param string $NamespaceResourceType 命名空间资源类型(默认值为DEF)
+     * @param string $NamespaceType 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
+     * @param string $NamespaceId 命名空间ID
      */
     function __construct()
     {
@@ -70,12 +86,12 @@ class CreateNamespaceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
-        }
-
         if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
             $this->NamespaceName = $param["NamespaceName"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
         if (array_key_exists("NamespaceDesc",$param) and $param["NamespaceDesc"] !== null) {
@@ -84,6 +100,14 @@ class CreateNamespaceRequest extends AbstractModel
 
         if (array_key_exists("NamespaceResourceType",$param) and $param["NamespaceResourceType"] !== null) {
             $this->NamespaceResourceType = $param["NamespaceResourceType"];
+        }
+
+        if (array_key_exists("NamespaceType",$param) and $param["NamespaceType"] !== null) {
+            $this->NamespaceType = $param["NamespaceType"];
+        }
+
+        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
+            $this->NamespaceId = $param["NamespaceId"];
         }
     }
 }

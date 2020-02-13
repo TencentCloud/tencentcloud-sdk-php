@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMosaicSet() 获取马赛克列表，最大可支持 10 张。
+ * @method void setMosaicSet(array $MosaicSet) 设置马赛克列表，最大可支持 10 张。
  */
 
 /**
@@ -41,10 +43,16 @@ class TranscodeTaskInput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WatermarkSet;
+
+    /**
+     * @var array 马赛克列表，最大可支持 10 张。
+     */
+    public $MosaicSet;
     /**
      * @param integer $Definition 视频转码模板 ID。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MosaicSet 马赛克列表，最大可支持 10 张。
      */
     function __construct()
     {
@@ -68,6 +76,15 @@ class TranscodeTaskInput extends AbstractModel
                 $obj = new WatermarkInput();
                 $obj->deserialize($value);
                 array_push($this->WatermarkSet, $obj);
+            }
+        }
+
+        if (array_key_exists("MosaicSet",$param) and $param["MosaicSet"] !== null) {
+            $this->MosaicSet = [];
+            foreach ($param["MosaicSet"] as $key => $value){
+                $obj = new MosaicInput();
+                $obj->deserialize($value);
+                array_push($this->MosaicSet, $obj);
             }
         }
     }

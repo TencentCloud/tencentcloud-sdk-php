@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取VpcId
- * @method void setVpcId(string $VpcId) 设置VpcId
- * @method string getSubnetId() 获取SubnetId 子网ID
- * @method void setSubnetId(string $SubnetId) 设置SubnetId 子网ID
+ * @method string getLayerName() 获取层名称
+ * @method void setLayerName(string $LayerName) 设置层名称
+ * @method array getCompatibleRuntime() 获取适配的运行时
+ * @method void setCompatibleRuntime(array $CompatibleRuntime) 设置适配的运行时
  */
 
 /**
- *vpc 配置信息
+ *ListLayerVersions请求参数结构体
  */
-class VpcConfig extends AbstractModel
+class ListLayerVersionsRequest extends AbstractModel
 {
     /**
-     * @var string VpcId
+     * @var string 层名称
      */
-    public $VpcId;
+    public $LayerName;
 
     /**
-     * @var string SubnetId 子网ID
+     * @var array 适配的运行时
      */
-    public $SubnetId;
+    public $CompatibleRuntime;
     /**
-     * @param string $VpcId VpcId
-     * @param string $SubnetId SubnetId 子网ID
+     * @param string $LayerName 层名称
+     * @param array $CompatibleRuntime 适配的运行时
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class VpcConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists("LayerName",$param) and $param["LayerName"] !== null) {
+            $this->LayerName = $param["LayerName"];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists("CompatibleRuntime",$param) and $param["CompatibleRuntime"] !== null) {
+            $this->CompatibleRuntime = $param["CompatibleRuntime"];
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerName(string $TriggerName) 设置新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是cos触发器，需要是对应cos存储桶适用于XML API的访问域名(例如:5401-5ff414-12345.cos.ap-shanghai.myqcloud.com);如果是其他触发器，见具体触发器绑定参数的说明
  * @method string getType() 获取触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
  * @method void setType(string $Type) 设置触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
- * @method string getTriggerDesc() 获取触发器对应的参数，如果是 timer 类型的触发器其内容是 Linux cron 表达式。如果是cos类型的触发器，其内容是json字符串 {"event":"cos:ObjectCreated:*","filter":{"Prefix":"","Suffix":""}},其中event是触发的cos事件，fitler中Prefix是对应的文件前缀过滤条件，Suffix是后缀过滤条件，如果不需要filter条件可不传。如果是其他触发器，见具体触发器说明
- * @method void setTriggerDesc(string $TriggerDesc) 设置触发器对应的参数，如果是 timer 类型的触发器其内容是 Linux cron 表达式。如果是cos类型的触发器，其内容是json字符串 {"event":"cos:ObjectCreated:*","filter":{"Prefix":"","Suffix":""}},其中event是触发的cos事件，fitler中Prefix是对应的文件前缀过滤条件，Suffix是后缀过滤条件，如果不需要filter条件可不传。如果是其他触发器，见具体触发器说明
+ * @method string getTriggerDesc() 获取触发器对应的参数，可见具体[触发器描述说明](https://cloud.tencent.com/document/product/583/39901)
+ * @method void setTriggerDesc(string $TriggerDesc) 设置触发器对应的参数，可见具体[触发器描述说明](https://cloud.tencent.com/document/product/583/39901)
  * @method string getNamespace() 获取函数的命名空间
  * @method void setNamespace(string $Namespace) 设置函数的命名空间
  * @method string getQualifier() 获取函数的版本
@@ -55,7 +55,7 @@ class CreateTriggerRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var string 触发器对应的参数，如果是 timer 类型的触发器其内容是 Linux cron 表达式。如果是cos类型的触发器，其内容是json字符串 {"event":"cos:ObjectCreated:*","filter":{"Prefix":"","Suffix":""}},其中event是触发的cos事件，fitler中Prefix是对应的文件前缀过滤条件，Suffix是后缀过滤条件，如果不需要filter条件可不传。如果是其他触发器，见具体触发器说明
+     * @var string 触发器对应的参数，可见具体[触发器描述说明](https://cloud.tencent.com/document/product/583/39901)
      */
     public $TriggerDesc;
 
@@ -77,7 +77,7 @@ class CreateTriggerRequest extends AbstractModel
      * @param string $FunctionName 新建触发器绑定的函数名称
      * @param string $TriggerName 新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是cos触发器，需要是对应cos存储桶适用于XML API的访问域名(例如:5401-5ff414-12345.cos.ap-shanghai.myqcloud.com);如果是其他触发器，见具体触发器绑定参数的说明
      * @param string $Type 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
-     * @param string $TriggerDesc 触发器对应的参数，如果是 timer 类型的触发器其内容是 Linux cron 表达式。如果是cos类型的触发器，其内容是json字符串 {"event":"cos:ObjectCreated:*","filter":{"Prefix":"","Suffix":""}},其中event是触发的cos事件，fitler中Prefix是对应的文件前缀过滤条件，Suffix是后缀过滤条件，如果不需要filter条件可不传。如果是其他触发器，见具体触发器说明
+     * @param string $TriggerDesc 触发器对应的参数，可见具体[触发器描述说明](https://cloud.tencent.com/document/product/583/39901)
      * @param string $Namespace 函数的命名空间
      * @param string $Qualifier 函数的版本
      * @param string $Enable 触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭

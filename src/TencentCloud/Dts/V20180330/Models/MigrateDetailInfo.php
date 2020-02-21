@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProgress(string $Progress) 设置总进度,如：
  * @method string getCurrentStepProgress() 获取当前步骤进度,如:
  * @method void setCurrentStepProgress(string $CurrentStepProgress) 设置当前步骤进度,如:
- * @method integer getMasterSlaveDistance() 获取主从差距，MB
- * @method void setMasterSlaveDistance(integer $MasterSlaveDistance) 设置主从差距，MB
- * @method integer getSecondsBehindMaster() 获取主从差距，秒
- * @method void setSecondsBehindMaster(integer $SecondsBehindMaster) 设置主从差距，秒
+ * @method integer getMasterSlaveDistance() 获取主从差距，MB；在增量同步阶段有效，目前支持产品为：redis和mysql
+ * @method void setMasterSlaveDistance(integer $MasterSlaveDistance) 设置主从差距，MB；在增量同步阶段有效，目前支持产品为：redis和mysql
+ * @method integer getSecondsBehindMaster() 获取主从差距，秒；在增量同步阶段有效，目前支持产品为：mysql
+ * @method void setSecondsBehindMaster(integer $SecondsBehindMaster) 设置主从差距，秒；在增量同步阶段有效，目前支持产品为：mysql
  * @method array getStepInfo() 获取步骤信息
  * @method void setStepInfo(array $StepInfo) 设置步骤信息
  */
@@ -60,12 +60,12 @@ class MigrateDetailInfo extends AbstractModel
     public $CurrentStepProgress;
 
     /**
-     * @var integer 主从差距，MB
+     * @var integer 主从差距，MB；在增量同步阶段有效，目前支持产品为：redis和mysql
      */
     public $MasterSlaveDistance;
 
     /**
-     * @var integer 主从差距，秒
+     * @var integer 主从差距，秒；在增量同步阶段有效，目前支持产品为：mysql
      */
     public $SecondsBehindMaster;
 
@@ -78,8 +78,8 @@ class MigrateDetailInfo extends AbstractModel
      * @param integer $StepNow 当前步骤
      * @param string $Progress 总进度,如：
      * @param string $CurrentStepProgress 当前步骤进度,如:
-     * @param integer $MasterSlaveDistance 主从差距，MB
-     * @param integer $SecondsBehindMaster 主从差距，秒
+     * @param integer $MasterSlaveDistance 主从差距，MB；在增量同步阶段有效，目前支持产品为：redis和mysql
+     * @param integer $SecondsBehindMaster 主从差距，秒；在增量同步阶段有效，目前支持产品为：mysql
      * @param array $StepInfo 步骤信息
      */
     function __construct()

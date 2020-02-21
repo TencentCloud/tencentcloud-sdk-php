@@ -78,6 +78,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置函数类型，取值为HTTP或者Event
  * @method string getL5Enable() 获取是否启用L5
  * @method void setL5Enable(string $L5Enable) 设置是否启用L5
+ * @method array getLayers() 获取函数关联的Layer版本信息
+ * @method void setLayers(array $Layers) 设置函数关联的Layer版本信息
+ * @method DeadLetterConfig getDeadLetterConfig() 获取函数关联的死信队列信息
+ * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) 设置函数关联的死信队列信息
+ * @method string getAddTime() 获取函数创建回见
+ * @method void setAddTime(string $AddTime) 设置函数创建回见
+ * @method PublicNetConfigOut getPublicNetConfig() 获取公网访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicNetConfig(PublicNetConfigOut $PublicNetConfig) 设置公网访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOnsEnable() 获取是否启用Ons
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOnsEnable(string $OnsEnable) 设置是否启用Ons
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -238,6 +252,33 @@ class GetFunctionResponse extends AbstractModel
     public $L5Enable;
 
     /**
+     * @var array 函数关联的Layer版本信息
+     */
+    public $Layers;
+
+    /**
+     * @var DeadLetterConfig 函数关联的死信队列信息
+     */
+    public $DeadLetterConfig;
+
+    /**
+     * @var string 函数创建回见
+     */
+    public $AddTime;
+
+    /**
+     * @var PublicNetConfigOut 公网访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicNetConfig;
+
+    /**
+     * @var string 是否启用Ons
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OnsEnable;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -272,6 +313,13 @@ class GetFunctionResponse extends AbstractModel
      * @param AccessInfo $AccessInfo 域名信息
      * @param string $Type 函数类型，取值为HTTP或者Event
      * @param string $L5Enable 是否启用L5
+     * @param array $Layers 函数关联的Layer版本信息
+     * @param DeadLetterConfig $DeadLetterConfig 函数关联的死信队列信息
+     * @param string $AddTime 函数创建回见
+     * @param PublicNetConfigOut $PublicNetConfig 公网访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OnsEnable 是否启用Ons
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -418,6 +466,33 @@ class GetFunctionResponse extends AbstractModel
 
         if (array_key_exists("L5Enable",$param) and $param["L5Enable"] !== null) {
             $this->L5Enable = $param["L5Enable"];
+        }
+
+        if (array_key_exists("Layers",$param) and $param["Layers"] !== null) {
+            $this->Layers = [];
+            foreach ($param["Layers"] as $key => $value){
+                $obj = new LayerVersionInfo();
+                $obj->deserialize($value);
+                array_push($this->Layers, $obj);
+            }
+        }
+
+        if (array_key_exists("DeadLetterConfig",$param) and $param["DeadLetterConfig"] !== null) {
+            $this->DeadLetterConfig = new DeadLetterConfig();
+            $this->DeadLetterConfig->deserialize($param["DeadLetterConfig"]);
+        }
+
+        if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
+            $this->AddTime = $param["AddTime"];
+        }
+
+        if (array_key_exists("PublicNetConfig",$param) and $param["PublicNetConfig"] !== null) {
+            $this->PublicNetConfig = new PublicNetConfigOut();
+            $this->PublicNetConfig->deserialize($param["PublicNetConfig"]);
+        }
+
+        if (array_key_exists("OnsEnable",$param) and $param["OnsEnable"] !== null) {
+            $this->OnsEnable = $param["OnsEnable"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

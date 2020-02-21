@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetAttributes(array $TargetAttributes) 设置目标规则属性列表
  * @method string getLocationId() 获取转发规则ID，注意：针对七层监听器此参数必填
  * @method void setLocationId(string $LocationId) 设置转发规则ID，注意：针对七层监听器此参数必填
+ * @method string getRegion() 获取负载均衡实例所属地域，默认取AS服务所在地域
+ * @method void setRegion(string $Region) 设置负载均衡实例所属地域，默认取AS服务所在地域
  */
 
 /**
@@ -52,11 +54,17 @@ class ForwardLoadBalancer extends AbstractModel
      * @var string 转发规则ID，注意：针对七层监听器此参数必填
      */
     public $LocationId;
+
+    /**
+     * @var string 负载均衡实例所属地域，默认取AS服务所在地域
+     */
+    public $Region;
     /**
      * @param string $LoadBalancerId 负载均衡器ID
      * @param string $ListenerId 应用型负载均衡监听器 ID
      * @param array $TargetAttributes 目标规则属性列表
      * @param string $LocationId 转发规则ID，注意：针对七层监听器此参数必填
+     * @param string $Region 负载均衡实例所属地域，默认取AS服务所在地域
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class ForwardLoadBalancer extends AbstractModel
 
         if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {
             $this->LocationId = $param["LocationId"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

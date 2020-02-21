@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Nlp\V20190408\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getSensitiveWords() 获取敏感词数组
- * @method void setSensitiveWords(array $SensitiveWords) 设置敏感词数组
+ * @method array getMediaSegmentSet() 获取分片文件列表。
+ * @method void setMediaSegmentSet(array $MediaSegmentSet) 设置分片文件列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *SensitiveWordsRecognition返回参数结构体
+ *ParseStreamingManifest返回参数结构体
  */
-class SensitiveWordsRecognitionResponse extends AbstractModel
+class ParseStreamingManifestResponse extends AbstractModel
 {
     /**
-     * @var array 敏感词数组
+     * @var array 分片文件列表。
      */
-    public $SensitiveWords;
+    public $MediaSegmentSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param array $SensitiveWords 敏感词数组
+     * @param array $MediaSegmentSet 分片文件列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class SensitiveWordsRecognitionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SensitiveWords",$param) and $param["SensitiveWords"] !== null) {
-            $this->SensitiveWords = $param["SensitiveWords"];
+        if (array_key_exists("MediaSegmentSet",$param) and $param["MediaSegmentSet"] !== null) {
+            $this->MediaSegmentSet = $param["MediaSegmentSet"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

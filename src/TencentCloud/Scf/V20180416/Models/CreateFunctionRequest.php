@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
  * @method string getCodeSource() 获取CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
  * @method void setCodeSource(string $CodeSource) 设置CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
+ * @method array getLayers() 获取函数要关联的Layer版本列表，Layer会按照在列表中顺序依次覆盖。
+ * @method void setLayers(array $Layers) 设置函数要关联的Layer版本列表，Layer会按照在列表中顺序依次覆盖。
+ * @method DeadLetterConfig getDeadLetterConfig() 获取死信队列参数
+ * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) 设置死信队列参数
  */
 
 /**
@@ -129,6 +133,16 @@ class CreateFunctionRequest extends AbstractModel
      * @var string CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
      */
     public $CodeSource;
+
+    /**
+     * @var array 函数要关联的Layer版本列表，Layer会按照在列表中顺序依次覆盖。
+     */
+    public $Layers;
+
+    /**
+     * @var DeadLetterConfig 死信队列参数
+     */
+    public $DeadLetterConfig;
     /**
      * @param string $FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      * @param Code $Code 函数的代码. 注意：不能同时指定Cos与ZipFile
@@ -145,6 +159,8 @@ class CreateFunctionRequest extends AbstractModel
      * @param string $ClsTopicId 函数日志投递到的CLS TopicID
      * @param string $Type 函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
      * @param string $CodeSource CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
+     * @param array $Layers 函数要关联的Layer版本列表，Layer会按照在列表中顺序依次覆盖。
+     * @param DeadLetterConfig $DeadLetterConfig 死信队列参数
      */
     function __construct()
     {
@@ -219,6 +235,20 @@ class CreateFunctionRequest extends AbstractModel
 
         if (array_key_exists("CodeSource",$param) and $param["CodeSource"] !== null) {
             $this->CodeSource = $param["CodeSource"];
+        }
+
+        if (array_key_exists("Layers",$param) and $param["Layers"] !== null) {
+            $this->Layers = [];
+            foreach ($param["Layers"] as $key => $value){
+                $obj = new LayerVersionSimple();
+                $obj->deserialize($value);
+                array_push($this->Layers, $obj);
+            }
+        }
+
+        if (array_key_exists("DeadLetterConfig",$param) and $param["DeadLetterConfig"] !== null) {
+            $this->DeadLetterConfig = new DeadLetterConfig();
+            $this->DeadLetterConfig->deserialize($param["DeadLetterConfig"]);
         }
     }
 }

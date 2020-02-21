@@ -14,25 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Nlp\V20190408\Models;
+namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getText() 获取待识别的文本（仅支持UTF-8格式，不超过2000字）
- * @method void setText(string $Text) 设置待识别的文本（仅支持UTF-8格式，不超过2000字）
+ * @method string getLayerName() 获取layer名称
+ * @method void setLayerName(string $LayerName) 设置layer名称
+ * @method integer getLayerVersion() 获取版本号
+ * @method void setLayerVersion(integer $LayerVersion) 设置版本号
  */
 
 /**
- *SensitiveWordsRecognition请求参数结构体
+ *指定某个Layer版本
  */
-class SensitiveWordsRecognitionRequest extends AbstractModel
+class LayerVersionSimple extends AbstractModel
 {
     /**
-     * @var string 待识别的文本（仅支持UTF-8格式，不超过2000字）
+     * @var string layer名称
      */
-    public $Text;
+    public $LayerName;
+
     /**
-     * @param string $Text 待识别的文本（仅支持UTF-8格式，不超过2000字）
+     * @var integer 版本号
+     */
+    public $LayerVersion;
+    /**
+     * @param string $LayerName layer名称
+     * @param integer $LayerVersion 版本号
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class SensitiveWordsRecognitionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
+        if (array_key_exists("LayerName",$param) and $param["LayerName"] !== null) {
+            $this->LayerName = $param["LayerName"];
+        }
+
+        if (array_key_exists("LayerVersion",$param) and $param["LayerVersion"] !== null) {
+            $this->LayerVersion = $param["LayerVersion"];
         }
     }
 }

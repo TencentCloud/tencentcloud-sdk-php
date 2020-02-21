@@ -18,8 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getSignId() 获取待修改的签名Id。
- * @method void setSignId(integer $SignId) 设置待修改的签名Id。
+ * @method integer getSignId() 获取待修改的签名 ID。
+ * @method void setSignId(integer $SignId) 设置待修改的签名 ID。
  * @method string getSignName() 获取签名名称。
  * @method void setSignName(string $SignName) 设置签名名称。
  * @method integer getSignType() 获取签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 4：商标（7）。
 5：政府/机关事业单位/其他机构（2，3）。
 注：必须按照对应关系选择证明类型，否则会审核失败。
- * @method integer getDocumentType() 获取证明类型。其中：
+ * @method integer getDocumentType() 获取证明类型：
 0：三证合一。
 1：企业营业执照。
 2：组织机构代码证书。
@@ -47,7 +47,7 @@ use TencentCloud\Common\AbstractModel;
 5：网站备案后台截图(个人开发网站)。
 6：小程序设置页面截图(个人认证小程序)。
 7：商标注册书。
- * @method void setDocumentType(integer $DocumentType) 设置证明类型。其中：
+ * @method void setDocumentType(integer $DocumentType) 设置证明类型：
 0：三证合一。
 1：企业营业执照。
 2：组织机构代码证书。
@@ -56,16 +56,16 @@ use TencentCloud\Common\AbstractModel;
 5：网站备案后台截图(个人开发网站)。
 6：小程序设置页面截图(个人认证小程序)。
 7：商标注册书。
- * @method integer getInternational() 获取是否国际短信。其中：
+ * @method integer getInternational() 获取是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。
- * @method void setInternational(integer $International) 设置是否国际短信。其中：
+1：表示国际/港澳台短信。
+ * @method void setInternational(integer $International) 设置是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。
- * @method integer getUsedMethod() 获取签名用途。其中：
+1：表示国际/港澳台短信。
+ * @method integer getUsedMethod() 获取签名用途：
 0：自用。
 1：他用。
- * @method void setUsedMethod(integer $UsedMethod) 设置签名用途。其中：
+ * @method void setUsedMethod(integer $UsedMethod) 设置签名用途：
 0：自用。
 1：他用。
  * @method string getProofImage() 获取签名对应的资质证明图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀`data:image/jpeg;base64,`再赋值给该参数。
@@ -86,7 +86,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifySmsSignRequest extends AbstractModel
 {
     /**
-     * @var integer 待修改的签名Id。
+     * @var integer 待修改的签名 ID。
      */
     public $SignId;
 
@@ -108,7 +108,7 @@ class ModifySmsSignRequest extends AbstractModel
     public $SignType;
 
     /**
-     * @var integer 证明类型。其中：
+     * @var integer 证明类型：
 0：三证合一。
 1：企业营业执照。
 2：组织机构代码证书。
@@ -121,14 +121,14 @@ class ModifySmsSignRequest extends AbstractModel
     public $DocumentType;
 
     /**
-     * @var integer 是否国际短信。其中：
+     * @var integer 是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。
+1：表示国际/港澳台短信。
      */
     public $International;
 
     /**
-     * @var integer 签名用途。其中：
+     * @var integer 签名用途：
 0：自用。
 1：他用。
      */
@@ -151,7 +151,7 @@ class ModifySmsSignRequest extends AbstractModel
      */
     public $Remark;
     /**
-     * @param integer $SignId 待修改的签名Id。
+     * @param integer $SignId 待修改的签名 ID。
      * @param string $SignName 签名名称。
      * @param integer $SignType 签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：
 0：公司（0，1，2，3）。
@@ -161,7 +161,7 @@ class ModifySmsSignRequest extends AbstractModel
 4：商标（7）。
 5：政府/机关事业单位/其他机构（2，3）。
 注：必须按照对应关系选择证明类型，否则会审核失败。
-     * @param integer $DocumentType 证明类型。其中：
+     * @param integer $DocumentType 证明类型：
 0：三证合一。
 1：企业营业执照。
 2：组织机构代码证书。
@@ -170,10 +170,10 @@ class ModifySmsSignRequest extends AbstractModel
 5：网站备案后台截图(个人开发网站)。
 6：小程序设置页面截图(个人认证小程序)。
 7：商标注册书。
-     * @param integer $International 是否国际短信。其中：
+     * @param integer $International 是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。
-     * @param integer $UsedMethod 签名用途。其中：
+1：表示国际/港澳台短信。
+     * @param integer $UsedMethod 签名用途：
 0：自用。
 1：他用。
      * @param string $ProofImage 签名对应的资质证明图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀`data:image/jpeg;base64,`再赋值给该参数。

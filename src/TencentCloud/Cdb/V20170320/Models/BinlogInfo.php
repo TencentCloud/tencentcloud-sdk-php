@@ -18,18 +18,22 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取备份文件名
- * @method void setName(string $Name) 设置备份文件名
+ * @method string getName() 获取binlog 日志备份文件名
+ * @method void setName(string $Name) 设置binlog 日志备份文件名
  * @method integer getSize() 获取备份文件大小，单位：Byte
  * @method void setSize(integer $Size) 设置备份文件大小，单位：Byte
- * @method string getDate() 获取备份快照时间，时间格式：2016-03-17 02:10:37
- * @method void setDate(string $Date) 设置备份快照时间，时间格式：2016-03-17 02:10:37
+ * @method string getDate() 获取文件存储时间，时间格式：2016-03-17 02:10:37
+ * @method void setDate(string $Date) 设置文件存储时间，时间格式：2016-03-17 02:10:37
  * @method string getIntranetUrl() 获取内网下载地址
  * @method void setIntranetUrl(string $IntranetUrl) 设置内网下载地址
  * @method string getInternetUrl() 获取外网下载地址
  * @method void setInternetUrl(string $InternetUrl) 设置外网下载地址
  * @method string getType() 获取日志具体类型，可能的值有：binlog - 二进制日志
  * @method void setType(string $Type) 设置日志具体类型，可能的值有：binlog - 二进制日志
+ * @method string getBinlogStartTime() 获取binlog 文件起始时间
+ * @method void setBinlogStartTime(string $BinlogStartTime) 设置binlog 文件起始时间
+ * @method string getBinlogFinishTime() 获取binlog 文件截止时间
+ * @method void setBinlogFinishTime(string $BinlogFinishTime) 设置binlog 文件截止时间
  */
 
 /**
@@ -38,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class BinlogInfo extends AbstractModel
 {
     /**
-     * @var string 备份文件名
+     * @var string binlog 日志备份文件名
      */
     public $Name;
 
@@ -48,7 +52,7 @@ class BinlogInfo extends AbstractModel
     public $Size;
 
     /**
-     * @var string 备份快照时间，时间格式：2016-03-17 02:10:37
+     * @var string 文件存储时间，时间格式：2016-03-17 02:10:37
      */
     public $Date;
 
@@ -66,13 +70,25 @@ class BinlogInfo extends AbstractModel
      * @var string 日志具体类型，可能的值有：binlog - 二进制日志
      */
     public $Type;
+
     /**
-     * @param string $Name 备份文件名
+     * @var string binlog 文件起始时间
+     */
+    public $BinlogStartTime;
+
+    /**
+     * @var string binlog 文件截止时间
+     */
+    public $BinlogFinishTime;
+    /**
+     * @param string $Name binlog 日志备份文件名
      * @param integer $Size 备份文件大小，单位：Byte
-     * @param string $Date 备份快照时间，时间格式：2016-03-17 02:10:37
+     * @param string $Date 文件存储时间，时间格式：2016-03-17 02:10:37
      * @param string $IntranetUrl 内网下载地址
      * @param string $InternetUrl 外网下载地址
      * @param string $Type 日志具体类型，可能的值有：binlog - 二进制日志
+     * @param string $BinlogStartTime binlog 文件起始时间
+     * @param string $BinlogFinishTime binlog 文件截止时间
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class BinlogInfo extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("BinlogStartTime",$param) and $param["BinlogStartTime"] !== null) {
+            $this->BinlogStartTime = $param["BinlogStartTime"];
+        }
+
+        if (array_key_exists("BinlogFinishTime",$param) and $param["BinlogFinishTime"] !== null) {
+            $this->BinlogFinishTime = $param["BinlogFinishTime"];
         }
     }
 }

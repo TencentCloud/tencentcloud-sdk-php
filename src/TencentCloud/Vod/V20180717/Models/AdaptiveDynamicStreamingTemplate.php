@@ -50,6 +50,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoTrackTemplateSet(array $VideoTrackTemplateSet) 设置视频轨模板列表。
  * @method array getAudioTrackTemplateSet() 获取音频轨模板列表。
  * @method void setAudioTrackTemplateSet(array $AudioTrackTemplateSet) 设置音频轨模板列表。
+ * @method string getFormat() 获取自适应转码格式，取值范围：
+<li>HLS。</li>
+ * @method void setFormat(string $Format) 设置自适应转码格式，取值范围：
+<li>HLS。</li>
+ * @method array getStreamInfos() 获取自适应转码输入流参数信息，最多输入10路流。
+ * @method void setStreamInfos(array $StreamInfos) 设置自适应转码输入流参数信息，最多输入10路流。
  * @method integer getDisableHigherVideoBitrate() 获取是否禁止视频低码率转高码率，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
@@ -122,6 +128,17 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
     public $AudioTrackTemplateSet;
 
     /**
+     * @var string 自适应转码格式，取值范围：
+<li>HLS。</li>
+     */
+    public $Format;
+
+    /**
+     * @var array 自适应转码输入流参数信息，最多输入10路流。
+     */
+    public $StreamInfos;
+
+    /**
      * @var integer 是否禁止视频低码率转高码率，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
@@ -161,6 +178,9 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
 如果取值为空字符串，代表不对视频做 DRM 保护。
      * @param array $VideoTrackTemplateSet 视频轨模板列表。
      * @param array $AudioTrackTemplateSet 音频轨模板列表。
+     * @param string $Format 自适应转码格式，取值范围：
+<li>HLS。</li>
+     * @param array $StreamInfos 自适应转码输入流参数信息，最多输入10路流。
      * @param integer $DisableHigherVideoBitrate 是否禁止视频低码率转高码率，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
@@ -221,6 +241,19 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
                 $obj = new AudioTrackTemplateInfo();
                 $obj->deserialize($value);
                 array_push($this->AudioTrackTemplateSet, $obj);
+            }
+        }
+
+        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
+            $this->Format = $param["Format"];
+        }
+
+        if (array_key_exists("StreamInfos",$param) and $param["StreamInfos"] !== null) {
+            $this->StreamInfos = [];
+            foreach ($param["StreamInfos"] as $key => $value){
+                $obj = new AdaptiveStreamTemplate();
+                $obj->deserialize($value);
+                array_push($this->StreamInfos, $obj);
             }
         }
 

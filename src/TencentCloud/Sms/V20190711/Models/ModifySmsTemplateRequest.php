@@ -26,8 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateContent(string $TemplateContent) 设置新的模板内容。
  * @method integer getSmsType() 获取短信类型，0表示普通短信, 1表示营销短信。
  * @method void setSmsType(integer $SmsType) 设置短信类型，0表示普通短信, 1表示营销短信。
- * @method integer getInternational() 获取0表示国内短信，1表示国际/港澳台短信，默认为0。
- * @method void setInternational(integer $International) 设置0表示国内短信，1表示国际/港澳台短信，默认为0。
+ * @method integer getInternational() 获取是否国际/港澳台短信：
+0：表示国内短信。
+1：表示国际/港澳台短信。
+ * @method void setInternational(integer $International) 设置是否国际/港澳台短信：
+0：表示国内短信。
+1：表示国际/港澳台短信。
  * @method string getRemark() 获取模板备注，例如申请原因，使用场景等。
  * @method void setRemark(string $Remark) 设置模板备注，例如申请原因，使用场景等。
  */
@@ -58,7 +62,9 @@ class ModifySmsTemplateRequest extends AbstractModel
     public $SmsType;
 
     /**
-     * @var integer 0表示国内短信，1表示国际/港澳台短信，默认为0。
+     * @var integer 是否国际/港澳台短信：
+0：表示国内短信。
+1：表示国际/港澳台短信。
      */
     public $International;
 
@@ -71,7 +77,9 @@ class ModifySmsTemplateRequest extends AbstractModel
      * @param string $TemplateName 新的模板名称。
      * @param string $TemplateContent 新的模板内容。
      * @param integer $SmsType 短信类型，0表示普通短信, 1表示营销短信。
-     * @param integer $International 0表示国内短信，1表示国际/港澳台短信，默认为0。
+     * @param integer $International 是否国际/港澳台短信：
+0：表示国内短信。
+1：表示国际/港澳台短信。
      * @param string $Remark 模板备注，例如申请原因，使用场景等。
      */
     function __construct()

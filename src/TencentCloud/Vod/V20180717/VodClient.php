@@ -164,6 +164,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * @method Models\ModifyTranscodeTemplateResponse ModifyTranscodeTemplate(Models\ModifyTranscodeTemplateRequest $req) 修改用户自定义转码模板信息。
 * @method Models\ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(Models\ModifyWatermarkTemplateRequest $req) 修改用户自定义水印模板，水印类型不允许修改。
 * @method Models\ModifyWordSampleResponse ModifyWordSample(Models\ModifyWordSampleRequest $req) 该接口用于修改关键词的应用场景、标签，关键词本身不可修改，如需修改，可删除重建。
+* @method Models\ParseStreamingManifestResponse ParseStreamingManifest(Models\ParseStreamingManifestRequest $req) 上传 HLS 视频时，解析索引文件内容，返回待上传的分片文件列表。分片文件路径必须是当前目录或子目录的相对路径，不能是 URL，不能是绝对路径。
 * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) 对点播中的音视频媒体发起处理任务，功能包括：
 1. 视频转码（带水印）；
 2. 视频转动图；

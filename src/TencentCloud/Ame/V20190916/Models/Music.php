@@ -18,8 +18,8 @@ namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getUrl() 获取音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。
- * @method void setUrl(string $Url) 设置音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。
+ * @method string getUrl() 获取音乐播放链接相对路径，必须通过在正版曲库直通车控制台上登记的域名进行拼接。
+ * @method void setUrl(string $Url) 设置音乐播放链接相对路径，必须通过在正版曲库直通车控制台上登记的域名进行拼接。
  * @method integer getFileSize() 获取音频文件大小
  * @method void setFileSize(integer $FileSize) 设置音频文件大小
  * @method string getFileExtension() 获取音频文件类型
@@ -32,15 +32,19 @@ Unit :ms
 Unit :ms
  * @method void setAuditionEnd(integer $AuditionEnd) 设置Song fragment end.试听片段结束时间, 试听时长为auditionEnd-auditionBegin
 Unit :ms
+ * @method string getFullUrl() 获取音乐播放链接全路径，前提是在正版曲库直通车控制台添加过域名，否则返回空字符。
+如果添加过多个域名只返回第一个添加域名的播放全路径。
+ * @method void setFullUrl(string $FullUrl) 设置音乐播放链接全路径，前提是在正版曲库直通车控制台添加过域名，否则返回空字符。
+如果添加过多个域名只返回第一个添加域名的播放全路径。
  */
 
 /**
- *Music
+ *音乐详情
  */
 class Music extends AbstractModel
 {
     /**
-     * @var string 音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。
+     * @var string 音乐播放链接相对路径，必须通过在正版曲库直通车控制台上登记的域名进行拼接。
      */
     public $Url;
 
@@ -65,14 +69,22 @@ Unit :ms
 Unit :ms
      */
     public $AuditionEnd;
+
     /**
-     * @param string $Url 音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。
+     * @var string 音乐播放链接全路径，前提是在正版曲库直通车控制台添加过域名，否则返回空字符。
+如果添加过多个域名只返回第一个添加域名的播放全路径。
+     */
+    public $FullUrl;
+    /**
+     * @param string $Url 音乐播放链接相对路径，必须通过在正版曲库直通车控制台上登记的域名进行拼接。
      * @param integer $FileSize 音频文件大小
      * @param string $FileExtension 音频文件类型
      * @param integer $AuditionBegin Song fragment start.试听片段开始时间，试听时长为auditionEnd-auditionBegin
 Unit :ms
      * @param integer $AuditionEnd Song fragment end.试听片段结束时间, 试听时长为auditionEnd-auditionBegin
 Unit :ms
+     * @param string $FullUrl 音乐播放链接全路径，前提是在正版曲库直通车控制台添加过域名，否则返回空字符。
+如果添加过多个域名只返回第一个添加域名的播放全路径。
      */
     function __construct()
     {
@@ -104,6 +116,10 @@ Unit :ms
 
         if (array_key_exists("AuditionEnd",$param) and $param["AuditionEnd"] !== null) {
             $this->AuditionEnd = $param["AuditionEnd"];
+        }
+
+        if (array_key_exists("FullUrl",$param) and $param["FullUrl"] !== null) {
+            $this->FullUrl = $param["FullUrl"];
         }
     }
 }

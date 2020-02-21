@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dayu\V20180709\Models;
+namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getRuleConfig() 获取7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组
- * @method void setRuleConfig(array $RuleConfig) 设置7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *CreateL7CCRule返回参数结构体
+ *DeleteLayerVersion返回参数结构体
  */
-class CreateL7CCRuleResponse extends AbstractModel
+class DeleteLayerVersionResponse extends AbstractModel
 {
-    /**
-     * @var array 7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组
-     */
-    public $RuleConfig;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param array $RuleConfig 7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,15 +46,6 @@ class CreateL7CCRuleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleConfig",$param) and $param["RuleConfig"] !== null) {
-            $this->RuleConfig = [];
-            foreach ($param["RuleConfig"] as $key => $value){
-                $obj = new CCRuleConfig();
-                $obj->deserialize($value);
-                array_push($this->RuleConfig, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

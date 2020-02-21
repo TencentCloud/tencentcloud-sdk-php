@@ -18,29 +18,29 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getVpcId() 获取私有网络 的 Id
- * @method void setVpcId(string $VpcId) 设置私有网络 的 Id
- * @method string getSubnetId() 获取子网的 Id
- * @method void setSubnetId(string $SubnetId) 设置子网的 Id
+ * @method string getLayerName() 获取层名称
+ * @method void setLayerName(string $LayerName) 设置层名称
+ * @method integer getLayerVersion() 获取版本号
+ * @method void setLayerVersion(integer $LayerVersion) 设置版本号
  */
 
 /**
- *私有网络参数配置
+ *GetLayerVersion请求参数结构体
  */
-class VpcConfig extends AbstractModel
+class GetLayerVersionRequest extends AbstractModel
 {
     /**
-     * @var string 私有网络 的 Id
+     * @var string 层名称
      */
-    public $VpcId;
+    public $LayerName;
 
     /**
-     * @var string 子网的 Id
+     * @var integer 版本号
      */
-    public $SubnetId;
+    public $LayerVersion;
     /**
-     * @param string $VpcId 私有网络 的 Id
-     * @param string $SubnetId 子网的 Id
+     * @param string $LayerName 层名称
+     * @param integer $LayerVersion 版本号
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class VpcConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists("LayerName",$param) and $param["LayerName"] !== null) {
+            $this->LayerName = $param["LayerName"];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists("LayerVersion",$param) and $param["LayerVersion"] !== null) {
+            $this->LayerVersion = $param["LayerVersion"];
         }
     }
 }

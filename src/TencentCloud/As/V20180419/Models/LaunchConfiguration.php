@@ -74,8 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastOperationInstanceTypesCheckPolicy(string $LastOperationInstanceTypesCheckPolicy) 设置上次操作时，InstanceTypesCheckPolicy 取值。
  * @method HostNameSettings getHostNameSettings() 获取云服务器主机名（HostName）的相关设置。
  * @method void setHostNameSettings(HostNameSettings $HostNameSettings) 设置云服务器主机名（HostName）的相关设置。
- * @method array getInstanceNameSettings() 获取云服务器实例名（InstanceName）的相关设置。
- * @method void setInstanceNameSettings(array $InstanceNameSettings) 设置云服务器实例名（InstanceName）的相关设置。
+ * @method InstanceNameSettings getInstanceNameSettings() 获取云服务器实例名（InstanceName）的相关设置。
+ * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) 设置云服务器实例名（InstanceName）的相关设置。
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  */
@@ -210,7 +210,7 @@ class LaunchConfiguration extends AbstractModel
     public $HostNameSettings;
 
     /**
-     * @var array 云服务器实例名（InstanceName）的相关设置。
+     * @var InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
      */
     public $InstanceNameSettings;
 
@@ -247,7 +247,7 @@ class LaunchConfiguration extends AbstractModel
      * @param string $CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
      * @param string $LastOperationInstanceTypesCheckPolicy 上次操作时，InstanceTypesCheckPolicy 取值。
      * @param HostNameSettings $HostNameSettings 云服务器主机名（HostName）的相关设置。
-     * @param array $InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
+     * @param InstanceNameSettings $InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      */
     function __construct()
@@ -380,12 +380,8 @@ class LaunchConfiguration extends AbstractModel
         }
 
         if (array_key_exists("InstanceNameSettings",$param) and $param["InstanceNameSettings"] !== null) {
-            $this->InstanceNameSettings = [];
-            foreach ($param["InstanceNameSettings"] as $key => $value){
-                $obj = new InstanceNameSettings();
-                $obj->deserialize($value);
-                array_push($this->InstanceNameSettings, $obj);
-            }
+            $this->InstanceNameSettings = new InstanceNameSettings();
+            $this->InstanceNameSettings->deserialize($param["InstanceNameSettings"]);
         }
 
         if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {

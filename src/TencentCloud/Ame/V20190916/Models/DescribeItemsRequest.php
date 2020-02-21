@@ -22,14 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置offset (Default = 0)，(当前页-1) * Limit
  * @method integer getLimit() 获取条数，必须大于0，最大值为30
  * @method void setLimit(integer $Limit) 设置条数，必须大于0，最大值为30
- * @method string getCategoryId() 获取（电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109
- * @method void setCategoryId(string $CategoryId) 设置（电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109
- * @method string getCategoryCode() 获取（电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109
- * @method void setCategoryCode(string $CategoryCode) 设置（电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109
+ * @method string getCategoryId() 获取（电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
+ * @method void setCategoryId(string $CategoryId) 设置（电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
+ * @method string getCategoryCode() 获取（电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
+ * @method void setCategoryCode(string $CategoryCode) 设置（电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
  */
 
 /**
@@ -48,23 +44,19 @@ class DescribeItemsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109
+     * @var string （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
      */
     public $CategoryId;
 
     /**
-     * @var string （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109
+     * @var string （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
      */
     public $CategoryCode;
     /**
      * @param integer $Offset offset (Default = 0)，(当前页-1) * Limit
      * @param integer $Limit 条数，必须大于0，最大值为30
-     * @param string $CategoryId （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109
-     * @param string $CategoryCode （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109
+     * @param string $CategoryId （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
+     * @param string $CategoryCode （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
      */
     function __construct()
     {

@@ -38,6 +38,7 @@ class HttpConnection
     {
         $options = ["allow_redirects" => false];
         $options["timeout"] = $this->profile->getHttpProfile()->getReqTimeout();
+        $options["proxy"] = $this->profile->getHttpProfile()->getProxy();
         return $options;
     }
 

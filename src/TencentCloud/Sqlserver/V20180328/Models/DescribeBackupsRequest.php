@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间(yyyy-MM-dd HH:mm:ss)
  * @method string getInstanceId() 获取实例ID，形如mssql-njj2mtpl
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-njj2mtpl
- * @method integer getLimit() 获取分页返回，每页返回数量，默认为20，最大值为 100
- * @method void setLimit(integer $Limit) 设置分页返回，每页返回数量，默认为20，最大值为 100
- * @method integer getOffset() 获取偏移量，默认为 0
- * @method void setOffset(integer $Offset) 设置偏移量，默认为 0
+ * @method integer getLimit() 获取分页返回，每页返回的数目，取值为1-100，默认值为20
+ * @method void setLimit(integer $Limit) 设置分页返回，每页返回的数目，取值为1-100，默认值为20
+ * @method integer getOffset() 获取分页返回，页编号，默认值为第0页
+ * @method void setOffset(integer $Offset) 设置分页返回，页编号，默认值为第0页
  */
 
 /**
@@ -51,20 +51,20 @@ class DescribeBackupsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 分页返回，每页返回数量，默认为20，最大值为 100
+     * @var integer 分页返回，每页返回的数目，取值为1-100，默认值为20
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认为 0
+     * @var integer 分页返回，页编号，默认值为第0页
      */
     public $Offset;
     /**
      * @param string $StartTime 开始时间(yyyy-MM-dd HH:mm:ss)
      * @param string $EndTime 结束时间(yyyy-MM-dd HH:mm:ss)
      * @param string $InstanceId 实例ID，形如mssql-njj2mtpl
-     * @param integer $Limit 分页返回，每页返回数量，默认为20，最大值为 100
-     * @param integer $Offset 偏移量，默认为 0
+     * @param integer $Limit 分页返回，每页返回的数目，取值为1-100，默认值为20
+     * @param integer $Offset 分页返回，页编号，默认值为第0页
      */
     function __construct()
     {

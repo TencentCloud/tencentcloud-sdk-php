@@ -26,16 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPGroupId(string $PGroupId) 设置权限组 ID
  * @method string getProtocol() 获取文件系统协议类型， 值为 NFS、CIFS; 若留空则默认为 NFS协议
  * @method void setProtocol(string $Protocol) 设置文件系统协议类型， 值为 NFS、CIFS; 若留空则默认为 NFS协议
- * @method string getStorageType() 获取文件系统存储类型，值为 SD ；其中 SD 为标准型存储
- * @method void setStorageType(string $StorageType) 设置文件系统存储类型，值为 SD ；其中 SD 为标准型存储
- * @method string getVpcId() 获取私有网路（VPC） ID
- * @method void setVpcId(string $VpcId) 设置私有网路（VPC） ID
- * @method string getSubnetId() 获取子网 ID
- * @method void setSubnetId(string $SubnetId) 设置子网 ID
+ * @method string getStorageType() 获取文件系统存储类型，值为 SD ；其中 SD 为标准型存储， HP为性能存储。
+ * @method void setStorageType(string $StorageType) 设置文件系统存储类型，值为 SD ；其中 SD 为标准型存储， HP为性能存储。
+ * @method string getVpcId() 获取私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。
+ * @method void setVpcId(string $VpcId) 设置私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。
+ * @method string getSubnetId() 获取子网 ID，若网络类型选择的是VPC，该字段为必填。
+ * @method void setSubnetId(string $SubnetId) 设置子网 ID，若网络类型选择的是VPC，该字段为必填。
  * @method string getMountIP() 获取指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP
  * @method void setMountIP(string $MountIP) 设置指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP
  * @method string getFsName() 获取用户自定义文件系统名称
  * @method void setFsName(string $FsName) 设置用户自定义文件系统名称
+ * @method array getResourceTags() 获取文件系统标签
+ * @method void setResourceTags(array $ResourceTags) 设置文件系统标签
  */
 
 /**
@@ -64,17 +66,17 @@ class CreateCfsFileSystemRequest extends AbstractModel
     public $Protocol;
 
     /**
-     * @var string 文件系统存储类型，值为 SD ；其中 SD 为标准型存储
+     * @var string 文件系统存储类型，值为 SD ；其中 SD 为标准型存储， HP为性能存储。
      */
     public $StorageType;
 
     /**
-     * @var string 私有网路（VPC） ID
+     * @var string 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。
      */
     public $VpcId;
 
     /**
-     * @var string 子网 ID
+     * @var string 子网 ID，若网络类型选择的是VPC，该字段为必填。
      */
     public $SubnetId;
 
@@ -87,16 +89,22 @@ class CreateCfsFileSystemRequest extends AbstractModel
      * @var string 用户自定义文件系统名称
      */
     public $FsName;
+
+    /**
+     * @var array 文件系统标签
+     */
+    public $ResourceTags;
     /**
      * @param string $Zone 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
      * @param string $NetInterface 网络类型，值为 VPC，BASIC；其中 VPC 为私有网络，BASIC 为基础网络
      * @param string $PGroupId 权限组 ID
      * @param string $Protocol 文件系统协议类型， 值为 NFS、CIFS; 若留空则默认为 NFS协议
-     * @param string $StorageType 文件系统存储类型，值为 SD ；其中 SD 为标准型存储
-     * @param string $VpcId 私有网路（VPC） ID
-     * @param string $SubnetId 子网 ID
+     * @param string $StorageType 文件系统存储类型，值为 SD ；其中 SD 为标准型存储， HP为性能存储。
+     * @param string $VpcId 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。
+     * @param string $SubnetId 子网 ID，若网络类型选择的是VPC，该字段为必填。
      * @param string $MountIP 指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP
      * @param string $FsName 用户自定义文件系统名称
+     * @param array $ResourceTags 文件系统标签
      */
     function __construct()
     {
@@ -144,6 +152,15 @@ class CreateCfsFileSystemRequest extends AbstractModel
 
         if (array_key_exists("FsName",$param) and $param["FsName"] !== null) {
             $this->FsName = $param["FsName"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

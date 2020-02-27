@@ -18,53 +18,77 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getIp() 获取节点 ip。
- * @method void setIp(string $Ip) 设置节点 ip。
- * @method string getPlatform() 获取是否为腾讯云 CDN 加速节点。yes 表示该节点为腾讯云 CDN 节点，no 表示该节点不是腾讯云 CDN 节点。
- * @method void setPlatform(string $Platform) 设置是否为腾讯云 CDN 加速节点。yes 表示该节点为腾讯云 CDN 节点，no 表示该节点不是腾讯云 CDN 节点。
- * @method string getLocation() 获取表示该节点所处的省份/国家。unknown 表示节点位置未知。
- * @method void setLocation(string $Location) 设置表示该节点所处的省份/国家。unknown 表示节点位置未知。
- * @method array getHistory() 获取节点上下线历史记录。
- * @method void setHistory(array $History) 设置节点上下线历史记录。
- * @method string getArea() 获取节点的服务地域。mainland 表示服务地域为中国境内，overseas 表示服务地域为中国境外， unknown 表示服务地域未知。
- * @method void setArea(string $Area) 设置节点的服务地域。mainland 表示服务地域为中国境内，overseas 表示服务地域为中国境外， unknown 表示服务地域未知。
+ * @method string getIp() 获取指定查询的 IP
+ * @method void setIp(string $Ip) 设置指定查询的 IP
+ * @method string getPlatform() 获取IP 归属：
+yes：节点归属于腾讯云 CDN
+no：节点不属于腾讯云 CDN
+ * @method void setPlatform(string $Platform) 设置IP 归属：
+yes：节点归属于腾讯云 CDN
+no：节点不属于腾讯云 CDN
+ * @method string getLocation() 获取节点所处的省份/国家
+unknown 表示节点位置未知
+ * @method void setLocation(string $Location) 设置节点所处的省份/国家
+unknown 表示节点位置未知
+ * @method array getHistory() 获取节点上下线历史记录
+ * @method void setHistory(array $History) 设置节点上下线历史记录
+ * @method string getArea() 获取节点的所在区域
+mainland：中国境内加速节点
+overseas：中国境外加速节点
+unknown：服务地域无法获取
+ * @method void setArea(string $Area) 设置节点的所在区域
+mainland：中国境内加速节点
+overseas：中国境外加速节点
+unknown：服务地域无法获取
  */
 
 /**
- *CdnIp 属性详情。
+ *IP 属性信息
  */
 class CdnIp extends AbstractModel
 {
     /**
-     * @var string 节点 ip。
+     * @var string 指定查询的 IP
      */
     public $Ip;
 
     /**
-     * @var string 是否为腾讯云 CDN 加速节点。yes 表示该节点为腾讯云 CDN 节点，no 表示该节点不是腾讯云 CDN 节点。
+     * @var string IP 归属：
+yes：节点归属于腾讯云 CDN
+no：节点不属于腾讯云 CDN
      */
     public $Platform;
 
     /**
-     * @var string 表示该节点所处的省份/国家。unknown 表示节点位置未知。
+     * @var string 节点所处的省份/国家
+unknown 表示节点位置未知
      */
     public $Location;
 
     /**
-     * @var array 节点上下线历史记录。
+     * @var array 节点上下线历史记录
      */
     public $History;
 
     /**
-     * @var string 节点的服务地域。mainland 表示服务地域为中国境内，overseas 表示服务地域为中国境外， unknown 表示服务地域未知。
+     * @var string 节点的所在区域
+mainland：中国境内加速节点
+overseas：中国境外加速节点
+unknown：服务地域无法获取
      */
     public $Area;
     /**
-     * @param string $Ip 节点 ip。
-     * @param string $Platform 是否为腾讯云 CDN 加速节点。yes 表示该节点为腾讯云 CDN 节点，no 表示该节点不是腾讯云 CDN 节点。
-     * @param string $Location 表示该节点所处的省份/国家。unknown 表示节点位置未知。
-     * @param array $History 节点上下线历史记录。
-     * @param string $Area 节点的服务地域。mainland 表示服务地域为中国境内，overseas 表示服务地域为中国境外， unknown 表示服务地域未知。
+     * @param string $Ip 指定查询的 IP
+     * @param string $Platform IP 归属：
+yes：节点归属于腾讯云 CDN
+no：节点不属于腾讯云 CDN
+     * @param string $Location 节点所处的省份/国家
+unknown 表示节点位置未知
+     * @param array $History 节点上下线历史记录
+     * @param string $Area 节点的所在区域
+mainland：中国境内加速节点
+overseas：中国境外加速节点
+unknown：服务地域无法获取
      */
     function __construct()
     {

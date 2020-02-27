@@ -91,6 +91,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
     8. 视频打点信息（keyFrameDescInfo）：对视频设置的打点信息。
     9. 转自适应码流信息（adaptiveDynamicStreamingInfo）：包括规格、加密类型、打包格式等相关信息。
 2. 可以指定回包只返回部分信息。
+* @method Models\DescribeMediaProcessUsageDataResponse DescribeMediaProcessUsageData(Models\DescribeMediaProcessUsageDataRequest $req) 该接口返回查询时间范围内每天使用的视频处理用量信息。
+   1. 可以查询最近365天内的视频处理统计数据。
+   2. 查询时间跨度不超过90天。
 * @method Models\DescribePersonSamplesResponse DescribePersonSamples(Models\DescribePersonSamplesRequest $req) 该接口用于查询人物样本信息，支持根据人物 ID、名称、标签，分页查询。
 * @method Models\DescribeProcedureTemplatesResponse DescribeProcedureTemplates(Models\DescribeProcedureTemplatesRequest $req) 根据任务流模板名字，获取任务流模板详情列表。
 * @method Models\DescribeReviewDetailsResponse DescribeReviewDetails(Models\DescribeReviewDetailsRequest $req) 该接口返回查询时间范围内每天使用的视频内容审核时长数据，单位： 秒。
@@ -99,6 +102,12 @@ use TencentCloud\Vod\V20180717\Models as Models;
 2. 查询时间跨度不超过90天。
 * @method Models\DescribeSampleSnapshotTemplatesResponse DescribeSampleSnapshotTemplates(Models\DescribeSampleSnapshotTemplatesRequest $req) 查询采样截图模板，支持根据条件，分页查询。
 * @method Models\DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(Models\DescribeSnapshotByTimeOffsetTemplatesRequest $req) 查询指定时间点截图模板，支持根据条件，分页查询。
+* @method Models\DescribeStorageDataResponse DescribeStorageData(Models\DescribeStorageDataRequest $req) 查询存储空间使用情况和文件数量。
+* @method Models\DescribeStorageDetailsResponse DescribeStorageDetails(Models\DescribeStorageDetailsRequest $req) 该接口返回查询时间范围内使用的点播存储空间，单位：字节。
+   1. 可以查询最近365天内的存储空间数据；
+   2. 查询时间跨度不超过90天；
+   3. 分钟粒度查询跨度不超过5天；
+   4. 小时粒度查询跨度不超过10天。
 * @method Models\DescribeSubAppIdsResponse DescribeSubAppIds(Models\DescribeSubAppIdsRequest $req) 该接口用于获取当前账号有权限的子应用列表，包含主应用。若尚未开通子应用功能，接口将返回 
  FailedOperation。
 * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询3天之内提交的任务）。

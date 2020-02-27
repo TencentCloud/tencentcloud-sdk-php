@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeNameType(string $NodeNameType) 设置集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
  * @method ClusterExtraArgs getExtraArgs() 获取集群自定义参数
  * @method void setExtraArgs(ClusterExtraArgs $ExtraArgs) 设置集群自定义参数
+ * @method string getNetworkType() 获取集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
+ * @method void setNetworkType(string $NetworkType) 设置集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
+ * @method boolean getIsNonStaticIpMode() 获取集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
+ * @method void setIsNonStaticIpMode(boolean $IsNonStaticIpMode) 设置集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
  */
 
 /**
@@ -59,12 +63,24 @@ class ClusterAdvancedSettings extends AbstractModel
      * @var ClusterExtraArgs 集群自定义参数
      */
     public $ExtraArgs;
+
+    /**
+     * @var string 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
+     */
+    public $NetworkType;
+
+    /**
+     * @var boolean 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
+     */
+    public $IsNonStaticIpMode;
     /**
      * @param boolean $IPVS 是否启用IPVS
      * @param boolean $AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      * @param string $ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
      * @param string $NodeNameType 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
      * @param ClusterExtraArgs $ExtraArgs 集群自定义参数
+     * @param string $NetworkType 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
+     * @param boolean $IsNonStaticIpMode 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
      */
     function __construct()
     {
@@ -97,6 +113,14 @@ class ClusterAdvancedSettings extends AbstractModel
         if (array_key_exists("ExtraArgs",$param) and $param["ExtraArgs"] !== null) {
             $this->ExtraArgs = new ClusterExtraArgs();
             $this->ExtraArgs->deserialize($param["ExtraArgs"]);
+        }
+
+        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
+            $this->NetworkType = $param["NetworkType"];
+        }
+
+        if (array_key_exists("IsNonStaticIpMode",$param) and $param["IsNonStaticIpMode"] !== null) {
+            $this->IsNonStaticIpMode = $param["IsNonStaticIpMode"];
         }
     }
 }

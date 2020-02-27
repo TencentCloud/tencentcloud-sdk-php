@@ -18,12 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getApplicationId() 获取待创建表所属应用实例ID
- * @method void setApplicationId(string $ApplicationId) 设置待创建表所属应用实例ID
- * @method array getIdlFiles() 获取用户选定的建表IDL文件列表
- * @method void setIdlFiles(array $IdlFiles) 设置用户选定的建表IDL文件列表
- * @method array getSelectedTables() 获取待创建表信息列表
- * @method void setSelectedTables(array $SelectedTables) 设置待创建表信息列表
+ * @method string getClusterId() 获取待创建表格所属集群ID
+ * @method void setClusterId(string $ClusterId) 设置待创建表格所属集群ID
+ * @method array getIdlFiles() 获取用户选定的建表格IDL文件列表
+ * @method void setIdlFiles(array $IdlFiles) 设置用户选定的建表格IDL文件列表
+ * @method array getSelectedTables() 获取待创建表格信息列表
+ * @method void setSelectedTables(array $SelectedTables) 设置待创建表格信息列表
  */
 
 /**
@@ -32,23 +32,23 @@ use TencentCloud\Common\AbstractModel;
 class CreateTablesRequest extends AbstractModel
 {
     /**
-     * @var string 待创建表所属应用实例ID
+     * @var string 待创建表格所属集群ID
      */
-    public $ApplicationId;
+    public $ClusterId;
 
     /**
-     * @var array 用户选定的建表IDL文件列表
+     * @var array 用户选定的建表格IDL文件列表
      */
     public $IdlFiles;
 
     /**
-     * @var array 待创建表信息列表
+     * @var array 待创建表格信息列表
      */
     public $SelectedTables;
     /**
-     * @param string $ApplicationId 待创建表所属应用实例ID
-     * @param array $IdlFiles 用户选定的建表IDL文件列表
-     * @param array $SelectedTables 待创建表信息列表
+     * @param string $ClusterId 待创建表格所属集群ID
+     * @param array $IdlFiles 用户选定的建表格IDL文件列表
+     * @param array $SelectedTables 待创建表格信息列表
      */
     function __construct()
     {
@@ -62,8 +62,8 @@ class CreateTablesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
         if (array_key_exists("IdlFiles",$param) and $param["IdlFiles"] !== null) {
@@ -78,7 +78,7 @@ class CreateTablesRequest extends AbstractModel
         if (array_key_exists("SelectedTables",$param) and $param["SelectedTables"] !== null) {
             $this->SelectedTables = [];
             foreach ($param["SelectedTables"] as $key => $value){
-                $obj = new SelectedTableInfo();
+                $obj = new SelectedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->SelectedTables, $obj);
             }

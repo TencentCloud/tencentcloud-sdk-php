@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatusSet(array $StatusSet) 设置状态集合。只要符合集合中某一状态的迁移任务，就会查出来
  * @method string getMigrateName() 获取迁移任务的名称，模糊匹配
  * @method void setMigrateName(string $MigrateName) 设置迁移任务的名称，模糊匹配
- * @method integer getLimit() 获取每页的记录数
- * @method void setLimit(integer $Limit) 设置每页的记录数
- * @method integer getOffset() 获取查询第几页的记录
- * @method void setOffset(integer $Offset) 设置查询第几页的记录
+ * @method integer getLimit() 获取分页返回，每页返回的数目，取值为1-100，默认值为100
+ * @method void setLimit(integer $Limit) 设置分页返回，每页返回的数目，取值为1-100，默认值为100
+ * @method integer getOffset() 获取分页返回，页编号，默认值为第0页
+ * @method void setOffset(integer $Offset) 设置分页返回，页编号，默认值为第0页
  * @method string getOrderBy() 获取查询结果按照关键字排序，可选值为name、createTime、startTime，endTime，status
  * @method void setOrderBy(string $OrderBy) 设置查询结果按照关键字排序，可选值为name、createTime、startTime，endTime，status
  * @method string getOrderByType() 获取排序方式，可选值为desc、asc
@@ -48,12 +48,12 @@ class DescribeMigrationsRequest extends AbstractModel
     public $MigrateName;
 
     /**
-     * @var integer 每页的记录数
+     * @var integer 分页返回，每页返回的数目，取值为1-100，默认值为100
      */
     public $Limit;
 
     /**
-     * @var integer 查询第几页的记录
+     * @var integer 分页返回，页编号，默认值为第0页
      */
     public $Offset;
 
@@ -69,8 +69,8 @@ class DescribeMigrationsRequest extends AbstractModel
     /**
      * @param array $StatusSet 状态集合。只要符合集合中某一状态的迁移任务，就会查出来
      * @param string $MigrateName 迁移任务的名称，模糊匹配
-     * @param integer $Limit 每页的记录数
-     * @param integer $Offset 查询第几页的记录
+     * @param integer $Limit 分页返回，每页返回的数目，取值为1-100，默认值为100
+     * @param integer $Offset 分页返回，页编号，默认值为第0页
      * @param string $OrderBy 查询结果按照关键字排序，可选值为name、createTime、startTime，endTime，status
      * @param string $OrderByType 排序方式，可选值为desc、asc
      */

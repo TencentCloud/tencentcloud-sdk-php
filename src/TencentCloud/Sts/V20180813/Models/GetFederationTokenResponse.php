@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCredentials(Credentials $Credentials) 设置临时证书
  * @method integer getExpiredTime() 获取临时证书有效的时间，返回 Unix 时间戳，精确到秒
  * @method void setExpiredTime(integer $ExpiredTime) 设置临时证书有效的时间，返回 Unix 时间戳，精确到秒
+ * @method string getExpiration() 获取证书有效的时间，以 iso8601 格式的 UTC 时间表示
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExpiration(string $Expiration) 设置证书有效的时间，以 iso8601 格式的 UTC 时间表示
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,12 +46,20 @@ class GetFederationTokenResponse extends AbstractModel
     public $ExpiredTime;
 
     /**
+     * @var string 证书有效的时间，以 iso8601 格式的 UTC 时间表示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Expiration;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param Credentials $Credentials 临时证书
      * @param integer $ExpiredTime 临时证书有效的时间，返回 Unix 时间戳，精确到秒
+     * @param string $Expiration 证书有效的时间，以 iso8601 格式的 UTC 时间表示
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -69,6 +81,10 @@ class GetFederationTokenResponse extends AbstractModel
 
         if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
             $this->ExpiredTime = $param["ExpiredTime"];
+        }
+
+        if (array_key_exists("Expiration",$param) and $param["Expiration"] !== null) {
+            $this->Expiration = $param["Expiration"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

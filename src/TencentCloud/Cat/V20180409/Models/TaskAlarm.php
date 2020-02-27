@@ -18,8 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTaskId() 获取任务Id
- * @method void setTaskId(integer $TaskId) 设置任务Id
+ * @method integer getTaskId() 获取任务ID
+ * @method void setTaskId(integer $TaskId) 设置任务ID
  * @method string getTaskName() 获取任务名称
  * @method void setTaskName(string $TaskName) 设置任务名称
  * @method integer getPeriod() 获取任务周期，单位为分钟。目前支持1，5，15，30几种取值
@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCatTypeName(string $CatTypeName) 设置拨测类型。http, https, ping, tcp, udp, smtp, pop3, dns 之一
  * @method integer getStatus() 获取任务状态。1表示暂停，2表示运行中，0为初始态
  * @method void setStatus(integer $Status) 设置任务状态。1表示暂停，2表示运行中，0为初始态
- * @method string getCgiUrl() 获取拨测任务的Url
- * @method void setCgiUrl(string $CgiUrl) 设置拨测任务的Url
+ * @method string getCgiUrl() 获取拨测任务的URL
+ * @method void setCgiUrl(string $CgiUrl) 设置拨测任务的URL
  * @method string getAddTime() 获取任务创建时间
  * @method void setAddTime(string $AddTime) 设置任务创建时间
  * @method integer getAlarmStatus() 获取告警状态。1 故障，0 正常
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class TaskAlarm extends AbstractModel
 {
     /**
-     * @var integer 任务Id
+     * @var integer 任务ID
      */
     public $TaskId;
 
@@ -71,7 +71,7 @@ class TaskAlarm extends AbstractModel
     public $Status;
 
     /**
-     * @var string 拨测任务的Url
+     * @var string 拨测任务的URL
      */
     public $CgiUrl;
 
@@ -95,12 +95,12 @@ class TaskAlarm extends AbstractModel
      */
     public $UpdateTime;
     /**
-     * @param integer $TaskId 任务Id
+     * @param integer $TaskId 任务ID
      * @param string $TaskName 任务名称
      * @param integer $Period 任务周期，单位为分钟。目前支持1，5，15，30几种取值
      * @param string $CatTypeName 拨测类型。http, https, ping, tcp, udp, smtp, pop3, dns 之一
      * @param integer $Status 任务状态。1表示暂停，2表示运行中，0为初始态
-     * @param string $CgiUrl 拨测任务的Url
+     * @param string $CgiUrl 拨测任务的URL
      * @param string $AddTime 任务创建时间
      * @param integer $AlarmStatus 告警状态。1 故障，0 正常
      * @param string $StatusInfo 告警状态描述，统计信息

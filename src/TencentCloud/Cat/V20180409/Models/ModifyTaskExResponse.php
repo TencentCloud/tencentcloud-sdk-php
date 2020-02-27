@@ -18,8 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTaskId() 获取拨测任务id。验证通过后，创建任务时使用，传递给CreateTask 接口。
- * @method void setTaskId(integer $TaskId) 设置拨测任务id。验证通过后，创建任务时使用，传递给CreateTask 接口。
+ * @method integer getTaskId() 获取拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
+ * @method void setTaskId(integer $TaskId) 设置拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyTaskExResponse extends AbstractModel
 {
     /**
-     * @var integer 拨测任务id。验证通过后，创建任务时使用，传递给CreateTask 接口。
+     * @var integer 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
      */
     public $TaskId;
 
@@ -39,7 +39,7 @@ class ModifyTaskExResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TaskId 拨测任务id。验证通过后，创建任务时使用，传递给CreateTask 接口。
+     * @param integer $TaskId 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

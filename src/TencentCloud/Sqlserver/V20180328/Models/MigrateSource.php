@@ -18,8 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取迁移源实例的ID，MigrateType=1(CDB for SQLServers)时使用，格式如：mssql-si2823jyl
- * @method void setInstanceId(string $InstanceId) 设置迁移源实例的ID，MigrateType=1(CDB for SQLServers)时使用，格式如：mssql-si2823jyl
+ * @method string getInstanceId() 获取迁移源实例的ID，MigrateType=1(TencentDB for SQLServers)时使用，格式如：mssql-si2823jyl
+ * @method void setInstanceId(string $InstanceId) 设置迁移源实例的ID，MigrateType=1(TencentDB for SQLServers)时使用，格式如：mssql-si2823jyl
  * @method string getCvmId() 获取迁移源Cvm的ID，MigrateType=2(云服务器自建SQLServer数据库)时使用
  * @method void setCvmId(string $CvmId) 设置迁移源Cvm的ID，MigrateType=2(云服务器自建SQLServer数据库)时使用
  * @method string getVpcId() 获取迁移源Cvm的Vpc网络标识，MigrateType=2(云服务器自建SQLServer数据库)时使用，格式如：vpc-6ys9ont9
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class MigrateSource extends AbstractModel
 {
     /**
-     * @var string 迁移源实例的ID，MigrateType=1(CDB for SQLServers)时使用，格式如：mssql-si2823jyl
+     * @var string 迁移源实例的ID，MigrateType=1(TencentDB for SQLServers)时使用，格式如：mssql-si2823jyl
      */
     public $InstanceId;
 
@@ -95,7 +95,7 @@ class MigrateSource extends AbstractModel
      */
     public $UrlPassword;
     /**
-     * @param string $InstanceId 迁移源实例的ID，MigrateType=1(CDB for SQLServers)时使用，格式如：mssql-si2823jyl
+     * @param string $InstanceId 迁移源实例的ID，MigrateType=1(TencentDB for SQLServers)时使用，格式如：mssql-si2823jyl
      * @param string $CvmId 迁移源Cvm的ID，MigrateType=2(云服务器自建SQLServer数据库)时使用
      * @param string $VpcId 迁移源Cvm的Vpc网络标识，MigrateType=2(云服务器自建SQLServer数据库)时使用，格式如：vpc-6ys9ont9
      * @param string $SubnetId 迁移源Cvm的Vpc下的子网标识，MigrateType=2(云服务器自建SQLServer数据库)时使用，格式如：subnet-h9extioi

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getDiskType() 获取云盘类型
  * @method void setDiskType(string $DiskType) 设置云盘类型
- * @method string getFileSystem() 获取文件系统
- * @method void setFileSystem(string $FileSystem) 设置文件系统
+ * @method string getFileSystem() 获取文件系统(ext3/ext4/xfs)
+ * @method void setFileSystem(string $FileSystem) 设置文件系统(ext3/ext4/xfs)
  * @method integer getDiskSize() 获取云盘大小(G）
  * @method void setDiskSize(integer $DiskSize) 设置云盘大小(G）
  * @method boolean getAutoFormatAndMount() 获取是否自动化格式盘并挂载
@@ -41,7 +41,7 @@ class DataDisk extends AbstractModel
     public $DiskType;
 
     /**
-     * @var string 文件系统
+     * @var string 文件系统(ext3/ext4/xfs)
      */
     public $FileSystem;
 
@@ -61,7 +61,7 @@ class DataDisk extends AbstractModel
     public $MountTarget;
     /**
      * @param string $DiskType 云盘类型
-     * @param string $FileSystem 文件系统
+     * @param string $FileSystem 文件系统(ext3/ext4/xfs)
      * @param integer $DiskSize 云盘大小(G）
      * @param boolean $AutoFormatAndMount 是否自动化格式盘并挂载
      * @param string $MountTarget 挂载目录

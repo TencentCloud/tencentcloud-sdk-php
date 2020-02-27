@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMigrateName(string $MigrateName) 设置迁移任务的名称
  * @method integer getMigrateType() 获取迁移类型（1:结构迁移 2:数据迁移 3:增量同步）
  * @method void setMigrateType(integer $MigrateType) 设置迁移类型（1:结构迁移 2:数据迁移 3:增量同步）
- * @method integer getSourceType() 获取迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
- * @method void setSourceType(integer $SourceType) 设置迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
+ * @method integer getSourceType() 获取迁移源的类型 1:TencentDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
+ * @method void setSourceType(integer $SourceType) 设置迁移源的类型 1:TencentDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
  * @method MigrateSource getSource() 获取迁移源
  * @method void setSource(MigrateSource $Source) 设置迁移源
  * @method MigrateTarget getTarget() 获取迁移目标
@@ -48,7 +48,7 @@ class CreateMigrationRequest extends AbstractModel
     public $MigrateType;
 
     /**
-     * @var integer 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
+     * @var integer 迁移源的类型 1:TencentDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
      */
     public $SourceType;
 
@@ -69,7 +69,7 @@ class CreateMigrationRequest extends AbstractModel
     /**
      * @param string $MigrateName 迁移任务的名称
      * @param integer $MigrateType 迁移类型（1:结构迁移 2:数据迁移 3:增量同步）
-     * @param integer $SourceType 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
+     * @param integer $SourceType 迁移源的类型 1:TencentDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
      * @param MigrateSource $Source 迁移源
      * @param MigrateTarget $Target 迁移目标
      * @param array $MigrateDBSet 迁移DB对象 ，离线迁移不使用（SourceType=4或SourceType=5）。

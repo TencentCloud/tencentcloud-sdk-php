@@ -18,10 +18,10 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取被销毁的实例ID
- * @method void setInstanceId(string $InstanceId) 设置被销毁的实例ID
- * @method array getResourceIds() 获取销毁节点ID
- * @method void setResourceIds(array $ResourceIds) 设置销毁节点ID
+ * @method string getInstanceId() 获取实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method array getResourceIds() 获取销毁节点ID。该参数为预留参数，用户无需配置。
+ * @method void setResourceIds(array $ResourceIds) 设置销毁节点ID。该参数为预留参数，用户无需配置。
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class TerminateInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 被销毁的实例ID
+     * @var string 实例ID。
      */
     public $InstanceId;
 
     /**
-     * @var array 销毁节点ID
+     * @var array 销毁节点ID。该参数为预留参数，用户无需配置。
      */
     public $ResourceIds;
     /**
-     * @param string $InstanceId 被销毁的实例ID
-     * @param array $ResourceIds 销毁节点ID
+     * @param string $InstanceId 实例ID。
+     * @param array $ResourceIds 销毁节点ID。该参数为预留参数，用户无需配置。
      */
     function __construct()
     {

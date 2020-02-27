@@ -20,54 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getCatTypeName() 获取http, https, ping, tcp, ftp, smtp, udp, dns 之一
  * @method void setCatTypeName(string $CatTypeName) 设置http, https, ping, tcp, ftp, smtp, udp, dns 之一
- * @method string getUrl() 获取拨测的url  例如：www.qq.com (url域名解析需要能解析出具体的ip)
- * @method void setUrl(string $Url) 设置拨测的url  例如：www.qq.com (url域名解析需要能解析出具体的ip)
+ * @method string getUrl() 获取拨测的URL， 例如：www.qq.com (URL域名解析需要能解析出具体的IP)
+ * @method void setUrl(string $Url) 设置拨测的URL， 例如：www.qq.com (URL域名解析需要能解析出具体的IP)
  * @method integer getPeriod() 获取拨测周期。取值可为1,5,15,30之一, 单位：分钟。精度不能低于用户等级规定的最小精度
  * @method void setPeriod(integer $Period) 设置拨测周期。取值可为1,5,15,30之一, 单位：分钟。精度不能低于用户等级规定的最小精度
  * @method string getTaskName() 获取拨测任务名称不能超过32个字符。同一个用户创建的任务名不可重复
  * @method void setTaskName(string $TaskName) 设置拨测任务名称不能超过32个字符。同一个用户创建的任务名不可重复
- * @method integer getAgentGroupId() 获取拨测分组id，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
- * @method void setAgentGroupId(integer $AgentGroupId) 设置拨测分组id，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
+ * @method integer getAgentGroupId() 获取拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
+ * @method void setAgentGroupId(integer $AgentGroupId) 设置拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
  * @method string getHost() 获取指定域名(如需要)
  * @method void setHost(string $Host) 设置指定域名(如需要)
  * @method integer getIsHeader() 获取是否为Header请求（非0 发起Header 请求。为0，且PostData 非空，发起POST请求。为0，PostData 为空，发起GET请求）
  * @method void setIsHeader(integer $IsHeader) 设置是否为Header请求（非0 发起Header 请求。为0，且PostData 非空，发起POST请求。为0，PostData 为空，发起GET请求）
- * @method string getSslVer() 获取url中含有https时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
- * @method void setSslVer(string $SslVer) 设置url中含有https时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
- * @method string getPostData() 获取POST 请求数据。空字符串表示非POST请求
- * @method void setPostData(string $PostData) 设置POST 请求数据。空字符串表示非POST请求
- * @method string getUserAgent() 获取用户agent 信息
- * @method void setUserAgent(string $UserAgent) 设置用户agent 信息
+ * @method string getSslVer() 获取URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+ * @method void setSslVer(string $SslVer) 设置URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+ * @method string getPostData() 获取POST请求数据。空字符串表示非POST请求
+ * @method void setPostData(string $PostData) 设置POST请求数据。空字符串表示非POST请求
+ * @method string getUserAgent() 获取用户Agent信息
+ * @method void setUserAgent(string $UserAgent) 设置用户Agent信息
  * @method string getCheckStr() 获取要在结果中进行匹配的字符串
  * @method void setCheckStr(string $CheckStr) 设置要在结果中进行匹配的字符串
  * @method integer getCheckType() 获取1 表示通过检查结果是否包含CheckStr 进行校验
  * @method void setCheckType(integer $CheckType) 设置1 表示通过检查结果是否包含CheckStr 进行校验
- * @method string getCookie() 获取需要设置的cookie信息
- * @method void setCookie(string $Cookie) 设置需要设置的cookie信息
- * @method integer getTaskId() 获取任务号。用于验证且修改任务时传入原任务号
- * @method void setTaskId(integer $TaskId) 设置任务号。用于验证且修改任务时传入原任务号
- * @method string getUserName() 获取登陆服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测。
- * @method void setUserName(string $UserName) 设置登陆服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测。
- * @method string getPassWord() 获取登陆服务器的密码
- * @method void setPassWord(string $PassWord) 设置登陆服务器的密码
+ * @method string getCookie() 获取需要设置的Cookie信息
+ * @method void setCookie(string $Cookie) 设置需要设置的Cookie信息
+ * @method integer getTaskId() 获取任务ID，用于验证且修改任务时传入原任务ID
+ * @method void setTaskId(integer $TaskId) 设置任务ID，用于验证且修改任务时传入原任务ID
+ * @method string getUserName() 获取登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测
+ * @method void setUserName(string $UserName) 设置登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测
+ * @method string getPassWord() 获取登录服务器的密码
+ * @method void setPassWord(string $PassWord) 设置登录服务器的密码
  * @method integer getReqDataType() 获取缺省为0。0 表示请求为字符串类型。1表示为二进制类型
  * @method void setReqDataType(integer $ReqDataType) 设置缺省为0。0 表示请求为字符串类型。1表示为二进制类型
- * @method string getReqData() 获取发起tcp, udp请求的协议请求数据
- * @method void setReqData(string $ReqData) 设置发起tcp, udp请求的协议请求数据
+ * @method string getReqData() 获取发起TCP, UDP请求的协议请求数据
+ * @method void setReqData(string $ReqData) 设置发起TCP, UDP请求的协议请求数据
  * @method integer getRespDataType() 获取缺省为0。0 表示响应为字符串类型。1表示为二进制类型
  * @method void setRespDataType(integer $RespDataType) 设置缺省为0。0 表示响应为字符串类型。1表示为二进制类型
- * @method string getRespData() 获取预期的udp请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
- * @method void setRespData(string $RespData) 设置预期的udp请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
- * @method string getDnsSvr() 获取目的dns服务器  可以为空字符串
- * @method void setDnsSvr(string $DnsSvr) 设置目的dns服务器  可以为空字符串
- * @method string getDnsCheckIp() 获取需要检验是否在dns ip列表的ip。可以为空字符串，表示不校验
- * @method void setDnsCheckIp(string $DnsCheckIp) 设置需要检验是否在dns ip列表的ip。可以为空字符串，表示不校验
+ * @method string getRespData() 获取预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
+ * @method void setRespData(string $RespData) 设置预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
+ * @method string getDnsSvr() 获取目的DNS服务器  可以为空字符串
+ * @method void setDnsSvr(string $DnsSvr) 设置目的DNS服务器  可以为空字符串
+ * @method string getDnsCheckIp() 获取需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验
+ * @method void setDnsCheckIp(string $DnsCheckIp) 设置需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验
  * @method string getDnsQueryType() 获取需要为下列值之一。缺省为A。A, MX, NS, CNAME, TXT, ANY
  * @method void setDnsQueryType(string $DnsQueryType) 设置需要为下列值之一。缺省为A。A, MX, NS, CNAME, TXT, ANY
- * @method integer getUseSecConn() 获取是否使用安全链接ssl  0 不使用，1 使用
- * @method void setUseSecConn(integer $UseSecConn) 设置是否使用安全链接ssl  0 不使用，1 使用
- * @method integer getNeedAuth() 获取ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
- * @method void setNeedAuth(integer $NeedAuth) 设置ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+ * @method integer getUseSecConn() 获取是否使用安全链接SSL， 0 不使用，1 使用
+ * @method void setUseSecConn(integer $UseSecConn) 设置是否使用安全链接SSL， 0 不使用，1 使用
+ * @method integer getNeedAuth() 获取FTP登录验证方式， 0 不验证 ， 1 匿名登录， 2 需要身份验证
+ * @method void setNeedAuth(integer $NeedAuth) 设置FTP登录验证方式， 0 不验证 ， 1 匿名登录， 2 需要身份验证
  * @method integer getPort() 获取拨测目标的端口号
  * @method void setPort(integer $Port) 设置拨测目标的端口号
  * @method integer getType() 获取Type=0 默认 （站点监控）Type=2 可用率监控
@@ -89,7 +89,7 @@ class CreateTaskExRequest extends AbstractModel
     public $CatTypeName;
 
     /**
-     * @var string 拨测的url  例如：www.qq.com (url域名解析需要能解析出具体的ip)
+     * @var string 拨测的URL， 例如：www.qq.com (URL域名解析需要能解析出具体的IP)
      */
     public $Url;
 
@@ -104,7 +104,7 @@ class CreateTaskExRequest extends AbstractModel
     public $TaskName;
 
     /**
-     * @var integer 拨测分组id，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
+     * @var integer 拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
      */
     public $AgentGroupId;
 
@@ -119,17 +119,17 @@ class CreateTaskExRequest extends AbstractModel
     public $IsHeader;
 
     /**
-     * @var string url中含有https时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+     * @var string URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
      */
     public $SslVer;
 
     /**
-     * @var string POST 请求数据。空字符串表示非POST请求
+     * @var string POST请求数据。空字符串表示非POST请求
      */
     public $PostData;
 
     /**
-     * @var string 用户agent 信息
+     * @var string 用户Agent信息
      */
     public $UserAgent;
 
@@ -144,22 +144,22 @@ class CreateTaskExRequest extends AbstractModel
     public $CheckType;
 
     /**
-     * @var string 需要设置的cookie信息
+     * @var string 需要设置的Cookie信息
      */
     public $Cookie;
 
     /**
-     * @var integer 任务号。用于验证且修改任务时传入原任务号
+     * @var integer 任务ID，用于验证且修改任务时传入原任务ID
      */
     public $TaskId;
 
     /**
-     * @var string 登陆服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测。
+     * @var string 登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测
      */
     public $UserName;
 
     /**
-     * @var string 登陆服务器的密码
+     * @var string 登录服务器的密码
      */
     public $PassWord;
 
@@ -169,7 +169,7 @@ class CreateTaskExRequest extends AbstractModel
     public $ReqDataType;
 
     /**
-     * @var string 发起tcp, udp请求的协议请求数据
+     * @var string 发起TCP, UDP请求的协议请求数据
      */
     public $ReqData;
 
@@ -179,17 +179,17 @@ class CreateTaskExRequest extends AbstractModel
     public $RespDataType;
 
     /**
-     * @var string 预期的udp请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
+     * @var string 预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
      */
     public $RespData;
 
     /**
-     * @var string 目的dns服务器  可以为空字符串
+     * @var string 目的DNS服务器  可以为空字符串
      */
     public $DnsSvr;
 
     /**
-     * @var string 需要检验是否在dns ip列表的ip。可以为空字符串，表示不校验
+     * @var string 需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验
      */
     public $DnsCheckIp;
 
@@ -199,12 +199,12 @@ class CreateTaskExRequest extends AbstractModel
     public $DnsQueryType;
 
     /**
-     * @var integer 是否使用安全链接ssl  0 不使用，1 使用
+     * @var integer 是否使用安全链接SSL， 0 不使用，1 使用
      */
     public $UseSecConn;
 
     /**
-     * @var integer ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+     * @var integer FTP登录验证方式， 0 不验证 ， 1 匿名登录， 2 需要身份验证
      */
     public $NeedAuth;
 
@@ -229,30 +229,30 @@ class CreateTaskExRequest extends AbstractModel
     public $RedirectFollowNum;
     /**
      * @param string $CatTypeName http, https, ping, tcp, ftp, smtp, udp, dns 之一
-     * @param string $Url 拨测的url  例如：www.qq.com (url域名解析需要能解析出具体的ip)
+     * @param string $Url 拨测的URL， 例如：www.qq.com (URL域名解析需要能解析出具体的IP)
      * @param integer $Period 拨测周期。取值可为1,5,15,30之一, 单位：分钟。精度不能低于用户等级规定的最小精度
      * @param string $TaskName 拨测任务名称不能超过32个字符。同一个用户创建的任务名不可重复
-     * @param integer $AgentGroupId 拨测分组id，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
+     * @param integer $AgentGroupId 拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
      * @param string $Host 指定域名(如需要)
      * @param integer $IsHeader 是否为Header请求（非0 发起Header 请求。为0，且PostData 非空，发起POST请求。为0，PostData 为空，发起GET请求）
-     * @param string $SslVer url中含有https时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
-     * @param string $PostData POST 请求数据。空字符串表示非POST请求
-     * @param string $UserAgent 用户agent 信息
+     * @param string $SslVer URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+     * @param string $PostData POST请求数据。空字符串表示非POST请求
+     * @param string $UserAgent 用户Agent信息
      * @param string $CheckStr 要在结果中进行匹配的字符串
      * @param integer $CheckType 1 表示通过检查结果是否包含CheckStr 进行校验
-     * @param string $Cookie 需要设置的cookie信息
-     * @param integer $TaskId 任务号。用于验证且修改任务时传入原任务号
-     * @param string $UserName 登陆服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测。
-     * @param string $PassWord 登陆服务器的密码
+     * @param string $Cookie 需要设置的Cookie信息
+     * @param integer $TaskId 任务ID，用于验证且修改任务时传入原任务ID
+     * @param string $UserName 登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测
+     * @param string $PassWord 登录服务器的密码
      * @param integer $ReqDataType 缺省为0。0 表示请求为字符串类型。1表示为二进制类型
-     * @param string $ReqData 发起tcp, udp请求的协议请求数据
+     * @param string $ReqData 发起TCP, UDP请求的协议请求数据
      * @param integer $RespDataType 缺省为0。0 表示响应为字符串类型。1表示为二进制类型
-     * @param string $RespData 预期的udp请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
-     * @param string $DnsSvr 目的dns服务器  可以为空字符串
-     * @param string $DnsCheckIp 需要检验是否在dns ip列表的ip。可以为空字符串，表示不校验
+     * @param string $RespData 预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
+     * @param string $DnsSvr 目的DNS服务器  可以为空字符串
+     * @param string $DnsCheckIp 需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验
      * @param string $DnsQueryType 需要为下列值之一。缺省为A。A, MX, NS, CNAME, TXT, ANY
-     * @param integer $UseSecConn 是否使用安全链接ssl  0 不使用，1 使用
-     * @param integer $NeedAuth ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+     * @param integer $UseSecConn 是否使用安全链接SSL， 0 不使用，1 使用
+     * @param integer $NeedAuth FTP登录验证方式， 0 不验证 ， 1 匿名登录， 2 需要身份验证
      * @param integer $Port 拨测目标的端口号
      * @param integer $Type Type=0 默认 （站点监控）Type=2 可用率监控
      * @param integer $IsVerify IsVerify=0 非验证任务 IsVerify=1 验证任务，不传则默认为0

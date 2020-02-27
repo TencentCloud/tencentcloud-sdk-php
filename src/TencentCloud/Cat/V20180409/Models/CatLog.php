@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTime(string $Time) 设置拨测时间点
  * @method string getCatTypeName() 获取拨测类型
  * @method void setCatTypeName(string $CatTypeName) 设置拨测类型
- * @method integer getTaskId() 获取任务Id
- * @method void setTaskId(integer $TaskId) 设置任务Id
+ * @method integer getTaskId() 获取任务ID
+ * @method void setTaskId(integer $TaskId) 设置任务ID
  * @method string getCity() 获取拨测点所在城市
  * @method void setCity(string $City) 设置拨测点所在城市
  * @method string getIsp() 获取拨测点所在运营商
  * @method void setIsp(string $Isp) 设置拨测点所在运营商
- * @method string getServerIp() 获取被拨测Server 的Ip
- * @method void setServerIp(string $ServerIp) 设置被拨测Server 的Ip
- * @method string getDomainName() 获取被拨测Server 的域名
- * @method void setDomainName(string $DomainName) 设置被拨测Server 的域名
+ * @method string getServerIp() 获取被拨测Server的IP
+ * @method void setServerIp(string $ServerIp) 设置被拨测Server的IP
+ * @method string getDomainName() 获取被拨测Server的域名
+ * @method void setDomainName(string $DomainName) 设置被拨测Server的域名
  * @method integer getTotalTime() 获取执行耗时，单位毫秒
  * @method void setTotalTime(integer $TotalTime) 设置执行耗时，单位毫秒
  * @method integer getResultType() 获取成功失败(1 失败，0 成功）
@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReqMsg(string $ReqMsg) 设置拨测请求
  * @method string getRespMsg() 获取拨测回应
  * @method void setRespMsg(string $RespMsg) 设置拨测回应
- * @method string getClientIp() 获取客户端ip
- * @method void setClientIp(string $ClientIp) 设置客户端ip
+ * @method string getClientIp() 获取客户端IP
+ * @method void setClientIp(string $ClientIp) 设置客户端IP
  * @method string getCityName() 获取拨测点所在城市名称
  * @method void setCityName(string $CityName) 设置拨测点所在城市名称
  * @method string getIspName() 获取拨测点所在运营商名称
@@ -80,7 +80,7 @@ class CatLog extends AbstractModel
     public $CatTypeName;
 
     /**
-     * @var integer 任务Id
+     * @var integer 任务ID
      */
     public $TaskId;
 
@@ -95,12 +95,12 @@ class CatLog extends AbstractModel
     public $Isp;
 
     /**
-     * @var string 被拨测Server 的Ip
+     * @var string 被拨测Server的IP
      */
     public $ServerIp;
 
     /**
-     * @var string 被拨测Server 的域名
+     * @var string 被拨测Server的域名
      */
     public $DomainName;
 
@@ -140,7 +140,7 @@ class CatLog extends AbstractModel
     public $RespMsg;
 
     /**
-     * @var string 客户端ip
+     * @var string 客户端IP
      */
     public $ClientIp;
 
@@ -181,11 +181,11 @@ class CatLog extends AbstractModel
     /**
      * @param string $Time 拨测时间点
      * @param string $CatTypeName 拨测类型
-     * @param integer $TaskId 任务Id
+     * @param integer $TaskId 任务ID
      * @param string $City 拨测点所在城市
      * @param string $Isp 拨测点所在运营商
-     * @param string $ServerIp 被拨测Server 的Ip
-     * @param string $DomainName 被拨测Server 的域名
+     * @param string $ServerIp 被拨测Server的IP
+     * @param string $DomainName 被拨测Server的域名
      * @param integer $TotalTime 执行耗时，单位毫秒
      * @param integer $ResultType 成功失败(1 失败，0 成功）
      * @param integer $ResultCode 失败错误码
@@ -193,7 +193,7 @@ class CatLog extends AbstractModel
      * @param integer $RspPkgSize 回应包大小
      * @param string $ReqMsg 拨测请求
      * @param string $RespMsg 拨测回应
-     * @param string $ClientIp 客户端ip
+     * @param string $ClientIp 客户端IP
      * @param string $CityName 拨测点所在城市名称
      * @param string $IspName 拨测点所在运营商名称
      * @param integer $ParseTime 解析耗时，单位毫秒

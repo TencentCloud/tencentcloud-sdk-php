@@ -46,10 +46,10 @@ use TencentCloud\Common\AbstractModel;
 <li>10：实例迁移中</li>
 <li>11：只读</li>
 <li>12：重启中</li>
- * @method integer getOffset() 获取页数，默认为 0
- * @method void setOffset(integer $Offset) 设置页数，默认为 0
- * @method integer getLimit() 获取页大小，默认为50
- * @method void setLimit(integer $Limit) 设置页大小，默认为50
+ * @method integer getOffset() 获取分页返回，页编号，默认值为第0页
+ * @method void setOffset(integer $Offset) 设置分页返回，页编号，默认值为第0页
+ * @method integer getLimit() 获取分页返回，每页返回的数目，取值为1-100，默认值为100
+ * @method void setLimit(integer $Limit) 设置分页返回，每页返回的数目，取值为1-100，默认值为100
  * @method array getInstanceIdSet() 获取一个或者多个实例ID。实例ID，格式如：mssql-si2823jyl
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置一个或者多个实例ID。实例ID，格式如：mssql-si2823jyl
  * @method integer getPayMode() 获取付费类型检索 1-包年包月，0-按量计费
@@ -84,12 +84,12 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 页数，默认为 0
+     * @var integer 分页返回，页编号，默认值为第0页
      */
     public $Offset;
 
     /**
-     * @var integer 页大小，默认为50
+     * @var integer 分页返回，每页返回的数目，取值为1-100，默认值为100
      */
     public $Limit;
 
@@ -117,8 +117,8 @@ class DescribeDBInstancesRequest extends AbstractModel
 <li>10：实例迁移中</li>
 <li>11：只读</li>
 <li>12：重启中</li>
-     * @param integer $Offset 页数，默认为 0
-     * @param integer $Limit 页大小，默认为50
+     * @param integer $Offset 分页返回，页编号，默认值为第0页
+     * @param integer $Limit 分页返回，每页返回的数目，取值为1-100，默认值为100
      * @param array $InstanceIdSet 一个或者多个实例ID。实例ID，格式如：mssql-si2823jyl
      * @param integer $PayMode 付费类型检索 1-包年包月，0-按量计费
      */

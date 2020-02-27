@@ -18,11 +18,15 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCnt() 获取实例数量
- * @method void setTotalCnt(integer $TotalCnt) 设置实例数量
- * @method array getClusterList() 获取集群实例信息列表
+ * @method integer getTotalCnt() 获取符合条件的实例总数。
+ * @method void setTotalCnt(integer $TotalCnt) 设置符合条件的实例总数。
+ * @method array getClusterList() 获取EMR实例详细信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterList(array $ClusterList) 设置集群实例信息列表
+ * @method void setClusterList(array $ClusterList) 设置EMR实例详细信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagKeys() 获取实例关联的标签键列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagKeys(array $TagKeys) 设置实例关联的标签键列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -34,23 +38,31 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstancesResponse extends AbstractModel
 {
     /**
-     * @var integer 实例数量
+     * @var integer 符合条件的实例总数。
      */
     public $TotalCnt;
 
     /**
-     * @var array 集群实例信息列表
+     * @var array EMR实例详细信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterList;
+
+    /**
+     * @var array 实例关联的标签键列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagKeys;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $TotalCnt 实例数量
-     * @param array $ClusterList 集群实例信息列表
+     * @param integer $TotalCnt 符合条件的实例总数。
+     * @param array $ClusterList EMR实例详细信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagKeys 实例关联的标签键列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -77,6 +89,10 @@ class DescribeInstancesResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ClusterList, $obj);
             }
+        }
+
+        if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
+            $this->TagKeys = $param["TagKeys"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

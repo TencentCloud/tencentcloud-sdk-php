@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) 设置鉴恐控制参数。
  * @method PoliticalConfigureInfo getPoliticalConfigure() 获取鉴政控制参数。
  * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) 设置鉴政控制参数。
+ * @method ProhibitedConfigureInfo getProhibitedConfigure() 获取违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+ * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) 设置违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
  * @method UserDefineConfigureInfo getUserDefineConfigure() 获取用户自定义内容审核控制参数。
  * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) 设置用户自定义内容审核控制参数。
  * @method float getScreenshotInterval() 获取截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
@@ -80,6 +88,14 @@ class CreateContentReviewTemplateRequest extends AbstractModel
     public $PoliticalConfigure;
 
     /**
+     * @var ProhibitedConfigureInfo 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+     */
+    public $ProhibitedConfigure;
+
+    /**
      * @var UserDefineConfigureInfo 用户自定义内容审核控制参数。
      */
     public $UserDefineConfigure;
@@ -102,6 +118,10 @@ class CreateContentReviewTemplateRequest extends AbstractModel
      * @param PornConfigureInfo $PornConfigure 鉴黄控制参数。
      * @param TerrorismConfigureInfo $TerrorismConfigure 鉴恐控制参数。
      * @param PoliticalConfigureInfo $PoliticalConfigure 鉴政控制参数。
+     * @param ProhibitedConfigureInfo $ProhibitedConfigure 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
      * @param UserDefineConfigureInfo $UserDefineConfigure 用户自定义内容审核控制参数。
      * @param float $ScreenshotInterval 截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
@@ -143,6 +163,11 @@ class CreateContentReviewTemplateRequest extends AbstractModel
         if (array_key_exists("PoliticalConfigure",$param) and $param["PoliticalConfigure"] !== null) {
             $this->PoliticalConfigure = new PoliticalConfigureInfo();
             $this->PoliticalConfigure->deserialize($param["PoliticalConfigure"]);
+        }
+
+        if (array_key_exists("ProhibitedConfigure",$param) and $param["ProhibitedConfigure"] !== null) {
+            $this->ProhibitedConfigure = new ProhibitedConfigureInfo();
+            $this->ProhibitedConfigure->deserialize($param["ProhibitedConfigure"]);
         }
 
         if (array_key_exists("UserDefineConfigure",$param) and $param["UserDefineConfigure"] !== null) {

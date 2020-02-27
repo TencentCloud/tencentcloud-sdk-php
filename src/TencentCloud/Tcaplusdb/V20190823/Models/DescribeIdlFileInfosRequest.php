@@ -18,16 +18,16 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getApplicationId() 获取文件所属应用实例ID
- * @method void setApplicationId(string $ApplicationId) 设置文件所属应用实例ID
- * @method array getLogicZoneIds() 获取文件所属大区ID
- * @method void setLogicZoneIds(array $LogicZoneIds) 设置文件所属大区ID
- * @method array getIdlFileIds() 获取指定文件ID
- * @method void setIdlFileIds(array $IdlFileIds) 设置指定文件ID
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取文件列表大小
- * @method void setLimit(integer $Limit) 设置文件列表大小
+ * @method string getClusterId() 获取文件所属集群ID
+ * @method void setClusterId(string $ClusterId) 设置文件所属集群ID
+ * @method array getTableGroupIds() 获取文件所属表格组ID
+ * @method void setTableGroupIds(array $TableGroupIds) 设置文件所属表格组ID
+ * @method array getIdlFileIds() 获取指定文件ID列表
+ * @method void setIdlFileIds(array $IdlFileIds) 设置指定文件ID列表
+ * @method integer getOffset() 获取查询列表偏移量
+ * @method void setOffset(integer $Offset) 设置查询列表偏移量
+ * @method integer getLimit() 获取查询列表返回记录数
+ * @method void setLimit(integer $Limit) 设置查询列表返回记录数
  */
 
 /**
@@ -36,35 +36,35 @@ use TencentCloud\Common\AbstractModel;
 class DescribeIdlFileInfosRequest extends AbstractModel
 {
     /**
-     * @var string 文件所属应用实例ID
+     * @var string 文件所属集群ID
      */
-    public $ApplicationId;
+    public $ClusterId;
 
     /**
-     * @var array 文件所属大区ID
+     * @var array 文件所属表格组ID
      */
-    public $LogicZoneIds;
+    public $TableGroupIds;
 
     /**
-     * @var array 指定文件ID
+     * @var array 指定文件ID列表
      */
     public $IdlFileIds;
 
     /**
-     * @var integer 偏移量
+     * @var integer 查询列表偏移量
      */
     public $Offset;
 
     /**
-     * @var integer 文件列表大小
+     * @var integer 查询列表返回记录数
      */
     public $Limit;
     /**
-     * @param string $ApplicationId 文件所属应用实例ID
-     * @param array $LogicZoneIds 文件所属大区ID
-     * @param array $IdlFileIds 指定文件ID
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 文件列表大小
+     * @param string $ClusterId 文件所属集群ID
+     * @param array $TableGroupIds 文件所属表格组ID
+     * @param array $IdlFileIds 指定文件ID列表
+     * @param integer $Offset 查询列表偏移量
+     * @param integer $Limit 查询列表返回记录数
      */
     function __construct()
     {
@@ -78,12 +78,12 @@ class DescribeIdlFileInfosRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
-        if (array_key_exists("LogicZoneIds",$param) and $param["LogicZoneIds"] !== null) {
-            $this->LogicZoneIds = $param["LogicZoneIds"];
+        if (array_key_exists("TableGroupIds",$param) and $param["TableGroupIds"] !== null) {
+            $this->TableGroupIds = $param["TableGroupIds"];
         }
 
         if (array_key_exists("IdlFileIds",$param) and $param["IdlFileIds"] !== null) {

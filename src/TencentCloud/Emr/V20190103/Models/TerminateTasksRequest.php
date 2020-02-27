@@ -18,10 +18,10 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取销毁节点所属实例ID
- * @method void setInstanceId(string $InstanceId) 设置销毁节点所属实例ID
- * @method array getResourceIds() 获取销毁节点ID
- * @method void setResourceIds(array $ResourceIds) 设置销毁节点ID
+ * @method string getInstanceId() 获取实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method array getResourceIds() 获取待销毁节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr/static/hardware)查询。
+ * @method void setResourceIds(array $ResourceIds) 设置待销毁节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr/static/hardware)查询。
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class TerminateTasksRequest extends AbstractModel
 {
     /**
-     * @var string 销毁节点所属实例ID
+     * @var string 实例ID。
      */
     public $InstanceId;
 
     /**
-     * @var array 销毁节点ID
+     * @var array 待销毁节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr/static/hardware)查询。
      */
     public $ResourceIds;
     /**
-     * @param string $InstanceId 销毁节点所属实例ID
-     * @param array $ResourceIds 销毁节点ID
+     * @param string $InstanceId 实例ID。
+     * @param array $ResourceIds 待销毁节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr/static/hardware)查询。
      */
     function __construct()
     {

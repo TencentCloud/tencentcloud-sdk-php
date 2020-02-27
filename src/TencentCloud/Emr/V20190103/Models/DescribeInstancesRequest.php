@@ -18,20 +18,36 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDisplayStrategy() 获取集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
- * @method void setDisplayStrategy(string $DisplayStrategy) 设置集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
- * @method array getInstanceIds() 获取查询列表,  如果不填写，返回该AppId下所有实例列表
- * @method void setInstanceIds(array $InstanceIds) 设置查询列表,  如果不填写，返回该AppId下所有实例列表
- * @method integer getOffset() 获取查询偏移量，默认0
- * @method void setOffset(integer $Offset) 设置查询偏移量，默认0
- * @method integer getLimit() 获取查询结果限制，默认值10
- * @method void setLimit(integer $Limit) 设置查询结果限制，默认值10
- * @method integer getProjectId() 获取项目列表，默认值-1
- * @method void setProjectId(integer $ProjectId) 设置项目列表，默认值-1
- * @method string getOrderField() 获取排序字段，当前支持以下排序字段：clusterId、addTime、status
- * @method void setOrderField(string $OrderField) 设置排序字段，当前支持以下排序字段：clusterId、addTime、status
- * @method integer getAsc() 获取排序方法，0降序，1升序
- * @method void setAsc(integer $Asc) 设置排序方法，0降序，1升序
+ * @method string getDisplayStrategy() 获取集群筛选策略。取值范围：
+<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li>
+<li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li>
+<li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li>
+ * @method void setDisplayStrategy(string $DisplayStrategy) 设置集群筛选策略。取值范围：
+<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li>
+<li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li>
+<li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li>
+ * @method array getInstanceIds() 获取按照一个或者多个实例ID查询。实例ID形如: emr-xxxxxxxx 。(此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的 Ids.N 一节)。如果不填写实例ID，返回该APPID下所有实例列表。
+ * @method void setInstanceIds(array $InstanceIds) 设置按照一个或者多个实例ID查询。实例ID形如: emr-xxxxxxxx 。(此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的 Ids.N 一节)。如果不填写实例ID，返回该APPID下所有实例列表。
+ * @method integer getOffset() 获取页编号，默认值为0，表示第一页。
+ * @method void setOffset(integer $Offset) 设置页编号，默认值为0，表示第一页。
+ * @method integer getLimit() 获取每页返回数量，默认值为10，最大值为100。
+ * @method void setLimit(integer $Limit) 设置每页返回数量，默认值为10，最大值为100。
+ * @method integer getProjectId() 获取实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。如果该参数取值为-1，返回所有实例列表。
+ * @method void setProjectId(integer $ProjectId) 设置实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。如果该参数取值为-1，返回所有实例列表。
+ * @method string getOrderField() 获取排序字段。取值范围：
+<li>clusterId：表示按照实例ID排序。</li>
+<li>addTime：表示按照实例创建时间排序。</li>
+<li>status：表示按照实例的状态码排序。</li>
+ * @method void setOrderField(string $OrderField) 设置排序字段。取值范围：
+<li>clusterId：表示按照实例ID排序。</li>
+<li>addTime：表示按照实例创建时间排序。</li>
+<li>status：表示按照实例的状态码排序。</li>
+ * @method integer getAsc() 获取按照OrderField升序或者降序进行排序。取值范围：
+<li>0：表示降序。</li>
+<li>1：表示升序。</li>默认值为0。
+ * @method void setAsc(integer $Asc) 设置按照OrderField升序或者降序进行排序。取值范围：
+<li>0：表示降序。</li>
+<li>1：表示升序。</li>默认值为0。
  */
 
 /**
@@ -40,47 +56,63 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
+     * @var string 集群筛选策略。取值范围：
+<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li>
+<li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li>
+<li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li>
      */
     public $DisplayStrategy;
 
     /**
-     * @var array 查询列表,  如果不填写，返回该AppId下所有实例列表
+     * @var array 按照一个或者多个实例ID查询。实例ID形如: emr-xxxxxxxx 。(此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的 Ids.N 一节)。如果不填写实例ID，返回该APPID下所有实例列表。
      */
     public $InstanceIds;
 
     /**
-     * @var integer 查询偏移量，默认0
+     * @var integer 页编号，默认值为0，表示第一页。
      */
     public $Offset;
 
     /**
-     * @var integer 查询结果限制，默认值10
+     * @var integer 每页返回数量，默认值为10，最大值为100。
      */
     public $Limit;
 
     /**
-     * @var integer 项目列表，默认值-1
+     * @var integer 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。如果该参数取值为-1，返回所有实例列表。
      */
     public $ProjectId;
 
     /**
-     * @var string 排序字段，当前支持以下排序字段：clusterId、addTime、status
+     * @var string 排序字段。取值范围：
+<li>clusterId：表示按照实例ID排序。</li>
+<li>addTime：表示按照实例创建时间排序。</li>
+<li>status：表示按照实例的状态码排序。</li>
      */
     public $OrderField;
 
     /**
-     * @var integer 排序方法，0降序，1升序
+     * @var integer 按照OrderField升序或者降序进行排序。取值范围：
+<li>0：表示降序。</li>
+<li>1：表示升序。</li>默认值为0。
      */
     public $Asc;
     /**
-     * @param string $DisplayStrategy 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
-     * @param array $InstanceIds 查询列表,  如果不填写，返回该AppId下所有实例列表
-     * @param integer $Offset 查询偏移量，默认0
-     * @param integer $Limit 查询结果限制，默认值10
-     * @param integer $ProjectId 项目列表，默认值-1
-     * @param string $OrderField 排序字段，当前支持以下排序字段：clusterId、addTime、status
-     * @param integer $Asc 排序方法，0降序，1升序
+     * @param string $DisplayStrategy 集群筛选策略。取值范围：
+<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li>
+<li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li>
+<li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li>
+     * @param array $InstanceIds 按照一个或者多个实例ID查询。实例ID形如: emr-xxxxxxxx 。(此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的 Ids.N 一节)。如果不填写实例ID，返回该APPID下所有实例列表。
+     * @param integer $Offset 页编号，默认值为0，表示第一页。
+     * @param integer $Limit 每页返回数量，默认值为10，最大值为100。
+     * @param integer $ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。如果该参数取值为-1，返回所有实例列表。
+     * @param string $OrderField 排序字段。取值范围：
+<li>clusterId：表示按照实例ID排序。</li>
+<li>addTime：表示按照实例创建时间排序。</li>
+<li>status：表示按照实例的状态码排序。</li>
+     * @param integer $Asc 按照OrderField升序或者降序进行排序。取值范围：
+<li>0：表示降序。</li>
+<li>1：表示升序。</li>默认值为0。
      */
     function __construct()
     {

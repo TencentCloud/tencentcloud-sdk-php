@@ -18,21 +18,25 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getOriginalCost() 获取刊例价
+ * @method string getOriginalCost() 获取原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOriginalCost(string $OriginalCost) 设置刊例价
+ * @method void setOriginalCost(string $OriginalCost) 设置原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDiscountCost() 获取折扣价格
+ * @method string getDiscountCost() 获取折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiscountCost(string $DiscountCost) 设置折扣价格
+ * @method void setDiscountCost(string $DiscountCost) 设置折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUnit() 获取单位
+ * @method string getUnit() 获取扩容的时间单位。取值范围：
+<li>s：表示秒。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnit(string $Unit) 设置单位
+ * @method void setUnit(string $Unit) 设置扩容的时间单位。取值范围：
+<li>s：表示秒。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PriceResource getPriceSpec() 获取询价配置
+ * @method PriceResource getPriceSpec() 获取询价的节点规格。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPriceSpec(PriceResource $PriceSpec) 设置询价配置
+ * @method void setPriceSpec(PriceResource $PriceSpec) 设置询价的节点规格。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,25 +48,27 @@ use TencentCloud\Common\AbstractModel;
 class InquiryPriceScaleOutInstanceResponse extends AbstractModel
 {
     /**
-     * @var string 刊例价
+     * @var string 原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalCost;
 
     /**
-     * @var string 折扣价格
+     * @var string 折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscountCost;
 
     /**
-     * @var string 单位
+     * @var string 扩容的时间单位。取值范围：
+<li>s：表示秒。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
     /**
-     * @var PriceResource 询价配置
+     * @var PriceResource 询价的节点规格。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PriceSpec;
@@ -72,13 +78,15 @@ class InquiryPriceScaleOutInstanceResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $OriginalCost 刊例价
+     * @param string $OriginalCost 原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DiscountCost 折扣价格
+     * @param string $DiscountCost 折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Unit 单位
+     * @param string $Unit 扩容的时间单位。取值范围：
+<li>s：表示秒。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PriceResource $PriceSpec 询价配置
+     * @param PriceResource $PriceSpec 询价的节点规格。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

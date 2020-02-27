@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(integer $AppId) 设置迁移任务所属的用户ID
  * @method string getRegion() 获取迁移任务所属的地域
  * @method void setRegion(string $Region) 设置迁移任务所属的地域
- * @method integer getSourceType() 获取迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
- * @method void setSourceType(integer $SourceType) 设置迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
+ * @method integer getSourceType() 获取迁移源的类型 1:TencentDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
+ * @method void setSourceType(integer $SourceType) 设置迁移源的类型 1:TencentDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
  * @method string getCreateTime() 获取迁移任务的创建时间
  * @method void setCreateTime(string $CreateTime) 设置迁移任务的创建时间
  * @method string getStartTime() 获取迁移任务的开始时间
@@ -72,7 +72,7 @@ class MigrateTask extends AbstractModel
     public $Region;
 
     /**
-     * @var integer 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
+     * @var integer 迁移源的类型 1:TencentDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
      */
     public $SourceType;
 
@@ -120,7 +120,7 @@ class MigrateTask extends AbstractModel
      * @param string $MigrateName 迁移任务名称
      * @param integer $AppId 迁移任务所属的用户ID
      * @param string $Region 迁移任务所属的地域
-     * @param integer $SourceType 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
+     * @param integer $SourceType 迁移源的类型 1:TencentDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
      * @param string $CreateTime 迁移任务的创建时间
      * @param string $StartTime 迁移任务的开始时间
      * @param string $EndTime 迁移任务的结束时间

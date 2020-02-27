@@ -18,18 +18,18 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getDomainStatus() 获取域名状态过滤。0-停用，1-启用
- * @method void setDomainStatus(integer $DomainStatus) 设置域名状态过滤。0-停用，1-启用
- * @method integer getDomainType() 获取域名类型过滤。0-推流，1-播放
- * @method void setDomainType(integer $DomainType) 设置域名类型过滤。0-推流，1-播放
- * @method integer getPageSize() 获取分页大小，范围：10~100。默认10
- * @method void setPageSize(integer $PageSize) 设置分页大小，范围：10~100。默认10
- * @method integer getPageNum() 获取取第几页，范围：1~100000。默认1
- * @method void setPageNum(integer $PageNum) 设置取第几页，范围：1~100000。默认1
- * @method integer getIsDelayLive() 获取0 普通直播 1慢直播 默认0
- * @method void setIsDelayLive(integer $IsDelayLive) 设置0 普通直播 1慢直播 默认0
- * @method string getDomainPrefix() 获取域名前缀
- * @method void setDomainPrefix(string $DomainPrefix) 设置域名前缀
+ * @method integer getDomainStatus() 获取域名状态过滤。0-停用，1-启用。
+ * @method void setDomainStatus(integer $DomainStatus) 设置域名状态过滤。0-停用，1-启用。
+ * @method integer getDomainType() 获取域名类型过滤。0-推流，1-播放。
+ * @method void setDomainType(integer $DomainType) 设置域名类型过滤。0-推流，1-播放。
+ * @method integer getPageSize() 获取分页大小，范围：10~100。默认10。
+ * @method void setPageSize(integer $PageSize) 设置分页大小，范围：10~100。默认10。
+ * @method integer getPageNum() 获取取第几页，范围：1~100000。默认1。
+ * @method void setPageNum(integer $PageNum) 设置取第几页，范围：1~100000。默认1。
+ * @method integer getIsDelayLive() 获取0 普通直播 1慢直播 默认0。
+ * @method void setIsDelayLive(integer $IsDelayLive) 设置0 普通直播 1慢直播 默认0。
+ * @method string getDomainPrefix() 获取域名前缀。
+ * @method void setDomainPrefix(string $DomainPrefix) 设置域名前缀。
  */
 
 /**
@@ -38,41 +38,41 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLiveDomainsRequest extends AbstractModel
 {
     /**
-     * @var integer 域名状态过滤。0-停用，1-启用
+     * @var integer 域名状态过滤。0-停用，1-启用。
      */
     public $DomainStatus;
 
     /**
-     * @var integer 域名类型过滤。0-推流，1-播放
+     * @var integer 域名类型过滤。0-推流，1-播放。
      */
     public $DomainType;
 
     /**
-     * @var integer 分页大小，范围：10~100。默认10
+     * @var integer 分页大小，范围：10~100。默认10。
      */
     public $PageSize;
 
     /**
-     * @var integer 取第几页，范围：1~100000。默认1
+     * @var integer 取第几页，范围：1~100000。默认1。
      */
     public $PageNum;
 
     /**
-     * @var integer 0 普通直播 1慢直播 默认0
+     * @var integer 0 普通直播 1慢直播 默认0。
      */
     public $IsDelayLive;
 
     /**
-     * @var string 域名前缀
+     * @var string 域名前缀。
      */
     public $DomainPrefix;
     /**
-     * @param integer $DomainStatus 域名状态过滤。0-停用，1-启用
-     * @param integer $DomainType 域名类型过滤。0-推流，1-播放
-     * @param integer $PageSize 分页大小，范围：10~100。默认10
-     * @param integer $PageNum 取第几页，范围：1~100000。默认1
-     * @param integer $IsDelayLive 0 普通直播 1慢直播 默认0
-     * @param string $DomainPrefix 域名前缀
+     * @param integer $DomainStatus 域名状态过滤。0-停用，1-启用。
+     * @param integer $DomainType 域名类型过滤。0-推流，1-播放。
+     * @param integer $PageSize 分页大小，范围：10~100。默认10。
+     * @param integer $PageNum 取第几页，范围：1~100000。默认1。
+     * @param integer $IsDelayLive 0 普通直播 1慢直播 默认0。
+     * @param string $DomainPrefix 域名前缀。
      */
     function __construct()
     {

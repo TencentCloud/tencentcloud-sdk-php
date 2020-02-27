@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBPrivileges(array $DBPrivileges) 设置DB权限列表
  * @method string getRemark() 获取账号备注信息
  * @method void setRemark(string $Remark) 设置账号备注信息
+ * @method boolean getIsAdmin() 获取是否为管理员账户，默认为否
+ * @method void setIsAdmin(boolean $IsAdmin) 设置是否为管理员账户，默认为否
  */
 
 /**
@@ -52,11 +54,17 @@ class AccountCreateInfo extends AbstractModel
      * @var string 账号备注信息
      */
     public $Remark;
+
+    /**
+     * @var boolean 是否为管理员账户，默认为否
+     */
+    public $IsAdmin;
     /**
      * @param string $UserName 实例用户名
      * @param string $Password 实例密码
      * @param array $DBPrivileges DB权限列表
      * @param string $Remark 账号备注信息
+     * @param boolean $IsAdmin 是否为管理员账户，默认为否
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class AccountCreateInfo extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("IsAdmin",$param) and $param["IsAdmin"] !== null) {
+            $this->IsAdmin = $param["IsAdmin"];
         }
     }
 }

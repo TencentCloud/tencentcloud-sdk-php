@@ -18,12 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getIdlFiles() 获取本次上传校验所有的Idl文件信息列表
- * @method void setIdlFiles(array $IdlFiles) 设置本次上传校验所有的Idl文件信息列表
- * @method integer getTotalCount() 获取读取Idl描述文件后解析出的合法表数量，不包含已经创建的表
- * @method void setTotalCount(integer $TotalCount) 设置读取Idl描述文件后解析出的合法表数量，不包含已经创建的表
- * @method array getTableInfos() 获取读取Idl描述文件后解析出的合法表列表，不包含已经创建的表
- * @method void setTableInfos(array $TableInfos) 设置读取Idl描述文件后解析出的合法表列表，不包含已经创建的表
+ * @method array getIdlFiles() 获取本次上传校验所有的IDL文件信息列表
+ * @method void setIdlFiles(array $IdlFiles) 设置本次上传校验所有的IDL文件信息列表
+ * @method integer getTotalCount() 获取读取IDL描述文件后解析出的合法表数量，不包含已经创建的表
+ * @method void setTotalCount(integer $TotalCount) 设置读取IDL描述文件后解析出的合法表数量，不包含已经创建的表
+ * @method array getTableInfos() 获取读取IDL描述文件后解析出的合法表列表，不包含已经创建的表
+ * @method void setTableInfos(array $TableInfos) 设置读取IDL描述文件后解析出的合法表列表，不包含已经创建的表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class VerifyIdlFilesResponse extends AbstractModel
 {
     /**
-     * @var array 本次上传校验所有的Idl文件信息列表
+     * @var array 本次上传校验所有的IDL文件信息列表
      */
     public $IdlFiles;
 
     /**
-     * @var integer 读取Idl描述文件后解析出的合法表数量，不包含已经创建的表
+     * @var integer 读取IDL描述文件后解析出的合法表数量，不包含已经创建的表
      */
     public $TotalCount;
 
     /**
-     * @var array 读取Idl描述文件后解析出的合法表列表，不包含已经创建的表
+     * @var array 读取IDL描述文件后解析出的合法表列表，不包含已经创建的表
      */
     public $TableInfos;
 
@@ -53,9 +53,9 @@ class VerifyIdlFilesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $IdlFiles 本次上传校验所有的Idl文件信息列表
-     * @param integer $TotalCount 读取Idl描述文件后解析出的合法表数量，不包含已经创建的表
-     * @param array $TableInfos 读取Idl描述文件后解析出的合法表列表，不包含已经创建的表
+     * @param array $IdlFiles 本次上传校验所有的IDL文件信息列表
+     * @param integer $TotalCount 读取IDL描述文件后解析出的合法表数量，不包含已经创建的表
+     * @param array $TableInfos 读取IDL描述文件后解析出的合法表列表，不包含已经创建的表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -86,7 +86,7 @@ class VerifyIdlFilesResponse extends AbstractModel
         if (array_key_exists("TableInfos",$param) and $param["TableInfos"] !== null) {
             $this->TableInfos = [];
             foreach ($param["TableInfos"] as $key => $value){
-                $obj = new ParsedTableInfo();
+                $obj = new ParsedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->TableInfos, $obj);
             }

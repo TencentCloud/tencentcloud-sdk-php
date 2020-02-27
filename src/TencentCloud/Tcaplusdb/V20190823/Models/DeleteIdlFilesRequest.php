@@ -18,8 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getApplicationId() 获取应用实例ID
- * @method void setApplicationId(string $ApplicationId) 设置应用实例ID
+ * @method string getClusterId() 获取IDL所属集群ID
+ * @method void setClusterId(string $ClusterId) 设置IDL所属集群ID
  * @method array getIdlFiles() 获取待删除的IDL文件信息列表
  * @method void setIdlFiles(array $IdlFiles) 设置待删除的IDL文件信息列表
  */
@@ -30,16 +30,16 @@ use TencentCloud\Common\AbstractModel;
 class DeleteIdlFilesRequest extends AbstractModel
 {
     /**
-     * @var string 应用实例ID
+     * @var string IDL所属集群ID
      */
-    public $ApplicationId;
+    public $ClusterId;
 
     /**
      * @var array 待删除的IDL文件信息列表
      */
     public $IdlFiles;
     /**
-     * @param string $ApplicationId 应用实例ID
+     * @param string $ClusterId IDL所属集群ID
      * @param array $IdlFiles 待删除的IDL文件信息列表
      */
     function __construct()
@@ -54,8 +54,8 @@ class DeleteIdlFilesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
         if (array_key_exists("IdlFiles",$param) and $param["IdlFiles"] !== null) {

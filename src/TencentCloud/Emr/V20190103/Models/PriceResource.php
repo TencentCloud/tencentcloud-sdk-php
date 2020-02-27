@@ -54,6 +54,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskCnt(integer $DiskCnt) 设置磁盘数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceType() 获取规格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceType(string $InstanceType) 设置规格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -114,6 +122,18 @@ class PriceResource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskCnt;
+
+    /**
+     * @var string 规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceType;
+
+    /**
+     * @var array 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
     /**
      * @param string $Spec 需要的规格
 注意：此字段可能返回 null，表示取不到有效值。
@@ -132,6 +152,10 @@ class PriceResource extends AbstractModel
      * @param array $MultiDisks 云盘列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskCnt 磁盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceType 规格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -185,6 +209,19 @@ class PriceResource extends AbstractModel
 
         if (array_key_exists("DiskCnt",$param) and $param["DiskCnt"] !== null) {
             $this->DiskCnt = $param["DiskCnt"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

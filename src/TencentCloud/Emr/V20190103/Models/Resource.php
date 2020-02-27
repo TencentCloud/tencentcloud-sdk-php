@@ -50,6 +50,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMultiDisks(array $MultiDisks) 设置云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取需要绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置需要绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceType() 获取规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceType(string $InstanceType) 设置规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLocalDiskNum() 获取本地盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocalDiskNum(integer $LocalDiskNum) 设置本地盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDiskNum() 获取盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiskNum(integer $DiskNum) 设置盘数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -104,6 +120,30 @@ class Resource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MultiDisks;
+
+    /**
+     * @var array 需要绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
+     * @var string 规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceType;
+
+    /**
+     * @var integer 本地盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LocalDiskNum;
+
+    /**
+     * @var integer 盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiskNum;
     /**
      * @param string $Spec 节点规格描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -120,6 +160,14 @@ class Resource extends AbstractModel
      * @param integer $RootSize 系统盘容量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MultiDisks 云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 需要绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceType 规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LocalDiskNum 本地盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DiskNum 盘数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -169,6 +217,27 @@ class Resource extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->MultiDisks, $obj);
             }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("LocalDiskNum",$param) and $param["LocalDiskNum"] !== null) {
+            $this->LocalDiskNum = $param["LocalDiskNum"];
+        }
+
+        if (array_key_exists("DiskNum",$param) and $param["DiskNum"] !== null) {
+            $this->DiskNum = $param["DiskNum"];
         }
     }
 }

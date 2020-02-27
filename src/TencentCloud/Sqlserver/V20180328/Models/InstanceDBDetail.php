@@ -18,8 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method array getDBDetails() 获取数据库信息列表
  * @method void setDBDetails(array $DBDetails) 设置数据库信息列表
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class InstanceDBDetail extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string 实例ID
      */
     public $InstanceId;
 
@@ -39,7 +39,7 @@ class InstanceDBDetail extends AbstractModel
      */
     public $DBDetails;
     /**
-     * @param string $InstanceId 实例id
+     * @param string $InstanceId 实例ID
      * @param array $DBDetails 数据库信息列表
      */
     function __construct()

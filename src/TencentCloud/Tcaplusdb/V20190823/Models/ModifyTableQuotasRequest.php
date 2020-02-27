@@ -18,8 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getApplicationId() 获取带扩缩容表所属应用实例ID
- * @method void setApplicationId(string $ApplicationId) 设置带扩缩容表所属应用实例ID
+ * @method string getClusterId() 获取带扩缩容表所属集群ID
+ * @method void setClusterId(string $ClusterId) 设置带扩缩容表所属集群ID
  * @method array getTableQuotas() 获取已选中待修改的表配额列表
  * @method void setTableQuotas(array $TableQuotas) 设置已选中待修改的表配额列表
  */
@@ -30,16 +30,16 @@ use TencentCloud\Common\AbstractModel;
 class ModifyTableQuotasRequest extends AbstractModel
 {
     /**
-     * @var string 带扩缩容表所属应用实例ID
+     * @var string 带扩缩容表所属集群ID
      */
-    public $ApplicationId;
+    public $ClusterId;
 
     /**
      * @var array 已选中待修改的表配额列表
      */
     public $TableQuotas;
     /**
-     * @param string $ApplicationId 带扩缩容表所属应用实例ID
+     * @param string $ClusterId 带扩缩容表所属集群ID
      * @param array $TableQuotas 已选中待修改的表配额列表
      */
     function __construct()
@@ -54,14 +54,14 @@ class ModifyTableQuotasRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
         if (array_key_exists("TableQuotas",$param) and $param["TableQuotas"] !== null) {
             $this->TableQuotas = [];
             foreach ($param["TableQuotas"] as $key => $value){
-                $obj = new SelectedTableInfo();
+                $obj = new SelectedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->TableQuotas, $obj);
             }

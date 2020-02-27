@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMigrateName(string $MigrateName) 设置新的迁移任务的名称，若不填则不修改
  * @method integer getMigrateType() 获取新的迁移类型（1:结构迁移 2:数据迁移 3:增量同步），若不填则不修改
  * @method void setMigrateType(integer $MigrateType) 设置新的迁移类型（1:结构迁移 2:数据迁移 3:增量同步），若不填则不修改
- * @method integer getSourceType() 获取迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改
- * @method void setSourceType(integer $SourceType) 设置迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改
+ * @method integer getSourceType() 获取迁移源的类型 1:TencentDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改
+ * @method void setSourceType(integer $SourceType) 设置迁移源的类型 1:TencentDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改
  * @method MigrateSource getSource() 获取迁移源，若不填则不修改
  * @method void setSource(MigrateSource $Source) 设置迁移源，若不填则不修改
  * @method MigrateTarget getTarget() 获取迁移目标，若不填则不修改
@@ -55,7 +55,7 @@ class ModifyMigrationRequest extends AbstractModel
     public $MigrateType;
 
     /**
-     * @var integer 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改
+     * @var integer 迁移源的类型 1:TencentDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改
      */
     public $SourceType;
 
@@ -77,7 +77,7 @@ class ModifyMigrationRequest extends AbstractModel
      * @param integer $MigrateId 迁移任务ID
      * @param string $MigrateName 新的迁移任务的名称，若不填则不修改
      * @param integer $MigrateType 新的迁移类型（1:结构迁移 2:数据迁移 3:增量同步），若不填则不修改
-     * @param integer $SourceType 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改
+     * @param integer $SourceType 迁移源的类型 1:TencentDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改
      * @param MigrateSource $Source 迁移源，若不填则不修改
      * @param MigrateTarget $Target 迁移目标，若不填则不修改
      * @param array $MigrateDBSet 迁移DB对象 ，离线迁移（SourceType=4或SourceType=5）不使用，若不填则不修改

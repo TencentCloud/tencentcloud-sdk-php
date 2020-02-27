@@ -23,14 +23,10 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 
 /**
 * @method Models\CommonServiceAPIResponse CommonServiceAPI(Models\CommonServiceAPIRequest $req) TCB云API统一入口
-* @method Models\CreateMysqlInstanceResponse CreateMysqlInstance(Models\CreateMysqlInstanceRequest $req) 创建mysql实例
 * @method Models\DescribeDatabaseACLResponse DescribeDatabaseACL(Models\DescribeDatabaseACLRequest $req) 获取数据库权限
 * @method Models\DescribeEnvsResponse DescribeEnvs(Models\DescribeEnvsRequest $req) 获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
-* @method Models\IsolateMysqlInstanceResponse IsolateMysqlInstance(Models\IsolateMysqlInstanceRequest $req) 隔离mysql实例
 * @method Models\ModifyDatabaseACLResponse ModifyDatabaseACL(Models\ModifyDatabaseACLRequest $req) 修改数据库权限
 * @method Models\ModifyEnvResponse ModifyEnv(Models\ModifyEnvRequest $req) 更新环境信息
-* @method Models\OfflineMysqlInstanceResponse OfflineMysqlInstance(Models\OfflineMysqlInstanceRequest $req) 下线mysql实例
-* @method Models\UpgradeMysqlInstanceResponse UpgradeMysqlInstance(Models\UpgradeMysqlInstanceRequest $req) 升级mysql实例
  */
 
 class TcbClient extends AbstractClient

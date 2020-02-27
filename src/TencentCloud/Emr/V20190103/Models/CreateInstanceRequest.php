@@ -18,46 +18,102 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getProductId() 获取产品ID
- * @method void setProductId(integer $ProductId) 设置产品ID
- * @method VPCSettings getVPCSettings() 获取VPC设置参数
- * @method void setVPCSettings(VPCSettings $VPCSettings) 设置VPC设置参数
- * @method array getSoftware() 获取软件列表
- * @method void setSoftware(array $Software) 设置软件列表
- * @method NewResourceSpec getResourceSpec() 获取资源描述
- * @method void setResourceSpec(NewResourceSpec $ResourceSpec) 设置资源描述
- * @method integer getSupportHA() 获取支持HA
- * @method void setSupportHA(integer $SupportHA) 设置支持HA
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method integer getPayMode() 获取计费类型
- * @method void setPayMode(integer $PayMode) 设置计费类型
- * @method Placement getPlacement() 获取集群位置信息
- * @method void setPlacement(Placement $Placement) 设置集群位置信息
- * @method integer getTimeSpan() 获取时间长度
- * @method void setTimeSpan(integer $TimeSpan) 设置时间长度
- * @method string getTimeUnit() 获取时间单位
- * @method void setTimeUnit(string $TimeUnit) 设置时间单位
- * @method LoginSettings getLoginSettings() 获取登录配置
- * @method void setLoginSettings(LoginSettings $LoginSettings) 设置登录配置
- * @method COSSettings getCOSSettings() 获取COS设置参数
- * @method void setCOSSettings(COSSettings $COSSettings) 设置COS设置参数
- * @method string getSgId() 获取安全组ID
- * @method void setSgId(string $SgId) 设置安全组ID
- * @method array getPreExecutedFileSettings() 获取预执行脚本设置
- * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) 设置预执行脚本设置
- * @method integer getAutoRenew() 获取自动续费
- * @method void setAutoRenew(integer $AutoRenew) 设置自动续费
- * @method string getClientToken() 获取客户端Token
- * @method void setClientToken(string $ClientToken) 设置客户端Token
- * @method string getNeedMasterWan() 获取是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
- * @method void setNeedMasterWan(string $NeedMasterWan) 设置是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
- * @method integer getRemoteLoginAtCreate() 获取是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
- * @method void setRemoteLoginAtCreate(integer $RemoteLoginAtCreate) 设置是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
- * @method integer getCheckSecurity() 获取是否开启安全集群，0表示不开启，非0表示开启
- * @method void setCheckSecurity(integer $CheckSecurity) 设置是否开启安全集群，0表示不开启，非0表示开启
- * @method string getExtendFsField() 获取访问外部文件系统
- * @method void setExtendFsField(string $ExtendFsField) 设置访问外部文件系统
+ * @method integer getProductId() 获取产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li>
+ * @method void setProductId(integer $ProductId) 设置产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li>
+ * @method VPCSettings getVPCSettings() 获取私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+ * @method void setVPCSettings(VPCSettings $VPCSettings) 设置私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+ * @method array getSoftware() 获取部署的组件列表。不同ProductId对应特定版本的组件。例如，当ProductId取值为4时，该参数可以填写Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9；当ProductId取值为2时，该参数可以填写Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9。
+ * @method void setSoftware(array $Software) 设置部署的组件列表。不同ProductId对应特定版本的组件。例如，当ProductId取值为4时，该参数可以填写Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9；当ProductId取值为2时，该参数可以填写Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9。
+ * @method NewResourceSpec getResourceSpec() 获取节点资源的规格。
+ * @method void setResourceSpec(NewResourceSpec $ResourceSpec) 设置节点资源的规格。
+ * @method integer getSupportHA() 获取是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li>
+ * @method void setSupportHA(integer $SupportHA) 设置是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li>
+ * @method string getInstanceName() 获取实例名称。
+<li>长度限制为6-36个字符。</li>
+<li>只允许包含中文、字母、数字、-、_。</li>
+ * @method void setInstanceName(string $InstanceName) 设置实例名称。
+<li>长度限制为6-36个字符。</li>
+<li>只允许包含中文、字母、数字、-、_。</li>
+ * @method integer getPayMode() 获取实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
+ * @method void setPayMode(integer $PayMode) 设置实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
+ * @method Placement getPlacement() 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+ * @method void setPlacement(Placement $Placement) 设置实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+ * @method integer getTimeSpan() 获取购买实例的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
+ * @method void setTimeSpan(integer $TimeSpan) 设置购买实例的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
+ * @method string getTimeUnit() 获取购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+ * @method void setTimeUnit(string $TimeUnit) 设置购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+ * @method LoginSettings getLoginSettings() 获取实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
+<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
+<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
+ * @method void setLoginSettings(LoginSettings $LoginSettings) 设置实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
+<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
+<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
+ * @method COSSettings getCOSSettings() 获取开启COS访问需要设置的参数。
+ * @method void setCOSSettings(COSSettings $COSSettings) 设置开启COS访问需要设置的参数。
+ * @method string getSgId() 获取实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
+ * @method void setSgId(string $SgId) 设置实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
+ * @method array getPreExecutedFileSettings() 获取引导操作脚本设置。
+ * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) 设置引导操作脚本设置。
+ * @method integer getAutoRenew() 获取包年包月实例是否自动续费。取值范围：
+<li>0：表示不自动续费。</li>
+<li>1：表示自动续费。</li>
+ * @method void setAutoRenew(integer $AutoRenew) 设置包年包月实例是否自动续费。取值范围：
+<li>0：表示不自动续费。</li>
+<li>1：表示自动续费。</li>
+ * @method string getClientToken() 获取客户端Token。
+ * @method void setClientToken(string $ClientToken) 设置客户端Token。
+ * @method string getNeedMasterWan() 获取是否开启集群Master节点公网。取值范围：
+<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
+<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
+ * @method void setNeedMasterWan(string $NeedMasterWan) 设置是否开启集群Master节点公网。取值范围：
+<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
+<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
+ * @method integer getRemoteLoginAtCreate() 获取是否需要开启外网远程登录，即22号端口。在SgId不为空时，该参数无效。
+ * @method void setRemoteLoginAtCreate(integer $RemoteLoginAtCreate) 设置是否需要开启外网远程登录，即22号端口。在SgId不为空时，该参数无效。
+ * @method integer getCheckSecurity() 获取是否开启安全集群。0表示不开启，非0表示开启。
+ * @method void setCheckSecurity(integer $CheckSecurity) 设置是否开启安全集群。0表示不开启，非0表示开启。
+ * @method string getExtendFsField() 获取访问外部文件系统。
+ * @method void setExtendFsField(string $ExtendFsField) 设置访问外部文件系统。
+ * @method array getTags() 获取标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
+ * @method void setTags(array $Tags) 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
+ * @method array getDisasterRecoverGroupIds() 获取分散置放群组ID列表，当前只支持指定一个。
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置分散置放群组ID列表，当前只支持指定一个。
+ * @method integer getCbsEncrypt() 获取集群维度CBS加密盘，默认0表示不加密，1表示加密
+ * @method void setCbsEncrypt(integer $CbsEncrypt) 设置集群维度CBS加密盘，默认0表示不加密，1表示加密
+ * @method string getMetaType() 获取hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+ * @method void setMetaType(string $MetaType) 设置hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+ * @method string getUnifyMetaInstanceId() 获取EMR-MetaDB实例
+ * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) 设置EMR-MetaDB实例
+ * @method CustomMetaInfo getMetaDBInfo() 获取自定义MetaDB信息
+ * @method void setMetaDBInfo(CustomMetaInfo $MetaDBInfo) 设置自定义MetaDB信息
  */
 
 /**
@@ -66,125 +122,205 @@ use TencentCloud\Common\AbstractModel;
 class CreateInstanceRequest extends AbstractModel
 {
     /**
-     * @var integer 产品ID
+     * @var integer 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li>
      */
     public $ProductId;
 
     /**
-     * @var VPCSettings VPC设置参数
+     * @var VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
      */
     public $VPCSettings;
 
     /**
-     * @var array 软件列表
+     * @var array 部署的组件列表。不同ProductId对应特定版本的组件。例如，当ProductId取值为4时，该参数可以填写Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9；当ProductId取值为2时，该参数可以填写Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9。
      */
     public $Software;
 
     /**
-     * @var NewResourceSpec 资源描述
+     * @var NewResourceSpec 节点资源的规格。
      */
     public $ResourceSpec;
 
     /**
-     * @var integer 支持HA
+     * @var integer 是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li>
      */
     public $SupportHA;
 
     /**
-     * @var string 实例名称
+     * @var string 实例名称。
+<li>长度限制为6-36个字符。</li>
+<li>只允许包含中文、字母、数字、-、_。</li>
      */
     public $InstanceName;
 
     /**
-     * @var integer 计费类型
+     * @var integer 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
      */
     public $PayMode;
 
     /**
-     * @var Placement 集群位置信息
+     * @var Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
     public $Placement;
 
     /**
-     * @var integer 时间长度
+     * @var integer 购买实例的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
      */
     public $TimeSpan;
 
     /**
-     * @var string 时间单位
+     * @var string 购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public $TimeUnit;
 
     /**
-     * @var LoginSettings 登录配置
+     * @var LoginSettings 实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
+<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
+<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
      */
     public $LoginSettings;
 
     /**
-     * @var COSSettings COS设置参数
+     * @var COSSettings 开启COS访问需要设置的参数。
      */
     public $COSSettings;
 
     /**
-     * @var string 安全组ID
+     * @var string 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
      */
     public $SgId;
 
     /**
-     * @var array 预执行脚本设置
+     * @var array 引导操作脚本设置。
      */
     public $PreExecutedFileSettings;
 
     /**
-     * @var integer 自动续费
+     * @var integer 包年包月实例是否自动续费。取值范围：
+<li>0：表示不自动续费。</li>
+<li>1：表示自动续费。</li>
      */
     public $AutoRenew;
 
     /**
-     * @var string 客户端Token
+     * @var string 客户端Token。
      */
     public $ClientToken;
 
     /**
-     * @var string 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+     * @var string 是否开启集群Master节点公网。取值范围：
+<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
+<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
      */
     public $NeedMasterWan;
 
     /**
-     * @var integer 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+     * @var integer 是否需要开启外网远程登录，即22号端口。在SgId不为空时，该参数无效。
      */
     public $RemoteLoginAtCreate;
 
     /**
-     * @var integer 是否开启安全集群，0表示不开启，非0表示开启
+     * @var integer 是否开启安全集群。0表示不开启，非0表示开启。
      */
     public $CheckSecurity;
 
     /**
-     * @var string 访问外部文件系统
+     * @var string 访问外部文件系统。
      */
     public $ExtendFsField;
+
     /**
-     * @param integer $ProductId 产品ID
-     * @param VPCSettings $VPCSettings VPC设置参数
-     * @param array $Software 软件列表
-     * @param NewResourceSpec $ResourceSpec 资源描述
-     * @param integer $SupportHA 支持HA
-     * @param string $InstanceName 实例名称
-     * @param integer $PayMode 计费类型
-     * @param Placement $Placement 集群位置信息
-     * @param integer $TimeSpan 时间长度
-     * @param string $TimeUnit 时间单位
-     * @param LoginSettings $LoginSettings 登录配置
-     * @param COSSettings $COSSettings COS设置参数
-     * @param string $SgId 安全组ID
-     * @param array $PreExecutedFileSettings 预执行脚本设置
-     * @param integer $AutoRenew 自动续费
-     * @param string $ClientToken 客户端Token
-     * @param string $NeedMasterWan 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
-     * @param integer $RemoteLoginAtCreate 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
-     * @param integer $CheckSecurity 是否开启安全集群，0表示不开启，非0表示开启
-     * @param string $ExtendFsField 访问外部文件系统
+     * @var array 标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
+     */
+    public $Tags;
+
+    /**
+     * @var array 分散置放群组ID列表，当前只支持指定一个。
+     */
+    public $DisasterRecoverGroupIds;
+
+    /**
+     * @var integer 集群维度CBS加密盘，默认0表示不加密，1表示加密
+     */
+    public $CbsEncrypt;
+
+    /**
+     * @var string hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+     */
+    public $MetaType;
+
+    /**
+     * @var string EMR-MetaDB实例
+     */
+    public $UnifyMetaInstanceId;
+
+    /**
+     * @var CustomMetaInfo 自定义MetaDB信息
+     */
+    public $MetaDBInfo;
+    /**
+     * @param integer $ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li>
+     * @param VPCSettings $VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+     * @param array $Software 部署的组件列表。不同ProductId对应特定版本的组件。例如，当ProductId取值为4时，该参数可以填写Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9；当ProductId取值为2时，该参数可以填写Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9。
+     * @param NewResourceSpec $ResourceSpec 节点资源的规格。
+     * @param integer $SupportHA 是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li>
+     * @param string $InstanceName 实例名称。
+<li>长度限制为6-36个字符。</li>
+<li>只允许包含中文、字母、数字、-、_。</li>
+     * @param integer $PayMode 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
+     * @param Placement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     * @param integer $TimeSpan 购买实例的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
+     * @param string $TimeUnit 购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+     * @param LoginSettings $LoginSettings 实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
+<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
+<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
+     * @param COSSettings $COSSettings 开启COS访问需要设置的参数。
+     * @param string $SgId 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
+     * @param array $PreExecutedFileSettings 引导操作脚本设置。
+     * @param integer $AutoRenew 包年包月实例是否自动续费。取值范围：
+<li>0：表示不自动续费。</li>
+<li>1：表示自动续费。</li>
+     * @param string $ClientToken 客户端Token。
+     * @param string $NeedMasterWan 是否开启集群Master节点公网。取值范围：
+<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
+<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
+     * @param integer $RemoteLoginAtCreate 是否需要开启外网远程登录，即22号端口。在SgId不为空时，该参数无效。
+     * @param integer $CheckSecurity 是否开启安全集群。0表示不开启，非0表示开启。
+     * @param string $ExtendFsField 访问外部文件系统。
+     * @param array $Tags 标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
+     * @param array $DisasterRecoverGroupIds 分散置放群组ID列表，当前只支持指定一个。
+     * @param integer $CbsEncrypt 集群维度CBS加密盘，默认0表示不加密，1表示加密
+     * @param string $MetaType hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+     * @param string $UnifyMetaInstanceId EMR-MetaDB实例
+     * @param CustomMetaInfo $MetaDBInfo 自定义MetaDB信息
      */
     function __construct()
     {
@@ -286,6 +422,36 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("ExtendFsField",$param) and $param["ExtendFsField"] !== null) {
             $this->ExtendFsField = $param["ExtendFsField"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("DisasterRecoverGroupIds",$param) and $param["DisasterRecoverGroupIds"] !== null) {
+            $this->DisasterRecoverGroupIds = $param["DisasterRecoverGroupIds"];
+        }
+
+        if (array_key_exists("CbsEncrypt",$param) and $param["CbsEncrypt"] !== null) {
+            $this->CbsEncrypt = $param["CbsEncrypt"];
+        }
+
+        if (array_key_exists("MetaType",$param) and $param["MetaType"] !== null) {
+            $this->MetaType = $param["MetaType"];
+        }
+
+        if (array_key_exists("UnifyMetaInstanceId",$param) and $param["UnifyMetaInstanceId"] !== null) {
+            $this->UnifyMetaInstanceId = $param["UnifyMetaInstanceId"];
+        }
+
+        if (array_key_exists("MetaDBInfo",$param) and $param["MetaDBInfo"] !== null) {
+            $this->MetaDBInfo = new CustomMetaInfo();
+            $this->MetaDBInfo->deserialize($param["MetaDBInfo"]);
         }
     }
 }

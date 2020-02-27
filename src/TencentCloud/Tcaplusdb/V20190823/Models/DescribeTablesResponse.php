@@ -18,10 +18,10 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取表数量
- * @method void setTotalCount(integer $TotalCount) 设置表数量
- * @method array getTableInfos() 获取表详情结果列表
- * @method void setTableInfos(array $TableInfos) 设置表详情结果列表
+ * @method integer getTotalCount() 获取表格数量
+ * @method void setTotalCount(integer $TotalCount) 设置表格数量
+ * @method array getTableInfos() 获取表格详情结果列表
+ * @method void setTableInfos(array $TableInfos) 设置表格详情结果列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTablesResponse extends AbstractModel
 {
     /**
-     * @var integer 表数量
+     * @var integer 表格数量
      */
     public $TotalCount;
 
     /**
-     * @var array 表详情结果列表
+     * @var array 表格详情结果列表
      */
     public $TableInfos;
 
@@ -46,8 +46,8 @@ class DescribeTablesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 表数量
-     * @param array $TableInfos 表详情结果列表
+     * @param integer $TotalCount 表格数量
+     * @param array $TableInfos 表格详情结果列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -69,7 +69,7 @@ class DescribeTablesResponse extends AbstractModel
         if (array_key_exists("TableInfos",$param) and $param["TableInfos"] !== null) {
             $this->TableInfos = [];
             foreach ($param["TableInfos"] as $key => $value){
-                $obj = new TableInfo();
+                $obj = new TableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->TableInfos, $obj);
             }

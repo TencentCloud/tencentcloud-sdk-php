@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 16k_ca：16k 粤语。
  * @method integer getChannelNum() 获取语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
  * @method void setChannelNum(integer $ChannelNum) 设置语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
- * @method integer getResTextFormat() 获取识别结果文本编码方式。0：UTF-8。
- * @method void setResTextFormat(integer $ResTextFormat) 设置识别结果文本编码方式。0：UTF-8。
+ * @method integer getResTextFormat() 获取识别结果返回形式。0：标准结果  1：含词时间戳列表结果(一般用于生成字幕场景)
+ * @method void setResTextFormat(integer $ResTextFormat) 设置识别结果返回形式。0：标准结果  1：含词时间戳列表结果(一般用于生成字幕场景)
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method void setSourceType(integer $SourceType) 设置语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method string getCallbackUrl() 获取回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
@@ -69,7 +69,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $ChannelNum;
 
     /**
-     * @var integer 识别结果文本编码方式。0：UTF-8。
+     * @var integer 识别结果返回形式。0：标准结果  1：含词时间戳列表结果(一般用于生成字幕场景)
      */
     public $ResTextFormat;
 
@@ -110,7 +110,7 @@ class CreateRecTaskRequest extends AbstractModel
 16k_en：16k 英语；
 16k_ca：16k 粤语。
      * @param integer $ChannelNum 语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
-     * @param integer $ResTextFormat 识别结果文本编码方式。0：UTF-8。
+     * @param integer $ResTextFormat 识别结果返回形式。0：标准结果  1：含词时间戳列表结果(一般用于生成字幕场景)
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
      * @param string $CallbackUrl 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
      * @param string $Url 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。

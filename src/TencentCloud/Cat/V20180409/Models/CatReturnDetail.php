@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProvinceName(string $ProvinceName) 设置省份中文名称
  * @method string getMapKey() 获取Map键值
  * @method void setMapKey(string $MapKey) 设置Map键值
- * @method string getServerIp() 获取拨测目标的ip
- * @method void setServerIp(string $ServerIp) 设置拨测目标的ip
+ * @method string getServerIp() 获取拨测目标的IP
+ * @method void setServerIp(string $ServerIp) 设置拨测目标的IP
  * @method integer getResultCount() 获取拨测失败个数
  * @method void setResultCount(integer $ResultCount) 设置拨测失败个数
  * @method integer getResultCode() 获取拨测失败返回码
@@ -62,7 +62,7 @@ class CatReturnDetail extends AbstractModel
     public $MapKey;
 
     /**
-     * @var string 拨测目标的ip
+     * @var string 拨测目标的IP
      */
     public $ServerIp;
 
@@ -85,7 +85,7 @@ class CatReturnDetail extends AbstractModel
      * @param string $Province 省份全拼
      * @param string $ProvinceName 省份中文名称
      * @param string $MapKey Map键值
-     * @param string $ServerIp 拨测目标的ip
+     * @param string $ServerIp 拨测目标的IP
      * @param integer $ResultCount 拨测失败个数
      * @param integer $ResultCode 拨测失败返回码
      * @param string $ErrorReason 拨测失败原因描述

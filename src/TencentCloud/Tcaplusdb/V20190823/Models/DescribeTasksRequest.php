@@ -18,16 +18,16 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getApplicationIds() 获取需要查询任务所属的应用ID列表
- * @method void setApplicationIds(array $ApplicationIds) 设置需要查询任务所属的应用ID列表
+ * @method array getClusterIds() 获取需要查询任务所属的集群ID列表
+ * @method void setClusterIds(array $ClusterIds) 设置需要查询任务所属的集群ID列表
  * @method array getTaskIds() 获取需要查询的任务ID列表
  * @method void setTaskIds(array $TaskIds) 设置需要查询的任务ID列表
  * @method array getFilters() 获取过滤条件，本接口支持：Content，TaskType, Operator, Time
  * @method void setFilters(array $Filters) 设置过滤条件，本接口支持：Content，TaskType, Operator, Time
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取任务列表大小
- * @method void setLimit(integer $Limit) 设置任务列表大小
+ * @method integer getOffset() 获取查询列表偏移量
+ * @method void setOffset(integer $Offset) 设置查询列表偏移量
+ * @method integer getLimit() 获取查询列表返回记录数
+ * @method void setLimit(integer $Limit) 设置查询列表返回记录数
  */
 
 /**
@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTasksRequest extends AbstractModel
 {
     /**
-     * @var array 需要查询任务所属的应用ID列表
+     * @var array 需要查询任务所属的集群ID列表
      */
-    public $ApplicationIds;
+    public $ClusterIds;
 
     /**
      * @var array 需要查询的任务ID列表
@@ -51,20 +51,20 @@ class DescribeTasksRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 偏移量
+     * @var integer 查询列表偏移量
      */
     public $Offset;
 
     /**
-     * @var integer 任务列表大小
+     * @var integer 查询列表返回记录数
      */
     public $Limit;
     /**
-     * @param array $ApplicationIds 需要查询任务所属的应用ID列表
+     * @param array $ClusterIds 需要查询任务所属的集群ID列表
      * @param array $TaskIds 需要查询的任务ID列表
      * @param array $Filters 过滤条件，本接口支持：Content，TaskType, Operator, Time
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 任务列表大小
+     * @param integer $Offset 查询列表偏移量
+     * @param integer $Limit 查询列表返回记录数
      */
     function __construct()
     {
@@ -78,8 +78,8 @@ class DescribeTasksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationIds",$param) and $param["ApplicationIds"] !== null) {
-            $this->ApplicationIds = $param["ApplicationIds"];
+        if (array_key_exists("ClusterIds",$param) and $param["ClusterIds"] !== null) {
+            $this->ClusterIds = $param["ClusterIds"];
         }
 
         if (array_key_exists("TaskIds",$param) and $param["TaskIds"] !== null) {

@@ -18,12 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getIdlFiles() 获取本次上传校验所有的Idl文件信息列表
- * @method void setIdlFiles(array $IdlFiles) 设置本次上传校验所有的Idl文件信息列表
- * @method integer getTotalCount() 获取本次校验合法的表数量
- * @method void setTotalCount(integer $TotalCount) 设置本次校验合法的表数量
- * @method array getTableInfos() 获取读取IDL描述文件后,根据用户指示的所选中表解析校验结果
- * @method void setTableInfos(array $TableInfos) 设置读取IDL描述文件后,根据用户指示的所选中表解析校验结果
+ * @method array getIdlFiles() 获取本次上传校验所有的IDL文件信息列表
+ * @method void setIdlFiles(array $IdlFiles) 设置本次上传校验所有的IDL文件信息列表
+ * @method integer getTotalCount() 获取本次校验合法的表格数量
+ * @method void setTotalCount(integer $TotalCount) 设置本次校验合法的表格数量
+ * @method array getTableInfos() 获取读取IDL描述文件后,根据用户指示的所选中表格解析校验结果
+ * @method void setTableInfos(array $TableInfos) 设置读取IDL描述文件后,根据用户指示的所选中表格解析校验结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class CompareIdlFilesResponse extends AbstractModel
 {
     /**
-     * @var array 本次上传校验所有的Idl文件信息列表
+     * @var array 本次上传校验所有的IDL文件信息列表
      */
     public $IdlFiles;
 
     /**
-     * @var integer 本次校验合法的表数量
+     * @var integer 本次校验合法的表格数量
      */
     public $TotalCount;
 
     /**
-     * @var array 读取IDL描述文件后,根据用户指示的所选中表解析校验结果
+     * @var array 读取IDL描述文件后,根据用户指示的所选中表格解析校验结果
      */
     public $TableInfos;
 
@@ -53,9 +53,9 @@ class CompareIdlFilesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param array $IdlFiles 本次上传校验所有的Idl文件信息列表
-     * @param integer $TotalCount 本次校验合法的表数量
-     * @param array $TableInfos 读取IDL描述文件后,根据用户指示的所选中表解析校验结果
+     * @param array $IdlFiles 本次上传校验所有的IDL文件信息列表
+     * @param integer $TotalCount 本次校验合法的表格数量
+     * @param array $TableInfos 读取IDL描述文件后,根据用户指示的所选中表格解析校验结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -86,7 +86,7 @@ class CompareIdlFilesResponse extends AbstractModel
         if (array_key_exists("TableInfos",$param) and $param["TableInfos"] !== null) {
             $this->TableInfos = [];
             foreach ($param["TableInfos"] as $key => $value){
-                $obj = new ParsedTableInfo();
+                $obj = new ParsedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->TableInfos, $obj);
             }

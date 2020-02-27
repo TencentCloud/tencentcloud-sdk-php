@@ -30,9 +30,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageType(integer $StorageType) 设置硬盘类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDiskType() 获取盘类型
+ * @method string getDiskType() 获取硬盘类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskType(string $DiskType) 设置盘类型
+ * @method void setDiskType(string $DiskType) 设置硬盘类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRootSize() 获取系统盘大小
 注意：此字段可能返回 null，表示取不到有效值。
@@ -49,6 +49,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDiskSize() 获取硬盘大小
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskSize(integer $DiskSize) 设置硬盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceType() 获取规格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceType(string $InstanceType) 设置规格
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -76,7 +80,7 @@ class OutterResource extends AbstractModel
     public $StorageType;
 
     /**
-     * @var string 盘类型
+     * @var string 硬盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskType;
@@ -104,6 +108,12 @@ class OutterResource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskSize;
+
+    /**
+     * @var string 规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceType;
     /**
      * @param string $Spec 规格
 注意：此字段可能返回 null，表示取不到有效值。
@@ -111,7 +121,7 @@ class OutterResource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StorageType 硬盘类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DiskType 盘类型
+     * @param string $DiskType 硬盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RootSize 系统盘大小
 注意：此字段可能返回 null，表示取不到有效值。
@@ -120,6 +130,8 @@ class OutterResource extends AbstractModel
      * @param integer $Cpu CPU个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskSize 硬盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceType 规格
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,10 @@ class OutterResource extends AbstractModel
 
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
             $this->DiskSize = $param["DiskSize"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

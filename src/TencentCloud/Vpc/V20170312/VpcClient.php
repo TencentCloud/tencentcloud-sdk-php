@@ -69,8 +69,9 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * @method Models\CheckNetDetectStateResponse CheckNetDetectState(Models\CheckNetDetectStateRequest $req) 本接口(CheckNetDetectState)用于验证网络探测。
 * @method Models\CreateAddressTemplateResponse CreateAddressTemplate(Models\CreateAddressTemplateRequest $req) 本接口（CreateAddressTemplate）用于创建IP地址模版
 * @method Models\CreateAddressTemplateGroupResponse CreateAddressTemplateGroup(Models\CreateAddressTemplateGroupRequest $req) 本接口（CreateAddressTemplateGroup）用于创建IP地址模版集合
-* @method Models\CreateBandwidthPackageResponse CreateBandwidthPackage(Models\CreateBandwidthPackageRequest $req) 接口支持创建[设备带宽包](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85)和[ip带宽包](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+* @method Models\CreateBandwidthPackageResponse CreateBandwidthPackage(Models\CreateBandwidthPackageRequest $req) 接口支持创建[设备带宽包](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85)和[IP带宽包](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
 * @method Models\CreateCcnResponse CreateCcn(Models\CreateCcnRequest $req) 本接口（CreateCcn）用于创建云联网（CCN）。<br />
+* 创建云联网同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
 每个账号能创建的云联网实例个数是有限的，详请参考产品文档。如果需要扩充请联系在线客服。
 * @method Models\CreateCustomerGatewayResponse CreateCustomerGateway(Models\CreateCustomerGatewayRequest $req) 本接口（CreateCustomerGateway）用于创建对端网关。
 * @method Models\CreateDefaultVpcResponse CreateDefaultVpc(Models\CreateDefaultVpcRequest $req) 本接口（CreateDefaultVpc）用于创建默认私有网络(VPC）。
@@ -99,11 +100,13 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 创建弹性网卡同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
 * @method Models\CreateRouteTableResponse CreateRouteTable(Models\CreateRouteTableRequest $req) 本接口(CreateRouteTable)用于创建路由表。
 * 创建了VPC后，系统会创建一个默认路由表，所有新建的子网都会关联到默认路由表。默认情况下您可以直接使用默认路由表来管理您的路由策略。当您的路由策略较多时，您可以调用创建路由表接口创建更多路由表管理您的路由策略。
+* 创建路由表同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
 * @method Models\CreateRoutesResponse CreateRoutes(Models\CreateRoutesRequest $req) 本接口(CreateRoutes)用于创建路由策略。
 * 向指定路由表批量新增路由策略。
 * @method Models\CreateSecurityGroupResponse CreateSecurityGroup(Models\CreateSecurityGroupRequest $req) 本接口（CreateSecurityGroup）用于创建新的安全组（SecurityGroup）。
 * 每个账户下每个地域的每个项目的<a href="https://cloud.tencent.com/document/product/213/12453">安全组数量限制</a>。
 * 新建的安全组的入站和出站规则默认都是全部拒绝，在创建后通常您需要再调用CreateSecurityGroupPolicies将安全组的规则设置为需要的规则。
+* 创建安全组同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
 * @method Models\CreateSecurityGroupPoliciesResponse CreateSecurityGroupPolicies(Models\CreateSecurityGroupPoliciesRequest $req) 本接口（CreateSecurityGroupPolicies）用于创建安全组规则（SecurityGroupPolicy）。
 
 * Version安全组规则版本号，用户每次更新安全规则版本会自动加1，防止您更新的路由规则已过期，不填不考虑冲突。
@@ -123,20 +126,23 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 您可以创建的最小网段子网掩码为28（有16个IP地址），最大网段子网掩码为16（65,536个IP地址）。
 * 同一个VPC内，多个子网的网段不能重叠。
 * 子网创建后会自动关联到默认路由表。
+* 创建子网同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
 * @method Models\CreateSubnetsResponse CreateSubnets(Models\CreateSubnetsRequest $req) 本接口(CreateSubnets)用于批量创建子网。
 * 创建子网前必须创建好 VPC。
 * 子网创建成功后，子网网段不能修改。子网网段必须在VPC网段内，可以和VPC网段相同（VPC有且只有一个子网时），建议子网网段在VPC网段内，预留网段给其他子网使用。
 * 您可以创建的最小网段子网掩码为28（有16个IP地址），最大网段子网掩码为16（65,536个IP地址）。
 * 同一个VPC内，多个子网的网段不能重叠。
 * 子网创建后会自动关联到默认路由表。
+* 创建子网同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
 * @method Models\CreateVpcResponse CreateVpc(Models\CreateVpcRequest $req) 本接口(CreateVpc)用于创建私有网络(VPC)。
 * 用户可以创建的最小网段子网掩码为28（有16个IP地址），最大网段子网掩码为16（65,536个IP地址）,如果规划VPC网段请参见VPC网段规划说明。
 * 同一个地域能创建的VPC资源个数也是有限制的，详见 <a href="https://cloud.tencent.com/doc/product/215/537" title="VPC使用限制">VPC使用限制</a>,如果需要扩充请联系在线客服。
+* 创建VPC同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
 * @method Models\CreateVpnConnectionResponse CreateVpnConnection(Models\CreateVpnConnectionRequest $req) 本接口（CreateVpnConnection）用于创建VPN通道。
 * @method Models\CreateVpnGatewayResponse CreateVpnGateway(Models\CreateVpnGatewayRequest $req) 本接口（CreateVpnGateway）用于创建VPN网关。
 * @method Models\DeleteAddressTemplateResponse DeleteAddressTemplate(Models\DeleteAddressTemplateRequest $req) 本接口（DeleteAddressTemplate）用于删除IP地址模板
 * @method Models\DeleteAddressTemplateGroupResponse DeleteAddressTemplateGroup(Models\DeleteAddressTemplateGroupRequest $req) 本接口（DeleteAddressTemplateGroup）用于删除IP地址模板集合
-* @method Models\DeleteBandwidthPackageResponse DeleteBandwidthPackage(Models\DeleteBandwidthPackageRequest $req) 接口支持删除共享带宽包，包括[设备带宽包](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85)和[ip带宽包](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+* @method Models\DeleteBandwidthPackageResponse DeleteBandwidthPackage(Models\DeleteBandwidthPackageRequest $req) 接口支持删除共享带宽包，包括[设备带宽包](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85)和[IP带宽包](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
 * @method Models\DeleteCcnResponse DeleteCcn(Models\DeleteCcnRequest $req) 本接口（DeleteCcn）用于删除云联网。
 * 删除后，云联网关联的所有实例间路由将被删除，网络将会中断，请务必确认
 * 删除云联网是不可逆的操作，请谨慎处理。
@@ -212,6 +218,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * @method Models\DescribeRouteConflictsResponse DescribeRouteConflicts(Models\DescribeRouteConflictsRequest $req) 本接口（DescribeRouteConflicts）用于查询自定义路由策略与云联网路由策略冲突列表
 * @method Models\DescribeRouteTablesResponse DescribeRouteTables(Models\DescribeRouteTablesRequest $req)  本接口（DescribeRouteTables）用于查询路由表。
 * @method Models\DescribeSecurityGroupAssociationStatisticsResponse DescribeSecurityGroupAssociationStatistics(Models\DescribeSecurityGroupAssociationStatisticsRequest $req) 本接口（DescribeSecurityGroupAssociationStatistics）用于查询安全组关联的实例统计。
+* @method Models\DescribeSecurityGroupLimitsResponse DescribeSecurityGroupLimits(Models\DescribeSecurityGroupLimitsRequest $req) 本接口(DescribeSecurityGroupLimits)用于查询用户安全组配额。
 * @method Models\DescribeSecurityGroupPoliciesResponse DescribeSecurityGroupPolicies(Models\DescribeSecurityGroupPoliciesRequest $req) 本接口（DescribeSecurityGroupPolicies）用于查询安全组规则。
 * @method Models\DescribeSecurityGroupsResponse DescribeSecurityGroups(Models\DescribeSecurityGroupsRequest $req) 本接口（DescribeSecurityGroups）用于查询安全组。
 * @method Models\DescribeServiceTemplateGroupsResponse DescribeServiceTemplateGroups(Models\DescribeServiceTemplateGroupsRequest $req) 本接口（DescribeServiceTemplateGroups）用于查询协议端口模板集合

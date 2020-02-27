@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDealName(string $DealName) 设置订单名
  * @method integer getCount() 获取商品数量
  * @method void setCount(integer $Count) 设置商品数量
- * @method integer getFlowId() 获取关联的流程 Id，可用于查询流程执行状态
- * @method void setFlowId(integer $FlowId) 设置关联的流程 Id，可用于查询流程执行状态
+ * @method integer getFlowId() 获取关联的流程 ID，可用于查询流程执行状态
+ * @method void setFlowId(integer $FlowId) 设置关联的流程 ID，可用于查询流程执行状态
  * @method array getInstanceIdSet() 获取只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
  * @method string getOwnerUin() 获取所属账号
@@ -48,7 +48,7 @@ class DealInfo extends AbstractModel
     public $Count;
 
     /**
-     * @var integer 关联的流程 Id，可用于查询流程执行状态
+     * @var integer 关联的流程 ID，可用于查询流程执行状态
      */
     public $FlowId;
 
@@ -69,7 +69,7 @@ class DealInfo extends AbstractModel
     /**
      * @param string $DealName 订单名
      * @param integer $Count 商品数量
-     * @param integer $FlowId 关联的流程 Id，可用于查询流程执行状态
+     * @param integer $FlowId 关联的流程 ID，可用于查询流程执行状态
      * @param array $InstanceIdSet 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
      * @param string $OwnerUin 所属账号
      * @param string $InstanceChargeType 实例付费类型

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBandwidthLimitType(string $BandwidthLimitType) 设置限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagSet() 获取标签键值对。
+ * @method void setTagSet(array $TagSet) 设置标签键值对。
  */
 
 /**
@@ -93,6 +95,11 @@ class CCN extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BandwidthLimitType;
+
+    /**
+     * @var array 标签键值对。
+     */
+    public $TagSet;
     /**
      * @param string $CcnId 云联网唯一ID
      * @param string $CcnName 云联网名称
@@ -105,6 +112,7 @@ class CCN extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BandwidthLimitType 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagSet 标签键值对。
      */
     function __construct()
     {
@@ -152,6 +160,15 @@ class CCN extends AbstractModel
 
         if (array_key_exists("BandwidthLimitType",$param) and $param["BandwidthLimitType"] !== null) {
             $this->BandwidthLimitType = $param["BandwidthLimitType"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

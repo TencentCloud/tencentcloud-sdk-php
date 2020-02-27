@@ -18,32 +18,44 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getStatus() 获取上下线状态。online 为上线，offline 为下线。
- * @method void setStatus(string $Status) 设置上下线状态。online 为上线，offline 为下线。
- * @method string getDatetime() 获取操作时间。当该值为 null 时表示无历史状态变更记录。
+ * @method string getStatus() 获取操作类型
+online：节点上线
+offline：节点下线
+ * @method void setStatus(string $Status) 设置操作类型
+online：节点上线
+offline：节点下线
+ * @method string getDatetime() 获取操作类型对应的操作时间
+当该值为 null 时表示无历史状态变更记录
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDatetime(string $Datetime) 设置操作时间。当该值为 null 时表示无历史状态变更记录。
+ * @method void setDatetime(string $Datetime) 设置操作类型对应的操作时间
+当该值为 null 时表示无历史状态变更记录
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
- *CdnIp 节点上下线历史
+ *CDN 节点上下线历史记录
  */
 class CdnIpHistory extends AbstractModel
 {
     /**
-     * @var string 上下线状态。online 为上线，offline 为下线。
+     * @var string 操作类型
+online：节点上线
+offline：节点下线
      */
     public $Status;
 
     /**
-     * @var string 操作时间。当该值为 null 时表示无历史状态变更记录。
+     * @var string 操作类型对应的操作时间
+当该值为 null 时表示无历史状态变更记录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Datetime;
     /**
-     * @param string $Status 上下线状态。online 为上线，offline 为下线。
-     * @param string $Datetime 操作时间。当该值为 null 时表示无历史状态变更记录。
+     * @param string $Status 操作类型
+online：节点上线
+offline：节点下线
+     * @param string $Datetime 操作类型对应的操作时间
+当该值为 null 时表示无历史状态变更记录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

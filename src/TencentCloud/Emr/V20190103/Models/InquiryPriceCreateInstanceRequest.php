@@ -18,24 +18,60 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTimeUnit() 获取时间单位
- * @method void setTimeUnit(string $TimeUnit) 设置时间单位
- * @method integer getTimeSpan() 获取时间长度
- * @method void setTimeSpan(integer $TimeSpan) 设置时间长度
- * @method NewResourceSpec getResourceSpec() 获取询价资源描述
- * @method void setResourceSpec(NewResourceSpec $ResourceSpec) 设置询价资源描述
- * @method string getCurrency() 获取货币种类
- * @method void setCurrency(string $Currency) 设置货币种类
- * @method integer getPayMode() 获取计费类型
- * @method void setPayMode(integer $PayMode) 设置计费类型
- * @method integer getSupportHA() 获取是否支持HA， 1 支持，0 不支持
- * @method void setSupportHA(integer $SupportHA) 设置是否支持HA， 1 支持，0 不支持
- * @method array getSoftware() 获取软件列表
- * @method void setSoftware(array $Software) 设置软件列表
- * @method Placement getPlacement() 获取位置信息
- * @method void setPlacement(Placement $Placement) 设置位置信息
- * @method VPCSettings getVPCSettings() 获取VPC信息
- * @method void setVPCSettings(VPCSettings $VPCSettings) 设置VPC信息
+ * @method string getTimeUnit() 获取购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+ * @method void setTimeUnit(string $TimeUnit) 设置购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+ * @method integer getTimeSpan() 获取购买实例的时长。需要结合TimeUnit一起使用。
+ * @method void setTimeSpan(integer $TimeSpan) 设置购买实例的时长。需要结合TimeUnit一起使用。
+ * @method NewResourceSpec getResourceSpec() 获取询价的节点规格。
+ * @method void setResourceSpec(NewResourceSpec $ResourceSpec) 设置询价的节点规格。
+ * @method string getCurrency() 获取货币种类。取值范围：
+<li>CNY：表示人民币。</li>
+ * @method void setCurrency(string $Currency) 设置货币种类。取值范围：
+<li>CNY：表示人民币。</li>
+ * @method integer getPayMode() 获取实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
+ * @method void setPayMode(integer $PayMode) 设置实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
+ * @method integer getSupportHA() 获取是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li>
+ * @method void setSupportHA(integer $SupportHA) 设置是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li>
+ * @method array getSoftware() 获取部署的组件列表。
+ * @method void setSoftware(array $Software) 设置部署的组件列表。
+ * @method Placement getPlacement() 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+ * @method void setPlacement(Placement $Placement) 设置实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+ * @method VPCSettings getVPCSettings() 获取私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+ * @method void setVPCSettings(VPCSettings $VPCSettings) 设置私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+ * @method string getMetaType() 获取hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+ * @method void setMetaType(string $MetaType) 设置hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+ * @method string getUnifyMetaInstanceId() 获取EMR-MetaDB实例
+ * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) 设置EMR-MetaDB实例
+ * @method CustomMetaInfo getMetaDBInfo() 获取自定义MetaDB信息
+ * @method void setMetaDBInfo(CustomMetaInfo $MetaDBInfo) 设置自定义MetaDB信息
+ * @method integer getProductId() 获取产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li>
+ * @method void setProductId(integer $ProductId) 设置产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li>
  */
 
 /**
@@ -44,59 +80,111 @@ use TencentCloud\Common\AbstractModel;
 class InquiryPriceCreateInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 时间单位
+     * @var string 购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public $TimeUnit;
 
     /**
-     * @var integer 时间长度
+     * @var integer 购买实例的时长。需要结合TimeUnit一起使用。
      */
     public $TimeSpan;
 
     /**
-     * @var NewResourceSpec 询价资源描述
+     * @var NewResourceSpec 询价的节点规格。
      */
     public $ResourceSpec;
 
     /**
-     * @var string 货币种类
+     * @var string 货币种类。取值范围：
+<li>CNY：表示人民币。</li>
      */
     public $Currency;
 
     /**
-     * @var integer 计费类型
+     * @var integer 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
      */
     public $PayMode;
 
     /**
-     * @var integer 是否支持HA， 1 支持，0 不支持
+     * @var integer 是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li>
      */
     public $SupportHA;
 
     /**
-     * @var array 软件列表
+     * @var array 部署的组件列表。
      */
     public $Software;
 
     /**
-     * @var Placement 位置信息
+     * @var Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
     public $Placement;
 
     /**
-     * @var VPCSettings VPC信息
+     * @var VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
      */
     public $VPCSettings;
+
     /**
-     * @param string $TimeUnit 时间单位
-     * @param integer $TimeSpan 时间长度
-     * @param NewResourceSpec $ResourceSpec 询价资源描述
-     * @param string $Currency 货币种类
-     * @param integer $PayMode 计费类型
-     * @param integer $SupportHA 是否支持HA， 1 支持，0 不支持
-     * @param array $Software 软件列表
-     * @param Placement $Placement 位置信息
-     * @param VPCSettings $VPCSettings VPC信息
+     * @var string hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+     */
+    public $MetaType;
+
+    /**
+     * @var string EMR-MetaDB实例
+     */
+    public $UnifyMetaInstanceId;
+
+    /**
+     * @var CustomMetaInfo 自定义MetaDB信息
+     */
+    public $MetaDBInfo;
+
+    /**
+     * @var integer 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li>
+     */
+    public $ProductId;
+    /**
+     * @param string $TimeUnit 购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+     * @param integer $TimeSpan 购买实例的时长。需要结合TimeUnit一起使用。
+     * @param NewResourceSpec $ResourceSpec 询价的节点规格。
+     * @param string $Currency 货币种类。取值范围：
+<li>CNY：表示人民币。</li>
+     * @param integer $PayMode 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
+     * @param integer $SupportHA 是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li>
+     * @param array $Software 部署的组件列表。
+     * @param Placement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     * @param VPCSettings $VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+     * @param string $MetaType hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+     * @param string $UnifyMetaInstanceId EMR-MetaDB实例
+     * @param CustomMetaInfo $MetaDBInfo 自定义MetaDB信息
+     * @param integer $ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li>
      */
     function __construct()
     {
@@ -147,6 +235,23 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
         if (array_key_exists("VPCSettings",$param) and $param["VPCSettings"] !== null) {
             $this->VPCSettings = new VPCSettings();
             $this->VPCSettings->deserialize($param["VPCSettings"]);
+        }
+
+        if (array_key_exists("MetaType",$param) and $param["MetaType"] !== null) {
+            $this->MetaType = $param["MetaType"];
+        }
+
+        if (array_key_exists("UnifyMetaInstanceId",$param) and $param["UnifyMetaInstanceId"] !== null) {
+            $this->UnifyMetaInstanceId = $param["UnifyMetaInstanceId"];
+        }
+
+        if (array_key_exists("MetaDBInfo",$param) and $param["MetaDBInfo"] !== null) {
+            $this->MetaDBInfo = new CustomMetaInfo();
+            $this->MetaDBInfo->deserialize($param["MetaDBInfo"]);
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

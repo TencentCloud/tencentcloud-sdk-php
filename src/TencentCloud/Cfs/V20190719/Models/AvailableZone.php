@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneCnName(string $ZoneCnName) 设置可用区中文名称
  * @method array getTypes() 获取Type数组
  * @method void setTypes(array $Types) 设置Type数组
+ * @method string getZoneName() 获取可用区中英文名称
+ * @method void setZoneName(string $ZoneName) 设置可用区中英文名称
  */
 
 /**
@@ -52,11 +54,17 @@ class AvailableZone extends AbstractModel
      * @var array Type数组
      */
     public $Types;
+
+    /**
+     * @var string 可用区中英文名称
+     */
+    public $ZoneName;
     /**
      * @param string $Zone 可用区名称
      * @param integer $ZoneId 可用区ID
      * @param string $ZoneCnName 可用区中文名称
      * @param array $Types Type数组
+     * @param string $ZoneName 可用区中英文名称
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class AvailableZone extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Types, $obj);
             }
+        }
+
+        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
+            $this->ZoneName = $param["ZoneName"];
         }
     }
 }

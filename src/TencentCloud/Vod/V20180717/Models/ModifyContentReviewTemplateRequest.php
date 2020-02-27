@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTerrorismConfigure(TerrorismConfigureInfoForUpdate $TerrorismConfigure) 设置鉴恐控制参数。
  * @method PoliticalConfigureInfoForUpdate getPoliticalConfigure() 获取鉴政控制参数。
  * @method void setPoliticalConfigure(PoliticalConfigureInfoForUpdate $PoliticalConfigure) 设置鉴政控制参数。
+ * @method ProhibitedConfigureInfoForUpdate getProhibitedConfigure() 获取违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+ * @method void setProhibitedConfigure(ProhibitedConfigureInfoForUpdate $ProhibitedConfigure) 设置违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
  * @method UserDefineConfigureInfoForUpdate getUserDefineConfigure() 获取用户自定义内容审核控制参数。
  * @method void setUserDefineConfigure(UserDefineConfigureInfoForUpdate $UserDefineConfigure) 设置用户自定义内容审核控制参数。
  * @method float getScreenshotInterval() 获取截帧间隔，单位为秒，最小值为 0.5 秒。
@@ -80,6 +88,14 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
     public $PoliticalConfigure;
 
     /**
+     * @var ProhibitedConfigureInfoForUpdate 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+     */
+    public $ProhibitedConfigure;
+
+    /**
      * @var UserDefineConfigureInfoForUpdate 用户自定义内容审核控制参数。
      */
     public $UserDefineConfigure;
@@ -107,6 +123,10 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
      * @param PornConfigureInfoForUpdate $PornConfigure 鉴黄控制参数。
      * @param TerrorismConfigureInfoForUpdate $TerrorismConfigure 鉴恐控制参数。
      * @param PoliticalConfigureInfoForUpdate $PoliticalConfigure 鉴政控制参数。
+     * @param ProhibitedConfigureInfoForUpdate $ProhibitedConfigure 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
      * @param UserDefineConfigureInfoForUpdate $UserDefineConfigure 用户自定义内容审核控制参数。
      * @param float $ScreenshotInterval 截帧间隔，单位为秒，最小值为 0.5 秒。
      * @param string $ReviewWallSwitch 审核结果是否进入审核墙（对审核结果进行人工复核）的开关。
@@ -151,6 +171,11 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
         if (array_key_exists("PoliticalConfigure",$param) and $param["PoliticalConfigure"] !== null) {
             $this->PoliticalConfigure = new PoliticalConfigureInfoForUpdate();
             $this->PoliticalConfigure->deserialize($param["PoliticalConfigure"]);
+        }
+
+        if (array_key_exists("ProhibitedConfigure",$param) and $param["ProhibitedConfigure"] !== null) {
+            $this->ProhibitedConfigure = new ProhibitedConfigureInfoForUpdate();
+            $this->ProhibitedConfigure->deserialize($param["ProhibitedConfigure"]);
         }
 
         if (array_key_exists("UserDefineConfigure",$param) and $param["UserDefineConfigure"] !== null) {

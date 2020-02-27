@@ -18,28 +18,28 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTaskId() 获取任务Id
- * @method void setTaskId(integer $TaskId) 设置任务Id
+ * @method integer getTaskId() 获取任务ID
+ * @method void setTaskId(integer $TaskId) 设置任务ID
  * @method string getTaskName() 获取任务名称
  * @method void setTaskName(string $TaskName) 设置任务名称
  * @method integer getPeriod() 获取任务周期，单位为分钟。目前支持1，5，15，30几种取值
  * @method void setPeriod(integer $Period) 设置任务周期，单位为分钟。目前支持1，5，15，30几种取值
  * @method string getCatTypeName() 获取拨测类型。http, https, ping, tcp 之一
  * @method void setCatTypeName(string $CatTypeName) 设置拨测类型。http, https, ping, tcp 之一
- * @method string getCgiUrl() 获取拨测任务的Url
- * @method void setCgiUrl(string $CgiUrl) 设置拨测任务的Url
- * @method integer getAgentGroupId() 获取拨测分组id
- * @method void setAgentGroupId(integer $AgentGroupId) 设置拨测分组id
- * @method integer getPolicyGroupId() 获取告警策略组id
- * @method void setPolicyGroupId(integer $PolicyGroupId) 设置告警策略组id
+ * @method string getCgiUrl() 获取拨测任务的URL
+ * @method void setCgiUrl(string $CgiUrl) 设置拨测任务的URL
+ * @method integer getAgentGroupId() 获取拨测分组ID
+ * @method void setAgentGroupId(integer $AgentGroupId) 设置拨测分组ID
+ * @method integer getPolicyGroupId() 获取告警策略组ID
+ * @method void setPolicyGroupId(integer $PolicyGroupId) 设置告警策略组ID
  * @method integer getStatus() 获取任务状态。1表示暂停，2表示运行中，0为初始态
  * @method void setStatus(integer $Status) 设置任务状态。1表示暂停，2表示运行中，0为初始态
  * @method string getAddTime() 获取任务创建时间
  * @method void setAddTime(string $AddTime) 设置任务创建时间
  * @method integer getType() 获取任务类型。0 站点监控，2 可用性监控
  * @method void setType(integer $Type) 设置任务类型。0 站点监控，2 可用性监控
- * @method string getTopicId() 获取绑定的统一告警主题Id
- * @method void setTopicId(string $TopicId) 设置绑定的统一告警主题Id
+ * @method string getTopicId() 获取绑定的统一告警主题ID
+ * @method void setTopicId(string $TopicId) 设置绑定的统一告警主题ID
  * @method integer getAlarmStatus() 获取告警状态。0 未启用，1, 启用
  * @method void setAlarmStatus(integer $AlarmStatus) 设置告警状态。0 未启用，1, 启用
  * @method string getHost() 获取指定的域名
@@ -50,38 +50,38 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCheckStr(string $CheckStr) 设置要在结果中进行匹配的字符串
  * @method integer getCheckType() 获取1 表示通过检查结果是否包含CheckStr 进行校验
  * @method void setCheckType(integer $CheckType) 设置1 表示通过检查结果是否包含CheckStr 进行校验
- * @method string getUserAgent() 获取用户agent 信息
- * @method void setUserAgent(string $UserAgent) 设置用户agent 信息
- * @method string getCookie() 获取设置的cookie信息
- * @method void setCookie(string $Cookie) 设置设置的cookie信息
+ * @method string getUserAgent() 获取用户Agent信息
+ * @method void setUserAgent(string $UserAgent) 设置用户Agent信息
+ * @method string getCookie() 获取设置的Cookie信息
+ * @method void setCookie(string $Cookie) 设置设置的Cookie信息
  * @method string getPostData() 获取POST 请求数据。空字符串表示非POST请求
  * @method void setPostData(string $PostData) 设置POST 请求数据。空字符串表示非POST请求
  * @method string getSslVer() 获取SSL协议版本
  * @method void setSslVer(string $SslVer) 设置SSL协议版本
  * @method integer getIsHeader() 获取是否为Header请求。非0 Header 请求
  * @method void setIsHeader(integer $IsHeader) 设置是否为Header请求。非0 Header 请求
- * @method string getDnsSvr() 获取目的dns服务器
- * @method void setDnsSvr(string $DnsSvr) 设置目的dns服务器
- * @method string getDnsCheckIp() 获取需要检验是否在dns ip列表的ip
- * @method void setDnsCheckIp(string $DnsCheckIp) 设置需要检验是否在dns ip列表的ip
- * @method string getDnsQueryType() 获取dns查询类型
- * @method void setDnsQueryType(string $DnsQueryType) 设置dns查询类型
- * @method string getUserName() 获取登陆服务器的账号
- * @method void setUserName(string $UserName) 设置登陆服务器的账号
- * @method string getPassWord() 获取登陆服务器的密码
- * @method void setPassWord(string $PassWord) 设置登陆服务器的密码
- * @method integer getUseSecConn() 获取是否使用安全链接ssl  0 不使用，1 使用
- * @method void setUseSecConn(integer $UseSecConn) 设置是否使用安全链接ssl  0 不使用，1 使用
- * @method integer getNeedAuth() 获取ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
- * @method void setNeedAuth(integer $NeedAuth) 设置ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+ * @method string getDnsSvr() 获取目的DNS服务器
+ * @method void setDnsSvr(string $DnsSvr) 设置目的DNS服务器
+ * @method string getDnsCheckIp() 获取需要检验是否在DNS IP列表的IP
+ * @method void setDnsCheckIp(string $DnsCheckIp) 设置需要检验是否在DNS IP列表的IP
+ * @method string getDnsQueryType() 获取DNS查询类型
+ * @method void setDnsQueryType(string $DnsQueryType) 设置DNS查询类型
+ * @method string getUserName() 获取登录服务器的账号
+ * @method void setUserName(string $UserName) 设置登录服务器的账号
+ * @method string getPassWord() 获取登录服务器的密码
+ * @method void setPassWord(string $PassWord) 设置登录服务器的密码
+ * @method integer getUseSecConn() 获取是否使用安全链接SSL， 0 不使用，1 使用
+ * @method void setUseSecConn(integer $UseSecConn) 设置是否使用安全链接SSL， 0 不使用，1 使用
+ * @method integer getNeedAuth() 获取FTP登录验证方式  0 不验证  1 匿名登录  2 需要身份验证
+ * @method void setNeedAuth(integer $NeedAuth) 设置FTP登录验证方式  0 不验证  1 匿名登录  2 需要身份验证
  * @method integer getReqDataType() 获取请求数据类型。0 表示请求为字符串类型。1表示为二进制类型
  * @method void setReqDataType(integer $ReqDataType) 设置请求数据类型。0 表示请求为字符串类型。1表示为二进制类型
- * @method string getReqData() 获取发起tcp, udp请求的协议请求数据
- * @method void setReqData(string $ReqData) 设置发起tcp, udp请求的协议请求数据
+ * @method string getReqData() 获取发起TCP, UDP请求的协议请求数据
+ * @method void setReqData(string $ReqData) 设置发起TCP, UDP请求的协议请求数据
  * @method integer getRespDataType() 获取响应数据类型。0 表示响应为字符串类型。1表示为二进制类型
  * @method void setRespDataType(integer $RespDataType) 设置响应数据类型。0 表示响应为字符串类型。1表示为二进制类型
- * @method string getRespData() 获取预期的udp请求的回应数据
- * @method void setRespData(string $RespData) 设置预期的udp请求的回应数据
+ * @method string getRespData() 获取预期的UDP请求的回应数据
+ * @method void setRespData(string $RespData) 设置预期的UDP请求的回应数据
  * @method integer getRedirectFollowNum() 获取跟随跳转次数
  * @method void setRedirectFollowNum(integer $RedirectFollowNum) 设置跟随跳转次数
  */
@@ -92,7 +92,7 @@ use TencentCloud\Common\AbstractModel;
 class CatTaskDetail extends AbstractModel
 {
     /**
-     * @var integer 任务Id
+     * @var integer 任务ID
      */
     public $TaskId;
 
@@ -112,17 +112,17 @@ class CatTaskDetail extends AbstractModel
     public $CatTypeName;
 
     /**
-     * @var string 拨测任务的Url
+     * @var string 拨测任务的URL
      */
     public $CgiUrl;
 
     /**
-     * @var integer 拨测分组id
+     * @var integer 拨测分组ID
      */
     public $AgentGroupId;
 
     /**
-     * @var integer 告警策略组id
+     * @var integer 告警策略组ID
      */
     public $PolicyGroupId;
 
@@ -142,7 +142,7 @@ class CatTaskDetail extends AbstractModel
     public $Type;
 
     /**
-     * @var string 绑定的统一告警主题Id
+     * @var string 绑定的统一告警主题ID
      */
     public $TopicId;
 
@@ -172,12 +172,12 @@ class CatTaskDetail extends AbstractModel
     public $CheckType;
 
     /**
-     * @var string 用户agent 信息
+     * @var string 用户Agent信息
      */
     public $UserAgent;
 
     /**
-     * @var string 设置的cookie信息
+     * @var string 设置的Cookie信息
      */
     public $Cookie;
 
@@ -197,37 +197,37 @@ class CatTaskDetail extends AbstractModel
     public $IsHeader;
 
     /**
-     * @var string 目的dns服务器
+     * @var string 目的DNS服务器
      */
     public $DnsSvr;
 
     /**
-     * @var string 需要检验是否在dns ip列表的ip
+     * @var string 需要检验是否在DNS IP列表的IP
      */
     public $DnsCheckIp;
 
     /**
-     * @var string dns查询类型
+     * @var string DNS查询类型
      */
     public $DnsQueryType;
 
     /**
-     * @var string 登陆服务器的账号
+     * @var string 登录服务器的账号
      */
     public $UserName;
 
     /**
-     * @var string 登陆服务器的密码
+     * @var string 登录服务器的密码
      */
     public $PassWord;
 
     /**
-     * @var integer 是否使用安全链接ssl  0 不使用，1 使用
+     * @var integer 是否使用安全链接SSL， 0 不使用，1 使用
      */
     public $UseSecConn;
 
     /**
-     * @var integer ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+     * @var integer FTP登录验证方式  0 不验证  1 匿名登录  2 需要身份验证
      */
     public $NeedAuth;
 
@@ -237,7 +237,7 @@ class CatTaskDetail extends AbstractModel
     public $ReqDataType;
 
     /**
-     * @var string 发起tcp, udp请求的协议请求数据
+     * @var string 发起TCP, UDP请求的协议请求数据
      */
     public $ReqData;
 
@@ -247,7 +247,7 @@ class CatTaskDetail extends AbstractModel
     public $RespDataType;
 
     /**
-     * @var string 预期的udp请求的回应数据
+     * @var string 预期的UDP请求的回应数据
      */
     public $RespData;
 
@@ -256,38 +256,38 @@ class CatTaskDetail extends AbstractModel
      */
     public $RedirectFollowNum;
     /**
-     * @param integer $TaskId 任务Id
+     * @param integer $TaskId 任务ID
      * @param string $TaskName 任务名称
      * @param integer $Period 任务周期，单位为分钟。目前支持1，5，15，30几种取值
      * @param string $CatTypeName 拨测类型。http, https, ping, tcp 之一
-     * @param string $CgiUrl 拨测任务的Url
-     * @param integer $AgentGroupId 拨测分组id
-     * @param integer $PolicyGroupId 告警策略组id
+     * @param string $CgiUrl 拨测任务的URL
+     * @param integer $AgentGroupId 拨测分组ID
+     * @param integer $PolicyGroupId 告警策略组ID
      * @param integer $Status 任务状态。1表示暂停，2表示运行中，0为初始态
      * @param string $AddTime 任务创建时间
      * @param integer $Type 任务类型。0 站点监控，2 可用性监控
-     * @param string $TopicId 绑定的统一告警主题Id
+     * @param string $TopicId 绑定的统一告警主题ID
      * @param integer $AlarmStatus 告警状态。0 未启用，1, 启用
      * @param string $Host 指定的域名
      * @param integer $Port 拨测目标的端口号
      * @param string $CheckStr 要在结果中进行匹配的字符串
      * @param integer $CheckType 1 表示通过检查结果是否包含CheckStr 进行校验
-     * @param string $UserAgent 用户agent 信息
-     * @param string $Cookie 设置的cookie信息
+     * @param string $UserAgent 用户Agent信息
+     * @param string $Cookie 设置的Cookie信息
      * @param string $PostData POST 请求数据。空字符串表示非POST请求
      * @param string $SslVer SSL协议版本
      * @param integer $IsHeader 是否为Header请求。非0 Header 请求
-     * @param string $DnsSvr 目的dns服务器
-     * @param string $DnsCheckIp 需要检验是否在dns ip列表的ip
-     * @param string $DnsQueryType dns查询类型
-     * @param string $UserName 登陆服务器的账号
-     * @param string $PassWord 登陆服务器的密码
-     * @param integer $UseSecConn 是否使用安全链接ssl  0 不使用，1 使用
-     * @param integer $NeedAuth ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+     * @param string $DnsSvr 目的DNS服务器
+     * @param string $DnsCheckIp 需要检验是否在DNS IP列表的IP
+     * @param string $DnsQueryType DNS查询类型
+     * @param string $UserName 登录服务器的账号
+     * @param string $PassWord 登录服务器的密码
+     * @param integer $UseSecConn 是否使用安全链接SSL， 0 不使用，1 使用
+     * @param integer $NeedAuth FTP登录验证方式  0 不验证  1 匿名登录  2 需要身份验证
      * @param integer $ReqDataType 请求数据类型。0 表示请求为字符串类型。1表示为二进制类型
-     * @param string $ReqData 发起tcp, udp请求的协议请求数据
+     * @param string $ReqData 发起TCP, UDP请求的协议请求数据
      * @param integer $RespDataType 响应数据类型。0 表示响应为字符串类型。1表示为二进制类型
-     * @param string $RespData 预期的udp请求的回应数据
+     * @param string $RespData 预期的UDP请求的回应数据
      * @param integer $RedirectFollowNum 跟随跳转次数
      */
     function __construct()

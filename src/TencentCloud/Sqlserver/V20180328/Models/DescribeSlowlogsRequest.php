@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置查询开始时间
  * @method string getEndTime() 获取查询结束时间
  * @method void setEndTime(string $EndTime) 设置查询结束时间
- * @method integer getLimit() 获取分页返回结果，分页大小，默认20，不超过100
- * @method void setLimit(integer $Limit) 设置分页返回结果，分页大小，默认20，不超过100
- * @method integer getOffset() 获取从第几页开始返回，起始页，从0开始，默认为0
- * @method void setOffset(integer $Offset) 设置从第几页开始返回，起始页，从0开始，默认为0
+ * @method integer getLimit() 获取分页返回，每页返回的数目，取值为1-100，默认值为20
+ * @method void setLimit(integer $Limit) 设置分页返回，每页返回的数目，取值为1-100，默认值为20
+ * @method integer getOffset() 获取分页返回，页编号，默认值为第0页
+ * @method void setOffset(integer $Offset) 设置分页返回，页编号，默认值为第0页
  */
 
 /**
@@ -51,20 +51,20 @@ class DescribeSlowlogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 分页返回结果，分页大小，默认20，不超过100
+     * @var integer 分页返回，每页返回的数目，取值为1-100，默认值为20
      */
     public $Limit;
 
     /**
-     * @var integer 从第几页开始返回，起始页，从0开始，默认为0
+     * @var integer 分页返回，页编号，默认值为第0页
      */
     public $Offset;
     /**
      * @param string $InstanceId 实例ID，形如mssql-k8voqdlz
      * @param string $StartTime 查询开始时间
      * @param string $EndTime 查询结束时间
-     * @param integer $Limit 分页返回结果，分页大小，默认20，不超过100
-     * @param integer $Offset 从第几页开始返回，起始页，从0开始，默认为0
+     * @param integer $Limit 分页返回，每页返回的数目，取值为1-100，默认值为20
+     * @param integer $Offset 分页返回，页编号，默认值为第0页
      */
     function __construct()
     {

@@ -18,16 +18,16 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getApplicationId() 获取待查询表所属应用实例ID
- * @method void setApplicationId(string $ApplicationId) 设置待查询表所属应用实例ID
- * @method array getLogicZoneIds() 获取待查询表所属大区列表
- * @method void setLogicZoneIds(array $LogicZoneIds) 设置待查询表所属大区列表
+ * @method string getClusterId() 获取待查询表格所属集群ID
+ * @method void setClusterId(string $ClusterId) 设置待查询表格所属集群ID
+ * @method array getTableGroupIds() 获取待查询表格所属表格组ID列表
+ * @method void setTableGroupIds(array $TableGroupIds) 设置待查询表格所属表格组ID列表
  * @method array getFilters() 获取过滤条件，本接口支持：TableName，TableInstanceId
  * @method void setFilters(array $Filters) 设置过滤条件，本接口支持：TableName，TableInstanceId
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取结果列表数量
- * @method void setLimit(integer $Limit) 设置结果列表数量
+ * @method integer getOffset() 获取查询结果偏移量
+ * @method void setOffset(integer $Offset) 设置查询结果偏移量
+ * @method integer getLimit() 获取查询结果返回记录数量
+ * @method void setLimit(integer $Limit) 设置查询结果返回记录数量
  */
 
 /**
@@ -36,14 +36,14 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTablesInRecycleRequest extends AbstractModel
 {
     /**
-     * @var string 待查询表所属应用实例ID
+     * @var string 待查询表格所属集群ID
      */
-    public $ApplicationId;
+    public $ClusterId;
 
     /**
-     * @var array 待查询表所属大区列表
+     * @var array 待查询表格所属表格组ID列表
      */
-    public $LogicZoneIds;
+    public $TableGroupIds;
 
     /**
      * @var array 过滤条件，本接口支持：TableName，TableInstanceId
@@ -51,20 +51,20 @@ class DescribeTablesInRecycleRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 偏移量
+     * @var integer 查询结果偏移量
      */
     public $Offset;
 
     /**
-     * @var integer 结果列表数量
+     * @var integer 查询结果返回记录数量
      */
     public $Limit;
     /**
-     * @param string $ApplicationId 待查询表所属应用实例ID
-     * @param array $LogicZoneIds 待查询表所属大区列表
+     * @param string $ClusterId 待查询表格所属集群ID
+     * @param array $TableGroupIds 待查询表格所属表格组ID列表
      * @param array $Filters 过滤条件，本接口支持：TableName，TableInstanceId
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 结果列表数量
+     * @param integer $Offset 查询结果偏移量
+     * @param integer $Limit 查询结果返回记录数量
      */
     function __construct()
     {
@@ -78,12 +78,12 @@ class DescribeTablesInRecycleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
-        if (array_key_exists("LogicZoneIds",$param) and $param["LogicZoneIds"] !== null) {
-            $this->LogicZoneIds = $param["LogicZoneIds"];
+        if (array_key_exists("TableGroupIds",$param) and $param["TableGroupIds"] !== null) {
+            $this->TableGroupIds = $param["TableGroupIds"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

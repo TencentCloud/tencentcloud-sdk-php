@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getVpnConnectionIds() 获取VPN通道实例ID。形如：vpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
  * @method void setVpnConnectionIds(array $VpnConnectionIds) 设置VPN通道实例ID。形如：vpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
- * @method array getFilters() 获取过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
+ * @method array getFilters() 获取过滤条件。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
 <li>vpc-id - String - VPC实例ID，形如：`vpc-0a36uwkr`。</li>
 <li>vpn-gateway-id - String - VPN网关实例ID，形如：`vpngw-p4lmqawn`。</li>
 <li>customer-gateway-id - String - 对端网关实例ID，形如：`cgw-l4rblw63`。</li>
 <li>vpn-connection-name - String - 通道名称，形如：`test-vpn`。</li>
 <li>vpn-connection-id - String - 通道实例ID，形如：`vpnx-5p7vkch8"`。</li>
- * @method void setFilters(array $Filters) 设置过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
+ * @method void setFilters(array $Filters) 设置过滤条件。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
 <li>vpc-id - String - VPC实例ID，形如：`vpc-0a36uwkr`。</li>
 <li>vpn-gateway-id - String - VPN网关实例ID，形如：`vpngw-p4lmqawn`。</li>
 <li>customer-gateway-id - String - 对端网关实例ID，形如：`cgw-l4rblw63`。</li>
@@ -49,7 +49,7 @@ class DescribeVpnConnectionsRequest extends AbstractModel
     public $VpnConnectionIds;
 
     /**
-     * @var array 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
+     * @var array 过滤条件。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
 <li>vpc-id - String - VPC实例ID，形如：`vpc-0a36uwkr`。</li>
 <li>vpn-gateway-id - String - VPN网关实例ID，形如：`vpngw-p4lmqawn`。</li>
 <li>customer-gateway-id - String - 对端网关实例ID，形如：`cgw-l4rblw63`。</li>
@@ -69,7 +69,7 @@ class DescribeVpnConnectionsRequest extends AbstractModel
     public $Limit;
     /**
      * @param array $VpnConnectionIds VPN通道实例ID。形如：vpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
-     * @param array $Filters 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
+     * @param array $Filters 过滤条件。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
 <li>vpc-id - String - VPC实例ID，形如：`vpc-0a36uwkr`。</li>
 <li>vpn-gateway-id - String - VPN网关实例ID，形如：`vpngw-p4lmqawn`。</li>
 <li>customer-gateway-id - String - 对端网关实例ID，形如：`cgw-l4rblw63`。</li>

@@ -18,8 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getApplicationId() 获取表所在应用实例ID
- * @method void setApplicationId(string $ApplicationId) 设置表所在应用实例ID
+ * @method string getClusterId() 获取表所在集群ID
+ * @method void setClusterId(string $ClusterId) 设置表所在集群ID
  * @method array getSelectedTables() 获取待恢复表信息
  * @method void setSelectedTables(array $SelectedTables) 设置待恢复表信息
  */
@@ -30,16 +30,16 @@ use TencentCloud\Common\AbstractModel;
 class RecoverRecycleTablesRequest extends AbstractModel
 {
     /**
-     * @var string 表所在应用实例ID
+     * @var string 表所在集群ID
      */
-    public $ApplicationId;
+    public $ClusterId;
 
     /**
      * @var array 待恢复表信息
      */
     public $SelectedTables;
     /**
-     * @param string $ApplicationId 表所在应用实例ID
+     * @param string $ClusterId 表所在集群ID
      * @param array $SelectedTables 待恢复表信息
      */
     function __construct()
@@ -54,14 +54,14 @@ class RecoverRecycleTablesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
         if (array_key_exists("SelectedTables",$param) and $param["SelectedTables"] !== null) {
             $this->SelectedTables = [];
             foreach ($param["SelectedTables"] as $key => $value){
-                $obj = new SelectedTableInfo();
+                $obj = new SelectedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->SelectedTables, $obj);
             }

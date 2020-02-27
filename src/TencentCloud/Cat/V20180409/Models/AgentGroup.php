@@ -18,8 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getGroupId() 获取拨测分组Id
- * @method void setGroupId(integer $GroupId) 设置拨测分组Id
+ * @method integer getGroupId() 获取拨测分组ID
+ * @method void setGroupId(integer $GroupId) 设置拨测分组ID
  * @method string getGroupName() 获取拨测分组名称
  * @method void setGroupName(string $GroupName) 设置拨测分组名称
  * @method integer getIsDefault() 获取是否默认拨测分组。1表示是，0表示否
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class AgentGroup extends AbstractModel
 {
     /**
-     * @var integer 拨测分组Id
+     * @var integer 拨测分组ID
      */
     public $GroupId;
 
@@ -67,7 +67,7 @@ class AgentGroup extends AbstractModel
      */
     public $MaxGroupNum;
     /**
-     * @param integer $GroupId 拨测分组Id
+     * @param integer $GroupId 拨测分组ID
      * @param string $GroupName 拨测分组名称
      * @param integer $IsDefault 是否默认拨测分组。1表示是，0表示否
      * @param integer $TaskNum 使用本拨测分组的任务数

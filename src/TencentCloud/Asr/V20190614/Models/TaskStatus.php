@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResult(string $Result) 设置识别结果。
  * @method string getErrorMsg() 获取失败原因说明。
  * @method void setErrorMsg(string $ErrorMsg) 设置失败原因说明。
+ * @method array getResultDetail() 获取识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResultDetail(array $ResultDetail) 设置识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -59,12 +63,20 @@ class TaskStatus extends AbstractModel
      * @var string 失败原因说明。
      */
     public $ErrorMsg;
+
+    /**
+     * @var array 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResultDetail;
     /**
      * @param integer $TaskId 任务标识。
      * @param integer $Status 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
      * @param string $StatusStr 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
      * @param string $Result 识别结果。
      * @param string $ErrorMsg 失败原因说明。
+     * @param array $ResultDetail 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +108,15 @@ class TaskStatus extends AbstractModel
 
         if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
             $this->ErrorMsg = $param["ErrorMsg"];
+        }
+
+        if (array_key_exists("ResultDetail",$param) and $param["ResultDetail"] !== null) {
+            $this->ResultDetail = [];
+            foreach ($param["ResultDetail"] as $key => $value){
+                $obj = new SentenceDetail();
+                $obj->deserialize($value);
+                array_push($this->ResultDetail, $obj);
+            }
         }
     }
 }

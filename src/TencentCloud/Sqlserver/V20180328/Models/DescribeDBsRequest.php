@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getInstanceIdSet() 获取实例ID
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置实例ID
- * @method integer getLimit() 获取每页记录数，最大为100，默认20
- * @method void setLimit(integer $Limit) 设置每页记录数，最大为100，默认20
- * @method integer getOffset() 获取页编号，从第0页开始
- * @method void setOffset(integer $Offset) 设置页编号，从第0页开始
+ * @method integer getLimit() 获取分页返回，每页返回的数目，取值为1-100，默认值为20
+ * @method void setLimit(integer $Limit) 设置分页返回，每页返回的数目，取值为1-100，默认值为20
+ * @method integer getOffset() 获取分页返回，页编号，默认值为第0页
+ * @method void setOffset(integer $Offset) 设置分页返回，页编号，默认值为第0页
  */
 
 /**
@@ -37,18 +37,18 @@ class DescribeDBsRequest extends AbstractModel
     public $InstanceIdSet;
 
     /**
-     * @var integer 每页记录数，最大为100，默认20
+     * @var integer 分页返回，每页返回的数目，取值为1-100，默认值为20
      */
     public $Limit;
 
     /**
-     * @var integer 页编号，从第0页开始
+     * @var integer 分页返回，页编号，默认值为第0页
      */
     public $Offset;
     /**
      * @param array $InstanceIdSet 实例ID
-     * @param integer $Limit 每页记录数，最大为100，默认20
-     * @param integer $Offset 页编号，从第0页开始
+     * @param integer $Limit 分页返回，每页返回的数目，取值为1-100，默认值为20
+     * @param integer $Offset 分页返回，页编号，默认值为第0页
      */
     function __construct()
     {

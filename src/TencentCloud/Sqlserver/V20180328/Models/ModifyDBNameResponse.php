@@ -18,8 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getFlowId() 获取任务流id
- * @method void setFlowId(integer $FlowId) 设置任务流id
+ * @method integer getFlowId() 获取任务流ID
+ * @method void setFlowId(integer $FlowId) 设置任务流ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDBNameResponse extends AbstractModel
 {
     /**
-     * @var integer 任务流id
+     * @var integer 任务流ID
      */
     public $FlowId;
 
@@ -39,7 +39,7 @@ class ModifyDBNameResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $FlowId 任务流id
+     * @param integer $FlowId 任务流ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -18,18 +18,30 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTimeUnit() 获取时间单位。s:按量用例单位。m:包年包月用例单位
- * @method void setTimeUnit(string $TimeUnit) 设置时间单位。s:按量用例单位。m:包年包月用例单位
- * @method integer getTimeSpan() 获取时间长度。按量用例长度为3600。
- * @method void setTimeSpan(integer $TimeSpan) 设置时间长度。按量用例长度为3600。
- * @method UpdateInstanceSettings getUpdateSpec() 获取变配参数
- * @method void setUpdateSpec(UpdateInstanceSettings $UpdateSpec) 设置变配参数
- * @method integer getPayMode() 获取计费类型
- * @method void setPayMode(integer $PayMode) 设置计费类型
- * @method Placement getPlacement() 获取位置信息
- * @method void setPlacement(Placement $Placement) 设置位置信息
- * @method string getCurrency() 获取货币种类
- * @method void setCurrency(string $Currency) 设置货币种类
+ * @method string getTimeUnit() 获取变配的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+ * @method void setTimeUnit(string $TimeUnit) 设置变配的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+ * @method integer getTimeSpan() 获取变配的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
+ * @method void setTimeSpan(integer $TimeSpan) 设置变配的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
+ * @method UpdateInstanceSettings getUpdateSpec() 获取节点变配的目标配置。
+ * @method void setUpdateSpec(UpdateInstanceSettings $UpdateSpec) 设置节点变配的目标配置。
+ * @method integer getPayMode() 获取实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
+ * @method void setPayMode(integer $PayMode) 设置实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
+ * @method Placement getPlacement() 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+ * @method void setPlacement(Placement $Placement) 设置实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+ * @method string getCurrency() 获取货币种类。取值范围：
+<li>CNY：表示人民币。</li>
+ * @method void setCurrency(string $Currency) 设置货币种类。取值范围：
+<li>CNY：表示人民币。</li>
  */
 
 /**
@@ -38,41 +50,53 @@ use TencentCloud\Common\AbstractModel;
 class InquiryPriceUpdateInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 时间单位。s:按量用例单位。m:包年包月用例单位
+     * @var string 变配的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public $TimeUnit;
 
     /**
-     * @var integer 时间长度。按量用例长度为3600。
+     * @var integer 变配的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
      */
     public $TimeSpan;
 
     /**
-     * @var UpdateInstanceSettings 变配参数
+     * @var UpdateInstanceSettings 节点变配的目标配置。
      */
     public $UpdateSpec;
 
     /**
-     * @var integer 计费类型
+     * @var integer 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
      */
     public $PayMode;
 
     /**
-     * @var Placement 位置信息
+     * @var Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
     public $Placement;
 
     /**
-     * @var string 货币种类
+     * @var string 货币种类。取值范围：
+<li>CNY：表示人民币。</li>
      */
     public $Currency;
     /**
-     * @param string $TimeUnit 时间单位。s:按量用例单位。m:包年包月用例单位
-     * @param integer $TimeSpan 时间长度。按量用例长度为3600。
-     * @param UpdateInstanceSettings $UpdateSpec 变配参数
-     * @param integer $PayMode 计费类型
-     * @param Placement $Placement 位置信息
-     * @param string $Currency 货币种类
+     * @param string $TimeUnit 变配的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+     * @param integer $TimeSpan 变配的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
+     * @param UpdateInstanceSettings $UpdateSpec 节点变配的目标配置。
+     * @param integer $PayMode 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
+     * @param Placement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     * @param string $Currency 货币种类。取值范围：
+<li>CNY：表示人民币。</li>
      */
     function __construct()
     {

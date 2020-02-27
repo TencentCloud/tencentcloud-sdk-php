@@ -18,12 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getApplicationId() 获取待修改表所在应用实例ID
- * @method void setApplicationId(string $ApplicationId) 设置待修改表所在应用实例ID
+ * @method string getClusterId() 获取待修改表格所在集群ID
+ * @method void setClusterId(string $ClusterId) 设置待修改表格所在集群ID
  * @method array getIdlFiles() 获取选中的改表IDL文件
  * @method void setIdlFiles(array $IdlFiles) 设置选中的改表IDL文件
- * @method array getSelectedTables() 获取待改表列表
- * @method void setSelectedTables(array $SelectedTables) 设置待改表列表
+ * @method array getSelectedTables() 获取待改表格列表
+ * @method void setSelectedTables(array $SelectedTables) 设置待改表格列表
  */
 
 /**
@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 class ModifyTablesRequest extends AbstractModel
 {
     /**
-     * @var string 待修改表所在应用实例ID
+     * @var string 待修改表格所在集群ID
      */
-    public $ApplicationId;
+    public $ClusterId;
 
     /**
      * @var array 选中的改表IDL文件
@@ -42,13 +42,13 @@ class ModifyTablesRequest extends AbstractModel
     public $IdlFiles;
 
     /**
-     * @var array 待改表列表
+     * @var array 待改表格列表
      */
     public $SelectedTables;
     /**
-     * @param string $ApplicationId 待修改表所在应用实例ID
+     * @param string $ClusterId 待修改表格所在集群ID
      * @param array $IdlFiles 选中的改表IDL文件
-     * @param array $SelectedTables 待改表列表
+     * @param array $SelectedTables 待改表格列表
      */
     function __construct()
     {
@@ -62,8 +62,8 @@ class ModifyTablesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
         if (array_key_exists("IdlFiles",$param) and $param["IdlFiles"] !== null) {
@@ -78,7 +78,7 @@ class ModifyTablesRequest extends AbstractModel
         if (array_key_exists("SelectedTables",$param) and $param["SelectedTables"] !== null) {
             $this->SelectedTables = [];
             foreach ($param["SelectedTables"] as $key => $value){
-                $obj = new SelectedTableInfo();
+                $obj = new SelectedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->SelectedTables, $obj);
             }

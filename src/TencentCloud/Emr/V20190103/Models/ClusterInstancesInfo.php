@@ -62,9 +62,63 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(integer $SubnetId) 设置子网ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取状态
+ * @method integer getStatus() 获取实例的状态码。取值范围：
+<li>2：表示集群运行中。</li>
+<li>3：表示集群创建中。</li>
+<li>4：表示集群扩容中。</li>
+<li>5：表示集群增加router节点中。</li>
+<li>6：表示集群安装组件中。</li>
+<li>7：表示集群执行命令中。</li>
+<li>8：表示重启服务中。</li>
+<li>9：表示进入维护中。</li>
+<li>10：表示服务暂停中。</li>
+<li>11：表示退出维护中。</li>
+<li>12：表示退出暂停中。</li>
+<li>13：表示配置下发中。</li>
+<li>14：表示销毁集群中。</li>
+<li>15：表示销毁core节点中。</li>
+<li>16：销毁task节点中。</li>
+<li>17：表示销毁router节点中。</li>
+<li>18：表示更改webproxy密码中。</li>
+<li>19：表示集群隔离中。</li>
+<li>20：表示集群冲正中。</li>
+<li>21：表示集群回收中。</li>
+<li>22：表示变配等待中。</li>
+<li>23：表示集群已隔离。</li>
+<li>24：表示缩容节点中。</li>
+<li>33：表示集群等待退费中。</li>
+<li>34：表示集群已退费。</li>
+<li>301：表示创建失败。</li>
+<li>302：表示扩容失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置状态
+ * @method void setStatus(integer $Status) 设置实例的状态码。取值范围：
+<li>2：表示集群运行中。</li>
+<li>3：表示集群创建中。</li>
+<li>4：表示集群扩容中。</li>
+<li>5：表示集群增加router节点中。</li>
+<li>6：表示集群安装组件中。</li>
+<li>7：表示集群执行命令中。</li>
+<li>8：表示重启服务中。</li>
+<li>9：表示进入维护中。</li>
+<li>10：表示服务暂停中。</li>
+<li>11：表示退出维护中。</li>
+<li>12：表示退出暂停中。</li>
+<li>13：表示配置下发中。</li>
+<li>14：表示销毁集群中。</li>
+<li>15：表示销毁core节点中。</li>
+<li>16：销毁task节点中。</li>
+<li>17：表示销毁router节点中。</li>
+<li>18：表示更改webproxy密码中。</li>
+<li>19：表示集群隔离中。</li>
+<li>20：表示集群冲正中。</li>
+<li>21：表示集群回收中。</li>
+<li>22：表示变配等待中。</li>
+<li>23：表示集群已隔离。</li>
+<li>24：表示缩容节点中。</li>
+<li>33：表示集群等待退费中。</li>
+<li>34：表示集群已退费。</li>
+<li>301：表示创建失败。</li>
+<li>302：表示扩容失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddTime() 获取添加时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -105,6 +159,22 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAlarmInfo() 获取集群错误状态告警信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmInfo(string $AlarmInfo) 设置集群错误状态告警信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsWoodpeckerCluster() 获取是否采用新架构
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsWoodpeckerCluster(integer $IsWoodpeckerCluster) 设置是否采用新架构
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMetaDb() 获取元数据库信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetaDb(string $MetaDb) 设置元数据库信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHiveMetaDb() 获取Hive元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHiveMetaDb(string $HiveMetaDb) 设置Hive元数据信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -180,7 +250,34 @@ class ClusterInstancesInfo extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer 状态
+     * @var integer 实例的状态码。取值范围：
+<li>2：表示集群运行中。</li>
+<li>3：表示集群创建中。</li>
+<li>4：表示集群扩容中。</li>
+<li>5：表示集群增加router节点中。</li>
+<li>6：表示集群安装组件中。</li>
+<li>7：表示集群执行命令中。</li>
+<li>8：表示重启服务中。</li>
+<li>9：表示进入维护中。</li>
+<li>10：表示服务暂停中。</li>
+<li>11：表示退出维护中。</li>
+<li>12：表示退出暂停中。</li>
+<li>13：表示配置下发中。</li>
+<li>14：表示销毁集群中。</li>
+<li>15：表示销毁core节点中。</li>
+<li>16：销毁task节点中。</li>
+<li>17：表示销毁router节点中。</li>
+<li>18：表示更改webproxy密码中。</li>
+<li>19：表示集群隔离中。</li>
+<li>20：表示集群冲正中。</li>
+<li>21：表示集群回收中。</li>
+<li>22：表示变配等待中。</li>
+<li>23：表示集群已隔离。</li>
+<li>24：表示缩容节点中。</li>
+<li>33：表示集群等待退费中。</li>
+<li>34：表示集群已退费。</li>
+<li>301：表示创建失败。</li>
+<li>302：表示扩容失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -244,6 +341,30 @@ class ClusterInstancesInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmInfo;
+
+    /**
+     * @var integer 是否采用新架构
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsWoodpeckerCluster;
+
+    /**
+     * @var string 元数据库信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MetaDb;
+
+    /**
+     * @var array 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
+     * @var string Hive元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HiveMetaDb;
     /**
      * @param integer $Id ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -267,7 +388,34 @@ class ClusterInstancesInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubnetId 子网ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 状态
+     * @param integer $Status 实例的状态码。取值范围：
+<li>2：表示集群运行中。</li>
+<li>3：表示集群创建中。</li>
+<li>4：表示集群扩容中。</li>
+<li>5：表示集群增加router节点中。</li>
+<li>6：表示集群安装组件中。</li>
+<li>7：表示集群执行命令中。</li>
+<li>8：表示重启服务中。</li>
+<li>9：表示进入维护中。</li>
+<li>10：表示服务暂停中。</li>
+<li>11：表示退出维护中。</li>
+<li>12：表示退出暂停中。</li>
+<li>13：表示配置下发中。</li>
+<li>14：表示销毁集群中。</li>
+<li>15：表示销毁core节点中。</li>
+<li>16：销毁task节点中。</li>
+<li>17：表示销毁router节点中。</li>
+<li>18：表示更改webproxy密码中。</li>
+<li>19：表示集群隔离中。</li>
+<li>20：表示集群冲正中。</li>
+<li>21：表示集群回收中。</li>
+<li>22：表示变配等待中。</li>
+<li>23：表示集群已隔离。</li>
+<li>24：表示缩容节点中。</li>
+<li>33：表示集群等待退费中。</li>
+<li>34：表示集群已退费。</li>
+<li>301：表示创建失败。</li>
+<li>302：表示扩容失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddTime 添加时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -288,6 +436,14 @@ class ClusterInstancesInfo extends AbstractModel
      * @param integer $IsTradeCluster 是否计费集群
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlarmInfo 集群错误状态告警信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsWoodpeckerCluster 是否采用新架构
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MetaDb 元数据库信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HiveMetaDb Hive元数据信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -389,6 +545,27 @@ class ClusterInstancesInfo extends AbstractModel
 
         if (array_key_exists("AlarmInfo",$param) and $param["AlarmInfo"] !== null) {
             $this->AlarmInfo = $param["AlarmInfo"];
+        }
+
+        if (array_key_exists("IsWoodpeckerCluster",$param) and $param["IsWoodpeckerCluster"] !== null) {
+            $this->IsWoodpeckerCluster = $param["IsWoodpeckerCluster"];
+        }
+
+        if (array_key_exists("MetaDb",$param) and $param["MetaDb"] !== null) {
+            $this->MetaDb = $param["MetaDb"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("HiveMetaDb",$param) and $param["HiveMetaDb"] !== null) {
+            $this->HiveMetaDb = $param["HiveMetaDb"];
         }
     }
 }

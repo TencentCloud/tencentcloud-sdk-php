@@ -62,6 +62,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeType(integer $ChargeType) 设置收费类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRouterNodeSize() 获取Router节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRouterNodeSize(integer $RouterNodeSize) 设置Router节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSupportHA() 获取是否支持HA
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSupportHA(boolean $SupportHA) 设置是否支持HA
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSecurityOn() 获取是否支持安全模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityOn(boolean $SecurityOn) 设置是否支持安全模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSecurityGroup() 获取安全组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityGroup(string $SecurityGroup) 设置安全组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCbsEncrypt() 获取是否开启Cbs加密
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCbsEncrypt(integer $CbsEncrypt) 设置是否开启Cbs加密
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -134,6 +154,36 @@ class EmrProductConfigOutter extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeType;
+
+    /**
+     * @var integer Router节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RouterNodeSize;
+
+    /**
+     * @var boolean 是否支持HA
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SupportHA;
+
+    /**
+     * @var boolean 是否支持安全模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityOn;
+
+    /**
+     * @var string 安全组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityGroup;
+
+    /**
+     * @var integer 是否开启Cbs加密
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CbsEncrypt;
     /**
      * @param array $SoftInfo 软件信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -156,6 +206,16 @@ class EmrProductConfigOutter extends AbstractModel
      * @param boolean $OnCos 是否使用COS
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChargeType 收费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RouterNodeSize Router节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SupportHA 是否支持HA
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SecurityOn 是否支持安全模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SecurityGroup 安全组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CbsEncrypt 是否开启Cbs加密
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -216,6 +276,26 @@ class EmrProductConfigOutter extends AbstractModel
 
         if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
             $this->ChargeType = $param["ChargeType"];
+        }
+
+        if (array_key_exists("RouterNodeSize",$param) and $param["RouterNodeSize"] !== null) {
+            $this->RouterNodeSize = $param["RouterNodeSize"];
+        }
+
+        if (array_key_exists("SupportHA",$param) and $param["SupportHA"] !== null) {
+            $this->SupportHA = $param["SupportHA"];
+        }
+
+        if (array_key_exists("SecurityOn",$param) and $param["SecurityOn"] !== null) {
+            $this->SecurityOn = $param["SecurityOn"];
+        }
+
+        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
+            $this->SecurityGroup = $param["SecurityGroup"];
+        }
+
+        if (array_key_exists("CbsEncrypt",$param) and $param["CbsEncrypt"] !== null) {
+            $this->CbsEncrypt = $param["CbsEncrypt"];
         }
     }
 }

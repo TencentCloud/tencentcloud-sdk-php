@@ -18,8 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getApplicationId() 获取待删除表所在应用实例ID
- * @method void setApplicationId(string $ApplicationId) 设置待删除表所在应用实例ID
+ * @method string getClusterId() 获取待删除表所在集群ID
+ * @method void setClusterId(string $ClusterId) 设置待删除表所在集群ID
  * @method array getSelectedTables() 获取待删除表信息列表
  * @method void setSelectedTables(array $SelectedTables) 设置待删除表信息列表
  */
@@ -30,16 +30,16 @@ use TencentCloud\Common\AbstractModel;
 class DeleteTablesRequest extends AbstractModel
 {
     /**
-     * @var string 待删除表所在应用实例ID
+     * @var string 待删除表所在集群ID
      */
-    public $ApplicationId;
+    public $ClusterId;
 
     /**
      * @var array 待删除表信息列表
      */
     public $SelectedTables;
     /**
-     * @param string $ApplicationId 待删除表所在应用实例ID
+     * @param string $ClusterId 待删除表所在集群ID
      * @param array $SelectedTables 待删除表信息列表
      */
     function __construct()
@@ -54,14 +54,14 @@ class DeleteTablesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
         if (array_key_exists("SelectedTables",$param) and $param["SelectedTables"] !== null) {
             $this->SelectedTables = [];
             foreach ($param["SelectedTables"] as $key => $value){
-                $obj = new SelectedTableInfo();
+                $obj = new SelectedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->SelectedTables, $obj);
             }

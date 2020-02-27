@@ -18,8 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getApplicationId() 获取表所属应用实例ID
- * @method void setApplicationId(string $ApplicationId) 设置表所属应用实例ID
+ * @method string getClusterId() 获取表所属集群实例ID
+ * @method void setClusterId(string $ClusterId) 设置表所属集群实例ID
  * @method array getTableMemos() 获取选定表详情列表
  * @method void setTableMemos(array $TableMemos) 设置选定表详情列表
  */
@@ -30,16 +30,16 @@ use TencentCloud\Common\AbstractModel;
 class ModifyTableMemosRequest extends AbstractModel
 {
     /**
-     * @var string 表所属应用实例ID
+     * @var string 表所属集群实例ID
      */
-    public $ApplicationId;
+    public $ClusterId;
 
     /**
      * @var array 选定表详情列表
      */
     public $TableMemos;
     /**
-     * @param string $ApplicationId 表所属应用实例ID
+     * @param string $ClusterId 表所属集群实例ID
      * @param array $TableMemos 选定表详情列表
      */
     function __construct()
@@ -54,14 +54,14 @@ class ModifyTableMemosRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
         if (array_key_exists("TableMemos",$param) and $param["TableMemos"] !== null) {
             $this->TableMemos = [];
             foreach ($param["TableMemos"] as $key => $value){
-                $obj = new SelectedTableInfo();
+                $obj = new SelectedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->TableMemos, $obj);
             }

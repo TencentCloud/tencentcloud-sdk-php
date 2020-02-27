@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkAclId(string $NetworkAclId) 设置关联`ACL`ID
  * @method boolean getIsRemoteVpcSnat() 获取是否为 `SNAT` 地址池子网。
  * @method void setIsRemoteVpcSnat(boolean $IsRemoteVpcSnat) 设置是否为 `SNAT` 地址池子网。
+ * @method integer getTotalIpAddressCount() 获取子网`IP`总数。
+ * @method void setTotalIpAddressCount(integer $TotalIpAddressCount) 设置子网`IP`总数。
+ * @method array getTagSet() 获取标签键值对。
+ * @method void setTagSet(array $TagSet) 设置标签键值对。
  */
 
 /**
@@ -115,6 +119,16 @@ class Subnet extends AbstractModel
      * @var boolean 是否为 `SNAT` 地址池子网。
      */
     public $IsRemoteVpcSnat;
+
+    /**
+     * @var integer 子网`IP`总数。
+     */
+    public $TotalIpAddressCount;
+
+    /**
+     * @var array 标签键值对。
+     */
+    public $TagSet;
     /**
      * @param string $VpcId `VPC`实例`ID`。
      * @param string $SubnetId 子网实例`ID`，例如：subnet-bthucmmy。
@@ -129,6 +143,8 @@ class Subnet extends AbstractModel
      * @param string $Ipv6CidrBlock 子网的 `IPv6` `CIDR`。
      * @param string $NetworkAclId 关联`ACL`ID
      * @param boolean $IsRemoteVpcSnat 是否为 `SNAT` 地址池子网。
+     * @param integer $TotalIpAddressCount 子网`IP`总数。
+     * @param array $TagSet 标签键值对。
      */
     function __construct()
     {
@@ -192,6 +208,19 @@ class Subnet extends AbstractModel
 
         if (array_key_exists("IsRemoteVpcSnat",$param) and $param["IsRemoteVpcSnat"] !== null) {
             $this->IsRemoteVpcSnat = $param["IsRemoteVpcSnat"];
+        }
+
+        if (array_key_exists("TotalIpAddressCount",$param) and $param["TotalIpAddressCount"] !== null) {
+            $this->TotalIpAddressCount = $param["TotalIpAddressCount"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。形如：`vpc-6v2ht8q5`
  * @method array getSubnets() 获取子网对象列表。
  * @method void setSubnets(array $Subnets) 设置子网对象列表。
+ * @method array getTags() 获取指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
  */
 
 /**
@@ -38,9 +40,15 @@ class CreateSubnetsRequest extends AbstractModel
      * @var array 子网对象列表。
      */
     public $Subnets;
+
+    /**
+     * @var array 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
+     */
+    public $Tags;
     /**
      * @param string $VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
      * @param array $Subnets 子网对象列表。
+     * @param array $Tags 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     function __construct()
     {
@@ -64,6 +72,15 @@ class CreateSubnetsRequest extends AbstractModel
                 $obj = new SubnetInput();
                 $obj->deserialize($value);
                 array_push($this->Subnets, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
             }
         }
     }

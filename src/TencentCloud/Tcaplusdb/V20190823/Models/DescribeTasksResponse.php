@@ -69,7 +69,7 @@ class DescribeTasksResponse extends AbstractModel
         if (array_key_exists("TaskInfos",$param) and $param["TaskInfos"] !== null) {
             $this->TaskInfos = [];
             foreach ($param["TaskInfos"] as $key => $value){
-                $obj = new TaskInfo();
+                $obj = new TaskInfoNew();
                 $obj->deserialize($value);
                 array_push($this->TaskInfos, $obj);
             }

@@ -94,7 +94,7 @@ use TencentCloud\Live\V20180801\Models as Models;
 * @method Models\DescribeLiveDomainResponse DescribeLiveDomain(Models\DescribeLiveDomainRequest $req) 查询直播域名信息。
 * @method Models\DescribeLiveDomainCertResponse DescribeLiveDomainCert(Models\DescribeLiveDomainCertRequest $req) 获取域名证书信息
 * @method Models\DescribeLiveDomainPlayInfoListResponse DescribeLiveDomainPlayInfoList(Models\DescribeLiveDomainPlayInfoListRequest $req) 查询实时的域名维度下行播放数据，由于数据处理有耗时，接口默认查询4分钟前的准实时数据。
-* @method Models\DescribeLiveDomainsResponse DescribeLiveDomains(Models\DescribeLiveDomainsRequest $req) 根据域名状态、类型等信息查询用户的域名信息
+* @method Models\DescribeLiveDomainsResponse DescribeLiveDomains(Models\DescribeLiveDomainsRequest $req) 根据域名状态、类型等信息查询用户的域名信息。
 * @method Models\DescribeLiveForbidStreamListResponse DescribeLiveForbidStreamList(Models\DescribeLiveForbidStreamListRequest $req) 获取禁推流列表
 * @method Models\DescribeLivePackageInfoResponse DescribeLivePackageInfo(Models\DescribeLivePackageInfoRequest $req) 查询用户套餐包总量、使用量、剩余量、包状态、购买时间和过期时间等。
 * @method Models\DescribeLivePlayAuthKeyResponse DescribeLivePlayAuthKey(Models\DescribeLivePlayAuthKeyRequest $req) 查询播放鉴权key。
@@ -142,7 +142,7 @@ use TencentCloud\Live\V20180801\Models as Models;
 * @method Models\ModifyLiveCertResponse ModifyLiveCert(Models\ModifyLiveCertRequest $req) 修改证书
 * @method Models\ModifyLiveDomainCertResponse ModifyLiveDomainCert(Models\ModifyLiveDomainCertRequest $req) 修改域名和证书绑定信息
 * @method Models\ModifyLivePlayAuthKeyResponse ModifyLivePlayAuthKey(Models\ModifyLivePlayAuthKeyRequest $req) 修改播放鉴权key
-* @method Models\ModifyLivePlayDomainResponse ModifyLivePlayDomain(Models\ModifyLivePlayDomainRequest $req) 修改播放域名信息
+* @method Models\ModifyLivePlayDomainResponse ModifyLivePlayDomain(Models\ModifyLivePlayDomainRequest $req) 修改播放域名信息。
 * @method Models\ModifyLivePushAuthKeyResponse ModifyLivePushAuthKey(Models\ModifyLivePushAuthKeyRequest $req) 修改直播推流鉴权key
 * @method Models\ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(Models\ModifyLiveRecordTemplateRequest $req) 修改录制模板配置
 * @method Models\ModifyLiveSnapshotTemplateResponse ModifyLiveSnapshotTemplate(Models\ModifyLiveSnapshotTemplateRequest $req) 修改截图模板配置

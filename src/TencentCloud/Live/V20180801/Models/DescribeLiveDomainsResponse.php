@@ -18,10 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getAllCount() 获取总记录数
- * @method void setAllCount(integer $AllCount) 设置总记录数
- * @method array getDomainList() 获取域名详细信息列表
- * @method void setDomainList(array $DomainList) 设置域名详细信息列表
+ * @method integer getAllCount() 获取总记录数。
+ * @method void setAllCount(integer $AllCount) 设置总记录数。
+ * @method array getDomainList() 获取域名详细信息列表。
+ * @method void setDomainList(array $DomainList) 设置域名详细信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLiveDomainsResponse extends AbstractModel
 {
     /**
-     * @var integer 总记录数
+     * @var integer 总记录数。
      */
     public $AllCount;
 
     /**
-     * @var array 域名详细信息列表
+     * @var array 域名详细信息列表。
      */
     public $DomainList;
 
@@ -46,8 +46,8 @@ class DescribeLiveDomainsResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $AllCount 总记录数
-     * @param array $DomainList 域名详细信息列表
+     * @param integer $AllCount 总记录数。
+     * @param array $DomainList 域名详细信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

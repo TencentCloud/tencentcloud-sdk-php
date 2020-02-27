@@ -18,10 +18,10 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getApplicationId() 获取待回档表所在应用实例ID
- * @method void setApplicationId(string $ApplicationId) 设置待回档表所在应用实例ID
- * @method array getSelectedTables() 获取待回档表列表
- * @method void setSelectedTables(array $SelectedTables) 设置待回档表列表
+ * @method string getClusterId() 获取待回档表格所在集群ID
+ * @method void setClusterId(string $ClusterId) 设置待回档表格所在集群ID
+ * @method array getSelectedTables() 获取待回档表格列表
+ * @method void setSelectedTables(array $SelectedTables) 设置待回档表格列表
  * @method string getRollbackTime() 获取待回档时间
  * @method void setRollbackTime(string $RollbackTime) 设置待回档时间
  * @method string getMode() 获取回档模式，支持：`KEYS`
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class RollbackTablesRequest extends AbstractModel
 {
     /**
-     * @var string 待回档表所在应用实例ID
+     * @var string 待回档表格所在集群ID
      */
-    public $ApplicationId;
+    public $ClusterId;
 
     /**
-     * @var array 待回档表列表
+     * @var array 待回档表格列表
      */
     public $SelectedTables;
 
@@ -53,8 +53,8 @@ class RollbackTablesRequest extends AbstractModel
      */
     public $Mode;
     /**
-     * @param string $ApplicationId 待回档表所在应用实例ID
-     * @param array $SelectedTables 待回档表列表
+     * @param string $ClusterId 待回档表格所在集群ID
+     * @param array $SelectedTables 待回档表格列表
      * @param string $RollbackTime 待回档时间
      * @param string $Mode 回档模式，支持：`KEYS`
      */
@@ -70,14 +70,14 @@ class RollbackTablesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
         if (array_key_exists("SelectedTables",$param) and $param["SelectedTables"] !== null) {
             $this->SelectedTables = [];
             foreach ($param["SelectedTables"] as $key => $value){
-                $obj = new SelectedTableInfo();
+                $obj = new SelectedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->SelectedTables, $obj);
             }

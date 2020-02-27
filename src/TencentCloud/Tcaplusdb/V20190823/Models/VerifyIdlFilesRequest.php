@@ -18,10 +18,10 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getApplicationId() 获取待加表的应用实例ID
- * @method void setApplicationId(string $ApplicationId) 设置待加表的应用实例ID
- * @method string getLogicZoneId() 获取待加表的大区ID
- * @method void setLogicZoneId(string $LogicZoneId) 设置待加表的大区ID
+ * @method string getClusterId() 获取待创建表格的集群ID
+ * @method void setClusterId(string $ClusterId) 设置待创建表格的集群ID
+ * @method string getTableGroupId() 获取待创建表格的表格组ID
+ * @method void setTableGroupId(string $TableGroupId) 设置待创建表格的表格组ID
  * @method array getExistingIdlFiles() 获取曾经上传过的IDL文件信息列表，与NewIdlFiles至少有一者
  * @method void setExistingIdlFiles(array $ExistingIdlFiles) 设置曾经上传过的IDL文件信息列表，与NewIdlFiles至少有一者
  * @method array getNewIdlFiles() 获取待上传的IDL文件信息列表，与ExistingIdlFiles至少有一者
@@ -34,14 +34,14 @@ use TencentCloud\Common\AbstractModel;
 class VerifyIdlFilesRequest extends AbstractModel
 {
     /**
-     * @var string 待加表的应用实例ID
+     * @var string 待创建表格的集群ID
      */
-    public $ApplicationId;
+    public $ClusterId;
 
     /**
-     * @var string 待加表的大区ID
+     * @var string 待创建表格的表格组ID
      */
-    public $LogicZoneId;
+    public $TableGroupId;
 
     /**
      * @var array 曾经上传过的IDL文件信息列表，与NewIdlFiles至少有一者
@@ -53,8 +53,8 @@ class VerifyIdlFilesRequest extends AbstractModel
      */
     public $NewIdlFiles;
     /**
-     * @param string $ApplicationId 待加表的应用实例ID
-     * @param string $LogicZoneId 待加表的大区ID
+     * @param string $ClusterId 待创建表格的集群ID
+     * @param string $TableGroupId 待创建表格的表格组ID
      * @param array $ExistingIdlFiles 曾经上传过的IDL文件信息列表，与NewIdlFiles至少有一者
      * @param array $NewIdlFiles 待上传的IDL文件信息列表，与ExistingIdlFiles至少有一者
      */
@@ -70,12 +70,12 @@ class VerifyIdlFilesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
-        if (array_key_exists("LogicZoneId",$param) and $param["LogicZoneId"] !== null) {
-            $this->LogicZoneId = $param["LogicZoneId"];
+        if (array_key_exists("TableGroupId",$param) and $param["TableGroupId"] !== null) {
+            $this->TableGroupId = $param["TableGroupId"];
         }
 
         if (array_key_exists("ExistingIdlFiles",$param) and $param["ExistingIdlFiles"] !== null) {

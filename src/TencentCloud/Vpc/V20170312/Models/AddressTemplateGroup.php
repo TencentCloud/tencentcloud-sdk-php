@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddressTemplateIdSet(array $AddressTemplateIdSet) 设置IP地址模板ID。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method array getAddressTemplateSet() 获取IP地址模板实例。
+ * @method void setAddressTemplateSet(array $AddressTemplateSet) 设置IP地址模板实例。
  */
 
 /**
@@ -52,11 +54,17 @@ class AddressTemplateGroup extends AbstractModel
      * @var string 创建时间。
      */
     public $CreatedTime;
+
+    /**
+     * @var array IP地址模板实例。
+     */
+    public $AddressTemplateSet;
     /**
      * @param string $AddressTemplateGroupName IP地址模板集合名称。
      * @param string $AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
      * @param array $AddressTemplateIdSet IP地址模板ID。
      * @param string $CreatedTime 创建时间。
+     * @param array $AddressTemplateSet IP地址模板实例。
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class AddressTemplateGroup extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("AddressTemplateSet",$param) and $param["AddressTemplateSet"] !== null) {
+            $this->AddressTemplateSet = [];
+            foreach ($param["AddressTemplateSet"] as $key => $value){
+                $obj = new AddressTemplateItem();
+                $obj->deserialize($value);
+                array_push($this->AddressTemplateSet, $obj);
+            }
         }
     }
 }

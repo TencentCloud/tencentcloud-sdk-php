@@ -18,10 +18,10 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getOriginalPrice() 获取未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元
- * @method void setOriginalPrice(integer $OriginalPrice) 设置未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元
- * @method integer getPrice() 获取实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元
- * @method void setPrice(integer $Price) 设置实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元
+ * @method integer getOriginalPrice() 获取未打折的原价，其值除以100表示最终的价格。例如10094表示100.94元
+ * @method void setOriginalPrice(integer $OriginalPrice) 设置未打折的原价，其值除以100表示最终的价格。例如10094表示100.94元
+ * @method integer getPrice() 获取实际需要支付价格，其值除以100表示最终的价格。例如10094表示100.94元
+ * @method void setPrice(integer $Price) 设置实际需要支付价格，其值除以100表示最终的价格。例如10094表示100.94元
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var integer 未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元
+     * @var integer 未打折的原价，其值除以100表示最终的价格。例如10094表示100.94元
      */
     public $OriginalPrice;
 
     /**
-     * @var integer 实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元
+     * @var integer 实际需要支付价格，其值除以100表示最终的价格。例如10094表示100.94元
      */
     public $Price;
 
@@ -46,8 +46,8 @@ class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $OriginalPrice 未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元
-     * @param integer $Price 实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元
+     * @param integer $OriginalPrice 未打折的原价，其值除以100表示最终的价格。例如10094表示100.94元
+     * @param integer $Price 实际需要支付价格，其值除以100表示最终的价格。例如10094表示100.94元
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

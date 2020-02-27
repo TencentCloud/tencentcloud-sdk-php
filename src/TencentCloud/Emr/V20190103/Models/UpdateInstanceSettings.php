@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCPUCores(integer $CPUCores) 设置CPU核数
  * @method string getResourceId() 获取机器资源ID（EMR测资源标识）
  * @method void setResourceId(string $ResourceId) 设置机器资源ID（EMR测资源标识）
+ * @method string getInstanceType() 获取变配机器规格
+ * @method void setInstanceType(string $InstanceType) 设置变配机器规格
  */
 
 /**
@@ -45,10 +47,16 @@ class UpdateInstanceSettings extends AbstractModel
      * @var string 机器资源ID（EMR测资源标识）
      */
     public $ResourceId;
+
+    /**
+     * @var string 变配机器规格
+     */
+    public $InstanceType;
     /**
      * @param integer $Memory 内存容量，单位为G
      * @param integer $CPUCores CPU核数
      * @param string $ResourceId 机器资源ID（EMR测资源标识）
+     * @param string $InstanceType 变配机器规格
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class UpdateInstanceSettings extends AbstractModel
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

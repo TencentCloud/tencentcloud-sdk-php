@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDnsServers(array $DnsServers) 设置DNS地址，最多支持4个
  * @method string getDomainName() 获取域名
  * @method void setDomainName(string $DomainName) 设置域名
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  */
 
 /**
@@ -59,12 +61,18 @@ class CreateVpcRequest extends AbstractModel
      * @var string 域名
      */
     public $DomainName;
+
+    /**
+     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     */
+    public $Tags;
     /**
      * @param string $VpcName vpc名称，最大长度不能超过60个字节。
      * @param string $CidrBlock vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
      * @param string $EnableMulticast 是否开启组播。true: 开启, false: 不开启。
      * @param array $DnsServers DNS地址，最多支持4个
      * @param string $DomainName 域名
+     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class CreateVpcRequest extends AbstractModel
 
         if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
             $this->DomainName = $param["DomainName"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMain(boolean $Main) 设置是否默认路由表。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method array getTagSet() 获取标签键值对。
+ * @method void setTagSet(array $TagSet) 设置标签键值对。
  */
 
 /**
@@ -73,6 +75,11 @@ class RouteTable extends AbstractModel
      * @var string 创建时间。
      */
     public $CreatedTime;
+
+    /**
+     * @var array 标签键值对。
+     */
+    public $TagSet;
     /**
      * @param string $VpcId VPC实例ID。
      * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
@@ -81,6 +88,7 @@ class RouteTable extends AbstractModel
      * @param array $RouteSet 路由表策略集合。
      * @param boolean $Main 是否默认路由表。
      * @param string $CreatedTime 创建时间。
+     * @param array $TagSet 标签键值对。
      */
     function __construct()
     {
@@ -130,6 +138,15 @@ class RouteTable extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

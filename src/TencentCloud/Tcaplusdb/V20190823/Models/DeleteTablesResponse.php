@@ -69,7 +69,7 @@ class DeleteTablesResponse extends AbstractModel
         if (array_key_exists("TableResults",$param) and $param["TableResults"] !== null) {
             $this->TableResults = [];
             foreach ($param["TableResults"] as $key => $value){
-                $obj = new TableResult();
+                $obj = new TableResultNew();
                 $obj->deserialize($value);
                 array_push($this->TableResults, $obj);
             }

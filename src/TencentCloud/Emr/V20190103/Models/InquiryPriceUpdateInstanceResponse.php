@@ -18,21 +18,25 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method float getOriginalCost() 获取刊例价
+ * @method float getOriginalCost() 获取原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOriginalCost(float $OriginalCost) 设置刊例价
+ * @method void setOriginalCost(float $OriginalCost) 设置原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getDiscountCost() 获取折扣价格
+ * @method float getDiscountCost() 获取折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiscountCost(float $DiscountCost) 设置折扣价格
+ * @method void setDiscountCost(float $DiscountCost) 设置折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTimeUnit() 获取时间单位，"s","m"
+ * @method string getTimeUnit() 获取变配的时间单位。取值范围：
+<li>s：表示秒。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeUnit(string $TimeUnit) 设置时间单位，"s","m"
+ * @method void setTimeUnit(string $TimeUnit) 设置变配的时间单位。取值范围：
+<li>s：表示秒。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTimeSpan() 获取时间数量
+ * @method integer getTimeSpan() 获取变配的时长。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeSpan(integer $TimeSpan) 设置时间数量
+ * @method void setTimeSpan(integer $TimeSpan) 设置变配的时长。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,25 +48,27 @@ use TencentCloud\Common\AbstractModel;
 class InquiryPriceUpdateInstanceResponse extends AbstractModel
 {
     /**
-     * @var float 刊例价
+     * @var float 原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalCost;
 
     /**
-     * @var float 折扣价格
+     * @var float 折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscountCost;
 
     /**
-     * @var string 时间单位，"s","m"
+     * @var string 变配的时间单位。取值范围：
+<li>s：表示秒。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeUnit;
 
     /**
-     * @var integer 时间数量
+     * @var integer 变配的时长。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeSpan;
@@ -72,13 +78,15 @@ class InquiryPriceUpdateInstanceResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param float $OriginalCost 刊例价
+     * @param float $OriginalCost 原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $DiscountCost 折扣价格
+     * @param float $DiscountCost 折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TimeUnit 时间单位，"s","m"
+     * @param string $TimeUnit 变配的时间单位。取值范围：
+<li>s：表示秒。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TimeSpan 时间数量
+     * @param integer $TimeSpan 变配的时长。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

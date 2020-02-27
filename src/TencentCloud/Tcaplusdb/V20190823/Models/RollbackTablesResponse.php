@@ -18,10 +18,10 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取表回档任务结果数量
- * @method void setTotalCount(integer $TotalCount) 设置表回档任务结果数量
- * @method array getTableResults() 获取表回档任务结果列表
- * @method void setTableResults(array $TableResults) 设置表回档任务结果列表
+ * @method integer getTotalCount() 获取表格回档任务结果数量
+ * @method void setTotalCount(integer $TotalCount) 设置表格回档任务结果数量
+ * @method array getTableResults() 获取表格回档任务结果列表
+ * @method void setTableResults(array $TableResults) 设置表格回档任务结果列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class RollbackTablesResponse extends AbstractModel
 {
     /**
-     * @var integer 表回档任务结果数量
+     * @var integer 表格回档任务结果数量
      */
     public $TotalCount;
 
     /**
-     * @var array 表回档任务结果列表
+     * @var array 表格回档任务结果列表
      */
     public $TableResults;
 
@@ -46,8 +46,8 @@ class RollbackTablesResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 表回档任务结果数量
-     * @param array $TableResults 表回档任务结果列表
+     * @param integer $TotalCount 表格回档任务结果数量
+     * @param array $TableResults 表格回档任务结果列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -69,7 +69,7 @@ class RollbackTablesResponse extends AbstractModel
         if (array_key_exists("TableResults",$param) and $param["TableResults"] !== null) {
             $this->TableResults = [];
             foreach ($param["TableResults"] as $key => $value){
-                $obj = new TableRollbackResult();
+                $obj = new TableRollbackResultNew();
                 $obj->deserialize($value);
                 array_push($this->TableResults, $obj);
             }

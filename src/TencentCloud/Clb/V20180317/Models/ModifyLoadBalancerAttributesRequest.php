@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternetChargeInfo(InternetAccessible $InternetChargeInfo) 设置网络计费相关参数
  * @method boolean getLoadBalancerPassToTarget() 获取Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
  * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) 设置Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+ * @method boolean getSnatPro() 获取是否开启SnatPro
+ * @method void setSnatPro(boolean $SnatPro) 设置是否开启SnatPro
  */
 
 /**
@@ -59,12 +61,18 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
      * @var boolean Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
      */
     public $LoadBalancerPassToTarget;
+
+    /**
+     * @var boolean 是否开启SnatPro
+     */
+    public $SnatPro;
     /**
      * @param string $LoadBalancerId 负载均衡的唯一ID
      * @param string $LoadBalancerName 负载均衡实例名称
      * @param TargetRegionInfo $TargetRegionInfo 负载均衡绑定的后端服务的地域信息
      * @param InternetAccessible $InternetChargeInfo 网络计费相关参数
      * @param boolean $LoadBalancerPassToTarget Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+     * @param boolean $SnatPro 是否开启SnatPro
      */
     function __construct()
     {
@@ -98,6 +106,10 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
 
         if (array_key_exists("LoadBalancerPassToTarget",$param) and $param["LoadBalancerPassToTarget"] !== null) {
             $this->LoadBalancerPassToTarget = $param["LoadBalancerPassToTarget"];
+        }
+
+        if (array_key_exists("SnatPro",$param) and $param["SnatPro"] !== null) {
+            $this->SnatPro = $param["SnatPro"];
         }
     }
 }

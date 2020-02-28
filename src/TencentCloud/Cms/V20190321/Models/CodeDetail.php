@@ -18,14 +18,14 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getCodePosition() 获取二维码在图片中的位置，由4个点的坐标表示
- * @method void setCodePosition(array $CodePosition) 设置二维码在图片中的位置，由4个点的坐标表示
+ * @method array getCodePosition() 获取二维码在图片中的位置，由边界点的坐标表示
+ * @method void setCodePosition(array $CodePosition) 设置二维码在图片中的位置，由边界点的坐标表示
  * @method string getCodeCharset() 获取二维码文本的编码格式
  * @method void setCodeCharset(string $CodeCharset) 设置二维码文本的编码格式
  * @method string getCodeText() 获取二维码的文本内容
  * @method void setCodeText(string $CodeText) 设置二维码的文本内容
- * @method integer getCodeType() 获取二维码的类型：1：ONED_BARCODE，2：QRCOD，3:WXCODE，4：PDF417，5:DATAMATRIX
- * @method void setCodeType(integer $CodeType) 设置二维码的类型：1：ONED_BARCODE，2：QRCOD，3:WXCODE，4：PDF417，5:DATAMATRIX
+ * @method integer getCodeType() 获取二维码的类型：1:ONED_BARCODE，2:QRCOD，3:WXCODE，4:PDF417，5:DATAMATRIX
+ * @method void setCodeType(integer $CodeType) 设置二维码的类型：1:ONED_BARCODE，2:QRCOD，3:WXCODE，4:PDF417，5:DATAMATRIX
  */
 
 /**
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CodeDetail extends AbstractModel
 {
     /**
-     * @var array 二维码在图片中的位置，由4个点的坐标表示
+     * @var array 二维码在图片中的位置，由边界点的坐标表示
      */
     public $CodePosition;
 
@@ -49,14 +49,14 @@ class CodeDetail extends AbstractModel
     public $CodeText;
 
     /**
-     * @var integer 二维码的类型：1：ONED_BARCODE，2：QRCOD，3:WXCODE，4：PDF417，5:DATAMATRIX
+     * @var integer 二维码的类型：1:ONED_BARCODE，2:QRCOD，3:WXCODE，4:PDF417，5:DATAMATRIX
      */
     public $CodeType;
     /**
-     * @param array $CodePosition 二维码在图片中的位置，由4个点的坐标表示
+     * @param array $CodePosition 二维码在图片中的位置，由边界点的坐标表示
      * @param string $CodeCharset 二维码文本的编码格式
      * @param string $CodeText 二维码的文本内容
-     * @param integer $CodeType 二维码的类型：1：ONED_BARCODE，2：QRCOD，3:WXCODE，4：PDF417，5:DATAMATRIX
+     * @param integer $CodeType 二维码的类型：1:ONED_BARCODE，2:QRCOD，3:WXCODE，4:PDF417，5:DATAMATRIX
      */
     function __construct()
     {

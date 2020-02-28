@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestOperationRequestId(string $LatestOperationRequestId) 设置实例最新操作的唯一请求 ID。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDisasterRecoverGroupId() 获取分散置放群组ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) 设置分散置放群组ID。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -235,6 +239,12 @@ class Instance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestOperationRequestId;
+
+    /**
+     * @var string 分散置放群组ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DisasterRecoverGroupId;
     /**
      * @param Placement $Placement 实例所在的位置。
      * @param string $InstanceId 实例`ID`。
@@ -268,6 +278,8 @@ class Instance extends AbstractModel
      * @param string $LatestOperationState 实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功<br><li>OPERATING：表示操作执行中<br><li>FAILED：表示操作失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestOperationRequestId 实例最新操作的唯一请求 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DisasterRecoverGroupId 分散置放群组ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -407,6 +419,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("LatestOperationRequestId",$param) and $param["LatestOperationRequestId"] !== null) {
             $this->LatestOperationRequestId = $param["LatestOperationRequestId"];
+        }
+
+        if (array_key_exists("DisasterRecoverGroupId",$param) and $param["DisasterRecoverGroupId"] !== null) {
+            $this->DisasterRecoverGroupId = $param["DisasterRecoverGroupId"];
         }
     }
 }

@@ -28,7 +28,6 @@ use TencentCloud\Common\AbstractModel;
 20007：谩骂
 20105：广告引流 
 24001：暴恐
-21000：综合
  * @method void setEvilType(integer $EvilType) 设置恶意类型
 100：正常
 20001：政治
@@ -37,7 +36,6 @@ use TencentCloud\Common\AbstractModel;
 20007：谩骂
 20105：广告引流 
 24001：暴恐
-21000：综合
  * @method array getKeywords() 获取命中的关键词
  * @method void setKeywords(array $Keywords) 设置命中的关键词
  */
@@ -61,7 +59,6 @@ class TextData extends AbstractModel
 20007：谩骂
 20105：广告引流 
 24001：暴恐
-21000：综合
      */
     public $EvilType;
 
@@ -79,7 +76,6 @@ class TextData extends AbstractModel
 20007：谩骂
 20105：广告引流 
 24001：暴恐
-21000：综合
      * @param array $Keywords 命中的关键词
      */
     function __construct()

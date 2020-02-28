@@ -29,7 +29,6 @@ use TencentCloud\Common\AbstractModel;
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
  * @method void setEvilType(integer $EvilType) 设置恶意类型
 100：正常
 20001：政治
@@ -37,7 +36,6 @@ use TencentCloud\Common\AbstractModel;
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
  * @method string getFileMd5() 获取文件的md5
  * @method void setFileMd5(string $FileMd5) 设置文件的md5
  * @method string getFileName() 获取文件名称
@@ -58,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置任务状态
 1：已完成
 2：处理中
+ * @method string getCompressFileUrl() 获取文件压缩后云url
+ * @method void setCompressFileUrl(string $CompressFileUrl) 设置文件压缩后云url
  * @method string getFileUrl() 获取文件的url
  * @method void setFileUrl(string $FileUrl) 设置文件的url
  */
@@ -85,7 +85,6 @@ class FileSampleInfo extends AbstractModel
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
      */
     public $EvilType;
 
@@ -124,6 +123,11 @@ class FileSampleInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var string 文件压缩后云url
+     */
+    public $CompressFileUrl;
+
+    /**
      * @var string 文件的url
      */
     public $FileUrl;
@@ -137,7 +141,6 @@ class FileSampleInfo extends AbstractModel
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
      * @param string $FileMd5 文件的md5
      * @param string $FileName 文件名称
      * @param string $FileType 文件类型
@@ -148,6 +151,7 @@ class FileSampleInfo extends AbstractModel
      * @param integer $Status 任务状态
 1：已完成
 2：处理中
+     * @param string $CompressFileUrl 文件压缩后云url
      * @param string $FileUrl 文件的url
      */
     function __construct()
@@ -196,6 +200,10 @@ class FileSampleInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("CompressFileUrl",$param) and $param["CompressFileUrl"] !== null) {
+            $this->CompressFileUrl = $param["CompressFileUrl"];
         }
 
         if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {

@@ -28,7 +28,6 @@ use TencentCloud\Common\AbstractModel;
 20007：谩骂 
 20103：性感
 24001：暴恐
-21000：综合
  * @method void setEvilType(integer $EvilType) 设置恶意类型
 100：正常 
 20001：政治
@@ -37,13 +36,14 @@ use TencentCloud\Common\AbstractModel;
 20007：谩骂 
 20103：性感
 24001：暴恐
-21000：综合
  * @method CodeDetect getCodeDetect() 获取图片二维码详情
  * @method void setCodeDetect(CodeDetect $CodeDetect) 设置图片二维码详情
  * @method ImageHotDetect getHotDetect() 获取图片性感详情
  * @method void setHotDetect(ImageHotDetect $HotDetect) 设置图片性感详情
  * @method ImageIllegalDetect getIllegalDetect() 获取图片违法详情
  * @method void setIllegalDetect(ImageIllegalDetect $IllegalDetect) 设置图片违法详情
+ * @method LogoDetail getLogoDetect() 获取logo详情
+ * @method void setLogoDetect(LogoDetail $LogoDetect) 设置logo详情
  * @method OCRDetect getOCRDetect() 获取图片OCR详情
  * @method void setOCRDetect(OCRDetect $OCRDetect) 设置图片OCR详情
  * @method ImagePolityDetect getPolityDetect() 获取图片涉政详情
@@ -75,7 +75,6 @@ class ImageData extends AbstractModel
 20007：谩骂 
 20103：性感
 24001：暴恐
-21000：综合
      */
     public $EvilType;
 
@@ -93,6 +92,11 @@ class ImageData extends AbstractModel
      * @var ImageIllegalDetect 图片违法详情
      */
     public $IllegalDetect;
+
+    /**
+     * @var LogoDetail logo详情
+     */
+    public $LogoDetect;
 
     /**
      * @var OCRDetect 图片OCR详情
@@ -128,10 +132,10 @@ class ImageData extends AbstractModel
 20007：谩骂 
 20103：性感
 24001：暴恐
-21000：综合
      * @param CodeDetect $CodeDetect 图片二维码详情
      * @param ImageHotDetect $HotDetect 图片性感详情
      * @param ImageIllegalDetect $IllegalDetect 图片违法详情
+     * @param LogoDetail $LogoDetect logo详情
      * @param OCRDetect $OCRDetect 图片OCR详情
      * @param ImagePolityDetect $PolityDetect 图片涉政详情
      * @param ImagePornDetect $PornDetect 图片涉黄详情
@@ -171,6 +175,11 @@ class ImageData extends AbstractModel
         if (array_key_exists("IllegalDetect",$param) and $param["IllegalDetect"] !== null) {
             $this->IllegalDetect = new ImageIllegalDetect();
             $this->IllegalDetect->deserialize($param["IllegalDetect"]);
+        }
+
+        if (array_key_exists("LogoDetect",$param) and $param["LogoDetect"] !== null) {
+            $this->LogoDetect = new LogoDetail();
+            $this->LogoDetect->deserialize($param["LogoDetect"]);
         }
 
         if (array_key_exists("OCRDetect",$param) and $param["OCRDetect"] !== null) {

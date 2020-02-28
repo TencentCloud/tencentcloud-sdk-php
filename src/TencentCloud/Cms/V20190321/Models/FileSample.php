@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileName(string $FileName) 设置文件名称
  * @method string getFileUrl() 获取文件url
  * @method void setFileUrl(string $FileUrl) 设置文件url
+ * @method string getCompressFileUrl() 获取文件压缩后云url
+ * @method void setCompressFileUrl(string $CompressFileUrl) 设置文件压缩后云url
  */
 
 /**
@@ -45,10 +47,16 @@ class FileSample extends AbstractModel
      * @var string 文件url
      */
     public $FileUrl;
+
+    /**
+     * @var string 文件压缩后云url
+     */
+    public $CompressFileUrl;
     /**
      * @param string $FileMd5 文件md5
      * @param string $FileName 文件名称
      * @param string $FileUrl 文件url
+     * @param string $CompressFileUrl 文件压缩后云url
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class FileSample extends AbstractModel
 
         if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
             $this->FileUrl = $param["FileUrl"];
+        }
+
+        if (array_key_exists("CompressFileUrl",$param) and $param["CompressFileUrl"] !== null) {
+            $this->CompressFileUrl = $param["CompressFileUrl"];
         }
     }
 }

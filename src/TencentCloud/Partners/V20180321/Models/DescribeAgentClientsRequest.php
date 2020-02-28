@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取限制数目
  * @method void setLimit(integer $Limit) 设置限制数目
+ * @method string getSalesUin() 获取业务员ID
+ * @method void setSalesUin(string $SalesUin) 设置业务员ID
+ * @method string getSalesName() 获取业务员姓名（模糊查询）
+ * @method void setSalesName(string $SalesName) 设置业务员姓名（模糊查询）
  */
 
 /**
@@ -66,6 +70,16 @@ class DescribeAgentClientsRequest extends AbstractModel
      * @var integer 限制数目
      */
     public $Limit;
+
+    /**
+     * @var string 业务员ID
+     */
+    public $SalesUin;
+
+    /**
+     * @var string 业务员姓名（模糊查询）
+     */
+    public $SalesName;
     /**
      * @param string $ClientUin 客户账号ID
      * @param string $ClientName 客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
@@ -73,6 +87,8 @@ class DescribeAgentClientsRequest extends AbstractModel
      * @param string $OrderDirection ASC/DESC， 不区分大小写，按申请时间排序
      * @param integer $Offset 偏移量
      * @param integer $Limit 限制数目
+     * @param string $SalesUin 业务员ID
+     * @param string $SalesName 业务员姓名（模糊查询）
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class DescribeAgentClientsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("SalesUin",$param) and $param["SalesUin"] !== null) {
+            $this->SalesUin = $param["SalesUin"];
+        }
+
+        if (array_key_exists("SalesName",$param) and $param["SalesName"] !== null) {
+            $this->SalesName = $param["SalesName"];
         }
     }
 }

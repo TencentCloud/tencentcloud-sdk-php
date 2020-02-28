@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getCurrencyType() 获取ISO 货币代码，CNY
  * @method void setCurrencyType(string $CurrencyType) 设置ISO 货币代码，CNY
- * @method string getMidasAppId() 获取聚鑫分配的支付主MidasAppid
- * @method void setMidasAppId(string $MidasAppId) 设置聚鑫分配的支付主MidasAppid
+ * @method string getMidasAppId() 获取聚鑫分配的支付主MidasAppId
+ * @method void setMidasAppId(string $MidasAppId) 设置聚鑫分配的支付主MidasAppId
  * @method string getOutTradeNo() 获取支付订单号，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
  * @method void setOutTradeNo(string $OutTradeNo) 设置支付订单号，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
  * @method string getProductDetail() 获取商品详情，需要URL编码
  * @method void setProductDetail(string $ProductDetail) 设置商品详情，需要URL编码
- * @method string getProductId() 获取商品id，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
- * @method void setProductId(string $ProductId) 设置商品id，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
+ * @method string getProductId() 获取商品ID，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
+ * @method void setProductId(string $ProductId) 设置商品ID，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
  * @method string getProductName() 获取商品名称，需要URL编码
  * @method void setProductName(string $ProductName) 设置商品名称，需要URL编码
  * @method integer getTotalAmt() 获取支付金额，单位： 分
  * @method void setTotalAmt(integer $TotalAmt) 设置支付金额，单位： 分
- * @method string getUserId() 获取用户Id，长度不小于5位，仅支持字母和数字的组合
- * @method void setUserId(string $UserId) 设置用户Id，长度不小于5位，仅支持字母和数字的组合
- * @method string getRealChannel() 获取银行真实渠道.如:bank_ccb
- * @method void setRealChannel(string $RealChannel) 设置银行真实渠道.如:bank_ccb
- * @method array getSubOrderList() 获取子订单信息列表，格式：子订单号、子应用Id、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
- * @method void setSubOrderList(array $SubOrderList) 设置子订单信息列表，格式：子订单号、子应用Id、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+ * @method string getUserId() 获取用户ID，长度不小于5位，仅支持字母和数字的组合
+ * @method void setUserId(string $UserId) 设置用户ID，长度不小于5位，仅支持字母和数字的组合
+ * @method string getRealChannel() 获取银行真实渠道.如:bank_pingan
+ * @method void setRealChannel(string $RealChannel) 设置银行真实渠道.如:bank_pingan
+ * @method array getSubOrderList() 获取子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+ * @method void setSubOrderList(array $SubOrderList) 设置子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
  * @method integer getOriginalAmt() 获取原始金额
  * @method void setOriginalAmt(integer $OriginalAmt) 设置原始金额
  * @method string getMidasSecretId() 获取聚鑫分配的安全ID
@@ -77,7 +77,7 @@ class UnifiedOrderRequest extends AbstractModel
     public $CurrencyType;
 
     /**
-     * @var string 聚鑫分配的支付主MidasAppid
+     * @var string 聚鑫分配的支付主MidasAppId
      */
     public $MidasAppId;
 
@@ -92,7 +92,7 @@ class UnifiedOrderRequest extends AbstractModel
     public $ProductDetail;
 
     /**
-     * @var string 商品id，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
+     * @var string 商品ID，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
      */
     public $ProductId;
 
@@ -107,17 +107,17 @@ class UnifiedOrderRequest extends AbstractModel
     public $TotalAmt;
 
     /**
-     * @var string 用户Id，长度不小于5位，仅支持字母和数字的组合
+     * @var string 用户ID，长度不小于5位，仅支持字母和数字的组合
      */
     public $UserId;
 
     /**
-     * @var string 银行真实渠道.如:bank_ccb
+     * @var string 银行真实渠道.如:bank_pingan
      */
     public $RealChannel;
 
     /**
-     * @var array 子订单信息列表，格式：子订单号、子应用Id、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+     * @var array 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
      */
     public $SubOrderList;
 
@@ -183,15 +183,15 @@ class UnifiedOrderRequest extends AbstractModel
     public $WxSubOpenId;
     /**
      * @param string $CurrencyType ISO 货币代码，CNY
-     * @param string $MidasAppId 聚鑫分配的支付主MidasAppid
+     * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $OutTradeNo 支付订单号，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
      * @param string $ProductDetail 商品详情，需要URL编码
-     * @param string $ProductId 商品id，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
+     * @param string $ProductId 商品ID，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
      * @param string $ProductName 商品名称，需要URL编码
      * @param integer $TotalAmt 支付金额，单位： 分
-     * @param string $UserId 用户Id，长度不小于5位，仅支持字母和数字的组合
-     * @param string $RealChannel 银行真实渠道.如:bank_ccb
-     * @param array $SubOrderList 子订单信息列表，格式：子订单号、子应用Id、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+     * @param string $UserId 用户ID，长度不小于5位，仅支持字母和数字的组合
+     * @param string $RealChannel 银行真实渠道.如:bank_pingan
+     * @param array $SubOrderList 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
      * @param integer $OriginalAmt 原始金额
      * @param string $MidasSecretId 聚鑫分配的安全ID
      * @param string $MidasSignature 按照聚鑫安全密钥计算的签名

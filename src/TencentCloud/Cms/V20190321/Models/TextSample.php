@@ -32,7 +32,6 @@ use TencentCloud\Common\AbstractModel;
 20007：谩骂 
 20105：广告引流 
 24001：暴恐
-20004/21000：综合
  * @method void setEvilType(integer $EvilType) 设置恶意类型
 100：正常
 20001：政治
@@ -41,7 +40,6 @@ use TencentCloud\Common\AbstractModel;
 20007：谩骂 
 20105：广告引流 
 24001：暴恐
-20004/21000：综合
  * @method string getId() 获取唯一标识
  * @method void setId(string $Id) 设置唯一标识
  * @method integer getLabel() 获取样本类型
@@ -87,7 +85,6 @@ class TextSample extends AbstractModel
 20007：谩骂 
 20105：广告引流 
 24001：暴恐
-20004/21000：综合
      */
     public $EvilType;
 
@@ -121,7 +118,6 @@ class TextSample extends AbstractModel
 20007：谩骂 
 20105：广告引流 
 24001：暴恐
-20004/21000：综合
      * @param string $Id 唯一标识
      * @param integer $Label 样本类型
 1：黑库

@@ -18,10 +18,10 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getMidasAppId() 获取聚鑫分配的支付主MidasAppid
- * @method void setMidasAppId(string $MidasAppId) 设置聚鑫分配的支付主MidasAppid
- * @method string getUserId() 获取用户Id，长度不小于5位， 仅支持字母和数字的组合
- * @method void setUserId(string $UserId) 设置用户Id，长度不小于5位， 仅支持字母和数字的组合
+ * @method string getMidasAppId() 获取聚鑫分配的支付主MidasAppId
+ * @method void setMidasAppId(string $MidasAppId) 设置聚鑫分配的支付主MidasAppId
+ * @method string getUserId() 获取用户ID，长度不小于5位， 仅支持字母和数字的组合
+ * @method void setUserId(string $UserId) 设置用户ID，长度不小于5位， 仅支持字母和数字的组合
  * @method string getMidasSecretId() 获取聚鑫分配的安全ID
  * @method void setMidasSecretId(string $MidasSecretId) 设置聚鑫分配的安全ID
  * @method string getMidasSignature() 获取按照聚鑫安全密钥计算的签名
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class CloseOrderRequest extends AbstractModel
 {
     /**
-     * @var string 聚鑫分配的支付主MidasAppid
+     * @var string 聚鑫分配的支付主MidasAppId
      */
     public $MidasAppId;
 
     /**
-     * @var string 用户Id，长度不小于5位， 仅支持字母和数字的组合
+     * @var string 用户ID，长度不小于5位， 仅支持字母和数字的组合
      */
     public $UserId;
 
@@ -67,8 +67,8 @@ class CloseOrderRequest extends AbstractModel
      */
     public $TransactionId;
     /**
-     * @param string $MidasAppId 聚鑫分配的支付主MidasAppid
-     * @param string $UserId 用户Id，长度不小于5位， 仅支持字母和数字的组合
+     * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
+     * @param string $UserId 用户ID，长度不小于5位， 仅支持字母和数字的组合
      * @param string $MidasSecretId 聚鑫分配的安全ID
      * @param string $MidasSignature 按照聚鑫安全密钥计算的签名
      * @param string $OutTradeNo 业务订单号，OutTradeNo ， TransactionId二选一，不能都为空,优先使用 OutTradeNo

@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * @method string getErrMsg() 获取操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
+ * @method void setErrMsg(string $ErrMsg) 设置操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
  * @method integer getProgress() 获取任务状态
 1：已完成
 2：处理中
@@ -34,6 +36,11 @@ use TencentCloud\Common\AbstractModel;
 class CreateTextSampleResponse extends AbstractModel
 {
     /**
+     * @var string 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
+     */
+    public $ErrMsg;
+
+    /**
      * @var integer 任务状态
 1：已完成
 2：处理中
@@ -45,6 +52,7 @@ class CreateTextSampleResponse extends AbstractModel
      */
     public $RequestId;
     /**
+     * @param string $ErrMsg 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
      * @param integer $Progress 任务状态
 1：已完成
 2：处理中
@@ -62,6 +70,10 @@ class CreateTextSampleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
+            $this->ErrMsg = $param["ErrMsg"];
+        }
+
         if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
             $this->Progress = $param["Progress"];
         }

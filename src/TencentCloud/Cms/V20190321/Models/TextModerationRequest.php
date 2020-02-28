@@ -18,8 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getContent() 获取文本内容Base64编码
- * @method void setContent(string $Content) 设置文本内容Base64编码
+ * @method string getContent() 获取文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
+ * @method void setContent(string $Content) 设置文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
  */
 
 /**
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
 class TextModerationRequest extends AbstractModel
 {
     /**
-     * @var string 文本内容Base64编码
+     * @var string 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
      */
     public $Content;
     /**
-     * @param string $Content 文本内容Base64编码
+     * @param string $Content 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
      */
     function __construct()
     {

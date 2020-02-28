@@ -27,7 +27,6 @@ use TencentCloud\Common\AbstractModel;
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流
  * @method void setEvilType(integer $EvilType) 设置恶意类型
 100：正常
@@ -36,7 +35,6 @@ use TencentCloud\Common\AbstractModel;
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流
  * @method integer getLabel() 获取样本类型
 1：黑库
@@ -44,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabel(integer $Label) 设置样本类型
 1：黑库
 2：白库
+ * @method string getTest() 获取测试修改参数
+ * @method void setTest(string $Test) 设置测试修改参数
  */
 
 /**
@@ -64,7 +64,6 @@ class CreateTextSampleRequest extends AbstractModel
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流
      */
     public $EvilType;
@@ -75,6 +74,11 @@ class CreateTextSampleRequest extends AbstractModel
 2：白库
      */
     public $Label;
+
+    /**
+     * @var string 测试修改参数
+     */
+    public $Test;
     /**
      * @param array $Contents 关键词数组
      * @param integer $EvilType 恶意类型
@@ -84,11 +88,11 @@ class CreateTextSampleRequest extends AbstractModel
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流
      * @param integer $Label 样本类型
 1：黑库
 2：白库
+     * @param string $Test 测试修改参数
      */
     function __construct()
     {
@@ -112,6 +116,10 @@ class CreateTextSampleRequest extends AbstractModel
 
         if (array_key_exists("Label",$param) and $param["Label"] !== null) {
             $this->Label = $param["Label"];
+        }
+
+        if (array_key_exists("Test",$param) and $param["Test"] !== null) {
+            $this->Test = $param["Test"];
         }
     }
 }

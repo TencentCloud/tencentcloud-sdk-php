@@ -27,7 +27,6 @@ use TencentCloud\Common\AbstractModel;
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流
  * @method void setEvilType(integer $EvilType) 设置恶意类型
 100：正常
@@ -36,16 +35,9 @@ use TencentCloud\Common\AbstractModel;
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流
- * @method string getFileType() 获取文件类型
-image：图片
-audio：音频
-video：视频
- * @method void setFileType(string $FileType) 设置文件类型
-image：图片
-audio：音频
-video：视频
+ * @method string getFileType() 获取image：图片
+ * @method void setFileType(string $FileType) 设置image：图片
  * @method integer getLabel() 获取样本类型
 1：黑库
 2：白库
@@ -72,16 +64,12 @@ class CreateFileSampleRequest extends AbstractModel
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流
      */
     public $EvilType;
 
     /**
-     * @var string 文件类型
-image：图片
-audio：音频
-video：视频
+     * @var string image：图片
      */
     public $FileType;
 
@@ -100,12 +88,8 @@ video：视频
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流
-     * @param string $FileType 文件类型
-image：图片
-audio：音频
-video：视频
+     * @param string $FileType image：图片
      * @param integer $Label 样本类型
 1：黑库
 2：白库

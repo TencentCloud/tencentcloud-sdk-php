@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceType(string $ResourceType) 设置计算环境资源类型，当前为CVM和CPM（黑石）
  * @method string getNextAction() 获取下一步动作
  * @method void setNextAction(string $NextAction) 设置下一步动作
+ * @method integer getAttachedComputeNodeCount() 获取用户添加到计算环境中的计算节点个数
+ * @method void setAttachedComputeNodeCount(integer $AttachedComputeNodeCount) 设置用户添加到计算环境中的计算节点个数
  */
 
 /**
@@ -87,6 +89,11 @@ class ComputeEnvView extends AbstractModel
      * @var string 下一步动作
      */
     public $NextAction;
+
+    /**
+     * @var integer 用户添加到计算环境中的计算节点个数
+     */
+    public $AttachedComputeNodeCount;
     /**
      * @param string $EnvId 计算环境ID
      * @param string $EnvName 计算环境名称
@@ -97,6 +104,7 @@ class ComputeEnvView extends AbstractModel
      * @param integer $DesiredComputeNodeCount 计算节点期望个数
      * @param string $ResourceType 计算环境资源类型，当前为CVM和CPM（黑石）
      * @param string $NextAction 下一步动作
+     * @param integer $AttachedComputeNodeCount 用户添加到计算环境中的计算节点个数
      */
     function __construct()
     {
@@ -146,6 +154,10 @@ class ComputeEnvView extends AbstractModel
 
         if (array_key_exists("NextAction",$param) and $param["NextAction"] !== null) {
             $this->NextAction = $param["NextAction"];
+        }
+
+        if (array_key_exists("AttachedComputeNodeCount",$param) and $param["AttachedComputeNodeCount"] !== null) {
+            $this->AttachedComputeNodeCount = $param["AttachedComputeNodeCount"];
         }
     }
 }

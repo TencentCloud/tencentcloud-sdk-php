@@ -25,7 +25,6 @@ use TencentCloud\Common\AbstractModel;
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
  * @method void setEvilType(integer $EvilType) 设置恶意类型
 100：正常 
 20001：政治
@@ -33,7 +32,6 @@ use TencentCloud\Common\AbstractModel;
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
  * @method integer getHitFlag() 获取处置判定 0：未匹配到 1：恶意 2：白样本
  * @method void setHitFlag(integer $HitFlag) 设置处置判定 0：未匹配到 1：恶意 2：白样本
  * @method string getSeedUrl() 获取返回的种子url
@@ -53,7 +51,6 @@ class Similar extends AbstractModel
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
      */
     public $EvilType;
 
@@ -74,7 +71,6 @@ class Similar extends AbstractModel
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
      * @param integer $HitFlag 处置判定 0：未匹配到 1：恶意 2：白样本
      * @param string $SeedUrl 返回的种子url
      */

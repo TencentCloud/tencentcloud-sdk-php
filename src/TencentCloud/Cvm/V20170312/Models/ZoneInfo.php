@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
 <li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
+<li> ap-nanjing-1 </li>
+<li> ap-nanjing-2 </li>
  * @method void setZone(string $Zone) 设置可用区名称，例如，ap-guangzhou-3
 全网可用区名称如下：
 <li> ap-chongqing-1 </li>
@@ -94,6 +96,8 @@ use TencentCloud\Common\AbstractModel;
 <li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
+<li> ap-nanjing-1 </li>
+<li> ap-nanjing-2 </li>
  * @method string getZoneName() 获取可用区描述，例如，广州三区
  * @method void setZoneName(string $ZoneName) 设置可用区描述，例如，广州三区
  * @method string getZoneId() 获取可用区ID
@@ -146,6 +150,8 @@ class ZoneInfo extends AbstractModel
 <li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
+<li> ap-nanjing-1 </li>
+<li> ap-nanjing-2 </li>
      */
     public $Zone;
 
@@ -202,6 +208,8 @@ class ZoneInfo extends AbstractModel
 <li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
+<li> ap-nanjing-1 </li>
+<li> ap-nanjing-2 </li>
      * @param string $ZoneName 可用区描述，例如，广州三区
      * @param string $ZoneId 可用区ID
      * @param string $ZoneState 可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。

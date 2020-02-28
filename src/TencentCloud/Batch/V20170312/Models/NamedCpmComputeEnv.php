@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotifications(Notification $Notifications) 设置通知信息
  * @method string getActionIfComputeNodeInactive() 获取非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
  * @method void setActionIfComputeNodeInactive(string $ActionIfComputeNodeInactive) 设置非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
+ * @method integer getResourceMaxRetryCount() 获取对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值11，如果不设置的话，系统会设置一个默认值，当前为7
+ * @method void setResourceMaxRetryCount(integer $ResourceMaxRetryCount) 设置对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值11，如果不设置的话，系统会设置一个默认值，当前为7
  */
 
 /**
@@ -87,6 +89,11 @@ class NamedCpmComputeEnv extends AbstractModel
      * @var string 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
      */
     public $ActionIfComputeNodeInactive;
+
+    /**
+     * @var integer 对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值11，如果不设置的话，系统会设置一个默认值，当前为7
+     */
+    public $ResourceMaxRetryCount;
     /**
      * @param string $EnvName 计算环境名称
      * @param EnvDataCpm $EnvData 计算环境具体参数
@@ -97,6 +104,7 @@ class NamedCpmComputeEnv extends AbstractModel
      * @param array $InputMappings 输入映射信息
      * @param Notification $Notifications 通知信息
      * @param string $ActionIfComputeNodeInactive 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
+     * @param integer $ResourceMaxRetryCount 对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值11，如果不设置的话，系统会设置一个默认值，当前为7
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class NamedCpmComputeEnv extends AbstractModel
 
         if (array_key_exists("ActionIfComputeNodeInactive",$param) and $param["ActionIfComputeNodeInactive"] !== null) {
             $this->ActionIfComputeNodeInactive = $param["ActionIfComputeNodeInactive"];
+        }
+
+        if (array_key_exists("ResourceMaxRetryCount",$param) and $param["ResourceMaxRetryCount"] !== null) {
+            $this->ResourceMaxRetryCount = $param["ResourceMaxRetryCount"];
         }
     }
 }

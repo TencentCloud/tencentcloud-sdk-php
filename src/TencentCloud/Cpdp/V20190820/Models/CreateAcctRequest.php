@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getMidasAppId() 获取聚鑫平台分配的支付MidasAppId
  * @method void setMidasAppId(string $MidasAppId) 设置聚鑫平台分配的支付MidasAppId
- * @method string getSubMchId() 获取业务平台的子商户Id，唯一
- * @method void setSubMchId(string $SubMchId) 设置业务平台的子商户Id，唯一
+ * @method string getSubMchId() 获取业务平台的子商户ID，唯一
+ * @method void setSubMchId(string $SubMchId) 设置业务平台的子商户ID，唯一
  * @method string getSubMchName() 获取子商户名称
  * @method void setSubMchName(string $SubMchName) 设置子商户名称
  * @method string getAddress() 获取子商户地址
@@ -65,7 +65,7 @@ class CreateAcctRequest extends AbstractModel
     public $MidasAppId;
 
     /**
-     * @var string 业务平台的子商户Id，唯一
+     * @var string 业务平台的子商户ID，唯一
      */
     public $SubMchId;
 
@@ -121,7 +121,7 @@ class CreateAcctRequest extends AbstractModel
     public $ShortName;
     /**
      * @param string $MidasAppId 聚鑫平台分配的支付MidasAppId
-     * @param string $SubMchId 业务平台的子商户Id，唯一
+     * @param string $SubMchId 业务平台的子商户ID，唯一
      * @param string $SubMchName 子商户名称
      * @param string $Address 子商户地址
      * @param string $Contact 子商户联系人

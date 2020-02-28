@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 20001：政治
  * @method integer getHitFlag() 获取处置判定  0：正常 1：可疑
  * @method void setHitFlag(integer $HitFlag) 设置处置判定  0：正常 1：可疑
+ * @method array getPolityLogoDetail() 获取命中的logo标签信息
+ * @method void setPolityLogoDetail(array $PolityLogoDetail) 设置命中的logo标签信息
  * @method array getFaceNames() 获取命中的人脸名称
  * @method void setFaceNames(array $FaceNames) 设置命中的人脸名称
  * @method array getKeywords() 获取关键词明细
@@ -54,6 +56,11 @@ class ImagePolityDetect extends AbstractModel
     public $HitFlag;
 
     /**
+     * @var array 命中的logo标签信息
+     */
+    public $PolityLogoDetail;
+
+    /**
      * @var array 命中的人脸名称
      */
     public $FaceNames;
@@ -77,6 +84,7 @@ class ImagePolityDetect extends AbstractModel
 100：正常 
 20001：政治
      * @param integer $HitFlag 处置判定  0：正常 1：可疑
+     * @param array $PolityLogoDetail 命中的logo标签信息
      * @param array $FaceNames 命中的人脸名称
      * @param array $Keywords 关键词明细
      * @param array $PolityItems 命中的政治物品名称
@@ -100,6 +108,15 @@ class ImagePolityDetect extends AbstractModel
 
         if (array_key_exists("HitFlag",$param) and $param["HitFlag"] !== null) {
             $this->HitFlag = $param["HitFlag"];
+        }
+
+        if (array_key_exists("PolityLogoDetail",$param) and $param["PolityLogoDetail"] !== null) {
+            $this->PolityLogoDetail = [];
+            foreach ($param["PolityLogoDetail"] as $key => $value){
+                $obj = new Logo();
+                $obj->deserialize($value);
+                array_push($this->PolityLogoDetail, $obj);
+            }
         }
 
         if (array_key_exists("FaceNames",$param) and $param["FaceNames"] !== null) {

@@ -18,16 +18,16 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getUserId() 获取用户Id，长度不小于5位， 仅支持字母和数字的组合
- * @method void setUserId(string $UserId) 设置用户Id，长度不小于5位， 仅支持字母和数字的组合
+ * @method string getUserId() 获取用户ID，长度不小于5位， 仅支持字母和数字的组合
+ * @method void setUserId(string $UserId) 设置用户ID，长度不小于5位， 仅支持字母和数字的组合
  * @method string getRefundId() 获取退款订单号，仅支持数字、 字母、下划线（_）、横杠字 符（-）、点（.）的组合
  * @method void setRefundId(string $RefundId) 设置退款订单号，仅支持数字、 字母、下划线（_）、横杠字 符（-）、点（.）的组合
- * @method string getMidasAppId() 获取聚鑫分配的支付主MidasAppid
- * @method void setMidasAppId(string $MidasAppId) 设置聚鑫分配的支付主MidasAppid
- * @method integer getTotalRefundAmt() 获取退款金额，单位：分。备 注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额做为退款金额
- * @method void setTotalRefundAmt(integer $TotalRefundAmt) 设置退款金额，单位：分。备 注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额做为退款金额
- * @method array getSubOrderRefundList() 获取支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算 出来总和。
- * @method void setSubOrderRefundList(array $SubOrderRefundList) 设置支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算 出来总和。
+ * @method string getMidasAppId() 获取聚鑫分配的支付主MidasAppId
+ * @method void setMidasAppId(string $MidasAppId) 设置聚鑫分配的支付主MidasAppId
+ * @method integer getTotalRefundAmt() 获取退款金额，单位：分。备注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额作为退款金额
+ * @method void setTotalRefundAmt(integer $TotalRefundAmt) 设置退款金额，单位：分。备注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额作为退款金额
+ * @method array getSubOrderRefundList() 获取支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
+ * @method void setSubOrderRefundList(array $SubOrderRefundList) 设置支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
  * @method string getMidasSecretId() 获取聚鑫分配的安全ID
  * @method void setMidasSecretId(string $MidasSecretId) 设置聚鑫分配的安全ID
  * @method string getMidasSignature() 获取按照聚鑫安全密钥计算的签名
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class RefundRequest extends AbstractModel
 {
     /**
-     * @var string 用户Id，长度不小于5位， 仅支持字母和数字的组合
+     * @var string 用户ID，长度不小于5位， 仅支持字母和数字的组合
      */
     public $UserId;
 
@@ -58,17 +58,17 @@ class RefundRequest extends AbstractModel
     public $RefundId;
 
     /**
-     * @var string 聚鑫分配的支付主MidasAppid
+     * @var string 聚鑫分配的支付主MidasAppId
      */
     public $MidasAppId;
 
     /**
-     * @var integer 退款金额，单位：分。备 注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额做为退款金额
+     * @var integer 退款金额，单位：分。备注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额作为退款金额
      */
     public $TotalRefundAmt;
 
     /**
-     * @var array 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算 出来总和。
+     * @var array 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
      */
     public $SubOrderRefundList;
 
@@ -102,11 +102,11 @@ class RefundRequest extends AbstractModel
      */
     public $PlatformRefundAmt;
     /**
-     * @param string $UserId 用户Id，长度不小于5位， 仅支持字母和数字的组合
+     * @param string $UserId 用户ID，长度不小于5位， 仅支持字母和数字的组合
      * @param string $RefundId 退款订单号，仅支持数字、 字母、下划线（_）、横杠字 符（-）、点（.）的组合
-     * @param string $MidasAppId 聚鑫分配的支付主MidasAppid
-     * @param integer $TotalRefundAmt 退款金额，单位：分。备 注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额做为退款金额
-     * @param array $SubOrderRefundList 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算 出来总和。
+     * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
+     * @param integer $TotalRefundAmt 退款金额，单位：分。备注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额作为退款金额
+     * @param array $SubOrderRefundList 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
      * @param string $MidasSecretId 聚鑫分配的安全ID
      * @param string $MidasSignature 按照聚鑫安全密钥计算的签名
      * @param string $OutTradeNo 商品订单，仅支持数字、字 母、下划线（_）、横杠字符 （-）、点（.）的组合。  OutTradeNo ,TransactionId 二选一,不能都为空,优先使用 OutTradeNo

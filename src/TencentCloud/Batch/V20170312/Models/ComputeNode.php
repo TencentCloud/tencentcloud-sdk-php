@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置实例公网IP
  * @method string getResourceType() 获取计算环境资源类型，当前为CVM和CPM（黑石）
  * @method void setResourceType(string $ResourceType) 设置计算环境资源类型，当前为CVM和CPM（黑石）
+ * @method string getResourceOrigin() 获取计算环境资源来源。<br>BATCH_CREATED：由批量计算创建的实例资源。<br>
+USER_ATTACHED：用户添加到计算环境中的实例资源。
+ * @method void setResourceOrigin(string $ResourceOrigin) 设置计算环境资源来源。<br>BATCH_CREATED：由批量计算创建的实例资源。<br>
+USER_ATTACHED：用户添加到计算环境中的实例资源。
  */
 
 /**
@@ -101,6 +105,12 @@ class ComputeNode extends AbstractModel
      * @var string 计算环境资源类型，当前为CVM和CPM（黑石）
      */
     public $ResourceType;
+
+    /**
+     * @var string 计算环境资源来源。<br>BATCH_CREATED：由批量计算创建的实例资源。<br>
+USER_ATTACHED：用户添加到计算环境中的实例资源。
+     */
+    public $ResourceOrigin;
     /**
      * @param string $ComputeNodeId 计算节点ID
      * @param string $ComputeNodeInstanceId 计算节点实例ID，对于CVM场景，即为CVM的InstanceId
@@ -113,6 +123,8 @@ class ComputeNode extends AbstractModel
      * @param array $PrivateIpAddresses 实例内网IP
      * @param array $PublicIpAddresses 实例公网IP
      * @param string $ResourceType 计算环境资源类型，当前为CVM和CPM（黑石）
+     * @param string $ResourceOrigin 计算环境资源来源。<br>BATCH_CREATED：由批量计算创建的实例资源。<br>
+USER_ATTACHED：用户添加到计算环境中的实例资源。
      */
     function __construct()
     {
@@ -168,6 +180,10 @@ class ComputeNode extends AbstractModel
 
         if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
             $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("ResourceOrigin",$param) and $param["ResourceOrigin"] !== null) {
+            $this->ResourceOrigin = $param["ResourceOrigin"];
         }
     }
 }

@@ -67,6 +67,19 @@ catch(TencentCloudSDKException $e) {
 
 如果是有代理的环境下，需要设置系统环境变量 `https_proxy` ，否则可能无法正常调用，抛出连接超时的异常。
 
+或者使用 GuzzleHttp 代理配置:
+```php
+$cred = new Credential("secretId", "secretKey");
+
+$httpProfile = new HttpProfile();
+$httpProfile->setProxy('https://ip:port');
+
+$clientProfile = new ClientProfile();
+$clientProfile->setHttpProfile($httpProfile);
+
+$client = new OcrClient($cred, 'ap-beijing', $this->clientProfile);
+```
+
 ## 证书问题
 
 如果你的 PHP 环境证书有问题，可能会遇到报错，类似于 `cURL error 60: See http://curl.haxx.se/libcurl/c/libcurl-errors.html`，请尝试按如下步骤解决：

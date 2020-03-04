@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenew(array $AutoRenew) 设置续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
  * @method string getBillingMode() 获取计费模式：postpaid-按量计费；prepaid-包年包月
  * @method void setBillingMode(string $BillingMode) 设置计费模式：postpaid-按量计费；prepaid-包年包月
- * @method integer getType() 获取实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版
- * @method void setType(integer $Type) 设置实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版
+ * @method integer getType() 获取实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版；8 – Redis5.0主从版，9 – Redis5.0集群版，
+ * @method void setType(integer $Type) 设置实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版；8 – Redis5.0主从版，9 – Redis5.0集群版，
  * @method array getSearchKeys() 获取搜索关键词：支持实例Id、实例名称、完整IP
  * @method void setSearchKeys(array $SearchKeys) 设置搜索关键词：支持实例Id、实例名称、完整IP
  * @method array getTypeList() 获取内部参数，用户可忽略
@@ -158,7 +158,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $BillingMode;
 
     /**
-     * @var integer 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版
+     * @var integer 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版；8 – Redis5.0主从版，9 – Redis5.0集群版，
      */
     public $Type;
 
@@ -190,7 +190,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param string $EngineName 引擎信息：Redis-2.8，Redis-4.0，CKV
      * @param array $AutoRenew 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      * @param string $BillingMode 计费模式：postpaid-按量计费；prepaid-包年包月
-     * @param integer $Type 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版
+     * @param integer $Type 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版；8 – Redis5.0主从版，9 – Redis5.0集群版，
      * @param array $SearchKeys 搜索关键词：支持实例Id、实例名称、完整IP
      * @param array $TypeList 内部参数，用户可忽略
      */

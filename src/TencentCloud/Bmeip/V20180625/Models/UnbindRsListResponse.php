@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ckafka\V20190819\Models;
+namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method GroupResponse getResult() 获取返回结果集列表
- * @method void setResult(GroupResponse $Result) 设置返回结果集列表
+ * @method integer getTaskId() 获取解绑操作的异步任务ID，可以通过查询EIP任务状态查询任务状态
+ * @method void setTaskId(integer $TaskId) 设置解绑操作的异步任务ID，可以通过查询EIP任务状态查询任务状态
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *DescribeGroup返回参数结构体
+ *UnbindRsList返回参数结构体
  */
-class DescribeGroupResponse extends AbstractModel
+class UnbindRsListResponse extends AbstractModel
 {
     /**
-     * @var GroupResponse 返回结果集列表
+     * @var integer 解绑操作的异步任务ID，可以通过查询EIP任务状态查询任务状态
      */
-    public $Result;
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param GroupResponse $Result 返回结果集列表
+     * @param integer $TaskId 解绑操作的异步任务ID，可以通过查询EIP任务状态查询任务状态
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +54,8 @@ class DescribeGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new GroupResponse();
-            $this->Result->deserialize($param["Result"]);
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

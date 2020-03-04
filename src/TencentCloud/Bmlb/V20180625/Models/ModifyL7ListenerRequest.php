@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertCaContent(string $CertCaContent) 设置客户端证书内容。
  * @method integer getBandwidth() 获取计费模式为按固定带宽方式时监听器的限速值，可选值：0-1000，单位：Mbps。
  * @method void setBandwidth(integer $Bandwidth) 设置计费模式为按固定带宽方式时监听器的限速值，可选值：0-1000，单位：Mbps。
+ * @method integer getForwardProtocol() 获取转发协议。当监听器Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。
+ * @method void setForwardProtocol(integer $ForwardProtocol) 设置转发协议。当监听器Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。
  */
 
 /**
@@ -108,6 +110,11 @@ class ModifyL7ListenerRequest extends AbstractModel
      * @var integer 计费模式为按固定带宽方式时监听器的限速值，可选值：0-1000，单位：Mbps。
      */
     public $Bandwidth;
+
+    /**
+     * @var integer 转发协议。当监听器Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。
+     */
+    public $ForwardProtocol;
     /**
      * @param string $LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param string $ListenerId 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
@@ -121,6 +128,7 @@ class ModifyL7ListenerRequest extends AbstractModel
      * @param string $CertCaName 客户端证书名称。
      * @param string $CertCaContent 客户端证书内容。
      * @param integer $Bandwidth 计费模式为按固定带宽方式时监听器的限速值，可选值：0-1000，单位：Mbps。
+     * @param integer $ForwardProtocol 转发协议。当监听器Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class ModifyL7ListenerRequest extends AbstractModel
 
         if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
             $this->Bandwidth = $param["Bandwidth"];
+        }
+
+        if (array_key_exists("ForwardProtocol",$param) and $param["ForwardProtocol"] !== null) {
+            $this->ForwardProtocol = $param["ForwardProtocol"];
         }
     }
 }

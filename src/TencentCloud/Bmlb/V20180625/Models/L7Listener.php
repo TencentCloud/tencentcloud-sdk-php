@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
  * @method string getAddTimestamp() 获取创建时间戳。
  * @method void setAddTimestamp(string $AddTimestamp) 设置创建时间戳。
- * @method integer getForwardProtocol() 获取https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
- * @method void setForwardProtocol(integer $ForwardProtocol) 设置https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
+ * @method integer getForwardProtocol() 获取https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
+ * @method void setForwardProtocol(integer $ForwardProtocol) 设置https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
  */
 
 /**
@@ -105,7 +105,7 @@ class L7Listener extends AbstractModel
     public $AddTimestamp;
 
     /**
-     * @var integer https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
+     * @var integer https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
      */
     public $ForwardProtocol;
     /**
@@ -120,7 +120,7 @@ class L7Listener extends AbstractModel
      * @param string $CertCaId 七层监听器关联的客户端证书ID。
      * @param integer $Status 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      * @param string $AddTimestamp 创建时间戳。
-     * @param integer $ForwardProtocol https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
+     * @param integer $ForwardProtocol https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
      */
     function __construct()
     {

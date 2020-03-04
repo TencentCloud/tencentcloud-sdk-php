@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBzL4Metrics(string $BzL4Metrics) 设置保障型网关四层计费指标
  * @method string getBzL7Metrics() 获取保障型网关七层计费指标
  * @method void setBzL7Metrics(string $BzL7Metrics) 设置保障型网关七层计费指标
+ * @method integer getIntVpcId() 获取该负载均衡对应的所在的整形类型的VpcId
+ * @method void setIntVpcId(integer $IntVpcId) 设置该负载均衡对应的所在的整形类型的VpcId
  */
 
 /**
@@ -206,6 +208,11 @@ class LoadBalancer extends AbstractModel
      * @var string 保障型网关七层计费指标
      */
     public $BzL7Metrics;
+
+    /**
+     * @var integer 该负载均衡对应的所在的整形类型的VpcId
+     */
+    public $IntVpcId;
     /**
      * @param string $LoadBalancerId 负载均衡器ID
      * @param integer $ProjectId 项目ID，通过v2/DescribeProject 接口获得
@@ -233,6 +240,7 @@ class LoadBalancer extends AbstractModel
      * @param string $BzPayMode 保障型网关计费形式
      * @param string $BzL4Metrics 保障型网关四层计费指标
      * @param string $BzL7Metrics 保障型网关七层计费指标
+     * @param integer $IntVpcId 该负载均衡对应的所在的整形类型的VpcId
      */
     function __construct()
     {
@@ -348,6 +356,10 @@ class LoadBalancer extends AbstractModel
 
         if (array_key_exists("BzL7Metrics",$param) and $param["BzL7Metrics"] !== null) {
             $this->BzL7Metrics = $param["BzL7Metrics"];
+        }
+
+        if (array_key_exists("IntVpcId",$param) and $param["IntVpcId"] !== null) {
+            $this->IntVpcId = $param["IntVpcId"];
         }
     }
 }

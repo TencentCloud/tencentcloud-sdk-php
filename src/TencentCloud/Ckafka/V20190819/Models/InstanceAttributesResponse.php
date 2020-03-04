@@ -66,6 +66,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(integer $ExpireTime) 设置过期时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getZoneIds() 获取跨可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneIds(array $ZoneIds) 设置跨可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVersion() 获取kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersion(string $Version) 设置kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxGroupNum() 获取最大分组数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxGroupNum(integer $MaxGroupNum) 设置最大分组数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCvm() 获取售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCvm(integer $Cvm) 设置售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -184,6 +200,30 @@ class InstanceAttributesResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
+
+    /**
+     * @var array 跨可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneIds;
+
+    /**
+     * @var string kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Version;
+
+    /**
+     * @var integer 最大分组数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxGroupNum;
+
+    /**
+     * @var integer 售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Cvm;
     /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
@@ -208,6 +248,14 @@ class InstanceAttributesResponse extends AbstractModel
      * @param array $Tags 标签数组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExpireTime 过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ZoneIds 跨可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Version kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxGroupNum 最大分组数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Cvm 售卖类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -319,6 +367,22 @@ class InstanceAttributesResponse extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
+            $this->ZoneIds = $param["ZoneIds"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("MaxGroupNum",$param) and $param["MaxGroupNum"] !== null) {
+            $this->MaxGroupNum = $param["MaxGroupNum"];
+        }
+
+        if (array_key_exists("Cvm",$param) and $param["Cvm"] !== null) {
+            $this->Cvm = $param["Cvm"];
         }
     }
 }

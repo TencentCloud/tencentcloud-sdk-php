@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getZoneId() 获取实例所属的可用区ID
  * @method void setZoneId(integer $ZoneId) 设置实例所属的可用区ID
- * @method integer getTypeId() 获取实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
- * @method void setTypeId(integer $TypeId) 设置实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
+ * @method integer getTypeId() 获取实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，8 – Redis5.0主从版，9 – Redis5.0集群版，
+ * @method void setTypeId(integer $TypeId) 设置实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，8 – Redis5.0主从版，9 – Redis5.0集群版，
  * @method integer getMemSize() 获取实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
  * @method void setMemSize(integer $MemSize) 设置实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
  * @method integer getGoodsNum() 获取实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
@@ -67,7 +67,7 @@ class CreateInstancesRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
+     * @var integer 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，8 – Redis5.0主从版，9 – Redis5.0集群版，
      */
     public $TypeId;
 
@@ -152,7 +152,7 @@ class CreateInstancesRequest extends AbstractModel
     public $NoAuth;
     /**
      * @param integer $ZoneId 实例所属的可用区ID
-     * @param integer $TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
+     * @param integer $TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，8 – Redis5.0主从版，9 – Redis5.0集群版，
      * @param integer $MemSize 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
      * @param integer $GoodsNum 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
      * @param integer $Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]

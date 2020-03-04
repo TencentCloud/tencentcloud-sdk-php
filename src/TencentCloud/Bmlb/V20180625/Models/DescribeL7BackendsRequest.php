@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainId(string $DomainId) 设置转发域名实例ID，可通过接口DescribeL7Rules查询。
  * @method string getLocationId() 获取转发路径实例ID，可通过接口DescribeL7Rules查询。
  * @method void setLocationId(string $LocationId) 设置转发路径实例ID，可通过接口DescribeL7Rules查询。
- * @method string getQueryType() 获取查询条件，传'all'则查询所有与规则绑定的主机信息。
- * @method void setQueryType(string $QueryType) 设置查询条件，传'all'则查询所有与规则绑定的主机信息。
+ * @method string getQueryType() 获取查询条件，传'all'则查询所有与规则绑定的主机信息。如果为all时，DomainId和LocationId参数没有意义不必传入，否则DomainId和LocationId参数必须传入。
+ * @method void setQueryType(string $QueryType) 设置查询条件，传'all'则查询所有与规则绑定的主机信息。如果为all时，DomainId和LocationId参数没有意义不必传入，否则DomainId和LocationId参数必须传入。
  */
 
 /**
@@ -56,7 +56,7 @@ class DescribeL7BackendsRequest extends AbstractModel
     public $LocationId;
 
     /**
-     * @var string 查询条件，传'all'则查询所有与规则绑定的主机信息。
+     * @var string 查询条件，传'all'则查询所有与规则绑定的主机信息。如果为all时，DomainId和LocationId参数没有意义不必传入，否则DomainId和LocationId参数必须传入。
      */
     public $QueryType;
     /**
@@ -64,7 +64,7 @@ class DescribeL7BackendsRequest extends AbstractModel
      * @param string $ListenerId 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      * @param string $DomainId 转发域名实例ID，可通过接口DescribeL7Rules查询。
      * @param string $LocationId 转发路径实例ID，可通过接口DescribeL7Rules查询。
-     * @param string $QueryType 查询条件，传'all'则查询所有与规则绑定的主机信息。
+     * @param string $QueryType 查询条件，传'all'则查询所有与规则绑定的主机信息。如果为all时，DomainId和LocationId参数没有意义不必传入，否则DomainId和LocationId参数必须传入。
      */
     function __construct()
     {

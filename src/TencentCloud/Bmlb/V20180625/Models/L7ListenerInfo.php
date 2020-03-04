@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddTimestamp(string $AddTimestamp) 设置创建时间戳。
  * @method array getRuleSet() 获取返回的转发规则列表。
  * @method void setRuleSet(array $RuleSet) 设置返回的转发规则列表。
+ * @method integer getForwardProtocol() 获取https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
+ * @method void setForwardProtocol(integer $ForwardProtocol) 设置https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
  */
 
 /**
@@ -108,6 +110,11 @@ class L7ListenerInfo extends AbstractModel
      * @var array 返回的转发规则列表。
      */
     public $RuleSet;
+
+    /**
+     * @var integer https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
+     */
+    public $ForwardProtocol;
     /**
      * @param string $ListenerId 七层监听器实例ID。
      * @param string $ListenerName 七层监听器名称。
@@ -121,6 +128,7 @@ class L7ListenerInfo extends AbstractModel
      * @param integer $Status 当前绑定关系的健康检查状态（Dead代表不健康，Alive代表健康）。
      * @param string $AddTimestamp 创建时间戳。
      * @param array $RuleSet 返回的转发规则列表。
+     * @param integer $ForwardProtocol https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
      */
     function __construct()
     {
@@ -185,6 +193,10 @@ class L7ListenerInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RuleSet, $obj);
             }
+        }
+
+        if (array_key_exists("ForwardProtocol",$param) and $param["ForwardProtocol"] !== null) {
+            $this->ForwardProtocol = $param["ForwardProtocol"];
         }
     }
 }

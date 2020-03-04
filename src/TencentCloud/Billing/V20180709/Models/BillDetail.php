@@ -58,17 +58,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置Tag 信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBusinessCode() 获取商品名称代码
+ * @method string getBusinessCode() 获取商品名称代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBusinessCode(string $BusinessCode) 设置商品名称代码
+ * @method void setBusinessCode(string $BusinessCode) 设置商品名称代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProductCode() 获取子商品名称代码
+ * @method string getProductCode() 获取子商品名称代码 （未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProductCode(string $ProductCode) 设置子商品名称代码
+ * @method void setProductCode(string $ProductCode) 设置子商品名称代码 （未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getActionType() 获取交易类型代码
+ * @method string getActionType() 获取交易类型代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setActionType(string $ActionType) 设置交易类型代码
+ * @method void setActionType(string $ActionType) 设置交易类型代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -174,19 +174,19 @@ class BillDetail extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 商品名称代码
+     * @var string 商品名称代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessCode;
 
     /**
-     * @var string 子商品名称代码
+     * @var string 子商品名称代码 （未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductCode;
 
     /**
-     * @var string 交易类型代码
+     * @var string 交易类型代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionType;
@@ -211,11 +211,11 @@ class BillDetail extends AbstractModel
      * @param string $OperateUin 操作者UIN
      * @param array $Tags Tag 信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BusinessCode 商品名称代码
+     * @param string $BusinessCode 商品名称代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProductCode 子商品名称代码
+     * @param string $ProductCode 子商品名称代码 （未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ActionType 交易类型代码
+     * @param string $ActionType 交易类型代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

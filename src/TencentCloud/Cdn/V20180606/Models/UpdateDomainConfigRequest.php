@@ -88,6 +88,8 @@ global：全球加速
 mainland：中国境内加速
 overseas：中国境外加速
 global：全球加速
+ * @method OriginPullTimeout getOriginPullTimeout() 获取回源超时配置
+ * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) 设置回源超时配置
  */
 
 /**
@@ -241,6 +243,11 @@ overseas：中国境外加速
 global：全球加速
      */
     public $Area;
+
+    /**
+     * @var OriginPullTimeout 回源超时配置
+     */
+    public $OriginPullTimeout;
     /**
      * @param string $Domain 域名
      * @param integer $ProjectId 项目 ID
@@ -277,6 +284,7 @@ media：流媒体点播加速
 mainland：中国境内加速
 overseas：中国境外加速
 global：全球加速
+     * @param OriginPullTimeout $OriginPullTimeout 回源超时配置
      */
     function __construct()
     {
@@ -424,6 +432,11 @@ global：全球加速
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("OriginPullTimeout",$param) and $param["OriginPullTimeout"] !== null) {
+            $this->OriginPullTimeout = new OriginPullTimeout();
+            $this->OriginPullTimeout->deserialize($param["OriginPullTimeout"]);
         }
     }
 }

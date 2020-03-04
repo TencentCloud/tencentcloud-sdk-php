@@ -32,8 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置页编号，默认值为0，表示第一页。
  * @method integer getLimit() 获取每页返回数量，默认值为10，最大值为100。
  * @method void setLimit(integer $Limit) 设置每页返回数量，默认值为10，最大值为100。
- * @method integer getProjectId() 获取实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。如果该参数取值为-1，返回所有实例列表。
- * @method void setProjectId(integer $ProjectId) 设置实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。如果该参数取值为-1，返回所有实例列表。
+ * @method integer getProjectId() 获取建议必填-1，表示拉取所有项目下的集群。
+不填默认值为0，表示拉取默认项目下的集群。
+实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。
+ * @method void setProjectId(integer $ProjectId) 设置建议必填-1，表示拉取所有项目下的集群。
+不填默认值为0，表示拉取默认项目下的集群。
+实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。
  * @method string getOrderField() 获取排序字段。取值范围：
 <li>clusterId：表示按照实例ID排序。</li>
 <li>addTime：表示按照实例创建时间排序。</li>
@@ -79,7 +83,9 @@ class DescribeInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。如果该参数取值为-1，返回所有实例列表。
+     * @var integer 建议必填-1，表示拉取所有项目下的集群。
+不填默认值为0，表示拉取默认项目下的集群。
+实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。
      */
     public $ProjectId;
 
@@ -105,7 +111,9 @@ class DescribeInstancesRequest extends AbstractModel
      * @param array $InstanceIds 按照一个或者多个实例ID查询。实例ID形如: emr-xxxxxxxx 。(此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的 Ids.N 一节)。如果不填写实例ID，返回该APPID下所有实例列表。
      * @param integer $Offset 页编号，默认值为0，表示第一页。
      * @param integer $Limit 每页返回数量，默认值为10，最大值为100。
-     * @param integer $ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。如果该参数取值为-1，返回所有实例列表。
+     * @param integer $ProjectId 建议必填-1，表示拉取所有项目下的集群。
+不填默认值为0，表示拉取默认项目下的集群。
+实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。
      * @param string $OrderField 排序字段。取值范围：
 <li>clusterId：表示按照实例ID排序。</li>
 <li>addTime：表示按照实例创建时间排序。</li>

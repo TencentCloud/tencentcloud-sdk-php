@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method array getEipSet() 获取返回EIP信息数组
  * @method void setEipSet(array $EipSet) 设置返回EIP信息数组
+ * @method integer getTotalCount() 获取返回EIP数量
+ * @method void setTotalCount(integer $TotalCount) 设置返回EIP数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,11 +37,17 @@ class DescribeEipsResponse extends AbstractModel
     public $EipSet;
 
     /**
+     * @var integer 返回EIP数量
+     */
+    public $TotalCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
      * @param array $EipSet 返回EIP信息数组
+     * @param integer $TotalCount 返回EIP数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +69,10 @@ class DescribeEipsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->EipSet, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
  * @method ItemPrice getPrice() 获取实例的售卖价格。
  * @method void setPrice(ItemPrice $Price) 设置实例的售卖价格。
+ * @method string getSoldOutReason() 获取售罄原因。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSoldOutReason(string $SoldOutReason) 设置售罄原因。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -111,6 +115,12 @@ class InstanceTypeQuotaItem extends AbstractModel
      * @var ItemPrice 实例的售卖价格。
      */
     public $Price;
+
+    /**
+     * @var string 售罄原因。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SoldOutReason;
     /**
      * @param string $Zone 可用区。
      * @param string $InstanceType 实例机型。
@@ -125,6 +135,8 @@ class InstanceTypeQuotaItem extends AbstractModel
      * @param array $LocalDiskTypeList 本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
      * @param string $Status 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
      * @param ItemPrice $Price 实例的售卖价格。
+     * @param string $SoldOutReason 售罄原因。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -191,6 +203,10 @@ class InstanceTypeQuotaItem extends AbstractModel
         if (array_key_exists("Price",$param) and $param["Price"] !== null) {
             $this->Price = new ItemPrice();
             $this->Price->deserialize($param["Price"]);
+        }
+
+        if (array_key_exists("SoldOutReason",$param) and $param["SoldOutReason"] !== null) {
+            $this->SoldOutReason = $param["SoldOutReason"];
         }
     }
 }

@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置子网id
  * @method integer getRenewFlag() 获取实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费
  * @method void setRenewFlag(integer $RenewFlag) 设置实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费
- * @method string getHealthy() 获取实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
- * @method void setHealthy(string $Healthy) 设置实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
+ * @method integer getHealthy() 获取实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
+ * @method void setHealthy(integer $Healthy) 设置实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
  * @method string getHealthyMessage() 获取实例状态信息
  * @method void setHealthyMessage(string $HealthyMessage) 设置实例状态信息
  * @method integer getCreateTime() 获取实例创建时间时间
@@ -56,6 +56,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicNum(integer $TopicNum) 设置Topic个数
  * @method array getTags() 获取标识tag
  * @method void setTags(array $Tags) 设置标识tag
+ * @method string getVersion() 获取kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersion(string $Version) 设置kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getZoneIds() 获取跨可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneIds(array $ZoneIds) 设置跨可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCvm() 获取ckafka售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCvm(integer $Cvm) 设置ckafka售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -124,7 +136,7 @@ class InstanceDetail extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var string 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
+     * @var integer 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
      */
     public $Healthy;
 
@@ -157,6 +169,24 @@ class InstanceDetail extends AbstractModel
      * @var array 标识tag
      */
     public $Tags;
+
+    /**
+     * @var string kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Version;
+
+    /**
+     * @var array 跨可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneIds;
+
+    /**
+     * @var integer ckafka售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Cvm;
     /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
@@ -170,13 +200,19 @@ class InstanceDetail extends AbstractModel
      * @param string $VpcId vpcId，如果为空，说明是基础网络
      * @param string $SubnetId 子网id
      * @param integer $RenewFlag 实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费
-     * @param string $Healthy 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
+     * @param integer $Healthy 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
      * @param string $HealthyMessage 实例状态信息
      * @param integer $CreateTime 实例创建时间时间
      * @param integer $ExpireTime 实例过期时间
      * @param integer $IsInternal 是否为内部客户。值为1 表示内部客户
      * @param integer $TopicNum Topic个数
      * @param array $Tags 标识tag
+     * @param string $Version kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ZoneIds 跨可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Cvm ckafka售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -274,6 +310,18 @@ class InstanceDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
+            $this->ZoneIds = $param["ZoneIds"];
+        }
+
+        if (array_key_exists("Cvm",$param) and $param["Cvm"] !== null) {
+            $this->Cvm = $param["Cvm"];
         }
     }
 }

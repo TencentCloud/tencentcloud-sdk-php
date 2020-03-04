@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置接收机所在的私有网络的Cidr。
  * @method string getHealthStatus() 获取接收机的健康状态。
  * @method void setHealthStatus(string $HealthStatus) 设置接收机的健康状态。
+ * @method array getOperates() 获取接收机的可以执行的操作集合。
+ * @method void setOperates(array $Operates) 设置接收机的可以执行的操作集合。
  */
 
 /**
@@ -115,6 +117,11 @@ class TrafficMirrorReceiver extends AbstractModel
      * @var string 接收机的健康状态。
      */
     public $HealthStatus;
+
+    /**
+     * @var array 接收机的可以执行的操作集合。
+     */
+    public $Operates;
     /**
      * @param string $InstanceId 接收机实例ID。
      * @param integer $Port 接收机接收端口。
@@ -129,6 +136,7 @@ class TrafficMirrorReceiver extends AbstractModel
      * @param string $VpcName 接收机所在的私有网络的名称。
      * @param string $VpcCidrBlock 接收机所在的私有网络的Cidr。
      * @param string $HealthStatus 接收机的健康状态。
+     * @param array $Operates 接收机的可以执行的操作集合。
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class TrafficMirrorReceiver extends AbstractModel
 
         if (array_key_exists("HealthStatus",$param) and $param["HealthStatus"] !== null) {
             $this->HealthStatus = $param["HealthStatus"];
+        }
+
+        if (array_key_exists("Operates",$param) and $param["Operates"] !== null) {
+            $this->Operates = $param["Operates"];
         }
     }
 }

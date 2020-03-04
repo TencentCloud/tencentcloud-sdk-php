@@ -18,44 +18,36 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTopicName() 获取订阅的主题名
- * @method void setTopicName(string $TopicName) 设置订阅的主题名
- * @method array getPartition() 获取订阅的分区
+ * @method string getPartition() 获取Partition,例如"0"或"1"
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPartition(array $Partition) 设置订阅的分区
+ * @method void setPartition(string $Partition) 设置Partition,例如"0"或"1"
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPartitionOffset() 获取分区offset信息
+ * @method integer getOffset() 获取Offset,例如100
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPartitionOffset(array $PartitionOffset) 设置分区offset信息
+ * @method void setOffset(integer $Offset) 设置Offset,例如100
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
- *订阅信息实体
+ *分区和位移
  */
-class SubscribedInfo extends AbstractModel
+class PartitionOffset extends AbstractModel
 {
     /**
-     * @var string 订阅的主题名
-     */
-    public $TopicName;
-
-    /**
-     * @var array 订阅的分区
+     * @var string Partition,例如"0"或"1"
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Partition;
 
     /**
-     * @var array 分区offset信息
+     * @var integer Offset,例如100
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $PartitionOffset;
+    public $Offset;
     /**
-     * @param string $TopicName 订阅的主题名
-     * @param array $Partition 订阅的分区
+     * @param string $Partition Partition,例如"0"或"1"
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PartitionOffset 分区offset信息
+     * @param integer $Offset Offset,例如100
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -70,21 +62,12 @@ class SubscribedInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
-        }
-
         if (array_key_exists("Partition",$param) and $param["Partition"] !== null) {
             $this->Partition = $param["Partition"];
         }
 
-        if (array_key_exists("PartitionOffset",$param) and $param["PartitionOffset"] !== null) {
-            $this->PartitionOffset = [];
-            foreach ($param["PartitionOffset"] as $key => $value){
-                $obj = new PartitionOffset();
-                $obj->deserialize($value);
-                array_push($this->PartitionOffset, $obj);
-            }
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

@@ -18,44 +18,36 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTopicName() 获取订阅的主题名
- * @method void setTopicName(string $TopicName) 设置订阅的主题名
- * @method array getPartition() 获取订阅的分区
+ * @method integer getTotalCount() 获取计数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPartition(array $Partition) 设置订阅的分区
+ * @method void setTotalCount(integer $TotalCount) 设置计数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPartitionOffset() 获取分区offset信息
+ * @method array getGroupList() 获取GroupList
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPartitionOffset(array $PartitionOffset) 设置分区offset信息
+ * @method void setGroupList(array $GroupList) 设置GroupList
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
- *订阅信息实体
+ *DescribeGroup的返回
  */
-class SubscribedInfo extends AbstractModel
+class GroupResponse extends AbstractModel
 {
     /**
-     * @var string 订阅的主题名
+     * @var integer 计数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TopicName;
+    public $TotalCount;
 
     /**
-     * @var array 订阅的分区
+     * @var array GroupList
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Partition;
-
+    public $GroupList;
     /**
-     * @var array 分区offset信息
+     * @param integer $TotalCount 计数
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $PartitionOffset;
-    /**
-     * @param string $TopicName 订阅的主题名
-     * @param array $Partition 订阅的分区
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PartitionOffset 分区offset信息
+     * @param array $GroupList GroupList
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -70,20 +62,16 @@ class SubscribedInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Partition",$param) and $param["Partition"] !== null) {
-            $this->Partition = $param["Partition"];
-        }
-
-        if (array_key_exists("PartitionOffset",$param) and $param["PartitionOffset"] !== null) {
-            $this->PartitionOffset = [];
-            foreach ($param["PartitionOffset"] as $key => $value){
-                $obj = new PartitionOffset();
+        if (array_key_exists("GroupList",$param) and $param["GroupList"] !== null) {
+            $this->GroupList = [];
+            foreach ($param["GroupList"] as $key => $value){
+                $obj = new DescribeGroup();
                 $obj->deserialize($value);
-                array_push($this->PartitionOffset, $obj);
+                array_push($this->GroupList, $obj);
             }
         }
     }

@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReturnCode(string $ReturnCode) 设置返回的code，0为正常，非0为错误
  * @method string getReturnMessage() 获取成功消息
  * @method void setReturnMessage(string $ReturnMessage) 设置成功消息
+ * @method OperateResponseData getData() 获取操作型返回的Data数据,可能有flowId等
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setData(OperateResponseData $Data) 设置操作型返回的Data数据,可能有flowId等
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -38,9 +42,17 @@ class JgwOperateResponse extends AbstractModel
      * @var string 成功消息
      */
     public $ReturnMessage;
+
+    /**
+     * @var OperateResponseData 操作型返回的Data数据,可能有flowId等
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Data;
     /**
      * @param string $ReturnCode 返回的code，0为正常，非0为错误
      * @param string $ReturnMessage 成功消息
+     * @param OperateResponseData $Data 操作型返回的Data数据,可能有flowId等
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +72,11 @@ class JgwOperateResponse extends AbstractModel
 
         if (array_key_exists("ReturnMessage",$param) and $param["ReturnMessage"] !== null) {
             $this->ReturnMessage = $param["ReturnMessage"];
+        }
+
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new OperateResponseData();
+            $this->Data->deserialize($param["Data"]);
         }
     }
 }

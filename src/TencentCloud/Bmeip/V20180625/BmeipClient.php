@@ -40,6 +40,7 @@ use TencentCloud\Bmeip\V20180625\Models as Models;
 * @method Models\UnbindEipAclsResponse UnbindEipAcls(Models\UnbindEipAclsRequest $req) 解绑弹性公网IP ACL
 * @method Models\UnbindHostedResponse UnbindHosted(Models\UnbindHostedRequest $req) UnbindHosted接口用于解绑托管机器上的EIP
 * @method Models\UnbindRsResponse UnbindRs(Models\UnbindRsRequest $req) 解绑黑石EIP
+* @method Models\UnbindRsListResponse UnbindRsList(Models\UnbindRsListRequest $req) 批量解绑物理机弹性公网IP接口
 * @method Models\UnbindVpcIpResponse UnbindVpcIp(Models\UnbindVpcIpRequest $req) 黑石EIP解绑VPCIP
  */
 

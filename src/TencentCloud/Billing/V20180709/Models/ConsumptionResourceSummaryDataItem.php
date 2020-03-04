@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusinessCode(string $BusinessCode) 设置产品码
  * @method string getBusinessCodeName() 获取产品名称
  * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称
+ * @method string getConsumptionTypeName() 获取消耗类型
+ * @method void setConsumptionTypeName(string $ConsumptionTypeName) 设置消耗类型
  */
 
 /**
@@ -108,6 +110,11 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
      * @var string 产品名称
      */
     public $BusinessCodeName;
+
+    /**
+     * @var string 消耗类型
+     */
+    public $ConsumptionTypeName;
     /**
      * @param string $ResourceId 资源ID
      * @param string $ResourceName 资源名称
@@ -121,6 +128,7 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
      * @param string $PayModeName 付费模式名称
      * @param string $BusinessCode 产品码
      * @param string $BusinessCodeName 产品名称
+     * @param string $ConsumptionTypeName 消耗类型
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
 
         if (array_key_exists("BusinessCodeName",$param) and $param["BusinessCodeName"] !== null) {
             $this->BusinessCodeName = $param["BusinessCodeName"];
+        }
+
+        if (array_key_exists("ConsumptionTypeName",$param) and $param["ConsumptionTypeName"] !== null) {
+            $this->ConsumptionTypeName = $param["ConsumptionTypeName"];
         }
     }
 }

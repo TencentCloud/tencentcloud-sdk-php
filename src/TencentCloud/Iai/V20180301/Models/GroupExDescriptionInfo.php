@@ -19,7 +19,9 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method integer getGroupExDescriptionIndex() 获取人员库自定义描述字段Index，从0开始
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupExDescriptionIndex(integer $GroupExDescriptionIndex) 设置人员库自定义描述字段Index，从0开始
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupExDescription() 获取需要更新的人员库自定义描述字段内容
  * @method void setGroupExDescription(string $GroupExDescription) 设置需要更新的人员库自定义描述字段内容
  */
@@ -31,6 +33,7 @@ class GroupExDescriptionInfo extends AbstractModel
 {
     /**
      * @var integer 人员库自定义描述字段Index，从0开始
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupExDescriptionIndex;
 
@@ -40,6 +43,7 @@ class GroupExDescriptionInfo extends AbstractModel
     public $GroupExDescription;
     /**
      * @param integer $GroupExDescriptionIndex 人员库自定义描述字段Index，从0开始
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupExDescription 需要更新的人员库自定义描述字段内容
      */
     function __construct()

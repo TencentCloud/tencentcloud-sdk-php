@@ -40,8 +40,8 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
  * @method void setMaxFaceNum(integer $MaxFaceNum) 设置最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。
 MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。
 例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
- * @method integer getMinFaceSize() 获取人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
- * @method void setMinFaceSize(integer $MinFaceSize) 设置人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
+ * @method integer getMinFaceSize() 获取人脸长和宽的最小尺寸，单位为像素。默认为34。低于34将影响搜索精度。建议设置为80。
+ * @method void setMinFaceSize(integer $MinFaceSize) 设置人脸长和宽的最小尺寸，单位为像素。默认为34。低于34将影响搜索精度。建议设置为80。
  * @method integer getMaxPersonNumPerGroup() 获取被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
 例，设MaxFaceNum为3，MaxPersonNumPerGroup为5，GroupIds长度为3，则最多可能返回3*5*3=45个人员。
  * @method void setMaxPersonNumPerGroup(integer $MaxPersonNumPerGroup) 设置被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
@@ -101,7 +101,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     public $MaxFaceNum;
 
     /**
-     * @var integer 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
+     * @var integer 人脸长和宽的最小尺寸，单位为像素。默认为34。低于34将影响搜索精度。建议设置为80。
      */
     public $MinFaceSize;
 
@@ -144,7 +144,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      * @param integer $MaxFaceNum 最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。
 MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。
 例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
-     * @param integer $MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
+     * @param integer $MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为34。低于34将影响搜索精度。建议设置为80。
      * @param integer $MaxPersonNumPerGroup 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
 例，设MaxFaceNum为3，MaxPersonNumPerGroup为5，GroupIds长度为3，则最多可能返回3*5*3=45个人员。
      * @param integer $QualityControl 图片质量控制。 

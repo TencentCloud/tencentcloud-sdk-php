@@ -18,8 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTaskStatus() 获取任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
- * @method void setTaskStatus(integer $TaskStatus) 设置任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+ * @method integer getTaskStatus() 获取任务状态: 0-请返回,1-已完成,2-处理中,3-处理出错,4-处理超时
+ * @method void setTaskStatus(integer $TaskStatus) 设置任务状态: 0-请返回,1-已完成,2-处理中,3-处理出错,4-处理超时
  * @method AppDetailInfo getAppDetailInfo() 获取app加固前的详细信息
  * @method void setAppDetailInfo(AppDetailInfo $AppDetailInfo) 设置app加固前的详细信息
  * @method ShieldInfo getShieldInfo() 获取app加固后的详细信息
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeShieldResultResponse extends AbstractModel
 {
     /**
-     * @var integer 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+     * @var integer 任务状态: 0-请返回,1-已完成,2-处理中,3-处理出错,4-处理超时
      */
     public $TaskStatus;
 
@@ -67,7 +67,7 @@ class DescribeShieldResultResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+     * @param integer $TaskStatus 任务状态: 0-请返回,1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param AppDetailInfo $AppDetailInfo app加固前的详细信息
      * @param ShieldInfo $ShieldInfo app加固后的详细信息
      * @param string $StatusDesc 状态描述

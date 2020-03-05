@@ -23,10 +23,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxFaceNum(integer $MaxFaceNum) 设置最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为120。 
 此参数用于控制处理待检测图片中的人脸个数，值越小，处理速度越快。
  * @method integer getMinFaceSize() 获取人脸长和宽的最小尺寸，单位为像素。
-默认为40。建议不低于34。
+默认为34。建议不低于34。
 低于MinFaceSize值的人脸不会被检测。
  * @method void setMinFaceSize(integer $MinFaceSize) 设置人脸长和宽的最小尺寸，单位为像素。
-默认为40。建议不低于34。
+默认为34。建议不低于34。
 低于MinFaceSize值的人脸不会被检测。
  * @method string getImage() 获取图片 base64 数据，base64 编码后大小不可超过5M。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -79,7 +79,7 @@ class DetectFaceRequest extends AbstractModel
 
     /**
      * @var integer 人脸长和宽的最小尺寸，单位为像素。
-默认为40。建议不低于34。
+默认为34。建议不低于34。
 低于MinFaceSize值的人脸不会被检测。
      */
     public $MinFaceSize;
@@ -125,7 +125,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      * @param integer $MaxFaceNum 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为120。 
 此参数用于控制处理待检测图片中的人脸个数，值越小，处理速度越快。
      * @param integer $MinFaceSize 人脸长和宽的最小尺寸，单位为像素。
-默认为40。建议不低于34。
+默认为34。建议不低于34。
 低于MinFaceSize值的人脸不会被检测。
      * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。

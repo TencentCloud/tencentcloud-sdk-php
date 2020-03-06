@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetAttributes(array $TargetAttributes) 设置目标规则属性列表
  * @method string getLocationId() 获取转发规则ID，注意：针对七层监听器此参数必填
  * @method void setLocationId(string $LocationId) 设置转发规则ID，注意：针对七层监听器此参数必填
- * @method string getRegion() 获取负载均衡实例所属地域，默认取AS服务所在地域
- * @method void setRegion(string $Region) 设置负载均衡实例所属地域，默认取AS服务所在地域
+ * @method string getRegion() 获取负载均衡实例所属地域，默认取AS服务所在地域。格式与公共参数Region相同，如："ap-guangzhou"。
+ * @method void setRegion(string $Region) 设置负载均衡实例所属地域，默认取AS服务所在地域。格式与公共参数Region相同，如："ap-guangzhou"。
  */
 
 /**
@@ -56,7 +56,7 @@ class ForwardLoadBalancer extends AbstractModel
     public $LocationId;
 
     /**
-     * @var string 负载均衡实例所属地域，默认取AS服务所在地域
+     * @var string 负载均衡实例所属地域，默认取AS服务所在地域。格式与公共参数Region相同，如："ap-guangzhou"。
      */
     public $Region;
     /**
@@ -64,7 +64,7 @@ class ForwardLoadBalancer extends AbstractModel
      * @param string $ListenerId 应用型负载均衡监听器 ID
      * @param array $TargetAttributes 目标规则属性列表
      * @param string $LocationId 转发规则ID，注意：针对七层监听器此参数必填
-     * @param string $Region 负载均衡实例所属地域，默认取AS服务所在地域
+     * @param string $Region 负载均衡实例所属地域，默认取AS服务所在地域。格式与公共参数Region相同，如："ap-guangzhou"。
      */
     function __construct()
     {

@@ -90,6 +90,8 @@ overseas：中国境外加速
 global：全球加速
  * @method OriginPullTimeout getOriginPullTimeout() 获取回源超时配置
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) 设置回源超时配置
+ * @method AwsPrivateAccess getAwsPrivateAccess() 获取回源S3私有鉴权
+ * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) 设置回源S3私有鉴权
  */
 
 /**
@@ -248,6 +250,11 @@ global：全球加速
      * @var OriginPullTimeout 回源超时配置
      */
     public $OriginPullTimeout;
+
+    /**
+     * @var AwsPrivateAccess 回源S3私有鉴权
+     */
+    public $AwsPrivateAccess;
     /**
      * @param string $Domain 域名
      * @param integer $ProjectId 项目 ID
@@ -285,6 +292,7 @@ mainland：中国境内加速
 overseas：中国境外加速
 global：全球加速
      * @param OriginPullTimeout $OriginPullTimeout 回源超时配置
+     * @param AwsPrivateAccess $AwsPrivateAccess 回源S3私有鉴权
      */
     function __construct()
     {
@@ -437,6 +445,11 @@ global：全球加速
         if (array_key_exists("OriginPullTimeout",$param) and $param["OriginPullTimeout"] !== null) {
             $this->OriginPullTimeout = new OriginPullTimeout();
             $this->OriginPullTimeout->deserialize($param["OriginPullTimeout"]);
+        }
+
+        if (array_key_exists("AwsPrivateAccess",$param) and $param["AwsPrivateAccess"] !== null) {
+            $this->AwsPrivateAccess = new AwsPrivateAccess();
+            $this->AwsPrivateAccess->deserialize($param["AwsPrivateAccess"]);
         }
     }
 }

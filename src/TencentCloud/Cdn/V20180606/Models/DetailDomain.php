@@ -200,6 +200,10 @@ global：全球锁定
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) 设置回源超时配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AwsPrivateAccess getAwsPrivateAccess() 获取回源S3鉴权配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) 设置回源S3鉴权配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -453,6 +457,12 @@ global：全球锁定
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginPullTimeout;
+
+    /**
+     * @var AwsPrivateAccess 回源S3鉴权配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AwsPrivateAccess;
     /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
@@ -544,6 +554,8 @@ overseas：中国境外锁定
 global：全球锁定
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginPullTimeout $OriginPullTimeout 回源超时配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AwsPrivateAccess $AwsPrivateAccess 回源S3鉴权配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -739,6 +751,11 @@ global：全球锁定
         if (array_key_exists("OriginPullTimeout",$param) and $param["OriginPullTimeout"] !== null) {
             $this->OriginPullTimeout = new OriginPullTimeout();
             $this->OriginPullTimeout->deserialize($param["OriginPullTimeout"]);
+        }
+
+        if (array_key_exists("AwsPrivateAccess",$param) and $param["AwsPrivateAccess"] !== null) {
+            $this->AwsPrivateAccess = new AwsPrivateAccess();
+            $this->AwsPrivateAccess->deserialize($param["AwsPrivateAccess"]);
         }
     }
 }

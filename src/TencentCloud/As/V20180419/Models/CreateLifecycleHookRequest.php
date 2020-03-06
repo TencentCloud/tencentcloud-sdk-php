@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotificationMetadata(string $NotificationMetadata) 设置弹性伸缩向通知目标发送的附加信息，默认值为空字符串“”。最大长度不能超过1024个字节。
  * @method NotificationTarget getNotificationTarget() 获取通知目标
  * @method void setNotificationTarget(NotificationTarget $NotificationTarget) 设置通知目标
+ * @method string getLifecycleTransitionType() 获取进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
+ * @method void setLifecycleTransitionType(string $LifecycleTransitionType) 设置进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
  */
 
 /**
@@ -73,6 +75,11 @@ class CreateLifecycleHookRequest extends AbstractModel
      * @var NotificationTarget 通知目标
      */
     public $NotificationTarget;
+
+    /**
+     * @var string 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
+     */
+    public $LifecycleTransitionType;
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $LifecycleHookName 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字节。
@@ -81,6 +88,7 @@ class CreateLifecycleHookRequest extends AbstractModel
      * @param integer $HeartbeatTimeout 生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到3600秒，默认值为300秒
      * @param string $NotificationMetadata 弹性伸缩向通知目标发送的附加信息，默认值为空字符串“”。最大长度不能超过1024个字节。
      * @param NotificationTarget $NotificationTarget 通知目标
+     * @param string $LifecycleTransitionType 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class CreateLifecycleHookRequest extends AbstractModel
         if (array_key_exists("NotificationTarget",$param) and $param["NotificationTarget"] !== null) {
             $this->NotificationTarget = new NotificationTarget();
             $this->NotificationTarget->deserialize($param["NotificationTarget"]);
+        }
+
+        if (array_key_exists("LifecycleTransitionType",$param) and $param["LifecycleTransitionType"] !== null) {
+            $this->LifecycleTransitionType = $param["LifecycleTransitionType"];
         }
     }
 }

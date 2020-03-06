@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
- * @method string getEsVersion() 获取实例版本（支持"5.6.4"、"6.4.3"）
- * @method void setEsVersion(string $EsVersion) 设置实例版本（支持"5.6.4"、"6.4.3"）
+ * @method string getEsVersion() 获取实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"）
+ * @method void setEsVersion(string $EsVersion) 设置实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"）
  * @method string getVpcId() 获取私有网络ID
  * @method void setVpcId(string $VpcId) 设置私有网络ID
  * @method string getSubnetId() 获取子网ID
@@ -101,7 +101,7 @@ class CreateInstanceRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 实例版本（支持"5.6.4"、"6.4.3"）
+     * @var string 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"）
      */
     public $EsVersion;
 
@@ -239,7 +239,7 @@ class CreateInstanceRequest extends AbstractModel
     public $BasicSecurityType;
     /**
      * @param string $Zone 可用区
-     * @param string $EsVersion 实例版本（支持"5.6.4"、"6.4.3"）
+     * @param string $EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"）
      * @param string $VpcId 私有网络ID
      * @param string $SubnetId 子网ID
      * @param string $Password 访问密码（密码需8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）

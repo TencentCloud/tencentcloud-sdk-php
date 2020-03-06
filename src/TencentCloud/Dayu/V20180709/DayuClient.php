@@ -23,6 +23,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
 
 /**
 * @method Models\CreateBasicDDoSAlarmThresholdResponse CreateBasicDDoSAlarmThreshold(Models\CreateBasicDDoSAlarmThresholdRequest $req) 设置基础防护的DDoS告警阈值，只支持基础防护产品
+* @method Models\CreateBoundIPResponse CreateBoundIP(Models\CreateBoundIPRequest $req) 绑定IP到高防包实例，支持独享包、共享包；需要注意的是此接口绑定或解绑IP是异步接口，当处于绑定或解绑中时，则不允许再进行绑定或解绑，需要等待当前绑定或解绑完成。
 * @method Models\CreateCCFrequencyRulesResponse CreateCCFrequencyRules(Models\CreateCCFrequencyRulesRequest $req) 添加CC防护的访问频率控制规则
 * @method Models\CreateCCSelfDefinePolicyResponse CreateCCSelfDefinePolicy(Models\CreateCCSelfDefinePolicyRequest $req) 创建CC自定义策略
 * @method Models\CreateDDoSPolicyResponse CreateDDoSPolicy(Models\CreateDDoSPolicyRequest $req) 添加DDoS高级策略

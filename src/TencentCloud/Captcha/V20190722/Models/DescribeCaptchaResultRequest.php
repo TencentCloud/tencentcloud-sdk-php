@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMacAddress(string $MacAddress) 设置mac 地址或设备唯一标识
  * @method string getImei() 获取手机设备号
  * @method void setImei(string $Imei) 设置手机设备号
+ * @method integer getNeedGetCaptchaTime() 获取是否返回前端获取验证码时间，取值1：需要返回
+ * @method void setNeedGetCaptchaTime(integer $NeedGetCaptchaTime) 设置是否返回前端获取验证码时间，取值1：需要返回
  */
 
 /**
@@ -94,6 +96,11 @@ class DescribeCaptchaResultRequest extends AbstractModel
      * @var string 手机设备号
      */
     public $Imei;
+
+    /**
+     * @var integer 是否返回前端获取验证码时间，取值1：需要返回
+     */
+    public $NeedGetCaptchaTime;
     /**
      * @param integer $CaptchaType 验证码类型，9：滑块验证码
      * @param string $Ticket 验证码返回给用户的票据
@@ -105,6 +112,7 @@ class DescribeCaptchaResultRequest extends AbstractModel
      * @param integer $SceneId 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
      * @param string $MacAddress mac 地址或设备唯一标识
      * @param string $Imei 手机设备号
+     * @param integer $NeedGetCaptchaTime 是否返回前端获取验证码时间，取值1：需要返回
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeCaptchaResultRequest extends AbstractModel
 
         if (array_key_exists("Imei",$param) and $param["Imei"] !== null) {
             $this->Imei = $param["Imei"];
+        }
+
+        if (array_key_exists("NeedGetCaptchaTime",$param) and $param["NeedGetCaptchaTime"] !== null) {
+            $this->NeedGetCaptchaTime = $param["NeedGetCaptchaTime"];
         }
     }
 }

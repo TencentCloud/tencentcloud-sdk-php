@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosRegion(string $CosRegion) 设置cos存储桶所在地域。
  * @method integer getIsEnableCmqNotify() 获取是否开启cmq消息通知。1：是，0：否。
  * @method void setIsEnableCmqNotify(integer $IsEnableCmqNotify) 设置是否开启cmq消息通知。1：是，0：否。
+ * @method integer getIsEnableKmsEncry() 获取是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+ * @method void setIsEnableKmsEncry(integer $IsEnableKmsEncry) 设置是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+ * @method string getKeyId() 获取CMK的全局唯一标识符。
+ * @method void setKeyId(string $KeyId) 设置CMK的全局唯一标识符。
+ * @method string getKmsAlias() 获取CMK别名。
+ * @method void setKmsAlias(string $KmsAlias) 设置CMK别名。
+ * @method string getKmsRegion() 获取kms地域。
+ * @method void setKmsRegion(string $KmsRegion) 设置kms地域。
  * @method string getLogFilePrefix() 获取日志前缀。
  * @method void setLogFilePrefix(string $LogFilePrefix) 设置日志前缀。
  * @method integer getReadWriteAttribute() 获取管理事件读写属性，1：只读，2：只写，3：全部
@@ -81,6 +89,26 @@ class DescribeAuditResponse extends AbstractModel
     public $IsEnableCmqNotify;
 
     /**
+     * @var integer 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+     */
+    public $IsEnableKmsEncry;
+
+    /**
+     * @var string CMK的全局唯一标识符。
+     */
+    public $KeyId;
+
+    /**
+     * @var string CMK别名。
+     */
+    public $KmsAlias;
+
+    /**
+     * @var string kms地域。
+     */
+    public $KmsRegion;
+
+    /**
      * @var string 日志前缀。
      */
     public $LogFilePrefix;
@@ -102,6 +130,10 @@ class DescribeAuditResponse extends AbstractModel
      * @param string $CosBucketName cos存储桶名称。
      * @param string $CosRegion cos存储桶所在地域。
      * @param integer $IsEnableCmqNotify 是否开启cmq消息通知。1：是，0：否。
+     * @param integer $IsEnableKmsEncry 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+     * @param string $KeyId CMK的全局唯一标识符。
+     * @param string $KmsAlias CMK别名。
+     * @param string $KmsRegion kms地域。
      * @param string $LogFilePrefix 日志前缀。
      * @param integer $ReadWriteAttribute 管理事件读写属性，1：只读，2：只写，3：全部
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -144,6 +176,22 @@ class DescribeAuditResponse extends AbstractModel
 
         if (array_key_exists("IsEnableCmqNotify",$param) and $param["IsEnableCmqNotify"] !== null) {
             $this->IsEnableCmqNotify = $param["IsEnableCmqNotify"];
+        }
+
+        if (array_key_exists("IsEnableKmsEncry",$param) and $param["IsEnableKmsEncry"] !== null) {
+            $this->IsEnableKmsEncry = $param["IsEnableKmsEncry"];
+        }
+
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("KmsAlias",$param) and $param["KmsAlias"] !== null) {
+            $this->KmsAlias = $param["KmsAlias"];
+        }
+
+        if (array_key_exists("KmsRegion",$param) and $param["KmsRegion"] !== null) {
+            $this->KmsRegion = $param["KmsRegion"];
         }
 
         if (array_key_exists("LogFilePrefix",$param) and $param["LogFilePrefix"] !== null) {

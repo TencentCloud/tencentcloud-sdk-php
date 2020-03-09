@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。
  * @method string getVpnGatewayName() 获取网关实例名称。
  * @method void setVpnGatewayName(string $VpnGatewayName) 设置网关实例名称。
- * @method string getType() 获取网关实例类型：'IPSEC', 'SSL'。
- * @method void setType(string $Type) 设置网关实例类型：'IPSEC', 'SSL'。
+ * @method string getType() 获取网关实例类型：'IPSEC', 'SSL','CCN'。
+ * @method void setType(string $Type) 设置网关实例类型：'IPSEC', 'SSL','CCN'。
  * @method string getState() 获取网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
  * @method void setState(string $State) 设置网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
  * @method string getPublicIpAddress() 获取网关公网IP。
@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpnGatewayQuotaSet(array $VpnGatewayQuotaSet) 设置网关带宽配额信息
  * @method string getVersion() 获取网关实例版本信息
  * @method void setVersion(string $Version) 设置网关实例版本信息
+ * @method string getNetworkInstanceId() 获取Type值为CCN时，该值表示云联网实例ID
+ * @method void setNetworkInstanceId(string $NetworkInstanceId) 设置Type值为CCN时，该值表示云联网实例ID
  */
 
 /**
@@ -75,7 +77,7 @@ class VpnGateway extends AbstractModel
     public $VpnGatewayName;
 
     /**
-     * @var string 网关实例类型：'IPSEC', 'SSL'。
+     * @var string 网关实例类型：'IPSEC', 'SSL','CCN'。
      */
     public $Type;
 
@@ -143,11 +145,16 @@ class VpnGateway extends AbstractModel
      * @var string 网关实例版本信息
      */
     public $Version;
+
+    /**
+     * @var string Type值为CCN时，该值表示云联网实例ID
+     */
+    public $NetworkInstanceId;
     /**
      * @param string $VpnGatewayId 网关实例ID。
      * @param string $VpcId VPC实例ID。
      * @param string $VpnGatewayName 网关实例名称。
-     * @param string $Type 网关实例类型：'IPSEC', 'SSL'。
+     * @param string $Type 网关实例类型：'IPSEC', 'SSL','CCN'。
      * @param string $State 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
      * @param string $PublicIpAddress 网关公网IP。
      * @param string $RenewFlag 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
@@ -161,6 +168,7 @@ class VpnGateway extends AbstractModel
      * @param string $Zone 可用区，如：ap-guangzhou-2
      * @param array $VpnGatewayQuotaSet 网关带宽配额信息
      * @param string $Version 网关实例版本信息
+     * @param string $NetworkInstanceId Type值为CCN时，该值表示云联网实例ID
      */
     function __construct()
     {
@@ -245,6 +253,10 @@ class VpnGateway extends AbstractModel
 
         if (array_key_exists("Version",$param) and $param["Version"] !== null) {
             $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("NetworkInstanceId",$param) and $param["NetworkInstanceId"] !== null) {
+            $this->NetworkInstanceId = $param["NetworkInstanceId"];
         }
     }
 }

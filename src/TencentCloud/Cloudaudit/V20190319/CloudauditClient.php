@@ -22,7 +22,11 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cloudaudit\V20190319\Models as Models;
 
 /**
-* @method Models\CreateAuditResponse CreateAudit(Models\CreateAuditRequest $req) 创建跟踪集
+* @method Models\CreateAuditResponse CreateAudit(Models\CreateAuditRequest $req) 参数要求：
+1、如果IsCreateNewBucket的值存在的话，cosRegion和cosBucketName都是必填参数。
+2、如果IsEnableCmqNotify的值是1的话，IsCreateNewQueue、CmqRegion和CmqQueueName都是必填参数。
+3、如果IsEnableCmqNotify的值是0的话，IsCreateNewQueue、CmqRegion和CmqQueueName都不能传。
+4、如果IsEnableKmsEncry的值是1的话，KmsRegion和KeyId属于必填项
 * @method Models\DeleteAuditResponse DeleteAudit(Models\DeleteAuditRequest $req) 删除跟踪集
 * @method Models\DescribeAuditResponse DescribeAudit(Models\DescribeAuditRequest $req) 查询跟踪集详情
 * @method Models\GetAttributeKeyResponse GetAttributeKey(Models\GetAttributeKeyRequest $req) 查询AttributeKey的有效取值范围
@@ -37,6 +41,7 @@ use TencentCloud\Cloudaudit\V20190319\Models as Models;
 1、如果IsCreateNewBucket的值存在的话，cosRegion和cosBucketName都是必填参数。
 2、如果IsEnableCmqNotify的值是1的话，IsCreateNewQueue、CmqRegion和CmqQueueName都是必填参数。
 3、如果IsEnableCmqNotify的值是0的话，IsCreateNewQueue、CmqRegion和CmqQueueName都不能传。
+4、如果IsEnableKmsEncry的值是1的话，KmsRegion和KeyId属于必填项
  */
 
 class CloudauditClient extends AbstractClient

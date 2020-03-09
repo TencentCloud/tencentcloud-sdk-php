@@ -60,6 +60,8 @@ USER：用户路由；
 NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
 CCN：云联网路由，系统默认下发，不可编辑与删除。
 用户只能添加和操作 USER 类型的路由。
+ * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
+ * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
  */
 
 /**
@@ -115,6 +117,11 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 用户只能添加和操作 USER 类型的路由。
      */
     public $RouteType;
+
+    /**
+     * @var string 路由表实例ID，例如：rtb-azd4dt1c。
+     */
+    public $RouteTableId;
     /**
      * @param string $DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      * @param string $GatewayType 下一跳类型，目前我们支持的类型有：
@@ -137,6 +144,7 @@ USER：用户路由；
 NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
 CCN：云联网路由，系统默认下发，不可编辑与删除。
 用户只能添加和操作 USER 类型的路由。
+     * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
     function __construct()
     {
@@ -176,6 +184,10 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
         if (array_key_exists("RouteType",$param) and $param["RouteType"] !== null) {
             $this->RouteType = $param["RouteType"];
+        }
+
+        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
+            $this->RouteTableId = $param["RouteTableId"];
         }
     }
 }

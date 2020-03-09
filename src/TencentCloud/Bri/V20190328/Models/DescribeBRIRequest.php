@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method BRIRequest getRequestData() 获取业务风险情报请求体
  * @method void setRequestData(BRIRequest $RequestData) 设置业务风险情报请求体
- * @method string getResourceId() 获取客户用于计费的资源Id
- * @method void setResourceId(string $ResourceId) 设置客户用于计费的资源Id
+ * @method string getResourceId() 获取客户用于计费的资源ID
+ * @method void setResourceId(string $ResourceId) 设置客户用于计费的资源ID
  */
 
 /**
@@ -35,12 +35,12 @@ class DescribeBRIRequest extends AbstractModel
     public $RequestData;
 
     /**
-     * @var string 客户用于计费的资源Id
+     * @var string 客户用于计费的资源ID
      */
     public $ResourceId;
     /**
      * @param BRIRequest $RequestData 业务风险情报请求体
-     * @param string $ResourceId 客户用于计费的资源Id
+     * @param string $ResourceId 客户用于计费的资源ID
      */
     function __construct()
     {

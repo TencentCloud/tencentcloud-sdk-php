@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
 20007：谩骂
 20105：广告引流 
 24001：暴恐
+ * @method TextOutputComm getCommon() 获取消息类公共相关参数
+ * @method void setCommon(TextOutputComm $Common) 设置消息类公共相关参数
+ * @method TextOutputID getID() 获取消息类ID信息
+ * @method void setID(TextOutputID $ID) 设置消息类ID信息
+ * @method TextOutputRes getRes() 获取消息类输出结果
+ * @method void setRes(TextOutputRes $Res) 设置消息类输出结果
  * @method array getKeywords() 获取命中的关键词
  * @method void setKeywords(array $Keywords) 设置命中的关键词
  */
@@ -63,6 +69,21 @@ class TextData extends AbstractModel
     public $EvilType;
 
     /**
+     * @var TextOutputComm 消息类公共相关参数
+     */
+    public $Common;
+
+    /**
+     * @var TextOutputID 消息类ID信息
+     */
+    public $ID;
+
+    /**
+     * @var TextOutputRes 消息类输出结果
+     */
+    public $Res;
+
+    /**
      * @var array 命中的关键词
      */
     public $Keywords;
@@ -76,6 +97,9 @@ class TextData extends AbstractModel
 20007：谩骂
 20105：广告引流 
 24001：暴恐
+     * @param TextOutputComm $Common 消息类公共相关参数
+     * @param TextOutputID $ID 消息类ID信息
+     * @param TextOutputRes $Res 消息类输出结果
      * @param array $Keywords 命中的关键词
      */
     function __construct()
@@ -96,6 +120,21 @@ class TextData extends AbstractModel
 
         if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
             $this->EvilType = $param["EvilType"];
+        }
+
+        if (array_key_exists("Common",$param) and $param["Common"] !== null) {
+            $this->Common = new TextOutputComm();
+            $this->Common->deserialize($param["Common"]);
+        }
+
+        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
+            $this->ID = new TextOutputID();
+            $this->ID->deserialize($param["ID"]);
+        }
+
+        if (array_key_exists("Res",$param) and $param["Res"] !== null) {
+            $this->Res = new TextOutputRes();
+            $this->Res->deserialize($param["Res"]);
         }
 
         if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {

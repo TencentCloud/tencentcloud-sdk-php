@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventId(string $EventId) 设置日志ID
  * @method string getEventName() 获取事件名称
  * @method void setEventName(string $EventName) 设置事件名称
- * @method string getEventNameCn() 获取事件名称中文描述
- * @method void setEventNameCn(string $EventNameCn) 设置事件名称中文描述
+ * @method string getEventNameCn() 获取事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+ * @method void setEventNameCn(string $EventNameCn) 设置事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
  * @method string getEventRegion() 获取事件地域
  * @method void setEventRegion(string $EventRegion) 设置事件地域
  * @method string getEventSource() 获取请求来源
@@ -40,8 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventTime(string $EventTime) 设置事件时间
  * @method string getRequestID() 获取请求ID
  * @method void setRequestID(string $RequestID) 设置请求ID
- * @method string getResourceTypeCn() 获取资源类型中文描述
- * @method void setResourceTypeCn(string $ResourceTypeCn) 设置资源类型中文描述
+ * @method string getResourceRegion() 获取资源地域
+ * @method void setResourceRegion(string $ResourceRegion) 设置资源地域
+ * @method string getResourceTypeCn() 获取资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+ * @method void setResourceTypeCn(string $ResourceTypeCn) 设置资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
  * @method string getSecretId() 获取证书ID
  * @method void setSecretId(string $SecretId) 设置证书ID
  * @method string getSourceIPAddress() 获取源IP
@@ -86,7 +88,7 @@ class Event extends AbstractModel
     public $EventName;
 
     /**
-     * @var string 事件名称中文描述
+     * @var string 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
      */
     public $EventNameCn;
 
@@ -111,7 +113,12 @@ class Event extends AbstractModel
     public $RequestID;
 
     /**
-     * @var string 资源类型中文描述
+     * @var string 资源地域
+     */
+    public $ResourceRegion;
+
+    /**
+     * @var string 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
      */
     public $ResourceTypeCn;
 
@@ -136,12 +143,13 @@ class Event extends AbstractModel
      * @param integer $ErrorCode 鉴权错误码
      * @param string $EventId 日志ID
      * @param string $EventName 事件名称
-     * @param string $EventNameCn 事件名称中文描述
+     * @param string $EventNameCn 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
      * @param string $EventRegion 事件地域
      * @param string $EventSource 请求来源
      * @param string $EventTime 事件时间
      * @param string $RequestID 请求ID
-     * @param string $ResourceTypeCn 资源类型中文描述
+     * @param string $ResourceRegion 资源地域
+     * @param string $ResourceTypeCn 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
      * @param string $SecretId 证书ID
      * @param string $SourceIPAddress 源IP
      * @param string $Username 用户名
@@ -201,6 +209,10 @@ class Event extends AbstractModel
 
         if (array_key_exists("RequestID",$param) and $param["RequestID"] !== null) {
             $this->RequestID = $param["RequestID"];
+        }
+
+        if (array_key_exists("ResourceRegion",$param) and $param["ResourceRegion"] !== null) {
+            $this->ResourceRegion = $param["ResourceRegion"];
         }
 
         if (array_key_exists("ResourceTypeCn",$param) and $param["ResourceTypeCn"] !== null) {

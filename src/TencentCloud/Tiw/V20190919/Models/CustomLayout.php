@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method Canvas getCanvas() 获取混流画布参数
  * @method void setCanvas(Canvas $Canvas) 设置混流画布参数
- * @method array getInputStreamList() 获取流布局参数
- * @method void setInputStreamList(array $InputStreamList) 设置流布局参数
+ * @method array getInputStreamList() 获取流布局参数，每路流的布局不能超出画布区域
+ * @method void setInputStreamList(array $InputStreamList) 设置流布局参数，每路流的布局不能超出画布区域
  */
 
 /**
@@ -35,12 +35,12 @@ class CustomLayout extends AbstractModel
     public $Canvas;
 
     /**
-     * @var array 流布局参数
+     * @var array 流布局参数，每路流的布局不能超出画布区域
      */
     public $InputStreamList;
     /**
      * @param Canvas $Canvas 混流画布参数
-     * @param array $InputStreamList 流布局参数
+     * @param array $InputStreamList 流布局参数，每路流的布局不能超出画布区域
      */
     function __construct()
     {

@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsCreateNewQueue(integer $IsCreateNewQueue) 设置是否创建新的队列。1：是，0：否。如果IsEnableCmqNotify值是1的话，此值属于必填字段。
  * @method integer getIsEnableCmqNotify() 获取是否开启cmq消息通知。1：是，0：否。目前仅支持cmq的队列服务。如果开启cmq消息通知服务，云审计会将您的日志内容实时投递到您指定地域的指定队列中。
  * @method void setIsEnableCmqNotify(integer $IsEnableCmqNotify) 设置是否开启cmq消息通知。1：是，0：否。目前仅支持cmq的队列服务。如果开启cmq消息通知服务，云审计会将您的日志内容实时投递到您指定地域的指定队列中。
+ * @method integer getIsEnableKmsEncry() 获取是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+ * @method void setIsEnableKmsEncry(integer $IsEnableKmsEncry) 设置是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+ * @method string getKeyId() 获取CMK的全局唯一标识符，如果不是新创建的kms，该值是必填值。可以通过ListKeyAliasByRegion来获取。云审计不会校验KeyId的合法性，请您谨慎填写，避免给您的数据造成损失。
+ * @method void setKeyId(string $KeyId) 设置CMK的全局唯一标识符，如果不是新创建的kms，该值是必填值。可以通过ListKeyAliasByRegion来获取。云审计不会校验KeyId的合法性，请您谨慎填写，避免给您的数据造成损失。
+ * @method string getKmsRegion() 获取kms地域。目前支持的地域可以使用ListKmsEnableRegion来获取。必须要和cos的地域保持一致。
+ * @method void setKmsRegion(string $KmsRegion) 设置kms地域。目前支持的地域可以使用ListKmsEnableRegion来获取。必须要和cos的地域保持一致。
  * @method string getLogFilePrefix() 获取日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。
  * @method void setLogFilePrefix(string $LogFilePrefix) 设置日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。
  * @method integer getReadWriteAttribute() 获取管理事件的读写属性。1：只读，2：只写，3：全部。
@@ -86,6 +92,21 @@ class UpdateAuditRequest extends AbstractModel
     public $IsEnableCmqNotify;
 
     /**
+     * @var integer 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+     */
+    public $IsEnableKmsEncry;
+
+    /**
+     * @var string CMK的全局唯一标识符，如果不是新创建的kms，该值是必填值。可以通过ListKeyAliasByRegion来获取。云审计不会校验KeyId的合法性，请您谨慎填写，避免给您的数据造成损失。
+     */
+    public $KeyId;
+
+    /**
+     * @var string kms地域。目前支持的地域可以使用ListKmsEnableRegion来获取。必须要和cos的地域保持一致。
+     */
+    public $KmsRegion;
+
+    /**
      * @var string 日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。
      */
     public $LogFilePrefix;
@@ -103,6 +124,9 @@ class UpdateAuditRequest extends AbstractModel
      * @param integer $IsCreateNewBucket 是否创建新的cos存储桶。1：是，0：否。
      * @param integer $IsCreateNewQueue 是否创建新的队列。1：是，0：否。如果IsEnableCmqNotify值是1的话，此值属于必填字段。
      * @param integer $IsEnableCmqNotify 是否开启cmq消息通知。1：是，0：否。目前仅支持cmq的队列服务。如果开启cmq消息通知服务，云审计会将您的日志内容实时投递到您指定地域的指定队列中。
+     * @param integer $IsEnableKmsEncry 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+     * @param string $KeyId CMK的全局唯一标识符，如果不是新创建的kms，该值是必填值。可以通过ListKeyAliasByRegion来获取。云审计不会校验KeyId的合法性，请您谨慎填写，避免给您的数据造成损失。
+     * @param string $KmsRegion kms地域。目前支持的地域可以使用ListKmsEnableRegion来获取。必须要和cos的地域保持一致。
      * @param string $LogFilePrefix 日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。
      * @param integer $ReadWriteAttribute 管理事件的读写属性。1：只读，2：只写，3：全部。
      */
@@ -148,6 +172,18 @@ class UpdateAuditRequest extends AbstractModel
 
         if (array_key_exists("IsEnableCmqNotify",$param) and $param["IsEnableCmqNotify"] !== null) {
             $this->IsEnableCmqNotify = $param["IsEnableCmqNotify"];
+        }
+
+        if (array_key_exists("IsEnableKmsEncry",$param) and $param["IsEnableKmsEncry"] !== null) {
+            $this->IsEnableKmsEncry = $param["IsEnableKmsEncry"];
+        }
+
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("KmsRegion",$param) and $param["KmsRegion"] !== null) {
+            $this->KmsRegion = $param["KmsRegion"];
         }
 
         if (array_key_exists("LogFilePrefix",$param) and $param["LogFilePrefix"] !== null) {

@@ -18,15 +18,15 @@ namespace TencentCloud\Bizlive\V20190313\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getEndTime() 获取结束时间，北京时间，
+ * @method string getEndTime() 获取结束时间，北京时间，格式：2019-04-28 10:36:00
 结束时间 和 开始时间  必须在同一天内。
- * @method void setEndTime(string $EndTime) 设置结束时间，北京时间，
+ * @method void setEndTime(string $EndTime) 设置结束时间，北京时间，格式：2019-04-28 10:36:00
 结束时间 和 开始时间  必须在同一天内。
  * @method string getPlayDomain() 获取播放域名。
  * @method void setPlayDomain(string $PlayDomain) 设置播放域名。
- * @method string getStartTime() 获取开始时间，北京时间，
+ * @method string getStartTime() 获取开始时间，北京时间，格式：2019-04-28 10:36:00
 当前时间 和 开始时间 间隔不超过30天。
- * @method void setStartTime(string $StartTime) 设置开始时间，北京时间，
+ * @method void setStartTime(string $StartTime) 设置开始时间，北京时间，格式：2019-04-28 10:36:00
 当前时间 和 开始时间 间隔不超过30天。
  * @method string getStreamName() 获取流名称，精确匹配。
 若不填，则为查询总体播放数据。
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeStreamPlayInfoListRequest extends AbstractModel
 {
     /**
-     * @var string 结束时间，北京时间，
+     * @var string 结束时间，北京时间，格式：2019-04-28 10:36:00
 结束时间 和 开始时间  必须在同一天内。
      */
     public $EndTime;
@@ -51,7 +51,7 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
     public $PlayDomain;
 
     /**
-     * @var string 开始时间，北京时间，
+     * @var string 开始时间，北京时间，格式：2019-04-28 10:36:00
 当前时间 和 开始时间 间隔不超过30天。
      */
     public $StartTime;
@@ -62,10 +62,10 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
      */
     public $StreamName;
     /**
-     * @param string $EndTime 结束时间，北京时间，
+     * @param string $EndTime 结束时间，北京时间，格式：2019-04-28 10:36:00
 结束时间 和 开始时间  必须在同一天内。
      * @param string $PlayDomain 播放域名。
-     * @param string $StartTime 开始时间，北京时间，
+     * @param string $StartTime 开始时间，北京时间，格式：2019-04-28 10:36:00
 当前时间 和 开始时间 间隔不超过30天。
      * @param string $StreamName 流名称，精确匹配。
 若不填，则为查询总体播放数据。

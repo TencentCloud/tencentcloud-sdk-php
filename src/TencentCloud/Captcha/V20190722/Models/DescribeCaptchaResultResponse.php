@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEvilLevel(integer $EvilLevel) 设置[0,100]，恶意等级
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getGetCaptchaTime() 获取前端获取验证码时间，时间戳格式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGetCaptchaTime(integer $GetCaptchaTime) 设置前端获取验证码时间，时间戳格式
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -118,6 +122,12 @@ class DescribeCaptchaResultResponse extends AbstractModel
     public $EvilLevel;
 
     /**
+     * @var integer 前端获取验证码时间，时间戳格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GetCaptchaTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -148,6 +158,8 @@ class DescribeCaptchaResultResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EvilLevel [0,100]，恶意等级
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $GetCaptchaTime 前端获取验证码时间，时间戳格式
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -172,6 +184,10 @@ class DescribeCaptchaResultResponse extends AbstractModel
 
         if (array_key_exists("EvilLevel",$param) and $param["EvilLevel"] !== null) {
             $this->EvilLevel = $param["EvilLevel"];
+        }
+
+        if (array_key_exists("GetCaptchaTime",$param) and $param["GetCaptchaTime"] !== null) {
+            $this->GetCaptchaTime = $param["GetCaptchaTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

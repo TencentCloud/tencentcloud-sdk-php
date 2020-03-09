@@ -22,9 +22,12 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Bizlive\V20190313\Models as Models;
 
 /**
+* @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) 创建会话
 * @method Models\DescribeStreamPlayInfoListResponse DescribeStreamPlayInfoList(Models\DescribeStreamPlayInfoListRequest $req) 查询播放数据，支持按流名称查询详细播放数据，也可按播放域名查询详细总数据。
+* @method Models\DescribeWorkersResponse DescribeWorkers(Models\DescribeWorkersRequest $req) 查询空闲机器数量
 * @method Models\ForbidLiveStreamResponse ForbidLiveStream(Models\ForbidLiveStreamRequest $req) 禁止某条流的推送，可以预设某个时刻将流恢复。
 * @method Models\RegisterIMResponse RegisterIM(Models\RegisterIMRequest $req) 注册聊天室
+* @method Models\StopGameResponse StopGame(Models\StopGameRequest $req) 强制退出游戏
  */
 
 class BizliveClient extends AbstractClient

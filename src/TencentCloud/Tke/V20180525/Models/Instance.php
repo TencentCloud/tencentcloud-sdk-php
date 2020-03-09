@@ -26,6 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFailedReason(string $FailedReason) 设置实例异常(或者处于初始化中)的原因
  * @method string getInstanceState() 获取实例的状态（running 运行中，initializing 初始化中，failed 异常）
  * @method void setInstanceState(string $InstanceState) 设置实例的状态（running 运行中，initializing 初始化中，failed 异常）
+ * @method string getDrainStatus() 获取实例是否封锁状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDrainStatus(string $DrainStatus) 设置实例是否封锁状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatedTime() 获取添加时间
+ * @method void setCreatedTime(string $CreatedTime) 设置添加时间
  */
 
 /**
@@ -52,11 +62,33 @@ class Instance extends AbstractModel
      * @var string 实例的状态（running 运行中，initializing 初始化中，failed 异常）
      */
     public $InstanceState;
+
+    /**
+     * @var string 实例是否封锁状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DrainStatus;
+
+    /**
+     * @var InstanceAdvancedSettings 配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceAdvancedSettings;
+
+    /**
+     * @var string 添加时间
+     */
+    public $CreatedTime;
     /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceRole 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER
      * @param string $FailedReason 实例异常(或者处于初始化中)的原因
      * @param string $InstanceState 实例的状态（running 运行中，initializing 初始化中，failed 异常）
+     * @param string $DrainStatus 实例是否封锁状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceAdvancedSettings $InstanceAdvancedSettings 配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatedTime 添加时间
      */
     function __construct()
     {
@@ -84,6 +116,19 @@ class Instance extends AbstractModel
 
         if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
             $this->InstanceState = $param["InstanceState"];
+        }
+
+        if (array_key_exists("DrainStatus",$param) and $param["DrainStatus"] !== null) {
+            $this->DrainStatus = $param["DrainStatus"];
+        }
+
+        if (array_key_exists("InstanceAdvancedSettings",$param) and $param["InstanceAdvancedSettings"] !== null) {
+            $this->InstanceAdvancedSettings = new InstanceAdvancedSettings();
+            $this->InstanceAdvancedSettings->deserialize($param["InstanceAdvancedSettings"]);
+        }
+
+        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
+            $this->CreatedTime = $param["CreatedTime"];
         }
     }
 }

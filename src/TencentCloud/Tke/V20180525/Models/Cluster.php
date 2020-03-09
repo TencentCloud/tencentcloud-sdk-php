@@ -46,6 +46,24 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProperty(string $Property) 设置集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getClusterMaterNodeNum() 获取集群当前master数量
+ * @method void setClusterMaterNodeNum(integer $ClusterMaterNodeNum) 设置集群当前master数量
+ * @method string getImageId() 获取集群使用镜像id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageId(string $ImageId) 设置集群使用镜像id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOsCustomizeType() 获取OsCustomizeType
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOsCustomizeType(string $OsCustomizeType) 设置OsCustomizeType
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContainerRuntime() 获取集群运行环境docker或container
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContainerRuntime(string $ContainerRuntime) 设置集群运行环境docker或container
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatedTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatedTime(string $CreatedTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -114,6 +132,35 @@ class Cluster extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Property;
+
+    /**
+     * @var integer 集群当前master数量
+     */
+    public $ClusterMaterNodeNum;
+
+    /**
+     * @var string 集群使用镜像id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageId;
+
+    /**
+     * @var string OsCustomizeType
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OsCustomizeType;
+
+    /**
+     * @var string 集群运行环境docker或container
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContainerRuntime;
+
+    /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatedTime;
     /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
@@ -128,6 +175,15 @@ class Cluster extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterStatus 集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
      * @param string $Property 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClusterMaterNodeNum 集群当前master数量
+     * @param string $ImageId 集群使用镜像id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OsCustomizeType OsCustomizeType
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContainerRuntime 集群运行环境docker或container
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatedTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -194,6 +250,26 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("Property",$param) and $param["Property"] !== null) {
             $this->Property = $param["Property"];
+        }
+
+        if (array_key_exists("ClusterMaterNodeNum",$param) and $param["ClusterMaterNodeNum"] !== null) {
+            $this->ClusterMaterNodeNum = $param["ClusterMaterNodeNum"];
+        }
+
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
+        }
+
+        if (array_key_exists("OsCustomizeType",$param) and $param["OsCustomizeType"] !== null) {
+            $this->OsCustomizeType = $param["OsCustomizeType"];
+        }
+
+        if (array_key_exists("ContainerRuntime",$param) and $param["ContainerRuntime"] !== null) {
+            $this->ContainerRuntime = $param["ContainerRuntime"];
+        }
+
+        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
+            $this->CreatedTime = $param["CreatedTime"];
         }
     }
 }

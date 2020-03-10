@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置排序字段
  * @method integer getOrder() 获取排序方式，取值：0:增序(默认)，1:降序
  * @method void setOrder(integer $Order) 设置排序方式，取值：0:增序(默认)，1:降序
+ * @method array getAclNames() 获取ACL名称列表，支持模糊查找
+ * @method void setAclNames(array $AclNames) 设置ACL名称列表，支持模糊查找
  */
 
 /**
@@ -87,6 +89,11 @@ class DescribeEipAclsRequest extends AbstractModel
      * @var integer 排序方式，取值：0:增序(默认)，1:降序
      */
     public $Order;
+
+    /**
+     * @var array ACL名称列表，支持模糊查找
+     */
+    public $AclNames;
     /**
      * @param string $AclName ACL 名称，支持模糊查找
      * @param array $AclIds ACL 实例 ID 列表，数组下标从 0 开始
@@ -97,6 +104,7 @@ class DescribeEipAclsRequest extends AbstractModel
      * @param array $EipNames EIP名称列表
      * @param string $OrderField 排序字段
      * @param integer $Order 排序方式，取值：0:增序(默认)，1:降序
+     * @param array $AclNames ACL名称列表，支持模糊查找
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeEipAclsRequest extends AbstractModel
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("AclNames",$param) and $param["AclNames"] !== null) {
+            $this->AclNames = $param["AclNames"];
         }
     }
 }

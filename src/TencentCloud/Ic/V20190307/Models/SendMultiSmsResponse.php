@@ -19,7 +19,9 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method array getData() 获取短信流水数组
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置短信流水数组
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -31,6 +33,7 @@ class SendMultiSmsResponse extends AbstractModel
 {
     /**
      * @var array 短信流水数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
@@ -40,6 +43,7 @@ class SendMultiSmsResponse extends AbstractModel
     public $RequestId;
     /**
      * @param array $Data 短信流水数组
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

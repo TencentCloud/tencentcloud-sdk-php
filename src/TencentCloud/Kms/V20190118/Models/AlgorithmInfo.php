@@ -18,29 +18,29 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDescription() 获取新的描述信息，最大支持1024字节
- * @method void setDescription(string $Description) 设置新的描述信息，最大支持1024字节
- * @method string getKeyId() 获取需要修改描述信息的CMK ID
- * @method void setKeyId(string $KeyId) 设置需要修改描述信息的CMK ID
+ * @method string getKeyUsage() 获取算法的标识
+ * @method void setKeyUsage(string $KeyUsage) 设置算法的标识
+ * @method string getAlgorithm() 获取算法的名称
+ * @method void setAlgorithm(string $Algorithm) 设置算法的名称
  */
 
 /**
- *UpdateKeyDescription请求参数结构体
+ *算法的名称 和 标识
  */
-class UpdateKeyDescriptionRequest extends AbstractModel
+class AlgorithmInfo extends AbstractModel
 {
     /**
-     * @var string 新的描述信息，最大支持1024字节
+     * @var string 算法的标识
      */
-    public $Description;
+    public $KeyUsage;
 
     /**
-     * @var string 需要修改描述信息的CMK ID
+     * @var string 算法的名称
      */
-    public $KeyId;
+    public $Algorithm;
     /**
-     * @param string $Description 新的描述信息，最大支持1024字节
-     * @param string $KeyId 需要修改描述信息的CMK ID
+     * @param string $KeyUsage 算法的标识
+     * @param string $Algorithm 算法的名称
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class UpdateKeyDescriptionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists("KeyUsage",$param) and $param["KeyUsage"] !== null) {
+            $this->KeyUsage = $param["KeyUsage"];
         }
 
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists("Algorithm",$param) and $param["Algorithm"] !== null) {
+            $this->Algorithm = $param["Algorithm"];
         }
     }
 }

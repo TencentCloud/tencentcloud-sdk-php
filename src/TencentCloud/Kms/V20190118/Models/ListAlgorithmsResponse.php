@@ -18,40 +18,36 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取CMK的总数量
- * @method void setTotalCount(integer $TotalCount) 设置CMK的总数量
- * @method array getKeyMetadatas() 获取返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKeyMetadatas(array $KeyMetadatas) 设置返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSymmetricAlgorithms() 获取本地区支持的对称加密算法
+ * @method void setSymmetricAlgorithms(array $SymmetricAlgorithms) 设置本地区支持的对称加密算法
+ * @method array getAsymmetricAlgorithms() 获取本地区支持的非对称加密算法
+ * @method void setAsymmetricAlgorithms(array $AsymmetricAlgorithms) 设置本地区支持的非对称加密算法
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *ListKeyDetail返回参数结构体
+ *ListAlgorithms返回参数结构体
  */
-class ListKeyDetailResponse extends AbstractModel
+class ListAlgorithmsResponse extends AbstractModel
 {
     /**
-     * @var integer CMK的总数量
+     * @var array 本地区支持的对称加密算法
      */
-    public $TotalCount;
+    public $SymmetricAlgorithms;
 
     /**
-     * @var array 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 本地区支持的非对称加密算法
      */
-    public $KeyMetadatas;
+    public $AsymmetricAlgorithms;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount CMK的总数量
-     * @param array $KeyMetadatas 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SymmetricAlgorithms 本地区支持的对称加密算法
+     * @param array $AsymmetricAlgorithms 本地区支持的非对称加密算法
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,16 +62,21 @@ class ListKeyDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("SymmetricAlgorithms",$param) and $param["SymmetricAlgorithms"] !== null) {
+            $this->SymmetricAlgorithms = [];
+            foreach ($param["SymmetricAlgorithms"] as $key => $value){
+                $obj = new AlgorithmInfo();
+                $obj->deserialize($value);
+                array_push($this->SymmetricAlgorithms, $obj);
+            }
         }
 
-        if (array_key_exists("KeyMetadatas",$param) and $param["KeyMetadatas"] !== null) {
-            $this->KeyMetadatas = [];
-            foreach ($param["KeyMetadatas"] as $key => $value){
-                $obj = new KeyMetadata();
+        if (array_key_exists("AsymmetricAlgorithms",$param) and $param["AsymmetricAlgorithms"] !== null) {
+            $this->AsymmetricAlgorithms = [];
+            foreach ($param["AsymmetricAlgorithms"] as $key => $value){
+                $obj = new AlgorithmInfo();
                 $obj->deserialize($value);
-                array_push($this->KeyMetadatas, $obj);
+                array_push($this->AsymmetricAlgorithms, $obj);
             }
         }
 

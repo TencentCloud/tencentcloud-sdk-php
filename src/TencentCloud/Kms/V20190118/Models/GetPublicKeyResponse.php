@@ -18,40 +18,44 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取CMK的总数量
- * @method void setTotalCount(integer $TotalCount) 设置CMK的总数量
- * @method array getKeyMetadatas() 获取返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKeyMetadatas(array $KeyMetadatas) 设置返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKeyId() 获取CMK的唯一标识。
+ * @method void setKeyId(string $KeyId) 设置CMK的唯一标识。
+ * @method string getPublicKey() 获取经过base64编码的公钥内容。
+ * @method void setPublicKey(string $PublicKey) 设置经过base64编码的公钥内容。
+ * @method string getPublicKeyPem() 获取PEM格式的公钥内容。
+ * @method void setPublicKeyPem(string $PublicKeyPem) 设置PEM格式的公钥内容。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *ListKeyDetail返回参数结构体
+ *GetPublicKey返回参数结构体
  */
-class ListKeyDetailResponse extends AbstractModel
+class GetPublicKeyResponse extends AbstractModel
 {
     /**
-     * @var integer CMK的总数量
+     * @var string CMK的唯一标识。
      */
-    public $TotalCount;
+    public $KeyId;
 
     /**
-     * @var array 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 经过base64编码的公钥内容。
      */
-    public $KeyMetadatas;
+    public $PublicKey;
+
+    /**
+     * @var string PEM格式的公钥内容。
+     */
+    public $PublicKeyPem;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount CMK的总数量
-     * @param array $KeyMetadatas 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KeyId CMK的唯一标识。
+     * @param string $PublicKey 经过base64编码的公钥内容。
+     * @param string $PublicKeyPem PEM格式的公钥内容。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,17 +70,16 @@ class ListKeyDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
         }
 
-        if (array_key_exists("KeyMetadatas",$param) and $param["KeyMetadatas"] !== null) {
-            $this->KeyMetadatas = [];
-            foreach ($param["KeyMetadatas"] as $key => $value){
-                $obj = new KeyMetadata();
-                $obj->deserialize($value);
-                array_push($this->KeyMetadatas, $obj);
-            }
+        if (array_key_exists("PublicKey",$param) and $param["PublicKey"] !== null) {
+            $this->PublicKey = $param["PublicKey"];
+        }
+
+        if (array_key_exists("PublicKeyPem",$param) and $param["PublicKeyPem"] !== null) {
+            $this->PublicKeyPem = $param["PublicKeyPem"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

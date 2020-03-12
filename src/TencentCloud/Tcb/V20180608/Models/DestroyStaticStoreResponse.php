@@ -14,44 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Kms\V20190118\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取CMK的总数量
- * @method void setTotalCount(integer $TotalCount) 设置CMK的总数量
- * @method array getKeyMetadatas() 获取返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKeyMetadatas(array $KeyMetadatas) 设置返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResult() 获取条件任务结果(succ/fail)
+ * @method void setResult(string $Result) 设置条件任务结果(succ/fail)
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *ListKeyDetail返回参数结构体
+ *DestroyStaticStore返回参数结构体
  */
-class ListKeyDetailResponse extends AbstractModel
+class DestroyStaticStoreResponse extends AbstractModel
 {
     /**
-     * @var integer CMK的总数量
+     * @var string 条件任务结果(succ/fail)
      */
-    public $TotalCount;
-
-    /**
-     * @var array 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $KeyMetadatas;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount CMK的总数量
-     * @param array $KeyMetadatas 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Result 条件任务结果(succ/fail)
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,17 +54,8 @@ class ListKeyDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("KeyMetadatas",$param) and $param["KeyMetadatas"] !== null) {
-            $this->KeyMetadatas = [];
-            foreach ($param["KeyMetadatas"] as $key => $value){
-                $obj = new KeyMetadata();
-                $obj->deserialize($value);
-                array_push($this->KeyMetadatas, $obj);
-            }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

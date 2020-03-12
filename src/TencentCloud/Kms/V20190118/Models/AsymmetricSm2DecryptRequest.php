@@ -18,29 +18,29 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDescription() 获取新的描述信息，最大支持1024字节
- * @method void setDescription(string $Description) 设置新的描述信息，最大支持1024字节
- * @method string getKeyId() 获取需要修改描述信息的CMK ID
- * @method void setKeyId(string $KeyId) 设置需要修改描述信息的CMK ID
+ * @method string getKeyId() 获取CMK的唯一标识
+ * @method void setKeyId(string $KeyId) 设置CMK的唯一标识
+ * @method string getCiphertext() 获取使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
+ * @method void setCiphertext(string $Ciphertext) 设置使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
  */
 
 /**
- *UpdateKeyDescription请求参数结构体
+ *AsymmetricSm2Decrypt请求参数结构体
  */
-class UpdateKeyDescriptionRequest extends AbstractModel
+class AsymmetricSm2DecryptRequest extends AbstractModel
 {
     /**
-     * @var string 新的描述信息，最大支持1024字节
-     */
-    public $Description;
-
-    /**
-     * @var string 需要修改描述信息的CMK ID
+     * @var string CMK的唯一标识
      */
     public $KeyId;
+
     /**
-     * @param string $Description 新的描述信息，最大支持1024字节
-     * @param string $KeyId 需要修改描述信息的CMK ID
+     * @var string 使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
+     */
+    public $Ciphertext;
+    /**
+     * @param string $KeyId CMK的唯一标识
+     * @param string $Ciphertext 使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class UpdateKeyDescriptionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
-        }
-
         if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
             $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("Ciphertext",$param) and $param["Ciphertext"] !== null) {
+            $this->Ciphertext = $param["Ciphertext"];
         }
     }
 }

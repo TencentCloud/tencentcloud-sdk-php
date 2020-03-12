@@ -30,7 +30,7 @@ use TencentCloud\Cr\V20180321\Models as Models;
 * @method Models\DownloadDialogueTextResponse DownloadDialogueText(Models\DownloadDialogueTextRequest $req) 用于获取指定案件的对话文本内容，次日早上8:00后可查询前日对话文本内容。
 * @method Models\DownloadRecordListResponse DownloadRecordList(Models\DownloadRecordListRequest $req) <p>用于获取录音下载链接清单，次日早上8:00后可查询前日录音清单。</p>
 <p>注意：录音清单中的录音下载链接仅次日20:00之前有效，请及时下载。</p>
-* @method Models\DownloadReportResponse DownloadReport(Models\DownloadReportRequest $req) 用于下载当日催收和回访结果报表。当日23:00后，可获取当日催收结果，次日00:30后，可获取昨日回访结果。
+* @method Models\DownloadReportResponse DownloadReport(Models\DownloadReportRequest $req) 用于下载结果报表。当日23:00后，可获取当日到期/逾期提醒结果，次日00:30后，可获取昨日回访结果。
 * @method Models\UploadDataFileResponse UploadDataFile(Models\UploadDataFileRequest $req) <p>该接口包含上传下列文件：</p>
 <ol style="margin-bottom:10px;">
   <li>到期/逾期提醒文件：用于每天到期/逾期提醒文件的上传</li>

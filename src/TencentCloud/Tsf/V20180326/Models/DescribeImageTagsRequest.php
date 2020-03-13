@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页个数，默认为20， 取值应为1~100
  * @method integer getQueryImageIdFlag() 获取不填和0:查询 1:不查询
  * @method void setQueryImageIdFlag(integer $QueryImageIdFlag) 设置不填和0:查询 1:不查询
+ * @method string getSearchWord() 获取可用于搜索的 tag 名字
+ * @method void setSearchWord(string $SearchWord) 设置可用于搜索的 tag 名字
  */
 
 /**
@@ -52,11 +54,17 @@ class DescribeImageTagsRequest extends AbstractModel
      * @var integer 不填和0:查询 1:不查询
      */
     public $QueryImageIdFlag;
+
+    /**
+     * @var string 可用于搜索的 tag 名字
+     */
+    public $SearchWord;
     /**
      * @param string $ApplicationId 应用Id
      * @param integer $Offset 偏移量，取值从0开始
      * @param integer $Limit 分页个数，默认为20， 取值应为1~100
      * @param integer $QueryImageIdFlag 不填和0:查询 1:不查询
+     * @param string $SearchWord 可用于搜索的 tag 名字
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeImageTagsRequest extends AbstractModel
 
         if (array_key_exists("QueryImageIdFlag",$param) and $param["QueryImageIdFlag"] !== null) {
             $this->QueryImageIdFlag = $param["QueryImageIdFlag"];
+        }
+
+        if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
+            $this->SearchWord = $param["SearchWord"];
         }
     }
 }

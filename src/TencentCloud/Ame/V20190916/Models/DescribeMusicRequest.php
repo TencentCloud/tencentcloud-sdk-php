@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getItemId() 获取歌曲ID
  * @method void setItemId(string $ItemId) 设置歌曲ID
- * @method string getIdentityId() 获取User identity ID，用来唯一标识用户
- * @method void setIdentityId(string $IdentityId) 设置User identity ID，用来唯一标识用户
+ * @method string getIdentityId() 获取在应用前端播放音乐C端用户的唯一标识。无需是账户信息，用户唯一标识即可。
+ * @method void setIdentityId(string $IdentityId) 设置在应用前端播放音乐C端用户的唯一标识。无需是账户信息，用户唯一标识即可。
  * @method string getSubItemType() 获取填 MP3-64K-FTD-P 获取歌曲热门片段
  * @method void setSubItemType(string $SubItemType) 设置填 MP3-64K-FTD-P 获取歌曲热门片段
  * @method string getSsl() 获取CDN URL Protocol:HTTP or HTTPS/SSL
@@ -41,7 +41,7 @@ class DescribeMusicRequest extends AbstractModel
     public $ItemId;
 
     /**
-     * @var string User identity ID，用来唯一标识用户
+     * @var string 在应用前端播放音乐C端用户的唯一标识。无需是账户信息，用户唯一标识即可。
      */
     public $IdentityId;
 
@@ -57,7 +57,7 @@ Values:Y , N(default)
     public $Ssl;
     /**
      * @param string $ItemId 歌曲ID
-     * @param string $IdentityId User identity ID，用来唯一标识用户
+     * @param string $IdentityId 在应用前端播放音乐C端用户的唯一标识。无需是账户信息，用户唯一标识即可。
      * @param string $SubItemType 填 MP3-64K-FTD-P 获取歌曲热门片段
      * @param string $Ssl CDN URL Protocol:HTTP or HTTPS/SSL
 Values:Y , N(default)

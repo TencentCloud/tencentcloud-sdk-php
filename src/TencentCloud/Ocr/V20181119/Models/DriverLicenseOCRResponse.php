@@ -38,19 +38,25 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndDate(string $EndDate) 设置有效期截止时间
  * @method string getCardCode() 获取证号
  * @method void setCardCode(string $CardCode) 设置证号
- * @method array getRecognizeWarnCode() 获取告警码	告警码消息	                                                告警码说明
--9102	WARN_DRIVER_LICENSE_COPY_CARD	        复印件告警
--9103	WARN_DRIVER_LICENSE_SCREENED_CARD	翻拍件告警
--9106	WARN_DRIVER_LICENSE_PS_CARD	                ps告警
+ * @method array getRecognizeWarnCode() 获取Code 告警码列表和释义：
+-9102  复印件告警
+-9103  翻拍件告警
+-9106  ps告警
 注：告警码可以同时存在多个
- * @method void setRecognizeWarnCode(array $RecognizeWarnCode) 设置告警码	告警码消息	                                                告警码说明
--9102	WARN_DRIVER_LICENSE_COPY_CARD	        复印件告警
--9103	WARN_DRIVER_LICENSE_SCREENED_CARD	翻拍件告警
--9106	WARN_DRIVER_LICENSE_PS_CARD	                ps告警
+ * @method void setRecognizeWarnCode(array $RecognizeWarnCode) 设置Code 告警码列表和释义：
+-9102  复印件告警
+-9103  翻拍件告警
+-9106  ps告警
 注：告警码可以同时存在多个
- * @method array getRecognizeWarnMsg() 获取告警码说明
+ * @method array getRecognizeWarnMsg() 获取告警码说明：
+WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
+WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
+WARN_DRIVER_LICENSE_PS_CARD ps告警
 注：告警信息可以同时存在多个
- * @method void setRecognizeWarnMsg(array $RecognizeWarnMsg) 设置告警码说明
+ * @method void setRecognizeWarnMsg(array $RecognizeWarnMsg) 设置告警码说明：
+WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
+WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
+WARN_DRIVER_LICENSE_PS_CARD ps告警
 注：告警信息可以同时存在多个
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -112,16 +118,19 @@ class DriverLicenseOCRResponse extends AbstractModel
     public $CardCode;
 
     /**
-     * @var array 告警码	告警码消息	                                                告警码说明
--9102	WARN_DRIVER_LICENSE_COPY_CARD	        复印件告警
--9103	WARN_DRIVER_LICENSE_SCREENED_CARD	翻拍件告警
--9106	WARN_DRIVER_LICENSE_PS_CARD	                ps告警
+     * @var array Code 告警码列表和释义：
+-9102  复印件告警
+-9103  翻拍件告警
+-9106  ps告警
 注：告警码可以同时存在多个
      */
     public $RecognizeWarnCode;
 
     /**
-     * @var array 告警码说明
+     * @var array 告警码说明：
+WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
+WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
+WARN_DRIVER_LICENSE_PS_CARD ps告警
 注：告警信息可以同时存在多个
      */
     public $RecognizeWarnMsg;
@@ -141,12 +150,15 @@ class DriverLicenseOCRResponse extends AbstractModel
      * @param string $StartDate 有效期开始时间
      * @param string $EndDate 有效期截止时间
      * @param string $CardCode 证号
-     * @param array $RecognizeWarnCode 告警码	告警码消息	                                                告警码说明
--9102	WARN_DRIVER_LICENSE_COPY_CARD	        复印件告警
--9103	WARN_DRIVER_LICENSE_SCREENED_CARD	翻拍件告警
--9106	WARN_DRIVER_LICENSE_PS_CARD	                ps告警
+     * @param array $RecognizeWarnCode Code 告警码列表和释义：
+-9102  复印件告警
+-9103  翻拍件告警
+-9106  ps告警
 注：告警码可以同时存在多个
-     * @param array $RecognizeWarnMsg 告警码说明
+     * @param array $RecognizeWarnMsg 告警码说明：
+WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
+WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
+WARN_DRIVER_LICENSE_PS_CARD ps告警
 注：告警信息可以同时存在多个
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

@@ -14,44 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cms\V20190321\Models;
+namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getBusinessCode() 获取业务返回码
-60001：成功请求回调任务
- * @method void setBusinessCode(integer $BusinessCode) 设置业务返回码
-60001：成功请求回调任务
- * @method string getData() 获取识别返回结果
- * @method void setData(string $Data) 设置识别返回结果
+ * @method ClsSearchLogs getLogs() 获取查询结果
+ * @method void setLogs(ClsSearchLogs $Logs) 设置查询结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *VideoModeration返回参数结构体
+ *SearchClsLog返回参数结构体
  */
-class VideoModerationResponse extends AbstractModel
+class SearchClsLogResponse extends AbstractModel
 {
     /**
-     * @var integer 业务返回码
-60001：成功请求回调任务
+     * @var ClsSearchLogs 查询结果
      */
-    public $BusinessCode;
-
-    /**
-     * @var string 识别返回结果
-     */
-    public $Data;
+    public $Logs;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $BusinessCode 业务返回码
-60001：成功请求回调任务
-     * @param string $Data 识别返回结果
+     * @param ClsSearchLogs $Logs 查询结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,12 +54,9 @@ class VideoModerationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
-            $this->BusinessCode = $param["BusinessCode"];
-        }
-
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+        if (array_key_exists("Logs",$param) and $param["Logs"] !== null) {
+            $this->Logs = new ClsSearchLogs();
+            $this->Logs->deserialize($param["Logs"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

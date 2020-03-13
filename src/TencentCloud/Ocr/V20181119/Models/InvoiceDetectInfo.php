@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
 12：购车发票
 13：过路过桥费发票
 14：购物小票
- * @method Rect getRect() 获取识别出的图片在混贴票据图片中的位置信息。
- * @method void setRect(Rect $Rect) 设置识别出的图片在混贴票据图片中的位置信息。
+ * @method Rect getRect() 获取识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X,Y), (Width, Height), Angle)，详情可参考OpenCV文档。
+ * @method void setRect(Rect $Rect) 设置识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X,Y), (Width, Height), Angle)，详情可参考OpenCV文档。
  * @method string getImage() 获取入参 ReturnImage 为 True 时返回 Base64 编码后的图片。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImage(string $Image) 设置入参 ReturnImage 为 True 时返回 Base64 编码后的图片。
@@ -94,7 +94,7 @@ class InvoiceDetectInfo extends AbstractModel
     public $Type;
 
     /**
-     * @var Rect 识别出的图片在混贴票据图片中的位置信息。
+     * @var Rect 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X,Y), (Width, Height), Angle)，详情可参考OpenCV文档。
      */
     public $Rect;
 
@@ -122,7 +122,7 @@ class InvoiceDetectInfo extends AbstractModel
 12：购车发票
 13：过路过桥费发票
 14：购物小票
-     * @param Rect $Rect 识别出的图片在混贴票据图片中的位置信息。
+     * @param Rect $Rect 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X,Y), (Width, Height), Angle)，详情可参考OpenCV文档。
      * @param string $Image 入参 ReturnImage 为 True 时返回 Base64 编码后的图片。
 注意：此字段可能返回 null，表示取不到有效值。
      */

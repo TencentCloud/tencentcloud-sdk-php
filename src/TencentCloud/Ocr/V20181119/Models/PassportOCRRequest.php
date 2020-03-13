@@ -36,16 +36,10 @@ use TencentCloud\Common\AbstractModel;
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
- * @method string getType() 获取护照类型（默认CN）：
-CN：支持中国大陆居民护照，字段较多，精度更高；
-HK：支持中国香港护照（部分主要字段）；
-GENERAL：支持国外护照（部分主要字段）；
-THAI：支持泰国护照（部分主要字段）。
- * @method void setType(string $Type) 设置护照类型（默认CN）：
-CN：支持中国大陆居民护照，字段较多，精度更高；
-HK：支持中国香港护照（部分主要字段）；
-GENERAL：支持国外护照（部分主要字段）；
-THAI：支持泰国护照（部分主要字段）。
+ * @method string getType() 获取默认填写CN
+支持中国大陆居民护照。
+ * @method void setType(string $Type) 设置默认填写CN
+支持中国大陆居民护照。
  */
 
 /**
@@ -71,11 +65,8 @@ class PassportOCRRequest extends AbstractModel
     public $ImageUrl;
 
     /**
-     * @var string 护照类型（默认CN）：
-CN：支持中国大陆居民护照，字段较多，精度更高；
-HK：支持中国香港护照（部分主要字段）；
-GENERAL：支持国外护照（部分主要字段）；
-THAI：支持泰国护照（部分主要字段）。
+     * @var string 默认填写CN
+支持中国大陆居民护照。
      */
     public $Type;
     /**
@@ -88,11 +79,8 @@ THAI：支持泰国护照（部分主要字段）。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
-     * @param string $Type 护照类型（默认CN）：
-CN：支持中国大陆居民护照，字段较多，精度更高；
-HK：支持中国香港护照（部分主要字段）；
-GENERAL：支持国外护照（部分主要字段）；
-THAI：支持泰国护照（部分主要字段）。
+     * @param string $Type 默认填写CN
+支持中国大陆居民护照。
      */
     function __construct()
     {

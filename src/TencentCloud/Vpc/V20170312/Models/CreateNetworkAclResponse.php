@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cms\V20190321\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getResults() 获取概览数据集合
- * @method void setResults(array $Results) 设置概览数据集合
+ * @method NetworkAcl getNetworkAcl() 获取网络ACL实例。
+ * @method void setNetworkAcl(NetworkAcl $NetworkAcl) 设置网络ACL实例。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *DescribeModerationOverview返回参数结构体
+ *CreateNetworkAcl返回参数结构体
  */
-class DescribeModerationOverviewResponse extends AbstractModel
+class CreateNetworkAclResponse extends AbstractModel
 {
     /**
-     * @var array 概览数据集合
+     * @var NetworkAcl 网络ACL实例。
      */
-    public $Results;
+    public $NetworkAcl;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param array $Results 概览数据集合
+     * @param NetworkAcl $NetworkAcl 网络ACL实例。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +54,9 @@ class DescribeModerationOverviewResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Results",$param) and $param["Results"] !== null) {
-            $this->Results = [];
-            foreach ($param["Results"] as $key => $value){
-                $obj = new OverviewRecord();
-                $obj->deserialize($value);
-                array_push($this->Results, $obj);
-            }
+        if (array_key_exists("NetworkAcl",$param) and $param["NetworkAcl"] !== null) {
+            $this->NetworkAcl = new NetworkAcl();
+            $this->NetworkAcl->deserialize($param["NetworkAcl"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

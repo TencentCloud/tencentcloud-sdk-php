@@ -52,8 +52,8 @@ FailedOperation.UnKnowError：表示识别失败；
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
- * @method Rect getRect() 获取识别出的图片在混贴票据图片中的位置信息。
- * @method void setRect(Rect $Rect) 设置识别出的图片在混贴票据图片中的位置信息。
+ * @method Rect getRect() 获取识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X,Y), (Width, Height), Angle)，详情可参考OpenCV文档。
+ * @method void setRect(Rect $Rect) 设置识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X,Y), (Width, Height), Angle)，详情可参考OpenCV文档。
  * @method float getAngle() 获取识别出的图片在混贴票据图片中的旋转角度。
  * @method void setAngle(float $Angle) 设置识别出的图片在混贴票据图片中的旋转角度。
  * @method array getSingleInvoiceInfos() 获取识别到的内容。
@@ -91,7 +91,7 @@ FailedOperation.UnKnowError：表示识别失败；
     public $Type;
 
     /**
-     * @var Rect 识别出的图片在混贴票据图片中的位置信息。
+     * @var Rect 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X,Y), (Width, Height), Angle)，详情可参考OpenCV文档。
      */
     public $Rect;
 
@@ -122,7 +122,7 @@ FailedOperation.UnKnowError：表示识别失败；
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
-     * @param Rect $Rect 识别出的图片在混贴票据图片中的位置信息。
+     * @param Rect $Rect 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X,Y), (Width, Height), Angle)，详情可参考OpenCV文档。
      * @param float $Angle 识别出的图片在混贴票据图片中的旋转角度。
      * @param array $SingleInvoiceInfos 识别到的内容。
      */

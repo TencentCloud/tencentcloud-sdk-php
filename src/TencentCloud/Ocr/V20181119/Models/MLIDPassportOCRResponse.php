@@ -35,9 +35,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getWarn() 获取告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警
+-9106       证件遮挡告警
  * @method void setWarn(array $Warn) 设置告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警
+-9106       证件遮挡告警
  * @method string getImage() 获取证件图片
  * @method void setImage(string $Image) 设置证件图片
  * @method string getAdvancedInfo() 获取扩展字段:
@@ -106,6 +108,7 @@ class MLIDPassportOCRResponse extends AbstractModel
      * @var array 告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警
+-9106       证件遮挡告警
      */
     public $Warn;
 
@@ -142,6 +145,7 @@ class MLIDPassportOCRResponse extends AbstractModel
      * @param array $Warn 告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警
+-9106       证件遮挡告警
      * @param string $Image 证件图片
      * @param string $AdvancedInfo 扩展字段:
 {

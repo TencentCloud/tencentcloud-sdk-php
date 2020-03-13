@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfigIdList(array $ConfigIdList) 设置配置项ID列表，不传入时查询全量，低优先级
  * @method string getConfigName() 获取配置项名称，精确查询，不传入时查询全量
  * @method void setConfigName(string $ConfigName) 设置配置项名称，精确查询，不传入时查询全量
+ * @method string getConfigVersion() 获取配置项版本，精确查询，不传入时查询全量
+ * @method void setConfigVersion(string $ConfigVersion) 设置配置项版本，精确查询，不传入时查询全量
  */
 
 /**
@@ -59,12 +61,18 @@ class DescribePublicConfigsRequest extends AbstractModel
      * @var string 配置项名称，精确查询，不传入时查询全量
      */
     public $ConfigName;
+
+    /**
+     * @var string 配置项版本，精确查询，不传入时查询全量
+     */
+    public $ConfigVersion;
     /**
      * @param string $ConfigId 配置项ID，不传入时查询全量，高优先级
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 每页条数，默认为20
      * @param array $ConfigIdList 配置项ID列表，不传入时查询全量，低优先级
      * @param string $ConfigName 配置项名称，精确查询，不传入时查询全量
+     * @param string $ConfigVersion 配置项版本，精确查询，不传入时查询全量
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribePublicConfigsRequest extends AbstractModel
 
         if (array_key_exists("ConfigName",$param) and $param["ConfigName"] !== null) {
             $this->ConfigName = $param["ConfigName"];
+        }
+
+        if (array_key_exists("ConfigVersion",$param) and $param["ConfigVersion"] !== null) {
+            $this->ConfigVersion = $param["ConfigVersion"];
         }
     }
 }

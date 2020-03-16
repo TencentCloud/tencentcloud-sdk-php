@@ -19,7 +19,9 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method DescribePolicyConditionListConfigManual getConfigManual() 获取指标配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigManual(DescribePolicyConditionListConfigManual $ConfigManual) 设置指标配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMetricId() 获取指标id
  * @method void setMetricId(integer $MetricId) 设置指标id
  * @method string getMetricShowName() 获取指标名称
@@ -35,6 +37,7 @@ class DescribePolicyConditionListMetric extends AbstractModel
 {
     /**
      * @var DescribePolicyConditionListConfigManual 指标配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigManual;
 
@@ -54,6 +57,7 @@ class DescribePolicyConditionListMetric extends AbstractModel
     public $MetricUnit;
     /**
      * @param DescribePolicyConditionListConfigManual $ConfigManual 指标配置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MetricId 指标id
      * @param string $MetricShowName 指标名称
      * @param string $MetricUnit 指标单位

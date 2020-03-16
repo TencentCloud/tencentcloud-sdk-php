@@ -50,8 +50,8 @@ REJECTED:拒绝
  VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
  * @method void setNetworkType(string $NetworkType) 设置网络类型，分别为VPC、BMVPC、CCN
  VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
- * @method string getNetworkRegion() 获取VPC地域
- * @method void setNetworkRegion(string $NetworkRegion) 设置VPC地域
+ * @method string getNetworkRegion() 获取VPC地域对应的网络名，如ap-guangzhou
+ * @method void setNetworkRegion(string $NetworkRegion) 设置VPC地域对应的网络名，如ap-guangzhou
  * @method string getVpcId() 获取私有网络统一 ID 或者黑石网络统一 ID
  * @method void setVpcId(string $VpcId) 设置私有网络统一 ID 或者黑石网络统一 ID
  * @method string getDirectConnectGatewayId() 获取专线网关 ID
@@ -74,6 +74,32 @@ REJECTED:拒绝
  * @method void setCreatedTime(string $CreatedTime) 设置专线通道创建时间
  * @method integer getBandwidth() 获取专线通道带宽值
  * @method void setBandwidth(integer $Bandwidth) 设置专线通道带宽值
+ * @method array getTagSet() 获取专线通道标签值
+ * @method void setTagSet(array $TagSet) 设置专线通道标签值
+ * @method string getNetDetectId() 获取关联的网络自定义探测ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetDetectId(string $NetDetectId) 设置关联的网络自定义探测ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableBGPCommunity() 获取BGP community开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableBGPCommunity(boolean $EnableBGPCommunity) 设置BGP community开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNatType() 获取是否为Nat通道
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNatType(integer $NatType) 设置是否为Nat通道
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVpcRegion() 获取VPC地域简码，如gz、cd
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcRegion(string $VpcRegion) 设置VPC地域简码，如gz、cd
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBfdEnable() 获取是否开启BFD
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBfdEnable(integer $BfdEnable) 设置是否开启BFD
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAccessPointType() 获取专线通道接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessPointType(string $AccessPointType) 设置专线通道接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -122,7 +148,7 @@ REJECTED:拒绝
     public $NetworkType;
 
     /**
-     * @var string VPC地域
+     * @var string VPC地域对应的网络名，如ap-guangzhou
      */
     public $NetworkRegion;
 
@@ -180,6 +206,47 @@ REJECTED:拒绝
      * @var integer 专线通道带宽值
      */
     public $Bandwidth;
+
+    /**
+     * @var array 专线通道标签值
+     */
+    public $TagSet;
+
+    /**
+     * @var string 关联的网络自定义探测ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetDetectId;
+
+    /**
+     * @var boolean BGP community开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableBGPCommunity;
+
+    /**
+     * @var integer 是否为Nat通道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NatType;
+
+    /**
+     * @var string VPC地域简码，如gz、cd
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcRegion;
+
+    /**
+     * @var integer 是否开启BFD
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BfdEnable;
+
+    /**
+     * @var string 专线通道接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccessPointType;
     /**
      * @param string $DirectConnectTunnelId 专线通道ID
      * @param string $DirectConnectId 物理专线ID
@@ -197,7 +264,7 @@ REJECTED:拒绝
      * @param string $OwnerAccount 专线通道的拥有者，开发商账号 ID
      * @param string $NetworkType 网络类型，分别为VPC、BMVPC、CCN
  VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
-     * @param string $NetworkRegion VPC地域
+     * @param string $NetworkRegion VPC地域对应的网络名，如ap-guangzhou
      * @param string $VpcId 私有网络统一 ID 或者黑石网络统一 ID
      * @param string $DirectConnectGatewayId 专线网关 ID
      * @param string $RouteType BGP ：BGP路由 STATIC：静态 默认为 BGP 路由
@@ -209,6 +276,19 @@ REJECTED:拒绝
      * @param string $DirectConnectTunnelName 专线通道名称
      * @param string $CreatedTime 专线通道创建时间
      * @param integer $Bandwidth 专线通道带宽值
+     * @param array $TagSet 专线通道标签值
+     * @param string $NetDetectId 关联的网络自定义探测ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableBGPCommunity BGP community开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NatType 是否为Nat通道
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VpcRegion VPC地域简码，如gz、cd
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BfdEnable 是否开启BFD
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AccessPointType 专线通道接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -298,6 +378,39 @@ REJECTED:拒绝
 
         if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
             $this->Bandwidth = $param["Bandwidth"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
+        }
+
+        if (array_key_exists("NetDetectId",$param) and $param["NetDetectId"] !== null) {
+            $this->NetDetectId = $param["NetDetectId"];
+        }
+
+        if (array_key_exists("EnableBGPCommunity",$param) and $param["EnableBGPCommunity"] !== null) {
+            $this->EnableBGPCommunity = $param["EnableBGPCommunity"];
+        }
+
+        if (array_key_exists("NatType",$param) and $param["NatType"] !== null) {
+            $this->NatType = $param["NatType"];
+        }
+
+        if (array_key_exists("VpcRegion",$param) and $param["VpcRegion"] !== null) {
+            $this->VpcRegion = $param["VpcRegion"];
+        }
+
+        if (array_key_exists("BfdEnable",$param) and $param["BfdEnable"] !== null) {
+            $this->BfdEnable = $param["BfdEnable"];
+        }
+
+        if (array_key_exists("AccessPointType",$param) and $param["AccessPointType"] !== null) {
+            $this->AccessPointType = $param["AccessPointType"];
         }
     }
 }

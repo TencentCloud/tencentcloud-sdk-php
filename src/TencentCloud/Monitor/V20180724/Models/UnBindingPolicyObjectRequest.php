@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(integer $GroupId) 设置策略组id
  * @method array getUniqueId() 获取待删除对象实例的唯一id列表
  * @method void setUniqueId(array $UniqueId) 设置待删除对象实例的唯一id列表
+ * @method integer getInstanceGroupId() 获取实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
+ * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
  */
 
 /**
@@ -45,10 +47,16 @@ class UnBindingPolicyObjectRequest extends AbstractModel
      * @var array 待删除对象实例的唯一id列表
      */
     public $UniqueId;
+
+    /**
+     * @var integer 实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
+     */
+    public $InstanceGroupId;
     /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $GroupId 策略组id
      * @param array $UniqueId 待删除对象实例的唯一id列表
+     * @param integer $InstanceGroupId 实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class UnBindingPolicyObjectRequest extends AbstractModel
 
         if (array_key_exists("UniqueId",$param) and $param["UniqueId"] !== null) {
             $this->UniqueId = $param["UniqueId"];
+        }
+
+        if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
+            $this->InstanceGroupId = $param["InstanceGroupId"];
         }
     }
 }

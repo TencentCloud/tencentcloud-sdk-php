@@ -176,6 +176,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHiveMetaDb(string $HiveMetaDb) 设置Hive元数据信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getServiceClass() 获取集群类型:EMR,CLICKHOUSE,DRUID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceClass(string $ServiceClass) 设置集群类型:EMR,CLICKHOUSE,DRUID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -365,6 +369,12 @@ class ClusterInstancesInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HiveMetaDb;
+
+    /**
+     * @var string 集群类型:EMR,CLICKHOUSE,DRUID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceClass;
     /**
      * @param integer $Id ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -444,6 +454,8 @@ class ClusterInstancesInfo extends AbstractModel
      * @param array $Tags 标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HiveMetaDb Hive元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ServiceClass 集群类型:EMR,CLICKHOUSE,DRUID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -566,6 +578,10 @@ class ClusterInstancesInfo extends AbstractModel
 
         if (array_key_exists("HiveMetaDb",$param) and $param["HiveMetaDb"] !== null) {
             $this->HiveMetaDb = $param["HiveMetaDb"];
+        }
+
+        if (array_key_exists("ServiceClass",$param) and $param["ServiceClass"] !== null) {
+            $this->ServiceClass = $param["ServiceClass"];
         }
     }
 }

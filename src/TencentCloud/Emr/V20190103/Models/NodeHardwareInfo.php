@@ -158,6 +158,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置节点绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAutoFlag() 获取是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoFlag(integer $AutoFlag) 设置是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -374,6 +378,12 @@ class NodeHardwareInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
+
+    /**
+     * @var integer 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoFlag;
     /**
      * @param integer $AppId 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -444,6 +454,8 @@ class NodeHardwareInfo extends AbstractModel
      * @param integer $Destroyable 此节点是否可销毁，1可销毁，0不可销毁
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 节点绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AutoFlag 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -607,6 +619,10 @@ class NodeHardwareInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("AutoFlag",$param) and $param["AutoFlag"] !== null) {
+            $this->AutoFlag = $param["AutoFlag"];
         }
     }
 }

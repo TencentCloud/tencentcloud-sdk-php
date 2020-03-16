@@ -19,17 +19,11 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method integer getBitrate() 获取音频流的码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBitrate(integer $Bitrate) 设置音频流的码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSamplingRate() 获取音频流的采样率，单位：hz。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSamplingRate(integer $SamplingRate) 设置音频流的采样率，单位：hz。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCodec() 获取音频流的编码格式，例如 aac。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCodec(string $Codec) 设置音频流的编码格式，例如 aac。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -39,28 +33,22 @@ class MediaAudioStreamItem extends AbstractModel
 {
     /**
      * @var integer 音频流的码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bitrate;
 
     /**
      * @var integer 音频流的采样率，单位：hz。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SamplingRate;
 
     /**
      * @var string 音频流的编码格式，例如 aac。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Codec;
     /**
      * @param integer $Bitrate 音频流的码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SamplingRate 音频流的采样率，单位：hz。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Codec 音频流的编码格式，例如 aac。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModule(string $Module) 设置固定值，为"monitor"
  * @method integer getGroupId() 获取策略组id
  * @method void setGroupId(integer $GroupId) 设置策略组id
+ * @method integer getLimit() 获取分页参数，每页返回的数量，取值1~100，默认20
+ * @method void setLimit(integer $Limit) 设置分页参数，每页返回的数量，取值1~100，默认20
+ * @method integer getOffset() 获取分页参数，页偏移量，从0开始计数，默认0
+ * @method void setOffset(integer $Offset) 设置分页参数，页偏移量，从0开始计数，默认0
+ * @method array getDimensions() 获取筛选对象的维度信息
+ * @method void setDimensions(array $Dimensions) 设置筛选对象的维度信息
  */
 
 /**
@@ -38,9 +44,27 @@ class DescribeBindingPolicyObjectListRequest extends AbstractModel
      * @var integer 策略组id
      */
     public $GroupId;
+
+    /**
+     * @var integer 分页参数，每页返回的数量，取值1~100，默认20
+     */
+    public $Limit;
+
+    /**
+     * @var integer 分页参数，页偏移量，从0开始计数，默认0
+     */
+    public $Offset;
+
+    /**
+     * @var array 筛选对象的维度信息
+     */
+    public $Dimensions;
     /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $GroupId 策略组id
+     * @param integer $Limit 分页参数，每页返回的数量，取值1~100，默认20
+     * @param integer $Offset 分页参数，页偏移量，从0开始计数，默认0
+     * @param array $Dimensions 筛选对象的维度信息
      */
     function __construct()
     {
@@ -60,6 +84,23 @@ class DescribeBindingPolicyObjectListRequest extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Dimensions",$param) and $param["Dimensions"] !== null) {
+            $this->Dimensions = [];
+            foreach ($param["Dimensions"] as $key => $value){
+                $obj = new DescribeBindingPolicyObjectListDimension();
+                $obj->deserialize($value);
+                array_push($this->Dimensions, $obj);
+            }
         }
     }
 }

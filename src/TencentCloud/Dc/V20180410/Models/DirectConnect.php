@@ -100,6 +100,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFaultReportContactNumber(string $FaultReportContactNumber) 设置报障联系电话。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagSet() 获取标签键值对
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagSet(array $TagSet) 设置标签键值对
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAccessPointType() 获取物理专线的接入点类型。
+ * @method void setAccessPointType(string $AccessPointType) 设置物理专线的接入点类型。
  */
 
 /**
@@ -235,6 +241,17 @@ class DirectConnect extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FaultReportContactNumber;
+
+    /**
+     * @var array 标签键值对
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagSet;
+
+    /**
+     * @var string 物理专线的接入点类型。
+     */
+    public $AccessPointType;
     /**
      * @param string $DirectConnectId 物理专线ID。
      * @param string $DirectConnectName 物理专线的名称。
@@ -277,6 +294,9 @@ class DirectConnect extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FaultReportContactNumber 报障联系电话。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagSet 标签键值对
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AccessPointType 物理专线的接入点类型。
      */
     function __construct()
     {
@@ -376,6 +396,19 @@ class DirectConnect extends AbstractModel
 
         if (array_key_exists("FaultReportContactNumber",$param) and $param["FaultReportContactNumber"] !== null) {
             $this->FaultReportContactNumber = $param["FaultReportContactNumber"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
+        }
+
+        if (array_key_exists("AccessPointType",$param) and $param["AccessPointType"] !== null) {
+            $this->AccessPointType = $param["AccessPointType"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Gs\V20191118\Models as Models;
 /**
 * @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) 创建会话
 * @method Models\DescribeWorkersResponse DescribeWorkers(Models\DescribeWorkersRequest $req) 查询空闲机器数量
+* @method Models\DescribeWorkersInfoResponse DescribeWorkersInfo(Models\DescribeWorkersInfoRequest $req) 获取机器信息
+* @method Models\ModifyWorkersResponse ModifyWorkers(Models\ModifyWorkersRequest $req) 修改机器信息
 * @method Models\StopGameResponse StopGame(Models\StopGameRequest $req) 强制退出游戏
 * @method Models\TrylockWorkerResponse TrylockWorker(Models\TrylockWorkerRequest $req) 尝试锁定机器
  */

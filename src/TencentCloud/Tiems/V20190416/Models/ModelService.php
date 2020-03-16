@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGpuType(string $GpuType) 设置GPU类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogTopicId() 获取Cls日志主题Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogTopicId(string $LogTopicId) 设置Cls日志主题Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -226,6 +230,12 @@ class ModelService extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GpuType;
+
+    /**
+     * @var string Cls日志主题Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogTopicId;
     /**
      * @param string $Id 服务ID
      * @param string $Cluster 运行集群
@@ -260,6 +270,8 @@ class ModelService extends AbstractModel
      * @param string $Description 备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GpuType GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogTopicId Cls日志主题Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -379,6 +391,10 @@ class ModelService extends AbstractModel
 
         if (array_key_exists("GpuType",$param) and $param["GpuType"] !== null) {
             $this->GpuType = $param["GpuType"];
+        }
+
+        if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
+            $this->LogTopicId = $param["LogTopicId"];
         }
     }
 }

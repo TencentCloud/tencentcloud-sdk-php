@@ -24,16 +24,12 @@ use TencentCloud\Common\AbstractModel;
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
 <li>70000：内部服务错误，建议重试。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrCode(integer $ErrCode) 设置错误码，0 表示成功，其他值表示失败：
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
 <li>70000：内部服务错误，建议重试。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CoverBySnapshotTaskInput getInput() 获取对视频截图做封面任务的输入。
  * @method void setInput(CoverBySnapshotTaskInput $Input) 设置对视频截图做封面任务的输入。
  * @method CoverBySnapshotTaskOutput getOutput() 获取对视频截图做封面任务的输出。
@@ -55,13 +51,11 @@ class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
 <li>70000：内部服务错误，建议重试。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
 
     /**
      * @var string 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
@@ -80,9 +74,7 @@ class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
 <li>70000：内部服务错误，建议重试。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverBySnapshotTaskInput $Input 对视频截图做封面任务的输入。
      * @param CoverBySnapshotTaskOutput $Output 对视频截图做封面任务的输出。
      */

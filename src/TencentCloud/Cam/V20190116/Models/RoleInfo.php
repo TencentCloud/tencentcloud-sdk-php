@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleType(string $RoleType) 设置角色类型，取user或system
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSessionDuration() 获取有效时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionDuration(integer $SessionDuration) 设置有效时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -83,6 +87,12 @@ class RoleInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleType;
+
+    /**
+     * @var integer 有效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionDuration;
     /**
      * @param string $RoleId 角色ID
      * @param string $RoleName 角色名称
@@ -92,6 +102,8 @@ class RoleInfo extends AbstractModel
      * @param string $UpdateTime 角色的最近一次时间
      * @param integer $ConsoleLogin 角色是否允许登录
      * @param string $RoleType 角色类型，取user或system
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SessionDuration 有效时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -136,6 +148,10 @@ class RoleInfo extends AbstractModel
 
         if (array_key_exists("RoleType",$param) and $param["RoleType"] !== null) {
             $this->RoleType = $param["RoleType"];
+        }
+
+        if (array_key_exists("SessionDuration",$param) and $param["SessionDuration"] !== null) {
+            $this->SessionDuration = $param["SessionDuration"];
         }
     }
 }

@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method string getOrderField() 获取排序字段, 支持"CreateTime"排序
+ * @method void setOrderField(string $OrderField) 设置排序字段, 支持"CreateTime"排序
+ * @method string getOrderDirection() 获取排序方向, “asc”、“desc”
+ * @method void setOrderDirection(string $OrderDirection) 设置排序方向, “asc”、“desc”
  */
 
 /**
@@ -64,6 +68,16 @@ class DescribeCustomerGatewaysRequest extends AbstractModel
      * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
+
+    /**
+     * @var string 排序字段, 支持"CreateTime"排序
+     */
+    public $OrderField;
+
+    /**
+     * @var string 排序方向, “asc”、“desc”
+     */
+    public $OrderDirection;
     /**
      * @param array $CustomerGatewayIds 对端网关ID，例如：bmcgw-2wqq41m9。每次请求的实例的上限为100。参数不支持同时指定CustomerGatewayIds和Filters。
      * @param array $Filters 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定CustomerGatewayIds和Filters。
@@ -73,6 +87,8 @@ class DescribeCustomerGatewaysRequest extends AbstractModel
 <li>zone - String - （过滤条件）对端所在可用区，形如：ap-guangzhou-2。</li>
      * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
+     * @param string $OrderField 排序字段, 支持"CreateTime"排序
+     * @param string $OrderDirection 排序方向, “asc”、“desc”
      */
     function __construct()
     {
@@ -105,6 +121,14 @@ class DescribeCustomerGatewaysRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
+        }
+
+        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
+            $this->OrderDirection = $param["OrderDirection"];
         }
     }
 }

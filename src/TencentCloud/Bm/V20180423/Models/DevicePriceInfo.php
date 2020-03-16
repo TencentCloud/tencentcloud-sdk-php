@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealTotalCost(integer $RealTotalCost) 设置折扣价
  * @method integer getTimeSpan() 获取计费时长
  * @method void setTimeSpan(integer $TimeSpan) 设置计费时长
- * @method string getTimeUnit() 获取计费时长单位, m:按月计费; d:按天计费
- * @method void setTimeUnit(string $TimeUnit) 设置计费时长单位, m:按月计费; d:按天计费
+ * @method string getTimeUnit() 获取计费时长单位, M:按月计费; D:按天计费
+ * @method void setTimeUnit(string $TimeUnit) 设置计费时长单位, M:按月计费; D:按天计费
  * @method integer getGoodsCount() 获取商品数量
  * @method void setGoodsCount(integer $GoodsCount) 设置商品数量
  */
@@ -135,7 +135,7 @@ class DevicePriceInfo extends AbstractModel
     public $TimeSpan;
 
     /**
-     * @var string 计费时长单位, m:按月计费; d:按天计费
+     * @var string 计费时长单位, M:按月计费; D:按天计费
      */
     public $TimeUnit;
 
@@ -159,7 +159,7 @@ class DevicePriceInfo extends AbstractModel
      * @param integer $TotalCost 原价
      * @param integer $RealTotalCost 折扣价
      * @param integer $TimeSpan 计费时长
-     * @param string $TimeUnit 计费时长单位, m:按月计费; d:按天计费
+     * @param string $TimeUnit 计费时长单位, M:按月计费; D:按天计费
      * @param integer $GoodsCount 商品数量
      */
     function __construct()

@@ -44,6 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRentTag(integer $RentTag) 设置是否租用域名
  * @method string getRentExpireTime() 获取租用域名过期时间
  * @method void setRentExpireTime(string $RentExpireTime) 设置租用域名过期时间
+ * @method integer getIsMiniProgramLive() 获取0：标准直播，
+1：小程序直播。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsMiniProgramLive(integer $IsMiniProgramLive) 设置0：标准直播，
+1：小程序直播。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -107,6 +113,13 @@ class DomainInfo extends AbstractModel
      * @var string 租用域名过期时间
      */
     public $RentExpireTime;
+
+    /**
+     * @var integer 0：标准直播，
+1：小程序直播。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsMiniProgramLive;
     /**
      * @param string $Name 直播域名
      * @param integer $Type 域名类型。0-推流，1-播放
@@ -121,6 +134,9 @@ class DomainInfo extends AbstractModel
      * @param string $CurrentCName 当前客户使用的cname信息
      * @param integer $RentTag 是否租用域名
      * @param string $RentExpireTime 租用域名过期时间
+     * @param integer $IsMiniProgramLive 0：标准直播，
+1：小程序直播。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -176,6 +192,10 @@ class DomainInfo extends AbstractModel
 
         if (array_key_exists("RentExpireTime",$param) and $param["RentExpireTime"] !== null) {
             $this->RentExpireTime = $param["RentExpireTime"];
+        }
+
+        if (array_key_exists("IsMiniProgramLive",$param) and $param["IsMiniProgramLive"] !== null) {
+            $this->IsMiniProgramLive = $param["IsMiniProgramLive"];
         }
     }
 }

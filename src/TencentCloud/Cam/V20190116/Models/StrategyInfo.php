@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeactived(integer $Deactived) 设置是否已下线
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDeactivedDetail() 获取已下线产品列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeactivedDetail(array $DeactivedDetail) 设置已下线产品列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -109,6 +113,12 @@ class StrategyInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Deactived;
+
+    /**
+     * @var array 已下线产品列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeactivedDetail;
     /**
      * @param integer $PolicyId 策略ID。
      * @param string $PolicyName 策略名称。
@@ -124,6 +134,8 @@ class StrategyInfo extends AbstractModel
      * @param integer $IsAttached 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Deactived 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DeactivedDetail 已下线产品列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -176,6 +188,10 @@ class StrategyInfo extends AbstractModel
 
         if (array_key_exists("Deactived",$param) and $param["Deactived"] !== null) {
             $this->Deactived = $param["Deactived"];
+        }
+
+        if (array_key_exists("DeactivedDetail",$param) and $param["DeactivedDetail"] !== null) {
+            $this->DeactivedDetail = $param["DeactivedDetail"];
         }
     }
 }

@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置VPC网段
  * @method string getVpcName() 获取VPC名称
  * @method void setVpcName(string $VpcName) 设置VPC名称
+ * @method string getVpnGatewayName() 获取VPN网关名称
+ * @method void setVpnGatewayName(string $VpnGatewayName) 设置VPN网关名称
+ * @method string getCustomerGatewayName() 获取对端网关名称
+ * @method void setCustomerGatewayName(string $CustomerGatewayName) 设置对端网关名称
+ * @method array getDestinationCidr() 获取IPSEC VPN通道路由策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDestinationCidr(array $DestinationCidr) 设置IPSEC VPN通道路由策略
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -136,6 +144,22 @@ class VpnConnection extends AbstractModel
      * @var string VPC名称
      */
     public $VpcName;
+
+    /**
+     * @var string VPN网关名称
+     */
+    public $VpnGatewayName;
+
+    /**
+     * @var string 对端网关名称
+     */
+    public $CustomerGatewayName;
+
+    /**
+     * @var array IPSEC VPN通道路由策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DestinationCidr;
     /**
      * @param string $VpnConnectionId 通道实例ID。
      * @param string $VpnConnectionName 通道名称。
@@ -153,6 +177,10 @@ class VpnConnection extends AbstractModel
      * @param string $Zone 可用区
      * @param string $VpcCidrBlock VPC网段
      * @param string $VpcName VPC名称
+     * @param string $VpnGatewayName VPN网关名称
+     * @param string $CustomerGatewayName 对端网关名称
+     * @param array $DestinationCidr IPSEC VPN通道路由策略
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -235,6 +263,18 @@ class VpnConnection extends AbstractModel
 
         if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
             $this->VpcName = $param["VpcName"];
+        }
+
+        if (array_key_exists("VpnGatewayName",$param) and $param["VpnGatewayName"] !== null) {
+            $this->VpnGatewayName = $param["VpnGatewayName"];
+        }
+
+        if (array_key_exists("CustomerGatewayName",$param) and $param["CustomerGatewayName"] !== null) {
+            $this->CustomerGatewayName = $param["CustomerGatewayName"];
+        }
+
+        if (array_key_exists("DestinationCidr",$param) and $param["DestinationCidr"] !== null) {
+            $this->DestinationCidr = $param["DestinationCidr"];
         }
     }
 }

@@ -126,9 +126,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectInfo(ProjectInfo $ProjectInfo) 设置项目信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getBoundResource() 获取需要权限的资源。
+ * @method array getBoundResource() 获取关联的云资源，暂不可用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBoundResource(array $BoundResource) 设置需要权限的资源。
+ * @method void setBoundResource(array $BoundResource) 设置关联的云资源，暂不可用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeployable() 获取是否可部署。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -304,7 +304,7 @@ class Certificates extends AbstractModel
     public $ProjectInfo;
 
     /**
-     * @var array 需要权限的资源。
+     * @var array 关联的云资源，暂不可用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BoundResource;
@@ -369,7 +369,7 @@ class Certificates extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectInfo $ProjectInfo 项目信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $BoundResource 需要权限的资源。
+     * @param array $BoundResource 关联的云资源，暂不可用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Deployable 是否可部署。
 注意：此字段可能返回 null，表示取不到有效值。

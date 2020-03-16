@@ -100,6 +100,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachine(string $Machine) 设置机器型号
  * @method integer getIsEncryptSupported() 获取是否支持数据加密。1-支持；0-不支持
  * @method void setIsEncryptSupported(integer $IsEncryptSupported) 设置是否支持数据加密。1-支持；0-不支持
+ * @method integer getCpu() 获取实例CPU核数
+ * @method void setCpu(integer $Cpu) 设置实例CPU核数
  */
 
 /**
@@ -299,6 +301,11 @@ class DBInstance extends AbstractModel
      * @var integer 是否支持数据加密。1-支持；0-不支持
      */
     public $IsEncryptSupported;
+
+    /**
+     * @var integer 实例CPU核数
+     */
+    public $Cpu;
     /**
      * @param string $InstanceId 实例 ID，唯一标识一个 TDSQL 实例
      * @param string $InstanceName 实例名称，用户可修改
@@ -341,6 +348,7 @@ class DBInstance extends AbstractModel
      * @param integer $IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
      * @param string $Machine 机器型号
      * @param integer $IsEncryptSupported 是否支持数据加密。1-支持；0-不支持
+     * @param integer $Cpu 实例CPU核数
      */
     function __construct()
     {
@@ -504,6 +512,10 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("IsEncryptSupported",$param) and $param["IsEncryptSupported"] !== null) {
             $this->IsEncryptSupported = $param["IsEncryptSupported"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

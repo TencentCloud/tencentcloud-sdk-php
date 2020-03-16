@@ -31,7 +31,7 @@ SD、HD、UHD1、UHD2、AUDIO
  */
 
 /**
- *设置加密秘钥所需的参数
+ *设置加密密钥所需的参数
  */
 class KeyParam extends AbstractModel
 {

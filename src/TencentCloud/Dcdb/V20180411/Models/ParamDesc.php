@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefault(string $Default) 设置系统默认值
  * @method ParamConstraint getConstraint() 获取参数限制
  * @method void setConstraint(ParamConstraint $Constraint) 设置参数限制
+ * @method boolean getHaveSetValue() 获取是否有设置过值，false:没有设置过值，true:有设置过值。
+ * @method void setHaveSetValue(boolean $HaveSetValue) 设置是否有设置过值，false:没有设置过值，true:有设置过值。
  */
 
 /**
@@ -62,6 +64,11 @@ class ParamDesc extends AbstractModel
      * @var ParamConstraint 参数限制
      */
     public $Constraint;
+
+    /**
+     * @var boolean 是否有设置过值，false:没有设置过值，true:有设置过值。
+     */
+    public $HaveSetValue;
     /**
      * @param string $Param 参数名字
      * @param string $Value 当前参数值
@@ -69,6 +76,7 @@ class ParamDesc extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Default 系统默认值
      * @param ParamConstraint $Constraint 参数限制
+     * @param boolean $HaveSetValue 是否有设置过值，false:没有设置过值，true:有设置过值。
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class ParamDesc extends AbstractModel
         if (array_key_exists("Constraint",$param) and $param["Constraint"] !== null) {
             $this->Constraint = new ParamConstraint();
             $this->Constraint->deserialize($param["Constraint"]);
+        }
+
+        if (array_key_exists("HaveSetValue",$param) and $param["HaveSetValue"] !== null) {
+            $this->HaveSetValue = $param["HaveSetValue"];
         }
     }
 }

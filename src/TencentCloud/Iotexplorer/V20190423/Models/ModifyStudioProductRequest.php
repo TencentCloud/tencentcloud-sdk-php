@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductDesc(string $ProductDesc) 设置产品描述
  * @method integer getModuleId() 获取模型ID
  * @method void setModuleId(integer $ModuleId) 设置模型ID
+ * @method string getEnableProductScript() 获取是否打开二进制转Json功能, 取值为字符串 true/false
+ * @method void setEnableProductScript(string $EnableProductScript) 设置是否打开二进制转Json功能, 取值为字符串 true/false
  */
 
 /**
@@ -52,11 +54,17 @@ class ModifyStudioProductRequest extends AbstractModel
      * @var integer 模型ID
      */
     public $ModuleId;
+
+    /**
+     * @var string 是否打开二进制转Json功能, 取值为字符串 true/false
+     */
+    public $EnableProductScript;
     /**
      * @param string $ProductId 产品ID
      * @param string $ProductName 产品名称
      * @param string $ProductDesc 产品描述
      * @param integer $ModuleId 模型ID
+     * @param string $EnableProductScript 是否打开二进制转Json功能, 取值为字符串 true/false
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyStudioProductRequest extends AbstractModel
 
         if (array_key_exists("ModuleId",$param) and $param["ModuleId"] !== null) {
             $this->ModuleId = $param["ModuleId"];
+        }
+
+        if (array_key_exists("EnableProductScript",$param) and $param["EnableProductScript"] !== null) {
+            $this->EnableProductScript = $param["EnableProductScript"];
         }
     }
 }

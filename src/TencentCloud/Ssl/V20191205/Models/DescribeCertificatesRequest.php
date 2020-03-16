@@ -18,8 +18,8 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getOffset() 获取页数。
- * @method void setOffset(integer $Offset) 设置页数。
+ * @method integer getOffset() 获取分页偏移量，从0开始
+ * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始
  * @method integer getLimit() 获取每页数量。
  * @method void setLimit(integer $Limit) 设置每页数量。
  * @method string getSearchKey() 获取搜索关键词。
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCertificatesRequest extends AbstractModel
 {
     /**
-     * @var integer 页数。
+     * @var integer 分页偏移量，从0开始
      */
     public $Offset;
 
@@ -81,7 +81,7 @@ class DescribeCertificatesRequest extends AbstractModel
      */
     public $Deployable;
     /**
-     * @param integer $Offset 页数。
+     * @param integer $Offset 分页偏移量，从0开始
      * @param integer $Limit 每页数量。
      * @param string $SearchKey 搜索关键词。
      * @param string $CertificateType 证书类型，可选值：CA，SVR。

@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceGroup(DescribePolicyGroupListGroupInstanceGroup $InstanceGroup) 设置策略组绑定的实例组信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsUnionRule() 获取且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsUnionRule(integer $IsUnionRule) 设置且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -172,6 +176,12 @@ class DescribePolicyGroupListGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceGroup;
+
+    /**
+     * @var integer 且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsUnionRule;
     /**
      * @param integer $GroupId 策略组id
      * @param string $GroupName 策略组名称
@@ -196,6 +206,8 @@ class DescribePolicyGroupListGroup extends AbstractModel
      * @param DescribePolicyGroupInfoConditionTpl $ConditionsTemp 模板策略组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DescribePolicyGroupListGroupInstanceGroup $InstanceGroup 策略组绑定的实例组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsUnionRule 且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -301,6 +313,10 @@ class DescribePolicyGroupListGroup extends AbstractModel
         if (array_key_exists("InstanceGroup",$param) and $param["InstanceGroup"] !== null) {
             $this->InstanceGroup = new DescribePolicyGroupListGroupInstanceGroup();
             $this->InstanceGroup->deserialize($param["InstanceGroup"]);
+        }
+
+        if (array_key_exists("IsUnionRule",$param) and $param["IsUnionRule"] !== null) {
+            $this->IsUnionRule = $param["IsUnionRule"];
         }
     }
 }

@@ -35,6 +35,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
 * @method Models\CreateL7RuleCertResponse CreateL7RuleCert(Models\CreateL7RuleCertRequest $req) 配置7层转发规则的证书
 * @method Models\CreateL7RulesResponse CreateL7Rules(Models\CreateL7RulesRequest $req) 添加7层(网站)转发规则
 * @method Models\CreateL7RulesUploadResponse CreateL7RulesUpload(Models\CreateL7RulesUploadRequest $req) 批量上传7层转发规则
+* @method Models\CreateNetReturnResponse CreateNetReturn(Models\CreateNetReturnRequest $req) 高防IP专业版一键切回源站
 * @method Models\CreateUnblockIpResponse CreateUnblockIp(Models\CreateUnblockIpRequest $req) IP解封操作
 * @method Models\DeleteCCFrequencyRulesResponse DeleteCCFrequencyRules(Models\DeleteCCFrequencyRulesRequest $req) 删除CC防护的访问频率控制规则
 * @method Models\DeleteCCSelfDefinePolicyResponse DeleteCCSelfDefinePolicy(Models\DeleteCCSelfDefinePolicyRequest $req) 删除CC自定义策略
@@ -114,6 +115,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
 * @method Models\ModifyL4KeepTimeResponse ModifyL4KeepTime(Models\ModifyL4KeepTimeRequest $req) 修改L4转发规则的会话保持，支持的子产品：高防IP、高防IP专业版
 * @method Models\ModifyL4RulesResponse ModifyL4Rules(Models\ModifyL4RulesRequest $req) 修改L4转发规则
 * @method Models\ModifyL7RulesResponse ModifyL7Rules(Models\ModifyL7RulesRequest $req) 修改L7转发规则
+* @method Models\ModifyNetReturnSwitchResponse ModifyNetReturnSwitch(Models\ModifyNetReturnSwitchRequest $req) 在客户收攻击或者被封堵时，切回到源站，并设置回切的时长
 * @method Models\ModifyResBindDDoSPolicyResponse ModifyResBindDDoSPolicy(Models\ModifyResBindDDoSPolicyRequest $req) 资源实例绑定DDoS高级策略
 * @method Models\ModifyResourceRenewFlagResponse ModifyResourceRenewFlag(Models\ModifyResourceRenewFlagRequest $req) 修改资源自动续费标记
  */

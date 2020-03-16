@@ -62,6 +62,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置集群ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNamespaceResourceType() 获取集群资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNamespaceResourceType(string $NamespaceResourceType) 设置集群资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNamespaceType() 获取命名空间类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNamespaceType(string $NamespaceType) 设置命名空间类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -134,6 +142,18 @@ class Namespace extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
+
+    /**
+     * @var string 集群资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NamespaceResourceType;
+
+    /**
+     * @var string 命名空间类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NamespaceType;
     /**
      * @param string $NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -156,6 +176,10 @@ class Namespace extends AbstractModel
      * @param array $ClusterList 集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NamespaceResourceType 集群资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NamespaceType 命名空间类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -217,6 +241,14 @@ class Namespace extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("NamespaceResourceType",$param) and $param["NamespaceResourceType"] !== null) {
+            $this->NamespaceResourceType = $param["NamespaceResourceType"];
+        }
+
+        if (array_key_exists("NamespaceType",$param) and $param["NamespaceType"] !== null) {
+            $this->NamespaceType = $param["NamespaceType"];
         }
     }
 }

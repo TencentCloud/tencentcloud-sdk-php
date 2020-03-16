@@ -30,9 +30,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDrainStatus(string $DrainStatus) 设置实例是否封锁状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取配置
+ * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取节点配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置配置
+ * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置节点配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取添加时间
  * @method void setCreatedTime(string $CreatedTime) 设置添加时间
@@ -70,7 +70,7 @@ class Instance extends AbstractModel
     public $DrainStatus;
 
     /**
-     * @var InstanceAdvancedSettings 配置
+     * @var InstanceAdvancedSettings 节点配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceAdvancedSettings;
@@ -86,7 +86,7 @@ class Instance extends AbstractModel
      * @param string $InstanceState 实例的状态（running 运行中，initializing 初始化中，failed 异常）
      * @param string $DrainStatus 实例是否封锁状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceAdvancedSettings $InstanceAdvancedSettings 配置
+     * @param InstanceAdvancedSettings $InstanceAdvancedSettings 节点配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 添加时间
      */

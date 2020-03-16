@@ -23,11 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
  * @method string getType() 获取域名类型。包含以下取值：
-<li>system</li>
-<li>user</li>
+<li>SYSTEM</li>
+<li>USER</li>
  * @method void setType(string $Type) 设置域名类型。包含以下取值：
-<li>system</li>
-<li>user</li>
+<li>SYSTEM</li>
+<li>USER</li>
  * @method string getStatus() 获取状态。包含以下取值：
 <li>ENABLE</li>
 <li>DISABLE</li>
@@ -57,8 +57,8 @@ class AuthDomain extends AbstractModel
 
     /**
      * @var string 域名类型。包含以下取值：
-<li>system</li>
-<li>user</li>
+<li>SYSTEM</li>
+<li>USER</li>
      */
     public $Type;
 
@@ -82,8 +82,8 @@ class AuthDomain extends AbstractModel
      * @param string $Id 域名ID
      * @param string $Domain 域名
      * @param string $Type 域名类型。包含以下取值：
-<li>system</li>
-<li>user</li>
+<li>SYSTEM</li>
+<li>USER</li>
      * @param string $Status 状态。包含以下取值：
 <li>ENABLE</li>
 <li>DISABLE</li>

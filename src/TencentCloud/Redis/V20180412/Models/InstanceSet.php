@@ -96,6 +96,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoAuth(boolean $NoAuth) 设置是否为免密实例，true-免密实例；false-非免密实例
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getClientLimit() 获取客户端连接数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientLimit(integer $ClientLimit) 设置客户端连接数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDtsStatus() 获取DTS状态（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDtsStatus(integer $DtsStatus) 设置DTS状态（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNetLimit() 获取分片带宽上限，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetLimit(integer $NetLimit) 设置分片带宽上限，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPasswordFree() 获取免密实例标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPasswordFree(integer $PasswordFree) 设置免密实例标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReadOnly() 获取实例只读标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReadOnly(integer $ReadOnly) 设置实例只读标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVip6() 获取内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVip6(string $Vip6) 设置内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -285,6 +309,42 @@ class InstanceSet extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoAuth;
+
+    /**
+     * @var integer 客户端连接数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientLimit;
+
+    /**
+     * @var integer DTS状态（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DtsStatus;
+
+    /**
+     * @var integer 分片带宽上限，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetLimit;
+
+    /**
+     * @var integer 免密实例标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PasswordFree;
+
+    /**
+     * @var integer 实例只读标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReadOnly;
+
+    /**
+     * @var string 内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Vip6;
     /**
      * @param string $InstanceName 实例名称
      * @param string $InstanceId 实例Id
@@ -324,6 +384,18 @@ class InstanceSet extends AbstractModel
      * @param string $ProjectName 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $NoAuth 是否为免密实例，true-免密实例；false-非免密实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClientLimit 客户端连接数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DtsStatus DTS状态（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NetLimit 分片带宽上限，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PasswordFree 免密实例标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ReadOnly 实例只读标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Vip6 内部参数，用户可忽略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -490,6 +562,30 @@ class InstanceSet extends AbstractModel
 
         if (array_key_exists("NoAuth",$param) and $param["NoAuth"] !== null) {
             $this->NoAuth = $param["NoAuth"];
+        }
+
+        if (array_key_exists("ClientLimit",$param) and $param["ClientLimit"] !== null) {
+            $this->ClientLimit = $param["ClientLimit"];
+        }
+
+        if (array_key_exists("DtsStatus",$param) and $param["DtsStatus"] !== null) {
+            $this->DtsStatus = $param["DtsStatus"];
+        }
+
+        if (array_key_exists("NetLimit",$param) and $param["NetLimit"] !== null) {
+            $this->NetLimit = $param["NetLimit"];
+        }
+
+        if (array_key_exists("PasswordFree",$param) and $param["PasswordFree"] !== null) {
+            $this->PasswordFree = $param["PasswordFree"];
+        }
+
+        if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {
+            $this->ReadOnly = $param["ReadOnly"];
+        }
+
+        if (array_key_exists("Vip6",$param) and $param["Vip6"] !== null) {
+            $this->Vip6 = $param["Vip6"];
         }
     }
 }

@@ -104,6 +104,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuantizationInput(QuantizationInput $QuantizationInput) 设置量化输入
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogTopicId() 获取Cls日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogTopicId(string $LogTopicId) 设置Cls日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -249,6 +253,12 @@ class Job extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QuantizationInput;
+
+    /**
+     * @var string Cls日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogTopicId;
     /**
      * @param string $Id 任务 Id
      * @param string $Cluster 集群名
@@ -292,6 +302,8 @@ class Job extends AbstractModel
      * @param string $JobType Job类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param QuantizationInput $QuantizationInput 量化输入
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogTopicId Cls日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -403,6 +415,10 @@ class Job extends AbstractModel
         if (array_key_exists("QuantizationInput",$param) and $param["QuantizationInput"] !== null) {
             $this->QuantizationInput = new QuantizationInput();
             $this->QuantizationInput->deserialize($param["QuantizationInput"]);
+        }
+
+        if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
+            $this->LogTopicId = $param["LogTopicId"];
         }
     }
 }

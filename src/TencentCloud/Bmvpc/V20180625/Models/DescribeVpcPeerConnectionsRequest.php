@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method string getVpcId() 获取私有网络ID
+ * @method void setVpcId(string $VpcId) 设置私有网络ID
  */
 
 /**
@@ -58,6 +60,11 @@ class DescribeVpcPeerConnectionsRequest extends AbstractModel
      * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
+
+    /**
+     * @var string 私有网络ID
+     */
+    public $VpcId;
     /**
      * @param array $VpcPeerConnectionIds 对等连接实例ID
      * @param array $Filters 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpcPeerConnectionIds和Filters。
@@ -65,6 +72,7 @@ class DescribeVpcPeerConnectionsRequest extends AbstractModel
 <li>peer-name - String - （过滤条件）对等连接名称。</li>
      * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
+     * @param string $VpcId 私有网络ID
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ class DescribeVpcPeerConnectionsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
     }
 }

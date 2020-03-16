@@ -58,6 +58,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method boolean getIsOld() 获取是否老专区VPC
  * @method void setIsOld(boolean $IsOld) 设置是否老专区VPC
+ * @method integer getCcnServiceNum() 获取云联网服务个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCcnServiceNum(integer $CcnServiceNum) 设置云联网服务个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVpcPeerLimitToAllRegion() 获取VPC允许创建的对等连接个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcPeerLimitToAllRegion(integer $VpcPeerLimitToAllRegion) 设置VPC允许创建的对等连接个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVpcPeerLimitToSameRegion() 获取VPC允许创建的同地域的对等连接的个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcPeerLimitToSameRegion(integer $VpcPeerLimitToSameRegion) 设置VPC允许创建的同地域的对等连接的个数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -164,6 +176,24 @@ class VpcResource extends AbstractModel
      * @var boolean 是否老专区VPC
      */
     public $IsOld;
+
+    /**
+     * @var integer 云联网服务个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CcnServiceNum;
+
+    /**
+     * @var integer VPC允许创建的对等连接个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcPeerLimitToAllRegion;
+
+    /**
+     * @var integer VPC允许创建的同地域的对等连接的个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcPeerLimitToSameRegion;
     /**
      * @param string $VpcId 私有网络ID
      * @param string $VpcName 私有网络名称
@@ -185,6 +215,12 @@ class VpcResource extends AbstractModel
      * @param string $Zone 可用区
      * @param string $CreateTime 创建时间
      * @param boolean $IsOld 是否老专区VPC
+     * @param integer $CcnServiceNum 云联网服务个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VpcPeerLimitToAllRegion VPC允许创建的对等连接个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VpcPeerLimitToSameRegion VPC允许创建的同地域的对等连接的个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -276,6 +312,18 @@ class VpcResource extends AbstractModel
 
         if (array_key_exists("IsOld",$param) and $param["IsOld"] !== null) {
             $this->IsOld = $param["IsOld"];
+        }
+
+        if (array_key_exists("CcnServiceNum",$param) and $param["CcnServiceNum"] !== null) {
+            $this->CcnServiceNum = $param["CcnServiceNum"];
+        }
+
+        if (array_key_exists("VpcPeerLimitToAllRegion",$param) and $param["VpcPeerLimitToAllRegion"] !== null) {
+            $this->VpcPeerLimitToAllRegion = $param["VpcPeerLimitToAllRegion"];
+        }
+
+        if (array_key_exists("VpcPeerLimitToSameRegion",$param) and $param["VpcPeerLimitToSameRegion"] !== null) {
+            $this->VpcPeerLimitToSameRegion = $param["VpcPeerLimitToSameRegion"];
         }
     }
 }

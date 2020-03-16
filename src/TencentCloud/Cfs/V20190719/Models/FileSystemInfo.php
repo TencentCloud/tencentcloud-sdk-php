@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncrypted(boolean $Encrypted) 设置文件系统是否加密
  * @method string getKmsKeyId() 获取加密所使用的密钥，可以为密钥的 ID 或者 ARN
  * @method void setKmsKeyId(string $KmsKeyId) 设置加密所使用的密钥，可以为密钥的 ID 或者 ARN
+ * @method integer getAppId() 获取应用ID
+ * @method void setAppId(integer $AppId) 设置应用ID
  */
 
 /**
@@ -136,6 +138,11 @@ class FileSystemInfo extends AbstractModel
      * @var string 加密所使用的密钥，可以为密钥的 ID 或者 ARN
      */
     public $KmsKeyId;
+
+    /**
+     * @var integer 应用ID
+     */
+    public $AppId;
     /**
      * @param string $CreationTime 创建时间
      * @param string $CreationToken 用户自定义名称
@@ -153,6 +160,7 @@ class FileSystemInfo extends AbstractModel
      * @param string $FsName 用户自定义名称
      * @param boolean $Encrypted 文件系统是否加密
      * @param string $KmsKeyId 加密所使用的密钥，可以为密钥的 ID 或者 ARN
+     * @param integer $AppId 应用ID
      */
     function __construct()
     {
@@ -229,6 +237,10 @@ class FileSystemInfo extends AbstractModel
 
         if (array_key_exists("KmsKeyId",$param) and $param["KmsKeyId"] !== null) {
             $this->KmsKeyId = $param["KmsKeyId"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
         }
     }
 }

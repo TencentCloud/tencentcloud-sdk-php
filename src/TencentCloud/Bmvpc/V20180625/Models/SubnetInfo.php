@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCidrBlock(string $CidrBlock) 设置子网CIDR。
  * @method integer getType() 获取子网类型。0: 黑石物理机子网; 6: ccs子网; 7 Docker子网; 8: 虚拟机子网
  * @method void setType(integer $Type) 设置子网类型。0: 黑石物理机子网; 6: ccs子网; 7 Docker子网; 8: 虚拟机子网
- * @method integer getZoneId() 获取可用区ID。
- * @method void setZoneId(integer $ZoneId) 设置可用区ID。
+ * @method integer getZoneId() 获取子网可用区ID。
+ * @method void setZoneId(integer $ZoneId) 设置子网可用区ID。
  * @method integer getCpmNum() 获取子网物理机的个数
  * @method void setCpmNum(integer $CpmNum) 设置子网物理机的个数
  * @method integer getVlanId() 获取子网的VlanId。
@@ -54,6 +54,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetCreateTime(string $SubnetCreateTime) 设置子网创建时间
  * @method integer getIsSmartNic() 获取25G子网标识
  * @method void setIsSmartNic(integer $IsSmartNic) 设置25G子网标识
+ * @method string getZone() 获取子网可用区。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZone(string $Zone) 设置子网可用区。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVpcZoneId() 获取VPC所在可用区ID
+ * @method void setVpcZoneId(integer $VpcZoneId) 设置VPC所在可用区ID
+ * @method string getVpcZone() 获取VPC所在可用区
+ * @method void setVpcZone(string $VpcZone) 设置VPC所在可用区
+ * @method integer getBroadcastFlag() 获取是否开启广播，关闭为0，开启为1。
+ * @method void setBroadcastFlag(integer $BroadcastFlag) 设置是否开启广播，关闭为0，开启为1。
  */
 
 /**
@@ -97,7 +107,7 @@ class SubnetInfo extends AbstractModel
     public $Type;
 
     /**
-     * @var integer 可用区ID。
+     * @var integer 子网可用区ID。
      */
     public $ZoneId;
 
@@ -150,6 +160,27 @@ class SubnetInfo extends AbstractModel
      * @var integer 25G子网标识
      */
     public $IsSmartNic;
+
+    /**
+     * @var string 子网可用区。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zone;
+
+    /**
+     * @var integer VPC所在可用区ID
+     */
+    public $VpcZoneId;
+
+    /**
+     * @var string VPC所在可用区
+     */
+    public $VpcZone;
+
+    /**
+     * @var integer 是否开启广播，关闭为0，开启为1。
+     */
+    public $BroadcastFlag;
     /**
      * @param string $VpcId 私有网络的唯一ID。
      * @param string $VpcName VPC的名称。
@@ -158,7 +189,7 @@ class SubnetInfo extends AbstractModel
      * @param string $SubnetName 子网名称。
      * @param string $CidrBlock 子网CIDR。
      * @param integer $Type 子网类型。0: 黑石物理机子网; 6: ccs子网; 7 Docker子网; 8: 虚拟机子网
-     * @param integer $ZoneId 可用区ID。
+     * @param integer $ZoneId 子网可用区ID。
      * @param integer $CpmNum 子网物理机的个数
      * @param integer $VlanId 子网的VlanId。
      * @param integer $DistributedFlag 是否开启分布式网关 ，关闭为0，开启为1。
@@ -169,6 +200,11 @@ class SubnetInfo extends AbstractModel
      * @param integer $TotalIpNum 子网中总共的IP个数
      * @param string $SubnetCreateTime 子网创建时间
      * @param integer $IsSmartNic 25G子网标识
+     * @param string $Zone 子网可用区。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VpcZoneId VPC所在可用区ID
+     * @param string $VpcZone VPC所在可用区
+     * @param integer $BroadcastFlag 是否开启广播，关闭为0，开启为1。
      */
     function __construct()
     {
@@ -252,6 +288,22 @@ class SubnetInfo extends AbstractModel
 
         if (array_key_exists("IsSmartNic",$param) and $param["IsSmartNic"] !== null) {
             $this->IsSmartNic = $param["IsSmartNic"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("VpcZoneId",$param) and $param["VpcZoneId"] !== null) {
+            $this->VpcZoneId = $param["VpcZoneId"];
+        }
+
+        if (array_key_exists("VpcZone",$param) and $param["VpcZone"] !== null) {
+            $this->VpcZone = $param["VpcZone"];
+        }
+
+        if (array_key_exists("BroadcastFlag",$param) and $param["BroadcastFlag"] !== null) {
+            $this->BroadcastFlag = $param["BroadcastFlag"];
         }
     }
 }

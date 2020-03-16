@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStepId(string $StepId) 设置步骤英文标识
  * @method integer getStatus() 获取步骤状态:0-默认值,1-成功,2-失败,3-执行中,4-未执行
  * @method void setStatus(integer $Status) 设置步骤状态:0-默认值,1-成功,2-失败,3-执行中,4-未执行
+ * @method string getStartTime() 获取当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartTime(string $StartTime) 设置当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -52,11 +56,19 @@ class MigrateStepDetailInfo extends AbstractModel
      * @var integer 步骤状态:0-默认值,1-成功,2-失败,3-执行中,4-未执行
      */
     public $Status;
+
+    /**
+     * @var string 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartTime;
     /**
      * @param integer $StepNo 步骤序列
      * @param string $StepName 步骤展现名称
      * @param string $StepId 步骤英文标识
      * @param integer $Status 步骤状态:0-默认值,1-成功,2-失败,3-执行中,4-未执行
+     * @param string $StartTime 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class MigrateStepDetailInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
         }
     }
 }

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置角色描述
  * @method integer getConsoleLogin() 获取是否允许登录 1 为允许 0 为不允许
  * @method void setConsoleLogin(integer $ConsoleLogin) 设置是否允许登录 1 为允许 0 为不允许
+ * @method integer getSessionDuration() 获取申请角色临时密钥的最长有效期限制(范围：0~43200)
+ * @method void setSessionDuration(integer $SessionDuration) 设置申请角色临时密钥的最长有效期限制(范围：0~43200)
  */
 
 /**
@@ -52,11 +54,17 @@ class CreateRoleRequest extends AbstractModel
      * @var integer 是否允许登录 1 为允许 0 为不允许
      */
     public $ConsoleLogin;
+
+    /**
+     * @var integer 申请角色临时密钥的最长有效期限制(范围：0~43200)
+     */
+    public $SessionDuration;
     /**
      * @param string $RoleName 角色名称
      * @param string $PolicyDocument 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
      * @param string $Description 角色描述
      * @param integer $ConsoleLogin 是否允许登录 1 为允许 0 为不允许
+     * @param integer $SessionDuration 申请角色临时密钥的最长有效期限制(范围：0~43200)
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateRoleRequest extends AbstractModel
 
         if (array_key_exists("ConsoleLogin",$param) and $param["ConsoleLogin"] !== null) {
             $this->ConsoleLogin = $param["ConsoleLogin"];
+        }
+
+        if (array_key_exists("SessionDuration",$param) and $param["SessionDuration"] !== null) {
+            $this->SessionDuration = $param["SessionDuration"];
         }
     }
 }

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getAccountResId() 获取账户ID
  * @method void setAccountResId(string $AccountResId) 设置账户ID
- * @method string getAuthorizationTime() 获取授权时间，格式为年月日时分秒，例20160801095509
- * @method void setAuthorizationTime(string $AuthorizationTime) 设置授权时间，格式为年月日时分秒，例20160801095509
- * @method string getLocation() 获取授权IP地址
- * @method void setLocation(string $Location) 设置授权IP地址
+ * @method string getAuthorizationTime() 获取授权时间（上传合同可不传该参数）
+ * @method void setAuthorizationTime(string $AuthorizationTime) 设置授权时间（上传合同可不传该参数）
+ * @method string getLocation() 获取授权IP地址（上传合同可不传该参数）
+ * @method void setLocation(string $Location) 设置授权IP地址（上传合同可不传该参数）
  * @method string getSealId() 获取签章ID
  * @method void setSealId(string $SealId) 设置签章ID
  * @method string getImageData() 获取签名图片，优先级比SealId高
@@ -45,12 +45,12 @@ class SignInfo extends AbstractModel
     public $AccountResId;
 
     /**
-     * @var string 授权时间，格式为年月日时分秒，例20160801095509
+     * @var string 授权时间（上传合同可不传该参数）
      */
     public $AuthorizationTime;
 
     /**
-     * @var string 授权IP地址
+     * @var string 授权IP地址（上传合同可不传该参数）
      */
     public $Location;
 
@@ -75,8 +75,8 @@ class SignInfo extends AbstractModel
     public $SignLocation;
     /**
      * @param string $AccountResId 账户ID
-     * @param string $AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
-     * @param string $Location 授权IP地址
+     * @param string $AuthorizationTime 授权时间（上传合同可不传该参数）
+     * @param string $Location 授权IP地址（上传合同可不传该参数）
      * @param string $SealId 签章ID
      * @param string $ImageData 签名图片，优先级比SealId高
      * @param integer $CertType 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1

@@ -19,15 +19,25 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method DescribePolicyConditionListConfigManualCalcType getCalcType() 获取检测方式
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCalcType(DescribePolicyConditionListConfigManualCalcType $CalcType) 设置检测方式
+注意：此字段可能返回 null，表示取不到有效值。
  * @method DescribePolicyConditionListConfigManualCalcValue getCalcValue() 获取检测阈值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCalcValue(DescribePolicyConditionListConfigManualCalcValue $CalcValue) 设置检测阈值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method DescribePolicyConditionListConfigManualContinueTime getContinueTime() 获取持续时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContinueTime(DescribePolicyConditionListConfigManualContinueTime $ContinueTime) 设置持续时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method DescribePolicyConditionListConfigManualPeriod getPeriod() 获取数据周期
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeriod(DescribePolicyConditionListConfigManualPeriod $Period) 设置数据周期
+注意：此字段可能返回 null，表示取不到有效值。
  * @method DescribePolicyConditionListConfigManualPeriodNum getPeriodNum() 获取持续周期个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeriodNum(DescribePolicyConditionListConfigManualPeriodNum $PeriodNum) 设置持续周期个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method DescribePolicyConditionListConfigManualStatType getStatType() 获取聚合方式
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatType(DescribePolicyConditionListConfigManualStatType $StatType) 设置聚合方式
@@ -41,26 +51,31 @@ class DescribePolicyConditionListConfigManual extends AbstractModel
 {
     /**
      * @var DescribePolicyConditionListConfigManualCalcType 检测方式
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalcType;
 
     /**
      * @var DescribePolicyConditionListConfigManualCalcValue 检测阈值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalcValue;
 
     /**
      * @var DescribePolicyConditionListConfigManualContinueTime 持续时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContinueTime;
 
     /**
      * @var DescribePolicyConditionListConfigManualPeriod 数据周期
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Period;
 
     /**
      * @var DescribePolicyConditionListConfigManualPeriodNum 持续周期个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeriodNum;
 
@@ -71,10 +86,15 @@ class DescribePolicyConditionListConfigManual extends AbstractModel
     public $StatType;
     /**
      * @param DescribePolicyConditionListConfigManualCalcType $CalcType 检测方式
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DescribePolicyConditionListConfigManualCalcValue $CalcValue 检测阈值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DescribePolicyConditionListConfigManualContinueTime $ContinueTime 持续时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DescribePolicyConditionListConfigManualPeriod $Period 数据周期
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DescribePolicyConditionListConfigManualPeriodNum $PeriodNum 持续周期个数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DescribePolicyConditionListConfigManualStatType $StatType 聚合方式
 注意：此字段可能返回 null，表示取不到有效值。
      */

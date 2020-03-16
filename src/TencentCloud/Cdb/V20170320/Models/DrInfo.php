@@ -26,8 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getRegion() 获取地域信息
  * @method void setRegion(string $Region) 设置地域信息
- * @method integer getSyncStatus() 获取实例同步状态
- * @method void setSyncStatus(integer $SyncStatus) 设置实例同步状态
+ * @method integer getSyncStatus() 获取实例同步状态。可能的返回值为：
+0 - 灾备未同步；
+1 - 灾备同步中；
+2 - 灾备同步成功；
+3 - 灾备同步失败；
+4 - 灾备同步修复中。
+ * @method void setSyncStatus(integer $SyncStatus) 设置实例同步状态。可能的返回值为：
+0 - 灾备未同步；
+1 - 灾备同步中；
+2 - 灾备同步成功；
+3 - 灾备同步失败；
+4 - 灾备同步修复中。
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
  * @method integer getInstanceType() 获取实例类型
@@ -60,7 +70,12 @@ class DrInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var integer 实例同步状态
+     * @var integer 实例同步状态。可能的返回值为：
+0 - 灾备未同步；
+1 - 灾备同步中；
+2 - 灾备同步成功；
+3 - 灾备同步失败；
+4 - 灾备同步修复中。
      */
     public $SyncStatus;
 
@@ -78,7 +93,12 @@ class DrInfo extends AbstractModel
      * @param string $Zone 可用区信息
      * @param string $InstanceId 实例ID
      * @param string $Region 地域信息
-     * @param integer $SyncStatus 实例同步状态
+     * @param integer $SyncStatus 实例同步状态。可能的返回值为：
+0 - 灾备未同步；
+1 - 灾备同步中；
+2 - 灾备同步成功；
+3 - 灾备同步失败；
+4 - 灾备同步修复中。
      * @param string $InstanceName 实例名称
      * @param integer $InstanceType 实例类型
      */

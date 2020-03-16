@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method string getVpnGatewayId() 获取VPN网关实例ID
+ * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID
+ * @method string getVpnConnectionName() 获取VPN通道名称
+ * @method void setVpnConnectionName(string $VpnConnectionName) 设置VPN通道名称
+ * @method string getOrderField() 获取排序字段, 支持"CreateTime"排序
+ * @method void setOrderField(string $OrderField) 设置排序字段, 支持"CreateTime"排序
+ * @method string getOrderDirection() 获取排序方向, “asc”、“desc”
+ * @method void setOrderDirection(string $OrderDirection) 设置排序方向, “asc”、“desc”
  */
 
 /**
@@ -61,6 +69,26 @@ class DescribeVpnConnectionsRequest extends AbstractModel
      * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
+
+    /**
+     * @var string VPN网关实例ID
+     */
+    public $VpnGatewayId;
+
+    /**
+     * @var string VPN通道名称
+     */
+    public $VpnConnectionName;
+
+    /**
+     * @var string 排序字段, 支持"CreateTime"排序
+     */
+    public $OrderField;
+
+    /**
+     * @var string 排序方向, “asc”、“desc”
+     */
+    public $OrderDirection;
     /**
      * @param array $VpnConnectionIds VPN通道实例ID。形如：bmvpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
      * @param array $Filters 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
@@ -69,6 +97,10 @@ class DescribeVpnConnectionsRequest extends AbstractModel
 <li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
      * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
+     * @param string $VpnGatewayId VPN网关实例ID
+     * @param string $VpnConnectionName VPN通道名称
+     * @param string $OrderField 排序字段, 支持"CreateTime"排序
+     * @param string $OrderDirection 排序方向, “asc”、“desc”
      */
     function __construct()
     {
@@ -101,6 +133,22 @@ class DescribeVpnConnectionsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("VpnGatewayId",$param) and $param["VpnGatewayId"] !== null) {
+            $this->VpnGatewayId = $param["VpnGatewayId"];
+        }
+
+        if (array_key_exists("VpnConnectionName",$param) and $param["VpnConnectionName"] !== null) {
+            $this->VpnConnectionName = $param["VpnConnectionName"];
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
+        }
+
+        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
+            $this->OrderDirection = $param["OrderDirection"];
         }
     }
 }

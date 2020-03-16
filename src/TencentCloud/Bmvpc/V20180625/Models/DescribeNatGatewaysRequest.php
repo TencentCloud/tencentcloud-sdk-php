@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置起始值
  * @method integer getLimit() 获取偏移值，默认值为 20
  * @method void setLimit(integer $Limit) 设置偏移值，默认值为 20
+ * @method string getZone() 获取NAT所在可用区，形如：ap-guangzhou-2。
+ * @method void setZone(string $Zone) 设置NAT所在可用区，形如：ap-guangzhou-2。
+ * @method string getOrderField() 获取排序字段, 支持"CreateTime"排序
+ * @method void setOrderField(string $OrderField) 设置排序字段, 支持"CreateTime"排序
+ * @method string getOrderDirection() 获取排序方向, “asc”、“desc”
+ * @method void setOrderDirection(string $OrderDirection) 设置排序方向, “asc”、“desc”
  */
 
 /**
@@ -66,6 +72,21 @@ class DescribeNatGatewaysRequest extends AbstractModel
      * @var integer 偏移值，默认值为 20
      */
     public $Limit;
+
+    /**
+     * @var string NAT所在可用区，形如：ap-guangzhou-2。
+     */
+    public $Zone;
+
+    /**
+     * @var string 排序字段, 支持"CreateTime"排序
+     */
+    public $OrderField;
+
+    /**
+     * @var string 排序方向, “asc”、“desc”
+     */
+    public $OrderDirection;
     /**
      * @param string $NatId NAT网关ID，例如：nat-kdm476mp
      * @param string $NatName NAT名称
@@ -73,6 +94,9 @@ class DescribeNatGatewaysRequest extends AbstractModel
      * @param string $VpcId 私有网络ID，例如：vpc-kd7d06of
      * @param integer $Offset 起始值
      * @param integer $Limit 偏移值，默认值为 20
+     * @param string $Zone NAT所在可用区，形如：ap-guangzhou-2。
+     * @param string $OrderField 排序字段, 支持"CreateTime"排序
+     * @param string $OrderDirection 排序方向, “asc”、“desc”
      */
     function __construct()
     {
@@ -108,6 +132,18 @@ class DescribeNatGatewaysRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
+        }
+
+        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
+            $this->OrderDirection = $param["OrderDirection"];
         }
     }
 }

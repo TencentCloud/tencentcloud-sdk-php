@@ -19,13 +19,21 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method NumberData getNumber() 获取数字类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNumber(NumberData $Number) 设置数字类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method StringData getString() 获取字符串类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setString(StringData $String) 设置字符串类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method EnumData getEnum() 获取枚举类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnum(EnumData $Enum) 设置枚举类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method BoolData getBool() 获取布尔类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBool(BoolData $Bool) 设置布尔类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -35,28 +43,36 @@ class DataTemplate extends AbstractModel
 {
     /**
      * @var NumberData 数字类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Number;
 
     /**
      * @var StringData 字符串类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $String;
 
     /**
      * @var EnumData 枚举类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enum;
 
     /**
      * @var BoolData 布尔类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bool;
     /**
      * @param NumberData $Number 数字类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StringData $String 字符串类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EnumData $Enum 枚举类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param BoolData $Bool 布尔类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

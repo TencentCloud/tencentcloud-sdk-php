@@ -24,16 +24,20 @@ use TencentCloud\Common\AbstractModel;
 vpc-id - String - （过滤条件）私有网络实例ID，形如：vpc-f49l6u0z。
 vpc-name - String - （过滤条件）私有网络名称。
 zone - String - （过滤条件）可用区。
-state - String - （过滤条件）VPC状态。
+state - String - （过滤条件）VPC状态。available: 运营中; pending: 创建中; failed: 创建失败; deleting: 删除中
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定SubnetIds和Filters。
 vpc-id - String - （过滤条件）私有网络实例ID，形如：vpc-f49l6u0z。
 vpc-name - String - （过滤条件）私有网络名称。
 zone - String - （过滤条件）可用区。
-state - String - （过滤条件）VPC状态。
+state - String - （过滤条件）VPC状态。available: 运营中; pending: 创建中; failed: 创建失败; deleting: 删除中
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
  * @method void setLimit(integer $Limit) 设置返回数量
+ * @method string getOrderField() 获取排序字段
+ * @method void setOrderField(string $OrderField) 设置排序字段
+ * @method string getOrderDirection() 获取排序方向, “asc”、“desc”
+ * @method void setOrderDirection(string $OrderDirection) 设置排序方向, “asc”、“desc”
  */
 
 /**
@@ -51,7 +55,7 @@ class DescribeVpcResourceRequest extends AbstractModel
 vpc-id - String - （过滤条件）私有网络实例ID，形如：vpc-f49l6u0z。
 vpc-name - String - （过滤条件）私有网络名称。
 zone - String - （过滤条件）可用区。
-state - String - （过滤条件）VPC状态。
+state - String - （过滤条件）VPC状态。available: 运营中; pending: 创建中; failed: 创建失败; deleting: 删除中
      */
     public $Filters;
 
@@ -64,15 +68,27 @@ state - String - （过滤条件）VPC状态。
      * @var integer 返回数量
      */
     public $Limit;
+
+    /**
+     * @var string 排序字段
+     */
+    public $OrderField;
+
+    /**
+     * @var string 排序方向, “asc”、“desc”
+     */
+    public $OrderDirection;
     /**
      * @param array $VpcIds 私有网络实例ID
      * @param array $Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
 vpc-id - String - （过滤条件）私有网络实例ID，形如：vpc-f49l6u0z。
 vpc-name - String - （过滤条件）私有网络名称。
 zone - String - （过滤条件）可用区。
-state - String - （过滤条件）VPC状态。
+state - String - （过滤条件）VPC状态。available: 运营中; pending: 创建中; failed: 创建失败; deleting: 删除中
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
+     * @param string $OrderField 排序字段
+     * @param string $OrderDirection 排序方向, “asc”、“desc”
      */
     function __construct()
     {
@@ -105,6 +121,14 @@ state - String - （过滤条件）VPC状态。
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
+        }
+
+        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
+            $this->OrderDirection = $param["OrderDirection"];
         }
     }
 }

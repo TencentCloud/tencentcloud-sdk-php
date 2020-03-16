@@ -80,6 +80,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwnerUin(string $OwnerUin) 设置资源所有者uin,无值则返回"-"
  * @method string getOperateUin() 获取操作者uin,无值则返回"-"
  * @method void setOperateUin(string $OperateUin) 设置操作者uin,无值则返回"-"
+ * @method string getBusinessCode() 获取商品名称代码
+ * @method void setBusinessCode(string $BusinessCode) 设置商品名称代码
+ * @method string getProductCode() 获取子商品名称代码
+ * @method void setProductCode(string $ProductCode) 设置子商品名称代码
+ * @method integer getRegionId() 获取区域ID
+ * @method void setRegionId(integer $RegionId) 设置区域ID
  */
 
 /**
@@ -237,6 +243,21 @@ class BillResourceSummary extends AbstractModel
      * @var string 操作者uin,无值则返回"-"
      */
     public $OperateUin;
+
+    /**
+     * @var string 商品名称代码
+     */
+    public $BusinessCode;
+
+    /**
+     * @var string 子商品名称代码
+     */
+    public $ProductCode;
+
+    /**
+     * @var integer 区域ID
+     */
+    public $RegionId;
     /**
      * @param string $BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      * @param string $ProductCodeName 子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
@@ -269,6 +290,9 @@ class BillResourceSummary extends AbstractModel
      * @param string $PayerUin 付款方uin
      * @param string $OwnerUin 资源所有者uin,无值则返回"-"
      * @param string $OperateUin 操作者uin,无值则返回"-"
+     * @param string $BusinessCode 商品名称代码
+     * @param string $ProductCode 子商品名称代码
+     * @param integer $RegionId 区域ID
      */
     function __construct()
     {
@@ -405,6 +429,18 @@ class BillResourceSummary extends AbstractModel
 
         if (array_key_exists("OperateUin",$param) and $param["OperateUin"] !== null) {
             $this->OperateUin = $param["OperateUin"];
+        }
+
+        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
+            $this->BusinessCode = $param["BusinessCode"];
+        }
+
+        if (array_key_exists("ProductCode",$param) and $param["ProductCode"] !== null) {
+            $this->ProductCode = $param["ProductCode"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
     }
 }

@@ -50,6 +50,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoTs(integer $VideoTs) 设置视频流逝时间，单位是ms。
  * @method integer getAudioTs() 获取音频流逝时间，单位是ms。
  * @method void setAudioTs(integer $AudioTs) 设置音频流逝时间，单位是ms。
+ * @method integer getMetaVideoRate() 获取metadata中的视频码率，单位是kbps。
+ * @method void setMetaVideoRate(integer $MetaVideoRate) 设置metadata中的视频码率，单位是kbps。
+ * @method integer getMetaAudioRate() 获取metadata中的音频码率，单位是kbps。
+ * @method void setMetaAudioRate(integer $MetaAudioRate) 设置metadata中的音频码率，单位是kbps。
+ * @method integer getMateFps() 获取metadata中的帧率。
+ * @method void setMateFps(integer $MateFps) 设置metadata中的帧率。
  */
 
 /**
@@ -136,6 +142,21 @@ class PushQualityData extends AbstractModel
      * @var integer 音频流逝时间，单位是ms。
      */
     public $AudioTs;
+
+    /**
+     * @var integer metadata中的视频码率，单位是kbps。
+     */
+    public $MetaVideoRate;
+
+    /**
+     * @var integer metadata中的音频码率，单位是kbps。
+     */
+    public $MetaAudioRate;
+
+    /**
+     * @var integer metadata中的帧率。
+     */
+    public $MateFps;
     /**
      * @param string $Time 数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      * @param string $PushDomain 推流域名。
@@ -153,6 +174,9 @@ class PushQualityData extends AbstractModel
      * @param integer $LocalTs 本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
      * @param integer $VideoTs 视频流逝时间，单位是ms。
      * @param integer $AudioTs 音频流逝时间，单位是ms。
+     * @param integer $MetaVideoRate metadata中的视频码率，单位是kbps。
+     * @param integer $MetaAudioRate metadata中的音频码率，单位是kbps。
+     * @param integer $MateFps metadata中的帧率。
      */
     function __construct()
     {
@@ -228,6 +252,18 @@ class PushQualityData extends AbstractModel
 
         if (array_key_exists("AudioTs",$param) and $param["AudioTs"] !== null) {
             $this->AudioTs = $param["AudioTs"];
+        }
+
+        if (array_key_exists("MetaVideoRate",$param) and $param["MetaVideoRate"] !== null) {
+            $this->MetaVideoRate = $param["MetaVideoRate"];
+        }
+
+        if (array_key_exists("MetaAudioRate",$param) and $param["MetaAudioRate"] !== null) {
+            $this->MetaAudioRate = $param["MetaAudioRate"];
+        }
+
+        if (array_key_exists("MateFps",$param) and $param["MateFps"] !== null) {
+            $this->MateFps = $param["MateFps"];
         }
     }
 }

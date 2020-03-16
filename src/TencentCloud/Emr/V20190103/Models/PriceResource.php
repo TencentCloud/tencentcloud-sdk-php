@@ -62,6 +62,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDiskNum() 获取磁盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiskNum(integer $DiskNum) 设置磁盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLocalDiskNum() 获取本地盘的数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocalDiskNum(integer $LocalDiskNum) 设置本地盘的数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -134,6 +142,18 @@ class PriceResource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
+
+    /**
+     * @var integer 磁盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiskNum;
+
+    /**
+     * @var integer 本地盘的数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LocalDiskNum;
     /**
      * @param string $Spec 需要的规格
 注意：此字段可能返回 null，表示取不到有效值。
@@ -156,6 +176,10 @@ class PriceResource extends AbstractModel
      * @param string $InstanceType 规格
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DiskNum 磁盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LocalDiskNum 本地盘的数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -222,6 +246,14 @@ class PriceResource extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("DiskNum",$param) and $param["DiskNum"] !== null) {
+            $this->DiskNum = $param["DiskNum"];
+        }
+
+        if (array_key_exists("LocalDiskNum",$param) and $param["LocalDiskNum"] !== null) {
+            $this->LocalDiskNum = $param["LocalDiskNum"];
         }
     }
 }

@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method integer getModuleId() 获取产品ModuleId
  * @method void setModuleId(integer $ModuleId) 设置产品ModuleId
+ * @method string getEnableProductScript() 获取是否使用脚本进行二进制转json功能 可以取值 true / false
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableProductScript(string $EnableProductScript) 设置是否使用脚本进行二进制转json功能 可以取值 true / false
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -122,6 +126,12 @@ class ProductEntry extends AbstractModel
      * @var integer 产品ModuleId
      */
     public $ModuleId;
+
+    /**
+     * @var string 是否使用脚本进行二进制转json功能 可以取值 true / false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableProductScript;
     /**
      * @param string $ProductId 产品ID
      * @param string $ProductName 产品名称
@@ -137,6 +147,8 @@ class ProductEntry extends AbstractModel
      * @param integer $ProductType 产品类型
      * @param string $ProjectId 项目ID
      * @param integer $ModuleId 产品ModuleId
+     * @param string $EnableProductScript 是否使用脚本进行二进制转json功能 可以取值 true / false
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -204,6 +216,10 @@ class ProductEntry extends AbstractModel
 
         if (array_key_exists("ModuleId",$param) and $param["ModuleId"] !== null) {
             $this->ModuleId = $param["ModuleId"];
+        }
+
+        if (array_key_exists("EnableProductScript",$param) and $param["EnableProductScript"] !== null) {
+            $this->EnableProductScript = $param["EnableProductScript"];
         }
     }
 }

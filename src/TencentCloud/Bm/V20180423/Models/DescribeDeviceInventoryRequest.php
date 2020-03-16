@@ -26,18 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络ID
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
- * @method integer getCpuId() 获取CpuId，自定义机型时需传入
- * @method void setCpuId(integer $CpuId) 设置CpuId，自定义机型时需传入
- * @method string getDiskType() 获取硬盘类型，自定义机型时需传入
- * @method void setDiskType(string $DiskType) 设置硬盘类型，自定义机型时需传入
- * @method integer getDiskSize() 获取单块硬盘大小，自定义机型时需传入
- * @method void setDiskSize(integer $DiskSize) 设置单块硬盘大小，自定义机型时需传入
- * @method integer getDiskNum() 获取硬盘数量，自定义机型时需传入
- * @method void setDiskNum(integer $DiskNum) 设置硬盘数量，自定义机型时需传入
- * @method integer getMem() 获取内存总大小，自定义机型时需传入
- * @method void setMem(integer $Mem) 设置内存总大小，自定义机型时需传入
- * @method integer getHaveRaidCard() 获取是否支持raid，自定义机型时需传入
- * @method void setHaveRaidCard(integer $HaveRaidCard) 设置是否支持raid，自定义机型时需传入
+ * @method integer getCpuId() 获取CPU型号ID，查询自定义机型时必填
+ * @method void setCpuId(integer $CpuId) 设置CPU型号ID，查询自定义机型时必填
+ * @method integer getMemSize() 获取内存大小，单位为G，查询自定义机型时必填
+ * @method void setMemSize(integer $MemSize) 设置内存大小，单位为G，查询自定义机型时必填
+ * @method integer getContainRaidCard() 获取是否有RAID卡，取值：1(有) 0(无)，查询自定义机型时必填
+ * @method void setContainRaidCard(integer $ContainRaidCard) 设置是否有RAID卡，取值：1(有) 0(无)，查询自定义机型时必填
+ * @method integer getSystemDiskTypeId() 获取系统盘类型ID，查询自定义机型时必填
+ * @method void setSystemDiskTypeId(integer $SystemDiskTypeId) 设置系统盘类型ID，查询自定义机型时必填
+ * @method integer getSystemDiskCount() 获取系统盘数量，查询自定义机型时必填
+ * @method void setSystemDiskCount(integer $SystemDiskCount) 设置系统盘数量，查询自定义机型时必填
+ * @method integer getDataDiskTypeId() 获取数据盘类型ID，查询自定义机型时可填
+ * @method void setDataDiskTypeId(integer $DataDiskTypeId) 设置数据盘类型ID，查询自定义机型时可填
+ * @method integer getDataDiskCount() 获取数据盘数量，查询自定义机型时可填
+ * @method void setDataDiskCount(integer $DataDiskCount) 设置数据盘数量，查询自定义机型时可填
  */
 
 /**
@@ -66,45 +68,51 @@ class DescribeDeviceInventoryRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer CpuId，自定义机型时需传入
+     * @var integer CPU型号ID，查询自定义机型时必填
      */
     public $CpuId;
 
     /**
-     * @var string 硬盘类型，自定义机型时需传入
+     * @var integer 内存大小，单位为G，查询自定义机型时必填
      */
-    public $DiskType;
+    public $MemSize;
 
     /**
-     * @var integer 单块硬盘大小，自定义机型时需传入
+     * @var integer 是否有RAID卡，取值：1(有) 0(无)，查询自定义机型时必填
      */
-    public $DiskSize;
+    public $ContainRaidCard;
 
     /**
-     * @var integer 硬盘数量，自定义机型时需传入
+     * @var integer 系统盘类型ID，查询自定义机型时必填
      */
-    public $DiskNum;
+    public $SystemDiskTypeId;
 
     /**
-     * @var integer 内存总大小，自定义机型时需传入
+     * @var integer 系统盘数量，查询自定义机型时必填
      */
-    public $Mem;
+    public $SystemDiskCount;
 
     /**
-     * @var integer 是否支持raid，自定义机型时需传入
+     * @var integer 数据盘类型ID，查询自定义机型时可填
      */
-    public $HaveRaidCard;
+    public $DataDiskTypeId;
+
+    /**
+     * @var integer 数据盘数量，查询自定义机型时可填
+     */
+    public $DataDiskCount;
     /**
      * @param string $Zone 可用区
      * @param string $DeviceClassCode 设备型号
      * @param string $VpcId 私有网络ID
      * @param string $SubnetId 子网ID
-     * @param integer $CpuId CpuId，自定义机型时需传入
-     * @param string $DiskType 硬盘类型，自定义机型时需传入
-     * @param integer $DiskSize 单块硬盘大小，自定义机型时需传入
-     * @param integer $DiskNum 硬盘数量，自定义机型时需传入
-     * @param integer $Mem 内存总大小，自定义机型时需传入
-     * @param integer $HaveRaidCard 是否支持raid，自定义机型时需传入
+     * @param integer $CpuId CPU型号ID，查询自定义机型时必填
+     * @param integer $MemSize 内存大小，单位为G，查询自定义机型时必填
+     * @param integer $ContainRaidCard 是否有RAID卡，取值：1(有) 0(无)，查询自定义机型时必填
+     * @param integer $SystemDiskTypeId 系统盘类型ID，查询自定义机型时必填
+     * @param integer $SystemDiskCount 系统盘数量，查询自定义机型时必填
+     * @param integer $DataDiskTypeId 数据盘类型ID，查询自定义机型时可填
+     * @param integer $DataDiskCount 数据盘数量，查询自定义机型时可填
      */
     function __construct()
     {
@@ -138,24 +146,28 @@ class DescribeDeviceInventoryRequest extends AbstractModel
             $this->CpuId = $param["CpuId"];
         }
 
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists("MemSize",$param) and $param["MemSize"] !== null) {
+            $this->MemSize = $param["MemSize"];
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
+        if (array_key_exists("ContainRaidCard",$param) and $param["ContainRaidCard"] !== null) {
+            $this->ContainRaidCard = $param["ContainRaidCard"];
         }
 
-        if (array_key_exists("DiskNum",$param) and $param["DiskNum"] !== null) {
-            $this->DiskNum = $param["DiskNum"];
+        if (array_key_exists("SystemDiskTypeId",$param) and $param["SystemDiskTypeId"] !== null) {
+            $this->SystemDiskTypeId = $param["SystemDiskTypeId"];
         }
 
-        if (array_key_exists("Mem",$param) and $param["Mem"] !== null) {
-            $this->Mem = $param["Mem"];
+        if (array_key_exists("SystemDiskCount",$param) and $param["SystemDiskCount"] !== null) {
+            $this->SystemDiskCount = $param["SystemDiskCount"];
         }
 
-        if (array_key_exists("HaveRaidCard",$param) and $param["HaveRaidCard"] !== null) {
-            $this->HaveRaidCard = $param["HaveRaidCard"];
+        if (array_key_exists("DataDiskTypeId",$param) and $param["DataDiskTypeId"] !== null) {
+            $this->DataDiskTypeId = $param["DataDiskTypeId"];
+        }
+
+        if (array_key_exists("DataDiskCount",$param) and $param["DataDiskCount"] !== null) {
+            $this->DataDiskCount = $param["DataDiskCount"];
         }
     }
 }

@@ -27,29 +27,21 @@ use TencentCloud\Common\AbstractModel;
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
  * @method integer getErrCode() 获取已弃用，请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrCode(integer $ErrCode) 设置已弃用，请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取已弃用，请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置已弃用，请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取媒体文件 ID
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 FileId；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Id。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(string $FileId) 设置媒体文件 ID
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 FileId；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Id。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileName() 获取媒体文件名称
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.Name；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Name。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置媒体文件名称
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.Name；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Name。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileUrl() 获取媒体文件地址
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.MediaUrl；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Url。</li>
@@ -57,7 +49,9 @@ use TencentCloud\Common\AbstractModel;
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.MediaUrl；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Url。</li>
  * @method MediaMetaData getMetaData() 获取原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetaData(MediaMetaData $MetaData) 设置原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMediaProcessResultSet() 获取视频处理任务的执行状态与结果。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMediaProcessResultSet(array $MediaProcessResultSet) 设置视频处理任务的执行状态与结果。
@@ -75,27 +69,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) 设置视频内容识别任务的执行状态与结果。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTasksPriority() 获取任务流的优先级，取值范围为 [-10, 10]。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTasksPriority(integer $TasksPriority) 设置任务流的优先级，取值范围为 [-10, 10]。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTasksNotifyMode() 获取任务流状态变更通知模式。
 <li>Finish：只有当任务流全部执行完毕时，才发起一次事件通知；</li>
 <li>Change：只要任务流中每个子任务的状态发生变化，都进行事件通知；</li>
 <li>None：不接受该任务流回调。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTasksNotifyMode(string $TasksNotifyMode) 设置任务流状态变更通知模式。
 <li>Finish：只有当任务流全部执行完毕时，才发起一次事件通知；</li>
 <li>Change：只要任务流中每个子任务的状态发生变化，都进行事件通知；</li>
 <li>None：不接受该任务流回调。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -117,13 +103,11 @@ class ProcedureTask extends AbstractModel
 
     /**
      * @var integer 已弃用，请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
 
     /**
      * @var string 已弃用，请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
@@ -131,7 +115,6 @@ class ProcedureTask extends AbstractModel
      * @var string 媒体文件 ID
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 FileId；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Id。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
@@ -139,7 +122,6 @@ class ProcedureTask extends AbstractModel
      * @var string 媒体文件名称
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.Name；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Name。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
 
@@ -152,6 +134,7 @@ class ProcedureTask extends AbstractModel
 
     /**
      * @var MediaMetaData 原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetaData;
 
@@ -181,7 +164,6 @@ class ProcedureTask extends AbstractModel
 
     /**
      * @var integer 任务流的优先级，取值范围为 [-10, 10]。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TasksPriority;
 
@@ -190,19 +172,16 @@ class ProcedureTask extends AbstractModel
 <li>Finish：只有当任务流全部执行完毕时，才发起一次事件通知；</li>
 <li>Change：只要任务流中每个子任务的状态发生变化，都进行事件通知；</li>
 <li>None：不接受该任务流回调。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TasksNotifyMode;
 
     /**
      * @var string 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionContext;
 
     /**
      * @var string 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionId;
     /**
@@ -211,21 +190,18 @@ class ProcedureTask extends AbstractModel
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
      * @param integer $ErrCode 已弃用，请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 已弃用，请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 媒体文件 ID
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 FileId；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Id。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 媒体文件名称
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.Name；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Name。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileUrl 媒体文件地址
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.MediaUrl；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Url。</li>
      * @param MediaMetaData $MetaData 原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MediaProcessResultSet 视频处理任务的执行状态与结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
@@ -235,16 +211,12 @@ class ProcedureTask extends AbstractModel
      * @param array $AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TasksPriority 任务流的优先级，取值范围为 [-10, 10]。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TasksNotifyMode 任务流状态变更通知模式。
 <li>Finish：只有当任务流全部执行完毕时，才发起一次事件通知；</li>
 <li>Change：只要任务流中每个子任务的状态发生变化，都进行事件通知；</li>
 <li>None：不接受该任务流回调。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

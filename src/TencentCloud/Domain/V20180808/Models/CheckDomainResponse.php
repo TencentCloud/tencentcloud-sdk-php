@@ -26,10 +26,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReason(string $Reason) 设置不能注册原因
  * @method boolean getPremium() 获取是否是溢价词
  * @method void setPremium(boolean $Premium) 设置是否是溢价词
- * @method integer getPrice() 获取价格
- * @method void setPrice(integer $Price) 设置价格
+ * @method integer getPrice() 获取域名价格
+ * @method void setPrice(integer $Price) 设置域名价格
  * @method boolean getBlackWord() 获取是否是敏感词
  * @method void setBlackWord(boolean $BlackWord) 设置是否是敏感词
+ * @method string getDescribe() 获取溢价词描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescribe(string $Describe) 设置溢价词描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFeeRenew() 获取溢价词的续费价格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFeeRenew(integer $FeeRenew) 设置溢价词的续费价格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRealPrice() 获取域名真实价格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRealPrice(integer $RealPrice) 设置域名真实价格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFeeTransfer() 获取溢价词的转入价格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFeeTransfer(integer $FeeTransfer) 设置溢价词的转入价格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFeeRestore() 获取溢价词的赎回价格
+ * @method void setFeeRestore(integer $FeeRestore) 设置溢价词的赎回价格
+ * @method integer getPeriod() 获取检测年限
+ * @method void setPeriod(integer $Period) 设置检测年限
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -60,7 +80,7 @@ class CheckDomainResponse extends AbstractModel
     public $Premium;
 
     /**
-     * @var integer 价格
+     * @var integer 域名价格
      */
     public $Price;
 
@@ -68,6 +88,40 @@ class CheckDomainResponse extends AbstractModel
      * @var boolean 是否是敏感词
      */
     public $BlackWord;
+
+    /**
+     * @var string 溢价词描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Describe;
+
+    /**
+     * @var integer 溢价词的续费价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FeeRenew;
+
+    /**
+     * @var integer 域名真实价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RealPrice;
+
+    /**
+     * @var integer 溢价词的转入价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FeeTransfer;
+
+    /**
+     * @var integer 溢价词的赎回价格
+     */
+    public $FeeRestore;
+
+    /**
+     * @var integer 检测年限
+     */
+    public $Period;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -78,8 +132,18 @@ class CheckDomainResponse extends AbstractModel
      * @param boolean $Available 是否能够注册
      * @param string $Reason 不能注册原因
      * @param boolean $Premium 是否是溢价词
-     * @param integer $Price 价格
+     * @param integer $Price 域名价格
      * @param boolean $BlackWord 是否是敏感词
+     * @param string $Describe 溢价词描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FeeRenew 溢价词的续费价格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RealPrice 域名真实价格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FeeTransfer 溢价词的转入价格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FeeRestore 溢价词的赎回价格
+     * @param integer $Period 检测年限
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -116,6 +180,30 @@ class CheckDomainResponse extends AbstractModel
 
         if (array_key_exists("BlackWord",$param) and $param["BlackWord"] !== null) {
             $this->BlackWord = $param["BlackWord"];
+        }
+
+        if (array_key_exists("Describe",$param) and $param["Describe"] !== null) {
+            $this->Describe = $param["Describe"];
+        }
+
+        if (array_key_exists("FeeRenew",$param) and $param["FeeRenew"] !== null) {
+            $this->FeeRenew = $param["FeeRenew"];
+        }
+
+        if (array_key_exists("RealPrice",$param) and $param["RealPrice"] !== null) {
+            $this->RealPrice = $param["RealPrice"];
+        }
+
+        if (array_key_exists("FeeTransfer",$param) and $param["FeeTransfer"] !== null) {
+            $this->FeeTransfer = $param["FeeTransfer"];
+        }
+
+        if (array_key_exists("FeeRestore",$param) and $param["FeeRestore"] !== null) {
+            $this->FeeRestore = $param["FeeRestore"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

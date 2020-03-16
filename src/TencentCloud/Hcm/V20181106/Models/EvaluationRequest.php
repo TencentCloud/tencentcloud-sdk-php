@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSupportHorizontalImage(boolean $SupportHorizontalImage) 设置横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
  * @method boolean getRejectNonArithmeticImage() 获取拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
  * @method void setRejectNonArithmeticImage(boolean $RejectNonArithmeticImage) 设置拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
+ * @method integer getIsAsync() 获取异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+ * @method void setIsAsync(integer $IsAsync) 设置异步模式标识，0：同步模式，1：异步模式。默认为同步模式
  */
 
 /**
@@ -66,6 +68,11 @@ class EvaluationRequest extends AbstractModel
      * @var boolean 拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
      */
     public $RejectNonArithmeticImage;
+
+    /**
+     * @var integer 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+     */
+    public $IsAsync;
     /**
      * @param string $SessionId 图片唯一标识，一张图片一个SessionId；
      * @param string $Image 图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
@@ -73,6 +80,7 @@ class EvaluationRequest extends AbstractModel
      * @param string $Url 图片url，与Image参数二者填一即可；
      * @param boolean $SupportHorizontalImage 横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
      * @param boolean $RejectNonArithmeticImage 拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
+     * @param integer $IsAsync 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class EvaluationRequest extends AbstractModel
 
         if (array_key_exists("RejectNonArithmeticImage",$param) and $param["RejectNonArithmeticImage"] !== null) {
             $this->RejectNonArithmeticImage = $param["RejectNonArithmeticImage"];
+        }
+
+        if (array_key_exists("IsAsync",$param) and $param["IsAsync"] !== null) {
+            $this->IsAsync = $param["IsAsync"];
         }
     }
 }

@@ -19,11 +19,17 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method TopicAction getTopic() 获取转发至topic
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopic(TopicAction $Topic) 设置转发至topic
+注意：此字段可能返回 null，表示取不到有效值。
  * @method ServiceAction getService() 获取转发至第三发
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setService(ServiceAction $Service) 设置转发至第三发
+注意：此字段可能返回 null，表示取不到有效值。
  * @method CkafkaAction getCkafka() 获取转发至第三发Ckafka
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCkafka(CkafkaAction $Ckafka) 设置转发至第三发Ckafka
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -33,22 +39,28 @@ class Action extends AbstractModel
 {
     /**
      * @var TopicAction 转发至topic
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Topic;
 
     /**
      * @var ServiceAction 转发至第三发
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Service;
 
     /**
      * @var CkafkaAction 转发至第三发Ckafka
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ckafka;
     /**
      * @param TopicAction $Topic 转发至topic
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceAction $Service 转发至第三发
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CkafkaAction $Ckafka 转发至第三发Ckafka
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

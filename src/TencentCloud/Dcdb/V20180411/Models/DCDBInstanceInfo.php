@@ -96,6 +96,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWanStatus(integer $WanStatus) 设置外网状态，0-未开通；1-已开通；2-关闭；3-开通中
  * @method integer getIsAuditSupported() 获取该实例是否支持审计。1-支持；0-不支持
  * @method void setIsAuditSupported(integer $IsAuditSupported) 设置该实例是否支持审计。1-支持；0-不支持
+ * @method integer getCpu() 获取Cpu核数
+ * @method void setCpu(integer $Cpu) 设置Cpu核数
  */
 
 /**
@@ -293,6 +295,11 @@ class DCDBInstanceInfo extends AbstractModel
      * @var integer 该实例是否支持审计。1-支持；0-不支持
      */
     public $IsAuditSupported;
+
+    /**
+     * @var integer Cpu核数
+     */
+    public $Cpu;
     /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
@@ -333,6 +340,7 @@ class DCDBInstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      * @param integer $IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
+     * @param integer $Cpu Cpu核数
      */
     function __construct()
     {
@@ -501,6 +509,10 @@ class DCDBInstanceInfo extends AbstractModel
 
         if (array_key_exists("IsAuditSupported",$param) and $param["IsAuditSupported"] !== null) {
             $this->IsAuditSupported = $param["IsAuditSupported"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

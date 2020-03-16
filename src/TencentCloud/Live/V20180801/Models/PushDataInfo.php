@@ -50,6 +50,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResolution(string $Resolution) 设置分辨率。
  * @method integer getAsampleRate() 获取采样率。
  * @method void setAsampleRate(integer $AsampleRate) 设置采样率。
+ * @method integer getMetaAudioSpeed() 获取metadata中的音频码率，单位是Kbps。
+ * @method void setMetaAudioSpeed(integer $MetaAudioSpeed) 设置metadata中的音频码率，单位是Kbps。
+ * @method integer getMetaVideoSpeed() 获取metadata中的视频码率，单位是Kbps。
+ * @method void setMetaVideoSpeed(integer $MetaVideoSpeed) 设置metadata中的视频码率，单位是Kbps。
+ * @method integer getMetaFps() 获取metadata中的帧率。
+ * @method void setMetaFps(integer $MetaFps) 设置metadata中的帧率。
  */
 
 /**
@@ -128,6 +134,21 @@ class PushDataInfo extends AbstractModel
      * @var integer 采样率。
      */
     public $AsampleRate;
+
+    /**
+     * @var integer metadata中的音频码率，单位是Kbps。
+     */
+    public $MetaAudioSpeed;
+
+    /**
+     * @var integer metadata中的视频码率，单位是Kbps。
+     */
+    public $MetaVideoSpeed;
+
+    /**
+     * @var integer metadata中的帧率。
+     */
+    public $MetaFps;
     /**
      * @param string $StreamName 流名称。
      * @param string $AppName 推流路径。
@@ -145,6 +166,9 @@ class PushDataInfo extends AbstractModel
 例："H264"。
      * @param string $Resolution 分辨率。
      * @param integer $AsampleRate 采样率。
+     * @param integer $MetaAudioSpeed metadata中的音频码率，单位是Kbps。
+     * @param integer $MetaVideoSpeed metadata中的视频码率，单位是Kbps。
+     * @param integer $MetaFps metadata中的帧率。
      */
     function __construct()
     {
@@ -212,6 +236,18 @@ class PushDataInfo extends AbstractModel
 
         if (array_key_exists("AsampleRate",$param) and $param["AsampleRate"] !== null) {
             $this->AsampleRate = $param["AsampleRate"];
+        }
+
+        if (array_key_exists("MetaAudioSpeed",$param) and $param["MetaAudioSpeed"] !== null) {
+            $this->MetaAudioSpeed = $param["MetaAudioSpeed"];
+        }
+
+        if (array_key_exists("MetaVideoSpeed",$param) and $param["MetaVideoSpeed"] !== null) {
+            $this->MetaVideoSpeed = $param["MetaVideoSpeed"];
+        }
+
+        if (array_key_exists("MetaFps",$param) and $param["MetaFps"] !== null) {
+            $this->MetaFps = $param["MetaFps"];
         }
     }
 }

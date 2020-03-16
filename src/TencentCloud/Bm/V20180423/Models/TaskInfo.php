@@ -62,6 +62,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLanIp(string $LanIp) 设置内网IP
  * @method string getMgtIp() 获取管理IP
  * @method void setMgtIp(string $MgtIp) 设置管理IP
+ * @method string getTaskTypeName() 获取故障类中文名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskTypeName(string $TaskTypeName) 设置故障类中文名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskSubType() 获取故障类型，取值：unconfirmed (不明确故障)；redundancy (有冗余故障)；nonredundancy (无冗余故障)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskSubType(string $TaskSubType) 设置故障类型，取值：unconfirmed (不明确故障)；redundancy (有冗余故障)；nonredundancy (无冗余故障)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -178,6 +186,18 @@ class TaskInfo extends AbstractModel
      * @var string 管理IP
      */
     public $MgtIp;
+
+    /**
+     * @var string 故障类中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskTypeName;
+
+    /**
+     * @var string 故障类型，取值：unconfirmed (不明确故障)；redundancy (有冗余故障)；nonredundancy (无冗余故障)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskSubType;
     /**
      * @param string $TaskId 任务id
      * @param string $InstanceId 主机id
@@ -201,6 +221,10 @@ class TaskInfo extends AbstractModel
      * @param string $WanIp 公网ip
      * @param string $LanIp 内网IP
      * @param string $MgtIp 管理IP
+     * @param string $TaskTypeName 故障类中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskSubType 故障类型，取值：unconfirmed (不明确故障)；redundancy (有冗余故障)；nonredundancy (无冗余故障)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -300,6 +324,14 @@ class TaskInfo extends AbstractModel
 
         if (array_key_exists("MgtIp",$param) and $param["MgtIp"] !== null) {
             $this->MgtIp = $param["MgtIp"];
+        }
+
+        if (array_key_exists("TaskTypeName",$param) and $param["TaskTypeName"] !== null) {
+            $this->TaskTypeName = $param["TaskTypeName"];
+        }
+
+        if (array_key_exists("TaskSubType",$param) and $param["TaskSubType"] !== null) {
+            $this->TaskSubType = $param["TaskSubType"];
         }
     }
 }

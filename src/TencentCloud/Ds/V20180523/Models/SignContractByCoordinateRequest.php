@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContractResId(string $ContractResId) 设置合同ID
  * @method string getAccountResId() 获取帐户ID
  * @method void setAccountResId(string $AccountResId) 设置帐户ID
- * @method string getAuthorizationTime() 获取授权时间，格式为年月日时分秒，例20160801095509
- * @method void setAuthorizationTime(string $AuthorizationTime) 设置授权时间，格式为年月日时分秒，例20160801095509
- * @method string getPosition() 获取授权IP地址
- * @method void setPosition(string $Position) 设置授权IP地址
  * @method array getSignLocations() 获取签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
  * @method void setSignLocations(array $SignLocations) 设置签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
+ * @method string getAuthorizationTime() 获取授权时间（由平台自动填充）
+ * @method void setAuthorizationTime(string $AuthorizationTime) 设置授权时间（由平台自动填充）
+ * @method string getPosition() 获取授权IP地址（由平台自动填充）
+ * @method void setPosition(string $Position) 设置授权IP地址（由平台自动填充）
  * @method string getSealResId() 获取签章ID
  * @method void setSealResId(string $SealResId) 设置签章ID
  * @method integer getCertType() 获取选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
@@ -66,19 +66,19 @@ class SignContractByCoordinateRequest extends AbstractModel
     public $AccountResId;
 
     /**
-     * @var string 授权时间，格式为年月日时分秒，例20160801095509
+     * @var array 签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
+     */
+    public $SignLocations;
+
+    /**
+     * @var string 授权时间（由平台自动填充）
      */
     public $AuthorizationTime;
 
     /**
-     * @var string 授权IP地址
+     * @var string 授权IP地址（由平台自动填充）
      */
     public $Position;
-
-    /**
-     * @var array 签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
-     */
-    public $SignLocations;
 
     /**
      * @var string 签章ID
@@ -99,9 +99,9 @@ class SignContractByCoordinateRequest extends AbstractModel
      * @param string $Operation 操作名SignContractByCoordinate
      * @param string $ContractResId 合同ID
      * @param string $AccountResId 帐户ID
-     * @param string $AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
-     * @param string $Position 授权IP地址
      * @param array $SignLocations 签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
+     * @param string $AuthorizationTime 授权时间（由平台自动填充）
+     * @param string $Position 授权IP地址（由平台自动填充）
      * @param string $SealResId 签章ID
      * @param integer $CertType 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      * @param string $ImageData 签名图片，base64编码
@@ -134,14 +134,6 @@ class SignContractByCoordinateRequest extends AbstractModel
             $this->AccountResId = $param["AccountResId"];
         }
 
-        if (array_key_exists("AuthorizationTime",$param) and $param["AuthorizationTime"] !== null) {
-            $this->AuthorizationTime = $param["AuthorizationTime"];
-        }
-
-        if (array_key_exists("Position",$param) and $param["Position"] !== null) {
-            $this->Position = $param["Position"];
-        }
-
         if (array_key_exists("SignLocations",$param) and $param["SignLocations"] !== null) {
             $this->SignLocations = [];
             foreach ($param["SignLocations"] as $key => $value){
@@ -149,6 +141,14 @@ class SignContractByCoordinateRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SignLocations, $obj);
             }
+        }
+
+        if (array_key_exists("AuthorizationTime",$param) and $param["AuthorizationTime"] !== null) {
+            $this->AuthorizationTime = $param["AuthorizationTime"];
+        }
+
+        if (array_key_exists("Position",$param) and $param["Position"] !== null) {
+            $this->Position = $param["Position"];
         }
 
         if (array_key_exists("SealResId",$param) and $param["SealResId"] !== null) {

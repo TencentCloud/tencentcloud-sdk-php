@@ -23,9 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCondition() 获取过滤规则
  * @method void setCondition(string $Condition) 设置过滤规则
  * @method string getTopic() 获取Topic
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopic(string $Topic) 设置Topic
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductId() 获取产品Id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(string $ProductId) 设置产品Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -45,18 +49,22 @@ class RuleQuery extends AbstractModel
 
     /**
      * @var string Topic
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Topic;
 
     /**
      * @var string 产品Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductId;
     /**
      * @param string $Field 字段
      * @param string $Condition 过滤规则
      * @param string $Topic Topic
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductId 产品Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

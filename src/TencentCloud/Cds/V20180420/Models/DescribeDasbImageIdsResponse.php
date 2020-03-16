@@ -14,40 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Postgres\V20170312\Models;
+namespace TencentCloud\Cds\V20180420\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTotalCount() 获取查询到的实例数量。
- * @method void setTotalCount(integer $TotalCount) 设置查询到的实例数量。
- * @method array getDBInstanceSet() 获取实例详细信息集合。
- * @method void setDBInstanceSet(array $DBInstanceSet) 设置实例详细信息集合。
+ * @method string getBaseImageId() 获取基础镜像ID
+ * @method void setBaseImageId(string $BaseImageId) 设置基础镜像ID
+ * @method string getAiImageId() 获取AI镜像ID
+ * @method void setAiImageId(string $AiImageId) 设置AI镜像ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *DescribeDBInstances返回参数结构体
+ *DescribeDasbImageIds返回参数结构体
  */
-class DescribeDBInstancesResponse extends AbstractModel
+class DescribeDasbImageIdsResponse extends AbstractModel
 {
     /**
-     * @var integer 查询到的实例数量。
+     * @var string 基础镜像ID
      */
-    public $TotalCount;
+    public $BaseImageId;
 
     /**
-     * @var array 实例详细信息集合。
+     * @var string AI镜像ID
      */
-    public $DBInstanceSet;
+    public $AiImageId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param integer $TotalCount 查询到的实例数量。
-     * @param array $DBInstanceSet 实例详细信息集合。
+     * @param string $BaseImageId 基础镜像ID
+     * @param string $AiImageId AI镜像ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +62,12 @@ class DescribeDBInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("BaseImageId",$param) and $param["BaseImageId"] !== null) {
+            $this->BaseImageId = $param["BaseImageId"];
         }
 
-        if (array_key_exists("DBInstanceSet",$param) and $param["DBInstanceSet"] !== null) {
-            $this->DBInstanceSet = [];
-            foreach ($param["DBInstanceSet"] as $key => $value){
-                $obj = new DBInstance();
-                $obj->deserialize($value);
-                array_push($this->DBInstanceSet, $obj);
-            }
+        if (array_key_exists("AiImageId",$param) and $param["AiImageId"] !== null) {
+            $this->AiImageId = $param["AiImageId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

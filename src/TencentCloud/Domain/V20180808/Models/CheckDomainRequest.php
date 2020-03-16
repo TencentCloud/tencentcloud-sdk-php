@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getDomainName() 获取所查询域名名称
  * @method void setDomainName(string $DomainName) 设置所查询域名名称
+ * @method string getPeriod() 获取年限
+ * @method void setPeriod(string $Period) 设置年限
  */
 
 /**
@@ -31,8 +33,14 @@ class CheckDomainRequest extends AbstractModel
      * @var string 所查询域名名称
      */
     public $DomainName;
+
+    /**
+     * @var string 年限
+     */
+    public $Period;
     /**
      * @param string $DomainName 所查询域名名称
+     * @param string $Period 年限
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CheckDomainRequest extends AbstractModel
         }
         if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
             $this->DomainName = $param["DomainName"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
     }
 }

@@ -28,6 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置策略组说明
  * @method string getLastEditUin() 获取最后编辑的用户uin
  * @method void setLastEditUin(string $LastEditUin) 设置最后编辑的用户uin
+ * @method integer getUpdateTime() 获取更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateTime(integer $UpdateTime) 设置更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInsertTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInsertTime(integer $InsertTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsUnionRule() 获取是否且规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsUnionRule(integer $IsUnionRule) 设置是否且规则
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -59,12 +71,36 @@ class DescribePolicyGroupInfoConditionTpl extends AbstractModel
      * @var string 最后编辑的用户uin
      */
     public $LastEditUin;
+
+    /**
+     * @var integer 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateTime;
+
+    /**
+     * @var integer 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InsertTime;
+
+    /**
+     * @var integer 是否且规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsUnionRule;
     /**
      * @param integer $GroupId 策略组id
      * @param string $GroupName 策略组名称
      * @param string $ViewName 策略类型
      * @param string $Remark 策略组说明
      * @param string $LastEditUin 最后编辑的用户uin
+     * @param integer $UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InsertTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsUnionRule 是否且规则
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +132,18 @@ class DescribePolicyGroupInfoConditionTpl extends AbstractModel
 
         if (array_key_exists("LastEditUin",$param) and $param["LastEditUin"] !== null) {
             $this->LastEditUin = $param["LastEditUin"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("InsertTime",$param) and $param["InsertTime"] !== null) {
+            $this->InsertTime = $param["InsertTime"];
+        }
+
+        if (array_key_exists("IsUnionRule",$param) and $param["IsUnionRule"] !== null) {
+            $this->IsUnionRule = $param["IsUnionRule"];
         }
     }
 }

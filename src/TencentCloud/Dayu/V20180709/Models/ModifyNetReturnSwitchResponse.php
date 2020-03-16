@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Postgres\V20170312\Models;
+namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDealName() 获取交易名字。
- * @method void setDealName(string $DealName) 设置交易名字。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *UpgradeDBInstance返回参数结构体
+ *ModifyNetReturnSwitch返回参数结构体
  */
-class UpgradeDBInstanceResponse extends AbstractModel
+class ModifyNetReturnSwitchResponse extends AbstractModel
 {
-    /**
-     * @var string 交易名字。
-     */
-    public $DealName;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $DealName 交易名字。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,10 +46,6 @@ class UpgradeDBInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
-            $this->DealName = $param["DealName"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

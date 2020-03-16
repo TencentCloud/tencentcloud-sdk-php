@@ -30,9 +30,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置资源状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVip() 获取资源Ip
+ * @method string getVip() 获取资源IP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVip(string $Vip) 设置资源Ip
+ * @method void setVip(string $Vip) 设置资源IP
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取资源所属Vpc
 注意：此字段可能返回 null，表示取不到有效值。
@@ -116,7 +116,7 @@ class ResourceInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var string 资源Ip
+     * @var string 资源IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip;
@@ -211,7 +211,7 @@ class ResourceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 资源状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Vip 资源Ip
+     * @param string $Vip 资源IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 资源所属Vpc
 注意：此字段可能返回 null，表示取不到有效值。

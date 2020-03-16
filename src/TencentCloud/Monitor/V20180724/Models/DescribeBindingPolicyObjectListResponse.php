@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotal(integer $Total) 设置绑定的对象实例总数
  * @method integer getNoShieldedSum() 获取未屏蔽的对象实例数
  * @method void setNoShieldedSum(integer $NoShieldedSum) 设置未屏蔽的对象实例数
+ * @method DescribeBindingPolicyObjectListInstanceGroup getInstanceGroup() 获取绑定的实例分组信息，没有绑定实例分组则为空
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceGroup(DescribeBindingPolicyObjectListInstanceGroup $InstanceGroup) 设置绑定的实例分组信息，没有绑定实例分组则为空
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -52,6 +56,12 @@ class DescribeBindingPolicyObjectListResponse extends AbstractModel
     public $NoShieldedSum;
 
     /**
+     * @var DescribeBindingPolicyObjectListInstanceGroup 绑定的实例分组信息，没有绑定实例分组则为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceGroup;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -60,6 +70,8 @@ class DescribeBindingPolicyObjectListResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 绑定的对象实例总数
      * @param integer $NoShieldedSum 未屏蔽的对象实例数
+     * @param DescribeBindingPolicyObjectListInstanceGroup $InstanceGroup 绑定的实例分组信息，没有绑定实例分组则为空
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -89,6 +101,11 @@ class DescribeBindingPolicyObjectListResponse extends AbstractModel
 
         if (array_key_exists("NoShieldedSum",$param) and $param["NoShieldedSum"] !== null) {
             $this->NoShieldedSum = $param["NoShieldedSum"];
+        }
+
+        if (array_key_exists("InstanceGroup",$param) and $param["InstanceGroup"] !== null) {
+            $this->InstanceGroup = new DescribeBindingPolicyObjectListInstanceGroup();
+            $this->InstanceGroup->deserialize($param["InstanceGroup"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

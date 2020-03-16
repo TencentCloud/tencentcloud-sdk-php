@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionType(string $ActionType) 设置交易类型代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRegionId() 获取区域ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegionId(integer $RegionId) 设置区域ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -190,6 +194,12 @@ class BillDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionType;
+
+    /**
+     * @var integer 区域ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegionId;
     /**
      * @param string $BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      * @param string $ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1
@@ -216,6 +226,8 @@ class BillDetail extends AbstractModel
      * @param string $ProductCode 子商品名称代码 （未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionType 交易类型代码（未开放的字段）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RegionId 区域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -326,6 +338,10 @@ class BillDetail extends AbstractModel
 
         if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
             $this->ActionType = $param["ActionType"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
     }
 }

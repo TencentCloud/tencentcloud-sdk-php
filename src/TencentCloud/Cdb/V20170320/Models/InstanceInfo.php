@@ -28,20 +28,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoVipInfo(RoVipInfo $RoVipInfo) 设置只读vip信息。单独开通只读实例访问的只读实例才有该字段
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMemory() 获取内存容量，单位为MB
- * @method void setMemory(integer $Memory) 设置内存容量，单位为MB
+ * @method integer getMemory() 获取内存容量，单位为 MB
+ * @method void setMemory(integer $Memory) 设置内存容量，单位为 MB
  * @method integer getStatus() 获取实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
  * @method void setStatus(integer $Status) 设置实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
- * @method integer getVpcId() 获取私有网络ID，例如：51102
- * @method void setVpcId(integer $VpcId) 设置私有网络ID，例如：51102
+ * @method integer getVpcId() 获取私有网络 ID，例如：51102
+ * @method void setVpcId(integer $VpcId) 设置私有网络 ID，例如：51102
  * @method SlaveInfo getSlaveInfo() 获取备机信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlaveInfo(SlaveInfo $SlaveInfo) 设置备机信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method integer getVolume() 获取硬盘容量，单位为GB
- * @method void setVolume(integer $Volume) 设置硬盘容量，单位为GB
+ * @method string getInstanceId() 获取实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID
+ * @method integer getVolume() 获取硬盘容量，单位为 GB
+ * @method void setVolume(integer $Volume) 设置硬盘容量，单位为 GB
  * @method integer getAutoRenew() 获取自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
  * @method void setAutoRenew(integer $AutoRenew) 设置自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
  * @method integer getProtectMode() 获取数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
@@ -50,12 +50,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoGroups(array $RoGroups) 设置只读组详细信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSubnetId() 获取子网ID，例如：2333
- * @method void setSubnetId(integer $SubnetId) 设置子网ID，例如：2333
+ * @method integer getSubnetId() 获取子网 ID，例如：2333
+ * @method void setSubnetId(integer $SubnetId) 设置子网 ID，例如：2333
  * @method integer getInstanceType() 获取实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
  * @method void setInstanceType(integer $InstanceType) 设置实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
- * @method integer getProjectId() 获取项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID
+ * @method integer getProjectId() 获取项目 ID
+ * @method void setProjectId(integer $ProjectId) 设置项目 ID
  * @method string getRegion() 获取地域信息
  * @method void setRegion(string $Region) 设置地域信息
  * @method string getDeadlineTime() 获取实例到期时间
@@ -86,8 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayType(integer $PayType) 设置付费类型，可能的返回值：0-包年包月；1-按量计费
  * @method string getCreateTime() 获取实例创建时间
  * @method void setCreateTime(string $CreateTime) 设置实例创建时间
- * @method string getVip() 获取实例IP
- * @method void setVip(string $Vip) 设置实例IP
+ * @method string getVip() 获取实例 IP
+ * @method void setVip(string $Vip) 设置实例 IP
  * @method integer getVport() 获取端口号
  * @method void setVport(integer $Vport) 设置端口号
  * @method integer getCdbError() 获取是否锁定标记
@@ -96,8 +96,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络描述符，例如：“vpc-5v8wn9mg”
  * @method string getUniqSubnetId() 获取子网描述符，例如：“subnet-1typ0s7d”
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网描述符，例如：“subnet-1typ0s7d”
- * @method string getPhysicalId() 获取物理ID
- * @method void setPhysicalId(string $PhysicalId) 设置物理ID
+ * @method string getPhysicalId() 获取物理 ID
+ * @method void setPhysicalId(string $PhysicalId) 设置物理 ID
  * @method integer getCpu() 获取核心数
  * @method void setCpu(integer $Cpu) 设置核心数
  * @method integer getQps() 获取每秒查询数量
@@ -108,9 +108,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceClass(string $DeviceClass) 设置物理机型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDeployGroupId() 获取置放群组ID
+ * @method string getDeployGroupId() 获取置放群组 ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeployGroupId(string $DeployGroupId) 设置置放群组ID
+ * @method void setDeployGroupId(string $DeployGroupId) 设置置放群组 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getZoneId() 获取可用区 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneId(integer $ZoneId) 设置可用区 ID
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -141,7 +145,7 @@ class InstanceInfo extends AbstractModel
     public $RoVipInfo;
 
     /**
-     * @var integer 内存容量，单位为MB
+     * @var integer 内存容量，单位为 MB
      */
     public $Memory;
 
@@ -151,7 +155,7 @@ class InstanceInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 私有网络ID，例如：51102
+     * @var integer 私有网络 ID，例如：51102
      */
     public $VpcId;
 
@@ -162,12 +166,12 @@ class InstanceInfo extends AbstractModel
     public $SlaveInfo;
 
     /**
-     * @var string 实例ID
+     * @var string 实例 ID
      */
     public $InstanceId;
 
     /**
-     * @var integer 硬盘容量，单位为GB
+     * @var integer 硬盘容量，单位为 GB
      */
     public $Volume;
 
@@ -188,7 +192,7 @@ class InstanceInfo extends AbstractModel
     public $RoGroups;
 
     /**
-     * @var integer 子网ID，例如：2333
+     * @var integer 子网 ID，例如：2333
      */
     public $SubnetId;
 
@@ -198,7 +202,7 @@ class InstanceInfo extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var integer 项目ID
+     * @var integer 项目 ID
      */
     public $ProjectId;
 
@@ -270,7 +274,7 @@ class InstanceInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string 实例IP
+     * @var string 实例 IP
      */
     public $Vip;
 
@@ -295,7 +299,7 @@ class InstanceInfo extends AbstractModel
     public $UniqSubnetId;
 
     /**
-     * @var string 物理ID
+     * @var string 物理 ID
      */
     public $PhysicalId;
 
@@ -321,30 +325,36 @@ class InstanceInfo extends AbstractModel
     public $DeviceClass;
 
     /**
-     * @var string 置放群组ID
+     * @var string 置放群组 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployGroupId;
+
+    /**
+     * @var integer 可用区 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneId;
     /**
      * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @param string $Zone 可用区信息
      * @param integer $InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
      * @param RoVipInfo $RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Memory 内存容量，单位为MB
+     * @param integer $Memory 内存容量，单位为 MB
      * @param integer $Status 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
-     * @param integer $VpcId 私有网络ID，例如：51102
+     * @param integer $VpcId 私有网络 ID，例如：51102
      * @param SlaveInfo $SlaveInfo 备机信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceId 实例ID
-     * @param integer $Volume 硬盘容量，单位为GB
+     * @param string $InstanceId 实例 ID
+     * @param integer $Volume 硬盘容量，单位为 GB
      * @param integer $AutoRenew 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
      * @param integer $ProtectMode 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
      * @param array $RoGroups 只读组详细信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SubnetId 子网ID，例如：2333
+     * @param integer $SubnetId 子网 ID，例如：2333
      * @param integer $InstanceType 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
-     * @param integer $ProjectId 项目ID
+     * @param integer $ProjectId 项目 ID
      * @param string $Region 地域信息
      * @param string $DeadlineTime 实例到期时间
      * @param integer $DeployMode 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
@@ -360,18 +370,20 @@ class InstanceInfo extends AbstractModel
      * @param integer $WanPort 外网端口号
      * @param integer $PayType 付费类型，可能的返回值：0-包年包月；1-按量计费
      * @param string $CreateTime 实例创建时间
-     * @param string $Vip 实例IP
+     * @param string $Vip 实例 IP
      * @param integer $Vport 端口号
      * @param integer $CdbError 是否锁定标记
      * @param string $UniqVpcId 私有网络描述符，例如：“vpc-5v8wn9mg”
      * @param string $UniqSubnetId 子网描述符，例如：“subnet-1typ0s7d”
-     * @param string $PhysicalId 物理ID
+     * @param string $PhysicalId 物理 ID
      * @param integer $Cpu 核心数
      * @param integer $Qps 每秒查询数量
      * @param string $ZoneName 可用区中文名称
      * @param string $DeviceClass 物理机型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DeployGroupId 置放群组ID
+     * @param string $DeployGroupId 置放群组 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ZoneId 可用区 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -557,6 +569,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("DeployGroupId",$param) and $param["DeployGroupId"] !== null) {
             $this->DeployGroupId = $param["DeployGroupId"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
     }
 }

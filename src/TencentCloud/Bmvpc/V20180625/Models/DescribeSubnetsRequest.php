@@ -36,6 +36,10 @@ zone - String - （过滤条件）可用区。
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
  * @method void setLimit(integer $Limit) 设置返回数量
+ * @method string getOrderField() 获取排序字段, 支持按“CreateTime”，“VlanId”
+ * @method void setOrderField(string $OrderField) 设置排序字段, 支持按“CreateTime”，“VlanId”
+ * @method string getOrderDirection() 获取排序方向, “asc”、“desc”
+ * @method void setOrderDirection(string $OrderDirection) 设置排序方向, “asc”、“desc”
  */
 
 /**
@@ -67,6 +71,16 @@ zone - String - （过滤条件）可用区。
      * @var integer 返回数量
      */
     public $Limit;
+
+    /**
+     * @var string 排序字段, 支持按“CreateTime”，“VlanId”
+     */
+    public $OrderField;
+
+    /**
+     * @var string 排序方向, “asc”、“desc”
+     */
+    public $OrderDirection;
     /**
      * @param array $SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。参数不支持同时指定SubnetIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
@@ -77,6 +91,8 @@ subnet-name - String - （过滤条件）子网名称。
 zone - String - （过滤条件）可用区。
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
+     * @param string $OrderField 排序字段, 支持按“CreateTime”，“VlanId”
+     * @param string $OrderDirection 排序方向, “asc”、“desc”
      */
     function __construct()
     {
@@ -109,6 +125,14 @@ zone - String - （过滤条件）可用区。
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
+        }
+
+        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
+            $this->OrderDirection = $param["OrderDirection"];
         }
     }
 }

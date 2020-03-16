@@ -18,7 +18,10 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
-
+ * @method integer getOnSale() 获取是否仅查询在售标准机型配置信息。取值0：查询所有机型；1：查询在售机型。默认为1
+ * @method void setOnSale(integer $OnSale) 设置是否仅查询在售标准机型配置信息。取值0：查询所有机型；1：查询在售机型。默认为1
+ * @method integer getNeedPriceInfo() 获取是否返回价格信息。取值0：不返回价格信息，接口返回速度更快；1：返回价格信息。默认为1
+ * @method void setNeedPriceInfo(integer $NeedPriceInfo) 设置是否返回价格信息。取值0：不返回价格信息，接口返回速度更快；1：返回价格信息。默认为1
  */
 
 /**
@@ -26,9 +29,18 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeDeviceClassRequest extends AbstractModel
 {
+    /**
+     * @var integer 是否仅查询在售标准机型配置信息。取值0：查询所有机型；1：查询在售机型。默认为1
+     */
+    public $OnSale;
 
     /**
-
+     * @var integer 是否返回价格信息。取值0：不返回价格信息，接口返回速度更快；1：返回价格信息。默认为1
+     */
+    public $NeedPriceInfo;
+    /**
+     * @param integer $OnSale 是否仅查询在售标准机型配置信息。取值0：查询所有机型；1：查询在售机型。默认为1
+     * @param integer $NeedPriceInfo 是否返回价格信息。取值0：不返回价格信息，接口返回速度更快；1：返回价格信息。默认为1
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeDeviceClassRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("OnSale",$param) and $param["OnSale"] !== null) {
+            $this->OnSale = $param["OnSale"];
+        }
 
+        if (array_key_exists("NeedPriceInfo",$param) and $param["NeedPriceInfo"] !== null) {
+            $this->NeedPriceInfo = $param["NeedPriceInfo"];
+        }
     }
 }

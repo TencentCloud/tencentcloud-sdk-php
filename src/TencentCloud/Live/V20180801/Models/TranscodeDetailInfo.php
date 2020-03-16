@@ -50,6 +50,8 @@ topspeed_H265 =》极速高清-H265。
  * @method void setType(string $Type) 设置类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
  * @method string getPushDomain() 获取推流域名。
  * @method void setPushDomain(string $PushDomain) 设置推流域名。
+ * @method string getResolution() 获取分辨率。
+ * @method void setResolution(string $Resolution) 设置分辨率。
  */
 
 /**
@@ -104,6 +106,11 @@ topspeed_H265 =》极速高清-H265。
      * @var string 推流域名。
      */
     public $PushDomain;
+
+    /**
+     * @var string 分辨率。
+     */
+    public $Resolution;
     /**
      * @param string $StreamName 流名称。
      * @param string $StartTime 开始时间，北京时间，
@@ -121,6 +128,7 @@ topspeed_H265 =》极速高清-H265。
      * @param integer $Bitrate 码率。
      * @param string $Type 类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
      * @param string $PushDomain 推流域名。
+     * @param string $Resolution 分辨率。
      */
     function __construct()
     {
@@ -164,6 +172,10 @@ topspeed_H265 =》极速高清-H265。
 
         if (array_key_exists("PushDomain",$param) and $param["PushDomain"] !== null) {
             $this->PushDomain = $param["PushDomain"];
+        }
+
+        if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
+            $this->Resolution = $param["Resolution"];
         }
     }
 }

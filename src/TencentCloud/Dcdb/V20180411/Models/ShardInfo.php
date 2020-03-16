@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeCount(integer $NodeCount) 设置节点数，2 为一主一从， 3 为一主二从
  * @method integer getPid() 获取产品类型 Id（过时字段，请勿依赖该值）
  * @method void setPid(integer $Pid) 设置产品类型 Id（过时字段，请勿依赖该值）
+ * @method integer getCpu() 获取Cpu核数
+ * @method void setCpu(integer $Cpu) 设置Cpu核数
  */
 
 /**
@@ -87,6 +89,11 @@ class ShardInfo extends AbstractModel
      * @var integer 产品类型 Id（过时字段，请勿依赖该值）
      */
     public $Pid;
+
+    /**
+     * @var integer Cpu核数
+     */
+    public $Cpu;
     /**
      * @param string $ShardInstanceId 分片ID
      * @param string $ShardSerialId 分片Set ID
@@ -97,6 +104,7 @@ class ShardInfo extends AbstractModel
      * @param integer $ShardId 分片数字ID
      * @param integer $NodeCount 节点数，2 为一主一从， 3 为一主二从
      * @param integer $Pid 产品类型 Id（过时字段，请勿依赖该值）
+     * @param integer $Cpu Cpu核数
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class ShardInfo extends AbstractModel
 
         if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
             $this->Pid = $param["Pid"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

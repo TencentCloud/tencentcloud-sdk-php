@@ -75,9 +75,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAliases() 获取设备名称列表
  * @method void setAliases(array $Aliases) 设置设备名称列表
  * @method integer getCpuId() 获取CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
  * @method void setCpuId(integer $CpuId) 设置CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
  * @method integer getContainRaidCard() 获取是否有RAID卡，取值：1(有) 0(无)，自定义机型需要传入
  * @method void setContainRaidCard(integer $ContainRaidCard) 设置是否有RAID卡，取值：1(有) 0(无)，自定义机型需要传入
  * @method integer getMemSize() 获取内存大小，单位为G，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
@@ -96,6 +96,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileSystem(string $FileSystem) 设置指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
  * @method string getBuySession() 获取此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名作为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
  * @method void setBuySession(string $BuySession) 设置此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名作为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
+ * @method string getSgId() 获取绑定已有的安全组ID。仅在NeedSecurityAgent为1时生效
+ * @method void setSgId(string $SgId) 设置绑定已有的安全组ID。仅在NeedSecurityAgent为1时生效
+ * @method string getTemplateId() 获取安全组模板ID，由模板创建新安全组并绑定。TemplateId和SgId不能同时传入
+ * @method void setTemplateId(string $TemplateId) 设置安全组模板ID，由模板创建新安全组并绑定。TemplateId和SgId不能同时传入
  */
 
 /**
@@ -245,7 +249,7 @@ class BuyDevicesRequest extends AbstractModel
 
     /**
      * @var integer CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
      */
     public $CpuId;
 
@@ -293,6 +297,16 @@ class BuyDevicesRequest extends AbstractModel
      * @var string 此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名作为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
      */
     public $BuySession;
+
+    /**
+     * @var string 绑定已有的安全组ID。仅在NeedSecurityAgent为1时生效
+     */
+    public $SgId;
+
+    /**
+     * @var string 安全组模板ID，由模板创建新安全组并绑定。TemplateId和SgId不能同时传入
+     */
+    public $TemplateId;
     /**
      * @param string $Zone 可用区ID。通过接口[查询地域以及可用区(DescribeRegions)](https://cloud.tencent.com/document/api/386/33564)获取可用区信息
      * @param integer $OsTypeId 部署服务器的操作系统ID。通过接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)获取操作系统信息
@@ -323,7 +337,7 @@ class BuyDevicesRequest extends AbstractModel
      * @param array $LanIps 指定的内网IP列表，不指定时自动分配
      * @param array $Aliases 设备名称列表
      * @param integer $CpuId CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
      * @param integer $ContainRaidCard 是否有RAID卡，取值：1(有) 0(无)，自定义机型需要传入
      * @param integer $MemSize 内存大小，单位为G，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
      * @param integer $SystemDiskTypeId 系统盘ID，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
@@ -333,6 +347,8 @@ class BuyDevicesRequest extends AbstractModel
      * @param array $Tags 绑定的标签列表
      * @param string $FileSystem 指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
      * @param string $BuySession 此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名作为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
+     * @param string $SgId 绑定已有的安全组ID。仅在NeedSecurityAgent为1时生效
+     * @param string $TemplateId 安全组模板ID，由模板创建新安全组并绑定。TemplateId和SgId不能同时传入
      */
     function __construct()
     {
@@ -501,6 +517,14 @@ class BuyDevicesRequest extends AbstractModel
 
         if (array_key_exists("BuySession",$param) and $param["BuySession"] !== null) {
             $this->BuySession = $param["BuySession"];
+        }
+
+        if (array_key_exists("SgId",$param) and $param["SgId"] !== null) {
+            $this->SgId = $param["SgId"];
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

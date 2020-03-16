@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContractFile(string $ContractFile) 设置合同上传链接地址
  * @method string getContractName() 获取合同名称
  * @method void setContractName(string $ContractName) 设置合同名称
- * @method string getInitiator() 获取合同发起方帐号ID
- * @method void setInitiator(string $Initiator) 设置合同发起方帐号ID
  * @method string getRemarks() 获取备注
  * @method void setRemarks(string $Remarks) 设置备注
+ * @method string getInitiator() 获取合同发起方腾讯云帐号ID（由平台自动填写）
+ * @method void setInitiator(string $Initiator) 设置合同发起方腾讯云帐号ID（由平台自动填写）
  * @method string getExpireTime() 获取合同长时间未签署的过期时间
  * @method void setExpireTime(string $ExpireTime) 设置合同长时间未签署的过期时间
  */
@@ -67,14 +67,14 @@ class CreateContractByUploadRequest extends AbstractModel
     public $ContractName;
 
     /**
-     * @var string 合同发起方帐号ID
-     */
-    public $Initiator;
-
-    /**
      * @var string 备注
      */
     public $Remarks;
+
+    /**
+     * @var string 合同发起方腾讯云帐号ID（由平台自动填写）
+     */
+    public $Initiator;
 
     /**
      * @var string 合同长时间未签署的过期时间
@@ -86,8 +86,8 @@ class CreateContractByUploadRequest extends AbstractModel
      * @param array $SignInfos 签署人信息
      * @param string $ContractFile 合同上传链接地址
      * @param string $ContractName 合同名称
-     * @param string $Initiator 合同发起方帐号ID
      * @param string $Remarks 备注
+     * @param string $Initiator 合同发起方腾讯云帐号ID（由平台自动填写）
      * @param string $ExpireTime 合同长时间未签署的过期时间
      */
     function __construct()
@@ -127,12 +127,12 @@ class CreateContractByUploadRequest extends AbstractModel
             $this->ContractName = $param["ContractName"];
         }
 
-        if (array_key_exists("Initiator",$param) and $param["Initiator"] !== null) {
-            $this->Initiator = $param["Initiator"];
-        }
-
         if (array_key_exists("Remarks",$param) and $param["Remarks"] !== null) {
             $this->Remarks = $param["Remarks"];
+        }
+
+        if (array_key_exists("Initiator",$param) and $param["Initiator"] !== null) {
+            $this->Initiator = $param["Initiator"];
         }
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {

@@ -33,17 +33,29 @@ use TencentCloud\Common\AbstractModel;
  * @method string getGpuDescription() 获取GPU描述
  * @method void setGpuDescription(string $GpuDescription) 设置GPU描述
  * @method float getDiscount() 获取单价折扣
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscount(float $Discount) 设置单价折扣
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUnitPrice() 获取用户刊例价格
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnitPrice(integer $UnitPrice) 设置用户刊例价格
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRealPrice() 获取实际价格
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealPrice(integer $RealPrice) 设置实际价格
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNormalPrice() 获取官网刊例价格
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNormalPrice(integer $NormalPrice) 设置官网刊例价格
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceType() 获取设备使用场景类型
  * @method void setDeviceType(string $DeviceType) 设置设备使用场景类型
  * @method integer getSeries() 获取机型系列
  * @method void setSeries(integer $Series) 设置机型系列
+ * @method integer getCpu() 获取cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+ * @method void setCpu(integer $Cpu) 设置cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+ * @method integer getMem() 获取内存容量。单位G
+ * @method void setMem(integer $Mem) 设置内存容量。单位G
  */
 
 /**
@@ -88,21 +100,25 @@ class DeviceClass extends AbstractModel
 
     /**
      * @var float 单价折扣
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Discount;
 
     /**
      * @var integer 用户刊例价格
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnitPrice;
 
     /**
      * @var integer 实际价格
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealPrice;
 
     /**
      * @var integer 官网刊例价格
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NormalPrice;
 
@@ -115,6 +131,16 @@ class DeviceClass extends AbstractModel
      * @var integer 机型系列
      */
     public $Series;
+
+    /**
+     * @var integer cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+     */
+    public $Cpu;
+
+    /**
+     * @var integer 内存容量。单位G
+     */
+    public $Mem;
     /**
      * @param string $DeviceClassCode 机型ID
      * @param string $CpuDescription CPU描述
@@ -124,11 +150,17 @@ class DeviceClass extends AbstractModel
      * @param string $NicDescription 网卡描述
      * @param string $GpuDescription GPU描述
      * @param float $Discount 单价折扣
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UnitPrice 用户刊例价格
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RealPrice 实际价格
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NormalPrice 官网刊例价格
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceType 设备使用场景类型
      * @param integer $Series 机型系列
+     * @param integer $Cpu cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+     * @param integer $Mem 内存容量。单位G
      */
     function __construct()
     {
@@ -192,6 +224,14 @@ class DeviceClass extends AbstractModel
 
         if (array_key_exists("Series",$param) and $param["Series"] !== null) {
             $this->Series = $param["Series"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("Mem",$param) and $param["Mem"] !== null) {
+            $this->Mem = $param["Mem"];
         }
     }
 }

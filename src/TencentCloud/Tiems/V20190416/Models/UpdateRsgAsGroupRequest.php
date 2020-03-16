@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(string $Id) 设置伸缩组 ID
  * @method string getName() 获取重命名名称
  * @method void setName(string $Name) 设置重命名名称
+ * @method integer getMaxSize() 获取伸缩组最大节点数
+ * @method void setMaxSize(integer $MaxSize) 设置伸缩组最大节点数
+ * @method integer getMinSize() 获取伸缩组最小节点数
+ * @method void setMinSize(integer $MinSize) 设置伸缩组最小节点数
  */
 
 /**
@@ -38,9 +42,21 @@ class UpdateRsgAsGroupRequest extends AbstractModel
      * @var string 重命名名称
      */
     public $Name;
+
+    /**
+     * @var integer 伸缩组最大节点数
+     */
+    public $MaxSize;
+
+    /**
+     * @var integer 伸缩组最小节点数
+     */
+    public $MinSize;
     /**
      * @param string $Id 伸缩组 ID
      * @param string $Name 重命名名称
+     * @param integer $MaxSize 伸缩组最大节点数
+     * @param integer $MinSize 伸缩组最小节点数
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class UpdateRsgAsGroupRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("MaxSize",$param) and $param["MaxSize"] !== null) {
+            $this->MaxSize = $param["MaxSize"];
+        }
+
+        if (array_key_exists("MinSize",$param) and $param["MinSize"] !== null) {
+            $this->MinSize = $param["MinSize"];
         }
     }
 }

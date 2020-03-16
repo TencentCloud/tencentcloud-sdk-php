@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getCanSetDefault() 获取是否可以设置成默认策略
  * @method void setCanSetDefault(boolean $CanSetDefault) 设置是否可以设置成默认策略
+ * @method integer getIsUnionRule() 获取是否且规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsUnionRule(integer $IsUnionRule) 设置是否且规则
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -155,6 +159,12 @@ class DescribePolicyGroupInfoResponse extends AbstractModel
     public $CanSetDefault;
 
     /**
+     * @var integer 是否且规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsUnionRule;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -180,6 +190,8 @@ class DescribePolicyGroupInfoResponse extends AbstractModel
      * @param DescribePolicyGroupInfoConditionTpl $ConditionsTemp 模板策略组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CanSetDefault 是否可以设置成默认策略
+     * @param integer $IsUnionRule 是否且规则
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -273,6 +285,10 @@ class DescribePolicyGroupInfoResponse extends AbstractModel
 
         if (array_key_exists("CanSetDefault",$param) and $param["CanSetDefault"] !== null) {
             $this->CanSetDefault = $param["CanSetDefault"];
+        }
+
+        if (array_key_exists("IsUnionRule",$param) and $param["IsUnionRule"] !== null) {
+            $this->IsUnionRule = $param["IsUnionRule"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

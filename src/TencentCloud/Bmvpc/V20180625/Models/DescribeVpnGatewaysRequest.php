@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取请求对象个数
  * @method void setLimit(integer $Limit) 设置请求对象个数
+ * @method string getOrderField() 获取排序字段, 支持"CreateTime"排序
+ * @method void setOrderField(string $OrderField) 设置排序字段, 支持"CreateTime"排序
+ * @method string getOrderDirection() 获取排序方向, “asc”、“desc”
+ * @method void setOrderDirection(string $OrderDirection) 设置排序方向, “asc”、“desc”
  */
 
 /**
@@ -64,6 +68,16 @@ class DescribeVpnGatewaysRequest extends AbstractModel
      * @var integer 请求对象个数
      */
     public $Limit;
+
+    /**
+     * @var string 排序字段, 支持"CreateTime"排序
+     */
+    public $OrderField;
+
+    /**
+     * @var string 排序方向, “asc”、“desc”
+     */
+    public $OrderDirection;
     /**
      * @param array $VpnGatewayIds VPN网关实例ID。形如：bmvpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
@@ -73,6 +87,8 @@ class DescribeVpnGatewaysRequest extends AbstractModel
 <li>vpngw-name - String - （过滤条件）vpn网关名称。</li>
      * @param integer $Offset 偏移量
      * @param integer $Limit 请求对象个数
+     * @param string $OrderField 排序字段, 支持"CreateTime"排序
+     * @param string $OrderDirection 排序方向, “asc”、“desc”
      */
     function __construct()
     {
@@ -105,6 +121,14 @@ class DescribeVpnGatewaysRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
+        }
+
+        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
+            $this->OrderDirection = $param["OrderDirection"];
         }
     }
 }

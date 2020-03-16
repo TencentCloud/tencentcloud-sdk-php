@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTransactorIdentNo(string $TransactorIdentNo) 设置经办人证件号码
  * @method string getTransactorPhone() 获取经办人手机号
  * @method void setTransactorPhone(string $TransactorPhone) 设置经办人手机号
+ * @method string getEmail() 获取企业联系人邮箱
+ * @method void setEmail(string $Email) 设置企业联系人邮箱
  */
 
 /**
@@ -94,6 +96,11 @@ class CreateEnterpriseAccountRequest extends AbstractModel
      * @var string 经办人手机号
      */
     public $TransactorPhone;
+
+    /**
+     * @var string 企业联系人邮箱
+     */
+    public $Email;
     /**
      * @param string $Module 模块名AccountMng
      * @param string $Operation 操作名CreateEnterpriseAccount
@@ -105,6 +112,7 @@ class CreateEnterpriseAccountRequest extends AbstractModel
      * @param integer $TransactorIdentType 经办人证件类型，0代表身份证
      * @param string $TransactorIdentNo 经办人证件号码
      * @param string $TransactorPhone 经办人手机号
+     * @param string $Email 企业联系人邮箱
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class CreateEnterpriseAccountRequest extends AbstractModel
 
         if (array_key_exists("TransactorPhone",$param) and $param["TransactorPhone"] !== null) {
             $this->TransactorPhone = $param["TransactorPhone"];
+        }
+
+        if (array_key_exists("Email",$param) and $param["Email"] !== null) {
+            $this->Email = $param["Email"];
         }
     }
 }

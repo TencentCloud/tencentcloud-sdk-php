@@ -18,10 +18,10 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getMaxReplicas() 获取最大副本数
- * @method void setMaxReplicas(integer $MaxReplicas) 设置最大副本数
- * @method integer getMinReplicas() 获取最小副本数
- * @method void setMinReplicas(integer $MinReplicas) 设置最小副本数
+ * @method integer getMaxReplicas() 获取最大副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
+ * @method void setMaxReplicas(integer $MaxReplicas) 设置最大副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
+ * @method integer getMinReplicas() 获取最小副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
+ * @method void setMinReplicas(integer $MinReplicas) 设置最小副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
  * @method integer getStartReplicas() 获取起始副本数
  * @method void setStartReplicas(integer $StartReplicas) 设置起始副本数
  * @method array getHpaMetrics() 获取扩缩容指标，选择自动扩缩容时至少需要选择一个指标，支持CPU-UTIL、MEMORY-UTIL
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class Scaler extends AbstractModel
 {
     /**
-     * @var integer 最大副本数
+     * @var integer 最大副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
      */
     public $MaxReplicas;
 
     /**
-     * @var integer 最小副本数
+     * @var integer 最小副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
      */
     public $MinReplicas;
 
@@ -53,8 +53,8 @@ class Scaler extends AbstractModel
      */
     public $HpaMetrics;
     /**
-     * @param integer $MaxReplicas 最大副本数
-     * @param integer $MinReplicas 最小副本数
+     * @param integer $MaxReplicas 最大副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
+     * @param integer $MinReplicas 最小副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
      * @param integer $StartReplicas 起始副本数
      * @param array $HpaMetrics 扩缩容指标，选择自动扩缩容时至少需要选择一个指标，支持CPU-UTIL、MEMORY-UTIL
      */

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCPU(integer $CPU) 设置CPU核数，单位：核。
  * @method integer getMemory() 获取内存容量，单位：`GB`。
  * @method void setMemory(integer $Memory) 设置内存容量，单位：`GB`。
+ * @method integer getFPGA() 获取FPGA核数，单位：核。
+ * @method void setFPGA(integer $FPGA) 设置FPGA核数，单位：核。
  */
 
 /**
@@ -66,6 +68,11 @@ class InstanceTypeConfig extends AbstractModel
      * @var integer 内存容量，单位：`GB`。
      */
     public $Memory;
+
+    /**
+     * @var integer FPGA核数，单位：核。
+     */
+    public $FPGA;
     /**
      * @param string $Zone 可用区。
      * @param string $InstanceType 实例机型。
@@ -73,6 +80,7 @@ class InstanceTypeConfig extends AbstractModel
      * @param integer $GPU GPU核数，单位：核。
      * @param integer $CPU CPU核数，单位：核。
      * @param integer $Memory 内存容量，单位：`GB`。
+     * @param integer $FPGA FPGA核数，单位：核。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class InstanceTypeConfig extends AbstractModel
 
         if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
             $this->Memory = $param["Memory"];
+        }
+
+        if (array_key_exists("FPGA",$param) and $param["FPGA"] !== null) {
+            $this->FPGA = $param["FPGA"];
         }
     }
 }

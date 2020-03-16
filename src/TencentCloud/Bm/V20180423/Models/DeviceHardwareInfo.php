@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNicDescription(string $NicDescription) 设置网卡描述
  * @method string getRaidDescription() 获取是否支持 RAID 的描述
  * @method void setRaidDescription(string $RaidDescription) 设置是否支持 RAID 的描述
+ * @method integer getCpu() 获取cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+ * @method void setCpu(integer $Cpu) 设置cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
  */
 
 /**
@@ -129,6 +131,11 @@ class DeviceHardwareInfo extends AbstractModel
      * @var string 是否支持 RAID 的描述
      */
     public $RaidDescription;
+
+    /**
+     * @var integer cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+     */
+    public $Cpu;
     /**
      * @param string $InstanceId 设备实例 ID
      * @param integer $IsElastic 是否自定义机型
@@ -145,6 +152,7 @@ class DeviceHardwareInfo extends AbstractModel
      * @param string $DiskDescription 磁盘描述
      * @param string $NicDescription 网卡描述
      * @param string $RaidDescription 是否支持 RAID 的描述
+     * @param integer $Cpu cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class DeviceHardwareInfo extends AbstractModel
 
         if (array_key_exists("RaidDescription",$param) and $param["RaidDescription"] !== null) {
             $this->RaidDescription = $param["RaidDescription"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

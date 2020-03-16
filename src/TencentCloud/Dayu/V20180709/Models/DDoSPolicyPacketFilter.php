@@ -32,8 +32,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPktlenMin(integer $PktlenMin) 设置最小包长，取值范围[0,1500]
  * @method integer getPktlenMax() 获取最大包长，取值范围[0,1500]
  * @method void setPktlenMax(integer $PktlenMax) 设置最大包长，取值范围[0,1500]
- * @method string getMatchBegin() 获取是否检测载荷，取值范围[begin_l5(表示检测), no_match(表示不检测)]
- * @method void setMatchBegin(string $MatchBegin) 设置是否检测载荷，取值范围[begin_l5(表示检测), no_match(表示不检测)]
+ * @method string getMatchBegin() 获取是否检测载荷，取值范围[
+begin_l3(IP头)
+begin_l4(TCP头)
+begin_l5(载荷)
+no_match(不检测)
+]
+ * @method void setMatchBegin(string $MatchBegin) 设置是否检测载荷，取值范围[
+begin_l3(IP头)
+begin_l4(TCP头)
+begin_l5(载荷)
+no_match(不检测)
+]
  * @method string getMatchType() 获取是否是正则表达式，取值范围[sunday(表示关键字),pcre(表示正则表达式)]
  * @method void setMatchType(string $MatchType) 设置是否是正则表达式，取值范围[sunday(表示关键字),pcre(表示正则表达式)]
  * @method string getStr() 获取关键字或正则表达式
@@ -89,7 +99,12 @@ class DDoSPolicyPacketFilter extends AbstractModel
     public $PktlenMax;
 
     /**
-     * @var string 是否检测载荷，取值范围[begin_l5(表示检测), no_match(表示不检测)]
+     * @var string 是否检测载荷，取值范围[
+begin_l3(IP头)
+begin_l4(TCP头)
+begin_l5(载荷)
+no_match(不检测)
+]
      */
     public $MatchBegin;
 
@@ -130,7 +145,12 @@ class DDoSPolicyPacketFilter extends AbstractModel
      * @param integer $DportEnd 结束目的端口，取值范围[0,65535]
      * @param integer $PktlenMin 最小包长，取值范围[0,1500]
      * @param integer $PktlenMax 最大包长，取值范围[0,1500]
-     * @param string $MatchBegin 是否检测载荷，取值范围[begin_l5(表示检测), no_match(表示不检测)]
+     * @param string $MatchBegin 是否检测载荷，取值范围[
+begin_l3(IP头)
+begin_l4(TCP头)
+begin_l5(载荷)
+no_match(不检测)
+]
      * @param string $MatchType 是否是正则表达式，取值范围[sunday(表示关键字),pcre(表示正则表达式)]
      * @param string $Str 关键字或正则表达式
      * @param integer $Depth 检测深度，取值范围[0,1500]

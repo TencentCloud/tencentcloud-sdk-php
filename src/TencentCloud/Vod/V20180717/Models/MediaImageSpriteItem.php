@@ -19,29 +19,17 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method integer getDefinition() 获取雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefinition(integer $Definition) 设置雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHeight() 获取雪碧图小图的高度。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeight(integer $Height) 设置雪碧图小图的高度。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWidth() 获取雪碧图小图的宽度。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWidth(integer $Width) 设置雪碧图小图的宽度。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取每一张雪碧图大图里小图的数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置每一张雪碧图大图里小图的数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getImageUrlSet() 获取每一张雪碧图大图的地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageUrlSet(array $ImageUrlSet) 设置每一张雪碧图大图的地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWebVttUrl() 获取雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebVttUrl(string $WebVttUrl) 设置雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -51,52 +39,40 @@ class MediaImageSpriteItem extends AbstractModel
 {
     /**
      * @var integer 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Definition;
 
     /**
      * @var integer 雪碧图小图的高度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
 
     /**
      * @var integer 雪碧图小图的宽度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
      * @var integer 每一张雪碧图大图里小图的数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 每一张雪碧图大图的地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageUrlSet;
 
     /**
      * @var string 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebVttUrl;
     /**
      * @param integer $Definition 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Height 雪碧图小图的高度。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Width 雪碧图小图的宽度。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 每一张雪碧图大图里小图的数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ImageUrlSet 每一张雪碧图大图的地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WebVttUrl 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -76,6 +76,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
 * @method Models\OfflineDevicesResponse OfflineDevices(Models\OfflineDevicesRequest $req) 销毁黑石物理机实例：可以销毁物理机列表中的竞价实例，或回收站列表中所有计费模式的实例
 * @method Models\RebootDevicesResponse RebootDevices(Models\RebootDevicesRequest $req) 重启机器
 * @method Models\RecoverDevicesResponse RecoverDevices(Models\RecoverDevicesRequest $req) 恢复回收站中的物理机（仅限后付费的物理机）
+* @method Models\ReloadDeviceOsResponse ReloadDeviceOs(Models\ReloadDeviceOsRequest $req) 重装操作系统
 * @method Models\RepairTaskControlResponse RepairTaskControl(Models\RepairTaskControlRequest $req) 此接口用于操作维修任务<br>
 入参TaskId为维修任务ID<br>
 入参Operate表示对维修任务的操作，支持如下取值：<br>

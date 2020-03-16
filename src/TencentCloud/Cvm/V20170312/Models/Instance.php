@@ -51,11 +51,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getImageId() 获取生产实例所使用的镜像`ID`。
  * @method void setImageId(string $ImageId) 设置生产实例所使用的镜像`ID`。
  * @method string getRenewFlag() 获取自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
+<br><li>注意：后付费模式本项为null
  * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
+<br><li>注意：后付费模式本项为null
  * @method string getCreatedTime() 获取创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
- * @method string getExpiredTime() 获取到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
- * @method void setExpiredTime(string $ExpiredTime) 设置到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+ * @method string getExpiredTime() 获取到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。注意：后付费模式本项为null
+ * @method void setExpiredTime(string $ExpiredTime) 设置到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。注意：后付费模式本项为null
  * @method string getOsName() 获取操作系统名称。
  * @method void setOsName(string $OsName) 设置操作系统名称。
  * @method array getSecurityGroupIds() 获取实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
@@ -87,6 +89,14 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDisasterRecoverGroupId() 获取分散置放群组ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) 设置分散置放群组ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIPv6Addresses() 获取实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIPv6Addresses(string $IPv6Addresses) 设置实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCamRoleName() 获取CAM角色名。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -173,6 +183,7 @@ class Instance extends AbstractModel
 
     /**
      * @var string 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
+<br><li>注意：后付费模式本项为null
      */
     public $RenewFlag;
 
@@ -182,7 +193,7 @@ class Instance extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var string 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * @var string 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。注意：后付费模式本项为null
      */
     public $ExpiredTime;
 
@@ -245,6 +256,18 @@ class Instance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisasterRecoverGroupId;
+
+    /**
+     * @var string 实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IPv6Addresses;
+
+    /**
+     * @var string CAM角色名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CamRoleName;
     /**
      * @param Placement $Placement 实例所在的位置。
      * @param string $InstanceId 实例`ID`。
@@ -263,8 +286,9 @@ class Instance extends AbstractModel
      * @param VirtualPrivateCloud $VirtualPrivateCloud 实例所属虚拟私有网络信息。
      * @param string $ImageId 生产实例所使用的镜像`ID`。
      * @param string $RenewFlag 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
+<br><li>注意：后付费模式本项为null
      * @param string $CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
-     * @param string $ExpiredTime 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * @param string $ExpiredTime 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。注意：后付费模式本项为null
      * @param string $OsName 操作系统名称。
      * @param array $SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
      * @param LoginSettings $LoginSettings 实例登录设置。目前只返回实例所关联的密钥。
@@ -280,6 +304,10 @@ class Instance extends AbstractModel
      * @param string $LatestOperationRequestId 实例最新操作的唯一请求 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DisasterRecoverGroupId 分散置放群组ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IPv6Addresses 实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CamRoleName CAM角色名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -423,6 +451,14 @@ class Instance extends AbstractModel
 
         if (array_key_exists("DisasterRecoverGroupId",$param) and $param["DisasterRecoverGroupId"] !== null) {
             $this->DisasterRecoverGroupId = $param["DisasterRecoverGroupId"];
+        }
+
+        if (array_key_exists("IPv6Addresses",$param) and $param["IPv6Addresses"] !== null) {
+            $this->IPv6Addresses = $param["IPv6Addresses"];
+        }
+
+        if (array_key_exists("CamRoleName",$param) and $param["CamRoleName"] !== null) {
+            $this->CamRoleName = $param["CamRoleName"];
         }
     }
 }

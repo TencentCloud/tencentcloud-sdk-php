@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventConditions(array $EventConditions) 设置策略组中的时间告警规则
  * @method integer getBackEndCall() 获取是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
  * @method void setBackEndCall(integer $BackEndCall) 设置是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
+ * @method integer getIsUnionRule() 获取指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
+ * @method void setIsUnionRule(integer $IsUnionRule) 设置指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
  */
 
 /**
@@ -101,6 +103,11 @@ class CreatePolicyGroupRequest extends AbstractModel
      * @var integer 是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
      */
     public $BackEndCall;
+
+    /**
+     * @var integer 指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
+     */
+    public $IsUnionRule;
     /**
      * @param string $GroupName 组策略名称
      * @param string $Module 固定值，为"monitor"
@@ -113,6 +120,7 @@ class CreatePolicyGroupRequest extends AbstractModel
      * @param array $Conditions 策略组中的阈值告警规则
      * @param array $EventConditions 策略组中的时间告警规则
      * @param integer $BackEndCall 是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
+     * @param integer $IsUnionRule 指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
      */
     function __construct()
     {
@@ -178,6 +186,10 @@ class CreatePolicyGroupRequest extends AbstractModel
 
         if (array_key_exists("BackEndCall",$param) and $param["BackEndCall"] !== null) {
             $this->BackEndCall = $param["BackEndCall"];
+        }
+
+        if (array_key_exists("IsUnionRule",$param) and $param["IsUnionRule"] !== null) {
+            $this->IsUnionRule = $param["IsUnionRule"];
         }
     }
 }

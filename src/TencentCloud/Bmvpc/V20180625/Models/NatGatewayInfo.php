@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络ID
  * @method string getVpcName() 获取私有网络名称
  * @method void setVpcName(string $VpcName) 设置私有网络名称
- * @method integer getProductionStatus() 获取网关状态，其中0表示创建中，1表示运行中，2表示创建失败
- * @method void setProductionStatus(integer $ProductionStatus) 设置网关状态，其中0表示创建中，1表示运行中，2表示创建失败
+ * @method integer getProductionStatus() 获取网关创建状态，其中0表示创建中，1表示运行中，2表示创建失败
+ * @method void setProductionStatus(integer $ProductionStatus) 设置网关创建状态，其中0表示创建中，1表示运行中，2表示创建失败
  * @method array getEips() 获取EIP列表
  * @method void setEips(array $Eips) 设置EIP列表
  * @method integer getMaxConcurrent() 获取并发连接数规格，取值为1000000, 3000000, 10000000
@@ -44,6 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置网关类型，取值为 small，middle，big，分别对应小型、中型、大型
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method integer getState() 获取网关启用状态，1为禁用，0为启用。
+ * @method void setState(integer $State) 设置网关启用状态，1为禁用，0为启用。
+ * @method integer getIntVpcId() 获取私有网络整型ID
+ * @method void setIntVpcId(integer $IntVpcId) 设置私有网络整型ID
+ * @method integer getNatResourceId() 获取NAT资源ID
+ * @method void setNatResourceId(integer $NatResourceId) 设置NAT资源ID
  */
 
 /**
@@ -72,7 +78,7 @@ class NatGatewayInfo extends AbstractModel
     public $VpcName;
 
     /**
-     * @var integer 网关状态，其中0表示创建中，1表示运行中，2表示创建失败
+     * @var integer 网关创建状态，其中0表示创建中，1表示运行中，2表示创建失败
      */
     public $ProductionStatus;
 
@@ -115,12 +121,27 @@ class NatGatewayInfo extends AbstractModel
      * @var string 创建时间
      */
     public $CreateTime;
+
+    /**
+     * @var integer 网关启用状态，1为禁用，0为启用。
+     */
+    public $State;
+
+    /**
+     * @var integer 私有网络整型ID
+     */
+    public $IntVpcId;
+
+    /**
+     * @var integer NAT资源ID
+     */
+    public $NatResourceId;
     /**
      * @param string $NatId NAT网关ID
      * @param string $NatName 网关名称
      * @param string $VpcId 私有网络ID
      * @param string $VpcName 私有网络名称
-     * @param integer $ProductionStatus 网关状态，其中0表示创建中，1表示运行中，2表示创建失败
+     * @param integer $ProductionStatus 网关创建状态，其中0表示创建中，1表示运行中，2表示创建失败
      * @param array $Eips EIP列表
      * @param integer $MaxConcurrent 并发连接数规格，取值为1000000, 3000000, 10000000
      * @param string $Zone 可用区
@@ -129,6 +150,9 @@ class NatGatewayInfo extends AbstractModel
      * @param string $VpcCidrBlock 私有网络网段
      * @param string $Type 网关类型，取值为 small，middle，big，分别对应小型、中型、大型
      * @param string $CreateTime 创建时间
+     * @param integer $State 网关启用状态，1为禁用，0为启用。
+     * @param integer $IntVpcId 私有网络整型ID
+     * @param integer $NatResourceId NAT资源ID
      */
     function __construct()
     {
@@ -192,6 +216,18 @@ class NatGatewayInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
+        }
+
+        if (array_key_exists("IntVpcId",$param) and $param["IntVpcId"] !== null) {
+            $this->IntVpcId = $param["IntVpcId"];
+        }
+
+        if (array_key_exists("NatResourceId",$param) and $param["NatResourceId"] !== null) {
+            $this->NatResourceId = $param["NatResourceId"];
         }
     }
 }

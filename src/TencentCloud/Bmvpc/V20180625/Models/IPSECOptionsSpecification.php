@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIPSECSaLifetimeSeconds(integer $IPSECSaLifetimeSeconds) 设置IPsec SA lifetime(s)：单位秒，取值范围：180-604800
  * @method string getSecurityProto() 获取安全协议，默认为ESP
  * @method void setSecurityProto(string $SecurityProto) 设置安全协议，默认为ESP
+ * @method string getEncapMode() 获取报文封装模式:默认为Tunnel
+ * @method void setEncapMode(string $EncapMode) 设置报文封装模式:默认为Tunnel
  */
 
 /**
@@ -66,6 +68,11 @@ class IPSECOptionsSpecification extends AbstractModel
      * @var string 安全协议，默认为ESP
      */
     public $SecurityProto;
+
+    /**
+     * @var string 报文封装模式:默认为Tunnel
+     */
+    public $EncapMode;
     /**
      * @param string $PfsDhGroup PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
      * @param integer $IPSECSaLifetimeTraffic IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
@@ -73,6 +80,7 @@ class IPSECOptionsSpecification extends AbstractModel
      * @param string $IntegrityAlgorith 认证算法：可选值：'MD5', 'SHA1'，默认为
      * @param integer $IPSECSaLifetimeSeconds IPsec SA lifetime(s)：单位秒，取值范围：180-604800
      * @param string $SecurityProto 安全协议，默认为ESP
+     * @param string $EncapMode 报文封装模式:默认为Tunnel
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class IPSECOptionsSpecification extends AbstractModel
 
         if (array_key_exists("SecurityProto",$param) and $param["SecurityProto"] !== null) {
             $this->SecurityProto = $param["SecurityProto"];
+        }
+
+        if (array_key_exists("EncapMode",$param) and $param["EncapMode"] !== null) {
+            $this->EncapMode = $param["EncapMode"];
         }
     }
 }

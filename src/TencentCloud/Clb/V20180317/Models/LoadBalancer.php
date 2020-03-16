@@ -176,6 +176,14 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnatIps(array $SnatIps) 设置开启SnatPro负载均衡后，SnatIp列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSlaType() 获取性能保障规格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSlaType(string $SlaType) 设置性能保障规格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsBlock() 获取vip是否被封堵
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsBlock(boolean $IsBlock) 设置vip是否被封堵
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -425,6 +433,18 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnatIps;
+
+    /**
+     * @var string 性能保障规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SlaType;
+
+    /**
+     * @var boolean vip是否被封堵
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsBlock;
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
@@ -504,6 +524,10 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param boolean $SnatPro 是否开启SnatPro
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SnatIps 开启SnatPro负载均衡后，SnatIp列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SlaType 性能保障规格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsBlock vip是否被封堵
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -701,6 +725,14 @@ OPEN：公网属性， INTERNAL：内网属性。
                 $obj->deserialize($value);
                 array_push($this->SnatIps, $obj);
             }
+        }
+
+        if (array_key_exists("SlaType",$param) and $param["SlaType"] !== null) {
+            $this->SlaType = $param["SlaType"];
+        }
+
+        if (array_key_exists("IsBlock",$param) and $param["IsBlock"] !== null) {
+            $this->IsBlock = $param["IsBlock"];
         }
     }
 }

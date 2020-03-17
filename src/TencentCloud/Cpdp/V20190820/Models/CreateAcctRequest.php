@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
 缺省： enterprise
  * @method string getShortName() 获取不填则默认子商户名称
  * @method void setShortName(string $ShortName) 设置不填则默认子商户名称
+ * @method string getPlatformId() 获取平台参数，沙箱环境传sandbox，生产环境传release，默认release
+ * @method void setPlatformId(string $PlatformId) 设置平台参数，沙箱环境传sandbox，生产环境传release，默认release
  */
 
 /**
@@ -119,6 +121,11 @@ class CreateAcctRequest extends AbstractModel
      * @var string 不填则默认子商户名称
      */
     public $ShortName;
+
+    /**
+     * @var string 平台参数，沙箱环境传sandbox，生产环境传release，默认release
+     */
+    public $PlatformId;
     /**
      * @param string $MidasAppId 聚鑫平台分配的支付MidasAppId
      * @param string $SubMchId 业务平台的子商户ID，唯一
@@ -137,6 +144,7 @@ class CreateAcctRequest extends AbstractModel
 企业：enterprise
 缺省： enterprise
      * @param string $ShortName 不填则默认子商户名称
+     * @param string $PlatformId 平台参数，沙箱环境传sandbox，生产环境传release，默认release
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class CreateAcctRequest extends AbstractModel
 
         if (array_key_exists("ShortName",$param) and $param["ShortName"] !== null) {
             $this->ShortName = $param["ShortName"];
+        }
+
+        if (array_key_exists("PlatformId",$param) and $param["PlatformId"] !== null) {
+            $this->PlatformId = $param["PlatformId"];
         }
     }
 }

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFps(integer $Fps) 设置帧率，可设置为30、45或60
  * @method string getUserIp() 获取游戏用户IP，用于就近调度，例如125.127.178.228
  * @method void setUserIp(string $UserIp) 设置游戏用户IP，用于就近调度，例如125.127.178.228
+ * @method integer getOptimization() 获取优化项，便于客户灰度开启新的优化项，默认为0
+ * @method void setOptimization(integer $Optimization) 设置优化项，便于客户灰度开启新的优化项，默认为0
  */
 
 /**
@@ -115,6 +117,11 @@ class CreateSessionRequest extends AbstractModel
      * @var string 游戏用户IP，用于就近调度，例如125.127.178.228
      */
     public $UserIp;
+
+    /**
+     * @var integer 优化项，便于客户灰度开启新的优化项，默认为0
+     */
+    public $Optimization;
     /**
      * @param string $ClientSession 客户端session信息，从JSSDK请求中获得
      * @param string $UserId 游戏用户ID
@@ -129,6 +136,7 @@ class CreateSessionRequest extends AbstractModel
      * @param integer $MinBitrate 单位Mbps，动态调整最小码率
      * @param integer $Fps 帧率，可设置为30、45或60
      * @param string $UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
+     * @param integer $Optimization 优化项，便于客户灰度开启新的优化项，默认为0
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class CreateSessionRequest extends AbstractModel
 
         if (array_key_exists("UserIp",$param) and $param["UserIp"] !== null) {
             $this->UserIp = $param["UserIp"];
+        }
+
+        if (array_key_exists("Optimization",$param) and $param["Optimization"] !== null) {
+            $this->Optimization = $param["Optimization"];
         }
     }
 }

@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectIds(array $ProjectIds) 设置项目ID组成的数组，数组下标从0开始
  * @method array getSearchKeys() 获取搜索关键词：支持实例ID、实例名称、完整IP
  * @method void setSearchKeys(array $SearchKeys) 设置搜索关键词：支持实例ID、实例名称、完整IP
+ * @method array getUniqSubnetIds() 获取子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+ * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+ * @method array getUniqVpcIds() 获取私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+ * @method void setUniqVpcIds(array $UniqVpcIds) 设置私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
  * @method array getVips() 获取实例服务IP组成的数组，数组下标从0开始
  * @method void setVips(array $Vips) 设置实例服务IP组成的数组，数组下标从0开始
  */
@@ -84,6 +88,16 @@ class DescribeInstancesRequest extends AbstractModel
     public $SearchKeys;
 
     /**
+     * @var array 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     */
+    public $UniqSubnetIds;
+
+    /**
+     * @var array 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     */
+    public $UniqVpcIds;
+
+    /**
      * @var array 实例服务IP组成的数组，数组下标从0开始
      */
     public $Vips;
@@ -96,6 +110,8 @@ class DescribeInstancesRequest extends AbstractModel
      * @param integer $OrderType 0倒序，1正序，默认倒序
      * @param array $ProjectIds 项目ID组成的数组，数组下标从0开始
      * @param array $SearchKeys 搜索关键词：支持实例ID、实例名称、完整IP
+     * @param array $UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     * @param array $UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
      * @param array $Vips 实例服务IP组成的数组，数组下标从0开始
      */
     function __construct()
@@ -140,6 +156,14 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("SearchKeys",$param) and $param["SearchKeys"] !== null) {
             $this->SearchKeys = $param["SearchKeys"];
+        }
+
+        if (array_key_exists("UniqSubnetIds",$param) and $param["UniqSubnetIds"] !== null) {
+            $this->UniqSubnetIds = $param["UniqSubnetIds"];
+        }
+
+        if (array_key_exists("UniqVpcIds",$param) and $param["UniqVpcIds"] !== null) {
+            $this->UniqVpcIds = $param["UniqVpcIds"];
         }
 
         if (array_key_exists("Vips",$param) and $param["Vips"] !== null) {

@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置参与校验的参数类型。
 0：使用手机号进行校验；
 1：使用姓名与身份证号进行校验。
- * @method string getMobile() 获取手机号。11位数字。
- * @method void setMobile(string $Mobile) 设置手机号。11位数字。
+ * @method string getMobile() 获取手机号，11位数字，
+特别提示：
+手机号验证只限制在腾讯健康守护可信模型覆盖的数据范围内，与手机号本身在运营商是否实名无关联，不在范围会提示“手机号未实名”，建议客户与传入姓名和身份证号信息组合使用。
+ * @method void setMobile(string $Mobile) 设置手机号，11位数字，
+特别提示：
+手机号验证只限制在腾讯健康守护可信模型覆盖的数据范围内，与手机号本身在运营商是否实名无关联，不在范围会提示“手机号未实名”，建议客户与传入姓名和身份证号信息组合使用。
  * @method string getIdCard() 获取身份证号码。
  * @method void setIdCard(string $IdCard) 设置身份证号码。
  * @method string getName() 获取姓名。
@@ -45,7 +49,9 @@ class MinorsVerificationRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var string 手机号。11位数字。
+     * @var string 手机号，11位数字，
+特别提示：
+手机号验证只限制在腾讯健康守护可信模型覆盖的数据范围内，与手机号本身在运营商是否实名无关联，不在范围会提示“手机号未实名”，建议客户与传入姓名和身份证号信息组合使用。
      */
     public $Mobile;
 
@@ -62,7 +68,9 @@ class MinorsVerificationRequest extends AbstractModel
      * @param string $Type 参与校验的参数类型。
 0：使用手机号进行校验；
 1：使用姓名与身份证号进行校验。
-     * @param string $Mobile 手机号。11位数字。
+     * @param string $Mobile 手机号，11位数字，
+特别提示：
+手机号验证只限制在腾讯健康守护可信模型覆盖的数据范围内，与手机号本身在运营商是否实名无关联，不在范围会提示“手机号未实名”，建议客户与传入姓名和身份证号信息组合使用。
      * @param string $IdCard 身份证号码。
      * @param string $Name 姓名。
      */

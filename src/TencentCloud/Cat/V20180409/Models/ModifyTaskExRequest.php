@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskName(string $TaskName) 设置拨测任务名称不能超过32个字符。同一个用户创建的任务名不可重复
  * @method integer getTaskId() 获取验证成功的拨测任务ID
  * @method void setTaskId(integer $TaskId) 设置验证成功的拨测任务ID
- * @method integer getAgentGroupId() 获取拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的GroupId的值。注意，Type为0时，AgentGroupId为必填
- * @method void setAgentGroupId(integer $AgentGroupId) 设置拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的GroupId的值。注意，Type为0时，AgentGroupId为必填
+ * @method integer getAgentGroupId() 获取拨测分组ID，体现本拨测任务要采用哪些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的GroupId的值。注意，Type为0时，AgentGroupId为必填
+ * @method void setAgentGroupId(integer $AgentGroupId) 设置拨测分组ID，体现本拨测任务要采用哪些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的GroupId的值。注意，Type为0时，AgentGroupId为必填
  * @method string getHost() 获取指定域名(如需要)
  * @method void setHost(string $Host) 设置指定域名(如需要)
  * @method integer getPort() 获取拨测目标的端口号
@@ -107,7 +107,7 @@ class ModifyTaskExRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @var integer 拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的GroupId的值。注意，Type为0时，AgentGroupId为必填
+     * @var integer 拨测分组ID，体现本拨测任务要采用哪些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的GroupId的值。注意，Type为0时，AgentGroupId为必填
      */
     public $AgentGroupId;
 
@@ -226,7 +226,7 @@ class ModifyTaskExRequest extends AbstractModel
      * @param integer $Period 拨测周期。取值可为1,5,15,30之一, 单位：分钟。精度不能低于用户等级规定的最小精度
      * @param string $TaskName 拨测任务名称不能超过32个字符。同一个用户创建的任务名不可重复
      * @param integer $TaskId 验证成功的拨测任务ID
-     * @param integer $AgentGroupId 拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的GroupId的值。注意，Type为0时，AgentGroupId为必填
+     * @param integer $AgentGroupId 拨测分组ID，体现本拨测任务要采用哪些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的GroupId的值。注意，Type为0时，AgentGroupId为必填
      * @param string $Host 指定域名(如需要)
      * @param integer $Port 拨测目标的端口号
      * @param integer $IsHeader 是否为Header请求（非0 发起Header 请求。为0，且PostData非空，发起POST请求。为0，PostData为空，发起GET请求）

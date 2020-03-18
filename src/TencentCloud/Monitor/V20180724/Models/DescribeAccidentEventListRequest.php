@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置起始时间，默认一天前的时间戳
  * @method integer getEndTime() 获取结束时间，默认当前时间戳
  * @method void setEndTime(integer $EndTime) 设置结束时间，默认当前时间戳
- * @method integer getLimit() 获取每页返回的数量，默认20
- * @method void setLimit(integer $Limit) 设置每页返回的数量，默认20
- * @method integer getOffset() 获取页偏移量，默认0
- * @method void setOffset(integer $Offset) 设置页偏移量，默认0
+ * @method integer getLimit() 获取分页参数，每页返回的数量，取值1~100，默认20
+ * @method void setLimit(integer $Limit) 设置分页参数，每页返回的数量，取值1~100，默认20
+ * @method integer getOffset() 获取分页参数，页偏移量，从0开始计数，默认0
+ * @method void setOffset(integer $Offset) 设置分页参数，页偏移量，从0开始计数，默认0
  * @method string getUpdateTimeOrder() 获取根据UpdateTime排序的规则，取值asc或desc
  * @method void setUpdateTimeOrder(string $UpdateTimeOrder) 设置根据UpdateTime排序的规则，取值asc或desc
  * @method string getOccurTimeOrder() 获取根据OccurTime排序的规则，取值asc或desc（优先根据UpdateTimeOrder排序）
@@ -65,12 +65,12 @@ class DescribeAccidentEventListRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 每页返回的数量，默认20
+     * @var integer 分页参数，每页返回的数量，取值1~100，默认20
      */
     public $Limit;
 
     /**
-     * @var integer 页偏移量，默认0
+     * @var integer 分页参数，页偏移量，从0开始计数，默认0
      */
     public $Offset;
 
@@ -112,8 +112,8 @@ class DescribeAccidentEventListRequest extends AbstractModel
      * @param string $Module 接口模块名，当前接口取值monitor
      * @param integer $StartTime 起始时间，默认一天前的时间戳
      * @param integer $EndTime 结束时间，默认当前时间戳
-     * @param integer $Limit 每页返回的数量，默认20
-     * @param integer $Offset 页偏移量，默认0
+     * @param integer $Limit 分页参数，每页返回的数量，取值1~100，默认20
+     * @param integer $Offset 分页参数，页偏移量，从0开始计数，默认0
      * @param string $UpdateTimeOrder 根据UpdateTime排序的规则，取值asc或desc
      * @param string $OccurTimeOrder 根据OccurTime排序的规则，取值asc或desc（优先根据UpdateTimeOrder排序）
      * @param array $AccidentType 根据事件类型过滤，1表示服务问题，2表示其他订阅

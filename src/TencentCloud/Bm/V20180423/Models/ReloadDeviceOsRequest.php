@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedEMRSoftware(integer $NeedEMRSoftware) 设置是否安装EMR软件包，取值：1(安装) 0(不安装)，默认取值0
  * @method integer getReserveSgConfig() 获取是否保留安全组配置，取值：1(保留) 0(不保留)，默认取值0
  * @method void setReserveSgConfig(integer $ReserveSgConfig) 设置是否保留安全组配置，取值：1(保留) 0(不保留)，默认取值0
+ * @method integer getSysDataSpace() 获取/data分区大小，可不填。除root、swap、usr/local的剩余空间会自动分配到data分区
+ * @method void setSysDataSpace(integer $SysDataSpace) 设置/data分区大小，可不填。除root、swap、usr/local的剩余空间会自动分配到data分区
  */
 
 /**
@@ -157,6 +159,11 @@ class ReloadDeviceOsRequest extends AbstractModel
      * @var integer 是否保留安全组配置，取值：1(保留) 0(不保留)，默认取值0
      */
     public $ReserveSgConfig;
+
+    /**
+     * @var integer /data分区大小，可不填。除root、swap、usr/local的剩余空间会自动分配到data分区
+     */
+    public $SysDataSpace;
     /**
      * @param string $InstanceId 设备的唯一ID
      * @param string $Password 密码。 用户设置的linux root或Windows Administrator密码。密码校验规则: <li> Windows机器密码需12到16位，至少包括三项 `[a-z]`,`[A-Z]`,`[0-9]`和`[()`'`~!@#$%^&*-+=_`|`{}[]:;'<>,.?/]`的特殊符号, 密码不能包含Administrator(不区分大小写); <li> Linux机器密码需8到16位，至少包括两项`[a-z,A-Z]`,`[0-9]`和`[()`'`~!@#$%^&*-+=_`|`{}[]:;'<>,.?/]`的特殊符号
@@ -177,6 +184,7 @@ class ReloadDeviceOsRequest extends AbstractModel
      * @param integer $NeedEMRAgent 是否安装EMR Agent，取值：1(安装) 0(不安装)，默认取值0
      * @param integer $NeedEMRSoftware 是否安装EMR软件包，取值：1(安装) 0(不安装)，默认取值0
      * @param integer $ReserveSgConfig 是否保留安全组配置，取值：1(保留) 0(不保留)，默认取值0
+     * @param integer $SysDataSpace /data分区大小，可不填。除root、swap、usr/local的剩余空间会自动分配到data分区
      */
     function __construct()
     {
@@ -264,6 +272,10 @@ class ReloadDeviceOsRequest extends AbstractModel
 
         if (array_key_exists("ReserveSgConfig",$param) and $param["ReserveSgConfig"] !== null) {
             $this->ReserveSgConfig = $param["ReserveSgConfig"];
+        }
+
+        if (array_key_exists("SysDataSpace",$param) and $param["SysDataSpace"] !== null) {
+            $this->SysDataSpace = $param["SysDataSpace"];
         }
     }
 }

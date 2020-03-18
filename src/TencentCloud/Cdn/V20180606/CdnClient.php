@@ -39,6 +39,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
 + 状态码 5xx 汇总及各 5 开头状态码明细（单位为 个）
 * @method Models\DescribeCdnDomainLogsResponse DescribeCdnDomainLogs(Models\DescribeCdnDomainLogsRequest $req) DescribeCdnDomainLogs 用于查询访问日志下载地址，仅支持 30 天以内的境内、境外访问日志下载链接查询。
 * @method Models\DescribeCdnIpResponse DescribeCdnIp(Models\DescribeCdnIpRequest $req) DescribeCdnIp 用于查询 CDN IP 归属。
+* @method Models\DescribeCertDomainsResponse DescribeCertDomains(Models\DescribeCertDomainsRequest $req) 校验证书并提取SSL证书中包含的域名，返回CDN已接入的域名列表，及已配置证书的域名列表
 * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) DescribeDomains 用于查询内容分发网络加速域名（含境内、境外）基本配置信息，包括项目ID、服务状态，业务类型、创建时间、更新时间等信息。
 * @method Models\DescribeDomainsConfigResponse DescribeDomainsConfig(Models\DescribeDomainsConfigRequest $req) DescribeDomainsConfig 用于查询内容分发网络加速域名（含境内、境外）的所有配置信息。
 * @method Models\DescribeIpStatusResponse DescribeIpStatus(Models\DescribeIpStatusRequest $req) DescribeIpStatus 用于查询域名所在加速平台的边缘节点、回源节点明细

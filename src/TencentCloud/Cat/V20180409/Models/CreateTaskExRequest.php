@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(integer $Period) 设置拨测周期。取值可为1,5,15,30之一, 单位：分钟。精度不能低于用户等级规定的最小精度
  * @method string getTaskName() 获取拨测任务名称不能超过32个字符。同一个用户创建的任务名不可重复
  * @method void setTaskName(string $TaskName) 设置拨测任务名称不能超过32个字符。同一个用户创建的任务名不可重复
- * @method integer getAgentGroupId() 获取拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
- * @method void setAgentGroupId(integer $AgentGroupId) 设置拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
+ * @method integer getAgentGroupId() 获取拨测分组ID，体现本拨测任务要采用哪些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
+ * @method void setAgentGroupId(integer $AgentGroupId) 设置拨测分组ID，体现本拨测任务要采用哪些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
  * @method string getHost() 获取指定域名(如需要)
  * @method void setHost(string $Host) 设置指定域名(如需要)
  * @method integer getIsHeader() 获取是否为Header请求（非0 发起Header 请求。为0，且PostData 非空，发起POST请求。为0，PostData 为空，发起GET请求）
@@ -104,7 +104,7 @@ class CreateTaskExRequest extends AbstractModel
     public $TaskName;
 
     /**
-     * @var integer 拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
+     * @var integer 拨测分组ID，体现本拨测任务要采用哪些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
      */
     public $AgentGroupId;
 
@@ -232,7 +232,7 @@ class CreateTaskExRequest extends AbstractModel
      * @param string $Url 拨测的URL， 例如：www.qq.com (URL域名解析需要能解析出具体的IP)
      * @param integer $Period 拨测周期。取值可为1,5,15,30之一, 单位：分钟。精度不能低于用户等级规定的最小精度
      * @param string $TaskName 拨测任务名称不能超过32个字符。同一个用户创建的任务名不可重复
-     * @param integer $AgentGroupId 拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
+     * @param integer $AgentGroupId 拨测分组ID，体现本拨测任务要采用哪些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
      * @param string $Host 指定域名(如需要)
      * @param integer $IsHeader 是否为Header请求（非0 发起Header 请求。为0，且PostData 非空，发起POST请求。为0，PostData 为空，发起GET请求）
      * @param string $SslVer URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一

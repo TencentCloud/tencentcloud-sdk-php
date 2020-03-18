@@ -54,13 +54,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrganizationCountry(string $OrganizationCountry) 设置国家。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrganizationCity() 获取省。
+ * @method string getOrganizationCity() 获取市。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrganizationCity(string $OrganizationCity) 设置省。
+ * @method void setOrganizationCity(string $OrganizationCity) 设置市。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrganizationRegion() 获取市。
+ * @method string getOrganizationRegion() 获取省。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrganizationRegion(string $OrganizationRegion) 设置市。
+ * @method void setOrganizationRegion(string $OrganizationRegion) 设置省。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPostalCode() 获取邮政编码。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -180,13 +180,13 @@ class SubmittedData extends AbstractModel
     public $OrganizationCountry;
 
     /**
-     * @var string 省。
+     * @var string 市。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrganizationCity;
 
     /**
-     * @var string 市。
+     * @var string 省。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrganizationRegion;
@@ -293,9 +293,9 @@ class SubmittedData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrganizationCountry 国家。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OrganizationCity 省。
+     * @param string $OrganizationCity 市。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OrganizationRegion 市。
+     * @param string $OrganizationRegion 省。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PostalCode 邮政编码。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -18,12 +18,12 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getGroupId() 获取拨测分组id
- * @method void setGroupId(integer $GroupId) 设置拨测分组id
+ * @method integer getGroupId() 获取拨测分组ID
+ * @method void setGroupId(integer $GroupId) 设置拨测分组ID
  * @method string getGroupName() 获取拨测分组名称
  * @method void setGroupName(string $GroupName) 设置拨测分组名称
- * @method integer getIsDefault() 获取是否为默认分组。取值可为0，1
- * @method void setIsDefault(integer $IsDefault) 设置是否为默认分组。取值可为0，1
+ * @method integer getIsDefault() 获取是否为默认分组。取值可为0，1。取 1 时表示设置为默认分组
+ * @method void setIsDefault(integer $IsDefault) 设置是否为默认分组。取值可为0，1。取 1 时表示设置为默认分组
  * @method array getAgents() 获取Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgents 的返回结果。
  * @method void setAgents(array $Agents) 设置Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgents 的返回结果。
  */
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAgentGroupRequest extends AbstractModel
 {
     /**
-     * @var integer 拨测分组id
+     * @var integer 拨测分组ID
      */
     public $GroupId;
 
@@ -44,7 +44,7 @@ class ModifyAgentGroupRequest extends AbstractModel
     public $GroupName;
 
     /**
-     * @var integer 是否为默认分组。取值可为0，1
+     * @var integer 是否为默认分组。取值可为0，1。取 1 时表示设置为默认分组
      */
     public $IsDefault;
 
@@ -53,9 +53,9 @@ class ModifyAgentGroupRequest extends AbstractModel
      */
     public $Agents;
     /**
-     * @param integer $GroupId 拨测分组id
+     * @param integer $GroupId 拨测分组ID
      * @param string $GroupName 拨测分组名称
-     * @param integer $IsDefault 是否为默认分组。取值可为0，1
+     * @param integer $IsDefault 是否为默认分组。取值可为0，1。取 1 时表示设置为默认分组
      * @param array $Agents Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgents 的返回结果。
      */
     function __construct()

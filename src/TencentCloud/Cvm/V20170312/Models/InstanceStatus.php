@@ -25,7 +25,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *描述实例的状态。状态类型详见[实例状态表](/document/api/213/9452#INSTANCE_STATE)
+ *描述实例的状态。状态类型详见[实例状态表](/document/api/213/15753#InstanceStatus)
  */
 class InstanceStatus extends AbstractModel
 {

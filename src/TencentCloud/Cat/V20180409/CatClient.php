@@ -24,7 +24,7 @@ use TencentCloud\Cat\V20180409\Models as Models;
 /**
 * @method Models\BindAlarmPolicyResponse BindAlarmPolicy(Models\BindAlarmPolicyRequest $req) 绑定拨测任务和告警策略组
 * @method Models\CreateAgentGroupResponse CreateAgentGroup(Models\CreateAgentGroupRequest $req) 添加拨测分组
-* @method Models\CreateTaskExResponse CreateTaskEx(Models\CreateTaskExRequest $req) 创建拨测任务(扩充)
+* @method Models\CreateTaskExResponse CreateTaskEx(Models\CreateTaskExRequest $req) 创建拨测任务(扩展)
 * @method Models\DeleteAgentGroupResponse DeleteAgentGroup(Models\DeleteAgentGroupRequest $req) 删除拨测分组
 * @method Models\DeleteTasksResponse DeleteTasks(Models\DeleteTasksRequest $req) 删除多个拨测任务
 * @method Models\DescribeAgentGroupsResponse DescribeAgentGroups(Models\DescribeAgentGroupsRequest $req) 查询拨测分组列表

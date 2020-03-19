@@ -57,6 +57,11 @@ class ClientProfile
      */
     private $unsignedPayload;
 
+    /**
+     * @var boolean
+     */
+    private $checkPHPVersion;
+
 
     /**
      * ClientProfile constructor.
@@ -68,6 +73,7 @@ class ClientProfile
         $this->signMethod = $signMethod ? $signMethod : ClientProfile::$SIGN_TC3_SHA256;
         $this->httpProfile = $httpProfile ? $httpProfile : new HttpProfile();
         $this->unsignedPayload = false;
+        $this->checkPHPVersion = true;
     }
 
     /**
@@ -113,6 +119,16 @@ class ClientProfile
     public function getUnsignedPayload()
     {
         return $this->unsignedPayload;
+    }
+
+    public function getCheckPHPVersion()
+    {
+        return $this->checkPHPVersion;
+    }
+
+    public function setCheckPHPVersion($flag)
+    {
+        $this->checkPHPVersion = $flag;
     }
 
     /**

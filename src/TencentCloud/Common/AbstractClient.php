@@ -42,6 +42,7 @@ abstract class AbstractClient
      */
     public static $HTTP_RSP_OK = 200;
 
+    private $PHP_VERSION_MINIMUM = "5.6.33";
 
     /**
      * @var Credential 认证类实例，保存认证相关字段
@@ -97,6 +98,10 @@ abstract class AbstractClient
         }
         $this->sdkVersion = AbstractClient::$SDK_VERSION;
         $this->apiVersion = $version;
+
+        if (version_compare(phpversion(), $this->PHP_VERSION_MINIMUM, '<') && $profile->getCheckPHPVersion()) {
+            throw new TencentCloudSDKException("ClientError", "PHP version must >= ".$this->PHP_VERSION_MINIMUM.", your current is ".phpversion());
+        }
     }
 
     /**

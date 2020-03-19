@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getSignId() 获取签名Id
  * @method void setSignId(integer $SignId) 设置签名Id
- * @method integer getInternational() 获取是否国际短信。其中：
+ * @method integer getInternational() 获取是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。
- * @method void setInternational(integer $International) 设置是否国际短信。其中：
+1：表示国际/港澳台短信。
+ * @method void setInternational(integer $International) 设置是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。
+1：表示国际/港澳台短信。
  * @method integer getStatusCode() 获取申请签名状态。其中：
 0：表示审核通过。
 -1：表示审核未通过或审核失败。
@@ -51,9 +51,9 @@ class DescribeSignListStatus extends AbstractModel
     public $SignId;
 
     /**
-     * @var integer 是否国际短信。其中：
+     * @var integer 是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。
+1：表示国际/港澳台短信。
      */
     public $International;
 
@@ -80,9 +80,9 @@ class DescribeSignListStatus extends AbstractModel
     public $CreateTime;
     /**
      * @param integer $SignId 签名Id
-     * @param integer $International 是否国际短信。其中：
+     * @param integer $International 是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。
+1：表示国际/港澳台短信。
      * @param integer $StatusCode 申请签名状态。其中：
 0：表示审核通过。
 -1：表示审核未通过或审核失败。

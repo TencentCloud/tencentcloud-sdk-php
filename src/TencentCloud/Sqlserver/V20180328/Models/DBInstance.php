@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置物理机代号
  * @method integer getPid() 获取计费ID
  * @method void setPid(integer $Pid) 设置计费ID
+ * @method string getUniqVpcId() 获取实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
+ * @method void setUniqVpcId(string $UniqVpcId) 设置实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
+ * @method string getUniqSubnetId() 获取实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
  */
 
 /**
@@ -234,6 +238,16 @@ class DBInstance extends AbstractModel
      * @var integer 计费ID
      */
     public $Pid;
+
+    /**
+     * @var string 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
+     */
+    public $UniqVpcId;
+
+    /**
+     * @var string 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
+     */
+    public $UniqSubnetId;
     /**
      * @param string $InstanceId 实例ID
      * @param string $Name 实例名称
@@ -265,6 +279,8 @@ class DBInstance extends AbstractModel
      * @param string $Version 实例版本代号
      * @param string $Type 物理机代号
      * @param integer $Pid 计费ID
+     * @param string $UniqVpcId 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
+     * @param string $UniqSubnetId 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
      */
     function __construct()
     {
@@ -396,6 +412,14 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
             $this->Pid = $param["Pid"];
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
+        }
+
+        if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
+            $this->UniqSubnetId = $param["UniqSubnetId"];
         }
     }
 }

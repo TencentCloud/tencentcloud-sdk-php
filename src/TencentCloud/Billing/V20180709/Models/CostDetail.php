@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFeeBeginTime(string $FeeBeginTime) 设置费用开始时间
  * @method string getFeeEndTime() 获取费用结束时间
  * @method void setFeeEndTime(string $FeeEndTime) 设置费用结束时间
- * @method CostComponentSet getComponentSet() 获取组件明细
- * @method void setComponentSet(CostComponentSet $ComponentSet) 设置组件明细
+ * @method array getComponentSet() 获取组件明细
+ * @method void setComponentSet(array $ComponentSet) 设置组件明细
  * @method string getProductCode() 获取产品代码
  * @method void setProductCode(string $ProductCode) 设置产品代码
  */
@@ -131,7 +131,7 @@ class CostDetail extends AbstractModel
     public $FeeEndTime;
 
     /**
-     * @var CostComponentSet 组件明细
+     * @var array 组件明细
      */
     public $ComponentSet;
 
@@ -155,7 +155,7 @@ class CostDetail extends AbstractModel
      * @param string $BillId 交易id
      * @param string $FeeBeginTime 费用开始时间
      * @param string $FeeEndTime 费用结束时间
-     * @param CostComponentSet $ComponentSet 组件明细
+     * @param array $ComponentSet 组件明细
      * @param string $ProductCode 产品代码
      */
     function __construct()
@@ -227,8 +227,12 @@ class CostDetail extends AbstractModel
         }
 
         if (array_key_exists("ComponentSet",$param) and $param["ComponentSet"] !== null) {
-            $this->ComponentSet = new CostComponentSet();
-            $this->ComponentSet->deserialize($param["ComponentSet"]);
+            $this->ComponentSet = [];
+            foreach ($param["ComponentSet"] as $key => $value){
+                $obj = new CostComponentSet();
+                $obj->deserialize($value);
+                array_push($this->ComponentSet, $obj);
+            }
         }
 
         if (array_key_exists("ProductCode",$param) and $param["ProductCode"] !== null) {

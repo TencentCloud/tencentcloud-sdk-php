@@ -120,6 +120,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVip6(string $Vip6) 设置内部参数，用户可忽略
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRemainBandwidthDuration() 获取内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) 设置内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -345,6 +349,12 @@ class InstanceSet extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip6;
+
+    /**
+     * @var string 内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RemainBandwidthDuration;
     /**
      * @param string $InstanceName 实例名称
      * @param string $InstanceId 实例Id
@@ -396,6 +406,8 @@ class InstanceSet extends AbstractModel
      * @param integer $ReadOnly 实例只读标识（内部参数，用户可忽略）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Vip6 内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RemainBandwidthDuration 内部参数，用户可忽略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -586,6 +598,10 @@ class InstanceSet extends AbstractModel
 
         if (array_key_exists("Vip6",$param) and $param["Vip6"] !== null) {
             $this->Vip6 = $param["Vip6"];
+        }
+
+        if (array_key_exists("RemainBandwidthDuration",$param) and $param["RemainBandwidthDuration"] !== null) {
+            $this->RemainBandwidthDuration = $param["RemainBandwidthDuration"];
         }
     }
 }

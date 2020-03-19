@@ -31,6 +31,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
 * @method Models\CreateInstanceNameResponse CreateInstanceName(Models\CreateInstanceNameRequest $req) 资源实例重命名，支持独享包、共享包、高防IP、高防IP专业版；
 * @method Models\CreateL4HealthConfigResponse CreateL4HealthConfig(Models\CreateL4HealthConfigRequest $req) 上传四层健康检查配置
 * @method Models\CreateL4RulesResponse CreateL4Rules(Models\CreateL4RulesRequest $req) 添加L4转发规则
+* @method Models\CreateL7CCRuleResponse CreateL7CCRule(Models\CreateL7CCRuleRequest $req) 此接口是7层CC的访问频控自定义规则（IP+Host维度，不支持具体的URI），此接口已弃用，请调用新接口CreateCCFrequencyRules，新接口同时支持IP+Host维度以及具体的URI；
 * @method Models\CreateL7HealthConfigResponse CreateL7HealthConfig(Models\CreateL7HealthConfigRequest $req) 上传七层健康检查配置
 * @method Models\CreateL7RuleCertResponse CreateL7RuleCert(Models\CreateL7RuleCertRequest $req) 配置7层转发规则的证书
 * @method Models\CreateL7RulesResponse CreateL7Rules(Models\CreateL7RulesRequest $req) 添加7层(网站)转发规则

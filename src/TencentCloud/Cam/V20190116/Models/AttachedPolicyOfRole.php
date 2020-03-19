@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeactivedDetail(array $DeactivedDetail) 设置已下线的产品列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取策略描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置策略描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -82,6 +86,12 @@ class AttachedPolicyOfRole extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeactivedDetail;
+
+    /**
+     * @var string 策略描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
     /**
      * @param integer $PolicyId 策略ID
      * @param string $PolicyName 策略名称
@@ -92,6 +102,8 @@ class AttachedPolicyOfRole extends AbstractModel
      * @param integer $Deactived 是否已下线(0:否 1:是)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DeactivedDetail 已下线的产品列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 策略描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,10 @@ class AttachedPolicyOfRole extends AbstractModel
 
         if (array_key_exists("DeactivedDetail",$param) and $param["DeactivedDetail"] !== null) {
             $this->DeactivedDetail = $param["DeactivedDetail"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

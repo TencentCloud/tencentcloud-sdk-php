@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShardSlaveZones(array $ShardSlaveZones) 设置分片的从可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCpu() 获取CPU核数
+ * @method void setCpu(integer $Cpu) 设置CPU核数
  */
 
 /**
@@ -194,6 +196,11 @@ class DCDBShardInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShardSlaveZones;
+
+    /**
+     * @var integer CPU核数
+     */
+    public $Cpu;
     /**
      * @param string $InstanceId 所属实例Id
      * @param string $ShardSerialId 分片SQL透传Id，用于将sql透传到指定分片执行
@@ -221,6 +228,7 @@ class DCDBShardInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ShardSlaveZones 分片的从可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Cpu CPU核数
      */
     function __construct()
     {
@@ -324,6 +332,10 @@ class DCDBShardInfo extends AbstractModel
 
         if (array_key_exists("ShardSlaveZones",$param) and $param["ShardSlaveZones"] !== null) {
             $this->ShardSlaveZones = $param["ShardSlaveZones"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

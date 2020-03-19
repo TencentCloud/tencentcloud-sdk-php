@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataLen(integer $DataLen) 设置数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
  * @method string getHotwordId() 获取热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
  * @method void setHotwordId(string $HotwordId) 设置热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+ * @method integer getFilterDirty() 获取是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
+ * @method void setFilterDirty(integer $FilterDirty) 设置是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
+ * @method integer getFilterModal() 获取是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
+ * @method void setFilterModal(integer $FilterModal) 设置是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
  */
 
 /**
@@ -102,6 +106,16 @@ class CreateRecTaskRequest extends AbstractModel
      * @var string 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
      */
     public $HotwordId;
+
+    /**
+     * @var integer 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
+     */
+    public $FilterDirty;
+
+    /**
+     * @var integer 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
+     */
+    public $FilterModal;
     /**
      * @param string $EngineModelType 引擎模型类型。
 8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
@@ -117,6 +131,8 @@ class CreateRecTaskRequest extends AbstractModel
      * @param string $Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于5MB。
      * @param integer $DataLen 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
      * @param string $HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+     * @param integer $FilterDirty 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
+     * @param integer $FilterModal 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
      */
     function __construct()
     {
@@ -164,6 +180,14 @@ class CreateRecTaskRequest extends AbstractModel
 
         if (array_key_exists("HotwordId",$param) and $param["HotwordId"] !== null) {
             $this->HotwordId = $param["HotwordId"];
+        }
+
+        if (array_key_exists("FilterDirty",$param) and $param["FilterDirty"] !== null) {
+            $this->FilterDirty = $param["FilterDirty"];
+        }
+
+        if (array_key_exists("FilterModal",$param) and $param["FilterModal"] !== null) {
+            $this->FilterModal = $param["FilterModal"];
         }
     }
 }

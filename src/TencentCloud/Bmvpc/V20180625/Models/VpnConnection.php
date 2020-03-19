@@ -54,9 +54,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpnGatewayName(string $VpnGatewayName) 设置VPN网关名称
  * @method string getCustomerGatewayName() 获取对端网关名称
  * @method void setCustomerGatewayName(string $CustomerGatewayName) 设置对端网关名称
- * @method array getDestinationCidr() 获取IPSEC VPN通道路由策略
+ * @method array getDestinationCidr() 获取IPSEC VPN通道路由策略目的端地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDestinationCidr(array $DestinationCidr) 设置IPSEC VPN通道路由策略
+ * @method void setDestinationCidr(array $DestinationCidr) 设置IPSEC VPN通道路由策略目的端地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSourceCidr() 获取IPSEC VPN通道路由策略源端地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSourceCidr(array $SourceCidr) 设置IPSEC VPN通道路由策略源端地址
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -156,10 +160,16 @@ class VpnConnection extends AbstractModel
     public $CustomerGatewayName;
 
     /**
-     * @var array IPSEC VPN通道路由策略
+     * @var array IPSEC VPN通道路由策略目的端地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DestinationCidr;
+
+    /**
+     * @var array IPSEC VPN通道路由策略源端地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SourceCidr;
     /**
      * @param string $VpnConnectionId 通道实例ID。
      * @param string $VpnConnectionName 通道名称。
@@ -179,7 +189,9 @@ class VpnConnection extends AbstractModel
      * @param string $VpcName VPC名称
      * @param string $VpnGatewayName VPN网关名称
      * @param string $CustomerGatewayName 对端网关名称
-     * @param array $DestinationCidr IPSEC VPN通道路由策略
+     * @param array $DestinationCidr IPSEC VPN通道路由策略目的端地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SourceCidr IPSEC VPN通道路由策略源端地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -275,6 +287,10 @@ class VpnConnection extends AbstractModel
 
         if (array_key_exists("DestinationCidr",$param) and $param["DestinationCidr"] !== null) {
             $this->DestinationCidr = $param["DestinationCidr"];
+        }
+
+        if (array_key_exists("SourceCidr",$param) and $param["SourceCidr"] !== null) {
+            $this->SourceCidr = $param["SourceCidr"];
         }
     }
 }

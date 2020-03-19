@@ -26,8 +26,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidasSecretId(string $MidasSecretId) 设置由平台客服提供的计费密钥Id
  * @method string getMidasSignature() 获取计费签名
  * @method void setMidasSignature(string $MidasSignature) 设置计费签名
- * @method string getPlatformId() 获取平台参数，沙箱环境传sandbox，生产环境传release，默认release
- * @method void setPlatformId(string $PlatformId) 设置平台参数，沙箱环境传sandbox，生产环境传release，默认release
  */
 
 /**
@@ -54,17 +52,11 @@ class QueryAcctBindingRequest extends AbstractModel
      * @var string 计费签名
      */
     public $MidasSignature;
-
-    /**
-     * @var string 平台参数，沙箱环境传sandbox，生产环境传release，默认release
-     */
-    public $PlatformId;
     /**
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $SubAppId 聚鑫计费SubAppId，代表子商户
      * @param string $MidasSecretId 由平台客服提供的计费密钥Id
      * @param string $MidasSignature 计费签名
-     * @param string $PlatformId 平台参数，沙箱环境传sandbox，生产环境传release，默认release
      */
     function __construct()
     {
@@ -92,10 +84,6 @@ class QueryAcctBindingRequest extends AbstractModel
 
         if (array_key_exists("MidasSignature",$param) and $param["MidasSignature"] !== null) {
             $this->MidasSignature = $param["MidasSignature"];
-        }
-
-        if (array_key_exists("PlatformId",$param) and $param["PlatformId"] !== null) {
-            $this->PlatformId = $param["PlatformId"];
         }
     }
 }

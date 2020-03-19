@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPid(integer $Pid) 设置产品类型 Id
  * @method integer getQps() 获取最大 Qps 值
  * @method void setQps(integer $Qps) 设置最大 Qps 值
+ * @method integer getCpu() 获取CPU核数
+ * @method void setCpu(integer $Cpu) 设置CPU核数
  */
 
 /**
@@ -73,6 +75,11 @@ class SpecConfigInfo extends AbstractModel
      * @var integer 最大 Qps 值
      */
     public $Qps;
+
+    /**
+     * @var integer CPU核数
+     */
+    public $Cpu;
     /**
      * @param integer $NodeCount 节点个数，2 表示一主一从，3 表示一主二从
      * @param integer $Memory 内存大小，单位 GB
@@ -81,6 +88,7 @@ class SpecConfigInfo extends AbstractModel
      * @param string $SuitInfo 推荐的使用场景
      * @param integer $Pid 产品类型 Id
      * @param integer $Qps 最大 Qps 值
+     * @param integer $Cpu CPU核数
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class SpecConfigInfo extends AbstractModel
 
         if (array_key_exists("Qps",$param) and $param["Qps"] !== null) {
             $this->Qps = $param["Qps"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

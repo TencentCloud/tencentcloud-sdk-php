@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method ZoneInfo getZoneInfo() 获取实例所在的Zone的信息。
  * @method void setZoneInfo(ZoneInfo $ZoneInfo) 设置实例所在的Zone的信息。
- * @method  getCountry() 获取实例所在的国家的信息。
- * @method void setCountry( $Country) 设置实例所在的国家的信息。
+ * @method Country getCountry() 获取实例所在的国家的信息。
+ * @method void setCountry(Country $Country) 设置实例所在的国家的信息。
  * @method Area getArea() 获取实例所在的Area的信息。
  * @method void setArea(Area $Area) 设置实例所在的Area的信息。
- * @method  getProvince() 获取实例所在的省份的信息。
- * @method void setProvince( $Province) 设置实例所在的省份的信息。
- * @method  getCity() 获取实例所在的城市的信息。
- * @method void setCity( $City) 设置实例所在的城市的信息。
+ * @method Province getProvince() 获取实例所在的省份的信息。
+ * @method void setProvince(Province $Province) 设置实例所在的省份的信息。
+ * @method City getCity() 获取实例所在的城市的信息。
+ * @method void setCity(City $City) 设置实例所在的城市的信息。
  * @method RegionInfo getRegionInfo() 获取实例所在的Region的信息。
  * @method void setRegionInfo(RegionInfo $RegionInfo) 设置实例所在的Region的信息。
  */
@@ -43,7 +43,7 @@ class Position extends AbstractModel
     public $ZoneInfo;
 
     /**
-     * @var  实例所在的国家的信息。
+     * @var Country 实例所在的国家的信息。
      */
     public $Country;
 
@@ -53,12 +53,12 @@ class Position extends AbstractModel
     public $Area;
 
     /**
-     * @var  实例所在的省份的信息。
+     * @var Province 实例所在的省份的信息。
      */
     public $Province;
 
     /**
-     * @var  实例所在的城市的信息。
+     * @var City 实例所在的城市的信息。
      */
     public $City;
 
@@ -68,10 +68,10 @@ class Position extends AbstractModel
     public $RegionInfo;
     /**
      * @param ZoneInfo $ZoneInfo 实例所在的Zone的信息。
-     * @param  $Country 实例所在的国家的信息。
+     * @param Country $Country 实例所在的国家的信息。
      * @param Area $Area 实例所在的Area的信息。
-     * @param  $Province 实例所在的省份的信息。
-     * @param  $City 实例所在的城市的信息。
+     * @param Province $Province 实例所在的省份的信息。
+     * @param City $City 实例所在的城市的信息。
      * @param RegionInfo $RegionInfo 实例所在的Region的信息。
      */
     function __construct()
@@ -92,7 +92,7 @@ class Position extends AbstractModel
         }
 
         if (array_key_exists("Country",$param) and $param["Country"] !== null) {
-            $this->Country = new ();
+            $this->Country = new Country();
             $this->Country->deserialize($param["Country"]);
         }
 
@@ -102,12 +102,12 @@ class Position extends AbstractModel
         }
 
         if (array_key_exists("Province",$param) and $param["Province"] !== null) {
-            $this->Province = new ();
+            $this->Province = new Province();
             $this->Province->deserialize($param["Province"]);
         }
 
         if (array_key_exists("City",$param) and $param["City"] !== null) {
-            $this->City = new ();
+            $this->City = new City();
             $this->City->deserialize($param["City"]);
         }
 

@@ -138,6 +138,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemRequest(string $MemRequest) 设置初始分配的内存 MiB 数，对应 K8S request
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubnetId() 获取子网id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubnetId(string $SubnetId) 设置子网id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -324,6 +328,12 @@ class ContainerGroupDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemRequest;
+
+    /**
+     * @var string 子网id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubnetId;
     /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -384,6 +394,8 @@ class ContainerGroupDetail extends AbstractModel
      * @param string $CpuRequest 初始分配的 CPU 核数，对应 K8S request
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MemRequest 初始分配的内存 MiB 数，对应 K8S request
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubnetId 子网id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -526,6 +538,10 @@ class ContainerGroupDetail extends AbstractModel
 
         if (array_key_exists("MemRequest",$param) and $param["MemRequest"] !== null) {
             $this->MemRequest = $param["MemRequest"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

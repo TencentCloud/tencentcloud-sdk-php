@@ -24,15 +24,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannel(string $Channel) 设置渠道
  * @method string getLogsetId() 获取日志集ID
  * @method void setLogsetId(string $LogsetId) 设置日志集ID
- * @method string getTopicId() 获取主题ID
- * @method void setTopicId(string $TopicId) 设置主题ID
- * @method array getDomainAreaConfigs() 获取域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名。
- * @method void setDomainAreaConfigs(array $DomainAreaConfigs) 设置域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名。
- * @method string getTopicName() 获取主题名称
- * @method void setTopicName(string $TopicName) 设置主题名称
- * @method string getUpdateTime() 获取主题最近更新时间
+ * @method string getTopicId() 获取日志主题ID
+ * @method void setTopicId(string $TopicId) 设置日志主题ID
+ * @method array getDomainAreaConfigs() 获取域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名
+ * @method void setDomainAreaConfigs(array $DomainAreaConfigs) 设置域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名
+ * @method string getTopicName() 获取日志主题名称
+ * @method void setTopicName(string $TopicName) 设置日志主题名称
+ * @method string getUpdateTime() 获取日志主题最近更新时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置主题最近更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置日志主题最近更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -59,22 +59,22 @@ class ListClsTopicDomainsResponse extends AbstractModel
     public $LogsetId;
 
     /**
-     * @var string 主题ID
+     * @var string 日志主题ID
      */
     public $TopicId;
 
     /**
-     * @var array 域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名。
+     * @var array 域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名
      */
     public $DomainAreaConfigs;
 
     /**
-     * @var string 主题名称
+     * @var string 日志主题名称
      */
     public $TopicName;
 
     /**
-     * @var string 主题最近更新时间
+     * @var string 日志主题最近更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
@@ -87,10 +87,10 @@ class ListClsTopicDomainsResponse extends AbstractModel
      * @param integer $AppId 开发者ID
      * @param string $Channel 渠道
      * @param string $LogsetId 日志集ID
-     * @param string $TopicId 主题ID
-     * @param array $DomainAreaConfigs 域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名。
-     * @param string $TopicName 主题名称
-     * @param string $UpdateTime 主题最近更新时间
+     * @param string $TopicId 日志主题ID
+     * @param array $DomainAreaConfigs 域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名
+     * @param string $TopicName 日志主题名称
+     * @param string $UpdateTime 日志主题最近更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

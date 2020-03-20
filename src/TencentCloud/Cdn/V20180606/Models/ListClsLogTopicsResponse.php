@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method LogSetInfo getLogset() 获取日志集信息
  * @method void setLogset(LogSetInfo $Logset) 设置日志集信息
- * @method array getTopics() 获取主题信息列表
+ * @method array getTopics() 获取日志主题信息列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopics(array $Topics) 设置主题信息列表
+ * @method void setTopics(array $Topics) 设置日志主题信息列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -39,7 +39,7 @@ class ListClsLogTopicsResponse extends AbstractModel
     public $Logset;
 
     /**
-     * @var array 主题信息列表
+     * @var array 日志主题信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Topics;
@@ -50,7 +50,7 @@ class ListClsLogTopicsResponse extends AbstractModel
     public $RequestId;
     /**
      * @param LogSetInfo $Logset 日志集信息
-     * @param array $Topics 主题信息列表
+     * @param array $Topics 日志主题信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

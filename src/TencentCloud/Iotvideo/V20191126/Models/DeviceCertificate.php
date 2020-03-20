@@ -27,7 +27,7 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *设备证书及秘钥
+ *设备证书及密钥
  */
 class DeviceCertificate extends AbstractModel
 {

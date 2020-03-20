@@ -18,20 +18,20 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getFromUrl() 获取源Url。目前可支持直播流及点播文件。
+ * @method string getFromUrl() 获取源 Url。目前可支持直播流及点播文件。
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
 3. 支持拉流文件格式：flv，rtmp，hls，mp4。
- * @method void setFromUrl(string $FromUrl) 设置源Url。目前可支持直播流及点播文件。
+ * @method void setFromUrl(string $FromUrl) 设置源 Url。目前可支持直播流及点播文件。
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
 3. 支持拉流文件格式：flv，rtmp，hls，mp4。
- * @method string getToUrl() 获取目的Url，目前限制该目标地址为腾讯域名。
-仅支持：rtmp协议。
- * @method void setToUrl(string $ToUrl) 设置目的Url，目前限制该目标地址为腾讯域名。
-仅支持：rtmp协议。
+ * @method string getToUrl() 获取目的 Url，目前限制该目标地址为腾讯域名。
+仅支持：rtmp 协议。
+ * @method void setToUrl(string $ToUrl) 设置目的 Url，目前限制该目标地址为腾讯域名。
+仅支持：rtmp 协议。
  * @method integer getAreaId() 获取选择完成转拉推的服务所在区域:
 1-深圳，
 2-上海，
@@ -47,33 +47,33 @@ use TencentCloud\Common\AbstractModel;
 2-移动，
 3-联通，
 4-其他。
-注：AreaId为4的时候,IspId只能为其他。
+注：AreaId 为4的时候，IspId 只能为其他。
  * @method void setIspId(integer $IspId) 设置选择完成转拉推服务使用的运营商网络：
 1-电信，
 2-移动，
 3-联通，
 4-其他。
-注：AreaId为4的时候,IspId只能为其他。
+注：AreaId 为4的时候，IspId 只能为其他。
  * @method string getStartTime() 获取开始时间。
-使用UTC格式时间，
+使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setStartTime(string $StartTime) 设置开始时间。
-使用UTC格式时间，
+使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getEndTime() 获取结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
-使用UTC格式时间，
+使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setEndTime(string $EndTime) 设置结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
-使用UTC格式时间，
+使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  */
@@ -84,7 +84,7 @@ use TencentCloud\Common\AbstractModel;
 class CreatePullStreamConfigRequest extends AbstractModel
 {
     /**
-     * @var string 源Url。目前可支持直播流及点播文件。
+     * @var string 源 Url。目前可支持直播流及点播文件。
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
@@ -93,8 +93,8 @@ class CreatePullStreamConfigRequest extends AbstractModel
     public $FromUrl;
 
     /**
-     * @var string 目的Url，目前限制该目标地址为腾讯域名。
-仅支持：rtmp协议。
+     * @var string 目的 Url，目前限制该目标地址为腾讯域名。
+仅支持：rtmp 协议。
      */
     public $ToUrl;
 
@@ -113,13 +113,13 @@ class CreatePullStreamConfigRequest extends AbstractModel
 2-移动，
 3-联通，
 4-其他。
-注：AreaId为4的时候,IspId只能为其他。
+注：AreaId 为4的时候，IspId 只能为其他。
      */
     public $IspId;
 
     /**
      * @var string 开始时间。
-使用UTC格式时间，
+使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
@@ -130,19 +130,19 @@ class CreatePullStreamConfigRequest extends AbstractModel
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
-使用UTC格式时间，
+使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $EndTime;
     /**
-     * @param string $FromUrl 源Url。目前可支持直播流及点播文件。
+     * @param string $FromUrl 源 Url。目前可支持直播流及点播文件。
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
 3. 支持拉流文件格式：flv，rtmp，hls，mp4。
-     * @param string $ToUrl 目的Url，目前限制该目标地址为腾讯域名。
-仅支持：rtmp协议。
+     * @param string $ToUrl 目的 Url，目前限制该目标地址为腾讯域名。
+仅支持：rtmp 协议。
      * @param integer $AreaId 选择完成转拉推的服务所在区域:
 1-深圳，
 2-上海，
@@ -153,16 +153,16 @@ class CreatePullStreamConfigRequest extends AbstractModel
 2-移动，
 3-联通，
 4-其他。
-注：AreaId为4的时候,IspId只能为其他。
+注：AreaId 为4的时候，IspId 只能为其他。
      * @param string $StartTime 开始时间。
-使用UTC格式时间，
+使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $EndTime 结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
-使用UTC格式时间，
+使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */

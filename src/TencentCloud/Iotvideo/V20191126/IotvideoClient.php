@@ -76,6 +76,13 @@ use TencentCloud\Iotvideo\V20191126\Models as Models;
   1.若设备当前不在线,会直接返回错误
   2.若设备网络出现异常时,消息发送可能超时,超时等待最长时间为3秒
   3.value的内容必须与实际物模型的定义一致
+* @method Models\ModifyDevicePropertyResponse ModifyDeviceProperty(Models\ModifyDevicePropertyRequest $req) 本接口（ModifyDeviceProperty）用于修改设备物模型的属性（ProWritable）。
+可对setVal数据属性进行写入,如:
+ProWritable.Pos.setVal
+对于嵌套类型的可写属性，可以仅对其部分数据内容进行写入，如:
+ProWritable.Pos.setVal.x;
+可写属性云端写入成功即返回;云端向设备端发布属性变更参数;若当前设备不在线,在设备下次上线时会自动更新这些属性参数;
+物模型写入数据时,不需要传入时标信息,平台以当前时标作为数据的时标更新物模型中的时标信息。
 * @method Models\ModifyProductResponse ModifyProduct(Models\ModifyProductRequest $req) 本接口（ModifyProduct）用于编辑物联网智能视频产品的相关信息。
 * @method Models\RenewUploadTestResponse RenewUploadTest(Models\RenewUploadTestRequest $req) 设备刷新cos上传证书
 * @method Models\RunDeviceResponse RunDevice(Models\RunDeviceRequest $req) 本接口（RunDevice）用于启用设备，可进行批量操作，每次操作最多100台设备。

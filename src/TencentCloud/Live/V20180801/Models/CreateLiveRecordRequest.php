@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
- * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
- * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+ * @method string getAppName() 获取推流路径，与推流和播放地址中的 AppName保持一致，默认为 live。
+ * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的 AppName保持一致，默认为 live。
  * @method string getDomainName() 获取推流域名。多域名推流必须设置。
  * @method void setDomainName(string $DomainName) 设置推流域名。多域名推流必须设置。
- * @method string getStartTime() 获取录制开始时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+ * @method string getStartTime() 获取录制开始时间。中国标准时间，需要 URLEncode(rfc3986)。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
 定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。
- * @method void setStartTime(string $StartTime) 设置录制开始时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+ * @method void setStartTime(string $StartTime) 设置录制开始时间。中国标准时间，需要 URLEncode(rfc3986)。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
 定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。
- * @method string getEndTime() 获取录制结束时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
+ * @method string getEndTime() 获取录制结束时间。中国标准时间，需要 URLEncode(rfc3986)。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
 定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。
- * @method void setEndTime(string $EndTime) 设置录制结束时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
+ * @method void setEndTime(string $EndTime) 设置录制结束时间。中国标准时间，需要 URLEncode(rfc3986)。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
 定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。
  * @method string getRecordType() 获取录制类型。
 “video” : 音视频录制【默认】。
@@ -52,24 +52,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHighlight(integer $Highlight) 设置开启实时视频录制模式标志。
 0：不开启实时视频录制模式，即定时录制模式【默认】。见[示例一](#.E7.A4.BA.E4.BE.8B1-.E5.88.9B.E5.BB.BA.E5.AE.9A.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
 1：开启实时视频录制模式。见[示例二](#.E7.A4.BA.E4.BE.8B2-.E5.88.9B.E5.BB.BA.E5.AE.9E.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
- * @method integer getMixStream() 获取开启A+B=C混流C流录制标志。
-0：不开启A+B=C混流C流录制【默认】。
-1：开启A+B=C混流C流录制。
+ * @method integer getMixStream() 获取开启 A+B=C混流C流录制标志。
+0：不开启 A+B=C混流C流录制【默认】。
+1：开启 A+B=C混流C流录制。
 在定时录制模式或实时视频录制模式下，该参数均有效。
- * @method void setMixStream(integer $MixStream) 设置开启A+B=C混流C流录制标志。
-0：不开启A+B=C混流C流录制【默认】。
-1：开启A+B=C混流C流录制。
+ * @method void setMixStream(integer $MixStream) 设置开启 A+B=C混流C流录制标志。
+0：不开启 A+B=C混流C流录制【默认】。
+1：开启 A+B=C混流C流录制。
 在定时录制模式或实时视频录制模式下，该参数均有效。
  * @method string getStreamParam() 获取录制流参数。当前支持以下参数：
-record_interval - 录制分片时长，单位 秒，1800 - 7200
-storage_time - 录制文件存储时长，单位 秒
-eg. record_interval=3600&storage_time=2592000
+record_interval - 录制分片时长，单位 秒，1800 - 7200。
+storage_time - 录制文件存储时长，单位 秒。
+eg. record_interval=3600&storage_time=2592000。
 注：参数需要url encode。
 在定时录制模式或实时视频录制模式下，该参数均有效。
  * @method void setStreamParam(string $StreamParam) 设置录制流参数。当前支持以下参数：
-record_interval - 录制分片时长，单位 秒，1800 - 7200
-storage_time - 录制文件存储时长，单位 秒
-eg. record_interval=3600&storage_time=2592000
+record_interval - 录制分片时长，单位 秒，1800 - 7200。
+storage_time - 录制文件存储时长，单位 秒。
+eg. record_interval=3600&storage_time=2592000。
 注：参数需要url encode。
 在定时录制模式或实时视频录制模式下，该参数均有效。
  */
@@ -85,7 +85,7 @@ class CreateLiveRecordRequest extends AbstractModel
     public $StreamName;
 
     /**
-     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @var string 推流路径，与推流和播放地址中的 AppName保持一致，默认为 live。
      */
     public $AppName;
 
@@ -95,13 +95,13 @@ class CreateLiveRecordRequest extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string 录制开始时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+     * @var string 录制开始时间。中国标准时间，需要 URLEncode(rfc3986)。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
 定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。
      */
     public $StartTime;
 
     /**
-     * @var string 录制结束时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
+     * @var string 录制结束时间。中国标准时间，需要 URLEncode(rfc3986)。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
 定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。
      */
     public $EndTime;
@@ -129,29 +129,29 @@ class CreateLiveRecordRequest extends AbstractModel
     public $Highlight;
 
     /**
-     * @var integer 开启A+B=C混流C流录制标志。
-0：不开启A+B=C混流C流录制【默认】。
-1：开启A+B=C混流C流录制。
+     * @var integer 开启 A+B=C混流C流录制标志。
+0：不开启 A+B=C混流C流录制【默认】。
+1：开启 A+B=C混流C流录制。
 在定时录制模式或实时视频录制模式下，该参数均有效。
      */
     public $MixStream;
 
     /**
      * @var string 录制流参数。当前支持以下参数：
-record_interval - 录制分片时长，单位 秒，1800 - 7200
-storage_time - 录制文件存储时长，单位 秒
-eg. record_interval=3600&storage_time=2592000
+record_interval - 录制分片时长，单位 秒，1800 - 7200。
+storage_time - 录制文件存储时长，单位 秒。
+eg. record_interval=3600&storage_time=2592000。
 注：参数需要url encode。
 在定时录制模式或实时视频录制模式下，该参数均有效。
      */
     public $StreamParam;
     /**
      * @param string $StreamName 流名称。
-     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @param string $AppName 推流路径，与推流和播放地址中的 AppName保持一致，默认为 live。
      * @param string $DomainName 推流域名。多域名推流必须设置。
-     * @param string $StartTime 录制开始时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+     * @param string $StartTime 录制开始时间。中国标准时间，需要 URLEncode(rfc3986)。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
 定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。
-     * @param string $EndTime 录制结束时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
+     * @param string $EndTime 录制结束时间。中国标准时间，需要 URLEncode(rfc3986)。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
 定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。
      * @param string $RecordType 录制类型。
 “video” : 音视频录制【默认】。
@@ -163,14 +163,14 @@ eg. record_interval=3600&storage_time=2592000
      * @param integer $Highlight 开启实时视频录制模式标志。
 0：不开启实时视频录制模式，即定时录制模式【默认】。见[示例一](#.E7.A4.BA.E4.BE.8B1-.E5.88.9B.E5.BB.BA.E5.AE.9A.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
 1：开启实时视频录制模式。见[示例二](#.E7.A4.BA.E4.BE.8B2-.E5.88.9B.E5.BB.BA.E5.AE.9E.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
-     * @param integer $MixStream 开启A+B=C混流C流录制标志。
-0：不开启A+B=C混流C流录制【默认】。
-1：开启A+B=C混流C流录制。
+     * @param integer $MixStream 开启 A+B=C混流C流录制标志。
+0：不开启 A+B=C混流C流录制【默认】。
+1：开启 A+B=C混流C流录制。
 在定时录制模式或实时视频录制模式下，该参数均有效。
      * @param string $StreamParam 录制流参数。当前支持以下参数：
-record_interval - 录制分片时长，单位 秒，1800 - 7200
-storage_time - 录制文件存储时长，单位 秒
-eg. record_interval=3600&storage_time=2592000
+record_interval - 录制分片时长，单位 秒，1800 - 7200。
+storage_time - 录制文件存储时长，单位 秒。
+eg. record_interval=3600&storage_time=2592000。
 注：参数需要url encode。
 在定时录制模式或实时视频录制模式下，该参数均有效。
      */

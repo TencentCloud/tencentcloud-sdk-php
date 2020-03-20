@@ -18,8 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTaskId() 获取任务ID，全局唯一标识录制任务。
- * @method void setTaskId(integer $TaskId) 设置任务ID，全局唯一标识录制任务。
+ * @method integer getTaskId() 获取任务 ID，全局唯一标识录制任务。
+ * @method void setTaskId(integer $TaskId) 设置任务 ID，全局唯一标识录制任务。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateLiveRecordResponse extends AbstractModel
 {
     /**
-     * @var integer 任务ID，全局唯一标识录制任务。
+     * @var integer 任务 ID，全局唯一标识录制任务。
      */
     public $TaskId;
 
@@ -39,7 +39,7 @@ class CreateLiveRecordResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param integer $TaskId 任务ID，全局唯一标识录制任务。
+     * @param integer $TaskId 任务 ID，全局唯一标识录制任务。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

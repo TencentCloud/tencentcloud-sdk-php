@@ -70,9 +70,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionType(string $ActionType) 设置交易类型代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRegionId() 获取区域ID
+ * @method string getRegionId() 获取区域ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegionId(integer $RegionId) 设置区域ID
+ * @method void setRegionId(string $RegionId) 设置区域ID
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -196,7 +196,7 @@ class BillDetail extends AbstractModel
     public $ActionType;
 
     /**
-     * @var integer 区域ID
+     * @var string 区域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
@@ -227,7 +227,7 @@ class BillDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionType 交易类型代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RegionId 区域ID
+     * @param string $RegionId 区域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

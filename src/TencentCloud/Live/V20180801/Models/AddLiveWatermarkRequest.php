@@ -18,12 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getPictureUrl() 获取水印图片url。
- * @method void setPictureUrl(string $PictureUrl) 设置水印图片url。
+ * @method string getPictureUrl() 获取水印图片 URL。
+ * @method void setPictureUrl(string $PictureUrl) 设置水印图片 URL。
  * @method string getWatermarkName() 获取水印名称。
  * @method void setWatermarkName(string $WatermarkName) 设置水印名称。
- * @method integer getXPosition() 获取显示位置,X轴偏移。
- * @method void setXPosition(integer $XPosition) 设置显示位置,X轴偏移。
+ * @method integer getXPosition() 获取显示位置, X轴偏移。
+ * @method void setXPosition(integer $XPosition) 设置显示位置, X轴偏移。
  * @method integer getYPosition() 获取显示位置,Y轴偏移。
  * @method void setYPosition(integer $YPosition) 设置显示位置,Y轴偏移。
  * @method integer getWidth() 获取水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class AddLiveWatermarkRequest extends AbstractModel
 {
     /**
-     * @var string 水印图片url。
+     * @var string 水印图片 URL。
      */
     public $PictureUrl;
 
@@ -48,7 +48,7 @@ class AddLiveWatermarkRequest extends AbstractModel
     public $WatermarkName;
 
     /**
-     * @var integer 显示位置,X轴偏移。
+     * @var integer 显示位置, X轴偏移。
      */
     public $XPosition;
 
@@ -67,9 +67,9 @@ class AddLiveWatermarkRequest extends AbstractModel
      */
     public $Height;
     /**
-     * @param string $PictureUrl 水印图片url。
+     * @param string $PictureUrl 水印图片 URL。
      * @param string $WatermarkName 水印名称。
-     * @param integer $XPosition 显示位置,X轴偏移。
+     * @param integer $XPosition 显示位置, X轴偏移。
      * @param integer $YPosition 显示位置,Y轴偏移。
      * @param integer $Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
      * @param integer $Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。

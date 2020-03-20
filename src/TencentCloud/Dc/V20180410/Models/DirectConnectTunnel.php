@@ -100,6 +100,14 @@ REJECTED:拒绝
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessPointType(string $AccessPointType) 设置专线通道接入点类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDirectConnectGatewayName() 获取专线网关名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDirectConnectGatewayName(string $DirectConnectGatewayName) 设置专线网关名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVpcName() 获取VPC名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcName(string $VpcName) 设置VPC名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -247,6 +255,18 @@ REJECTED:拒绝
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessPointType;
+
+    /**
+     * @var string 专线网关名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DirectConnectGatewayName;
+
+    /**
+     * @var string VPC名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcName;
     /**
      * @param string $DirectConnectTunnelId 专线通道ID
      * @param string $DirectConnectId 物理专线ID
@@ -288,6 +308,10 @@ REJECTED:拒绝
      * @param integer $BfdEnable 是否开启BFD
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessPointType 专线通道接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DirectConnectGatewayName 专线网关名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VpcName VPC名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -411,6 +435,14 @@ REJECTED:拒绝
 
         if (array_key_exists("AccessPointType",$param) and $param["AccessPointType"] !== null) {
             $this->AccessPointType = $param["AccessPointType"];
+        }
+
+        if (array_key_exists("DirectConnectGatewayName",$param) and $param["DirectConnectGatewayName"] !== null) {
+            $this->DirectConnectGatewayName = $param["DirectConnectGatewayName"];
+        }
+
+        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
+            $this->VpcName = $param["VpcName"];
         }
     }
 }

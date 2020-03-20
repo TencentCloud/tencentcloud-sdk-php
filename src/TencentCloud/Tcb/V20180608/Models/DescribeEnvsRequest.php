@@ -20,6 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getEnvId() 获取环境ID，如果传了这个参数则只返回该环境的相关信息
  * @method void setEnvId(string $EnvId) 设置环境ID，如果传了这个参数则只返回该环境的相关信息
+ * @method boolean getIsVisible() 获取指定Channels字段为可见渠道列表或不可见渠道列表
+如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
+ * @method void setIsVisible(boolean $IsVisible) 设置指定Channels字段为可见渠道列表或不可见渠道列表
+如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
+ * @method array getChannels() 获取渠道列表，代表可见或不可见渠道由IsVisible参数指定
+ * @method void setChannels(array $Channels) 设置渠道列表，代表可见或不可见渠道由IsVisible参数指定
  */
 
 /**
@@ -31,8 +37,22 @@ class DescribeEnvsRequest extends AbstractModel
      * @var string 环境ID，如果传了这个参数则只返回该环境的相关信息
      */
     public $EnvId;
+
+    /**
+     * @var boolean 指定Channels字段为可见渠道列表或不可见渠道列表
+如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
+     */
+    public $IsVisible;
+
+    /**
+     * @var array 渠道列表，代表可见或不可见渠道由IsVisible参数指定
+     */
+    public $Channels;
     /**
      * @param string $EnvId 环境ID，如果传了这个参数则只返回该环境的相关信息
+     * @param boolean $IsVisible 指定Channels字段为可见渠道列表或不可见渠道列表
+如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
+     * @param array $Channels 渠道列表，代表可见或不可见渠道由IsVisible参数指定
      */
     function __construct()
     {
@@ -48,6 +68,14 @@ class DescribeEnvsRequest extends AbstractModel
         }
         if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
             $this->EnvId = $param["EnvId"];
+        }
+
+        if (array_key_exists("IsVisible",$param) and $param["IsVisible"] !== null) {
+            $this->IsVisible = $param["IsVisible"];
+        }
+
+        if (array_key_exists("Channels",$param) and $param["Channels"] !== null) {
+            $this->Channels = $param["Channels"];
         }
     }
 }

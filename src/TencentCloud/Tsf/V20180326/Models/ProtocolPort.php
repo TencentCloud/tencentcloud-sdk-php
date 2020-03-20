@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) 设置服务端口
  * @method integer getTargetPort() 获取容器端口
  * @method void setTargetPort(integer $TargetPort) 设置容器端口
+ * @method integer getNodePort() 获取主机端口
+ * @method void setNodePort(integer $NodePort) 设置主机端口
  */
 
 /**
@@ -45,10 +47,16 @@ class ProtocolPort extends AbstractModel
      * @var integer 容器端口
      */
     public $TargetPort;
+
+    /**
+     * @var integer 主机端口
+     */
+    public $NodePort;
     /**
      * @param string $Protocol TCP UDP
      * @param integer $Port 服务端口
      * @param integer $TargetPort 容器端口
+     * @param integer $NodePort 主机端口
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ProtocolPort extends AbstractModel
 
         if (array_key_exists("TargetPort",$param) and $param["TargetPort"] !== null) {
             $this->TargetPort = $param["TargetPort"];
+        }
+
+        if (array_key_exists("NodePort",$param) and $param["NodePort"] !== null) {
+            $this->NodePort = $param["NodePort"];
         }
     }
 }

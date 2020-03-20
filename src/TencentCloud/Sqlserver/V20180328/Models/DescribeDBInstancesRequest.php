@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置一个或者多个实例ID。实例ID，格式如：mssql-si2823jyl
  * @method integer getPayMode() 获取付费类型检索 1-包年包月，0-按量计费
  * @method void setPayMode(integer $PayMode) 设置付费类型检索 1-包年包月，0-按量计费
+ * @method string getVpcId() 获取实例所属VPC的唯一字符串ID，格式如：vpc-xxx，传空字符串(“”)则按照基础网络筛选。
+ * @method void setVpcId(string $VpcId) 设置实例所属VPC的唯一字符串ID，格式如：vpc-xxx，传空字符串(“”)则按照基础网络筛选。
+ * @method string getSubnetId() 获取实例所属子网的唯一字符串ID，格式如： subnet-xxx，传空字符串(“”)则按照基础网络筛选。
+ * @method void setSubnetId(string $SubnetId) 设置实例所属子网的唯一字符串ID，格式如： subnet-xxx，传空字符串(“”)则按照基础网络筛选。
  */
 
 /**
@@ -102,6 +106,16 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @var integer 付费类型检索 1-包年包月，0-按量计费
      */
     public $PayMode;
+
+    /**
+     * @var string 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，传空字符串(“”)则按照基础网络筛选。
+     */
+    public $VpcId;
+
+    /**
+     * @var string 实例所属子网的唯一字符串ID，格式如： subnet-xxx，传空字符串(“”)则按照基础网络筛选。
+     */
+    public $SubnetId;
     /**
      * @param integer $ProjectId 项目ID
      * @param integer $Status 实例状态。取值范围：
@@ -121,6 +135,8 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param integer $Limit 分页返回，每页返回的数目，取值为1-100，默认值为100
      * @param array $InstanceIdSet 一个或者多个实例ID。实例ID，格式如：mssql-si2823jyl
      * @param integer $PayMode 付费类型检索 1-包年包月，0-按量计费
+     * @param string $VpcId 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，传空字符串(“”)则按照基础网络筛选。
+     * @param string $SubnetId 实例所属子网的唯一字符串ID，格式如： subnet-xxx，传空字符串(“”)则按照基础网络筛选。
      */
     function __construct()
     {
@@ -156,6 +172,14 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

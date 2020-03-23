@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcName(string $VpcName) 设置私有网络名称。
  * @method string getVpcCidrBlock() 获取私有网络Cidr。
  * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置私有网络Cidr。
- * @method array getLoadBalancerVips() 获取负载均衡获得的公网IP地址,支持多个
- * @method void setLoadBalancerVips(array $LoadBalancerVips) 设置负载均衡获得的公网IP地址,支持多个
+ * @method array getLoadBalancerVips() 获取负载均衡的IPV4的VIP。
+ * @method void setLoadBalancerVips(array $LoadBalancerVips) 设置负载均衡的IPV4的VIP。
  * @method array getSupportListenerTypes() 获取无
  * @method void setSupportListenerTypes(array $SupportListenerTypes) 设置无
  * @method integer getBandwidth() 获取无
@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBzL7Metrics(string $BzL7Metrics) 设置保障型网关七层计费指标
  * @method integer getIntVpcId() 获取该负载均衡对应的所在的整形类型的VpcId
  * @method void setIntVpcId(integer $IntVpcId) 设置该负载均衡对应的所在的整形类型的VpcId
+ * @method array getCurVips() 获取负载均衡的IPV6或者IPV4的VIP。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCurVips(array $CurVips) 设置负载均衡的IPV6或者IPV4的VIP。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -160,7 +164,7 @@ class LoadBalancer extends AbstractModel
     public $VpcCidrBlock;
 
     /**
-     * @var array 负载均衡获得的公网IP地址,支持多个
+     * @var array 负载均衡的IPV4的VIP。
      */
     public $LoadBalancerVips;
 
@@ -213,6 +217,12 @@ class LoadBalancer extends AbstractModel
      * @var integer 该负载均衡对应的所在的整形类型的VpcId
      */
     public $IntVpcId;
+
+    /**
+     * @var array 负载均衡的IPV6或者IPV4的VIP。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CurVips;
     /**
      * @param string $LoadBalancerId 负载均衡器ID
      * @param integer $ProjectId 项目ID，通过v2/DescribeProject 接口获得
@@ -230,7 +240,7 @@ class LoadBalancer extends AbstractModel
      * @param string $StatusTime 无
      * @param string $VpcName 私有网络名称。
      * @param string $VpcCidrBlock 私有网络Cidr。
-     * @param array $LoadBalancerVips 负载均衡获得的公网IP地址,支持多个
+     * @param array $LoadBalancerVips 负载均衡的IPV4的VIP。
      * @param array $SupportListenerTypes 无
      * @param integer $Bandwidth 无
      * @param string $ConfId 负载均衡个性化配置ID
@@ -241,6 +251,8 @@ class LoadBalancer extends AbstractModel
      * @param string $BzL4Metrics 保障型网关四层计费指标
      * @param string $BzL7Metrics 保障型网关七层计费指标
      * @param integer $IntVpcId 该负载均衡对应的所在的整形类型的VpcId
+     * @param array $CurVips 负载均衡的IPV6或者IPV4的VIP。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -360,6 +372,10 @@ class LoadBalancer extends AbstractModel
 
         if (array_key_exists("IntVpcId",$param) and $param["IntVpcId"] !== null) {
             $this->IntVpcId = $param["IntVpcId"];
+        }
+
+        if (array_key_exists("CurVips",$param) and $param["CurVips"] !== null) {
+            $this->CurVips = $param["CurVips"];
         }
     }
 }

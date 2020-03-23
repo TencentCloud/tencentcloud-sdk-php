@@ -22,6 +22,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cloudhsm\V20191112\Models as Models;
 
 /**
+* @method Models\DescribeHSMBySubnetIdResponse DescribeHSMBySubnetId(Models\DescribeHSMBySubnetIdRequest $req) 通过SubnetId获取Hsm资源数
+* @method Models\DescribeHSMByVpcIdResponse DescribeHSMByVpcId(Models\DescribeHSMByVpcIdRequest $req) 通过VpcId获取Hsm资源数
 * @method Models\DescribeSubnetResponse DescribeSubnet(Models\DescribeSubnetRequest $req) 查询子网列表
 * @method Models\DescribeUsgResponse DescribeUsg(Models\DescribeUsgRequest $req) 根据用户的AppId获取用户安全组列表
 * @method Models\DescribeUsgRuleResponse DescribeUsgRule(Models\DescribeUsgRuleRequest $req) 获取安全组详情

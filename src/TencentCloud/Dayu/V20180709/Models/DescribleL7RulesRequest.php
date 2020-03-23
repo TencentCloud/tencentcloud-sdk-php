@@ -18,8 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+ * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+ * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method string getId() 获取资源ID
  * @method void setId(string $Id) 设置资源ID
  * @method array getRuleIdList() 获取规则ID，可选参数，填写后获取指定的规则
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribleL7RulesRequest extends AbstractModel
 {
     /**
-     * @var string 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * @var string 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public $Business;
 
@@ -81,7 +81,7 @@ class DescribleL7RulesRequest extends AbstractModel
      */
     public $StatusList;
     /**
-     * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param string $Id 资源ID
      * @param array $RuleIdList 规则ID，可选参数，填写后获取指定的规则
      * @param integer $Limit 一页条数，填0表示不分页

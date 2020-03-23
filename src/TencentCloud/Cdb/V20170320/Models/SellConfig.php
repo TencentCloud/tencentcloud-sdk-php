@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInfo(string $Info) 设置应用场景描述
  * @method integer getStatus() 获取状态值
  * @method void setStatus(integer $Status) 设置状态值
+ * @method integer getTag() 获取标签值
+ * @method void setTag(integer $Tag) 设置标签值
  */
 
 /**
@@ -115,6 +117,11 @@ class SellConfig extends AbstractModel
      * @var integer 状态值
      */
     public $Status;
+
+    /**
+     * @var integer 标签值
+     */
+    public $Tag;
     /**
      * @param string $Device 设备类型
      * @param string $Type 售卖规格描述
@@ -129,6 +136,7 @@ class SellConfig extends AbstractModel
      * @param integer $Iops 每秒IO数量
      * @param string $Info 应用场景描述
      * @param integer $Status 状态值
+     * @param integer $Tag 标签值
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class SellConfig extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = $param["Tag"];
         }
     }
 }

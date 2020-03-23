@@ -18,8 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTopicId() 获取主日志题ID
- * @method void setTopicId(string $TopicId) 设置主日志题ID
+ * @method string getTopicId() 获取日志主题ID
+ * @method void setTopicId(string $TopicId) 设置日志主题ID
  * @method string getLogsetId() 获取日志集ID
  * @method void setLogsetId(string $LogsetId) 设置日志集ID
  * @method string getChannel() 获取接入渠道，默认值为cdn
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteClsLogTopicRequest extends AbstractModel
 {
     /**
-     * @var string 主日志题ID
+     * @var string 日志主题ID
      */
     public $TopicId;
 
@@ -46,7 +46,7 @@ class DeleteClsLogTopicRequest extends AbstractModel
      */
     public $Channel;
     /**
-     * @param string $TopicId 主日志题ID
+     * @param string $TopicId 日志主题ID
      * @param string $LogsetId 日志集ID
      * @param string $Channel 接入渠道，默认值为cdn
      */

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getDeadLetterQueueName() 获取死信队列名称
  * @method void setDeadLetterQueueName(string $DeadLetterQueueName) 设置死信队列名称
- * @method integer getLimit() 获取limit
- * @method void setLimit(integer $Limit) 设置limit
- * @method integer getOffset() 获取offset
- * @method void setOffset(integer $Offset) 设置offset
+ * @method integer getLimit() 获取分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
+ * @method void setLimit(integer $Limit) 设置分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
+ * @method integer getOffset() 获取分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
+ * @method void setOffset(integer $Offset) 设置分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
  * @method array getFilters() 获取过滤死信队列源队列名称，目前仅支持SourceQueueName过滤
  * @method void setFilters(array $Filters) 设置过滤死信队列源队列名称，目前仅支持SourceQueueName过滤
  */
@@ -39,12 +39,12 @@ class DescribeDeadLetterSourceQueuesRequest extends AbstractModel
     public $DeadLetterQueueName;
 
     /**
-     * @var integer limit
+     * @var integer 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
      */
     public $Limit;
 
     /**
-     * @var integer offset
+     * @var integer 分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
      */
     public $Offset;
 
@@ -54,8 +54,8 @@ class DescribeDeadLetterSourceQueuesRequest extends AbstractModel
     public $Filters;
     /**
      * @param string $DeadLetterQueueName 死信队列名称
-     * @param integer $Limit limit
-     * @param integer $Offset offset
+     * @param integer $Limit 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
+     * @param integer $Offset 分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
      * @param array $Filters 过滤死信队列源队列名称，目前仅支持SourceQueueName过滤
      */
     function __construct()

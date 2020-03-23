@@ -20,16 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getRegistryId() 获取实例Id
  * @method void setRegistryId(string $RegistryId) 设置实例Id
- * @method string getNamespaceName() 获取命名空间名称
- * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
- * @method boolean getIsPublic() 获取访问级别，True为公开，False为私有
- * @method void setIsPublic(boolean $IsPublic) 设置访问级别，True为公开，False为私有
+ * @method string getNamespaceName() 获取指定命名空间，不填写默认查询所有命名空间
+ * @method void setNamespaceName(string $NamespaceName) 设置指定命名空间，不填写默认查询所有命名空间
+ * @method integer getLimit() 获取每页个数
+ * @method void setLimit(integer $Limit) 设置每页个数
+ * @method integer getOffset() 获取页偏移
+ * @method void setOffset(integer $Offset) 设置页偏移
  */
 
 /**
- *ModifyNamespace请求参数结构体
+ *DescribeNamespaces请求参数结构体
  */
-class ModifyNamespaceRequest extends AbstractModel
+class DescribeNamespacesRequest extends AbstractModel
 {
     /**
      * @var string 实例Id
@@ -37,18 +39,24 @@ class ModifyNamespaceRequest extends AbstractModel
     public $RegistryId;
 
     /**
-     * @var string 命名空间名称
+     * @var string 指定命名空间，不填写默认查询所有命名空间
      */
     public $NamespaceName;
 
     /**
-     * @var boolean 访问级别，True为公开，False为私有
+     * @var integer 每页个数
      */
-    public $IsPublic;
+    public $Limit;
+
+    /**
+     * @var integer 页偏移
+     */
+    public $Offset;
     /**
      * @param string $RegistryId 实例Id
-     * @param string $NamespaceName 命名空间名称
-     * @param boolean $IsPublic 访问级别，True为公开，False为私有
+     * @param string $NamespaceName 指定命名空间，不填写默认查询所有命名空间
+     * @param integer $Limit 每页个数
+     * @param integer $Offset 页偏移
      */
     function __construct()
     {
@@ -70,8 +78,12 @@ class ModifyNamespaceRequest extends AbstractModel
             $this->NamespaceName = $param["NamespaceName"];
         }
 
-        if (array_key_exists("IsPublic",$param) and $param["IsPublic"] !== null) {
-            $this->IsPublic = $param["IsPublic"];
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

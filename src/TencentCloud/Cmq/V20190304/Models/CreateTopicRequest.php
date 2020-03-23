@@ -18,14 +18,14 @@ namespace TencentCloud\Cmq\V20190304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTopicName() 获取TopicName
- * @method void setTopicName(string $TopicName) 设置TopicName
- * @method integer getMaxMsgSize() 获取MaxMsgSize
- * @method void setMaxMsgSize(integer $MaxMsgSize) 设置MaxMsgSize
- * @method integer getFilterType() 获取FilterType
- * @method void setFilterType(integer $FilterType) 设置FilterType
- * @method integer getMsgRetentionSeconds() 获取MsgRetentionSeconds
- * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) 设置MsgRetentionSeconds
+ * @method string getTopicName() 获取主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
+ * @method void setTopicName(string $TopicName) 设置主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
+ * @method integer getMaxMsgSize() 获取消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
+ * @method void setMaxMsgSize(integer $MaxMsgSize) 设置消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
+ * @method integer getFilterType() 获取用于指定主题的消息匹配策略。
+ * @method void setFilterType(integer $FilterType) 设置用于指定主题的消息匹配策略。
+ * @method integer getMsgRetentionSeconds() 获取消息保存时间。取值范围60 - 86400 s（即1分钟 - 1天），默认值86400。
+ * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) 设置消息保存时间。取值范围60 - 86400 s（即1分钟 - 1天），默认值86400。
  * @method boolean getTrace() 获取是否开启消息轨迹标识，true表示开启，false表示不开启，不填表示不开启。
  * @method void setTrace(boolean $Trace) 设置是否开启消息轨迹标识，true表示开启，false表示不开启，不填表示不开启。
  */
@@ -36,22 +36,22 @@ use TencentCloud\Common\AbstractModel;
 class CreateTopicRequest extends AbstractModel
 {
     /**
-     * @var string TopicName
+     * @var string 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
      */
     public $TopicName;
 
     /**
-     * @var integer MaxMsgSize
+     * @var integer 消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
      */
     public $MaxMsgSize;
 
     /**
-     * @var integer FilterType
+     * @var integer 用于指定主题的消息匹配策略。
      */
     public $FilterType;
 
     /**
-     * @var integer MsgRetentionSeconds
+     * @var integer 消息保存时间。取值范围60 - 86400 s（即1分钟 - 1天），默认值86400。
      */
     public $MsgRetentionSeconds;
 
@@ -60,10 +60,10 @@ class CreateTopicRequest extends AbstractModel
      */
     public $Trace;
     /**
-     * @param string $TopicName TopicName
-     * @param integer $MaxMsgSize MaxMsgSize
-     * @param integer $FilterType FilterType
-     * @param integer $MsgRetentionSeconds MsgRetentionSeconds
+     * @param string $TopicName 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
+     * @param integer $MaxMsgSize 消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
+     * @param integer $FilterType 用于指定主题的消息匹配策略。
+     * @param integer $MsgRetentionSeconds 消息保存时间。取值范围60 - 86400 s（即1分钟 - 1天），默认值86400。
      * @param boolean $Trace 是否开启消息轨迹标识，true表示开启，false表示不开启，不填表示不开启。
      */
     function __construct()

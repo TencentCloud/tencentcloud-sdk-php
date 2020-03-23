@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppMd5(string $AppMd5) 设置app的md5，需要正确传递
  * @method integer getAppSize() 获取app的大小
  * @method void setAppSize(integer $AppSize) 设置app的大小
- * @method string getFileName() 获取app的文件名，指定后加固后的文件名是{FileName}_legu.apk
- * @method void setFileName(string $FileName) 设置app的文件名，指定后加固后的文件名是{FileName}_legu.apk
+ * @method string getFileName() 获取app的文件名
+ * @method void setFileName(string $FileName) 设置app的文件名
  * @method string getAppPkgName() 获取app的包名，需要正确的传递此字段
  * @method void setAppPkgName(string $AppPkgName) 设置app的包名，需要正确的传递此字段
  * @method string getAppVersion() 获取app的版本号
@@ -57,7 +57,7 @@ class AppInfo extends AbstractModel
     public $AppSize;
 
     /**
-     * @var string app的文件名，指定后加固后的文件名是{FileName}_legu.apk
+     * @var string app的文件名
      */
     public $FileName;
 
@@ -84,7 +84,7 @@ class AppInfo extends AbstractModel
      * @param string $AppUrl app的url，必须保证不用权限校验就可以下载
      * @param string $AppMd5 app的md5，需要正确传递
      * @param integer $AppSize app的大小
-     * @param string $FileName app的文件名，指定后加固后的文件名是{FileName}_legu.apk
+     * @param string $FileName app的文件名
      * @param string $AppPkgName app的包名，需要正确的传递此字段
      * @param string $AppVersion app的版本号
      * @param string $AppIconUrl app的图标url

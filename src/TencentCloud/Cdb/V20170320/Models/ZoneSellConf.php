@@ -46,6 +46,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneConf(ZoneConf $ZoneConf) 设置多可用区信息
  * @method array getDrZone() 获取可支持的灾备可用区信息
  * @method void setDrZone(array $DrZone) 设置可支持的灾备可用区信息
+ * @method boolean getIsSupportRemoteRo() 获取是否支持跨可用区只读
+ * @method void setIsSupportRemoteRo(boolean $IsSupportRemoteRo) 设置是否支持跨可用区只读
+ * @method array getRemoteRoZone() 获取可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemoteRoZone(array $RemoteRoZone) 设置可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -122,6 +128,17 @@ class ZoneSellConf extends AbstractModel
      * @var array 可支持的灾备可用区信息
      */
     public $DrZone;
+
+    /**
+     * @var boolean 是否支持跨可用区只读
+     */
+    public $IsSupportRemoteRo;
+
+    /**
+     * @var array 可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RemoteRoZone;
     /**
      * @param integer $Status 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
      * @param string $ZoneName 可用区中文名称
@@ -137,6 +154,9 @@ class ZoneSellConf extends AbstractModel
      * @param array $SellType 售卖实例类型数组
      * @param ZoneConf $ZoneConf 多可用区信息
      * @param array $DrZone 可支持的灾备可用区信息
+     * @param boolean $IsSupportRemoteRo 是否支持跨可用区只读
+     * @param array $RemoteRoZone 可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -210,6 +230,14 @@ class ZoneSellConf extends AbstractModel
 
         if (array_key_exists("DrZone",$param) and $param["DrZone"] !== null) {
             $this->DrZone = $param["DrZone"];
+        }
+
+        if (array_key_exists("IsSupportRemoteRo",$param) and $param["IsSupportRemoteRo"] !== null) {
+            $this->IsSupportRemoteRo = $param["IsSupportRemoteRo"];
+        }
+
+        if (array_key_exists("RemoteRoZone",$param) and $param["RemoteRoZone"] !== null) {
+            $this->RemoteRoZone = $param["RemoteRoZone"];
         }
     }
 }

@@ -1,9 +1,9 @@
 <?php
 require_once '../../../TCloudAutoLoader.php';
 // 导入对应产品模块的client
-use TencentCloud\Sms\v20190711\SmsClient;
+use TencentCloud\Sms\V20190711\SmsClient;
 // 导入要请求接口对应的Request类
-use TencentCloud\Sms\v20190711\Models\PullSmsSendStatusByPhoneNumberRequest;
+use TencentCloud\Sms\V20190711\Models\PullSmsSendStatusByPhoneNumberRequest;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
 // 导入可选配置类

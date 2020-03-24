@@ -72,6 +72,11 @@ class HttpProfile
     private $protocol;
 
     /**
+     * @var string|array 请求代理
+     */
+    private $proxy;
+
+    /**
      * HttpProfile constructor.
      * @param string $protocol  请求协议
      * @param string $endpoint  请求接入点域名(xx.[region.]tencentcloudapi.com)
@@ -122,6 +127,15 @@ class HttpProfile
     }
 
     /**
+     * 设置请求代理
+     * @param string|array $proxy 请求代理配置
+     */
+    public function setProxy($proxy)
+    {
+        $this->proxy = $proxy;
+    }
+
+    /**
      * 获取请求方法
      * @return null|string 请求方法
      */
@@ -155,5 +169,14 @@ class HttpProfile
     public function getEndpoint()
     {
         return $this->endpoint;
+    }
+
+    /**
+     * 获取请求代理
+     * @return null|string|array
+     */
+    public function getProxy()
+    {
+        return $this->proxy;
     }
 }

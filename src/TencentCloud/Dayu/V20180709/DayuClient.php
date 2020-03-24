@@ -45,6 +45,8 @@ use TencentCloud\Dayu\V20180709\Models as Models;
 * @method Models\DeleteL4RulesResponse DeleteL4Rules(Models\DeleteL4RulesRequest $req) 删除四层转发规则
 * @method Models\DeleteL7RulesResponse DeleteL7Rules(Models\DeleteL7RulesRequest $req) 删除七层转发规则
 * @method Models\DescribeActionLogResponse DescribeActionLog(Models\DescribeActionLogRequest $req) 获取操作日志
+* @method Models\DescribeBGPIPL7RuleMaxCntResponse DescribeBGPIPL7RuleMaxCnt(Models\DescribeBGPIPL7RuleMaxCntRequest $req) 获取高防IP可添加的最多7层规则数量
+
 * @method Models\DescribeBaradDataResponse DescribeBaradData(Models\DescribeBaradDataRequest $req) 为大禹子产品提供业务转发指标数据的接口
 * @method Models\DescribeBasicCCThresholdResponse DescribeBasicCCThreshold(Models\DescribeBasicCCThresholdRequest $req) 获取基础防护CC防护阈值
 * @method Models\DescribeBasicDeviceThresholdResponse DescribeBasicDeviceThreshold(Models\DescribeBasicDeviceThresholdRequest $req) 获取基础防护黑洞阈值

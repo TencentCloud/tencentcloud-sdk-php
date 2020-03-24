@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTid(string $Tid) 设置设备TID
  * @method string getCertificate() 获取设备初始证书信息，base64编码
  * @method void setCertificate(string $Certificate) 设置设备初始证书信息，base64编码
- * @method string getWhiteBoxSoUrl() 获取白盒私钥下载地址
- * @method void setWhiteBoxSoUrl(string $WhiteBoxSoUrl) 设置白盒私钥下载地址
+ * @method string getWhiteBoxSoUrl() 获取设备私钥下载地址
+ * @method void setWhiteBoxSoUrl(string $WhiteBoxSoUrl) 设置设备私钥下载地址
  */
 
 /**
@@ -42,13 +42,13 @@ class DeviceCertificate extends AbstractModel
     public $Certificate;
 
     /**
-     * @var string 白盒私钥下载地址
+     * @var string 设备私钥下载地址
      */
     public $WhiteBoxSoUrl;
     /**
      * @param string $Tid 设备TID
      * @param string $Certificate 设备初始证书信息，base64编码
-     * @param string $WhiteBoxSoUrl 白盒私钥下载地址
+     * @param string $WhiteBoxSoUrl 设备私钥下载地址
      */
     function __construct()
     {

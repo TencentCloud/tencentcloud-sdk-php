@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSendFor(array $SendFor) 设置电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
  * @method array getRecoverNotify() 获取恢复通知方式。可选"SMS"
  * @method void setRecoverNotify(array $RecoverNotify) 设置恢复通知方式。可选"SMS"
+ * @method string getReceiveLanguage() 获取告警发送语言
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReceiveLanguage(string $ReceiveLanguage) 设置告警发送语言
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -118,6 +122,12 @@ class DescribePolicyGroupInfoReceiverInfo extends AbstractModel
      * @var array 恢复通知方式。可选"SMS"
      */
     public $RecoverNotify;
+
+    /**
+     * @var string 告警发送语言
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReceiveLanguage;
     /**
      * @param array $ReceiverGroupList 告警接收组id列表
      * @param array $ReceiverUserList 告警接收人id列表
@@ -133,6 +143,8 @@ class DescribePolicyGroupInfoReceiverInfo extends AbstractModel
      * @param integer $NeedSendNotice 是否需要电话告警触达提示。0不需要，1需要
      * @param array $SendFor 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
      * @param array $RecoverNotify 恢复通知方式。可选"SMS"
+     * @param string $ReceiveLanguage 告警发送语言
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -196,6 +208,10 @@ class DescribePolicyGroupInfoReceiverInfo extends AbstractModel
 
         if (array_key_exists("RecoverNotify",$param) and $param["RecoverNotify"] !== null) {
             $this->RecoverNotify = $param["RecoverNotify"];
+        }
+
+        if (array_key_exists("ReceiveLanguage",$param) and $param["ReceiveLanguage"] !== null) {
+            $this->ReceiveLanguage = $param["ReceiveLanguage"];
         }
     }
 }

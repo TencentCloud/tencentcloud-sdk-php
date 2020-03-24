@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReceiverGroupList(array $ReceiverGroupList) 设置接收组列表。通过平台接口查询到的接收组id列表
  * @method array getReceiverUserList() 获取接收人列表。通过平台接口查询到的接收人id列表
  * @method void setReceiverUserList(array $ReceiverUserList) 设置接收人列表。通过平台接口查询到的接收人id列表
+ * @method string getReceiveLanguage() 获取告警接收语言，枚举值（zh-CN，en-US）
+ * @method void setReceiveLanguage(string $ReceiveLanguage) 设置告警接收语言，枚举值（zh-CN，en-US）
  */
 
 /**
@@ -122,6 +124,11 @@ class ReceiverInfo extends AbstractModel
      * @var array 接收人列表。通过平台接口查询到的接收人id列表
      */
     public $ReceiverUserList;
+
+    /**
+     * @var string 告警接收语言，枚举值（zh-CN，en-US）
+     */
+    public $ReceiveLanguage;
     /**
      * @param integer $StartTime 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
      * @param integer $EndTime 告警时间段结束时间。含义同StartTime
@@ -137,6 +144,7 @@ class ReceiverInfo extends AbstractModel
      * @param integer $NeedSendNotice 是否需要电话告警触达提示。0不需要，1需要
      * @param array $ReceiverGroupList 接收组列表。通过平台接口查询到的接收组id列表
      * @param array $ReceiverUserList 接收人列表。通过平台接口查询到的接收人id列表
+     * @param string $ReceiveLanguage 告警接收语言，枚举值（zh-CN，en-US）
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class ReceiverInfo extends AbstractModel
 
         if (array_key_exists("ReceiverUserList",$param) and $param["ReceiverUserList"] !== null) {
             $this->ReceiverUserList = $param["ReceiverUserList"];
+        }
+
+        if (array_key_exists("ReceiveLanguage",$param) and $param["ReceiveLanguage"] !== null) {
+            $this->ReceiveLanguage = $param["ReceiveLanguage"];
         }
     }
 }

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLookupAttributes(array $LookupAttributes) 设置检索条件
  * @method integer getMaxResults() 获取返回日志的最大条数
  * @method void setMaxResults(integer $MaxResults) 设置返回日志的最大条数
+ * @method string getMode() 获取云审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
+ * @method void setMode(string $Mode) 设置云审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
  * @method string getNextToken() 获取查看更多日志的凭证
  * @method void setNextToken(string $NextToken) 设置查看更多日志的凭证
  */
@@ -56,6 +58,11 @@ class LookUpEventsRequest extends AbstractModel
     public $MaxResults;
 
     /**
+     * @var string 云审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
+     */
+    public $Mode;
+
+    /**
      * @var string 查看更多日志的凭证
      */
     public $NextToken;
@@ -64,6 +71,7 @@ class LookUpEventsRequest extends AbstractModel
      * @param integer $StartTime 开始时间
      * @param array $LookupAttributes 检索条件
      * @param integer $MaxResults 返回日志的最大条数
+     * @param string $Mode 云审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
      * @param string $NextToken 查看更多日志的凭证
      */
     function __construct()
@@ -97,6 +105,10 @@ class LookUpEventsRequest extends AbstractModel
 
         if (array_key_exists("MaxResults",$param) and $param["MaxResults"] !== null) {
             $this->MaxResults = $param["MaxResults"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
 
         if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {

@@ -58,9 +58,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificate(string $Certificate) 设置设备初始证书信息，base64编码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWhiteBoxSoUrl() 获取白盒秘钥库文件下载地址
+ * @method string getWhiteBoxSoUrl() 获取设备私钥下载地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWhiteBoxSoUrl(string $WhiteBoxSoUrl) 设置白盒秘钥库文件下载地址
+ * @method void setWhiteBoxSoUrl(string $WhiteBoxSoUrl) 设置设备私钥下载地址
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getStreamStatus() 获取设备推流状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -134,7 +134,7 @@ class DeviceData extends AbstractModel
     public $Certificate;
 
     /**
-     * @var string 白盒秘钥库文件下载地址
+     * @var string 设备私钥下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WhiteBoxSoUrl;
@@ -165,7 +165,7 @@ class DeviceData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Certificate 设备初始证书信息，base64编码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WhiteBoxSoUrl 白盒秘钥库文件下载地址
+     * @param string $WhiteBoxSoUrl 设备私钥下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $StreamStatus 设备推流状态
 注意：此字段可能返回 null，表示取不到有效值。

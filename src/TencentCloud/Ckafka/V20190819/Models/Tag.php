@@ -18,29 +18,29 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTagKey() 获取标识的key
- * @method void setTagKey(string $TagKey) 设置标识的key
- * @method string getTagValue() 获取标识的值
- * @method void setTagValue(string $TagValue) 设置标识的值
+ * @method string getTagKey() 获取标签的key
+ * @method void setTagKey(string $TagKey) 设置标签的key
+ * @method string getTagValue() 获取标签的值
+ * @method void setTagValue(string $TagValue) 设置标签的值
  */
 
 /**
- *实例详情中的标识对象
+ *实例详情中的标签对象
  */
 class Tag extends AbstractModel
 {
     /**
-     * @var string 标识的key
+     * @var string 标签的key
      */
     public $TagKey;
 
     /**
-     * @var string 标识的值
+     * @var string 标签的值
      */
     public $TagValue;
     /**
-     * @param string $TagKey 标识的key
-     * @param string $TagValue 标识的值
+     * @param string $TagKey 标签的key
+     * @param string $TagValue 标签的值
      */
     function __construct()
     {

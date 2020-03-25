@@ -18,14 +18,14 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAccessId() 获取终端用户在IotVideo上的唯一标识id
- * @method void setAccessId(string $AccessId) 设置终端用户在IotVideo上的唯一标识id
- * @method string getAccessToken() 获取IotVideo平台的accessToken
- * @method void setAccessToken(string $AccessToken) 设置IotVideo平台的accessToken
+ * @method string getAccessId() 获取终端用户在IoT Video上的唯一标识ID
+ * @method void setAccessId(string $AccessId) 设置终端用户在IoT Video上的唯一标识ID
+ * @method string getAccessToken() 获取IoT Video平台的AccessToken
+ * @method void setAccessToken(string $AccessToken) 设置IoT Video平台的AccessToken
  * @method integer getExpireTime() 获取Token的过期时间，单位秒(UTC时间)
  * @method void setExpireTime(integer $ExpireTime) 设置Token的过期时间，单位秒(UTC时间)
- * @method string getTerminalId() 获取终端id
- * @method void setTerminalId(string $TerminalId) 设置终端id
+ * @method string getTerminalId() 获取终端ID
+ * @method void setTerminalId(string $TerminalId) 设置终端ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateUsrTokenResponse extends AbstractModel
 {
     /**
-     * @var string 终端用户在IotVideo上的唯一标识id
+     * @var string 终端用户在IoT Video上的唯一标识ID
      */
     public $AccessId;
 
     /**
-     * @var string IotVideo平台的accessToken
+     * @var string IoT Video平台的AccessToken
      */
     public $AccessToken;
 
@@ -51,7 +51,7 @@ class CreateUsrTokenResponse extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @var string 终端id
+     * @var string 终端ID
      */
     public $TerminalId;
 
@@ -60,10 +60,10 @@ class CreateUsrTokenResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $AccessId 终端用户在IotVideo上的唯一标识id
-     * @param string $AccessToken IotVideo平台的accessToken
+     * @param string $AccessId 终端用户在IoT Video上的唯一标识ID
+     * @param string $AccessToken IoT Video平台的AccessToken
      * @param integer $ExpireTime Token的过期时间，单位秒(UTC时间)
-     * @param string $TerminalId 终端id
+     * @param string $TerminalId 终端ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

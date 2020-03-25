@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationRuntimeType(string $ApplicationRuntimeType) 设置应用runtime类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApigatewayServiceId() 获取Apigateway的serviceId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApigatewayServiceId(string $ApigatewayServiceId) 设置Apigateway的serviceId
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -124,6 +128,12 @@ class ApplicationForPage extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationRuntimeType;
+
+    /**
+     * @var string Apigateway的serviceId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApigatewayServiceId;
     /**
      * @param string $ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -144,6 +154,8 @@ class ApplicationForPage extends AbstractModel
      * @param string $ApplicationResourceType 应用资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationRuntimeType 应用runtime类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApigatewayServiceId Apigateway的serviceId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +208,10 @@ class ApplicationForPage extends AbstractModel
 
         if (array_key_exists("ApplicationRuntimeType",$param) and $param["ApplicationRuntimeType"] !== null) {
             $this->ApplicationRuntimeType = $param["ApplicationRuntimeType"];
+        }
+
+        if (array_key_exists("ApigatewayServiceId",$param) and $param["ApigatewayServiceId"] !== null) {
+            $this->ApigatewayServiceId = $param["ApigatewayServiceId"];
         }
     }
 }

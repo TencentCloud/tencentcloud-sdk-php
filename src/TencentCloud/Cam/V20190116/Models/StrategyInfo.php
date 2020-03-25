@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeactivedDetail(array $DeactivedDetail) 设置已下线产品列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsServiceLinkedPolicy() 获取是否是服务相关角色策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsServiceLinkedPolicy(integer $IsServiceLinkedPolicy) 设置是否是服务相关角色策略
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -119,6 +123,12 @@ class StrategyInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeactivedDetail;
+
+    /**
+     * @var integer 是否是服务相关角色策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsServiceLinkedPolicy;
     /**
      * @param integer $PolicyId 策略ID。
      * @param string $PolicyName 策略名称。
@@ -136,6 +146,8 @@ class StrategyInfo extends AbstractModel
      * @param integer $Deactived 是否已下线
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DeactivedDetail 已下线产品列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsServiceLinkedPolicy 是否是服务相关角色策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -192,6 +204,10 @@ class StrategyInfo extends AbstractModel
 
         if (array_key_exists("DeactivedDetail",$param) and $param["DeactivedDetail"] !== null) {
             $this->DeactivedDetail = $param["DeactivedDetail"];
+        }
+
+        if (array_key_exists("IsServiceLinkedPolicy",$param) and $param["IsServiceLinkedPolicy"] !== null) {
+            $this->IsServiceLinkedPolicy = $param["IsServiceLinkedPolicy"];
         }
     }
 }

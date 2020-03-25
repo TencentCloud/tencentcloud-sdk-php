@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置域名更新时间。
  * @method Origin getOrigin() 获取源站配置详情。
  * @method void setOrigin(Origin $Origin) 设置源站配置详情。
- * @method string getDisable() 获取域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，没量域名，未备案，带宽封顶，只读
- * @method void setDisable(string $Disable) 设置域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，没量域名，未备案，带宽封顶，只读
+ * @method string getDisable() 获取域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，无流量域名，未备案，带宽封顶，只读
+ * @method void setDisable(string $Disable) 设置域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，无流量域名，未备案，带宽封顶，只读
  * @method string getArea() 获取加速区域，mainland，oversea或global。
  * @method void setArea(string $Area) 设置加速区域，mainland，oversea或global。
  * @method string getReadonly() 获取域名锁定状态，normal、global，分别表示未被锁定、全球锁定。
@@ -95,7 +95,7 @@ class DomainBriefInfo extends AbstractModel
     public $Origin;
 
     /**
-     * @var string 域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，没量域名，未备案，带宽封顶，只读
+     * @var string 域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，无流量域名，未备案，带宽封顶，只读
      */
     public $Disable;
 
@@ -118,7 +118,7 @@ class DomainBriefInfo extends AbstractModel
      * @param string $CreateTime 域名创建时间。
      * @param string $UpdateTime 域名更新时间。
      * @param Origin $Origin 源站配置详情。
-     * @param string $Disable 域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，没量域名，未备案，带宽封顶，只读
+     * @param string $Disable 域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，无流量域名，未备案，带宽封顶，只读
      * @param string $Area 加速区域，mainland，oversea或global。
      * @param string $Readonly 域名锁定状态，normal、global，分别表示未被锁定、全球锁定。
      */

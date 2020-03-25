@@ -129,6 +129,8 @@ use TencentCloud\Vod\V20180717\Models as Models;
 7. 对点播中的多个流进行剪辑，然后拼接，生成一个新的视频。
 
 对于生成的新视频，还可以指定生成后的视频是否要执行任务流。
+
+>当对直播流做剪辑、拼接等操作时，请确保流结束后再操作。否则生成的视频可能不完整。
 * @method Models\ExecuteFunctionResponse ExecuteFunction(Models\ExecuteFunctionRequest $req) 本接口仅用于定制开发的特殊场景，除非云点播客服人员主动告知您需要使用本接口，其它情况请勿调用。
 * @method Models\ForbidMediaDistributionResponse ForbidMediaDistribution(Models\ForbidMediaDistributionRequest $req) * 对媒体禁播后，除了点播控制台预览，其他场景访问视频各种资源的 URL（原始文件、转码输出文件、截图等）均会返回 403。
   禁播/解禁操作全网生效时间约 5~10 分钟。

@@ -18,10 +18,10 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAccessId() 获取终端用户在IotVideo上的唯一标识id
- * @method void setAccessId(string $AccessId) 设置终端用户在IotVideo上的唯一标识id
- * @method string getUniqueId() 获取终端唯一id,用于区分同一个用户的多个终端
- * @method void setUniqueId(string $UniqueId) 设置终端唯一id,用于区分同一个用户的多个终端
+ * @method string getAccessId() 获取终端用户在IoT Video上的唯一标识ID
+ * @method void setAccessId(string $AccessId) 设置终端用户在IoT Video上的唯一标识ID
+ * @method string getUniqueId() 获取终端唯一ID，用于区分同一个用户的多个终端
+ * @method void setUniqueId(string $UniqueId) 设置终端唯一ID，用于区分同一个用户的多个终端
  * @method integer getTtlMinutes() 获取Token的TTL(time to alive)分钟数
  * @method void setTtlMinutes(integer $TtlMinutes) 设置Token的TTL(time to alive)分钟数
  */
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateUsrTokenRequest extends AbstractModel
 {
     /**
-     * @var string 终端用户在IotVideo上的唯一标识id
+     * @var string 终端用户在IoT Video上的唯一标识ID
      */
     public $AccessId;
 
     /**
-     * @var string 终端唯一id,用于区分同一个用户的多个终端
+     * @var string 终端唯一ID，用于区分同一个用户的多个终端
      */
     public $UniqueId;
 
@@ -46,8 +46,8 @@ class CreateUsrTokenRequest extends AbstractModel
      */
     public $TtlMinutes;
     /**
-     * @param string $AccessId 终端用户在IotVideo上的唯一标识id
-     * @param string $UniqueId 终端唯一id,用于区分同一个用户的多个终端
+     * @param string $AccessId 终端用户在IoT Video上的唯一标识ID
+     * @param string $UniqueId 终端唯一ID，用于区分同一个用户的多个终端
      * @param integer $TtlMinutes Token的TTL(time to alive)分钟数
      */
     function __construct()

@@ -118,6 +118,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunServiceInstanceCount(integer $RunServiceInstanceCount) 设置集群可用的服务实例数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubnetId() 获取集群所属子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubnetId(string $SubnetId) 设置集群所属子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method OperationInfo getOperationInfo() 获取返回给前端的控制信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperationInfo(OperationInfo $OperationInfo) 设置返回给前端的控制信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -274,6 +282,18 @@ class Cluster extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunServiceInstanceCount;
+
+    /**
+     * @var string 集群所属子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubnetId;
+
+    /**
+     * @var OperationInfo 返回给前端的控制信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperationInfo;
     /**
      * @param string $ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -324,6 +344,10 @@ class Cluster extends AbstractModel
      * @param float $ClusterLimitMem 集群最大内存限制，单位：G
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RunServiceInstanceCount 集群可用的服务实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubnetId 集群所属子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperationInfo $OperationInfo 返回给前端的控制信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -436,6 +460,15 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("RunServiceInstanceCount",$param) and $param["RunServiceInstanceCount"] !== null) {
             $this->RunServiceInstanceCount = $param["RunServiceInstanceCount"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("OperationInfo",$param) and $param["OperationInfo"] !== null) {
+            $this->OperationInfo = new OperationInfo();
+            $this->OperationInfo->deserialize($param["OperationInfo"]);
         }
     }
 }

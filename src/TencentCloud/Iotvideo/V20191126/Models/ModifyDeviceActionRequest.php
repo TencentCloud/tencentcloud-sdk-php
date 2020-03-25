@@ -18,8 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTid() 获取设备Tid
- * @method void setTid(string $Tid) 设置设备Tid
+ * @method string getTid() 获取设备TID
+ * @method void setTid(string $Tid) 设置设备TID
  * @method boolean getWakeup() 获取如果设备处于休眠状态，是否唤醒设备
  * @method void setWakeup(boolean $Wakeup) 设置如果设备处于休眠状态，是否唤醒设备
  * @method string getBranch() 获取物模型的分支路径
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDeviceActionRequest extends AbstractModel
 {
     /**
-     * @var string 设备Tid
+     * @var string 设备TID
      */
     public $Tid;
 
@@ -60,7 +60,7 @@ class ModifyDeviceActionRequest extends AbstractModel
      */
     public $IsNum;
     /**
-     * @param string $Tid 设备Tid
+     * @param string $Tid 设备TID
      * @param boolean $Wakeup 如果设备处于休眠状态，是否唤醒设备
      * @param string $Branch 物模型的分支路径
      * @param string $Value 写入的物模型数据，如果是json需要转义成字符串

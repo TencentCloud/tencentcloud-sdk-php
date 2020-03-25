@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * @method AiSamplePerson getPerson() 获取人物信息。
  * @method void setPerson(AiSamplePerson $Person) 设置人物信息。
  * @method array getFailFaceInfoSet() 获取处理失败的人脸信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailFaceInfoSet(array $FailFaceInfoSet) 设置处理失败的人脸信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,7 +38,6 @@ class CreatePersonSampleResponse extends AbstractModel
 
     /**
      * @var array 处理失败的人脸信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailFaceInfoSet;
 
@@ -51,7 +48,6 @@ class CreatePersonSampleResponse extends AbstractModel
     /**
      * @param AiSamplePerson $Person 人物信息。
      * @param array $FailFaceInfoSet 处理失败的人脸信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

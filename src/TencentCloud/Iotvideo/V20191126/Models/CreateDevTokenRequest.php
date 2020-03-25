@@ -18,8 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAccessId() 获取客户的终端用户在IotVideo上的唯一标识id
- * @method void setAccessId(string $AccessId) 设置客户的终端用户在IotVideo上的唯一标识id
+ * @method string getAccessId() 获取客户的终端用户在IoT Video上的唯一标识ID
+ * @method void setAccessId(string $AccessId) 设置客户的终端用户在IoT Video上的唯一标识ID
  * @method array getTids() 获取设备TID列表,0<元素数量<=100
  * @method void setTids(array $Tids) 设置设备TID列表,0<元素数量<=100
  * @method integer getTtlMinutes() 获取Token的TTL(time to alive)分钟数
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDevTokenRequest extends AbstractModel
 {
     /**
-     * @var string 客户的终端用户在IotVideo上的唯一标识id
+     * @var string 客户的终端用户在IoT Video上的唯一标识ID
      */
     public $AccessId;
 
@@ -46,7 +46,7 @@ class CreateDevTokenRequest extends AbstractModel
      */
     public $TtlMinutes;
     /**
-     * @param string $AccessId 客户的终端用户在IotVideo上的唯一标识id
+     * @param string $AccessId 客户的终端用户在IoT Video上的唯一标识ID
      * @param array $Tids 设备TID列表,0<元素数量<=100
      * @param integer $TtlMinutes Token的TTL(time to alive)分钟数
      */

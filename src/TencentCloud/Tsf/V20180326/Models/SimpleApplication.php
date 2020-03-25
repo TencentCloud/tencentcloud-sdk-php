@@ -54,6 +54,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置UpdateTime
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApigatewayServiceId() 获取ApigatewayServiceId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApigatewayServiceId(string $ApigatewayServiceId) 设置ApigatewayServiceId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationRuntimeType() 获取ApplicationRuntimeType
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationRuntimeType(string $ApplicationRuntimeType) 设置ApplicationRuntimeType
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -114,6 +122,18 @@ class SimpleApplication extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
+
+    /**
+     * @var string ApigatewayServiceId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApigatewayServiceId;
+
+    /**
+     * @var string ApplicationRuntimeType
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationRuntimeType;
     /**
      * @param string $ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -132,6 +152,10 @@ class SimpleApplication extends AbstractModel
      * @param string $CreateTime CreateTime
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime UpdateTime
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApigatewayServiceId ApigatewayServiceId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationRuntimeType ApplicationRuntimeType
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +204,14 @@ class SimpleApplication extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("ApigatewayServiceId",$param) and $param["ApigatewayServiceId"] !== null) {
+            $this->ApigatewayServiceId = $param["ApigatewayServiceId"];
+        }
+
+        if (array_key_exists("ApplicationRuntimeType",$param) and $param["ApplicationRuntimeType"] !== null) {
+            $this->ApplicationRuntimeType = $param["ApplicationRuntimeType"];
         }
     }
 }

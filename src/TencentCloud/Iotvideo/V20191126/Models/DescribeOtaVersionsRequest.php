@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method integer getOffset() 获取分页偏移量
  * @method void setOffset(integer $Offset) 设置分页偏移量
- * @method integer getLimit() 获取每页数量,,0<取值范围<=100
- * @method void setLimit(integer $Limit) 设置每页数量,,0<取值范围<=100
+ * @method integer getLimit() 获取每页数量，0<取值范围<=100
+ * @method void setLimit(integer $Limit) 设置每页数量，0<取值范围<=100
  * @method string getProductId() 获取产品ID，为空时查询客户所有产品的版本信息
  * @method void setProductId(string $ProductId) 设置产品ID，为空时查询客户所有产品的版本信息
  * @method string getOtaVersion() 获取版本号，支持模糊匹配
@@ -41,7 +41,7 @@ class DescribeOtaVersionsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 每页数量,,0<取值范围<=100
+     * @var integer 每页数量，0<取值范围<=100
      */
     public $Limit;
 
@@ -61,7 +61,7 @@ class DescribeOtaVersionsRequest extends AbstractModel
     public $PubStatus;
     /**
      * @param integer $Offset 分页偏移量
-     * @param integer $Limit 每页数量,,0<取值范围<=100
+     * @param integer $Limit 每页数量，0<取值范围<=100
      * @param string $ProductId 产品ID，为空时查询客户所有产品的版本信息
      * @param string $OtaVersion 版本号，支持模糊匹配
      * @param integer $PubStatus 版本类型 1未发布 2测试发布 3正式发布 4禁用

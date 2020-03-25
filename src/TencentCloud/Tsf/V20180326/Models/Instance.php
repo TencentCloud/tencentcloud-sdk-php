@@ -130,6 +130,34 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperationState(integer $OperationState) 设置实例执行状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNamespaceId() 获取NamespaceId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNamespaceId(string $NamespaceId) 设置NamespaceId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceZoneId() 获取InstanceZoneId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceZoneId(string $InstanceZoneId) 设置InstanceZoneId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceImportMode() 获取InstanceImportMode
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceImportMode(string $InstanceImportMode) 设置InstanceImportMode
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationType() 获取ApplicationType
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationType(string $ApplicationType) 设置ApplicationType
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationResourceType() 获取ApplicationResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationResourceType(string $ApplicationResourceType) 设置ApplicationResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getServiceSidecarStatus() 获取ServiceSidecarStatus
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceSidecarStatus(string $ServiceSidecarStatus) 设置ServiceSidecarStatus
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupName() 获取GroupName
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupName(string $GroupName) 设置GroupName
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -304,6 +332,48 @@ class Instance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperationState;
+
+    /**
+     * @var string NamespaceId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NamespaceId;
+
+    /**
+     * @var string InstanceZoneId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceZoneId;
+
+    /**
+     * @var string InstanceImportMode
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceImportMode;
+
+    /**
+     * @var string ApplicationType
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationType;
+
+    /**
+     * @var string ApplicationResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationResourceType;
+
+    /**
+     * @var string ServiceSidecarStatus
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceSidecarStatus;
+
+    /**
+     * @var string GroupName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupName;
     /**
      * @param string $InstanceId 机器实例ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -360,6 +430,20 @@ class Instance extends AbstractModel
      * @param string $UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OperationState 实例执行状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NamespaceId NamespaceId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceZoneId InstanceZoneId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceImportMode InstanceImportMode
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationType ApplicationType
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationResourceType ApplicationResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ServiceSidecarStatus ServiceSidecarStatus
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupName GroupName
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -484,6 +568,34 @@ class Instance extends AbstractModel
 
         if (array_key_exists("OperationState",$param) and $param["OperationState"] !== null) {
             $this->OperationState = $param["OperationState"];
+        }
+
+        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
+            $this->NamespaceId = $param["NamespaceId"];
+        }
+
+        if (array_key_exists("InstanceZoneId",$param) and $param["InstanceZoneId"] !== null) {
+            $this->InstanceZoneId = $param["InstanceZoneId"];
+        }
+
+        if (array_key_exists("InstanceImportMode",$param) and $param["InstanceImportMode"] !== null) {
+            $this->InstanceImportMode = $param["InstanceImportMode"];
+        }
+
+        if (array_key_exists("ApplicationType",$param) and $param["ApplicationType"] !== null) {
+            $this->ApplicationType = $param["ApplicationType"];
+        }
+
+        if (array_key_exists("ApplicationResourceType",$param) and $param["ApplicationResourceType"] !== null) {
+            $this->ApplicationResourceType = $param["ApplicationResourceType"];
+        }
+
+        if (array_key_exists("ServiceSidecarStatus",$param) and $param["ServiceSidecarStatus"] !== null) {
+            $this->ServiceSidecarStatus = $param["ServiceSidecarStatus"];
+        }
+
+        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
+            $this->GroupName = $param["GroupName"];
         }
     }
 }

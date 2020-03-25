@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMicroserviceType(string $MicroserviceType) 设置应用微服务类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupResourceType() 获取GroupResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupResourceType(string $GroupResourceType) 设置GroupResourceType
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -164,6 +168,12 @@ class VmGroupSimple extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MicroserviceType;
+
+    /**
+     * @var string GroupResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupResourceType;
     /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -192,6 +202,8 @@ class VmGroupSimple extends AbstractModel
      * @param string $NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MicroserviceType 应用微服务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupResourceType GroupResourceType
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +272,10 @@ class VmGroupSimple extends AbstractModel
 
         if (array_key_exists("MicroserviceType",$param) and $param["MicroserviceType"] !== null) {
             $this->MicroserviceType = $param["MicroserviceType"];
+        }
+
+        if (array_key_exists("GroupResourceType",$param) and $param["GroupResourceType"] !== null) {
+            $this->GroupResourceType = $param["GroupResourceType"];
         }
     }
 }

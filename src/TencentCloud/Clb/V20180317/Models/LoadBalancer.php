@@ -184,6 +184,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsBlock(boolean $IsBlock) 设置vip是否被封堵
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsBlockTime() 获取封堵或解封时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsBlockTime(string $IsBlockTime) 设置封堵或解封时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -445,6 +449,12 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsBlock;
+
+    /**
+     * @var string 封堵或解封时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsBlockTime;
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
@@ -528,6 +538,8 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $SlaType 性能保障规格
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsBlock vip是否被封堵
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsBlockTime 封堵或解封时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -733,6 +745,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("IsBlock",$param) and $param["IsBlock"] !== null) {
             $this->IsBlock = $param["IsBlock"];
+        }
+
+        if (array_key_exists("IsBlockTime",$param) and $param["IsBlockTime"] !== null) {
+            $this->IsBlockTime = $param["IsBlockTime"];
         }
     }
 }

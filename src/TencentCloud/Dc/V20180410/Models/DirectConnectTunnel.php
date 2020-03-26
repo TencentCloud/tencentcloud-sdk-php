@@ -18,11 +18,11 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDirectConnectTunnelId() 获取专线通道ID
- * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) 设置专线通道ID
+ * @method string getDirectConnectTunnelId() 获取专用通道ID
+ * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) 设置专用通道ID
  * @method string getDirectConnectId() 获取物理专线ID
  * @method void setDirectConnectId(string $DirectConnectId) 设置物理专线ID
- * @method string getState() 获取专线通道状态
+ * @method string getState() 获取专用通道状态
 AVAILABLE:就绪或者已连接
 PENDING:申请中
 ALLOCATING:配置中
@@ -32,7 +32,7 @@ DELETING:删除中
 DELETED:删除完成
 COMFIRMING:待接受
 REJECTED:拒绝
- * @method void setState(string $State) 设置专线通道状态
+ * @method void setState(string $State) 设置专用通道状态
 AVAILABLE:就绪或者已连接
 PENDING:申请中
 ALLOCATING:配置中
@@ -44,8 +44,8 @@ COMFIRMING:待接受
 REJECTED:拒绝
  * @method string getDirectConnectOwnerAccount() 获取物理专线的拥有者，开发商账号 ID
  * @method void setDirectConnectOwnerAccount(string $DirectConnectOwnerAccount) 设置物理专线的拥有者，开发商账号 ID
- * @method string getOwnerAccount() 获取专线通道的拥有者，开发商账号 ID
- * @method void setOwnerAccount(string $OwnerAccount) 设置专线通道的拥有者，开发商账号 ID
+ * @method string getOwnerAccount() 获取专用通道的拥有者，开发商账号 ID
+ * @method void setOwnerAccount(string $OwnerAccount) 设置专用通道的拥有者，开发商账号 ID
  * @method string getNetworkType() 获取网络类型，分别为VPC、BMVPC、CCN
  VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
  * @method void setNetworkType(string $NetworkType) 设置网络类型，分别为VPC、BMVPC、CCN
@@ -62,20 +62,20 @@ REJECTED:拒绝
  * @method void setBgpPeer(BgpPeer $BgpPeer) 设置用户侧BGP，Asn，AuthKey
  * @method array getRouteFilterPrefixes() 获取用户侧网段地址
  * @method void setRouteFilterPrefixes(array $RouteFilterPrefixes) 设置用户侧网段地址
- * @method integer getVlan() 获取专线通道的Vlan
- * @method void setVlan(integer $Vlan) 设置专线通道的Vlan
+ * @method integer getVlan() 获取专用通道的Vlan
+ * @method void setVlan(integer $Vlan) 设置专用通道的Vlan
  * @method string getTencentAddress() 获取TencentAddress，腾讯侧互联 IP
  * @method void setTencentAddress(string $TencentAddress) 设置TencentAddress，腾讯侧互联 IP
  * @method string getCustomerAddress() 获取CustomerAddress，用户侧互联 IP
  * @method void setCustomerAddress(string $CustomerAddress) 设置CustomerAddress，用户侧互联 IP
- * @method string getDirectConnectTunnelName() 获取专线通道名称
- * @method void setDirectConnectTunnelName(string $DirectConnectTunnelName) 设置专线通道名称
- * @method string getCreatedTime() 获取专线通道创建时间
- * @method void setCreatedTime(string $CreatedTime) 设置专线通道创建时间
- * @method integer getBandwidth() 获取专线通道带宽值
- * @method void setBandwidth(integer $Bandwidth) 设置专线通道带宽值
- * @method array getTagSet() 获取专线通道标签值
- * @method void setTagSet(array $TagSet) 设置专线通道标签值
+ * @method string getDirectConnectTunnelName() 获取专用通道名称
+ * @method void setDirectConnectTunnelName(string $DirectConnectTunnelName) 设置专用通道名称
+ * @method string getCreatedTime() 获取专用通道创建时间
+ * @method void setCreatedTime(string $CreatedTime) 设置专用通道创建时间
+ * @method integer getBandwidth() 获取专用通道带宽值
+ * @method void setBandwidth(integer $Bandwidth) 设置专用通道带宽值
+ * @method array getTagSet() 获取专用通道标签值
+ * @method void setTagSet(array $TagSet) 设置专用通道标签值
  * @method string getNetDetectId() 获取关联的网络自定义探测ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetDetectId(string $NetDetectId) 设置关联的网络自定义探测ID
@@ -96,9 +96,9 @@ REJECTED:拒绝
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBfdEnable(integer $BfdEnable) 设置是否开启BFD
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAccessPointType() 获取专线通道接入点类型
+ * @method string getAccessPointType() 获取专用通道接入点类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccessPointType(string $AccessPointType) 设置专线通道接入点类型
+ * @method void setAccessPointType(string $AccessPointType) 设置专用通道接入点类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDirectConnectGatewayName() 获取专线网关名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -111,12 +111,12 @@ REJECTED:拒绝
  */
 
 /**
- *专线通道信息列表
+ *专用通道信息列表
  */
 class DirectConnectTunnel extends AbstractModel
 {
     /**
-     * @var string 专线通道ID
+     * @var string 专用通道ID
      */
     public $DirectConnectTunnelId;
 
@@ -126,7 +126,7 @@ class DirectConnectTunnel extends AbstractModel
     public $DirectConnectId;
 
     /**
-     * @var string 专线通道状态
+     * @var string 专用通道状态
 AVAILABLE:就绪或者已连接
 PENDING:申请中
 ALLOCATING:配置中
@@ -145,7 +145,7 @@ REJECTED:拒绝
     public $DirectConnectOwnerAccount;
 
     /**
-     * @var string 专线通道的拥有者，开发商账号 ID
+     * @var string 专用通道的拥有者，开发商账号 ID
      */
     public $OwnerAccount;
 
@@ -186,7 +186,7 @@ REJECTED:拒绝
     public $RouteFilterPrefixes;
 
     /**
-     * @var integer 专线通道的Vlan
+     * @var integer 专用通道的Vlan
      */
     public $Vlan;
 
@@ -201,22 +201,22 @@ REJECTED:拒绝
     public $CustomerAddress;
 
     /**
-     * @var string 专线通道名称
+     * @var string 专用通道名称
      */
     public $DirectConnectTunnelName;
 
     /**
-     * @var string 专线通道创建时间
+     * @var string 专用通道创建时间
      */
     public $CreatedTime;
 
     /**
-     * @var integer 专线通道带宽值
+     * @var integer 专用通道带宽值
      */
     public $Bandwidth;
 
     /**
-     * @var array 专线通道标签值
+     * @var array 专用通道标签值
      */
     public $TagSet;
 
@@ -251,7 +251,7 @@ REJECTED:拒绝
     public $BfdEnable;
 
     /**
-     * @var string 专线通道接入点类型
+     * @var string 专用通道接入点类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessPointType;
@@ -268,9 +268,9 @@ REJECTED:拒绝
      */
     public $VpcName;
     /**
-     * @param string $DirectConnectTunnelId 专线通道ID
+     * @param string $DirectConnectTunnelId 专用通道ID
      * @param string $DirectConnectId 物理专线ID
-     * @param string $State 专线通道状态
+     * @param string $State 专用通道状态
 AVAILABLE:就绪或者已连接
 PENDING:申请中
 ALLOCATING:配置中
@@ -281,7 +281,7 @@ DELETED:删除完成
 COMFIRMING:待接受
 REJECTED:拒绝
      * @param string $DirectConnectOwnerAccount 物理专线的拥有者，开发商账号 ID
-     * @param string $OwnerAccount 专线通道的拥有者，开发商账号 ID
+     * @param string $OwnerAccount 专用通道的拥有者，开发商账号 ID
      * @param string $NetworkType 网络类型，分别为VPC、BMVPC、CCN
  VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
      * @param string $NetworkRegion VPC地域对应的网络名，如ap-guangzhou
@@ -290,13 +290,13 @@ REJECTED:拒绝
      * @param string $RouteType BGP ：BGP路由 STATIC：静态 默认为 BGP 路由
      * @param BgpPeer $BgpPeer 用户侧BGP，Asn，AuthKey
      * @param array $RouteFilterPrefixes 用户侧网段地址
-     * @param integer $Vlan 专线通道的Vlan
+     * @param integer $Vlan 专用通道的Vlan
      * @param string $TencentAddress TencentAddress，腾讯侧互联 IP
      * @param string $CustomerAddress CustomerAddress，用户侧互联 IP
-     * @param string $DirectConnectTunnelName 专线通道名称
-     * @param string $CreatedTime 专线通道创建时间
-     * @param integer $Bandwidth 专线通道带宽值
-     * @param array $TagSet 专线通道标签值
+     * @param string $DirectConnectTunnelName 专用通道名称
+     * @param string $CreatedTime 专用通道创建时间
+     * @param integer $Bandwidth 专用通道带宽值
+     * @param array $TagSet 专用通道标签值
      * @param string $NetDetectId 关联的网络自定义探测ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableBGPCommunity BGP community开关
@@ -307,7 +307,7 @@ REJECTED:拒绝
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BfdEnable 是否开启BFD
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AccessPointType 专线通道接入点类型
+     * @param string $AccessPointType 专用通道接入点类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DirectConnectGatewayName 专线网关名称
 注意：此字段可能返回 null，表示取不到有效值。

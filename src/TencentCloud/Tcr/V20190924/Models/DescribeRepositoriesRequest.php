@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getRegistryId() 获取实例Id
  * @method void setRegistryId(string $RegistryId) 设置实例Id
- * @method string getRepositoryName() 获取仓库名称，用于查询
- * @method void setRepositoryName(string $RepositoryName) 设置仓库名称，用于查询
+ * @method string getNamespaceName() 获取指定命名空间，不填写默认为查询所有命名空间下镜像仓库
+ * @method void setNamespaceName(string $NamespaceName) 设置指定命名空间，不填写默认为查询所有命名空间下镜像仓库
+ * @method string getRepositoryName() 获取指定镜像仓库，不填写默认查询指定命名空间下所有镜像仓库
+ * @method void setRepositoryName(string $RepositoryName) 设置指定镜像仓库，不填写默认查询指定命名空间下所有镜像仓库
  * @method integer getOffset() 获取页数，用于分页
  * @method void setOffset(integer $Offset) 设置页数，用于分页
  * @method integer getLimit() 获取每页个数，用于分页
  * @method void setLimit(integer $Limit) 设置每页个数，用于分页
  * @method string getSortBy() 获取基于字段排序，支持的值有-creation_time,-name, -update_time
  * @method void setSortBy(string $SortBy) 设置基于字段排序，支持的值有-creation_time,-name, -update_time
- * @method string getNamespaceName() 获取命名空间名称，用于查询改命名空间下的仓库，如果不填写默认为所有命名空间下
- * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称，用于查询改命名空间下的仓库，如果不填写默认为所有命名空间下
  */
 
 /**
@@ -43,7 +43,12 @@ class DescribeRepositoriesRequest extends AbstractModel
     public $RegistryId;
 
     /**
-     * @var string 仓库名称，用于查询
+     * @var string 指定命名空间，不填写默认为查询所有命名空间下镜像仓库
+     */
+    public $NamespaceName;
+
+    /**
+     * @var string 指定镜像仓库，不填写默认查询指定命名空间下所有镜像仓库
      */
     public $RepositoryName;
 
@@ -61,18 +66,13 @@ class DescribeRepositoriesRequest extends AbstractModel
      * @var string 基于字段排序，支持的值有-creation_time,-name, -update_time
      */
     public $SortBy;
-
-    /**
-     * @var string 命名空间名称，用于查询改命名空间下的仓库，如果不填写默认为所有命名空间下
-     */
-    public $NamespaceName;
     /**
      * @param string $RegistryId 实例Id
-     * @param string $RepositoryName 仓库名称，用于查询
+     * @param string $NamespaceName 指定命名空间，不填写默认为查询所有命名空间下镜像仓库
+     * @param string $RepositoryName 指定镜像仓库，不填写默认查询指定命名空间下所有镜像仓库
      * @param integer $Offset 页数，用于分页
      * @param integer $Limit 每页个数，用于分页
      * @param string $SortBy 基于字段排序，支持的值有-creation_time,-name, -update_time
-     * @param string $NamespaceName 命名空间名称，用于查询改命名空间下的仓库，如果不填写默认为所有命名空间下
      */
     function __construct()
     {
@@ -90,6 +90,10 @@ class DescribeRepositoriesRequest extends AbstractModel
             $this->RegistryId = $param["RegistryId"];
         }
 
+        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
+            $this->NamespaceName = $param["NamespaceName"];
+        }
+
         if (array_key_exists("RepositoryName",$param) and $param["RepositoryName"] !== null) {
             $this->RepositoryName = $param["RepositoryName"];
         }
@@ -104,10 +108,6 @@ class DescribeRepositoriesRequest extends AbstractModel
 
         if (array_key_exists("SortBy",$param) and $param["SortBy"] !== null) {
             $this->SortBy = $param["SortBy"];
-        }
-
-        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
-            $this->NamespaceName = $param["NamespaceName"];
         }
     }
 }

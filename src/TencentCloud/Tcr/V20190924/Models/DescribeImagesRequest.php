@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getRegistryId() 获取实例ID
  * @method void setRegistryId(string $RegistryId) 设置实例ID
- * @method string getRepositoryName() 获取镜像仓库名称
- * @method void setRepositoryName(string $RepositoryName) 设置镜像仓库名称
  * @method string getNamespaceName() 获取命名空间名称
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
+ * @method string getRepositoryName() 获取镜像仓库名称
+ * @method void setRepositoryName(string $RepositoryName) 设置镜像仓库名称
+ * @method string getImageVersion() 获取指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
+ * @method void setImageVersion(string $ImageVersion) 设置指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
  * @method integer getLimit() 获取每页个数，用于分页，默认20
  * @method void setLimit(integer $Limit) 设置每页个数，用于分页，默认20
  * @method integer getOffset() 获取页数，默认值为1
  * @method void setOffset(integer $Offset) 设置页数，默认值为1
- * @method string getImageVersion() 获取镜像版本(Tag)，置空则返回仓库内全部的容器镜像
- * @method void setImageVersion(string $ImageVersion) 设置镜像版本(Tag)，置空则返回仓库内全部的容器镜像
  */
 
 /**
@@ -43,14 +43,19 @@ class DescribeImagesRequest extends AbstractModel
     public $RegistryId;
 
     /**
+     * @var string 命名空间名称
+     */
+    public $NamespaceName;
+
+    /**
      * @var string 镜像仓库名称
      */
     public $RepositoryName;
 
     /**
-     * @var string 命名空间名称
+     * @var string 指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
      */
-    public $NamespaceName;
+    public $ImageVersion;
 
     /**
      * @var integer 每页个数，用于分页，默认20
@@ -61,18 +66,13 @@ class DescribeImagesRequest extends AbstractModel
      * @var integer 页数，默认值为1
      */
     public $Offset;
-
-    /**
-     * @var string 镜像版本(Tag)，置空则返回仓库内全部的容器镜像
-     */
-    public $ImageVersion;
     /**
      * @param string $RegistryId 实例ID
-     * @param string $RepositoryName 镜像仓库名称
      * @param string $NamespaceName 命名空间名称
+     * @param string $RepositoryName 镜像仓库名称
+     * @param string $ImageVersion 指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
      * @param integer $Limit 每页个数，用于分页，默认20
      * @param integer $Offset 页数，默认值为1
-     * @param string $ImageVersion 镜像版本(Tag)，置空则返回仓库内全部的容器镜像
      */
     function __construct()
     {
@@ -90,12 +90,16 @@ class DescribeImagesRequest extends AbstractModel
             $this->RegistryId = $param["RegistryId"];
         }
 
+        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
+            $this->NamespaceName = $param["NamespaceName"];
+        }
+
         if (array_key_exists("RepositoryName",$param) and $param["RepositoryName"] !== null) {
             $this->RepositoryName = $param["RepositoryName"];
         }
 
-        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
-            $this->NamespaceName = $param["NamespaceName"];
+        if (array_key_exists("ImageVersion",$param) and $param["ImageVersion"] !== null) {
+            $this->ImageVersion = $param["ImageVersion"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
@@ -104,10 +108,6 @@ class DescribeImagesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
-        }
-
-        if (array_key_exists("ImageVersion",$param) and $param["ImageVersion"] !== null) {
-            $this->ImageVersion = $param["ImageVersion"];
         }
     }
 }

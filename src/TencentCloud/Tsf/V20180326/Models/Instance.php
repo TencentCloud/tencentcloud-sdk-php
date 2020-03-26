@@ -158,6 +158,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置GroupName
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNamespaceName() 获取NamespaceName
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNamespaceName(string $NamespaceName) 设置NamespaceName
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -374,6 +378,12 @@ class Instance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
+
+    /**
+     * @var string NamespaceName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NamespaceName;
     /**
      * @param string $InstanceId 机器实例ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -444,6 +454,8 @@ class Instance extends AbstractModel
      * @param string $ServiceSidecarStatus ServiceSidecarStatus
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName GroupName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NamespaceName NamespaceName
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -596,6 +608,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
             $this->GroupName = $param["GroupName"];
+        }
+
+        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
+            $this->NamespaceName = $param["NamespaceName"];
         }
     }
 }

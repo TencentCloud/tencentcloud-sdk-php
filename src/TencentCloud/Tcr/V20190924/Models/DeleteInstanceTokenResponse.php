@@ -18,36 +18,20 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getToken() 获取访问凭证
- * @method void setToken(string $Token) 设置访问凭证
- * @method integer getExpTime() 获取访问凭证过期时间戳
- * @method void setExpTime(integer $ExpTime) 设置访问凭证过期时间戳
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *CreateInstanceToken返回参数结构体
+ *DeleteInstanceToken返回参数结构体
  */
-class CreateInstanceTokenResponse extends AbstractModel
+class DeleteInstanceTokenResponse extends AbstractModel
 {
-    /**
-     * @var string 访问凭证
-     */
-    public $Token;
-
-    /**
-     * @var integer 访问凭证过期时间戳
-     */
-    public $ExpTime;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $Token 访问凭证
-     * @param integer $ExpTime 访问凭证过期时间戳
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,14 +46,6 @@ class CreateInstanceTokenResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
-        }
-
-        if (array_key_exists("ExpTime",$param) and $param["ExpTime"] !== null) {
-            $this->ExpTime = $param["ExpTime"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

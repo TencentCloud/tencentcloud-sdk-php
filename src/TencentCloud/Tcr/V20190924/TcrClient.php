@@ -27,7 +27,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
 * @method Models\CreateApplicationTriggerPersonalResponse CreateApplicationTriggerPersonal(Models\CreateApplicationTriggerPersonalRequest $req) 用于创建应用更新触发器
 * @method Models\CreateImageLifecyclePersonalResponse CreateImageLifecyclePersonal(Models\CreateImageLifecyclePersonalRequest $req) 用于在个人版中创建清理策略
 * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建实例
-* @method Models\CreateInstanceTokenResponse CreateInstanceToken(Models\CreateInstanceTokenRequest $req) 获取临时登录密码
+* @method Models\CreateInstanceTokenResponse CreateInstanceToken(Models\CreateInstanceTokenRequest $req) 创建实例的临时或长期访问凭证
 * @method Models\CreateNamespaceResponse CreateNamespace(Models\CreateNamespaceRequest $req) 用于在企业版中创建命名空间
 * @method Models\CreateNamespacePersonalResponse CreateNamespacePersonal(Models\CreateNamespacePersonalRequest $req) 创建个人版镜像仓库命名空间，此命名空间全局唯一
 * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 用于企业版创建镜像仓库
@@ -37,6 +37,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
 * @method Models\DeleteImageLifecycleGlobalPersonalResponse DeleteImageLifecycleGlobalPersonal(Models\DeleteImageLifecycleGlobalPersonalRequest $req) 用于删除个人版全局镜像版本自动清理策略
 * @method Models\DeleteImageLifecyclePersonalResponse DeleteImageLifecyclePersonal(Models\DeleteImageLifecyclePersonalRequest $req) 用于在个人版镜像仓库中删除仓库Tag自动清理策略
 * @method Models\DeleteImagePersonalResponse DeleteImagePersonal(Models\DeleteImagePersonalRequest $req) 用于在个人版中删除tag
+* @method Models\DeleteInstanceTokenResponse DeleteInstanceToken(Models\DeleteInstanceTokenRequest $req) 删除长期访问凭证
 * @method Models\DeleteNamespaceResponse DeleteNamespace(Models\DeleteNamespaceRequest $req) 删除命名空间
 * @method Models\DeleteNamespacePersonalResponse DeleteNamespacePersonal(Models\DeleteNamespacePersonalRequest $req) 删除共享版命名空间
 * @method Models\DeleteRepositoryResponse DeleteRepository(Models\DeleteRepositoryRequest $req) 删除镜像仓库
@@ -48,12 +49,13 @@ use TencentCloud\Tcr\V20190924\Models as Models;
 * @method Models\DescribeImageLifecycleGlobalPersonalResponse DescribeImageLifecycleGlobalPersonal(Models\DescribeImageLifecycleGlobalPersonalRequest $req) 用于获取个人版全局镜像版本自动清理策略
 * @method Models\DescribeImageLifecyclePersonalResponse DescribeImageLifecyclePersonal(Models\DescribeImageLifecyclePersonalRequest $req) 用于获取个人版仓库中自动清理策略
 * @method Models\DescribeImagePersonalResponse DescribeImagePersonal(Models\DescribeImagePersonalRequest $req) 用于获取个人版镜像仓库tag列表
-* @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 用于在企业版中查询镜像仓库内容器镜像信息，获取镜像版本列表
+* @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 查询镜像版本列表或指定容器镜像信息
 * @method Models\DescribeInstanceStatusResponse DescribeInstanceStatus(Models\DescribeInstanceStatusRequest $req) 查询实例当前状态以及过程信息
+* @method Models\DescribeInstanceTokenResponse DescribeInstanceToken(Models\DescribeInstanceTokenRequest $req) 查询长期访问凭证信息
 * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询实例信息
 * @method Models\DescribeNamespacePersonalResponse DescribeNamespacePersonal(Models\DescribeNamespacePersonalRequest $req) 查询个人版命名空间信息
 * @method Models\DescribeNamespacesResponse DescribeNamespaces(Models\DescribeNamespacesRequest $req) 查询命名空间列表或指定命名空间信息
-* @method Models\DescribeRepositoriesResponse DescribeRepositories(Models\DescribeRepositoriesRequest $req) 查询镜像仓库信息
+* @method Models\DescribeRepositoriesResponse DescribeRepositories(Models\DescribeRepositoriesRequest $req) 查询镜像仓库列表或指定镜像仓库信息
 * @method Models\DescribeRepositoryFilterPersonalResponse DescribeRepositoryFilterPersonal(Models\DescribeRepositoryFilterPersonalRequest $req) 用于在个人版镜像仓库中，获取满足输入搜索条件的用户镜像仓库
 * @method Models\DescribeRepositoryOwnerPersonalResponse DescribeRepositoryOwnerPersonal(Models\DescribeRepositoryOwnerPersonalRequest $req) 用于在个人版中获取用户全部的镜像仓库列表
 * @method Models\DescribeRepositoryPersonalResponse DescribeRepositoryPersonal(Models\DescribeRepositoryPersonalRequest $req) 查询个人版仓库信息
@@ -61,8 +63,9 @@ use TencentCloud\Tcr\V20190924\Models as Models;
 * @method Models\DuplicateImagePersonalResponse DuplicateImagePersonal(Models\DuplicateImagePersonalRequest $req) 用于在个人版镜像仓库中复制镜像版本
 * @method Models\ManageImageLifecycleGlobalPersonalResponse ManageImageLifecycleGlobalPersonal(Models\ManageImageLifecycleGlobalPersonalRequest $req) 用于设置个人版全局镜像版本自动清理策略
 * @method Models\ModifyApplicationTriggerPersonalResponse ModifyApplicationTriggerPersonal(Models\ModifyApplicationTriggerPersonalRequest $req) 用于修改应用更新触发器
+* @method Models\ModifyInstanceTokenResponse ModifyInstanceToken(Models\ModifyInstanceTokenRequest $req) 更新实例内指定长期访问凭证的启用状态
 * @method Models\ModifyNamespaceResponse ModifyNamespace(Models\ModifyNamespaceRequest $req) 更新命名空间信息，当前仅支持修改命名空间访问级别
-* @method Models\ModifyRepositoryResponse ModifyRepository(Models\ModifyRepositoryRequest $req) 更新镜像仓库描述
+* @method Models\ModifyRepositoryResponse ModifyRepository(Models\ModifyRepositoryRequest $req) 更新镜像仓库信息，可修改仓库描述信息
 * @method Models\ModifyRepositoryAccessPersonalResponse ModifyRepositoryAccessPersonal(Models\ModifyRepositoryAccessPersonalRequest $req) 用于更新个人版镜像仓库的访问属性
 * @method Models\ModifyRepositoryInfoPersonalResponse ModifyRepositoryInfoPersonal(Models\ModifyRepositoryInfoPersonalRequest $req) 用于在个人版镜像仓库中更新容器镜像描述
 * @method Models\ModifyUserPasswordPersonalResponse ModifyUserPasswordPersonal(Models\ModifyUserPasswordPersonalRequest $req) 修改个人用户登录密码

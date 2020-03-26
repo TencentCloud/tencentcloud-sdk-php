@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 1-表示需要， 0-表示不需要
  * @method void setNeedRecordNum(integer $NeedRecordNum) 设置是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
+ * @method string getActionType() 获取查询交易类型。如 按量计费日结，按量计费小时结 等
+ * @method void setActionType(string $ActionType) 设置查询交易类型。如 按量计费日结，按量计费小时结 等
  */
 
 /**
@@ -62,6 +64,11 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
 1-表示需要， 0-表示不需要
      */
     public $NeedRecordNum;
+
+    /**
+     * @var string 查询交易类型。如 按量计费日结，按量计费小时结 等
+     */
+    public $ActionType;
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 数量，最大值为1000
@@ -69,6 +76,7 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
      * @param string $Month 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      * @param integer $NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
+     * @param string $ActionType 查询交易类型。如 按量计费日结，按量计费小时结 等
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
 
         if (array_key_exists("NeedRecordNum",$param) and $param["NeedRecordNum"] !== null) {
             $this->NeedRecordNum = $param["NeedRecordNum"];
+        }
+
+        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
+            $this->ActionType = $param["ActionType"];
         }
     }
 }

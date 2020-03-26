@@ -32,13 +32,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置角色的最近一次时间
  * @method integer getConsoleLogin() 获取角色是否允许登录
  * @method void setConsoleLogin(integer $ConsoleLogin) 设置角色是否允许登录
- * @method string getRoleType() 获取角色类型，取user或system
+ * @method string getRoleType() 获取角色类型，取user、system或service_linked
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRoleType(string $RoleType) 设置角色类型，取user或system
+ * @method void setRoleType(string $RoleType) 设置角色类型，取user、system或service_linked
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSessionDuration() 获取有效时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionDuration(integer $SessionDuration) 设置有效时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeletionTaskId() 获取服务相关角色删除TaskId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeletionTaskId(string $DeletionTaskId) 设置服务相关角色删除TaskId
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
@@ -83,7 +87,7 @@ class RoleInfo extends AbstractModel
     public $ConsoleLogin;
 
     /**
-     * @var string 角色类型，取user或system
+     * @var string 角色类型，取user、system或service_linked
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleType;
@@ -93,6 +97,12 @@ class RoleInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionDuration;
+
+    /**
+     * @var string 服务相关角色删除TaskId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeletionTaskId;
     /**
      * @param string $RoleId 角色ID
      * @param string $RoleName 角色名称
@@ -101,9 +111,11 @@ class RoleInfo extends AbstractModel
      * @param string $AddTime 角色的创建时间
      * @param string $UpdateTime 角色的最近一次时间
      * @param integer $ConsoleLogin 角色是否允许登录
-     * @param string $RoleType 角色类型，取user或system
+     * @param string $RoleType 角色类型，取user、system或service_linked
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SessionDuration 有效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeletionTaskId 服务相关角色删除TaskId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -152,6 +164,10 @@ class RoleInfo extends AbstractModel
 
         if (array_key_exists("SessionDuration",$param) and $param["SessionDuration"] !== null) {
             $this->SessionDuration = $param["SessionDuration"];
+        }
+
+        if (array_key_exists("DeletionTaskId",$param) and $param["DeletionTaskId"] !== null) {
+            $this->DeletionTaskId = $param["DeletionTaskId"];
         }
     }
 }

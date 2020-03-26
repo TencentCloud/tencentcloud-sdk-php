@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKeyMd5(string $TagKeyMd5) 设置标签键MD5值
  * @method string getTagValueMd5() 获取标签值MD5值
  * @method void setTagValueMd5(string $TagValueMd5) 设置标签值MD5值
+ * @method string getServiceType() 获取资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceType(string $ServiceType) 设置资源类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -59,12 +63,20 @@ class TagResource extends AbstractModel
      * @var string 标签值MD5值
      */
     public $TagValueMd5;
+
+    /**
+     * @var string 资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceType;
     /**
      * @param string $TagKey 标签键
      * @param string $TagValue 标签值
      * @param string $ResourceId 资源ID
      * @param string $TagKeyMd5 标签键MD5值
      * @param string $TagValueMd5 标签值MD5值
+     * @param string $ServiceType 资源类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class TagResource extends AbstractModel
 
         if (array_key_exists("TagValueMd5",$param) and $param["TagValueMd5"] !== null) {
             $this->TagValueMd5 = $param["TagValueMd5"];
+        }
+
+        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
+            $this->ServiceType = $param["ServiceType"];
         }
     }
 }

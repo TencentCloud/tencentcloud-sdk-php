@@ -18,36 +18,36 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getToken() 获取访问凭证
- * @method void setToken(string $Token) 设置访问凭证
- * @method integer getExpTime() 获取访问凭证过期时间戳
- * @method void setExpTime(integer $ExpTime) 设置访问凭证过期时间戳
+ * @method integer getTotalCount() 获取长期访问凭证总数
+ * @method void setTotalCount(integer $TotalCount) 设置长期访问凭证总数
+ * @method array getTokens() 获取长期访问凭证列表
+ * @method void setTokens(array $Tokens) 设置长期访问凭证列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *CreateInstanceToken返回参数结构体
+ *DescribeInstanceToken返回参数结构体
  */
-class CreateInstanceTokenResponse extends AbstractModel
+class DescribeInstanceTokenResponse extends AbstractModel
 {
     /**
-     * @var string 访问凭证
+     * @var integer 长期访问凭证总数
      */
-    public $Token;
+    public $TotalCount;
 
     /**
-     * @var integer 访问凭证过期时间戳
+     * @var array 长期访问凭证列表
      */
-    public $ExpTime;
+    public $Tokens;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $Token 访问凭证
-     * @param integer $ExpTime 访问凭证过期时间戳
+     * @param integer $TotalCount 长期访问凭证总数
+     * @param array $Tokens 长期访问凭证列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,17 @@ class CreateInstanceTokenResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("ExpTime",$param) and $param["ExpTime"] !== null) {
-            $this->ExpTime = $param["ExpTime"];
+        if (array_key_exists("Tokens",$param) and $param["Tokens"] !== null) {
+            $this->Tokens = [];
+            foreach ($param["Tokens"] as $key => $value){
+                $obj = new TcrInstanceToken();
+                $obj->deserialize($value);
+                array_push($this->Tokens, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getRegistryId() 获取实例ID
  * @method void setRegistryId(string $RegistryId) 设置实例ID
- * @method string getRepositoryName() 获取镜像仓库名称
- * @method void setRepositoryName(string $RepositoryName) 设置镜像仓库名称
- * @method string getDescription() 获取仓库描述
- * @method void setDescription(string $Description) 设置仓库描述
- * @method string getBriefDescription() 获取仓库的简短描述
- * @method void setBriefDescription(string $BriefDescription) 设置仓库的简短描述
  * @method string getNamespaceName() 获取命名空间名称
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
+ * @method string getRepositoryName() 获取镜像仓库名称
+ * @method void setRepositoryName(string $RepositoryName) 设置镜像仓库名称
+ * @method string getBriefDescription() 获取仓库简短描述
+ * @method void setBriefDescription(string $BriefDescription) 设置仓库简短描述
+ * @method string getDescription() 获取仓库详细描述
+ * @method void setDescription(string $Description) 设置仓库详细描述
  */
 
 /**
@@ -41,30 +41,30 @@ class ModifyRepositoryRequest extends AbstractModel
     public $RegistryId;
 
     /**
+     * @var string 命名空间名称
+     */
+    public $NamespaceName;
+
+    /**
      * @var string 镜像仓库名称
      */
     public $RepositoryName;
 
     /**
-     * @var string 仓库描述
-     */
-    public $Description;
-
-    /**
-     * @var string 仓库的简短描述
+     * @var string 仓库简短描述
      */
     public $BriefDescription;
 
     /**
-     * @var string 命名空间名称
+     * @var string 仓库详细描述
      */
-    public $NamespaceName;
+    public $Description;
     /**
      * @param string $RegistryId 实例ID
-     * @param string $RepositoryName 镜像仓库名称
-     * @param string $Description 仓库描述
-     * @param string $BriefDescription 仓库的简短描述
      * @param string $NamespaceName 命名空间名称
+     * @param string $RepositoryName 镜像仓库名称
+     * @param string $BriefDescription 仓库简短描述
+     * @param string $Description 仓库详细描述
      */
     function __construct()
     {
@@ -82,20 +82,20 @@ class ModifyRepositoryRequest extends AbstractModel
             $this->RegistryId = $param["RegistryId"];
         }
 
-        if (array_key_exists("RepositoryName",$param) and $param["RepositoryName"] !== null) {
-            $this->RepositoryName = $param["RepositoryName"];
+        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
+            $this->NamespaceName = $param["NamespaceName"];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists("RepositoryName",$param) and $param["RepositoryName"] !== null) {
+            $this->RepositoryName = $param["RepositoryName"];
         }
 
         if (array_key_exists("BriefDescription",$param) and $param["BriefDescription"] !== null) {
             $this->BriefDescription = $param["BriefDescription"];
         }
 
-        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
-            $this->NamespaceName = $param["NamespaceName"];
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

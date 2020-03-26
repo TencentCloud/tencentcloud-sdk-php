@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getRegistryId() 获取实例Id
  * @method void setRegistryId(string $RegistryId) 设置实例Id
+ * @method string getTokenType() 获取访问凭证类型，longterm 为长期访问凭证，temp 为临时访问凭证，默认是临时访问凭证，有效期1小时
+ * @method void setTokenType(string $TokenType) 设置访问凭证类型，longterm 为长期访问凭证，temp 为临时访问凭证，默认是临时访问凭证，有效期1小时
+ * @method string getDesc() 获取长期访问凭证描述信息
+ * @method void setDesc(string $Desc) 设置长期访问凭证描述信息
  */
 
 /**
@@ -31,8 +35,20 @@ class CreateInstanceTokenRequest extends AbstractModel
      * @var string 实例Id
      */
     public $RegistryId;
+
+    /**
+     * @var string 访问凭证类型，longterm 为长期访问凭证，temp 为临时访问凭证，默认是临时访问凭证，有效期1小时
+     */
+    public $TokenType;
+
+    /**
+     * @var string 长期访问凭证描述信息
+     */
+    public $Desc;
     /**
      * @param string $RegistryId 实例Id
+     * @param string $TokenType 访问凭证类型，longterm 为长期访问凭证，temp 为临时访问凭证，默认是临时访问凭证，有效期1小时
+     * @param string $Desc 长期访问凭证描述信息
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class CreateInstanceTokenRequest extends AbstractModel
         }
         if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
             $this->RegistryId = $param["RegistryId"];
+        }
+
+        if (array_key_exists("TokenType",$param) and $param["TokenType"] !== null) {
+            $this->TokenType = $param["TokenType"];
+        }
+
+        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
+            $this->Desc = $param["Desc"];
         }
     }
 }

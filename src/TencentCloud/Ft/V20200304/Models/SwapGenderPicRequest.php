@@ -18,10 +18,10 @@ namespace TencentCloud\Ft\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getGenderInfos() 获取人脸变化性别信息。 
-您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸变换性别。
- * @method void setGenderInfos(array $GenderInfos) 设置人脸变化性别信息。 
-您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸变换性别。
+ * @method array getGenderInfos() 获取人脸转化性别信息。 
+您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸转换性别。
+ * @method void setGenderInfos(array $GenderInfos) 设置人脸转化性别信息。 
+您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸转换性别。
  * @method string getImage() 获取图片 base64 数据，base64 编码后大小不可超过5M。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method void setImage(string $Image) 设置图片 base64 数据，base64 编码后大小不可超过5M。 
@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
 class SwapGenderPicRequest extends AbstractModel
 {
     /**
-     * @var array 人脸变化性别信息。 
-您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸变换性别。
+     * @var array 人脸转化性别信息。 
+您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸转换性别。
      */
     public $GenderInfos;
 
@@ -64,8 +64,8 @@ class SwapGenderPicRequest extends AbstractModel
      */
     public $Url;
     /**
-     * @param array $GenderInfos 人脸变化性别信息。 
-您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸变换性别。
+     * @param array $GenderInfos 人脸转化性别信息。 
+您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸转换性别。
      * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param string $Url 图片的 Url ，对应图片 base64 编码后大小不可超过5M。 

@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificateType(string $CertificateType) 设置证书类型（目前支持：CA = 客户端证书，SVR = 服务器证书）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPackageType() 获取证书类型。
+ * @method string getPackageType() 获取证书套餐类型：1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = Symantec 增强型企业版(EV Pro)， 4 = Symantec 增强型(EV)， 5 = Symantec 企业型专业版(OV Pro)， 6 = Symantec 企业型(OV)， 7 = Symantec 企业型(OV)通配符， 8 = Geotrust 增强型(EV)， 9 = Geotrust 企业型(OV)， 10 = Geotrust 企业型(OV)通配符， 11 = TrustAsia 域名型多域名 SSL证书， 12 = TrustAsia 域名型(DV)通配符， 13 = TrustAsia 企业型通配符 （OV）SSL证书(D3)， 14 = TrustAsia 企业型 （OV）SSL证书(D3)， 15 = TrustAsia 企业型多域名 （OV）SSL证书(D3)， 16 = TrustAsia 增强型 （EV）SSL证书(D3)， 17 = TrustAsia 增强型多域名（EV）SSL证书(D3)， 18 = GlobalSign 企业型（OV）SSL证， 19 = GlobalSign 企业型通配符 （OV）SSL证书， 20 = GlobalSign 增强型 （EV）SSL证书， 21 = TrustAsia 企业型通配符多域名 （OV）SSL证书(D3)， 22 = GlobalSign 企业型多域名 （OV）SSL证书， 23 = GlobalSign 企业型通配符多域名 （OV）SSL证书， 24 = GlobalSign 增强型多域名（EV） SSL证书。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPackageType(string $PackageType) 设置证书类型。
+ * @method void setPackageType(string $PackageType) 设置证书套餐类型：1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = Symantec 增强型企业版(EV Pro)， 4 = Symantec 增强型(EV)， 5 = Symantec 企业型专业版(OV Pro)， 6 = Symantec 企业型(OV)， 7 = Symantec 企业型(OV)通配符， 8 = Geotrust 增强型(EV)， 9 = Geotrust 企业型(OV)， 10 = Geotrust 企业型(OV)通配符， 11 = TrustAsia 域名型多域名 SSL证书， 12 = TrustAsia 域名型(DV)通配符， 13 = TrustAsia 企业型通配符 （OV）SSL证书(D3)， 14 = TrustAsia 企业型 （OV）SSL证书(D3)， 15 = TrustAsia 企业型多域名 （OV）SSL证书(D3)， 16 = TrustAsia 增强型 （EV）SSL证书(D3)， 17 = TrustAsia 增强型多域名（EV）SSL证书(D3)， 18 = GlobalSign 企业型（OV）SSL证， 19 = GlobalSign 企业型通配符 （OV）SSL证书， 20 = GlobalSign 增强型 （EV）SSL证书， 21 = TrustAsia 企业型通配符多域名 （OV）SSL证书(D3)， 22 = GlobalSign 企业型多域名 （OV）SSL证书， 23 = GlobalSign 企业型通配符多域名 （OV）SSL证书， 24 = GlobalSign 增强型多域名（EV） SSL证书。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductZhName() 获取证书办法者名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -46,21 +46,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置域名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAlias() 获取别名。
+ * @method string getAlias() 获取备注名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlias(string $Alias) 设置别名。
+ * @method void setAlias(string $Alias) 设置备注名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取证书类型。
+ * @method integer getStatus() 获取证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置证书类型。
+ * @method void setStatus(integer $Status) 设置证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatusMsg() 获取状态信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusMsg(string $StatusMsg) 设置状态信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVerifyType() 获取证书验证类型。
+ * @method string getVerifyType() 获取验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，EMAIL = 邮件验证。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVerifyType(string $VerifyType) 设置证书验证类型。
+ * @method void setVerifyType(string $VerifyType) 设置验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，EMAIL = 邮件验证。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVulnerabilityStatus() 获取漏洞扫描状态。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -176,7 +176,7 @@ class DescribeCertificateResponse extends AbstractModel
     public $CertificateType;
 
     /**
-     * @var string 证书类型。
+     * @var string 证书套餐类型：1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = Symantec 增强型企业版(EV Pro)， 4 = Symantec 增强型(EV)， 5 = Symantec 企业型专业版(OV Pro)， 6 = Symantec 企业型(OV)， 7 = Symantec 企业型(OV)通配符， 8 = Geotrust 增强型(EV)， 9 = Geotrust 企业型(OV)， 10 = Geotrust 企业型(OV)通配符， 11 = TrustAsia 域名型多域名 SSL证书， 12 = TrustAsia 域名型(DV)通配符， 13 = TrustAsia 企业型通配符 （OV）SSL证书(D3)， 14 = TrustAsia 企业型 （OV）SSL证书(D3)， 15 = TrustAsia 企业型多域名 （OV）SSL证书(D3)， 16 = TrustAsia 增强型 （EV）SSL证书(D3)， 17 = TrustAsia 增强型多域名（EV）SSL证书(D3)， 18 = GlobalSign 企业型（OV）SSL证， 19 = GlobalSign 企业型通配符 （OV）SSL证书， 20 = GlobalSign 增强型 （EV）SSL证书， 21 = TrustAsia 企业型通配符多域名 （OV）SSL证书(D3)， 22 = GlobalSign 企业型多域名 （OV）SSL证书， 23 = GlobalSign 企业型通配符多域名 （OV）SSL证书， 24 = GlobalSign 增强型多域名（EV） SSL证书。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageType;
@@ -194,13 +194,13 @@ class DescribeCertificateResponse extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 别名。
+     * @var string 备注名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Alias;
 
     /**
-     * @var integer 证书类型。
+     * @var integer 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -212,7 +212,7 @@ class DescribeCertificateResponse extends AbstractModel
     public $StatusMsg;
 
     /**
-     * @var string 证书验证类型。
+     * @var string 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，EMAIL = 邮件验证。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VerifyType;
@@ -350,19 +350,19 @@ class DescribeCertificateResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertificateType 证书类型（目前支持：CA = 客户端证书，SVR = 服务器证书）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PackageType 证书类型。
+     * @param string $PackageType 证书套餐类型：1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = Symantec 增强型企业版(EV Pro)， 4 = Symantec 增强型(EV)， 5 = Symantec 企业型专业版(OV Pro)， 6 = Symantec 企业型(OV)， 7 = Symantec 企业型(OV)通配符， 8 = Geotrust 增强型(EV)， 9 = Geotrust 企业型(OV)， 10 = Geotrust 企业型(OV)通配符， 11 = TrustAsia 域名型多域名 SSL证书， 12 = TrustAsia 域名型(DV)通配符， 13 = TrustAsia 企业型通配符 （OV）SSL证书(D3)， 14 = TrustAsia 企业型 （OV）SSL证书(D3)， 15 = TrustAsia 企业型多域名 （OV）SSL证书(D3)， 16 = TrustAsia 增强型 （EV）SSL证书(D3)， 17 = TrustAsia 增强型多域名（EV）SSL证书(D3)， 18 = GlobalSign 企业型（OV）SSL证， 19 = GlobalSign 企业型通配符 （OV）SSL证书， 20 = GlobalSign 增强型 （EV）SSL证书， 21 = TrustAsia 企业型通配符多域名 （OV）SSL证书(D3)， 22 = GlobalSign 企业型多域名 （OV）SSL证书， 23 = GlobalSign 企业型通配符多域名 （OV）SSL证书， 24 = GlobalSign 增强型多域名（EV） SSL证书。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductZhName 证书办法者名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Domain 域名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Alias 别名。
+     * @param string $Alias 备注名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 证书类型。
+     * @param integer $Status 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusMsg 状态信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VerifyType 证书验证类型。
+     * @param string $VerifyType 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，EMAIL = 邮件验证。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VulnerabilityStatus 漏洞扫描状态。
 注意：此字段可能返回 null，表示取不到有效值。

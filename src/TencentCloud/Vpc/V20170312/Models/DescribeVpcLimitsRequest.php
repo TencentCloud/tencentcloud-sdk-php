@@ -14,33 +14,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssl\V20191205\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCertificateId() 获取证书id。
- * @method void setCertificateId(string $CertificateId) 设置证书id。
- * @method string getAlias() 获取备注名称。
- * @method void setAlias(string $Alias) 设置备注名称。
+ * @method array getLimitTypes() 获取配额名称。每次最大查询100个配额类型。
+ * @method void setLimitTypes(array $LimitTypes) 设置配额名称。每次最大查询100个配额类型。
  */
 
 /**
- *ModifyCertificateAlias请求参数结构体
+ *DescribeVpcLimits请求参数结构体
  */
-class ModifyCertificateAliasRequest extends AbstractModel
+class DescribeVpcLimitsRequest extends AbstractModel
 {
     /**
-     * @var string 证书id。
+     * @var array 配额名称。每次最大查询100个配额类型。
      */
-    public $CertificateId;
-
+    public $LimitTypes;
     /**
-     * @var string 备注名称。
-     */
-    public $Alias;
-    /**
-     * @param string $CertificateId 证书id。
-     * @param string $Alias 备注名称。
+     * @param array $LimitTypes 配额名称。每次最大查询100个配额类型。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class ModifyCertificateAliasRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
-        }
-
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists("LimitTypes",$param) and $param["LimitTypes"] !== null) {
+            $this->LimitTypes = $param["LimitTypes"];
         }
     }
 }

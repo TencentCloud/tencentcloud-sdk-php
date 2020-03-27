@@ -14,33 +14,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssl\V20191205\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCertificateId() 获取证书id。
- * @method void setCertificateId(string $CertificateId) 设置证书id。
- * @method string getAlias() 获取备注名称。
- * @method void setAlias(string $Alias) 设置备注名称。
+ * @method string getZone() 获取子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
+ * @method void setZone(string $Zone) 设置子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
  */
 
 /**
- *ModifyCertificateAlias请求参数结构体
+ *CheckDefaultSubnet请求参数结构体
  */
-class ModifyCertificateAliasRequest extends AbstractModel
+class CheckDefaultSubnetRequest extends AbstractModel
 {
     /**
-     * @var string 证书id。
+     * @var string 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
      */
-    public $CertificateId;
-
+    public $Zone;
     /**
-     * @var string 备注名称。
-     */
-    public $Alias;
-    /**
-     * @param string $CertificateId 证书id。
-     * @param string $Alias 备注名称。
+     * @param string $Zone 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class ModifyCertificateAliasRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
-        }
-
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

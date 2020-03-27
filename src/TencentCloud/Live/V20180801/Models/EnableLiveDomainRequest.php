@@ -18,8 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDomainName() 获取待启用的直播域名
- * @method void setDomainName(string $DomainName) 设置待启用的直播域名
+ * @method string getDomainName() 获取待启用的直播域名。
+ * @method void setDomainName(string $DomainName) 设置待启用的直播域名。
  */
 
 /**
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
 class EnableLiveDomainRequest extends AbstractModel
 {
     /**
-     * @var string 待启用的直播域名
+     * @var string 待启用的直播域名。
      */
     public $DomainName;
     /**
-     * @param string $DomainName 待启用的直播域名
+     * @param string $DomainName 待启用的直播域名。
      */
     function __construct()
     {

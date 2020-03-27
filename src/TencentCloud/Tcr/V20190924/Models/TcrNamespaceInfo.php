@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreationTime(string $CreationTime) 设置创建时间
  * @method boolean getPublic() 获取访问级别
  * @method void setPublic(boolean $Public) 设置访问级别
+ * @method integer getNamespaceId() 获取命名空间的Id
+ * @method void setNamespaceId(integer $NamespaceId) 设置命名空间的Id
  */
 
 /**
@@ -45,10 +47,16 @@ class TcrNamespaceInfo extends AbstractModel
      * @var boolean 访问级别
      */
     public $Public;
+
+    /**
+     * @var integer 命名空间的Id
+     */
+    public $NamespaceId;
     /**
      * @param string $Name 命名空间名称
      * @param string $CreationTime 创建时间
      * @param boolean $Public 访问级别
+     * @param integer $NamespaceId 命名空间的Id
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class TcrNamespaceInfo extends AbstractModel
 
         if (array_key_exists("Public",$param) and $param["Public"] !== null) {
             $this->Public = $param["Public"];
+        }
+
+        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
+            $this->NamespaceId = $param["NamespaceId"];
         }
     }
 }

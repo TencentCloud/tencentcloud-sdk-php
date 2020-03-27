@@ -58,6 +58,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStartupParameters() 获取启动参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartupParameters(string $StartupParameters) 设置启动参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupResourceType() 获取部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupResourceType(string $GroupResourceType) 设置部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppMicroServiceType() 获取应用微服务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppMicroServiceType(string $AppMicroServiceType) 设置应用微服务类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -124,6 +136,24 @@ class SimpleGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceName;
+
+    /**
+     * @var string 启动参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartupParameters;
+
+    /**
+     * @var string 部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupResourceType;
+
+    /**
+     * @var string 应用微服务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppMicroServiceType;
     /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -144,6 +174,12 @@ class SimpleGroup extends AbstractModel
      * @param string $NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceName 命名空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StartupParameters 启动参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupResourceType 部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppMicroServiceType 应用微服务类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +232,18 @@ class SimpleGroup extends AbstractModel
 
         if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
             $this->NamespaceName = $param["NamespaceName"];
+        }
+
+        if (array_key_exists("StartupParameters",$param) and $param["StartupParameters"] !== null) {
+            $this->StartupParameters = $param["StartupParameters"];
+        }
+
+        if (array_key_exists("GroupResourceType",$param) and $param["GroupResourceType"] !== null) {
+            $this->GroupResourceType = $param["GroupResourceType"];
+        }
+
+        if (array_key_exists("AppMicroServiceType",$param) and $param["AppMicroServiceType"] !== null) {
+            $this->AppMicroServiceType = $param["AppMicroServiceType"];
         }
     }
 }

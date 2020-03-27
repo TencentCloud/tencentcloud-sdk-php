@@ -18,21 +18,29 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getLimitType() 获取私有网络配额描述
+ * @method void setLimitType(string $LimitType) 设置私有网络配额描述
+ * @method integer getLimitValue() 获取私有网络配额值
+ * @method void setLimitValue(integer $LimitValue) 设置私有网络配额值
  */
 
 /**
- *DescribeAddressTemplateInstances返回参数结构体
+ *私有网络配额
  */
-class DescribeAddressTemplateInstancesResponse extends AbstractModel
+class VpcLimit extends AbstractModel
 {
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 私有网络配额描述
      */
-    public $RequestId;
+    public $LimitType;
+
     /**
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var integer 私有网络配额值
+     */
+    public $LimitValue;
+    /**
+     * @param string $LimitType 私有网络配额描述
+     * @param integer $LimitValue 私有网络配额值
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeAddressTemplateInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("LimitType",$param) and $param["LimitType"] !== null) {
+            $this->LimitType = $param["LimitType"];
+        }
+
+        if (array_key_exists("LimitValue",$param) and $param["LimitValue"] !== null) {
+            $this->LimitValue = $param["LimitValue"];
         }
     }
 }

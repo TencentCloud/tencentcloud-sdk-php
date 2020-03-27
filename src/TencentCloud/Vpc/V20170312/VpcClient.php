@@ -67,6 +67,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 一个弹性网卡只能同时绑定一个云主机。
 * 只有运行中或者已关机状态的云主机才能绑定弹性网卡，查看云主机状态详见<a href="https://cloud.tencent.com/document/api/213/9452#InstanceStatus">腾讯云主机信息</a>。
 * 弹性网卡绑定的云主机必须是私有网络的，而且云主机所在可用区必须和弹性网卡子网的可用区相同。
+* @method Models\CheckDefaultSubnetResponse CheckDefaultSubnet(Models\CheckDefaultSubnetRequest $req) 本接口（CheckDefaultSubnet）用于预判是否可建默认子网。
 * @method Models\CheckNetDetectStateResponse CheckNetDetectState(Models\CheckNetDetectStateRequest $req) 本接口(CheckNetDetectState)用于验证网络探测。
 * @method Models\CreateAddressTemplateResponse CreateAddressTemplate(Models\CreateAddressTemplateRequest $req) 本接口（CreateAddressTemplate）用于创建IP地址模版
 * @method Models\CreateAddressTemplateGroupResponse CreateAddressTemplateGroup(Models\CreateAddressTemplateGroupRequest $req) 本接口（CreateAddressTemplateGroup）用于创建IP地址模版集合
@@ -189,7 +190,6 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * @method Models\DescribeAccountAttributesResponse DescribeAccountAttributes(Models\DescribeAccountAttributesRequest $req) 本接口（DescribeAccountAttributes）用于查询用户账号私有属性。
 * @method Models\DescribeAddressQuotaResponse DescribeAddressQuota(Models\DescribeAddressQuotaRequest $req) 本接口 (DescribeAddressQuota) 用于查询您账户的[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）在当前地域的配额信息。配额详情可参见 [EIP 产品简介](https://cloud.tencent.com/document/product/213/5733)。
 * @method Models\DescribeAddressTemplateGroupsResponse DescribeAddressTemplateGroups(Models\DescribeAddressTemplateGroupsRequest $req) 本接口（DescribeAddressTemplateGroups）用于查询IP地址模板集合
-* @method Models\DescribeAddressTemplateInstancesResponse DescribeAddressTemplateInstances(Models\DescribeAddressTemplateInstancesRequest $req) 本接口（DescribeAddressTemplateInstances）用于查询参数模板IP地址关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
 * @method Models\DescribeAddressTemplatesResponse DescribeAddressTemplates(Models\DescribeAddressTemplatesRequest $req) 本接口（DescribeAddressTemplates）用于查询IP地址模板
 * @method Models\DescribeAddressesResponse DescribeAddresses(Models\DescribeAddressesRequest $req) 本接口 (DescribeAddresses) 用于查询一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）的详细信息。
 * 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的 EIP。
@@ -234,6 +234,36 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * @method Models\DescribeTemplateLimitsResponse DescribeTemplateLimits(Models\DescribeTemplateLimitsRequest $req) 本接口（DescribeTemplateLimits）用于查询参数模板配额列表。
 * @method Models\DescribeVpcIpv6AddressesResponse DescribeVpcIpv6Addresses(Models\DescribeVpcIpv6AddressesRequest $req) 本接口（DescribeVpcIpv6Addresses）用于查询 `VPC` `IPv6` 信息。
 只能查询已使用的`IPv6`信息，当查询未使用的IP时，本接口不会报错，但不会出现在返回结果里。
+* @method Models\DescribeVpcLimitsResponse DescribeVpcLimits(Models\DescribeVpcLimitsRequest $req) 获取私有网络配额，部分私有网络的配额有地域属性。
+LimitTypes取值范围：
+* appid-max-vpcs （每个开发商每个地域可创建的VPC数）
+* vpc-max-subnets（每个VPC可创建的子网数）
+* vpc-max-route-tables（每个VPC可创建的路由表数）
+* route-table-max-policies（每个路由表可添加的策略数）
+* vpc-max-vpn-gateways（每个VPC可创建的VPN网关数）
+* appid-max-custom-gateways（每个开发商可创建的对端网关数）
+* appid-max-vpn-connections（每个开发商可创建的VPN通道数）
+* custom-gateway-max-vpn-connections（每个对端网关可创建的VPN通道数）
+* vpn-gateway-max-custom-gateways（每个VPNGW可以创建的通道数）
+* vpc-max-network-acls（每个VPC可创建的网络ACL数）
+* network-acl-max-inbound-policies（每个网络ACL可添加的入站规则数）
+* network-acl-max-outbound-policies（每个网络ACL可添加的出站规则数）
+* vpc-max-vpcpeers（每个VPC可创建的对等连接数）
+* vpc-max-available-vpcpeers（每个VPC可创建的有效对等连接数）
+* vpc-max-basic-network-interconnections（每个VPC可创建的基础网络云主机与VPC互通数）
+* direct-connection-max-snats（每个专线网关可创建的SNAT数）
+* direct-connection-max-dnats（每个专线网关可创建的DNAT数）
+* direct-connection-max-snapts（每个专线网关可创建的SNAPT数）
+* direct-connection-max-dnapts（每个专线网关可创建的DNAPT数）
+* vpc-max-nat-gateways（每个VPC可创建的NAT网关数）
+* nat-gateway-max-eips（每个NAT可以购买的外网IP数量）
+* vpc-max-enis（每个VPC可创建弹性网卡数）
+* vpc-max-havips（每个VPC可创建HAVIP数）
+* eni-max-private-ips（每个ENI可以绑定的内网IP数（ENI未绑定子机））
+* nat-gateway-max-dnapts（每个NAT网关可创建的DNAPT数）
+* vpc-max-ipv6s（每个VPC可分配的IPv6地址数）
+* eni-max-ipv6s（每个ENI可分配的IPv6地址数）
+* vpc-max-assistant_cidrs（每个VPC可分配的辅助CIDR数）
 * @method Models\DescribeVpcPrivateIpAddressesResponse DescribeVpcPrivateIpAddresses(Models\DescribeVpcPrivateIpAddressesRequest $req) 本接口（DescribeVpcPrivateIpAddresses）用于查询VPC内网IP信息。<br />
 只能查询已使用的IP信息，当查询未使用的IP时，本接口不会报错，但不会出现在返回结果里。
 * @method Models\DescribeVpcsResponse DescribeVpcs(Models\DescribeVpcsRequest $req) 本接口（DescribeVpcs）用于查询私有网络列表。

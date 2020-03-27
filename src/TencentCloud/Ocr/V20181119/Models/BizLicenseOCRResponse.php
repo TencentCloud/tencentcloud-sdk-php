@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(string $Period) 设置营业期限
  * @method string getComposingForm() 获取组成形式
  * @method void setComposingForm(string $ComposingForm) 设置组成形式
+ * @method string getSetDate() 获取成立日期
+ * @method void setSetDate(string $SetDate) 设置成立日期
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -91,6 +93,11 @@ class BizLicenseOCRResponse extends AbstractModel
     public $ComposingForm;
 
     /**
+     * @var string 成立日期
+     */
+    public $SetDate;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -104,6 +111,7 @@ class BizLicenseOCRResponse extends AbstractModel
      * @param string $Type 主体类型
      * @param string $Period 营业期限
      * @param string $ComposingForm 组成形式
+     * @param string $SetDate 成立日期
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -152,6 +160,10 @@ class BizLicenseOCRResponse extends AbstractModel
 
         if (array_key_exists("ComposingForm",$param) and $param["ComposingForm"] !== null) {
             $this->ComposingForm = $param["ComposingForm"];
+        }
+
+        if (array_key_exists("SetDate",$param) and $param["SetDate"] !== null) {
+            $this->SetDate = $param["SetDate"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

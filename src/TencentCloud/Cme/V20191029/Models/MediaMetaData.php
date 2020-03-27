@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) 设置视频流宽度的最大值，单位：px。
  * @method float getDuration() 获取时长，单位：秒。
  * @method void setDuration(float $Duration) 设置时长，单位：秒。
+ * @method integer getRotate() 获取视频拍摄时的选择角度，单位：度
+ * @method void setRotate(integer $Rotate) 设置视频拍摄时的选择角度，单位：度
  * @method array getVideoStreamInfoSet() 获取视频流信息。
  * @method void setVideoStreamInfoSet(array $VideoStreamInfoSet) 设置视频流信息。
  * @method array getAudioStreamInfoSet() 获取音频流信息。
@@ -72,6 +74,11 @@ class MediaMetaData extends AbstractModel
     public $Duration;
 
     /**
+     * @var integer 视频拍摄时的选择角度，单位：度
+     */
+    public $Rotate;
+
+    /**
      * @var array 视频流信息。
      */
     public $VideoStreamInfoSet;
@@ -87,6 +94,7 @@ class MediaMetaData extends AbstractModel
      * @param integer $Height 视频流高度的最大值，单位：px。
      * @param integer $Width 视频流宽度的最大值，单位：px。
      * @param float $Duration 时长，单位：秒。
+     * @param integer $Rotate 视频拍摄时的选择角度，单位：度
      * @param array $VideoStreamInfoSet 视频流信息。
      * @param array $AudioStreamInfoSet 音频流信息。
      */
@@ -124,6 +132,10 @@ class MediaMetaData extends AbstractModel
 
         if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
             $this->Duration = $param["Duration"];
+        }
+
+        if (array_key_exists("Rotate",$param) and $param["Rotate"] !== null) {
+            $this->Rotate = $param["Rotate"];
         }
 
         if (array_key_exists("VideoStreamInfoSet",$param) and $param["VideoStreamInfoSet"] !== null) {

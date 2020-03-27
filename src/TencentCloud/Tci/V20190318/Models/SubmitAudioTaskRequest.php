@@ -119,7 +119,8 @@ class SubmitAudioTaskRequest extends AbstractModel
         }
 
         if (array_key_exists("Functions",$param) and $param["Functions"] !== null) {
-            $this->Functions = new Function();
+            $dynamicClassNameAvoidKeywordConflict = "Function";
+            $this->Functions = new $dynamicClassNameAvoidKeywordConflict();
             $this->Functions->deserialize($param["Functions"]);
         }
 

@@ -14,40 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Scf\V20180416\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getFunctions() 获取函数列表
- * @method void setFunctions(array $Functions) 设置函数列表
- * @method integer getTotalCount() 获取总数
- * @method void setTotalCount(integer $TotalCount) 设置总数
+ * @method array getVpcLimitSet() 获取私有网络配额
+ * @method void setVpcLimitSet(array $VpcLimitSet) 设置私有网络配额
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *ListFunctions返回参数结构体
+ *DescribeVpcLimits返回参数结构体
  */
-class ListFunctionsResponse extends AbstractModel
+class DescribeVpcLimitsResponse extends AbstractModel
 {
     /**
-     * @var array 函数列表
+     * @var array 私有网络配额
      */
-    public $Functions;
-
-    /**
-     * @var integer 总数
-     */
-    public $TotalCount;
+    public $VpcLimitSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param array $Functions 函数列表
-     * @param integer $TotalCount 总数
+     * @param array $VpcLimitSet 私有网络配额
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,18 +54,13 @@ class ListFunctionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Functions",$param) and $param["Functions"] !== null) {
-            $this->Functions = [];
-            foreach ($param["Functions"] as $key => $value){
-                $dynamicClassNameAvoidKeywordConflict = "Function";
-                $obj = new $dynamicClassNameAvoidKeywordConflict();
+        if (array_key_exists("VpcLimitSet",$param) and $param["VpcLimitSet"] !== null) {
+            $this->VpcLimitSet = [];
+            foreach ($param["VpcLimitSet"] as $key => $value){
+                $obj = new VpcLimit();
                 $obj->deserialize($value);
-                array_push($this->Functions, $obj);
+                array_push($this->VpcLimitSet, $obj);
             }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

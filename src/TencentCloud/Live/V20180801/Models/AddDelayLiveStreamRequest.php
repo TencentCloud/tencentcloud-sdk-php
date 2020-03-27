@@ -18,8 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为live。
- * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+ * @method string getAppName() 获取推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
+ * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
  * @method string getDomainName() 获取推流域名。
  * @method void setDomainName(string $DomainName) 设置推流域名。
  * @method string getStreamName() 获取流名称。
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class AddDelayLiveStreamRequest extends AbstractModel
 {
     /**
-     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+     * @var string 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
      */
     public $AppName;
 
@@ -69,7 +69,7 @@ class AddDelayLiveStreamRequest extends AbstractModel
      */
     public $ExpireTime;
     /**
-     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+     * @param string $AppName 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
      * @param string $DomainName 推流域名。
      * @param string $StreamName 流名称。
      * @param integer $DelayTime 延播时间，单位：秒，上限：600秒。

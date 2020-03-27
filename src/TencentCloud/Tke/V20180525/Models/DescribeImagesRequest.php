@@ -14,33 +14,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssl\V20191205\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCertificateId() 获取证书id。
- * @method void setCertificateId(string $CertificateId) 设置证书id。
- * @method string getAlias() 获取备注名称。
- * @method void setAlias(string $Alias) 设置备注名称。
+
  */
 
 /**
- *ModifyCertificateAlias请求参数结构体
+ *DescribeImages请求参数结构体
  */
-class ModifyCertificateAliasRequest extends AbstractModel
+class DescribeImagesRequest extends AbstractModel
 {
-    /**
-     * @var string 证书id。
-     */
-    public $CertificateId;
 
     /**
-     * @var string 备注名称。
-     */
-    public $Alias;
-    /**
-     * @param string $CertificateId 证书id。
-     * @param string $Alias 备注名称。
+
      */
     function __construct()
     {
@@ -54,12 +42,6 @@ class ModifyCertificateAliasRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
-        }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
-        }
     }
 }

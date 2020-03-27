@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceName(string $ResourceName) 设置资源名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEventId() 获取攻击事件Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEventId(string $EventId) 设置攻击事件Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -111,6 +115,12 @@ class DDoSEventRecord extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceName;
+
+    /**
+     * @var string 攻击事件Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EventId;
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      * @param string $Id 资源ID
@@ -124,6 +134,8 @@ class DDoSEventRecord extends AbstractModel
      * @param string $OverLoad 是否超过弹性防护峰值，取值取值[yes(是)，no(否)，空字符串（未知值）]
      * @param integer $AttackStatus 攻击状态，取值[0（攻击中）, 1（攻击结束）]
      * @param string $ResourceName 资源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EventId 攻击事件Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -184,6 +196,10 @@ class DDoSEventRecord extends AbstractModel
 
         if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
             $this->ResourceName = $param["ResourceName"];
+        }
+
+        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
+            $this->EventId = $param["EventId"];
         }
     }
 }

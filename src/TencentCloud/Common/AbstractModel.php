@@ -28,6 +28,8 @@ abstract class AbstractModel
 {
     /**
      * 内部实现，用户禁止调用
+     * @return array
+     * @throws \ReflectionException
      */
     public function serialize()
     {
@@ -109,8 +111,9 @@ abstract class AbstractModel
     }
 
     /**
+     * 解析
      * @param $param
-     * @return mixed
+     * @return array|void
      */
     abstract public function deserialize($param);
 
@@ -125,6 +128,7 @@ abstract class AbstractModel
 
     /**
      * @return false|string
+     * @throws \ReflectionException
      */
     public function toJsonString()
     {

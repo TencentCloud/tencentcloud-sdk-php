@@ -175,8 +175,8 @@ abstract class AbstractClient
 
     /**
      * @param string $action
-     * @param $request
-     * @param $options
+     * @param AbstractModel $request
+     * @param array $options
      * @return mixed
      * @throws TencentCloudSDKException
      */
@@ -217,6 +217,13 @@ abstract class AbstractClient
         }
     }
 
+    /**
+     * 发送请求
+     * @param string $action
+     * @param array $request
+     * @return \Psr\Http\Message\ResponseInterface
+     * @throws TencentCloudSDKException
+     */
     private function doRequest($action, $request)
     {
         switch ($this->profile->getHttpProfile()->getReqMethod()) {
@@ -232,6 +239,13 @@ abstract class AbstractClient
         }
     }
 
+    /**
+     * @param string $action
+     * @param AbstractModel $request
+     * @param array $options
+     * @return \Psr\Http\Message\ResponseInterface
+     * @throws \ReflectionException
+     */
     private function doRequestWithTC3($action, $request, $options)
     {
         $headers = array();
@@ -320,10 +334,11 @@ abstract class AbstractClient
     }
 
     /**
-     * @param $request
+     * @param AbstractModel $request
      * @param $boundary
-     * @param $options
+     * @param array $options
      * @return string
+     * @throws \ReflectionException
      */
     private function getMultipartPayload($request, $boundary, $options)
     {
@@ -349,6 +364,9 @@ abstract class AbstractClient
     }
 
     /**
+     * @param string $action
+     * @param array $request
+     * @return \Psr\Http\Message\ResponseInterface
      * @throws TencentCloudSDKException
      */
     private function getRequest($action, $request)
@@ -359,6 +377,9 @@ abstract class AbstractClient
     }
 
     /**
+     * @param string $action
+     * @param array $request
+     * @return \Psr\Http\Message\ResponseInterface
      * @throws TencentCloudSDKException
      */
     private function postRequest($action, $request)
@@ -369,6 +390,11 @@ abstract class AbstractClient
     }
 
     /**
+     * 格式化请求数据
+     * @param string $action
+     * @param array $request
+     * @param string $reqMethod
+     * @return mixed
      * @throws TencentCloudSDKException
      */
     private function formatRequestData($action, $request, $reqMethod)
@@ -402,6 +428,10 @@ abstract class AbstractClient
         return $param;
     }
 
+    /**
+     * 创建Http 链接
+     * @return HttpConnection
+     */
     private function createConnect()
     {
         return new HttpConnection($this->profile->getHttpProfile()->getProtocol() .
@@ -409,6 +439,7 @@ abstract class AbstractClient
     }
 
     /**
+     * 格式化签名字符串
      * @param string $host
      * @param string $uri
      * @param array $param

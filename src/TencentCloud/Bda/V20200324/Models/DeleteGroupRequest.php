@@ -14,33 +14,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssl\V20191205\Models;
+namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAction() 获取操作证书动作。
- * @method void setAction(string $Action) 设置操作证书动作。
- * @method string getCreatedOn() 获取操作时间。
- * @method void setCreatedOn(string $CreatedOn) 设置操作时间。
+ * @method string getGroupId() 获取人体库ID。
+ * @method void setGroupId(string $GroupId) 设置人体库ID。
  */
 
 /**
- *证书操作日志。
+ *DeleteGroup请求参数结构体
  */
-class OperationLog extends AbstractModel
+class DeleteGroupRequest extends AbstractModel
 {
     /**
-     * @var string 操作证书动作。
+     * @var string 人体库ID。
      */
-    public $Action;
-
+    public $GroupId;
     /**
-     * @var string 操作时间。
-     */
-    public $CreatedOn;
-    /**
-     * @param string $Action 操作证书动作。
-     * @param string $CreatedOn 操作时间。
+     * @param string $GroupId 人体库ID。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class OperationLog extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
-        }
-
-        if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
-            $this->CreatedOn = $param["CreatedOn"];
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

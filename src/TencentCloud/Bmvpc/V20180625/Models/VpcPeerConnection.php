@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcPeerConnectionId(string $VpcPeerConnectionId) 设置对等连接唯一ID
  * @method string getVpcPeerConnectionName() 获取对等连接名称
  * @method void setVpcPeerConnectionName(string $VpcPeerConnectionName) 设置对等连接名称
- * @method string getState() 获取对等连接状态
- * @method void setState(string $State) 设置对等连接状态
+ * @method string getState() 获取对等连接状态。pending:申请中,available:运行中,expired:已过期,rejected:已拒绝,deleted:已删除
+ * @method void setState(string $State) 设置对等连接状态。pending:申请中,available:运行中,expired:已过期,rejected:已拒绝,deleted:已删除
  * @method string getVpcZone() 获取本端VPC所属可用区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcZone(string $VpcZone) 设置本端VPC所属可用区
@@ -96,7 +96,7 @@ class VpcPeerConnection extends AbstractModel
     public $VpcPeerConnectionName;
 
     /**
-     * @var string 对等连接状态
+     * @var string 对等连接状态。pending:申请中,available:运行中,expired:已过期,rejected:已拒绝,deleted:已删除
      */
     public $State;
 
@@ -159,7 +159,7 @@ class VpcPeerConnection extends AbstractModel
      * @param string $PeerAppId 对端APPID
      * @param string $VpcPeerConnectionId 对等连接唯一ID
      * @param string $VpcPeerConnectionName 对等连接名称
-     * @param string $State 对等连接状态
+     * @param string $State 对等连接状态。pending:申请中,available:运行中,expired:已过期,rejected:已拒绝,deleted:已删除
      * @param string $VpcZone 本端VPC所属可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PeerVpcZone 对端VPC所属可用区

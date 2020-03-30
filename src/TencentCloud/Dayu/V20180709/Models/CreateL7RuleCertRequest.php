@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
- * @method string getId() 获取资源ID
- * @method void setId(string $Id) 设置资源ID
+ * @method string getId() 获取资源实例ID，比如高防IP实例的ID，高防IP专业版实例的ID
+ * @method void setId(string $Id) 设置资源实例ID，比如高防IP实例的ID，高防IP专业版实例的ID
  * @method string getRuleId() 获取规则ID
  * @method void setRuleId(string $RuleId) 设置规则ID
  * @method integer getCertType() 获取证书类型，当为协议为HTTPS协议时必须填，取值[2(腾讯云托管证书)]
@@ -45,7 +45,7 @@ class CreateL7RuleCertRequest extends AbstractModel
     public $Business;
 
     /**
-     * @var string 资源ID
+     * @var string 资源实例ID，比如高防IP实例的ID，高防IP专业版实例的ID
      */
     public $Id;
 
@@ -75,7 +75,7 @@ class CreateL7RuleCertRequest extends AbstractModel
     public $PrivateKey;
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
-     * @param string $Id 资源ID
+     * @param string $Id 资源实例ID，比如高防IP实例的ID，高防IP专业版实例的ID
      * @param string $RuleId 规则ID
      * @param integer $CertType 证书类型，当为协议为HTTPS协议时必须填，取值[2(腾讯云托管证书)]
      * @param string $SSLId 当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID

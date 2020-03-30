@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcPeerLimitToSameRegion(integer $VpcPeerLimitToSameRegion) 设置VPC允许创建的同地域的对等连接的个数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIntVpcId() 获取整型私有网络ID
+ * @method void setIntVpcId(integer $IntVpcId) 设置整型私有网络ID
  */
 
 /**
@@ -194,6 +196,11 @@ class VpcResource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcPeerLimitToSameRegion;
+
+    /**
+     * @var integer 整型私有网络ID
+     */
+    public $IntVpcId;
     /**
      * @param string $VpcId 私有网络ID
      * @param string $VpcName 私有网络名称
@@ -221,6 +228,7 @@ class VpcResource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VpcPeerLimitToSameRegion VPC允许创建的同地域的对等连接的个数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IntVpcId 整型私有网络ID
      */
     function __construct()
     {
@@ -324,6 +332,10 @@ class VpcResource extends AbstractModel
 
         if (array_key_exists("VpcPeerLimitToSameRegion",$param) and $param["VpcPeerLimitToSameRegion"] !== null) {
             $this->VpcPeerLimitToSameRegion = $param["VpcPeerLimitToSameRegion"];
+        }
+
+        if (array_key_exists("IntVpcId",$param) and $param["IntVpcId"] !== null) {
+            $this->IntVpcId = $param["IntVpcId"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setState(string $State) 设置VPC状态
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method integer getIntVpcId() 获取整型私有网络ID。
+ * @method void setIntVpcId(integer $IntVpcId) 设置整型私有网络ID。
  */
 
 /**
@@ -66,6 +68,11 @@ class VpcInfo extends AbstractModel
      * @var string 创建时间
      */
     public $CreateTime;
+
+    /**
+     * @var integer 整型私有网络ID。
+     */
+    public $IntVpcId;
     /**
      * @param string $VpcId 私有网络的唯一ID。
      * @param string $VpcName VPC的名称。
@@ -73,6 +80,7 @@ class VpcInfo extends AbstractModel
      * @param string $Zone 可用区
      * @param string $State VPC状态
      * @param string $CreateTime 创建时间
+     * @param integer $IntVpcId 整型私有网络ID。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class VpcInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("IntVpcId",$param) and $param["IntVpcId"] !== null) {
+            $this->IntVpcId = $param["IntVpcId"];
         }
     }
 }

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(string $InstanceType) 设置伸缩组节点类型
  * @method integer getInstanceCount() 获取伸缩组内节点个数
  * @method void setInstanceCount(integer $InstanceCount) 设置伸缩组内节点个数
+ * @method integer getDesiredSize() 获取伸缩组起始节点数
+ * @method void setDesiredSize(integer $DesiredSize) 设置伸缩组起始节点数
  */
 
 /**
@@ -115,6 +117,11 @@ class RsgAsGroup extends AbstractModel
      * @var integer 伸缩组内节点个数
      */
     public $InstanceCount;
+
+    /**
+     * @var integer 伸缩组起始节点数
+     */
+    public $DesiredSize;
     /**
      * @param string $Id 伸缩组 ID
      * @param string $Region 伸缩组所在地域
@@ -129,6 +136,7 @@ class RsgAsGroup extends AbstractModel
      * @param string $Status 伸缩组状态
      * @param string $InstanceType 伸缩组节点类型
      * @param integer $InstanceCount 伸缩组内节点个数
+     * @param integer $DesiredSize 伸缩组起始节点数
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class RsgAsGroup extends AbstractModel
 
         if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
             $this->InstanceCount = $param["InstanceCount"];
+        }
+
+        if (array_key_exists("DesiredSize",$param) and $param["DesiredSize"] !== null) {
+            $this->DesiredSize = $param["DesiredSize"];
         }
     }
 }

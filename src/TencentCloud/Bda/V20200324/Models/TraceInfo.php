@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssl\V20191205\Models;
+namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAction() 获取操作证书动作。
- * @method void setAction(string $Action) 设置操作证书动作。
- * @method string getCreatedOn() 获取操作时间。
- * @method void setCreatedOn(string $CreatedOn) 设置操作时间。
+ * @method string getTraceId() 获取人体轨迹ID。
+ * @method void setTraceId(string $TraceId) 设置人体轨迹ID。
+ * @method array getBodyIds() 获取包含的人体轨迹图片Id列表。
+ * @method void setBodyIds(array $BodyIds) 设置包含的人体轨迹图片Id列表。
  */
 
 /**
- *证书操作日志。
+ *人体轨迹信息。
  */
-class OperationLog extends AbstractModel
+class TraceInfo extends AbstractModel
 {
     /**
-     * @var string 操作证书动作。
+     * @var string 人体轨迹ID。
      */
-    public $Action;
+    public $TraceId;
 
     /**
-     * @var string 操作时间。
+     * @var array 包含的人体轨迹图片Id列表。
      */
-    public $CreatedOn;
+    public $BodyIds;
     /**
-     * @param string $Action 操作证书动作。
-     * @param string $CreatedOn 操作时间。
+     * @param string $TraceId 人体轨迹ID。
+     * @param array $BodyIds 包含的人体轨迹图片Id列表。
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class OperationLog extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
+        if (array_key_exists("TraceId",$param) and $param["TraceId"] !== null) {
+            $this->TraceId = $param["TraceId"];
         }
 
-        if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
-            $this->CreatedOn = $param["CreatedOn"];
+        if (array_key_exists("BodyIds",$param) and $param["BodyIds"] !== null) {
+            $this->BodyIds = $param["BodyIds"];
         }
     }
 }

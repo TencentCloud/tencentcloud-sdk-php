@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectName(string $ProjectName) 设置项目名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProjectCreatorUin() 获取项目创建用户UIN。
+ * @method integer getProjectCreatorUin() 获取项目创建用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectCreatorUin(integer $ProjectCreatorUin) 设置项目创建用户UIN。
+ * @method void setProjectCreatorUin(integer $ProjectCreatorUin) 设置项目创建用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectCreateTime() 获取项目创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -34,18 +34,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectResume(string $ProjectResume) 设置项目信息简述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOwnerUin() 获取用户UIN。
+ * @method integer getOwnerUin() 获取用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOwnerUin(integer $OwnerUin) 设置用户UIN。
+ * @method void setOwnerUin(integer $OwnerUin) 设置用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectId() 获取项目ID。
+ * @method string getProjectId() 获取项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置项目ID。
+ * @method void setProjectId(string $ProjectId) 设置项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
- *获取证书列表（DescribeCertificates）返回参数键为 Certificates下，key为 ProjectInfo的内容。
+ *获取证书列表（DescribeCertificates）返回参数键为 Certificates 下，key为 ProjectInfo 的内容。
  */
 class ProjectInfo extends AbstractModel
 {
@@ -56,7 +56,7 @@ class ProjectInfo extends AbstractModel
     public $ProjectName;
 
     /**
-     * @var integer 项目创建用户UIN。
+     * @var integer 项目创建用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectCreatorUin;
@@ -74,28 +74,28 @@ class ProjectInfo extends AbstractModel
     public $ProjectResume;
 
     /**
-     * @var integer 用户UIN。
+     * @var integer 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerUin;
 
     /**
-     * @var string 项目ID。
+     * @var string 项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
     /**
      * @param string $ProjectName 项目名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ProjectCreatorUin 项目创建用户UIN。
+     * @param integer $ProjectCreatorUin 项目创建用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectCreateTime 项目创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectResume 项目信息简述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OwnerUin 用户UIN。
+     * @param integer $OwnerUin 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectId 项目ID。
+     * @param string $ProjectId 项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

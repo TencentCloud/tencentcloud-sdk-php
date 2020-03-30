@@ -14,52 +14,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcr\V20190924\Models;
+namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getUsername() 获取用户名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUsername(string $Username) 设置用户名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getToken() 获取访问凭证
- * @method void setToken(string $Token) 设置访问凭证
- * @method integer getExpTime() 获取访问凭证过期时间戳
- * @method void setExpTime(integer $ExpTime) 设置访问凭证过期时间戳
+ * @method array getPersonInfos() 获取返回的人员信息。
+ * @method void setPersonInfos(array $PersonInfos) 设置返回的人员信息。
+ * @method integer getPersonNum() 获取该人体库的人员数量。
+ * @method void setPersonNum(integer $PersonNum) 设置该人体库的人员数量。
+ * @method string getBodyModelVersion() 获取人体识别所用的算法模型版本。
+ * @method void setBodyModelVersion(string $BodyModelVersion) 设置人体识别所用的算法模型版本。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *CreateInstanceToken返回参数结构体
+ *GetPersonList返回参数结构体
  */
-class CreateInstanceTokenResponse extends AbstractModel
+class GetPersonListResponse extends AbstractModel
 {
     /**
-     * @var string 用户名
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 返回的人员信息。
      */
-    public $Username;
+    public $PersonInfos;
 
     /**
-     * @var string 访问凭证
+     * @var integer 该人体库的人员数量。
      */
-    public $Token;
+    public $PersonNum;
 
     /**
-     * @var integer 访问凭证过期时间戳
+     * @var string 人体识别所用的算法模型版本。
      */
-    public $ExpTime;
+    public $BodyModelVersion;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $Username 用户名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Token 访问凭证
-     * @param integer $ExpTime 访问凭证过期时间戳
+     * @param array $PersonInfos 返回的人员信息。
+     * @param integer $PersonNum 该人体库的人员数量。
+     * @param string $BodyModelVersion 人体识别所用的算法模型版本。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,16 +70,21 @@ class CreateInstanceTokenResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
-            $this->Username = $param["Username"];
+        if (array_key_exists("PersonInfos",$param) and $param["PersonInfos"] !== null) {
+            $this->PersonInfos = [];
+            foreach ($param["PersonInfos"] as $key => $value){
+                $obj = new PersonInfo();
+                $obj->deserialize($value);
+                array_push($this->PersonInfos, $obj);
+            }
         }
 
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
+        if (array_key_exists("PersonNum",$param) and $param["PersonNum"] !== null) {
+            $this->PersonNum = $param["PersonNum"];
         }
 
-        if (array_key_exists("ExpTime",$param) and $param["ExpTime"] !== null) {
-            $this->ExpTime = $param["ExpTime"];
+        if (array_key_exists("BodyModelVersion",$param) and $param["BodyModelVersion"] !== null) {
+            $this->BodyModelVersion = $param["BodyModelVersion"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

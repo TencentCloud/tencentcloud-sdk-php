@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssl\V20191205\Models;
+namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getAction() 获取操作证书动作。
- * @method void setAction(string $Action) 设置操作证书动作。
- * @method string getCreatedOn() 获取操作时间。
- * @method void setCreatedOn(string $CreatedOn) 设置操作时间。
+ * @method string getPersonId() 获取人员ID。
+ * @method void setPersonId(string $PersonId) 设置人员ID。
+ * @method Trace getTrace() 获取人体轨迹信息。
+ * @method void setTrace(Trace $Trace) 设置人体轨迹信息。
  */
 
 /**
- *证书操作日志。
+ *CreateTrace请求参数结构体
  */
-class OperationLog extends AbstractModel
+class CreateTraceRequest extends AbstractModel
 {
     /**
-     * @var string 操作证书动作。
+     * @var string 人员ID。
      */
-    public $Action;
+    public $PersonId;
 
     /**
-     * @var string 操作时间。
+     * @var Trace 人体轨迹信息。
      */
-    public $CreatedOn;
+    public $Trace;
     /**
-     * @param string $Action 操作证书动作。
-     * @param string $CreatedOn 操作时间。
+     * @param string $PersonId 人员ID。
+     * @param Trace $Trace 人体轨迹信息。
      */
     function __construct()
     {
@@ -54,12 +54,13 @@ class OperationLog extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
+        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
+            $this->PersonId = $param["PersonId"];
         }
 
-        if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
-            $this->CreatedOn = $param["CreatedOn"];
+        if (array_key_exists("Trace",$param) and $param["Trace"] !== null) {
+            $this->Trace = new Trace();
+            $this->Trace->deserialize($param["Trace"]);
         }
     }
 }

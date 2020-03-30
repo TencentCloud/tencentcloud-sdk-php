@@ -18,21 +18,21 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCsrType() 获取CSR类型，（online = 在线生成CSR，parse = 粘贴CSR）。
+ * @method string getCsrType() 获取CSR 类型，（online = 在线生成CSR，parse = 粘贴 CSR）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCsrType(string $CsrType) 设置CSR类型，（online = 在线生成CSR，parse = 粘贴CSR）。
+ * @method void setCsrType(string $CsrType) 设置CSR 类型，（online = 在线生成CSR，parse = 粘贴 CSR）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCsrContent() 获取CSR内容。
+ * @method string getCsrContent() 获取CSR 内容。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCsrContent(string $CsrContent) 设置CSR内容。
+ * @method void setCsrContent(string $CsrContent) 设置CSR 内容。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCertificateDomain() 获取域名信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificateDomain(string $CertificateDomain) 设置域名信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDomainList() 获取DNS信息。
+ * @method array getDomainList() 获取DNS 信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDomainList(array $DomainList) 设置DNS信息。
+ * @method void setDomainList(array $DomainList) 设置DNS 信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKeyPassword() 获取私钥密码。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -121,18 +121,18 @@ use TencentCloud\Common\AbstractModel;
  */
 
 /**
- *获取证书列表（DescribeCertificate）返回参数键为 SubmittedData的内容。
+ *获取证书列表（DescribeCertificate）返回参数键为 SubmittedData 的内容。
  */
 class SubmittedData extends AbstractModel
 {
     /**
-     * @var string CSR类型，（online = 在线生成CSR，parse = 粘贴CSR）。
+     * @var string CSR 类型，（online = 在线生成CSR，parse = 粘贴 CSR）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CsrType;
 
     /**
-     * @var string CSR内容。
+     * @var string CSR 内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CsrContent;
@@ -144,7 +144,7 @@ class SubmittedData extends AbstractModel
     public $CertificateDomain;
 
     /**
-     * @var array DNS信息。
+     * @var array DNS 信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainList;
@@ -275,13 +275,13 @@ class SubmittedData extends AbstractModel
      */
     public $VerifyType;
     /**
-     * @param string $CsrType CSR类型，（online = 在线生成CSR，parse = 粘贴CSR）。
+     * @param string $CsrType CSR 类型，（online = 在线生成CSR，parse = 粘贴 CSR）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CsrContent CSR内容。
+     * @param string $CsrContent CSR 内容。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertificateDomain 域名信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DomainList DNS信息。
+     * @param array $DomainList DNS 信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KeyPassword 私钥密码。
 注意：此字段可能返回 null，表示取不到有效值。

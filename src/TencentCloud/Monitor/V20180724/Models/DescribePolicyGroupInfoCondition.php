@@ -33,11 +33,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAlarmNotifyPeriod() 获取告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
  * @method void setAlarmNotifyPeriod(integer $AlarmNotifyPeriod) 设置告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
  * @method integer getCalcType() 获取比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCalcType(integer $CalcType) 设置比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCalcValue() 获取检测阈值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCalcValue(string $CalcValue) 设置检测阈值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getContinueTime() 获取持续多长时间触发规则会告警(单位秒)
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContinueTime(integer $ContinueTime) 设置持续多长时间触发规则会告警(单位秒)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -82,16 +88,19 @@ class DescribePolicyGroupInfoCondition extends AbstractModel
 
     /**
      * @var integer 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalcType;
 
     /**
      * @var string 检测阈值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalcValue;
 
     /**
      * @var integer 持续多长时间触发规则会告警(单位秒)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContinueTime;
     /**
@@ -103,8 +112,11 @@ class DescribePolicyGroupInfoCondition extends AbstractModel
      * @param integer $AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
      * @param integer $AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
      * @param integer $CalcType 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CalcValue 检测阈值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ContinueTime 持续多长时间触发规则会告警(单位秒)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

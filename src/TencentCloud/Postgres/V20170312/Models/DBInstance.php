@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceNetInfo(array $DBInstanceNetInfo) 设置实例网络连接信息
  * @method string getType() 获取机器类型
  * @method void setType(string $Type) 设置机器类型
+ * @method integer getAppId() 获取用户的AppId
+ * @method void setAppId(integer $AppId) 设置用户的AppId
+ * @method integer getUid() 获取实例的Uid
+ * @method void setUid(integer $Uid) 设置实例的Uid
  */
 
 /**
@@ -192,6 +196,16 @@ class DBInstance extends AbstractModel
      * @var string 机器类型
      */
     public $Type;
+
+    /**
+     * @var integer 用户的AppId
+     */
+    public $AppId;
+
+    /**
+     * @var integer 实例的Uid
+     */
+    public $Uid;
     /**
      * @param string $Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      * @param string $Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
@@ -217,6 +231,8 @@ class DBInstance extends AbstractModel
      * @param integer $AutoRenew 是否自动续费，1：自动续费，0：不自动续费
      * @param array $DBInstanceNetInfo 实例网络连接信息
      * @param string $Type 机器类型
+     * @param integer $AppId 用户的AppId
+     * @param integer $Uid 实例的Uid
      */
     function __construct()
     {
@@ -329,6 +345,14 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
+            $this->Uid = $param["Uid"];
         }
     }
 }

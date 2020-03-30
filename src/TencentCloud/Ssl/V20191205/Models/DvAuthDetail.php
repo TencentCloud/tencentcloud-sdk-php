@@ -18,84 +18,84 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getDvAuthKey() 获取DV认证密钥。
+ * @method string getDvAuthKey() 获取DV 认证密钥。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthKey(string $DvAuthKey) 设置DV认证密钥。
+ * @method void setDvAuthKey(string $DvAuthKey) 设置DV 认证密钥。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDvAuthValue() 获取DV认证值。
+ * @method string getDvAuthValue() 获取DV 认证值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthValue(string $DvAuthValue) 设置DV认证值。
+ * @method void setDvAuthValue(string $DvAuthValue) 设置DV 认证值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDvAuthDomain() 获取DV认证值域名。
+ * @method string getDvAuthDomain() 获取DV 认证值域名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthDomain(string $DvAuthDomain) 设置DV认证值域名。
+ * @method void setDvAuthDomain(string $DvAuthDomain) 设置DV 认证值域名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDvAuthPath() 获取DV认证值路径。
+ * @method string getDvAuthPath() 获取DV 认证值路径。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthPath(string $DvAuthPath) 设置DV认证值路径。
+ * @method void setDvAuthPath(string $DvAuthPath) 设置DV 认证值路径。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDvAuthKeySubDomain() 获取DV认证子域名。
+ * @method string getDvAuthKeySubDomain() 获取DV 认证子域名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthKeySubDomain(string $DvAuthKeySubDomain) 设置DV认证子域名。
+ * @method void setDvAuthKeySubDomain(string $DvAuthKeySubDomain) 设置DV 认证子域名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDvAuths() 获取DV认证信息。
+ * @method array getDvAuths() 获取DV 认证信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuths(array $DvAuths) 设置DV认证信息。
+ * @method void setDvAuths(array $DvAuths) 设置DV 认证信息。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
- *获取证书列表（DescribeCertificate）返回参数键为 DvAuthDetail的内容。
+ *获取证书列表（DescribeCertificate）返回参数键为 DvAuthDetail 的内容。
  */
 class DvAuthDetail extends AbstractModel
 {
     /**
-     * @var string DV认证密钥。
+     * @var string DV 认证密钥。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DvAuthKey;
 
     /**
-     * @var string DV认证值。
+     * @var string DV 认证值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DvAuthValue;
 
     /**
-     * @var string DV认证值域名。
+     * @var string DV 认证值域名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DvAuthDomain;
 
     /**
-     * @var string DV认证值路径。
+     * @var string DV 认证值路径。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DvAuthPath;
 
     /**
-     * @var string DV认证子域名。
+     * @var string DV 认证子域名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DvAuthKeySubDomain;
 
     /**
-     * @var array DV认证信息。
+     * @var array DV 认证信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DvAuths;
     /**
-     * @param string $DvAuthKey DV认证密钥。
+     * @param string $DvAuthKey DV 认证密钥。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DvAuthValue DV认证值。
+     * @param string $DvAuthValue DV 认证值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DvAuthDomain DV认证值域名。
+     * @param string $DvAuthDomain DV 认证值域名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DvAuthPath DV认证值路径。
+     * @param string $DvAuthPath DV 认证值路径。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DvAuthKeySubDomain DV认证子域名。
+     * @param string $DvAuthKeySubDomain DV 认证子域名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DvAuths DV认证信息。
+     * @param array $DvAuths DV 认证信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

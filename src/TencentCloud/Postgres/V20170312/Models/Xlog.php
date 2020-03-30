@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternalAddr(string $InternalAddr) 设置内网下载地址
  * @method string getExternalAddr() 获取外网下载地址
  * @method void setExternalAddr(string $ExternalAddr) 设置外网下载地址
+ * @method integer getSize() 获取备份文件大小
+ * @method void setSize(integer $Size) 设置备份文件大小
  */
 
 /**
@@ -59,12 +61,18 @@ class Xlog extends AbstractModel
      * @var string 外网下载地址
      */
     public $ExternalAddr;
+
+    /**
+     * @var integer 备份文件大小
+     */
+    public $Size;
     /**
      * @param integer $Id 备份文件唯一标识
      * @param string $StartTime 文件生成的开始时间
      * @param string $EndTime 文件生成的结束时间
      * @param string $InternalAddr 内网下载地址
      * @param string $ExternalAddr 外网下载地址
+     * @param integer $Size 备份文件大小
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class Xlog extends AbstractModel
 
         if (array_key_exists("ExternalAddr",$param) and $param["ExternalAddr"] !== null) {
             $this->ExternalAddr = $param["ExternalAddr"];
+        }
+
+        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
+            $this->Size = $param["Size"];
         }
     }
 }

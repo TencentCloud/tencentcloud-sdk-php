@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Bmlb\V20180625;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Bmlb\V20180625\Models as Models;
 
 /**
 * @method Models\BindL4BackendsResponse BindL4Backends(Models\BindL4BackendsRequest $req) 绑定黑石服务器到四层监听器。服务器包括物理服务器、虚拟机以及半托管机器。
@@ -75,18 +75,37 @@ use TencentCloud\Bmlb\V20180625\Models as Models;
 
 class BmlbClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "bmlb.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-06-25";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("bmlb")."\\"."V20180625\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

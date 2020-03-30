@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Clb\V20180317;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Clb\V20180317\Models as Models;
 
 /**
 * @method Models\AssociateTargetGroupsResponse AssociateTargetGroups(Models\AssociateTargetGroupsRequest $req) 本接口(AssociateTargetGroups)用来将目标组绑定到负载均衡的监听器（四层协议）或转发规则（七层协议）上。
@@ -116,18 +116,37 @@ use TencentCloud\Clb\V20180317\Models as Models;
 
 class ClbClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "clb.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-03-17";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("clb")."\\"."V20180317\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

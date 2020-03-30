@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Cvm\V20170312;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Cvm\V20170312\Models as Models;
 
 /**
 * @method Models\AllocateHostsResponse AllocateHosts(Models\AllocateHostsRequest $req) 本接口 (AllocateHosts) 用于创建一个或多个指定配置的CDH实例。
@@ -278,18 +278,37 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 
 class CvmClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "cvm.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2017-03-12";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("cvm")."\\"."V20170312\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

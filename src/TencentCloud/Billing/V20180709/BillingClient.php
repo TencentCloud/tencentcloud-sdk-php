@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Billing\V20180709;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Billing\V20180709\Models as Models;
 
 /**
 * @method Models\DescribeAccountBalanceResponse DescribeAccountBalance(Models\DescribeAccountBalanceRequest $req) 获取云账户余额信息。
@@ -43,18 +43,37 @@ use TencentCloud\Billing\V20180709\Models as Models;
 
 class BillingClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "billing.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-07-09";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("billing")."\\"."V20180709\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

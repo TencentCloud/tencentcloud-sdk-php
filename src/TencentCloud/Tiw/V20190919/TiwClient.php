@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Tiw\V20190919;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Tiw\V20190919\Models as Models;
 
 /**
 * @method Models\CreateTranscodeResponse CreateTranscode(Models\CreateTranscodeRequest $req) 创建一个文档转码任务
@@ -37,18 +37,37 @@ use TencentCloud\Tiw\V20190919\Models as Models;
 
 class TiwClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "tiw.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-09-19";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("tiw")."\\"."V20190919\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Soe\V20180724;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Soe\V20180724\Models as Models;
 
 /**
 * @method Models\InitOralProcessResponse InitOralProcess(Models\InitOralProcessRequest $req) 初始化发音评估过程，每一轮评估前进行调用。语音输入模式分为流式模式和非流式模式，流式模式支持数据分片传输，可以加快评估响应速度。评估模式分为词模式和句子模式，词模式会标注每个音节的详细信息；句子模式会有完整度和流利度的评估。
@@ -30,18 +30,37 @@ use TencentCloud\Soe\V20180724\Models as Models;
 
 class SoeClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "soe.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-07-24";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("soe")."\\"."V20180724\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

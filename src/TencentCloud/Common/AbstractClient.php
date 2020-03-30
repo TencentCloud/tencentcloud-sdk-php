@@ -174,6 +174,14 @@ abstract class AbstractClient
     }
 
     /**
+     * Return Response
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
+    abstract public function returnResponse($action, $response);
+
+    /**
      * @param string $action
      * @param AbstractModel $request
      * @param array $options

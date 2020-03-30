@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Ecm\V20190719;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Ecm\V20190719\Models as Models;
 
 /**
 * @method Models\CreateModuleResponse CreateModule(Models\CreateModuleRequest $req) 创建模块
@@ -48,18 +48,37 @@ use TencentCloud\Ecm\V20190719\Models as Models;
 
 class EcmClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "ecm.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-07-19";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("ecm")."\\"."V20190719\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

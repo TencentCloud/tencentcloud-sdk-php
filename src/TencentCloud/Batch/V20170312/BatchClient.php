@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Batch\V20170312;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Batch\V20170312\Models as Models;
 
 /**
 * @method Models\AttachInstancesResponse AttachInstances(Models\AttachInstancesRequest $req) 此接口可将已存在实例添加到计算环境中。
@@ -73,18 +73,37 @@ use TencentCloud\Batch\V20170312\Models as Models;
 
 class BatchClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "batch.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2017-03-12";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("batch")."\\"."V20170312\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

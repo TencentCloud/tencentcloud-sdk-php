@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Habo\V20181203;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Habo\V20181203\Models as Models;
 
 /**
 * @method Models\DescribeStatusResponse DescribeStatus(Models\DescribeStatusRequest $req) 查询指定md5样本是否分析完成，并获取分析日志下载地址。
@@ -28,18 +28,37 @@ use TencentCloud\Habo\V20181203\Models as Models;
 
 class HaboClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "habo.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-12-03";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("habo")."\\"."V20181203\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

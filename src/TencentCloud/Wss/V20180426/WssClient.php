@@ -16,31 +16,49 @@
  */
 
 namespace TencentCloud\Wss\V20180426;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Wss\V20180426\Models as Models;
 
 /**
-* @method Models\DeleteCertResponse DeleteCert(Models\DeleteCertRequest $req) 本接口（DeleteCert）用于删除证书。
-* @method Models\DescribeCertListResponse DescribeCertList(Models\DescribeCertListRequest $req) 本接口(DescribeCertList)用于获取证书列表。
-* @method Models\UploadCertResponse UploadCert(Models\UploadCertRequest $req) 本接口（UploadCert）用于上传证书。
+ * @method Models\DeleteCertResponse DeleteCert(Models\DeleteCertRequest $req) 本接口（DeleteCert）用于删除证书。
+ * @method Models\DescribeCertListResponse DescribeCertList(Models\DescribeCertListRequest $req) 本接口(DescribeCertList)用于获取证书列表。
+ * @method Models\UploadCertResponse UploadCert(Models\UploadCertRequest $req) 本接口（UploadCert）用于上传证书。
  */
-
 class WssClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "wss.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-04-26";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * WssClient constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile = null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("wss")."\\"."V20180426\\Models"."\\".ucfirst($action)."Response";
+        $respClass = "TencentCloud" . "\\" . ucfirst("wss") . "\\" . "V20180426\\Models" . "\\" . ucfirst($action) . "Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Dts\V20180330;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Dts\V20180330\Models as Models;
 
 /**
 * @method Models\ActivateSubscribeResponse ActivateSubscribe(Models\ActivateSubscribeRequest $req) 本接口用于配置数据订阅，只有在未配置状态的订阅实例才能调用此接口。
@@ -80,18 +80,37 @@ use TencentCloud\Dts\V20180330\Models as Models;
 
 class DtsClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "dts.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-03-30";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("dts")."\\"."V20180330\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

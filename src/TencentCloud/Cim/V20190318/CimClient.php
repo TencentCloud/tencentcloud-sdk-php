@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Cim\V20190318;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Cim\V20190318\Models as Models;
 
 /**
 * @method Models\DescribeSdkAppidResponse DescribeSdkAppid(Models\DescribeSdkAppidRequest $req) 获取云通信IM中腾讯云账号对应的SDKAppID
@@ -27,18 +27,37 @@ use TencentCloud\Cim\V20190318\Models as Models;
 
 class CimClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "cim.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-03-18";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("cim")."\\"."V20190318\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

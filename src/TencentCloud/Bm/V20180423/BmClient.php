@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Bm\V20180423;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Bm\V20180423\Models as Models;
 
 /**
 * @method Models\AttachCamRoleResponse AttachCamRole(Models\AttachCamRoleRequest $req) 服务器绑定CAM角色，该角色授权访问黑石物理服务器服务，为黑石物理服务器提供了访问资源的权限，如请求服务器的临时证书
@@ -109,18 +109,37 @@ ConfirmUnRecovered（维修完成后，确认故障未恢复）<br>
 
 class BmClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "bm.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-04-23";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("bm")."\\"."V20180423\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

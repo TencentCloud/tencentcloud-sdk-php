@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Drm\V20181115;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Drm\V20181115\Models as Models;
 
 /**
 * @method Models\AddFairPlayPemResponse AddFairPlayPem(Models\AddFairPlayPemRequest $req) 本接口用来设置fairplay方案所需的私钥、私钥密钥、ask等信息。
@@ -43,18 +43,37 @@ use TencentCloud\Drm\V20181115\Models as Models;
 
 class DrmClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "drm.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-11-15";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("drm")."\\"."V20181115\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

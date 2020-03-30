@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Cloudaudit\V20190319;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Cloudaudit\V20190319\Models as Models;
 
 /**
 * @method Models\CreateAuditResponse CreateAudit(Models\CreateAuditRequest $req) 参数要求：
@@ -46,18 +46,37 @@ use TencentCloud\Cloudaudit\V20190319\Models as Models;
 
 class CloudauditClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "cloudaudit.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-03-19";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("cloudaudit")."\\"."V20190319\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

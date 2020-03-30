@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Ft\V20200304;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Ft\V20200304\Models as Models;
 
 /**
 * @method Models\ChangeAgePicResponse ChangeAgePic(Models\ChangeAgePicRequest $req) 用户上传一张人脸图片，基于人脸编辑与生成算法，输出一张人脸变老或变年轻的图片，支持实现人脸不同年龄的变化。（目前暂只支持10岁，后续放开再通知） 
@@ -28,18 +28,37 @@ use TencentCloud\Ft\V20200304\Models as Models;
 
 class FtClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "ft.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2020-03-04";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("ft")."\\"."V20200304\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

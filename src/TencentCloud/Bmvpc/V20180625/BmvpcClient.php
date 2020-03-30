@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Bmvpc\V20180625;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Bmvpc\V20180625\Models as Models;
 
 /**
 * @method Models\AcceptVpcPeerConnectionResponse AcceptVpcPeerConnection(Models\AcceptVpcPeerConnectionRequest $req) 接受黑石对等连接
@@ -99,18 +99,37 @@ use TencentCloud\Bmvpc\V20180625\Models as Models;
 
 class BmvpcClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "bmvpc.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-06-25";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("bmvpc")."\\"."V20180625\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

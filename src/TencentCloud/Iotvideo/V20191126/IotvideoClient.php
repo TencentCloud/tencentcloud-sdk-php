@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Iotvideo\V20191126;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Iotvideo\V20191126\Models as Models;
 
 /**
 * @method Models\CreateAppUsrResponse CreateAppUsr(Models\CreateAppUsrRequest $req) 本接口（CreateAppUsr）用于接收由厂商云发送过来的注册请求,建立厂商云终端用户与IoT Video终端用户的映射关系。
@@ -101,18 +101,37 @@ ProWritable.Pos.setVal.x;
 
 class IotvideoClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "iotvideo.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-11-26";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("iotvideo")."\\"."V20191126\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

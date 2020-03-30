@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Tts\V20190823;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Tts\V20190823\Models as Models;
 
 /**
 * @method Models\TextToVoiceResponse TextToVoice(Models\TextToVoiceRequest $req) 腾讯云语音合成技术（TTS）可以将任意文本转化为语音，实现让机器和应用张口说话。
@@ -29,18 +29,37 @@ use TencentCloud\Tts\V20190823\Models as Models;
 
 class TtsClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "tts.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-08-23";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * TtsClient constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("tts")."\\"."V20190823\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

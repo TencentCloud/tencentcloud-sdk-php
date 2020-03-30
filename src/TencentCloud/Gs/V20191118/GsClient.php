@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Gs\V20191118;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Gs\V20191118\Models as Models;
 
 /**
 * @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) 创建会话
@@ -32,18 +32,37 @@ use TencentCloud\Gs\V20191118\Models as Models;
 
 class GsClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "gs.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-11-18";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("gs")."\\"."V20191118\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

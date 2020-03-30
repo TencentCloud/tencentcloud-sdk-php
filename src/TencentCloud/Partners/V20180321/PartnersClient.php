@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Partners\V20180321;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Partners\V20180321\Models as Models;
 
 /**
 * @method Models\AgentPayDealsResponse AgentPayDeals(Models\AgentPayDealsRequest $req) 代理商支付订单接口，支持自付/代付
@@ -40,18 +40,37 @@ use TencentCloud\Partners\V20180321\Models as Models;
 
 class PartnersClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "partners.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-03-21";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("partners")."\\"."V20180321\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

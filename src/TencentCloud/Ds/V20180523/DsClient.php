@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Ds\V20180523;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Ds\V20180523\Models as Models;
 
 /**
 * @method Models\CheckVcodeResponse CheckVcode(Models\CheckVcodeRequest $req) 检测验证码接口。此接口用于企业电子合同平台通过给用户发送短信验证码，以短信授权方式签署合同。此接口配合发送验证码接口使用。
@@ -40,18 +40,37 @@ use TencentCloud\Ds\V20180523\Models as Models;
 
 class DsClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "ds.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-05-23";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("ds")."\\"."V20180523\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

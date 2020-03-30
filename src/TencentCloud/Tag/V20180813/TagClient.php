@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Tag\V20180813;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Tag\V20180813\Models as Models;
 
 /**
 * @method Models\AddResourceTagResponse AddResourceTag(Models\AddResourceTagRequest $req) 本接口用于给标签关联资源
@@ -39,18 +39,37 @@ use TencentCloud\Tag\V20180813\Models as Models;
 
 class TagClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "tag.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-08-13";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("tag")."\\"."V20180813\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

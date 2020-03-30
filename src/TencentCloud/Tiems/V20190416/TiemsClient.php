@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Tiems\V20190416;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Tiems\V20190416\Models as Models;
 
 /**
 * @method Models\CreateJobResponse CreateJob(Models\CreateJobRequest $req) 创建任务
@@ -51,18 +51,37 @@ use TencentCloud\Tiems\V20190416\Models as Models;
 
 class TiemsClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "tiems.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-04-16";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("tiems")."\\"."V20190416\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

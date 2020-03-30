@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Yunjing\V20180228;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Yunjing\V20180228\Models as Models;
 
 /**
 * @method Models\AddLoginWhiteListResponse AddLoginWhiteList(Models\AddLoginWhiteListRequest $req) 本接口（AddLoginWhiteList）用于添加白名单规则
@@ -128,18 +128,38 @@ use TencentCloud\Yunjing\V20180228\Models as Models;
 
 class YunjingClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "yunjing.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-02-28";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * YunjingClient constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * Return Response
+     * @param string $action
+     * @param array $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("yunjing")."\\"."V20180228\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Tmt\V20180321;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Tmt\V20180321\Models as Models;
 
 /**
 * @method Models\ImageTranslateResponse ImageTranslate(Models\ImageTranslateRequest $req) 提供中文到英文、英文到中文两种语言的图片翻译服务，可自动识别图片中的文本内容并翻译成目标语言，识别后的文本按行翻译，后续会提供可按段落翻译的版本。<br />
@@ -39,18 +39,37 @@ use TencentCloud\Tmt\V20180321\Models as Models;
 
 class TmtClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "tmt.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-03-21";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("tmt")."\\"."V20180321\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

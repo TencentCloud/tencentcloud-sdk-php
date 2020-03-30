@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Mongodb\V20180408;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Mongodb\V20180408\Models as Models;
 
 /**
 * @method Models\AssignProjectResponse AssignProject(Models\AssignProjectRequest $req) 本接口(AssignProject)用于指定云数据库实例的所属项目。
@@ -43,18 +43,37 @@ use TencentCloud\Mongodb\V20180408\Models as Models;
 
 class MongodbClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "mongodb.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-04-08";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("mongodb")."\\"."V20180408\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

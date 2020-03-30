@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\As\V20180419;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\As\V20180419\Models as Models;
 
 /**
 * @method Models\AttachInstancesResponse AttachInstances(Models\AttachInstancesRequest $req) 本接口（AttachInstances）用于将 CVM 实例添加到伸缩组。
@@ -147,15 +147,33 @@ use TencentCloud\As\V20180419\Models as Models;
 
 class AsClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "as.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-04-19";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return mixed|\TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("as")."\\"."V20180419\\Models"."\\".ucfirst($action)."Response";

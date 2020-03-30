@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Vod\V20180717;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Vod\V20180717\Models as Models;
 
 /**
 * @method Models\ApplyUploadResponse ApplyUpload(Models\ApplyUploadRequest $req) * 该接口用于申请媒体文件（和封面文件）的上传，获取文件上传到云点播的元信息（包括上传路径、上传签名等），用于后续上传接口。
@@ -227,18 +227,37 @@ use TencentCloud\Vod\V20180717\Models as Models;
 
 class VodClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "vod.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-07-17";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * VodClient constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("vod")."\\"."V20180717\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

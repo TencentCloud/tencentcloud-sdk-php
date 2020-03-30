@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Tbp\V20190311;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Tbp\V20190311\Models as Models;
 
 /**
 * @method Models\CreateBotResponse CreateBot(Models\CreateBotRequest $req) 创建机器人
@@ -30,18 +30,37 @@ use TencentCloud\Tbp\V20190311\Models as Models;
 
 class TbpClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "tbp.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-03-11";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("tbp")."\\"."V20190311\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

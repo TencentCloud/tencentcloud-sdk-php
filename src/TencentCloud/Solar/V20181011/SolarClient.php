@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Solar\V20181011;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Solar\V20181011\Models as Models;
 
 /**
 * @method Models\CheckStaffChUserResponse CheckStaffChUser(Models\CheckStaffChUserRequest $req) 员工渠道更改员工状态
@@ -43,18 +43,37 @@ use TencentCloud\Solar\V20181011\Models as Models;
 
 class SolarClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "solar.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-10-11";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("solar")."\\"."V20181011\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

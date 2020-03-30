@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Captcha\V20190722;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Captcha\V20190722\Models as Models;
 
 /**
 * @method Models\DescribeCaptchaAppIdInfoResponse DescribeCaptchaAppIdInfo(Models\DescribeCaptchaAppIdInfoRequest $req) 查询安全验证码应用APPId信息
@@ -33,18 +33,37 @@ use TencentCloud\Captcha\V20190722\Models as Models;
 
 class CaptchaClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "captcha.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-07-22";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("captcha")."\\"."V20190722\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

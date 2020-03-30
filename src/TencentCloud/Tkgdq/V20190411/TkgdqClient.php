@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Tkgdq\V20190411;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Tkgdq\V20190411\Models as Models;
 
 /**
 * @method Models\DescribeEntityResponse DescribeEntity(Models\DescribeEntityRequest $req) 输入实体名称，返回实体相关的信息如实体别名、实体英文名、实体详细信息、相关实体等
@@ -29,18 +29,37 @@ use TencentCloud\Tkgdq\V20190411\Models as Models;
 
 class TkgdqClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "tkgdq.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-04-11";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("tkgdq")."\\"."V20190411\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

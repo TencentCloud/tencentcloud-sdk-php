@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Cis\V20180408;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Cis\V20180408\Models as Models;
 
 /**
 * @method Models\CreateContainerInstanceResponse CreateContainerInstance(Models\CreateContainerInstanceRequest $req) 此接口（CreateContainerInstance）用于创建容器实例
@@ -33,18 +33,37 @@ use TencentCloud\Cis\V20180408\Models as Models;
 
 class CisClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "cis.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-04-08";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("cis")."\\"."V20180408\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

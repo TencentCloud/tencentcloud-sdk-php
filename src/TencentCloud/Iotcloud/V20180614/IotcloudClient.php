@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Iotcloud\V20180614;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Iotcloud\V20180614\Models as Models;
 
 /**
 * @method Models\BindDevicesResponse BindDevices(Models\BindDevicesRequest $req) 本接口（BindDevices）用于网关设备批量绑定子设备
@@ -60,18 +60,37 @@ use TencentCloud\Iotcloud\V20180614\Models as Models;
 
 class IotcloudClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "iotcloud.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-06-14";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("iotcloud")."\\"."V20180614\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

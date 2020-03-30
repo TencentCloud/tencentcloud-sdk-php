@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Nlp\V20190408;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Nlp\V20190408\Models as Models;
 
 /**
 * @method Models\AutoSummarizationResponse AutoSummarization(Models\AutoSummarizationRequest $req) 利用人工智能算法，自动抽取文本中的关键信息并生成指定长度的文本摘要。可用于新闻标题生成、科技文献摘要生成和商品评论摘要等。
@@ -78,18 +78,37 @@ https://ai.tencent.com/ailab/nlp/embedding.html
 
 class NlpClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "nlp.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-04-08";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("nlp")."\\"."V20190408\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

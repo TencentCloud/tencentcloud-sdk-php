@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Ie\V20200304;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Ie\V20200304\Models as Models;
 
 /**
 * @method Models\CreateEditingTaskResponse CreateEditingTask(Models\CreateEditingTaskRequest $req) 创建智能编辑任务，可以同时选择视频标签识别、分类识别、智能拆条、智能集锦、智能封面和片头片尾识别中的一项或者多项能力。
@@ -28,18 +28,37 @@ use TencentCloud\Ie\V20200304\Models as Models;
 
 class IeClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "ie.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2020-03-04";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("ie")."\\"."V20200304\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Tbm\V20180129;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Tbm\V20180129\Models as Models;
 
 /**
 * @method Models\DescribeBrandCommentCountResponse DescribeBrandCommentCount(Models\DescribeBrandCommentCountRequest $req) 通过分析用户在评价品牌时用词的正负面情绪评分，返回品牌好评与差评评价条数，按天输出结果。
@@ -35,18 +35,37 @@ use TencentCloud\Tbm\V20180129\Models as Models;
 
 class TbmClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "tbm.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-01-29";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("tbm")."\\"."V20180129\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Asr\V20190614;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Asr\V20190614\Models as Models;
 
 /**
 * @method Models\CreateAsrVocabResponse CreateAsrVocab(Models\CreateAsrVocabRequest $req) 用户通过本接口进行热词表的创建。
@@ -55,18 +55,37 @@ use TencentCloud\Asr\V20190614\Models as Models;
 
 class AsrClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "asr.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-06-14";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("asr")."\\"."V20190614\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

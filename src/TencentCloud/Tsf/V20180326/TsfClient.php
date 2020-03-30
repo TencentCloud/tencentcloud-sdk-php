@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Tsf\V20180326;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Tsf\V20180326\Models as Models;
 
 /**
 * @method Models\AddClusterInstancesResponse AddClusterInstances(Models\AddClusterInstancesRequest $req) 添加云主机节点至TSF集群
@@ -103,18 +103,37 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
 
 class TsfClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "tsf.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-03-26";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("tsf")."\\"."V20180326\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

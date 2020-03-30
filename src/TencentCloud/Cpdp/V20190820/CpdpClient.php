@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Cpdp\V20190820;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Cpdp\V20190820\Models as Models;
 
 /**
 * @method Models\ApplyWithdrawalResponse ApplyWithdrawal(Models\ApplyWithdrawalRequest $req) 商户提现
@@ -71,18 +71,37 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
 
 class CpdpClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "cpdp.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-08-20";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("cpdp")."\\"."V20190820\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Bri\V20190328;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Bri\V20190328\Models as Models;
 
 /**
 * @method Models\DescribeBRIResponse DescribeBRI(Models\DescribeBRIRequest $req) 输入业务名 (bri_num, bri_dev, bri_ip, bri_apk, bri_url 五种之一)  及其 相应字段, 获取业务风险分数和标签。
@@ -37,18 +37,37 @@ use TencentCloud\Bri\V20190328\Models as Models;
 
 class BriClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "bri.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-03-28";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("bri")."\\"."V20190328\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

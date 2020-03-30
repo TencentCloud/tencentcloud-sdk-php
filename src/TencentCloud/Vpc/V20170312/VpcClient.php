@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Vpc\V20170312;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Vpc\V20170312\Models as Models;
 
 /**
 * @method Models\AcceptAttachCcnInstancesResponse AcceptAttachCcnInstances(Models\AcceptAttachCcnInstancesRequest $req) 本接口（AcceptAttachCcnInstances）用于跨账号关联实例时，云联网所有者接受并同意关联操作。
@@ -378,18 +378,37 @@ LimitTypes取值范围：
 
 class VpcClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "vpc.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2017-03-12";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * VpcClient constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("vpc")."\\"."V20170312\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

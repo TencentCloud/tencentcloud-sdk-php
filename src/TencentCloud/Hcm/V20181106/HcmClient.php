@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Hcm\V20181106;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Hcm\V20181106\Models as Models;
 
 /**
 * @method Models\EvaluationResponse Evaluation(Models\EvaluationRequest $req) 速算题目批改接口，根据用户上传的图片或图片的URL识别图片中的数学算式，进而给出算式的正确性评估。
@@ -27,18 +27,37 @@ use TencentCloud\Hcm\V20181106\Models as Models;
 
 class HcmClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "hcm.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-11-06";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("hcm")."\\"."V20181106\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

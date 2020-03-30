@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Ticm\V20181127;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Ticm\V20181127\Models as Models;
 
 /**
 * @method Models\DescribeVideoTaskResponse DescribeVideoTask(Models\DescribeVideoTaskRequest $req) 提交完视频审核任务后，可以通过本接口来获取当前处理的进度和结果
@@ -29,18 +29,37 @@ use TencentCloud\Ticm\V20181127\Models as Models;
 
 class TicmClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "ticm.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-11-27";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("ticm")."\\"."V20181127\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

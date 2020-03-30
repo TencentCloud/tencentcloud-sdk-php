@@ -16,30 +16,49 @@
  */
 
 namespace TencentCloud\Yunsou\V20180504;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Yunsou\V20180504\Models as Models;
 
 /**
-* @method Models\DataManipulationResponse DataManipulation(Models\DataManipulationRequest $req) 上传云搜数据的API接口
-* @method Models\DataSearchResponse DataSearch(Models\DataSearchRequest $req) 用于检索云搜中的数据
+ * @method Models\DataManipulationResponse DataManipulation(Models\DataManipulationRequest $req) 上传云搜数据的API接口
+ * @method Models\DataSearchResponse DataSearch(Models\DataSearchRequest $req) 用于检索云搜中的数据
  */
-
 class YunsouClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "yunsou.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-05-04";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * YunsouClient constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile = null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * Return Response
+     * @param string $action
+     * @param array $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("yunsou")."\\"."V20180504\\Models"."\\".ucfirst($action)."Response";
+        $respClass = "TencentCloud" . "\\" . ucfirst("yunsou") . "\\" . "V20180504\\Models" . "\\" . ucfirst($action) . "Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

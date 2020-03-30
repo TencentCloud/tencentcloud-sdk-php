@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Facefusion\V20181201;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Facefusion\V20181201\Models as Models;
 
 /**
 * @method Models\FaceFusionResponse FaceFusion(Models\FaceFusionRequest $req) 本接口用于人脸融合，用户上传人脸图片，获取与模板融合后的人脸图片。未发布的活动请求频率限制为1次/秒，已发布的活动请求频率限制50次/秒。如有需要提高活动的请求频率限制，请在控制台中申请。
@@ -34,18 +34,37 @@ use TencentCloud\Facefusion\V20181201\Models as Models;
 
 class FacefusionClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "facefusion.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-12-01";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("facefusion")."\\"."V20181201\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

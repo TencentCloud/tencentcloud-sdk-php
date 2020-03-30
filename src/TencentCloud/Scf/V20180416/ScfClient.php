@@ -67,6 +67,7 @@ class ScfClient extends AbstractClient
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("scf")."\\"."V20180416\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

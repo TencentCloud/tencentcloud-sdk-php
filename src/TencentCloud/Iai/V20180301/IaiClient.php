@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Iai\V20180301;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Iai\V20180301\Models as Models;
 
 /**
 * @method Models\AnalyzeFaceResponse AnalyzeFace(Models\AnalyzeFaceRequest $req) 对请求图片进行五官定位（也称人脸关键点定位），计算构成人脸轮廓的 90 个点，包括眉毛（左右各 8 点）、眼睛（左右各 8 点）、鼻子（13 点）、嘴巴（22 点）、脸型轮廓（21 点）、眼珠[或瞳孔]（2点）。
@@ -178,18 +178,37 @@ use TencentCloud\Iai\V20180301\Models as Models;
 
 class IaiClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "iai.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-03-01";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("iai")."\\"."V20180301\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

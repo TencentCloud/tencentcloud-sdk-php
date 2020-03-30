@@ -16,10 +16,10 @@
  */
 
 namespace TencentCloud\Tci\V20190318;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Tci\V20190318\Models as Models;
 
 /**
 * @method Models\AIAssistantResponse AIAssistant(Models\AIAssistantRequest $req) 提供 AI 助教基础版本功能接口
@@ -115,18 +115,37 @@ use TencentCloud\Tci\V20190318\Models as Models;
 
 class TciClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "tci.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-03-18";
 
-    function __construct($credential, $region, $profile=null)
+    /**
+     * Constructor.
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws \TencentCloud\Common\Exception\TencentCloudSDKException
+     */
+    public function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);
     }
 
+    /**
+     * @param string $action
+     * @param array|null $response
+     * @return \TencentCloud\Common\AbstractModel
+     */
     public function returnResponse($action, $response)
     {
         $respClass = "TencentCloud"."\\".ucfirst("tci")."\\"."V20190318\\Models"."\\".ucfirst($action)."Response";
+        /** @var \TencentCloud\Common\AbstractModel $obj */
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

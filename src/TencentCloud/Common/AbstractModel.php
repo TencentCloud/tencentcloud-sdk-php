@@ -112,8 +112,8 @@ abstract class AbstractModel
 
     /**
      * 解析
-     * @param $param
-     * @return array|void
+     * @param array|null $param
+     * @return void
      */
     abstract public function deserialize($param);
 

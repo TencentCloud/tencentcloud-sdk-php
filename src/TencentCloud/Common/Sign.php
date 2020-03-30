@@ -19,14 +19,20 @@
 namespace TencentCloud\Common;
 
 use TencentCloud\Common\Exception\TencentCloudSDKException;
+
 /**
  * 签名类，禁止client引用
- * @package TencentCloud\Common
  * @throws TencentCloudSDKException
+ * @package TencentCloud\Common
  */
 class Sign
 {
     /**
+     * 签名
+     * @param string $secretKey
+     * @param string $signStr
+     * @param string $signMethod
+     * @return string
      * @throws TencentCloudSDKException
      */
     public static function sign($secretKey, $signStr, $signMethod)
@@ -39,9 +45,17 @@ class Sign
         return $signature;
     }
 
+    /**
+     * 签名
+     * @param string $skey
+     * @param string $date
+     * @param string $service
+     * @param string $str2sign
+     * @return string
+     */
     public static function signTC3($skey, $date, $service, $str2sign)
     {
-        $dateKey = hash_hmac("SHA256", $date, "TC3".$skey, true);
+        $dateKey = hash_hmac("SHA256", $date, "TC3" . $skey, true);
         $serviceKey = hash_hmac("SHA256", $service, $dateKey, true);
         $reqKey = hash_hmac("SHA256", "tc3_request", $serviceKey, true);
         return hash_hmac("SHA256", $str2sign, $reqKey);

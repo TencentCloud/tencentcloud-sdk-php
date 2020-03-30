@@ -17,6 +17,7 @@
  */
 
 namespace TencentCloud\Common;
+
 use \ReflectionClass;
 
 /**
@@ -30,16 +31,20 @@ abstract class AbstractModel
      */
     public function serialize()
     {
-        $ret = $this->objSerialize($this);
-		return $ret;
+        return $this->objSerialize($this);
     }
 
-    private function objSerialize($obj) {
+    /**
+     * @param string $obj
+     * @return array
+     * @throws \ReflectionException
+     */
+    private function objSerialize($obj)
+    {
         $memberRet = [];
         $ref = new ReflectionClass(get_class($obj));
         $memberList = $ref->getProperties();
-        foreach ($memberList as $x => $member)
-        {
+        foreach ($memberList as $x => $member) {
             $name = ucfirst($member->getName());
             $member->setAccessible(true);
             $value = $member->getValue($obj);
@@ -57,10 +62,15 @@ abstract class AbstractModel
         return $memberRet;
     }
 
-    private function arraySerialize($memberList) {
+    /**
+     * @param array $memberList
+     * @return array
+     * @throws \ReflectionException
+     */
+    private function arraySerialize($memberList)
+    {
         $memberRet = [];
-        foreach ($memberList as $name => $value)
-        {
+        foreach ($memberList as $name => $value) {
             if ($value === null) {
                 continue;
             }
@@ -68,25 +78,29 @@ abstract class AbstractModel
                 $memberRet[$name] = $this->objSerialize($value);
             } elseif (is_array($value)) {
                 $memberRet[$name] = $this->arraySerialize($value);
-            }else {
+            } else {
                 $memberRet[$name] = $value;
             }
         }
         return $memberRet;
     }
 
+    /**
+     * @param array $array
+     * @param null $prepend
+     * @return array
+     */
     private function arrayMerge($array, $prepend = null)
     {
         $results = array();
         foreach ($array as $key => $value) {
             if (is_array($value)) {
-                $results = array_merge($results, static::arrayMerge($value, $prepend.$key.'.'));
-            }
-            else {
+                $results = array_merge($results, static::arrayMerge($value, $prepend . $key . '.'));
+            } else {
                 if (is_bool($value)) {
-                    $results[$prepend.$key] = json_encode($value);
+                    $results[$prepend . $key] = json_encode($value);
                 } else {
-                    $results[$prepend.$key] = $value;
+                    $results[$prepend . $key] = $value;
                 }
 
             }
@@ -94,6 +108,10 @@ abstract class AbstractModel
         return $results;
     }
 
+    /**
+     * @param $param
+     * @return mixed
+     */
     abstract public function deserialize($param);
 
     /**
@@ -105,6 +123,9 @@ abstract class AbstractModel
         $this->deserialize($arr);
     }
 
+    /**
+     * @return false|string
+     */
     public function toJsonString()
     {
         $r = $this->serialize();
@@ -115,10 +136,16 @@ abstract class AbstractModel
         return json_encode($r, JSON_UNESCAPED_UNICODE);
     }
 
+    /**
+     * 魔术方法
+     * @param string $member
+     * @param array $param
+     * @return mixed|void
+     */
     public function __call($member, $param)
     {
-        $act = substr($member,0,3);
-        $attr = substr($member,3);
+        $act = substr($member, 0, 3);
+        $attr = substr($member, 3);
         if ($act === "get") {
             return $this->$attr;
         } else if ($act === "set") {

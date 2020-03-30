@@ -41,7 +41,6 @@ class ClientProfile
      */
     public static $SIGN_TC3_SHA256 = "TC3-HMAC-SHA256";
 
-
     /**
      * @var HttpProfile http相关参数
      */
@@ -121,11 +120,17 @@ class ClientProfile
         return $this->unsignedPayload;
     }
 
+    /**
+     * @return bool
+     */
     public function getCheckPHPVersion()
     {
         return $this->checkPHPVersion;
     }
 
+    /**
+     * @param boolean $flag
+     */
     public function setCheckPHPVersion($flag)
     {
         $this->checkPHPVersion = $flag;

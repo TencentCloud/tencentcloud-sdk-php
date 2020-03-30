@@ -19,6 +19,7 @@
 namespace TencentCloud\Common\Http;
 
 use GuzzleHttp\Client;
+use TencentCloud\Common\Profile\ClientProfile;
 
 /**
  * http连接类
@@ -26,15 +27,32 @@ use GuzzleHttp\Client;
  */
 class HttpConnection
 {
+    /**
+     * @var Client
+     */
     private $client;
+
+    /**
+     * @var ClientProfile
+     */
     private $profile;
-    function __construct($url, $profile)
+
+    /**
+     * HttpConnection constructor.
+     * @param string $url
+     * @param $profile
+     */
+    public function __construct($url, $profile)
     {
         $this->client = new Client(["base_uri" => $url]);
         $this->profile = $profile;
     }
 
-    private  function getOptions()
+    /**
+     * 获取参数
+     * @return array
+     */
+    private function getOptions()
     {
         $options = ["allow_redirects" => false];
         $options["timeout"] = $this->profile->getHttpProfile()->getReqTimeout();
@@ -42,6 +60,13 @@ class HttpConnection
         return $options;
     }
 
+    /**
+     * GET 请求
+     * @param string $uri
+     * @param array $query
+     * @param array $headers
+     * @return \Psr\Http\Message\ResponseInterface
+     */
     public function getRequest($uri = '', $query = [], $headers = [])
     {
         $options = $this->getOptions();
@@ -56,9 +81,16 @@ class HttpConnection
         return $this->client->get($uri, $options);
     }
 
+    /**
+     * POST 请求
+     * @param string $uri
+     * @param array $headers
+     * @param string $body
+     * @return \Psr\Http\Message\ResponseInterface
+     */
     public function postRequest($uri = '', $headers = [], $body = '')
     {
-        $options  = $this->getOptions();
+        $options = $this->getOptions();
         if ($headers) {
             $options["headers"] = $headers;
         }
@@ -69,9 +101,16 @@ class HttpConnection
         return $this->client->post($uri, $options);
     }
 
+    /**
+     * POST RAW请求
+     * @param string $uri
+     * @param array $headers
+     * @param string $body
+     * @return \Psr\Http\Message\ResponseInterface
+     */
     public function postRequestRaw($uri = '', $headers = [], $body = '')
     {
-        $options  = $this->getOptions();
+        $options = $this->getOptions();
         if ($headers) {
             $options["headers"] = $headers;
         }

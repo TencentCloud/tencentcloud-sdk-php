@@ -18,10 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getTaskId() 获取异步任务ID
- * @method void setTaskId(integer $TaskId) 设置异步任务ID
- * @method string getDealName() 获取计费订单号
- * @method void setDealName(string $DealName) 设置计费订单号
+ * @method integer getTaskId() 获取异步任务ID。TaskId和DealName必填一个参数
+ * @method void setTaskId(integer $TaskId) 设置异步任务ID。TaskId和DealName必填一个参数
+ * @method string getDealName() 获取计费订单号。TaskId和DealName必填一个参数
+ * @method void setDealName(string $DealName) 设置计费订单号。TaskId和DealName必填一个参数
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTaskResultRequest extends AbstractModel
 {
     /**
-     * @var integer 异步任务ID
+     * @var integer 异步任务ID。TaskId和DealName必填一个参数
      */
     public $TaskId;
 
     /**
-     * @var string 计费订单号
+     * @var string 计费订单号。TaskId和DealName必填一个参数
      */
     public $DealName;
     /**
-     * @param integer $TaskId 异步任务ID
-     * @param string $DealName 计费订单号
+     * @param integer $TaskId 异步任务ID。TaskId和DealName必填一个参数
+     * @param string $DealName 计费订单号。TaskId和DealName必填一个参数
      */
     function __construct()
     {

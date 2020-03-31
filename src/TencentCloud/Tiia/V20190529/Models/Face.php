@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) 设置人脸区域宽度。
  * @method integer getHeight() 获取人脸区域高度。
  * @method void setHeight(integer $Height) 设置人脸区域高度。
+ * @method string getID() 获取公众人物的唯一编号，可以用于区分同名人物、一个人物不同称呼等情况。唯一编号为8个字符构成的字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setID(string $ID) 设置公众人物的唯一编号，可以用于区分同名人物、一个人物不同称呼等情况。唯一编号为8个字符构成的字符串。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -83,6 +87,12 @@ class Face extends AbstractModel
      * @var integer 人脸区域高度。
      */
     public $Height;
+
+    /**
+     * @var string 公众人物的唯一编号，可以用于区分同名人物、一个人物不同称呼等情况。唯一编号为8个字符构成的字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ID;
     /**
      * @param string $Name 与图片中人脸最相似的公众人物的名字。
      * @param array $Labels 公众人物身份标签的数组，一个公众人物可能有多个身份标签。
@@ -93,6 +103,8 @@ class Face extends AbstractModel
      * @param integer $Y 人脸区域左上角纵坐标。
      * @param integer $Width 人脸区域宽度。
      * @param integer $Height 人脸区域高度。
+     * @param string $ID 公众人物的唯一编号，可以用于区分同名人物、一个人物不同称呼等情况。唯一编号为8个字符构成的字符串。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -141,6 +153,10 @@ class Face extends AbstractModel
 
         if (array_key_exists("Height",$param) and $param["Height"] !== null) {
             $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
+            $this->ID = $param["ID"];
         }
     }
 }

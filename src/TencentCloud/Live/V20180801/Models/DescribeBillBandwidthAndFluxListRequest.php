@@ -26,12 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlayDomains(array $PlayDomains) 设置直播播放域名，若不填，表示总体数据。
  * @method string getMainlandOrOversea() 获取可选值：
 Mainland：查询国内数据，
-Oversea：则查询国外数据。
+Oversea：则查询国外数据，
 默认：查询国内+国外的数据。
+注：LEB（快直播）只支持国内+国外数据查询。
  * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置可选值：
 Mainland：查询国内数据，
-Oversea：则查询国外数据。
+Oversea：则查询国外数据，
 默认：查询国内+国外的数据。
+注：LEB（快直播）只支持国内+国外数据查询。
  * @method integer getGranularity() 获取数据粒度，支持如下粒度：
 5：5分钟粒度，（跨度不支持超过1天），
 60：1小时粒度（跨度不支持超过一个月），
@@ -42,6 +44,8 @@ Oversea：则查询国外数据。
 60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
 默认值：5。
+ * @method string getServiceName() 获取服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
+ * @method void setServiceName(string $ServiceName) 设置服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
  */
 
 /**
@@ -67,8 +71,9 @@ class DescribeBillBandwidthAndFluxListRequest extends AbstractModel
     /**
      * @var string 可选值：
 Mainland：查询国内数据，
-Oversea：则查询国外数据。
+Oversea：则查询国外数据，
 默认：查询国内+国外的数据。
+注：LEB（快直播）只支持国内+国外数据查询。
      */
     public $MainlandOrOversea;
 
@@ -80,19 +85,26 @@ Oversea：则查询国外数据。
 默认值：5。
      */
     public $Granularity;
+
+    /**
+     * @var string 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
+     */
+    public $ServiceName;
     /**
      * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
      * @param array $PlayDomains 直播播放域名，若不填，表示总体数据。
      * @param string $MainlandOrOversea 可选值：
 Mainland：查询国内数据，
-Oversea：则查询国外数据。
+Oversea：则查询国外数据，
 默认：查询国内+国外的数据。
+注：LEB（快直播）只支持国内+国外数据查询。
      * @param integer $Granularity 数据粒度，支持如下粒度：
 5：5分钟粒度，（跨度不支持超过1天），
 60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
 默认值：5。
+     * @param string $ServiceName 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
      */
     function __construct()
     {
@@ -124,6 +136,10 @@ Oversea：则查询国外数据。
 
         if (array_key_exists("Granularity",$param) and $param["Granularity"] !== null) {
             $this->Granularity = $param["Granularity"];
+        }
+
+        if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
+            $this->ServiceName = $param["ServiceName"];
         }
     }
 }

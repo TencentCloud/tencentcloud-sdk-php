@@ -100,6 +100,10 @@ UNKNOWN，未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportSecurity(integer $SupportSecurity) 设置是否支持安全组配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBillingType() 获取计费类型:(0:按带宽计费  1:按流量计费）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillingType(integer $BillingType) 设置计费类型:(0:按带宽计费  1:按流量计费）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -235,6 +239,12 @@ UNKNOWN，未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportSecurity;
+
+    /**
+     * @var integer 计费类型:(0:按带宽计费  1:按流量计费）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillingType;
     /**
      * @param string $InstanceId （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -276,6 +286,8 @@ UNKNOWN，未知状态。
      * @param array $TagSet 标签列表，不存在标签时，该字段为空列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SupportSecurity 是否支持安全组配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BillingType 计费类型:(0:按带宽计费  1:按流量计费）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -383,6 +395,10 @@ UNKNOWN，未知状态。
 
         if (array_key_exists("SupportSecurity",$param) and $param["SupportSecurity"] !== null) {
             $this->SupportSecurity = $param["SupportSecurity"];
+        }
+
+        if (array_key_exists("BillingType",$param) and $param["BillingType"] !== null) {
+            $this->BillingType = $param["BillingType"];
         }
     }
 }

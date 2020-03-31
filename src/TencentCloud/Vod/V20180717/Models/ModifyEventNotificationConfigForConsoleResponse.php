@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tione\V20191022\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTrainingJobName() 获取训练任务名称
- * @method void setTrainingJobName(string $TrainingJobName) 设置训练任务名称
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *CreateTrainingJob返回参数结构体
+ *ModifyEventNotificationConfigForConsole返回参数结构体
  */
-class CreateTrainingJobResponse extends AbstractModel
+class ModifyEventNotificationConfigForConsoleResponse extends AbstractModel
 {
-    /**
-     * @var string 训练任务名称
-     */
-    public $TrainingJobName;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $TrainingJobName 训练任务名称
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,10 +46,6 @@ class CreateTrainingJobResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrainingJobName",$param) and $param["TrainingJobName"] !== null) {
-            $this->TrainingJobName = $param["TrainingJobName"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

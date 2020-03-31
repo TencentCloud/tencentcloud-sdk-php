@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRp(integer $Rp) 设置每页数量。默认为20。
  * @method integer getPage() 获取页码。默认为1。
  * @method void setPage(integer $Page) 设置页码。默认为1。
+ * @method integer getSubUin() 获取子账号UIN
+ * @method void setSubUin(integer $SubUin) 设置子账号UIN
  */
 
 /**
@@ -45,10 +47,16 @@ class ListGroupsForUserRequest extends AbstractModel
      * @var integer 页码。默认为1。
      */
     public $Page;
+
+    /**
+     * @var integer 子账号UIN
+     */
+    public $SubUin;
     /**
      * @param integer $Uid 子用户 UID
      * @param integer $Rp 每页数量。默认为20。
      * @param integer $Page 页码。默认为1。
+     * @param integer $SubUin 子账号UIN
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ListGroupsForUserRequest extends AbstractModel
 
         if (array_key_exists("Page",$param) and $param["Page"] !== null) {
             $this->Page = $param["Page"];
+        }
+
+        if (array_key_exists("SubUin",$param) and $param["SubUin"] !== null) {
+            $this->SubUin = $param["SubUin"];
         }
     }
 }

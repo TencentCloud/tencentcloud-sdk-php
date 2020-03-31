@@ -18,8 +18,6 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getTrainingJobName() 获取训练任务名称
- * @method void setTrainingJobName(string $TrainingJobName) 设置训练任务名称
  * @method AlgorithmSpecification getAlgorithmSpecification() 获取算法镜像配置
  * @method void setAlgorithmSpecification(AlgorithmSpecification $AlgorithmSpecification) 设置算法镜像配置
  * @method array getInputDataConfig() 获取输入数据配置
@@ -28,16 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputDataConfig(OutputDataConfig $OutputDataConfig) 设置输出数据配置
  * @method ResourceConfig getResourceConfig() 获取资源实例配置
  * @method void setResourceConfig(ResourceConfig $ResourceConfig) 设置资源实例配置
+ * @method string getTrainingJobName() 获取训练任务名称
+ * @method void setTrainingJobName(string $TrainingJobName) 设置训练任务名称
  * @method StoppingCondition getStoppingCondition() 获取中止条件
  * @method void setStoppingCondition(StoppingCondition $StoppingCondition) 设置中止条件
  * @method VpcConfig getVpcConfig() 获取私有网络配置
  * @method void setVpcConfig(VpcConfig $VpcConfig) 设置私有网络配置
  * @method string getHyperParameters() 获取算法超级参数
  * @method void setHyperParameters(string $HyperParameters) 设置算法超级参数
- * @method string getRoleName() 获取角色名称
- * @method void setRoleName(string $RoleName) 设置角色名称
  * @method array getEnvConfig() 获取环境变量配置
  * @method void setEnvConfig(array $EnvConfig) 设置环境变量配置
+ * @method string getRoleName() 获取角色名称
+ * @method void setRoleName(string $RoleName) 设置角色名称
  */
 
 /**
@@ -45,11 +45,6 @@ use TencentCloud\Common\AbstractModel;
  */
 class CreateTrainingJobRequest extends AbstractModel
 {
-    /**
-     * @var string 训练任务名称
-     */
-    public $TrainingJobName;
-
     /**
      * @var AlgorithmSpecification 算法镜像配置
      */
@@ -71,6 +66,11 @@ class CreateTrainingJobRequest extends AbstractModel
     public $ResourceConfig;
 
     /**
+     * @var string 训练任务名称
+     */
+    public $TrainingJobName;
+
+    /**
      * @var StoppingCondition 中止条件
      */
     public $StoppingCondition;
@@ -86,25 +86,25 @@ class CreateTrainingJobRequest extends AbstractModel
     public $HyperParameters;
 
     /**
-     * @var string 角色名称
-     */
-    public $RoleName;
-
-    /**
      * @var array 环境变量配置
      */
     public $EnvConfig;
+
     /**
-     * @param string $TrainingJobName 训练任务名称
+     * @var string 角色名称
+     */
+    public $RoleName;
+    /**
      * @param AlgorithmSpecification $AlgorithmSpecification 算法镜像配置
      * @param array $InputDataConfig 输入数据配置
      * @param OutputDataConfig $OutputDataConfig 输出数据配置
      * @param ResourceConfig $ResourceConfig 资源实例配置
+     * @param string $TrainingJobName 训练任务名称
      * @param StoppingCondition $StoppingCondition 中止条件
      * @param VpcConfig $VpcConfig 私有网络配置
      * @param string $HyperParameters 算法超级参数
-     * @param string $RoleName 角色名称
      * @param array $EnvConfig 环境变量配置
+     * @param string $RoleName 角色名称
      */
     function __construct()
     {
@@ -118,10 +118,6 @@ class CreateTrainingJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrainingJobName",$param) and $param["TrainingJobName"] !== null) {
-            $this->TrainingJobName = $param["TrainingJobName"];
-        }
-
         if (array_key_exists("AlgorithmSpecification",$param) and $param["AlgorithmSpecification"] !== null) {
             $this->AlgorithmSpecification = new AlgorithmSpecification();
             $this->AlgorithmSpecification->deserialize($param["AlgorithmSpecification"]);
@@ -146,6 +142,10 @@ class CreateTrainingJobRequest extends AbstractModel
             $this->ResourceConfig->deserialize($param["ResourceConfig"]);
         }
 
+        if (array_key_exists("TrainingJobName",$param) and $param["TrainingJobName"] !== null) {
+            $this->TrainingJobName = $param["TrainingJobName"];
+        }
+
         if (array_key_exists("StoppingCondition",$param) and $param["StoppingCondition"] !== null) {
             $this->StoppingCondition = new StoppingCondition();
             $this->StoppingCondition->deserialize($param["StoppingCondition"]);
@@ -160,10 +160,6 @@ class CreateTrainingJobRequest extends AbstractModel
             $this->HyperParameters = $param["HyperParameters"];
         }
 
-        if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
-            $this->RoleName = $param["RoleName"];
-        }
-
         if (array_key_exists("EnvConfig",$param) and $param["EnvConfig"] !== null) {
             $this->EnvConfig = [];
             foreach ($param["EnvConfig"] as $key => $value){
@@ -171,6 +167,10 @@ class CreateTrainingJobRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->EnvConfig, $obj);
             }
+        }
+
+        if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
+            $this->RoleName = $param["RoleName"];
         }
     }
 }

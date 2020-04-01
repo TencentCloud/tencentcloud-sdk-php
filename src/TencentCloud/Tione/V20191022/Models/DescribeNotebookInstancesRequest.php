@@ -22,24 +22,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取限制数目
  * @method void setLimit(integer $Limit) 设置限制数目
- * @method string getSortBy() 获取排序字段
- * @method void setSortBy(string $SortBy) 设置排序字段
- * @method string getSortOrder() 获取排序方式
- * @method void setSortOrder(string $SortOrder) 设置排序方式
- * @method string getCreationTimeAfter() 获取创建时间晚于
- * @method void setCreationTimeAfter(string $CreationTimeAfter) 设置创建时间晚于
- * @method string getCreationTimeBefore() 获取创建时间早于
- * @method void setCreationTimeBefore(string $CreationTimeBefore) 设置创建时间早于
- * @method string getLastModifiedTimeAfter() 获取最近修改时间晚于
- * @method void setLastModifiedTimeAfter(string $LastModifiedTimeAfter) 设置最近修改时间晚于
- * @method string getLastModifiedTimeBefore() 获取最近修改时间早于
- * @method void setLastModifiedTimeBefore(string $LastModifiedTimeBefore) 设置最近修改时间早于
- * @method string getNameContains() 获取根据名称过滤
- * @method void setNameContains(string $NameContains) 设置根据名称过滤
- * @method string getStatusEquals() 获取根据状态过滤
- * @method void setStatusEquals(string $StatusEquals) 设置根据状态过滤
- * @method integer getMaxResults() 获取最大返回个数
- * @method void setMaxResults(integer $MaxResults) 设置最大返回个数
+ * @method string getSortOrder() 获取排序规则。默认取Descending
+Descending 按更新时间降序
+Ascending 按更新时间升序
+ * @method void setSortOrder(string $SortOrder) 设置排序规则。默认取Descending
+Descending 按更新时间降序
+Ascending 按更新时间升序
+ * @method array getFilters() 获取过滤条件。
+instance-name - String - 是否必填：否 -（过滤条件）按照名称过滤。
+search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
+lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
+default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
+additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
+ * @method void setFilters(array $Filters) 设置过滤条件。
+instance-name - String - 是否必填：否 -（过滤条件）按照名称过滤。
+search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
+lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
+default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
+additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
+ * @method string getSortBy() 获取【废弃字段】排序字段
+ * @method void setSortBy(string $SortBy) 设置【废弃字段】排序字段
  */
 
 /**
@@ -58,61 +60,39 @@ class DescribeNotebookInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 排序字段
-     */
-    public $SortBy;
-
-    /**
-     * @var string 排序方式
+     * @var string 排序规则。默认取Descending
+Descending 按更新时间降序
+Ascending 按更新时间升序
      */
     public $SortOrder;
 
     /**
-     * @var string 创建时间晚于
+     * @var array 过滤条件。
+instance-name - String - 是否必填：否 -（过滤条件）按照名称过滤。
+search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
+lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
+default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
+additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
      */
-    public $CreationTimeAfter;
+    public $Filters;
 
     /**
-     * @var string 创建时间早于
+     * @var string 【废弃字段】排序字段
      */
-    public $CreationTimeBefore;
-
-    /**
-     * @var string 最近修改时间晚于
-     */
-    public $LastModifiedTimeAfter;
-
-    /**
-     * @var string 最近修改时间早于
-     */
-    public $LastModifiedTimeBefore;
-
-    /**
-     * @var string 根据名称过滤
-     */
-    public $NameContains;
-
-    /**
-     * @var string 根据状态过滤
-     */
-    public $StatusEquals;
-
-    /**
-     * @var integer 最大返回个数
-     */
-    public $MaxResults;
+    public $SortBy;
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 限制数目
-     * @param string $SortBy 排序字段
-     * @param string $SortOrder 排序方式
-     * @param string $CreationTimeAfter 创建时间晚于
-     * @param string $CreationTimeBefore 创建时间早于
-     * @param string $LastModifiedTimeAfter 最近修改时间晚于
-     * @param string $LastModifiedTimeBefore 最近修改时间早于
-     * @param string $NameContains 根据名称过滤
-     * @param string $StatusEquals 根据状态过滤
-     * @param integer $MaxResults 最大返回个数
+     * @param string $SortOrder 排序规则。默认取Descending
+Descending 按更新时间降序
+Ascending 按更新时间升序
+     * @param array $Filters 过滤条件。
+instance-name - String - 是否必填：否 -（过滤条件）按照名称过滤。
+search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
+lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
+default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
+additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
+     * @param string $SortBy 【废弃字段】排序字段
      */
     function __construct()
     {
@@ -134,40 +114,21 @@ class DescribeNotebookInstancesRequest extends AbstractModel
             $this->Limit = $param["Limit"];
         }
 
-        if (array_key_exists("SortBy",$param) and $param["SortBy"] !== null) {
-            $this->SortBy = $param["SortBy"];
-        }
-
         if (array_key_exists("SortOrder",$param) and $param["SortOrder"] !== null) {
             $this->SortOrder = $param["SortOrder"];
         }
 
-        if (array_key_exists("CreationTimeAfter",$param) and $param["CreationTimeAfter"] !== null) {
-            $this->CreationTimeAfter = $param["CreationTimeAfter"];
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
 
-        if (array_key_exists("CreationTimeBefore",$param) and $param["CreationTimeBefore"] !== null) {
-            $this->CreationTimeBefore = $param["CreationTimeBefore"];
-        }
-
-        if (array_key_exists("LastModifiedTimeAfter",$param) and $param["LastModifiedTimeAfter"] !== null) {
-            $this->LastModifiedTimeAfter = $param["LastModifiedTimeAfter"];
-        }
-
-        if (array_key_exists("LastModifiedTimeBefore",$param) and $param["LastModifiedTimeBefore"] !== null) {
-            $this->LastModifiedTimeBefore = $param["LastModifiedTimeBefore"];
-        }
-
-        if (array_key_exists("NameContains",$param) and $param["NameContains"] !== null) {
-            $this->NameContains = $param["NameContains"];
-        }
-
-        if (array_key_exists("StatusEquals",$param) and $param["StatusEquals"] !== null) {
-            $this->StatusEquals = $param["StatusEquals"];
-        }
-
-        if (array_key_exists("MaxResults",$param) and $param["MaxResults"] !== null) {
-            $this->MaxResults = $param["MaxResults"];
+        if (array_key_exists("SortBy",$param) and $param["SortBy"] !== null) {
+            $this->SortBy = $param["SortBy"];
         }
     }
 }

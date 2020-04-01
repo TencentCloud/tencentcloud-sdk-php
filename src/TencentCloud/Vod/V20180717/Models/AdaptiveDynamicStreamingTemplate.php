@@ -30,12 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置转自适应码流模板名称。
  * @method string getComment() 获取转自适应码流模板描述信息。
  * @method void setComment(string $Comment) 设置转自适应码流模板描述信息。
- * @method string getPackageType() 获取打包类型，取值范围：
-<li>hls；</li>
-<li>dash。</li>
- * @method void setPackageType(string $PackageType) 设置打包类型，取值范围：
-<li>hls；</li>
-<li>dash。</li>
+ * @method string getFormat() 获取自适应转码格式，取值范围：
+<li>HLS。</li>
+ * @method void setFormat(string $Format) 设置自适应转码格式，取值范围：
+<li>HLS。</li>
  * @method string getDrmType() 获取DRM 类型，取值范围：
 <li>FairPlay；</li>
 <li>SimpleAES；</li>
@@ -46,14 +44,6 @@ use TencentCloud\Common\AbstractModel;
 <li>SimpleAES；</li>
 <li>Widevine。</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
- * @method array getVideoTrackTemplateSet() 获取视频轨模板列表。
- * @method void setVideoTrackTemplateSet(array $VideoTrackTemplateSet) 设置视频轨模板列表。
- * @method array getAudioTrackTemplateSet() 获取音频轨模板列表。
- * @method void setAudioTrackTemplateSet(array $AudioTrackTemplateSet) 设置音频轨模板列表。
- * @method string getFormat() 获取自适应转码格式，取值范围：
-<li>HLS。</li>
- * @method void setFormat(string $Format) 设置自适应转码格式，取值范围：
-<li>HLS。</li>
  * @method array getStreamInfos() 获取自适应转码输入流参数信息，最多输入10路流。
  * @method void setStreamInfos(array $StreamInfos) 设置自适应转码输入流参数信息，最多输入10路流。
  * @method integer getDisableHigherVideoBitrate() 获取是否禁止视频低码率转高码率，取值范围：
@@ -102,11 +92,10 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
     public $Comment;
 
     /**
-     * @var string 打包类型，取值范围：
-<li>hls；</li>
-<li>dash。</li>
+     * @var string 自适应转码格式，取值范围：
+<li>HLS。</li>
      */
-    public $PackageType;
+    public $Format;
 
     /**
      * @var string DRM 类型，取值范围：
@@ -116,22 +105,6 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
 如果取值为空字符串，代表不对视频做 DRM 保护。
      */
     public $DrmType;
-
-    /**
-     * @var array 视频轨模板列表。
-     */
-    public $VideoTrackTemplateSet;
-
-    /**
-     * @var array 音频轨模板列表。
-     */
-    public $AudioTrackTemplateSet;
-
-    /**
-     * @var string 自适应转码格式，取值范围：
-<li>HLS。</li>
-     */
-    public $Format;
 
     /**
      * @var array 自适应转码输入流参数信息，最多输入10路流。
@@ -168,18 +141,13 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
 <li>Custom：用户自定义模板。</li>
      * @param string $Name 转自适应码流模板名称。
      * @param string $Comment 转自适应码流模板描述信息。
-     * @param string $PackageType 打包类型，取值范围：
-<li>hls；</li>
-<li>dash。</li>
+     * @param string $Format 自适应转码格式，取值范围：
+<li>HLS。</li>
      * @param string $DrmType DRM 类型，取值范围：
 <li>FairPlay；</li>
 <li>SimpleAES；</li>
 <li>Widevine。</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
-     * @param array $VideoTrackTemplateSet 视频轨模板列表。
-     * @param array $AudioTrackTemplateSet 音频轨模板列表。
-     * @param string $Format 自适应转码格式，取值范围：
-<li>HLS。</li>
      * @param array $StreamInfos 自适应转码输入流参数信息，最多输入10路流。
      * @param integer $DisableHigherVideoBitrate 是否禁止视频低码率转高码率，取值范围：
 <li>0：否，</li>
@@ -218,34 +186,12 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
             $this->Comment = $param["Comment"];
         }
 
-        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
-            $this->PackageType = $param["PackageType"];
+        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
+            $this->Format = $param["Format"];
         }
 
         if (array_key_exists("DrmType",$param) and $param["DrmType"] !== null) {
             $this->DrmType = $param["DrmType"];
-        }
-
-        if (array_key_exists("VideoTrackTemplateSet",$param) and $param["VideoTrackTemplateSet"] !== null) {
-            $this->VideoTrackTemplateSet = [];
-            foreach ($param["VideoTrackTemplateSet"] as $key => $value){
-                $obj = new VideoTrackTemplateInfo();
-                $obj->deserialize($value);
-                array_push($this->VideoTrackTemplateSet, $obj);
-            }
-        }
-
-        if (array_key_exists("AudioTrackTemplateSet",$param) and $param["AudioTrackTemplateSet"] !== null) {
-            $this->AudioTrackTemplateSet = [];
-            foreach ($param["AudioTrackTemplateSet"] as $key => $value){
-                $obj = new AudioTrackTemplateInfo();
-                $obj->deserialize($value);
-                array_push($this->AudioTrackTemplateSet, $obj);
-            }
-        }
-
-        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
-            $this->Format = $param["Format"];
         }
 
         if (array_key_exists("StreamInfos",$param) and $param["StreamInfos"] !== null) {

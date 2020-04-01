@@ -19,33 +19,23 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * @method AlgorithmSpecification getAlgorithmSpecification() 获取算法镜像配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlgorithmSpecification(AlgorithmSpecification $AlgorithmSpecification) 设置算法镜像配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTrainingJobName() 获取任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrainingJobName(string $TrainingJobName) 设置任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHyperParameters() 获取算法超级参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHyperParameters(string $HyperParameters) 设置算法超级参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInputDataConfig() 获取输入数据配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputDataConfig(array $InputDataConfig) 设置输入数据配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OutputDataConfig getOutputDataConfig() 获取输出数据配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputDataConfig(OutputDataConfig $OutputDataConfig) 设置输出数据配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method StoppingCondition getStoppingCondition() 获取中止条件
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStoppingCondition(StoppingCondition $StoppingCondition) 设置中止条件
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ResourceConfig getResourceConfig() 获取计算实例配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceConfig(ResourceConfig $ResourceConfig) 设置计算实例配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method VpcConfig getVpcConfig() 获取私有网络配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcConfig(VpcConfig $VpcConfig) 设置私有网络配置
@@ -55,9 +45,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFailureReason(string $FailureReason) 设置失败原因
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastModifiedTime() 获取最近修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastModifiedTime(string $LastModifiedTime) 设置最近修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTrainingStartTime() 获取任务开始时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrainingStartTime(string $TrainingStartTime) 设置任务开始时间
@@ -71,9 +59,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelArtifacts(ModelArtifacts $ModelArtifacts) 设置模型输出配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecondaryStatus() 获取详细状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecondaryStatus(string $SecondaryStatus) 设置详细状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSecondaryStatusTransitions() 获取详细状态事件记录
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecondaryStatusTransitions(array $SecondaryStatusTransitions) 设置详细状态事件记录
@@ -83,9 +69,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleName(string $RoleName) 设置角色名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTrainingJobStatus() 获取任务状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrainingJobStatus(string $TrainingJobStatus) 设置任务状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -97,13 +81,11 @@ class DescribeTrainingJobResponse extends AbstractModel
 {
     /**
      * @var AlgorithmSpecification 算法镜像配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlgorithmSpecification;
 
     /**
      * @var string 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrainingJobName;
 
@@ -115,13 +97,11 @@ class DescribeTrainingJobResponse extends AbstractModel
 
     /**
      * @var array 输入数据配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputDataConfig;
 
     /**
      * @var OutputDataConfig 输出数据配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputDataConfig;
 
@@ -133,7 +113,6 @@ class DescribeTrainingJobResponse extends AbstractModel
 
     /**
      * @var ResourceConfig 计算实例配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceConfig;
 
@@ -151,7 +130,6 @@ class DescribeTrainingJobResponse extends AbstractModel
 
     /**
      * @var string 最近修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastModifiedTime;
 
@@ -175,7 +153,6 @@ class DescribeTrainingJobResponse extends AbstractModel
 
     /**
      * @var string 详细状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecondaryStatus;
 
@@ -193,7 +170,6 @@ class DescribeTrainingJobResponse extends AbstractModel
 
     /**
      * @var string 任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrainingJobStatus;
 
@@ -203,25 +179,19 @@ class DescribeTrainingJobResponse extends AbstractModel
     public $RequestId;
     /**
      * @param AlgorithmSpecification $AlgorithmSpecification 算法镜像配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrainingJobName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HyperParameters 算法超级参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InputDataConfig 输入数据配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputDataConfig $OutputDataConfig 输出数据配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StoppingCondition $StoppingCondition 中止条件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceConfig $ResourceConfig 计算实例配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcConfig $VpcConfig 私有网络配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailureReason 失败原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastModifiedTime 最近修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrainingStartTime 任务开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrainingEndTime 任务完成时间
@@ -229,13 +199,11 @@ class DescribeTrainingJobResponse extends AbstractModel
      * @param ModelArtifacts $ModelArtifacts 模型输出配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecondaryStatus 详细状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecondaryStatusTransitions 详细状态事件记录
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoleName 角色名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrainingJobStatus 任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -44,6 +44,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
 上报的时间戳为期望保存的时间戳，建议构造整数分钟时刻的时间戳。
 时间戳时间范围必须为当前时间到 300 秒前之间。
 同一 IP 指标对的数据需按分钟先后顺序上报。
+* @method Models\SendCustomAlarmMsgResponse SendCustomAlarmMsg(Models\SendCustomAlarmMsgRequest $req) 发送自定义消息告警
 * @method Models\UnBindingAllPolicyObjectResponse UnBindingAllPolicyObject(Models\UnBindingAllPolicyObjectRequest $req) 删除全部的关联对象
 * @method Models\UnBindingPolicyObjectResponse UnBindingPolicyObject(Models\UnBindingPolicyObjectRequest $req) 删除策略的关联对象
  */

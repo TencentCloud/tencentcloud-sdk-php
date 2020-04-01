@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置内存配置，单位为1M
  * @method integer getGpu() 获取显卡配置，单位为 1/1000 卡
  * @method void setGpu(integer $Gpu) 设置显卡配置，单位为 1/1000 卡
+ * @method string getLogTopicId() 获取Cls日志主题ID
+ * @method void setLogTopicId(string $LogTopicId) 设置Cls日志主题ID
  */
 
 /**
@@ -94,6 +96,11 @@ class UpdateServiceRequest extends AbstractModel
      * @var integer 显卡配置，单位为 1/1000 卡
      */
     public $Gpu;
+
+    /**
+     * @var string Cls日志主题ID
+     */
+    public $LogTopicId;
     /**
      * @param string $ServiceId 服务Id
      * @param Scaler $Scaler 扩缩容配置
@@ -105,6 +112,7 @@ class UpdateServiceRequest extends AbstractModel
      * @param integer $Cpu 处理器配置，单位为 1/1000 核
      * @param integer $Memory 内存配置，单位为1M
      * @param integer $Gpu 显卡配置，单位为 1/1000 卡
+     * @param string $LogTopicId Cls日志主题ID
      */
     function __construct()
     {
@@ -157,6 +165,10 @@ class UpdateServiceRequest extends AbstractModel
 
         if (array_key_exists("Gpu",$param) and $param["Gpu"] !== null) {
             $this->Gpu = $param["Gpu"];
+        }
+
+        if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
+            $this->LogTopicId = $param["LogTopicId"];
         }
     }
 }

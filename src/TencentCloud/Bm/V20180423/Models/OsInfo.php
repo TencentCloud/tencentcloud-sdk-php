@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageTag(string $ImageTag) 设置标识镜像分类。public:公共镜像; private: 专属镜像
  * @method integer getMaxPartitionSize() 获取操作系统，ext4文件下所支持的最大的磁盘大小。单位为T
  * @method void setMaxPartitionSize(integer $MaxPartitionSize) 设置操作系统，ext4文件下所支持的最大的磁盘大小。单位为T
+ * @method string getOsMinorVersion() 获取黑石版本号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOsMinorVersion(string $OsMinorVersion) 设置黑石版本号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOsMinorClass() 获取黑石版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOsMinorClass(string $OsMinorClass) 设置黑石版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -73,6 +81,18 @@ class OsInfo extends AbstractModel
      * @var integer 操作系统，ext4文件下所支持的最大的磁盘大小。单位为T
      */
     public $MaxPartitionSize;
+
+    /**
+     * @var string 黑石版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OsMinorVersion;
+
+    /**
+     * @var string 黑石版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OsMinorClass;
     /**
      * @param integer $OsTypeId 操作系统ID
      * @param string $OsName 操作系统名称
@@ -81,6 +101,10 @@ class OsInfo extends AbstractModel
      * @param string $OsClass 操作系统的分类，如CentOs Debian
      * @param string $ImageTag 标识镜像分类。public:公共镜像; private: 专属镜像
      * @param integer $MaxPartitionSize 操作系统，ext4文件下所支持的最大的磁盘大小。单位为T
+     * @param string $OsMinorVersion 黑石版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OsMinorClass 黑石版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +144,14 @@ class OsInfo extends AbstractModel
 
         if (array_key_exists("MaxPartitionSize",$param) and $param["MaxPartitionSize"] !== null) {
             $this->MaxPartitionSize = $param["MaxPartitionSize"];
+        }
+
+        if (array_key_exists("OsMinorVersion",$param) and $param["OsMinorVersion"] !== null) {
+            $this->OsMinorVersion = $param["OsMinorVersion"];
+        }
+
+        if (array_key_exists("OsMinorClass",$param) and $param["OsMinorClass"] !== null) {
+            $this->OsMinorClass = $param["OsMinorClass"];
         }
     }
 }

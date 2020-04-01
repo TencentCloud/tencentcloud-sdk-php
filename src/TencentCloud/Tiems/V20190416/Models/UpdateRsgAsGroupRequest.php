@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxSize(integer $MaxSize) 设置伸缩组最大节点数
  * @method integer getMinSize() 获取伸缩组最小节点数
  * @method void setMinSize(integer $MinSize) 设置伸缩组最小节点数
+ * @method integer getDesiredSize() 获取伸缩组期望的节点数
+ * @method void setDesiredSize(integer $DesiredSize) 设置伸缩组期望的节点数
  */
 
 /**
@@ -52,11 +54,17 @@ class UpdateRsgAsGroupRequest extends AbstractModel
      * @var integer 伸缩组最小节点数
      */
     public $MinSize;
+
+    /**
+     * @var integer 伸缩组期望的节点数
+     */
+    public $DesiredSize;
     /**
      * @param string $Id 伸缩组 ID
      * @param string $Name 重命名名称
      * @param integer $MaxSize 伸缩组最大节点数
      * @param integer $MinSize 伸缩组最小节点数
+     * @param integer $DesiredSize 伸缩组期望的节点数
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class UpdateRsgAsGroupRequest extends AbstractModel
 
         if (array_key_exists("MinSize",$param) and $param["MinSize"] !== null) {
             $this->MinSize = $param["MinSize"];
+        }
+
+        if (array_key_exists("DesiredSize",$param) and $param["DesiredSize"] !== null) {
+            $this->DesiredSize = $param["DesiredSize"];
         }
     }
 }

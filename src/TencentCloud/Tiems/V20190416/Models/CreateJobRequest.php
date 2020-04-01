@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGpuType(string $GpuType) 设置GPU类型
  * @method QuantizationInput getQuantizationInput() 获取量化输入
  * @method void setQuantizationInput(QuantizationInput $QuantizationInput) 设置量化输入
+ * @method string getLogTopicId() 获取Cls日志主题ID
+ * @method void setLogTopicId(string $LogTopicId) 设置Cls日志主题ID
  */
 
 /**
@@ -115,6 +117,11 @@ class CreateJobRequest extends AbstractModel
      * @var QuantizationInput 量化输入
      */
     public $QuantizationInput;
+
+    /**
+     * @var string Cls日志主题ID
+     */
+    public $LogTopicId;
     /**
      * @param string $Name 任务名称
      * @param string $ResourceGroupId 使用的资源组 Id，默认使用共享资源组
@@ -129,6 +136,7 @@ class CreateJobRequest extends AbstractModel
      * @param integer $GpuMemory 显存配置, 单位为1M，范围 [0, 256000]
      * @param string $GpuType GPU类型
      * @param QuantizationInput $QuantizationInput 量化输入
+     * @param string $LogTopicId Cls日志主题ID
      */
     function __construct()
     {
@@ -194,6 +202,10 @@ class CreateJobRequest extends AbstractModel
         if (array_key_exists("QuantizationInput",$param) and $param["QuantizationInput"] !== null) {
             $this->QuantizationInput = new QuantizationInput();
             $this->QuantizationInput->deserialize($param["QuantizationInput"]);
+        }
+
+        if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
+            $this->LogTopicId = $param["LogTopicId"];
         }
     }
 }

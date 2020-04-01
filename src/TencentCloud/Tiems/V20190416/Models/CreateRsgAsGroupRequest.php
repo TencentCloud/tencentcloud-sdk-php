@@ -24,10 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxSize(integer $MaxSize) 设置伸缩组允许的最大节点数
  * @method integer getMinSize() 获取伸缩组允许的最小节点数
  * @method void setMinSize(integer $MinSize) 设置伸缩组允许的最小节点数
+ * @method string getInstanceType() 获取伸缩组的节点规格
+ * @method void setInstanceType(string $InstanceType) 设置伸缩组的节点规格
  * @method string getCluster() 获取资源组所在的集群名
  * @method void setCluster(string $Cluster) 设置资源组所在的集群名
  * @method string getName() 获取伸缩组名称
  * @method void setName(string $Name) 设置伸缩组名称
+ * @method integer getDesiredSize() 获取伸缩组期望的节点数
+ * @method void setDesiredSize(integer $DesiredSize) 设置伸缩组期望的节点数
  */
 
 /**
@@ -51,6 +55,11 @@ class CreateRsgAsGroupRequest extends AbstractModel
     public $MinSize;
 
     /**
+     * @var string 伸缩组的节点规格
+     */
+    public $InstanceType;
+
+    /**
      * @var string 资源组所在的集群名
      */
     public $Cluster;
@@ -59,12 +68,19 @@ class CreateRsgAsGroupRequest extends AbstractModel
      * @var string 伸缩组名称
      */
     public $Name;
+
+    /**
+     * @var integer 伸缩组期望的节点数
+     */
+    public $DesiredSize;
     /**
      * @param string $RsgId 资源组 ID
      * @param integer $MaxSize 伸缩组允许的最大节点数
      * @param integer $MinSize 伸缩组允许的最小节点数
+     * @param string $InstanceType 伸缩组的节点规格
      * @param string $Cluster 资源组所在的集群名
      * @param string $Name 伸缩组名称
+     * @param integer $DesiredSize 伸缩组期望的节点数
      */
     function __construct()
     {
@@ -90,12 +106,20 @@ class CreateRsgAsGroupRequest extends AbstractModel
             $this->MinSize = $param["MinSize"];
         }
 
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
         if (array_key_exists("Cluster",$param) and $param["Cluster"] !== null) {
             $this->Cluster = $param["Cluster"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("DesiredSize",$param) and $param["DesiredSize"] !== null) {
+            $this->DesiredSize = $param["DesiredSize"];
         }
     }
 }

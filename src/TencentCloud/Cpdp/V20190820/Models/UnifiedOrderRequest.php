@@ -36,8 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置用户ID，长度不小于5位，仅支持字母和数字的组合
  * @method string getRealChannel() 获取银行真实渠道.如:bank_pingan
  * @method void setRealChannel(string $RealChannel) 设置银行真实渠道.如:bank_pingan
- * @method array getSubOrderList() 获取子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
- * @method void setSubOrderList(array $SubOrderList) 设置子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
  * @method integer getOriginalAmt() 获取原始金额
  * @method void setOriginalAmt(integer $OriginalAmt) 设置原始金额
  * @method string getMidasSecretId() 获取聚鑫分配的安全ID
@@ -56,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuantity(integer $Quantity) 设置购买数量，不传默认为1
  * @method string getSubAppId() 获取聚鑫计费SubAppId，代表子商户
  * @method void setSubAppId(string $SubAppId) 设置聚鑫计费SubAppId，代表子商户
+ * @method array getSubOrderList() 获取子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+注：接入银行或其他支付渠道服务商模式下，必传
+ * @method void setSubOrderList(array $SubOrderList) 设置子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+注：接入银行或其他支付渠道服务商模式下，必传
  * @method integer getTotalMchIncome() 获取结算应收金额，单位：分
  * @method void setTotalMchIncome(integer $TotalMchIncome) 设置结算应收金额，单位：分
  * @method integer getTotalPlatformIncome() 获取平台应收金额，单位：分
@@ -117,11 +119,6 @@ class UnifiedOrderRequest extends AbstractModel
     public $RealChannel;
 
     /**
-     * @var array 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
-     */
-    public $SubOrderList;
-
-    /**
      * @var integer 原始金额
      */
     public $OriginalAmt;
@@ -163,6 +160,12 @@ class UnifiedOrderRequest extends AbstractModel
     public $SubAppId;
 
     /**
+     * @var array 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+注：接入银行或其他支付渠道服务商模式下，必传
+     */
+    public $SubOrderList;
+
+    /**
      * @var integer 结算应收金额，单位：分
      */
     public $TotalMchIncome;
@@ -191,7 +194,6 @@ class UnifiedOrderRequest extends AbstractModel
      * @param integer $TotalAmt 支付金额，单位： 分
      * @param string $UserId 用户ID，长度不小于5位，仅支持字母和数字的组合
      * @param string $RealChannel 银行真实渠道.如:bank_pingan
-     * @param array $SubOrderList 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
      * @param integer $OriginalAmt 原始金额
      * @param string $MidasSecretId 聚鑫分配的安全ID
      * @param string $MidasSignature 按照聚鑫安全密钥计算的签名
@@ -201,6 +203,8 @@ class UnifiedOrderRequest extends AbstractModel
      * @param string $Metadata 透传字段，支付成功回调透传给应用，用于业务透传自定义内容
      * @param integer $Quantity 购买数量，不传默认为1
      * @param string $SubAppId 聚鑫计费SubAppId，代表子商户
+     * @param array $SubOrderList 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+注：接入银行或其他支付渠道服务商模式下，必传
      * @param integer $TotalMchIncome 结算应收金额，单位：分
      * @param integer $TotalPlatformIncome 平台应收金额，单位：分
      * @param string $WxOpenId 微信公众号/小程序支付时为必选，需要传微信下的openid
@@ -254,15 +258,6 @@ class UnifiedOrderRequest extends AbstractModel
             $this->RealChannel = $param["RealChannel"];
         }
 
-        if (array_key_exists("SubOrderList",$param) and $param["SubOrderList"] !== null) {
-            $this->SubOrderList = [];
-            foreach ($param["SubOrderList"] as $key => $value){
-                $obj = new UnifiedOrderInSubOrderList();
-                $obj->deserialize($value);
-                array_push($this->SubOrderList, $obj);
-            }
-        }
-
         if (array_key_exists("OriginalAmt",$param) and $param["OriginalAmt"] !== null) {
             $this->OriginalAmt = $param["OriginalAmt"];
         }
@@ -293,6 +288,15 @@ class UnifiedOrderRequest extends AbstractModel
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
+        }
+
+        if (array_key_exists("SubOrderList",$param) and $param["SubOrderList"] !== null) {
+            $this->SubOrderList = [];
+            foreach ($param["SubOrderList"] as $key => $value){
+                $obj = new UnifiedOrderInSubOrderList();
+                $obj->deserialize($value);
+                array_push($this->SubOrderList, $obj);
+            }
         }
 
         if (array_key_exists("TotalMchIncome",$param) and $param["TotalMchIncome"] !== null) {

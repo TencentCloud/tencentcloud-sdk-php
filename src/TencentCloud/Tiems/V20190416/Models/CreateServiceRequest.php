@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置备注
  * @method string getGpuType() 获取GPU类型
  * @method void setGpuType(string $GpuType) 设置GPU类型
+ * @method string getLogTopicId() 获取Cls日志主题ID
+ * @method void setLogTopicId(string $LogTopicId) 设置Cls日志主题ID
  */
 
 /**
@@ -115,6 +117,11 @@ class CreateServiceRequest extends AbstractModel
      * @var string GPU类型
      */
     public $GpuType;
+
+    /**
+     * @var string Cls日志主题ID
+     */
+    public $LogTopicId;
     /**
      * @param Scaler $Scaler 扩缩容配置
      * @param string $ServiceConfigId 服务配置Id
@@ -129,6 +136,7 @@ class CreateServiceRequest extends AbstractModel
      * @param integer $GpuMemory 显存配置, 单位为1M，范围 [0, 256000]
      * @param string $Description 备注
      * @param string $GpuType GPU类型
+     * @param string $LogTopicId Cls日志主题ID
      */
     function __construct()
     {
@@ -193,6 +201,10 @@ class CreateServiceRequest extends AbstractModel
 
         if (array_key_exists("GpuType",$param) and $param["GpuType"] !== null) {
             $this->GpuType = $param["GpuType"];
+        }
+
+        if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
+            $this->LogTopicId = $param["LogTopicId"];
         }
     }
 }

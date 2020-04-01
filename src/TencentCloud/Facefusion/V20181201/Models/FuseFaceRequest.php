@@ -27,13 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getMergeInfos() 获取用户人脸图片、素材模板图的人脸位置信息。
  * @method void setMergeInfos(array $MergeInfos) 设置用户人脸图片、素材模板图的人脸位置信息。
  * @method integer getFuseProfileDegree() 获取脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中脸型参数数值。
+若此参数不填写，则使用人脸融合控制台中脸型参数数值。（换脸版算法暂不支持此参数调整）
  * @method void setFuseProfileDegree(integer $FuseProfileDegree) 设置脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中脸型参数数值。
+若此参数不填写，则使用人脸融合控制台中脸型参数数值。（换脸版算法暂不支持此参数调整）
  * @method integer getFuseFaceDegree() 获取五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中五官参数数值。
+若此参数不填写，则使用人脸融合控制台中五官参数数值。（换脸版算法暂不支持此参数调整）
  * @method void setFuseFaceDegree(integer $FuseFaceDegree) 设置五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中五官参数数值。
+若此参数不填写，则使用人脸融合控制台中五官参数数值。（换脸版算法暂不支持此参数调整）
  * @method integer getCelebrityIdentify() 获取0表示不需要鉴政，1表示需要鉴政。默认值为0。
 请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
  * @method void setCelebrityIdentify(integer $CelebrityIdentify) 设置0表示不需要鉴政，1表示需要鉴政。默认值为0。
@@ -67,13 +67,13 @@ class FuseFaceRequest extends AbstractModel
 
     /**
      * @var integer 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中脸型参数数值。
+若此参数不填写，则使用人脸融合控制台中脸型参数数值。（换脸版算法暂不支持此参数调整）
      */
     public $FuseProfileDegree;
 
     /**
      * @var integer 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中五官参数数值。
+若此参数不填写，则使用人脸融合控制台中五官参数数值。（换脸版算法暂不支持此参数调整）
      */
     public $FuseFaceDegree;
 
@@ -88,9 +88,9 @@ class FuseFaceRequest extends AbstractModel
      * @param string $RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
      * @param array $MergeInfos 用户人脸图片、素材模板图的人脸位置信息。
      * @param integer $FuseProfileDegree 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中脸型参数数值。
+若此参数不填写，则使用人脸融合控制台中脸型参数数值。（换脸版算法暂不支持此参数调整）
      * @param integer $FuseFaceDegree 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中五官参数数值。
+若此参数不填写，则使用人脸融合控制台中五官参数数值。（换脸版算法暂不支持此参数调整）
      * @param integer $CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
 请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
      */

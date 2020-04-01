@@ -18,8 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getFilters() 获取筛选选项，支持按照name等字段进行筛选
- * @method void setFilters(array $Filters) 设置筛选选项，支持按照name等字段进行筛选
+ * @method array getFilters() 获取筛选选项，支持筛选的字段：id, region, zone, cluster, status, runtime, rsg_id
+ * @method void setFilters(array $Filters) 设置筛选选项，支持筛选的字段：id, region, zone, cluster, status, runtime, rsg_id
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeServicesRequest extends AbstractModel
 {
     /**
-     * @var array 筛选选项，支持按照name等字段进行筛选
+     * @var array 筛选选项，支持筛选的字段：id, region, zone, cluster, status, runtime, rsg_id
      */
     public $Filters;
 
@@ -60,7 +60,7 @@ class DescribeServicesRequest extends AbstractModel
      */
     public $OrderField;
     /**
-     * @param array $Filters 筛选选项，支持按照name等字段进行筛选
+     * @param array $Filters 筛选选项，支持筛选的字段：id, region, zone, cluster, status, runtime, rsg_id
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认为20，最大值为100
      * @param string $Order 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列

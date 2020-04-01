@@ -38,7 +38,7 @@ use TencentCloud\Bmvpc\V20180625\Models as Models;
 * @method Models\CreateNatGatewayResponse CreateNatGateway(Models\CreateNatGatewayRequest $req) 创建NAT网关接口，可针对网段方式、子网全部IP、子网部分IP这三种方式创建NAT网关
 * @method Models\CreateRoutePoliciesResponse CreateRoutePolicies(Models\CreateRoutePoliciesRequest $req) 创建黑石路由表的路由规则
 * @method Models\CreateSubnetResponse CreateSubnet(Models\CreateSubnetRequest $req) 创建黑石私有网络的子网
-访问管理: 用户可以对VpcId进行授权操作。比如设置资源为["qcs::bmvpc:::unVpc/vpc-xxxxx"]
+访问管理: 用户可以对VpcId进行授权操作。例如设置资源为["qcs::bmvpc:::unVpc/vpc-xxxxx"]
 * @method Models\CreateVirtualSubnetWithVlanResponse CreateVirtualSubnetWithVlan(Models\CreateVirtualSubnetWithVlanRequest $req) 创建黑石虚拟子网， 虚拟子网用于在黑石上创建虚拟网络，与黑石子网要做好规划。虚拟子网会分配2000-2999的VlanId。
 * @method Models\CreateVpcResponse CreateVpc(Models\CreateVpcRequest $req) 创建黑石私有网络
 * @method Models\CreateVpcPeerConnectionResponse CreateVpcPeerConnection(Models\CreateVpcPeerConnectionRequest $req) 创建对等连接

@@ -18,8 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method boolean getNone() 获取无秘钥，默认选项
- * @method void setNone(boolean $None) 设置无秘钥，默认选项
+ * @method boolean getNoSecret() 获取无秘钥，默认选项
+ * @method void setNoSecret(boolean $NoSecret) 设置无秘钥，默认选项
  * @method string getSecret() 获取Git用户名密码base64编码后的字符串
 编码前的内容应为Json字符串，如
 {"UserName": "用户名", "Password":"密码"}
@@ -36,7 +36,7 @@ class GitSecret extends AbstractModel
     /**
      * @var boolean 无秘钥，默认选项
      */
-    public $None;
+    public $NoSecret;
 
     /**
      * @var string Git用户名密码base64编码后的字符串
@@ -45,7 +45,7 @@ class GitSecret extends AbstractModel
      */
     public $Secret;
     /**
-     * @param boolean $None 无秘钥，默认选项
+     * @param boolean $NoSecret 无秘钥，默认选项
      * @param string $Secret Git用户名密码base64编码后的字符串
 编码前的内容应为Json字符串，如
 {"UserName": "用户名", "Password":"密码"}
@@ -62,8 +62,8 @@ class GitSecret extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("None",$param) and $param["None"] !== null) {
-            $this->None = $param["None"];
+        if (array_key_exists("NoSecret",$param) and $param["NoSecret"] !== null) {
+            $this->NoSecret = $param["NoSecret"];
         }
 
         if (array_key_exists("Secret",$param) and $param["Secret"] !== null) {

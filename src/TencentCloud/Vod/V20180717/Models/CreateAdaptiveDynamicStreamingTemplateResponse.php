@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tione\V20191022\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getNotebookInstanceName() 获取Notebook实例名字
- * @method void setNotebookInstanceName(string $NotebookInstanceName) 设置Notebook实例名字
+ * @method integer getDefinition() 获取自适应转码模板唯一标识。
+ * @method void setDefinition(integer $Definition) 设置自适应转码模板唯一标识。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 
 /**
- *CreateNotebookInstance返回参数结构体
+ *CreateAdaptiveDynamicStreamingTemplate返回参数结构体
  */
-class CreateNotebookInstanceResponse extends AbstractModel
+class CreateAdaptiveDynamicStreamingTemplateResponse extends AbstractModel
 {
     /**
-     * @var string Notebook实例名字
+     * @var integer 自适应转码模板唯一标识。
      */
-    public $NotebookInstanceName;
+    public $Definition;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
     /**
-     * @param string $NotebookInstanceName Notebook实例名字
+     * @param integer $Definition 自适应转码模板唯一标识。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class CreateNotebookInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NotebookInstanceName",$param) and $param["NotebookInstanceName"] !== null) {
-            $this->NotebookInstanceName = $param["NotebookInstanceName"];
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

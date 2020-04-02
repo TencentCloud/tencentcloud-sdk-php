@@ -14,25 +14,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcaplusdb\V20190823\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method integer getSimpleAesDefinition() 获取保护类型为 SimpleAES 的转自适应码流模板 ID。
+ * @method void setSimpleAesDefinition(integer $SimpleAesDefinition) 设置保护类型为 SimpleAES 的转自适应码流模板 ID。
  */
 
 /**
- *ModifyAppName返回参数结构体
+ *DRM 自适应码流播放信息修改对象
  */
-class ModifyAppNameResponse extends AbstractModel
+class DrmStreamingsInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var integer 保护类型为 SimpleAES 的转自适应码流模板 ID。
      */
-    public $RequestId;
+    public $SimpleAesDefinition;
     /**
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param integer $SimpleAesDefinition 保护类型为 SimpleAES 的转自适应码流模板 ID。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class ModifyAppNameResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("SimpleAesDefinition",$param) and $param["SimpleAesDefinition"] !== null) {
+            $this->SimpleAesDefinition = $param["SimpleAesDefinition"];
         }
     }
 }

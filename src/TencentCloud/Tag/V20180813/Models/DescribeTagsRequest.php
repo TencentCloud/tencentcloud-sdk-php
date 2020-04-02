@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页大小，默认为 15
  * @method integer getCreateUin() 获取创建者用户 Uin，不传或为空只将 Uin 作为条件查询
  * @method void setCreateUin(integer $CreateUin) 设置创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+ * @method array getTagKeys() 获取标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只会本值
+ * @method void setTagKeys(array $TagKeys) 设置标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只会本值
  */
 
 /**
@@ -59,12 +61,18 @@ class DescribeTagsRequest extends AbstractModel
      * @var integer 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
      */
     public $CreateUin;
+
+    /**
+     * @var array 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只会本值
+     */
+    public $TagKeys;
     /**
      * @param string $TagKey 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
      * @param string $TagValue 标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
      * @param integer $Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      * @param integer $Limit 每页大小，默认为 15
      * @param integer $CreateUin 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+     * @param array $TagKeys 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只会本值
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeTagsRequest extends AbstractModel
 
         if (array_key_exists("CreateUin",$param) and $param["CreateUin"] !== null) {
             $this->CreateUin = $param["CreateUin"];
+        }
+
+        if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
+            $this->TagKeys = $param["TagKeys"];
         }
     }
 }

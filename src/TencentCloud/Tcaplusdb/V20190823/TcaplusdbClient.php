@@ -40,7 +40,6 @@ use TencentCloud\Tcaplusdb\V20190823\Models as Models;
 * @method Models\DescribeTablesInRecycleResponse DescribeTablesInRecycle(Models\DescribeTablesInRecycleRequest $req) 查询回收站中的表详情
 * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 查询任务列表
 * @method Models\DescribeUinInWhitelistResponse DescribeUinInWhitelist(Models\DescribeUinInWhitelistRequest $req) 查询本用户是否在白名单中，控制是否能创建TDR类型的APP或表
-* @method Models\ModifyAppNameResponse ModifyAppName(Models\ModifyAppNameRequest $req) 修改指定的应用名称
 * @method Models\ModifyClusterNameResponse ModifyClusterName(Models\ModifyClusterNameRequest $req) 修改指定的集群名称
 * @method Models\ModifyClusterPasswordResponse ModifyClusterPassword(Models\ModifyClusterPasswordRequest $req) 修改指定集群的密码，后台将在旧密码失效之前同时支持TcaplusDB SDK使用旧密码和新密码访问数据库。在旧密码失效之前不能提交新的密码修改请求，在旧密码失效之后不能提交修改旧密码过期时间的请求。
 * @method Models\ModifyTableGroupNameResponse ModifyTableGroupName(Models\ModifyTableGroupNameRequest $req) 修改TcaplusDB表格组名称

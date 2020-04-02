@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method string getType() 获取搜索的事件类型
- * @method void setType(string $Type) 设置搜索的事件类型
- * @method integer getStartTime() 获取起始时间, 为0 表示 当前时间 - 24h
- * @method void setStartTime(integer $StartTime) 设置起始时间, 为0 表示 当前时间 - 24h
- * @method integer getEndTime() 获取结束时间, 为0 表示当前时间
- * @method void setEndTime(integer $EndTime) 设置结束时间, 为0 表示当前时间
+ * @method string getType() 获取搜索的事件类型：alert 表示告警，fault 表示故障，info 表示信息，为空则表示查询上述所有类型事件
+ * @method void setType(string $Type) 设置搜索的事件类型：alert 表示告警，fault 表示故障，info 表示信息，为空则表示查询上述所有类型事件
+ * @method integer getStartTime() 获取起始时间（Unix 时间戳，秒级）, 为0 表示 当前时间 - 24h
+ * @method void setStartTime(integer $StartTime) 设置起始时间（Unix 时间戳，秒级）, 为0 表示 当前时间 - 24h
+ * @method integer getEndTime() 获取结束时间（Unix 时间戳，秒级）, 为0 表示当前时间
+ * @method void setEndTime(integer $EndTime) 设置结束时间（Unix 时间戳，秒级）, 为0 表示当前时间
  * @method string getContext() 获取搜索上下文, 用作查询游标
  * @method void setContext(string $Context) 设置搜索上下文, 用作查询游标
  * @method integer getSize() 获取单次获取的历史数据项目的最大数量
@@ -50,17 +50,17 @@ class ListEventHistoryRequest extends AbstractModel
     public $DeviceName;
 
     /**
-     * @var string 搜索的事件类型
+     * @var string 搜索的事件类型：alert 表示告警，fault 表示故障，info 表示信息，为空则表示查询上述所有类型事件
      */
     public $Type;
 
     /**
-     * @var integer 起始时间, 为0 表示 当前时间 - 24h
+     * @var integer 起始时间（Unix 时间戳，秒级）, 为0 表示 当前时间 - 24h
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间, 为0 表示当前时间
+     * @var integer 结束时间（Unix 时间戳，秒级）, 为0 表示当前时间
      */
     public $EndTime;
 
@@ -76,9 +76,9 @@ class ListEventHistoryRequest extends AbstractModel
     /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
-     * @param string $Type 搜索的事件类型
-     * @param integer $StartTime 起始时间, 为0 表示 当前时间 - 24h
-     * @param integer $EndTime 结束时间, 为0 表示当前时间
+     * @param string $Type 搜索的事件类型：alert 表示告警，fault 表示故障，info 表示信息，为空则表示查询上述所有类型事件
+     * @param integer $StartTime 起始时间（Unix 时间戳，秒级）, 为0 表示 当前时间 - 24h
+     * @param integer $EndTime 结束时间（Unix 时间戳，秒级）, 为0 表示当前时间
      * @param string $Context 搜索上下文, 用作查询游标
      * @param integer $Size 单次获取的历史数据项目的最大数量
      */

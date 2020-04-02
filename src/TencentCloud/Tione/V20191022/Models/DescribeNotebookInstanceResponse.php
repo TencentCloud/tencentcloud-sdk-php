@@ -36,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRootAccess(string $RootAccess) 设置Root用户权限
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSecurityGroupIds() 获取安全组ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网ID
@@ -47,10 +43,6 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getVolumeSizeInGB() 获取数据卷大小(GB)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolumeSizeInGB(integer $VolumeSizeInGB) 设置数据卷大小(GB)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUrl() 获取Notebook实例链接
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUrl(string $Url) 设置Notebook实例链接
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFailureReason() 获取创建失败原因
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastModifiedTime(string $LastModifiedTime) 设置Notebook实例最近修改时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNetworkInterfaceId() 获取Notebook实例网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置Notebook实例网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogUrl() 获取Notebook实例日志链接
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogUrl(string $LogUrl) 设置Notebook实例日志链接
@@ -79,6 +67,22 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() 获取Notebook实例ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置Notebook实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLifecycleScriptsName() 获取notebook生命周期脚本名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLifecycleScriptsName(string $LifecycleScriptsName) 设置notebook生命周期脚本名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDefaultCodeRepository() 获取默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefaultCodeRepository(string $DefaultCodeRepository) 设置默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAdditionalCodeRepositories() 获取其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdditionalCodeRepositories(array $AdditionalCodeRepositories) 设置其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -119,12 +123,6 @@ class DescribeNotebookInstanceResponse extends AbstractModel
     public $RootAccess;
 
     /**
-     * @var array 安全组ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $SecurityGroupIds;
-
-    /**
      * @var string 子网ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -135,12 +133,6 @@ class DescribeNotebookInstanceResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeSizeInGB;
-
-    /**
-     * @var string Notebook实例链接
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Url;
 
     /**
      * @var string 创建失败原因
@@ -161,12 +153,6 @@ class DescribeNotebookInstanceResponse extends AbstractModel
     public $LastModifiedTime;
 
     /**
-     * @var string Notebook实例网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $NetworkInterfaceId;
-
-    /**
      * @var string Notebook实例日志链接
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -185,6 +171,26 @@ class DescribeNotebookInstanceResponse extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string notebook生命周期脚本名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LifecycleScriptsName;
+
+    /**
+     * @var string 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefaultCodeRepository;
+
+    /**
+     * @var array 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdditionalCodeRepositories;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -198,13 +204,9 @@ class DescribeNotebookInstanceResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RootAccess Root用户权限
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SecurityGroupIds 安全组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VolumeSizeInGB 数据卷大小(GB)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Url Notebook实例链接
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailureReason 创建失败原因
 注意：此字段可能返回 null，表示取不到有效值。
@@ -212,13 +214,19 @@ class DescribeNotebookInstanceResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastModifiedTime Notebook实例最近修改时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NetworkInterfaceId Notebook实例网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogUrl Notebook实例日志链接
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NotebookInstanceStatus Notebook实例状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId Notebook实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LifecycleScriptsName notebook生命周期脚本名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DefaultCodeRepository 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AdditionalCodeRepositories 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -254,20 +262,12 @@ class DescribeNotebookInstanceResponse extends AbstractModel
             $this->RootAccess = $param["RootAccess"];
         }
 
-        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
-            $this->SecurityGroupIds = $param["SecurityGroupIds"];
-        }
-
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
         }
 
         if (array_key_exists("VolumeSizeInGB",$param) and $param["VolumeSizeInGB"] !== null) {
             $this->VolumeSizeInGB = $param["VolumeSizeInGB"];
-        }
-
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
         }
 
         if (array_key_exists("FailureReason",$param) and $param["FailureReason"] !== null) {
@@ -282,10 +282,6 @@ class DescribeNotebookInstanceResponse extends AbstractModel
             $this->LastModifiedTime = $param["LastModifiedTime"];
         }
 
-        if (array_key_exists("NetworkInterfaceId",$param) and $param["NetworkInterfaceId"] !== null) {
-            $this->NetworkInterfaceId = $param["NetworkInterfaceId"];
-        }
-
         if (array_key_exists("LogUrl",$param) and $param["LogUrl"] !== null) {
             $this->LogUrl = $param["LogUrl"];
         }
@@ -296,6 +292,18 @@ class DescribeNotebookInstanceResponse extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("LifecycleScriptsName",$param) and $param["LifecycleScriptsName"] !== null) {
+            $this->LifecycleScriptsName = $param["LifecycleScriptsName"];
+        }
+
+        if (array_key_exists("DefaultCodeRepository",$param) and $param["DefaultCodeRepository"] !== null) {
+            $this->DefaultCodeRepository = $param["DefaultCodeRepository"];
+        }
+
+        if (array_key_exists("AdditionalCodeRepositories",$param) and $param["AdditionalCodeRepositories"] !== null) {
+            $this->AdditionalCodeRepositories = $param["AdditionalCodeRepositories"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

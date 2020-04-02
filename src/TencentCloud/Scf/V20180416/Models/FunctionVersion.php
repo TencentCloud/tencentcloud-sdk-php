@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置版本描述信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAddTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAddTime(string $AddTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModTime() 获取更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModTime(string $ModTime) 设置更新时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -41,9 +49,25 @@ class FunctionVersion extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
+
+    /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AddTime;
+
+    /**
+     * @var string 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModTime;
     /**
      * @param string $Version 函数版本名称
      * @param string $Description 版本描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AddTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -64,6 +88,14 @@ class FunctionVersion extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
+            $this->AddTime = $param["AddTime"];
+        }
+
+        if (array_key_exists("ModTime",$param) and $param["ModTime"] !== null) {
+            $this->ModTime = $param["ModTime"];
         }
     }
 }

@@ -44,14 +44,14 @@ NORMAL_CVM：普通云服务器；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
- * @method string getNetDetectId() 获取网络探测实例ID。形如：netd-12345678。
- * @method void setNetDetectId(string $NetDetectId) 设置网络探测实例ID。形如：netd-12345678。
- * @method string getVpcId() 获取`VPC`实例`ID`。形如：`vpc-12345678`
- * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。形如：`vpc-12345678`
- * @method string getSubnetId() 获取子网实例ID。形如：subnet-12345678。
- * @method void setSubnetId(string $SubnetId) 设置子网实例ID。形如：subnet-12345678。
- * @method string getNetDetectName() 获取网络探测名称，最大长度不能超过60个字节。
- * @method void setNetDetectName(string $NetDetectName) 设置网络探测名称，最大长度不能超过60个字节。
+ * @method string getNetDetectId() 获取网络探测实例ID。形如：netd-12345678。该参数与（VpcId，SubnetId，NetDetectName），至少要有一个。当NetDetectId存在时，使用NetDetectId。
+ * @method void setNetDetectId(string $NetDetectId) 设置网络探测实例ID。形如：netd-12345678。该参数与（VpcId，SubnetId，NetDetectName），至少要有一个。当NetDetectId存在时，使用NetDetectId。
+ * @method string getVpcId() 获取`VPC`实例`ID`。形如：`vpc-12345678`。该参数与（SubnetId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
+ * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。形如：`vpc-12345678`。该参数与（SubnetId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
+ * @method string getSubnetId() 获取子网实例ID。形如：subnet-12345678。该参数与（VpcId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
+ * @method void setSubnetId(string $SubnetId) 设置子网实例ID。形如：subnet-12345678。该参数与（VpcId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
+ * @method string getNetDetectName() 获取网络探测名称，最大长度不能超过60个字节。该参数与（VpcId，SubnetId）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
+ * @method void setNetDetectName(string $NetDetectName) 设置网络探测名称，最大长度不能超过60个字节。该参数与（VpcId，SubnetId）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
  */
 
 /**
@@ -85,22 +85,22 @@ NORMAL_CVM：普通云服务器；
     public $NextHopDestination;
 
     /**
-     * @var string 网络探测实例ID。形如：netd-12345678。
+     * @var string 网络探测实例ID。形如：netd-12345678。该参数与（VpcId，SubnetId，NetDetectName），至少要有一个。当NetDetectId存在时，使用NetDetectId。
      */
     public $NetDetectId;
 
     /**
-     * @var string `VPC`实例`ID`。形如：`vpc-12345678`
+     * @var string `VPC`实例`ID`。形如：`vpc-12345678`。该参数与（SubnetId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
      */
     public $VpcId;
 
     /**
-     * @var string 子网实例ID。形如：subnet-12345678。
+     * @var string 子网实例ID。形如：subnet-12345678。该参数与（VpcId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
      */
     public $SubnetId;
 
     /**
-     * @var string 网络探测名称，最大长度不能超过60个字节。
+     * @var string 网络探测名称，最大长度不能超过60个字节。该参数与（VpcId，SubnetId）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
      */
     public $NetDetectName;
     /**
@@ -117,10 +117,10 @@ NORMAL_CVM：普通云服务器；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-     * @param string $NetDetectId 网络探测实例ID。形如：netd-12345678。
-     * @param string $VpcId `VPC`实例`ID`。形如：`vpc-12345678`
-     * @param string $SubnetId 子网实例ID。形如：subnet-12345678。
-     * @param string $NetDetectName 网络探测名称，最大长度不能超过60个字节。
+     * @param string $NetDetectId 网络探测实例ID。形如：netd-12345678。该参数与（VpcId，SubnetId，NetDetectName），至少要有一个。当NetDetectId存在时，使用NetDetectId。
+     * @param string $VpcId `VPC`实例`ID`。形如：`vpc-12345678`。该参数与（SubnetId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
+     * @param string $SubnetId 子网实例ID。形如：subnet-12345678。该参数与（VpcId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
+     * @param string $NetDetectName 网络探测名称，最大长度不能超过60个字节。该参数与（VpcId，SubnetId）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
      */
     function __construct()
     {

@@ -18,9 +18,9 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getFieldName() 获取属性字段名称
+ * @method string getFieldName() 获取属性字段名称，对应数据模板中功能属性的标识符
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFieldName(string $FieldName) 设置属性字段名称
+ * @method void setFieldName(string $FieldName) 设置属性字段名称，对应数据模板中功能属性的标识符
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getListover() 获取数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDeviceDataHistoryResponse extends AbstractModel
 {
     /**
-     * @var string 属性字段名称
+     * @var string 属性字段名称，对应数据模板中功能属性的标识符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FieldName;
@@ -72,7 +72,7 @@ class DescribeDeviceDataHistoryResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $FieldName 属性字段名称
+     * @param string $FieldName 属性字段名称，对应数据模板中功能属性的标识符
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Listover 数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。
 注意：此字段可能返回 null，表示取不到有效值。

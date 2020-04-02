@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAffinity(array $Affinity) 设置置放群组的亲和性策略，目前仅支持取值为1，策略1表示同台物理机上限制实例的个数。
  * @method integer getLimitNum() 获取置放群组亲和性策略1中同台物理机上实例的限制个数。
  * @method void setLimitNum(integer $LimitNum) 设置置放群组亲和性策略1中同台物理机上实例的限制个数。
+ * @method array getDevClass() 获取置放群组机型属性，可选参数：SH12+SH02、TS85。
+ * @method void setDevClass(array $DevClass) 设置置放群组机型属性，可选参数：SH12+SH02、TS85。
  */
 
 /**
@@ -52,11 +54,17 @@ class CreateDeployGroupRequest extends AbstractModel
      * @var integer 置放群组亲和性策略1中同台物理机上实例的限制个数。
      */
     public $LimitNum;
+
+    /**
+     * @var array 置放群组机型属性，可选参数：SH12+SH02、TS85。
+     */
+    public $DevClass;
     /**
      * @param string $DeployGroupName 置放群组名称，最长不能超过60个字符。
      * @param string $Description 置放群组描述，最长不能超过200个字符。
      * @param array $Affinity 置放群组的亲和性策略，目前仅支持取值为1，策略1表示同台物理机上限制实例的个数。
      * @param integer $LimitNum 置放群组亲和性策略1中同台物理机上实例的限制个数。
+     * @param array $DevClass 置放群组机型属性，可选参数：SH12+SH02、TS85。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateDeployGroupRequest extends AbstractModel
 
         if (array_key_exists("LimitNum",$param) and $param["LimitNum"] !== null) {
             $this->LimitNum = $param["LimitNum"];
+        }
+
+        if (array_key_exists("DevClass",$param) and $param["DevClass"] !== null) {
+            $this->DevClass = $param["DevClass"];
         }
     }
 }

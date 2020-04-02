@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrpcFunc(string $TrpcFunc) 设置TRPC调用服务接口，ForwardType为TRPC时有效
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getQuicStatus() 获取QUIC状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQuicStatus(string $QuicStatus) 设置QUIC状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -191,6 +195,12 @@ class RuleOutput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrpcFunc;
+
+    /**
+     * @var string QUIC状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QuicStatus;
     /**
      * @param string $LocationId 转发规则的 ID
      * @param string $Domain 转发规则的域名。
@@ -220,6 +230,8 @@ class RuleOutput extends AbstractModel
      * @param string $TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrpcFunc TRPC调用服务接口，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $QuicStatus QUIC状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -316,6 +328,10 @@ class RuleOutput extends AbstractModel
 
         if (array_key_exists("TrpcFunc",$param) and $param["TrpcFunc"] !== null) {
             $this->TrpcFunc = $param["TrpcFunc"];
+        }
+
+        if (array_key_exists("QuicStatus",$param) and $param["QuicStatus"] !== null) {
+            $this->QuicStatus = $param["QuicStatus"];
         }
     }
 }

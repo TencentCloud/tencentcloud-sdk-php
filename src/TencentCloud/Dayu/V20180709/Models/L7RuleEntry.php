@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCCThreshold(integer $CCThreshold) 设置HTTPS协议的CC防护阈值
  * @method string getCCLevel() 获取HTTPS协议的CC防护等级
  * @method void setCCLevel(string $CCLevel) 设置HTTPS协议的CC防护等级
+ * @method integer getHttpsToHttpEnable() 获取是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHttpsToHttpEnable(integer $HttpsToHttpEnable) 设置是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -150,6 +154,12 @@ class L7RuleEntry extends AbstractModel
      * @var string HTTPS协议的CC防护等级
      */
     public $CCLevel;
+
+    /**
+     * @var integer 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HttpsToHttpEnable;
     /**
      * @param string $Protocol 转发协议，取值[http, https]
      * @param string $Domain 转发域名
@@ -169,6 +179,8 @@ class L7RuleEntry extends AbstractModel
      * @param integer $CCEnable HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)]
      * @param integer $CCThreshold HTTPS协议的CC防护阈值
      * @param string $CCLevel HTTPS协议的CC防护等级
+     * @param integer $HttpsToHttpEnable 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -257,6 +269,10 @@ class L7RuleEntry extends AbstractModel
 
         if (array_key_exists("CCLevel",$param) and $param["CCLevel"] !== null) {
             $this->CCLevel = $param["CCLevel"];
+        }
+
+        if (array_key_exists("HttpsToHttpEnable",$param) and $param["HttpsToHttpEnable"] !== null) {
+            $this->HttpsToHttpEnable = $param["HttpsToHttpEnable"];
         }
     }
 }

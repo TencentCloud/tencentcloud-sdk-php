@@ -28,6 +28,7 @@ use TencentCloud\Tag\V20180813\Models as Models;
 * @method Models\DeleteTagResponse DeleteTag(Models\DeleteTagRequest $req) 本接口用于删除一对标签键和标签值
 * @method Models\DescribeResourceTagsResponse DescribeResourceTags(Models\DescribeResourceTagsRequest $req) 查询资源关联标签
 * @method Models\DescribeResourceTagsByResourceIdsResponse DescribeResourceTagsByResourceIds(Models\DescribeResourceTagsByResourceIdsRequest $req) 用于查询已有资源标签键值对
+* @method Models\DescribeResourceTagsByTagKeysResponse DescribeResourceTagsByTagKeys(Models\DescribeResourceTagsByTagKeysRequest $req) 根据标签键获取资源标签
 * @method Models\DescribeResourcesByTagsResponse DescribeResourcesByTags(Models\DescribeResourcesByTagsRequest $req) 通过标签查询资源列表
 * @method Models\DescribeTagKeysResponse DescribeTagKeys(Models\DescribeTagKeysRequest $req) 用于查询已建立的标签列表中的标签键。
 

@@ -180,6 +180,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceClass(string $ServiceClass) 设置集群类型:EMR,CLICKHOUSE,DRUID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAliasInfo() 获取集群所有节点的别名序列化
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAliasInfo(string $AliasInfo) 设置集群所有节点的别名序列化
+注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
@@ -375,6 +379,12 @@ class ClusterInstancesInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceClass;
+
+    /**
+     * @var string 集群所有节点的别名序列化
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AliasInfo;
     /**
      * @param integer $Id ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -456,6 +466,8 @@ class ClusterInstancesInfo extends AbstractModel
      * @param string $HiveMetaDb Hive元数据信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceClass 集群类型:EMR,CLICKHOUSE,DRUID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AliasInfo 集群所有节点的别名序列化
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -582,6 +594,10 @@ class ClusterInstancesInfo extends AbstractModel
 
         if (array_key_exists("ServiceClass",$param) and $param["ServiceClass"] !== null) {
             $this->ServiceClass = $param["ServiceClass"];
+        }
+
+        if (array_key_exists("AliasInfo",$param) and $param["AliasInfo"] !== null) {
+            $this->AliasInfo = $param["AliasInfo"];
         }
     }
 }

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrpcCallee(string $TrpcCallee) 设置TRPC被调服务器路由，ForwardType为TRPC时必填
  * @method string getTrpcFunc() 获取TRPC调用服务接口，ForwardType为TRPC时必填
  * @method void setTrpcFunc(string $TrpcFunc) 设置TRPC调用服务接口，ForwardType为TRPC时必填
+ * @method boolean getQuic() 获取是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
+ * @method void setQuic(boolean $Quic) 设置是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
  */
 
 /**
@@ -111,6 +113,11 @@ class RuleInput extends AbstractModel
      * @var string TRPC调用服务接口，ForwardType为TRPC时必填
      */
     public $TrpcFunc;
+
+    /**
+     * @var boolean 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
+     */
+    public $Quic;
     /**
      * @param string $Domain 转发规则的域名。长度限制为：1~80。
      * @param string $Url 转发规则的路径。长度限制为：1~200。
@@ -125,6 +132,7 @@ class RuleInput extends AbstractModel
      * @param string $TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
      * @param string $TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填
      * @param string $TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填
+     * @param boolean $Quic 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
      */
     function __construct()
     {
@@ -186,6 +194,10 @@ class RuleInput extends AbstractModel
 
         if (array_key_exists("TrpcFunc",$param) and $param["TrpcFunc"] !== null) {
             $this->TrpcFunc = $param["TrpcFunc"];
+        }
+
+        if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
+            $this->Quic = $param["Quic"];
         }
     }
 }

@@ -90,9 +90,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) 设置分散置放群组ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIPv6Addresses() 获取实例的IPv6地址。
+ * @method array getIPv6Addresses() 获取实例的IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIPv6Addresses(string $IPv6Addresses) 设置实例的IPv6地址。
+ * @method void setIPv6Addresses(array $IPv6Addresses) 设置实例的IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCamRoleName() 获取CAM角色名。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -258,7 +258,7 @@ class Instance extends AbstractModel
     public $DisasterRecoverGroupId;
 
     /**
-     * @var string 实例的IPv6地址。
+     * @var array 实例的IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IPv6Addresses;
@@ -305,7 +305,7 @@ class Instance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DisasterRecoverGroupId 分散置放群组ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IPv6Addresses 实例的IPv6地址。
+     * @param array $IPv6Addresses 实例的IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CamRoleName CAM角色名。
 注意：此字段可能返回 null，表示取不到有效值。

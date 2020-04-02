@@ -14,40 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tione\V20191022\Models;
+namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getKey() 获取key
+ * @method string getResourceId() 获取资源唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKey(string $Key) 设置key
+ * @method void setResourceId(string $ResourceId) 设置资源唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getValue() 获取value
+ * @method array getTagKeyValues() 获取标签键值对
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(string $Value) 设置value
+ * @method void setTagKeyValues(array $TagKeyValues) 设置标签键值对
 注意：此字段可能返回 null，表示取不到有效值。
  */
 
 /**
- *notebook标签
+ *资源标签键值
  */
-class Tag extends AbstractModel
+class ResourceIdTag extends AbstractModel
 {
     /**
-     * @var string key
+     * @var string 资源唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Key;
+    public $ResourceId;
 
     /**
-     * @var string value
+     * @var array 标签键值对
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Value;
+    public $TagKeyValues;
     /**
-     * @param string $Key key
+     * @param string $ResourceId 资源唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Value value
+     * @param array $TagKeyValues 标签键值对
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +62,17 @@ class Tag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("TagKeyValues",$param) and $param["TagKeyValues"] !== null) {
+            $this->TagKeyValues = [];
+            foreach ($param["TagKeyValues"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagKeyValues, $obj);
+            }
         }
     }
 }

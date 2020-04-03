@@ -92,5 +92,15 @@ $client = new OcrClient($cred, 'ap-beijing', $this->clientProfile);
 
 此 SDK 依赖的 GuzzleHttp 需要开启 php_curl 扩展，查看环境上的 php.ini 环境确认是否已启用，例如在 Linux 环境下，PHP 7.1 版本，托管在 apache 下的服务，可以打开 /etc/php/7.1/apache2/php.ini 中查看 extension=php_curl.dll 配置项是否已被注释，请删除此项配置前的注释符并重启 apache。
 
+# 常见问题
+
+## Web 访问异常
+
+命令行下执行正常，但是放在 Web 服务器执行则报错：
+
+cURL error 0: The cURL request was retried 3 times and did not succeed. The most likely reason for the failure is that cURL was unable to rewind the body of the request and subsequent retries resulted in the same error. Turn on the debug option to see what went wrong. See https://bugs.php.net/bug.php?id=47204 for more information. (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+此问题出现情况不一。可以运行 `php -r "echo sys_get_temp_dir();"` 打印系统默认临时目录绝对路径，然后在 `php.ini` 配置 `sys_temp_dir` 为这个值尝试是否能解决。
+
 # 旧版SDK
 新版SDK兼容旧版SDK。旧版本的SDK存放于QcloudApi目录，但不再维护更新，推荐使用新版SDK。

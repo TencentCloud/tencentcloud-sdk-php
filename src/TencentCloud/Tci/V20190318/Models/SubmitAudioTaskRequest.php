@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceEncodeType(integer $VoiceEncodeType) 设置语音编码类型 1:pcm
  * @method integer getVoiceFileType() 获取语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
  * @method void setVoiceFileType(integer $VoiceFileType) 设置语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
- * @method Function getFunctions() 获取功能开关列表，表示是否需要打开相应的功能，返回相应的信息
- * @method void setFunctions(Function $Functions) 设置功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+ * @method FunctionInfo getFunctions() 获取功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+ * @method void setFunctions(FunctionInfo $Functions) 设置功能开关列表，表示是否需要打开相应的功能，返回相应的信息
  * @method string getFileType() 获取视频文件类型，默认点播，直播填 live_url
  * @method void setFileType(string $FileType) 设置视频文件类型，默认点播，直播填 live_url
  * @method integer getMuteThreshold() 获取静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
@@ -62,7 +62,7 @@ class SubmitAudioTaskRequest extends AbstractModel
     public $VoiceFileType;
 
     /**
-     * @var Function 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+     * @var FunctionInfo 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      */
     public $Functions;
 
@@ -85,7 +85,7 @@ class SubmitAudioTaskRequest extends AbstractModel
      * @param string $Url 音频URL。客户请求为URL方式时必须带此字段指名音频的url。
      * @param integer $VoiceEncodeType 语音编码类型 1:pcm
      * @param integer $VoiceFileType 语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
-     * @param Function $Functions 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+     * @param FunctionInfo $Functions 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      * @param string $FileType 视频文件类型，默认点播，直播填 live_url
      * @param integer $MuteThreshold 静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
      * @param array $VocabLibNameList 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
@@ -119,8 +119,7 @@ class SubmitAudioTaskRequest extends AbstractModel
         }
 
         if (array_key_exists("Functions",$param) and $param["Functions"] !== null) {
-            $dynamicClassNameAvoidKeywordConflict = "Function";
-            $this->Functions = new $dynamicClassNameAvoidKeywordConflict();
+            $this->Functions = new FunctionInfo();
             $this->Functions->deserialize($param["Functions"]);
         }
 

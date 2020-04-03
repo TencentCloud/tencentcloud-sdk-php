@@ -33,7 +33,7 @@ use TencentCloud\Common\AbstractModel;
 /**
  *功能开关列表，表示是否需要打开相应的功能，返回相应的信息
  */
-class Function extends AbstractModel
+class FunctionInfo extends AbstractModel
 {
     /**
      * @var boolean 输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本

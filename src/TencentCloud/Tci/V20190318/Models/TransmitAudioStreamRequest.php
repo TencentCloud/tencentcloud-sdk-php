@@ -18,8 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method Function getFunctions() 获取功能开关列表，表示是否需要打开相应的功能，返回相应的信息
- * @method void setFunctions(Function $Functions) 设置功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+ * @method FunctionInfo getFunctions() 获取功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+ * @method void setFunctions(FunctionInfo $Functions) 设置功能开关列表，表示是否需要打开相应的功能，返回相应的信息
  * @method integer getSeqId() 获取流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义。
  * @method void setSeqId(integer $SeqId) 设置流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义。
  * @method string getSessionId() 获取语音段唯一标识，一个完整语音一个SessionId。
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class TransmitAudioStreamRequest extends AbstractModel
 {
     /**
-     * @var Function 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+     * @var FunctionInfo 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      */
     public $Functions;
 
@@ -95,7 +95,7 @@ class TransmitAudioStreamRequest extends AbstractModel
      */
     public $VocabLibNameList;
     /**
-     * @param Function $Functions 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+     * @param FunctionInfo $Functions 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      * @param integer $SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义。
      * @param string $SessionId 语音段唯一标识，一个完整语音一个SessionId。
      * @param string $UserVoiceData 当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
@@ -119,8 +119,7 @@ class TransmitAudioStreamRequest extends AbstractModel
             return;
         }
         if (array_key_exists("Functions",$param) and $param["Functions"] !== null) {
-            $dynamicClassNameAvoidKeywordConflict = "Function";
-            $this->Functions = new $dynamicClassNameAvoidKeywordConflict();
+            $this->Functions = new FunctionInfo();
             $this->Functions->deserialize($param["Functions"]);
         }
 

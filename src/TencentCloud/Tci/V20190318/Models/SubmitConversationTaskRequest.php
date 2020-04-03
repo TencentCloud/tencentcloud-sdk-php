@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceEncodeType(integer $VoiceEncodeType) 设置语音编码类型 1:pcm
  * @method integer getVoiceFileType() 获取语音文件类型 1:raw, 2:wav, 3:mp3（三种格式目前仅支持16k采样率16bit）
  * @method void setVoiceFileType(integer $VoiceFileType) 设置语音文件类型 1:raw, 2:wav, 3:mp3（三种格式目前仅支持16k采样率16bit）
- * @method Function getFunctions() 获取功能开关列表，表示是否需要打开相应的功能，返回相应的信息
- * @method void setFunctions(Function $Functions) 设置功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+ * @method FunctionInfo getFunctions() 获取功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+ * @method void setFunctions(FunctionInfo $Functions) 设置功能开关列表，表示是否需要打开相应的功能，返回相应的信息
  * @method array getVocabLibNameList() 获取识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
  * @method void setVocabLibNameList(array $VocabLibNameList) 设置识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
  */
@@ -65,7 +65,7 @@ class SubmitConversationTaskRequest extends AbstractModel
     public $VoiceFileType;
 
     /**
-     * @var Function 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+     * @var FunctionInfo 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      */
     public $Functions;
 
@@ -79,7 +79,7 @@ class SubmitConversationTaskRequest extends AbstractModel
      * @param string $TeacherUrl 教师音频流
      * @param integer $VoiceEncodeType 语音编码类型 1:pcm
      * @param integer $VoiceFileType 语音文件类型 1:raw, 2:wav, 3:mp3（三种格式目前仅支持16k采样率16bit）
-     * @param Function $Functions 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+     * @param FunctionInfo $Functions 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      * @param array $VocabLibNameList 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      */
     function __construct()
@@ -115,8 +115,7 @@ class SubmitConversationTaskRequest extends AbstractModel
         }
 
         if (array_key_exists("Functions",$param) and $param["Functions"] !== null) {
-            $dynamicClassNameAvoidKeywordConflict = "Function";
-            $this->Functions = new $dynamicClassNameAvoidKeywordConflict();
+            $this->Functions = new FunctionInfo();
             $this->Functions->deserialize($param["Functions"]);
         }
 

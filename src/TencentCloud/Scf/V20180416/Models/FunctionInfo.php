@@ -45,7 +45,7 @@ use TencentCloud\Common\AbstractModel;
 /**
  *函数列表
  */
-class Function extends AbstractModel
+class FunctionInfo extends AbstractModel
 {
     /**
      * @var string 修改时间

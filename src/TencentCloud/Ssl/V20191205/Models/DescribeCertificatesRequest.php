@@ -18,18 +18,18 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getOffset() 获取分页偏移量，从0开始
- * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始
+ * @method integer getOffset() 获取分页偏移量，从0开始。
+ * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始。
  * @method integer getLimit() 获取每页数量。
  * @method void setLimit(integer $Limit) 设置每页数量。
  * @method string getSearchKey() 获取搜索关键词。
  * @method void setSearchKey(string $SearchKey) 设置搜索关键词。
- * @method string getCertificateType() 获取证书类型，可选值：CA，SVR。
- * @method void setCertificateType(string $CertificateType) 设置证书类型，可选值：CA，SVR。
- * @method integer getProjectId() 获取项目ID。
- * @method void setProjectId(integer $ProjectId) 设置项目ID。
- * @method string getExpirationSort() 获取按到期时间排序：DESC降序， ASC 升序。
- * @method void setExpirationSort(string $ExpirationSort) 设置按到期时间排序：DESC降序， ASC 升序。
+ * @method string getCertificateType() 获取证书类型：CA = 客户端证书，SVR = 服务器证书。
+ * @method void setCertificateType(string $CertificateType) 设置证书类型：CA = 客户端证书，SVR = 服务器证书。
+ * @method integer getProjectId() 获取项目 ID。
+ * @method void setProjectId(integer $ProjectId) 设置项目 ID。
+ * @method string getExpirationSort() 获取按到期时间排序：DESC = 降序， ASC = 升序。
+ * @method void setExpirationSort(string $ExpirationSort) 设置按到期时间排序：DESC = 降序， ASC = 升序。
  * @method array getCertificateStatus() 获取证书状态。
  * @method void setCertificateStatus(array $CertificateStatus) 设置证书状态。
  * @method integer getDeployable() 获取是否可部署，可选值：1 = 可部署，0 =  不可部署。
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCertificatesRequest extends AbstractModel
 {
     /**
-     * @var integer 分页偏移量，从0开始
+     * @var integer 分页偏移量，从0开始。
      */
     public $Offset;
 
@@ -57,17 +57,17 @@ class DescribeCertificatesRequest extends AbstractModel
     public $SearchKey;
 
     /**
-     * @var string 证书类型，可选值：CA，SVR。
+     * @var string 证书类型：CA = 客户端证书，SVR = 服务器证书。
      */
     public $CertificateType;
 
     /**
-     * @var integer 项目ID。
+     * @var integer 项目 ID。
      */
     public $ProjectId;
 
     /**
-     * @var string 按到期时间排序：DESC降序， ASC 升序。
+     * @var string 按到期时间排序：DESC = 降序， ASC = 升序。
      */
     public $ExpirationSort;
 
@@ -81,12 +81,12 @@ class DescribeCertificatesRequest extends AbstractModel
      */
     public $Deployable;
     /**
-     * @param integer $Offset 分页偏移量，从0开始
+     * @param integer $Offset 分页偏移量，从0开始。
      * @param integer $Limit 每页数量。
      * @param string $SearchKey 搜索关键词。
-     * @param string $CertificateType 证书类型，可选值：CA，SVR。
-     * @param integer $ProjectId 项目ID。
-     * @param string $ExpirationSort 按到期时间排序：DESC降序， ASC 升序。
+     * @param string $CertificateType 证书类型：CA = 客户端证书，SVR = 服务器证书。
+     * @param integer $ProjectId 项目 ID。
+     * @param string $ExpirationSort 按到期时间排序：DESC = 降序， ASC = 升序。
      * @param array $CertificateStatus 证书状态。
      * @param integer $Deployable 是否可部署，可选值：1 = 可部署，0 =  不可部署。
      */

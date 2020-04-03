@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncryptionType(string $EncryptionType) 设置加密类型 加密类型，1表示证书认证，2表示签名认证。
  * @method string getNetType() 获取连接类型 可以填写 wifi cellular else
  * @method void setNetType(string $NetType) 设置连接类型 可以填写 wifi cellular else
- * @method integer getDataProtocol() 获取数据协议 (1 使用物模型)
- * @method void setDataProtocol(integer $DataProtocol) 设置数据协议 (1 使用物模型)
+ * @method integer getDataProtocol() 获取数据协议 (1 使用物模型 2 为自定义)
+ * @method void setDataProtocol(integer $DataProtocol) 设置数据协议 (1 使用物模型 2 为自定义)
  * @method string getProductDesc() 获取产品描述
  * @method void setProductDesc(string $ProductDesc) 设置产品描述
  * @method string getProjectId() 获取产品的项目ID
@@ -67,7 +67,7 @@ class CreateStudioProductRequest extends AbstractModel
     public $NetType;
 
     /**
-     * @var integer 数据协议 (1 使用物模型)
+     * @var integer 数据协议 (1 使用物模型 2 为自定义)
      */
     public $DataProtocol;
 
@@ -86,7 +86,7 @@ class CreateStudioProductRequest extends AbstractModel
      * @param integer $ProductType 产品类型 填写 ( 0 普通产品 )
      * @param string $EncryptionType 加密类型 加密类型，1表示证书认证，2表示签名认证。
      * @param string $NetType 连接类型 可以填写 wifi cellular else
-     * @param integer $DataProtocol 数据协议 (1 使用物模型)
+     * @param integer $DataProtocol 数据协议 (1 使用物模型 2 为自定义)
      * @param string $ProductDesc 产品描述
      * @param string $ProjectId 产品的项目ID
      */

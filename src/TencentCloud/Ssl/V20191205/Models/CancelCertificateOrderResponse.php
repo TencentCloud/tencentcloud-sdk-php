@@ -18,8 +18,8 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCertificateId() 获取取消订单成功的证书id
- * @method void setCertificateId(string $CertificateId) 设置取消订单成功的证书id
+ * @method string getCertificateId() 获取取消订单成功的证书 ID。
+ * @method void setCertificateId(string $CertificateId) 设置取消订单成功的证书 ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CancelCertificateOrderResponse extends AbstractModel
 {
     /**
-     * @var string 取消订单成功的证书id
+     * @var string 取消订单成功的证书 ID。
      */
     public $CertificateId;
 
@@ -39,7 +39,7 @@ class CancelCertificateOrderResponse extends AbstractModel
      */
     public $RequestId;
     /**
-     * @param string $CertificateId 取消订单成功的证书id
+     * @param string $CertificateId 取消订单成功的证书 ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

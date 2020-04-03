@@ -20,10 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getType() 获取类型，取值有：
 <li>PERSON：个人。</li>
+<li>TEAM：团队。</li>
  * @method void setType(string $Type) 设置类型，取值有：
 <li>PERSON：个人。</li>
- * @method string getId() 获取Id，当 Type=PERSON，取值为用户 Id。
- * @method void setId(string $Id) 设置Id，当 Type=PERSON，取值为用户 Id。
+<li>TEAM：团队。</li>
+ * @method string getId() 获取Id，当 Type=PERSON，取值为用户 Id，当 Type=TEAM，取值为团队 Id。
+ * @method void setId(string $Id) 设置Id，当 Type=PERSON，取值为用户 Id，当 Type=TEAM，取值为团队 Id。
  */
 
 /**
@@ -34,17 +36,19 @@ class Entity extends AbstractModel
     /**
      * @var string 类型，取值有：
 <li>PERSON：个人。</li>
+<li>TEAM：团队。</li>
      */
     public $Type;
 
     /**
-     * @var string Id，当 Type=PERSON，取值为用户 Id。
+     * @var string Id，当 Type=PERSON，取值为用户 Id，当 Type=TEAM，取值为团队 Id。
      */
     public $Id;
     /**
      * @param string $Type 类型，取值有：
 <li>PERSON：个人。</li>
-     * @param string $Id Id，当 Type=PERSON，取值为用户 Id。
+<li>TEAM：团队。</li>
+     * @param string $Id Id，当 Type=PERSON，取值为用户 Id，当 Type=TEAM，取值为团队 Id。
      */
     function __construct()
     {

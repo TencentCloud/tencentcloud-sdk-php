@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndDate(string $EndDate) 设置有效期截止时间
  * @method string getCardCode() 获取证号
  * @method void setCardCode(string $CardCode) 设置证号
+ * @method string getArchivesCode() 获取档案编号
+ * @method void setArchivesCode(string $ArchivesCode) 设置档案编号
+ * @method string getRecord() 获取记录
+ * @method void setRecord(string $Record) 设置记录
  * @method array getRecognizeWarnCode() 获取Code 告警码列表和释义：
 -9102  复印件告警
 -9103  翻拍件告警
@@ -118,6 +122,16 @@ class DriverLicenseOCRResponse extends AbstractModel
     public $CardCode;
 
     /**
+     * @var string 档案编号
+     */
+    public $ArchivesCode;
+
+    /**
+     * @var string 记录
+     */
+    public $Record;
+
+    /**
      * @var array Code 告警码列表和释义：
 -9102  复印件告警
 -9103  翻拍件告警
@@ -150,6 +164,8 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
      * @param string $StartDate 有效期开始时间
      * @param string $EndDate 有效期截止时间
      * @param string $CardCode 证号
+     * @param string $ArchivesCode 档案编号
+     * @param string $Record 记录
      * @param array $RecognizeWarnCode Code 告警码列表和释义：
 -9102  复印件告警
 -9103  翻拍件告警
@@ -212,6 +228,14 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
 
         if (array_key_exists("CardCode",$param) and $param["CardCode"] !== null) {
             $this->CardCode = $param["CardCode"];
+        }
+
+        if (array_key_exists("ArchivesCode",$param) and $param["ArchivesCode"] !== null) {
+            $this->ArchivesCode = $param["ArchivesCode"];
+        }
+
+        if (array_key_exists("Record",$param) and $param["Record"] !== null) {
+            $this->Record = $param["Record"];
         }
 
         if (array_key_exists("RecognizeWarnCode",$param) and $param["RecognizeWarnCode"] !== null) {

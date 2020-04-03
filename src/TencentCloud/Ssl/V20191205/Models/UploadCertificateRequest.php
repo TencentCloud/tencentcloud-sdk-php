@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * @method string getCertificatePublicKey() 获取证书公钥。
  * @method void setCertificatePublicKey(string $CertificatePublicKey) 设置证书公钥。
- * @method string getCertificatePrivateKey() 获取私钥内容，证书类型为SVR时必填，为CA时可不填。
- * @method void setCertificatePrivateKey(string $CertificatePrivateKey) 设置私钥内容，证书类型为SVR时必填，为CA时可不填。
- * @method string getCertificateType() 获取证书类型，默认SVR。CA = 客户端证书，SVR = 服务器证书。
- * @method void setCertificateType(string $CertificateType) 设置证书类型，默认SVR。CA = 客户端证书，SVR = 服务器证书。
- * @method string getAlias() 获取证书别名。
- * @method void setAlias(string $Alias) 设置证书别名。
- * @method integer getProjectId() 获取项目id。
- * @method void setProjectId(integer $ProjectId) 设置项目id。
+ * @method string getCertificatePrivateKey() 获取私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。
+ * @method void setCertificatePrivateKey(string $CertificatePrivateKey) 设置私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。
+ * @method string getCertificateType() 获取证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
+ * @method void setCertificateType(string $CertificateType) 设置证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
+ * @method string getAlias() 获取备注名称。
+ * @method void setAlias(string $Alias) 设置备注名称。
+ * @method integer getProjectId() 获取项目 ID。
+ * @method void setProjectId(integer $ProjectId) 设置项目 ID。
  */
 
 /**
@@ -41,30 +41,30 @@ class UploadCertificateRequest extends AbstractModel
     public $CertificatePublicKey;
 
     /**
-     * @var string 私钥内容，证书类型为SVR时必填，为CA时可不填。
+     * @var string 私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。
      */
     public $CertificatePrivateKey;
 
     /**
-     * @var string 证书类型，默认SVR。CA = 客户端证书，SVR = 服务器证书。
+     * @var string 证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
      */
     public $CertificateType;
 
     /**
-     * @var string 证书别名。
+     * @var string 备注名称。
      */
     public $Alias;
 
     /**
-     * @var integer 项目id。
+     * @var integer 项目 ID。
      */
     public $ProjectId;
     /**
      * @param string $CertificatePublicKey 证书公钥。
-     * @param string $CertificatePrivateKey 私钥内容，证书类型为SVR时必填，为CA时可不填。
-     * @param string $CertificateType 证书类型，默认SVR。CA = 客户端证书，SVR = 服务器证书。
-     * @param string $Alias 证书别名。
-     * @param integer $ProjectId 项目id。
+     * @param string $CertificatePrivateKey 私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。
+     * @param string $CertificateType 证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
+     * @param string $Alias 备注名称。
+     * @param integer $ProjectId 项目 ID。
      */
     function __construct()
     {

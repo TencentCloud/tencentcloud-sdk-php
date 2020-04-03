@@ -39,10 +39,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTag() 获取人员库信息备注，[0，40]个字符。
  * @method void setTag(string $Tag) 设置人员库信息备注，[0，40]个字符。
  * @method string getFaceModelVersion() 获取人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
-默认为"2.0"。
+2020年4月2日开始，默认为“3.0”，之前使用过本接口的账号若未填写本参数默认为“2.0”。 
 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
  * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
-默认为"2.0"。
+2020年4月2日开始，默认为“3.0”，之前使用过本接口的账号若未填写本参数默认为“2.0”。 
 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
  */
 
@@ -79,7 +79,7 @@ class CreateGroupRequest extends AbstractModel
 
     /**
      * @var string 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
-默认为"2.0"。
+2020年4月2日开始，默认为“3.0”，之前使用过本接口的账号若未填写本参数默认为“2.0”。 
 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
      */
     public $FaceModelVersion;
@@ -95,7 +95,7 @@ class CreateGroupRequest extends AbstractModel
 可在对应人员描述字段中填写内容，登记该人员的学号、工号、手机号等信息。
      * @param string $Tag 人员库信息备注，[0，40]个字符。
      * @param string $FaceModelVersion 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
-默认为"2.0"。
+2020年4月2日开始，默认为“3.0”，之前使用过本接口的账号若未填写本参数默认为“2.0”。 
 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
      */
     function __construct()

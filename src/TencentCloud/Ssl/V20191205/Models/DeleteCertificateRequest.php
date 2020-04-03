@@ -18,8 +18,8 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCertificateId() 获取证书ID。
- * @method void setCertificateId(string $CertificateId) 设置证书ID。
+ * @method string getCertificateId() 获取证书 ID。
+ * @method void setCertificateId(string $CertificateId) 设置证书 ID。
  */
 
 /**
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
 class DeleteCertificateRequest extends AbstractModel
 {
     /**
-     * @var string 证书ID。
+     * @var string 证书 ID。
      */
     public $CertificateId;
     /**
-     * @param string $CertificateId 证书ID。
+     * @param string $CertificateId 证书 ID。
      */
     function __construct()
     {

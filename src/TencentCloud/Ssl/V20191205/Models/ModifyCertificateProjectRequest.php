@@ -18,10 +18,10 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method array getCertificateIdList() 获取需要修改所属项目的证书id集合，最多100个证书
- * @method void setCertificateIdList(array $CertificateIdList) 设置需要修改所属项目的证书id集合，最多100个证书
- * @method integer getProjectId() 获取项目id。
- * @method void setProjectId(integer $ProjectId) 设置项目id。
+ * @method array getCertificateIdList() 获取需要修改所属项目的证书 ID 集合，最多100个证书。
+ * @method void setCertificateIdList(array $CertificateIdList) 设置需要修改所属项目的证书 ID 集合，最多100个证书。
+ * @method integer getProjectId() 获取项目 ID。
+ * @method void setProjectId(integer $ProjectId) 设置项目 ID。
  */
 
 /**
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
 class ModifyCertificateProjectRequest extends AbstractModel
 {
     /**
-     * @var array 需要修改所属项目的证书id集合，最多100个证书
+     * @var array 需要修改所属项目的证书 ID 集合，最多100个证书。
      */
     public $CertificateIdList;
 
     /**
-     * @var integer 项目id。
+     * @var integer 项目 ID。
      */
     public $ProjectId;
     /**
-     * @param array $CertificateIdList 需要修改所属项目的证书id集合，最多100个证书
-     * @param integer $ProjectId 项目id。
+     * @param array $CertificateIdList 需要修改所属项目的证书 ID 集合，最多100个证书。
+     * @param integer $ProjectId 项目 ID。
      */
     function __construct()
     {

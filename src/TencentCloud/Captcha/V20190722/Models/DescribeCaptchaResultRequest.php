@@ -18,8 +18,8 @@ namespace TencentCloud\Captcha\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method integer getCaptchaType() 获取验证码类型，9：滑块验证码
- * @method void setCaptchaType(integer $CaptchaType) 设置验证码类型，9：滑块验证码
+ * @method integer getCaptchaType() 获取固定填值：9。可在控制台配置不同验证码类型。
+ * @method void setCaptchaType(integer $CaptchaType) 设置固定填值：9。可在控制台配置不同验证码类型。
  * @method string getTicket() 获取验证码返回给用户的票据
  * @method void setTicket(string $Ticket) 设置验证码返回给用户的票据
  * @method string getUserIp() 获取用户操作来源的外网 IP
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCaptchaResultRequest extends AbstractModel
 {
     /**
-     * @var integer 验证码类型，9：滑块验证码
+     * @var integer 固定填值：9。可在控制台配置不同验证码类型。
      */
     public $CaptchaType;
 
@@ -102,7 +102,7 @@ class DescribeCaptchaResultRequest extends AbstractModel
      */
     public $NeedGetCaptchaTime;
     /**
-     * @param integer $CaptchaType 验证码类型，9：滑块验证码
+     * @param integer $CaptchaType 固定填值：9。可在控制台配置不同验证码类型。
      * @param string $Ticket 验证码返回给用户的票据
      * @param string $UserIp 用户操作来源的外网 IP
      * @param string $Randstr 验证票据需要的随机字符串

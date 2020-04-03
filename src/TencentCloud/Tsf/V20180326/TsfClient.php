@@ -67,6 +67,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
 * @method Models\DescribeMicroserviceResponse DescribeMicroservice(Models\DescribeMicroserviceRequest $req) 查询微服务详情
 * @method Models\DescribeMicroservicesResponse DescribeMicroservices(Models\DescribeMicroservicesRequest $req) 获取微服务列表
 * @method Models\DescribePkgsResponse DescribePkgs(Models\DescribePkgsRequest $req) 无
+* @method Models\DescribePodInstancesResponse DescribePodInstances(Models\DescribePodInstancesRequest $req) 获取部署组实例列表
 * @method Models\DescribePublicConfigResponse DescribePublicConfig(Models\DescribePublicConfigRequest $req) 查询公共配置（单条）
 * @method Models\DescribePublicConfigReleaseLogsResponse DescribePublicConfigReleaseLogs(Models\DescribePublicConfigReleaseLogsRequest $req) 查询公共配置发布历史
 * @method Models\DescribePublicConfigReleasesResponse DescribePublicConfigReleases(Models\DescribePublicConfigReleasesRequest $req) 查询公共配置发布信息

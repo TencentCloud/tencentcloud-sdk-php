@@ -62,9 +62,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttps(Https $Https) 设置Https配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDisable() 获取域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，没量域名，未备案，带宽封顶，只读。
+ * @method string getDisable() 获取域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，无流量域名，未备案，带宽封顶，只读。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDisable(string $Disable) 设置域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，没量域名，未备案，带宽封顶，只读。
+ * @method void setDisable(string $Disable) 设置域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，无流量域名，未备案，带宽封顶，只读。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ForceRedirect getForceRedirect() 获取访问协议强制跳转配置。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -168,7 +168,7 @@ class DomainDetailInfo extends AbstractModel
     public $Https;
 
     /**
-     * @var string 域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，没量域名，未备案，带宽封顶，只读。
+     * @var string 域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，无流量域名，未备案，带宽封顶，只读。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Disable;
@@ -213,7 +213,7 @@ class DomainDetailInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Https $Https Https配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Disable 域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，没量域名，未备案，带宽封顶，只读。
+     * @param string $Disable 域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，无流量域名，未备案，带宽封顶，只读。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ForceRedirect $ForceRedirect 访问协议强制跳转配置。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -18,12 +18,12 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getCertificateId() 获取证书id。
- * @method void setCertificateId(string $CertificateId) 设置证书id。
- * @method string getCsrType() 获取Csr生成方式: online = 在线生成, parse = 手动上传 。
- * @method void setCsrType(string $CsrType) 设置Csr生成方式: online = 在线生成, parse = 手动上传 。
- * @method string getCsrContent() 获取上传的Csr内容。
- * @method void setCsrContent(string $CsrContent) 设置上传的Csr内容。
+ * @method string getCertificateId() 获取证书 ID。
+ * @method void setCertificateId(string $CertificateId) 设置证书 ID。
+ * @method string getCsrType() 获取CSR 生成方式：online = 在线生成, parse = 手动上传 。
+ * @method void setCsrType(string $CsrType) 设置CSR 生成方式：online = 在线生成, parse = 手动上传 。
+ * @method string getCsrContent() 获取上传的 CSR 内容。
+ * @method void setCsrContent(string $CsrContent) 设置上传的 CSR 内容。
  * @method string getCertificateDomain() 获取绑定证书的域名 。
  * @method void setCertificateDomain(string $CertificateDomain) 设置绑定证书的域名 。
  * @method array getDomainList() 获取上传的域名数组（多域名证书可以上传）。
@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrganizationDivision(string $OrganizationDivision) 设置部门名称。
  * @method string getOrganizationAddress() 获取公司详细地址 。
  * @method void setOrganizationAddress(string $OrganizationAddress) 设置公司详细地址 。
- * @method string getOrganizationCountry() 获取国家名称 如中国:CN 。
- * @method void setOrganizationCountry(string $OrganizationCountry) 设置国家名称 如中国:CN 。
+ * @method string getOrganizationCountry() 获取国家名称 如中国：CN 。
+ * @method void setOrganizationCountry(string $OrganizationCountry) 设置国家名称 如中国：CN 。
  * @method string getOrganizationCity() 获取公司所在城市 。
  * @method void setOrganizationCity(string $OrganizationCity) 设置公司所在城市 。
  * @method string getOrganizationRegion() 获取公司所在省份。
@@ -78,17 +78,17 @@ use TencentCloud\Common\AbstractModel;
 class SubmitCertificateInformationRequest extends AbstractModel
 {
     /**
-     * @var string 证书id。
+     * @var string 证书 ID。
      */
     public $CertificateId;
 
     /**
-     * @var string Csr生成方式: online = 在线生成, parse = 手动上传 。
+     * @var string CSR 生成方式：online = 在线生成, parse = 手动上传 。
      */
     public $CsrType;
 
     /**
-     * @var string 上传的Csr内容。
+     * @var string 上传的 CSR 内容。
      */
     public $CsrContent;
 
@@ -123,7 +123,7 @@ class SubmitCertificateInformationRequest extends AbstractModel
     public $OrganizationAddress;
 
     /**
-     * @var string 国家名称 如中国:CN 。
+     * @var string 国家名称 如中国：CN 。
      */
     public $OrganizationCountry;
 
@@ -207,16 +207,16 @@ class SubmitCertificateInformationRequest extends AbstractModel
      */
     public $ContactPosition;
     /**
-     * @param string $CertificateId 证书id。
-     * @param string $CsrType Csr生成方式: online = 在线生成, parse = 手动上传 。
-     * @param string $CsrContent 上传的Csr内容。
+     * @param string $CertificateId 证书 ID。
+     * @param string $CsrType CSR 生成方式：online = 在线生成, parse = 手动上传 。
+     * @param string $CsrContent 上传的 CSR 内容。
      * @param string $CertificateDomain 绑定证书的域名 。
      * @param array $DomainList 上传的域名数组（多域名证书可以上传）。
      * @param string $KeyPassword 私钥密码 。
      * @param string $OrganizationName 公司名称 。
      * @param string $OrganizationDivision 部门名称。
      * @param string $OrganizationAddress 公司详细地址 。
-     * @param string $OrganizationCountry 国家名称 如中国:CN 。
+     * @param string $OrganizationCountry 国家名称 如中国：CN 。
      * @param string $OrganizationCity 公司所在城市 。
      * @param string $OrganizationRegion 公司所在省份。
      * @param string $PostalCode 公司邮编 。

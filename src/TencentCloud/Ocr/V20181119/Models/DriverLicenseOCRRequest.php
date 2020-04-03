@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
  * @method void setImageUrl(string $ImageUrl) 设置图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
+ * @method string getCardSide() 获取FRONT 为驾驶证主页正面（有红色印章的一面），
+BACK 为驾驶证副页正面（有档案编号的一面）。
+ * @method void setCardSide(string $CardSide) 设置FRONT 为驾驶证主页正面（有红色印章的一面），
+BACK 为驾驶证副页正面（有档案编号的一面）。
  */
 
 /**
@@ -44,11 +48,19 @@ class DriverLicenseOCRRequest extends AbstractModel
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
      */
     public $ImageUrl;
+
+    /**
+     * @var string FRONT 为驾驶证主页正面（有红色印章的一面），
+BACK 为驾驶证副页正面（有档案编号的一面）。
+     */
+    public $CardSide;
     /**
      * @param string $ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      * @param string $ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
+     * @param string $CardSide FRONT 为驾驶证主页正面（有红色印章的一面），
+BACK 为驾驶证副页正面（有档案编号的一面）。
      */
     function __construct()
     {
@@ -68,6 +80,10 @@ class DriverLicenseOCRRequest extends AbstractModel
 
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("CardSide",$param) and $param["CardSide"] !== null) {
+            $this->CardSide = $param["CardSide"];
         }
     }
 }

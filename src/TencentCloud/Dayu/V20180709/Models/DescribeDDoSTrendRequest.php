@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDDoSTrend请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
  * @method string getIp() 获取资源实例的IP
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置统计结束时间
  * @method string getId() 获取资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例）
  * @method void setId(string $Id) 设置资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例）
- */
-
-/**
- *DescribeDDoSTrend请求参数结构体
  */
 class DescribeDDoSTrendRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeDDoSTrendRequest extends AbstractModel
      * @var string 资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例）
      */
     public $Id;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      * @param string $Ip 资源实例的IP
@@ -86,6 +85,7 @@ class DescribeDDoSTrendRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

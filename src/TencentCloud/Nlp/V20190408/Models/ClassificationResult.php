@@ -18,6 +18,8 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文本分类结果
+ *
  * @method string getFirstClassName() 获取一级分类名称
  * @method void setFirstClassName(string $FirstClassName) 设置一级分类名称
  * @method float getFirstClassProbability() 获取一级分类概率
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecondClassName(string $SecondClassName) 设置二级分类名称
  * @method float getSecondClassProbability() 获取二级分类概率
  * @method void setSecondClassProbability(float $SecondClassProbability) 设置二级分类概率
- */
-
-/**
- *文本分类结果
  */
 class ClassificationResult extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ClassificationResult extends AbstractModel
      * @var float 二级分类概率
      */
     public $SecondClassProbability;
+
     /**
      * @param string $FirstClassName 一级分类名称
      * @param float $FirstClassProbability 一级分类概率
@@ -62,6 +61,7 @@ class ClassificationResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

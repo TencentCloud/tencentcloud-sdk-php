@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPC视图子网信息
+ *
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
  * @method string getSubnetName() 获取子网名称
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLbNum(integer $LbNum) 设置内网负载均衡个数
  * @method string getZone() 获取子网所在可用区
  * @method void setZone(string $Zone) 设置子网所在可用区
- */
-
-/**
- *VPC视图子网信息
  */
 class VpcSubnetViewInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class VpcSubnetViewInfo extends AbstractModel
      * @var string 子网所在可用区
      */
     public $Zone;
+
     /**
      * @param string $SubnetId 子网ID
      * @param string $SubnetName 子网名称
@@ -78,6 +77,7 @@ class VpcSubnetViewInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

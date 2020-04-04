@@ -18,16 +18,14 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateHostedInterface请求参数结构体
+ *
  * @method array getInstanceIds() 获取托管机器唯一ID 数组
  * @method void setInstanceIds(array $InstanceIds) 设置托管机器唯一ID 数组
  * @method string getVpcId() 获取私有网络ID或者私有网络统一ID，建议使用统一ID
  * @method void setVpcId(string $VpcId) 设置私有网络ID或者私有网络统一ID，建议使用统一ID
  * @method string getSubnetId() 获取子网ID或者子网统一ID，建议使用统一ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID或者子网统一ID，建议使用统一ID
- */
-
-/**
- *CreateHostedInterface请求参数结构体
  */
 class CreateHostedInterfaceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateHostedInterfaceRequest extends AbstractModel
      * @var string 子网ID或者子网统一ID，建议使用统一ID
      */
     public $SubnetId;
+
     /**
      * @param array $InstanceIds 托管机器唯一ID 数组
      * @param string $VpcId 私有网络ID或者私有网络统一ID，建议使用统一ID
@@ -54,6 +53,7 @@ class CreateHostedInterfaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

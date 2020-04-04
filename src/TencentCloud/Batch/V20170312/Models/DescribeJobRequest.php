@@ -18,12 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeJob请求参数结构体
+ *
  * @method string getJobId() 获取作业标识
  * @method void setJobId(string $JobId) 设置作业标识
- */
-
-/**
- *DescribeJob请求参数结构体
  */
 class DescribeJobRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeJobRequest extends AbstractModel
      * @var string 作业标识
      */
     public $JobId;
+
     /**
      * @param string $JobId 作业标识
      */
@@ -38,6 +37,7 @@ class DescribeJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

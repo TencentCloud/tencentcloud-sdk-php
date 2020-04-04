@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySmsSign请求参数结构体
+ *
  * @method integer getSignId() 获取待修改的签名 ID。
  * @method void setSignId(integer $SignId) 设置待修改的签名 ID。
  * @method string getSignName() 获取签名名称。
@@ -78,10 +80,6 @@ use TencentCloud\Common\AbstractModel;
 注：只有 UsedMethod 在选择为 1（他用）时，这个字段才会生效。
  * @method string getRemark() 获取签名的申请备注。
  * @method void setRemark(string $Remark) 设置签名的申请备注。
- */
-
-/**
- *ModifySmsSign请求参数结构体
  */
 class ModifySmsSignRequest extends AbstractModel
 {
@@ -150,6 +148,7 @@ class ModifySmsSignRequest extends AbstractModel
      * @var string 签名的申请备注。
      */
     public $Remark;
+
     /**
      * @param integer $SignId 待修改的签名 ID。
      * @param string $SignName 签名名称。
@@ -186,6 +185,7 @@ class ModifySmsSignRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

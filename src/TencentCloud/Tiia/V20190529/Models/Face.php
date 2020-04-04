@@ -18,6 +18,8 @@ namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 公众人物识别人脸信息
+ *
  * @method string getName() 获取与图片中人脸最相似的公众人物的名字。
  * @method void setName(string $Name) 设置与图片中人脸最相似的公众人物的名字。
  * @method array getLabels() 获取公众人物身份标签的数组，一个公众人物可能有多个身份标签。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setID(string $ID) 设置公众人物的唯一编号，可以用于区分同名人物、一个人物不同称呼等情况。唯一编号为8个字符构成的字符串。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *公众人物识别人脸信息
  */
 class Face extends AbstractModel
 {
@@ -93,6 +91,7 @@ class Face extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ID;
+
     /**
      * @param string $Name 与图片中人脸最相似的公众人物的名字。
      * @param array $Labels 公众人物身份标签的数组，一个公众人物可能有多个身份标签。
@@ -110,6 +109,7 @@ class Face extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

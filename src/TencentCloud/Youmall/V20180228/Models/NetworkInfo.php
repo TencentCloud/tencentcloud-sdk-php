@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 没有店铺信息的网络状态
+ *
  * @method float getUpload() 获取上传带宽，单位Mb/s，-1：未知
  * @method void setUpload(float $Upload) 设置上传带宽，单位Mb/s，-1：未知
  * @method float getDownload() 获取下载带宽，单位Mb/s，-1：未知
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(integer $UpdateTime) 设置更新时间戳
  * @method string getMac() 获取上报网络状态设备
  * @method void setMac(string $Mac) 设置上报网络状态设备
- */
-
-/**
- *没有店铺信息的网络状态
  */
 class NetworkInfo extends AbstractModel
 {
@@ -87,6 +85,7 @@ class NetworkInfo extends AbstractModel
      * @var string 上报网络状态设备
      */
     public $Mac;
+
     /**
      * @param float $Upload 上传带宽，单位Mb/s，-1：未知
      * @param float $Download 下载带宽，单位Mb/s，-1：未知
@@ -102,6 +101,7 @@ class NetworkInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

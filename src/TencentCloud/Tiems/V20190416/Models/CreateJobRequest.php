@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateJob请求参数结构体
+ *
  * @method string getName() 获取任务名称
  * @method void setName(string $Name) 设置任务名称
  * @method string getResourceGroupId() 获取使用的资源组 Id，默认使用共享资源组
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuantizationInput(QuantizationInput $QuantizationInput) 设置量化输入
  * @method string getLogTopicId() 获取Cls日志主题ID
  * @method void setLogTopicId(string $LogTopicId) 设置Cls日志主题ID
- */
-
-/**
- *CreateJob请求参数结构体
  */
 class CreateJobRequest extends AbstractModel
 {
@@ -122,6 +120,7 @@ class CreateJobRequest extends AbstractModel
      * @var string Cls日志主题ID
      */
     public $LogTopicId;
+
     /**
      * @param string $Name 任务名称
      * @param string $ResourceGroupId 使用的资源组 Id，默认使用共享资源组
@@ -142,6 +141,7 @@ class CreateJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

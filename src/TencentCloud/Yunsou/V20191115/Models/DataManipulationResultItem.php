@@ -18,16 +18,14 @@ namespace TencentCloud\Yunsou\V20191115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据操作结果明细
+ *
  * @method string getResult() 获取结果
  * @method void setResult(string $Result) 设置结果
  * @method string getDocId() 获取文档ID
  * @method void setDocId(string $DocId) 设置文档ID
  * @method integer getErrno() 获取错误码
  * @method void setErrno(integer $Errno) 设置错误码
- */
-
-/**
- *数据操作结果明细
  */
 class DataManipulationResultItem extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DataManipulationResultItem extends AbstractModel
      * @var integer 错误码
      */
     public $Errno;
+
     /**
      * @param string $Result 结果
      * @param string $DocId 文档ID
@@ -54,6 +53,7 @@ class DataManipulationResultItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

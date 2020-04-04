@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSubnets请求参数结构体
+ *
  * @method array getSubnetIds() 获取子网实例ID查询。形如：subnet-pxir56ns。参数不支持同时指定SubnetIds和Filters。
  * @method void setSubnetIds(array $SubnetIds) 设置子网实例ID查询。形如：subnet-pxir56ns。参数不支持同时指定SubnetIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定SubnetIds和Filters。
@@ -40,10 +42,6 @@ zone - String - （过滤条件）可用区。
  * @method void setOrderField(string $OrderField) 设置排序字段, 支持按“CreateTime”，“VlanId”
  * @method string getOrderDirection() 获取排序方向, “asc”、“desc”
  * @method void setOrderDirection(string $OrderDirection) 设置排序方向, “asc”、“desc”
- */
-
-/**
- *DescribeSubnets请求参数结构体
  */
 class DescribeSubnetsRequest extends AbstractModel
 {
@@ -81,6 +79,7 @@ zone - String - （过滤条件）可用区。
      * @var string 排序方向, “asc”、“desc”
      */
     public $OrderDirection;
+
     /**
      * @param array $SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。参数不支持同时指定SubnetIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
@@ -98,6 +97,7 @@ zone - String - （过滤条件）可用区。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

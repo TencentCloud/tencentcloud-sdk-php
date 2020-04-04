@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 灾备实例信息
+ *
  * @method integer getStatus() 获取灾备实例状态
  * @method void setStatus(integer $Status) 设置灾备实例状态
  * @method string getZone() 获取可用区信息
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置实例名称
  * @method integer getInstanceType() 获取实例类型
  * @method void setInstanceType(integer $InstanceType) 设置实例类型
- */
-
-/**
- *灾备实例信息
  */
 class DrInfo extends AbstractModel
 {
@@ -88,6 +86,7 @@ class DrInfo extends AbstractModel
      * @var integer 实例类型
      */
     public $InstanceType;
+
     /**
      * @param integer $Status 灾备实例状态
      * @param string $Zone 可用区信息
@@ -106,6 +105,7 @@ class DrInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

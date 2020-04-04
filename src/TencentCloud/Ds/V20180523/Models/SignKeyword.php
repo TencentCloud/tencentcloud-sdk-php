@@ -18,6 +18,8 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 签署关键字信息
+ *
  * @method string getKeyword() 获取关键字
  * @method void setKeyword(string $Keyword) 设置关键字
  * @method string getOffsetCoordX() 获取X轴偏移坐标
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageWidth(string $ImageWidth) 设置签章图片宽度
  * @method string getImageHeight() 获取签章图片高度
  * @method void setImageHeight(string $ImageHeight) 设置签章图片高度
- */
-
-/**
- *签署关键字信息
  */
 class SignKeyword extends AbstractModel
 {
@@ -59,6 +57,7 @@ class SignKeyword extends AbstractModel
      * @var string 签章图片高度
      */
     public $ImageHeight;
+
     /**
      * @param string $Keyword 关键字
      * @param string $OffsetCoordX X轴偏移坐标
@@ -70,6 +69,7 @@ class SignKeyword extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

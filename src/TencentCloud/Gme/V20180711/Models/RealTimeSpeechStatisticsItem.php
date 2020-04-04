@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实时语音用量统计数据
+ *
  * @method integer getMainLandDau() 获取大陆地区DAU
  * @method void setMainLandDau(integer $MainLandDau) 设置大陆地区DAU
  * @method integer getMainLandPcu() 获取大陆地区PCU
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOverseaPcu(integer $OverseaPcu) 设置海外地区PCU
  * @method integer getOverseaDuration() 获取海外地区总使用时长，单位为min
  * @method void setOverseaDuration(integer $OverseaDuration) 设置海外地区总使用时长，单位为min
- */
-
-/**
- *实时语音用量统计数据
  */
 class RealTimeSpeechStatisticsItem extends AbstractModel
 {
@@ -66,6 +64,7 @@ class RealTimeSpeechStatisticsItem extends AbstractModel
      * @var integer 海外地区总使用时长，单位为min
      */
     public $OverseaDuration;
+
     /**
      * @param integer $MainLandDau 大陆地区DAU
      * @param integer $MainLandPcu 大陆地区PCU
@@ -78,6 +77,7 @@ class RealTimeSpeechStatisticsItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图像任务统计结果
+ *
  * @method array getFaceDetect() 获取人员检测统计信息
  * @method void setFaceDetect(array $FaceDetect) 设置人员检测统计信息
  * @method array getFaceExpression() 获取人脸表情统计信息
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStudentMovement(ActionStatistic $StudentMovement) 设置学生动作统计信息
  * @method ActionStatistic getTeacherMovement() 获取教师动作统计信息
  * @method void setTeacherMovement(ActionStatistic $TeacherMovement) 设置教师动作统计信息
- */
-
-/**
- *图像任务统计结果
  */
 class ImageTaskStatistic extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ImageTaskStatistic extends AbstractModel
      * @var ActionStatistic 教师动作统计信息
      */
     public $TeacherMovement;
+
     /**
      * @param array $FaceDetect 人员检测统计信息
      * @param array $FaceExpression 人脸表情统计信息
@@ -94,6 +93,7 @@ class ImageTaskStatistic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

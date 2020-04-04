@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 枚举类型数据
+ *
  * @method string getName() 获取名称
  * @method void setName(string $Name) 设置名称
  * @method string getDesc() 获取描述
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMode(string $Mode) 设置读写模式
  * @method array getRange() 获取取值列表
  * @method void setRange(array $Range) 设置取值列表
- */
-
-/**
- *枚举类型数据
  */
 class EnumData extends AbstractModel
 {
@@ -52,6 +50,7 @@ class EnumData extends AbstractModel
      * @var array 取值列表
      */
     public $Range;
+
     /**
      * @param string $Name 名称
      * @param string $Desc 描述
@@ -62,6 +61,7 @@ class EnumData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

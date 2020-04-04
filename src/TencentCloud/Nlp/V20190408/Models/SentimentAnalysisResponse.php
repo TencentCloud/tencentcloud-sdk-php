@@ -18,6 +18,8 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SentimentAnalysis返回参数结构体
+ *
  * @method float getNegative() 获取负面情感概率
  * @method void setNegative(float $Negative) 设置负面情感概率
  * @method float getPositive() 获取正面情感概率
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSentiment(string $Sentiment) 设置情感属性
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *SentimentAnalysis返回参数结构体
  */
 class SentimentAnalysisResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SentimentAnalysisResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param float $Negative 负面情感概率
      * @param float $Positive 正面情感概率
@@ -62,6 +61,7 @@ class SentimentAnalysisResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

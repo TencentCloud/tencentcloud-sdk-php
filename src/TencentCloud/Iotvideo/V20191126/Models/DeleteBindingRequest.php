@@ -18,16 +18,14 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteBinding请求参数结构体
+ *
  * @method string getAccessId() 获取终端用户在IoT Video上的唯一标识ID
  * @method void setAccessId(string $AccessId) 设置终端用户在IoT Video上的唯一标识ID
  * @method string getTid() 获取设备TID
  * @method void setTid(string $Tid) 设置设备TID
  * @method string getRole() 获取用户角色，owner：主人，guest：访客
  * @method void setRole(string $Role) 设置用户角色，owner：主人，guest：访客
- */
-
-/**
- *DeleteBinding请求参数结构体
  */
 class DeleteBindingRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteBindingRequest extends AbstractModel
      * @var string 用户角色，owner：主人，guest：访客
      */
     public $Role;
+
     /**
      * @param string $AccessId 终端用户在IoT Video上的唯一标识ID
      * @param string $Tid 设备TID
@@ -54,6 +53,7 @@ class DeleteBindingRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

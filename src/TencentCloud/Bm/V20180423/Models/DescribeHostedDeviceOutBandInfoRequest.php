@@ -18,14 +18,12 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHostedDeviceOutBandInfo请求参数结构体
+ *
  * @method array getInstanceIds() 获取托管设备的唯一ID数组,数组个数不超过20
  * @method void setInstanceIds(array $InstanceIds) 设置托管设备的唯一ID数组,数组个数不超过20
  * @method string getZone() 获取可用区ID
  * @method void setZone(string $Zone) 设置可用区ID
- */
-
-/**
- *DescribeHostedDeviceOutBandInfo请求参数结构体
  */
 class DescribeHostedDeviceOutBandInfoRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeHostedDeviceOutBandInfoRequest extends AbstractModel
      * @var string 可用区ID
      */
     public $Zone;
+
     /**
      * @param array $InstanceIds 托管设备的唯一ID数组,数组个数不超过20
      * @param string $Zone 可用区ID
@@ -46,6 +45,7 @@ class DescribeHostedDeviceOutBandInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

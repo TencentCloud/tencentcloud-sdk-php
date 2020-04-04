@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccounts请求参数结构体
+ *
  * @method string getUuid() 获取云镜客户端唯一Uuid。Username和Uuid必填其一，使用Uuid表示，查询该主机下列表信息。
  * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid。Username和Uuid必填其一，使用Uuid表示，查询该主机下列表信息。
  * @method string getUsername() 获取云镜客户端唯一Uuid。Username和Uuid必填其一，使用Username表示，查询该用户名下列表信息。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Username - String - 是否必填：否 - 帐号名</li>
 <li>Privilege - String - 是否必填：否 - 帐号类型（ORDINARY: 普通帐号 | SUPPER: 超级管理员帐号）</li>
 <li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
- */
-
-/**
- *DescribeAccounts请求参数结构体
  */
 class DescribeAccountsRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ class DescribeAccountsRequest extends AbstractModel
 <li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
      */
     public $Filters;
+
     /**
      * @param string $Uuid 云镜客户端唯一Uuid。Username和Uuid必填其一，使用Uuid表示，查询该主机下列表信息。
      * @param string $Username 云镜客户端唯一Uuid。Username和Uuid必填其一，使用Username表示，查询该用户名下列表信息。
@@ -82,6 +81,7 @@ class DescribeAccountsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

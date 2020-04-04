@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文本全文识别输入。
+ *
  * @method integer getDefinition() 获取文本全文识别模板 ID。
  * @method void setDefinition(integer $Definition) 设置文本全文识别模板 ID。
- */
-
-/**
- *文本全文识别输入。
  */
 class AiRecognitionTaskOcrFullTextResultInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskOcrFullTextResultInput extends AbstractModel
      * @var integer 文本全文识别模板 ID。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 文本全文识别模板 ID。
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskOcrFullTextResultInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

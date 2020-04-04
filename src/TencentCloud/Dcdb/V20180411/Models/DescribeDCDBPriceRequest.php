@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDCDBPrice请求参数结构体
+ *
  * @method string getZone() 获取欲新购实例的可用区ID。
  * @method void setZone(string $Zone) 设置欲新购实例的可用区ID。
  * @method integer getCount() 获取欲购买实例的数量，目前支持购买1-10个实例
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShardCount(integer $ShardCount) 设置实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
  * @method string getPaymode() 获取付费类型。postpaid：按量付费   prepaid：预付费
  * @method void setPaymode(string $Paymode) 设置付费类型。postpaid：按量付费   prepaid：预付费
- */
-
-/**
- *DescribeDCDBPrice请求参数结构体
  */
 class DescribeDCDBPriceRequest extends AbstractModel
 {
@@ -89,6 +87,7 @@ class DescribeDCDBPriceRequest extends AbstractModel
      * @var string 付费类型。postpaid：按量付费   prepaid：预付费
      */
     public $Paymode;
+
     /**
      * @param string $Zone 欲新购实例的可用区ID。
      * @param integer $Count 欲购买实例的数量，目前支持购买1-10个实例
@@ -106,6 +105,7 @@ class DescribeDCDBPriceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

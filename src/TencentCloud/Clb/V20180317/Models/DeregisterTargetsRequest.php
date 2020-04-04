@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeregisterTargets请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例 ID，格式如 lb-12345678
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID，格式如 lb-12345678
  * @method string getListenerId() 获取监听器 ID，格式如 lbl-12345678
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置目标规则的域名，提供LocationId参数时本参数不生效
  * @method string getUrl() 获取目标规则的URL，提供LocationId参数时本参数不生效
  * @method void setUrl(string $Url) 设置目标规则的URL，提供LocationId参数时本参数不生效
- */
-
-/**
- *DeregisterTargets请求参数结构体
  */
 class DeregisterTargetsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DeregisterTargetsRequest extends AbstractModel
      * @var string 目标规则的URL，提供LocationId参数时本参数不生效
      */
     public $Url;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID，格式如 lb-12345678
      * @param string $ListenerId 监听器 ID，格式如 lbl-12345678
@@ -78,6 +77,7 @@ class DeregisterTargetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

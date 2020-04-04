@@ -18,16 +18,14 @@ namespace TencentCloud\Cds\V20180420\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDasbImageIds返回参数结构体
+ *
  * @method string getBaseImageId() 获取基础镜像ID
  * @method void setBaseImageId(string $BaseImageId) 设置基础镜像ID
  * @method string getAiImageId() 获取AI镜像ID
  * @method void setAiImageId(string $AiImageId) 设置AI镜像ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDasbImageIds返回参数结构体
  */
 class DescribeDasbImageIdsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDasbImageIdsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $BaseImageId 基础镜像ID
      * @param string $AiImageId AI镜像ID
@@ -54,6 +53,7 @@ class DescribeDasbImageIdsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

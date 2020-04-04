@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 本地磁盘规格
+ *
  * @method string getType() 获取本地磁盘类型。
  * @method void setType(string $Type) 设置本地磁盘类型。
  * @method string getPartitionType() 获取本地磁盘属性。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxSize(integer $MaxSize) 设置本地磁盘最大值。
  * @method string getRequired() 获取购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。
  * @method void setRequired(string $Required) 设置购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。
- */
-
-/**
- *本地磁盘规格
  */
 class LocalDiskType extends AbstractModel
 {
@@ -59,6 +57,7 @@ class LocalDiskType extends AbstractModel
      * @var string 购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。
      */
     public $Required;
+
     /**
      * @param string $Type 本地磁盘类型。
      * @param string $PartitionType 本地磁盘属性。
@@ -70,6 +69,7 @@ class LocalDiskType extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

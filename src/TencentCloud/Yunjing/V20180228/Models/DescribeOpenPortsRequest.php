@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeOpenPorts请求参数结构体
+ *
  * @method string getUuid() 获取云镜客户端唯一Uuid。Port和Uuid必填其一，使用Uuid表示，查询该主机列表信息。
  * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid。Port和Uuid必填其一，使用Uuid表示，查询该主机列表信息。
  * @method integer getPort() 获取开放端口号。Port和Uuid必填其一，使用Port表示查询该端口的列表信息。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Port - Uint64 - 是否必填：否 - 端口号</li>
 <li>ProcessName - String - 是否必填：否 - 进程名</li>
 <li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
- */
-
-/**
- *DescribeOpenPorts请求参数结构体
  */
 class DescribeOpenPortsRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ class DescribeOpenPortsRequest extends AbstractModel
 <li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
      */
     public $Filters;
+
     /**
      * @param string $Uuid 云镜客户端唯一Uuid。Port和Uuid必填其一，使用Uuid表示，查询该主机列表信息。
      * @param integer $Port 开放端口号。Port和Uuid必填其一，使用Port表示查询该端口的列表信息。
@@ -82,6 +81,7 @@ class DescribeOpenPortsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

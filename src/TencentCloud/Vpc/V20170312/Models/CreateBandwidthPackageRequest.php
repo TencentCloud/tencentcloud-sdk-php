@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateBandwidthPackage请求参数结构体
+ *
  * @method string getNetworkType() 获取带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
  * @method void setNetworkType(string $NetworkType) 设置带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
  * @method string getChargeType() 获取带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置需要关联的标签列表。
  * @method string getProtocol() 获取带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
  * @method void setProtocol(string $Protocol) 设置带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
- */
-
-/**
- *CreateBandwidthPackage请求参数结构体
  */
 class CreateBandwidthPackageRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
      * @var string 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
      */
     public $Protocol;
+
     /**
      * @param string $NetworkType 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
      * @param string $ChargeType 带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
@@ -86,6 +85,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

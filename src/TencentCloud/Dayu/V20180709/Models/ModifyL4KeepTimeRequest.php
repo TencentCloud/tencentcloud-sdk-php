@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyL4KeepTime请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method string getId() 获取资源ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeepEnable(integer $KeepEnable) 设置会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
  * @method integer getKeepTime() 获取会话保持时间，单位秒
  * @method void setKeepTime(integer $KeepTime) 设置会话保持时间，单位秒
- */
-
-/**
- *ModifyL4KeepTime请求参数结构体
  */
 class ModifyL4KeepTimeRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyL4KeepTimeRequest extends AbstractModel
      * @var integer 会话保持时间，单位秒
      */
     public $KeepTime;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param string $Id 资源ID
@@ -70,6 +69,7 @@ class ModifyL4KeepTimeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

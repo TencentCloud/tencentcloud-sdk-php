@@ -18,14 +18,12 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetBashEventsStatus请求参数结构体
+ *
  * @method array getIds() 获取ID数组，最大100条。
  * @method void setIds(array $Ids) 设置ID数组，最大100条。
  * @method integer getStatus() 获取新状态(0-待处理 1-高危 2-正常)
  * @method void setStatus(integer $Status) 设置新状态(0-待处理 1-高危 2-正常)
- */
-
-/**
- *SetBashEventsStatus请求参数结构体
  */
 class SetBashEventsStatusRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SetBashEventsStatusRequest extends AbstractModel
      * @var integer 新状态(0-待处理 1-高危 2-正常)
      */
     public $Status;
+
     /**
      * @param array $Ids ID数组，最大100条。
      * @param integer $Status 新状态(0-待处理 1-高危 2-正常)
@@ -46,6 +45,7 @@ class SetBashEventsStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

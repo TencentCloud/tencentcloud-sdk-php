@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 输出文件名的`{number}`变量的规则。
+ *
  * @method integer getInitialValue() 获取`{number}`变量的起始值，默认为0。
  * @method void setInitialValue(integer $InitialValue) 设置`{number}`变量的起始值，默认为0。
  * @method integer getIncrement() 获取`{number}`变量的增长步长，默认为1。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinLength(integer $MinLength) 设置`{number}`变量的最小长度，不足时补占位符。默认为1。
  * @method string getPlaceHolder() 获取`{number}`变量的长度不足时，补充的占位符。默认为"0"。
  * @method void setPlaceHolder(string $PlaceHolder) 设置`{number}`变量的长度不足时，补充的占位符。默认为"0"。
- */
-
-/**
- *输出文件名的`{number}`变量的规则。
  */
 class NumberFormat extends AbstractModel
 {
@@ -52,6 +50,7 @@ class NumberFormat extends AbstractModel
      * @var string `{number}`变量的长度不足时，补充的占位符。默认为"0"。
      */
     public $PlaceHolder;
+
     /**
      * @param integer $InitialValue `{number}`变量的起始值，默认为0。
      * @param integer $Increment `{number}`变量的增长步长，默认为1。
@@ -62,6 +61,7 @@ class NumberFormat extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

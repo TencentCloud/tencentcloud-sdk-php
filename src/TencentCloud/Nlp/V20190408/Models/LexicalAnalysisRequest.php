@@ -18,6 +18,8 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * LexicalAnalysis请求参数结构体
+ *
  * @method string getText() 获取待分析的文本（仅支持UTF-8格式，不超过500字）
  * @method void setText(string $Text) 设置待分析的文本（仅支持UTF-8格式，不超过500字）
  * @method integer getFlag() 获取词法分析模式（默认取2值）：
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlag(integer $Flag) 设置词法分析模式（默认取2值）：
 1、高精度（混合粒度分词能力）；
 2、高性能（单粒度分词能力）；
- */
-
-/**
- *LexicalAnalysis请求参数结构体
  */
 class LexicalAnalysisRequest extends AbstractModel
 {
@@ -44,6 +42,7 @@ class LexicalAnalysisRequest extends AbstractModel
 2、高性能（单粒度分词能力）；
      */
     public $Flag;
+
     /**
      * @param string $Text 待分析的文本（仅支持UTF-8格式，不超过500字）
      * @param integer $Flag 词法分析模式（默认取2值）：
@@ -54,6 +53,7 @@ class LexicalAnalysisRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

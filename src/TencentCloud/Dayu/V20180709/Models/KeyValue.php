@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 字段值，K-V形式
+ *
  * @method string getKey() 获取字段名称
  * @method void setKey(string $Key) 设置字段名称
  * @method string getValue() 获取字段取值
  * @method void setValue(string $Value) 设置字段取值
- */
-
-/**
- *字段值，K-V形式
  */
 class KeyValue extends AbstractModel
 {
@@ -38,6 +36,7 @@ class KeyValue extends AbstractModel
      * @var string 字段取值
      */
     public $Value;
+
     /**
      * @param string $Key 字段名称
      * @param string $Value 字段取值
@@ -46,6 +45,7 @@ class KeyValue extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

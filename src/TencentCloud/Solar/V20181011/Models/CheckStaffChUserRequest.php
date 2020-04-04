@@ -18,14 +18,12 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CheckStaffChUser请求参数结构体
+ *
  * @method array getUserId() 获取员工ID
  * @method void setUserId(array $UserId) 设置员工ID
  * @method string getOperateType() 获取渠道状态：checkpass审核通过, checkreject审核拒绝, enableoperate启用, stopoperate停用
  * @method void setOperateType(string $OperateType) 设置渠道状态：checkpass审核通过, checkreject审核拒绝, enableoperate启用, stopoperate停用
- */
-
-/**
- *CheckStaffChUser请求参数结构体
  */
 class CheckStaffChUserRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CheckStaffChUserRequest extends AbstractModel
      * @var string 渠道状态：checkpass审核通过, checkreject审核拒绝, enableoperate启用, stopoperate停用
      */
     public $OperateType;
+
     /**
      * @param array $UserId 员工ID
      * @param string $OperateType 渠道状态：checkpass审核通过, checkreject审核拒绝, enableoperate启用, stopoperate停用
@@ -46,6 +45,7 @@ class CheckStaffChUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

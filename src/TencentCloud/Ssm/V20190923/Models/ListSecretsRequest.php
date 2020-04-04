@@ -18,6 +18,8 @@ namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListSecrets请求参数结构体
+ *
  * @method integer getOffset() 获取查询列表的起始位置，以0开始，不设置默认为0。
  * @method void setOffset(integer $Offset) 设置查询列表的起始位置，以0开始，不设置默认为0。
  * @method integer getLimit() 获取单次查询返回的最大数量，0或不设置则使用默认值 20。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setState(integer $State) 设置根据凭据状态进行过滤，默认为0表示查询全部，1 表示查询Enabed 凭据列表，2表示查询Disabled 凭据列表， 3 表示查询PendingDelete 凭据列表。
  * @method string getSearchSecretName() 获取根据凭据名称进行过滤，为空表示不过滤。
  * @method void setSearchSecretName(string $SearchSecretName) 设置根据凭据名称进行过滤，为空表示不过滤。
- */
-
-/**
- *ListSecrets请求参数结构体
  */
 class ListSecretsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ListSecretsRequest extends AbstractModel
      * @var string 根据凭据名称进行过滤，为空表示不过滤。
      */
     public $SearchSecretName;
+
     /**
      * @param integer $Offset 查询列表的起始位置，以0开始，不设置默认为0。
      * @param integer $Limit 单次查询返回的最大数量，0或不设置则使用默认值 20。
@@ -70,6 +69,7 @@ class ListSecretsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

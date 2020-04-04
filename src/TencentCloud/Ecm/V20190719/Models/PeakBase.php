@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 峰值信息
+ *
  * @method integer getPeakCpuNum() 获取CPU峰值
  * @method void setPeakCpuNum(integer $PeakCpuNum) 设置CPU峰值
  * @method integer getPeakMemoryNum() 获取内存峰值
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeakStorageNum(integer $PeakStorageNum) 设置硬盘峰值
  * @method string getRecordTime() 获取记录时间
  * @method void setRecordTime(string $RecordTime) 设置记录时间
- */
-
-/**
- *峰值信息
  */
 class PeakBase extends AbstractModel
 {
@@ -52,6 +50,7 @@ class PeakBase extends AbstractModel
      * @var string 记录时间
      */
     public $RecordTime;
+
     /**
      * @param integer $PeakCpuNum CPU峰值
      * @param integer $PeakMemoryNum 内存峰值
@@ -62,6 +61,7 @@ class PeakBase extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

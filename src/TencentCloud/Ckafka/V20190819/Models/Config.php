@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 高级配置对象
+ *
  * @method integer getRetention() 获取消息保留时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetention(integer $Retention) 设置消息保留时间
@@ -48,10 +50,6 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置最大消息字节数
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *高级配置对象
  */
 class Config extends AbstractModel
 {
@@ -97,6 +95,7 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxMessageBytes;
+
     /**
      * @param integer $Retention 消息保留时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,6 +117,7 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

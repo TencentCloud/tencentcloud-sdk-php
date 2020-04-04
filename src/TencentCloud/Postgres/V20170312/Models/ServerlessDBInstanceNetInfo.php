@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * serverless实例网络信息描述
+ *
  * @method string getAddress() 获取地址
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddress(string $Address) 设置地址
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetType(string $NetType) 设置网络类型
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *serverless实例网络信息描述
  */
 class ServerlessDBInstanceNetInfo extends AbstractModel
 {
@@ -74,6 +72,7 @@ class ServerlessDBInstanceNetInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetType;
+
     /**
      * @param string $Address 地址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -90,6 +89,7 @@ class ServerlessDBInstanceNetInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

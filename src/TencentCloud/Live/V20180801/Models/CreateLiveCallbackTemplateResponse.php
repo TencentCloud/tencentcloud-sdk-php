@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveCallbackTemplate返回参数结构体
+ *
  * @method integer getTemplateId() 获取模板ID。
  * @method void setTemplateId(integer $TemplateId) 设置模板ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateLiveCallbackTemplate返回参数结构体
  */
 class CreateLiveCallbackTemplateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateLiveCallbackTemplateResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TemplateId 模板ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateLiveCallbackTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

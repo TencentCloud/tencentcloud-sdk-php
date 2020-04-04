@@ -18,14 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ExecuteScalingPolicy请求参数结构体
+ *
  * @method string getAutoScalingPolicyId() 获取告警伸缩策略ID
  * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) 设置告警伸缩策略ID
  * @method boolean getHonorCooldown() 获取是否检查伸缩组活动处于冷却时间内，默认值为false
  * @method void setHonorCooldown(boolean $HonorCooldown) 设置是否检查伸缩组活动处于冷却时间内，默认值为false
- */
-
-/**
- *ExecuteScalingPolicy请求参数结构体
  */
 class ExecuteScalingPolicyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ExecuteScalingPolicyRequest extends AbstractModel
      * @var boolean 是否检查伸缩组活动处于冷却时间内，默认值为false
      */
     public $HonorCooldown;
+
     /**
      * @param string $AutoScalingPolicyId 告警伸缩策略ID
      * @param boolean $HonorCooldown 是否检查伸缩组活动处于冷却时间内，默认值为false
@@ -46,6 +45,7 @@ class ExecuteScalingPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

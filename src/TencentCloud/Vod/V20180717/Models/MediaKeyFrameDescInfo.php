@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频打点信息
+ *
  * @method array getKeyFrameDescSet() 获取视频打点信息数组。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyFrameDescSet(array $KeyFrameDescSet) 设置视频打点信息数组。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *视频打点信息
  */
 class MediaKeyFrameDescInfo extends AbstractModel
 {
@@ -34,6 +32,7 @@ class MediaKeyFrameDescInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyFrameDescSet;
+
     /**
      * @param array $KeyFrameDescSet 视频打点信息数组。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,6 +41,7 @@ class MediaKeyFrameDescInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

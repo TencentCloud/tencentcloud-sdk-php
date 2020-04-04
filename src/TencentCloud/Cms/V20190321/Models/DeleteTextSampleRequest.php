@@ -18,12 +18,10 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTextSample请求参数结构体
+ *
  * @method array getIds() 获取唯一标识数组，目前暂时只支持单个删除
  * @method void setIds(array $Ids) 设置唯一标识数组，目前暂时只支持单个删除
- */
-
-/**
- *DeleteTextSample请求参数结构体
  */
 class DeleteTextSampleRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteTextSampleRequest extends AbstractModel
      * @var array 唯一标识数组，目前暂时只支持单个删除
      */
     public $Ids;
+
     /**
      * @param array $Ids 唯一标识数组，目前暂时只支持单个删除
      */
@@ -38,6 +37,7 @@ class DeleteTextSampleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

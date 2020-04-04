@@ -18,14 +18,12 @@ namespace TencentCloud\Tbp\V20190311\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateBot请求参数结构体
+ *
  * @method string getBotName() 获取机器人名称
  * @method void setBotName(string $BotName) 设置机器人名称
  * @method string getBotCnName() 获取机器人中文名称
  * @method void setBotCnName(string $BotCnName) 设置机器人中文名称
- */
-
-/**
- *CreateBot请求参数结构体
  */
 class CreateBotRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateBotRequest extends AbstractModel
      * @var string 机器人中文名称
      */
     public $BotCnName;
+
     /**
      * @param string $BotName 机器人名称
      * @param string $BotCnName 机器人中文名称
@@ -46,6 +45,7 @@ class CreateBotRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeKeys返回参数结构体
+ *
  * @method array getKeys() 获取加密密钥列表
  * @method void setKeys(array $Keys) 设置加密密钥列表
  * @method string getSessionKey() 获取用来加密密钥。
@@ -34,10 +36,6 @@ Fairplay方案无该值。
 Fairplay方案无该值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeKeys返回参数结构体
  */
 class DescribeKeysResponse extends AbstractModel
 {
@@ -68,6 +66,7 @@ Fairplay方案无该值。
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Keys 加密密钥列表
      * @param string $SessionKey 用来加密密钥。
@@ -82,6 +81,7 @@ Fairplay方案无该值。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

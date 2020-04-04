@@ -18,14 +18,12 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddOrganizationNode请求参数结构体
+ *
  * @method integer getParentNodeId() 获取父组织单元ID
  * @method void setParentNodeId(integer $ParentNodeId) 设置父组织单元ID
  * @method string getName() 获取组织单元名字
  * @method void setName(string $Name) 设置组织单元名字
- */
-
-/**
- *AddOrganizationNode请求参数结构体
  */
 class AddOrganizationNodeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AddOrganizationNodeRequest extends AbstractModel
      * @var string 组织单元名字
      */
     public $Name;
+
     /**
      * @param integer $ParentNodeId 父组织单元ID
      * @param string $Name 组织单元名字
@@ -46,6 +45,7 @@ class AddOrganizationNodeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

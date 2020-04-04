@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 刷新任务详情
+ *
  * @method string getTaskId() 获取刷新任务 ID
  * @method void setTaskId(string $TaskId) 设置刷新任务 ID
  * @method string getUrl() 获取刷新 URL
@@ -44,10 +46,6 @@ flush：刷新更新资源（仅目录刷新时有此类型）
 delete：刷新全部资源
  * @method string getCreateTime() 获取刷新任务提交时间
  * @method void setCreateTime(string $CreateTime) 设置刷新任务提交时间
- */
-
-/**
- *刷新任务详情
  */
 class PurgeTask extends AbstractModel
 {
@@ -87,6 +85,7 @@ delete：刷新全部资源
      * @var string 刷新任务提交时间
      */
     public $CreateTime;
+
     /**
      * @param string $TaskId 刷新任务 ID
      * @param string $Url 刷新 URL
@@ -106,6 +105,7 @@ delete：刷新全部资源
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频转码播放信息（2017 版）
+ *
  * @method string getUrl() 获取播放地址。
  * @method void setUrl(string $Url) 设置播放地址。
  * @method integer getDefinition() 获取转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHeight(integer $Height) 设置视频流高度的最大值，单位：px。
  * @method integer getWidth() 获取视频流宽度的最大值，单位：px。
  * @method void setWidth(integer $Width) 设置视频流宽度的最大值，单位：px。
- */
-
-/**
- *视频转码播放信息（2017 版）
  */
 class TranscodePlayInfo2017 extends AbstractModel
 {
@@ -59,6 +57,7 @@ class TranscodePlayInfo2017 extends AbstractModel
      * @var integer 视频流宽度的最大值，单位：px。
      */
     public $Width;
+
     /**
      * @param string $Url 播放地址。
      * @param integer $Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
@@ -70,6 +69,7 @@ class TranscodePlayInfo2017 extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Hcm\V20181106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 目标算式在图片上的坐标信息
+ *
  * @method integer getHeight() 获取算式高度
  * @method void setHeight(integer $Height) 设置算式高度
  * @method integer getWidth() 获取算式宽度
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setX(integer $X) 设置算式图的左上角横坐标
  * @method integer getY() 获取算式图的左上角纵坐标
  * @method void setY(integer $Y) 设置算式图的左上角纵坐标
- */
-
-/**
- *目标算式在图片上的坐标信息
  */
 class ItemCoord extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ItemCoord extends AbstractModel
      * @var integer 算式图的左上角纵坐标
      */
     public $Y;
+
     /**
      * @param integer $Height 算式高度
      * @param integer $Width 算式宽度
@@ -62,6 +61,7 @@ class ItemCoord extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

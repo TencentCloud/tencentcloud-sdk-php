@@ -18,16 +18,14 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePolicyConditionList.ConfigManual.CalcType
+ *
  * @method array getKeys() 获取CalcType 取值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeys(array $Keys) 设置CalcType 取值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getNeed() 获取是否必须
  * @method void setNeed(boolean $Need) 设置是否必须
- */
-
-/**
- *DescribePolicyConditionList.ConfigManual.CalcType
  */
 class DescribePolicyConditionListConfigManualCalcType extends AbstractModel
 {
@@ -41,6 +39,7 @@ class DescribePolicyConditionListConfigManualCalcType extends AbstractModel
      * @var boolean 是否必须
      */
     public $Need;
+
     /**
      * @param array $Keys CalcType 取值
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class DescribePolicyConditionListConfigManualCalcType extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

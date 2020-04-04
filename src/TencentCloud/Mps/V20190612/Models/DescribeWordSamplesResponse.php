@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWordSamples返回参数结构体
+ *
  * @method integer getTotalCount() 获取符合条件的记录总数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的记录总数。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeWordSamples返回参数结构体
  */
 class DescribeWordSamplesResponse extends AbstractModel
 {
@@ -51,6 +49,7 @@ class DescribeWordSamplesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 符合条件的记录总数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -62,6 +61,7 @@ class DescribeWordSamplesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

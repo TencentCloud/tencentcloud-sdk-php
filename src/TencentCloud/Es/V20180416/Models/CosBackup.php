@@ -18,14 +18,12 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ES cos自动备份信息
+ *
  * @method boolean getIsAutoBackup() 获取是否开启cos自动备份
  * @method void setIsAutoBackup(boolean $IsAutoBackup) 设置是否开启cos自动备份
  * @method string getBackupTime() 获取自动备份执行时间（精确到小时）, e.g. "22:00"
  * @method void setBackupTime(string $BackupTime) 设置自动备份执行时间（精确到小时）, e.g. "22:00"
- */
-
-/**
- *ES cos自动备份信息
  */
 class CosBackup extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CosBackup extends AbstractModel
      * @var string 自动备份执行时间（精确到小时）, e.g. "22:00"
      */
     public $BackupTime;
+
     /**
      * @param boolean $IsAutoBackup 是否开启cos自动备份
      * @param string $BackupTime 自动备份执行时间（精确到小时）, e.g. "22:00"
@@ -46,6 +45,7 @@ class CosBackup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

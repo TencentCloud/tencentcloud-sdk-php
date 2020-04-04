@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 配置项
+ *
  * @method string getConfigId() 获取配置项ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigId(string $ConfigId) 设置配置项ID
@@ -66,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigVersionCount(integer $ConfigVersionCount) 设置配置项版本数量
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *配置项
  */
 class Config extends AbstractModel
 {
@@ -144,6 +142,7 @@ class Config extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigVersionCount;
+
     /**
      * @param string $ConfigId 配置项ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,6 +173,7 @@ class Config extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文章信息
+ *
  * @method string getTitle() 获取文章标题
  * @method void setTitle(string $Title) 设置文章标题
  * @method string getUrl() 获取文章url地址
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAbstract(string $Abstract) 设置文章摘要
  * @method string getArticleId() 获取文章ID
  * @method void setArticleId(string $ArticleId) 设置文章ID
- */
-
-/**
- *文章信息
  */
 class BrandReportArticle extends AbstractModel
 {
@@ -87,6 +85,7 @@ class BrandReportArticle extends AbstractModel
      * @var string 文章ID
      */
     public $ArticleId;
+
     /**
      * @param string $Title 文章标题
      * @param string $Url 文章url地址
@@ -102,6 +101,7 @@ class BrandReportArticle extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

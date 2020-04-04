@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteServiceTemplateGroup请求参数结构体
+ *
  * @method string getServiceTemplateGroupId() 获取协议端口模板集合实例ID，例如：ppmg-n17uxvve。
  * @method void setServiceTemplateGroupId(string $ServiceTemplateGroupId) 设置协议端口模板集合实例ID，例如：ppmg-n17uxvve。
- */
-
-/**
- *DeleteServiceTemplateGroup请求参数结构体
  */
 class DeleteServiceTemplateGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteServiceTemplateGroupRequest extends AbstractModel
      * @var string 协议端口模板集合实例ID，例如：ppmg-n17uxvve。
      */
     public $ServiceTemplateGroupId;
+
     /**
      * @param string $ServiceTemplateGroupId 协议端口模板集合实例ID，例如：ppmg-n17uxvve。
      */
@@ -38,6 +37,7 @@ class DeleteServiceTemplateGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetInstanceAccess请求参数结构体
+ *
  * @method string getFleetId() 获取服务部署Id
  * @method void setFleetId(string $FleetId) 设置服务部署Id
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
- */
-
-/**
- *GetInstanceAccess请求参数结构体
  */
 class GetInstanceAccessRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GetInstanceAccessRequest extends AbstractModel
      * @var string 实例Id
      */
     public $InstanceId;
+
     /**
      * @param string $FleetId 服务部署Id
      * @param string $InstanceId 实例Id
@@ -46,6 +45,7 @@ class GetInstanceAccessRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

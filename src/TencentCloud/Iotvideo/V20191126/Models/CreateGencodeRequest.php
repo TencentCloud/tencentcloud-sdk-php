@@ -18,14 +18,12 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateGencode请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method integer getRevision() 获取物模型发布版本号，-1代表最新编辑（未发布）的版本
  * @method void setRevision(integer $Revision) 设置物模型发布版本号，-1代表最新编辑（未发布）的版本
- */
-
-/**
- *CreateGencode请求参数结构体
  */
 class CreateGencodeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateGencodeRequest extends AbstractModel
      * @var integer 物模型发布版本号，-1代表最新编辑（未发布）的版本
      */
     public $Revision;
+
     /**
      * @param string $ProductId 产品ID
      * @param integer $Revision 物模型发布版本号，-1代表最新编辑（未发布）的版本
@@ -46,6 +45,7 @@ class CreateGencodeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

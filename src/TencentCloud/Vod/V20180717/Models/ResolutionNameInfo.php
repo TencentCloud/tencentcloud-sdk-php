@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 播放器子流名字信息
+ *
  * @method integer getMinEdgeLength() 获取视频短边长度，单位：像素。
  * @method void setMinEdgeLength(integer $MinEdgeLength) 设置视频短边长度，单位：像素。
  * @method string getName() 获取展示名字。
  * @method void setName(string $Name) 设置展示名字。
- */
-
-/**
- *播放器子流名字信息
  */
 class ResolutionNameInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ResolutionNameInfo extends AbstractModel
      * @var string 展示名字。
      */
     public $Name;
+
     /**
      * @param integer $MinEdgeLength 视频短边长度，单位：像素。
      * @param string $Name 展示名字。
@@ -46,6 +45,7 @@ class ResolutionNameInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

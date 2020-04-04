@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人脸信息列表。
+ *
  * @method integer getX() 获取人脸框左上角横坐标。
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFaceQualityInfo(FaceQualityInfo $FaceQualityInfo) 设置人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *人脸信息列表。
  */
 class FaceInfo extends AbstractModel
 {
@@ -84,6 +82,7 @@ class FaceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FaceQualityInfo;
+
     /**
      * @param integer $X 人脸框左上角横坐标。
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
@@ -102,6 +101,7 @@ class FaceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

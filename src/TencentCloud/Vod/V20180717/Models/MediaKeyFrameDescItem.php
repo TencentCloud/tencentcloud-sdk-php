@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频打点信息
+ *
  * @method float getTimeOffset() 获取打点的视频偏移时间，单位：秒。
  * @method void setTimeOffset(float $TimeOffset) 设置打点的视频偏移时间，单位：秒。
  * @method string getContent() 获取打点的内容字符串，限制 1-128 个字符。
  * @method void setContent(string $Content) 设置打点的内容字符串，限制 1-128 个字符。
- */
-
-/**
- *视频打点信息
  */
 class MediaKeyFrameDescItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MediaKeyFrameDescItem extends AbstractModel
      * @var string 打点的内容字符串，限制 1-128 个字符。
      */
     public $Content;
+
     /**
      * @param float $TimeOffset 打点的视频偏移时间，单位：秒。
      * @param string $Content 打点的内容字符串，限制 1-128 个字符。
@@ -46,6 +45,7 @@ class MediaKeyFrameDescItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

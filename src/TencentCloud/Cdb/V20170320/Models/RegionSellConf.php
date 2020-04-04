@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 地域售卖配置
+ *
  * @method string getRegionName() 获取地域中文名称
  * @method void setRegionName(string $RegionName) 设置地域中文名称
  * @method string getArea() 获取所属大区
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域名称
  * @method array getZonesConf() 获取可用区售卖配置
  * @method void setZonesConf(array $ZonesConf) 设置可用区售卖配置
- */
-
-/**
- *地域售卖配置
  */
 class RegionSellConf extends AbstractModel
 {
@@ -59,6 +57,7 @@ class RegionSellConf extends AbstractModel
      * @var array 可用区售卖配置
      */
     public $ZonesConf;
+
     /**
      * @param string $RegionName 地域中文名称
      * @param string $Area 所属大区
@@ -70,6 +69,7 @@ class RegionSellConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTargetGroups请求参数结构体
+ *
  * @method array getTargetGroupIds() 获取目标组的ID数组
  * @method void setTargetGroupIds(array $TargetGroupIds) 设置目标组的ID数组
- */
-
-/**
- *DeleteTargetGroups请求参数结构体
  */
 class DeleteTargetGroupsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteTargetGroupsRequest extends AbstractModel
      * @var array 目标组的ID数组
      */
     public $TargetGroupIds;
+
     /**
      * @param array $TargetGroupIds 目标组的ID数组
      */
@@ -38,6 +37,7 @@ class DeleteTargetGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

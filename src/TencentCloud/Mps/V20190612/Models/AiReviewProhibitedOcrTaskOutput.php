@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Ocr 文字涉违禁信息
+ *
  * @method float getConfidence() 获取Ocr 文字涉违禁评分，分值为0到100。
  * @method void setConfidence(float $Confidence) 设置Ocr 文字涉违禁评分，分值为0到100。
  * @method string getSuggestion() 获取Ocr 文字涉违禁结果建议，取值范围：
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>block。</li>
  * @method array getSegmentSet() 获取Ocr 文字有涉违禁嫌疑的视频片段列表。
  * @method void setSegmentSet(array $SegmentSet) 设置Ocr 文字有涉违禁嫌疑的视频片段列表。
- */
-
-/**
- *Ocr 文字涉违禁信息
  */
 class AiReviewProhibitedOcrTaskOutput extends AbstractModel
 {
@@ -54,6 +52,7 @@ class AiReviewProhibitedOcrTaskOutput extends AbstractModel
      * @var array Ocr 文字有涉违禁嫌疑的视频片段列表。
      */
     public $SegmentSet;
+
     /**
      * @param float $Confidence Ocr 文字涉违禁评分，分值为0到100。
      * @param string $Suggestion Ocr 文字涉违禁结果建议，取值范围：
@@ -66,6 +65,7 @@ class AiReviewProhibitedOcrTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

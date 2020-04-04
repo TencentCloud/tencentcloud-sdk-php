@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDisksRenewFlag请求参数结构体
+ *
  * @method array getDiskIds() 获取一个或多个待操作的云硬盘ID。
  * @method void setDiskIds(array $DiskIds) 设置一个或多个待操作的云硬盘ID。
  * @method string getRenewFlag() 获取云盘的续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
  * @method void setRenewFlag(string $RenewFlag) 设置云盘的续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
- */
-
-/**
- *ModifyDisksRenewFlag请求参数结构体
  */
 class ModifyDisksRenewFlagRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDisksRenewFlagRequest extends AbstractModel
      * @var string 云盘的续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
      */
     public $RenewFlag;
+
     /**
      * @param array $DiskIds 一个或多个待操作的云硬盘ID。
      * @param string $RenewFlag 云盘的续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
@@ -46,6 +45,7 @@ class ModifyDisksRenewFlagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

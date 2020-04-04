@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转发规则之间的重定向关系
+ *
  * @method string getSourceLocationId() 获取源转发规则ID
  * @method void setSourceLocationId(string $SourceLocationId) 设置源转发规则ID
  * @method string getTargetLocationId() 获取重定向至的目标转发规则ID
  * @method void setTargetLocationId(string $TargetLocationId) 设置重定向至的目标转发规则ID
- */
-
-/**
- *转发规则之间的重定向关系
  */
 class RewriteLocationMap extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RewriteLocationMap extends AbstractModel
      * @var string 重定向至的目标转发规则ID
      */
     public $TargetLocationId;
+
     /**
      * @param string $SourceLocationId 源转发规则ID
      * @param string $TargetLocationId 重定向至的目标转发规则ID
@@ -46,6 +45,7 @@ class RewriteLocationMap extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

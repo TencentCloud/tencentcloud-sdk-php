@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCcn请求参数结构体
+ *
  * @method string getCcnName() 获取CCN名称，最大长度不能超过60个字节。
  * @method void setCcnName(string $CcnName) 设置CCN名称，最大长度不能超过60个字节。
  * @method string getCcnDescription() 获取CCN描述信息，最大长度不能超过100个字节。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthLimitType(string $BandwidthLimitType) 设置限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
- */
-
-/**
- *CreateCcn请求参数结构体
  */
 class CreateCcnRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateCcnRequest extends AbstractModel
      * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     public $Tags;
+
     /**
      * @param string $CcnName CCN名称，最大长度不能超过60个字节。
      * @param string $CcnDescription CCN描述信息，最大长度不能超过100个字节。
@@ -78,6 +77,7 @@ class CreateCcnRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

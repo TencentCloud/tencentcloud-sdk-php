@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 机型配置
+ *
  * @method InstanceFamilyConfig getInstanceFamilyConfig() 获取机型族配置信息
  * @method void setInstanceFamilyConfig(InstanceFamilyConfig $InstanceFamilyConfig) 设置机型族配置信息
  * @method string getInstanceType() 获取机型
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtInfo(string $ExtInfo) 设置机型额外信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *机型配置
  */
 class InstanceTypeConfig extends AbstractModel
 {
@@ -83,6 +81,7 @@ class InstanceTypeConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtInfo;
+
     /**
      * @param InstanceFamilyConfig $InstanceFamilyConfig 机型族配置信息
      * @param string $InstanceType 机型
@@ -98,6 +97,7 @@ class InstanceTypeConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

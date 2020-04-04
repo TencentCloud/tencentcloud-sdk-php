@@ -18,16 +18,14 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePersonInfoByFacePicture请求参数结构体
+ *
  * @method string getCompanyId() 获取优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
  * @method void setCompanyId(string $CompanyId) 设置优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
  * @method integer getShopId() 获取优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
  * @method void setShopId(integer $ShopId) 设置优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
  * @method string getPicture() 获取人脸图片BASE编码
  * @method void setPicture(string $Picture) 设置人脸图片BASE编码
- */
-
-/**
- *DescribePersonInfoByFacePicture请求参数结构体
  */
 class DescribePersonInfoByFacePictureRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribePersonInfoByFacePictureRequest extends AbstractModel
      * @var string 人脸图片BASE编码
      */
     public $Picture;
+
     /**
      * @param string $CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      * @param integer $ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
@@ -54,6 +53,7 @@ class DescribePersonInfoByFacePictureRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

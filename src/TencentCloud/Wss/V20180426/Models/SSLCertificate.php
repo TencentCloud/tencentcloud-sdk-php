@@ -18,6 +18,8 @@ namespace TencentCloud\Wss\V20180426\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取证书列表（SSLCertificate）返回参数键为 CertificateSet 的内容。
+ *
  * @method string getOwnerUin() 获取所属账户
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerUin(string $OwnerUin) 设置所属账户
@@ -122,10 +124,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCert(string $Cert) 设置证书
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *获取证书列表（SSLCertificate）返回参数键为 CertificateSet 的内容。
  */
 class SSLCertificate extends AbstractModel
 {
@@ -284,6 +282,7 @@ class SSLCertificate extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cert;
+
     /**
      * @param string $OwnerUin 所属账户
 注意：此字段可能返回 null，表示取不到有效值。
@@ -342,6 +341,7 @@ class SSLCertificate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

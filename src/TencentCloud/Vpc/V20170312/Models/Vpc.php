@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 私有网络(VPC)对象。
+ *
  * @method string getVpcName() 获取`VPC`名称。
  * @method void setVpcName(string $VpcName) 设置`VPC`名称。
  * @method string getVpcId() 获取`VPC`实例`ID`，例如：vpc-azd4dt1c。
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssistantCidrSet(array $AssistantCidrSet) 设置辅助CIDR
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *私有网络(VPC)对象。
  */
 class Vpc extends AbstractModel
 {
@@ -118,6 +116,7 @@ class Vpc extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssistantCidrSet;
+
     /**
      * @param string $VpcName `VPC`名称。
      * @param string $VpcId `VPC`实例`ID`，例如：vpc-azd4dt1c。
@@ -138,6 +137,7 @@ class Vpc extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

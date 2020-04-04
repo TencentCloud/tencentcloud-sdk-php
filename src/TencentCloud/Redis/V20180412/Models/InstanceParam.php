@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例参数
+ *
  * @method string getKey() 获取设置参数的名字
  * @method void setKey(string $Key) 设置设置参数的名字
  * @method string getValue() 获取设置参数的值
  * @method void setValue(string $Value) 设置设置参数的值
- */
-
-/**
- *实例参数
  */
 class InstanceParam extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceParam extends AbstractModel
      * @var string 设置参数的值
      */
     public $Value;
+
     /**
      * @param string $Key 设置参数的名字
      * @param string $Value 设置参数的值
@@ -46,6 +45,7 @@ class InstanceParam extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

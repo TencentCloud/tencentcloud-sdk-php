@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateIp6Translators请求参数结构体
+ *
  * @method string getIp6TranslatorName() 获取转换实例名称
  * @method void setIp6TranslatorName(string $Ip6TranslatorName) 设置转换实例名称
  * @method integer getIp6TranslatorCount() 获取创建转换实例数量，默认是1个
  * @method void setIp6TranslatorCount(integer $Ip6TranslatorCount) 设置创建转换实例数量，默认是1个
  * @method string getIp6InternetServiceProvider() 获取转换实例运营商属性，可取"CMCC","CTCC","CUCC","BGP"
  * @method void setIp6InternetServiceProvider(string $Ip6InternetServiceProvider) 设置转换实例运营商属性，可取"CMCC","CTCC","CUCC","BGP"
- */
-
-/**
- *CreateIp6Translators请求参数结构体
  */
 class CreateIp6TranslatorsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateIp6TranslatorsRequest extends AbstractModel
      * @var string 转换实例运营商属性，可取"CMCC","CTCC","CUCC","BGP"
      */
     public $Ip6InternetServiceProvider;
+
     /**
      * @param string $Ip6TranslatorName 转换实例名称
      * @param integer $Ip6TranslatorCount 创建转换实例数量，默认是1个
@@ -54,6 +53,7 @@ class CreateIp6TranslatorsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

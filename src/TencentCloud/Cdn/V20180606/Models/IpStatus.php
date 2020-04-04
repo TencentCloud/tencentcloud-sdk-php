@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 节点 IP 信息
+ *
  * @method string getIp() 获取节点 IP
  * @method void setIp(string $Ip) 设置节点 IP
  * @method string getDistrict() 获取节点所属区域
@@ -32,10 +34,6 @@ offline：下线状态
  * @method void setStatus(string $Status) 设置节点状态
 online：上线状态，正常调度服务中
 offline：下线状态
- */
-
-/**
- *节点 IP 信息
  */
 class IpStatus extends AbstractModel
 {
@@ -65,6 +63,7 @@ online：上线状态，正常调度服务中
 offline：下线状态
      */
     public $Status;
+
     /**
      * @param string $Ip 节点 IP
      * @param string $District 节点所属区域
@@ -78,6 +77,7 @@ offline：下线状态
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

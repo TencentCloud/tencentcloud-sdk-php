@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IP 黑白名单配置，默认为关闭状态
+ *
  * @method string getSwitch() 获取IP 黑白名单配置开关
 on：开启
 off：关闭
@@ -40,10 +42,6 @@ blacklist：黑名单
 支持 X.X.X.X 形式 IP，或 /8、 /16、/24 形式网段
 最多可填充 50 个白名单或 50 个黑名单
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *IP 黑白名单配置，默认为关闭状态
  */
 class IpFilter extends AbstractModel
 {
@@ -69,6 +67,7 @@ blacklist：黑名单
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Filters;
+
     /**
      * @param string $Switch IP 黑白名单配置开关
 on：开启
@@ -86,6 +85,7 @@ blacklist：黑名单
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

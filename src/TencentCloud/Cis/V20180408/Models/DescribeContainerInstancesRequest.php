@@ -18,6 +18,8 @@ namespace TencentCloud\Cis\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeContainerInstances请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认为10
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 - Zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。
 - VpcId - String - 是否必填：否 -（过滤条件）按照VpcId过滤。
 - InstanceName - String - 是否必填：否 -（过滤条件）按照容器实例名称做模糊查询。
- */
-
-/**
- *DescribeContainerInstances请求参数结构体
  */
 class DescribeContainerInstancesRequest extends AbstractModel
 {
@@ -54,6 +52,7 @@ class DescribeContainerInstancesRequest extends AbstractModel
 - InstanceName - String - 是否必填：否 -（过滤条件）按照容器实例名称做模糊查询。
      */
     public $Filters;
+
     /**
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认为10
@@ -66,6 +65,7 @@ class DescribeContainerInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

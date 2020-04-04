@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateVpnConnection请求参数结构体
+ *
  * @method string getVpcId() 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method string getVpnGatewayId() 获取VPN网关实例ID。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIKEOptionsSpecification(IKEOptionsSpecification $IKEOptionsSpecification) 设置IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
  * @method IPSECOptionsSpecification getIPSECOptionsSpecification() 获取IPSec配置，腾讯云提供IPSec安全会话设置
  * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) 设置IPSec配置，腾讯云提供IPSec安全会话设置
- */
-
-/**
- *CreateVpnConnection请求参数结构体
  */
 class CreateVpnConnectionRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CreateVpnConnectionRequest extends AbstractModel
      * @var IPSECOptionsSpecification IPSec配置，腾讯云提供IPSec安全会话设置
      */
     public $IPSECOptionsSpecification;
+
     /**
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param string $VpnGatewayId VPN网关实例ID。
@@ -94,6 +93,7 @@ class CreateVpnConnectionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

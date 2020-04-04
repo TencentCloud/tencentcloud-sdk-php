@@ -18,14 +18,12 @@ namespace TencentCloud\Cis\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 过滤条件
+ *
  * @method string getName() 获取过滤字段，可选值 - Zone，VpcId，InstanceName
  * @method void setName(string $Name) 设置过滤字段，可选值 - Zone，VpcId，InstanceName
  * @method array getValueList() 获取过滤值列表
  * @method void setValueList(array $ValueList) 设置过滤值列表
- */
-
-/**
- *过滤条件
  */
 class Filter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Filter extends AbstractModel
      * @var array 过滤值列表
      */
     public $ValueList;
+
     /**
      * @param string $Name 过滤字段，可选值 - Zone，VpcId，InstanceName
      * @param array $ValueList 过滤值列表
@@ -46,6 +45,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAnimatedGraphicsTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取转动图模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置转动图模板唯一标识。
  * @method string getName() 获取转动图模板名称，长度限制：64 个字符。
@@ -64,10 +66,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *ModifyAnimatedGraphicsTemplate请求参数结构体
  */
 class ModifyAnimatedGraphicsTemplateRequest extends AbstractModel
 {
@@ -133,6 +131,7 @@ class ModifyAnimatedGraphicsTemplateRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param integer $Definition 转动图模板唯一标识。
      * @param string $Name 转动图模板名称，长度限制：64 个字符。
@@ -162,6 +161,7 @@ class ModifyAnimatedGraphicsTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

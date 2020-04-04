@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUploadedFiles请求参数结构体
+ *
  * @method string getPath() 获取文件路径。该字段应填用户主账号的OwnerUin信息。
  * @method void setPath(string $Path) 设置文件路径。该字段应填用户主账号的OwnerUin信息。
  * @method integer getOffset() 获取记录偏移量，默认值为0。
  * @method void setOffset(integer $Offset) 设置记录偏移量，默认值为0。
  * @method integer getLimit() 获取单次请求返回的数量，默认值为20。
  * @method void setLimit(integer $Limit) 设置单次请求返回的数量，默认值为20。
- */
-
-/**
- *DescribeUploadedFiles请求参数结构体
  */
 class DescribeUploadedFilesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeUploadedFilesRequest extends AbstractModel
      * @var integer 单次请求返回的数量，默认值为20。
      */
     public $Limit;
+
     /**
      * @param string $Path 文件路径。该字段应填用户主账号的OwnerUin信息。
      * @param integer $Offset 记录偏移量，默认值为0。
@@ -54,6 +53,7 @@ class DescribeUploadedFilesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

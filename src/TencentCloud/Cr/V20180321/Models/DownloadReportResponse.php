@@ -18,6 +18,8 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DownloadReport返回参数结构体
+ *
  * @method string getDailyReportUrl() 获取到期/逾期提醒日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDailyReportUrl(string $DailyReportUrl) 设置到期/逾期提醒日报下载地址
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DownloadReport返回参数结构体
  */
 class DownloadReportResponse extends AbstractModel
 {
@@ -91,6 +89,7 @@ class DownloadReportResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $DailyReportUrl 到期/逾期提醒日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -110,6 +109,7 @@ class DownloadReportResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMachineInfo返回参数结构体
+ *
  * @method string getMachineIp() 获取机器ip。
  * @method void setMachineIp(string $MachineIp) 设置机器ip。
  * @method integer getProtectDays() 获取受云镜保护天数。
@@ -68,10 +70,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFreeVulsLeft(integer $FreeVulsLeft) 设置免费漏洞剩余检测数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeMachineInfo返回参数结构体
  */
 class DescribeMachineInfoResponse extends AbstractModel
 {
@@ -167,6 +165,7 @@ class DescribeMachineInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $MachineIp 机器ip。
      * @param integer $ProtectDays 受云镜保护天数。
@@ -198,6 +197,7 @@ class DescribeMachineInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

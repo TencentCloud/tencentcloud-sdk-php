@@ -18,12 +18,10 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAccessRules请求参数结构体
+ *
  * @method array getAccessRules() 获取多个权限规则，上限为10
  * @method void setAccessRules(array $AccessRules) 设置多个权限规则，上限为10
- */
-
-/**
- *ModifyAccessRules请求参数结构体
  */
 class ModifyAccessRulesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ModifyAccessRulesRequest extends AbstractModel
      * @var array 多个权限规则，上限为10
      */
     public $AccessRules;
+
     /**
      * @param array $AccessRules 多个权限规则，上限为10
      */
@@ -38,6 +37,7 @@ class ModifyAccessRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

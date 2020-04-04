@@ -18,12 +18,10 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCustomer请求参数结构体
+ *
  * @method string getUserId() 获取用户ID
  * @method void setUserId(string $UserId) 设置用户ID
- */
-
-/**
- *DescribeCustomer请求参数结构体
  */
 class DescribeCustomerRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeCustomerRequest extends AbstractModel
      * @var string 用户ID
      */
     public $UserId;
+
     /**
      * @param string $UserId 用户ID
      */
@@ -38,6 +37,7 @@ class DescribeCustomerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

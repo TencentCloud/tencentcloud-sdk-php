@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 自适应转码流参数模板
+ *
  * @method VideoTemplateInfo getVideo() 获取视频参数信息。
  * @method void setVideo(VideoTemplateInfo $Video) 设置视频参数信息。
  * @method AudioTemplateInfo getAudio() 获取音频参数信息。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoveAudio(integer $RemoveAudio) 设置是否移除音频流，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
- */
-
-/**
- *自适应转码流参数模板
  */
 class AdaptiveStreamTemplate extends AbstractModel
 {
@@ -51,6 +49,7 @@ class AdaptiveStreamTemplate extends AbstractModel
 <li>1：是。</li>
      */
     public $RemoveAudio;
+
     /**
      * @param VideoTemplateInfo $Video 视频参数信息。
      * @param AudioTemplateInfo $Audio 音频参数信息。
@@ -62,6 +61,7 @@ class AdaptiveStreamTemplate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

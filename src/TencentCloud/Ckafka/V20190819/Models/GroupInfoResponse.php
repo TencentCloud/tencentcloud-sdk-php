@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GroupInfo返回数据的实体
+ *
  * @method string getErrorCode() 获取错误码，正常为0
  * @method void setErrorCode(string $ErrorCode) 设置错误码，正常为0
  * @method string getState() 获取group 状态描述（常见的为 Empty、Stable、Dead 三种状态）：
@@ -40,10 +42,6 @@ Stable：消费分组中各个消费者已经加入，处于稳定状态
  * @method void setMembers(array $Members) 设置仅当 state 为 Stable 且 protocol_type 为 consumer 时， 该数组才包含信息
  * @method string getGroup() 获取Kafka 消费分组
  * @method void setGroup(string $Group) 设置Kafka 消费分组
- */
-
-/**
- *GroupInfo返回数据的实体
  */
 class GroupInfoResponse extends AbstractModel
 {
@@ -81,6 +79,7 @@ Stable：消费分组中各个消费者已经加入，处于稳定状态
      * @var string Kafka 消费分组
      */
     public $Group;
+
     /**
      * @param string $ErrorCode 错误码，正常为0
      * @param string $State group 状态描述（常见的为 Empty、Stable、Dead 三种状态）：
@@ -98,6 +97,7 @@ Stable：消费分组中各个消费者已经加入，处于稳定状态
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CheckVcode请求参数结构体
+ *
  * @method string getModule() 获取模块名VerifyCode
  * @method void setModule(string $Module) 设置模块名VerifyCode
  * @method string getOperation() 获取操作名CheckVcode
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContractResId(string $ContractResId) 设置合同ID
  * @method string getVerifyCode() 获取验证码
  * @method void setVerifyCode(string $VerifyCode) 设置验证码
- */
-
-/**
- *CheckVcode请求参数结构体
  */
 class CheckVcodeRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CheckVcodeRequest extends AbstractModel
      * @var string 验证码
      */
     public $VerifyCode;
+
     /**
      * @param string $Module 模块名VerifyCode
      * @param string $Operation 操作名CheckVcode
@@ -70,6 +69,7 @@ class CheckVcodeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

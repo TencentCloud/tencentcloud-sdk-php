@@ -18,6 +18,8 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能集锦结果项
+ *
  * @method string getHighlightUrl() 获取智能集锦地址。
  * @method void setHighlightUrl(string $HighlightUrl) 设置智能集锦地址。
  * @method string getCovImgUrl() 获取智能集锦封面地址。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDuration(float $Duration) 设置智能集锦持续时间，单位：秒。
  * @method array getSegmentSet() 获取智能集锦子片段结果集，集锦片段由这些子片段拼接生成。
  * @method void setSegmentSet(array $SegmentSet) 设置智能集锦子片段结果集，集锦片段由这些子片段拼接生成。
- */
-
-/**
- *智能集锦结果项
  */
 class HighlightsTaskResultItem extends AbstractModel
 {
@@ -59,6 +57,7 @@ class HighlightsTaskResultItem extends AbstractModel
      * @var array 智能集锦子片段结果集，集锦片段由这些子片段拼接生成。
      */
     public $SegmentSet;
+
     /**
      * @param string $HighlightUrl 智能集锦地址。
      * @param string $CovImgUrl 智能集锦封面地址。
@@ -70,6 +69,7 @@ class HighlightsTaskResultItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

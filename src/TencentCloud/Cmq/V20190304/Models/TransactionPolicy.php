@@ -18,6 +18,8 @@ namespace TencentCloud\Cmq\V20190304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TransactionPolicy
+ *
  * @method integer getFirstQueryInterval() 获取FirstQueryInterval
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstQueryInterval(integer $FirstQueryInterval) 设置FirstQueryInterval
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxQueryCount(integer $MaxQueryCount) 设置MaxQueryCount
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *TransactionPolicy
  */
 class TransactionPolicy extends AbstractModel
 {
@@ -44,6 +42,7 @@ class TransactionPolicy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxQueryCount;
+
     /**
      * @param integer $FirstQueryInterval FirstQueryInterval
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class TransactionPolicy extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

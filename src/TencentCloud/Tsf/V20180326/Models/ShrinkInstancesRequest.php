@@ -18,14 +18,12 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ShrinkInstances请求参数结构体
+ *
  * @method string getGroupId() 获取部署组ID
  * @method void setGroupId(string $GroupId) 设置部署组ID
  * @method array getInstanceIdList() 获取下线机器实例ID列表
  * @method void setInstanceIdList(array $InstanceIdList) 设置下线机器实例ID列表
- */
-
-/**
- *ShrinkInstances请求参数结构体
  */
 class ShrinkInstancesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ShrinkInstancesRequest extends AbstractModel
      * @var array 下线机器实例ID列表
      */
     public $InstanceIdList;
+
     /**
      * @param string $GroupId 部署组ID
      * @param array $InstanceIdList 下线机器实例ID列表
@@ -46,6 +45,7 @@ class ShrinkInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

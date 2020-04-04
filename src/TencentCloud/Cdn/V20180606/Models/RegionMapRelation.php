@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 区域映射id和子区域id的关联信息。
+ *
  * @method integer getRegionId() 获取区域ID。
  * @method void setRegionId(integer $RegionId) 设置区域ID。
  * @method array getSubRegionIdList() 获取子区域ID列表
  * @method void setSubRegionIdList(array $SubRegionIdList) 设置子区域ID列表
- */
-
-/**
- *区域映射id和子区域id的关联信息。
  */
 class RegionMapRelation extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RegionMapRelation extends AbstractModel
      * @var array 子区域ID列表
      */
     public $SubRegionIdList;
+
     /**
      * @param integer $RegionId 区域ID。
      * @param array $SubRegionIdList 子区域ID列表
@@ -46,6 +45,7 @@ class RegionMapRelation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

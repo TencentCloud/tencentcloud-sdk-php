@@ -18,16 +18,14 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * JoinGameServerSession请求参数结构体
+ *
  * @method string getGameServerSessionId() 获取游戏服务器会话ID
  * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话ID
  * @method string getPlayerId() 获取玩家ID
  * @method void setPlayerId(string $PlayerId) 设置玩家ID
  * @method string getPlayerData() 获取玩家自定义信息
  * @method void setPlayerData(string $PlayerData) 设置玩家自定义信息
- */
-
-/**
- *JoinGameServerSession请求参数结构体
  */
 class JoinGameServerSessionRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class JoinGameServerSessionRequest extends AbstractModel
      * @var string 玩家自定义信息
      */
     public $PlayerData;
+
     /**
      * @param string $GameServerSessionId 游戏服务器会话ID
      * @param string $PlayerId 玩家ID
@@ -54,6 +53,7 @@ class JoinGameServerSessionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

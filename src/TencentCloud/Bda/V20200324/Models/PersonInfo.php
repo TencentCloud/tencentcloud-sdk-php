@@ -18,16 +18,14 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人员信息。
+ *
  * @method string getPersonName() 获取人员名称。
  * @method void setPersonName(string $PersonName) 设置人员名称。
  * @method string getPersonId() 获取人员ID。
  * @method void setPersonId(string $PersonId) 设置人员ID。
  * @method array getTraceInfos() 获取包含的人体轨迹图片信息列表。
  * @method void setTraceInfos(array $TraceInfos) 设置包含的人体轨迹图片信息列表。
- */
-
-/**
- *人员信息。
  */
 class PersonInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class PersonInfo extends AbstractModel
      * @var array 包含的人体轨迹图片信息列表。
      */
     public $TraceInfos;
+
     /**
      * @param string $PersonName 人员名称。
      * @param string $PersonId 人员ID。
@@ -54,6 +53,7 @@ class PersonInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

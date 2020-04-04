@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 结构化的慢日志详情
+ *
  * @method integer getTimestamp() 获取Sql的执行时间。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestamp(integer $Timestamp) 设置Sql的执行时间。
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMd5(string $Md5) 设置Sql语句的md5。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *结构化的慢日志详情
  */
 class SlowLogItem extends AbstractModel
 {
@@ -134,6 +132,7 @@ class SlowLogItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Md5;
+
     /**
      * @param integer $Timestamp Sql的执行时间。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -162,6 +161,7 @@ class SlowLogItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAutoSnapshotPolicies返回参数结构体
+ *
  * @method integer getTotalCount() 获取有效的定期快照策略数量。
  * @method void setTotalCount(integer $TotalCount) 设置有效的定期快照策略数量。
  * @method array getAutoSnapshotPolicySet() 获取定期快照策略列表。
  * @method void setAutoSnapshotPolicySet(array $AutoSnapshotPolicySet) 设置定期快照策略列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAutoSnapshotPolicies返回参数结构体
  */
 class DescribeAutoSnapshotPoliciesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAutoSnapshotPoliciesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 有效的定期快照策略数量。
      * @param array $AutoSnapshotPolicySet 定期快照策略列表。
@@ -54,6 +53,7 @@ class DescribeAutoSnapshotPoliciesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

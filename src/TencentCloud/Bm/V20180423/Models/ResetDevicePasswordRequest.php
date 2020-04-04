@@ -18,14 +18,12 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetDevicePassword请求参数结构体
+ *
  * @method array getInstanceIds() 获取需要重置密码的服务器ID列表
  * @method void setInstanceIds(array $InstanceIds) 设置需要重置密码的服务器ID列表
  * @method string getPassword() 获取新密码
  * @method void setPassword(string $Password) 设置新密码
- */
-
-/**
- *ResetDevicePassword请求参数结构体
  */
 class ResetDevicePasswordRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ResetDevicePasswordRequest extends AbstractModel
      * @var string 新密码
      */
     public $Password;
+
     /**
      * @param array $InstanceIds 需要重置密码的服务器ID列表
      * @param string $Password 新密码
@@ -46,6 +45,7 @@ class ResetDevicePasswordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

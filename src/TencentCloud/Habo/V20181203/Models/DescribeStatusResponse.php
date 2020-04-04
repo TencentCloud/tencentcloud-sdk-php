@@ -18,6 +18,8 @@ namespace TencentCloud\Habo\V20181203\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeStatus返回参数结构体
+ *
  * @method integer getStatus() 获取接口调用状态，1表示成功，非1表示失败
  * @method void setStatus(integer $Status) 设置接口调用状态，1表示成功，非1表示失败
  * @method string getInfo() 获取成功时返回success，失败时返回具体的失败原因，如样本分析未完成
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(string $Data) 设置成功时返回样本日志下载地址，该地址10分钟内有效
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeStatus返回参数结构体
  */
 class DescribeStatusResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeStatusResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Status 接口调用状态，1表示成功，非1表示失败
      * @param string $Info 成功时返回success，失败时返回具体的失败原因，如样本分析未完成
@@ -62,6 +61,7 @@ class DescribeStatusResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

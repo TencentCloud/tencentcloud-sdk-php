@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateApplicationTriggerPersonal请求参数结构体
+ *
  * @method string getRepoName() 获取触发器关联的镜像仓库，library/test格式
  * @method void setRepoName(string $RepoName) 设置触发器关联的镜像仓库，library/test格式
  * @method string getTriggerName() 获取触发器名称
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterRegion(integer $ClusterRegion) 设置应用所在TKE集群地域
  * @method string getInvokeExpr() 获取触发方式对应的表达式
  * @method void setInvokeExpr(string $InvokeExpr) 设置触发方式对应的表达式
- */
-
-/**
- *CreateApplicationTriggerPersonal请求参数结构体
  */
 class CreateApplicationTriggerPersonalRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class CreateApplicationTriggerPersonalRequest extends AbstractModel
      * @var string 触发方式对应的表达式
      */
     public $InvokeExpr;
+
     /**
      * @param string $RepoName 触发器关联的镜像仓库，library/test格式
      * @param string $TriggerName 触发器名称
@@ -110,6 +109,7 @@ class CreateApplicationTriggerPersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

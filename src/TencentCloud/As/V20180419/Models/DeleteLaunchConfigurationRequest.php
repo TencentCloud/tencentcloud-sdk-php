@@ -18,12 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLaunchConfiguration请求参数结构体
+ *
  * @method string getLaunchConfigurationId() 获取需要删除的启动配置ID。
  * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置需要删除的启动配置ID。
- */
-
-/**
- *DeleteLaunchConfiguration请求参数结构体
  */
 class DeleteLaunchConfigurationRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteLaunchConfigurationRequest extends AbstractModel
      * @var string 需要删除的启动配置ID。
      */
     public $LaunchConfigurationId;
+
     /**
      * @param string $LaunchConfigurationId 需要删除的启动配置ID。
      */
@@ -38,6 +37,7 @@ class DeleteLaunchConfigurationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

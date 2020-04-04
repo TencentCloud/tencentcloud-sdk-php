@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePurgeTasks请求参数结构体
+ *
  * @method string getPurgeType() 获取指定刷新类型查询
 url：url 刷新记录
 path：目录刷新记录
@@ -54,10 +56,6 @@ global：全球
 mainland：境内
 overseas：境外
 global：全球
- */
-
-/**
- *DescribePurgeTasks请求参数结构体
  */
 class DescribePurgeTasksRequest extends AbstractModel
 {
@@ -114,6 +112,7 @@ overseas：境外
 global：全球
      */
     public $Area;
+
     /**
      * @param string $PurgeType 指定刷新类型查询
 url：url 刷新记录
@@ -138,6 +137,7 @@ global：全球
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

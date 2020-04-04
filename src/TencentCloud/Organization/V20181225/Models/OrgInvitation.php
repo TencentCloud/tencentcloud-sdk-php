@@ -18,6 +18,8 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 企业组织邀请
+ *
  * @method integer getId() 获取邀请ID
  * @method void setId(integer $Id) 设置邀请ID
  * @method integer getUin() 获取被邀请UIN
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInviteTime(string $InviteTime) 设置邀请时间
  * @method string getExpireTime() 获取过期时间
  * @method void setExpireTime(string $ExpireTime) 设置过期时间
- */
-
-/**
- *企业组织邀请
  */
 class OrgInvitation extends AbstractModel
 {
@@ -101,6 +99,7 @@ class OrgInvitation extends AbstractModel
      * @var string 过期时间
      */
     public $ExpireTime;
+
     /**
      * @param integer $Id 邀请ID
      * @param integer $Uin 被邀请UIN
@@ -118,6 +117,7 @@ class OrgInvitation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

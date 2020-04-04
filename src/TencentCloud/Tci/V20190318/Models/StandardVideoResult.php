@@ -18,16 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 标准化接口图像分析结果
+ *
  * @method array getHighlightsInfo() 获取分析完成后的统计结果
  * @method void setHighlightsInfo(array $HighlightsInfo) 设置分析完成后的统计结果
  * @method string getMessage() 获取状态描述
  * @method void setMessage(string $Message) 设置状态描述
  * @method string getStatus() 获取任务状态
  * @method void setStatus(string $Status) 设置任务状态
- */
-
-/**
- *标准化接口图像分析结果
  */
 class StandardVideoResult extends AbstractModel
 {
@@ -45,6 +43,7 @@ class StandardVideoResult extends AbstractModel
      * @var string 任务状态
      */
     public $Status;
+
     /**
      * @param array $HighlightsInfo 分析完成后的统计结果
      * @param string $Message 状态描述
@@ -54,6 +53,7 @@ class StandardVideoResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

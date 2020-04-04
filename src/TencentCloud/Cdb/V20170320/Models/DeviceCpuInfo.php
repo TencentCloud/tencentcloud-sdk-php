@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ *  CPU负载
+ *
  * @method array getRate() 获取实例CPU平均使用率
  * @method void setRate(array $Rate) 设置实例CPU平均使用率
  * @method array getLoad() 获取实例CPU监控数据
  * @method void setLoad(array $Load) 设置实例CPU监控数据
- */
-
-/**
- * CPU负载
  */
 class DeviceCpuInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeviceCpuInfo extends AbstractModel
      * @var array 实例CPU监控数据
      */
     public $Load;
+
     /**
      * @param array $Rate 实例CPU平均使用率
      * @param array $Load 实例CPU监控数据
@@ -46,6 +45,7 @@ class DeviceCpuInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

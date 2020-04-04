@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddRealServers请求参数结构体
+ *
  * @method integer getProjectId() 获取源站对应的项目ID
  * @method void setProjectId(integer $ProjectId) 设置源站对应的项目ID
  * @method array getRealServerIP() 获取源站对应的IP或域名
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerName(string $RealServerName) 设置源站名称
  * @method array getTagSet() 获取标签列表
  * @method void setTagSet(array $TagSet) 设置标签列表
- */
-
-/**
- *AddRealServers请求参数结构体
  */
 class AddRealServersRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AddRealServersRequest extends AbstractModel
      * @var array 标签列表
      */
     public $TagSet;
+
     /**
      * @param integer $ProjectId 源站对应的项目ID
      * @param array $RealServerIP 源站对应的IP或域名
@@ -62,6 +61,7 @@ class AddRealServersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

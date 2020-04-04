@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 对端网关厂商信息对象。
+ *
  * @method string getPlatform() 获取平台。
  * @method void setPlatform(string $Platform) 设置平台。
  * @method string getSoftwareVersion() 获取软件版本。
  * @method void setSoftwareVersion(string $SoftwareVersion) 设置软件版本。
  * @method string getVendorName() 获取供应商名称。
  * @method void setVendorName(string $VendorName) 设置供应商名称。
- */
-
-/**
- *对端网关厂商信息对象。
  */
 class CustomerGatewayVendor extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CustomerGatewayVendor extends AbstractModel
      * @var string 供应商名称。
      */
     public $VendorName;
+
     /**
      * @param string $Platform 平台。
      * @param string $SoftwareVersion 软件版本。
@@ -54,6 +53,7 @@ class CustomerGatewayVendor extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

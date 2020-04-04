@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 目标组关联到的规则
+ *
  * @method string getLoadBalancerId() 获取关联到的负载均衡ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置关联到的负载均衡ID
  * @method string getListenerId() 获取关联到的监听器ID
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡名称
  * @method string getListenerName() 获取监听器名称
  * @method void setListenerName(string $ListenerName) 设置监听器名称
- */
-
-/**
- *目标组关联到的规则
  */
 class AssociationItem extends AbstractModel
 {
@@ -96,6 +94,7 @@ class AssociationItem extends AbstractModel
      * @var string 监听器名称
      */
     public $ListenerName;
+
     /**
      * @param string $LoadBalancerId 关联到的负载均衡ID
      * @param string $ListenerId 关联到的监听器ID
@@ -114,6 +113,7 @@ class AssociationItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

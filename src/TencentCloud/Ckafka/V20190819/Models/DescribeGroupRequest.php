@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGroup请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getSearchWord() 获取搜索关键字
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取最大返回数量
  * @method void setLimit(integer $Limit) 设置最大返回数量
- */
-
-/**
- *DescribeGroup请求参数结构体
  */
 class DescribeGroupRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeGroupRequest extends AbstractModel
      * @var integer 最大返回数量
      */
     public $Limit;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $SearchWord 搜索关键字
@@ -62,6 +61,7 @@ class DescribeGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务
+ *
  * @method Application getApplication() 获取应用程序信息
  * @method void setApplication(Application $Application) 设置应用程序信息
  * @method string getTaskName() 获取任务名称，在一个作业内部唯一
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRestartComputeNode(boolean $RestartComputeNode) 设置任务完成后，重启计算节点。适用于指定计算环境执行任务。
  * @method integer getResourceMaxRetryCount() 获取启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
  * @method void setResourceMaxRetryCount(integer $ResourceMaxRetryCount) 设置启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
- */
-
-/**
- *任务
  */
 class Task extends AbstractModel
 {
@@ -150,6 +148,7 @@ class Task extends AbstractModel
      * @var integer 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
      */
     public $ResourceMaxRetryCount;
+
     /**
      * @param Application $Application 应用程序信息
      * @param string $TaskName 任务名称，在一个作业内部唯一
@@ -174,6 +173,7 @@ class Task extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

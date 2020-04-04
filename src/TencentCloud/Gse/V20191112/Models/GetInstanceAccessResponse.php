@@ -18,14 +18,12 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetInstanceAccess返回参数结构体
+ *
  * @method InstanceAccess getInstanceAccess() 获取实例登录所需要的凭据
  * @method void setInstanceAccess(InstanceAccess $InstanceAccess) 设置实例登录所需要的凭据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetInstanceAccess返回参数结构体
  */
 class GetInstanceAccessResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GetInstanceAccessResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param InstanceAccess $InstanceAccess 实例登录所需要的凭据
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class GetInstanceAccessResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

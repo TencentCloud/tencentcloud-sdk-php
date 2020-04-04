@@ -18,14 +18,12 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeShieldPlanInstance请求参数结构体
+ *
  * @method string getResourceId() 获取资源id
  * @method void setResourceId(string $ResourceId) 设置资源id
  * @method integer getPid() 获取服务类别id
  * @method void setPid(integer $Pid) 设置服务类别id
- */
-
-/**
- *DescribeShieldPlanInstance请求参数结构体
  */
 class DescribeShieldPlanInstanceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeShieldPlanInstanceRequest extends AbstractModel
      * @var integer 服务类别id
      */
     public $Pid;
+
     /**
      * @param string $ResourceId 资源id
      * @param integer $Pid 服务类别id
@@ -46,6 +45,7 @@ class DescribeShieldPlanInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

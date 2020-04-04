@@ -18,16 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PAI实例
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getDomainName() 获取实例域名
  * @method void setDomainName(string $DomainName) 设置实例域名
  * @method string getPaiMateUrl() 获取PAI管理页面URL
  * @method void setPaiMateUrl(string $PaiMateUrl) 设置PAI管理页面URL
- */
-
-/**
- *PAI实例
  */
 class PaiInstance extends AbstractModel
 {
@@ -45,6 +43,7 @@ class PaiInstance extends AbstractModel
      * @var string PAI管理页面URL
      */
     public $PaiMateUrl;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $DomainName 实例域名
@@ -54,6 +53,7 @@ class PaiInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

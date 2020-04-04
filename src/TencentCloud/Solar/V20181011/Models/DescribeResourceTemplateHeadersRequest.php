@@ -18,12 +18,10 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeResourceTemplateHeaders请求参数结构体
+ *
  * @method string getWxAppId() 获取微信公众号appId
  * @method void setWxAppId(string $WxAppId) 设置微信公众号appId
- */
-
-/**
- *DescribeResourceTemplateHeaders请求参数结构体
  */
 class DescribeResourceTemplateHeadersRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeResourceTemplateHeadersRequest extends AbstractModel
      * @var string 微信公众号appId
      */
     public $WxAppId;
+
     /**
      * @param string $WxAppId 微信公众号appId
      */
@@ -38,6 +37,7 @@ class DescribeResourceTemplateHeadersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

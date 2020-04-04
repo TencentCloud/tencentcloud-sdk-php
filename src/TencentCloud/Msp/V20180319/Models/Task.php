@@ -18,6 +18,8 @@ namespace TencentCloud\Msp\V20180319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 迁移任务类别
+ *
  * @method string getTaskId() 获取任务Id
  * @method void setTaskId(string $TaskId) 设置任务Id
  * @method string getTaskName() 获取任务名称
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdated(string $Updated) 设置状态更新时间
  * @method DstInfo getDstInfo() 获取迁移目的信息
  * @method void setDstInfo(DstInfo $DstInfo) 设置迁移目的信息
- */
-
-/**
- *迁移任务类别
  */
 class Task extends AbstractModel
 {
@@ -94,6 +92,7 @@ class Task extends AbstractModel
      * @var DstInfo 迁移目的信息
      */
     public $DstInfo;
+
     /**
      * @param string $TaskId 任务Id
      * @param string $TaskName 任务名称
@@ -110,6 +109,7 @@ class Task extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

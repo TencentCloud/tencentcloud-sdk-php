@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询四层监听器返回的与监听器绑定关系的主机信息。
+ *
  * @method integer getBindType() 获取绑定类别（0代表黑石物理机，1代表虚拟机IP）。
  * @method void setBindType(integer $BindType) 设置绑定类别（0代表黑石物理机，1代表虚拟机IP）。
  * @method integer getPort() 获取主机端口。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperates(array $Operates) 设置黑石物理机当前可以执行的操作。
  * @method integer getProbePort() 获取主机探测端口。
  * @method void setProbePort(integer $ProbePort) 设置主机探测端口。
- */
-
-/**
- *查询四层监听器返回的与监听器绑定关系的主机信息。
  */
 class L4Backend extends AbstractModel
 {
@@ -87,6 +85,7 @@ class L4Backend extends AbstractModel
      * @var integer 主机探测端口。
      */
     public $ProbePort;
+
     /**
      * @param integer $BindType 绑定类别（0代表黑石物理机，1代表虚拟机IP）。
      * @param integer $Port 主机端口。
@@ -102,6 +101,7 @@ class L4Backend extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

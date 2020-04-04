@@ -18,6 +18,8 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据库资源信息
+ *
  * @method string getInstanceId() 获取数据库唯一标识
  * @method void setInstanceId(string $InstanceId) 设置数据库唯一标识
  * @method string getStatus() 获取状态。包含以下取值：
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 当前支持ap-shanghai
  * @method void setRegion(string $Region) 设置所属地域。
 当前支持ap-shanghai
- */
-
-/**
- *数据库资源信息
  */
 class DatabasesInfo extends AbstractModel
 {
@@ -60,6 +58,7 @@ class DatabasesInfo extends AbstractModel
 当前支持ap-shanghai
      */
     public $Region;
+
     /**
      * @param string $InstanceId 数据库唯一标识
      * @param string $Status 状态。包含以下取值：
@@ -74,6 +73,7 @@ class DatabasesInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

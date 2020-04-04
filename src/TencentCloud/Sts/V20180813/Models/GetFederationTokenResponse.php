@@ -18,6 +18,8 @@ namespace TencentCloud\Sts\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetFederationToken返回参数结构体
+ *
  * @method Credentials getCredentials() 获取临时证书
  * @method void setCredentials(Credentials $Credentials) 设置临时证书
  * @method integer getExpiredTime() 获取临时证书有效的时间，返回 Unix 时间戳，精确到秒
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetFederationToken返回参数结构体
  */
 class GetFederationTokenResponse extends AbstractModel
 {
@@ -55,6 +53,7 @@ class GetFederationTokenResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param Credentials $Credentials 临时证书
      * @param integer $ExpiredTime 临时证书有效的时间，返回 Unix 时间戳，精确到秒
@@ -66,6 +65,7 @@ class GetFederationTokenResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

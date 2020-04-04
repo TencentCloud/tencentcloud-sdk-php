@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 七层健康检查配置
+ *
  * @method string getProtocol() 获取转发协议，取值[http, https, http/https]
  * @method void setProtocol(string $Protocol) 设置转发协议，取值[http, https, http/https]
  * @method string getDomain() 获取转发域名
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatusCode(integer $StatusCode) 设置健康检查判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
  * @method string getUrl() 获取检查目录的URL，默认为/
  * @method void setUrl(string $Url) 设置检查目录的URL，默认为/
- */
-
-/**
- *七层健康检查配置
  */
 class L7HealthConfig extends AbstractModel
 {
@@ -87,6 +85,7 @@ class L7HealthConfig extends AbstractModel
      * @var string 检查目录的URL，默认为/
      */
     public $Url;
+
     /**
      * @param string $Protocol 转发协议，取值[http, https, http/https]
      * @param string $Domain 转发域名
@@ -102,6 +101,7 @@ class L7HealthConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

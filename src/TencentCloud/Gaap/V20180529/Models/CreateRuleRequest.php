@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRule请求参数结构体
+ *
  * @method string getListenerId() 获取7层监听器ID
  * @method void setListenerId(string $ListenerId) 设置7层监听器ID
  * @method string getDomain() 获取转发规则的域名
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 不传递该字段时表示使用对应监听器的ForwardProtocol。
  * @method string getForwardHost() 获取加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
  * @method void setForwardHost(string $ForwardHost) 设置加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
- */
-
-/**
- *CreateRule请求参数结构体
  */
 class CreateRuleRequest extends AbstractModel
 {
@@ -90,6 +88,7 @@ class CreateRuleRequest extends AbstractModel
      * @var string 加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
      */
     public $ForwardHost;
+
     /**
      * @param string $ListenerId 7层监听器ID
      * @param string $Domain 转发规则的域名
@@ -106,6 +105,7 @@ class CreateRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

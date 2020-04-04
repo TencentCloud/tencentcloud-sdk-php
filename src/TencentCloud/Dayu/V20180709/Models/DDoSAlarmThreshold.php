@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DDoS告警阈值
+ *
  * @method integer getAlarmType() 获取告警阈值类型，1-入流量，2-清洗流量
  * @method void setAlarmType(integer $AlarmType) 设置告警阈值类型，1-入流量，2-清洗流量
  * @method integer getAlarmThreshold() 获取告警阈值，大于0（目前排定的值）
  * @method void setAlarmThreshold(integer $AlarmThreshold) 设置告警阈值，大于0（目前排定的值）
- */
-
-/**
- *DDoS告警阈值
  */
 class DDoSAlarmThreshold extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DDoSAlarmThreshold extends AbstractModel
      * @var integer 告警阈值，大于0（目前排定的值）
      */
     public $AlarmThreshold;
+
     /**
      * @param integer $AlarmType 告警阈值类型，1-入流量，2-清洗流量
      * @param integer $AlarmThreshold 告警阈值，大于0（目前排定的值）
@@ -46,6 +45,7 @@ class DDoSAlarmThreshold extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

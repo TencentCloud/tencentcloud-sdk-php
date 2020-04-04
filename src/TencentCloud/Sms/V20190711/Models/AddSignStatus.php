@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 添加签名响应 
+ *
  * @method integer getSignId() 获取签名Id。
  * @method void setSignId(integer $SignId) 设置签名Id。
  * @method integer getSignApplyId() 获取签名申请Id。
  * @method void setSignApplyId(integer $SignApplyId) 设置签名申请Id。
- */
-
-/**
- *添加签名响应 
  */
 class AddSignStatus extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AddSignStatus extends AbstractModel
      * @var integer 签名申请Id。
      */
     public $SignApplyId;
+
     /**
      * @param integer $SignId 签名Id。
      * @param integer $SignApplyId 签名申请Id。
@@ -46,6 +45,7 @@ class AddSignStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

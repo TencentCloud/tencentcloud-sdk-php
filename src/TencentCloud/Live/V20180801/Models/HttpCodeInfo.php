@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HTTP返回码和统计数据
+ *
  * @method string getHttpCode() 获取HTTP协议返回码。
 例："2xx", "3xx", "4xx", "5xx"。
  * @method void setHttpCode(string $HttpCode) 设置HTTP协议返回码。
 例："2xx", "3xx", "4xx", "5xx"。
  * @method array getValueList() 获取统计信息，对于无数据的时间点，会补0。
  * @method void setValueList(array $ValueList) 设置统计信息，对于无数据的时间点，会补0。
- */
-
-/**
- *HTTP返回码和统计数据
  */
 class HttpCodeInfo extends AbstractModel
 {
@@ -41,6 +39,7 @@ class HttpCodeInfo extends AbstractModel
      * @var array 统计信息，对于无数据的时间点，会补0。
      */
     public $ValueList;
+
     /**
      * @param string $HttpCode HTTP协议返回码。
 例："2xx", "3xx", "4xx", "5xx"。
@@ -50,6 +49,7 @@ class HttpCodeInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

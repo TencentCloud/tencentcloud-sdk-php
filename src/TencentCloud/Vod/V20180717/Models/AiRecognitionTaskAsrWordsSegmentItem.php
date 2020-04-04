@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音识别片段。
+ *
  * @method float getStartTimeOffset() 获取识别片段起始的偏移时间，单位：秒。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置识别片段起始的偏移时间，单位：秒。
  * @method float getEndTimeOffset() 获取识别片段终止的偏移时间，单位：秒。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置识别片段终止的偏移时间，单位：秒。
  * @method float getConfidence() 获取识别片段置信度。取值：0~100。
  * @method void setConfidence(float $Confidence) 设置识别片段置信度。取值：0~100。
- */
-
-/**
- *语音识别片段。
  */
 class AiRecognitionTaskAsrWordsSegmentItem extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AiRecognitionTaskAsrWordsSegmentItem extends AbstractModel
      * @var float 识别片段置信度。取值：0~100。
      */
     public $Confidence;
+
     /**
      * @param float $StartTimeOffset 识别片段起始的偏移时间，单位：秒。
      * @param float $EndTimeOffset 识别片段终止的偏移时间，单位：秒。
@@ -54,6 +53,7 @@ class AiRecognitionTaskAsrWordsSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

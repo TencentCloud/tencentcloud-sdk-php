@@ -18,16 +18,14 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCfsFileSystems返回参数结构体
+ *
  * @method array getFileSystems() 获取文件系统信息
  * @method void setFileSystems(array $FileSystems) 设置文件系统信息
  * @method integer getTotalCount() 获取文件系统总数
  * @method void setTotalCount(integer $TotalCount) 设置文件系统总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeCfsFileSystems返回参数结构体
  */
 class DescribeCfsFileSystemsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeCfsFileSystemsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $FileSystems 文件系统信息
      * @param integer $TotalCount 文件系统总数
@@ -54,6 +53,7 @@ class DescribeCfsFileSystemsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

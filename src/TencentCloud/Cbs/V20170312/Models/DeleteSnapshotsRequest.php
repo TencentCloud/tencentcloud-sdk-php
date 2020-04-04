@@ -18,12 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSnapshots请求参数结构体
+ *
  * @method array getSnapshotIds() 获取要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。
  * @method void setSnapshotIds(array $SnapshotIds) 设置要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。
- */
-
-/**
- *DeleteSnapshots请求参数结构体
  */
 class DeleteSnapshotsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteSnapshotsRequest extends AbstractModel
      * @var array 要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。
      */
     public $SnapshotIds;
+
     /**
      * @param array $SnapshotIds 要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。
      */
@@ -38,6 +37,7 @@ class DeleteSnapshotsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

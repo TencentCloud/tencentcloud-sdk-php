@@ -18,14 +18,12 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDevice返回参数结构体
+ *
  * @method DeviceData getData() 获取设备参数描述。
  * @method void setData(DeviceData $Data) 设置设备参数描述。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateDevice返回参数结构体
  */
 class CreateDeviceResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateDeviceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param DeviceData $Data 设备参数描述。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateDeviceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

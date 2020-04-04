@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceScaleOutInstance请求参数结构体
+ *
  * @method string getTimeUnit() 获取扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 <li>CNY：表示人民币。</li>
  * @method integer getRouterCount() 获取扩容的Router节点数量。
  * @method void setRouterCount(integer $RouterCount) 设置扩容的Router节点数量。
- */
-
-/**
- *InquiryPriceScaleOutInstance请求参数结构体
  */
 class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 {
@@ -102,6 +100,7 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
      * @var integer 扩容的Router节点数量。
      */
     public $RouterCount;
+
     /**
      * @param string $TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
@@ -122,6 +121,7 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

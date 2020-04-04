@@ -18,16 +18,14 @@ namespace TencentCloud\Cds\V20180420\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDbauditInstances请求参数结构体
+ *
  * @method string getSearchRegion() 获取查询条件地域
  * @method void setSearchRegion(string $SearchRegion) 设置查询条件地域
  * @method integer getLimit() 获取限制数目，默认10， 最大50
  * @method void setLimit(integer $Limit) 设置限制数目，默认10， 最大50
  * @method integer getOffset() 获取偏移量，默认1
  * @method void setOffset(integer $Offset) 设置偏移量，默认1
- */
-
-/**
- *DescribeDbauditInstances请求参数结构体
  */
 class DescribeDbauditInstancesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDbauditInstancesRequest extends AbstractModel
      * @var integer 偏移量，默认1
      */
     public $Offset;
+
     /**
      * @param string $SearchRegion 查询条件地域
      * @param integer $Limit 限制数目，默认10， 最大50
@@ -54,6 +53,7 @@ class DescribeDbauditInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

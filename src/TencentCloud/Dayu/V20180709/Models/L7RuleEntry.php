@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * L7规则
+ *
  * @method string getProtocol() 获取转发协议，取值[http, https]
  * @method void setProtocol(string $Protocol) 设置转发协议，取值[http, https]
  * @method string getDomain() 获取转发域名
@@ -58,10 +60,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpsToHttpEnable(integer $HttpsToHttpEnable) 设置是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *L7规则
  */
 class L7RuleEntry extends AbstractModel
 {
@@ -160,6 +158,7 @@ class L7RuleEntry extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpsToHttpEnable;
+
     /**
      * @param string $Protocol 转发协议，取值[http, https]
      * @param string $Domain 转发域名
@@ -186,6 +185,7 @@ class L7RuleEntry extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

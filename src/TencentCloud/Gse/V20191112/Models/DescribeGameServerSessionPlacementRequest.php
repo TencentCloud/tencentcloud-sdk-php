@@ -18,12 +18,10 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGameServerSessionPlacement请求参数结构体
+ *
  * @method string getPlacementId() 获取游戏服务器会话放置的唯一标识符
  * @method void setPlacementId(string $PlacementId) 设置游戏服务器会话放置的唯一标识符
- */
-
-/**
- *DescribeGameServerSessionPlacement请求参数结构体
  */
 class DescribeGameServerSessionPlacementRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeGameServerSessionPlacementRequest extends AbstractModel
      * @var string 游戏服务器会话放置的唯一标识符
      */
     public $PlacementId;
+
     /**
      * @param string $PlacementId 游戏服务器会话放置的唯一标识符
      */
@@ -38,6 +37,7 @@ class DescribeGameServerSessionPlacementRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

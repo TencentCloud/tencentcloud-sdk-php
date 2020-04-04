@@ -18,14 +18,13 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUinInWhitelist请求参数结构体
+ *
 
- */
-
-/**
- *DescribeUinInWhitelist请求参数结构体
  */
 class DescribeUinInWhitelistRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeUinInWhitelistRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpnConnections请求参数结构体
+ *
  * @method array getVpnConnectionIds() 获取VPN通道实例ID。形如：vpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
  * @method void setVpnConnectionIds(array $VpnConnectionIds) 设置VPN通道实例ID。形如：vpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
  * @method array getFilters() 获取过滤条件。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
- */
-
-/**
- *DescribeVpnConnections请求参数结构体
  */
 class DescribeVpnConnectionsRequest extends AbstractModel
 {
@@ -67,6 +65,7 @@ class DescribeVpnConnectionsRequest extends AbstractModel
      * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
+
     /**
      * @param array $VpnConnectionIds VPN通道实例ID。形如：vpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
      * @param array $Filters 过滤条件。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
@@ -82,6 +81,7 @@ class DescribeVpnConnectionsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

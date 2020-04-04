@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ParseStreamingManifest请求参数结构体
+ *
  * @method string getMediaManifestContent() 获取待解析的索引文件内容。
  * @method void setMediaManifestContent(string $MediaManifestContent) 设置待解析的索引文件内容。
  * @method string getManifestType() 获取视频索引文件格式。默认 m3u8 格式。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setManifestType(string $ManifestType) 设置视频索引文件格式。默认 m3u8 格式。
 <li>m3u8</li>
 <li>mpd</li>
- */
-
-/**
- *ParseStreamingManifest请求参数结构体
  */
 class ParseStreamingManifestRequest extends AbstractModel
 {
@@ -44,6 +42,7 @@ class ParseStreamingManifestRequest extends AbstractModel
 <li>mpd</li>
      */
     public $ManifestType;
+
     /**
      * @param string $MediaManifestContent 待解析的索引文件内容。
      * @param string $ManifestType 视频索引文件格式。默认 m3u8 格式。
@@ -54,6 +53,7 @@ class ParseStreamingManifestRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

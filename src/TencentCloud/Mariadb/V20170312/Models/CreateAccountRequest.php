@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAccount请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method string getUserName() 获取登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
  * @method integer getDelayThresh() 获取根据传入时间判断备机不可用
  * @method void setDelayThresh(integer $DelayThresh) 设置根据传入时间判断备机不可用
- */
-
-/**
- *CreateAccount请求参数结构体
  */
 class CreateAccountRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateAccountRequest extends AbstractModel
      * @var integer 根据传入时间判断备机不可用
      */
     public $DelayThresh;
+
     /**
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param string $UserName 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
@@ -86,6 +85,7 @@ class CreateAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

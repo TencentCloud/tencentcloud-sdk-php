@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSlowlogs返回参数结构体
+ *
  * @method integer getTotalCount() 获取查询总数
  * @method void setTotalCount(integer $TotalCount) 设置查询总数
  * @method array getSlowlogs() 获取慢查询日志信息列表
  * @method void setSlowlogs(array $Slowlogs) 设置慢查询日志信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeSlowlogs返回参数结构体
  */
 class DescribeSlowlogsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeSlowlogsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 查询总数
      * @param array $Slowlogs 慢查询日志信息列表
@@ -54,6 +53,7 @@ class DescribeSlowlogsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

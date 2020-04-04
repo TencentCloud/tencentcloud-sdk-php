@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RemoveRealServers请求参数结构体
+ *
  * @method array getRealServerIds() 获取源站Id列表
  * @method void setRealServerIds(array $RealServerIds) 设置源站Id列表
- */
-
-/**
- *RemoveRealServers请求参数结构体
  */
 class RemoveRealServersRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RemoveRealServersRequest extends AbstractModel
      * @var array 源站Id列表
      */
     public $RealServerIds;
+
     /**
      * @param array $RealServerIds 源站Id列表
      */
@@ -38,6 +37,7 @@ class RemoveRealServersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

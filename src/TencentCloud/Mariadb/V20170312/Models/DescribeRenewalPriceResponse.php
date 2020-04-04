@@ -18,16 +18,14 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRenewalPrice返回参数结构体
+ *
  * @method integer getOriginalPrice() 获取原价，单位：分
  * @method void setOriginalPrice(integer $OriginalPrice) 设置原价，单位：分
  * @method integer getPrice() 获取实际价格，单位：分。受折扣等影响，可能和原价不同。
  * @method void setPrice(integer $Price) 设置实际价格，单位：分。受折扣等影响，可能和原价不同。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeRenewalPrice返回参数结构体
  */
 class DescribeRenewalPriceResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeRenewalPriceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $OriginalPrice 原价，单位：分
      * @param integer $Price 实际价格，单位：分。受折扣等影响，可能和原价不同。
@@ -54,6 +53,7 @@ class DescribeRenewalPriceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

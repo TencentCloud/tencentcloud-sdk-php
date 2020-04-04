@@ -18,16 +18,14 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Decrypt返回参数结构体
+ *
  * @method string getKeyId() 获取CMK的全局唯一标识
  * @method void setKeyId(string $KeyId) 设置CMK的全局唯一标识
  * @method string getPlaintext() 获取解密后的明文。该字段是base64编码的，为了得到原始明文，调用方需要进行base64解码
  * @method void setPlaintext(string $Plaintext) 设置解密后的明文。该字段是base64编码的，为了得到原始明文，调用方需要进行base64解码
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *Decrypt返回参数结构体
  */
 class DecryptResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DecryptResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $KeyId CMK的全局唯一标识
      * @param string $Plaintext 解密后的明文。该字段是base64编码的，为了得到原始明文，调用方需要进行base64解码
@@ -54,6 +53,7 @@ class DecryptResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

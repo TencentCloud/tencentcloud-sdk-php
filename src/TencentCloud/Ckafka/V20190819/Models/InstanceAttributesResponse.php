@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例属性返回结果对象
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getInstanceName() 获取实例名称
@@ -82,10 +84,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCvm(integer $Cvm) 设置售卖类型
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *实例属性返回结果对象
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -224,6 +222,7 @@ class InstanceAttributesResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cvm;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
@@ -262,6 +261,7 @@ class InstanceAttributesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

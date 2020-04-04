@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAccountPrivileges请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method array getAccounts() 获取数据库的账号，包括用户名和域名。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意，不传该参数表示清除该权限。
  * @method void setColumnPrivileges(array $ColumnPrivileges) 设置数据库表中列的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
 注意，不传该参数表示清除该权限。
- */
-
-/**
- *ModifyAccountPrivileges请求参数结构体
  */
 class ModifyAccountPrivilegesRequest extends AbstractModel
 {
@@ -78,6 +76,7 @@ class ModifyAccountPrivilegesRequest extends AbstractModel
 注意，不传该参数表示清除该权限。
      */
     public $ColumnPrivileges;
+
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param array $Accounts 数据库的账号，包括用户名和域名。
@@ -94,6 +93,7 @@ class ModifyAccountPrivilegesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

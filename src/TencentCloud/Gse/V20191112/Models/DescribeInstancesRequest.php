@@ -18,6 +18,8 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstances请求参数结构体
+ *
  * @method string getFleetId() 获取服务部署ID
  * @method void setFleetId(string $FleetId) 设置服务部署ID
  * @method string getInstanceId() 获取实例ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置结果返回最大数量
  * @method integer getLimit() 获取返回结果偏移
  * @method void setLimit(integer $Limit) 设置返回结果偏移
- */
-
-/**
- *DescribeInstances请求参数结构体
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @var integer 返回结果偏移
      */
     public $Limit;
+
     /**
      * @param string $FleetId 服务部署ID
      * @param string $InstanceId 实例ID
@@ -62,6 +61,7 @@ class DescribeInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

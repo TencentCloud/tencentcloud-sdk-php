@@ -18,14 +18,12 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAuthDomains返回参数结构体
+ *
  * @method array getDomains() 获取安全域名列表列表
  * @method void setDomains(array $Domains) 设置安全域名列表列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAuthDomains返回参数结构体
  */
 class DescribeAuthDomainsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeAuthDomainsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Domains 安全域名列表列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeAuthDomainsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

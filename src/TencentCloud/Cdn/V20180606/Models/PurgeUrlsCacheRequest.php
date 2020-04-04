@@ -18,12 +18,10 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PurgeUrlsCache请求参数结构体
+ *
  * @method array getUrls() 获取URL 列表，需要包含协议头部 http:// 或 https://
  * @method void setUrls(array $Urls) 设置URL 列表，需要包含协议头部 http:// 或 https://
- */
-
-/**
- *PurgeUrlsCache请求参数结构体
  */
 class PurgeUrlsCacheRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class PurgeUrlsCacheRequest extends AbstractModel
      * @var array URL 列表，需要包含协议头部 http:// 或 https://
      */
     public $Urls;
+
     /**
      * @param array $Urls URL 列表，需要包含协议头部 http:// 或 https://
      */
@@ -38,6 +37,7 @@ class PurgeUrlsCacheRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

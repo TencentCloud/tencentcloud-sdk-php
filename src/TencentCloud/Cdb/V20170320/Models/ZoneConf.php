@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 多可用区信息
+ *
  * @method array getDeployMode() 获取可用区部署方式，可能的值为：0-单可用区；1-多可用区
  * @method void setDeployMode(array $DeployMode) 设置可用区部署方式，可能的值为：0-单可用区；1-多可用区
  * @method array getMasterZone() 获取主实例所在的可用区
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSlaveZone(array $SlaveZone) 设置实例为多可用区部署时，备库1所在的可用区
  * @method array getBackupZone() 获取实例为多可用区部署时，备库2所在的可用区
  * @method void setBackupZone(array $BackupZone) 设置实例为多可用区部署时，备库2所在的可用区
- */
-
-/**
- *多可用区信息
  */
 class ZoneConf extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ZoneConf extends AbstractModel
      * @var array 实例为多可用区部署时，备库2所在的可用区
      */
     public $BackupZone;
+
     /**
      * @param array $DeployMode 可用区部署方式，可能的值为：0-单可用区；1-多可用区
      * @param array $MasterZone 主实例所在的可用区
@@ -62,6 +61,7 @@ class ZoneConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

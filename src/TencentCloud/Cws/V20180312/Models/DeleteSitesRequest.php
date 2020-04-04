@@ -18,12 +18,10 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSites请求参数结构体
+ *
  * @method array getSiteIds() 获取站点ID列表
  * @method void setSiteIds(array $SiteIds) 设置站点ID列表
- */
-
-/**
- *DeleteSites请求参数结构体
  */
 class DeleteSitesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteSitesRequest extends AbstractModel
      * @var array 站点ID列表
      */
     public $SiteIds;
+
     /**
      * @param array $SiteIds 站点ID列表
      */
@@ -38,6 +37,7 @@ class DeleteSitesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

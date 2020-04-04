@@ -18,6 +18,8 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUserPortrait返回参数结构体
+ *
  * @method AgePortraitInfo getAge() 获取年龄画像
  * @method void setAge(AgePortraitInfo $Age) 设置年龄画像
  * @method GenderPortraitInfo getGender() 获取性别画像
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStar(StarPortraitInfo $Star) 设置明星喜好画像
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeUserPortrait返回参数结构体
  */
 class DescribeUserPortraitResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeUserPortraitResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param AgePortraitInfo $Age 年龄画像
      * @param GenderPortraitInfo $Gender 性别画像
@@ -78,6 +77,7 @@ class DescribeUserPortraitResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

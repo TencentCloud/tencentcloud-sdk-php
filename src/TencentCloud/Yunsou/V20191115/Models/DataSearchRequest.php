@@ -18,6 +18,8 @@ namespace TencentCloud\Yunsou\V20191115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DataSearch请求参数结构体
+ *
  * @method integer getResourceId() 获取云搜的业务ID，用以表明当前数据请求的业务
  * @method void setResourceId(integer $ResourceId) 设置云搜的业务ID，用以表明当前数据请求的业务
  * @method string getSearchQuery() 获取检索串
@@ -64,10 +66,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatitude(float $Latitude) 设置纬度信息
  * @method array getMultiFilter() 获取分类过滤并集
  * @method void setMultiFilter(array $MultiFilter) 设置分类过滤并集
- */
-
-/**
- *DataSearch请求参数结构体
  */
 class DataSearchRequest extends AbstractModel
 {
@@ -185,6 +183,7 @@ class DataSearchRequest extends AbstractModel
      * @var array 分类过滤并集
      */
     public $MultiFilter;
+
     /**
      * @param integer $ResourceId 云搜的业务ID，用以表明当前数据请求的业务
      * @param string $SearchQuery 检索串
@@ -214,6 +213,7 @@ class DataSearchRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

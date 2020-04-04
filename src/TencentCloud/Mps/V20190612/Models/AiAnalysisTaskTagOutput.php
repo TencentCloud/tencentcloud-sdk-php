@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能标签结果信息
+ *
  * @method array getTagSet() 获取视频智能标签列表。
  * @method void setTagSet(array $TagSet) 设置视频智能标签列表。
- */
-
-/**
- *智能标签结果信息
  */
 class AiAnalysisTaskTagOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiAnalysisTaskTagOutput extends AbstractModel
      * @var array 视频智能标签列表。
      */
     public $TagSet;
+
     /**
      * @param array $TagSet 视频智能标签列表。
      */
@@ -38,6 +37,7 @@ class AiAnalysisTaskTagOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

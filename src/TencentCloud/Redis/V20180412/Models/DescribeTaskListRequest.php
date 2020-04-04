@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskList请求参数结构体
+ *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getInstanceName() 获取实例名称
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置终止时间
  * @method array getTaskStatus() 获取任务状态
  * @method void setTaskStatus(array $TaskStatus) 设置任务状态
- */
-
-/**
- *DescribeTaskList请求参数结构体
  */
 class DescribeTaskListRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class DescribeTaskListRequest extends AbstractModel
      * @var array 任务状态
      */
     public $TaskStatus;
+
     /**
      * @param string $InstanceId 实例Id
      * @param string $InstanceName 实例名称
@@ -102,6 +101,7 @@ class DescribeTaskListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

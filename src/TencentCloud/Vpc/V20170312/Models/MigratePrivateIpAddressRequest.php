@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MigratePrivateIpAddress请求参数结构体
+ *
  * @method string getSourceNetworkInterfaceId() 获取当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method void setSourceNetworkInterfaceId(string $SourceNetworkInterfaceId) 设置当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method string getDestinationNetworkInterfaceId() 获取待迁移的目的弹性网卡实例ID。
  * @method void setDestinationNetworkInterfaceId(string $DestinationNetworkInterfaceId) 设置待迁移的目的弹性网卡实例ID。
  * @method string getPrivateIpAddress() 获取迁移的内网IP地址，例如：10.0.0.6。
  * @method void setPrivateIpAddress(string $PrivateIpAddress) 设置迁移的内网IP地址，例如：10.0.0.6。
- */
-
-/**
- *MigratePrivateIpAddress请求参数结构体
  */
 class MigratePrivateIpAddressRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MigratePrivateIpAddressRequest extends AbstractModel
      * @var string 迁移的内网IP地址，例如：10.0.0.6。
      */
     public $PrivateIpAddress;
+
     /**
      * @param string $SourceNetworkInterfaceId 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
      * @param string $DestinationNetworkInterfaceId 待迁移的目的弹性网卡实例ID。
@@ -54,6 +53,7 @@ class MigratePrivateIpAddressRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

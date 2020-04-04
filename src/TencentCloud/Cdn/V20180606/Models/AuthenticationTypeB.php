@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 时间戳防盗链模式 B 配置（B 模式正在进行平台升级，暂不支持配置）
+ *
  * @method string getSecretKey() 获取计算签名的密钥
 仅允许大小写字母与数字，长度 6~32 位
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
  * @method void setFilterType(string $FilterType) 设置whitelist：白名单，表示对除了 FileExtensions 列表之外的所有类型进行鉴权
 blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
- */
-
-/**
- *时间戳防盗链模式 B 配置（B 模式正在进行平台升级，暂不支持配置）
  */
 class AuthenticationTypeB extends AbstractModel
 {
@@ -67,6 +65,7 @@ class AuthenticationTypeB extends AbstractModel
 blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
      */
     public $FilterType;
+
     /**
      * @param string $SecretKey 计算签名的密钥
 仅允许大小写字母与数字，长度 6~32 位
@@ -82,6 +81,7 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

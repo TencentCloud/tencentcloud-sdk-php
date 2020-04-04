@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeFaceIdByTempId请求参数结构体
+ *
  * @method string getCompanyId() 获取优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
  * @method void setCompanyId(string $CompanyId) 设置优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
  * @method integer getShopId() 获取优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPosId(string $PosId) 设置pos机id
  * @method integer getPictureExpires() 获取图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
  * @method void setPictureExpires(integer $PictureExpires) 设置图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
- */
-
-/**
- *DescribeFaceIdByTempId请求参数结构体
  */
 class DescribeFaceIdByTempIdRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeFaceIdByTempIdRequest extends AbstractModel
      * @var integer 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      */
     public $PictureExpires;
+
     /**
      * @param string $CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      * @param integer $ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
@@ -78,6 +77,7 @@ class DescribeFaceIdByTempIdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

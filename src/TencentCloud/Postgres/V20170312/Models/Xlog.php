@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据库Xlog信息
+ *
  * @method integer getId() 获取备份文件唯一标识
  * @method void setId(integer $Id) 设置备份文件唯一标识
  * @method string getStartTime() 获取文件生成的开始时间
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExternalAddr(string $ExternalAddr) 设置外网下载地址
  * @method integer getSize() 获取备份文件大小
  * @method void setSize(integer $Size) 设置备份文件大小
- */
-
-/**
- *数据库Xlog信息
  */
 class Xlog extends AbstractModel
 {
@@ -66,6 +64,7 @@ class Xlog extends AbstractModel
      * @var integer 备份文件大小
      */
     public $Size;
+
     /**
      * @param integer $Id 备份文件唯一标识
      * @param string $StartTime 文件生成的开始时间
@@ -78,6 +77,7 @@ class Xlog extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

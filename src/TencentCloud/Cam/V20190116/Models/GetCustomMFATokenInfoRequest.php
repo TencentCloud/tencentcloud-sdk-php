@@ -18,12 +18,10 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetCustomMFATokenInfo请求参数结构体
+ *
  * @method string getMFAToken() 获取自定义多因子验证Token
  * @method void setMFAToken(string $MFAToken) 设置自定义多因子验证Token
- */
-
-/**
- *GetCustomMFATokenInfo请求参数结构体
  */
 class GetCustomMFATokenInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetCustomMFATokenInfoRequest extends AbstractModel
      * @var string 自定义多因子验证Token
      */
     public $MFAToken;
+
     /**
      * @param string $MFAToken 自定义多因子验证Token
      */
@@ -38,6 +37,7 @@ class GetCustomMFATokenInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

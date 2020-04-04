@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 词汇库中的单词出现在音频中的总次数信息
+ *
  * @method array getVocabDetailInfo() 获取单词出现在该音频中总次数
  * @method void setVocabDetailInfo(array $VocabDetailInfo) 设置单词出现在该音频中总次数
  * @method string getVocabLibName() 获取词汇库名称
  * @method void setVocabLibName(string $VocabLibName) 设置词汇库名称
- */
-
-/**
- *词汇库中的单词出现在音频中的总次数信息
  */
 class VocabStatInfomation extends AbstractModel
 {
@@ -38,6 +36,7 @@ class VocabStatInfomation extends AbstractModel
      * @var string 词汇库名称
      */
     public $VocabLibName;
+
     /**
      * @param array $VocabDetailInfo 单词出现在该音频中总次数
      * @param string $VocabLibName 词汇库名称
@@ -46,6 +45,7 @@ class VocabStatInfomation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

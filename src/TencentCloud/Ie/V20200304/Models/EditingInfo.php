@@ -18,6 +18,8 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能编辑任务参数信息
+ *
  * @method TagEditingInfo getTagEditingInfo() 获取视频标签识别任务参数，不填则不开启。
  * @method void setTagEditingInfo(TagEditingInfo $TagEditingInfo) 设置视频标签识别任务参数，不填则不开启。
  * @method ClassificationEditingInfo getClassificationEditingInfo() 获取视频分类识别任务参数，不填则不开启。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCoverEditingInfo(CoverEditingInfo $CoverEditingInfo) 设置智能封面任务参数，不填则不开启。
  * @method OpeningEndingEditingInfo getOpeningEndingEditingInfo() 获取片头片尾识别任务参数，不填则不开启。
  * @method void setOpeningEndingEditingInfo(OpeningEndingEditingInfo $OpeningEndingEditingInfo) 设置片头片尾识别任务参数，不填则不开启。
- */
-
-/**
- *智能编辑任务参数信息
  */
 class EditingInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class EditingInfo extends AbstractModel
      * @var OpeningEndingEditingInfo 片头片尾识别任务参数，不填则不开启。
      */
     public $OpeningEndingEditingInfo;
+
     /**
      * @param TagEditingInfo $TagEditingInfo 视频标签识别任务参数，不填则不开启。
      * @param ClassificationEditingInfo $ClassificationEditingInfo 视频分类识别任务参数，不填则不开启。
@@ -78,6 +77,7 @@ class EditingInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

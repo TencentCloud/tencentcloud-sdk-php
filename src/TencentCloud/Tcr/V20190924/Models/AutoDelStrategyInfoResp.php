@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取自动删除策略
+ *
  * @method integer getTotalCount() 获取总数目
  * @method void setTotalCount(integer $TotalCount) 设置总数目
  * @method array getStrategyInfo() 获取自动删除策略列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyInfo(array $StrategyInfo) 设置自动删除策略列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *获取自动删除策略
  */
 class AutoDelStrategyInfoResp extends AbstractModel
 {
@@ -41,6 +39,7 @@ class AutoDelStrategyInfoResp extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyInfo;
+
     /**
      * @param integer $TotalCount 总数目
      * @param array $StrategyInfo 自动删除策略列表
@@ -50,6 +49,7 @@ class AutoDelStrategyInfoResp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

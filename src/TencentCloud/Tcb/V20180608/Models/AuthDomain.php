@@ -18,6 +18,8 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 合法域名
+ *
  * @method string getId() 获取域名ID
  * @method void setId(string $Id) 设置域名ID
  * @method string getDomain() 获取域名
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- */
-
-/**
- *合法域名
  */
 class AuthDomain extends AbstractModel
 {
@@ -78,6 +76,7 @@ class AuthDomain extends AbstractModel
      * @var string 更新时间
      */
     public $UpdateTime;
+
     /**
      * @param string $Id 域名ID
      * @param string $Domain 域名
@@ -94,6 +93,7 @@ class AuthDomain extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

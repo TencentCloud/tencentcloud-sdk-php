@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 主实例信息
+ *
  * @method string getRegion() 获取地域信息
  * @method void setRegion(string $Region) 设置地域信息
  * @method integer getRegionId() 获取地域ID
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExClusterId(string $ExClusterId) 设置独享集群ID
  * @method string getExClusterName() 获取独享集群名称
  * @method void setExClusterName(string $ExClusterName) 设置独享集群名称
- */
-
-/**
- *主实例信息
  */
 class MasterInfo extends AbstractModel
 {
@@ -150,6 +148,7 @@ class MasterInfo extends AbstractModel
      * @var string 独享集群名称
      */
     public $ExClusterName;
+
     /**
      * @param string $Region 地域信息
      * @param integer $RegionId 地域ID
@@ -174,6 +173,7 @@ class MasterInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

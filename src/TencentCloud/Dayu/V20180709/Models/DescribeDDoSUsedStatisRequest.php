@@ -18,12 +18,10 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDDoSUsedStatis请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP）
- */
-
-/**
- *DescribeDDoSUsedStatis请求参数结构体
  */
 class DescribeDDoSUsedStatisRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeDDoSUsedStatisRequest extends AbstractModel
      * @var string 大禹子产品代号（bgpip表示高防IP）
      */
     public $Business;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP）
      */
@@ -38,6 +37,7 @@ class DescribeDDoSUsedStatisRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

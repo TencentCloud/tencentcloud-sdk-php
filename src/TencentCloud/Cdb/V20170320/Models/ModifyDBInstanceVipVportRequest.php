@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstanceVipVport请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
  * @method string getDstIp() 获取目标 IP。该参数和 DstPort 参数，两者必传一个。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络统一 ID。
  * @method string getUniqSubnetId() 获取子网统一 ID。
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网统一 ID。
- */
-
-/**
- *ModifyDBInstanceVipVport请求参数结构体
  */
 class ModifyDBInstanceVipVportRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyDBInstanceVipVportRequest extends AbstractModel
      * @var string 子网统一 ID。
      */
     public $UniqSubnetId;
+
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      * @param string $DstIp 目标 IP。该参数和 DstPort 参数，两者必传一个。
@@ -70,6 +69,7 @@ class ModifyDBInstanceVipVportRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

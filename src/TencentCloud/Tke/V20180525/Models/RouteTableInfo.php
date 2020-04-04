@@ -18,16 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 集群路由表对象
+ *
  * @method string getRouteTableName() 获取路由表名称。
  * @method void setRouteTableName(string $RouteTableName) 设置路由表名称。
  * @method string getRouteTableCidrBlock() 获取路由表CIDR。
  * @method void setRouteTableCidrBlock(string $RouteTableCidrBlock) 设置路由表CIDR。
  * @method string getVpcId() 获取VPC实例ID。
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。
- */
-
-/**
- *集群路由表对象
  */
 class RouteTableInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RouteTableInfo extends AbstractModel
      * @var string VPC实例ID。
      */
     public $VpcId;
+
     /**
      * @param string $RouteTableName 路由表名称。
      * @param string $RouteTableCidrBlock 路由表CIDR。
@@ -54,6 +53,7 @@ class RouteTableInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

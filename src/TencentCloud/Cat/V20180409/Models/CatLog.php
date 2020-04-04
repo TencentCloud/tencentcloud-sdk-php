@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 拨测记录
+ *
  * @method string getTime() 获取拨测时间点
  * @method void setTime(string $Time) 设置拨测时间点
  * @method string getCatTypeName() 获取拨测类型
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWaitTime(integer $WaitTime) 设置等待耗时，单位毫秒
  * @method integer getReceiveTime() 获取接收耗时，单位毫秒
  * @method void setReceiveTime(integer $ReceiveTime) 设置接收耗时，单位毫秒
- */
-
-/**
- *拨测记录
  */
 class CatLog extends AbstractModel
 {
@@ -178,6 +176,7 @@ class CatLog extends AbstractModel
      * @var integer 接收耗时，单位毫秒
      */
     public $ReceiveTime;
+
     /**
      * @param string $Time 拨测时间点
      * @param string $CatTypeName 拨测类型
@@ -206,6 +205,7 @@ class CatLog extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

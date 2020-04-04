@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBLogFiles返回参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：tdsql-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：tdsql-ow728lmc。
  * @method integer getType() 获取请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNormalPrefix(string $NormalPrefix) 设置如果是普通网络的实例，做用本前缀加上URI为下载地址
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDBLogFiles返回参数结构体
  */
 class DescribeDBLogFilesResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeDBLogFilesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc。
      * @param integer $Type 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
@@ -86,6 +85,7 @@ class DescribeDBLogFilesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cmq\V20190304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 批量queue属性信息
+ *
  * @method string getQueueId() 获取QueueId
  * @method void setQueueId(string $QueueId) 设置QueueId
  * @method string getQueueName() 获取QueueName
@@ -114,10 +116,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrace(boolean $Trace) 设置消息轨迹表示，true表示开启，false表示不开启
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *批量queue属性信息
  */
 class QueueSet extends AbstractModel
 {
@@ -268,6 +266,7 @@ class QueueSet extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Trace;
+
     /**
      * @param string $QueueId QueueId
      * @param string $QueueName QueueName
@@ -322,6 +321,7 @@ class QueueSet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BusinessCardOCR返回参数结构体
+ *
  * @method array getBusinessCardInfos() 获取名片识别结果，具体内容请点击左侧链接。
  * @method void setBusinessCardInfos(array $BusinessCardInfos) 设置名片识别结果，具体内容请点击左侧链接。
  * @method string getRetImageBase64() 获取返回图像预处理后的图片，图像预处理未开启时返回内容为空。
  * @method void setRetImageBase64(string $RetImageBase64) 设置返回图像预处理后的图片，图像预处理未开启时返回内容为空。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *BusinessCardOCR返回参数结构体
  */
 class BusinessCardOCRResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class BusinessCardOCRResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $BusinessCardInfos 名片识别结果，具体内容请点击左侧链接。
      * @param string $RetImageBase64 返回图像预处理后的图片，图像预处理未开启时返回内容为空。
@@ -54,6 +53,7 @@ class BusinessCardOCRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

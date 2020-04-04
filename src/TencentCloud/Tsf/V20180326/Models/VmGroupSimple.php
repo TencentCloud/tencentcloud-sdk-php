@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 虚拟机部署组列表简要字段
+ *
  * @method string getGroupId() 获取部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置部署组ID
@@ -78,10 +80,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupResourceType(string $GroupResourceType) 设置GroupResourceType
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *虚拟机部署组列表简要字段
  */
 class VmGroupSimple extends AbstractModel
 {
@@ -174,6 +172,7 @@ class VmGroupSimple extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupResourceType;
+
     /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -210,6 +209,7 @@ class VmGroupSimple extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

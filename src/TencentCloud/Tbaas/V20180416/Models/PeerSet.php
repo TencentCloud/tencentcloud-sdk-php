@@ -18,14 +18,12 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PeerSet
+ *
  * @method string getPeerName() 获取节点名称
  * @method void setPeerName(string $PeerName) 设置节点名称
  * @method string getOrgName() 获取组织名称
  * @method void setOrgName(string $OrgName) 设置组织名称
- */
-
-/**
- *PeerSet
  */
 class PeerSet extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PeerSet extends AbstractModel
      * @var string 组织名称
      */
     public $OrgName;
+
     /**
      * @param string $PeerName 节点名称
      * @param string $OrgName 组织名称
@@ -46,6 +45,7 @@ class PeerSet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

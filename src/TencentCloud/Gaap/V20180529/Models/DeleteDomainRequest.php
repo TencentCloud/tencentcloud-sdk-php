@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteDomain请求参数结构体
+ *
  * @method string getListenerId() 获取监听器ID
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getDomain() 获取需要删除的域名
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 当采用非强制删除时，如果域名下已有规则绑定了源站，则无法删除。
  * @method void setForce(integer $Force) 设置是否强制删除已绑定源站的转发规则，0非强制，1强制。
 当采用非强制删除时，如果域名下已有规则绑定了源站，则无法删除。
- */
-
-/**
- *DeleteDomain请求参数结构体
  */
 class DeleteDomainRequest extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DeleteDomainRequest extends AbstractModel
 当采用非强制删除时，如果域名下已有规则绑定了源站，则无法删除。
      */
     public $Force;
+
     /**
      * @param string $ListenerId 监听器ID
      * @param string $Domain 需要删除的域名
@@ -58,6 +57,7 @@ class DeleteDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

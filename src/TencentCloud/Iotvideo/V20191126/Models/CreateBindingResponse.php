@@ -18,14 +18,12 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateBinding返回参数结构体
+ *
  * @method string getAccessToken() 获取访问设备的AccessToken
  * @method void setAccessToken(string $AccessToken) 设置访问设备的AccessToken
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateBinding返回参数结构体
  */
 class CreateBindingResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateBindingResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $AccessToken 访问设备的AccessToken
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateBindingResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

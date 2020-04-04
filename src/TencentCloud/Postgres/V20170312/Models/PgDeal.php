@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 订单详情
+ *
  * @method string getDealName() 获取订单名
  * @method void setDealName(string $DealName) 设置订单名
  * @method string getOwnerUin() 获取所属用户
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowId(integer $FlowId) 设置异步任务流程ID
  * @method array getDBInstanceIdSet() 获取实例ID数组
  * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置实例ID数组
- */
-
-/**
- *订单详情
  */
 class PgDeal extends AbstractModel
 {
@@ -66,6 +64,7 @@ class PgDeal extends AbstractModel
      * @var array 实例ID数组
      */
     public $DBInstanceIdSet;
+
     /**
      * @param string $DealName 订单名
      * @param string $OwnerUin 所属用户
@@ -78,6 +77,7 @@ class PgDeal extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

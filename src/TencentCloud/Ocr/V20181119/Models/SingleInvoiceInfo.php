@@ -18,14 +18,12 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 混贴票据中单张发票的内容
+ *
  * @method string getName() 获取识别出的字段名称
  * @method void setName(string $Name) 设置识别出的字段名称
  * @method string getValue() 获取识别出的字段名称对应的值，也就是字段name对应的字符串结果。
  * @method void setValue(string $Value) 设置识别出的字段名称对应的值，也就是字段name对应的字符串结果。
- */
-
-/**
- *混贴票据中单张发票的内容
  */
 class SingleInvoiceInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SingleInvoiceInfo extends AbstractModel
      * @var string 识别出的字段名称对应的值，也就是字段name对应的字符串结果。
      */
     public $Value;
+
     /**
      * @param string $Name 识别出的字段名称
      * @param string $Value 识别出的字段名称对应的值，也就是字段name对应的字符串结果。
@@ -46,6 +45,7 @@ class SingleInvoiceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

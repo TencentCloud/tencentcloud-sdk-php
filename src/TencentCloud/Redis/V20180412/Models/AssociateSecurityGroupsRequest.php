@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AssociateSecurityGroups请求参数结构体
+ *
  * @method string getProduct() 获取数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
  * @method void setProduct(string $Product) 设置数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
  * @method string getSecurityGroupId() 获取要绑定的安全组ID，类似sg-efil73jd。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置要绑定的安全组ID，类似sg-efil73jd。
  * @method array getInstanceIds() 获取被绑定的实例ID，类似ins-lesecurk，支持指定多个实例。
  * @method void setInstanceIds(array $InstanceIds) 设置被绑定的实例ID，类似ins-lesecurk，支持指定多个实例。
- */
-
-/**
- *AssociateSecurityGroups请求参数结构体
  */
 class AssociateSecurityGroupsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AssociateSecurityGroupsRequest extends AbstractModel
      * @var array 被绑定的实例ID，类似ins-lesecurk，支持指定多个实例。
      */
     public $InstanceIds;
+
     /**
      * @param string $Product 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
      * @param string $SecurityGroupId 要绑定的安全组ID，类似sg-efil73jd。
@@ -54,6 +53,7 @@ class AssociateSecurityGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

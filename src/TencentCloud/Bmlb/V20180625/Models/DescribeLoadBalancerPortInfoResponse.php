@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLoadBalancerPortInfo返回参数结构体
+ *
  * @method array getListenerSet() 获取返回的监听器列表（四层和七层）。
  * @method void setListenerSet(array $ListenerSet) 设置返回的监听器列表（四层和七层）。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeLoadBalancerPortInfo返回参数结构体
  */
 class DescribeLoadBalancerPortInfoResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeLoadBalancerPortInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $ListenerSet 返回的监听器列表（四层和七层）。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeLoadBalancerPortInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

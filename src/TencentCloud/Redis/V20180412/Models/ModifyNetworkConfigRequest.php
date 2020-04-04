@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNetworkConfig请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getOperation() 获取操作类型：changeVip——修改实例VIP；changeVpc——修改实例子网；changeBaseToVpc——基础网络转VPC网络
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络ID，changeVpc、changeBaseToVpc的时候需要提供
  * @method string getSubnetId() 获取子网ID，changeVpc、changeBaseToVpc的时候需要提供
  * @method void setSubnetId(string $SubnetId) 设置子网ID，changeVpc、changeBaseToVpc的时候需要提供
- */
-
-/**
- *ModifyNetworkConfig请求参数结构体
  */
 class ModifyNetworkConfigRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyNetworkConfigRequest extends AbstractModel
      * @var string 子网ID，changeVpc、changeBaseToVpc的时候需要提供
      */
     public $SubnetId;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $Operation 操作类型：changeVip——修改实例VIP；changeVpc——修改实例子网；changeBaseToVpc——基础网络转VPC网络
@@ -70,6 +69,7 @@ class ModifyNetworkConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

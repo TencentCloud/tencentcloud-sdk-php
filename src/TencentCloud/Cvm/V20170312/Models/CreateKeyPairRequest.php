@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateKeyPair请求参数结构体
+ *
  * @method string getKeyName() 获取密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
  * @method void setKeyName(string $KeyName) 设置密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
  * @method integer getProjectId() 获取密钥对创建后所属的项目ID。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 可以通过以下方式获取项目ID：
 <li>通过项目列表查询项目ID。
 <li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。
- */
-
-/**
- *CreateKeyPair请求参数结构体
  */
 class CreateKeyPairRequest extends AbstractModel
 {
@@ -47,6 +45,7 @@ class CreateKeyPairRequest extends AbstractModel
 <li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。
      */
     public $ProjectId;
+
     /**
      * @param string $KeyName 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
      * @param integer $ProjectId 密钥对创建后所属的项目ID。
@@ -58,6 +57,7 @@ class CreateKeyPairRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

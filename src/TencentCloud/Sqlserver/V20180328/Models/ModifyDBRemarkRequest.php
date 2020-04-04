@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBRemark请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，形如mssql-rljoi3bf
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-rljoi3bf
  * @method array getDBRemarks() 获取数据库名称及备注数组，每个元素包含数据库名和对应的备注
  * @method void setDBRemarks(array $DBRemarks) 设置数据库名称及备注数组，每个元素包含数据库名和对应的备注
- */
-
-/**
- *ModifyDBRemark请求参数结构体
  */
 class ModifyDBRemarkRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBRemarkRequest extends AbstractModel
      * @var array 数据库名称及备注数组，每个元素包含数据库名和对应的备注
      */
     public $DBRemarks;
+
     /**
      * @param string $InstanceId 实例ID，形如mssql-rljoi3bf
      * @param array $DBRemarks 数据库名称及备注数组，每个元素包含数据库名和对应的备注
@@ -46,6 +45,7 @@ class ModifyDBRemarkRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

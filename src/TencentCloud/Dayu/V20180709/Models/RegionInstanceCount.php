@@ -18,16 +18,14 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 地域资源实例数
+ *
  * @method string getRegion() 获取地域码
  * @method void setRegion(string $Region) 设置地域码
  * @method string getRegionV3() 获取地域码（新规范）
  * @method void setRegionV3(string $RegionV3) 设置地域码（新规范）
  * @method integer getCount() 获取资源实例数
  * @method void setCount(integer $Count) 设置资源实例数
- */
-
-/**
- *地域资源实例数
  */
 class RegionInstanceCount extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RegionInstanceCount extends AbstractModel
      * @var integer 资源实例数
      */
     public $Count;
+
     /**
      * @param string $Region 地域码
      * @param string $RegionV3 地域码（新规范）
@@ -54,6 +53,7 @@ class RegionInstanceCount extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

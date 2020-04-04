@@ -18,12 +18,10 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteEcdnDomain请求参数结构体
+ *
  * @method string getDomain() 获取待删除域名。
  * @method void setDomain(string $Domain) 设置待删除域名。
- */
-
-/**
- *DeleteEcdnDomain请求参数结构体
  */
 class DeleteEcdnDomainRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteEcdnDomainRequest extends AbstractModel
      * @var string 待删除域名。
      */
     public $Domain;
+
     /**
      * @param string $Domain 待删除域名。
      */
@@ -38,6 +37,7 @@ class DeleteEcdnDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

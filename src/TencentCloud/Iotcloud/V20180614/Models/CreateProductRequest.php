@@ -18,16 +18,14 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateProduct请求参数结构体
+ *
  * @method string getProductName() 获取产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
  * @method void setProductName(string $ProductName) 设置产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
  * @method ProductProperties getProductProperties() 获取产品属性
  * @method void setProductProperties(ProductProperties $ProductProperties) 设置产品属性
  * @method string getSkey() 获取创建CLAA产品时，需要Skey
  * @method void setSkey(string $Skey) 设置创建CLAA产品时，需要Skey
- */
-
-/**
- *CreateProduct请求参数结构体
  */
 class CreateProductRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateProductRequest extends AbstractModel
      * @var string 创建CLAA产品时，需要Skey
      */
     public $Skey;
+
     /**
      * @param string $ProductName 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
      * @param ProductProperties $ProductProperties 产品属性
@@ -54,6 +53,7 @@ class CreateProductRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

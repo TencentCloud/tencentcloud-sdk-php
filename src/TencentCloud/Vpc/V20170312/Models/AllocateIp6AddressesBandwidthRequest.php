@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AllocateIp6AddressesBandwidth请求参数结构体
+ *
  * @method array getIp6Addresses() 获取需要开通公网访问能力的IPV6地址
  * @method void setIp6Addresses(array $Ip6Addresses) 设置需要开通公网访问能力的IPV6地址
  * @method integer getInternetMaxBandwidthOut() 获取带宽，单位Mbps。默认是1Mbps
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置带宽，单位Mbps。默认是1Mbps
  * @method string getInternetChargeType() 获取网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，默认是"TRAFFIC_POSTPAID_BY_HOUR"。
  * @method void setInternetChargeType(string $InternetChargeType) 设置网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，默认是"TRAFFIC_POSTPAID_BY_HOUR"。
- */
-
-/**
- *AllocateIp6AddressesBandwidth请求参数结构体
  */
 class AllocateIp6AddressesBandwidthRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AllocateIp6AddressesBandwidthRequest extends AbstractModel
      * @var string 网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，默认是"TRAFFIC_POSTPAID_BY_HOUR"。
      */
     public $InternetChargeType;
+
     /**
      * @param array $Ip6Addresses 需要开通公网访问能力的IPV6地址
      * @param integer $InternetMaxBandwidthOut 带宽，单位Mbps。默认是1Mbps
@@ -54,6 +53,7 @@ class AllocateIp6AddressesBandwidthRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

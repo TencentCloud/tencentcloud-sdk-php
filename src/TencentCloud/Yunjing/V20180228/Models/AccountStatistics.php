@@ -18,14 +18,12 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 帐号统计数据。
+ *
  * @method string getUsername() 获取用户名。
  * @method void setUsername(string $Username) 设置用户名。
  * @method integer getMachineNum() 获取主机数量。
  * @method void setMachineNum(integer $MachineNum) 设置主机数量。
- */
-
-/**
- *帐号统计数据。
  */
 class AccountStatistics extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AccountStatistics extends AbstractModel
      * @var integer 主机数量。
      */
     public $MachineNum;
+
     /**
      * @param string $Username 用户名。
      * @param integer $MachineNum 主机数量。
@@ -46,6 +45,7 @@ class AccountStatistics extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

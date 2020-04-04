@@ -18,6 +18,8 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StartOnlineRecord请求参数结构体
+ *
  * @method integer getSdkAppId() 获取客户的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置客户的SdkAppId
  * @method integer getRoomId() 获取需要录制的房间号
@@ -50,10 +52,6 @@ MIX_STREAM - 混流功能
 MIX_STREAM - 混流功能
  * @method boolean getAudioFileNeeded() 获取是否需要在结果回调中返回各路流的纯音频录制文件，文件格式为mp3
  * @method void setAudioFileNeeded(boolean $AudioFileNeeded) 设置是否需要在结果回调中返回各路流的纯音频录制文件，文件格式为mp3
- */
-
-/**
- *StartOnlineRecord请求参数结构体
  */
 class StartOnlineRecordRequest extends AbstractModel
 {
@@ -112,6 +110,7 @@ MIX_STREAM - 混流功能
      * @var boolean 是否需要在结果回调中返回各路流的纯音频录制文件，文件格式为mp3
      */
     public $AudioFileNeeded;
+
     /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param integer $RoomId 需要录制的房间号
@@ -134,6 +133,7 @@ MIX_STREAM - 混流功能
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

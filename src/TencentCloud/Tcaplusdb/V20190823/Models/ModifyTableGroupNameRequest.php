@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTableGroupName请求参数结构体
+ *
  * @method string getClusterId() 获取表格组所属的集群ID
  * @method void setClusterId(string $ClusterId) 设置表格组所属的集群ID
  * @method string getTableGroupId() 获取待修改名称的表格组ID
  * @method void setTableGroupId(string $TableGroupId) 设置待修改名称的表格组ID
  * @method string getTableGroupName() 获取新的表格组名称，可以使用中英文字符和符号
  * @method void setTableGroupName(string $TableGroupName) 设置新的表格组名称，可以使用中英文字符和符号
- */
-
-/**
- *ModifyTableGroupName请求参数结构体
  */
 class ModifyTableGroupNameRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyTableGroupNameRequest extends AbstractModel
      * @var string 新的表格组名称，可以使用中英文字符和符号
      */
     public $TableGroupName;
+
     /**
      * @param string $ClusterId 表格组所属的集群ID
      * @param string $TableGroupId 待修改名称的表格组ID
@@ -54,6 +53,7 @@ class ModifyTableGroupNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

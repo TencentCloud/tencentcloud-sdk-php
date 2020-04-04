@@ -18,16 +18,14 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateShieldPlanInstance返回参数结构体
+ *
  * @method integer getPlanId() 获取策略id
  * @method void setPlanId(integer $PlanId) 设置策略id
  * @method integer getProgress() 获取任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
  * @method void setProgress(integer $Progress) 设置任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateShieldPlanInstance返回参数结构体
  */
 class CreateShieldPlanInstanceResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateShieldPlanInstanceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $PlanId 策略id
      * @param integer $Progress 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
@@ -54,6 +53,7 @@ class CreateShieldPlanInstanceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

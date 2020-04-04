@@ -18,16 +18,14 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 表示一个标签键值对以及是否允许删除
+ *
  * @method string getTagKey() 获取标签键
  * @method void setTagKey(string $TagKey) 设置标签键
  * @method string getTagValue() 获取标签值
  * @method void setTagValue(string $TagValue) 设置标签值
  * @method integer getCanDelete() 获取是否可以删除
  * @method void setCanDelete(integer $CanDelete) 设置是否可以删除
- */
-
-/**
- *表示一个标签键值对以及是否允许删除
  */
 class TagWithDelete extends AbstractModel
 {
@@ -45,6 +43,7 @@ class TagWithDelete extends AbstractModel
      * @var integer 是否可以删除
      */
     public $CanDelete;
+
     /**
      * @param string $TagKey 标签键
      * @param string $TagValue 标签值
@@ -54,6 +53,7 @@ class TagWithDelete extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

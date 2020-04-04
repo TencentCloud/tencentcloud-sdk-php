@@ -18,6 +18,8 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSubProject返回参数结构体
+ *
  * @method ProductInfo getProductInfo() 获取作品信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductInfo(ProductInfo $ProductInfo) 设置作品信息
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeSubProject返回参数结构体
  */
 class DescribeSubProjectResponse extends AbstractModel
 {
@@ -121,6 +119,7 @@ class DescribeSubProjectResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param ProductInfo $ProductInfo 作品信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -146,6 +145,7 @@ class DescribeSubProjectResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

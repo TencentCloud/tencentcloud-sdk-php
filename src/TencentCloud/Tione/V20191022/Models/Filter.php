@@ -18,14 +18,12 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 过滤器
+ *
  * @method string getName() 获取过滤字段名称
  * @method void setName(string $Name) 设置过滤字段名称
  * @method array getValues() 获取过滤字段取值
  * @method void setValues(array $Values) 设置过滤字段取值
- */
-
-/**
- *过滤器
  */
 class Filter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Filter extends AbstractModel
      * @var array 过滤字段取值
      */
     public $Values;
+
     /**
      * @param string $Name 过滤字段名称
      * @param array $Values 过滤字段取值
@@ -46,6 +45,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

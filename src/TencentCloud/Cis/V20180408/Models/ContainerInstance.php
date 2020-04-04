@@ -18,6 +18,8 @@ namespace TencentCloud\Cis\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 容器实例的具体信息
+ *
  * @method string getInstanceId() 获取容器实例ID
  * @method void setInstanceId(string $InstanceId) 设置容器实例ID
  * @method string getInstanceName() 获取容器实例名称
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetCidr(string $SubnetCidr) 设置子网Cidr
  * @method string getLanIp() 获取内网IP
  * @method void setLanIp(string $LanIp) 设置内网IP
- */
-
-/**
- *容器实例的具体信息
  */
 class ContainerInstance extends AbstractModel
 {
@@ -129,6 +127,7 @@ class ContainerInstance extends AbstractModel
      * @var string 内网IP
      */
     public $LanIp;
+
     /**
      * @param string $InstanceId 容器实例ID
      * @param string $InstanceName 容器实例名称
@@ -150,6 +149,7 @@ class ContainerInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

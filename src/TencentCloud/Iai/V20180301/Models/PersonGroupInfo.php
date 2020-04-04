@@ -18,14 +18,12 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 包含此人员的人员库及描述字段内容列表
+ *
  * @method string getGroupId() 获取包含此人员的人员库ID
  * @method void setGroupId(string $GroupId) 设置包含此人员的人员库ID
  * @method array getPersonExDescriptions() 获取人员描述字段内容
  * @method void setPersonExDescriptions(array $PersonExDescriptions) 设置人员描述字段内容
- */
-
-/**
- *包含此人员的人员库及描述字段内容列表
  */
 class PersonGroupInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PersonGroupInfo extends AbstractModel
      * @var array 人员描述字段内容
      */
     public $PersonExDescriptions;
+
     /**
      * @param string $GroupId 包含此人员的人员库ID
      * @param array $PersonExDescriptions 人员描述字段内容
@@ -46,6 +45,7 @@ class PersonGroupInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

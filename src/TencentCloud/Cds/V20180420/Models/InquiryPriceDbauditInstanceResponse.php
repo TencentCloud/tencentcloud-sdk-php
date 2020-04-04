@@ -18,16 +18,14 @@ namespace TencentCloud\Cds\V20180420\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceDbauditInstance返回参数结构体
+ *
  * @method float getTotalPrice() 获取总价，单位：元
  * @method void setTotalPrice(float $TotalPrice) 设置总价，单位：元
  * @method float getRealTotalCost() 获取真实价钱，预支费用的折扣价，单位：元
  * @method void setRealTotalCost(float $RealTotalCost) 设置真实价钱，预支费用的折扣价，单位：元
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *InquiryPriceDbauditInstance返回参数结构体
  */
 class InquiryPriceDbauditInstanceResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InquiryPriceDbauditInstanceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param float $TotalPrice 总价，单位：元
      * @param float $RealTotalCost 真实价钱，预支费用的折扣价，单位：元
@@ -54,6 +53,7 @@ class InquiryPriceDbauditInstanceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

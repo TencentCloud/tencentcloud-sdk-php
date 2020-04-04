@@ -18,12 +18,10 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetAttributeKey请求参数结构体
+ *
  * @method string getWebsiteType() 获取网站类型，取值范围是zh和en。如果不传值默认zh
  * @method void setWebsiteType(string $WebsiteType) 设置网站类型，取值范围是zh和en。如果不传值默认zh
- */
-
-/**
- *GetAttributeKey请求参数结构体
  */
 class GetAttributeKeyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetAttributeKeyRequest extends AbstractModel
      * @var string 网站类型，取值范围是zh和en。如果不传值默认zh
      */
     public $WebsiteType;
+
     /**
      * @param string $WebsiteType 网站类型，取值范围是zh和en。如果不传值默认zh
      */
@@ -38,6 +37,7 @@ class GetAttributeKeyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

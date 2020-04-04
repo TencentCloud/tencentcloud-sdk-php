@@ -18,16 +18,14 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * QueryAcctBinding返回参数结构体
+ *
  * @method integer getTotalCount() 获取总行数
  * @method void setTotalCount(integer $TotalCount) 设置总行数
  * @method array getBankCardItems() 获取银行卡信息列表
  * @method void setBankCardItems(array $BankCardItems) 设置银行卡信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *QueryAcctBinding返回参数结构体
  */
 class QueryAcctBindingResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class QueryAcctBindingResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 总行数
      * @param array $BankCardItems 银行卡信息列表
@@ -54,6 +53,7 @@ class QueryAcctBindingResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

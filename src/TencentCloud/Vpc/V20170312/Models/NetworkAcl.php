@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 网络ACL
+ *
  * @method string getVpcId() 获取`VPC`实例`ID`。
  * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。
  * @method string getNetworkAclId() 获取网络ACL实例`ID`。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIngressEntries(array $IngressEntries) 设置网络ACl入站规则。
  * @method array getEgressEntries() 获取网络ACL出站规则。
  * @method void setEgressEntries(array $EgressEntries) 设置网络ACL出站规则。
- */
-
-/**
- *网络ACL
  */
 class NetworkAcl extends AbstractModel
 {
@@ -73,6 +71,7 @@ class NetworkAcl extends AbstractModel
      * @var array 网络ACL出站规则。
      */
     public $EgressEntries;
+
     /**
      * @param string $VpcId `VPC`实例`ID`。
      * @param string $NetworkAclId 网络ACL实例`ID`。
@@ -86,6 +85,7 @@ class NetworkAcl extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述了实例的增强服务启用情况与其设置，如云安全，云监控等实例 Agent
+ *
  * @method RunSecurityServiceEnabled getSecurityService() 获取开启云安全服务。若不指定该参数，则默认开启云安全服务。
  * @method void setSecurityService(RunSecurityServiceEnabled $SecurityService) 设置开启云安全服务。若不指定该参数，则默认开启云安全服务。
  * @method RunMonitorServiceEnabled getMonitorService() 获取开启云监控服务。若不指定该参数，则默认开启云监控服务。
  * @method void setMonitorService(RunMonitorServiceEnabled $MonitorService) 设置开启云监控服务。若不指定该参数，则默认开启云监控服务。
- */
-
-/**
- *描述了实例的增强服务启用情况与其设置，如云安全，云监控等实例 Agent
  */
 class EnhancedService extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EnhancedService extends AbstractModel
      * @var RunMonitorServiceEnabled 开启云监控服务。若不指定该参数，则默认开启云监控服务。
      */
     public $MonitorService;
+
     /**
      * @param RunSecurityServiceEnabled $SecurityService 开启云安全服务。若不指定该参数，则默认开启云安全服务。
      * @param RunMonitorServiceEnabled $MonitorService 开启云监控服务。若不指定该参数，则默认开启云监控服务。
@@ -46,6 +45,7 @@ class EnhancedService extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

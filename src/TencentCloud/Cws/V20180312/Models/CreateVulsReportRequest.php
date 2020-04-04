@@ -18,14 +18,12 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateVulsReport请求参数结构体
+ *
  * @method integer getSiteId() 获取站点ID
  * @method void setSiteId(integer $SiteId) 设置站点ID
  * @method integer getMonitorId() 获取监控任务ID
  * @method void setMonitorId(integer $MonitorId) 设置监控任务ID
- */
-
-/**
- *CreateVulsReport请求参数结构体
  */
 class CreateVulsReportRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateVulsReportRequest extends AbstractModel
      * @var integer 监控任务ID
      */
     public $MonitorId;
+
     /**
      * @param integer $SiteId 站点ID
      * @param integer $MonitorId 监控任务ID
@@ -46,6 +45,7 @@ class CreateVulsReportRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 点播媒体文件基础信息
+ *
  * @method string getName() 获取媒体文件名称。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置媒体文件名称。
@@ -78,10 +80,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVid(string $Vid) 设置直播录制文件的唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *点播媒体文件基础信息
  */
 class MediaBasicInfo extends AbstractModel
 {
@@ -174,6 +172,7 @@ class MediaBasicInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vid;
+
     /**
      * @param string $Name 媒体文件名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -210,6 +209,7 @@ class MediaBasicInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

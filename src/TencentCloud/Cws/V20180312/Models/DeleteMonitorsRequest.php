@@ -18,12 +18,10 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteMonitors请求参数结构体
+ *
  * @method array getMonitorIds() 获取监控任务ID列表
  * @method void setMonitorIds(array $MonitorIds) 设置监控任务ID列表
- */
-
-/**
- *DeleteMonitors请求参数结构体
  */
 class DeleteMonitorsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteMonitorsRequest extends AbstractModel
      * @var array 监控任务ID列表
      */
     public $MonitorIds;
+
     /**
      * @param array $MonitorIds 监控任务ID列表
      */
@@ -38,6 +37,7 @@ class DeleteMonitorsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeIndustryNews请求参数结构体
+ *
  * @method string getIndustryId() 获取行业ID
  * @method void setIndustryId(string $IndustryId) 设置行业ID
  * @method string getStartDate() 获取查询开始时间
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询偏移，默认从0开始
  * @method integer getLimit() 获取查询条数上限，默认20
  * @method void setLimit(integer $Limit) 设置查询条数上限，默认20
- */
-
-/**
- *DescribeIndustryNews请求参数结构体
  */
 class DescribeIndustryNewsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeIndustryNewsRequest extends AbstractModel
      * @var integer 查询条数上限，默认20
      */
     public $Limit;
+
     /**
      * @param string $IndustryId 行业ID
      * @param string $StartDate 查询开始时间
@@ -78,6 +77,7 @@ class DescribeIndustryNewsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 售卖配置详情
+ *
  * @method string getDevice() 获取设备类型
  * @method void setDevice(string $Device) 设置设备类型
  * @method string getType() 获取售卖规格描述
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置状态值
  * @method integer getTag() 获取标签值
  * @method void setTag(integer $Tag) 设置标签值
- */
-
-/**
- *售卖配置详情
  */
 class SellConfig extends AbstractModel
 {
@@ -122,6 +120,7 @@ class SellConfig extends AbstractModel
      * @var integer 标签值
      */
     public $Tag;
+
     /**
      * @param string $Device 设备类型
      * @param string $Type 售卖规格描述
@@ -142,6 +141,7 @@ class SellConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

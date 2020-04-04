@@ -18,6 +18,8 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEcdnDomainLogs请求参数结构体
+ *
  * @method string getDomain() 获取待查询域名。
  * @method void setDomain(string $Domain) 设置待查询域名。
  * @method string getStartTime() 获取日志起始时间。如：2019-10-01 00:00:00
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置日志链接列表分页起始地址，默认0。
  * @method integer getLimit() 获取日志链接列表分页记录条数，默认100，最大1000。
  * @method void setLimit(integer $Limit) 设置日志链接列表分页记录条数，默认100，最大1000。
- */
-
-/**
- *DescribeEcdnDomainLogs请求参数结构体
  */
 class DescribeEcdnDomainLogsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeEcdnDomainLogsRequest extends AbstractModel
      * @var integer 日志链接列表分页记录条数，默认100，最大1000。
      */
     public $Limit;
+
     /**
      * @param string $Domain 待查询域名。
      * @param string $StartTime 日志起始时间。如：2019-10-01 00:00:00
@@ -70,6 +69,7 @@ class DescribeEcdnDomainLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StartAutoScalingInstances请求参数结构体
+ *
  * @method string getAutoScalingGroupId() 获取伸缩组ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
  * @method array getInstanceIds() 获取待开启的CVM实例ID列表
  * @method void setInstanceIds(array $InstanceIds) 设置待开启的CVM实例ID列表
- */
-
-/**
- *StartAutoScalingInstances请求参数结构体
  */
 class StartAutoScalingInstancesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class StartAutoScalingInstancesRequest extends AbstractModel
      * @var array 待开启的CVM实例ID列表
      */
     public $InstanceIds;
+
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param array $InstanceIds 待开启的CVM实例ID列表
@@ -46,6 +45,7 @@ class StartAutoScalingInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

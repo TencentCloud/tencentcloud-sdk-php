@@ -18,16 +18,14 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUsg请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量，当Offset和Limit均为0时将一次性返回用户所有的安全组列表。
  * @method void setOffset(integer $Offset) 设置偏移量，当Offset和Limit均为0时将一次性返回用户所有的安全组列表。
  * @method integer getLimit() 获取返回量，当Offset和Limit均为0时将一次性返回用户所有的安全组列表。
  * @method void setLimit(integer $Limit) 设置返回量，当Offset和Limit均为0时将一次性返回用户所有的安全组列表。
  * @method string getSearchWord() 获取搜索关键字
  * @method void setSearchWord(string $SearchWord) 设置搜索关键字
- */
-
-/**
- *DescribeUsg请求参数结构体
  */
 class DescribeUsgRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeUsgRequest extends AbstractModel
      * @var string 搜索关键字
      */
     public $SearchWord;
+
     /**
      * @param integer $Offset 偏移量，当Offset和Limit均为0时将一次性返回用户所有的安全组列表。
      * @param integer $Limit 返回量，当Offset和Limit均为0时将一次性返回用户所有的安全组列表。
@@ -54,6 +53,7 @@ class DescribeUsgRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

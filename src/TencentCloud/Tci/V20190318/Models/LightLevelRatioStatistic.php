@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 光照强度比例统计结果
+ *
  * @method string getLevel() 获取名称
  * @method void setLevel(string $Level) 设置名称
  * @method float getRatio() 获取比例
  * @method void setRatio(float $Ratio) 设置比例
- */
-
-/**
- *光照强度比例统计结果
  */
 class LightLevelRatioStatistic extends AbstractModel
 {
@@ -38,6 +36,7 @@ class LightLevelRatioStatistic extends AbstractModel
      * @var float 比例
      */
     public $Ratio;
+
     /**
      * @param string $Level 名称
      * @param float $Ratio 比例
@@ -46,6 +45,7 @@ class LightLevelRatioStatistic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

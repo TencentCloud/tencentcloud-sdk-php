@@ -18,12 +18,10 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AppGetUser请求参数结构体
+ *
  * @method string getAccessToken() 获取访问Token
  * @method void setAccessToken(string $AccessToken) 设置访问Token
- */
-
-/**
- *AppGetUser请求参数结构体
  */
 class AppGetUserRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AppGetUserRequest extends AbstractModel
      * @var string 访问Token
      */
     public $AccessToken;
+
     /**
      * @param string $AccessToken 访问Token
      */
@@ -38,6 +37,7 @@ class AppGetUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

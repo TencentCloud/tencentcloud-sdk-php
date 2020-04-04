@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBillingData返回参数结构体
+ *
  * @method string getInterval() 获取时间粒度，根据查询时传递参数指定：
 min：1 分钟粒度
 5min：5 分钟粒度
@@ -32,10 +34,6 @@ day：天粒度
  * @method void setData(array $Data) 设置数据明细
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeBillingData返回参数结构体
  */
 class DescribeBillingDataResponse extends AbstractModel
 {
@@ -57,6 +55,7 @@ day：天粒度
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Interval 时间粒度，根据查询时传递参数指定：
 min：1 分钟粒度
@@ -70,6 +69,7 @@ day：天粒度
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

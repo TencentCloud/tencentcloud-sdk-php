@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ClearTables请求参数结构体
+ *
  * @method string getClusterId() 获取表所属集群实例ID
  * @method void setClusterId(string $ClusterId) 设置表所属集群实例ID
  * @method array getSelectedTables() 获取待清理表信息列表
  * @method void setSelectedTables(array $SelectedTables) 设置待清理表信息列表
- */
-
-/**
- *ClearTables请求参数结构体
  */
 class ClearTablesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ClearTablesRequest extends AbstractModel
      * @var array 待清理表信息列表
      */
     public $SelectedTables;
+
     /**
      * @param string $ClusterId 表所属集群实例ID
      * @param array $SelectedTables 待清理表信息列表
@@ -46,6 +45,7 @@ class ClearTablesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

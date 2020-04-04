@@ -18,14 +18,12 @@ namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyWorkers请求参数结构体
+ *
  * @method array getInstanceIds() 获取批量机器ID，最多不超过100个
  * @method void setInstanceIds(array $InstanceIds) 设置批量机器ID，最多不超过100个
  * @method integer getSetNo() 获取资源池编号，修改有效范围为[1,100]，在idle状态下才能修改成功
  * @method void setSetNo(integer $SetNo) 设置资源池编号，修改有效范围为[1,100]，在idle状态下才能修改成功
- */
-
-/**
- *ModifyWorkers请求参数结构体
  */
 class ModifyWorkersRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyWorkersRequest extends AbstractModel
      * @var integer 资源池编号，修改有效范围为[1,100]，在idle状态下才能修改成功
      */
     public $SetNo;
+
     /**
      * @param array $InstanceIds 批量机器ID，最多不超过100个
      * @param integer $SetNo 资源池编号，修改有效范围为[1,100]，在idle状态下才能修改成功
@@ -46,6 +45,7 @@ class ModifyWorkersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

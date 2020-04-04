@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AIAssistant请求参数结构体
+ *
  * @method string getFileContent() 获取输入分析对象内容，输入数据格式参考FileType参数释义
  * @method void setFileContent(string $FileContent) 设置输入分析对象内容，输入数据格式参考FileType参数释义
  * @method string getFileType() 获取输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，audio_url: 音频文件，picture：图片二进制数据的BASE64编码
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceEncodeType(integer $VoiceEncodeType) 设置语音编码类型 1:pcm
  * @method integer getVoiceFileType() 获取语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
  * @method void setVoiceFileType(integer $VoiceFileType) 设置语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
- */
-
-/**
- *AIAssistant请求参数结构体
  */
 class AIAssistantRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class AIAssistantRequest extends AbstractModel
      * @var integer 语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
      */
     public $VoiceFileType;
+
     /**
      * @param string $FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      * @param string $FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，audio_url: 音频文件，picture：图片二进制数据的BASE64编码
@@ -102,6 +101,7 @@ class AIAssistantRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

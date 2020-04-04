@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTopic请求参数结构体
+ *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getTopicName() 获取主题名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionMs(integer $RetentionMs) 设置可消息选。保留时间，单位ms，当前最小值为60000ms
  * @method integer getSegmentMs() 获取Segment分片滚动的时长，单位ms，当前最小为3600000ms
  * @method void setSegmentMs(integer $SegmentMs) 设置Segment分片滚动的时长，单位ms，当前最小为3600000ms
- */
-
-/**
- *CreateTopic请求参数结构体
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -108,6 +106,7 @@ class CreateTopicRequest extends AbstractModel
      * @var integer Segment分片滚动的时长，单位ms，当前最小为3600000ms
      */
     public $SegmentMs;
+
     /**
      * @param string $InstanceId 实例Id
      * @param string $TopicName 主题名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
@@ -126,6 +125,7 @@ class CreateTopicRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

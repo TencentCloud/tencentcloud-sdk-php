@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateRsgAsGroup请求参数结构体
+ *
  * @method string getId() 获取伸缩组 ID
  * @method void setId(string $Id) 设置伸缩组 ID
  * @method string getName() 获取重命名名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinSize(integer $MinSize) 设置伸缩组最小节点数
  * @method integer getDesiredSize() 获取伸缩组期望的节点数
  * @method void setDesiredSize(integer $DesiredSize) 设置伸缩组期望的节点数
- */
-
-/**
- *UpdateRsgAsGroup请求参数结构体
  */
 class UpdateRsgAsGroupRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class UpdateRsgAsGroupRequest extends AbstractModel
      * @var integer 伸缩组期望的节点数
      */
     public $DesiredSize;
+
     /**
      * @param string $Id 伸缩组 ID
      * @param string $Name 重命名名称
@@ -70,6 +69,7 @@ class UpdateRsgAsGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

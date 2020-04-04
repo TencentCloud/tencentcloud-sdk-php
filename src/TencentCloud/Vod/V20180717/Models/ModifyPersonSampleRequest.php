@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyPersonSample请求参数结构体
+ *
  * @method string getPersonId() 获取人物 ID。
  * @method void setPersonId(string $PersonId) 设置人物 ID。
  * @method string getName() 获取名称，长度限制：128 个字符。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) 设置标签操作信息。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *ModifyPersonSample请求参数结构体
  */
 class ModifyPersonSampleRequest extends AbstractModel
 {
@@ -82,6 +80,7 @@ class ModifyPersonSampleRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param string $PersonId 人物 ID。
      * @param string $Name 名称，长度限制：128 个字符。
@@ -98,6 +97,7 @@ class ModifyPersonSampleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

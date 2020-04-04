@@ -18,14 +18,12 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 按机型归类的实例可售卖规格信息
+ *
  * @method string getMachine() 获取设备型号
  * @method void setMachine(string $Machine) 设置设备型号
  * @method array getSpecInfos() 获取该机型对应的可售卖规格列表
  * @method void setSpecInfos(array $SpecInfos) 设置该机型对应的可售卖规格列表
- */
-
-/**
- *按机型归类的实例可售卖规格信息
  */
 class InstanceSpec extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceSpec extends AbstractModel
      * @var array 该机型对应的可售卖规格列表
      */
     public $SpecInfos;
+
     /**
      * @param string $Machine 设备型号
      * @param array $SpecInfos 该机型对应的可售卖规格列表
@@ -46,6 +45,7 @@ class InstanceSpec extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

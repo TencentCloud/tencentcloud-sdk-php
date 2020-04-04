@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 来源文件信息
+ *
  * @method string getSourceType() 获取媒体文件的来源类别：
 <li>Record：来自录制。如直播录制、直播时移录制等。</li>
 <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceContext(string $SourceContext) 设置用户创建文件时透传的字段
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *来源文件信息
  */
 class MediaSourceData extends AbstractModel
 {
@@ -56,6 +54,7 @@ class MediaSourceData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceContext;
+
     /**
      * @param string $SourceType 媒体文件的来源类别：
 <li>Record：来自录制。如直播录制、直播时移录制等。</li>
@@ -70,6 +69,7 @@ class MediaSourceData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

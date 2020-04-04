@@ -18,12 +18,10 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteClusterRouteTable请求参数结构体
+ *
  * @method string getRouteTableName() 获取路由表名称
  * @method void setRouteTableName(string $RouteTableName) 设置路由表名称
- */
-
-/**
- *DeleteClusterRouteTable请求参数结构体
  */
 class DeleteClusterRouteTableRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteClusterRouteTableRequest extends AbstractModel
      * @var string 路由表名称
      */
     public $RouteTableName;
+
     /**
      * @param string $RouteTableName 路由表名称
      */
@@ -38,6 +37,7 @@ class DeleteClusterRouteTableRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

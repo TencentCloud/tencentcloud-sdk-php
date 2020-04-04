@@ -18,14 +18,12 @@ namespace TencentCloud\Tmt\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * LanguageDetect请求参数结构体
+ *
  * @method string getText() 获取待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败。单次请求的文本长度需要低于2000。
  * @method void setText(string $Text) 设置待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败。单次请求的文本长度需要低于2000。
  * @method integer getProjectId() 获取项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
  * @method void setProjectId(integer $ProjectId) 设置项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
- */
-
-/**
- *LanguageDetect请求参数结构体
  */
 class LanguageDetectRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class LanguageDetectRequest extends AbstractModel
      * @var integer 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      */
     public $ProjectId;
+
     /**
      * @param string $Text 待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败。单次请求的文本长度需要低于2000。
      * @param integer $ProjectId 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
@@ -46,6 +45,7 @@ class LanguageDetectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveForbidStreamList请求参数结构体
+ *
  * @method integer getPageNum() 获取取得第几页，默认1。
  * @method void setPageNum(integer $PageNum) 设置取得第几页，默认1。
  * @method integer getPageSize() 获取每页大小，最大100。 
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置每页大小，最大100。 
 取值：1~100之前的任意整数。
 默认值：10。
- */
-
-/**
- *DescribeLiveForbidStreamList请求参数结构体
  */
 class DescribeLiveForbidStreamListRequest extends AbstractModel
 {
@@ -44,6 +42,7 @@ class DescribeLiveForbidStreamListRequest extends AbstractModel
 默认值：10。
      */
     public $PageSize;
+
     /**
      * @param integer $PageNum 取得第几页，默认1。
      * @param integer $PageSize 每页大小，最大100。 
@@ -54,6 +53,7 @@ class DescribeLiveForbidStreamListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

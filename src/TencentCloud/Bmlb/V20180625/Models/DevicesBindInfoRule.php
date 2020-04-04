@@ -18,16 +18,14 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取设备绑定信息时返回的设备所绑定的转发规则信息。
+ *
  * @method string getDomain() 获取转发域名。
  * @method void setDomain(string $Domain) 设置转发域名。
  * @method string getDomainId() 获取转发域名ID。
  * @method void setDomainId(string $DomainId) 设置转发域名ID。
  * @method array getLocationSet() 获取转发路径列表。
  * @method void setLocationSet(array $LocationSet) 设置转发路径列表。
- */
-
-/**
- *获取设备绑定信息时返回的设备所绑定的转发规则信息。
  */
 class DevicesBindInfoRule extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DevicesBindInfoRule extends AbstractModel
      * @var array 转发路径列表。
      */
     public $LocationSet;
+
     /**
      * @param string $Domain 转发域名。
      * @param string $DomainId 转发域名ID。
@@ -54,6 +53,7 @@ class DevicesBindInfoRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

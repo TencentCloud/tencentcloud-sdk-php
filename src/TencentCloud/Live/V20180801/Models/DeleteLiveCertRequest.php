@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLiveCert请求参数结构体
+ *
  * @method integer getCertId() 获取证书Id。
  * @method void setCertId(integer $CertId) 设置证书Id。
- */
-
-/**
- *DeleteLiveCert请求参数结构体
  */
 class DeleteLiveCertRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteLiveCertRequest extends AbstractModel
      * @var integer 证书Id。
      */
     public $CertId;
+
     /**
      * @param integer $CertId 证书Id。
      */
@@ -38,6 +37,7 @@ class DeleteLiveCertRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tbp\V20190627\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 槽位信息
+ *
  * @method string getSlotName() 获取槽位名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlotName(string $SlotName) 设置槽位名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlotValue(string $SlotValue) 设置槽位值
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *槽位信息
  */
 class SlotInfo extends AbstractModel
 {
@@ -44,6 +42,7 @@ class SlotInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlotValue;
+
     /**
      * @param string $SlotName 槽位名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class SlotInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

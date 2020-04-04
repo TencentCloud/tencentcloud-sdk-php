@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例参数修改历史
+ *
  * @method string getParamName() 获取参数名称
  * @method void setParamName(string $ParamName) 设置参数名称
  * @method string getPreValue() 获取修改前值
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
  * @method string getModifyTime() 获取修改时间
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
- */
-
-/**
- *实例参数修改历史
  */
 class InstanceParamHistory extends AbstractModel
 {
@@ -59,6 +57,7 @@ class InstanceParamHistory extends AbstractModel
      * @var string 修改时间
      */
     public $ModifyTime;
+
     /**
      * @param string $ParamName 参数名称
      * @param string $PreValue 修改前值
@@ -70,6 +69,7 @@ class InstanceParamHistory extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

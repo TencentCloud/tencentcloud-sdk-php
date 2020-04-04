@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SrvInvoke返回参数结构体
+ *
  * @method integer getRetCode() 获取返回码
  * @method void setRetCode(integer $RetCode) 设置返回码
  * @method string getRetMsg() 获取返回消息
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(string $Data) 设置返回数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *SrvInvoke返回参数结构体
  */
 class SrvInvokeResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SrvInvokeResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $RetCode 返回码
      * @param string $RetMsg 返回消息
@@ -62,6 +61,7 @@ class SrvInvokeResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

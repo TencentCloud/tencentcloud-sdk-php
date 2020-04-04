@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频拆条输出。
+ *
  * @method array getSegmentSet() 获取视频拆条片段列表。
  * @method void setSegmentSet(array $SegmentSet) 设置视频拆条片段列表。
- */
-
-/**
- *视频拆条输出。
  */
 class AiRecognitionTaskSegmentResultOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskSegmentResultOutput extends AbstractModel
      * @var array 视频拆条片段列表。
      */
     public $SegmentSet;
+
     /**
      * @param array $SegmentSet 视频拆条片段列表。
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskSegmentResultOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

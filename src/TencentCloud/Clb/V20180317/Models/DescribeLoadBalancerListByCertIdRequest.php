@@ -18,12 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLoadBalancerListByCertId请求参数结构体
+ *
  * @method array getCertIds() 获取服务端证书的ID，或客户端证书的ID
  * @method void setCertIds(array $CertIds) 设置服务端证书的ID，或客户端证书的ID
- */
-
-/**
- *DescribeLoadBalancerListByCertId请求参数结构体
  */
 class DescribeLoadBalancerListByCertIdRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeLoadBalancerListByCertIdRequest extends AbstractModel
      * @var array 服务端证书的ID，或客户端证书的ID
      */
     public $CertIds;
+
     /**
      * @param array $CertIds 服务端证书的ID，或客户端证书的ID
      */
@@ -38,6 +37,7 @@ class DescribeLoadBalancerListByCertIdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

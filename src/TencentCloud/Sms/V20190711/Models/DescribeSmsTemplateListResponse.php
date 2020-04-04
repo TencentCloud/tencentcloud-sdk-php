@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSmsTemplateList返回参数结构体
+ *
  * @method array getDescribeTemplateStatusSet() 获取获取短信签名信息响应
  * @method void setDescribeTemplateStatusSet(array $DescribeTemplateStatusSet) 设置获取短信签名信息响应
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeSmsTemplateList返回参数结构体
  */
 class DescribeSmsTemplateListResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeSmsTemplateListResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $DescribeTemplateStatusSet 获取短信签名信息响应
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeSmsTemplateListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

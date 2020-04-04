@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 回源超时配置
+ *
  * @method integer getConnectTimeout() 获取回源建连超时时间，单位为秒，要求5~60之间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectTimeout(integer $ConnectTimeout) 设置回源建连超时时间，单位为秒，要求5~60之间
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReceiveTimeout(integer $ReceiveTimeout) 设置回源接收超时时间，单位为秒，要求10 ~ 60之间
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *回源超时配置
  */
 class OriginPullTimeout extends AbstractModel
 {
@@ -44,6 +42,7 @@ class OriginPullTimeout extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReceiveTimeout;
+
     /**
      * @param integer $ConnectTimeout 回源建连超时时间，单位为秒，要求5~60之间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class OriginPullTimeout extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

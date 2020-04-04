@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HLS专属录制参数
+ *
  * @method integer getFlowContinueDuration() 获取HLS续流超时时间。
  * @method void setFlowContinueDuration(integer $FlowContinueDuration) 设置HLS续流超时时间。
- */
-
-/**
- *HLS专属录制参数
  */
 class HlsSpecialParam extends AbstractModel
 {
@@ -31,6 +29,7 @@ class HlsSpecialParam extends AbstractModel
      * @var integer HLS续流超时时间。
      */
     public $FlowContinueDuration;
+
     /**
      * @param integer $FlowContinueDuration HLS续流超时时间。
      */
@@ -38,6 +37,7 @@ class HlsSpecialParam extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

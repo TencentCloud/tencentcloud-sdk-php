@@ -18,14 +18,12 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEditingTaskResult返回参数结构体
+ *
  * @method EditingTaskResult getTaskResult() 获取编辑任务结果信息。
  * @method void setTaskResult(EditingTaskResult $TaskResult) 设置编辑任务结果信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeEditingTaskResult返回参数结构体
  */
 class DescribeEditingTaskResultResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeEditingTaskResultResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param EditingTaskResult $TaskResult 编辑任务结果信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeEditingTaskResultResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

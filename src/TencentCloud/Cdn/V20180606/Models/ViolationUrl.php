@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 违规 URL 详情
+ *
  * @method integer getId() 获取ID
  * @method void setId(integer $Id) 设置ID
  * @method string getRealUrl() 获取违规资源原始访问 URL
@@ -40,10 +42,6 @@ complain：申诉进行中
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- */
-
-/**
- *违规 URL 详情
  */
 class ViolationUrl extends AbstractModel
 {
@@ -81,6 +79,7 @@ complain：申诉进行中
      * @var string 更新时间
      */
     public $UpdateTime;
+
     /**
      * @param integer $Id ID
      * @param string $RealUrl 违规资源原始访问 URL
@@ -98,6 +97,7 @@ complain：申诉进行中
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

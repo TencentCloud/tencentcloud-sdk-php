@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBasicCCThreshold请求参数结构体
+ *
  * @method string getBasicIp() 获取查询的IP地址，取值如：1.1.1.1
  * @method void setBasicIp(string $BasicIp) 设置查询的IP地址，取值如：1.1.1.1
  * @method string getBasicRegion() 获取查询IP所属地域，取值如：gz、bj、sh、hk等地域缩写
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBasicIpInstance(string $BasicIpInstance) 设置可选，IPInstance Nat 网关（如果查询的设备类型是NAT服务器，需要传此参数，通过nat资源查询接口获取）
  * @method integer getBasicIspCode() 获取可选，运营商线路（如果查询的设备类型是NAT服务器，需要传此参数为5）
  * @method void setBasicIspCode(integer $BasicIspCode) 设置可选，运营商线路（如果查询的设备类型是NAT服务器，需要传此参数为5）
- */
-
-/**
- *DescribeBasicCCThreshold请求参数结构体
  */
 class DescribeBasicCCThresholdRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeBasicCCThresholdRequest extends AbstractModel
      * @var integer 可选，运营商线路（如果查询的设备类型是NAT服务器，需要传此参数为5）
      */
     public $BasicIspCode;
+
     /**
      * @param string $BasicIp 查询的IP地址，取值如：1.1.1.1
      * @param string $BasicRegion 查询IP所属地域，取值如：gz、bj、sh、hk等地域缩写
@@ -78,6 +77,7 @@ class DescribeBasicCCThresholdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

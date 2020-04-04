@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUserLimit返回参数结构体
+ *
  * @method integer getMaxTaskNum() 获取用户可建立的最大任务数
  * @method void setMaxTaskNum(integer $MaxTaskNum) 设置用户可建立的最大任务数
  * @method integer getMaxAgentNum() 获取用户可用的最大拨测结点数
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinPeriod(integer $MinPeriod) 设置用户可用的最小拨测间隔
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeUserLimit返回参数结构体
  */
 class DescribeUserLimitResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeUserLimitResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $MaxTaskNum 用户可建立的最大任务数
      * @param integer $MaxAgentNum 用户可用的最大拨测结点数
@@ -70,6 +69,7 @@ class DescribeUserLimitResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

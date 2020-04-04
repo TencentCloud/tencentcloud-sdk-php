@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户返回实体
+ *
  * @method array getUsers() 获取符合条件的用户列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsers(array $Users) 设置符合条件的用户列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取符合条件的总用户数
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的总用户数
- */
-
-/**
- *用户返回实体
  */
 class UserResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class UserResponse extends AbstractModel
      * @var integer 符合条件的总用户数
      */
     public $TotalCount;
+
     /**
      * @param array $Users 符合条件的用户列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class UserResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

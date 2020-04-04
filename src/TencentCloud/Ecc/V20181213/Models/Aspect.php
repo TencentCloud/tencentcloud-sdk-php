@@ -18,16 +18,14 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 作文批改每个维度名字与得分
+ *
  * @method string getName() 获取维度名字
  * @method void setName(string $Name) 设置维度名字
  * @method float getScore() 获取维度得分
  * @method void setScore(float $Score) 设置维度得分
  * @method float getPercentage() 获取维度分数占比
  * @method void setPercentage(float $Percentage) 设置维度分数占比
- */
-
-/**
- *作文批改每个维度名字与得分
  */
 class Aspect extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Aspect extends AbstractModel
      * @var float 维度分数占比
      */
     public $Percentage;
+
     /**
      * @param string $Name 维度名字
      * @param float $Score 维度得分
@@ -54,6 +53,7 @@ class Aspect extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 消耗按资源汇总过滤条件
+ *
  * @method array getBusiness() 获取产品列表
  * @method void setBusiness(array $Business) 设置产品列表
  * @method array getProject() 获取项目列表
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(array $Region) 设置地域列表
  * @method array getPayMode() 获取付费模式列表
  * @method void setPayMode(array $PayMode) 设置付费模式列表
- */
-
-/**
- *消耗按资源汇总过滤条件
  */
 class ConsumptionResourceSummaryConditionValue extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ConsumptionResourceSummaryConditionValue extends AbstractModel
      * @var array 付费模式列表
      */
     public $PayMode;
+
     /**
      * @param array $Business 产品列表
      * @param array $Project 项目列表
@@ -62,6 +61,7 @@ class ConsumptionResourceSummaryConditionValue extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

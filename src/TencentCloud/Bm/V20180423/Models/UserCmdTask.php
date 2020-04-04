@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 自定义脚本任务信息
+ *
  * @method string getTaskId() 获取任务ID
  * @method void setTaskId(string $TaskId) 设置任务ID
  * @method integer getStatus() 获取任务状态ID，取值: -1(进行中) 0(结束)
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRunBeginTime(string $RunBeginTime) 设置执行开始时间
  * @method string getRunEndTime() 获取执行结束时间
  * @method void setRunEndTime(string $RunEndTime) 设置执行结束时间
- */
-
-/**
- *自定义脚本任务信息
  */
 class UserCmdTask extends AbstractModel
 {
@@ -87,6 +85,7 @@ class UserCmdTask extends AbstractModel
      * @var string 执行结束时间
      */
     public $RunEndTime;
+
     /**
      * @param string $TaskId 任务ID
      * @param integer $Status 任务状态ID，取值: -1(进行中) 0(结束)
@@ -102,6 +101,7 @@ class UserCmdTask extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

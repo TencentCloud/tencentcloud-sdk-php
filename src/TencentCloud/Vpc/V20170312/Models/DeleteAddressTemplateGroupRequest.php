@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAddressTemplateGroup请求参数结构体
+ *
  * @method string getAddressTemplateGroupId() 获取IP地址模板集合实例ID，例如：ipmg-90cex8mq。
  * @method void setAddressTemplateGroupId(string $AddressTemplateGroupId) 设置IP地址模板集合实例ID，例如：ipmg-90cex8mq。
- */
-
-/**
- *DeleteAddressTemplateGroup请求参数结构体
  */
 class DeleteAddressTemplateGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteAddressTemplateGroupRequest extends AbstractModel
      * @var string IP地址模板集合实例ID，例如：ipmg-90cex8mq。
      */
     public $AddressTemplateGroupId;
+
     /**
      * @param string $AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-90cex8mq。
      */
@@ -38,6 +37,7 @@ class DeleteAddressTemplateGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

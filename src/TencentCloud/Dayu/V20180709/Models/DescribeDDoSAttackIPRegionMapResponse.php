@@ -18,16 +18,14 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDDoSAttackIPRegionMap返回参数结构体
+ *
  * @method array getNationCount() 获取全球地域分布数据
  * @method void setNationCount(array $NationCount) 设置全球地域分布数据
  * @method array getProvinceCount() 获取国内省份地域分布数据
  * @method void setProvinceCount(array $ProvinceCount) 设置国内省份地域分布数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDDoSAttackIPRegionMap返回参数结构体
  */
 class DescribeDDoSAttackIPRegionMapResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDDoSAttackIPRegionMapResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $NationCount 全球地域分布数据
      * @param array $ProvinceCount 国内省份地域分布数据
@@ -54,6 +53,7 @@ class DescribeDDoSAttackIPRegionMapResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

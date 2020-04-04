@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询策略绑定对象列表接口返回的对象实例信息
+ *
  * @method string getUniqueId() 获取对象唯一id
  * @method void setUniqueId(string $UniqueId) 设置对象唯一id
  * @method string getDimensions() 获取表示对象实例的维度集合，jsonObj字符串
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsShielded(integer $IsShielded) 设置对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽
  * @method string getRegion() 获取对象所在的地域
  * @method void setRegion(string $Region) 设置对象所在的地域
- */
-
-/**
- *查询策略绑定对象列表接口返回的对象实例信息
  */
 class DescribeBindingPolicyObjectListInstance extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeBindingPolicyObjectListInstance extends AbstractModel
      * @var string 对象所在的地域
      */
     public $Region;
+
     /**
      * @param string $UniqueId 对象唯一id
      * @param string $Dimensions 表示对象实例的维度集合，jsonObj字符串
@@ -62,6 +61,7 @@ class DescribeBindingPolicyObjectListInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

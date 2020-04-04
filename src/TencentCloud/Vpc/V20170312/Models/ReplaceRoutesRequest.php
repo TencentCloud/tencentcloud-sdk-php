@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReplaceRoutes请求参数结构体
+ *
  * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
  * @method array getRoutes() 获取路由策略对象。需要指定路由策略ID（RouteId）。
  * @method void setRoutes(array $Routes) 设置路由策略对象。需要指定路由策略ID（RouteId）。
- */
-
-/**
- *ReplaceRoutes请求参数结构体
  */
 class ReplaceRoutesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ReplaceRoutesRequest extends AbstractModel
      * @var array 路由策略对象。需要指定路由策略ID（RouteId）。
      */
     public $Routes;
+
     /**
      * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      * @param array $Routes 路由策略对象。需要指定路由策略ID（RouteId）。
@@ -46,6 +45,7 @@ class ReplaceRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

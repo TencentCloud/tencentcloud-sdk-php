@@ -18,16 +18,14 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * region维度的网络峰值信息
+ *
  * @method string getRegion() 获取region信息
  * @method void setRegion(string $Region) 设置region信息
  * @method array getPeakNetworkSet() 获取网络峰值集合
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeakNetworkSet(array $PeakNetworkSet) 设置网络峰值集合
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *region维度的网络峰值信息
  */
 class PeakNetworkRegionInfo extends AbstractModel
 {
@@ -41,6 +39,7 @@ class PeakNetworkRegionInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeakNetworkSet;
+
     /**
      * @param string $Region region信息
      * @param array $PeakNetworkSet 网络峰值集合
@@ -50,6 +49,7 @@ class PeakNetworkRegionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

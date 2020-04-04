@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTaskEx请求参数结构体
+ *
  * @method string getCatTypeName() 获取http, https, ping, tcp, ftp, smtp, udp, dns 之一
  * @method void setCatTypeName(string $CatTypeName) 设置http, https, ping, tcp, ftp, smtp, udp, dns 之一
  * @method string getUrl() 获取拨测的URL， 例如：www.qq.com (URL域名解析需要能解析出具体的IP)
@@ -76,10 +78,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsVerify(integer $IsVerify) 设置IsVerify=0 非验证任务 IsVerify=1 验证任务，不传则默认为0
  * @method integer getRedirectFollowNum() 获取跟随跳转次数，取值范围0-5，不传则表示不跟随
  * @method void setRedirectFollowNum(integer $RedirectFollowNum) 设置跟随跳转次数，取值范围0-5，不传则表示不跟随
- */
-
-/**
- *CreateTaskEx请求参数结构体
  */
 class CreateTaskExRequest extends AbstractModel
 {
@@ -227,6 +225,7 @@ class CreateTaskExRequest extends AbstractModel
      * @var integer 跟随跳转次数，取值范围0-5，不传则表示不跟随
      */
     public $RedirectFollowNum;
+
     /**
      * @param string $CatTypeName http, https, ping, tcp, ftp, smtp, udp, dns 之一
      * @param string $Url 拨测的URL， 例如：www.qq.com (URL域名解析需要能解析出具体的IP)
@@ -262,6 +261,7 @@ class CreateTaskExRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

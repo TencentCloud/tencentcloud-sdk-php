@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * cpu信息
+ *
  * @method integer getCpuId() 获取CPU的ID
  * @method void setCpuId(integer $CpuId) 设置CPU的ID
  * @method string getCpuDescription() 获取CPU型号描述
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSeries(integer $Series) 设置机型序列
  * @method array getContainRaidCard() 获取支持的RAID方式，0：有RAID卡，1：没有RAID卡
  * @method void setContainRaidCard(array $ContainRaidCard) 设置支持的RAID方式，0：有RAID卡，1：没有RAID卡
- */
-
-/**
- *cpu信息
  */
 class CpuInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CpuInfo extends AbstractModel
      * @var array 支持的RAID方式，0：有RAID卡，1：没有RAID卡
      */
     public $ContainRaidCard;
+
     /**
      * @param integer $CpuId CPU的ID
      * @param string $CpuDescription CPU型号描述
@@ -62,6 +61,7 @@ class CpuInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

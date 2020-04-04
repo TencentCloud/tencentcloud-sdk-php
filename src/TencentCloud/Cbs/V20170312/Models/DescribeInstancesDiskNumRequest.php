@@ -18,12 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstancesDiskNum请求参数结构体
+ *
  * @method array getInstanceIds() 获取云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
  * @method void setInstanceIds(array $InstanceIds) 设置云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
- */
-
-/**
- *DescribeInstancesDiskNum请求参数结构体
  */
 class DescribeInstancesDiskNumRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeInstancesDiskNumRequest extends AbstractModel
      * @var array 云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
      */
     public $InstanceIds;
+
     /**
      * @param array $InstanceIds 云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
      */
@@ -38,6 +37,7 @@ class DescribeInstancesDiskNumRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

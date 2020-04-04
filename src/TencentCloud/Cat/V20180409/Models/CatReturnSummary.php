@@ -18,16 +18,14 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 拨测失败返回情况汇总
+ *
  * @method integer getResultCount() 获取拨测失败个数
  * @method void setResultCount(integer $ResultCount) 设置拨测失败个数
  * @method integer getResultCode() 获取拨测失败返回码
  * @method void setResultCode(integer $ResultCode) 设置拨测失败返回码
  * @method string getErrorReason() 获取拨测失败原因描述
  * @method void setErrorReason(string $ErrorReason) 设置拨测失败原因描述
- */
-
-/**
- *拨测失败返回情况汇总
  */
 class CatReturnSummary extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CatReturnSummary extends AbstractModel
      * @var string 拨测失败原因描述
      */
     public $ErrorReason;
+
     /**
      * @param integer $ResultCount 拨测失败个数
      * @param integer $ResultCode 拨测失败返回码
@@ -54,6 +53,7 @@ class CatReturnSummary extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

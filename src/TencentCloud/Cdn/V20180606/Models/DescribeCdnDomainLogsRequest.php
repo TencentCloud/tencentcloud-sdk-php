@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCdnDomainLogs请求参数结构体
+ *
  * @method string getDomain() 获取指定域名查询
  * @method void setDomain(string $Domain) 设置指定域名查询
  * @method string getStartTime() 获取开始时间，如 2019-09-04 00:00:00
@@ -38,10 +40,6 @@ mainland：获取境内加速日志包下载链接
 overseas：获取境外加速日志包下载链接
 global：同时获取境内、境外加速日志包下载链接（分开打包）
 不指定时默认为 mainland
- */
-
-/**
- *DescribeCdnDomainLogs请求参数结构体
  */
 class DescribeCdnDomainLogsRequest extends AbstractModel
 {
@@ -78,6 +76,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
 不指定时默认为 mainland
      */
     public $Area;
+
     /**
      * @param string $Domain 指定域名查询
      * @param string $StartTime 开始时间，如 2019-09-04 00:00:00
@@ -94,6 +93,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

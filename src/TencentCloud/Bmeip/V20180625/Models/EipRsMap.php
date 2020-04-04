@@ -18,14 +18,12 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EipId与InstanceId绑定关系
+ *
  * @method string getEipId() 获取EIP实例 ID
  * @method void setEipId(string $EipId) 设置EIP实例 ID
  * @method string getInstanceId() 获取黑石物理机实例ID
  * @method void setInstanceId(string $InstanceId) 设置黑石物理机实例ID
- */
-
-/**
- *EipId与InstanceId绑定关系
  */
 class EipRsMap extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EipRsMap extends AbstractModel
      * @var string 黑石物理机实例ID
      */
     public $InstanceId;
+
     /**
      * @param string $EipId EIP实例 ID
      * @param string $InstanceId 黑石物理机实例ID
@@ -46,6 +45,7 @@ class EipRsMap extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

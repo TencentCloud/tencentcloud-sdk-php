@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 输出映射配置
+ *
  * @method string getScene() 获取存储类型，仅支持COS
  * @method void setScene(string $Scene) 设置存储类型，仅支持COS
  * @method integer getWorkerNum() 获取并行worker数量
  * @method void setWorkerNum(integer $WorkerNum) 设置并行worker数量
  * @method integer getWorkerPartSize() 获取worker分块大小，单位MB
  * @method void setWorkerPartSize(integer $WorkerPartSize) 设置worker分块大小，单位MB
- */
-
-/**
- *输出映射配置
  */
 class OutputMappingConfig extends AbstractModel
 {
@@ -45,6 +43,7 @@ class OutputMappingConfig extends AbstractModel
      * @var integer worker分块大小，单位MB
      */
     public $WorkerPartSize;
+
     /**
      * @param string $Scene 存储类型，仅支持COS
      * @param integer $WorkerNum 并行worker数量
@@ -54,6 +53,7 @@ class OutputMappingConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

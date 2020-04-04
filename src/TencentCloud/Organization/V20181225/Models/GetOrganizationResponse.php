@@ -18,6 +18,8 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetOrganization返回参数结构体
+ *
  * @method integer getOrgId() 获取企业组织ID
  * @method void setOrgId(integer $OrgId) 设置企业组织ID
  * @method integer getHostUin() 获取创建者UIN
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsEmpty(integer $IsEmpty) 设置是否为空
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetOrganization返回参数结构体
  */
 class GetOrganizationResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class GetOrganizationResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $OrgId 企业组织ID
      * @param integer $HostUin 创建者UIN
@@ -86,6 +85,7 @@ class GetOrganizationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

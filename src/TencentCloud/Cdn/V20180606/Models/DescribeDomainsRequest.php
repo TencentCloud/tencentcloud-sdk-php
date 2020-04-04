@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDomains请求参数结构体
+ *
  * @method integer getOffset() 获取分页查询偏移量，默认为 0 （第一页）
  * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0 （第一页）
  * @method integer getLimit() 获取分页查询限制数目，默认为 100，最大可设置为 1000
  * @method void setLimit(integer $Limit) 设置分页查询限制数目，默认为 100，最大可设置为 1000
  * @method array getFilters() 获取查询条件过滤器，复杂类型
  * @method void setFilters(array $Filters) 设置查询条件过滤器，复杂类型
- */
-
-/**
- *DescribeDomains请求参数结构体
  */
 class DescribeDomainsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDomainsRequest extends AbstractModel
      * @var array 查询条件过滤器，复杂类型
      */
     public $Filters;
+
     /**
      * @param integer $Offset 分页查询偏移量，默认为 0 （第一页）
      * @param integer $Limit 分页查询限制数目，默认为 100，最大可设置为 1000
@@ -54,6 +53,7 @@ class DescribeDomainsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

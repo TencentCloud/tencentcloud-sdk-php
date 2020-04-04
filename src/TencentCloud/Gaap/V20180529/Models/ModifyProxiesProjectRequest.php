@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyProxiesProject请求参数结构体
+ *
  * @method integer getProjectId() 获取需要修改到的项目ID。
  * @method void setProjectId(integer $ProjectId) 设置需要修改到的项目ID。
  * @method array getInstanceIds() 获取（旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 更多详细信息请参阅：如何保证幂等性。
  * @method array getProxyIds() 获取（新参数）一个或多个待操作的通道ID。
  * @method void setProxyIds(array $ProxyIds) 设置（新参数）一个或多个待操作的通道ID。
- */
-
-/**
- *ModifyProxiesProject请求参数结构体
  */
 class ModifyProxiesProjectRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class ModifyProxiesProjectRequest extends AbstractModel
      * @var array （新参数）一个或多个待操作的通道ID。
      */
     public $ProxyIds;
+
     /**
      * @param integer $ProjectId 需要修改到的项目ID。
      * @param array $InstanceIds （旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。
@@ -66,6 +65,7 @@ class ModifyProxiesProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

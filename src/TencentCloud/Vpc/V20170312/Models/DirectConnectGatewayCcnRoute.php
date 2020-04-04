@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 专线网关云联网路由（IDC网段）对象
+ *
  * @method string getRouteId() 获取路由ID。
  * @method void setRouteId(string $RouteId) 设置路由ID。
  * @method string getDestinationCidrBlock() 获取IDC网段。
  * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置IDC网段。
  * @method array getASPath() 获取`BGP`的`AS-Path`属性。
  * @method void setASPath(array $ASPath) 设置`BGP`的`AS-Path`属性。
- */
-
-/**
- *专线网关云联网路由（IDC网段）对象
  */
 class DirectConnectGatewayCcnRoute extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DirectConnectGatewayCcnRoute extends AbstractModel
      * @var array `BGP`的`AS-Path`属性。
      */
     public $ASPath;
+
     /**
      * @param string $RouteId 路由ID。
      * @param string $DestinationCidrBlock IDC网段。
@@ -54,6 +53,7 @@ class DirectConnectGatewayCcnRoute extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ic\V20190307\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 卡片详细信息
+ *
  * @method string getIccid() 获取卡片ID
  * @method void setIccid(string $Iccid) 设置卡片ID
  * @method string getMsisdn() 获取卡电话号码
@@ -104,10 +106,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedSms(integer $NeedSms) 设置是否开通短信0:未开短信 1:开通短信
  * @method integer getProvider() 获取服务
  * @method void setProvider(integer $Provider) 设置服务
- */
-
-/**
- *卡片详细信息
  */
 class CardInfo extends AbstractModel
 {
@@ -257,6 +255,7 @@ class CardInfo extends AbstractModel
      * @var integer 服务
      */
     public $Provider;
+
     /**
      * @param string $Iccid 卡片ID
      * @param string $Msisdn 卡电话号码
@@ -306,6 +305,7 @@ class CardInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

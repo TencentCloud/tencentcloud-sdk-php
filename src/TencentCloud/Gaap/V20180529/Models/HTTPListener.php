@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HTTP类型监听器信息
+ *
  * @method string getListenerId() 获取监听器ID
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getListenerName() 获取监听器名称
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 2，销毁中；
 3，源站调整中；
 4，配置变更中。
- */
-
-/**
- *HTTP类型监听器信息
  */
 class HTTPListener extends AbstractModel
 {
@@ -81,6 +79,7 @@ class HTTPListener extends AbstractModel
 4，配置变更中。
      */
     public $ListenerStatus;
+
     /**
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
@@ -98,6 +97,7 @@ class HTTPListener extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveStreamEventList返回参数结构体
+ *
  * @method array getEventList() 获取推断流事件列表。
  * @method void setEventList(array $EventList) 设置推断流事件列表。
  * @method integer getPageNum() 获取分页的页码。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalPage(integer $TotalPage) 设置总页数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeLiveStreamEventList返回参数结构体
  */
 class DescribeLiveStreamEventListResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeLiveStreamEventListResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $EventList 推断流事件列表。
      * @param integer $PageNum 分页的页码。
@@ -78,6 +77,7 @@ class DescribeLiveStreamEventListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

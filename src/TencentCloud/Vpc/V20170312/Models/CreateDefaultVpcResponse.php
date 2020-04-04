@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDefaultVpc返回参数结构体
+ *
  * @method DefaultVpcSubnet getVpc() 获取默认VPC和子网ID
  * @method void setVpc(DefaultVpcSubnet $Vpc) 设置默认VPC和子网ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateDefaultVpc返回参数结构体
  */
 class CreateDefaultVpcResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateDefaultVpcResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param DefaultVpcSubnet $Vpc 默认VPC和子网ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateDefaultVpcResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

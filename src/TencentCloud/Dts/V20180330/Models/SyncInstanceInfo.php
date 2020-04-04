@@ -18,14 +18,12 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 灾备同步的实例信息，记录主实例或灾备实例的信息
+ *
  * @method string getRegion() 获取地域英文名，如：ap-guangzhou
  * @method void setRegion(string $Region) 设置地域英文名，如：ap-guangzhou
  * @method string getInstanceId() 获取实例短ID
  * @method void setInstanceId(string $InstanceId) 设置实例短ID
- */
-
-/**
- *灾备同步的实例信息，记录主实例或灾备实例的信息
  */
 class SyncInstanceInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SyncInstanceInfo extends AbstractModel
      * @var string 实例短ID
      */
     public $InstanceId;
+
     /**
      * @param string $Region 地域英文名，如：ap-guangzhou
      * @param string $InstanceId 实例短ID
@@ -46,6 +45,7 @@ class SyncInstanceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

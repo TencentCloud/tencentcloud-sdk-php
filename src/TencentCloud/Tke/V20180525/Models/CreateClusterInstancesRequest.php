@@ -18,16 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateClusterInstances请求参数结构体
+ *
  * @method string getClusterId() 获取集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
  * @method void setClusterId(string $ClusterId) 设置集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
  * @method string getRunInstancePara() 获取CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
  * @method void setRunInstancePara(string $RunInstancePara) 设置CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取实例额外需要设置参数信息
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置实例额外需要设置参数信息
- */
-
-/**
- *CreateClusterInstances请求参数结构体
  */
 class CreateClusterInstancesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateClusterInstancesRequest extends AbstractModel
      * @var InstanceAdvancedSettings 实例额外需要设置参数信息
      */
     public $InstanceAdvancedSettings;
+
     /**
      * @param string $ClusterId 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
      * @param string $RunInstancePara CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
@@ -54,6 +53,7 @@ class CreateClusterInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

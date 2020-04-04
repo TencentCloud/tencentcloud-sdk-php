@@ -18,12 +18,10 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteOrganizationNodes请求参数结构体
+ *
  * @method array getNodeIds() 获取组织单元ID列表
  * @method void setNodeIds(array $NodeIds) 设置组织单元ID列表
- */
-
-/**
- *DeleteOrganizationNodes请求参数结构体
  */
 class DeleteOrganizationNodesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteOrganizationNodesRequest extends AbstractModel
      * @var array 组织单元ID列表
      */
     public $NodeIds;
+
     /**
      * @param array $NodeIds 组织单元ID列表
      */
@@ -38,6 +37,7 @@ class DeleteOrganizationNodesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

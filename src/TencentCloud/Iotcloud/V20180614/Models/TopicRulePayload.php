@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 创建规则请求包体
+ *
  * @method string getSql() 获取规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
  * @method void setSql(string $Sql) 设置规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
  * @method string getActions() 获取行为的JSON字符串，大部分种类举例如下：
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置规则描述
  * @method boolean getRuleDisabled() 获取是否禁用规则
  * @method void setRuleDisabled(boolean $RuleDisabled) 设置是否禁用规则
- */
-
-/**
- *创建规则请求包体
  */
 class TopicRulePayload extends AbstractModel
 {
@@ -55,6 +53,7 @@ class TopicRulePayload extends AbstractModel
      * @var boolean 是否禁用规则
      */
     public $RuleDisabled;
+
     /**
      * @param string $Sql 规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
      * @param string $Actions 行为的JSON字符串，大部分种类举例如下：
@@ -66,6 +65,7 @@ class TopicRulePayload extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

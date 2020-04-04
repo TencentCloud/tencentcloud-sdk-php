@@ -18,16 +18,14 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 监控数据
+ *
  * @method string getStartTime() 获取起始时间，形如 2018-03-24 23:59:59
  * @method void setStartTime(string $StartTime) 设置起始时间，形如 2018-03-24 23:59:59
  * @method string getEndTime() 获取结束时间，形如 2018-03-24 23:59:59
  * @method void setEndTime(string $EndTime) 设置结束时间，形如 2018-03-24 23:59:59
  * @method array getData() 获取监控数据
  * @method void setData(array $Data) 设置监控数据
- */
-
-/**
- *监控数据
  */
 class MonitorData extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MonitorData extends AbstractModel
      * @var array 监控数据
      */
     public $Data;
+
     /**
      * @param string $StartTime 起始时间，形如 2018-03-24 23:59:59
      * @param string $EndTime 结束时间，形如 2018-03-24 23:59:59
@@ -54,6 +53,7 @@ class MonitorData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeletePerson请求参数结构体
+ *
  * @method string getPersonId() 获取人员ID。
  * @method void setPersonId(string $PersonId) 设置人员ID。
- */
-
-/**
- *DeletePerson请求参数结构体
  */
 class DeletePersonRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeletePersonRequest extends AbstractModel
      * @var string 人员ID。
      */
     public $PersonId;
+
     /**
      * @param string $PersonId 人员ID。
      */
@@ -38,6 +37,7 @@ class DeletePersonRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 输出数据配置
+ *
  * @method string getCosOutputBucket() 获取cos桶
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosOutputBucket(string $CosOutputBucket) 设置cos桶
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosOutputKeyPrefix(string $CosOutputKeyPrefix) 设置cos文件key
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *输出数据配置
  */
 class OutputDataConfig extends AbstractModel
 {
@@ -44,6 +42,7 @@ class OutputDataConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosOutputKeyPrefix;
+
     /**
      * @param string $CosOutputBucket cos桶
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class OutputDataConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

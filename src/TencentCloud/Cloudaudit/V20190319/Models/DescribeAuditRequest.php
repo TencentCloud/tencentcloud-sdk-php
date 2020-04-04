@@ -18,12 +18,10 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAudit请求参数结构体
+ *
  * @method string getAuditName() 获取跟踪集名称
  * @method void setAuditName(string $AuditName) 设置跟踪集名称
- */
-
-/**
- *DescribeAudit请求参数结构体
  */
 class DescribeAuditRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeAuditRequest extends AbstractModel
      * @var string 跟踪集名称
      */
     public $AuditName;
+
     /**
      * @param string $AuditName 跟踪集名称
      */
@@ -38,6 +37,7 @@ class DescribeAuditRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

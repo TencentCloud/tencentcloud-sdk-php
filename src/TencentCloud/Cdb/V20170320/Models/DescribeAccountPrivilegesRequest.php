@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccountPrivileges请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method string getUser() 获取数据库的账号名称。
  * @method void setUser(string $User) 设置数据库的账号名称。
  * @method string getHost() 获取数据库的账号域名。
  * @method void setHost(string $Host) 设置数据库的账号域名。
- */
-
-/**
- *DescribeAccountPrivileges请求参数结构体
  */
 class DescribeAccountPrivilegesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
      * @var string 数据库的账号域名。
      */
     public $Host;
+
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param string $User 数据库的账号名称。
@@ -54,6 +53,7 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

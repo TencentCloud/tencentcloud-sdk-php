@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 待与流量镜像解绑的接收机信息。
+ *
  * @method integer getPort() 获取待解绑的主机端口，可选值1~65535。
  * @method void setPort(integer $Port) 设置待解绑的主机端口，可选值1~65535。
  * @method string getInstanceId() 获取待解绑的主机实例ID。
  * @method void setInstanceId(string $InstanceId) 设置待解绑的主机实例ID。
- */
-
-/**
- *待与流量镜像解绑的接收机信息。
  */
 class UnbindTrafficMirrorReceiver extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UnbindTrafficMirrorReceiver extends AbstractModel
      * @var string 待解绑的主机实例ID。
      */
     public $InstanceId;
+
     /**
      * @param integer $Port 待解绑的主机端口，可选值1~65535。
      * @param string $InstanceId 待解绑的主机实例ID。
@@ -46,6 +45,7 @@ class UnbindTrafficMirrorReceiver extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

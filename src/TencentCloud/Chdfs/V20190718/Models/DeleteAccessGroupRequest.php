@@ -18,12 +18,10 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAccessGroup请求参数结构体
+ *
  * @method string getAccessGroupId() 获取权限组ID
  * @method void setAccessGroupId(string $AccessGroupId) 设置权限组ID
- */
-
-/**
- *DeleteAccessGroup请求参数结构体
  */
 class DeleteAccessGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteAccessGroupRequest extends AbstractModel
      * @var string 权限组ID
      */
     public $AccessGroupId;
+
     /**
      * @param string $AccessGroupId 权限组ID
      */
@@ -38,6 +37,7 @@ class DeleteAccessGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

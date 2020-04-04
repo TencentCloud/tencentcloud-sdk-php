@@ -18,16 +18,14 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 磁盘信息
+ *
  * @method string getDiskType() 获取磁盘类型：LOCAL_BASIC
  * @method void setDiskType(string $DiskType) 设置磁盘类型：LOCAL_BASIC
  * @method string getDiskId() 获取磁盘ID
  * @method void setDiskId(string $DiskId) 设置磁盘ID
  * @method integer getDiskSize() 获取磁盘大小（GB）
  * @method void setDiskSize(integer $DiskSize) 设置磁盘大小（GB）
- */
-
-/**
- *磁盘信息
  */
 class DiskInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DiskInfo extends AbstractModel
      * @var integer 磁盘大小（GB）
      */
     public $DiskSize;
+
     /**
      * @param string $DiskType 磁盘类型：LOCAL_BASIC
      * @param string $DiskId 磁盘ID
@@ -54,6 +53,7 @@ class DiskInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

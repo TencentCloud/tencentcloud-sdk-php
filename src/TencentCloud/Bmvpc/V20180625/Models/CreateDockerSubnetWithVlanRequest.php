@@ -18,14 +18,12 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDockerSubnetWithVlan请求参数结构体
+ *
  * @method string getVpcId() 获取系统分配的私有网络ID，例如：vpc-kd7d06of
  * @method void setVpcId(string $VpcId) 设置系统分配的私有网络ID，例如：vpc-kd7d06of
  * @method array getSubnetSet() 获取子网信息
  * @method void setSubnetSet(array $SubnetSet) 设置子网信息
- */
-
-/**
- *CreateDockerSubnetWithVlan请求参数结构体
  */
 class CreateDockerSubnetWithVlanRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateDockerSubnetWithVlanRequest extends AbstractModel
      * @var array 子网信息
      */
     public $SubnetSet;
+
     /**
      * @param string $VpcId 系统分配的私有网络ID，例如：vpc-kd7d06of
      * @param array $SubnetSet 子网信息
@@ -46,6 +45,7 @@ class CreateDockerSubnetWithVlanRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

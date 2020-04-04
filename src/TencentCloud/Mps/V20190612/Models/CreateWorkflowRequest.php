@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateWorkflow请求参数结构体
+ *
  * @method string getWorkflowName() 获取工作流名称，最多128字符。同一个用户该名称唯一。
  * @method void setWorkflowName(string $WorkflowName) 设置工作流名称，最多128字符。同一个用户该名称唯一。
  * @method WorkflowTrigger getTrigger() 获取工作流绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知配置，不填代表不获取事件通知。
  * @method integer getTaskPriority() 获取工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
  * @method void setTaskPriority(integer $TaskPriority) 设置工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
- */
-
-/**
- *CreateWorkflow请求参数结构体
  */
 class CreateWorkflowRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class CreateWorkflowRequest extends AbstractModel
      * @var integer 工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      */
     public $TaskPriority;
+
     /**
      * @param string $WorkflowName 工作流名称，最多128字符。同一个用户该名称唯一。
      * @param WorkflowTrigger $Trigger 工作流绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
@@ -110,6 +109,7 @@ class CreateWorkflowRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

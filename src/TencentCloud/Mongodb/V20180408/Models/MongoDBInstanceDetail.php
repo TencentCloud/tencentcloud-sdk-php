@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例详情
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getInstanceName() 获取实例名称
@@ -104,10 +106,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceStatusDesc(string $InstanceStatusDesc) 设置实例状态描述
  * @method string getRealInstanceId() 获取实例对应的物理实例ID，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
  * @method void setRealInstanceId(string $RealInstanceId) 设置实例对应的物理实例ID，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
- */
-
-/**
- *实例详情
  */
 class MongoDBInstanceDetail extends AbstractModel
 {
@@ -305,6 +303,7 @@ class MongoDBInstanceDetail extends AbstractModel
      * @var string 实例对应的物理实例ID，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
      */
     public $RealInstanceId;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
@@ -354,6 +353,7 @@ class MongoDBInstanceDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

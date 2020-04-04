@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 按标签汇总消费详情
+ *
  * @method string getTagValue() 获取标签值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagValue(string $TagValue) 设置标签值
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealTotalCostRatio(string $RealTotalCostRatio) 设置费用所占百分比，两位小数
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *按标签汇总消费详情
  */
 class TagSummaryOverviewItem extends AbstractModel
 {
@@ -54,6 +52,7 @@ class TagSummaryOverviewItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealTotalCostRatio;
+
     /**
      * @param string $TagValue 标签值
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class TagSummaryOverviewItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

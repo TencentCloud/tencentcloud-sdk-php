@@ -18,6 +18,8 @@ namespace TencentCloud\Tia\V20180226\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateJob请求参数结构体
+ *
  * @method string getName() 获取任务名称
  * @method void setName(string $Name) 设置任务名称
  * @method string getCluster() 获取运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDebug(boolean $Debug) 设置启动 debug 模式，默认为 false
  * @method array getRuntimeConf() 获取运行任务的其他配置信息
  * @method void setRuntimeConf(array $RuntimeConf) 设置运行任务的其他配置信息
- */
-
-/**
- *CreateJob请求参数结构体
  */
 class CreateJobRequest extends AbstractModel
 {
@@ -122,6 +120,7 @@ class CreateJobRequest extends AbstractModel
      * @var array 运行任务的其他配置信息
      */
     public $RuntimeConf;
+
     /**
      * @param string $Name 任务名称
      * @param string $Cluster 运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
@@ -142,6 +141,7 @@ class CreateJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

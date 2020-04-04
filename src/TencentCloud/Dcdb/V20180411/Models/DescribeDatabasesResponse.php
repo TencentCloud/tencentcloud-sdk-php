@@ -18,16 +18,14 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDatabases返回参数结构体
+ *
  * @method array getDatabases() 获取该实例上的数据库列表。
  * @method void setDatabases(array $Databases) 设置该实例上的数据库列表。
  * @method string getInstanceId() 获取透传入参。
  * @method void setInstanceId(string $InstanceId) 设置透传入参。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDatabases返回参数结构体
  */
 class DescribeDatabasesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDatabasesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Databases 该实例上的数据库列表。
      * @param string $InstanceId 透传入参。
@@ -54,6 +53,7 @@ class DescribeDatabasesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

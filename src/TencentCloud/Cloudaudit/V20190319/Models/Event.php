@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 日志详情
+ *
  * @method Resource getResources() 获取资源对
  * @method void setResources(Resource $Resources) 设置资源对
  * @method integer getAccountID() 获取主账号ID
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceIPAddress(string $SourceIPAddress) 设置源IP
  * @method string getUsername() 获取用户名
  * @method void setUsername(string $Username) 设置用户名
- */
-
-/**
- *日志详情
  */
 class Event extends AbstractModel
 {
@@ -136,6 +134,7 @@ class Event extends AbstractModel
      * @var string 用户名
      */
     public $Username;
+
     /**
      * @param Resource $Resources 资源对
      * @param integer $AccountID 主账号ID
@@ -158,6 +157,7 @@ class Event extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

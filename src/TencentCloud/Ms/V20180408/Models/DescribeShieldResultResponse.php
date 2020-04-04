@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeShieldResult返回参数结构体
+ *
  * @method integer getTaskStatus() 获取任务状态: 0-请返回,1-已完成,2-处理中,3-处理出错,4-处理超时
  * @method void setTaskStatus(integer $TaskStatus) 设置任务状态: 0-请返回,1-已完成,2-处理中,3-处理出错,4-处理超时
  * @method AppDetailInfo getAppDetailInfo() 获取app加固前的详细信息
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatusRef(string $StatusRef) 设置状态指引
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeShieldResult返回参数结构体
  */
 class DescribeShieldResultResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeShieldResultResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TaskStatus 任务状态: 0-请返回,1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param AppDetailInfo $AppDetailInfo app加固前的详细信息
@@ -78,6 +77,7 @@ class DescribeShieldResultResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

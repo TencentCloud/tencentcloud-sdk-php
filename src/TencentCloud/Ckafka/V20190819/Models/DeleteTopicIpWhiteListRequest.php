@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTopicIpWhiteList请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getTopicName() 获取主题名称
  * @method void setTopicName(string $TopicName) 设置主题名称
  * @method array getIpWhiteList() 获取ip白名单列表
  * @method void setIpWhiteList(array $IpWhiteList) 设置ip白名单列表
- */
-
-/**
- *DeleteTopicIpWhiteList请求参数结构体
  */
 class DeleteTopicIpWhiteListRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteTopicIpWhiteListRequest extends AbstractModel
      * @var array ip白名单列表
      */
     public $IpWhiteList;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $TopicName 主题名称
@@ -54,6 +53,7 @@ class DeleteTopicIpWhiteListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

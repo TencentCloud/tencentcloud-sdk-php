@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateCfsRule请求参数结构体
+ *
  * @method string getPGroupId() 获取权限组 ID
  * @method void setPGroupId(string $PGroupId) 设置权限组 ID
  * @method string getRuleId() 获取规则 ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserPermission(string $UserPermission) 设置用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。不填默认为root_squash。
  * @method integer getPriority() 获取规则优先级，参数范围1-100。 其中 1 为最高，100为最低
  * @method void setPriority(integer $Priority) 设置规则优先级，参数范围1-100。 其中 1 为最高，100为最低
- */
-
-/**
- *UpdateCfsRule请求参数结构体
  */
 class UpdateCfsRuleRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class UpdateCfsRuleRequest extends AbstractModel
      * @var integer 规则优先级，参数范围1-100。 其中 1 为最高，100为最低
      */
     public $Priority;
+
     /**
      * @param string $PGroupId 权限组 ID
      * @param string $RuleId 规则 ID
@@ -78,6 +77,7 @@ class UpdateCfsRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 病毒信息
+ *
  * @method integer getSafeType() 获取软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件
  * @method void setSafeType(integer $SafeType) 设置软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件
  * @method string getVirusName() 获取病毒名称， utf8编码，非病毒时值为空
  * @method void setVirusName(string $VirusName) 设置病毒名称， utf8编码，非病毒时值为空
  * @method string getVirusDesc() 获取病毒描述，utf8编码，非病毒时值为空
  * @method void setVirusDesc(string $VirusDesc) 设置病毒描述，utf8编码，非病毒时值为空
- */
-
-/**
- *病毒信息
  */
 class VirusInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class VirusInfo extends AbstractModel
      * @var string 病毒描述，utf8编码，非病毒时值为空
      */
     public $VirusDesc;
+
     /**
      * @param integer $SafeType 软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件
      * @param string $VirusName 病毒名称， utf8编码，非病毒时值为空
@@ -54,6 +53,7 @@ class VirusInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

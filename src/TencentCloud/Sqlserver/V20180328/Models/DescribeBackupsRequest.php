@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackups请求参数结构体
+ *
  * @method string getStartTime() 获取开始时间(yyyy-MM-dd HH:mm:ss)
  * @method void setStartTime(string $StartTime) 设置开始时间(yyyy-MM-dd HH:mm:ss)
  * @method string getEndTime() 获取结束时间(yyyy-MM-dd HH:mm:ss)
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页返回，每页返回的数目，取值为1-100，默认值为20
  * @method integer getOffset() 获取分页返回，页编号，默认值为第0页
  * @method void setOffset(integer $Offset) 设置分页返回，页编号，默认值为第0页
- */
-
-/**
- *DescribeBackups请求参数结构体
  */
 class DescribeBackupsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeBackupsRequest extends AbstractModel
      * @var integer 分页返回，页编号，默认值为第0页
      */
     public $Offset;
+
     /**
      * @param string $StartTime 开始时间(yyyy-MM-dd HH:mm:ss)
      * @param string $EndTime 结束时间(yyyy-MM-dd HH:mm:ss)
@@ -70,6 +69,7 @@ class DescribeBackupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProject返回参数结构体
+ *
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
  * @method string getProjectName() 获取项目名称
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeProject返回参数结构体
  */
 class DescribeProjectResponse extends AbstractModel
 {
@@ -90,6 +88,7 @@ class DescribeProjectResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $ProjectId 项目id
      * @param string $ProjectName 项目名称
@@ -106,6 +105,7 @@ class DescribeProjectResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

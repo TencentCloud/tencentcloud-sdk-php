@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SendTransactionHandler请求参数结构体
+ *
  * @method string getModule() 获取模块名，固定字段：transaction
  * @method void setModule(string $Module) 设置模块名，固定字段：transaction
  * @method string getOperation() 获取操作名，固定字段：send_transaction
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFuncName(string $FuncName) 设置合约方法名
  * @method array getFuncParam() 获取合约方法入参
  * @method void setFuncParam(array $FuncParam) 设置合约方法入参
- */
-
-/**
- *SendTransactionHandler请求参数结构体
  */
 class SendTransactionHandlerRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class SendTransactionHandlerRequest extends AbstractModel
      * @var array 合约方法入参
      */
     public $FuncParam;
+
     /**
      * @param string $Module 模块名，固定字段：transaction
      * @param string $Operation 操作名，固定字段：send_transaction
@@ -78,6 +77,7 @@ class SendTransactionHandlerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

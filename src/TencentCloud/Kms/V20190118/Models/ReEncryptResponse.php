@@ -18,6 +18,8 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReEncrypt返回参数结构体
+ *
  * @method string getCiphertextBlob() 获取重新加密后的密文
  * @method void setCiphertextBlob(string $CiphertextBlob) 设置重新加密后的密文
  * @method string getKeyId() 获取重新加密使用的CMK
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReEncrypted(boolean $ReEncrypted) 设置true表示密文已经重新加密。同一个CMK进行重加密，在密钥没有发生轮换的情况下不会进行实际重新加密操作，返回原密文
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ReEncrypt返回参数结构体
  */
 class ReEncryptResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ReEncryptResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $CiphertextBlob 重新加密后的密文
      * @param string $KeyId 重新加密使用的CMK
@@ -70,6 +69,7 @@ class ReEncryptResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MLIDCardOCR返回参数结构体
+ *
  * @method string getID() 获取身份证号
  * @method void setID(string $ID) 设置身份证号
  * @method string getName() 获取姓名
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
 }
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *MLIDCardOCR返回参数结构体
  */
 class MLIDCardOCRResponse extends AbstractModel
 {
@@ -110,6 +108,7 @@ class MLIDCardOCRResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $ID 身份证号
      * @param string $Name 姓名
@@ -134,6 +133,7 @@ class MLIDCardOCRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

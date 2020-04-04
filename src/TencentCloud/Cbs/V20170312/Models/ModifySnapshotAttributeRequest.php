@@ -18,16 +18,14 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySnapshotAttribute请求参数结构体
+ *
  * @method string getSnapshotId() 获取快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
  * @method void setSnapshotId(string $SnapshotId) 设置快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
  * @method string getSnapshotName() 获取新的快照名称。最长为60个字符。
  * @method void setSnapshotName(string $SnapshotName) 设置新的快照名称。最长为60个字符。
  * @method boolean getIsPermanent() 获取快照的保留时间，FALSE表示非永久保留，TRUE表示永久保留。仅支持将非永久快照修改为永久快照。
  * @method void setIsPermanent(boolean $IsPermanent) 设置快照的保留时间，FALSE表示非永久保留，TRUE表示永久保留。仅支持将非永久快照修改为永久快照。
- */
-
-/**
- *ModifySnapshotAttribute请求参数结构体
  */
 class ModifySnapshotAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifySnapshotAttributeRequest extends AbstractModel
      * @var boolean 快照的保留时间，FALSE表示非永久保留，TRUE表示永久保留。仅支持将非永久快照修改为永久快照。
      */
     public $IsPermanent;
+
     /**
      * @param string $SnapshotId 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
      * @param string $SnapshotName 新的快照名称。最长为60个字符。
@@ -54,6 +53,7 @@ class ModifySnapshotAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

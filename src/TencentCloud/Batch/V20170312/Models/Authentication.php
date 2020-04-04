@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 授权认证信息
+ *
  * @method string getScene() 获取授权场景，例如COS
  * @method void setScene(string $Scene) 设置授权场景，例如COS
  * @method string getSecretId() 获取SecretId
  * @method void setSecretId(string $SecretId) 设置SecretId
  * @method string getSecretKey() 获取SecretKey
  * @method void setSecretKey(string $SecretKey) 设置SecretKey
- */
-
-/**
- *授权认证信息
  */
 class Authentication extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Authentication extends AbstractModel
      * @var string SecretKey
      */
     public $SecretKey;
+
     /**
      * @param string $Scene 授权场景，例如COS
      * @param string $SecretId SecretId
@@ -54,6 +53,7 @@ class Authentication extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

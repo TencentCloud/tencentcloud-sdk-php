@@ -18,12 +18,10 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteImage请求参数结构体
+ *
  * @method array getImageIDSet() 获取镜像ID列表。
  * @method void setImageIDSet(array $ImageIDSet) 设置镜像ID列表。
- */
-
-/**
- *DeleteImage请求参数结构体
  */
 class DeleteImageRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteImageRequest extends AbstractModel
      * @var array 镜像ID列表。
      */
     public $ImageIDSet;
+
     /**
      * @param array $ImageIDSet 镜像ID列表。
      */
@@ -38,6 +37,7 @@ class DeleteImageRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

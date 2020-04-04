@@ -18,14 +18,12 @@ namespace TencentCloud\Msp\V20180319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 时间对象
+ *
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
- */
-
-/**
- *时间对象
  */
 class TimeObj extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TimeObj extends AbstractModel
      * @var string 结束时间
      */
     public $EndTime;
+
     /**
      * @param string $CreateTime 创建时间
      * @param string $EndTime 结束时间
@@ -46,6 +45,7 @@ class TimeObj extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

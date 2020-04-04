@@ -18,14 +18,12 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 区域性别平均停留时间子结构
+ *
  * @method float getMaleAvrStayTime() 获取男性平均停留时间
  * @method void setMaleAvrStayTime(float $MaleAvrStayTime) 设置男性平均停留时间
  * @method float getFemaleAvrStayTime() 获取女性平均停留时间
  * @method void setFemaleAvrStayTime(float $FemaleAvrStayTime) 设置女性平均停留时间
- */
-
-/**
- *区域性别平均停留时间子结构
  */
 class ZoneAgeGroupAvrStayTime extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ZoneAgeGroupAvrStayTime extends AbstractModel
      * @var float 女性平均停留时间
      */
     public $FemaleAvrStayTime;
+
     /**
      * @param float $MaleAvrStayTime 男性平均停留时间
      * @param float $FemaleAvrStayTime 女性平均停留时间
@@ -46,6 +45,7 @@ class ZoneAgeGroupAvrStayTime extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

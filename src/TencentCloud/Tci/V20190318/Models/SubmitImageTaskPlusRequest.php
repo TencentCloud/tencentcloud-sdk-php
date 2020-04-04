@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SubmitImageTaskPlus请求参数结构体
+ *
  * @method array getFileContent() 获取输入分析对象内容，输入数据格式参考FileType参数释义
  * @method void setFileContent(array $FileContent) 设置输入分析对象内容，输入数据格式参考FileType参数释义
  * @method string getFileType() 获取输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxVideoDuration(integer $MaxVideoDuration) 设置视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
  * @method float getSimThreshold() 获取人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
  * @method void setSimThreshold(float $SimThreshold) 设置人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
- */
-
-/**
- *SubmitImageTaskPlus请求参数结构体
  */
 class SubmitImageTaskPlusRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class SubmitImageTaskPlusRequest extends AbstractModel
      * @var float 人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
      */
     public $SimThreshold;
+
     /**
      * @param array $FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      * @param string $FileType 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
@@ -94,6 +93,7 @@ class SubmitImageTaskPlusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

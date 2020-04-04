@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdatePayType请求参数结构体
+ *
  * @method string getArea() 获取计费区域，mainland或overseas。
  * @method void setArea(string $Area) 设置计费区域，mainland或overseas。
  * @method string getPayType() 获取计费类型，flux或bandwidth。
  * @method void setPayType(string $PayType) 设置计费类型，flux或bandwidth。
- */
-
-/**
- *UpdatePayType请求参数结构体
  */
 class UpdatePayTypeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UpdatePayTypeRequest extends AbstractModel
      * @var string 计费类型，flux或bandwidth。
      */
     public $PayType;
+
     /**
      * @param string $Area 计费区域，mainland或overseas。
      * @param string $PayType 计费类型，flux或bandwidth。
@@ -46,6 +45,7 @@ class UpdatePayTypeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

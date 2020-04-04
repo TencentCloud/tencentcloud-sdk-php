@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTopicAttributes请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
  * @method string getTopicName() 获取主题名称。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置主题消息最大值，单位为 Byte，最大值为8388608Byte（即8MB）。
  * @method string getCleanUpPolicy() 获取消息删除策略，可以选择delete 或者compact
  * @method void setCleanUpPolicy(string $CleanUpPolicy) 设置消息删除策略，可以选择delete 或者compact
- */
-
-/**
- *ModifyTopicAttributes请求参数结构体
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @var string 消息删除策略，可以选择delete 或者compact
      */
     public $CleanUpPolicy;
+
     /**
      * @param string $InstanceId 实例 ID。
      * @param string $TopicName 主题名称。
@@ -110,6 +109,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

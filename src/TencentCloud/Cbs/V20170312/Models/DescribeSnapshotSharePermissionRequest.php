@@ -18,12 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSnapshotSharePermission请求参数结构体
+ *
  * @method string getSnapshotId() 获取要查询快照的ID。可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。
  * @method void setSnapshotId(string $SnapshotId) 设置要查询快照的ID。可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。
- */
-
-/**
- *DescribeSnapshotSharePermission请求参数结构体
  */
 class DescribeSnapshotSharePermissionRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeSnapshotSharePermissionRequest extends AbstractModel
      * @var string 要查询快照的ID。可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。
      */
     public $SnapshotId;
+
     /**
      * @param string $SnapshotId 要查询快照的ID。可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。
      */
@@ -38,6 +37,7 @@ class DescribeSnapshotSharePermissionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

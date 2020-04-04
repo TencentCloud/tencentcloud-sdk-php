@@ -18,14 +18,13 @@ namespace TencentCloud\Bizlive\V20190313\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWorkers请求参数结构体
+ *
 
- */
-
-/**
- *DescribeWorkers请求参数结构体
  */
 class DescribeWorkersRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeWorkersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

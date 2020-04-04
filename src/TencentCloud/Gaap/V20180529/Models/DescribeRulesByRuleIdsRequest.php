@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRulesByRuleIds请求参数结构体
+ *
  * @method array getRuleIds() 获取规则ID列表。最多支持10个规则。
  * @method void setRuleIds(array $RuleIds) 设置规则ID列表。最多支持10个规则。
- */
-
-/**
- *DescribeRulesByRuleIds请求参数结构体
  */
 class DescribeRulesByRuleIdsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeRulesByRuleIdsRequest extends AbstractModel
      * @var array 规则ID列表。最多支持10个规则。
      */
     public $RuleIds;
+
     /**
      * @param array $RuleIds 规则ID列表。最多支持10个规则。
      */
@@ -38,6 +37,7 @@ class DescribeRulesByRuleIdsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnassignIpv6SubnetCidrBlock请求参数结构体
+ *
  * @method string getVpcId() 获取子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
  * @method void setVpcId(string $VpcId) 设置子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
  * @method array getIpv6SubnetCidrBlocks() 获取`IPv6` 子网段列表。
  * @method void setIpv6SubnetCidrBlocks(array $Ipv6SubnetCidrBlocks) 设置`IPv6` 子网段列表。
- */
-
-/**
- *UnassignIpv6SubnetCidrBlock请求参数结构体
  */
 class UnassignIpv6SubnetCidrBlockRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UnassignIpv6SubnetCidrBlockRequest extends AbstractModel
      * @var array `IPv6` 子网段列表。
      */
     public $Ipv6SubnetCidrBlocks;
+
     /**
      * @param string $VpcId 子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
      * @param array $Ipv6SubnetCidrBlocks `IPv6` 子网段列表。
@@ -46,6 +45,7 @@ class UnassignIpv6SubnetCidrBlockRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateFunction请求参数结构体
+ *
  * @method string getFunctionName() 获取创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
  * @method void setFunctionName(string $FunctionName) 设置创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
  * @method Code getCode() 获取函数的代码. 注意：不能同时指定Cos与ZipFile
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLayers(array $Layers) 设置函数要关联的Layer版本列表，Layer会按照在列表中顺序依次覆盖。
  * @method DeadLetterConfig getDeadLetterConfig() 获取死信队列参数
  * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) 设置死信队列参数
- */
-
-/**
- *CreateFunction请求参数结构体
  */
 class CreateFunctionRequest extends AbstractModel
 {
@@ -143,6 +141,7 @@ class CreateFunctionRequest extends AbstractModel
      * @var DeadLetterConfig 死信队列参数
      */
     public $DeadLetterConfig;
+
     /**
      * @param string $FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      * @param Code $Code 函数的代码. 注意：不能同时指定Cos与ZipFile
@@ -166,6 +165,7 @@ class CreateFunctionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

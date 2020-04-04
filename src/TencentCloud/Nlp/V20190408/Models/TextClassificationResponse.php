@@ -18,14 +18,12 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TextClassification返回参数结构体
+ *
  * @method array getClasses() 获取文本分类结果（文本分类映射表请参见附录）
  * @method void setClasses(array $Classes) 设置文本分类结果（文本分类映射表请参见附录）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *TextClassification返回参数结构体
  */
 class TextClassificationResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TextClassificationResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Classes 文本分类结果（文本分类映射表请参见附录）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class TextClassificationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SearchPersons返回参数结构体
+ *
  * @method array getResults() 获取识别结果。
  * @method void setResults(array $Results) 设置识别结果。
  * @method integer getPersonNum() 获取搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *SearchPersons返回参数结构体
  */
 class SearchPersonsResponse extends AbstractModel
 {
@@ -55,6 +53,7 @@ class SearchPersonsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Results 识别结果。
      * @param integer $PersonNum 搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。
@@ -66,6 +65,7 @@ class SearchPersonsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskDetail返回参数结构体
+ *
  * @method string getStatus() 获取任务状态，取值有：
 <li>PROCESSING：处理中：</li>
 <li>SUCCESS：成功；</li>
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间，格式按照 ISO 8601 标准表示。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeTaskDetail返回参数结构体
  */
 class DescribeTaskDetailResponse extends AbstractModel
 {
@@ -101,6 +99,7 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Status 任务状态，取值有：
 <li>PROCESSING：处理中：</li>
@@ -122,6 +121,7 @@ class DescribeTaskDetailResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

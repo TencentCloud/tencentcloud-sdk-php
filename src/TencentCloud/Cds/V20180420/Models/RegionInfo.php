@@ -18,6 +18,8 @@ namespace TencentCloud\Cds\V20180420\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数盾地域信息
+ *
  * @method integer getRegionId() 获取地域ID
  * @method void setRegionId(integer $RegionId) 设置地域ID
  * @method string getRegion() 获取地域名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionName(string $RegionName) 设置地域描述
  * @method integer getRegionState() 获取地域可用状态
  * @method void setRegionState(integer $RegionState) 设置地域可用状态
- */
-
-/**
- *数盾地域信息
  */
 class RegionInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RegionInfo extends AbstractModel
      * @var integer 地域可用状态
      */
     public $RegionState;
+
     /**
      * @param integer $RegionId 地域ID
      * @param string $Region 地域名称
@@ -62,6 +61,7 @@ class RegionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

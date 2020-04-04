@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * cdh实例详细信息
+ *
  * @method Placement getPlacement() 获取cdh实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
  * @method void setPlacement(Placement $Placement) 设置cdh实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
  * @method string getHostId() 获取cdh实例id
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCageId(string $CageId) 设置专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *cdh实例详细信息
  */
 class HostItem extends AbstractModel
 {
@@ -118,6 +116,7 @@ class HostItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CageId;
+
     /**
      * @param Placement $Placement cdh实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      * @param string $HostId cdh实例id
@@ -138,6 +137,7 @@ class HostItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

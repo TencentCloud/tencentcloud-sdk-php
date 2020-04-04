@@ -18,16 +18,14 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述某个地域下某个可用区的可售卖规格详细信息。
+ *
  * @method string getRegion() 获取地域英文编码，对应RegionSet的Region字段
  * @method void setRegion(string $Region) 设置地域英文编码，对应RegionSet的Region字段
  * @method string getZone() 获取区域英文编码，对应ZoneSet的Zone字段
  * @method void setZone(string $Zone) 设置区域英文编码，对应ZoneSet的Zone字段
  * @method array getSpecItemInfoList() 获取规格详细信息列表
  * @method void setSpecItemInfoList(array $SpecItemInfoList) 设置规格详细信息列表
- */
-
-/**
- *描述某个地域下某个可用区的可售卖规格详细信息。
  */
 class SpecInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SpecInfo extends AbstractModel
      * @var array 规格详细信息列表
      */
     public $SpecItemInfoList;
+
     /**
      * @param string $Region 地域英文编码，对应RegionSet的Region字段
      * @param string $Zone 区域英文编码，对应ZoneSet的Zone字段
@@ -54,6 +53,7 @@ class SpecInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

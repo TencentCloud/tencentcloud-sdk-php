@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSecurityGroup请求参数结构体
+ *
  * @method string getGroupName() 获取安全组名称，可任意命名，但不得超过60个字符。
  * @method void setGroupName(string $GroupName) 设置安全组名称，可任意命名，但不得超过60个字符。
  * @method string getGroupDescription() 获取安全组备注，最多100个字符。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目ID，默认0。可在qcloud控制台项目管理页面查询到。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
- */
-
-/**
- *CreateSecurityGroup请求参数结构体
  */
 class CreateSecurityGroupRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateSecurityGroupRequest extends AbstractModel
      * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     public $Tags;
+
     /**
      * @param string $GroupName 安全组名称，可任意命名，但不得超过60个字符。
      * @param string $GroupDescription 安全组备注，最多100个字符。
@@ -62,6 +61,7 @@ class CreateSecurityGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

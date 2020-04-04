@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例对象
+ *
  * @method string getInstanceId() 获取实例id
  * @method void setInstanceId(string $InstanceId) 设置实例id
  * @method string getInstanceName() 获取实例名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIfCommunity(boolean $IfCommunity) 设置是否开源实例。开源：true，不开源：false
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *实例对象
  */
 class Instance extends AbstractModel
 {
@@ -55,6 +53,7 @@ class Instance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IfCommunity;
+
     /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
@@ -66,6 +65,7 @@ class Instance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

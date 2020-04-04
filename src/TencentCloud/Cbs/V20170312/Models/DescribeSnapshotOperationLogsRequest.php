@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSnapshotOperationLogs请求参数结构体
+ *
  * @method array getFilters() 获取过滤条件。支持以下条件：
 <li>snapshot-id - Array of String - 是否必填：是 - 按快照ID过滤，每个请求最多可指定10个快照ID。
  * @method void setFilters(array $Filters) 设置过滤条件。支持以下条件：
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) 设置要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
  * @method string getEndTime() 获取要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
  * @method void setEndTime(string $EndTime) 设置要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
- */
-
-/**
- *DescribeSnapshotOperationLogs请求参数结构体
  */
 class DescribeSnapshotOperationLogsRequest extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DescribeSnapshotOperationLogsRequest extends AbstractModel
      * @var string 要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
      */
     public $EndTime;
+
     /**
      * @param array $Filters 过滤条件。支持以下条件：
 <li>snapshot-id - Array of String - 是否必填：是 - 按快照ID过滤，每个请求最多可指定10个快照ID。
@@ -58,6 +57,7 @@ class DescribeSnapshotOperationLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

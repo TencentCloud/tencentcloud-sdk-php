@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 传统型负载均衡的后端信息
+ *
  * @method string getInstanceId() 获取后端实例ID
  * @method void setInstanceId(string $InstanceId) 设置后端实例ID
  * @method integer getWeight() 获取权重，取值范围 [0, 100]
  * @method void setWeight(integer $Weight) 设置权重，取值范围 [0, 100]
- */
-
-/**
- *传统型负载均衡的后端信息
  */
 class ClassicalTargetInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ClassicalTargetInfo extends AbstractModel
      * @var integer 权重，取值范围 [0, 100]
      */
     public $Weight;
+
     /**
      * @param string $InstanceId 后端实例ID
      * @param integer $Weight 权重，取值范围 [0, 100]
@@ -46,6 +45,7 @@ class ClassicalTargetInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

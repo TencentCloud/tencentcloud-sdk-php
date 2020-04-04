@@ -18,6 +18,8 @@ namespace TencentCloud\Npp\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 直拨话单详情
+ *
  * @method string getCallId() 获取呼叫通话 ID
  * @method void setCallId(string $CallId) 设置呼叫通话 ID
  * @method string getBindId() 获取双方号码 + 中间号绑定 ID，该 ID 全局唯一
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstDuration(string $DstDuration) 设置呼叫转接被叫接通到通话结束通话时间
  * @method string getRecordUrl() 获取录音 URL，如果不录音或录音失败，该值为空
  * @method void setRecordUrl(string $RecordUrl) 设置录音 URL，如果不录音或录音失败，该值为空
- */
-
-/**
- *直拨话单详情
  */
 class VirturalNumCdr extends AbstractModel
 {
@@ -122,6 +120,7 @@ class VirturalNumCdr extends AbstractModel
      * @var string 录音 URL，如果不录音或录音失败，该值为空
      */
     public $RecordUrl;
+
     /**
      * @param string $CallId 呼叫通话 ID
      * @param string $BindId 双方号码 + 中间号绑定 ID，该 ID 全局唯一
@@ -142,6 +141,7 @@ class VirturalNumCdr extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteResourceTag请求参数结构体
+ *
  * @method string getTagKey() 获取标签键
  * @method void setTagKey(string $TagKey) 设置标签键
  * @method string getResource() 获取资源六段式描述
  * @method void setResource(string $Resource) 设置资源六段式描述
- */
-
-/**
- *DeleteResourceTag请求参数结构体
  */
 class DeleteResourceTagRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteResourceTagRequest extends AbstractModel
      * @var string 资源六段式描述
      */
     public $Resource;
+
     /**
      * @param string $TagKey 标签键
      * @param string $Resource 资源六段式描述
@@ -46,6 +45,7 @@ class DeleteResourceTagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

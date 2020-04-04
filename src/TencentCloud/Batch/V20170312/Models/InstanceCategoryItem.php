@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例分类列表
+ *
  * @method string getInstanceCategory() 获取实例类型名
  * @method void setInstanceCategory(string $InstanceCategory) 设置实例类型名
  * @method array getInstanceFamilySet() 获取实例族列表
  * @method void setInstanceFamilySet(array $InstanceFamilySet) 设置实例族列表
- */
-
-/**
- *实例分类列表
  */
 class InstanceCategoryItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceCategoryItem extends AbstractModel
      * @var array 实例族列表
      */
     public $InstanceFamilySet;
+
     /**
      * @param string $InstanceCategory 实例类型名
      * @param array $InstanceFamilySet 实例族列表
@@ -46,6 +45,7 @@ class InstanceCategoryItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

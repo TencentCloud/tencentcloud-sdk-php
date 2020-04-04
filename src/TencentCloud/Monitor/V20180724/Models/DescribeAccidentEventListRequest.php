@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccidentEventList请求参数结构体
+ *
  * @method string getModule() 获取接口模块名，当前接口取值monitor
  * @method void setModule(string $Module) 设置接口模块名，当前接口取值monitor
  * @method integer getStartTime() 获取起始时间，默认一天前的时间戳
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccidentRegion(array $AccidentRegion) 设置根据事件地域过滤，gz表示广州，sh表示上海等
  * @method string getAffectResource() 获取根据影响资源过滤，比如ins-19a06bka
  * @method void setAffectResource(string $AffectResource) 设置根据影响资源过滤，比如ins-19a06bka
- */
-
-/**
- *DescribeAccidentEventList请求参数结构体
  */
 class DescribeAccidentEventListRequest extends AbstractModel
 {
@@ -108,6 +106,7 @@ class DescribeAccidentEventListRequest extends AbstractModel
      * @var string 根据影响资源过滤，比如ins-19a06bka
      */
     public $AffectResource;
+
     /**
      * @param string $Module 接口模块名，当前接口取值monitor
      * @param integer $StartTime 起始时间，默认一天前的时间戳
@@ -126,6 +125,7 @@ class DescribeAccidentEventListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

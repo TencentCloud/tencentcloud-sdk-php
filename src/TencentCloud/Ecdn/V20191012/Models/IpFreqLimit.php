@@ -18,16 +18,14 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IP限频配置。
+ *
  * @method string getSwitch() 获取IP限频配置开关，on或off。
  * @method void setSwitch(string $Switch) 设置IP限频配置开关，on或off。
  * @method integer getQps() 获取每秒请求数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQps(integer $Qps) 设置每秒请求数。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *IP限频配置。
  */
 class IpFreqLimit extends AbstractModel
 {
@@ -41,6 +39,7 @@ class IpFreqLimit extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Qps;
+
     /**
      * @param string $Switch IP限频配置开关，on或off。
      * @param integer $Qps 每秒请求数。
@@ -50,6 +49,7 @@ class IpFreqLimit extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

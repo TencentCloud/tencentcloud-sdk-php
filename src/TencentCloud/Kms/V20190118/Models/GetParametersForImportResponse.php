@@ -18,6 +18,8 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetParametersForImport返回参数结构体
+ *
  * @method string getKeyId() 获取CMK的唯一标识，用于指定目标导入密钥材料的CMK。
  * @method void setKeyId(string $KeyId) 设置CMK的唯一标识，用于指定目标导入密钥材料的CMK。
  * @method string getImportToken() 获取导入密钥材料需要的token，用于作为 ImportKeyMaterial 的参数。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParametersValidTo(integer $ParametersValidTo) 设置该导出token和公钥的有效期，超过该时间后无法导入，需要重新调用GetParametersForImport获取。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetParametersForImport返回参数结构体
  */
 class GetParametersForImportResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class GetParametersForImportResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $KeyId CMK的唯一标识，用于指定目标导入密钥材料的CMK。
      * @param string $ImportToken 导入密钥材料需要的token，用于作为 ImportKeyMaterial 的参数。
@@ -70,6 +69,7 @@ class GetParametersForImportResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

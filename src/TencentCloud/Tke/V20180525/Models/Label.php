@@ -18,14 +18,12 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * k8s中标签，一般以数组的方式存在
+ *
  * @method string getName() 获取map表中的Name
  * @method void setName(string $Name) 设置map表中的Name
  * @method string getValue() 获取map表中的Value
  * @method void setValue(string $Value) 设置map表中的Value
- */
-
-/**
- *k8s中标签，一般以数组的方式存在
  */
 class Label extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Label extends AbstractModel
      * @var string map表中的Value
      */
     public $Value;
+
     /**
      * @param string $Name map表中的Name
      * @param string $Value map表中的Value
@@ -46,6 +45,7 @@ class Label extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

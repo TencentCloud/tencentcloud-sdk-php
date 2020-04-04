@@ -18,14 +18,12 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateScanInstances请求参数结构体
+ *
  * @method array getAppInfos() 获取待扫描的app信息列表，一次最多提交20个
  * @method void setAppInfos(array $AppInfos) 设置待扫描的app信息列表，一次最多提交20个
  * @method ScanInfo getScanInfo() 获取扫描信息
  * @method void setScanInfo(ScanInfo $ScanInfo) 设置扫描信息
- */
-
-/**
- *CreateScanInstances请求参数结构体
  */
 class CreateScanInstancesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateScanInstancesRequest extends AbstractModel
      * @var ScanInfo 扫描信息
      */
     public $ScanInfo;
+
     /**
      * @param array $AppInfos 待扫描的app信息列表，一次最多提交20个
      * @param ScanInfo $ScanInfo 扫描信息
@@ -46,6 +45,7 @@ class CreateScanInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

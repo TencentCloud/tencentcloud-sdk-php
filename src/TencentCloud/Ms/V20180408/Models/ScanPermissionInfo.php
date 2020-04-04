@@ -18,12 +18,10 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全扫描系统权限信息
+ *
  * @method string getPermission() 获取系统权限
  * @method void setPermission(string $Permission) 设置系统权限
- */
-
-/**
- *安全扫描系统权限信息
  */
 class ScanPermissionInfo extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ScanPermissionInfo extends AbstractModel
      * @var string 系统权限
      */
     public $Permission;
+
     /**
      * @param string $Permission 系统权限
      */
@@ -38,6 +37,7 @@ class ScanPermissionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

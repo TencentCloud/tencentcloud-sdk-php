@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyPullStreamStatus请求参数结构体
+ *
  * @method array getConfigIds() 获取配置id列表。
  * @method void setConfigIds(array $ConfigIds) 设置配置id列表。
  * @method string getStatus() 获取目标状态。0无效，2正在运行，4暂停。
  * @method void setStatus(string $Status) 设置目标状态。0无效，2正在运行，4暂停。
- */
-
-/**
- *ModifyPullStreamStatus请求参数结构体
  */
 class ModifyPullStreamStatusRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyPullStreamStatusRequest extends AbstractModel
      * @var string 目标状态。0无效，2正在运行，4暂停。
      */
     public $Status;
+
     /**
      * @param array $ConfigIds 配置id列表。
      * @param string $Status 目标状态。0无效，2正在运行，4暂停。
@@ -46,6 +45,7 @@ class ModifyPullStreamStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

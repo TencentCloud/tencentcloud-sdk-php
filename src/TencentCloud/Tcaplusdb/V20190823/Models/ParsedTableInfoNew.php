@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 从IDL表描述文件中解析出来的表信息
+ *
  * @method string getTableIdlType() 获取表格描述语言类型：`PROTO`或`TDR`
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableIdlType(string $TableIdlType) 设置表格描述语言类型：`PROTO`或`TDR`
@@ -90,10 +92,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSortRule(integer $SortRule) 设置SORTLIST类型表格排序顺序
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *从IDL表描述文件中解析出来的表信息
  */
 class ParsedTableInfoNew extends AbstractModel
 {
@@ -204,6 +202,7 @@ class ParsedTableInfoNew extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SortRule;
+
     /**
      * @param string $TableIdlType 表格描述语言类型：`PROTO`或`TDR`
 注意：此字段可能返回 null，表示取不到有效值。
@@ -246,6 +245,7 @@ class ParsedTableInfoNew extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

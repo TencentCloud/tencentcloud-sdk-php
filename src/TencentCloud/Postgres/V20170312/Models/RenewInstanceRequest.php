@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RenewInstance请求参数结构体
+ *
  * @method string getDBInstanceId() 获取实例ID，形如postgres-6fego161
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-6fego161
  * @method integer getPeriod() 获取续费多少个月
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券,1是,0否，默认不使用
  * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券
- */
-
-/**
- *RenewInstance请求参数结构体
  */
 class RenewInstanceRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RenewInstanceRequest extends AbstractModel
      * @var array 代金券ID列表，目前仅支持指定一张代金券
      */
     public $VoucherIds;
+
     /**
      * @param string $DBInstanceId 实例ID，形如postgres-6fego161
      * @param integer $Period 续费多少个月
@@ -62,6 +61,7 @@ class RenewInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

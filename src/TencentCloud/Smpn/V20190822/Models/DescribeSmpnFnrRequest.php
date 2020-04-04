@@ -18,14 +18,12 @@ namespace TencentCloud\Smpn\V20190822\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSmpnFnr请求参数结构体
+ *
  * @method FNRRequest getRequestData() 获取虚假号码识别请求内容
  * @method void setRequestData(FNRRequest $RequestData) 设置虚假号码识别请求内容
  * @method string getResourceId() 获取用于计费的资源ID
  * @method void setResourceId(string $ResourceId) 设置用于计费的资源ID
- */
-
-/**
- *DescribeSmpnFnr请求参数结构体
  */
 class DescribeSmpnFnrRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeSmpnFnrRequest extends AbstractModel
      * @var string 用于计费的资源ID
      */
     public $ResourceId;
+
     /**
      * @param FNRRequest $RequestData 虚假号码识别请求内容
      * @param string $ResourceId 用于计费的资源ID
@@ -46,6 +45,7 @@ class DescribeSmpnFnrRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

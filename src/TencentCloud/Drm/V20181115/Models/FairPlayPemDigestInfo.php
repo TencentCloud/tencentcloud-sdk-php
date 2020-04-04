@@ -18,6 +18,8 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * FairPlay 私钥摘要信息。
+ *
  * @method integer getFairPlayPemId() 获取fairplay 私钥pem id。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFairPlayPemId(integer $FairPlayPemId) 设置fairplay 私钥pem id。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMd5PemDecryptKey(string $Md5PemDecryptKey) 设置私钥解密密钥的md5值。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *FairPlay 私钥摘要信息。
  */
 class FairPlayPemDigestInfo extends AbstractModel
 {
@@ -74,6 +72,7 @@ class FairPlayPemDigestInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Md5PemDecryptKey;
+
     /**
      * @param integer $FairPlayPemId fairplay 私钥pem id。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -90,6 +89,7 @@ class FairPlayPemDigestInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

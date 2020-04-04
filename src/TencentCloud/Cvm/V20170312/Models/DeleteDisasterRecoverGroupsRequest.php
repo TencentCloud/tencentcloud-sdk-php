@@ -18,12 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteDisasterRecoverGroups请求参数结构体
+ *
  * @method array getDisasterRecoverGroupIds() 获取分散置放群组ID列表，可通过[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置分散置放群组ID列表，可通过[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
- */
-
-/**
- *DeleteDisasterRecoverGroups请求参数结构体
  */
 class DeleteDisasterRecoverGroupsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteDisasterRecoverGroupsRequest extends AbstractModel
      * @var array 分散置放群组ID列表，可通过[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
      */
     public $DisasterRecoverGroupIds;
+
     /**
      * @param array $DisasterRecoverGroupIds 分散置放群组ID列表，可通过[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
      */
@@ -38,6 +37,7 @@ class DeleteDisasterRecoverGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

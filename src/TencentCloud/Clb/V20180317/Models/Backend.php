@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 监听器绑定的后端服务的详细信息
+ *
  * @method string getType() 获取后端服务的类型，可取：CVM、ENI（即将支持）
  * @method void setType(string $Type) 设置后端服务的类型，可取：CVM、ENI（即将支持）
  * @method string getInstanceId() 获取后端服务的唯一 ID，如 ins-abcd1234
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEniId(string $EniId) 设置弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *监听器绑定的后端服务的详细信息
  */
 class Backend extends AbstractModel
 {
@@ -102,6 +100,7 @@ class Backend extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EniId;
+
     /**
      * @param string $Type 后端服务的类型，可取：CVM、ENI（即将支持）
      * @param string $InstanceId 后端服务的唯一 ID，如 ins-abcd1234
@@ -122,6 +121,7 @@ class Backend extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

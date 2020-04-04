@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据模版
+ *
  * @method NumberData getNumber() 获取数字类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNumber(NumberData $Number) 设置数字类型
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBool(BoolData $Bool) 设置布尔类型
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *数据模版
  */
 class DataTemplate extends AbstractModel
 {
@@ -64,6 +62,7 @@ class DataTemplate extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bool;
+
     /**
      * @param NumberData $Number 数字类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +77,7 @@ class DataTemplate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 受影响主机信息
+ *
  * @method integer getId() 获取漏洞ID。
  * @method void setId(integer $Id) 设置漏洞ID。
  * @method string getMachineIp() 获取主机IP。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulId(integer $VulId) 设置漏洞种类ID。
  * @method boolean getIsProVersion() 获取是否为专业版。
  * @method void setIsProVersion(boolean $IsProVersion) 设置是否为专业版。
- */
-
-/**
- *受影响主机信息
  */
 class ImpactedHost extends AbstractModel
 {
@@ -96,6 +94,7 @@ class ImpactedHost extends AbstractModel
      * @var boolean 是否为专业版。
      */
     public $IsProVersion;
+
     /**
      * @param integer $Id 漏洞ID。
      * @param string $MachineIp 主机IP。
@@ -114,6 +113,7 @@ class ImpactedHost extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

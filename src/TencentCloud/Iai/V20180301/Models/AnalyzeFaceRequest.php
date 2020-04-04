@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AnalyzeFace请求参数结构体
+ *
  * @method integer getMode() 获取检测模式。0 为检测所有出现的人脸， 1 为检测面积最大的人脸。默认为 0。最多返回 10 张人脸的五官定位（人脸关键点）具体信息。
  * @method void setMode(integer $Mode) 设置检测模式。0 为检测所有出现的人脸， 1 为检测面积最大的人脸。默认为 0。最多返回 10 张人脸的五官定位（人脸关键点）具体信息。
  * @method string getImage() 获取图片 base64 数据，base64 编码后大小不可超过5M。
@@ -40,10 +42,6 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
  * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
 2020年4月2日开始，默认为“3.0”，之前使用过本接口的账号若未填写本参数默认为“2.0”。  
 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用最新版本。
- */
-
-/**
- *AnalyzeFace请求参数结构体
  */
 class AnalyzeFaceRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用最新版本。
      */
     public $FaceModelVersion;
+
     /**
      * @param integer $Mode 检测模式。0 为检测所有出现的人脸， 1 为检测面积最大的人脸。默认为 0。最多返回 10 张人脸的五官定位（人脸关键点）具体信息。
      * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。
@@ -90,6 +89,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

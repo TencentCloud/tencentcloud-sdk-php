@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSnapshotByTimeOffsetTemplate返回参数结构体
+ *
  * @method integer getDefinition() 获取时间点截图模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置时间点截图模板唯一标识。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateSnapshotByTimeOffsetTemplate返回参数结构体
  */
 class CreateSnapshotByTimeOffsetTemplateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateSnapshotByTimeOffsetTemplateResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Definition 时间点截图模板唯一标识。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateSnapshotByTimeOffsetTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 单句的详细识别结果，包含单个词的时间偏移，一般用于生成字幕的场景。
+ *
  * @method string getFinalSentence() 获取单句最终识别结果
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFinalSentence(string $FinalSentence) 设置单句最终识别结果
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWords(array $Words) 设置单句中词详情
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *单句的详细识别结果，包含单个词的时间偏移，一般用于生成字幕的场景。
  */
 class SentenceDetail extends AbstractModel
 {
@@ -84,6 +82,7 @@ class SentenceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Words;
+
     /**
      * @param string $FinalSentence 单句最终识别结果
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,6 +101,7 @@ class SentenceDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

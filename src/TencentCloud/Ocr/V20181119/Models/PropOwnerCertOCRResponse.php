@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PropOwnerCertOCR返回参数结构体
+ *
  * @method string getOwner() 获取房地产权利人
  * @method void setOwner(string $Owner) 设置房地产权利人
  * @method string getPossession() 获取共有情况
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocation(string $Location) 设置房地坐落
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *PropOwnerCertOCR返回参数结构体
  */
 class PropOwnerCertOCRResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class PropOwnerCertOCRResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Owner 房地产权利人
      * @param string $Possession 共有情况
@@ -86,6 +85,7 @@ class PropOwnerCertOCRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

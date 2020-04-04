@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 识别出的最相似候选人
+ *
  * @method string getPersonId() 获取人员ID
  * @method void setPersonId(string $PersonId) 设置人员ID
  * @method string getFaceId() 获取人脸ID
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPersonGroupInfos(array $PersonGroupInfos) 设置包含此人员的人员库及描述字段内容列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *识别出的最相似候选人
  */
 class Candidate extends AbstractModel
 {
@@ -93,6 +91,7 @@ class Candidate extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PersonGroupInfos;
+
     /**
      * @param string $PersonId 人员ID
      * @param string $FaceId 人脸ID
@@ -114,6 +113,7 @@ class Candidate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

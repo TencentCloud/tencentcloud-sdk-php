@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 点播文件雪碧图信息
+ *
  * @method array getImageSpriteSet() 获取特定规格的雪碧图信息集合，每个元素代表一套相同规格的雪碧图。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageSpriteSet(array $ImageSpriteSet) 设置特定规格的雪碧图信息集合，每个元素代表一套相同规格的雪碧图。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *点播文件雪碧图信息
  */
 class MediaImageSpriteInfo extends AbstractModel
 {
@@ -34,6 +32,7 @@ class MediaImageSpriteInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageSpriteSet;
+
     /**
      * @param array $ImageSpriteSet 特定规格的雪碧图信息集合，每个元素代表一套相同规格的雪碧图。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,6 +41,7 @@ class MediaImageSpriteInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转账充值明细信息
+ *
  * @method string getInAcctType() 获取STRING(10)，入账类型（02: 会员充值; 03: 资金挂账）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInAcctType(string $InAcctType) 设置STRING(10)，入账类型（02: 会员充值; 03: 资金挂账）
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrontSeqNo(string $FrontSeqNo) 设置STRING(52)，见证系统流水号
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *转账充值明细信息
  */
 class TransferItem extends AbstractModel
 {
@@ -134,6 +132,7 @@ class TransferItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrontSeqNo;
+
     /**
      * @param string $InAcctType STRING(10)，入账类型（02: 会员充值; 03: 资金挂账）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -162,6 +161,7 @@ class TransferItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

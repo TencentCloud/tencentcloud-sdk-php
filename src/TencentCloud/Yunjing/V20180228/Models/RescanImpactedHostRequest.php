@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RescanImpactedHost请求参数结构体
+ *
  * @method integer getId() 获取漏洞ID。
  * @method void setId(integer $Id) 设置漏洞ID。
- */
-
-/**
- *RescanImpactedHost请求参数结构体
  */
 class RescanImpactedHostRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RescanImpactedHostRequest extends AbstractModel
      * @var integer 漏洞ID。
      */
     public $Id;
+
     /**
      * @param integer $Id 漏洞ID。
      */
@@ -38,6 +37,7 @@ class RescanImpactedHostRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

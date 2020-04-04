@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyInstanceAttributes请求参数结构体
+ *
  * @method string getInstanceId() 获取实例id
  * @method void setInstanceId(string $InstanceId) 设置实例id
  * @method integer getMsgRetentionTime() 获取实例日志的最长保留时间，单位分钟，最大30天，0代表不开启日志保留时间回收策略
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
  * @method ModifyInstanceAttributesConfig getConfig() 获取实例配置
  * @method void setConfig(ModifyInstanceAttributesConfig $Config) 设置实例配置
- */
-
-/**
- *ModifyInstanceAttributes请求参数结构体
  */
 class ModifyInstanceAttributesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
      * @var ModifyInstanceAttributesConfig 实例配置
      */
     public $Config;
+
     /**
      * @param string $InstanceId 实例id
      * @param integer $MsgRetentionTime 实例日志的最长保留时间，单位分钟，最大30天，0代表不开启日志保留时间回收策略
@@ -62,6 +61,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

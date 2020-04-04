@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLivePlayDomain请求参数结构体
+ *
  * @method string getDomainName() 获取播放域名。
  * @method void setDomainName(string $DomainName) 设置播放域名。
  * @method integer getPlayType() 获取拉流域名类型。1-国内；2-全球；3-境外
  * @method void setPlayType(integer $PlayType) 设置拉流域名类型。1-国内；2-全球；3-境外
- */
-
-/**
- *ModifyLivePlayDomain请求参数结构体
  */
 class ModifyLivePlayDomainRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyLivePlayDomainRequest extends AbstractModel
      * @var integer 拉流域名类型。1-国内；2-全球；3-境外
      */
     public $PlayType;
+
     /**
      * @param string $DomainName 播放域名。
      * @param integer $PlayType 拉流域名类型。1-国内；2-全球；3-境外
@@ -46,6 +45,7 @@ class ModifyLivePlayDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

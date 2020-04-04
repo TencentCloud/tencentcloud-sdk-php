@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveSnapshotTemplate返回参数结构体
+ *
  * @method SnapshotTemplateInfo getTemplate() 获取截图模板信息。
  * @method void setTemplate(SnapshotTemplateInfo $Template) 设置截图模板信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeLiveSnapshotTemplate返回参数结构体
  */
 class DescribeLiveSnapshotTemplateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeLiveSnapshotTemplateResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param SnapshotTemplateInfo $Template 截图模板信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeLiveSnapshotTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

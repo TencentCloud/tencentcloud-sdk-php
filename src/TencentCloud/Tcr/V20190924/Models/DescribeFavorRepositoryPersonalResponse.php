@@ -18,14 +18,12 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeFavorRepositoryPersonal返回参数结构体
+ *
  * @method FavorResp getData() 获取个人收藏仓库列表返回信息
  * @method void setData(FavorResp $Data) 设置个人收藏仓库列表返回信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeFavorRepositoryPersonal返回参数结构体
  */
 class DescribeFavorRepositoryPersonalResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeFavorRepositoryPersonalResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param FavorResp $Data 个人收藏仓库列表返回信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeFavorRepositoryPersonalResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

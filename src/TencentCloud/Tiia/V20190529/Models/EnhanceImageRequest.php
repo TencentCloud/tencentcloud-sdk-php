@@ -18,6 +18,8 @@ namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EnhanceImage请求参数结构体
+ *
  * @method string getImageUrl() 获取图片URL地址。 
 图片限制： 
 • 图片格式：PNG、JPG、JPEG。 
@@ -39,10 +41,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageBase64(string $ImageBase64) 设置支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
 **注意：图片需要base64编码，并且要去掉编码头部。**
  */
-
-/**
- *EnhanceImage请求参数结构体
- */
 class EnhanceImageRequest extends AbstractModel
 {
     /**
@@ -62,6 +60,7 @@ class EnhanceImageRequest extends AbstractModel
 **注意：图片需要base64编码，并且要去掉编码头部。**
      */
     public $ImageBase64;
+
     /**
      * @param string $ImageUrl 图片URL地址。 
 图片限制： 
@@ -78,6 +77,7 @@ class EnhanceImageRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

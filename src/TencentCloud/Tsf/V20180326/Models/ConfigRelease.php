@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 配置项发布信息
+ *
  * @method string getConfigReleaseId() 获取配置项发布ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigReleaseId(string $ConfigReleaseId) 设置配置项发布ID
@@ -66,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReleaseDesc(string $ReleaseDesc) 设置发布描述
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *配置项发布信息
  */
 class ConfigRelease extends AbstractModel
 {
@@ -144,6 +142,7 @@ class ConfigRelease extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReleaseDesc;
+
     /**
      * @param string $ConfigReleaseId 配置项发布ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,6 +173,7 @@ class ConfigRelease extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

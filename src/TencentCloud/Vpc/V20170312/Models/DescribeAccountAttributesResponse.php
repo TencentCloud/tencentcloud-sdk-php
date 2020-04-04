@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccountAttributes返回参数结构体
+ *
  * @method array getAccountAttributeSet() 获取用户账号属性对象
  * @method void setAccountAttributeSet(array $AccountAttributeSet) 设置用户账号属性对象
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAccountAttributes返回参数结构体
  */
 class DescribeAccountAttributesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeAccountAttributesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $AccountAttributeSet 用户账号属性对象
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeAccountAttributesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

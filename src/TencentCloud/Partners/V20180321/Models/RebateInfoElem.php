@@ -18,6 +18,8 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 返佣信息定义
+ *
  * @method string getUin() 获取代理商账号ID
  * @method void setUin(string $Uin) 设置代理商账号ID
  * @method string getRebateMonth() 获取返佣月份，如2018-02
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuarterSales(integer $QuarterSales) 设置季度业绩，单位分
  * @method string getExceptionFlag() 获取NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
  * @method void setExceptionFlag(string $ExceptionFlag) 设置NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
- */
-
-/**
- *返佣信息定义
  */
 class RebateInfoElem extends AbstractModel
 {
@@ -66,6 +64,7 @@ class RebateInfoElem extends AbstractModel
      * @var string NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
      */
     public $ExceptionFlag;
+
     /**
      * @param string $Uin 代理商账号ID
      * @param string $RebateMonth 返佣月份，如2018-02
@@ -78,6 +77,7 @@ class RebateInfoElem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

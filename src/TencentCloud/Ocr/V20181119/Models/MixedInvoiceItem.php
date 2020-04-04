@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 混贴票据单张发票识别信息
+ *
  * @method string getCode() 获取识别结果。
 OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
 FailedOperation.UnKnowError：表示识别失败；
@@ -58,10 +60,6 @@ FailedOperation.UnKnowError：表示识别失败；
  * @method void setAngle(float $Angle) 设置识别出的图片在混贴票据图片中的旋转角度。
  * @method array getSingleInvoiceInfos() 获取识别到的内容。
  * @method void setSingleInvoiceInfos(array $SingleInvoiceInfos) 设置识别到的内容。
- */
-
-/**
- *混贴票据单张发票识别信息
  */
 class MixedInvoiceItem extends AbstractModel
 {
@@ -104,6 +102,7 @@ FailedOperation.UnKnowError：表示识别失败；
      * @var array 识别到的内容。
      */
     public $SingleInvoiceInfos;
+
     /**
      * @param string $Code 识别结果。
 OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
@@ -130,6 +129,7 @@ FailedOperation.UnKnowError：表示识别失败；
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

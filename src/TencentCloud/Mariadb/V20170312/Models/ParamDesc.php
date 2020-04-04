@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DB参数描述
+ *
  * @method string getParam() 获取参数名字
  * @method void setParam(string $Param) 设置参数名字
  * @method string getValue() 获取当前参数值
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConstraint(ParamConstraint $Constraint) 设置参数限制
  * @method boolean getHaveSetValue() 获取是否有设置过值，false:没有设置过值，true:有设置过值。
  * @method void setHaveSetValue(boolean $HaveSetValue) 设置是否有设置过值，false:没有设置过值，true:有设置过值。
- */
-
-/**
- *DB参数描述
  */
 class ParamDesc extends AbstractModel
 {
@@ -69,6 +67,7 @@ class ParamDesc extends AbstractModel
      * @var boolean 是否有设置过值，false:没有设置过值，true:有设置过值。
      */
     public $HaveSetValue;
+
     /**
      * @param string $Param 参数名字
      * @param string $Value 当前参数值
@@ -82,6 +81,7 @@ class ParamDesc extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

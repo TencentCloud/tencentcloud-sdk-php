@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNotificationConfiguration请求参数结构体
+ *
  * @method string getAutoScalingGroupId() 获取伸缩组ID。
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。
  * @method array getNotificationTypes() 获取通知类型，即为需要订阅的通知类型集合，取值范围如下：
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
  * @method array getNotificationUserGroupIds() 获取通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
  * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
- */
-
-/**
- *CreateNotificationConfiguration请求参数结构体
  */
 class CreateNotificationConfigurationRequest extends AbstractModel
 {
@@ -63,6 +61,7 @@ class CreateNotificationConfigurationRequest extends AbstractModel
      * @var array 通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
      */
     public $NotificationUserGroupIds;
+
     /**
      * @param string $AutoScalingGroupId 伸缩组ID。
      * @param array $NotificationTypes 通知类型，即为需要订阅的通知类型集合，取值范围如下：
@@ -78,6 +77,7 @@ class CreateNotificationConfigurationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

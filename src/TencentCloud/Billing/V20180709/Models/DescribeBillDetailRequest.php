@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBillDetail请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取数量，最大值为100
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置查询指定资源信息
  * @method string getActionType() 获取查询交易类型。如 按量计费日结，按量计费小时结 等
  * @method void setActionType(string $ActionType) 设置查询交易类型。如 按量计费日结，按量计费小时结 等
- */
-
-/**
- *DescribeBillDetail请求参数结构体
  */
 class DescribeBillDetailRequest extends AbstractModel
 {
@@ -104,6 +102,7 @@ class DescribeBillDetailRequest extends AbstractModel
      * @var string 查询交易类型。如 按量计费日结，按量计费小时结 等
      */
     public $ActionType;
+
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 数量，最大值为100
@@ -122,6 +121,7 @@ class DescribeBillDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

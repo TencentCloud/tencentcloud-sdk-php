@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstances请求参数结构体
+ *
  * @method string getInstanceId() 获取（过滤条件）按照实例ID过滤
  * @method void setInstanceId(string $InstanceId) 设置（过滤条件）按照实例ID过滤
  * @method string getSearchWord() 获取（过滤条件）按照实例名称过滤，支持模糊查询
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，不填则默认10，最大值20
  * @method string getTagKey() 获取匹配标签key值。
  * @method void setTagKey(string $TagKey) 设置匹配标签key值。
- */
-
-/**
- *DescribeInstances请求参数结构体
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @var string 匹配标签key值。
      */
     public $TagKey;
+
     /**
      * @param string $InstanceId （过滤条件）按照实例ID过滤
      * @param string $SearchWord （过滤条件）按照实例名称过滤，支持模糊查询
@@ -78,6 +77,7 @@ class DescribeInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

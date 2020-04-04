@@ -18,14 +18,12 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSubnetAvailableIps请求参数结构体
+ *
  * @method string getSubnetId() 获取私有网络子网ID
  * @method void setSubnetId(string $SubnetId) 设置私有网络子网ID
  * @method string getCidr() 获取CIDR前缀，例如10.0.1
  * @method void setCidr(string $Cidr) 设置CIDR前缀，例如10.0.1
- */
-
-/**
- *DescribeSubnetAvailableIps请求参数结构体
  */
 class DescribeSubnetAvailableIpsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeSubnetAvailableIpsRequest extends AbstractModel
      * @var string CIDR前缀，例如10.0.1
      */
     public $Cidr;
+
     /**
      * @param string $SubnetId 私有网络子网ID
      * @param string $Cidr CIDR前缀，例如10.0.1
@@ -46,6 +45,7 @@ class DescribeSubnetAvailableIpsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

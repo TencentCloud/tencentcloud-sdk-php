@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 输入数据配置
+ *
  * @method string getChannelName() 获取通道名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelName(string $ChannelName) 设置通道名
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContentType(string $ContentType) 设置文件类型
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *输入数据配置
  */
 class InputDataConfig extends AbstractModel
 {
@@ -64,6 +62,7 @@ class InputDataConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContentType;
+
     /**
      * @param string $ChannelName 通道名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +77,7 @@ class InputDataConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

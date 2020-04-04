@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频拼接任务信息，该结构仅用于对 2017 版[视频拼接](https://cloud.tencent.com/document/product/266/7821)接口发起的任务。
+ *
  * @method string getTaskId() 获取视频拼接任务 ID。
  * @method void setTaskId(string $TaskId) 设置视频拼接任务 ID。
  * @method array getFileInfoSet() 获取视频拼接源文件信息。
  * @method void setFileInfoSet(array $FileInfoSet) 设置视频拼接源文件信息。
- */
-
-/**
- *视频拼接任务信息，该结构仅用于对 2017 版[视频拼接](https://cloud.tencent.com/document/product/266/7821)接口发起的任务。
  */
 class ConcatTask2017 extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ConcatTask2017 extends AbstractModel
      * @var array 视频拼接源文件信息。
      */
     public $FileInfoSet;
+
     /**
      * @param string $TaskId 视频拼接任务 ID。
      * @param array $FileInfoSet 视频拼接源文件信息。
@@ -46,6 +45,7 @@ class ConcatTask2017 extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

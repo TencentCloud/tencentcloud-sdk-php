@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AnalyzeFace返回参数结构体
+ *
  * @method integer getImageWidth() 获取请求的图片宽度。
  * @method void setImageWidth(integer $ImageWidth) 设置请求的图片宽度。
  * @method integer getImageHeight() 获取请求的图片高度。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别所用的算法模型版本。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *AnalyzeFace返回参数结构体
  */
 class AnalyzeFaceResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AnalyzeFaceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $ImageWidth 请求的图片宽度。
      * @param integer $ImageHeight 请求的图片高度。
@@ -70,6 +69,7 @@ class AnalyzeFaceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

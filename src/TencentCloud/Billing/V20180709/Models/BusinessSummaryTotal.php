@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 按产品汇总总费用
+ *
  * @method string getRealTotalCost() 获取总花费
  * @method void setRealTotalCost(string $RealTotalCost) 设置总花费
  * @method string getVoucherPayAmount() 获取代金券金额
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送金金额
  * @method string getCashPayAmount() 获取现金金额
  * @method void setCashPayAmount(string $CashPayAmount) 设置现金金额
- */
-
-/**
- *按产品汇总总费用
  */
 class BusinessSummaryTotal extends AbstractModel
 {
@@ -52,6 +50,7 @@ class BusinessSummaryTotal extends AbstractModel
      * @var string 现金金额
      */
     public $CashPayAmount;
+
     /**
      * @param string $RealTotalCost 总花费
      * @param string $VoucherPayAmount 代金券金额
@@ -62,6 +61,7 @@ class BusinessSummaryTotal extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

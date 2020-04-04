@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetInstancesPassword请求参数结构体
+ *
  * @method array getInstanceIds() 获取一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。
  * @method void setInstanceIds(array $InstanceIds) 设置一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。
  * @method string getPassword() 获取实例登录密码。不同操作系统类型密码复杂度限制不一样，具体如下：
@@ -30,10 +32,6 @@ Windows实例密码必须12~30位，不能以“/”开头且不包括用户名�
  * @method void setUserName(string $UserName) 设置待重置密码的实例操作系统用户名。不得超过64个字符。
  * @method boolean getForceStop() 获取是否对运行中的实例选择强制关机。建议对运行中的实例先手动关机，然后再重置用户密码。取值范围：<br><li>TRUE：表示在正常关机失败后进行强制关机<br><li>FALSE：表示在正常关机失败后不进行强制关机<br><br>默认取值：FALSE。<br><br>强制关机的效果等同于关闭物理计算机的电源开关。强制关机可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常关机时使用。
  * @method void setForceStop(boolean $ForceStop) 设置是否对运行中的实例选择强制关机。建议对运行中的实例先手动关机，然后再重置用户密码。取值范围：<br><li>TRUE：表示在正常关机失败后进行强制关机<br><li>FALSE：表示在正常关机失败后不进行强制关机<br><br>默认取值：FALSE。<br><br>强制关机的效果等同于关闭物理计算机的电源开关。强制关机可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常关机时使用。
- */
-
-/**
- *ResetInstancesPassword请求参数结构体
  */
 class ResetInstancesPasswordRequest extends AbstractModel
 {
@@ -58,6 +56,7 @@ Windows实例密码必须12~30位，不能以“/”开头且不包括用户名�
      * @var boolean 是否对运行中的实例选择强制关机。建议对运行中的实例先手动关机，然后再重置用户密码。取值范围：<br><li>TRUE：表示在正常关机失败后进行强制关机<br><li>FALSE：表示在正常关机失败后不进行强制关机<br><br>默认取值：FALSE。<br><br>强制关机的效果等同于关闭物理计算机的电源开关。强制关机可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常关机时使用。
      */
     public $ForceStop;
+
     /**
      * @param array $InstanceIds 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。
      * @param string $Password 实例登录密码。不同操作系统类型密码复杂度限制不一样，具体如下：
@@ -70,6 +69,7 @@ Windows实例密码必须12~30位，不能以“/”开头且不包括用户名�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

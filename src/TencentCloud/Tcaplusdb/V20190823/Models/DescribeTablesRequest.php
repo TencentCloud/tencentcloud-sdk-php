@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTables请求参数结构体
+ *
  * @method string getClusterId() 获取待查询表格所属集群ID
  * @method void setClusterId(string $ClusterId) 设置待查询表格所属集群ID
  * @method array getTableGroupIds() 获取待查询表格所属表格组ID列表
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询结果偏移量
  * @method integer getLimit() 获取查询结果返回记录数量
  * @method void setLimit(integer $Limit) 设置查询结果返回记录数量
- */
-
-/**
- *DescribeTables请求参数结构体
  */
 class DescribeTablesRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeTablesRequest extends AbstractModel
      * @var integer 查询结果返回记录数量
      */
     public $Limit;
+
     /**
      * @param string $ClusterId 待查询表格所属集群ID
      * @param array $TableGroupIds 待查询表格所属表格组ID列表
@@ -78,6 +77,7 @@ class DescribeTablesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

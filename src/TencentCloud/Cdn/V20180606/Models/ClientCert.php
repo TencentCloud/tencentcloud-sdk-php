@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * https 客户端证书配置
+ *
  * @method string getCertificate() 获取客户端证书
 PEM 格式，需要进行 Base 64 编码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,10 +42,6 @@ PEM 格式，需要进行 Base 64 编码
  * @method void setDeployTime(string $DeployTime) 设置证书颁发时间
 作为入参时无需填充
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *https 客户端证书配置
  */
 class ClientCert extends AbstractModel
 {
@@ -73,6 +71,7 @@ PEM 格式，需要进行 Base 64 编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployTime;
+
     /**
      * @param string $Certificate 客户端证书
 PEM 格式，需要进行 Base 64 编码
@@ -90,6 +89,7 @@ PEM 格式，需要进行 Base 64 编码
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

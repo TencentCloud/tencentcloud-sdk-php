@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 检测出的人脸框的位置
+ *
  * @method integer getX() 获取人脸框左上角横坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) 设置人脸宽度
  * @method integer getHeight() 获取人脸高度
  * @method void setHeight(integer $Height) 设置人脸高度
- */
-
-/**
- *检测出的人脸框的位置
  */
 class FaceRect extends AbstractModel
 {
@@ -64,6 +62,7 @@ class FaceRect extends AbstractModel
      * @var integer 人脸高度
      */
     public $Height;
+
     /**
      * @param integer $X 人脸框左上角横坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
@@ -78,6 +77,7 @@ class FaceRect extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

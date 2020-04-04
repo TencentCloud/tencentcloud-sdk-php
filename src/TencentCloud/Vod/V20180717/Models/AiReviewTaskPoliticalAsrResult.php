@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内容审核 Asr 文字鉴政、敏感任务结果类型
+ *
  * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method integer getErrCode() 获取错误码，0 表示成功，其他值表示失败：
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(AiReviewPoliticalAsrTaskInput $Input) 设置内容审核 Asr 文字鉴政任务输入。
  * @method AiReviewPoliticalAsrTaskOutput getOutput() 获取内容审核 Asr 文字鉴政任务输出。
  * @method void setOutput(AiReviewPoliticalAsrTaskOutput $Output) 设置内容审核 Asr 文字鉴政任务输出。
- */
-
-/**
- *内容审核 Asr 文字鉴政、敏感任务结果类型
  */
 class AiReviewTaskPoliticalAsrResult extends AbstractModel
 {
@@ -74,6 +72,7 @@ class AiReviewTaskPoliticalAsrResult extends AbstractModel
      * @var AiReviewPoliticalAsrTaskOutput 内容审核 Asr 文字鉴政任务输出。
      */
     public $Output;
+
     /**
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param integer $ErrCode 错误码，0 表示成功，其他值表示失败：
@@ -90,6 +89,7 @@ class AiReviewTaskPoliticalAsrResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例的备份数组
+ *
  * @method string getStartTime() 获取开始备份的时间
  * @method void setStartTime(string $StartTime) 设置开始备份的时间
  * @method string getBackupId() 获取备份ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备份的备注信息
  * @method integer getLocked() 获取备份是否被锁定，0：未被锁定；1：已被锁定
  * @method void setLocked(integer $Locked) 设置备份是否被锁定，0：未被锁定；1：已被锁定
- */
-
-/**
- *实例的备份数组
  */
 class RedisBackupSet extends AbstractModel
 {
@@ -66,6 +64,7 @@ class RedisBackupSet extends AbstractModel
      * @var integer 备份是否被锁定，0：未被锁定；1：已被锁定
      */
     public $Locked;
+
     /**
      * @param string $StartTime 开始备份的时间
      * @param string $BackupId 备份ID
@@ -78,6 +77,7 @@ class RedisBackupSet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

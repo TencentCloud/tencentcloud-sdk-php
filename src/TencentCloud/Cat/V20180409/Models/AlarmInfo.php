@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 拨测告警信息
+ *
  * @method string getObjName() 获取告警对象的名称
  * @method void setObjName(string $ObjName) 设置告警对象的名称
  * @method string getFirstOccurTime() 获取告警发生的时间
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetricValue(string $MetricValue) 设置特征项数值
  * @method string getObjId() 获取告警对象的ID
  * @method void setObjId(string $ObjId) 设置告警对象的ID
- */
-
-/**
- *拨测告警信息
  */
 class AlarmInfo extends AbstractModel
 {
@@ -87,6 +85,7 @@ class AlarmInfo extends AbstractModel
      * @var string 告警对象的ID
      */
     public $ObjId;
+
     /**
      * @param string $ObjName 告警对象的名称
      * @param string $FirstOccurTime 告警发生的时间
@@ -102,6 +101,7 @@ class AlarmInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

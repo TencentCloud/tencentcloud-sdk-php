@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 权限组数组
+ *
  * @method string getPGroupId() 获取权限组ID
  * @method void setPGroupId(string $PGroupId) 设置权限组ID
  * @method string getName() 获取权限组名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCDate(string $CDate) 设置创建时间
  * @method integer getBindCfsNum() 获取关联文件系统个数
  * @method void setBindCfsNum(integer $BindCfsNum) 设置关联文件系统个数
- */
-
-/**
- *权限组数组
  */
 class PGroupInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class PGroupInfo extends AbstractModel
      * @var integer 关联文件系统个数
      */
     public $BindCfsNum;
+
     /**
      * @param string $PGroupId 权限组ID
      * @param string $Name 权限组名称
@@ -70,6 +69,7 @@ class PGroupInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

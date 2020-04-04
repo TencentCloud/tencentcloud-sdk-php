@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSimpleGroups请求参数结构体
+ *
  * @method array getGroupIdList() 获取部署组ID列表，不填写时查询全量
  * @method void setGroupIdList(array $GroupIdList) 设置部署组ID列表，不填写时查询全量
  * @method string getApplicationId() 获取应用ID，不填写时查询全量
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchWord(string $SearchWord) 设置模糊查询，部署组名称，不填写时查询全量
  * @method string getAppMicroServiceType() 获取部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
  * @method void setAppMicroServiceType(string $AppMicroServiceType) 设置部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
- */
-
-/**
- *DescribeSimpleGroups请求参数结构体
  */
 class DescribeSimpleGroupsRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class DescribeSimpleGroupsRequest extends AbstractModel
      * @var string 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
      */
     public $AppMicroServiceType;
+
     /**
      * @param array $GroupIdList 部署组ID列表，不填写时查询全量
      * @param string $ApplicationId 应用ID，不填写时查询全量
@@ -102,6 +101,7 @@ class DescribeSimpleGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

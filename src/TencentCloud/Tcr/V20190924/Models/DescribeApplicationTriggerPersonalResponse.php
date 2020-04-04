@@ -18,14 +18,12 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeApplicationTriggerPersonal返回参数结构体
+ *
  * @method DescribeApplicationTriggerPersonalResp getData() 获取触发器列表返回值
  * @method void setData(DescribeApplicationTriggerPersonalResp $Data) 设置触发器列表返回值
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeApplicationTriggerPersonal返回参数结构体
  */
 class DescribeApplicationTriggerPersonalResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeApplicationTriggerPersonalResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param DescribeApplicationTriggerPersonalResp $Data 触发器列表返回值
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeApplicationTriggerPersonalResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

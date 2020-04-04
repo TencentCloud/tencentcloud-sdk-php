@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeFileSample请求参数结构体
+ *
  * @method array getFilters() 获取支持通过标签值进行筛选
  * @method void setFilters(array $Filters) 设置支持通过标签值进行筛选
  * @method integer getLimit() 获取数量限制，默认为20，最大值为100
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderDirection(string $OrderDirection) 设置升序（asc）还是降序（desc），默认：desc
  * @method string getOrderField() 获取按某个字段排序，目前仅支持CreatedAt排序
  * @method void setOrderField(string $OrderField) 设置按某个字段排序，目前仅支持CreatedAt排序
- */
-
-/**
- *DescribeFileSample请求参数结构体
  */
 class DescribeFileSampleRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeFileSampleRequest extends AbstractModel
      * @var string 按某个字段排序，目前仅支持CreatedAt排序
      */
     public $OrderField;
+
     /**
      * @param array $Filters 支持通过标签值进行筛选
      * @param integer $Limit 数量限制，默认为20，最大值为100
@@ -70,6 +69,7 @@ class DescribeFileSampleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

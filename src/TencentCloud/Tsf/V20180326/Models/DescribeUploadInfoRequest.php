@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUploadInfo请求参数结构体
+ *
  * @method string getApplicationId() 获取应用ID
  * @method void setApplicationId(string $ApplicationId) 设置应用ID
  * @method string getPkgName() 获取程序包名
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPkgType(string $PkgType) 设置程序包类型
  * @method string getPkgDesc() 获取程序包介绍
  * @method void setPkgDesc(string $PkgDesc) 设置程序包介绍
- */
-
-/**
- *DescribeUploadInfo请求参数结构体
  */
 class DescribeUploadInfoRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeUploadInfoRequest extends AbstractModel
      * @var string 程序包介绍
      */
     public $PkgDesc;
+
     /**
      * @param string $ApplicationId 应用ID
      * @param string $PkgName 程序包名
@@ -70,6 +69,7 @@ class DescribeUploadInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

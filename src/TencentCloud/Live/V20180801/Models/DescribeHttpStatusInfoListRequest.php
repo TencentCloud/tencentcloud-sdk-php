@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHttpStatusInfoList请求参数结构体
+ *
  * @method string getStartTime() 获取起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
 StartTime不能为3个月前。
@@ -32,10 +34,6 @@ StartTime不能为3个月前。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
  * @method array getPlayDomains() 获取播放域名列表。
  * @method void setPlayDomains(array $PlayDomains) 设置播放域名列表。
- */
-
-/**
- *DescribeHttpStatusInfoList请求参数结构体
  */
 class DescribeHttpStatusInfoListRequest extends AbstractModel
 {
@@ -57,6 +55,7 @@ StartTime不能为3个月前。
      * @var array 播放域名列表。
      */
     public $PlayDomains;
+
     /**
      * @param string $StartTime 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
@@ -70,6 +69,7 @@ StartTime不能为3个月前。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

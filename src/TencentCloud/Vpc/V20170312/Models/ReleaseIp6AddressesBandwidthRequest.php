@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReleaseIp6AddressesBandwidth请求参数结构体
+ *
  * @method array getIp6Addresses() 获取IPV6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
  * @method void setIp6Addresses(array $Ip6Addresses) 设置IPV6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
  * @method array getIp6AddressIds() 获取IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
  * @method void setIp6AddressIds(array $Ip6AddressIds) 设置IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
- */
-
-/**
- *ReleaseIp6AddressesBandwidth请求参数结构体
  */
 class ReleaseIp6AddressesBandwidthRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ReleaseIp6AddressesBandwidthRequest extends AbstractModel
      * @var array IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
      */
     public $Ip6AddressIds;
+
     /**
      * @param array $Ip6Addresses IPV6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
      * @param array $Ip6AddressIds IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
@@ -46,6 +45,7 @@ class ReleaseIp6AddressesBandwidthRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

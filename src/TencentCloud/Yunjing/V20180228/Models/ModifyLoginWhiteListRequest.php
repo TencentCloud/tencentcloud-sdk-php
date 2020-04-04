@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLoginWhiteList请求参数结构体
+ *
  * @method LoginWhiteListsRule getRules() 获取白名单规则
  * @method void setRules(LoginWhiteListsRule $Rules) 设置白名单规则
- */
-
-/**
- *ModifyLoginWhiteList请求参数结构体
  */
 class ModifyLoginWhiteListRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ModifyLoginWhiteListRequest extends AbstractModel
      * @var LoginWhiteListsRule 白名单规则
      */
     public $Rules;
+
     /**
      * @param LoginWhiteListsRule $Rules 白名单规则
      */
@@ -38,6 +37,7 @@ class ModifyLoginWhiteListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

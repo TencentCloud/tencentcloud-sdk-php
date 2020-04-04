@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRuleSets请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method array getIdList() 获取资源ID列表
  * @method void setIdList(array $IdList) 设置资源ID列表
- */
-
-/**
- *DescribeRuleSets请求参数结构体
  */
 class DescribeRuleSetsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeRuleSetsRequest extends AbstractModel
      * @var array 资源ID列表
      */
     public $IdList;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param array $IdList 资源ID列表
@@ -46,6 +45,7 @@ class DescribeRuleSetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

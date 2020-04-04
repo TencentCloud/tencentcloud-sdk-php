@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SEO 搜索引擎优化配置，默认为关闭状态
+ *
  * @method string getSwitch() 获取SEO 配置开关
 on：开启
 off：关闭
@@ -26,10 +28,6 @@ off：关闭
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *SEO 搜索引擎优化配置，默认为关闭状态
  */
 class Seo extends AbstractModel
 {
@@ -40,6 +38,7 @@ off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
+
     /**
      * @param string $Switch SEO 配置开关
 on：开启
@@ -50,6 +49,7 @@ off：关闭
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

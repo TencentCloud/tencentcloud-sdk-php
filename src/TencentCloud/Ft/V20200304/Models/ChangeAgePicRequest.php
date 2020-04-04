@@ -18,6 +18,8 @@ namespace TencentCloud\Ft\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ChangeAgePic请求参数结构体
+ *
  * @method array getAgeInfos() 获取人脸变老变年轻信息。 
 您可以输入最多3个 AgeInfo 来实现给一张图中的最多3张人脸变老变年轻。
  * @method void setAgeInfos(array $AgeInfos) 设置人脸变老变年轻信息。 
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 图片存储于腾讯云的 Url 可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- */
-
-/**
- *ChangeAgePic请求参数结构体
  */
 class ChangeAgePicRequest extends AbstractModel
 {
@@ -63,6 +61,7 @@ class ChangeAgePicRequest extends AbstractModel
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Url;
+
     /**
      * @param array $AgeInfos 人脸变老变年轻信息。 
 您可以输入最多3个 AgeInfo 来实现给一张图中的最多3张人脸变老变年轻。
@@ -78,6 +77,7 @@ class ChangeAgePicRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

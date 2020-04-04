@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNatGateway请求参数结构体
+ *
  * @method string getForwardMode() 获取转发模式，其中0表示IP方式，1表示网段方式；通过cidr方式可支持更多的IP接入到NAT网关
  * @method void setForwardMode(string $ForwardMode) 设置转发模式，其中0表示IP方式，1表示网段方式；通过cidr方式可支持更多的IP接入到NAT网关
  * @method string getVpcId() 获取私有网络ID，例如：vpc-kd7d06of
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoAllocEipNum(integer $AutoAllocEipNum) 设置新建EIP数目，系统将会按您的要求生产该数目个数EIP, AssignedEips和AutoAllocEipNum至少输入一个
  * @method integer getExclusive() 获取独占标识，取值为0和1，默认值为0；0和1分别表示创建共享型NAT网关和独占NAT型网关；由于同一个VPC网络内，指向NAT集群的默认路由只有一条，因此VPC内只能创建一种类型NAT网关；创建独占型NAT网关时，需联系对应架构师进行独占NAT集群搭建，否则无法创建独占型NAT网关。
  * @method void setExclusive(integer $Exclusive) 设置独占标识，取值为0和1，默认值为0；0和1分别表示创建共享型NAT网关和独占NAT型网关；由于同一个VPC网络内，指向NAT集群的默认路由只有一条，因此VPC内只能创建一种类型NAT网关；创建独占型NAT网关时，需联系对应架构师进行独占NAT集群搭建，否则无法创建独占型NAT网关。
- */
-
-/**
- *CreateNatGateway请求参数结构体
  */
 class CreateNatGatewayRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class CreateNatGatewayRequest extends AbstractModel
      * @var integer 独占标识，取值为0和1，默认值为0；0和1分别表示创建共享型NAT网关和独占NAT型网关；由于同一个VPC网络内，指向NAT集群的默认路由只有一条，因此VPC内只能创建一种类型NAT网关；创建独占型NAT网关时，需联系对应架构师进行独占NAT集群搭建，否则无法创建独占型NAT网关。
      */
     public $Exclusive;
+
     /**
      * @param string $ForwardMode 转发模式，其中0表示IP方式，1表示网段方式；通过cidr方式可支持更多的IP接入到NAT网关
      * @param string $VpcId 私有网络ID，例如：vpc-kd7d06of
@@ -102,6 +101,7 @@ class CreateNatGatewayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

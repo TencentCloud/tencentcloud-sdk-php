@@ -18,12 +18,10 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCustomImages请求参数结构体
+ *
  * @method array getImageIds() 获取准备删除的镜像ID列表
  * @method void setImageIds(array $ImageIds) 设置准备删除的镜像ID列表
- */
-
-/**
- *DeleteCustomImages请求参数结构体
  */
 class DeleteCustomImagesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteCustomImagesRequest extends AbstractModel
      * @var array 准备删除的镜像ID列表
      */
     public $ImageIds;
+
     /**
      * @param array $ImageIds 准备删除的镜像ID列表
      */
@@ -38,6 +37,7 @@ class DeleteCustomImagesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

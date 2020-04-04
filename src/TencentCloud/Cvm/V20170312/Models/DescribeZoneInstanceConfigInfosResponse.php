@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeZoneInstanceConfigInfos返回参数结构体
+ *
  * @method array getInstanceTypeQuotaSet() 获取可用区机型配置列表。
  * @method void setInstanceTypeQuotaSet(array $InstanceTypeQuotaSet) 设置可用区机型配置列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeZoneInstanceConfigInfos返回参数结构体
  */
 class DescribeZoneInstanceConfigInfosResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeZoneInstanceConfigInfosResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $InstanceTypeQuotaSet 可用区机型配置列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeZoneInstanceConfigInfosResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

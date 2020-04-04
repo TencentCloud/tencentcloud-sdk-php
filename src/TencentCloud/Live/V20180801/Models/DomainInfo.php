@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 直播域名信息
+ *
  * @method string getName() 获取直播域名
  * @method void setName(string $Name) 设置直播域名
  * @method integer getType() 获取域名类型。0-推流，1-播放
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsMiniProgramLive(integer $IsMiniProgramLive) 设置0：标准直播，
 1：小程序直播。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *直播域名信息
  */
 class DomainInfo extends AbstractModel
 {
@@ -120,6 +118,7 @@ class DomainInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsMiniProgramLive;
+
     /**
      * @param string $Name 直播域名
      * @param integer $Type 域名类型。0-推流，1-播放
@@ -142,6 +141,7 @@ class DomainInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

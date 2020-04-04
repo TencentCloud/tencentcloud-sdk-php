@@ -18,12 +18,10 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstancesDeniedActions请求参数结构体
+ *
  * @method array getInstanceIdSet() 获取无
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置无
- */
-
-/**
- *DescribeInstancesDeniedActions请求参数结构体
  */
 class DescribeInstancesDeniedActionsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeInstancesDeniedActionsRequest extends AbstractModel
      * @var array 无
      */
     public $InstanceIdSet;
+
     /**
      * @param array $InstanceIdSet 无
      */
@@ -38,6 +37,7 @@ class DescribeInstancesDeniedActionsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProjects请求参数结构体
+ *
  * @method integer getPageNo() 获取页码
  * @method void setPageNo(integer $PageNo) 设置页码
  * @method integer getPageSize() 获取页面大小
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(Filters $Filters) 设置部门范围过滤
  * @method integer getProjectStatus() 获取项目状态, 0:编辑中 1:运营中 2:已下线 3:已删除 4:审批中
  * @method void setProjectStatus(integer $ProjectStatus) 设置项目状态, 0:编辑中 1:运营中 2:已下线 3:已删除 4:审批中
- */
-
-/**
- *DescribeProjects请求参数结构体
  */
 class DescribeProjectsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeProjectsRequest extends AbstractModel
      * @var integer 项目状态, 0:编辑中 1:运营中 2:已下线 3:已删除 4:审批中
      */
     public $ProjectStatus;
+
     /**
      * @param integer $PageNo 页码
      * @param integer $PageSize 页面大小
@@ -70,6 +69,7 @@ class DescribeProjectsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

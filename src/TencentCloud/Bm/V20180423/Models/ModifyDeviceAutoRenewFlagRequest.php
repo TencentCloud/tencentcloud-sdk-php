@@ -18,14 +18,12 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDeviceAutoRenewFlag请求参数结构体
+ *
  * @method integer getAutoRenewFlag() 获取自动续费标志位。0: 不自动续费; 1: 自动续费
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标志位。0: 不自动续费; 1: 自动续费
  * @method array getInstanceIds() 获取需要修改的设备ID列表
  * @method void setInstanceIds(array $InstanceIds) 设置需要修改的设备ID列表
- */
-
-/**
- *ModifyDeviceAutoRenewFlag请求参数结构体
  */
 class ModifyDeviceAutoRenewFlagRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDeviceAutoRenewFlagRequest extends AbstractModel
      * @var array 需要修改的设备ID列表
      */
     public $InstanceIds;
+
     /**
      * @param integer $AutoRenewFlag 自动续费标志位。0: 不自动续费; 1: 自动续费
      * @param array $InstanceIds 需要修改的设备ID列表
@@ -46,6 +45,7 @@ class ModifyDeviceAutoRenewFlagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

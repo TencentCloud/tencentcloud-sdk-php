@@ -18,14 +18,13 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRuntimes请求参数结构体
+ *
 
- */
-
-/**
- *DescribeRuntimes请求参数结构体
  */
 class DescribeRuntimesRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeRuntimesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

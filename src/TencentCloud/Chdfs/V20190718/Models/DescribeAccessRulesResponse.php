@@ -18,14 +18,12 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccessRules返回参数结构体
+ *
  * @method array getAccessRules() 获取权限规则列表
  * @method void setAccessRules(array $AccessRules) 设置权限规则列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAccessRules返回参数结构体
  */
 class DescribeAccessRulesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeAccessRulesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $AccessRules 权限规则列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeAccessRulesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

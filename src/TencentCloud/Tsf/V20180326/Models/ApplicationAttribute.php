@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 应用列表其它字段
+ *
  * @method integer getInstanceCount() 获取总实例个数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceCount(integer $InstanceCount) 设置总实例个数
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupCount(integer $GroupCount) 设置应用下部署组个数
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *应用列表其它字段
  */
 class ApplicationAttribute extends AbstractModel
 {
@@ -54,6 +52,7 @@ class ApplicationAttribute extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupCount;
+
     /**
      * @param integer $InstanceCount 总实例个数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class ApplicationAttribute extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

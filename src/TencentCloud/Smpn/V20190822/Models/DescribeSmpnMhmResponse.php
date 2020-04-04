@@ -18,14 +18,12 @@ namespace TencentCloud\Smpn\V20190822\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSmpnMhm返回参数结构体
+ *
  * @method MHMResponse getResponseData() 获取号码营销监控回应内容
  * @method void setResponseData(MHMResponse $ResponseData) 设置号码营销监控回应内容
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeSmpnMhm返回参数结构体
  */
 class DescribeSmpnMhmResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeSmpnMhmResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param MHMResponse $ResponseData 号码营销监控回应内容
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeSmpnMhmResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

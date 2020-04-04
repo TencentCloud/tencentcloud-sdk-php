@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteWorkflow请求参数结构体
+ *
  * @method integer getWorkflowId() 获取工作流 ID。
  * @method void setWorkflowId(integer $WorkflowId) 设置工作流 ID。
- */
-
-/**
- *DeleteWorkflow请求参数结构体
  */
 class DeleteWorkflowRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteWorkflowRequest extends AbstractModel
      * @var integer 工作流 ID。
      */
     public $WorkflowId;
+
     /**
      * @param integer $WorkflowId 工作流 ID。
      */
@@ -38,6 +37,7 @@ class DeleteWorkflowRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

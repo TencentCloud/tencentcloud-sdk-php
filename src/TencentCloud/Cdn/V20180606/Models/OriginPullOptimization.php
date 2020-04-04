@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 跨国回源优化配置，默认为关闭状态（功能灰度中，尚未全量）
+ *
  * @method string getSwitch() 获取跨国回源优化配置开关
 on：开启
 off：关闭
@@ -32,10 +34,6 @@ CNToOV：境内回源境外
 OVToCN：境外回源境内
 CNToOV：境内回源境外
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *跨国回源优化配置，默认为关闭状态（功能灰度中，尚未全量）
  */
 class OriginPullOptimization extends AbstractModel
 {
@@ -53,6 +51,7 @@ CNToOV：境内回源境外
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OptimizationType;
+
     /**
      * @param string $Switch 跨国回源优化配置开关
 on：开启
@@ -66,6 +65,7 @@ CNToOV：境内回源境外
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

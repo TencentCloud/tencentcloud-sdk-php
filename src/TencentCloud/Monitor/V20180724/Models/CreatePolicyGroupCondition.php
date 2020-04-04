@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 创建策略传入的阈值告警条件
+ *
  * @method integer getMetricId() 获取指标Id
  * @method void setMetricId(integer $MetricId) 设置指标Id
  * @method integer getAlarmNotifyType() 获取告警发送收敛类型。0连续告警，1指数告警
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContinuePeriod(integer $ContinuePeriod) 设置持续几个检测周期触发规则会告警
  * @method integer getRuleId() 获取如果通过模版创建，需要传入模版中该指标的对应RuleId
  * @method void setRuleId(integer $RuleId) 设置如果通过模版创建，需要传入模版中该指标的对应RuleId
- */
-
-/**
- *创建策略传入的阈值告警条件
  */
 class CreatePolicyGroupCondition extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CreatePolicyGroupCondition extends AbstractModel
      * @var integer 如果通过模版创建，需要传入模版中该指标的对应RuleId
      */
     public $RuleId;
+
     /**
      * @param integer $MetricId 指标Id
      * @param integer $AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
@@ -94,6 +93,7 @@ class CreatePolicyGroupCondition extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

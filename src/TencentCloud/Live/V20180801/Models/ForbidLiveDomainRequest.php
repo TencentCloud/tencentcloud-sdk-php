@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ForbidLiveDomain请求参数结构体
+ *
  * @method string getDomainName() 获取待停用的直播域名。
  * @method void setDomainName(string $DomainName) 设置待停用的直播域名。
- */
-
-/**
- *ForbidLiveDomain请求参数结构体
  */
 class ForbidLiveDomainRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ForbidLiveDomainRequest extends AbstractModel
      * @var string 待停用的直播域名。
      */
     public $DomainName;
+
     /**
      * @param string $DomainName 待停用的直播域名。
      */
@@ -38,6 +37,7 @@ class ForbidLiveDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

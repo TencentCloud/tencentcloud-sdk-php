@@ -18,12 +18,10 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音过滤服务配置数据
+ *
  * @method string getStatus() 获取语音过滤服务开关，取值：open/close
  * @method void setStatus(string $Status) 设置语音过滤服务开关，取值：open/close
- */
-
-/**
- *语音过滤服务配置数据
  */
 class VoiceFilterConf extends AbstractModel
 {
@@ -31,6 +29,7 @@ class VoiceFilterConf extends AbstractModel
      * @var string 语音过滤服务开关，取值：open/close
      */
     public $Status;
+
     /**
      * @param string $Status 语音过滤服务开关，取值：open/close
      */
@@ -38,6 +37,7 @@ class VoiceFilterConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

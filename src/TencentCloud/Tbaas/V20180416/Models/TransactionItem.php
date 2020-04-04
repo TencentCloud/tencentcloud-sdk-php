@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 交易列表项信息
+ *
  * @method string getTransactionId() 获取交易ID
  * @method void setTransactionId(string $TransactionId) 设置交易ID
  * @method string getTransactionHash() 获取交易hash
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlockHeight(integer $BlockHeight) 设置交易所在区块高度
  * @method string getTransactionStatus() 获取交易状态
  * @method void setTransactionStatus(string $TransactionStatus) 设置交易状态
- */
-
-/**
- *交易列表项信息
  */
 class TransactionItem extends AbstractModel
 {
@@ -80,6 +78,7 @@ class TransactionItem extends AbstractModel
      * @var string 交易状态
      */
     public $TransactionStatus;
+
     /**
      * @param string $TransactionId 交易ID
      * @param string $TransactionHash 交易hash
@@ -94,6 +93,7 @@ class TransactionItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

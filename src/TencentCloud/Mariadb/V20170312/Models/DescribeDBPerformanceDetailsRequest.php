@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBPerformanceDetails请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：tdsql-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：tdsql-ow728lmc。
  * @method string getStartTime() 获取开始日期，格式yyyy-mm-dd
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束日期，格式yyyy-mm-dd
  * @method string getMetricName() 获取拉取的指标名，支持的值为：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
  * @method void setMetricName(string $MetricName) 设置拉取的指标名，支持的值为：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
- */
-
-/**
- *DescribeDBPerformanceDetails请求参数结构体
  */
 class DescribeDBPerformanceDetailsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeDBPerformanceDetailsRequest extends AbstractModel
      * @var string 拉取的指标名，支持的值为：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
      */
     public $MetricName;
+
     /**
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc。
      * @param string $StartTime 开始日期，格式yyyy-mm-dd
@@ -62,6 +61,7 @@ class DescribeDBPerformanceDetailsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

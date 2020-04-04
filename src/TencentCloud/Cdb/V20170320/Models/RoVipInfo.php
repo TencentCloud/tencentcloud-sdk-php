@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 只读vip信息
+ *
  * @method integer getRoVipStatus() 获取只读vip状态
  * @method void setRoVipStatus(integer $RoVipStatus) 设置只读vip状态
  * @method integer getRoSubnetId() 获取只读vip的子网
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoVport(integer $RoVport) 设置只读vip的端口号
  * @method string getRoVip() 获取只读vip
  * @method void setRoVip(string $RoVip) 设置只读vip
- */
-
-/**
- *只读vip信息
  */
 class RoVipInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class RoVipInfo extends AbstractModel
      * @var string 只读vip
      */
     public $RoVip;
+
     /**
      * @param integer $RoVipStatus 只读vip状态
      * @param integer $RoSubnetId 只读vip的子网
@@ -70,6 +69,7 @@ class RoVipInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

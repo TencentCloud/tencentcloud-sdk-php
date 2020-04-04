@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图片水印模板
+ *
  * @method string getImageUrl() 获取水印图片地址。
  * @method void setImageUrl(string $ImageUrl) 设置水印图片地址。
  * @method string getWidth() 获取水印的宽度。支持 %、px 两种格式：
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 <li>当字符串以 % 结尾，表示水印 Height 为视频高度的百分比大小，如 10% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Width 单位为像素，如 100px 表示 Width 为 100 像素；</li>
 0px：表示 Height 按照 Width 对视频宽度的比例缩放。
- */
-
-/**
- *图片水印模板
  */
 class ImageWatermarkTemplate extends AbstractModel
 {
@@ -60,6 +58,7 @@ class ImageWatermarkTemplate extends AbstractModel
 0px：表示 Height 按照 Width 对视频宽度的比例缩放。
      */
     public $Height;
+
     /**
      * @param string $ImageUrl 水印图片地址。
      * @param string $Width 水印的宽度。支持 %、px 两种格式：
@@ -74,6 +73,7 @@ class ImageWatermarkTemplate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRole请求参数结构体
+ *
  * @method string getRoleName() 获取角色名称
  * @method void setRoleName(string $RoleName) 设置角色名称
  * @method string getPolicyDocument() 获取策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConsoleLogin(integer $ConsoleLogin) 设置是否允许登录 1 为允许 0 为不允许
  * @method integer getSessionDuration() 获取申请角色临时密钥的最长有效期限制(范围：0~43200)
  * @method void setSessionDuration(integer $SessionDuration) 设置申请角色临时密钥的最长有效期限制(范围：0~43200)
- */
-
-/**
- *CreateRole请求参数结构体
  */
 class CreateRoleRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateRoleRequest extends AbstractModel
      * @var integer 申请角色临时密钥的最长有效期限制(范围：0~43200)
      */
     public $SessionDuration;
+
     /**
      * @param string $RoleName 角色名称
      * @param string $PolicyDocument 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
@@ -70,6 +69,7 @@ class CreateRoleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

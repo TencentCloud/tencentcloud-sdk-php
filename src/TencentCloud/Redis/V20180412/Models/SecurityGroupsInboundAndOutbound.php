@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全组出入规则
+ *
  * @method string getAction() 获取执行动作
  * @method void setAction(string $Action) 设置执行动作
  * @method string getIp() 获取IP地址
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(string $Port) 设置端口号
  * @method string getProto() 获取协议类型
  * @method void setProto(string $Proto) 设置协议类型
- */
-
-/**
- *安全组出入规则
  */
 class SecurityGroupsInboundAndOutbound extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SecurityGroupsInboundAndOutbound extends AbstractModel
      * @var string 协议类型
      */
     public $Proto;
+
     /**
      * @param string $Action 执行动作
      * @param string $Ip IP地址
@@ -62,6 +61,7 @@ class SecurityGroupsInboundAndOutbound extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

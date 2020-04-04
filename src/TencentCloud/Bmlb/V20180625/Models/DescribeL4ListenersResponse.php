@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeL4Listeners返回参数结构体
+ *
  * @method array getListenerSet() 获取监听器信息数组。
  * @method void setListenerSet(array $ListenerSet) 设置监听器信息数组。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeL4Listeners返回参数结构体
  */
 class DescribeL4ListenersResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeL4ListenersResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $ListenerSet 监听器信息数组。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeL4ListenersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

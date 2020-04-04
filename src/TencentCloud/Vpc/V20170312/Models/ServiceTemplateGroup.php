@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 协议端口模板集合
+ *
  * @method string getServiceTemplateGroupId() 获取协议端口模板集合实例ID，例如：ppmg-2klmrefu。
  * @method void setServiceTemplateGroupId(string $ServiceTemplateGroupId) 设置协议端口模板集合实例ID，例如：ppmg-2klmrefu。
  * @method string getServiceTemplateGroupName() 获取协议端口模板集合名称。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
  * @method array getServiceTemplateSet() 获取协议端口模板实例信息。
  * @method void setServiceTemplateSet(array $ServiceTemplateSet) 设置协议端口模板实例信息。
- */
-
-/**
- *协议端口模板集合
  */
 class ServiceTemplateGroup extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ServiceTemplateGroup extends AbstractModel
      * @var array 协议端口模板实例信息。
      */
     public $ServiceTemplateSet;
+
     /**
      * @param string $ServiceTemplateGroupId 协议端口模板集合实例ID，例如：ppmg-2klmrefu。
      * @param string $ServiceTemplateGroupName 协议端口模板集合名称。
@@ -70,6 +69,7 @@ class ServiceTemplateGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

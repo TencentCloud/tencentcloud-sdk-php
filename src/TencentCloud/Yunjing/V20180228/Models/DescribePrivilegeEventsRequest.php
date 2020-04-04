@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePrivilegeEvents请求参数结构体
+ *
  * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Keywords - String - 是否必填：否 - 关键词(主机IP)</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>Keywords - String - 是否必填：否 - 关键词(主机IP)</li>
- */
-
-/**
- *DescribePrivilegeEvents请求参数结构体
  */
 class DescribePrivilegeEventsRequest extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DescribePrivilegeEventsRequest extends AbstractModel
 <li>Keywords - String - 是否必填：否 - 关键词(主机IP)</li>
      */
     public $Filters;
+
     /**
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
@@ -58,6 +57,7 @@ class DescribePrivilegeEventsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

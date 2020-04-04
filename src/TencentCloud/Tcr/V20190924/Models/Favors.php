@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 仓库收藏
+ *
  * @method string getRepoName() 获取仓库名字
  * @method void setRepoName(string $RepoName) 设置仓库名字
  * @method string getRepoType() 获取仓库类型
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域
  * @method integer getRegionId() 获取地域的Id
  * @method void setRegionId(integer $RegionId) 设置地域的Id
- */
-
-/**
- *仓库收藏
  */
 class Favors extends AbstractModel
 {
@@ -112,6 +110,7 @@ class Favors extends AbstractModel
      * @var integer 地域的Id
      */
     public $RegionId;
+
     /**
      * @param string $RepoName 仓库名字
      * @param string $RepoType 仓库类型
@@ -134,6 +133,7 @@ class Favors extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

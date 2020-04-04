@@ -18,14 +18,13 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListUsers请求参数结构体
+ *
 
- */
-
-/**
- *ListUsers请求参数结构体
  */
 class ListUsersRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class ListUsersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

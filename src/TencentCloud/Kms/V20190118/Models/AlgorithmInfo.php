@@ -18,14 +18,12 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 算法的名称 和 标识
+ *
  * @method string getKeyUsage() 获取算法的标识
  * @method void setKeyUsage(string $KeyUsage) 设置算法的标识
  * @method string getAlgorithm() 获取算法的名称
  * @method void setAlgorithm(string $Algorithm) 设置算法的名称
- */
-
-/**
- *算法的名称 和 标识
  */
 class AlgorithmInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AlgorithmInfo extends AbstractModel
      * @var string 算法的名称
      */
     public $Algorithm;
+
     /**
      * @param string $KeyUsage 算法的标识
      * @param string $Algorithm 算法的名称
@@ -46,6 +45,7 @@ class AlgorithmInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

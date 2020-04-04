@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据库备注信息
+ *
  * @method string getName() 获取数据库名称
  * @method void setName(string $Name) 设置数据库名称
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
- */
-
-/**
- *数据库备注信息
  */
 class DBRemark extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DBRemark extends AbstractModel
      * @var string 备注信息
      */
     public $Remark;
+
     /**
      * @param string $Name 数据库名称
      * @param string $Remark 备注信息
@@ -46,6 +45,7 @@ class DBRemark extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

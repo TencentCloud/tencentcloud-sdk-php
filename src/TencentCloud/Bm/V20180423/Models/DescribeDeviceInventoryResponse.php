@@ -18,14 +18,12 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDeviceInventory返回参数结构体
+ *
  * @method integer getDeviceCount() 获取库存设备数量
  * @method void setDeviceCount(integer $DeviceCount) 设置库存设备数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDeviceInventory返回参数结构体
  */
 class DescribeDeviceInventoryResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDeviceInventoryResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $DeviceCount 库存设备数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeDeviceInventoryResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateVpc请求参数结构体
+ *
  * @method string getVpcName() 获取vpc名称，最大长度不能超过60个字节。
  * @method void setVpcName(string $VpcName) 设置vpc名称，最大长度不能超过60个字节。
  * @method string getCidrBlock() 获取vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) 设置域名
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
- */
-
-/**
- *CreateVpc请求参数结构体
  */
 class CreateVpcRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateVpcRequest extends AbstractModel
      * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     public $Tags;
+
     /**
      * @param string $VpcName vpc名称，最大长度不能超过60个字节。
      * @param string $CidrBlock vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
@@ -78,6 +77,7 @@ class CreateVpcRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

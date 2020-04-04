@@ -18,6 +18,8 @@ namespace TencentCloud\Tmt\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TextTranslateBatch返回参数结构体
+ *
  * @method string getSource() 获取源语言，详见入参Target
  * @method void setSource(string $Source) 设置源语言，详见入参Target
  * @method string getTarget() 获取目标语言，详见入参Target
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetTextList(array $TargetTextList) 设置翻译后的文本列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *TextTranslateBatch返回参数结构体
  */
 class TextTranslateBatchResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class TextTranslateBatchResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Source 源语言，详见入参Target
      * @param string $Target 目标语言，详见入参Target
@@ -62,6 +61,7 @@ class TextTranslateBatchResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

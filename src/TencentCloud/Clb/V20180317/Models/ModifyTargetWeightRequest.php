@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTargetWeight请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例 ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
  * @method string getListenerId() 获取负载均衡监听器 ID
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargets(array $Targets) 设置要修改权重的后端服务列表
  * @method integer getWeight() 获取后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
  * @method void setWeight(integer $Weight) 设置后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
- */
-
-/**
- *ModifyTargetWeight请求参数结构体
  */
 class ModifyTargetWeightRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifyTargetWeightRequest extends AbstractModel
      * @var integer 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
      */
     public $Weight;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param string $ListenerId 负载均衡监听器 ID
@@ -86,6 +85,7 @@ class ModifyTargetWeightRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 大教室场景肢体动作识别信息
+ *
  * @method ActionType getBodyPosture() 获取躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
  * @method void setBodyPosture(ActionType $BodyPosture) 设置躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
  * @method ActionType getHandup() 获取举手识别结果，包含举手（hand）和未检测到举手（nothand）
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTop(integer $Top) 设置动作出现图像的上侧起始侧坐标位置
  * @method integer getWidth() 获取动作图像宽度
  * @method void setWidth(integer $Width) 设置动作图像宽度
- */
-
-/**
- *大教室场景肢体动作识别信息
  */
 class ActionInfo extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ActionInfo extends AbstractModel
      * @var integer 动作图像宽度
      */
     public $Width;
+
     /**
      * @param ActionType $BodyPosture 躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
      * @param ActionType $Handup 举手识别结果，包含举手（hand）和未检测到举手（nothand）
@@ -94,6 +93,7 @@ class ActionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

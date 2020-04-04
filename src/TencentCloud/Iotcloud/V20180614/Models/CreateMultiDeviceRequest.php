@@ -18,14 +18,12 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateMultiDevice请求参数结构体
+ *
  * @method string getProductId() 获取产品 ID。创建产品时腾讯云为用户分配全局唯一的 ID
  * @method void setProductId(string $ProductId) 设置产品 ID。创建产品时腾讯云为用户分配全局唯一的 ID
  * @method array getDeviceNames() 获取批量创建的设备名数组，单次最多创建 100 个设备。命名规则：[a-zA-Z0-9:_-]{1,48}
  * @method void setDeviceNames(array $DeviceNames) 设置批量创建的设备名数组，单次最多创建 100 个设备。命名规则：[a-zA-Z0-9:_-]{1,48}
- */
-
-/**
- *CreateMultiDevice请求参数结构体
  */
 class CreateMultiDeviceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateMultiDeviceRequest extends AbstractModel
      * @var array 批量创建的设备名数组，单次最多创建 100 个设备。命名规则：[a-zA-Z0-9:_-]{1,48}
      */
     public $DeviceNames;
+
     /**
      * @param string $ProductId 产品 ID。创建产品时腾讯云为用户分配全局唯一的 ID
      * @param array $DeviceNames 批量创建的设备名数组，单次最多创建 100 个设备。命名规则：[a-zA-Z0-9:_-]{1,48}
@@ -46,6 +45,7 @@ class CreateMultiDeviceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

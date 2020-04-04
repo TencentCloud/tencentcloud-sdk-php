@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 播放错误码信息
+ *
  * @method string getTime() 获取数据时间点，
 格式：yyyy-mm-dd HH:MM:SS。
  * @method void setTime(string $Time) 设置数据时间点，
 格式：yyyy-mm-dd HH:MM:SS。
  * @method array getHttpStatusInfoList() 获取播放状态码详细信息。
  * @method void setHttpStatusInfoList(array $HttpStatusInfoList) 设置播放状态码详细信息。
- */
-
-/**
- *播放错误码信息
  */
 class HttpStatusData extends AbstractModel
 {
@@ -41,6 +39,7 @@ class HttpStatusData extends AbstractModel
      * @var array 播放状态码详细信息。
      */
     public $HttpStatusInfoList;
+
     /**
      * @param string $Time 数据时间点，
 格式：yyyy-mm-dd HH:MM:SS。
@@ -50,6 +49,7 @@ class HttpStatusData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

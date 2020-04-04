@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstanceSpec请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method integer getMemory() 获取实例配置变更后的内存大小，单位：GB。内存和磁盘必须同时升配或同时降配
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVolume(integer $Volume) 设置实例配置变更后的硬盘大小，单位：GB。内存和磁盘必须同时升配或同时降配。降配时，新的磁盘参数必须大于已用磁盘容量的1.2倍
  * @method integer getOplogSize() 获取实例配置变更后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90%
  * @method void setOplogSize(integer $OplogSize) 设置实例配置变更后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90%
- */
-
-/**
- *ModifyDBInstanceSpec请求参数结构体
  */
 class ModifyDBInstanceSpecRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
      * @var integer 实例配置变更后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90%
      */
     public $OplogSize;
+
     /**
      * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      * @param integer $Memory 实例配置变更后的内存大小，单位：GB。内存和磁盘必须同时升配或同时降配
@@ -62,6 +61,7 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBParameters请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：tdsql-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：tdsql-ow728lmc。
  * @method array getParams() 获取参数列表，每一个元素是Param和Value的组合
  * @method void setParams(array $Params) 设置参数列表，每一个元素是Param和Value的组合
- */
-
-/**
- *ModifyDBParameters请求参数结构体
  */
 class ModifyDBParametersRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBParametersRequest extends AbstractModel
      * @var array 参数列表，每一个元素是Param和Value的组合
      */
     public $Params;
+
     /**
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc。
      * @param array $Params 参数列表，每一个元素是Param和Value的组合
@@ -46,6 +45,7 @@ class ModifyDBParametersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAutoSnapshotPolicy返回参数结构体
+ *
  * @method string getAutoSnapshotPolicyId() 获取新创建的定期快照策略ID。
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置新创建的定期快照策略ID。
  * @method string getNextTriggerTime() 获取首次开始备份的时间。
  * @method void setNextTriggerTime(string $NextTriggerTime) 设置首次开始备份的时间。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateAutoSnapshotPolicy返回参数结构体
  */
 class CreateAutoSnapshotPolicyResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateAutoSnapshotPolicyResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $AutoSnapshotPolicyId 新创建的定期快照策略ID。
      * @param string $NextTriggerTime 首次开始备份的时间。
@@ -54,6 +53,7 @@ class CreateAutoSnapshotPolicyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

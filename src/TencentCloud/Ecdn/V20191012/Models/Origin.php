@@ -18,6 +18,8 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 源站配置。
+ *
  * @method array getOrigins() 获取主源站列表，默认格式为 ["ip1:port1", "ip2:port2"]。
 支持在源站列表中配置权重，配置IP源站权重格式为 ["ip1:port1:weight1", "ip2:port2:weight2"]。
  * @method void setOrigins(array $Origins) 设置主源站列表，默认格式为 ["ip1:port1", "ip2:port2"]。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupOriginType(string $BackupOriginType) 设置备份源站类型，同OriginType。
 设置BackupOrigins时必须填写。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *源站配置。
  */
 class Origin extends AbstractModel
 {
@@ -87,6 +85,7 @@ class Origin extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupOriginType;
+
     /**
      * @param array $Origins 主源站列表，默认格式为 ["ip1:port1", "ip2:port2"]。
 支持在源站列表中配置权重，配置IP源站权重格式为 ["ip1:port1:weight1", "ip2:port2:weight2"]。
@@ -106,6 +105,7 @@ class Origin extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

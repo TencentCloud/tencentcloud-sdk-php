@@ -18,6 +18,8 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMountPoints请求参数结构体
+ *
  * @method string getFileSystemId() 获取文件系统ID
 注意：若根据AccessGroupId查看挂载点列表，则无需设置FileSystemId
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认为所有
  * @method void setLimit(integer $Limit) 设置返回数量，默认为所有
- */
-
-/**
- *DescribeMountPoints请求参数结构体
  */
 class DescribeMountPointsRequest extends AbstractModel
 {
@@ -58,6 +56,7 @@ class DescribeMountPointsRequest extends AbstractModel
      * @var integer 返回数量，默认为所有
      */
     public $Limit;
+
     /**
      * @param string $FileSystemId 文件系统ID
 注意：若根据AccessGroupId查看挂载点列表，则无需设置FileSystemId
@@ -70,6 +69,7 @@ class DescribeMountPointsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

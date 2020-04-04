@@ -18,14 +18,12 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 账单 Tag 信息
+ *
  * @method string getTagKey() 获取分账标签键
  * @method void setTagKey(string $TagKey) 设置分账标签键
  * @method string getTagValue() 获取标签值
  * @method void setTagValue(string $TagValue) 设置标签值
- */
-
-/**
- *账单 Tag 信息
  */
 class BillTagInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BillTagInfo extends AbstractModel
      * @var string 标签值
      */
     public $TagValue;
+
     /**
      * @param string $TagKey 分账标签键
      * @param string $TagValue 标签值
@@ -46,6 +45,7 @@ class BillTagInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

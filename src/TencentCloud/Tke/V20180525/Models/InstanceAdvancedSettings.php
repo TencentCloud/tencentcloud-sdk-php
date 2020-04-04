@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述了k8s集群相关配置与信息。
+ *
  * @method string getMountTarget() 获取数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
  * @method void setMountTarget(string $MountTarget) 设置数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
  * @method string getDockerGraphPath() 获取dockerd --graph 指定值, 默认为 /var/lib/docker
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataDisks(array $DataDisks) 设置数据盘相关信息
  * @method InstanceExtraArgs getExtraArgs() 获取节点相关的自定义参数信息
  * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) 设置节点相关的自定义参数信息
- */
-
-/**
- *描述了k8s集群相关配置与信息。
  */
 class InstanceAdvancedSettings extends AbstractModel
 {
@@ -73,6 +71,7 @@ class InstanceAdvancedSettings extends AbstractModel
      * @var InstanceExtraArgs 节点相关的自定义参数信息
      */
     public $ExtraArgs;
+
     /**
      * @param string $MountTarget 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
      * @param string $DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
@@ -86,6 +85,7 @@ class InstanceAdvancedSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

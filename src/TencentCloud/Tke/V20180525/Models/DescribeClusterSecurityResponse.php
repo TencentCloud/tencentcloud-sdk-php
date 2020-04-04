@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterSecurity返回参数结构体
+ *
  * @method string getUserName() 获取集群的账号名称
  * @method void setUserName(string $UserName) 设置集群的账号名称
  * @method string getPassword() 获取集群的访问密码
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityPolicy(array $SecurityPolicy) 设置集群访问策略组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeClusterSecurity返回参数结构体
  */
 class DescribeClusterSecurityResponse extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeClusterSecurityResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $UserName 集群的账号名称
      * @param string $Password 集群的访问密码
@@ -94,6 +93,7 @@ class DescribeClusterSecurityResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

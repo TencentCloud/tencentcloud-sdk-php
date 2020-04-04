@@ -18,12 +18,10 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OfflineIsolatedSubscribe请求参数结构体
+ *
  * @method string getSubscribeId() 获取数据订阅实例的ID
  * @method void setSubscribeId(string $SubscribeId) 设置数据订阅实例的ID
- */
-
-/**
- *OfflineIsolatedSubscribe请求参数结构体
  */
 class OfflineIsolatedSubscribeRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class OfflineIsolatedSubscribeRequest extends AbstractModel
      * @var string 数据订阅实例的ID
      */
     public $SubscribeId;
+
     /**
      * @param string $SubscribeId 数据订阅实例的ID
      */
@@ -38,6 +37,7 @@ class OfflineIsolatedSubscribeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

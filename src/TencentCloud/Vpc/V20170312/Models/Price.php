@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 价格
+ *
  * @method ItemPrice getInstancePrice() 获取实例价格。
  * @method void setInstancePrice(ItemPrice $InstancePrice) 设置实例价格。
  * @method ItemPrice getBandwidthPrice() 获取网络价格。
  * @method void setBandwidthPrice(ItemPrice $BandwidthPrice) 设置网络价格。
- */
-
-/**
- *价格
  */
 class Price extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Price extends AbstractModel
      * @var ItemPrice 网络价格。
      */
     public $BandwidthPrice;
+
     /**
      * @param ItemPrice $InstancePrice 实例价格。
      * @param ItemPrice $BandwidthPrice 网络价格。
@@ -46,6 +45,7 @@ class Price extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

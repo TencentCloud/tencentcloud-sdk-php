@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyL4Listener请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method string getListenerId() 获取四层监听器ID。可通过接口DescribeL4Listeners查询。
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setToaFlag(integer $ToaFlag) 设置是否开启toa。可选值：0（关闭）、1（开启），默认关闭。（该字段在负载均衡为fullnat类型下才生效）
  * @method string getBalanceMode() 获取四层调度方式。wrr，wlc。
  * @method void setBalanceMode(string $BalanceMode) 设置四层调度方式。wrr，wlc。
- */
-
-/**
- *ModifyL4Listener请求参数结构体
  */
 class ModifyL4ListenerRequest extends AbstractModel
 {
@@ -143,6 +141,7 @@ class ModifyL4ListenerRequest extends AbstractModel
      * @var string 四层调度方式。wrr，wlc。
      */
     public $BalanceMode;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param string $ListenerId 四层监听器ID。可通过接口DescribeL4Listeners查询。
@@ -166,6 +165,7 @@ class ModifyL4ListenerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

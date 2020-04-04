@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAcl请求参数结构体
+ *
  * @method string getInstanceId() 获取实例id信息
  * @method void setInstanceId(string $InstanceId) 设置实例id信息
  * @method integer getResourceType() 获取Acl资源类型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，当前只有TOPIC，其它字段用于后续兼容开源kafka的acl时使用
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) 设置默认为\*，表示任何host都可以访问，当前ckafka不支持host为\*，但是后面开源kafka的产品化会直接支持
  * @method string getPrincipal() 获取用户列表，默认为*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户
  * @method void setPrincipal(string $Principal) 设置用户列表，默认为*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户
- */
-
-/**
- *CreateAcl请求参数结构体
  */
 class CreateAclRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateAclRequest extends AbstractModel
      * @var string 用户列表，默认为*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户
      */
     public $Principal;
+
     /**
      * @param string $InstanceId 实例id信息
      * @param integer $ResourceType Acl资源类型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，当前只有TOPIC，其它字段用于后续兼容开源kafka的acl时使用
@@ -86,6 +85,7 @@ class CreateAclRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

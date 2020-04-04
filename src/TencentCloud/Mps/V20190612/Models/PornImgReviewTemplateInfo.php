@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 画面鉴黄任务控制参数
+ *
  * @method string getSwitch() 获取画面鉴黄任务开关，可选值：
 <li>ON：开启画面鉴黄任务；</li>
 <li>OFF：关闭画面鉴黄任务。</li>
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlockConfidence(integer $BlockConfidence) 设置判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
  * @method integer getReviewConfidence() 获取判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。
  * @method void setReviewConfidence(integer $ReviewConfidence) 设置判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。
- */
-
-/**
- *画面鉴黄任务控制参数
  */
 class PornImgReviewTemplateInfo extends AbstractModel
 {
@@ -70,6 +68,7 @@ class PornImgReviewTemplateInfo extends AbstractModel
      * @var integer 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。
      */
     public $ReviewConfidence;
+
     /**
      * @param string $Switch 画面鉴黄任务开关，可选值：
 <li>ON：开启画面鉴黄任务；</li>
@@ -86,6 +85,7 @@ class PornImgReviewTemplateInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

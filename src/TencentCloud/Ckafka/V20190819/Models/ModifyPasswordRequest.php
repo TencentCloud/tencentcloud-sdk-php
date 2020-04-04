@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyPassword请求参数结构体
+ *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getName() 获取用户名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) 设置用户当前密码
  * @method string getPasswordNew() 获取用户新密码
  * @method void setPasswordNew(string $PasswordNew) 设置用户新密码
- */
-
-/**
- *ModifyPassword请求参数结构体
  */
 class ModifyPasswordRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyPasswordRequest extends AbstractModel
      * @var string 用户新密码
      */
     public $PasswordNew;
+
     /**
      * @param string $InstanceId 实例Id
      * @param string $Name 用户名称
@@ -62,6 +61,7 @@ class ModifyPasswordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

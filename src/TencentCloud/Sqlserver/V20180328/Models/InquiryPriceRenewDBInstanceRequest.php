@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceRenewDBInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method integer getPeriod() 获取续费周期。按月续费最多48个月。默认查询续费一个月的价格
  * @method void setPeriod(integer $Period) 设置续费周期。按月续费最多48个月。默认查询续费一个月的价格
  * @method string getTimeUnit() 获取续费周期单位。month表示按月续费，当前只支持按月付费查询价格
  * @method void setTimeUnit(string $TimeUnit) 设置续费周期单位。month表示按月续费，当前只支持按月付费查询价格
- */
-
-/**
- *InquiryPriceRenewDBInstance请求参数结构体
  */
 class InquiryPriceRenewDBInstanceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InquiryPriceRenewDBInstanceRequest extends AbstractModel
      * @var string 续费周期单位。month表示按月续费，当前只支持按月付费查询价格
      */
     public $TimeUnit;
+
     /**
      * @param string $InstanceId 实例ID
      * @param integer $Period 续费周期。按月续费最多48个月。默认查询续费一个月的价格
@@ -54,6 +53,7 @@ class InquiryPriceRenewDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例的标签信息
+ *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method array getTags() 获取标签信息
  * @method void setTags(array $Tags) 设置标签信息
- */
-
-/**
- *实例的标签信息
  */
 class TagsInfoOfInstance extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TagsInfoOfInstance extends AbstractModel
      * @var array 标签信息
      */
     public $Tags;
+
     /**
      * @param string $InstanceId 实例Id
      * @param array $Tags 标签信息
@@ -46,6 +45,7 @@ class TagsInfoOfInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBPrice请求参数结构体
+ *
  * @method string getZone() 获取可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。
  * @method void setZone(string $Zone) 设置可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。
  * @method integer getGoodsNum() 获取实例数量，默认值为 1，最小值 1，最大值为 100。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceRole(string $InstanceRole) 设置实例类型，默认为 master，支持值包括：master - 表示主实例，ro - 表示只读实例，dr - 表示灾备实例。
  * @method integer getProtectMode() 获取数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
  * @method void setProtectMode(integer $ProtectMode) 设置数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
- */
-
-/**
- *DescribeDBPrice请求参数结构体
  */
 class DescribeDBPriceRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeDBPriceRequest extends AbstractModel
      * @var integer 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
      */
     public $ProtectMode;
+
     /**
      * @param string $Zone 可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。
      * @param integer $GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
@@ -94,6 +93,7 @@ class DescribeDBPriceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

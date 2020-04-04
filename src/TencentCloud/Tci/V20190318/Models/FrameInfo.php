@@ -18,16 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人员信息
+ *
  * @method float getSimilarity() 获取相似度
  * @method void setSimilarity(float $Similarity) 设置相似度
  * @method string getSnapshotUrl() 获取截图的存储地址
  * @method void setSnapshotUrl(string $SnapshotUrl) 设置截图的存储地址
  * @method integer getTs() 获取相对于视频起始时间的时间戳，单位秒
  * @method void setTs(integer $Ts) 设置相对于视频起始时间的时间戳，单位秒
- */
-
-/**
- *人员信息
  */
 class FrameInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class FrameInfo extends AbstractModel
      * @var integer 相对于视频起始时间的时间戳，单位秒
      */
     public $Ts;
+
     /**
      * @param float $Similarity 相似度
      * @param string $SnapshotUrl 截图的存储地址
@@ -54,6 +53,7 @@ class FrameInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

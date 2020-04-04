@@ -18,16 +18,14 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用于创建负载均衡的个性化配置。
+ *
  * @method string getBzPayMode() 获取按月/按小时计费。
  * @method void setBzPayMode(string $BzPayMode) 设置按月/按小时计费。
  * @method string getBzL4Metrics() 获取四层可选按带宽，连接数衡量。
  * @method void setBzL4Metrics(string $BzL4Metrics) 设置四层可选按带宽，连接数衡量。
  * @method string getBzL7Metrics() 获取七层可选按qps衡量。
  * @method void setBzL7Metrics(string $BzL7Metrics) 设置七层可选按qps衡量。
- */
-
-/**
- *用于创建负载均衡的个性化配置。
  */
 class CreateLoadBalancerBzConf extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateLoadBalancerBzConf extends AbstractModel
      * @var string 七层可选按qps衡量。
      */
     public $BzL7Metrics;
+
     /**
      * @param string $BzPayMode 按月/按小时计费。
      * @param string $BzL4Metrics 四层可选按带宽，连接数衡量。
@@ -54,6 +53,7 @@ class CreateLoadBalancerBzConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

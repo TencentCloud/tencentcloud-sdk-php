@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTransmitStatis请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；bgp表示独享包；bgp-multip表示共享包）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；bgp表示独享包；bgp-multip表示共享包）
  * @method string getId() 获取资源实例ID
@@ -36,10 +38,6 @@ pkg表示包速率；
  * @method void setEndTime(string $EndTime) 设置统计结束时间，秒部分保持为0，分钟部分为5的倍数
  * @method array getIpList() 获取资源的IP（当Business为bgp-multip时必填，且仅支持一个IP）；当不填写时，默认统计资源实例的所有IP；资源实例有多个IP（比如高防IP专业版）时，统计方式是求和；
  * @method void setIpList(array $IpList) 设置资源的IP（当Business为bgp-multip时必填，且仅支持一个IP）；当不填写时，默认统计资源实例的所有IP；资源实例有多个IP（比如高防IP专业版）时，统计方式是求和；
- */
-
-/**
- *DescribeTransmitStatis请求参数结构体
  */
 class DescribeTransmitStatisRequest extends AbstractModel
 {
@@ -79,6 +77,7 @@ pkg表示包速率；
      * @var array 资源的IP（当Business为bgp-multip时必填，且仅支持一个IP）；当不填写时，默认统计资源实例的所有IP；资源实例有多个IP（比如高防IP专业版）时，统计方式是求和；
      */
     public $IpList;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；bgp表示独享包；bgp-multip表示共享包）
      * @param string $Id 资源实例ID
@@ -94,6 +93,7 @@ pkg表示包速率；
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

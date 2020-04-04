@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeStreamPlayInfoList请求参数结构体
+ *
  * @method string getStartTime() 获取开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 当前时间 和 开始时间 间隔不超过30天。
  * @method void setStartTime(string $StartTime) 设置开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
 若不填，则为查询总体播放数据。
 注意：按AppName查询，需要联系客服同学提单支持。
- */
-
-/**
- *DescribeStreamPlayInfoList请求参数结构体
  */
 class DescribeStreamPlayInfoListRequest extends AbstractModel
 {
@@ -77,6 +75,7 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
 注意：按AppName查询，需要联系客服同学提单支持。
      */
     public $AppName;
+
     /**
      * @param string $StartTime 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 当前时间 和 开始时间 间隔不超过30天。
@@ -94,6 +93,7 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

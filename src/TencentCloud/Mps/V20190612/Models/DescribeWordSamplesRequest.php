@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWordSamples请求参数结构体
+ *
  * @method array getUsages() 获取<b>关键词应用场景过滤条件，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
 2. Recognition.Asr：通过语音识别技术，进行内容识别；
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：100，最大值：100。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：100，最大值：100。
- */
-
-/**
- *DescribeWordSamples请求参数结构体
  */
 class DescribeWordSamplesRequest extends AbstractModel
 {
@@ -83,6 +81,7 @@ class DescribeWordSamplesRequest extends AbstractModel
      * @var integer 返回记录条数，默认值：100，最大值：100。
      */
     public $Limit;
+
     /**
      * @param array $Usages <b>关键词应用场景过滤条件，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
@@ -102,6 +101,7 @@ class DescribeWordSamplesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

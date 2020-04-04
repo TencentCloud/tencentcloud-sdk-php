@@ -18,16 +18,14 @@ namespace TencentCloud\Npp\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCallBack请求参数结构体
+ *
  * @method string getBizAppId() 获取业务appid
  * @method void setBizAppId(string $BizAppId) 设置业务appid
  * @method string getCallId() 获取回拨请求响应中返回的 callId
  * @method void setCallId(string $CallId) 设置回拨请求响应中返回的 callId
  * @method string getCancelFlag() 获取0：不管通话状态直接拆线（默认) 1：主叫响铃以后状态不拆线 2：主叫接听以后状态不拆线 3：被叫响铃以后状态不拆线 4：被叫接听以后状态不拆线
  * @method void setCancelFlag(string $CancelFlag) 设置0：不管通话状态直接拆线（默认) 1：主叫响铃以后状态不拆线 2：主叫接听以后状态不拆线 3：被叫响铃以后状态不拆线 4：被叫接听以后状态不拆线
- */
-
-/**
- *DeleteCallBack请求参数结构体
  */
 class DeleteCallBackRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteCallBackRequest extends AbstractModel
      * @var string 0：不管通话状态直接拆线（默认) 1：主叫响铃以后状态不拆线 2：主叫接听以后状态不拆线 3：被叫响铃以后状态不拆线 4：被叫接听以后状态不拆线
      */
     public $CancelFlag;
+
     /**
      * @param string $BizAppId 业务appid
      * @param string $CallId 回拨请求响应中返回的 callId
@@ -54,6 +53,7 @@ class DeleteCallBackRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

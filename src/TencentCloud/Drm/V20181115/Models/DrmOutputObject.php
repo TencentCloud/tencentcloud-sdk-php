@@ -18,16 +18,14 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DRM加密后的输出对象
+ *
  * @method string getBucketName() 获取输出的桶名称。
  * @method void setBucketName(string $BucketName) 设置输出的桶名称。
  * @method string getObjectName() 获取输出的对象名称。
  * @method void setObjectName(string $ObjectName) 设置输出的对象名称。
  * @method DrmOutputPara getPara() 获取输出对象参数。
  * @method void setPara(DrmOutputPara $Para) 设置输出对象参数。
- */
-
-/**
- *DRM加密后的输出对象
  */
 class DrmOutputObject extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DrmOutputObject extends AbstractModel
      * @var DrmOutputPara 输出对象参数。
      */
     public $Para;
+
     /**
      * @param string $BucketName 输出的桶名称。
      * @param string $ObjectName 输出的对象名称。
@@ -54,6 +53,7 @@ class DrmOutputObject extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 对视频截雪碧图任务输入参数类型
+ *
  * @method integer getDefinition() 获取雪碧图模板 ID。
  * @method void setDefinition(integer $Definition) 设置雪碧图模板 ID。
- */
-
-/**
- *对视频截雪碧图任务输入参数类型
  */
 class ImageSpriteTaskInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ImageSpriteTaskInput extends AbstractModel
      * @var integer 雪碧图模板 ID。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 雪碧图模板 ID。
      */
@@ -38,6 +37,7 @@ class ImageSpriteTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

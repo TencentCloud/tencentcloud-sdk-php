@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupUrl请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getBackupId() 获取备份ID，通过DescribeInstanceBackups接口可查
  * @method void setBackupId(string $BackupId) 设置备份ID，通过DescribeInstanceBackups接口可查
- */
-
-/**
- *DescribeBackupUrl请求参数结构体
  */
 class DescribeBackupUrlRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeBackupUrlRequest extends AbstractModel
      * @var string 备份ID，通过DescribeInstanceBackups接口可查
      */
     public $BackupId;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $BackupId 备份ID，通过DescribeInstanceBackups接口可查
@@ -46,6 +45,7 @@ class DescribeBackupUrlRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

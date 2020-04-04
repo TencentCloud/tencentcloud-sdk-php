@@ -18,6 +18,8 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人体轨迹信息
+ *
  * @method array getImages() 获取人体轨迹图片 Base64 数组。 
 数组长度最小为1最大为5。 
 单个图片 base64 编码后大小不可超过2M。 
@@ -49,10 +51,6 @@ Urls、Images必须提供一个，如果都提供，只使用 Urls。
 顺序对应 Images 或 Urls 中的顺序。  
 当不输入本参数时，我们将认为输入图片已是经过裁剪后的人体小图，不会进行人体检测而直接进行特征提取处理。
  */
-
-/**
- *人体轨迹信息
- */
 class Trace extends AbstractModel
 {
     /**
@@ -81,6 +79,7 @@ Urls、Images必须提供一个，如果都提供，只使用 Urls。
 当不输入本参数时，我们将认为输入图片已是经过裁剪后的人体小图，不会进行人体检测而直接进行特征提取处理。
      */
     public $BodyRects;
+
     /**
      * @param array $Images 人体轨迹图片 Base64 数组。 
 数组长度最小为1最大为5。 
@@ -102,6 +101,7 @@ Urls、Images必须提供一个，如果都提供，只使用 Urls。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

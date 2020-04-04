@@ -18,14 +18,12 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 二维码在图片中的位置，由边界点的坐标表示
+ *
  * @method float getFloatX() 获取二维码边界点X轴坐标
  * @method void setFloatX(float $FloatX) 设置二维码边界点X轴坐标
  * @method float getFloatY() 获取二维码边界点Y轴坐标
  * @method void setFloatY(float $FloatY) 设置二维码边界点Y轴坐标
- */
-
-/**
- *二维码在图片中的位置，由边界点的坐标表示
  */
 class CodePosition extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CodePosition extends AbstractModel
      * @var float 二维码边界点Y轴坐标
      */
     public $FloatY;
+
     /**
      * @param float $FloatX 二维码边界点X轴坐标
      * @param float $FloatY 二维码边界点Y轴坐标
@@ -46,6 +45,7 @@ class CodePosition extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

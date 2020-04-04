@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述了云硬盘的详细信息
+ *
  * @method string getDiskId() 获取云硬盘ID。
  * @method void setDiskId(string $DiskId) 设置云硬盘ID。
  * @method string getDiskUsage() 获取云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
@@ -106,10 +108,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotSize(integer $SnapshotSize) 设置云盘拥有的快照总容量，单位为MB。
  * @method boolean getBackupDisk() 获取云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。
  * @method void setBackupDisk(boolean $BackupDisk) 设置云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。
- */
-
-/**
- *描述了云硬盘的详细信息
  */
 class Disk extends AbstractModel
 {
@@ -288,6 +286,7 @@ class Disk extends AbstractModel
      * @var boolean 云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。
      */
     public $BackupDisk;
+
     /**
      * @param string $DiskId 云硬盘ID。
      * @param string $DiskUsage 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
@@ -338,6 +337,7 @@ class Disk extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

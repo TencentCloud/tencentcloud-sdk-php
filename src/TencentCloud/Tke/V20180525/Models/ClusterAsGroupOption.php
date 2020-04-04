@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 集群弹性伸缩配置
+ *
  * @method boolean getIsScaleDownEnabled() 获取是否开启缩容
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsScaleDownEnabled(boolean $IsScaleDownEnabled) 设置是否开启缩容
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIgnoreDaemonSetsUtilization(boolean $IgnoreDaemonSetsUtilization) 设置计算资源使用量时是否默认忽略DaemonSet的实例(默认值: False，不忽略)
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *集群弹性伸缩配置
  */
 class ClusterAsGroupOption extends AbstractModel
 {
@@ -114,6 +112,7 @@ class ClusterAsGroupOption extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IgnoreDaemonSetsUtilization;
+
     /**
      * @param boolean $IsScaleDownEnabled 是否开启缩容
 注意：此字段可能返回 null，表示取不到有效值。
@@ -138,6 +137,7 @@ class ClusterAsGroupOption extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

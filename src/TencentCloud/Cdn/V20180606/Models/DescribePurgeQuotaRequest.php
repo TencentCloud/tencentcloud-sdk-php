@@ -18,14 +18,13 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePurgeQuota请求参数结构体
+ *
 
- */
-
-/**
- *DescribePurgeQuota请求参数结构体
  */
 class DescribePurgeQuotaRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribePurgeQuotaRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

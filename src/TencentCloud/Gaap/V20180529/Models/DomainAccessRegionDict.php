@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 域名解析就近访问配置详情
+ *
  * @method array getNationCountryInnerList() 获取就近接入区域
  * @method void setNationCountryInnerList(array $NationCountryInnerList) 设置就近接入区域
  * @method array getProxyList() 获取加速区域通道列表
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContinentInnerCode(string $ContinentInnerCode) 设置加速区域所属大洲内部编码
  * @method string getRegionName() 获取加速区域别名
  * @method void setRegionName(string $RegionName) 设置加速区域别名
- */
-
-/**
- *域名解析就近访问配置详情
  */
 class DomainAccessRegionDict extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DomainAccessRegionDict extends AbstractModel
      * @var string 加速区域别名
      */
     public $RegionName;
+
     /**
      * @param array $NationCountryInnerList 就近接入区域
      * @param array $ProxyList 加速区域通道列表
@@ -78,6 +77,7 @@ class DomainAccessRegionDict extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

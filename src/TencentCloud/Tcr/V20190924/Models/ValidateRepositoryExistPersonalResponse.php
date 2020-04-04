@@ -18,14 +18,12 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ValidateRepositoryExistPersonal返回参数结构体
+ *
  * @method RepoIsExistResp getData() 获取仓库是否存在
  * @method void setData(RepoIsExistResp $Data) 设置仓库是否存在
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ValidateRepositoryExistPersonal返回参数结构体
  */
 class ValidateRepositoryExistPersonalResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ValidateRepositoryExistPersonalResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param RepoIsExistResp $Data 仓库是否存在
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class ValidateRepositoryExistPersonalResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

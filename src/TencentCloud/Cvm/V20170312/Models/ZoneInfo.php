@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 可用区信息
+ *
  * @method string getZone() 获取可用区名称，例如，ap-guangzhou-3
 全网可用区名称如下：
 <li> ap-chongqing-1 </li>
@@ -105,10 +107,6 @@ use TencentCloud\Common\AbstractModel;
  * @method string getZoneState() 获取可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
  * @method void setZoneState(string $ZoneState) 设置可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
  */
-
-/**
- *可用区信息
- */
 class ZoneInfo extends AbstractModel
 {
     /**
@@ -169,6 +167,7 @@ class ZoneInfo extends AbstractModel
      * @var string 可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
      */
     public $ZoneState;
+
     /**
      * @param string $Zone 可用区名称，例如，ap-guangzhou-3
 全网可用区名称如下：
@@ -218,6 +217,7 @@ class ZoneInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

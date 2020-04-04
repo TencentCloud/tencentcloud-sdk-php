@@ -18,14 +18,12 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MixedInvoiceOCR返回参数结构体
+ *
  * @method array getMixedInvoiceItems() 获取混贴票据识别结果，具体内容请点击左侧链接。
  * @method void setMixedInvoiceItems(array $MixedInvoiceItems) 设置混贴票据识别结果，具体内容请点击左侧链接。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *MixedInvoiceOCR返回参数结构体
  */
 class MixedInvoiceOCRResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MixedInvoiceOCRResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $MixedInvoiceItems 混贴票据识别结果，具体内容请点击左侧链接。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class MixedInvoiceOCRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

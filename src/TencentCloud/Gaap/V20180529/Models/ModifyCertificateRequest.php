@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyCertificate请求参数结构体
+ *
  * @method string getListenerId() 获取监听器实例ID
  * @method void setListenerId(string $ListenerId) 设置监听器实例ID
  * @method string getDomain() 获取需要修改证书的域名
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
  * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) 设置新的多客户端证书ID列表。其中：
 仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
- */
-
-/**
- *ModifyCertificate请求参数结构体
  */
 class ModifyCertificateRequest extends AbstractModel
 {
@@ -71,6 +69,7 @@ class ModifyCertificateRequest extends AbstractModel
 仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
      */
     public $PolyClientCertificateIds;
+
     /**
      * @param string $ListenerId 监听器实例ID
      * @param string $Domain 需要修改证书的域名
@@ -86,6 +85,7 @@ class ModifyCertificateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

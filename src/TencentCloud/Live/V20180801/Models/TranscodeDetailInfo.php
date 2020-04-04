@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转码详细信息
+ *
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method string getStartTime() 获取开始时间，北京时间，
@@ -52,10 +54,6 @@ topspeed_H265 =》极速高清-H265。
  * @method void setPushDomain(string $PushDomain) 设置推流域名。
  * @method string getResolution() 获取分辨率。
  * @method void setResolution(string $Resolution) 设置分辨率。
- */
-
-/**
- *转码详细信息
  */
 class TranscodeDetailInfo extends AbstractModel
 {
@@ -111,6 +109,7 @@ topspeed_H265 =》极速高清-H265。
      * @var string 分辨率。
      */
     public $Resolution;
+
     /**
      * @param string $StreamName 流名称。
      * @param string $StartTime 开始时间，北京时间，
@@ -134,6 +133,7 @@ topspeed_H265 =》极速高清-H265。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

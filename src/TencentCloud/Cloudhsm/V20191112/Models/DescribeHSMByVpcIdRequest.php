@@ -18,12 +18,10 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHSMByVpcId请求参数结构体
+ *
  * @method string getVpcId() 获取VPC标识符
  * @method void setVpcId(string $VpcId) 设置VPC标识符
- */
-
-/**
- *DescribeHSMByVpcId请求参数结构体
  */
 class DescribeHSMByVpcIdRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeHSMByVpcIdRequest extends AbstractModel
      * @var string VPC标识符
      */
     public $VpcId;
+
     /**
      * @param string $VpcId VPC标识符
      */
@@ -38,6 +37,7 @@ class DescribeHSMByVpcIdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

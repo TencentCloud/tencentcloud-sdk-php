@@ -18,14 +18,12 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 过滤器
+ *
  * @method string getName() 获取属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
  * @method void setName(string $Name) 设置属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
  * @method array getValues() 获取属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
  * @method void setValues(array $Values) 设置属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
- */
-
-/**
- *过滤器
  */
 class Filter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Filter extends AbstractModel
      * @var array 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
      */
     public $Values;
+
     /**
      * @param string $Name 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
      * @param array $Values 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
@@ -46,6 +45,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

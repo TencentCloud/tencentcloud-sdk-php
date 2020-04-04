@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyVsmAttributes请求参数结构体
+ *
  * @method string getResourceId() 获取资源Id
  * @method void setResourceId(string $ResourceId) 设置资源Id
  * @method array getType() 获取UpdateResourceName-修改资源名称,
@@ -36,10 +38,6 @@ Default-默认不修改
  * @method void setVpcId(string $VpcId) 设置VpcId
  * @method string getSubnetId() 获取子网Id
  * @method void setSubnetId(string $SubnetId) 设置子网Id
- */
-
-/**
- *ModifyVsmAttributes请求参数结构体
  */
 class ModifyVsmAttributesRequest extends AbstractModel
 {
@@ -75,6 +73,7 @@ Default-默认不修改
      * @var string 子网Id
      */
     public $SubnetId;
+
     /**
      * @param string $ResourceId 资源Id
      * @param array $Type UpdateResourceName-修改资源名称,
@@ -90,6 +89,7 @@ Default-默认不修改
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

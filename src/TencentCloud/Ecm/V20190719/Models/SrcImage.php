@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 镜像来源信息
+ *
  * @method string getImageId() 获取镜像id
  * @method void setImageId(string $ImageId) 设置镜像id
  * @method string getImageName() 获取镜像名称
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionID(integer $RegionID) 设置区域ID
  * @method string getRegionName() 获取区域名称
  * @method void setRegionName(string $RegionName) 设置区域名称
- */
-
-/**
- *镜像来源信息
  */
 class SrcImage extends AbstractModel
 {
@@ -73,6 +71,7 @@ class SrcImage extends AbstractModel
      * @var string 区域名称
      */
     public $RegionName;
+
     /**
      * @param string $ImageId 镜像id
      * @param string $ImageName 镜像名称
@@ -86,6 +85,7 @@ class SrcImage extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

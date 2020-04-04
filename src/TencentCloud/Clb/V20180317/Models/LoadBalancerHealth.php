@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 负载均衡实例的健康检查状态
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID
  * @method string getLoadBalancerName() 获取负载均衡实例名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setListeners(array $Listeners) 设置监听器列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *负载均衡实例的健康检查状态
  */
 class LoadBalancerHealth extends AbstractModel
 {
@@ -51,6 +49,7 @@ class LoadBalancerHealth extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Listeners;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例ID
      * @param string $LoadBalancerName 负载均衡实例名称
@@ -62,6 +61,7 @@ class LoadBalancerHealth extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

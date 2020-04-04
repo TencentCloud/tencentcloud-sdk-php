@@ -18,12 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTaskTemplates请求参数结构体
+ *
  * @method array getTaskTemplateIds() 获取用于删除任务模板信息
  * @method void setTaskTemplateIds(array $TaskTemplateIds) 设置用于删除任务模板信息
- */
-
-/**
- *DeleteTaskTemplates请求参数结构体
  */
 class DeleteTaskTemplatesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteTaskTemplatesRequest extends AbstractModel
      * @var array 用于删除任务模板信息
      */
     public $TaskTemplateIds;
+
     /**
      * @param array $TaskTemplateIds 用于删除任务模板信息
      */
@@ -38,6 +37,7 @@ class DeleteTaskTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSubnet请求参数结构体
+ *
  * @method string getSubnetId() 获取子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
  * @method void setSubnetId(string $SubnetId) 设置子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
- */
-
-/**
- *DeleteSubnet请求参数结构体
  */
 class DeleteSubnetRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteSubnetRequest extends AbstractModel
      * @var string 子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
      */
     public $SubnetId;
+
     /**
      * @param string $SubnetId 子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
      */
@@ -38,6 +37,7 @@ class DeleteSubnetRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

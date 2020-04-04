@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 日志集信息
+ *
  * @method integer getAppId() 获取开发者ID
  * @method void setAppId(integer $AppId) 设置开发者ID
  * @method string getChannel() 获取渠道
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建日期
  * @method string getRegion() 获取区域
  * @method void setRegion(string $Region) 设置区域
- */
-
-/**
- *日志集信息
  */
 class LogSetInfo extends AbstractModel
 {
@@ -83,6 +81,7 @@ class LogSetInfo extends AbstractModel
      * @var string 区域
      */
     public $Region;
+
     /**
      * @param integer $AppId 开发者ID
      * @param string $Channel 渠道
@@ -98,6 +97,7 @@ class LogSetInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

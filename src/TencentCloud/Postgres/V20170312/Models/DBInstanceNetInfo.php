@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述实例的网络连接信息
+ *
  * @method string getAddress() 获取DNS域名
  * @method void setAddress(string $Address) 设置DNS域名
  * @method string getIp() 获取Ip
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetType(string $NetType) 设置网络类型，1、inner（内网地址）；2、public（外网地址）
  * @method string getStatus() 获取网络连接状态
  * @method void setStatus(string $Status) 设置网络连接状态
- */
-
-/**
- *描述实例的网络连接信息
  */
 class DBInstanceNetInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DBInstanceNetInfo extends AbstractModel
      * @var string 网络连接状态
      */
     public $Status;
+
     /**
      * @param string $Address DNS域名
      * @param string $Ip Ip
@@ -70,6 +69,7 @@ class DBInstanceNetInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

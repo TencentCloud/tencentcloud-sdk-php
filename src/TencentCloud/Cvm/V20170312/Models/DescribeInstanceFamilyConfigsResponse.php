@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceFamilyConfigs返回参数结构体
+ *
  * @method array getInstanceFamilyConfigSet() 获取实例机型组配置的列表信息
  * @method void setInstanceFamilyConfigSet(array $InstanceFamilyConfigSet) 设置实例机型组配置的列表信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeInstanceFamilyConfigs返回参数结构体
  */
 class DescribeInstanceFamilyConfigsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeInstanceFamilyConfigsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $InstanceFamilyConfigSet 实例机型组配置的列表信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeInstanceFamilyConfigsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

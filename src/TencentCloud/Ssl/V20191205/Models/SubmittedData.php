@@ -18,6 +18,8 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取证书列表（DescribeCertificate）返回参数键为 SubmittedData 的内容。
+ *
  * @method string getCsrType() 获取CSR 类型，（online = 在线生成CSR，parse = 粘贴 CSR）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCsrType(string $CsrType) 设置CSR 类型，（online = 在线生成CSR，parse = 粘贴 CSR）。
@@ -118,10 +120,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVerifyType(string $VerifyType) 设置验证类型。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *获取证书列表（DescribeCertificate）返回参数键为 SubmittedData 的内容。
  */
 class SubmittedData extends AbstractModel
 {
@@ -274,6 +272,7 @@ class SubmittedData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VerifyType;
+
     /**
      * @param string $CsrType CSR 类型，（online = 在线生成CSR，parse = 粘贴 CSR）。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -330,6 +329,7 @@ class SubmittedData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBlockIPList返回参数结构体
+ *
  * @method integer getBlockedIPCount() 获取返回的IP的数量
  * @method void setBlockedIPCount(integer $BlockedIPCount) 设置返回的IP的数量
  * @method string getClientIPField() 获取获取用户真实IP的字段
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlockedIPList(array $BlockedIPList) 设置加入了12360黑名单的IP列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeBlockIPList返回参数结构体
  */
 class DescribeBlockIPListResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeBlockIPListResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $BlockedIPCount 返回的IP的数量
      * @param string $ClientIPField 获取用户真实IP的字段
@@ -62,6 +61,7 @@ class DescribeBlockIPListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文件音频流信息
+ *
  * @method integer getBitrate() 获取音频流的码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBitrate(integer $Bitrate) 设置音频流的码率，单位：bps。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCodec(string $Codec) 设置音频流的编码格式，例如 aac。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *文件音频流信息
  */
 class VodAudioStreamItem extends AbstractModel
 {
@@ -54,6 +52,7 @@ class VodAudioStreamItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Codec;
+
     /**
      * @param integer $Bitrate 音频流的码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class VodAudioStreamItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

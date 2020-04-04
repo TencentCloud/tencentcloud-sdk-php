@@ -18,6 +18,8 @@ namespace TencentCloud\Wss\V20180426\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCertList请求参数结构体
+ *
  * @method string getModuleType() 获取模块名称，应填 ssl。
  * @method void setModuleType(string $ModuleType) 设置模块名称，应填 ssl。
  * @method integer getOffset() 获取页数，默认第一页。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWithCert(string $WithCert) 设置是否同时获取证书内容。
  * @method string getAltDomain() 获取如传，则只返回可以给该域名使用的证书。
  * @method void setAltDomain(string $AltDomain) 设置如传，则只返回可以给该域名使用的证书。
- */
-
-/**
- *DescribeCertList请求参数结构体
  */
 class DescribeCertListRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeCertListRequest extends AbstractModel
      * @var string 如传，则只返回可以给该域名使用的证书。
      */
     public $AltDomain;
+
     /**
      * @param string $ModuleType 模块名称，应填 ssl。
      * @param integer $Offset 页数，默认第一页。
@@ -94,6 +93,7 @@ class DescribeCertListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

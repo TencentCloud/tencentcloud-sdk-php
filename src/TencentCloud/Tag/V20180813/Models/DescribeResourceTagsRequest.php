@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeResourceTags请求参数结构体
+ *
  * @method integer getCreateUin() 获取创建者uin
  * @method void setCreateUin(integer $CreateUin) 设置创建者uin
  * @method string getResourceRegion() 获取资源所在地域
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页大小，默认为 15
  * @method integer getCosResourceId() 获取是否是Cos的资源id
  * @method void setCosResourceId(integer $CosResourceId) 设置是否是Cos的资源id
- */
-
-/**
- *DescribeResourceTags请求参数结构体
  */
 class DescribeResourceTagsRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeResourceTagsRequest extends AbstractModel
      * @var integer 是否是Cos的资源id
      */
     public $CosResourceId;
+
     /**
      * @param integer $CreateUin 创建者uin
      * @param string $ResourceRegion 资源所在地域
@@ -94,6 +93,7 @@ class DescribeResourceTagsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

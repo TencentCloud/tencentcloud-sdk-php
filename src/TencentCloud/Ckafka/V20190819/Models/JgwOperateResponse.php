@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 操作型结果返回值
+ *
  * @method string getReturnCode() 获取返回的code，0为正常，非0为错误
  * @method void setReturnCode(string $ReturnCode) 设置返回的code，0为正常，非0为错误
  * @method string getReturnMessage() 获取成功消息
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(OperateResponseData $Data) 设置操作型返回的Data数据,可能有flowId等
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *操作型结果返回值
  */
 class JgwOperateResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ class JgwOperateResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
+
     /**
      * @param string $ReturnCode 返回的code，0为正常，非0为错误
      * @param string $ReturnMessage 成功消息
@@ -58,6 +57,7 @@ class JgwOperateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

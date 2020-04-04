@@ -18,6 +18,8 @@ namespace TencentCloud\Tia\V20180226\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 日志
+ *
  * @method string getContainerName() 获取容器名
  * @method void setContainerName(string $ContainerName) 设置容器名
  * @method string getLog() 获取日志内容
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPodName(string $PodName) 设置Pod名
  * @method string getTime() 获取日志日期，格式为“2018-07-02T09:10:04.916553368Z”
  * @method void setTime(string $Time) 设置日志日期，格式为“2018-07-02T09:10:04.916553368Z”
- */
-
-/**
- *日志
  */
 class Log extends AbstractModel
 {
@@ -66,6 +64,7 @@ class Log extends AbstractModel
      * @var string 日志日期，格式为“2018-07-02T09:10:04.916553368Z”
      */
     public $Time;
+
     /**
      * @param string $ContainerName 容器名
      * @param string $Log 日志内容
@@ -78,6 +77,7 @@ class Log extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

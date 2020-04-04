@@ -18,12 +18,10 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteMountPoint请求参数结构体
+ *
  * @method string getMountPointId() 获取挂载点ID
  * @method void setMountPointId(string $MountPointId) 设置挂载点ID
- */
-
-/**
- *DeleteMountPoint请求参数结构体
  */
 class DeleteMountPointRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteMountPointRequest extends AbstractModel
      * @var string 挂载点ID
      */
     public $MountPointId;
+
     /**
      * @param string $MountPointId 挂载点ID
      */
@@ -38,6 +37,7 @@ class DeleteMountPointRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频内容识别模板详情
+ *
  * @method integer getDefinition() 获取视频内容识别模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置视频内容识别模板唯一标识。
  * @method string getName() 获取视频内容识别模板名称。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
- */
-
-/**
- *视频内容识别模板详情
  */
 class AIRecognitionTemplateItem extends AbstractModel
 {
@@ -94,6 +92,7 @@ class AIRecognitionTemplateItem extends AbstractModel
      * @var string 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      */
     public $UpdateTime;
+
     /**
      * @param integer $Definition 视频内容识别模板唯一标识。
      * @param string $Name 视频内容识别模板名称。
@@ -110,6 +109,7 @@ class AIRecognitionTemplateItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

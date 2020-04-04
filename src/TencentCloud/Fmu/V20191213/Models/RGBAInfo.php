@@ -18,6 +18,8 @@ namespace TencentCloud\Fmu\V20191213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RGBA通道信息
+ *
  * @method integer getR() 获取R通道数值。[0,255]。
  * @method void setR(integer $R) 设置R通道数值。[0,255]。
  * @method integer getG() 获取G通道数值。[0,255]。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setB(integer $B) 设置B通道数值。[0,255]。
  * @method integer getA() 获取A通道数值。[0,100]。建议取值50。
  * @method void setA(integer $A) 设置A通道数值。[0,100]。建议取值50。
- */
-
-/**
- *RGBA通道信息
  */
 class RGBAInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RGBAInfo extends AbstractModel
      * @var integer A通道数值。[0,100]。建议取值50。
      */
     public $A;
+
     /**
      * @param integer $R R通道数值。[0,255]。
      * @param integer $G G通道数值。[0,255]。
@@ -62,6 +61,7 @@ class RGBAInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

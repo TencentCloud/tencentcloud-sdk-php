@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteDirectConnectGateway请求参数结构体
+ *
  * @method string getDirectConnectGatewayId() 获取专线网关唯一`ID`，形如：`dcg-9o233uri`。
  * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) 设置专线网关唯一`ID`，形如：`dcg-9o233uri`。
- */
-
-/**
- *DeleteDirectConnectGateway请求参数结构体
  */
 class DeleteDirectConnectGatewayRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteDirectConnectGatewayRequest extends AbstractModel
      * @var string 专线网关唯一`ID`，形如：`dcg-9o233uri`。
      */
     public $DirectConnectGatewayId;
+
     /**
      * @param string $DirectConnectGatewayId 专线网关唯一`ID`，形如：`dcg-9o233uri`。
      */
@@ -38,6 +37,7 @@ class DeleteDirectConnectGatewayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

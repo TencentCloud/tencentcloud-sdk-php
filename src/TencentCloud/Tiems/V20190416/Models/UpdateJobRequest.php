@@ -18,16 +18,14 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateJob请求参数结构体
+ *
  * @method string getJobId() 获取任务 Id
  * @method void setJobId(string $JobId) 设置任务 Id
  * @method string getJobAction() 获取任务更新动作，支持：Cancel
  * @method void setJobAction(string $JobAction) 设置任务更新动作，支持：Cancel
  * @method string getDescription() 获取备注
  * @method void setDescription(string $Description) 设置备注
- */
-
-/**
- *UpdateJob请求参数结构体
  */
 class UpdateJobRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UpdateJobRequest extends AbstractModel
      * @var string 备注
      */
     public $Description;
+
     /**
      * @param string $JobId 任务 Id
      * @param string $JobAction 任务更新动作，支持：Cancel
@@ -54,6 +53,7 @@ class UpdateJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

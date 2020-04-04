@@ -18,6 +18,8 @@ namespace TencentCloud\Facefusion\V20181201\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * FuseFace请求参数结构体
+ *
  * @method string getProjectId() 获取活动 ID，请在人脸融合控制台查看。
  * @method void setProjectId(string $ProjectId) 设置活动 ID，请在人脸融合控制台查看。
  * @method string getModelId() 获取素材 ID，请在人脸融合控制台查看。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
  * @method void setCelebrityIdentify(integer $CelebrityIdentify) 设置0表示不需要鉴政，1表示需要鉴政。默认值为0。
 请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
- */
-
-/**
- *FuseFace请求参数结构体
  */
 class FuseFaceRequest extends AbstractModel
 {
@@ -82,6 +80,7 @@ class FuseFaceRequest extends AbstractModel
 请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
      */
     public $CelebrityIdentify;
+
     /**
      * @param string $ProjectId 活动 ID，请在人脸融合控制台查看。
      * @param string $ModelId 素材 ID，请在人脸融合控制台查看。
@@ -98,6 +97,7 @@ class FuseFaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 详细DTS实例信息
+ *
  * @method integer getRegionId() 获取地域ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(integer $RegionId) 设置地域ID
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *详细DTS实例信息
  */
 class DescribeInstanceDTSInstanceInfo extends AbstractModel
 {
@@ -104,6 +102,7 @@ class DescribeInstanceDTSInstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
+
     /**
      * @param integer $RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -126,6 +125,7 @@ class DescribeInstanceDTSInstanceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

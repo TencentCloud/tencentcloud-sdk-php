@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDBInstanceHour返回参数结构体
+ *
  * @method array getDealIds() 获取短订单 ID。
  * @method void setDealIds(array $DealIds) 设置短订单 ID。
  * @method array getInstanceIds() 获取实例 ID 列表。
  * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateDBInstanceHour返回参数结构体
  */
 class CreateDBInstanceHourResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateDBInstanceHourResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $DealIds 短订单 ID。
      * @param array $InstanceIds 实例 ID 列表。
@@ -54,6 +53,7 @@ class CreateDBInstanceHourResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetBlockListHandler返回参数结构体
+ *
  * @method integer getTotalCount() 获取总记录数
  * @method void setTotalCount(integer $TotalCount) 设置总记录数
  * @method string getGroupPk() 获取当前群组编号
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setList(array $List) 设置返回数据列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetBlockListHandler返回参数结构体
  */
 class GetBlockListHandlerResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GetBlockListHandlerResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 总记录数
      * @param string $GroupPk 当前群组编号
@@ -62,6 +61,7 @@ class GetBlockListHandlerResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

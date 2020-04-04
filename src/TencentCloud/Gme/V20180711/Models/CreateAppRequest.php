@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateApp请求参数结构体
+ *
  * @method string getAppName() 获取应用名称
  * @method void setAppName(string $AppName) 设置应用名称
  * @method integer getProjectId() 获取腾讯云项目ID，默认为0，表示默认项目
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceFilterConf(VoiceFilterConf $VoiceFilterConf) 设置语音分析服务配置数据
  * @method array getTags() 获取需要添加的标签列表
  * @method void setTags(array $Tags) 设置需要添加的标签列表
- */
-
-/**
- *CreateApp请求参数结构体
  */
 class CreateAppRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CreateAppRequest extends AbstractModel
      * @var array 需要添加的标签列表
      */
     public $Tags;
+
     /**
      * @param string $AppName 应用名称
      * @param integer $ProjectId 腾讯云项目ID，默认为0，表示默认项目
@@ -94,6 +93,7 @@ class CreateAppRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

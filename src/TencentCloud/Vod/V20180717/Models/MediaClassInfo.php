@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 分类信息描述
+ *
  * @method integer getClassId() 获取分类 ID
  * @method void setClassId(integer $ClassId) 设置分类 ID
  * @method integer getParentId() 获取父类 ID，一级分类的父类 ID 为 -1。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubClassIdSet(array $SubClassIdSet) 设置当前分类的第一级子类 ID 集合
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *分类信息描述
  */
 class MediaClassInfo extends AbstractModel
 {
@@ -62,6 +60,7 @@ class MediaClassInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubClassIdSet;
+
     /**
      * @param integer $ClassId 分类 ID
      * @param integer $ParentId 父类 ID，一级分类的父类 ID 为 -1。
@@ -74,6 +73,7 @@ class MediaClassInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

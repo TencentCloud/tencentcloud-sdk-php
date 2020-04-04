@@ -18,14 +18,12 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 省份画像元素
+ *
  * @method string getProvince() 获取省份名称
  * @method void setProvince(string $Province) 设置省份名称
  * @method float getPercent() 获取百分比
  * @method void setPercent(float $Percent) 设置百分比
- */
-
-/**
- *省份画像元素
  */
 class ProvincePortrait extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ProvincePortrait extends AbstractModel
      * @var float 百分比
      */
     public $Percent;
+
     /**
      * @param string $Province 省份名称
      * @param float $Percent 百分比
@@ -46,6 +45,7 @@ class ProvincePortrait extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

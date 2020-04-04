@@ -18,14 +18,12 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 子用户和用户组关联信息
+ *
  * @method integer getUid() 获取子用户 UID
  * @method void setUid(integer $Uid) 设置子用户 UID
  * @method integer getGroupId() 获取用户组 ID
  * @method void setGroupId(integer $GroupId) 设置用户组 ID
- */
-
-/**
- *子用户和用户组关联信息
  */
 class GroupIdOfUidInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GroupIdOfUidInfo extends AbstractModel
      * @var integer 用户组 ID
      */
     public $GroupId;
+
     /**
      * @param integer $Uid 子用户 UID
      * @param integer $GroupId 用户组 ID
@@ -46,6 +45,7 @@ class GroupIdOfUidInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 运行商统计信息
+ *
  * @method string getProviderName() 获取运营商名称
  * @method void setProviderName(string $ProviderName) 设置运营商名称
  * @method integer getProviderNodeNum() 获取节点数量
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProvederInstanceNum(integer $ProvederInstanceNum) 设置实例数量
  * @method array getZoneInstanceInfoSet() 获取Zone实例信息结构体数组
  * @method void setZoneInstanceInfoSet(array $ZoneInstanceInfoSet) 设置Zone实例信息结构体数组
- */
-
-/**
- *运行商统计信息
  */
 class ISPCounter extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ISPCounter extends AbstractModel
      * @var array Zone实例信息结构体数组
      */
     public $ZoneInstanceInfoSet;
+
     /**
      * @param string $ProviderName 运营商名称
      * @param integer $ProviderNodeNum 节点数量
@@ -62,6 +61,7 @@ class ISPCounter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

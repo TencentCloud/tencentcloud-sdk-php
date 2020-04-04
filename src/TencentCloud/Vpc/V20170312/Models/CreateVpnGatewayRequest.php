@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateVpnGateway请求参数结构体
+ *
  * @method string getVpcId() 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method string getVpnGatewayName() 获取VPN网关名称，最大长度不能超过60个字节。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method string getZone() 获取可用区，如：ap-guangzhou-2。
  * @method void setZone(string $Zone) 设置可用区，如：ap-guangzhou-2。
- */
-
-/**
- *CreateVpnGateway请求参数结构体
  */
 class CreateVpnGatewayRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateVpnGatewayRequest extends AbstractModel
      * @var string 可用区，如：ap-guangzhou-2。
      */
     public $Zone;
+
     /**
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param string $VpnGatewayName VPN网关名称，最大长度不能超过60个字节。
@@ -78,6 +77,7 @@ class CreateVpnGatewayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRulesByRuleIds返回参数结构体
+ *
  * @method integer getTotalCount() 获取返回的规则总个数。
  * @method void setTotalCount(integer $TotalCount) 设置返回的规则总个数。
  * @method array getRuleSet() 获取返回的规则列表。
  * @method void setRuleSet(array $RuleSet) 设置返回的规则列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeRulesByRuleIds返回参数结构体
  */
 class DescribeRulesByRuleIdsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeRulesByRuleIdsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 返回的规则总个数。
      * @param array $RuleSet 返回的规则列表。
@@ -54,6 +53,7 @@ class DescribeRulesByRuleIdsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

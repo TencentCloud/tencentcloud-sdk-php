@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyProVersionRenewFlag请求参数结构体
+ *
  * @method string getRenewFlag() 获取自动续费标识。取值范围：
 <li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li>
 <li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li>
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 <li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li>
  * @method string getQuuid() 获取主机唯一ID，对应CVM的uuid、BM的instanceId。
  * @method void setQuuid(string $Quuid) 设置主机唯一ID，对应CVM的uuid、BM的instanceId。
- */
-
-/**
- *ModifyProVersionRenewFlag请求参数结构体
  */
 class ModifyProVersionRenewFlagRequest extends AbstractModel
 {
@@ -47,6 +45,7 @@ class ModifyProVersionRenewFlagRequest extends AbstractModel
      * @var string 主机唯一ID，对应CVM的uuid、BM的instanceId。
      */
     public $Quuid;
+
     /**
      * @param string $RenewFlag 自动续费标识。取值范围：
 <li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li>
@@ -58,6 +57,7 @@ class ModifyProVersionRenewFlagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 试题识别结构化信息
+ *
  * @method string getQuestionTextNo() 获取题号
  * @method void setQuestionTextNo(string $QuestionTextNo) 设置题号
  * @method integer getQuestionTextType() 获取题型：
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuestionOptions(string $QuestionOptions) 设置选择题选项，包含1个或多个option
  * @method string getQuestionSubquestion() 获取所有子题的question属性
  * @method void setQuestionSubquestion(string $QuestionSubquestion) 设置所有子题的question属性
- */
-
-/**
- *试题识别结构化信息
  */
 class QuestionObj extends AbstractModel
 {
@@ -68,6 +66,7 @@ class QuestionObj extends AbstractModel
      * @var string 所有子题的question属性
      */
     public $QuestionSubquestion;
+
     /**
      * @param string $QuestionTextNo 题号
      * @param integer $QuestionTextType 题型：
@@ -82,6 +81,7 @@ class QuestionObj extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

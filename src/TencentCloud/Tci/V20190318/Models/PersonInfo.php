@@ -18,16 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人员信息
+ *
  * @method string getPersonId() 获取需要匹配的人员的ID列表。
  * @method void setPersonId(string $PersonId) 设置需要匹配的人员的ID列表。
  * @method string getCoverBeginUrl() 获取视频集锦开始封面照片。
  * @method void setCoverBeginUrl(string $CoverBeginUrl) 设置视频集锦开始封面照片。
  * @method string getCoverEndUrl() 获取视频集锦结束封面照片。
  * @method void setCoverEndUrl(string $CoverEndUrl) 设置视频集锦结束封面照片。
- */
-
-/**
- *人员信息
  */
 class PersonInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class PersonInfo extends AbstractModel
      * @var string 视频集锦结束封面照片。
      */
     public $CoverEndUrl;
+
     /**
      * @param string $PersonId 需要匹配的人员的ID列表。
      * @param string $CoverBeginUrl 视频集锦开始封面照片。
@@ -54,6 +53,7 @@ class PersonInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

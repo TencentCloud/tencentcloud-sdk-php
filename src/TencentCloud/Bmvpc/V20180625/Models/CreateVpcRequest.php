@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateVpc请求参数结构体
+ *
  * @method string getVpcName() 获取私有网络的名称
  * @method void setVpcName(string $VpcName) 设置私有网络的名称
  * @method string getCidrBlock() 获取私有网络的CIDR
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetSet(array $SubnetSet) 设置子网信息
  * @method boolean getEnableMonitoring() 获取是否启用内网监控
  * @method void setEnableMonitoring(boolean $EnableMonitoring) 设置是否启用内网监控
- */
-
-/**
- *CreateVpc请求参数结构体
  */
 class CreateVpcRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateVpcRequest extends AbstractModel
      * @var boolean 是否启用内网监控
      */
     public $EnableMonitoring;
+
     /**
      * @param string $VpcName 私有网络的名称
      * @param string $CidrBlock 私有网络的CIDR
@@ -70,6 +69,7 @@ class CreateVpcRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

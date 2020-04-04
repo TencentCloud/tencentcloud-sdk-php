@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteImageTags返回参数结构体
+ *
  * @method boolean getResult() 获取批量删除操作是否成功。
 true：成功。
 false：失败。
@@ -26,10 +28,6 @@ true：成功。
 false：失败。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DeleteImageTags返回参数结构体
  */
 class DeleteImageTagsResponse extends AbstractModel
 {
@@ -44,6 +42,7 @@ false：失败。
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param boolean $Result 批量删除操作是否成功。
 true：成功。
@@ -54,6 +53,7 @@ false：失败。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

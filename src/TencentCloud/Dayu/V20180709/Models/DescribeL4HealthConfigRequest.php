@@ -18,16 +18,14 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeL4HealthConfig请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method string getId() 获取资源ID
  * @method void setId(string $Id) 设置资源ID
  * @method array getRuleIdList() 获取规则ID数组，当导出所有规则的健康检查配置则不填或填空数组；
  * @method void setRuleIdList(array $RuleIdList) 设置规则ID数组，当导出所有规则的健康检查配置则不填或填空数组；
- */
-
-/**
- *DescribeL4HealthConfig请求参数结构体
  */
 class DescribeL4HealthConfigRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeL4HealthConfigRequest extends AbstractModel
      * @var array 规则ID数组，当导出所有规则的健康检查配置则不填或填空数组；
      */
     public $RuleIdList;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param string $Id 资源ID
@@ -54,6 +53,7 @@ class DescribeL4HealthConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

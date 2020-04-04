@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云联网（CCN）关联实例（Instance）对象。
+ *
  * @method string getInstanceId() 获取关联实例ID。
  * @method void setInstanceId(string $InstanceId) 设置关联实例ID。
  * @method string getInstanceRegion() 获取关联实例ID所属大区，例如：ap-guangzhou。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>`VPC`：私有网络</li>
 <li>`DIRECTCONNECT`：专线网关</li>
 <li>`BMVPC`：黑石私有网络</li>
- */
-
-/**
- *云联网（CCN）关联实例（Instance）对象。
  */
 class CcnInstance extends AbstractModel
 {
@@ -54,6 +52,7 @@ class CcnInstance extends AbstractModel
 <li>`BMVPC`：黑石私有网络</li>
      */
     public $InstanceType;
+
     /**
      * @param string $InstanceId 关联实例ID。
      * @param string $InstanceRegion 关联实例ID所属大区，例如：ap-guangzhou。
@@ -66,6 +65,7 @@ class CcnInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

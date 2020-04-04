@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询四层监听器时返回的四层监听器信息。
+ *
  * @method string getListenerId() 获取监听器ID。
  * @method void setListenerId(string $ListenerId) 设置监听器ID。
  * @method string getListenerName() 获取用户自定义的监听器名称。
@@ -60,10 +62,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddTimestamp(string $AddTimestamp) 设置创建时间戳。
  * @method string getBalanceMode() 获取转发后端服务器调度类型。
  * @method void setBalanceMode(string $BalanceMode) 设置转发后端服务器调度类型。
- */
-
-/**
- *查询四层监听器时返回的四层监听器信息。
  */
 class L4Listener extends AbstractModel
 {
@@ -171,6 +169,7 @@ class L4Listener extends AbstractModel
      * @var string 转发后端服务器调度类型。
      */
     public $BalanceMode;
+
     /**
      * @param string $ListenerId 监听器ID。
      * @param string $ListenerName 用户自定义的监听器名称。
@@ -198,6 +197,7 @@ class L4Listener extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

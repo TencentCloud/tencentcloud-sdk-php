@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAddressTemplateAttribute请求参数结构体
+ *
  * @method string getAddressTemplateId() 获取IP地址模板实例ID，例如：ipm-mdunqeb6。
  * @method void setAddressTemplateId(string $AddressTemplateId) 设置IP地址模板实例ID，例如：ipm-mdunqeb6。
  * @method string getAddressTemplateName() 获取IP地址模板名称。
  * @method void setAddressTemplateName(string $AddressTemplateName) 设置IP地址模板名称。
  * @method array getAddresses() 获取地址信息，支持 IP、CIDR、IP 范围。
  * @method void setAddresses(array $Addresses) 设置地址信息，支持 IP、CIDR、IP 范围。
- */
-
-/**
- *ModifyAddressTemplateAttribute请求参数结构体
  */
 class ModifyAddressTemplateAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyAddressTemplateAttributeRequest extends AbstractModel
      * @var array 地址信息，支持 IP、CIDR、IP 范围。
      */
     public $Addresses;
+
     /**
      * @param string $AddressTemplateId IP地址模板实例ID，例如：ipm-mdunqeb6。
      * @param string $AddressTemplateName IP地址模板名称。
@@ -54,6 +53,7 @@ class ModifyAddressTemplateAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

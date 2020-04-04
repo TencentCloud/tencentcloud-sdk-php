@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ApplyUserCert请求参数结构体
+ *
  * @method string getModule() 获取模块名，固定字段：cert_mng
  * @method void setModule(string $Module) 设置模块名，固定字段：cert_mng
  * @method string getOperation() 获取操作名，固定字段：cert_apply_for_user
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCsrData(string $CsrData) 设置csr p10证书文件。需要用户根据文档生成证书的CSR文件
  * @method string getNotes() 获取证书备注信息
  * @method void setNotes(string $Notes) 设置证书备注信息
- */
-
-/**
- *ApplyUserCert请求参数结构体
  */
 class ApplyUserCertRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class ApplyUserCertRequest extends AbstractModel
      * @var string 证书备注信息
      */
     public $Notes;
+
     /**
      * @param string $Module 模块名，固定字段：cert_mng
      * @param string $Operation 操作名，固定字段：cert_apply_for_user
@@ -102,6 +101,7 @@ class ApplyUserCertRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

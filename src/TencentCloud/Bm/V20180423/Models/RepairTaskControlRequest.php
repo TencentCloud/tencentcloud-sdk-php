@@ -18,14 +18,12 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RepairTaskControl请求参数结构体
+ *
  * @method string getTaskId() 获取维修任务ID
  * @method void setTaskId(string $TaskId) 设置维修任务ID
  * @method string getOperate() 获取操作
  * @method void setOperate(string $Operate) 设置操作
- */
-
-/**
- *RepairTaskControl请求参数结构体
  */
 class RepairTaskControlRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RepairTaskControlRequest extends AbstractModel
      * @var string 操作
      */
     public $Operate;
+
     /**
      * @param string $TaskId 维修任务ID
      * @param string $Operate 操作
@@ -46,6 +45,7 @@ class RepairTaskControlRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

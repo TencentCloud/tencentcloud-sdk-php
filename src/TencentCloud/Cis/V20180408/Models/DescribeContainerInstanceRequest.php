@@ -18,12 +18,10 @@ namespace TencentCloud\Cis\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeContainerInstance请求参数结构体
+ *
  * @method string getInstanceName() 获取容器实例名称
  * @method void setInstanceName(string $InstanceName) 设置容器实例名称
- */
-
-/**
- *DescribeContainerInstance请求参数结构体
  */
 class DescribeContainerInstanceRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeContainerInstanceRequest extends AbstractModel
      * @var string 容器实例名称
      */
     public $InstanceName;
+
     /**
      * @param string $InstanceName 容器实例名称
      */
@@ -38,6 +37,7 @@ class DescribeContainerInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

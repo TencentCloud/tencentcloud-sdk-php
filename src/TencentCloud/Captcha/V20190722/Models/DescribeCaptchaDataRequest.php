@@ -18,6 +18,8 @@ namespace TencentCloud\Captcha\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCaptchaData请求参数结构体
+ *
  * @method integer getCaptchaAppId() 获取验证码应用ID
  * @method void setCaptchaAppId(integer $CaptchaAppId) 设置验证码应用ID
  * @method integer getStart() 获取查询开始时间
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnd(integer $End) 设置查询结束时间
  * @method integer getType() 获取查询类型
  * @method void setType(integer $Type) 设置查询类型
- */
-
-/**
- *DescribeCaptchaData请求参数结构体
  */
 class DescribeCaptchaDataRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeCaptchaDataRequest extends AbstractModel
      * @var integer 查询类型
      */
     public $Type;
+
     /**
      * @param integer $CaptchaAppId 验证码应用ID
      * @param integer $Start 查询开始时间
@@ -62,6 +61,7 @@ class DescribeCaptchaDataRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

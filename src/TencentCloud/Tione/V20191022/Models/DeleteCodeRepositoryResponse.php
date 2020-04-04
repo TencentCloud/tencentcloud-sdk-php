@@ -18,14 +18,12 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCodeRepository返回参数结构体
+ *
  * @method string getCodeRepositoryName() 获取存储库名称
  * @method void setCodeRepositoryName(string $CodeRepositoryName) 设置存储库名称
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DeleteCodeRepository返回参数结构体
  */
 class DeleteCodeRepositoryResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteCodeRepositoryResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $CodeRepositoryName 存储库名称
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DeleteCodeRepositoryResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

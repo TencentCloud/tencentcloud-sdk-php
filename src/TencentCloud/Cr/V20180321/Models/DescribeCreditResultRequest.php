@@ -18,6 +18,8 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCreditResult请求参数结构体
+ *
  * @method string getModule() 获取模块名，本接口取值：Credit
  * @method void setModule(string $Module) 设置模块名，本接口取值：Credit
  * @method string getOperation() 获取操作名，本接口取值：Get
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCaseId(string $CaseId) 设置信审任务ID
  * @method string getRequestDate() 获取请求日期，格式为YYYY-MM-DD
  * @method void setRequestDate(string $RequestDate) 设置请求日期，格式为YYYY-MM-DD
- */
-
-/**
- *DescribeCreditResult请求参数结构体
  */
 class DescribeCreditResultRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeCreditResultRequest extends AbstractModel
      * @var string 请求日期，格式为YYYY-MM-DD
      */
     public $RequestDate;
+
     /**
      * @param string $Module 模块名，本接口取值：Credit
      * @param string $Operation 操作名，本接口取值：Get
@@ -78,6 +77,7 @@ class DescribeCreditResultRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

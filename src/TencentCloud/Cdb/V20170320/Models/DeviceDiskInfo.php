@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例磁盘监控数据
+ *
  * @method array getIoRatioPerSec() 获取平均每秒有百分之几的时间用于IO操作
  * @method void setIoRatioPerSec(array $IoRatioPerSec) 设置平均每秒有百分之几的时间用于IO操作
  * @method array getIoWaitTime() 获取平均每次设备I/O操作的等待时间*100，单位为毫秒。例如：该值为201，表示平均每次I/O操作等待时间为：201/100=2.1毫秒
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRead(array $Read) 设置磁盘平均每秒完成的读操作次数总和*100。例如：该值为2002，表示磁盘平均每秒完成读操作为：2002/100=20.2次
  * @method array getWrite() 获取磁盘平均每秒完成的写操作次数总和*100。例如：该值为30001，表示磁盘平均每秒完成写操作为：30001/100=300.01次
  * @method void setWrite(array $Write) 设置磁盘平均每秒完成的写操作次数总和*100。例如：该值为30001，表示磁盘平均每秒完成写操作为：30001/100=300.01次
- */
-
-/**
- *实例磁盘监控数据
  */
 class DeviceDiskInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DeviceDiskInfo extends AbstractModel
      * @var array 磁盘平均每秒完成的写操作次数总和*100。例如：该值为30001，表示磁盘平均每秒完成写操作为：30001/100=300.01次
      */
     public $Write;
+
     /**
      * @param array $IoRatioPerSec 平均每秒有百分之几的时间用于IO操作
      * @param array $IoWaitTime 平均每次设备I/O操作的等待时间*100，单位为毫秒。例如：该值为201，表示平均每次I/O操作等待时间为：201/100=2.1毫秒
@@ -62,6 +61,7 @@ class DeviceDiskInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

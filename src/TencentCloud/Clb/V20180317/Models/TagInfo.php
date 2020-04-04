@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 负载均衡的标签信息
+ *
  * @method string getTagKey() 获取标签的键
  * @method void setTagKey(string $TagKey) 设置标签的键
  * @method string getTagValue() 获取标签的值
  * @method void setTagValue(string $TagValue) 设置标签的值
- */
-
-/**
- *负载均衡的标签信息
  */
 class TagInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TagInfo extends AbstractModel
      * @var string 标签的值
      */
     public $TagValue;
+
     /**
      * @param string $TagKey 标签的键
      * @param string $TagValue 标签的值
@@ -46,6 +45,7 @@ class TagInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

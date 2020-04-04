@@ -18,14 +18,12 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTasks请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量，从0开始
  * @method void setOffset(integer $Offset) 设置偏移量，从0开始
  * @method integer getLimit() 获取分页的大小，数值范围 1-250
  * @method void setLimit(integer $Limit) 设置分页的大小，数值范围 1-250
- */
-
-/**
- *DescribeTasks请求参数结构体
  */
 class DescribeTasksRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeTasksRequest extends AbstractModel
      * @var integer 分页的大小，数值范围 1-250
      */
     public $Limit;
+
     /**
      * @param integer $Offset 偏移量，从0开始
      * @param integer $Limit 分页的大小，数值范围 1-250
@@ -46,6 +45,7 @@ class DescribeTasksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

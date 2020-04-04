@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpcIpv6Addresses请求参数结构体
+ *
  * @method string getVpcId() 获取`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
  * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
  * @method array getIpv6Addresses() 获取`IP`地址列表，批量查询单次请求最多支持`10`个。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量。
  * @method integer getLimit() 获取返回数量。
  * @method void setLimit(integer $Limit) 设置返回数量。
- */
-
-/**
- *DescribeVpcIpv6Addresses请求参数结构体
  */
 class DescribeVpcIpv6AddressesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeVpcIpv6AddressesRequest extends AbstractModel
      * @var integer 返回数量。
      */
     public $Limit;
+
     /**
      * @param string $VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
      * @param array $Ipv6Addresses `IP`地址列表，批量查询单次请求最多支持`10`个。
@@ -62,6 +61,7 @@ class DescribeVpcIpv6AddressesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

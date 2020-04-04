@@ -18,16 +18,14 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AsymmetricRsaDecrypt请求参数结构体
+ *
  * @method string getKeyId() 获取CMK的唯一标识
  * @method void setKeyId(string $KeyId) 设置CMK的唯一标识
  * @method string getCiphertext() 获取使用PublicKey加密的密文，Base64编码
  * @method void setCiphertext(string $Ciphertext) 设置使用PublicKey加密的密文，Base64编码
  * @method string getAlgorithm() 获取在使用公钥加密时对应的算法：当前支持RSAES_PKCS1_V1_5、RSAES_OAEP_SHA_1、RSAES_OAEP_SHA_256
  * @method void setAlgorithm(string $Algorithm) 设置在使用公钥加密时对应的算法：当前支持RSAES_PKCS1_V1_5、RSAES_OAEP_SHA_1、RSAES_OAEP_SHA_256
- */
-
-/**
- *AsymmetricRsaDecrypt请求参数结构体
  */
 class AsymmetricRsaDecryptRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AsymmetricRsaDecryptRequest extends AbstractModel
      * @var string 在使用公钥加密时对应的算法：当前支持RSAES_PKCS1_V1_5、RSAES_OAEP_SHA_1、RSAES_OAEP_SHA_256
      */
     public $Algorithm;
+
     /**
      * @param string $KeyId CMK的唯一标识
      * @param string $Ciphertext 使用PublicKey加密的密文，Base64编码
@@ -54,6 +53,7 @@ class AsymmetricRsaDecryptRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

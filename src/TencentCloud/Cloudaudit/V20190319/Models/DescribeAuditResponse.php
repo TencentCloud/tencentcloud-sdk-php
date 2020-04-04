@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAudit返回参数结构体
+ *
  * @method string getAuditName() 获取跟踪集名称。
  * @method void setAuditName(string $AuditName) 设置跟踪集名称。
  * @method integer getAuditStatus() 获取跟踪集状态，1：开启，0：停止。
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadWriteAttribute(integer $ReadWriteAttribute) 设置管理事件读写属性，1：只读，2：只写，3：全部
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAudit返回参数结构体
  */
 class DescribeAuditResponse extends AbstractModel
 {
@@ -122,6 +120,7 @@ class DescribeAuditResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $AuditName 跟踪集名称。
      * @param integer $AuditStatus 跟踪集状态，1：开启，0：停止。
@@ -142,6 +141,7 @@ class DescribeAuditResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

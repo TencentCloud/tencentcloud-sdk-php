@@ -18,16 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLifecycleHooks返回参数结构体
+ *
  * @method array getLifecycleHookSet() 获取生命周期挂钩数组
  * @method void setLifecycleHookSet(array $LifecycleHookSet) 设置生命周期挂钩数组
  * @method integer getTotalCount() 获取总体数量
  * @method void setTotalCount(integer $TotalCount) 设置总体数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeLifecycleHooks返回参数结构体
  */
 class DescribeLifecycleHooksResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeLifecycleHooksResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $LifecycleHookSet 生命周期挂钩数组
      * @param integer $TotalCount 总体数量
@@ -54,6 +53,7 @@ class DescribeLifecycleHooksResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

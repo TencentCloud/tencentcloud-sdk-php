@@ -18,14 +18,12 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProductEventList的入参Dimensions
+ *
  * @method string getName() 获取维度名
  * @method void setName(string $Name) 设置维度名
  * @method string getValue() 获取维度值
  * @method void setValue(string $Value) 设置维度值
- */
-
-/**
- *DescribeProductEventList的入参Dimensions
  */
 class DescribeProductEventListDimensions extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeProductEventListDimensions extends AbstractModel
      * @var string 维度值
      */
     public $Value;
+
     /**
      * @param string $Name 维度名
      * @param string $Value 维度值
@@ -46,6 +45,7 @@ class DescribeProductEventListDimensions extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

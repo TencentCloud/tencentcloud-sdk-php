@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CompleteLifecycleAction请求参数结构体
+ *
  * @method string getLifecycleHookId() 获取生命周期挂钩ID
  * @method void setLifecycleHookId(string $LifecycleHookId) 设置生命周期挂钩ID
  * @method string getLifecycleActionResult() 获取生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON”
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID，“InstanceId”和“LifecycleActionToken”必须填充其中一个
  * @method string getLifecycleActionToken() 获取“InstanceId”和“LifecycleActionToken”必须填充其中一个
  * @method void setLifecycleActionToken(string $LifecycleActionToken) 设置“InstanceId”和“LifecycleActionToken”必须填充其中一个
- */
-
-/**
- *CompleteLifecycleAction请求参数结构体
  */
 class CompleteLifecycleActionRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CompleteLifecycleActionRequest extends AbstractModel
      * @var string “InstanceId”和“LifecycleActionToken”必须填充其中一个
      */
     public $LifecycleActionToken;
+
     /**
      * @param string $LifecycleHookId 生命周期挂钩ID
      * @param string $LifecycleActionResult 生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON”
@@ -62,6 +61,7 @@ class CompleteLifecycleActionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DownloadRecordList请求参数结构体
+ *
  * @method string getModule() 获取模块名，本接口取值：Record
  * @method void setModule(string $Module) 设置模块名，本接口取值：Record
  * @method string getOperation() 获取操作名，本接口取值：DownloadList
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBizDate(string $BizDate) 设置录音日期，格式为YYYY-MM-DD
  * @method string getInstId() 获取实例ID
  * @method void setInstId(string $InstId) 设置实例ID
- */
-
-/**
- *DownloadRecordList请求参数结构体
  */
 class DownloadRecordListRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DownloadRecordListRequest extends AbstractModel
      * @var string 实例ID
      */
     public $InstId;
+
     /**
      * @param string $Module 模块名，本接口取值：Record
      * @param string $Operation 操作名，本接口取值：DownloadList
@@ -62,6 +61,7 @@ class DownloadRecordListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

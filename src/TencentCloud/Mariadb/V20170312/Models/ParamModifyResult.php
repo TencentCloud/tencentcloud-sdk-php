@@ -18,14 +18,12 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 修改参数结果
+ *
  * @method string getParam() 获取修改参数名字
  * @method void setParam(string $Param) 设置修改参数名字
  * @method integer getCode() 获取参数修改结果。0表示修改成功；-1表示修改失败；-2表示该参数值非法
  * @method void setCode(integer $Code) 设置参数修改结果。0表示修改成功；-1表示修改失败；-2表示该参数值非法
- */
-
-/**
- *修改参数结果
  */
 class ParamModifyResult extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ParamModifyResult extends AbstractModel
      * @var integer 参数修改结果。0表示修改成功；-1表示修改失败；-2表示该参数值非法
      */
     public $Code;
+
     /**
      * @param string $Param 修改参数名字
      * @param integer $Code 参数修改结果。0表示修改成功；-1表示修改失败；-2表示该参数值非法
@@ -46,6 +45,7 @@ class ParamModifyResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

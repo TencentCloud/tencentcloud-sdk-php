@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAutoSnapshotPolicyAttribute请求参数结构体
+ *
  * @method string getAutoSnapshotPolicyId() 获取定期快照策略ID。
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置定期快照策略ID。
  * @method array getPolicy() 获取定期快照的执行策略。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsPermanent(boolean $IsPermanent) 设置通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
  * @method integer getRetentionDays() 获取通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。
  * @method void setRetentionDays(integer $RetentionDays) 设置通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。
- */
-
-/**
- *ModifyAutoSnapshotPolicyAttribute请求参数结构体
  */
 class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
      * @var integer 通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。
      */
     public $RetentionDays;
+
     /**
      * @param string $AutoSnapshotPolicyId 定期快照策略ID。
      * @param array $Policy 定期快照的执行策略。
@@ -78,6 +77,7 @@ class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

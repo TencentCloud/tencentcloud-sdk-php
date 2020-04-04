@@ -18,14 +18,12 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 函数标签
+ *
  * @method string getKey() 获取标签的key
  * @method void setKey(string $Key) 设置标签的key
  * @method string getValue() 获取标签的value
  * @method void setValue(string $Value) 设置标签的value
- */
-
-/**
- *函数标签
  */
 class Tag extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Tag extends AbstractModel
      * @var string 标签的value
      */
     public $Value;
+
     /**
      * @param string $Key 标签的key
      * @param string $Value 标签的value
@@ -46,6 +45,7 @@ class Tag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

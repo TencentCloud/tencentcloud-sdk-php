@@ -18,12 +18,10 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RunDevice请求参数结构体
+ *
  * @method array getTids() 获取TID列表 ≤100
  * @method void setTids(array $Tids) 设置TID列表 ≤100
- */
-
-/**
- *RunDevice请求参数结构体
  */
 class RunDeviceRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RunDeviceRequest extends AbstractModel
      * @var array TID列表 ≤100
      */
     public $Tids;
+
     /**
      * @param array $Tids TID列表 ≤100
      */
@@ -38,6 +37,7 @@ class RunDeviceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

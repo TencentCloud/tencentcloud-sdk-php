@@ -18,16 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHosts返回参数结构体
+ *
  * @method integer getTotalCount() 获取符合查询条件的cdh实例总数
  * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的cdh实例总数
  * @method array getHostSet() 获取cdh实例详细信息列表
  * @method void setHostSet(array $HostSet) 设置cdh实例详细信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeHosts返回参数结构体
  */
 class DescribeHostsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeHostsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 符合查询条件的cdh实例总数
      * @param array $HostSet cdh实例详细信息列表
@@ -54,6 +53,7 @@ class DescribeHostsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

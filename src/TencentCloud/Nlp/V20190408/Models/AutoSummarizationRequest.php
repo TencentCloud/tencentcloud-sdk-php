@@ -18,16 +18,14 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AutoSummarization请求参数结构体
+ *
  * @method string getText() 获取待处理的文本（仅支持UTF-8格式，不超过2000字）
  * @method void setText(string $Text) 设置待处理的文本（仅支持UTF-8格式，不超过2000字）
  * @method integer getLength() 获取指定摘要的长度上限（默认值为200）
 注：为保证摘要的可读性，最终生成的摘要长度会低于指定的长度上限。
  * @method void setLength(integer $Length) 设置指定摘要的长度上限（默认值为200）
 注：为保证摘要的可读性，最终生成的摘要长度会低于指定的长度上限。
- */
-
-/**
- *AutoSummarization请求参数结构体
  */
 class AutoSummarizationRequest extends AbstractModel
 {
@@ -41,6 +39,7 @@ class AutoSummarizationRequest extends AbstractModel
 注：为保证摘要的可读性，最终生成的摘要长度会低于指定的长度上限。
      */
     public $Length;
+
     /**
      * @param string $Text 待处理的文本（仅支持UTF-8格式，不超过2000字）
      * @param integer $Length 指定摘要的长度上限（默认值为200）
@@ -50,6 +49,7 @@ class AutoSummarizationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

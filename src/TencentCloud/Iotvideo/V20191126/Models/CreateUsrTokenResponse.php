@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateUsrToken返回参数结构体
+ *
  * @method string getAccessId() 获取终端用户在IoT Video上的唯一标识ID
  * @method void setAccessId(string $AccessId) 设置终端用户在IoT Video上的唯一标识ID
  * @method string getAccessToken() 获取IoT Video平台的AccessToken
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTerminalId(string $TerminalId) 设置终端ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateUsrToken返回参数结构体
  */
 class CreateUsrTokenResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateUsrTokenResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $AccessId 终端用户在IoT Video上的唯一标识ID
      * @param string $AccessToken IoT Video平台的AccessToken
@@ -70,6 +69,7 @@ class CreateUsrTokenResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

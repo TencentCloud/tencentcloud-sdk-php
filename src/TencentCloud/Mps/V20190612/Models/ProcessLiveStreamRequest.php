@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ProcessLiveStream请求参数结构体
+ *
  * @method string getUrl() 获取直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
  * @method void setUrl(string $Url) 设置直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
  * @method LiveStreamTaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知信息，用于指定直播流处理的结果。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
  * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
- */
-
-/**
- *ProcessLiveStream请求参数结构体
  */
 class ProcessLiveStreamRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ProcessLiveStreamRequest extends AbstractModel
      * @var string 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     public $SessionContext;
+
     /**
      * @param string $Url 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
      * @param LiveStreamTaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息，用于指定直播流处理的结果。
@@ -94,6 +93,7 @@ class ProcessLiveStreamRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

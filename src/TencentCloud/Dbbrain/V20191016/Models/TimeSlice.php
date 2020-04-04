@@ -18,14 +18,12 @@ namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 单位时间间隔内的慢日志统计
+ *
  * @method integer getCount() 获取总数
  * @method void setCount(integer $Count) 设置总数
  * @method integer getTimestamp() 获取统计开始时间
  * @method void setTimestamp(integer $Timestamp) 设置统计开始时间
- */
-
-/**
- *单位时间间隔内的慢日志统计
  */
 class TimeSlice extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TimeSlice extends AbstractModel
      * @var integer 统计开始时间
      */
     public $Timestamp;
+
     /**
      * @param integer $Count 总数
      * @param integer $Timestamp 统计开始时间
@@ -46,6 +45,7 @@ class TimeSlice extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

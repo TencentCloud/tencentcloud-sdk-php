@@ -18,6 +18,8 @@ namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图片路径
+ *
  * @method string getKey() 获取station图片大小及类别
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置station图片大小及类别
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置station图片地址
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *图片路径
  */
 class ImagePath extends AbstractModel
 {
@@ -44,6 +42,7 @@ class ImagePath extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
+
     /**
      * @param string $Key station图片大小及类别
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class ImagePath extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

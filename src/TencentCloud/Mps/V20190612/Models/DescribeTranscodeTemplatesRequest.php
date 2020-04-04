@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTranscodeTemplates请求参数结构体
+ *
  * @method array getDefinitions() 获取转码模板唯一标识过滤条件，数组长度限制：100。
  * @method void setDefinitions(array $Definitions) 设置转码模板唯一标识过滤条件，数组长度限制：100。
  * @method string getType() 获取模板类型过滤条件，可选值：
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
- */
-
-/**
- *DescribeTranscodeTemplates请求参数结构体
  */
 class DescribeTranscodeTemplatesRequest extends AbstractModel
 {
@@ -84,6 +82,7 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
      * @var integer 返回记录条数，默认值：10，最大值：100。
      */
     public $Limit;
+
     /**
      * @param array $Definitions 转码模板唯一标识过滤条件，数组长度限制：100。
      * @param string $Type 模板类型过滤条件，可选值：
@@ -102,6 +101,7 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

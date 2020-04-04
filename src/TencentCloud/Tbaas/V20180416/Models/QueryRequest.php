@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Query请求参数结构体
+ *
  * @method string getModule() 获取模块名，固定字段：transaction
  * @method void setModule(string $Module) 设置模块名，固定字段：transaction
  * @method string getOperation() 获取操作名，固定字段：query
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) 设置调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
  * @method array getArgs() 获取被调用的函数参数列表
  * @method void setArgs(array $Args) 设置被调用的函数参数列表
- */
-
-/**
- *Query请求参数结构体
  */
 class QueryRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class QueryRequest extends AbstractModel
      * @var array 被调用的函数参数列表
      */
     public $Args;
+
     /**
      * @param string $Module 模块名，固定字段：transaction
      * @param string $Operation 操作名，固定字段：query
@@ -102,6 +101,7 @@ class QueryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

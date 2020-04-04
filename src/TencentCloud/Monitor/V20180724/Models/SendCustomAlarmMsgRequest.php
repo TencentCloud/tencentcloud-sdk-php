@@ -18,16 +18,14 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SendCustomAlarmMsg请求参数结构体
+ *
  * @method string getModule() 获取接口模块名，当前取值monitor
  * @method void setModule(string $Module) 设置接口模块名，当前取值monitor
  * @method string getPolicyId() 获取消息策略ID，在云监控自定义消息页面配置
  * @method void setPolicyId(string $PolicyId) 设置消息策略ID，在云监控自定义消息页面配置
  * @method string getMsg() 获取用户想要发送的自定义消息内容
  * @method void setMsg(string $Msg) 设置用户想要发送的自定义消息内容
- */
-
-/**
- *SendCustomAlarmMsg请求参数结构体
  */
 class SendCustomAlarmMsgRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SendCustomAlarmMsgRequest extends AbstractModel
      * @var string 用户想要发送的自定义消息内容
      */
     public $Msg;
+
     /**
      * @param string $Module 接口模块名，当前取值monitor
      * @param string $PolicyId 消息策略ID，在云监控自定义消息页面配置
@@ -54,6 +53,7 @@ class SendCustomAlarmMsgRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

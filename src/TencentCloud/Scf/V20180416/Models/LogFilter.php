@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 日志过滤条件，用于区分正确与错误日志
+ *
  * @method string getRetCode() 获取filter.RetCode的取值有：
 not0 表示只返回错误日志，
 is0 表示只返回正确日志，
@@ -33,10 +35,6 @@ ResourceLimitExceeded 返回函数调用发生资源超限的日志，
 UserCodeException 返回函数调用发生用户代码错误的日志，
 无输入则返回所有日志。
  */
-
-/**
- *日志过滤条件，用于区分正确与错误日志
- */
 class LogFilter extends AbstractModel
 {
     /**
@@ -49,6 +47,7 @@ UserCodeException 返回函数调用发生用户代码错误的日志，
 无输入则返回所有日志。
      */
     public $RetCode;
+
     /**
      * @param string $RetCode filter.RetCode的取值有：
 not0 表示只返回错误日志，
@@ -62,6 +61,7 @@ UserCodeException 返回函数调用发生用户代码错误的日志，
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

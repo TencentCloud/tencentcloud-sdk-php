@@ -18,6 +18,8 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 专用通道信息列表
+ *
  * @method string getDirectConnectTunnelId() 获取专用通道ID
  * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) 设置专用通道ID
  * @method string getDirectConnectId() 获取物理专线ID
@@ -108,10 +110,6 @@ REJECTED:拒绝
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcName(string $VpcName) 设置VPC名称
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *专用通道信息列表
  */
 class DirectConnectTunnel extends AbstractModel
 {
@@ -267,6 +265,7 @@ REJECTED:拒绝
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcName;
+
     /**
      * @param string $DirectConnectTunnelId 专用通道ID
      * @param string $DirectConnectId 物理专线ID
@@ -318,6 +317,7 @@ REJECTED:拒绝
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

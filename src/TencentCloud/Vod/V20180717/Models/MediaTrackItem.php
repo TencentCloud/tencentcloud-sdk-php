@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 媒体轨道的片段信息
+ *
  * @method string getType() 获取片段类型。取值有：
 <li>Video：视频片段。</li>
 <li>Audio：音频片段。</li>
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEmptyItem(EmptyTrackItem $EmptyItem) 设置空白片段，当 Type = Empty 时有效。空片段用于时间轴的占位。<li>如需要两个音频片段之间有一段时间的静音，可以用 EmptyTrackItem 来进行占位。</li>
 <li>使用 EmptyTrackItem 进行占位，来定位某个Item。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *媒体轨道的片段信息
  */
 class MediaTrackItem extends AbstractModel
 {
@@ -99,6 +97,7 @@ class MediaTrackItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EmptyItem;
+
     /**
      * @param string $Type 片段类型。取值有：
 <li>Video：视频片段。</li>
@@ -122,6 +121,7 @@ class MediaTrackItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

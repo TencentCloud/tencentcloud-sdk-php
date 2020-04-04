@@ -18,12 +18,10 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSubProject请求参数结构体
+ *
  * @method string getSubProjectId() 获取子项目id
  * @method void setSubProjectId(string $SubProjectId) 设置子项目id
- */
-
-/**
- *DescribeSubProject请求参数结构体
  */
 class DescribeSubProjectRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeSubProjectRequest extends AbstractModel
      * @var string 子项目id
      */
     public $SubProjectId;
+
     /**
      * @param string $SubProjectId 子项目id
      */
@@ -38,6 +37,7 @@ class DescribeSubProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

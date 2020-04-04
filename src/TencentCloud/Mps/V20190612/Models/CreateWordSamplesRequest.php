@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateWordSamples请求参数结构体
+ *
  * @method array getUsages() 获取<b>关键词应用场景，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
 2. Recognition.Asr：通过语音识别技术，进行内容识别；
@@ -39,10 +41,6 @@ use TencentCloud\Common\AbstractModel;
  * @method array getWords() 获取关键词，数组长度限制：100。
  * @method void setWords(array $Words) 设置关键词，数组长度限制：100。
  */
-
-/**
- *CreateWordSamples请求参数结构体
- */
 class CreateWordSamplesRequest extends AbstractModel
 {
     /**
@@ -62,6 +60,7 @@ class CreateWordSamplesRequest extends AbstractModel
      * @var array 关键词，数组长度限制：100。
      */
     public $Words;
+
     /**
      * @param array $Usages <b>关键词应用场景，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
@@ -78,6 +77,7 @@ class CreateWordSamplesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

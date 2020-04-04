@@ -18,6 +18,8 @@ namespace TencentCloud\Smpn\V20190822\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 号码营销监控回应
+ *
  * @method integer getTagType() 获取标记类型
  0: 无标记
  50:骚扰电话
@@ -39,10 +41,6 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTagCount() 获取标记次数
  * @method void setTagCount(integer $TagCount) 设置标记次数
  */
-
-/**
- *号码营销监控回应
- */
 class MHMResponse extends AbstractModel
 {
     /**
@@ -62,6 +60,7 @@ class MHMResponse extends AbstractModel
      * @var integer 标记次数
      */
     public $TagCount;
+
     /**
      * @param integer $TagType 标记类型
  0: 无标记
@@ -78,6 +77,7 @@ class MHMResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeOtaVersions请求参数结构体
+ *
  * @method integer getOffset() 获取分页偏移量
  * @method void setOffset(integer $Offset) 设置分页偏移量
  * @method integer getLimit() 获取每页数量，0<取值范围<=100
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOtaVersion(string $OtaVersion) 设置版本号，支持模糊匹配
  * @method integer getPubStatus() 获取版本类型 1未发布 2测试发布 3正式发布 4禁用
  * @method void setPubStatus(integer $PubStatus) 设置版本类型 1未发布 2测试发布 3正式发布 4禁用
- */
-
-/**
- *DescribeOtaVersions请求参数结构体
  */
 class DescribeOtaVersionsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeOtaVersionsRequest extends AbstractModel
      * @var integer 版本类型 1未发布 2测试发布 3正式发布 4禁用
      */
     public $PubStatus;
+
     /**
      * @param integer $Offset 分页偏移量
      * @param integer $Limit 每页数量，0<取值范围<=100
@@ -70,6 +69,7 @@ class DescribeOtaVersionsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

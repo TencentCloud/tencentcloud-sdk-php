@@ -18,14 +18,12 @@ namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EnhanceImage返回参数结构体
+ *
  * @method string getEnhancedImage() 获取增强后图片的base64编码。
  * @method void setEnhancedImage(string $EnhancedImage) 设置增强后图片的base64编码。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *EnhanceImage返回参数结构体
  */
 class EnhanceImageResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EnhanceImageResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $EnhancedImage 增强后图片的base64编码。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class EnhanceImageResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

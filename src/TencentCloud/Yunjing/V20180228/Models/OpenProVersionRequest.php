@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OpenProVersion请求参数结构体
+ *
  * @method string getMachineType() 获取云主机类型。
 <li>CVM：表示虚拟主机</li>
 <li>BM:  表示黑石物理机</li>
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 黑石的InstanceId，CVM的Uuid
  * @method integer getActivityId() 获取活动ID。
  * @method void setActivityId(integer $ActivityId) 设置活动ID。
- */
-
-/**
- *OpenProVersion请求参数结构体
  */
 class OpenProVersionRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ class OpenProVersionRequest extends AbstractModel
      * @var integer 活动ID。
      */
     public $ActivityId;
+
     /**
      * @param string $MachineType 云主机类型。
 <li>CVM：表示虚拟主机</li>
@@ -78,6 +77,7 @@ class OpenProVersionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

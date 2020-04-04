@@ -18,6 +18,8 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用于描述资源的归属实体。
+ *
  * @method string getType() 获取类型，取值有：
 <li>PERSON：个人。</li>
 <li>TEAM：团队。</li>
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 <li>TEAM：团队。</li>
  * @method string getId() 获取Id，当 Type=PERSON，取值为用户 Id，当 Type=TEAM，取值为团队 Id。
  * @method void setId(string $Id) 设置Id，当 Type=PERSON，取值为用户 Id，当 Type=TEAM，取值为团队 Id。
- */
-
-/**
- *用于描述资源的归属实体。
  */
 class Entity extends AbstractModel
 {
@@ -44,6 +42,7 @@ class Entity extends AbstractModel
      * @var string Id，当 Type=PERSON，取值为用户 Id，当 Type=TEAM，取值为团队 Id。
      */
     public $Id;
+
     /**
      * @param string $Type 类型，取值有：
 <li>PERSON：个人。</li>
@@ -54,6 +53,7 @@ class Entity extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

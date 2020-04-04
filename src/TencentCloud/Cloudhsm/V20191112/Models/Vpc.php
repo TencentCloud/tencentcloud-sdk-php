@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPC对象
+ *
  * @method string getVpcName() 获取Vpc名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcName(string $VpcName) 设置Vpc名称
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDefault(boolean $IsDefault) 设置是否为默认VPC
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *VPC对象
  */
 class Vpc extends AbstractModel
 {
@@ -64,6 +62,7 @@ class Vpc extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDefault;
+
     /**
      * @param string $VpcName Vpc名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +77,7 @@ class Vpc extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

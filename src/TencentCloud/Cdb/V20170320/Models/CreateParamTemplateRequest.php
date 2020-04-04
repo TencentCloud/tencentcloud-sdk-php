@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateParamTemplate请求参数结构体
+ *
  * @method string getName() 获取参数模板名称。
  * @method void setName(string $Name) 设置参数模板名称。
  * @method string getDescription() 获取参数模板描述。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(integer $TemplateId) 设置源参数模板 ID。
  * @method array getParamList() 获取参数列表。
  * @method void setParamList(array $ParamList) 设置参数列表。
- */
-
-/**
- *CreateParamTemplate请求参数结构体
  */
 class CreateParamTemplateRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateParamTemplateRequest extends AbstractModel
      * @var array 参数列表。
      */
     public $ParamList;
+
     /**
      * @param string $Name 参数模板名称。
      * @param string $Description 参数模板描述。
@@ -70,6 +69,7 @@ class CreateParamTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

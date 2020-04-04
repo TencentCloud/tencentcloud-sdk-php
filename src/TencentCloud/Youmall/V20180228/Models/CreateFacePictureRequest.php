@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateFacePicture请求参数结构体
+ *
  * @method string getCompanyId() 获取集团ID
  * @method void setCompanyId(string $CompanyId) 设置集团ID
  * @method integer getPersonType() 获取人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShopId(integer $ShopId) 设置店铺ID，如果不填表示操作集团身份库
  * @method boolean getIsForceUpload() 获取是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
  * @method void setIsForceUpload(boolean $IsForceUpload) 设置是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
- */
-
-/**
- *CreateFacePicture请求参数结构体
  */
 class CreateFacePictureRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateFacePictureRequest extends AbstractModel
      * @var boolean 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
      */
     public $IsForceUpload;
+
     /**
      * @param string $CompanyId 集团ID
      * @param integer $PersonType 人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
@@ -78,6 +77,7 @@ class CreateFacePictureRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

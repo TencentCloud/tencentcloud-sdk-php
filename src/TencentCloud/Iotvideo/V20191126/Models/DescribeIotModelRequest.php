@@ -18,14 +18,12 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeIotModel请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method integer getRevision() 获取物模型版本号， -1表示最新编辑的（未发布）
  * @method void setRevision(integer $Revision) 设置物模型版本号， -1表示最新编辑的（未发布）
- */
-
-/**
- *DescribeIotModel请求参数结构体
  */
 class DescribeIotModelRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeIotModelRequest extends AbstractModel
      * @var integer 物模型版本号， -1表示最新编辑的（未发布）
      */
     public $Revision;
+
     /**
      * @param string $ProductId 产品ID
      * @param integer $Revision 物模型版本号， -1表示最新编辑的（未发布）
@@ -46,6 +45,7 @@ class DescribeIotModelRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

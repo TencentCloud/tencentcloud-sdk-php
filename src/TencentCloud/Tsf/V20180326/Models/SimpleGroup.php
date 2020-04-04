@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 部署组
+ *
  * @method string getGroupId() 获取部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置部署组ID
@@ -70,10 +72,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppMicroServiceType(string $AppMicroServiceType) 设置应用微服务类型
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *部署组
  */
 class SimpleGroup extends AbstractModel
 {
@@ -154,6 +152,7 @@ class SimpleGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppMicroServiceType;
+
     /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -186,6 +185,7 @@ class SimpleGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

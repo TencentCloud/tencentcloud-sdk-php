@@ -18,6 +18,8 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * https客户端证书配置。
+ *
  * @method string getCertificate() 获取客户端证书，pem格式。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificate(string $Certificate) 设置客户端证书，pem格式。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployTime(string $DeployTime) 设置证书颁发时间。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *https客户端证书配置。
  */
 class ClientCert extends AbstractModel
 {
@@ -64,6 +62,7 @@ class ClientCert extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployTime;
+
     /**
      * @param string $Certificate 客户端证书，pem格式。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +77,7 @@ class ClientCert extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

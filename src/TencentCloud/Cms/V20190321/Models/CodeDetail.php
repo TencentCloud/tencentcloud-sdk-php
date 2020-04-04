@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 从图片中检测到的二维码，可能为多个
+ *
  * @method array getCodePosition() 获取二维码在图片中的位置，由边界点的坐标表示
  * @method void setCodePosition(array $CodePosition) 设置二维码在图片中的位置，由边界点的坐标表示
  * @method string getCodeCharset() 获取二维码文本的编码格式
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCodeText(string $CodeText) 设置二维码的文本内容
  * @method integer getCodeType() 获取二维码的类型：1:ONED_BARCODE，2:QRCOD，3:WXCODE，4:PDF417，5:DATAMATRIX
  * @method void setCodeType(integer $CodeType) 设置二维码的类型：1:ONED_BARCODE，2:QRCOD，3:WXCODE，4:PDF417，5:DATAMATRIX
- */
-
-/**
- *从图片中检测到的二维码，可能为多个
  */
 class CodeDetail extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CodeDetail extends AbstractModel
      * @var integer 二维码的类型：1:ONED_BARCODE，2:QRCOD，3:WXCODE，4:PDF417，5:DATAMATRIX
      */
     public $CodeType;
+
     /**
      * @param array $CodePosition 二维码在图片中的位置，由边界点的坐标表示
      * @param string $CodeCharset 二维码文本的编码格式
@@ -62,6 +61,7 @@ class CodeDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 订阅信息实体
+ *
  * @method string getTopicName() 获取订阅的主题名
  * @method void setTopicName(string $TopicName) 设置订阅的主题名
  * @method array getPartition() 获取订阅的分区
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartitionOffset(array $PartitionOffset) 设置分区offset信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *订阅信息实体
  */
 class SubscribedInfo extends AbstractModel
 {
@@ -51,6 +49,7 @@ class SubscribedInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PartitionOffset;
+
     /**
      * @param string $TopicName 订阅的主题名
      * @param array $Partition 订阅的分区
@@ -62,6 +61,7 @@ class SubscribedInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

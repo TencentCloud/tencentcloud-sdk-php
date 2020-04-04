@@ -18,6 +18,8 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频信息
+ *
  * @method integer getVideoPlayTime() 获取视频开始播放的时间（单位：毫秒）
  * @method void setVideoPlayTime(integer $VideoPlayTime) 设置视频开始播放的时间（单位：毫秒）
  * @method integer getVideoSize() 获取视频大小（字节）
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
 - 4：纯音频（mp3)
  * @method string getUserId() 获取摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型）
  * @method void setUserId(string $UserId) 设置摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型）
- */
-
-/**
- *视频信息
  */
 class VideoInfo extends AbstractModel
 {
@@ -95,6 +93,7 @@ class VideoInfo extends AbstractModel
      * @var string 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型）
      */
     public $UserId;
+
     /**
      * @param integer $VideoPlayTime 视频开始播放的时间（单位：毫秒）
      * @param integer $VideoSize 视频大小（字节）
@@ -114,6 +113,7 @@ class VideoInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

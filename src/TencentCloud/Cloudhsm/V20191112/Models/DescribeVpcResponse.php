@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpc返回参数结构体
+ *
  * @method integer getTotalCount() 获取可查询到的所有Vpc实例总数。
  * @method void setTotalCount(integer $TotalCount) 设置可查询到的所有Vpc实例总数。
  * @method array getVpcList() 获取Vpc对象列表
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeVpc返回参数结构体
  */
 class DescribeVpcResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DescribeVpcResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 可查询到的所有Vpc实例总数。
      * @param array $VpcList Vpc对象列表
@@ -58,6 +57,7 @@ class DescribeVpcResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

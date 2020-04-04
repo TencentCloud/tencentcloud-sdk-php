@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云服务器主机名（HostName）的相关设置
+ *
  * @method string getHostName() 获取云服务器的主机名。
 <br><li> 点号（.）和短横线（-）不能作为 HostName 的首尾字符，不能连续使用。
 <br><li> 不支持 Windows 实例。
@@ -37,10 +39,6 @@ use TencentCloud\Common\AbstractModel;
 <br><li> UNIQUE，入参所填的 HostName 相当于主机名前缀，AS 和 CVM 会对其进行拓展，伸缩组中实例的 HostName 可以保证唯一。
 注意：此字段可能返回 null，表示取不到有效值。
  */
-
-/**
- *云服务器主机名（HostName）的相关设置
- */
 class HostNameSettings extends AbstractModel
 {
     /**
@@ -59,6 +57,7 @@ class HostNameSettings extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostNameStyle;
+
     /**
      * @param string $HostName 云服务器的主机名。
 <br><li> 点号（.）和短横线（-）不能作为 HostName 的首尾字符，不能连续使用。
@@ -74,6 +73,7 @@ class HostNameSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

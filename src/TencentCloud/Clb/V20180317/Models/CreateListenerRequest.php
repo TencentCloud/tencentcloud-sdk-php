@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateListener请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例 ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
  * @method array getPorts() 获取要将监听器创建到哪些端口，每个端口对应一个新的监听器
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL监听器。
  * @method integer getSniSwitch() 获取是否开启SNI特性，此参数仅适用于HTTPS监听器。
  * @method void setSniSwitch(integer $SniSwitch) 设置是否开启SNI特性，此参数仅适用于HTTPS监听器。
- */
-
-/**
- *CreateListener请求参数结构体
  */
 class CreateListenerRequest extends AbstractModel
 {
@@ -90,6 +88,7 @@ class CreateListenerRequest extends AbstractModel
      * @var integer 是否开启SNI特性，此参数仅适用于HTTPS监听器。
      */
     public $SniSwitch;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param array $Ports 要将监听器创建到哪些端口，每个端口对应一个新的监听器
@@ -106,6 +105,7 @@ class CreateListenerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述每个实例（应用，大区或表）处理过程中可能出现的错误详情。
+ *
  * @method string getCode() 获取错误码
  * @method void setCode(string $Code) 设置错误码
  * @method string getMessage() 获取错误信息
  * @method void setMessage(string $Message) 设置错误信息
- */
-
-/**
- *描述每个实例（应用，大区或表）处理过程中可能出现的错误详情。
  */
 class ErrorInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ErrorInfo extends AbstractModel
      * @var string 错误信息
      */
     public $Message;
+
     /**
      * @param string $Code 错误码
      * @param string $Message 错误信息
@@ -46,6 +45,7 @@ class ErrorInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 每日客流统计子结构
+ *
  * @method string getDay() 获取日期，如 2018-08-6
  * @method void setDay(string $Day) 设置日期，如 2018-08-6
  * @method integer getFlowCount() 获取客流量
  * @method void setFlowCount(integer $FlowCount) 设置客流量
- */
-
-/**
- *每日客流统计子结构
  */
 class ZoneDayFlow extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ZoneDayFlow extends AbstractModel
      * @var integer 客流量
      */
     public $FlowCount;
+
     /**
      * @param string $Day 日期，如 2018-08-6
      * @param integer $FlowCount 客流量
@@ -46,6 +45,7 @@ class ZoneDayFlow extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音检测返回结果
+ *
  * @method string getDataId() 获取数据ID
  * @method void setDataId(string $DataId) 设置数据ID
  * @method string getTaskId() 获取任务ID
  * @method void setTaskId(string $TaskId) 设置任务ID
- */
-
-/**
- *语音检测返回结果
  */
 class ScanVoiceResult extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ScanVoiceResult extends AbstractModel
      * @var string 任务ID
      */
     public $TaskId;
+
     /**
      * @param string $DataId 数据ID
      * @param string $TaskId 任务ID
@@ -46,6 +45,7 @@ class ScanVoiceResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

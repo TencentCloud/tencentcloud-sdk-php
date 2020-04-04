@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProVersionInfo返回参数结构体
+ *
  * @method integer getPostPayCost() 获取后付费昨日扣费
  * @method void setPostPayCost(integer $PostPayCost) 设置后付费昨日扣费
  * @method boolean getIsAutoOpenProVersion() 获取新增主机是否自动开通专业版
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProVersionNum(integer $ProVersionNum) 设置开通专业版主机数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeProVersionInfo返回参数结构体
  */
 class DescribeProVersionInfoResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeProVersionInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $PostPayCost 后付费昨日扣费
      * @param boolean $IsAutoOpenProVersion 新增主机是否自动开通专业版
@@ -62,6 +61,7 @@ class DescribeProVersionInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

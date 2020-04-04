@@ -18,6 +18,8 @@ namespace TencentCloud\Npp\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Get400Cdr请求参数结构体
+ *
  * @method string getBizAppId() 获取业务appid
  * @method void setBizAppId(string $BizAppId) 设置业务appid
  * @method string getCallId() 获取通话唯一标识 callId，即直拨呼叫响应中返回的 callId
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeStamp(string $StartTimeStamp) 设置话单开始时间戳
  * @method string getEndTimeStamp() 获取话单结束时间戳
  * @method void setEndTimeStamp(string $EndTimeStamp) 设置话单结束时间戳
- */
-
-/**
- *Get400Cdr请求参数结构体
  */
 class Get400CdrRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class Get400CdrRequest extends AbstractModel
      * @var string 话单结束时间戳
      */
     public $EndTimeStamp;
+
     /**
      * @param string $BizAppId 业务appid
      * @param string $CallId 通话唯一标识 callId，即直拨呼叫响应中返回的 callId
@@ -70,6 +69,7 @@ class Get400CdrRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

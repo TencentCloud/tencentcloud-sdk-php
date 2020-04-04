@@ -18,6 +18,8 @@ namespace TencentCloud\Bri\V20190328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BRI请求
+ *
  * @method string getService() 获取业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
  * @method void setService(string $Service) 设置业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
  * @method string getCertMd5() 获取Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhoneNumber(string $PhoneNumber) 设置电话号码 (业务名为bri_num时必填)
  * @method string getUrl() 获取网址 (业务名为bri_url时必填)
  * @method void setUrl(string $Url) 设置网址 (业务名为bri_url时必填)
- */
-
-/**
- *BRI请求
  */
 class BRIRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class BRIRequest extends AbstractModel
      * @var string 网址 (业务名为bri_url时必填)
      */
     public $Url;
+
     /**
      * @param string $Service 业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
      * @param string $CertMd5 Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
@@ -102,6 +101,7 @@ class BRIRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

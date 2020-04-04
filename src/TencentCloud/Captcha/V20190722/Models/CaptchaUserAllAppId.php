@@ -18,16 +18,14 @@ namespace TencentCloud\Captcha\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户注册的APPID和应用名称对象
+ *
  * @method integer getCaptchaAppId() 获取验证码应用ID
  * @method void setCaptchaAppId(integer $CaptchaAppId) 设置验证码应用ID
  * @method string getAppName() 获取注册应用名称
  * @method void setAppName(string $AppName) 设置注册应用名称
  * @method integer getTcAppId() 获取腾讯云APPID
  * @method void setTcAppId(integer $TcAppId) 设置腾讯云APPID
- */
-
-/**
- *用户注册的APPID和应用名称对象
  */
 class CaptchaUserAllAppId extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CaptchaUserAllAppId extends AbstractModel
      * @var integer 腾讯云APPID
      */
     public $TcAppId;
+
     /**
      * @param integer $CaptchaAppId 验证码应用ID
      * @param string $AppName 注册应用名称
@@ -54,6 +53,7 @@ class CaptchaUserAllAppId extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

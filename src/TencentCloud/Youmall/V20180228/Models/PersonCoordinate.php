@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 轨迹点坐标
+ *
  * @method float getCADX() 获取CAD图X坐标
  * @method void setCADX(float $CADX) 设置CAD图X坐标
  * @method float getCADY() 获取CAD图Y坐标
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShopId(integer $ShopId) 设置门店编号
  * @method string getEvent() 获取事件
  * @method void setEvent(string $Event) 设置事件
- */
-
-/**
- *轨迹点坐标
  */
 class PersonCoordinate extends AbstractModel
 {
@@ -80,6 +78,7 @@ class PersonCoordinate extends AbstractModel
      * @var string 事件
      */
     public $Event;
+
     /**
      * @param float $CADX CAD图X坐标
      * @param float $CADY CAD图Y坐标
@@ -94,6 +93,7 @@ class PersonCoordinate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

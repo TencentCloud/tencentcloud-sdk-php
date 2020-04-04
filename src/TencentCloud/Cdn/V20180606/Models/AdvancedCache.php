@@ -18,6 +18,9 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 缓存过期配置高级版（功能灰度中，尚未全量）
+注意：该版本不支持设置首页缓存规则
+ *
  * @method array getCacheRules() 获取缓存过期规则
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCacheRules(array $CacheRules) 设置缓存过期规则
@@ -45,11 +48,6 @@ off：关闭
 默认为关闭状态
 注意：此字段可能返回 null，表示取不到有效值。
  */
-
-/**
- *缓存过期配置高级版（功能灰度中，尚未全量）
-注意：该版本不支持设置首页缓存规则
- */
 class AdvancedCache extends AbstractModel
 {
     /**
@@ -76,6 +74,7 @@ off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IgnoreSetCookie;
+
     /**
      * @param array $CacheRules 缓存过期规则
 注意：此字段可能返回 null，表示取不到有效值。
@@ -95,6 +94,7 @@ off：关闭
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

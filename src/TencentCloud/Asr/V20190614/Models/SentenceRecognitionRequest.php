@@ -18,6 +18,8 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SentenceRecognition请求参数结构体
+ *
  * @method integer getProjectId() 获取腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
  * @method void setProjectId(integer $ProjectId) 设置腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
  * @method integer getSubServiceType() 获取子服务类型。2： 一句话识别。
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterModal(integer $FilterModal) 设置是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
  * @method integer getFilterPunc() 获取是否过滤句末的句号（目前支持中文普通话引擎）。0：不过滤句末的句号；1：过滤句末的句号。
  * @method void setFilterPunc(integer $FilterPunc) 设置是否过滤句末的句号（目前支持中文普通话引擎）。0：不过滤句末的句号；1：过滤句末的句号。
- */
-
-/**
- *SentenceRecognition请求参数结构体
  */
 class SentenceRecognitionRequest extends AbstractModel
 {
@@ -127,6 +125,7 @@ class SentenceRecognitionRequest extends AbstractModel
      * @var integer 是否过滤句末的句号（目前支持中文普通话引擎）。0：不过滤句末的句号；1：过滤句末的句号。
      */
     public $FilterPunc;
+
     /**
      * @param integer $ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      * @param integer $SubServiceType 子服务类型。2： 一句话识别。
@@ -150,6 +149,7 @@ class SentenceRecognitionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

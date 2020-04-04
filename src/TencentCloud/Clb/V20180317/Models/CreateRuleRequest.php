@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRule请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例 ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
  * @method string getListenerId() 获取监听器 ID
  * @method void setListenerId(string $ListenerId) 设置监听器 ID
  * @method array getRules() 获取新建转发规则的信息
  * @method void setRules(array $Rules) 设置新建转发规则的信息
- */
-
-/**
- *CreateRule请求参数结构体
  */
 class CreateRuleRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateRuleRequest extends AbstractModel
      * @var array 新建转发规则的信息
      */
     public $Rules;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param string $ListenerId 监听器 ID
@@ -54,6 +53,7 @@ class CreateRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

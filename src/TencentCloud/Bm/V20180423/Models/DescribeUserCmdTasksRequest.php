@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUserCmdTasks请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取数量限制
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置排序字段，支持： RunBeginTime,RunEndTime,InstanceCount,SuccessCount,FailureCount
  * @method integer getOrder() 获取排序方式，取值: 1倒序，0顺序；默认倒序
  * @method void setOrder(integer $Order) 设置排序方式，取值: 1倒序，0顺序；默认倒序
- */
-
-/**
- *DescribeUserCmdTasks请求参数结构体
  */
 class DescribeUserCmdTasksRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeUserCmdTasksRequest extends AbstractModel
      * @var integer 排序方式，取值: 1倒序，0顺序；默认倒序
      */
     public $Order;
+
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 数量限制
@@ -62,6 +61,7 @@ class DescribeUserCmdTasksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Sts\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * API密钥数据列表
+ *
  * @method string getSecretId() 获取密钥ID
  * @method void setSecretId(string $SecretId) 设置密钥ID
  * @method integer getCreateTime() 获取创建时间(时间戳)
  * @method void setCreateTime(integer $CreateTime) 设置创建时间(时间戳)
  * @method integer getStatus() 获取状态(2:有效, 3:禁用, 4:已删除)
  * @method void setStatus(integer $Status) 设置状态(2:有效, 3:禁用, 4:已删除)
- */
-
-/**
- *API密钥数据列表
  */
 class ApiKey extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ApiKey extends AbstractModel
      * @var integer 状态(2:有效, 3:禁用, 4:已删除)
      */
     public $Status;
+
     /**
      * @param string $SecretId 密钥ID
      * @param integer $CreateTime 创建时间(时间戳)
@@ -54,6 +53,7 @@ class ApiKey extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IP 属性信息
+ *
  * @method string getIp() 获取指定查询的 IP
  * @method void setIp(string $Ip) 设置指定查询的 IP
  * @method string getPlatform() 获取IP 归属：
@@ -40,10 +42,6 @@ unknown：服务地域无法获取
 mainland：中国境内加速节点
 overseas：中国境外加速节点
 unknown：服务地域无法获取
- */
-
-/**
- *IP 属性信息
  */
 class CdnIp extends AbstractModel
 {
@@ -77,6 +75,7 @@ overseas：中国境外加速节点
 unknown：服务地域无法获取
      */
     public $Area;
+
     /**
      * @param string $Ip 指定查询的 IP
      * @param string $Platform IP 归属：
@@ -94,6 +93,7 @@ unknown：服务地域无法获取
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 主题属性返回结果实体
+ *
  * @method string getTopicId() 获取主题 ID
  * @method void setTopicId(string $TopicId) 设置主题 ID
  * @method integer getCreateTime() 获取创建时间
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfig(Config $Config) 设置topic 配置数组
  * @method array getPartitions() 获取分区详情
  * @method void setPartitions(array $Partitions) 设置分区详情
- */
-
-/**
- *主题属性返回结果实体
  */
 class TopicAttributesResponse extends AbstractModel
 {
@@ -83,6 +81,7 @@ class TopicAttributesResponse extends AbstractModel
      * @var array 分区详情
      */
     public $Partitions;
+
     /**
      * @param string $TopicId 主题 ID
      * @param integer $CreateTime 创建时间
@@ -98,6 +97,7 @@ class TopicAttributesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

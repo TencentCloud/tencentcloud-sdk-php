@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeApplications请求参数结构体
+ *
  * @method string getSearchWord() 获取搜索字段
  * @method void setSearchWord(string $SearchWord) 设置搜索字段
  * @method string getOrderBy() 获取排序字段
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMicroserviceType(string $MicroserviceType) 设置应用的微服务类型
  * @method array getApplicationResourceTypeList() 获取应用资源类型数组
  * @method void setApplicationResourceTypeList(array $ApplicationResourceTypeList) 设置应用资源类型数组
- */
-
-/**
- *DescribeApplications请求参数结构体
  */
 class DescribeApplicationsRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeApplicationsRequest extends AbstractModel
      * @var array 应用资源类型数组
      */
     public $ApplicationResourceTypeList;
+
     /**
      * @param string $SearchWord 搜索字段
      * @param string $OrderBy 排序字段
@@ -94,6 +93,7 @@ class DescribeApplicationsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取录音识别结果结果的返回参数
+ *
  * @method integer getTaskId() 获取任务标识。
  * @method void setTaskId(integer $TaskId) 设置任务标识。
  * @method integer getStatus() 获取任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResultDetail(array $ResultDetail) 设置识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *获取录音识别结果结果的返回参数
  */
 class TaskStatus extends AbstractModel
 {
@@ -69,6 +67,7 @@ class TaskStatus extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultDetail;
+
     /**
      * @param integer $TaskId 任务标识。
      * @param integer $Status 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
@@ -82,6 +81,7 @@ class TaskStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

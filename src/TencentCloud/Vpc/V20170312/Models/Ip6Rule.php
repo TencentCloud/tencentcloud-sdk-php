@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IPV6转换规则
+ *
  * @method string getIp6RuleId() 获取IPV6转换规则唯一ID，形如rule6-xxxxxxxx
  * @method void setIp6RuleId(string $Ip6RuleId) 设置IPV6转换规则唯一ID，形如rule6-xxxxxxxx
  * @method string getIp6RuleName() 获取IPV6转换规则名称
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleStatus(string $RuleStatus) 设置转换规则状态，限于CREATING,RUNNING,DELETING,MODIFYING
  * @method string getCreatedTime() 获取转换规则创建时间
  * @method void setCreatedTime(string $CreatedTime) 设置转换规则创建时间
- */
-
-/**
- *IPV6转换规则
  */
 class Ip6Rule extends AbstractModel
 {
@@ -87,6 +85,7 @@ class Ip6Rule extends AbstractModel
      * @var string 转换规则创建时间
      */
     public $CreatedTime;
+
     /**
      * @param string $Ip6RuleId IPV6转换规则唯一ID，形如rule6-xxxxxxxx
      * @param string $Ip6RuleName IPV6转换规则名称
@@ -102,6 +101,7 @@ class Ip6Rule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

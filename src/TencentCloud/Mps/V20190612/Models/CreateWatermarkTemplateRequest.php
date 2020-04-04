@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateWatermarkTemplate请求参数结构体
+ *
  * @method string getType() 获取水印类型，可选值：
 <li>image：图片水印；</li>
 <li>text：文字水印；</li>
@@ -64,10 +66,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTextTemplate(TextWatermarkTemplateInput $TextTemplate) 设置文字水印模板，仅当 Type 为 text，该字段必填且有效。
  * @method SvgWatermarkInput getSvgTemplate() 获取SVG 水印模板，仅当 Type 为 svg，该字段必填且有效。
  * @method void setSvgTemplate(SvgWatermarkInput $SvgTemplate) 设置SVG 水印模板，仅当 Type 为 svg，该字段必填且有效。
- */
-
-/**
- *CreateWatermarkTemplate请求参数结构体
  */
 class CreateWatermarkTemplateRequest extends AbstractModel
 {
@@ -129,6 +127,7 @@ class CreateWatermarkTemplateRequest extends AbstractModel
      * @var SvgWatermarkInput SVG 水印模板，仅当 Type 为 svg，该字段必填且有效。
      */
     public $SvgTemplate;
+
     /**
      * @param string $Type 水印类型，可选值：
 <li>image：图片水印；</li>
@@ -158,6 +157,7 @@ class CreateWatermarkTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

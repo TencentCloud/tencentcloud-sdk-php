@@ -18,12 +18,10 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpcView请求参数结构体
+ *
  * @method string getVpcId() 获取私有网络唯一ID
  * @method void setVpcId(string $VpcId) 设置私有网络唯一ID
- */
-
-/**
- *DescribeVpcView请求参数结构体
  */
 class DescribeVpcViewRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeVpcViewRequest extends AbstractModel
      * @var string 私有网络唯一ID
      */
     public $VpcId;
+
     /**
      * @param string $VpcId 私有网络唯一ID
      */
@@ -38,6 +37,7 @@ class DescribeVpcViewRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

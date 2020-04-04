@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTaskTemplate请求参数结构体
+ *
  * @method string getTaskTemplateName() 获取任务模板名称
  * @method void setTaskTemplateName(string $TaskTemplateName) 设置任务模板名称
  * @method Task getTaskTemplateInfo() 获取任务模板内容，参数要求与任务一致
  * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) 设置任务模板内容，参数要求与任务一致
  * @method string getTaskTemplateDescription() 获取任务模板描述
  * @method void setTaskTemplateDescription(string $TaskTemplateDescription) 设置任务模板描述
- */
-
-/**
- *CreateTaskTemplate请求参数结构体
  */
 class CreateTaskTemplateRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateTaskTemplateRequest extends AbstractModel
      * @var string 任务模板描述
      */
     public $TaskTemplateDescription;
+
     /**
      * @param string $TaskTemplateName 任务模板名称
      * @param Task $TaskTemplateInfo 任务模板内容，参数要求与任务一致
@@ -54,6 +53,7 @@ class CreateTaskTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

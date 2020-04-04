@@ -18,16 +18,14 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTaskEx返回参数结构体
+ *
  * @method integer getResultId() 获取拨测结果查询ID。接下来可以使用查询拨测是否能够成功，验证能否通过。
  * @method void setResultId(integer $ResultId) 设置拨测结果查询ID。接下来可以使用查询拨测是否能够成功，验证能否通过。
  * @method integer getTaskId() 获取拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
  * @method void setTaskId(integer $TaskId) 设置拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateTaskEx返回参数结构体
  */
 class CreateTaskExResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateTaskExResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $ResultId 拨测结果查询ID。接下来可以使用查询拨测是否能够成功，验证能否通过。
      * @param integer $TaskId 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
@@ -54,6 +53,7 @@ class CreateTaskExResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

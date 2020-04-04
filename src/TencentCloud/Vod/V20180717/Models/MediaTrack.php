@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 轨道信息
+ *
  * @method string getType() 获取轨道类型，取值有：
 <ul>
 <li>Video ：视频轨道。视频轨道由以下 Item 组成：<ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrackItems(array $TrackItems) 设置轨道上的媒体片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *轨道信息
  */
 class MediaTrack extends AbstractModel
 {
@@ -56,6 +54,7 @@ class MediaTrack extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrackItems;
+
     /**
      * @param string $Type 轨道类型，取值有：
 <ul>
@@ -70,6 +69,7 @@ class MediaTrack extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

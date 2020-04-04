@@ -18,12 +18,10 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RestartDBInstance请求参数结构体
+ *
  * @method string getDBInstanceId() 获取实例ID，形如postgres-6r233v55
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-6r233v55
- */
-
-/**
- *RestartDBInstance请求参数结构体
  */
 class RestartDBInstanceRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RestartDBInstanceRequest extends AbstractModel
      * @var string 实例ID，形如postgres-6r233v55
      */
     public $DBInstanceId;
+
     /**
      * @param string $DBInstanceId 实例ID，形如postgres-6r233v55
      */
@@ -38,6 +37,7 @@ class RestartDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

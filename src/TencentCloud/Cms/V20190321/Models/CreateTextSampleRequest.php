@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTextSample请求参数结构体
+ *
  * @method array getContents() 获取关键词数组
  * @method void setContents(array $Contents) 设置关键词数组
  * @method integer getEvilType() 获取恶意类型
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
 2：白库
  * @method string getTest() 获取测试修改参数
  * @method void setTest(string $Test) 设置测试修改参数
- */
-
-/**
- *CreateTextSample请求参数结构体
  */
 class CreateTextSampleRequest extends AbstractModel
 {
@@ -79,6 +77,7 @@ class CreateTextSampleRequest extends AbstractModel
      * @var string 测试修改参数
      */
     public $Test;
+
     /**
      * @param array $Contents 关键词数组
      * @param integer $EvilType 恶意类型
@@ -98,6 +97,7 @@ class CreateTextSampleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CheckNetDetectState请求参数结构体
+ *
  * @method array getDetectDestinationIp() 获取探测目的IPv4地址数组，最多两个。
  * @method void setDetectDestinationIp(array $DetectDestinationIp) 设置探测目的IPv4地址数组，最多两个。
  * @method string getNextHopType() 获取下一跳类型，目前我们支持的类型有：
@@ -52,10 +54,6 @@ NORMAL_CVM：普通云服务器；
  * @method void setSubnetId(string $SubnetId) 设置子网实例ID。形如：subnet-12345678。该参数与（VpcId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
  * @method string getNetDetectName() 获取网络探测名称，最大长度不能超过60个字节。该参数与（VpcId，SubnetId）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
  * @method void setNetDetectName(string $NetDetectName) 设置网络探测名称，最大长度不能超过60个字节。该参数与（VpcId，SubnetId）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
- */
-
-/**
- *CheckNetDetectState请求参数结构体
  */
 class CheckNetDetectStateRequest extends AbstractModel
 {
@@ -103,6 +101,7 @@ NORMAL_CVM：普通云服务器；
      * @var string 网络探测名称，最大长度不能超过60个字节。该参数与（VpcId，SubnetId）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
      */
     public $NetDetectName;
+
     /**
      * @param array $DetectDestinationIp 探测目的IPv4地址数组，最多两个。
      * @param string $NextHopType 下一跳类型，目前我们支持的类型有：
@@ -126,6 +125,7 @@ NORMAL_CVM：普通云服务器；
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

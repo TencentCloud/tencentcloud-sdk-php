@@ -18,6 +18,8 @@ namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 检测到的单个商品结构体
+ *
  * @method string getName() 获取图片中商品的三级分类识别结果，选取所有三级分类中的置信度最大者
  * @method void setName(string $Name) 设置图片中商品的三级分类识别结果，选取所有三级分类中的置信度最大者
  * @method string getParents() 获取三级商品分类对应的一级分类和二级分类，两级之间用“-”（中划线）隔开，例如商品名称是“硬盘”，那么Parents输出为“电脑、办公-电脑配件”
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setXMax(integer $XMax) 设置商品坐标X轴的最大值
  * @method integer getYMax() 获取商品坐标Y轴的最大值
  * @method void setYMax(integer $YMax) 设置商品坐标Y轴的最大值
- */
-
-/**
- *检测到的单个商品结构体
  */
 class Product extends AbstractModel
 {
@@ -73,6 +71,7 @@ class Product extends AbstractModel
      * @var integer 商品坐标Y轴的最大值
      */
     public $YMax;
+
     /**
      * @param string $Name 图片中商品的三级分类识别结果，选取所有三级分类中的置信度最大者
      * @param string $Parents 三级商品分类对应的一级分类和二级分类，两级之间用“-”（中划线）隔开，例如商品名称是“硬盘”，那么Parents输出为“电脑、办公-电脑配件”
@@ -86,6 +85,7 @@ class Product extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

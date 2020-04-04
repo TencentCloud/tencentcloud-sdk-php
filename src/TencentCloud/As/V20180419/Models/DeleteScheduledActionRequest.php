@@ -18,12 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteScheduledAction请求参数结构体
+ *
  * @method string getScheduledActionId() 获取待删除的定时任务ID。
  * @method void setScheduledActionId(string $ScheduledActionId) 设置待删除的定时任务ID。
- */
-
-/**
- *DeleteScheduledAction请求参数结构体
  */
 class DeleteScheduledActionRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteScheduledActionRequest extends AbstractModel
      * @var string 待删除的定时任务ID。
      */
     public $ScheduledActionId;
+
     /**
      * @param string $ScheduledActionId 待删除的定时任务ID。
      */
@@ -38,6 +37,7 @@ class DeleteScheduledActionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

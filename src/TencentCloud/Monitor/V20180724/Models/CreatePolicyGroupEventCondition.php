@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 创建策略传入的事件告警条件
+ *
  * @method integer getEventId() 获取告警事件的Id
  * @method void setEventId(integer $EventId) 设置告警事件的Id
  * @method integer getAlarmNotifyType() 获取告警发送收敛类型。0连续告警，1指数告警
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmNotifyPeriod(integer $AlarmNotifyPeriod) 设置告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
  * @method integer getRuleId() 获取如果通过模版创建，需要传入模版中该指标的对应RuleId
  * @method void setRuleId(integer $RuleId) 设置如果通过模版创建，需要传入模版中该指标的对应RuleId
- */
-
-/**
- *创建策略传入的事件告警条件
  */
 class CreatePolicyGroupEventCondition extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreatePolicyGroupEventCondition extends AbstractModel
      * @var integer 如果通过模版创建，需要传入模版中该指标的对应RuleId
      */
     public $RuleId;
+
     /**
      * @param integer $EventId 告警事件的Id
      * @param integer $AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
@@ -62,6 +61,7 @@ class CreatePolicyGroupEventCondition extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

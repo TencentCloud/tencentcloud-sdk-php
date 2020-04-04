@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ExecuteFunction请求参数结构体
+ *
  * @method string getFunctionName() 获取调用后端接口名称。
  * @method void setFunctionName(string $FunctionName) 设置调用后端接口名称。
  * @method string getFunctionArg() 获取接口参数，具体参数格式调用时与后端协调。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *ExecuteFunction请求参数结构体
  */
 class ExecuteFunctionRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ExecuteFunctionRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param string $FunctionName 调用后端接口名称。
      * @param string $FunctionArg 接口参数，具体参数格式调用时与后端协调。
@@ -78,6 +77,7 @@ class ExecuteFunctionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

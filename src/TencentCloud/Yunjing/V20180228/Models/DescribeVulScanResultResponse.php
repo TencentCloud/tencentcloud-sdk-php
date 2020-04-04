@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVulScanResult返回参数结构体
+ *
  * @method integer getVulNum() 获取漏洞数量。
  * @method void setVulNum(integer $VulNum) 设置漏洞数量。
  * @method integer getProVersionNum() 获取专业版机器数。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBasicVersionNum(integer $BasicVersionNum) 设置基础版机器数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeVulScanResult返回参数结构体
  */
 class DescribeVulScanResultResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeVulScanResultResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $VulNum 漏洞数量。
      * @param integer $ProVersionNum 专业版机器数。
@@ -78,6 +77,7 @@ class DescribeVulScanResultResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

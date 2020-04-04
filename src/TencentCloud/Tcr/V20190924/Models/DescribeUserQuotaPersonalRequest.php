@@ -18,14 +18,13 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUserQuotaPersonal请求参数结构体
+ *
 
- */
-
-/**
- *DescribeUserQuotaPersonal请求参数结构体
  */
 class DescribeUserQuotaPersonalRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeUserQuotaPersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

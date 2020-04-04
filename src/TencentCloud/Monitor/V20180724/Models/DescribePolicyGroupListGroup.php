@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePolicyGroupList.Group
+ *
  * @method integer getGroupId() 获取策略组id
  * @method void setGroupId(integer $GroupId) 设置策略组id
  * @method string getGroupName() 获取策略组名称
@@ -70,10 +72,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUnionRule(integer $IsUnionRule) 设置且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DescribePolicyGroupList.Group
  */
 class DescribePolicyGroupListGroup extends AbstractModel
 {
@@ -182,6 +180,7 @@ class DescribePolicyGroupListGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUnionRule;
+
     /**
      * @param integer $GroupId 策略组id
      * @param string $GroupName 策略组名称
@@ -214,6 +213,7 @@ class DescribePolicyGroupListGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

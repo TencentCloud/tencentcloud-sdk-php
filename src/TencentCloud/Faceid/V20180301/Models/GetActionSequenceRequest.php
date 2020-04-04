@@ -18,14 +18,13 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetActionSequence请求参数结构体
+ *
 
- */
-
-/**
- *GetActionSequence请求参数结构体
  */
 class GetActionSequenceRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class GetActionSequenceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

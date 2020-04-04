@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PullEvents返回参数结构体
+ *
  * @method array getEventSet() 获取事件列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventSet(array $EventSet) 设置事件列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *PullEvents返回参数结构体
  */
 class PullEventsResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class PullEventsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $EventSet 事件列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class PullEventsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

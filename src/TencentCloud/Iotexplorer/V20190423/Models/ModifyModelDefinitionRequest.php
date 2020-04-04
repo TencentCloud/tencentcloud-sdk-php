@@ -18,14 +18,12 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyModelDefinition请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getModelSchema() 获取数据模板定义
  * @method void setModelSchema(string $ModelSchema) 设置数据模板定义
- */
-
-/**
- *ModifyModelDefinition请求参数结构体
  */
 class ModifyModelDefinitionRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyModelDefinitionRequest extends AbstractModel
      * @var string 数据模板定义
      */
     public $ModelSchema;
+
     /**
      * @param string $ProductId 产品ID
      * @param string $ModelSchema 数据模板定义
@@ -46,6 +45,7 @@ class ModifyModelDefinitionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,13 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ExportAttackLogs请求参数结构体
+ *
 
- */
-
-/**
- *ExportAttackLogs请求参数结构体
  */
 class ExportAttackLogsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class ExportAttackLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

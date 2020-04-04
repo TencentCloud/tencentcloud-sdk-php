@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeComputeEnvs请求参数结构体
+ *
  * @method array getEnvIds() 获取计算环境ID列表，与Filters参数不能同时指定。
  * @method void setEnvIds(array $EnvIds) 设置计算环境ID列表，与Filters参数不能同时指定。
  * @method array getFilters() 获取过滤条件
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
  * @method void setLimit(integer $Limit) 设置返回数量
- */
-
-/**
- *DescribeComputeEnvs请求参数结构体
  */
 class DescribeComputeEnvsRequest extends AbstractModel
 {
@@ -67,6 +65,7 @@ class DescribeComputeEnvsRequest extends AbstractModel
      * @var integer 返回数量
      */
     public $Limit;
+
     /**
      * @param array $EnvIds 计算环境ID列表，与Filters参数不能同时指定。
      * @param array $Filters 过滤条件
@@ -82,6 +81,7 @@ class DescribeComputeEnvsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyMigrateJob请求参数结构体
+ *
  * @method string getJobId() 获取待修改的数据迁移任务ID
  * @method void setJobId(string $JobId) 设置待修改的数据迁移任务ID
  * @method string getJobName() 获取数据迁移任务名称
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
 
 如果是'整个实例'的迁移模式,不需设置该字段
- */
-
-/**
- *ModifyMigrateJob请求参数结构体
  */
 class ModifyMigrateJobRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class ModifyMigrateJobRequest extends AbstractModel
 如果是'整个实例'的迁移模式,不需设置该字段
      */
     public $DatabaseInfo;
+
     /**
      * @param string $JobId 待修改的数据迁移任务ID
      * @param string $JobName 数据迁移任务名称
@@ -122,6 +121,7 @@ class ModifyMigrateJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

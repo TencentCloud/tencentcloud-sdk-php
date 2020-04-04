@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 子用户信息
+ *
  * @method integer getUin() 获取子用户用户 ID
  * @method void setUin(integer $Uin) 设置子用户用户 ID
  * @method string getName() 获取子用户用户名
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCountryCode(string $CountryCode) 设置区号
  * @method string getEmail() 获取邮箱
  * @method void setEmail(string $Email) 设置邮箱
- */
-
-/**
- *子用户信息
  */
 class SubAccountInfo extends AbstractModel
 {
@@ -80,6 +78,7 @@ class SubAccountInfo extends AbstractModel
      * @var string 邮箱
      */
     public $Email;
+
     /**
      * @param integer $Uin 子用户用户 ID
      * @param string $Name 子用户用户名
@@ -94,6 +93,7 @@ class SubAccountInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

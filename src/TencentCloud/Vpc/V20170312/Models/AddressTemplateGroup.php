@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IP地址模板集合
+ *
  * @method string getAddressTemplateGroupName() 获取IP地址模板集合名称。
  * @method void setAddressTemplateGroupName(string $AddressTemplateGroupName) 设置IP地址模板集合名称。
  * @method string getAddressTemplateGroupId() 获取IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
  * @method array getAddressTemplateSet() 获取IP地址模板实例。
  * @method void setAddressTemplateSet(array $AddressTemplateSet) 设置IP地址模板实例。
- */
-
-/**
- *IP地址模板集合
  */
 class AddressTemplateGroup extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AddressTemplateGroup extends AbstractModel
      * @var array IP地址模板实例。
      */
     public $AddressTemplateSet;
+
     /**
      * @param string $AddressTemplateGroupName IP地址模板集合名称。
      * @param string $AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
@@ -70,6 +69,7 @@ class AddressTemplateGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

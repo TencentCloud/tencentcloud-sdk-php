@@ -18,16 +18,14 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteFairPlayPem请求参数结构体
+ *
  * @method integer getBailorId() 获取委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
  * @method void setBailorId(integer $BailorId) 设置委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
  * @method integer getFairPlayPemId() 获取要删除的pem id。
 当未传入该值时，将删除所有的私钥。
  * @method void setFairPlayPemId(integer $FairPlayPemId) 设置要删除的pem id。
 当未传入该值时，将删除所有的私钥。
- */
-
-/**
- *DeleteFairPlayPem请求参数结构体
  */
 class DeleteFairPlayPemRequest extends AbstractModel
 {
@@ -41,6 +39,7 @@ class DeleteFairPlayPemRequest extends AbstractModel
 当未传入该值时，将删除所有的私钥。
      */
     public $FairPlayPemId;
+
     /**
      * @param integer $BailorId 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      * @param integer $FairPlayPemId 要删除的pem id。
@@ -50,6 +49,7 @@ class DeleteFairPlayPemRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

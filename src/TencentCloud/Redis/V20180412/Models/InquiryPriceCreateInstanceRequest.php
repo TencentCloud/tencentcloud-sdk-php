@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceCreateInstance请求参数结构体
+ *
  * @method integer getZoneId() 获取实例所属的可用区id
  * @method void setZoneId(integer $ZoneId) 设置实例所属的可用区id
  * @method integer getTypeId() 获取实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
  * @method boolean getReplicasReadonly() 获取是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
  * @method void setReplicasReadonly(boolean $ReplicasReadonly) 设置是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
- */
-
-/**
- *InquiryPriceCreateInstance请求参数结构体
  */
 class InquiryPriceCreateInstanceRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
      * @var boolean 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
     public $ReplicasReadonly;
+
     /**
      * @param integer $ZoneId 实例所属的可用区id
      * @param integer $TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
@@ -102,6 +101,7 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

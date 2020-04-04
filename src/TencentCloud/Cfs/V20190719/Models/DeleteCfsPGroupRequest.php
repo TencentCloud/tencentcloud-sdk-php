@@ -18,12 +18,10 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCfsPGroup请求参数结构体
+ *
  * @method string getPGroupId() 获取权限组 ID
  * @method void setPGroupId(string $PGroupId) 设置权限组 ID
- */
-
-/**
- *DeleteCfsPGroup请求参数结构体
  */
 class DeleteCfsPGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteCfsPGroupRequest extends AbstractModel
      * @var string 权限组 ID
      */
     public $PGroupId;
+
     /**
      * @param string $PGroupId 权限组 ID
      */
@@ -38,6 +37,7 @@ class DeleteCfsPGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

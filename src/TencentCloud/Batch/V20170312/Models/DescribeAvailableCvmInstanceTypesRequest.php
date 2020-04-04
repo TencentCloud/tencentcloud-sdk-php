@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAvailableCvmInstanceTypes请求参数结构体
+ *
  * @method array getFilters() 获取过滤条件。
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
 <li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
 <li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
- */
-
-/**
- *DescribeAvailableCvmInstanceTypes请求参数结构体
  */
 class DescribeAvailableCvmInstanceTypesRequest extends AbstractModel
 {
@@ -37,6 +35,7 @@ class DescribeAvailableCvmInstanceTypesRequest extends AbstractModel
 <li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
      */
     public $Filters;
+
     /**
      * @param array $Filters 过滤条件。
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
@@ -46,6 +45,7 @@ class DescribeAvailableCvmInstanceTypesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Domain\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CheckDomain返回参数结构体
+ *
  * @method string getDomainName() 获取所查询域名名称
  * @method void setDomainName(string $DomainName) 设置所查询域名名称
  * @method boolean getAvailable() 获取是否能够注册
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(integer $Period) 设置检测年限
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CheckDomain返回参数结构体
  */
 class CheckDomainResponse extends AbstractModel
 {
@@ -127,6 +125,7 @@ class CheckDomainResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $DomainName 所查询域名名称
      * @param boolean $Available 是否能够注册
@@ -150,6 +149,7 @@ class CheckDomainResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

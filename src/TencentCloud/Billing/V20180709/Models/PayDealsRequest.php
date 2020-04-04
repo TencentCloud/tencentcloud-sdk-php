@@ -18,16 +18,14 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PayDeals请求参数结构体
+ *
  * @method array getOrderIds() 获取需要支付的一个或者多个订单号
  * @method void setOrderIds(array $OrderIds) 设置需要支付的一个或者多个订单号
  * @method integer getAutoVoucher() 获取是否自动使用代金券,1:是,0否,默认0
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券,1:是,0否,默认0
  * @method array getVoucherIds() 获取代金券ID列表,目前仅支持指定一张代金券
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表,目前仅支持指定一张代金券
- */
-
-/**
- *PayDeals请求参数结构体
  */
 class PayDealsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class PayDealsRequest extends AbstractModel
      * @var array 代金券ID列表,目前仅支持指定一张代金券
      */
     public $VoucherIds;
+
     /**
      * @param array $OrderIds 需要支付的一个或者多个订单号
      * @param integer $AutoVoucher 是否自动使用代金券,1:是,0否,默认0
@@ -54,6 +53,7 @@ class PayDealsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

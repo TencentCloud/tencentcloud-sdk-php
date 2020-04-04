@@ -18,14 +18,12 @@ namespace TencentCloud\Domain\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDomainPriceList返回参数结构体
+ *
  * @method array getPriceList() 获取域名价格列表
  * @method void setPriceList(array $PriceList) 设置域名价格列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDomainPriceList返回参数结构体
  */
 class DescribeDomainPriceListResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDomainPriceListResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $PriceList 域名价格列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeDomainPriceListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 账号的数据库权限信息
+ *
  * @method string getDBName() 获取数据库名
  * @method void setDBName(string $DBName) 设置数据库名
  * @method string getPrivilege() 获取数据库权限，ReadWrite表示可读写，ReadOnly表示只读
  * @method void setPrivilege(string $Privilege) 设置数据库权限，ReadWrite表示可读写，ReadOnly表示只读
- */
-
-/**
- *账号的数据库权限信息
  */
 class DBPrivilege extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DBPrivilege extends AbstractModel
      * @var string 数据库权限，ReadWrite表示可读写，ReadOnly表示只读
      */
     public $Privilege;
+
     /**
      * @param string $DBName 数据库名
      * @param string $Privilege 数据库权限，ReadWrite表示可读写，ReadOnly表示只读
@@ -46,6 +45,7 @@ class DBPrivilege extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

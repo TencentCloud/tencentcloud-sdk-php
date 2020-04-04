@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文本全文识别片段。
+ *
  * @method float getConfidence() 获取识别片段置信度。取值：0~100。
  * @method void setConfidence(float $Confidence) 设置识别片段置信度。取值：0~100。
  * @method array getAreaCoordSet() 获取识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
  * @method void setAreaCoordSet(array $AreaCoordSet) 设置识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
  * @method string getText() 获取识别文本。
  * @method void setText(string $Text) 设置识别文本。
- */
-
-/**
- *文本全文识别片段。
  */
 class AiRecognitionTaskOcrFullTextSegmentTextItem extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AiRecognitionTaskOcrFullTextSegmentTextItem extends AbstractModel
      * @var string 识别文本。
      */
     public $Text;
+
     /**
      * @param float $Confidence 识别片段置信度。取值：0~100。
      * @param array $AreaCoordSet 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
@@ -54,6 +53,7 @@ class AiRecognitionTaskOcrFullTextSegmentTextItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

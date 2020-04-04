@@ -18,6 +18,8 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 分路径的http头部设置规则。
+ *
  * @method string getHeaderMode() 获取http头部设置方式，支持add，set或del，分别表示新增，设置或删除头部。
 请求头部暂不支持set。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRulePaths(array $RulePaths) 设置url路径或文件类型列表。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *分路径的http头部设置规则。
  */
 class HttpHeaderPathRule extends AbstractModel
 {
@@ -77,6 +75,7 @@ class HttpHeaderPathRule extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RulePaths;
+
     /**
      * @param string $HeaderMode http头部设置方式，支持add，set或del，分别表示新增，设置或删除头部。
 请求头部暂不支持set。
@@ -94,6 +93,7 @@ class HttpHeaderPathRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

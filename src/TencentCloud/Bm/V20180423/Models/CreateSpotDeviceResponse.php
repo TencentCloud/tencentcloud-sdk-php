@@ -18,16 +18,14 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSpotDevice返回参数结构体
+ *
  * @method array getResourceIds() 获取创建的服务器ID
  * @method void setResourceIds(array $ResourceIds) 设置创建的服务器ID
  * @method integer getFlowId() 获取任务ID
  * @method void setFlowId(integer $FlowId) 设置任务ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateSpotDevice返回参数结构体
  */
 class CreateSpotDeviceResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateSpotDeviceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $ResourceIds 创建的服务器ID
      * @param integer $FlowId 任务ID
@@ -54,6 +53,7 @@ class CreateSpotDeviceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

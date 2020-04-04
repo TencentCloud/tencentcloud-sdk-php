@@ -18,6 +18,8 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyMonitorAttribute请求参数结构体
+ *
  * @method integer getMonitorId() 获取监测任务ID
  * @method void setMonitorId(integer $MonitorId) 设置监测任务ID
  * @method array getUrls() 获取站点的url列表
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstScanStartTime(string $FirstScanStartTime) 设置首次扫描开始时间
  * @method integer getMonitorStatus() 获取监测状态：1-监测中；2-暂停监测
  * @method void setMonitorStatus(integer $MonitorStatus) 设置监测状态：1-监测中；2-暂停监测
- */
-
-/**
- *ModifyMonitorAttribute请求参数结构体
  */
 class ModifyMonitorAttributeRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ModifyMonitorAttributeRequest extends AbstractModel
      * @var integer 监测状态：1-监测中；2-暂停监测
      */
     public $MonitorStatus;
+
     /**
      * @param integer $MonitorId 监测任务ID
      * @param array $Urls 站点的url列表
@@ -94,6 +93,7 @@ class ModifyMonitorAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

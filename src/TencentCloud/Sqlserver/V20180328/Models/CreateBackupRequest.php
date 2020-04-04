@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateBackup请求参数结构体
+ *
  * @method integer getStrategy() 获取备份策略(0-实例备份 1-多库备份)
  * @method void setStrategy(integer $Strategy) 设置备份策略(0-实例备份 1-多库备份)
  * @method array getDBNames() 获取需要备份库名的列表(多库备份才填写)
  * @method void setDBNames(array $DBNames) 设置需要备份库名的列表(多库备份才填写)
  * @method string getInstanceId() 获取实例ID，形如mssql-i1z41iwd
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-i1z41iwd
- */
-
-/**
- *CreateBackup请求参数结构体
  */
 class CreateBackupRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateBackupRequest extends AbstractModel
      * @var string 实例ID，形如mssql-i1z41iwd
      */
     public $InstanceId;
+
     /**
      * @param integer $Strategy 备份策略(0-实例备份 1-多库备份)
      * @param array $DBNames 需要备份库名的列表(多库备份才填写)
@@ -54,6 +53,7 @@ class CreateBackupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

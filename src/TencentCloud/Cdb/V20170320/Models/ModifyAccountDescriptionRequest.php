@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAccountDescription请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method array getAccounts() 获取云数据库账号。
  * @method void setAccounts(array $Accounts) 设置云数据库账号。
  * @method string getDescription() 获取数据库账号的备注信息。
  * @method void setDescription(string $Description) 设置数据库账号的备注信息。
- */
-
-/**
- *ModifyAccountDescription请求参数结构体
  */
 class ModifyAccountDescriptionRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyAccountDescriptionRequest extends AbstractModel
      * @var string 数据库账号的备注信息。
      */
     public $Description;
+
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param array $Accounts 云数据库账号。
@@ -54,6 +53,7 @@ class ModifyAccountDescriptionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

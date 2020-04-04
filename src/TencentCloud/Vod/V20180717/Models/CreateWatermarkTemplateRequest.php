@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateWatermarkTemplate请求参数结构体
+ *
  * @method string getType() 获取水印类型，可选值：
 <li>image：图片水印；</li>
 <li>text：文字水印；</li>
@@ -66,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSvgTemplate(SvgWatermarkInput $SvgTemplate) 设置SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *CreateWatermarkTemplate请求参数结构体
  */
 class CreateWatermarkTemplateRequest extends AbstractModel
 {
@@ -136,6 +134,7 @@ class CreateWatermarkTemplateRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param string $Type 水印类型，可选值：
 <li>image：图片水印；</li>
@@ -166,6 +165,7 @@ class CreateWatermarkTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

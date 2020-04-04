@@ -18,6 +18,8 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 游戏会话部署对象
+ *
  * @method string getPlacementId() 获取部署Id
  * @method void setPlacementId(string $PlacementId) 设置部署Id
  * @method string getGameServerSessionQueueName() 获取服务部署组名称
@@ -76,10 +78,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置结束时间
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *游戏会话部署对象
  */
 class GameServerSessionPlacement extends AbstractModel
 {
@@ -179,6 +177,7 @@ class GameServerSessionPlacement extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
+
     /**
      * @param string $PlacementId 部署Id
      * @param string $GameServerSessionQueueName 服务部署组名称
@@ -214,6 +213,7 @@ class GameServerSessionPlacement extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

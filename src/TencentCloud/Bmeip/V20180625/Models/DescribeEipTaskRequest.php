@@ -18,12 +18,10 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEipTask请求参数结构体
+ *
  * @method integer getTaskId() 获取EIP查询任务ID
  * @method void setTaskId(integer $TaskId) 设置EIP查询任务ID
- */
-
-/**
- *DescribeEipTask请求参数结构体
  */
 class DescribeEipTaskRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeEipTaskRequest extends AbstractModel
      * @var integer EIP查询任务ID
      */
     public $TaskId;
+
     /**
      * @param integer $TaskId EIP查询任务ID
      */
@@ -38,6 +37,7 @@ class DescribeEipTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

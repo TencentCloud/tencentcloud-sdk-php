@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProIspPlaySumInfoList返回参数结构体
+ *
  * @method float getTotalFlux() 获取总流量。
  * @method void setTotalFlux(float $TotalFlux) 设置总流量。
  * @method integer getTotalRequest() 获取总请求数。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAvgFluxPerSecond(float $AvgFluxPerSecond) 设置平均带宽。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeProIspPlaySumInfoList返回参数结构体
  */
 class DescribeProIspPlaySumInfoListResponse extends AbstractModel
 {
@@ -94,6 +92,7 @@ class DescribeProIspPlaySumInfoListResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param float $TotalFlux 总流量。
      * @param integer $TotalRequest 总请求数。
@@ -110,6 +109,7 @@ class DescribeProIspPlaySumInfoListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

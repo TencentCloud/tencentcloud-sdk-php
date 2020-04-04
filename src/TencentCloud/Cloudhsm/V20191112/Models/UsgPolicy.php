@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全组策略
+ *
  * @method string getIp() 获取cidr格式地址
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIp(string $Ip) 设置cidr格式地址
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAction(string $Action) 设置匹配后行为:ACCEPT/DROP
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *安全组策略
  */
 class UsgPolicy extends AbstractModel
 {
@@ -104,6 +102,7 @@ class UsgPolicy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Action;
+
     /**
      * @param string $Ip cidr格式地址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -126,6 +125,7 @@ class UsgPolicy extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

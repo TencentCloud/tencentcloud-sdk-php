@@ -18,6 +18,8 @@ namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CropImage返回参数结构体
+ *
  * @method integer getX() 获取裁剪区域左上角X坐标值
  * @method void setX(integer $X) 设置裁剪区域左上角X坐标值
  * @method integer getY() 获取裁剪区域左上角Y坐标值
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
 以上是辅助决策的参考建议，可以根据业务需求选择采纳或忽视。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CropImage返回参数结构体
  */
 class CropImageResponse extends AbstractModel
 {
@@ -104,6 +102,7 @@ class CropImageResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $X 裁剪区域左上角X坐标值
      * @param integer $Y 裁剪区域左上角Y坐标值
@@ -126,6 +125,7 @@ class CropImageResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

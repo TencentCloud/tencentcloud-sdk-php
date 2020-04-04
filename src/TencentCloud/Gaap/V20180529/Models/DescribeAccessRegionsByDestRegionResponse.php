@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccessRegionsByDestRegion返回参数结构体
+ *
  * @method integer getTotalCount() 获取可用加速区域数量
  * @method void setTotalCount(integer $TotalCount) 设置可用加速区域数量
  * @method array getAccessRegionSet() 获取可用加速区域信息列表
  * @method void setAccessRegionSet(array $AccessRegionSet) 设置可用加速区域信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAccessRegionsByDestRegion返回参数结构体
  */
 class DescribeAccessRegionsByDestRegionResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAccessRegionsByDestRegionResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 可用加速区域数量
      * @param array $AccessRegionSet 可用加速区域信息列表
@@ -54,6 +53,7 @@ class DescribeAccessRegionsByDestRegionResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetTransactionDetailForUser返回参数结构体
+ *
  * @method string getTransactionId() 获取交易ID
  * @method void setTransactionId(string $TransactionId) 设置交易ID
  * @method string getTransactionHash() 获取交易hash
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndorserOrgList(array $EndorserOrgList) 设置背书组织列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetTransactionDetailForUser返回参数结构体
  */
 class GetTransactionDetailForUserResponse extends AbstractModel
 {
@@ -122,6 +120,7 @@ class GetTransactionDetailForUserResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $TransactionId 交易ID
      * @param string $TransactionHash 交易hash
@@ -142,6 +141,7 @@ class GetTransactionDetailForUserResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

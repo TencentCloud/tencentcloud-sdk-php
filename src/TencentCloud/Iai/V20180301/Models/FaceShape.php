@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 五官定位（人脸关键点）具体信息。
+ *
  * @method array getFaceProfile() 获取描述脸型轮廓的 21 点。
  * @method void setFaceProfile(array $FaceProfile) 设置描述脸型轮廓的 21 点。
  * @method array getLeftEye() 获取描述左侧眼睛轮廓的 8 点。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLeftPupil(array $LeftPupil) 设置左瞳孔轮廓的 1 个点。
  * @method array getRightPupil() 获取右瞳孔轮廓的 1 个点。
  * @method void setRightPupil(array $RightPupil) 设置右瞳孔轮廓的 1 个点。
- */
-
-/**
- *五官定位（人脸关键点）具体信息。
  */
 class FaceShape extends AbstractModel
 {
@@ -87,6 +85,7 @@ class FaceShape extends AbstractModel
      * @var array 右瞳孔轮廓的 1 个点。
      */
     public $RightPupil;
+
     /**
      * @param array $FaceProfile 描述脸型轮廓的 21 点。
      * @param array $LeftEye 描述左侧眼睛轮廓的 8 点。
@@ -102,6 +101,7 @@ class FaceShape extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

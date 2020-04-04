@@ -18,14 +18,12 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 终止条件
+ *
  * @method integer getMaxRuntimeInSeconds() 获取最长运行运行时间（秒）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxRuntimeInSeconds(integer $MaxRuntimeInSeconds) 设置最长运行运行时间（秒）
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *终止条件
  */
 class StoppingCondition extends AbstractModel
 {
@@ -34,6 +32,7 @@ class StoppingCondition extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxRuntimeInSeconds;
+
     /**
      * @param integer $MaxRuntimeInSeconds 最长运行运行时间（秒）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,6 +41,7 @@ class StoppingCondition extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DownloadCertificate请求参数结构体
+ *
  * @method string getCertificateId() 获取证书 ID。
  * @method void setCertificateId(string $CertificateId) 设置证书 ID。
- */
-
-/**
- *DownloadCertificate请求参数结构体
  */
 class DownloadCertificateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DownloadCertificateRequest extends AbstractModel
      * @var string 证书 ID。
      */
     public $CertificateId;
+
     /**
      * @param string $CertificateId 证书 ID。
      */
@@ -38,6 +37,7 @@ class DownloadCertificateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

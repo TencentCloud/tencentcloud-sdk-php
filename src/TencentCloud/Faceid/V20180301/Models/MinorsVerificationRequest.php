@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MinorsVerification请求参数结构体
+ *
  * @method string getType() 获取参与校验的参数类型。
 0：使用手机号进行校验；
 1：使用姓名与身份证号进行校验。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdCard(string $IdCard) 设置身份证号码。
  * @method string getName() 获取姓名。
  * @method void setName(string $Name) 设置姓名。
- */
-
-/**
- *MinorsVerification请求参数结构体
  */
 class MinorsVerificationRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ class MinorsVerificationRequest extends AbstractModel
      * @var string 姓名。
      */
     public $Name;
+
     /**
      * @param string $Type 参与校验的参数类型。
 0：使用手机号进行校验；
@@ -78,6 +77,7 @@ class MinorsVerificationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

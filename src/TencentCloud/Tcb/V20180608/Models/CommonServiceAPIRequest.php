@@ -18,14 +18,12 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CommonServiceAPI请求参数结构体
+ *
  * @method string getService() 获取Service名，需要转发访问的接口名
  * @method void setService(string $Service) 设置Service名，需要转发访问的接口名
  * @method string getJSONData() 获取需要转发的云API参数，要转成JSON格式
  * @method void setJSONData(string $JSONData) 设置需要转发的云API参数，要转成JSON格式
- */
-
-/**
- *CommonServiceAPI请求参数结构体
  */
 class CommonServiceAPIRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CommonServiceAPIRequest extends AbstractModel
      * @var string 需要转发的云API参数，要转成JSON格式
      */
     public $JSONData;
+
     /**
      * @param string $Service Service名，需要转发访问的接口名
      * @param string $JSONData 需要转发的云API参数，要转成JSON格式
@@ -46,6 +45,7 @@ class CommonServiceAPIRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 节点信息
+ *
  * @method ZoneInfo getZoneInfo() 获取zone信息
  * @method void setZoneInfo(ZoneInfo $ZoneInfo) 设置zone信息
  * @method Country getCountry() 获取国家信息
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setISPSet(array $ISPSet) 设置运营商列表
  * @method integer getISPNum() 获取运营商数量
  * @method void setISPNum(integer $ISPNum) 设置运营商数量
- */
-
-/**
- *节点信息
  */
 class Node extends AbstractModel
 {
@@ -80,6 +78,7 @@ class Node extends AbstractModel
      * @var integer 运营商数量
      */
     public $ISPNum;
+
     /**
      * @param ZoneInfo $ZoneInfo zone信息
      * @param Country $Country 国家信息
@@ -94,6 +93,7 @@ class Node extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

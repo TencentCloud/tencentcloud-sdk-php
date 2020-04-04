@@ -18,16 +18,14 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ik插件词典信息
+ *
  * @method string getKey() 获取词典键值
  * @method void setKey(string $Key) 设置词典键值
  * @method string getName() 获取词典名称
  * @method void setName(string $Name) 设置词典名称
  * @method integer getSize() 获取词典大小，单位B
  * @method void setSize(integer $Size) 设置词典大小，单位B
- */
-
-/**
- *ik插件词典信息
  */
 class DictInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DictInfo extends AbstractModel
      * @var integer 词典大小，单位B
      */
     public $Size;
+
     /**
      * @param string $Key 词典键值
      * @param string $Name 词典名称
@@ -54,6 +53,7 @@ class DictInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

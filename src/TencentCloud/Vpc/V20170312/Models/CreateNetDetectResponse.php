@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNetDetect返回参数结构体
+ *
  * @method NetDetect getNetDetect() 获取网络探测（NetDetect）对象。
  * @method void setNetDetect(NetDetect $NetDetect) 设置网络探测（NetDetect）对象。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateNetDetect返回参数结构体
  */
 class CreateNetDetectResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateNetDetectResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param NetDetect $NetDetect 网络探测（NetDetect）对象。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateNetDetectResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

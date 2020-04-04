@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * serverless实例描述
+ *
  * @method string getDBInstanceId() 获取实例id，唯一标识符
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例id，唯一标识符
@@ -74,10 +76,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBDatabaseList(array $DBDatabaseList) 设置实例下的db信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *serverless实例描述
  */
 class ServerlessDBInstance extends AbstractModel
 {
@@ -164,6 +162,7 @@ class ServerlessDBInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBDatabaseList;
+
     /**
      * @param string $DBInstanceId 实例id，唯一标识符
 注意：此字段可能返回 null，表示取不到有效值。
@@ -198,6 +197,7 @@ class ServerlessDBInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

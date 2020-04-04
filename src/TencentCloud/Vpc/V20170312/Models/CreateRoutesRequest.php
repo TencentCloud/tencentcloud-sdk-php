@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRoutes请求参数结构体
+ *
  * @method string getRouteTableId() 获取路由表实例ID。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID。
  * @method array getRoutes() 获取路由策略对象。
  * @method void setRoutes(array $Routes) 设置路由策略对象。
- */
-
-/**
- *CreateRoutes请求参数结构体
  */
 class CreateRoutesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateRoutesRequest extends AbstractModel
      * @var array 路由策略对象。
      */
     public $Routes;
+
     /**
      * @param string $RouteTableId 路由表实例ID。
      * @param array $Routes 路由策略对象。
@@ -46,6 +45,7 @@ class CreateRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

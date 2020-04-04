@@ -18,14 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLaunchConfiguration返回参数结构体
+ *
  * @method string getLaunchConfigurationId() 获取当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。
  * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateLaunchConfiguration返回参数结构体
  */
 class CreateLaunchConfigurationResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateLaunchConfigurationResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $LaunchConfigurationId 当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateLaunchConfigurationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

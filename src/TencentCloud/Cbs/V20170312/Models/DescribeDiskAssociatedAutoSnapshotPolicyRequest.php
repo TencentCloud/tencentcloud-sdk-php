@@ -18,12 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDiskAssociatedAutoSnapshotPolicy请求参数结构体
+ *
  * @method string getDiskId() 获取要查询的云硬盘ID。
  * @method void setDiskId(string $DiskId) 设置要查询的云硬盘ID。
- */
-
-/**
- *DescribeDiskAssociatedAutoSnapshotPolicy请求参数结构体
  */
 class DescribeDiskAssociatedAutoSnapshotPolicyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeDiskAssociatedAutoSnapshotPolicyRequest extends AbstractModel
      * @var string 要查询的云硬盘ID。
      */
     public $DiskId;
+
     /**
      * @param string $DiskId 要查询的云硬盘ID。
      */
@@ -38,6 +37,7 @@ class DescribeDiskAssociatedAutoSnapshotPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

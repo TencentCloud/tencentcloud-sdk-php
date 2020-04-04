@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateServerlessGroup请求参数结构体
+ *
  * @method string getApplicationId() 获取分组所属应用ID
  * @method void setApplicationId(string $ApplicationId) 设置分组所属应用ID
  * @method string getGroupName() 获取分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceId(string $NamespaceId) 设置分组所属名字空间ID
  * @method string getClusterId() 获取分组所属集群ID
  * @method void setClusterId(string $ClusterId) 设置分组所属集群ID
- */
-
-/**
- *CreateServerlessGroup请求参数结构体
  */
 class CreateServerlessGroupRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateServerlessGroupRequest extends AbstractModel
      * @var string 分组所属集群ID
      */
     public $ClusterId;
+
     /**
      * @param string $ApplicationId 分组所属应用ID
      * @param string $GroupName 分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
@@ -62,6 +61,7 @@ class CreateServerlessGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

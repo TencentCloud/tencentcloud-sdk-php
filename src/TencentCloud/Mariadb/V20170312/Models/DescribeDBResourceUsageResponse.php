@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBResourceUsage返回参数结构体
+ *
  * @method MonitorData getBinlogDiskAvailable() 获取binlog日志磁盘可用空间,单位GB
  * @method void setBinlogDiskAvailable(MonitorData $BinlogDiskAvailable) 设置binlog日志磁盘可用空间,单位GB
  * @method MonitorData getDataDiskAvailable() 获取磁盘可用空间,单位GB
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemAvailable(MonitorData $MemAvailable) 设置内存可用空间,单位GB
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDBResourceUsage返回参数结构体
  */
 class DescribeDBResourceUsageResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeDBResourceUsageResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param MonitorData $BinlogDiskAvailable binlog日志磁盘可用空间,单位GB
      * @param MonitorData $DataDiskAvailable 磁盘可用空间,单位GB
@@ -70,6 +69,7 @@ class DescribeDBResourceUsageResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

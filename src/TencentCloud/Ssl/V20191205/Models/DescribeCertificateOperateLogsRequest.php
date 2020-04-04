@@ -18,6 +18,8 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCertificateOperateLogs请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取请求日志数量，默认为20。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间，默认15天前。
  * @method string getEndTime() 获取结束时间，默认现在时间。
  * @method void setEndTime(string $EndTime) 设置结束时间，默认现在时间。
- */
-
-/**
- *DescribeCertificateOperateLogs请求参数结构体
  */
 class DescribeCertificateOperateLogsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeCertificateOperateLogsRequest extends AbstractModel
      * @var string 结束时间，默认现在时间。
      */
     public $EndTime;
+
     /**
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 请求日志数量，默认为20。
@@ -62,6 +61,7 @@ class DescribeCertificateOperateLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 添加模板参数响应 
+ *
  * @method string getTemplateId() 获取模板参数
  * @method void setTemplateId(string $TemplateId) 设置模板参数
- */
-
-/**
- *添加模板参数响应 
  */
 class AddTemplateStatus extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AddTemplateStatus extends AbstractModel
      * @var string 模板参数
      */
     public $TemplateId;
+
     /**
      * @param string $TemplateId 模板参数
      */
@@ -38,6 +37,7 @@ class AddTemplateStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

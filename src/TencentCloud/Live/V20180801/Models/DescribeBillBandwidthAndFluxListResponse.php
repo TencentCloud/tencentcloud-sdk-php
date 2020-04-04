@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBillBandwidthAndFluxList返回参数结构体
+ *
  * @method string getPeakBandwidthTime() 获取峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method void setPeakBandwidthTime(string $PeakBandwidthTime) 设置峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method float getPeakBandwidth() 获取峰值带宽，单位是Mbps。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataInfoList(array $DataInfoList) 设置明细数据信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeBillBandwidthAndFluxList返回参数结构体
  */
 class DescribeBillBandwidthAndFluxListResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeBillBandwidthAndFluxListResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $PeakBandwidthTime 峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param float $PeakBandwidth 峰值带宽，单位是Mbps。
@@ -86,6 +85,7 @@ class DescribeBillBandwidthAndFluxListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

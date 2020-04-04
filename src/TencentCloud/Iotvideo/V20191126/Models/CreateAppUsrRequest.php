@@ -18,12 +18,10 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAppUsr请求参数结构体
+ *
  * @method string getCunionId() 获取标识用户的唯一ID，防止同一个用户多次注册
  * @method void setCunionId(string $CunionId) 设置标识用户的唯一ID，防止同一个用户多次注册
- */
-
-/**
- *CreateAppUsr请求参数结构体
  */
 class CreateAppUsrRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CreateAppUsrRequest extends AbstractModel
      * @var string 标识用户的唯一ID，防止同一个用户多次注册
      */
     public $CunionId;
+
     /**
      * @param string $CunionId 标识用户的唯一ID，防止同一个用户多次注册
      */
@@ -38,6 +37,7 @@ class CreateAppUsrRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

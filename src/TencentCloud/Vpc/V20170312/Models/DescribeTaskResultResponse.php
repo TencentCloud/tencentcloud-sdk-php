@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskResult返回参数结构体
+ *
  * @method integer getTaskId() 获取任务ID
  * @method void setTaskId(integer $TaskId) 设置任务ID
  * @method string getResult() 获取执行结果，包括"SUCCESS", "FAILED", "RUNNING"
  * @method void setResult(string $Result) 设置执行结果，包括"SUCCESS", "FAILED", "RUNNING"
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeTaskResult返回参数结构体
  */
 class DescribeTaskResultResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTaskResultResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TaskId 任务ID
      * @param string $Result 执行结果，包括"SUCCESS", "FAILED", "RUNNING"
@@ -54,6 +53,7 @@ class DescribeTaskResultResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateInstances返回参数结构体
+ *
  * @method string getDealId() 获取交易的ID
  * @method void setDealId(string $DealId) 设置交易的ID
  * @method array getInstanceIds() 获取实例ID(该字段灰度中，部分地域不可见)
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID(该字段灰度中，部分地域不可见)
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateInstances返回参数结构体
  */
 class CreateInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateInstancesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $DealId 交易的ID
      * @param array $InstanceIds 实例ID(该字段灰度中，部分地域不可见)
@@ -54,6 +53,7 @@ class CreateInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

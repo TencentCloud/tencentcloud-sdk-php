@@ -18,14 +18,12 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetOutBandVpnAuthPassword请求参数结构体
+ *
  * @method string getPassword() 获取设置的Vpn认证密码
  * @method void setPassword(string $Password) 设置设置的Vpn认证密码
  * @method string getOperate() 获取操作字段，取值为：Create（创建）或Update（修改）
  * @method void setOperate(string $Operate) 设置操作字段，取值为：Create（创建）或Update（修改）
- */
-
-/**
- *SetOutBandVpnAuthPassword请求参数结构体
  */
 class SetOutBandVpnAuthPasswordRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SetOutBandVpnAuthPasswordRequest extends AbstractModel
      * @var string 操作字段，取值为：Create（创建）或Update（修改）
      */
     public $Operate;
+
     /**
      * @param string $Password 设置的Vpn认证密码
      * @param string $Operate 操作字段，取值为：Create（创建）或Update（修改）
@@ -46,6 +45,7 @@ class SetOutBandVpnAuthPasswordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

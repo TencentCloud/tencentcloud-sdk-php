@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RemoveIp6Rules请求参数结构体
+ *
  * @method string getIp6TranslatorId() 获取IPV6转换规则所属的转换实例唯一ID，形如ip6-xxxxxxxx
  * @method void setIp6TranslatorId(string $Ip6TranslatorId) 设置IPV6转换规则所属的转换实例唯一ID，形如ip6-xxxxxxxx
  * @method array getIp6RuleIds() 获取待删除IPV6转换规则，形如rule6-xxxxxxxx
  * @method void setIp6RuleIds(array $Ip6RuleIds) 设置待删除IPV6转换规则，形如rule6-xxxxxxxx
- */
-
-/**
- *RemoveIp6Rules请求参数结构体
  */
 class RemoveIp6RulesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RemoveIp6RulesRequest extends AbstractModel
      * @var array 待删除IPV6转换规则，形如rule6-xxxxxxxx
      */
     public $Ip6RuleIds;
+
     /**
      * @param string $Ip6TranslatorId IPV6转换规则所属的转换实例唯一ID，形如ip6-xxxxxxxx
      * @param array $Ip6RuleIds 待删除IPV6转换规则，形如rule6-xxxxxxxx
@@ -46,6 +45,7 @@ class RemoveIp6RulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

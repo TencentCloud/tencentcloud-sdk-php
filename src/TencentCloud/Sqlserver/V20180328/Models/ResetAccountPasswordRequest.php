@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetAccountPassword请求参数结构体
+ *
  * @method string getInstanceId() 获取数据库实例ID，形如mssql-njj2mtpl
  * @method void setInstanceId(string $InstanceId) 设置数据库实例ID，形如mssql-njj2mtpl
  * @method array getAccounts() 获取更新后的账户密码信息数组
  * @method void setAccounts(array $Accounts) 设置更新后的账户密码信息数组
- */
-
-/**
- *ResetAccountPassword请求参数结构体
  */
 class ResetAccountPasswordRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ResetAccountPasswordRequest extends AbstractModel
      * @var array 更新后的账户密码信息数组
      */
     public $Accounts;
+
     /**
      * @param string $InstanceId 数据库实例ID，形如mssql-njj2mtpl
      * @param array $Accounts 更新后的账户密码信息数组
@@ -46,6 +45,7 @@ class ResetAccountPasswordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

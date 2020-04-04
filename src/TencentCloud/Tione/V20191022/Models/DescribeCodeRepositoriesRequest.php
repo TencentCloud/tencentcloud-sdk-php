@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCodeRepositories请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认为20
@@ -34,10 +36,6 @@ Ascending 按更新时间升序
  * @method void setSortOrder(string $SortOrder) 设置排序规则。默认取Descending
 Descending 按更新时间降序
 Ascending 按更新时间升序
- */
-
-/**
- *DescribeCodeRepositories请求参数结构体
  */
 class DescribeCodeRepositoriesRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ Descending 按更新时间降序
 Ascending 按更新时间升序
      */
     public $SortOrder;
+
     /**
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认为20
@@ -78,6 +77,7 @@ Ascending 按更新时间升序
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

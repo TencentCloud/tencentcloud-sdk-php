@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Liveness请求参数结构体
+ *
  * @method string getVideoBase64() 获取用于活体检测的视频，视频的BASE64值；
 BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
  * @method void setVideoBase64(string $VideoBase64) 设置用于活体检测的视频，视频的BASE64值；
@@ -34,10 +36,6 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 静默模式传参：不需要传递此参数。
  * @method string getOptional() 获取本接口不需要传递此参数。
  * @method void setOptional(string $Optional) 设置本接口不需要传递此参数。
- */
-
-/**
- *Liveness请求参数结构体
  */
 class LivenessRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
      * @var string 本接口不需要传递此参数。
      */
     public $Optional;
+
     /**
      * @param string $VideoBase64 用于活体检测的视频，视频的BASE64值；
 BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
@@ -78,6 +77,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

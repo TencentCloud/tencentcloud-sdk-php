@@ -18,12 +18,10 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHSMBySubnetId请求参数结构体
+ *
  * @method string getSubnetId() 获取Subnet标识符
  * @method void setSubnetId(string $SubnetId) 设置Subnet标识符
- */
-
-/**
- *DescribeHSMBySubnetId请求参数结构体
  */
 class DescribeHSMBySubnetIdRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeHSMBySubnetIdRequest extends AbstractModel
      * @var string Subnet标识符
      */
     public $SubnetId;
+
     /**
      * @param string $SubnetId Subnet标识符
      */
@@ -38,6 +37,7 @@ class DescribeHSMBySubnetIdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

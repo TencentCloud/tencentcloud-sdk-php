@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetDeviceLog请求参数结构体
+ *
  * @method string getProductId() 获取产品Id
  * @method void setProductId(string $ProductId) 设置产品Id
  * @method array getDeviceNames() 获取设备名称列表，最大支持100台
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScrollId(string $ScrollId) 设置查询游标
  * @method string getType() 获取日志类型（comm/status）
  * @method void setType(string $Type) 设置日志类型（comm/status）
- */
-
-/**
- *GetDeviceLog请求参数结构体
  */
 class GetDeviceLogRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class GetDeviceLogRequest extends AbstractModel
      * @var string 日志类型（comm/status）
      */
     public $Type;
+
     /**
      * @param string $ProductId 产品Id
      * @param array $DeviceNames 设备名称列表，最大支持100台
@@ -94,6 +93,7 @@ class GetDeviceLogRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

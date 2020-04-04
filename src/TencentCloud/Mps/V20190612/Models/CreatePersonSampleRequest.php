@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePersonSample请求参数结构体
+ *
  * @method string getName() 获取人物名称，长度限制：20 个字符。
  * @method void setName(string $Name) 设置人物名称，长度限制：20 个字符。
  * @method array getUsages() 获取人物应用场景，可选值：
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置人物标签
 <li>数组长度限制：20 个标签；</li>
 <li>单个标签长度限制：128 个字符。</li>
- */
-
-/**
- *CreatePersonSample请求参数结构体
  */
 class CreatePersonSampleRequest extends AbstractModel
 {
@@ -77,6 +75,7 @@ class CreatePersonSampleRequest extends AbstractModel
 <li>单个标签长度限制：128 个字符。</li>
      */
     public $Tags;
+
     /**
      * @param string $Name 人物名称，长度限制：20 个字符。
      * @param array $Usages 人物应用场景，可选值：
@@ -94,6 +93,7 @@ class CreatePersonSampleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

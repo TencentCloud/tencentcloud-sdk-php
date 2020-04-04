@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRollbackTime请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method array getDBs() 获取需要查询的数据库列表
  * @method void setDBs(array $DBs) 设置需要查询的数据库列表
- */
-
-/**
- *DescribeRollbackTime请求参数结构体
  */
 class DescribeRollbackTimeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeRollbackTimeRequest extends AbstractModel
      * @var array 需要查询的数据库列表
      */
     public $DBs;
+
     /**
      * @param string $InstanceId 实例ID
      * @param array $DBs 需要查询的数据库列表
@@ -46,6 +45,7 @@ class DescribeRollbackTimeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

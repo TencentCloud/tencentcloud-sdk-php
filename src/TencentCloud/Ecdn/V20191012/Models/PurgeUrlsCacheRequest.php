@@ -18,12 +18,10 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PurgeUrlsCache请求参数结构体
+ *
  * @method array getUrls() 获取要刷新的Url列表，必须包含协议头部。
  * @method void setUrls(array $Urls) 设置要刷新的Url列表，必须包含协议头部。
- */
-
-/**
- *PurgeUrlsCache请求参数结构体
  */
 class PurgeUrlsCacheRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class PurgeUrlsCacheRequest extends AbstractModel
      * @var array 要刷新的Url列表，必须包含协议头部。
      */
     public $Urls;
+
     /**
      * @param array $Urls 要刷新的Url列表，必须包含协议头部。
      */
@@ -38,6 +37,7 @@ class PurgeUrlsCacheRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

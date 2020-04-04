@@ -18,6 +18,8 @@ namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMusic请求参数结构体
+ *
  * @method string getItemId() 获取歌曲ID
  * @method void setItemId(string $ItemId) 设置歌曲ID
  * @method string getIdentityId() 获取在应用前端播放音乐C端用户的唯一标识。无需是账户信息，用户唯一标识即可。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 Values:Y , N(default)
  * @method void setSsl(string $Ssl) 设置CDN URL Protocol:HTTP or HTTPS/SSL
 Values:Y , N(default)
- */
-
-/**
- *DescribeMusic请求参数结构体
  */
 class DescribeMusicRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class DescribeMusicRequest extends AbstractModel
 Values:Y , N(default)
      */
     public $Ssl;
+
     /**
      * @param string $ItemId 歌曲ID
      * @param string $IdentityId 在应用前端播放音乐C端用户的唯一标识。无需是账户信息，用户唯一标识即可。
@@ -66,6 +65,7 @@ Values:Y , N(default)
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

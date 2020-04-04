@@ -18,6 +18,8 @@ namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecret返回参数结构体
+ *
  * @method string getSecretName() 获取凭据名称。
  * @method void setSecretName(string $SecretName) 设置凭据名称。
  * @method string getDescription() 获取凭据描述信息。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置创建日期。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeSecret返回参数结构体
  */
 class DescribeSecretResponse extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeSecretResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $SecretName 凭据名称。
      * @param string $Description 凭据描述信息。
@@ -94,6 +93,7 @@ class DescribeSecretResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

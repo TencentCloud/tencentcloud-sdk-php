@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备事件的搜索结果项
+ *
  * @method integer getTimeStamp() 获取事件的时间戳
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeStamp(integer $TimeStamp) 设置事件的时间戳
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(string $Data) 设置事件的数据
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *设备事件的搜索结果项
  */
 class EventHistoryItem extends AbstractModel
 {
@@ -84,6 +82,7 @@ class EventHistoryItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
+
     /**
      * @param integer $TimeStamp 事件的时间戳
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,6 +101,7 @@ class EventHistoryItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

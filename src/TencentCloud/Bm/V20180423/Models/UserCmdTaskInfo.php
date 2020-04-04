@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 自定义脚本任务详细信息
+ *
  * @method integer getAutoId() 获取自动编号，可忽略
  * @method void setAutoId(integer $AutoId) 设置自动编号，可忽略
  * @method string getTaskId() 获取任务ID
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(integer $AppId) 设置用户AppId
  * @method integer getLastShellExit() 获取用户执行脚本结束退出的返回值，没有返回值为-1
  * @method void setLastShellExit(integer $LastShellExit) 设置用户执行脚本结束退出的返回值，没有返回值为-1
- */
-
-/**
- *自定义脚本任务详细信息
  */
 class UserCmdTaskInfo extends AbstractModel
 {
@@ -157,6 +155,7 @@ class UserCmdTaskInfo extends AbstractModel
      * @var integer 用户执行脚本结束退出的返回值，没有返回值为-1
      */
     public $LastShellExit;
+
     /**
      * @param integer $AutoId 自动编号，可忽略
      * @param string $TaskId 任务ID
@@ -182,6 +181,7 @@ class UserCmdTaskInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

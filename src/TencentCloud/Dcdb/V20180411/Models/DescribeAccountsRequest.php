@@ -18,12 +18,10 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccounts请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，形如：dcdbt-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如：dcdbt-ow728lmc。
- */
-
-/**
- *DescribeAccounts请求参数结构体
  */
 class DescribeAccountsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeAccountsRequest extends AbstractModel
      * @var string 实例ID，形如：dcdbt-ow728lmc。
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 实例ID，形如：dcdbt-ow728lmc。
      */
@@ -38,6 +37,7 @@ class DescribeAccountsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

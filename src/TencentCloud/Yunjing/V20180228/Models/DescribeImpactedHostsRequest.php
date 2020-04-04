@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImpactedHosts请求参数结构体
+ *
  * @method integer getVulId() 获取漏洞种类ID。
  * @method void setVulId(integer $VulId) 设置漏洞种类ID。
  * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Status - String - 是否必填：否 - 状态筛选（UN_OPERATED：待处理 | FIXED：已修复）</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>Status - String - 是否必填：否 - 状态筛选（UN_OPERATED：待处理 | FIXED：已修复）</li>
- */
-
-/**
- *DescribeImpactedHosts请求参数结构体
  */
 class DescribeImpactedHostsRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class DescribeImpactedHostsRequest extends AbstractModel
 <li>Status - String - 是否必填：否 - 状态筛选（UN_OPERATED：待处理 | FIXED：已修复）</li>
      */
     public $Filters;
+
     /**
      * @param integer $VulId 漏洞种类ID。
      * @param integer $Limit 返回数量，默认为10，最大值为100。
@@ -66,6 +65,7 @@ class DescribeImpactedHostsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

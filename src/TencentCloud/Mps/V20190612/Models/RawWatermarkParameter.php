@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 自定义水印规格参数。
+ *
  * @method string getType() 获取水印类型，可选值：
 <li>image：图片水印。</li>
  * @method void setType(string $Type) 设置水印类型，可选值：
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 默认值：0px。
  * @method RawImageWatermarkInput getImageTemplate() 获取图片水印模板，当 Type 为 image，该字段必填。当 Type 为 text，该字段无效。
  * @method void setImageTemplate(RawImageWatermarkInput $ImageTemplate) 设置图片水印模板，当 Type 为 image，该字段必填。当 Type 为 text，该字段无效。
- */
-
-/**
- *自定义水印规格参数。
  */
 class RawWatermarkParameter extends AbstractModel
 {
@@ -86,6 +84,7 @@ class RawWatermarkParameter extends AbstractModel
      * @var RawImageWatermarkInput 图片水印模板，当 Type 为 image，该字段必填。当 Type 为 text，该字段无效。
      */
     public $ImageTemplate;
+
     /**
      * @param string $Type 水印类型，可选值：
 <li>image：图片水印。</li>
@@ -106,6 +105,7 @@ class RawWatermarkParameter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

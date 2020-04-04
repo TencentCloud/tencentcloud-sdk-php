@@ -18,16 +18,14 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRsgAsGroups返回参数结构体
+ *
  * @method array getRsgAsGroupSet() 获取所查询的伸缩组数组
  * @method void setRsgAsGroupSet(array $RsgAsGroupSet) 设置所查询的伸缩组数组
  * @method integer getTotalCount() 获取伸缩组数组总数目
  * @method void setTotalCount(integer $TotalCount) 设置伸缩组数组总数目
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeRsgAsGroups返回参数结构体
  */
 class DescribeRsgAsGroupsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeRsgAsGroupsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $RsgAsGroupSet 所查询的伸缩组数组
      * @param integer $TotalCount 伸缩组数组总数目
@@ -54,6 +53,7 @@ class DescribeRsgAsGroupsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

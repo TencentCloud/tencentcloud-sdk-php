@@ -18,16 +18,14 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetFunctionAddress请求参数结构体
+ *
  * @method string getFunctionName() 获取函数的名称
  * @method void setFunctionName(string $FunctionName) 设置函数的名称
  * @method string getQualifier() 获取函数的版本
  * @method void setQualifier(string $Qualifier) 设置函数的版本
  * @method string getNamespace() 获取函数的命名空间
  * @method void setNamespace(string $Namespace) 设置函数的命名空间
- */
-
-/**
- *GetFunctionAddress请求参数结构体
  */
 class GetFunctionAddressRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GetFunctionAddressRequest extends AbstractModel
      * @var string 函数的命名空间
      */
     public $Namespace;
+
     /**
      * @param string $FunctionName 函数的名称
      * @param string $Qualifier 函数的版本
@@ -54,6 +53,7 @@ class GetFunctionAddressRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

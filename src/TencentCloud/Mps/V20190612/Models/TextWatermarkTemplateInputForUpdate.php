@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文字水印模板
+ *
  * @method string getFontType() 获取字体类型，目前可以支持两种：
 <li>simkai.ttf：可以支持中文和英文；</li>
 <li>arial.ttf：仅支持英文。</li>
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFontAlpha(float $FontAlpha) 设置文字透明度，取值范围：(0, 1]
 <li>0：完全透明</li>
 <li>1：完全不透明</li>
- */
-
-/**
- *文字水印模板
  */
 class TextWatermarkTemplateInputForUpdate extends AbstractModel
 {
@@ -64,6 +62,7 @@ class TextWatermarkTemplateInputForUpdate extends AbstractModel
 <li>1：完全不透明</li>
      */
     public $FontAlpha;
+
     /**
      * @param string $FontType 字体类型，目前可以支持两种：
 <li>simkai.ttf：可以支持中文和英文；</li>
@@ -78,6 +77,7 @@ class TextWatermarkTemplateInputForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

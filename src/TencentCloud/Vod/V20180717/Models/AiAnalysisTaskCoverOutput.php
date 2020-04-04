@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能封面结果信息
+ *
  * @method array getCoverSet() 获取智能封面列表。
  * @method void setCoverSet(array $CoverSet) 设置智能封面列表。
- */
-
-/**
- *智能封面结果信息
  */
 class AiAnalysisTaskCoverOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiAnalysisTaskCoverOutput extends AbstractModel
      * @var array 智能封面列表。
      */
     public $CoverSet;
+
     /**
      * @param array $CoverSet 智能封面列表。
      */
@@ -38,6 +37,7 @@ class AiAnalysisTaskCoverOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

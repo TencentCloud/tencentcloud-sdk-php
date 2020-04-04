@@ -18,16 +18,14 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Encrypt返回参数结构体
+ *
  * @method string getCiphertextBlob() 获取加密后经过base64编码的密文
  * @method void setCiphertextBlob(string $CiphertextBlob) 设置加密后经过base64编码的密文
  * @method string getKeyId() 获取加密使用的CMK的全局唯一标识
  * @method void setKeyId(string $KeyId) 设置加密使用的CMK的全局唯一标识
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *Encrypt返回参数结构体
  */
 class EncryptResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class EncryptResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $CiphertextBlob 加密后经过base64编码的密文
      * @param string $KeyId 加密使用的CMK的全局唯一标识
@@ -54,6 +53,7 @@ class EncryptResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 依赖关系
+ *
  * @method string getStartTask() 获取依赖关系的起点任务名称
  * @method void setStartTask(string $StartTask) 设置依赖关系的起点任务名称
  * @method string getEndTask() 获取依赖关系的终点任务名称
  * @method void setEndTask(string $EndTask) 设置依赖关系的终点任务名称
- */
-
-/**
- *依赖关系
  */
 class Dependence extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Dependence extends AbstractModel
      * @var string 依赖关系的终点任务名称
      */
     public $EndTask;
+
     /**
      * @param string $StartTask 依赖关系的起点任务名称
      * @param string $EndTask 依赖关系的终点任务名称
@@ -46,6 +45,7 @@ class Dependence extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

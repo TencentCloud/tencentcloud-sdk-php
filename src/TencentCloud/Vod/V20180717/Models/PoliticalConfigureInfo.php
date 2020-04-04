@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 鉴政任务控制参数
+ *
  * @method PoliticalImgReviewTemplateInfo getImgReviewInfo() 获取画面鉴政控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfo $ImgReviewInfo) 设置画面鉴政控制参数。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfo $OcrReviewInfo) 设置文本鉴政控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *鉴政任务控制参数
  */
 class PoliticalConfigureInfo extends AbstractModel
 {
@@ -54,6 +52,7 @@ class PoliticalConfigureInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrReviewInfo;
+
     /**
      * @param PoliticalImgReviewTemplateInfo $ImgReviewInfo 画面鉴政控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class PoliticalConfigureInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

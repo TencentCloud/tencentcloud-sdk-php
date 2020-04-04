@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateFileSample请求参数结构体
+ *
  * @method array getContents() 获取文件类型结构数组
  * @method void setContents(array $Contents) 设置文件类型结构数组
  * @method integer getEvilType() 获取恶意类型
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabel(integer $Label) 设置样本类型
 1：黑库
 2：白库
- */
-
-/**
- *CreateFileSample请求参数结构体
  */
 class CreateFileSampleRequest extends AbstractModel
 {
@@ -79,6 +77,7 @@ class CreateFileSampleRequest extends AbstractModel
 2：白库
      */
     public $Label;
+
     /**
      * @param array $Contents 文件类型结构数组
      * @param integer $EvilType 恶意类型
@@ -98,6 +97,7 @@ class CreateFileSampleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 协议端口模板
+ *
  * @method string getServiceTemplateId() 获取协议端口实例ID，例如：ppm-f5n1f8da。
  * @method void setServiceTemplateId(string $ServiceTemplateId) 设置协议端口实例ID，例如：ppm-f5n1f8da。
  * @method string getServiceTemplateName() 获取模板名称。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceSet(array $ServiceSet) 设置协议端口信息。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- */
-
-/**
- *协议端口模板
  */
 class ServiceTemplate extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ServiceTemplate extends AbstractModel
      * @var string 创建时间。
      */
     public $CreatedTime;
+
     /**
      * @param string $ServiceTemplateId 协议端口实例ID，例如：ppm-f5n1f8da。
      * @param string $ServiceTemplateName 模板名称。
@@ -62,6 +61,7 @@ class ServiceTemplate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

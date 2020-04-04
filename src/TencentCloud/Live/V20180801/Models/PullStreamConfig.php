@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 拉流配置
+ *
  * @method string getConfigId() 获取拉流配置Id。
  * @method void setConfigId(string $ConfigId) 设置拉流配置Id。
  * @method string getFromUrl() 获取源Url。
@@ -48,10 +50,6 @@ UTC格式时间，
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getStatus() 获取0无效，1初始状态，2正在运行，3拉起失败，4暂停。
  * @method void setStatus(string $Status) 设置0无效，1初始状态，2正在运行，3拉起失败，4暂停。
- */
-
-/**
- *拉流配置
  */
 class PullStreamConfig extends AbstractModel
 {
@@ -101,6 +99,7 @@ UTC格式时间，
      * @var string 0无效，1初始状态，2正在运行，3拉起失败，4暂停。
      */
     public $Status;
+
     /**
      * @param string $ConfigId 拉流配置Id。
      * @param string $FromUrl 源Url。
@@ -122,6 +121,7 @@ UTC格式时间，
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

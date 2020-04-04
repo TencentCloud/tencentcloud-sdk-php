@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ImageRecognition请求参数结构体
+ *
  * @method string getIdCard() 获取身份证号
  * @method void setIdCard(string $IdCard) 设置身份证号
  * @method string getName() 获取姓名。中文请使用UTF-8编码。
@@ -28,10 +30,6 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
 BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
  * @method string getOptional() 获取本接口不需要传递此参数。
  * @method void setOptional(string $Optional) 设置本接口不需要传递此参数。
- */
-
-/**
- *ImageRecognition请求参数结构体
  */
 class ImageRecognitionRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
      * @var string 本接口不需要传递此参数。
      */
     public $Optional;
+
     /**
      * @param string $IdCard 身份证号
      * @param string $Name 姓名。中文请使用UTF-8编码。
@@ -66,6 +65,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

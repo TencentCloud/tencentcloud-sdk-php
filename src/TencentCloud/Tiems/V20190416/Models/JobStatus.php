@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务状态
+ *
  * @method string getStatus() 获取任务状态
  * @method void setStatus(string $Status) 设置任务状态
  * @method string getMessage() 获取错误时为错误描述
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplicaInfos(array $ReplicaInfos) 设置副本实例
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *任务状态
  */
 class JobStatus extends AbstractModel
 {
@@ -81,6 +79,7 @@ class JobStatus extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReplicaInfos;
+
     /**
      * @param string $Status 任务状态
      * @param string $Message 错误时为错误描述
@@ -98,6 +97,7 @@ class JobStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

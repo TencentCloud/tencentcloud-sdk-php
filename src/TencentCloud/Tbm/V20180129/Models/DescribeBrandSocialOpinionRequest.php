@@ -18,6 +18,8 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBrandSocialOpinion请求参数结构体
+ *
  * @method string getBrandId() 获取品牌ID
  * @method void setBrandId(string $BrandId) 设置品牌ID
  * @method string getStartDate() 获取检索开始时间
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置查询条数上限，默认20
  * @method boolean getShowList() 获取列表显示标记，若为true，则返回文章列表详情
  * @method void setShowList(boolean $ShowList) 设置列表显示标记，若为true，则返回文章列表详情
- */
-
-/**
- *DescribeBrandSocialOpinion请求参数结构体
  */
 class DescribeBrandSocialOpinionRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeBrandSocialOpinionRequest extends AbstractModel
      * @var boolean 列表显示标记，若为true，则返回文章列表详情
      */
     public $ShowList;
+
     /**
      * @param string $BrandId 品牌ID
      * @param string $StartDate 检索开始时间
@@ -78,6 +77,7 @@ class DescribeBrandSocialOpinionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

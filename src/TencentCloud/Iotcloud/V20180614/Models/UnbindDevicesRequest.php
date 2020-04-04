@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnbindDevices请求参数结构体
+ *
  * @method string getGatewayProductId() 获取网关设备的产品ID
  * @method void setGatewayProductId(string $GatewayProductId) 设置网关设备的产品ID
  * @method string getGatewayDeviceName() 获取网关设备的设备名
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceNames(array $DeviceNames) 设置多个设备名
  * @method string getSkey() 获取中兴CLAA设备的解绑需要Skey，普通设备不需要
  * @method void setSkey(string $Skey) 设置中兴CLAA设备的解绑需要Skey，普通设备不需要
- */
-
-/**
- *UnbindDevices请求参数结构体
  */
 class UnbindDevicesRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class UnbindDevicesRequest extends AbstractModel
      * @var string 中兴CLAA设备的解绑需要Skey，普通设备不需要
      */
     public $Skey;
+
     /**
      * @param string $GatewayProductId 网关设备的产品ID
      * @param string $GatewayDeviceName 网关设备的设备名
@@ -70,6 +69,7 @@ class UnbindDevicesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

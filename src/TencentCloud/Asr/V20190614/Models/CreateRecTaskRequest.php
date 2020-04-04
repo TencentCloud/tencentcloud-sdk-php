@@ -18,6 +18,8 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRecTask请求参数结构体
+ *
  * @method string getEngineModelType() 获取引擎模型类型。
 8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
 8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterDirty(integer $FilterDirty) 设置是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
  * @method integer getFilterModal() 获取是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
  * @method void setFilterModal(integer $FilterModal) 设置是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
- */
-
-/**
- *CreateRecTask请求参数结构体
  */
 class CreateRecTaskRequest extends AbstractModel
 {
@@ -116,6 +114,7 @@ class CreateRecTaskRequest extends AbstractModel
      * @var integer 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
      */
     public $FilterModal;
+
     /**
      * @param string $EngineModelType 引擎模型类型。
 8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
@@ -138,6 +137,7 @@ class CreateRecTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

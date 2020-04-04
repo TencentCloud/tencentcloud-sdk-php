@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDDoSDefendStatus请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（basic表示基础防护；bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（basic表示基础防护；bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版）
  * @method string getId() 获取资源实例ID，只有当Business不是基础防护时才需要填写此字段；
@@ -77,10 +79,6 @@ use TencentCloud\Common\AbstractModel;
 "tpe":    中国台湾
 "nj":     南京
  */
-
-/**
- *DescribeDDoSDefendStatus请求参数结构体
- */
 class DescribeDDoSDefendStatusRequest extends AbstractModel
 {
     /**
@@ -139,6 +137,7 @@ class DescribeDDoSDefendStatusRequest extends AbstractModel
 "nj":     南京
      */
     public $IPRegion;
+
     /**
      * @param string $Business 大禹子产品代号（basic表示基础防护；bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版）
      * @param string $Id 资源实例ID，只有当Business不是基础防护时才需要填写此字段；
@@ -174,6 +173,7 @@ class DescribeDDoSDefendStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

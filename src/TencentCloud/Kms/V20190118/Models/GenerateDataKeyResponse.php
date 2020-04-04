@@ -18,6 +18,8 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GenerateDataKey返回参数结构体
+ *
  * @method string getKeyId() 获取CMK的全局唯一标识
  * @method void setKeyId(string $KeyId) 设置CMK的全局唯一标识
  * @method string getPlaintext() 获取生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCiphertextBlob(string $CiphertextBlob) 设置DataKey加密后经过base64编码的密文，用户需要自行保存密文
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GenerateDataKey返回参数结构体
  */
 class GenerateDataKeyResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GenerateDataKeyResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $KeyId CMK的全局唯一标识
      * @param string $Plaintext 生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文
@@ -62,6 +61,7 @@ class GenerateDataKeyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

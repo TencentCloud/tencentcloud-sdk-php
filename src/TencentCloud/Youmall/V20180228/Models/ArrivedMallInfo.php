@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 客户到场信息
+ *
  * @method string getArrivedTime() 获取到场时间
  * @method void setArrivedTime(string $ArrivedTime) 设置到场时间
  * @method string getLeaveTime() 获取出场时间
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutCapPic(string $OutCapPic) 设置出场抓拍图片
  * @method string getTraceId() 获取轨迹编码
  * @method void setTraceId(string $TraceId) 设置轨迹编码
- */
-
-/**
- *客户到场信息
  */
 class ArrivedMallInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ArrivedMallInfo extends AbstractModel
      * @var string 轨迹编码
      */
     public $TraceId;
+
     /**
      * @param string $ArrivedTime 到场时间
      * @param string $LeaveTime 出场时间
@@ -78,6 +77,7 @@ class ArrivedMallInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

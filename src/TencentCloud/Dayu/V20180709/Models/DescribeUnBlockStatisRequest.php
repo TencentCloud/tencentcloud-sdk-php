@@ -18,14 +18,13 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUnBlockStatis请求参数结构体
+ *
 
- */
-
-/**
- *DescribeUnBlockStatis请求参数结构体
  */
 class DescribeUnBlockStatisRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeUnBlockStatisRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

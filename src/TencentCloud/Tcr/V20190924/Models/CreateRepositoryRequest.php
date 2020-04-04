@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRepository请求参数结构体
+ *
  * @method string getRegistryId() 获取实例ID
  * @method void setRegistryId(string $RegistryId) 设置实例ID
  * @method string getNamespaceName() 获取命名空间名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBriefDescription(string $BriefDescription) 设置仓库简短描述
  * @method string getDescription() 获取仓库详细描述
  * @method void setDescription(string $Description) 设置仓库详细描述
- */
-
-/**
- *CreateRepository请求参数结构体
  */
 class CreateRepositoryRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateRepositoryRequest extends AbstractModel
      * @var string 仓库详细描述
      */
     public $Description;
+
     /**
      * @param string $RegistryId 实例ID
      * @param string $NamespaceName 命名空间名称
@@ -70,6 +69,7 @@ class CreateRepositoryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

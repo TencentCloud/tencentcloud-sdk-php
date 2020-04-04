@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyGroupDomainConfig请求参数结构体
+ *
  * @method string getGroupId() 获取通道组ID。
  * @method void setGroupId(string $GroupId) 设置通道组ID。
  * @method string getDefaultDnsIp() 获取域名解析默认访问IP或域名。
  * @method void setDefaultDnsIp(string $DefaultDnsIp) 设置域名解析默认访问IP或域名。
  * @method array getAccessRegionList() 获取就近接入区域配置。
  * @method void setAccessRegionList(array $AccessRegionList) 设置就近接入区域配置。
- */
-
-/**
- *ModifyGroupDomainConfig请求参数结构体
  */
 class ModifyGroupDomainConfigRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyGroupDomainConfigRequest extends AbstractModel
      * @var array 就近接入区域配置。
      */
     public $AccessRegionList;
+
     /**
      * @param string $GroupId 通道组ID。
      * @param string $DefaultDnsIp 域名解析默认访问IP或域名。
@@ -54,6 +53,7 @@ class ModifyGroupDomainConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

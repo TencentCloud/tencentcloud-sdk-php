@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 编辑视频任务的输入。
+ *
  * @method array getFileInfoSet() 获取输入的视频文件信息。
  * @method void setFileInfoSet(array $FileInfoSet) 设置输入的视频文件信息。
- */
-
-/**
- *编辑视频任务的输入。
  */
 class EditMediaTaskInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class EditMediaTaskInput extends AbstractModel
      * @var array 输入的视频文件信息。
      */
     public $FileInfoSet;
+
     /**
      * @param array $FileInfoSet 输入的视频文件信息。
      */
@@ -38,6 +37,7 @@ class EditMediaTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

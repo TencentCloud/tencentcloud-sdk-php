@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CloseProxies请求参数结构体
+ *
  * @method array getInstanceIds() 获取（旧参数，请切换到ProxyIds）通道的实例ID。
  * @method void setInstanceIds(array $InstanceIds) 设置（旧参数，请切换到ProxyIds）通道的实例ID。
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 更多详细信息请参阅：如何保证幂等性。
  * @method array getProxyIds() 获取（新参数）通道的实例ID。
  * @method void setProxyIds(array $ProxyIds) 设置（新参数）通道的实例ID。
- */
-
-/**
- *CloseProxies请求参数结构体
  */
 class CloseProxiesRequest extends AbstractModel
 {
@@ -48,6 +46,7 @@ class CloseProxiesRequest extends AbstractModel
      * @var array （新参数）通道的实例ID。
      */
     public $ProxyIds;
+
     /**
      * @param array $InstanceIds （旧参数，请切换到ProxyIds）通道的实例ID。
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
@@ -58,6 +57,7 @@ class CloseProxiesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

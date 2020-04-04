@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 共享镜像仓库用户配额
+ *
  * @method string getUsername() 获取用户名
  * @method void setUsername(string $Username) 设置用户名
  * @method string getType() 获取配额的类型
  * @method void setType(string $Type) 设置配额的类型
  * @method integer getValue() 获取配置的值
  * @method void setValue(integer $Value) 设置配置的值
- */
-
-/**
- *共享镜像仓库用户配额
  */
 class Limit extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Limit extends AbstractModel
      * @var integer 配置的值
      */
     public $Value;
+
     /**
      * @param string $Username 用户名
      * @param string $Type 配额的类型
@@ -54,6 +53,7 @@ class Limit extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

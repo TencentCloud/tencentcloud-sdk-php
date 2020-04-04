@@ -18,14 +18,13 @@ namespace TencentCloud\Cds\V20180420\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDasbImageIds请求参数结构体
+ *
 
- */
-
-/**
- *DescribeDasbImageIds请求参数结构体
  */
 class DescribeDasbImageIdsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeDasbImageIdsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

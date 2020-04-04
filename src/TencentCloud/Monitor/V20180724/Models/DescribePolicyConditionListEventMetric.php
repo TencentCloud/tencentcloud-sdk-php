@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePolicyConditionList.EventMetric
+ *
  * @method integer getEventId() 获取事件id
  * @method void setEventId(integer $EventId) 设置事件id
  * @method string getEventShowName() 获取事件名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedRecovered(boolean $NeedRecovered) 设置是否需要恢复
  * @method integer getType() 获取事件类型，预留字段，当前固定取值为2
  * @method void setType(integer $Type) 设置事件类型，预留字段，当前固定取值为2
- */
-
-/**
- *DescribePolicyConditionList.EventMetric
  */
 class DescribePolicyConditionListEventMetric extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribePolicyConditionListEventMetric extends AbstractModel
      * @var integer 事件类型，预留字段，当前固定取值为2
      */
     public $Type;
+
     /**
      * @param integer $EventId 事件id
      * @param string $EventShowName 事件名称
@@ -62,6 +61,7 @@ class DescribePolicyConditionListEventMetric extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

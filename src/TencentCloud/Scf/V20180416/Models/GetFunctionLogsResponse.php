@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetFunctionLogs返回参数结构体
+ *
  * @method integer getTotalCount() 获取函数日志的总数
  * @method void setTotalCount(integer $TotalCount) 设置函数日志的总数
  * @method array getData() 获取函数日志信息
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchContext(LogSearchContext $SearchContext) 设置日志服务分页参数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetFunctionLogs返回参数结构体
  */
 class GetFunctionLogsResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GetFunctionLogsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 函数日志的总数
      * @param array $Data 函数日志信息
@@ -62,6 +61,7 @@ class GetFunctionLogsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSlowLogTopSqls请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID 。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
  * @method string getStartTime() 获取开始时间。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- */
-
-/**
- *DescribeSlowLogTopSqls请求参数结构体
  */
 class DescribeSlowLogTopSqlsRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
      * @var integer 偏移量，默认为0。
      */
     public $Offset;
+
     /**
      * @param string $InstanceId 实例 ID 。
      * @param string $StartTime 开始时间。
@@ -86,6 +85,7 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

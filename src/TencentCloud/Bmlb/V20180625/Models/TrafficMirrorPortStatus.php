@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 流量镜像健康检查返回的接收机的端口及状态信息。
+ *
  * @method integer getPort() 获取接收机端口。
  * @method void setPort(integer $Port) 设置接收机端口。
  * @method string getStatus() 获取状态。
  * @method void setStatus(string $Status) 设置状态。
- */
-
-/**
- *流量镜像健康检查返回的接收机的端口及状态信息。
  */
 class TrafficMirrorPortStatus extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TrafficMirrorPortStatus extends AbstractModel
      * @var string 状态。
      */
     public $Status;
+
     /**
      * @param integer $Port 接收机端口。
      * @param string $Status 状态。
@@ -46,6 +45,7 @@ class TrafficMirrorPortStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

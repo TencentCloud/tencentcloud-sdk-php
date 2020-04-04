@@ -18,6 +18,8 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 项目导出信息。
+ *
  * @method string getVodFileId() 获取云点播媒资 FileId。
  * @method void setVodFileId(string $VodFileId) 设置云点播媒资 FileId。
  * @method string getURL() 获取导出的媒资 URL。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaterialBaseInfo(MaterialBaseInfo $MaterialBaseInfo) 设置素材基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *项目导出信息。
  */
 class VideoEditProjectOutput extends AbstractModel
 {
@@ -55,6 +53,7 @@ class VideoEditProjectOutput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaterialBaseInfo;
+
     /**
      * @param string $VodFileId 云点播媒资 FileId。
      * @param string $URL 导出的媒资 URL。
@@ -66,6 +65,7 @@ class VideoEditProjectOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

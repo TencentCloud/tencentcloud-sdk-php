@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDBInstanceHour请求参数结构体
+ *
  * @method integer getMemory() 获取实例内存大小，单位：GB
  * @method void setMemory(integer $Memory) 设置实例内存大小，单位：GB
  * @method integer getVolume() 获取实例硬盘大小，单位：GB
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目ID，不填为默认项目
  * @method array getSecurityGroup() 获取安全组参数
  * @method void setSecurityGroup(array $SecurityGroup) 设置安全组参数
- */
-
-/**
- *CreateDBInstanceHour请求参数结构体
  */
 class CreateDBInstanceHourRequest extends AbstractModel
 {
@@ -129,6 +127,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @var array 安全组参数
      */
     public $SecurityGroup;
+
     /**
      * @param integer $Memory 实例内存大小，单位：GB
      * @param integer $Volume 实例硬盘大小，单位：GB
@@ -150,6 +149,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateDomainConfig请求参数结构体
+ *
  * @method string getDomain() 获取域名。
  * @method void setDomain(string $Domain) 设置域名。
  * @method Origin getOrigin() 获取源站配置。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForceRedirect(ForceRedirect $ForceRedirect) 设置访问协议强制跳转配置。
  * @method string getArea() 获取域名加速区域，mainland，overseas或global，分别表示中国境内加速，海外加速或全球加速。
  * @method void setArea(string $Area) 设置域名加速区域，mainland，overseas或global，分别表示中国境内加速，海外加速或全球加速。
- */
-
-/**
- *UpdateDomainConfig请求参数结构体
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class UpdateDomainConfigRequest extends AbstractModel
      * @var string 域名加速区域，mainland，overseas或global，分别表示中国境内加速，海外加速或全球加速。
      */
     public $Area;
+
     /**
      * @param string $Domain 域名。
      * @param Origin $Origin 源站配置。
@@ -118,6 +117,7 @@ class UpdateDomainConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

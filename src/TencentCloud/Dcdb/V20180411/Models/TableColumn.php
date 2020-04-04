@@ -18,14 +18,12 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据库列信息
+ *
  * @method string getCol() 获取列名称
  * @method void setCol(string $Col) 设置列名称
  * @method string getType() 获取列类型
  * @method void setType(string $Type) 设置列类型
- */
-
-/**
- *数据库列信息
  */
 class TableColumn extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TableColumn extends AbstractModel
      * @var string 列类型
      */
     public $Type;
+
     /**
      * @param string $Col 列名称
      * @param string $Type 列类型
@@ -46,6 +45,7 @@ class TableColumn extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

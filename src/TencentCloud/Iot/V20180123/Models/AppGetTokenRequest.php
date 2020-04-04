@@ -18,16 +18,14 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AppGetToken请求参数结构体
+ *
  * @method string getUserName() 获取用户名
  * @method void setUserName(string $UserName) 设置用户名
  * @method string getPassword() 获取密码
  * @method void setPassword(string $Password) 设置密码
  * @method integer getExpire() 获取TTL
  * @method void setExpire(integer $Expire) 设置TTL
- */
-
-/**
- *AppGetToken请求参数结构体
  */
 class AppGetTokenRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AppGetTokenRequest extends AbstractModel
      * @var integer TTL
      */
     public $Expire;
+
     /**
      * @param string $UserName 用户名
      * @param string $Password 密码
@@ -54,6 +53,7 @@ class AppGetTokenRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

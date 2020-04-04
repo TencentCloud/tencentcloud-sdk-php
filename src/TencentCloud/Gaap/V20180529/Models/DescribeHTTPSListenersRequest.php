@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHTTPSListeners请求参数结构体
+ *
  * @method string getProxyId() 获取过滤条件，通道ID
  * @method void setProxyId(string $ProxyId) 设置过滤条件，通道ID
  * @method string getListenerId() 获取过滤条件，根据监听器ID进行精确查询。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制数量，默认为20
  * @method string getSearchValue() 获取过滤条件，支持按照端口或监听器名称进行模糊查询
  * @method void setSearchValue(string $SearchValue) 设置过滤条件，支持按照端口或监听器名称进行模糊查询
- */
-
-/**
- *DescribeHTTPSListeners请求参数结构体
  */
 class DescribeHTTPSListenersRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeHTTPSListenersRequest extends AbstractModel
      * @var string 过滤条件，支持按照端口或监听器名称进行模糊查询
      */
     public $SearchValue;
+
     /**
      * @param string $ProxyId 过滤条件，通道ID
      * @param string $ListenerId 过滤条件，根据监听器ID进行精确查询。
@@ -86,6 +85,7 @@ class DescribeHTTPSListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

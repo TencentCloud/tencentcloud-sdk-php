@@ -18,16 +18,14 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWeeklyReportBruteAttacks返回参数结构体
+ *
  * @method array getWeeklyReportBruteAttacks() 获取专业周报密码破解数组。
  * @method void setWeeklyReportBruteAttacks(array $WeeklyReportBruteAttacks) 设置专业周报密码破解数组。
  * @method integer getTotalCount() 获取记录总数。
  * @method void setTotalCount(integer $TotalCount) 设置记录总数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeWeeklyReportBruteAttacks返回参数结构体
  */
 class DescribeWeeklyReportBruteAttacksResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeWeeklyReportBruteAttacksResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $WeeklyReportBruteAttacks 专业周报密码破解数组。
      * @param integer $TotalCount 记录总数。
@@ -54,6 +53,7 @@ class DescribeWeeklyReportBruteAttacksResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

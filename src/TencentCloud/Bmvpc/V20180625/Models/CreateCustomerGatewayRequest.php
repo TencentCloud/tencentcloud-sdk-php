@@ -18,16 +18,14 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCustomerGateway请求参数结构体
+ *
  * @method string getCustomerGatewayName() 获取对端网关名称，可任意命名，但不得超过60个字符。
  * @method void setCustomerGatewayName(string $CustomerGatewayName) 设置对端网关名称，可任意命名，但不得超过60个字符。
  * @method string getIpAddress() 获取对端网关公网IP。
  * @method void setIpAddress(string $IpAddress) 设置对端网关公网IP。
  * @method string getZone() 获取可用区ID
  * @method void setZone(string $Zone) 设置可用区ID
- */
-
-/**
- *CreateCustomerGateway请求参数结构体
  */
 class CreateCustomerGatewayRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateCustomerGatewayRequest extends AbstractModel
      * @var string 可用区ID
      */
     public $Zone;
+
     /**
      * @param string $CustomerGatewayName 对端网关名称，可任意命名，但不得超过60个字符。
      * @param string $IpAddress 对端网关公网IP。
@@ -54,6 +53,7 @@ class CreateCustomerGatewayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

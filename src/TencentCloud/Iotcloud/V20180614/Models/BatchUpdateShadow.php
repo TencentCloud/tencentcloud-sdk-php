@@ -18,12 +18,10 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 批量更新设备影子任务
+ *
  * @method string getDesired() 获取设备影子的期望状态，格式为 Json 对象序列化之后的字符串
  * @method void setDesired(string $Desired) 设置设备影子的期望状态，格式为 Json 对象序列化之后的字符串
- */
-
-/**
- *批量更新设备影子任务
  */
 class BatchUpdateShadow extends AbstractModel
 {
@@ -31,6 +29,7 @@ class BatchUpdateShadow extends AbstractModel
      * @var string 设备影子的期望状态，格式为 Json 对象序列化之后的字符串
      */
     public $Desired;
+
     /**
      * @param string $Desired 设备影子的期望状态，格式为 Json 对象序列化之后的字符串
      */
@@ -38,6 +37,7 @@ class BatchUpdateShadow extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

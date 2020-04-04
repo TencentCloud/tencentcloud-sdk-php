@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云盘配置。
+ *
  * @method boolean getAvailable() 获取配置是否可用。
  * @method void setAvailable(boolean $Available) 设置配置是否可用。
  * @method string getDiskType() 获取云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceFamily(string $InstanceFamily) 设置实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *云盘配置。
  */
 class DiskConfig extends AbstractModel
 {
@@ -93,6 +91,7 @@ class DiskConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceFamily;
+
     /**
      * @param boolean $Available 配置是否可用。
      * @param string $DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
@@ -110,6 +109,7 @@ class DiskConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

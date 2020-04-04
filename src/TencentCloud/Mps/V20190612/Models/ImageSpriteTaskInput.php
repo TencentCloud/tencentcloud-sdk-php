@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 对视频截雪碧图任务输入参数类型
+ *
  * @method integer getDefinition() 获取雪碧图模板 ID。
  * @method void setDefinition(integer $Definition) 设置雪碧图模板 ID。
  * @method TaskOutputStorage getOutputStorage() 获取截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) 设置截取雪碧图后输出路径中的`{number}`变量的规则。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *对视频截雪碧图任务输入参数类型
  */
 class ImageSpriteTaskInput extends AbstractModel
 {
@@ -65,6 +63,7 @@ class ImageSpriteTaskInput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectNumberFormat;
+
     /**
      * @param integer $Definition 雪碧图模板 ID。
      * @param TaskOutputStorage $OutputStorage 截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。
@@ -78,6 +77,7 @@ class ImageSpriteTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

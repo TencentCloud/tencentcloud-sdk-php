@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnbindRelateAcct请求参数结构体
+ *
  * @method string getMrchCode() 获取String(22)，商户号（签约客户号）
  * @method void setMrchCode(string $MrchCode) 设置String(22)，商户号（签约客户号）
  * @method string getFunctionFlag() 获取STRING(2)，功能标志（1: 解绑）
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemberAcctNo(string $MemberAcctNo) 设置STRING(50)，待解绑的提现账户的账号（提现账号）
  * @method string getReservedMsg() 获取STRING(1027)，保留域
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
- */
-
-/**
- *UnbindRelateAcct请求参数结构体
  */
 class UnbindRelateAcctRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class UnbindRelateAcctRequest extends AbstractModel
      * @var string STRING(1027)，保留域
      */
     public $ReservedMsg;
+
     /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $FunctionFlag STRING(2)，功能标志（1: 解绑）
@@ -70,6 +69,7 @@ class UnbindRelateAcctRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeConfigReleaseLogs请求参数结构体
+ *
  * @method string getGroupId() 获取部署组ID，不传入时查询全量
  * @method void setGroupId(string $GroupId) 设置部署组ID，不传入时查询全量
  * @method integer getOffset() 获取偏移量，默认为0
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID，不传入时查询全量
  * @method string getApplicationId() 获取应用ID，不传入时查询全量
  * @method void setApplicationId(string $ApplicationId) 设置应用ID，不传入时查询全量
- */
-
-/**
- *DescribeConfigReleaseLogs请求参数结构体
  */
 class DescribeConfigReleaseLogsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeConfigReleaseLogsRequest extends AbstractModel
      * @var string 应用ID，不传入时查询全量
      */
     public $ApplicationId;
+
     /**
      * @param string $GroupId 部署组ID，不传入时查询全量
      * @param integer $Offset 偏移量，默认为0
@@ -78,6 +77,7 @@ class DescribeConfigReleaseLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 地域信息
+ *
  * @method string getRegion() 获取地域名称，例如，ap-guangzhou
  * @method void setRegion(string $Region) 设置地域名称，例如，ap-guangzhou
  * @method string getRegionName() 获取地域描述，例如，华南地区(广州)
  * @method void setRegionName(string $RegionName) 设置地域描述，例如，华南地区(广州)
  * @method string getRegionState() 获取地域是否可用状态
  * @method void setRegionState(string $RegionState) 设置地域是否可用状态
- */
-
-/**
- *地域信息
  */
 class RegionInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RegionInfo extends AbstractModel
      * @var string 地域是否可用状态
      */
     public $RegionState;
+
     /**
      * @param string $Region 地域名称，例如，ap-guangzhou
      * @param string $RegionName 地域描述，例如，华南地区(广州)
@@ -54,6 +53,7 @@ class RegionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

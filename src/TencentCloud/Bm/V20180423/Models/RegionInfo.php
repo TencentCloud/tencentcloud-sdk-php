@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 地域信息
+ *
  * @method string getRegion() 获取地域ID
  * @method void setRegion(string $Region) 设置地域ID
  * @method integer getRegionId() 获取地域整型ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionDescription(string $RegionDescription) 设置地域描述
  * @method array getZoneInfoSet() 获取该地域下的可用区信息
  * @method void setZoneInfoSet(array $ZoneInfoSet) 设置该地域下的可用区信息
- */
-
-/**
- *地域信息
  */
 class RegionInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RegionInfo extends AbstractModel
      * @var array 该地域下的可用区信息
      */
     public $ZoneInfoSet;
+
     /**
      * @param string $Region 地域ID
      * @param integer $RegionId 地域整型ID
@@ -62,6 +61,7 @@ class RegionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

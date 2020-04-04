@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBillBandwidthAndFluxList请求参数结构体
+ *
  * @method string getStartTime() 获取起始时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method void setStartTime(string $StartTime) 设置起始时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method string getEndTime() 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
@@ -46,10 +48,6 @@ Oversea：则查询国外数据，
 默认值：5。
  * @method string getServiceName() 获取服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
  * @method void setServiceName(string $ServiceName) 设置服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
- */
-
-/**
- *DescribeBillBandwidthAndFluxList请求参数结构体
  */
 class DescribeBillBandwidthAndFluxListRequest extends AbstractModel
 {
@@ -90,6 +88,7 @@ Oversea：则查询国外数据，
      * @var string 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
      */
     public $ServiceName;
+
     /**
      * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
@@ -110,6 +109,7 @@ Oversea：则查询国外数据，
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

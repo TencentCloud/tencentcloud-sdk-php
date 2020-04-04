@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能分类任务输入类型
+ *
  * @method integer getDefinition() 获取视频智能封面模板 ID。
  * @method void setDefinition(integer $Definition) 设置视频智能封面模板 ID。
- */
-
-/**
- *智能分类任务输入类型
  */
 class AiAnalysisTaskCoverInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiAnalysisTaskCoverInput extends AbstractModel
      * @var integer 视频智能封面模板 ID。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 视频智能封面模板 ID。
      */
@@ -38,6 +37,7 @@ class AiAnalysisTaskCoverInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

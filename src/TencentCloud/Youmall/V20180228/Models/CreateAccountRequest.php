@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAccount请求参数结构体
+ *
  * @method string getCompanyId() 获取集团ID
  * @method void setCompanyId(string $CompanyId) 设置集团ID
  * @method string getName() 获取账号名；需要是手机号
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShopCode(string $ShopCode) 设置客户门店编码
  * @method string getRemark() 获取备注说明; 30个字符以内
  * @method void setRemark(string $Remark) 设置备注说明; 30个字符以内
- */
-
-/**
- *CreateAccount请求参数结构体
  */
 class CreateAccountRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateAccountRequest extends AbstractModel
      * @var string 备注说明; 30个字符以内
      */
     public $Remark;
+
     /**
      * @param string $CompanyId 集团ID
      * @param string $Name 账号名；需要是手机号
@@ -70,6 +69,7 @@ class CreateAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

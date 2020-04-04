@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDomainErrorPageInfo返回参数结构体
+ *
  * @method string getErrorPageId() 获取错误定制响应的配置ID
  * @method void setErrorPageId(string $ErrorPageId) 设置错误定制响应的配置ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateDomainErrorPageInfo返回参数结构体
  */
 class CreateDomainErrorPageInfoResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateDomainErrorPageInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $ErrorPageId 错误定制响应的配置ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateDomainErrorPageInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCCFrequencyRules请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method string getCCFrequencyRuleId() 获取CC防护的访问频率控制规则ID
  * @method void setCCFrequencyRuleId(string $CCFrequencyRuleId) 设置CC防护的访问频率控制规则ID
- */
-
-/**
- *DeleteCCFrequencyRules请求参数结构体
  */
 class DeleteCCFrequencyRulesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteCCFrequencyRulesRequest extends AbstractModel
      * @var string CC防护的访问频率控制规则ID
      */
     public $CCFrequencyRuleId;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param string $CCFrequencyRuleId CC防护的访问频率控制规则ID
@@ -46,6 +45,7 @@ class DeleteCCFrequencyRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

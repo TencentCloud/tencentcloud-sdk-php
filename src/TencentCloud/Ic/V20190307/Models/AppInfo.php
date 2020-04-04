@@ -18,6 +18,8 @@ namespace TencentCloud\Ic\V20190307\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 物联网卡应用信息详情
+ *
  * @method string getSdkappid() 获取应用ID
  * @method void setSdkappid(string $Sdkappid) 设置应用ID
  * @method string getAppkey() 获取应用key
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBizType(integer $BizType) 设置应用类型
  * @method string getUin() 获取用户Uin
  * @method void setUin(string $Uin) 设置用户Uin
- */
-
-/**
- *物联网卡应用信息详情
  */
 class AppInfo extends AbstractModel
 {
@@ -83,6 +81,7 @@ class AppInfo extends AbstractModel
      * @var string 用户Uin
      */
     public $Uin;
+
     /**
      * @param string $Sdkappid 应用ID
      * @param string $Appkey 应用key
@@ -98,6 +97,7 @@ class AppInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

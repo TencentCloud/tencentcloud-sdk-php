@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RAID和设备分区结构
+ *
  * @method integer getRaidId() 获取RAID类型ID
  * @method void setRaidId(integer $RaidId) 设置RAID类型ID
  * @method string getRaid() 获取RAID名称
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataDiskSize(integer $DataDiskSize) 设置数据盘总大小
  * @method array getDeviceDiskSizeInfoSet() 获取硬盘列表
  * @method void setDeviceDiskSizeInfoSet(array $DeviceDiskSizeInfoSet) 设置硬盘列表
- */
-
-/**
- *RAID和设备分区结构
  */
 class DeviceClassPartitionInfo extends AbstractModel
 {
@@ -101,6 +99,7 @@ class DeviceClassPartitionInfo extends AbstractModel
      * @var array 硬盘列表
      */
     public $DeviceDiskSizeInfoSet;
+
     /**
      * @param integer $RaidId RAID类型ID
      * @param string $Raid RAID名称
@@ -118,6 +117,7 @@ class DeviceClassPartitionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

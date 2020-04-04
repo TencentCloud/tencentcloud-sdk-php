@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDirectConnectGateway请求参数结构体
+ *
  * @method string getDirectConnectGatewayName() 获取专线网关名称
  * @method void setDirectConnectGatewayName(string $DirectConnectGatewayName) 设置专线网关名称
  * @method string getNetworkType() 获取关联网络类型，可选值：
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGatewayType(string $GatewayType) 设置网关类型，可选值：
 <li>NORMAL - （默认）标准型，注：云联网只支持标准型</li>
 <li>NAT - NAT型</li>NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
- */
-
-/**
- *CreateDirectConnectGateway请求参数结构体
  */
 class CreateDirectConnectGatewayRequest extends AbstractModel
 {
@@ -67,6 +65,7 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
 <li>NAT - NAT型</li>NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
      */
     public $GatewayType;
+
     /**
      * @param string $DirectConnectGatewayName 专线网关名称
      * @param string $NetworkType 关联网络类型，可选值：
@@ -82,6 +81,7 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

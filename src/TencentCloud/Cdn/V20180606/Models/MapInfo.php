@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 名称与ID映射关系
+ *
  * @method integer getId() 获取对象 Id
  * @method void setId(integer $Id) 设置对象 Id
  * @method string getName() 获取对象名称
  * @method void setName(string $Name) 设置对象名称
- */
-
-/**
- *名称与ID映射关系
  */
 class MapInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MapInfo extends AbstractModel
      * @var string 对象名称
      */
     public $Name;
+
     /**
      * @param integer $Id 对象 Id
      * @param string $Name 对象名称
@@ -46,6 +45,7 @@ class MapInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例操作记录中的流程任务信息
+ *
  * @method string getName() 获取任务名
  * @method void setName(string $Name) 设置任务名
  * @method float getProgress() 获取任务进度
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFinishTime(string $FinishTime) 设置任务完成时间
  * @method array getSubTasks() 获取子任务
  * @method void setSubTasks(array $SubTasks) 设置子任务
- */
-
-/**
- *实例操作记录中的流程任务信息
  */
 class TaskDetail extends AbstractModel
 {
@@ -52,6 +50,7 @@ class TaskDetail extends AbstractModel
      * @var array 子任务
      */
     public $SubTasks;
+
     /**
      * @param string $Name 任务名
      * @param float $Progress 任务进度
@@ -62,6 +61,7 @@ class TaskDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

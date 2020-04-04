@@ -18,12 +18,10 @@ namespace TencentCloud\Bizlive\V20190313\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StopGame请求参数结构体
+ *
  * @method string getUserId() 获取游戏用户ID
  * @method void setUserId(string $UserId) 设置游戏用户ID
- */
-
-/**
- *StopGame请求参数结构体
  */
 class StopGameRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class StopGameRequest extends AbstractModel
      * @var string 游戏用户ID
      */
     public $UserId;
+
     /**
      * @param string $UserId 游戏用户ID
      */
@@ -38,6 +37,7 @@ class StopGameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

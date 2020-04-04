@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备详细信息
+ *
  * @method string getDeviceName() 获取设备名
  * @method void setDeviceName(string $DeviceName) 设置设备名
  * @method integer getStatus() 获取0: 离线, 1: 在线, 2: 获取失败, 3 未激活
@@ -70,10 +72,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNwkSKey(string $NwkSKey) 设置LoRaWAN 网络会话密钥
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *设备详细信息
  */
 class DeviceInfo extends AbstractModel
 {
@@ -158,6 +156,7 @@ class DeviceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NwkSKey;
+
     /**
      * @param string $DeviceName 设备名
      * @param integer $Status 0: 离线, 1: 在线, 2: 获取失败, 3 未激活
@@ -190,6 +189,7 @@ class DeviceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

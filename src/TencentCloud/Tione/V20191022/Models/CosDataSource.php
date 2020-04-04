@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * cos路径
+ *
  * @method string getBucket() 获取cos桶
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucket(string $Bucket) 设置cos桶
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataType(string $DataType) 设置数据类型
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *cos路径
  */
 class CosDataSource extends AbstractModel
 {
@@ -64,6 +62,7 @@ class CosDataSource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataType;
+
     /**
      * @param string $Bucket cos桶
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +77,7 @@ class CosDataSource extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

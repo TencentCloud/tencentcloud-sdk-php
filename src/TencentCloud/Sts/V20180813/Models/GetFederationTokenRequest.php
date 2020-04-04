@@ -18,6 +18,8 @@ namespace TencentCloud\Sts\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetFederationToken请求参数结构体
+ *
  * @method string getName() 获取您可以自定义调用方英文名称，由字母组成。
  * @method void setName(string $Name) 设置您可以自定义调用方英文名称，由字母组成。
  * @method string getPolicy() 获取策略描述
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 3、策略中不能包含 principal 元素。
  * @method integer getDurationSeconds() 获取指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
  * @method void setDurationSeconds(integer $DurationSeconds) 设置指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
- */
-
-/**
- *GetFederationToken请求参数结构体
  */
 class GetFederationTokenRequest extends AbstractModel
 {
@@ -57,6 +55,7 @@ class GetFederationTokenRequest extends AbstractModel
      * @var integer 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
      */
     public $DurationSeconds;
+
     /**
      * @param string $Name 您可以自定义调用方英文名称，由字母组成。
      * @param string $Policy 策略描述
@@ -70,6 +69,7 @@ class GetFederationTokenRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

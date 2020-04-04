@@ -18,14 +18,12 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateContainGroup返回参数结构体
+ *
  * @method string getResult() 获取返回创建成功的部署组ID，返回null表示失败
  * @method void setResult(string $Result) 设置返回创建成功的部署组ID，返回null表示失败
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateContainGroup返回参数结构体
  */
 class CreateContainGroupResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateContainGroupResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Result 返回创建成功的部署组ID，返回null表示失败
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateContainGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

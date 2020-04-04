@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRouteTables请求参数结构体
+ *
  * @method array getRouteTableIds() 获取路由表实例ID，例如：rtb-azd4dt1c。
  * @method void setRouteTableIds(array $RouteTableIds) 设置路由表实例ID，例如：rtb-azd4dt1c。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定RouteTableIds和Filters。
@@ -42,10 +44,6 @@ zone - String - （过滤条件）可用区。
  * @method void setOrderField(string $OrderField) 设置排序字段, 支持按“RouteTableId”，“VpcId”, "RouteTableName", "CreateTime"
  * @method string getOrderDirection() 获取排序方向, “asc”、“desc”
  * @method void setOrderDirection(string $OrderDirection) 设置排序方向, “asc”、“desc”
- */
-
-/**
- *DescribeRouteTables请求参数结构体
  */
 class DescribeRouteTablesRequest extends AbstractModel
 {
@@ -84,6 +82,7 @@ zone - String - （过滤条件）可用区。
      * @var string 排序方向, “asc”、“desc”
      */
     public $OrderDirection;
+
     /**
      * @param array $RouteTableIds 路由表实例ID，例如：rtb-azd4dt1c。
      * @param array $Filters 过滤条件，参数不支持同时指定RouteTableIds和Filters。
@@ -102,6 +101,7 @@ zone - String - （过滤条件）可用区。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

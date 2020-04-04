@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全组基础信息
+ *
  * @method string getSgId() 获取安全组Id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSgId(string $SgId) 设置安全组Id
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *安全组基础信息
  */
 class SgUnit extends AbstractModel
 {
@@ -64,6 +62,7 @@ class SgUnit extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
+
     /**
      * @param string $SgId 安全组Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +77,7 @@ class SgUnit extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

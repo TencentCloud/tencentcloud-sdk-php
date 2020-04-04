@@ -18,12 +18,10 @@ namespace TencentCloud\Iottid\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AuthTestTid请求参数结构体
+ *
  * @method string getData() 获取设备端SDK填入测试TID参数后生成的加密数据串
  * @method void setData(string $Data) 设置设备端SDK填入测试TID参数后生成的加密数据串
- */
-
-/**
- *AuthTestTid请求参数结构体
  */
 class AuthTestTidRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AuthTestTidRequest extends AbstractModel
      * @var string 设备端SDK填入测试TID参数后生成的加密数据串
      */
     public $Data;
+
     /**
      * @param string $Data 设备端SDK填入测试TID参数后生成的加密数据串
      */
@@ -38,6 +37,7 @@ class AuthTestTidRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

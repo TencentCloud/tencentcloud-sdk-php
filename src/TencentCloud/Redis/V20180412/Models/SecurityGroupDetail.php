@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全组详情
+ *
  * @method integer getProjectId() 获取项目Id
  * @method void setProjectId(integer $ProjectId) 设置项目Id
  * @method string getCreateTime() 获取创建时间
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInboundRule(array $InboundRule) 设置安全组入站规则
  * @method array getOutboundRule() 获取安全组出站规则
  * @method void setOutboundRule(array $OutboundRule) 设置安全组出站规则
- */
-
-/**
- *安全组详情
  */
 class SecurityGroupDetail extends AbstractModel
 {
@@ -73,6 +71,7 @@ class SecurityGroupDetail extends AbstractModel
      * @var array 安全组出站规则
      */
     public $OutboundRule;
+
     /**
      * @param integer $ProjectId 项目Id
      * @param string $CreateTime 创建时间
@@ -86,6 +85,7 @@ class SecurityGroupDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

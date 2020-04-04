@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内容审核 Ocr 文字审核嫌疑片段
+ *
  * @method float getStartTimeOffset() 获取嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置嫌疑片段起始的偏移时间，单位：秒。
@@ -50,10 +52,6 @@ block。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAreaCoordSet(array $AreaCoordSet) 设置嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *内容审核 Ocr 文字审核嫌疑片段
  */
 class VodOcrTextSegmentItem extends AbstractModel
 {
@@ -96,6 +94,7 @@ block。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AreaCoordSet;
+
     /**
      * @param float $StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,6 +117,7 @@ block。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

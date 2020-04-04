@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 账户属性对象
+ *
  * @method string getAttributeName() 获取属性名
  * @method void setAttributeName(string $AttributeName) 设置属性名
  * @method array getAttributeValues() 获取属性值
  * @method void setAttributeValues(array $AttributeValues) 设置属性值
- */
-
-/**
- *账户属性对象
  */
 class AccountAttribute extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AccountAttribute extends AbstractModel
      * @var array 属性值
      */
     public $AttributeValues;
+
     /**
      * @param string $AttributeName 属性名
      * @param array $AttributeValues 属性值
@@ -46,6 +45,7 @@ class AccountAttribute extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

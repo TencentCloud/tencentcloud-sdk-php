@@ -18,6 +18,8 @@ namespace TencentCloud\Fmu\V20191213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BeautifyPic请求参数结构体
+ *
  * @method string getImage() 获取图片 base64 数据，base64 编码后大小不可超过5M。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method void setImage(string $Image) 设置图片 base64 数据，base64 编码后大小不可超过5M。 
@@ -40,10 +42,6 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
  * @method void setFaceLifting(integer $FaceLifting) 设置瘦脸程度，取值范围[0,100]。0不瘦脸，100代表最高程度。默认值70。
  * @method integer getEyeEnlarging() 获取大眼程度，取值范围[0,100]。0不大眼，100代表最高程度。默认值70。
  * @method void setEyeEnlarging(integer $EyeEnlarging) 设置大眼程度，取值范围[0,100]。0不大眼，100代表最高程度。默认值70。
- */
-
-/**
- *BeautifyPic请求参数结构体
  */
 class BeautifyPicRequest extends AbstractModel
 {
@@ -81,6 +79,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      * @var integer 大眼程度，取值范围[0,100]。0不大眼，100代表最高程度。默认值70。
      */
     public $EyeEnlarging;
+
     /**
      * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -98,6 +97,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

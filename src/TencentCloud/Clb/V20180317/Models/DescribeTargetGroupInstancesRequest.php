@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTargetGroupInstances请求参数结构体
+ *
  * @method array getFilters() 获取过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤
  * @method void setFilters(array $Filters) 设置过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤
  * @method integer getLimit() 获取显示数量限制，默认20
  * @method void setLimit(integer $Limit) 设置显示数量限制，默认20
  * @method integer getOffset() 获取显示的偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置显示的偏移量，默认为0
- */
-
-/**
- *DescribeTargetGroupInstances请求参数结构体
  */
 class DescribeTargetGroupInstancesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTargetGroupInstancesRequest extends AbstractModel
      * @var integer 显示的偏移量，默认为0
      */
     public $Offset;
+
     /**
      * @param array $Filters 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤
      * @param integer $Limit 显示数量限制，默认20
@@ -54,6 +53,7 @@ class DescribeTargetGroupInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

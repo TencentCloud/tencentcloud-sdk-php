@@ -18,6 +18,8 @@ namespace TencentCloud\Hcm\V20181106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Evaluation请求参数结构体
+ *
  * @method string getSessionId() 获取图片唯一标识，一张图片一个SessionId；
  * @method void setSessionId(string $SessionId) 设置图片唯一标识，一张图片一个SessionId；
  * @method string getImage() 获取图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRejectNonArithmeticImage(boolean $RejectNonArithmeticImage) 设置拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
  * @method integer getIsAsync() 获取异步模式标识，0：同步模式，1：异步模式。默认为同步模式
  * @method void setIsAsync(integer $IsAsync) 设置异步模式标识，0：同步模式，1：异步模式。默认为同步模式
- */
-
-/**
- *Evaluation请求参数结构体
  */
 class EvaluationRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class EvaluationRequest extends AbstractModel
      * @var integer 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
      */
     public $IsAsync;
+
     /**
      * @param string $SessionId 图片唯一标识，一张图片一个SessionId；
      * @param string $Image 图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
@@ -86,6 +85,7 @@ class EvaluationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

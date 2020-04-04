@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTrafficMirrorListeners请求参数结构体
+ *
  * @method string getTrafficMirrorId() 获取流量镜像实例ID。
  * @method void setTrafficMirrorId(string $TrafficMirrorId) 设置流量镜像实例ID。
  * @method integer getOffset() 获取分页的偏移量，也即从第几条记录开始查询
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchProtocols(array $SearchProtocols) 设置待搜索的协议名称。
  * @method array getSearchLoadBalancerPorts() 获取待搜索的端口。
  * @method void setSearchLoadBalancerPorts(array $SearchLoadBalancerPorts) 设置待搜索的端口。
- */
-
-/**
- *DescribeTrafficMirrorListeners请求参数结构体
  */
 class DescribeTrafficMirrorListenersRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class DescribeTrafficMirrorListenersRequest extends AbstractModel
      * @var array 待搜索的端口。
      */
     public $SearchLoadBalancerPorts;
+
     /**
      * @param string $TrafficMirrorId 流量镜像实例ID。
      * @param integer $Offset 分页的偏移量，也即从第几条记录开始查询
@@ -110,6 +109,7 @@ class DescribeTrafficMirrorListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

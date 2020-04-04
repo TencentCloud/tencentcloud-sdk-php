@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 色情识别结果。
+ *
  * @method integer getCode() 获取该识别场景的错误码：
 0表示成功，
 -1表示系统错误，
@@ -44,10 +46,6 @@ BLOCK：违规
  * @method void setAdvancedInfo(string $AdvancedInfo) 设置预留字段，后期用于展示更多识别信息。
  * @method string getType() 获取取值'LABEL‘，LABEL表示结论和置信度来自标签分类。
  * @method void setType(string $Type) 设置取值'LABEL‘，LABEL表示结论和置信度来自标签分类。
- */
-
-/**
- *色情识别结果。
  */
 class PornResult extends AbstractModel
 {
@@ -87,6 +85,7 @@ BLOCK：违规
      * @var string 取值'LABEL‘，LABEL表示结论和置信度来自标签分类。
      */
     public $Type;
+
     /**
      * @param integer $Code 该识别场景的错误码：
 0表示成功，
@@ -106,6 +105,7 @@ BLOCK：违规
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityGroupPolicies请求参数结构体
+ *
  * @method string getSecurityGroupId() 获取安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。
- */
-
-/**
- *DescribeSecurityGroupPolicies请求参数结构体
  */
 class DescribeSecurityGroupPoliciesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeSecurityGroupPoliciesRequest extends AbstractModel
      * @var string 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      */
     public $SecurityGroupId;
+
     /**
      * @param string $SecurityGroupId 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      */
@@ -38,6 +37,7 @@ class DescribeSecurityGroupPoliciesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

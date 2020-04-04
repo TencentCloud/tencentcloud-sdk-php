@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnassignIpv6Addresses请求参数结构体
+ *
  * @method string getNetworkInterfaceId() 获取弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
  * @method array getIpv6Addresses() 获取指定的`IPv6`地址列表，单次最多指定10个。
  * @method void setIpv6Addresses(array $Ipv6Addresses) 设置指定的`IPv6`地址列表，单次最多指定10个。
- */
-
-/**
- *UnassignIpv6Addresses请求参数结构体
  */
 class UnassignIpv6AddressesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UnassignIpv6AddressesRequest extends AbstractModel
      * @var array 指定的`IPv6`地址列表，单次最多指定10个。
      */
     public $Ipv6Addresses;
+
     /**
      * @param string $NetworkInterfaceId 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
      * @param array $Ipv6Addresses 指定的`IPv6`地址列表，单次最多指定10个。
@@ -46,6 +45,7 @@ class UnassignIpv6AddressesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

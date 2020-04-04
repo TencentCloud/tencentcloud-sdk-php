@@ -18,6 +18,8 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人体框
+ *
  * @method integer getX() 获取人体框左上角横坐标。
  * @method void setX(integer $X) 设置人体框左上角横坐标。
  * @method integer getY() 获取人体框左上角纵坐标。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) 设置人体宽度。
  * @method integer getHeight() 获取人体高度。
  * @method void setHeight(integer $Height) 设置人体高度。
- */
-
-/**
- *人体框
  */
 class BodyRect extends AbstractModel
 {
@@ -52,6 +50,7 @@ class BodyRect extends AbstractModel
      * @var integer 人体高度。
      */
     public $Height;
+
     /**
      * @param integer $X 人体框左上角横坐标。
      * @param integer $Y 人体框左上角纵坐标。
@@ -62,6 +61,7 @@ class BodyRect extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

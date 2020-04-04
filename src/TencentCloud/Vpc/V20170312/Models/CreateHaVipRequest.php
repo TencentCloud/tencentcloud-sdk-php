@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateHaVip请求参数结构体
+ *
  * @method string getVpcId() 获取`HAVIP`所在私有网络`ID`。
  * @method void setVpcId(string $VpcId) 设置`HAVIP`所在私有网络`ID`。
  * @method string getSubnetId() 获取`HAVIP`所在子网`ID`。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHaVipName(string $HaVipName) 设置`HAVIP`名称。
  * @method string getVip() 获取指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
  * @method void setVip(string $Vip) 设置指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
- */
-
-/**
- *CreateHaVip请求参数结构体
  */
 class CreateHaVipRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateHaVipRequest extends AbstractModel
      * @var string 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
      */
     public $Vip;
+
     /**
      * @param string $VpcId `HAVIP`所在私有网络`ID`。
      * @param string $SubnetId `HAVIP`所在子网`ID`。
@@ -62,6 +61,7 @@ class CreateHaVipRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 监听器的健康检查信息
+ *
  * @method string getListenerId() 获取监听器ID
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getListenerName() 获取监听器名称
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRules(array $Rules) 设置监听器的转发规则列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *监听器的健康检查信息
  */
 class ListenerHealth extends AbstractModel
 {
@@ -65,6 +63,7 @@ class ListenerHealth extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rules;
+
     /**
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
@@ -78,6 +77,7 @@ class ListenerHealth extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

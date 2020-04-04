@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 音频轨道上的音频片段信息。
+ *
  * @method string getSourceMedia() 获取音频素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
  * @method void setSourceMedia(string $SourceMedia) 设置音频素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
  * @method float getSourceMediaStartTime() 获取音频片段取自素材文件的起始时间，单位为秒。0 表示从素材开始位置截取。默认为0。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioOperations(array $AudioOperations) 设置对音频片段进行的操作，如音量调节等。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *音频轨道上的音频片段信息。
  */
 class AudioTrackItem extends AbstractModel
 {
@@ -55,6 +53,7 @@ class AudioTrackItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioOperations;
+
     /**
      * @param string $SourceMedia 音频素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
      * @param float $SourceMediaStartTime 音频片段取自素材文件的起始时间，单位为秒。0 表示从素材开始位置截取。默认为0。
@@ -66,6 +65,7 @@ class AudioTrackItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

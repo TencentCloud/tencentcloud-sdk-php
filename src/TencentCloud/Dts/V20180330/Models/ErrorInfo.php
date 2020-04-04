@@ -18,14 +18,12 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 迁移任务错误信息及提示
+ *
  * @method string getErrorLog() 获取具体的报错日志, 包含错误码和错误信息
  * @method void setErrorLog(string $ErrorLog) 设置具体的报错日志, 包含错误码和错误信息
  * @method string getHelpDoc() 获取报错对应的帮助文档Ur
  * @method void setHelpDoc(string $HelpDoc) 设置报错对应的帮助文档Ur
- */
-
-/**
- *迁移任务错误信息及提示
  */
 class ErrorInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ErrorInfo extends AbstractModel
      * @var string 报错对应的帮助文档Ur
      */
     public $HelpDoc;
+
     /**
      * @param string $ErrorLog 具体的报错日志, 包含错误码和错误信息
      * @param string $HelpDoc 报错对应的帮助文档Ur
@@ -46,6 +45,7 @@ class ErrorInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

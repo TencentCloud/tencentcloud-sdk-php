@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNetworkInterfaceLimit请求参数结构体
+ *
  * @method string getInstanceId() 获取要查询的CVM实例ID或弹性网卡ID
  * @method void setInstanceId(string $InstanceId) 设置要查询的CVM实例ID或弹性网卡ID
- */
-
-/**
- *DescribeNetworkInterfaceLimit请求参数结构体
  */
 class DescribeNetworkInterfaceLimitRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeNetworkInterfaceLimitRequest extends AbstractModel
      * @var string 要查询的CVM实例ID或弹性网卡ID
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 要查询的CVM实例ID或弹性网卡ID
      */
@@ -38,6 +37,7 @@ class DescribeNetworkInterfaceLimitRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

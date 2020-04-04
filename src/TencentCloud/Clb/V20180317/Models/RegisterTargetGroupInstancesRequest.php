@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RegisterTargetGroupInstances请求参数结构体
+ *
  * @method string getTargetGroupId() 获取目标组ID
  * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID
  * @method array getTargetGroupInstances() 获取服务器实例数组
  * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置服务器实例数组
- */
-
-/**
- *RegisterTargetGroupInstances请求参数结构体
  */
 class RegisterTargetGroupInstancesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RegisterTargetGroupInstancesRequest extends AbstractModel
      * @var array 服务器实例数组
      */
     public $TargetGroupInstances;
+
     /**
      * @param string $TargetGroupId 目标组ID
      * @param array $TargetGroupInstances 服务器实例数组
@@ -46,6 +45,7 @@ class RegisterTargetGroupInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

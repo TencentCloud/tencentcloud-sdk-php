@@ -18,14 +18,12 @@ namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeStations请求参数结构体
+ *
  * @method integer getLimit() 获取条数，必须大于0
  * @method void setLimit(integer $Limit) 设置条数，必须大于0
  * @method integer getOffset() 获取offset (Default = 0)，(当前页-1) * Limit
  * @method void setOffset(integer $Offset) 设置offset (Default = 0)，(当前页-1) * Limit
- */
-
-/**
- *DescribeStations请求参数结构体
  */
 class DescribeStationsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeStationsRequest extends AbstractModel
      * @var integer offset (Default = 0)，(当前页-1) * Limit
      */
     public $Offset;
+
     /**
      * @param integer $Limit 条数，必须大于0
      * @param integer $Offset offset (Default = 0)，(当前页-1) * Limit
@@ -46,6 +45,7 @@ class DescribeStationsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

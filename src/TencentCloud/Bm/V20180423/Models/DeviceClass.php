@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 物理机设备类型
+ *
  * @method string getDeviceClassCode() 获取机型ID
  * @method void setDeviceClassCode(string $DeviceClassCode) 设置机型ID
  * @method string getCpuDescription() 获取CPU描述
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) 设置cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
  * @method integer getMem() 获取内存容量。单位G
  * @method void setMem(integer $Mem) 设置内存容量。单位G
- */
-
-/**
- *物理机设备类型
  */
 class DeviceClass extends AbstractModel
 {
@@ -141,6 +139,7 @@ class DeviceClass extends AbstractModel
      * @var integer 内存容量。单位G
      */
     public $Mem;
+
     /**
      * @param string $DeviceClassCode 机型ID
      * @param string $CpuDescription CPU描述
@@ -166,6 +165,7 @@ class DeviceClass extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

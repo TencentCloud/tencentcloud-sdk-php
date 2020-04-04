@@ -18,6 +18,8 @@ namespace TencentCloud\Ic\V20190307\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 短信流水信息
+ *
  * @method string getCode() 获取该iccid请求状态
  * @method void setCode(string $Code) 设置该iccid请求状态
  * @method string getMsg() 获取短信发送返回信息
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIccid(string $Iccid) 设置卡片ID
  * @method string getSid() 获取流水ID
  * @method void setSid(string $Sid) 设置流水ID
- */
-
-/**
- *短信流水信息
  */
 class SmsRet extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SmsRet extends AbstractModel
      * @var string 流水ID
      */
     public $Sid;
+
     /**
      * @param string $Code 该iccid请求状态
      * @param string $Msg 短信发送返回信息
@@ -62,6 +61,7 @@ class SmsRet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

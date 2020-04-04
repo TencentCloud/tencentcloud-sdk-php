@@ -18,16 +18,14 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBLogFiles请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：dcdbt-ow7t8lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：dcdbt-ow7t8lmc。
  * @method string getShardId() 获取分片 ID，形如：shard-7noic7tv
  * @method void setShardId(string $ShardId) 设置分片 ID，形如：shard-7noic7tv
  * @method integer getType() 获取请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
  * @method void setType(integer $Type) 设置请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
- */
-
-/**
- *DescribeDBLogFiles请求参数结构体
  */
 class DescribeDBLogFilesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBLogFilesRequest extends AbstractModel
      * @var integer 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
      */
     public $Type;
+
     /**
      * @param string $InstanceId 实例 ID，形如：dcdbt-ow7t8lmc。
      * @param string $ShardId 分片 ID，形如：shard-7noic7tv
@@ -54,6 +53,7 @@ class DescribeDBLogFilesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

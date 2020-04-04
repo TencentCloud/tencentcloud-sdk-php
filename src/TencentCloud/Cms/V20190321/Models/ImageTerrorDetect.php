@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图片暴恐详情
+ *
  * @method integer getEvilType() 获取恶意类型
 100：正常
 24001：暴恐
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) 设置暴恐标签：返回暴恐特征中文描述
  * @method integer getScore() 获取暴恐分：分值范围0--100，分数越高暴恐倾向越明显
  * @method void setScore(integer $Score) 设置暴恐分：分值范围0--100，分数越高暴恐倾向越明显
- */
-
-/**
- *图片暴恐详情
  */
 class ImageTerrorDetect extends AbstractModel
 {
@@ -65,6 +63,7 @@ class ImageTerrorDetect extends AbstractModel
      * @var integer 暴恐分：分值范围0--100，分数越高暴恐倾向越明显
      */
     public $Score;
+
     /**
      * @param integer $EvilType 恶意类型
 100：正常
@@ -78,6 +77,7 @@ class ImageTerrorDetect extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAutoSnapshotPolicy请求参数结构体
+ *
  * @method array getPolicy() 获取定期快照的执行策略。
  * @method void setPolicy(array $Policy) 设置定期快照的执行策略。
  * @method string getAutoSnapshotPolicyName() 获取要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionDays(integer $RetentionDays) 设置通过该定期快照策略创建的快照保留天数，默认保留7天。如果指定本参数，则IsPermanent入参不可指定为TRUE，否则会产生冲突。
  * @method boolean getDryRun() 获取是否创建定期快照的执行策略。TRUE表示只需获取首次开始备份的时间，不实际创建定期快照策略，FALSE表示创建，默认为FALSE。
  * @method void setDryRun(boolean $DryRun) 设置是否创建定期快照的执行策略。TRUE表示只需获取首次开始备份的时间，不实际创建定期快照策略，FALSE表示创建，默认为FALSE。
- */
-
-/**
- *CreateAutoSnapshotPolicy请求参数结构体
  */
 class CreateAutoSnapshotPolicyRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
      * @var boolean 是否创建定期快照的执行策略。TRUE表示只需获取首次开始备份的时间，不实际创建定期快照策略，FALSE表示创建，默认为FALSE。
      */
     public $DryRun;
+
     /**
      * @param array $Policy 定期快照的执行策略。
      * @param string $AutoSnapshotPolicyName 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
@@ -78,6 +77,7 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

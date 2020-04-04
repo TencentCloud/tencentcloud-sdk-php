@@ -18,14 +18,12 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyClientRemark请求参数结构体
+ *
  * @method string getClientRemark() 获取客户备注名称
  * @method void setClientRemark(string $ClientRemark) 设置客户备注名称
  * @method string getClientUin() 获取客户账号ID
  * @method void setClientUin(string $ClientUin) 设置客户账号ID
- */
-
-/**
- *ModifyClientRemark请求参数结构体
  */
 class ModifyClientRemarkRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyClientRemarkRequest extends AbstractModel
      * @var string 客户账号ID
      */
     public $ClientUin;
+
     /**
      * @param string $ClientRemark 客户备注名称
      * @param string $ClientUin 客户账号ID
@@ -46,6 +45,7 @@ class ModifyClientRemarkRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

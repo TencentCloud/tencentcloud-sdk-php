@@ -18,6 +18,8 @@ namespace TencentCloud\Bri\V20190328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 响应
+ *
  * @method float getScore() 获取风险分值，取值[0,100], 分值越高风险越高
  * @method void setScore(float $Score) 设置风险分值，取值[0,100], 分值越高风险越高
  * @method array getTags() 获取当Service为bri_num时,返回的风险标签有:
@@ -71,10 +73,6 @@ use TencentCloud\Common\AbstractModel;
 3) 风险   说明: APK为外挂或色情等风险应用
 4) 病毒   说明: APK为包含恶意代码的恶意软件吗,可能破坏系统或者其他app正常使用
  */
-
-/**
- *响应
- */
 class BRIResponse extends AbstractModel
 {
     /**
@@ -110,6 +108,7 @@ class BRIResponse extends AbstractModel
 4) 病毒   说明: APK为包含恶意代码的恶意软件吗,可能破坏系统或者其他app正常使用
      */
     public $Tags;
+
     /**
      * @param float $Score 风险分值，取值[0,100], 分值越高风险越高
      * @param array $Tags 当Service为bri_num时,返回的风险标签有:
@@ -142,6 +141,7 @@ class BRIResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePlayErrorCodeSumInfoList返回参数结构体
+ *
  * @method array getProIspInfoList() 获取分省份分运营商错误码为4或5开头的状态码数据信息。
  * @method void setProIspInfoList(array $ProIspInfoList) 设置分省份分运营商错误码为4或5开头的状态码数据信息。
  * @method integer getTotalCodeAll() 获取所有状态码的加和的次数。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCode3xx(integer $TotalCode3xx) 设置状态码为3开头的总次数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribePlayErrorCodeSumInfoList返回参数结构体
  */
 class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel
 {
@@ -108,6 +106,7 @@ class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $ProIspInfoList 分省份分运营商错误码为4或5开头的状态码数据信息。
      * @param integer $TotalCodeAll 所有状态码的加和的次数。
@@ -126,6 +125,7 @@ class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

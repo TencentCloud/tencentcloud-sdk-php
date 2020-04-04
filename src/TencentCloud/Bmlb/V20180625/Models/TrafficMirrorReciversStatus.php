@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 流量镜像健康检查返回的接收机状态信息。
+ *
  * @method string getLanIp() 获取内网IP。
  * @method void setLanIp(string $LanIp) 设置内网IP。
  * @method array getReceiversPortStatusSet() 获取端口及对应的状态。
  * @method void setReceiversPortStatusSet(array $ReceiversPortStatusSet) 设置端口及对应的状态。
- */
-
-/**
- *流量镜像健康检查返回的接收机状态信息。
  */
 class TrafficMirrorReciversStatus extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TrafficMirrorReciversStatus extends AbstractModel
      * @var array 端口及对应的状态。
      */
     public $ReceiversPortStatusSet;
+
     /**
      * @param string $LanIp 内网IP。
      * @param array $ReceiversPortStatusSet 端口及对应的状态。
@@ -46,6 +45,7 @@ class TrafficMirrorReciversStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

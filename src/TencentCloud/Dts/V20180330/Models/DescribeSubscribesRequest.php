@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSubscribes请求参数结构体
+ *
  * @method string getSubscribeId() 获取数据订阅的实例ID
  * @method void setSubscribeId(string $SubscribeId) 设置数据订阅的实例ID
  * @method string getSubscribeName() 获取数据订阅的实例名称
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置单次返回的记录数量
  * @method string getOrderDirection() 获取排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
  * @method void setOrderDirection(string $OrderDirection) 设置排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
- */
-
-/**
- *DescribeSubscribes请求参数结构体
  */
 class DescribeSubscribesRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class DescribeSubscribesRequest extends AbstractModel
      * @var string 排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
      */
     public $OrderDirection;
+
     /**
      * @param string $SubscribeId 数据订阅的实例ID
      * @param string $SubscribeName 数据订阅的实例名称
@@ -118,6 +117,7 @@ class DescribeSubscribesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

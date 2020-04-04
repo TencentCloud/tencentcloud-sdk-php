@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备状态
+ *
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getStatus() 获取设备状态（inactive, online, offline）
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOnlineTimes() 获取上线次数
  * @method void setOnlineTimes(integer $OnlineTimes) 设置上线次数
- */
-
-/**
- *设备状态
  */
 class DeviceStatus extends AbstractModel
 {
@@ -65,6 +63,7 @@ class DeviceStatus extends AbstractModel
      * @var integer 上线次数
      */
     public $OnlineTimes;
+
     /**
      * @param string $DeviceName 设备名称
      * @param string $Status 设备状态（inactive, online, offline）
@@ -78,6 +77,7 @@ class DeviceStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

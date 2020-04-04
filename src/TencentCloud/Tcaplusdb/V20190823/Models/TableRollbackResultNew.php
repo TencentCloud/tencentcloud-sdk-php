@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 表格回档结果信息
+ *
  * @method string getTableInstanceId() 获取表格实例ID，形如：tcaplus-3be64cbb
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableInstanceId(string $TableInstanceId) 设置表格实例ID，形如：tcaplus-3be64cbb
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalKeyNum(integer $TotalKeyNum) 设置Key文件中包含总的Key数量
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *表格回档结果信息
  */
 class TableRollbackResultNew extends AbstractModel
 {
@@ -134,6 +132,7 @@ class TableRollbackResultNew extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalKeyNum;
+
     /**
      * @param string $TableInstanceId 表格实例ID，形如：tcaplus-3be64cbb
 注意：此字段可能返回 null，表示取不到有效值。
@@ -162,6 +161,7 @@ class TableRollbackResultNew extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

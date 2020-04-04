@@ -18,12 +18,10 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PauseTask请求参数结构体
+ *
  * @method integer getTaskId() 获取拨测任务id
  * @method void setTaskId(integer $TaskId) 设置拨测任务id
- */
-
-/**
- *PauseTask请求参数结构体
  */
 class PauseTaskRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class PauseTaskRequest extends AbstractModel
      * @var integer 拨测任务id
      */
     public $TaskId;
+
     /**
      * @param integer $TaskId 拨测任务id
      */
@@ -38,6 +37,7 @@ class PauseTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

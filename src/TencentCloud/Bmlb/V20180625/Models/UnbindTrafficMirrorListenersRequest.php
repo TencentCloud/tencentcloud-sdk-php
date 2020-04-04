@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnbindTrafficMirrorListeners请求参数结构体
+ *
  * @method string getTrafficMirrorId() 获取流量镜像实例ID。
  * @method void setTrafficMirrorId(string $TrafficMirrorId) 设置流量镜像实例ID。
  * @method array getListenerIds() 获取七层监听器实例ID数组，可通过接口DescribeL7Listeners查询。
  * @method void setListenerIds(array $ListenerIds) 设置七层监听器实例ID数组，可通过接口DescribeL7Listeners查询。
- */
-
-/**
- *UnbindTrafficMirrorListeners请求参数结构体
  */
 class UnbindTrafficMirrorListenersRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UnbindTrafficMirrorListenersRequest extends AbstractModel
      * @var array 七层监听器实例ID数组，可通过接口DescribeL7Listeners查询。
      */
     public $ListenerIds;
+
     /**
      * @param string $TrafficMirrorId 流量镜像实例ID。
      * @param array $ListenerIds 七层监听器实例ID数组，可通过接口DescribeL7Listeners查询。
@@ -46,6 +45,7 @@ class UnbindTrafficMirrorListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

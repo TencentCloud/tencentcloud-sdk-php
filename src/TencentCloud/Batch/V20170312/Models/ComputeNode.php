@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 计算节点
+ *
  * @method string getComputeNodeId() 获取计算节点ID
  * @method void setComputeNodeId(string $ComputeNodeId) 设置计算节点ID
  * @method string getComputeNodeInstanceId() 获取计算节点实例ID，对于CVM场景，即为CVM的InstanceId
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
 USER_ATTACHED：用户添加到计算环境中的实例资源。
  * @method void setResourceOrigin(string $ResourceOrigin) 设置计算环境资源来源。<br>BATCH_CREATED：由批量计算创建的实例资源。<br>
 USER_ATTACHED：用户添加到计算环境中的实例资源。
- */
-
-/**
- *计算节点
  */
 class ComputeNode extends AbstractModel
 {
@@ -111,6 +109,7 @@ class ComputeNode extends AbstractModel
 USER_ATTACHED：用户添加到计算环境中的实例资源。
      */
     public $ResourceOrigin;
+
     /**
      * @param string $ComputeNodeId 计算节点ID
      * @param string $ComputeNodeInstanceId 计算节点实例ID，对于CVM场景，即为CVM的InstanceId
@@ -130,6 +129,7 @@ USER_ATTACHED：用户添加到计算环境中的实例资源。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TimeInfoResult
+ *
  * @method integer getDuration() 获取持续时间，单位毫秒
  * @method void setDuration(integer $Duration) 设置持续时间，单位毫秒
  * @method integer getEndTs() 获取结束时间戳，单位毫秒
  * @method void setEndTs(integer $EndTs) 设置结束时间戳，单位毫秒
  * @method integer getStartTs() 获取开始时间戳，单位毫秒
  * @method void setStartTs(integer $StartTs) 设置开始时间戳，单位毫秒
- */
-
-/**
- *TimeInfoResult
  */
 class TimeInfoResult extends AbstractModel
 {
@@ -45,6 +43,7 @@ class TimeInfoResult extends AbstractModel
      * @var integer 开始时间戳，单位毫秒
      */
     public $StartTs;
+
     /**
      * @param integer $Duration 持续时间，单位毫秒
      * @param integer $EndTs 结束时间戳，单位毫秒
@@ -54,6 +53,7 @@ class TimeInfoResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHighlightResult请求参数结构体
+ *
  * @method integer getJobId() 获取精彩集锦任务唯一id。在URL方式时提交请求后会返回一个JobId，后续查询该url的结果时使用这个JobId进行查询。
  * @method void setJobId(integer $JobId) 设置精彩集锦任务唯一id。在URL方式时提交请求后会返回一个JobId，后续查询该url的结果时使用这个JobId进行查询。
- */
-
-/**
- *DescribeHighlightResult请求参数结构体
  */
 class DescribeHighlightResultRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeHighlightResultRequest extends AbstractModel
      * @var integer 精彩集锦任务唯一id。在URL方式时提交请求后会返回一个JobId，后续查询该url的结果时使用这个JobId进行查询。
      */
     public $JobId;
+
     /**
      * @param integer $JobId 精彩集锦任务唯一id。在URL方式时提交请求后会返回一个JobId，后续查询该url的结果时使用这个JobId进行查询。
      */
@@ -38,6 +37,7 @@ class DescribeHighlightResultRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

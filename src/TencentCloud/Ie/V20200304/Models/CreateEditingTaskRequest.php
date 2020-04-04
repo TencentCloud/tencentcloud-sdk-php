@@ -18,6 +18,8 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateEditingTask请求参数结构体
+ *
  * @method EditingInfo getEditingInfo() 获取智能编辑任务参数。
  * @method void setEditingInfo(EditingInfo $EditingInfo) 设置智能编辑任务参数。
  * @method DownInfo getDownInfo() 获取视频源信息。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSaveInfo(SaveInfo $SaveInfo) 设置结果存储信息。对于包含智能拆条、智能集锦或者智能封面的任务必选。
  * @method CallbackInfo getCallbackInfo() 获取任务结果回调地址信息。
  * @method void setCallbackInfo(CallbackInfo $CallbackInfo) 设置任务结果回调地址信息。
- */
-
-/**
- *CreateEditingTask请求参数结构体
  */
 class CreateEditingTaskRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateEditingTaskRequest extends AbstractModel
      * @var CallbackInfo 任务结果回调地址信息。
      */
     public $CallbackInfo;
+
     /**
      * @param EditingInfo $EditingInfo 智能编辑任务参数。
      * @param DownInfo $DownInfo 视频源信息。
@@ -62,6 +61,7 @@ class CreateEditingTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

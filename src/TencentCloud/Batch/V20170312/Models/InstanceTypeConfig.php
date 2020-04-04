@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 批量计算可用的InstanceTypeConfig信息
+ *
  * @method integer getMem() 获取内存容量，单位：`GB`。
  * @method void setMem(integer $Mem) 设置内存容量，单位：`GB`。
  * @method integer getCpu() 获取CPU核数，单位：核。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区。
  * @method string getInstanceFamily() 获取实例机型系列。
  * @method void setInstanceFamily(string $InstanceFamily) 设置实例机型系列。
- */
-
-/**
- *批量计算可用的InstanceTypeConfig信息
  */
 class InstanceTypeConfig extends AbstractModel
 {
@@ -59,6 +57,7 @@ class InstanceTypeConfig extends AbstractModel
      * @var string 实例机型系列。
      */
     public $InstanceFamily;
+
     /**
      * @param integer $Mem 内存容量，单位：`GB`。
      * @param integer $Cpu CPU核数，单位：核。
@@ -70,6 +69,7 @@ class InstanceTypeConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

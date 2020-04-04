@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 核身文本信息
+ *
  * @method integer getErrCode() 获取本次流程最终验证结果。0为成功
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrCode(integer $ErrCode) 设置本次流程最终验证结果。0为成功
@@ -102,10 +104,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMobile(string $Mobile) 设置手机号码。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *核身文本信息
  */
 class DetectInfoText extends AbstractModel
 {
@@ -234,6 +232,7 @@ class DetectInfoText extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mobile;
+
     /**
      * @param integer $ErrCode 本次流程最终验证结果。0为成功
 注意：此字段可能返回 null，表示取不到有效值。
@@ -282,6 +281,7 @@ class DetectInfoText extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

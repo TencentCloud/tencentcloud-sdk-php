@@ -18,12 +18,10 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 函数的环境变量参数
+ *
  * @method array getVariables() 获取环境变量数组
  * @method void setVariables(array $Variables) 设置环境变量数组
- */
-
-/**
- *函数的环境变量参数
  */
 class Environment extends AbstractModel
 {
@@ -31,6 +29,7 @@ class Environment extends AbstractModel
      * @var array 环境变量数组
      */
     public $Variables;
+
     /**
      * @param array $Variables 环境变量数组
      */
@@ -38,6 +37,7 @@ class Environment extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

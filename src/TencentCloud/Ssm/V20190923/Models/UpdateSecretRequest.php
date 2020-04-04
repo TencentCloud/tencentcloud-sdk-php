@@ -18,6 +18,8 @@ namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateSecret请求参数结构体
+ *
  * @method string getSecretName() 获取指定需要更新凭据内容的名称。
  * @method void setSecretName(string $SecretName) 设置指定需要更新凭据内容的名称。
  * @method string getVersionId() 获取指定需要更新凭据内容的版本号。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretBinary(string $SecretBinary) 设置新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。SecretBinary 和 SecretString 只能一个不为空。
  * @method string getSecretString() 获取新的凭据内容为文本的场景使用该字段，不需要base64编码。SecretBinary 和 SecretString 只能一个不为空。
  * @method void setSecretString(string $SecretString) 设置新的凭据内容为文本的场景使用该字段，不需要base64编码。SecretBinary 和 SecretString 只能一个不为空。
- */
-
-/**
- *UpdateSecret请求参数结构体
  */
 class UpdateSecretRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class UpdateSecretRequest extends AbstractModel
      * @var string 新的凭据内容为文本的场景使用该字段，不需要base64编码。SecretBinary 和 SecretString 只能一个不为空。
      */
     public $SecretString;
+
     /**
      * @param string $SecretName 指定需要更新凭据内容的名称。
      * @param string $VersionId 指定需要更新凭据内容的版本号。
@@ -62,6 +61,7 @@ class UpdateSecretRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

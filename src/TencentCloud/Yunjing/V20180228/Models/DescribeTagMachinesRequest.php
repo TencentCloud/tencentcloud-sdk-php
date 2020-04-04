@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTagMachines请求参数结构体
+ *
  * @method integer getId() 获取标签ID
  * @method void setId(integer $Id) 设置标签ID
- */
-
-/**
- *DescribeTagMachines请求参数结构体
  */
 class DescribeTagMachinesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeTagMachinesRequest extends AbstractModel
      * @var integer 标签ID
      */
     public $Id;
+
     /**
      * @param integer $Id 标签ID
      */
@@ -38,6 +37,7 @@ class DescribeTagMachinesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

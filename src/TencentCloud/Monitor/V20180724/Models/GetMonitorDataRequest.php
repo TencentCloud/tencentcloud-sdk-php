@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetMonitorData请求参数结构体
+ *
  * @method string getNamespace() 获取命名空间，每个云产品会有一个命名空间
  * @method void setNamespace(string $Namespace) 设置命名空间，每个云产品会有一个命名空间
  * @method string getMetricName() 获取指标名称，各个云产品的详细指标说明请参阅各个产品[监控接口](https://cloud.tencent.com/document/product/248/30384)文档
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置起始时间，如2018-09-22T19:51:23+08:00
  * @method string getEndTime() 获取结束时间，默认为当前时间。 EndTime不能小于StartTime
  * @method void setEndTime(string $EndTime) 设置结束时间，默认为当前时间。 EndTime不能小于StartTime
- */
-
-/**
- *GetMonitorData请求参数结构体
  */
 class GetMonitorDataRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class GetMonitorDataRequest extends AbstractModel
      * @var string 结束时间，默认为当前时间。 EndTime不能小于StartTime
      */
     public $EndTime;
+
     /**
      * @param string $Namespace 命名空间，每个云产品会有一个命名空间
      * @param string $MetricName 指标名称，各个云产品的详细指标说明请参阅各个产品[监控接口](https://cloud.tencent.com/document/product/248/30384)文档
@@ -78,6 +77,7 @@ class GetMonitorDataRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

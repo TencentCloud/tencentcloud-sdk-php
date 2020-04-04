@@ -18,12 +18,10 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteImageTags请求参数结构体
+ *
  * @method array getImageTags() 获取镜像版本数组
  * @method void setImageTags(array $ImageTags) 设置镜像版本数组
- */
-
-/**
- *DeleteImageTags请求参数结构体
  */
 class DeleteImageTagsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteImageTagsRequest extends AbstractModel
      * @var array 镜像版本数组
      */
     public $ImageTags;
+
     /**
      * @param array $ImageTags 镜像版本数组
      */
@@ -38,6 +37,7 @@ class DeleteImageTagsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

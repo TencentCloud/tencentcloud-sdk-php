@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 可用区售卖配置
+ *
  * @method integer getStatus() 获取可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
  * @method void setStatus(integer $Status) 设置可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
  * @method string getZoneName() 获取可用区中文名称
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoteRoZone(array $RemoteRoZone) 设置可支持的跨可用区只读区信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *可用区售卖配置
  */
 class ZoneSellConf extends AbstractModel
 {
@@ -139,6 +137,7 @@ class ZoneSellConf extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoteRoZone;
+
     /**
      * @param integer $Status 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
      * @param string $ZoneName 可用区中文名称
@@ -162,6 +161,7 @@ class ZoneSellConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

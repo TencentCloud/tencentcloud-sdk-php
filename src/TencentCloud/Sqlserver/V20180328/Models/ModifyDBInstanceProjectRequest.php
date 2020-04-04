@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstanceProject请求参数结构体
+ *
  * @method array getInstanceIdSet() 获取实例ID数组，形如mssql-j8kv137v
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置实例ID数组，形如mssql-j8kv137v
  * @method integer getProjectId() 获取项目ID，为0的话表示默认项目
  * @method void setProjectId(integer $ProjectId) 设置项目ID，为0的话表示默认项目
- */
-
-/**
- *ModifyDBInstanceProject请求参数结构体
  */
 class ModifyDBInstanceProjectRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBInstanceProjectRequest extends AbstractModel
      * @var integer 项目ID，为0的话表示默认项目
      */
     public $ProjectId;
+
     /**
      * @param array $InstanceIdSet 实例ID数组，形如mssql-j8kv137v
      * @param integer $ProjectId 项目ID，为0的话表示默认项目
@@ -46,6 +45,7 @@ class ModifyDBInstanceProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

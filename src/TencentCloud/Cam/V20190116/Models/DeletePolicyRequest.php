@@ -18,12 +18,10 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeletePolicy请求参数结构体
+ *
  * @method array getPolicyId() 获取数组，数组成员是策略 id，支持批量删除策略
  * @method void setPolicyId(array $PolicyId) 设置数组，数组成员是策略 id，支持批量删除策略
- */
-
-/**
- *DeletePolicy请求参数结构体
  */
 class DeletePolicyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeletePolicyRequest extends AbstractModel
      * @var array 数组，数组成员是策略 id，支持批量删除策略
      */
     public $PolicyId;
+
     /**
      * @param array $PolicyId 数组，数组成员是策略 id，支持批量删除策略
      */
@@ -38,6 +37,7 @@ class DeletePolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

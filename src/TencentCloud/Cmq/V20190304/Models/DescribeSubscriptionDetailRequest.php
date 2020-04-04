@@ -18,6 +18,8 @@ namespace TencentCloud\Cmq\V20190304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSubscriptionDetail请求参数结构体
+ *
  * @method string getTopicName() 获取主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
  * @method void setTopicName(string $TopicName) 设置主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
  * @method integer getOffset() 获取分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
  * @method array getFilters() 获取筛选参数，目前只支持SubscriptionName，且仅支持一个关键字。
  * @method void setFilters(array $Filters) 设置筛选参数，目前只支持SubscriptionName，且仅支持一个关键字。
- */
-
-/**
- *DescribeSubscriptionDetail请求参数结构体
  */
 class DescribeSubscriptionDetailRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeSubscriptionDetailRequest extends AbstractModel
      * @var array 筛选参数，目前只支持SubscriptionName，且仅支持一个关键字。
      */
     public $Filters;
+
     /**
      * @param string $TopicName 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
      * @param integer $Offset 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
@@ -62,6 +61,7 @@ class DescribeSubscriptionDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

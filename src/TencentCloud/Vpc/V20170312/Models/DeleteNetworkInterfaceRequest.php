@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteNetworkInterface请求参数结构体
+ *
  * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-m6dyj72l。
- */
-
-/**
- *DeleteNetworkInterface请求参数结构体
  */
 class DeleteNetworkInterfaceRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteNetworkInterfaceRequest extends AbstractModel
      * @var string 弹性网卡实例ID，例如：eni-m6dyj72l。
      */
     public $NetworkInterfaceId;
+
     /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      */
@@ -38,6 +37,7 @@ class DeleteNetworkInterfaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

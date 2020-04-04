@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDDoSPolicyCase返回参数结构体
+ *
  * @method string getSceneId() 获取策略场景ID
  * @method void setSceneId(string $SceneId) 设置策略场景ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateDDoSPolicyCase返回参数结构体
  */
 class CreateDDoSPolicyCaseResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateDDoSPolicyCaseResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $SceneId 策略场景ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateDDoSPolicyCaseResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

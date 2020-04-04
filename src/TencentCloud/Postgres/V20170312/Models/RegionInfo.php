@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述地域的编码和状态等信息
+ *
  * @method string getRegion() 获取该地域对应的英文名称
  * @method void setRegion(string $Region) 设置该地域对应的英文名称
  * @method string getRegionName() 获取该地域对应的中文名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionId(integer $RegionId) 设置该地域对应的数字编号
  * @method string getRegionState() 获取可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
  * @method void setRegionState(string $RegionState) 设置可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
- */
-
-/**
- *描述地域的编码和状态等信息
  */
 class RegionInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RegionInfo extends AbstractModel
      * @var string 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
      */
     public $RegionState;
+
     /**
      * @param string $Region 该地域对应的英文名称
      * @param string $RegionName 该地域对应的中文名称
@@ -62,6 +61,7 @@ class RegionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

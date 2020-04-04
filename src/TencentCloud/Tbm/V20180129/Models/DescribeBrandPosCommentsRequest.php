@@ -18,6 +18,8 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBrandPosComments请求参数结构体
+ *
  * @method string getBrandId() 获取品牌ID
  * @method void setBrandId(string $BrandId) 设置品牌ID
  * @method string getStartDate() 获取查询开始时间
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置查询条数上限，默认20
  * @method integer getOffset() 获取查询偏移，从0开始
  * @method void setOffset(integer $Offset) 设置查询偏移，从0开始
- */
-
-/**
- *DescribeBrandPosComments请求参数结构体
  */
 class DescribeBrandPosCommentsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeBrandPosCommentsRequest extends AbstractModel
      * @var integer 查询偏移，从0开始
      */
     public $Offset;
+
     /**
      * @param string $BrandId 品牌ID
      * @param string $StartDate 查询开始时间
@@ -70,6 +69,7 @@ class DescribeBrandPosCommentsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

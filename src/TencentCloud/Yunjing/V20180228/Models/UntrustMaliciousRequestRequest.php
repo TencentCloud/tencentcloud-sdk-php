@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UntrustMaliciousRequest请求参数结构体
+ *
  * @method integer getId() 获取受信任记录ID。
  * @method void setId(integer $Id) 设置受信任记录ID。
- */
-
-/**
- *UntrustMaliciousRequest请求参数结构体
  */
 class UntrustMaliciousRequestRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class UntrustMaliciousRequestRequest extends AbstractModel
      * @var integer 受信任记录ID。
      */
     public $Id;
+
     /**
      * @param integer $Id 受信任记录ID。
      */
@@ -38,6 +37,7 @@ class UntrustMaliciousRequestRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

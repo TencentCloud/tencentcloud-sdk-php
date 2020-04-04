@@ -18,12 +18,10 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StartMigrateJob请求参数结构体
+ *
  * @method string getJobId() 获取数据迁移任务ID
  * @method void setJobId(string $JobId) 设置数据迁移任务ID
- */
-
-/**
- *StartMigrateJob请求参数结构体
  */
 class StartMigrateJobRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class StartMigrateJobRequest extends AbstractModel
      * @var string 数据迁移任务ID
      */
     public $JobId;
+
     /**
      * @param string $JobId 数据迁移任务ID
      */
@@ -38,6 +37,7 @@ class StartMigrateJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

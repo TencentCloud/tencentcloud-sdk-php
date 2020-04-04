@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeFlowLog请求参数结构体
+ *
  * @method string getVpcId() 获取私用网络ID或者统一ID，建议使用统一ID
  * @method void setVpcId(string $VpcId) 设置私用网络ID或者统一ID，建议使用统一ID
  * @method string getFlowLogId() 获取流日志唯一ID
  * @method void setFlowLogId(string $FlowLogId) 设置流日志唯一ID
- */
-
-/**
- *DescribeFlowLog请求参数结构体
  */
 class DescribeFlowLogRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeFlowLogRequest extends AbstractModel
      * @var string 流日志唯一ID
      */
     public $FlowLogId;
+
     /**
      * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID
      * @param string $FlowLogId 流日志唯一ID
@@ -46,6 +45,7 @@ class DescribeFlowLogRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

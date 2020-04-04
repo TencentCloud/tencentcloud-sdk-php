@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindingPolicyObject请求参数结构体
+ *
  * @method integer getGroupId() 获取策略分组Id
  * @method void setGroupId(integer $GroupId) 设置策略分组Id
  * @method string getModule() 获取必填。固定值"monitor"
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组ID
  * @method array getDimensions() 获取需要绑定的对象维度信息
  * @method void setDimensions(array $Dimensions) 设置需要绑定的对象维度信息
- */
-
-/**
- *BindingPolicyObject请求参数结构体
  */
 class BindingPolicyObjectRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class BindingPolicyObjectRequest extends AbstractModel
      * @var array 需要绑定的对象维度信息
      */
     public $Dimensions;
+
     /**
      * @param integer $GroupId 策略分组Id
      * @param string $Module 必填。固定值"monitor"
@@ -62,6 +61,7 @@ class BindingPolicyObjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

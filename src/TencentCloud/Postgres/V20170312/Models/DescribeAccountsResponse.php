@@ -18,16 +18,14 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccounts返回参数结构体
+ *
  * @method integer getTotalCount() 获取本次调用接口共返回了多少条数据。
  * @method void setTotalCount(integer $TotalCount) 设置本次调用接口共返回了多少条数据。
  * @method array getDetails() 获取帐号列表详细信息。
  * @method void setDetails(array $Details) 设置帐号列表详细信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAccounts返回参数结构体
  */
 class DescribeAccountsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAccountsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 本次调用接口共返回了多少条数据。
      * @param array $Details 帐号列表详细信息。
@@ -54,6 +53,7 @@ class DescribeAccountsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

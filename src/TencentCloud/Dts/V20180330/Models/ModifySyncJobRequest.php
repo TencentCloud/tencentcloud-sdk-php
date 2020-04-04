@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySyncJob请求参数结构体
+ *
  * @method string getJobId() 获取待修改的灾备同步任务ID
  * @method void setJobId(string $JobId) 设置待修改的灾备同步任务ID
  * @method string getJobName() 获取灾备同步任务名称
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabaseInfo(string $DatabaseInfo) 设置当选择'指定库表'灾备同步的时候, 需要设置待同步的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
 对于database-table两级结构的数据库：
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
- */
-
-/**
- *ModifySyncJob请求参数结构体
  */
 class ModifySyncJobRequest extends AbstractModel
 {
@@ -58,6 +56,7 @@ class ModifySyncJobRequest extends AbstractModel
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
      */
     public $DatabaseInfo;
+
     /**
      * @param string $JobId 待修改的灾备同步任务ID
      * @param string $JobName 灾备同步任务名称
@@ -70,6 +69,7 @@ class ModifySyncJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 网络探测对象。
+ *
  * @method string getVpcId() 获取`VPC`实例`ID`。形如：`vpc-12345678`
  * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。形如：`vpc-12345678`
  * @method string getVpcName() 获取`VPC`实例名称。
@@ -70,10 +72,6 @@ NORMAL_CVM：普通云服务器；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *网络探测对象。
  */
 class NetDetect extends AbstractModel
 {
@@ -154,6 +152,7 @@ NORMAL_CVM：普通云服务器；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
+
     /**
      * @param string $VpcId `VPC`实例`ID`。形如：`vpc-12345678`
      * @param string $VpcName `VPC`实例名称。
@@ -186,6 +185,7 @@ NORMAL_CVM：普通云服务器；
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeIp6Translators请求参数结构体
+ *
  * @method array getIp6TranslatorIds() 获取IPV6转换实例唯一ID数组，形如ip6-xxxxxxxx
  * @method void setIp6TranslatorIds(array $Ip6TranslatorIds) 设置IPV6转换实例唯一ID数组，形如ip6-xxxxxxxx
  * @method array getFilters() 获取每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`Ip6TranslatorIds`和`Filters`。详细的过滤条件如下：
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
- */
-
-/**
- *DescribeIp6Translators请求参数结构体
  */
 class DescribeIp6TranslatorsRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ class DescribeIp6TranslatorsRequest extends AbstractModel
      * @var integer 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
      */
     public $Limit;
+
     /**
      * @param array $Ip6TranslatorIds IPV6转换实例唯一ID数组，形如ip6-xxxxxxxx
      * @param array $Filters 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`Ip6TranslatorIds`和`Filters`。详细的过滤条件如下：
@@ -78,6 +77,7 @@ class DescribeIp6TranslatorsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

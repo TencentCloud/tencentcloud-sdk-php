@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全事件消息数据。
+ *
  * @method string getUuid() 获取云镜客户端UUID。
  * @method void setUuid(string $Uuid) 设置云镜客户端UUID。
  * @method string getEventTime() 获取安全事件发生事件。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 <li>BASELINE：安全基线</li>
  * @method string getMessage() 获取安全事件消息。
  * @method void setMessage(string $Message) 设置安全事件消息。
- */
-
-/**
- *安全事件消息数据。
  */
 class SecurityDynamic extends AbstractModel
 {
@@ -67,6 +65,7 @@ class SecurityDynamic extends AbstractModel
      * @var string 安全事件消息。
      */
     public $Message;
+
     /**
      * @param string $Uuid 云镜客户端UUID。
      * @param string $EventTime 安全事件发生事件。
@@ -82,6 +81,7 @@ class SecurityDynamic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

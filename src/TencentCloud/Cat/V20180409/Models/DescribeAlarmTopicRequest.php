@@ -18,12 +18,10 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAlarmTopic请求参数结构体
+ *
  * @method integer getNeedAdd() 获取如果不存在拨测相关的主题，是否自动创建一个。取值可为0, 1，默认为0
  * @method void setNeedAdd(integer $NeedAdd) 设置如果不存在拨测相关的主题，是否自动创建一个。取值可为0, 1，默认为0
- */
-
-/**
- *DescribeAlarmTopic请求参数结构体
  */
 class DescribeAlarmTopicRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeAlarmTopicRequest extends AbstractModel
      * @var integer 如果不存在拨测相关的主题，是否自动创建一个。取值可为0, 1，默认为0
      */
     public $NeedAdd;
+
     /**
      * @param integer $NeedAdd 如果不存在拨测相关的主题，是否自动创建一个。取值可为0, 1，默认为0
      */
@@ -38,6 +37,7 @@ class DescribeAlarmTopicRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

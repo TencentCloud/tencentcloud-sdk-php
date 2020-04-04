@@ -18,14 +18,13 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeIpBlockList请求参数结构体
+ *
 
- */
-
-/**
- *DescribeIpBlockList请求参数结构体
  */
 class DescribeIpBlockListRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeIpBlockListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

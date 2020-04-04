@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 组件统计数据。
+ *
  * @method integer getId() 获取组件ID。
  * @method void setId(integer $Id) 设置组件ID。
  * @method integer getMachineNum() 获取主机数量。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 <li>SYSTEM：系统组件</li>
  * @method string getDescription() 获取组件描述。
  * @method void setDescription(string $Description) 设置组件描述。
- */
-
-/**
- *组件统计数据。
  */
 class ComponentStatistics extends AbstractModel
 {
@@ -65,6 +63,7 @@ class ComponentStatistics extends AbstractModel
      * @var string 组件描述。
      */
     public $Description;
+
     /**
      * @param integer $Id 组件ID。
      * @param integer $MachineNum 主机数量。
@@ -78,6 +77,7 @@ class ComponentStatistics extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

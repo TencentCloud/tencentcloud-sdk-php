@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupSummaries请求参数结构体
+ *
  * @method string getProduct() 获取需要查询的云数据库产品类型，目前仅支持 "mysql"。
  * @method void setProduct(string $Product) 设置需要查询的云数据库产品类型，目前仅支持 "mysql"。
  * @method integer getOffset() 获取分页查询数据的偏移量。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。
  * @method string getOrderDirection() 获取指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。
  * @method void setOrderDirection(string $OrderDirection) 设置指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。
- */
-
-/**
- *DescribeBackupSummaries请求参数结构体
  */
 class DescribeBackupSummariesRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeBackupSummariesRequest extends AbstractModel
      * @var string 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。
      */
     public $OrderDirection;
+
     /**
      * @param string $Product 需要查询的云数据库产品类型，目前仅支持 "mysql"。
      * @param integer $Offset 分页查询数据的偏移量。
@@ -70,6 +69,7 @@ class DescribeBackupSummariesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

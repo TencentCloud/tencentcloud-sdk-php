@@ -18,14 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNotificationConfiguration返回参数结构体
+ *
  * @method string getAutoScalingNotificationId() 获取通知ID。
  * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) 设置通知ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateNotificationConfiguration返回参数结构体
  */
 class CreateNotificationConfigurationResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateNotificationConfigurationResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $AutoScalingNotificationId 通知ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateNotificationConfigurationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

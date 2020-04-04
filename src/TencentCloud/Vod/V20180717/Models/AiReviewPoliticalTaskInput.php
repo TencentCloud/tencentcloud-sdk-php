@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内容审核鉴政任务输入参数类型
+ *
  * @method integer getDefinition() 获取鉴政模板 ID。
  * @method void setDefinition(integer $Definition) 设置鉴政模板 ID。
- */
-
-/**
- *内容审核鉴政任务输入参数类型
  */
 class AiReviewPoliticalTaskInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiReviewPoliticalTaskInput extends AbstractModel
      * @var integer 鉴政模板 ID。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 鉴政模板 ID。
      */
@@ -38,6 +37,7 @@ class AiReviewPoliticalTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

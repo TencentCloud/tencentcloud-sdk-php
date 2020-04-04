@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTrafficPackages请求参数结构体
+ *
  * @method integer getOffset() 获取分页查询起始地址，默认 0（第一页）
  * @method void setOffset(integer $Offset) 设置分页查询起始地址，默认 0（第一页）
  * @method integer getLimit() 获取分页查询记录个数，默认100，最大1000
  * @method void setLimit(integer $Limit) 设置分页查询记录个数，默认100，最大1000
- */
-
-/**
- *DescribeTrafficPackages请求参数结构体
  */
 class DescribeTrafficPackagesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeTrafficPackagesRequest extends AbstractModel
      * @var integer 分页查询记录个数，默认100，最大1000
      */
     public $Limit;
+
     /**
      * @param integer $Offset 分页查询起始地址，默认 0（第一页）
      * @param integer $Limit 分页查询记录个数，默认100，最大1000
@@ -46,6 +45,7 @@ class DescribeTrafficPackagesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SubmitCertificateInformation请求参数结构体
+ *
  * @method string getCertificateId() 获取证书 ID。
  * @method void setCertificateId(string $CertificateId) 设置证书 ID。
  * @method string getCsrType() 获取CSR 生成方式：online = 在线生成, parse = 手动上传 。
@@ -70,10 +72,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContactNumber(string $ContactNumber) 设置联系人手机号码 。
  * @method string getContactPosition() 获取联系人职位。
  * @method void setContactPosition(string $ContactPosition) 设置联系人职位。
- */
-
-/**
- *SubmitCertificateInformation请求参数结构体
  */
 class SubmitCertificateInformationRequest extends AbstractModel
 {
@@ -206,6 +204,7 @@ class SubmitCertificateInformationRequest extends AbstractModel
      * @var string 联系人职位。
      */
     public $ContactPosition;
+
     /**
      * @param string $CertificateId 证书 ID。
      * @param string $CsrType CSR 生成方式：online = 在线生成, parse = 手动上传 。
@@ -238,6 +237,7 @@ class SubmitCertificateInformationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

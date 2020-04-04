@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频转动图结果信息
+ *
  * @method string getUrl() 获取转动图的文件地址。
  * @method void setUrl(string $Url) 设置转动图的文件地址。
  * @method integer getDefinition() 获取转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置动图在视频中的起始时间偏移，单位：秒。
  * @method float getEndTimeOffset() 获取动图在视频中的结束时间偏移，单位：秒。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置动图在视频中的结束时间偏移，单位：秒。
- */
-
-/**
- *视频转动图结果信息
  */
 class MediaAnimatedGraphicsItem extends AbstractModel
 {
@@ -94,6 +92,7 @@ class MediaAnimatedGraphicsItem extends AbstractModel
      * @var float 动图在视频中的结束时间偏移，单位：秒。
      */
     public $EndTimeOffset;
+
     /**
      * @param string $Url 转动图的文件地址。
      * @param integer $Definition 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
@@ -110,6 +109,7 @@ class MediaAnimatedGraphicsItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

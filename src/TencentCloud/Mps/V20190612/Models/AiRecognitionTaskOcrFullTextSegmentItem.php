@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文本全文识别片段。
+ *
  * @method float getStartTimeOffset() 获取识别片段起始的偏移时间，单位：秒。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置识别片段起始的偏移时间，单位：秒。
  * @method float getEndTimeOffset() 获取识别片段终止的偏移时间，单位：秒。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置识别片段终止的偏移时间，单位：秒。
  * @method array getTextSet() 获取识别片段结果集。
  * @method void setTextSet(array $TextSet) 设置识别片段结果集。
- */
-
-/**
- *文本全文识别片段。
  */
 class AiRecognitionTaskOcrFullTextSegmentItem extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AiRecognitionTaskOcrFullTextSegmentItem extends AbstractModel
      * @var array 识别片段结果集。
      */
     public $TextSet;
+
     /**
      * @param float $StartTimeOffset 识别片段起始的偏移时间，单位：秒。
      * @param float $EndTimeOffset 识别片段终止的偏移时间，单位：秒。
@@ -54,6 +53,7 @@ class AiRecognitionTaskOcrFullTextSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

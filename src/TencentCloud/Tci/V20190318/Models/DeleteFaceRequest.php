@@ -18,16 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteFace请求参数结构体
+ *
  * @method array getFaceIdSet() 获取人脸标识符数组
  * @method void setFaceIdSet(array $FaceIdSet) 设置人脸标识符数组
  * @method string getPersonId() 获取人员唯一标识符
  * @method void setPersonId(string $PersonId) 设置人员唯一标识符
  * @method string getLibraryId() 获取人员库唯一标识符
  * @method void setLibraryId(string $LibraryId) 设置人员库唯一标识符
- */
-
-/**
- *DeleteFace请求参数结构体
  */
 class DeleteFaceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteFaceRequest extends AbstractModel
      * @var string 人员库唯一标识符
      */
     public $LibraryId;
+
     /**
      * @param array $FaceIdSet 人脸标识符数组
      * @param string $PersonId 人员唯一标识符
@@ -54,6 +53,7 @@ class DeleteFaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

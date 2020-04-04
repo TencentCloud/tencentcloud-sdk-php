@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePersonSamples返回参数结构体
+ *
  * @method integer getTotalCount() 获取符合条件的记录总数。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的记录总数。
  * @method array getPersonSet() 获取人物信息。
  * @method void setPersonSet(array $PersonSet) 设置人物信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribePersonSamples返回参数结构体
  */
 class DescribePersonSamplesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribePersonSamplesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 符合条件的记录总数。
      * @param array $PersonSet 人物信息。
@@ -54,6 +53,7 @@ class DescribePersonSamplesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

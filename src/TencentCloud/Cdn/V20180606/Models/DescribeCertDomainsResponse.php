@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCertDomains返回参数结构体
+ *
  * @method array getDomains() 获取已接入CDN的域名列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomains(array $Domains) 设置已接入CDN的域名列表
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeCertDomains返回参数结构体
  */
 class DescribeCertDomainsResponse extends AbstractModel
 {
@@ -51,6 +49,7 @@ class DescribeCertDomainsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Domains 已接入CDN的域名列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -62,6 +61,7 @@ class DescribeCertDomainsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

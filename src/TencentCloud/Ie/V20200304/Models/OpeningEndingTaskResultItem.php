@@ -18,6 +18,8 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 片头片尾识别结果项
+ *
  * @method float getOpeningTimeOffset() 获取视频片头的结束时间点，单位：秒。
  * @method void setOpeningTimeOffset(float $OpeningTimeOffset) 设置视频片头的结束时间点，单位：秒。
  * @method float getOpeningConfidence() 获取片头识别置信度，取值范围是 0 到 100。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndingTimeOffset(float $EndingTimeOffset) 设置视频片尾的开始时间点，单位：秒。
  * @method float getEndingConfidence() 获取片尾识别置信度，取值范围是 0 到 100。
  * @method void setEndingConfidence(float $EndingConfidence) 设置片尾识别置信度，取值范围是 0 到 100。
- */
-
-/**
- *片头片尾识别结果项
  */
 class OpeningEndingTaskResultItem extends AbstractModel
 {
@@ -52,6 +50,7 @@ class OpeningEndingTaskResultItem extends AbstractModel
      * @var float 片尾识别置信度，取值范围是 0 到 100。
      */
     public $EndingConfidence;
+
     /**
      * @param float $OpeningTimeOffset 视频片头的结束时间点，单位：秒。
      * @param float $OpeningConfidence 片头识别置信度，取值范围是 0 到 100。
@@ -62,6 +61,7 @@ class OpeningEndingTaskResultItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

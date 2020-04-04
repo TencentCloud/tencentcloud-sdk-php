@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceTypeConfigs请求参数结构体
+ *
  * @method array getFilters() 获取过滤条件。
 <li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](https://cloud.tencent.com/document/product/213/15753#ZoneInfo)过滤。</li>
 <li> instance-family - String - 是否必填：否 -（过滤条件）按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 <li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](https://cloud.tencent.com/document/product/213/15753#ZoneInfo)过滤。</li>
 <li> instance-family - String - 是否必填：否 -（过滤条件）按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
 每次请求的`Filters`的上限为10，`Filter.Values`的上限为1。
- */
-
-/**
- *DescribeInstanceTypeConfigs请求参数结构体
  */
 class DescribeInstanceTypeConfigsRequest extends AbstractModel
 {
@@ -40,6 +38,7 @@ class DescribeInstanceTypeConfigsRequest extends AbstractModel
 每次请求的`Filters`的上限为10，`Filter.Values`的上限为1。
      */
     public $Filters;
+
     /**
      * @param array $Filters 过滤条件。
 <li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](https://cloud.tencent.com/document/product/213/15753#ZoneInfo)过滤。</li>
@@ -50,6 +49,7 @@ class DescribeInstanceTypeConfigsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

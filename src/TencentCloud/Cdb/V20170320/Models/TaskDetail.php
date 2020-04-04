@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例任务详情
+ *
  * @method integer getCode() 获取错误码。
  * @method void setCode(integer $Code) 设置错误码。
  * @method string getMessage() 获取错误信息。
@@ -80,10 +82,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAsyncRequestId() 获取异步任务的请求 ID。
  * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务的请求 ID。
- */
-
-/**
- *实例任务详情
  */
 class TaskDetail extends AbstractModel
 {
@@ -157,6 +155,7 @@ class TaskDetail extends AbstractModel
      * @var string 异步任务的请求 ID。
      */
     public $AsyncRequestId;
+
     /**
      * @param integer $Code 错误码。
      * @param string $Message 错误信息。
@@ -194,6 +193,7 @@ class TaskDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

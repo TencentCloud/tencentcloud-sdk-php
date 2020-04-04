@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ForbidMediaDistribution返回参数结构体
+ *
  * @method array getNotExistFileIdSet() 获取不存在的文件 ID 列表。
  * @method void setNotExistFileIdSet(array $NotExistFileIdSet) 设置不存在的文件 ID 列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ForbidMediaDistribution返回参数结构体
  */
 class ForbidMediaDistributionResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ForbidMediaDistributionResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $NotExistFileIdSet 不存在的文件 ID 列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class ForbidMediaDistributionResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

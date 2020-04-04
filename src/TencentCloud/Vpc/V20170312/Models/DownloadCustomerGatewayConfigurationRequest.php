@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DownloadCustomerGatewayConfiguration请求参数结构体
+ *
  * @method string getVpnGatewayId() 获取VPN网关实例ID。
  * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
  * @method string getVpnConnectionId() 获取VPN通道实例ID。形如：vpnx-f49l6u0z。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomerGatewayVendor(CustomerGatewayVendor $CustomerGatewayVendor) 设置对端网关厂商信息对象，可通过DescribeCustomerGatewayVendors获取。
  * @method string getInterfaceName() 获取通道接入设备物理接口名称。
  * @method void setInterfaceName(string $InterfaceName) 设置通道接入设备物理接口名称。
- */
-
-/**
- *DownloadCustomerGatewayConfiguration请求参数结构体
  */
 class DownloadCustomerGatewayConfigurationRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DownloadCustomerGatewayConfigurationRequest extends AbstractModel
      * @var string 通道接入设备物理接口名称。
      */
     public $InterfaceName;
+
     /**
      * @param string $VpnGatewayId VPN网关实例ID。
      * @param string $VpnConnectionId VPN通道实例ID。形如：vpnx-f49l6u0z。
@@ -62,6 +61,7 @@ class DownloadCustomerGatewayConfigurationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

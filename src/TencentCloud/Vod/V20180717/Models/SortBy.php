@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 排序依据
+ *
  * @method string getField() 获取排序字段
  * @method void setField(string $Field) 设置排序字段
  * @method string getOrder() 获取排序方式，可选值：Asc（升序）、Desc（降序）
  * @method void setOrder(string $Order) 设置排序方式，可选值：Asc（升序）、Desc（降序）
- */
-
-/**
- *排序依据
  */
 class SortBy extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SortBy extends AbstractModel
      * @var string 排序方式，可选值：Asc（升序）、Desc（降序）
      */
     public $Order;
+
     /**
      * @param string $Field 排序字段
      * @param string $Order 排序方式，可选值：Asc（升序）、Desc（降序）
@@ -46,6 +45,7 @@ class SortBy extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstancesProject请求参数结构体
+ *
  * @method array getInstanceIds() 获取待修改的实例ID列表。实例 ID 形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method void setInstanceIds(array $InstanceIds) 设置待修改的实例ID列表。实例 ID 形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method integer getProjectId() 获取要分配的项目 ID，可以通过 DescribeProjects 查询项目列表接口获取。
  * @method void setProjectId(integer $ProjectId) 设置要分配的项目 ID，可以通过 DescribeProjects 查询项目列表接口获取。
- */
-
-/**
- *ModifyDBInstancesProject请求参数结构体
  */
 class ModifyDBInstancesProjectRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBInstancesProjectRequest extends AbstractModel
      * @var integer 要分配的项目 ID，可以通过 DescribeProjects 查询项目列表接口获取。
      */
     public $ProjectId;
+
     /**
      * @param array $InstanceIds 待修改的实例ID列表。实例 ID 形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param integer $ProjectId 要分配的项目 ID，可以通过 DescribeProjects 查询项目列表接口获取。
@@ -46,6 +45,7 @@ class ModifyDBInstancesProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

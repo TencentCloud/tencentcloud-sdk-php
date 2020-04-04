@@ -18,14 +18,12 @@ namespace TencentCloud\Captcha\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCaptchaOperData方法 尝试次数分布 type = 4
+ *
  * @method integer getTryCount() 获取尝试次数
  * @method void setTryCount(integer $TryCount) 设置尝试次数
  * @method integer getUserCount() 获取用户请求数量
  * @method void setUserCount(integer $UserCount) 设置用户请求数量
- */
-
-/**
- *DescribeCaptchaOperData方法 尝试次数分布 type = 4
  */
 class CaptchaOperDataTryTimesDistributeUnit extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CaptchaOperDataTryTimesDistributeUnit extends AbstractModel
      * @var integer 用户请求数量
      */
     public $UserCount;
+
     /**
      * @param integer $TryCount 尝试次数
      * @param integer $UserCount 用户请求数量
@@ -46,6 +45,7 @@ class CaptchaOperDataTryTimesDistributeUnit extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

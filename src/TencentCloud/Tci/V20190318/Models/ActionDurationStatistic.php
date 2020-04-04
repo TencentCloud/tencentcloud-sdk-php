@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 时长统计结果
+ *
  * @method integer getDuration() 获取时长
  * @method void setDuration(integer $Duration) 设置时长
  * @method string getName() 获取名称
  * @method void setName(string $Name) 设置名称
- */
-
-/**
- *时长统计结果
  */
 class ActionDurationStatistic extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ActionDurationStatistic extends AbstractModel
      * @var string 名称
      */
     public $Name;
+
     /**
      * @param integer $Duration 时长
      * @param string $Name 名称
@@ -46,6 +45,7 @@ class ActionDurationStatistic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

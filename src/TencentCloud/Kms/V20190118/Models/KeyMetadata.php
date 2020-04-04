@@ -18,6 +18,8 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CMK属性信息
+ *
  * @method string getKeyId() 获取CMK的全局唯一标识
  * @method void setKeyId(string $KeyId) 设置CMK的全局唯一标识
  * @method string getAlias() 获取作为密钥更容易辨识，更容易被人看懂的别名
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidTo(integer $ValidTo) 设置在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *CMK属性信息
  */
 class KeyMetadata extends AbstractModel
 {
@@ -131,6 +129,7 @@ class KeyMetadata extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidTo;
+
     /**
      * @param string $KeyId CMK的全局唯一标识
      * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名
@@ -154,6 +153,7 @@ class KeyMetadata extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AgentTransferMoney请求参数结构体
+ *
  * @method string getClientUin() 获取客户账号ID
  * @method void setClientUin(string $ClientUin) 设置客户账号ID
  * @method integer getAmount() 获取转账金额，单位分
  * @method void setAmount(integer $Amount) 设置转账金额，单位分
- */
-
-/**
- *AgentTransferMoney请求参数结构体
  */
 class AgentTransferMoneyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AgentTransferMoneyRequest extends AbstractModel
      * @var integer 转账金额，单位分
      */
     public $Amount;
+
     /**
      * @param string $ClientUin 客户账号ID
      * @param integer $Amount 转账金额，单位分
@@ -46,6 +45,7 @@ class AgentTransferMoneyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

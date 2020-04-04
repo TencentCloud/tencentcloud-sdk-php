@@ -18,14 +18,13 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteOrganization请求参数结构体
+ *
 
- */
-
-/**
- *DeleteOrganization请求参数结构体
  */
 class DeleteOrganizationRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DeleteOrganizationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

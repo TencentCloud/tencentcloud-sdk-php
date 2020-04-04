@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 作业
+ *
  * @method array getTasks() 获取任务信息
  * @method void setTasks(array $Tasks) 设置任务信息
  * @method string getJobName() 获取作业名称
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskExecutionDependOn(string $TaskExecutionDependOn) 设置对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
  * @method string getStateIfCreateCvmFailed() 获取表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
  * @method void setStateIfCreateCvmFailed(string $StateIfCreateCvmFailed) 设置表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
- */
-
-/**
- *作业
  */
 class Job extends AbstractModel
 {
@@ -80,6 +78,7 @@ class Job extends AbstractModel
      * @var string 表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
      */
     public $StateIfCreateCvmFailed;
+
     /**
      * @param array $Tasks 任务信息
      * @param string $JobName 作业名称
@@ -94,6 +93,7 @@ class Job extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

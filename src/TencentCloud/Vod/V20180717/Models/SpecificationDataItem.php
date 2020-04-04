@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 指定规格任务统计数据。
+ *
  * @method string getSpecification() 获取任务规格。
  * @method void setSpecification(string $Specification) 设置任务规格。
  * @method array getData() 获取统计数据。
  * @method void setData(array $Data) 设置统计数据。
- */
-
-/**
- *指定规格任务统计数据。
  */
 class SpecificationDataItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SpecificationDataItem extends AbstractModel
      * @var array 统计数据。
      */
     public $Data;
+
     /**
      * @param string $Specification 任务规格。
      * @param array $Data 统计数据。
@@ -46,6 +45,7 @@ class SpecificationDataItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

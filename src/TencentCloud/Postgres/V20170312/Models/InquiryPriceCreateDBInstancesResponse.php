@@ -18,16 +18,14 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceCreateDBInstances返回参数结构体
+ *
  * @method integer getOriginalPrice() 获取原始价格，单位：分
  * @method void setOriginalPrice(integer $OriginalPrice) 设置原始价格，单位：分
  * @method integer getPrice() 获取折后价格，单位：分
  * @method void setPrice(integer $Price) 设置折后价格，单位：分
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *InquiryPriceCreateDBInstances返回参数结构体
  */
 class InquiryPriceCreateDBInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InquiryPriceCreateDBInstancesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $OriginalPrice 原始价格，单位：分
      * @param integer $Price 折后价格，单位：分
@@ -54,6 +53,7 @@ class InquiryPriceCreateDBInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListNamespaces请求参数结构体
+ *
  * @method integer getLimit() 获取返回数据长度，默认值为 20
  * @method void setLimit(integer $Limit) 设置返回数据长度，默认值为 20
  * @method integer getOffset() 获取数据的偏移量，默认值为 0
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderby(string $Orderby) 设置根据哪个字段进行返回结果排序,支持以下字段：Name,Updatetime
  * @method string getOrder() 获取以升序还是降序的方式返回结果，可选值 ASC 和 DESC
  * @method void setOrder(string $Order) 设置以升序还是降序的方式返回结果，可选值 ASC 和 DESC
- */
-
-/**
- *ListNamespaces请求参数结构体
  */
 class ListNamespacesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ListNamespacesRequest extends AbstractModel
      * @var string 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
      */
     public $Order;
+
     /**
      * @param integer $Limit 返回数据长度，默认值为 20
      * @param integer $Offset 数据的偏移量，默认值为 0
@@ -62,6 +61,7 @@ class ListNamespacesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

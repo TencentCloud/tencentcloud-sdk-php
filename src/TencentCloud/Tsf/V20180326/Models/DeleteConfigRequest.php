@@ -18,12 +18,10 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteConfig请求参数结构体
+ *
  * @method string getConfigId() 获取配置项ID
  * @method void setConfigId(string $ConfigId) 设置配置项ID
- */
-
-/**
- *DeleteConfig请求参数结构体
  */
 class DeleteConfigRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteConfigRequest extends AbstractModel
      * @var string 配置项ID
      */
     public $ConfigId;
+
     /**
      * @param string $ConfigId 配置项ID
      */
@@ -38,6 +37,7 @@ class DeleteConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

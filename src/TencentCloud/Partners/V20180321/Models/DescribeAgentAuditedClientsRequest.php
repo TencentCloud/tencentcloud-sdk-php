@@ -18,6 +18,8 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAgentAuditedClients请求参数结构体
+ *
  * @method string getClientUin() 获取客户账号ID
  * @method void setClientUin(string $ClientUin) 设置客户账号ID
  * @method string getClientName() 获取客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSalesUin(string $SalesUin) 设置业务员ID
  * @method string getSalesName() 获取业务员姓名（模糊查询）
  * @method void setSalesName(string $SalesName) 设置业务员姓名（模糊查询）
- */
-
-/**
- *DescribeAgentAuditedClients请求参数结构体
  */
 class DescribeAgentAuditedClientsRequest extends AbstractModel
 {
@@ -115,6 +113,7 @@ class DescribeAgentAuditedClientsRequest extends AbstractModel
      * @var string 业务员姓名（模糊查询）
      */
     public $SalesName;
+
     /**
      * @param string $ClientUin 客户账号ID
      * @param string $ClientName 客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
@@ -134,6 +133,7 @@ class DescribeAgentAuditedClientsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

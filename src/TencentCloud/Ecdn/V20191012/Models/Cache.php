@@ -18,12 +18,10 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 缓存配置简单版本，该版本不支持设置源站未返回max-age情况下的缓存规则。
+ *
  * @method array getCacheRules() 获取缓存配置规则数组。
  * @method void setCacheRules(array $CacheRules) 设置缓存配置规则数组。
- */
-
-/**
- *缓存配置简单版本，该版本不支持设置源站未返回max-age情况下的缓存规则。
  */
 class Cache extends AbstractModel
 {
@@ -31,6 +29,7 @@ class Cache extends AbstractModel
      * @var array 缓存配置规则数组。
      */
     public $CacheRules;
+
     /**
      * @param array $CacheRules 缓存配置规则数组。
      */
@@ -38,6 +37,7 @@ class Cache extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

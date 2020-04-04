@@ -18,14 +18,13 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAddressQuota请求参数结构体
+ *
 
- */
-
-/**
- *DescribeAddressQuota请求参数结构体
  */
 class DescribeAddressQuotaRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeAddressQuotaRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 弹性伸缩事件通知
+ *
  * @method string getAutoScalingGroupId() 获取伸缩组ID。
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。
  * @method array getNotificationUserGroupIds() 获取用户组ID列表。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotificationTypes(array $NotificationTypes) 设置通知事件列表。
  * @method string getAutoScalingNotificationId() 获取事件通知ID。
  * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) 设置事件通知ID。
- */
-
-/**
- *弹性伸缩事件通知
  */
 class AutoScalingNotification extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AutoScalingNotification extends AbstractModel
      * @var string 事件通知ID。
      */
     public $AutoScalingNotificationId;
+
     /**
      * @param string $AutoScalingGroupId 伸缩组ID。
      * @param array $NotificationUserGroupIds 用户组ID列表。
@@ -62,6 +61,7 @@ class AutoScalingNotification extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

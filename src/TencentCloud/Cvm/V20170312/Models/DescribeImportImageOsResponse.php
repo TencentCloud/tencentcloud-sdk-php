@@ -18,16 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImportImageOs返回参数结构体
+ *
  * @method ImageOsList getImportImageOsListSupported() 获取支持的导入镜像的操作系统类型。
  * @method void setImportImageOsListSupported(ImageOsList $ImportImageOsListSupported) 设置支持的导入镜像的操作系统类型。
  * @method array getImportImageOsVersionSet() 获取支持的导入镜像的操作系统版本。
  * @method void setImportImageOsVersionSet(array $ImportImageOsVersionSet) 设置支持的导入镜像的操作系统版本。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeImportImageOs返回参数结构体
  */
 class DescribeImportImageOsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeImportImageOsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param ImageOsList $ImportImageOsListSupported 支持的导入镜像的操作系统类型。
      * @param array $ImportImageOsVersionSet 支持的导入镜像的操作系统版本。
@@ -54,6 +53,7 @@ class DescribeImportImageOsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

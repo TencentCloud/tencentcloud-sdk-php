@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * logo位置信息
+ *
  * @method float getCx() 获取logo横坐标
  * @method void setCx(float $Cx) 设置logo横坐标
  * @method float getCy() 获取logo纵坐标
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRotate(float $Rotate) 设置logo图标中心旋转度
  * @method float getWidth() 获取logo图标宽度
  * @method void setWidth(float $Width) 设置logo图标宽度
- */
-
-/**
- *logo位置信息
  */
 class RrectF extends AbstractModel
 {
@@ -59,6 +57,7 @@ class RrectF extends AbstractModel
      * @var float logo图标宽度
      */
     public $Width;
+
     /**
      * @param float $Cx logo横坐标
      * @param float $Cy logo纵坐标
@@ -70,6 +69,7 @@ class RrectF extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

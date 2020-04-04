@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户自定义人物审核任务控制参数
+ *
  * @method string getSwitch() 获取用户自定义人物审核任务开关，可选值：
 <li>ON：开启自定义人物审核任务；</li>
 <li>OFF：关闭自定义人物审核任务。</li>
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlockConfidence(integer $BlockConfidence) 设置判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 97 分。取值范围：0~100。
  * @method integer getReviewConfidence() 获取判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 95 分。取值范围：0~100。
  * @method void setReviewConfidence(integer $ReviewConfidence) 设置判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 95 分。取值范围：0~100。
- */
-
-/**
- *用户自定义人物审核任务控制参数
  */
 class UserDefineFaceReviewTemplateInfo extends AbstractModel
 {
@@ -61,6 +59,7 @@ class UserDefineFaceReviewTemplateInfo extends AbstractModel
      * @var integer 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 95 分。取值范围：0~100。
      */
     public $ReviewConfidence;
+
     /**
      * @param string $Switch 用户自定义人物审核任务开关，可选值：
 <li>ON：开启自定义人物审核任务；</li>
@@ -74,6 +73,7 @@ class UserDefineFaceReviewTemplateInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Bizlive\V20190313\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 流播放信息
+ *
  * @method float getBandwidth() 获取带宽（单位Mbps）。
  * @method void setBandwidth(float $Bandwidth) 设置带宽（单位Mbps）。
  * @method float getFlux() 获取流量 （单位MB）。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRequest(integer $Request) 设置请求数。
  * @method string getTime() 获取数据时间点，格式：yyyy-mm-dd HH:MM:SS。
  * @method void setTime(string $Time) 设置数据时间点，格式：yyyy-mm-dd HH:MM:SS。
- */
-
-/**
- *流播放信息
  */
 class DayStreamPlayInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DayStreamPlayInfo extends AbstractModel
      * @var string 数据时间点，格式：yyyy-mm-dd HH:MM:SS。
      */
     public $Time;
+
     /**
      * @param float $Bandwidth 带宽（单位Mbps）。
      * @param float $Flux 流量 （单位MB）。
@@ -70,6 +69,7 @@ class DayStreamPlayInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

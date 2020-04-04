@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取流量镜像的监听器列表信息时返回的与流量镜像绑定的监听器信息。
+ *
  * @method string getListenerId() 获取监听器ID。
  * @method void setListenerId(string $ListenerId) 设置监听器ID。
  * @method string getListenerName() 获取监听器名称。
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerVipv6s(array $LoadBalancerVipv6s) 设置负载均衡的IPV6的VIP。
  * @method string getIpProtocolType() 获取支持的IP协议类型。ipv4或者是ipv6。
  * @method void setIpProtocolType(string $IpProtocolType) 设置支持的IP协议类型。ipv4或者是ipv6。
- */
-
-/**
- *获取流量镜像的监听器列表信息时返回的与流量镜像绑定的监听器信息。
  */
 class TrafficMirrorListener extends AbstractModel
 {
@@ -150,6 +148,7 @@ class TrafficMirrorListener extends AbstractModel
      * @var string 支持的IP协议类型。ipv4或者是ipv6。
      */
     public $IpProtocolType;
+
     /**
      * @param string $ListenerId 监听器ID。
      * @param string $ListenerName 监听器名称。
@@ -174,6 +173,7 @@ class TrafficMirrorListener extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

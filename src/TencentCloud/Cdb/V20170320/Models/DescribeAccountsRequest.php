@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccounts请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method integer getOffset() 获取记录偏移量，默认值为0。
  * @method void setOffset(integer $Offset) 设置记录偏移量，默认值为0。
  * @method integer getLimit() 获取单次请求返回的数量，默认值为20，最小值为1，最大值为100。
  * @method void setLimit(integer $Limit) 设置单次请求返回的数量，默认值为20，最小值为1，最大值为100。
- */
-
-/**
- *DescribeAccounts请求参数结构体
  */
 class DescribeAccountsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAccountsRequest extends AbstractModel
      * @var integer 单次请求返回的数量，默认值为20，最小值为1，最大值为100。
      */
     public $Limit;
+
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param integer $Offset 记录偏移量，默认值为0。
@@ -54,6 +53,7 @@ class DescribeAccountsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

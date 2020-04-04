@@ -18,14 +18,12 @@ namespace TencentCloud\Tkgdq\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEntity返回参数结构体
+ *
  * @method string getContent() 获取返回查询实体相关信息
  * @method void setContent(string $Content) 设置返回查询实体相关信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeEntity返回参数结构体
  */
 class DescribeEntityResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeEntityResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Content 返回查询实体相关信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeEntityResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

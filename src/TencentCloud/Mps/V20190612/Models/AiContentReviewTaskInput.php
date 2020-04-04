@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能内容审核任务类型
+ *
  * @method integer getDefinition() 获取视频内容审核模板 ID。
  * @method void setDefinition(integer $Definition) 设置视频内容审核模板 ID。
- */
-
-/**
- *智能内容审核任务类型
  */
 class AiContentReviewTaskInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiContentReviewTaskInput extends AbstractModel
      * @var integer 视频内容审核模板 ID。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 视频内容审核模板 ID。
      */
@@ -38,6 +37,7 @@ class AiContentReviewTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

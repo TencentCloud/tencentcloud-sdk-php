@@ -18,6 +18,8 @@ namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetectLabel返回参数结构体
+ *
  * @method array getLabels() 获取Web网络版标签结果数组。如未选择WEB场景，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(array $Labels) 设置Web网络版标签结果数组。如未选择WEB场景，则为空。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DetectLabel返回参数结构体
  */
 class DetectLabelResponse extends AbstractModel
 {
@@ -61,6 +59,7 @@ class DetectLabelResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Labels Web网络版标签结果数组。如未选择WEB场景，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,6 +73,7 @@ class DetectLabelResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

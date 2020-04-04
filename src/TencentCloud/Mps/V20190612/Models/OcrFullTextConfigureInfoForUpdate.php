@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文本全文本识别任务控制参数
+ *
  * @method string getSwitch() 获取文本全文识别任务开关，可选值：
 <li>ON：开启智能文本全文识别任务；</li>
 <li>OFF：关闭智能文本全文识别任务。</li>
  * @method void setSwitch(string $Switch) 设置文本全文识别任务开关，可选值：
 <li>ON：开启智能文本全文识别任务；</li>
 <li>OFF：关闭智能文本全文识别任务。</li>
- */
-
-/**
- *文本全文本识别任务控制参数
  */
 class OcrFullTextConfigureInfoForUpdate extends AbstractModel
 {
@@ -37,6 +35,7 @@ class OcrFullTextConfigureInfoForUpdate extends AbstractModel
 <li>OFF：关闭智能文本全文识别任务。</li>
      */
     public $Switch;
+
     /**
      * @param string $Switch 文本全文识别任务开关，可选值：
 <li>ON：开启智能文本全文识别任务；</li>
@@ -46,6 +45,7 @@ class OcrFullTextConfigureInfoForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

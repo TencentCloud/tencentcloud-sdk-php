@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBImportRecords请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method string getStartTime() 获取开始时间，时间格式如：2016-01-01 00:00:01。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页参数，偏移量，默认值为0。
  * @method integer getLimit() 获取分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
  * @method void setLimit(integer $Limit) 设置分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
- */
-
-/**
- *DescribeDBImportRecords请求参数结构体
  */
 class DescribeDBImportRecordsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeDBImportRecordsRequest extends AbstractModel
      * @var integer 分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
      */
     public $Limit;
+
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param string $StartTime 开始时间，时间格式如：2016-01-01 00:00:01。
@@ -70,6 +69,7 @@ class DescribeDBImportRecordsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

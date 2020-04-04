@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文本关键词识别输入。
+ *
  * @method integer getDefinition() 获取文本关键词识别模板 ID。
  * @method void setDefinition(integer $Definition) 设置文本关键词识别模板 ID。
- */
-
-/**
- *文本关键词识别输入。
  */
 class AiRecognitionTaskOcrWordsResultInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskOcrWordsResultInput extends AbstractModel
      * @var integer 文本关键词识别模板 ID。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 文本关键词识别模板 ID。
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskOcrWordsResultInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

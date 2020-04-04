@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ParseLiveStreamProcessNotification请求参数结构体
+ *
  * @method string getContent() 获取从 CMQ 获取到的直播流事件通知内容。
  * @method void setContent(string $Content) 设置从 CMQ 获取到的直播流事件通知内容。
- */
-
-/**
- *ParseLiveStreamProcessNotification请求参数结构体
  */
 class ParseLiveStreamProcessNotificationRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ParseLiveStreamProcessNotificationRequest extends AbstractModel
      * @var string 从 CMQ 获取到的直播流事件通知内容。
      */
     public $Content;
+
     /**
      * @param string $Content 从 CMQ 获取到的直播流事件通知内容。
      */
@@ -38,6 +37,7 @@ class ParseLiveStreamProcessNotificationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

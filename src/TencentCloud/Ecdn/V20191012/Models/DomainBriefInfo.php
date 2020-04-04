@@ -18,6 +18,8 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CDN域名简要信息。
+ *
  * @method string getResourceId() 获取域名ID。
  * @method void setResourceId(string $ResourceId) 设置域名ID。
  * @method integer getAppId() 获取腾讯云账号ID。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArea(string $Area) 设置加速区域，mainland，oversea或global。
  * @method string getReadonly() 获取域名锁定状态，normal、global，分别表示未被锁定、全球锁定。
  * @method void setReadonly(string $Readonly) 设置域名锁定状态，normal、global，分别表示未被锁定、全球锁定。
- */
-
-/**
- *CDN域名简要信息。
  */
 class DomainBriefInfo extends AbstractModel
 {
@@ -108,6 +106,7 @@ class DomainBriefInfo extends AbstractModel
      * @var string 域名锁定状态，normal、global，分别表示未被锁定、全球锁定。
      */
     public $Readonly;
+
     /**
      * @param string $ResourceId 域名ID。
      * @param integer $AppId 腾讯云账号ID。
@@ -126,6 +125,7 @@ class DomainBriefInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

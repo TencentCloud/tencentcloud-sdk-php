@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 表格识别结果
+ *
  * @method integer getColTl() 获取单元格左上角的列索引
  * @method void setColTl(integer $ColTl) 设置单元格左上角的列索引
  * @method integer getRowTl() 获取单元格左上角的行索引
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolygon(array $Polygon) 设置文本行坐标，以四个顶点坐标表示
  * @method string getAdvancedInfo() 获取此字段为扩展字段
  * @method void setAdvancedInfo(string $AdvancedInfo) 设置此字段为扩展字段
- */
-
-/**
- *表格识别结果
  */
 class TextTable extends AbstractModel
 {
@@ -87,6 +85,7 @@ class TextTable extends AbstractModel
      * @var string 此字段为扩展字段
      */
     public $AdvancedInfo;
+
     /**
      * @param integer $ColTl 单元格左上角的列索引
      * @param integer $RowTl 单元格左上角的行索引
@@ -102,6 +101,7 @@ class TextTable extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

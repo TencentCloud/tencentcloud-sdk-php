@@ -18,16 +18,14 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpgradeNatGateway请求参数结构体
+ *
  * @method string getNatId() 获取NAT网关ID，例如：nat-kdm476mp
  * @method void setNatId(string $NatId) 设置NAT网关ID，例如：nat-kdm476mp
  * @method string getVpcId() 获取私有网络ID，例如：vpc-kd7d06of
  * @method void setVpcId(string $VpcId) 设置私有网络ID，例如：vpc-kd7d06of
  * @method integer getMaxConcurrent() 获取并发连接数规格；取值为1000000、3000000、10000000，分别对应小型、中型、大型NAT网关
  * @method void setMaxConcurrent(integer $MaxConcurrent) 设置并发连接数规格；取值为1000000、3000000、10000000，分别对应小型、中型、大型NAT网关
- */
-
-/**
- *UpgradeNatGateway请求参数结构体
  */
 class UpgradeNatGatewayRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UpgradeNatGatewayRequest extends AbstractModel
      * @var integer 并发连接数规格；取值为1000000、3000000、10000000，分别对应小型、中型、大型NAT网关
      */
     public $MaxConcurrent;
+
     /**
      * @param string $NatId NAT网关ID，例如：nat-kdm476mp
      * @param string $VpcId 私有网络ID，例如：vpc-kd7d06of
@@ -54,6 +53,7 @@ class UpgradeNatGatewayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

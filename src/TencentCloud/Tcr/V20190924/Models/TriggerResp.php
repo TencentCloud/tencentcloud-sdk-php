@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 触发器返回值
+ *
  * @method string getTriggerName() 获取触发器名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerName(string $TriggerName) 设置触发器名称
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvokePara(TriggerInvokePara $InvokePara) 设置触发器参数
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *触发器返回值
  */
 class TriggerResp extends AbstractModel
 {
@@ -94,6 +92,7 @@ class TriggerResp extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvokePara;
+
     /**
      * @param string $TriggerName 触发器名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,6 +113,7 @@ class TriggerResp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

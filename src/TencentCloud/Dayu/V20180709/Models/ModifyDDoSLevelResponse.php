@@ -18,16 +18,14 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDDoSLevel返回参数结构体
+ *
  * @method string getId() 获取资源ID
  * @method void setId(string $Id) 设置资源ID
  * @method string getDDoSLevel() 获取防护等级，取值[low,middle,high]
  * @method void setDDoSLevel(string $DDoSLevel) 设置防护等级，取值[low,middle,high]
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ModifyDDoSLevel返回参数结构体
  */
 class ModifyDDoSLevelResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyDDoSLevelResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Id 资源ID
      * @param string $DDoSLevel 防护等级，取值[low,middle,high]
@@ -54,6 +53,7 @@ class ModifyDDoSLevelResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetectMisbehavior返回参数结构体
+ *
  * @method float getConfidence() 获取对于图片中包含不良行为的置信度，取值[0,1]，一般超过0.5则表明可能包含不良行为内容；
  * @method void setConfidence(float $Confidence) 设置对于图片中包含不良行为的置信度，取值[0,1]，一般超过0.5则表明可能包含不良行为内容；
  * @method string getType() 获取图像中最可能包含的不良行为类别，包括赌博、打架斗殴、吸毒等。
  * @method void setType(string $Type) 设置图像中最可能包含的不良行为类别，包括赌博、打架斗殴、吸毒等。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DetectMisbehavior返回参数结构体
  */
 class DetectMisbehaviorResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DetectMisbehaviorResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param float $Confidence 对于图片中包含不良行为的置信度，取值[0,1]，一般超过0.5则表明可能包含不良行为内容；
      * @param string $Type 图像中最可能包含的不良行为类别，包括赌博、打架斗殴、吸毒等。
@@ -54,6 +53,7 @@ class DetectMisbehaviorResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

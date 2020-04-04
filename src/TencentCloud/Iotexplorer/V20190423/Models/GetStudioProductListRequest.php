@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetStudioProductList请求参数结构体
+ *
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method string getDevStatus() 获取产品DevStatus
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置Offset
  * @method integer getLimit() 获取Limit
  * @method void setLimit(integer $Limit) 设置Limit
- */
-
-/**
- *GetStudioProductList请求参数结构体
  */
 class GetStudioProductListRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GetStudioProductListRequest extends AbstractModel
      * @var integer Limit
      */
     public $Limit;
+
     /**
      * @param string $ProjectId 项目ID
      * @param string $DevStatus 产品DevStatus
@@ -62,6 +61,7 @@ class GetStudioProductListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

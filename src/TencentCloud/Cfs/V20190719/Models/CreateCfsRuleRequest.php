@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCfsRule请求参数结构体
+ *
  * @method string getPGroupId() 获取权限组 ID
  * @method void setPGroupId(string $PGroupId) 设置权限组 ID
  * @method string getAuthClientIp() 获取可以填写单个 IP 或者单个网段，例如 10.1.10.11 或者 10.10.1.0/24。默认来访地址为*表示允许所有。同时需要注意，此处需填写 CVM 的内网 IP。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRWPermission(string $RWPermission) 设置读写权限, 值为 RO、RW；其中 RO 为只读，RW 为读写，不填默认为只读
  * @method string getUserPermission() 获取用户权限，值为 all_squash、no_all_squash、root_squash、no_root_squash。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。不填默认为root_squash。
  * @method void setUserPermission(string $UserPermission) 设置用户权限，值为 all_squash、no_all_squash、root_squash、no_root_squash。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。不填默认为root_squash。
- */
-
-/**
- *CreateCfsRule请求参数结构体
  */
 class CreateCfsRuleRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateCfsRuleRequest extends AbstractModel
      * @var string 用户权限，值为 all_squash、no_all_squash、root_squash、no_root_squash。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。不填默认为root_squash。
      */
     public $UserPermission;
+
     /**
      * @param string $PGroupId 权限组 ID
      * @param string $AuthClientIp 可以填写单个 IP 或者单个网段，例如 10.1.10.11 或者 10.10.1.0/24。默认来访地址为*表示允许所有。同时需要注意，此处需填写 CVM 的内网 IP。
@@ -70,6 +69,7 @@ class CreateCfsRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

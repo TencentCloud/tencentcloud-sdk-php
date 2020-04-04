@@ -18,16 +18,14 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNonlocalLoginPlaces返回参数结构体
+ *
  * @method integer getTotalCount() 获取记录总数。
  * @method void setTotalCount(integer $TotalCount) 设置记录总数。
  * @method array getNonLocalLoginPlaces() 获取异地登录信息数组。
  * @method void setNonLocalLoginPlaces(array $NonLocalLoginPlaces) 设置异地登录信息数组。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeNonlocalLoginPlaces返回参数结构体
  */
 class DescribeNonlocalLoginPlacesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeNonlocalLoginPlacesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 记录总数。
      * @param array $NonLocalLoginPlaces 异地登录信息数组。
@@ -54,6 +53,7 @@ class DescribeNonlocalLoginPlacesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

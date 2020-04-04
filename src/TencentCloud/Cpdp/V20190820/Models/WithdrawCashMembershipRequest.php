@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * WithdrawCashMembership请求参数结构体
+ *
  * @method string getMrchCode() 获取String(22)，商户号（签约客户号）
  * @method void setMrchCode(string $MrchCode) 设置String(22)，商户号（签约客户号）
  * @method string getTranWebName() 获取STRING(150)，交易网名称（市场名称）
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
  * @method string getWebSign() 获取STRING(300)，网银签名
  * @method void setWebSign(string $WebSign) 设置STRING(300)，网银签名
- */
-
-/**
- *WithdrawCashMembership请求参数结构体
  */
 class WithdrawCashMembershipRequest extends AbstractModel
 {
@@ -115,6 +113,7 @@ class WithdrawCashMembershipRequest extends AbstractModel
      * @var string STRING(300)，网银签名
      */
     public $WebSign;
+
     /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $TranWebName STRING(150)，交易网名称（市场名称）
@@ -134,6 +133,7 @@ class WithdrawCashMembershipRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

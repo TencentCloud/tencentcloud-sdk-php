@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CompareFace请求参数结构体
+ *
  * @method string getImageA() 获取A 图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -77,10 +79,6 @@ B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
 默认 0。 
 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
  */
-
-/**
- *CompareFace请求参数结构体
- */
 class CompareFaceRequest extends AbstractModel
 {
     /**
@@ -135,6 +133,7 @@ B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
      */
     public $QualityControl;
+
     /**
      * @param string $ImageA A 图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
@@ -170,6 +169,7 @@ B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,13 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEipQuota请求参数结构体
+ *
 
- */
-
-/**
- *DescribeEipQuota请求参数结构体
  */
 class DescribeEipQuotaRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeEipQuotaRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

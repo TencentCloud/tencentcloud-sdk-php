@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 对视频截图做封面任务输入参数类型
+ *
  * @method integer getDefinition() 获取指定时间点截图模板 ID。
  * @method void setDefinition(integer $Definition) 设置指定时间点截图模板 ID。
  * @method string getPositionType() 获取截图方式。包含：
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *对视频截图做封面任务输入参数类型
  */
 class CoverBySnapshotTaskInput extends AbstractModel
 {
@@ -67,6 +65,7 @@ class CoverBySnapshotTaskInput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WatermarkSet;
+
     /**
      * @param integer $Definition 指定时间点截图模板 ID。
      * @param string $PositionType 截图方式。包含：
@@ -82,6 +81,7 @@ class CoverBySnapshotTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

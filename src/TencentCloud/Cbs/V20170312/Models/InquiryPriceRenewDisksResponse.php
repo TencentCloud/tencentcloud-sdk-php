@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceRenewDisks返回参数结构体
+ *
  * @method PrepayPrice getDiskPrice() 获取描述了续费云盘的价格。
  * @method void setDiskPrice(PrepayPrice $DiskPrice) 设置描述了续费云盘的价格。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *InquiryPriceRenewDisks返回参数结构体
  */
 class InquiryPriceRenewDisksResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InquiryPriceRenewDisksResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param PrepayPrice $DiskPrice 描述了续费云盘的价格。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class InquiryPriceRenewDisksResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

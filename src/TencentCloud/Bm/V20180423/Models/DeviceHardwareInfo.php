@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备硬件配置信息
+ *
  * @method string getInstanceId() 获取设备实例 ID
  * @method void setInstanceId(string $InstanceId) 设置设备实例 ID
  * @method integer getIsElastic() 获取是否自定义机型
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRaidDescription(string $RaidDescription) 设置是否支持 RAID 的描述
  * @method integer getCpu() 获取cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
  * @method void setCpu(integer $Cpu) 设置cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
- */
-
-/**
- *设备硬件配置信息
  */
 class DeviceHardwareInfo extends AbstractModel
 {
@@ -136,6 +134,7 @@ class DeviceHardwareInfo extends AbstractModel
      * @var integer cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
      */
     public $Cpu;
+
     /**
      * @param string $InstanceId 设备实例 ID
      * @param integer $IsElastic 是否自定义机型
@@ -158,6 +157,7 @@ class DeviceHardwareInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

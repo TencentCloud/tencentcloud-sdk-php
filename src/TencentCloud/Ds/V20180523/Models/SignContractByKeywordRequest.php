@@ -18,6 +18,8 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SignContractByKeyword请求参数结构体
+ *
  * @method string getModule() 获取模块名ContractMng
  * @method void setModule(string $Module) 设置模块名ContractMng
  * @method string getOperation() 获取操作名SignContractByKeyword
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertType(integer $CertType) 设置选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
  * @method string getImageData() 获取签名图片，base64编码
  * @method void setImageData(string $ImageData) 设置签名图片，base64编码
- */
-
-/**
- *SignContractByKeyword请求参数结构体
  */
 class SignContractByKeywordRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class SignContractByKeywordRequest extends AbstractModel
      * @var string 签名图片，base64编码
      */
     public $ImageData;
+
     /**
      * @param string $Module 模块名ContractMng
      * @param string $Operation 操作名SignContractByKeyword
@@ -110,6 +109,7 @@ class SignContractByKeywordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

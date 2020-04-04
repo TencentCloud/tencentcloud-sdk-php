@@ -18,14 +18,12 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListVersionByFunction请求参数结构体
+ *
  * @method string getFunctionName() 获取函数ID
  * @method void setFunctionName(string $FunctionName) 设置函数ID
  * @method string getNamespace() 获取命名空间
  * @method void setNamespace(string $Namespace) 设置命名空间
- */
-
-/**
- *ListVersionByFunction请求参数结构体
  */
 class ListVersionByFunctionRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ListVersionByFunctionRequest extends AbstractModel
      * @var string 命名空间
      */
     public $Namespace;
+
     /**
      * @param string $FunctionName 函数ID
      * @param string $Namespace 命名空间
@@ -46,6 +45,7 @@ class ListVersionByFunctionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

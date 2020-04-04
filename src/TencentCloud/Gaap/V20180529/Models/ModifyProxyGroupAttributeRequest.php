@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyProxyGroupAttribute请求参数结构体
+ *
  * @method string getGroupId() 获取需要修改的通道组ID。
  * @method void setGroupId(string $GroupId) 设置需要修改的通道组ID。
  * @method string getGroupName() 获取修改后的通道组名称：不超过30个字符，超过部分会被截断。
  * @method void setGroupName(string $GroupName) 设置修改后的通道组名称：不超过30个字符，超过部分会被截断。
- */
-
-/**
- *ModifyProxyGroupAttribute请求参数结构体
  */
 class ModifyProxyGroupAttributeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyProxyGroupAttributeRequest extends AbstractModel
      * @var string 修改后的通道组名称：不超过30个字符，超过部分会被截断。
      */
     public $GroupName;
+
     /**
      * @param string $GroupId 需要修改的通道组ID。
      * @param string $GroupName 修改后的通道组名称：不超过30个字符，超过部分会被截断。
@@ -46,6 +45,7 @@ class ModifyProxyGroupAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 资源标签
+ *
  * @method string getResourceRegion() 获取资源所在地域
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置资源标签
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *资源标签
  */
 class ResourceTag extends AbstractModel
 {
@@ -74,6 +72,7 @@ class ResourceTag extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
+
     /**
      * @param string $ResourceRegion 资源所在地域
 注意：此字段可能返回 null，表示取不到有效值。
@@ -90,6 +89,7 @@ class ResourceTag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

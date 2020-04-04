@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDDoSAlarmThreshold返回参数结构体
+ *
  * @method DDoSAlarmThreshold getDDoSAlarmThreshold() 获取DDoS告警阈值
  * @method void setDDoSAlarmThreshold(DDoSAlarmThreshold $DDoSAlarmThreshold) 设置DDoS告警阈值
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDDoSAlarmThreshold返回参数结构体
  */
 class DescribeDDoSAlarmThresholdResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDDoSAlarmThresholdResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param DDoSAlarmThreshold $DDoSAlarmThreshold DDoS告警阈值
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeDDoSAlarmThresholdResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

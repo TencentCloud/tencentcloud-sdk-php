@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * cos临时帐号信息
+ *
  * @method string getSessionToken() 获取会话Token
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionToken(string $SessionToken) 设置会话Token
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置所在域
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *cos临时帐号信息
  */
 class CosCredentials extends AbstractModel
 {
@@ -84,6 +82,7 @@ class CosCredentials extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
+
     /**
      * @param string $SessionToken 会话Token
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,6 +101,7 @@ class CosCredentials extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

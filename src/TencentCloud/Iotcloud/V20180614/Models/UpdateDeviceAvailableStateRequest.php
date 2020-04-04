@@ -18,16 +18,14 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateDeviceAvailableState请求参数结构体
+ *
  * @method string getProductId() 获取设备所属产品id
  * @method void setProductId(string $ProductId) 设置设备所属产品id
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method integer getEnableState() 获取要设置的设备状态，1为启用，0为禁用
  * @method void setEnableState(integer $EnableState) 设置要设置的设备状态，1为启用，0为禁用
- */
-
-/**
- *UpdateDeviceAvailableState请求参数结构体
  */
 class UpdateDeviceAvailableStateRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UpdateDeviceAvailableStateRequest extends AbstractModel
      * @var integer 要设置的设备状态，1为启用，0为禁用
      */
     public $EnableState;
+
     /**
      * @param string $ProductId 设备所属产品id
      * @param string $DeviceName 设备名称
@@ -54,6 +53,7 @@ class UpdateDeviceAvailableStateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

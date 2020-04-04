@@ -18,6 +18,8 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ApplyCreditAudit请求参数结构体
+ *
  * @method string getModule() 获取模块名，本接口取值：Credit
  * @method void setModule(string $Module) 设置模块名，本接口取值：Credit
  * @method string getOperation() 获取操作名，本接口取值：Apply
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址
  * @method string getData() 获取JSON格式的业务字段。
  * @method void setData(string $Data) 设置JSON格式的业务字段。
- */
-
-/**
- *ApplyCreditAudit请求参数结构体
  */
 class ApplyCreditAuditRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ApplyCreditAuditRequest extends AbstractModel
      * @var string JSON格式的业务字段。
      */
     public $Data;
+
     /**
      * @param string $Module 模块名，本接口取值：Credit
      * @param string $Operation 操作名，本接口取值：Apply
@@ -86,6 +85,7 @@ class ApplyCreditAuditRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

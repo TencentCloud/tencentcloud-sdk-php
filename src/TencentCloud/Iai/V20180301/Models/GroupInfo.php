@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 返回的人员库信息
+ *
  * @method string getGroupName() 获取人员库名称
  * @method void setGroupName(string $GroupName) 设置人员库名称
  * @method string getGroupId() 获取人员库ID
@@ -40,10 +42,6 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
  * @method void setCreationTimestamp(integer $CreationTimestamp) 设置Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *返回的人员库信息
  */
 class GroupInfo extends AbstractModel
 {
@@ -81,6 +79,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreationTimestamp;
+
     /**
      * @param string $GroupName 人员库名称
      * @param string $GroupId 人员库ID
@@ -98,6 +97,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RebootDevices请求参数结构体
+ *
  * @method array getInstanceIds() 获取需要重启的设备ID列表
  * @method void setInstanceIds(array $InstanceIds) 设置需要重启的设备ID列表
- */
-
-/**
- *RebootDevices请求参数结构体
  */
 class RebootDevicesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RebootDevicesRequest extends AbstractModel
      * @var array 需要重启的设备ID列表
      */
     public $InstanceIds;
+
     /**
      * @param array $InstanceIds 需要重启的设备ID列表
      */
@@ -38,6 +37,7 @@ class RebootDevicesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

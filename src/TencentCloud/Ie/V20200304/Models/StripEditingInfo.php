@@ -18,14 +18,12 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能拆条任务参数信息
+ *
  * @method integer getSwitch() 获取是否开启智能拆条。0为关闭，1为开启。其他非0非1值默认为0。
  * @method void setSwitch(integer $Switch) 设置是否开启智能拆条。0为关闭，1为开启。其他非0非1值默认为0。
  * @method string getCustomInfo() 获取额外定制化服务参数。参数为序列化的Json字符串，例如：{"k1":"v1"}。
  * @method void setCustomInfo(string $CustomInfo) 设置额外定制化服务参数。参数为序列化的Json字符串，例如：{"k1":"v1"}。
- */
-
-/**
- *智能拆条任务参数信息
  */
 class StripEditingInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class StripEditingInfo extends AbstractModel
      * @var string 额外定制化服务参数。参数为序列化的Json字符串，例如：{"k1":"v1"}。
      */
     public $CustomInfo;
+
     /**
      * @param integer $Switch 是否开启智能拆条。0为关闭，1为开启。其他非0非1值默认为0。
      * @param string $CustomInfo 额外定制化服务参数。参数为序列化的Json字符串，例如：{"k1":"v1"}。
@@ -46,6 +45,7 @@ class StripEditingInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

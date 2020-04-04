@@ -18,14 +18,12 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * tag过滤数组多个是与的关系
+ *
  * @method string getTagKey() 获取标签键
  * @method void setTagKey(string $TagKey) 设置标签键
  * @method array getTagValue() 获取标签值数组 多个值的话是或的关系
  * @method void setTagValue(array $TagValue) 设置标签值数组 多个值的话是或的关系
- */
-
-/**
- *tag过滤数组多个是与的关系
  */
 class TagFilter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TagFilter extends AbstractModel
      * @var array 标签值数组 多个值的话是或的关系
      */
     public $TagValue;
+
     /**
      * @param string $TagKey 标签键
      * @param array $TagValue 标签值数组 多个值的话是或的关系
@@ -46,6 +45,7 @@ class TagFilter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

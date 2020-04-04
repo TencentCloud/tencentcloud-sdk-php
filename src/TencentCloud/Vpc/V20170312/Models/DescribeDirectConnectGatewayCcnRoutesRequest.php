@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDirectConnectGatewayCcnRoutes请求参数结构体
+ *
  * @method string getDirectConnectGatewayId() 获取专线网关ID，形如：`dcg-prpqlmg1`。
  * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) 设置专线网关ID，形如：`dcg-prpqlmg1`。
  * @method string getCcnRouteType() 获取云联网路由学习类型，可选值：
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量。
  * @method integer getLimit() 获取返回数量。
  * @method void setLimit(integer $Limit) 设置返回数量。
- */
-
-/**
- *DescribeDirectConnectGatewayCcnRoutes请求参数结构体
  */
 class DescribeDirectConnectGatewayCcnRoutesRequest extends AbstractModel
 {
@@ -58,6 +56,7 @@ class DescribeDirectConnectGatewayCcnRoutesRequest extends AbstractModel
      * @var integer 返回数量。
      */
     public $Limit;
+
     /**
      * @param string $DirectConnectGatewayId 专线网关ID，形如：`dcg-prpqlmg1`。
      * @param string $CcnRouteType 云联网路由学习类型，可选值：
@@ -70,6 +69,7 @@ class DescribeDirectConnectGatewayCcnRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

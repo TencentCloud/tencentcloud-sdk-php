@@ -18,14 +18,12 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 分组识别结果Item
+ *
  * @method string getGroupId() 获取人员库ID 。
  * @method void setGroupId(string $GroupId) 设置人员库ID 。
  * @method array getCandidates() 获取识别出的最相似候选人。
  * @method void setCandidates(array $Candidates) 设置识别出的最相似候选人。
- */
-
-/**
- *分组识别结果Item
  */
 class GroupCandidate extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GroupCandidate extends AbstractModel
      * @var array 识别出的最相似候选人。
      */
     public $Candidates;
+
     /**
      * @param string $GroupId 人员库ID 。
      * @param array $Candidates 识别出的最相似候选人。
@@ -46,6 +45,7 @@ class GroupCandidate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

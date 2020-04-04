@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 创建备份时，指定需要备份的库表信息
+ *
  * @method string getDb() 获取需要备份的库名
  * @method void setDb(string $Db) 设置需要备份的库名
  * @method string getTable() 获取需要备份的表名。 如果传该参数，表示备份该库中的指定表。如果不传该参数则备份该db库
  * @method void setTable(string $Table) 设置需要备份的表名。 如果传该参数，表示备份该库中的指定表。如果不传该参数则备份该db库
- */
-
-/**
- *创建备份时，指定需要备份的库表信息
  */
 class BackupItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BackupItem extends AbstractModel
      * @var string 需要备份的表名。 如果传该参数，表示备份该库中的指定表。如果不传该参数则备份该db库
      */
     public $Table;
+
     /**
      * @param string $Db 需要备份的库名
      * @param string $Table 需要备份的表名。 如果传该参数，表示备份该库中的指定表。如果不传该参数则备份该db库
@@ -46,6 +45,7 @@ class BackupItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

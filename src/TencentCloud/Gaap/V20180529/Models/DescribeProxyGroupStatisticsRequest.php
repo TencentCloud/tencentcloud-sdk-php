@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProxyGroupStatistics请求参数结构体
+ *
  * @method string getGroupId() 获取通道组ID
  * @method void setGroupId(string $GroupId) 设置通道组ID
  * @method string getStartTime() 获取起始时间
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 当时间范围不超过1天，支持最小粒度60秒；
 当时间范围不超过7天，支持最小粒度3600秒；
 当时间范围不超过30天，支持最小粒度86400秒。
- */
-
-/**
- *DescribeProxyGroupStatistics请求参数结构体
  */
 class DescribeProxyGroupStatisticsRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ class DescribeProxyGroupStatisticsRequest extends AbstractModel
 当时间范围不超过30天，支持最小粒度86400秒。
      */
     public $Granularity;
+
     /**
      * @param string $GroupId 通道组ID
      * @param string $StartTime 起始时间
@@ -82,6 +81,7 @@ class DescribeProxyGroupStatisticsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

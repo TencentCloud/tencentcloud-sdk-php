@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InitDBInstances请求参数结构体
+ *
  * @method array getDBInstanceIdSet() 获取实例ID集合。
  * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置实例ID集合。
  * @method string getAdminName() 获取实例根账号用户名。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdminPassword(string $AdminPassword) 设置实例根账号用户名对应的密码。
  * @method string getCharset() 获取实例字符集，目前只支持：UTF8、LATIN1。
  * @method void setCharset(string $Charset) 设置实例字符集，目前只支持：UTF8、LATIN1。
- */
-
-/**
- *InitDBInstances请求参数结构体
  */
 class InitDBInstancesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class InitDBInstancesRequest extends AbstractModel
      * @var string 实例字符集，目前只支持：UTF8、LATIN1。
      */
     public $Charset;
+
     /**
      * @param array $DBInstanceIdSet 实例ID集合。
      * @param string $AdminName 实例根账号用户名。
@@ -62,6 +61,7 @@ class InitDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

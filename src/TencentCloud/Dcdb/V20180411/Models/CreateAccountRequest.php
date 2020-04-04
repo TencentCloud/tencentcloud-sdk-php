@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAccount请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
  * @method string getUserName() 获取AccountName
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 建议该参数值大于10。当ReadOnly选择1、2时该参数生效。
  * @method void setDelayThresh(integer $DelayThresh) 设置如果备机延迟超过本参数设置值，系统将认为备机发生故障
 建议该参数值大于10。当ReadOnly选择1、2时该参数生效。
- */
-
-/**
- *CreateAccount请求参数结构体
  */
 class CreateAccountRequest extends AbstractModel
 {
@@ -76,6 +74,7 @@ class CreateAccountRequest extends AbstractModel
 建议该参数值大于10。当ReadOnly选择1、2时该参数生效。
      */
     public $DelayThresh;
+
     /**
      * @param string $InstanceId 实例 ID，形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      * @param string $UserName AccountName
@@ -90,6 +89,7 @@ class CreateAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

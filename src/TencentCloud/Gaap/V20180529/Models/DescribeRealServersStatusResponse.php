@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRealServersStatus返回参数结构体
+ *
  * @method integer getTotalCount() 获取返回源站查询结果的个数
  * @method void setTotalCount(integer $TotalCount) 设置返回源站查询结果的个数
  * @method array getRealServerStatusSet() 获取源站被绑定状态列表
  * @method void setRealServerStatusSet(array $RealServerStatusSet) 设置源站被绑定状态列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeRealServersStatus返回参数结构体
  */
 class DescribeRealServersStatusResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeRealServersStatusResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 返回源站查询结果的个数
      * @param array $RealServerStatusSet 源站被绑定状态列表
@@ -54,6 +53,7 @@ class DescribeRealServersStatusResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRunLog返回参数结构体
+ *
  * @method string getData() 获取设备运行日志文本信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(string $Data) 设置设备运行日志文本信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeRunLog返回参数结构体
  */
 class DescribeRunLogResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class DescribeRunLogResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Data 设备运行日志文本信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class DescribeRunLogResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTranscodeTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取转码模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置转码模板唯一标识。
- */
-
-/**
- *DeleteTranscodeTemplate请求参数结构体
  */
 class DeleteTranscodeTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteTranscodeTemplateRequest extends AbstractModel
      * @var integer 转码模板唯一标识。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 转码模板唯一标识。
      */
@@ -38,6 +37,7 @@ class DeleteTranscodeTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Bizlive\V20190313\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RegisterIM请求参数结构体
+ *
  * @method string getNickname() 获取用户昵称
  * @method void setNickname(string $Nickname) 设置用户昵称
  * @method string getUserId() 获取用户唯一ID，建议采用用户小程序OpenID加盐形式
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHeadImgUrl(string $HeadImgUrl) 设置用户头像URL
  * @method integer getLevel() 获取用户身份，默认值：0，表示无特殊身份
  * @method void setLevel(integer $Level) 设置用户身份，默认值：0，表示无特殊身份
- */
-
-/**
- *RegisterIM请求参数结构体
  */
 class RegisterIMRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RegisterIMRequest extends AbstractModel
      * @var integer 用户身份，默认值：0，表示无特殊身份
      */
     public $Level;
+
     /**
      * @param string $Nickname 用户昵称
      * @param string $UserId 用户唯一ID，建议采用用户小程序OpenID加盐形式
@@ -62,6 +61,7 @@ class RegisterIMRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

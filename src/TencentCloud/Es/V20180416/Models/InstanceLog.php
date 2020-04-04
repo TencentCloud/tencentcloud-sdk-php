@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ES集群日志详细信息
+ *
  * @method string getTime() 获取日志时间
  * @method void setTime(string $Time) 设置日志时间
  * @method string getLevel() 获取日志级别
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIp(string $Ip) 设置集群节点ip
  * @method string getMessage() 获取日志内容
  * @method void setMessage(string $Message) 设置日志内容
- */
-
-/**
- *ES集群日志详细信息
  */
 class InstanceLog extends AbstractModel
 {
@@ -52,6 +50,7 @@ class InstanceLog extends AbstractModel
      * @var string 日志内容
      */
     public $Message;
+
     /**
      * @param string $Time 日志时间
      * @param string $Level 日志级别
@@ -62,6 +61,7 @@ class InstanceLog extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

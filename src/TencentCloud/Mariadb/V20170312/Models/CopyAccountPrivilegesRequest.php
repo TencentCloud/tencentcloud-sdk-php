@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CopyAccountPrivileges请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method string getSrcUserName() 获取源用户名
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSrcReadOnly(string $SrcReadOnly) 设置源账号的 ReadOnly 属性
  * @method string getDstReadOnly() 获取目的账号的 ReadOnly 属性
  * @method void setDstReadOnly(string $DstReadOnly) 设置目的账号的 ReadOnly 属性
- */
-
-/**
- *CopyAccountPrivileges请求参数结构体
  */
 class CopyAccountPrivilegesRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CopyAccountPrivilegesRequest extends AbstractModel
      * @var string 目的账号的 ReadOnly 属性
      */
     public $DstReadOnly;
+
     /**
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param string $SrcUserName 源用户名
@@ -86,6 +85,7 @@ class CopyAccountPrivilegesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

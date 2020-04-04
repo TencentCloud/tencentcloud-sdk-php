@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProxiesStatus请求参数结构体
+ *
  * @method array getInstanceIds() 获取（旧参数，请切换到ProxyIds）通道ID列表。
  * @method void setInstanceIds(array $InstanceIds) 设置（旧参数，请切换到ProxyIds）通道ID列表。
  * @method array getProxyIds() 获取（新参数）通道ID列表。
  * @method void setProxyIds(array $ProxyIds) 设置（新参数）通道ID列表。
- */
-
-/**
- *DescribeProxiesStatus请求参数结构体
  */
 class DescribeProxiesStatusRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeProxiesStatusRequest extends AbstractModel
      * @var array （新参数）通道ID列表。
      */
     public $ProxyIds;
+
     /**
      * @param array $InstanceIds （旧参数，请切换到ProxyIds）通道ID列表。
      * @param array $ProxyIds （新参数）通道ID列表。
@@ -46,6 +45,7 @@ class DescribeProxiesStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 项目奖品库存
+ *
  * @method string getPrizeId() 获取奖品id
  * @method void setPrizeId(string $PrizeId) 设置奖品id
  * @method integer getPrizeBat() 获取奖品批次
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPoolIdx(integer $PoolIdx) 设置奖品所在奖池index
  * @method string getPoolName() 获取奖品所在奖池名称
  * @method void setPoolName(string $PoolName) 设置奖品所在奖池名称
- */
-
-/**
- *项目奖品库存
  */
 class ProjectStock extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ProjectStock extends AbstractModel
      * @var string 奖品所在奖池名称
      */
     public $PoolName;
+
     /**
      * @param string $PrizeId 奖品id
      * @param integer $PrizeBat 奖品批次
@@ -86,6 +85,7 @@ class ProjectStock extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

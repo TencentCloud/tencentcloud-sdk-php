@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Ocr 文字涉黄信息
+ *
  * @method float getConfidence() 获取Ocr 文字涉黄评分，分值为0到100。
  * @method void setConfidence(float $Confidence) 设置Ocr 文字涉黄评分，分值为0到100。
  * @method string getSuggestion() 获取Ocr 文字涉黄结果建议，取值范围：
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>block。</li>
  * @method array getSegmentSet() 获取Ocr 文字有涉黄嫌疑的视频片段列表。
  * @method void setSegmentSet(array $SegmentSet) 设置Ocr 文字有涉黄嫌疑的视频片段列表。
- */
-
-/**
- *Ocr 文字涉黄信息
  */
 class AiReviewPornOcrTaskOutput extends AbstractModel
 {
@@ -54,6 +52,7 @@ class AiReviewPornOcrTaskOutput extends AbstractModel
      * @var array Ocr 文字有涉黄嫌疑的视频片段列表。
      */
     public $SegmentSet;
+
     /**
      * @param float $Confidence Ocr 文字涉黄评分，分值为0到100。
      * @param string $Suggestion Ocr 文字涉黄结果建议，取值范围：
@@ -66,6 +65,7 @@ class AiReviewPornOcrTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

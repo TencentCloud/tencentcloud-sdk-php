@@ -18,14 +18,12 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateKeyDescription请求参数结构体
+ *
  * @method string getDescription() 获取新的描述信息，最大支持1024字节
  * @method void setDescription(string $Description) 设置新的描述信息，最大支持1024字节
  * @method string getKeyId() 获取需要修改描述信息的CMK ID
  * @method void setKeyId(string $KeyId) 设置需要修改描述信息的CMK ID
- */
-
-/**
- *UpdateKeyDescription请求参数结构体
  */
 class UpdateKeyDescriptionRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UpdateKeyDescriptionRequest extends AbstractModel
      * @var string 需要修改描述信息的CMK ID
      */
     public $KeyId;
+
     /**
      * @param string $Description 新的描述信息，最大支持1024字节
      * @param string $KeyId 需要修改描述信息的CMK ID
@@ -46,6 +45,7 @@ class UpdateKeyDescriptionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePublicConfigReleases请求参数结构体
+ *
  * @method string getConfigName() 获取配置项名称，不传入时查询全量
  * @method void setConfigName(string $ConfigName) 设置配置项名称，不传入时查询全量
  * @method string getNamespaceId() 获取命名空间ID，不传入时查询全量
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method string getConfigId() 获取配置项ID，不传入时查询全量
  * @method void setConfigId(string $ConfigId) 设置配置项ID，不传入时查询全量
- */
-
-/**
- *DescribePublicConfigReleases请求参数结构体
  */
 class DescribePublicConfigReleasesRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribePublicConfigReleasesRequest extends AbstractModel
      * @var string 配置项ID，不传入时查询全量
      */
     public $ConfigId;
+
     /**
      * @param string $ConfigName 配置项名称，不传入时查询全量
      * @param string $NamespaceId 命名空间ID，不传入时查询全量
@@ -70,6 +69,7 @@ class DescribePublicConfigReleasesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

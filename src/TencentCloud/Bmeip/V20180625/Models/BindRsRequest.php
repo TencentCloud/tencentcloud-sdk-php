@@ -18,14 +18,12 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindRs请求参数结构体
+ *
  * @method string getEipId() 获取Eip实例ID
  * @method void setEipId(string $EipId) 设置Eip实例ID
  * @method string getInstanceId() 获取物理服务器实例ID
  * @method void setInstanceId(string $InstanceId) 设置物理服务器实例ID
- */
-
-/**
- *BindRs请求参数结构体
  */
 class BindRsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BindRsRequest extends AbstractModel
      * @var string 物理服务器实例ID
      */
     public $InstanceId;
+
     /**
      * @param string $EipId Eip实例ID
      * @param string $InstanceId 物理服务器实例ID
@@ -46,6 +45,7 @@ class BindRsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

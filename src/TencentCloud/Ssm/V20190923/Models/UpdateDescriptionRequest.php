@@ -18,14 +18,12 @@ namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateDescription请求参数结构体
+ *
  * @method string getSecretName() 获取指定需要更新描述信息的凭据名。
  * @method void setSecretName(string $SecretName) 设置指定需要更新描述信息的凭据名。
  * @method string getDescription() 获取新的描述信息，最大长度2048个字节。
  * @method void setDescription(string $Description) 设置新的描述信息，最大长度2048个字节。
- */
-
-/**
- *UpdateDescription请求参数结构体
  */
 class UpdateDescriptionRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UpdateDescriptionRequest extends AbstractModel
      * @var string 新的描述信息，最大长度2048个字节。
      */
     public $Description;
+
     /**
      * @param string $SecretName 指定需要更新描述信息的凭据名。
      * @param string $Description 新的描述信息，最大长度2048个字节。
@@ -46,6 +45,7 @@ class UpdateDescriptionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBrandExposure返回参数结构体
+ *
  * @method integer getTotalCount() 获取累计曝光量
  * @method void setTotalCount(integer $TotalCount) 设置累计曝光量
  * @method array getDateCountSet() 获取按天计算的统计数据
  * @method void setDateCountSet(array $DateCountSet) 设置按天计算的统计数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeBrandExposure返回参数结构体
  */
 class DescribeBrandExposureResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeBrandExposureResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 累计曝光量
      * @param array $DateCountSet 按天计算的统计数据
@@ -54,6 +53,7 @@ class DescribeBrandExposureResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateProduct请求参数结构体
+ *
  * @method string getProductModel() 获取产器型号(APP产品,为APP包名)
  * @method void setProductModel(string $ProductModel) 设置产器型号(APP产品,为APP包名)
  * @method array getFeatures() 获取设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChipManufactureId(string $ChipManufactureId) 设置主芯片产商ID
  * @method string getChipId() 获取主芯片ID
  * @method void setChipId(string $ChipId) 设置主芯片ID
- */
-
-/**
- *CreateProduct请求参数结构体
  */
 class CreateProductRequest extends AbstractModel
 {
@@ -72,6 +70,7 @@ class CreateProductRequest extends AbstractModel
      * @var string 主芯片ID
      */
     public $ChipId;
+
     /**
      * @param string $ProductModel 产器型号(APP产品,为APP包名)
      * @param array $Features 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
@@ -86,6 +85,7 @@ class CreateProductRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

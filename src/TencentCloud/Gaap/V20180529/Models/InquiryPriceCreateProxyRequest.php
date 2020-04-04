@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceCreateProxy请求参数结构体
+ *
  * @method string getAccessRegion() 获取加速区域名称。
  * @method void setAccessRegion(string $AccessRegion) 设置加速区域名称。
  * @method integer getBandwidth() 获取通道带宽上限，单位：Mbps。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerRegion(string $RealServerRegion) 设置（新参数）源站区域名称。
  * @method integer getConcurrent() 获取（新参数）通道并发量上限，表示同时在线的连接数，单位：万。
  * @method void setConcurrent(integer $Concurrent) 设置（新参数）通道并发量上限，表示同时在线的连接数，单位：万。
- */
-
-/**
- *InquiryPriceCreateProxy请求参数结构体
  */
 class InquiryPriceCreateProxyRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
      * @var integer （新参数）通道并发量上限，表示同时在线的连接数，单位：万。
      */
     public $Concurrent;
+
     /**
      * @param string $AccessRegion 加速区域名称。
      * @param integer $Bandwidth 通道带宽上限，单位：Mbps。
@@ -78,6 +77,7 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

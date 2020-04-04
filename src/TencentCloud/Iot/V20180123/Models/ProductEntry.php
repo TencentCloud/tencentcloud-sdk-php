@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 产品条目
+ *
  * @method string getProductId() 获取产品Id
  * @method void setProductId(string $ProductId) 设置产品Id
  * @method string getProductKey() 获取产品Key
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域
  * @method string getDeviceType() 获取设备类型
  * @method void setDeviceType(string $DeviceType) 设置设备类型
- */
-
-/**
- *产品条目
  */
 class ProductEntry extends AbstractModel
 {
@@ -122,6 +120,7 @@ class ProductEntry extends AbstractModel
      * @var string 设备类型
      */
     public $DeviceType;
+
     /**
      * @param string $ProductId 产品Id
      * @param string $ProductKey 产品Key
@@ -142,6 +141,7 @@ class ProductEntry extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

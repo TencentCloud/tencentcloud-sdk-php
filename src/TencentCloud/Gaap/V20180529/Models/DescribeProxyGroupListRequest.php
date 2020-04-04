@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProxyGroupList请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量，默认值为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。
  * @method integer getLimit() 获取返回数量，默认值为20，最大值为100。
@@ -40,10 +42,6 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
  * @method void setFilters(array $Filters) 设置过滤条件。   
 每次请求的Filter.Values的上限为5。
 RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
- */
-
-/**
- *DescribeProxyGroupList请求参数结构体
  */
 class DescribeProxyGroupListRequest extends AbstractModel
 {
@@ -77,6 +75,7 @@ class DescribeProxyGroupListRequest extends AbstractModel
 RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
      */
     public $Filters;
+
     /**
      * @param integer $Offset 偏移量，默认值为0。
      * @param integer $Limit 返回数量，默认值为20，最大值为100。
@@ -94,6 +93,7 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

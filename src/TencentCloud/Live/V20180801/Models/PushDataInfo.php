@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 推流数据信息
+ *
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method string getAppName() 获取推流路径。
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetaVideoSpeed(integer $MetaVideoSpeed) 设置metadata中的视频码率，单位是Kbps。
  * @method integer getMetaFps() 获取metadata中的帧率。
  * @method void setMetaFps(integer $MetaFps) 设置metadata中的帧率。
- */
-
-/**
- *推流数据信息
  */
 class PushDataInfo extends AbstractModel
 {
@@ -149,6 +147,7 @@ class PushDataInfo extends AbstractModel
      * @var integer metadata中的帧率。
      */
     public $MetaFps;
+
     /**
      * @param string $StreamName 流名称。
      * @param string $AppName 推流路径。
@@ -174,6 +173,7 @@ class PushDataInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

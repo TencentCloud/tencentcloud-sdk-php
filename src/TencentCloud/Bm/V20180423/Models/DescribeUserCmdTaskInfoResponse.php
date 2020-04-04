@@ -18,16 +18,14 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUserCmdTaskInfo返回参数结构体
+ *
  * @method integer getTotalCount() 获取返回数量
  * @method void setTotalCount(integer $TotalCount) 设置返回数量
  * @method array getUserCmdTaskInfoSet() 获取自定义脚本任务详细信息列表
  * @method void setUserCmdTaskInfoSet(array $UserCmdTaskInfoSet) 设置自定义脚本任务详细信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeUserCmdTaskInfo返回参数结构体
  */
 class DescribeUserCmdTaskInfoResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeUserCmdTaskInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 返回数量
      * @param array $UserCmdTaskInfoSet 自定义脚本任务详细信息列表
@@ -54,6 +53,7 @@ class DescribeUserCmdTaskInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

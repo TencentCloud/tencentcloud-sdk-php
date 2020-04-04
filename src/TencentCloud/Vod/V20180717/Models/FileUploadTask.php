@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文件上传任务信息
+ *
  * @method string getFileId() 获取文件唯一 ID。
  * @method void setFileId(string $FileId) 设置文件唯一 ID。
  * @method MediaBasicInfo getMediaBasicInfo() 获取上传完成后生成的媒体文件基础信息。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetaData(MediaMetaData $MetaData) 设置元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *文件上传任务信息
  */
 class FileUploadTask extends AbstractModel
 {
@@ -58,6 +56,7 @@ class FileUploadTask extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetaData;
+
     /**
      * @param string $FileId 文件唯一 ID。
      * @param MediaBasicInfo $MediaBasicInfo 上传完成后生成的媒体文件基础信息。
@@ -70,6 +69,7 @@ class FileUploadTask extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

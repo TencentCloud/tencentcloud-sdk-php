@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListClsTopicDomains请求参数结构体
+ *
  * @method string getLogsetId() 获取日志集ID
  * @method void setLogsetId(string $LogsetId) 设置日志集ID
  * @method string getTopicId() 获取日志主题ID
  * @method void setTopicId(string $TopicId) 设置日志主题ID
  * @method string getChannel() 获取接入渠道，默认值为cdn
  * @method void setChannel(string $Channel) 设置接入渠道，默认值为cdn
- */
-
-/**
- *ListClsTopicDomains请求参数结构体
  */
 class ListClsTopicDomainsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListClsTopicDomainsRequest extends AbstractModel
      * @var string 接入渠道，默认值为cdn
      */
     public $Channel;
+
     /**
      * @param string $LogsetId 日志集ID
      * @param string $TopicId 日志主题ID
@@ -54,6 +53,7 @@ class ListClsTopicDomainsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

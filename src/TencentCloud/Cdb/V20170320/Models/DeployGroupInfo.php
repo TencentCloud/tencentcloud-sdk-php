@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 置放群组信息
+ *
  * @method string getDeployGroupId() 获取置放群组 ID。
  * @method void setDeployGroupId(string $DeployGroupId) 设置置放群组 ID。
  * @method string getDeployGroupName() 获取置放群组名称。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDevClass(string $DevClass) 设置置放群组物理机型属性。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *置放群组信息
  */
 class DeployGroupInfo extends AbstractModel
 {
@@ -89,6 +87,7 @@ class DeployGroupInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DevClass;
+
     /**
      * @param string $DeployGroupId 置放群组 ID。
      * @param string $DeployGroupName 置放群组名称。
@@ -106,6 +105,7 @@ class DeployGroupInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

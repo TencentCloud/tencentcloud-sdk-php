@@ -18,14 +18,12 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 包含MetricName的DataPoint数据
+ *
  * @method string getMetricName() 获取数据项
  * @method void setMetricName(string $MetricName) 设置数据项
  * @method array getPoints() 获取数据点的时间和值
  * @method void setPoints(array $Points) 设置数据点的时间和值
- */
-
-/**
- *包含MetricName的DataPoint数据
  */
 class DataPointMetric extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DataPointMetric extends AbstractModel
      * @var array 数据点的时间和值
      */
     public $Points;
+
     /**
      * @param string $MetricName 数据项
      * @param array $Points 数据点的时间和值
@@ -46,6 +45,7 @@ class DataPointMetric extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 一条转发规则的健康检查状态
+ *
  * @method string getLocationId() 获取转发规则ID
  * @method void setLocationId(string $LocationId) 设置转发规则ID
  * @method string getDomain() 获取转发规则的域名
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargets(array $Targets) 设置本规则上绑定的后端的健康检查状态
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *一条转发规则的健康检查状态
  */
 class RuleHealth extends AbstractModel
 {
@@ -61,6 +59,7 @@ class RuleHealth extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Targets;
+
     /**
      * @param string $LocationId 转发规则ID
      * @param string $Domain 转发规则的域名
@@ -74,6 +73,7 @@ class RuleHealth extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

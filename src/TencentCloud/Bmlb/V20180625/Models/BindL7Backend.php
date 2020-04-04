@@ -18,16 +18,14 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 待与七层监听器转发规则绑定的物理机主机、虚拟机或半托管主机信息。目前一个七层转发路径下面最多允许绑定255个主机端口。
+ *
  * @method integer getPort() 获取待绑定的主机端口，可选值1~65535。
  * @method void setPort(integer $Port) 设置待绑定的主机端口，可选值1~65535。
  * @method string getInstanceId() 获取黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
  * @method void setInstanceId(string $InstanceId) 设置黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
  * @method integer getWeight() 获取待绑定的主机权重，可选值0~100。
  * @method void setWeight(integer $Weight) 设置待绑定的主机权重，可选值0~100。
- */
-
-/**
- *待与七层监听器转发规则绑定的物理机主机、虚拟机或半托管主机信息。目前一个七层转发路径下面最多允许绑定255个主机端口。
  */
 class BindL7Backend extends AbstractModel
 {
@@ -45,6 +43,7 @@ class BindL7Backend extends AbstractModel
      * @var integer 待绑定的主机权重，可选值0~100。
      */
     public $Weight;
+
     /**
      * @param integer $Port 待绑定的主机端口，可选值1~65535。
      * @param string $InstanceId 黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
@@ -54,6 +53,7 @@ class BindL7Backend extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转码模板信息
+ *
  * @method string getVcodec() 获取视频编码：
 h264/h265。
  * @method void setVcodec(string $Vcodec) 设置视频编码：
@@ -64,10 +66,6 @@ baseline/main/high。
  * @method void setAiTransCode(integer $AiTransCode) 设置是否是急速高清模板，0：否，1：是。默认0。
  * @method float getAdaptBitratePercent() 获取急速高清相比VideoBitrate少多少码率，0.1到0.5
  * @method void setAdaptBitratePercent(float $AdaptBitratePercent) 设置急速高清相比VideoBitrate少多少码率，0.1到0.5
- */
-
-/**
- *转码模板信息
  */
 class TemplateInfo extends AbstractModel
 {
@@ -173,6 +171,7 @@ baseline/main/high。
      * @var float 急速高清相比VideoBitrate少多少码率，0.1到0.5
      */
     public $AdaptBitratePercent;
+
     /**
      * @param string $Vcodec 视频编码：
 h264/h265。
@@ -202,6 +201,7 @@ baseline/main/high。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

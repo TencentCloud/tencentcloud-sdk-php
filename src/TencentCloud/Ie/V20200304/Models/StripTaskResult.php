@@ -18,6 +18,8 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能拆条结果信息
+ *
  * @method integer getStatus() 获取编辑任务状态。 
 1：执行中；2：成功；3：失败。
  * @method void setStatus(integer $Status) 设置编辑任务状态。 
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemSet(array $ItemSet) 设置智能拆条结果集。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *智能拆条结果信息
  */
 class StripTaskResult extends AbstractModel
 {
@@ -61,6 +59,7 @@ class StripTaskResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemSet;
+
     /**
      * @param integer $Status 编辑任务状态。 
 1：执行中；2：成功；3：失败。
@@ -74,6 +73,7 @@ class StripTaskResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

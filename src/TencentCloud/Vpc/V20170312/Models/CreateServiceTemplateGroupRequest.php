@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateServiceTemplateGroup请求参数结构体
+ *
  * @method string getServiceTemplateGroupName() 获取协议端口模板集合名称
  * @method void setServiceTemplateGroupName(string $ServiceTemplateGroupName) 设置协议端口模板集合名称
  * @method array getServiceTemplateIds() 获取协议端口模板实例ID，例如：ppm-4dw6agho。
  * @method void setServiceTemplateIds(array $ServiceTemplateIds) 设置协议端口模板实例ID，例如：ppm-4dw6agho。
- */
-
-/**
- *CreateServiceTemplateGroup请求参数结构体
  */
 class CreateServiceTemplateGroupRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateServiceTemplateGroupRequest extends AbstractModel
      * @var array 协议端口模板实例ID，例如：ppm-4dw6agho。
      */
     public $ServiceTemplateIds;
+
     /**
      * @param string $ServiceTemplateGroupName 协议端口模板集合名称
      * @param array $ServiceTemplateIds 协议端口模板实例ID，例如：ppm-4dw6agho。
@@ -46,6 +45,7 @@ class CreateServiceTemplateGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

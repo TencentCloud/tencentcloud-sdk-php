@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDDoSPolicy请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method string getId() 获取可选字段，资源ID，如果填写则表示该资源绑定的DDoS高级策略
  * @method void setId(string $Id) 设置可选字段，资源ID，如果填写则表示该资源绑定的DDoS高级策略
- */
-
-/**
- *DescribeDDoSPolicy请求参数结构体
  */
 class DescribeDDoSPolicyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDDoSPolicyRequest extends AbstractModel
      * @var string 可选字段，资源ID，如果填写则表示该资源绑定的DDoS高级策略
      */
     public $Id;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param string $Id 可选字段，资源ID，如果填写则表示该资源绑定的DDoS高级策略
@@ -46,6 +45,7 @@ class DescribeDDoSPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

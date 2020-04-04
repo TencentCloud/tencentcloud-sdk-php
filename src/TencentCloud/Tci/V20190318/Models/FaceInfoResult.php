@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * FaceInfoResult
+ *
  * @method float getFaceRatio() 获取人脸尺寸的占比
  * @method void setFaceRatio(float $FaceRatio) 设置人脸尺寸的占比
  * @method integer getFrameHeight() 获取帧高度
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTop(integer $Top) 设置人脸顶坐标
  * @method integer getWidth() 获取人脸宽度
  * @method void setWidth(integer $Width) 设置人脸宽度
- */
-
-/**
- *FaceInfoResult
  */
 class FaceInfoResult extends AbstractModel
 {
@@ -73,6 +71,7 @@ class FaceInfoResult extends AbstractModel
      * @var integer 人脸宽度
      */
     public $Width;
+
     /**
      * @param float $FaceRatio 人脸尺寸的占比
      * @param integer $FrameHeight 帧高度
@@ -86,6 +85,7 @@ class FaceInfoResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateInstanceAccount请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getAccountName() 获取子账号名称
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivilege(string $Privilege) 设置读写策略：填写r、w、rw，表示只读、只写、读写
  * @method string getRemark() 获取子账号描述信息
  * @method void setRemark(string $Remark) 设置子账号描述信息
- */
-
-/**
- *CreateInstanceAccount请求参数结构体
  */
 class CreateInstanceAccountRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateInstanceAccountRequest extends AbstractModel
      * @var string 子账号描述信息
      */
     public $Remark;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $AccountName 子账号名称
@@ -78,6 +77,7 @@ class CreateInstanceAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

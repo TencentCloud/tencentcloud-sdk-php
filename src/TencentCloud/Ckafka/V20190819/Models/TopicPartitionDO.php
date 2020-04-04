@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 分区详情
+ *
  * @method integer getPartition() 获取Partition ID
  * @method void setPartition(integer $Partition) 设置Partition ID
  * @method integer getLeaderStatus() 获取Leader 运行状态
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsrNum(integer $IsrNum) 设置ISR 个数
  * @method integer getReplicaNum() 获取副本个数
  * @method void setReplicaNum(integer $ReplicaNum) 设置副本个数
- */
-
-/**
- *分区详情
  */
 class TopicPartitionDO extends AbstractModel
 {
@@ -52,6 +50,7 @@ class TopicPartitionDO extends AbstractModel
      * @var integer 副本个数
      */
     public $ReplicaNum;
+
     /**
      * @param integer $Partition Partition ID
      * @param integer $LeaderStatus Leader 运行状态
@@ -62,6 +61,7 @@ class TopicPartitionDO extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

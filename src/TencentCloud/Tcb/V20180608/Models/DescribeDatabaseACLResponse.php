@@ -18,6 +18,8 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDatabaseACL返回参数结构体
+ *
  * @method string getAclTag() 获取权限标签。包含以下取值：
 <li> READONLY：所有用户可读，仅创建者和管理员可写</li>
 <li> PRIVATE：仅创建者及管理员可读写</li>
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li> ADMINONLY：仅管理员可读写</li>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDatabaseACL返回参数结构体
  */
 class DescribeDatabaseACLResponse extends AbstractModel
 {
@@ -50,6 +48,7 @@ class DescribeDatabaseACLResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $AclTag 权限标签。包含以下取值：
 <li> READONLY：所有用户可读，仅创建者和管理员可写</li>
@@ -62,6 +61,7 @@ class DescribeDatabaseACLResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDosageDetailByDate请求参数结构体
+ *
  * @method string getStartDate() 获取查询账单开始日期，如 2019-01-01
  * @method void setStartDate(string $StartDate) 设置查询账单开始日期，如 2019-01-01
  * @method string getEndDate() 获取查询账单结束日期，如 2019-01-01， 时间跨度不超过7天
@@ -71,10 +73,6 @@ cdn业务：
  * @method void setInstanceID(string $InstanceID) 设置1、如果为空，则返回EIP或CLB所有实例的明细；
 2、如果传入实例名，则返回该实例明细
  */
-
-/**
- *DescribeDosageDetailByDate请求参数结构体
- */
 class DescribeDosageDetailByDateRequest extends AbstractModel
 {
     /**
@@ -122,6 +120,7 @@ cdn业务：
 2、如果传入实例名，则返回该实例明细
      */
     public $InstanceID;
+
     /**
      * @param string $StartDate 查询账单开始日期，如 2019-01-01
      * @param string $EndDate 查询账单结束日期，如 2019-01-01， 时间跨度不超过7天
@@ -154,6 +153,7 @@ cdn业务：
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

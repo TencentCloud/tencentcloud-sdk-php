@@ -18,14 +18,12 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRouteTableConflicts请求参数结构体
+ *
  * @method string getRouteTableCidrBlock() 获取路由表CIDR
  * @method void setRouteTableCidrBlock(string $RouteTableCidrBlock) 设置路由表CIDR
  * @method string getVpcId() 获取路由表绑定的VPC
  * @method void setVpcId(string $VpcId) 设置路由表绑定的VPC
- */
-
-/**
- *DescribeRouteTableConflicts请求参数结构体
  */
 class DescribeRouteTableConflictsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeRouteTableConflictsRequest extends AbstractModel
      * @var string 路由表绑定的VPC
      */
     public $VpcId;
+
     /**
      * @param string $RouteTableCidrBlock 路由表CIDR
      * @param string $VpcId 路由表绑定的VPC
@@ -46,6 +45,7 @@ class DescribeRouteTableConflictsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

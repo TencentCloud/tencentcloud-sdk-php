@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeScreenShotSheetNumList请求参数结构体
+ *
  * @method string getStartTime() 获取utc起始时间，格式为yyyy-mm-ddTHH:MM:SSZ
  * @method void setStartTime(string $StartTime) 设置utc起始时间，格式为yyyy-mm-ddTHH:MM:SSZ
  * @method string getEndTime() 获取utc结束时间，格式为yyyy-mm-ddTHH:MM:SSZ，支持查询最近1年数据。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPushDomains(array $PushDomains) 设置推流域名（支持查询2019年11 月1日之后的域名维度数据）。
  * @method string getGranularity() 获取数据维度，数据延迟1个半小时，可选值包括：1、Minute（5分钟粒度，最大支持查询时间范围是31天），2、Day（天粒度，默认值，最大支持查询时间范围是186天当天）。
  * @method void setGranularity(string $Granularity) 设置数据维度，数据延迟1个半小时，可选值包括：1、Minute（5分钟粒度，最大支持查询时间范围是31天），2、Day（天粒度，默认值，最大支持查询时间范围是186天当天）。
- */
-
-/**
- *DescribeScreenShotSheetNumList请求参数结构体
  */
 class DescribeScreenShotSheetNumListRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeScreenShotSheetNumListRequest extends AbstractModel
      * @var string 数据维度，数据延迟1个半小时，可选值包括：1、Minute（5分钟粒度，最大支持查询时间范围是31天），2、Day（天粒度，默认值，最大支持查询时间范围是186天当天）。
      */
     public $Granularity;
+
     /**
      * @param string $StartTime utc起始时间，格式为yyyy-mm-ddTHH:MM:SSZ
      * @param string $EndTime utc结束时间，格式为yyyy-mm-ddTHH:MM:SSZ，支持查询最近1年数据。
@@ -70,6 +69,7 @@ class DescribeScreenShotSheetNumListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

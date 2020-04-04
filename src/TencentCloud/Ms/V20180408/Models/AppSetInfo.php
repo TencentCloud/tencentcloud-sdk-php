@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 加固后app的信息，包含基本信息和加固信息
+ *
  * @method string getItemId() 获取任务唯一标识
  * @method void setItemId(string $ItemId) 设置任务唯一标识
  * @method string getAppName() 获取app的名称
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShieldMd5(string $ShieldMd5) 设置加固后app的md5
  * @method integer getShieldSize() 获取加固后app的大小
  * @method void setShieldSize(integer $ShieldSize) 设置加固后app的大小
- */
-
-/**
- *加固后app的信息，包含基本信息和加固信息
  */
 class AppSetInfo extends AbstractModel
 {
@@ -129,6 +127,7 @@ class AppSetInfo extends AbstractModel
      * @var integer 加固后app的大小
      */
     public $ShieldSize;
+
     /**
      * @param string $ItemId 任务唯一标识
      * @param string $AppName app的名称
@@ -150,6 +149,7 @@ class AppSetInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

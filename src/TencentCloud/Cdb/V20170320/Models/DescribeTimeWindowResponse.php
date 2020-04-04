@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTimeWindow返回参数结构体
+ *
  * @method array getMonday() 获取星期一的可维护时间列表。
  * @method void setMonday(array $Monday) 设置星期一的可维护时间列表。
  * @method array getTuesday() 获取星期二的可维护时间列表。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSunday(array $Sunday) 设置星期日的可维护时间列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeTimeWindow返回参数结构体
  */
 class DescribeTimeWindowResponse extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeTimeWindowResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Monday 星期一的可维护时间列表。
      * @param array $Tuesday 星期二的可维护时间列表。
@@ -94,6 +93,7 @@ class DescribeTimeWindowResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

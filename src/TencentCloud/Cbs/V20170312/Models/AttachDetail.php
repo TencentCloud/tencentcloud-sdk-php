@@ -18,16 +18,14 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述一个实例已挂载和可挂载数据盘的数量。
+ *
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
  * @method integer getAttachedDiskCount() 获取实例已挂载数据盘的数量。
  * @method void setAttachedDiskCount(integer $AttachedDiskCount) 设置实例已挂载数据盘的数量。
  * @method integer getMaxAttachCount() 获取实例最大可挂载数据盘的数量。
  * @method void setMaxAttachCount(integer $MaxAttachCount) 设置实例最大可挂载数据盘的数量。
- */
-
-/**
- *描述一个实例已挂载和可挂载数据盘的数量。
  */
 class AttachDetail extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AttachDetail extends AbstractModel
      * @var integer 实例最大可挂载数据盘的数量。
      */
     public $MaxAttachCount;
+
     /**
      * @param string $InstanceId 实例ID。
      * @param integer $AttachedDiskCount 实例已挂载数据盘的数量。
@@ -54,6 +53,7 @@ class AttachDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

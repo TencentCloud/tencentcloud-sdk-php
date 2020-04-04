@@ -18,14 +18,13 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCustomerGatewayVendors请求参数结构体
+ *
 
- */
-
-/**
- *DescribeCustomerGatewayVendors请求参数结构体
  */
 class DescribeCustomerGatewayVendorsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeCustomerGatewayVendorsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMaliciousRequests请求参数结构体
+ *
  * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 <li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
  * @method string getUuid() 获取云镜客户端唯一UUID。
  * @method void setUuid(string $Uuid) 设置云镜客户端唯一UUID。
- */
-
-/**
- *DescribeMaliciousRequests请求参数结构体
  */
 class DescribeMaliciousRequestsRequest extends AbstractModel
 {
@@ -61,6 +59,7 @@ class DescribeMaliciousRequestsRequest extends AbstractModel
      * @var string 云镜客户端唯一UUID。
      */
     public $Uuid;
+
     /**
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
@@ -74,6 +73,7 @@ class DescribeMaliciousRequestsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

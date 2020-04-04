@@ -18,14 +18,12 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetOnlineRecordCallback请求参数结构体
+ *
  * @method integer getSdkAppId() 获取客户的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置客户的SdkAppId
  * @method string getCallback() 获取实时录制任务结果回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持 http或https协议，即回调地址以http://或https://开头
  * @method void setCallback(string $Callback) 设置实时录制任务结果回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持 http或https协议，即回调地址以http://或https://开头
- */
-
-/**
- *SetOnlineRecordCallback请求参数结构体
  */
 class SetOnlineRecordCallbackRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SetOnlineRecordCallbackRequest extends AbstractModel
      * @var string 实时录制任务结果回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持 http或https协议，即回调地址以http://或https://开头
      */
     public $Callback;
+
     /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param string $Callback 实时录制任务结果回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持 http或https协议，即回调地址以http://或https://开头
@@ -46,6 +45,7 @@ class SetOnlineRecordCallbackRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

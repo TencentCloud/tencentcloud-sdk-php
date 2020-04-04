@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 预测输入
+ *
  * @method string getInputPath() 获取输入路径，支持 cos 格式路径文件夹或文件
  * @method void setInputPath(string $InputPath) 设置输入路径，支持 cos 格式路径文件夹或文件
  * @method string getOutputPath() 获取输出路径，支持 cos 格式路径
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignatureName(string $SignatureName) 设置模型签名
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *预测输入
  */
 class PredictInput extends AbstractModel
 {
@@ -69,6 +67,7 @@ class PredictInput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SignatureName;
+
     /**
      * @param string $InputPath 输入路径，支持 cos 格式路径文件夹或文件
      * @param string $OutputPath 输出路径，支持 cos 格式路径
@@ -82,6 +81,7 @@ class PredictInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

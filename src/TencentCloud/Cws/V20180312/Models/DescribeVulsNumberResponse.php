@@ -18,6 +18,8 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVulsNumber返回参数结构体
+ *
  * @method integer getImpactSiteNumber() 获取受影响的网站总数。
  * @method void setImpactSiteNumber(integer $ImpactSiteNumber) 设置受影响的网站总数。
  * @method integer getSiteNumber() 获取已验证的网站总数。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImpactSites(array $ImpactSites) 设置受影响的网站列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeVulsNumber返回参数结构体
  */
 class DescribeVulsNumberResponse extends AbstractModel
 {
@@ -94,6 +92,7 @@ class DescribeVulsNumberResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $ImpactSiteNumber 受影响的网站总数。
      * @param integer $SiteNumber 已验证的网站总数。
@@ -110,6 +109,7 @@ class DescribeVulsNumberResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

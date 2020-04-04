@@ -18,14 +18,12 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateUploadPath请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getFileName() 获取固件文件名
  * @method void setFileName(string $FileName) 设置固件文件名
- */
-
-/**
- *CreateUploadPath请求参数结构体
  */
 class CreateUploadPathRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateUploadPathRequest extends AbstractModel
      * @var string 固件文件名
      */
     public $FileName;
+
     /**
      * @param string $ProductId 产品ID
      * @param string $FileName 固件文件名
@@ -46,6 +45,7 @@ class CreateUploadPathRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

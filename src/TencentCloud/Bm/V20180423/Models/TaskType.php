@@ -18,16 +18,14 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 故障id对应故障名列表
+ *
  * @method integer getTypeId() 获取故障类ID
  * @method void setTypeId(integer $TypeId) 设置故障类ID
  * @method string getTypeName() 获取故障类中文名
  * @method void setTypeName(string $TypeName) 设置故障类中文名
  * @method string getTaskSubType() 获取故障类型父类
  * @method void setTaskSubType(string $TaskSubType) 设置故障类型父类
- */
-
-/**
- *故障id对应故障名列表
  */
 class TaskType extends AbstractModel
 {
@@ -45,6 +43,7 @@ class TaskType extends AbstractModel
      * @var string 故障类型父类
      */
     public $TaskSubType;
+
     /**
      * @param integer $TypeId 故障类ID
      * @param string $TypeName 故障类中文名
@@ -54,6 +53,7 @@ class TaskType extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

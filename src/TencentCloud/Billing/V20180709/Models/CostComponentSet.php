@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 消耗组件明细
+ *
  * @method string getComponentCodeName() 获取组件类型名称
  * @method void setComponentCodeName(string $ComponentCodeName) 设置组件类型名称
  * @method string getItemCodeName() 获取组件名称
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCashPayAmount(string $CashPayAmount) 设置现金支付金额
  * @method string getIncentivePayAmount() 获取赠送金支付金额
  * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送金支付金额
- */
-
-/**
- *消耗组件明细
  */
 class CostComponentSet extends AbstractModel
 {
@@ -108,6 +106,7 @@ class CostComponentSet extends AbstractModel
      * @var string 赠送金支付金额
      */
     public $IncentivePayAmount;
+
     /**
      * @param string $ComponentCodeName 组件类型名称
      * @param string $ItemCodeName 组件名称
@@ -126,6 +125,7 @@ class CostComponentSet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

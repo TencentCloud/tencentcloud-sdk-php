@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OpenProxies返回参数结构体
+ *
  * @method array getInvalidStatusInstanceSet() 获取非关闭状态下的通道实例ID列表，不可开启。
  * @method void setInvalidStatusInstanceSet(array $InvalidStatusInstanceSet) 设置非关闭状态下的通道实例ID列表，不可开启。
  * @method array getOperationFailedInstanceSet() 获取开启操作失败的通道实例ID列表。
  * @method void setOperationFailedInstanceSet(array $OperationFailedInstanceSet) 设置开启操作失败的通道实例ID列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *OpenProxies返回参数结构体
  */
 class OpenProxiesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class OpenProxiesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $InvalidStatusInstanceSet 非关闭状态下的通道实例ID列表，不可开启。
      * @param array $OperationFailedInstanceSet 开启操作失败的通道实例ID列表。
@@ -54,6 +53,7 @@ class OpenProxiesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

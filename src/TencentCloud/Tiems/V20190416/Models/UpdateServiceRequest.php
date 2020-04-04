@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateService请求参数结构体
+ *
  * @method string getServiceId() 获取服务Id
  * @method void setServiceId(string $ServiceId) 设置服务Id
  * @method Scaler getScaler() 获取扩缩容配置
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGpu(integer $Gpu) 设置显卡配置，单位为 1/1000 卡
  * @method string getLogTopicId() 获取Cls日志主题ID
  * @method void setLogTopicId(string $LogTopicId) 设置Cls日志主题ID
- */
-
-/**
- *UpdateService请求参数结构体
  */
 class UpdateServiceRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class UpdateServiceRequest extends AbstractModel
      * @var string Cls日志主题ID
      */
     public $LogTopicId;
+
     /**
      * @param string $ServiceId 服务Id
      * @param Scaler $Scaler 扩缩容配置
@@ -118,6 +117,7 @@ class UpdateServiceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人脸识别输入。
+ *
  * @method integer getDefinition() 获取人脸识别模板 ID。
  * @method void setDefinition(integer $Definition) 设置人脸识别模板 ID。
- */
-
-/**
- *人脸识别输入。
  */
 class AiRecognitionTaskFaceResultInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskFaceResultInput extends AbstractModel
      * @var integer 人脸识别模板 ID。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 人脸识别模板 ID。
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskFaceResultInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

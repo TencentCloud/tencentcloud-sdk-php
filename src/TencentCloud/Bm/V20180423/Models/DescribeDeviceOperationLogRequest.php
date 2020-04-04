@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDeviceOperationLog请求参数结构体
+ *
  * @method string getInstanceId() 获取设备实例ID
  * @method void setInstanceId(string $InstanceId) 设置设备实例ID
  * @method string getStartTime() 获取查询开始日期
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
  * @method void setLimit(integer $Limit) 设置返回数量
- */
-
-/**
- *DescribeDeviceOperationLog请求参数结构体
  */
 class DescribeDeviceOperationLogRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeDeviceOperationLogRequest extends AbstractModel
      * @var integer 返回数量
      */
     public $Limit;
+
     /**
      * @param string $InstanceId 设备实例ID
      * @param string $StartTime 查询开始日期
@@ -70,6 +69,7 @@ class DescribeDeviceOperationLogRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

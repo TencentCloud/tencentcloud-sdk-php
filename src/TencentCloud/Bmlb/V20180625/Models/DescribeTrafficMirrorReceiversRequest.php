@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTrafficMirrorReceivers请求参数结构体
+ *
  * @method string getTrafficMirrorId() 获取流量镜像实例ID。
  * @method void setTrafficMirrorId(string $TrafficMirrorId) 设置流量镜像实例ID。
  * @method array getInstanceIds() 获取接收机黑石物理机实例ID数组。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVagueStr(string $VagueStr) 设置搜索instance或者alias
  * @method string getVagueIp() 获取搜索IP
  * @method void setVagueIp(string $VagueIp) 设置搜索IP
- */
-
-/**
- *DescribeTrafficMirrorReceivers请求参数结构体
  */
 class DescribeTrafficMirrorReceiversRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeTrafficMirrorReceiversRequest extends AbstractModel
      * @var string 搜索IP
      */
     public $VagueIp;
+
     /**
      * @param string $TrafficMirrorId 流量镜像实例ID。
      * @param array $InstanceIds 接收机黑石物理机实例ID数组。
@@ -94,6 +93,7 @@ class DescribeTrafficMirrorReceiversRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

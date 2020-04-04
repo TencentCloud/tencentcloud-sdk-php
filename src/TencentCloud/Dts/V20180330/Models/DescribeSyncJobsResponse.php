@@ -18,16 +18,14 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSyncJobs返回参数结构体
+ *
  * @method integer getTotalCount() 获取任务数目
  * @method void setTotalCount(integer $TotalCount) 设置任务数目
  * @method array getJobList() 获取任务详情数组
  * @method void setJobList(array $JobList) 设置任务详情数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeSyncJobs返回参数结构体
  */
 class DescribeSyncJobsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeSyncJobsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 任务数目
      * @param array $JobList 任务详情数组
@@ -54,6 +53,7 @@ class DescribeSyncJobsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

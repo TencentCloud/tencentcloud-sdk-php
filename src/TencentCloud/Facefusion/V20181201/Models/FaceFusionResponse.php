@@ -18,16 +18,14 @@ namespace TencentCloud\Facefusion\V20181201\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * FaceFusion返回参数结构体
+ *
  * @method string getImage() 获取RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
  * @method void setImage(string $Image) 设置RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
  * @method array getReviewResultSet() 获取鉴政结果
  * @method void setReviewResultSet(array $ReviewResultSet) 设置鉴政结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *FaceFusion返回参数结构体
  */
 class FaceFusionResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class FaceFusionResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Image RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
      * @param array $ReviewResultSet 鉴政结果
@@ -54,6 +53,7 @@ class FaceFusionResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

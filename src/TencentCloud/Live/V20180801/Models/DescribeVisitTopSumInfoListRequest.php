@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVisitTopSumInfoList请求参数结构体
+ *
  * @method string getStartTime() 获取起始时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method void setStartTime(string $StartTime) 设置起始时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method string getEndTime() 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 默认值是20。
  * @method string getOrderParam() 获取排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
  * @method void setOrderParam(string $OrderParam) 设置排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
- */
-
-/**
- *DescribeVisitTopSumInfoList请求参数结构体
  */
 class DescribeVisitTopSumInfoListRequest extends AbstractModel
 {
@@ -85,6 +83,7 @@ class DescribeVisitTopSumInfoListRequest extends AbstractModel
      * @var string 排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
      */
     public $OrderParam;
+
     /**
      * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS
@@ -102,6 +101,7 @@ class DescribeVisitTopSumInfoListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

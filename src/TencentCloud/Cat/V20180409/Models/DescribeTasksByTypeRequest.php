@@ -18,16 +18,14 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTasksByType请求参数结构体
+ *
  * @method integer getOffset() 获取从第Offset 条开始查询。缺省值为0
  * @method void setOffset(integer $Offset) 设置从第Offset 条开始查询。缺省值为0
  * @method integer getLimit() 获取本批次查询Limit 条记录。缺省值为20
  * @method void setLimit(integer $Limit) 设置本批次查询Limit 条记录。缺省值为20
  * @method integer getType() 获取拨测任务类型。0 站点监控，2 可用性监控。缺省值为2
  * @method void setType(integer $Type) 设置拨测任务类型。0 站点监控，2 可用性监控。缺省值为2
- */
-
-/**
- *DescribeTasksByType请求参数结构体
  */
 class DescribeTasksByTypeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTasksByTypeRequest extends AbstractModel
      * @var integer 拨测任务类型。0 站点监控，2 可用性监控。缺省值为2
      */
     public $Type;
+
     /**
      * @param integer $Offset 从第Offset 条开始查询。缺省值为0
      * @param integer $Limit 本批次查询Limit 条记录。缺省值为20
@@ -54,6 +53,7 @@ class DescribeTasksByTypeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

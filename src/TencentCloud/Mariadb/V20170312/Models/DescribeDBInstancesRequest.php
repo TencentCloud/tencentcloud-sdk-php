@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstances请求参数结构体
+ *
  * @method array getInstanceIds() 获取按照一个或者多个实例 ID 查询。实例 ID 形如：tdsql-ow728lmc。每次请求的实例的上限为100。
  * @method void setInstanceIds(array $InstanceIds) 设置按照一个或者多个实例 ID 查询。实例 ID 形如：tdsql-ow728lmc。每次请求的实例的上限为100。
  * @method string getSearchName() 获取搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExclusterType(integer $ExclusterType) 设置实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
  * @method array getExclusterIds() 获取按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9
  * @method void setExclusterIds(array $ExclusterIds) 设置按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9
- */
-
-/**
- *DescribeDBInstances请求参数结构体
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -129,6 +127,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @var array 按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9
      */
     public $ExclusterIds;
+
     /**
      * @param array $InstanceIds 按照一个或者多个实例 ID 查询。实例 ID 形如：tdsql-ow728lmc。每次请求的实例的上限为100。
      * @param string $SearchName 搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。
@@ -150,6 +149,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

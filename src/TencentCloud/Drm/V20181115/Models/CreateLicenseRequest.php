@@ -18,6 +18,8 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLicense请求参数结构体
+ *
  * @method string getDrmType() 获取DRM方案类型，接口取值：WIDEVINE，FAIRPLAY。
  * @method void setDrmType(string $DrmType) 设置DRM方案类型，接口取值：WIDEVINE，FAIRPLAY。
  * @method string getLicenseRequest() 获取Base64编码的终端设备License Request数据。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 该值为空时，默认授权所有track播放。
  * @method PlaybackPolicy getPlaybackPolicy() 获取播放策略参数。
  * @method void setPlaybackPolicy(PlaybackPolicy $PlaybackPolicy) 设置播放策略参数。
- */
-
-/**
- *CreateLicense请求参数结构体
  */
 class CreateLicenseRequest extends AbstractModel
 {
@@ -62,6 +60,7 @@ class CreateLicenseRequest extends AbstractModel
      * @var PlaybackPolicy 播放策略参数。
      */
     public $PlaybackPolicy;
+
     /**
      * @param string $DrmType DRM方案类型，接口取值：WIDEVINE，FAIRPLAY。
      * @param string $LicenseRequest Base64编码的终端设备License Request数据。
@@ -74,6 +73,7 @@ class CreateLicenseRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

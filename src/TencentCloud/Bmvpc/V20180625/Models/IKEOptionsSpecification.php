@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
+ *
  * @method string getPropoEncryAlgorithm() 获取加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
  * @method void setPropoEncryAlgorithm(string $PropoEncryAlgorithm) 设置加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
  * @method string getPropoAuthenAlgorithm() 获取认证算法：可选值：'MD5', 'SHA1'，默认为MD5
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIKESaLifetimeSeconds(integer $IKESaLifetimeSeconds) 设置IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
  * @method string getIKEVersion() 获取IKE版本
  * @method void setIKEVersion(string $IKEVersion) 设置IKE版本
- */
-
-/**
- *IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
  */
 class IKEOptionsSpecification extends AbstractModel
 {
@@ -108,6 +106,7 @@ class IKEOptionsSpecification extends AbstractModel
      * @var string IKE版本
      */
     public $IKEVersion;
+
     /**
      * @param string $PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
      * @param string $PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，默认为MD5
@@ -126,6 +125,7 @@ class IKEOptionsSpecification extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Aai\V20180522\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Chat请求参数结构体
+ *
  * @method string getText() 获取聊天输入文本
  * @method void setText(string $Text) 设置聊天输入文本
  * @method integer getProjectId() 获取腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
  * @method void setProjectId(integer $ProjectId) 设置腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
  * @method string getUser() 获取json格式，比如 {"id":"test","gender":"male"}。记录当前与机器人交互的用户id，非必须但强烈建议传入，否则多轮聊天功能会受影响
  * @method void setUser(string $User) 设置json格式，比如 {"id":"test","gender":"male"}。记录当前与机器人交互的用户id，非必须但强烈建议传入，否则多轮聊天功能会受影响
- */
-
-/**
- *Chat请求参数结构体
  */
 class ChatRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ChatRequest extends AbstractModel
      * @var string json格式，比如 {"id":"test","gender":"male"}。记录当前与机器人交互的用户id，非必须但强烈建议传入，否则多轮聊天功能会受影响
      */
     public $User;
+
     /**
      * @param string $Text 聊天输入文本
      * @param integer $ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
@@ -54,6 +53,7 @@ class ChatRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

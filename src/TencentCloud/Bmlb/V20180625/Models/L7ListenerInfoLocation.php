@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询绑定了某主机的七层监听器时返回的转发路径。
+ *
  * @method string getUrl() 获取转发路径。
  * @method void setUrl(string $Url) 设置转发路径。
  * @method string getLocationId() 获取转发路径实例ID。
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddTimestamp(string $AddTimestamp) 设置创建时间戳。
  * @method array getBackendSet() 获取该转发路径所绑定的主机列表。
  * @method void setBackendSet(array $BackendSet) 设置该转发路径所绑定的主机列表。
- */
-
-/**
- *查询绑定了某主机的七层监听器时返回的转发路径。
  */
 class L7ListenerInfoLocation extends AbstractModel
 {
@@ -122,6 +120,7 @@ class L7ListenerInfoLocation extends AbstractModel
      * @var array 该转发路径所绑定的主机列表。
      */
     public $BackendSet;
+
     /**
      * @param string $Url 转发路径。
      * @param string $LocationId 转发路径实例ID。
@@ -142,6 +141,7 @@ class L7ListenerInfoLocation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

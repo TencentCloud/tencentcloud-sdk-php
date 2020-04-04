@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RO 实例的权重值
+ *
  * @method string getInstanceId() 获取RO 实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置RO 实例 ID。
  * @method integer getWeight() 获取权重值。取值范围为 [0, 100]。
  * @method void setWeight(integer $Weight) 设置权重值。取值范围为 [0, 100]。
- */
-
-/**
- *RO 实例的权重值
  */
 class RoWeightValue extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RoWeightValue extends AbstractModel
      * @var integer 权重值。取值范围为 [0, 100]。
      */
     public $Weight;
+
     /**
      * @param string $InstanceId RO 实例 ID。
      * @param integer $Weight 权重值。取值范围为 [0, 100]。
@@ -46,6 +45,7 @@ class RoWeightValue extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

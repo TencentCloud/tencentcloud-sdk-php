@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频片头片尾识别任务控制参数
+ *
  * @method string getSwitch() 获取视频片头片尾识别任务开关，可选值：
 <li>ON：开启智能视频片头片尾识别任务；</li>
 <li>OFF：关闭智能视频片头片尾识别任务。</li>
  * @method void setSwitch(string $Switch) 设置视频片头片尾识别任务开关，可选值：
 <li>ON：开启智能视频片头片尾识别任务；</li>
 <li>OFF：关闭智能视频片头片尾识别任务。</li>
- */
-
-/**
- *视频片头片尾识别任务控制参数
  */
 class HeadTailConfigureInfo extends AbstractModel
 {
@@ -37,6 +35,7 @@ class HeadTailConfigureInfo extends AbstractModel
 <li>OFF：关闭智能视频片头片尾识别任务。</li>
      */
     public $Switch;
+
     /**
      * @param string $Switch 视频片头片尾识别任务开关，可选值：
 <li>ON：开启智能视频片头片尾识别任务；</li>
@@ -46,6 +45,7 @@ class HeadTailConfigureInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

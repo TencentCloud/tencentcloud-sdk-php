@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 网络探测验证结果。
+ *
  * @method string getNetDetectId() 获取网络探测实例ID。形如：netd-12345678。
  * @method void setNetDetectId(string $NetDetectId) 设置网络探测实例ID。形如：netd-12345678。
  * @method array getNetDetectIpStateSet() 获取网络探测目的IP验证结果对象数组。
  * @method void setNetDetectIpStateSet(array $NetDetectIpStateSet) 设置网络探测目的IP验证结果对象数组。
- */
-
-/**
- *网络探测验证结果。
  */
 class NetDetectState extends AbstractModel
 {
@@ -38,6 +36,7 @@ class NetDetectState extends AbstractModel
      * @var array 网络探测目的IP验证结果对象数组。
      */
     public $NetDetectIpStateSet;
+
     /**
      * @param string $NetDetectId 网络探测实例ID。形如：netd-12345678。
      * @param array $NetDetectIpStateSet 网络探测目的IP验证结果对象数组。
@@ -46,6 +45,7 @@ class NetDetectState extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAddressTemplates请求参数结构体
+ *
  * @method array getFilters() 获取过滤条件。
 <li>address-template-name - String - （过滤条件）IP地址模板名称。</li>
 <li>address-template-id - String - （过滤条件）IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) 设置偏移量，默认为0。
  * @method string getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(string $Limit) 设置返回数量，默认为20，最大值为100。
- */
-
-/**
- *DescribeAddressTemplates请求参数结构体
  */
 class DescribeAddressTemplatesRequest extends AbstractModel
 {
@@ -51,6 +49,7 @@ class DescribeAddressTemplatesRequest extends AbstractModel
      * @var string 返回数量，默认为20，最大值为100。
      */
     public $Limit;
+
     /**
      * @param array $Filters 过滤条件。
 <li>address-template-name - String - （过滤条件）IP地址模板名称。</li>
@@ -62,6 +61,7 @@ class DescribeAddressTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

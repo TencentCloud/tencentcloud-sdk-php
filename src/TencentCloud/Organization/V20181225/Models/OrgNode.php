@@ -18,6 +18,8 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 企业组织单元
+ *
  * @method integer getNodeId() 获取组织单元ID
  * @method void setNodeId(integer $NodeId) 设置组织单元ID
  * @method string getName() 获取名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParentNodeId(integer $ParentNodeId) 设置父单元ID
  * @method integer getMemberCount() 获取成员数量
  * @method void setMemberCount(integer $MemberCount) 设置成员数量
- */
-
-/**
- *企业组织单元
  */
 class OrgNode extends AbstractModel
 {
@@ -52,6 +50,7 @@ class OrgNode extends AbstractModel
      * @var integer 成员数量
      */
     public $MemberCount;
+
     /**
      * @param integer $NodeId 组织单元ID
      * @param string $Name 名称
@@ -62,6 +61,7 @@ class OrgNode extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

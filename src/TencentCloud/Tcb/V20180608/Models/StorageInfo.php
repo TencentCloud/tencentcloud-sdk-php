@@ -18,6 +18,8 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StorageInfo 资源信息
+ *
  * @method string getRegion() 获取资源所属地域。
 当前支持ap-shanghai
  * @method void setRegion(string $Region) 设置资源所属地域。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCdnDomain(string $CdnDomain) 设置cdn 域名
  * @method string getAppId() 获取资源所属用户的腾讯云appId
  * @method void setAppId(string $AppId) 设置资源所属用户的腾讯云appId
- */
-
-/**
- *StorageInfo 资源信息
  */
 class StorageInfo extends AbstractModel
 {
@@ -55,6 +53,7 @@ class StorageInfo extends AbstractModel
      * @var string 资源所属用户的腾讯云appId
      */
     public $AppId;
+
     /**
      * @param string $Region 资源所属地域。
 当前支持ap-shanghai
@@ -66,6 +65,7 @@ class StorageInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

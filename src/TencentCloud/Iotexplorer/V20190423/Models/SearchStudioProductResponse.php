@@ -18,16 +18,14 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SearchStudioProduct返回参数结构体
+ *
  * @method array getProducts() 获取产品列表
  * @method void setProducts(array $Products) 设置产品列表
  * @method integer getTotal() 获取产品数量
  * @method void setTotal(integer $Total) 设置产品数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *SearchStudioProduct返回参数结构体
  */
 class SearchStudioProductResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SearchStudioProductResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Products 产品列表
      * @param integer $Total 产品数量
@@ -54,6 +53,7 @@ class SearchStudioProductResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

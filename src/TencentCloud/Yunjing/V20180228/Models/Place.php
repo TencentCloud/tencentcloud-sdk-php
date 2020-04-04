@@ -18,16 +18,14 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 登录地信息
+ *
  * @method integer getCityId() 获取城市 ID。
  * @method void setCityId(integer $CityId) 设置城市 ID。
  * @method integer getProvinceId() 获取省份 ID。
  * @method void setProvinceId(integer $ProvinceId) 设置省份 ID。
  * @method integer getCountryId() 获取国家ID，暂只支持国内：1。
  * @method void setCountryId(integer $CountryId) 设置国家ID，暂只支持国内：1。
- */
-
-/**
- *登录地信息
  */
 class Place extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Place extends AbstractModel
      * @var integer 国家ID，暂只支持国内：1。
      */
     public $CountryId;
+
     /**
      * @param integer $CityId 城市 ID。
      * @param integer $ProvinceId 省份 ID。
@@ -54,6 +53,7 @@ class Place extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCCAlarmThreshold请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP专业版）
  * @method string getRsId() 获取资源ID,字符串类型
  * @method void setRsId(string $RsId) 设置资源ID,字符串类型
- */
-
-/**
- *DescribeCCAlarmThreshold请求参数结构体
  */
 class DescribeCCAlarmThresholdRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeCCAlarmThresholdRequest extends AbstractModel
      * @var string 资源ID,字符串类型
      */
     public $RsId;
+
     /**
      * @param string $Business 大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP专业版）
      * @param string $RsId 资源ID,字符串类型
@@ -46,6 +45,7 @@ class DescribeCCAlarmThresholdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

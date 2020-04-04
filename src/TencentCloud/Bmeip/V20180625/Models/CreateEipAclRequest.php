@@ -18,14 +18,12 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateEipAcl请求参数结构体
+ *
  * @method string getAclName() 获取ACL 名称
  * @method void setAclName(string $AclName) 设置ACL 名称
  * @method integer getStatus() 获取ACL 状态 0：无状态，1：有状态
  * @method void setStatus(integer $Status) 设置ACL 状态 0：无状态，1：有状态
- */
-
-/**
- *CreateEipAcl请求参数结构体
  */
 class CreateEipAclRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateEipAclRequest extends AbstractModel
      * @var integer ACL 状态 0：无状态，1：有状态
      */
     public $Status;
+
     /**
      * @param string $AclName ACL 名称
      * @param integer $Status ACL 状态 0：无状态，1：有状态
@@ -46,6 +45,7 @@ class CreateEipAclRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

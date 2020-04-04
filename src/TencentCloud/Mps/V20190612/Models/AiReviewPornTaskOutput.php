@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 鉴黄结果信息
+ *
  * @method float getConfidence() 获取视频鉴黄评分，分值为0到100。
  * @method void setConfidence(float $Confidence) 设置视频鉴黄评分，分值为0到100。
  * @method string getSuggestion() 获取鉴黄结果建议，取值范围：
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 <li>intimacy：亲密行为。</li>
  * @method array getSegmentSet() 获取有涉黄嫌疑的视频片段列表。
  * @method void setSegmentSet(array $SegmentSet) 设置有涉黄嫌疑的视频片段列表。
- */
-
-/**
- *鉴黄结果信息
  */
 class AiReviewPornTaskOutput extends AbstractModel
 {
@@ -73,6 +71,7 @@ class AiReviewPornTaskOutput extends AbstractModel
      * @var array 有涉黄嫌疑的视频片段列表。
      */
     public $SegmentSet;
+
     /**
      * @param float $Confidence 视频鉴黄评分，分值为0到100。
      * @param string $Suggestion 鉴黄结果建议，取值范围：
@@ -90,6 +89,7 @@ class AiReviewPornTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

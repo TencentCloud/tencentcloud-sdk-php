@@ -18,14 +18,13 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetSnapOverview请求参数结构体
+ *
 
- */
-
-/**
- *GetSnapOverview请求参数结构体
  */
 class GetSnapOverviewRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class GetSnapOverviewRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

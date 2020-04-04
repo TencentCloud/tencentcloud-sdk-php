@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 配置
+ *
  * @method string getId() 获取Id
  * @method void setId(string $Id) 设置Id
  * @method string getName() 获取配置名
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置配置描述
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *配置
  */
 class Config extends AbstractModel
 {
@@ -83,6 +81,7 @@ class Config extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
+
     /**
      * @param string $Id Id
      * @param string $Name 配置名
@@ -98,6 +97,7 @@ class Config extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

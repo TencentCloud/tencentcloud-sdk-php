@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGroup的返回
+ *
  * @method integer getTotalCount() 获取计数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置计数
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupList(array $GroupList) 设置GroupList
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DescribeGroup的返回
  */
 class GroupResponse extends AbstractModel
 {
@@ -44,6 +42,7 @@ class GroupResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupList;
+
     /**
      * @param integer $TotalCount 计数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class GroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

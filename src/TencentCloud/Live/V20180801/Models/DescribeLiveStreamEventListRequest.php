@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveStreamEventList请求参数结构体
+ *
  * @method string getStartTime() 获取起始时间。 
 UTC 格式，例如：2018-12-29T19:00:00Z。
 支持查询60天内的历史记录。
@@ -74,10 +76,6 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
  * @method void setIsAsc(integer $IsAsc) 设置是否按结束时间正序显示，默认逆序。
 0：逆序。
 1：正序。
- */
-
-/**
- *DescribeLiveStreamEventList请求参数结构体
  */
 class DescribeLiveStreamEventListRequest extends AbstractModel
 {
@@ -148,6 +146,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
 1：正序。
      */
     public $IsAsc;
+
     /**
      * @param string $StartTime 起始时间。 
 UTC 格式，例如：2018-12-29T19:00:00Z。
@@ -182,6 +181,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

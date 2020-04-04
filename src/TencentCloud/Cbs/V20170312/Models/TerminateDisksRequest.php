@@ -18,12 +18,10 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TerminateDisks请求参数结构体
+ *
  * @method array getDiskIds() 获取需退还的云盘ID列表。
  * @method void setDiskIds(array $DiskIds) 设置需退还的云盘ID列表。
- */
-
-/**
- *TerminateDisks请求参数结构体
  */
 class TerminateDisksRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class TerminateDisksRequest extends AbstractModel
      * @var array 需退还的云盘ID列表。
      */
     public $DiskIds;
+
     /**
      * @param array $DiskIds 需退还的云盘ID列表。
      */
@@ -38,6 +37,7 @@ class TerminateDisksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

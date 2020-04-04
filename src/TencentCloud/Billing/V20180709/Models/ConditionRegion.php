@@ -18,14 +18,12 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 地域过滤条件
+ *
  * @method string getRegionId() 获取地域ID
  * @method void setRegionId(string $RegionId) 设置地域ID
  * @method string getRegionName() 获取地域名称
  * @method void setRegionName(string $RegionName) 设置地域名称
- */
-
-/**
- *地域过滤条件
  */
 class ConditionRegion extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ConditionRegion extends AbstractModel
      * @var string 地域名称
      */
     public $RegionName;
+
     /**
      * @param string $RegionId 地域ID
      * @param string $RegionName 地域名称
@@ -46,6 +45,7 @@ class ConditionRegion extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

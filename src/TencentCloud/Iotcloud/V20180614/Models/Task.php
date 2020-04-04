@@ -18,14 +18,12 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务描述细节
+ *
  * @method BatchUpdateShadow getUpdateShadowTask() 获取批量更新影子任务的描述细节，当 taskType 取值为 “UpdateShadow” 时，此字段必填。描述见下 BatchUpdateShadow
  * @method void setUpdateShadowTask(BatchUpdateShadow $UpdateShadowTask) 设置批量更新影子任务的描述细节，当 taskType 取值为 “UpdateShadow” 时，此字段必填。描述见下 BatchUpdateShadow
  * @method BatchPublishMessage getPublishMessageTask() 获取批量下发消息任务的描述细节，当 taskType 取值为 “PublishMessage” 时，此字段必填。描述见下 BatchPublishMessage
  * @method void setPublishMessageTask(BatchPublishMessage $PublishMessageTask) 设置批量下发消息任务的描述细节，当 taskType 取值为 “PublishMessage” 时，此字段必填。描述见下 BatchPublishMessage
- */
-
-/**
- *任务描述细节
  */
 class Task extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Task extends AbstractModel
      * @var BatchPublishMessage 批量下发消息任务的描述细节，当 taskType 取值为 “PublishMessage” 时，此字段必填。描述见下 BatchPublishMessage
      */
     public $PublishMessageTask;
+
     /**
      * @param BatchUpdateShadow $UpdateShadowTask 批量更新影子任务的描述细节，当 taskType 取值为 “UpdateShadow” 时，此字段必填。描述见下 BatchUpdateShadow
      * @param BatchPublishMessage $PublishMessageTask 批量下发消息任务的描述细节，当 taskType 取值为 “PublishMessage” 时，此字段必填。描述见下 BatchPublishMessage
@@ -46,6 +45,7 @@ class Task extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

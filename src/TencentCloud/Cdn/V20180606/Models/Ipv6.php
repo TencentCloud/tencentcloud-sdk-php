@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Ipv6启用配置，不可更改
+ *
  * @method string getSwitch() 获取域名是否开启ipv6功能，on或off。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitch(string $Switch) 设置域名是否开启ipv6功能，on或off。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *Ipv6启用配置，不可更改
  */
 class Ipv6 extends AbstractModel
 {
@@ -34,6 +32,7 @@ class Ipv6 extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
+
     /**
      * @param string $Switch 域名是否开启ipv6功能，on或off。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,6 +41,7 @@ class Ipv6 extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

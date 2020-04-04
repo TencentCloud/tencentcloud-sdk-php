@@ -18,14 +18,12 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteInstanceToken请求参数结构体
+ *
  * @method string getRegistryId() 获取实例 ID
  * @method void setRegistryId(string $RegistryId) 设置实例 ID
  * @method string getTokenId() 获取访问凭证 ID
  * @method void setTokenId(string $TokenId) 设置访问凭证 ID
- */
-
-/**
- *DeleteInstanceToken请求参数结构体
  */
 class DeleteInstanceTokenRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteInstanceTokenRequest extends AbstractModel
      * @var string 访问凭证 ID
      */
     public $TokenId;
+
     /**
      * @param string $RegistryId 实例 ID
      * @param string $TokenId 访问凭证 ID
@@ -46,6 +45,7 @@ class DeleteInstanceTokenRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

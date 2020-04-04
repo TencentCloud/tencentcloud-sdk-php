@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisassociateSecurityGroups请求参数结构体
+ *
  * @method array getSecurityGroupIds() 获取要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
  * @method array getInstanceIds() 获取被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
  * @method void setInstanceIds(array $InstanceIds) 设置被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
- */
-
-/**
- *DisassociateSecurityGroups请求参数结构体
  */
 class DisassociateSecurityGroupsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
      * @var array 被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
      */
     public $InstanceIds;
+
     /**
      * @param array $SecurityGroupIds 要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
      * @param array $InstanceIds 被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
@@ -46,6 +45,7 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

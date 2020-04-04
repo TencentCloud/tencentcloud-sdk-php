@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 异地登录白名单
+ *
  * @method integer getId() 获取记录ID
  * @method void setId(integer $Id) 设置记录ID
  * @method string getUuid() 获取云镜客户端ID
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineName(string $MachineName) 设置机器名
  * @method string getHostIp() 获取机器IP
  * @method void setHostIp(string $HostIp) 设置机器IP
- */
-
-/**
- *异地登录白名单
  */
 class LoginWhiteLists extends AbstractModel
 {
@@ -94,6 +92,7 @@ class LoginWhiteLists extends AbstractModel
      * @var string 机器IP
      */
     public $HostIp;
+
     /**
      * @param integer $Id 记录ID
      * @param string $Uuid 云镜客户端ID
@@ -110,6 +109,7 @@ class LoginWhiteLists extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

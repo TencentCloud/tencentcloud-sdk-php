@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupOverview返回参数结构体
+ *
  * @method integer getBackupCount() 获取用户在当前地域备份的总个数（包含数据备份和日志备份）。
  * @method void setBackupCount(integer $BackupCount) 设置用户在当前地域备份的总个数（包含数据备份和日志备份）。
  * @method integer getBackupVolume() 获取用户在当前地域备份的总容量
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFreeVolume(integer $FreeVolume) 设置用户在当前地域获得的赠送备份容量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeBackupOverview返回参数结构体
  */
 class DescribeBackupOverviewResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeBackupOverviewResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $BackupCount 用户在当前地域备份的总个数（包含数据备份和日志备份）。
      * @param integer $BackupVolume 用户在当前地域备份的总容量
@@ -70,6 +69,7 @@ class DescribeBackupOverviewResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteListeners请求参数结构体
+ *
  * @method array getListenerIds() 获取待删除的监听器ID列表
  * @method void setListenerIds(array $ListenerIds) 设置待删除的监听器ID列表
  * @method integer getForce() 获取已绑定源站的监听器是否允许强制删除，1：允许， 0：不允许
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置通道组ID，该参数和GroupId必须设置一个，但不能同时设置。
  * @method string getProxyId() 获取通道ID，该参数和GroupId必须设置一个，但不能同时设置。
  * @method void setProxyId(string $ProxyId) 设置通道ID，该参数和GroupId必须设置一个，但不能同时设置。
- */
-
-/**
- *DeleteListeners请求参数结构体
  */
 class DeleteListenersRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DeleteListenersRequest extends AbstractModel
      * @var string 通道ID，该参数和GroupId必须设置一个，但不能同时设置。
      */
     public $ProxyId;
+
     /**
      * @param array $ListenerIds 待删除的监听器ID列表
      * @param integer $Force 已绑定源站的监听器是否允许强制删除，1：允许， 0：不允许
@@ -62,6 +61,7 @@ class DeleteListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

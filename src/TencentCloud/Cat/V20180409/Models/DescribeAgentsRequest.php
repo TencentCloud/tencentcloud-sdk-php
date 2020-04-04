@@ -18,14 +18,13 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAgents请求参数结构体
+ *
 
- */
-
-/**
- *DescribeAgents请求参数结构体
  */
 class DescribeAgentsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeAgentsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

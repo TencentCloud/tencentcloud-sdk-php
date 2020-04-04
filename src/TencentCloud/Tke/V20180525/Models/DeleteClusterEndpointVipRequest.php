@@ -18,12 +18,10 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteClusterEndpointVip请求参数结构体
+ *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- */
-
-/**
- *DeleteClusterEndpointVip请求参数结构体
  */
 class DeleteClusterEndpointVipRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteClusterEndpointVipRequest extends AbstractModel
      * @var string 集群ID
      */
     public $ClusterId;
+
     /**
      * @param string $ClusterId 集群ID
      */
@@ -38,6 +37,7 @@ class DeleteClusterEndpointVipRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

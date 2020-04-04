@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备列表元素所包含的设备基本信息
+ *
  * @method string getTid() 获取设备TID
  * @method void setTid(string $Tid) 设置设备TID
  * @method string getDeviceName() 获取设备名称
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIotModel(string $IotModel) 设置物模型json数据
  * @method integer getLastUpdateTime() 获取设备固件最新更新时间，UNIX时间戳，单位秒
  * @method void setLastUpdateTime(integer $LastUpdateTime) 设置设备固件最新更新时间，UNIX时间戳，单位秒
- */
-
-/**
- *设备列表元素所包含的设备基本信息
  */
 class DevicesData extends AbstractModel
 {
@@ -94,6 +92,7 @@ class DevicesData extends AbstractModel
      * @var integer 设备固件最新更新时间，UNIX时间戳，单位秒
      */
     public $LastUpdateTime;
+
     /**
      * @param string $Tid 设备TID
      * @param string $DeviceName 设备名称
@@ -110,6 +109,7 @@ class DevicesData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

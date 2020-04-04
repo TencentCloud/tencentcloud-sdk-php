@@ -18,14 +18,12 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateShieldInstance请求参数结构体
+ *
  * @method AppInfo getAppInfo() 获取待加固的应用信息
  * @method void setAppInfo(AppInfo $AppInfo) 设置待加固的应用信息
  * @method ServiceInfo getServiceInfo() 获取加固服务信息
  * @method void setServiceInfo(ServiceInfo $ServiceInfo) 设置加固服务信息
- */
-
-/**
- *CreateShieldInstance请求参数结构体
  */
 class CreateShieldInstanceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateShieldInstanceRequest extends AbstractModel
      * @var ServiceInfo 加固服务信息
      */
     public $ServiceInfo;
+
     /**
      * @param AppInfo $AppInfo 待加固的应用信息
      * @param ServiceInfo $ServiceInfo 加固服务信息
@@ -46,6 +45,7 @@ class CreateShieldInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

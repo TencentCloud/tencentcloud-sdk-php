@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTopicAttributes请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID
  * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method string getTopicName() 获取主题名称
  * @method void setTopicName(string $TopicName) 设置主题名称
- */
-
-/**
- *DescribeTopicAttributes请求参数结构体
  */
 class DescribeTopicAttributesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeTopicAttributesRequest extends AbstractModel
      * @var string 主题名称
      */
     public $TopicName;
+
     /**
      * @param string $InstanceId 实例 ID
      * @param string $TopicName 主题名称
@@ -46,6 +45,7 @@ class DescribeTopicAttributesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

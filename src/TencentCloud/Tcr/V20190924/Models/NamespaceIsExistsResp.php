@@ -18,14 +18,12 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * NamespaceIsExists返回类型
+ *
  * @method boolean getIsExist() 获取命名空间是否存在
  * @method void setIsExist(boolean $IsExist) 设置命名空间是否存在
  * @method boolean getIsPreserved() 获取是否为保留命名空间
  * @method void setIsPreserved(boolean $IsPreserved) 设置是否为保留命名空间
- */
-
-/**
- *NamespaceIsExists返回类型
  */
 class NamespaceIsExistsResp extends AbstractModel
 {
@@ -38,6 +36,7 @@ class NamespaceIsExistsResp extends AbstractModel
      * @var boolean 是否为保留命名空间
      */
     public $IsPreserved;
+
     /**
      * @param boolean $IsExist 命名空间是否存在
      * @param boolean $IsPreserved 是否为保留命名空间
@@ -46,6 +45,7 @@ class NamespaceIsExistsResp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

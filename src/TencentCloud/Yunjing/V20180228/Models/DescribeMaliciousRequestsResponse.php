@@ -18,16 +18,14 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMaliciousRequests返回参数结构体
+ *
  * @method integer getTotalCount() 获取记录总数。
  * @method void setTotalCount(integer $TotalCount) 设置记录总数。
  * @method array getMaliciousRequests() 获取恶意请求记录数组。
  * @method void setMaliciousRequests(array $MaliciousRequests) 设置恶意请求记录数组。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeMaliciousRequests返回参数结构体
  */
 class DescribeMaliciousRequestsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeMaliciousRequestsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 记录总数。
      * @param array $MaliciousRequests 恶意请求记录数组。
@@ -54,6 +53,7 @@ class DescribeMaliciousRequestsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CommitUpload请求参数结构体
+ *
  * @method string getVodSessionKey() 获取点播会话，取申请上传接口的返回值 VodSessionKey。
  * @method void setVodSessionKey(string $VodSessionKey) 设置点播会话，取申请上传接口的返回值 VodSessionKey。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *CommitUpload请求参数结构体
  */
 class CommitUploadRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CommitUploadRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param string $VodSessionKey 点播会话，取申请上传接口的返回值 VodSessionKey。
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
@@ -46,6 +45,7 @@ class CommitUploadRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

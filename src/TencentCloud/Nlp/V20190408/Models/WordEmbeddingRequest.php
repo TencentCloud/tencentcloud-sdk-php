@@ -18,12 +18,10 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * WordEmbedding请求参数结构体
+ *
  * @method string getText() 获取输入的词语（仅支持UTF-8格式，不超过20字）
  * @method void setText(string $Text) 设置输入的词语（仅支持UTF-8格式，不超过20字）
- */
-
-/**
- *WordEmbedding请求参数结构体
  */
 class WordEmbeddingRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class WordEmbeddingRequest extends AbstractModel
      * @var string 输入的词语（仅支持UTF-8格式，不超过20字）
      */
     public $Text;
+
     /**
      * @param string $Text 输入的词语（仅支持UTF-8格式，不超过20字）
      */
@@ -38,6 +37,7 @@ class WordEmbeddingRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

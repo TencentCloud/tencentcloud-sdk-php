@@ -18,14 +18,13 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBaseOverview请求参数结构体
+ *
 
- */
-
-/**
- *DescribeBaseOverview请求参数结构体
  */
 class DescribeBaseOverviewRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeBaseOverviewRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

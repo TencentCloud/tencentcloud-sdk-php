@@ -18,12 +18,10 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateVulsMisinformation请求参数结构体
+ *
  * @method array getVulIds() 获取漏洞ID列表
  * @method void setVulIds(array $VulIds) 设置漏洞ID列表
- */
-
-/**
- *CreateVulsMisinformation请求参数结构体
  */
 class CreateVulsMisinformationRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CreateVulsMisinformationRequest extends AbstractModel
      * @var array 漏洞ID列表
      */
     public $VulIds;
+
     /**
      * @param array $VulIds 漏洞ID列表
      */
@@ -38,6 +37,7 @@ class CreateVulsMisinformationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

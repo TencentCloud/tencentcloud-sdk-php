@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProcedureTemplates请求参数结构体
+ *
  * @method array getNames() 获取任务流模板名字过滤条件，数组长度限制：100。
  * @method void setNames(array $Names) 设置任务流模板名字过滤条件，数组长度限制：100。
  * @method string getType() 获取任务流模板类型过滤条件，可选值：
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *DescribeProcedureTemplates请求参数结构体
  */
 class DescribeProcedureTemplatesRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ class DescribeProcedureTemplatesRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param array $Names 任务流模板名字过滤条件，数组长度限制：100。
      * @param string $Type 任务流模板类型过滤条件，可选值：
@@ -78,6 +77,7 @@ class DescribeProcedureTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

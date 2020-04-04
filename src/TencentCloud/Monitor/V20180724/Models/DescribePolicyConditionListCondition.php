@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePolicyConditionList策略条件
+ *
  * @method string getPolicyViewName() 获取策略视图名称
  * @method void setPolicyViewName(string $PolicyViewName) 设置策略视图名称
  * @method array getEventMetrics() 获取事件告警条件
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportRegions(array $SupportRegions) 设置支持该策略类型的地域列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DescribePolicyConditionList策略条件
  */
 class DescribePolicyConditionListCondition extends AbstractModel
 {
@@ -89,6 +87,7 @@ class DescribePolicyConditionListCondition extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportRegions;
+
     /**
      * @param string $PolicyViewName 策略视图名称
      * @param array $EventMetrics 事件告警条件
@@ -106,6 +105,7 @@ class DescribePolicyConditionListCondition extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindHosted请求参数结构体
+ *
  * @method string getEipId() 获取Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
  * @method void setEipId(string $EipId) 设置Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
  * @method string getInstanceId() 获取托管机器实例ID
  * @method void setInstanceId(string $InstanceId) 设置托管机器实例ID
- */
-
-/**
- *BindHosted请求参数结构体
  */
 class BindHostedRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BindHostedRequest extends AbstractModel
      * @var string 托管机器实例ID
      */
     public $InstanceId;
+
     /**
      * @param string $EipId Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
      * @param string $InstanceId 托管机器实例ID
@@ -46,6 +45,7 @@ class BindHostedRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

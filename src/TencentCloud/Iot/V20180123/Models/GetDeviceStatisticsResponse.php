@@ -18,14 +18,12 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetDeviceStatistics返回参数结构体
+ *
  * @method array getDeviceStatistics() 获取统计数据
  * @method void setDeviceStatistics(array $DeviceStatistics) 设置统计数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetDeviceStatistics返回参数结构体
  */
 class GetDeviceStatisticsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GetDeviceStatisticsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $DeviceStatistics 统计数据
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class GetDeviceStatisticsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

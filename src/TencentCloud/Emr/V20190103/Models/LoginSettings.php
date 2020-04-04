@@ -18,14 +18,12 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 登录设置
+ *
  * @method string getPassword() 获取Password
  * @method void setPassword(string $Password) 设置Password
  * @method string getPublicKeyId() 获取Public Key
  * @method void setPublicKeyId(string $PublicKeyId) 设置Public Key
- */
-
-/**
- *登录设置
  */
 class LoginSettings extends AbstractModel
 {
@@ -38,6 +36,7 @@ class LoginSettings extends AbstractModel
      * @var string Public Key
      */
     public $PublicKeyId;
+
     /**
      * @param string $Password Password
      * @param string $PublicKeyId Public Key
@@ -46,6 +45,7 @@ class LoginSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

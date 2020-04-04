@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据库备份信息
+ *
  * @method integer getId() 获取备份文件唯一标识
  * @method void setId(integer $Id) 设置备份文件唯一标识
  * @method string getStartTime() 获取文件生成的开始时间
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternalAddr(string $InternalAddr) 设置内网下载地址
  * @method string getExternalAddr() 获取外网下载地址
  * @method void setExternalAddr(string $ExternalAddr) 设置外网下载地址
- */
-
-/**
- *数据库备份信息
  */
 class DBBackup extends AbstractModel
 {
@@ -101,6 +99,7 @@ class DBBackup extends AbstractModel
      * @var string 外网下载地址
      */
     public $ExternalAddr;
+
     /**
      * @param integer $Id 备份文件唯一标识
      * @param string $StartTime 文件生成的开始时间
@@ -118,6 +117,7 @@ class DBBackup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

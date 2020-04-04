@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeOriginData请求参数结构体
+ *
  * @method string getStartTime() 获取查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
 根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:00 在按 1 小时的时间粒度查询时，返回的第一个数据对应时间点为 2018-09-04 10:00:00
 起始时间与结束时间间隔小于等于 90 天
@@ -80,10 +82,6 @@ overseas：指定查询中国境外 CDN 数据
  * @method void setArea(string $Area) 设置指定服务地域查询，不填充表示查询中国境内 CDN 数据
 mainland：指定查询中国境内 CDN 数据
 overseas：指定查询中国境外 CDN 数据
- */
-
-/**
- *DescribeOriginData请求参数结构体
  */
 class DescribeOriginDataRequest extends AbstractModel
 {
@@ -149,6 +147,7 @@ mainland：指定查询中国境内 CDN 数据
 overseas：指定查询中国境外 CDN 数据
      */
     public $Area;
+
     /**
      * @param string $StartTime 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
 根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:00 在按 1 小时的时间粒度查询时，返回的第一个数据对应时间点为 2018-09-04 10:00:00
@@ -186,6 +185,7 @@ overseas：指定查询中国境外 CDN 数据
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

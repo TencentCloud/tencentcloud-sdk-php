@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListPolicies请求参数结构体
+ *
  * @method integer getRp() 获取每页数量，默认值是 20，必须大于 0 且小于或等于 200
  * @method void setRp(integer $Rp) 设置每页数量，默认值是 20，必须大于 0 且小于或等于 200
  * @method integer getPage() 获取页码，默认值是 1，从 1开始，不能大于 200
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScope(string $Scope) 设置可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All'
  * @method string getKeyword() 获取按策略名匹配
  * @method void setKeyword(string $Keyword) 设置按策略名匹配
- */
-
-/**
- *ListPolicies请求参数结构体
  */
 class ListPoliciesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ListPoliciesRequest extends AbstractModel
      * @var string 按策略名匹配
      */
     public $Keyword;
+
     /**
      * @param integer $Rp 每页数量，默认值是 20，必须大于 0 且小于或等于 200
      * @param integer $Page 页码，默认值是 1，从 1开始，不能大于 200
@@ -62,6 +61,7 @@ class ListPoliciesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 鉴政任务控制参数
+ *
  * @method PoliticalImgReviewTemplateInfo getImgReviewInfo() 获取画面鉴政控制参数。
  * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfo $ImgReviewInfo) 设置画面鉴政控制参数。
  * @method PoliticalAsrReviewTemplateInfo getAsrReviewInfo() 获取语音鉴政控制参数。
  * @method void setAsrReviewInfo(PoliticalAsrReviewTemplateInfo $AsrReviewInfo) 设置语音鉴政控制参数。
  * @method PoliticalOcrReviewTemplateInfo getOcrReviewInfo() 获取文本鉴政控制参数。
  * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfo $OcrReviewInfo) 设置文本鉴政控制参数。
- */
-
-/**
- *鉴政任务控制参数
  */
 class PoliticalConfigureInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class PoliticalConfigureInfo extends AbstractModel
      * @var PoliticalOcrReviewTemplateInfo 文本鉴政控制参数。
      */
     public $OcrReviewInfo;
+
     /**
      * @param PoliticalImgReviewTemplateInfo $ImgReviewInfo 画面鉴政控制参数。
      * @param PoliticalAsrReviewTemplateInfo $AsrReviewInfo 语音鉴政控制参数。
@@ -54,6 +53,7 @@ class PoliticalConfigureInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

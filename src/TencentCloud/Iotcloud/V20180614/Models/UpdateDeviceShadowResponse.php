@@ -18,14 +18,12 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateDeviceShadow返回参数结构体
+ *
  * @method string getData() 获取设备影子数据，JSON字符串格式
  * @method void setData(string $Data) 设置设备影子数据，JSON字符串格式
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *UpdateDeviceShadow返回参数结构体
  */
 class UpdateDeviceShadowResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UpdateDeviceShadowResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Data 设备影子数据，JSON字符串格式
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class UpdateDeviceShadowResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

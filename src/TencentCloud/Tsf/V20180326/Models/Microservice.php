@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 微服务
+ *
  * @method string getMicroserviceId() 获取微服务ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMicroserviceId(string $MicroserviceId) 设置微服务ID
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunInstanceCount(integer $RunInstanceCount) 设置微服务的运行实例数目
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *微服务
  */
 class Microservice extends AbstractModel
 {
@@ -94,6 +92,7 @@ class Microservice extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunInstanceCount;
+
     /**
      * @param string $MicroserviceId 微服务ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,6 +113,7 @@ class Microservice extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

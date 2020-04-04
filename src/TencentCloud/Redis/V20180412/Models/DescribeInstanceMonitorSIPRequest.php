@@ -18,12 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceMonitorSIP请求参数结构体
+ *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
- */
-
-/**
- *DescribeInstanceMonitorSIP请求参数结构体
  */
 class DescribeInstanceMonitorSIPRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeInstanceMonitorSIPRequest extends AbstractModel
      * @var string 实例Id
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 实例Id
      */
@@ -38,6 +37,7 @@ class DescribeInstanceMonitorSIPRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

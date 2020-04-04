@@ -18,14 +18,12 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeStudioProduct返回参数结构体
+ *
  * @method ProductEntry getProduct() 获取产品详情
  * @method void setProduct(ProductEntry $Product) 设置产品详情
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeStudioProduct返回参数结构体
  */
 class DescribeStudioProductResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeStudioProductResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param ProductEntry $Product 产品详情
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeStudioProductResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

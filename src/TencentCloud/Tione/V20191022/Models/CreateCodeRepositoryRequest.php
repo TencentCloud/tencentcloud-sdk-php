@@ -18,16 +18,14 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCodeRepository请求参数结构体
+ *
  * @method string getCodeRepositoryName() 获取存储库名称
  * @method void setCodeRepositoryName(string $CodeRepositoryName) 设置存储库名称
  * @method GitConfig getGitConfig() 获取Git相关配置
  * @method void setGitConfig(GitConfig $GitConfig) 设置Git相关配置
  * @method GitSecret getGitSecret() 获取Git凭证
  * @method void setGitSecret(GitSecret $GitSecret) 设置Git凭证
- */
-
-/**
- *CreateCodeRepository请求参数结构体
  */
 class CreateCodeRepositoryRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateCodeRepositoryRequest extends AbstractModel
      * @var GitSecret Git凭证
      */
     public $GitSecret;
+
     /**
      * @param string $CodeRepositoryName 存储库名称
      * @param GitConfig $GitConfig Git相关配置
@@ -54,6 +53,7 @@ class CreateCodeRepositoryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

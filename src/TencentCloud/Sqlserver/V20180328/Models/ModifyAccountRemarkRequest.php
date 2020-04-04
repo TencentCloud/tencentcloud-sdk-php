@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAccountRemark请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，形如mssql-j8kv137v
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-j8kv137v
  * @method array getAccounts() 获取修改备注的账户信息
  * @method void setAccounts(array $Accounts) 设置修改备注的账户信息
- */
-
-/**
- *ModifyAccountRemark请求参数结构体
  */
 class ModifyAccountRemarkRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyAccountRemarkRequest extends AbstractModel
      * @var array 修改备注的账户信息
      */
     public $Accounts;
+
     /**
      * @param string $InstanceId 实例ID，形如mssql-j8kv137v
      * @param array $Accounts 修改备注的账户信息
@@ -46,6 +45,7 @@ class ModifyAccountRemarkRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

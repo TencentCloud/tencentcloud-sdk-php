@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePolicyGroup请求参数结构体
+ *
  * @method string getGroupName() 获取组策略名称
  * @method void setGroupName(string $GroupName) 设置组策略名称
  * @method string getModule() 获取固定值，为"monitor"
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackEndCall(integer $BackEndCall) 设置是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
  * @method integer getIsUnionRule() 获取指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
  * @method void setIsUnionRule(integer $IsUnionRule) 设置指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
- */
-
-/**
- *CreatePolicyGroup请求参数结构体
  */
 class CreatePolicyGroupRequest extends AbstractModel
 {
@@ -108,6 +106,7 @@ class CreatePolicyGroupRequest extends AbstractModel
      * @var integer 指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
      */
     public $IsUnionRule;
+
     /**
      * @param string $GroupName 组策略名称
      * @param string $Module 固定值，为"monitor"
@@ -126,6 +125,7 @@ class CreatePolicyGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

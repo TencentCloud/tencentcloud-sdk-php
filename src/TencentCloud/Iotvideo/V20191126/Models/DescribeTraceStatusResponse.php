@@ -18,16 +18,14 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTraceStatus返回参数结构体
+ *
  * @method array getData() 获取设备追踪状态列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置设备追踪状态列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeTraceStatus返回参数结构体
  */
 class DescribeTraceStatusResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class DescribeTraceStatusResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Data 设备追踪状态列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class DescribeTraceStatusResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

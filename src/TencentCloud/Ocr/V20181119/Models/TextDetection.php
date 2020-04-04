@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文字识别结果
+ *
  * @method string getDetectedText() 获取识别出的文本行内容
  * @method void setDetectedText(string $DetectedText) 设置识别出的文本行内容
  * @method integer getConfidence() 获取置信度 0 ~100
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
  * @method void setAdvancedInfo(string $AdvancedInfo) 设置此字段为扩展字段。
 GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
- */
-
-/**
- *文字识别结果
  */
 class TextDetection extends AbstractModel
 {
@@ -58,6 +56,7 @@ class TextDetection extends AbstractModel
 GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
      */
     public $AdvancedInfo;
+
     /**
      * @param string $DetectedText 识别出的文本行内容
      * @param integer $Confidence 置信度 0 ~100
@@ -70,6 +69,7 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

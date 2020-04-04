@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Bcos区块对象
+ *
  * @method string getBlockHash() 获取区块哈希
  * @method void setBlockHash(string $BlockHash) 设置区块哈希
  * @method integer getBlockNumber() 获取区块高度
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTransCount(integer $TransCount) 设置交易数量
  * @method string getModifyTime() 获取记录修改时间
  * @method void setModifyTime(string $ModifyTime) 设置记录修改时间
- */
-
-/**
- *Bcos区块对象
  */
 class BcosBlockObj extends AbstractModel
 {
@@ -80,6 +78,7 @@ class BcosBlockObj extends AbstractModel
      * @var string 记录修改时间
      */
     public $ModifyTime;
+
     /**
      * @param string $BlockHash 区块哈希
      * @param integer $BlockNumber 区块高度
@@ -94,6 +93,7 @@ class BcosBlockObj extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

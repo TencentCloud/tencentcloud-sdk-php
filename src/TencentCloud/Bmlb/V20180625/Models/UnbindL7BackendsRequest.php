@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnbindL7Backends请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method string getListenerId() 获取七层监听器实例ID，可通过接口DescribeL7Listeners查询。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackendSet(array $BackendSet) 设置待绑定的主机信息。
  * @method integer getBindType() 获取绑定类型。0：物理机  1：虚拟机 2：半托管机器
  * @method void setBindType(integer $BindType) 设置绑定类型。0：物理机  1：虚拟机 2：半托管机器
- */
-
-/**
- *UnbindL7Backends请求参数结构体
  */
 class UnbindL7BackendsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class UnbindL7BackendsRequest extends AbstractModel
      * @var integer 绑定类型。0：物理机  1：虚拟机 2：半托管机器
      */
     public $BindType;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param string $ListenerId 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
@@ -78,6 +77,7 @@ class UnbindL7BackendsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

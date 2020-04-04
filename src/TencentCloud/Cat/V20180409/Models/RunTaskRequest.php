@@ -18,12 +18,10 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RunTask请求参数结构体
+ *
  * @method integer getTaskId() 获取任务Id
  * @method void setTaskId(integer $TaskId) 设置任务Id
- */
-
-/**
- *RunTask请求参数结构体
  */
 class RunTaskRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RunTaskRequest extends AbstractModel
      * @var integer 任务Id
      */
     public $TaskId;
+
     /**
      * @param integer $TaskId 任务Id
      */
@@ -38,6 +37,7 @@ class RunTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

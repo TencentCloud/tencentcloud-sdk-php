@@ -18,6 +18,8 @@ namespace TencentCloud\Aai\V20180522\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SentenceRecognition请求参数结构体
+ *
  * @method integer getProjectId() 获取腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
  * @method void setProjectId(integer $ProjectId) 设置腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
  * @method integer getSubServiceType() 获取子服务类型。2，一句话识别。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(string $Data) 设置语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于600kB。
  * @method integer getDataLen() 获取数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
  * @method void setDataLen(integer $DataLen) 设置数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
- */
-
-/**
- *SentenceRecognition请求参数结构体
  */
 class SentenceRecognitionRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class SentenceRecognitionRequest extends AbstractModel
      * @var integer 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
      */
     public $DataLen;
+
     /**
      * @param integer $ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      * @param integer $SubServiceType 子服务类型。2，一句话识别。
@@ -102,6 +101,7 @@ class SentenceRecognitionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务视频cos授权信息
+ *
  * @method integer getType() 获取授权类型，可选值： 
 0：bucket授权，需要将对应bucket授权给本服务帐号（3020447271），否则会读写cos失败； 
 1：key托管，把cos的账号id和key托管于本服务，本服务会提供一个托管id； 
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretKey(string $SecretKey) 设置cos身份秘钥，Type等于3时必选。
  * @method string getToken() 获取临时授权 token，Type等于3时必选。
  * @method void setToken(string $Token) 设置临时授权 token，Type等于3时必选。
- */
-
-/**
- *任务视频cos授权信息
  */
 class CosAuthMode extends AbstractModel
 {
@@ -71,6 +69,7 @@ class CosAuthMode extends AbstractModel
      * @var string 临时授权 token，Type等于3时必选。
      */
     public $Token;
+
     /**
      * @param integer $Type 授权类型，可选值： 
 0：bucket授权，需要将对应bucket授权给本服务帐号（3020447271），否则会读写cos失败； 
@@ -86,6 +85,7 @@ class CosAuthMode extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

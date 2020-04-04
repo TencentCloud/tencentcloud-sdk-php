@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数量统计结果
+ *
  * @method integer getCount() 获取数量
  * @method void setCount(integer $Count) 设置数量
  * @method string getName() 获取名称
  * @method void setName(string $Name) 设置名称
- */
-
-/**
- *数量统计结果
  */
 class ActionCountStatistic extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ActionCountStatistic extends AbstractModel
      * @var string 名称
      */
     public $Name;
+
     /**
      * @param integer $Count 数量
      * @param string $Name 名称
@@ -46,6 +45,7 @@ class ActionCountStatistic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

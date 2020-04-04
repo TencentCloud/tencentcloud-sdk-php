@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 函数版本信息
+ *
  * @method string getVersion() 获取函数版本名称
  * @method void setVersion(string $Version) 设置函数版本名称
  * @method string getDescription() 获取版本描述信息
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModTime(string $ModTime) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *函数版本信息
  */
 class FunctionVersion extends AbstractModel
 {
@@ -61,6 +59,7 @@ class FunctionVersion extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModTime;
+
     /**
      * @param string $Version 函数版本名称
      * @param string $Description 版本描述信息
@@ -74,6 +73,7 @@ class FunctionVersion extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

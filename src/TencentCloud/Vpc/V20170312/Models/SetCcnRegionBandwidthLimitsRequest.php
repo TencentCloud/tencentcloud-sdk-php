@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetCcnRegionBandwidthLimits请求参数结构体
+ *
  * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
  * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
  * @method array getCcnRegionBandwidthLimits() 获取云联网（CCN）各地域出带宽上限。
  * @method void setCcnRegionBandwidthLimits(array $CcnRegionBandwidthLimits) 设置云联网（CCN）各地域出带宽上限。
- */
-
-/**
- *SetCcnRegionBandwidthLimits请求参数结构体
  */
 class SetCcnRegionBandwidthLimitsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SetCcnRegionBandwidthLimitsRequest extends AbstractModel
      * @var array 云联网（CCN）各地域出带宽上限。
      */
     public $CcnRegionBandwidthLimits;
+
     /**
      * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
      * @param array $CcnRegionBandwidthLimits 云联网（CCN）各地域出带宽上限。
@@ -46,6 +45,7 @@ class SetCcnRegionBandwidthLimitsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

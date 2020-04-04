@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyIpv6AddressesAttribute请求参数结构体
+ *
  * @method string getNetworkInterfaceId() 获取弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
  * @method array getIpv6Addresses() 获取指定的内网IPv6`地址信息。
  * @method void setIpv6Addresses(array $Ipv6Addresses) 设置指定的内网IPv6`地址信息。
- */
-
-/**
- *ModifyIpv6AddressesAttribute请求参数结构体
  */
 class ModifyIpv6AddressesAttributeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyIpv6AddressesAttributeRequest extends AbstractModel
      * @var array 指定的内网IPv6`地址信息。
      */
     public $Ipv6Addresses;
+
     /**
      * @param string $NetworkInterfaceId 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
      * @param array $Ipv6Addresses 指定的内网IPv6`地址信息。
@@ -46,6 +45,7 @@ class ModifyIpv6AddressesAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

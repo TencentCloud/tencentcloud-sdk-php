@@ -18,14 +18,12 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ExpandGroup请求参数结构体
+ *
  * @method string getGroupId() 获取部署组ID
  * @method void setGroupId(string $GroupId) 设置部署组ID
  * @method array getInstanceIdList() 获取扩容的机器实例ID列表
  * @method void setInstanceIdList(array $InstanceIdList) 设置扩容的机器实例ID列表
- */
-
-/**
- *ExpandGroup请求参数结构体
  */
 class ExpandGroupRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ExpandGroupRequest extends AbstractModel
      * @var array 扩容的机器实例ID列表
      */
     public $InstanceIdList;
+
     /**
      * @param string $GroupId 部署组ID
      * @param array $InstanceIdList 扩容的机器实例ID列表
@@ -46,6 +45,7 @@ class ExpandGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

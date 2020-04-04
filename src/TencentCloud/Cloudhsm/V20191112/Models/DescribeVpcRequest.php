@@ -18,16 +18,14 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpc请求参数结构体
+ *
  * @method integer getOffset() 获取返回偏移量。
  * @method void setOffset(integer $Offset) 设置返回偏移量。
  * @method integer getLimit() 获取返回数量。
  * @method void setLimit(integer $Limit) 设置返回数量。
  * @method string getSearchWord() 获取搜索关键字
  * @method void setSearchWord(string $SearchWord) 设置搜索关键字
- */
-
-/**
- *DescribeVpc请求参数结构体
  */
 class DescribeVpcRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeVpcRequest extends AbstractModel
      * @var string 搜索关键字
      */
     public $SearchWord;
+
     /**
      * @param integer $Offset 返回偏移量。
      * @param integer $Limit 返回数量。
@@ -54,6 +53,7 @@ class DescribeVpcRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

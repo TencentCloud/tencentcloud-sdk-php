@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 证书信息
+ *
  * @method string getSSLMode() 获取认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
  * @method void setSSLMode(string $SSLMode) 设置认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
  * @method string getCertId() 获取服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertCaName(string $CertCaName) 设置上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
  * @method string getCertCaContent() 获取上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
  * @method void setCertCaContent(string $CertCaContent) 设置上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
- */
-
-/**
- *证书信息
  */
 class CertificateInput extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CertificateInput extends AbstractModel
      * @var string 上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
      */
     public $CertCaContent;
+
     /**
      * @param string $SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      * @param string $CertId 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
@@ -94,6 +93,7 @@ class CertificateInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

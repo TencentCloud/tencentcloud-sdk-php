@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 某省份某运营商在某段时间内的带宽，流量，请求数和并发数
+ *
  * @method string getProvinceName() 获取省份。
  * @method void setProvinceName(string $ProvinceName) 设置省份。
  * @method string getIspName() 获取运营商。
  * @method void setIspName(string $IspName) 设置运营商。
  * @method array getDetailInfoList() 获取分钟维度的明细数据。
  * @method void setDetailInfoList(array $DetailInfoList) 设置分钟维度的明细数据。
- */
-
-/**
- *某省份某运营商在某段时间内的带宽，流量，请求数和并发数
  */
 class GroupProIspDataInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GroupProIspDataInfo extends AbstractModel
      * @var array 分钟维度的明细数据。
      */
     public $DetailInfoList;
+
     /**
      * @param string $ProvinceName 省份。
      * @param string $IspName 运营商。
@@ -54,6 +53,7 @@ class GroupProIspDataInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

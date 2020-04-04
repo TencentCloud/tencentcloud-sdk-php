@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 单个物体识别结果。
+ *
  * @method string getName() 获取识别的物体名称。
  * @method void setName(string $Name) 设置识别的物体名称。
  * @method array getSegmentSet() 获取物体出现的片段列表。
  * @method void setSegmentSet(array $SegmentSet) 设置物体出现的片段列表。
- */
-
-/**
- *单个物体识别结果。
  */
 class AiRecognitionTaskObjectResultItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AiRecognitionTaskObjectResultItem extends AbstractModel
      * @var array 物体出现的片段列表。
      */
     public $SegmentSet;
+
     /**
      * @param string $Name 识别的物体名称。
      * @param array $SegmentSet 物体出现的片段列表。
@@ -46,6 +45,7 @@ class AiRecognitionTaskObjectResultItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

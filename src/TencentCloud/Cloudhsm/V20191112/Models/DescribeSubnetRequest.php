@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSubnet请求参数结构体
+ *
  * @method integer getLimit() 获取返回数量。
  * @method void setLimit(integer $Limit) 设置返回数量。
  * @method integer getOffset() 获取偏移量。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置查询指定VpcId下的子网信息。
  * @method string getSearchWord() 获取查找关键字
  * @method void setSearchWord(string $SearchWord) 设置查找关键字
- */
-
-/**
- *DescribeSubnet请求参数结构体
  */
 class DescribeSubnetRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeSubnetRequest extends AbstractModel
      * @var string 查找关键字
      */
     public $SearchWord;
+
     /**
      * @param integer $Limit 返回数量。
      * @param integer $Offset 偏移量。
@@ -62,6 +61,7 @@ class DescribeSubnetRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

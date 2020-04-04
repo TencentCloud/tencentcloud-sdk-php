@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EditPrivilegeRule请求参数结构体
+ *
  * @method integer getId() 获取规则ID(新增时请留空)
  * @method void setId(integer $Id) 设置规则ID(新增时请留空)
  * @method string getUuid() 获取客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSMode(integer $SMode) 设置是否S权限进程
  * @method integer getIsGlobal() 获取是否全局规则(默认否)
  * @method void setIsGlobal(integer $IsGlobal) 设置是否全局规则(默认否)
- */
-
-/**
- *EditPrivilegeRule请求参数结构体
  */
 class EditPrivilegeRuleRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class EditPrivilegeRuleRequest extends AbstractModel
      * @var integer 是否全局规则(默认否)
      */
     public $IsGlobal;
+
     /**
      * @param integer $Id 规则ID(新增时请留空)
      * @param string $Uuid 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
@@ -78,6 +77,7 @@ class EditPrivilegeRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

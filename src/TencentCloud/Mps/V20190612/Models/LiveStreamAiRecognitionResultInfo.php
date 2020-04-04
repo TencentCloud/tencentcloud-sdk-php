@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 直播流 AI 识别结果
+ *
  * @method array getResultSet() 获取内容识别结果列表。
  * @method void setResultSet(array $ResultSet) 设置内容识别结果列表。
- */
-
-/**
- *直播流 AI 识别结果
  */
 class LiveStreamAiRecognitionResultInfo extends AbstractModel
 {
@@ -31,6 +29,7 @@ class LiveStreamAiRecognitionResultInfo extends AbstractModel
      * @var array 内容识别结果列表。
      */
     public $ResultSet;
+
     /**
      * @param array $ResultSet 内容识别结果列表。
      */
@@ -38,6 +37,7 @@ class LiveStreamAiRecognitionResultInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

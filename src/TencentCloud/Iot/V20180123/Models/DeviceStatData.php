@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备统计数据
+ *
  * @method string getDatetime() 获取时间点
  * @method void setDatetime(string $Datetime) 设置时间点
  * @method integer getDeviceOnline() 获取在线设备数
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceActive(integer $DeviceActive) 设置激活设备数
  * @method integer getDeviceTotal() 获取设备总数
  * @method void setDeviceTotal(integer $DeviceTotal) 设置设备总数
- */
-
-/**
- *设备统计数据
  */
 class DeviceStatData extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DeviceStatData extends AbstractModel
      * @var integer 设备总数
      */
     public $DeviceTotal;
+
     /**
      * @param string $Datetime 时间点
      * @param integer $DeviceOnline 在线设备数
@@ -62,6 +61,7 @@ class DeviceStatData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

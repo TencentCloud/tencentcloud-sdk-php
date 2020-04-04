@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述一种规格的信息信息
+ *
  * @method string getSpecCode() 获取规格ID
  * @method void setSpecCode(string $SpecCode) 设置规格ID
  * @method string getVersion() 获取PostgreSQL的内核版本编号
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPid(integer $Pid) 设置该规格对应的计费ID
  * @method string getType() 获取机器类型
  * @method void setType(string $Type) 设置机器类型
- */
-
-/**
- *描述一种规格的信息信息
  */
 class SpecItemInfo extends AbstractModel
 {
@@ -94,6 +92,7 @@ class SpecItemInfo extends AbstractModel
      * @var string 机器类型
      */
     public $Type;
+
     /**
      * @param string $SpecCode 规格ID
      * @param string $Version PostgreSQL的内核版本编号
@@ -110,6 +109,7 @@ class SpecItemInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

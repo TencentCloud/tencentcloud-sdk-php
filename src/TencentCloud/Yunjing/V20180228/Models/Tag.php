@@ -18,16 +18,14 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 标签信息
+ *
  * @method integer getId() 获取标签ID
  * @method void setId(integer $Id) 设置标签ID
  * @method string getName() 获取标签名
  * @method void setName(string $Name) 设置标签名
  * @method integer getCount() 获取服务器数
  * @method void setCount(integer $Count) 设置服务器数
- */
-
-/**
- *标签信息
  */
 class Tag extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Tag extends AbstractModel
      * @var integer 服务器数
      */
     public $Count;
+
     /**
      * @param integer $Id 标签ID
      * @param string $Name 标签名
@@ -54,6 +53,7 @@ class Tag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

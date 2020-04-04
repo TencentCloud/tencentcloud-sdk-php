@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGroupProIspPlayInfoList请求参数结构体
+ *
  * @method string getStartTime() 获取起始时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method void setStartTime(string $StartTime) 设置起始时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method string getEndTime() 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIspNames(array $IspNames) 设置运营商列表，默认不填，则返回整个运营商的数据。
  * @method string getMainlandOrOversea() 获取国内还是国外，如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
  * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置国内还是国外，如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
- */
-
-/**
- *DescribeGroupProIspPlayInfoList请求参数结构体
  */
 class DescribeGroupProIspPlayInfoListRequest extends AbstractModel
 {
@@ -69,6 +67,7 @@ class DescribeGroupProIspPlayInfoListRequest extends AbstractModel
      * @var string 国内还是国外，如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
      */
     public $MainlandOrOversea;
+
     /**
      * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS
@@ -82,6 +81,7 @@ class DescribeGroupProIspPlayInfoListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

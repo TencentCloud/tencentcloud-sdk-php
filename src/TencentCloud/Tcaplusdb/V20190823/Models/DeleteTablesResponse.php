@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTables返回参数结构体
+ *
  * @method integer getTotalCount() 获取删除表结果数量
  * @method void setTotalCount(integer $TotalCount) 设置删除表结果数量
  * @method array getTableResults() 获取删除表结果详情列表
  * @method void setTableResults(array $TableResults) 设置删除表结果详情列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DeleteTables返回参数结构体
  */
 class DeleteTablesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteTablesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 删除表结果数量
      * @param array $TableResults 删除表结果详情列表
@@ -54,6 +53,7 @@ class DeleteTablesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveTranscodeDetailInfo请求参数结构体
+ *
  * @method string getPushDomain() 获取推流域名。
  * @method void setPushDomain(string $PushDomain) 设置推流域名。
  * @method string getStreamName() 获取流名称。
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndDayTime(string $EndDayTime) 设置结束天时间，北京时间，
 格式：yyyymmdd。
 注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
- */
-
-/**
- *DescribeLiveTranscodeDetailInfo请求参数结构体
  */
 class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
 {
@@ -97,6 +95,7 @@ class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
 注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
      */
     public $EndDayTime;
+
     /**
      * @param string $PushDomain 推流域名。
      * @param string $StreamName 流名称。
@@ -118,6 +117,7 @@ class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

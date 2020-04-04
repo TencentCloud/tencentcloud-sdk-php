@@ -18,6 +18,8 @@ namespace TencentCloud\Mvj\V20190926\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 返回结构
+ *
  * @method integer getPostTime() 获取操作时间戳，单位秒
  * @method void setPostTime(integer $PostTime) 设置操作时间戳，单位秒
  * @method string getUid() 获取用户ID 
@@ -34,10 +36,6 @@ accountType不同对应不同的用户ID。如果是QQ或微信用户则填入�
 [0,50]低价值
 [50,70]价值一般
 [70,100]高价值
- */
-
-/**
- *返回结构
  */
 class Data extends AbstractModel
 {
@@ -64,6 +62,7 @@ accountType不同对应不同的用户ID。如果是QQ或微信用户则填入�
 [70,100]高价值
      */
     public $ValueScore;
+
     /**
      * @param integer $PostTime 操作时间戳，单位秒
      * @param string $Uid 用户ID 
@@ -78,6 +77,7 @@ accountType不同对应不同的用户ID。如果是QQ或微信用户则填入�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

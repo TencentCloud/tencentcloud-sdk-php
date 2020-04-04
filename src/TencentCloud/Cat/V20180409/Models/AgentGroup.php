@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 拨测分组
+ *
  * @method integer getGroupId() 获取拨测分组ID
  * @method void setGroupId(integer $GroupId) 设置拨测分组ID
  * @method string getGroupName() 获取拨测分组名称
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupDetail(array $GroupDetail) 设置拨测结点列表
  * @method integer getMaxGroupNum() 获取最大拨测分组数
  * @method void setMaxGroupNum(integer $MaxGroupNum) 设置最大拨测分组数
- */
-
-/**
- *拨测分组
  */
 class AgentGroup extends AbstractModel
 {
@@ -66,6 +64,7 @@ class AgentGroup extends AbstractModel
      * @var integer 最大拨测分组数
      */
     public $MaxGroupNum;
+
     /**
      * @param integer $GroupId 拨测分组ID
      * @param string $GroupName 拨测分组名称
@@ -78,6 +77,7 @@ class AgentGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

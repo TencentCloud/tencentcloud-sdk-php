@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateRoleDescription请求参数结构体
+ *
  * @method string getDescription() 获取角色描述
  * @method void setDescription(string $Description) 设置角色描述
  * @method string getRoleId() 获取角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
  * @method void setRoleId(string $RoleId) 设置角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
  * @method string getRoleName() 获取角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
  * @method void setRoleName(string $RoleName) 设置角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
- */
-
-/**
- *UpdateRoleDescription请求参数结构体
  */
 class UpdateRoleDescriptionRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UpdateRoleDescriptionRequest extends AbstractModel
      * @var string 角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public $RoleName;
+
     /**
      * @param string $Description 角色描述
      * @param string $RoleId 角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
@@ -54,6 +53,7 @@ class UpdateRoleDescriptionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

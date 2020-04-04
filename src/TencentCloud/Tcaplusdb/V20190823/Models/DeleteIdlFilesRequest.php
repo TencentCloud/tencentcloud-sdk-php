@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteIdlFiles请求参数结构体
+ *
  * @method string getClusterId() 获取IDL所属集群ID
  * @method void setClusterId(string $ClusterId) 设置IDL所属集群ID
  * @method array getIdlFiles() 获取待删除的IDL文件信息列表
  * @method void setIdlFiles(array $IdlFiles) 设置待删除的IDL文件信息列表
- */
-
-/**
- *DeleteIdlFiles请求参数结构体
  */
 class DeleteIdlFilesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteIdlFilesRequest extends AbstractModel
      * @var array 待删除的IDL文件信息列表
      */
     public $IdlFiles;
+
     /**
      * @param string $ClusterId IDL所属集群ID
      * @param array $IdlFiles 待删除的IDL文件信息列表
@@ -46,6 +45,7 @@ class DeleteIdlFilesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

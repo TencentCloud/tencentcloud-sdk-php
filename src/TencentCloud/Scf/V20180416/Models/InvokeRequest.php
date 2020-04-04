@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Invoke请求参数结构体
+ *
  * @method string getFunctionName() 获取函数名称
  * @method void setFunctionName(string $FunctionName) 设置函数名称
  * @method string getInvocationType() 获取RequestResponse(同步) 和 Event(异步)，默认为同步
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogType(string $LogType) 设置同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志
  * @method string getNamespace() 获取命名空间
  * @method void setNamespace(string $Namespace) 设置命名空间
- */
-
-/**
- *Invoke请求参数结构体
  */
 class InvokeRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class InvokeRequest extends AbstractModel
      * @var string 命名空间
      */
     public $Namespace;
+
     /**
      * @param string $FunctionName 函数名称
      * @param string $InvocationType RequestResponse(同步) 和 Event(异步)，默认为同步
@@ -78,6 +77,7 @@ class InvokeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

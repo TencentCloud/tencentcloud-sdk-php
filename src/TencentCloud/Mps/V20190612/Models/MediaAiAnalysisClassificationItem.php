@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能分类结果
+ *
  * @method string getClassification() 获取智能分类的类别名称。
  * @method void setClassification(string $Classification) 设置智能分类的类别名称。
  * @method float getConfidence() 获取智能分类的可信度，取值范围是 0 到 100。
  * @method void setConfidence(float $Confidence) 设置智能分类的可信度，取值范围是 0 到 100。
- */
-
-/**
- *智能分类结果
  */
 class MediaAiAnalysisClassificationItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MediaAiAnalysisClassificationItem extends AbstractModel
      * @var float 智能分类的可信度，取值范围是 0 到 100。
      */
     public $Confidence;
+
     /**
      * @param string $Classification 智能分类的类别名称。
      * @param float $Confidence 智能分类的可信度，取值范围是 0 到 100。
@@ -46,6 +45,7 @@ class MediaAiAnalysisClassificationItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

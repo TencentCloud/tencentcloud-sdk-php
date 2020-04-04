@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查重任务信息
+ *
  * @method string getJobId() 获取查重任务ID，用于查询、获取查重的进度和结果。
  * @method void setJobId(string $JobId) 设置查重任务ID，用于查询、获取查重的进度和结果。
  * @method integer getStartTime() 获取查重起始时间。 
@@ -30,10 +32,6 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
 有关更多信息，请参阅 Unix 时间。
  * @method integer getJobStatus() 获取查重任务是否已完成。0: 成功 1: 未完成 2: 失败
  * @method void setJobStatus(integer $JobStatus) 设置查重任务是否已完成。0: 成功 1: 未完成 2: 失败
- */
-
-/**
- *查重任务信息
  */
 class JobIdInfo extends AbstractModel
 {
@@ -54,6 +52,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
      * @var integer 查重任务是否已完成。0: 成功 1: 未完成 2: 失败
      */
     public $JobStatus;
+
     /**
      * @param string $JobId 查重任务ID，用于查询、获取查重的进度和结果。
      * @param integer $StartTime 查重起始时间。 
@@ -66,6 +65,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

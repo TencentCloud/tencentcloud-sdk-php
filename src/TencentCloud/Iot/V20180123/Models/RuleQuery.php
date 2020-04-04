@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询
+ *
  * @method string getField() 获取字段
  * @method void setField(string $Field) 设置字段
  * @method string getCondition() 获取过滤规则
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(string $ProductId) 设置产品Id
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *查询
  */
 class RuleQuery extends AbstractModel
 {
@@ -58,6 +56,7 @@ class RuleQuery extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductId;
+
     /**
      * @param string $Field 字段
      * @param string $Condition 过滤规则
@@ -70,6 +69,7 @@ class RuleQuery extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

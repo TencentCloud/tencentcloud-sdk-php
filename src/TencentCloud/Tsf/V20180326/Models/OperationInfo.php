@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 提供给前端，控制按钮是否显示
+ *
  * @method OperationInfoDetail getInit() 获取初始化按钮的控制信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInit(OperationInfoDetail $Init) 设置初始化按钮的控制信息
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestroy(OperationInfoDetail $Destroy) 设置销毁机器的控制信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *提供给前端，控制按钮是否显示
  */
 class OperationInfo extends AbstractModel
 {
@@ -54,6 +52,7 @@ class OperationInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Destroy;
+
     /**
      * @param OperationInfoDetail $Init 初始化按钮的控制信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class OperationInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

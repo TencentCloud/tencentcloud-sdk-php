@@ -18,14 +18,12 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnBindingAllPolicyObject请求参数结构体
+ *
  * @method string getModule() 获取固定值，为"monitor"
  * @method void setModule(string $Module) 设置固定值，为"monitor"
  * @method integer getGroupId() 获取策略组id
  * @method void setGroupId(integer $GroupId) 设置策略组id
- */
-
-/**
- *UnBindingAllPolicyObject请求参数结构体
  */
 class UnBindingAllPolicyObjectRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UnBindingAllPolicyObjectRequest extends AbstractModel
      * @var integer 策略组id
      */
     public $GroupId;
+
     /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $GroupId 策略组id
@@ -46,6 +45,7 @@ class UnBindingAllPolicyObjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

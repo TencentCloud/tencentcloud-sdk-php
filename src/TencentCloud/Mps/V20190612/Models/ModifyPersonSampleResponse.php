@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyPersonSample返回参数结构体
+ *
  * @method AiSamplePerson getPerson() 获取人物信息。
  * @method void setPerson(AiSamplePerson $Person) 设置人物信息。
  * @method array getFailFaceInfoSet() 获取处理失败的人脸信息。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ModifyPersonSample返回参数结构体
  */
 class ModifyPersonSampleResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ class ModifyPersonSampleResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param AiSamplePerson $Person 人物信息。
      * @param array $FailFaceInfoSet 处理失败的人脸信息。
@@ -58,6 +57,7 @@ class ModifyPersonSampleResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

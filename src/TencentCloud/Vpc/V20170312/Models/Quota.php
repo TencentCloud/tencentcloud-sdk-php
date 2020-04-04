@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述配额信息
+ *
  * @method string getQuotaId() 获取配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
  * @method void setQuotaId(string $QuotaId) 设置配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
  * @method integer getQuotaCurrent() 获取当前数量
  * @method void setQuotaCurrent(integer $QuotaCurrent) 设置当前数量
  * @method integer getQuotaLimit() 获取配额数量
  * @method void setQuotaLimit(integer $QuotaLimit) 设置配额数量
- */
-
-/**
- *描述配额信息
  */
 class Quota extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Quota extends AbstractModel
      * @var integer 配额数量
      */
     public $QuotaLimit;
+
     /**
      * @param string $QuotaId 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
      * @param integer $QuotaCurrent 当前数量
@@ -54,6 +53,7 @@ class Quota extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

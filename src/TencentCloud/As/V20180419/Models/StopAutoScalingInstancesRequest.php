@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StopAutoScalingInstances请求参数结构体
+ *
  * @method string getAutoScalingGroupId() 获取伸缩组ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
  * @method array getInstanceIds() 获取待关闭的CVM实例ID列表
@@ -30,10 +32,6 @@ STOP_CHARGING：关机停止收费
 KEEP_CHARGING：关机继续收费  
 STOP_CHARGING：关机停止收费
 默认为 KEEP_CHARGING
- */
-
-/**
- *StopAutoScalingInstances请求参数结构体
  */
 class StopAutoScalingInstancesRequest extends AbstractModel
 {
@@ -54,6 +52,7 @@ STOP_CHARGING：关机停止收费
 默认为 KEEP_CHARGING
      */
     public $StoppedMode;
+
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param array $InstanceIds 待关闭的CVM实例ID列表
@@ -66,6 +65,7 @@ STOP_CHARGING：关机停止收费
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

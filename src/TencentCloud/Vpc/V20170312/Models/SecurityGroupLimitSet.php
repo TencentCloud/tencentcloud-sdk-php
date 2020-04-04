@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户安全组配额限制。
+ *
  * @method integer getSecurityGroupLimit() 获取每个项目每个地域可创建安全组数
  * @method void setSecurityGroupLimit(integer $SecurityGroupLimit) 设置每个项目每个地域可创建安全组数
  * @method integer getSecurityGroupPolicyLimit() 获取安全组下的最大规则数
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupInstanceLimit(integer $SecurityGroupInstanceLimit) 设置单安全组关联实例数
  * @method integer getInstanceSecurityGroupLimit() 获取实例关联安全组数
  * @method void setInstanceSecurityGroupLimit(integer $InstanceSecurityGroupLimit) 设置实例关联安全组数
- */
-
-/**
- *用户安全组配额限制。
  */
 class SecurityGroupLimitSet extends AbstractModel
 {
@@ -59,6 +57,7 @@ class SecurityGroupLimitSet extends AbstractModel
      * @var integer 实例关联安全组数
      */
     public $InstanceSecurityGroupLimit;
+
     /**
      * @param integer $SecurityGroupLimit 每个项目每个地域可创建安全组数
      * @param integer $SecurityGroupPolicyLimit 安全组下的最大规则数
@@ -70,6 +69,7 @@ class SecurityGroupLimitSet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

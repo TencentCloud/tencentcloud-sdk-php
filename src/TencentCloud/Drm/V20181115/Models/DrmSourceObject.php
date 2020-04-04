@@ -18,14 +18,12 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用于DRM加密的源对象
+ *
  * @method string getBucketName() 获取输入的桶名称。
  * @method void setBucketName(string $BucketName) 设置输入的桶名称。
  * @method string getObjectName() 获取输入对象名称。
  * @method void setObjectName(string $ObjectName) 设置输入对象名称。
- */
-
-/**
- *用于DRM加密的源对象
  */
 class DrmSourceObject extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DrmSourceObject extends AbstractModel
      * @var string 输入对象名称。
      */
     public $ObjectName;
+
     /**
      * @param string $BucketName 输入的桶名称。
      * @param string $ObjectName 输入对象名称。
@@ -46,6 +45,7 @@ class DrmSourceObject extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

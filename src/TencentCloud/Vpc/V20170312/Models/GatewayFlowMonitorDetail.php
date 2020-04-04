@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 网关流量监控明细
+ *
  * @method string getPrivateIpAddress() 获取来源`IP`。
  * @method void setPrivateIpAddress(string $PrivateIpAddress) 设置来源`IP`。
  * @method integer getInPkg() 获取入包量。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInTraffic(integer $InTraffic) 设置入带宽，单位：`Byte`。
  * @method integer getOutTraffic() 获取出带宽，单位：`Byte`。
  * @method void setOutTraffic(integer $OutTraffic) 设置出带宽，单位：`Byte`。
- */
-
-/**
- *网关流量监控明细
  */
 class GatewayFlowMonitorDetail extends AbstractModel
 {
@@ -59,6 +57,7 @@ class GatewayFlowMonitorDetail extends AbstractModel
      * @var integer 出带宽，单位：`Byte`。
      */
     public $OutTraffic;
+
     /**
      * @param string $PrivateIpAddress 来源`IP`。
      * @param integer $InPkg 入包量。
@@ -70,6 +69,7 @@ class GatewayFlowMonitorDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

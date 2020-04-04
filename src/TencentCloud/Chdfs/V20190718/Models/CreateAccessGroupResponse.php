@@ -18,14 +18,12 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAccessGroup返回参数结构体
+ *
  * @method AccessGroup getAccessGroup() 获取权限组
  * @method void setAccessGroup(AccessGroup $AccessGroup) 设置权限组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateAccessGroup返回参数结构体
  */
 class CreateAccessGroupResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateAccessGroupResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param AccessGroup $AccessGroup 权限组
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateAccessGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

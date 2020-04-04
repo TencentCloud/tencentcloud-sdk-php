@@ -18,14 +18,12 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAccessGroup请求参数结构体
+ *
  * @method string getAccessGroupName() 获取权限组名称
  * @method void setAccessGroupName(string $AccessGroupName) 设置权限组名称
  * @method string getDescription() 获取权限组描述
  * @method void setDescription(string $Description) 设置权限组描述
- */
-
-/**
- *CreateAccessGroup请求参数结构体
  */
 class CreateAccessGroupRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateAccessGroupRequest extends AbstractModel
      * @var string 权限组描述
      */
     public $Description;
+
     /**
      * @param string $AccessGroupName 权限组名称
      * @param string $Description 权限组描述
@@ -46,6 +45,7 @@ class CreateAccessGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

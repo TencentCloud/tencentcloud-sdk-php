@@ -18,14 +18,12 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteUsualLoginPlaces请求参数结构体
+ *
  * @method string getUuid() 获取云镜客户端Uuid
  * @method void setUuid(string $Uuid) 设置云镜客户端Uuid
  * @method array getCityIds() 获取已添加常用登录地城市ID数组
  * @method void setCityIds(array $CityIds) 设置已添加常用登录地城市ID数组
- */
-
-/**
- *DeleteUsualLoginPlaces请求参数结构体
  */
 class DeleteUsualLoginPlacesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteUsualLoginPlacesRequest extends AbstractModel
      * @var array 已添加常用登录地城市ID数组
      */
     public $CityIds;
+
     /**
      * @param string $Uuid 云镜客户端Uuid
      * @param array $CityIds 已添加常用登录地城市ID数组
@@ -46,6 +45,7 @@ class DeleteUsualLoginPlacesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

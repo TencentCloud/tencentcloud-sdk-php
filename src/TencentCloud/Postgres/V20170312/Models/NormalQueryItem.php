@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 单条SlowQuery信息
+ *
  * @method string getUserName() 获取用户名
  * @method void setUserName(string $UserName) 设置用户名
  * @method integer getCalls() 获取调用次数
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabaseName(string $DatabaseName) 设置数据库名字
  * @method string getNormalQuery() 获取脱敏后的慢SQL
  * @method void setNormalQuery(string $NormalQuery) 设置脱敏后的慢SQL
- */
-
-/**
- *单条SlowQuery信息
  */
 class NormalQueryItem extends AbstractModel
 {
@@ -129,6 +127,7 @@ class NormalQueryItem extends AbstractModel
      * @var string 脱敏后的慢SQL
      */
     public $NormalQuery;
+
     /**
      * @param string $UserName 用户名
      * @param integer $Calls 调用次数
@@ -150,6 +149,7 @@ class NormalQueryItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

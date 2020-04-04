@@ -18,12 +18,10 @@ namespace TencentCloud\Mongodb\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TerminateDBInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。
- */
-
-/**
- *TerminateDBInstance请求参数结构体
  */
 class TerminateDBInstanceRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class TerminateDBInstanceRequest extends AbstractModel
      * @var string 实例ID，格式如：cmgo-p8vnipr5。
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。
      */
@@ -38,6 +37,7 @@ class TerminateDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

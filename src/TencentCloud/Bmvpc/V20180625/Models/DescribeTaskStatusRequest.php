@@ -18,12 +18,10 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskStatus请求参数结构体
+ *
  * @method integer getTaskId() 获取任务ID
  * @method void setTaskId(integer $TaskId) 设置任务ID
- */
-
-/**
- *DescribeTaskStatus请求参数结构体
  */
 class DescribeTaskStatusRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeTaskStatusRequest extends AbstractModel
      * @var integer 任务ID
      */
     public $TaskId;
+
     /**
      * @param integer $TaskId 任务ID
      */
@@ -38,6 +37,7 @@ class DescribeTaskStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBindUsr请求参数结构体
+ *
  * @method string getAccessId() 获取设备主人的AccessId
  * @method void setAccessId(string $AccessId) 设置设备主人的AccessId
  * @method string getTid() 获取设备TID
  * @method void setTid(string $Tid) 设置设备TID
- */
-
-/**
- *DescribeBindUsr请求参数结构体
  */
 class DescribeBindUsrRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeBindUsrRequest extends AbstractModel
      * @var string 设备TID
      */
     public $Tid;
+
     /**
      * @param string $AccessId 设备主人的AccessId
      * @param string $Tid 设备TID
@@ -46,6 +45,7 @@ class DescribeBindUsrRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

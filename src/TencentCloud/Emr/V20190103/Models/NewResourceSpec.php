@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 资源描述
+ *
  * @method Resource getMasterResourceSpec() 获取描述Master节点资源
  * @method void setMasterResourceSpec(Resource $MasterResourceSpec) 设置描述Master节点资源
  * @method Resource getCoreResourceSpec() 获取描述Core节点资源
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommonResourceSpec(Resource $CommonResourceSpec) 设置描述Common节点资源
  * @method integer getCommonCount() 获取Common节点数量
  * @method void setCommonCount(integer $CommonCount) 设置Common节点数量
- */
-
-/**
- *资源描述
  */
 class NewResourceSpec extends AbstractModel
 {
@@ -80,6 +78,7 @@ class NewResourceSpec extends AbstractModel
      * @var integer Common节点数量
      */
     public $CommonCount;
+
     /**
      * @param Resource $MasterResourceSpec 描述Master节点资源
      * @param Resource $CoreResourceSpec 描述Core节点资源
@@ -94,6 +93,7 @@ class NewResourceSpec extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateApp的输出参数
+ *
  * @method integer getBizId() 获取应用ID，由后台自动生成。
  * @method void setBizId(integer $BizId) 设置应用ID，由后台自动生成。
  * @method string getAppName() 获取应用名称，透传输入参数的AppName
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceMessageConf(VoiceMessageConf $VoiceMessageConf) 设置语音消息及转文本服务配置数据
  * @method VoiceFilterConf getVoiceFilterConf() 获取语音分析服务配置数据
  * @method void setVoiceFilterConf(VoiceFilterConf $VoiceFilterConf) 设置语音分析服务配置数据
- */
-
-/**
- *CreateApp的输出参数
  */
 class CreateAppResponse extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CreateAppResponse extends AbstractModel
      * @var VoiceFilterConf 语音分析服务配置数据
      */
     public $VoiceFilterConf;
+
     /**
      * @param integer $BizId 应用ID，由后台自动生成。
      * @param string $AppName 应用名称，透传输入参数的AppName
@@ -94,6 +93,7 @@ class CreateAppResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

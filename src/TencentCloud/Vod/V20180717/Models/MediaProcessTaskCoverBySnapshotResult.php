@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 对视频截图做封面任务结果类型
+ *
  * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method integer getErrCode() 获取错误码，0 表示成功，其他值表示失败：
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(CoverBySnapshotTaskInput $Input) 设置对视频截图做封面任务的输入。
  * @method CoverBySnapshotTaskOutput getOutput() 获取对视频截图做封面任务的输出。
  * @method void setOutput(CoverBySnapshotTaskOutput $Output) 设置对视频截图做封面任务的输出。
- */
-
-/**
- *对视频截图做封面任务结果类型
  */
 class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
 {
@@ -68,6 +66,7 @@ class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
      * @var CoverBySnapshotTaskOutput 对视频截图做封面任务的输出。
      */
     public $Output;
+
     /**
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param integer $ErrCode 错误码，0 表示成功，其他值表示失败：
@@ -82,6 +81,7 @@ class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

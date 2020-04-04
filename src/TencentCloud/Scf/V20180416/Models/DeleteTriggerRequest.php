@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTrigger请求参数结构体
+ *
  * @method string getFunctionName() 获取函数的名称
  * @method void setFunctionName(string $FunctionName) 设置函数的名称
  * @method string getTriggerName() 获取要删除的触发器名称
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerDesc(string $TriggerDesc) 设置如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
  * @method string getQualifier() 获取函数的版本信息
  * @method void setQualifier(string $Qualifier) 设置函数的版本信息
- */
-
-/**
- *DeleteTrigger请求参数结构体
  */
 class DeleteTriggerRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DeleteTriggerRequest extends AbstractModel
      * @var string 函数的版本信息
      */
     public $Qualifier;
+
     /**
      * @param string $FunctionName 函数的名称
      * @param string $TriggerName 要删除的触发器名称
@@ -78,6 +77,7 @@ class DeleteTriggerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

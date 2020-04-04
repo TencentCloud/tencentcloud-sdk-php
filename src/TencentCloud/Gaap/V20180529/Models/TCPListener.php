@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TCP类型监听器信息
+ *
  * @method string getListenerId() 获取监听器ID
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getListenerName() 获取监听器名称
@@ -74,10 +76,6 @@ lc，最小连接数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取监听器创建时间，Unix时间戳
  * @method void setCreateTime(integer $CreateTime) 设置监听器创建时间，Unix时间戳
- */
-
-/**
- *TCP类型监听器信息
  */
 class TCPListener extends AbstractModel
 {
@@ -164,6 +162,7 @@ lc，最小连接数。
      * @var integer 监听器创建时间，Unix时间戳
      */
     public $CreateTime;
+
     /**
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
@@ -198,6 +197,7 @@ lc，最小连接数。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

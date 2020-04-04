@@ -18,14 +18,12 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 环境变量
+ *
  * @method string getName() 获取环境变量名称
  * @method void setName(string $Name) 设置环境变量名称
  * @method string getValue() 获取服务端口
  * @method void setValue(string $Value) 设置服务端口
- */
-
-/**
- *环境变量
  */
 class Env extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Env extends AbstractModel
      * @var string 服务端口
      */
     public $Value;
+
     /**
      * @param string $Name 环境变量名称
      * @param string $Value 服务端口
@@ -46,6 +45,7 @@ class Env extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

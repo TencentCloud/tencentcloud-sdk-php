@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 对账文件信息
+ *
  * @method string getFileName() 获取STRING(256)，文件名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置STRING(256)，文件名称
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDrawCode(string $DrawCode) 设置STRING(64)，提取码
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *对账文件信息
  */
 class FileItem extends AbstractModel
 {
@@ -64,6 +62,7 @@ class FileItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DrawCode;
+
     /**
      * @param string $FileName STRING(256)，文件名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +77,7 @@ class FileItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

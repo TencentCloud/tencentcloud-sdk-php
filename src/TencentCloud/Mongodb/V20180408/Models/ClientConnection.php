@@ -18,14 +18,12 @@ namespace TencentCloud\Mongodb\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 客户端连接信息，包括客户端IP和连接数
+ *
  * @method string getIP() 获取连接的客户端IP
  * @method void setIP(string $IP) 设置连接的客户端IP
  * @method integer getCount() 获取对应客户端IP的连接数
  * @method void setCount(integer $Count) 设置对应客户端IP的连接数
- */
-
-/**
- *客户端连接信息，包括客户端IP和连接数
  */
 class ClientConnection extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ClientConnection extends AbstractModel
      * @var integer 对应客户端IP的连接数
      */
     public $Count;
+
     /**
      * @param string $IP 连接的客户端IP
      * @param integer $Count 对应客户端IP的连接数
@@ -46,6 +45,7 @@ class ClientConnection extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

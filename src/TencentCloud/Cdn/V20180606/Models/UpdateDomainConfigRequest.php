@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateDomainConfig请求参数结构体
+ *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
  * @method integer getProjectId() 获取项目 ID
@@ -92,10 +94,6 @@ global：全球加速
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) 设置回源超时配置
  * @method AwsPrivateAccess getAwsPrivateAccess() 获取回源S3私有鉴权
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) 设置回源S3私有鉴权
- */
-
-/**
- *UpdateDomainConfig请求参数结构体
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -255,6 +253,7 @@ global：全球加速
      * @var AwsPrivateAccess 回源S3私有鉴权
      */
     public $AwsPrivateAccess;
+
     /**
      * @param string $Domain 域名
      * @param integer $ProjectId 项目 ID
@@ -298,6 +297,7 @@ global：全球加速
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

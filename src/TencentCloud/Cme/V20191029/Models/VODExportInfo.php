@@ -18,14 +18,12 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云点播导出信息。
+ *
  * @method string getName() 获取导出的媒资名称。
  * @method void setName(string $Name) 设置导出的媒资名称。
  * @method integer getClassId() 获取导出的媒资分类 Id。
  * @method void setClassId(integer $ClassId) 设置导出的媒资分类 Id。
- */
-
-/**
- *云点播导出信息。
  */
 class VODExportInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class VODExportInfo extends AbstractModel
      * @var integer 导出的媒资分类 Id。
      */
     public $ClassId;
+
     /**
      * @param string $Name 导出的媒资名称。
      * @param integer $ClassId 导出的媒资分类 Id。
@@ -46,6 +45,7 @@ class VODExportInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 网络硬盘上下限数据
+ *
  * @method integer getMaxBandwidth() 获取网络带宽上限
  * @method void setMaxBandwidth(integer $MaxBandwidth) 设置网络带宽上限
  * @method integer getMaxSystemDiskSize() 获取数据盘上限
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPerDataDisk(integer $PerDataDisk) 设置数据盘步长
  * @method integer getMaxModuleNum() 获取总模块数量
  * @method void setMaxModuleNum(integer $MaxModuleNum) 设置总模块数量
- */
-
-/**
- *网络硬盘上下限数据
  */
 class NetworkStorageRange extends AbstractModel
 {
@@ -129,6 +127,7 @@ class NetworkStorageRange extends AbstractModel
      * @var integer 总模块数量
      */
     public $MaxModuleNum;
+
     /**
      * @param integer $MaxBandwidth 网络带宽上限
      * @param integer $MaxSystemDiskSize 数据盘上限
@@ -150,6 +149,7 @@ class NetworkStorageRange extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBlockIPTask请求参数结构体
+ *
  * @method string getTaskId() 获取ModifyBlockIPList 接口返回的异步任务的ID。
  * @method void setTaskId(string $TaskId) 设置ModifyBlockIPList 接口返回的异步任务的ID。
- */
-
-/**
- *DescribeBlockIPTask请求参数结构体
  */
 class DescribeBlockIPTaskRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeBlockIPTaskRequest extends AbstractModel
      * @var string ModifyBlockIPList 接口返回的异步任务的ID。
      */
     public $TaskId;
+
     /**
      * @param string $TaskId ModifyBlockIPList 接口返回的异步任务的ID。
      */
@@ -38,6 +37,7 @@ class DescribeBlockIPTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

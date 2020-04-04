@@ -18,14 +18,13 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRegionAndPrice请求参数结构体
+ *
 
- */
-
-/**
- *DescribeRegionAndPrice请求参数结构体
  */
 class DescribeRegionAndPriceRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeRegionAndPriceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

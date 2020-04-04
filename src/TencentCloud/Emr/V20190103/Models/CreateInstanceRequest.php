@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateInstance请求参数结构体
+ *
  * @method integer getProductId() 获取产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 <li>1：表示EMR-V1.3.1。</li>
 <li>2：表示EMR-V2.0.1。</li>
@@ -114,10 +116,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) 设置EMR-MetaDB实例
  * @method CustomMetaInfo getMetaDBInfo() 获取自定义MetaDB信息
  * @method void setMetaDBInfo(CustomMetaInfo $MetaDBInfo) 设置自定义MetaDB信息
- */
-
-/**
- *CreateInstance请求参数结构体
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -272,6 +270,7 @@ class CreateInstanceRequest extends AbstractModel
      * @var CustomMetaInfo 自定义MetaDB信息
      */
     public $MetaDBInfo;
+
     /**
      * @param integer $ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 <li>1：表示EMR-V1.3.1。</li>
@@ -326,6 +325,7 @@ class CreateInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

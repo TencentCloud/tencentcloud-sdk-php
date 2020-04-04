@@ -18,12 +18,10 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTraceStatus请求参数结构体
+ *
  * @method array getTids() 获取设备TID列表
  * @method void setTids(array $Tids) 设置设备TID列表
- */
-
-/**
- *DescribeTraceStatus请求参数结构体
  */
 class DescribeTraceStatusRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeTraceStatusRequest extends AbstractModel
      * @var array 设备TID列表
      */
     public $Tids;
+
     /**
      * @param array $Tids 设备TID列表
      */
@@ -38,6 +37,7 @@ class DescribeTraceStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

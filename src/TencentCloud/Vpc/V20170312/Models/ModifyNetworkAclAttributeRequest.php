@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNetworkAclAttribute请求参数结构体
+ *
  * @method string getNetworkAclId() 获取网络ACL实例ID。例如：acl-12345678。
  * @method void setNetworkAclId(string $NetworkAclId) 设置网络ACL实例ID。例如：acl-12345678。
  * @method string getNetworkAclName() 获取网络ACL名称，最大长度不能超过60个字节。
  * @method void setNetworkAclName(string $NetworkAclName) 设置网络ACL名称，最大长度不能超过60个字节。
- */
-
-/**
- *ModifyNetworkAclAttribute请求参数结构体
  */
 class ModifyNetworkAclAttributeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyNetworkAclAttributeRequest extends AbstractModel
      * @var string 网络ACL名称，最大长度不能超过60个字节。
      */
     public $NetworkAclName;
+
     /**
      * @param string $NetworkAclId 网络ACL实例ID。例如：acl-12345678。
      * @param string $NetworkAclName 网络ACL名称，最大长度不能超过60个字节。
@@ -46,6 +45,7 @@ class ModifyNetworkAclAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文本识别结果详情
+ *
  * @method integer getEvilFlag() 获取是否恶意 0：正常 1：可疑
  * @method void setEvilFlag(integer $EvilFlag) 设置是否恶意 0：正常 1：可疑
  * @method integer getEvilType() 获取恶意类型
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRes(TextOutputRes $Res) 设置消息类输出结果
  * @method array getKeywords() 获取命中的关键词
  * @method void setKeywords(array $Keywords) 设置命中的关键词
- */
-
-/**
- *文本识别结果详情
  */
 class TextData extends AbstractModel
 {
@@ -87,6 +85,7 @@ class TextData extends AbstractModel
      * @var array 命中的关键词
      */
     public $Keywords;
+
     /**
      * @param integer $EvilFlag 是否恶意 0：正常 1：可疑
      * @param integer $EvilType 恶意类型
@@ -106,6 +105,7 @@ class TextData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

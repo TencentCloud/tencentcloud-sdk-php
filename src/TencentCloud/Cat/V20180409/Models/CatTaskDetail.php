@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务信息和告警策略组
+ *
  * @method integer getTaskId() 获取任务ID
  * @method void setTaskId(integer $TaskId) 设置任务ID
  * @method string getTaskName() 获取任务名称
@@ -84,10 +86,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRespData(string $RespData) 设置预期的UDP请求的回应数据
  * @method integer getRedirectFollowNum() 获取跟随跳转次数
  * @method void setRedirectFollowNum(integer $RedirectFollowNum) 设置跟随跳转次数
- */
-
-/**
- *任务信息和告警策略组
  */
 class CatTaskDetail extends AbstractModel
 {
@@ -255,6 +253,7 @@ class CatTaskDetail extends AbstractModel
      * @var integer 跟随跳转次数
      */
     public $RedirectFollowNum;
+
     /**
      * @param integer $TaskId 任务ID
      * @param string $TaskName 任务名称
@@ -294,6 +293,7 @@ class CatTaskDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

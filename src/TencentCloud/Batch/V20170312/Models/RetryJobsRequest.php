@@ -18,12 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RetryJobs请求参数结构体
+ *
  * @method array getJobIds() 获取作业ID列表。
  * @method void setJobIds(array $JobIds) 设置作业ID列表。
- */
-
-/**
- *RetryJobs请求参数结构体
  */
 class RetryJobsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RetryJobsRequest extends AbstractModel
      * @var array 作业ID列表。
      */
     public $JobIds;
+
     /**
      * @param array $JobIds 作业ID列表。
      */
@@ -38,6 +37,7 @@ class RetryJobsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

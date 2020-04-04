@@ -18,12 +18,10 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteVpc请求参数结构体
+ *
  * @method string getVpcId() 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
- */
-
-/**
- *DeleteVpc请求参数结构体
  */
 class DeleteVpcRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteVpcRequest extends AbstractModel
      * @var string VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
     public $VpcId;
+
     /**
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
@@ -38,6 +37,7 @@ class DeleteVpcRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

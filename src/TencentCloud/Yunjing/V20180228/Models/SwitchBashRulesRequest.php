@@ -18,14 +18,12 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SwitchBashRules请求参数结构体
+ *
  * @method integer getId() 获取规则ID
  * @method void setId(integer $Id) 设置规则ID
  * @method integer getDisabled() 获取是否禁用
  * @method void setDisabled(integer $Disabled) 设置是否禁用
- */
-
-/**
- *SwitchBashRules请求参数结构体
  */
 class SwitchBashRulesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SwitchBashRulesRequest extends AbstractModel
      * @var integer 是否禁用
      */
     public $Disabled;
+
     /**
      * @param integer $Id 规则ID
      * @param integer $Disabled 是否禁用
@@ -46,6 +45,7 @@ class SwitchBashRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

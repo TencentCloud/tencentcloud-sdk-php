@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateFace返回参数结构体
+ *
  * @method integer getSucFaceNum() 获取加入成功的人脸数量
  * @method void setSucFaceNum(integer $SucFaceNum) 设置加入成功的人脸数量
  * @method array getSucFaceIds() 获取加入成功的人脸ID列表
@@ -40,10 +42,6 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
  * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别所用的算法模型版本。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateFace返回参数结构体
  */
 class CreateFaceResponse extends AbstractModel
 {
@@ -85,6 +83,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $SucFaceNum 加入成功的人脸数量
      * @param array $SucFaceIds 加入成功的人脸ID列表
@@ -102,6 +101,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

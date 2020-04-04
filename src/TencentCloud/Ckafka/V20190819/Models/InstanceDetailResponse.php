@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例详情返回结果
+ *
  * @method integer getTotalCount() 获取符合条件的实例总数
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例总数
  * @method array getInstanceList() 获取符合条件的实例详情列表
  * @method void setInstanceList(array $InstanceList) 设置符合条件的实例详情列表
- */
-
-/**
- *实例详情返回结果
  */
 class InstanceDetailResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceDetailResponse extends AbstractModel
      * @var array 符合条件的实例详情列表
      */
     public $InstanceList;
+
     /**
      * @param integer $TotalCount 符合条件的实例总数
      * @param array $InstanceList 符合条件的实例详情列表
@@ -46,6 +45,7 @@ class InstanceDetailResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

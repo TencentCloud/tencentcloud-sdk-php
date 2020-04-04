@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePeakNetworkOverview请求参数结构体
+ *
  * @method string getStartTime() 获取开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期。
  * @method void setStartTime(string $StartTime) 设置开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期。
  * @method string getEndTime() 获取结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。
  * @method void setFilters(array $Filters) 设置过滤条件。
 region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。
- */
-
-/**
- *DescribePeakNetworkOverview请求参数结构体
  */
 class DescribePeakNetworkOverviewRequest extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DescribePeakNetworkOverviewRequest extends AbstractModel
 region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。
      */
     public $Filters;
+
     /**
      * @param string $StartTime 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期。
      * @param string $EndTime 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。
@@ -58,6 +57,7 @@ region    String      是否必填：否     （过滤条件）按照region过�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

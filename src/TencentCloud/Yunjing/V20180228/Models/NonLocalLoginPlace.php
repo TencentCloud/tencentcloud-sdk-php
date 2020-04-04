@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 异地登录
+ *
  * @method integer getId() 获取事件ID。
  * @method void setId(integer $Id) 设置事件ID。
  * @method string getMachineIp() 获取主机IP。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginTime(string $LoginTime) 设置登录时间。
  * @method string getUuid() 获取云镜客户端唯一标识Uuid。
  * @method void setUuid(string $Uuid) 设置云镜客户端唯一标识Uuid。
- */
-
-/**
- *异地登录
  */
 class NonLocalLoginPlace extends AbstractModel
 {
@@ -107,6 +105,7 @@ class NonLocalLoginPlace extends AbstractModel
      * @var string 云镜客户端唯一标识Uuid。
      */
     public $Uuid;
+
     /**
      * @param integer $Id 事件ID。
      * @param string $MachineIp 主机IP。
@@ -126,6 +125,7 @@ class NonLocalLoginPlace extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

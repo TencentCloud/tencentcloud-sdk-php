@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询策略输出的阈值告警条件
+ *
  * @method string getMetricShowName() 获取指标名称
  * @method void setMetricShowName(string $MetricShowName) 设置指标名称
  * @method integer getPeriod() 获取数据聚合周期(单位秒)
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContinueTime(integer $ContinueTime) 设置持续多长时间触发规则会告警(单位秒)
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *查询策略输出的阈值告警条件
  */
 class DescribePolicyGroupInfoCondition extends AbstractModel
 {
@@ -103,6 +101,7 @@ class DescribePolicyGroupInfoCondition extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContinueTime;
+
     /**
      * @param string $MetricShowName 指标名称
      * @param integer $Period 数据聚合周期(单位秒)
@@ -122,6 +121,7 @@ class DescribePolicyGroupInfoCondition extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

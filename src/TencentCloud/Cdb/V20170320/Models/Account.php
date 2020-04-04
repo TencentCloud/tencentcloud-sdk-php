@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据库账号信息
+ *
  * @method string getUser() 获取新账户的名称
  * @method void setUser(string $User) 设置新账户的名称
  * @method string getHost() 获取新账户的域名
  * @method void setHost(string $Host) 设置新账户的域名
- */
-
-/**
- *数据库账号信息
  */
 class Account extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Account extends AbstractModel
      * @var string 新账户的域名
      */
     public $Host;
+
     /**
      * @param string $User 新账户的名称
      * @param string $Host 新账户的域名
@@ -46,6 +45,7 @@ class Account extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

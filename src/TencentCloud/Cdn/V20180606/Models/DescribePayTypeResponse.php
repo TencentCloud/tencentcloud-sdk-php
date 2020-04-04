@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePayType返回参数结构体
+ *
  * @method string getPayType() 获取计费类型：
 flux：流量计费
 bandwidth：带宽计费
@@ -58,10 +60,6 @@ flux：流量计费
 bandwidth：带宽计费
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribePayType返回参数结构体
  */
 class DescribePayTypeResponse extends AbstractModel
 {
@@ -108,6 +106,7 @@ bandwidth：带宽计费
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $PayType 计费类型：
 flux：流量计费
@@ -134,6 +133,7 @@ bandwidth：带宽计费
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

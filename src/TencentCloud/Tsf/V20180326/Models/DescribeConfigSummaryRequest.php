@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeConfigSummary请求参数结构体
+ *
  * @method string getApplicationId() 获取应用ID，不传入时查询全量
  * @method void setApplicationId(string $ApplicationId) 设置应用ID，不传入时查询全量
  * @method string getSearchWord() 获取查询关键字，模糊查询：应用名称，配置项名称，不传入时查询全量
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取每页条数，默认为20
  * @method void setLimit(integer $Limit) 设置每页条数，默认为20
- */
-
-/**
- *DescribeConfigSummary请求参数结构体
  */
 class DescribeConfigSummaryRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeConfigSummaryRequest extends AbstractModel
      * @var integer 每页条数，默认为20
      */
     public $Limit;
+
     /**
      * @param string $ApplicationId 应用ID，不传入时查询全量
      * @param string $SearchWord 查询关键字，模糊查询：应用名称，配置项名称，不传入时查询全量
@@ -62,6 +61,7 @@ class DescribeConfigSummaryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

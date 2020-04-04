@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePerson请求参数结构体
+ *
  * @method string getLibraryId() 获取人员库唯一标识符
  * @method void setLibraryId(string $LibraryId) 设置人员库唯一标识符
  * @method string getPersonId() 获取人员唯一标识符
  * @method void setPersonId(string $PersonId) 设置人员唯一标识符
- */
-
-/**
- *DescribePerson请求参数结构体
  */
 class DescribePersonRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribePersonRequest extends AbstractModel
      * @var string 人员唯一标识符
      */
     public $PersonId;
+
     /**
      * @param string $LibraryId 人员库唯一标识符
      * @param string $PersonId 人员唯一标识符
@@ -46,6 +45,7 @@ class DescribePersonRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

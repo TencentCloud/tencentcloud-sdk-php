@@ -18,14 +18,12 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SwitchDrToMaster请求参数结构体
+ *
  * @method SyncInstanceInfo getDstInfo() 获取灾备实例的信息
  * @method void setDstInfo(SyncInstanceInfo $DstInfo) 设置灾备实例的信息
  * @method string getDatabaseType() 获取数据库的类型  （如 mysql）
  * @method void setDatabaseType(string $DatabaseType) 设置数据库的类型  （如 mysql）
- */
-
-/**
- *SwitchDrToMaster请求参数结构体
  */
 class SwitchDrToMasterRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SwitchDrToMasterRequest extends AbstractModel
      * @var string 数据库的类型  （如 mysql）
      */
     public $DatabaseType;
+
     /**
      * @param SyncInstanceInfo $DstInfo 灾备实例的信息
      * @param string $DatabaseType 数据库的类型  （如 mysql）
@@ -46,6 +45,7 @@ class SwitchDrToMasterRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

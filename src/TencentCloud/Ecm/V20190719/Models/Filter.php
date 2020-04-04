@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 过滤器Filter;由Name和ValueSet组成，是string的key和字符串数组的value
+ *
  * @method string getName() 获取过滤字段名称
  * @method void setName(string $Name) 设置过滤字段名称
  * @method array getValues() 获取过滤字段内容数组
  * @method void setValues(array $Values) 设置过滤字段内容数组
- */
-
-/**
- *过滤器Filter;由Name和ValueSet组成，是string的key和字符串数组的value
  */
 class Filter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Filter extends AbstractModel
      * @var array 过滤字段内容数组
      */
     public $Values;
+
     /**
      * @param string $Name 过滤字段名称
      * @param array $Values 过滤字段内容数组
@@ -46,6 +45,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

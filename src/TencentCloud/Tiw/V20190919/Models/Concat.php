@@ -18,16 +18,14 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实时录制视频拼接参数
+ *
  * @method boolean getEnabled() 获取是否开启拼接功能
 在开启了视频拼接功能的情况下，实时录制服务会把同一个用户因为暂停导致的多段视频拼接成一个视频
  * @method void setEnabled(boolean $Enabled) 设置是否开启拼接功能
 在开启了视频拼接功能的情况下，实时录制服务会把同一个用户因为暂停导致的多段视频拼接成一个视频
  * @method string getImage() 获取视频拼接时使用的垫片图片下载地址，不填默认用全黑的图片进行视频垫片
  * @method void setImage(string $Image) 设置视频拼接时使用的垫片图片下载地址，不填默认用全黑的图片进行视频垫片
- */
-
-/**
- *实时录制视频拼接参数
  */
 class Concat extends AbstractModel
 {
@@ -41,6 +39,7 @@ class Concat extends AbstractModel
      * @var string 视频拼接时使用的垫片图片下载地址，不填默认用全黑的图片进行视频垫片
      */
     public $Image;
+
     /**
      * @param boolean $Enabled 是否开启拼接功能
 在开启了视频拼接功能的情况下，实时录制服务会把同一个用户因为暂停导致的多段视频拼接成一个视频
@@ -50,6 +49,7 @@ class Concat extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

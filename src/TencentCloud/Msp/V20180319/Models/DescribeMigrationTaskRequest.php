@@ -18,12 +18,10 @@ namespace TencentCloud\Msp\V20180319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMigrationTask请求参数结构体
+ *
  * @method string getTaskId() 获取任务ID，例如msp-jitoh33n
  * @method void setTaskId(string $TaskId) 设置任务ID，例如msp-jitoh33n
- */
-
-/**
- *DescribeMigrationTask请求参数结构体
  */
 class DescribeMigrationTaskRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeMigrationTaskRequest extends AbstractModel
      * @var string 任务ID，例如msp-jitoh33n
      */
     public $TaskId;
+
     /**
      * @param string $TaskId 任务ID，例如msp-jitoh33n
      */
@@ -38,6 +37,7 @@ class DescribeMigrationTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 输入规则，当上传视频命中该规则时，即触发工作流。
+ *
  * @method string getType() 获取触发器的类型，目前仅支持 CosFileUpload。
  * @method void setType(string $Type) 设置触发器的类型，目前仅支持 CosFileUpload。
  * @method CosFileUploadTrigger getCosFileUploadTrigger() 获取当 Type 为 CosFileUpload 时必填且有效，为 COS 触发规则。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosFileUploadTrigger(CosFileUploadTrigger $CosFileUploadTrigger) 设置当 Type 为 CosFileUpload 时必填且有效，为 COS 触发规则。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *输入规则，当上传视频命中该规则时，即触发工作流。
  */
 class WorkflowTrigger extends AbstractModel
 {
@@ -41,6 +39,7 @@ class WorkflowTrigger extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosFileUploadTrigger;
+
     /**
      * @param string $Type 触发器的类型，目前仅支持 CosFileUpload。
      * @param CosFileUploadTrigger $CosFileUploadTrigger 当 Type 为 CosFileUpload 时必填且有效，为 COS 触发规则。
@@ -50,6 +49,7 @@ class WorkflowTrigger extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

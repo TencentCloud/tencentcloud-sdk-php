@@ -18,14 +18,12 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DownloadCustomerGatewayConfiguration请求参数结构体
+ *
  * @method string getVpnConnectionId() 获取VPN通道实例ID。形如：bmvpnx-f49l6u0z。
  * @method void setVpnConnectionId(string $VpnConnectionId) 设置VPN通道实例ID。形如：bmvpnx-f49l6u0z。
  * @method string getVendorName() 获取厂商,取值 h3c，cisco
  * @method void setVendorName(string $VendorName) 设置厂商,取值 h3c，cisco
- */
-
-/**
- *DownloadCustomerGatewayConfiguration请求参数结构体
  */
 class DownloadCustomerGatewayConfigurationRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DownloadCustomerGatewayConfigurationRequest extends AbstractModel
      * @var string 厂商,取值 h3c，cisco
      */
     public $VendorName;
+
     /**
      * @param string $VpnConnectionId VPN通道实例ID。形如：bmvpnx-f49l6u0z。
      * @param string $VendorName 厂商,取值 h3c，cisco
@@ -46,6 +45,7 @@ class DownloadCustomerGatewayConfigurationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

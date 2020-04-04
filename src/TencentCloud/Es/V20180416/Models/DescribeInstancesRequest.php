@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstances请求参数结构体
+ *
  * @method string getZone() 获取集群实例所属可用区，不传则默认所有可用区
  * @method void setZone(string $Zone) 设置集群实例所属可用区，不传则默认所有可用区
  * @method array getInstanceIds() 获取集群实例ID列表
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagList(array $TagList) 设置节点标签信息列表
  * @method array getIpList() 获取私有网络vip列表
  * @method void setIpList(array $IpList) 设置私有网络vip列表
- */
-
-/**
- *DescribeInstances请求参数结构体
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @var array 私有网络vip列表
      */
     public $IpList;
+
     /**
      * @param string $Zone 集群实例所属可用区，不传则默认所有可用区
      * @param array $InstanceIds 集群实例ID列表
@@ -102,6 +101,7 @@ class DescribeInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

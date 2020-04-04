@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyPerson请求参数结构体
+ *
  * @method string getLibraryId() 获取人员库唯一标识符
  * @method void setLibraryId(string $LibraryId) 设置人员库唯一标识符
  * @method string getPersonId() 获取人员唯一标识符
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhoneNumber(string $PhoneNumber) 设置人员电话号码
  * @method string getStudentNumber() 获取人员学生号码
  * @method void setStudentNumber(string $StudentNumber) 设置人员学生号码
- */
-
-/**
- *ModifyPerson请求参数结构体
  */
 class ModifyPersonRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ModifyPersonRequest extends AbstractModel
      * @var string 人员学生号码
      */
     public $StudentNumber;
+
     /**
      * @param string $LibraryId 人员库唯一标识符
      * @param string $PersonId 人员唯一标识符
@@ -94,6 +93,7 @@ class ModifyPersonRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

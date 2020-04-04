@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAgentVuls请求参数结构体
+ *
  * @method string getVulType() 获取漏洞类型。
 <li>WEB: Web应用漏洞</li>
 <li>SYSTEM：系统组件漏洞</li>
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Status - String - 是否必填：否 - 状态筛选（UN_OPERATED: 待处理 | FIXED：已修复）
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>Status - String - 是否必填：否 - 状态筛选（UN_OPERATED: 待处理 | FIXED：已修复）
- */
-
-/**
- *DescribeAgentVuls请求参数结构体
  */
 class DescribeAgentVulsRequest extends AbstractModel
 {
@@ -71,6 +69,7 @@ class DescribeAgentVulsRequest extends AbstractModel
 <li>Status - String - 是否必填：否 - 状态筛选（UN_OPERATED: 待处理 | FIXED：已修复）
      */
     public $Filters;
+
     /**
      * @param string $VulType 漏洞类型。
 <li>WEB: Web应用漏洞</li>
@@ -86,6 +85,7 @@ class DescribeAgentVulsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

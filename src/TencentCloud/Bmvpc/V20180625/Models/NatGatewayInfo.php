@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * NAT详情
+ *
  * @method string getNatId() 获取NAT网关ID
  * @method void setNatId(string $NatId) 设置NAT网关ID
  * @method string getNatName() 获取网关名称
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIntVpcId(integer $IntVpcId) 设置私有网络整型ID
  * @method integer getNatResourceId() 获取NAT资源ID
  * @method void setNatResourceId(integer $NatResourceId) 设置NAT资源ID
- */
-
-/**
- *NAT详情
  */
 class NatGatewayInfo extends AbstractModel
 {
@@ -136,6 +134,7 @@ class NatGatewayInfo extends AbstractModel
      * @var integer NAT资源ID
      */
     public $NatResourceId;
+
     /**
      * @param string $NatId NAT网关ID
      * @param string $NatName 网关名称
@@ -158,6 +157,7 @@ class NatGatewayInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

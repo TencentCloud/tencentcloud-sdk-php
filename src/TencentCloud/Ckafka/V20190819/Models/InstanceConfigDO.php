@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例配置实体
+ *
  * @method boolean getAutoCreateTopicsEnable() 获取是否自动创建主题
  * @method void setAutoCreateTopicsEnable(boolean $AutoCreateTopicsEnable) 设置是否自动创建主题
  * @method integer getDefaultNumPartitions() 获取分区数
  * @method void setDefaultNumPartitions(integer $DefaultNumPartitions) 设置分区数
  * @method integer getDefaultReplicationFactor() 获取默认的复制Factor
  * @method void setDefaultReplicationFactor(integer $DefaultReplicationFactor) 设置默认的复制Factor
- */
-
-/**
- *实例配置实体
  */
 class InstanceConfigDO extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InstanceConfigDO extends AbstractModel
      * @var integer 默认的复制Factor
      */
     public $DefaultReplicationFactor;
+
     /**
      * @param boolean $AutoCreateTopicsEnable 是否自动创建主题
      * @param integer $DefaultNumPartitions 分区数
@@ -54,6 +53,7 @@ class InstanceConfigDO extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

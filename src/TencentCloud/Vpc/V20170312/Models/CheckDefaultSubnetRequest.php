@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CheckDefaultSubnet请求参数结构体
+ *
  * @method string getZone() 获取子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
  * @method void setZone(string $Zone) 设置子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
- */
-
-/**
- *CheckDefaultSubnet请求参数结构体
  */
 class CheckDefaultSubnetRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CheckDefaultSubnetRequest extends AbstractModel
      * @var string 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
      */
     public $Zone;
+
     /**
      * @param string $Zone 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
      */
@@ -38,6 +37,7 @@ class CheckDefaultSubnetRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

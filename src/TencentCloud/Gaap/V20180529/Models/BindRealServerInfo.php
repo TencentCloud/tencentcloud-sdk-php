@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 添加源站的源站信息返回值
+ *
  * @method string getRealServerIP() 获取源站的IP或域名
  * @method void setRealServerIP(string $RealServerIP) 设置源站的IP或域名
  * @method string getRealServerId() 获取源站ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *添加源站的源站信息返回值
  */
 class BindRealServerInfo extends AbstractModel
 {
@@ -62,6 +60,7 @@ class BindRealServerInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
+
     /**
      * @param string $RealServerIP 源站的IP或域名
      * @param string $RealServerId 源站ID
@@ -74,6 +73,7 @@ class BindRealServerInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

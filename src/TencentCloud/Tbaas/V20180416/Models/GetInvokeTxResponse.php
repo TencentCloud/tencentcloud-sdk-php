@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetInvokeTx返回参数结构体
+ *
  * @method integer getTxValidationCode() 获取交易执行状态码
  * @method void setTxValidationCode(integer $TxValidationCode) 设置交易执行状态码
  * @method string getTxValidationMsg() 获取交易执行消息
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlockId(integer $BlockId) 设置交易所在区块ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetInvokeTx返回参数结构体
  */
 class GetInvokeTxResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GetInvokeTxResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TxValidationCode 交易执行状态码
      * @param string $TxValidationMsg 交易执行消息
@@ -62,6 +61,7 @@ class GetInvokeTxResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

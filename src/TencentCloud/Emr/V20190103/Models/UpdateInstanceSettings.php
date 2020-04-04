@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 变配资源规格
+ *
  * @method integer getMemory() 获取内存容量，单位为G
  * @method void setMemory(integer $Memory) 设置内存容量，单位为G
  * @method integer getCPUCores() 获取CPU核数
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置机器资源ID（EMR测资源标识）
  * @method string getInstanceType() 获取变配机器规格
  * @method void setInstanceType(string $InstanceType) 设置变配机器规格
- */
-
-/**
- *变配资源规格
  */
 class UpdateInstanceSettings extends AbstractModel
 {
@@ -52,6 +50,7 @@ class UpdateInstanceSettings extends AbstractModel
      * @var string 变配机器规格
      */
     public $InstanceType;
+
     /**
      * @param integer $Memory 内存容量，单位为G
      * @param integer $CPUCores CPU核数
@@ -62,6 +61,7 @@ class UpdateInstanceSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

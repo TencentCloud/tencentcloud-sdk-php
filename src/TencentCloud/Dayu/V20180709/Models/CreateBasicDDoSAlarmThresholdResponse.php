@@ -18,16 +18,14 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateBasicDDoSAlarmThreshold返回参数结构体
+ *
  * @method integer getAlarmThreshold() 获取当存在告警阈值配置时，返回告警阈值大于0，当不存在告警配置时，返回告警阈值为0；
  * @method void setAlarmThreshold(integer $AlarmThreshold) 设置当存在告警阈值配置时，返回告警阈值大于0，当不存在告警配置时，返回告警阈值为0；
  * @method integer getAlarmType() 获取告警阈值类型，1-入流量，2-清洗流量；当AlarmThreshold大于0时有效；
  * @method void setAlarmType(integer $AlarmType) 设置告警阈值类型，1-入流量，2-清洗流量；当AlarmThreshold大于0时有效；
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateBasicDDoSAlarmThreshold返回参数结构体
  */
 class CreateBasicDDoSAlarmThresholdResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateBasicDDoSAlarmThresholdResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $AlarmThreshold 当存在告警阈值配置时，返回告警阈值大于0，当不存在告警配置时，返回告警阈值为0；
      * @param integer $AlarmType 告警阈值类型，1-入流量，2-清洗流量；当AlarmThreshold大于0时有效；
@@ -54,6 +53,7 @@ class CreateBasicDDoSAlarmThresholdResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

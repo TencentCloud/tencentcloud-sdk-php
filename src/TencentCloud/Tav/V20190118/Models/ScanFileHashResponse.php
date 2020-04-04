@@ -18,6 +18,8 @@ namespace TencentCloud\Tav\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ScanFileHash返回参数结构体
+ *
  * @method integer getStatus() 获取接口调用状态，成功返回200，失败返回400
  * @method void setStatus(integer $Status) 设置接口调用状态，成功返回200，失败返回400
  * @method string getInfo() 获取接口调用描述信息，成功返回"scan success"，失败返回"scan error"
@@ -30,10 +32,6 @@ return_state查询状态：-1/0代表失败、1/2代表成功；
 virus_state文状件态：0文件不存在、1白、2黑、3未知、4感染性、5低可信白；
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ScanFileHash返回参数结构体
  */
 class ScanFileHashResponse extends AbstractModel
 {
@@ -58,6 +56,7 @@ virus_state文状件态：0文件不存在、1白、2黑、3未知、4感染性�
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Status 接口调用状态，成功返回200，失败返回400
      * @param string $Info 接口调用描述信息，成功返回"scan success"，失败返回"scan error"
@@ -70,6 +69,7 @@ virus_state文状件态：0文件不存在、1白、2黑、3未知、4感染性�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

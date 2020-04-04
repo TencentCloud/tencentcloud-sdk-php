@@ -18,14 +18,13 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLibraries请求参数结构体
+ *
 
- */
-
-/**
- *DescribeLibraries请求参数结构体
  */
 class DescribeLibrariesRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeLibrariesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

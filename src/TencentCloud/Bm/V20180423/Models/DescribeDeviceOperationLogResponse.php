@@ -18,16 +18,14 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDeviceOperationLog返回参数结构体
+ *
  * @method array getDeviceOperationLogSet() 获取操作日志列表
  * @method void setDeviceOperationLogSet(array $DeviceOperationLogSet) 设置操作日志列表
  * @method integer getTotalCount() 获取返回数目
  * @method void setTotalCount(integer $TotalCount) 设置返回数目
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDeviceOperationLog返回参数结构体
  */
 class DescribeDeviceOperationLogResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDeviceOperationLogResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $DeviceOperationLogSet 操作日志列表
      * @param integer $TotalCount 返回数目
@@ -54,6 +53,7 @@ class DescribeDeviceOperationLogResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

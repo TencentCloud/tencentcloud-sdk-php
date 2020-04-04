@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDDoSWaterKey返回参数结构体
+ *
  * @method array getKeyList() 获取水印密钥列表
  * @method void setKeyList(array $KeyList) 设置水印密钥列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ModifyDDoSWaterKey返回参数结构体
  */
 class ModifyDDoSWaterKeyResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDDoSWaterKeyResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $KeyList 水印密钥列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class ModifyDDoSWaterKeyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

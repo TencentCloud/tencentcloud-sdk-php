@@ -18,16 +18,14 @@ namespace TencentCloud\Captcha\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCaptchaOperData操作数据查询尝试次数 type = 3
+ *
  * @method string getDateKey() 获取时间
  * @method void setDateKey(string $DateKey) 设置时间
  * @method array getCntPerPass() 获取平均尝试次数
  * @method void setCntPerPass(array $CntPerPass) 设置平均尝试次数
  * @method float getMarketCntPerPass() 获取market平均尝试次数
  * @method void setMarketCntPerPass(float $MarketCntPerPass) 设置market平均尝试次数
- */
-
-/**
- *DescribeCaptchaOperData操作数据查询尝试次数 type = 3
  */
 class CaptchaOperDataTryTimesUnit extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CaptchaOperDataTryTimesUnit extends AbstractModel
      * @var float market平均尝试次数
      */
     public $MarketCntPerPass;
+
     /**
      * @param string $DateKey 时间
      * @param array $CntPerPass 平均尝试次数
@@ -54,6 +53,7 @@ class CaptchaOperDataTryTimesUnit extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

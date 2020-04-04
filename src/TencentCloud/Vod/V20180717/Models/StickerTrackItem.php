@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 贴图轨上的贴图信息。
+ *
  * @method string getSourceMedia() 获取贴图素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
  * @method void setSourceMedia(string $SourceMedia) 设置贴图素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
  * @method float getDuration() 获取贴图的持续时间，单位为秒。
@@ -72,10 +74,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageOperations(array $ImageOperations) 设置对贴图进行的操作，如图像旋转等。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *贴图轨上的贴图信息。
  */
 class StickerTrackItem extends AbstractModel
 {
@@ -141,6 +139,7 @@ class StickerTrackItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageOperations;
+
     /**
      * @param string $SourceMedia 贴图素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
      * @param float $Duration 贴图的持续时间，单位为秒。
@@ -174,6 +173,7 @@ class StickerTrackItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

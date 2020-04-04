@@ -18,12 +18,10 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户配额返回值
+ *
  * @method array getLimitInfo() 获取配额信息
  * @method void setLimitInfo(array $LimitInfo) 设置配额信息
- */
-
-/**
- *用户配额返回值
  */
 class RespLimit extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RespLimit extends AbstractModel
      * @var array 配额信息
      */
     public $LimitInfo;
+
     /**
      * @param array $LimitInfo 配额信息
      */
@@ -38,6 +37,7 @@ class RespLimit extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

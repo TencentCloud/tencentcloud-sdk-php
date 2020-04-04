@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 过滤器条件
+ *
  * @method string getName() 获取过滤器的名称
  * @method void setName(string $Name) 设置过滤器的名称
  * @method array getValues() 获取过滤器的值数组
  * @method void setValues(array $Values) 设置过滤器的值数组
- */
-
-/**
- *过滤器条件
  */
 class Filter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Filter extends AbstractModel
      * @var array 过滤器的值数组
      */
     public $Values;
+
     /**
      * @param string $Name 过滤器的名称
      * @param array $Values 过滤器的值数组
@@ -46,6 +45,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

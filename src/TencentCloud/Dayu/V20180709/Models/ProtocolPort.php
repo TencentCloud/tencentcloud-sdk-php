@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Protocol、Port参数
+ *
  * @method string getProtocol() 获取协议（tcp；udp）
  * @method void setProtocol(string $Protocol) 设置协议（tcp；udp）
  * @method integer getPort() 获取端口
  * @method void setPort(integer $Port) 设置端口
- */
-
-/**
- *Protocol、Port参数
  */
 class ProtocolPort extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ProtocolPort extends AbstractModel
      * @var integer 端口
      */
     public $Port;
+
     /**
      * @param string $Protocol 协议（tcp；udp）
      * @param integer $Port 端口
@@ -46,6 +45,7 @@ class ProtocolPort extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

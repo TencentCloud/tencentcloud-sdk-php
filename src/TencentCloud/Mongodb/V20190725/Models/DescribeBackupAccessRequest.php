@@ -18,14 +18,12 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupAccess请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method string getBackupName() 获取需要获取下载授权的备份文件名
  * @method void setBackupName(string $BackupName) 设置需要获取下载授权的备份文件名
- */
-
-/**
- *DescribeBackupAccess请求参数结构体
  */
 class DescribeBackupAccessRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeBackupAccessRequest extends AbstractModel
      * @var string 需要获取下载授权的备份文件名
      */
     public $BackupName;
+
     /**
      * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      * @param string $BackupName 需要获取下载授权的备份文件名
@@ -46,6 +45,7 @@ class DescribeBackupAccessRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

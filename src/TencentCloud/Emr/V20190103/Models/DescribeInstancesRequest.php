@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstances请求参数结构体
+ *
  * @method string getDisplayStrategy() 获取集群筛选策略。取值范围：
 <li>clusterList：表示查询除了已销毁集群之外的集群列表。</li>
 <li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li>
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsc(integer $Asc) 设置按照OrderField升序或者降序进行排序。取值范围：
 <li>0：表示降序。</li>
 <li>1：表示升序。</li>默认值为0。
- */
-
-/**
- *DescribeInstances请求参数结构体
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -103,6 +101,7 @@ class DescribeInstancesRequest extends AbstractModel
 <li>1：表示升序。</li>默认值为0。
      */
     public $Asc;
+
     /**
      * @param string $DisplayStrategy 集群筛选策略。取值范围：
 <li>clusterList：表示查询除了已销毁集群之外的集群列表。</li>
@@ -126,6 +125,7 @@ class DescribeInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

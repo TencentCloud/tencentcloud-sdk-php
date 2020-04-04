@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpcResource请求参数结构体
+ *
  * @method array getVpcIds() 获取私有网络实例ID
  * @method void setVpcIds(array $VpcIds) 设置私有网络实例ID
  * @method array getFilters() 获取过滤条件，参数不支持同时指定SubnetIds和Filters。
@@ -38,10 +40,6 @@ state - String - （过滤条件）VPC状态。available: 运营中; pending: �
  * @method void setOrderField(string $OrderField) 设置排序字段
  * @method string getOrderDirection() 获取排序方向, “asc”、“desc”
  * @method void setOrderDirection(string $OrderDirection) 设置排序方向, “asc”、“desc”
- */
-
-/**
- *DescribeVpcResource请求参数结构体
  */
 class DescribeVpcResourceRequest extends AbstractModel
 {
@@ -78,6 +76,7 @@ state - String - （过滤条件）VPC状态。available: 运营中; pending: �
      * @var string 排序方向, “asc”、“desc”
      */
     public $OrderDirection;
+
     /**
      * @param array $VpcIds 私有网络实例ID
      * @param array $Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
@@ -94,6 +93,7 @@ state - String - （过滤条件）VPC状态。available: 运营中; pending: �
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

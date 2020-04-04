@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetClusterSummary请求参数结构体
+ *
  * @method string getModule() 获取模块名称，固定字段：cluster_mng
  * @method void setModule(string $Module) 设置模块名称，固定字段：cluster_mng
  * @method string getOperation() 获取操作名称，固定字段：cluster_summary
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(integer $GroupId) 设置组织ID，固定字段：0
  * @method string getGroupName() 获取调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
  * @method void setGroupName(string $GroupName) 设置调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
- */
-
-/**
- *GetClusterSummary请求参数结构体
  */
 class GetClusterSummaryRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class GetClusterSummaryRequest extends AbstractModel
      * @var string 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public $GroupName;
+
     /**
      * @param string $Module 模块名称，固定字段：cluster_mng
      * @param string $Operation 操作名称，固定字段：cluster_summary
@@ -70,6 +69,7 @@ class GetClusterSummaryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

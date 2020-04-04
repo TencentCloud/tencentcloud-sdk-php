@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RollbackInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method integer getType() 获取回档类型，0-回档的数据库覆盖原库；1-回档的数据库以重命名的形式生成，不覆盖原库
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBs(array $DBs) 设置需要回档的数据库
  * @method string getTime() 获取回档目标时间点
  * @method void setTime(string $Time) 设置回档目标时间点
- */
-
-/**
- *RollbackInstance请求参数结构体
  */
 class RollbackInstanceRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RollbackInstanceRequest extends AbstractModel
      * @var string 回档目标时间点
      */
     public $Time;
+
     /**
      * @param string $InstanceId 实例ID
      * @param integer $Type 回档类型，0-回档的数据库覆盖原库；1-回档的数据库以重命名的形式生成，不覆盖原库
@@ -62,6 +61,7 @@ class RollbackInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

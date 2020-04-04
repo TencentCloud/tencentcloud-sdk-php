@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAttackLogs请求参数结构体
+ *
  * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>HttpMethod - String - 是否必填：否 - 攻击方法(POST|GET)</li>
 <li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
 <li>DateRange - String - 是否必填：否 - 时间范围(存储最近3个月的数据)，如最近一个月["2019-11-17", "2019-12-17"]</li>
- */
-
-/**
- *DescribeAttackLogs请求参数结构体
  */
 class DescribeAttackLogsRequest extends AbstractModel
 {
@@ -54,6 +52,7 @@ class DescribeAttackLogsRequest extends AbstractModel
 <li>DateRange - String - 是否必填：否 - 时间范围(存储最近3个月的数据)，如最近一个月["2019-11-17", "2019-12-17"]</li>
      */
     public $Filters;
+
     /**
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
@@ -66,6 +65,7 @@ class DescribeAttackLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

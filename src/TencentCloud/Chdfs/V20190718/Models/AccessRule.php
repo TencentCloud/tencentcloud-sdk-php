@@ -18,6 +18,8 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 权限规则
+ *
  * @method integer getAccessRuleId() 获取权限规则ID
  * @method void setAccessRuleId(integer $AccessRuleId) 设置权限规则ID
  * @method string getAddress() 获取权限规则地址（网段或IP）
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPriority(integer $Priority) 设置优先级（取值范围1~100，值越小优先级越高）
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
- */
-
-/**
- *权限规则
  */
 class AccessRule extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AccessRule extends AbstractModel
      * @var string 创建时间
      */
     public $CreateTime;
+
     /**
      * @param integer $AccessRuleId 权限规则ID
      * @param string $Address 权限规则地址（网段或IP）
@@ -70,6 +69,7 @@ class AccessRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

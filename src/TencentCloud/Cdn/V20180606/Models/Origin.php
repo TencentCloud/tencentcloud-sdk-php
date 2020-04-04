@@ -18,6 +18,15 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 源站配置复杂类型，支持以下配置：
++ 源站指定为单个域名
++ 源站指定为多个 IP，可配置端口（1~65535），可配置权重（1~100），格式为 IP:端口:权重
++ 回源域名配置
++ 对象存储（COS）作为源站
++ 热备源站指定为单个域名
++ 热备源站指定为多个 IP，可配置端口（1~65535），暂不支持权重配置
++ 热备源站回源域名配置
+ *
  * @method array getOrigins() 获取主源站列表
 修改源站时，需要同时填充对应的 OriginType
 注意：此字段可能返回 null，表示取不到有效值。
@@ -93,17 +102,6 @@ ip：IP 列表作为源站
  * @method void setBackupServerName(string $BackupServerName) 设置回备源站时 Host 头部，不填充则默认为主源站的 ServerName
 注意：此字段可能返回 null，表示取不到有效值。
  */
-
-/**
- *源站配置复杂类型，支持以下配置：
-+ 源站指定为单个域名
-+ 源站指定为多个 IP，可配置端口（1~65535），可配置权重（1~100），格式为 IP:端口:权重
-+ 回源域名配置
-+ 对象存储（COS）作为源站
-+ 热备源站指定为单个域名
-+ 热备源站指定为多个 IP，可配置端口（1~65535），暂不支持权重配置
-+ 热备源站回源域名配置
- */
 class Origin extends AbstractModel
 {
     /**
@@ -174,6 +172,7 @@ ip：IP 列表作为源站
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupServerName;
+
     /**
      * @param array $Origins 主源站列表
 修改源站时，需要同时填充对应的 OriginType
@@ -217,6 +216,7 @@ ip：IP 列表作为源站
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

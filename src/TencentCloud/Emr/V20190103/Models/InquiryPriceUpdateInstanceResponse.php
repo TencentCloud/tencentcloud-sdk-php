@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceUpdateInstance返回参数结构体
+ *
  * @method float getOriginalCost() 获取原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalCost(float $OriginalCost) 设置原价，单位为元。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *InquiryPriceUpdateInstance返回参数结构体
  */
 class InquiryPriceUpdateInstanceResponse extends AbstractModel
 {
@@ -77,6 +75,7 @@ class InquiryPriceUpdateInstanceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param float $OriginalCost 原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -94,6 +93,7 @@ class InquiryPriceUpdateInstanceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

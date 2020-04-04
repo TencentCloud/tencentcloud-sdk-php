@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveCallbackRule请求参数结构体
+ *
  * @method string getDomainName() 获取推流域名。
  * @method void setDomainName(string $DomainName) 设置推流域名。
  * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为live。
  * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为live。
  * @method integer getTemplateId() 获取模板ID。
  * @method void setTemplateId(integer $TemplateId) 设置模板ID。
- */
-
-/**
- *CreateLiveCallbackRule请求参数结构体
  */
 class CreateLiveCallbackRuleRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateLiveCallbackRuleRequest extends AbstractModel
      * @var integer 模板ID。
      */
     public $TemplateId;
+
     /**
      * @param string $DomainName 推流域名。
      * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
@@ -54,6 +53,7 @@ class CreateLiveCallbackRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

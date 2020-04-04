@@ -18,12 +18,10 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RestartDBInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取数据库实例ID，形如mssql-njj2mtpl
  * @method void setInstanceId(string $InstanceId) 设置数据库实例ID，形如mssql-njj2mtpl
- */
-
-/**
- *RestartDBInstance请求参数结构体
  */
 class RestartDBInstanceRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RestartDBInstanceRequest extends AbstractModel
      * @var string 数据库实例ID，形如mssql-njj2mtpl
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 数据库实例ID，形如mssql-njj2mtpl
      */
@@ -38,6 +37,7 @@ class RestartDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

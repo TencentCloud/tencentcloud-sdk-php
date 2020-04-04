@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 标准化接口图像分析结果
+ *
  * @method array getResultSet() 获取详细结果
  * @method void setResultSet(array $ResultSet) 设置详细结果
  * @method ImageTaskStatistic getStatistic() 获取分析完成后的统计结果
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置任务状态
  * @method integer getTotalCount() 获取结果总数
  * @method void setTotalCount(integer $TotalCount) 设置结果总数
- */
-
-/**
- *标准化接口图像分析结果
  */
 class StandardImageResult extends AbstractModel
 {
@@ -59,6 +57,7 @@ class StandardImageResult extends AbstractModel
      * @var integer 结果总数
      */
     public $TotalCount;
+
     /**
      * @param array $ResultSet 详细结果
      * @param ImageTaskStatistic $Statistic 分析完成后的统计结果
@@ -70,6 +69,7 @@ class StandardImageResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

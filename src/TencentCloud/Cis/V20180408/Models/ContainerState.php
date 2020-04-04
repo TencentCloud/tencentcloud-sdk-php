@@ -18,6 +18,8 @@ namespace TencentCloud\Cis\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 容器状态
+ *
  * @method string getStartTime() 获取容器运行开始时间
  * @method void setStartTime(string $StartTime) 设置容器运行开始时间
  * @method string getState() 获取容器状态
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFinishTime(string $FinishTime) 设置容器运行结束时间
  * @method integer getExitCode() 获取容器运行退出码
  * @method void setExitCode(integer $ExitCode) 设置容器运行退出码
- */
-
-/**
- *容器状态
  */
 class ContainerState extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ContainerState extends AbstractModel
      * @var integer 容器运行退出码
      */
     public $ExitCode;
+
     /**
      * @param string $StartTime 容器运行开始时间
      * @param string $State 容器状态
@@ -70,6 +69,7 @@ class ContainerState extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

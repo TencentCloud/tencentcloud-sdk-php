@@ -18,16 +18,14 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSitesScans请求参数结构体
+ *
  * @method array getSiteIds() 获取站点的ID列表
  * @method void setSiteIds(array $SiteIds) 设置站点的ID列表
  * @method string getScannerType() 获取扫描模式，normal-正常扫描；deep-深度扫描
  * @method void setScannerType(string $ScannerType) 设置扫描模式，normal-正常扫描；deep-深度扫描
  * @method integer getRateLimit() 获取扫描速率限制，每秒发送X个HTTP请求
  * @method void setRateLimit(integer $RateLimit) 设置扫描速率限制，每秒发送X个HTTP请求
- */
-
-/**
- *CreateSitesScans请求参数结构体
  */
 class CreateSitesScansRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateSitesScansRequest extends AbstractModel
      * @var integer 扫描速率限制，每秒发送X个HTTP请求
      */
     public $RateLimit;
+
     /**
      * @param array $SiteIds 站点的ID列表
      * @param string $ScannerType 扫描模式，normal-正常扫描；deep-深度扫描
@@ -54,6 +53,7 @@ class CreateSitesScansRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

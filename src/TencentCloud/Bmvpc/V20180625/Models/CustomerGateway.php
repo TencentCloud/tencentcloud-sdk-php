@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 对端网关
+ *
  * @method string getCustomerGatewayId() 获取用户网关唯一ID
  * @method void setCustomerGatewayId(string $CustomerGatewayId) 设置用户网关唯一ID
  * @method string getCustomerGatewayName() 获取网关名称
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpnConnNum(integer $VpnConnNum) 设置VPN通道引用个数
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *对端网关
  */
 class CustomerGateway extends AbstractModel
 {
@@ -62,6 +60,7 @@ class CustomerGateway extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpnConnNum;
+
     /**
      * @param string $CustomerGatewayId 用户网关唯一ID
      * @param string $CustomerGatewayName 网关名称
@@ -74,6 +73,7 @@ class CustomerGateway extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

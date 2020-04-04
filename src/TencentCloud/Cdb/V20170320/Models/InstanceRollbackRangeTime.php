@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例可回档时间范围
+ *
  * @method integer getCode() 获取查询数据库错误码
  * @method void setCode(integer $Code) 设置查询数据库错误码
  * @method string getMessage() 获取查询数据库错误信息
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
  * @method array getTimes() 获取可回档时间范围
  * @method void setTimes(array $Times) 设置可回档时间范围
- */
-
-/**
- *实例可回档时间范围
  */
 class InstanceRollbackRangeTime extends AbstractModel
 {
@@ -52,6 +50,7 @@ class InstanceRollbackRangeTime extends AbstractModel
      * @var array 可回档时间范围
      */
     public $Times;
+
     /**
      * @param integer $Code 查询数据库错误码
      * @param string $Message 查询数据库错误信息
@@ -62,6 +61,7 @@ class InstanceRollbackRangeTime extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

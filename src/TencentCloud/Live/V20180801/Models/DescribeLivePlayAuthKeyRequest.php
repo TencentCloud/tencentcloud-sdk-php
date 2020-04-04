@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLivePlayAuthKey请求参数结构体
+ *
  * @method string getDomainName() 获取域名。
  * @method void setDomainName(string $DomainName) 设置域名。
- */
-
-/**
- *DescribeLivePlayAuthKey请求参数结构体
  */
 class DescribeLivePlayAuthKeyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeLivePlayAuthKeyRequest extends AbstractModel
      * @var string 域名。
      */
     public $DomainName;
+
     /**
      * @param string $DomainName 域名。
      */
@@ -38,6 +37,7 @@ class DescribeLivePlayAuthKeyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

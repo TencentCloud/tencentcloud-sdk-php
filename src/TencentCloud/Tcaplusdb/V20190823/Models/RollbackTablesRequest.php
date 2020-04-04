@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RollbackTables请求参数结构体
+ *
  * @method string getClusterId() 获取待回档表格所在集群ID
  * @method void setClusterId(string $ClusterId) 设置待回档表格所在集群ID
  * @method array getSelectedTables() 获取待回档表格列表
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRollbackTime(string $RollbackTime) 设置待回档时间
  * @method string getMode() 获取回档模式，支持：`KEYS`
  * @method void setMode(string $Mode) 设置回档模式，支持：`KEYS`
- */
-
-/**
- *RollbackTables请求参数结构体
  */
 class RollbackTablesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RollbackTablesRequest extends AbstractModel
      * @var string 回档模式，支持：`KEYS`
      */
     public $Mode;
+
     /**
      * @param string $ClusterId 待回档表格所在集群ID
      * @param array $SelectedTables 待回档表格列表
@@ -62,6 +61,7 @@ class RollbackTablesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePerson返回参数结构体
+ *
  * @method string getTraceId() 获取人员轨迹唯一标识。
  * @method void setTraceId(string $TraceId) 设置人员轨迹唯一标识。
  * @method string getBodyModelVersion() 获取人体识别所用的算法模型版本。
@@ -36,10 +38,6 @@ RetCode 的顺序和入参中Images 或 Urls 的顺序一致。
 RetCode 的顺序和入参中Images 或 Urls 的顺序一致。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreatePerson返回参数结构体
  */
 class CreatePersonResponse extends AbstractModel
 {
@@ -71,6 +69,7 @@ RetCode 的顺序和入参中Images 或 Urls 的顺序一致。
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $TraceId 人员轨迹唯一标识。
      * @param string $BodyModelVersion 人体识别所用的算法模型版本。
@@ -86,6 +85,7 @@ RetCode 的顺序和入参中Images 或 Urls 的顺序一致。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

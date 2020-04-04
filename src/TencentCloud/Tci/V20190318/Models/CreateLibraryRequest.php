@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLibrary请求参数结构体
+ *
  * @method string getLibraryName() 获取人员库名称
  * @method void setLibraryName(string $LibraryName) 设置人员库名称
  * @method string getLibraryId() 获取人员库唯一标志符，为空则系统自动生成。
  * @method void setLibraryId(string $LibraryId) 设置人员库唯一标志符，为空则系统自动生成。
- */
-
-/**
- *CreateLibrary请求参数结构体
  */
 class CreateLibraryRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateLibraryRequest extends AbstractModel
      * @var string 人员库唯一标志符，为空则系统自动生成。
      */
     public $LibraryId;
+
     /**
      * @param string $LibraryName 人员库名称
      * @param string $LibraryId 人员库唯一标志符，为空则系统自动生成。
@@ -46,6 +45,7 @@ class CreateLibraryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

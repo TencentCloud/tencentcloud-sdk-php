@@ -18,16 +18,14 @@ namespace TencentCloud\Aai\V20180522\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SimultaneousInterpreting返回参数结构体
+ *
  * @method string getAsrText() 获取语音识别的结果
  * @method void setAsrText(string $AsrText) 设置语音识别的结果
  * @method string getNmtText() 获取机器翻译的结果
  * @method void setNmtText(string $NmtText) 设置机器翻译的结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *SimultaneousInterpreting返回参数结构体
  */
 class SimultaneousInterpretingResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SimultaneousInterpretingResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $AsrText 语音识别的结果
      * @param string $NmtText 机器翻译的结果
@@ -54,6 +53,7 @@ class SimultaneousInterpretingResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

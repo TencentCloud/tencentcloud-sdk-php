@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ManageTask请求参数结构体
+ *
  * @method string getOperationType() 获取操作类型，取值范围：
 <li>Abort：终止任务。</li>
  * @method void setOperationType(string $OperationType) 设置操作类型，取值范围：
 <li>Abort：终止任务。</li>
  * @method string getTaskId() 获取视频处理的任务 ID。
  * @method void setTaskId(string $TaskId) 设置视频处理的任务 ID。
- */
-
-/**
- *ManageTask请求参数结构体
  */
 class ManageTaskRequest extends AbstractModel
 {
@@ -41,6 +39,7 @@ class ManageTaskRequest extends AbstractModel
      * @var string 视频处理的任务 ID。
      */
     public $TaskId;
+
     /**
      * @param string $OperationType 操作类型，取值范围：
 <li>Abort：终止任务。</li>
@@ -50,6 +49,7 @@ class ManageTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

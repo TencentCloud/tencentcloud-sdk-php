@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyClass请求参数结构体
+ *
  * @method integer getClassId() 获取分类 ID
  * @method void setClassId(integer $ClassId) 设置分类 ID
  * @method string getClassName() 获取分类名称。长度限制：1-64 个字符。
  * @method void setClassName(string $ClassName) 设置分类名称。长度限制：1-64 个字符。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *ModifyClass请求参数结构体
  */
 class ModifyClassRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyClassRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param integer $ClassId 分类 ID
      * @param string $ClassName 分类名称。长度限制：1-64 个字符。
@@ -54,6 +53,7 @@ class ModifyClassRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

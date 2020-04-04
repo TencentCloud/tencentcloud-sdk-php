@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpgradeInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getEsVersion() 获取目标ES版本
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLicenseType(string $LicenseType) 设置目标商业特性版本：<li>oss 开源版</li><li>basic 基础版</li>当前仅在5.6.4升级6.x版本时使用，默认值为basic
  * @method integer getBasicSecurityType() 获取6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
  * @method void setBasicSecurityType(integer $BasicSecurityType) 设置6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
- */
-
-/**
- *UpgradeInstance请求参数结构体
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class UpgradeInstanceRequest extends AbstractModel
      * @var integer 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
      */
     public $BasicSecurityType;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $EsVersion 目标ES版本
@@ -70,6 +69,7 @@ class UpgradeInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

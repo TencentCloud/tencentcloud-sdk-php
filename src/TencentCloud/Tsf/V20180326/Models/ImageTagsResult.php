@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 镜像版本列表
+ *
  * @method integer getTotalCount() 获取总记录数
  * @method void setTotalCount(integer $TotalCount) 设置总记录数
  * @method string getRepoName() 获取仓库名,含命名空间,如tsf/ngin
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServer(string $Server) 设置镜像服务器地址
  * @method array getContent() 获取列表信息
  * @method void setContent(array $Content) 设置列表信息
- */
-
-/**
- *镜像版本列表
  */
 class ImageTagsResult extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ImageTagsResult extends AbstractModel
      * @var array 列表信息
      */
     public $Content;
+
     /**
      * @param integer $TotalCount 总记录数
      * @param string $RepoName 仓库名,含命名空间,如tsf/ngin
@@ -62,6 +61,7 @@ class ImageTagsResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

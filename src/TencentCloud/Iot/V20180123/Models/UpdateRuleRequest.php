@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateRule请求参数结构体
+ *
  * @method string getRuleId() 获取规则Id
  * @method void setRuleId(string $RuleId) 设置规则Id
  * @method string getName() 获取名称
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActions(array $Actions) 设置转发动作列表
  * @method integer getDataType() 获取数据类型（0：文本，1：二进制）
  * @method void setDataType(integer $DataType) 设置数据类型（0：文本，1：二进制）
- */
-
-/**
- *UpdateRule请求参数结构体
  */
 class UpdateRuleRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class UpdateRuleRequest extends AbstractModel
      * @var integer 数据类型（0：文本，1：二进制）
      */
     public $DataType;
+
     /**
      * @param string $RuleId 规则Id
      * @param string $Name 名称
@@ -78,6 +77,7 @@ class UpdateRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUserCmdTaskInfo请求参数结构体
+ *
  * @method string getTaskId() 获取任务ID
  * @method void setTaskId(string $TaskId) 设置任务ID
  * @method integer getOffset() 获取偏移量
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(integer $Order) 设置排序方式，取值: 1倒序，0顺序；默认倒序
  * @method string getSearchKey() 获取关键字搜索，可搜索ID或别名，支持模糊搜索
  * @method void setSearchKey(string $SearchKey) 设置关键字搜索，可搜索ID或别名，支持模糊搜索
- */
-
-/**
- *DescribeUserCmdTaskInfo请求参数结构体
  */
 class DescribeUserCmdTaskInfoRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeUserCmdTaskInfoRequest extends AbstractModel
      * @var string 关键字搜索，可搜索ID或别名，支持模糊搜索
      */
     public $SearchKey;
+
     /**
      * @param string $TaskId 任务ID
      * @param integer $Offset 偏移量
@@ -78,6 +77,7 @@ class DescribeUserCmdTaskInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

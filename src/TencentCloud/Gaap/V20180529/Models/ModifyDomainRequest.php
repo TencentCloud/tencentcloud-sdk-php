@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDomain请求参数结构体
+ *
  * @method string getListenerId() 获取7层监听器ID
  * @method void setListenerId(string $ListenerId) 设置7层监听器ID
  * @method string getOldDomain() 获取修改前的域名信息
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 不带该字段和ClientCertificateId时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
 其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
- */
-
-/**
- *ModifyDomain请求参数结构体
  */
 class ModifyDomainRequest extends AbstractModel
 {
@@ -93,6 +91,7 @@ class ModifyDomainRequest extends AbstractModel
 其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
      */
     public $PolyClientCertificateIds;
+
     /**
      * @param string $ListenerId 7层监听器ID
      * @param string $OldDomain 修改前的域名信息
@@ -114,6 +113,7 @@ class ModifyDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

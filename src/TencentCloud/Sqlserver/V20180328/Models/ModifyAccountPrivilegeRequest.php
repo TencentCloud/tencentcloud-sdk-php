@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAccountPrivilege请求参数结构体
+ *
  * @method string getInstanceId() 获取数据库实例ID，形如mssql-njj2mtpl
  * @method void setInstanceId(string $InstanceId) 设置数据库实例ID，形如mssql-njj2mtpl
  * @method array getAccounts() 获取账号权限变更信息
  * @method void setAccounts(array $Accounts) 设置账号权限变更信息
- */
-
-/**
- *ModifyAccountPrivilege请求参数结构体
  */
 class ModifyAccountPrivilegeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyAccountPrivilegeRequest extends AbstractModel
      * @var array 账号权限变更信息
      */
     public $Accounts;
+
     /**
      * @param string $InstanceId 数据库实例ID，形如mssql-njj2mtpl
      * @param array $Accounts 账号权限变更信息
@@ -46,6 +45,7 @@ class ModifyAccountPrivilegeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例节点类型
+ *
  * @method string getName() 获取节点名称
  * @method void setName(string $Name) 设置节点名称
  * @method string getRunId() 获取实例运行时节点Id
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorage(integer $Storage) 设置节点存储
  * @method float getStorageSlope() 获取节点存储倾斜度
  * @method void setStorageSlope(float $StorageSlope) 设置节点存储倾斜度
- */
-
-/**
- *实例节点类型
  */
 class InstanceClusterNode extends AbstractModel
 {
@@ -115,6 +113,7 @@ class InstanceClusterNode extends AbstractModel
      * @var float 节点存储倾斜度
      */
     public $StorageSlope;
+
     /**
      * @param string $Name 节点名称
      * @param string $RunId 实例运行时节点Id
@@ -134,6 +133,7 @@ class InstanceClusterNode extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 客户所属的门店信息
+ *
  * @method string getCompanyId() 获取公司ID
  * @method void setCompanyId(string $CompanyId) 设置公司ID
  * @method integer getShopId() 获取门店ID
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCity(string $City) 设置市
  * @method string getCompanyName() 获取公司名称
  * @method void setCompanyName(string $CompanyName) 设置公司名称
- */
-
-/**
- *客户所属的门店信息
  */
 class ShopInfo extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ShopInfo extends AbstractModel
      * @var string 公司名称
      */
     public $CompanyName;
+
     /**
      * @param string $CompanyId 公司ID
      * @param integer $ShopId 门店ID
@@ -86,6 +85,7 @@ class ShopInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

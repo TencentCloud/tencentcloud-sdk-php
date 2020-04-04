@@ -18,6 +18,8 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateOrganization返回参数结构体
+ *
  * @method integer getOrgId() 获取企业组织ID
  * @method void setOrgId(integer $OrgId) 设置企业组织ID
  * @method string getNickname() 获取创建者昵称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrgType(integer $OrgType) 设置组织类型
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateOrganization返回参数结构体
  */
 class CreateOrganizationResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateOrganizationResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $OrgId 企业组织ID
      * @param string $Nickname 创建者昵称
@@ -70,6 +69,7 @@ class CreateOrganizationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

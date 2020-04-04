@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 计算节点统计指标
+ *
  * @method integer getSubmittedCount() 获取已经完成提交的计算节点数量
  * @method void setSubmittedCount(integer $SubmittedCount) 设置已经完成提交的计算节点数量
  * @method integer getCreatingCount() 获取创建中的计算节点数量
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeletingCount(integer $DeletingCount) 设置销毁中的计算节点数量
  * @method integer getAbnormalCount() 获取异常的计算节点数量
  * @method void setAbnormalCount(integer $AbnormalCount) 设置异常的计算节点数量
- */
-
-/**
- *计算节点统计指标
  */
 class ComputeNodeMetrics extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ComputeNodeMetrics extends AbstractModel
      * @var integer 异常的计算节点数量
      */
     public $AbnormalCount;
+
     /**
      * @param integer $SubmittedCount 已经完成提交的计算节点数量
      * @param integer $CreatingCount 创建中的计算节点数量
@@ -86,6 +85,7 @@ class ComputeNodeMetrics extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

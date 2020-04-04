@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询迁移任务列表类型
+ *
  * @method integer getMigrateId() 获取迁移任务ID
  * @method void setMigrateId(integer $MigrateId) 设置迁移任务ID
  * @method string getMigrateName() 获取迁移任务名称
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProgress(integer $Progress) 设置迁移任务当前进度（单位%）
  * @method MigrateDetail getMigrateDetail() 获取迁移任务进度细节
  * @method void setMigrateDetail(MigrateDetail $MigrateDetail) 设置迁移任务进度细节
- */
-
-/**
- *查询迁移任务列表类型
  */
 class MigrateTask extends AbstractModel
 {
@@ -115,6 +113,7 @@ class MigrateTask extends AbstractModel
      * @var MigrateDetail 迁移任务进度细节
      */
     public $MigrateDetail;
+
     /**
      * @param integer $MigrateId 迁移任务ID
      * @param string $MigrateName 迁移任务名称
@@ -134,6 +133,7 @@ class MigrateTask extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RevRegisterBillSupportWithdraw请求参数结构体
+ *
  * @method string getMrchCode() 获取String(22)，商户号（签约客户号）
  * @method void setMrchCode(string $MrchCode) 设置String(22)，商户号（签约客户号）
  * @method string getTranNetMemberCode() 获取STRING(32)，交易网会员代码
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReservedMsgTwo(string $ReservedMsgTwo) 设置STRING(300)，保留域2
  * @method string getReservedMsgThree() 获取STRING(300)，保留域3
  * @method void setReservedMsgThree(string $ReservedMsgThree) 设置STRING(300)，保留域3
- */
-
-/**
- *RevRegisterBillSupportWithdraw请求参数结构体
  */
 class RevRegisterBillSupportWithdrawRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class RevRegisterBillSupportWithdrawRequest extends AbstractModel
      * @var string STRING(300)，保留域3
      */
     public $ReservedMsgThree;
+
     /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $TranNetMemberCode STRING(32)，交易网会员代码
@@ -102,6 +101,7 @@ class RevRegisterBillSupportWithdrawRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

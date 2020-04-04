@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateClusterAsGroup请求参数结构体
+ *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getAutoScalingGroupPara() 获取伸缩组创建透传参数，json化字符串格式，详见[伸缩组创建实例](https://cloud.tencent.com/document/api/377/20440)接口。LaunchConfigurationId由LaunchConfigurePara参数创建，不支持填写
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置节点高级配置信息
  * @method array getLabels() 获取节点Label数组
  * @method void setLabels(array $Labels) 设置节点Label数组
- */
-
-/**
- *CreateClusterAsGroup请求参数结构体
  */
 class CreateClusterAsGroupRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateClusterAsGroupRequest extends AbstractModel
      * @var array 节点Label数组
      */
     public $Labels;
+
     /**
      * @param string $ClusterId 集群ID
      * @param string $AutoScalingGroupPara 伸缩组创建透传参数，json化字符串格式，详见[伸缩组创建实例](https://cloud.tencent.com/document/api/377/20440)接口。LaunchConfigurationId由LaunchConfigurePara参数创建，不支持填写
@@ -70,6 +69,7 @@ class CreateClusterAsGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

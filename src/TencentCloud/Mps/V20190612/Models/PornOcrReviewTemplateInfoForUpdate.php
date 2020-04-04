@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文本鉴黄任务控制参数。
+ *
  * @method string getSwitch() 获取文本鉴黄任务开关，可选值：
 <li>ON：开启文本鉴黄任务；</li>
 <li>OFF：关闭文本鉴黄任务。</li>
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlockConfidence(integer $BlockConfidence) 设置判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
  * @method integer getReviewConfidence() 获取判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核。取值范围：0~100。
  * @method void setReviewConfidence(integer $ReviewConfidence) 设置判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核。取值范围：0~100。
- */
-
-/**
- *文本鉴黄任务控制参数。
  */
 class PornOcrReviewTemplateInfoForUpdate extends AbstractModel
 {
@@ -51,6 +49,7 @@ class PornOcrReviewTemplateInfoForUpdate extends AbstractModel
      * @var integer 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核。取值范围：0~100。
      */
     public $ReviewConfidence;
+
     /**
      * @param string $Switch 文本鉴黄任务开关，可选值：
 <li>ON：开启文本鉴黄任务；</li>
@@ -62,6 +61,7 @@ class PornOcrReviewTemplateInfoForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

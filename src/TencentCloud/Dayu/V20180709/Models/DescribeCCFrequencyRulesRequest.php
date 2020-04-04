@@ -18,16 +18,14 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCCFrequencyRules请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method string getId() 获取资源ID
  * @method void setId(string $Id) 设置资源ID
  * @method string getRuleId() 获取7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；当填写时表示获取转发规则的访问频率控制规则；
  * @method void setRuleId(string $RuleId) 设置7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；当填写时表示获取转发规则的访问频率控制规则；
- */
-
-/**
- *DescribeCCFrequencyRules请求参数结构体
  */
 class DescribeCCFrequencyRulesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeCCFrequencyRulesRequest extends AbstractModel
      * @var string 7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；当填写时表示获取转发规则的访问频率控制规则；
      */
     public $RuleId;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param string $Id 资源ID
@@ -54,6 +53,7 @@ class DescribeCCFrequencyRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ECDN域名详细配置信息。
+ *
  * @method string getResourceId() 获取域名ID。
  * @method void setResourceId(string $ResourceId) 设置域名ID。
  * @method integer getAppId() 获取腾讯云账号ID。
@@ -78,10 +80,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadonly(string $Readonly) 设置域名锁定状态，normal、global 分别表示未被锁定，全球锁定。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *ECDN域名详细配置信息。
  */
 class DomainDetailInfo extends AbstractModel
 {
@@ -190,6 +188,7 @@ class DomainDetailInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Readonly;
+
     /**
      * @param string $ResourceId 域名ID。
      * @param integer $AppId 腾讯云账号ID。
@@ -226,6 +225,7 @@ class DomainDetailInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

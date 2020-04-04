@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频处理 COS 对象信息。
+ *
  * @method string getBucket() 获取视频处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
  * @method void setBucket(string $Bucket) 设置视频处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
  * @method string getRegion() 获取视频处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
  * @method void setRegion(string $Region) 设置视频处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
  * @method string getObject() 获取视频处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
  * @method void setObject(string $Object) 设置视频处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
- */
-
-/**
- *视频处理 COS 对象信息。
  */
 class CosInputInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CosInputInfo extends AbstractModel
      * @var string 视频处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
      */
     public $Object;
+
     /**
      * @param string $Bucket 视频处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
      * @param string $Region 视频处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
@@ -54,6 +53,7 @@ class CosInputInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

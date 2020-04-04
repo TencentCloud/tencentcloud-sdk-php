@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTransmitStatis返回参数结构体
+ *
  * @method array getInDataList() 获取当MetricName=traffic时，表示入流量带宽，单位bps；
 当MetricName=pkg时，表示入包速率，单位pps；
  * @method void setInDataList(array $InDataList) 设置当MetricName=traffic时，表示入流量带宽，单位bps；
@@ -34,10 +36,6 @@ traffic表示流量带宽；
 pkg表示包速率；
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeTransmitStatis返回参数结构体
  */
 class DescribeTransmitStatisResponse extends AbstractModel
 {
@@ -64,6 +62,7 @@ pkg表示包速率；
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $InDataList 当MetricName=traffic时，表示入流量带宽，单位bps；
 当MetricName=pkg时，表示入包速率，单位pps；
@@ -78,6 +77,7 @@ pkg表示包速率；
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

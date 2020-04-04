@@ -18,6 +18,8 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取证书列表（DescribeCertificates）返回参数键为 Certificates 的内容。
+ *
  * @method string getOwnerUin() 获取用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerUin(string $OwnerUin) 设置用户 UIN。
@@ -134,10 +136,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployable(boolean $Deployable) 设置是否可部署。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *获取证书列表（DescribeCertificates）返回参数键为 Certificates 的内容。
  */
 class Certificates extends AbstractModel
 {
@@ -314,6 +312,7 @@ class Certificates extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Deployable;
+
     /**
      * @param string $OwnerUin 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -378,6 +377,7 @@ class Certificates extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

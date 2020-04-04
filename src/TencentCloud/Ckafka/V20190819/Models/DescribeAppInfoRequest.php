@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAppInfo请求参数结构体
+ *
  * @method integer getOffset() 获取偏移位置
  * @method void setOffset(integer $Offset) 设置偏移位置
  * @method integer getLimit() 获取本次查询用户数目最大数量限制，最大值为50，默认50
  * @method void setLimit(integer $Limit) 设置本次查询用户数目最大数量限制，最大值为50，默认50
- */
-
-/**
- *DescribeAppInfo请求参数结构体
  */
 class DescribeAppInfoRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeAppInfoRequest extends AbstractModel
      * @var integer 本次查询用户数目最大数量限制，最大值为50，默认50
      */
     public $Limit;
+
     /**
      * @param integer $Offset 偏移位置
      * @param integer $Limit 本次查询用户数目最大数量限制，最大值为50，默认50
@@ -46,6 +45,7 @@ class DescribeAppInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

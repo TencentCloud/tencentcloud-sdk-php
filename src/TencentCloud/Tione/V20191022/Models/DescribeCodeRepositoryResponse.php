@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCodeRepository返回参数结构体
+ *
  * @method string getCreationTime() 获取创建时间
  * @method void setCreationTime(string $CreationTime) 设置创建时间
  * @method string getLastModifiedTime() 获取更新时间
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoSecret(boolean $NoSecret) 设置是否有Git凭证
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeCodeRepository返回参数结构体
  */
 class DescribeCodeRepositoryResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeCodeRepositoryResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $CreationTime 创建时间
      * @param string $LastModifiedTime 更新时间
@@ -78,6 +77,7 @@ class DescribeCodeRepositoryResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

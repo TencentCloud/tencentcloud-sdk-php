@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNetworkAcl返回参数结构体
+ *
  * @method NetworkAcl getNetworkAcl() 获取网络ACL实例。
  * @method void setNetworkAcl(NetworkAcl $NetworkAcl) 设置网络ACL实例。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateNetworkAcl返回参数结构体
  */
 class CreateNetworkAclResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateNetworkAclResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param NetworkAcl $NetworkAcl 网络ACL实例。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateNetworkAclResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

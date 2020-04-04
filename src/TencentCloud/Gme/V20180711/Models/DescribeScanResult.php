@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音检测结果返回
+ *
  * @method integer getCode() 获取业务返回码
  * @method void setCode(integer $Code) 设置业务返回码
  * @method string getDataId() 获取数据唯一 ID
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Start: 任务开始</li>
 <li>Success: 成功结束</li>
 <li>Error: 异常</li>
- */
-
-/**
- *语音检测结果返回
  */
 class DescribeScanResult extends AbstractModel
 {
@@ -123,6 +121,7 @@ class DescribeScanResult extends AbstractModel
 <li>Error: 异常</li>
      */
     public $Status;
+
     /**
      * @param integer $Code 业务返回码
      * @param string $DataId 数据唯一 ID
@@ -146,6 +145,7 @@ class DescribeScanResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

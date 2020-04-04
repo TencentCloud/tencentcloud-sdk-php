@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Invoke请求参数结构体
+ *
  * @method string getModule() 获取模块名，固定字段：transaction
  * @method void setModule(string $Module) 设置模块名，固定字段：transaction
  * @method string getOperation() 获取操作名，固定字段：invoke
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArgs(array $Args) 设置被调用的函数参数列表
  * @method integer getAsyncFlag() 获取同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
  * @method void setAsyncFlag(integer $AsyncFlag) 设置同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
- */
-
-/**
- *Invoke请求参数结构体
  */
 class InvokeRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class InvokeRequest extends AbstractModel
      * @var integer 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
      */
     public $AsyncFlag;
+
     /**
      * @param string $Module 模块名，固定字段：transaction
      * @param string $Operation 操作名，固定字段：invoke
@@ -110,6 +109,7 @@ class InvokeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

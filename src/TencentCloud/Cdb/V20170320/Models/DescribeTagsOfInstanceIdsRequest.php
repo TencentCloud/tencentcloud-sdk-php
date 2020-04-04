@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTagsOfInstanceIds请求参数结构体
+ *
  * @method array getInstanceIds() 获取实例列表。
  * @method void setInstanceIds(array $InstanceIds) 设置实例列表。
  * @method integer getOffset() 获取分页偏移量。
  * @method void setOffset(integer $Offset) 设置分页偏移量。
  * @method integer getLimit() 获取分页大小。
  * @method void setLimit(integer $Limit) 设置分页大小。
- */
-
-/**
- *DescribeTagsOfInstanceIds请求参数结构体
  */
 class DescribeTagsOfInstanceIdsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTagsOfInstanceIdsRequest extends AbstractModel
      * @var integer 分页大小。
      */
     public $Limit;
+
     /**
      * @param array $InstanceIds 实例列表。
      * @param integer $Offset 分页偏移量。
@@ -54,6 +53,7 @@ class DescribeTagsOfInstanceIdsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

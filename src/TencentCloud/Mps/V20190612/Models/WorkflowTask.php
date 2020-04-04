@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频处理任务信息
+ *
  * @method string getTaskId() 获取视频处理任务 ID。
  * @method void setTaskId(string $TaskId) 设置视频处理任务 ID。
  * @method string getStatus() 获取任务流状态，取值：
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) 设置视频内容分析任务的执行状态与结果。
  * @method array getAiRecognitionResultSet() 获取视频内容识别任务的执行状态与结果。
  * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) 设置视频内容识别任务的执行状态与结果。
- */
-
-/**
- *视频处理任务信息
  */
 class WorkflowTask extends AbstractModel
 {
@@ -106,6 +104,7 @@ class WorkflowTask extends AbstractModel
      * @var array 视频内容识别任务的执行状态与结果。
      */
     public $AiRecognitionResultSet;
+
     /**
      * @param string $TaskId 视频处理任务 ID。
      * @param string $Status 任务流状态，取值：
@@ -126,6 +125,7 @@ class WorkflowTask extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

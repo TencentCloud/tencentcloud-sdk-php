@@ -18,16 +18,14 @@ namespace TencentCloud\Tia\V20180226\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InstallAgent请求参数结构体
+ *
  * @method string getCluster() 获取集群名称
  * @method void setCluster(string $Cluster) 设置集群名称
  * @method string getTiaVersion() 获取Agent版本, 用于私有集群的agent安装，默认为“private-training”
  * @method void setTiaVersion(string $TiaVersion) 设置Agent版本, 用于私有集群的agent安装，默认为“private-training”
  * @method boolean getUpdate() 获取是否允许更新Agent
  * @method void setUpdate(boolean $Update) 设置是否允许更新Agent
- */
-
-/**
- *InstallAgent请求参数结构体
  */
 class InstallAgentRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InstallAgentRequest extends AbstractModel
      * @var boolean 是否允许更新Agent
      */
     public $Update;
+
     /**
      * @param string $Cluster 集群名称
      * @param string $TiaVersion Agent版本, 用于私有集群的agent安装，默认为“private-training”
@@ -54,6 +53,7 @@ class InstallAgentRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

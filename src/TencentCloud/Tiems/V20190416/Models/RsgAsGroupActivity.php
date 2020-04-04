@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 伸缩组活动信息
+ *
  * @method string getId() 获取伸缩组活动 ID
  * @method void setId(string $Id) 设置伸缩组活动 ID
  * @method string getRsgAsGroupId() 获取关联的伸缩组 ID
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRsgAsActivityRelatedInstance(array $RsgAsActivityRelatedInstance) 设置活动相关联的节点
  * @method string getStatusMessageSimplified() 获取简略的状态消息
  * @method void setStatusMessageSimplified(string $StatusMessageSimplified) 设置简略的状态消息
- */
-
-/**
- *伸缩组活动信息
  */
 class RsgAsGroupActivity extends AbstractModel
 {
@@ -108,6 +106,7 @@ class RsgAsGroupActivity extends AbstractModel
      * @var string 简略的状态消息
      */
     public $StatusMessageSimplified;
+
     /**
      * @param string $Id 伸缩组活动 ID
      * @param string $RsgAsGroupId 关联的伸缩组 ID
@@ -126,6 +125,7 @@ class RsgAsGroupActivity extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

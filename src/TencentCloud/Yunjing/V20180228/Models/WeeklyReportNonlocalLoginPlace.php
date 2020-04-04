@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 专业周报异地登录数据。
+ *
  * @method string getMachineIp() 获取主机IP。
  * @method void setMachineIp(string $MachineIp) 设置主机IP。
  * @method string getUsername() 获取用户名。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCity(integer $City) 设置城市ID。
  * @method string getLoginTime() 获取登录时间。
  * @method void setLoginTime(string $LoginTime) 设置登录时间。
- */
-
-/**
- *专业周报异地登录数据。
  */
 class WeeklyReportNonlocalLoginPlace extends AbstractModel
 {
@@ -73,6 +71,7 @@ class WeeklyReportNonlocalLoginPlace extends AbstractModel
      * @var string 登录时间。
      */
     public $LoginTime;
+
     /**
      * @param string $MachineIp 主机IP。
      * @param string $Username 用户名。
@@ -86,6 +85,7 @@ class WeeklyReportNonlocalLoginPlace extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

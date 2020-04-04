@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetGroupInfo返回参数结构体
+ *
  * @method string getGroupName() 获取人员库名称
  * @method void setGroupName(string $GroupName) 设置人员库名称
  * @method string getGroupId() 获取人员库ID
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreationTimestamp(integer $CreationTimestamp) 设置Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetGroupInfo返回参数结构体
  */
 class GetGroupInfoResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class GetGroupInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $GroupName 人员库名称
      * @param string $GroupId 人员库ID
@@ -86,6 +85,7 @@ class GetGroupInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeScanInstances请求参数结构体
+ *
  * @method array getFilters() 获取支持通过app名称，app包名进行筛选
  * @method void setFilters(array $Filters) 设置支持通过app名称，app包名进行筛选
  * @method integer getOffset() 获取偏移量，默认为0
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置按某个字段排序，目前仅支持TaskTime排序。
  * @method string getOrderDirection() 获取升序（asc）还是降序（desc），默认：desc。
  * @method void setOrderDirection(string $OrderDirection) 设置升序（asc）还是降序（desc），默认：desc。
- */
-
-/**
- *DescribeScanInstances请求参数结构体
  */
 class DescribeScanInstancesRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeScanInstancesRequest extends AbstractModel
      * @var string 升序（asc）还是降序（desc），默认：desc。
      */
     public $OrderDirection;
+
     /**
      * @param array $Filters 支持通过app名称，app包名进行筛选
      * @param integer $Offset 偏移量，默认为0
@@ -78,6 +77,7 @@ class DescribeScanInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImagePersonal请求参数结构体
+ *
  * @method string getRepoName() 获取仓库名称
  * @method void setRepoName(string $RepoName) 设置仓库名称
  * @method integer getOffset() 获取偏移量，默认为0
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回最大数量，默认 20, 最大值 100
  * @method string getTag() 获取tag名称，可根据输入搜索
  * @method void setTag(string $Tag) 设置tag名称，可根据输入搜索
- */
-
-/**
- *DescribeImagePersonal请求参数结构体
  */
 class DescribeImagePersonalRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeImagePersonalRequest extends AbstractModel
      * @var string tag名称，可根据输入搜索
      */
     public $Tag;
+
     /**
      * @param string $RepoName 仓库名称
      * @param integer $Offset 偏移量，默认为0
@@ -62,6 +61,7 @@ class DescribeImagePersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

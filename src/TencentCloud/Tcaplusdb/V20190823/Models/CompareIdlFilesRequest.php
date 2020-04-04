@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CompareIdlFiles请求参数结构体
+ *
  * @method string getClusterId() 获取待修改表格所在集群ID
  * @method void setClusterId(string $ClusterId) 设置待修改表格所在集群ID
  * @method array getSelectedTables() 获取待修改表格列表
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExistingIdlFiles(array $ExistingIdlFiles) 设置选中的已上传IDL文件列表，与NewIdlFiles必选其一
  * @method array getNewIdlFiles() 获取本次上传IDL文件列表，与ExistingIdlFiles必选其一
  * @method void setNewIdlFiles(array $NewIdlFiles) 设置本次上传IDL文件列表，与ExistingIdlFiles必选其一
- */
-
-/**
- *CompareIdlFiles请求参数结构体
  */
 class CompareIdlFilesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CompareIdlFilesRequest extends AbstractModel
      * @var array 本次上传IDL文件列表，与ExistingIdlFiles必选其一
      */
     public $NewIdlFiles;
+
     /**
      * @param string $ClusterId 待修改表格所在集群ID
      * @param array $SelectedTables 待修改表格列表
@@ -62,6 +61,7 @@ class CompareIdlFilesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

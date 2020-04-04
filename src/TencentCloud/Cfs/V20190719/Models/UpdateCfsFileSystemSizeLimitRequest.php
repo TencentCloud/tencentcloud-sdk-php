@@ -18,14 +18,12 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateCfsFileSystemSizeLimit请求参数结构体
+ *
  * @method integer getFsLimit() 获取文件系统容量限制大小，输入范围0-1073741824, 单位为GB；其中输入值为0时，表示不限制文件系统容量。
  * @method void setFsLimit(integer $FsLimit) 设置文件系统容量限制大小，输入范围0-1073741824, 单位为GB；其中输入值为0时，表示不限制文件系统容量。
  * @method string getFileSystemId() 获取文件系统ID
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
- */
-
-/**
- *UpdateCfsFileSystemSizeLimit请求参数结构体
  */
 class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel
      * @var string 文件系统ID
      */
     public $FileSystemId;
+
     /**
      * @param integer $FsLimit 文件系统容量限制大小，输入范围0-1073741824, 单位为GB；其中输入值为0时，表示不限制文件系统容量。
      * @param string $FileSystemId 文件系统ID
@@ -46,6 +45,7 @@ class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisableTopicRule请求参数结构体
+ *
  * @method string getRuleName() 获取规则名称
  * @method void setRuleName(string $RuleName) 设置规则名称
- */
-
-/**
- *DisableTopicRule请求参数结构体
  */
 class DisableTopicRuleRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DisableTopicRuleRequest extends AbstractModel
      * @var string 规则名称
      */
     public $RuleName;
+
     /**
      * @param string $RuleName 规则名称
      */
@@ -38,6 +37,7 @@ class DisableTopicRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

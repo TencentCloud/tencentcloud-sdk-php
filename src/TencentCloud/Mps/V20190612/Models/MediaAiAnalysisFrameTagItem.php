@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能按帧标签结果信息
+ *
  * @method string getTag() 获取按帧标签名称。
  * @method void setTag(string $Tag) 设置按帧标签名称。
  * @method float getConfidence() 获取按帧标签的可信度，取值范围是 0 到 100。
  * @method void setConfidence(float $Confidence) 设置按帧标签的可信度，取值范围是 0 到 100。
- */
-
-/**
- *智能按帧标签结果信息
  */
 class MediaAiAnalysisFrameTagItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MediaAiAnalysisFrameTagItem extends AbstractModel
      * @var float 按帧标签的可信度，取值范围是 0 到 100。
      */
     public $Confidence;
+
     /**
      * @param string $Tag 按帧标签名称。
      * @param float $Confidence 按帧标签的可信度，取值范围是 0 到 100。
@@ -46,6 +45,7 @@ class MediaAiAnalysisFrameTagItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

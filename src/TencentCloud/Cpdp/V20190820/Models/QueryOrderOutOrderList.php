@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询订单接口的出参，订单列表
+ *
  * @method string getMidasAppId() 获取聚鑫分配的支付主MidasAppId
  * @method void setMidasAppId(string $MidasAppId) 设置聚鑫分配的支付主MidasAppId
  * @method integer getAmt() 获取支付金额，单位：分
@@ -80,10 +82,6 @@ bank：网银
  * @method void setSubOrderList(array $SubOrderList) 设置调用下单接口传进来的 SubOutTradeNoList
  * @method string getChannelExternalOrderId() 获取支付机构订单号
  * @method void setChannelExternalOrderId(string $ChannelExternalOrderId) 设置支付机构订单号
- */
-
-/**
- *查询订单接口的出参，订单列表
  */
 class QueryOrderOutOrderList extends AbstractModel
 {
@@ -205,6 +203,7 @@ bank：网银
      * @var string 支付机构订单号
      */
     public $ChannelExternalOrderId;
+
     /**
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param integer $Amt 支付金额，单位：分
@@ -242,6 +241,7 @@ bank：网银
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

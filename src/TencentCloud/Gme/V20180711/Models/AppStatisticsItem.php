@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 应用用量统计数据
+ *
  * @method RealTimeSpeechStatisticsItem getRealtimeSpeechStatisticsItem() 获取实时语音统计数据
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealtimeSpeechStatisticsItem(RealTimeSpeechStatisticsItem $RealtimeSpeechStatisticsItem) 设置实时语音统计数据
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDate() 获取统计时间
  * @method void setDate(string $Date) 设置统计时间
- */
-
-/**
- *应用用量统计数据
  */
 class AppStatisticsItem extends AbstractModel
 {
@@ -61,6 +59,7 @@ class AppStatisticsItem extends AbstractModel
      * @var string 统计时间
      */
     public $Date;
+
     /**
      * @param RealTimeSpeechStatisticsItem $RealtimeSpeechStatisticsItem 实时语音统计数据
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,6 +73,7 @@ class AppStatisticsItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

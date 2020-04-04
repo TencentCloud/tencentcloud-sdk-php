@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 扫描后app的信息，包含基本信息和扫描状态信息
+ *
  * @method string getItemId() 获取任务唯一标识
  * @method void setItemId(string $ItemId) 设置任务唯一标识
  * @method string getAppName() 获取app的名称
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSafeType(integer $SafeType) 设置安全类型:1-安全软件，2-风险软件，3病毒软件
  * @method integer getVulCount() 获取漏洞个数
  * @method void setVulCount(integer $VulCount) 设置漏洞个数
- */
-
-/**
- *扫描后app的信息，包含基本信息和扫描状态信息
  */
 class AppScanSet extends AbstractModel
 {
@@ -115,6 +113,7 @@ class AppScanSet extends AbstractModel
      * @var integer 漏洞个数
      */
     public $VulCount;
+
     /**
      * @param string $ItemId 任务唯一标识
      * @param string $AppName app的名称
@@ -134,6 +133,7 @@ class AppScanSet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

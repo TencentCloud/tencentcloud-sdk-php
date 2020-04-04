@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeviceData
+ *
  * @method string getDeviceCert() 获取设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceCert(string $DeviceCert) 设置设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDevicePsk(string $DevicePsk) 设置对称加密密钥，base64编码。采用对称加密时返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DeviceData
  */
 class DeviceData extends AbstractModel
 {
@@ -64,6 +62,7 @@ class DeviceData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DevicePsk;
+
     /**
      * @param string $DeviceCert 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +77,7 @@ class DeviceData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

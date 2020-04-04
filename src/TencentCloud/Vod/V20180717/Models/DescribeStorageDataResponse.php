@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeStorageData返回参数结构体
+ *
  * @method integer getMediaCount() 获取当前媒体总量。
  * @method void setMediaCount(integer $MediaCount) 设置当前媒体总量。
  * @method integer getTotalStorage() 获取当前总存储量，单位是字节。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStandardStorage(integer $StandardStorage) 设置当前标准存储量，单位是字节。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeStorageData返回参数结构体
  */
 class DescribeStorageDataResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeStorageDataResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $MediaCount 当前媒体总量。
      * @param integer $TotalStorage 当前总存储量，单位是字节。
@@ -70,6 +69,7 @@ class DescribeStorageDataResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetFunctionAddress返回参数结构体
+ *
  * @method string getUrl() 获取函数的Cos地址
  * @method void setUrl(string $Url) 设置函数的Cos地址
  * @method string getCodeSha256() 获取函数的SHA256编码
  * @method void setCodeSha256(string $CodeSha256) 设置函数的SHA256编码
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetFunctionAddress返回参数结构体
  */
 class GetFunctionAddressResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GetFunctionAddressResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Url 函数的Cos地址
      * @param string $CodeSha256 函数的SHA256编码
@@ -54,6 +53,7 @@ class GetFunctionAddressResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

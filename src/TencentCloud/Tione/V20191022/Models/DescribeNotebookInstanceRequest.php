@@ -18,12 +18,10 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNotebookInstance请求参数结构体
+ *
  * @method string getNotebookInstanceName() 获取Notebook实例名称
  * @method void setNotebookInstanceName(string $NotebookInstanceName) 设置Notebook实例名称
- */
-
-/**
- *DescribeNotebookInstance请求参数结构体
  */
 class DescribeNotebookInstanceRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeNotebookInstanceRequest extends AbstractModel
      * @var string Notebook实例名称
      */
     public $NotebookInstanceName;
+
     /**
      * @param string $NotebookInstanceName Notebook实例名称
      */
@@ -38,6 +37,7 @@ class DescribeNotebookInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StopDBImportJob请求参数结构体
+ *
  * @method string getAsyncRequestId() 获取异步任务的请求 ID。
  * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务的请求 ID。
- */
-
-/**
- *StopDBImportJob请求参数结构体
  */
 class StopDBImportJobRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class StopDBImportJobRequest extends AbstractModel
      * @var string 异步任务的请求 ID。
      */
     public $AsyncRequestId;
+
     /**
      * @param string $AsyncRequestId 异步任务的请求 ID。
      */
@@ -38,6 +37,7 @@ class StopDBImportJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

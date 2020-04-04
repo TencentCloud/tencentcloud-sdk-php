@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityGroupAssociationStatistics请求参数结构体
+ *
  * @method array getSecurityGroupIds() 获取安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
- */
-
-/**
- *DescribeSecurityGroupAssociationStatistics请求参数结构体
  */
 class DescribeSecurityGroupAssociationStatisticsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeSecurityGroupAssociationStatisticsRequest extends AbstractModel
      * @var array 安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      */
     public $SecurityGroupIds;
+
     /**
      * @param array $SecurityGroupIds 安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      */
@@ -38,6 +37,7 @@ class DescribeSecurityGroupAssociationStatisticsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

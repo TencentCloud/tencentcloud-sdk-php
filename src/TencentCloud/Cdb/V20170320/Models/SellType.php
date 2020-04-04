@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 售卖实例类型
+ *
  * @method string getTypeName() 获取售卖实例名称
  * @method void setTypeName(string $TypeName) 设置售卖实例名称
  * @method array getEngineVersion() 获取内核版本号
  * @method void setEngineVersion(array $EngineVersion) 设置内核版本号
  * @method array getConfigs() 获取售卖规格详细配置
  * @method void setConfigs(array $Configs) 设置售卖规格详细配置
- */
-
-/**
- *售卖实例类型
  */
 class SellType extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SellType extends AbstractModel
      * @var array 售卖规格详细配置
      */
     public $Configs;
+
     /**
      * @param string $TypeName 售卖实例名称
      * @param array $EngineVersion 内核版本号
@@ -54,6 +53,7 @@ class SellType extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

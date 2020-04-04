@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySampleSnapshotTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取采样截图模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置采样截图模板唯一标识。
  * @method string getName() 获取采样截图模板名称，长度限制：64 个字符。
@@ -84,10 +86,6 @@ use TencentCloud\Common\AbstractModel;
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>
 默认值：black 。
- */
-
-/**
- *ModifySampleSnapshotTemplate请求参数结构体
  */
 class ModifySampleSnapshotTemplateRequest extends AbstractModel
 {
@@ -167,6 +165,7 @@ class ModifySampleSnapshotTemplateRequest extends AbstractModel
 默认值：black 。
      */
     public $FillType;
+
     /**
      * @param integer $Definition 采样截图模板唯一标识。
      * @param string $Name 采样截图模板名称，长度限制：64 个字符。
@@ -206,6 +205,7 @@ class ModifySampleSnapshotTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

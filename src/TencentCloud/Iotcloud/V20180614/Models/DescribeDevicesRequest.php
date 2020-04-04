@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDevices请求参数结构体
+ *
  * @method string getProductId() 获取需要查看设备列表的产品 ID
  * @method void setProductId(string $ProductId) 设置需要查看设备列表的产品 ID
  * @method integer getOffset() 获取偏移量，Offset从0开始
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页的大小，数值范围 10-250
  * @method string getFirmwareVersion() 获取设备固件版本号，若不带此参数会返回所有固件版本的设备
  * @method void setFirmwareVersion(string $FirmwareVersion) 设置设备固件版本号，若不带此参数会返回所有固件版本的设备
- */
-
-/**
- *DescribeDevices请求参数结构体
  */
 class DescribeDevicesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeDevicesRequest extends AbstractModel
      * @var string 设备固件版本号，若不带此参数会返回所有固件版本的设备
      */
     public $FirmwareVersion;
+
     /**
      * @param string $ProductId 需要查看设备列表的产品 ID
      * @param integer $Offset 偏移量，Offset从0开始
@@ -62,6 +61,7 @@ class DescribeDevicesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

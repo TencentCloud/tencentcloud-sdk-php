@@ -18,6 +18,8 @@ namespace TencentCloud\Tia\V20180226\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateModel请求参数结构体
+ *
  * @method string getName() 获取模型名称
  * @method void setName(string $Name) 设置模型名称
  * @method string getModel() 获取要部署的模型文件路径名
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServType(string $ServType) 设置部署模式，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式` 下服务的运行规模，形如 `2U4G1P`，详见 [自定义的训练规模](https://cloud.tencent.com/document/product/851/17319#.E8.87.AA.E5.AE.9A.E4.B9.89.E7.9A.84.E8.AE.AD.E7.BB.83.E8.A7.84.E6.A8.A1)
  * @method array getRuntimeConf() 获取`无服务器模式` 可选的其他配置信息，详见 [利用无服务器函数部署](https://cloud.tencent.com/document/product/851/17049#.E5.88.A9.E7.94.A8.E6.97.A0.E6.9C.8D.E5.8A.A1.E5.99.A8.E5.87.BD.E6.95.B0.E9.83.A8.E7.BD.B2)
  * @method void setRuntimeConf(array $RuntimeConf) 设置`无服务器模式` 可选的其他配置信息，详见 [利用无服务器函数部署](https://cloud.tencent.com/document/product/851/17049#.E5.88.A9.E7.94.A8.E6.97.A0.E6.9C.8D.E5.8A.A1.E5.99.A8.E5.87.BD.E6.95.B0.E9.83.A8.E7.BD.B2)
- */
-
-/**
- *CreateModel请求参数结构体
  */
 class CreateModelRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class CreateModelRequest extends AbstractModel
      * @var array `无服务器模式` 可选的其他配置信息，详见 [利用无服务器函数部署](https://cloud.tencent.com/document/product/851/17049#.E5.88.A9.E7.94.A8.E6.97.A0.E6.9C.8D.E5.8A.A1.E5.99.A8.E5.87.BD.E6.95.B0.E9.83.A8.E7.BD.B2)
      */
     public $RuntimeConf;
+
     /**
      * @param string $Name 模型名称
      * @param string $Model 要部署的模型文件路径名
@@ -102,6 +101,7 @@ class CreateModelRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

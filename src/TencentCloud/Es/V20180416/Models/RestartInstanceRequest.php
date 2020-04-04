@@ -18,14 +18,12 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RestartInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method boolean getForceRestart() 获取是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
  * @method void setForceRestart(boolean $ForceRestart) 设置是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
- */
-
-/**
- *RestartInstance请求参数结构体
  */
 class RestartInstanceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RestartInstanceRequest extends AbstractModel
      * @var boolean 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
      */
     public $ForceRestart;
+
     /**
      * @param string $InstanceId 实例ID
      * @param boolean $ForceRestart 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
@@ -46,6 +45,7 @@ class RestartInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

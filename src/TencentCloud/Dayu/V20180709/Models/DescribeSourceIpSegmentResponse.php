@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSourceIpSegment返回参数结构体
+ *
  * @method string getData() 获取回源IP段，多个用"；"分隔
  * @method void setData(string $Data) 设置回源IP段，多个用"；"分隔
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeSourceIpSegment返回参数结构体
  */
 class DescribeSourceIpSegmentResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeSourceIpSegmentResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Data 回源IP段，多个用"；"分隔
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeSourceIpSegmentResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

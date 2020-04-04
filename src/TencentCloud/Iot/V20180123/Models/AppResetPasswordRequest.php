@@ -18,16 +18,14 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AppResetPassword请求参数结构体
+ *
  * @method string getAccessToken() 获取访问Token
  * @method void setAccessToken(string $AccessToken) 设置访问Token
  * @method string getOldPassword() 获取旧密码
  * @method void setOldPassword(string $OldPassword) 设置旧密码
  * @method string getNewPassword() 获取新密码
  * @method void setNewPassword(string $NewPassword) 设置新密码
- */
-
-/**
- *AppResetPassword请求参数结构体
  */
 class AppResetPasswordRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AppResetPasswordRequest extends AbstractModel
      * @var string 新密码
      */
     public $NewPassword;
+
     /**
      * @param string $AccessToken 访问Token
      * @param string $OldPassword 旧密码
@@ -54,6 +53,7 @@ class AppResetPasswordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

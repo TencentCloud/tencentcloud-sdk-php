@@ -18,6 +18,8 @@ namespace TencentCloud\Captcha\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCaptchaResult返回参数结构体
+ *
  * @method integer getCaptchaCode() 获取1	OK	验证通过
 6	user code len error	验证码长度不匹配
 7	captcha no match	验证码答案不匹配/Randstr参数不匹配
@@ -77,10 +79,6 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-
-/**
- *DescribeCaptchaResult返回参数结构体
- */
 class DescribeCaptchaResultResponse extends AbstractModel
 {
     /**
@@ -131,6 +129,7 @@ class DescribeCaptchaResultResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $CaptchaCode 1	OK	验证通过
 6	user code len error	验证码长度不匹配
@@ -166,6 +165,7 @@ class DescribeCaptchaResultResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

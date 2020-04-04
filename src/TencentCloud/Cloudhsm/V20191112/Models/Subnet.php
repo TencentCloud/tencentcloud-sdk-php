@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Subnet对象
+ *
  * @method string getVpcId() 获取VPC实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDefault(boolean $IsDefault) 设置是否为默认Subnet
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *Subnet对象
  */
 class Subnet extends AbstractModel
 {
@@ -114,6 +112,7 @@ class Subnet extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDefault;
+
     /**
      * @param string $VpcId VPC实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -138,6 +137,7 @@ class Subnet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

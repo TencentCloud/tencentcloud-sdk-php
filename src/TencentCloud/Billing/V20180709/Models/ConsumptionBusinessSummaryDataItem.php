@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 消耗按产品汇总详情
+ *
  * @method string getBusinessCode() 获取产品码
  * @method void setBusinessCode(string $BusinessCode) 设置产品码
  * @method string getBusinessCodeName() 获取产品名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealTotalCost(string $RealTotalCost) 设置折后总价
  * @method ConsumptionSummaryTrend getTrend() 获取费用趋势
  * @method void setTrend(ConsumptionSummaryTrend $Trend) 设置费用趋势
- */
-
-/**
- *消耗按产品汇总详情
  */
 class ConsumptionBusinessSummaryDataItem extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ConsumptionBusinessSummaryDataItem extends AbstractModel
      * @var ConsumptionSummaryTrend 费用趋势
      */
     public $Trend;
+
     /**
      * @param string $BusinessCode 产品码
      * @param string $BusinessCodeName 产品名称
@@ -62,6 +61,7 @@ class ConsumptionBusinessSummaryDataItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

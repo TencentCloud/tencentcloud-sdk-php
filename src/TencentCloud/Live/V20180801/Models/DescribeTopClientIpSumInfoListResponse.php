@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTopClientIpSumInfoList返回参数结构体
+ *
  * @method integer getPageNum() 获取页号，范围是[1,1000]，默认值是1。
  * @method void setPageNum(integer $PageNum) 设置页号，范围是[1,1000]，默认值是1。
  * @method integer getPageSize() 获取每页个数，范围是[1,1000]，默认值是20。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataInfoList(array $DataInfoList) 设置数据内容。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeTopClientIpSumInfoList返回参数结构体
  */
 class DescribeTopClientIpSumInfoListResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeTopClientIpSumInfoListResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $PageNum 页号，范围是[1,1000]，默认值是1。
      * @param integer $PageSize 每页个数，范围是[1,1000]，默认值是20。
@@ -86,6 +85,7 @@ class DescribeTopClientIpSumInfoListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

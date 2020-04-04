@@ -18,16 +18,14 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ChatBot请求参数结构体
+ *
  * @method string getQuery() 获取用户请求的query
  * @method void setQuery(string $Query) 设置用户请求的query
  * @method integer getFlag() 获取0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
  * @method void setFlag(integer $Flag) 设置0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
  * @method string getOpenId() 获取服务的id,  主要用于儿童闲聊接口，比如手Q的openid
  * @method void setOpenId(string $OpenId) 设置服务的id,  主要用于儿童闲聊接口，比如手Q的openid
- */
-
-/**
- *ChatBot请求参数结构体
  */
 class ChatBotRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ChatBotRequest extends AbstractModel
      * @var string 服务的id,  主要用于儿童闲聊接口，比如手Q的openid
      */
     public $OpenId;
+
     /**
      * @param string $Query 用户请求的query
      * @param integer $Flag 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
@@ -54,6 +53,7 @@ class ChatBotRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

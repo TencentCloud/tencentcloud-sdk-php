@@ -18,16 +18,14 @@ namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 歌词信息
+ *
  * @method string getUrl() 获取歌词cdn地址
  * @method void setUrl(string $Url) 设置歌词cdn地址
  * @method string getFileNameExt() 获取歌词后缀名
  * @method void setFileNameExt(string $FileNameExt) 设置歌词后缀名
  * @method string getSubItemType() 获取歌词类型
  * @method void setSubItemType(string $SubItemType) 设置歌词类型
- */
-
-/**
- *歌词信息
  */
 class Lyric extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Lyric extends AbstractModel
      * @var string 歌词类型
      */
     public $SubItemType;
+
     /**
      * @param string $Url 歌词cdn地址
      * @param string $FileNameExt 歌词后缀名
@@ -54,6 +53,7 @@ class Lyric extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

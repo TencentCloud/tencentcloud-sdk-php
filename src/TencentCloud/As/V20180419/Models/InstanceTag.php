@@ -18,14 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例标签。通过指定该参数，可以为扩容的实例绑定标签。
+ *
  * @method string getKey() 获取标签键
  * @method void setKey(string $Key) 设置标签键
  * @method string getValue() 获取标签值
  * @method void setValue(string $Value) 设置标签值
- */
-
-/**
- *实例标签。通过指定该参数，可以为扩容的实例绑定标签。
  */
 class InstanceTag extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceTag extends AbstractModel
      * @var string 标签值
      */
     public $Value;
+
     /**
      * @param string $Key 标签键
      * @param string $Value 标签值
@@ -46,6 +45,7 @@ class InstanceTag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyProduct请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getProductName() 获取产品名称
  * @method void setProductName(string $ProductName) 设置产品名称
  * @method string getProductDescription() 获取产品描述
  * @method void setProductDescription(string $ProductDescription) 设置产品描述
- */
-
-/**
- *ModifyProduct请求参数结构体
  */
 class ModifyProductRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyProductRequest extends AbstractModel
      * @var string 产品描述
      */
     public $ProductDescription;
+
     /**
      * @param string $ProductId 产品ID
      * @param string $ProductName 产品名称
@@ -54,6 +53,7 @@ class ModifyProductRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

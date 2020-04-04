@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 规则信息
+ *
  * @method string getCreateTime() 获取规则创建时间。
  * @method void setCreateTime(string $CreateTime) 设置规则创建时间。
  * @method string getUpdateTime() 获取规则更新时间。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) 设置推流域名。
  * @method string getAppName() 获取推流路径。
  * @method void setAppName(string $AppName) 设置推流路径。
- */
-
-/**
- *规则信息
  */
 class CallBackRuleInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CallBackRuleInfo extends AbstractModel
      * @var string 推流路径。
      */
     public $AppName;
+
     /**
      * @param string $CreateTime 规则创建时间。
      * @param string $UpdateTime 规则更新时间。
@@ -70,6 +69,7 @@ class CallBackRuleInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

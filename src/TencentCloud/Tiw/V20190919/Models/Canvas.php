@@ -18,14 +18,12 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 混流画布参数
+ *
  * @method LayoutParams getLayoutParams() 获取混流画布宽高配置
  * @method void setLayoutParams(LayoutParams $LayoutParams) 设置混流画布宽高配置
  * @method string getBackgroundColor() 获取背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
  * @method void setBackgroundColor(string $BackgroundColor) 设置背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
- */
-
-/**
- *混流画布参数
  */
 class Canvas extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Canvas extends AbstractModel
      * @var string 背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
      */
     public $BackgroundColor;
+
     /**
      * @param LayoutParams $LayoutParams 混流画布宽高配置
      * @param string $BackgroundColor 背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
@@ -46,6 +45,7 @@ class Canvas extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

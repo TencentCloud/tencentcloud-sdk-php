@@ -18,16 +18,14 @@ namespace TencentCloud\Fmu\V20191213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * LUT素材信息
+ *
  * @method string getModelId() 获取唇色素材ID
  * @method void setModelId(string $ModelId) 设置唇色素材ID
  * @method string getLUTFileUrl() 获取唇色素材 url 。 LUT 文件 url 5分钟有效。
  * @method void setLUTFileUrl(string $LUTFileUrl) 设置唇色素材 url 。 LUT 文件 url 5分钟有效。
  * @method string getDescription() 获取文件描述信息。
  * @method void setDescription(string $Description) 设置文件描述信息。
- */
-
-/**
- *LUT素材信息
  */
 class ModelInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModelInfo extends AbstractModel
      * @var string 文件描述信息。
      */
     public $Description;
+
     /**
      * @param string $ModelId 唇色素材ID
      * @param string $LUTFileUrl 唇色素材 url 。 LUT 文件 url 5分钟有效。
@@ -54,6 +53,7 @@ class ModelInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

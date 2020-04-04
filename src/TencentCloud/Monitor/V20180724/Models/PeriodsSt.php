@@ -18,14 +18,12 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 周期内的统计方式
+ *
  * @method string getPeriod() 获取周期
  * @method void setPeriod(string $Period) 设置周期
  * @method array getStatType() 获取统计方式
  * @method void setStatType(array $StatType) 设置统计方式
- */
-
-/**
- *周期内的统计方式
  */
 class PeriodsSt extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PeriodsSt extends AbstractModel
      * @var array 统计方式
      */
     public $StatType;
+
     /**
      * @param string $Period 周期
      * @param array $StatType 统计方式
@@ -46,6 +45,7 @@ class PeriodsSt extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListGroups请求参数结构体
+ *
  * @method integer getPage() 获取页码。默认为1。
  * @method void setPage(integer $Page) 设置页码。默认为1。
  * @method integer getRp() 获取每页数量。默认为20。
  * @method void setRp(integer $Rp) 设置每页数量。默认为20。
  * @method string getKeyword() 获取按用户组名称匹配。
  * @method void setKeyword(string $Keyword) 设置按用户组名称匹配。
- */
-
-/**
- *ListGroups请求参数结构体
  */
 class ListGroupsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListGroupsRequest extends AbstractModel
      * @var string 按用户组名称匹配。
      */
     public $Keyword;
+
     /**
      * @param integer $Page 页码。默认为1。
      * @param integer $Rp 每页数量。默认为20。
@@ -54,6 +53,7 @@ class ListGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

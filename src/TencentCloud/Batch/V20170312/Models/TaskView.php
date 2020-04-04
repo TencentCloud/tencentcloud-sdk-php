@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务视图信息
+ *
  * @method string getTaskName() 获取任务名称
  * @method void setTaskName(string $TaskName) 设置任务名称
  * @method string getTaskState() 获取任务状态
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置结束时间
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *任务视图信息
  */
 class TaskView extends AbstractModel
 {
@@ -55,6 +53,7 @@ class TaskView extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
+
     /**
      * @param string $TaskName 任务名称
      * @param string $TaskState 任务状态
@@ -66,6 +65,7 @@ class TaskView extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

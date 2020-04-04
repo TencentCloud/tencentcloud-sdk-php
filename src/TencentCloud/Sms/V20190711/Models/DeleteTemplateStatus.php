@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 删除模板响应
+ *
  * @method string getDeleteStatus() 获取删除状态信息。
  * @method void setDeleteStatus(string $DeleteStatus) 设置删除状态信息。
  * @method integer getDeleteTime() 获取删除时间，UNIX 时间戳（单位：秒）。
  * @method void setDeleteTime(integer $DeleteTime) 设置删除时间，UNIX 时间戳（单位：秒）。
- */
-
-/**
- *删除模板响应
  */
 class DeleteTemplateStatus extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteTemplateStatus extends AbstractModel
      * @var integer 删除时间，UNIX 时间戳（单位：秒）。
      */
     public $DeleteTime;
+
     /**
      * @param string $DeleteStatus 删除状态信息。
      * @param integer $DeleteTime 删除时间，UNIX 时间戳（单位：秒）。
@@ -46,6 +45,7 @@ class DeleteTemplateStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

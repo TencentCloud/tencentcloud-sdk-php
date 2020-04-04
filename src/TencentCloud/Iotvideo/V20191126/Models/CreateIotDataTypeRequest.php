@@ -18,12 +18,10 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateIotDataType请求参数结构体
+ *
  * @method string getIotDataType() 获取用户自定义数据类型，json格式的字符串
  * @method void setIotDataType(string $IotDataType) 设置用户自定义数据类型，json格式的字符串
- */
-
-/**
- *CreateIotDataType请求参数结构体
  */
 class CreateIotDataTypeRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CreateIotDataTypeRequest extends AbstractModel
      * @var string 用户自定义数据类型，json格式的字符串
      */
     public $IotDataType;
+
     /**
      * @param string $IotDataType 用户自定义数据类型，json格式的字符串
      */
@@ -38,6 +37,7 @@ class CreateIotDataTypeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

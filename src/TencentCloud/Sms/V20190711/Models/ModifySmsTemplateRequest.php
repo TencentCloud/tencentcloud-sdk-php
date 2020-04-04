@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySmsTemplate请求参数结构体
+ *
  * @method integer getTemplateId() 获取待修改的模板的模板 ID。
  * @method void setTemplateId(integer $TemplateId) 设置待修改的模板的模板 ID。
  * @method string getTemplateName() 获取新的模板名称。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 1：表示国际/港澳台短信。
  * @method string getRemark() 获取模板备注，例如申请原因，使用场景等。
  * @method void setRemark(string $Remark) 设置模板备注，例如申请原因，使用场景等。
- */
-
-/**
- *ModifySmsTemplate请求参数结构体
  */
 class ModifySmsTemplateRequest extends AbstractModel
 {
@@ -72,6 +70,7 @@ class ModifySmsTemplateRequest extends AbstractModel
      * @var string 模板备注，例如申请原因，使用场景等。
      */
     public $Remark;
+
     /**
      * @param integer $TemplateId 待修改的模板的模板 ID。
      * @param string $TemplateName 新的模板名称。
@@ -86,6 +85,7 @@ class ModifySmsTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

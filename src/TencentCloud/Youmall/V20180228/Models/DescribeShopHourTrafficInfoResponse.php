@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeShopHourTrafficInfo返回参数结构体
+ *
  * @method string getCompanyId() 获取公司ID
  * @method void setCompanyId(string $CompanyId) 设置公司ID
  * @method integer getShopId() 获取门店ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShopHourTrafficInfoSet(array $ShopHourTrafficInfoSet) 设置分时客流信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeShopHourTrafficInfo返回参数结构体
  */
 class DescribeShopHourTrafficInfoResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeShopHourTrafficInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $CompanyId 公司ID
      * @param integer $ShopId 门店ID
@@ -70,6 +69,7 @@ class DescribeShopHourTrafficInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

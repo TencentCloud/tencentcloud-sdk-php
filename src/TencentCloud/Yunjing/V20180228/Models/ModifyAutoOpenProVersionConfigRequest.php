@@ -18,16 +18,14 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAutoOpenProVersionConfig请求参数结构体
+ *
  * @method string getStatus() 获取设置自动开通状态。
 <li>CLOSE：关闭</li>
 <li>OPEN：打开</li>
  * @method void setStatus(string $Status) 设置设置自动开通状态。
 <li>CLOSE：关闭</li>
 <li>OPEN：打开</li>
- */
-
-/**
- *ModifyAutoOpenProVersionConfig请求参数结构体
  */
 class ModifyAutoOpenProVersionConfigRequest extends AbstractModel
 {
@@ -37,6 +35,7 @@ class ModifyAutoOpenProVersionConfigRequest extends AbstractModel
 <li>OPEN：打开</li>
      */
     public $Status;
+
     /**
      * @param string $Status 设置自动开通状态。
 <li>CLOSE：关闭</li>
@@ -46,6 +45,7 @@ class ModifyAutoOpenProVersionConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteServerlessDBInstance请求参数结构体
+ *
  * @method string getDBInstanceName() 获取DB实例名称，实例名和实例ID必须至少传一个，如果同时存在，将只以实例ID为准。
  * @method void setDBInstanceName(string $DBInstanceName) 设置DB实例名称，实例名和实例ID必须至少传一个，如果同时存在，将只以实例ID为准。
  * @method string getDBInstanceId() 获取DB实例ID，实例名和实例ID必须至少传一个，如果同时存在，将只以实例ID为准。
  * @method void setDBInstanceId(string $DBInstanceId) 设置DB实例ID，实例名和实例ID必须至少传一个，如果同时存在，将只以实例ID为准。
- */
-
-/**
- *DeleteServerlessDBInstance请求参数结构体
  */
 class DeleteServerlessDBInstanceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteServerlessDBInstanceRequest extends AbstractModel
      * @var string DB实例ID，实例名和实例ID必须至少传一个，如果同时存在，将只以实例ID为准。
      */
     public $DBInstanceId;
+
     /**
      * @param string $DBInstanceName DB实例名称，实例名和实例ID必须至少传一个，如果同时存在，将只以实例ID为准。
      * @param string $DBInstanceId DB实例ID，实例名和实例ID必须至少传一个，如果同时存在，将只以实例ID为准。
@@ -46,6 +45,7 @@ class DeleteServerlessDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

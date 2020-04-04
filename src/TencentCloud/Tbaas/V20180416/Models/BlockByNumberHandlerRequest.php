@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BlockByNumberHandler请求参数结构体
+ *
  * @method string getModule() 获取模块名，固定字段：block
  * @method void setModule(string $Module) 设置模块名，固定字段：block
  * @method string getOperation() 获取操作名，固定字段：block_by_number
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupPk(string $GroupPk) 设置当前群组编号
  * @method integer getBlockNumber() 获取区块高度
  * @method void setBlockNumber(integer $BlockNumber) 设置区块高度
- */
-
-/**
- *BlockByNumberHandler请求参数结构体
  */
 class BlockByNumberHandlerRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class BlockByNumberHandlerRequest extends AbstractModel
      * @var integer 区块高度
      */
     public $BlockNumber;
+
     /**
      * @param string $Module 模块名，固定字段：block
      * @param string $Operation 操作名，固定字段：block_by_number
@@ -62,6 +61,7 @@ class BlockByNumberHandlerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

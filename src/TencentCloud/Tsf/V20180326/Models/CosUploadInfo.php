@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * cos上传所需信息
+ *
  * @method string getPkgId() 获取程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgId(string $PkgId) 设置程序包ID
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method CosCredentials getCredentials() 获取鉴权信息
  * @method void setCredentials(CosCredentials $Credentials) 设置鉴权信息
- */
-
-/**
- *cos上传所需信息
  */
 class CosUploadInfo extends AbstractModel
 {
@@ -71,6 +69,7 @@ class CosUploadInfo extends AbstractModel
      * @var CosCredentials 鉴权信息
      */
     public $Credentials;
+
     /**
      * @param string $PkgId 程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -86,6 +85,7 @@ class CosUploadInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

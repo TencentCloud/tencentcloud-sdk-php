@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDefaultParams返回参数结构体
+ *
  * @method integer getTotalCount() 获取参数个数。
  * @method void setTotalCount(integer $TotalCount) 设置参数个数。
  * @method array getItems() 获取参数详情。
  * @method void setItems(array $Items) 设置参数详情。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDefaultParams返回参数结构体
  */
 class DescribeDefaultParamsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDefaultParamsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 参数个数。
      * @param array $Items 参数详情。
@@ -54,6 +53,7 @@ class DescribeDefaultParamsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteNamespace请求参数结构体
+ *
  * @method string getRegistryId() 获取实例ID
  * @method void setRegistryId(string $RegistryId) 设置实例ID
  * @method string getNamespaceName() 获取命名空间的名称
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间的名称
- */
-
-/**
- *DeleteNamespace请求参数结构体
  */
 class DeleteNamespaceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteNamespaceRequest extends AbstractModel
      * @var string 命名空间的名称
      */
     public $NamespaceName;
+
     /**
      * @param string $RegistryId 实例ID
      * @param string $NamespaceName 命名空间的名称
@@ -46,6 +45,7 @@ class DeleteNamespaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

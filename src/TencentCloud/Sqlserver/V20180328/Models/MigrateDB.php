@@ -18,12 +18,10 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 需要迁移的DB列表
+ *
  * @method string getDBName() 获取迁移数据库的名称
  * @method void setDBName(string $DBName) 设置迁移数据库的名称
- */
-
-/**
- *需要迁移的DB列表
  */
 class MigrateDB extends AbstractModel
 {
@@ -31,6 +29,7 @@ class MigrateDB extends AbstractModel
      * @var string 迁移数据库的名称
      */
     public $DBName;
+
     /**
      * @param string $DBName 迁移数据库的名称
      */
@@ -38,6 +37,7 @@ class MigrateDB extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

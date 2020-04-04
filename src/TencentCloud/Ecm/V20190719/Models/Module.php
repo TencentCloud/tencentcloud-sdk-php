@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 模块信息
+ *
  * @method string getModuleId() 获取模块Id
  * @method void setModuleId(string $ModuleId) 设置模块Id
  * @method string getModuleName() 获取模块名称
@@ -42,10 +44,6 @@ DELETEFAILED：删除失败
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method integer getDefaultBandwidth() 获取默认带宽
  * @method void setDefaultBandwidth(integer $DefaultBandwidth) 设置默认带宽
- */
-
-/**
- *模块信息
  */
 class Module extends AbstractModel
 {
@@ -96,6 +94,7 @@ DELETEFAILED：删除失败
      * @var integer 默认带宽
      */
     public $DefaultBandwidth;
+
     /**
      * @param string $ModuleId 模块Id
      * @param string $ModuleName 模块名称
@@ -114,6 +113,7 @@ DELETEFAILED：删除失败
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

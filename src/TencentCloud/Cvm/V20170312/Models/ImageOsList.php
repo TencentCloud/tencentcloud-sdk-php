@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 支持的操作系统类型，根据windows和Linux分类。
+ *
  * @method array getWindows() 获取支持的windows操作系统。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWindows(array $Windows) 设置支持的windows操作系统。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLinux(array $Linux) 设置支持的linux操作系统
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *支持的操作系统类型，根据windows和Linux分类。
  */
 class ImageOsList extends AbstractModel
 {
@@ -44,6 +42,7 @@ class ImageOsList extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Linux;
+
     /**
      * @param array $Windows 支持的windows操作系统。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class ImageOsList extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

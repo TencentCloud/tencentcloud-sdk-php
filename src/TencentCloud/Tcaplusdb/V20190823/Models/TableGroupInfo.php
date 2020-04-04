@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 表格组详细信息
+ *
  * @method string getTableGroupId() 获取表格组ID
  * @method void setTableGroupId(string $TableGroupId) 设置表格组ID
  * @method string getTableGroupName() 获取表格组名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableCount(integer $TableCount) 设置表格组包含的表格数量
  * @method integer getTotalSize() 获取表格组包含的表格存储总量（MB）
  * @method void setTotalSize(integer $TotalSize) 设置表格组包含的表格存储总量（MB）
- */
-
-/**
- *表格组详细信息
  */
 class TableGroupInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class TableGroupInfo extends AbstractModel
      * @var integer 表格组包含的表格存储总量（MB）
      */
     public $TotalSize;
+
     /**
      * @param string $TableGroupId 表格组ID
      * @param string $TableGroupName 表格组名称
@@ -70,6 +69,7 @@ class TableGroupInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

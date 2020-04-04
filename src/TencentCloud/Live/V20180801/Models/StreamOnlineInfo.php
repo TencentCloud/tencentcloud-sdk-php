@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询当前正在推流的信息
+ *
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method array getPublishTimeList() 获取推流时间列表
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) 设置应用名称。
  * @method string getDomainName() 获取推流域名。
  * @method void setDomainName(string $DomainName) 设置推流域名。
- */
-
-/**
- *查询当前正在推流的信息
  */
 class StreamOnlineInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class StreamOnlineInfo extends AbstractModel
      * @var string 推流域名。
      */
     public $DomainName;
+
     /**
      * @param string $StreamName 流名称。
      * @param array $PublishTimeList 推流时间列表
@@ -62,6 +61,7 @@ class StreamOnlineInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

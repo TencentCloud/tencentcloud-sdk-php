@@ -18,14 +18,12 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 配置项
+ *
  * @method string getName() 获取名称
  * @method void setName(string $Name) 设置名称
  * @method integer getValue() 获取取值
  * @method void setValue(integer $Value) 设置取值
- */
-
-/**
- *配置项
  */
 class Option extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Option extends AbstractModel
      * @var integer 取值
      */
     public $Value;
+
     /**
      * @param string $Name 名称
      * @param integer $Value 取值
@@ -46,6 +45,7 @@ class Option extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

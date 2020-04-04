@@ -18,14 +18,13 @@ namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWorkersInfo请求参数结构体
+ *
 
- */
-
-/**
- *DescribeWorkersInfo请求参数结构体
  */
 class DescribeWorkersInfoRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeWorkersInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

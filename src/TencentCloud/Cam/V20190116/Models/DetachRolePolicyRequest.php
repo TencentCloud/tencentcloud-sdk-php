@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetachRolePolicy请求参数结构体
+ *
  * @method integer getPolicyId() 获取策略ID
  * @method void setPolicyId(integer $PolicyId) 设置策略ID
  * @method string getDetachRoleId() 获取角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
  * @method void setDetachRoleId(string $DetachRoleId) 设置角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
  * @method string getDetachRoleName() 获取角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
  * @method void setDetachRoleName(string $DetachRoleName) 设置角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
- */
-
-/**
- *DetachRolePolicy请求参数结构体
  */
 class DetachRolePolicyRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DetachRolePolicyRequest extends AbstractModel
      * @var string 角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
      */
     public $DetachRoleName;
+
     /**
      * @param integer $PolicyId 策略ID
      * @param string $DetachRoleId 角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
@@ -54,6 +53,7 @@ class DetachRolePolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

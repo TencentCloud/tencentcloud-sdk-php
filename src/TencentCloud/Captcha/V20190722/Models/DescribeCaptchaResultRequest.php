@@ -18,6 +18,8 @@ namespace TencentCloud\Captcha\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCaptchaResult请求参数结构体
+ *
  * @method integer getCaptchaType() 获取固定填值：9。可在控制台配置不同验证码类型。
  * @method void setCaptchaType(integer $CaptchaType) 设置固定填值：9。可在控制台配置不同验证码类型。
  * @method string getTicket() 获取验证码返回给用户的票据
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImei(string $Imei) 设置手机设备号
  * @method integer getNeedGetCaptchaTime() 获取是否返回前端获取验证码时间，取值1：需要返回
  * @method void setNeedGetCaptchaTime(integer $NeedGetCaptchaTime) 设置是否返回前端获取验证码时间，取值1：需要返回
- */
-
-/**
- *DescribeCaptchaResult请求参数结构体
  */
 class DescribeCaptchaResultRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class DescribeCaptchaResultRequest extends AbstractModel
      * @var integer 是否返回前端获取验证码时间，取值1：需要返回
      */
     public $NeedGetCaptchaTime;
+
     /**
      * @param integer $CaptchaType 固定填值：9。可在控制台配置不同验证码类型。
      * @param string $Ticket 验证码返回给用户的票据
@@ -118,6 +117,7 @@ class DescribeCaptchaResultRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

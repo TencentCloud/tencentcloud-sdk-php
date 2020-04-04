@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteMachineTag请求参数结构体
+ *
  * @method integer getRid() 获取关联的标签ID
  * @method void setRid(integer $Rid) 设置关联的标签ID
- */
-
-/**
- *DeleteMachineTag请求参数结构体
  */
 class DeleteMachineTagRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteMachineTagRequest extends AbstractModel
      * @var integer 关联的标签ID
      */
     public $Rid;
+
     /**
      * @param integer $Rid 关联的标签ID
      */
@@ -38,6 +37,7 @@ class DeleteMachineTagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

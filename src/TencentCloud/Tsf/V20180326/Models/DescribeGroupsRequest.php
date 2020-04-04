@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGroups请求参数结构体
+ *
  * @method string getSearchWord() 获取搜索字段
  * @method void setSearchWord(string $SearchWord) 设置搜索字段
  * @method string getApplicationId() 获取应用ID
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method array getGroupResourceTypeList() 获取部署组资源类型列表
  * @method void setGroupResourceTypeList(array $GroupResourceTypeList) 设置部署组资源类型列表
- */
-
-/**
- *DescribeGroups请求参数结构体
  */
 class DescribeGroupsRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class DescribeGroupsRequest extends AbstractModel
      * @var array 部署组资源类型列表
      */
     public $GroupResourceTypeList;
+
     /**
      * @param string $SearchWord 搜索字段
      * @param string $ApplicationId 应用ID
@@ -102,6 +101,7 @@ class DescribeGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

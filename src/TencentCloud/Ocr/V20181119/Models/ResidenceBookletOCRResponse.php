@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResidenceBookletOCR返回参数结构体
+ *
  * @method string getHouseholdNumber() 获取户号
  * @method void setHouseholdNumber(string $HouseholdNumber) 设置户号
  * @method string getName() 获取姓名
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddress(string $Address) 设置住址
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ResidenceBookletOCR返回参数结构体
  */
 class ResidenceBookletOCRResponse extends AbstractModel
 {
@@ -115,6 +113,7 @@ class ResidenceBookletOCRResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $HouseholdNumber 户号
      * @param string $Name 姓名
@@ -134,6 +133,7 @@ class ResidenceBookletOCRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

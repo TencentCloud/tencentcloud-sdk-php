@@ -18,12 +18,10 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEditingTaskResult请求参数结构体
+ *
  * @method string getTaskId() 获取编辑任务 ID。
  * @method void setTaskId(string $TaskId) 设置编辑任务 ID。
- */
-
-/**
- *DescribeEditingTaskResult请求参数结构体
  */
 class DescribeEditingTaskResultRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeEditingTaskResultRequest extends AbstractModel
      * @var string 编辑任务 ID。
      */
     public $TaskId;
+
     /**
      * @param string $TaskId 编辑任务 ID。
      */
@@ -38,6 +37,7 @@ class DescribeEditingTaskResultRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

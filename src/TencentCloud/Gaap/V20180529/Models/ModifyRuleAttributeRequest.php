@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyRuleAttribute请求参数结构体
+ *
  * @method string getListenerId() 获取监听器ID
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getRuleId() 获取转发规则ID
@@ -48,10 +50,6 @@ lc，最小连接数。
 当ForwardHost=default时，使用规则的域名，其他情况为该字段所设置的值。
  * @method void setForwardHost(string $ForwardHost) 设置加速通道转发到源站的请求中携带的host。
 当ForwardHost=default时，使用规则的域名，其他情况为该字段所设置的值。
- */
-
-/**
- *ModifyRuleAttribute请求参数结构体
  */
 class ModifyRuleAttributeRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ lc，最小连接数。
 当ForwardHost=default时，使用规则的域名，其他情况为该字段所设置的值。
      */
     public $ForwardHost;
+
     /**
      * @param string $ListenerId 监听器ID
      * @param string $RuleId 转发规则ID
@@ -122,6 +121,7 @@ lc，最小连接数。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

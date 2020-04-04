@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AllocateHosts请求参数结构体
+ *
  * @method Placement getPlacement() 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
  * @method void setPlacement(Placement $Placement) 设置实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostCount(integer $HostCount) 设置购买CDH实例数量。
  * @method array getTagSpecification() 获取标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
  * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
- */
-
-/**
- *AllocateHosts请求参数结构体
  */
 class AllocateHostsRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class AllocateHostsRequest extends AbstractModel
      * @var array 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
      */
     public $TagSpecification;
+
     /**
      * @param Placement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      * @param string $ClientToken 用于保证请求幂等性的字符串。
@@ -86,6 +85,7 @@ class AllocateHostsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

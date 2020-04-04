@@ -18,6 +18,8 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetectBody请求参数结构体
+ *
  * @method string getImage() 获取人体图片 Base64 数据。
 图片 base64 编码后大小不可超过5M。
 图片分辨率不得超过 2048*2048。
@@ -42,10 +44,6 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method integer getMaxBodyNum() 获取最多检测的人体数目，默认值为1（仅检测图片中面积最大的那个人体）； 最大值10 ，检测图片中面积最大的10个人体。
  * @method void setMaxBodyNum(integer $MaxBodyNum) 设置最多检测的人体数目，默认值为1（仅检测图片中面积最大的那个人体）； 最大值10 ，检测图片中面积最大的10个人体。
- */
-
-/**
- *DetectBody请求参数结构体
  */
 class DetectBodyRequest extends AbstractModel
 {
@@ -72,6 +70,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      * @var integer 最多检测的人体数目，默认值为1（仅检测图片中面积最大的那个人体）； 最大值10 ，检测图片中面积最大的10个人体。
      */
     public $MaxBodyNum;
+
     /**
      * @param string $Image 人体图片 Base64 数据。
 图片 base64 编码后大小不可超过5M。
@@ -90,6 +89,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

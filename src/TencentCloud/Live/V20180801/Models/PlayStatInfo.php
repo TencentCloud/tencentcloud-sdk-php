@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 按省份运营商查询的播放信息
+ *
  * @method string getTime() 获取数据时间点。
  * @method void setTime(string $Time) 设置数据时间点。
  * @method float getValue() 获取带宽/流量/请求数/并发连接数/下载速度的值，若没数据返回时该值为0
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(float $Value) 设置带宽/流量/请求数/并发连接数/下载速度的值，若没数据返回时该值为0
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *按省份运营商查询的播放信息
  */
 class PlayStatInfo extends AbstractModel
 {
@@ -41,6 +39,7 @@ class PlayStatInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
+
     /**
      * @param string $Time 数据时间点。
      * @param float $Value 带宽/流量/请求数/并发连接数/下载速度的值，若没数据返回时该值为0
@@ -50,6 +49,7 @@ class PlayStatInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

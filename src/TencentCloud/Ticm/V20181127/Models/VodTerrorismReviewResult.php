@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 暴恐信息
+ *
  * @method float getConfidence() 获取视频暴恐评分，分值为0到100。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfidence(float $Confidence) 设置视频暴恐评分，分值为0到100。
@@ -70,10 +72,6 @@ terrorists：暴恐人物。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentSet(array $SegmentSet) 设置有暴恐嫌疑的视频片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *暴恐信息
  */
 class VodTerrorismReviewResult extends AbstractModel
 {
@@ -130,6 +128,7 @@ terrorists：暴恐人物。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentSet;
+
     /**
      * @param float $Confidence 视频暴恐评分，分值为0到100。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -162,6 +161,7 @@ terrorists：暴恐人物。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

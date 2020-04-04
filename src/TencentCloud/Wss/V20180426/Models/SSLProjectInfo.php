@@ -18,6 +18,8 @@ namespace TencentCloud\Wss\V20180426\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取证书列表接口（SSLProjectInfo）出参键为CertificateSet下的元素ProjectIno详情
+ *
  * @method string getProjectId() 获取项目ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(string $ProjectId) 设置项目ID
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInfo(string $Info) 设置项目说明
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *获取证书列表接口（SSLProjectInfo）出参键为CertificateSet下的元素ProjectIno详情
  */
 class SSLProjectInfo extends AbstractModel
 {
@@ -84,6 +82,7 @@ class SSLProjectInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Info;
+
     /**
      * @param string $ProjectId 项目ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,6 +101,7 @@ class SSLProjectInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

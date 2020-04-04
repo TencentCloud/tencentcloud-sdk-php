@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReplaceTopicRule请求参数结构体
+ *
  * @method string getRuleName() 获取规则名称
  * @method void setRuleName(string $RuleName) 设置规则名称
  * @method TopicRulePayload getTopicRulePayload() 获取替换的规则包体
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyType(integer $ModifyType) 设置修改类型，0：其他，1：创建行为，2：更新行为，3：删除行为
  * @method integer getActionIndex() 获取action增删改变更填对应topicRulePayload里面第几个action
  * @method void setActionIndex(integer $ActionIndex) 设置action增删改变更填对应topicRulePayload里面第几个action
- */
-
-/**
- *ReplaceTopicRule请求参数结构体
  */
 class ReplaceTopicRuleRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ReplaceTopicRuleRequest extends AbstractModel
      * @var integer action增删改变更填对应topicRulePayload里面第几个action
      */
     public $ActionIndex;
+
     /**
      * @param string $RuleName 规则名称
      * @param TopicRulePayload $TopicRulePayload 替换的规则包体
@@ -62,6 +61,7 @@ class ReplaceTopicRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

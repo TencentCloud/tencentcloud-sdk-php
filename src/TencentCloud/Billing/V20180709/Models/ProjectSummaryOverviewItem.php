@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 按项目汇总消费详情
+ *
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method string getProjectName() 获取项目名称
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置代金券金额
  * @method string getBillMonth() 获取账单月份，格式2019-08
  * @method void setBillMonth(string $BillMonth) 设置账单月份，格式2019-08
- */
-
-/**
- *按项目汇总消费详情
  */
 class ProjectSummaryOverviewItem extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ProjectSummaryOverviewItem extends AbstractModel
      * @var string 账单月份，格式2019-08
      */
     public $BillMonth;
+
     /**
      * @param string $ProjectId 项目ID
      * @param string $ProjectName 项目名称
@@ -94,6 +93,7 @@ class ProjectSummaryOverviewItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

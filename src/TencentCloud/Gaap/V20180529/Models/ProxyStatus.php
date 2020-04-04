@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 通道状态信息
+ *
  * @method string getInstanceId() 获取通道实例ID。
  * @method void setInstanceId(string $InstanceId) 设置通道实例ID。
  * @method string getStatus() 获取通道状态。
@@ -45,10 +47,6 @@ ISOLATING，隔离中；
 ISOLATED，已隔离；
 UNKNOWN，未知状态。
  */
-
-/**
- *通道状态信息
- */
 class ProxyStatus extends AbstractModel
 {
     /**
@@ -71,6 +69,7 @@ ISOLATED，已隔离；
 UNKNOWN，未知状态。
      */
     public $Status;
+
     /**
      * @param string $InstanceId 通道实例ID。
      * @param string $Status 通道状态。
@@ -90,6 +89,7 @@ UNKNOWN，未知状态。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

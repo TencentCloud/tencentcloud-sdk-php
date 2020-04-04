@@ -18,6 +18,11 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 时间戳防盗链模式 D 配置
+时间戳防盗链模式 D 的访问 URL 格式为：http://DomainName/FileName?sign=md5hash&t=timestamp
+其中 timestamp 为十进制或十六进制 UNIX 时间戳；
+md5hash：MD5（自定义密钥 + 文件路径 + timestamp）
+ *
  * @method string getSecretKey() 获取计算签名的密钥
 仅允许大小写字母与数字，长度 6~32 位
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,13 +55,6 @@ hex：十六进制
  * @method void setTimeFormat(string $TimeFormat) 设置时间戳进制设置
 dec：十进制
 hex：十六进制
- */
-
-/**
- *时间戳防盗链模式 D 配置
-时间戳防盗链模式 D 的访问 URL 格式为：http://DomainName/FileName?sign=md5hash&t=timestamp
-其中 timestamp 为十进制或十六进制 UNIX 时间戳；
-md5hash：MD5（自定义密钥 + 文件路径 + timestamp）
  */
 class AuthenticationTypeD extends AbstractModel
 {
@@ -103,6 +101,7 @@ dec：十进制
 hex：十六进制
      */
     public $TimeFormat;
+
     /**
      * @param string $SecretKey 计算签名的密钥
 仅允许大小写字母与数字，长度 6~32 位
@@ -125,6 +124,7 @@ hex：十六进制
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

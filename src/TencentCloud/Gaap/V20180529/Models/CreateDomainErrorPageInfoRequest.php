@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDomainErrorPageInfo请求参数结构体
+ *
  * @method string getListenerId() 获取监听器ID
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getDomain() 获取域名
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClearHeaders(array $ClearHeaders) 设置需要删除的响应头
  * @method array getSetHeaders() 获取需要设置的响应头
  * @method void setSetHeaders(array $SetHeaders) 设置需要设置的响应头
- */
-
-/**
- *CreateDomainErrorPageInfo请求参数结构体
  */
 class CreateDomainErrorPageInfoRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateDomainErrorPageInfoRequest extends AbstractModel
      * @var array 需要设置的响应头
      */
     public $SetHeaders;
+
     /**
      * @param string $ListenerId 监听器ID
      * @param string $Domain 域名
@@ -86,6 +85,7 @@ class CreateDomainErrorPageInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

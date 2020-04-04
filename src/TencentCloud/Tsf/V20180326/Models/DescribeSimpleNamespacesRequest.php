@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSimpleNamespaces请求参数结构体
+ *
  * @method array getNamespaceIdList() 获取命名空间ID列表，不传入时查询全量
  * @method void setNamespaceIdList(array $NamespaceIdList) 设置命名空间ID列表，不传入时查询全量
  * @method string getClusterId() 获取集群ID，不传入时查询全量
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceName(string $NamespaceName) 设置通过命名空间名精确过滤
  * @method string getIsDefault() 获取通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
  * @method void setIsDefault(string $IsDefault) 设置通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
- */
-
-/**
- *DescribeSimpleNamespaces请求参数结构体
  */
 class DescribeSimpleNamespacesRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class DescribeSimpleNamespacesRequest extends AbstractModel
      * @var string 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
      */
     public $IsDefault;
+
     /**
      * @param array $NamespaceIdList 命名空间ID列表，不传入时查询全量
      * @param string $ClusterId 集群ID，不传入时查询全量
@@ -110,6 +109,7 @@ class DescribeSimpleNamespacesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

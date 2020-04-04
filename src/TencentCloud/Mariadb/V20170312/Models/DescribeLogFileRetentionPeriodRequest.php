@@ -18,12 +18,10 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLogFileRetentionPeriod请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：tdsql-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：tdsql-ow728lmc。
- */
-
-/**
- *DescribeLogFileRetentionPeriod请求参数结构体
  */
 class DescribeLogFileRetentionPeriodRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeLogFileRetentionPeriodRequest extends AbstractModel
      * @var string 实例 ID，形如：tdsql-ow728lmc。
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc。
      */
@@ -38,6 +37,7 @@ class DescribeLogFileRetentionPeriodRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

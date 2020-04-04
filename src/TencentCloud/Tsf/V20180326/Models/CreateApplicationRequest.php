@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateApplication请求参数结构体
+ *
  * @method string getApplicationName() 获取应用名称
  * @method void setApplicationName(string $ApplicationName) 设置应用名称
  * @method string getApplicationType() 获取应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationResourceType(string $ApplicationResourceType) 设置应用资源类型，废弃参数
  * @method string getApplicationRuntimeType() 获取应用runtime类型
  * @method void setApplicationRuntimeType(string $ApplicationRuntimeType) 设置应用runtime类型
- */
-
-/**
- *CreateApplication请求参数结构体
  */
 class CreateApplicationRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateApplicationRequest extends AbstractModel
      * @var string 应用runtime类型
      */
     public $ApplicationRuntimeType;
+
     /**
      * @param string $ApplicationName 应用名称
      * @param string $ApplicationType 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
@@ -86,6 +85,7 @@ class CreateApplicationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

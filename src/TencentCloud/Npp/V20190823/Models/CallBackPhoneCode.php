@@ -18,14 +18,12 @@ namespace TencentCloud\Npp\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 回拨号码字段
+ *
  * @method string getNation() 获取国家码，统一以 00 开头
  * @method void setNation(string $Nation) 设置国家码，统一以 00 开头
  * @method string getPhone() 获取号码（固话区号前加 0，如075586013388）
  * @method void setPhone(string $Phone) 设置号码（固话区号前加 0，如075586013388）
- */
-
-/**
- *回拨号码字段
  */
 class CallBackPhoneCode extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CallBackPhoneCode extends AbstractModel
      * @var string 号码（固话区号前加 0，如075586013388）
      */
     public $Phone;
+
     /**
      * @param string $Nation 国家码，统一以 00 开头
      * @param string $Phone 号码（固话区号前加 0，如075586013388）
@@ -46,6 +45,7 @@ class CallBackPhoneCode extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

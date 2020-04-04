@@ -18,6 +18,8 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateEnterpriseAccount请求参数结构体
+ *
  * @method string getModule() 获取模块名AccountMng
  * @method void setModule(string $Module) 设置模块名AccountMng
  * @method string getOperation() 获取操作名CreateEnterpriseAccount
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTransactorPhone(string $TransactorPhone) 设置经办人手机号
  * @method string getEmail() 获取企业联系人邮箱
  * @method void setEmail(string $Email) 设置企业联系人邮箱
- */
-
-/**
- *CreateEnterpriseAccount请求参数结构体
  */
 class CreateEnterpriseAccountRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class CreateEnterpriseAccountRequest extends AbstractModel
      * @var string 企业联系人邮箱
      */
     public $Email;
+
     /**
      * @param string $Module 模块名AccountMng
      * @param string $Operation 操作名CreateEnterpriseAccount
@@ -118,6 +117,7 @@ class CreateEnterpriseAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

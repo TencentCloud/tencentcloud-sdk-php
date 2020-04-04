@@ -18,14 +18,12 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 集群关联的伸缩组最大实例数最小值实例数
+ *
  * @method integer getMinSize() 获取伸缩组最小实例数
  * @method void setMinSize(integer $MinSize) 设置伸缩组最小实例数
  * @method integer getMaxSize() 获取伸缩组最大实例数
  * @method void setMaxSize(integer $MaxSize) 设置伸缩组最大实例数
- */
-
-/**
- *集群关联的伸缩组最大实例数最小值实例数
  */
 class AutoScalingGroupRange extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AutoScalingGroupRange extends AbstractModel
      * @var integer 伸缩组最大实例数
      */
     public $MaxSize;
+
     /**
      * @param integer $MinSize 伸缩组最小实例数
      * @param integer $MaxSize 伸缩组最大实例数
@@ -46,6 +45,7 @@ class AutoScalingGroupRange extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

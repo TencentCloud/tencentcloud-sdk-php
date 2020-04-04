@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VideoModeration请求参数结构体
+ *
  * @method string getVideoUrl() 获取需要审核的视频的URL地址
  * @method void setVideoUrl(string $VideoUrl) 设置需要审核的视频的URL地址
  * @method string getDeveloperId() 获取开发者标识
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCBUrl(string $CBUrl) 设置审核完成后回调地址
  * @method string getExtra() 获取透传字段，透传简单信息。
  * @method void setExtra(string $Extra) 设置透传字段，透传简单信息。
- */
-
-/**
- *VideoModeration请求参数结构体
  */
 class VideoModerationRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class VideoModerationRequest extends AbstractModel
      * @var string 透传字段，透传简单信息。
      */
     public $Extra;
+
     /**
      * @param string $VideoUrl 需要审核的视频的URL地址
      * @param string $DeveloperId 开发者标识
@@ -62,6 +61,7 @@ class VideoModerationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

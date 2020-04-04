@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备信息
+ *
  * @method string getTid() 获取设备TID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTid(string $Tid) 设置设备TID
@@ -66,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamStatus(boolean $StreamStatus) 设置设备推流状态
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *设备信息
  */
 class DeviceData extends AbstractModel
 {
@@ -144,6 +142,7 @@ class DeviceData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamStatus;
+
     /**
      * @param string $Tid 设备TID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,6 +173,7 @@ class DeviceData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

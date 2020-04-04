@@ -18,14 +18,13 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ExportBruteAttacks请求参数结构体
+ *
 
- */
-
-/**
- *ExportBruteAttacks请求参数结构体
  */
 class ExportBruteAttacksRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class ExportBruteAttacksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

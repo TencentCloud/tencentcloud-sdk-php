@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCfsFileSystem请求参数结构体
+ *
  * @method string getZone() 获取可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
  * @method void setZone(string $Zone) 设置可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
  * @method string getNetInterface() 获取网络类型，值为 VPC，BASIC；其中 VPC 为私有网络，BASIC 为基础网络
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFsName(string $FsName) 设置用户自定义文件系统名称
  * @method array getResourceTags() 获取文件系统标签
  * @method void setResourceTags(array $ResourceTags) 设置文件系统标签
- */
-
-/**
- *CreateCfsFileSystem请求参数结构体
  */
 class CreateCfsFileSystemRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class CreateCfsFileSystemRequest extends AbstractModel
      * @var array 文件系统标签
      */
     public $ResourceTags;
+
     /**
      * @param string $Zone 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
      * @param string $NetInterface 网络类型，值为 VPC，BASIC；其中 VPC 为私有网络，BASIC 为基础网络
@@ -110,6 +109,7 @@ class CreateCfsFileSystemRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

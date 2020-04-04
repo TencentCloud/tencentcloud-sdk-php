@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDevicesBindInfo返回参数结构体
+ *
  * @method array getLoadBalancerSet() 获取返回的负载均衡绑定信息。
  * @method void setLoadBalancerSet(array $LoadBalancerSet) 设置返回的负载均衡绑定信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDevicesBindInfo返回参数结构体
  */
 class DescribeDevicesBindInfoResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDevicesBindInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $LoadBalancerSet 返回的负载均衡绑定信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeDevicesBindInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

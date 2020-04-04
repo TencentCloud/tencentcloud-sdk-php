@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 发送短信状态
+ *
  * @method string getSerialNo() 获取发送流水号。
  * @method void setSerialNo(string $SerialNo) 设置发送流水号。
  * @method string getPhoneNumber() 获取手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCode(string $Code) 设置短信请求错误码，具体含义请参考错误码。
  * @method string getMessage() 获取短信请求错误码描述。
  * @method void setMessage(string $Message) 设置短信请求错误码描述。
- */
-
-/**
- *发送短信状态
  */
 class SendStatus extends AbstractModel
 {
@@ -66,6 +64,7 @@ class SendStatus extends AbstractModel
      * @var string 短信请求错误码描述。
      */
     public $Message;
+
     /**
      * @param string $SerialNo 发送流水号。
      * @param string $PhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
@@ -78,6 +77,7 @@ class SendStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

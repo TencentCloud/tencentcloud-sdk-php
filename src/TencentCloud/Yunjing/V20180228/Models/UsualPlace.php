@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 常用登录地
+ *
  * @method integer getId() 获取ID。
  * @method void setId(integer $Id) 设置ID。
  * @method string getUuid() 获取云镜客户端唯一标识UUID。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProvinceId(integer $ProvinceId) 设置省份 ID。
  * @method integer getCityId() 获取城市 ID。
  * @method void setCityId(integer $CityId) 设置城市 ID。
- */
-
-/**
- *常用登录地
  */
 class UsualPlace extends AbstractModel
 {
@@ -59,6 +57,7 @@ class UsualPlace extends AbstractModel
      * @var integer 城市 ID。
      */
     public $CityId;
+
     /**
      * @param integer $Id ID。
      * @param string $Uuid 云镜客户端唯一标识UUID。
@@ -70,6 +69,7 @@ class UsualPlace extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能分析结果
+ *
  * @method string getType() 获取任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrameTagTask(AiAnalysisTaskFrameTagResult $FrameTagTask) 设置视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *智能分析结果
  */
 class AiAnalysisResult extends AbstractModel
 {
@@ -86,6 +84,7 @@ class AiAnalysisResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrameTagTask;
+
     /**
      * @param string $Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
@@ -106,6 +105,7 @@ class AiAnalysisResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

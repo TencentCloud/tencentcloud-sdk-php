@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReplaceSecurityGroupPolicy请求参数结构体
+ *
  * @method string getSecurityGroupId() 获取安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
  * @method SecurityGroupPolicySet getSecurityGroupPolicySet() 获取安全组规则集合对象。
  * @method void setSecurityGroupPolicySet(SecurityGroupPolicySet $SecurityGroupPolicySet) 设置安全组规则集合对象。
- */
-
-/**
- *ReplaceSecurityGroupPolicy请求参数结构体
  */
 class ReplaceSecurityGroupPolicyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ReplaceSecurityGroupPolicyRequest extends AbstractModel
      * @var SecurityGroupPolicySet 安全组规则集合对象。
      */
     public $SecurityGroupPolicySet;
+
     /**
      * @param string $SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      * @param SecurityGroupPolicySet $SecurityGroupPolicySet 安全组规则集合对象。
@@ -46,6 +45,7 @@ class ReplaceSecurityGroupPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

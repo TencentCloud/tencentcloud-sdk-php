@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 指定时间点截图信息
+ *
  * @method float getTimeOffset() 获取该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
  * @method void setTimeOffset(float $TimeOffset) 设置该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
  * @method string getPath() 获取该张截图的路径。
  * @method void setPath(string $Path) 设置该张截图的路径。
  * @method array getWaterMarkDefinition() 获取截图如果被打上了水印，被打水印的模板 ID 列表。
  * @method void setWaterMarkDefinition(array $WaterMarkDefinition) 设置截图如果被打上了水印，被打水印的模板 ID 列表。
- */
-
-/**
- *指定时间点截图信息
  */
 class MediaSnapshotByTimePicInfoItem extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MediaSnapshotByTimePicInfoItem extends AbstractModel
      * @var array 截图如果被打上了水印，被打水印的模板 ID 列表。
      */
     public $WaterMarkDefinition;
+
     /**
      * @param float $TimeOffset 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
      * @param string $Path 该张截图的路径。
@@ -54,6 +53,7 @@ class MediaSnapshotByTimePicInfoItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

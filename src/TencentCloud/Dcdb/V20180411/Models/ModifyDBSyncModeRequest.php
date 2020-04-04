@@ -18,14 +18,12 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBSyncMode请求参数结构体
+ *
  * @method string getInstanceId() 获取待修改同步模式的实例ID。形如：dcdbt-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置待修改同步模式的实例ID。形如：dcdbt-ow728lmc。
  * @method integer getSyncMode() 获取同步模式：0 异步，1 强同步， 2 强同步可退化
  * @method void setSyncMode(integer $SyncMode) 设置同步模式：0 异步，1 强同步， 2 强同步可退化
- */
-
-/**
- *ModifyDBSyncMode请求参数结构体
  */
 class ModifyDBSyncModeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBSyncModeRequest extends AbstractModel
      * @var integer 同步模式：0 异步，1 强同步， 2 强同步可退化
      */
     public $SyncMode;
+
     /**
      * @param string $InstanceId 待修改同步模式的实例ID。形如：dcdbt-ow728lmc。
      * @param integer $SyncMode 同步模式：0 异步，1 强同步， 2 强同步可退化
@@ -46,6 +45,7 @@ class ModifyDBSyncModeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

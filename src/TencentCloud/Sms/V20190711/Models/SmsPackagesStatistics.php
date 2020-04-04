@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 套餐包信息统计响应包体
+ *
  * @method string getPackageCreateTime() 获取套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。
  * @method void setPackageCreateTime(string $PackageCreateTime) 设置套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。
  * @method integer getPackageCreateUnixTime() 获取套餐包创建时间，UNIX 时间戳（单位：秒）。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackageId(integer $PackageId) 设置套餐包 ID。
  * @method integer getCurrentUsage() 获取当前使用量。
  * @method void setCurrentUsage(integer $CurrentUsage) 设置当前使用量。
- */
-
-/**
- *套餐包信息统计响应包体
  */
 class SmsPackagesStatistics extends AbstractModel
 {
@@ -94,6 +92,7 @@ class SmsPackagesStatistics extends AbstractModel
      * @var integer 当前使用量。
      */
     public $CurrentUsage;
+
     /**
      * @param string $PackageCreateTime 套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。
      * @param integer $PackageCreateUnixTime 套餐包创建时间，UNIX 时间戳（单位：秒）。
@@ -110,6 +109,7 @@ class SmsPackagesStatistics extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTranscode返回参数结构体
+ *
  * @method integer getPages() 获取文档的总页数
  * @method void setPages(integer $Pages) 设置文档的总页数
  * @method integer getProgress() 获取转码的当前进度,取值范围为0~100
@@ -58,10 +60,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompressFileUrl(string $CompressFileUrl) 设置转码压缩文件下载的URL，如果发起文档转码请求参数中`CompressFileType`为空或者不是支持的压缩格式，该参数为空字符串
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeTranscode返回参数结构体
  */
 class DescribeTranscodeResponse extends AbstractModel
 {
@@ -128,6 +126,7 @@ class DescribeTranscodeResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Pages 文档的总页数
      * @param integer $Progress 转码的当前进度,取值范围为0~100
@@ -154,6 +153,7 @@ class DescribeTranscodeResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Bizlive\V20190313\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ForbidLiveStream请求参数结构体
+ *
  * @method string getAppName() 获取应用名称。
  * @method void setAppName(string $AppName) 设置应用名称。
  * @method string getDomainName() 获取您的推流域名。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：默认禁播90天，且最长支持禁播90天。
  * @method void setResumeTime(string $ResumeTime) 设置恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
 注意：默认禁播90天，且最长支持禁播90天。
- */
-
-/**
- *ForbidLiveStream请求参数结构体
  */
 class ForbidLiveStreamRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class ForbidLiveStreamRequest extends AbstractModel
 注意：默认禁播90天，且最长支持禁播90天。
      */
     public $ResumeTime;
+
     /**
      * @param string $AppName 应用名称。
      * @param string $DomainName 您的推流域名。
@@ -66,6 +65,7 @@ class ForbidLiveStreamRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePersonSamples请求参数结构体
+ *
  * @method string getType() 获取拉取的人物类型，可选值：
 <li>UserDefine：用户自定义人物库；</li>
 <li>Default：系统默认人物库。</li>
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：100，最大值：100。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：100，最大值：100。
- */
-
-/**
- *DescribePersonSamples请求参数结构体
  */
 class DescribePersonSamplesRequest extends AbstractModel
 {
@@ -81,6 +79,7 @@ class DescribePersonSamplesRequest extends AbstractModel
      * @var integer 返回记录条数，默认值：100，最大值：100。
      */
     public $Limit;
+
     /**
      * @param string $Type 拉取的人物类型，可选值：
 <li>UserDefine：用户自定义人物库；</li>
@@ -98,6 +97,7 @@ class DescribePersonSamplesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWeeklyReportInfo返回参数结构体
+ *
  * @method string getCompanyName() 获取账号所属公司或个人名称。
  * @method void setCompanyName(string $CompanyName) 设置账号所属公司或个人名称。
  * @method integer getMachineNum() 获取机器总数。
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDownloadUrl(string $DownloadUrl) 设置导出文件下载地址。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeWeeklyReportInfo返回参数结构体
  */
 class DescribeWeeklyReportInfoResponse extends AbstractModel
 {
@@ -131,6 +129,7 @@ class DescribeWeeklyReportInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $CompanyName 账号所属公司或个人名称。
      * @param integer $MachineNum 机器总数。
@@ -154,6 +153,7 @@ class DescribeWeeklyReportInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

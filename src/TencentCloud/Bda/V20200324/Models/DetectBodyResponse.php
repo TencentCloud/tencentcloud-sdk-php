@@ -18,16 +18,14 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetectBody返回参数结构体
+ *
  * @method array getBodyDetectResults() 获取图中检测出来的人体框。
  * @method void setBodyDetectResults(array $BodyDetectResults) 设置图中检测出来的人体框。
  * @method string getBodyModelVersion() 获取人体识别所用的算法模型版本。
  * @method void setBodyModelVersion(string $BodyModelVersion) 设置人体识别所用的算法模型版本。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DetectBody返回参数结构体
  */
 class DetectBodyResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DetectBodyResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $BodyDetectResults 图中检测出来的人体框。
      * @param string $BodyModelVersion 人体识别所用的算法模型版本。
@@ -54,6 +53,7 @@ class DetectBodyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

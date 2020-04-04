@@ -18,14 +18,12 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备签名
+ *
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getDeviceSignature() 获取设备签名
  * @method void setDeviceSignature(string $DeviceSignature) 设置设备签名
- */
-
-/**
- *设备签名
  */
 class DeviceSignature extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeviceSignature extends AbstractModel
      * @var string 设备签名
      */
     public $DeviceSignature;
+
     /**
      * @param string $DeviceName 设备名称
      * @param string $DeviceSignature 设备签名
@@ -46,6 +45,7 @@ class DeviceSignature extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

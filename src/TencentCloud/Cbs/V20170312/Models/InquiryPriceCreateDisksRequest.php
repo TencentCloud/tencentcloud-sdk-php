@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceCreateDisks请求参数结构体
+ *
  * @method string getDiskType() 获取云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
  * @method void setDiskType(string $DiskType) 设置云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
  * @method integer getDiskSize() 获取云硬盘大小，单位为GB。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskCount(integer $DiskCount) 设置购买云盘的数量。不填则默认为1。
  * @method integer getProjectId() 获取云盘所属项目ID。
  * @method void setProjectId(integer $ProjectId) 设置云盘所属项目ID。
- */
-
-/**
- *InquiryPriceCreateDisks请求参数结构体
  */
 class InquiryPriceCreateDisksRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class InquiryPriceCreateDisksRequest extends AbstractModel
      * @var integer 云盘所属项目ID。
      */
     public $ProjectId;
+
     /**
      * @param string $DiskType 云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
      * @param integer $DiskSize 云硬盘大小，单位为GB。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
@@ -78,6 +77,7 @@ class InquiryPriceCreateDisksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

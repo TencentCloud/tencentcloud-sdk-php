@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 消费组返回结果实体
+ *
  * @method integer getTotalCount() 获取符合条件的消费组数量
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的消费组数量
  * @method array getTopicList() 获取主题列表
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupListForMonitor(array $GroupListForMonitor) 设置监控的组列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *消费组返回结果实体
  */
 class ConsumerGroupResponse extends AbstractModel
 {
@@ -101,6 +99,7 @@ class ConsumerGroupResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupListForMonitor;
+
     /**
      * @param integer $TotalCount 符合条件的消费组数量
      * @param array $TopicList 主题列表
@@ -122,6 +121,7 @@ class ConsumerGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

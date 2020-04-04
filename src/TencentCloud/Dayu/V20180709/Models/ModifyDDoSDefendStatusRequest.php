@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDDoSDefendStatus请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版；basic表示基础防护）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版；basic表示基础防护）
  * @method integer getStatus() 获取防护状态值，取值[0（关闭），1（开启）]
@@ -80,10 +82,6 @@ use TencentCloud\Common\AbstractModel;
 "ru":     俄罗斯
 "tpe":    中国台湾
 "nj":     南京
- */
-
-/**
- *ModifyDDoSDefendStatus请求参数结构体
  */
 class ModifyDDoSDefendStatusRequest extends AbstractModel
 {
@@ -153,6 +151,7 @@ class ModifyDDoSDefendStatusRequest extends AbstractModel
 "nj":     南京
      */
     public $IPRegion;
+
     /**
      * @param string $Business 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版；basic表示基础防护）
      * @param integer $Status 防护状态值，取值[0（关闭），1（开启）]
@@ -190,6 +189,7 @@ class ModifyDDoSDefendStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 修改黑石负载均衡七层转发路径时待修改的七层转发规则信息。
+ *
  * @method string getDomainId() 获取转发域名实例ID，可通过接口DescribeL7Rules查询。
  * @method void setDomainId(string $DomainId) 设置转发域名实例ID，可通过接口DescribeL7Rules查询。
  * @method string getLocationId() 获取转发路径实例ID，可通过接口DescribeL7Rules查询。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBalanceMode(string $BalanceMode) 设置均衡方式：ip_hash、wrr。默认值wrr。
  * @method string getDomain() 获取转发域名。
  * @method void setDomain(string $Domain) 设置转发域名。
- */
-
-/**
- *修改黑石负载均衡七层转发路径时待修改的七层转发规则信息。
  */
 class ModifyL7LocationRule extends AbstractModel
 {
@@ -115,6 +113,7 @@ class ModifyL7LocationRule extends AbstractModel
      * @var string 转发域名。
      */
     public $Domain;
+
     /**
      * @param string $DomainId 转发域名实例ID，可通过接口DescribeL7Rules查询。
      * @param string $LocationId 转发路径实例ID，可通过接口DescribeL7Rules查询。
@@ -134,6 +133,7 @@ class ModifyL7LocationRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

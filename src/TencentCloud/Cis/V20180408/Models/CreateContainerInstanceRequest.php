@@ -18,6 +18,8 @@ namespace TencentCloud\Cis\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateContainerInstance请求参数结构体
+ *
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
  * @method string getVpcId() 获取vpcId
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRestartPolicy(string $RestartPolicy) 设置重启策略（Always,OnFailure,Never）
  * @method array getContainers() 获取容器列表
  * @method void setContainers(array $Containers) 设置容器列表
- */
-
-/**
- *CreateContainerInstance请求参数结构体
  */
 class CreateContainerInstanceRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateContainerInstanceRequest extends AbstractModel
      * @var array 容器列表
      */
     public $Containers;
+
     /**
      * @param string $Zone 可用区
      * @param string $VpcId vpcId
@@ -78,6 +77,7 @@ class CreateContainerInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

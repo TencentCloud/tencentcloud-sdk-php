@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDDoSPolicy请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method array getDropOptions() 获取协议禁用，必须填写且数组长度必须为1
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPacketFilters(array $PacketFilters) 设置报文过滤，当没有报文过滤时填空数组
  * @method array getWaterPrint() 获取水印策略参数，当没有启用水印功能时填空数组，最多只能传一条水印策略（即数组大小不超过1）
  * @method void setWaterPrint(array $WaterPrint) 设置水印策略参数，当没有启用水印功能时填空数组，最多只能传一条水印策略（即数组大小不超过1）
- */
-
-/**
- *CreateDDoSPolicy请求参数结构体
  */
 class CreateDDoSPolicyRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateDDoSPolicyRequest extends AbstractModel
      * @var array 水印策略参数，当没有启用水印功能时填空数组，最多只能传一条水印策略（即数组大小不超过1）
      */
     public $WaterPrint;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param array $DropOptions 协议禁用，必须填写且数组长度必须为1
@@ -86,6 +85,7 @@ class CreateDDoSPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

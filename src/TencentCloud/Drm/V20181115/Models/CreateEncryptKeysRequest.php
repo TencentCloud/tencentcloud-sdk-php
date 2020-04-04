@@ -18,6 +18,8 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateEncryptKeys请求参数结构体
+ *
  * @method string getDrmType() 获取使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
  * @method void setDrmType(string $DrmType) 设置使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
  * @method array getKeys() 获取设置的加密密钥列表。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContentId(string $ContentId) 设置一个加密内容的唯一标识。
  * @method string getContentType() 获取内容类型。接口取值VodVideo,LiveVideo。
  * @method void setContentType(string $ContentType) 设置内容类型。接口取值VodVideo,LiveVideo。
- */
-
-/**
- *CreateEncryptKeys请求参数结构体
  */
 class CreateEncryptKeysRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateEncryptKeysRequest extends AbstractModel
      * @var string 内容类型。接口取值VodVideo,LiveVideo。
      */
     public $ContentType;
+
     /**
      * @param string $DrmType 使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
      * @param array $Keys 设置的加密密钥列表。
@@ -62,6 +61,7 @@ class CreateEncryptKeysRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 命名空间信息
+ *
  * @method string getNamespace() 获取命名空间
  * @method void setNamespace(string $Namespace) 设置命名空间
  * @method string getCreationTime() 获取创建时间
  * @method void setCreationTime(string $CreationTime) 设置创建时间
  * @method integer getRepoCount() 获取命名空间下仓库数量
  * @method void setRepoCount(integer $RepoCount) 设置命名空间下仓库数量
- */
-
-/**
- *命名空间信息
  */
 class NamespaceInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class NamespaceInfo extends AbstractModel
      * @var integer 命名空间下仓库数量
      */
     public $RepoCount;
+
     /**
      * @param string $Namespace 命名空间
      * @param string $CreationTime 创建时间
@@ -54,6 +53,7 @@ class NamespaceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

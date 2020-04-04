@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ *  二级状态流水
+ *
  * @method string getStartTime() 获取状态开始时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置状态开始时间
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusMessage(string $StatusMessage) 设置状态详情
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- * 二级状态流水
  */
 class SecondaryStatusTransition extends AbstractModel
 {
@@ -64,6 +62,7 @@ class SecondaryStatusTransition extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusMessage;
+
     /**
      * @param string $StartTime 状态开始时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +77,7 @@ class SecondaryStatusTransition extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

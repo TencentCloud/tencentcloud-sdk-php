@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 子订单列表
+ *
  * @method integer getSubMchIncome() 获取子订单结算应收金额，单位： 分
  * @method void setSubMchIncome(integer $SubMchIncome) 设置子订单结算应收金额，单位： 分
  * @method integer getPlatformIncome() 获取子订单平台应收金额，单位：分
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetadata(string $Metadata) 设置发货标识，由业务在调用聚鑫下单接口的 时候下发
  * @method integer getOriginalAmt() 获取子订单原始金额
  * @method void setOriginalAmt(integer $OriginalAmt) 设置子订单原始金额
- */
-
-/**
- *子订单列表
  */
 class UnifiedOrderInSubOrderList extends AbstractModel
 {
@@ -87,6 +85,7 @@ class UnifiedOrderInSubOrderList extends AbstractModel
      * @var integer 子订单原始金额
      */
     public $OriginalAmt;
+
     /**
      * @param integer $SubMchIncome 子订单结算应收金额，单位： 分
      * @param integer $PlatformIncome 子订单平台应收金额，单位：分
@@ -102,6 +101,7 @@ class UnifiedOrderInSubOrderList extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

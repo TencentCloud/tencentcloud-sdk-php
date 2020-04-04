@@ -18,6 +18,8 @@ namespace TencentCloud\Tbp\V20190311\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TextProcess请求参数结构体
+ *
  * @method string getBotId() 获取机器人标识，用于定义抽象机器人。
  * @method void setBotId(string $BotId) 设置机器人标识，用于定义抽象机器人。
  * @method string getTerminalId() 获取终端标识，每个终端(或线程)对应一个，区分并发多用户。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBotEnv(string $BotEnv) 设置机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
  * @method string getSessionAttributes() 获取透传字段，透传给用户自定义的WebService服务。
  * @method void setSessionAttributes(string $SessionAttributes) 设置透传字段，透传给用户自定义的WebService服务。
- */
-
-/**
- *TextProcess请求参数结构体
  */
 class TextProcessRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class TextProcessRequest extends AbstractModel
      * @var string 透传字段，透传给用户自定义的WebService服务。
      */
     public $SessionAttributes;
+
     /**
      * @param string $BotId 机器人标识，用于定义抽象机器人。
      * @param string $TerminalId 终端标识，每个终端(或线程)对应一个，区分并发多用户。
@@ -70,6 +69,7 @@ class TextProcessRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

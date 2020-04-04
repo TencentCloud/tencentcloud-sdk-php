@@ -18,6 +18,8 @@ namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图像标签检测结果。
+ *
  * @method string getName() 获取图片中的物体名称。
  * @method void setName(string $Name) 设置图片中的物体名称。
  * @method integer getConfidence() 获取算法对于Name的置信度，0-100之间，值越高，表示对于Name越确定。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstCategory(string $FirstCategory) 设置标签的一级分类
  * @method string getSecondCategory() 获取标签的二级分类
  * @method void setSecondCategory(string $SecondCategory) 设置标签的二级分类
- */
-
-/**
- *图像标签检测结果。
  */
 class DetectLabelItem extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DetectLabelItem extends AbstractModel
      * @var string 标签的二级分类
      */
     public $SecondCategory;
+
     /**
      * @param string $Name 图片中的物体名称。
      * @param integer $Confidence 算法对于Name的置信度，0-100之间，值越高，表示对于Name越确定。
@@ -62,6 +61,7 @@ class DetectLabelItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

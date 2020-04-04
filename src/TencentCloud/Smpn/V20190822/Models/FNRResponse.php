@@ -18,12 +18,10 @@ namespace TencentCloud\Smpn\V20190822\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 虚假号码识别回应
+ *
  * @method integer getStatus() 获取虚假号码描述
  * @method void setStatus(integer $Status) 设置虚假号码描述
- */
-
-/**
- *虚假号码识别回应
  */
 class FNRResponse extends AbstractModel
 {
@@ -31,6 +29,7 @@ class FNRResponse extends AbstractModel
      * @var integer 虚假号码描述
      */
     public $Status;
+
     /**
      * @param integer $Status 虚假号码描述
      */
@@ -38,6 +37,7 @@ class FNRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

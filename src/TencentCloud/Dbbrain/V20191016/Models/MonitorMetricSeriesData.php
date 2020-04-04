@@ -18,14 +18,12 @@ namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 单位时间间隔内的监控指标数据
+ *
  * @method array getSeries() 获取监控指标。
  * @method void setSeries(array $Series) 设置监控指标。
  * @method array getTimestamp() 获取监控指标对应的时间戳。
  * @method void setTimestamp(array $Timestamp) 设置监控指标对应的时间戳。
- */
-
-/**
- *单位时间间隔内的监控指标数据
  */
 class MonitorMetricSeriesData extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MonitorMetricSeriesData extends AbstractModel
      * @var array 监控指标对应的时间戳。
      */
     public $Timestamp;
+
     /**
      * @param array $Series 监控指标。
      * @param array $Timestamp 监控指标对应的时间戳。
@@ -46,6 +45,7 @@ class MonitorMetricSeriesData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

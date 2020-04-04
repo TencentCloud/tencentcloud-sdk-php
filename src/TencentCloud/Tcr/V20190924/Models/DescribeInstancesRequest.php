@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstances请求参数结构体
+ *
  * @method array getRegistryids() 获取实例ID列表(为空时，
 表示获取账号下所有实例)
  * @method void setRegistryids(array $Registryids) 设置实例ID列表(为空时，
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置过滤条件
  * @method boolean getAllRegion() 获取获取所有地域的实例，默认为False
  * @method void setAllRegion(boolean $AllRegion) 设置获取所有地域的实例，默认为False
- */
-
-/**
- *DescribeInstances请求参数结构体
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -62,6 +60,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @var boolean 获取所有地域的实例，默认为False
      */
     public $AllRegion;
+
     /**
      * @param array $Registryids 实例ID列表(为空时，
 表示获取账号下所有实例)
@@ -74,6 +73,7 @@ class DescribeInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

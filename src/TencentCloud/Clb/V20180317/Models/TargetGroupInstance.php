@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 目标组实例
+ *
  * @method string getBindIP() 获取目标组实例的内网IP
  * @method void setBindIP(string $BindIP) 设置目标组实例的内网IP
  * @method integer getPort() 获取目标组实例的端口
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWeight(integer $Weight) 设置目标组实例的权重
  * @method integer getNewPort() 获取目标组实例的新端口
  * @method void setNewPort(integer $NewPort) 设置目标组实例的新端口
- */
-
-/**
- *目标组实例
  */
 class TargetGroupInstance extends AbstractModel
 {
@@ -52,6 +50,7 @@ class TargetGroupInstance extends AbstractModel
      * @var integer 目标组实例的新端口
      */
     public $NewPort;
+
     /**
      * @param string $BindIP 目标组实例的内网IP
      * @param integer $Port 目标组实例的端口
@@ -62,6 +61,7 @@ class TargetGroupInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

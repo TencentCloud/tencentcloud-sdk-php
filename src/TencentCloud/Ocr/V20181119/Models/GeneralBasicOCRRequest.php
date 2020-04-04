@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GeneralBasicOCR请求参数结构体
+ *
  * @method string getImageBase64() 获取图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
@@ -67,10 +69,6 @@ nor\hun\tha\lat
 荷兰语、瑞典语、芬兰语、丹麦语、
 挪威语、匈牙利语、泰语、拉丁语系。
  */
-
-/**
- *GeneralBasicOCR请求参数结构体
- */
 class GeneralBasicOCRRequest extends AbstractModel
 {
     /**
@@ -112,6 +110,7 @@ nor\hun\tha\lat
 挪威语、匈牙利语、泰语、拉丁语系。
      */
     public $LanguageType;
+
     /**
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
@@ -142,6 +141,7 @@ nor\hun\tha\lat
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

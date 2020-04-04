@@ -18,6 +18,8 @@ namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RecognizeCar请求参数结构体
+ *
  * @method string getImageUrl() 获取图片URL地址。 
 图片限制： 
 • 图片格式：PNG、JPG、JPEG。 
@@ -41,10 +43,6 @@ use TencentCloud\Common\AbstractModel;
 **注意：图片需要base64编码，并且要去掉编码头部。**
 支持的图片格式：PNG、JPG、JPEG、BMP，暂不支持GIF格式。支持的图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。
  */
-
-/**
- *RecognizeCar请求参数结构体
- */
 class RecognizeCarRequest extends AbstractModel
 {
     /**
@@ -65,6 +63,7 @@ class RecognizeCarRequest extends AbstractModel
 支持的图片格式：PNG、JPG、JPEG、BMP，暂不支持GIF格式。支持的图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。
      */
     public $ImageBase64;
+
     /**
      * @param string $ImageUrl 图片URL地址。 
 图片限制： 
@@ -82,6 +81,7 @@ class RecognizeCarRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

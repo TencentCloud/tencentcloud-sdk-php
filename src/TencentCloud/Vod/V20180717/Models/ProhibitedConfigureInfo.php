@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 违禁任务控制参数
+ *
  * @method ProhibitedAsrReviewTemplateInfo getAsrReviewInfo() 获取语音违禁控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfo $AsrReviewInfo) 设置语音违禁控制参数。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfo $OcrReviewInfo) 设置文本违禁控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *违禁任务控制参数
  */
 class ProhibitedConfigureInfo extends AbstractModel
 {
@@ -44,6 +42,7 @@ class ProhibitedConfigureInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrReviewInfo;
+
     /**
      * @param ProhibitedAsrReviewTemplateInfo $AsrReviewInfo 语音违禁控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class ProhibitedConfigureInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

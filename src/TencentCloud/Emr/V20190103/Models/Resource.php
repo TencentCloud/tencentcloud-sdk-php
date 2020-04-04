@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 资源详情
+ *
  * @method string getSpec() 获取节点规格描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpec(string $Spec) 设置节点规格描述
@@ -66,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskNum(integer $DiskNum) 设置盘数量
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *资源详情
  */
 class Resource extends AbstractModel
 {
@@ -144,6 +142,7 @@ class Resource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskNum;
+
     /**
      * @param string $Spec 节点规格描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,6 +173,7 @@ class Resource extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

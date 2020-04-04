@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 源实例信息
+ *
  * @method string getAccessKey() 获取阿里云AccessKey。源库是阿里云RDS5.6适用
  * @method void setAccessKey(string $AccessKey) 设置阿里云AccessKey。源库是阿里云RDS5.6适用
  * @method string getIp() 获取实例的IP地址
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineVersion() 获取数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
  * @method void setEngineVersion(string $EngineVersion) 设置数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
- */
-
-/**
- *源实例信息
  */
 class SrcInfo extends AbstractModel
 {
@@ -139,6 +137,7 @@ class SrcInfo extends AbstractModel
      * @var string 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
      */
     public $EngineVersion;
+
     /**
      * @param string $AccessKey 阿里云AccessKey。源库是阿里云RDS5.6适用
      * @param string $Ip 实例的IP地址
@@ -162,6 +161,7 @@ class SrcInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

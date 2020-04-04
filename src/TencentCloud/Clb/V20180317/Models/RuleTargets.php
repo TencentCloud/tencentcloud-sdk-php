@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HTTP/HTTPS监听器下的转发规则绑定的后端服务信息
+ *
  * @method string getLocationId() 获取转发规则的 ID
  * @method void setLocationId(string $LocationId) 设置转发规则的 ID
  * @method string getDomain() 获取转发规则的域名
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargets(array $Targets) 设置后端服务的信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *HTTP/HTTPS监听器下的转发规则绑定的后端服务信息
  */
 class RuleTargets extends AbstractModel
 {
@@ -55,6 +53,7 @@ class RuleTargets extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Targets;
+
     /**
      * @param string $LocationId 转发规则的 ID
      * @param string $Domain 转发规则的域名
@@ -66,6 +65,7 @@ class RuleTargets extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

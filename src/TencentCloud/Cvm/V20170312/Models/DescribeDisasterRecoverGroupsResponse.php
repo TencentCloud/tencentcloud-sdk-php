@@ -18,16 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDisasterRecoverGroups返回参数结构体
+ *
  * @method array getDisasterRecoverGroupSet() 获取分散置放群组信息列表。
  * @method void setDisasterRecoverGroupSet(array $DisasterRecoverGroupSet) 设置分散置放群组信息列表。
  * @method integer getTotalCount() 获取用户置放群组总量。
  * @method void setTotalCount(integer $TotalCount) 设置用户置放群组总量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDisasterRecoverGroups返回参数结构体
  */
 class DescribeDisasterRecoverGroupsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDisasterRecoverGroupsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $DisasterRecoverGroupSet 分散置放群组信息列表。
      * @param integer $TotalCount 用户置放群组总量。
@@ -54,6 +53,7 @@ class DescribeDisasterRecoverGroupsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

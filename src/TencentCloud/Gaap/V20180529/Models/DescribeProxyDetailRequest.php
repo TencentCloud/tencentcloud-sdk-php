@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProxyDetail请求参数结构体
+ *
  * @method string getProxyId() 获取需查询的通道ID。
  * @method void setProxyId(string $ProxyId) 设置需查询的通道ID。
- */
-
-/**
- *DescribeProxyDetail请求参数结构体
  */
 class DescribeProxyDetailRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeProxyDetailRequest extends AbstractModel
      * @var string 需查询的通道ID。
      */
     public $ProxyId;
+
     /**
      * @param string $ProxyId 需查询的通道ID。
      */
@@ -38,6 +37,7 @@ class DescribeProxyDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

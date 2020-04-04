@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCertificates返回参数结构体
+ *
  * @method array getCertificateSet() 获取服务器证书列表，包括证书ID 和证书名称。
  * @method void setCertificateSet(array $CertificateSet) 设置服务器证书列表，包括证书ID 和证书名称。
  * @method integer getTotalCount() 获取满足查询条件的服务器证书总数量。
  * @method void setTotalCount(integer $TotalCount) 设置满足查询条件的服务器证书总数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeCertificates返回参数结构体
  */
 class DescribeCertificatesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeCertificatesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $CertificateSet 服务器证书列表，包括证书ID 和证书名称。
      * @param integer $TotalCount 满足查询条件的服务器证书总数量。
@@ -54,6 +53,7 @@ class DescribeCertificatesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

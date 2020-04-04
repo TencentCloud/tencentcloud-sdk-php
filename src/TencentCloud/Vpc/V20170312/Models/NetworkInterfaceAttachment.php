@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 弹性网卡绑定关系
+ *
  * @method string getInstanceId() 获取云主机实例ID。
  * @method void setInstanceId(string $InstanceId) 设置云主机实例ID。
  * @method integer getDeviceIndex() 获取网卡在云主机实例内的序号。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceAccountId(string $InstanceAccountId) 设置云主机所有者账户信息。
  * @method string getAttachTime() 获取绑定时间。
  * @method void setAttachTime(string $AttachTime) 设置绑定时间。
- */
-
-/**
- *弹性网卡绑定关系
  */
 class NetworkInterfaceAttachment extends AbstractModel
 {
@@ -52,6 +50,7 @@ class NetworkInterfaceAttachment extends AbstractModel
      * @var string 绑定时间。
      */
     public $AttachTime;
+
     /**
      * @param string $InstanceId 云主机实例ID。
      * @param integer $DeviceIndex 网卡在云主机实例内的序号。
@@ -62,6 +61,7 @@ class NetworkInterfaceAttachment extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 计算环境的创建或销毁活动
+ *
  * @method string getActivityId() 获取活动ID
  * @method void setActivityId(string $ActivityId) 设置活动ID
  * @method string getComputeNodeId() 获取计算节点ID
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置云服务器实例ID
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *计算环境的创建或销毁活动
  */
 class Activity extends AbstractModel
 {
@@ -100,6 +98,7 @@ class Activity extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
+
     /**
      * @param string $ActivityId 活动ID
      * @param string $ComputeNodeId 计算节点ID
@@ -118,6 +117,7 @@ class Activity extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

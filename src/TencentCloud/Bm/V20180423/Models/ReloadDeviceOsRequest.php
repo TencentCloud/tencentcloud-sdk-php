@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReloadDeviceOs请求参数结构体
+ *
  * @method string getInstanceId() 获取设备的唯一ID
  * @method void setInstanceId(string $InstanceId) 设置设备的唯一ID
  * @method string getPassword() 获取密码。 用户设置的linux root或Windows Administrator密码。密码校验规则: <li> Windows机器密码需12到16位，至少包括三项 `[a-z]`,`[A-Z]`,`[0-9]`和`[()`'`~!@#$%^&*-+=_`|`{}[]:;'<>,.?/]`的特殊符号, 密码不能包含Administrator(不区分大小写); <li> Linux机器密码需8到16位，至少包括两项`[a-z,A-Z]`,`[0-9]`和`[()`'`~!@#$%^&*-+=_`|`{}[]:;'<>,.?/]`的特殊符号
@@ -58,10 +60,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReserveSgConfig(integer $ReserveSgConfig) 设置是否保留安全组配置，取值：1(保留) 0(不保留)，默认取值0
  * @method integer getSysDataSpace() 获取/data分区大小，可不填。除root、swap、usr/local的剩余空间会自动分配到data分区
  * @method void setSysDataSpace(integer $SysDataSpace) 设置/data分区大小，可不填。除root、swap、usr/local的剩余空间会自动分配到data分区
- */
-
-/**
- *ReloadDeviceOs请求参数结构体
  */
 class ReloadDeviceOsRequest extends AbstractModel
 {
@@ -164,6 +162,7 @@ class ReloadDeviceOsRequest extends AbstractModel
      * @var integer /data分区大小，可不填。除root、swap、usr/local的剩余空间会自动分配到data分区
      */
     public $SysDataSpace;
+
     /**
      * @param string $InstanceId 设备的唯一ID
      * @param string $Password 密码。 用户设置的linux root或Windows Administrator密码。密码校验规则: <li> Windows机器密码需12到16位，至少包括三项 `[a-z]`,`[A-Z]`,`[0-9]`和`[()`'`~!@#$%^&*-+=_`|`{}[]:;'<>,.?/]`的特殊符号, 密码不能包含Administrator(不区分大小写); <li> Linux机器密码需8到16位，至少包括两项`[a-z,A-Z]`,`[0-9]`和`[()`'`~!@#$%^&*-+=_`|`{}[]:;'<>,.?/]`的特殊符号
@@ -190,6 +189,7 @@ class ReloadDeviceOsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

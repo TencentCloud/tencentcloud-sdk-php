@@ -18,12 +18,10 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupTime请求参数结构体
+ *
  * @method array getInstanceIds() 获取实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
- */
-
-/**
- *DescribeBackupTime请求参数结构体
  */
 class DescribeBackupTimeRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeBackupTimeRequest extends AbstractModel
      * @var array 实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public $InstanceIds;
+
     /**
      * @param array $InstanceIds 实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
@@ -38,6 +37,7 @@ class DescribeBackupTimeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

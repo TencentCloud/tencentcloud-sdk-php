@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 矩形坐标
+ *
  * @method integer getX() 获取左上角x
  * @method void setX(integer $X) 设置左上角x
  * @method integer getY() 获取左上角y
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) 设置宽度
  * @method integer getHeight() 获取高度
  * @method void setHeight(integer $Height) 设置高度
- */
-
-/**
- *矩形坐标
  */
 class Rect extends AbstractModel
 {
@@ -52,6 +50,7 @@ class Rect extends AbstractModel
      * @var integer 高度
      */
     public $Height;
+
     /**
      * @param integer $X 左上角x
      * @param integer $Y 左上角y
@@ -62,6 +61,7 @@ class Rect extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

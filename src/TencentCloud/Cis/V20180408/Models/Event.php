@@ -18,6 +18,8 @@ namespace TencentCloud\Cis\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 容器实例事件
+ *
  * @method string getFirstSeen() 获取事件首次出现时间
  * @method void setFirstSeen(string $FirstSeen) 设置事件首次出现时间
  * @method string getLastSeen() 获取事件上次出现时间
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReason(string $Reason) 设置事件出现原因
  * @method string getMessage() 获取事件消息
  * @method void setMessage(string $Message) 设置事件消息
- */
-
-/**
- *容器实例事件
  */
 class Event extends AbstractModel
 {
@@ -66,6 +64,7 @@ class Event extends AbstractModel
      * @var string 事件消息
      */
     public $Message;
+
     /**
      * @param string $FirstSeen 事件首次出现时间
      * @param string $LastSeen 事件上次出现时间
@@ -78,6 +77,7 @@ class Event extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

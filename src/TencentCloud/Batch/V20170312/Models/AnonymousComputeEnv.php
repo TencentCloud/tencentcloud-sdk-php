@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 计算环境
+ *
  * @method string getEnvType() 获取计算环境管理类型
  * @method void setEnvType(string $EnvType) 设置计算环境管理类型
  * @method EnvData getEnvData() 获取计算环境具体参数
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMountDataDisks(array $MountDataDisks) 设置数据盘挂载选项
  * @method AgentRunningMode getAgentRunningMode() 获取agent运行模式，适用于Windows系统
  * @method void setAgentRunningMode(AgentRunningMode $AgentRunningMode) 设置agent运行模式，适用于Windows系统
- */
-
-/**
- *计算环境
  */
 class AnonymousComputeEnv extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AnonymousComputeEnv extends AbstractModel
      * @var AgentRunningMode agent运行模式，适用于Windows系统
      */
     public $AgentRunningMode;
+
     /**
      * @param string $EnvType 计算环境管理类型
      * @param EnvData $EnvData 计算环境具体参数
@@ -62,6 +61,7 @@ class AnonymousComputeEnv extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

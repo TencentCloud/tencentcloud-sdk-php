@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RenewVpnGateway请求参数结构体
+ *
  * @method string getVpnGatewayId() 获取VPN网关实例ID。
  * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费计费模式。
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费计费模式。
- */
-
-/**
- *RenewVpnGateway请求参数结构体
  */
 class RenewVpnGatewayRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RenewVpnGatewayRequest extends AbstractModel
      * @var InstanceChargePrepaid 预付费计费模式。
      */
     public $InstanceChargePrepaid;
+
     /**
      * @param string $VpnGatewayId VPN网关实例ID。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费计费模式。
@@ -46,6 +45,7 @@ class RenewVpnGatewayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

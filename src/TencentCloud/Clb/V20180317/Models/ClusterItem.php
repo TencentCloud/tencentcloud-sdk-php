@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 独占集群信息
+ *
  * @method string getClusterId() 获取集群唯一ID
  * @method void setClusterId(string $ClusterId) 设置集群唯一ID
  * @method string getClusterName() 获取集群名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置集群所在可用区，如ap-guangzhou-1
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *独占集群信息
  */
 class ClusterItem extends AbstractModel
 {
@@ -51,6 +49,7 @@ class ClusterItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
+
     /**
      * @param string $ClusterId 集群唯一ID
      * @param string $ClusterName 集群名称
@@ -62,6 +61,7 @@ class ClusterItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

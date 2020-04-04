@@ -18,16 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 操作系统支持的类型。
+ *
  * @method string getOsName() 获取操作系统类型
  * @method void setOsName(string $OsName) 设置操作系统类型
  * @method array getOsVersions() 获取支持的操作系统版本
  * @method void setOsVersions(array $OsVersions) 设置支持的操作系统版本
  * @method array getArchitecture() 获取支持的操作系统架构
  * @method void setArchitecture(array $Architecture) 设置支持的操作系统架构
- */
-
-/**
- *操作系统支持的类型。
  */
 class OsVersion extends AbstractModel
 {
@@ -45,6 +43,7 @@ class OsVersion extends AbstractModel
      * @var array 支持的操作系统架构
      */
     public $Architecture;
+
     /**
      * @param string $OsName 操作系统类型
      * @param array $OsVersions 支持的操作系统版本
@@ -54,6 +53,7 @@ class OsVersion extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

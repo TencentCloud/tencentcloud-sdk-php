@@ -18,12 +18,10 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 复制镜像tag返回值
+ *
  * @method string getDigest() 获取镜像Digest值
  * @method void setDigest(string $Digest) 设置镜像Digest值
- */
-
-/**
- *复制镜像tag返回值
  */
 class DupImageTagResp extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DupImageTagResp extends AbstractModel
      * @var string 镜像Digest值
      */
     public $Digest;
+
     /**
      * @param string $Digest 镜像Digest值
      */
@@ -38,6 +37,7 @@ class DupImageTagResp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

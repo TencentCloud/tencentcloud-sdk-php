@@ -18,14 +18,13 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ExportNonlocalLoginPlaces请求参数结构体
+ *
 
- */
-
-/**
- *ExportNonlocalLoginPlaces请求参数结构体
  */
 class ExportNonlocalLoginPlacesRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class ExportNonlocalLoginPlacesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

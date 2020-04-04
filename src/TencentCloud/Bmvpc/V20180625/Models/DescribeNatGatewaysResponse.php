@@ -18,16 +18,14 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNatGateways返回参数结构体
+ *
  * @method array getNatGatewayInfoSet() 获取NAT网关信息列表
  * @method void setNatGatewayInfoSet(array $NatGatewayInfoSet) 设置NAT网关信息列表
  * @method integer getTotalCount() 获取总数目
  * @method void setTotalCount(integer $TotalCount) 设置总数目
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeNatGateways返回参数结构体
  */
 class DescribeNatGatewaysResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeNatGatewaysResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $NatGatewayInfoSet NAT网关信息列表
      * @param integer $TotalCount 总数目
@@ -54,6 +53,7 @@ class DescribeNatGatewaysResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

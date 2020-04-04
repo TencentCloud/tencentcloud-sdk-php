@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNamespace请求参数结构体
+ *
  * @method string getRegistryId() 获取实例Id
  * @method void setRegistryId(string $RegistryId) 设置实例Id
  * @method string getNamespaceName() 获取命名空间名称
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
  * @method boolean getIsPublic() 获取访问级别，True为公开，False为私有
  * @method void setIsPublic(boolean $IsPublic) 设置访问级别，True为公开，False为私有
- */
-
-/**
- *ModifyNamespace请求参数结构体
  */
 class ModifyNamespaceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyNamespaceRequest extends AbstractModel
      * @var boolean 访问级别，True为公开，False为私有
      */
     public $IsPublic;
+
     /**
      * @param string $RegistryId 实例Id
      * @param string $NamespaceName 命名空间名称
@@ -54,6 +53,7 @@ class ModifyNamespaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

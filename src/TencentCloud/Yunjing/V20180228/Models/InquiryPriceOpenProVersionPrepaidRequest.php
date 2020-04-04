@@ -18,14 +18,12 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceOpenProVersionPrepaid请求参数结构体
+ *
  * @method ChargePrepaid getChargePrepaid() 获取预付费模式(包年包月)参数设置。
  * @method void setChargePrepaid(ChargePrepaid $ChargePrepaid) 设置预付费模式(包年包月)参数设置。
  * @method array getMachines() 获取需要开通专业版机器列表数组。
  * @method void setMachines(array $Machines) 设置需要开通专业版机器列表数组。
- */
-
-/**
- *InquiryPriceOpenProVersionPrepaid请求参数结构体
  */
 class InquiryPriceOpenProVersionPrepaidRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InquiryPriceOpenProVersionPrepaidRequest extends AbstractModel
      * @var array 需要开通专业版机器列表数组。
      */
     public $Machines;
+
     /**
      * @param ChargePrepaid $ChargePrepaid 预付费模式(包年包月)参数设置。
      * @param array $Machines 需要开通专业版机器列表数组。
@@ -46,6 +45,7 @@ class InquiryPriceOpenProVersionPrepaidRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

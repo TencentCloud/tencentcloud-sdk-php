@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 订阅实例信息
+ *
  * @method string getSubscribeId() 获取数据订阅的实例ID
  * @method void setSubscribeId(string $SubscribeId) 设置数据订阅的实例ID
  * @method string getSubscribeName() 获取数据订阅实例的名称
@@ -60,10 +62,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置数据订阅实例的状态，creating - 创建中，normal - 正常运行，isolating - 隔离中，isolated - 已隔离，offlining - 下线中，offline - 已下线
  * @method string getSdkConsumedTime() 获取SDK最后一条确认消息的时间戳，如果SDK一直消费，也可以作为SDK当前消费时间点
  * @method void setSdkConsumedTime(string $SdkConsumedTime) 设置SDK最后一条确认消息的时间戳，如果SDK一直消费，也可以作为SDK当前消费时间点
- */
-
-/**
- *订阅实例信息
  */
 class SubscribeInfo extends AbstractModel
 {
@@ -171,6 +169,7 @@ class SubscribeInfo extends AbstractModel
      * @var string SDK最后一条确认消息的时间戳，如果SDK一直消费，也可以作为SDK当前消费时间点
      */
     public $SdkConsumedTime;
+
     /**
      * @param string $SubscribeId 数据订阅的实例ID
      * @param string $SubscribeName 数据订阅实例的名称
@@ -198,6 +197,7 @@ class SubscribeInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

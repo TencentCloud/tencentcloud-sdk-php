@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 专业版周报漏洞数据。
+ *
  * @method string getMachineIp() 获取主机内网IP。
  * @method void setMachineIp(string $MachineIp) 设置主机内网IP。
  * @method string getVulName() 获取漏洞名称。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 <li> FIXED : 已修复</li>
  * @method string getLastScanTime() 获取最后扫描时间。
  * @method void setLastScanTime(string $LastScanTime) 设置最后扫描时间。
- */
-
-/**
- *专业版周报漏洞数据。
  */
 class WeeklyReportVul extends AbstractModel
 {
@@ -84,6 +82,7 @@ class WeeklyReportVul extends AbstractModel
      * @var string 最后扫描时间。
      */
     public $LastScanTime;
+
     /**
      * @param string $MachineIp 主机内网IP。
      * @param string $VulName 漏洞名称。
@@ -102,6 +101,7 @@ class WeeklyReportVul extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

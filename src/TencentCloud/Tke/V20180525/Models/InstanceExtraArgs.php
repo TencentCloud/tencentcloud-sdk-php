@@ -18,14 +18,12 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 节点自定义参数
+ *
  * @method array getKubelet() 获取kubelet自定义参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKubelet(array $Kubelet) 设置kubelet自定义参数
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *节点自定义参数
  */
 class InstanceExtraArgs extends AbstractModel
 {
@@ -34,6 +32,7 @@ class InstanceExtraArgs extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Kubelet;
+
     /**
      * @param array $Kubelet kubelet自定义参数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,6 +41,7 @@ class InstanceExtraArgs extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

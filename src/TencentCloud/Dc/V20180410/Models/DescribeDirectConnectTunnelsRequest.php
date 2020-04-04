@@ -18,6 +18,8 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDirectConnectTunnels请求参数结构体
+ *
  * @method array getFilters() 获取过滤条件:
 参数不支持同时指定DirectConnectTunnelIds和Filters。
 <li> direct-connect-tunnel-name, 专用通道名称。</li>
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100
- */
-
-/**
- *DescribeDirectConnectTunnels请求参数结构体
  */
 class DescribeDirectConnectTunnelsRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ class DescribeDirectConnectTunnelsRequest extends AbstractModel
      * @var integer 返回数量，默认为20，最大值为100
      */
     public $Limit;
+
     /**
      * @param array $Filters 过滤条件:
 参数不支持同时指定DirectConnectTunnelIds和Filters。
@@ -78,6 +77,7 @@ class DescribeDirectConnectTunnelsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

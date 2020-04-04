@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转场操作
+ *
  * @method string getType() 获取转场类型，取值有：
 <ul>
 <li>图像的转场操作，用于两个视频片段图像间的转场处理：
@@ -113,10 +115,6 @@ use TencentCloud\Common\AbstractModel;
 </li>
 </ul>
  */
-
-/**
- *转场操作
- */
 class TransitionOpertion extends AbstractModel
 {
     /**
@@ -169,6 +167,7 @@ class TransitionOpertion extends AbstractModel
 </ul>
      */
     public $Type;
+
     /**
      * @param string $Type 转场类型，取值有：
 <ul>
@@ -222,6 +221,7 @@ class TransitionOpertion extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

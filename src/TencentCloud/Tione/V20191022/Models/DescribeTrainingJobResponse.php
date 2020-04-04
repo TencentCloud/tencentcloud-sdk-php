@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTrainingJob返回参数结构体
+ *
  * @method AlgorithmSpecification getAlgorithmSpecification() 获取算法镜像配置
  * @method void setAlgorithmSpecification(AlgorithmSpecification $AlgorithmSpecification) 设置算法镜像配置
  * @method string getTrainingJobName() 获取任务名称
@@ -72,10 +74,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrainingJobStatus(string $TrainingJobStatus) 设置任务状态
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeTrainingJob返回参数结构体
  */
 class DescribeTrainingJobResponse extends AbstractModel
 {
@@ -177,6 +175,7 @@ class DescribeTrainingJobResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param AlgorithmSpecification $AlgorithmSpecification 算法镜像配置
      * @param string $TrainingJobName 任务名称
@@ -210,6 +209,7 @@ class DescribeTrainingJobResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

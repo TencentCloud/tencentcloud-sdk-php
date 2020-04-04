@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 子网对象
+ *
  * @method string getVpcId() 获取`VPC`实例`ID`。
  * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。
  * @method string getSubnetId() 获取子网实例`ID`，例如：subnet-bthucmmy。
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalIpAddressCount(integer $TotalIpAddressCount) 设置子网`IP`总数。
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
- */
-
-/**
- *子网对象
  */
 class Subnet extends AbstractModel
 {
@@ -129,6 +127,7 @@ class Subnet extends AbstractModel
      * @var array 标签键值对。
      */
     public $TagSet;
+
     /**
      * @param string $VpcId `VPC`实例`ID`。
      * @param string $SubnetId 子网实例`ID`，例如：subnet-bthucmmy。
@@ -150,6 +149,7 @@ class Subnet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

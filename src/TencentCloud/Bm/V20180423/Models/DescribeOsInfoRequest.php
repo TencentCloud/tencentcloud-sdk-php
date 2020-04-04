@@ -18,12 +18,10 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeOsInfo请求参数结构体
+ *
  * @method string getDeviceClassCode() 获取设备类型代号。 可以从DescribeDeviceClass查询设备类型列表
  * @method void setDeviceClassCode(string $DeviceClassCode) 设置设备类型代号。 可以从DescribeDeviceClass查询设备类型列表
- */
-
-/**
- *DescribeOsInfo请求参数结构体
  */
 class DescribeOsInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeOsInfoRequest extends AbstractModel
      * @var string 设备类型代号。 可以从DescribeDeviceClass查询设备类型列表
      */
     public $DeviceClassCode;
+
     /**
      * @param string $DeviceClassCode 设备类型代号。 可以从DescribeDeviceClass查询设备类型列表
      */
@@ -38,6 +37,7 @@ class DescribeOsInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

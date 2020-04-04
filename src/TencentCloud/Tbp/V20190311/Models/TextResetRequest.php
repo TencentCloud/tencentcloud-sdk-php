@@ -18,16 +18,14 @@ namespace TencentCloud\Tbp\V20190311\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TextReset请求参数结构体
+ *
  * @method string getBotId() 获取机器人标识，用于定义抽象机器人。
  * @method void setBotId(string $BotId) 设置机器人标识，用于定义抽象机器人。
  * @method string getTerminalId() 获取终端标识，每个终端(或线程)对应一个，区分并发多用户。
  * @method void setTerminalId(string $TerminalId) 设置终端标识，每个终端(或线程)对应一个，区分并发多用户。
  * @method string getBotEnv() 获取机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
  * @method void setBotEnv(string $BotEnv) 设置机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
- */
-
-/**
- *TextReset请求参数结构体
  */
 class TextResetRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class TextResetRequest extends AbstractModel
      * @var string 机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
      */
     public $BotEnv;
+
     /**
      * @param string $BotId 机器人标识，用于定义抽象机器人。
      * @param string $TerminalId 终端标识，每个终端(或线程)对应一个，区分并发多用户。
@@ -54,6 +53,7 @@ class TextResetRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

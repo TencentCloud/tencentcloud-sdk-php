@@ -18,6 +18,8 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 签署人信息
+ *
  * @method string getAccountResId() 获取账户ID
  * @method void setAccountResId(string $AccountResId) 设置账户ID
  * @method string getAuthorizationTime() 获取授权时间（上传合同可不传该参数）
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertType(integer $CertType) 设置默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
  * @method string getSignLocation() 获取签名域的标签值
  * @method void setSignLocation(string $SignLocation) 设置签名域的标签值
- */
-
-/**
- *签署人信息
  */
 class SignInfo extends AbstractModel
 {
@@ -73,6 +71,7 @@ class SignInfo extends AbstractModel
      * @var string 签名域的标签值
      */
     public $SignLocation;
+
     /**
      * @param string $AccountResId 账户ID
      * @param string $AuthorizationTime 授权时间（上传合同可不传该参数）
@@ -86,6 +85,7 @@ class SignInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

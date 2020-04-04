@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeComponentInfo返回参数结构体
+ *
  * @method integer getId() 获取组件ID。
  * @method void setId(integer $Id) 设置组件ID。
  * @method string getComponentName() 获取组件名称。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置组件描述。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeComponentInfo返回参数结构体
  */
 class DescribeComponentInfoResponse extends AbstractModel
 {
@@ -72,6 +70,7 @@ class DescribeComponentInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Id 组件ID。
      * @param string $ComponentName 组件名称。
@@ -86,6 +85,7 @@ class DescribeComponentInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

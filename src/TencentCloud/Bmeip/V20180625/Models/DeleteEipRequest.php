@@ -18,12 +18,10 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteEip请求参数结构体
+ *
  * @method array getEipIds() 获取Eip实例ID列表
  * @method void setEipIds(array $EipIds) 设置Eip实例ID列表
- */
-
-/**
- *DeleteEip请求参数结构体
  */
 class DeleteEipRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteEipRequest extends AbstractModel
      * @var array Eip实例ID列表
      */
     public $EipIds;
+
     /**
      * @param array $EipIds Eip实例ID列表
      */
@@ -38,6 +37,7 @@ class DeleteEipRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

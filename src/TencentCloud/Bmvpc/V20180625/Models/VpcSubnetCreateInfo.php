@@ -18,16 +18,14 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 创建VPC下默认子网
+ *
  * @method string getSubnetName() 获取子网名称
  * @method void setSubnetName(string $SubnetName) 设置子网名称
  * @method string getCidrBlock() 获取子网的CIDR
  * @method void setCidrBlock(string $CidrBlock) 设置子网的CIDR
  * @method string getZone() 获取子网的可用区
  * @method void setZone(string $Zone) 设置子网的可用区
- */
-
-/**
- *创建VPC下默认子网
  */
 class VpcSubnetCreateInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class VpcSubnetCreateInfo extends AbstractModel
      * @var string 子网的可用区
      */
     public $Zone;
+
     /**
      * @param string $SubnetName 子网名称
      * @param string $CidrBlock 子网的CIDR
@@ -54,6 +53,7 @@ class VpcSubnetCreateInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

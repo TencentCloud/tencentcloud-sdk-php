@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 升级实例 -- 切分分片类型
+ *
  * @method array getShardInstanceIds() 获取分片ID数组
  * @method void setShardInstanceIds(array $ShardInstanceIds) 设置分片ID数组
  * @method integer getSplitRate() 获取数据切分比例
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShardMemory(integer $ShardMemory) 设置分片内存大小，单位 GB
  * @method integer getShardStorage() 获取分片存储大小，单位 GB
  * @method void setShardStorage(integer $ShardStorage) 设置分片存储大小，单位 GB
- */
-
-/**
- *升级实例 -- 切分分片类型
  */
 class SplitShardConfig extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SplitShardConfig extends AbstractModel
      * @var integer 分片存储大小，单位 GB
      */
     public $ShardStorage;
+
     /**
      * @param array $ShardInstanceIds 分片ID数组
      * @param integer $SplitRate 数据切分比例
@@ -62,6 +61,7 @@ class SplitShardConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

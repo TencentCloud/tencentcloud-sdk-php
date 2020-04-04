@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RunUserCmd请求参数结构体
+ *
  * @method string getCmdId() 获取自定义脚本ID
  * @method void setCmdId(string $CmdId) 设置自定义脚本ID
  * @method string getUserName() 获取执行脚本机器的用户名
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) 设置执行脚本的服务器实例
  * @method string getCmdParam() 获取执行脚本的参数，必须经过base64编码
  * @method void setCmdParam(string $CmdParam) 设置执行脚本的参数，必须经过base64编码
- */
-
-/**
- *RunUserCmd请求参数结构体
  */
 class RunUserCmdRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class RunUserCmdRequest extends AbstractModel
      * @var string 执行脚本的参数，必须经过base64编码
      */
     public $CmdParam;
+
     /**
      * @param string $CmdId 自定义脚本ID
      * @param string $UserName 执行脚本机器的用户名
@@ -70,6 +69,7 @@ class RunUserCmdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

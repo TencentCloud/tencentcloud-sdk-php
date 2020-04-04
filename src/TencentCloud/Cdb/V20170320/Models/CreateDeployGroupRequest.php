@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDeployGroup请求参数结构体
+ *
  * @method string getDeployGroupName() 获取置放群组名称，最长不能超过60个字符。
  * @method void setDeployGroupName(string $DeployGroupName) 设置置放群组名称，最长不能超过60个字符。
  * @method string getDescription() 获取置放群组描述，最长不能超过200个字符。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimitNum(integer $LimitNum) 设置置放群组亲和性策略1中同台物理机上实例的限制个数。
  * @method array getDevClass() 获取置放群组机型属性，可选参数：SH12+SH02、TS85。
  * @method void setDevClass(array $DevClass) 设置置放群组机型属性，可选参数：SH12+SH02、TS85。
- */
-
-/**
- *CreateDeployGroup请求参数结构体
  */
 class CreateDeployGroupRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateDeployGroupRequest extends AbstractModel
      * @var array 置放群组机型属性，可选参数：SH12+SH02、TS85。
      */
     public $DevClass;
+
     /**
      * @param string $DeployGroupName 置放群组名称，最长不能超过60个字符。
      * @param string $Description 置放群组描述，最长不能超过200个字符。
@@ -70,6 +69,7 @@ class CreateDeployGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

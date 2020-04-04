@@ -18,14 +18,12 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRoleList请求参数结构体
+ *
  * @method integer getPage() 获取页码，从1开始
  * @method void setPage(integer $Page) 设置页码，从1开始
  * @method integer getRp() 获取每页行数，不能大于200
  * @method void setRp(integer $Rp) 设置每页行数，不能大于200
- */
-
-/**
- *DescribeRoleList请求参数结构体
  */
 class DescribeRoleListRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeRoleListRequest extends AbstractModel
      * @var integer 每页行数，不能大于200
      */
     public $Rp;
+
     /**
      * @param integer $Page 页码，从1开始
      * @param integer $Rp 每页行数，不能大于200
@@ -46,6 +45,7 @@ class DescribeRoleListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DRM 自适应码流播放信息修改对象
+ *
  * @method integer getSimpleAesDefinition() 获取保护类型为 SimpleAES 的转自适应码流模板 ID。
  * @method void setSimpleAesDefinition(integer $SimpleAesDefinition) 设置保护类型为 SimpleAES 的转自适应码流模板 ID。
- */
-
-/**
- *DRM 自适应码流播放信息修改对象
  */
 class DrmStreamingsInfoForUpdate extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DrmStreamingsInfoForUpdate extends AbstractModel
      * @var integer 保护类型为 SimpleAES 的转自适应码流模板 ID。
      */
     public $SimpleAesDefinition;
+
     /**
      * @param integer $SimpleAesDefinition 保护类型为 SimpleAES 的转自适应码流模板 ID。
      */
@@ -38,6 +37,7 @@ class DrmStreamingsInfoForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

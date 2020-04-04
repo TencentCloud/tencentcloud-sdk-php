@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCostSummaryByProduct请求参数结构体
+ *
  * @method string getPayerUin() 获取查询账单数据的用户UIN
  * @method void setPayerUin(string $PayerUin) 设置查询账单数据的用户UIN
  * @method string getBeginTime() 获取目前只支持传当月1号 00:00:00，且必须和EndTime为相同月份，不支持跨月查询，例 2018-09-01 00:00:00
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getNeedRecordNum() 获取是否需要返回记录数量，0不需要，1需要，默认不需要
  * @method void setNeedRecordNum(integer $NeedRecordNum) 设置是否需要返回记录数量，0不需要，1需要，默认不需要
- */
-
-/**
- *DescribeCostSummaryByProduct请求参数结构体
  */
 class DescribeCostSummaryByProductRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeCostSummaryByProductRequest extends AbstractModel
      * @var integer 是否需要返回记录数量，0不需要，1需要，默认不需要
      */
     public $NeedRecordNum;
+
     /**
      * @param string $PayerUin 查询账单数据的用户UIN
      * @param string $BeginTime 目前只支持传当月1号 00:00:00，且必须和EndTime为相同月份，不支持跨月查询，例 2018-09-01 00:00:00
@@ -78,6 +77,7 @@ class DescribeCostSummaryByProductRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

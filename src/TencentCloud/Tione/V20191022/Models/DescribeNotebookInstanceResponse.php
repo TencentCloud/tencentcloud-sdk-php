@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNotebookInstance返回参数结构体
+ *
  * @method string getNotebookInstanceName() 获取Notebook实例名称
  * @method void setNotebookInstanceName(string $NotebookInstanceName) 设置Notebook实例名称
  * @method string getInstanceType() 获取Notebook算力资源类型
@@ -86,10 +88,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeNotebookInstance返回参数结构体
  */
 class DescribeNotebookInstanceResponse extends AbstractModel
 {
@@ -194,6 +192,7 @@ class DescribeNotebookInstanceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $NotebookInstanceName Notebook实例名称
      * @param string $InstanceType Notebook算力资源类型
@@ -234,6 +233,7 @@ class DescribeNotebookInstanceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

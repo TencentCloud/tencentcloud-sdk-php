@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AttributeKey值详情
+ *
  * @method string getLabel() 获取中文标签
  * @method void setLabel(string $Label) 设置中文标签
  * @method string getLabelType() 获取输入框类型
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStarter(string $Starter) 设置初始化展示
  * @method string getValue() 获取AttributeKey值
  * @method void setValue(string $Value) 设置AttributeKey值
- */
-
-/**
- *AttributeKey值详情
  */
 class AttributeKeyDetail extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AttributeKeyDetail extends AbstractModel
      * @var string AttributeKey值
      */
     public $Value;
+
     /**
      * @param string $Label 中文标签
      * @param string $LabelType 输入框类型
@@ -70,6 +69,7 @@ class AttributeKeyDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

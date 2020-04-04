@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateUser请求参数结构体
+ *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getName() 获取用户名称
  * @method void setName(string $Name) 设置用户名称
  * @method string getPassword() 获取用户密码
  * @method void setPassword(string $Password) 设置用户密码
- */
-
-/**
- *CreateUser请求参数结构体
  */
 class CreateUserRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateUserRequest extends AbstractModel
      * @var string 用户密码
      */
     public $Password;
+
     /**
      * @param string $InstanceId 实例Id
      * @param string $Name 用户名称
@@ -54,6 +53,7 @@ class CreateUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

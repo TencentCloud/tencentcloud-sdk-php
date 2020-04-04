@@ -18,14 +18,12 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 环境变量
+ *
  * @method string getName() 获取名称
  * @method void setName(string $Name) 设置名称
  * @method string getValue() 获取值
  * @method void setValue(string $Value) 设置值
- */
-
-/**
- *环境变量
  */
 class EnvConfig extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EnvConfig extends AbstractModel
      * @var string 值
      */
     public $Value;
+
     /**
      * @param string $Name 名称
      * @param string $Value 值
@@ -46,6 +45,7 @@ class EnvConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

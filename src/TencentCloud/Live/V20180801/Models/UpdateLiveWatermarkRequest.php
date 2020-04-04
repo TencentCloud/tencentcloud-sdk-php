@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateLiveWatermark请求参数结构体
+ *
  * @method integer getWatermarkId() 获取水印ID。
  * @method void setWatermarkId(integer $WatermarkId) 设置水印ID。
  * @method string getPictureUrl() 获取水印图片url。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) 设置水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
  * @method integer getHeight() 获取水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
  * @method void setHeight(integer $Height) 设置水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
- */
-
-/**
- *UpdateLiveWatermark请求参数结构体
  */
 class UpdateLiveWatermarkRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class UpdateLiveWatermarkRequest extends AbstractModel
      * @var integer 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
      */
     public $Height;
+
     /**
      * @param integer $WatermarkId 水印ID。
      * @param string $PictureUrl 水印图片url。
@@ -86,6 +85,7 @@ class UpdateLiveWatermarkRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

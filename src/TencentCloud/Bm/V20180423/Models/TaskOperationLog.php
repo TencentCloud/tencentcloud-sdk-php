@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 维修任务操作日志
+ *
  * @method string getTaskStep() 获取操作步骤
  * @method void setTaskStep(string $TaskStep) 设置操作步骤
  * @method string getOperator() 获取操作人
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperationDetail(string $OperationDetail) 设置操作描述
  * @method string getOperationTime() 获取操作时间
  * @method void setOperationTime(string $OperationTime) 设置操作时间
- */
-
-/**
- *维修任务操作日志
  */
 class TaskOperationLog extends AbstractModel
 {
@@ -52,6 +50,7 @@ class TaskOperationLog extends AbstractModel
      * @var string 操作时间
      */
     public $OperationTime;
+
     /**
      * @param string $TaskStep 操作步骤
      * @param string $Operator 操作人
@@ -62,6 +61,7 @@ class TaskOperationLog extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

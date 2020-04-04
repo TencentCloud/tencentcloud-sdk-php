@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 集群
+ *
  * @method string getClusterId() 获取集群ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置集群ID
@@ -126,10 +128,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperationInfo(OperationInfo $OperationInfo) 设置返回给前端的控制信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *集群
  */
 class Cluster extends AbstractModel
 {
@@ -294,6 +292,7 @@ class Cluster extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperationInfo;
+
     /**
      * @param string $ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -354,6 +353,7 @@ class Cluster extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

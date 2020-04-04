@@ -18,14 +18,12 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCosSecKeyInstance请求参数结构体
+ *
  * @method string getCosRegion() 获取地域信息，例如广州：ap-guangzhou，上海：ap-shanghai，默认为广州。
  * @method void setCosRegion(string $CosRegion) 设置地域信息，例如广州：ap-guangzhou，上海：ap-shanghai，默认为广州。
  * @method integer getDuration() 获取密钥有效时间，默认为1小时。
  * @method void setDuration(integer $Duration) 设置密钥有效时间，默认为1小时。
- */
-
-/**
- *CreateCosSecKeyInstance请求参数结构体
  */
 class CreateCosSecKeyInstanceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateCosSecKeyInstanceRequest extends AbstractModel
      * @var integer 密钥有效时间，默认为1小时。
      */
     public $Duration;
+
     /**
      * @param string $CosRegion 地域信息，例如广州：ap-guangzhou，上海：ap-shanghai，默认为广州。
      * @param integer $Duration 密钥有效时间，默认为1小时。
@@ -46,6 +45,7 @@ class CreateCosSecKeyInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

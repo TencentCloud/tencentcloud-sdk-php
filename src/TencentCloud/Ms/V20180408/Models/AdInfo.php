@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 广告信息
+ *
  * @method array getSpots() 获取插播广告列表
  * @method void setSpots(array $Spots) 设置插播广告列表
  * @method array getBoutiqueRecommands() 获取精品推荐广告列表
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIntegralWalls(array $IntegralWalls) 设置积分墙广告列表
  * @method array getNotifyBars() 获取通知栏广告列表
  * @method void setNotifyBars(array $NotifyBars) 设置通知栏广告列表
- */
-
-/**
- *广告信息
  */
 class AdInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class AdInfo extends AbstractModel
      * @var array 通知栏广告列表
      */
     public $NotifyBars;
+
     /**
      * @param array $Spots 插播广告列表
      * @param array $BoutiqueRecommands 精品推荐广告列表
@@ -78,6 +77,7 @@ class AdInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

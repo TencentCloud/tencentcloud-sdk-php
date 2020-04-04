@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateFunctionConfiguration请求参数结构体
+ *
  * @method string getFunctionName() 获取要修改的函数名称
  * @method void setFunctionName(string $FunctionName) 设置要修改的函数名称
  * @method string getDescription() 获取函数描述。最大支持 1000 个英文字母、数字、空格、逗号和英文句号，支持中文
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) 设置函数关联的死信队列信息
  * @method string getOnsEnable() 获取是否开启Ons访问能力，TRUE 为开启，FALSE为关闭
  * @method void setOnsEnable(string $OnsEnable) 设置是否开启Ons访问能力，TRUE 为开启，FALSE为关闭
- */
-
-/**
- *UpdateFunctionConfiguration请求参数结构体
  */
 class UpdateFunctionConfigurationRequest extends AbstractModel
 {
@@ -136,6 +134,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @var string 是否开启Ons访问能力，TRUE 为开启，FALSE为关闭
      */
     public $OnsEnable;
+
     /**
      * @param string $FunctionName 要修改的函数名称
      * @param string $Description 函数描述。最大支持 1000 个英文字母、数字、空格、逗号和英文句号，支持中文
@@ -158,6 +157,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

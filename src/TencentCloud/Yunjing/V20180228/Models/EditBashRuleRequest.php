@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EditBashRule请求参数结构体
+ *
  * @method string getName() 获取规则名称
  * @method void setName(string $Name) 设置规则名称
  * @method integer getLevel() 获取危险等级(1: 高危 2:中危 3: 低危)
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostip(string $Hostip) 设置主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
  * @method integer getIsGlobal() 获取是否全局规则(默认否)
  * @method void setIsGlobal(integer $IsGlobal) 设置是否全局规则(默认否)
- */
-
-/**
- *EditBashRule请求参数结构体
  */
 class EditBashRuleRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class EditBashRuleRequest extends AbstractModel
      * @var integer 是否全局规则(默认否)
      */
     public $IsGlobal;
+
     /**
      * @param string $Name 规则名称
      * @param integer $Level 危险等级(1: 高危 2:中危 3: 低危)
@@ -86,6 +85,7 @@ class EditBashRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云日志服务相关信息
+ *
  * @method string getLogsetName() 获取log名
  * @method void setLogsetName(string $LogsetName) 设置log名
  * @method string getLogsetId() 获取log-id
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) 设置topic-id
  * @method string getRegion() 获取cls日志所属地域
  * @method void setRegion(string $Region) 设置cls日志所属地域
- */
-
-/**
- *云日志服务相关信息
  */
 class LogServiceInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class LogServiceInfo extends AbstractModel
      * @var string cls日志所属地域
      */
     public $Region;
+
     /**
      * @param string $LogsetName log名
      * @param string $LogsetId log-id
@@ -70,6 +69,7 @@ class LogServiceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 镜像tag信息
+ *
  * @method string getTagName() 获取Tag名称
  * @method void setTagName(string $TagName) 设置Tag名称
  * @method string getTagId() 获取镜像Id
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
  * @method string getPushTime() 获取镜像更新时间
  * @method void setPushTime(string $PushTime) 设置镜像更新时间
- */
-
-/**
- *镜像tag信息
  */
 class TagInfo extends AbstractModel
 {
@@ -125,6 +123,7 @@ class TagInfo extends AbstractModel
      * @var string 镜像更新时间
      */
     public $PushTime;
+
     /**
      * @param string $TagName Tag名称
      * @param string $TagId 镜像Id
@@ -146,6 +145,7 @@ class TagInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

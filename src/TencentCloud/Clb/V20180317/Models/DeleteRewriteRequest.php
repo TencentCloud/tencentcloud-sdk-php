@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteRewrite请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID
  * @method string getSourceListenerId() 获取源监听器ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetListenerId(string $TargetListenerId) 设置目标监听器ID
  * @method array getRewriteInfos() 获取转发规则之间的重定向关系
  * @method void setRewriteInfos(array $RewriteInfos) 设置转发规则之间的重定向关系
- */
-
-/**
- *DeleteRewrite请求参数结构体
  */
 class DeleteRewriteRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DeleteRewriteRequest extends AbstractModel
      * @var array 转发规则之间的重定向关系
      */
     public $RewriteInfos;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例ID
      * @param string $SourceListenerId 源监听器ID
@@ -62,6 +61,7 @@ class DeleteRewriteRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

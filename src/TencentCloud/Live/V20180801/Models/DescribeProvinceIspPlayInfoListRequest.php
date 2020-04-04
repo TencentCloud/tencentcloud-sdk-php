@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProvinceIspPlayInfoList请求参数结构体
+ *
  * @method string getStartTime() 获取起始时间点，当前使用北京时间，
 例：2019-02-21 10:00:00。
  * @method void setStartTime(string $StartTime) 设置起始时间点，当前使用北京时间，
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIspNames(array $IspNames) 设置要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据。
  * @method string getMainlandOrOversea() 获取地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
  * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
- */
-
-/**
- *DescribeProvinceIspPlayInfoList请求参数结构体
  */
 class DescribeProvinceIspPlayInfoListRequest extends AbstractModel
 {
@@ -107,6 +105,7 @@ class DescribeProvinceIspPlayInfoListRequest extends AbstractModel
      * @var string 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
      */
     public $MainlandOrOversea;
+
     /**
      * @param string $StartTime 起始时间点，当前使用北京时间，
 例：2019-02-21 10:00:00。
@@ -130,6 +129,7 @@ class DescribeProvinceIspPlayInfoListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

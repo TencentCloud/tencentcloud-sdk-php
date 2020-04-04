@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Tcr镜像仓库信息
+ *
  * @method string getName() 获取仓库名称
  * @method void setName(string $Name) 设置仓库名称
  * @method string getNamespace() 获取命名空间名称
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- */
-
-/**
- *Tcr镜像仓库信息
  */
 class TcrRepositoryInfo extends AbstractModel
 {
@@ -79,6 +77,7 @@ class TcrRepositoryInfo extends AbstractModel
      * @var string 更新时间
      */
     public $UpdateTime;
+
     /**
      * @param string $Name 仓库名称
      * @param string $Namespace 命名空间名称
@@ -94,6 +93,7 @@ class TcrRepositoryInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

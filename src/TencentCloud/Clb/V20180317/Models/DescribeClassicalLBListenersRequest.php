@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClassicalLBListeners请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例 ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
  * @method array getListenerIds() 获取负载均衡监听器ID列表
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerPort(integer $ListenerPort) 设置负载均衡监听端口， 范围[1-65535]
  * @method integer getStatus() 获取监听器的状态，0 表示创建中，1 表示运行中
  * @method void setStatus(integer $Status) 设置监听器的状态，0 表示创建中，1 表示运行中
- */
-
-/**
- *DescribeClassicalLBListeners请求参数结构体
  */
 class DescribeClassicalLBListenersRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeClassicalLBListenersRequest extends AbstractModel
      * @var integer 监听器的状态，0 表示创建中，1 表示运行中
      */
     public $Status;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param array $ListenerIds 负载均衡监听器ID列表
@@ -70,6 +69,7 @@ class DescribeClassicalLBListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

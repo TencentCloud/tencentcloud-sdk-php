@@ -18,14 +18,12 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人脸识别结果。
+ *
  * @method FaceRect getFaceRect() 获取检测出的人脸框位置。
  * @method void setFaceRect(FaceRect $FaceRect) 设置检测出的人脸框位置。
  * @method array getCandidates() 获取候选人列表。当前返回相似度最高的候选人。
  * @method void setCandidates(array $Candidates) 设置候选人列表。当前返回相似度最高的候选人。
- */
-
-/**
- *人脸识别结果。
  */
 class FaceResult extends AbstractModel
 {
@@ -38,6 +36,7 @@ class FaceResult extends AbstractModel
      * @var array 候选人列表。当前返回相似度最高的候选人。
      */
     public $Candidates;
+
     /**
      * @param FaceRect $FaceRect 检测出的人脸框位置。
      * @param array $Candidates 候选人列表。当前返回相似度最高的候选人。
@@ -46,6 +45,7 @@ class FaceResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

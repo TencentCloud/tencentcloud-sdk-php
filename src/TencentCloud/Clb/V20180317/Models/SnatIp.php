@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SnatIp的信息结构
+ *
  * @method string getSubnetId() 获取私有网络子网的唯一性id，如subnet-12345678
  * @method void setSubnetId(string $SubnetId) 设置私有网络子网的唯一性id，如subnet-12345678
  * @method string getIp() 获取IP地址，如192.168.0.1
  * @method void setIp(string $Ip) 设置IP地址，如192.168.0.1
- */
-
-/**
- *SnatIp的信息结构
  */
 class SnatIp extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SnatIp extends AbstractModel
      * @var string IP地址，如192.168.0.1
      */
     public $Ip;
+
     /**
      * @param string $SubnetId 私有网络子网的唯一性id，如subnet-12345678
      * @param string $Ip IP地址，如192.168.0.1
@@ -46,6 +45,7 @@ class SnatIp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

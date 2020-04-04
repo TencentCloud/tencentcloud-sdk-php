@@ -18,16 +18,14 @@ namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSlowLogTimeSeriesStats请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID 。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
  * @method string getStartTime() 获取开始时间。
  * @method void setStartTime(string $StartTime) 设置开始时间。
  * @method string getEndTime() 获取结束时间。
  * @method void setEndTime(string $EndTime) 设置结束时间。
- */
-
-/**
- *DescribeSlowLogTimeSeriesStats请求参数结构体
  */
 class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel
      * @var string 结束时间。
      */
     public $EndTime;
+
     /**
      * @param string $InstanceId 实例 ID 。
      * @param string $StartTime 开始时间。
@@ -54,6 +53,7 @@ class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

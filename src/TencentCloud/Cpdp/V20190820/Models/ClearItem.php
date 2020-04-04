@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 银行在途清算结果信息
+ *
  * @method string getDate() 获取STRING(8)，日期（格式: 20190101）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDate(string $Date) 设置STRING(8)，日期（格式: 20190101）
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalAmt(string $TotalAmt) 设置STRING(300)，待清算总金额
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *银行在途清算结果信息
  */
 class ClearItem extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ClearItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalAmt;
+
     /**
      * @param string $Date STRING(8)，日期（格式: 20190101）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,6 +113,7 @@ class ClearItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

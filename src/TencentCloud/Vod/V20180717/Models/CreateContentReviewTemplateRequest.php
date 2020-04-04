@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateContentReviewTemplate请求参数结构体
+ *
  * @method string getReviewWallSwitch() 获取审核结果是否进入审核墙（对审核结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScreenshotInterval(float $ScreenshotInterval) 设置截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *CreateContentReviewTemplate请求参数结构体
  */
 class CreateContentReviewTemplateRequest extends AbstractModel
 {
@@ -109,6 +107,7 @@ class CreateContentReviewTemplateRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param string $ReviewWallSwitch 审核结果是否进入审核墙（对审核结果进行人工复核）的开关。
 <li>ON：是；</li>
@@ -130,6 +129,7 @@ class CreateContentReviewTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

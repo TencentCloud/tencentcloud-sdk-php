@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstancesDiskNum返回参数结构体
+ *
  * @method array getAttachDetail() 获取各个云服务器已挂载和可挂载弹性云盘的数量。
  * @method void setAttachDetail(array $AttachDetail) 设置各个云服务器已挂载和可挂载弹性云盘的数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeInstancesDiskNum返回参数结构体
  */
 class DescribeInstancesDiskNumResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeInstancesDiskNumResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $AttachDetail 各个云服务器已挂载和可挂载弹性云盘的数量。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeInstancesDiskNumResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

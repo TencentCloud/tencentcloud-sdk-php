@@ -18,14 +18,12 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * QueryRefund返回参数结构体
+ *
  * @method string getState() 获取退款状态码，退款提交成功后返回  1：退款中；  2：退款成功；  3：退款失败。
  * @method void setState(string $State) 设置退款状态码，退款提交成功后返回  1：退款中；  2：退款成功；  3：退款失败。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *QueryRefund返回参数结构体
  */
 class QueryRefundResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class QueryRefundResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $State 退款状态码，退款提交成功后返回  1：退款中；  2：退款成功；  3：退款失败。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class QueryRefundResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

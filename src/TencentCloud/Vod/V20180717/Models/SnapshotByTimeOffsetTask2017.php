@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频指定时间点截图任务信息，该结构仅用于 2017 版[指定时间点截图](https://cloud.tencent.com/document/product/266/8102)接口发起的任务。
+ *
  * @method string getTaskId() 获取截图任务 ID。
  * @method void setTaskId(string $TaskId) 设置截图任务 ID。
  * @method string getFileId() 获取截图文件 ID。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) 设置截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
  * @method array getSnapshotInfoSet() 获取截图结果信息。
  * @method void setSnapshotInfoSet(array $SnapshotInfoSet) 设置截图结果信息。
- */
-
-/**
- *视频指定时间点截图任务信息，该结构仅用于 2017 版[指定时间点截图](https://cloud.tencent.com/document/product/266/8102)接口发起的任务。
  */
 class SnapshotByTimeOffsetTask2017 extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SnapshotByTimeOffsetTask2017 extends AbstractModel
      * @var array 截图结果信息。
      */
     public $SnapshotInfoSet;
+
     /**
      * @param string $TaskId 截图任务 ID。
      * @param string $FileId 截图文件 ID。
@@ -62,6 +61,7 @@ class SnapshotByTimeOffsetTask2017 extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

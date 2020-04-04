@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 编辑点播视频文件信息
+ *
  * @method string getFileId() 获取视频的 ID。
  * @method void setFileId(string $FileId) 设置视频的 ID。
  * @method float getStartTimeOffset() 获取视频剪辑的起始偏移时间偏移，单位：秒。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置视频剪辑的起始结束时间偏移，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *编辑点播视频文件信息
  */
 class EditMediaFileInfo extends AbstractModel
 {
@@ -51,6 +49,7 @@ class EditMediaFileInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTimeOffset;
+
     /**
      * @param string $FileId 视频的 ID。
      * @param float $StartTimeOffset 视频剪辑的起始偏移时间偏移，单位：秒。
@@ -62,6 +61,7 @@ class EditMediaFileInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

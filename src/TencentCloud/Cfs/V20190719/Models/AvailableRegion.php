@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 版本控制-区域数组
+ *
  * @method string getRegion() 获取区域名称，如“ap-beijing”
  * @method void setRegion(string $Region) 设置区域名称，如“ap-beijing”
  * @method string getRegionName() 获取区域名称，如“bj”
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZones(array $Zones) 设置可用区数组
  * @method string getRegionCnName() 获取区域中文名称，如“广州”
  * @method void setRegionCnName(string $RegionCnName) 设置区域中文名称，如“广州”
- */
-
-/**
- *版本控制-区域数组
  */
 class AvailableRegion extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AvailableRegion extends AbstractModel
      * @var string 区域中文名称，如“广州”
      */
     public $RegionCnName;
+
     /**
      * @param string $Region 区域名称，如“ap-beijing”
      * @param string $RegionName 区域名称，如“bj”
@@ -70,6 +69,7 @@ class AvailableRegion extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

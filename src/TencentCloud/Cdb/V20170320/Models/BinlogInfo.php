@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 二进制日志信息
+ *
  * @method string getName() 获取binlog 日志备份文件名
  * @method void setName(string $Name) 设置binlog 日志备份文件名
  * @method integer getSize() 获取备份文件大小，单位：Byte
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBinlogStartTime(string $BinlogStartTime) 设置binlog 文件起始时间
  * @method string getBinlogFinishTime() 获取binlog 文件截止时间
  * @method void setBinlogFinishTime(string $BinlogFinishTime) 设置binlog 文件截止时间
- */
-
-/**
- *二进制日志信息
  */
 class BinlogInfo extends AbstractModel
 {
@@ -80,6 +78,7 @@ class BinlogInfo extends AbstractModel
      * @var string binlog 文件截止时间
      */
     public $BinlogFinishTime;
+
     /**
      * @param string $Name binlog 日志备份文件名
      * @param integer $Size 备份文件大小，单位：Byte
@@ -94,6 +93,7 @@ class BinlogInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

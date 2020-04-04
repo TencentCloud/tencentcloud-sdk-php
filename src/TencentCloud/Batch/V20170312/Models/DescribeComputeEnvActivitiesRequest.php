@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeComputeEnvActivities请求参数结构体
+ *
  * @method string getEnvId() 获取计算环境ID
  * @method void setEnvId(string $EnvId) 设置计算环境ID
  * @method integer getOffset() 获取偏移量
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 <li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
  * @method void setFilters(Filter $Filters) 设置过滤条件
 <li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
- */
-
-/**
- *DescribeComputeEnvActivities请求参数结构体
  */
 class DescribeComputeEnvActivitiesRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class DescribeComputeEnvActivitiesRequest extends AbstractModel
 <li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
      */
     public $Filters;
+
     /**
      * @param string $EnvId 计算环境ID
      * @param integer $Offset 偏移量
@@ -66,6 +65,7 @@ class DescribeComputeEnvActivitiesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

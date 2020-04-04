@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 消息类输出公共参数
+ *
  * @method integer getAppID() 获取接入业务的唯一ID
  * @method void setAppID(integer $AppID) 设置接入业务的唯一ID
  * @method integer getBUCtrlID() 获取接口唯一ID，旁路调用接口返回有该字段，标识唯一接口
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSendTime(integer $SendTime) 设置消息发送时间
  * @method integer getUin() 获取请求字段里的Common.Uin
  * @method void setUin(integer $Uin) 设置请求字段里的Common.Uin
- */
-
-/**
- *消息类输出公共参数
  */
 class TextOutputComm extends AbstractModel
 {
@@ -52,6 +50,7 @@ class TextOutputComm extends AbstractModel
      * @var integer 请求字段里的Common.Uin
      */
     public $Uin;
+
     /**
      * @param integer $AppID 接入业务的唯一ID
      * @param integer $BUCtrlID 接口唯一ID，旁路调用接口返回有该字段，标识唯一接口
@@ -62,6 +61,7 @@ class TextOutputComm extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

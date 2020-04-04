@@ -18,12 +18,10 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteProduct请求参数结构体
+ *
  * @method string getProductId() 获取产品Id
  * @method void setProductId(string $ProductId) 设置产品Id
- */
-
-/**
- *DeleteProduct请求参数结构体
  */
 class DeleteProductRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteProductRequest extends AbstractModel
      * @var string 产品Id
      */
     public $ProductId;
+
     /**
      * @param string $ProductId 产品Id
      */
@@ -38,6 +37,7 @@ class DeleteProductRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

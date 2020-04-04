@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * FaceAttrResult
+ *
  * @method integer getAge() 获取年龄
  * @method void setAge(integer $Age) 设置年龄
  * @method string getSex() 获取性别
  * @method void setSex(string $Sex) 设置性别
- */
-
-/**
- *FaceAttrResult
  */
 class FaceAttrResult extends AbstractModel
 {
@@ -38,6 +36,7 @@ class FaceAttrResult extends AbstractModel
      * @var string 性别
      */
     public $Sex;
+
     /**
      * @param integer $Age 年龄
      * @param string $Sex 性别
@@ -46,6 +45,7 @@ class FaceAttrResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Region和RegionName
+ *
  * @method string getRegion() 获取Region
  * @method void setRegion(string $Region) 设置Region
  * @method string getRegionName() 获取Region名称
  * @method void setRegionName(string $RegionName) 设置Region名称
  * @method integer getRegionId() 获取RegionID
  * @method void setRegionId(integer $RegionId) 设置RegionID
- */
-
-/**
- *Region和RegionName
  */
 class RegionInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RegionInfo extends AbstractModel
      * @var integer RegionID
      */
     public $RegionId;
+
     /**
      * @param string $Region Region
      * @param string $RegionName Region名称
@@ -54,6 +53,7 @@ class RegionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySubnetAttribute请求参数结构体
+ *
  * @method string getSubnetId() 获取子网实例ID。形如：subnet-pxir56ns。
  * @method void setSubnetId(string $SubnetId) 设置子网实例ID。形如：subnet-pxir56ns。
  * @method string getSubnetName() 获取子网名称，最大长度不能超过60个字节。
  * @method void setSubnetName(string $SubnetName) 设置子网名称，最大长度不能超过60个字节。
  * @method string getEnableBroadcast() 获取子网是否开启广播。
  * @method void setEnableBroadcast(string $EnableBroadcast) 设置子网是否开启广播。
- */
-
-/**
- *ModifySubnetAttribute请求参数结构体
  */
 class ModifySubnetAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifySubnetAttributeRequest extends AbstractModel
      * @var string 子网是否开启广播。
      */
     public $EnableBroadcast;
+
     /**
      * @param string $SubnetId 子网实例ID。形如：subnet-pxir56ns。
      * @param string $SubnetName 子网名称，最大长度不能超过60个字节。
@@ -54,6 +53,7 @@ class ModifySubnetAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

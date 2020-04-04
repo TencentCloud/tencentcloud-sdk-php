@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例枚举类型参数描述
+ *
  * @method string getParamName() 获取参数名
  * @method void setParamName(string $ParamName) 设置参数名
  * @method string getValueType() 获取参数类型：enum
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnumValue(array $EnumValue) 设置参数可取值
  * @method integer getStatus() 获取参数状态, 1: 修改中， 2：修改完成
  * @method void setStatus(integer $Status) 设置参数状态, 1: 修改中， 2：修改完成
- */
-
-/**
- *实例枚举类型参数描述
  */
 class InstanceEnumParam extends AbstractModel
 {
@@ -80,6 +78,7 @@ class InstanceEnumParam extends AbstractModel
      * @var integer 参数状态, 1: 修改中， 2：修改完成
      */
     public $Status;
+
     /**
      * @param string $ParamName 参数名
      * @param string $ValueType 参数类型：enum
@@ -94,6 +93,7 @@ class InstanceEnumParam extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

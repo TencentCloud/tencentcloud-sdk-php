@@ -18,16 +18,14 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AsyncRegisterIps请求参数结构体
+ *
  * @method string getVpcId() 获取私有网络的唯一ID。
  * @method void setVpcId(string $VpcId) 设置私有网络的唯一ID。
  * @method string getSubnetId() 获取子网唯一ID。
  * @method void setSubnetId(string $SubnetId) 设置子网唯一ID。
  * @method array getIps() 获取需要注册的IP列表。
  * @method void setIps(array $Ips) 设置需要注册的IP列表。
- */
-
-/**
- *AsyncRegisterIps请求参数结构体
  */
 class AsyncRegisterIpsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AsyncRegisterIpsRequest extends AbstractModel
      * @var array 需要注册的IP列表。
      */
     public $Ips;
+
     /**
      * @param string $VpcId 私有网络的唯一ID。
      * @param string $SubnetId 子网唯一ID。
@@ -54,6 +53,7 @@ class AsyncRegisterIpsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

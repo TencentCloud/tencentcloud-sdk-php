@@ -18,6 +18,8 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 录音信息
+ *
  * @method string getAccountNum() 获取案件编号。
  * @method void setAccountNum(string $AccountNum) 设置案件编号。
  * @method string getBizDate() 获取外呼日期。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordCosUrl(string $RecordCosUrl) 设置录音下载链接。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *录音信息
  */
 class SingleRecord extends AbstractModel
 {
@@ -86,6 +84,7 @@ class SingleRecord extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordCosUrl;
+
     /**
      * @param string $AccountNum 案件编号。
      * @param string $BizDate 外呼日期。
@@ -102,6 +101,7 @@ class SingleRecord extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

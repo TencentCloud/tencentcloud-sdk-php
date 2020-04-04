@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateProduct返回参数结构体
+ *
  * @method string getProductName() 获取产品名称
  * @method void setProductName(string $ProductName) 设置产品名称
  * @method string getProductId() 获取产品 ID，腾讯云生成全局唯一 ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductProperties(ProductProperties $ProductProperties) 设置产品属性
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateProduct返回参数结构体
  */
 class CreateProductResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateProductResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $ProductName 产品名称
      * @param string $ProductId 产品 ID，腾讯云生成全局唯一 ID
@@ -62,6 +61,7 @@ class CreateProductResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

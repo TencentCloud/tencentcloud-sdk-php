@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 网络状态
+ *
  * @method string getCompanyId() 获取集团id
  * @method void setCompanyId(string $CompanyId) 设置集团id
  * @method integer getShopId() 获取店铺id
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(integer $UpdateTime) 设置更新时间戳
  * @method string getMac() 获取上报网络状态设备
  * @method void setMac(string $Mac) 设置上报网络状态设备
- */
-
-/**
- *网络状态
  */
 class NetworkAndShopInfo extends AbstractModel
 {
@@ -122,6 +120,7 @@ class NetworkAndShopInfo extends AbstractModel
      * @var string 上报网络状态设备
      */
     public $Mac;
+
     /**
      * @param string $CompanyId 集团id
      * @param integer $ShopId 店铺id
@@ -142,6 +141,7 @@ class NetworkAndShopInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

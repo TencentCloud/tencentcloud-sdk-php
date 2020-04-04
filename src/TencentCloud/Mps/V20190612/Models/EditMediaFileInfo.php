@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 编辑点播视频文件信息
+ *
  * @method MediaInputInfo getInputInfo() 获取视频的输入信息。
  * @method void setInputInfo(MediaInputInfo $InputInfo) 设置视频的输入信息。
  * @method float getStartTimeOffset() 获取视频剪辑的起始时间偏移，单位：秒。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置视频剪辑的起始时间偏移，单位：秒。
  * @method float getEndTimeOffset() 获取视频剪辑的结束时间偏移，单位：秒。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置视频剪辑的结束时间偏移，单位：秒。
- */
-
-/**
- *编辑点播视频文件信息
  */
 class EditMediaFileInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class EditMediaFileInfo extends AbstractModel
      * @var float 视频剪辑的结束时间偏移，单位：秒。
      */
     public $EndTimeOffset;
+
     /**
      * @param MediaInputInfo $InputInfo 视频的输入信息。
      * @param float $StartTimeOffset 视频剪辑的起始时间偏移，单位：秒。
@@ -54,6 +53,7 @@ class EditMediaFileInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

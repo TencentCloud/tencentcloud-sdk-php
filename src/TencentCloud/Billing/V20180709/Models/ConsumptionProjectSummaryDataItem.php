@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 消耗按项目汇总详情
+ *
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method string getProjectName() 获取项目名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrend(ConsumptionSummaryTrend $Trend) 设置趋势
  * @method array getBusiness() 获取产品消耗详情
  * @method void setBusiness(array $Business) 设置产品消耗详情
- */
-
-/**
- *消耗按项目汇总详情
  */
 class ConsumptionProjectSummaryDataItem extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ConsumptionProjectSummaryDataItem extends AbstractModel
      * @var array 产品消耗详情
      */
     public $Business;
+
     /**
      * @param string $ProjectId 项目ID
      * @param string $ProjectName 项目名称
@@ -70,6 +69,7 @@ class ConsumptionProjectSummaryDataItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

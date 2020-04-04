@@ -18,6 +18,8 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySiteAttribute请求参数结构体
+ *
  * @method integer getSiteId() 获取站点ID
  * @method void setSiteId(integer $SiteId) 设置站点ID
  * @method string getName() 获取站点名称
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginCheckKw(string $LoginCheckKw) 设置用于测试cookie是否有效的关键字
  * @method string getScanDisallow() 获取禁止扫描器扫描的目录关键字
  * @method void setScanDisallow(string $ScanDisallow) 设置禁止扫描器扫描的目录关键字
- */
-
-/**
- *ModifySiteAttribute请求参数结构体
  */
 class ModifySiteAttributeRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifySiteAttributeRequest extends AbstractModel
      * @var string 禁止扫描器扫描的目录关键字
      */
     public $ScanDisallow;
+
     /**
      * @param integer $SiteId 站点ID
      * @param string $Name 站点名称
@@ -86,6 +85,7 @@ class ModifySiteAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

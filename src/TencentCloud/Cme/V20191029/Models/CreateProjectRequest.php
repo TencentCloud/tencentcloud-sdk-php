@@ -18,6 +18,8 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateProject请求参数结构体
+ *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
  * @method string getCategory() 获取项目类别，取值有：
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 <li>9:16。</li>
  * @method Entity getOwner() 获取归属者。
  * @method void setOwner(Entity $Owner) 设置归属者。
- */
-
-/**
- *CreateProject请求参数结构体
  */
 class CreateProjectRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ class CreateProjectRequest extends AbstractModel
      * @var Entity 归属者。
      */
     public $Owner;
+
     /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $Category 项目类别，取值有：
@@ -82,6 +81,7 @@ class CreateProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 站点信息。
+ *
  * @method integer getSiteId() 获取站点ID。
  * @method void setSiteId(integer $SiteId) 设置站点ID。
  * @method string getUrl() 获取站点Url。
  * @method void setUrl(string $Url) 设置站点Url。
- */
-
-/**
- *站点信息。
  */
 class MiniSite extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MiniSite extends AbstractModel
      * @var string 站点Url。
      */
     public $Url;
+
     /**
      * @param integer $SiteId 站点ID。
      * @param string $Url 站点Url。
@@ -46,6 +45,7 @@ class MiniSite extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

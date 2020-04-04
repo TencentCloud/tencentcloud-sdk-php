@@ -18,6 +18,8 @@ namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 分类内容
+ *
  * @method string getCategoryID() 获取StationID
  * @method void setCategoryID(string $CategoryID) 设置StationID
  * @method string getCategoryCode() 获取Station MCCode
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImagePathMap(array $ImagePathMap) 设置station图片集合
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *分类内容
  */
 class Station extends AbstractModel
 {
@@ -71,6 +69,7 @@ class Station extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImagePathMap;
+
     /**
      * @param string $CategoryID StationID
      * @param string $CategoryCode Station MCCode
@@ -86,6 +85,7 @@ class Station extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

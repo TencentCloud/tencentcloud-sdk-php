@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内容审核 Ocr 文字鉴政、敏感任务结果类型
+ *
  * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method integer getCode() 获取错误码，0：成功，其他值：失败。
@@ -42,10 +44,6 @@ block。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentSet(array $SegmentSet) 设置Ocr 文字有涉政、敏感嫌疑的视频片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *内容审核 Ocr 文字鉴政、敏感任务结果类型
  */
 class VodPoliticalOcrReviewResult extends AbstractModel
 {
@@ -84,6 +82,7 @@ block。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentSet;
+
     /**
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param integer $Code 错误码，0：成功，其他值：失败。
@@ -102,6 +101,7 @@ block。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

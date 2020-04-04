@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 拨测Agent 所在省份、运营商
+ *
  * @method string getProvince() 获取拨测结点所在的省份（拼音缩写）
  * @method void setProvince(string $Province) 设置拨测结点所在的省份（拼音缩写）
  * @method string getIsp() 获取拨测结点所在的运营商（英文缩写）
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIspName(string $IspName) 设置拨测结点所在的运营商（中文名称）
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *拨测Agent 所在省份、运营商
  */
 class CatAgent extends AbstractModel
 {
@@ -58,6 +56,7 @@ class CatAgent extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IspName;
+
     /**
      * @param string $Province 拨测结点所在的省份（拼音缩写）
      * @param string $Isp 拨测结点所在的运营商（英文缩写）
@@ -70,6 +69,7 @@ class CatAgent extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

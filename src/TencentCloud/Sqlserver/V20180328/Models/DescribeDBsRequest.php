@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBs请求参数结构体
+ *
  * @method array getInstanceIdSet() 获取实例ID
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置实例ID
  * @method integer getLimit() 获取分页返回，每页返回的数目，取值为1-100，默认值为20
  * @method void setLimit(integer $Limit) 设置分页返回，每页返回的数目，取值为1-100，默认值为20
  * @method integer getOffset() 获取分页返回，页编号，默认值为第0页
  * @method void setOffset(integer $Offset) 设置分页返回，页编号，默认值为第0页
- */
-
-/**
- *DescribeDBs请求参数结构体
  */
 class DescribeDBsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBsRequest extends AbstractModel
      * @var integer 分页返回，页编号，默认值为第0页
      */
     public $Offset;
+
     /**
      * @param array $InstanceIdSet 实例ID
      * @param integer $Limit 分页返回，每页返回的数目，取值为1-100，默认值为20
@@ -54,6 +53,7 @@ class DescribeDBsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

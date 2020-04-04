@@ -18,14 +18,12 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * WordSimilarity返回参数结构体
+ *
  * @method float getSimilarity() 获取两个词语的相似度
  * @method void setSimilarity(float $Similarity) 设置两个词语的相似度
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *WordSimilarity返回参数结构体
  */
 class WordSimilarityResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class WordSimilarityResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param float $Similarity 两个词语的相似度
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class WordSimilarityResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

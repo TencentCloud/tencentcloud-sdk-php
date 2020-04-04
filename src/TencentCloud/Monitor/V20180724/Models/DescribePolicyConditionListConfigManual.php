@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePolicyConditionList.ConfigManual
+ *
  * @method DescribePolicyConditionListConfigManualCalcType getCalcType() 获取检测方式
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCalcType(DescribePolicyConditionListConfigManualCalcType $CalcType) 设置检测方式
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatType(DescribePolicyConditionListConfigManualStatType $StatType) 设置聚合方式
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DescribePolicyConditionList.ConfigManual
  */
 class DescribePolicyConditionListConfigManual extends AbstractModel
 {
@@ -84,6 +82,7 @@ class DescribePolicyConditionListConfigManual extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatType;
+
     /**
      * @param DescribePolicyConditionListConfigManualCalcType $CalcType 检测方式
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,6 +101,7 @@ class DescribePolicyConditionListConfigManual extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

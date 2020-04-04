@@ -18,6 +18,8 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频流信息。
+ *
  * @method integer getBitrate() 获取码率，单位：bps。
  * @method void setBitrate(integer $Bitrate) 设置码率，单位：bps。
  * @method integer getHeight() 获取高度，单位：px。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCodec(string $Codec) 设置编码格式。
  * @method integer getFps() 获取帧率，单位：hz。
  * @method void setFps(integer $Fps) 设置帧率，单位：hz。
- */
-
-/**
- *视频流信息。
  */
 class VideoStreamInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class VideoStreamInfo extends AbstractModel
      * @var integer 帧率，单位：hz。
      */
     public $Fps;
+
     /**
      * @param integer $Bitrate 码率，单位：bps。
      * @param integer $Height 高度，单位：px。
@@ -70,6 +69,7 @@ class VideoStreamInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

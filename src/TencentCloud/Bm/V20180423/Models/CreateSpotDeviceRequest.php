@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSpotDevice请求参数结构体
+ *
  * @method string getZone() 获取可用区名称。如ap-guangzhou-bls-1, 通过DescribeRegions获取
  * @method void setZone(string $Zone) 设置可用区名称。如ap-guangzhou-bls-1, 通过DescribeRegions获取
  * @method string getComputeType() 获取计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpotPriceLimit(float $SpotPriceLimit) 设置用户设置的价格。当为SpotWithPriceLimit竞价策略时有效
  * @method string getPasswd() 获取设置竞价实例密码。可选参数，没有指定会生成随机密码
  * @method void setPasswd(string $Passwd) 设置设置竞价实例密码。可选参数，没有指定会生成随机密码
- */
-
-/**
- *CreateSpotDevice请求参数结构体
  */
 class CreateSpotDeviceRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class CreateSpotDeviceRequest extends AbstractModel
      * @var string 设置竞价实例密码。可选参数，没有指定会生成随机密码
      */
     public $Passwd;
+
     /**
      * @param string $Zone 可用区名称。如ap-guangzhou-bls-1, 通过DescribeRegions获取
      * @param string $ComputeType 计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
@@ -102,6 +101,7 @@ class CreateSpotDeviceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

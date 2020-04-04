@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用于创建四层监听器的监听器信息。目前一个负载均衡下面最多允许创建50个七层监听器。
+ *
  * @method integer getLoadBalancerPort() 获取七层监听器端口，可选值1~65535。
  * @method void setLoadBalancerPort(integer $LoadBalancerPort) 设置七层监听器端口，可选值1~65535。
  * @method string getProtocol() 获取七层监听器协议类型，可选值：http,https。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidth(integer $Bandwidth) 设置用于计费模式为固定带宽计费，指定监听器最大带宽值，可选值：0-1000，单位：Mbps。
  * @method integer getForwardProtocol() 获取转发协议。当Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。
  * @method void setForwardProtocol(integer $ForwardProtocol) 设置转发协议。当Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。
- */
-
-/**
- *用于创建四层监听器的监听器信息。目前一个负载均衡下面最多允许创建50个七层监听器。
  */
 class CreateL7Listener extends AbstractModel
 {
@@ -115,6 +113,7 @@ class CreateL7Listener extends AbstractModel
      * @var integer 转发协议。当Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。
      */
     public $ForwardProtocol;
+
     /**
      * @param integer $LoadBalancerPort 七层监听器端口，可选值1~65535。
      * @param string $Protocol 七层监听器协议类型，可选值：http,https。
@@ -134,6 +133,7 @@ class CreateL7Listener extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePaiInstance请求参数结构体
+ *
  * @method string getDomainName() 获取PAI实例的域名。
  * @method void setDomainName(string $DomainName) 设置PAI实例的域名。
  * @method InternetAccessible getInternetAccessible() 获取公网带宽相关信息设置。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型。
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
- */
-
-/**
- *CreatePaiInstance请求参数结构体
  */
 class CreatePaiInstanceRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class CreatePaiInstanceRequest extends AbstractModel
      * @var InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      */
     public $InstanceChargePrepaid;
+
     /**
      * @param string $DomainName PAI实例的域名。
      * @param InternetAccessible $InternetAccessible 公网带宽相关信息设置。
@@ -118,6 +117,7 @@ class CreatePaiInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

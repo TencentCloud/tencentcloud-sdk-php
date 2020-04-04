@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceLogs请求参数结构体
+ *
  * @method string getInstanceId() 获取集群实例ID
  * @method void setInstanceId(string $InstanceId) 设置集群实例ID
  * @method integer getLogType() 获取日志类型，默认值为1
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderByType(integer $OrderByType) 设置时间排序方式，默认值为0
 <li>0, 降序</li>
 <li>1, 升序</li>
- */
-
-/**
- *DescribeInstanceLogs请求参数结构体
  */
 class DescribeInstanceLogsRequest extends AbstractModel
 {
@@ -98,6 +96,7 @@ class DescribeInstanceLogsRequest extends AbstractModel
 <li>1, 升序</li>
      */
     public $OrderByType;
+
     /**
      * @param string $InstanceId 集群实例ID
      * @param integer $LogType 日志类型，默认值为1
@@ -118,6 +117,7 @@ class DescribeInstanceLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

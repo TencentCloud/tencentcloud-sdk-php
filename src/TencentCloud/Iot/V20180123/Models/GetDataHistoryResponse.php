@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetDataHistory返回参数结构体
+ *
  * @method array getDataHistory() 获取数据历史
  * @method void setDataHistory(array $DataHistory) 设置数据历史
  * @method string getScrollId() 获取查询游标
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScrollTimeout(integer $ScrollTimeout) 设置查询游标超时
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetDataHistory返回参数结构体
  */
 class GetDataHistoryResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GetDataHistoryResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $DataHistory 数据历史
      * @param string $ScrollId 查询游标
@@ -62,6 +61,7 @@ class GetDataHistoryResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

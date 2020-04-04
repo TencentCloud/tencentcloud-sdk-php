@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 可以显示统计数据的通道组和对应通道信息
+ *
  * @method string getGroupId() 获取通道组ID
  * @method void setGroupId(string $GroupId) 设置通道组ID
  * @method string getGroupName() 获取通道组名称
  * @method void setGroupName(string $GroupName) 设置通道组名称
  * @method array getProxySet() 获取通道组下通道列表
  * @method void setProxySet(array $ProxySet) 设置通道组下通道列表
- */
-
-/**
- *可以显示统计数据的通道组和对应通道信息
  */
 class GroupStatisticsInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GroupStatisticsInfo extends AbstractModel
      * @var array 通道组下通道列表
      */
     public $ProxySet;
+
     /**
      * @param string $GroupId 通道组ID
      * @param string $GroupName 通道组名称
@@ -54,6 +53,7 @@ class GroupStatisticsInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMonitors请求参数结构体
+ *
  * @method array getMonitorIds() 获取监控任务ID列表
  * @method void setMonitorIds(array $MonitorIds) 设置监控任务ID列表
  * @method array getFilters() 获取过滤条件
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认为10，最大值为100
  * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100
- */
-
-/**
- *DescribeMonitors请求参数结构体
  */
 class DescribeMonitorsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeMonitorsRequest extends AbstractModel
      * @var integer 返回数量，默认为10，最大值为100
      */
     public $Limit;
+
     /**
      * @param array $MonitorIds 监控任务ID列表
      * @param array $Filters 过滤条件
@@ -62,6 +61,7 @@ class DescribeMonitorsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateProject请求参数结构体
+ *
  * @method string getProjectName() 获取项目名称
  * @method void setProjectName(string $ProjectName) 设置项目名称
  * @method string getProjectDesc() 获取项目描述
  * @method void setProjectDesc(string $ProjectDesc) 设置项目描述
- */
-
-/**
- *CreateProject请求参数结构体
  */
 class CreateProjectRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateProjectRequest extends AbstractModel
      * @var string 项目描述
      */
     public $ProjectDesc;
+
     /**
      * @param string $ProjectName 项目名称
      * @param string $ProjectDesc 项目描述
@@ -46,6 +45,7 @@ class CreateProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

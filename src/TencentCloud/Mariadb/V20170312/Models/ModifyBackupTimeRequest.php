@@ -18,16 +18,14 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyBackupTime请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method string getStartBackupTime() 获取每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
  * @method void setStartBackupTime(string $StartBackupTime) 设置每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
  * @method string getEndBackupTime() 获取每天备份执行的区间的结束时间，格式 mm:ss，形如 23:59
  * @method void setEndBackupTime(string $EndBackupTime) 设置每天备份执行的区间的结束时间，格式 mm:ss，形如 23:59
- */
-
-/**
- *ModifyBackupTime请求参数结构体
  */
 class ModifyBackupTimeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyBackupTimeRequest extends AbstractModel
      * @var string 每天备份执行的区间的结束时间，格式 mm:ss，形如 23:59
      */
     public $EndBackupTime;
+
     /**
      * @param string $InstanceId 实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param string $StartBackupTime 每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
@@ -54,6 +53,7 @@ class ModifyBackupTimeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

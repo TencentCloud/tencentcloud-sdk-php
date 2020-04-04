@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DDoS攻击事件记录
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
  * @method string getId() 获取资源ID
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventId(string $EventId) 设置攻击事件Id
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DDoS攻击事件记录
  */
 class DDoSEventRecord extends AbstractModel
 {
@@ -121,6 +119,7 @@ class DDoSEventRecord extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventId;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      * @param string $Id 资源ID
@@ -142,6 +141,7 @@ class DDoSEventRecord extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

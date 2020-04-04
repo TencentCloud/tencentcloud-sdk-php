@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 流维度的播放信息
+ *
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method float getTotalFlux() 获取总流量（单位MB）。
  * @method void setTotalFlux(float $TotalFlux) 设置总流量（单位MB）。
- */
-
-/**
- *流维度的播放信息
  */
 class PlayDataInfoByStream extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PlayDataInfoByStream extends AbstractModel
      * @var float 总流量（单位MB）。
      */
     public $TotalFlux;
+
     /**
      * @param string $StreamName 流名称。
      * @param float $TotalFlux 总流量（单位MB）。
@@ -46,6 +45,7 @@ class PlayDataInfoByStream extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

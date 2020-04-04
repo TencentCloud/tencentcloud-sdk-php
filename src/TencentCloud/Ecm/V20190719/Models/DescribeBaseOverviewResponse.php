@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBaseOverview返回参数结构体
+ *
  * @method integer getModuleNum() 获取模块数量，单位：个
  * @method void setModuleNum(integer $ModuleNum) 设置模块数量，单位：个
  * @method integer getNodeNum() 获取节点数量，单位：个
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWillExpireNum(integer $WillExpireNum) 设置即将过期实例数量，单位：台
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeBaseOverview返回参数结构体
  */
 class DescribeBaseOverviewResponse extends AbstractModel
 {
@@ -108,6 +106,7 @@ class DescribeBaseOverviewResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $ModuleNum 模块数量，单位：个
      * @param integer $NodeNum 节点数量，单位：个
@@ -126,6 +125,7 @@ class DescribeBaseOverviewResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetachGroupPolicy请求参数结构体
+ *
  * @method integer getPolicyId() 获取策略 id
  * @method void setPolicyId(integer $PolicyId) 设置策略 id
  * @method integer getDetachGroupId() 获取用户组 id
  * @method void setDetachGroupId(integer $DetachGroupId) 设置用户组 id
- */
-
-/**
- *DetachGroupPolicy请求参数结构体
  */
 class DetachGroupPolicyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DetachGroupPolicyRequest extends AbstractModel
      * @var integer 用户组 id
      */
     public $DetachGroupId;
+
     /**
      * @param integer $PolicyId 策略 id
      * @param integer $DetachGroupId 用户组 id
@@ -46,6 +45,7 @@ class DetachGroupPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

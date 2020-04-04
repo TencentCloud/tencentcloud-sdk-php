@@ -18,14 +18,12 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CancelKeyDeletion返回参数结构体
+ *
  * @method string getKeyId() 获取唯一标志被取消删除的CMK。
  * @method void setKeyId(string $KeyId) 设置唯一标志被取消删除的CMK。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CancelKeyDeletion返回参数结构体
  */
 class CancelKeyDeletionResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CancelKeyDeletionResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $KeyId 唯一标志被取消删除的CMK。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CancelKeyDeletionResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

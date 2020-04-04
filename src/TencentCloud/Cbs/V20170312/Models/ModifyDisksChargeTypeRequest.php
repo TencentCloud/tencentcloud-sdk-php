@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDisksChargeType请求参数结构体
+ *
  * @method array getDiskIds() 获取一个或多个待操作的云硬盘ID。每次请求批量云盘上限为100。
  * @method void setDiskIds(array $DiskIds) 设置一个或多个待操作的云硬盘ID。每次请求批量云盘上限为100。
  * @method DiskChargePrepaid getDiskChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
  * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
- */
-
-/**
- *ModifyDisksChargeType请求参数结构体
  */
 class ModifyDisksChargeTypeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDisksChargeTypeRequest extends AbstractModel
      * @var DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
      */
     public $DiskChargePrepaid;
+
     /**
      * @param array $DiskIds 一个或多个待操作的云硬盘ID。每次请求批量云盘上限为100。
      * @param DiskChargePrepaid $DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
@@ -46,6 +45,7 @@ class ModifyDisksChargeTypeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

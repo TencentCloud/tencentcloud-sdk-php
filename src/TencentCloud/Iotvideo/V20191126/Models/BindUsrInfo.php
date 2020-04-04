@@ -18,14 +18,12 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备绑定的终端用户
+ *
  * @method string getAccessId() 获取IotVideo平台分配给终端用户的用户id
  * @method void setAccessId(string $AccessId) 设置IotVideo平台分配给终端用户的用户id
  * @method string getRole() 获取用户角色，owner：主人，guest：访客
  * @method void setRole(string $Role) 设置用户角色，owner：主人，guest：访客
- */
-
-/**
- *设备绑定的终端用户
  */
 class BindUsrInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BindUsrInfo extends AbstractModel
      * @var string 用户角色，owner：主人，guest：访客
      */
     public $Role;
+
     /**
      * @param string $AccessId IotVideo平台分配给终端用户的用户id
      * @param string $Role 用户角色，owner：主人，guest：访客
@@ -46,6 +45,7 @@ class BindUsrInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Zone信息
+ *
  * @method integer getZoneId() 获取ZoneId
  * @method void setZoneId(integer $ZoneId) 设置ZoneId
  * @method string getZoneName() 获取ZoneName
  * @method void setZoneName(string $ZoneName) 设置ZoneName
  * @method string getZone() 获取Zone
  * @method void setZone(string $Zone) 设置Zone
- */
-
-/**
- *Zone信息
  */
 class ZoneInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ZoneInfo extends AbstractModel
      * @var string Zone
      */
     public $Zone;
+
     /**
      * @param integer $ZoneId ZoneId
      * @param string $ZoneName ZoneName
@@ -54,6 +53,7 @@ class ZoneInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

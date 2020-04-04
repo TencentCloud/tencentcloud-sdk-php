@@ -18,6 +18,8 @@ namespace TencentCloud\Yunsou\V20191115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 搜索结果元素
+ *
  * @method string getDocAbs() 获取动态摘要信息
  * @method void setDocAbs(string $DocAbs) 设置动态摘要信息
  * @method string getDocId() 获取检索文档id
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setL2Score(float $L2Score) 设置精计算得分
  * @method string getSearchDebuginfo() 获取文档级回传信息
  * @method void setSearchDebuginfo(string $SearchDebuginfo) 设置文档级回传信息
- */
-
-/**
- *搜索结果元素
  */
 class SearchResultItem extends AbstractModel
 {
@@ -59,6 +57,7 @@ class SearchResultItem extends AbstractModel
      * @var string 文档级回传信息
      */
     public $SearchDebuginfo;
+
     /**
      * @param string $DocAbs 动态摘要信息
      * @param string $DocId 检索文档id
@@ -70,6 +69,7 @@ class SearchResultItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

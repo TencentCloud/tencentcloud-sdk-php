@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 目的实例信息，具体内容跟迁移任务类型相关
+ *
  * @method string getInstanceId() 获取目标实例ID，如cdb-jd92ijd8
  * @method void setInstanceId(string $InstanceId) 设置目标实例ID，如cdb-jd92ijd8
  * @method string getRegion() 获取目标实例地域，如ap-guangzhou
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) 设置目标实例vport。已废弃，无需填写
  * @method integer getReadOnly() 获取目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
  * @method void setReadOnly(integer $ReadOnly) 设置目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
- */
-
-/**
- *目的实例信息，具体内容跟迁移任务类型相关
  */
 class DstInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DstInfo extends AbstractModel
      * @var integer 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
      */
     public $ReadOnly;
+
     /**
      * @param string $InstanceId 目标实例ID，如cdb-jd92ijd8
      * @param string $Region 目标实例地域，如ap-guangzhou
@@ -70,6 +69,7 @@ class DstInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

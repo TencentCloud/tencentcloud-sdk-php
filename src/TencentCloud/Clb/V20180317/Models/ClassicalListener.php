@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 传统型负载均衡监听器信息
+ *
  * @method string getListenerId() 获取负载均衡监听器ID
  * @method void setListenerId(string $ListenerId) 设置负载均衡监听器ID
  * @method integer getListenerPort() 获取负载均衡监听器端口
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertCaId(string $CertCaId) 设置传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
  * @method integer getStatus() 获取监听器的状态，0 表示创建中，1 表示运行中
  * @method void setStatus(integer $Status) 设置监听器的状态，0 表示创建中，1 表示运行中
- */
-
-/**
- *传统型负载均衡监听器信息
  */
 class ClassicalListener extends AbstractModel
 {
@@ -150,6 +148,7 @@ class ClassicalListener extends AbstractModel
      * @var integer 监听器的状态，0 表示创建中，1 表示运行中
      */
     public $Status;
+
     /**
      * @param string $ListenerId 负载均衡监听器ID
      * @param integer $ListenerPort 负载均衡监听器端口
@@ -174,6 +173,7 @@ class ClassicalListener extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

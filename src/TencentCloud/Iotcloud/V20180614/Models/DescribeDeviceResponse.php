@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDevice返回参数结构体
+ *
  * @method string getDeviceName() 获取设备名
  * @method void setDeviceName(string $DeviceName) 设置设备名
  * @method integer getOnline() 获取设备是否在线，0不在线，1在线
@@ -78,10 +80,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDevice返回参数结构体
  */
 class DescribeDeviceResponse extends AbstractModel
 {
@@ -206,6 +204,7 @@ class DescribeDeviceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $DeviceName 设备名
      * @param integer $Online 设备是否在线，0不在线，1在线
@@ -242,6 +241,7 @@ class DescribeDeviceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

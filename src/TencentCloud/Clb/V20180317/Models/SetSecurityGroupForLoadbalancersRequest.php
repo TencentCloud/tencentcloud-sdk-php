@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetSecurityGroupForLoadbalancers请求参数结构体
+ *
  * @method string getSecurityGroup() 获取安全组ID，如 sg-12345678
  * @method void setSecurityGroup(string $SecurityGroup) 设置安全组ID，如 sg-12345678
  * @method string getOperationType() 获取ADD 绑定安全组；
@@ -26,10 +28,6 @@ DEL 解绑安全组
 DEL 解绑安全组
  * @method array getLoadBalancerIds() 获取负载均衡实例ID数组
  * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置负载均衡实例ID数组
- */
-
-/**
- *SetSecurityGroupForLoadbalancers请求参数结构体
  */
 class SetSecurityGroupForLoadbalancersRequest extends AbstractModel
 {
@@ -48,6 +46,7 @@ DEL 解绑安全组
      * @var array 负载均衡实例ID数组
      */
     public $LoadBalancerIds;
+
     /**
      * @param string $SecurityGroup 安全组ID，如 sg-12345678
      * @param string $OperationType ADD 绑定安全组；
@@ -58,6 +57,7 @@ DEL 解绑安全组
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

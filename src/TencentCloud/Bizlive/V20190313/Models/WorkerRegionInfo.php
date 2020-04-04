@@ -18,14 +18,12 @@ namespace TencentCloud\Bizlive\V20190313\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * worker的区域信息
+ *
  * @method integer getIdle() 获取该区域空闲机器数量
  * @method void setIdle(integer $Idle) 设置该区域空闲机器数量
  * @method string getRegion() 获取区域
  * @method void setRegion(string $Region) 设置区域
- */
-
-/**
- *worker的区域信息
  */
 class WorkerRegionInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class WorkerRegionInfo extends AbstractModel
      * @var string 区域
      */
     public $Region;
+
     /**
      * @param integer $Idle 该区域空闲机器数量
      * @param string $Region 区域
@@ -46,6 +45,7 @@ class WorkerRegionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

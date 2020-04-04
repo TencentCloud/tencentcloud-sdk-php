@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstances请求参数结构体
+ *
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method integer getStatus() 获取实例状态。取值范围：
@@ -58,10 +60,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置实例所属VPC的唯一字符串ID，格式如：vpc-xxx，传空字符串(“”)则按照基础网络筛选。
  * @method string getSubnetId() 获取实例所属子网的唯一字符串ID，格式如： subnet-xxx，传空字符串(“”)则按照基础网络筛选。
  * @method void setSubnetId(string $SubnetId) 设置实例所属子网的唯一字符串ID，格式如： subnet-xxx，传空字符串(“”)则按照基础网络筛选。
- */
-
-/**
- *DescribeDBInstances请求参数结构体
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -116,6 +114,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @var string 实例所属子网的唯一字符串ID，格式如： subnet-xxx，传空字符串(“”)则按照基础网络筛选。
      */
     public $SubnetId;
+
     /**
      * @param integer $ProjectId 项目ID
      * @param integer $Status 实例状态。取值范围：
@@ -142,6 +141,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

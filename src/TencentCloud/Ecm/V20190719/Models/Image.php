@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 镜像信息
+ *
  * @method string getImageId() 获取镜像ID
  * @method void setImageId(string $ImageId) 设置镜像ID
  * @method string getImageName() 获取镜像名称
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageSize(integer $ImageSize) 设置镜像大小。单位：GB
  * @method SrcImage getSrcImage() 获取镜像来源信息
  * @method void setSrcImage(SrcImage $SrcImage) 设置镜像来源信息
- */
-
-/**
- *镜像信息
  */
 class Image extends AbstractModel
 {
@@ -122,6 +120,7 @@ class Image extends AbstractModel
      * @var SrcImage 镜像来源信息
      */
     public $SrcImage;
+
     /**
      * @param string $ImageId 镜像ID
      * @param string $ImageName 镜像名称
@@ -142,6 +141,7 @@ class Image extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 独占集群
+ *
  * @method array getL4Clusters() 获取4层独占集群列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setL4Clusters(array $L4Clusters) 设置4层独占集群列表
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClassicalCluster(ClusterItem $ClassicalCluster) 设置vpcgw集群
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *独占集群
  */
 class ExclusiveCluster extends AbstractModel
 {
@@ -54,6 +52,7 @@ class ExclusiveCluster extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClassicalCluster;
+
     /**
      * @param array $L4Clusters 4层独占集群列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class ExclusiveCluster extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

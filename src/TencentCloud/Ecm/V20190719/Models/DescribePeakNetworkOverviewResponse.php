@@ -18,16 +18,14 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePeakNetworkOverview返回参数结构体
+ *
  * @method array getPeakNetworkRegionSet() 获取网络峰值数组。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeakNetworkRegionSet(array $PeakNetworkRegionSet) 设置网络峰值数组。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribePeakNetworkOverview返回参数结构体
  */
 class DescribePeakNetworkOverviewResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class DescribePeakNetworkOverviewResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $PeakNetworkRegionSet 网络峰值数组。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class DescribePeakNetworkOverviewResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyPersonType请求参数结构体
+ *
  * @method string getCompanyId() 获取集团ID
  * @method void setCompanyId(string $CompanyId) 设置集团ID
  * @method integer getShopId() 获取门店ID
@@ -34,10 +36,6 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
 PersonType=0时(普通顾客)，0普通顾客
 PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册会员，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
- */
-
-/**
- *ModifyPersonType请求参数结构体
  */
 class ModifyPersonTypeRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3�
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
      */
     public $PersonSubType;
+
     /**
      * @param string $CompanyId 集团ID
      * @param integer $ShopId 门店ID
@@ -82,6 +81,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

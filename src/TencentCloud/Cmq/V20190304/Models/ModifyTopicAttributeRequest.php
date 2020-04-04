@@ -18,6 +18,8 @@ namespace TencentCloud\Cmq\V20190304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTopicAttribute请求参数结构体
+ *
  * @method string getTopicName() 获取主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
  * @method void setTopicName(string $TopicName) 设置主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
  * @method integer getMaxMsgSize() 获取消息最大长度。取值范围1024 - 65536 Byte（即1 - 64K），默认值65536。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) 设置消息保存时间。取值范围60 - 86400 s（即1分钟 - 1天），默认值86400。
  * @method boolean getTrace() 获取是否开启消息轨迹标识，true表示开启，false表示不开启，不填表示不开启。
  * @method void setTrace(boolean $Trace) 设置是否开启消息轨迹标识，true表示开启，false表示不开启，不填表示不开启。
- */
-
-/**
- *ModifyTopicAttribute请求参数结构体
  */
 class ModifyTopicAttributeRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyTopicAttributeRequest extends AbstractModel
      * @var boolean 是否开启消息轨迹标识，true表示开启，false表示不开启，不填表示不开启。
      */
     public $Trace;
+
     /**
      * @param string $TopicName 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
      * @param integer $MaxMsgSize 消息最大长度。取值范围1024 - 65536 Byte（即1 - 64K），默认值65536。
@@ -62,6 +61,7 @@ class ModifyTopicAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

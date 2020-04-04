@@ -18,14 +18,12 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListOrganizationMembers请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取限制数目
  * @method void setLimit(integer $Limit) 设置限制数目
- */
-
-/**
- *ListOrganizationMembers请求参数结构体
  */
 class ListOrganizationMembersRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ListOrganizationMembersRequest extends AbstractModel
      * @var integer 限制数目
      */
     public $Limit;
+
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 限制数目
@@ -46,6 +45,7 @@ class ListOrganizationMembersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能分类结果信息
+ *
  * @method array getClassificationSet() 获取视频智能分类列表。
  * @method void setClassificationSet(array $ClassificationSet) 设置视频智能分类列表。
- */
-
-/**
- *智能分类结果信息
  */
 class AiAnalysisTaskClassificationOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiAnalysisTaskClassificationOutput extends AbstractModel
      * @var array 视频智能分类列表。
      */
     public $ClassificationSet;
+
     /**
      * @param array $ClassificationSet 视频智能分类列表。
      */
@@ -38,6 +37,7 @@ class AiAnalysisTaskClassificationOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GenerateRandom请求参数结构体
+ *
  * @method integer getNumberOfBytes() 获取生成的随机数的长度。最小值为1， 最大值为1024。
  * @method void setNumberOfBytes(integer $NumberOfBytes) 设置生成的随机数的长度。最小值为1， 最大值为1024。
- */
-
-/**
- *GenerateRandom请求参数结构体
  */
 class GenerateRandomRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GenerateRandomRequest extends AbstractModel
      * @var integer 生成的随机数的长度。最小值为1， 最大值为1024。
      */
     public $NumberOfBytes;
+
     /**
      * @param integer $NumberOfBytes 生成的随机数的长度。最小值为1， 最大值为1024。
      */
@@ -38,6 +37,7 @@ class GenerateRandomRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

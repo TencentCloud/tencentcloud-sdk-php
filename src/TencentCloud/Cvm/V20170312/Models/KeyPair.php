@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述密钥对信息
+ *
  * @method string getKeyId() 获取密钥对的`ID`，是密钥对的唯一标识。
  * @method void setKeyId(string $KeyId) 设置密钥对的`ID`，是密钥对的唯一标识。
  * @method string getKeyName() 获取密钥对名称。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssociatedInstanceIds(array $AssociatedInstanceIds) 设置密钥关联的实例`ID`列表。
  * @method string getCreatedTime() 获取创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
- */
-
-/**
- *描述密钥对信息
  */
 class KeyPair extends AbstractModel
 {
@@ -80,6 +78,7 @@ class KeyPair extends AbstractModel
      * @var string 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public $CreatedTime;
+
     /**
      * @param string $KeyId 密钥对的`ID`，是密钥对的唯一标识。
      * @param string $KeyName 密钥对名称。
@@ -94,6 +93,7 @@ class KeyPair extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

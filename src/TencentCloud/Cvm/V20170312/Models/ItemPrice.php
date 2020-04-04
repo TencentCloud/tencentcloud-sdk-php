@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述了单项的价格信息
+ *
  * @method float getUnitPrice() 获取后续合计费用的原价，后付费模式使用，单位：元。<br><li>如返回了其他时间区间项，如UnitPriceSecondStep，则本项代表时间区间在(0, 96)小时；若未返回其他时间区间项，则本项代表全时段，即(0, ∞)小时
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnitPrice(float $UnitPrice) 设置后续合计费用的原价，后付费模式使用，单位：元。<br><li>如返回了其他时间区间项，如UnitPriceSecondStep，则本项代表时间区间在(0, 96)小时；若未返回其他时间区间项，则本项代表全时段，即(0, ∞)小时
@@ -58,10 +60,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnitPriceDiscountThirdStep(float $UnitPriceDiscountThirdStep) 设置使用时间区间在(360, ∞)小时的后续合计费用的折扣价，后付费模式使用，单位：元
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *描述了单项的价格信息
  */
 class ItemPrice extends AbstractModel
 {
@@ -124,6 +122,7 @@ class ItemPrice extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnitPriceDiscountThirdStep;
+
     /**
      * @param float $UnitPrice 后续合计费用的原价，后付费模式使用，单位：元。<br><li>如返回了其他时间区间项，如UnitPriceSecondStep，则本项代表时间区间在(0, 96)小时；若未返回其他时间区间项，则本项代表全时段，即(0, ∞)小时
 注意：此字段可能返回 null，表示取不到有效值。
@@ -150,6 +149,7 @@ class ItemPrice extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

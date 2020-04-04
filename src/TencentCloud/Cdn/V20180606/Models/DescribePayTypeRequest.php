@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePayType请求参数结构体
+ *
  * @method string getArea() 获取指定服务地域查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
@@ -26,10 +28,6 @@ overseas：境外计费方式查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
 未填充时默认为 mainland
- */
-
-/**
- *DescribePayType请求参数结构体
  */
 class DescribePayTypeRequest extends AbstractModel
 {
@@ -40,6 +38,7 @@ overseas：境外计费方式查询
 未填充时默认为 mainland
      */
     public $Area;
+
     /**
      * @param string $Area 指定服务地域查询
 mainland：境内计费方式查询
@@ -50,6 +49,7 @@ overseas：境外计费方式查询
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

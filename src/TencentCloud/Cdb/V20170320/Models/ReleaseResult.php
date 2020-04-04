@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 解隔离任务结果
+ *
  * @method string getInstanceId() 获取实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
  * @method integer getCode() 获取实例解隔离操作的结果值。返回值为0表示成功。
  * @method void setCode(integer $Code) 设置实例解隔离操作的结果值。返回值为0表示成功。
  * @method string getMessage() 获取实例解隔离操作的错误信息。
  * @method void setMessage(string $Message) 设置实例解隔离操作的错误信息。
- */
-
-/**
- *解隔离任务结果
  */
 class ReleaseResult extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ReleaseResult extends AbstractModel
      * @var string 实例解隔离操作的错误信息。
      */
     public $Message;
+
     /**
      * @param string $InstanceId 实例 ID。
      * @param integer $Code 实例解隔离操作的结果值。返回值为0表示成功。
@@ -54,6 +53,7 @@ class ReleaseResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

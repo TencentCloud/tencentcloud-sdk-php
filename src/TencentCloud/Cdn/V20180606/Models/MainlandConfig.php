@@ -18,6 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 域名国内地区特殊配置。分地区特殊配置。UpdateDomainConfig接口只支持修改部分分地区配置，为了兼容旧版本配置，本类型会列出旧版本所有可能存在差异的配置列表，支持修改的配置列表如下：
++ Authentication
++ BandwidthAlert
++ ErrorPage
++ IpFilter
++ Origin
++ Referer
+ *
  * @method Authentication getAuthentication() 获取时间戳防盗链配置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthentication(Authentication $Authentication) 设置时间戳防盗链配置。
@@ -114,16 +122,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoSeek(VideoSeek $VideoSeek) 设置视频拖拽配置。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *域名国内地区特殊配置。分地区特殊配置。UpdateDomainConfig接口只支持修改部分分地区配置，为了兼容旧版本配置，本类型会列出旧版本所有可能存在差异的配置列表，支持修改的配置列表如下：
-+ Authentication
-+ BandwidthAlert
-+ ErrorPage
-+ IpFilter
-+ Origin
-+ Referer
  */
 class MainlandConfig extends AbstractModel
 {
@@ -270,6 +268,7 @@ class MainlandConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoSeek;
+
     /**
      * @param Authentication $Authentication 时间戳防盗链配置。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -324,6 +323,7 @@ class MainlandConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

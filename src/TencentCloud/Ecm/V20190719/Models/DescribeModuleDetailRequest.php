@@ -18,12 +18,10 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeModuleDetail请求参数结构体
+ *
  * @method string getModuleId() 获取模块ID，如em-qn46snq8。
  * @method void setModuleId(string $ModuleId) 设置模块ID，如em-qn46snq8。
- */
-
-/**
- *DescribeModuleDetail请求参数结构体
  */
 class DescribeModuleDetailRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeModuleDetailRequest extends AbstractModel
      * @var string 模块ID，如em-qn46snq8。
      */
     public $ModuleId;
+
     /**
      * @param string $ModuleId 模块ID，如em-qn46snq8。
      */
@@ -38,6 +37,7 @@ class DescribeModuleDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

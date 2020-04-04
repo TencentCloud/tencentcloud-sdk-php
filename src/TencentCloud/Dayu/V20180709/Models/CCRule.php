@@ -18,16 +18,14 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * cc自定义策略配置的规则
+ *
  * @method string getSkey() 获取规则的key, 可以为host、cgi、ua、referer
  * @method void setSkey(string $Skey) 设置规则的key, 可以为host、cgi、ua、referer
  * @method string getOperator() 获取规则的条件，可以为include、not_include、equal
  * @method void setOperator(string $Operator) 设置规则的条件，可以为include、not_include、equal
  * @method string getValue() 获取规则的值，长度小于31字节
  * @method void setValue(string $Value) 设置规则的值，长度小于31字节
- */
-
-/**
- *cc自定义策略配置的规则
  */
 class CCRule extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CCRule extends AbstractModel
      * @var string 规则的值，长度小于31字节
      */
     public $Value;
+
     /**
      * @param string $Skey 规则的key, 可以为host、cgi、ua、referer
      * @param string $Operator 规则的条件，可以为include、not_include、equal
@@ -54,6 +53,7 @@ class CCRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterSecurity请求参数结构体
+ *
  * @method string getClusterId() 获取集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
  * @method void setClusterId(string $ClusterId) 设置集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
- */
-
-/**
- *DescribeClusterSecurity请求参数结构体
  */
 class DescribeClusterSecurityRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeClusterSecurityRequest extends AbstractModel
      * @var string 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
      */
     public $ClusterId;
+
     /**
      * @param string $ClusterId 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
      */
@@ -38,6 +37,7 @@ class DescribeClusterSecurityRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

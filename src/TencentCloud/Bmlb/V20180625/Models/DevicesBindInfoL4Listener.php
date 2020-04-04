@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取设备绑定信息时返回的四层监听器信息。
+ *
  * @method string getListenerId() 获取七层监听器实例ID。
  * @method void setListenerId(string $ListenerId) 设置七层监听器实例ID。
  * @method string getProtocol() 获取七层监听器协议类型，可选值：http,https。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerPort(integer $LoadBalancerPort) 设置七层监听器的监听端口。
  * @method array getBackendSet() 获取该转发路径所绑定的主机列表。
  * @method void setBackendSet(array $BackendSet) 设置该转发路径所绑定的主机列表。
- */
-
-/**
- *获取设备绑定信息时返回的四层监听器信息。
  */
 class DevicesBindInfoL4Listener extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DevicesBindInfoL4Listener extends AbstractModel
      * @var array 该转发路径所绑定的主机列表。
      */
     public $BackendSet;
+
     /**
      * @param string $ListenerId 七层监听器实例ID。
      * @param string $Protocol 七层监听器协议类型，可选值：http,https。
@@ -62,6 +61,7 @@ class DevicesBindInfoL4Listener extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

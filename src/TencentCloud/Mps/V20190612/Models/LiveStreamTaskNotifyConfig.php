@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务处理的事件通知配置。
+ *
  * @method string getCmqModel() 获取CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
  * @method void setCmqModel(string $CmqModel) 设置CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
  * @method string getCmqRegion() 获取CMQ 的园区，如 sh，bj 等。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueueName(string $QueueName) 设置当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
  * @method string getTopicName() 获取当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
  * @method void setTopicName(string $TopicName) 设置当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
- */
-
-/**
- *任务处理的事件通知配置。
  */
 class LiveStreamTaskNotifyConfig extends AbstractModel
 {
@@ -52,6 +50,7 @@ class LiveStreamTaskNotifyConfig extends AbstractModel
      * @var string 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
      */
     public $TopicName;
+
     /**
      * @param string $CmqModel CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
      * @param string $CmqRegion CMQ 的园区，如 sh，bj 等。
@@ -62,6 +61,7 @@ class LiveStreamTaskNotifyConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 日志包下载链接详情
+ *
  * @method string getStartTime() 获取日志包起始时间
  * @method void setStartTime(string $StartTime) 设置日志包起始时间
  * @method string getEndTime() 获取日志包结束时间
@@ -32,10 +34,6 @@ mainland：境内
 overseas：境外
  * @method string getLogName() 获取日志包文件名
  * @method void setLogName(string $LogName) 设置日志包文件名
- */
-
-/**
- *日志包下载链接详情
  */
 class DomainLog extends AbstractModel
 {
@@ -65,6 +63,7 @@ overseas：境外
      * @var string 日志包文件名
      */
     public $LogName;
+
     /**
      * @param string $StartTime 日志包起始时间
      * @param string $EndTime 日志包结束时间
@@ -78,6 +77,7 @@ overseas：境外
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

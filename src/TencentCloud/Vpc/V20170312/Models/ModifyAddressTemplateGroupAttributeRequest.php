@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAddressTemplateGroupAttribute请求参数结构体
+ *
  * @method string getAddressTemplateGroupId() 获取IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
  * @method void setAddressTemplateGroupId(string $AddressTemplateGroupId) 设置IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
  * @method string getAddressTemplateGroupName() 获取IP地址模板集合名称。
  * @method void setAddressTemplateGroupName(string $AddressTemplateGroupName) 设置IP地址模板集合名称。
  * @method array getAddressTemplateIds() 获取IP地址模板实例ID， 例如：ipm-mdunqeb6。
  * @method void setAddressTemplateIds(array $AddressTemplateIds) 设置IP地址模板实例ID， 例如：ipm-mdunqeb6。
- */
-
-/**
- *ModifyAddressTemplateGroupAttribute请求参数结构体
  */
 class ModifyAddressTemplateGroupAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyAddressTemplateGroupAttributeRequest extends AbstractModel
      * @var array IP地址模板实例ID， 例如：ipm-mdunqeb6。
      */
     public $AddressTemplateIds;
+
     /**
      * @param string $AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
      * @param string $AddressTemplateGroupName IP地址模板集合名称。
@@ -54,6 +53,7 @@ class ModifyAddressTemplateGroupAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

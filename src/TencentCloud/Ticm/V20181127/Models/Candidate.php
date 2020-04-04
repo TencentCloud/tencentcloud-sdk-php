@@ -18,14 +18,12 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 识别出人脸对应的候选人。
+ *
  * @method string getName() 获取识别出人脸对应的候选人数组。当前返回相似度最高的候选人。
  * @method void setName(string $Name) 设置识别出人脸对应的候选人数组。当前返回相似度最高的候选人。
  * @method integer getConfidence() 获取相似度，0-100之间。
  * @method void setConfidence(integer $Confidence) 设置相似度，0-100之间。
- */
-
-/**
- *识别出人脸对应的候选人。
  */
 class Candidate extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Candidate extends AbstractModel
      * @var integer 相似度，0-100之间。
      */
     public $Confidence;
+
     /**
      * @param string $Name 识别出人脸对应的候选人数组。当前返回相似度最高的候选人。
      * @param integer $Confidence 相似度，0-100之间。
@@ -46,6 +45,7 @@ class Candidate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

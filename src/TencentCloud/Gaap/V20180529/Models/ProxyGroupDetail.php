@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 通道组详情信息
+ *
  * @method integer getCreateTime() 获取创建时间
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
  * @method integer getProjectId() 获取项目ID
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *通道组详情信息
  */
 class ProxyGroupDetail extends AbstractModel
 {
@@ -133,6 +131,7 @@ class ProxyGroupDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
+
     /**
      * @param integer $CreateTime 创建时间
      * @param integer $ProjectId 项目ID
@@ -158,6 +157,7 @@ class ProxyGroupDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

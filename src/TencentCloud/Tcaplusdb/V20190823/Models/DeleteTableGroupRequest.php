@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTableGroup请求参数结构体
+ *
  * @method string getClusterId() 获取表格组所属的集群ID
  * @method void setClusterId(string $ClusterId) 设置表格组所属的集群ID
  * @method string getTableGroupId() 获取表格组ID
  * @method void setTableGroupId(string $TableGroupId) 设置表格组ID
- */
-
-/**
- *DeleteTableGroup请求参数结构体
  */
 class DeleteTableGroupRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteTableGroupRequest extends AbstractModel
      * @var string 表格组ID
      */
     public $TableGroupId;
+
     /**
      * @param string $ClusterId 表格组所属的集群ID
      * @param string $TableGroupId 表格组ID
@@ -46,6 +45,7 @@ class DeleteTableGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

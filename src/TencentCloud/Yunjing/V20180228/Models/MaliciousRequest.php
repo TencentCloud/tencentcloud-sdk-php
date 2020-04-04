@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 恶意请求数据。
+ *
  * @method integer getId() 获取记录ID。
  * @method void setId(integer $Id) 设置记录ID。
  * @method string getUuid() 获取云镜客户端UUID。
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCmdLine(string $CmdLine) 设置执行命令行。
  * @method integer getPid() 获取进程PID。
  * @method void setPid(integer $Pid) 设置进程PID。
- */
-
-/**
- *恶意请求数据。
  */
 class MaliciousRequest extends AbstractModel
 {
@@ -141,6 +139,7 @@ class MaliciousRequest extends AbstractModel
      * @var integer 进程PID。
      */
     public $Pid;
+
     /**
      * @param integer $Id 记录ID。
      * @param string $Uuid 云镜客户端UUID。
@@ -166,6 +165,7 @@ class MaliciousRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

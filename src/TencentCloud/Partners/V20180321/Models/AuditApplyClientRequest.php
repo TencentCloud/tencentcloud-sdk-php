@@ -18,16 +18,14 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AuditApplyClient请求参数结构体
+ *
  * @method string getClientUin() 获取待审核客户账号ID
  * @method void setClientUin(string $ClientUin) 设置待审核客户账号ID
  * @method string getAuditResult() 获取审核结果，可能的取值：accept/reject
  * @method void setAuditResult(string $AuditResult) 设置审核结果，可能的取值：accept/reject
  * @method string getNote() 获取申请理由，B类客户审核通过时必须填写申请理由
  * @method void setNote(string $Note) 设置申请理由，B类客户审核通过时必须填写申请理由
- */
-
-/**
- *AuditApplyClient请求参数结构体
  */
 class AuditApplyClientRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AuditApplyClientRequest extends AbstractModel
      * @var string 申请理由，B类客户审核通过时必须填写申请理由
      */
     public $Note;
+
     /**
      * @param string $ClientUin 待审核客户账号ID
      * @param string $AuditResult 审核结果，可能的取值：accept/reject
@@ -54,6 +53,7 @@ class AuditApplyClientRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

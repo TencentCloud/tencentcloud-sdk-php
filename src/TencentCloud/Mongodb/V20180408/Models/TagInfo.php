@@ -18,14 +18,12 @@ namespace TencentCloud\Mongodb\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例标签信息
+ *
  * @method string getTagKey() 获取标签Key值
  * @method void setTagKey(string $TagKey) 设置标签Key值
  * @method string getTagValue() 获取标签值
  * @method void setTagValue(string $TagValue) 设置标签值
- */
-
-/**
- *实例标签信息
  */
 class TagInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TagInfo extends AbstractModel
      * @var string 标签值
      */
     public $TagValue;
+
     /**
      * @param string $TagKey 标签Key值
      * @param string $TagValue 标签值
@@ -46,6 +45,7 @@ class TagInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

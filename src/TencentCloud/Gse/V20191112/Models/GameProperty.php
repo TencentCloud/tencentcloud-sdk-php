@@ -18,14 +18,12 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 游戏属性详情
+ *
  * @method string getKey() 获取属性名称
  * @method void setKey(string $Key) 设置属性名称
  * @method string getValue() 获取属性值
  * @method void setValue(string $Value) 设置属性值
- */
-
-/**
- *游戏属性详情
  */
 class GameProperty extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GameProperty extends AbstractModel
      * @var string 属性值
      */
     public $Value;
+
     /**
      * @param string $Key 属性名称
      * @param string $Value 属性值
@@ -46,6 +45,7 @@ class GameProperty extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

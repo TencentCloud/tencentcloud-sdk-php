@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 私有网络和基础网络互通设备
+ *
  * @method string getVpcId() 获取VPC实例ID
  * @method void setVpcId(string $VpcId) 设置VPC实例ID
  * @method string getInstanceId() 获取云服务器实例唯一ID
  * @method void setInstanceId(string $InstanceId) 设置云服务器实例唯一ID
- */
-
-/**
- *私有网络和基础网络互通设备
  */
 class ClassicLinkInstance extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ClassicLinkInstance extends AbstractModel
      * @var string 云服务器实例唯一ID
      */
     public $InstanceId;
+
     /**
      * @param string $VpcId VPC实例ID
      * @param string $InstanceId 云服务器实例唯一ID
@@ -46,6 +45,7 @@ class ClassicLinkInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

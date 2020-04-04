@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusters请求参数结构体
+ *
  * @method array getClusterIds() 获取集群ID列表(为空时，
 表示获取账号下所有集群)
  * @method void setClusterIds(array $ClusterIds) 设置集群ID列表(为空时，
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置最大输出条数，默认20，最大为100
  * @method array getFilters() 获取过滤条件,当前只支持按照单个条件ClusterName进行过滤
  * @method void setFilters(array $Filters) 设置过滤条件,当前只支持按照单个条件ClusterName进行过滤
- */
-
-/**
- *DescribeClusters请求参数结构体
  */
 class DescribeClustersRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class DescribeClustersRequest extends AbstractModel
      * @var array 过滤条件,当前只支持按照单个条件ClusterName进行过滤
      */
     public $Filters;
+
     /**
      * @param array $ClusterIds 集群ID列表(为空时，
 表示获取账号下所有集群)
@@ -66,6 +65,7 @@ class DescribeClustersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

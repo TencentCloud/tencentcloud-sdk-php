@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 路由表冲突对象
+ *
  * @method string getRouteTableType() 获取路由表类型。
  * @method void setRouteTableType(string $RouteTableType) 设置路由表类型。
  * @method string getRouteTableCidrBlock() 获取路由表CIDR。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表ID。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *路由表冲突对象
  */
 class RouteTableConflict extends AbstractModel
 {
@@ -61,6 +59,7 @@ class RouteTableConflict extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteTableId;
+
     /**
      * @param string $RouteTableType 路由表类型。
      * @param string $RouteTableCidrBlock 路由表CIDR。
@@ -74,6 +73,7 @@ class RouteTableConflict extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

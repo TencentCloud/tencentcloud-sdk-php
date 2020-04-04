@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 采样截图信息
+ *
  * @method integer getDefinition() 获取采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
  * @method void setDefinition(integer $Definition) 设置采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
  * @method string getSampleType() 获取采样方式，取值范围：
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageUrlSet(array $ImageUrlSet) 设置生成的截图 url 列表。
  * @method array getWaterMarkDefinition() 获取截图如果被打上了水印，被打水印的模板 ID 列表。
  * @method void setWaterMarkDefinition(array $WaterMarkDefinition) 设置截图如果被打上了水印，被打水印的模板 ID 列表。
- */
-
-/**
- *采样截图信息
  */
 class MediaSampleSnapshotItem extends AbstractModel
 {
@@ -71,6 +69,7 @@ class MediaSampleSnapshotItem extends AbstractModel
      * @var array 截图如果被打上了水印，被打水印的模板 ID 列表。
      */
     public $WaterMarkDefinition;
+
     /**
      * @param integer $Definition 采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      * @param string $SampleType 采样方式，取值范围：
@@ -86,6 +85,7 @@ class MediaSampleSnapshotItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

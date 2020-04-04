@@ -18,16 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAITaskResult请求参数结构体
+ *
  * @method integer getTaskId() 获取任务唯一标识符。在URL方式时提交请求后会返回一个任务标识符，后续查询该url的结果时使用这个标识符进行查询。
  * @method void setTaskId(integer $TaskId) 设置任务唯一标识符。在URL方式时提交请求后会返回一个任务标识符，后续查询该url的结果时使用这个标识符进行查询。
  * @method integer getLimit() 获取限制数目
  * @method void setLimit(integer $Limit) 设置限制数目
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
- */
-
-/**
- *DescribeAITaskResult请求参数结构体
  */
 class DescribeAITaskResultRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAITaskResultRequest extends AbstractModel
      * @var integer 偏移量
      */
     public $Offset;
+
     /**
      * @param integer $TaskId 任务唯一标识符。在URL方式时提交请求后会返回一个任务标识符，后续查询该url的结果时使用这个标识符进行查询。
      * @param integer $Limit 限制数目
@@ -54,6 +53,7 @@ class DescribeAITaskResultRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

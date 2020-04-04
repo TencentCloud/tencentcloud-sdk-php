@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClassicalLBHealthStatus请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例 ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
  * @method string getListenerId() 获取负载均衡监听器ID
  * @method void setListenerId(string $ListenerId) 设置负载均衡监听器ID
- */
-
-/**
- *DescribeClassicalLBHealthStatus请求参数结构体
  */
 class DescribeClassicalLBHealthStatusRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeClassicalLBHealthStatusRequest extends AbstractModel
      * @var string 负载均衡监听器ID
      */
     public $ListenerId;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param string $ListenerId 负载均衡监听器ID
@@ -46,6 +45,7 @@ class DescribeClassicalLBHealthStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

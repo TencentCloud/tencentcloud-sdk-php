@@ -18,14 +18,13 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNode请求参数结构体
+ *
 
- */
-
-/**
- *DescribeNode请求参数结构体
  */
 class DescribeNodeRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeNodeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频内容识别输入参数类型
+ *
  * @method integer getDefinition() 获取视频智能识别模板 ID 。
  * @method void setDefinition(integer $Definition) 设置视频智能识别模板 ID 。
- */
-
-/**
- *视频内容识别输入参数类型
  */
 class AiRecognitionTaskInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskInput extends AbstractModel
      * @var integer 视频智能识别模板 ID 。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 视频智能识别模板 ID 。
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * s3源站回源鉴权。
+ *
  * @method string getSwitch() 获取开关，on/off。
  * @method void setSwitch(string $Switch) 设置开关，on/off。
  * @method string getAccessKey() 获取访问ID。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecretKey(string $SecretKey) 设置密钥。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *s3源站回源鉴权。
  */
 class AwsPrivateAccess extends AbstractModel
 {
@@ -51,6 +49,7 @@ class AwsPrivateAccess extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretKey;
+
     /**
      * @param string $Switch 开关，on/off。
      * @param string $AccessKey 访问ID。
@@ -62,6 +61,7 @@ class AwsPrivateAccess extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ParseLiveStreamProcessNotification返回参数结构体
+ *
  * @method string getNotificationType() 获取直播流处理结果类型，包含：
 <li>AiReviewResult：内容审核结果；</li>
 <li>AiRecognitionResult：内容识别结果；</li>
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ParseLiveStreamProcessNotification返回参数结构体
  */
 class ParseLiveStreamProcessNotificationResponse extends AbstractModel
 {
@@ -98,6 +96,7 @@ class ParseLiveStreamProcessNotificationResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $NotificationType 直播流处理结果类型，包含：
 <li>AiReviewResult：内容审核结果；</li>
@@ -118,6 +117,7 @@ class ParseLiveStreamProcessNotificationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

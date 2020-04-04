@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 触发器触发参数
+ *
  * @method string getAppId() 获取AppId
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置AppId
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterRegion(integer $ClusterRegion) 设置TKE集群地域数字ID
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *触发器触发参数
  */
 class TriggerInvokePara extends AbstractModel
 {
@@ -84,6 +82,7 @@ class TriggerInvokePara extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterRegion;
+
     /**
      * @param string $AppId AppId
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,6 +101,7 @@ class TriggerInvokePara extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

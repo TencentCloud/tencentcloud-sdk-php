@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述云数据库实例的详细信息。
+ *
  * @method string getInstanceId() 获取实例 ID，唯一标识一个 TDSQL 实例
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，唯一标识一个 TDSQL 实例
  * @method string getInstanceName() 获取实例名称，用户可修改
@@ -102,10 +104,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsEncryptSupported(integer $IsEncryptSupported) 设置是否支持数据加密。1-支持；0-不支持
  * @method integer getCpu() 获取实例CPU核数
  * @method void setCpu(integer $Cpu) 设置实例CPU核数
- */
-
-/**
- *描述云数据库实例的详细信息。
  */
 class DBInstance extends AbstractModel
 {
@@ -306,6 +304,7 @@ class DBInstance extends AbstractModel
      * @var integer 实例CPU核数
      */
     public $Cpu;
+
     /**
      * @param string $InstanceId 实例 ID，唯一标识一个 TDSQL 实例
      * @param string $InstanceName 实例名称，用户可修改
@@ -354,6 +353,7 @@ class DBInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

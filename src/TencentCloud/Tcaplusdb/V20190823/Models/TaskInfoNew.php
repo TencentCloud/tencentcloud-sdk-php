@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务信息详情
+ *
  * @method string getTaskId() 获取任务ID
  * @method void setTaskId(string $TaskId) 设置任务ID
  * @method string getTaskType() 获取任务类型
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(string $Operator) 设置操作者
  * @method string getContent() 获取任务详情
  * @method void setContent(string $Content) 设置任务详情
- */
-
-/**
- *任务信息详情
  */
 class TaskInfoNew extends AbstractModel
 {
@@ -94,6 +92,7 @@ class TaskInfoNew extends AbstractModel
      * @var string 任务详情
      */
     public $Content;
+
     /**
      * @param string $TaskId 任务ID
      * @param string $TaskType 任务类型
@@ -110,6 +109,7 @@ class TaskInfoNew extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

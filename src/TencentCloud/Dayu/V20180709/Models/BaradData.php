@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 巴拉多返回的数据
+ *
  * @method string getMetricName() 获取指标名（connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
 inactive_conn表示非活跃连接数;
@@ -38,10 +40,6 @@ outpkg表示出包速率；）
  * @method void setData(array $Data) 设置值数组
  * @method integer getCount() 获取值数组的大小
  * @method void setCount(integer $Count) 设置值数组的大小
- */
-
-/**
- *巴拉多返回的数据
  */
 class BaradData extends AbstractModel
 {
@@ -66,6 +64,7 @@ outpkg表示出包速率；）
      * @var integer 值数组的大小
      */
     public $Count;
+
     /**
      * @param string $MetricName 指标名（connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
@@ -82,6 +81,7 @@ outpkg表示出包速率；）
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

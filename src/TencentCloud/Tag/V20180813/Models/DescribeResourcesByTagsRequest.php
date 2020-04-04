@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeResourcesByTags请求参数结构体
+ *
  * @method array getTagFilters() 获取标签过滤数组
  * @method void setTagFilters(array $TagFilters) 设置标签过滤数组
  * @method integer getCreateUin() 获取创建标签者uin
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域
  * @method string getServiceType() 获取业务类型
  * @method void setServiceType(string $ServiceType) 设置业务类型
- */
-
-/**
- *DescribeResourcesByTags请求参数结构体
  */
 class DescribeResourcesByTagsRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeResourcesByTagsRequest extends AbstractModel
      * @var string 业务类型
      */
     public $ServiceType;
+
     /**
      * @param array $TagFilters 标签过滤数组
      * @param integer $CreateUin 创建标签者uin
@@ -94,6 +93,7 @@ class DescribeResourcesByTagsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

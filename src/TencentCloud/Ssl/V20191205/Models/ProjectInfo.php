@@ -18,6 +18,8 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取证书列表（DescribeCertificates）返回参数键为 Certificates 下，key为 ProjectInfo 的内容。
+ *
  * @method string getProjectName() 获取项目名称。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectName(string $ProjectName) 设置项目名称。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(string $ProjectId) 设置项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *获取证书列表（DescribeCertificates）返回参数键为 Certificates 下，key为 ProjectInfo 的内容。
  */
 class ProjectInfo extends AbstractModel
 {
@@ -84,6 +82,7 @@ class ProjectInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
+
     /**
      * @param string $ProjectName 项目名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,6 +101,7 @@ class ProjectInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

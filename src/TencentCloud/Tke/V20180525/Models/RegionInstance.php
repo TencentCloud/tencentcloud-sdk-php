@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 地域属性信息
+ *
  * @method string getRegionName() 获取地域名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionName(string $RegionName) 设置地域名称
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置地域白名单
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *地域属性信息
  */
 class RegionInstance extends AbstractModel
 {
@@ -84,6 +82,7 @@ class RegionInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
+
     /**
      * @param string $RegionName 地域名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,6 +101,7 @@ class RegionInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

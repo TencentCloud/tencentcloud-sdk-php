@@ -18,12 +18,10 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户性别画像元素数组
+ *
  * @method array getPortraitSet() 获取用户性别画像数组
  * @method void setPortraitSet(array $PortraitSet) 设置用户性别画像数组
- */
-
-/**
- *用户性别画像元素数组
  */
 class GenderPortraitInfo extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GenderPortraitInfo extends AbstractModel
      * @var array 用户性别画像数组
      */
     public $PortraitSet;
+
     /**
      * @param array $PortraitSet 用户性别画像数组
      */
@@ -38,6 +37,7 @@ class GenderPortraitInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

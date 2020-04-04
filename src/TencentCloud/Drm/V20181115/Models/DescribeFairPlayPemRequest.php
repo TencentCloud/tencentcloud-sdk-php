@@ -18,16 +18,14 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeFairPlayPem请求参数结构体
+ *
  * @method integer getBailorId() 获取委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
  * @method void setBailorId(integer $BailorId) 设置委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
  * @method integer getFairPlayPemId() 获取需要查询的pem id。
 当该值未填入时，将返回所有的私钥信息。
  * @method void setFairPlayPemId(integer $FairPlayPemId) 设置需要查询的pem id。
 当该值未填入时，将返回所有的私钥信息。
- */
-
-/**
- *DescribeFairPlayPem请求参数结构体
  */
 class DescribeFairPlayPemRequest extends AbstractModel
 {
@@ -41,6 +39,7 @@ class DescribeFairPlayPemRequest extends AbstractModel
 当该值未填入时，将返回所有的私钥信息。
      */
     public $FairPlayPemId;
+
     /**
      * @param integer $BailorId 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      * @param integer $FairPlayPemId 需要查询的pem id。
@@ -50,6 +49,7 @@ class DescribeFairPlayPemRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

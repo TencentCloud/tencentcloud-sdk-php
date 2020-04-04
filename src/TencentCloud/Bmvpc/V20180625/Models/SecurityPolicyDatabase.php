@@ -18,14 +18,12 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SecurityPolicyDatabase策略
+ *
  * @method string getLocalCidrBlock() 获取本端网段
  * @method void setLocalCidrBlock(string $LocalCidrBlock) 设置本端网段
  * @method array getRemoteCidrBlock() 获取对端网段
  * @method void setRemoteCidrBlock(array $RemoteCidrBlock) 设置对端网段
- */
-
-/**
- *SecurityPolicyDatabase策略
  */
 class SecurityPolicyDatabase extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SecurityPolicyDatabase extends AbstractModel
      * @var array 对端网段
      */
     public $RemoteCidrBlock;
+
     /**
      * @param string $LocalCidrBlock 本端网段
      * @param array $RemoteCidrBlock 对端网段
@@ -46,6 +45,7 @@ class SecurityPolicyDatabase extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

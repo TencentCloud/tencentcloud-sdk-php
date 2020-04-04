@@ -18,12 +18,10 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVocab请求参数结构体
+ *
  * @method string getVocabLibName() 获取要查询词汇的词汇库名
  * @method void setVocabLibName(string $VocabLibName) 设置要查询词汇的词汇库名
- */
-
-/**
- *DescribeVocab请求参数结构体
  */
 class DescribeVocabRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeVocabRequest extends AbstractModel
      * @var string 要查询词汇的词汇库名
      */
     public $VocabLibName;
+
     /**
      * @param string $VocabLibName 要查询词汇的词汇库名
      */
@@ -38,6 +37,7 @@ class DescribeVocabRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

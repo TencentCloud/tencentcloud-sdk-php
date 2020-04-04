@@ -18,14 +18,12 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IdCardVerification请求参数结构体
+ *
  * @method string getIdCard() 获取身份证号
  * @method void setIdCard(string $IdCard) 设置身份证号
  * @method string getName() 获取姓名
  * @method void setName(string $Name) 设置姓名
- */
-
-/**
- *IdCardVerification请求参数结构体
  */
 class IdCardVerificationRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class IdCardVerificationRequest extends AbstractModel
      * @var string 姓名
      */
     public $Name;
+
     /**
      * @param string $IdCard 身份证号
      * @param string $Name 姓名
@@ -46,6 +45,7 @@ class IdCardVerificationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 模型输出
+ *
  * @method string getCosModelArtifacts() 获取cos输出路径
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosModelArtifacts(string $CosModelArtifacts) 设置cos输出路径
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *模型输出
  */
 class ModelArtifacts extends AbstractModel
 {
@@ -34,6 +32,7 @@ class ModelArtifacts extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosModelArtifacts;
+
     /**
      * @param string $CosModelArtifacts cos输出路径
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,6 +41,7 @@ class ModelArtifacts extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

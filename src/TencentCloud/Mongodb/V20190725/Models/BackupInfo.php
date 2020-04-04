@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 备份信息
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method integer getBackupType() 获取备份方式，0-自动备份，1-手动备份
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置备份状态，1-备份中，2-备份成功
  * @method integer getBackupMethod() 获取备份方法，0-逻辑备份，1-物理备份
  * @method void setBackupMethod(integer $BackupMethod) 设置备份方法，0-逻辑备份，1-物理备份
- */
-
-/**
- *备份信息
  */
 class BackupInfo extends AbstractModel
 {
@@ -99,6 +97,7 @@ class BackupInfo extends AbstractModel
      * @var integer 备份方法，0-逻辑备份，1-物理备份
      */
     public $BackupMethod;
+
     /**
      * @param string $InstanceId 实例ID
      * @param integer $BackupType 备份方式，0-自动备份，1-手动备份
@@ -118,6 +117,7 @@ class BackupInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

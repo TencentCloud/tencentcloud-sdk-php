@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWorkflows返回参数结构体
+ *
  * @method integer getTotalCount() 获取符合过滤条件的记录总数。
  * @method void setTotalCount(integer $TotalCount) 设置符合过滤条件的记录总数。
  * @method array getWorkflowInfoSet() 获取工作流信息数组。
  * @method void setWorkflowInfoSet(array $WorkflowInfoSet) 设置工作流信息数组。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeWorkflows返回参数结构体
  */
 class DescribeWorkflowsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeWorkflowsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 符合过滤条件的记录总数。
      * @param array $WorkflowInfoSet 工作流信息数组。
@@ -54,6 +53,7 @@ class DescribeWorkflowsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ProcessMediaByUrl请求参数结构体
+ *
  * @method MediaInputInfo getInputInfo() 获取输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
  * @method void setInputInfo(MediaInputInfo $InputInfo) 设置输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
  * @method MediaOutputInfo getOutputInfo() 获取输出文件 COS 路径信息。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *ProcessMediaByUrl请求参数结构体
  */
 class ProcessMediaByUrlRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ProcessMediaByUrlRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param MediaInputInfo $InputInfo 输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
      * @param MediaOutputInfo $OutputInfo 输出文件 COS 路径信息。
@@ -110,6 +109,7 @@ class ProcessMediaByUrlRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAddressTemplateGroups请求参数结构体
+ *
  * @method array getFilters() 获取过滤条件。
 <li>address-template-group-name - String - （过滤条件）IP地址模板集合名称。</li>
 <li>address-template-group-id - String - （过滤条件）IP地址模板实集合例ID，例如：ipmg-mdunqeb6。</li>
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) 设置偏移量，默认为0。
  * @method string getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(string $Limit) 设置返回数量，默认为20，最大值为100。
- */
-
-/**
- *DescribeAddressTemplateGroups请求参数结构体
  */
 class DescribeAddressTemplateGroupsRequest extends AbstractModel
 {
@@ -51,6 +49,7 @@ class DescribeAddressTemplateGroupsRequest extends AbstractModel
      * @var string 返回数量，默认为20，最大值为100。
      */
     public $Limit;
+
     /**
      * @param array $Filters 过滤条件。
 <li>address-template-group-name - String - （过滤条件）IP地址模板集合名称。</li>
@@ -62,6 +61,7 @@ class DescribeAddressTemplateGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

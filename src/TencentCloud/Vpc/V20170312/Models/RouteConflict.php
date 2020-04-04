@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 路由冲突对象
+ *
  * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
  * @method string getDestinationCidrBlock() 获取要检查的与之冲突的目的端
  * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置要检查的与之冲突的目的端
  * @method array getConflictSet() 获取冲突的路由策略列表
  * @method void setConflictSet(array $ConflictSet) 设置冲突的路由策略列表
- */
-
-/**
- *路由冲突对象
  */
 class RouteConflict extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RouteConflict extends AbstractModel
      * @var array 冲突的路由策略列表
      */
     public $ConflictSet;
+
     /**
      * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      * @param string $DestinationCidrBlock 要检查的与之冲突的目的端
@@ -54,6 +53,7 @@ class RouteConflict extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

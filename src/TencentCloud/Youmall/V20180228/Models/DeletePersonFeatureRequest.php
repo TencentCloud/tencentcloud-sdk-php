@@ -18,16 +18,14 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeletePersonFeature请求参数结构体
+ *
  * @method string getCompanyId() 获取公司ID
  * @method void setCompanyId(string $CompanyId) 设置公司ID
  * @method integer getShopId() 获取门店ID
  * @method void setShopId(integer $ShopId) 设置门店ID
  * @method integer getPersonId() 获取顾客ID
  * @method void setPersonId(integer $PersonId) 设置顾客ID
- */
-
-/**
- *DeletePersonFeature请求参数结构体
  */
 class DeletePersonFeatureRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeletePersonFeatureRequest extends AbstractModel
      * @var integer 顾客ID
      */
     public $PersonId;
+
     /**
      * @param string $CompanyId 公司ID
      * @param integer $ShopId 门店ID
@@ -54,6 +53,7 @@ class DeletePersonFeatureRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

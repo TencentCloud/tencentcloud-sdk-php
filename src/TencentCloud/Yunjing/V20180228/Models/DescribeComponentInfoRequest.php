@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeComponentInfo请求参数结构体
+ *
  * @method integer getComponentId() 获取组件ID。
  * @method void setComponentId(integer $ComponentId) 设置组件ID。
- */
-
-/**
- *DescribeComponentInfo请求参数结构体
  */
 class DescribeComponentInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeComponentInfoRequest extends AbstractModel
      * @var integer 组件ID。
      */
     public $ComponentId;
+
     /**
      * @param integer $ComponentId 组件ID。
      */
@@ -38,6 +37,7 @@ class DescribeComponentInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

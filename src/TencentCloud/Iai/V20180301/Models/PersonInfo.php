@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 返回的人员信息
+ *
  * @method string getPersonName() 获取人员名称
  * @method void setPersonName(string $PersonName) 设置人员名称
  * @method string getPersonId() 获取人员Id
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
  * @method void setCreationTimestamp(integer $CreationTimestamp) 设置人员的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
- */
-
-/**
- *返回的人员信息
  */
 class PersonInfo extends AbstractModel
 {
@@ -69,6 +67,7 @@ class PersonInfo extends AbstractModel
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
      */
     public $CreationTimestamp;
+
     /**
      * @param string $PersonName 人员名称
      * @param string $PersonId 人员Id
@@ -82,6 +81,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

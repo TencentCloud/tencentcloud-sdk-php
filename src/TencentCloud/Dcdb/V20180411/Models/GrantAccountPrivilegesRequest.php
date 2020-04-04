@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GrantAccountPrivileges请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：dcdbt-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：dcdbt-ow728lmc。
  * @method string getUserName() 获取登录用户名。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setObject(string $Object) 设置具体的 Type 的名称，例如 Type 为 table 时就是具体的表名。DbName 和 Type 都为具体名称，则 Object 表示具体对象名，不能为 \* 或者为空
  * @method string getColName() 获取当 Type=table 时，ColName 为 \* 表示对表授权，如果为具体字段名，表示对字段授权
  * @method void setColName(string $ColName) 设置当 Type=table 时，ColName 为 \* 表示对表授权，如果为具体字段名，表示对字段授权
- */
-
-/**
- *GrantAccountPrivileges请求参数结构体
  */
 class GrantAccountPrivilegesRequest extends AbstractModel
 {
@@ -92,6 +90,7 @@ class GrantAccountPrivilegesRequest extends AbstractModel
      * @var string 当 Type=table 时，ColName 为 \* 表示对表授权，如果为具体字段名，表示对字段授权
      */
     public $ColName;
+
     /**
      * @param string $InstanceId 实例 ID，形如：dcdbt-ow728lmc。
      * @param string $UserName 登录用户名。
@@ -110,6 +109,7 @@ class GrantAccountPrivilegesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

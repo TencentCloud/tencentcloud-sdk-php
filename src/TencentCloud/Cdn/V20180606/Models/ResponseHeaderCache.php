@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 源站头部缓存配置，默认为开启状态，缓存所有头部信息
+ *
  * @method string getSwitch() 获取源站头部缓存开关
 on：开启
 off：关闭
  * @method void setSwitch(string $Switch) 设置源站头部缓存开关
 on：开启
 off：关闭
- */
-
-/**
- *源站头部缓存配置，默认为开启状态，缓存所有头部信息
  */
 class ResponseHeaderCache extends AbstractModel
 {
@@ -37,6 +35,7 @@ on：开启
 off：关闭
      */
     public $Switch;
+
     /**
      * @param string $Switch 源站头部缓存开关
 on：开启
@@ -46,6 +45,7 @@ off：关闭
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

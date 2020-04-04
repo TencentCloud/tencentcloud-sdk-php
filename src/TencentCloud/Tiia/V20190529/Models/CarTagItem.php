@@ -18,6 +18,8 @@ namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 车辆属性识别的结果
+ *
  * @method string getSerial() 获取车系
  * @method void setSerial(string $Serial) 设置车系
  * @method string getBrand() 获取车辆品牌
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setYear(integer $Year) 设置年份，没识别出年份的时候返回0
  * @method array getCarLocation() 获取车辆在图片中的坐标信息
  * @method void setCarLocation(array $CarLocation) 设置车辆在图片中的坐标信息
- */
-
-/**
- *车辆属性识别的结果
  */
 class CarTagItem extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CarTagItem extends AbstractModel
      * @var array 车辆在图片中的坐标信息
      */
     public $CarLocation;
+
     /**
      * @param string $Serial 车系
      * @param string $Brand 车辆品牌
@@ -86,6 +85,7 @@ class CarTagItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

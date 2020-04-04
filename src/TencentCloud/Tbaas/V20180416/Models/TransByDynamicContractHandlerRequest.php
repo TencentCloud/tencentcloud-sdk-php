@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TransByDynamicContractHandler请求参数结构体
+ *
  * @method string getModule() 获取模块名，固定字段：transaction
  * @method void setModule(string $Module) 设置模块名，固定字段：transaction
  * @method string getOperation() 获取操作名，固定字段：trans_by_dynamic_contract
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFuncName(string $FuncName) 设置合约被调用方法名
  * @method array getFuncParam() 获取合约被调用方法的入参
  * @method void setFuncParam(array $FuncParam) 设置合约被调用方法的入参
- */
-
-/**
- *TransByDynamicContractHandler请求参数结构体
  */
 class TransByDynamicContractHandlerRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class TransByDynamicContractHandlerRequest extends AbstractModel
      * @var array 合约被调用方法的入参
      */
     public $FuncParam;
+
     /**
      * @param string $Module 模块名，固定字段：transaction
      * @param string $Operation 操作名，固定字段：trans_by_dynamic_contract
@@ -94,6 +93,7 @@ class TransByDynamicContractHandlerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

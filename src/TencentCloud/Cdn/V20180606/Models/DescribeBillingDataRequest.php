@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBillingData请求参数结构体
+ *
  * @method string getStartTime() 获取查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
 根据指定时间粒度参数不同，会进行向前取整，如指定起始时间为 2018-09-04 10:40:00 按小时粒度查询，返回的第一个数据对应时间点为 2018-09-04 10:00:00
 起始时间与结束时间间隔小于等于 90 天
@@ -72,10 +74,6 @@ bandwidth：计费带宽
 flux：计费流量
 bandwidth：计费带宽
 默认为 bandwidth
- */
-
-/**
- *DescribeBillingData请求参数结构体
  */
 class DescribeBillingDataRequest extends AbstractModel
 {
@@ -137,6 +135,7 @@ bandwidth：计费带宽
 默认为 bandwidth
      */
     public $Metric;
+
     /**
      * @param string $StartTime 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
 根据指定时间粒度参数不同，会进行向前取整，如指定起始时间为 2018-09-04 10:40:00 按小时粒度查询，返回的第一个数据对应时间点为 2018-09-04 10:00:00
@@ -170,6 +169,7 @@ bandwidth：计费带宽
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

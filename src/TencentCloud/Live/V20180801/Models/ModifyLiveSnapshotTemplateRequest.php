@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLiveSnapshotTemplate请求参数结构体
+ *
  * @method integer getTemplateId() 获取模板Id。
  * @method void setTemplateId(integer $TemplateId) 设置模板Id。
  * @method string getTemplateName() 获取模板名称。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosBucket(string $CosBucket) 设置Cos Bucket名称。
  * @method string getCosRegion() 获取Cos 地域。
  * @method void setCosRegion(string $CosRegion) 设置Cos 地域。
- */
-
-/**
- *ModifyLiveSnapshotTemplate请求参数结构体
  */
 class ModifyLiveSnapshotTemplateRequest extends AbstractModel
 {
@@ -103,6 +101,7 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
      * @var string Cos 地域。
      */
     public $CosRegion;
+
     /**
      * @param integer $TemplateId 模板Id。
      * @param string $TemplateName 模板名称。
@@ -122,6 +121,7 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

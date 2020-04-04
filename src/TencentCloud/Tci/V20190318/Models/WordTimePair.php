@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 单词出现的那个句子的起始时间和结束时间信息
+ *
  * @method integer getMbtm() 获取单词出现的那个句子的起始时间
  * @method void setMbtm(integer $Mbtm) 设置单词出现的那个句子的起始时间
  * @method integer getMetm() 获取	单词出现的那个句子的结束时间
  * @method void setMetm(integer $Metm) 设置	单词出现的那个句子的结束时间
- */
-
-/**
- *单词出现的那个句子的起始时间和结束时间信息
  */
 class WordTimePair extends AbstractModel
 {
@@ -38,6 +36,7 @@ class WordTimePair extends AbstractModel
      * @var integer 	单词出现的那个句子的结束时间
      */
     public $Metm;
+
     /**
      * @param integer $Mbtm 单词出现的那个句子的起始时间
      * @param integer $Metm 	单词出现的那个句子的结束时间
@@ -46,6 +45,7 @@ class WordTimePair extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

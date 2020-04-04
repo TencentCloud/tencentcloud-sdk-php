@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 起止时间
+ *
  * @method integer getEndTime() 获取结束时间戳
  * @method void setEndTime(integer $EndTime) 设置结束时间戳
  * @method integer getStartTime() 获取起始时间戳
  * @method void setStartTime(integer $StartTime) 设置起始时间戳
- */
-
-/**
- *起止时间
  */
 class TimeType extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TimeType extends AbstractModel
      * @var integer 起始时间戳
      */
     public $StartTime;
+
     /**
      * @param integer $EndTime 结束时间戳
      * @param integer $StartTime 起始时间戳
@@ -46,6 +45,7 @@ class TimeType extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

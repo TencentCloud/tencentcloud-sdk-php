@@ -18,6 +18,8 @@ namespace TencentCloud\Memcached\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例详细信息列表
+ *
  * @method array getTags() 获取实例关联的标签信息
  * @method void setTags(array $Tags) 设置实例关联的标签信息
  * @method string getAddTimeStamp() 获取实例创建时间
@@ -66,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVport(integer $Vport) 设置实例端口号
  * @method integer getZoneId() 获取区域ID
  * @method void setZoneId(integer $ZoneId) 设置区域ID
- */
-
-/**
- *实例详细信息列表
  */
 class InstanceListInfo extends AbstractModel
 {
@@ -192,6 +190,7 @@ class InstanceListInfo extends AbstractModel
      * @var integer 区域ID
      */
     public $ZoneId;
+
     /**
      * @param array $Tags 实例关联的标签信息
      * @param string $AddTimeStamp 实例创建时间
@@ -222,6 +221,7 @@ class InstanceListInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

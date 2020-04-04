@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLiveRecordTemplate请求参数结构体
+ *
  * @method integer getTemplateId() 获取模板Id。
  * @method void setTemplateId(integer $TemplateId) 设置模板Id。
  * @method string getTemplateName() 获取模板名称。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) 设置HLS录制定制参数
  * @method RecordParam getMp3Param() 获取Mp3录制参数，开启Mp3录制时设置。
  * @method void setMp3Param(RecordParam $Mp3Param) 设置Mp3录制参数，开启Mp3录制时设置。
- */
-
-/**
- *ModifyLiveRecordTemplate请求参数结构体
  */
 class ModifyLiveRecordTemplateRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
      * @var RecordParam Mp3录制参数，开启Mp3录制时设置。
      */
     public $Mp3Param;
+
     /**
      * @param integer $TemplateId 模板Id。
      * @param string $TemplateName 模板名称。
@@ -102,6 +101,7 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

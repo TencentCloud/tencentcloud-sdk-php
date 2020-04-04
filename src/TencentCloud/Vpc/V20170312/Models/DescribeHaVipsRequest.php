@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHaVips请求参数结构体
+ *
  * @method array getHaVipIds() 获取`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
  * @method void setHaVipIds(array $HaVipIds) 设置`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
  * @method void setLimit(integer $Limit) 设置返回数量
- */
-
-/**
- *DescribeHaVips请求参数结构体
  */
 class DescribeHaVipsRequest extends AbstractModel
 {
@@ -67,6 +65,7 @@ class DescribeHaVipsRequest extends AbstractModel
      * @var integer 返回数量
      */
     public $Limit;
+
     /**
      * @param array $HaVipIds `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
      * @param array $Filters 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
@@ -82,6 +81,7 @@ class DescribeHaVipsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

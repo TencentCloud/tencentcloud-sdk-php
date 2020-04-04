@@ -18,6 +18,8 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTasks请求参数结构体
+ *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
  * @method string getProjectId() 获取项目 Id。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页返回的起始偏移量，默认值：0。
  * @method integer getLimit() 获取分页返回的记录条数，默认值：10。
  * @method void setLimit(integer $Limit) 设置分页返回的记录条数，默认值：10。
- */
-
-/**
- *DescribeTasks请求参数结构体
  */
 class DescribeTasksRequest extends AbstractModel
 {
@@ -78,6 +76,7 @@ class DescribeTasksRequest extends AbstractModel
      * @var integer 分页返回的记录条数，默认值：10。
      */
     public $Limit;
+
     /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $ProjectId 项目 Id。
@@ -94,6 +93,7 @@ class DescribeTasksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

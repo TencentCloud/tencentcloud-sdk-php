@@ -18,16 +18,14 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeFileSample返回参数结构体
+ *
  * @method array getFileSampleSet() 获取符合要求的样本的信息
  * @method void setFileSampleSet(array $FileSampleSet) 设置符合要求的样本的信息
  * @method integer getTotalCount() 获取符合要求的样本的数量
  * @method void setTotalCount(integer $TotalCount) 设置符合要求的样本的数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeFileSample返回参数结构体
  */
 class DescribeFileSampleResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeFileSampleResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $FileSampleSet 符合要求的样本的信息
      * @param integer $TotalCount 符合要求的样本的数量
@@ -54,6 +53,7 @@ class DescribeFileSampleResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

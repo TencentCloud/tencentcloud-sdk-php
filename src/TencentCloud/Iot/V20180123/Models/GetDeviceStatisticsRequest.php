@@ -18,16 +18,14 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetDeviceStatistics请求参数结构体
+ *
  * @method array getProducts() 获取产品Id列表
  * @method void setProducts(array $Products) 设置产品Id列表
  * @method string getStartDate() 获取开始日期
  * @method void setStartDate(string $StartDate) 设置开始日期
  * @method string getEndDate() 获取结束日期
  * @method void setEndDate(string $EndDate) 设置结束日期
- */
-
-/**
- *GetDeviceStatistics请求参数结构体
  */
 class GetDeviceStatisticsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GetDeviceStatisticsRequest extends AbstractModel
      * @var string 结束日期
      */
     public $EndDate;
+
     /**
      * @param array $Products 产品Id列表
      * @param string $StartDate 开始日期
@@ -54,6 +53,7 @@ class GetDeviceStatisticsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TsfPage<Config>
+ *
  * @method integer getTotalCount() 获取TsfPageConfig
  * @method void setTotalCount(integer $TotalCount) 设置TsfPageConfig
  * @method array getContent() 获取配置项列表
  * @method void setContent(array $Content) 设置配置项列表
- */
-
-/**
- *TsfPage<Config>
  */
 class TsfPageConfig extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TsfPageConfig extends AbstractModel
      * @var array 配置项列表
      */
     public $Content;
+
     /**
      * @param integer $TotalCount TsfPageConfig
      * @param array $Content 配置项列表
@@ -46,6 +45,7 @@ class TsfPageConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

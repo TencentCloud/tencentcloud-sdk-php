@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * `IPv6`地址信息。
+ *
  * @method string getAddress() 获取`IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
  * @method void setAddress(string $Address) 设置`IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
  * @method boolean getPrimary() 获取是否是主`IP`。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 <li>`MIGRATING`：迁移中</li>
 <li>`DELETING`：删除中</li>
 <li>`AVAILABLE`：可用的</li>
- */
-
-/**
- *`IPv6`地址信息。
  */
 class Ipv6Address extends AbstractModel
 {
@@ -78,6 +76,7 @@ class Ipv6Address extends AbstractModel
 <li>`AVAILABLE`：可用的</li>
      */
     public $State;
+
     /**
      * @param string $Address `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
      * @param boolean $Primary 是否是主`IP`。
@@ -94,6 +93,7 @@ class Ipv6Address extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

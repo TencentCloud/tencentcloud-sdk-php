@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 账户信息详情
+ *
  * @method string getName() 获取账户名
  * @method void setName(string $Name) 设置账户名
  * @method string getRemark() 获取账户备注
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternalStatus(string $InternalStatus) 设置账户内部状态，正常为enable
  * @method array getDbs() 获取该账户对相关db的读写权限信息
  * @method void setDbs(array $Dbs) 设置该账户对相关db的读写权限信息
- */
-
-/**
- *账户信息详情
  */
 class AccountDetail extends AbstractModel
 {
@@ -80,6 +78,7 @@ class AccountDetail extends AbstractModel
      * @var array 该账户对相关db的读写权限信息
      */
     public $Dbs;
+
     /**
      * @param string $Name 账户名
      * @param string $Remark 账户备注
@@ -94,6 +93,7 @@ class AccountDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

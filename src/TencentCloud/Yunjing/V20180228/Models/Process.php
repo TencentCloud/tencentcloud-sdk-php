@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 进程信息数据。
+ *
  * @method integer getId() 获取唯一ID。
  * @method void setId(integer $Id) 设置唯一ID。
  * @method string getUuid() 获取云镜客户端唯一UUID。
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFullPath(string $FullPath) 设置进程路径。
  * @method string getCreateTime() 获取创建时间。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
- */
-
-/**
- *进程信息数据。
  */
 class Process extends AbstractModel
 {
@@ -113,6 +111,7 @@ class Process extends AbstractModel
      * @var string 创建时间。
      */
     public $CreateTime;
+
     /**
      * @param integer $Id 唯一ID。
      * @param string $Uuid 云镜客户端唯一UUID。
@@ -134,6 +133,7 @@ class Process extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

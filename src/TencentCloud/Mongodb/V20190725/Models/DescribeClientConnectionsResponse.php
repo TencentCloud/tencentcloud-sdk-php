@@ -18,14 +18,12 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClientConnections返回参数结构体
+ *
  * @method array getClients() 获取客户端连接信息，包括客户端IP和对应IP的连接数量
  * @method void setClients(array $Clients) 设置客户端连接信息，包括客户端IP和对应IP的连接数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeClientConnections返回参数结构体
  */
 class DescribeClientConnectionsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeClientConnectionsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Clients 客户端连接信息，包括客户端IP和对应IP的连接数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeClientConnectionsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

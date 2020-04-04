@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 灾备同步任务信息
+ *
  * @method string getJobId() 获取灾备任务id
  * @method void setJobId(string $JobId) 设置灾备任务id
  * @method string getJobName() 获取灾备任务名
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
- */
-
-/**
- *灾备同步任务信息
  */
 class SyncJobInfo extends AbstractModel
 {
@@ -129,6 +127,7 @@ class SyncJobInfo extends AbstractModel
      * @var string 结束时间
      */
     public $EndTime;
+
     /**
      * @param string $JobId 灾备任务id
      * @param string $JobName 灾备任务名
@@ -150,6 +149,7 @@ class SyncJobInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

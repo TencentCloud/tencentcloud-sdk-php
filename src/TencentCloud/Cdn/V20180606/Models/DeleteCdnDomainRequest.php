@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCdnDomain请求参数结构体
+ *
  * @method string getDomain() 获取域名
 域名状态需要为【已停用】
  * @method void setDomain(string $Domain) 设置域名
 域名状态需要为【已停用】
- */
-
-/**
- *DeleteCdnDomain请求参数结构体
  */
 class DeleteCdnDomainRequest extends AbstractModel
 {
@@ -34,6 +32,7 @@ class DeleteCdnDomainRequest extends AbstractModel
 域名状态需要为【已停用】
      */
     public $Domain;
+
     /**
      * @param string $Domain 域名
 域名状态需要为【已停用】
@@ -42,6 +41,7 @@ class DeleteCdnDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

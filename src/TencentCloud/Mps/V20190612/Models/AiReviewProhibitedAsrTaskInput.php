@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内容审核 Asr 文字鉴违禁任务输入参数类型
+ *
  * @method integer getDefinition() 获取鉴违禁模板 ID。
  * @method void setDefinition(integer $Definition) 设置鉴违禁模板 ID。
- */
-
-/**
- *内容审核 Asr 文字鉴违禁任务输入参数类型
  */
 class AiReviewProhibitedAsrTaskInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiReviewProhibitedAsrTaskInput extends AbstractModel
      * @var integer 鉴违禁模板 ID。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 鉴违禁模板 ID。
      */
@@ -38,6 +37,7 @@ class AiReviewProhibitedAsrTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ShutdownDevices请求参数结构体
+ *
  * @method array getInstanceIds() 获取需要关闭的设备ID列表
  * @method void setInstanceIds(array $InstanceIds) 设置需要关闭的设备ID列表
- */
-
-/**
- *ShutdownDevices请求参数结构体
  */
 class ShutdownDevicesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ShutdownDevicesRequest extends AbstractModel
      * @var array 需要关闭的设备ID列表
      */
     public $InstanceIds;
+
     /**
      * @param array $InstanceIds 需要关闭的设备ID列表
      */
@@ -38,6 +37,7 @@ class ShutdownDevicesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

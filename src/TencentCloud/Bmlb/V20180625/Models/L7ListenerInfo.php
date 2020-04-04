@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询绑定了某主机的七层监听器时返回的七层监听器信息。
+ *
  * @method string getListenerId() 获取七层监听器实例ID。
  * @method void setListenerId(string $ListenerId) 设置七层监听器实例ID。
  * @method string getListenerName() 获取七层监听器名称。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleSet(array $RuleSet) 设置返回的转发规则列表。
  * @method integer getForwardProtocol() 获取https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
  * @method void setForwardProtocol(integer $ForwardProtocol) 设置https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
- */
-
-/**
- *查询绑定了某主机的七层监听器时返回的七层监听器信息。
  */
 class L7ListenerInfo extends AbstractModel
 {
@@ -115,6 +113,7 @@ class L7ListenerInfo extends AbstractModel
      * @var integer https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
      */
     public $ForwardProtocol;
+
     /**
      * @param string $ListenerId 七层监听器实例ID。
      * @param string $ListenerName 七层监听器名称。
@@ -134,6 +133,7 @@ class L7ListenerInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindRelateAcctUnionPay返回参数结构体
+ *
  * @method string getReservedMsg() 获取STRING(1027)，保留域（在同名子账户绑定的场景下，若返回"VERIFIED"则说明无需验证直接绑定成功）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域（在同名子账户绑定的场景下，若返回"VERIFIED"则说明无需验证直接绑定成功）
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCnsmrSeqNo(string $CnsmrSeqNo) 设置String(22)，交易流水号
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *BindRelateAcctUnionPay返回参数结构体
  */
 class BindRelateAcctUnionPayResponse extends AbstractModel
 {
@@ -62,6 +60,7 @@ class BindRelateAcctUnionPayResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $ReservedMsg STRING(1027)，保留域（在同名子账户绑定的场景下，若返回"VERIFIED"则说明无需验证直接绑定成功）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,6 +73,7 @@ class BindRelateAcctUnionPayResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

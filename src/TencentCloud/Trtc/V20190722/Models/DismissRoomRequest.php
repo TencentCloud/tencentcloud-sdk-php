@@ -18,14 +18,12 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DismissRoom请求参数结构体
+ *
  * @method integer getSdkAppId() 获取TRTC的SDKAppId。
  * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的SDKAppId。
  * @method integer getRoomId() 获取房间号。
  * @method void setRoomId(integer $RoomId) 设置房间号。
- */
-
-/**
- *DismissRoom请求参数结构体
  */
 class DismissRoomRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DismissRoomRequest extends AbstractModel
      * @var integer 房间号。
      */
     public $RoomId;
+
     /**
      * @param integer $SdkAppId TRTC的SDKAppId。
      * @param integer $RoomId 房间号。
@@ -46,6 +45,7 @@ class DismissRoomRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

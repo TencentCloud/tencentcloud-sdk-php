@@ -18,14 +18,12 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 拉取触发器列表返回值
+ *
  * @method integer getTotalCount() 获取返回条目总数
  * @method void setTotalCount(integer $TotalCount) 设置返回条目总数
  * @method array getTriggerInfo() 获取触发器列表
  * @method void setTriggerInfo(array $TriggerInfo) 设置触发器列表
- */
-
-/**
- *拉取触发器列表返回值
  */
 class DescribeApplicationTriggerPersonalResp extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeApplicationTriggerPersonalResp extends AbstractModel
      * @var array 触发器列表
      */
     public $TriggerInfo;
+
     /**
      * @param integer $TotalCount 返回条目总数
      * @param array $TriggerInfo 触发器列表
@@ -46,6 +45,7 @@ class DescribeApplicationTriggerPersonalResp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

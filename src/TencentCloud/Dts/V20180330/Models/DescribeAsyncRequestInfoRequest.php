@@ -18,12 +18,10 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAsyncRequestInfo请求参数结构体
+ *
  * @method string getAsyncRequestId() 获取任务 ID
  * @method void setAsyncRequestId(string $AsyncRequestId) 设置任务 ID
- */
-
-/**
- *DescribeAsyncRequestInfo请求参数结构体
  */
 class DescribeAsyncRequestInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeAsyncRequestInfoRequest extends AbstractModel
      * @var string 任务 ID
      */
     public $AsyncRequestId;
+
     /**
      * @param string $AsyncRequestId 任务 ID
      */
@@ -38,6 +37,7 @@ class DescribeAsyncRequestInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

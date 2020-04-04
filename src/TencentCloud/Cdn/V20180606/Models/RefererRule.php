@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Referer 黑白名单配置规则，针对特定资源生效
+ *
  * @method string getRuleType() 获取规则类型：
 all：所有文件生效
 file：指定文件后缀生效
@@ -52,10 +54,6 @@ false：不允许空 referer
  * @method void setAllowEmpty(boolean $AllowEmpty) 设置是否允许空 referer
 true：允许空 referer
 false：不允许空 referer
- */
-
-/**
- *Referer 黑白名单配置规则，针对特定资源生效
  */
 class RefererRule extends AbstractModel
 {
@@ -95,6 +93,7 @@ true：允许空 referer
 false：不允许空 referer
      */
     public $AllowEmpty;
+
     /**
      * @param string $RuleType 规则类型：
 all：所有文件生效
@@ -118,6 +117,7 @@ false：不允许空 referer
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

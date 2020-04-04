@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBBackups请求参数结构体
+ *
  * @method string getDBInstanceId() 获取实例ID，形如postgres-4wdeb0zv。
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-4wdeb0zv。
  * @method integer getType() 获取备份方式（1-全量）。目前只支持全量，取值为1。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。
  * @method integer getOffset() 获取返回结果中的第几页，从第0页开始。默认为0。
  * @method void setOffset(integer $Offset) 设置返回结果中的第几页，从第0页开始。默认为0。
- */
-
-/**
- *DescribeDBBackups请求参数结构体
  */
 class DescribeDBBackupsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeDBBackupsRequest extends AbstractModel
      * @var integer 返回结果中的第几页，从第0页开始。默认为0。
      */
     public $Offset;
+
     /**
      * @param string $DBInstanceId 实例ID，形如postgres-4wdeb0zv。
      * @param integer $Type 备份方式（1-全量）。目前只支持全量，取值为1。
@@ -78,6 +77,7 @@ class DescribeDBBackupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

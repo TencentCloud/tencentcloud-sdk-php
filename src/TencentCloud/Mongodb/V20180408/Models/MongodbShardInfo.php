@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例分片详情
+ *
  * @method float getUsedVolume() 获取分片已使用容量
  * @method void setUsedVolume(float $UsedVolume) 设置分片已使用容量
  * @method string getReplicaSetId() 获取分片ID
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecondaryNum(integer $SecondaryNum) 设置分片从节点数
  * @method string getRealReplicaSetId() 获取分片物理ID
  * @method void setRealReplicaSetId(string $RealReplicaSetId) 设置分片物理ID
- */
-
-/**
- *实例分片详情
  */
 class MongodbShardInfo extends AbstractModel
 {
@@ -80,6 +78,7 @@ class MongodbShardInfo extends AbstractModel
      * @var string 分片物理ID
      */
     public $RealReplicaSetId;
+
     /**
      * @param float $UsedVolume 分片已使用容量
      * @param string $ReplicaSetId 分片ID
@@ -94,6 +93,7 @@ class MongodbShardInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

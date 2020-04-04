@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTrainingJob请求参数结构体
+ *
  * @method AlgorithmSpecification getAlgorithmSpecification() 获取算法镜像配置
  * @method void setAlgorithmSpecification(AlgorithmSpecification $AlgorithmSpecification) 设置算法镜像配置
  * @method array getInputDataConfig() 获取输入数据配置
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvConfig(array $EnvConfig) 设置环境变量配置
  * @method string getRoleName() 获取角色名称
  * @method void setRoleName(string $RoleName) 设置角色名称
- */
-
-/**
- *CreateTrainingJob请求参数结构体
  */
 class CreateTrainingJobRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class CreateTrainingJobRequest extends AbstractModel
      * @var string 角色名称
      */
     public $RoleName;
+
     /**
      * @param AlgorithmSpecification $AlgorithmSpecification 算法镜像配置
      * @param array $InputDataConfig 输入数据配置
@@ -110,6 +109,7 @@ class CreateTrainingJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

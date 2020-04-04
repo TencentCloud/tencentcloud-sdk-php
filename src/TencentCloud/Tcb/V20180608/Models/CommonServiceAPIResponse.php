@@ -18,14 +18,12 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CommonServiceAPI返回参数结构体
+ *
  * @method string getJSONResp() 获取json格式response
  * @method void setJSONResp(string $JSONResp) 设置json格式response
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CommonServiceAPI返回参数结构体
  */
 class CommonServiceAPIResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CommonServiceAPIResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $JSONResp json格式response
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CommonServiceAPIResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

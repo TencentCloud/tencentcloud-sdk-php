@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeComponentStatistics请求参数结构体
+ *
  * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 ComponentName - String - 是否必填：否 - 组件名称
  * @method void setFilters(array $Filters) 设置过滤条件。
 ComponentName - String - 是否必填：否 - 组件名称
- */
-
-/**
- *DescribeComponentStatistics请求参数结构体
  */
 class DescribeComponentStatisticsRequest extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DescribeComponentStatisticsRequest extends AbstractModel
 ComponentName - String - 是否必填：否 - 组件名称
      */
     public $Filters;
+
     /**
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
@@ -58,6 +57,7 @@ ComponentName - String - 是否必填：否 - 组件名称
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

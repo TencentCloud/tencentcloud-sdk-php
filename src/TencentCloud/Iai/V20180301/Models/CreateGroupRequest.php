@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateGroup请求参数结构体
+ *
  * @method string getGroupName() 获取人员库名称，[1,60]个字符，可修改，不可重复。
  * @method void setGroupName(string $GroupName) 设置人员库名称，[1,60]个字符，可修改，不可重复。
  * @method string getGroupId() 获取人员库 ID，不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
 2020年4月2日开始，默认为“3.0”，之前使用过本接口的账号若未填写本参数默认为“2.0”。 
 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
- */
-
-/**
- *CreateGroup请求参数结构体
  */
 class CreateGroupRequest extends AbstractModel
 {
@@ -83,6 +81,7 @@ class CreateGroupRequest extends AbstractModel
 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
      */
     public $FaceModelVersion;
+
     /**
      * @param string $GroupName 人员库名称，[1,60]个字符，可修改，不可重复。
      * @param string $GroupId 人员库 ID，不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
@@ -102,6 +101,7 @@ class CreateGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

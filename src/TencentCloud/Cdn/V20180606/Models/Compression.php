@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能压缩配置，默认对 js、html、css、xml、json、shtml、htm 后缀且大小为 256 ~ 2097152 字节的文件进行 GZIP 压缩
+ *
  * @method string getSwitch() 获取智能压缩配置开关
 on：开启
 off：关闭
@@ -28,10 +30,6 @@ off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompressionRules(array $CompressionRules) 设置压缩规则数组
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *智能压缩配置，默认对 js、html、css、xml、json、shtml、htm 后缀且大小为 256 ~ 2097152 字节的文件进行 GZIP 压缩
  */
 class Compression extends AbstractModel
 {
@@ -47,6 +45,7 @@ off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompressionRules;
+
     /**
      * @param string $Switch 智能压缩配置开关
 on：开启
@@ -58,6 +57,7 @@ off：关闭
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

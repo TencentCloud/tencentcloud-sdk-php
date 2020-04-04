@@ -18,14 +18,12 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RemoveInstances请求参数结构体
+ *
  * @method string getClusterId() 获取集群 ID
  * @method void setClusterId(string $ClusterId) 设置集群 ID
  * @method array getInstanceIdList() 获取云主机 ID 列表
  * @method void setInstanceIdList(array $InstanceIdList) 设置云主机 ID 列表
- */
-
-/**
- *RemoveInstances请求参数结构体
  */
 class RemoveInstancesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RemoveInstancesRequest extends AbstractModel
      * @var array 云主机 ID 列表
      */
     public $InstanceIdList;
+
     /**
      * @param string $ClusterId 集群 ID
      * @param array $InstanceIdList 云主机 ID 列表
@@ -46,6 +45,7 @@ class RemoveInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

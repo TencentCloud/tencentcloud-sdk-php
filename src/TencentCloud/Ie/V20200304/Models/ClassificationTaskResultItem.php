@@ -18,14 +18,12 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频分类识别结果项
+ *
  * @method string getClassification() 获取分类名称。
  * @method void setClassification(string $Classification) 设置分类名称。
  * @method float getConfidence() 获取置信度，取值范围是 0 到 100。
  * @method void setConfidence(float $Confidence) 设置置信度，取值范围是 0 到 100。
- */
-
-/**
- *视频分类识别结果项
  */
 class ClassificationTaskResultItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ClassificationTaskResultItem extends AbstractModel
      * @var float 置信度，取值范围是 0 到 100。
      */
     public $Confidence;
+
     /**
      * @param string $Classification 分类名称。
      * @param float $Confidence 置信度，取值范围是 0 到 100。
@@ -46,6 +45,7 @@ class ClassificationTaskResultItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

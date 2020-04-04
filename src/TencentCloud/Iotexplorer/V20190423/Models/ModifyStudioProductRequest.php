@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyStudioProduct请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getProductName() 获取产品名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModuleId(integer $ModuleId) 设置模型ID
  * @method string getEnableProductScript() 获取是否打开二进制转Json功能, 取值为字符串 true/false
  * @method void setEnableProductScript(string $EnableProductScript) 设置是否打开二进制转Json功能, 取值为字符串 true/false
- */
-
-/**
- *ModifyStudioProduct请求参数结构体
  */
 class ModifyStudioProductRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyStudioProductRequest extends AbstractModel
      * @var string 是否打开二进制转Json功能, 取值为字符串 true/false
      */
     public $EnableProductScript;
+
     /**
      * @param string $ProductId 产品ID
      * @param string $ProductName 产品名称
@@ -70,6 +69,7 @@ class ModifyStudioProductRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

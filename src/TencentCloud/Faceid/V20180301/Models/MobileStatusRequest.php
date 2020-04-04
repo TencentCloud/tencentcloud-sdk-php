@@ -18,12 +18,10 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MobileStatus请求参数结构体
+ *
  * @method string getMobile() 获取手机号码
  * @method void setMobile(string $Mobile) 设置手机号码
- */
-
-/**
- *MobileStatus请求参数结构体
  */
 class MobileStatusRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class MobileStatusRequest extends AbstractModel
      * @var string 手机号码
      */
     public $Mobile;
+
     /**
      * @param string $Mobile 手机号码
      */
@@ -38,6 +37,7 @@ class MobileStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

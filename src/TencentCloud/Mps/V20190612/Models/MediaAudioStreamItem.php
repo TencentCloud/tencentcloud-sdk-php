@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 点播文件音频流信息
+ *
  * @method integer getBitrate() 获取音频流的码率，单位：bps。
  * @method void setBitrate(integer $Bitrate) 设置音频流的码率，单位：bps。
  * @method integer getSamplingRate() 获取音频流的采样率，单位：hz。
  * @method void setSamplingRate(integer $SamplingRate) 设置音频流的采样率，单位：hz。
  * @method string getCodec() 获取音频流的编码格式，例如 aac。
  * @method void setCodec(string $Codec) 设置音频流的编码格式，例如 aac。
- */
-
-/**
- *点播文件音频流信息
  */
 class MediaAudioStreamItem extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MediaAudioStreamItem extends AbstractModel
      * @var string 音频流的编码格式，例如 aac。
      */
     public $Codec;
+
     /**
      * @param integer $Bitrate 音频流的码率，单位：bps。
      * @param integer $SamplingRate 音频流的采样率，单位：hz。
@@ -54,6 +53,7 @@ class MediaAudioStreamItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 进程数据统计数据。
+ *
  * @method string getProcessName() 获取进程名。
  * @method void setProcessName(string $ProcessName) 设置进程名。
  * @method integer getMachineNum() 获取主机数量。
  * @method void setMachineNum(integer $MachineNum) 设置主机数量。
- */
-
-/**
- *进程数据统计数据。
  */
 class ProcessStatistics extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ProcessStatistics extends AbstractModel
      * @var integer 主机数量。
      */
     public $MachineNum;
+
     /**
      * @param string $ProcessName 进程名。
      * @param integer $MachineNum 主机数量。
@@ -46,6 +45,7 @@ class ProcessStatistics extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

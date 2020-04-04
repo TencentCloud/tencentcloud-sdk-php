@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateStudioProduct请求参数结构体
+ *
  * @method string getProductName() 获取产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
  * @method void setProductName(string $ProductName) 设置产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
  * @method integer getCategoryId() 获取产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductDesc(string $ProductDesc) 设置产品描述
  * @method string getProjectId() 获取产品的项目ID
  * @method void setProjectId(string $ProjectId) 设置产品的项目ID
- */
-
-/**
- *CreateStudioProduct请求参数结构体
  */
 class CreateStudioProductRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CreateStudioProductRequest extends AbstractModel
      * @var string 产品的项目ID
      */
     public $ProjectId;
+
     /**
      * @param string $ProductName 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
      * @param integer $CategoryId 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
@@ -94,6 +93,7 @@ class CreateStudioProductRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

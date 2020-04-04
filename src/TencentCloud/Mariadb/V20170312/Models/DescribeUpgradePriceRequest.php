@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUpgradePrice请求参数结构体
+ *
  * @method string getInstanceId() 获取待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method integer getMemory() 获取内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
  * @method void setStorage(integer $Storage) 设置存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
- */
-
-/**
- *DescribeUpgradePrice请求参数结构体
  */
 class DescribeUpgradePriceRequest extends AbstractModel
 {
@@ -51,6 +49,7 @@ class DescribeUpgradePriceRequest extends AbstractModel
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
      */
     public $Storage;
+
     /**
      * @param string $InstanceId 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param integer $Memory 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
@@ -62,6 +61,7 @@ class DescribeUpgradePriceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

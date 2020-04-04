@@ -18,14 +18,13 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstanceSpecs请求参数结构体
+ *
 
- */
-
-/**
- *DescribeDBInstanceSpecs请求参数结构体
  */
 class DescribeDBInstanceSpecsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeDBInstanceSpecsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

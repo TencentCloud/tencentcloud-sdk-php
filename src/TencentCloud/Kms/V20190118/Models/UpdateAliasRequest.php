@@ -18,14 +18,12 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateAlias请求参数结构体
+ *
  * @method string getAlias() 获取新的别名，1-60个字符或数字的组合
  * @method void setAlias(string $Alias) 设置新的别名，1-60个字符或数字的组合
  * @method string getKeyId() 获取CMK的全局唯一标识符
  * @method void setKeyId(string $KeyId) 设置CMK的全局唯一标识符
- */
-
-/**
- *UpdateAlias请求参数结构体
  */
 class UpdateAliasRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UpdateAliasRequest extends AbstractModel
      * @var string CMK的全局唯一标识符
      */
     public $KeyId;
+
     /**
      * @param string $Alias 新的别名，1-60个字符或数字的组合
      * @param string $KeyId CMK的全局唯一标识符
@@ -46,6 +45,7 @@ class UpdateAliasRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

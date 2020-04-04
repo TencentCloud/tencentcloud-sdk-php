@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 托管设备带外信息
+ *
  * @method string getInstanceId() 获取物理机ID
  * @method void setInstanceId(string $InstanceId) 设置物理机ID
  * @method string getOutBandIp() 获取带外IP
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpnIp(string $VpnIp) 设置VPN的IP
  * @method integer getVpnPort() 获取VPN的端口
  * @method void setVpnPort(integer $VpnPort) 设置VPN的端口
- */
-
-/**
- *托管设备带外信息
  */
 class HostedDeviceOutBandInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class HostedDeviceOutBandInfo extends AbstractModel
      * @var integer VPN的端口
      */
     public $VpnPort;
+
     /**
      * @param string $InstanceId 物理机ID
      * @param string $OutBandIp 带外IP
@@ -62,6 +61,7 @@ class HostedDeviceOutBandInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

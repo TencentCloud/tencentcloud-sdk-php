@@ -18,14 +18,12 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDCDBRenewalPrice请求参数结构体
+ *
  * @method string getInstanceId() 获取待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
  * @method integer getPeriod() 获取续费时长，单位：月。不传则默认为1个月。
  * @method void setPeriod(integer $Period) 设置续费时长，单位：月。不传则默认为1个月。
- */
-
-/**
- *DescribeDCDBRenewalPrice请求参数结构体
  */
 class DescribeDCDBRenewalPriceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDCDBRenewalPriceRequest extends AbstractModel
      * @var integer 续费时长，单位：月。不传则默认为1个月。
      */
     public $Period;
+
     /**
      * @param string $InstanceId 待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      * @param integer $Period 续费时长，单位：月。不传则默认为1个月。
@@ -46,6 +45,7 @@ class DescribeDCDBRenewalPriceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

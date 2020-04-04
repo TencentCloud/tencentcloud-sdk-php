@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyWatermarkTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取水印模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置水印模板唯一标识。
  * @method string getName() 获取水印模板名称，长度限制：64 个字符。
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSvgTemplate(SvgWatermarkInputForUpdate $SvgTemplate) 设置SVG 水印模板，该字段仅对 SVG 水印模板有效。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *ModifyWatermarkTemplate请求参数结构体
  */
 class ModifyWatermarkTemplateRequest extends AbstractModel
 {
@@ -118,6 +116,7 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param integer $Definition 水印模板唯一标识。
      * @param string $Name 水印模板名称，长度限制：64 个字符。
@@ -142,6 +141,7 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

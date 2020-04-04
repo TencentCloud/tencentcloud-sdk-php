@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 计算环境信息
+ *
  * @method string getEnvId() 获取计算环境ID
  * @method void setEnvId(string $EnvId) 设置计算环境ID
  * @method string getEnvName() 获取计算环境名称
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNextAction(string $NextAction) 设置下一步动作
  * @method integer getAttachedComputeNodeCount() 获取用户添加到计算环境中的计算节点个数
  * @method void setAttachedComputeNodeCount(integer $AttachedComputeNodeCount) 设置用户添加到计算环境中的计算节点个数
- */
-
-/**
- *计算环境信息
  */
 class ComputeEnvView extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ComputeEnvView extends AbstractModel
      * @var integer 用户添加到计算环境中的计算节点个数
      */
     public $AttachedComputeNodeCount;
+
     /**
      * @param string $EnvId 计算环境ID
      * @param string $EnvName 计算环境名称
@@ -110,6 +109,7 @@ class ComputeEnvView extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

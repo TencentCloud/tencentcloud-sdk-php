@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateOpenPortTask请求参数结构体
+ *
  * @method string getUuid() 获取云镜客户端唯一Uuid。
  * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid。
- */
-
-/**
- *CreateOpenPortTask请求参数结构体
  */
 class CreateOpenPortTaskRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CreateOpenPortTaskRequest extends AbstractModel
      * @var string 云镜客户端唯一Uuid。
      */
     public $Uuid;
+
     /**
      * @param string $Uuid 云镜客户端唯一Uuid。
      */
@@ -38,6 +37,7 @@ class CreateOpenPortTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteNotificationConfiguration请求参数结构体
+ *
  * @method string getAutoScalingNotificationId() 获取待删除的通知ID。
  * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) 设置待删除的通知ID。
- */
-
-/**
- *DeleteNotificationConfiguration请求参数结构体
  */
 class DeleteNotificationConfigurationRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteNotificationConfigurationRequest extends AbstractModel
      * @var string 待删除的通知ID。
      */
     public $AutoScalingNotificationId;
+
     /**
      * @param string $AutoScalingNotificationId 待删除的通知ID。
      */
@@ -38,6 +37,7 @@ class DeleteNotificationConfigurationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

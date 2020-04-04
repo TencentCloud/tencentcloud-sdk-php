@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetTransactionDetailForUser请求参数结构体
+ *
  * @method string getModule() 获取模块名，固定字段：transaction
  * @method void setModule(string $Module) 设置模块名，固定字段：transaction
  * @method string getOperation() 获取操作名，固定字段：transaction_detail_for_user
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlockId(integer $BlockId) 设置区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID
  * @method string getTransactionId() 获取交易ID，需要查询的详情的交易ID
  * @method void setTransactionId(string $TransactionId) 设置交易ID，需要查询的详情的交易ID
- */
-
-/**
- *GetTransactionDetailForUser请求参数结构体
  */
 class GetTransactionDetailForUserRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class GetTransactionDetailForUserRequest extends AbstractModel
      * @var string 交易ID，需要查询的详情的交易ID
      */
     public $TransactionId;
+
     /**
      * @param string $Module 模块名，固定字段：transaction
      * @param string $Operation 操作名，固定字段：transaction_detail_for_user
@@ -86,6 +85,7 @@ class GetTransactionDetailForUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

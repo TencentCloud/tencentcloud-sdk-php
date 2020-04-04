@@ -18,14 +18,12 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstanceName请求参数结构体
+ *
  * @method string getInstanceId() 获取待修改的实例 ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置待修改的实例 ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method string getInstanceName() 获取新的实例名称。允许的字符为字母、数字、下划线、连字符和中文。
  * @method void setInstanceName(string $InstanceName) 设置新的实例名称。允许的字符为字母、数字、下划线、连字符和中文。
- */
-
-/**
- *ModifyDBInstanceName请求参数结构体
  */
 class ModifyDBInstanceNameRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBInstanceNameRequest extends AbstractModel
      * @var string 新的实例名称。允许的字符为字母、数字、下划线、连字符和中文。
      */
     public $InstanceName;
+
     /**
      * @param string $InstanceId 待修改的实例 ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param string $InstanceName 新的实例名称。允许的字符为字母、数字、下划线、连字符和中文。
@@ -46,6 +45,7 @@ class ModifyDBInstanceNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

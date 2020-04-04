@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBindingPolicyObjectList请求参数结构体
+ *
  * @method string getModule() 获取固定值，为"monitor"
  * @method void setModule(string $Module) 设置固定值，为"monitor"
  * @method integer getGroupId() 获取策略组id
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页参数，页偏移量，从0开始计数，默认0
  * @method array getDimensions() 获取筛选对象的维度信息
  * @method void setDimensions(array $Dimensions) 设置筛选对象的维度信息
- */
-
-/**
- *DescribeBindingPolicyObjectList请求参数结构体
  */
 class DescribeBindingPolicyObjectListRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeBindingPolicyObjectListRequest extends AbstractModel
      * @var array 筛选对象的维度信息
      */
     public $Dimensions;
+
     /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $GroupId 策略组id
@@ -70,6 +69,7 @@ class DescribeBindingPolicyObjectListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

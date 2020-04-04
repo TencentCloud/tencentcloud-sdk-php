@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRewrite返回参数结构体
+ *
  * @method array getRewriteSet() 获取重定向转发规则构成的数组，若无重定向规则，则返回空数组
  * @method void setRewriteSet(array $RewriteSet) 设置重定向转发规则构成的数组，若无重定向规则，则返回空数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeRewrite返回参数结构体
  */
 class DescribeRewriteResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeRewriteResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $RewriteSet 重定向转发规则构成的数组，若无重定向规则，则返回空数组
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeRewriteResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

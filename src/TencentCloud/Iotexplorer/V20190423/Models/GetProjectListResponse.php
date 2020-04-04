@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetProjectList返回参数结构体
+ *
  * @method array getProjects() 获取项目列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjects(array $Projects) 设置项目列表
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetProjectList返回参数结构体
  */
 class GetProjectListResponse extends AbstractModel
 {
@@ -51,6 +49,7 @@ class GetProjectListResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Projects 项目列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -62,6 +61,7 @@ class GetProjectListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

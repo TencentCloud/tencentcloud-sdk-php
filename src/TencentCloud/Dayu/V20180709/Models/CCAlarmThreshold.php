@@ -18,12 +18,10 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CC告警阈值
+ *
  * @method integer getAlarmThreshold() 获取CC告警阈值
  * @method void setAlarmThreshold(integer $AlarmThreshold) 设置CC告警阈值
- */
-
-/**
- *CC告警阈值
  */
 class CCAlarmThreshold extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CCAlarmThreshold extends AbstractModel
      * @var integer CC告警阈值
      */
     public $AlarmThreshold;
+
     /**
      * @param integer $AlarmThreshold CC告警阈值
      */
@@ -38,6 +37,7 @@ class CCAlarmThreshold extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

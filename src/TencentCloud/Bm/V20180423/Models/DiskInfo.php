@@ -18,16 +18,14 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 自定义机型磁盘的描述
+ *
  * @method integer getDiskTypeId() 获取磁盘ID
  * @method void setDiskTypeId(integer $DiskTypeId) 设置磁盘ID
  * @method integer getSize() 获取磁盘的容量，单位为G
  * @method void setSize(integer $Size) 设置磁盘的容量，单位为G
  * @method string getDiskDescription() 获取磁盘信息描述
  * @method void setDiskDescription(string $DiskDescription) 设置磁盘信息描述
- */
-
-/**
- *自定义机型磁盘的描述
  */
 class DiskInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DiskInfo extends AbstractModel
      * @var string 磁盘信息描述
      */
     public $DiskDescription;
+
     /**
      * @param integer $DiskTypeId 磁盘ID
      * @param integer $Size 磁盘的容量，单位为G
@@ -54,6 +53,7 @@ class DiskInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

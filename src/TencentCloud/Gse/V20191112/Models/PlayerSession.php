@@ -18,6 +18,8 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 玩家会话详情
+ *
  * @method string getCreationTime() 获取玩家会话创建时间
  * @method void setCreationTime(string $CreationTime) 设置玩家会话创建时间
  * @method string getDnsName() 获取游戏服务器会话运行的DNS标识
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTerminationTime(string $TerminationTime) 设置玩家会话终止时间
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *玩家会话详情
  */
 class PlayerSession extends AbstractModel
 {
@@ -113,6 +111,7 @@ class PlayerSession extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TerminationTime;
+
     /**
      * @param string $CreationTime 玩家会话创建时间
      * @param string $DnsName 游戏服务器会话运行的DNS标识
@@ -134,6 +133,7 @@ class PlayerSession extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

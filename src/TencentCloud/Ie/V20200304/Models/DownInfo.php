@@ -18,6 +18,8 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频源信息
+ *
  * @method integer getType() 获取下载类型，可选值： 
 0：UrlInfo； 
 1：CosInfo。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrlInfo(UrlInfo $UrlInfo) 设置Url形式下载信息，当Type等于0时必选。
  * @method CosInfo getCosInfo() 获取Cos形式下载信息，当Type等于1时必选。
  * @method void setCosInfo(CosInfo $CosInfo) 设置Cos形式下载信息，当Type等于1时必选。
- */
-
-/**
- *视频源信息
  */
 class DownInfo extends AbstractModel
 {
@@ -51,6 +49,7 @@ class DownInfo extends AbstractModel
      * @var CosInfo Cos形式下载信息，当Type等于1时必选。
      */
     public $CosInfo;
+
     /**
      * @param integer $Type 下载类型，可选值： 
 0：UrlInfo； 
@@ -62,6 +61,7 @@ class DownInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

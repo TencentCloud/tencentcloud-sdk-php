@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内容审核 Asr 文字审核嫌疑片段
+ *
  * @method float getStartTimeOffset() 获取嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置嫌疑片段起始的偏移时间，单位：秒。
@@ -46,10 +48,6 @@ block。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeywordSet(array $KeywordSet) 设置嫌疑关键词列表。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *内容审核 Asr 文字审核嫌疑片段
  */
 class VodAsrTextSegmentItem extends AbstractModel
 {
@@ -86,6 +84,7 @@ block。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeywordSet;
+
     /**
      * @param float $StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -106,6 +105,7 @@ block。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

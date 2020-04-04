@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMultiDevices请求参数结构体
+ *
  * @method string getProductId() 获取产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
  * @method void setProductId(string $ProductId) 设置产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
  * @method string getTaskId() 获取任务 ID，由批量创建设备接口返回
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移
  * @method integer getLimit() 获取分页大小，每页返回的设备个数
  * @method void setLimit(integer $Limit) 设置分页大小，每页返回的设备个数
- */
-
-/**
- *DescribeMultiDevices请求参数结构体
  */
 class DescribeMultiDevicesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeMultiDevicesRequest extends AbstractModel
      * @var integer 分页大小，每页返回的设备个数
      */
     public $Limit;
+
     /**
      * @param string $ProductId 产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
      * @param string $TaskId 任务 ID，由批量创建设备接口返回
@@ -62,6 +61,7 @@ class DescribeMultiDevicesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音检测详情
+ *
  * @method string getLabel() 获取违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
  * @method void setLabel(string $Label) 设置违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
  * @method string getRate() 获取该场景下概率[0.00,100.00],分值越大违规概率越高
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置关键字在音频的开始时间，从0开始的偏移量，单位为毫秒
  * @method integer getEndTime() 获取关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
  * @method void setEndTime(integer $EndTime) 设置关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
- */
-
-/**
- *语音检测详情
  */
 class ScanDetail extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ScanDetail extends AbstractModel
      * @var integer 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
      */
     public $EndTime;
+
     /**
      * @param string $Label 违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
      * @param string $Rate 该场景下概率[0.00,100.00],分值越大违规概率越高
@@ -70,6 +69,7 @@ class ScanDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

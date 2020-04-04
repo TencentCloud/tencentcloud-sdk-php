@@ -18,16 +18,14 @@ namespace TencentCloud\Ic\V20190307\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 卡片列表数据
+ *
  * @method string getTotal() 获取卡片总数
  * @method void setTotal(string $Total) 设置卡片总数
  * @method array getList() 获取卡片列表信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setList(array $List) 设置卡片列表信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *卡片列表数据
  */
 class CardList extends AbstractModel
 {
@@ -41,6 +39,7 @@ class CardList extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
+
     /**
      * @param string $Total 卡片总数
      * @param array $List 卡片列表信息
@@ -50,6 +49,7 @@ class CardList extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

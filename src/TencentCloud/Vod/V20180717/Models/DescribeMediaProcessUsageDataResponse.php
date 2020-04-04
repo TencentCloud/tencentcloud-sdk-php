@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMediaProcessUsageData返回参数结构体
+ *
  * @method array getMediaProcessDataSet() 获取视频处理统计数据概览，展示所查询任务的概览以及详细数据。
  * @method void setMediaProcessDataSet(array $MediaProcessDataSet) 设置视频处理统计数据概览，展示所查询任务的概览以及详细数据。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeMediaProcessUsageData返回参数结构体
  */
 class DescribeMediaProcessUsageDataResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeMediaProcessUsageDataResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $MediaProcessDataSet 视频处理统计数据概览，展示所查询任务的概览以及详细数据。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeMediaProcessUsageDataResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

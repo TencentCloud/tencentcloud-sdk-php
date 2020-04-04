@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 画布信息。制作视频时，如果源素材（视频或者图片）不能填满输出的视频窗口，将用设置的画布进行背景绘制。
+ *
  * @method string getColor() 获取背景颜色，取值有：
 <li>Black：黑色背景</li>
 <li>White：白色背景</li>
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。
  * @method void setHeight(integer $Height) 设置画布高度，即输出视频的高度（或长边），取值范围：0~ 4096，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。
- */
-
-/**
- *画布信息。制作视频时，如果源素材（视频或者图片）不能填满输出的视频窗口，将用设置的画布进行背景绘制。
  */
 class Canvas extends AbstractModel
 {
@@ -60,6 +58,7 @@ class Canvas extends AbstractModel
 默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。
      */
     public $Height;
+
     /**
      * @param string $Color 背景颜色，取值有：
 <li>Black：黑色背景</li>
@@ -74,6 +73,7 @@ class Canvas extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

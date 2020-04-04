@@ -18,16 +18,14 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * LicensePlateOCR返回参数结构体
+ *
  * @method string getNumber() 获取识别出的车牌号码。
  * @method void setNumber(string $Number) 设置识别出的车牌号码。
  * @method integer getConfidence() 获取置信度，0 - 100 之间。
  * @method void setConfidence(integer $Confidence) 设置置信度，0 - 100 之间。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *LicensePlateOCR返回参数结构体
  */
 class LicensePlateOCRResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class LicensePlateOCRResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Number 识别出的车牌号码。
      * @param integer $Confidence 置信度，0 - 100 之间。
@@ -54,6 +53,7 @@ class LicensePlateOCRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

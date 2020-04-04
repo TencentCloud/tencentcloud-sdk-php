@@ -18,6 +18,8 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTask返回参数结构体
+ *
  * @method string getContent() 获取作文识别文本
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置作文识别文本
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置任务状态，“Progressing”: 处理中（此时无结果返回）、“Finished”: 处理完成
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeTask返回参数结构体
  */
 class DescribeTaskResponse extends AbstractModel
 {
@@ -58,6 +56,7 @@ class DescribeTaskResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Content 作文识别文本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -70,6 +69,7 @@ class DescribeTaskResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

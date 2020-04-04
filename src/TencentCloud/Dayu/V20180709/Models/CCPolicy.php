@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * cc自定义规则
+ *
  * @method string getName() 获取策略名称
  * @method void setName(string $Name) 设置策略名称
  * @method string getSmode() 获取匹配模式，取值[matching(匹配模式), speedlimit(限速模式)]
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleId(string $RuleId) 设置可选字段，表示HTTPS的CC防护域名对应的转发规则ID;
  * @method string getDomain() 获取HTTPS的CC防护域名
  * @method void setDomain(string $Domain) 设置HTTPS的CC防护域名
- */
-
-/**
- *cc自定义规则
  */
 class CCPolicy extends AbstractModel
 {
@@ -108,6 +106,7 @@ class CCPolicy extends AbstractModel
      * @var string HTTPS的CC防护域名
      */
     public $Domain;
+
     /**
      * @param string $Name 策略名称
      * @param string $Smode 匹配模式，取值[matching(匹配模式), speedlimit(限速模式)]
@@ -126,6 +125,7 @@ class CCPolicy extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

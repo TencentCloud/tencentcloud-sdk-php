@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyPersonFeatureInfo请求参数结构体
+ *
  * @method string getCompanyId() 获取集团ID
  * @method void setCompanyId(string $CompanyId) 设置集团ID
  * @method integer getPersonId() 获取需要修改的顾客id
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPersonType(integer $PersonType) 设置人物类型，仅能操作黑白名单顾客（1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
  * @method integer getShopId() 获取店铺ID，如果不填表示操作集团身份库
  * @method void setShopId(integer $ShopId) 设置店铺ID，如果不填表示操作集团身份库
- */
-
-/**
- *ModifyPersonFeatureInfo请求参数结构体
  */
 class ModifyPersonFeatureInfoRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ModifyPersonFeatureInfoRequest extends AbstractModel
      * @var integer 店铺ID，如果不填表示操作集团身份库
      */
     public $ShopId;
+
     /**
      * @param string $CompanyId 集团ID
      * @param integer $PersonId 需要修改的顾客id
@@ -78,6 +77,7 @@ class ModifyPersonFeatureInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

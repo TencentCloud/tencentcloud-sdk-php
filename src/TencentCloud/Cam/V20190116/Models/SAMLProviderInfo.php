@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SAML身份提供商
+ *
  * @method string getName() 获取SAML身份提供商名称
  * @method void setName(string $Name) 设置SAML身份提供商名称
  * @method string getDescription() 获取SAML身份提供商描述
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置SAML身份提供商创建时间
  * @method string getModifyTime() 获取SAML身份提供商上次修改时间
  * @method void setModifyTime(string $ModifyTime) 设置SAML身份提供商上次修改时间
- */
-
-/**
- *SAML身份提供商
  */
 class SAMLProviderInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SAMLProviderInfo extends AbstractModel
      * @var string SAML身份提供商上次修改时间
      */
     public $ModifyTime;
+
     /**
      * @param string $Name SAML身份提供商名称
      * @param string $Description SAML身份提供商描述
@@ -62,6 +61,7 @@ class SAMLProviderInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

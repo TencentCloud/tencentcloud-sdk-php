@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBinlogBackupOverview返回参数结构体
+ *
  * @method integer getBinlogBackupVolume() 获取总的日志备份容量（单位为字节）。
  * @method void setBinlogBackupVolume(integer $BinlogBackupVolume) 设置总的日志备份容量（单位为字节）。
  * @method integer getBinlogBackupCount() 获取总的日志备份个数。
  * @method void setBinlogBackupCount(integer $BinlogBackupCount) 设置总的日志备份个数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeBinlogBackupOverview返回参数结构体
  */
 class DescribeBinlogBackupOverviewResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $BinlogBackupVolume 总的日志备份容量（单位为字节）。
      * @param integer $BinlogBackupCount 总的日志备份个数。
@@ -54,6 +53,7 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

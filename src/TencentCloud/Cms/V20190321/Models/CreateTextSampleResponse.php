@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTextSample返回参数结构体
+ *
  * @method string getErrMsg() 获取操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
  * @method void setErrMsg(string $ErrMsg) 设置操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
  * @method integer getProgress() 获取任务状态
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 2：处理中
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateTextSample返回参数结构体
  */
 class CreateTextSampleResponse extends AbstractModel
 {
@@ -51,6 +49,7 @@ class CreateTextSampleResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $ErrMsg 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
      * @param integer $Progress 任务状态
@@ -62,6 +61,7 @@ class CreateTextSampleResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

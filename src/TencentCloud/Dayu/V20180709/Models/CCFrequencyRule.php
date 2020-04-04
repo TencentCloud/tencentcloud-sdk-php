@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CC的访问频率控制规则
+ *
  * @method string getCCFrequencyRuleId() 获取CC的访问频率控制规则ID
  * @method void setCCFrequencyRuleId(string $CCFrequencyRuleId) 设置CC的访问频率控制规则ID
  * @method string getUri() 获取URI字符串，必须以/开头，例如/abc/a.php，长度不超过31；当URI=/时，匹配模式只能选择前缀匹配；
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAct(string $Act) 设置执行动作，取值["alg"（人机识别）, "drop"（拦截）]
  * @method integer getExeDuration() 获取执行时间，单位秒，取值[1-900]
  * @method void setExeDuration(integer $ExeDuration) 设置执行时间，单位秒，取值[1-900]
- */
-
-/**
- *CC的访问频率控制规则
  */
 class CCFrequencyRule extends AbstractModel
 {
@@ -87,6 +85,7 @@ class CCFrequencyRule extends AbstractModel
      * @var integer 执行时间，单位秒，取值[1-900]
      */
     public $ExeDuration;
+
     /**
      * @param string $CCFrequencyRuleId CC的访问频率控制规则ID
      * @param string $Uri URI字符串，必须以/开头，例如/abc/a.php，长度不超过31；当URI=/时，匹配模式只能选择前缀匹配；
@@ -102,6 +101,7 @@ class CCFrequencyRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

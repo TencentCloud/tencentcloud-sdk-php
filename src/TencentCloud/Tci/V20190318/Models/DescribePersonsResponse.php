@@ -18,16 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePersons返回参数结构体
+ *
  * @method array getPersonSet() 获取人员列表
  * @method void setPersonSet(array $PersonSet) 设置人员列表
  * @method integer getTotalCount() 获取人员总数
  * @method void setTotalCount(integer $TotalCount) 设置人员总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribePersons返回参数结构体
  */
 class DescribePersonsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribePersonsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $PersonSet 人员列表
      * @param integer $TotalCount 人员总数
@@ -54,6 +53,7 @@ class DescribePersonsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

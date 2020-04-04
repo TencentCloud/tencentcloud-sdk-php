@@ -18,12 +18,10 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListCmqEnableRegion请求参数结构体
+ *
  * @method string getWebsiteType() 获取站点类型。zh表示中国区，en表示国际区。默认中国区。
  * @method void setWebsiteType(string $WebsiteType) 设置站点类型。zh表示中国区，en表示国际区。默认中国区。
- */
-
-/**
- *ListCmqEnableRegion请求参数结构体
  */
 class ListCmqEnableRegionRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ListCmqEnableRegionRequest extends AbstractModel
      * @var string 站点类型。zh表示中国区，en表示国际区。默认中国区。
      */
     public $WebsiteType;
+
     /**
      * @param string $WebsiteType 站点类型。zh表示中国区，en表示国际区。默认中国区。
      */
@@ -38,6 +37,7 @@ class ListCmqEnableRegionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

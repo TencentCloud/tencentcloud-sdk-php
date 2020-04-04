@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateL4Listeners请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method array getListenerSet() 获取监听器信息数组，可以创建多个监听器。目前一个负载均衡下面最多允许创建50个监听器
  * @method void setListenerSet(array $ListenerSet) 设置监听器信息数组，可以创建多个监听器。目前一个负载均衡下面最多允许创建50个监听器
- */
-
-/**
- *CreateL4Listeners请求参数结构体
  */
 class CreateL4ListenersRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateL4ListenersRequest extends AbstractModel
      * @var array 监听器信息数组，可以创建多个监听器。目前一个负载均衡下面最多允许创建50个监听器
      */
     public $ListenerSet;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param array $ListenerSet 监听器信息数组，可以创建多个监听器。目前一个负载均衡下面最多允许创建50个监听器
@@ -46,6 +45,7 @@ class CreateL4ListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Npp\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCallBack请求参数结构体
+ *
  * @method string getBizAppId() 获取业务appid
  * @method void setBizAppId(string $BizAppId) 设置业务appid
  * @method string getSrc() 获取主叫号码(必须为 11 位手机号，号码前加 0086，如 008613631686024)
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreCallerHandle(RreCallerHandle $PreCallerHandle) 设置结构体，主叫呼叫预处理操作，根据不同操作确认是否呼通被叫。如需使用，本结构体需要与 keyList 结构体配合使用，此时这两个参数都为必填项
  * @method string getOrderId() 获取订单 ID，最大长度不超过64个字节，对于一些有订单状态 App 相关应用使用（如达人帮接入 App 应用)，该字段只在帐单中带上，其它回调不附带该字段
  * @method void setOrderId(string $OrderId) 设置订单 ID，最大长度不超过64个字节，对于一些有订单状态 App 相关应用使用（如达人帮接入 App 应用)，该字段只在帐单中带上，其它回调不附带该字段
- */
-
-/**
- *CreateCallBack请求参数结构体
  */
 class CreateCallBackRequest extends AbstractModel
 {
@@ -132,6 +130,7 @@ class CreateCallBackRequest extends AbstractModel
      * @var string 订单 ID，最大长度不超过64个字节，对于一些有订单状态 App 相关应用使用（如达人帮接入 App 应用)，该字段只在帐单中带上，其它回调不附带该字段
      */
     public $OrderId;
+
     /**
      * @param string $BizAppId 业务appid
      * @param string $Src 主叫号码(必须为 11 位手机号，号码前加 0086，如 008613631686024)
@@ -154,6 +153,7 @@ class CreateCallBackRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 域名查询时过滤条件。
+ *
  * @method string getName() 获取过滤字段名，支持的列表如下：
 - origin：主源站。
 - domain：域名。
@@ -49,10 +51,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFuzzy(boolean $Fuzzy) 设置是否启用模糊查询，仅支持过滤字段名为origin，domain。
 模糊查询时，Value长度最大为1，否则Value长度最大为5。
  */
-
-/**
- *域名查询时过滤条件。
- */
 class DomainFilter extends AbstractModel
 {
     /**
@@ -81,6 +79,7 @@ class DomainFilter extends AbstractModel
 模糊查询时，Value长度最大为1，否则Value长度最大为5。
      */
     public $Fuzzy;
+
     /**
      * @param string $Name 过滤字段名，支持的列表如下：
 - origin：主源站。
@@ -102,6 +101,7 @@ class DomainFilter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

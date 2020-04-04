@@ -18,16 +18,14 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAlarmReceivers请求参数结构体
+ *
  * @method integer getGroupId() 获取需要修改接收人的策略组Id
  * @method void setGroupId(integer $GroupId) 设置需要修改接收人的策略组Id
  * @method string getModule() 获取必填。固定为“monitor”
  * @method void setModule(string $Module) 设置必填。固定为“monitor”
  * @method array getReceiverInfos() 获取新接收人信息, 没有填写则删除所有接收人
  * @method void setReceiverInfos(array $ReceiverInfos) 设置新接收人信息, 没有填写则删除所有接收人
- */
-
-/**
- *ModifyAlarmReceivers请求参数结构体
  */
 class ModifyAlarmReceiversRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyAlarmReceiversRequest extends AbstractModel
      * @var array 新接收人信息, 没有填写则删除所有接收人
      */
     public $ReceiverInfos;
+
     /**
      * @param integer $GroupId 需要修改接收人的策略组Id
      * @param string $Module 必填。固定为“monitor”
@@ -54,6 +53,7 @@ class ModifyAlarmReceiversRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

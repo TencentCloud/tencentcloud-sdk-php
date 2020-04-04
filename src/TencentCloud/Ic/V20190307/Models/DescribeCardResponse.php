@@ -18,16 +18,14 @@ namespace TencentCloud\Ic\V20190307\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCard返回参数结构体
+ *
  * @method CardInfo getData() 获取卡片详细信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(CardInfo $Data) 设置卡片详细信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeCard返回参数结构体
  */
 class DescribeCardResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class DescribeCardResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param CardInfo $Data 卡片详细信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class DescribeCardResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskStatus返回参数结构体
+ *
  * @method string getTaskResult() 获取任务结果
  * @method void setTaskResult(string $TaskResult) 设置任务结果
  * @method string getTaskType() 获取任务类型，010代表合同上传结果，020代表合同下载结果
  * @method void setTaskType(string $TaskType) 设置任务类型，010代表合同上传结果，020代表合同下载结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeTaskStatus返回参数结构体
  */
 class DescribeTaskStatusResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTaskStatusResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $TaskResult 任务结果
      * @param string $TaskType 任务类型，010代表合同上传结果，020代表合同下载结果
@@ -54,6 +53,7 @@ class DescribeTaskStatusResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

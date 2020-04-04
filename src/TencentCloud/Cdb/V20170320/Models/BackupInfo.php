@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 备份详细信息
+ *
  * @method string getName() 获取备份文件名
  * @method void setName(string $Name) 设置备份文件名
  * @method integer getSize() 获取备份文件大小，单位：Byte
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMethod(string $Method) 设置备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
  * @method string getWay() 获取备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
  * @method void setWay(string $Way) 设置备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
- */
-
-/**
- *备份详细信息
  */
 class BackupInfo extends AbstractModel
 {
@@ -115,6 +113,7 @@ class BackupInfo extends AbstractModel
      * @var string 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
      */
     public $Way;
+
     /**
      * @param string $Name 备份文件名
      * @param integer $Size 备份文件大小，单位：Byte
@@ -134,6 +133,7 @@ class BackupInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

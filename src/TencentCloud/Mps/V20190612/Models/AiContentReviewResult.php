@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内容审核结果
+ *
  * @method string getType() 获取任务的类型，可以取的值有：
 <li>Porn：图片鉴黄</li>
 <li>Terrorism：图片鉴恐</li>
@@ -86,10 +88,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProhibitedOcrTask(AiReviewTaskProhibitedOcrResult $ProhibitedOcrTask) 设置视频内容审核 Ocr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *内容审核结果
  */
 class AiContentReviewResult extends AbstractModel
 {
@@ -178,6 +176,7 @@ class AiContentReviewResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProhibitedOcrTask;
+
     /**
      * @param string $Type 任务的类型，可以取的值有：
 <li>Porn：图片鉴黄</li>
@@ -218,6 +217,7 @@ class AiContentReviewResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 反弹Shell数据
+ *
  * @method integer getId() 获取ID
  * @method void setId(integer $Id) 设置ID
  * @method string getUuid() 获取云镜UUID
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineName(string $MachineName) 设置主机名
  * @method string getProcTree() 获取进程树
  * @method void setProcTree(string $ProcTree) 设置进程树
- */
-
-/**
- *反弹Shell数据
  */
 class ReverseShell extends AbstractModel
 {
@@ -157,6 +155,7 @@ class ReverseShell extends AbstractModel
      * @var string 进程树
      */
     public $ProcTree;
+
     /**
      * @param integer $Id ID
      * @param string $Uuid 云镜UUID
@@ -182,6 +181,7 @@ class ReverseShell extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

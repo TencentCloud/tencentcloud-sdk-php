@@ -18,12 +18,10 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnbindEipAcls请求参数结构体
+ *
  * @method array getEipIdAclIdList() 获取待解关联的 EIP 与 ACL列表
  * @method void setEipIdAclIdList(array $EipIdAclIdList) 设置待解关联的 EIP 与 ACL列表
- */
-
-/**
- *UnbindEipAcls请求参数结构体
  */
 class UnbindEipAclsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class UnbindEipAclsRequest extends AbstractModel
      * @var array 待解关联的 EIP 与 ACL列表
      */
     public $EipIdAclIdList;
+
     /**
      * @param array $EipIdAclIdList 待解关联的 EIP 与 ACL列表
      */
@@ -38,6 +37,7 @@ class UnbindEipAclsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

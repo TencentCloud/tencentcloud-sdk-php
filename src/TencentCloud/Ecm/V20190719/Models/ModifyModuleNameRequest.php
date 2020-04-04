@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyModuleName请求参数结构体
+ *
  * @method string getModuleId() 获取模块ID。
  * @method void setModuleId(string $ModuleId) 设置模块ID。
  * @method string getModuleName() 获取模块名称。
  * @method void setModuleName(string $ModuleName) 设置模块名称。
- */
-
-/**
- *ModifyModuleName请求参数结构体
  */
 class ModifyModuleNameRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyModuleNameRequest extends AbstractModel
      * @var string 模块名称。
      */
     public $ModuleName;
+
     /**
      * @param string $ModuleId 模块ID。
      * @param string $ModuleName 模块名称。
@@ -46,6 +45,7 @@ class ModifyModuleNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

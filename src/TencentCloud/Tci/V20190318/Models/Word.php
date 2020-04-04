@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 当前句子包含的所有单词信息
+ *
  * @method float getConfidence() 获取当前词的置信度
  * @method void setConfidence(float $Confidence) 设置当前词的置信度
  * @method integer getMbtm() 获取当前单词语音的起始时间点，单位为ms
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setText(string $Text) 设置当前词
  * @method integer getWsize() 获取当前词的字节数
  * @method void setWsize(integer $Wsize) 设置当前词的字节数
- */
-
-/**
- *当前句子包含的所有单词信息
  */
 class Word extends AbstractModel
 {
@@ -59,6 +57,7 @@ class Word extends AbstractModel
      * @var integer 当前词的字节数
      */
     public $Wsize;
+
     /**
      * @param float $Confidence 当前词的置信度
      * @param integer $Mbtm 当前单词语音的起始时间点，单位为ms
@@ -70,6 +69,7 @@ class Word extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

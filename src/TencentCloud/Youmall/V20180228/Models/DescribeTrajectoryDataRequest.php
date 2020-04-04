@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTrajectoryData请求参数结构体
+ *
  * @method string getCompanyId() 获取集团ID
  * @method void setCompanyId(string $CompanyId) 设置集团ID
  * @method integer getShopId() 获取店铺ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制返回数据的最大条数，最大 400（负数代为 400）
  * @method integer getGender() 获取顾客性别顾虑，0是男，1是女，其它代表不分性别
  * @method void setGender(integer $Gender) 设置顾客性别顾虑，0是男，1是女，其它代表不分性别
- */
-
-/**
- *DescribeTrajectoryData请求参数结构体
  */
 class DescribeTrajectoryDataRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeTrajectoryDataRequest extends AbstractModel
      * @var integer 顾客性别顾虑，0是男，1是女，其它代表不分性别
      */
     public $Gender;
+
     /**
      * @param string $CompanyId 集团ID
      * @param integer $ShopId 店铺ID
@@ -78,6 +77,7 @@ class DescribeTrajectoryDataRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

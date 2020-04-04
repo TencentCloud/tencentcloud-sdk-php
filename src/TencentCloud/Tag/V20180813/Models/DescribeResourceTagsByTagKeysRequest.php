@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeResourceTagsByTagKeys请求参数结构体
+ *
  * @method string getServiceType() 获取业务类型
  * @method void setServiceType(string $ServiceType) 设置业务类型
  * @method string getResourcePrefix() 获取资源前缀
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页大小，默认为 400
  * @method integer getOffset() 获取数据偏移量，默认为 0, 必须为Limit参数的整数倍
  * @method void setOffset(integer $Offset) 设置数据偏移量，默认为 0, 必须为Limit参数的整数倍
- */
-
-/**
- *DescribeResourceTagsByTagKeys请求参数结构体
  */
 class DescribeResourceTagsByTagKeysRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeResourceTagsByTagKeysRequest extends AbstractModel
      * @var integer 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      */
     public $Offset;
+
     /**
      * @param string $ServiceType 业务类型
      * @param string $ResourcePrefix 资源前缀
@@ -86,6 +85,7 @@ class DescribeResourceTagsByTagKeysRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

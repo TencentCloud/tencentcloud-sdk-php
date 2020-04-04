@@ -18,16 +18,14 @@ namespace TencentCloud\Tics\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * { "source": "inergj_ai_predict", "stamp": "msraminer", "time": 1531994023 }
+ *
  * @method string getSource() 获取来源
  * @method void setSource(string $Source) 设置来源
  * @method string getStamp() 获取标记
  * @method void setStamp(string $Stamp) 设置标记
  * @method integer getTime() 获取时间
  * @method void setTime(integer $Time) 设置时间
- */
-
-/**
- *{ "source": "inergj_ai_predict", "stamp": "msraminer", "time": 1531994023 }
  */
 class IntelligenceType extends AbstractModel
 {
@@ -45,6 +43,7 @@ class IntelligenceType extends AbstractModel
      * @var integer 时间
      */
     public $Time;
+
     /**
      * @param string $Source 来源
      * @param string $Stamp 标记
@@ -54,6 +53,7 @@ class IntelligenceType extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

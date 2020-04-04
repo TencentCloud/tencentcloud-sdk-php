@@ -18,16 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 统计结果
+ *
  * @method array getActionCount() 获取数量统计
  * @method void setActionCount(array $ActionCount) 设置数量统计
  * @method array getActionDuration() 获取时长统计
  * @method void setActionDuration(array $ActionDuration) 设置时长统计
  * @method array getActionDurationRatio() 获取时长比例统计
  * @method void setActionDurationRatio(array $ActionDurationRatio) 设置时长比例统计
- */
-
-/**
- *统计结果
  */
 class ActionStatistic extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ActionStatistic extends AbstractModel
      * @var array 时长比例统计
      */
     public $ActionDurationRatio;
+
     /**
      * @param array $ActionCount 数量统计
      * @param array $ActionDuration 时长统计
@@ -54,6 +53,7 @@ class ActionStatistic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

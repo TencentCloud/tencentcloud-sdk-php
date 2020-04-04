@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeConfig返回参数结构体
+ *
  * @method NetworkStorageRange getNetworkStorageRange() 获取网络带宽硬盘大小的范围信息。
  * @method void setNetworkStorageRange(NetworkStorageRange $NetworkStorageRange) 设置网络带宽硬盘大小的范围信息。
  * @method array getImageWhiteSet() 获取镜像操作系统白名单
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeConfig返回参数结构体
  */
 class DescribeConfigResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DescribeConfigResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param NetworkStorageRange $NetworkStorageRange 网络带宽硬盘大小的范围信息。
      * @param array $ImageWhiteSet 镜像操作系统白名单
@@ -58,6 +57,7 @@ class DescribeConfigResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

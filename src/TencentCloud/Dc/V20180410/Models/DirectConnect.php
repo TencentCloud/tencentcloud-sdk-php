@@ -18,6 +18,8 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 物理专线信息列表
+ *
  * @method string getDirectConnectId() 获取物理专线ID。
  * @method void setDirectConnectId(string $DirectConnectId) 设置物理专线ID。
  * @method string getDirectConnectName() 获取物理专线的名称。
@@ -114,10 +116,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeState(string $ChargeState) 设置计费状态
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *物理专线信息列表
  */
 class DirectConnect extends AbstractModel
 {
@@ -272,6 +270,7 @@ class DirectConnect extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeState;
+
     /**
      * @param string $DirectConnectId 物理专线ID。
      * @param string $DirectConnectName 物理专线的名称。
@@ -326,6 +325,7 @@ class DirectConnect extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

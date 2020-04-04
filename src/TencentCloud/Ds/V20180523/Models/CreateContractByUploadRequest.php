@@ -18,6 +18,8 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateContractByUpload请求参数结构体
+ *
  * @method string getModule() 获取模块名ContractMng
  * @method void setModule(string $Module) 设置模块名ContractMng
  * @method string getOperation() 获取操作名CreateContractByUpload
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInitiator(string $Initiator) 设置合同发起方腾讯云帐号ID（由平台自动填写）
  * @method string getExpireTime() 获取合同长时间未签署的过期时间
  * @method void setExpireTime(string $ExpireTime) 设置合同长时间未签署的过期时间
- */
-
-/**
- *CreateContractByUpload请求参数结构体
  */
 class CreateContractByUploadRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CreateContractByUploadRequest extends AbstractModel
      * @var string 合同长时间未签署的过期时间
      */
     public $ExpireTime;
+
     /**
      * @param string $Module 模块名ContractMng
      * @param string $Operation 操作名CreateContractByUpload
@@ -94,6 +93,7 @@ class CreateContractByUploadRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

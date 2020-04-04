@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVocabLib返回参数结构体
+ *
  * @method array getVocabLibNameSet() 获取返回该appid下的所有词汇库名
  * @method void setVocabLibNameSet(array $VocabLibNameSet) 设置返回该appid下的所有词汇库名
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeVocabLib返回参数结构体
  */
 class DescribeVocabLibResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeVocabLibResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $VocabLibNameSet 返回该appid下的所有词汇库名
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeVocabLibResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

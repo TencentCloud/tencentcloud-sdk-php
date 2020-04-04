@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeFlowLogs请求参数结构体
+ *
  * @method string getVpcId() 获取私用网络ID或者统一ID，建议使用统一ID
  * @method void setVpcId(string $VpcId) 设置私用网络ID或者统一ID，建议使用统一ID
  * @method string getFlowLogId() 获取流日志唯一ID
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(Filter $Filters) 设置过滤条件，参数不支持同时指定FlowLogIds和Filters。
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
- */
-
-/**
- *DescribeFlowLogs请求参数结构体
  */
 class DescribeFlowLogsRequest extends AbstractModel
 {
@@ -121,6 +119,7 @@ class DescribeFlowLogsRequest extends AbstractModel
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
      */
     public $Filters;
+
     /**
      * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID
      * @param string $FlowLogId 流日志唯一ID
@@ -142,6 +141,7 @@ class DescribeFlowLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

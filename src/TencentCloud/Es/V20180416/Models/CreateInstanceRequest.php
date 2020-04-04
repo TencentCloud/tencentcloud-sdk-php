@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateInstance请求参数结构体
+ *
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
  * @method string getEsVersion() 获取实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"）
@@ -88,10 +90,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagList(array $TagList) 设置节点标签信息列表
  * @method integer getBasicSecurityType() 获取6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
  * @method void setBasicSecurityType(integer $BasicSecurityType) 设置6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
- */
-
-/**
- *CreateInstance请求参数结构体
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -237,6 +235,7 @@ class CreateInstanceRequest extends AbstractModel
      * @var integer 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
      */
     public $BasicSecurityType;
+
     /**
      * @param string $Zone 可用区
      * @param string $EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"）
@@ -278,6 +277,7 @@ class CreateInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

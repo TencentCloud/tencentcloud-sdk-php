@@ -18,6 +18,8 @@ namespace TencentCloud\Tmt\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SpeechTranslate请求参数结构体
+ *
  * @method string getSessionUuid() 获取一段完整的语音对应一个SessionUuid
  * @method void setSessionUuid(string $SessionUuid) 设置一段完整的语音对应一个SessionUuid
  * @method string getSource() 获取音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
  * @method string getMode() 获取识别模式，该参数已废弃
  * @method void setMode(string $Mode) 设置识别模式，该参数已废弃
- */
-
-/**
- *SpeechTranslate请求参数结构体
  */
 class SpeechTranslateRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class SpeechTranslateRequest extends AbstractModel
      * @var string 识别模式，该参数已废弃
      */
     public $Mode;
+
     /**
      * @param string $SessionUuid 一段完整的语音对应一个SessionUuid
      * @param string $Source 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
@@ -102,6 +101,7 @@ class SpeechTranslateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

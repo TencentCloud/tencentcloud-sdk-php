@@ -18,12 +18,10 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 录音文件识别请求的返回数据
+ *
  * @method integer getTaskId() 获取任务ID，可通过此ID在轮询接口获取识别状态与结果
  * @method void setTaskId(integer $TaskId) 设置任务ID，可通过此ID在轮询接口获取识别状态与结果
- */
-
-/**
- *录音文件识别请求的返回数据
  */
 class Task extends AbstractModel
 {
@@ -31,6 +29,7 @@ class Task extends AbstractModel
      * @var integer 任务ID，可通过此ID在轮询接口获取识别状态与结果
      */
     public $TaskId;
+
     /**
      * @param integer $TaskId 任务ID，可通过此ID在轮询接口获取识别状态与结果
      */
@@ -38,6 +37,7 @@ class Task extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

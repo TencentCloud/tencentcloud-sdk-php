@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 可用性监控任务状态及告警信息
+ *
  * @method integer getTaskId() 获取任务ID
  * @method void setTaskId(integer $TaskId) 设置任务ID
  * @method string getTaskName() 获取任务名称
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatusInfo(string $StatusInfo) 设置告警状态描述，统计信息
  * @method string getUpdateTime() 获取任务更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置任务更新时间
- */
-
-/**
- *可用性监控任务状态及告警信息
  */
 class TaskAlarm extends AbstractModel
 {
@@ -94,6 +92,7 @@ class TaskAlarm extends AbstractModel
      * @var string 任务更新时间
      */
     public $UpdateTime;
+
     /**
      * @param integer $TaskId 任务ID
      * @param string $TaskName 任务名称
@@ -110,6 +109,7 @@ class TaskAlarm extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

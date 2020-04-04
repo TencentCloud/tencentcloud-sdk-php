@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InstitutionOCR返回参数结构体
+ *
  * @method string getRegId() 获取注册号
  * @method void setRegId(string $RegId) 设置注册号
  * @method string getValidDate() 获取有效期
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLegalPerson(string $LegalPerson) 设置法定代表人
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *InstitutionOCR返回参数结构体
  */
 class InstitutionOCRResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class InstitutionOCRResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $RegId 注册号
      * @param string $ValidDate 有效期
@@ -78,6 +77,7 @@ class InstitutionOCRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

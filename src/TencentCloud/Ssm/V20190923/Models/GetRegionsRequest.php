@@ -18,14 +18,13 @@ namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetRegions请求参数结构体
+ *
 
- */
-
-/**
- *GetRegions请求参数结构体
  */
 class GetRegionsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class GetRegionsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 包列表
+ *
  * @method integer getTotalCount() 获取程序包总量
  * @method void setTotalCount(integer $TotalCount) 设置程序包总量
  * @method array getContent() 获取程序包信息列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置程序包信息列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *包列表
  */
 class PkgList extends AbstractModel
 {
@@ -41,6 +39,7 @@ class PkgList extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
+
     /**
      * @param integer $TotalCount 程序包总量
      * @param array $Content 程序包信息列表
@@ -50,6 +49,7 @@ class PkgList extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

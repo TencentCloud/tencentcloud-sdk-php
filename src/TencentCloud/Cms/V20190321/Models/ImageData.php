@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图片识别结果详情
+ *
  * @method integer getEvilFlag() 获取是否恶意 0：正常 1：可疑
  * @method void setEvilFlag(integer $EvilFlag) 设置是否恶意 0：正常 1：可疑
  * @method integer getEvilType() 获取恶意类型
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSimilar(Similar $Similar) 设置图片相似度详情
  * @method ImageTerrorDetect getTerrorDetect() 获取图片暴恐详情
  * @method void setTerrorDetect(ImageTerrorDetect $TerrorDetect) 设置图片暴恐详情
- */
-
-/**
- *图片识别结果详情
  */
 class ImageData extends AbstractModel
 {
@@ -122,6 +120,7 @@ class ImageData extends AbstractModel
      * @var ImageTerrorDetect 图片暴恐详情
      */
     public $TerrorDetect;
+
     /**
      * @param integer $EvilFlag 是否恶意 0：正常 1：可疑
      * @param integer $EvilType 恶意类型
@@ -146,6 +145,7 @@ class ImageData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

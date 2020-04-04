@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 慢查询日志文件信息
+ *
  * @method integer getId() 获取慢查询日志文件唯一标识
  * @method void setId(integer $Id) 设置慢查询日志文件唯一标识
  * @method string getStartTime() 获取文件生成的开始时间
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态（1成功 2失败）
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *慢查询日志文件信息
  */
 class SlowlogInfo extends AbstractModel
 {
@@ -83,6 +81,7 @@ class SlowlogInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
+
     /**
      * @param integer $Id 慢查询日志文件唯一标识
      * @param string $StartTime 文件生成的开始时间
@@ -98,6 +97,7 @@ class SlowlogInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

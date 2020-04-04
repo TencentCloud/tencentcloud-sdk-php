@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 关联策略信息
+ *
  * @method integer getPolicyId() 获取策略id
  * @method void setPolicyId(integer $PolicyId) 设置策略id
  * @method string getPolicyName() 获取策略名称
@@ -60,10 +62,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeactivedDetail(array $DeactivedDetail) 设置已下线的产品列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *关联策略信息
  */
 class AttachPolicyInfo extends AbstractModel
 {
@@ -131,6 +129,7 @@ class AttachPolicyInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeactivedDetail;
+
     /**
      * @param integer $PolicyId 策略id
      * @param string $PolicyName 策略名称
@@ -158,6 +157,7 @@ class AttachPolicyInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

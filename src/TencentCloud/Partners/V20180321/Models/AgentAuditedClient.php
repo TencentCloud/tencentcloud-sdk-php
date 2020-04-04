@@ -18,6 +18,8 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 已审核代客信息
+ *
  * @method string getUin() 获取代理商账号ID
  * @method void setUin(string $Uin) 设置代理商账号ID
  * @method string getClientUin() 获取代客账号ID
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMail(string $Mail) 设置代客邮箱
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *已审核代客信息
  */
 class AgentAuditedClient extends AbstractModel
 {
@@ -145,6 +143,7 @@ class AgentAuditedClient extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mail;
+
     /**
      * @param string $Uin 代理商账号ID
      * @param string $ClientUin 代客账号ID
@@ -170,6 +169,7 @@ class AgentAuditedClient extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

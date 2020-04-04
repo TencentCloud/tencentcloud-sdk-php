@@ -18,12 +18,10 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTriple请求参数结构体
+ *
  * @method string getTripleCondition() 获取三元组查询条件
  * @method void setTripleCondition(string $TripleCondition) 设置三元组查询条件
- */
-
-/**
- *DescribeTriple请求参数结构体
  */
 class DescribeTripleRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeTripleRequest extends AbstractModel
      * @var string 三元组查询条件
      */
     public $TripleCondition;
+
     /**
      * @param string $TripleCondition 三元组查询条件
      */
@@ -38,6 +37,7 @@ class DescribeTripleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

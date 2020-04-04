@@ -18,16 +18,14 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备属性
+ *
  * @method string getTag() 获取属性名称
  * @method void setTag(string $Tag) 设置属性名称
  * @method integer getType() 获取属性值的类型，1 int，2 string
  * @method void setType(integer $Type) 设置属性值的类型，1 int，2 string
  * @method string getValue() 获取属性的值
  * @method void setValue(string $Value) 设置属性的值
- */
-
-/**
- *设备属性
  */
 class DeviceTag extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeviceTag extends AbstractModel
      * @var string 属性的值
      */
     public $Value;
+
     /**
      * @param string $Tag 属性名称
      * @param integer $Type 属性值的类型，1 int，2 string
@@ -54,6 +53,7 @@ class DeviceTag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

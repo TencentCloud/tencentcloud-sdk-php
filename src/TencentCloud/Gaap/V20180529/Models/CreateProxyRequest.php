@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateProxy请求参数结构体
+ *
  * @method integer getProjectId() 获取通道的项目ID。
  * @method void setProjectId(integer $ProjectId) 设置通道的项目ID。
  * @method string getProxyName() 获取通道名称。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 当设置该参数时，表示复制该通道。
  * @method void setClonedProxyId(string $ClonedProxyId) 设置被复制的通道ID。只有处于运行中状态的通道可以被复制。
 当设置该参数时，表示复制该通道。
- */
-
-/**
- *CreateProxy请求参数结构体
  */
 class CreateProxyRequest extends AbstractModel
 {
@@ -100,6 +98,7 @@ class CreateProxyRequest extends AbstractModel
 当设置该参数时，表示复制该通道。
      */
     public $ClonedProxyId;
+
     /**
      * @param integer $ProjectId 通道的项目ID。
      * @param string $ProxyName 通道名称。
@@ -118,6 +117,7 @@ class CreateProxyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

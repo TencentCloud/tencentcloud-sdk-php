@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * mongodb售卖规格
+ *
  * @method string getSpecCode() 获取规格信息标识
  * @method void setSpecCode(string $SpecCode) 设置规格信息标识
  * @method integer getStatus() 获取规格有效标志，取值：0-停止售卖，1-开放售卖
@@ -60,10 +62,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxReplicateSetNodeNum(integer $MaxReplicateSetNodeNum) 设置最大分片从节点数
  * @method string getMachineType() 获取机器类型，取值：0-HIO，4-HIO10G
  * @method void setMachineType(string $MachineType) 设置机器类型，取值：0-HIO，4-HIO10G
- */
-
-/**
- *mongodb售卖规格
  */
 class SpecItem extends AbstractModel
 {
@@ -171,6 +169,7 @@ class SpecItem extends AbstractModel
      * @var string 机器类型，取值：0-HIO，4-HIO10G
      */
     public $MachineType;
+
     /**
      * @param string $SpecCode 规格信息标识
      * @param integer $Status 规格有效标志，取值：0-停止售卖，1-开放售卖
@@ -198,6 +197,7 @@ class SpecItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMigrateCheckJob返回参数结构体
+ *
  * @method string getStatus() 获取校验任务状态：unavailable(当前不可用), starting(开始中)，running(校验中)，finished(校验完成)
  * @method void setStatus(string $Status) 设置校验任务状态：unavailable(当前不可用), starting(开始中)，running(校验中)，finished(校验完成)
  * @method integer getErrorCode() 获取任务的错误码
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCheckFlag(integer $CheckFlag) 设置校验是否通过,0-未通过，1-校验通过, 3-未校验
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeMigrateCheckJob返回参数结构体
  */
 class DescribeMigrateCheckJobResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeMigrateCheckJobResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Status 校验任务状态：unavailable(当前不可用), starting(开始中)，running(校验中)，finished(校验完成)
      * @param integer $ErrorCode 任务的错误码
@@ -78,6 +77,7 @@ class DescribeMigrateCheckJobResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

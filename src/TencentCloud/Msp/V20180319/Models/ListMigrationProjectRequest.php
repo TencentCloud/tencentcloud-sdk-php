@@ -18,14 +18,12 @@ namespace TencentCloud\Msp\V20180319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListMigrationProject请求参数结构体
+ *
  * @method integer getOffset() 获取记录起始数，默认值为0
  * @method void setOffset(integer $Offset) 设置记录起始数，默认值为0
  * @method integer getLimit() 获取返回条数，默认值为500
  * @method void setLimit(integer $Limit) 设置返回条数，默认值为500
- */
-
-/**
- *ListMigrationProject请求参数结构体
  */
 class ListMigrationProjectRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ListMigrationProjectRequest extends AbstractModel
      * @var integer 返回条数，默认值为500
      */
     public $Limit;
+
     /**
      * @param integer $Offset 记录起始数，默认值为0
      * @param integer $Limit 返回条数，默认值为500
@@ -46,6 +45,7 @@ class ListMigrationProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

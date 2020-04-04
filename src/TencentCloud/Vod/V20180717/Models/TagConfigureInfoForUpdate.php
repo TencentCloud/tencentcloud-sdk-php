@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能标签任务控制参数
+ *
  * @method string getSwitch() 获取智能标签任务开关，可选值：
 <li>ON：开启智能标签任务；</li>
 <li>OFF：关闭智能标签任务。</li>
  * @method void setSwitch(string $Switch) 设置智能标签任务开关，可选值：
 <li>ON：开启智能标签任务；</li>
 <li>OFF：关闭智能标签任务。</li>
- */
-
-/**
- *智能标签任务控制参数
  */
 class TagConfigureInfoForUpdate extends AbstractModel
 {
@@ -37,6 +35,7 @@ class TagConfigureInfoForUpdate extends AbstractModel
 <li>OFF：关闭智能标签任务。</li>
      */
     public $Switch;
+
     /**
      * @param string $Switch 智能标签任务开关，可选值：
 <li>ON：开启智能标签任务；</li>
@@ -46,6 +45,7 @@ class TagConfigureInfoForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

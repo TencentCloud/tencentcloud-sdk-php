@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyIp6Translator请求参数结构体
+ *
  * @method string getIp6TranslatorId() 获取IPV6转换实例唯一ID，形如ip6-xxxxxxxxx
  * @method void setIp6TranslatorId(string $Ip6TranslatorId) 设置IPV6转换实例唯一ID，形如ip6-xxxxxxxxx
  * @method string getIp6TranslatorName() 获取IPV6转换实例修改名称
  * @method void setIp6TranslatorName(string $Ip6TranslatorName) 设置IPV6转换实例修改名称
- */
-
-/**
- *ModifyIp6Translator请求参数结构体
  */
 class ModifyIp6TranslatorRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyIp6TranslatorRequest extends AbstractModel
      * @var string IPV6转换实例修改名称
      */
     public $Ip6TranslatorName;
+
     /**
      * @param string $Ip6TranslatorId IPV6转换实例唯一ID，形如ip6-xxxxxxxxx
      * @param string $Ip6TranslatorName IPV6转换实例修改名称
@@ -46,6 +45,7 @@ class ModifyIp6TranslatorRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

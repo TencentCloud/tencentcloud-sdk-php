@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGroupDomainConfig返回参数结构体
+ *
  * @method array getAccessRegionList() 获取域名解析就近接入配置列表。
  * @method void setAccessRegionList(array $AccessRegionList) 设置域名解析就近接入配置列表。
  * @method string getDefaultDnsIp() 获取默认访问Ip。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessRegionCount(integer $AccessRegionCount) 设置接入地域的配置的总数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeGroupDomainConfig返回参数结构体
  */
 class DescribeGroupDomainConfigResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeGroupDomainConfigResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $AccessRegionList 域名解析就近接入配置列表。
      * @param string $DefaultDnsIp 默认访问Ip。
@@ -70,6 +69,7 @@ class DescribeGroupDomainConfigResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

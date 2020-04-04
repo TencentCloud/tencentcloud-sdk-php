@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 售卖可用区信息
+ *
  * @method string getRegion() 获取地域英文ID
  * @method void setRegion(string $Region) 设置地域英文ID
  * @method integer getRegionId() 获取地域数字ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneList(array $ZoneList) 设置可用区列表
  * @method array getAvailableChoice() 获取可选择的主可用区和从可用区
  * @method void setAvailableChoice(array $AvailableChoice) 设置可选择的主可用区和从可用区
- */
-
-/**
- *售卖可用区信息
  */
 class RegionInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class RegionInfo extends AbstractModel
      * @var array 可选择的主可用区和从可用区
      */
     public $AvailableChoice;
+
     /**
      * @param string $Region 地域英文ID
      * @param integer $RegionId 地域数字ID
@@ -70,6 +69,7 @@ class RegionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

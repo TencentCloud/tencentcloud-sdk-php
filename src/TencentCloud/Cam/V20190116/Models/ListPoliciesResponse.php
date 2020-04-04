@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListPolicies返回参数结构体
+ *
  * @method integer getTotalNum() 获取策略总数
  * @method void setTotalNum(integer $TotalNum) 设置策略总数
  * @method array getList() 获取策略数组，数组每个成员包括 policyId、policyName、addTime、type、description、 createMode 字段。其中： 
@@ -46,10 +48,6 @@ IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ListPolicies返回参数结构体
  */
 class ListPoliciesResponse extends AbstractModel
 {
@@ -82,6 +80,7 @@ IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalNum 策略总数
      * @param array $List 策略数组，数组每个成员包括 policyId、policyName、addTime、type、description、 createMode 字段。其中： 
@@ -102,6 +101,7 @@ IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

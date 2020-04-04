@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetProcedureTemplate请求参数结构体
+ *
  * @method string getName() 获取任务流名字
  * @method void setName(string $Name) 设置任务流名字
  * @method MediaProcessTaskInput getMediaProcessTask() 获取视频处理类型任务参数。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置AI 内容识别类型任务参数。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *ResetProcedureTemplate请求参数结构体
  */
 class ResetProcedureTemplateRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ResetProcedureTemplateRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param string $Name 任务流名字
      * @param MediaProcessTaskInput $MediaProcessTask 视频处理类型任务参数。
@@ -78,6 +77,7 @@ class ResetProcedureTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

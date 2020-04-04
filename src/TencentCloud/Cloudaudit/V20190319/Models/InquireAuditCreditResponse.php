@@ -18,14 +18,12 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquireAuditCredit返回参数结构体
+ *
  * @method integer getAuditAmount() 获取可创建跟踪集的数量
  * @method void setAuditAmount(integer $AuditAmount) 设置可创建跟踪集的数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *InquireAuditCredit返回参数结构体
  */
 class InquireAuditCreditResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InquireAuditCreditResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $AuditAmount 可创建跟踪集的数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class InquireAuditCreditResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

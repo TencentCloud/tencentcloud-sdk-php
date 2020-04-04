@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询结果排序条件
+ *
  * @method string getKey() 获取排序字段，当前支持：
 createTime，域名创建时间
 certExpireTime，证书过期时间
@@ -26,10 +28,6 @@ createTime，域名创建时间
 certExpireTime，证书过期时间
  * @method string getSequence() 获取asc/desc，默认desc。
  * @method void setSequence(string $Sequence) 设置asc/desc，默认desc。
- */
-
-/**
- *查询结果排序条件
  */
 class Sort extends AbstractModel
 {
@@ -44,6 +42,7 @@ certExpireTime，证书过期时间
      * @var string asc/desc，默认desc。
      */
     public $Sequence;
+
     /**
      * @param string $Key 排序字段，当前支持：
 createTime，域名创建时间
@@ -54,6 +53,7 @@ certExpireTime，证书过期时间
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

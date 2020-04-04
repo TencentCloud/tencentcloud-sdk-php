@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDeviceMonitorInfo返回参数结构体
+ *
  * @method DeviceCpuInfo getCpu() 获取实例CPU监控数据
  * @method void setCpu(DeviceCpuInfo $Cpu) 设置实例CPU监控数据
  * @method DeviceMemInfo getMem() 获取实例内存监控数据
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisk(DeviceDiskInfo $Disk) 设置实例磁盘监控数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDeviceMonitorInfo返回参数结构体
  */
 class DescribeDeviceMonitorInfoResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeDeviceMonitorInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param DeviceCpuInfo $Cpu 实例CPU监控数据
      * @param DeviceMemInfo $Mem 实例内存监控数据
@@ -70,6 +69,7 @@ class DescribeDeviceMonitorInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

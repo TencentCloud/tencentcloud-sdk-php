@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MigrateNetworkInterface请求参数结构体
+ *
  * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method string getSourceInstanceId() 获取弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
  * @method void setSourceInstanceId(string $SourceInstanceId) 设置弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
  * @method string getDestinationInstanceId() 获取待迁移的目的CVM实例ID。
  * @method void setDestinationInstanceId(string $DestinationInstanceId) 设置待迁移的目的CVM实例ID。
- */
-
-/**
- *MigrateNetworkInterface请求参数结构体
  */
 class MigrateNetworkInterfaceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MigrateNetworkInterfaceRequest extends AbstractModel
      * @var string 待迁移的目的CVM实例ID。
      */
     public $DestinationInstanceId;
+
     /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      * @param string $SourceInstanceId 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
@@ -54,6 +53,7 @@ class MigrateNetworkInterfaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

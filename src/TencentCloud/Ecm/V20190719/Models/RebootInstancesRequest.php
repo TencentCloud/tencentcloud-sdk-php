@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RebootInstances请求参数结构体
+ *
  * @method array getInstanceIdSet() 获取待重启的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置待重启的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。
  * @method boolean getForceReboot() 获取是否在正常重启失败后选择强制重启实例。取值范围：
@@ -40,10 +42,6 @@ HARD：表示硬关机
 SOFT_FIRST：表示优先软关机，失败再执行硬关机
 
 默认取值：SOFT。
- */
-
-/**
- *RebootInstances请求参数结构体
  */
 class RebootInstancesRequest extends AbstractModel
 {
@@ -69,6 +67,7 @@ SOFT_FIRST：表示优先软关机，失败再执行硬关机
 默认取值：SOFT。
      */
     public $StopType;
+
     /**
      * @param array $InstanceIdSet 待重启的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。
      * @param boolean $ForceReboot 是否在正常重启失败后选择强制重启实例。取值范围：
@@ -86,6 +85,7 @@ SOFT_FIRST：表示优先软关机，失败再执行硬关机
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

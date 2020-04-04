@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ACL对象实体
+ *
  * @method integer getResourceType() 获取Acl资源类型，（0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID）当前只有TOPIC，
  * @method void setResourceType(integer $ResourceType) 设置Acl资源类型，（0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID）当前只有TOPIC，
  * @method string getResourceName() 获取资源名称，和resourceType相关如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperation(integer $Operation) 设置Acl操作方式(0:UNKNOWN，1:ANY，2:ALL，3:READ，4:WRITE，5:CREATE，6:DELETE，7:ALTER，8:DESCRIBE，9:CLUSTER_ACTION，10:DESCRIBE_CONFIGS，11:ALTER_CONFIGS，12:IDEMPOTEN_WRITE)
  * @method integer getPermissionType() 获取权限类型(0:UNKNOWN，1:ANY，2:DENY，3:ALLOW)
  * @method void setPermissionType(integer $PermissionType) 设置权限类型(0:UNKNOWN，1:ANY，2:DENY，3:ALLOW)
- */
-
-/**
- *ACL对象实体
  */
 class Acl extends AbstractModel
 {
@@ -72,6 +70,7 @@ class Acl extends AbstractModel
      * @var integer 权限类型(0:UNKNOWN，1:ANY，2:DENY，3:ALLOW)
      */
     public $PermissionType;
+
     /**
      * @param integer $ResourceType Acl资源类型，（0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID）当前只有TOPIC，
      * @param string $ResourceName 资源名称，和resourceType相关如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称
@@ -86,6 +85,7 @@ class Acl extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

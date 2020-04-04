@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeApplicationTriggerPersonal请求参数结构体
+ *
  * @method string getRepoName() 获取仓库名称
  * @method void setRepoName(string $RepoName) 设置仓库名称
  * @method string getTriggerName() 获取触发器名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回最大数量，默认 20, 最大值 100
  * @method void setLimit(integer $Limit) 设置返回最大数量，默认 20, 最大值 100
- */
-
-/**
- *DescribeApplicationTriggerPersonal请求参数结构体
  */
 class DescribeApplicationTriggerPersonalRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeApplicationTriggerPersonalRequest extends AbstractModel
      * @var integer 返回最大数量，默认 20, 最大值 100
      */
     public $Limit;
+
     /**
      * @param string $RepoName 仓库名称
      * @param string $TriggerName 触发器名称
@@ -62,6 +61,7 @@ class DescribeApplicationTriggerPersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

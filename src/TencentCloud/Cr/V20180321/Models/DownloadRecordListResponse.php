@@ -18,14 +18,12 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DownloadRecordList返回参数结构体
+ *
  * @method string getRecordListUrl() 获取录音列表下载地址
  * @method void setRecordListUrl(string $RecordListUrl) 设置录音列表下载地址
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DownloadRecordList返回参数结构体
  */
 class DownloadRecordListResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DownloadRecordListResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $RecordListUrl 录音列表下载地址
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DownloadRecordListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

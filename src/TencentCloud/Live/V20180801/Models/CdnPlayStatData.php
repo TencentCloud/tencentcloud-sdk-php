@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 下行播放统计指标
+ *
  * @method string getTime() 获取时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method void setTime(string $Time) 设置时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method float getBandwidth() 获取带宽，（单位Mbps）。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRequest(integer $Request) 设置新增请求数。
  * @method integer getOnline() 获取并发连接数。
  * @method void setOnline(integer $Online) 设置并发连接数。
- */
-
-/**
- *下行播放统计指标
  */
 class CdnPlayStatData extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CdnPlayStatData extends AbstractModel
      * @var integer 并发连接数。
      */
     public $Online;
+
     /**
      * @param string $Time 时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param float $Bandwidth 带宽，（单位Mbps）。
@@ -70,6 +69,7 @@ class CdnPlayStatData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

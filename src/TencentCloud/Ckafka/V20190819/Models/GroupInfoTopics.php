@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GroupInfo内部topic对象
+ *
  * @method string getTopic() 获取分配的 topic 名称
  * @method void setTopic(string $Topic) 设置分配的 topic 名称
  * @method array getPartitions() 获取分配的 partition 信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartitions(array $Partitions) 设置分配的 partition 信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *GroupInfo内部topic对象
  */
 class GroupInfoTopics extends AbstractModel
 {
@@ -41,6 +39,7 @@ class GroupInfoTopics extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Partitions;
+
     /**
      * @param string $Topic 分配的 topic 名称
      * @param array $Partitions 分配的 partition 信息
@@ -50,6 +49,7 @@ class GroupInfoTopics extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

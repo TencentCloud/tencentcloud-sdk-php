@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频处理任务类型
+ *
  * @method array getTranscodeTaskSet() 获取视频转码任务列表。
  * @method void setTranscodeTaskSet(array $TranscodeTaskSet) 设置视频转码任务列表。
  * @method array getAnimatedGraphicTaskSet() 获取视频转动图任务列表。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSampleSnapshotTaskSet(array $SampleSnapshotTaskSet) 设置对视频采样截图任务列表。
  * @method array getImageSpriteTaskSet() 获取对视频截雪碧图任务列表。
  * @method void setImageSpriteTaskSet(array $ImageSpriteTaskSet) 设置对视频截雪碧图任务列表。
- */
-
-/**
- *视频处理任务类型
  */
 class MediaProcessTaskInput extends AbstractModel
 {
@@ -59,6 +57,7 @@ class MediaProcessTaskInput extends AbstractModel
      * @var array 对视频截雪碧图任务列表。
      */
     public $ImageSpriteTaskSet;
+
     /**
      * @param array $TranscodeTaskSet 视频转码任务列表。
      * @param array $AnimatedGraphicTaskSet 视频转动图任务列表。
@@ -70,6 +69,7 @@ class MediaProcessTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ES集群配置项
+ *
  * @method array getBlackIpList() 获取kibana访问黑名单
  * @method void setBlackIpList(array $BlackIpList) 设置kibana访问黑名单
  * @method array getWhiteIpList() 获取kibana访问白名单
  * @method void setWhiteIpList(array $WhiteIpList) 设置kibana访问白名单
- */
-
-/**
- *ES集群配置项
  */
 class EsAcl extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EsAcl extends AbstractModel
      * @var array kibana访问白名单
      */
     public $WhiteIpList;
+
     /**
      * @param array $BlackIpList kibana访问黑名单
      * @param array $WhiteIpList kibana访问白名单
@@ -46,6 +45,7 @@ class EsAcl extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

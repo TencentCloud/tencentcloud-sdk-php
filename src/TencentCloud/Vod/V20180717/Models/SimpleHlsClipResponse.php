@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SimpleHlsClip返回参数结构体
+ *
  * @method string getUrl() 获取裁剪后的视频地址。
  * @method void setUrl(string $Url) 设置裁剪后的视频地址。
  * @method MediaMetaData getMetaData() 获取裁剪后的视频元信息。目前`Size`，`Rotate`，`VideoDuration`，`AudioDuration` 几个字段暂时缺省，没有真实数据。
  * @method void setMetaData(MediaMetaData $MetaData) 设置裁剪后的视频元信息。目前`Size`，`Rotate`，`VideoDuration`，`AudioDuration` 几个字段暂时缺省，没有真实数据。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *SimpleHlsClip返回参数结构体
  */
 class SimpleHlsClipResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SimpleHlsClipResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Url 裁剪后的视频地址。
      * @param MediaMetaData $MetaData 裁剪后的视频元信息。目前`Size`，`Rotate`，`VideoDuration`，`AudioDuration` 几个字段暂时缺省，没有真实数据。
@@ -54,6 +53,7 @@ class SimpleHlsClipResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

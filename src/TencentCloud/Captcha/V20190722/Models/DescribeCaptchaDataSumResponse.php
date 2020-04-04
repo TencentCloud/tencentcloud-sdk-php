@@ -18,6 +18,8 @@ namespace TencentCloud\Captcha\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCaptchaDataSum返回参数结构体
+ *
  * @method integer getGetSum() 获取请求总量
  * @method void setGetSum(integer $GetSum) 设置请求总量
  * @method integer getVfySuccSum() 获取请求验证成功量
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCheckTicketSum(integer $CheckTicketSum) 设置票据校验量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeCaptchaDataSum返回参数结构体
  */
 class DescribeCaptchaDataSumResponse extends AbstractModel
 {
@@ -83,6 +81,7 @@ class DescribeCaptchaDataSumResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $GetSum 请求总量
      * @param integer $VfySuccSum 请求验证成功量
@@ -98,6 +97,7 @@ class DescribeCaptchaDataSumResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

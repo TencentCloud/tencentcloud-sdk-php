@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstancesDeniedActions返回参数结构体
+ *
  * @method array getInstanceOperatorSet() 获取实例对应的禁止操作
  * @method void setInstanceOperatorSet(array $InstanceOperatorSet) 设置实例对应的禁止操作
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeInstancesDeniedActions返回参数结构体
  */
 class DescribeInstancesDeniedActionsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeInstancesDeniedActionsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $InstanceOperatorSet 实例对应的禁止操作
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeInstancesDeniedActionsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

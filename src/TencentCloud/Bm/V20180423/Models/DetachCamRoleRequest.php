@@ -18,12 +18,10 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetachCamRole请求参数结构体
+ *
  * @method string getInstanceId() 获取服务器ID
  * @method void setInstanceId(string $InstanceId) 设置服务器ID
- */
-
-/**
- *DetachCamRole请求参数结构体
  */
 class DetachCamRoleRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DetachCamRoleRequest extends AbstractModel
      * @var string 服务器ID
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 服务器ID
      */
@@ -38,6 +37,7 @@ class DetachCamRoleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyProxiesAttribute请求参数结构体
+ *
  * @method array getInstanceIds() 获取（旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。
  * @method void setInstanceIds(array $InstanceIds) 设置（旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。
  * @method string getProxyName() 获取通道名称。可任意命名，但不得超过30个字符。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 更多详细信息请参阅：如何保证幂等性。
  * @method array getProxyIds() 获取（新参数）一个或多个待操作的通道ID。
  * @method void setProxyIds(array $ProxyIds) 设置（新参数）一个或多个待操作的通道ID。
- */
-
-/**
- *ModifyProxiesAttribute请求参数结构体
  */
 class ModifyProxiesAttributeRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class ModifyProxiesAttributeRequest extends AbstractModel
      * @var array （新参数）一个或多个待操作的通道ID。
      */
     public $ProxyIds;
+
     /**
      * @param array $InstanceIds （旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。
      * @param string $ProxyName 通道名称。可任意命名，但不得超过30个字符。
@@ -66,6 +65,7 @@ class ModifyProxiesAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据订阅地域售卖信息
+ *
  * @method string getRegionName() 获取地域名称，如广州
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionName(string $RegionName) 设置地域名称，如广州
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置当前地域的售卖情况，1 - 正常， 2-灰度，3 - 停售
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *数据订阅地域售卖信息
  */
 class SubscribeRegionConf extends AbstractModel
 {
@@ -74,6 +72,7 @@ class SubscribeRegionConf extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
+
     /**
      * @param string $RegionName 地域名称，如广州
 注意：此字段可能返回 null，表示取不到有效值。
@@ -90,6 +89,7 @@ class SubscribeRegionConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

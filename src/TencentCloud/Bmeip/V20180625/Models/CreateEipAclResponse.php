@@ -18,6 +18,8 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateEipAcl返回参数结构体
+ *
  * @method string getAclId() 获取ACL 实例 ID
  * @method void setAclId(string $AclId) 设置ACL 实例 ID
  * @method integer getStatus() 获取ACL 实例状态
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedAt(string $CreatedAt) 设置ACL 实例创建时间
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateEipAcl返回参数结构体
  */
 class CreateEipAclResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateEipAclResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $AclId ACL 实例 ID
      * @param integer $Status ACL 实例状态
@@ -70,6 +69,7 @@ class CreateEipAclResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

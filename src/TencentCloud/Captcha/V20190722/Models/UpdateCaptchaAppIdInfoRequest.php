@@ -18,6 +18,8 @@ namespace TencentCloud\Captcha\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateCaptchaAppIdInfo请求参数结构体
+ *
  * @method integer getCaptchaAppId() 获取验证码应用ID
  * @method void setCaptchaAppId(integer $CaptchaAppId) 设置验证码应用ID
  * @method string getAppName() 获取应用名
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopFullScreen(integer $TopFullScreen) 设置是否全屏
  * @method integer getTrafficThreshold() 获取流量限制
  * @method void setTrafficThreshold(integer $TrafficThreshold) 设置流量限制
- */
-
-/**
- *UpdateCaptchaAppIdInfo请求参数结构体
  */
 class UpdateCaptchaAppIdInfoRequest extends AbstractModel
 {
@@ -115,6 +113,7 @@ class UpdateCaptchaAppIdInfoRequest extends AbstractModel
      * @var integer 流量限制
      */
     public $TrafficThreshold;
+
     /**
      * @param integer $CaptchaAppId 验证码应用ID
      * @param string $AppName 应用名
@@ -134,6 +133,7 @@ class UpdateCaptchaAppIdInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

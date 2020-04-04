@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 运单识别结果
+ *
  * @method WaybillObj getRecName() 获取收件人姓名
  * @method void setRecName(WaybillObj $RecName) 设置收件人姓名
  * @method WaybillObj getRecNum() 获取收件人手机号
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSenderAddr(WaybillObj $SenderAddr) 设置寄件人地址
  * @method WaybillObj getWaybillNum() 获取运单号
  * @method void setWaybillNum(WaybillObj $WaybillNum) 设置运单号
- */
-
-/**
- *运单识别结果
  */
 class TextWaybill extends AbstractModel
 {
@@ -73,6 +71,7 @@ class TextWaybill extends AbstractModel
      * @var WaybillObj 运单号
      */
     public $WaybillNum;
+
     /**
      * @param WaybillObj $RecName 收件人姓名
      * @param WaybillObj $RecNum 收件人手机号
@@ -86,6 +85,7 @@ class TextWaybill extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

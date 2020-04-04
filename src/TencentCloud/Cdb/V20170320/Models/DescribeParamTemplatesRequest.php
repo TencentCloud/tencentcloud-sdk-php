@@ -18,14 +18,13 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeParamTemplates请求参数结构体
+ *
 
- */
-
-/**
- *DescribeParamTemplates请求参数结构体
  */
 class DescribeParamTemplatesRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeParamTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

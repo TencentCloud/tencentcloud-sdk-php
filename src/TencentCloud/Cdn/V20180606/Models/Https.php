@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 域名 https 加速配置，默认为关闭状态
+ *
  * @method string getSwitch() 获取https 配置开关
 on：开启
 off：关闭
@@ -87,10 +89,6 @@ deployed：部署成功
 failed：部署失败
 注意：此字段可能返回 null，表示取不到有效值。
  */
-
-/**
- *域名 https 加速配置，默认为关闭状态
- */
 class Https extends AbstractModel
 {
     /**
@@ -158,6 +156,7 @@ failed：部署失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SslStatus;
+
     /**
      * @param string $Switch https 配置开关
 on：开启
@@ -198,6 +197,7 @@ failed：部署失败
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

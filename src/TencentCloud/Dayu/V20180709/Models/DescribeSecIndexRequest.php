@@ -18,14 +18,13 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecIndex请求参数结构体
+ *
 
- */
-
-/**
- *DescribeSecIndex请求参数结构体
  */
 class DescribeSecIndexRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeSecIndexRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

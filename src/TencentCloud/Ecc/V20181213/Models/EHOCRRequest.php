@@ -18,6 +18,8 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EHOCR请求参数结构体
+ *
  * @method string getImage() 获取图片所在的url或base64编码后的图像数据，依据InputType而定
  * @method void setImage(string $Image) 设置图片所在的url或base64编码后的图像数据，依据InputType而定
  * @method integer getInputType() 获取输出图片类型，0 表示 Image 字段是图片所在的 url，1 表示 Image 字段是 base64 编码后的图像数据
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelContent(string $ModelContent) 设置范文内容，可选参数，同上，范文的正文部分。
  * @method integer getIsAsync() 获取异步模式标识，0：同步模式，1：异步模式。默认为同步模式
  * @method void setIsAsync(integer $IsAsync) 设置异步模式标识，0：同步模式，1：异步模式。默认为同步模式
- */
-
-/**
- *EHOCR请求参数结构体
  */
 class EHOCRRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class EHOCRRequest extends AbstractModel
      * @var integer 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
      */
     public $IsAsync;
+
     /**
      * @param string $Image 图片所在的url或base64编码后的图像数据，依据InputType而定
      * @param integer $InputType 输出图片类型，0 表示 Image 字段是图片所在的 url，1 表示 Image 字段是 base64 编码后的图像数据
@@ -118,6 +117,7 @@ class EHOCRRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

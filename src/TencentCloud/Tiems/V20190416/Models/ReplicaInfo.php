@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例信息
+ *
  * @method string getName() 获取实例名称
  * @method void setName(string $Name) 设置实例名称
  * @method string getEniIp() 获取弹性网卡模式时，弹性网卡Ip
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRestarted() 获取重启次数
  * @method void setRestarted(integer $Restarted) 设置重启次数
- */
-
-/**
- *实例信息
  */
 class ReplicaInfo extends AbstractModel
 {
@@ -85,6 +83,7 @@ class ReplicaInfo extends AbstractModel
      * @var integer 重启次数
      */
     public $Restarted;
+
     /**
      * @param string $Name 实例名称
      * @param string $EniIp 弹性网卡模式时，弹性网卡Ip
@@ -102,6 +101,7 @@ class ReplicaInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

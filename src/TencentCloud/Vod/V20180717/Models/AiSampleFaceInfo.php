@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI 样本管理，人脸信息。
+ *
  * @method string getFaceId() 获取人脸图片 ID。
  * @method void setFaceId(string $FaceId) 设置人脸图片 ID。
  * @method string getUrl() 获取人脸图片地址。
  * @method void setUrl(string $Url) 设置人脸图片地址。
- */
-
-/**
- *AI 样本管理，人脸信息。
  */
 class AiSampleFaceInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AiSampleFaceInfo extends AbstractModel
      * @var string 人脸图片地址。
      */
     public $Url;
+
     /**
      * @param string $FaceId 人脸图片 ID。
      * @param string $Url 人脸图片地址。
@@ -46,6 +45,7 @@ class AiSampleFaceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

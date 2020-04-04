@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRepositories返回参数结构体
+ *
  * @method array getRepositoryList() 获取仓库信息列表
  * @method void setRepositoryList(array $RepositoryList) 设置仓库信息列表
  * @method integer getTotalCount() 获取总个数
  * @method void setTotalCount(integer $TotalCount) 设置总个数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeRepositories返回参数结构体
  */
 class DescribeRepositoriesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeRepositoriesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $RepositoryList 仓库信息列表
      * @param integer $TotalCount 总个数
@@ -54,6 +53,7 @@ class DescribeRepositoriesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

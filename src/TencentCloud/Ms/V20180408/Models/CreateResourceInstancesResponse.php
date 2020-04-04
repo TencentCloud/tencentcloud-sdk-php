@@ -18,14 +18,12 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateResourceInstances返回参数结构体
+ *
  * @method array getResourceSet() 获取新创建的资源列表。
  * @method void setResourceSet(array $ResourceSet) 设置新创建的资源列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateResourceInstances返回参数结构体
  */
 class CreateResourceInstancesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateResourceInstancesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $ResourceSet 新创建的资源列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateResourceInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDirectConnects返回参数结构体
+ *
  * @method array getDirectConnectSet() 获取物理专线列表。
  * @method void setDirectConnectSet(array $DirectConnectSet) 设置物理专线列表。
  * @method integer getTotalCount() 获取符合物理专线列表数量。
  * @method void setTotalCount(integer $TotalCount) 设置符合物理专线列表数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDirectConnects返回参数结构体
  */
 class DescribeDirectConnectsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDirectConnectsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $DirectConnectSet 物理专线列表。
      * @param integer $TotalCount 符合物理专线列表数量。
@@ -54,6 +53,7 @@ class DescribeDirectConnectsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

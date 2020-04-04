@@ -18,14 +18,12 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * eipid与aclid关联关系
+ *
  * @method string getEipId() 获取EIP 实例 ID
  * @method void setEipId(string $EipId) 设置EIP 实例 ID
  * @method string getAclId() 获取ACL 实例 ID
  * @method void setAclId(string $AclId) 设置ACL 实例 ID
- */
-
-/**
- *eipid与aclid关联关系
  */
 class EipAclMap extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EipAclMap extends AbstractModel
      * @var string ACL 实例 ID
      */
     public $AclId;
+
     /**
      * @param string $EipId EIP 实例 ID
      * @param string $AclId ACL 实例 ID
@@ -46,6 +45,7 @@ class EipAclMap extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

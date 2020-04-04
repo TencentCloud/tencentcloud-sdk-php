@@ -18,12 +18,10 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户侧网段地址
+ *
  * @method string getCidr() 获取用户侧网段地址
  * @method void setCidr(string $Cidr) 设置用户侧网段地址
- */
-
-/**
- *用户侧网段地址
  */
 class RouteFilterPrefix extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RouteFilterPrefix extends AbstractModel
      * @var string 用户侧网段地址
      */
     public $Cidr;
+
     /**
      * @param string $Cidr 用户侧网段地址
      */
@@ -38,6 +37,7 @@ class RouteFilterPrefix extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

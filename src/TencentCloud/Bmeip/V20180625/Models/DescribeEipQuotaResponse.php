@@ -18,6 +18,8 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEipQuota返回参数结构体
+ *
  * @method integer getEipNumQuota() 获取能拥有的EIP个数的总配额，默认是100个
  * @method void setEipNumQuota(integer $EipNumQuota) 设置能拥有的EIP个数的总配额，默认是100个
  * @method integer getCurrentEipNum() 获取当前已使用的EIP个数，包括创建中、绑定中、已绑定、解绑中、未绑定几种状态的EIP个数总和
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBatchApplyMax(integer $BatchApplyMax) 设置BatchApplyMax
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeEipQuota返回参数结构体
  */
 class DescribeEipQuotaResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeEipQuotaResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $EipNumQuota 能拥有的EIP个数的总配额，默认是100个
      * @param integer $CurrentEipNum 当前已使用的EIP个数，包括创建中、绑定中、已绑定、解绑中、未绑定几种状态的EIP个数总和
@@ -78,6 +77,7 @@ class DescribeEipQuotaResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

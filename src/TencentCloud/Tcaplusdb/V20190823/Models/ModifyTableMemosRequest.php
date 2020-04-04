@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTableMemos请求参数结构体
+ *
  * @method string getClusterId() 获取表所属集群实例ID
  * @method void setClusterId(string $ClusterId) 设置表所属集群实例ID
  * @method array getTableMemos() 获取选定表详情列表
  * @method void setTableMemos(array $TableMemos) 设置选定表详情列表
- */
-
-/**
- *ModifyTableMemos请求参数结构体
  */
 class ModifyTableMemosRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyTableMemosRequest extends AbstractModel
      * @var array 选定表详情列表
      */
     public $TableMemos;
+
     /**
      * @param string $ClusterId 表所属集群实例ID
      * @param array $TableMemos 选定表详情列表
@@ -46,6 +45,7 @@ class ModifyTableMemosRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

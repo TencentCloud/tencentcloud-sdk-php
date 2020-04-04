@@ -18,12 +18,10 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteScanInstances请求参数结构体
+ *
  * @method array getAppSids() 获取删除一个或多个扫描的app，最大支持20个
  * @method void setAppSids(array $AppSids) 设置删除一个或多个扫描的app，最大支持20个
- */
-
-/**
- *DeleteScanInstances请求参数结构体
  */
 class DeleteScanInstancesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteScanInstancesRequest extends AbstractModel
      * @var array 删除一个或多个扫描的app，最大支持20个
      */
     public $AppSids;
+
     /**
      * @param array $AppSids 删除一个或多个扫描的app，最大支持20个
      */
@@ -38,6 +37,7 @@ class DeleteScanInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

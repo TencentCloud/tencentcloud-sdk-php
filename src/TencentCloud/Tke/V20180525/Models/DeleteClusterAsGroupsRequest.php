@@ -18,16 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteClusterAsGroups请求参数结构体
+ *
  * @method string getClusterId() 获取集群ID，通过[DescribeClusters](https://cloud.tencent.com/document/api/457/31862)接口获取。
  * @method void setClusterId(string $ClusterId) 设置集群ID，通过[DescribeClusters](https://cloud.tencent.com/document/api/457/31862)接口获取。
  * @method array getAutoScalingGroupIds() 获取集群伸缩组ID的列表
  * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) 设置集群伸缩组ID的列表
  * @method boolean getKeepInstance() 获取是否保留伸缩组中的节点(默认值： false(不保留))
  * @method void setKeepInstance(boolean $KeepInstance) 设置是否保留伸缩组中的节点(默认值： false(不保留))
- */
-
-/**
- *DeleteClusterAsGroups请求参数结构体
  */
 class DeleteClusterAsGroupsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteClusterAsGroupsRequest extends AbstractModel
      * @var boolean 是否保留伸缩组中的节点(默认值： false(不保留))
      */
     public $KeepInstance;
+
     /**
      * @param string $ClusterId 集群ID，通过[DescribeClusters](https://cloud.tencent.com/document/api/457/31862)接口获取。
      * @param array $AutoScalingGroupIds 集群伸缩组ID的列表
@@ -54,6 +53,7 @@ class DeleteClusterAsGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

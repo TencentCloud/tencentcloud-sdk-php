@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频截取雪碧图任务，该结构仅用于对 2017 版[截取雪碧图](https://cloud.tencent.com/document/product/266/8101)接口发起的任务。
+ *
  * @method string getTaskId() 获取截图雪碧图任务 ID。
  * @method void setTaskId(string $TaskId) 设置截图雪碧图任务 ID。
  * @method integer getErrCode() 获取错误码
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebVttUrl(string $WebVttUrl) 设置雪碧图子图位置与时间关系 WebVtt 文件地址。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *视频截取雪碧图任务，该结构仅用于对 2017 版[截取雪碧图](https://cloud.tencent.com/document/product/266/8101)接口发起的任务。
  */
 class CreateImageSpriteTask2017 extends AbstractModel
 {
@@ -107,6 +105,7 @@ class CreateImageSpriteTask2017 extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebVttUrl;
+
     /**
      * @param string $TaskId 截图雪碧图任务 ID。
      * @param integer $ErrCode 错误码
@@ -130,6 +129,7 @@ class CreateImageSpriteTask2017 extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

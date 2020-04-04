@@ -18,16 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述了按带宽计费的相关信息
+ *
  * @method string getStartTime() 获取开始时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
  * @method void setStartTime(string $StartTime) 设置开始时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
  * @method string getEndTime() 获取结束时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
  * @method void setEndTime(string $EndTime) 设置结束时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
  * @method InternetAccessible getInternetAccessible() 获取实例带宽信息。
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置实例带宽信息。
- */
-
-/**
- *描述了按带宽计费的相关信息
  */
 class InternetBandwidthConfig extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InternetBandwidthConfig extends AbstractModel
      * @var InternetAccessible 实例带宽信息。
      */
     public $InternetAccessible;
+
     /**
      * @param string $StartTime 开始时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      * @param string $EndTime 结束时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
@@ -54,6 +53,7 @@ class InternetBandwidthConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

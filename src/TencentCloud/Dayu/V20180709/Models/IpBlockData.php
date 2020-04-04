@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IP封堵记录
+ *
  * @method string getIp() 获取IP
  * @method void setIp(string $Ip) 设置IP
  * @method string getStatus() 获取状态（Blocked：被封堵；UnBlocking：解封中；UnBlockFailed：解封失败）
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnBlockTime(string $UnBlockTime) 设置解封时间（预计解封时间）
  * @method string getActionType() 获取解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
  * @method void setActionType(string $ActionType) 设置解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
- */
-
-/**
- *IP封堵记录
  */
 class IpBlockData extends AbstractModel
 {
@@ -59,6 +57,7 @@ class IpBlockData extends AbstractModel
      * @var string 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
      */
     public $ActionType;
+
     /**
      * @param string $Ip IP
      * @param string $Status 状态（Blocked：被封堵；UnBlocking：解封中；UnBlockFailed：解封失败）
@@ -70,6 +69,7 @@ class IpBlockData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

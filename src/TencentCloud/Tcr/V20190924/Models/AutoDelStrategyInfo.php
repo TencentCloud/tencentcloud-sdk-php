@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 自动删除策略信息
+ *
  * @method string getUsername() 获取用户名
  * @method void setUsername(string $Username) 设置用户名
  * @method string getRepoName() 获取仓库名
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValid(integer $Valid) 设置Valid
  * @method string getCreationTime() 获取创建时间
  * @method void setCreationTime(string $CreationTime) 设置创建时间
- */
-
-/**
- *自动删除策略信息
  */
 class AutoDelStrategyInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class AutoDelStrategyInfo extends AbstractModel
      * @var string 创建时间
      */
     public $CreationTime;
+
     /**
      * @param string $Username 用户名
      * @param string $RepoName 仓库名
@@ -78,6 +77,7 @@ class AutoDelStrategyInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

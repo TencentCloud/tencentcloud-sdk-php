@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeResourcesByTags返回参数结构体
+ *
  * @method integer getTotalCount() 获取结果总数
  * @method void setTotalCount(integer $TotalCount) 设置结果总数
  * @method integer getOffset() 获取数据位移偏量
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRows(array $Rows) 设置资源标签
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeResourcesByTags返回参数结构体
  */
 class DescribeResourcesByTagsResponse extends AbstractModel
 {
@@ -62,6 +60,7 @@ class DescribeResourcesByTagsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 结果总数
      * @param integer $Offset 数据位移偏量
@@ -74,6 +73,7 @@ class DescribeResourcesByTagsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

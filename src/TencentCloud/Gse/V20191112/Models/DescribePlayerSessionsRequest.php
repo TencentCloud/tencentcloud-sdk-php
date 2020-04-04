@@ -18,6 +18,8 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePlayerSessions请求参数结构体
+ *
  * @method string getGameServerSessionId() 获取游戏服务器会话ID
  * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话ID
  * @method integer getLimit() 获取单次查询记录数上限
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlayerSessionId(string $PlayerSessionId) 设置玩家会话ID
  * @method string getPlayerSessionStatusFilter() 获取玩家会话状态（RESERVED,ACTIVE,COMPLETED,TIMEDOUT）
  * @method void setPlayerSessionStatusFilter(string $PlayerSessionStatusFilter) 设置玩家会话状态（RESERVED,ACTIVE,COMPLETED,TIMEDOUT）
- */
-
-/**
- *DescribePlayerSessions请求参数结构体
  */
 class DescribePlayerSessionsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribePlayerSessionsRequest extends AbstractModel
      * @var string 玩家会话状态（RESERVED,ACTIVE,COMPLETED,TIMEDOUT）
      */
     public $PlayerSessionStatusFilter;
+
     /**
      * @param string $GameServerSessionId 游戏服务器会话ID
      * @param integer $Limit 单次查询记录数上限
@@ -78,6 +77,7 @@ class DescribePlayerSessionsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

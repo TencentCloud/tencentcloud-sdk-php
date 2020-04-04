@@ -18,6 +18,8 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeIndustryNews返回参数结构体
+ *
  * @method integer getNewsCount() 获取总计文章数量
  * @method void setNewsCount(integer $NewsCount) 设置总计文章数量
  * @method integer getFromCount() 获取总计来源数量
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDateCountSet(array $DateCountSet) 设置按天统计的数量列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeIndustryNews返回参数结构体
  */
 class DescribeIndustryNewsResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeIndustryNewsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $NewsCount 总计文章数量
      * @param integer $FromCount 总计来源数量
@@ -78,6 +77,7 @@ class DescribeIndustryNewsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

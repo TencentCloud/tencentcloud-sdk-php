@@ -18,6 +18,8 @@ namespace TencentCloud\Tmt\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 翻译结果
+ *
  * @method string getSourceText() 获取识别出的源文
  * @method void setSourceText(string $SourceText) 设置识别出的源文
  * @method string getTargetText() 获取翻译后的译文
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setW(integer $W) 设置宽度
  * @method integer getH() 获取高度
  * @method void setH(integer $H) 设置高度
- */
-
-/**
- *翻译结果
  */
 class ItemValue extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ItemValue extends AbstractModel
      * @var integer 高度
      */
     public $H;
+
     /**
      * @param string $SourceText 识别出的源文
      * @param string $TargetText 翻译后的译文
@@ -78,6 +77,7 @@ class ItemValue extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindRelateAccReUnionPay返回参数结构体
+ *
  * @method string getFrontSeqNo() 获取STRING(52)，见证系统流水号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrontSeqNo(string $FrontSeqNo) 设置STRING(52)，见证系统流水号
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCnsmrSeqNo(string $CnsmrSeqNo) 设置String(22)，交易流水号
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *BindRelateAccReUnionPay返回参数结构体
  */
 class BindRelateAccReUnionPayResponse extends AbstractModel
 {
@@ -72,6 +70,7 @@ class BindRelateAccReUnionPayResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $FrontSeqNo STRING(52)，见证系统流水号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -86,6 +85,7 @@ class BindRelateAccReUnionPayResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

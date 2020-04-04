@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstanceName请求参数结构体
+ *
  * @method string getInstanceId() 获取数据库实例ID，形如mssql-njj2mtpl
  * @method void setInstanceId(string $InstanceId) 设置数据库实例ID，形如mssql-njj2mtpl
  * @method string getInstanceName() 获取新的数据库实例名字
  * @method void setInstanceName(string $InstanceName) 设置新的数据库实例名字
- */
-
-/**
- *ModifyDBInstanceName请求参数结构体
  */
 class ModifyDBInstanceNameRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBInstanceNameRequest extends AbstractModel
      * @var string 新的数据库实例名字
      */
     public $InstanceName;
+
     /**
      * @param string $InstanceId 数据库实例ID，形如mssql-njj2mtpl
      * @param string $InstanceName 新的数据库实例名字
@@ -46,6 +45,7 @@ class ModifyDBInstanceNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

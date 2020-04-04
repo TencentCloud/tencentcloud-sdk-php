@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetSAMLProvider返回参数结构体
+ *
  * @method string getName() 获取SAML身份提供商名称
  * @method void setName(string $Name) 设置SAML身份提供商名称
  * @method string getDescription() 获取SAML身份提供商描述
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSAMLMetadata(string $SAMLMetadata) 设置SAML身份提供商元数据文档
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetSAMLProvider返回参数结构体
  */
 class GetSAMLProviderResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class GetSAMLProviderResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Name SAML身份提供商名称
      * @param string $Description SAML身份提供商描述
@@ -78,6 +77,7 @@ class GetSAMLProviderResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

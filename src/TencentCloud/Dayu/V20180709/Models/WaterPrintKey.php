@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 水印Key
+ *
  * @method string getKeyId() 获取水印KeyID
  * @method void setKeyId(string $KeyId) 设置水印KeyID
  * @method string getKeyContent() 获取水印Key值
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOpenStatus(integer $OpenStatus) 设置是否开启，取值[0（没有开启），1（已开启）]
  * @method string getCreateTime() 获取密钥生成时间
  * @method void setCreateTime(string $CreateTime) 设置密钥生成时间
- */
-
-/**
- *水印Key
  */
 class WaterPrintKey extends AbstractModel
 {
@@ -59,6 +57,7 @@ class WaterPrintKey extends AbstractModel
      * @var string 密钥生成时间
      */
     public $CreateTime;
+
     /**
      * @param string $KeyId 水印KeyID
      * @param string $KeyContent 水印Key值
@@ -70,6 +69,7 @@ class WaterPrintKey extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

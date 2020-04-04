@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBindingPolicyObjectList返回的是实例分组信息
+ *
  * @method integer getInstanceGroupId() 获取实例分组id
  * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组id
  * @method string getViewName() 获取告警策略类型名称
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegions(array $Regions) 设置实例所在的地域集合
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DescribeBindingPolicyObjectList返回的是实例分组信息
  */
 class DescribeBindingPolicyObjectListInstanceGroup extends AbstractModel
 {
@@ -83,6 +81,7 @@ class DescribeBindingPolicyObjectListInstanceGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Regions;
+
     /**
      * @param integer $InstanceGroupId 实例分组id
      * @param string $ViewName 告警策略类型名称
@@ -98,6 +97,7 @@ class DescribeBindingPolicyObjectListInstanceGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 小程序审核信息单元
+ *
  * @method integer getDefinition() 获取模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。
  * @method void setDefinition(integer $Definition) 设置模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。
  * @method MediaMetaData getMetaData() 获取视频元信息。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReviewSummary(array $ReviewSummary) 设置小程序审核元素。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *小程序审核信息单元
  */
 class MediaMiniProgramReviewInfoItem extends AbstractModel
 {
@@ -71,6 +69,7 @@ class MediaMiniProgramReviewInfoItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReviewSummary;
+
     /**
      * @param integer $Definition 模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。
      * @param MediaMetaData $MetaData 视频元信息。
@@ -86,6 +85,7 @@ class MediaMiniProgramReviewInfoItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

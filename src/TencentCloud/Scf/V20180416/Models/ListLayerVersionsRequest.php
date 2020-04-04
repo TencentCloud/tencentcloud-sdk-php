@@ -18,14 +18,12 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListLayerVersions请求参数结构体
+ *
  * @method string getLayerName() 获取层名称
  * @method void setLayerName(string $LayerName) 设置层名称
  * @method array getCompatibleRuntime() 获取适配的运行时
  * @method void setCompatibleRuntime(array $CompatibleRuntime) 设置适配的运行时
- */
-
-/**
- *ListLayerVersions请求参数结构体
  */
 class ListLayerVersionsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ListLayerVersionsRequest extends AbstractModel
      * @var array 适配的运行时
      */
     public $CompatibleRuntime;
+
     /**
      * @param string $LayerName 层名称
      * @param array $CompatibleRuntime 适配的运行时
@@ -46,6 +45,7 @@ class ListLayerVersionsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

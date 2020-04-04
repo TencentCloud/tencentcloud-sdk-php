@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDiskConfigQuota请求参数结构体
+ *
  * @method string getInquiryType() 获取查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
  * @method void setInquiryType(string $InquiryType) 设置查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
  * @method array getZones() 获取查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCPU(integer $CPU) 设置实例CPU核数。
  * @method integer getMemory() 获取实例内存大小。
  * @method void setMemory(integer $Memory) 设置实例内存大小。
- */
-
-/**
- *DescribeDiskConfigQuota请求参数结构体
  */
 class DescribeDiskConfigQuotaRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
      * @var integer 实例内存大小。
      */
     public $Memory;
+
     /**
      * @param string $InquiryType 查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
      * @param array $Zones 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
@@ -94,6 +93,7 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

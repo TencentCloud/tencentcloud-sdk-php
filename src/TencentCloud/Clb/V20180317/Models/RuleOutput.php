@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HTTP/HTTPS监听器的转发规则（输出）
+ *
  * @method string getLocationId() 获取转发规则的 ID
  * @method void setLocationId(string $LocationId) 设置转发规则的 ID
  * @method string getDomain() 获取转发规则的域名。
@@ -80,10 +82,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuicStatus(string $QuicStatus) 设置QUIC状态
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *HTTP/HTTPS监听器的转发规则（输出）
  */
 class RuleOutput extends AbstractModel
 {
@@ -201,6 +199,7 @@ class RuleOutput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QuicStatus;
+
     /**
      * @param string $LocationId 转发规则的 ID
      * @param string $Domain 转发规则的域名。
@@ -238,6 +237,7 @@ class RuleOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

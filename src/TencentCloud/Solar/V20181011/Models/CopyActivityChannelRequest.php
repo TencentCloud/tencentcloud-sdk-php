@@ -18,16 +18,14 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CopyActivityChannel请求参数结构体
+ *
  * @method string getActivityId() 获取活动ID
  * @method void setActivityId(string $ActivityId) 设置活动ID
  * @method string getChannelFrom() 获取来源渠道ID
  * @method void setChannelFrom(string $ChannelFrom) 设置来源渠道ID
  * @method array getChannelTo() 获取目的渠道id
  * @method void setChannelTo(array $ChannelTo) 设置目的渠道id
- */
-
-/**
- *CopyActivityChannel请求参数结构体
  */
 class CopyActivityChannelRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CopyActivityChannelRequest extends AbstractModel
      * @var array 目的渠道id
      */
     public $ChannelTo;
+
     /**
      * @param string $ActivityId 活动ID
      * @param string $ChannelFrom 来源渠道ID
@@ -54,6 +53,7 @@ class CopyActivityChannelRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

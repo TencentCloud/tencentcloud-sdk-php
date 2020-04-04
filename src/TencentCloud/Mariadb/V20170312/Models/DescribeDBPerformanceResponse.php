@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBPerformance返回参数结构体
+ *
  * @method MonitorData getLongQuery() 获取慢查询数
  * @method void setLongQuery(MonitorData $LongQuery) 设置慢查询数
  * @method MonitorData getSelectTotal() 获取查询操作数SELECT
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSlaveDelay(MonitorData $SlaveDelay) 设置主备延迟
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDBPerformance返回参数结构体
  */
 class DescribeDBPerformanceResponse extends AbstractModel
 {
@@ -101,6 +99,7 @@ class DescribeDBPerformanceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param MonitorData $LongQuery 慢查询数
      * @param MonitorData $SelectTotal 查询操作数SELECT
@@ -118,6 +117,7 @@ class DescribeDBPerformanceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

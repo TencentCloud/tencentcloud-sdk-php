@@ -18,6 +18,8 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 活动详情
+ *
  * @method string getTemplateId() 获取活动使用模板id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateId(string $TemplateId) 设置活动使用模板id
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPersonalConfig(string $PersonalConfig) 设置活动模板自定义配置
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *活动详情
  */
 class ActivityInfo extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ActivityInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PersonalConfig;
+
     /**
      * @param string $TemplateId 活动使用模板id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,6 +113,7 @@ class ActivityInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

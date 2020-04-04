@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * serverless账号描述
+ *
  * @method string getDBUser() 获取用户名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBUser(string $DBUser) 设置用户名
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBConnLimit(integer $DBConnLimit) 设置连接数限制
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *serverless账号描述
  */
 class ServerlessDBAccount extends AbstractModel
 {
@@ -54,6 +52,7 @@ class ServerlessDBAccount extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBConnLimit;
+
     /**
      * @param string $DBUser 用户名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class ServerlessDBAccount extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

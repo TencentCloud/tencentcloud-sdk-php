@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNatGatewayDestinationIpPortTranslationNatRules返回参数结构体
+ *
  * @method array getNatGatewayDestinationIpPortTranslationNatRuleSet() 获取NAT网关端口转发规则对象数组。
  * @method void setNatGatewayDestinationIpPortTranslationNatRuleSet(array $NatGatewayDestinationIpPortTranslationNatRuleSet) 设置NAT网关端口转发规则对象数组。
  * @method integer getTotalCount() 获取符合条件的NAT网关端口转发规则对象数目。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的NAT网关端口转发规则对象数目。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeNatGatewayDestinationIpPortTranslationNatRules返回参数结构体
  */
 class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse extends Abs
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $NatGatewayDestinationIpPortTranslationNatRuleSet NAT网关端口转发规则对象数组。
      * @param integer $TotalCount 符合条件的NAT网关端口转发规则对象数目。
@@ -54,6 +53,7 @@ class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse extends Abs
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyPersonTagInfo请求参数结构体
+ *
  * @method string getCompanyId() 获取优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
  * @method void setCompanyId(string $CompanyId) 设置优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
  * @method integer getShopId() 获取优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
  * @method void setShopId(integer $ShopId) 设置优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
  * @method array getTags() 获取需要设置的顾客信息，批量设置最大为10个
  * @method void setTags(array $Tags) 设置需要设置的顾客信息，批量设置最大为10个
- */
-
-/**
- *ModifyPersonTagInfo请求参数结构体
  */
 class ModifyPersonTagInfoRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyPersonTagInfoRequest extends AbstractModel
      * @var array 需要设置的顾客信息，批量设置最大为10个
      */
     public $Tags;
+
     /**
      * @param string $CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      * @param integer $ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
@@ -54,6 +53,7 @@ class ModifyPersonTagInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

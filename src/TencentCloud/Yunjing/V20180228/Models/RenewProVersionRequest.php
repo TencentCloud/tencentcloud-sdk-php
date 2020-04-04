@@ -18,14 +18,12 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RenewProVersion请求参数结构体
+ *
  * @method ChargePrepaid getChargePrepaid() 获取购买相关参数。
  * @method void setChargePrepaid(ChargePrepaid $ChargePrepaid) 设置购买相关参数。
  * @method string getQuuid() 获取主机唯一ID，对应CVM的uuid、BM的InstanceId。
  * @method void setQuuid(string $Quuid) 设置主机唯一ID，对应CVM的uuid、BM的InstanceId。
- */
-
-/**
- *RenewProVersion请求参数结构体
  */
 class RenewProVersionRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RenewProVersionRequest extends AbstractModel
      * @var string 主机唯一ID，对应CVM的uuid、BM的InstanceId。
      */
     public $Quuid;
+
     /**
      * @param ChargePrepaid $ChargePrepaid 购买相关参数。
      * @param string $Quuid 主机唯一ID，对应CVM的uuid、BM的InstanceId。
@@ -46,6 +45,7 @@ class RenewProVersionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

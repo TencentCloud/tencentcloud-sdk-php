@@ -18,6 +18,8 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 监控任务基础数据
+ *
  * @method integer getId() 获取监控任务ID。
  * @method void setId(integer $Id) 设置监控任务ID。
  * @method string getName() 获取监控名称。
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppid(integer $Appid) 设置云用户appid。
  * @method integer getContentScanStatus() 获取扫描状态：0-待检测；1-检测完成
  * @method void setContentScanStatus(integer $ContentScanStatus) 设置扫描状态：0-待检测；1-检测完成
- */
-
-/**
- *监控任务基础数据
  */
 class Monitor extends AbstractModel
 {
@@ -129,6 +127,7 @@ class Monitor extends AbstractModel
      * @var integer 扫描状态：0-待检测；1-检测完成
      */
     public $ContentScanStatus;
+
     /**
      * @param integer $Id 监控任务ID。
      * @param string $Name 监控名称。
@@ -150,6 +149,7 @@ class Monitor extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

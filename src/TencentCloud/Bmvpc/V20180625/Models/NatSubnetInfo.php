@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * NAT子网信息
+ *
  * @method string getName() 获取子网名称
  * @method void setName(string $Name) 设置子网名称
  * @method string getSubnetId() 获取子网ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetNatType(integer $SubnetNatType) 设置NAT子网类型，其中0表示绑定部分IP的NAT子网，1表示绑定全部IP的NAT子网，2表示绑定网关方式的NAT子网
  * @method string getCidrBlock() 获取子网网段
  * @method void setCidrBlock(string $CidrBlock) 设置子网网段
- */
-
-/**
- *NAT子网信息
  */
 class NatSubnetInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class NatSubnetInfo extends AbstractModel
      * @var string 子网网段
      */
     public $CidrBlock;
+
     /**
      * @param string $Name 子网名称
      * @param string $SubnetId 子网ID
@@ -62,6 +61,7 @@ class NatSubnetInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

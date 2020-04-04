@@ -18,16 +18,14 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDevicePriceInfo请求参数结构体
+ *
  * @method array getInstanceIds() 获取需要查询的实例列表
  * @method void setInstanceIds(array $InstanceIds) 设置需要查询的实例列表
  * @method string getTimeUnit() 获取购买时长单位，当前只支持取值为m
  * @method void setTimeUnit(string $TimeUnit) 设置购买时长单位，当前只支持取值为m
  * @method integer getTimeSpan() 获取购买时长
  * @method void setTimeSpan(integer $TimeSpan) 设置购买时长
- */
-
-/**
- *DescribeDevicePriceInfo请求参数结构体
  */
 class DescribeDevicePriceInfoRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDevicePriceInfoRequest extends AbstractModel
      * @var integer 购买时长
      */
     public $TimeSpan;
+
     /**
      * @param array $InstanceIds 需要查询的实例列表
      * @param string $TimeUnit 购买时长单位，当前只支持取值为m
@@ -54,6 +53,7 @@ class DescribeDevicePriceInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

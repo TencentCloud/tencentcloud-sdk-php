@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 竞价相关选项
+ *
  * @method string getMaxPrice() 获取竞价出价
  * @method void setMaxPrice(string $MaxPrice) 设置竞价出价
  * @method string getSpotInstanceType() 获取竞价请求类型，当前仅支持类型：one-time
  * @method void setSpotInstanceType(string $SpotInstanceType) 设置竞价请求类型，当前仅支持类型：one-time
- */
-
-/**
- *竞价相关选项
  */
 class SpotMarketOptions extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SpotMarketOptions extends AbstractModel
      * @var string 竞价请求类型，当前仅支持类型：one-time
      */
     public $SpotInstanceType;
+
     /**
      * @param string $MaxPrice 竞价出价
      * @param string $SpotInstanceType 竞价请求类型，当前仅支持类型：one-time
@@ -46,6 +45,7 @@ class SpotMarketOptions extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

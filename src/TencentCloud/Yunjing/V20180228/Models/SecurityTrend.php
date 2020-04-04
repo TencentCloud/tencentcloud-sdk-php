@@ -18,14 +18,12 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全趋势统计数据。
+ *
  * @method string getDate() 获取事件时间。
  * @method void setDate(string $Date) 设置事件时间。
  * @method integer getEventNum() 获取事件数量。
  * @method void setEventNum(integer $EventNum) 设置事件数量。
- */
-
-/**
- *安全趋势统计数据。
  */
 class SecurityTrend extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SecurityTrend extends AbstractModel
      * @var integer 事件数量。
      */
     public $EventNum;
+
     /**
      * @param string $Date 事件时间。
      * @param integer $EventNum 事件数量。
@@ -46,6 +45,7 @@ class SecurityTrend extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTopicRule请求参数结构体
+ *
  * @method string getRuleName() 获取规则名
  * @method void setRuleName(string $RuleName) 设置规则名
- */
-
-/**
- *DeleteTopicRule请求参数结构体
  */
 class DeleteTopicRuleRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteTopicRuleRequest extends AbstractModel
      * @var string 规则名
      */
     public $RuleName;
+
     /**
      * @param string $RuleName 规则名
      */
@@ -38,6 +37,7 @@ class DeleteTopicRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

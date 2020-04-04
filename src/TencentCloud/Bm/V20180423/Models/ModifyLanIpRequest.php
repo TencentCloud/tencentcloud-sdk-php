@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLanIp请求参数结构体
+ *
  * @method string getInstanceId() 获取物理机ID
  * @method void setInstanceId(string $InstanceId) 设置物理机ID
  * @method string getVpcId() 获取指定新VPC
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLanIp(string $LanIp) 设置指定新内网IP
  * @method integer getRebootDevice() 获取是否需要重启机器，取值 1(需要) 0(不需要)，默认取值0
  * @method void setRebootDevice(integer $RebootDevice) 设置是否需要重启机器，取值 1(需要) 0(不需要)，默认取值0
- */
-
-/**
- *ModifyLanIp请求参数结构体
  */
 class ModifyLanIpRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyLanIpRequest extends AbstractModel
      * @var integer 是否需要重启机器，取值 1(需要) 0(不需要)，默认取值0
      */
     public $RebootDevice;
+
     /**
      * @param string $InstanceId 物理机ID
      * @param string $VpcId 指定新VPC
@@ -70,6 +69,7 @@ class ModifyLanIpRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

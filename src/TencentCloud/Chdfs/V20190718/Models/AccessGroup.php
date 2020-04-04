@@ -18,6 +18,8 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 权限组
+ *
  * @method string getAccessGroupId() 获取权限组ID
  * @method void setAccessGroupId(string $AccessGroupId) 设置权限组ID
  * @method string getAccessGroupName() 获取权限组名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置权限组描述
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
- */
-
-/**
- *权限组
  */
 class AccessGroup extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AccessGroup extends AbstractModel
      * @var string 创建时间
      */
     public $CreateTime;
+
     /**
      * @param string $AccessGroupId 权限组ID
      * @param string $AccessGroupName 权限组名称
@@ -62,6 +61,7 @@ class AccessGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

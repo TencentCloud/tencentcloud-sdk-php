@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClassicLinkInstances请求参数结构体
+ *
  * @method array getFilters() 获取过滤条件。
 <li>vpc-id - String - （过滤条件）VPC实例ID。</li>
 <li>vm-ip - String - （过滤条件）基础网络云服务器IP。</li>
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) 设置偏移量
  * @method string getLimit() 获取返回数量
  * @method void setLimit(string $Limit) 设置返回数量
- */
-
-/**
- *DescribeClassicLinkInstances请求参数结构体
  */
 class DescribeClassicLinkInstancesRequest extends AbstractModel
 {
@@ -51,6 +49,7 @@ class DescribeClassicLinkInstancesRequest extends AbstractModel
      * @var string 返回数量
      */
     public $Limit;
+
     /**
      * @param array $Filters 过滤条件。
 <li>vpc-id - String - （过滤条件）VPC实例ID。</li>
@@ -62,6 +61,7 @@ class DescribeClassicLinkInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

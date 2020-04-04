@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云数据库账号信息
+ *
  * @method string getUserName() 获取用户名
  * @method void setUserName(string $UserName) 设置用户名
  * @method string getHost() 获取用户可以从哪台主机登录（对应 MySQL 用户的 host 字段，UserName + Host 唯一标识一个用户，IP形式，IP段以%结尾；支持填入%；为空默认等于%）
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 建议该参数值大于10。当ReadOnly选择1、2时该参数生效。
  * @method void setDelayThresh(integer $DelayThresh) 设置如果备机延迟超过本参数设置值，系统将认为备机发生故障
 建议该参数值大于10。当ReadOnly选择1、2时该参数生效。
- */
-
-/**
- *云数据库账号信息
  */
 class DBAccount extends AbstractModel
 {
@@ -76,6 +74,7 @@ class DBAccount extends AbstractModel
 建议该参数值大于10。当ReadOnly选择1、2时该参数生效。
      */
     public $DelayThresh;
+
     /**
      * @param string $UserName 用户名
      * @param string $Host 用户可以从哪台主机登录（对应 MySQL 用户的 host 字段，UserName + Host 唯一标识一个用户，IP形式，IP段以%结尾；支持填入%；为空默认等于%）
@@ -90,6 +89,7 @@ class DBAccount extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

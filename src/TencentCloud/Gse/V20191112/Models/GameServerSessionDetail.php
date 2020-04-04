@@ -18,16 +18,14 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 游戏服务器会话详情（GameServerSessionDetail）
+ *
  * @method GameServerSession getGameServerSession() 获取游戏服务器会话
  * @method void setGameServerSession(GameServerSession $GameServerSession) 设置游戏服务器会话
  * @method string getProtectionPolicy() 获取保护策略，可选（NoProtection,FullProtection）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtectionPolicy(string $ProtectionPolicy) 设置保护策略，可选（NoProtection,FullProtection）
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *游戏服务器会话详情（GameServerSessionDetail）
  */
 class GameServerSessionDetail extends AbstractModel
 {
@@ -41,6 +39,7 @@ class GameServerSessionDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProtectionPolicy;
+
     /**
      * @param GameServerSession $GameServerSession 游戏服务器会话
      * @param string $ProtectionPolicy 保护策略，可选（NoProtection,FullProtection）
@@ -50,6 +49,7 @@ class GameServerSessionDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

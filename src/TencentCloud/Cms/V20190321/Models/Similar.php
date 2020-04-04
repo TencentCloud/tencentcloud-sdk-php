@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 相似度详情
+ *
  * @method integer getEvilType() 获取恶意类型
 100：正常 
 20001：政治
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHitFlag(integer $HitFlag) 设置处置判定 0：未匹配到 1：恶意 2：白样本
  * @method string getSeedUrl() 获取返回的种子url
  * @method void setSeedUrl(string $SeedUrl) 设置返回的种子url
- */
-
-/**
- *相似度详情
  */
 class Similar extends AbstractModel
 {
@@ -63,6 +61,7 @@ class Similar extends AbstractModel
      * @var string 返回的种子url
      */
     public $SeedUrl;
+
     /**
      * @param integer $EvilType 恶意类型
 100：正常 
@@ -78,6 +77,7 @@ class Similar extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

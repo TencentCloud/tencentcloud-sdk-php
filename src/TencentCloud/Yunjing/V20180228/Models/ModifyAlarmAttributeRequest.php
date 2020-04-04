@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAlarmAttribute请求参数结构体
+ *
  * @method string getAttribute() 获取告警项目。
 <li>Offline：防护软件离线</li>
 <li>Malware：发现木马文件</li>
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValue(string $Value) 设置告警项目属性。
 <li>CLOSE：关闭</li>
 <li>OPEN：打开</li>
- */
-
-/**
- *ModifyAlarmAttribute请求参数结构体
  */
 class ModifyAlarmAttributeRequest extends AbstractModel
 {
@@ -56,6 +54,7 @@ class ModifyAlarmAttributeRequest extends AbstractModel
 <li>OPEN：打开</li>
      */
     public $Value;
+
     /**
      * @param string $Attribute 告警项目。
 <li>Offline：防护软件离线</li>
@@ -70,6 +69,7 @@ class ModifyAlarmAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

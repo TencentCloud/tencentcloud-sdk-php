@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 地址信息
+ *
  * @method string getFrom() 获取起始地址。
  * @method void setFrom(string $From) 设置起始地址。
  * @method string getTo() 获取结束地址。
  * @method void setTo(string $To) 设置结束地址。
- */
-
-/**
- *地址信息
  */
 class AddressTemplateItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AddressTemplateItem extends AbstractModel
      * @var string 结束地址。
      */
     public $To;
+
     /**
      * @param string $From 起始地址。
      * @param string $To 结束地址。
@@ -46,6 +45,7 @@ class AddressTemplateItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

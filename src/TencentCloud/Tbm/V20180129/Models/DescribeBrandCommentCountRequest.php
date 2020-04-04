@@ -18,16 +18,14 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBrandCommentCount请求参数结构体
+ *
  * @method string getBrandId() 获取品牌ID
  * @method void setBrandId(string $BrandId) 设置品牌ID
  * @method string getStartDate() 获取查询开始日期
  * @method void setStartDate(string $StartDate) 设置查询开始日期
  * @method string getEndDate() 获取查询结束日期
  * @method void setEndDate(string $EndDate) 设置查询结束日期
- */
-
-/**
- *DescribeBrandCommentCount请求参数结构体
  */
 class DescribeBrandCommentCountRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeBrandCommentCountRequest extends AbstractModel
      * @var string 查询结束日期
      */
     public $EndDate;
+
     /**
      * @param string $BrandId 品牌ID
      * @param string $StartDate 查询开始日期
@@ -54,6 +53,7 @@ class DescribeBrandCommentCountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

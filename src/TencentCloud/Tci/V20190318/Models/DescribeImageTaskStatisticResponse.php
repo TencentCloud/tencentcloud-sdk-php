@@ -18,16 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImageTaskStatistic返回参数结构体
+ *
  * @method ImageTaskStatistic getStatistic() 获取任务统计信息
  * @method void setStatistic(ImageTaskStatistic $Statistic) 设置任务统计信息
  * @method integer getJobId() 获取图像任务唯一标识符
  * @method void setJobId(integer $JobId) 设置图像任务唯一标识符
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeImageTaskStatistic返回参数结构体
  */
 class DescribeImageTaskStatisticResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeImageTaskStatisticResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param ImageTaskStatistic $Statistic 任务统计信息
      * @param integer $JobId 图像任务唯一标识符
@@ -54,6 +53,7 @@ class DescribeImageTaskStatisticResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

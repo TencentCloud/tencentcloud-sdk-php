@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 专线网关对象。
+ *
  * @method string getDirectConnectGatewayId() 获取专线网关`ID`。
  * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) 设置专线网关`ID`。
  * @method string getDirectConnectGatewayName() 获取专线网关名称。
@@ -60,10 +62,6 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
  * @method void setEnableBGP(boolean $EnableBGP) 设置是否启用BGP。
  * @method boolean getEnableBGPCommunity() 获取开启和关闭BGP的community属性。
  * @method void setEnableBGPCommunity(boolean $EnableBGPCommunity) 设置开启和关闭BGP的community属性。
- */
-
-/**
- *专线网关对象。
  */
 class DirectConnectGateway extends AbstractModel
 {
@@ -135,6 +133,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
      * @var boolean 开启和关闭BGP的community属性。
      */
     public $EnableBGPCommunity;
+
     /**
      * @param string $DirectConnectGatewayId 专线网关`ID`。
      * @param string $DirectConnectGatewayName 专线网关名称。
@@ -162,6 +161,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

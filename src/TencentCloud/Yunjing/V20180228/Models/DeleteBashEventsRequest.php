@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteBashEvents请求参数结构体
+ *
  * @method array getIds() 获取ID数组，最大100条。
  * @method void setIds(array $Ids) 设置ID数组，最大100条。
- */
-
-/**
- *DeleteBashEvents请求参数结构体
  */
 class DeleteBashEventsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteBashEventsRequest extends AbstractModel
      * @var array ID数组，最大100条。
      */
     public $Ids;
+
     /**
      * @param array $Ids ID数组，最大100条。
      */
@@ -38,6 +37,7 @@ class DeleteBashEventsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

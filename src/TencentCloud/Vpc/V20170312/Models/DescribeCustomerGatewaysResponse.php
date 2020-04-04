@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCustomerGateways返回参数结构体
+ *
  * @method array getCustomerGatewaySet() 获取对端网关对象列表
  * @method void setCustomerGatewaySet(array $CustomerGatewaySet) 设置对端网关对象列表
  * @method integer getTotalCount() 获取符合条件的实例数量。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeCustomerGateways返回参数结构体
  */
 class DescribeCustomerGatewaysResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeCustomerGatewaysResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $CustomerGatewaySet 对端网关对象列表
      * @param integer $TotalCount 符合条件的实例数量。
@@ -54,6 +53,7 @@ class DescribeCustomerGatewaysResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

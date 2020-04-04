@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取与流量镜像绑定的接收机信息时返回的接收机信息。
+ *
  * @method string getInstanceId() 获取接收机实例ID。
  * @method void setInstanceId(string $InstanceId) 设置接收机实例ID。
  * @method integer getPort() 获取接收机接收端口。
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthStatus(string $HealthStatus) 设置接收机的健康状态。
  * @method array getOperates() 获取接收机的可以执行的操作集合。
  * @method void setOperates(array $Operates) 设置接收机的可以执行的操作集合。
- */
-
-/**
- *获取与流量镜像绑定的接收机信息时返回的接收机信息。
  */
 class TrafficMirrorReceiver extends AbstractModel
 {
@@ -122,6 +120,7 @@ class TrafficMirrorReceiver extends AbstractModel
      * @var array 接收机的可以执行的操作集合。
      */
     public $Operates;
+
     /**
      * @param string $InstanceId 接收机实例ID。
      * @param integer $Port 接收机接收端口。
@@ -142,6 +141,7 @@ class TrafficMirrorReceiver extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

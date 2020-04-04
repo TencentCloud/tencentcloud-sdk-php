@@ -18,6 +18,8 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyProject请求参数结构体
+ *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
  * @method string getProjectId() 获取项目 Id。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置项目名称，不可超过30个字符。
  * @method Entity getOwner() 获取归属者。
  * @method void setOwner(Entity $Owner) 设置归属者。
- */
-
-/**
- *ModifyProject请求参数结构体
  */
 class ModifyProjectRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyProjectRequest extends AbstractModel
      * @var Entity 归属者。
      */
     public $Owner;
+
     /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $ProjectId 项目 Id。
@@ -62,6 +61,7 @@ class ModifyProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

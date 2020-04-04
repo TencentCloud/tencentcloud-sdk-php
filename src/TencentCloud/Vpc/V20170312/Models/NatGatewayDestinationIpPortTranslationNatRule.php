@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * NAT网关的端口转发规则
+ *
  * @method string getIpProtocol() 获取网络协议，可选值：`TCP`、`UDP`。
  * @method void setIpProtocol(string $IpProtocol) 设置网络协议，可选值：`TCP`、`UDP`。
  * @method string getPublicIpAddress() 获取弹性IP。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置NAT网关转发规则创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *NAT网关的端口转发规则
  */
 class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
 {
@@ -96,6 +94,7 @@ class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
+
     /**
      * @param string $IpProtocol 网络协议，可选值：`TCP`、`UDP`。
      * @param string $PublicIpAddress 弹性IP。
@@ -114,6 +113,7 @@ class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

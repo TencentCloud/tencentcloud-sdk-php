@@ -18,14 +18,13 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ExportBashEvents请求参数结构体
+ *
 
- */
-
-/**
- *ExportBashEvents请求参数结构体
  */
 class ExportBashEventsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class ExportBashEventsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

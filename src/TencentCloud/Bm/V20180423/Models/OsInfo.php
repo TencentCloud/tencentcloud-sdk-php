@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 操作系统类型
+ *
  * @method integer getOsTypeId() 获取操作系统ID
  * @method void setOsTypeId(integer $OsTypeId) 设置操作系统ID
  * @method string getOsName() 获取操作系统名称
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOsMinorClass(string $OsMinorClass) 设置黑石版本
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *操作系统类型
  */
 class OsInfo extends AbstractModel
 {
@@ -93,6 +91,7 @@ class OsInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsMinorClass;
+
     /**
      * @param integer $OsTypeId 操作系统ID
      * @param string $OsName 操作系统名称
@@ -110,6 +109,7 @@ class OsInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

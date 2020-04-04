@@ -18,6 +18,8 @@ namespace TencentCloud\Facefusion\V20181201\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人脸图片和待被融合的素材模板图的人脸位置信息。
+ *
  * @method string getImage() 获取输入图片base64
  * @method void setImage(string $Image) 设置输入图片base64
  * @method string getUrl() 获取输入图片url
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputImageFaceRect(FaceRect $InputImageFaceRect) 设置上传的图片人脸位置信息（人脸框）
  * @method string getTemplateFaceID() 获取控制台上传的素材人脸ID
  * @method void setTemplateFaceID(string $TemplateFaceID) 设置控制台上传的素材人脸ID
- */
-
-/**
- *人脸图片和待被融合的素材模板图的人脸位置信息。
  */
 class MergeInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class MergeInfo extends AbstractModel
      * @var string 控制台上传的素材人脸ID
      */
     public $TemplateFaceID;
+
     /**
      * @param string $Image 输入图片base64
      * @param string $Url 输入图片url
@@ -62,6 +61,7 @@ class MergeInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

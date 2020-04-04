@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 分片回源配置，默认为开启状态
+ *
  * @method string getSwitch() 获取分片回源配置开关
 on：开启
 off：关闭
  * @method void setSwitch(string $Switch) 设置分片回源配置开关
 on：开启
 off：关闭
- */
-
-/**
- *分片回源配置，默认为开启状态
  */
 class RangeOriginPull extends AbstractModel
 {
@@ -37,6 +35,7 @@ on：开启
 off：关闭
      */
     public $Switch;
+
     /**
      * @param string $Switch 分片回源配置开关
 on：开启
@@ -46,6 +45,7 @@ off：关闭
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

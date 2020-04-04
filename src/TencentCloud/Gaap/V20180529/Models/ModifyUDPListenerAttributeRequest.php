@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyUDPListenerAttribute请求参数结构体
+ *
  * @method string getListenerId() 获取监听器ID
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getGroupId() 获取通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerName(string $ListenerName) 设置监听器名称
  * @method string getScheduler() 获取监听器源站调度策略
  * @method void setScheduler(string $Scheduler) 设置监听器源站调度策略
- */
-
-/**
- *ModifyUDPListenerAttribute请求参数结构体
  */
 class ModifyUDPListenerAttributeRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyUDPListenerAttributeRequest extends AbstractModel
      * @var string 监听器源站调度策略
      */
     public $Scheduler;
+
     /**
      * @param string $ListenerId 监听器ID
      * @param string $GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
@@ -70,6 +69,7 @@ class ModifyUDPListenerAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

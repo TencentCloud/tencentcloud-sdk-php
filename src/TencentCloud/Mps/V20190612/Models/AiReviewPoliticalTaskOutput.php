@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 涉政信息
+ *
  * @method float getConfidence() 获取视频涉政评分，分值为0到100。
  * @method void setConfidence(float $Confidence) 设置视频涉政评分，分值为0到100。
  * @method string getSuggestion() 获取涉政结果建议，取值范围：
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 <li>violation_photo：违规图标。</li>
  * @method array getSegmentSet() 获取有涉政嫌疑的视频片段列表。
  * @method void setSegmentSet(array $SegmentSet) 设置有涉政嫌疑的视频片段列表。
- */
-
-/**
- *涉政信息
  */
 class AiReviewPoliticalTaskOutput extends AbstractModel
 {
@@ -67,6 +65,7 @@ class AiReviewPoliticalTaskOutput extends AbstractModel
      * @var array 有涉政嫌疑的视频片段列表。
      */
     public $SegmentSet;
+
     /**
      * @param float $Confidence 视频涉政评分，分值为0到100。
      * @param string $Suggestion 涉政结果建议，取值范围：
@@ -82,6 +81,7 @@ class AiReviewPoliticalTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

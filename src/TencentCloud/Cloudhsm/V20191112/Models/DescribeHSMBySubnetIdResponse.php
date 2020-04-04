@@ -18,16 +18,14 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHSMBySubnetId返回参数结构体
+ *
  * @method integer getTotalCount() 获取HSM数量
  * @method void setTotalCount(integer $TotalCount) 设置HSM数量
  * @method string getSubnetId() 获取作为查询条件的SubnetId
  * @method void setSubnetId(string $SubnetId) 设置作为查询条件的SubnetId
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeHSMBySubnetId返回参数结构体
  */
 class DescribeHSMBySubnetIdResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeHSMBySubnetIdResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount HSM数量
      * @param string $SubnetId 作为查询条件的SubnetId
@@ -54,6 +53,7 @@ class DescribeHSMBySubnetIdResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

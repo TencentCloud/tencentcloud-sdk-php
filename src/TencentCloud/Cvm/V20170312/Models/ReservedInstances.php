@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述用户已购买预留实例计费信息
+ *
  * @method string getReservedInstancesId() 获取已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
  * @method void setReservedInstancesId(string $ReservedInstancesId) 设置已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
  * @method string getInstanceType() 获取预留实例计费的类型。形如：S3.MEDIUM4。
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
 返回项： All Upfront (预付全部费用)。
  * @method void setOfferingType(string $OfferingType) 设置预留实例计费的付款类型。形如：All Upfront。
 返回项： All Upfront (预付全部费用)。
- */
-
-/**
- *描述用户已购买预留实例计费信息
  */
 class ReservedInstances extends AbstractModel
 {
@@ -122,6 +120,7 @@ class ReservedInstances extends AbstractModel
 返回项： All Upfront (预付全部费用)。
      */
     public $OfferingType;
+
     /**
      * @param string $ReservedInstancesId 已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
      * @param string $InstanceType 预留实例计费的类型。形如：S3.MEDIUM4。
@@ -146,6 +145,7 @@ class ReservedInstances extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

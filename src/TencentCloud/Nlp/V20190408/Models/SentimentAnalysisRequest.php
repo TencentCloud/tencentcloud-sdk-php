@@ -18,6 +18,8 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SentimentAnalysis请求参数结构体
+ *
  * @method string getText() 获取待分析的文本（仅支持UTF-8格式，不超过200字）
  * @method void setText(string $Text) 设置待分析的文本（仅支持UTF-8格式，不超过200字）
  * @method integer getFlag() 获取文本所属类型（默认取4值）：
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 2、社交类
 3、美食酒店类
 4、通用领域类
- */
-
-/**
- *SentimentAnalysis请求参数结构体
  */
 class SentimentAnalysisRequest extends AbstractModel
 {
@@ -50,6 +48,7 @@ class SentimentAnalysisRequest extends AbstractModel
 4、通用领域类
      */
     public $Flag;
+
     /**
      * @param string $Text 待分析的文本（仅支持UTF-8格式，不超过200字）
      * @param integer $Flag 文本所属类型（默认取4值）：
@@ -62,6 +61,7 @@ class SentimentAnalysisRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

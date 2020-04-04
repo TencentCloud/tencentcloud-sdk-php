@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 统一返回的TopicResponse
+ *
  * @method array getTopicList() 获取返回的主题信息列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicList(array $TopicList) 设置返回的主题信息列表
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的 topic 数量
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *统一返回的TopicResponse
  */
 class TopicResult extends AbstractModel
 {
@@ -44,6 +42,7 @@ class TopicResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
+
     /**
      * @param array $TopicList 返回的主题信息列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class TopicResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

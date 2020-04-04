@@ -18,6 +18,8 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePersonalAccount请求参数结构体
+ *
  * @method string getModule() 获取模块名AccountMng
  * @method void setModule(string $Module) 设置模块名AccountMng
  * @method string getOperation() 获取操作名CreatePersonalAccount
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdentNo(string $IdentNo) 设置个人用户证件号码
  * @method string getMobilePhone() 获取个人用户手机号
  * @method void setMobilePhone(string $MobilePhone) 设置个人用户手机号
- */
-
-/**
- *CreatePersonalAccount请求参数结构体
  */
 class CreatePersonalAccountRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreatePersonalAccountRequest extends AbstractModel
      * @var string 个人用户手机号
      */
     public $MobilePhone;
+
     /**
      * @param string $Module 模块名AccountMng
      * @param string $Operation 操作名CreatePersonalAccount
@@ -78,6 +77,7 @@ class CreatePersonalAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

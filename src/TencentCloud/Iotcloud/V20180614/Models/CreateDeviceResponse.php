@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDevice返回参数结构体
+ *
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getDevicePsk() 获取对称加密密钥，base64编码。采用对称加密时返回该参数
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoraNwkKey(string $LoraNwkKey) 设置LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateDevice返回参数结构体
  */
 class CreateDeviceResponse extends AbstractModel
 {
@@ -87,6 +85,7 @@ class CreateDeviceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $DeviceName 设备名称
      * @param string $DevicePsk 对称加密密钥，base64编码。采用对称加密时返回该参数
@@ -102,6 +101,7 @@ class CreateDeviceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

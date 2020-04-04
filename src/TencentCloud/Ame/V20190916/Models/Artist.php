@@ -18,12 +18,10 @@ namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Artist
+ *
  * @method string getArtistName() 获取歌手名
  * @method void setArtistName(string $ArtistName) 设置歌手名
- */
-
-/**
- *Artist
  */
 class Artist extends AbstractModel
 {
@@ -31,6 +29,7 @@ class Artist extends AbstractModel
      * @var string 歌手名
      */
     public $ArtistName;
+
     /**
      * @param string $ArtistName 歌手名
      */
@@ -38,6 +37,7 @@ class Artist extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

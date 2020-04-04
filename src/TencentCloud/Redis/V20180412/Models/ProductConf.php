@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 产品信息
+ *
  * @method integer getType() 获取产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版
  * @method void setType(integer $Type) 设置产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版
  * @method string getTypeName() 获取产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) 设置支持的计费模式，1-包年包月，0-按量计费
  * @method boolean getEnableRepicaReadOnly() 获取是否支持副本只读
  * @method void setEnableRepicaReadOnly(boolean $EnableRepicaReadOnly) 设置是否支持副本只读
- */
-
-/**
- *产品信息
  */
 class ProductConf extends AbstractModel
 {
@@ -115,6 +113,7 @@ class ProductConf extends AbstractModel
      * @var boolean 是否支持副本只读
      */
     public $EnableRepicaReadOnly;
+
     /**
      * @param integer $Type 产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版
      * @param string $TypeName 产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版
@@ -134,6 +133,7 @@ class ProductConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

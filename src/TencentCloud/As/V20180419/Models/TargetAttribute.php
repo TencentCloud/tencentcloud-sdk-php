@@ -18,14 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 负载均衡器目标属性
+ *
  * @method integer getPort() 获取端口
  * @method void setPort(integer $Port) 设置端口
  * @method integer getWeight() 获取权重
  * @method void setWeight(integer $Weight) 设置权重
- */
-
-/**
- *负载均衡器目标属性
  */
 class TargetAttribute extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TargetAttribute extends AbstractModel
      * @var integer 权重
      */
     public $Weight;
+
     /**
      * @param integer $Port 端口
      * @param integer $Weight 权重
@@ -46,6 +45,7 @@ class TargetAttribute extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

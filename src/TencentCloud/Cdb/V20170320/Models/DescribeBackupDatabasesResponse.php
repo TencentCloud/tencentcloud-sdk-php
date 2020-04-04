@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupDatabases返回参数结构体
+ *
  * @method integer getTotalCount() 获取返回的数据个数。
  * @method void setTotalCount(integer $TotalCount) 设置返回的数据个数。
  * @method array getItems() 获取符合查询条件的数据库数组。
  * @method void setItems(array $Items) 设置符合查询条件的数据库数组。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeBackupDatabases返回参数结构体
  */
 class DescribeBackupDatabasesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeBackupDatabasesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 返回的数据个数。
      * @param array $Items 符合查询条件的数据库数组。
@@ -54,6 +53,7 @@ class DescribeBackupDatabasesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 备机信息
+ *
  * @method integer getVport() 获取端口号
  * @method void setVport(integer $Vport) 设置端口号
  * @method string getRegion() 获取地域信息
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) 设置虚拟 IP 信息
  * @method string getZone() 获取可用区信息
  * @method void setZone(string $Zone) 设置可用区信息
- */
-
-/**
- *备机信息
  */
 class SlaveInstanceInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SlaveInstanceInfo extends AbstractModel
      * @var string 可用区信息
      */
     public $Zone;
+
     /**
      * @param integer $Vport 端口号
      * @param string $Region 地域信息
@@ -62,6 +61,7 @@ class SlaveInstanceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

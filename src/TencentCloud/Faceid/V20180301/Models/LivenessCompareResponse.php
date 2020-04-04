@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * LivenessCompare返回参数结构体
+ *
  * @method string getBestFrameBase64() 获取验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
  * @method void setBestFrameBase64(string $BestFrameBase64) 设置验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
  * @method float getSim() 获取相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置业务结果描述。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *LivenessCompare返回参数结构体
  */
 class LivenessCompareResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class LivenessCompareResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $BestFrameBase64 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
      * @param float $Sim 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）。
@@ -70,6 +69,7 @@ class LivenessCompareResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

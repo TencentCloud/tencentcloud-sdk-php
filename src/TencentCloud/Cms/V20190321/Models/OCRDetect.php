@@ -18,12 +18,10 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OCR识别结果详情
+ *
  * @method string getTextInfo() 获取识别到的文本信息
  * @method void setTextInfo(string $TextInfo) 设置识别到的文本信息
- */
-
-/**
- *OCR识别结果详情
  */
 class OCRDetect extends AbstractModel
 {
@@ -31,6 +29,7 @@ class OCRDetect extends AbstractModel
      * @var string 识别到的文本信息
      */
     public $TextInfo;
+
     /**
      * @param string $TextInfo 识别到的文本信息
      */
@@ -38,6 +37,7 @@ class OCRDetect extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSAMLProvider请求参数结构体
+ *
  * @method string getName() 获取SAML身份提供商名称
  * @method void setName(string $Name) 设置SAML身份提供商名称
- */
-
-/**
- *DeleteSAMLProvider请求参数结构体
  */
 class DeleteSAMLProviderRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteSAMLProviderRequest extends AbstractModel
      * @var string SAML身份提供商名称
      */
     public $Name;
+
     /**
      * @param string $Name SAML身份提供商名称
      */
@@ -38,6 +37,7 @@ class DeleteSAMLProviderRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

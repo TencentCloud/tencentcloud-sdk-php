@@ -18,12 +18,10 @@ namespace TencentCloud\Smpn\V20190822\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 虚假号码识别请求
+ *
  * @method string getPhoneNumber() 获取电话号码
  * @method void setPhoneNumber(string $PhoneNumber) 设置电话号码
- */
-
-/**
- *虚假号码识别请求
  */
 class FNRRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class FNRRequest extends AbstractModel
      * @var string 电话号码
      */
     public $PhoneNumber;
+
     /**
      * @param string $PhoneNumber 电话号码
      */
@@ -38,6 +37,7 @@ class FNRRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

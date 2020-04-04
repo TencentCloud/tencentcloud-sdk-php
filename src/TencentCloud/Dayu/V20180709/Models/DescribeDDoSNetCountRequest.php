@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDDoSNetCount请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（net表示高防IP专业版）
  * @method string getId() 获取资源ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置统计结束时间
  * @method string getMetricName() 获取指标，取值[traffic（攻击协议流量, 单位KB）, pkg（攻击协议报文数）, classnum（攻击事件次数）]
  * @method void setMetricName(string $MetricName) 设置指标，取值[traffic（攻击协议流量, 单位KB）, pkg（攻击协议报文数）, classnum（攻击事件次数）]
- */
-
-/**
- *DescribeDDoSNetCount请求参数结构体
  */
 class DescribeDDoSNetCountRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeDDoSNetCountRequest extends AbstractModel
      * @var string 指标，取值[traffic（攻击协议流量, 单位KB）, pkg（攻击协议报文数）, classnum（攻击事件次数）]
      */
     public $MetricName;
+
     /**
      * @param string $Business 大禹子产品代号（net表示高防IP专业版）
      * @param string $Id 资源ID
@@ -70,6 +69,7 @@ class DescribeDDoSNetCountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCfsPGroup返回参数结构体
+ *
  * @method string getPGroupId() 获取权限组 ID
  * @method void setPGroupId(string $PGroupId) 设置权限组 ID
  * @method string getName() 获取权限组名字
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCDate(string $CDate) 设置权限组创建时间
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateCfsPGroup返回参数结构体
  */
 class CreateCfsPGroupResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateCfsPGroupResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $PGroupId 权限组 ID
      * @param string $Name 权限组名字
@@ -78,6 +77,7 @@ class CreateCfsPGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

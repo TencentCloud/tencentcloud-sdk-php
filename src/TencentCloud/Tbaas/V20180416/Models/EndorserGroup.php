@@ -18,14 +18,12 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 背书组织及其节点列表
+ *
  * @method string getEndorserGroupName() 获取背书组织名称
  * @method void setEndorserGroupName(string $EndorserGroupName) 设置背书组织名称
  * @method array getEndorserPeerList() 获取背书节点列表
  * @method void setEndorserPeerList(array $EndorserPeerList) 设置背书节点列表
- */
-
-/**
- *背书组织及其节点列表
  */
 class EndorserGroup extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EndorserGroup extends AbstractModel
      * @var array 背书节点列表
      */
     public $EndorserPeerList;
+
     /**
      * @param string $EndorserGroupName 背书组织名称
      * @param array $EndorserPeerList 背书节点列表
@@ -46,6 +45,7 @@ class EndorserGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

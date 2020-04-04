@@ -18,12 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述了实例登录相关配置与信息，出于安全性考虑，不会描述敏感信息。
+ *
  * @method array getKeyIds() 获取密钥ID列表。
  * @method void setKeyIds(array $KeyIds) 设置密钥ID列表。
- */
-
-/**
- *描述了实例登录相关配置与信息，出于安全性考虑，不会描述敏感信息。
  */
 class LimitedLoginSettings extends AbstractModel
 {
@@ -31,6 +29,7 @@ class LimitedLoginSettings extends AbstractModel
      * @var array 密钥ID列表。
      */
     public $KeyIds;
+
     /**
      * @param array $KeyIds 密钥ID列表。
      */
@@ -38,6 +37,7 @@ class LimitedLoginSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

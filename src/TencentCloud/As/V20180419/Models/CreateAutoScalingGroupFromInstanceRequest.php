@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAutoScalingGroupFromInstance请求参数结构体
+ *
  * @method string getAutoScalingGroupName() 获取伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
  * @method void setAutoScalingGroupName(string $AutoScalingGroupName) 设置伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
  * @method string getInstanceId() 获取实例ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDesiredCapacity(integer $DesiredCapacity) 设置期望实例数，大小介于最小实例数和最大实例数之间。
  * @method boolean getInheritInstanceTag() 获取是否继承实例标签，默认值为False
  * @method void setInheritInstanceTag(boolean $InheritInstanceTag) 设置是否继承实例标签，默认值为False
- */
-
-/**
- *CreateAutoScalingGroupFromInstance请求参数结构体
  */
 class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel
      * @var boolean 是否继承实例标签，默认值为False
      */
     public $InheritInstanceTag;
+
     /**
      * @param string $AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      * @param string $InstanceId 实例ID
@@ -78,6 +77,7 @@ class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

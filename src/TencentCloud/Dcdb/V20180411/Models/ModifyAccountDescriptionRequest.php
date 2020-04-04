@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAccountDescription请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：dcdbt-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：dcdbt-ow728lmc。
  * @method string getUserName() 获取登录用户名。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) 设置用户允许的访问 host，用户名+host唯一确定一个账号。
  * @method string getDescription() 获取新的账号备注，长度 0~256。
  * @method void setDescription(string $Description) 设置新的账号备注，长度 0~256。
- */
-
-/**
- *ModifyAccountDescription请求参数结构体
  */
 class ModifyAccountDescriptionRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyAccountDescriptionRequest extends AbstractModel
      * @var string 新的账号备注，长度 0~256。
      */
     public $Description;
+
     /**
      * @param string $InstanceId 实例 ID，形如：dcdbt-ow728lmc。
      * @param string $UserName 登录用户名。
@@ -62,6 +61,7 @@ class ModifyAccountDescriptionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

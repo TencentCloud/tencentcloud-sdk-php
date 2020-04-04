@@ -18,6 +18,8 @@ namespace TencentCloud\Cis\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeContainerLog请求参数结构体
+ *
  * @method string getInstanceName() 获取容器实例名称
  * @method void setInstanceName(string $InstanceName) 设置容器实例名称
  * @method string getContainerName() 获取容器名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTail(integer $Tail) 设置日志显示尾部行数
  * @method string getSinceTime() 获取日志起始时间
  * @method void setSinceTime(string $SinceTime) 设置日志起始时间
- */
-
-/**
- *DescribeContainerLog请求参数结构体
  */
 class DescribeContainerLogRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeContainerLogRequest extends AbstractModel
      * @var string 日志起始时间
      */
     public $SinceTime;
+
     /**
      * @param string $InstanceName 容器实例名称
      * @param string $ContainerName 容器名称
@@ -62,6 +61,7 @@ class DescribeContainerLogRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

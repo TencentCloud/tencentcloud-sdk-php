@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 资源类型及标签键值对
+ *
  * @method string getKey() 获取标签键
  * @method void setKey(string $Key) 设置标签键
  * @method string getValue() 获取标签值
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceType(string $ResourceType) 设置标签绑定的资源类型，当前支持类型："auto-scaling-group
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *资源类型及标签键值对
  */
 class Tag extends AbstractModel
 {
@@ -48,6 +46,7 @@ class Tag extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
+
     /**
      * @param string $Key 标签键
      * @param string $Value 标签值
@@ -58,6 +57,7 @@ class Tag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据库视图信息
+ *
  * @method string getView() 获取视图名称
  * @method void setView(string $View) 设置视图名称
- */
-
-/**
- *数据库视图信息
  */
 class DatabaseView extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DatabaseView extends AbstractModel
      * @var string 视图名称
      */
     public $View;
+
     /**
      * @param string $View 视图名称
      */
@@ -38,6 +37,7 @@ class DatabaseView extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

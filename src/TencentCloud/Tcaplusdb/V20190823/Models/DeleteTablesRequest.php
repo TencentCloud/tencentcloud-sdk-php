@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTables请求参数结构体
+ *
  * @method string getClusterId() 获取待删除表所在集群ID
  * @method void setClusterId(string $ClusterId) 设置待删除表所在集群ID
  * @method array getSelectedTables() 获取待删除表信息列表
  * @method void setSelectedTables(array $SelectedTables) 设置待删除表信息列表
- */
-
-/**
- *DeleteTables请求参数结构体
  */
 class DeleteTablesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteTablesRequest extends AbstractModel
      * @var array 待删除表信息列表
      */
     public $SelectedTables;
+
     /**
      * @param string $ClusterId 待删除表所在集群ID
      * @param array $SelectedTables 待删除表信息列表
@@ -46,6 +45,7 @@ class DeleteTablesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

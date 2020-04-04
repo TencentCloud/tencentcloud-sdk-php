@@ -18,14 +18,12 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAppStatus接口输出参数
+ *
  * @method integer getBizId() 获取GME应用ID
  * @method void setBizId(integer $BizId) 设置GME应用ID
  * @method string getStatus() 获取应用状态，取值：open/close
  * @method void setStatus(string $Status) 设置应用状态，取值：open/close
- */
-
-/**
- *ModifyAppStatus接口输出参数
  */
 class ModifyAppStatusResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyAppStatusResponse extends AbstractModel
      * @var string 应用状态，取值：open/close
      */
     public $Status;
+
     /**
      * @param integer $BizId GME应用ID
      * @param string $Status 应用状态，取值：open/close
@@ -46,6 +45,7 @@ class ModifyAppStatusResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

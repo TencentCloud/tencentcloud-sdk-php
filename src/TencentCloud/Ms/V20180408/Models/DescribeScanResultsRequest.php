@@ -18,14 +18,12 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeScanResults请求参数结构体
+ *
  * @method string getItemId() 获取任务唯一标识
  * @method void setItemId(string $ItemId) 设置任务唯一标识
  * @method array getAppMd5s() 获取批量查询一个或者多个app的扫描结果，如果不传表示查询该任务下所提交的所有app
  * @method void setAppMd5s(array $AppMd5s) 设置批量查询一个或者多个app的扫描结果，如果不传表示查询该任务下所提交的所有app
- */
-
-/**
- *DescribeScanResults请求参数结构体
  */
 class DescribeScanResultsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeScanResultsRequest extends AbstractModel
      * @var array 批量查询一个或者多个app的扫描结果，如果不传表示查询该任务下所提交的所有app
      */
     public $AppMd5s;
+
     /**
      * @param string $ItemId 任务唯一标识
      * @param array $AppMd5s 批量查询一个或者多个app的扫描结果，如果不传表示查询该任务下所提交的所有app
@@ -46,6 +45,7 @@ class DescribeScanResultsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取当前门店最新网络状态数据返回结构
+ *
  * @method integer getCount() 获取总数
  * @method void setCount(integer $Count) 设置总数
  * @method array getInfos() 获取网络状态
  * @method void setInfos(array $Infos) 设置网络状态
- */
-
-/**
- *获取当前门店最新网络状态数据返回结构
  */
 class NetworkLastInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class NetworkLastInfo extends AbstractModel
      * @var array 网络状态
      */
     public $Infos;
+
     /**
      * @param integer $Count 总数
      * @param array $Infos 网络状态
@@ -46,6 +45,7 @@ class NetworkLastInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户绑定app的基本信息
+ *
  * @method string getAppIconUrl() 获取app的icon的url
  * @method void setAppIconUrl(string $AppIconUrl) 设置app的icon的url
  * @method string getAppName() 获取app的名称
  * @method void setAppName(string $AppName) 设置app的名称
  * @method string getAppPkgName() 获取app的包名
  * @method void setAppPkgName(string $AppPkgName) 设置app的包名
- */
-
-/**
- *用户绑定app的基本信息
  */
 class BindInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class BindInfo extends AbstractModel
      * @var string app的包名
      */
     public $AppPkgName;
+
     /**
      * @param string $AppIconUrl app的icon的url
      * @param string $AppName app的名称
@@ -54,6 +53,7 @@ class BindInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

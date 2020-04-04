@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TerminateTaskInstance请求参数结构体
+ *
  * @method string getJobId() 获取作业ID
  * @method void setJobId(string $JobId) 设置作业ID
  * @method string getTaskName() 获取任务名称
  * @method void setTaskName(string $TaskName) 设置任务名称
  * @method integer getTaskInstanceIndex() 获取任务实例索引
  * @method void setTaskInstanceIndex(integer $TaskInstanceIndex) 设置任务实例索引
- */
-
-/**
- *TerminateTaskInstance请求参数结构体
  */
 class TerminateTaskInstanceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class TerminateTaskInstanceRequest extends AbstractModel
      * @var integer 任务实例索引
      */
     public $TaskInstanceIndex;
+
     /**
      * @param string $JobId 作业ID
      * @param string $TaskName 任务名称
@@ -54,6 +53,7 @@ class TerminateTaskInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

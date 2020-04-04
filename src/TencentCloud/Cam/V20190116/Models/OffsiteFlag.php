@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 异地登录设置
+ *
  * @method integer getVerifyFlag() 获取验证标识
  * @method void setVerifyFlag(integer $VerifyFlag) 设置验证标识
  * @method integer getNotifyPhone() 获取手机通知
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotifyWechat(integer $NotifyWechat) 设置微信通知
  * @method integer getTips() 获取提示
  * @method void setTips(integer $Tips) 设置提示
- */
-
-/**
- *异地登录设置
  */
 class OffsiteFlag extends AbstractModel
 {
@@ -59,6 +57,7 @@ class OffsiteFlag extends AbstractModel
      * @var integer 提示
      */
     public $Tips;
+
     /**
      * @param integer $VerifyFlag 验证标识
      * @param integer $NotifyPhone 手机通知
@@ -70,6 +69,7 @@ class OffsiteFlag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

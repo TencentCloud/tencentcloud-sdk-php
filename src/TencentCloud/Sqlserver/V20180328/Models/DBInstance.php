@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例详细信息
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getName() 获取实例名称
@@ -82,10 +84,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) 设置实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
  * @method string getUniqSubnetId() 获取实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
- */
-
-/**
- *实例详细信息
  */
 class DBInstance extends AbstractModel
 {
@@ -248,6 +246,7 @@ class DBInstance extends AbstractModel
      * @var string 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
      */
     public $UniqSubnetId;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $Name 实例名称
@@ -286,6 +285,7 @@ class DBInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDCDBInstances请求参数结构体
+ *
  * @method array getInstanceIds() 获取按照一个或者多个实例 ID 查询。实例 ID 形如：dcdbt-2t4cf98d
  * @method void setInstanceIds(array $InstanceIds) 设置按照一个或者多个实例 ID 查询。实例 ID 形如：dcdbt-2t4cf98d
  * @method string getSearchName() 获取搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsFilterExcluster(boolean $IsFilterExcluster) 设置标识是否使用ExclusterType字段, false不使用，true使用
  * @method array getExclusterIds() 获取独享集群ID
  * @method void setExclusterIds(array $ExclusterIds) 设置独享集群ID
- */
-
-/**
- *DescribeDCDBInstances请求参数结构体
  */
 class DescribeDCDBInstancesRequest extends AbstractModel
 {
@@ -122,6 +120,7 @@ class DescribeDCDBInstancesRequest extends AbstractModel
      * @var array 独享集群ID
      */
     public $ExclusterIds;
+
     /**
      * @param array $InstanceIds 按照一个或者多个实例 ID 查询。实例 ID 形如：dcdbt-2t4cf98d
      * @param string $SearchName 搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。
@@ -142,6 +141,7 @@ class DescribeDCDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

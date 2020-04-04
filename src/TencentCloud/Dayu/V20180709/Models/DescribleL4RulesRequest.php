@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribleL4Rules请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method string getId() 获取资源ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置一页条数，填0表示不分页
  * @method integer getOffset() 获取页起始偏移，取值为(页码-1)*一页条数
  * @method void setOffset(integer $Offset) 设置页起始偏移，取值为(页码-1)*一页条数
- */
-
-/**
- *DescribleL4Rules请求参数结构体
  */
 class DescribleL4RulesRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribleL4RulesRequest extends AbstractModel
      * @var integer 页起始偏移，取值为(页码-1)*一页条数
      */
     public $Offset;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param string $Id 资源ID
@@ -70,6 +69,7 @@ class DescribleL4RulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

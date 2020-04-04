@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备条目
+ *
  * @method string getProductId() 获取产品Id
  * @method void setProductId(string $ProductId) 设置产品Id
  * @method string getDeviceName() 获取设备名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceSecret(string $DeviceSecret) 设置设备密钥
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
- */
-
-/**
- *设备条目
  */
 class DeviceEntry extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DeviceEntry extends AbstractModel
      * @var string 创建时间
      */
     public $CreateTime;
+
     /**
      * @param string $ProductId 产品Id
      * @param string $DeviceName 设备名称
@@ -62,6 +61,7 @@ class DeviceEntry extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

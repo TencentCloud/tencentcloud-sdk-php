@@ -18,12 +18,10 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisableRsgAsGroup请求参数结构体
+ *
  * @method string getId() 获取伸缩组 ID
  * @method void setId(string $Id) 设置伸缩组 ID
- */
-
-/**
- *DisableRsgAsGroup请求参数结构体
  */
 class DisableRsgAsGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DisableRsgAsGroupRequest extends AbstractModel
      * @var string 伸缩组 ID
      */
     public $Id;
+
     /**
      * @param string $Id 伸缩组 ID
      */
@@ -38,6 +37,7 @@ class DisableRsgAsGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

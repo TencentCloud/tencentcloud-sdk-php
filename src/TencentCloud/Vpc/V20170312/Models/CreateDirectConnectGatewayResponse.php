@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDirectConnectGateway返回参数结构体
+ *
  * @method DirectConnectGateway getDirectConnectGateway() 获取专线网关对象。
  * @method void setDirectConnectGateway(DirectConnectGateway $DirectConnectGateway) 设置专线网关对象。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateDirectConnectGateway返回参数结构体
  */
 class CreateDirectConnectGatewayResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateDirectConnectGatewayResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param DirectConnectGateway $DirectConnectGateway 专线网关对象。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateDirectConnectGatewayResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

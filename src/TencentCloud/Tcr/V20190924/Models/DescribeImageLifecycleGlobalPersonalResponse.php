@@ -18,14 +18,12 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImageLifecycleGlobalPersonal返回参数结构体
+ *
  * @method AutoDelStrategyInfoResp getData() 获取全局自动删除策略信息
  * @method void setData(AutoDelStrategyInfoResp $Data) 设置全局自动删除策略信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeImageLifecycleGlobalPersonal返回参数结构体
  */
 class DescribeImageLifecycleGlobalPersonalResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeImageLifecycleGlobalPersonalResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param AutoDelStrategyInfoResp $Data 全局自动删除策略信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeImageLifecycleGlobalPersonalResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

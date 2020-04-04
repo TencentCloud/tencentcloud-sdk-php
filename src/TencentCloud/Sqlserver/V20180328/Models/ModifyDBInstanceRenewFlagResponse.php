@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstanceRenewFlag返回参数结构体
+ *
  * @method integer getCount() 获取修改成功的个数
  * @method void setCount(integer $Count) 设置修改成功的个数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ModifyDBInstanceRenewFlag返回参数结构体
  */
 class ModifyDBInstanceRenewFlagResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBInstanceRenewFlagResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Count 修改成功的个数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class ModifyDBInstanceRenewFlagResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 负载均衡实例的信息
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例 ID。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID。
  * @method string getLoadBalancerName() 获取负载均衡实例的名称。
@@ -188,10 +190,6 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsBlockTime(string $IsBlockTime) 设置封堵或解封时间
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *负载均衡实例的信息
  */
 class LoadBalancer extends AbstractModel
 {
@@ -455,6 +453,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsBlockTime;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
@@ -546,6 +545,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

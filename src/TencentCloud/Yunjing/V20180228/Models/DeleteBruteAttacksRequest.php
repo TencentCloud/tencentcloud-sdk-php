@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteBruteAttacks请求参数结构体
+ *
  * @method array getIds() 获取暴力破解事件Id数组。
  * @method void setIds(array $Ids) 设置暴力破解事件Id数组。
- */
-
-/**
- *DeleteBruteAttacks请求参数结构体
  */
 class DeleteBruteAttacksRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteBruteAttacksRequest extends AbstractModel
      * @var array 暴力破解事件Id数组。
      */
     public $Ids;
+
     /**
      * @param array $Ids 暴力破解事件Id数组。
      */
@@ -38,6 +37,7 @@ class DeleteBruteAttacksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

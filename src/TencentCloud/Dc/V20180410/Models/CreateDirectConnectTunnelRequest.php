@@ -18,6 +18,8 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDirectConnectTunnel请求参数结构体
+ *
  * @method string getDirectConnectId() 获取专线 ID，例如：dc-kd7d06of
  * @method void setDirectConnectId(string $DirectConnectId) 设置专线 ID，例如：dc-kd7d06of
  * @method string getDirectConnectTunnelName() 获取专用通道名称
@@ -64,10 +66,6 @@ STATIC：静态
  * @method void setTencentAddress(string $TencentAddress) 设置TencentAddress，腾讯侧互联 IP
  * @method string getCustomerAddress() 获取CustomerAddress，用户侧互联 IP
  * @method void setCustomerAddress(string $CustomerAddress) 设置CustomerAddress，用户侧互联 IP
- */
-
-/**
- *CreateDirectConnectTunnel请求参数结构体
  */
 class CreateDirectConnectTunnelRequest extends AbstractModel
 {
@@ -149,6 +147,7 @@ STATIC：静态
      * @var string CustomerAddress，用户侧互联 IP
      */
     public $CustomerAddress;
+
     /**
      * @param string $DirectConnectId 专线 ID，例如：dc-kd7d06of
      * @param string $DirectConnectTunnelName 专用通道名称
@@ -178,6 +177,7 @@ STATIC：静态
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

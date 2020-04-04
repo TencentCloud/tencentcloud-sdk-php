@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 运营商信息
+ *
  * @method string getISPId() 获取运营商ID
  * @method void setISPId(string $ISPId) 设置运营商ID
  * @method string getISPName() 获取运营商名称
  * @method void setISPName(string $ISPName) 设置运营商名称
- */
-
-/**
- *运营商信息
  */
 class ISP extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ISP extends AbstractModel
      * @var string 运营商名称
      */
     public $ISPName;
+
     /**
      * @param string $ISPId 运营商ID
      * @param string $ISPName 运营商名称
@@ -46,6 +45,7 @@ class ISP extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

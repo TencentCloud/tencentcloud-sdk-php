@@ -18,12 +18,10 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetUser请求参数结构体
+ *
  * @method string getName() 获取子用户用户名
  * @method void setName(string $Name) 设置子用户用户名
- */
-
-/**
- *GetUser请求参数结构体
  */
 class GetUserRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetUserRequest extends AbstractModel
      * @var string 子用户用户名
      */
     public $Name;
+
     /**
      * @param string $Name 子用户用户名
      */
@@ -38,6 +37,7 @@ class GetUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

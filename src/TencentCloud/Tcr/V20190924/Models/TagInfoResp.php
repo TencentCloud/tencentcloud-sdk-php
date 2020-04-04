@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Tag列表的返回值
+ *
  * @method integer getTagCount() 获取Tag的总数
  * @method void setTagCount(integer $TagCount) 设置Tag的总数
  * @method array getTagInfo() 获取TagInfo列表
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServer(string $Server) 设置Server
  * @method string getRepoName() 获取仓库名称
  * @method void setRepoName(string $RepoName) 设置仓库名称
- */
-
-/**
- *Tag列表的返回值
  */
 class TagInfoResp extends AbstractModel
 {
@@ -52,6 +50,7 @@ class TagInfoResp extends AbstractModel
      * @var string 仓库名称
      */
     public $RepoName;
+
     /**
      * @param integer $TagCount Tag的总数
      * @param array $TagInfo TagInfo列表
@@ -62,6 +61,7 @@ class TagInfoResp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

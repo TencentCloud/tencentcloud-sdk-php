@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ACL返回结果集
+ *
  * @method integer getTotalCount() 获取符合条件的总数据条数
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的总数据条数
  * @method array getAclList() 获取ACL列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAclList(array $AclList) 设置ACL列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *ACL返回结果集
  */
 class AclResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class AclResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AclList;
+
     /**
      * @param integer $TotalCount 符合条件的总数据条数
      * @param array $AclList ACL列表
@@ -50,6 +49,7 @@ class AclResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

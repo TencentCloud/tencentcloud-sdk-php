@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RenewHosts请求参数结构体
+ *
  * @method array getHostIds() 获取一个或多个待操作的CDH实例ID。
  * @method void setHostIds(array $HostIds) 设置一个或多个待操作的CDH实例ID。
  * @method ChargePrepaid getHostChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method void setHostChargePrepaid(ChargePrepaid $HostChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
- */
-
-/**
- *RenewHosts请求参数结构体
  */
 class RenewHostsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RenewHostsRequest extends AbstractModel
      * @var ChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      */
     public $HostChargePrepaid;
+
     /**
      * @param array $HostIds 一个或多个待操作的CDH实例ID。
      * @param ChargePrepaid $HostChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
@@ -46,6 +45,7 @@ class RenewHostsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

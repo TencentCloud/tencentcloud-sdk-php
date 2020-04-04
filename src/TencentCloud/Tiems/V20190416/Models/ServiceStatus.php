@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 服务状态
+ *
  * @method integer getDesiredReplicas() 获取预期副本数
  * @method void setDesiredReplicas(integer $DesiredReplicas) 设置预期副本数
  * @method integer getCurrentReplicas() 获取当前副本数
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplicaInfos(array $ReplicaInfos) 设置副本信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *服务状态
  */
 class ServiceStatus extends AbstractModel
 {
@@ -85,6 +83,7 @@ class ServiceStatus extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReplicaInfos;
+
     /**
      * @param integer $DesiredReplicas 预期副本数
      * @param integer $CurrentReplicas 当前副本数
@@ -102,6 +101,7 @@ class ServiceStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

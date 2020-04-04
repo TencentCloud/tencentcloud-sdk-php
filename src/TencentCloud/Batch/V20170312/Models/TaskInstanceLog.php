@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务实例日志详情。
+ *
  * @method integer getTaskInstanceIndex() 获取任务实例
  * @method void setTaskInstanceIndex(integer $TaskInstanceIndex) 设置任务实例
  * @method string getStdoutLog() 获取标准输出日志（Base64编码）
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStderrRedirectFileName(string $StderrRedirectFileName) 设置标准错误重定向文件名
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *任务实例日志详情。
  */
 class TaskInstanceLog extends AbstractModel
 {
@@ -91,6 +89,7 @@ class TaskInstanceLog extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StderrRedirectFileName;
+
     /**
      * @param integer $TaskInstanceIndex 任务实例
      * @param string $StdoutLog 标准输出日志（Base64编码）
@@ -110,6 +109,7 @@ class TaskInstanceLog extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

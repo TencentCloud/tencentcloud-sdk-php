@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述实例的位置相关信息。
+ *
  * @method ZoneInfo getZoneInfo() 获取实例所在的Zone的信息。
  * @method void setZoneInfo(ZoneInfo $ZoneInfo) 设置实例所在的Zone的信息。
  * @method Country getCountry() 获取实例所在的国家的信息。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCity(City $City) 设置实例所在的城市的信息。
  * @method RegionInfo getRegionInfo() 获取实例所在的Region的信息。
  * @method void setRegionInfo(RegionInfo $RegionInfo) 设置实例所在的Region的信息。
- */
-
-/**
- *描述实例的位置相关信息。
  */
 class Position extends AbstractModel
 {
@@ -66,6 +64,7 @@ class Position extends AbstractModel
      * @var RegionInfo 实例所在的Region的信息。
      */
     public $RegionInfo;
+
     /**
      * @param ZoneInfo $ZoneInfo 实例所在的Zone的信息。
      * @param Country $Country 实例所在的国家的信息。
@@ -78,6 +77,7 @@ class Position extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 聚合的实例状态返回结果
+ *
  * @method array getInstanceList() 获取符合条件的实例列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceList(array $InstanceList) 设置符合条件的实例列表
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的结果总数
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *聚合的实例状态返回结果
  */
 class InstanceResponse extends AbstractModel
 {
@@ -44,6 +42,7 @@ class InstanceResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
+
     /**
      * @param array $InstanceList 符合条件的实例列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class InstanceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

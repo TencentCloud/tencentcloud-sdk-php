@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDevice请求参数结构体
+ *
  * @method string getProductId() 获取产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
  * @method void setProductId(string $ProductId) 设置产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
  * @method string getDeviceName() 获取设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSkey(string $Skey) 设置创建LoRa设备需要skey
  * @method string getLoraAppKey() 获取LoRa设备的AppKey
  * @method void setLoraAppKey(string $LoraAppKey) 设置LoRa设备的AppKey
- */
-
-/**
- *CreateDevice请求参数结构体
  */
 class CreateDeviceRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class CreateDeviceRequest extends AbstractModel
      * @var string LoRa设备的AppKey
      */
     public $LoraAppKey;
+
     /**
      * @param string $ProductId 产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
      * @param string $DeviceName 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
@@ -110,6 +109,7 @@ class CreateDeviceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

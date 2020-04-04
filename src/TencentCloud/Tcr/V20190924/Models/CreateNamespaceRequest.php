@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNamespace请求参数结构体
+ *
  * @method string getRegistryId() 获取实例ID
  * @method void setRegistryId(string $RegistryId) 设置实例ID
  * @method string getNamespaceName() 获取命名空间的名称
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间的名称
  * @method boolean getIsPublic() 获取是否公开，true为公开，fale为私有
  * @method void setIsPublic(boolean $IsPublic) 设置是否公开，true为公开，fale为私有
- */
-
-/**
- *CreateNamespace请求参数结构体
  */
 class CreateNamespaceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateNamespaceRequest extends AbstractModel
      * @var boolean 是否公开，true为公开，fale为私有
      */
     public $IsPublic;
+
     /**
      * @param string $RegistryId 实例ID
      * @param string $NamespaceName 命名空间的名称
@@ -54,6 +53,7 @@ class CreateNamespaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

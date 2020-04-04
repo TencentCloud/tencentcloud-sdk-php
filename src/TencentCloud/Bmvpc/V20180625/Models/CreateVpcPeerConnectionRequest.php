@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateVpcPeerConnection请求参数结构体
+ *
  * @method string getVpcId() 获取本端VPC唯一ID
  * @method void setVpcId(string $VpcId) 设置本端VPC唯一ID
  * @method string getPeerVpcId() 获取对端VPC唯一ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeerUin(string $PeerUin) 设置对端账户OwnerUin（默认值为本端账户）
  * @method integer getBandwidth() 获取跨地域必传，带宽上限值
  * @method void setBandwidth(integer $Bandwidth) 设置跨地域必传，带宽上限值
- */
-
-/**
- *CreateVpcPeerConnection请求参数结构体
  */
 class CreateVpcPeerConnectionRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateVpcPeerConnectionRequest extends AbstractModel
      * @var integer 跨地域必传，带宽上限值
      */
     public $Bandwidth;
+
     /**
      * @param string $VpcId 本端VPC唯一ID
      * @param string $PeerVpcId 对端VPC唯一ID
@@ -78,6 +77,7 @@ class CreateVpcPeerConnectionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

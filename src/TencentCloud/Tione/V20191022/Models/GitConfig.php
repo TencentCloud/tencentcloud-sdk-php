@@ -18,16 +18,14 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 存储库Git相关配置
+ *
  * @method string getRepositoryUrl() 获取git地址
  * @method void setRepositoryUrl(string $RepositoryUrl) 设置git地址
  * @method string getBranch() 获取代码分支
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBranch(string $Branch) 设置代码分支
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *存储库Git相关配置
  */
 class GitConfig extends AbstractModel
 {
@@ -41,6 +39,7 @@ class GitConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Branch;
+
     /**
      * @param string $RepositoryUrl git地址
      * @param string $Branch 代码分支
@@ -50,6 +49,7 @@ class GitConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

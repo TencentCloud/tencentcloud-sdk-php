@@ -18,14 +18,12 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCustomerGateway返回参数结构体
+ *
  * @method CustomerGateway getCustomerGateway() 获取对端网关对象
  * @method void setCustomerGateway(CustomerGateway $CustomerGateway) 设置对端网关对象
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateCustomerGateway返回参数结构体
  */
 class CreateCustomerGatewayResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateCustomerGatewayResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param CustomerGateway $CustomerGateway 对端网关对象
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateCustomerGatewayResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetProjectList请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取个数限制
  * @method void setLimit(integer $Limit) 设置个数限制
- */
-
-/**
- *GetProjectList请求参数结构体
  */
 class GetProjectListRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GetProjectListRequest extends AbstractModel
      * @var integer 个数限制
      */
     public $Limit;
+
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 个数限制
@@ -46,6 +45,7 @@ class GetProjectListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PullSmsReplyStatus请求参数结构体
+ *
  * @method integer getLimit() 获取拉取最大条数，最多100条。
  * @method void setLimit(integer $Limit) 设置拉取最大条数，最多100条。
  * @method string getSmsSdkAppid() 获取短信 SdkAppid 在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际 SdkAppid，例如1400006666。
  * @method void setSmsSdkAppid(string $SmsSdkAppid) 设置短信 SdkAppid 在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际 SdkAppid，例如1400006666。
- */
-
-/**
- *PullSmsReplyStatus请求参数结构体
  */
 class PullSmsReplyStatusRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PullSmsReplyStatusRequest extends AbstractModel
      * @var string 短信 SdkAppid 在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际 SdkAppid，例如1400006666。
      */
     public $SmsSdkAppid;
+
     /**
      * @param integer $Limit 拉取最大条数，最多100条。
      * @param string $SmsSdkAppid 短信 SdkAppid 在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际 SdkAppid，例如1400006666。
@@ -46,6 +45,7 @@ class PullSmsReplyStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

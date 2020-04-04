@@ -18,14 +18,13 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUserLimit请求参数结构体
+ *
 
- */
-
-/**
- *DescribeUserLimit请求参数结构体
  */
 class DescribeUserLimitRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeUserLimitRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

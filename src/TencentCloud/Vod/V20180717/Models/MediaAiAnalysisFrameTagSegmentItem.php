@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 按帧标签片段列表
+ *
  * @method float getStartTimeOffset() 获取按帧标签起始的偏移时间。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置按帧标签起始的偏移时间。
  * @method float getEndTimeOffset() 获取按帧标签结束的偏移时间。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置按帧标签结束的偏移时间。
  * @method array getTagSet() 获取时间片段内的标签列表。
  * @method void setTagSet(array $TagSet) 设置时间片段内的标签列表。
- */
-
-/**
- *按帧标签片段列表
  */
 class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel
      * @var array 时间片段内的标签列表。
      */
     public $TagSet;
+
     /**
      * @param float $StartTimeOffset 按帧标签起始的偏移时间。
      * @param float $EndTimeOffset 按帧标签结束的偏移时间。
@@ -54,6 +53,7 @@ class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

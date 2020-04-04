@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 并发录制路数
+ *
  * @method string getTime() 获取时间点。
  * @method void setTime(string $Time) 设置时间点。
  * @method integer getNum() 获取路数。
  * @method void setNum(integer $Num) 设置路数。
- */
-
-/**
- *并发录制路数
  */
 class ConcurrentRecordStreamNum extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ConcurrentRecordStreamNum extends AbstractModel
      * @var integer 路数。
      */
     public $Num;
+
     /**
      * @param string $Time 时间点。
      * @param integer $Num 路数。
@@ -46,6 +45,7 @@ class ConcurrentRecordStreamNum extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

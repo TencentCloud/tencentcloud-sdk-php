@@ -18,12 +18,10 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProductConfig请求参数结构体
+ *
  * @method string getZone() 获取可用区名称
  * @method void setZone(string $Zone) 设置可用区名称
- */
-
-/**
- *DescribeProductConfig请求参数结构体
  */
 class DescribeProductConfigRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeProductConfigRequest extends AbstractModel
      * @var string 可用区名称
      */
     public $Zone;
+
     /**
      * @param string $Zone 可用区名称
      */
@@ -38,6 +37,7 @@ class DescribeProductConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

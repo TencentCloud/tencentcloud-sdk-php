@@ -18,16 +18,14 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListOrganizationInvitations返回参数结构体
+ *
  * @method array getInvitations() 获取邀请信息列表
  * @method void setInvitations(array $Invitations) 设置邀请信息列表
  * @method integer getTotalCount() 获取总数目
  * @method void setTotalCount(integer $TotalCount) 设置总数目
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ListOrganizationInvitations返回参数结构体
  */
 class ListOrganizationInvitationsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListOrganizationInvitationsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Invitations 邀请信息列表
      * @param integer $TotalCount 总数目
@@ -54,6 +53,7 @@ class ListOrganizationInvitationsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

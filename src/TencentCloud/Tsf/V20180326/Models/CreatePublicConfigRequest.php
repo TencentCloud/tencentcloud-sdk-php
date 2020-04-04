@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePublicConfig请求参数结构体
+ *
  * @method string getConfigName() 获取配置项名称
  * @method void setConfigName(string $ConfigName) 设置配置项名称
  * @method string getConfigVersion() 获取配置项版本
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfigVersionDesc(string $ConfigVersionDesc) 设置配置项版本描述
  * @method string getConfigType() 获取配置项类型
  * @method void setConfigType(string $ConfigType) 设置配置项类型
- */
-
-/**
- *CreatePublicConfig请求参数结构体
  */
 class CreatePublicConfigRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreatePublicConfigRequest extends AbstractModel
      * @var string 配置项类型
      */
     public $ConfigType;
+
     /**
      * @param string $ConfigName 配置项名称
      * @param string $ConfigVersion 配置项版本
@@ -70,6 +69,7 @@ class CreatePublicConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

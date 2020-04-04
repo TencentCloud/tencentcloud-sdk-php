@@ -18,6 +18,8 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCustomers请求参数结构体
+ *
  * @method string getQueryType() 获取查询类型，0.个人，1负责部门，2.指定部门
  * @method void setQueryType(string $QueryType) 设置查询类型，0.个人，1负责部门，2.指定部门
  * @method string getGroupId() 获取分组ID
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页记录条数
  * @method string getSubProjectId() 获取子项目ID
  * @method void setSubProjectId(string $SubProjectId) 设置子项目ID
- */
-
-/**
- *DescribeCustomers请求参数结构体
  */
 class DescribeCustomersRequest extends AbstractModel
 {
@@ -115,6 +113,7 @@ class DescribeCustomersRequest extends AbstractModel
      * @var string 子项目ID
      */
     public $SubProjectId;
+
     /**
      * @param string $QueryType 查询类型，0.个人，1负责部门，2.指定部门
      * @param string $GroupId 分组ID
@@ -134,6 +133,7 @@ class DescribeCustomersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

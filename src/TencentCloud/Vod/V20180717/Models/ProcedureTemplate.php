@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务流模板详情
+ *
  * @method string getName() 获取任务流名字。
  * @method void setName(string $Name) 设置任务流名字。
  * @method string getType() 获取任务流模板类型，取值范围：
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- */
-
-/**
- *任务流模板详情
  */
 class ProcedureTemplate extends AbstractModel
 {
@@ -108,6 +106,7 @@ class ProcedureTemplate extends AbstractModel
      * @var string 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $UpdateTime;
+
     /**
      * @param string $Name 任务流名字。
      * @param string $Type 任务流模板类型，取值范围：
@@ -130,6 +129,7 @@ class ProcedureTemplate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

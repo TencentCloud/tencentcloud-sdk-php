@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例机型配置。
+ *
  * @method integer getCPU() 获取CPU核数。
  * @method void setCPU(integer $CPU) 设置CPU核数。
  * @method integer getMemory() 获取内存值，单位GB。
  * @method void setMemory(integer $Memory) 设置内存值，单位GB。
  * @method array getInstanceCategories() 获取实例机型类别，可选参数：“ALL”、“GENERAL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
  * @method void setInstanceCategories(array $InstanceCategories) 设置实例机型类别，可选参数：“ALL”、“GENERAL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
- */
-
-/**
- *实例机型配置。
  */
 class InstanceTypeOptions extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InstanceTypeOptions extends AbstractModel
      * @var array 实例机型类别，可选参数：“ALL”、“GENERAL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
      */
     public $InstanceCategories;
+
     /**
      * @param integer $CPU CPU核数。
      * @param integer $Memory 内存值，单位GB。
@@ -54,6 +53,7 @@ class InstanceTypeOptions extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

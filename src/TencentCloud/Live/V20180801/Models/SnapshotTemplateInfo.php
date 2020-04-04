@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 截图模板信息
+ *
  * @method integer getTemplateId() 获取模板Id。
  * @method void setTemplateId(integer $TemplateId) 设置模板Id。
  * @method string getTemplateName() 获取模板名称。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosRegion(string $CosRegion) 设置Cos 地域。
  * @method string getDescription() 获取模板描述
  * @method void setDescription(string $Description) 设置模板描述
- */
-
-/**
- *截图模板信息
  */
 class SnapshotTemplateInfo extends AbstractModel
 {
@@ -94,6 +92,7 @@ class SnapshotTemplateInfo extends AbstractModel
      * @var string 模板描述
      */
     public $Description;
+
     /**
      * @param integer $TemplateId 模板Id。
      * @param string $TemplateName 模板名称。
@@ -110,6 +109,7 @@ class SnapshotTemplateInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

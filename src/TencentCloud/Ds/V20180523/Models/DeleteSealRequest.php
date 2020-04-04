@@ -18,6 +18,8 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSeal请求参数结构体
+ *
  * @method string getModule() 获取模块名SealMng
  * @method void setModule(string $Module) 设置模块名SealMng
  * @method string getOperation() 获取操作名DeleteSeal
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountResId(string $AccountResId) 设置帐号ID
  * @method string getSealResId() 获取签章ID
  * @method void setSealResId(string $SealResId) 设置签章ID
- */
-
-/**
- *DeleteSeal请求参数结构体
  */
 class DeleteSealRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DeleteSealRequest extends AbstractModel
      * @var string 签章ID
      */
     public $SealResId;
+
     /**
      * @param string $Module 模块名SealMng
      * @param string $Operation 操作名DeleteSeal
@@ -62,6 +61,7 @@ class DeleteSealRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

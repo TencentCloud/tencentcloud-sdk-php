@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 被选中的表信息
+ *
  * @method string getTableGroupId() 获取表所属表格组ID
  * @method void setTableGroupId(string $TableGroupId) 设置表所属表格组ID
  * @method string getTableName() 获取表格名称
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileSize(integer $FileSize) 设置Key回档文件大小，回档专用
  * @method string getFileContent() 获取Key回档文件内容，回档专用
  * @method void setFileContent(string $FileContent) 设置Key回档文件内容，回档专用
- */
-
-/**
- *被选中的表信息
  */
 class SelectedTableInfoNew extends AbstractModel
 {
@@ -122,6 +120,7 @@ class SelectedTableInfoNew extends AbstractModel
      * @var string Key回档文件内容，回档专用
      */
     public $FileContent;
+
     /**
      * @param string $TableGroupId 表所属表格组ID
      * @param string $TableName 表格名称
@@ -142,6 +141,7 @@ class SelectedTableInfoNew extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

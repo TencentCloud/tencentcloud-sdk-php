@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * QueryRefund请求参数结构体
+ *
  * @method string getUserId() 获取用户ID，长度不小于5位，仅支持字母和数字的组合。
  * @method void setUserId(string $UserId) 设置用户ID，长度不小于5位，仅支持字母和数字的组合。
  * @method string getRefundId() 获取退款订单号，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidasSecretId(string $MidasSecretId) 设置聚鑫分配的安全ID
  * @method string getMidasSignature() 获取按照聚鑫安全密钥计算的签名
  * @method void setMidasSignature(string $MidasSignature) 设置按照聚鑫安全密钥计算的签名
- */
-
-/**
- *QueryRefund请求参数结构体
  */
 class QueryRefundRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class QueryRefundRequest extends AbstractModel
      * @var string 按照聚鑫安全密钥计算的签名
      */
     public $MidasSignature;
+
     /**
      * @param string $UserId 用户ID，长度不小于5位，仅支持字母和数字的组合。
      * @param string $RefundId 退款订单号，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合。
@@ -70,6 +69,7 @@ class QueryRefundRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetTopics请求参数结构体
+ *
  * @method string getProductId() 获取产品Id
  * @method void setProductId(string $ProductId) 设置产品Id
  * @method integer getOffset() 获取偏移
  * @method void setOffset(integer $Offset) 设置偏移
  * @method integer getLength() 获取长度
  * @method void setLength(integer $Length) 设置长度
- */
-
-/**
- *GetTopics请求参数结构体
  */
 class GetTopicsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GetTopicsRequest extends AbstractModel
      * @var integer 长度
      */
     public $Length;
+
     /**
      * @param string $ProductId 产品Id
      * @param integer $Offset 偏移
@@ -54,6 +53,7 @@ class GetTopicsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDevice请求参数结构体
+ *
  * @method string getProductId() 获取产品ID。
  * @method void setProductId(string $ProductId) 设置产品ID。
  * @method string getDeviceName() 获取设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppSKey(string $AppSKey) 设置LoRaWAN 应用会话密钥
  * @method string getNwkSKey() 获取LoRaWAN 网络会话密钥
  * @method void setNwkSKey(string $NwkSKey) 设置LoRaWAN 网络会话密钥
- */
-
-/**
- *CreateDevice请求参数结构体
  */
 class CreateDeviceRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateDeviceRequest extends AbstractModel
      * @var string LoRaWAN 网络会话密钥
      */
     public $NwkSKey;
+
     /**
      * @param string $ProductId 产品ID。
      * @param string $DeviceName 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
@@ -86,6 +85,7 @@ class CreateDeviceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

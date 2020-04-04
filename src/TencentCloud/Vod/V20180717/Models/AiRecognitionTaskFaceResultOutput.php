@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能人脸识别输出。
+ *
  * @method array getResultSet() 获取智能人脸识别结果集。
  * @method void setResultSet(array $ResultSet) 设置智能人脸识别结果集。
- */
-
-/**
- *智能人脸识别输出。
  */
 class AiRecognitionTaskFaceResultOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskFaceResultOutput extends AbstractModel
      * @var array 智能人脸识别结果集。
      */
     public $ResultSet;
+
     /**
      * @param array $ResultSet 智能人脸识别结果集。
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskFaceResultOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

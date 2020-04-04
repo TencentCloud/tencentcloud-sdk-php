@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 结构化的错误日志详情
+ *
  * @method integer getTimestamp() 获取错误发生时间。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestamp(integer $Timestamp) 设置错误发生时间。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置错误详情
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *结构化的错误日志详情
  */
 class ErrlogItem extends AbstractModel
 {
@@ -44,6 +42,7 @@ class ErrlogItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
+
     /**
      * @param integer $Timestamp 错误发生时间。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class ErrlogItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

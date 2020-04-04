@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 仓库信息的返回信息
+ *
  * @method integer getTotalCount() 获取仓库总数
  * @method void setTotalCount(integer $TotalCount) 设置仓库总数
  * @method array getRepoInfo() 获取仓库信息列表
  * @method void setRepoInfo(array $RepoInfo) 设置仓库信息列表
  * @method string getServer() 获取Server信息
  * @method void setServer(string $Server) 设置Server信息
- */
-
-/**
- *仓库信息的返回信息
  */
 class RepoInfoResp extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RepoInfoResp extends AbstractModel
      * @var string Server信息
      */
     public $Server;
+
     /**
      * @param integer $TotalCount 仓库总数
      * @param array $RepoInfo 仓库信息列表
@@ -54,6 +53,7 @@ class RepoInfoResp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

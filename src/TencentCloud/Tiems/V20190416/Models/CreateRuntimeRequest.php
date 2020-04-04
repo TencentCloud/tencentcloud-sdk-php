@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRuntime请求参数结构体
+ *
  * @method string getName() 获取全局唯一的运行环境名称
  * @method void setName(string $Name) 设置全局唯一的运行环境名称
  * @method string getImage() 获取运行环境镜像地址
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置运行环境描述
  * @method boolean getHealthCheckOn() 获取是否支持健康检查，默认为False
  * @method void setHealthCheckOn(boolean $HealthCheckOn) 设置是否支持健康检查，默认为False
- */
-
-/**
- *CreateRuntime请求参数结构体
  */
 class CreateRuntimeRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateRuntimeRequest extends AbstractModel
      * @var boolean 是否支持健康检查，默认为False
      */
     public $HealthCheckOn;
+
     /**
      * @param string $Name 全局唯一的运行环境名称
      * @param string $Image 运行环境镜像地址
@@ -70,6 +69,7 @@ class CreateRuntimeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateContainGroup请求参数结构体
+ *
  * @method string getApplicationId() 获取分组所属应用ID
  * @method void setApplicationId(string $ApplicationId) 设置分组所属应用ID
  * @method string getNamespaceId() 获取分组所属命名空间ID
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuRequest(string $CpuRequest) 设置初始分配的 CPU 核数，对应 K8S request
  * @method string getMemRequest() 获取初始分配的内存 MiB 数，对应 K8S request
  * @method void setMemRequest(string $MemRequest) 设置初始分配的内存 MiB 数，对应 K8S request
- */
-
-/**
- *CreateContainGroup请求参数结构体
  */
 class CreateContainGroupRequest extends AbstractModel
 {
@@ -122,6 +120,7 @@ class CreateContainGroupRequest extends AbstractModel
      * @var string 初始分配的内存 MiB 数，对应 K8S request
      */
     public $MemRequest;
+
     /**
      * @param string $ApplicationId 分组所属应用ID
      * @param string $NamespaceId 分组所属命名空间ID
@@ -142,6 +141,7 @@ class CreateContainGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

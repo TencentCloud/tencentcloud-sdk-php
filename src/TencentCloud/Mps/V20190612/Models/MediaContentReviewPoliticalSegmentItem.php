@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内容审核涉政嫌疑片段
+ *
  * @method float getStartTimeOffset() 获取嫌疑片段起始的偏移时间，单位：秒。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置嫌疑片段起始的偏移时间，单位：秒。
  * @method float getEndTimeOffset() 获取嫌疑片段结束的偏移时间，单位：秒。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAreaCoordSet(array $AreaCoordSet) 设置涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
  * @method string getPicUrlExpireTime() 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method void setPicUrlExpireTime(string $PicUrlExpireTime) 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
- */
-
-/**
- *内容审核涉政嫌疑片段
  */
 class MediaContentReviewPoliticalSegmentItem extends AbstractModel
 {
@@ -99,6 +97,7 @@ class MediaContentReviewPoliticalSegmentItem extends AbstractModel
      * @var string 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      */
     public $PicUrlExpireTime;
+
     /**
      * @param float $StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
      * @param float $EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
@@ -118,6 +117,7 @@ class MediaContentReviewPoliticalSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * consumer信息
+ *
  * @method string getMemberId() 获取coordinator 为消费分组中的消费者生成的唯一 ID
  * @method void setMemberId(string $MemberId) 设置coordinator 为消费分组中的消费者生成的唯一 ID
  * @method string getClientId() 获取客户消费者 SDK 自己设置的 client.id 信息
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientHost(string $ClientHost) 设置一般存储客户的 IP 地址
  * @method Assignment getAssignment() 获取存储着分配给该消费者的 partition 信息
  * @method void setAssignment(Assignment $Assignment) 设置存储着分配给该消费者的 partition 信息
- */
-
-/**
- *consumer信息
  */
 class GroupInfoMember extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GroupInfoMember extends AbstractModel
      * @var Assignment 存储着分配给该消费者的 partition 信息
      */
     public $Assignment;
+
     /**
      * @param string $MemberId coordinator 为消费分组中的消费者生成的唯一 ID
      * @param string $ClientId 客户消费者 SDK 自己设置的 client.id 信息
@@ -62,6 +61,7 @@ class GroupInfoMember extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

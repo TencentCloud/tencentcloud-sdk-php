@@ -18,16 +18,14 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyResourceRenewFlag请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包；insurance表示保险包；staticpack表示三网套餐包）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包；insurance表示保险包；staticpack表示三网套餐包）
  * @method string getId() 获取资源Id
  * @method void setId(string $Id) 设置资源Id
  * @method integer getRenewFlag() 获取自动续费标记（0手动续费；1自动续费；2到期不续费）
  * @method void setRenewFlag(integer $RenewFlag) 设置自动续费标记（0手动续费；1自动续费；2到期不续费）
- */
-
-/**
- *ModifyResourceRenewFlag请求参数结构体
  */
 class ModifyResourceRenewFlagRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyResourceRenewFlagRequest extends AbstractModel
      * @var integer 自动续费标记（0手动续费；1自动续费；2到期不续费）
      */
     public $RenewFlag;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包；insurance表示保险包；staticpack表示三网套餐包）
      * @param string $Id 资源Id
@@ -54,6 +53,7 @@ class ModifyResourceRenewFlagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据源
+ *
  * @method CosDataSource getCosDataSource() 获取cos数据源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosDataSource(CosDataSource $CosDataSource) 设置cos数据源
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSystemDataSource(FileSystemDataSource $FileSystemDataSource) 设置文件系统输入源
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *数据源
  */
 class DataSource extends AbstractModel
 {
@@ -44,6 +42,7 @@ class DataSource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSystemDataSource;
+
     /**
      * @param CosDataSource $CosDataSource cos数据源
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class DataSource extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

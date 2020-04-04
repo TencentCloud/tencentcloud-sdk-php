@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VerifyRootAccount请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method string getPassword() 获取实例 ROOT 账号的密码。
  * @method void setPassword(string $Password) 设置实例 ROOT 账号的密码。
- */
-
-/**
- *VerifyRootAccount请求参数结构体
  */
 class VerifyRootAccountRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class VerifyRootAccountRequest extends AbstractModel
      * @var string 实例 ROOT 账号的密码。
      */
     public $Password;
+
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param string $Password 实例 ROOT 账号的密码。
@@ -46,6 +45,7 @@ class VerifyRootAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

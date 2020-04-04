@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAnimatedGraphicsTemplates请求参数结构体
+ *
  * @method array getDefinitions() 获取转动图模板唯一标识过滤条件，数组长度限制：100。
  * @method void setDefinitions(array $Definitions) 设置转动图模板唯一标识过滤条件，数组长度限制：100。
  * @method integer getOffset() 获取分页偏移量，默认值：0。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置模板类型过滤条件，可选值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
- */
-
-/**
- *DescribeAnimatedGraphicsTemplates请求参数结构体
  */
 class DescribeAnimatedGraphicsTemplatesRequest extends AbstractModel
 {
@@ -58,6 +56,7 @@ class DescribeAnimatedGraphicsTemplatesRequest extends AbstractModel
 <li>Custom：用户自定义模板。</li>
      */
     public $Type;
+
     /**
      * @param array $Definitions 转动图模板唯一标识过滤条件，数组长度限制：100。
      * @param integer $Offset 分页偏移量，默认值：0。
@@ -70,6 +69,7 @@ class DescribeAnimatedGraphicsTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

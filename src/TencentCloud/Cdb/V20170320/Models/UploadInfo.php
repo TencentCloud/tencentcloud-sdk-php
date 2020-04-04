@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文件上传描述
+ *
  * @method integer getAllSliceNum() 获取文件所有分片数
  * @method void setAllSliceNum(integer $AllSliceNum) 设置文件所有分片数
  * @method integer getCompleteNum() 获取已完成分片数
  * @method void setCompleteNum(integer $CompleteNum) 设置已完成分片数
- */
-
-/**
- *文件上传描述
  */
 class UploadInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UploadInfo extends AbstractModel
      * @var integer 已完成分片数
      */
     public $CompleteNum;
+
     /**
      * @param integer $AllSliceNum 文件所有分片数
      * @param integer $CompleteNum 已完成分片数
@@ -46,6 +45,7 @@ class UploadInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

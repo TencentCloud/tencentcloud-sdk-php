@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 消费组主题对象
+ *
  * @method string getTopicId() 获取主题ID
  * @method void setTopicId(string $TopicId) 设置主题ID
  * @method string getTopicName() 获取主题名称
  * @method void setTopicName(string $TopicName) 设置主题名称
- */
-
-/**
- *消费组主题对象
  */
 class ConsumerGroupTopic extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ConsumerGroupTopic extends AbstractModel
      * @var string 主题名称
      */
     public $TopicName;
+
     /**
      * @param string $TopicId 主题ID
      * @param string $TopicName 主题名称
@@ -46,6 +45,7 @@ class ConsumerGroupTopic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

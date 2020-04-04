@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 对视频截图做封面任务输出类型
+ *
  * @method string getCoverUrl() 获取封面 URL。
  * @method void setCoverUrl(string $CoverUrl) 设置封面 URL。
- */
-
-/**
- *对视频截图做封面任务输出类型
  */
 class CoverBySnapshotTaskOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CoverBySnapshotTaskOutput extends AbstractModel
      * @var string 封面 URL。
      */
     public $CoverUrl;
+
     /**
      * @param string $CoverUrl 封面 URL。
      */
@@ -38,6 +37,7 @@ class CoverBySnapshotTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

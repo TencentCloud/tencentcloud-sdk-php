@@ -18,6 +18,8 @@ namespace TencentCloud\Soe\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 单音节评价结果
+ *
  * @method integer getMemBeginTime() 获取当前音节语音起始时间点，单位为ms
  * @method void setMemBeginTime(integer $MemBeginTime) 设置当前音节语音起始时间点，单位为ms
  * @method integer getMemEndTime() 获取当前音节语音终止时间点，单位为ms
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReferencePhone(string $ReferencePhone) 设置参考音素，在单词诊断模式下，代表标准音素
  * @method integer getMatchTag() 获取当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
  * @method void setMatchTag(integer $MatchTag) 设置当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
- */
-
-/**
- *单音节评价结果
  */
 class PhoneInfo extends AbstractModel
 {
@@ -80,6 +78,7 @@ class PhoneInfo extends AbstractModel
      * @var integer 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      */
     public $MatchTag;
+
     /**
      * @param integer $MemBeginTime 当前音节语音起始时间点，单位为ms
      * @param integer $MemEndTime 当前音节语音终止时间点，单位为ms
@@ -94,6 +93,7 @@ class PhoneInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

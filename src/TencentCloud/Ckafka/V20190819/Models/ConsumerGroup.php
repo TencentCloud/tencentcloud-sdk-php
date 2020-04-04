@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户组实体
+ *
  * @method string getConsumerGroupName() 获取用户组名称
  * @method void setConsumerGroupName(string $ConsumerGroupName) 设置用户组名称
  * @method array getSubscribedInfo() 获取订阅信息实体
  * @method void setSubscribedInfo(array $SubscribedInfo) 设置订阅信息实体
- */
-
-/**
- *用户组实体
  */
 class ConsumerGroup extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ConsumerGroup extends AbstractModel
      * @var array 订阅信息实体
      */
     public $SubscribedInfo;
+
     /**
      * @param string $ConsumerGroupName 用户组名称
      * @param array $SubscribedInfo 订阅信息实体
@@ -46,6 +45,7 @@ class ConsumerGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCluster请求参数结构体
+ *
  * @method string getIdlType() 获取集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
  * @method void setIdlType(string $IdlType) 设置集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
  * @method string getClusterName() 获取集群名称，可使用中文或英文字符，最大长度32个字符
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置集群所绑定的子网实例ID，形如：subnet-pxir56ns
  * @method string getPassword() 获取集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
  * @method void setPassword(string $Password) 设置集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
- */
-
-/**
- *CreateCluster请求参数结构体
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateClusterRequest extends AbstractModel
      * @var string 集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
      */
     public $Password;
+
     /**
      * @param string $IdlType 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
      * @param string $ClusterName 集群名称，可使用中文或英文字符，最大长度32个字符
@@ -70,6 +69,7 @@ class CreateClusterRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 微服务实例信息
+ *
  * @method string getInstanceId() 获取机器实例ID信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置机器实例ID信息
@@ -98,10 +100,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationType(string $ApplicationType) 设置应用类型
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *微服务实例信息
  */
 class MsInstance extends AbstractModel
 {
@@ -224,6 +222,7 @@ class MsInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationType;
+
     /**
      * @param string $InstanceId 机器实例ID信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -270,6 +269,7 @@ class MsInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBrandCommentCount返回参数结构体
+ *
  * @method array getCommentSet() 获取按天统计好评/差评数
  * @method void setCommentSet(array $CommentSet) 设置按天统计好评/差评数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeBrandCommentCount返回参数结构体
  */
 class DescribeBrandCommentCountResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeBrandCommentCountResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $CommentSet 按天统计好评/差评数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeBrandCommentCountResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

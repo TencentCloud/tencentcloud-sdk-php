@@ -18,16 +18,14 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例可执行操作
+ *
  * @method string getInstanceId() 获取实例id
  * @method void setInstanceId(string $InstanceId) 设置实例id
  * @method array getDeniedActions() 获取实例禁止的操作
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeniedActions(array $DeniedActions) 设置实例禁止的操作
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *实例可执行操作
  */
 class InstanceOperator extends AbstractModel
 {
@@ -41,6 +39,7 @@ class InstanceOperator extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeniedActions;
+
     /**
      * @param string $InstanceId 实例id
      * @param array $DeniedActions 实例禁止的操作
@@ -50,6 +49,7 @@ class InstanceOperator extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

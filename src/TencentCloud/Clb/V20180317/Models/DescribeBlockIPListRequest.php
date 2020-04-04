@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBlockIPList请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例 ID。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID。
  * @method integer getOffset() 获取数据偏移量，默认为 0。
  * @method void setOffset(integer $Offset) 设置数据偏移量，默认为 0。
  * @method integer getLimit() 获取返回IP的最大个数，默认为 100000。
  * @method void setLimit(integer $Limit) 设置返回IP的最大个数，默认为 100000。
- */
-
-/**
- *DescribeBlockIPList请求参数结构体
  */
 class DescribeBlockIPListRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeBlockIPListRequest extends AbstractModel
      * @var integer 返回IP的最大个数，默认为 100000。
      */
     public $Limit;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param integer $Offset 数据偏移量，默认为 0。
@@ -54,6 +53,7 @@ class DescribeBlockIPListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

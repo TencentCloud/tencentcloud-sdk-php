@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据历史条目
+ *
  * @method string getId() 获取日志id
  * @method void setId(string $Id) 设置日志id
  * @method integer getTimestamp() 获取时间戳
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getData() 获取数据
  * @method void setData(string $Data) 设置数据
- */
-
-/**
- *数据历史条目
  */
 class DataHistoryEntry extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DataHistoryEntry extends AbstractModel
      * @var string 数据
      */
     public $Data;
+
     /**
      * @param string $Id 日志id
      * @param integer $Timestamp 时间戳
@@ -62,6 +61,7 @@ class DataHistoryEntry extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

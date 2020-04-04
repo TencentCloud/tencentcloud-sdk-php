@@ -18,12 +18,10 @@ namespace TencentCloud\Smpn\V20190822\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 企业号码认证回应
+ *
  * @method integer getRetCode() 获取0成功 其他失败
  * @method void setRetCode(integer $RetCode) 设置0成功 其他失败
- */
-
-/**
- *企业号码认证回应
  */
 class EPAResponse extends AbstractModel
 {
@@ -31,6 +29,7 @@ class EPAResponse extends AbstractModel
      * @var integer 0成功 其他失败
      */
     public $RetCode;
+
     /**
      * @param integer $RetCode 0成功 其他失败
      */
@@ -38,6 +37,7 @@ class EPAResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

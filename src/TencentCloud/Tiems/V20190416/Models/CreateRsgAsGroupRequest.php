@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRsgAsGroup请求参数结构体
+ *
  * @method string getRsgId() 获取资源组 ID
  * @method void setRsgId(string $RsgId) 设置资源组 ID
  * @method integer getMaxSize() 获取伸缩组允许的最大节点数
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置伸缩组名称
  * @method integer getDesiredSize() 获取伸缩组期望的节点数
  * @method void setDesiredSize(integer $DesiredSize) 设置伸缩组期望的节点数
- */
-
-/**
- *CreateRsgAsGroup请求参数结构体
  */
 class CreateRsgAsGroupRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateRsgAsGroupRequest extends AbstractModel
      * @var integer 伸缩组期望的节点数
      */
     public $DesiredSize;
+
     /**
      * @param string $RsgId 资源组 ID
      * @param integer $MaxSize 伸缩组允许的最大节点数
@@ -86,6 +85,7 @@ class CreateRsgAsGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

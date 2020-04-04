@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * LiveRealTimeClip返回参数结构体
+ *
  * @method string getUrl() 获取剪辑后的视频播放 URL。
  * @method void setUrl(string $Url) 设置剪辑后的视频播放 URL。
  * @method string getFileId() 获取剪辑固化后的视频的媒体文件的唯一标识。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *LiveRealTimeClip返回参数结构体
  */
 class LiveRealTimeClipResponse extends AbstractModel
 {
@@ -68,6 +66,7 @@ class LiveRealTimeClipResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Url 剪辑后的视频播放 URL。
      * @param string $FileId 剪辑固化后的视频的媒体文件的唯一标识。
@@ -82,6 +81,7 @@ class LiveRealTimeClipResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

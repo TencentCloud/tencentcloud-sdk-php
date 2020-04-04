@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 本地提权规则
+ *
  * @method integer getId() 获取规则ID
  * @method void setId(integer $Id) 设置规则ID
  * @method string getUuid() 获取客户端ID
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
  * @method string getHostip() 获取主机IP
  * @method void setHostip(string $Hostip) 设置主机IP
- */
-
-/**
- *本地提权规则
  */
 class PrivilegeRule extends AbstractModel
 {
@@ -94,6 +92,7 @@ class PrivilegeRule extends AbstractModel
      * @var string 主机IP
      */
     public $Hostip;
+
     /**
      * @param integer $Id 规则ID
      * @param string $Uuid 客户端ID
@@ -110,6 +109,7 @@ class PrivilegeRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

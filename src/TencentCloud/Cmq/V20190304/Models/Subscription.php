@@ -18,6 +18,8 @@ namespace TencentCloud\Cmq\V20190304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 订阅返回参数
+ *
  * @method string getSubscriptionName() 获取SubscriptionName
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubscriptionName(string $SubscriptionName) 设置SubscriptionName
@@ -66,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotifyContentFormat(string $NotifyContentFormat) 设置NotifyContentFormat
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *订阅返回参数
  */
 class Subscription extends AbstractModel
 {
@@ -144,6 +142,7 @@ class Subscription extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotifyContentFormat;
+
     /**
      * @param string $SubscriptionName SubscriptionName
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,6 +173,7 @@ class Subscription extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

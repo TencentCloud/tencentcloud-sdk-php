@@ -18,14 +18,12 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHistoryNetworkInfo返回参数结构体
+ *
  * @method NetworkHistoryInfo getInstanceSet() 获取网络状态数据
  * @method void setInstanceSet(NetworkHistoryInfo $InstanceSet) 设置网络状态数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeHistoryNetworkInfo返回参数结构体
  */
 class DescribeHistoryNetworkInfoResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeHistoryNetworkInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param NetworkHistoryInfo $InstanceSet 网络状态数据
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeHistoryNetworkInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

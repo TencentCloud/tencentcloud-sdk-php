@@ -18,14 +18,13 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityGroupLimits请求参数结构体
+ *
 
- */
-
-/**
- *DescribeSecurityGroupLimits请求参数结构体
  */
 class DescribeSecurityGroupLimitsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeSecurityGroupLimitsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

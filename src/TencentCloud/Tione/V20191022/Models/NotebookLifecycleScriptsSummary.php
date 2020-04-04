@@ -18,16 +18,14 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * notebook生命周期脚本实例概览
+ *
  * @method string getNotebookLifecycleScriptsName() 获取notebook生命周期脚本名称
  * @method void setNotebookLifecycleScriptsName(string $NotebookLifecycleScriptsName) 设置notebook生命周期脚本名称
  * @method string getCreationTime() 获取创建时间
  * @method void setCreationTime(string $CreationTime) 设置创建时间
  * @method string getLastModifiedTime() 获取修改时间
  * @method void setLastModifiedTime(string $LastModifiedTime) 设置修改时间
- */
-
-/**
- *notebook生命周期脚本实例概览
  */
 class NotebookLifecycleScriptsSummary extends AbstractModel
 {
@@ -45,6 +43,7 @@ class NotebookLifecycleScriptsSummary extends AbstractModel
      * @var string 修改时间
      */
     public $LastModifiedTime;
+
     /**
      * @param string $NotebookLifecycleScriptsName notebook生命周期脚本名称
      * @param string $CreationTime 创建时间
@@ -54,6 +53,7 @@ class NotebookLifecycleScriptsSummary extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

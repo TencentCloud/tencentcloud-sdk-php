@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述HTTP的包头参数
+ *
  * @method string getHeaderName() 获取HTTP头名
  * @method void setHeaderName(string $HeaderName) 设置HTTP头名
  * @method string getHeaderValue() 获取HTTP头值
  * @method void setHeaderValue(string $HeaderValue) 设置HTTP头值
- */
-
-/**
- *描述HTTP的包头参数
  */
 class HttpHeaderParam extends AbstractModel
 {
@@ -38,6 +36,7 @@ class HttpHeaderParam extends AbstractModel
      * @var string HTTP头值
      */
     public $HeaderValue;
+
     /**
      * @param string $HeaderName HTTP头名
      * @param string $HeaderValue HTTP头值
@@ -46,6 +45,7 @@ class HttpHeaderParam extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

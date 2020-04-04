@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 容灾组信息
+ *
  * @method string getDisasterRecoverGroupId() 获取分散置放群组id。
  * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) 设置分散置放群组id。
  * @method string getName() 获取分散置放群组名称，长度1-60个字符。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置分散置放群组创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *容灾组信息
  */
 class DisasterRecoverGroup extends AbstractModel
 {
@@ -79,6 +77,7 @@ class DisasterRecoverGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
+
     /**
      * @param string $DisasterRecoverGroupId 分散置放群组id。
      * @param string $Name 分散置放群组名称，长度1-60个字符。
@@ -94,6 +93,7 @@ class DisasterRecoverGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

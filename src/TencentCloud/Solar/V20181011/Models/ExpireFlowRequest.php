@@ -18,12 +18,10 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ExpireFlow请求参数结构体
+ *
  * @method string getFlowId() 获取工单ID
  * @method void setFlowId(string $FlowId) 设置工单ID
- */
-
-/**
- *ExpireFlow请求参数结构体
  */
 class ExpireFlowRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ExpireFlowRequest extends AbstractModel
      * @var string 工单ID
      */
     public $FlowId;
+
     /**
      * @param string $FlowId 工单ID
      */
@@ -38,6 +37,7 @@ class ExpireFlowRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterEndpointStatus返回参数结构体
+ *
  * @method string getStatus() 获取查询集群访问端口状态（Created 开启成功，Creating 开启中中，NotFound 未开启）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置查询集群访问端口状态（Created 开启成功，Creating 开启中中，NotFound 未开启）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeClusterEndpointStatus返回参数结构体
  */
 class DescribeClusterEndpointStatusResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class DescribeClusterEndpointStatusResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Status 查询集群访问端口状态（Created 开启成功，Creating 开启中中，NotFound 未开启）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class DescribeClusterEndpointStatusResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

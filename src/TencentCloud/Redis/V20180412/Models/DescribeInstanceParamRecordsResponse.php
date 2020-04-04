@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceParamRecords返回参数结构体
+ *
  * @method integer getTotalCount() 获取总的修改历史记录数。
  * @method void setTotalCount(integer $TotalCount) 设置总的修改历史记录数。
  * @method array getInstanceParamHistory() 获取修改历史记录信息。
  * @method void setInstanceParamHistory(array $InstanceParamHistory) 设置修改历史记录信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeInstanceParamRecords返回参数结构体
  */
 class DescribeInstanceParamRecordsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeInstanceParamRecordsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 总的修改历史记录数。
      * @param array $InstanceParamHistory 修改历史记录信息。
@@ -54,6 +53,7 @@ class DescribeInstanceParamRecordsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

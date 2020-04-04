@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文字样本信息
+ *
  * @method integer getCode() 获取处理错误码
  * @method void setCode(integer $Code) 设置处理错误码
  * @method string getContent() 获取关键词
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置任务状态
 1：已完成
 2：处理中
- */
-
-/**
- *文字样本信息
  */
 class TextSample extends AbstractModel
 {
@@ -106,6 +104,7 @@ class TextSample extends AbstractModel
 2：处理中
      */
     public $Status;
+
     /**
      * @param integer $Code 处理错误码
      * @param string $Content 关键词
@@ -130,6 +129,7 @@ class TextSample extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

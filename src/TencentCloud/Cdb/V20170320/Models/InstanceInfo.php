@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例详细信息
+ *
  * @method integer getWanStatus() 获取外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
  * @method void setWanStatus(integer $WanStatus) 设置外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
  * @method string getZone() 获取可用区信息
@@ -116,10 +118,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置可用区 ID
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *实例详细信息
  */
 class InstanceInfo extends AbstractModel
 {
@@ -335,6 +333,7 @@ class InstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
+
     /**
      * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @param string $Zone 可用区信息
@@ -390,6 +389,7 @@ class InstanceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

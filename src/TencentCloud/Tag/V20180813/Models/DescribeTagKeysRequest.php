@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTagKeys请求参数结构体
+ *
  * @method integer getCreateUin() 获取创建者用户 Uin，不传或为空只将 Uin 作为条件查询
  * @method void setCreateUin(integer $CreateUin) 设置创建者用户 Uin，不传或为空只将 Uin 作为条件查询
  * @method integer getOffset() 获取数据偏移量，默认为 0, 必须为Limit参数的整数倍
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页大小，默认为 15
  * @method integer getShowProject() 获取是否展现项目
  * @method void setShowProject(integer $ShowProject) 设置是否展现项目
- */
-
-/**
- *DescribeTagKeys请求参数结构体
  */
 class DescribeTagKeysRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeTagKeysRequest extends AbstractModel
      * @var integer 是否展现项目
      */
     public $ShowProject;
+
     /**
      * @param integer $CreateUin 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
      * @param integer $Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
@@ -62,6 +61,7 @@ class DescribeTagKeysRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

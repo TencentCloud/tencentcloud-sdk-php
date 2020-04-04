@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 触发器触发条件
+ *
  * @method string getInvokeMethod() 获取触发方式
  * @method void setInvokeMethod(string $InvokeMethod) 设置触发方式
  * @method string getInvokeExpr() 获取触发表达式
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvokeExpr(string $InvokeExpr) 设置触发表达式
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *触发器触发条件
  */
 class TriggerInvokeCondition extends AbstractModel
 {
@@ -41,6 +39,7 @@ class TriggerInvokeCondition extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvokeExpr;
+
     /**
      * @param string $InvokeMethod 触发方式
      * @param string $InvokeExpr 触发表达式
@@ -50,6 +49,7 @@ class TriggerInvokeCondition extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

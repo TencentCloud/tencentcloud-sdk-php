@@ -18,12 +18,10 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyUserPasswordPersonal请求参数结构体
+ *
  * @method string getPassword() 获取更新后的密码
  * @method void setPassword(string $Password) 设置更新后的密码
- */
-
-/**
- *ModifyUserPasswordPersonal请求参数结构体
  */
 class ModifyUserPasswordPersonalRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ModifyUserPasswordPersonalRequest extends AbstractModel
      * @var string 更新后的密码
      */
     public $Password;
+
     /**
      * @param string $Password 更新后的密码
      */
@@ -38,6 +37,7 @@ class ModifyUserPasswordPersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

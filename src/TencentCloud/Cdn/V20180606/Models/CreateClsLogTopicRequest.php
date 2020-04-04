@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateClsLogTopic请求参数结构体
+ *
  * @method string getTopicName() 获取日志主题名称
  * @method void setTopicName(string $TopicName) 设置日志主题名称
  * @method string getLogsetId() 获取日志集ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannel(string $Channel) 设置接入渠道，默认值为cdn
  * @method array getDomainAreaConfigs() 获取域名区域信息
  * @method void setDomainAreaConfigs(array $DomainAreaConfigs) 设置域名区域信息
- */
-
-/**
- *CreateClsLogTopic请求参数结构体
  */
 class CreateClsLogTopicRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateClsLogTopicRequest extends AbstractModel
      * @var array 域名区域信息
      */
     public $DomainAreaConfigs;
+
     /**
      * @param string $TopicName 日志主题名称
      * @param string $LogsetId 日志集ID
@@ -62,6 +61,7 @@ class CreateClsLogTopicRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频处理任务类型
+ *
  * @method array getTranscodeTaskSet() 获取视频转码任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranscodeTaskSet(array $TranscodeTaskSet) 设置视频转码任务列表。
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdaptiveDynamicStreamingTaskSet(array $AdaptiveDynamicStreamingTaskSet) 设置对视频转自适应码流任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *视频处理任务类型
  */
 class MediaProcessTaskInput extends AbstractModel
 {
@@ -94,6 +92,7 @@ class MediaProcessTaskInput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdaptiveDynamicStreamingTaskSet;
+
     /**
      * @param array $TranscodeTaskSet 视频转码任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,6 +113,7 @@ class MediaProcessTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

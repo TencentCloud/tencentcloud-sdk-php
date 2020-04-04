@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMigrateJobs请求参数结构体
+ *
  * @method string getJobId() 获取数据迁移任务ID
  * @method void setJobId(string $JobId) 设置数据迁移任务ID
  * @method string getJobName() 获取数据迁移任务名称
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回实例数量，默认20，有效区间[1,100]
  * @method void setLimit(integer $Limit) 设置返回实例数量，默认20，有效区间[1,100]
- */
-
-/**
- *DescribeMigrateJobs请求参数结构体
  */
 class DescribeMigrateJobsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeMigrateJobsRequest extends AbstractModel
      * @var integer 返回实例数量，默认20，有效区间[1,100]
      */
     public $Limit;
+
     /**
      * @param string $JobId 数据迁移任务ID
      * @param string $JobName 数据迁移任务名称
@@ -78,6 +77,7 @@ class DescribeMigrateJobsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

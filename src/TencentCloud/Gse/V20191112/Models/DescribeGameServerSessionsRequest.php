@@ -18,6 +18,8 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGameServerSessions请求参数结构体
+ *
  * @method string getAliasId() 获取别名ID
  * @method void setAliasId(string $AliasId) 设置别名ID
  * @method string getFleetId() 获取舰队ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNextToken(string $NextToken) 设置页偏移，用于查询下一页
  * @method string getStatusFilter() 获取游戏服务器会话状态
  * @method void setStatusFilter(string $StatusFilter) 设置游戏服务器会话状态
- */
-
-/**
- *DescribeGameServerSessions请求参数结构体
  */
 class DescribeGameServerSessionsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeGameServerSessionsRequest extends AbstractModel
      * @var string 游戏服务器会话状态
      */
     public $StatusFilter;
+
     /**
      * @param string $AliasId 别名ID
      * @param string $FleetId 舰队ID
@@ -78,6 +77,7 @@ class DescribeGameServerSessionsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

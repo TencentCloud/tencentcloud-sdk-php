@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 压缩规则配置，最多可设置 100 条
+ *
  * @method boolean getCompress() 获取true：需要设置为 ture，启用压缩
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompress(boolean $Compress) 设置true：需要设置为 ture，启用压缩
@@ -46,10 +48,6 @@ brotli：需要同时指定 GZIP 压缩才可启用
 gzip：指定 GZIP 压缩
 brotli：需要同时指定 GZIP 压缩才可启用
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *压缩规则配置，最多可设置 100 条
  */
 class CompressionRule extends AbstractModel
 {
@@ -86,6 +84,7 @@ brotli：需要同时指定 GZIP 压缩才可启用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Algorithms;
+
     /**
      * @param boolean $Compress true：需要设置为 ture，启用压缩
 注意：此字段可能返回 null，表示取不到有效值。
@@ -106,6 +105,7 @@ brotli：需要同时指定 GZIP 压缩才可启用
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

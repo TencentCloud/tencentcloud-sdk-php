@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述键值对过滤器，用于条件过滤查询。
+ *
  * @method string getName() 获取过滤键的名称。
  * @method void setName(string $Name) 设置过滤键的名称。
  * @method array getValues() 获取一个或者多个过滤值。
  * @method void setValues(array $Values) 设置一个或者多个过滤值。
- */
-
-/**
- *描述键值对过滤器，用于条件过滤查询。
  */
 class Filter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Filter extends AbstractModel
      * @var array 一个或者多个过滤值。
      */
     public $Values;
+
     /**
      * @param string $Name 过滤键的名称。
      * @param array $Values 一个或者多个过滤值。
@@ -46,6 +45,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

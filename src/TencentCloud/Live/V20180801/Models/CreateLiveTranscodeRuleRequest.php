@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveTranscodeRule请求参数结构体
+ *
  * @method string getDomainName() 获取播放域名。
  * @method void setDomainName(string $DomainName) 设置播放域名。
  * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填空。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamName(string $StreamName) 设置流名称。如果只绑定域名或路径，则此处填空。
  * @method integer getTemplateId() 获取指定已有的模板Id。
  * @method void setTemplateId(integer $TemplateId) 设置指定已有的模板Id。
- */
-
-/**
- *CreateLiveTranscodeRule请求参数结构体
  */
 class CreateLiveTranscodeRuleRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateLiveTranscodeRuleRequest extends AbstractModel
      * @var integer 指定已有的模板Id。
      */
     public $TemplateId;
+
     /**
      * @param string $DomainName 播放域名。
      * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填空。
@@ -62,6 +61,7 @@ class CreateLiveTranscodeRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

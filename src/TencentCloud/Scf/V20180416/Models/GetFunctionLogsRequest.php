@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetFunctionLogs请求参数结构体
+ *
  * @method string getFunctionName() 获取函数的名称
  * @method void setFunctionName(string $FunctionName) 设置函数的名称
  * @method integer getOffset() 获取数据的偏移量，Offset+Limit不能大于10000
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置查询的具体日期，例如：2017-05-16 20:59:59，只能与startTime相差一天之内
  * @method LogSearchContext getSearchContext() 获取服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
  * @method void setSearchContext(LogSearchContext $SearchContext) 设置服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
- */
-
-/**
- *GetFunctionLogs请求参数结构体
  */
 class GetFunctionLogsRequest extends AbstractModel
 {
@@ -108,6 +106,7 @@ class GetFunctionLogsRequest extends AbstractModel
      * @var LogSearchContext 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
      */
     public $SearchContext;
+
     /**
      * @param string $FunctionName 函数的名称
      * @param integer $Offset 数据的偏移量，Offset+Limit不能大于10000
@@ -126,6 +125,7 @@ class GetFunctionLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

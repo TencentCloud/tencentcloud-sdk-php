@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 高危命令数据
+ *
  * @method integer getId() 获取ID
  * @method void setId(integer $Id) 设置ID
  * @method string getUuid() 获取云镜ID
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置发生时间
  * @method string getMachineName() 获取主机名
  * @method void setMachineName(string $MachineName) 设置主机名
- */
-
-/**
- *高危命令数据
  */
 class BashEvent extends AbstractModel
 {
@@ -115,6 +113,7 @@ class BashEvent extends AbstractModel
      * @var string 主机名
      */
     public $MachineName;
+
     /**
      * @param integer $Id ID
      * @param string $Uuid 云镜ID
@@ -134,6 +133,7 @@ class BashEvent extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

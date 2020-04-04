@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RevokeMemberRechargeThirdPay请求参数结构体
+ *
  * @method string getOldFillFrontSeqNo() 获取STRING(52)，原充值的前置流水号
  * @method void setOldFillFrontSeqNo(string $OldFillFrontSeqNo) 设置STRING(52)，原充值的前置流水号
  * @method string getOldFillPayChannelType() 获取STRING(20)，原充值的支付渠道类型
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReservedMsgTwo(string $ReservedMsgTwo) 设置STRING(300)，保留域2
  * @method string getReservedMsgThree() 获取STRING(300)，保留域3
  * @method void setReservedMsgThree(string $ReservedMsgThree) 设置STRING(300)，保留域3
- */
-
-/**
- *RevokeMemberRechargeThirdPay请求参数结构体
  */
 class RevokeMemberRechargeThirdPayRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class RevokeMemberRechargeThirdPayRequest extends AbstractModel
      * @var string STRING(300)，保留域3
      */
     public $ReservedMsgThree;
+
     /**
      * @param string $OldFillFrontSeqNo STRING(52)，原充值的前置流水号
      * @param string $OldFillPayChannelType STRING(20)，原充值的支付渠道类型
@@ -118,6 +117,7 @@ class RevokeMemberRechargeThirdPayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用于描述实例相关的信息。
+ *
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
  * @method string getInstanceName() 获取实例名称，如ens-34241f3s。
@@ -144,10 +146,6 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataDisks(array $DataDisks) 设置数据盘信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *用于描述实例相关的信息。
  */
 class Instance extends AbstractModel
 {
@@ -305,6 +303,7 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataDisks;
+
     /**
      * @param string $InstanceId 实例ID。
      * @param string $InstanceName 实例名称，如ens-34241f3s。
@@ -374,6 +373,7 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

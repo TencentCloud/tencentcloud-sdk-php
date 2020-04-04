@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AssignIpv6Addresses返回参数结构体
+ *
  * @method array getIpv6AddressSet() 获取分配给弹性网卡的`IPv6`地址列表。
  * @method void setIpv6AddressSet(array $Ipv6AddressSet) 设置分配给弹性网卡的`IPv6`地址列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *AssignIpv6Addresses返回参数结构体
  */
 class AssignIpv6AddressesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AssignIpv6AddressesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Ipv6AddressSet 分配给弹性网卡的`IPv6`地址列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class AssignIpv6AddressesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

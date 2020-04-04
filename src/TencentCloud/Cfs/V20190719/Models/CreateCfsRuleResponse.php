@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCfsRule返回参数结构体
+ *
  * @method string getRuleId() 获取规则 ID
  * @method void setRuleId(string $RuleId) 设置规则 ID
  * @method string getPGroupId() 获取权限组 ID
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPriority(integer $Priority) 设置优先级
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateCfsRule返回参数结构体
  */
 class CreateCfsRuleResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateCfsRuleResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $RuleId 规则 ID
      * @param string $PGroupId 权限组 ID
@@ -86,6 +85,7 @@ class CreateCfsRuleResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

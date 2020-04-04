@@ -18,14 +18,12 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyCustomerGatewayAttribute请求参数结构体
+ *
  * @method string getCustomerGatewayId() 获取对端网关ID，例如：bmcgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
  * @method void setCustomerGatewayId(string $CustomerGatewayId) 设置对端网关ID，例如：bmcgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
  * @method string getCustomerGatewayName() 获取对端网关名称，可任意命名，但不得超过60个字符。
  * @method void setCustomerGatewayName(string $CustomerGatewayName) 设置对端网关名称，可任意命名，但不得超过60个字符。
- */
-
-/**
- *ModifyCustomerGatewayAttribute请求参数结构体
  */
 class ModifyCustomerGatewayAttributeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyCustomerGatewayAttributeRequest extends AbstractModel
      * @var string 对端网关名称，可任意命名，但不得超过60个字符。
      */
     public $CustomerGatewayName;
+
     /**
      * @param string $CustomerGatewayId 对端网关ID，例如：bmcgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
      * @param string $CustomerGatewayName 对端网关名称，可任意命名，但不得超过60个字符。
@@ -46,6 +45,7 @@ class ModifyCustomerGatewayAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

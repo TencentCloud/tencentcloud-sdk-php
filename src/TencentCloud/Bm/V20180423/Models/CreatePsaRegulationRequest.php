@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePsaRegulation请求参数结构体
+ *
  * @method string getPsaName() 获取规则别名
  * @method void setPsaName(string $PsaName) 设置规则别名
  * @method array getTaskTypeIds() 获取关联的故障类型ID列表
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRepairLimit(integer $RepairLimit) 设置维修实例上限，默认为5
  * @method string getPsaDescription() 获取规则备注
  * @method void setPsaDescription(string $PsaDescription) 设置规则备注
- */
-
-/**
- *CreatePsaRegulation请求参数结构体
  */
 class CreatePsaRegulationRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreatePsaRegulationRequest extends AbstractModel
      * @var string 规则备注
      */
     public $PsaDescription;
+
     /**
      * @param string $PsaName 规则别名
      * @param array $TaskTypeIds 关联的故障类型ID列表
@@ -62,6 +61,7 @@ class CreatePsaRegulationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

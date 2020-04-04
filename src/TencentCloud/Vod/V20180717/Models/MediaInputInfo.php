@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 要处理的源视频信息，视频名称、视频自定义 ID。
+ *
  * @method string getUrl() 获取视频 URL。
  * @method void setUrl(string $Url) 设置视频 URL。
  * @method string getName() 获取视频名称。
  * @method void setName(string $Name) 设置视频名称。
  * @method string getId() 获取视频自定义 ID。
  * @method void setId(string $Id) 设置视频自定义 ID。
- */
-
-/**
- *要处理的源视频信息，视频名称、视频自定义 ID。
  */
 class MediaInputInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MediaInputInfo extends AbstractModel
      * @var string 视频自定义 ID。
      */
     public $Id;
+
     /**
      * @param string $Url 视频 URL。
      * @param string $Name 视频名称。
@@ -54,6 +53,7 @@ class MediaInputInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

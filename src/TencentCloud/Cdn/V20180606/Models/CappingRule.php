@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 下行限速配置规则，最多可配置 100 条
+ *
  * @method string getRuleType() 获取规则类型：
 all：所有文件生效
 file：指定文件后缀生效
@@ -40,10 +42,6 @@ directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
  * @method integer getKBpsThreshold() 获取下行速度值设置，单位为 KB/s
  * @method void setKBpsThreshold(integer $KBpsThreshold) 设置下行速度值设置，单位为 KB/s
- */
-
-/**
- *下行限速配置规则，最多可配置 100 条
  */
 class CappingRule extends AbstractModel
 {
@@ -69,6 +67,7 @@ path 时填充绝对路径，如 /xxx/test.html
      * @var integer 下行速度值设置，单位为 KB/s
      */
     public $KBpsThreshold;
+
     /**
      * @param string $RuleType 规则类型：
 all：所有文件生效
@@ -86,6 +85,7 @@ path 时填充绝对路径，如 /xxx/test.html
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

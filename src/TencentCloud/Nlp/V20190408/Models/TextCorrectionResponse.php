@@ -18,16 +18,14 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TextCorrection返回参数结构体
+ *
  * @method array getCCITokens() 获取纠错详情
  * @method void setCCITokens(array $CCITokens) 设置纠错详情
  * @method string getResultText() 获取纠错后的文本
  * @method void setResultText(string $ResultText) 设置纠错后的文本
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *TextCorrection返回参数结构体
  */
 class TextCorrectionResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class TextCorrectionResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $CCITokens 纠错详情
      * @param string $ResultText 纠错后的文本
@@ -54,6 +53,7 @@ class TextCorrectionResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

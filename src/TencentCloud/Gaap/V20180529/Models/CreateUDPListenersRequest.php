@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateUDPListeners请求参数结构体
+ *
  * @method string getListenerName() 获取监听器名称
  * @method void setListenerName(string $ListenerName) 设置监听器名称
  * @method array getPorts() 获取监听器端口列表
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
  * @method array getRealServerPorts() 获取源站端口列表，该参数仅支持v1版本监听器和通道组监听器
  * @method void setRealServerPorts(array $RealServerPorts) 设置源站端口列表，该参数仅支持v1版本监听器和通道组监听器
- */
-
-/**
- *CreateUDPListeners请求参数结构体
  */
 class CreateUDPListenersRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateUDPListenersRequest extends AbstractModel
      * @var array 源站端口列表，该参数仅支持v1版本监听器和通道组监听器
      */
     public $RealServerPorts;
+
     /**
      * @param string $ListenerName 监听器名称
      * @param array $Ports 监听器端口列表
@@ -86,6 +85,7 @@ class CreateUDPListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

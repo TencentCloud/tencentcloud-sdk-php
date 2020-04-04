@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 部署组实例列表
+ *
  * @method string getPodName() 获取实例名称(对应到kubernetes的pod名称)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodName(string $PodName) 设置实例名称(对应到kubernetes的pod名称)
@@ -70,10 +72,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceStatus(string $InstanceStatus) 设置机器实例状态
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *部署组实例列表
  */
 class GroupPod extends AbstractModel
 {
@@ -154,6 +152,7 @@ class GroupPod extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceStatus;
+
     /**
      * @param string $PodName 实例名称(对应到kubernetes的pod名称)
 注意：此字段可能返回 null，表示取不到有效值。
@@ -186,6 +185,7 @@ class GroupPod extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

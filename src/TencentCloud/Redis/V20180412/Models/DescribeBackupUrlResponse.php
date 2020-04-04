@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupUrl返回参数结构体
+ *
  * @method array getDownloadUrl() 获取外网下载地址（6小时）
  * @method void setDownloadUrl(array $DownloadUrl) 设置外网下载地址（6小时）
  * @method array getInnerDownloadUrl() 获取内网下载地址（6小时）
  * @method void setInnerDownloadUrl(array $InnerDownloadUrl) 设置内网下载地址（6小时）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeBackupUrl返回参数结构体
  */
 class DescribeBackupUrlResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeBackupUrlResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $DownloadUrl 外网下载地址（6小时）
      * @param array $InnerDownloadUrl 内网下载地址（6小时）
@@ -54,6 +53,7 @@ class DescribeBackupUrlResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

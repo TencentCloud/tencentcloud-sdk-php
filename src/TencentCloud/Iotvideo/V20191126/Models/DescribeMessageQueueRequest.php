@@ -18,12 +18,10 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMessageQueue请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
- */
-
-/**
- *DescribeMessageQueue请求参数结构体
  */
 class DescribeMessageQueueRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeMessageQueueRequest extends AbstractModel
      * @var string 产品ID
      */
     public $ProductId;
+
     /**
      * @param string $ProductId 产品ID
      */
@@ -38,6 +37,7 @@ class DescribeMessageQueueRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

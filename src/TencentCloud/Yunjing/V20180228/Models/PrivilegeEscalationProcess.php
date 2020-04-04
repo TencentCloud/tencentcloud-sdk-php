@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 本地提权数据
+ *
  * @method integer getId() 获取数据ID
  * @method void setId(integer $Id) 设置数据ID
  * @method string getUuid() 获取云镜ID
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置发生时间
  * @method string getMachineName() 获取机器名
  * @method void setMachineName(string $MachineName) 设置机器名
- */
-
-/**
- *本地提权数据
  */
 class PrivilegeEscalationProcess extends AbstractModel
 {
@@ -150,6 +148,7 @@ class PrivilegeEscalationProcess extends AbstractModel
      * @var string 机器名
      */
     public $MachineName;
+
     /**
      * @param integer $Id 数据ID
      * @param string $Uuid 云镜ID
@@ -174,6 +173,7 @@ class PrivilegeEscalationProcess extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

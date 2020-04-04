@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 集群master自定义参数
+ *
  * @method array getKubeAPIServer() 获取kube-apiserver自定义参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKubeAPIServer(array $KubeAPIServer) 设置kube-apiserver自定义参数
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKubeScheduler(array $KubeScheduler) 设置kube-scheduler自定义参数
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *集群master自定义参数
  */
 class ClusterExtraArgs extends AbstractModel
 {
@@ -54,6 +52,7 @@ class ClusterExtraArgs extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KubeScheduler;
+
     /**
      * @param array $KubeAPIServer kube-apiserver自定义参数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class ClusterExtraArgs extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

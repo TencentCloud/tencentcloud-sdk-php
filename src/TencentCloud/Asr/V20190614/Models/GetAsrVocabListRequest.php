@@ -18,14 +18,13 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetAsrVocabList请求参数结构体
+ *
 
- */
-
-/**
- *GetAsrVocabList请求参数结构体
  */
 class GetAsrVocabListRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class GetAsrVocabListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

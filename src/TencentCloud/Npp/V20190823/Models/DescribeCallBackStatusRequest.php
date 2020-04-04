@@ -18,6 +18,8 @@ namespace TencentCloud\Npp\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCallBackStatus请求参数结构体
+ *
  * @method string getBizAppId() 获取业务appid
  * @method void setBizAppId(string $BizAppId) 设置业务appid
  * @method string getCallId() 获取回拨请求响应中返回的 callId
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDst(string $Dst) 设置被叫号码
  * @method string getCallStatus() 获取通话最后状态：0：未知状态 1：主叫响铃中 2：主叫接听 3：被叫响铃中 4：正常通话中 5：通话结束
  * @method void setCallStatus(string $CallStatus) 设置通话最后状态：0：未知状态 1：主叫响铃中 2：主叫接听 3：被叫响铃中 4：正常通话中 5：通话结束
- */
-
-/**
- *DescribeCallBackStatus请求参数结构体
  */
 class DescribeCallBackStatusRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeCallBackStatusRequest extends AbstractModel
      * @var string 通话最后状态：0：未知状态 1：主叫响铃中 2：主叫接听 3：被叫响铃中 4：正常通话中 5：通话结束
      */
     public $CallStatus;
+
     /**
      * @param string $BizAppId 业务appid
      * @param string $CallId 回拨请求响应中返回的 callId
@@ -70,6 +69,7 @@ class DescribeCallBackStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAnimatedGraphicsTemplates请求参数结构体
+ *
  * @method array getDefinitions() 获取转动图模板唯一标识过滤条件，数组长度限制：100。
  * @method void setDefinitions(array $Definitions) 设置转动图模板唯一标识过滤条件，数组长度限制：100。
  * @method integer getOffset() 获取分页偏移量，默认值：0。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Custom：用户自定义模板。</li>
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *DescribeAnimatedGraphicsTemplates请求参数结构体
  */
 class DescribeAnimatedGraphicsTemplatesRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ class DescribeAnimatedGraphicsTemplatesRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param array $Definitions 转动图模板唯一标识过滤条件，数组长度限制：100。
      * @param integer $Offset 分页偏移量，默认值：0。
@@ -78,6 +77,7 @@ class DescribeAnimatedGraphicsTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 加固后app的信息
+ *
  * @method integer getShieldCode() 获取加固结果的返回码
  * @method void setShieldCode(integer $ShieldCode) 设置加固结果的返回码
  * @method integer getShieldSize() 获取加固后app的大小
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItemId(string $ItemId) 设置任务唯一标识
  * @method string getServiceEdition() 获取加固版本，basic基础版，professional专业版，enterprise企业版
  * @method void setServiceEdition(string $ServiceEdition) 设置加固版本，basic基础版，professional专业版，enterprise企业版
- */
-
-/**
- *加固后app的信息
  */
 class ShieldInfo extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ShieldInfo extends AbstractModel
      * @var string 加固版本，basic基础版，professional专业版，enterprise企业版
      */
     public $ServiceEdition;
+
     /**
      * @param integer $ShieldCode 加固结果的返回码
      * @param integer $ShieldSize 加固后app的大小
@@ -86,6 +85,7 @@ class ShieldInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

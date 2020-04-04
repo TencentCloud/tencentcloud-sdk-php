@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstances请求参数结构体
+ *
  * @method array getInstanceIds() 获取实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method integer getInstanceType() 获取实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectIds(array $ProjectIds) 设置项目 ID
  * @method string getSearchKey() 获取搜索关键词，支持实例Id、实例名称、完整IP
  * @method void setSearchKey(string $SearchKey) 设置搜索关键词，支持实例Id、实例名称、完整IP
- */
-
-/**
- *DescribeDBInstances请求参数结构体
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -115,6 +113,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @var string 搜索关键词，支持实例Id、实例名称、完整IP
      */
     public $SearchKey;
+
     /**
      * @param array $InstanceIds 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      * @param integer $InstanceType 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
@@ -134,6 +133,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

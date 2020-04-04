@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音全文识别片段。
+ *
  * @method float getConfidence() 获取识别片段置信度。取值：0~100。
  * @method void setConfidence(float $Confidence) 设置识别片段置信度。取值：0~100。
  * @method float getStartTimeOffset() 获取识别片段起始的偏移时间，单位：秒。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置识别片段终止的偏移时间，单位：秒。
  * @method string getText() 获取识别文本。
  * @method void setText(string $Text) 设置识别文本。
- */
-
-/**
- *语音全文识别片段。
  */
 class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel
      * @var string 识别文本。
      */
     public $Text;
+
     /**
      * @param float $Confidence 识别片段置信度。取值：0~100。
      * @param float $StartTimeOffset 识别片段起始的偏移时间，单位：秒。
@@ -62,6 +61,7 @@ class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

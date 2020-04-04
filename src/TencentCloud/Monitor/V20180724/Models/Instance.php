@@ -18,12 +18,10 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例维度组合数组
+ *
  * @method array getDimensions() 获取实例的维度组合
  * @method void setDimensions(array $Dimensions) 设置实例的维度组合
- */
-
-/**
- *实例维度组合数组
  */
 class Instance extends AbstractModel
 {
@@ -31,6 +29,7 @@ class Instance extends AbstractModel
      * @var array 实例的维度组合
      */
     public $Dimensions;
+
     /**
      * @param array $Dimensions 实例的维度组合
      */
@@ -38,6 +37,7 @@ class Instance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

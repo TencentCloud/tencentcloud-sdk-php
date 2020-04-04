@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取短信模板信息响应
+ *
  * @method integer getTemplateId() 获取模板Id
  * @method void setTemplateId(integer $TemplateId) 设置模板Id
  * @method integer getInternational() 获取是否国际/港澳台短信：
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateName(string $TemplateName) 设置模板名称。
  * @method integer getCreateTime() 获取提交审核时间，UNIX 时间戳（单位：秒）。
  * @method void setCreateTime(integer $CreateTime) 设置提交审核时间，UNIX 时间戳（单位：秒）。
- */
-
-/**
- *获取短信模板信息响应
  */
 class DescribeTemplateListStatus extends AbstractModel
 {
@@ -78,6 +76,7 @@ class DescribeTemplateListStatus extends AbstractModel
      * @var integer 提交审核时间，UNIX 时间戳（单位：秒）。
      */
     public $CreateTime;
+
     /**
      * @param integer $TemplateId 模板Id
      * @param integer $International 是否国际/港澳台短信：
@@ -94,6 +93,7 @@ class DescribeTemplateListStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

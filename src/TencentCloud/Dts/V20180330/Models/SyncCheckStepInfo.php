@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 灾备任务校验步骤
+ *
  * @method integer getStepNo() 获取步骤序列
  * @method void setStepNo(integer $StepNo) 设置步骤序列
  * @method string getStepName() 获取步骤展现名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStepCode(integer $StepCode) 设置步骤执行结果代码
  * @method string getStepMessage() 获取步骤执行结果提示
  * @method void setStepMessage(string $StepMessage) 设置步骤执行结果提示
- */
-
-/**
- *灾备任务校验步骤
  */
 class SyncCheckStepInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SyncCheckStepInfo extends AbstractModel
      * @var string 步骤执行结果提示
      */
     public $StepMessage;
+
     /**
      * @param integer $StepNo 步骤序列
      * @param string $StepName 步骤展现名称
@@ -62,6 +61,7 @@ class SyncCheckStepInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

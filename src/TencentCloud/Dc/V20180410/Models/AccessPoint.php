@@ -18,6 +18,8 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 接入点信息。
+ *
  * @method string getAccessPointName() 获取接入点的名称。
  * @method void setAccessPointName(string $AccessPointName) 设置接入点的名称。
  * @method string getAccessPointId() 获取接入点唯一ID。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLineOperator(array $LineOperator) 设置接入点支持的运营商列表。
  * @method string getRegionId() 获取接入点管理的大区ID。
  * @method void setRegionId(string $RegionId) 设置接入点管理的大区ID。
- */
-
-/**
- *接入点信息。
  */
 class AccessPoint extends AbstractModel
 {
@@ -66,6 +64,7 @@ class AccessPoint extends AbstractModel
      * @var string 接入点管理的大区ID。
      */
     public $RegionId;
+
     /**
      * @param string $AccessPointName 接入点的名称。
      * @param string $AccessPointId 接入点唯一ID。
@@ -78,6 +77,7 @@ class AccessPoint extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

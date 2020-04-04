@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 待查询四层监听器绑定的主机信息。
+ *
  * @method integer getPort() 获取待绑定的主机端口，可选值1~65535。
  * @method void setPort(integer $Port) 设置待绑定的主机端口，可选值1~65535。
  * @method string getInstanceId() 获取黑石物理机的主机ID。
  * @method void setInstanceId(string $InstanceId) 设置黑石物理机的主机ID。
- */
-
-/**
- *待查询四层监听器绑定的主机信息。
  */
 class DescribeL4Backend extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeL4Backend extends AbstractModel
      * @var string 黑石物理机的主机ID。
      */
     public $InstanceId;
+
     /**
      * @param integer $Port 待绑定的主机端口，可选值1~65535。
      * @param string $InstanceId 黑石物理机的主机ID。
@@ -46,6 +45,7 @@ class DescribeL4Backend extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 操作系统类型
+ *
  * @method integer getOsTypeId() 获取操作系统ID。
  * @method void setOsTypeId(integer $OsTypeId) 设置操作系统ID。
  * @method string getOsName() 获取操作系统名称。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageTag(string $ImageTag) 设置标识镜像分类。public:公共镜像; private: 专属镜像。
  * @method integer getMaxPartitionSize() 获取操作系统，ext4文件下所支持的最大的磁盘大小。单位为T。
  * @method void setMaxPartitionSize(integer $MaxPartitionSize) 设置操作系统，ext4文件下所支持的最大的磁盘大小。单位为T。
- */
-
-/**
- *操作系统类型
  */
 class OsInfo extends AbstractModel
 {
@@ -73,6 +71,7 @@ class OsInfo extends AbstractModel
      * @var integer 操作系统，ext4文件下所支持的最大的磁盘大小。单位为T。
      */
     public $MaxPartitionSize;
+
     /**
      * @param integer $OsTypeId 操作系统ID。
      * @param string $OsName 操作系统名称。
@@ -86,6 +85,7 @@ class OsInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

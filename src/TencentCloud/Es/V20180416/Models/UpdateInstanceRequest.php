@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getInstanceName() 获取实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
@@ -66,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKibanaPublicAccess(string $KibanaPublicAccess) 设置Kibana公网访问状态
  * @method string getKibanaPrivateAccess() 获取Kibana内网访问状态
  * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) 设置Kibana内网访问状态
- */
-
-/**
- *UpdateInstance请求参数结构体
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -168,6 +166,7 @@ class UpdateInstanceRequest extends AbstractModel
      * @var string Kibana内网访问状态
      */
     public $KibanaPrivateAccess;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
@@ -198,6 +197,7 @@ class UpdateInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

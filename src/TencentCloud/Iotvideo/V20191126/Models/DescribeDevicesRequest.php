@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDevices请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method boolean getReturnModel() 获取是否返回全量数据
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOtaVersion(string $OtaVersion) 设置指定固件版本号，为空查询此产品下所有设备
  * @method string getDeviceName() 获取设备名称，支持左前缀模糊匹配
  * @method void setDeviceName(string $DeviceName) 设置设备名称，支持左前缀模糊匹配
- */
-
-/**
- *DescribeDevices请求参数结构体
  */
 class DescribeDevicesRequest extends AbstractModel
 {
@@ -69,6 +67,7 @@ class DescribeDevicesRequest extends AbstractModel
      * @var string 设备名称，支持左前缀模糊匹配
      */
     public $DeviceName;
+
     /**
      * @param string $ProductId 产品ID
      * @param boolean $ReturnModel 是否返回全量数据
@@ -82,6 +81,7 @@ class DescribeDevicesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

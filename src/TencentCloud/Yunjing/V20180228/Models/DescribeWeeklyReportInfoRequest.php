@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWeeklyReportInfo请求参数结构体
+ *
  * @method string getBeginDate() 获取专业周报开始时间。
  * @method void setBeginDate(string $BeginDate) 设置专业周报开始时间。
- */
-
-/**
- *DescribeWeeklyReportInfo请求参数结构体
  */
 class DescribeWeeklyReportInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeWeeklyReportInfoRequest extends AbstractModel
      * @var string 专业周报开始时间。
      */
     public $BeginDate;
+
     /**
      * @param string $BeginDate 专业周报开始时间。
      */
@@ -38,6 +37,7 @@ class DescribeWeeklyReportInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

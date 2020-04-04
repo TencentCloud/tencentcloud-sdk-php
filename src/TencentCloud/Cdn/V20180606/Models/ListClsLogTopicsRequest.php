@@ -18,12 +18,10 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListClsLogTopics请求参数结构体
+ *
  * @method string getChannel() 获取接入渠道，默认值为cdn
  * @method void setChannel(string $Channel) 设置接入渠道，默认值为cdn
- */
-
-/**
- *ListClsLogTopics请求参数结构体
  */
 class ListClsLogTopicsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ListClsLogTopicsRequest extends AbstractModel
      * @var string 接入渠道，默认值为cdn
      */
     public $Channel;
+
     /**
      * @param string $Channel 接入渠道，默认值为cdn
      */
@@ -38,6 +37,7 @@ class ListClsLogTopicsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

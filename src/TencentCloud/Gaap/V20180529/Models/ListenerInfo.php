@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内部接口使用，返回可以查询统计数据的监听器信息
+ *
  * @method string getListenerId() 获取监听器ID
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getListenerName() 获取监听器名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) 设置监听器监听端口
  * @method string getProtocol() 获取监听器协议类型
  * @method void setProtocol(string $Protocol) 设置监听器协议类型
- */
-
-/**
- *内部接口使用，返回可以查询统计数据的监听器信息
  */
 class ListenerInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ListenerInfo extends AbstractModel
      * @var string 监听器协议类型
      */
     public $Protocol;
+
     /**
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
@@ -62,6 +61,7 @@ class ListenerInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

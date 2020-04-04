@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDeviceDataHistory请求参数结构体
+ *
  * @method integer getMinTime() 获取区间开始时间（Unix 时间戳，毫秒级）
  * @method void setMinTime(integer $MinTime) 设置区间开始时间（Unix 时间戳，毫秒级）
  * @method integer getMaxTime() 获取区间结束时间（Unix 时间戳，毫秒级）
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回条数
  * @method string getContext() 获取检索上下文
  * @method void setContext(string $Context) 设置检索上下文
- */
-
-/**
- *DescribeDeviceDataHistory请求参数结构体
  */
 class DescribeDeviceDataHistoryRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeDeviceDataHistoryRequest extends AbstractModel
      * @var string 检索上下文
      */
     public $Context;
+
     /**
      * @param integer $MinTime 区间开始时间（Unix 时间戳，毫秒级）
      * @param integer $MaxTime 区间结束时间（Unix 时间戳，毫秒级）
@@ -86,6 +85,7 @@ class DescribeDeviceDataHistoryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

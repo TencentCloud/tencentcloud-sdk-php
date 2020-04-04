@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 绑定到 COS 的输入规则。
+ *
  * @method string getBucket() 获取工作流绑定的 COS Bucket 名，如 TopRankVideo-125xxx88。
  * @method void setBucket(string $Bucket) 设置工作流绑定的 COS Bucket 名，如 TopRankVideo-125xxx88。
  * @method string getRegion() 获取工作流绑定的 COS Bucket 所属园区，如 ap-chongiqng。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDir(string $Dir) 设置工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。
  * @method array getFormats() 获取工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。
  * @method void setFormats(array $Formats) 设置工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。
- */
-
-/**
- *绑定到 COS 的输入规则。
  */
 class CosFileUploadTrigger extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CosFileUploadTrigger extends AbstractModel
      * @var array 工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。
      */
     public $Formats;
+
     /**
      * @param string $Bucket 工作流绑定的 COS Bucket 名，如 TopRankVideo-125xxx88。
      * @param string $Region 工作流绑定的 COS Bucket 所属园区，如 ap-chongiqng。
@@ -62,6 +61,7 @@ class CosFileUploadTrigger extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

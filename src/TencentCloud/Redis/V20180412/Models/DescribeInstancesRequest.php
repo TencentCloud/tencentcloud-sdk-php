@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstances请求参数结构体
+ *
  * @method integer getLimit() 获取实例列表的大小，参数默认值20
  * @method void setLimit(integer $Limit) 设置实例列表的大小，参数默认值20
  * @method integer getOffset() 获取偏移量，取Limit整数倍
@@ -60,10 +62,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchKeys(array $SearchKeys) 设置搜索关键词：支持实例Id、实例名称、完整IP
  * @method array getTypeList() 获取内部参数，用户可忽略
  * @method void setTypeList(array $TypeList) 设置内部参数，用户可忽略
- */
-
-/**
- *DescribeInstances请求参数结构体
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -171,6 +169,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @var array 内部参数，用户可忽略
      */
     public $TypeList;
+
     /**
      * @param integer $Limit 实例列表的大小，参数默认值20
      * @param integer $Offset 偏移量，取Limit整数倍
@@ -198,6 +197,7 @@ class DescribeInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IgnoreImpactedHosts请求参数结构体
+ *
  * @method array getIds() 获取漏洞ID数组。
  * @method void setIds(array $Ids) 设置漏洞ID数组。
- */
-
-/**
- *IgnoreImpactedHosts请求参数结构体
  */
 class IgnoreImpactedHostsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class IgnoreImpactedHostsRequest extends AbstractModel
      * @var array 漏洞ID数组。
      */
     public $Ids;
+
     /**
      * @param array $Ids 漏洞ID数组。
      */
@@ -38,6 +37,7 @@ class IgnoreImpactedHostsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

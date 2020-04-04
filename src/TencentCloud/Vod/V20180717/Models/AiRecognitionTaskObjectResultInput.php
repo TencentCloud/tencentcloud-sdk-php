@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 物体识别任务输入类型。
+ *
  * @method integer getDefinition() 获取物体识别模板 ID。
  * @method void setDefinition(integer $Definition) 设置物体识别模板 ID。
- */
-
-/**
- *物体识别任务输入类型。
  */
 class AiRecognitionTaskObjectResultInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskObjectResultInput extends AbstractModel
      * @var integer 物体识别模板 ID。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 物体识别模板 ID。
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskObjectResultInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

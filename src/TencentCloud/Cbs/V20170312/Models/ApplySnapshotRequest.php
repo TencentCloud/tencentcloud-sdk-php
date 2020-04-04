@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ApplySnapshot请求参数结构体
+ *
  * @method string getSnapshotId() 获取快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
  * @method void setSnapshotId(string $SnapshotId) 设置快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
  * @method string getDiskId() 获取快照原云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
  * @method void setDiskId(string $DiskId) 设置快照原云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
- */
-
-/**
- *ApplySnapshot请求参数结构体
  */
 class ApplySnapshotRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ApplySnapshotRequest extends AbstractModel
      * @var string 快照原云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
     public $DiskId;
+
     /**
      * @param string $SnapshotId 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
      * @param string $DiskId 快照原云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
@@ -46,6 +45,7 @@ class ApplySnapshotRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

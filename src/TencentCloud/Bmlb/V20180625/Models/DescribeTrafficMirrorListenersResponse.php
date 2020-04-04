@@ -18,16 +18,14 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTrafficMirrorListeners返回参数结构体
+ *
  * @method array getListenerSet() 获取监听器列表。
  * @method void setListenerSet(array $ListenerSet) 设置监听器列表。
  * @method integer getTotalCount() 获取监听器总数。
  * @method void setTotalCount(integer $TotalCount) 设置监听器总数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeTrafficMirrorListeners返回参数结构体
  */
 class DescribeTrafficMirrorListenersResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTrafficMirrorListenersResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $ListenerSet 监听器列表。
      * @param integer $TotalCount 监听器总数。
@@ -54,6 +53,7 @@ class DescribeTrafficMirrorListenersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

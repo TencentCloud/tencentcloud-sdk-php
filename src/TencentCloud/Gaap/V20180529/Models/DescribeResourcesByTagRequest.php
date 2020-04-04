@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeResourcesByTag请求参数结构体
+ *
  * @method string getTagKey() 获取标签键。
  * @method void setTagKey(string $TagKey) 设置标签键。
  * @method string getTagValue() 获取标签值。
@@ -32,10 +34,6 @@ Proxy表示通道；
 ProxyGroup表示通道组；
 RealServer表示源站。
 不指定该字段则查询该标签下所有资源。
- */
-
-/**
- *DescribeResourcesByTag请求参数结构体
  */
 class DescribeResourcesByTagRequest extends AbstractModel
 {
@@ -57,6 +55,7 @@ RealServer表示源站。
 不指定该字段则查询该标签下所有资源。
      */
     public $ResourceType;
+
     /**
      * @param string $TagKey 标签键。
      * @param string $TagValue 标签值。
@@ -70,6 +69,7 @@ RealServer表示源站。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 需要删除的镜像版本
+ *
  * @method string getRepoName() 获取仓库名，如/tsf/nginx
  * @method void setRepoName(string $RepoName) 设置仓库名，如/tsf/nginx
  * @method string getTagName() 获取版本号:如V1
  * @method void setTagName(string $TagName) 设置版本号:如V1
- */
-
-/**
- *需要删除的镜像版本
  */
 class DeleteImageTag extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteImageTag extends AbstractModel
      * @var string 版本号:如V1
      */
     public $TagName;
+
     /**
      * @param string $RepoName 仓库名，如/tsf/nginx
      * @param string $TagName 版本号:如V1
@@ -46,6 +45,7 @@ class DeleteImageTag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

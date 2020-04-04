@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeIdlFileInfos请求参数结构体
+ *
  * @method string getClusterId() 获取文件所属集群ID
  * @method void setClusterId(string $ClusterId) 设置文件所属集群ID
  * @method array getTableGroupIds() 获取文件所属表格组ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询列表偏移量
  * @method integer getLimit() 获取查询列表返回记录数
  * @method void setLimit(integer $Limit) 设置查询列表返回记录数
- */
-
-/**
- *DescribeIdlFileInfos请求参数结构体
  */
 class DescribeIdlFileInfosRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeIdlFileInfosRequest extends AbstractModel
      * @var integer 查询列表返回记录数
      */
     public $Limit;
+
     /**
      * @param string $ClusterId 文件所属集群ID
      * @param array $TableGroupIds 文件所属表格组ID
@@ -70,6 +69,7 @@ class DescribeIdlFileInfosRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

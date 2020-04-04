@@ -18,12 +18,10 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetPolicy请求参数结构体
+ *
  * @method integer getPolicyId() 获取策略Id
  * @method void setPolicyId(integer $PolicyId) 设置策略Id
- */
-
-/**
- *GetPolicy请求参数结构体
  */
 class GetPolicyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetPolicyRequest extends AbstractModel
      * @var integer 策略Id
      */
     public $PolicyId;
+
     /**
      * @param integer $PolicyId 策略Id
      */
@@ -38,6 +37,7 @@ class GetPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

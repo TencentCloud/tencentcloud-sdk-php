@@ -18,6 +18,8 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyFairPlayPem请求参数结构体
+ *
  * @method string getPem() 获取加密后的fairplay方案申请时使用的私钥。
 请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对私钥文件中的字段进行加密，并对加密结果进行base64编码。
  * @method void setPem(string $Pem) 设置加密后的fairplay方案申请时使用的私钥。
@@ -40,10 +42,6 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
 该值可以不传，后台将自动分配一个优先级。
  * @method void setPriority(integer $Priority) 设置私钥的优先级，优先级数值越高，优先级越高。
 该值可以不传，后台将自动分配一个优先级。
- */
-
-/**
- *ModifyFairPlayPem请求参数结构体
  */
 class ModifyFairPlayPemRequest extends AbstractModel
 {
@@ -81,6 +79,7 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
 该值可以不传，后台将自动分配一个优先级。
      */
     public $Priority;
+
     /**
      * @param string $Pem 加密后的fairplay方案申请时使用的私钥。
 请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对私钥文件中的字段进行加密，并对加密结果进行base64编码。
@@ -98,6 +97,7 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

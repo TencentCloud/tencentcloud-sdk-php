@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyContentReviewTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取内容审核模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置内容审核模板唯一标识。
  * @method string getName() 获取内容审核模板名称，长度限制：64 个字符。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此参数尚未支持。
  * @method UserDefineConfigureInfoForUpdate getUserDefineConfigure() 获取用户自定义内容审核控制参数。
  * @method void setUserDefineConfigure(UserDefineConfigureInfoForUpdate $UserDefineConfigure) 设置用户自定义内容审核控制参数。
- */
-
-/**
- *ModifyContentReviewTemplate请求参数结构体
  */
 class ModifyContentReviewTemplateRequest extends AbstractModel
 {
@@ -89,6 +87,7 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
      * @var UserDefineConfigureInfoForUpdate 用户自定义内容审核控制参数。
      */
     public $UserDefineConfigure;
+
     /**
      * @param integer $Definition 内容审核模板唯一标识。
      * @param string $Name 内容审核模板名称，长度限制：64 个字符。
@@ -106,6 +105,7 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

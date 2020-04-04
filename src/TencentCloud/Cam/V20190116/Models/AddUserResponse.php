@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddUser返回参数结构体
+ *
  * @method integer getUin() 获取子用户 UIN
  * @method void setUin(integer $Uin) 设置子用户 UIN
  * @method string getName() 获取子用户用户名
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUid(integer $Uid) 设置子用户 UID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *AddUser返回参数结构体
  */
 class AddUserResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class AddUserResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Uin 子用户 UIN
      * @param string $Name 子用户用户名
@@ -86,6 +85,7 @@ class AddUserResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CheckSimilarPerson请求参数结构体
+ *
  * @method array getGroupIds() 获取待整理的人员库列表。 
 人员库总人数不可超过200万，人员库个数不可超过10个。
  * @method void setGroupIds(array $GroupIds) 设置待整理的人员库列表。 
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 1：宽松的同一人要求； 
 2：严格的同一人要求。  
 注： 要求越高，则疑似同一人的概率越小。
- */
-
-/**
- *CheckSimilarPerson请求参数结构体
  */
 class CheckSimilarPersonRequest extends AbstractModel
 {
@@ -50,6 +48,7 @@ class CheckSimilarPersonRequest extends AbstractModel
 注： 要求越高，则疑似同一人的概率越小。
      */
     public $UniquePersonControl;
+
     /**
      * @param array $GroupIds 待整理的人员库列表。 
 人员库总人数不可超过200万，人员库个数不可超过10个。
@@ -62,6 +61,7 @@ class CheckSimilarPersonRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

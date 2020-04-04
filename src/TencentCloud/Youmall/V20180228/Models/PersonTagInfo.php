@@ -18,16 +18,14 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 修改顾客属性参数
+ *
  * @method integer getOldType() 获取顾客原类型
  * @method void setOldType(integer $OldType) 设置顾客原类型
  * @method integer getNewType() 获取顾客新类型
  * @method void setNewType(integer $NewType) 设置顾客新类型
  * @method integer getPersonId() 获取顾客face id
  * @method void setPersonId(integer $PersonId) 设置顾客face id
- */
-
-/**
- *修改顾客属性参数
  */
 class PersonTagInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class PersonTagInfo extends AbstractModel
      * @var integer 顾客face id
      */
     public $PersonId;
+
     /**
      * @param integer $OldType 顾客原类型
      * @param integer $NewType 顾客新类型
@@ -54,6 +53,7 @@ class PersonTagInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSnapshotByTimeOffsetTemplate请求参数结构体
+ *
  * @method string getName() 获取指定时间点截图模板名称，长度限制：64 个字符。
  * @method void setName(string $Name) 设置指定时间点截图模板名称，长度限制：64 个字符。
  * @method integer getWidth() 获取截图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
@@ -68,10 +70,6 @@ use TencentCloud\Common\AbstractModel;
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>
 默认值：black 。
- */
-
-/**
- *CreateSnapshotByTimeOffsetTemplate请求参数结构体
  */
 class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel
 {
@@ -127,6 +125,7 @@ class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel
 默认值：black 。
      */
     public $FillType;
+
     /**
      * @param string $Name 指定时间点截图模板名称，长度限制：64 个字符。
      * @param integer $Width 截图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
@@ -158,6 +157,7 @@ class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

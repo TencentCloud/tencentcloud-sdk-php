@@ -18,14 +18,12 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceRenewDBInstance请求参数结构体
+ *
  * @method string getDBInstanceId() 获取实例ID
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID
  * @method integer getPeriod() 获取续费周期，按月计算，最大不超过48
  * @method void setPeriod(integer $Period) 设置续费周期，按月计算，最大不超过48
- */
-
-/**
- *InquiryPriceRenewDBInstance请求参数结构体
  */
 class InquiryPriceRenewDBInstanceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InquiryPriceRenewDBInstanceRequest extends AbstractModel
      * @var integer 续费周期，按月计算，最大不超过48
      */
     public $Period;
+
     /**
      * @param string $DBInstanceId 实例ID
      * @param integer $Period 续费周期，按月计算，最大不超过48
@@ -46,6 +45,7 @@ class InquiryPriceRenewDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

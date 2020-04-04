@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 漏洞信息
+ *
  * @method string getVulId() 获取漏洞id
  * @method void setVulId(string $VulId) 设置漏洞id
  * @method string getVulName() 获取漏洞名称
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulFilepath(string $VulFilepath) 设置漏洞位置
  * @method integer getRiskLevel() 获取风险级别：1 低风险 ；2中等风险；3 高风险
  * @method void setRiskLevel(integer $RiskLevel) 设置风险级别：1 低风险 ；2中等风险；3 高风险
- */
-
-/**
- *漏洞信息
  */
 class VulList extends AbstractModel
 {
@@ -80,6 +78,7 @@ class VulList extends AbstractModel
      * @var integer 风险级别：1 低风险 ；2中等风险；3 高风险
      */
     public $RiskLevel;
+
     /**
      * @param string $VulId 漏洞id
      * @param string $VulName 漏洞名称
@@ -94,6 +93,7 @@ class VulList extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

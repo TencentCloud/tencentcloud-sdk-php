@@ -18,12 +18,10 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 双路混流视频集锦开关项
+ *
  * @method boolean getEnableCoverPictures() 获取片头片尾增加图片开关
  * @method void setEnableCoverPictures(boolean $EnableCoverPictures) 设置片头片尾增加图片开关
- */
-
-/**
- *双路混流视频集锦开关项
  */
 class DoubleVideoFunction extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DoubleVideoFunction extends AbstractModel
      * @var boolean 片头片尾增加图片开关
      */
     public $EnableCoverPictures;
+
     /**
      * @param boolean $EnableCoverPictures 片头片尾增加图片开关
      */
@@ -38,6 +37,7 @@ class DoubleVideoFunction extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

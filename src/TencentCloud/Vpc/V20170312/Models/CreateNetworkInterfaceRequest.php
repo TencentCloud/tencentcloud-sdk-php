@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNetworkInterface请求参数结构体
+ *
  * @method string getVpcId() 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method string getNetworkInterfaceName() 获取弹性网卡名称，最大长度不能超过60个字节。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息，单次最多指定10个。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
- */
-
-/**
- *CreateNetworkInterface请求参数结构体
  */
 class CreateNetworkInterfaceRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
      * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     public $Tags;
+
     /**
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param string $NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
@@ -94,6 +93,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetInvokeTx请求参数结构体
+ *
  * @method string getModule() 获取模块名，固定字段：transaction
  * @method void setModule(string $Module) 设置模块名，固定字段：transaction
  * @method string getOperation() 获取操作名，固定字段：query_txid
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTxId(string $TxId) 设置交易ID
  * @method string getGroupName() 获取调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
  * @method void setGroupName(string $GroupName) 设置调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
- */
-
-/**
- *GetInvokeTx请求参数结构体
  */
 class GetInvokeTxRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class GetInvokeTxRequest extends AbstractModel
      * @var string 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public $GroupName;
+
     /**
      * @param string $Module 模块名，固定字段：transaction
      * @param string $Operation 操作名，固定字段：query_txid
@@ -94,6 +93,7 @@ class GetInvokeTxRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

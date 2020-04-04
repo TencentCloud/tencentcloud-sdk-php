@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBName请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getOldDBName() 获取旧数据库名
  * @method void setOldDBName(string $OldDBName) 设置旧数据库名
  * @method string getNewDBName() 获取新数据库名
  * @method void setNewDBName(string $NewDBName) 设置新数据库名
- */
-
-/**
- *ModifyDBName请求参数结构体
  */
 class ModifyDBNameRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyDBNameRequest extends AbstractModel
      * @var string 新数据库名
      */
     public $NewDBName;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $OldDBName 旧数据库名
@@ -54,6 +53,7 @@ class ModifyDBNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

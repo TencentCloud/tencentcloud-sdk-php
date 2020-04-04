@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyBandwidthPackageAttribute请求参数结构体
+ *
  * @method string getBandwidthPackageId() 获取带宽包唯一标识ID
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包唯一标识ID
  * @method string getBandwidthPackageName() 获取带宽包名称
  * @method void setBandwidthPackageName(string $BandwidthPackageName) 设置带宽包名称
  * @method string getChargeType() 获取带宽包计费模式
  * @method void setChargeType(string $ChargeType) 设置带宽包计费模式
- */
-
-/**
- *ModifyBandwidthPackageAttribute请求参数结构体
  */
 class ModifyBandwidthPackageAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyBandwidthPackageAttributeRequest extends AbstractModel
      * @var string 带宽包计费模式
      */
     public $ChargeType;
+
     /**
      * @param string $BandwidthPackageId 带宽包唯一标识ID
      * @param string $BandwidthPackageName 带宽包名称
@@ -54,6 +53,7 @@ class ModifyBandwidthPackageAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

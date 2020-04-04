@@ -18,14 +18,12 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateServerlessDBInstance返回参数结构体
+ *
  * @method string getDBInstanceId() 获取实例ID，该ID全局唯一，如：postgres-xxxxx
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，该ID全局唯一，如：postgres-xxxxx
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateServerlessDBInstance返回参数结构体
  */
 class CreateServerlessDBInstanceResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateServerlessDBInstanceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $DBInstanceId 实例ID，该ID全局唯一，如：postgres-xxxxx
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateServerlessDBInstanceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

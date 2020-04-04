@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务概要信息
+ *
  * @method string getTaskId() 获取任务 ID。
  * @method void setTaskId(string $TaskId) 设置任务 ID。
  * @method string getTaskType() 获取任务类型，包含：
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginProcessTime(string $BeginProcessTime) 设置任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。若任务尚未开始，该字段为：0000-00-00T00:00:00Z。
  * @method string getFinishTime() 获取任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。若任务尚未完成，该字段为：0000-00-00T00:00:00Z。
  * @method void setFinishTime(string $FinishTime) 设置任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。若任务尚未完成，该字段为：0000-00-00T00:00:00Z。
- */
-
-/**
- *任务概要信息
  */
 class TaskSimpleInfo extends AbstractModel
 {
@@ -68,6 +66,7 @@ class TaskSimpleInfo extends AbstractModel
      * @var string 任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。若任务尚未完成，该字段为：0000-00-00T00:00:00Z。
      */
     public $FinishTime;
+
     /**
      * @param string $TaskId 任务 ID。
      * @param string $TaskType 任务类型，包含：
@@ -82,6 +81,7 @@ class TaskSimpleInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImageTaskStatistic请求参数结构体
+ *
  * @method integer getJobId() 获取图像任务标识符
  * @method void setJobId(integer $JobId) 设置图像任务标识符
- */
-
-/**
- *DescribeImageTaskStatistic请求参数结构体
  */
 class DescribeImageTaskStatisticRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeImageTaskStatisticRequest extends AbstractModel
      * @var integer 图像任务标识符
      */
     public $JobId;
+
     /**
      * @param integer $JobId 图像任务标识符
      */
@@ -38,6 +37,7 @@ class DescribeImageTaskStatisticRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

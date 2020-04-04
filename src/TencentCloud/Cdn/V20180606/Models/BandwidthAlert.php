@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 带宽封顶配置，默认为关闭状态
+ *
  * @method string getSwitch() 获取带宽封顶配置开关
 on：开启
 off：关闭
@@ -40,10 +42,6 @@ RETURN_404：全部请求返回 404
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastTriggerTime(string $LastTriggerTime) 设置上次触发带宽封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *带宽封顶配置，默认为关闭状态
  */
 class BandwidthAlert extends AbstractModel
 {
@@ -73,6 +71,7 @@ RETURN_404：全部请求返回 404
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastTriggerTime;
+
     /**
      * @param string $Switch 带宽封顶配置开关
 on：开启
@@ -90,6 +89,7 @@ RETURN_404：全部请求返回 404
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

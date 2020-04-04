@@ -18,6 +18,8 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 漏洞数据
+ *
  * @method integer getId() 获取漏洞ID。
  * @method void setId(integer $Id) 设置漏洞ID。
  * @method integer getSiteId() 获取站点ID。
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppid(integer $Appid) 设置云用户appid。
  * @method string getUin() 获取云用户标识。
  * @method void setUin(string $Uin) 设置云用户标识。
- */
-
-/**
- *漏洞数据
  */
 class Vul extends AbstractModel
 {
@@ -150,6 +148,7 @@ class Vul extends AbstractModel
      * @var string 云用户标识。
      */
     public $Uin;
+
     /**
      * @param integer $Id 漏洞ID。
      * @param integer $SiteId 站点ID。
@@ -174,6 +173,7 @@ class Vul extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

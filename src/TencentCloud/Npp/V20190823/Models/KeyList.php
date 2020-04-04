@@ -18,14 +18,12 @@ namespace TencentCloud\Npp\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 对应按键操作,如果没有结构体里定义按键操作用户按键以后都从 interruptPrompt 重新播放
+ *
  * @method string getKey() 获取用户按键（0-9、*、#、A-D)
  * @method void setKey(string $Key) 设置用户按键（0-9、*、#、A-D)
  * @method string getOperate() 获取1: 呼通被叫 2：interruptPrompt 重播提示 3：拆线
  * @method void setOperate(string $Operate) 设置1: 呼通被叫 2：interruptPrompt 重播提示 3：拆线
- */
-
-/**
- *对应按键操作,如果没有结构体里定义按键操作用户按键以后都从 interruptPrompt 重新播放
  */
 class KeyList extends AbstractModel
 {
@@ -38,6 +36,7 @@ class KeyList extends AbstractModel
      * @var string 1: 呼通被叫 2：interruptPrompt 重播提示 3：拆线
      */
     public $Operate;
+
     /**
      * @param string $Key 用户按键（0-9、*、#、A-D)
      * @param string $Operate 1: 呼通被叫 2：interruptPrompt 重播提示 3：拆线
@@ -46,6 +45,7 @@ class KeyList extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

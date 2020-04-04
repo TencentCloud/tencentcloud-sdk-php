@@ -18,14 +18,12 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteRoutePolicy请求参数结构体
+ *
  * @method string getRouteTableId() 获取路由表ID
  * @method void setRouteTableId(string $RouteTableId) 设置路由表ID
  * @method string getRoutePolicyId() 获取路由表策略ID
  * @method void setRoutePolicyId(string $RoutePolicyId) 设置路由表策略ID
- */
-
-/**
- *DeleteRoutePolicy请求参数结构体
  */
 class DeleteRoutePolicyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteRoutePolicyRequest extends AbstractModel
      * @var string 路由表策略ID
      */
     public $RoutePolicyId;
+
     /**
      * @param string $RouteTableId 路由表ID
      * @param string $RoutePolicyId 路由表策略ID
@@ -46,6 +45,7 @@ class DeleteRoutePolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

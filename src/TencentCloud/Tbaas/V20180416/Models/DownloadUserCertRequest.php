@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DownloadUserCert请求参数结构体
+ *
  * @method string getModule() 获取模块名，固定字段：cert_mng
  * @method void setModule(string $Module) 设置模块名，固定字段：cert_mng
  * @method string getOperation() 获取操作名，固定字段：cert_download_for_user
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置区块链网络ID，可在区块链网络详情或列表中获取
  * @method string getGroupName() 获取下载证书的组织名称，可以在组织管理列表中获取当前组织的名称
  * @method void setGroupName(string $GroupName) 设置下载证书的组织名称，可以在组织管理列表中获取当前组织的名称
- */
-
-/**
- *DownloadUserCert请求参数结构体
  */
 class DownloadUserCertRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DownloadUserCertRequest extends AbstractModel
      * @var string 下载证书的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public $GroupName;
+
     /**
      * @param string $Module 模块名，固定字段：cert_mng
      * @param string $Operation 操作名，固定字段：cert_download_for_user
@@ -78,6 +77,7 @@ class DownloadUserCertRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

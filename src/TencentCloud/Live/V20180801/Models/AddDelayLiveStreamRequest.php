@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddDelayLiveStream请求参数结构体
+ *
  * @method string getAppName() 获取推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
  * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
  * @method string getDomainName() 获取推流域名。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：
 1. 默认7天后过期，且最长支持7天内生效。
 2. 北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
- */
-
-/**
- *AddDelayLiveStream请求参数结构体
  */
 class AddDelayLiveStreamRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ class AddDelayLiveStreamRequest extends AbstractModel
 2. 北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $ExpireTime;
+
     /**
      * @param string $AppName 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
      * @param string $DomainName 推流域名。
@@ -82,6 +81,7 @@ class AddDelayLiveStreamRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

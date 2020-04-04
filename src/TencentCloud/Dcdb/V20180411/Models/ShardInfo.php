@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 分片信息
+ *
  * @method string getShardInstanceId() 获取分片ID
  * @method void setShardInstanceId(string $ShardInstanceId) 设置分片ID
  * @method string getShardSerialId() 获取分片Set ID
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPid(integer $Pid) 设置产品类型 Id（过时字段，请勿依赖该值）
  * @method integer getCpu() 获取Cpu核数
  * @method void setCpu(integer $Cpu) 设置Cpu核数
- */
-
-/**
- *分片信息
  */
 class ShardInfo extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ShardInfo extends AbstractModel
      * @var integer Cpu核数
      */
     public $Cpu;
+
     /**
      * @param string $ShardInstanceId 分片ID
      * @param string $ShardSerialId 分片Set ID
@@ -110,6 +109,7 @@ class ShardInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

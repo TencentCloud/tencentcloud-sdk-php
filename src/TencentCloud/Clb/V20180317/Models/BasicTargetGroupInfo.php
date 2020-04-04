@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 监听器或者转发规则绑定的目标组基本信息
+ *
  * @method string getTargetGroupId() 获取目标组ID
  * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID
  * @method string getTargetGroupName() 获取目标组名称
  * @method void setTargetGroupName(string $TargetGroupName) 设置目标组名称
- */
-
-/**
- *监听器或者转发规则绑定的目标组基本信息
  */
 class BasicTargetGroupInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BasicTargetGroupInfo extends AbstractModel
      * @var string 目标组名称
      */
     public $TargetGroupName;
+
     /**
      * @param string $TargetGroupId 目标组ID
      * @param string $TargetGroupName 目标组名称
@@ -46,6 +45,7 @@ class BasicTargetGroupInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

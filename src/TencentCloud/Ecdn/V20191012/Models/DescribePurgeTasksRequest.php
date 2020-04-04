@@ -18,6 +18,8 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePurgeTasks请求参数结构体
+ *
  * @method string getPurgeType() 获取查询刷新类型。url：查询 url 刷新记录；path：查询目录刷新记录。
  * @method void setPurgeType(string $PurgeType) 设置查询刷新类型。url：查询 url 刷新记录；path：查询目录刷新记录。
  * @method string getStartTime() 获取开始时间，如2018-08-08 00:00:00。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyword(string $Keyword) 设置查询关键字，请输入域名或 http(s):// 开头完整 URL。
  * @method string getStatus() 获取查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
  * @method void setStatus(string $Status) 设置查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
- */
-
-/**
- *DescribePurgeTasks请求参数结构体
  */
 class DescribePurgeTasksRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribePurgeTasksRequest extends AbstractModel
      * @var string 查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
      */
     public $Status;
+
     /**
      * @param string $PurgeType 查询刷新类型。url：查询 url 刷新记录；path：查询目录刷新记录。
      * @param string $StartTime 开始时间，如2018-08-08 00:00:00。
@@ -94,6 +93,7 @@ class DescribePurgeTasksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

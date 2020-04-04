@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReplaceCert请求参数结构体
+ *
  * @method string getOldCertId() 获取要被替换的证书ID
  * @method void setOldCertId(string $OldCertId) 设置要被替换的证书ID
  * @method string getNewCert() 获取证书内容
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewKey(string $NewKey) 设置私钥内容，证书类型为SVR时不需要传递
  * @method integer getDeleteOld() 获取是否删除旧证书，0 表示不删除，1 表示删除
  * @method void setDeleteOld(integer $DeleteOld) 设置是否删除旧证书，0 表示不删除，1 表示删除
- */
-
-/**
- *ReplaceCert请求参数结构体
  */
 class ReplaceCertRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ReplaceCertRequest extends AbstractModel
      * @var integer 是否删除旧证书，0 表示不删除，1 表示删除
      */
     public $DeleteOld;
+
     /**
      * @param string $OldCertId 要被替换的证书ID
      * @param string $NewCert 证书内容
@@ -70,6 +69,7 @@ class ReplaceCertRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

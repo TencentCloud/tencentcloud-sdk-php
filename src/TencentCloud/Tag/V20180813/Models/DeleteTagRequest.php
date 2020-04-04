@@ -18,14 +18,12 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTag请求参数结构体
+ *
  * @method string getTagKey() 获取需要删除的标签键
  * @method void setTagKey(string $TagKey) 设置需要删除的标签键
  * @method string getTagValue() 获取需要删除的标签值
  * @method void setTagValue(string $TagValue) 设置需要删除的标签值
- */
-
-/**
- *DeleteTag请求参数结构体
  */
 class DeleteTagRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteTagRequest extends AbstractModel
      * @var string 需要删除的标签值
      */
     public $TagValue;
+
     /**
      * @param string $TagKey 需要删除的标签键
      * @param string $TagValue 需要删除的标签值
@@ -46,6 +45,7 @@ class DeleteTagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

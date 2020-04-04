@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HTTPS类型监听器信息
+ *
  * @method string getListenerId() 获取监听器ID
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getListenerName() 获取监听器名称
@@ -68,10 +70,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolyClientCertificateAliasInfo(array $PolyClientCertificateAliasInfo) 设置多客户端CA证书别名信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *HTTPS类型监听器信息
  */
 class HTTPSListener extends AbstractModel
 {
@@ -151,6 +149,7 @@ class HTTPSListener extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolyClientCertificateAliasInfo;
+
     /**
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
@@ -182,6 +181,7 @@ class HTTPSListener extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Iottid\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UploadDeviceUniqueCode请求参数结构体
+ *
  * @method array getCodeSet() 获取硬件唯一标识码
  * @method void setCodeSet(array $CodeSet) 设置硬件唯一标识码
  * @method string getOrderId() 获取硬件标识码绑定的申请编号
  * @method void setOrderId(string $OrderId) 设置硬件标识码绑定的申请编号
- */
-
-/**
- *UploadDeviceUniqueCode请求参数结构体
  */
 class UploadDeviceUniqueCodeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UploadDeviceUniqueCodeRequest extends AbstractModel
      * @var string 硬件标识码绑定的申请编号
      */
     public $OrderId;
+
     /**
      * @param array $CodeSet 硬件唯一标识码
      * @param string $OrderId 硬件标识码绑定的申请编号
@@ -46,6 +45,7 @@ class UploadDeviceUniqueCodeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

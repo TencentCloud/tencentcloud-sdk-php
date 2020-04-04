@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例节点
+ *
  * @method integer getId() 获取Id
  * @method void setId(integer $Id) 设置Id
  * @method array getInstanceClusterNode() 获取节点详细信息
  * @method void setInstanceClusterNode(array $InstanceClusterNode) 设置节点详细信息
- */
-
-/**
- *实例节点
  */
 class InstanceNode extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceNode extends AbstractModel
      * @var array 节点详细信息
      */
     public $InstanceClusterNode;
+
     /**
      * @param integer $Id Id
      * @param array $InstanceClusterNode 节点详细信息
@@ -46,6 +45,7 @@ class InstanceNode extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

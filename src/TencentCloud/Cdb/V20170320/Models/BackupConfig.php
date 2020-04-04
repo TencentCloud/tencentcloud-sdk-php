@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ECDB第二个从库的配置信息，只有ECDB实例才有这个字段
+ *
  * @method string getReplicationMode() 获取第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
  * @method void setReplicationMode(string $ReplicationMode) 设置第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
  * @method string getZone() 获取第二个从库可用区的正式名称，如ap-shanghai-1
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) 设置第二个从库内网IP地址
  * @method integer getVport() 获取第二个从库访问端口
  * @method void setVport(integer $Vport) 设置第二个从库访问端口
- */
-
-/**
- *ECDB第二个从库的配置信息，只有ECDB实例才有这个字段
  */
 class BackupConfig extends AbstractModel
 {
@@ -52,6 +50,7 @@ class BackupConfig extends AbstractModel
      * @var integer 第二个从库访问端口
      */
     public $Vport;
+
     /**
      * @param string $ReplicationMode 第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
      * @param string $Zone 第二个从库可用区的正式名称，如ap-shanghai-1
@@ -62,6 +61,7 @@ class BackupConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

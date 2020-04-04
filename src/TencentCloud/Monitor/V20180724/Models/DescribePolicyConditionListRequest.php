@@ -18,12 +18,10 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePolicyConditionList请求参数结构体
+ *
  * @method string getModule() 获取固定值，为"monitor"
  * @method void setModule(string $Module) 设置固定值，为"monitor"
- */
-
-/**
- *DescribePolicyConditionList请求参数结构体
  */
 class DescribePolicyConditionListRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribePolicyConditionListRequest extends AbstractModel
      * @var string 固定值，为"monitor"
      */
     public $Module;
+
     /**
      * @param string $Module 固定值，为"monitor"
      */
@@ -38,6 +37,7 @@ class DescribePolicyConditionListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

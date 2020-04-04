@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * LivenessRecognition请求参数结构体
+ *
  * @method string getIdCard() 获取身份证号
  * @method void setIdCard(string $IdCard) 设置身份证号
  * @method string getName() 获取姓名。中文请使用UTF-8编码。
@@ -38,10 +40,6 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 静默模式传参：空。
  * @method string getOptional() 获取本接口不需要传递此参数。
  * @method void setOptional(string $Optional) 设置本接口不需要传递此参数。
- */
-
-/**
- *LivenessRecognition请求参数结构体
  */
 class LivenessRecognitionRequest extends AbstractModel
 {
@@ -78,6 +76,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
      * @var string 本接口不需要传递此参数。
      */
     public $Optional;
+
     /**
      * @param string $IdCard 身份证号
      * @param string $Name 姓名。中文请使用UTF-8编码。
@@ -94,6 +93,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

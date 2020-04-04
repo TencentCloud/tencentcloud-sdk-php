@@ -18,6 +18,8 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StartEncryption请求参数结构体
+ *
  * @method string getCosEndPoint() 获取cos的end point。
  * @method void setCosEndPoint(string $CosEndPoint) 设置cos的end point。
  * @method string getCosSecretId() 获取cos api密钥id。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceObject(DrmSourceObject $SourceObject) 设置存储在COS上的原始内容信息
  * @method array getOutputObjects() 获取加密后的内容存储到COS的对象
  * @method void setOutputObjects(array $OutputObjects) 设置加密后的内容存储到COS的对象
- */
-
-/**
- *StartEncryption请求参数结构体
  */
 class StartEncryptionRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class StartEncryptionRequest extends AbstractModel
      * @var array 加密后的内容存储到COS的对象
      */
     public $OutputObjects;
+
     /**
      * @param string $CosEndPoint cos的end point。
      * @param string $CosSecretId cos api密钥id。
@@ -78,6 +77,7 @@ class StartEncryptionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cis\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 容器实例中容器结构体
+ *
  * @method string getCommand() 获取容器启动命令
  * @method void setCommand(string $Command) 设置容器启动命令
  * @method array getArgs() 获取容器启动参数
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkingDir(string $WorkingDir) 设置容器工作目录
  * @method string getContainerId() 获取容器ID
  * @method void setContainerId(string $ContainerId) 设置容器ID
- */
-
-/**
- *容器实例中容器结构体
  */
 class Container extends AbstractModel
 {
@@ -108,6 +106,7 @@ class Container extends AbstractModel
      * @var string 容器ID
      */
     public $ContainerId;
+
     /**
      * @param string $Command 容器启动命令
      * @param array $Args 容器启动参数
@@ -126,6 +125,7 @@ class Container extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

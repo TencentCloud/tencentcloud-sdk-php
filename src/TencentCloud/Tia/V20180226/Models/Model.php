@@ -18,6 +18,21 @@ namespace TencentCloud\Tia\V20180226\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用于描述模型的详细情况
+        "Model": {
+            "Name": "test-model",
+            "Description": "test-model",
+            "Cluster": "ap-beijing",
+            "Model": "cos://test-1255502019.cos.ap-shanghai.myqcloud.com/example:/data/mnist",
+            "RuntimeVersion": "tiaserv-1.6.0-cpu",
+            "CreateTime": "2018-04-26 15:59:25 +0800 CST",
+            "State": "Running",
+            "ServingUrl": "140.143.51.230",
+            "Message": "Deployment does not have minimum availability.",
+            "AppId": 1255502019,
+            "ServType": "1U2G0P"
+        },
+ *
  * @method string getName() 获取模型名称
  * @method void setName(string $Name) 设置模型名称
  * @method string getDescription() 获取模型描述
@@ -50,23 +65,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(string $Uin) 设置创建任务的Uin
  * @method string getDelTime() 获取模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
  * @method void setDelTime(string $DelTime) 设置模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
- */
-
-/**
- *用于描述模型的详细情况
-        "Model": {
-            "Name": "test-model",
-            "Description": "test-model",
-            "Cluster": "ap-beijing",
-            "Model": "cos://test-1255502019.cos.ap-shanghai.myqcloud.com/example:/data/mnist",
-            "RuntimeVersion": "tiaserv-1.6.0-cpu",
-            "CreateTime": "2018-04-26 15:59:25 +0800 CST",
-            "State": "Running",
-            "ServingUrl": "140.143.51.230",
-            "Message": "Deployment does not have minimum availability.",
-            "AppId": 1255502019,
-            "ServType": "1U2G0P"
-        },
  */
 class Model extends AbstractModel
 {
@@ -149,6 +147,7 @@ class Model extends AbstractModel
      * @var string 模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      */
     public $DelTime;
+
     /**
      * @param string $Name 模型名称
      * @param string $Description 模型描述
@@ -171,6 +170,7 @@ class Model extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

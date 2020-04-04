@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 短信的下发状态详细信息
+ *
  * @method string getUserReceiveTime() 获取用户实际接收到短信的时间。
  * @method void setUserReceiveTime(string $UserReceiveTime) 设置用户实际接收到短信的时间。
  * @method integer getUserReceiveUnixTime() 获取用户实际接收到短信的时间，UNIX 时间戳（单位：秒）。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReportStatus(string $ReportStatus) 设置实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）。
  * @method string getDescription() 获取用户接收短信状态描述。
  * @method void setDescription(string $Description) 设置用户接收短信状态描述。
- */
-
-/**
- *短信的下发状态详细信息
  */
 class PullSmsSendStatus extends AbstractModel
 {
@@ -80,6 +78,7 @@ class PullSmsSendStatus extends AbstractModel
      * @var string 用户接收短信状态描述。
      */
     public $Description;
+
     /**
      * @param string $UserReceiveTime 用户实际接收到短信的时间。
      * @param integer $UserReceiveUnixTime 用户实际接收到短信的时间，UNIX 时间戳（单位：秒）。
@@ -94,6 +93,7 @@ class PullSmsSendStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

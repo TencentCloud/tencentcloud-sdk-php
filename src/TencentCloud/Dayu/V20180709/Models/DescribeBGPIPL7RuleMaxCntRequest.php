@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBGPIPL7RuleMaxCnt请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP）
  * @method string getId() 获取资源实例ID
  * @method void setId(string $Id) 设置资源实例ID
- */
-
-/**
- *DescribeBGPIPL7RuleMaxCnt请求参数结构体
  */
 class DescribeBGPIPL7RuleMaxCntRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeBGPIPL7RuleMaxCntRequest extends AbstractModel
      * @var string 资源实例ID
      */
     public $Id;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP）
      * @param string $Id 资源实例ID
@@ -46,6 +45,7 @@ class DescribeBGPIPL7RuleMaxCntRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

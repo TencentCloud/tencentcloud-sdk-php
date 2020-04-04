@@ -18,6 +18,8 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UploadFile请求参数结构体
+ *
  * @method string getModule() 获取模块名
  * @method void setModule(string $Module) 设置模块名
  * @method string getOperation() 获取操作名
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileName(string $FileName) 设置文件名
  * @method string getFileDate() 获取文件日期
  * @method void setFileDate(string $FileDate) 设置文件日期
- */
-
-/**
- *UploadFile请求参数结构体
  */
 class UploadFileRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class UploadFileRequest extends AbstractModel
      * @var string 文件日期
      */
     public $FileDate;
+
     /**
      * @param string $Module 模块名
      * @param string $Operation 操作名
@@ -70,6 +69,7 @@ class UploadFileRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

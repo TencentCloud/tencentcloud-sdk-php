@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 物理机分区格式
+ *
  * @method integer getSystemDiskSize() 获取系统盘大小
  * @method void setSystemDiskSize(integer $SystemDiskSize) 设置系统盘大小
  * @method integer getDataDiskSize() 获取数据盘大小
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSysDataSpace(integer $SysDataSpace) 设置data分区大小
  * @method array getDeviceDiskSizeInfoSet() 获取硬盘大小详情
  * @method void setDeviceDiskSizeInfoSet(array $DeviceDiskSizeInfoSet) 设置硬盘大小详情
- */
-
-/**
- *物理机分区格式
  */
 class DevicePartition extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DevicePartition extends AbstractModel
      * @var array 硬盘大小详情
      */
     public $DeviceDiskSizeInfoSet;
+
     /**
      * @param integer $SystemDiskSize 系统盘大小
      * @param integer $DataDiskSize 数据盘大小
@@ -94,6 +93,7 @@ class DevicePartition extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAutoScalingInstances请求参数结构体
+ *
  * @method array getInstanceIds() 获取待查询云服务器（CVM）的实例ID。参数不支持同时指定InstanceIds和Filters。
  * @method void setInstanceIds(array $InstanceIds) 设置待查询云服务器（CVM）的实例ID。参数不支持同时指定InstanceIds和Filters。
  * @method array getFilters() 获取过滤条件。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
- */
-
-/**
- *DescribeAutoScalingInstances请求参数结构体
  */
 class DescribeAutoScalingInstancesRequest extends AbstractModel
 {
@@ -61,6 +59,7 @@ class DescribeAutoScalingInstancesRequest extends AbstractModel
      * @var integer 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public $Limit;
+
     /**
      * @param array $InstanceIds 待查询云服务器（CVM）的实例ID。参数不支持同时指定InstanceIds和Filters。
      * @param array $Filters 过滤条件。
@@ -74,6 +73,7 @@ class DescribeAutoScalingInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

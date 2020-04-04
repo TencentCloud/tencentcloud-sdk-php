@@ -18,14 +18,12 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 拨测点维度信息
+ *
  * @method array getIsp() 获取运营商列表
  * @method void setIsp(array $Isp) 设置运营商列表
  * @method array getProvince() 获取省份列表
  * @method void setProvince(array $Province) 设置省份列表
- */
-
-/**
- *拨测点维度信息
  */
 class DimensionsDetail extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DimensionsDetail extends AbstractModel
      * @var array 省份列表
      */
     public $Province;
+
     /**
      * @param array $Isp 运营商列表
      * @param array $Province 省份列表
@@ -46,6 +45,7 @@ class DimensionsDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

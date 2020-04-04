@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频处理任务中的水印参数类型
+ *
  * @method integer getDefinition() 获取水印模板 ID。
  * @method void setDefinition(integer $Definition) 设置水印模板 ID。
  * @method RawWatermarkParameter getRawParameter() 获取水印自定义参数，当 Definition 填 0 时有效。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
 <li>不填或填0，表示水印持续到画面结束；</li>
 <li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
 <li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
- */
-
-/**
- *视频处理任务中的水印参数类型
  */
 class WatermarkInput extends AbstractModel
 {
@@ -87,6 +85,7 @@ class WatermarkInput extends AbstractModel
 <li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
      */
     public $EndTimeOffset;
+
     /**
      * @param integer $Definition 水印模板 ID。
      * @param RawWatermarkParameter $RawParameter 水印自定义参数，当 Definition 填 0 时有效。
@@ -106,6 +105,7 @@ class WatermarkInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

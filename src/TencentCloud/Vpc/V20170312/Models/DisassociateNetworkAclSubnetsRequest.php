@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisassociateNetworkAclSubnets请求参数结构体
+ *
  * @method string getNetworkAclId() 获取网络ACL实例ID。例如：acl-12345678。
  * @method void setNetworkAclId(string $NetworkAclId) 设置网络ACL实例ID。例如：acl-12345678。
  * @method array getSubnetIds() 获取子网实例ID数组。例如：[subnet-12345678]
  * @method void setSubnetIds(array $SubnetIds) 设置子网实例ID数组。例如：[subnet-12345678]
- */
-
-/**
- *DisassociateNetworkAclSubnets请求参数结构体
  */
 class DisassociateNetworkAclSubnetsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DisassociateNetworkAclSubnetsRequest extends AbstractModel
      * @var array 子网实例ID数组。例如：[subnet-12345678]
      */
     public $SubnetIds;
+
     /**
      * @param string $NetworkAclId 网络ACL实例ID。例如：acl-12345678。
      * @param array $SubnetIds 子网实例ID数组。例如：[subnet-12345678]
@@ -46,6 +45,7 @@ class DisassociateNetworkAclSubnetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

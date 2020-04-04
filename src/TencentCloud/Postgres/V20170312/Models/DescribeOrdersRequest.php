@@ -18,12 +18,10 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeOrders请求参数结构体
+ *
  * @method array getDealNames() 获取订单名集合
  * @method void setDealNames(array $DealNames) 设置订单名集合
- */
-
-/**
- *DescribeOrders请求参数结构体
  */
 class DescribeOrdersRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeOrdersRequest extends AbstractModel
      * @var array 订单名集合
      */
     public $DealNames;
+
     /**
      * @param array $DealNames 订单名集合
      */
@@ -38,6 +37,7 @@ class DescribeOrdersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

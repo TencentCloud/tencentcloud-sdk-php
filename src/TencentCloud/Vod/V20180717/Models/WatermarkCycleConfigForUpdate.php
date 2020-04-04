@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 水印周期配置。
+ *
  * @method float getStartTime() 获取水印在视频里第一次出现的播放时间点，单位：秒。
  * @method void setStartTime(float $StartTime) 设置水印在视频里第一次出现的播放时间点，单位：秒。
  * @method float getDisplayDuration() 获取在一个水印周期内，水印显示的持续时间，单位：秒。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 填 0 表示水印只持续一个水印周期（即在整个视频里只显示 DisplayDuration 秒）。
  * @method void setCycleDuration(float $CycleDuration) 设置一个水印周期的持续时间，单位：秒。
 填 0 表示水印只持续一个水印周期（即在整个视频里只显示 DisplayDuration 秒）。
- */
-
-/**
- *水印周期配置。
  */
 class WatermarkCycleConfigForUpdate extends AbstractModel
 {
@@ -48,6 +46,7 @@ class WatermarkCycleConfigForUpdate extends AbstractModel
 填 0 表示水印只持续一个水印周期（即在整个视频里只显示 DisplayDuration 秒）。
      */
     public $CycleDuration;
+
     /**
      * @param float $StartTime 水印在视频里第一次出现的播放时间点，单位：秒。
      * @param float $DisplayDuration 在一个水印周期内，水印显示的持续时间，单位：秒。
@@ -58,6 +57,7 @@ class WatermarkCycleConfigForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

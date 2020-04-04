@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyInstanceTag请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
  * @method array getReplaceTags() 获取要增加或修改的标签。
  * @method void setReplaceTags(array $ReplaceTags) 设置要增加或修改的标签。
  * @method array getDeleteTags() 获取要删除的标签。
  * @method void setDeleteTags(array $DeleteTags) 设置要删除的标签。
- */
-
-/**
- *ModifyInstanceTag请求参数结构体
  */
 class ModifyInstanceTagRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyInstanceTagRequest extends AbstractModel
      * @var array 要删除的标签。
      */
     public $DeleteTags;
+
     /**
      * @param string $InstanceId 实例 ID。
      * @param array $ReplaceTags 要增加或修改的标签。
@@ -54,6 +53,7 @@ class ModifyInstanceTagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSubnetByHostedDevice请求参数结构体
+ *
  * @method string getInstanceId() 获取托管机器ID, 如chm-xasdfx2j
  * @method void setInstanceId(string $InstanceId) 设置托管机器ID, 如chm-xasdfx2j
  * @method array getTypes() 获取子网类型。0: 物理机子网; 7: DOCKER子网 8: 虚拟子网
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询的起始位置。
  * @method integer getLimit() 获取查询的个数。
  * @method void setLimit(integer $Limit) 设置查询的个数。
- */
-
-/**
- *DescribeSubnetByHostedDevice请求参数结构体
  */
 class DescribeSubnetByHostedDeviceRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeSubnetByHostedDeviceRequest extends AbstractModel
      * @var integer 查询的个数。
      */
     public $Limit;
+
     /**
      * @param string $InstanceId 托管机器ID, 如chm-xasdfx2j
      * @param array $Types 子网类型。0: 物理机子网; 7: DOCKER子网 8: 虚拟子网
@@ -62,6 +61,7 @@ class DescribeSubnetByHostedDeviceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

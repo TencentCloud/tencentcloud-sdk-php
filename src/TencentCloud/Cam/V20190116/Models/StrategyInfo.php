@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 策略信息
+ *
  * @method integer getPolicyId() 获取策略ID。
  * @method void setPolicyId(integer $PolicyId) 设置策略ID。
  * @method string getPolicyName() 获取策略名称。
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsServiceLinkedPolicy(integer $IsServiceLinkedPolicy) 设置是否是服务相关角色策略
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *策略信息
  */
 class StrategyInfo extends AbstractModel
 {
@@ -129,6 +127,7 @@ class StrategyInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsServiceLinkedPolicy;
+
     /**
      * @param integer $PolicyId 策略ID。
      * @param string $PolicyName 策略名称。
@@ -154,6 +153,7 @@ class StrategyInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

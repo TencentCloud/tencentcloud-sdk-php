@@ -18,16 +18,14 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyPersonBaseInfo请求参数结构体
+ *
  * @method string getPersonId() 获取人员ID
  * @method void setPersonId(string $PersonId) 设置人员ID
  * @method string getPersonName() 获取需要修改的人员名称
  * @method void setPersonName(string $PersonName) 设置需要修改的人员名称
  * @method integer getGender() 获取需要修改的人员性别
  * @method void setGender(integer $Gender) 设置需要修改的人员性别
- */
-
-/**
- *ModifyPersonBaseInfo请求参数结构体
  */
 class ModifyPersonBaseInfoRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyPersonBaseInfoRequest extends AbstractModel
      * @var integer 需要修改的人员性别
      */
     public $Gender;
+
     /**
      * @param string $PersonId 人员ID
      * @param string $PersonName 需要修改的人员名称
@@ -54,6 +53,7 @@ class ModifyPersonBaseInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

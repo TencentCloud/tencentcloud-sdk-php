@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Topic
+ *
  * @method string getTopicId() 获取TopicId
  * @method void setTopicId(string $TopicId) 设置TopicId
  * @method string getTopicName() 获取Topic名称
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- */
-
-/**
- *Topic
  */
 class Topic extends AbstractModel
 {
@@ -94,6 +92,7 @@ class Topic extends AbstractModel
      * @var string 更新时间
      */
     public $UpdateTime;
+
     /**
      * @param string $TopicId TopicId
      * @param string $TopicName Topic名称
@@ -110,6 +109,7 @@ class Topic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

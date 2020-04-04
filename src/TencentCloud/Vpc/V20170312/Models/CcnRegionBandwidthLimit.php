@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云联网（CCN）地域出带宽上限
+ *
  * @method string getRegion() 获取地域，例如：ap-guangzhou
  * @method void setRegion(string $Region) 设置地域，例如：ap-guangzhou
  * @method integer getBandwidthLimit() 获取出带宽上限，单位：Mbps
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDstIsBm() 获取目的地域是否为黑石地域，默认`false`。
  * @method void setDstIsBm(boolean $DstIsBm) 设置目的地域是否为黑石地域，默认`false`。
- */
-
-/**
- *云联网（CCN）地域出带宽上限
  */
 class CcnRegionBandwidthLimit extends AbstractModel
 {
@@ -62,6 +60,7 @@ class CcnRegionBandwidthLimit extends AbstractModel
      * @var boolean 目的地域是否为黑石地域，默认`false`。
      */
     public $DstIsBm;
+
     /**
      * @param string $Region 地域，例如：ap-guangzhou
      * @param integer $BandwidthLimit 出带宽上限，单位：Mbps
@@ -74,6 +73,7 @@ class CcnRegionBandwidthLimit extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

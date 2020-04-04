@@ -18,16 +18,14 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnbindEipsFromNatGateway请求参数结构体
+ *
  * @method string getNatId() 获取NAT网关ID，例如：nat-kdm476mp
  * @method void setNatId(string $NatId) 设置NAT网关ID，例如：nat-kdm476mp
  * @method string getVpcId() 获取私有网络ID，例如：vpc-kd7d06of
  * @method void setVpcId(string $VpcId) 设置私有网络ID，例如：vpc-kd7d06of
  * @method array getAssignedEips() 获取已分配的EIP列表
  * @method void setAssignedEips(array $AssignedEips) 设置已分配的EIP列表
- */
-
-/**
- *UnbindEipsFromNatGateway请求参数结构体
  */
 class UnbindEipsFromNatGatewayRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UnbindEipsFromNatGatewayRequest extends AbstractModel
      * @var array 已分配的EIP列表
      */
     public $AssignedEips;
+
     /**
      * @param string $NatId NAT网关ID，例如：nat-kdm476mp
      * @param string $VpcId 私有网络ID，例如：vpc-kd7d06of
@@ -54,6 +53,7 @@ class UnbindEipsFromNatGatewayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

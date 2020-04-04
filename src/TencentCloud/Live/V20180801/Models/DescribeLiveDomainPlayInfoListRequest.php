@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveDomainPlayInfoList请求参数结构体
+ *
  * @method array getPlayDomains() 获取播放域名列表。
  * @method void setPlayDomains(array $PlayDomains) 设置播放域名列表。
- */
-
-/**
- *DescribeLiveDomainPlayInfoList请求参数结构体
  */
 class DescribeLiveDomainPlayInfoListRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeLiveDomainPlayInfoListRequest extends AbstractModel
      * @var array 播放域名列表。
      */
     public $PlayDomains;
+
     /**
      * @param array $PlayDomains 播放域名列表。
      */
@@ -38,6 +37,7 @@ class DescribeLiveDomainPlayInfoListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

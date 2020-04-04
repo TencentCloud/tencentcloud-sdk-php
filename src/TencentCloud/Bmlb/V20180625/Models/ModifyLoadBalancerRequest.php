@@ -18,16 +18,14 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLoadBalancer请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method string getLoadBalancerName() 获取负载均衡器名称，规则：1-20个英文、汉字、数字、连接线“-”或下划线“_”。
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡器名称，规则：1-20个英文、汉字、数字、连接线“-”或下划线“_”。
  * @method string getDomainPrefix() 获取域名前缀，负载均衡的域名由用户输入的域名前缀与配置文件中的域名后缀一起组合而成，保证是唯一的域名。规则：1-20个小写英文字母、数字或连接线“-”。内网类型的负载均衡不能配置该字段。
  * @method void setDomainPrefix(string $DomainPrefix) 设置域名前缀，负载均衡的域名由用户输入的域名前缀与配置文件中的域名后缀一起组合而成，保证是唯一的域名。规则：1-20个小写英文字母、数字或连接线“-”。内网类型的负载均衡不能配置该字段。
- */
-
-/**
- *ModifyLoadBalancer请求参数结构体
  */
 class ModifyLoadBalancerRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyLoadBalancerRequest extends AbstractModel
      * @var string 域名前缀，负载均衡的域名由用户输入的域名前缀与配置文件中的域名后缀一起组合而成，保证是唯一的域名。规则：1-20个小写英文字母、数字或连接线“-”。内网类型的负载均衡不能配置该字段。
      */
     public $DomainPrefix;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param string $LoadBalancerName 负载均衡器名称，规则：1-20个英文、汉字、数字、连接线“-”或下划线“_”。
@@ -54,6 +53,7 @@ class ModifyLoadBalancerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

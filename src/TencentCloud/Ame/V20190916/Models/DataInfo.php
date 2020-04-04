@@ -18,6 +18,8 @@ namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据信息
+ *
  * @method string getName() 获取Song Name
  * @method void setName(string $Name) 设置Song Name
  * @method string getVersion() 获取歌曲版本
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuditionBegin(integer $AuditionBegin) 设置试听开始时间
  * @method integer getAuditionEnd() 获取试听结束时间
  * @method void setAuditionEnd(integer $AuditionEnd) 设置试听结束时间
- */
-
-/**
- *数据信息
  */
 class DataInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DataInfo extends AbstractModel
      * @var integer 试听结束时间
      */
     public $AuditionEnd;
+
     /**
      * @param string $Name Song Name
      * @param string $Version 歌曲版本
@@ -70,6 +69,7 @@ class DataInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

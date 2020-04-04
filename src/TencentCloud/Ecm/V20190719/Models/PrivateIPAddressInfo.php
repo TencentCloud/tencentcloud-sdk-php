@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例的内网ip相关信息。
+ *
  * @method string getPrivateIPAddress() 获取实例的内网ip。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateIPAddress(string $PrivateIPAddress) 设置实例的内网ip。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *实例的内网ip相关信息。
  */
 class PrivateIPAddressInfo extends AbstractModel
 {
@@ -34,6 +32,7 @@ class PrivateIPAddressInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivateIPAddress;
+
     /**
      * @param string $PrivateIPAddress 实例的内网ip。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,6 +41,7 @@ class PrivateIPAddressInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

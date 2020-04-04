@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 私有网络配额
+ *
  * @method string getLimitType() 获取私有网络配额描述
  * @method void setLimitType(string $LimitType) 设置私有网络配额描述
  * @method integer getLimitValue() 获取私有网络配额值
  * @method void setLimitValue(integer $LimitValue) 设置私有网络配额值
- */
-
-/**
- *私有网络配额
  */
 class VpcLimit extends AbstractModel
 {
@@ -38,6 +36,7 @@ class VpcLimit extends AbstractModel
      * @var integer 私有网络配额值
      */
     public $LimitValue;
+
     /**
      * @param string $LimitType 私有网络配额描述
      * @param integer $LimitValue 私有网络配额值
@@ -46,6 +45,7 @@ class VpcLimit extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

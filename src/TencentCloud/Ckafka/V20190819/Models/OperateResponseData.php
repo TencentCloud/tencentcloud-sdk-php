@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 操作类型返回的Data结构
+ *
  * @method integer getFlowId() 获取FlowId
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowId(integer $FlowId) 设置FlowId
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *操作类型返回的Data结构
  */
 class OperateResponseData extends AbstractModel
 {
@@ -34,6 +32,7 @@ class OperateResponseData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowId;
+
     /**
      * @param integer $FlowId FlowId
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,6 +41,7 @@ class OperateResponseData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

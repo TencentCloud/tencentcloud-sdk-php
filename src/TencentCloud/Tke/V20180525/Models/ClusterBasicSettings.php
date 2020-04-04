@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述集群的基本配置信息
+ *
  * @method string getClusterOs() 获取集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
  * @method void setClusterOs(string $ClusterOs) 设置集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
  * @method string getClusterVersion() 获取集群版本,默认值为1.10.5
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOsCustomizeType(string $OsCustomizeType) 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
  * @method boolean getNeedWorkSecurityGroup() 获取是否开启节点的默认安全组(默认: 否，Aphla特性)
  * @method void setNeedWorkSecurityGroup(boolean $NeedWorkSecurityGroup) 设置是否开启节点的默认安全组(默认: 否，Aphla特性)
- */
-
-/**
- *描述集群的基本配置信息
  */
 class ClusterBasicSettings extends AbstractModel
 {
@@ -87,6 +85,7 @@ class ClusterBasicSettings extends AbstractModel
      * @var boolean 是否开启节点的默认安全组(默认: 否，Aphla特性)
      */
     public $NeedWorkSecurityGroup;
+
     /**
      * @param string $ClusterOs 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
      * @param string $ClusterVersion 集群版本,默认值为1.10.5
@@ -102,6 +101,7 @@ class ClusterBasicSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

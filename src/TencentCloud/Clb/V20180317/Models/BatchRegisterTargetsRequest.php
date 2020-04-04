@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BatchRegisterTargets请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡ID
  * @method array getTargets() 获取绑定目标
  * @method void setTargets(array $Targets) 设置绑定目标
- */
-
-/**
- *BatchRegisterTargets请求参数结构体
  */
 class BatchRegisterTargetsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BatchRegisterTargetsRequest extends AbstractModel
      * @var array 绑定目标
      */
     public $Targets;
+
     /**
      * @param string $LoadBalancerId 负载均衡ID
      * @param array $Targets 绑定目标
@@ -46,6 +45,7 @@ class BatchRegisterTargetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

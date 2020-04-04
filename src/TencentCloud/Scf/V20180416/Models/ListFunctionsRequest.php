@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListFunctions请求参数结构体
+ *
  * @method string getOrder() 获取以升序还是降序的方式返回结果，可选值 ASC 和 DESC
  * @method void setOrder(string $Order) 设置以升序还是降序的方式返回结果，可选值 ASC 和 DESC
  * @method string getOrderby() 获取根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime, FunctionName
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 - tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
- */
-
-/**
- *ListFunctions请求参数结构体
  */
 class ListFunctionsRequest extends AbstractModel
 {
@@ -89,6 +87,7 @@ class ListFunctionsRequest extends AbstractModel
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */
     public $Filters;
+
     /**
      * @param string $Order 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
      * @param string $Orderby 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime, FunctionName
@@ -106,6 +105,7 @@ class ListFunctionsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

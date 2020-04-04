@@ -18,14 +18,13 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProductInfo请求参数结构体
+ *
 
- */
-
-/**
- *DescribeProductInfo请求参数结构体
  */
 class DescribeProductInfoRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeProductInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

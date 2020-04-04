@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Tcr 命名空间的描述
+ *
  * @method string getName() 获取命名空间名称
  * @method void setName(string $Name) 设置命名空间名称
  * @method string getCreationTime() 获取创建时间
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublic(boolean $Public) 设置访问级别
  * @method integer getNamespaceId() 获取命名空间的Id
  * @method void setNamespaceId(integer $NamespaceId) 设置命名空间的Id
- */
-
-/**
- *Tcr 命名空间的描述
  */
 class TcrNamespaceInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class TcrNamespaceInfo extends AbstractModel
      * @var integer 命名空间的Id
      */
     public $NamespaceId;
+
     /**
      * @param string $Name 命名空间名称
      * @param string $CreationTime 创建时间
@@ -62,6 +61,7 @@ class TcrNamespaceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BatchDeleteRepositoryPersonal请求参数结构体
+ *
  * @method array getRepoNames() 获取仓库名称数组
  * @method void setRepoNames(array $RepoNames) 设置仓库名称数组
- */
-
-/**
- *BatchDeleteRepositoryPersonal请求参数结构体
  */
 class BatchDeleteRepositoryPersonalRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class BatchDeleteRepositoryPersonalRequest extends AbstractModel
      * @var array 仓库名称数组
      */
     public $RepoNames;
+
     /**
      * @param array $RepoNames 仓库名称数组
      */
@@ -38,6 +37,7 @@ class BatchDeleteRepositoryPersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

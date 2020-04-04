@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyScalingPolicy请求参数结构体
+ *
  * @method string getAutoScalingPolicyId() 获取告警策略ID。
  * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) 设置告警策略ID。
  * @method string getScalingPolicyName() 获取告警策略名称。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
  * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
 如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
- */
-
-/**
- *ModifyScalingPolicy请求参数结构体
  */
 class ModifyScalingPolicyRequest extends AbstractModel
 {
@@ -76,6 +74,7 @@ class ModifyScalingPolicyRequest extends AbstractModel
 如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
      */
     public $NotificationUserGroupIds;
+
     /**
      * @param string $AutoScalingPolicyId 告警策略ID。
      * @param string $ScalingPolicyName 告警策略名称。
@@ -90,6 +89,7 @@ class ModifyScalingPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

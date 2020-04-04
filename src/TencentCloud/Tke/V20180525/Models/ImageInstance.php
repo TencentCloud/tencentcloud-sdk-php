@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 镜像信息
+ *
  * @method string getAlias() 获取镜像别名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlias(string $Alias) 设置镜像别名
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOsCustomizeType(string $OsCustomizeType) 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *镜像信息
  */
 class ImageInstance extends AbstractModel
 {
@@ -64,6 +62,7 @@ class ImageInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsCustomizeType;
+
     /**
      * @param string $Alias 镜像别名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +77,7 @@ class ImageInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

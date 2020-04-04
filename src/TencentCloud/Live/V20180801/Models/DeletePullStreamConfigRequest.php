@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeletePullStreamConfig请求参数结构体
+ *
  * @method string getConfigId() 获取配置id。
  * @method void setConfigId(string $ConfigId) 设置配置id。
- */
-
-/**
- *DeletePullStreamConfig请求参数结构体
  */
 class DeletePullStreamConfigRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeletePullStreamConfigRequest extends AbstractModel
      * @var string 配置id。
      */
     public $ConfigId;
+
     /**
      * @param string $ConfigId 配置id。
      */
@@ -38,6 +37,7 @@ class DeletePullStreamConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

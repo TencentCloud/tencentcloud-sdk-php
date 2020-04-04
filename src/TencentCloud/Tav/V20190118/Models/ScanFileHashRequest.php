@@ -18,6 +18,8 @@ namespace TencentCloud\Tav\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ScanFileHash请求参数结构体
+ *
  * @method string getKey() 获取购买服务后获得的授权信息，用于保证请求有效性
  * @method void setKey(string $Key) 设置购买服务后获得的授权信息，用于保证请求有效性
  * @method string getMd5s() 获取需要查询的md5值（支持单个和多个，多个md5间用逗号分格）
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWithCategory(string $WithCategory) 设置保留字段默认填0
  * @method string getSensitiveLevel() 获取松严规则控制字段默认填10（5-松、10-标准、15-严）
  * @method void setSensitiveLevel(string $SensitiveLevel) 设置松严规则控制字段默认填10（5-松、10-标准、15-严）
- */
-
-/**
- *ScanFileHash请求参数结构体
  */
 class ScanFileHashRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ScanFileHashRequest extends AbstractModel
      * @var string 松严规则控制字段默认填10（5-松、10-标准、15-严）
      */
     public $SensitiveLevel;
+
     /**
      * @param string $Key 购买服务后获得的授权信息，用于保证请求有效性
      * @param string $Md5s 需要查询的md5值（支持单个和多个，多个md5间用逗号分格）
@@ -62,6 +61,7 @@ class ScanFileHashRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

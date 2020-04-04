@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 大Key类型分布详情
+ *
  * @method string getType() 获取类型
  * @method void setType(string $Type) 设置类型
  * @method integer getCount() 获取数量
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) 设置大小
  * @method integer getUpdatetime() 获取时间戳
  * @method void setUpdatetime(integer $Updatetime) 设置时间戳
- */
-
-/**
- *大Key类型分布详情
  */
 class BigKeyTypeInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class BigKeyTypeInfo extends AbstractModel
      * @var integer 时间戳
      */
     public $Updatetime;
+
     /**
      * @param string $Type 类型
      * @param integer $Count 数量
@@ -62,6 +61,7 @@ class BigKeyTypeInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySubAppIdInfo请求参数结构体
+ *
  * @method integer getSubAppId() 获取子应用 ID。
  * @method void setSubAppId(integer $SubAppId) 设置子应用 ID。
  * @method string getName() 获取子应用名称，长度限制：40个字符。
  * @method void setName(string $Name) 设置子应用名称，长度限制：40个字符。
  * @method string getDescription() 获取子应用简介，长度限制： 300个字符。
  * @method void setDescription(string $Description) 设置子应用简介，长度限制： 300个字符。
- */
-
-/**
- *ModifySubAppIdInfo请求参数结构体
  */
 class ModifySubAppIdInfoRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifySubAppIdInfoRequest extends AbstractModel
      * @var string 子应用简介，长度限制： 300个字符。
      */
     public $Description;
+
     /**
      * @param integer $SubAppId 子应用 ID。
      * @param string $Name 子应用名称，长度限制：40个字符。
@@ -54,6 +53,7 @@ class ModifySubAppIdInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePolicyGroupList接口策略组绑定的实例分组信息
+ *
  * @method integer getInstanceGroupId() 获取实例分组名称id
  * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组名称id
  * @method string getViewName() 获取策略类型视图名称
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(integer $UpdateTime) 设置更新时间
  * @method integer getInsertTime() 获取创建时间
  * @method void setInsertTime(integer $InsertTime) 设置创建时间
- */
-
-/**
- *DescribePolicyGroupList接口策略组绑定的实例分组信息
  */
 class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel
      * @var integer 创建时间
      */
     public $InsertTime;
+
     /**
      * @param integer $InstanceGroupId 实例分组名称id
      * @param string $ViewName 策略类型视图名称
@@ -86,6 +85,7 @@ class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

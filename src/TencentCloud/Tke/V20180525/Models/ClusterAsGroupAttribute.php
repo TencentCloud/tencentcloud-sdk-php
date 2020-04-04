@@ -18,16 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 集群伸缩组属性
+ *
  * @method string getAutoScalingGroupId() 获取伸缩组ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
  * @method boolean getAutoScalingGroupEnabled() 获取是否开启
  * @method void setAutoScalingGroupEnabled(boolean $AutoScalingGroupEnabled) 设置是否开启
  * @method AutoScalingGroupRange getAutoScalingGroupRange() 获取伸缩组最大最小实例数
  * @method void setAutoScalingGroupRange(AutoScalingGroupRange $AutoScalingGroupRange) 设置伸缩组最大最小实例数
- */
-
-/**
- *集群伸缩组属性
  */
 class ClusterAsGroupAttribute extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ClusterAsGroupAttribute extends AbstractModel
      * @var AutoScalingGroupRange 伸缩组最大最小实例数
      */
     public $AutoScalingGroupRange;
+
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param boolean $AutoScalingGroupEnabled 是否开启
@@ -54,6 +53,7 @@ class ClusterAsGroupAttribute extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

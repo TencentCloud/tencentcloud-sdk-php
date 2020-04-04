@@ -18,16 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLibrary返回参数结构体
+ *
  * @method string getLibraryId() 获取人员库唯一标识符
  * @method void setLibraryId(string $LibraryId) 设置人员库唯一标识符
  * @method string getLibraryName() 获取人员库名称
  * @method void setLibraryName(string $LibraryName) 设置人员库名称
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DeleteLibrary返回参数结构体
  */
 class DeleteLibraryResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteLibraryResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $LibraryId 人员库唯一标识符
      * @param string $LibraryName 人员库名称
@@ -54,6 +53,7 @@ class DeleteLibraryResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

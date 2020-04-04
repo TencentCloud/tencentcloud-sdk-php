@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 是否兼容旧版配置
+ *
  * @method integer getCode() 获取兼容标志状态码。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(integer $Code) 设置兼容标志状态码。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *是否兼容旧版配置
  */
 class Compatibility extends AbstractModel
 {
@@ -34,6 +32,7 @@ class Compatibility extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
+
     /**
      * @param integer $Code 兼容标志状态码。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,6 +41,7 @@ class Compatibility extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

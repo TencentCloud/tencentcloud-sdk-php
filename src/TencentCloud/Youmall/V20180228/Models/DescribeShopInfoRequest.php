@@ -18,14 +18,12 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeShopInfo请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
  * @method void setOffset(integer $Offset) 设置偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
  * @method integer getLimit() 获取Limit:每页的数据项，最大100，超过100会被强制指定为100
  * @method void setLimit(integer $Limit) 设置Limit:每页的数据项，最大100，超过100会被强制指定为100
- */
-
-/**
- *DescribeShopInfo请求参数结构体
  */
 class DescribeShopInfoRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeShopInfoRequest extends AbstractModel
      * @var integer Limit:每页的数据项，最大100，超过100会被强制指定为100
      */
     public $Limit;
+
     /**
      * @param integer $Offset 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      * @param integer $Limit Limit:每页的数据项，最大100，超过100会被强制指定为100
@@ -46,6 +45,7 @@ class DescribeShopInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

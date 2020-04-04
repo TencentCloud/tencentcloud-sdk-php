@@ -18,16 +18,14 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpcResource返回参数结构体
+ *
  * @method array getVpcResourceSet() 获取VPC数据
  * @method void setVpcResourceSet(array $VpcResourceSet) 设置VPC数据
  * @method integer getTotalCount() 获取VPC个数
  * @method void setTotalCount(integer $TotalCount) 设置VPC个数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeVpcResource返回参数结构体
  */
 class DescribeVpcResourceResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeVpcResourceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $VpcResourceSet VPC数据
      * @param integer $TotalCount VPC个数
@@ -54,6 +53,7 @@ class DescribeVpcResourceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

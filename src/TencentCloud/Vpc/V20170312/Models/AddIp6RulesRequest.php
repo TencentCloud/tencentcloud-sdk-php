@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddIp6Rules请求参数结构体
+ *
  * @method string getIp6TranslatorId() 获取IPV6转换实例唯一ID，形如ip6-xxxxxxxx
  * @method void setIp6TranslatorId(string $Ip6TranslatorId) 设置IPV6转换实例唯一ID，形如ip6-xxxxxxxx
  * @method array getIp6RuleInfos() 获取IPV6转换规则信息
  * @method void setIp6RuleInfos(array $Ip6RuleInfos) 设置IPV6转换规则信息
  * @method string getIp6RuleName() 获取IPV6转换规则名称
  * @method void setIp6RuleName(string $Ip6RuleName) 设置IPV6转换规则名称
- */
-
-/**
- *AddIp6Rules请求参数结构体
  */
 class AddIp6RulesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AddIp6RulesRequest extends AbstractModel
      * @var string IPV6转换规则名称
      */
     public $Ip6RuleName;
+
     /**
      * @param string $Ip6TranslatorId IPV6转换实例唯一ID，形如ip6-xxxxxxxx
      * @param array $Ip6RuleInfos IPV6转换规则信息
@@ -54,6 +53,7 @@ class AddIp6RulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ScanVoice请求参数结构体
+ *
  * @method integer getBizId() 获取应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
  * @method void setBizId(integer $BizId) 设置应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
  * @method array getScenes() 获取语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
  * @method string getCallback() 获取异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
  * @method void setCallback(string $Callback) 设置异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
- */
-
-/**
- *ScanVoice请求参数结构体
  */
 class ScanVoiceRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ class ScanVoiceRequest extends AbstractModel
      * @var string 异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
      */
     public $Callback;
+
     /**
      * @param integer $BizId 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      * @param array $Scenes 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
@@ -78,6 +77,7 @@ class ScanVoiceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePolicyConditionList.ConfigManual.StatType
+ *
  * @method string getP5() 获取数据聚合方式，周期5秒
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setP5(string $P5) 设置数据聚合方式，周期5秒
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setP86400(string $P86400) 设置数据聚合方式，周期1天
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DescribePolicyConditionList.ConfigManual.StatType
  */
 class DescribePolicyConditionListConfigManualStatType extends AbstractModel
 {
@@ -104,6 +102,7 @@ class DescribePolicyConditionListConfigManualStatType extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $P86400;
+
     /**
      * @param string $P5 数据聚合方式，周期5秒
 注意：此字段可能返回 null，表示取不到有效值。
@@ -126,6 +125,7 @@ class DescribePolicyConditionListConfigManualStatType extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

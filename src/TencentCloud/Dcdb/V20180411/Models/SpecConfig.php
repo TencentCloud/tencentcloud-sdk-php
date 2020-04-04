@@ -18,14 +18,12 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 按机型分类的规格配置
+ *
  * @method string getMachine() 获取规格机型
  * @method void setMachine(string $Machine) 设置规格机型
  * @method array getSpecConfigInfos() 获取规格列表
  * @method void setSpecConfigInfos(array $SpecConfigInfos) 设置规格列表
- */
-
-/**
- *按机型分类的规格配置
  */
 class SpecConfig extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SpecConfig extends AbstractModel
      * @var array 规格列表
      */
     public $SpecConfigInfos;
+
     /**
      * @param string $Machine 规格机型
      * @param array $SpecConfigInfos 规格列表
@@ -46,6 +45,7 @@ class SpecConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

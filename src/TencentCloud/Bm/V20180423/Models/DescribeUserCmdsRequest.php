@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUserCmds请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取数量限制
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchKey(string $SearchKey) 设置关键字搜索，可搜索ID或别名，支持模糊搜索
  * @method string getCmdId() 获取查询的脚本ID
  * @method void setCmdId(string $CmdId) 设置查询的脚本ID
- */
-
-/**
- *DescribeUserCmds请求参数结构体
  */
 class DescribeUserCmdsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeUserCmdsRequest extends AbstractModel
      * @var string 查询的脚本ID
      */
     public $CmdId;
+
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 数量限制
@@ -78,6 +77,7 @@ class DescribeUserCmdsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

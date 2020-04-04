@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCcnRoutes请求参数结构体
+ *
  * @method string getCcnId() 获取CCN实例ID，形如：ccn-gree226l。
  * @method void setCcnId(string $CcnId) 设置CCN实例ID，形如：ccn-gree226l。
  * @method array getRouteIds() 获取CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
  * @method void setLimit(integer $Limit) 设置返回数量
- */
-
-/**
- *DescribeCcnRoutes请求参数结构体
  */
 class DescribeCcnRoutesRequest extends AbstractModel
 {
@@ -74,6 +72,7 @@ class DescribeCcnRoutesRequest extends AbstractModel
      * @var integer 返回数量
      */
     public $Limit;
+
     /**
      * @param string $CcnId CCN实例ID，形如：ccn-gree226l。
      * @param array $RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
@@ -90,6 +89,7 @@ class DescribeCcnRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

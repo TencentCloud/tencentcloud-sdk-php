@@ -18,14 +18,12 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ExportBruteAttacks返回参数结构体
+ *
  * @method string getDownloadUrl() 获取导出文件下载链接地址。
  * @method void setDownloadUrl(string $DownloadUrl) 设置导出文件下载链接地址。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ExportBruteAttacks返回参数结构体
  */
 class ExportBruteAttacksResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ExportBruteAttacksResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $DownloadUrl 导出文件下载链接地址。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class ExportBruteAttacksResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

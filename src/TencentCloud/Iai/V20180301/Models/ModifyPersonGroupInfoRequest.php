@@ -18,16 +18,14 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyPersonGroupInfo请求参数结构体
+ *
  * @method string getGroupId() 获取人员库ID
  * @method void setGroupId(string $GroupId) 设置人员库ID
  * @method string getPersonId() 获取人员ID
  * @method void setPersonId(string $PersonId) 设置人员ID
  * @method array getPersonExDescriptionInfos() 获取需要修改的人员描述字段内容，key-value
  * @method void setPersonExDescriptionInfos(array $PersonExDescriptionInfos) 设置需要修改的人员描述字段内容，key-value
- */
-
-/**
- *ModifyPersonGroupInfo请求参数结构体
  */
 class ModifyPersonGroupInfoRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyPersonGroupInfoRequest extends AbstractModel
      * @var array 需要修改的人员描述字段内容，key-value
      */
     public $PersonExDescriptionInfos;
+
     /**
      * @param string $GroupId 人员库ID
      * @param string $PersonId 人员ID
@@ -54,6 +53,7 @@ class ModifyPersonGroupInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

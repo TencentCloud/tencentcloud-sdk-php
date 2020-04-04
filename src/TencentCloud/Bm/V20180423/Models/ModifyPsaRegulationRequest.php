@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyPsaRegulation请求参数结构体
+ *
  * @method string getPsaId() 获取预授权规则ID
  * @method void setPsaId(string $PsaId) 设置预授权规则ID
  * @method string getPsaName() 获取预授权规则别名
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPsaDescription(string $PsaDescription) 设置预授权规则备注
  * @method array getTaskTypeIds() 获取预授权规则关联故障类型ID列表
  * @method void setTaskTypeIds(array $TaskTypeIds) 设置预授权规则关联故障类型ID列表
- */
-
-/**
- *ModifyPsaRegulation请求参数结构体
  */
 class ModifyPsaRegulationRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyPsaRegulationRequest extends AbstractModel
      * @var array 预授权规则关联故障类型ID列表
      */
     public $TaskTypeIds;
+
     /**
      * @param string $PsaId 预授权规则ID
      * @param string $PsaName 预授权规则别名
@@ -70,6 +69,7 @@ class ModifyPsaRegulationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

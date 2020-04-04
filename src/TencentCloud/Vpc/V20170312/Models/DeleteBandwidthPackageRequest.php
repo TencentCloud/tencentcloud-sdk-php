@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteBandwidthPackage请求参数结构体
+ *
  * @method string getBandwidthPackageId() 获取待删除带宽包唯一ID
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置待删除带宽包唯一ID
- */
-
-/**
- *DeleteBandwidthPackage请求参数结构体
  */
 class DeleteBandwidthPackageRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteBandwidthPackageRequest extends AbstractModel
      * @var string 待删除带宽包唯一ID
      */
     public $BandwidthPackageId;
+
     /**
      * @param string $BandwidthPackageId 待删除带宽包唯一ID
      */
@@ -38,6 +37,7 @@ class DeleteBandwidthPackageRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

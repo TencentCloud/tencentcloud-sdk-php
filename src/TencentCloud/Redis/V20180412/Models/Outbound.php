@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全组出站规则
+ *
  * @method string getAction() 获取策略，ACCEPT或者DROP。
  * @method void setAction(string $Action) 设置策略，ACCEPT或者DROP。
  * @method string getAddressModule() 获取地址组id代表的地址集合。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceModule(string $ServiceModule) 设置服务组id代表的协议和端口集合。
  * @method string getId() 获取安全组id代表的地址集合。
  * @method void setId(string $Id) 设置安全组id代表的地址集合。
- */
-
-/**
- *安全组出站规则
  */
 class Outbound extends AbstractModel
 {
@@ -80,6 +78,7 @@ class Outbound extends AbstractModel
      * @var string 安全组id代表的地址集合。
      */
     public $Id;
+
     /**
      * @param string $Action 策略，ACCEPT或者DROP。
      * @param string $AddressModule 地址组id代表的地址集合。
@@ -94,6 +93,7 @@ class Outbound extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

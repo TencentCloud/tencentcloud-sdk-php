@@ -18,6 +18,8 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ImportMediaToProject请求参数结构体
+ *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
  * @method string getProjectId() 获取项目 Id。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreProcessDefinition(integer $PreProcessDefinition) 设置素材预处理任务模板 ID，取值：
 <li>10：进行编辑预处理。</li>
 注意：如果填0则不进行处理。
- */
-
-/**
- *ImportMediaToProject请求参数结构体
  */
 class ImportMediaToProjectRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ class ImportMediaToProjectRequest extends AbstractModel
 注意：如果填0则不进行处理。
      */
     public $PreProcessDefinition;
+
     /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $ProjectId 项目 Id。
@@ -78,6 +77,7 @@ class ImportMediaToProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

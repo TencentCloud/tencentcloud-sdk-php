@@ -18,16 +18,14 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePeakBaseOverview返回参数结构体
+ *
  * @method array getPeakFamilyInfoSet() 获取基础峰值列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeakFamilyInfoSet(array $PeakFamilyInfoSet) 设置基础峰值列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribePeakBaseOverview返回参数结构体
  */
 class DescribePeakBaseOverviewResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class DescribePeakBaseOverviewResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $PeakFamilyInfoSet 基础峰值列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class DescribePeakBaseOverviewResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

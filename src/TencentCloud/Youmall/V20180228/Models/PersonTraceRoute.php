@@ -18,14 +18,12 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 客户轨迹序列
+ *
  * @method string getTraceId() 获取轨迹编码
  * @method void setTraceId(string $TraceId) 设置轨迹编码
  * @method array getTracePointSet() 获取轨迹点序列
  * @method void setTracePointSet(array $TracePointSet) 设置轨迹点序列
- */
-
-/**
- *客户轨迹序列
  */
 class PersonTraceRoute extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PersonTraceRoute extends AbstractModel
      * @var array 轨迹点序列
      */
     public $TracePointSet;
+
     /**
      * @param string $TraceId 轨迹编码
      * @param array $TracePointSet 轨迹点序列
@@ -46,6 +45,7 @@ class PersonTraceRoute extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

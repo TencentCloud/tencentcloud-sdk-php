@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceCreateDBInstances请求参数结构体
+ *
  * @method string getZone() 获取可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
  * @method void setZone(string $Zone) 设置可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
  * @method string getSpecCode() 获取规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPid(integer $Pid) 设置计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
  * @method string getInstanceChargeType() 获取实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
- */
-
-/**
- *InquiryPriceCreateDBInstances请求参数结构体
  */
 class InquiryPriceCreateDBInstancesRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
      * @var string 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
      */
     public $InstanceChargeType;
+
     /**
      * @param string $Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
      * @param string $SpecCode 规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
@@ -86,6 +85,7 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

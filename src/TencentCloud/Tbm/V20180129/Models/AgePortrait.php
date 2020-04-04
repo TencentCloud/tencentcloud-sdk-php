@@ -18,14 +18,12 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户年龄画像
+ *
  * @method string getAgeRange() 获取年龄区间
  * @method void setAgeRange(string $AgeRange) 设置年龄区间
  * @method float getPercent() 获取百分比
  * @method void setPercent(float $Percent) 设置百分比
- */
-
-/**
- *用户年龄画像
  */
 class AgePortrait extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AgePortrait extends AbstractModel
      * @var float 百分比
      */
     public $Percent;
+
     /**
      * @param string $AgeRange 年龄区间
      * @param float $Percent 百分比
@@ -46,6 +45,7 @@ class AgePortrait extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

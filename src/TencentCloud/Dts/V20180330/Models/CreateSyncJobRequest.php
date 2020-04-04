@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSyncJob请求参数结构体
+ *
  * @method string getJobName() 获取灾备同步任务名
  * @method void setJobName(string $JobName) 设置灾备同步任务名
  * @method SyncOption getSyncOption() 获取灾备同步任务配置选项
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabaseInfo(string $DatabaseInfo) 设置需要同步的源数据库表信息，用json格式的字符串描述。
 对于database-table两级结构的数据库：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
- */
-
-/**
- *CreateSyncJob请求参数结构体
  */
 class CreateSyncJobRequest extends AbstractModel
 {
@@ -93,6 +91,7 @@ class CreateSyncJobRequest extends AbstractModel
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
      */
     public $DatabaseInfo;
+
     /**
      * @param string $JobName 灾备同步任务名
      * @param SyncOption $SyncOption 灾备同步任务配置选项
@@ -110,6 +109,7 @@ class CreateSyncJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

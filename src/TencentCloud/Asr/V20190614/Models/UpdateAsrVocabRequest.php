@@ -18,6 +18,8 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateAsrVocab请求参数结构体
+ *
  * @method string getVocabId() 获取热词表ID
  * @method void setVocabId(string $VocabId) 设置热词表ID
  * @method string getName() 获取热词表名称
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 当用户传此参数（参数长度大于0），即以此参数解析词权重，WordWeights会被忽略
  * @method string getDescription() 获取热词表描述
  * @method void setDescription(string $Description) 设置热词表描述
- */
-
-/**
- *UpdateAsrVocab请求参数结构体
  */
 class UpdateAsrVocabRequest extends AbstractModel
 {
@@ -62,6 +60,7 @@ class UpdateAsrVocabRequest extends AbstractModel
      * @var string 热词表描述
      */
     public $Description;
+
     /**
      * @param string $VocabId 热词表ID
      * @param string $Name 热词表名称
@@ -74,6 +73,7 @@ class UpdateAsrVocabRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

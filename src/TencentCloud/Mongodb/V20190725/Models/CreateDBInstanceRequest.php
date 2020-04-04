@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDBInstance请求参数结构体
+ *
  * @method integer getNodeNum() 获取每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
  * @method void setNodeNum(integer $NodeNum) 设置每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
  * @method integer getMemory() 获取实例内存大小，单位：GB
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置实例标签信息
  * @method integer getAutoRenewFlag() 获取自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。默认为不自动续费
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。默认为不自动续费
- */
-
-/**
- *CreateDBInstance请求参数结构体
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -136,6 +134,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @var integer 自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。默认为不自动续费
      */
     public $AutoRenewFlag;
+
     /**
      * @param integer $NodeNum 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
      * @param integer $Memory 实例内存大小，单位：GB
@@ -158,6 +157,7 @@ class CreateDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

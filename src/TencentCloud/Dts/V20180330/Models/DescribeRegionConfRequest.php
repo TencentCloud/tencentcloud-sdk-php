@@ -18,14 +18,13 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRegionConf请求参数结构体
+ *
 
- */
-
-/**
- *DescribeRegionConf请求参数结构体
  */
 class DescribeRegionConfRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeRegionConfRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

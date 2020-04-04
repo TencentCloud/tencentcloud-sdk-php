@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNetworkInterfaceLimit返回参数结构体
+ *
  * @method integer getEniQuantity() 获取弹性网卡配额
  * @method void setEniQuantity(integer $EniQuantity) 设置弹性网卡配额
  * @method integer getEniPrivateIpAddressQuantity() 获取每个弹性网卡可以分配的IP配额
  * @method void setEniPrivateIpAddressQuantity(integer $EniPrivateIpAddressQuantity) 设置每个弹性网卡可以分配的IP配额
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeNetworkInterfaceLimit返回参数结构体
  */
 class DescribeNetworkInterfaceLimitResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeNetworkInterfaceLimitResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $EniQuantity 弹性网卡配额
      * @param integer $EniPrivateIpAddressQuantity 每个弹性网卡可以分配的IP配额
@@ -54,6 +53,7 @@ class DescribeNetworkInterfaceLimitResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

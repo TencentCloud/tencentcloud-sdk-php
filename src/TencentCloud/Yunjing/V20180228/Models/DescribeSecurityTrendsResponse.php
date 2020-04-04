@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityTrends返回参数结构体
+ *
  * @method array getMalwares() 获取木马事件统计数据数组。
  * @method void setMalwares(array $Malwares) 设置木马事件统计数据数组。
  * @method array getNonLocalLoginPlaces() 获取异地登录事件统计数据数组。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBaseLines(array $BaseLines) 设置基线统计数据数组。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeSecurityTrends返回参数结构体
  */
 class DescribeSecurityTrendsResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeSecurityTrendsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Malwares 木马事件统计数据数组。
      * @param array $NonLocalLoginPlaces 异地登录事件统计数据数组。
@@ -78,6 +77,7 @@ class DescribeSecurityTrendsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAgentPayDeals请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取限制数目
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwnerUins(array $OwnerUins) 设置下单人账号ID列表
  * @method array getDealNames() 获取订单号列表
  * @method void setDealNames(array $DealNames) 设置订单号列表
- */
-
-/**
- *DescribeAgentPayDeals请求参数结构体
  */
 class DescribeAgentPayDealsRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeAgentPayDealsRequest extends AbstractModel
      * @var array 订单号列表
      */
     public $DealNames;
+
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 限制数目
@@ -94,6 +93,7 @@ class DescribeAgentPayDealsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

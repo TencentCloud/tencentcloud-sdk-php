@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HTTP/HTTPS转发规则（输入）
+ *
  * @method string getDomain() 获取转发规则的域名。长度限制为：1~80。
  * @method void setDomain(string $Domain) 设置转发规则的域名。长度限制为：1~80。
  * @method string getUrl() 获取转发规则的路径。长度限制为：1~200。
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrpcFunc(string $TrpcFunc) 设置TRPC调用服务接口，ForwardType为TRPC时必填
  * @method boolean getQuic() 获取是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
  * @method void setQuic(boolean $Quic) 设置是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
- */
-
-/**
- *HTTP/HTTPS转发规则（输入）
  */
 class RuleInput extends AbstractModel
 {
@@ -118,6 +116,7 @@ class RuleInput extends AbstractModel
      * @var boolean 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
      */
     public $Quic;
+
     /**
      * @param string $Domain 转发规则的域名。长度限制为：1~80。
      * @param string $Url 转发规则的路径。长度限制为：1~200。
@@ -138,6 +137,7 @@ class RuleInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCfsRule请求参数结构体
+ *
  * @method string getPGroupId() 获取权限组 ID
  * @method void setPGroupId(string $PGroupId) 设置权限组 ID
  * @method string getRuleId() 获取规则 ID
  * @method void setRuleId(string $RuleId) 设置规则 ID
- */
-
-/**
- *DeleteCfsRule请求参数结构体
  */
 class DeleteCfsRuleRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteCfsRuleRequest extends AbstractModel
      * @var string 规则 ID
      */
     public $RuleId;
+
     /**
      * @param string $PGroupId 权限组 ID
      * @param string $RuleId 规则 ID
@@ -46,6 +45,7 @@ class DeleteCfsRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

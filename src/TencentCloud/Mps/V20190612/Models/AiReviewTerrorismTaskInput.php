@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内容审核鉴恐任务输入参数类型
+ *
  * @method integer getDefinition() 获取鉴恐模板 ID。
  * @method void setDefinition(integer $Definition) 设置鉴恐模板 ID。
- */
-
-/**
- *内容审核鉴恐任务输入参数类型
  */
 class AiReviewTerrorismTaskInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiReviewTerrorismTaskInput extends AbstractModel
      * @var integer 鉴恐模板 ID。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 鉴恐模板 ID。
      */
@@ -38,6 +37,7 @@ class AiReviewTerrorismTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

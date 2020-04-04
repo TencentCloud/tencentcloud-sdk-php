@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 只读组参数
+ *
  * @method string getRoGroupMode() 获取只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。
  * @method void setRoGroupMode(string $RoGroupMode) 设置只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。
  * @method string getRoGroupId() 获取只读组 ID。
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoGroupZone(string $RoGroupZone) 设置只读组所在的可用区。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *只读组参数
  */
 class RoGroup extends AbstractModel
 {
@@ -141,6 +139,7 @@ class RoGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoGroupZone;
+
     /**
      * @param string $RoGroupMode 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。
      * @param string $RoGroupId 只读组 ID。
@@ -166,6 +165,7 @@ class RoGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 返回CMK列表信息
+ *
  * @method string getKeyId() 获取CMK的全局唯一标识。
  * @method void setKeyId(string $KeyId) 设置CMK的全局唯一标识。
- */
-
-/**
- *返回CMK列表信息
  */
 class Key extends AbstractModel
 {
@@ -31,6 +29,7 @@ class Key extends AbstractModel
      * @var string CMK的全局唯一标识。
      */
     public $KeyId;
+
     /**
      * @param string $KeyId CMK的全局唯一标识。
      */
@@ -38,6 +37,7 @@ class Key extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

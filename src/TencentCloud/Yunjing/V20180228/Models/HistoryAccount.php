@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 账号变更历史数据。
+ *
  * @method integer getId() 获取唯一ID。
  * @method void setId(integer $Id) 设置唯一ID。
  * @method string getUuid() 获取云镜客户端唯一Uuid。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 <li>DELETE：表示删除帐号</li>
  * @method string getModifyTime() 获取变更时间。
  * @method void setModifyTime(string $ModifyTime) 设置变更时间。
- */
-
-/**
- *账号变更历史数据。
  */
 class HistoryAccount extends AbstractModel
 {
@@ -82,6 +80,7 @@ class HistoryAccount extends AbstractModel
      * @var string 变更时间。
      */
     public $ModifyTime;
+
     /**
      * @param integer $Id 唯一ID。
      * @param string $Uuid 云镜客户端唯一Uuid。
@@ -98,6 +97,7 @@ class HistoryAccount extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

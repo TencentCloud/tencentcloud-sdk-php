@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 日志url信息
+ *
  * @method string getLogName() 获取日志名称。
  * @method void setLogName(string $LogName) 设置日志名称。
  * @method string getLogUrl() 获取日志Url。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogTime(string $LogTime) 设置日志生成时间
  * @method integer getFileSize() 获取文件大小
  * @method void setFileSize(integer $FileSize) 设置文件大小
- */
-
-/**
- *日志url信息
  */
 class LogInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class LogInfo extends AbstractModel
      * @var integer 文件大小
      */
     public $FileSize;
+
     /**
      * @param string $LogName 日志名称。
      * @param string $LogUrl 日志Url。
@@ -62,6 +61,7 @@ class LogInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

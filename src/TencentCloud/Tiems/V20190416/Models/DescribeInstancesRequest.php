@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstances请求参数结构体
+ *
  * @method array getFilters() 获取筛选选项
  * @method void setFilters(array $Filters) 设置筛选选项
  * @method integer getOffset() 获取偏移量，默认为0
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
  * @method string getResourceGroupId() 获取要查询的资源组 ID
  * @method void setResourceGroupId(string $ResourceGroupId) 设置要查询的资源组 ID
- */
-
-/**
- *DescribeInstances请求参数结构体
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @var string 要查询的资源组 ID
      */
     public $ResourceGroupId;
+
     /**
      * @param array $Filters 筛选选项
      * @param integer $Offset 偏移量，默认为0
@@ -78,6 +77,7 @@ class DescribeInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

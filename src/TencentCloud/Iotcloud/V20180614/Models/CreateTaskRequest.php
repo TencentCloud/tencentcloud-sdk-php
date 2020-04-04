@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTask请求参数结构体
+ *
  * @method string getTaskType() 获取任务类型，取值为 “UpdateShadow” 或者 “PublishMessage”
  * @method void setTaskType(string $TaskType) 设置任务类型，取值为 “UpdateShadow” 或者 “PublishMessage”
  * @method string getProductId() 获取执行任务的产品ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasks(Task $Tasks) 设置任务描述细节，描述见下 Task
  * @method integer getMaxExecutionTimeInSeconds() 获取最长执行时间，单位秒，被调度后超过此时间仍未有结果则视为任务失败。取值为0-86400，默认为86400
  * @method void setMaxExecutionTimeInSeconds(integer $MaxExecutionTimeInSeconds) 设置最长执行时间，单位秒，被调度后超过此时间仍未有结果则视为任务失败。取值为0-86400，默认为86400
- */
-
-/**
- *CreateTask请求参数结构体
  */
 class CreateTaskRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateTaskRequest extends AbstractModel
      * @var integer 最长执行时间，单位秒，被调度后超过此时间仍未有结果则视为任务失败。取值为0-86400，默认为86400
      */
     public $MaxExecutionTimeInSeconds;
+
     /**
      * @param string $TaskType 任务类型，取值为 “UpdateShadow” 或者 “PublishMessage”
      * @param string $ProductId 执行任务的产品ID
@@ -78,6 +77,7 @@ class CreateTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

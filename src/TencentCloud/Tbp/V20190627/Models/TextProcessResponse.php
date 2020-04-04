@@ -18,6 +18,8 @@ namespace TencentCloud\Tbp\V20190627\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TextProcess返回参数结构体
+ *
  * @method string getDialogStatus() 获取当前会话状态{会话开始: START; 会话中: COUTINUE; 会话结束: COMPLETE}。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDialogStatus(string $DialogStatus) 设置当前会话状态{会话开始: START; 会话中: COUTINUE; 会话结束: COMPLETE}。
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *TextProcess返回参数结构体
  */
 class TextProcessResponse extends AbstractModel
 {
@@ -111,6 +109,7 @@ class TextProcessResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $DialogStatus 当前会话状态{会话开始: START; 会话中: COUTINUE; 会话结束: COMPLETE}。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -134,6 +133,7 @@ class TextProcessResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

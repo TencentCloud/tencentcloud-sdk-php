@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * QueryOrder请求参数结构体
+ *
  * @method string getMidasAppId() 获取聚鑫分配的支付主 MidasAppId
  * @method void setMidasAppId(string $MidasAppId) 设置聚鑫分配的支付主 MidasAppId
  * @method string getUserId() 获取用户ID，长度不小于5位， 仅支持字母和数字的组合
@@ -42,10 +44,6 @@ type=by_user根据用户id 查订单 。
  * @method void setOutTradeNo(string $OutTradeNo) 设置业务订单号，OutTradeNo与 TransactionId不能同时为 空，都传优先使用 OutTradeNo
  * @method string getTransactionId() 获取聚鑫订单号，OutTradeNo与 TransactionId不能同时为 空，都传优先使用 OutTradeNo
  * @method void setTransactionId(string $TransactionId) 设置聚鑫订单号，OutTradeNo与 TransactionId不能同时为 空，都传优先使用 OutTradeNo
- */
-
-/**
- *QueryOrder请求参数结构体
  */
 class QueryOrderRequest extends AbstractModel
 {
@@ -104,6 +102,7 @@ type=by_user根据用户id 查订单 。
      * @var string 聚鑫订单号，OutTradeNo与 TransactionId不能同时为 空，都传优先使用 OutTradeNo
      */
     public $TransactionId;
+
     /**
      * @param string $MidasAppId 聚鑫分配的支付主 MidasAppId
      * @param string $UserId 用户ID，长度不小于5位， 仅支持字母和数字的组合
@@ -122,6 +121,7 @@ type=by_user根据用户id 查订单 。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListOrganizationNodeMembers请求参数结构体
+ *
  * @method integer getNodeId() 获取企业组织单元ID
  * @method void setNodeId(integer $NodeId) 设置企业组织单元ID
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取限制数目
  * @method void setLimit(integer $Limit) 设置限制数目
- */
-
-/**
- *ListOrganizationNodeMembers请求参数结构体
  */
 class ListOrganizationNodeMembersRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListOrganizationNodeMembersRequest extends AbstractModel
      * @var integer 限制数目
      */
     public $Limit;
+
     /**
      * @param integer $NodeId 企业组织单元ID
      * @param integer $Offset 偏移量
@@ -54,6 +53,7 @@ class ListOrganizationNodeMembersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

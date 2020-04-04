@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProjectSecurityGroups请求参数结构体
+ *
  * @method string getProduct() 获取数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb
  * @method void setProduct(string $Product) 设置数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb
  * @method integer getProjectId() 获取项目Id。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置拉取数量限制。
  * @method string getSearchKey() 获取搜索条件，支持安全组id或者安全组名称。
  * @method void setSearchKey(string $SearchKey) 设置搜索条件，支持安全组id或者安全组名称。
- */
-
-/**
- *DescribeProjectSecurityGroups请求参数结构体
  */
 class DescribeProjectSecurityGroupsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
      * @var string 搜索条件，支持安全组id或者安全组名称。
      */
     public $SearchKey;
+
     /**
      * @param string $Product 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb
      * @param integer $ProjectId 项目Id。
@@ -70,6 +69,7 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

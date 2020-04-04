@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CloneAccount请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getSrcUser() 获取源用户账户名
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstHost(string $DstHost) 设置目的用户HOST
  * @method string getDstDesc() 获取目的用户账户描述
  * @method void setDstDesc(string $DstDesc) 设置目的用户账户描述
- */
-
-/**
- *CloneAccount请求参数结构体
  */
 class CloneAccountRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CloneAccountRequest extends AbstractModel
      * @var string 目的用户账户描述
      */
     public $DstDesc;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $SrcUser 源用户账户名
@@ -78,6 +77,7 @@ class CloneAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

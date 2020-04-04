@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 计算环境数据
+ *
  * @method string getInstanceType() 获取CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
  * @method void setInstanceType(string $InstanceType) 设置CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
  * @method string getImageId() 获取CVM镜像ID
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZones(array $Zones) 设置可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
  * @method array getVirtualPrivateClouds() 获取私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
  * @method void setVirtualPrivateClouds(array $VirtualPrivateClouds) 设置私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
- */
-
-/**
- *计算环境数据
  */
 class EnvData extends AbstractModel
 {
@@ -136,6 +134,7 @@ class EnvData extends AbstractModel
      * @var array 私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
      */
     public $VirtualPrivateClouds;
+
     /**
      * @param string $InstanceType CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
      * @param string $ImageId CVM镜像ID
@@ -158,6 +157,7 @@ class EnvData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

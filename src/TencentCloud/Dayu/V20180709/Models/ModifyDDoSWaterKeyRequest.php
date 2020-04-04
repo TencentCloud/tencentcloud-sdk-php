@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDDoSWaterKey请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method string getPolicyId() 获取策略ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMethod(string $Method) 设置密钥操作，取值：[add（添加），delete（删除），open（开启），close（关闭），get（获取密钥）]
  * @method integer getKeyId() 获取密钥ID，当添加密钥操作时可以不填或填0，其他操作时必须填写；
  * @method void setKeyId(integer $KeyId) 设置密钥ID，当添加密钥操作时可以不填或填0，其他操作时必须填写；
- */
-
-/**
- *ModifyDDoSWaterKey请求参数结构体
  */
 class ModifyDDoSWaterKeyRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyDDoSWaterKeyRequest extends AbstractModel
      * @var integer 密钥ID，当添加密钥操作时可以不填或填0，其他操作时必须填写；
      */
     public $KeyId;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param string $PolicyId 策略ID
@@ -62,6 +61,7 @@ class ModifyDDoSWaterKeyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

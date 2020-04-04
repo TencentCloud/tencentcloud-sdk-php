@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 7层监听器转发规则健康检查相关参数
+ *
  * @method integer getDelayLoop() 获取健康检查的时间间隔
  * @method void setDelayLoop(integer $DelayLoop) 设置健康检查的时间间隔
  * @method integer getConnectTimeout() 获取健康检查的响应超时时间
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 当调用ModifyRuleAttribute时，不支持修改该参数。
  * @method void setDomain(string $Domain) 设置健康检查的检查域名。
 当调用ModifyRuleAttribute时，不支持修改该参数。
- */
-
-/**
- *7层监听器转发规则健康检查相关参数
  */
 class RuleCheckParams extends AbstractModel
 {
@@ -69,6 +67,7 @@ class RuleCheckParams extends AbstractModel
 当调用ModifyRuleAttribute时，不支持修改该参数。
      */
     public $Domain;
+
     /**
      * @param integer $DelayLoop 健康检查的时间间隔
      * @param integer $ConnectTimeout 健康检查的响应超时时间
@@ -82,6 +81,7 @@ class RuleCheckParams extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

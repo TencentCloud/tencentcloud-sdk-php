@@ -18,14 +18,12 @@ namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBDiagEvent请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID 。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
  * @method integer getEventId() 获取事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
  * @method void setEventId(integer $EventId) 设置事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
- */
-
-/**
- *DescribeDBDiagEvent请求参数结构体
  */
 class DescribeDBDiagEventRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDBDiagEventRequest extends AbstractModel
      * @var integer 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
      */
     public $EventId;
+
     /**
      * @param string $InstanceId 实例 ID 。
      * @param integer $EventId 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
@@ -46,6 +45,7 @@ class DescribeDBDiagEventRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SubmitAudioTask请求参数结构体
+ *
  * @method integer getLang() 获取音频源的语言，默认0为英文，1为中文
  * @method void setLang(integer $Lang) 设置音频源的语言，默认0为英文，1为中文
  * @method string getUrl() 获取音频URL。客户请求为URL方式时必须带此字段指名音频的url。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMuteThreshold(integer $MuteThreshold) 设置静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
  * @method array getVocabLibNameList() 获取识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
  * @method void setVocabLibNameList(array $VocabLibNameList) 设置识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
- */
-
-/**
- *SubmitAudioTask请求参数结构体
  */
 class SubmitAudioTaskRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class SubmitAudioTaskRequest extends AbstractModel
      * @var array 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      */
     public $VocabLibNameList;
+
     /**
      * @param integer $Lang 音频源的语言，默认0为英文，1为中文
      * @param string $Url 音频URL。客户请求为URL方式时必须带此字段指名音频的url。
@@ -94,6 +93,7 @@ class SubmitAudioTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

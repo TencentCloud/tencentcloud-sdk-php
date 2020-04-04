@@ -18,16 +18,14 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RunUserCmd返回参数结构体
+ *
  * @method array getSuccessTaskInfoSet() 获取运行成功的任务信息列表
  * @method void setSuccessTaskInfoSet(array $SuccessTaskInfoSet) 设置运行成功的任务信息列表
  * @method array getFailedTaskInfoSet() 获取运行失败的任务信息列表
  * @method void setFailedTaskInfoSet(array $FailedTaskInfoSet) 设置运行失败的任务信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *RunUserCmd返回参数结构体
  */
 class RunUserCmdResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RunUserCmdResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $SuccessTaskInfoSet 运行成功的任务信息列表
      * @param array $FailedTaskInfoSet 运行失败的任务信息列表
@@ -54,6 +53,7 @@ class RunUserCmdResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

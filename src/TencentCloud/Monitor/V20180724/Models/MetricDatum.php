@@ -18,14 +18,12 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 指标名称和值的封装
+ *
  * @method string getMetricName() 获取指标名称
  * @method void setMetricName(string $MetricName) 设置指标名称
  * @method integer getValue() 获取指标的值
  * @method void setValue(integer $Value) 设置指标的值
- */
-
-/**
- *指标名称和值的封装
  */
 class MetricDatum extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MetricDatum extends AbstractModel
      * @var integer 指标的值
      */
     public $Value;
+
     /**
      * @param string $MetricName 指标名称
      * @param integer $Value 指标的值
@@ -46,6 +45,7 @@ class MetricDatum extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

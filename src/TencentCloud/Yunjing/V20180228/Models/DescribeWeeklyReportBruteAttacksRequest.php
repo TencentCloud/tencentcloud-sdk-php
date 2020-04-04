@@ -18,16 +18,14 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWeeklyReportBruteAttacks请求参数结构体
+ *
  * @method string getBeginDate() 获取专业周报开始时间。
  * @method void setBeginDate(string $BeginDate) 设置专业周报开始时间。
  * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- */
-
-/**
- *DescribeWeeklyReportBruteAttacks请求参数结构体
  */
 class DescribeWeeklyReportBruteAttacksRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeWeeklyReportBruteAttacksRequest extends AbstractModel
      * @var integer 偏移量，默认为0。
      */
     public $Offset;
+
     /**
      * @param string $BeginDate 专业周报开始时间。
      * @param integer $Limit 返回数量，默认为10，最大值为100。
@@ -54,6 +53,7 @@ class DescribeWeeklyReportBruteAttacksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

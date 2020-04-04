@@ -18,14 +18,12 @@ namespace TencentCloud\Wss\V20180426\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCert请求参数结构体
+ *
  * @method string getId() 获取证书 ID，即通过 GetList 拿到的证书列表的 ID 字段。
  * @method void setId(string $Id) 设置证书 ID，即通过 GetList 拿到的证书列表的 ID 字段。
  * @method string getModuleType() 获取模块名称，应填 ssl。
  * @method void setModuleType(string $ModuleType) 设置模块名称，应填 ssl。
- */
-
-/**
- *DeleteCert请求参数结构体
  */
 class DeleteCertRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteCertRequest extends AbstractModel
      * @var string 模块名称，应填 ssl。
      */
     public $ModuleType;
+
     /**
      * @param string $Id 证书 ID，即通过 GetList 拿到的证书列表的 ID 字段。
      * @param string $ModuleType 模块名称，应填 ssl。
@@ -46,6 +45,7 @@ class DeleteCertRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

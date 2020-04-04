@@ -18,12 +18,10 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteIotDataType请求参数结构体
+ *
  * @method string getTypeId() 获取自定义数据类型的标识符
  * @method void setTypeId(string $TypeId) 设置自定义数据类型的标识符
- */
-
-/**
- *DeleteIotDataType请求参数结构体
  */
 class DeleteIotDataTypeRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteIotDataTypeRequest extends AbstractModel
      * @var string 自定义数据类型的标识符
      */
     public $TypeId;
+
     /**
      * @param string $TypeId 自定义数据类型的标识符
      */
@@ -38,6 +37,7 @@ class DeleteIotDataTypeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

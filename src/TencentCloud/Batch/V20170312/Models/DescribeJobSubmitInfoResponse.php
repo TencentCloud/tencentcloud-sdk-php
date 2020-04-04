@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeJobSubmitInfo返回参数结构体
+ *
  * @method string getJobId() 获取作业ID
  * @method void setJobId(string $JobId) 设置作业ID
  * @method string getJobName() 获取作业名称
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDependences(array $Dependences) 设置依赖信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeJobSubmitInfo返回参数结构体
  */
 class DescribeJobSubmitInfoResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeJobSubmitInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $JobId 作业ID
      * @param string $JobName 作业名称
@@ -86,6 +85,7 @@ class DescribeJobSubmitInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 可用区信息
+ *
  * @method string getZone() 获取可用区英文ID
  * @method void setZone(string $Zone) 设置可用区英文ID
  * @method integer getZoneId() 获取可用区数字ID
  * @method void setZoneId(integer $ZoneId) 设置可用区数字ID
  * @method string getZoneName() 获取可用区中文名
  * @method void setZoneName(string $ZoneName) 设置可用区中文名
- */
-
-/**
- *可用区信息
  */
 class ZonesInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ZonesInfo extends AbstractModel
      * @var string 可用区中文名
      */
     public $ZoneName;
+
     /**
      * @param string $Zone 可用区英文ID
      * @param integer $ZoneId 可用区数字ID
@@ -54,6 +53,7 @@ class ZonesInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

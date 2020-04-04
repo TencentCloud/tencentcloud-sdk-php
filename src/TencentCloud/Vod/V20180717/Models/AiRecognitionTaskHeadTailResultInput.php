@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频片头片尾识别的输入。
+ *
  * @method integer getDefinition() 获取视频片头片尾识别模板 ID。
  * @method void setDefinition(integer $Definition) 设置视频片头片尾识别模板 ID。
- */
-
-/**
- *视频片头片尾识别的输入。
  */
 class AiRecognitionTaskHeadTailResultInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskHeadTailResultInput extends AbstractModel
      * @var integer 视频片头片尾识别模板 ID。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 视频片头片尾识别模板 ID。
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskHeadTailResultInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

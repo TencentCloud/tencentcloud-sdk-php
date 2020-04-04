@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 制作媒体文件任务的输出。
+ *
  * @method string getFileType() 获取文件类型，例如 mp4、mp3 等。
  * @method void setFileType(string $FileType) 设置文件类型，例如 mp4、mp3 等。
  * @method string getFileId() 获取媒体文件 ID。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 <li>默认值：0，表示其他分类。</li>
  * @method string getExpireTime() 获取输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setExpireTime(string $ExpireTime) 设置输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
- */
-
-/**
- *制作媒体文件任务的输出。
  */
 class ComposeMediaTaskOutput extends AbstractModel
 {
@@ -69,6 +67,7 @@ class ComposeMediaTaskOutput extends AbstractModel
      * @var string 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $ExpireTime;
+
     /**
      * @param string $FileType 文件类型，例如 mp4、mp3 等。
      * @param string $FileId 媒体文件 ID。
@@ -82,6 +81,7 @@ class ComposeMediaTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

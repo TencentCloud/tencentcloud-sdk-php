@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音关键词识别输出。
+ *
  * @method array getResultSet() 获取语音关键词识别结果集。
  * @method void setResultSet(array $ResultSet) 设置语音关键词识别结果集。
- */
-
-/**
- *语音关键词识别输出。
  */
 class AiRecognitionTaskAsrWordsResultOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskAsrWordsResultOutput extends AbstractModel
      * @var array 语音关键词识别结果集。
      */
     public $ResultSet;
+
     /**
      * @param array $ResultSet 语音关键词识别结果集。
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskAsrWordsResultOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

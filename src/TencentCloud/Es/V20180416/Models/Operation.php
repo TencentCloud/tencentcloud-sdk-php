@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ES集群操作详细信息
+ *
  * @method integer getId() 获取操作唯一id
  * @method void setId(integer $Id) 设置操作唯一id
  * @method string getStartTime() 获取操作开始时间
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasks(array $Tasks) 设置流程任务信息
  * @method float getProgress() 获取操作进度
  * @method void setProgress(float $Progress) 设置操作进度
- */
-
-/**
- *ES集群操作详细信息
  */
 class Operation extends AbstractModel
 {
@@ -73,6 +71,7 @@ class Operation extends AbstractModel
      * @var float 操作进度
      */
     public $Progress;
+
     /**
      * @param integer $Id 操作唯一id
      * @param string $StartTime 操作开始时间
@@ -86,6 +85,7 @@ class Operation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

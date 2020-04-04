@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 二维码/条形码坐标信息
+ *
  * @method Coord getLeftTop() 获取左上顶点坐标（如果是条形码，X和Y都为-1）
  * @method void setLeftTop(Coord $LeftTop) 设置左上顶点坐标（如果是条形码，X和Y都为-1）
  * @method Coord getRightTop() 获取右上顶点坐标（如果是条形码，X和Y都为-1）
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRightBottom(Coord $RightBottom) 设置右下顶点坐标（如果是条形码，X和Y都为-1）
  * @method Coord getLeftBottom() 获取左下顶点坐标（如果是条形码，X和Y都为-1）
  * @method void setLeftBottom(Coord $LeftBottom) 设置左下顶点坐标（如果是条形码，X和Y都为-1）
- */
-
-/**
- *二维码/条形码坐标信息
  */
 class QrcodePositionObj extends AbstractModel
 {
@@ -52,6 +50,7 @@ class QrcodePositionObj extends AbstractModel
      * @var Coord 左下顶点坐标（如果是条形码，X和Y都为-1）
      */
     public $LeftBottom;
+
     /**
      * @param Coord $LeftTop 左上顶点坐标（如果是条形码，X和Y都为-1）
      * @param Coord $RightTop 右上顶点坐标（如果是条形码，X和Y都为-1）
@@ -62,6 +61,7 @@ class QrcodePositionObj extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

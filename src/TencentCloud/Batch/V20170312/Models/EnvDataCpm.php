@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 黑石计算环境数据
+ *
  * @method array getZones() 获取黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
  * @method void setZones(array $Zones) 设置黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
  * @method array getInstanceTypes() 获取购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。
@@ -60,10 +62,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHyperThreading(integer $HyperThreading) 设置是否开启超线程，取值：1(开启) 0(关闭)，默认取值1。
  * @method array getLanIps() 获取指定的内网IP列表，不指定时自动分配。
  * @method void setLanIps(array $LanIps) 设置指定的内网IP列表，不指定时自动分配。
- */
-
-/**
- *黑石计算环境数据
  */
 class EnvDataCpm extends AbstractModel
 {
@@ -171,6 +169,7 @@ class EnvDataCpm extends AbstractModel
      * @var array 指定的内网IP列表，不指定时自动分配。
      */
     public $LanIps;
+
     /**
      * @param array $Zones 黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
      * @param array $InstanceTypes 购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。
@@ -198,6 +197,7 @@ class EnvDataCpm extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 加固策略信息
+ *
  * @method integer getTotalCount() 获取加固策略数量
  * @method void setTotalCount(integer $TotalCount) 设置加固策略数量
  * @method array getPlanSet() 获取加固策略具体信息数组
  * @method void setPlanSet(array $PlanSet) 设置加固策略具体信息数组
- */
-
-/**
- *加固策略信息
  */
 class ShieldPlanInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ShieldPlanInfo extends AbstractModel
      * @var array 加固策略具体信息数组
      */
     public $PlanSet;
+
     /**
      * @param integer $TotalCount 加固策略数量
      * @param array $PlanSet 加固策略具体信息数组
@@ -46,6 +45,7 @@ class ShieldPlanInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

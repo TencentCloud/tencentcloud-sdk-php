@@ -18,14 +18,12 @@ namespace TencentCloud\Tav\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetScanResult请求参数结构体
+ *
  * @method string getKey() 获取购买服务后获得的授权信息，用于保证请求有效性
  * @method void setKey(string $Key) 设置购买服务后获得的授权信息，用于保证请求有效性
  * @method string getMd5() 获取需要获取扫描接口的md5（只允许单个md5）
  * @method void setMd5(string $Md5) 设置需要获取扫描接口的md5（只允许单个md5）
- */
-
-/**
- *GetScanResult请求参数结构体
  */
 class GetScanResultRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GetScanResultRequest extends AbstractModel
      * @var string 需要获取扫描接口的md5（只允许单个md5）
      */
     public $Md5;
+
     /**
      * @param string $Key 购买服务后获得的授权信息，用于保证请求有效性
      * @param string $Md5 需要获取扫描接口的md5（只允许单个md5）
@@ -46,6 +45,7 @@ class GetScanResultRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveSnapshotTemplate请求参数结构体
+ *
  * @method string getTemplateName() 获取模板名称，非空的字符串。
 长度上限：255字节。
  * @method void setTemplateName(string $TemplateName) 设置模板名称，非空的字符串。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHeight(integer $Height) 设置截图高度。默认：0（原始高）。
  * @method integer getPornFlag() 获取是否开启鉴黄，0：不开启，1：开启。默认：0。
  * @method void setPornFlag(integer $PornFlag) 设置是否开启鉴黄，0：不开启，1：开启。默认：0。
- */
-
-/**
- *CreateLiveSnapshotTemplate请求参数结构体
  */
 class CreateLiveSnapshotTemplateRequest extends AbstractModel
 {
@@ -96,6 +94,7 @@ class CreateLiveSnapshotTemplateRequest extends AbstractModel
      * @var integer 是否开启鉴黄，0：不开启，1：开启。默认：0。
      */
     public $PornFlag;
+
     /**
      * @param string $TemplateName 模板名称，非空的字符串。
 长度上限：255字节。
@@ -114,6 +113,7 @@ class CreateLiveSnapshotTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

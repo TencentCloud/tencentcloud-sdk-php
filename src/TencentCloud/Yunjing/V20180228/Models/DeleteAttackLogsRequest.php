@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAttackLogs请求参数结构体
+ *
  * @method array getIds() 获取日志ID数组，最大100条。
  * @method void setIds(array $Ids) 设置日志ID数组，最大100条。
- */
-
-/**
- *DeleteAttackLogs请求参数结构体
  */
 class DeleteAttackLogsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteAttackLogsRequest extends AbstractModel
      * @var array 日志ID数组，最大100条。
      */
     public $Ids;
+
     /**
      * @param array $Ids 日志ID数组，最大100条。
      */
@@ -38,6 +37,7 @@ class DeleteAttackLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

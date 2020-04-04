@@ -18,16 +18,14 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeQuotaData返回参数结构体
+ *
  * @method string getMetricName() 获取指标名
  * @method void setMetricName(string $MetricName) 设置指标名
  * @method integer getValue() 获取指标的值
  * @method void setValue(integer $Value) 设置指标的值
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeQuotaData返回参数结构体
  */
 class DescribeQuotaDataResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeQuotaDataResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $MetricName 指标名
      * @param integer $Value 指标的值
@@ -54,6 +53,7 @@ class DescribeQuotaDataResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

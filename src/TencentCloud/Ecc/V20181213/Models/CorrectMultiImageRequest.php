@@ -18,6 +18,8 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CorrectMultiImage请求参数结构体
+ *
  * @method array getImage() 获取图片的url链接或base64数据。每张图片数据作为数组的一个元素，数组个数与图片个数保持一致。存放类别依据InputType而定，url与base64编码不能混合使用。
  * @method void setImage(array $Image) 设置图片的url链接或base64数据。每张图片数据作为数组的一个元素，数组个数与图片个数保持一致。存放类别依据InputType而定，url与base64编码不能混合使用。
  * @method integer getInputType() 获取输出图片类型，0 表示 Image 字段是图片所在的 url，1 表示 Image 字段是 base64 编码后的图像数据。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelContent(string $ModelContent) 设置范文内容，可选参数，同上，范文的正文部分。
  * @method integer getIsAsync() 获取异步模式标识，0：同步模式，1：异步模式。默认为同步模式
  * @method void setIsAsync(integer $IsAsync) 设置异步模式标识，0：同步模式，1：异步模式。默认为同步模式
- */
-
-/**
- *CorrectMultiImage请求参数结构体
  */
 class CorrectMultiImageRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class CorrectMultiImageRequest extends AbstractModel
      * @var integer 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
      */
     public $IsAsync;
+
     /**
      * @param array $Image 图片的url链接或base64数据。每张图片数据作为数组的一个元素，数组个数与图片个数保持一致。存放类别依据InputType而定，url与base64编码不能混合使用。
      * @param integer $InputType 输出图片类型，0 表示 Image 字段是图片所在的 url，1 表示 Image 字段是 base64 编码后的图像数据。
@@ -118,6 +117,7 @@ class CorrectMultiImageRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

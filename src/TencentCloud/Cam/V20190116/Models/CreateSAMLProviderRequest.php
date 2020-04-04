@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSAMLProvider请求参数结构体
+ *
  * @method string getName() 获取SAML身份提供商名称
  * @method void setName(string $Name) 设置SAML身份提供商名称
  * @method string getDescription() 获取SAML身份提供商描述
  * @method void setDescription(string $Description) 设置SAML身份提供商描述
  * @method string getSAMLMetadataDocument() 获取SAML身份提供商Base64编码的元数据文档
  * @method void setSAMLMetadataDocument(string $SAMLMetadataDocument) 设置SAML身份提供商Base64编码的元数据文档
- */
-
-/**
- *CreateSAMLProvider请求参数结构体
  */
 class CreateSAMLProviderRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateSAMLProviderRequest extends AbstractModel
      * @var string SAML身份提供商Base64编码的元数据文档
      */
     public $SAMLMetadataDocument;
+
     /**
      * @param string $Name SAML身份提供商名称
      * @param string $Description SAML身份提供商描述
@@ -54,6 +53,7 @@ class CreateSAMLProviderRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

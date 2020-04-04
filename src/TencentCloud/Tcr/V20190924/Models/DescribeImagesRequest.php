@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImages请求参数结构体
+ *
  * @method string getRegistryId() 获取实例ID
  * @method void setRegistryId(string $RegistryId) 设置实例ID
  * @method string getNamespaceName() 获取命名空间名称
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页个数，用于分页，默认20
  * @method integer getOffset() 获取页数，默认值为1
  * @method void setOffset(integer $Offset) 设置页数，默认值为1
- */
-
-/**
- *DescribeImages请求参数结构体
  */
 class DescribeImagesRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeImagesRequest extends AbstractModel
      * @var integer 页数，默认值为1
      */
     public $Offset;
+
     /**
      * @param string $RegistryId 实例ID
      * @param string $NamespaceName 命名空间名称
@@ -78,6 +77,7 @@ class DescribeImagesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

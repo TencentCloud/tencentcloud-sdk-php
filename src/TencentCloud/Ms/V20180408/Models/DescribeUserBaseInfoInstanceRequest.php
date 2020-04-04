@@ -18,14 +18,13 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUserBaseInfoInstance请求参数结构体
+ *
 
- */
-
-/**
- *DescribeUserBaseInfoInstance请求参数结构体
  */
 class DescribeUserBaseInfoInstanceRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeUserBaseInfoInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

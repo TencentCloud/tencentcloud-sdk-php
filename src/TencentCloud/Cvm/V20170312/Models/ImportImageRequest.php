@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ImportImage请求参数结构体
+ *
  * @method string getArchitecture() 获取导入镜像的操作系统架构，`x86_64` 或 `i386`
  * @method void setArchitecture(string $Architecture) 设置导入镜像的操作系统架构，`x86_64` 或 `i386`
  * @method string getOsType() 获取导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDryRun(boolean $DryRun) 设置只检查参数，不执行任务
  * @method boolean getForce() 获取是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
  * @method void setForce(boolean $Force) 设置是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
- */
-
-/**
- *ImportImage请求参数结构体
  */
 class ImportImageRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ImportImageRequest extends AbstractModel
      * @var boolean 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
      */
     public $Force;
+
     /**
      * @param string $Architecture 导入镜像的操作系统架构，`x86_64` 或 `i386`
      * @param string $OsType 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
@@ -94,6 +93,7 @@ class ImportImageRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

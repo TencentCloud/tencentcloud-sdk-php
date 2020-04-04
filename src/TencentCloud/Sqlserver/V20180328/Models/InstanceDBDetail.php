@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例的数据库信息
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method array getDBDetails() 获取数据库信息列表
  * @method void setDBDetails(array $DBDetails) 设置数据库信息列表
- */
-
-/**
- *实例的数据库信息
  */
 class InstanceDBDetail extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceDBDetail extends AbstractModel
      * @var array 数据库信息列表
      */
     public $DBDetails;
+
     /**
      * @param string $InstanceId 实例ID
      * @param array $DBDetails 数据库信息列表
@@ -46,6 +45,7 @@ class InstanceDBDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

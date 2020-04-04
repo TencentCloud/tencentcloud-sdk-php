@@ -18,12 +18,10 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSmsSign请求参数结构体
+ *
  * @method integer getSignId() 获取待删除的签名 ID。
  * @method void setSignId(integer $SignId) 设置待删除的签名 ID。
- */
-
-/**
- *DeleteSmsSign请求参数结构体
  */
 class DeleteSmsSignRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteSmsSignRequest extends AbstractModel
      * @var integer 待删除的签名 ID。
      */
     public $SignId;
+
     /**
      * @param integer $SignId 待删除的签名 ID。
      */
@@ -38,6 +37,7 @@ class DeleteSmsSignRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

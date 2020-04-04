@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+ *
  * @method integer getPeriod() 获取购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
  * @method void setPeriod(integer $Period) 设置购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
  * @method string getRenewFlag() 获取自动续费标识。取值范围：
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 <li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li>
 
 默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
- */
-
-/**
- *预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
  */
 class ChargePrepaid extends AbstractModel
 {
@@ -53,6 +51,7 @@ class ChargePrepaid extends AbstractModel
 默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
      */
     public $RenewFlag;
+
     /**
      * @param integer $Period 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
      * @param string $RenewFlag 自动续费标识。取值范围：
@@ -66,6 +65,7 @@ class ChargePrepaid extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

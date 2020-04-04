@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeConversationTask请求参数结构体
+ *
  * @method integer getJobId() 获取音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
  * @method void setJobId(integer $JobId) 设置音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
  * @method integer getIdentity() 获取要查询明细的流的身份，1 老师 2 学生
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制数目
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
- */
-
-/**
- *DescribeConversationTask请求参数结构体
  */
 class DescribeConversationTaskRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeConversationTaskRequest extends AbstractModel
      * @var integer 偏移量
      */
     public $Offset;
+
     /**
      * @param integer $JobId 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      * @param integer $Identity 要查询明细的流的身份，1 老师 2 学生
@@ -62,6 +61,7 @@ class DescribeConversationTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

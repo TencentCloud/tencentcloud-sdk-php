@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 微信小程序发布任务类型
+ *
  * @method integer getSourceDefinition() 获取发布视频所对应的转码模板 ID，为 0 代表原始视频。
  * @method void setSourceDefinition(integer $SourceDefinition) 设置发布视频所对应的转码模板 ID，为 0 代表原始视频。
- */
-
-/**
- *微信小程序发布任务类型
  */
 class WechatMiniProgramPublishTaskInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class WechatMiniProgramPublishTaskInput extends AbstractModel
      * @var integer 发布视频所对应的转码模板 ID，为 0 代表原始视频。
      */
     public $SourceDefinition;
+
     /**
      * @param integer $SourceDefinition 发布视频所对应的转码模板 ID，为 0 代表原始视频。
      */
@@ -38,6 +37,7 @@ class WechatMiniProgramPublishTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

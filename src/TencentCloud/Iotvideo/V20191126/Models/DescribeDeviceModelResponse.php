@@ -18,16 +18,14 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDeviceModel返回参数结构体
+ *
  * @method DeviceModelData getData() 获取设备物模型信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(DeviceModelData $Data) 设置设备物模型信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDeviceModel返回参数结构体
  */
 class DescribeDeviceModelResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class DescribeDeviceModelResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param DeviceModelData $Data 设备物模型信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class DescribeDeviceModelResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyGroupOffsets请求参数结构体
+ *
  * @method string getInstanceId() 获取kafka实例id
  * @method void setInstanceId(string $InstanceId) 设置kafka实例id
  * @method string getGroup() 获取kafka 消费分组
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShiftTimestamp(integer $ShiftTimestamp) 设置单位ms。当strategy为1时，必须包含该字段，其中-2表示重置offset到最开始的位置，-1表示重置到最新的位置(相当于清空)，其它值则代表指定的时间，会获取topic中指定时间的offset然后进行重置，需要注意的时，如果指定的时间不存在消息，则获取最末尾的offset。
  * @method integer getOffset() 获取需要重新设置的offset位置。当strategy为2，必须包含该字段。
  * @method void setOffset(integer $Offset) 设置需要重新设置的offset位置。当strategy为2，必须包含该字段。
- */
-
-/**
- *ModifyGroupOffsets请求参数结构体
  */
 class ModifyGroupOffsetsRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifyGroupOffsetsRequest extends AbstractModel
      * @var integer 需要重新设置的offset位置。当strategy为2，必须包含该字段。
      */
     public $Offset;
+
     /**
      * @param string $InstanceId kafka实例id
      * @param string $Group kafka 消费分组
@@ -86,6 +85,7 @@ class ModifyGroupOffsetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

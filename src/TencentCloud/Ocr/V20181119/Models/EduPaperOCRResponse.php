@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EduPaperOCR返回参数结构体
+ *
  * @method array getEduPaperInfos() 获取检测到的文本信息，具体内容请点击左侧链接。
  * @method void setEduPaperInfos(array $EduPaperInfos) 设置检测到的文本信息，具体内容请点击左侧链接。
  * @method integer getAngle() 获取图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuestionBlockInfos(array $QuestionBlockInfos) 设置结构化方式输出，具体内容请点击左侧链接。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *EduPaperOCR返回参数结构体
  */
 class EduPaperOCRResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class EduPaperOCRResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $EduPaperInfos 检测到的文本信息，具体内容请点击左侧链接。
      * @param integer $Angle 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
@@ -62,6 +61,7 @@ class EduPaperOCRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

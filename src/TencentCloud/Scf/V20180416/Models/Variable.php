@@ -18,14 +18,12 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 变量参数
+ *
  * @method string getKey() 获取变量的名称
  * @method void setKey(string $Key) 设置变量的名称
  * @method string getValue() 获取变量的值
  * @method void setValue(string $Value) 设置变量的值
- */
-
-/**
- *变量参数
  */
 class Variable extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Variable extends AbstractModel
      * @var string 变量的值
      */
     public $Value;
+
     /**
      * @param string $Key 变量的名称
      * @param string $Value 变量的值
@@ -46,6 +45,7 @@ class Variable extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

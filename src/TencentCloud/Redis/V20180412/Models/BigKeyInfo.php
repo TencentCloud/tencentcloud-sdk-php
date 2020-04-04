@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 大Key详情
+ *
  * @method integer getDB() 获取所属的database
  * @method void setDB(integer $DB) 设置所属的database
  * @method string getKey() 获取大Key
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) 设置大小
  * @method integer getUpdatetime() 获取数据时间戳
  * @method void setUpdatetime(integer $Updatetime) 设置数据时间戳
- */
-
-/**
- *大Key详情
  */
 class BigKeyInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class BigKeyInfo extends AbstractModel
      * @var integer 数据时间戳
      */
     public $Updatetime;
+
     /**
      * @param integer $DB 所属的database
      * @param string $Key 大Key
@@ -70,6 +69,7 @@ class BigKeyInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 热词的词和权重
+ *
  * @method string getWord() 获取热词
  * @method void setWord(string $Word) 设置热词
  * @method integer getWeight() 获取权重
  * @method void setWeight(integer $Weight) 设置权重
- */
-
-/**
- *热词的词和权重
  */
 class HotWord extends AbstractModel
 {
@@ -38,6 +36,7 @@ class HotWord extends AbstractModel
      * @var integer 权重
      */
     public $Weight;
+
     /**
      * @param string $Word 热词
      * @param integer $Weight 权重
@@ -46,6 +45,7 @@ class HotWord extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

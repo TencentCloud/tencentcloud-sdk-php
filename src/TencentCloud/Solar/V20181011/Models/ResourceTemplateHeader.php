@@ -18,6 +18,8 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 素材模板消息标题的样例列表
+ *
  * @method string getContent() 获取模板预览区内容
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置模板预览区内容
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTitle(string $Title) 设置模板标题
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *素材模板消息标题的样例列表
  */
 class ResourceTemplateHeader extends AbstractModel
 {
@@ -71,6 +69,7 @@ class ResourceTemplateHeader extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Title;
+
     /**
      * @param string $Content 模板预览区内容
 注意：此字段可能返回 null，表示取不到有效值。
@@ -86,6 +85,7 @@ class ResourceTemplateHeader extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

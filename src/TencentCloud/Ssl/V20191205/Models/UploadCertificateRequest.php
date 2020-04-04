@@ -18,6 +18,8 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UploadCertificate请求参数结构体
+ *
  * @method string getCertificatePublicKey() 获取证书公钥。
  * @method void setCertificatePublicKey(string $CertificatePublicKey) 设置证书公钥。
  * @method string getCertificatePrivateKey() 获取私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlias(string $Alias) 设置备注名称。
  * @method integer getProjectId() 获取项目 ID。
  * @method void setProjectId(integer $ProjectId) 设置项目 ID。
- */
-
-/**
- *UploadCertificate请求参数结构体
  */
 class UploadCertificateRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class UploadCertificateRequest extends AbstractModel
      * @var integer 项目 ID。
      */
     public $ProjectId;
+
     /**
      * @param string $CertificatePublicKey 证书公钥。
      * @param string $CertificatePrivateKey 私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。
@@ -70,6 +69,7 @@ class UploadCertificateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

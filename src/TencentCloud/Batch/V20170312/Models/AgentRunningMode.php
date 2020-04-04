@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * agent运行模式
+ *
  * @method string getScene() 获取场景类型，支持WINDOWS
  * @method void setScene(string $Scene) 设置场景类型，支持WINDOWS
  * @method string getUser() 获取运行Agent的User
  * @method void setUser(string $User) 设置运行Agent的User
  * @method string getSession() 获取运行Agent的Session
  * @method void setSession(string $Session) 设置运行Agent的Session
- */
-
-/**
- *agent运行模式
  */
 class AgentRunningMode extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AgentRunningMode extends AbstractModel
      * @var string 运行Agent的Session
      */
     public $Session;
+
     /**
      * @param string $Scene 场景类型，支持WINDOWS
      * @param string $User 运行Agent的User
@@ -54,6 +53,7 @@ class AgentRunningMode extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

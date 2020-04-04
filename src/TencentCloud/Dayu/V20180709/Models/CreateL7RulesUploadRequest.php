@@ -18,16 +18,14 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateL7RulesUpload请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method string getId() 获取资源ID
  * @method void setId(string $Id) 设置资源ID
  * @method array getRules() 获取规则列表
  * @method void setRules(array $Rules) 设置规则列表
- */
-
-/**
- *CreateL7RulesUpload请求参数结构体
  */
 class CreateL7RulesUploadRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateL7RulesUploadRequest extends AbstractModel
      * @var array 规则列表
      */
     public $Rules;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param string $Id 资源ID
@@ -54,6 +53,7 @@ class CreateL7RulesUploadRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

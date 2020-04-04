@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnifiedOrder返回参数结构体
+ *
  * @method integer getTotalAmt() 获取支付金额，单位： 分
  * @method void setTotalAmt(integer $TotalAmt) 设置支付金额，单位： 分
  * @method string getOutTradeNo() 获取应用支付订单号
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTransactionId(string $TransactionId) 设置聚鑫的交易订单
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *UnifiedOrder返回参数结构体
  */
 class UnifiedOrderResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class UnifiedOrderResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalAmt 支付金额，单位： 分
      * @param string $OutTradeNo 应用支付订单号
@@ -70,6 +69,7 @@ class UnifiedOrderResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

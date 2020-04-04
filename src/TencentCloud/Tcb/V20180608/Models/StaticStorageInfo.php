@@ -18,6 +18,8 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 静态CDN资源信息
+ *
  * @method string getStaticDomain() 获取静态CDN域名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStaticDomain(string $StaticDomain) 设置静态CDN域名
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucket(string $Bucket) 设置bucket信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *静态CDN资源信息
  */
 class StaticStorageInfo extends AbstractModel
 {
@@ -74,6 +72,7 @@ class StaticStorageInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bucket;
+
     /**
      * @param string $StaticDomain 静态CDN域名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -90,6 +89,7 @@ class StaticStorageInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

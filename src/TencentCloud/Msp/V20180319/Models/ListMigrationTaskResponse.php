@@ -18,16 +18,14 @@ namespace TencentCloud\Msp\V20180319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListMigrationTask返回参数结构体
+ *
  * @method integer getTotalCount() 获取记录总条数
  * @method void setTotalCount(integer $TotalCount) 设置记录总条数
  * @method array getTasks() 获取迁移任务列表
  * @method void setTasks(array $Tasks) 设置迁移任务列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ListMigrationTask返回参数结构体
  */
 class ListMigrationTaskResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListMigrationTaskResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 记录总条数
      * @param array $Tasks 迁移任务列表
@@ -54,6 +53,7 @@ class ListMigrationTaskResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

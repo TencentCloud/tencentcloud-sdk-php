@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * app扫描结果集
+ *
  * @method integer getTaskStatus() 获取任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
  * @method void setTaskStatus(integer $TaskStatus) 设置任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
  * @method AppDetailInfo getAppDetailInfo() 获取app信息
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPermissionInfo(ScanPermissionList $PermissionInfo) 设置系统权限信息
  * @method ScanSensitiveList getSensitiveInfo() 获取敏感词列表
  * @method void setSensitiveInfo(ScanSensitiveList $SensitiveInfo) 设置敏感词列表
- */
-
-/**
- *app扫描结果集
  */
 class ScanSetInfo extends AbstractModel
 {
@@ -101,6 +99,7 @@ class ScanSetInfo extends AbstractModel
      * @var ScanSensitiveList 敏感词列表
      */
     public $SensitiveInfo;
+
     /**
      * @param integer $TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param AppDetailInfo $AppDetailInfo app信息
@@ -118,6 +117,7 @@ class ScanSetInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

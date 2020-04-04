@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateHTTPSListener请求参数结构体
+ *
  * @method string getListenerName() 获取监听器名称
  * @method void setListenerName(string $ListenerName) 设置监听器名称
  * @method integer getPort() 获取监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientCertificateId(string $ClientCertificateId) 设置客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
  * @method array getPolyClientCertificateIds() 获取新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
  * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) 设置新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
- */
-
-/**
- *CreateHTTPSListener请求参数结构体
  */
 class CreateHTTPSListenerRequest extends AbstractModel
 {
@@ -89,6 +87,7 @@ class CreateHTTPSListenerRequest extends AbstractModel
      * @var array 新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
      */
     public $PolyClientCertificateIds;
+
     /**
      * @param string $ListenerName 监听器名称
      * @param integer $Port 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
@@ -106,6 +105,7 @@ class CreateHTTPSListenerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

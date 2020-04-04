@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 通道信息
+ *
  * @method string getInstanceId() 获取（旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置（旧参数，请使用ProxyId）通道实例ID。
@@ -104,10 +106,6 @@ UNKNOWN，未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingType(integer $BillingType) 设置计费类型:(0:按带宽计费  1:按流量计费）
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *通道信息
  */
 class ProxyInfo extends AbstractModel
 {
@@ -245,6 +243,7 @@ UNKNOWN，未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingType;
+
     /**
      * @param string $InstanceId （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -294,6 +293,7 @@ UNKNOWN，未知状态。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteMigration请求参数结构体
+ *
  * @method integer getMigrateId() 获取迁移任务ID
  * @method void setMigrateId(integer $MigrateId) 设置迁移任务ID
- */
-
-/**
- *DeleteMigration请求参数结构体
  */
 class DeleteMigrationRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteMigrationRequest extends AbstractModel
      * @var integer 迁移任务ID
      */
     public $MigrateId;
+
     /**
      * @param integer $MigrateId 迁移任务ID
      */
@@ -38,6 +37,7 @@ class DeleteMigrationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

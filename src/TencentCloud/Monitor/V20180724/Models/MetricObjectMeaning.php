@@ -18,14 +18,12 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 指标数据的解释
+ *
  * @method string getEn() 获取指标英文解释
  * @method void setEn(string $En) 设置指标英文解释
  * @method string getZh() 获取指标中文解释
  * @method void setZh(string $Zh) 设置指标中文解释
- */
-
-/**
- *指标数据的解释
  */
 class MetricObjectMeaning extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MetricObjectMeaning extends AbstractModel
      * @var string 指标中文解释
      */
     public $Zh;
+
     /**
      * @param string $En 指标英文解释
      * @param string $Zh 指标中文解释
@@ -46,6 +45,7 @@ class MetricObjectMeaning extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

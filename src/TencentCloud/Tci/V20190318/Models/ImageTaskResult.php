@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图像任务结果
+ *
  * @method ActionInfo getActionInfo() 获取大教室场景学生肢体动作识别信息
  * @method void setActionInfo(ActionInfo $ActionInfo) 设置大教室场景学生肢体动作识别信息
  * @method FaceAttrResult getFaceAttr() 获取属性识别结果
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTeacherOutScreen(TeacherOutScreenResult $TeacherOutScreen) 设置教师是否在屏幕内判断结果
  * @method TimeInfoResult getTimeInfo() 获取时间统计结果
  * @method void setTimeInfo(TimeInfoResult $TimeInfo) 设置时间统计结果
- */
-
-/**
- *图像任务结果
  */
 class ImageTaskResult extends AbstractModel
 {
@@ -115,6 +113,7 @@ class ImageTaskResult extends AbstractModel
      * @var TimeInfoResult 时间统计结果
      */
     public $TimeInfo;
+
     /**
      * @param ActionInfo $ActionInfo 大教室场景学生肢体动作识别信息
      * @param FaceAttrResult $FaceAttr 属性识别结果
@@ -134,6 +133,7 @@ class ImageTaskResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

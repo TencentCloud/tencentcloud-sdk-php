@@ -18,14 +18,12 @@ namespace TencentCloud\Fmu\V20191213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateModel请求参数结构体
+ *
  * @method string getLUTFile() 获取用于试唇色，要求必须是LUT 格式的cube文件转换成512*512的PNG图片。查看 [LUT文件的使用说明](https://cloud.tencent.com/document/product/1172/41701)。了解 [cube文件转png图片小工具](http://yyb.gtimg.com/aiplat/static/qcloud-cube-to-png.html)。
  * @method void setLUTFile(string $LUTFile) 设置用于试唇色，要求必须是LUT 格式的cube文件转换成512*512的PNG图片。查看 [LUT文件的使用说明](https://cloud.tencent.com/document/product/1172/41701)。了解 [cube文件转png图片小工具](http://yyb.gtimg.com/aiplat/static/qcloud-cube-to-png.html)。
  * @method string getDescription() 获取文件描述信息，可用于备注。
  * @method void setDescription(string $Description) 设置文件描述信息，可用于备注。
- */
-
-/**
- *CreateModel请求参数结构体
  */
 class CreateModelRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateModelRequest extends AbstractModel
      * @var string 文件描述信息，可用于备注。
      */
     public $Description;
+
     /**
      * @param string $LUTFile 用于试唇色，要求必须是LUT 格式的cube文件转换成512*512的PNG图片。查看 [LUT文件的使用说明](https://cloud.tencent.com/document/product/1172/41701)。了解 [cube文件转png图片小工具](http://yyb.gtimg.com/aiplat/static/qcloud-cube-to-png.html)。
      * @param string $Description 文件描述信息，可用于备注。
@@ -46,6 +45,7 @@ class CreateModelRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

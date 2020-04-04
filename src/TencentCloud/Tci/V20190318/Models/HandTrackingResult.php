@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HandTrackingResult
+ *
  * @method string getClass() 获取识别结果
  * @method void setClass(string $Class) 设置识别结果
  * @method float getConfidence() 获取置信度
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTop(integer $Top) 设置识别结果顶坐标
  * @method integer getWidth() 获取识别结果宽度
  * @method void setWidth(integer $Width) 设置识别结果宽度
- */
-
-/**
- *HandTrackingResult
  */
 class HandTrackingResult extends AbstractModel
 {
@@ -66,6 +64,7 @@ class HandTrackingResult extends AbstractModel
      * @var integer 识别结果宽度
      */
     public $Width;
+
     /**
      * @param string $Class 识别结果
      * @param float $Confidence 置信度
@@ -78,6 +77,7 @@ class HandTrackingResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

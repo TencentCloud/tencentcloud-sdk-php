@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 日志搜索上下文
+ *
  * @method string getOffset() 获取偏移量
  * @method void setOffset(string $Offset) 设置偏移量
  * @method integer getLimit() 获取日志条数
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyword(string $Keyword) 设置日志关键词
  * @method string getType() 获取日志类型，支持Application和Platform，默认为Application
  * @method void setType(string $Type) 设置日志类型，支持Application和Platform，默认为Application
- */
-
-/**
- *日志搜索上下文
  */
 class LogSearchContext extends AbstractModel
 {
@@ -52,6 +50,7 @@ class LogSearchContext extends AbstractModel
      * @var string 日志类型，支持Application和Platform，默认为Application
      */
     public $Type;
+
     /**
      * @param string $Offset 偏移量
      * @param integer $Limit 日志条数
@@ -62,6 +61,7 @@ class LogSearchContext extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

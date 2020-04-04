@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRealServerStatistics请求参数结构体
+ *
  * @method string getRealServerId() 获取源站ID
  * @method void setRealServerId(string $RealServerId) 设置源站ID
  * @method string getListenerId() 获取监听器ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWithinTime(integer $WithinTime) 设置统计时长，单位：小时。仅支持最近1,3,6,12,24小时的统计查询
  * @method string getRuleId() 获取规则ID
  * @method void setRuleId(string $RuleId) 设置规则ID
- */
-
-/**
- *DescribeRealServerStatistics请求参数结构体
  */
 class DescribeRealServerStatisticsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeRealServerStatisticsRequest extends AbstractModel
      * @var string 规则ID
      */
     public $RuleId;
+
     /**
      * @param string $RealServerId 源站ID
      * @param string $ListenerId 监听器ID
@@ -62,6 +61,7 @@ class DescribeRealServerStatisticsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 版本控制-可用区数组
+ *
  * @method string getZone() 获取可用区名称
  * @method void setZone(string $Zone) 设置可用区名称
  * @method integer getZoneId() 获取可用区ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTypes(array $Types) 设置Type数组
  * @method string getZoneName() 获取可用区中英文名称
  * @method void setZoneName(string $ZoneName) 设置可用区中英文名称
- */
-
-/**
- *版本控制-可用区数组
  */
 class AvailableZone extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AvailableZone extends AbstractModel
      * @var string 可用区中英文名称
      */
     public $ZoneName;
+
     /**
      * @param string $Zone 可用区名称
      * @param integer $ZoneId 可用区ID
@@ -70,6 +69,7 @@ class AvailableZone extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

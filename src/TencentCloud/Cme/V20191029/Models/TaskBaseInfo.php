@@ -18,6 +18,8 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务基础信息。
+ *
  * @method string getTaskId() 获取任务 Id。
  * @method void setTaskId(string $TaskId) 设置任务 Id。
  * @method string getTaskType() 获取任务类型，取值有：
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrMsg(string $ErrMsg) 设置错误信息。
  * @method string getCreateTime() 获取创建时间，格式按照 ISO 8601 标准表示。
  * @method void setCreateTime(string $CreateTime) 设置创建时间，格式按照 ISO 8601 标准表示。
- */
-
-/**
- *任务基础信息。
  */
 class TaskBaseInfo extends AbstractModel
 {
@@ -91,6 +89,7 @@ class TaskBaseInfo extends AbstractModel
      * @var string 创建时间，格式按照 ISO 8601 标准表示。
      */
     public $CreateTime;
+
     /**
      * @param string $TaskId 任务 Id。
      * @param string $TaskType 任务类型，取值有：
@@ -110,6 +109,7 @@ class TaskBaseInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

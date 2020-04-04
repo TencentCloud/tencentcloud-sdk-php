@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNatGateways请求参数结构体
+ *
  * @method array getNatGatewayIds() 获取NAT网关统一 ID，形如：`nat-123xx454`。
  * @method void setNatGatewayIds(array $NatGatewayIds) 设置NAT网关统一 ID，形如：`nat-123xx454`。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定NatGatewayIds和Filters。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
- */
-
-/**
- *DescribeNatGateways请求参数结构体
  */
 class DescribeNatGatewaysRequest extends AbstractModel
 {
@@ -61,6 +59,7 @@ class DescribeNatGatewaysRequest extends AbstractModel
      * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
+
     /**
      * @param array $NatGatewayIds NAT网关统一 ID，形如：`nat-123xx454`。
      * @param array $Filters 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
@@ -74,6 +73,7 @@ class DescribeNatGatewaysRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

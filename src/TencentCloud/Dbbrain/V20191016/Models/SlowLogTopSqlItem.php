@@ -18,6 +18,8 @@ namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 慢日志TopSql
+ *
  * @method float getLockTime() 获取sql总锁等待时间
  * @method void setLockTime(float $LockTime) 设置sql总锁等待时间
  * @method float getLockTimeMax() 获取最大锁等待时间
@@ -58,10 +60,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRowsExaminedRatio(float $RowsExaminedRatio) 设置总扫描行数占比
  * @method float getRowsSentRatio() 获取总返回行数占比
  * @method void setRowsSentRatio(float $RowsSentRatio) 设置总返回行数占比
- */
-
-/**
- *慢日志TopSql
  */
 class SlowLogTopSqlItem extends AbstractModel
 {
@@ -164,6 +162,7 @@ class SlowLogTopSqlItem extends AbstractModel
      * @var float 总返回行数占比
      */
     public $RowsSentRatio;
+
     /**
      * @param float $LockTime sql总锁等待时间
      * @param float $LockTimeMax 最大锁等待时间
@@ -190,6 +189,7 @@ class SlowLogTopSqlItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

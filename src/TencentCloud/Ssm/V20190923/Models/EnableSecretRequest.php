@@ -18,12 +18,10 @@ namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EnableSecret请求参数结构体
+ *
  * @method string getSecretName() 获取指定启用凭据的名称。
  * @method void setSecretName(string $SecretName) 设置指定启用凭据的名称。
- */
-
-/**
- *EnableSecret请求参数结构体
  */
 class EnableSecretRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class EnableSecretRequest extends AbstractModel
      * @var string 指定启用凭据的名称。
      */
     public $SecretName;
+
     /**
      * @param string $SecretName 指定启用凭据的名称。
      */
@@ -38,6 +37,7 @@ class EnableSecretRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

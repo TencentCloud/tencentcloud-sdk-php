@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTopic请求参数结构体
+ *
  * @method string getInstanceId() 获取ckafka 实例Id
  * @method void setInstanceId(string $InstanceId) 设置ckafka 实例Id
  * @method string getTopicName() 获取ckafka 主题名称
  * @method void setTopicName(string $TopicName) 设置ckafka 主题名称
- */
-
-/**
- *DeleteTopic请求参数结构体
  */
 class DeleteTopicRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteTopicRequest extends AbstractModel
      * @var string ckafka 主题名称
      */
     public $TopicName;
+
     /**
      * @param string $InstanceId ckafka 实例Id
      * @param string $TopicName ckafka 主题名称
@@ -46,6 +45,7 @@ class DeleteTopicRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

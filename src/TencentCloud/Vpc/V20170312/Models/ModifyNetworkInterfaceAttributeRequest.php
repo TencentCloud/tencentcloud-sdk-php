@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNetworkInterfaceAttribute请求参数结构体
+ *
  * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-pxir56ns。
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-pxir56ns。
  * @method string getNetworkInterfaceName() 获取弹性网卡名称，最大长度不能超过60个字节。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) 设置弹性网卡描述，可任意命名，但不得超过60个字符。
  * @method array getSecurityGroupIds() 获取指定绑定的安全组，例如:['sg-1dd51d']。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置指定绑定的安全组，例如:['sg-1dd51d']。
- */
-
-/**
- *ModifyNetworkInterfaceAttribute请求参数结构体
  */
 class ModifyNetworkInterfaceAttributeRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyNetworkInterfaceAttributeRequest extends AbstractModel
      * @var array 指定绑定的安全组，例如:['sg-1dd51d']。
      */
     public $SecurityGroupIds;
+
     /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-pxir56ns。
      * @param string $NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
@@ -62,6 +61,7 @@ class ModifyNetworkInterfaceAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

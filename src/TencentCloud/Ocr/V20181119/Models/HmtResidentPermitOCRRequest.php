@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HmtResidentPermitOCR请求参数结构体
+ *
  * @method string getImageBase64() 获取图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
@@ -42,10 +44,6 @@ BACK：无照片的一面（国徽面），
  * @method void setCardSide(string $CardSide) 设置FRONT：有照片的一面（人像面），
 BACK：无照片的一面（国徽面），
 该参数如果不填或填错，将为您自动判断正反面。
- */
-
-/**
- *HmtResidentPermitOCR请求参数结构体
  */
 class HmtResidentPermitOCRRequest extends AbstractModel
 {
@@ -72,6 +70,7 @@ BACK：无照片的一面（国徽面），
 该参数如果不填或填错，将为您自动判断正反面。
      */
     public $CardSide;
+
     /**
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
@@ -90,6 +89,7 @@ BACK：无照片的一面（国徽面），
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

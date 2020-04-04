@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云联网（CCN）关联实例（Instance）对象
+ *
  * @method string getCcnId() 获取云联网实例ID。
  * @method void setCcnId(string $CcnId) 设置云联网实例ID。
  * @method string getInstanceType() 获取关联实例类型：
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAttachedTime(string $AttachedTime) 设置关联时间。
  * @method string getCcnUin() 获取云联网所属UIN（根账号）。
  * @method void setCcnUin(string $CcnUin) 设置云联网所属UIN（根账号）。
- */
-
-/**
- *云联网（CCN）关联实例（Instance）对象
  */
 class CcnAttachedInstance extends AbstractModel
 {
@@ -130,6 +128,7 @@ class CcnAttachedInstance extends AbstractModel
      * @var string 云联网所属UIN（根账号）。
      */
     public $CcnUin;
+
     /**
      * @param string $CcnId 云联网实例ID。
      * @param string $InstanceType 关联实例类型：
@@ -158,6 +157,7 @@ class CcnAttachedInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

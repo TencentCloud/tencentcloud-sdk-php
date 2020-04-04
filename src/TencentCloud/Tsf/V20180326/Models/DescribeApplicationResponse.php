@@ -18,16 +18,14 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeApplication返回参数结构体
+ *
  * @method ApplicationForPage getResult() 获取应用信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(ApplicationForPage $Result) 设置应用信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeApplication返回参数结构体
  */
 class DescribeApplicationResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class DescribeApplicationResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param ApplicationForPage $Result 应用信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class DescribeApplicationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

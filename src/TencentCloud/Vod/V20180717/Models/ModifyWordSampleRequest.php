@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyWordSample请求参数结构体
+ *
  * @method string getKeyword() 获取关键词，长度限制：128 个字符。
  * @method void setKeyword(string $Keyword) 设置关键词，长度限制：128 个字符。
  * @method array getUsages() 获取<b>关键词应用场景，可选值：</b>
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) 设置标签操作信息。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *ModifyWordSample请求参数结构体
  */
 class ModifyWordSampleRequest extends AbstractModel
 {
@@ -76,6 +74,7 @@ class ModifyWordSampleRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param string $Keyword 关键词，长度限制：128 个字符。
      * @param array $Usages <b>关键词应用场景，可选值：</b>
@@ -94,6 +93,7 @@ class ModifyWordSampleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

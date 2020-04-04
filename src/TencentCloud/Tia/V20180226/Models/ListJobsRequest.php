@@ -18,16 +18,14 @@ namespace TencentCloud\Tia\V20180226\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListJobs请求参数结构体
+ *
  * @method string getCluster() 获取运行任务的集群
  * @method void setCluster(string $Cluster) 设置运行任务的集群
  * @method integer getLimit() 获取分页参数，返回数量
  * @method void setLimit(integer $Limit) 设置分页参数，返回数量
  * @method integer getOffset() 获取分页参数，起始位置
  * @method void setOffset(integer $Offset) 设置分页参数，起始位置
- */
-
-/**
- *ListJobs请求参数结构体
  */
 class ListJobsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListJobsRequest extends AbstractModel
      * @var integer 分页参数，起始位置
      */
     public $Offset;
+
     /**
      * @param string $Cluster 运行任务的集群
      * @param integer $Limit 分页参数，返回数量
@@ -54,6 +53,7 @@ class ListJobsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateIotModel请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getIotModel() 获取物模型json串
  * @method void setIotModel(string $IotModel) 设置物模型json串
- */
-
-/**
- *CreateIotModel请求参数结构体
  */
 class CreateIotModelRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateIotModelRequest extends AbstractModel
      * @var string 物模型json串
      */
     public $IotModel;
+
     /**
      * @param string $ProductId 产品ID
      * @param string $IotModel 物模型json串
@@ -46,6 +45,7 @@ class CreateIotModelRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

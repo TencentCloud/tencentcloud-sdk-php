@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 状态码缓存过期时间规则配置
+ *
  * @method string getStatusCode() 获取http 状态码
 支持 403、404 状态码
  * @method void setStatusCode(string $StatusCode) 设置http 状态码
 支持 403、404 状态码
  * @method integer getCacheTime() 获取状态码缓存过期时间，单位秒
  * @method void setCacheTime(integer $CacheTime) 设置状态码缓存过期时间，单位秒
- */
-
-/**
- *状态码缓存过期时间规则配置
  */
 class StatusCodeCacheRule extends AbstractModel
 {
@@ -41,6 +39,7 @@ class StatusCodeCacheRule extends AbstractModel
      * @var integer 状态码缓存过期时间，单位秒
      */
     public $CacheTime;
+
     /**
      * @param string $StatusCode http 状态码
 支持 403、404 状态码
@@ -50,6 +49,7 @@ class StatusCodeCacheRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

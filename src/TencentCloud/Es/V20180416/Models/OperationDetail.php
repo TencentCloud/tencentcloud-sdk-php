@@ -18,14 +18,12 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 操作详情
+ *
  * @method array getOldInfo() 获取实例原始配置信息
  * @method void setOldInfo(array $OldInfo) 设置实例原始配置信息
  * @method array getNewInfo() 获取实例更新后配置信息
  * @method void setNewInfo(array $NewInfo) 设置实例更新后配置信息
- */
-
-/**
- *操作详情
  */
 class OperationDetail extends AbstractModel
 {
@@ -38,6 +36,7 @@ class OperationDetail extends AbstractModel
      * @var array 实例更新后配置信息
      */
     public $NewInfo;
+
     /**
      * @param array $OldInfo 实例原始配置信息
      * @param array $NewInfo 实例更新后配置信息
@@ -46,6 +45,7 @@ class OperationDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

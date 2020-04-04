@@ -18,14 +18,12 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ScheduleKeyDeletion请求参数结构体
+ *
  * @method string getKeyId() 获取CMK的唯一标志
  * @method void setKeyId(string $KeyId) 设置CMK的唯一标志
  * @method integer getPendingWindowInDays() 获取计划删除时间区间[7,30]
  * @method void setPendingWindowInDays(integer $PendingWindowInDays) 设置计划删除时间区间[7,30]
- */
-
-/**
- *ScheduleKeyDeletion请求参数结构体
  */
 class ScheduleKeyDeletionRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ScheduleKeyDeletionRequest extends AbstractModel
      * @var integer 计划删除时间区间[7,30]
      */
     public $PendingWindowInDays;
+
     /**
      * @param string $KeyId CMK的唯一标志
      * @param integer $PendingWindowInDays 计划删除时间区间[7,30]
@@ -46,6 +45,7 @@ class ScheduleKeyDeletionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

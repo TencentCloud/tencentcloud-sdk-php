@@ -18,16 +18,14 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Logo
+ *
  * @method RrectF getRrectF() 获取logo图标坐标信息
  * @method void setRrectF(RrectF $RrectF) 设置logo图标坐标信息
  * @method float getConfidence() 获取logo图标置信度
  * @method void setConfidence(float $Confidence) 设置logo图标置信度
  * @method string getName() 获取logo图标名称
  * @method void setName(string $Name) 设置logo图标名称
- */
-
-/**
- *Logo
  */
 class Logo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Logo extends AbstractModel
      * @var string logo图标名称
      */
     public $Name;
+
     /**
      * @param RrectF $RrectF logo图标坐标信息
      * @param float $Confidence logo图标置信度
@@ -54,6 +53,7 @@ class Logo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

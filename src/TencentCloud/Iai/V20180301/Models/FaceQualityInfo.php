@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+ *
  * @method integer getScore() 获取质量分: [0,100]，综合评价图像质量是否适合人脸识别，分数越高质量越好。 
 正常情况，只需要使用Score作为质量分总体的判断标准即可。Sharpness、Brightness、Completeness等细项分仅供参考。
 参考范围：[0,40]较差，[40,60] 一般，[60,80]较好，[80,100]很好。 
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompleteness(FaceQualityCompleteness $Completeness) 设置五官遮挡分，评价眉毛（Eyebrow）、眼睛（Eye）、鼻子（Nose）、脸颊（Cheek）、嘴巴（Mouth）、下巴（Chin）的被遮挡程度。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
  */
 class FaceQualityInfo extends AbstractModel
 {
@@ -85,6 +83,7 @@ class FaceQualityInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Completeness;
+
     /**
      * @param integer $Score 质量分: [0,100]，综合评价图像质量是否适合人脸识别，分数越高质量越好。 
 正常情况，只需要使用Score作为质量分总体的判断标准即可。Sharpness、Brightness、Completeness等细项分仅供参考。
@@ -106,6 +105,7 @@ class FaceQualityInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

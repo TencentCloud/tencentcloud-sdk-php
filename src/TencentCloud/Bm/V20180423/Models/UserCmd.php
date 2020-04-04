@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 脚本信息
+ *
  * @method string getAlias() 获取用户自定义脚本名
  * @method void setAlias(string $Alias) 设置用户自定义脚本名
  * @method integer getAppId() 获取AppId
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
  * @method string getOsType() 获取命令适用的操作系统类型
  * @method void setOsType(string $OsType) 设置命令适用的操作系统类型
- */
-
-/**
- *脚本信息
  */
 class UserCmd extends AbstractModel
 {
@@ -80,6 +78,7 @@ class UserCmd extends AbstractModel
      * @var string 命令适用的操作系统类型
      */
     public $OsType;
+
     /**
      * @param string $Alias 用户自定义脚本名
      * @param integer $AppId AppId
@@ -94,6 +93,7 @@ class UserCmd extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

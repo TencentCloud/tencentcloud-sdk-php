@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 回执数据统计响应包体
+ *
  * @method integer getCallbackCount() 获取短信回执量统计。
  * @method void setCallbackCount(integer $CallbackCount) 设置短信回执量统计。
  * @method integer getRequestSuccessCount() 获取短信提交成功量统计。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlackListCount(integer $BlackListCount) 设置号码拉入黑名单统计。
  * @method integer getFrequencyLimitCount() 获取运营商频率限制统计。
  * @method void setFrequencyLimitCount(integer $FrequencyLimitCount) 设置运营商频率限制统计。
- */
-
-/**
- *回执数据统计响应包体
  */
 class CallbackStatusStatistics extends AbstractModel
 {
@@ -87,6 +85,7 @@ class CallbackStatusStatistics extends AbstractModel
      * @var integer 运营商频率限制统计。
      */
     public $FrequencyLimitCount;
+
     /**
      * @param integer $CallbackCount 短信回执量统计。
      * @param integer $RequestSuccessCount 短信提交成功量统计。
@@ -102,6 +101,7 @@ class CallbackStatusStatistics extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

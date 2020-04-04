@@ -18,14 +18,12 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 端口统计列表
+ *
  * @method integer getPort() 获取端口号
  * @method void setPort(integer $Port) 设置端口号
  * @method integer getMachineNum() 获取主机数量
  * @method void setMachineNum(integer $MachineNum) 设置主机数量
- */
-
-/**
- *端口统计列表
  */
 class OpenPortStatistics extends AbstractModel
 {
@@ -38,6 +36,7 @@ class OpenPortStatistics extends AbstractModel
      * @var integer 主机数量
      */
     public $MachineNum;
+
     /**
      * @param integer $Port 端口号
      * @param integer $MachineNum 主机数量
@@ -46,6 +45,7 @@ class OpenPortStatistics extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

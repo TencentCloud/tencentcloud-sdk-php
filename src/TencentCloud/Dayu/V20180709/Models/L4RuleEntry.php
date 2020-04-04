@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * L4规则
+ *
  * @method string getProtocol() 获取转发协议，取值[TCP, UDP]
  * @method void setProtocol(string $Protocol) 设置转发协议，取值[TCP, UDP]
  * @method integer getVirtualPort() 获取转发端口
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleName(string $RuleName) 设置规则描述
  * @method integer getRemoveSwitch() 获取移除水印状态，取值[0(关闭)，1(开启)]
  * @method void setRemoveSwitch(integer $RemoveSwitch) 设置移除水印状态，取值[0(关闭)，1(开启)]
- */
-
-/**
- *L4规则
  */
 class L4RuleEntry extends AbstractModel
 {
@@ -101,6 +99,7 @@ class L4RuleEntry extends AbstractModel
      * @var integer 移除水印状态，取值[0(关闭)，1(开启)]
      */
     public $RemoveSwitch;
+
     /**
      * @param string $Protocol 转发协议，取值[TCP, UDP]
      * @param integer $VirtualPort 转发端口
@@ -118,6 +117,7 @@ class L4RuleEntry extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

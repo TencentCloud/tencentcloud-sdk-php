@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * FacePoseResult
+ *
  * @method string getDirection() 获取正脸或侧脸的消息
  * @method void setDirection(string $Direction) 设置正脸或侧脸的消息
  * @method float getPitch() 获取围绕Z轴旋转角度，俯仰角
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoll(float $Roll) 设置围绕X轴旋转角度，翻滚角
  * @method float getYaw() 获取围绕Y轴旋转角度，偏航角
  * @method void setYaw(float $Yaw) 设置围绕Y轴旋转角度，偏航角
- */
-
-/**
- *FacePoseResult
  */
 class FacePoseResult extends AbstractModel
 {
@@ -52,6 +50,7 @@ class FacePoseResult extends AbstractModel
      * @var float 围绕Y轴旋转角度，偏航角
      */
     public $Yaw;
+
     /**
      * @param string $Direction 正脸或侧脸的消息
      * @param float $Pitch 围绕Z轴旋转角度，俯仰角
@@ -62,6 +61,7 @@ class FacePoseResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

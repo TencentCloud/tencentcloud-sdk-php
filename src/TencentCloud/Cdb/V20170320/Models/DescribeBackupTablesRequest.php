@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupTables请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
  * @method string getStartTime() 获取开始时间，格式为：2017-07-12 10:29:20。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移。
  * @method integer getLimit() 获取分页大小，最小值为1，最大值为2000。
  * @method void setLimit(integer $Limit) 设置分页大小，最小值为1，最大值为2000。
- */
-
-/**
- *DescribeBackupTables请求参数结构体
  */
 class DescribeBackupTablesRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeBackupTablesRequest extends AbstractModel
      * @var integer 分页大小，最小值为1，最大值为2000。
      */
     public $Limit;
+
     /**
      * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
      * @param string $StartTime 开始时间，格式为：2017-07-12 10:29:20。
@@ -78,6 +77,7 @@ class DescribeBackupTablesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

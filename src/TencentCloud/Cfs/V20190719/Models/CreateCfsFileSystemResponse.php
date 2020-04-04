@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCfsFileSystem返回参数结构体
+ *
  * @method string getCreationTime() 获取文件系统创建时间
  * @method void setCreationTime(string $CreationTime) 设置文件系统创建时间
  * @method string getCreationToken() 获取用户自定义文件系统名称
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncrypted(boolean $Encrypted) 设置文件系统是否加密
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateCfsFileSystem返回参数结构体
  */
 class CreateCfsFileSystemResponse extends AbstractModel
 {
@@ -87,6 +85,7 @@ class CreateCfsFileSystemResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $CreationTime 文件系统创建时间
      * @param string $CreationToken 用户自定义文件系统名称
@@ -102,6 +101,7 @@ class CreateCfsFileSystemResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

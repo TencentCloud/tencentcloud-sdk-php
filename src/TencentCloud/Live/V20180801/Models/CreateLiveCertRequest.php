@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveCert请求参数结构体
+ *
  * @method integer getCertType() 获取证书类型。0-用户添加证书；1-腾讯云托管证书。
 注意：当证书类型为0时，HttpsCrt和HttpsKey必选；
 当证书类型为1时，优先使用CloudCertId对应证书，若CloudCertId为空则使用HttpsCrt和HttpsKey。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置描述。
  * @method string getCloudCertId() 获取腾讯云证书托管ID。
  * @method void setCloudCertId(string $CloudCertId) 设置腾讯云证书托管ID。
- */
-
-/**
- *CreateLiveCert请求参数结构体
  */
 class CreateLiveCertRequest extends AbstractModel
 {
@@ -72,6 +70,7 @@ class CreateLiveCertRequest extends AbstractModel
      * @var string 腾讯云证书托管ID。
      */
     public $CloudCertId;
+
     /**
      * @param integer $CertType 证书类型。0-用户添加证书；1-腾讯云托管证书。
 注意：当证书类型为0时，HttpsCrt和HttpsKey必选；
@@ -86,6 +85,7 @@ class CreateLiveCertRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

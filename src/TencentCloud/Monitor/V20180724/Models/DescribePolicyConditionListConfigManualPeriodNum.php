@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePolicyConditionList.ConfigManual.PeriodNum
+ *
  * @method integer getDefault() 获取默认周期数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefault(integer $Default) 设置默认周期数
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getNeed() 获取是否必须
  * @method void setNeed(boolean $Need) 设置是否必须
- */
-
-/**
- *DescribePolicyConditionList.ConfigManual.PeriodNum
  */
 class DescribePolicyConditionListConfigManualPeriodNum extends AbstractModel
 {
@@ -51,6 +49,7 @@ class DescribePolicyConditionListConfigManualPeriodNum extends AbstractModel
      * @var boolean 是否必须
      */
     public $Need;
+
     /**
      * @param integer $Default 默认周期数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -62,6 +61,7 @@ class DescribePolicyConditionListConfigManualPeriodNum extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

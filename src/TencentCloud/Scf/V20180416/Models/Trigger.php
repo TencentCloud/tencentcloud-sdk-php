@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 触发器类型
+ *
  * @method string getModTime() 获取触发器最后修改时间
  * @method void setModTime(string $ModTime) 设置触发器最后修改时间
  * @method string getType() 获取触发器类型
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(integer $Enable) 设置使能开关
  * @method string getCustomArgument() 获取客户自定义参数
  * @method void setCustomArgument(string $CustomArgument) 设置客户自定义参数
- */
-
-/**
- *触发器类型
  */
 class Trigger extends AbstractModel
 {
@@ -73,6 +71,7 @@ class Trigger extends AbstractModel
      * @var string 客户自定义参数
      */
     public $CustomArgument;
+
     /**
      * @param string $ModTime 触发器最后修改时间
      * @param string $Type 触发器类型
@@ -86,6 +85,7 @@ class Trigger extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

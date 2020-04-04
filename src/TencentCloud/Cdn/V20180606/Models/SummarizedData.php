@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 明细数据的汇总值，各指标根据其特性不同拥有不同汇总方式
+ *
  * @method string getName() 获取汇总方式，存在以下几种：
 sum：累加求和
 max：最大值，带宽模式下，采用 5 分钟粒度汇总数据，计算峰值带宽
@@ -28,10 +30,6 @@ max：最大值，带宽模式下，采用 5 分钟粒度汇总数据，计算�
 avg：平均值
  * @method float getValue() 获取汇总后的数据值
  * @method void setValue(float $Value) 设置汇总后的数据值
- */
-
-/**
- *明细数据的汇总值，各指标根据其特性不同拥有不同汇总方式
  */
 class SummarizedData extends AbstractModel
 {
@@ -47,6 +45,7 @@ avg：平均值
      * @var float 汇总后的数据值
      */
     public $Value;
+
     /**
      * @param string $Name 汇总方式，存在以下几种：
 sum：累加求和
@@ -58,6 +57,7 @@ avg：平均值
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 项目详情
+ *
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method string getProjectName() 获取项目名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置创建时间，unix时间戳
  * @method integer getUpdateTime() 获取更新时间，unix时间戳
  * @method void setUpdateTime(integer $UpdateTime) 设置更新时间，unix时间戳
- */
-
-/**
- *项目详情
  */
 class ProjectEntry extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ProjectEntry extends AbstractModel
      * @var integer 更新时间，unix时间戳
      */
     public $UpdateTime;
+
     /**
      * @param string $ProjectId 项目ID
      * @param string $ProjectName 项目名称
@@ -70,6 +69,7 @@ class ProjectEntry extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

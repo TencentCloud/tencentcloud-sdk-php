@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDevices请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置排序字段
  * @method integer getOrder() 获取排序方式，取值：0:增序(默认)，1:降序
  * @method void setOrder(integer $Order) 设置排序方式，取值：0:增序(默认)，1:降序
- */
-
-/**
- *DescribeDevices请求参数结构体
  */
 class DescribeDevicesRequest extends AbstractModel
 {
@@ -150,6 +148,7 @@ class DescribeDevicesRequest extends AbstractModel
      * @var integer 排序方式，取值：0:增序(默认)，1:降序
      */
     public $Order;
+
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
@@ -174,6 +173,7 @@ class DescribeDevicesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

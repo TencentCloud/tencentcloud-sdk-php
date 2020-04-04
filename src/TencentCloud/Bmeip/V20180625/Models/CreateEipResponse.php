@@ -18,16 +18,14 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateEip返回参数结构体
+ *
  * @method array getEipIds() 获取EIP列表
  * @method void setEipIds(array $EipIds) 设置EIP列表
  * @method integer getTaskId() 获取任务ID
  * @method void setTaskId(integer $TaskId) 设置任务ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateEip返回参数结构体
  */
 class CreateEipResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateEipResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $EipIds EIP列表
      * @param integer $TaskId 任务ID
@@ -54,6 +53,7 @@ class CreateEipResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

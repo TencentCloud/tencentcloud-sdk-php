@@ -18,12 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAutoScalingGroup请求参数结构体
+ *
  * @method string getAutoScalingGroupId() 获取伸缩组ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
- */
-
-/**
- *DeleteAutoScalingGroup请求参数结构体
  */
 class DeleteAutoScalingGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteAutoScalingGroupRequest extends AbstractModel
      * @var string 伸缩组ID
      */
     public $AutoScalingGroupId;
+
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      */
@@ -38,6 +37,7 @@ class DeleteAutoScalingGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

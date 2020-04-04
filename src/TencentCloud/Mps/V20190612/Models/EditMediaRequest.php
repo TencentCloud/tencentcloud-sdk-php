@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EditMedia请求参数结构体
+ *
  * @method array getFileInfos() 获取输入的视频文件信息。
  * @method void setFileInfos(array $FileInfos) 设置输入的视频文件信息。
  * @method TaskOutputStorage getOutputStorage() 获取视频处理输出文件的目标存储。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
  * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
- */
-
-/**
- *EditMedia请求参数结构体
  */
 class EditMediaRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class EditMediaRequest extends AbstractModel
      * @var string 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     public $SessionContext;
+
     /**
      * @param array $FileInfos 输入的视频文件信息。
      * @param TaskOutputStorage $OutputStorage 视频处理输出文件的目标存储。
@@ -86,6 +85,7 @@ class EditMediaRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

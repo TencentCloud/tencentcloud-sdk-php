@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 播放错误码信息
+ *
  * @method string getHttpStatus() 获取播放HTTP状态码。
  * @method void setHttpStatus(string $HttpStatus) 设置播放HTTP状态码。
  * @method integer getNum() 获取个数。
  * @method void setNum(integer $Num) 设置个数。
- */
-
-/**
- *播放错误码信息
  */
 class HttpStatusInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class HttpStatusInfo extends AbstractModel
      * @var integer 个数。
      */
     public $Num;
+
     /**
      * @param string $HttpStatus 播放HTTP状态码。
      * @param integer $Num 个数。
@@ -46,6 +45,7 @@ class HttpStatusInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

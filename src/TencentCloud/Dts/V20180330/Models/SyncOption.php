@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 灾备同步任务配置选项
+ *
  * @method integer getSyncObject() 获取同步对象，1-整个实例，2-指定库表
  * @method void setSyncObject(integer $SyncObject) 设置同步对象，1-整个实例，2-指定库表
  * @method integer getRunMode() 获取同步开始设置，1-立即开始
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyncType(integer $SyncType) 设置同步模式， 3-全量且增量同步
  * @method integer getConsistencyType() 获取数据一致性检测， 1-无需配置
  * @method void setConsistencyType(integer $ConsistencyType) 设置数据一致性检测， 1-无需配置
- */
-
-/**
- *灾备同步任务配置选项
  */
 class SyncOption extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SyncOption extends AbstractModel
      * @var integer 数据一致性检测， 1-无需配置
      */
     public $ConsistencyType;
+
     /**
      * @param integer $SyncObject 同步对象，1-整个实例，2-指定库表
      * @param integer $RunMode 同步开始设置，1-立即开始
@@ -62,6 +61,7 @@ class SyncOption extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

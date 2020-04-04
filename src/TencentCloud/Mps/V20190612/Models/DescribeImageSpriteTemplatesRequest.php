@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImageSpriteTemplates请求参数结构体
+ *
  * @method array getDefinitions() 获取雪碧图模板唯一标识过滤条件，数组长度限制：100。
  * @method void setDefinitions(array $Definitions) 设置雪碧图模板唯一标识过滤条件，数组长度限制：100。
  * @method integer getOffset() 获取分页偏移量，默认值：0。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置模板类型过滤条件，可选值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
- */
-
-/**
- *DescribeImageSpriteTemplates请求参数结构体
  */
 class DescribeImageSpriteTemplatesRequest extends AbstractModel
 {
@@ -58,6 +56,7 @@ class DescribeImageSpriteTemplatesRequest extends AbstractModel
 <li>Custom：用户自定义模板。</li>
      */
     public $Type;
+
     /**
      * @param array $Definitions 雪碧图模板唯一标识过滤条件，数组长度限制：100。
      * @param integer $Offset 分页偏移量，默认值：0。
@@ -70,6 +69,7 @@ class DescribeImageSpriteTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

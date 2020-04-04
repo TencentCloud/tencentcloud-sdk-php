@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteVpnGateway请求参数结构体
+ *
  * @method string getVpnGatewayId() 获取VPN网关实例ID。
  * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
- */
-
-/**
- *DeleteVpnGateway请求参数结构体
  */
 class DeleteVpnGatewayRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteVpnGatewayRequest extends AbstractModel
      * @var string VPN网关实例ID。
      */
     public $VpnGatewayId;
+
     /**
      * @param string $VpnGatewayId VPN网关实例ID。
      */
@@ -38,6 +37,7 @@ class DeleteVpnGatewayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

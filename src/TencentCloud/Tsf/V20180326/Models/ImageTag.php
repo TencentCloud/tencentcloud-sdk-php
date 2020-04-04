@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 列表信息
+ *
  * @method string getRepoName() 获取仓库名
  * @method void setRepoName(string $RepoName) 设置仓库名
  * @method string getTagName() 获取版本名称
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPushTime(string $PushTime) 设置push时间
  * @method integer getSizeByte() 获取单位为字节
  * @method void setSizeByte(integer $SizeByte) 设置单位为字节
- */
-
-/**
- *列表信息
  */
 class ImageTag extends AbstractModel
 {
@@ -115,6 +113,7 @@ class ImageTag extends AbstractModel
      * @var integer 单位为字节
      */
     public $SizeByte;
+
     /**
      * @param string $RepoName 仓库名
      * @param string $TagName 版本名称
@@ -134,6 +133,7 @@ class ImageTag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

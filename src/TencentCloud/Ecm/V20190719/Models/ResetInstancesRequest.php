@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetInstances请求参数结构体
+ *
  * @method array getInstanceIdSet() 获取待重装的实例ID列表。
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置待重装的实例ID列表。
  * @method string getImageId() 获取重装使用的镜像ID，若未指定，则使用各个实例当前的镜像进行重装。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) 设置密码设置，若未指定，则后续将以站内信的形式通知密码。
  * @method EnhancedService getEnhancedService() 获取是否开启云监控和云镜服务，未指定时默认开启。
  * @method void setEnhancedService(EnhancedService $EnhancedService) 设置是否开启云监控和云镜服务，未指定时默认开启。
- */
-
-/**
- *ResetInstances请求参数结构体
  */
 class ResetInstancesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ResetInstancesRequest extends AbstractModel
      * @var EnhancedService 是否开启云监控和云镜服务，未指定时默认开启。
      */
     public $EnhancedService;
+
     /**
      * @param array $InstanceIdSet 待重装的实例ID列表。
      * @param string $ImageId 重装使用的镜像ID，若未指定，则使用各个实例当前的镜像进行重装。
@@ -62,6 +61,7 @@ class ResetInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

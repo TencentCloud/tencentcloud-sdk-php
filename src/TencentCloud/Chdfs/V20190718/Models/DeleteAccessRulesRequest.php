@@ -18,12 +18,10 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAccessRules请求参数结构体
+ *
  * @method array getAccessRuleIds() 获取多个权限规则ID，上限为10
  * @method void setAccessRuleIds(array $AccessRuleIds) 设置多个权限规则ID，上限为10
- */
-
-/**
- *DeleteAccessRules请求参数结构体
  */
 class DeleteAccessRulesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteAccessRulesRequest extends AbstractModel
      * @var array 多个权限规则ID，上限为10
      */
     public $AccessRuleIds;
+
     /**
      * @param array $AccessRuleIds 多个权限规则ID，上限为10
      */
@@ -38,6 +37,7 @@ class DeleteAccessRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

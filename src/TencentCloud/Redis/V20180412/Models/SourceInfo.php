@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 访问来源信息
+ *
  * @method string getIp() 获取来源IP
  * @method void setIp(string $Ip) 设置来源IP
  * @method integer getConn() 获取连接数
  * @method void setConn(integer $Conn) 设置连接数
  * @method integer getCmd() 获取命令
  * @method void setCmd(integer $Cmd) 设置命令
- */
-
-/**
- *访问来源信息
  */
 class SourceInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SourceInfo extends AbstractModel
      * @var integer 命令
      */
     public $Cmd;
+
     /**
      * @param string $Ip 来源IP
      * @param integer $Conn 连接数
@@ -54,6 +53,7 @@ class SourceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

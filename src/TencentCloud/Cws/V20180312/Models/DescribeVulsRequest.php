@@ -18,6 +18,8 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVuls请求参数结构体
+ *
  * @method integer getSiteId() 获取站点ID
  * @method void setSiteId(integer $SiteId) 设置站点ID
  * @method integer getMonitorId() 获取监控任务ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认为10，最大值为100
  * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100
- */
-
-/**
- *DescribeVuls请求参数结构体
  */
 class DescribeVulsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeVulsRequest extends AbstractModel
      * @var integer 返回数量，默认为10，最大值为100
      */
     public $Limit;
+
     /**
      * @param integer $SiteId 站点ID
      * @param integer $MonitorId 监控任务ID
@@ -70,6 +69,7 @@ class DescribeVulsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

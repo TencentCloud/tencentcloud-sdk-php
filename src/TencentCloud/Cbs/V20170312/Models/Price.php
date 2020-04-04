@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述预付费或后付费云盘的价格。
+ *
  * @method float getOriginalPrice() 获取预付费云盘预支费用的原价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalPrice(float $OriginalPrice) 设置预付费云盘预支费用的原价，单位：元。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnitPriceDiscount(float $UnitPriceDiscount) 设置后付费云盘折扣单价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *描述预付费或后付费云盘的价格。
  */
 class Price extends AbstractModel
 {
@@ -74,6 +72,7 @@ class Price extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnitPriceDiscount;
+
     /**
      * @param float $OriginalPrice 预付费云盘预支费用的原价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -90,6 +89,7 @@ class Price extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 小程序审核信息
+ *
  * @method array getMiniProgramReviewList() 获取审核信息列表。
  * @method void setMiniProgramReviewList(array $MiniProgramReviewList) 设置审核信息列表。
- */
-
-/**
- *小程序审核信息
  */
 class MediaMiniProgramReviewInfo extends AbstractModel
 {
@@ -31,6 +29,7 @@ class MediaMiniProgramReviewInfo extends AbstractModel
      * @var array 审核信息列表。
      */
     public $MiniProgramReviewList;
+
     /**
      * @param array $MiniProgramReviewList 审核信息列表。
      */
@@ -38,6 +37,7 @@ class MediaMiniProgramReviewInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

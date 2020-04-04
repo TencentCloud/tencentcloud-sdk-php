@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述详细同步任务过程
+ *
  * @method integer getStepAll() 获取总步骤数
  * @method void setStepAll(integer $StepAll) 设置总步骤数
  * @method integer getStepNow() 获取当前步骤
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecondsBehindMaster(integer $SecondsBehindMaster) 设置主从差距，秒
  * @method array getStepInfo() 获取步骤信息
  * @method void setStepInfo(array $StepInfo) 设置步骤信息
- */
-
-/**
- *描述详细同步任务过程
  */
 class SyncDetailInfo extends AbstractModel
 {
@@ -73,6 +71,7 @@ class SyncDetailInfo extends AbstractModel
      * @var array 步骤信息
      */
     public $StepInfo;
+
     /**
      * @param integer $StepAll 总步骤数
      * @param integer $StepNow 当前步骤
@@ -86,6 +85,7 @@ class SyncDetailInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

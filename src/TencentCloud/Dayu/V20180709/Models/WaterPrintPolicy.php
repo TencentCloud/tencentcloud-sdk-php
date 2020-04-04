@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 水印策略参数
+ *
  * @method array getTcpPortList() 获取TCP端口段，例如["2000-3000","3500-4000"]
  * @method void setTcpPortList(array $TcpPortList) 设置TCP端口段，例如["2000-3000","3500-4000"]
  * @method array getUdpPortList() 获取UDP端口段，例如["2000-3000","3500-4000"]
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoveSwitch(integer $RemoveSwitch) 设置是否自动剥离，取值[0（不自动剥离），1（自动剥离）]
  * @method integer getOpenStatus() 获取是否开启，取值[0（没有开启），1（已开启）]
  * @method void setOpenStatus(integer $OpenStatus) 设置是否开启，取值[0（没有开启），1（已开启）]
- */
-
-/**
- *水印策略参数
  */
 class WaterPrintPolicy extends AbstractModel
 {
@@ -59,6 +57,7 @@ class WaterPrintPolicy extends AbstractModel
      * @var integer 是否开启，取值[0（没有开启），1（已开启）]
      */
     public $OpenStatus;
+
     /**
      * @param array $TcpPortList TCP端口段，例如["2000-3000","3500-4000"]
      * @param array $UdpPortList UDP端口段，例如["2000-3000","3500-4000"]
@@ -70,6 +69,7 @@ class WaterPrintPolicy extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

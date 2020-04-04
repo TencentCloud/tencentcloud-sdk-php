@@ -18,16 +18,14 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Encrypt请求参数结构体
+ *
  * @method string getKeyId() 获取调用CreateKey生成的CMK全局唯一标识符
  * @method void setKeyId(string $KeyId) 设置调用CreateKey生成的CMK全局唯一标识符
  * @method string getPlaintext() 获取被加密的明文数据，该字段必须使用base64编码，原文最大长度支持4K
  * @method void setPlaintext(string $Plaintext) 设置被加密的明文数据，该字段必须使用base64编码，原文最大长度支持4K
  * @method string getEncryptionContext() 获取key/value对的json字符串，如果指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024个字符
  * @method void setEncryptionContext(string $EncryptionContext) 设置key/value对的json字符串，如果指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024个字符
- */
-
-/**
- *Encrypt请求参数结构体
  */
 class EncryptRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class EncryptRequest extends AbstractModel
      * @var string key/value对的json字符串，如果指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024个字符
      */
     public $EncryptionContext;
+
     /**
      * @param string $KeyId 调用CreateKey生成的CMK全局唯一标识符
      * @param string $Plaintext 被加密的明文数据，该字段必须使用base64编码，原文最大长度支持4K
@@ -54,6 +53,7 @@ class EncryptRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

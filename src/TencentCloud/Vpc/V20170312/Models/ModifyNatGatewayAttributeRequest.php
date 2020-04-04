@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNatGatewayAttribute请求参数结构体
+ *
  * @method string getNatGatewayId() 获取NAT网关的ID，形如：`nat-df45454`。
  * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID，形如：`nat-df45454`。
  * @method string getNatGatewayName() 获取NAT网关的名称，形如：`test_nat`。
  * @method void setNatGatewayName(string $NatGatewayName) 设置NAT网关的名称，形如：`test_nat`。
  * @method integer getInternetMaxBandwidthOut() 获取NAT网关最大外网出带宽(单位:Mbps)。
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置NAT网关最大外网出带宽(单位:Mbps)。
- */
-
-/**
- *ModifyNatGatewayAttribute请求参数结构体
  */
 class ModifyNatGatewayAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyNatGatewayAttributeRequest extends AbstractModel
      * @var integer NAT网关最大外网出带宽(单位:Mbps)。
      */
     public $InternetMaxBandwidthOut;
+
     /**
      * @param string $NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      * @param string $NatGatewayName NAT网关的名称，形如：`test_nat`。
@@ -54,6 +53,7 @@ class ModifyNatGatewayAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

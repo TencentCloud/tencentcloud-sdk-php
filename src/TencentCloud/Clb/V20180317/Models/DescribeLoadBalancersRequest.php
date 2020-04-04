@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLoadBalancers请求参数结构体
+ *
  * @method array getLoadBalancerIds() 获取负载均衡实例 ID。
  * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置负载均衡实例 ID。
  * @method string getLoadBalancerType() 获取负载均衡实例的网络类型：
@@ -66,10 +68,6 @@ OPEN：公网属性， INTERNAL：内网属性。
 <li> internet-charge-type - String - 是否必填：否 - （过滤条件）按照 CLB 的网络计费模式过滤，包括"BANDWIDTH_PREPAID","TRAFFIC_POSTPAID_BY_HOUR","BANDWIDTH_POSTPAID_BY_HOUR","BANDWIDTH_PACKAGE"。</li>
 <li> master-zone-id - String - 是否必填：否 - （过滤条件）按照 CLB 的主可用区ID过滤，如 ："100001" （对应的是广州一区）。</li>
 <li> tag-key - String - 是否必填：否 - （过滤条件）按照 CLB 标签的键过滤。</li>
- */
-
-/**
- *DescribeLoadBalancers请求参数结构体
  */
 class DescribeLoadBalancersRequest extends AbstractModel
 {
@@ -172,6 +170,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 <li> tag-key - String - 是否必填：否 - （过滤条件）按照 CLB 标签的键过滤。</li>
      */
     public $Filters;
+
     /**
      * @param array $LoadBalancerIds 负载均衡实例 ID。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
@@ -202,6 +201,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

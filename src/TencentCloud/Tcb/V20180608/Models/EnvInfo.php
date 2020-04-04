@@ -18,6 +18,8 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 环境信息
+ *
  * @method string getEnvId() 获取账户下该环境唯一标识
  * @method void setEnvId(string $EnvId) 设置账户下该环境唯一标识
  * @method string getSource() 获取环境来源。包含以下取值：
@@ -64,10 +66,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAutoDegrade(boolean $IsAutoDegrade) 设置是否到期自动降为免费版
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *环境信息
  */
 class EnvInfo extends AbstractModel
 {
@@ -149,6 +147,7 @@ class EnvInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAutoDegrade;
+
     /**
      * @param string $EnvId 账户下该环境唯一标识
      * @param string $Source 环境来源。包含以下取值：
@@ -178,6 +177,7 @@ class EnvInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

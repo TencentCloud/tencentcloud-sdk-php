@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetDetectInfoEnhanced请求参数结构体
+ *
  * @method string getBizToken() 获取人脸核身流程的标识，调用DetectAuth接口时生成。
  * @method void setBizToken(string $BizToken) 设置人脸核身流程的标识，调用DetectAuth接口时生成。
  * @method string getRuleId() 获取用于细分客户使用场景，由腾讯侧在线下对接时分配。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsCutIdCardImage(boolean $IsCutIdCardImage) 设置是否对身份证照片进行裁边。默认为false。（InfoType需要包含2）
  * @method boolean getIsNeedIdCardAvatar() 获取是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
  * @method void setIsNeedIdCardAvatar(boolean $IsNeedIdCardAvatar) 设置是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
- */
-
-/**
- *GetDetectInfoEnhanced请求参数结构体
  */
 class GetDetectInfoEnhancedRequest extends AbstractModel
 {
@@ -72,6 +70,7 @@ class GetDetectInfoEnhancedRequest extends AbstractModel
      * @var boolean 是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
      */
     public $IsNeedIdCardAvatar;
+
     /**
      * @param string $BizToken 人脸核身流程的标识，调用DetectAuth接口时生成。
      * @param string $RuleId 用于细分客户使用场景，由腾讯侧在线下对接时分配。
@@ -86,6 +85,7 @@ class GetDetectInfoEnhancedRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

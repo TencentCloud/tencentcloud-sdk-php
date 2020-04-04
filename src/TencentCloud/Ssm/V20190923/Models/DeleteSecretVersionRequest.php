@@ -18,14 +18,12 @@ namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSecretVersion请求参数结构体
+ *
  * @method string getSecretName() 获取指定凭据名称。
  * @method void setSecretName(string $SecretName) 设置指定凭据名称。
  * @method string getVersionId() 获取指定该名称下需要删除的凭据的版本号。
  * @method void setVersionId(string $VersionId) 设置指定该名称下需要删除的凭据的版本号。
- */
-
-/**
- *DeleteSecretVersion请求参数结构体
  */
 class DeleteSecretVersionRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteSecretVersionRequest extends AbstractModel
      * @var string 指定该名称下需要删除的凭据的版本号。
      */
     public $VersionId;
+
     /**
      * @param string $SecretName 指定凭据名称。
      * @param string $VersionId 指定该名称下需要删除的凭据的版本号。
@@ -46,6 +45,7 @@ class DeleteSecretVersionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

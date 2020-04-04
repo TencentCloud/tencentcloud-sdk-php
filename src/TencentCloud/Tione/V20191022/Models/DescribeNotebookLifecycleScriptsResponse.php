@@ -18,16 +18,14 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNotebookLifecycleScripts返回参数结构体
+ *
  * @method array getNotebookLifecycleScriptsSet() 获取Notebook生命周期脚本列表
  * @method void setNotebookLifecycleScriptsSet(array $NotebookLifecycleScriptsSet) 设置Notebook生命周期脚本列表
  * @method integer getTotalCount() 获取Notebook生命周期脚本总数量
  * @method void setTotalCount(integer $TotalCount) 设置Notebook生命周期脚本总数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeNotebookLifecycleScripts返回参数结构体
  */
 class DescribeNotebookLifecycleScriptsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeNotebookLifecycleScriptsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $NotebookLifecycleScriptsSet Notebook生命周期脚本列表
      * @param integer $TotalCount Notebook生命周期脚本总数量
@@ -54,6 +53,7 @@ class DescribeNotebookLifecycleScriptsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

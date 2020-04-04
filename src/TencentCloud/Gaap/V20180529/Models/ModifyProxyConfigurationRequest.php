@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyProxyConfiguration请求参数结构体
+ *
  * @method string getInstanceId() 获取（旧参数，请切换到ProxyId）通道的实例ID。
  * @method void setInstanceId(string $InstanceId) 设置（旧参数，请切换到ProxyId）通道的实例ID。
  * @method integer getBandwidth() 获取需要调整到的目标带宽，单位：Mbps。
@@ -34,10 +36,6 @@ Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAcces
 更多详细信息请参阅：如何保证幂等性。
  * @method string getProxyId() 获取（新参数）通道的实例ID。
  * @method void setProxyId(string $ProxyId) 设置（新参数）通道的实例ID。
- */
-
-/**
- *ModifyProxyConfiguration请求参数结构体
  */
 class ModifyProxyConfigurationRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAcces
      * @var string （新参数）通道的实例ID。
      */
     public $ProxyId;
+
     /**
      * @param string $InstanceId （旧参数，请切换到ProxyId）通道的实例ID。
      * @param integer $Bandwidth 需要调整到的目标带宽，单位：Mbps。
@@ -82,6 +81,7 @@ Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAcces
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TrustMaliciousRequest请求参数结构体
+ *
  * @method integer getId() 获取恶意请求记录ID。
  * @method void setId(integer $Id) 设置恶意请求记录ID。
- */
-
-/**
- *TrustMaliciousRequest请求参数结构体
  */
 class TrustMaliciousRequestRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class TrustMaliciousRequestRequest extends AbstractModel
      * @var integer 恶意请求记录ID。
      */
     public $Id;
+
     /**
      * @param integer $Id 恶意请求记录ID。
      */
@@ -38,6 +37,7 @@ class TrustMaliciousRequestRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

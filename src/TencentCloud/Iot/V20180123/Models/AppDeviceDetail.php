@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 绑定设备详情
+ *
  * @method string getDeviceId() 获取设备Id
  * @method void setDeviceId(string $DeviceId) 设置设备Id
  * @method string getProductId() 获取所属产品Id
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceInfo(string $DeviceInfo) 设置设备信息（json）
  * @method array getDataTemplate() 获取数据模板
  * @method void setDataTemplate(array $DataTemplate) 设置数据模板
- */
-
-/**
- *绑定设备详情
  */
 class AppDeviceDetail extends AbstractModel
 {
@@ -87,6 +85,7 @@ class AppDeviceDetail extends AbstractModel
      * @var array 数据模板
      */
     public $DataTemplate;
+
     /**
      * @param string $DeviceId 设备Id
      * @param string $ProductId 所属产品Id
@@ -102,6 +101,7 @@ class AppDeviceDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

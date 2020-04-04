@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 按地域汇总消费详情
+ *
  * @method string getRegionId() 获取地域ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(string $RegionId) 设置地域ID
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置代金券金额
  * @method string getBillMonth() 获取账单月份，格式2019-08
  * @method void setBillMonth(string $BillMonth) 设置账单月份，格式2019-08
- */
-
-/**
- *按地域汇总消费详情
  */
 class RegionSummaryOverviewItem extends AbstractModel
 {
@@ -83,6 +81,7 @@ class RegionSummaryOverviewItem extends AbstractModel
      * @var string 账单月份，格式2019-08
      */
     public $BillMonth;
+
     /**
      * @param string $RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -98,6 +97,7 @@ class RegionSummaryOverviewItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

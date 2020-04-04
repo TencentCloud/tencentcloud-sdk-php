@@ -18,16 +18,14 @@ namespace TencentCloud\Cis\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 容器日志
+ *
  * @method string getName() 获取容器名称
  * @method void setName(string $Name) 设置容器名称
  * @method string getLog() 获取日志
  * @method void setLog(string $Log) 设置日志
  * @method string getTime() 获取日志记录时间
  * @method void setTime(string $Time) 设置日志记录时间
- */
-
-/**
- *容器日志
  */
 class ContainerLog extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ContainerLog extends AbstractModel
      * @var string 日志记录时间
      */
     public $Time;
+
     /**
      * @param string $Name 容器名称
      * @param string $Log 日志
@@ -54,6 +53,7 @@ class ContainerLog extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

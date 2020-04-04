@@ -18,6 +18,8 @@ namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CropImage请求参数结构体
+ *
  * @method integer getWidth() 获取需要裁剪区域的宽度，与Height共同组成所需裁剪的图片宽高比例；
 输入数字请大于0、小于图片宽度的像素值；
  * @method void setWidth(integer $Width) 设置需要裁剪区域的宽度，与Height共同组成所需裁剪的图片宽高比例；
@@ -50,10 +52,6 @@ Width : Height建议取值在[1, 2.5]之间，超过这个范围可能会影响�
 **注意：图片需要base64编码，并且要去掉编码头部。**
  * @method void setImageBase64(string $ImageBase64) 设置图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
 **注意：图片需要base64编码，并且要去掉编码头部。**
- */
-
-/**
- *CropImage请求参数结构体
  */
 class CropImageRequest extends AbstractModel
 {
@@ -88,6 +86,7 @@ Width : Height建议取值在[1, 2.5]之间，超过这个范围可能会影响�
 **注意：图片需要base64编码，并且要去掉编码头部。**
      */
     public $ImageBase64;
+
     /**
      * @param integer $Width 需要裁剪区域的宽度，与Height共同组成所需裁剪的图片宽高比例；
 输入数字请大于0、小于图片宽度的像素值；
@@ -110,6 +109,7 @@ Width : Height建议取值在[1, 2.5]之间，超过这个范围可能会影响�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

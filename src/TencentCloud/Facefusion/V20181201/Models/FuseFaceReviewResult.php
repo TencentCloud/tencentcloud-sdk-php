@@ -18,6 +18,8 @@ namespace TencentCloud\Facefusion\V20181201\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人脸融合鉴黄鉴政返回参数item
+ *
  * @method string getCategory() 获取保留字段
  * @method void setCategory(string $Category) 设置保留字段
  * @method string getCode() 获取状态码， 0为处理成功，其他值为处理失败
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuggestion(string $Suggestion) 设置保留字段
  * @method array getDetailSet() 获取审核详细内容
  * @method void setDetailSet(array $DetailSet) 设置审核详细内容
- */
-
-/**
- *人脸融合鉴黄鉴政返回参数item
  */
 class FuseFaceReviewResult extends AbstractModel
 {
@@ -66,6 +64,7 @@ class FuseFaceReviewResult extends AbstractModel
      * @var array 审核详细内容
      */
     public $DetailSet;
+
     /**
      * @param string $Category 保留字段
      * @param string $Code 状态码， 0为处理成功，其他值为处理失败
@@ -78,6 +77,7 @@ class FuseFaceReviewResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeFavorRepositoryPersonal请求参数结构体
+ *
  * @method string getRepoName() 获取仓库名称
  * @method void setRepoName(string $RepoName) 设置仓库名称
  * @method integer getLimit() 获取分页Limit
  * @method void setLimit(integer $Limit) 设置分页Limit
  * @method integer getOffset() 获取Offset用于分页
  * @method void setOffset(integer $Offset) 设置Offset用于分页
- */
-
-/**
- *DescribeFavorRepositoryPersonal请求参数结构体
  */
 class DescribeFavorRepositoryPersonalRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeFavorRepositoryPersonalRequest extends AbstractModel
      * @var integer Offset用于分页
      */
     public $Offset;
+
     /**
      * @param string $RepoName 仓库名称
      * @param integer $Limit 分页Limit
@@ -54,6 +53,7 @@ class DescribeFavorRepositoryPersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

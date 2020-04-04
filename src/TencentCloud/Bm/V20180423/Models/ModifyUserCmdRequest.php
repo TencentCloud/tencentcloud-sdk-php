@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyUserCmd请求参数结构体
+ *
  * @method string getCmdId() 获取待修改的脚本ID
  * @method void setCmdId(string $CmdId) 设置待修改的脚本ID
  * @method string getAlias() 获取待修改的脚本名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOsType(string $OsType) 设置脚本适用的操作系统类型
  * @method string getContent() 获取待修改的脚本内容，必须经过base64编码
  * @method void setContent(string $Content) 设置待修改的脚本内容，必须经过base64编码
- */
-
-/**
- *ModifyUserCmd请求参数结构体
  */
 class ModifyUserCmdRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyUserCmdRequest extends AbstractModel
      * @var string 待修改的脚本内容，必须经过base64编码
      */
     public $Content;
+
     /**
      * @param string $CmdId 待修改的脚本ID
      * @param string $Alias 待修改的脚本名称
@@ -62,6 +61,7 @@ class ModifyUserCmdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

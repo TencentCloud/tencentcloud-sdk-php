@@ -18,16 +18,14 @@ namespace TencentCloud\Tkgdq\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 返回的实体关系查询结果详细内容
+ *
  * @method array getObject() 获取实体关系查询返回关系的object
  * @method void setObject(array $Object) 设置实体关系查询返回关系的object
  * @method array getSubject() 获取实体关系查询返回关系的subject
  * @method void setSubject(array $Subject) 设置实体关系查询返回关系的subject
  * @method string getRelation() 获取实体关系查询返回的关系名称
  * @method void setRelation(string $Relation) 设置实体关系查询返回的关系名称
- */
-
-/**
- *返回的实体关系查询结果详细内容
  */
 class EntityRelationContent extends AbstractModel
 {
@@ -45,6 +43,7 @@ class EntityRelationContent extends AbstractModel
      * @var string 实体关系查询返回的关系名称
      */
     public $Relation;
+
     /**
      * @param array $Object 实体关系查询返回关系的object
      * @param array $Subject 实体关系查询返回关系的subject
@@ -54,6 +53,7 @@ class EntityRelationContent extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

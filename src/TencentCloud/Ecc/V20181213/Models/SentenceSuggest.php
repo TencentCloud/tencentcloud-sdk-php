@@ -18,6 +18,8 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 句子批阅建议
+ *
  * @method string getType() 获取类型
  * @method void setType(string $Type) 设置类型
  * @method string getErrorType() 获取错误类型
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrorPosition(array $ErrorPosition) 设置维度单词位置，在句子的第几个到第几个单词之间
  * @method array getErrorCoordinates() 获取维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
  * @method void setErrorCoordinates(array $ErrorCoordinates) 设置维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
- */
-
-/**
- *句子批阅建议
  */
 class SentenceSuggest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class SentenceSuggest extends AbstractModel
      * @var array 维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
      */
     public $ErrorCoordinates;
+
     /**
      * @param string $Type 类型
      * @param string $ErrorType 错误类型
@@ -86,6 +85,7 @@ class SentenceSuggest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

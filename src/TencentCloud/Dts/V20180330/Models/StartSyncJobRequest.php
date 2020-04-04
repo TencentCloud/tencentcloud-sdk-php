@@ -18,12 +18,10 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StartSyncJob请求参数结构体
+ *
  * @method string getJobId() 获取灾备同步任务ID
  * @method void setJobId(string $JobId) 设置灾备同步任务ID
- */
-
-/**
- *StartSyncJob请求参数结构体
  */
 class StartSyncJobRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class StartSyncJobRequest extends AbstractModel
      * @var string 灾备同步任务ID
      */
     public $JobId;
+
     /**
      * @param string $JobId 灾备同步任务ID
      */
@@ -38,6 +37,7 @@ class StartSyncJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

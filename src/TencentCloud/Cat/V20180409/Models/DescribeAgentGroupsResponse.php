@@ -18,16 +18,14 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAgentGroups返回参数结构体
+ *
  * @method AgentGroup getSysDefaultGroup() 获取用户所属的系统默认拨测分组
  * @method void setSysDefaultGroup(AgentGroup $SysDefaultGroup) 设置用户所属的系统默认拨测分组
  * @method array getCustomGroups() 获取用户创建的拨测分组列表
  * @method void setCustomGroups(array $CustomGroups) 设置用户创建的拨测分组列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAgentGroups返回参数结构体
  */
 class DescribeAgentGroupsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAgentGroupsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param AgentGroup $SysDefaultGroup 用户所属的系统默认拨测分组
      * @param array $CustomGroups 用户创建的拨测分组列表
@@ -54,6 +53,7 @@ class DescribeAgentGroupsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

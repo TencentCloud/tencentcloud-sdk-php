@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 计算环境
+ *
  * @method string getEnvName() 获取计算环境名称
  * @method void setEnvName(string $EnvName) 设置计算环境名称
  * @method integer getDesiredComputeNodeCount() 获取计算节点期望个数
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionIfComputeNodeInactive(string $ActionIfComputeNodeInactive) 设置非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
  * @method integer getResourceMaxRetryCount() 获取对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值11，如果不设置的话，系统会设置一个默认值，当前为7
  * @method void setResourceMaxRetryCount(integer $ResourceMaxRetryCount) 设置对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值11，如果不设置的话，系统会设置一个默认值，当前为7
- */
-
-/**
- *计算环境
  */
 class NamedComputeEnv extends AbstractModel
 {
@@ -108,6 +106,7 @@ class NamedComputeEnv extends AbstractModel
      * @var integer 对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值11，如果不设置的话，系统会设置一个默认值，当前为7
      */
     public $ResourceMaxRetryCount;
+
     /**
      * @param string $EnvName 计算环境名称
      * @param integer $DesiredComputeNodeCount 计算节点期望个数
@@ -126,6 +125,7 @@ class NamedComputeEnv extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

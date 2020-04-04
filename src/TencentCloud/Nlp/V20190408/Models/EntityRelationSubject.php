@@ -18,16 +18,14 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实体关系查询返回Subject
+ *
  * @method array getId() 获取Subject对应id
  * @method void setId(array $Id) 设置Subject对应id
  * @method array getName() 获取Subject对应name
  * @method void setName(array $Name) 设置Subject对应name
  * @method array getPopular() 获取Subject对应popular
  * @method void setPopular(array $Popular) 设置Subject对应popular
- */
-
-/**
- *实体关系查询返回Subject
  */
 class EntityRelationSubject extends AbstractModel
 {
@@ -45,6 +43,7 @@ class EntityRelationSubject extends AbstractModel
      * @var array Subject对应popular
      */
     public $Popular;
+
     /**
      * @param array $Id Subject对应id
      * @param array $Name Subject对应name
@@ -54,6 +53,7 @@ class EntityRelationSubject extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

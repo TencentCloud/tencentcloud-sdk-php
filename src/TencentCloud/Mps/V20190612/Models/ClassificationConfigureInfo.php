@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能分类任务控制参数
+ *
  * @method string getSwitch() 获取智能分类任务开关，可选值：
 <li>ON：开启智能分类任务；</li>
 <li>OFF：关闭智能分类任务。</li>
  * @method void setSwitch(string $Switch) 设置智能分类任务开关，可选值：
 <li>ON：开启智能分类任务；</li>
 <li>OFF：关闭智能分类任务。</li>
- */
-
-/**
- *智能分类任务控制参数
  */
 class ClassificationConfigureInfo extends AbstractModel
 {
@@ -37,6 +35,7 @@ class ClassificationConfigureInfo extends AbstractModel
 <li>OFF：关闭智能分类任务。</li>
      */
     public $Switch;
+
     /**
      * @param string $Switch 智能分类任务开关，可选值：
 <li>ON：开启智能分类任务；</li>
@@ -46,6 +45,7 @@ class ClassificationConfigureInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

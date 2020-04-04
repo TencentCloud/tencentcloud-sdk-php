@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 端口列表
+ *
  * @method integer getId() 获取唯一ID。
  * @method void setId(integer $Id) 设置唯一ID。
  * @method string getUuid() 获取云镜客户端唯一UUID。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置记录创建时间。
  * @method string getModifyTime() 获取记录更新时间。
  * @method void setModifyTime(string $ModifyTime) 设置记录更新时间。
- */
-
-/**
- *端口列表
  */
 class OpenPort extends AbstractModel
 {
@@ -87,6 +85,7 @@ class OpenPort extends AbstractModel
      * @var string 记录更新时间。
      */
     public $ModifyTime;
+
     /**
      * @param integer $Id 唯一ID。
      * @param string $Uuid 云镜客户端唯一UUID。
@@ -102,6 +101,7 @@ class OpenPort extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

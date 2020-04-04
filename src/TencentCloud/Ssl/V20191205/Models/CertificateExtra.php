@@ -18,6 +18,8 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取证书列表（DescribeCertificates）返回参数键为 Certificates 数组下，key为CertificateExtra 的内容。
+ *
  * @method string getDomainNumber() 获取证书可配置域名数量。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainNumber(string $DomainNumber) 设置证书可配置域名数量。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewOrder(string $RenewOrder) 设置新订单证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *获取证书列表（DescribeCertificates）返回参数键为 Certificates 数组下，key为CertificateExtra 的内容。
  */
 class CertificateExtra extends AbstractModel
 {
@@ -74,6 +72,7 @@ class CertificateExtra extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewOrder;
+
     /**
      * @param string $DomainNumber 证书可配置域名数量。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -90,6 +89,7 @@ class CertificateExtra extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

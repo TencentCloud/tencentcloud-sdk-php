@@ -18,16 +18,14 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListOrganizationInvitations请求参数结构体
+ *
  * @method integer getInvited() 获取是否被邀请。1：被邀请，0：发出的邀请
  * @method void setInvited(integer $Invited) 设置是否被邀请。1：被邀请，0：发出的邀请
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取限制数目
  * @method void setLimit(integer $Limit) 设置限制数目
- */
-
-/**
- *ListOrganizationInvitations请求参数结构体
  */
 class ListOrganizationInvitationsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListOrganizationInvitationsRequest extends AbstractModel
      * @var integer 限制数目
      */
     public $Limit;
+
     /**
      * @param integer $Invited 是否被邀请。1：被邀请，0：发出的邀请
      * @param integer $Offset 偏移量
@@ -54,6 +53,7 @@ class ListOrganizationInvitationsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

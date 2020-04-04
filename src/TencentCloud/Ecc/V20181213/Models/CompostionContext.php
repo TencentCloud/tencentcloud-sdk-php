@@ -18,6 +18,8 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图像识别批改接口返回的作文文本信息或批改信息
+ *
  * @method string getContent() 获取作文内容
  * @method void setContent(string $Content) 设置作文内容
  * @method CorrectData getCorrectData() 获取批改结果
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionId(string $SessionId) 设置图像识别唯一标识，一次识别一个 SessionId
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *图像识别批改接口返回的作文文本信息或批改信息
  */
 class CompostionContext extends AbstractModel
 {
@@ -61,6 +59,7 @@ class CompostionContext extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionId;
+
     /**
      * @param string $Content 作文内容
      * @param CorrectData $CorrectData 批改结果
@@ -74,6 +73,7 @@ class CompostionContext extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

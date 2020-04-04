@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 物理机信息
+ *
  * @method string getInstanceId() 获取设备唯一ID
  * @method void setInstanceId(string $InstanceId) 设置设备唯一ID
  * @method string getVpcId() 获取私有网络ID
@@ -68,10 +70,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetCidrBlock(string $SubnetCidrBlock) 设置所在子网CIDR
  * @method integer getIsLuckyDevice() 获取标识是否是竞价实例。0: 普通设备; 1: 竞价实例设备
  * @method void setIsLuckyDevice(integer $IsLuckyDevice) 设置标识是否是竞价实例。0: 普通设备; 1: 竞价实例设备
- */
-
-/**
- *物理机信息
  */
 class DeviceInfo extends AbstractModel
 {
@@ -195,6 +193,7 @@ class DeviceInfo extends AbstractModel
      * @var integer 标识是否是竞价实例。0: 普通设备; 1: 竞价实例设备
      */
     public $IsLuckyDevice;
+
     /**
      * @param string $InstanceId 设备唯一ID
      * @param string $VpcId 私有网络ID
@@ -226,6 +225,7 @@ class DeviceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

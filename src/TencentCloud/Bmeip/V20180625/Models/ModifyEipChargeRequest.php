@@ -18,16 +18,14 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyEipCharge请求参数结构体
+ *
  * @method string getPayMode() 获取EIP计费方式，flow-流量计费；bandwidth-带宽计费
  * @method void setPayMode(string $PayMode) 设置EIP计费方式，flow-流量计费；bandwidth-带宽计费
  * @method array getEipIds() 获取Eip实例ID列表
  * @method void setEipIds(array $EipIds) 设置Eip实例ID列表
  * @method integer getBandwidth() 获取带宽设定值（只在带宽计费时生效）
  * @method void setBandwidth(integer $Bandwidth) 设置带宽设定值（只在带宽计费时生效）
- */
-
-/**
- *ModifyEipCharge请求参数结构体
  */
 class ModifyEipChargeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyEipChargeRequest extends AbstractModel
      * @var integer 带宽设定值（只在带宽计费时生效）
      */
     public $Bandwidth;
+
     /**
      * @param string $PayMode EIP计费方式，flow-流量计费；bandwidth-带宽计费
      * @param array $EipIds Eip实例ID列表
@@ -54,6 +53,7 @@ class ModifyEipChargeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

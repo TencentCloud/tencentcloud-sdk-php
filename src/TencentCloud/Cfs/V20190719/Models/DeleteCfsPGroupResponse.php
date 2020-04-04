@@ -18,16 +18,14 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCfsPGroup返回参数结构体
+ *
  * @method string getPGroupId() 获取权限组 ID
  * @method void setPGroupId(string $PGroupId) 设置权限组 ID
  * @method integer getAppId() 获取用户 ID
  * @method void setAppId(integer $AppId) 设置用户 ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DeleteCfsPGroup返回参数结构体
  */
 class DeleteCfsPGroupResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteCfsPGroupResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $PGroupId 权限组 ID
      * @param integer $AppId 用户 ID
@@ -54,6 +53,7 @@ class DeleteCfsPGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

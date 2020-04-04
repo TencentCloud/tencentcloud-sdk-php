@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 排序类型数据结构
+ *
  * @method string getResource() 获取资源名称，根据查询条件不同分为以下几类：
 具体域名：表示该域名明细数据
 multiDomains：表示多域名汇总明细数据
@@ -30,10 +32,6 @@ multiDomains：表示多域名汇总明细数据
 all：账号维度明细数据
  * @method array getDetailData() 获取排序结果详情
  * @method void setDetailData(array $DetailData) 设置排序结果详情
- */
-
-/**
- *排序类型数据结构
  */
 class TopData extends AbstractModel
 {
@@ -50,6 +48,7 @@ all：账号维度明细数据
      * @var array 排序结果详情
      */
     public $DetailData;
+
     /**
      * @param string $Resource 资源名称，根据查询条件不同分为以下几类：
 具体域名：表示该域名明细数据
@@ -62,6 +61,7 @@ all：账号维度明细数据
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

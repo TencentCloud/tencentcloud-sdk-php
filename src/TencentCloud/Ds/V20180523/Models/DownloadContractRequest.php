@@ -18,16 +18,14 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DownloadContract请求参数结构体
+ *
  * @method string getModule() 获取模块名ContractMng
  * @method void setModule(string $Module) 设置模块名ContractMng
  * @method string getOperation() 获取操作名DownloadContract
  * @method void setOperation(string $Operation) 设置操作名DownloadContract
  * @method string getContractResId() 获取合同ID
  * @method void setContractResId(string $ContractResId) 设置合同ID
- */
-
-/**
- *DownloadContract请求参数结构体
  */
 class DownloadContractRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DownloadContractRequest extends AbstractModel
      * @var string 合同ID
      */
     public $ContractResId;
+
     /**
      * @param string $Module 模块名ContractMng
      * @param string $Operation 操作名DownloadContract
@@ -54,6 +53,7 @@ class DownloadContractRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

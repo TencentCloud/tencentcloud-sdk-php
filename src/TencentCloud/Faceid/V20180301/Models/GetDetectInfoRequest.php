@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetDetectInfo请求参数结构体
+ *
  * @method string getBizToken() 获取人脸核身流程的标识，调用DetectAuth接口时生成。
  * @method void setBizToken(string $BizToken) 设置人脸核身流程的标识，调用DetectAuth接口时生成。
  * @method string getRuleId() 获取用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInfoType(string $InfoType) 设置指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
 如 134表示拉取文本类、视频最佳截图照片、视频。
 默认值：0
- */
-
-/**
- *GetDetectInfo请求参数结构体
  */
 class GetDetectInfoRequest extends AbstractModel
 {
@@ -51,6 +49,7 @@ class GetDetectInfoRequest extends AbstractModel
 默认值：0
      */
     public $InfoType;
+
     /**
      * @param string $BizToken 人脸核身流程的标识，调用DetectAuth接口时生成。
      * @param string $RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
@@ -62,6 +61,7 @@ class GetDetectInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

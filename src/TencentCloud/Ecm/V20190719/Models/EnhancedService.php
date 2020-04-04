@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 增强服务
+ *
  * @method RunSecurityServiceEnabled getSecurityService() 获取是否开启云镜服务。
  * @method void setSecurityService(RunSecurityServiceEnabled $SecurityService) 设置是否开启云镜服务。
  * @method RunMonitorServiceEnabled getMonitorService() 获取是否开启云监控服务。
  * @method void setMonitorService(RunMonitorServiceEnabled $MonitorService) 设置是否开启云监控服务。
- */
-
-/**
- *增强服务
  */
 class EnhancedService extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EnhancedService extends AbstractModel
      * @var RunMonitorServiceEnabled 是否开启云监控服务。
      */
     public $MonitorService;
+
     /**
      * @param RunSecurityServiceEnabled $SecurityService 是否开启云镜服务。
      * @param RunMonitorServiceEnabled $MonitorService 是否开启云监控服务。
@@ -46,6 +45,7 @@ class EnhancedService extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

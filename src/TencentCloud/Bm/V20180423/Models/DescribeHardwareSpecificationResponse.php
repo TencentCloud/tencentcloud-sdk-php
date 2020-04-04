@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHardwareSpecification返回参数结构体
+ *
  * @method array getCpuInfoSet() 获取CPU型号列表
  * @method void setCpuInfoSet(array $CpuInfoSet) 设置CPU型号列表
  * @method array getMemSet() 获取内存的取值，单位为G
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskInfoSet(array $DiskInfoSet) 设置硬盘型号列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeHardwareSpecification返回参数结构体
  */
 class DescribeHardwareSpecificationResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeHardwareSpecificationResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $CpuInfoSet CPU型号列表
      * @param array $MemSet 内存的取值，单位为G
@@ -62,6 +61,7 @@ class DescribeHardwareSpecificationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

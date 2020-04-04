@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRepositories请求参数结构体
+ *
  * @method string getRegistryId() 获取实例Id
  * @method void setRegistryId(string $RegistryId) 设置实例Id
  * @method string getNamespaceName() 获取指定命名空间，不填写默认为查询所有命名空间下镜像仓库
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页个数，用于分页
  * @method string getSortBy() 获取基于字段排序，支持的值有-creation_time,-name, -update_time
  * @method void setSortBy(string $SortBy) 设置基于字段排序，支持的值有-creation_time,-name, -update_time
- */
-
-/**
- *DescribeRepositories请求参数结构体
  */
 class DescribeRepositoriesRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeRepositoriesRequest extends AbstractModel
      * @var string 基于字段排序，支持的值有-creation_time,-name, -update_time
      */
     public $SortBy;
+
     /**
      * @param string $RegistryId 实例Id
      * @param string $NamespaceName 指定命名空间，不填写默认为查询所有命名空间下镜像仓库
@@ -78,6 +77,7 @@ class DescribeRepositoriesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

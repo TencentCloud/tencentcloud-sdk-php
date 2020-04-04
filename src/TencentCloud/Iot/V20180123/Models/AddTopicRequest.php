@@ -18,14 +18,12 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddTopic请求参数结构体
+ *
  * @method string getProductId() 获取产品Id
  * @method void setProductId(string $ProductId) 设置产品Id
  * @method string getTopicName() 获取Topic名称
  * @method void setTopicName(string $TopicName) 设置Topic名称
- */
-
-/**
- *AddTopic请求参数结构体
  */
 class AddTopicRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AddTopicRequest extends AbstractModel
      * @var string Topic名称
      */
     public $TopicName;
+
     /**
      * @param string $ProductId 产品Id
      * @param string $TopicName Topic名称
@@ -46,6 +45,7 @@ class AddTopicRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

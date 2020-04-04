@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ActivateSubscribe请求参数结构体
+ *
  * @method string getSubscribeId() 获取订阅实例ID。
  * @method void setSubscribeId(string $SubscribeId) 设置订阅实例ID。
  * @method string getInstanceId() 获取数据库实例ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置数据订阅服务所在子网。默认为数据库实例所在的子网内。
  * @method integer getVport() 获取订阅服务端口；默认为7507
  * @method void setVport(integer $Vport) 设置订阅服务端口；默认为7507
- */
-
-/**
- *ActivateSubscribe请求参数结构体
  */
 class ActivateSubscribeRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ActivateSubscribeRequest extends AbstractModel
      * @var integer 订阅服务端口；默认为7507
      */
     public $Vport;
+
     /**
      * @param string $SubscribeId 订阅实例ID。
      * @param string $InstanceId 数据库实例ID
@@ -78,6 +77,7 @@ class ActivateSubscribeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

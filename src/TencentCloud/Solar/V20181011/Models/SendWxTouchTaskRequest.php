@@ -18,6 +18,8 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SendWxTouchTask请求参数结构体
+ *
  * @method string getGroupId() 获取客户分组ID
  * @method void setGroupId(string $GroupId) 设置客户分组ID
  * @method boolean getDistinctFlag() 获取去除今日已发送的客户
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(string $TemplateId) 设置模板消息ID
  * @method string getWxAppId() 获取微信公众号appId
  * @method void setWxAppId(string $WxAppId) 设置微信公众号appId
- */
-
-/**
- *SendWxTouchTask请求参数结构体
  */
 class SendWxTouchTaskRequest extends AbstractModel
 {
@@ -108,6 +106,7 @@ class SendWxTouchTaskRequest extends AbstractModel
      * @var string 微信公众号appId
      */
     public $WxAppId;
+
     /**
      * @param string $GroupId 客户分组ID
      * @param boolean $DistinctFlag 去除今日已发送的客户
@@ -126,6 +125,7 @@ class SendWxTouchTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

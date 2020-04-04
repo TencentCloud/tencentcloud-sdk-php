@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSubscribe请求参数结构体
+ *
  * @method string getProduct() 获取订阅的数据库类型，目前支持的有 mysql
  * @method void setProduct(string $Product) 设置订阅的数据库类型，目前支持的有 mysql
  * @method integer getPayType() 获取实例付费类型，1小时计费，0包年包月
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCount(integer $Count) 设置购买数量,默认为1，最大为10
  * @method integer getAutoRenew() 获取是否自动续费，默认为0，1表示自动续费。小时计费实例设置该标识无效。
  * @method void setAutoRenew(integer $AutoRenew) 设置是否自动续费，默认为0，1表示自动续费。小时计费实例设置该标识无效。
- */
-
-/**
- *CreateSubscribe请求参数结构体
  */
 class CreateSubscribeRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateSubscribeRequest extends AbstractModel
      * @var integer 是否自动续费，默认为0，1表示自动续费。小时计费实例设置该标识无效。
      */
     public $AutoRenew;
+
     /**
      * @param string $Product 订阅的数据库类型，目前支持的有 mysql
      * @param integer $PayType 实例付费类型，1小时计费，0包年包月
@@ -70,6 +69,7 @@ class CreateSubscribeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

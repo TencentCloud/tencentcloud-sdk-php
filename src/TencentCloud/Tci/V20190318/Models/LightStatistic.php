@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 光照统计结果
+ *
  * @method array getLightDistribution() 获取各个时间点的光线值
  * @method void setLightDistribution(array $LightDistribution) 设置各个时间点的光线值
  * @method array getLightLevelRatio() 获取光照程度比例统计结果
  * @method void setLightLevelRatio(array $LightLevelRatio) 设置光照程度比例统计结果
- */
-
-/**
- *光照统计结果
  */
 class LightStatistic extends AbstractModel
 {
@@ -38,6 +36,7 @@ class LightStatistic extends AbstractModel
      * @var array 光照程度比例统计结果
      */
     public $LightLevelRatio;
+
     /**
      * @param array $LightDistribution 各个时间点的光线值
      * @param array $LightLevelRatio 光照程度比例统计结果
@@ -46,6 +45,7 @@ class LightStatistic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

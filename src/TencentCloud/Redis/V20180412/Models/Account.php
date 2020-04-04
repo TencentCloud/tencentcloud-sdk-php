@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 子账号信息
+ *
  * @method string getInstanceId() 获取实例ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例ID
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置子账号状态：1-账号变更中，2-账号有效，-4-账号已删除
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *子账号信息
  */
 class Account extends AbstractModel
 {
@@ -84,6 +82,7 @@ class Account extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
+
     /**
      * @param string $InstanceId 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,6 +101,7 @@ class Account extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

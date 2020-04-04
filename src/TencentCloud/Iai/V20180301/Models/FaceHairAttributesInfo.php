@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人脸属性中的发型信息。
+ *
  * @method integer getLength() 获取0：光头，1：短发，2：中发，3：长发，4：绑发
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLength(integer $Length) 设置0：光头，1：短发，2：中发，3：长发，4：绑发
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColor(integer $Color) 设置0：黑色，1：金色，2：棕色，3：灰白色
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *人脸属性中的发型信息。
  */
 class FaceHairAttributesInfo extends AbstractModel
 {
@@ -54,6 +52,7 @@ class FaceHairAttributesInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Color;
+
     /**
      * @param integer $Length 0：光头，1：短发，2：中发，3：长发，4：绑发
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class FaceHairAttributesInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

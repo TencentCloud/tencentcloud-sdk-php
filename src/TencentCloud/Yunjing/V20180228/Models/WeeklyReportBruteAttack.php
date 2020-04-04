@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 专业周报密码破解数据。
+ *
  * @method string getMachineIp() 获取主机IP。
  * @method void setMachineIp(string $MachineIp) 设置主机IP。
  * @method string getUsername() 获取被破解用户名。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCount(integer $Count) 设置尝试次数。
  * @method string getAttackTime() 获取攻击时间。
  * @method void setAttackTime(string $AttackTime) 设置攻击时间。
- */
-
-/**
- *专业周报密码破解数据。
  */
 class WeeklyReportBruteAttack extends AbstractModel
 {
@@ -59,6 +57,7 @@ class WeeklyReportBruteAttack extends AbstractModel
      * @var string 攻击时间。
      */
     public $AttackTime;
+
     /**
      * @param string $MachineIp 主机IP。
      * @param string $Username 被破解用户名。
@@ -70,6 +69,7 @@ class WeeklyReportBruteAttack extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

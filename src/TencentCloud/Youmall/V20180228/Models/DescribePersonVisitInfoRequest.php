@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePersonVisitInfo请求参数结构体
+ *
  * @method string getCompanyId() 获取公司ID
  * @method void setCompanyId(string $CompanyId) 设置公司ID
  * @method integer getShopId() 获取门店ID
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartDateTime(string $StartDateTime) 设置开始时间，格式yyyy-MM-dd HH:mm:ss
  * @method string getEndDateTime() 获取结束时间，格式yyyy-MM-dd HH:mm:ss
  * @method void setEndDateTime(string $EndDateTime) 设置结束时间，格式yyyy-MM-dd HH:mm:ss
- */
-
-/**
- *DescribePersonVisitInfo请求参数结构体
  */
 class DescribePersonVisitInfoRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class DescribePersonVisitInfoRequest extends AbstractModel
      * @var string 结束时间，格式yyyy-MM-dd HH:mm:ss
      */
     public $EndDateTime;
+
     /**
      * @param string $CompanyId 公司ID
      * @param integer $ShopId 门店ID
@@ -102,6 +101,7 @@ class DescribePersonVisitInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

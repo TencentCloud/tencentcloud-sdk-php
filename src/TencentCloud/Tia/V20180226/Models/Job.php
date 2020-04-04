@@ -18,6 +18,8 @@ namespace TencentCloud\Tia\V20180226\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 训练任务信息
+ *
  * @method string getName() 获取任务名称
  * @method void setName(string $Name) 设置任务名称
  * @method string getCreateTime() 获取任务创建时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
@@ -64,10 +66,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuntimeConf(array $RuntimeConf) 设置Runtime的额外配置信息
  * @method string getId() 获取任务Id
  * @method void setId(string $Id) 设置任务Id
- */
-
-/**
- *训练任务信息
  */
 class Job extends AbstractModel
 {
@@ -185,6 +183,7 @@ class Job extends AbstractModel
      * @var string 任务Id
      */
     public $Id;
+
     /**
      * @param string $Name 任务名称
      * @param string $CreateTime 任务创建时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
@@ -214,6 +213,7 @@ class Job extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

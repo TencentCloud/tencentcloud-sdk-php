@@ -18,6 +18,8 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能拆条结果项
+ *
  * @method string getSegmentUrl() 获取视频拆条片段地址。
  * @method void setSegmentUrl(string $SegmentUrl) 设置视频拆条片段地址。
  * @method string getCovImgUrl() 获取拆条封面图片地址。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置拆条片段起始的偏移时间，单位：秒。
  * @method float getEndTimeOffset() 获取拆条片段终止的偏移时间，单位：秒。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置拆条片段终止的偏移时间，单位：秒。
- */
-
-/**
- *智能拆条结果项
  */
 class StripTaskResultItem extends AbstractModel
 {
@@ -59,6 +57,7 @@ class StripTaskResultItem extends AbstractModel
      * @var float 拆条片段终止的偏移时间，单位：秒。
      */
     public $EndTimeOffset;
+
     /**
      * @param string $SegmentUrl 视频拆条片段地址。
      * @param string $CovImgUrl 拆条封面图片地址。
@@ -70,6 +69,7 @@ class StripTaskResultItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

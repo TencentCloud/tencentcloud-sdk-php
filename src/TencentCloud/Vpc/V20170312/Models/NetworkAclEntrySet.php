@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 网络ACL规则集合
+ *
  * @method array getIngress() 获取入站规则。
  * @method void setIngress(array $Ingress) 设置入站规则。
  * @method array getEgress() 获取出站规则。
  * @method void setEgress(array $Egress) 设置出站规则。
- */
-
-/**
- *网络ACL规则集合
  */
 class NetworkAclEntrySet extends AbstractModel
 {
@@ -38,6 +36,7 @@ class NetworkAclEntrySet extends AbstractModel
      * @var array 出站规则。
      */
     public $Egress;
+
     /**
      * @param array $Ingress 入站规则。
      * @param array $Egress 出站规则。
@@ -46,6 +45,7 @@ class NetworkAclEntrySet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

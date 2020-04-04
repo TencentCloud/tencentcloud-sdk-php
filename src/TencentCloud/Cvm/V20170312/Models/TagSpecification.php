@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 创建资源实例时同时绑定的标签对说明
+ *
  * @method string getResourceType() 获取标签绑定的资源类型，当前支持类型："instance"和"host"
  * @method void setResourceType(string $ResourceType) 设置标签绑定的资源类型，当前支持类型："instance"和"host"
  * @method array getTags() 获取标签对列表
  * @method void setTags(array $Tags) 设置标签对列表
- */
-
-/**
- *创建资源实例时同时绑定的标签对说明
  */
 class TagSpecification extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TagSpecification extends AbstractModel
      * @var array 标签对列表
      */
     public $Tags;
+
     /**
      * @param string $ResourceType 标签绑定的资源类型，当前支持类型："instance"和"host"
      * @param array $Tags 标签对列表
@@ -46,6 +45,7 @@ class TagSpecification extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

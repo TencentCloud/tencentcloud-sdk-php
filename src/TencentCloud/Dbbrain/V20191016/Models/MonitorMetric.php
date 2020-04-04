@@ -18,6 +18,8 @@ namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 监控数据
+ *
  * @method string getMetric() 获取指标名称。
  * @method void setMetric(string $Metric) 设置指标名称。
  * @method string getUnit() 获取指标单位。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValues(array $Values) 设置指标值。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *监控数据
  */
 class MonitorMetric extends AbstractModel
 {
@@ -48,6 +46,7 @@ class MonitorMetric extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Values;
+
     /**
      * @param string $Metric 指标名称。
      * @param string $Unit 指标单位。
@@ -58,6 +57,7 @@ class MonitorMetric extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

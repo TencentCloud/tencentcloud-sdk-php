@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 直播 AI Asr 单词识别结果
+ *
  * @method string getWord() 获取语音关键词。
  * @method void setWord(string $Word) 设置语音关键词。
  * @method float getStartPtsTime() 获取识别片段起始的 PTS 时间，单位：秒。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndPtsTime(float $EndPtsTime) 设置识别片段终止的 PTS 时间，单位：秒。
  * @method float getConfidence() 获取识别片段置信度。取值：0~100。
  * @method void setConfidence(float $Confidence) 设置识别片段置信度。取值：0~100。
- */
-
-/**
- *直播 AI Asr 单词识别结果
  */
 class LiveStreamAsrWordsRecognitionResult extends AbstractModel
 {
@@ -52,6 +50,7 @@ class LiveStreamAsrWordsRecognitionResult extends AbstractModel
      * @var float 识别片段置信度。取值：0~100。
      */
     public $Confidence;
+
     /**
      * @param string $Word 语音关键词。
      * @param float $StartPtsTime 识别片段起始的 PTS 时间，单位：秒。
@@ -62,6 +61,7 @@ class LiveStreamAsrWordsRecognitionResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetAsrVocab请求参数结构体
+ *
  * @method string getVocabId() 获取热词表ID
  * @method void setVocabId(string $VocabId) 设置热词表ID
- */
-
-/**
- *GetAsrVocab请求参数结构体
  */
 class GetAsrVocabRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetAsrVocabRequest extends AbstractModel
      * @var string 热词表ID
      */
     public $VocabId;
+
     /**
      * @param string $VocabId 热词表ID
      */
@@ -38,6 +37,7 @@ class GetAsrVocabRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

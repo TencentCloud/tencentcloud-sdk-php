@@ -18,6 +18,8 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询对象及其对应的访问明细数据
+ *
  * @method string getResource() 获取资源名称，根据查询条件不同分为以下几类：
 具体域名：表示该域名明细数据
 multiDomains：表示多域名汇总明细数据
@@ -30,10 +32,6 @@ multiDomains：表示多域名汇总明细数据
 all：账号维度明细数据
  * @method EcdnData getEcdnData() 获取资源对应的数据明细
  * @method void setEcdnData(EcdnData $EcdnData) 设置资源对应的数据明细
- */
-
-/**
- *查询对象及其对应的访问明细数据
  */
 class ResourceData extends AbstractModel
 {
@@ -50,6 +48,7 @@ all：账号维度明细数据
      * @var EcdnData 资源对应的数据明细
      */
     public $EcdnData;
+
     /**
      * @param string $Resource 资源名称，根据查询条件不同分为以下几类：
 具体域名：表示该域名明细数据
@@ -62,6 +61,7 @@ all：账号维度明细数据
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBinlogBackupOverview请求参数结构体
+ *
  * @method string getProduct() 获取需要查询的云数据库产品类型，目前仅支持 "mysql"。
  * @method void setProduct(string $Product) 设置需要查询的云数据库产品类型，目前仅支持 "mysql"。
- */
-
-/**
- *DescribeBinlogBackupOverview请求参数结构体
  */
 class DescribeBinlogBackupOverviewRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeBinlogBackupOverviewRequest extends AbstractModel
      * @var string 需要查询的云数据库产品类型，目前仅支持 "mysql"。
      */
     public $Product;
+
     /**
      * @param string $Product 需要查询的云数据库产品类型，目前仅支持 "mysql"。
      */
@@ -38,6 +37,7 @@ class DescribeBinlogBackupOverviewRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

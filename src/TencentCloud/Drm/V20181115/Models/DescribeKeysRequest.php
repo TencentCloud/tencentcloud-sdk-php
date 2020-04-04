@@ -18,6 +18,8 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeKeys请求参数结构体
+ *
  * @method string getDrmType() 获取使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
  * @method void setDrmType(string $DrmType) 设置使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
  * @method array getTracks() 获取加密的track列表，接口取值VIDEO、AUDIO。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 如果该参数为空，则后台自动生成
  * @method void setContentId(string $ContentId) 设置一个加密内容的唯一标识。
 如果该参数为空，则后台自动生成
- */
-
-/**
- *DescribeKeys请求参数结构体
  */
 class DescribeKeysRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ class DescribeKeysRequest extends AbstractModel
 如果该参数为空，则后台自动生成
      */
     public $ContentId;
+
     /**
      * @param string $DrmType 使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
      * @param array $Tracks 加密的track列表，接口取值VIDEO、AUDIO。
@@ -78,6 +77,7 @@ class DescribeKeysRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetAttachCcnInstances请求参数结构体
+ *
  * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
  * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
  * @method string getCcnUin() 获取CCN所属UIN（根账号）。
  * @method void setCcnUin(string $CcnUin) 设置CCN所属UIN（根账号）。
  * @method array getInstances() 获取重新申请关联网络实例列表。
  * @method void setInstances(array $Instances) 设置重新申请关联网络实例列表。
- */
-
-/**
- *ResetAttachCcnInstances请求参数结构体
  */
 class ResetAttachCcnInstancesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ResetAttachCcnInstancesRequest extends AbstractModel
      * @var array 重新申请关联网络实例列表。
      */
     public $Instances;
+
     /**
      * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
      * @param string $CcnUin CCN所属UIN（根账号）。
@@ -54,6 +53,7 @@ class ResetAttachCcnInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

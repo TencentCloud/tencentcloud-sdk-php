@@ -18,16 +18,14 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ImageModeration请求参数结构体
+ *
  * @method string getFileContent() 获取文件内容 Base64,与FileUrl必须二填一
  * @method void setFileContent(string $FileContent) 设置文件内容 Base64,与FileUrl必须二填一
  * @method string getFileMD5() 获取文件MD5值
  * @method void setFileMD5(string $FileMD5) 设置文件MD5值
  * @method string getFileUrl() 获取文件地址
  * @method void setFileUrl(string $FileUrl) 设置文件地址
- */
-
-/**
- *ImageModeration请求参数结构体
  */
 class ImageModerationRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ImageModerationRequest extends AbstractModel
      * @var string 文件地址
      */
     public $FileUrl;
+
     /**
      * @param string $FileContent 文件内容 Base64,与FileUrl必须二填一
      * @param string $FileMD5 文件MD5值
@@ -54,6 +53,7 @@ class ImageModerationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

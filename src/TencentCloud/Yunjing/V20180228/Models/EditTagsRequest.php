@@ -18,16 +18,14 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EditTags请求参数结构体
+ *
  * @method string getName() 获取标签名
  * @method void setName(string $Name) 设置标签名
  * @method integer getId() 获取标签ID
  * @method void setId(integer $Id) 设置标签ID
  * @method array getQuuids() 获取CVM主机ID
  * @method void setQuuids(array $Quuids) 设置CVM主机ID
- */
-
-/**
- *EditTags请求参数结构体
  */
 class EditTagsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class EditTagsRequest extends AbstractModel
      * @var array CVM主机ID
      */
     public $Quuids;
+
     /**
      * @param string $Name 标签名
      * @param integer $Id 标签ID
@@ -54,6 +53,7 @@ class EditTagsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

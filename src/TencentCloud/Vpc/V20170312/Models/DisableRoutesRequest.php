@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisableRoutes请求参数结构体
+ *
  * @method string getRouteTableId() 获取路由表唯一ID。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表唯一ID。
  * @method array getRouteIds() 获取路由策略唯一ID。
  * @method void setRouteIds(array $RouteIds) 设置路由策略唯一ID。
- */
-
-/**
- *DisableRoutes请求参数结构体
  */
 class DisableRoutesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DisableRoutesRequest extends AbstractModel
      * @var array 路由策略唯一ID。
      */
     public $RouteIds;
+
     /**
      * @param string $RouteTableId 路由表唯一ID。
      * @param array $RouteIds 路由策略唯一ID。
@@ -46,6 +45,7 @@ class DisableRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

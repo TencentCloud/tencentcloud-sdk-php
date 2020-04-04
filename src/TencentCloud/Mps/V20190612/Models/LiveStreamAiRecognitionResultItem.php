@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 直播流 AI 识别结果
+ *
  * @method string getType() 获取结果的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
@@ -50,10 +52,6 @@ AsrFullTextRecognition 时有效。
 OcrFullTextRecognition 时有效。
  * @method void setOcrFullTextRecognitionResultSet(array $OcrFullTextRecognitionResultSet) 设置文本全文识别结果，当 Type 为
 OcrFullTextRecognition 时有效。
- */
-
-/**
- *直播流 AI 识别结果
  */
 class LiveStreamAiRecognitionResultItem extends AbstractModel
 {
@@ -96,6 +94,7 @@ AsrFullTextRecognition 时有效。
 OcrFullTextRecognition 时有效。
      */
     public $OcrFullTextRecognitionResultSet;
+
     /**
      * @param string $Type 结果的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
@@ -118,6 +117,7 @@ OcrFullTextRecognition 时有效。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

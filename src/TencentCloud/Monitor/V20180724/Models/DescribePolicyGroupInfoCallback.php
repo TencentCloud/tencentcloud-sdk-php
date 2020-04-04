@@ -18,16 +18,14 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询策略输出的用户回调信息
+ *
  * @method string getCallbackUrl() 获取用户回调接口地址
  * @method void setCallbackUrl(string $CallbackUrl) 设置用户回调接口地址
  * @method integer getValidFlag() 获取用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证
  * @method void setValidFlag(integer $ValidFlag) 设置用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证
  * @method string getVerifyCode() 获取用户回调接口验证码
  * @method void setVerifyCode(string $VerifyCode) 设置用户回调接口验证码
- */
-
-/**
- *查询策略输出的用户回调信息
  */
 class DescribePolicyGroupInfoCallback extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribePolicyGroupInfoCallback extends AbstractModel
      * @var string 用户回调接口验证码
      */
     public $VerifyCode;
+
     /**
      * @param string $CallbackUrl 用户回调接口地址
      * @param integer $ValidFlag 用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证
@@ -54,6 +53,7 @@ class DescribePolicyGroupInfoCallback extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

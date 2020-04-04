@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 子网对象
+ *
  * @method string getCidrBlock() 获取子网的`CIDR`。
  * @method void setCidrBlock(string $CidrBlock) 设置子网的`CIDR`。
  * @method string getSubnetName() 获取子网名称。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区。形如：`ap-guangzhou-2`。
  * @method string getRouteTableId() 获取指定关联路由表，形如：`rtb-3ryrwzuu`。
  * @method void setRouteTableId(string $RouteTableId) 设置指定关联路由表，形如：`rtb-3ryrwzuu`。
- */
-
-/**
- *子网对象
  */
 class SubnetInput extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SubnetInput extends AbstractModel
      * @var string 指定关联路由表，形如：`rtb-3ryrwzuu`。
      */
     public $RouteTableId;
+
     /**
      * @param string $CidrBlock 子网的`CIDR`。
      * @param string $SubnetName 子网名称。
@@ -62,6 +61,7 @@ class SubnetInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

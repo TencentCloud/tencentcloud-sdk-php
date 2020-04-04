@@ -18,16 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CVM实例数据盘挂载配置
+ *
  * @method string getInstanceType() 获取CVM实例类型
  * @method void setInstanceType(string $InstanceType) 设置CVM实例类型
  * @method array getDataDisks() 获取数据盘挂载信息
  * @method void setDataDisks(array $DataDisks) 设置数据盘挂载信息
  * @method string getZone() 获取CVM实例所属可用区
  * @method void setZone(string $Zone) 设置CVM实例所属可用区
- */
-
-/**
- *CVM实例数据盘挂载配置
  */
 class InstanceDataDiskMountSetting extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InstanceDataDiskMountSetting extends AbstractModel
      * @var string CVM实例所属可用区
      */
     public $Zone;
+
     /**
      * @param string $InstanceType CVM实例类型
      * @param array $DataDisks 数据盘挂载信息
@@ -54,6 +53,7 @@ class InstanceDataDiskMountSetting extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * so加固信息
+ *
  * @method array getSoFileNames() 获取so文件列表
  * @method void setSoFileNames(array $SoFileNames) 设置so文件列表
- */
-
-/**
- *so加固信息
  */
 class SoInfo extends AbstractModel
 {
@@ -31,6 +29,7 @@ class SoInfo extends AbstractModel
      * @var array so文件列表
      */
     public $SoFileNames;
+
     /**
      * @param array $SoFileNames so文件列表
      */
@@ -38,6 +37,7 @@ class SoInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNamespace请求参数结构体
+ *
  * @method string getNamespaceName() 获取命名空间名称
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
  * @method string getClusterId() 获取集群ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceType(string $NamespaceType) 设置是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
  * @method string getNamespaceId() 获取命名空间ID
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
- */
-
-/**
- *CreateNamespace请求参数结构体
  */
 class CreateNamespaceRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateNamespaceRequest extends AbstractModel
      * @var string 命名空间ID
      */
     public $NamespaceId;
+
     /**
      * @param string $NamespaceName 命名空间名称
      * @param string $ClusterId 集群ID
@@ -78,6 +77,7 @@ class CreateNamespaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ALG协议类型
+ *
  * @method boolean getFtp() 获取Ftp协议Alg功能是否开启
  * @method void setFtp(boolean $Ftp) 设置Ftp协议Alg功能是否开启
  * @method boolean getSip() 获取Sip协议Alg功能是否开启
  * @method void setSip(boolean $Sip) 设置Sip协议Alg功能是否开启
- */
-
-/**
- *ALG协议类型
  */
 class AlgType extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AlgType extends AbstractModel
      * @var boolean Sip协议Alg功能是否开启
      */
     public $Sip;
+
     /**
      * @param boolean $Ftp Ftp协议Alg功能是否开启
      * @param boolean $Sip Sip协议Alg功能是否开启
@@ -46,6 +45,7 @@ class AlgType extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 重定向目标的信息
+ *
  * @method string getTargetListenerId() 获取重定向目标的监听器ID
 注意：此字段可能返回 null，表示无重定向。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetLocationId(string $TargetLocationId) 设置重定向目标的转发规则ID
 注意：此字段可能返回 null，表示无重定向。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *重定向目标的信息
  */
 class RewriteTarget extends AbstractModel
 {
@@ -50,6 +48,7 @@ class RewriteTarget extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetLocationId;
+
     /**
      * @param string $TargetListenerId 重定向目标的监听器ID
 注意：此字段可能返回 null，表示无重定向。
@@ -62,6 +61,7 @@ class RewriteTarget extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

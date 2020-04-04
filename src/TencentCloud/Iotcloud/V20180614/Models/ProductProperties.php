@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 产品属性
+ *
  * @method string getProductDescription() 获取产品描述
  * @method void setProductDescription(string $ProductDescription) 设置产品描述
  * @method string getEncryptionType() 获取加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductSecret(string $ProductSecret) 设置动态注册产品秘钥
  * @method integer getRegisterLimit() 获取RegisterType为2时，设备动态创建的限制数量
  * @method void setRegisterLimit(integer $RegisterLimit) 设置RegisterType为2时，设备动态创建的限制数量
- */
-
-/**
- *产品属性
  */
 class ProductProperties extends AbstractModel
 {
@@ -118,6 +116,7 @@ class ProductProperties extends AbstractModel
      * @var integer RegisterType为2时，设备动态创建的限制数量
      */
     public $RegisterLimit;
+
     /**
      * @param string $ProductDescription 产品描述
      * @param string $EncryptionType 加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
@@ -138,6 +137,7 @@ class ProductProperties extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

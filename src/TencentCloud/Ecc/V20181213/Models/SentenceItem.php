@@ -18,16 +18,14 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 句子的相关信息
+ *
  * @method string getSentence() 获取英语句子
  * @method void setSentence(string $Sentence) 设置英语句子
  * @method integer getParaID() 获取段落id
  * @method void setParaID(integer $ParaID) 设置段落id
  * @method integer getSentenceID() 获取句子id
  * @method void setSentenceID(integer $SentenceID) 设置句子id
- */
-
-/**
- *句子的相关信息
  */
 class SentenceItem extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SentenceItem extends AbstractModel
      * @var integer 句子id
      */
     public $SentenceID;
+
     /**
      * @param string $Sentence 英语句子
      * @param integer $ParaID 段落id
@@ -54,6 +53,7 @@ class SentenceItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

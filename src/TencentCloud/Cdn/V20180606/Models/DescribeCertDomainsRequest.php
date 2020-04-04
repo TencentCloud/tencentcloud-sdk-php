@@ -18,12 +18,10 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCertDomains请求参数结构体
+ *
  * @method string getCert() 获取PEM格式证书Base64编码后的字符串
  * @method void setCert(string $Cert) 设置PEM格式证书Base64编码后的字符串
- */
-
-/**
- *DescribeCertDomains请求参数结构体
  */
 class DescribeCertDomainsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeCertDomainsRequest extends AbstractModel
      * @var string PEM格式证书Base64编码后的字符串
      */
     public $Cert;
+
     /**
      * @param string $Cert PEM格式证书Base64编码后的字符串
      */
@@ -38,6 +37,7 @@ class DescribeCertDomainsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

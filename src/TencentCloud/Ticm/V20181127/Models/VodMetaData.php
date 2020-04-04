@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 媒体文件元信息。
+ *
  * @method integer getSize() 获取上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(integer $Size) 设置上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioDuration(float $AudioDuration) 设置音频时长，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *媒体文件元信息。
  */
 class VodMetaData extends AbstractModel
 {
@@ -134,6 +132,7 @@ class VodMetaData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioDuration;
+
     /**
      * @param integer $Size 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -162,6 +161,7 @@ class VodMetaData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

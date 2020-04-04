@@ -18,12 +18,10 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateStaticStore请求参数结构体
+ *
  * @method string getEnvId() 获取环境ID
  * @method void setEnvId(string $EnvId) 设置环境ID
- */
-
-/**
- *CreateStaticStore请求参数结构体
  */
 class CreateStaticStoreRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CreateStaticStoreRequest extends AbstractModel
      * @var string 环境ID
      */
     public $EnvId;
+
     /**
      * @param string $EnvId 环境ID
      */
@@ -38,6 +37,7 @@ class CreateStaticStoreRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

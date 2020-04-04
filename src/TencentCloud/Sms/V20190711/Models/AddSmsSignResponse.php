@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddSmsSign返回参数结构体
+ *
  * @method AddSignStatus getAddSignStatus() 获取添加签名响应
  * @method void setAddSignStatus(AddSignStatus $AddSignStatus) 设置添加签名响应
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *AddSmsSign返回参数结构体
  */
 class AddSmsSignResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AddSmsSignResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param AddSignStatus $AddSignStatus 添加签名响应
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class AddSmsSignResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

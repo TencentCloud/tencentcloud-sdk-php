@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 检索配置开关项
+ *
  * @method boolean getEnableFaceDetect() 获取是否开启人脸检测
  * @method void setEnableFaceDetect(boolean $EnableFaceDetect) 设置是否开启人脸检测
  * @method boolean getEnableFaceExpression() 获取是否开启表情识别
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableKeywordWonderfulTime(boolean $EnableKeywordWonderfulTime) 设置是否开启视频集锦-老师关键字识别
  * @method boolean getEnableSmileWonderfulTime() 获取是否开启视频集锦-微笑识别
  * @method void setEnableSmileWonderfulTime(boolean $EnableSmileWonderfulTime) 设置是否开启视频集锦-微笑识别
- */
-
-/**
- *检索配置开关项
  */
 class HLFunction extends AbstractModel
 {
@@ -59,6 +57,7 @@ class HLFunction extends AbstractModel
      * @var boolean 是否开启视频集锦-微笑识别
      */
     public $EnableSmileWonderfulTime;
+
     /**
      * @param boolean $EnableFaceDetect 是否开启人脸检测
      * @param boolean $EnableFaceExpression 是否开启表情识别
@@ -70,6 +69,7 @@ class HLFunction extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

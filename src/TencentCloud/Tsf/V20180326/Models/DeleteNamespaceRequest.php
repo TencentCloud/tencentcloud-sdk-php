@@ -18,14 +18,12 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteNamespace请求参数结构体
+ *
  * @method string getNamespaceId() 获取命名空间ID
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- */
-
-/**
- *DeleteNamespace请求参数结构体
  */
 class DeleteNamespaceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteNamespaceRequest extends AbstractModel
      * @var string 集群ID
      */
     public $ClusterId;
+
     /**
      * @param string $NamespaceId 命名空间ID
      * @param string $ClusterId 集群ID
@@ -46,6 +45,7 @@ class DeleteNamespaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

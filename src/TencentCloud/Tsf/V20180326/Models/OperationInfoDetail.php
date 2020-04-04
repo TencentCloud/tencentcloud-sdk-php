@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 提供给前端控制按钮显示逻辑的字段
+ *
  * @method string getDisabledReason() 获取不显示的原因
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisabledReason(string $DisabledReason) 设置不显示的原因
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupported(boolean $Supported) 设置是否显示该按钮
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *提供给前端控制按钮显示逻辑的字段
  */
 class OperationInfoDetail extends AbstractModel
 {
@@ -54,6 +52,7 @@ class OperationInfoDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Supported;
+
     /**
      * @param string $DisabledReason 不显示的原因
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class OperationInfoDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWatermarkTemplates请求参数结构体
+ *
  * @method array getDefinitions() 获取水印模板唯一标识过滤条件，数组长度限制：100。
  * @method void setDefinitions(array $Definitions) 设置水印模板唯一标识过滤条件，数组长度限制：100。
  * @method string getType() 获取水印类型过滤条件，可选值：
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回记录条数
 <li>默认值：10；</li>
 <li>最大值：100。</li>
- */
-
-/**
- *DescribeWatermarkTemplates请求参数结构体
  */
 class DescribeWatermarkTemplatesRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
 <li>最大值：100。</li>
      */
     public $Limit;
+
     /**
      * @param array $Definitions 水印模板唯一标识过滤条件，数组长度限制：100。
      * @param string $Type 水印类型过滤条件，可选值：
@@ -78,6 +77,7 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

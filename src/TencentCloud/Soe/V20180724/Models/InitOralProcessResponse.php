@@ -18,14 +18,12 @@ namespace TencentCloud\Soe\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InitOralProcess返回参数结构体
+ *
  * @method string getSessionId() 获取语音段唯一标识，一个完整语音一个SessionId
  * @method void setSessionId(string $SessionId) 设置语音段唯一标识，一个完整语音一个SessionId
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *InitOralProcess返回参数结构体
  */
 class InitOralProcessResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InitOralProcessResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $SessionId 语音段唯一标识，一个完整语音一个SessionId
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class InitOralProcessResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

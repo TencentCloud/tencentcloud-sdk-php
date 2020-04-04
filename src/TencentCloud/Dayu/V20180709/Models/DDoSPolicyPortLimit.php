@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DDoS高级策略的禁用端口
+ *
  * @method string getProtocol() 获取协议，取值范围[tcp,udp,all]
  * @method void setProtocol(string $Protocol) 设置协议，取值范围[tcp,udp,all]
  * @method integer getDPortStart() 获取开始目的端口，取值范围[0,65535]
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKind(integer $Kind) 设置禁用端口类型，取值[0（目的端口范围禁用）， 1（源端口范围禁用）， 2（目的和源端口范围同时禁用）]
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DDoS高级策略的禁用端口
  */
 class DDoSPolicyPortLimit extends AbstractModel
 {
@@ -85,6 +83,7 @@ class DDoSPolicyPortLimit extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Kind;
+
     /**
      * @param string $Protocol 协议，取值范围[tcp,udp,all]
      * @param integer $DPortStart 开始目的端口，取值范围[0,65535]
@@ -102,6 +101,7 @@ class DDoSPolicyPortLimit extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

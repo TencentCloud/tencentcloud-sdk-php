@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBResourceUsageDetails请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：tdsql-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：tdsql-ow728lmc。
  * @method string getStartTime() 获取开始日期，格式yyyy-mm-dd
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束日期，格式yyyy-mm-dd
  * @method string getMetricName() 获取拉取的指标名称，支持的值为：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate
  * @method void setMetricName(string $MetricName) 设置拉取的指标名称，支持的值为：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate
- */
-
-/**
- *DescribeDBResourceUsageDetails请求参数结构体
  */
 class DescribeDBResourceUsageDetailsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeDBResourceUsageDetailsRequest extends AbstractModel
      * @var string 拉取的指标名称，支持的值为：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate
      */
     public $MetricName;
+
     /**
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc。
      * @param string $StartTime 开始日期，格式yyyy-mm-dd
@@ -62,6 +61,7 @@ class DescribeDBResourceUsageDetailsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频标签识别结果项
+ *
  * @method string getTag() 获取标签名称。
  * @method void setTag(string $Tag) 设置标签名称。
  * @method float getConfidence() 获取置信度，取值范围是 0 到 100。
  * @method void setConfidence(float $Confidence) 设置置信度，取值范围是 0 到 100。
- */
-
-/**
- *视频标签识别结果项
  */
 class TagTaskResultItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TagTaskResultItem extends AbstractModel
      * @var float 置信度，取值范围是 0 到 100。
      */
     public $Confidence;
+
     /**
      * @param string $Tag 标签名称。
      * @param float $Confidence 置信度，取值范围是 0 到 100。
@@ -46,6 +45,7 @@ class TagTaskResultItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

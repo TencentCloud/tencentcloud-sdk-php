@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCostDetail请求参数结构体
+ *
  * @method integer getLimit() 获取数量，最大值为100
  * @method void setLimit(integer $Limit) 设置数量，最大值为100
  * @method integer getOffset() 获取偏移量
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) 设置付费模式 prePay/postPay
  * @method string getResourceId() 获取查询指定资源信息
  * @method void setResourceId(string $ResourceId) 设置查询指定资源信息
- */
-
-/**
- *DescribeCostDetail请求参数结构体
  */
 class DescribeCostDetailRequest extends AbstractModel
 {
@@ -90,6 +88,7 @@ class DescribeCostDetailRequest extends AbstractModel
      * @var string 查询指定资源信息
      */
     public $ResourceId;
+
     /**
      * @param integer $Limit 数量，最大值为100
      * @param integer $Offset 偏移量
@@ -106,6 +105,7 @@ class DescribeCostDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

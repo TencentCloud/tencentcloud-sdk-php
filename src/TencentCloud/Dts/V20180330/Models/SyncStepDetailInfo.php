@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 同步任务进度
+ *
  * @method integer getStepNo() 获取步骤编号
  * @method void setStepNo(integer $StepNo) 设置步骤编号
  * @method string getStepName() 获取步骤名
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCanStop(integer $CanStop) 设置能否中止
  * @method integer getStepId() 获取步骤号
  * @method void setStepId(integer $StepId) 设置步骤号
- */
-
-/**
- *同步任务进度
  */
 class SyncStepDetailInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SyncStepDetailInfo extends AbstractModel
      * @var integer 步骤号
      */
     public $StepId;
+
     /**
      * @param integer $StepNo 步骤编号
      * @param string $StepName 步骤名
@@ -62,6 +61,7 @@ class SyncStepDetailInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

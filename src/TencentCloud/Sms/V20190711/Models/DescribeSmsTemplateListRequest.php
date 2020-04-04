@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSmsTemplateList请求参数结构体
+ *
  * @method array getTemplateIdSet() 获取模板 ID 数组。
  * @method void setTemplateIdSet(array $TemplateIdSet) 设置模板 ID 数组。
  * @method integer getInternational() 获取是否国际/港澳台短信：
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternational(integer $International) 设置是否国际/港澳台短信：
 0：表示国内短信。
 1：表示国际/港澳台短信。
- */
-
-/**
- *DescribeSmsTemplateList请求参数结构体
  */
 class DescribeSmsTemplateListRequest extends AbstractModel
 {
@@ -44,6 +42,7 @@ class DescribeSmsTemplateListRequest extends AbstractModel
 1：表示国际/港澳台短信。
      */
     public $International;
+
     /**
      * @param array $TemplateIdSet 模板 ID 数组。
      * @param integer $International 是否国际/港澳台短信：
@@ -54,6 +53,7 @@ class DescribeSmsTemplateListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

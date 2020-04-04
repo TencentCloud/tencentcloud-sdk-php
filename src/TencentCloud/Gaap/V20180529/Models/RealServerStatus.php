@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 源站绑定信息查询，BindStatus， 0: 未被绑定 1：被规则或者监听器绑定
+ *
  * @method string getRealServerId() 获取源站ID。
  * @method void setRealServerId(string $RealServerId) 设置源站ID。
  * @method integer getBindStatus() 获取0: 未被绑定 1：被规则或者监听器绑定。
  * @method void setBindStatus(integer $BindStatus) 设置0: 未被绑定 1：被规则或者监听器绑定。
  * @method string getProxyId() 获取绑定此源站的通道ID，没有绑定时为空字符串。
  * @method void setProxyId(string $ProxyId) 设置绑定此源站的通道ID，没有绑定时为空字符串。
- */
-
-/**
- *源站绑定信息查询，BindStatus， 0: 未被绑定 1：被规则或者监听器绑定
  */
 class RealServerStatus extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RealServerStatus extends AbstractModel
      * @var string 绑定此源站的通道ID，没有绑定时为空字符串。
      */
     public $ProxyId;
+
     /**
      * @param string $RealServerId 源站ID。
      * @param integer $BindStatus 0: 未被绑定 1：被规则或者监听器绑定。
@@ -54,6 +53,7 @@ class RealServerStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

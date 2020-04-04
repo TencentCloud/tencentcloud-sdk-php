@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+ *
  * @method integer getX() 获取左上角x
  * @method void setX(integer $X) 设置左上角x
  * @method integer getY() 获取左上角y
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) 设置宽width
  * @method integer getHeight() 获取高height
  * @method void setHeight(integer $Height) 设置高height
- */
-
-/**
- *文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
  */
 class ItemCoord extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ItemCoord extends AbstractModel
      * @var integer 高height
      */
     public $Height;
+
     /**
      * @param integer $X 左上角x
      * @param integer $Y 左上角y
@@ -62,6 +61,7 @@ class ItemCoord extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

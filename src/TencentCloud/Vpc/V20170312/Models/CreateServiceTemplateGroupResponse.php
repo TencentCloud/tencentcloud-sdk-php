@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateServiceTemplateGroup返回参数结构体
+ *
  * @method ServiceTemplateGroup getServiceTemplateGroup() 获取协议端口模板集合对象。
  * @method void setServiceTemplateGroup(ServiceTemplateGroup $ServiceTemplateGroup) 设置协议端口模板集合对象。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateServiceTemplateGroup返回参数结构体
  */
 class CreateServiceTemplateGroupResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateServiceTemplateGroupResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param ServiceTemplateGroup $ServiceTemplateGroup 协议端口模板集合对象。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateServiceTemplateGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

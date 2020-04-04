@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 通用时间窗
+ *
  * @method string getMonday() 获取周一的时间窗，格式如： 02:00-06:00
  * @method void setMonday(string $Monday) 设置周一的时间窗，格式如： 02:00-06:00
  * @method string getTuesday() 获取周二的时间窗，格式如： 02:00-06:00
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSaturday(string $Saturday) 设置周六的时间窗，格式如： 02:00-06:00
  * @method string getSunday() 获取周日的时间窗，格式如： 02:00-06:00
  * @method void setSunday(string $Sunday) 设置周日的时间窗，格式如： 02:00-06:00
- */
-
-/**
- *通用时间窗
  */
 class CommonTimeWindow extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CommonTimeWindow extends AbstractModel
      * @var string 周日的时间窗，格式如： 02:00-06:00
      */
     public $Sunday;
+
     /**
      * @param string $Monday 周一的时间窗，格式如： 02:00-06:00
      * @param string $Tuesday 周二的时间窗，格式如： 02:00-06:00
@@ -86,6 +85,7 @@ class CommonTimeWindow extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

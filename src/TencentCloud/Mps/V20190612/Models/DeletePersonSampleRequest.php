@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeletePersonSample请求参数结构体
+ *
  * @method string getPersonId() 获取人物 ID。
  * @method void setPersonId(string $PersonId) 设置人物 ID。
- */
-
-/**
- *DeletePersonSample请求参数结构体
  */
 class DeletePersonSampleRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeletePersonSampleRequest extends AbstractModel
      * @var string 人物 ID。
      */
     public $PersonId;
+
     /**
      * @param string $PersonId 人物 ID。
      */
@@ -38,6 +37,7 @@ class DeletePersonSampleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

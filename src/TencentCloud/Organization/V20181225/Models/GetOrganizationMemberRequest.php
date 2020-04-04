@@ -18,12 +18,10 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetOrganizationMember请求参数结构体
+ *
  * @method integer getMemberUin() 获取组织成员UIN
  * @method void setMemberUin(integer $MemberUin) 设置组织成员UIN
- */
-
-/**
- *GetOrganizationMember请求参数结构体
  */
 class GetOrganizationMemberRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetOrganizationMemberRequest extends AbstractModel
      * @var integer 组织成员UIN
      */
     public $MemberUin;
+
     /**
      * @param integer $MemberUin 组织成员UIN
      */
@@ -38,6 +37,7 @@ class GetOrganizationMemberRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

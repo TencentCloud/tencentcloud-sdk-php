@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据库实例参数
+ *
  * @method string getName() 获取参数名称
  * @method void setName(string $Name) 设置参数名称
  * @method string getCurrentValue() 获取参数值
  * @method void setCurrentValue(string $CurrentValue) 设置参数值
- */
-
-/**
- *数据库实例参数
  */
 class Parameter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Parameter extends AbstractModel
      * @var string 参数值
      */
     public $CurrentValue;
+
     /**
      * @param string $Name 参数名称
      * @param string $CurrentValue 参数值
@@ -46,6 +45,7 @@ class Parameter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

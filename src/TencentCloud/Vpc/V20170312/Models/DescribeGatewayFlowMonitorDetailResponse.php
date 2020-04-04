@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGatewayFlowMonitorDetail返回参数结构体
+ *
  * @method integer getTotalCount() 获取符合条件的对象数。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的对象数。
  * @method array getGatewayFlowMonitorDetailSet() 获取网关流量监控明细。
  * @method void setGatewayFlowMonitorDetailSet(array $GatewayFlowMonitorDetailSet) 设置网关流量监控明细。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeGatewayFlowMonitorDetail返回参数结构体
  */
 class DescribeGatewayFlowMonitorDetailResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeGatewayFlowMonitorDetailResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 符合条件的对象数。
      * @param array $GatewayFlowMonitorDetailSet 网关流量监控明细。
@@ -54,6 +53,7 @@ class DescribeGatewayFlowMonitorDetailResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

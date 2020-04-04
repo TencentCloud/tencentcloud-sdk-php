@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 镜像信息
+ *
  * @method string getDigest() 获取哈希值
  * @method void setDigest(string $Digest) 设置哈希值
  * @method integer getSize() 获取镜像大小
  * @method void setSize(integer $Size) 设置镜像大小
  * @method string getImageVersion() 获取Tag名称
  * @method void setImageVersion(string $ImageVersion) 设置Tag名称
- */
-
-/**
- *镜像信息
  */
 class TcrImageInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class TcrImageInfo extends AbstractModel
      * @var string Tag名称
      */
     public $ImageVersion;
+
     /**
      * @param string $Digest 哈希值
      * @param integer $Size 镜像大小
@@ -54,6 +53,7 @@ class TcrImageInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

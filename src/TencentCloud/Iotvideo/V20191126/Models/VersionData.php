@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 固件版本详细信息
+ *
  * @method string getProductId() 获取产品ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(string $ProductId) 设置产品ID
@@ -78,10 +80,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTimes(integer $ModifyTimes) 设置该固件版本发布的变更次数
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *固件版本详细信息
  */
 class VersionData extends AbstractModel
 {
@@ -174,6 +172,7 @@ class VersionData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTimes;
+
     /**
      * @param string $ProductId 产品ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -210,6 +209,7 @@ class VersionData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

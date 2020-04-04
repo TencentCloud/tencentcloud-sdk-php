@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能精彩片段结果类型
+ *
  * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method integer getErrCode() 获取错误码，0：成功，其他值：失败。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(AiAnalysisTaskHighlightOutput $Output) 设置智能精彩片段任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *智能精彩片段结果类型
  */
 class AiAnalysisTaskHighlightResult extends AbstractModel
 {
@@ -62,6 +60,7 @@ class AiAnalysisTaskHighlightResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
+
     /**
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param integer $ErrCode 错误码，0：成功，其他值：失败。
@@ -74,6 +73,7 @@ class AiAnalysisTaskHighlightResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

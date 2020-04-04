@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListGroups返回参数结构体
+ *
  * @method integer getTotalNum() 获取用户组总数。
  * @method void setTotalNum(integer $TotalNum) 设置用户组总数。
  * @method array getGroupInfo() 获取用户组数组信息。
  * @method void setGroupInfo(array $GroupInfo) 设置用户组数组信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ListGroups返回参数结构体
  */
 class ListGroupsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListGroupsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalNum 用户组总数。
      * @param array $GroupInfo 用户组数组信息。
@@ -54,6 +53,7 @@ class ListGroupsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

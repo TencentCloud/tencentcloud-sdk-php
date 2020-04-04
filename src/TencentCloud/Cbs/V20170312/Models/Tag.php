@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 标签。
+ *
  * @method string getKey() 获取标签健。
  * @method void setKey(string $Key) 设置标签健。
  * @method string getValue() 获取标签值。
  * @method void setValue(string $Value) 设置标签值。
- */
-
-/**
- *标签。
  */
 class Tag extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Tag extends AbstractModel
      * @var string 标签值。
      */
     public $Value;
+
     /**
      * @param string $Key 标签健。
      * @param string $Value 标签值。
@@ -46,6 +45,7 @@ class Tag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

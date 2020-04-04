@@ -18,14 +18,12 @@ namespace TencentCloud\Fmu\V20191213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TryLipstickPic返回参数结构体
+ *
  * @method string getResultImage() 获取结果图片Base64信息。
  * @method void setResultImage(string $ResultImage) 设置结果图片Base64信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *TryLipstickPic返回参数结构体
  */
 class TryLipstickPicResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TryLipstickPicResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $ResultImage 结果图片Base64信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class TryLipstickPicResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 坐标
+ *
  * @method integer getX() 获取x坐标
  * @method void setX(integer $X) 设置x坐标
  * @method integer getY() 获取Y坐标
  * @method void setY(integer $Y) 设置Y坐标
- */
-
-/**
- *坐标
  */
 class Point extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Point extends AbstractModel
      * @var integer Y坐标
      */
     public $Y;
+
     /**
      * @param integer $X x坐标
      * @param integer $Y Y坐标
@@ -46,6 +45,7 @@ class Point extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

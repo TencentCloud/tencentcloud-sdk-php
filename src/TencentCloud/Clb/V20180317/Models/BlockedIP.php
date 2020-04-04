@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 加入了12306黑名单的IP
+ *
  * @method string getIP() 获取黑名单IP
  * @method void setIP(string $IP) 设置黑名单IP
  * @method string getCreateTime() 获取加入黑名单的时间
  * @method void setCreateTime(string $CreateTime) 设置加入黑名单的时间
  * @method string getExpireTime() 获取过期时间
  * @method void setExpireTime(string $ExpireTime) 设置过期时间
- */
-
-/**
- *加入了12306黑名单的IP
  */
 class BlockedIP extends AbstractModel
 {
@@ -45,6 +43,7 @@ class BlockedIP extends AbstractModel
      * @var string 过期时间
      */
     public $ExpireTime;
+
     /**
      * @param string $IP 黑名单IP
      * @param string $CreateTime 加入黑名单的时间
@@ -54,6 +53,7 @@ class BlockedIP extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

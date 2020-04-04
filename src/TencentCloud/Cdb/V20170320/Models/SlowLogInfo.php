@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 慢查询日志详情
+ *
  * @method string getName() 获取备份文件名
  * @method void setName(string $Name) 设置备份文件名
  * @method integer getSize() 获取备份文件大小，单位：Byte
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternetUrl(string $InternetUrl) 设置外网下载地址
  * @method string getType() 获取日志具体类型，可能的值：slowlog - 慢日志
  * @method void setType(string $Type) 设置日志具体类型，可能的值：slowlog - 慢日志
- */
-
-/**
- *慢查询日志详情
  */
 class SlowLogInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class SlowLogInfo extends AbstractModel
      * @var string 日志具体类型，可能的值：slowlog - 慢日志
      */
     public $Type;
+
     /**
      * @param string $Name 备份文件名
      * @param integer $Size 备份文件大小，单位：Byte
@@ -78,6 +77,7 @@ class SlowLogInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CallDeviceActionSync返回参数结构体
+ *
  * @method string getClientToken() 获取调用Id
  * @method void setClientToken(string $ClientToken) 设置调用Id
  * @method string getOutputParams() 获取输出参数
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置返回状态
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CallDeviceActionSync返回参数结构体
  */
 class CallDeviceActionSyncResponse extends AbstractModel
 {
@@ -55,6 +53,7 @@ class CallDeviceActionSyncResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $ClientToken 调用Id
      * @param string $OutputParams 输出参数
@@ -66,6 +65,7 @@ class CallDeviceActionSyncResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

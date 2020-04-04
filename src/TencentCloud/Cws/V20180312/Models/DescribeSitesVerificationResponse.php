@@ -18,16 +18,14 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSitesVerification返回参数结构体
+ *
  * @method integer getTotalCount() 获取验证信息数量。
  * @method void setTotalCount(integer $TotalCount) 设置验证信息数量。
  * @method array getSitesVerification() 获取验证信息列表。
  * @method void setSitesVerification(array $SitesVerification) 设置验证信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeSitesVerification返回参数结构体
  */
 class DescribeSitesVerificationResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeSitesVerificationResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 验证信息数量。
      * @param array $SitesVerification 验证信息列表。
@@ -54,6 +53,7 @@ class DescribeSitesVerificationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

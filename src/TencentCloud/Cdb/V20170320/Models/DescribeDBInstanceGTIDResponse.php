@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstanceGTID返回参数结构体
+ *
  * @method integer getIsGTIDOpen() 获取GTID 是否开通的标记，可能的取值为：0 - 未开通，1 - 已开通。
  * @method void setIsGTIDOpen(integer $IsGTIDOpen) 设置GTID 是否开通的标记，可能的取值为：0 - 未开通，1 - 已开通。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDBInstanceGTID返回参数结构体
  */
 class DescribeDBInstanceGTIDResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDBInstanceGTIDResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $IsGTIDOpen GTID 是否开通的标记，可能的取值为：0 - 未开通，1 - 已开通。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeDBInstanceGTIDResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

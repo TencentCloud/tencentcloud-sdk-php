@@ -18,12 +18,10 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeShieldResult请求参数结构体
+ *
  * @method string getItemId() 获取任务唯一标识
  * @method void setItemId(string $ItemId) 设置任务唯一标识
- */
-
-/**
- *DescribeShieldResult请求参数结构体
  */
 class DescribeShieldResultRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeShieldResultRequest extends AbstractModel
      * @var string 任务唯一标识
      */
     public $ItemId;
+
     /**
      * @param string $ItemId 任务唯一标识
      */
@@ -38,6 +37,7 @@ class DescribeShieldResultRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

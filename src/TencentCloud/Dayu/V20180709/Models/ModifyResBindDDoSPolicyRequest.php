@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyResBindDDoSPolicy请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method string getId() 获取资源ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyId(string $PolicyId) 设置策略ID
  * @method string getMethod() 获取绑定或解绑，bind表示绑定策略，unbind表示解绑策略
  * @method void setMethod(string $Method) 设置绑定或解绑，bind表示绑定策略，unbind表示解绑策略
- */
-
-/**
- *ModifyResBindDDoSPolicy请求参数结构体
  */
 class ModifyResBindDDoSPolicyRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyResBindDDoSPolicyRequest extends AbstractModel
      * @var string 绑定或解绑，bind表示绑定策略，unbind表示解绑策略
      */
     public $Method;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param string $Id 资源ID
@@ -62,6 +61,7 @@ class ModifyResBindDDoSPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

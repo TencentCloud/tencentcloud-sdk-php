@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RO 组的配置信息
+ *
  * @method string getRoGroupName() 获取RO 组名称。
  * @method void setRoGroupName(string $RoGroupName) 设置RO 组名称。
  * @method integer getRoMaxDelayTime() 获取RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinRoInGroup(integer $MinRoInGroup) 设置最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。注意，若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
  * @method string getWeightMode() 获取权重模式。支持值包括："system" - 系统自动分配； "custom" - 用户自定义设置。注意，若设置 "custom" 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。
  * @method void setWeightMode(string $WeightMode) 设置权重模式。支持值包括："system" - 系统自动分配； "custom" - 用户自定义设置。注意，若设置 "custom" 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。
- */
-
-/**
- *RO 组的配置信息
  */
 class RoGroupAttr extends AbstractModel
 {
@@ -59,6 +57,7 @@ class RoGroupAttr extends AbstractModel
      * @var string 权重模式。支持值包括："system" - 系统自动分配； "custom" - 用户自定义设置。注意，若设置 "custom" 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。
      */
     public $WeightMode;
+
     /**
      * @param string $RoGroupName RO 组名称。
      * @param integer $RoMaxDelayTime RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
@@ -70,6 +69,7 @@ class RoGroupAttr extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

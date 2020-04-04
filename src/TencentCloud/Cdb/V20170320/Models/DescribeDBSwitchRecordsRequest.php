@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBSwitchRecords请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method integer getOffset() 获取分页偏移量。
  * @method void setOffset(integer $Offset) 设置分页偏移量。
  * @method integer getLimit() 获取分页大小，默认值为 50，最小值为 1，最大值为 2000。
  * @method void setLimit(integer $Limit) 设置分页大小，默认值为 50，最小值为 1，最大值为 2000。
- */
-
-/**
- *DescribeDBSwitchRecords请求参数结构体
  */
 class DescribeDBSwitchRecordsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBSwitchRecordsRequest extends AbstractModel
      * @var integer 分页大小，默认值为 50，最小值为 1，最大值为 2000。
      */
     public $Limit;
+
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param integer $Offset 分页偏移量。
@@ -54,6 +53,7 @@ class DescribeDBSwitchRecordsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

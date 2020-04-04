@@ -18,14 +18,12 @@ namespace TencentCloud\Iottid\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DownloadTids请求参数结构体
+ *
  * @method string getOrderId() 获取订单编号
  * @method void setOrderId(string $OrderId) 设置订单编号
  * @method integer getQuantity() 获取下载数量：1~10
  * @method void setQuantity(integer $Quantity) 设置下载数量：1~10
- */
-
-/**
- *DownloadTids请求参数结构体
  */
 class DownloadTidsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DownloadTidsRequest extends AbstractModel
      * @var integer 下载数量：1~10
      */
     public $Quantity;
+
     /**
      * @param string $OrderId 订单编号
      * @param integer $Quantity 下载数量：1~10
@@ -46,6 +45,7 @@ class DownloadTidsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

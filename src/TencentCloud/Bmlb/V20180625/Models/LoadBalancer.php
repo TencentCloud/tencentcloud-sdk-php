@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取负载均衡实例列表时返回的负载均衡信息。
+ *
  * @method string getLoadBalancerId() 获取负载均衡器ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡器ID
  * @method integer getProjectId() 获取项目ID，通过v2/DescribeProject 接口获得
@@ -76,10 +78,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurVips(array $CurVips) 设置负载均衡的IPV6或者IPV4的VIP。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *获取负载均衡实例列表时返回的负载均衡信息。
  */
 class LoadBalancer extends AbstractModel
 {
@@ -223,6 +221,7 @@ class LoadBalancer extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurVips;
+
     /**
      * @param string $LoadBalancerId 负载均衡器ID
      * @param integer $ProjectId 项目ID，通过v2/DescribeProject 接口获得
@@ -258,6 +257,7 @@ class LoadBalancer extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceMonitorTookDist请求参数结构体
+ *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getDate() 获取时间；例如："20190219"
  * @method void setDate(string $Date) 设置时间；例如："20190219"
  * @method integer getSpanType() 获取请求类型：1——string类型，2——所有类型
  * @method void setSpanType(integer $SpanType) 设置请求类型：1——string类型，2——所有类型
- */
-
-/**
- *DescribeInstanceMonitorTookDist请求参数结构体
  */
 class DescribeInstanceMonitorTookDistRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeInstanceMonitorTookDistRequest extends AbstractModel
      * @var integer 请求类型：1——string类型，2——所有类型
      */
     public $SpanType;
+
     /**
      * @param string $InstanceId 实例Id
      * @param string $Date 时间；例如："20190219"
@@ -54,6 +53,7 @@ class DescribeInstanceMonitorTookDistRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPN网关对象。
+ *
  * @method string getVpnGatewayId() 获取网关实例ID。
  * @method void setVpnGatewayId(string $VpnGatewayId) 设置网关实例ID。
  * @method string getVpcId() 获取VPC实例ID。
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersion(string $Version) 设置网关实例版本信息
  * @method string getNetworkInstanceId() 获取Type值为CCN时，该值表示云联网实例ID
  * @method void setNetworkInstanceId(string $NetworkInstanceId) 设置Type值为CCN时，该值表示云联网实例ID
- */
-
-/**
- *VPN网关对象。
  */
 class VpnGateway extends AbstractModel
 {
@@ -150,6 +148,7 @@ class VpnGateway extends AbstractModel
      * @var string Type值为CCN时，该值表示云联网实例ID
      */
     public $NetworkInstanceId;
+
     /**
      * @param string $VpnGatewayId 网关实例ID。
      * @param string $VpcId VPC实例ID。
@@ -174,6 +173,7 @@ class VpnGateway extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

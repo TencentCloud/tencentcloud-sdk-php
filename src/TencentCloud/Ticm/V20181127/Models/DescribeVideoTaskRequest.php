@@ -18,12 +18,10 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVideoTask请求参数结构体
+ *
  * @method string getVodTaskId() 获取需要查询的视频审核的任务ID
  * @method void setVodTaskId(string $VodTaskId) 设置需要查询的视频审核的任务ID
- */
-
-/**
- *DescribeVideoTask请求参数结构体
  */
 class DescribeVideoTaskRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeVideoTaskRequest extends AbstractModel
      * @var string 需要查询的视频审核的任务ID
      */
     public $VodTaskId;
+
     /**
      * @param string $VodTaskId 需要查询的视频审核的任务ID
      */
@@ -38,6 +37,7 @@ class DescribeVideoTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

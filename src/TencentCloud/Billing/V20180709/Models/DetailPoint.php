@@ -18,14 +18,12 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 由时间和值组成的数据结构
+ *
  * @method string getTime() 获取时间
  * @method void setTime(string $Time) 设置时间
  * @method string getValue() 获取值
  * @method void setValue(string $Value) 设置值
- */
-
-/**
- *由时间和值组成的数据结构
  */
 class DetailPoint extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DetailPoint extends AbstractModel
      * @var string 值
      */
     public $Value;
+
     /**
      * @param string $Time 时间
      * @param string $Value 值
@@ -46,6 +45,7 @@ class DetailPoint extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

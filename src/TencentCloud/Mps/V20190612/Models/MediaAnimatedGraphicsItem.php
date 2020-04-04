@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频转动图结果信息
+ *
  * @method TaskOutputStorage getStorage() 获取转动图文件的存储位置。
  * @method void setStorage(TaskOutputStorage $Storage) 设置转动图文件的存储位置。
  * @method string getPath() 获取转动图的文件路径。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置动图在视频中的起始时间偏移，单位：秒。
  * @method float getEndTimeOffset() 获取动图在视频中的结束时间偏移，单位：秒。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置动图在视频中的结束时间偏移，单位：秒。
- */
-
-/**
- *视频转动图结果信息
  */
 class MediaAnimatedGraphicsItem extends AbstractModel
 {
@@ -101,6 +99,7 @@ class MediaAnimatedGraphicsItem extends AbstractModel
      * @var float 动图在视频中的结束时间偏移，单位：秒。
      */
     public $EndTimeOffset;
+
     /**
      * @param TaskOutputStorage $Storage 转动图文件的存储位置。
      * @param string $Path 转动图的文件路径。
@@ -118,6 +117,7 @@ class MediaAnimatedGraphicsItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

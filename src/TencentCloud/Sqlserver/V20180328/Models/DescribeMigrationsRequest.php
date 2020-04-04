@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMigrations请求参数结构体
+ *
  * @method array getStatusSet() 获取状态集合。只要符合集合中某一状态的迁移任务，就会查出来
  * @method void setStatusSet(array $StatusSet) 设置状态集合。只要符合集合中某一状态的迁移任务，就会查出来
  * @method string getMigrateName() 获取迁移任务的名称，模糊匹配
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置查询结果按照关键字排序，可选值为name、createTime、startTime，endTime，status
  * @method string getOrderByType() 获取排序方式，可选值为desc、asc
  * @method void setOrderByType(string $OrderByType) 设置排序方式，可选值为desc、asc
- */
-
-/**
- *DescribeMigrations请求参数结构体
  */
 class DescribeMigrationsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeMigrationsRequest extends AbstractModel
      * @var string 排序方式，可选值为desc、asc
      */
     public $OrderByType;
+
     /**
      * @param array $StatusSet 状态集合。只要符合集合中某一状态的迁移任务，就会查出来
      * @param string $MigrateName 迁移任务的名称，模糊匹配
@@ -78,6 +77,7 @@ class DescribeMigrationsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

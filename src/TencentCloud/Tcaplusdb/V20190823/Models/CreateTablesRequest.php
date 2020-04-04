@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTables请求参数结构体
+ *
  * @method string getClusterId() 获取待创建表格所属集群ID
  * @method void setClusterId(string $ClusterId) 设置待创建表格所属集群ID
  * @method array getIdlFiles() 获取用户选定的建表格IDL文件列表
  * @method void setIdlFiles(array $IdlFiles) 设置用户选定的建表格IDL文件列表
  * @method array getSelectedTables() 获取待创建表格信息列表
  * @method void setSelectedTables(array $SelectedTables) 设置待创建表格信息列表
- */
-
-/**
- *CreateTables请求参数结构体
  */
 class CreateTablesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateTablesRequest extends AbstractModel
      * @var array 待创建表格信息列表
      */
     public $SelectedTables;
+
     /**
      * @param string $ClusterId 待创建表格所属集群ID
      * @param array $IdlFiles 用户选定的建表格IDL文件列表
@@ -54,6 +53,7 @@ class CreateTablesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

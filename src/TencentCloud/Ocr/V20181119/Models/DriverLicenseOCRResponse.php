@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DriverLicenseOCR返回参数结构体
+ *
  * @method string getName() 获取姓名
  * @method void setName(string $Name) 设置姓名
  * @method string getSex() 获取性别
@@ -64,10 +66,6 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
 注：告警信息可以同时存在多个
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DriverLicenseOCR返回参数结构体
  */
 class DriverLicenseOCRResponse extends AbstractModel
 {
@@ -153,6 +151,7 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Name 姓名
      * @param string $Sex 性别
@@ -182,6 +181,7 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

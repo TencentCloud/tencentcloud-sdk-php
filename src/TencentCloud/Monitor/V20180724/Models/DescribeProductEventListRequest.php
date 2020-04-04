@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProductEventList请求参数结构体
+ *
  * @method string getModule() 获取接口模块名，固定值"monitor"
  * @method void setModule(string $Module) 设置接口模块名，固定值"monitor"
  * @method array getProductName() 获取产品类型过滤，比如"cvm"表示云服务器
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置页偏移量，默认0
  * @method integer getLimit() 获取每页返回的数量，默认20
  * @method void setLimit(integer $Limit) 设置每页返回的数量，默认20
- */
-
-/**
- *DescribeProductEventList请求参数结构体
  */
 class DescribeProductEventListRequest extends AbstractModel
 {
@@ -129,6 +127,7 @@ class DescribeProductEventListRequest extends AbstractModel
      * @var integer 每页返回的数量，默认20
      */
     public $Limit;
+
     /**
      * @param string $Module 接口模块名，固定值"monitor"
      * @param array $ProductName 产品类型过滤，比如"cvm"表示云服务器
@@ -150,6 +149,7 @@ class DescribeProductEventListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

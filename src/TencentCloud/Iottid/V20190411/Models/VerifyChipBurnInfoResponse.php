@@ -18,6 +18,8 @@ namespace TencentCloud\Iottid\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VerifyChipBurnInfo返回参数结构体
+ *
  * @method boolean getPass() 获取验证结果
  * @method void setPass(boolean $Pass) 设置验证结果
  * @method integer getVerifiedTimes() 获取已验证次数
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLeftTimes(integer $LeftTimes) 设置剩余验证次数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *VerifyChipBurnInfo返回参数结构体
  */
 class VerifyChipBurnInfoResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class VerifyChipBurnInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param boolean $Pass 验证结果
      * @param integer $VerifiedTimes 已验证次数
@@ -62,6 +61,7 @@ class VerifyChipBurnInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 带宽和流量信息
+ *
  * @method string getTime() 获取时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method void setTime(string $Time) 设置时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method float getBandwidth() 获取带宽，单位是Mbps。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlux(float $Flux) 设置流量，单位是MB。
  * @method string getPeakTime() 获取峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
  * @method void setPeakTime(string $PeakTime) 设置峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
- */
-
-/**
- *带宽和流量信息
  */
 class BillDataInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class BillDataInfo extends AbstractModel
      * @var string 峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
      */
     public $PeakTime;
+
     /**
      * @param string $Time 时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param float $Bandwidth 带宽，单位是Mbps。
@@ -62,6 +61,7 @@ class BillDataInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecret请求参数结构体
+ *
  * @method string getSecretName() 获取指定需要获取凭据详细信息的凭据名称。
  * @method void setSecretName(string $SecretName) 设置指定需要获取凭据详细信息的凭据名称。
- */
-
-/**
- *DescribeSecret请求参数结构体
  */
 class DescribeSecretRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeSecretRequest extends AbstractModel
      * @var string 指定需要获取凭据详细信息的凭据名称。
      */
     public $SecretName;
+
     /**
      * @param string $SecretName 指定需要获取凭据详细信息的凭据名称。
      */
@@ -38,6 +37,7 @@ class DescribeSecretRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBSyncMode请求参数结构体
+ *
  * @method string getInstanceId() 获取待修改同步模式的实例ID。形如：dcdbt-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置待修改同步模式的实例ID。形如：dcdbt-ow728lmc。
- */
-
-/**
- *DescribeDBSyncMode请求参数结构体
  */
 class DescribeDBSyncModeRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeDBSyncModeRequest extends AbstractModel
      * @var string 待修改同步模式的实例ID。形如：dcdbt-ow728lmc。
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 待修改同步模式的实例ID。形如：dcdbt-ow728lmc。
      */
@@ -38,6 +37,7 @@ class DescribeDBSyncModeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

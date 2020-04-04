@@ -18,14 +18,13 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccountBalance请求参数结构体
+ *
 
- */
-
-/**
- *DescribeAccountBalance请求参数结构体
  */
 class DescribeAccountBalanceRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeAccountBalanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cds\V20180420\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据安全产品实例信息
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getAppId() 获取用户AppId
@@ -58,10 +60,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPdomain(string $Pdomain) 设置实例域名
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *数据安全产品实例信息
  */
 class CdsAuditInstance extends AbstractModel
 {
@@ -148,6 +146,7 @@ class CdsAuditInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pdomain;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $AppId 用户AppId
@@ -174,6 +173,7 @@ class CdsAuditInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

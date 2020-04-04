@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述 HAVIP 信息
+ *
  * @method string getHaVipId() 获取`HAVIP`的`ID`，是`HAVIP`的唯一标识。
  * @method void setHaVipId(string $HaVipId) 设置`HAVIP`的`ID`，是`HAVIP`的唯一标识。
  * @method string getHaVipName() 获取`HAVIP`名称。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
  * @method string getBusiness() 获取使用havip的业务标识。
  * @method void setBusiness(string $Business) 设置使用havip的业务标识。
- */
-
-/**
- *描述 HAVIP 信息
  */
 class HaVip extends AbstractModel
 {
@@ -107,6 +105,7 @@ class HaVip extends AbstractModel
      * @var string 使用havip的业务标识。
      */
     public $Business;
+
     /**
      * @param string $HaVipId `HAVIP`的`ID`，是`HAVIP`的唯一标识。
      * @param string $HaVipName `HAVIP`名称。
@@ -126,6 +125,7 @@ class HaVip extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

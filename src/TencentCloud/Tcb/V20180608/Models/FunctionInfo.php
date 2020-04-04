@@ -18,16 +18,14 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 函数的信息
+ *
  * @method string getNamespace() 获取命名空间
  * @method void setNamespace(string $Namespace) 设置命名空间
  * @method string getRegion() 获取所属地域。
 当前支持ap-shanghai
  * @method void setRegion(string $Region) 设置所属地域。
 当前支持ap-shanghai
- */
-
-/**
- *函数的信息
  */
 class FunctionInfo extends AbstractModel
 {
@@ -41,6 +39,7 @@ class FunctionInfo extends AbstractModel
 当前支持ap-shanghai
      */
     public $Region;
+
     /**
      * @param string $Namespace 命名空间
      * @param string $Region 所属地域。
@@ -50,6 +49,7 @@ class FunctionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

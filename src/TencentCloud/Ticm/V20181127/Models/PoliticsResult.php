@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 政治敏感识别结果。
+ *
  * @method integer getCode() 获取该识别场景的错误码：
 0表示成功，
 -1表示系统错误，
@@ -64,10 +66,6 @@ Type为FACE时：
  * @method void setType(string $Type) 设置取值'DNA' 或‘FACE’。DNA表示结论和置信度来自图像指纹，FACE表示结论和置信度来自人脸识别。
  * @method string getAdvancedInfo() 获取鉴政识别返回的详细标签后期开放。
  * @method void setAdvancedInfo(string $AdvancedInfo) 设置鉴政识别返回的详细标签后期开放。
- */
-
-/**
- *政治敏感识别结果。
  */
 class PoliticsResult extends AbstractModel
 {
@@ -121,6 +119,7 @@ Type为FACE时：
      * @var string 鉴政识别返回的详细标签后期开放。
      */
     public $AdvancedInfo;
+
     /**
      * @param integer $Code 该识别场景的错误码：
 0表示成功，
@@ -150,6 +149,7 @@ Type为FACE时：
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

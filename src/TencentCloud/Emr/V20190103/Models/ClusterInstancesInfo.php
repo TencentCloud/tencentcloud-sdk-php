@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 集群实例信息
+ *
  * @method integer getId() 获取ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置ID
@@ -184,10 +186,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAliasInfo(string $AliasInfo) 设置集群所有节点的别名序列化
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *集群实例信息
  */
 class ClusterInstancesInfo extends AbstractModel
 {
@@ -385,6 +383,7 @@ class ClusterInstancesInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AliasInfo;
+
     /**
      * @param integer $Id ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -474,6 +473,7 @@ class ClusterInstancesInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

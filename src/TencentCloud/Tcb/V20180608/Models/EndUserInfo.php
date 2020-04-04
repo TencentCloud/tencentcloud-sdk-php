@@ -18,6 +18,8 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 终端用户信息
+ *
  * @method string getUUId() 获取用户唯一ID
  * @method void setUUId(string $UUId) 设置用户唯一ID
  * @method string getWXOpenId() 获取微信ID
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAnonymous(boolean $IsAnonymous) 设置是否为匿名用户
  * @method boolean getIsDisabled() 获取是否禁用账户
  * @method void setIsDisabled(boolean $IsDisabled) 设置是否禁用账户
- */
-
-/**
- *终端用户信息
  */
 class EndUserInfo extends AbstractModel
 {
@@ -108,6 +106,7 @@ class EndUserInfo extends AbstractModel
      * @var boolean 是否禁用账户
      */
     public $IsDisabled;
+
     /**
      * @param string $UUId 用户唯一ID
      * @param string $WXOpenId 微信ID
@@ -126,6 +125,7 @@ class EndUserInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

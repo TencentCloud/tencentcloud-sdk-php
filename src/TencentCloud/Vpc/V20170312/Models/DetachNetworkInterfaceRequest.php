@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetachNetworkInterface请求参数结构体
+ *
  * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method string getInstanceId() 获取CVM实例ID。形如：ins-r8hr2upy。
  * @method void setInstanceId(string $InstanceId) 设置CVM实例ID。形如：ins-r8hr2upy。
- */
-
-/**
- *DetachNetworkInterface请求参数结构体
  */
 class DetachNetworkInterfaceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DetachNetworkInterfaceRequest extends AbstractModel
      * @var string CVM实例ID。形如：ins-r8hr2upy。
      */
     public $InstanceId;
+
     /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      * @param string $InstanceId CVM实例ID。形如：ins-r8hr2upy。
@@ -46,6 +45,7 @@ class DetachNetworkInterfaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

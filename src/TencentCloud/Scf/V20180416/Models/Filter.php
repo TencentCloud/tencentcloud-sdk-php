@@ -18,16 +18,14 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述键值对过滤器，用于条件过滤查询。例如过滤ID、名称、状态等
+若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+ *
  * @method string getName() 获取需要过滤的字段。
  * @method void setName(string $Name) 设置需要过滤的字段。
  * @method array getValues() 获取字段的过滤值。
  * @method void setValues(array $Values) 设置字段的过滤值。
- */
-
-/**
- *描述键值对过滤器，用于条件过滤查询。例如过滤ID、名称、状态等
-若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
-若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
  */
 class Filter extends AbstractModel
 {
@@ -40,6 +38,7 @@ class Filter extends AbstractModel
      * @var array 字段的过滤值。
      */
     public $Values;
+
     /**
      * @param string $Name 需要过滤的字段。
      * @param array $Values 字段的过滤值。
@@ -48,6 +47,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云盘操作日志。
+ *
  * @method string getOperator() 获取操作者的UIN。
  * @method void setOperator(string $Operator) 设置操作者的UIN。
  * @method string getOperation() 获取操作类型。取值范围：
@@ -54,10 +56,6 @@ PROCESSING :表示操作中。
  * @method void setStartTime(string $StartTime) 设置开始时间。
  * @method string getEndTime() 获取结束时间。
  * @method void setEndTime(string $EndTime) 设置结束时间。
- */
-
-/**
- *云盘操作日志。
  */
 class DiskOperationLog extends AbstractModel
 {
@@ -102,6 +100,7 @@ PROCESSING :表示操作中。
      * @var string 结束时间。
      */
     public $EndTime;
+
     /**
      * @param string $Operator 操作者的UIN。
      * @param string $Operation 操作类型。取值范围：
@@ -126,6 +125,7 @@ PROCESSING :表示操作中。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

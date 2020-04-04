@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTargetGroups请求参数结构体
+ *
  * @method array getTargetGroupIds() 获取目标组ID，与Filters互斥
  * @method void setTargetGroupIds(array $TargetGroupIds) 设置目标组ID，与Filters互斥
  * @method integer getLimit() 获取显示条数限制，默认为20
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置显示的偏移起始量
  * @method array getFilters() 获取过滤条件数组，与TargetGroupIds互斥，支持TargetGroupVpcId和TargetGroupName
  * @method void setFilters(array $Filters) 设置过滤条件数组，与TargetGroupIds互斥，支持TargetGroupVpcId和TargetGroupName
- */
-
-/**
- *DescribeTargetGroups请求参数结构体
  */
 class DescribeTargetGroupsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeTargetGroupsRequest extends AbstractModel
      * @var array 过滤条件数组，与TargetGroupIds互斥，支持TargetGroupVpcId和TargetGroupName
      */
     public $Filters;
+
     /**
      * @param array $TargetGroupIds 目标组ID，与Filters互斥
      * @param integer $Limit 显示条数限制，默认为20
@@ -62,6 +61,7 @@ class DescribeTargetGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

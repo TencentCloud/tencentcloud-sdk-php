@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAppUsr返回参数结构体
+ *
  * @method string getCunionId() 获取厂商云标识用户的唯一ID
  * @method void setCunionId(string $CunionId) 设置厂商云标识用户的唯一ID
  * @method string getAccessId() 获取客户的终端用户在IoT Video上的唯一标识ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewRegist(boolean $NewRegist) 设置用户是否为新创建
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateAppUsr返回参数结构体
  */
 class CreateAppUsrResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateAppUsrResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $CunionId 厂商云标识用户的唯一ID
      * @param string $AccessId 客户的终端用户在IoT Video上的唯一标识ID
@@ -62,6 +61,7 @@ class CreateAppUsrResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全组规则对象
+ *
  * @method integer getPolicyIndex() 获取安全组规则索引号。
  * @method void setPolicyIndex(integer $PolicyIndex) 设置安全组规则索引号。
  * @method string getProtocol() 获取协议, 取值: TCP,UDP, ICMP。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyDescription(string $PolicyDescription) 设置安全组规则描述。
  * @method string getModifyTime() 获取安全组最近修改时间。
  * @method void setModifyTime(string $ModifyTime) 设置安全组最近修改时间。
- */
-
-/**
- *安全组规则对象
  */
 class SecurityGroupPolicy extends AbstractModel
 {
@@ -101,6 +99,7 @@ class SecurityGroupPolicy extends AbstractModel
      * @var string 安全组最近修改时间。
      */
     public $ModifyTime;
+
     /**
      * @param integer $PolicyIndex 安全组规则索引号。
      * @param string $Protocol 协议, 取值: TCP,UDP, ICMP。
@@ -118,6 +117,7 @@ class SecurityGroupPolicy extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

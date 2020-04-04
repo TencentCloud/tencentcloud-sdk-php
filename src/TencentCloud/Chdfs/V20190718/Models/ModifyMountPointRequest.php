@@ -18,6 +18,8 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyMountPoint请求参数结构体
+ *
  * @method string getMountPointId() 获取挂载点ID
  * @method void setMountPointId(string $MountPointId) 设置挂载点ID
  * @method string getMountPointName() 获取挂载点名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMountPointStatus(integer $MountPointStatus) 设置挂载点状态
  * @method string getAccessGroupId() 获取权限组ID
  * @method void setAccessGroupId(string $AccessGroupId) 设置权限组ID
- */
-
-/**
- *ModifyMountPoint请求参数结构体
  */
 class ModifyMountPointRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyMountPointRequest extends AbstractModel
      * @var string 权限组ID
      */
     public $AccessGroupId;
+
     /**
      * @param string $MountPointId 挂载点ID
      * @param string $MountPointName 挂载点名称
@@ -62,6 +61,7 @@ class ModifyMountPointRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

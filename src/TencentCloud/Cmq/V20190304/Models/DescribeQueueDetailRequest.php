@@ -18,6 +18,8 @@ namespace TencentCloud\Cmq\V20190304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeQueueDetail请求参数结构体
+ *
  * @method integer getOffset() 获取分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
  * @method void setOffset(integer $Offset) 设置分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
  * @method integer getLimit() 获取分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKey(string $TagKey) 设置标签搜索
  * @method string getQueueName() 获取精确匹配QueueName
  * @method void setQueueName(string $QueueName) 设置精确匹配QueueName
- */
-
-/**
- *DescribeQueueDetail请求参数结构体
  */
 class DescribeQueueDetailRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeQueueDetailRequest extends AbstractModel
      * @var string 精确匹配QueueName
      */
     public $QueueName;
+
     /**
      * @param integer $Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
      * @param integer $Limit 分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
@@ -70,6 +69,7 @@ class DescribeQueueDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

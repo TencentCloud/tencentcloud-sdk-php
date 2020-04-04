@@ -18,16 +18,14 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 慢查询详情
+ *
  * @method float getTotalTime() 获取花费总时间
  * @method void setTotalTime(float $TotalTime) 设置花费总时间
  * @method integer getTotalCalls() 获取调用总次数
  * @method void setTotalCalls(integer $TotalCalls) 设置调用总次数
  * @method array getNormalQueries() 获取脱敏后的慢SQL列表
  * @method void setNormalQueries(array $NormalQueries) 设置脱敏后的慢SQL列表
- */
-
-/**
- *慢查询详情
  */
 class SlowlogDetail extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SlowlogDetail extends AbstractModel
      * @var array 脱敏后的慢SQL列表
      */
     public $NormalQueries;
+
     /**
      * @param float $TotalTime 花费总时间
      * @param integer $TotalCalls 调用总次数
@@ -54,6 +53,7 @@ class SlowlogDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

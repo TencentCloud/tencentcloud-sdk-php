@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例系列类型配置
+ *
  * @method string getInstanceFamilyType() 获取实例机型系列类型Id
  * @method void setInstanceFamilyType(string $InstanceFamilyType) 设置实例机型系列类型Id
  * @method string getInstanceFamilyTypeName() 获取实例机型系列类型名称
  * @method void setInstanceFamilyTypeName(string $InstanceFamilyTypeName) 设置实例机型系列类型名称
- */
-
-/**
- *实例系列类型配置
  */
 class InstanceFamilyTypeConfig extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceFamilyTypeConfig extends AbstractModel
      * @var string 实例机型系列类型名称
      */
     public $InstanceFamilyTypeName;
+
     /**
      * @param string $InstanceFamilyType 实例机型系列类型Id
      * @param string $InstanceFamilyTypeName 实例机型系列类型名称
@@ -46,6 +45,7 @@ class InstanceFamilyTypeConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

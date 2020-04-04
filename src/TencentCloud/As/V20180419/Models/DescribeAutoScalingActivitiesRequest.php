@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAutoScalingActivities请求参数结构体
+ *
  * @method array getActivityIds() 获取按照一个或者多个伸缩活动ID查询。伸缩活动ID形如：`asa-5l2ejpfo`。每次请求的上限为100。参数不支持同时指定`ActivityIds`和`Filters`。
  * @method void setActivityIds(array $ActivityIds) 设置按照一个或者多个伸缩活动ID查询。伸缩活动ID形如：`asa-5l2ejpfo`。每次请求的上限为100。参数不支持同时指定`ActivityIds`和`Filters`。
  * @method array getFilters() 获取过滤条件。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置伸缩活动最早的开始时间，如果指定了ActivityIds，此参数将被忽略。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
  * @method string getEndTime() 获取伸缩活动最晚的结束时间，如果指定了ActivityIds，此参数将被忽略。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
  * @method void setEndTime(string $EndTime) 设置伸缩活动最晚的结束时间，如果指定了ActivityIds，此参数将被忽略。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
- */
-
-/**
- *DescribeAutoScalingActivities请求参数结构体
  */
 class DescribeAutoScalingActivitiesRequest extends AbstractModel
 {
@@ -81,6 +79,7 @@ class DescribeAutoScalingActivitiesRequest extends AbstractModel
      * @var string 伸缩活动最晚的结束时间，如果指定了ActivityIds，此参数将被忽略。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public $EndTime;
+
     /**
      * @param array $ActivityIds 按照一个或者多个伸缩活动ID查询。伸缩活动ID形如：`asa-5l2ejpfo`。每次请求的上限为100。参数不支持同时指定`ActivityIds`和`Filters`。
      * @param array $Filters 过滤条件。
@@ -98,6 +97,7 @@ class DescribeAutoScalingActivitiesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

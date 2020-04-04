@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveSnapshotRule请求参数结构体
+ *
  * @method string getDomainName() 获取推流域名。
  * @method void setDomainName(string $DomainName) 设置推流域名。
  * @method integer getTemplateId() 获取模板Id。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注：如果本参数设置为非空字符串，规则将只对此推流起作用。
  * @method void setStreamName(string $StreamName) 设置流名称。
 注：如果本参数设置为非空字符串，规则将只对此推流起作用。
- */
-
-/**
- *CreateLiveSnapshotRule请求参数结构体
  */
 class CreateLiveSnapshotRuleRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class CreateLiveSnapshotRuleRequest extends AbstractModel
 注：如果本参数设置为非空字符串，规则将只对此推流起作用。
      */
     public $StreamName;
+
     /**
      * @param string $DomainName 推流域名。
      * @param integer $TemplateId 模板Id。
@@ -66,6 +65,7 @@ class CreateLiveSnapshotRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能封面信息
+ *
  * @method string getCoverPath() 获取智能封面存储路径。
  * @method void setCoverPath(string $CoverPath) 设置智能封面存储路径。
  * @method float getConfidence() 获取智能封面的可信度，取值范围是 0 到 100。
  * @method void setConfidence(float $Confidence) 设置智能封面的可信度，取值范围是 0 到 100。
- */
-
-/**
- *智能封面信息
  */
 class MediaAiAnalysisCoverItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MediaAiAnalysisCoverItem extends AbstractModel
      * @var float 智能封面的可信度，取值范围是 0 到 100。
      */
     public $Confidence;
+
     /**
      * @param string $CoverPath 智能封面存储路径。
      * @param float $Confidence 智能封面的可信度，取值范围是 0 到 100。
@@ -46,6 +45,7 @@ class MediaAiAnalysisCoverItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

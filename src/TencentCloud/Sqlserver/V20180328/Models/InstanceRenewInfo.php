@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例续费状态信息
+ *
  * @method string getInstanceId() 获取实例ID，形如mssql-j8kv137v
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-j8kv137v
  * @method integer getRenewFlag() 获取实例续费标记。0：正常续费，1：自动续费，2：到期不续
  * @method void setRenewFlag(integer $RenewFlag) 设置实例续费标记。0：正常续费，1：自动续费，2：到期不续
- */
-
-/**
- *实例续费状态信息
  */
 class InstanceRenewInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceRenewInfo extends AbstractModel
      * @var integer 实例续费标记。0：正常续费，1：自动续费，2：到期不续
      */
     public $RenewFlag;
+
     /**
      * @param string $InstanceId 实例ID，形如mssql-j8kv137v
      * @param integer $RenewFlag 实例续费标记。0：正常续费，1：自动续费，2：到期不续
@@ -46,6 +45,7 @@ class InstanceRenewInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

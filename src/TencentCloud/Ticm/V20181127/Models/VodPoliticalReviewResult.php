@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 涉政信息
+ *
  * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method integer getCode() 获取错误码，0：成功，其他值：失败。
@@ -58,10 +60,6 @@ violation_photo：违规图标。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentSet(array $SegmentSet) 设置有涉政嫌疑的视频片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *涉政信息
  */
 class VodPoliticalReviewResult extends AbstractModel
 {
@@ -112,6 +110,7 @@ violation_photo：违规图标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentSet;
+
     /**
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param integer $Code 错误码，0：成功，其他值：失败。
@@ -138,6 +137,7 @@ violation_photo：违规图标。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

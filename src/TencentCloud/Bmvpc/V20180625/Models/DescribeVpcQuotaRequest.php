@@ -18,12 +18,10 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpcQuota请求参数结构体
+ *
  * @method array getTypeIds() 获取类型
  * @method void setTypeIds(array $TypeIds) 设置类型
- */
-
-/**
- *DescribeVpcQuota请求参数结构体
  */
 class DescribeVpcQuotaRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeVpcQuotaRequest extends AbstractModel
      * @var array 类型
      */
     public $TypeIds;
+
     /**
      * @param array $TypeIds 类型
      */
@@ -38,6 +37,7 @@ class DescribeVpcQuotaRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

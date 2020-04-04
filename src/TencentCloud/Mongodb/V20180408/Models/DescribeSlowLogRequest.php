@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSlowLog请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method string getStartTime() 获取慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，最小值为0，最大值为10000，默认值为0。
  * @method integer getLimit() 获取分页大小，最小值为1，最大值为100，默认值为20。
  * @method void setLimit(integer $Limit) 设置分页大小，最小值为1，最大值为100，默认值为20。
- */
-
-/**
- *DescribeSlowLog请求参数结构体
  */
 class DescribeSlowLogRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeSlowLogRequest extends AbstractModel
      * @var integer 分页大小，最小值为1，最大值为100，默认值为20。
      */
     public $Limit;
+
     /**
      * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      * @param string $StartTime 慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
@@ -78,6 +77,7 @@ class DescribeSlowLogRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

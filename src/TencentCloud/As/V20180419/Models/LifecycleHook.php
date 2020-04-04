@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 生命周期挂钩
+ *
  * @method string getLifecycleHookId() 获取生命周期挂钩ID
  * @method void setLifecycleHookId(string $LifecycleHookId) 设置生命周期挂钩ID
  * @method string getLifecycleHookName() 获取生命周期挂钩名称
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotificationTarget(NotificationTarget $NotificationTarget) 设置通知目标
  * @method string getLifecycleTransitionType() 获取生命周期挂钩适用场景
  * @method void setLifecycleTransitionType(string $LifecycleTransitionType) 设置生命周期挂钩适用场景
- */
-
-/**
- *生命周期挂钩
  */
 class LifecycleHook extends AbstractModel
 {
@@ -94,6 +92,7 @@ class LifecycleHook extends AbstractModel
      * @var string 生命周期挂钩适用场景
      */
     public $LifecycleTransitionType;
+
     /**
      * @param string $LifecycleHookId 生命周期挂钩ID
      * @param string $LifecycleHookName 生命周期挂钩名称
@@ -110,6 +109,7 @@ class LifecycleHook extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

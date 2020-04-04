@@ -18,6 +18,8 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文件元信息。
+ *
  * @method integer getSize() 获取大小。
  * @method void setSize(integer $Size) 设置大小。
  * @method string getContainer() 获取容器类型。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoStreamInfoSet(array $VideoStreamInfoSet) 设置视频流信息。
  * @method array getAudioStreamInfoSet() 获取音频流信息。
  * @method void setAudioStreamInfoSet(array $AudioStreamInfoSet) 设置音频流信息。
- */
-
-/**
- *文件元信息。
  */
 class MediaMetaData extends AbstractModel
 {
@@ -87,6 +85,7 @@ class MediaMetaData extends AbstractModel
      * @var array 音频流信息。
      */
     public $AudioStreamInfoSet;
+
     /**
      * @param integer $Size 大小。
      * @param string $Container 容器类型。
@@ -102,6 +101,7 @@ class MediaMetaData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

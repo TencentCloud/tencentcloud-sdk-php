@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveCallbackTemplate请求参数结构体
+ *
  * @method string getTemplateName() 获取模板名称，非空的字符串。
 长度上限：255字节。
  * @method void setTemplateName(string $TemplateName) 设置模板名称，非空的字符串。
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 相关协议文档：[事件消息通知](/document/product/267/32741)。
  * @method string getCallbackKey() 获取回调key，回调URL公用，鉴权回调说明详见回调格式文档
  * @method void setCallbackKey(string $CallbackKey) 设置回调key，回调URL公用，鉴权回调说明详见回调格式文档
- */
-
-/**
- *CreateLiveCallbackTemplate请求参数结构体
  */
 class CreateLiveCallbackTemplateRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class CreateLiveCallbackTemplateRequest extends AbstractModel
      * @var string 回调key，回调URL公用，鉴权回调说明详见回调格式文档
      */
     public $CallbackKey;
+
     /**
      * @param string $TemplateName 模板名称，非空的字符串。
 长度上限：255字节。
@@ -122,6 +121,7 @@ class CreateLiveCallbackTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateKey返回参数结构体
+ *
  * @method string getKeyId() 获取CMK的全局唯一标识符
  * @method void setKeyId(string $KeyId) 设置CMK的全局唯一标识符
  * @method string getAlias() 获取作为密钥更容易辨识，更容易被人看懂的别名
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyUsage(string $KeyUsage) 设置CMK的用途
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateKey返回参数结构体
  */
 class CreateKeyResponse extends AbstractModel
 {
@@ -76,6 +74,7 @@ class CreateKeyResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $KeyId CMK的全局唯一标识符
      * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名
@@ -90,6 +89,7 @@ class CreateKeyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

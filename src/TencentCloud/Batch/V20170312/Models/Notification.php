@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 通知信息
+ *
  * @method string getTopicName() 获取CMQ主题名字，要求主题名有效且关联订阅
  * @method void setTopicName(string $TopicName) 设置CMQ主题名字，要求主题名有效且关联订阅
  * @method array getEventConfigs() 获取事件配置
  * @method void setEventConfigs(array $EventConfigs) 设置事件配置
- */
-
-/**
- *通知信息
  */
 class Notification extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Notification extends AbstractModel
      * @var array 事件配置
      */
     public $EventConfigs;
+
     /**
      * @param string $TopicName CMQ主题名字，要求主题名有效且关联订阅
      * @param array $EventConfigs 事件配置
@@ -46,6 +45,7 @@ class Notification extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 域名基础配置信息，含 CNAME、状态、业务类型、加速区域、创建时间、更新时间、源站配置等。
+ *
  * @method string getResourceId() 获取域名 ID
  * @method void setResourceId(string $ResourceId) 设置域名 ID
  * @method integer getAppId() 获取腾讯云账号 ID
@@ -88,10 +90,6 @@ normal：未锁定
 mainland：中国境内锁定
 overseas：中国境外锁定
 global：全球锁定
- */
-
-/**
- *域名基础配置信息，含 CNAME、状态、业务类型、加速区域、创建时间、更新时间、源站配置等。
  */
 class BriefDomain extends AbstractModel
 {
@@ -181,6 +179,7 @@ overseas：中国境外锁定
 global：全球锁定
      */
     public $Readonly;
+
     /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号 ID
@@ -222,6 +221,7 @@ global：全球锁定
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

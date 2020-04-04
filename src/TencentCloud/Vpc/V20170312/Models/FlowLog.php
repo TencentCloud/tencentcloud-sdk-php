@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 流日志
+ *
  * @method string getVpcId() 获取私用网络ID或者统一ID，建议使用统一ID
  * @method void setVpcId(string $VpcId) 设置私用网络ID或者统一ID，建议使用统一ID
  * @method string getFlowLogId() 获取流日志唯一ID
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowLogDescription(string $FlowLogDescription) 设置流日志描述信息
  * @method string getCreatedTime() 获取流日志创建时间
  * @method void setCreatedTime(string $CreatedTime) 设置流日志创建时间
- */
-
-/**
- *流日志
  */
 class FlowLog extends AbstractModel
 {
@@ -94,6 +92,7 @@ class FlowLog extends AbstractModel
      * @var string 流日志创建时间
      */
     public $CreatedTime;
+
     /**
      * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID
      * @param string $FlowLogId 流日志唯一ID
@@ -110,6 +109,7 @@ class FlowLog extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

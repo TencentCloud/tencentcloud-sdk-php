@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProductEventList返回的Events的Dimensions
+ *
  * @method string getKey() 获取维度名（英文）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置维度名（英文）
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置维度值
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DescribeProductEventList返回的Events的Dimensions
  */
 class DescribeProductEventListEventsDimensions extends AbstractModel
 {
@@ -54,6 +52,7 @@ class DescribeProductEventListEventsDimensions extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
+
     /**
      * @param string $Key 维度名（英文）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class DescribeProductEventListEventsDimensions extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EstimateCheckSimilarPersonCostTime请求参数结构体
+ *
  * @method array getGroupIds() 获取待整理的人员库列表。 
 人员库总人数不可超过200万，人员库个数不可超过10个。
  * @method void setGroupIds(array $GroupIds) 设置待整理的人员库列表。 
 人员库总人数不可超过200万，人员库个数不可超过10个。
- */
-
-/**
- *EstimateCheckSimilarPersonCostTime请求参数结构体
  */
 class EstimateCheckSimilarPersonCostTimeRequest extends AbstractModel
 {
@@ -34,6 +32,7 @@ class EstimateCheckSimilarPersonCostTimeRequest extends AbstractModel
 人员库总人数不可超过200万，人员库个数不可超过10个。
      */
     public $GroupIds;
+
     /**
      * @param array $GroupIds 待整理的人员库列表。 
 人员库总人数不可超过200万，人员库个数不可超过10个。
@@ -42,6 +41,7 @@ class EstimateCheckSimilarPersonCostTimeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

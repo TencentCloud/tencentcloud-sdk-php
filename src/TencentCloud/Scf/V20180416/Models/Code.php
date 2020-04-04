@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 函数代码
+ *
  * @method string getCosBucketName() 获取对象存储桶名称
  * @method void setCosBucketName(string $CosBucketName) 设置对象存储桶名称
  * @method string getCosObjectName() 获取对象存储对象路径
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGitCommitId(string $GitCommitId) 设置指定要拉取的版本
  * @method string getGitUserNameSecret() 获取加密后的Git用户名，一般无需指定
  * @method void setGitUserNameSecret(string $GitUserNameSecret) 设置加密后的Git用户名，一般无需指定
- */
-
-/**
- *函数代码
  */
 class Code extends AbstractModel
 {
@@ -122,6 +120,7 @@ class Code extends AbstractModel
      * @var string 加密后的Git用户名，一般无需指定
      */
     public $GitUserNameSecret;
+
     /**
      * @param string $CosBucketName 对象存储桶名称
      * @param string $CosObjectName 对象存储对象路径
@@ -142,6 +141,7 @@ class Code extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

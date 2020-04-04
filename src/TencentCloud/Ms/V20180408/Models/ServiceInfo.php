@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 提交app加固的服务信息
+ *
  * @method string getServiceEdition() 获取服务版本，基础版basic，专业版professional，企业版enterprise。
  * @method void setServiceEdition(string $ServiceEdition) 设置服务版本，基础版basic，专业版professional，企业版enterprise。
  * @method string getCallbackUrl() 获取任务处理完成后的反向通知回调地址，如果不需要通知请传递空字符串。通知为POST请求，post包体数据示例{"Response":{"ItemId":"4cdad8fb86f036b06bccb3f58971c306","ShieldCode":0,"ShieldMd5":"78701576793c4a5f04e1c9660de0aa0b","ShieldSize":11997354,"TaskStatus":1,"TaskTime":1539148141}}，调用方需要返回如下信息，{"Result":"ok","Reason":"xxxxx"}，如果Result字段值不等于ok会继续回调。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubmitSource(string $SubmitSource) 设置提交来源 YYB-应用宝 RDM-rdm MC-控制台 MAC_TOOL-mac工具 WIN_TOOL-window工具。
  * @method integer getPlanId() 获取加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。
  * @method void setPlanId(integer $PlanId) 设置加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。
- */
-
-/**
- *提交app加固的服务信息
  */
 class ServiceInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ServiceInfo extends AbstractModel
      * @var integer 加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。
      */
     public $PlanId;
+
     /**
      * @param string $ServiceEdition 服务版本，基础版basic，专业版professional，企业版enterprise。
      * @param string $CallbackUrl 任务处理完成后的反向通知回调地址，如果不需要通知请传递空字符串。通知为POST请求，post包体数据示例{"Response":{"ItemId":"4cdad8fb86f036b06bccb3f58971c306","ShieldCode":0,"ShieldMd5":"78701576793c4a5f04e1c9660de0aa0b","ShieldSize":11997354,"TaskStatus":1,"TaskTime":1539148141}}，调用方需要返回如下信息，{"Result":"ok","Reason":"xxxxx"}，如果Result字段值不等于ok会继续回调。
@@ -62,6 +61,7 @@ class ServiceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAIAnalysisTemplates请求参数结构体
+ *
  * @method array getDefinitions() 获取视频内容分析模板唯一标识过滤条件，数组长度限制：10。
  * @method void setDefinitions(array $Definitions) 设置视频内容分析模板唯一标识过滤条件，数组长度限制：10。
  * @method integer getOffset() 获取分页偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
- */
-
-/**
- *DescribeAIAnalysisTemplates请求参数结构体
  */
 class DescribeAIAnalysisTemplatesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAIAnalysisTemplatesRequest extends AbstractModel
      * @var integer 返回记录条数，默认值：10，最大值：100。
      */
     public $Limit;
+
     /**
      * @param array $Definitions 视频内容分析模板唯一标识过滤条件，数组长度限制：10。
      * @param integer $Offset 分页偏移量，默认值：0。
@@ -54,6 +53,7 @@ class DescribeAIAnalysisTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

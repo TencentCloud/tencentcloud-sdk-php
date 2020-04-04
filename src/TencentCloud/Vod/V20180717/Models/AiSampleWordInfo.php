@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI 样本管理，关键词输入信息。
+ *
  * @method string getKeyword() 获取关键词，长度限制：20 个字符。
  * @method void setKeyword(string $Keyword) 设置关键词，长度限制：20 个字符。
  * @method array getTags() 获取关键词标签
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置关键词标签
 <li>数组长度限制：20 个标签；</li>
 <li>单个标签长度限制：128 个字符。</li>
- */
-
-/**
- *AI 样本管理，关键词输入信息。
  */
 class AiSampleWordInfo extends AbstractModel
 {
@@ -44,6 +42,7 @@ class AiSampleWordInfo extends AbstractModel
 <li>单个标签长度限制：128 个字符。</li>
      */
     public $Tags;
+
     /**
      * @param string $Keyword 关键词，长度限制：20 个字符。
      * @param array $Tags 关键词标签
@@ -54,6 +53,7 @@ class AiSampleWordInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

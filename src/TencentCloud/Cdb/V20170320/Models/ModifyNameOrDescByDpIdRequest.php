@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNameOrDescByDpId请求参数结构体
+ *
  * @method string getDeployGroupId() 获取置放群组 ID。
  * @method void setDeployGroupId(string $DeployGroupId) 设置置放群组 ID。
  * @method string getDeployGroupName() 获取置放群组名称，最长不能超过60个字符。置放群组名和置放群组描述不能都为空。
  * @method void setDeployGroupName(string $DeployGroupName) 设置置放群组名称，最长不能超过60个字符。置放群组名和置放群组描述不能都为空。
  * @method string getDescription() 获取置放群组描述，最长不能超过200个字符。置放群组名和置放群组描述不能都为空。
  * @method void setDescription(string $Description) 设置置放群组描述，最长不能超过200个字符。置放群组名和置放群组描述不能都为空。
- */
-
-/**
- *ModifyNameOrDescByDpId请求参数结构体
  */
 class ModifyNameOrDescByDpIdRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyNameOrDescByDpIdRequest extends AbstractModel
      * @var string 置放群组描述，最长不能超过200个字符。置放群组名和置放群组描述不能都为空。
      */
     public $Description;
+
     /**
      * @param string $DeployGroupId 置放群组 ID。
      * @param string $DeployGroupName 置放群组名称，最长不能超过60个字符。置放群组名和置放群组描述不能都为空。
@@ -54,6 +53,7 @@ class ModifyNameOrDescByDpIdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNetworkConfig返回参数结构体
+ *
  * @method boolean getStatus() 获取执行状态：true|false
  * @method void setStatus(boolean $Status) 设置执行状态：true|false
  * @method string getSubnetId() 获取子网ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) 设置VIP地址
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ModifyNetworkConfig返回参数结构体
  */
 class ModifyNetworkConfigResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyNetworkConfigResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param boolean $Status 执行状态：true|false
      * @param string $SubnetId 子网ID
@@ -70,6 +69,7 @@ class ModifyNetworkConfigResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

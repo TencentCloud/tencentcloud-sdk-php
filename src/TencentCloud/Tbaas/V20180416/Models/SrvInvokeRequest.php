@@ -18,16 +18,14 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SrvInvoke请求参数结构体
+ *
  * @method string getService() 获取服务类型，iss或者dam
  * @method void setService(string $Service) 设置服务类型，iss或者dam
  * @method string getMethod() 获取服务接口，要调用的方法函数名
  * @method void setMethod(string $Method) 设置服务接口，要调用的方法函数名
  * @method string getParam() 获取用户自定义json字符串
  * @method void setParam(string $Param) 设置用户自定义json字符串
- */
-
-/**
- *SrvInvoke请求参数结构体
  */
 class SrvInvokeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SrvInvokeRequest extends AbstractModel
      * @var string 用户自定义json字符串
      */
     public $Param;
+
     /**
      * @param string $Service 服务类型，iss或者dam
      * @param string $Method 服务接口，要调用的方法函数名
@@ -54,6 +53,7 @@ class SrvInvokeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能精彩片段结果信息
+ *
  * @method array getHighlightSet() 获取视频智能精彩片段列表。
  * @method void setHighlightSet(array $HighlightSet) 设置视频智能精彩片段列表。
- */
-
-/**
- *智能精彩片段结果信息
  */
 class AiAnalysisTaskHighlightOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiAnalysisTaskHighlightOutput extends AbstractModel
      * @var array 视频智能精彩片段列表。
      */
     public $HighlightSet;
+
     /**
      * @param array $HighlightSet 视频智能精彩片段列表。
      */
@@ -38,6 +37,7 @@ class AiAnalysisTaskHighlightOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述实例的信息
+ *
  * @method Placement getPlacement() 获取实例所在的位置。
  * @method void setPlacement(Placement $Placement) 设置实例所在的位置。
  * @method string getInstanceId() 获取实例`ID`。
@@ -98,10 +100,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *描述实例的信息
  */
 class Instance extends AbstractModel
 {
@@ -268,6 +266,7 @@ class Instance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CamRoleName;
+
     /**
      * @param Placement $Placement 实例所在的位置。
      * @param string $InstanceId 实例`ID`。
@@ -314,6 +313,7 @@ class Instance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 根据源站查询的可用加速区域信息及对应的可选带宽和并发量
+ *
  * @method string getRegionId() 获取区域ID
  * @method void setRegionId(string $RegionId) 设置区域ID
  * @method string getRegionName() 获取区域的中文或英文名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConcurrentList(array $ConcurrentList) 设置可选的并发量取值数组
  * @method array getBandwidthList() 获取可选的带宽取值数组
  * @method void setBandwidthList(array $BandwidthList) 设置可选的带宽取值数组
- */
-
-/**
- *根据源站查询的可用加速区域信息及对应的可选带宽和并发量
  */
 class AccessRegionDetial extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AccessRegionDetial extends AbstractModel
      * @var array 可选的带宽取值数组
      */
     public $BandwidthList;
+
     /**
      * @param string $RegionId 区域ID
      * @param string $RegionName 区域的中文或英文名称
@@ -62,6 +61,7 @@ class AccessRegionDetial extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

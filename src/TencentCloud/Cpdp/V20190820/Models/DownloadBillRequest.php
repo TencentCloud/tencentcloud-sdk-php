@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DownloadBill请求参数结构体
+ *
  * @method string getStateDate() 获取请求下载对账单日期
  * @method void setStateDate(string $StateDate) 设置请求下载对账单日期
  * @method string getMidasAppId() 获取聚鑫分配的MidasAppId
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidasSecretId(string $MidasSecretId) 设置聚鑫分配的SecretId
  * @method string getMidasSignature() 获取使用聚鑫安全密钥计算的签名
  * @method void setMidasSignature(string $MidasSignature) 设置使用聚鑫安全密钥计算的签名
- */
-
-/**
- *DownloadBill请求参数结构体
  */
 class DownloadBillRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DownloadBillRequest extends AbstractModel
      * @var string 使用聚鑫安全密钥计算的签名
      */
     public $MidasSignature;
+
     /**
      * @param string $StateDate 请求下载对账单日期
      * @param string $MidasAppId 聚鑫分配的MidasAppId
@@ -62,6 +61,7 @@ class DownloadBillRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

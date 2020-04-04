@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内部接口使用，返回可以查询统计数据的通道和对应的监听器信息
+ *
  * @method string getProxyId() 获取通道ID
  * @method void setProxyId(string $ProxyId) 设置通道ID
  * @method string getProxyName() 获取通道名称
  * @method void setProxyName(string $ProxyName) 设置通道名称
  * @method array getListenerList() 获取监听器列表
  * @method void setListenerList(array $ListenerList) 设置监听器列表
- */
-
-/**
- *内部接口使用，返回可以查询统计数据的通道和对应的监听器信息
  */
 class ProxySimpleInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ProxySimpleInfo extends AbstractModel
      * @var array 监听器列表
      */
     public $ListenerList;
+
     /**
      * @param string $ProxyId 通道ID
      * @param string $ProxyName 通道名称
@@ -54,6 +53,7 @@ class ProxySimpleInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

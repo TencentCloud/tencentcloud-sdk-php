@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MixedInvoiceDetect请求参数结构体
+ *
  * @method boolean getReturnImage() 获取是否需要返回裁剪后的图片。
  * @method void setReturnImage(boolean $ReturnImage) 设置是否需要返回裁剪后的图片。
  * @method string getImageBase64() 获取图片的 Base64 值。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
- */
-
-/**
- *MixedInvoiceDetect请求参数结构体
  */
 class MixedInvoiceDetectRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class MixedInvoiceDetectRequest extends AbstractModel
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      */
     public $ImageUrl;
+
     /**
      * @param boolean $ReturnImage 是否需要返回裁剪后的图片。
      * @param string $ImageBase64 图片的 Base64 值。
@@ -82,6 +81,7 @@ class MixedInvoiceDetectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

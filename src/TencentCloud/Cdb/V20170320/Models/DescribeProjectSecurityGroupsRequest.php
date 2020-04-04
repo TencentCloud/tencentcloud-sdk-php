@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProjectSecurityGroups请求参数结构体
+ *
  * @method integer getProjectId() 获取项目ID。
  * @method void setProjectId(integer $ProjectId) 设置项目ID。
- */
-
-/**
- *DescribeProjectSecurityGroups请求参数结构体
  */
 class DescribeProjectSecurityGroupsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
      * @var integer 项目ID。
      */
     public $ProjectId;
+
     /**
      * @param integer $ProjectId 项目ID。
      */
@@ -38,6 +37,7 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

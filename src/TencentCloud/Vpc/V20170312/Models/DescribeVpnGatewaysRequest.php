@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpnGateways请求参数结构体
+ *
  * @method array getVpnGatewayIds() 获取VPN网关实例ID。形如：vpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
  * @method void setVpnGatewayIds(array $VpnGatewayIds) 设置VPN网关实例ID。形如：vpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取请求对象个数
  * @method void setLimit(integer $Limit) 设置请求对象个数
- */
-
-/**
- *DescribeVpnGateways请求参数结构体
  */
 class DescribeVpnGatewaysRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeVpnGatewaysRequest extends AbstractModel
      * @var integer 请求对象个数
      */
     public $Limit;
+
     /**
      * @param array $VpnGatewayIds VPN网关实例ID。形如：vpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
@@ -90,6 +89,7 @@ class DescribeVpnGatewaysRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

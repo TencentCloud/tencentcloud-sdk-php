@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetRoutes请求参数结构体
+ *
  * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
  * @method string getRouteTableName() 获取路由表名称，最大长度不能超过60个字节。
  * @method void setRouteTableName(string $RouteTableName) 设置路由表名称，最大长度不能超过60个字节。
  * @method array getRoutes() 获取路由策略。
  * @method void setRoutes(array $Routes) 设置路由策略。
- */
-
-/**
- *ResetRoutes请求参数结构体
  */
 class ResetRoutesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ResetRoutesRequest extends AbstractModel
      * @var array 路由策略。
      */
     public $Routes;
+
     /**
      * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      * @param string $RouteTableName 路由表名称，最大长度不能超过60个字节。
@@ -54,6 +53,7 @@ class ResetRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

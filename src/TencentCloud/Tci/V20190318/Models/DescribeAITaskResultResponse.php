@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAITaskResult返回参数结构体
+ *
  * @method StandardAudioResult getAudioResult() 获取音频分析结果
  * @method void setAudioResult(StandardAudioResult $AudioResult) 设置音频分析结果
  * @method StandardImageResult getImageResult() 获取图像分析结果
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(integer $TaskId) 设置任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAITaskResult返回参数结构体
  */
 class DescribeAITaskResultResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeAITaskResultResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param StandardAudioResult $AudioResult 音频分析结果
      * @param StandardImageResult $ImageResult 图像分析结果
@@ -78,6 +77,7 @@ class DescribeAITaskResultResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

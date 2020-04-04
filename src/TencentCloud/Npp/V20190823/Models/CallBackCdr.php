@@ -18,6 +18,8 @@ namespace TencentCloud\Npp\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 话单详情
+ *
  * @method string getCallId() 获取呼叫通话 ID
  * @method void setCallId(string $CallId) 设置呼叫通话 ID
  * @method string getSrc() 获取主叫号码
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrderId(string $OrderId) 设置订单 ID,最大长度不超过 64 个字节，对于一些有订单状态 App 相关应用（如达人帮接入 App 应用)，该字段只在帐单中带上，其它回调不附带该字段
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *话单详情
  */
 class CallBackCdr extends AbstractModel
 {
@@ -145,6 +143,7 @@ class CallBackCdr extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrderId;
+
     /**
      * @param string $CallId 呼叫通话 ID
      * @param string $Src 主叫号码
@@ -170,6 +169,7 @@ class CallBackCdr extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

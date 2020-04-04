@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 鉴恐任务控制参数。
+ *
  * @method TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() 获取画面鉴恐任务控制参数。
  * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo) 设置画面鉴恐任务控制参数。
  * @method TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() 获取文本鉴恐任务控制参数。
  * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo) 设置文本鉴恐任务控制参数。
- */
-
-/**
- *鉴恐任务控制参数。
  */
 class TerrorismConfigureInfoForUpdate extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TerrorismConfigureInfoForUpdate extends AbstractModel
      * @var TerrorismOcrReviewTemplateInfoForUpdate 文本鉴恐任务控制参数。
      */
     public $OcrReviewInfo;
+
     /**
      * @param TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo 画面鉴恐任务控制参数。
      * @param TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo 文本鉴恐任务控制参数。
@@ -46,6 +45,7 @@ class TerrorismConfigureInfoForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

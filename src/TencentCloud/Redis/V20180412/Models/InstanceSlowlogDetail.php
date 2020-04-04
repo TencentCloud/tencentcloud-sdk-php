@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 慢查询详情
+ *
  * @method integer getDuration() 获取慢查询耗时
  * @method void setDuration(integer $Duration) 设置慢查询耗时
  * @method string getClient() 获取客户端地址
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommandLine(string $CommandLine) 设置详细命令行信息
  * @method string getExecuteTime() 获取执行时间
  * @method void setExecuteTime(string $ExecuteTime) 设置执行时间
- */
-
-/**
- *慢查询详情
  */
 class InstanceSlowlogDetail extends AbstractModel
 {
@@ -59,6 +57,7 @@ class InstanceSlowlogDetail extends AbstractModel
      * @var string 执行时间
      */
     public $ExecuteTime;
+
     /**
      * @param integer $Duration 慢查询耗时
      * @param string $Client 客户端地址
@@ -70,6 +69,7 @@ class InstanceSlowlogDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

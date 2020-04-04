@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDomain请求参数结构体
+ *
  * @method string getListenerId() 获取监听器ID。
  * @method void setListenerId(string $ListenerId) 设置监听器ID。
  * @method string getDomain() 获取需要创建的域名，一个监听器下最大支持100个域名。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
  * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) 设置客户端CA证书，用于客户端与GAAP的HTTPS的交互。
 仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
- */
-
-/**
- *CreateDomain请求参数结构体
  */
 class CreateDomainRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ class CreateDomainRequest extends AbstractModel
 仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
      */
     public $PolyClientCertificateIds;
+
     /**
      * @param string $ListenerId 监听器ID。
      * @param string $Domain 需要创建的域名，一个监听器下最大支持100个域名。
@@ -78,6 +77,7 @@ class CreateDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

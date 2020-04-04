@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 配置项发布日志
+ *
  * @method string getConfigReleaseLogId() 获取配置项发布日志ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigReleaseLogId(string $ConfigReleaseLogId) 设置配置项发布日志ID
@@ -86,10 +88,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRollbackFlag(boolean $RollbackFlag) 设置回滚标识
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *配置项发布日志
  */
 class ConfigReleaseLog extends AbstractModel
 {
@@ -194,6 +192,7 @@ class ConfigReleaseLog extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RollbackFlag;
+
     /**
      * @param string $ConfigReleaseLogId 配置项发布日志ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -234,6 +233,7 @@ class ConfigReleaseLog extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

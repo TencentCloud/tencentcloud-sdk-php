@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeployDynamicContractHandler请求参数结构体
+ *
  * @method string getModule() 获取模块名，固定字段：contract
  * @method void setModule(string $Module) 设置模块名，固定字段：contract
  * @method string getOperation() 获取操作名，固定字段：deploy_by_dynamic_contract
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setByteCodeBin(string $ByteCodeBin) 设置合约编译后的binary
  * @method array getConstructorParams() 获取构造函数入参
  * @method void setConstructorParams(array $ConstructorParams) 设置构造函数入参
- */
-
-/**
- *DeployDynamicContractHandler请求参数结构体
  */
 class DeployDynamicContractHandlerRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DeployDynamicContractHandlerRequest extends AbstractModel
      * @var array 构造函数入参
      */
     public $ConstructorParams;
+
     /**
      * @param string $Module 模块名，固定字段：contract
      * @param string $Operation 操作名，固定字段：deploy_by_dynamic_contract
@@ -86,6 +85,7 @@ class DeployDynamicContractHandlerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

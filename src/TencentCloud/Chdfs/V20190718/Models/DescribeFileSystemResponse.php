@@ -18,16 +18,14 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeFileSystem返回参数结构体
+ *
  * @method FileSystem getFileSystem() 获取文件系统
  * @method void setFileSystem(FileSystem $FileSystem) 设置文件系统
  * @method integer getFileSystemCapacityUsed() 获取文件系统已使用大小（byte）
  * @method void setFileSystemCapacityUsed(integer $FileSystemCapacityUsed) 设置文件系统已使用大小（byte）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeFileSystem返回参数结构体
  */
 class DescribeFileSystemResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeFileSystemResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param FileSystem $FileSystem 文件系统
      * @param integer $FileSystemCapacityUsed 文件系统已使用大小（byte）
@@ -54,6 +53,7 @@ class DescribeFileSystemResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

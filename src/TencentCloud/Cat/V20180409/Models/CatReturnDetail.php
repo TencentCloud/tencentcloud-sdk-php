@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 拨测失败详情
+ *
  * @method string getIspName() 获取运营商名称
  * @method void setIspName(string $IspName) 设置运营商名称
  * @method string getProvince() 获取省份全拼
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResultCode(integer $ResultCode) 设置拨测失败返回码
  * @method string getErrorReason() 获取拨测失败原因描述
  * @method void setErrorReason(string $ErrorReason) 设置拨测失败原因描述
- */
-
-/**
- *拨测失败详情
  */
 class CatReturnDetail extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CatReturnDetail extends AbstractModel
      * @var string 拨测失败原因描述
      */
     public $ErrorReason;
+
     /**
      * @param string $IspName 运营商名称
      * @param string $Province 省份全拼
@@ -94,6 +93,7 @@ class CatReturnDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

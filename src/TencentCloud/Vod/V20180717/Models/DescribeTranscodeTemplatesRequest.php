@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTranscodeTemplates请求参数结构体
+ *
  * @method array getDefinitions() 获取转码模板唯一标识过滤条件，数组长度限制：100。
  * @method void setDefinitions(array $Definitions) 设置转码模板唯一标识过滤条件，数组长度限制：100。
  * @method string getType() 获取模板类型过滤条件，可选值：
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *DescribeTranscodeTemplates请求参数结构体
  */
 class DescribeTranscodeTemplatesRequest extends AbstractModel
 {
@@ -91,6 +89,7 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param array $Definitions 转码模板唯一标识过滤条件，数组长度限制：100。
      * @param string $Type 模板类型过滤条件，可选值：
@@ -110,6 +109,7 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

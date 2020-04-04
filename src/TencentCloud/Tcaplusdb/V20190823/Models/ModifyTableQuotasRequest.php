@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTableQuotas请求参数结构体
+ *
  * @method string getClusterId() 获取带扩缩容表所属集群ID
  * @method void setClusterId(string $ClusterId) 设置带扩缩容表所属集群ID
  * @method array getTableQuotas() 获取已选中待修改的表配额列表
  * @method void setTableQuotas(array $TableQuotas) 设置已选中待修改的表配额列表
- */
-
-/**
- *ModifyTableQuotas请求参数结构体
  */
 class ModifyTableQuotasRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyTableQuotasRequest extends AbstractModel
      * @var array 已选中待修改的表配额列表
      */
     public $TableQuotas;
+
     /**
      * @param string $ClusterId 带扩缩容表所属集群ID
      * @param array $TableQuotas 已选中待修改的表配额列表
@@ -46,6 +45,7 @@ class ModifyTableQuotasRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

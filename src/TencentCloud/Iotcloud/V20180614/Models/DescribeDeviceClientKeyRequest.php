@@ -18,14 +18,12 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDeviceClientKey请求参数结构体
+ *
  * @method string getProductId() 获取所属产品的Id
  * @method void setProductId(string $ProductId) 设置所属产品的Id
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
- */
-
-/**
- *DescribeDeviceClientKey请求参数结构体
  */
 class DescribeDeviceClientKeyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDeviceClientKeyRequest extends AbstractModel
      * @var string 设备名称
      */
     public $DeviceName;
+
     /**
      * @param string $ProductId 所属产品的Id
      * @param string $DeviceName 设备名称
@@ -46,6 +45,7 @@ class DescribeDeviceClientKeyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

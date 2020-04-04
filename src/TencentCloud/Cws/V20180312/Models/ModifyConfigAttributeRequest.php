@@ -18,12 +18,10 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyConfigAttribute请求参数结构体
+ *
  * @method string getNoticeLevel() 获取漏洞告警通知等级，4位分别代表：高危、中危、低危、提示
  * @method void setNoticeLevel(string $NoticeLevel) 设置漏洞告警通知等级，4位分别代表：高危、中危、低危、提示
- */
-
-/**
- *ModifyConfigAttribute请求参数结构体
  */
 class ModifyConfigAttributeRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ModifyConfigAttributeRequest extends AbstractModel
      * @var string 漏洞告警通知等级，4位分别代表：高危、中危、低危、提示
      */
     public $NoticeLevel;
+
     /**
      * @param string $NoticeLevel 漏洞告警通知等级，4位分别代表：高危、中危、低危、提示
      */
@@ -38,6 +37,7 @@ class ModifyConfigAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

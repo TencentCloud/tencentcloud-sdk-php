@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateServiceConfig请求参数结构体
+ *
  * @method string getName() 获取配置名称
  * @method void setName(string $Name) 设置配置名称
  * @method string getRuntime() 获取运行环境
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelUri(string $ModelUri) 设置模型地址，支持cos路径，格式为 cos://bucket名-appid.cos.region名.myqcloud.com/模型文件夹路径。为模型文件的上一层文件夹地址。
  * @method string getDescription() 获取配置描述
  * @method void setDescription(string $Description) 设置配置描述
- */
-
-/**
- *CreateServiceConfig请求参数结构体
  */
 class CreateServiceConfigRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateServiceConfigRequest extends AbstractModel
      * @var string 配置描述
      */
     public $Description;
+
     /**
      * @param string $Name 配置名称
      * @param string $Runtime 运行环境
@@ -62,6 +61,7 @@ class CreateServiceConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

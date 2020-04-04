@@ -18,12 +18,10 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 缓存相关配置。
+ *
  * @method string getFullUrlCache() 获取是否开启全路径缓存，on或off。
  * @method void setFullUrlCache(string $FullUrlCache) 设置是否开启全路径缓存，on或off。
- */
-
-/**
- *缓存相关配置。
  */
 class CacheKey extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CacheKey extends AbstractModel
      * @var string 是否开启全路径缓存，on或off。
      */
     public $FullUrlCache;
+
     /**
      * @param string $FullUrlCache 是否开启全路径缓存，on或off。
      */
@@ -38,6 +37,7 @@ class CacheKey extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

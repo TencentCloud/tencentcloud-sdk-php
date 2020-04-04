@@ -18,16 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterInstances返回参数结构体
+ *
  * @method integer getTotalCount() 获取集群中实例总数
  * @method void setTotalCount(integer $TotalCount) 设置集群中实例总数
  * @method array getInstanceSet() 获取集群中实例列表
  * @method void setInstanceSet(array $InstanceSet) 设置集群中实例列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeClusterInstances返回参数结构体
  */
 class DescribeClusterInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeClusterInstancesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 集群中实例总数
      * @param array $InstanceSet 集群中实例列表
@@ -54,6 +53,7 @@ class DescribeClusterInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

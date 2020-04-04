@@ -18,12 +18,10 @@ namespace TencentCloud\Tkgdq\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEntity请求参数结构体
+ *
  * @method string getEntityName() 获取实体名称
  * @method void setEntityName(string $EntityName) 设置实体名称
- */
-
-/**
- *DescribeEntity请求参数结构体
  */
 class DescribeEntityRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeEntityRequest extends AbstractModel
      * @var string 实体名称
      */
     public $EntityName;
+
     /**
      * @param string $EntityName 实体名称
      */
@@ -38,6 +37,7 @@ class DescribeEntityRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterPersonTrace返回参数结构体
+ *
  * @method string getMallId() 获取卖场系统编码
  * @method void setMallId(string $MallId) 设置卖场系统编码
  * @method string getMallCode() 获取卖场用户编码
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTracePointSet(array $TracePointSet) 设置轨迹序列
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeClusterPersonTrace返回参数结构体
  */
 class DescribeClusterPersonTraceResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeClusterPersonTraceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $MallId 卖场系统编码
      * @param string $MallCode 卖场用户编码
@@ -70,6 +69,7 @@ class DescribeClusterPersonTraceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户漏洞数随时间变化统计数据
+ *
  * @method integer getId() 获取ID。
  * @method void setId(integer $Id) 设置ID。
  * @method integer getAppid() 获取云用户appid。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedAt(string $CreatedAt) 设置记录添加时间。
  * @method string getUpdatedAt() 获取记录最近修改时间。
  * @method void setUpdatedAt(string $UpdatedAt) 设置记录最近修改时间。
- */
-
-/**
- *用户漏洞数随时间变化统计数据
  */
 class VulsTimeline extends AbstractModel
 {
@@ -108,6 +106,7 @@ class VulsTimeline extends AbstractModel
      * @var string 记录最近修改时间。
      */
     public $UpdatedAt;
+
     /**
      * @param integer $Id ID。
      * @param integer $Appid 云用户appid。
@@ -126,6 +125,7 @@ class VulsTimeline extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Soe\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音过程中断句的中间结果
+ *
  * @method integer getSentenceId() 获取句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
  * @method void setSentenceId(integer $SentenceId) 设置句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
  * @method array getWords() 获取详细发音评估结果
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPronCompletion(float $PronCompletion) 设置发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
  * @method float getSuggestedScore() 获取建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
  * @method void setSuggestedScore(float $SuggestedScore) 设置建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
- */
-
-/**
- *语音过程中断句的中间结果
  */
 class SentenceInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class SentenceInfo extends AbstractModel
      * @var float 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
      */
     public $SuggestedScore;
+
     /**
      * @param integer $SentenceId 句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
      * @param array $Words 详细发音评估结果
@@ -78,6 +77,7 @@ class SentenceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Ft\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ChangeAgePic返回参数结构体
+ *
  * @method string getResultImage() 获取base64编码图片
  * @method void setResultImage(string $ResultImage) 设置base64编码图片
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ChangeAgePic返回参数结构体
  */
 class ChangeAgePicResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ChangeAgePicResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $ResultImage base64编码图片
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class ChangeAgePicResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

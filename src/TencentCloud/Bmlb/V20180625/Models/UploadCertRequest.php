@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UploadCert请求参数结构体
+ *
  * @method string getCertType() 获取证书类型，可选值：CA，SVR。
  * @method void setCertType(string $CertType) 设置证书类型，可选值：CA，SVR。
  * @method string getCert() 获取证书内容。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlias(string $Alias) 设置证书别名。
  * @method string getKey() 获取私钥内容，证书类型为SVR时不需要传递。
  * @method void setKey(string $Key) 设置私钥内容，证书类型为SVR时不需要传递。
- */
-
-/**
- *UploadCert请求参数结构体
  */
 class UploadCertRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class UploadCertRequest extends AbstractModel
      * @var string 私钥内容，证书类型为SVR时不需要传递。
      */
     public $Key;
+
     /**
      * @param string $CertType 证书类型，可选值：CA，SVR。
      * @param string $Cert 证书内容。
@@ -62,6 +61,7 @@ class UploadCertRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

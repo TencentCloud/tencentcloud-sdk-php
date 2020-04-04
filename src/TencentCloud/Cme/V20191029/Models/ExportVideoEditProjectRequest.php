@@ -18,6 +18,8 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ExportVideoEditProject请求参数结构体
+ *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
  * @method string getProjectId() 获取项目 Id。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCMEExportInfo(CMEExportInfo $CMEExportInfo) 设置导出的云剪素材信息。指定 ExportDestination = CME 时有效。
  * @method VODExportInfo getVODExportInfo() 获取导出的云点播媒资信息。指定 ExportDestination = VOD 时有效。
  * @method void setVODExportInfo(VODExportInfo $VODExportInfo) 设置导出的云点播媒资信息。指定 ExportDestination = VOD 时有效。
- */
-
-/**
- *ExportVideoEditProject请求参数结构体
  */
 class ExportVideoEditProjectRequest extends AbstractModel
 {
@@ -81,6 +79,7 @@ class ExportVideoEditProjectRequest extends AbstractModel
      * @var VODExportInfo 导出的云点播媒资信息。指定 ExportDestination = VOD 时有效。
      */
     public $VODExportInfo;
+
     /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $ProjectId 项目 Id。
@@ -98,6 +97,7 @@ class ExportVideoEditProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

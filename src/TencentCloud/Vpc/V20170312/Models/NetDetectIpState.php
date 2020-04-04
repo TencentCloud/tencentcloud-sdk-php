@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 网络探测目的IP的验证结果。
+ *
  * @method string getDetectDestinationIp() 获取探测目的IPv4地址。
  * @method void setDetectDestinationIp(string $DetectDestinationIp) 设置探测目的IPv4地址。
  * @method integer getState() 获取探测结果。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDelay(integer $Delay) 设置时延，单位毫秒
  * @method integer getPacketLossRate() 获取丢包率
  * @method void setPacketLossRate(integer $PacketLossRate) 设置丢包率
- */
-
-/**
- *网络探测目的IP的验证结果。
  */
 class NetDetectIpState extends AbstractModel
 {
@@ -67,6 +65,7 @@ class NetDetectIpState extends AbstractModel
      * @var integer 丢包率
      */
     public $PacketLossRate;
+
     /**
      * @param string $DetectDestinationIp 探测目的IPv4地址。
      * @param integer $State 探测结果。
@@ -82,6 +81,7 @@ class NetDetectIpState extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

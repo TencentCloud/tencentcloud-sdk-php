@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 主机漏洞信息
+ *
  * @method integer getId() 获取漏洞ID。
  * @method void setId(integer $Id) 设置漏洞ID。
  * @method string getMachineIp() 获取主机IP。
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulStatus(string $VulStatus) 设置漏洞状态。
 <li>UN_OPERATED : 待处理</li>
 <li>FIXED : 已修复</li>
- */
-
-/**
- *主机漏洞信息
  */
 class AgentVul extends AbstractModel
 {
@@ -98,6 +96,7 @@ class AgentVul extends AbstractModel
 <li>FIXED : 已修复</li>
      */
     public $VulStatus;
+
     /**
      * @param integer $Id 漏洞ID。
      * @param string $MachineIp 主机IP。
@@ -118,6 +117,7 @@ class AgentVul extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

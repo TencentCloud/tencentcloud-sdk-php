@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 模型服务
+ *
  * @method string getId() 获取服务ID
  * @method void setId(string $Id) 设置服务ID
  * @method string getCluster() 获取运行集群
@@ -90,10 +92,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogTopicId(string $LogTopicId) 设置Cls日志主题Id
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *模型服务
  */
 class ModelService extends AbstractModel
 {
@@ -236,6 +234,7 @@ class ModelService extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogTopicId;
+
     /**
      * @param string $Id 服务ID
      * @param string $Cluster 运行集群
@@ -278,6 +277,7 @@ class ModelService extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

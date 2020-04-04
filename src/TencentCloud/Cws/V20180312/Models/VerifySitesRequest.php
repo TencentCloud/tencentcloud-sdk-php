@@ -18,12 +18,10 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VerifySites请求参数结构体
+ *
  * @method array getUrls() 获取站点的url列表
  * @method void setUrls(array $Urls) 设置站点的url列表
- */
-
-/**
- *VerifySites请求参数结构体
  */
 class VerifySitesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class VerifySitesRequest extends AbstractModel
      * @var array 站点的url列表
      */
     public $Urls;
+
     /**
      * @param array $Urls 站点的url列表
      */
@@ -38,6 +37,7 @@ class VerifySitesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

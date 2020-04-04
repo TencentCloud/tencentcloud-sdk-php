@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频处理任务统计数据。
+ *
  * @method string getTaskType() 获取任务类型。
 <li>Transcode: 转码</li>
 <li>Snapshot: 截图</li>
@@ -99,10 +101,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Edit.H265.2K: H.265编码方式2K视频编辑</li>
 <li>Edit.H265.4K: H.265编码方式4K视频编辑</li>
  */
-
-/**
- *视频处理任务统计数据。
- */
 class TaskStatData extends AbstractModel
 {
     /**
@@ -156,6 +154,7 @@ class TaskStatData extends AbstractModel
 <li>Edit.H265.4K: H.265编码方式4K视频编辑</li>
      */
     public $Details;
+
     /**
      * @param string $TaskType 任务类型。
 <li>Transcode: 转码</li>
@@ -202,6 +201,7 @@ class TaskStatData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

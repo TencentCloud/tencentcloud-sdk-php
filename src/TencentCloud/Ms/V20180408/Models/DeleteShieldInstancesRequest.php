@@ -18,12 +18,10 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteShieldInstances请求参数结构体
+ *
  * @method array getItemIds() 获取任务唯一标识ItemId的列表
  * @method void setItemIds(array $ItemIds) 设置任务唯一标识ItemId的列表
- */
-
-/**
- *DeleteShieldInstances请求参数结构体
  */
 class DeleteShieldInstancesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteShieldInstancesRequest extends AbstractModel
      * @var array 任务唯一标识ItemId的列表
      */
     public $ItemIds;
+
     /**
      * @param array $ItemIds 任务唯一标识ItemId的列表
      */
@@ -38,6 +37,7 @@ class DeleteShieldInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

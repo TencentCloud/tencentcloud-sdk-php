@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 备机信息
+ *
  * @method SlaveInstanceInfo getFirst() 获取第一备机信息
  * @method void setFirst(SlaveInstanceInfo $First) 设置第一备机信息
  * @method SlaveInstanceInfo getSecond() 获取第二备机信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecond(SlaveInstanceInfo $Second) 设置第二备机信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *备机信息
  */
 class SlaveInfo extends AbstractModel
 {
@@ -41,6 +39,7 @@ class SlaveInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Second;
+
     /**
      * @param SlaveInstanceInfo $First 第一备机信息
      * @param SlaveInstanceInfo $Second 第二备机信息
@@ -50,6 +49,7 @@ class SlaveInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

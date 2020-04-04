@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetInstancesMaxBandwidth请求参数结构体
+ *
  * @method array getInstanceIdSet() 获取待重置带宽上限的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置待重置带宽上限的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。
  * @method integer getMaxBandwidthOut() 获取修改后的最大带宽上限。
  * @method void setMaxBandwidthOut(integer $MaxBandwidthOut) 设置修改后的最大带宽上限。
- */
-
-/**
- *ResetInstancesMaxBandwidth请求参数结构体
  */
 class ResetInstancesMaxBandwidthRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ResetInstancesMaxBandwidthRequest extends AbstractModel
      * @var integer 修改后的最大带宽上限。
      */
     public $MaxBandwidthOut;
+
     /**
      * @param array $InstanceIdSet 待重置带宽上限的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。
      * @param integer $MaxBandwidthOut 修改后的最大带宽上限。
@@ -46,6 +45,7 @@ class ResetInstancesMaxBandwidthRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

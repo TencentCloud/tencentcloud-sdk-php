@@ -18,12 +18,10 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteRuntime请求参数结构体
+ *
  * @method string getRuntime() 获取要删除的Runtime名
  * @method void setRuntime(string $Runtime) 设置要删除的Runtime名
- */
-
-/**
- *DeleteRuntime请求参数结构体
  */
 class DeleteRuntimeRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteRuntimeRequest extends AbstractModel
      * @var string 要删除的Runtime名
      */
     public $Runtime;
+
     /**
      * @param string $Runtime 要删除的Runtime名
      */
@@ -38,6 +37,7 @@ class DeleteRuntimeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

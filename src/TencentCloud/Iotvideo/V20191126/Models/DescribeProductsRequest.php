@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProducts请求参数结构体
+ *
  * @method integer getLimit() 获取分页大小，当前页面中显示的最大数量，值范围 1-100
  * @method void setLimit(integer $Limit) 设置分页大小，当前页面中显示的最大数量，值范围 1-100
  * @method integer getOffset() 获取分页偏移，Offset从0开始
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置开始时间 ，UNIX 时间戳，单位秒
  * @method integer getEndTime() 获取结束时间 ，UNIX 时间戳，单位秒
  * @method void setEndTime(integer $EndTime) 设置结束时间 ，UNIX 时间戳，单位秒
- */
-
-/**
- *DescribeProducts请求参数结构体
  */
 class DescribeProductsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeProductsRequest extends AbstractModel
      * @var integer 结束时间 ，UNIX 时间戳，单位秒
      */
     public $EndTime;
+
     /**
      * @param integer $Limit 分页大小，当前页面中显示的最大数量，值范围 1-100
      * @param integer $Offset 分页偏移，Offset从0开始
@@ -70,6 +69,7 @@ class DescribeProductsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetTrafficMirrorAlias请求参数结构体
+ *
  * @method string getTrafficMirrorId() 获取流量镜像实例ID。
  * @method void setTrafficMirrorId(string $TrafficMirrorId) 设置流量镜像实例ID。
  * @method string getAlias() 获取流量镜像实例别名。
  * @method void setAlias(string $Alias) 设置流量镜像实例别名。
- */
-
-/**
- *SetTrafficMirrorAlias请求参数结构体
  */
 class SetTrafficMirrorAliasRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SetTrafficMirrorAliasRequest extends AbstractModel
      * @var string 流量镜像实例别名。
      */
     public $Alias;
+
     /**
      * @param string $TrafficMirrorId 流量镜像实例ID。
      * @param string $Alias 流量镜像实例别名。
@@ -46,6 +45,7 @@ class SetTrafficMirrorAliasRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

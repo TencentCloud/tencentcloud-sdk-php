@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务概要信息
+ *
  * @method string getTaskId() 获取任务 ID。
  * @method void setTaskId(string $TaskId) 设置任务 ID。
  * @method string getTaskType() 获取任务类型，取值：
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息。
  * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息。
- */
-
-/**
- *任务概要信息
  */
 class TaskSimpleInfo extends AbstractModel
 {
@@ -106,6 +104,7 @@ class TaskSimpleInfo extends AbstractModel
      * @var string 来源上下文，用于透传用户请求信息。
      */
     public $SessionContext;
+
     /**
      * @param string $TaskId 任务 ID。
      * @param string $TaskType 任务类型，取值：
@@ -130,6 +129,7 @@ class TaskSimpleInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

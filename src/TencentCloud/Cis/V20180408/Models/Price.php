@@ -18,14 +18,12 @@ namespace TencentCloud\Cis\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 价格
+ *
  * @method float getDiscountPrice() 获取原价，单位：元
  * @method void setDiscountPrice(float $DiscountPrice) 设置原价，单位：元
  * @method float getOriginalPrice() 获取折扣价，单位：元
  * @method void setOriginalPrice(float $OriginalPrice) 设置折扣价，单位：元
- */
-
-/**
- *价格
  */
 class Price extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Price extends AbstractModel
      * @var float 折扣价，单位：元
      */
     public $OriginalPrice;
+
     /**
      * @param float $DiscountPrice 原价，单位：元
      * @param float $OriginalPrice 折扣价，单位：元
@@ -46,6 +45,7 @@ class Price extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDomainErrorPageInfo请求参数结构体
+ *
  * @method string getListenerId() 获取监听器ID
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- */
-
-/**
- *DescribeDomainErrorPageInfo请求参数结构体
  */
 class DescribeDomainErrorPageInfoRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDomainErrorPageInfoRequest extends AbstractModel
      * @var string 域名
      */
     public $Domain;
+
     /**
      * @param string $ListenerId 监听器ID
      * @param string $Domain 域名
@@ -46,6 +45,7 @@ class DescribeDomainErrorPageInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 项目信息。
+ *
  * @method string getProjectId() 获取项目 Id。
  * @method void setProjectId(string $ProjectId) 设置项目 Id。
  * @method string getName() 获取项目名称。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置项目创建时间，格式按照 ISO 8601 标准表示。
  * @method string getUpdateTime() 获取项目更新时间，格式按照 ISO 8601 标准表示。
  * @method void setUpdateTime(string $UpdateTime) 设置项目更新时间，格式按照 ISO 8601 标准表示。
- */
-
-/**
- *项目信息。
  */
 class ProjectInfo extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ProjectInfo extends AbstractModel
      * @var string 项目更新时间，格式按照 ISO 8601 标准表示。
      */
     public $UpdateTime;
+
     /**
      * @param string $ProjectId 项目 Id。
      * @param string $Name 项目名称。
@@ -94,6 +93,7 @@ class ProjectInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

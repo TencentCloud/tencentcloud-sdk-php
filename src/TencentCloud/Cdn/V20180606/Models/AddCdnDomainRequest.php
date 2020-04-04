@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddCdnDomain请求参数结构体
+ *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
  * @method string getServiceType() 获取加速域名业务类型
@@ -94,10 +96,6 @@ global：全球加速
 使用中国境外加速、全球加速时，需要先开通中国境外加速服务
  * @method OriginPullTimeout getOriginPullTimeout() 获取回源超时配置
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) 设置回源超时配置
- */
-
-/**
- *AddCdnDomain请求参数结构体
  */
 class AddCdnDomainRequest extends AbstractModel
 {
@@ -258,6 +256,7 @@ global：全球加速
      * @var OriginPullTimeout 回源超时配置
      */
     public $OriginPullTimeout;
+
     /**
      * @param string $Domain 域名
      * @param string $ServiceType 加速域名业务类型
@@ -302,6 +301,7 @@ global：全球加速
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

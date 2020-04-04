@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 老师肢体动作识别结果
+ *
  * @method float getConfidence() 获取置信度
  * @method void setConfidence(float $Confidence) 设置置信度
  * @method integer getHeight() 获取识别结果高度
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTop(integer $Top) 设置识别结果顶坐标
  * @method integer getWidth() 获取识别结果宽度
  * @method void setWidth(integer $Width) 设置识别结果宽度
- */
-
-/**
- *老师肢体动作识别结果
  */
 class BodyMovementResult extends AbstractModel
 {
@@ -78,6 +76,7 @@ class BodyMovementResult extends AbstractModel
      * @var integer 识别结果宽度
      */
     public $Width;
+
     /**
      * @param float $Confidence 置信度
      * @param integer $Height 识别结果高度
@@ -94,6 +93,7 @@ class BodyMovementResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 拉取某个用户的所有资源信息
+ *
  * @method string getResourceId() 获取用户购买的资源id，全局唯一
  * @method void setResourceId(string $ResourceId) 设置用户购买的资源id，全局唯一
  * @method integer getPid() 获取资源的pid，MTP加固-12767，应用加固-12750 MTP反作弊-12766 源代码混淆-12736
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBindInfo(BindInfo $BindInfo) 设置用户绑定app的基本信息
  * @method string getResourceName() 获取资源名称，如应用加固，漏洞扫描
  * @method void setResourceName(string $ResourceName) 设置资源名称，如应用加固，漏洞扫描
- */
-
-/**
- *拉取某个用户的所有资源信息
  */
 class ResourceInfo extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ResourceInfo extends AbstractModel
      * @var string 资源名称，如应用加固，漏洞扫描
      */
     public $ResourceName;
+
     /**
      * @param string $ResourceId 用户购买的资源id，全局唯一
      * @param integer $Pid 资源的pid，MTP加固-12767，应用加固-12750 MTP反作弊-12766 源代码混淆-12736
@@ -86,6 +85,7 @@ class ResourceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

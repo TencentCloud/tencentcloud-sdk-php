@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeContentReviewTemplates请求参数结构体
+ *
  * @method array getDefinitions() 获取内容审核模板唯一标识过滤条件，数组长度限制：50。
  * @method void setDefinitions(array $Definitions) 设置内容审核模板唯一标识过滤条件，数组长度限制：50。
  * @method integer getOffset() 获取分页偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：50。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：50。
- */
-
-/**
- *DescribeContentReviewTemplates请求参数结构体
  */
 class DescribeContentReviewTemplatesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeContentReviewTemplatesRequest extends AbstractModel
      * @var integer 返回记录条数，默认值：10，最大值：50。
      */
     public $Limit;
+
     /**
      * @param array $Definitions 内容审核模板唯一标识过滤条件，数组长度限制：50。
      * @param integer $Offset 分页偏移量，默认值：0。
@@ -54,6 +53,7 @@ class DescribeContentReviewTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

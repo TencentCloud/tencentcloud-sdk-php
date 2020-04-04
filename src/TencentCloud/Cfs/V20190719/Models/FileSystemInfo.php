@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文件系统基本信息
+ *
  * @method string getCreationTime() 获取创建时间
  * @method void setCreationTime(string $CreationTime) 设置创建时间
  * @method string getCreationToken() 获取用户自定义名称
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKmsKeyId(string $KmsKeyId) 设置加密所使用的密钥，可以为密钥的 ID 或者 ARN
  * @method integer getAppId() 获取应用ID
  * @method void setAppId(integer $AppId) 设置应用ID
- */
-
-/**
- *文件系统基本信息
  */
 class FileSystemInfo extends AbstractModel
 {
@@ -143,6 +141,7 @@ class FileSystemInfo extends AbstractModel
      * @var integer 应用ID
      */
     public $AppId;
+
     /**
      * @param string $CreationTime 创建时间
      * @param string $CreationToken 用户自定义名称
@@ -166,6 +165,7 @@ class FileSystemInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

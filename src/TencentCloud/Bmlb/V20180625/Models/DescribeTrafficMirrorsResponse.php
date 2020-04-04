@@ -18,16 +18,14 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTrafficMirrors返回参数结构体
+ *
  * @method integer getTotalCount() 获取流量镜像总数。
  * @method void setTotalCount(integer $TotalCount) 设置流量镜像总数。
  * @method array getTrafficMirrorSet() 获取对象数组。数组元素为流量镜像信息，具体结构描述如list结构所示。
  * @method void setTrafficMirrorSet(array $TrafficMirrorSet) 设置对象数组。数组元素为流量镜像信息，具体结构描述如list结构所示。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeTrafficMirrors返回参数结构体
  */
 class DescribeTrafficMirrorsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTrafficMirrorsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 流量镜像总数。
      * @param array $TrafficMirrorSet 对象数组。数组元素为流量镜像信息，具体结构描述如list结构所示。
@@ -54,6 +53,7 @@ class DescribeTrafficMirrorsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

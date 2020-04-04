@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDisks请求参数结构体
+ *
  * @method string getDiskType() 获取硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
  * @method void setDiskType(string $DiskType) 设置硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
  * @method string getDiskChargeType() 获取云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDCPAID：独享集群付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置云盘绑定的标签。
  * @method boolean getShareable() 获取可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
  * @method void setShareable(boolean $Shareable) 设置可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
- */
-
-/**
- *CreateDisks请求参数结构体
  */
 class CreateDisksRequest extends AbstractModel
 {
@@ -108,6 +106,7 @@ class CreateDisksRequest extends AbstractModel
      * @var boolean 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
      */
     public $Shareable;
+
     /**
      * @param string $DiskType 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
      * @param string $DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDCPAID：独享集群付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
@@ -126,6 +125,7 @@ class CreateDisksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 区块对象
+ *
  * @method integer getBlockNum() 获取区块编号
  * @method void setBlockNum(integer $BlockNum) 设置区块编号
  * @method string getDataHash() 获取区块Hash数值
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreHash(string $PreHash) 设置前一个区块Hash（未使用）,与区块Hash数值一致
  * @method integer getTxCount() 获取区块内的交易数量
  * @method void setTxCount(integer $TxCount) 设置区块内的交易数量
- */
-
-/**
- *区块对象
  */
 class Block extends AbstractModel
 {
@@ -59,6 +57,7 @@ class Block extends AbstractModel
      * @var integer 区块内的交易数量
      */
     public $TxCount;
+
     /**
      * @param integer $BlockNum 区块编号
      * @param string $DataHash 区块Hash数值
@@ -70,6 +69,7 @@ class Block extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

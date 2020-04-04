@@ -18,14 +18,12 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 播放控制参数
+ *
  * @method integer getLicenseDurationSeconds() 获取播放许可证的有效期
  * @method void setLicenseDurationSeconds(integer $LicenseDurationSeconds) 设置播放许可证的有效期
  * @method integer getPlaybackDurationSeconds() 获取开始播放后，允许最长播放时间
  * @method void setPlaybackDurationSeconds(integer $PlaybackDurationSeconds) 设置开始播放后，允许最长播放时间
- */
-
-/**
- *播放控制参数
  */
 class PlaybackPolicy extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PlaybackPolicy extends AbstractModel
      * @var integer 开始播放后，允许最长播放时间
      */
     public $PlaybackDurationSeconds;
+
     /**
      * @param integer $LicenseDurationSeconds 播放许可证的有效期
      * @param integer $PlaybackDurationSeconds 开始播放后，允许最长播放时间
@@ -46,6 +45,7 @@ class PlaybackPolicy extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

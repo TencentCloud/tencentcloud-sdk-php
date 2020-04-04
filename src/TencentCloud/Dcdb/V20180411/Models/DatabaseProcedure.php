@@ -18,12 +18,10 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据库存储过程信息
+ *
  * @method string getProc() 获取存储过程名称
  * @method void setProc(string $Proc) 设置存储过程名称
- */
-
-/**
- *数据库存储过程信息
  */
 class DatabaseProcedure extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DatabaseProcedure extends AbstractModel
      * @var string 存储过程名称
      */
     public $Proc;
+
     /**
      * @param string $Proc 存储过程名称
      */
@@ -38,6 +37,7 @@ class DatabaseProcedure extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

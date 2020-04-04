@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPN通道对象。
+ *
  * @method string getVpnConnectionId() 获取通道实例ID。
  * @method void setVpnConnectionId(string $VpnConnectionId) 设置通道实例ID。
  * @method string getVpnConnectionName() 获取通道名称。
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIKEOptionsSpecification(IKEOptionsSpecification $IKEOptionsSpecification) 设置IKE选项。
  * @method IPSECOptionsSpecification getIPSECOptionsSpecification() 获取IPSEC选择。
  * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) 设置IPSEC选择。
- */
-
-/**
- *VPN通道对象。
  */
 class VpnConnection extends AbstractModel
 {
@@ -129,6 +127,7 @@ class VpnConnection extends AbstractModel
      * @var IPSECOptionsSpecification IPSEC选择。
      */
     public $IPSECOptionsSpecification;
+
     /**
      * @param string $VpnConnectionId 通道实例ID。
      * @param string $VpnConnectionName 通道名称。
@@ -150,6 +149,7 @@ class VpnConnection extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 过滤条件
+ *
  * @method string getName() 获取过滤字段
  * @method void setName(string $Name) 设置过滤字段
  * @method array getValues() 获取过滤值
  * @method void setValues(array $Values) 设置过滤值
- */
-
-/**
- *过滤条件
  */
 class Filter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Filter extends AbstractModel
      * @var array 过滤值
      */
     public $Values;
+
     /**
      * @param string $Name 过滤字段
      * @param array $Values 过滤值
@@ -46,6 +45,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

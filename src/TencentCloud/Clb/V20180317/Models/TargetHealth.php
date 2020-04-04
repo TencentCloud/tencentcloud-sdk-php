@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述一个Target的健康信息
+ *
  * @method string getIP() 获取Target的内网IP
  * @method void setIP(string $IP) 设置Target的内网IP
  * @method integer getPort() 获取Target绑定的端口
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetId(string $TargetId) 设置Target的实例ID，如 ins-12345678
  * @method string getHealthStatusDetial() 获取当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
  * @method void setHealthStatusDetial(string $HealthStatusDetial) 设置当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
- */
-
-/**
- *描述一个Target的健康信息
  */
 class TargetHealth extends AbstractModel
 {
@@ -59,6 +57,7 @@ class TargetHealth extends AbstractModel
      * @var string 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
      */
     public $HealthStatusDetial;
+
     /**
      * @param string $IP Target的内网IP
      * @param integer $Port Target绑定的端口
@@ -70,6 +69,7 @@ class TargetHealth extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

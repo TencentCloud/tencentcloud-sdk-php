@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 弹性网卡
+ *
  * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-f1xjkw1b。
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-f1xjkw1b。
  * @method string getNetworkInterfaceName() 获取弹性网卡名称。
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagSet(array $TagSet) 设置标签键值对。
  * @method integer getEniType() 获取网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
  * @method void setEniType(integer $EniType) 设置网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
- */
-
-/**
- *弹性网卡
  */
 class NetworkInterface extends AbstractModel
 {
@@ -154,6 +152,7 @@ class NetworkInterface extends AbstractModel
      * @var integer 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
      */
     public $EniType;
+
     /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      * @param string $NetworkInterfaceName 弹性网卡名称。
@@ -182,6 +181,7 @@ class NetworkInterface extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

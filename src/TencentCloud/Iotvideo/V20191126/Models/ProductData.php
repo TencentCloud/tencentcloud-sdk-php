@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 产品信息
+ *
  * @method string getProductId() 获取产品ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(string $ProductId) 设置产品ID
@@ -58,10 +60,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChipId(string $ChipId) 设置主芯片型号
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *产品信息
  */
 class ProductData extends AbstractModel
 {
@@ -124,6 +122,7 @@ class ProductData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChipId;
+
     /**
      * @param string $ProductId 产品ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -150,6 +149,7 @@ class ProductData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

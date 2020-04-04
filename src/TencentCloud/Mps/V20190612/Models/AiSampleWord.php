@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI 样本管理，关键词输出信息。
+ *
  * @method string getKeyword() 获取关键词。
  * @method void setKeyword(string $Keyword) 设置关键词。
  * @method array getTagSet() 获取关键词标签。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method string getUpdateTime() 获取最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method void setUpdateTime(string $UpdateTime) 设置最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
- */
-
-/**
- *AI 样本管理，关键词输出信息。
  */
 class AiSampleWord extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AiSampleWord extends AbstractModel
      * @var string 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      */
     public $UpdateTime;
+
     /**
      * @param string $Keyword 关键词。
      * @param array $TagSet 关键词标签。
@@ -70,6 +69,7 @@ class AiSampleWord extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

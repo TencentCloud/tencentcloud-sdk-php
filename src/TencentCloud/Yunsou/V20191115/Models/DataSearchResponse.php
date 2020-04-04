@@ -18,14 +18,12 @@ namespace TencentCloud\Yunsou\V20191115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DataSearch返回参数结构体
+ *
  * @method SearchResult getData() 获取检索结果
  * @method void setData(SearchResult $Data) 设置检索结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DataSearch返回参数结构体
  */
 class DataSearchResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DataSearchResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param SearchResult $Data 检索结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DataSearchResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

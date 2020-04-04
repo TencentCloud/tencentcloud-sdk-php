@@ -18,12 +18,10 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteJob请求参数结构体
+ *
  * @method string getJobId() 获取任务 Id
  * @method void setJobId(string $JobId) 设置任务 Id
- */
-
-/**
- *DeleteJob请求参数结构体
  */
 class DeleteJobRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteJobRequest extends AbstractModel
      * @var string 任务 Id
      */
     public $JobId;
+
     /**
      * @param string $JobId 任务 Id
      */
@@ -38,6 +37,7 @@ class DeleteJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

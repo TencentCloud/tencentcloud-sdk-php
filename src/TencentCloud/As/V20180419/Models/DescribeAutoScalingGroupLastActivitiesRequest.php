@@ -18,12 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAutoScalingGroupLastActivities请求参数结构体
+ *
  * @method array getAutoScalingGroupIds() 获取伸缩组ID列表
  * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) 设置伸缩组ID列表
- */
-
-/**
- *DescribeAutoScalingGroupLastActivities请求参数结构体
  */
 class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
      * @var array 伸缩组ID列表
      */
     public $AutoScalingGroupIds;
+
     /**
      * @param array $AutoScalingGroupIds 伸缩组ID列表
      */
@@ -38,6 +37,7 @@ class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

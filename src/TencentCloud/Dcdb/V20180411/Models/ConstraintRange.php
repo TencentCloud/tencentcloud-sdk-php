@@ -18,14 +18,12 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 约束类型值的范围
+ *
  * @method string getMin() 获取约束类型为section时的最小值
  * @method void setMin(string $Min) 设置约束类型为section时的最小值
  * @method string getMax() 获取约束类型为section时的最大值
  * @method void setMax(string $Max) 设置约束类型为section时的最大值
- */
-
-/**
- *约束类型值的范围
  */
 class ConstraintRange extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ConstraintRange extends AbstractModel
      * @var string 约束类型为section时的最大值
      */
     public $Max;
+
     /**
      * @param string $Min 约束类型为section时的最小值
      * @param string $Max 约束类型为section时的最大值
@@ -46,6 +45,7 @@ class ConstraintRange extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

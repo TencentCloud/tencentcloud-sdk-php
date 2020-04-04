@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindRelateAccReUnionPay请求参数结构体
+ *
  * @method string getMrchCode() 获取String(22)，商户号（签约客户号）
  * @method void setMrchCode(string $MrchCode) 设置String(22)，商户号（签约客户号）
  * @method string getTranNetMemberCode() 获取STRING(32)，交易网会员代码（若需要把一个待绑定账户关联到两个会员名下，此字段可上送两个会员的交易网代码，并且须用“|::|”（右侧）进行分隔）
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessageCheckCode(string $MessageCheckCode) 设置STRING(20)，短信验证码（即 BindRelateAcctUnionPay接口中的手机所接收到的短信验证码）
  * @method string getReservedMsg() 获取STRING(1027)，保留域
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
- */
-
-/**
- *BindRelateAccReUnionPay请求参数结构体
  */
 class BindRelateAccReUnionPayRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class BindRelateAccReUnionPayRequest extends AbstractModel
      * @var string STRING(1027)，保留域
      */
     public $ReservedMsg;
+
     /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $TranNetMemberCode STRING(32)，交易网会员代码（若需要把一个待绑定账户关联到两个会员名下，此字段可上送两个会员的交易网代码，并且须用“|::|”（右侧）进行分隔）
@@ -70,6 +69,7 @@ class BindRelateAccReUnionPayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

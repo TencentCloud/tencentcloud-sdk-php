@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteDomainErrorPageInfo请求参数结构体
+ *
  * @method string getErrorPageId() 获取定制错误响应页的唯一ID，请参考CreateDomainErrorPageInfo的响应
  * @method void setErrorPageId(string $ErrorPageId) 设置定制错误响应页的唯一ID，请参考CreateDomainErrorPageInfo的响应
- */
-
-/**
- *DeleteDomainErrorPageInfo请求参数结构体
  */
 class DeleteDomainErrorPageInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteDomainErrorPageInfoRequest extends AbstractModel
      * @var string 定制错误响应页的唯一ID，请参考CreateDomainErrorPageInfo的响应
      */
     public $ErrorPageId;
+
     /**
      * @param string $ErrorPageId 定制错误响应页的唯一ID，请参考CreateDomainErrorPageInfo的响应
      */
@@ -38,6 +37,7 @@ class DeleteDomainErrorPageInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

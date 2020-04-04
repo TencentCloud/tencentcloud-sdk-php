@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述了k8s节点数据盘相关配置与信息。
+ *
  * @method string getDiskType() 获取云盘类型
  * @method void setDiskType(string $DiskType) 设置云盘类型
  * @method string getFileSystem() 获取文件系统(ext3/ext4/xfs)
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoFormatAndMount(boolean $AutoFormatAndMount) 设置是否自动化格式盘并挂载
  * @method string getMountTarget() 获取挂载目录
  * @method void setMountTarget(string $MountTarget) 设置挂载目录
- */
-
-/**
- *描述了k8s节点数据盘相关配置与信息。
  */
 class DataDisk extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DataDisk extends AbstractModel
      * @var string 挂载目录
      */
     public $MountTarget;
+
     /**
      * @param string $DiskType 云盘类型
      * @param string $FileSystem 文件系统(ext3/ext4/xfs)
@@ -70,6 +69,7 @@ class DataDisk extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

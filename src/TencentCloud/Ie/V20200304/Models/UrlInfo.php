@@ -18,6 +18,8 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务视频Url形式下载信息。
+ *
  * @method string getUrl() 获取视频 URL。音视频支持mp4、ts等格式；直播流支持flv、rtmp格式。
 注意：目前智能编辑还不支持直播流场景。
  * @method void setUrl(string $Url) 设置视频 URL。音视频支持mp4、ts等格式；直播流支持flv、rtmp格式。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 默认为0。其他非0非1值默认为0。
  * @method string getHost() 获取指定请求资源时，HTTP头部host的值。
  * @method void setHost(string $Host) 设置指定请求资源时，HTTP头部host的值。
- */
-
-/**
- *任务视频Url形式下载信息。
  */
 class UrlInfo extends AbstractModel
 {
@@ -57,6 +55,7 @@ class UrlInfo extends AbstractModel
      * @var string 指定请求资源时，HTTP头部host的值。
      */
     public $Host;
+
     /**
      * @param string $Url 视频 URL。音视频支持mp4、ts等格式；直播流支持flv、rtmp格式。
 注意：目前智能编辑还不支持直播流场景。
@@ -70,6 +69,7 @@ class UrlInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

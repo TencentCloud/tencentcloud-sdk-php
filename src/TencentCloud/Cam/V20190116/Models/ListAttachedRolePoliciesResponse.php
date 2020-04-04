@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListAttachedRolePolicies返回参数结构体
+ *
  * @method array getList() 获取角色关联的策略列表
  * @method void setList(array $List) 设置角色关联的策略列表
  * @method integer getTotalNum() 获取角色关联的策略总数
  * @method void setTotalNum(integer $TotalNum) 设置角色关联的策略总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ListAttachedRolePolicies返回参数结构体
  */
 class ListAttachedRolePoliciesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListAttachedRolePoliciesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $List 角色关联的策略列表
      * @param integer $TotalNum 角色关联的策略总数
@@ -54,6 +53,7 @@ class ListAttachedRolePoliciesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

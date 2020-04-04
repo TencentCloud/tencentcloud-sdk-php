@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询绑定了某主机七层监听器时返回的与转发路径所绑定的主机信息。
+ *
  * @method integer getBindType() 获取绑定类别（0代表黑石物理机，1代表虚拟机IP）。
  * @method void setBindType(integer $BindType) 设置绑定类别（0代表黑石物理机，1代表虚拟机IP）。
  * @method integer getPort() 获取主机端口。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlias(string $Alias) 设置黑石物理机的别名。
  * @method string getLanIp() 获取主机IP。
  * @method void setLanIp(string $LanIp) 设置主机IP。
- */
-
-/**
- *查询绑定了某主机七层监听器时返回的与转发路径所绑定的主机信息。
  */
 class L7ListenerInfoBackend extends AbstractModel
 {
@@ -73,6 +71,7 @@ class L7ListenerInfoBackend extends AbstractModel
      * @var string 主机IP。
      */
     public $LanIp;
+
     /**
      * @param integer $BindType 绑定类别（0代表黑石物理机，1代表虚拟机IP）。
      * @param integer $Port 主机端口。
@@ -86,6 +85,7 @@ class L7ListenerInfoBackend extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

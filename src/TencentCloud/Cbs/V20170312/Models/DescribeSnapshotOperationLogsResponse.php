@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSnapshotOperationLogs返回参数结构体
+ *
  * @method array getSnapshotOperationLogSet() 获取快照操作日志列表。
  * @method void setSnapshotOperationLogSet(array $SnapshotOperationLogSet) 设置快照操作日志列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeSnapshotOperationLogs返回参数结构体
  */
 class DescribeSnapshotOperationLogsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeSnapshotOperationLogsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $SnapshotOperationLogSet 快照操作日志列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeSnapshotOperationLogsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

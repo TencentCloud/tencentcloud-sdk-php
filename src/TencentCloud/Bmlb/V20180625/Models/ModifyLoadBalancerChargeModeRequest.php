@@ -18,16 +18,14 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLoadBalancerChargeMode请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例ID。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
  * @method string getPayMode() 获取计费方式。flow或bandwidth。
  * @method void setPayMode(string $PayMode) 设置计费方式。flow或bandwidth。
  * @method array getListenerSet() 获取监听器信息，当计费方式选为 bandwidth 且此负载均衡实例下存在监听器时需填入此字段，可以自定义每个监听器带宽上限。
  * @method void setListenerSet(array $ListenerSet) 设置监听器信息，当计费方式选为 bandwidth 且此负载均衡实例下存在监听器时需填入此字段，可以自定义每个监听器带宽上限。
- */
-
-/**
- *ModifyLoadBalancerChargeMode请求参数结构体
  */
 class ModifyLoadBalancerChargeModeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyLoadBalancerChargeModeRequest extends AbstractModel
      * @var array 监听器信息，当计费方式选为 bandwidth 且此负载均衡实例下存在监听器时需填入此字段，可以自定义每个监听器带宽上限。
      */
     public $ListenerSet;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例ID。
      * @param string $PayMode 计费方式。flow或bandwidth。
@@ -54,6 +53,7 @@ class ModifyLoadBalancerChargeModeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

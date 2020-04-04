@@ -18,16 +18,14 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnbindHosted请求参数结构体
+ *
  * @method string getInstanceId() 获取托管机器实例ID
  * @method void setInstanceId(string $InstanceId) 设置托管机器实例ID
  * @method string getEipId() 获取Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
  * @method void setEipId(string $EipId) 设置Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
  * @method string getEip() 获取弹性IP。Eip和EipId参数必须要填写一个。
  * @method void setEip(string $Eip) 设置弹性IP。Eip和EipId参数必须要填写一个。
- */
-
-/**
- *UnbindHosted请求参数结构体
  */
 class UnbindHostedRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UnbindHostedRequest extends AbstractModel
      * @var string 弹性IP。Eip和EipId参数必须要填写一个。
      */
     public $Eip;
+
     /**
      * @param string $InstanceId 托管机器实例ID
      * @param string $EipId Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
@@ -54,6 +53,7 @@ class UnbindHostedRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

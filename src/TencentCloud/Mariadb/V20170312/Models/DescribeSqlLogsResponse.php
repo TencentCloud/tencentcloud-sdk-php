@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSqlLogs返回参数结构体
+ *
  * @method integer getTotalCount() 获取当前消息队列中的sql日志条目数。
  * @method void setTotalCount(integer $TotalCount) 设置当前消息队列中的sql日志条目数。
  * @method integer getStartOffset() 获取消息队列中的sql日志起始偏移。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSqlItems(array $SqlItems) 设置Sql日志列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeSqlLogs返回参数结构体
  */
 class DescribeSqlLogsResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeSqlLogsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 当前消息队列中的sql日志条目数。
      * @param integer $StartOffset 消息队列中的sql日志起始偏移。
@@ -86,6 +85,7 @@ class DescribeSqlLogsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

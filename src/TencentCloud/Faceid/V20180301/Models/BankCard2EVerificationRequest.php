@@ -18,14 +18,12 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BankCard2EVerification请求参数结构体
+ *
  * @method string getName() 获取姓名
  * @method void setName(string $Name) 设置姓名
  * @method string getBankCard() 获取银行卡
  * @method void setBankCard(string $BankCard) 设置银行卡
- */
-
-/**
- *BankCard2EVerification请求参数结构体
  */
 class BankCard2EVerificationRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BankCard2EVerificationRequest extends AbstractModel
      * @var string 银行卡
      */
     public $BankCard;
+
     /**
      * @param string $Name 姓名
      * @param string $BankCard 银行卡
@@ -46,6 +45,7 @@ class BankCard2EVerificationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

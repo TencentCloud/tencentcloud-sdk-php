@@ -18,6 +18,8 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetOrganizationMember返回参数结构体
+ *
  * @method integer getUin() 获取组织成员UIN
  * @method void setUin(integer $Uin) 设置组织成员UIN
  * @method string getName() 获取组织成员名称
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParentNodeId(integer $ParentNodeId) 设置父组织单元ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetOrganizationMember返回参数结构体
  */
 class GetOrganizationMemberResponse extends AbstractModel
 {
@@ -80,6 +78,7 @@ class GetOrganizationMemberResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Uin 组织成员UIN
      * @param string $Name 组织成员名称
@@ -94,6 +93,7 @@ class GetOrganizationMemberResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

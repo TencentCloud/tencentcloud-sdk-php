@@ -18,6 +18,8 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DependencyParsing返回参数结构体
+ *
  * @method array getDpTokens() 获取句法依存分析结果，其中句法依存关系的类型包括：
 <li>主谓关系，eg: 我送她一束花 (我 <-- 送)
 <li>动宾关系，eg: 我送她一束花 (送 --> 花)
@@ -53,10 +55,6 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-
-/**
- *DependencyParsing返回参数结构体
- */
 class DependencyParsingResponse extends AbstractModel
 {
     /**
@@ -83,6 +81,7 @@ class DependencyParsingResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $DpTokens 句法依存分析结果，其中句法依存关系的类型包括：
 <li>主谓关系，eg: 我送她一束花 (我 <-- 送)
@@ -106,6 +105,7 @@ class DependencyParsingResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

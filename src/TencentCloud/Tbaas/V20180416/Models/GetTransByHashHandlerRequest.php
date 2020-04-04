@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetTransByHashHandler请求参数结构体
+ *
  * @method string getModule() 获取模块名，固定字段：transaction
  * @method void setModule(string $Module) 设置模块名，固定字段：transaction
  * @method string getOperation() 获取操作名，固定字段：get_trans_by_hash
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupPk(string $GroupPk) 设置群组编号
  * @method string getTransHash() 获取交易哈希
  * @method void setTransHash(string $TransHash) 设置交易哈希
- */
-
-/**
- *GetTransByHashHandler请求参数结构体
  */
 class GetTransByHashHandlerRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GetTransByHashHandlerRequest extends AbstractModel
      * @var string 交易哈希
      */
     public $TransHash;
+
     /**
      * @param string $Module 模块名，固定字段：transaction
      * @param string $Operation 操作名，固定字段：get_trans_by_hash
@@ -62,6 +61,7 @@ class GetTransByHashHandlerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEips请求参数结构体
+ *
  * @method array getEipIds() 获取EIP实例ID列表
  * @method void setEipIds(array $EipIds) 设置EIP实例ID列表
  * @method array getEips() 获取EIP IP 列表
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAclId(string $AclId) 设置EIP ACL实例ID
  * @method integer getBindAcl() 获取搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定
  * @method void setBindAcl(integer $BindAcl) 设置搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定
- */
-
-/**
- *DescribeEips请求参数结构体
  */
 class DescribeEipsRequest extends AbstractModel
 {
@@ -129,6 +127,7 @@ class DescribeEipsRequest extends AbstractModel
      * @var integer 搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定
      */
     public $BindAcl;
+
     /**
      * @param array $EipIds EIP实例ID列表
      * @param array $Eips EIP IP 列表
@@ -150,6 +149,7 @@ class DescribeEipsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

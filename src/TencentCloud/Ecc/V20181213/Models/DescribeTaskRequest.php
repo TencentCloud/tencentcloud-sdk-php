@@ -18,14 +18,12 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTask请求参数结构体
+ *
  * @method string getTaskId() 获取任务 ID
  * @method void setTaskId(string $TaskId) 设置任务 ID
  * @method string getEccAppid() 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
  * @method void setEccAppid(string $EccAppid) 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
- */
-
-/**
- *DescribeTask请求参数结构体
  */
 class DescribeTaskRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeTaskRequest extends AbstractModel
      * @var string 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
      */
     public $EccAppid;
+
     /**
      * @param string $TaskId 任务 ID
      * @param string $EccAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
@@ -46,6 +45,7 @@ class DescribeTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

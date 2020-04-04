@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCcns请求参数结构体
+ *
  * @method array getCcnIds() 获取CCN实例ID。形如：ccn-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定CcnIds和Filters。
  * @method void setCcnIds(array $CcnIds) 设置CCN实例ID。形如：ccn-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定CcnIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定CcnIds和Filters。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
  * @method string getOrderDirection() 获取排序方法。顺序：`ASC`，倒序：`DESC`。
  * @method void setOrderDirection(string $OrderDirection) 设置排序方法。顺序：`ASC`，倒序：`DESC`。
- */
-
-/**
- *DescribeCcns请求参数结构体
  */
 class DescribeCcnsRequest extends AbstractModel
 {
@@ -84,6 +82,7 @@ class DescribeCcnsRequest extends AbstractModel
      * @var string 排序方法。顺序：`ASC`，倒序：`DESC`。
      */
     public $OrderDirection;
+
     /**
      * @param array $CcnIds CCN实例ID。形如：ccn-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定CcnIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定CcnIds和Filters。
@@ -102,6 +101,7 @@ class DescribeCcnsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteNetworkAcl请求参数结构体
+ *
  * @method string getNetworkAclId() 获取网络ACL实例ID。例如：acl-12345678。
  * @method void setNetworkAclId(string $NetworkAclId) 设置网络ACL实例ID。例如：acl-12345678。
- */
-
-/**
- *DeleteNetworkAcl请求参数结构体
  */
 class DeleteNetworkAclRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteNetworkAclRequest extends AbstractModel
      * @var string 网络ACL实例ID。例如：acl-12345678。
      */
     public $NetworkAclId;
+
     /**
      * @param string $NetworkAclId 网络ACL实例ID。例如：acl-12345678。
      */
@@ -38,6 +37,7 @@ class DeleteNetworkAclRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

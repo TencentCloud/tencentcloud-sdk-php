@@ -18,16 +18,14 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetProducts返回参数结构体
+ *
  * @method array getProducts() 获取Product列表
  * @method void setProducts(array $Products) 设置Product列表
  * @method integer getTotal() 获取Product总数
  * @method void setTotal(integer $Total) 设置Product总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetProducts返回参数结构体
  */
 class GetProductsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GetProductsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Products Product列表
      * @param integer $Total Product总数
@@ -54,6 +53,7 @@ class GetProductsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

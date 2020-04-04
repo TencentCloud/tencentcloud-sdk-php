@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 预热任务详情
+ *
  * @method string getTaskId() 获取预热任务 ID
  * @method void setTaskId(string $TaskId) 设置预热任务 ID
  * @method string getUrl() 获取预热 URL
@@ -46,10 +48,6 @@ global：全球
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置预热任务更新时间
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *预热任务详情
  */
 class PushTask extends AbstractModel
 {
@@ -94,6 +92,7 @@ global：全球
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
+
     /**
      * @param string $TaskId 预热任务 ID
      * @param string $Url 预热 URL
@@ -114,6 +113,7 @@ global：全球
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

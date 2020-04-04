@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云镜服务；
+ *
  * @method boolean getEnabled() 获取是否开启。
  * @method void setEnabled(boolean $Enabled) 设置是否开启。
  * @method integer getVersion() 获取云镜版本：0 基础版，1 专业版
  * @method void setVersion(integer $Version) 设置云镜版本：0 基础版，1 专业版
- */
-
-/**
- *云镜服务；
  */
 class RunSecurityServiceEnabled extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RunSecurityServiceEnabled extends AbstractModel
      * @var integer 云镜版本：0 基础版，1 专业版
      */
     public $Version;
+
     /**
      * @param boolean $Enabled 是否开启。
      * @param integer $Version 云镜版本：0 基础版，1 专业版
@@ -46,6 +45,7 @@ class RunSecurityServiceEnabled extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

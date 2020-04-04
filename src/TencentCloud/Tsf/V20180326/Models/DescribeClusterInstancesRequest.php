@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterInstances请求参数结构体
+ *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getSearchWord() 获取搜索字段
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取分页个数
  * @method void setLimit(integer $Limit) 设置分页个数
- */
-
-/**
- *DescribeClusterInstances请求参数结构体
  */
 class DescribeClusterInstancesRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeClusterInstancesRequest extends AbstractModel
      * @var integer 分页个数
      */
     public $Limit;
+
     /**
      * @param string $ClusterId 集群ID
      * @param string $SearchWord 搜索字段
@@ -78,6 +77,7 @@ class DescribeClusterInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 拼接视频中被忽略的时间段
+ *
  * @method integer getVideoTime() 获取录制暂停时间戳对应的视频播放时间(单位: 毫秒)
  * @method void setVideoTime(integer $VideoTime) 设置录制暂停时间戳对应的视频播放时间(单位: 毫秒)
  * @method integer getPauseTime() 获取录制暂停时间戳(单位: 毫秒)
  * @method void setPauseTime(integer $PauseTime) 设置录制暂停时间戳(单位: 毫秒)
  * @method integer getResumeTime() 获取录制恢复时间戳(单位: 毫秒)
  * @method void setResumeTime(integer $ResumeTime) 设置录制恢复时间戳(单位: 毫秒)
- */
-
-/**
- *拼接视频中被忽略的时间段
  */
 class OmittedDuration extends AbstractModel
 {
@@ -45,6 +43,7 @@ class OmittedDuration extends AbstractModel
      * @var integer 录制恢复时间戳(单位: 毫秒)
      */
     public $ResumeTime;
+
     /**
      * @param integer $VideoTime 录制暂停时间戳对应的视频播放时间(单位: 毫秒)
      * @param integer $PauseTime 录制暂停时间戳(单位: 毫秒)
@@ -54,6 +53,7 @@ class OmittedDuration extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

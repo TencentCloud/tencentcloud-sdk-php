@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PassportOCR返回参数结构体
+ *
  * @method string getCountry() 获取国家码
  * @method void setCountry(string $Country) 设置国家码
  * @method string getPassportNo() 获取护照号
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstName(string $FirstName) 设置名
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *PassportOCR返回参数结构体
  */
 class PassportOCRResponse extends AbstractModel
 {
@@ -136,6 +134,7 @@ class PassportOCRResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Country 国家码
      * @param string $PassportNo 护照号
@@ -158,6 +157,7 @@ class PassportOCRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

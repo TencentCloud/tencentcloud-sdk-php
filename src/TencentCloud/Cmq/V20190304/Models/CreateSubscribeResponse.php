@@ -18,14 +18,12 @@ namespace TencentCloud\Cmq\V20190304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSubscribe返回参数结构体
+ *
  * @method string getSubscriptionId() 获取SubscriptionId
  * @method void setSubscriptionId(string $SubscriptionId) 设置SubscriptionId
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateSubscribe返回参数结构体
  */
 class CreateSubscribeResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateSubscribeResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $SubscriptionId SubscriptionId
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateSubscribeResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

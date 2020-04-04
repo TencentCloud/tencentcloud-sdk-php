@@ -18,6 +18,8 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 游戏会话详情
+ *
  * @method string getCreationTime() 获取游戏服务器会话创建时间
  * @method void setCreationTime(string $CreationTime) 设置游戏服务器会话创建时间
  * @method string getCreatorId() 获取创建者ID
@@ -74,10 +76,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置实例类型
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *游戏会话详情
  */
 class GameServerSession extends AbstractModel
 {
@@ -180,6 +178,7 @@ class GameServerSession extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
+
     /**
      * @param string $CreationTime 游戏服务器会话创建时间
      * @param string $CreatorId 创建者ID
@@ -214,6 +213,7 @@ class GameServerSession extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内容审核鉴政任务结果类型
+ *
  * @method float getStartTimeOffset() 获取嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置嫌疑片段起始的偏移时间，单位：秒。
@@ -64,10 +66,6 @@ PicUrlExpireTime 时间点后图片将被删除）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAreaCoordSet(array $AreaCoordSet) 设置涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *内容审核鉴政任务结果类型
  */
 class VodPoliticalReviewSegmentItem extends AbstractModel
 {
@@ -129,6 +127,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AreaCoordSet;
+
     /**
      * @param float $StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -158,6 +157,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

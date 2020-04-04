@@ -18,14 +18,12 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 指定某个Layer版本
+ *
  * @method string getLayerName() 获取layer名称
  * @method void setLayerName(string $LayerName) 设置layer名称
  * @method integer getLayerVersion() 获取版本号
  * @method void setLayerVersion(integer $LayerVersion) 设置版本号
- */
-
-/**
- *指定某个Layer版本
  */
 class LayerVersionSimple extends AbstractModel
 {
@@ -38,6 +36,7 @@ class LayerVersionSimple extends AbstractModel
      * @var integer 版本号
      */
     public $LayerVersion;
+
     /**
      * @param string $LayerName layer名称
      * @param integer $LayerVersion 版本号
@@ -46,6 +45,7 @@ class LayerVersionSimple extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

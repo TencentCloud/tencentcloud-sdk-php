@@ -18,6 +18,8 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EipAcl信息
+ *
  * @method string getAclId() 获取ACL 实例 ID。
  * @method void setAclId(string $AclId) 设置ACL 实例 ID。
  * @method string getAclName() 获取ACL 实例名称
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutRules(array $OutRules) 设置出站规则
  * @method array getInRules() 获取入站规则
  * @method void setInRules(array $InRules) 设置入站规则
- */
-
-/**
- *EipAcl信息
  */
 class EipAcl extends AbstractModel
 {
@@ -73,6 +71,7 @@ class EipAcl extends AbstractModel
      * @var array 入站规则
      */
     public $InRules;
+
     /**
      * @param string $AclId ACL 实例 ID。
      * @param string $AclName ACL 实例名称
@@ -86,6 +85,7 @@ class EipAcl extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

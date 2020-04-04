@@ -18,16 +18,14 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyCustomImageAttribute请求参数结构体
+ *
  * @method string getImageId() 获取镜像ID
  * @method void setImageId(string $ImageId) 设置镜像ID
  * @method string getImageName() 获取设置新的镜像名
  * @method void setImageName(string $ImageName) 设置设置新的镜像名
  * @method string getImageDescription() 获取设置新的镜像描述
  * @method void setImageDescription(string $ImageDescription) 设置设置新的镜像描述
- */
-
-/**
- *ModifyCustomImageAttribute请求参数结构体
  */
 class ModifyCustomImageAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyCustomImageAttributeRequest extends AbstractModel
      * @var string 设置新的镜像描述
      */
     public $ImageDescription;
+
     /**
      * @param string $ImageId 镜像ID
      * @param string $ImageName 设置新的镜像名
@@ -54,6 +53,7 @@ class ModifyCustomImageAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

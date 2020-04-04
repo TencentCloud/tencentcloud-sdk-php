@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeResIpList请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method array getIdList() 获取资源ID, 如果不填，则获取用户所有资源的IP
  * @method void setIdList(array $IdList) 设置资源ID, 如果不填，则获取用户所有资源的IP
- */
-
-/**
- *DescribeResIpList请求参数结构体
  */
 class DescribeResIpListRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeResIpListRequest extends AbstractModel
      * @var array 资源ID, 如果不填，则获取用户所有资源的IP
      */
     public $IdList;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param array $IdList 资源ID, 如果不填，则获取用户所有资源的IP
@@ -46,6 +45,7 @@ class DescribeResIpListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

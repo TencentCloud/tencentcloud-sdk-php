@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Cos下载所需信息
+ *
  * @method string getBucket() 获取桶名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucket(string $Bucket) 设置桶名称
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCredentials(CosCredentials $Credentials) 设置鉴权信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *Cos下载所需信息
  */
 class CosDownloadInfo extends AbstractModel
 {
@@ -64,6 +62,7 @@ class CosDownloadInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Credentials;
+
     /**
      * @param string $Bucket 桶名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +77,7 @@ class CosDownloadInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

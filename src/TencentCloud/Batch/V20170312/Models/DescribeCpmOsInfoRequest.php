@@ -18,12 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCpmOsInfo请求参数结构体
+ *
  * @method string getDeviceClassCode() 获取黑石设备类型代号。 可以从[DescribeDeviceClass](https://cloud.tencent.com/document/api/386/32911)查询设备类型列表。
  * @method void setDeviceClassCode(string $DeviceClassCode) 设置黑石设备类型代号。 可以从[DescribeDeviceClass](https://cloud.tencent.com/document/api/386/32911)查询设备类型列表。
- */
-
-/**
- *DescribeCpmOsInfo请求参数结构体
  */
 class DescribeCpmOsInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeCpmOsInfoRequest extends AbstractModel
      * @var string 黑石设备类型代号。 可以从[DescribeDeviceClass](https://cloud.tencent.com/document/api/386/32911)查询设备类型列表。
      */
     public $DeviceClassCode;
+
     /**
      * @param string $DeviceClassCode 黑石设备类型代号。 可以从[DescribeDeviceClass](https://cloud.tencent.com/document/api/386/32911)查询设备类型列表。
      */
@@ -38,6 +37,7 @@ class DescribeCpmOsInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

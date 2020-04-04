@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySubscribeVipVport请求参数结构体
+ *
  * @method string getSubscribeId() 获取数据订阅实例的ID
  * @method void setSubscribeId(string $SubscribeId) 设置数据订阅实例的ID
  * @method string getDstUniqSubnetId() 获取指定目的子网，如果传此参数，DstIp必须在目的子网内
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstIp(string $DstIp) 设置目标IP，与DstPort至少传一个
  * @method integer getDstPort() 获取目标PORT，支持范围为：[1025-65535]
  * @method void setDstPort(integer $DstPort) 设置目标PORT，支持范围为：[1025-65535]
- */
-
-/**
- *ModifySubscribeVipVport请求参数结构体
  */
 class ModifySubscribeVipVportRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifySubscribeVipVportRequest extends AbstractModel
      * @var integer 目标PORT，支持范围为：[1025-65535]
      */
     public $DstPort;
+
     /**
      * @param string $SubscribeId 数据订阅实例的ID
      * @param string $DstUniqSubnetId 指定目的子网，如果传此参数，DstIp必须在目的子网内
@@ -62,6 +61,7 @@ class ModifySubscribeVipVportRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

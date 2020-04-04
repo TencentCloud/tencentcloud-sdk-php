@@ -18,12 +18,10 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 消耗汇总详情
+ *
  * @method string getRealTotalCost() 获取折后总价
  * @method void setRealTotalCost(string $RealTotalCost) 设置折后总价
- */
-
-/**
- *消耗汇总详情
  */
 class ConsumptionSummaryTotal extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ConsumptionSummaryTotal extends AbstractModel
      * @var string 折后总价
      */
     public $RealTotalCost;
+
     /**
      * @param string $RealTotalCost 折后总价
      */
@@ -38,6 +37,7 @@ class ConsumptionSummaryTotal extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

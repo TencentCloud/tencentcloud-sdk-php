@@ -18,12 +18,10 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstanceRenewFlag请求参数结构体
+ *
  * @method array getRenewFlags() 获取实例续费状态标记信息
  * @method void setRenewFlags(array $RenewFlags) 设置实例续费状态标记信息
- */
-
-/**
- *ModifyDBInstanceRenewFlag请求参数结构体
  */
 class ModifyDBInstanceRenewFlagRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ModifyDBInstanceRenewFlagRequest extends AbstractModel
      * @var array 实例续费状态标记信息
      */
     public $RenewFlags;
+
     /**
      * @param array $RenewFlags 实例续费状态标记信息
      */
@@ -38,6 +37,7 @@ class ModifyDBInstanceRenewFlagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

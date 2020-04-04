@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 账单筛选条件对象
+ *
  * @method integer getTimeRange() 获取只支持6和12两个值
  * @method void setTimeRange(integer $TimeRange) 设置只支持6和12两个值
  * @method string getBusinessCode() 获取产品编码
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileTypes(array $FileTypes) 设置文件类型
  * @method array getStatus() 获取状态
  * @method void setStatus(array $Status) 设置状态
- */
-
-/**
- *账单筛选条件对象
  */
 class Conditions extends AbstractModel
 {
@@ -157,6 +155,7 @@ class Conditions extends AbstractModel
      * @var array 状态
      */
     public $Status;
+
     /**
      * @param integer $TimeRange 只支持6和12两个值
      * @param string $BusinessCode 产品编码
@@ -182,6 +181,7 @@ class Conditions extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

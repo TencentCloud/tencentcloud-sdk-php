@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 集群的实例信息
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getInstanceRole() 获取节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取添加时间
  * @method void setCreatedTime(string $CreatedTime) 设置添加时间
- */
-
-/**
- *集群的实例信息
  */
 class Instance extends AbstractModel
 {
@@ -79,6 +77,7 @@ class Instance extends AbstractModel
      * @var string 添加时间
      */
     public $CreatedTime;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceRole 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER
@@ -94,6 +93,7 @@ class Instance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

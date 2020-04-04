@@ -18,6 +18,8 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSalesmans请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取限制数目
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSalesUin(string $SalesUin) 设置业务员ID
  * @method string getOrderDirection() 获取ASC/DESC， 不区分大小写，按创建通过时间排序
  * @method void setOrderDirection(string $OrderDirection) 设置ASC/DESC， 不区分大小写，按创建通过时间排序
- */
-
-/**
- *DescribeSalesmans请求参数结构体
  */
 class DescribeSalesmansRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeSalesmansRequest extends AbstractModel
      * @var string ASC/DESC， 不区分大小写，按创建通过时间排序
      */
     public $OrderDirection;
+
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 限制数目
@@ -70,6 +69,7 @@ class DescribeSalesmansRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

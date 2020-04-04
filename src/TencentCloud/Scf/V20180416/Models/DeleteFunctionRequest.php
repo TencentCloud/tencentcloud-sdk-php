@@ -18,14 +18,12 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteFunction请求参数结构体
+ *
  * @method string getFunctionName() 获取要删除的函数名称
  * @method void setFunctionName(string $FunctionName) 设置要删除的函数名称
  * @method string getNamespace() 获取函数所属命名空间
  * @method void setNamespace(string $Namespace) 设置函数所属命名空间
- */
-
-/**
- *DeleteFunction请求参数结构体
  */
 class DeleteFunctionRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteFunctionRequest extends AbstractModel
      * @var string 函数所属命名空间
      */
     public $Namespace;
+
     /**
      * @param string $FunctionName 要删除的函数名称
      * @param string $Namespace 函数所属命名空间
@@ -46,6 +45,7 @@ class DeleteFunctionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

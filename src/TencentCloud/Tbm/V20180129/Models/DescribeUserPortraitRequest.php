@@ -18,12 +18,10 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUserPortrait请求参数结构体
+ *
  * @method string getBrandId() 获取品牌ID
  * @method void setBrandId(string $BrandId) 设置品牌ID
- */
-
-/**
- *DescribeUserPortrait请求参数结构体
  */
 class DescribeUserPortraitRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeUserPortraitRequest extends AbstractModel
      * @var string 品牌ID
      */
     public $BrandId;
+
     /**
      * @param string $BrandId 品牌ID
      */
@@ -38,6 +37,7 @@ class DescribeUserPortraitRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

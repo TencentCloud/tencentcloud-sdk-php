@@ -18,14 +18,12 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTranscode请求参数结构体
+ *
  * @method integer getSdkAppId() 获取客户的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置客户的SdkAppId
  * @method string getTaskId() 获取文档转码任务的唯一标识Id
  * @method void setTaskId(string $TaskId) 设置文档转码任务的唯一标识Id
- */
-
-/**
- *DescribeTranscode请求参数结构体
  */
 class DescribeTranscodeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeTranscodeRequest extends AbstractModel
      * @var string 文档转码任务的唯一标识Id
      */
     public $TaskId;
+
     /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param string $TaskId 文档转码任务的唯一标识Id
@@ -46,6 +45,7 @@ class DescribeTranscodeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

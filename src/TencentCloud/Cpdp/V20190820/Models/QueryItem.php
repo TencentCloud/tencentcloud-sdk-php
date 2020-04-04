@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 聚鑫商户余额查询输出项
+ *
  * @method string getSubAcctNo() 获取子商户账户
  * @method void setSubAcctNo(string $SubAcctNo) 设置子商户账户
  * @method string getSubAcctProperty() 获取子账户属性 
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCashAmt(string $CashAmt) 设置可提现金额
  * @method string getMaintenanceDate() 获取维护日期 开户日期或修改日期
  * @method void setMaintenanceDate(string $MaintenanceDate) 设置维护日期 开户日期或修改日期
- */
-
-/**
- *聚鑫商户余额查询输出项
  */
 class QueryItem extends AbstractModel
 {
@@ -88,6 +86,7 @@ class QueryItem extends AbstractModel
      * @var string 维护日期 开户日期或修改日期
      */
     public $MaintenanceDate;
+
     /**
      * @param string $SubAcctNo 子商户账户
      * @param string $SubAcctProperty 子账户属性 
@@ -106,6 +105,7 @@ class QueryItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

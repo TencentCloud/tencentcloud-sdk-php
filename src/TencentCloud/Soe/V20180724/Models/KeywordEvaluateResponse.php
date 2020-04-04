@@ -18,16 +18,14 @@ namespace TencentCloud\Soe\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * KeywordEvaluate返回参数结构体
+ *
  * @method array getKeywordScores() 获取关键词得分
  * @method void setKeywordScores(array $KeywordScores) 设置关键词得分
  * @method string getSessionId() 获取语音段唯一标识，一段语音一个SessionId
  * @method void setSessionId(string $SessionId) 设置语音段唯一标识，一段语音一个SessionId
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *KeywordEvaluate返回参数结构体
  */
 class KeywordEvaluateResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class KeywordEvaluateResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $KeywordScores 关键词得分
      * @param string $SessionId 语音段唯一标识，一段语音一个SessionId
@@ -54,6 +53,7 @@ class KeywordEvaluateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 慢查询条目信息
+ *
  * @method string getCheckSum() 获取语句校验和，用于查询详情
  * @method void setCheckSum(string $CheckSum) 设置语句校验和，用于查询详情
  * @method string getDb() 获取数据库名称
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExampleSql(string $ExampleSql) 设置样例Sql
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *慢查询条目信息
  */
 class SlowLogData extends AbstractModel
 {
@@ -153,6 +151,7 @@ class SlowLogData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExampleSql;
+
     /**
      * @param string $CheckSum 语句校验和，用于查询详情
      * @param string $Db 数据库名称
@@ -178,6 +177,7 @@ class SlowLogData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

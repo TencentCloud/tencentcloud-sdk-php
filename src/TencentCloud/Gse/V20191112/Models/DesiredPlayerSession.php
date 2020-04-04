@@ -18,14 +18,12 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 玩家游戏会话信息
+ *
  * @method string getPlayerId() 获取与玩家会话关联的唯一玩家标识
  * @method void setPlayerId(string $PlayerId) 设置与玩家会话关联的唯一玩家标识
  * @method string getPlayerData() 获取开发人员定义的玩家数据
  * @method void setPlayerData(string $PlayerData) 设置开发人员定义的玩家数据
- */
-
-/**
- *玩家游戏会话信息
  */
 class DesiredPlayerSession extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DesiredPlayerSession extends AbstractModel
      * @var string 开发人员定义的玩家数据
      */
     public $PlayerData;
+
     /**
      * @param string $PlayerId 与玩家会话关联的唯一玩家标识
      * @param string $PlayerData 开发人员定义的玩家数据
@@ -46,6 +45,7 @@ class DesiredPlayerSession extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

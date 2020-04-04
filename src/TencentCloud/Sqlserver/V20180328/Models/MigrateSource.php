@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 迁移任务的源类型
+ *
  * @method string getInstanceId() 获取迁移源实例的ID，MigrateType=1(TencentDB for SQLServers)时使用，格式如：mssql-si2823jyl
  * @method void setInstanceId(string $InstanceId) 设置迁移源实例的ID，MigrateType=1(TencentDB for SQLServers)时使用，格式如：mssql-si2823jyl
  * @method string getCvmId() 获取迁移源Cvm的ID，MigrateType=2(云服务器自建SQLServer数据库)时使用
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(array $Url) 设置离线迁移的源备份地址，MigrateType=4或MigrateType=5使用
  * @method string getUrlPassword() 获取离线迁移的源备份密码，MigrateType=4或MigrateType=5使用
  * @method void setUrlPassword(string $UrlPassword) 设置离线迁移的源备份密码，MigrateType=4或MigrateType=5使用
- */
-
-/**
- *迁移任务的源类型
  */
 class MigrateSource extends AbstractModel
 {
@@ -94,6 +92,7 @@ class MigrateSource extends AbstractModel
      * @var string 离线迁移的源备份密码，MigrateType=4或MigrateType=5使用
      */
     public $UrlPassword;
+
     /**
      * @param string $InstanceId 迁移源实例的ID，MigrateType=1(TencentDB for SQLServers)时使用，格式如：mssql-si2823jyl
      * @param string $CvmId 迁移源Cvm的ID，MigrateType=2(云服务器自建SQLServer数据库)时使用
@@ -110,6 +109,7 @@ class MigrateSource extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cmq\V20190304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeadLetterSource
+ *
  * @method string getQueueId() 获取QueueId
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQueueId(string $QueueId) 设置QueueId
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQueueName(string $QueueName) 设置QueueName
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DeadLetterSource
  */
 class DeadLetterSource extends AbstractModel
 {
@@ -44,6 +42,7 @@ class DeadLetterSource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QueueName;
+
     /**
      * @param string $QueueId QueueId
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class DeadLetterSource extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

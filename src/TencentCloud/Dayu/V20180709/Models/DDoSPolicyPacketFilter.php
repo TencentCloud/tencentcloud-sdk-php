@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DDoS高级策略的报文过滤项
+ *
  * @method string getProtocol() 获取协议，取值范围[tcp,udp,icmp,all]
  * @method void setProtocol(string $Protocol) 设置协议，取值范围[tcp,udp,icmp,all]
  * @method integer getSportStart() 获取开始源端口，取值范围[0,65535]
@@ -56,10 +58,6 @@ no_match(不检测)
  * @method void setIsNot(integer $IsNot) 设置是否包括，取值范围[0(表示不包含),1(表示包含)]
  * @method string getAction() 获取策略动作，取值范围[drop，drop_black，drop_rst，drop_black_rst，transmit]
  * @method void setAction(string $Action) 设置策略动作，取值范围[drop，drop_black，drop_rst，drop_black_rst，transmit]
- */
-
-/**
- *DDoS高级策略的报文过滤项
  */
 class DDoSPolicyPacketFilter extends AbstractModel
 {
@@ -137,6 +135,7 @@ no_match(不检测)
      * @var string 策略动作，取值范围[drop，drop_black，drop_rst，drop_black_rst，transmit]
      */
     public $Action;
+
     /**
      * @param string $Protocol 协议，取值范围[tcp,udp,icmp,all]
      * @param integer $SportStart 开始源端口，取值范围[0,65535]
@@ -162,6 +161,7 @@ no_match(不检测)
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

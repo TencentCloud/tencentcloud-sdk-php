@@ -18,6 +18,8 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 分词&词性标注结果
+ *
  * @method integer getBeginOffset() 获取起始位置
  * @method void setBeginOffset(integer $BeginOffset) 设置起始位置
  * @method integer getLength() 获取长度
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPos(string $Pos) 设置词性
  * @method string getWord() 获取基础词
  * @method void setWord(string $Word) 设置基础词
- */
-
-/**
- *分词&词性标注结果
  */
 class PosToken extends AbstractModel
 {
@@ -52,6 +50,7 @@ class PosToken extends AbstractModel
      * @var string 基础词
      */
     public $Word;
+
     /**
      * @param integer $BeginOffset 起始位置
      * @param integer $Length 长度
@@ -62,6 +61,7 @@ class PosToken extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

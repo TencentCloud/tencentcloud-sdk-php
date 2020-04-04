@@ -18,12 +18,10 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSubscribeConf请求参数结构体
+ *
  * @method string getSubscribeId() 获取订阅实例ID
  * @method void setSubscribeId(string $SubscribeId) 设置订阅实例ID
- */
-
-/**
- *DescribeSubscribeConf请求参数结构体
  */
 class DescribeSubscribeConfRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeSubscribeConfRequest extends AbstractModel
      * @var string 订阅实例ID
      */
     public $SubscribeId;
+
     /**
      * @param string $SubscribeId 订阅实例ID
      */
@@ -38,6 +37,7 @@ class DescribeSubscribeConfRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AppGetDevice请求参数结构体
+ *
  * @method string getAccessToken() 获取访问Token
  * @method void setAccessToken(string $AccessToken) 设置访问Token
  * @method string getProductId() 获取产品Id
  * @method void setProductId(string $ProductId) 设置产品Id
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
- */
-
-/**
- *AppGetDevice请求参数结构体
  */
 class AppGetDeviceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AppGetDeviceRequest extends AbstractModel
      * @var string 设备名称
      */
     public $DeviceName;
+
     /**
      * @param string $AccessToken 访问Token
      * @param string $ProductId 产品Id
@@ -54,6 +53,7 @@ class AppGetDeviceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

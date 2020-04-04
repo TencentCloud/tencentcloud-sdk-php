@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 操作Action
+ *
  * @method string getAction() 获取可执行操作
  * @method void setAction(string $Action) 设置可执行操作
  * @method string getCode() 获取编码Code
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置具体信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *操作Action
  */
 class OperatorAction extends AbstractModel
 {
@@ -51,6 +49,7 @@ class OperatorAction extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
+
     /**
      * @param string $Action 可执行操作
      * @param string $Code 编码Code
@@ -62,6 +61,7 @@ class OperatorAction extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

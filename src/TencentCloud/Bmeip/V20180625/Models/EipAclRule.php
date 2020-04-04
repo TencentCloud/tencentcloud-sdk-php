@@ -18,6 +18,8 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * eipacl规则
+ *
  * @method string getIp() 获取源 IP
  * @method void setIp(string $Ip) 设置源 IP
  * @method string getPort() 获取目标端口
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAction(string $Action) 设置策略（accept/drop）
  * @method string getDescription() 获取备注
  * @method void setDescription(string $Description) 设置备注
- */
-
-/**
- *eipacl规则
  */
 class EipAclRule extends AbstractModel
 {
@@ -59,6 +57,7 @@ class EipAclRule extends AbstractModel
      * @var string 备注
      */
     public $Description;
+
     /**
      * @param string $Ip 源 IP
      * @param string $Port 目标端口
@@ -70,6 +69,7 @@ class EipAclRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

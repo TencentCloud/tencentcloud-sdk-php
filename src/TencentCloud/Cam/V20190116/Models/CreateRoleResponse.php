@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRole返回参数结构体
+ *
  * @method string getRoleId() 获取角色ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleId(string $RoleId) 设置角色ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateRole返回参数结构体
  */
 class CreateRoleResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class CreateRoleResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $RoleId 角色ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class CreateRoleResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

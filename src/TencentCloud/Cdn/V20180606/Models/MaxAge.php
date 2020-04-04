@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 浏览器缓存规则配置，用于设置 MaxAge 默认值，默认为关闭状态（功能灰度中，尚未全量）
+ *
  * @method string getSwitch() 获取浏览器缓存配置开关
 on：开启
 off：关闭
@@ -30,10 +32,6 @@ off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxAgeRules(array $MaxAgeRules) 设置MaxAge 规则
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *浏览器缓存规则配置，用于设置 MaxAge 默认值，默认为关闭状态（功能灰度中，尚未全量）
  */
 class MaxAge extends AbstractModel
 {
@@ -50,6 +48,7 @@ off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxAgeRules;
+
     /**
      * @param string $Switch 浏览器缓存配置开关
 on：开启
@@ -62,6 +61,7 @@ off：关闭
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

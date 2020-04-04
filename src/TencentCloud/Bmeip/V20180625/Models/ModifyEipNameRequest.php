@@ -18,14 +18,12 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyEipName请求参数结构体
+ *
  * @method string getEipId() 获取Eip实例ID，可通过/v2/DescribeEip 接口返回字段中的 eipId获取
  * @method void setEipId(string $EipId) 设置Eip实例ID，可通过/v2/DescribeEip 接口返回字段中的 eipId获取
  * @method string getEipName() 获取EIP 实例别名
  * @method void setEipName(string $EipName) 设置EIP 实例别名
- */
-
-/**
- *ModifyEipName请求参数结构体
  */
 class ModifyEipNameRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyEipNameRequest extends AbstractModel
      * @var string EIP 实例别名
      */
     public $EipName;
+
     /**
      * @param string $EipId Eip实例ID，可通过/v2/DescribeEip 接口返回字段中的 eipId获取
      * @param string $EipName EIP 实例别名
@@ -46,6 +45,7 @@ class ModifyEipNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

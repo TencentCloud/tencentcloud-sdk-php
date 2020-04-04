@@ -18,6 +18,11 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 时间戳防盗链模式 C 配置
+时间戳防盗链模式 C 的访问 URL 格式为：http://DomainName/md5hash/timestamp/FileName
+其中 timestamp 为十六进制 UNIX 时间戳；
+md5hash：MD5（自定义密钥 + 文件路径 + timestamp）
+ *
  * @method string getSecretKey() 获取计算签名的密钥
 仅允许大小写字母与数字，长度 6~32 位
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,13 +41,6 @@ use TencentCloud\Common\AbstractModel;
 blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
  * @method void setFilterType(string $FilterType) 设置whitelist：白名单，表示对除了 FileExtensions 列表之外的所有类型进行鉴权
 blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
- */
-
-/**
- *时间戳防盗链模式 C 配置
-时间戳防盗链模式 C 的访问 URL 格式为：http://DomainName/md5hash/timestamp/FileName
-其中 timestamp 为十六进制 UNIX 时间戳；
-md5hash：MD5（自定义密钥 + 文件路径 + timestamp）
  */
 class AuthenticationTypeC extends AbstractModel
 {
@@ -70,6 +68,7 @@ class AuthenticationTypeC extends AbstractModel
 blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
      */
     public $FilterType;
+
     /**
      * @param string $SecretKey 计算签名的密钥
 仅允许大小写字母与数字，长度 6~32 位
@@ -85,6 +84,7 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

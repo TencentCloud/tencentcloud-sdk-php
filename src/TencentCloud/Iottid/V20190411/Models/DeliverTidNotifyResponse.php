@@ -18,6 +18,8 @@ namespace TencentCloud\Iottid\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeliverTidNotify返回参数结构体
+ *
  * @method integer getRemaindCount() 获取剩余空发数量
  * @method void setRemaindCount(integer $RemaindCount) 设置剩余空发数量
  * @method string getTid() 获取已回执的TID编码
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductKey(string $ProductKey) 设置产品公钥
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DeliverTidNotify返回参数结构体
  */
 class DeliverTidNotifyResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DeliverTidNotifyResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $RemaindCount 剩余空发数量
      * @param string $Tid 已回执的TID编码
@@ -62,6 +61,7 @@ class DeliverTidNotifyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

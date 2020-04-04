@@ -18,12 +18,10 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OpenDBExtranetAccess请求参数结构体
+ *
  * @method string getInstanceId() 获取待开放外网访问的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置待开放外网访问的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
- */
-
-/**
- *OpenDBExtranetAccess请求参数结构体
  */
 class OpenDBExtranetAccessRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class OpenDBExtranetAccessRequest extends AbstractModel
      * @var string 待开放外网访问的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 待开放外网访问的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
@@ -38,6 +37,7 @@ class OpenDBExtranetAccessRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

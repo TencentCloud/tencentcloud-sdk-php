@@ -18,14 +18,13 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSaleInfo请求参数结构体
+ *
 
- */
-
-/**
- *DescribeSaleInfo请求参数结构体
  */
 class DescribeSaleInfoRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeSaleInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

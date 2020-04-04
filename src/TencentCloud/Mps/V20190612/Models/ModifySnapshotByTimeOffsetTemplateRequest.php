@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySnapshotByTimeOffsetTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取指定时间点截图模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置指定时间点截图模板唯一标识。
  * @method string getName() 获取指定时间点截图模板名称，长度限制：64 个字符。
@@ -70,10 +72,6 @@ use TencentCloud\Common\AbstractModel;
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>
 默认值：black 。
- */
-
-/**
- *ModifySnapshotByTimeOffsetTemplate请求参数结构体
  */
 class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
 {
@@ -134,6 +132,7 @@ class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
 默认值：black 。
      */
     public $FillType;
+
     /**
      * @param integer $Definition 指定时间点截图模板唯一标识。
      * @param string $Name 指定时间点截图模板名称，长度限制：64 个字符。
@@ -166,6 +165,7 @@ class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

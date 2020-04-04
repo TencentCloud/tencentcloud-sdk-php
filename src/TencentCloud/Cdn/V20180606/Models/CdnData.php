@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 访问明细数据类型
+ *
  * @method string getMetric() 获取查询指定的指标名称：
 flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
@@ -45,10 +47,6 @@ statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 �
  * @method SummarizedData getSummarizedData() 获取汇总数据组合
  * @method void setSummarizedData(SummarizedData $SummarizedData) 设置汇总数据组合
  */
-
-/**
- *访问明细数据类型
- */
 class CdnData extends AbstractModel
 {
     /**
@@ -75,6 +73,7 @@ statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 �
      * @var SummarizedData 汇总数据组合
      */
     public $SummarizedData;
+
     /**
      * @param string $Metric 查询指定的指标名称：
 flux：流量，单位为 byte
@@ -94,6 +93,7 @@ statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 �
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

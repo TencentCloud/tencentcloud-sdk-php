@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeStorageDetails请求参数结构体
+ *
  * @method string getStartTime() 获取起始时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
  * @method void setStartTime(string $StartTime) 设置起始时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
  * @method string getEndTime() 获取结束时间，需大于开始日期，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
  * @method void setSubAppId(integer $SubAppId) 设置点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
 当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
- */
-
-/**
- *DescribeStorageDetails请求参数结构体
  */
 class DescribeStorageDetailsRequest extends AbstractModel
 {
@@ -86,6 +84,7 @@ class DescribeStorageDetailsRequest extends AbstractModel
 当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
      */
     public $SubAppId;
+
     /**
      * @param string $StartTime 起始时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
      * @param string $EndTime 结束时间，需大于开始日期，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
@@ -106,6 +105,7 @@ class DescribeStorageDetailsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述可用区的编码和状态信息
+ *
  * @method string getZone() 获取该可用区的英文名称
  * @method void setZone(string $Zone) 设置该可用区的英文名称
  * @method string getZoneName() 获取该可用区的中文名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(integer $ZoneId) 设置该可用区对应的数字编号
  * @method string getZoneState() 获取可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
  * @method void setZoneState(string $ZoneState) 设置可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
- */
-
-/**
- *描述可用区的编码和状态信息
  */
 class ZoneInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ZoneInfo extends AbstractModel
      * @var string 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
      */
     public $ZoneState;
+
     /**
      * @param string $Zone 该可用区的英文名称
      * @param string $ZoneName 该可用区的中文名称
@@ -62,6 +61,7 @@ class ZoneInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

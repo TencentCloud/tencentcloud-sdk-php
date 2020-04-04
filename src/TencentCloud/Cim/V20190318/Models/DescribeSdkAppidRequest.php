@@ -18,14 +18,13 @@ namespace TencentCloud\Cim\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSdkAppid请求参数结构体
+ *
 
- */
-
-/**
- *DescribeSdkAppid请求参数结构体
  */
 class DescribeSdkAppidRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeSdkAppidRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 扩展数据
+ *
  * @method boolean getReleaseAddress() 获取释放地址
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReleaseAddress(boolean $ReleaseAddress) 设置释放地址
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageBlockAttr(StorageBlock $StorageBlockAttr) 设置HDD本地存储属性
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *扩展数据
  */
 class Externals extends AbstractModel
 {
@@ -54,6 +52,7 @@ class Externals extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageBlockAttr;
+
     /**
      * @param boolean $ReleaseAddress 释放地址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class Externals extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

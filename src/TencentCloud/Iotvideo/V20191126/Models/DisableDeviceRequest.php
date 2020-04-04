@@ -18,12 +18,10 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisableDevice请求参数结构体
+ *
  * @method array getTids() 获取设备TID ≤100
  * @method void setTids(array $Tids) 设置设备TID ≤100
- */
-
-/**
- *DisableDevice请求参数结构体
  */
 class DisableDeviceRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DisableDeviceRequest extends AbstractModel
      * @var array 设备TID ≤100
      */
     public $Tids;
+
     /**
      * @param array $Tids 设备TID ≤100
      */
@@ -38,6 +37,7 @@ class DisableDeviceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

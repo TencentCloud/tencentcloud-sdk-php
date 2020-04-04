@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCertificate请求参数结构体
+ *
  * @method integer getCertificateType() 获取证书类型。其中：
 0，表示基础认证配置；
 1，表示客户端CA证书；
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertificateAlias(string $CertificateAlias) 设置证书名称
  * @method string getCertificateKey() 获取密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
  * @method void setCertificateKey(string $CertificateKey) 设置密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
- */
-
-/**
- *CreateCertificate请求参数结构体
  */
 class CreateCertificateRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateCertificateRequest extends AbstractModel
      * @var string 密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
      */
     public $CertificateKey;
+
     /**
      * @param integer $CertificateType 证书类型。其中：
 0，表示基础认证配置；
@@ -90,6 +89,7 @@ class CreateCertificateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

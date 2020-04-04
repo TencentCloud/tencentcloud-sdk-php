@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 修改节点权重的数据类型
+ *
  * @method string getListenerId() 获取负载均衡监听器 ID
  * @method void setListenerId(string $ListenerId) 设置负载均衡监听器 ID
  * @method array getTargets() 获取要修改权重的后端机器列表
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置目标规则的URL，提供LocationId参数时本参数不生效
  * @method integer getWeight() 获取后端服务新的转发权重，取值范围：0~100。
  * @method void setWeight(integer $Weight) 设置后端服务新的转发权重，取值范围：0~100。
- */
-
-/**
- *修改节点权重的数据类型
  */
 class RsWeightRule extends AbstractModel
 {
@@ -66,6 +64,7 @@ class RsWeightRule extends AbstractModel
      * @var integer 后端服务新的转发权重，取值范围：0~100。
      */
     public $Weight;
+
     /**
      * @param string $ListenerId 负载均衡监听器 ID
      * @param array $Targets 要修改权重的后端机器列表
@@ -78,6 +77,7 @@ class RsWeightRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

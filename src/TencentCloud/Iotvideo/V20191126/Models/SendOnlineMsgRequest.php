@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SendOnlineMsg请求参数结构体
+ *
  * @method string getTid() 获取设备TID
  * @method void setTid(string $Tid) 设置设备TID
  * @method boolean getWakeup() 获取如果设备处于休眠状态，是否唤醒设备
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsgTopic(string $MsgTopic) 设置消息主题
  * @method string getMsgContent() 获取消息内容，最大长度不超过8k字节
  * @method void setMsgContent(string $MsgContent) 设置消息内容，最大长度不超过8k字节
- */
-
-/**
- *SendOnlineMsg请求参数结构体
  */
 class SendOnlineMsgRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ class SendOnlineMsgRequest extends AbstractModel
      * @var string 消息内容，最大长度不超过8k字节
      */
     public $MsgContent;
+
     /**
      * @param string $Tid 设备TID
      * @param boolean $Wakeup 如果设备处于休眠状态，是否唤醒设备
@@ -82,6 +81,7 @@ class SendOnlineMsgRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

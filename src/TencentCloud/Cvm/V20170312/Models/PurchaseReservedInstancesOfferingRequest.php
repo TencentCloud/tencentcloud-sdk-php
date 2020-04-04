@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PurchaseReservedInstancesOffering请求参数结构体
+ *
  * @method integer getInstanceCount() 获取购买预留实例计费数量
  * @method void setInstanceCount(integer $InstanceCount) 设置购买预留实例计费数量
  * @method string getReservedInstancesOfferingId() 获取预留实例计费配置ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDryRun(boolean $DryRun) 设置试运行
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性
- */
-
-/**
- *PurchaseReservedInstancesOffering请求参数结构体
  */
 class PurchaseReservedInstancesOfferingRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class PurchaseReservedInstancesOfferingRequest extends AbstractModel
      * @var string 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性
      */
     public $ClientToken;
+
     /**
      * @param integer $InstanceCount 购买预留实例计费数量
      * @param string $ReservedInstancesOfferingId 预留实例计费配置ID
@@ -62,6 +61,7 @@ class PurchaseReservedInstancesOfferingRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

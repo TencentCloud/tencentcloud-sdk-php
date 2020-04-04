@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DB资源使用情况监控指标集合
+ *
  * @method MonitorData getBinlogDiskAvailable() 获取binlog日志磁盘可用空间,单位GB
  * @method void setBinlogDiskAvailable(MonitorData $BinlogDiskAvailable) 设置binlog日志磁盘可用空间,单位GB
  * @method MonitorData getCpuUsageRate() 获取CPU利用率
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemAvailable(MonitorData $MemAvailable) 设置内存可用空间,单位GB
  * @method MonitorData getDataDiskAvailable() 获取磁盘可用空间,单位GB
  * @method void setDataDiskAvailable(MonitorData $DataDiskAvailable) 设置磁盘可用空间,单位GB
- */
-
-/**
- *DB资源使用情况监控指标集合
  */
 class ResourceUsageMonitorSet extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ResourceUsageMonitorSet extends AbstractModel
      * @var MonitorData 磁盘可用空间,单位GB
      */
     public $DataDiskAvailable;
+
     /**
      * @param MonitorData $BinlogDiskAvailable binlog日志磁盘可用空间,单位GB
      * @param MonitorData $CpuUsageRate CPU利用率
@@ -62,6 +61,7 @@ class ResourceUsageMonitorSet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

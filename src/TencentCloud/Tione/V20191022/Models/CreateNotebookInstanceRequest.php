@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNotebookInstance请求参数结构体
+ *
  * @method string getNotebookInstanceName() 获取Notebook实例名称
  * @method void setNotebookInstanceName(string $NotebookInstanceName) 设置Notebook实例名称
  * @method string getInstanceType() 获取Notebook算力类型
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
  * @method void setAdditionalCodeRepositories(array $AdditionalCodeRepositories) 设置其他存储库列表
 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
- */
-
-/**
- *CreateNotebookInstance请求参数结构体
  */
 class CreateNotebookInstanceRequest extends AbstractModel
 {
@@ -93,6 +91,7 @@ class CreateNotebookInstanceRequest extends AbstractModel
 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
      */
     public $AdditionalCodeRepositories;
+
     /**
      * @param string $NotebookInstanceName Notebook实例名称
      * @param string $InstanceType Notebook算力类型
@@ -110,6 +109,7 @@ class CreateNotebookInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

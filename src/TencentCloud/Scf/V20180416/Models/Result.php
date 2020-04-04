@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 运行函数的返回
+ *
  * @method string getLog() 获取表示执行过程中的日志输出，异步调用返回为空
  * @method void setLog(string $Log) 设置表示执行过程中的日志输出，异步调用返回为空
  * @method string getRetMsg() 获取表示执行函数的返回，异步调用返回为空
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionRequestId(string $FunctionRequestId) 设置此次函数执行的Id
  * @method integer getInvokeResult() 获取0为正确，异步调用返回为空
  * @method void setInvokeResult(integer $InvokeResult) 设置0为正确，异步调用返回为空
- */
-
-/**
- *运行函数的返回
  */
 class Result extends AbstractModel
 {
@@ -80,6 +78,7 @@ class Result extends AbstractModel
      * @var integer 0为正确，异步调用返回为空
      */
     public $InvokeResult;
+
     /**
      * @param string $Log 表示执行过程中的日志输出，异步调用返回为空
      * @param string $RetMsg 表示执行函数的返回，异步调用返回为空
@@ -94,6 +93,7 @@ class Result extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

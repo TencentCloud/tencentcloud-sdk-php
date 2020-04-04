@@ -18,14 +18,13 @@ namespace TencentCloud\Cds\V20180420\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDbauditInstanceType请求参数结构体
+ *
 
- */
-
-/**
- *DescribeDbauditInstanceType请求参数结构体
  */
 class DescribeDbauditInstanceTypeRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeDbauditInstanceTypeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

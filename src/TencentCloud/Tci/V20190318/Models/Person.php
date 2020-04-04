@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人员描述
+ *
  * @method string getLibraryId() 获取人员库唯一标识符
  * @method void setLibraryId(string $LibraryId) 设置人员库唯一标识符
  * @method string getPersonId() 获取人员唯一标识符
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStudentNumber(string $StudentNumber) 设置学生号码
  * @method string getUpdateTime() 获取修改时间
  * @method void setUpdateTime(string $UpdateTime) 设置修改时间
- */
-
-/**
- *人员描述
  */
 class Person extends AbstractModel
 {
@@ -94,6 +92,7 @@ class Person extends AbstractModel
      * @var string 修改时间
      */
     public $UpdateTime;
+
     /**
      * @param string $LibraryId 人员库唯一标识符
      * @param string $PersonId 人员唯一标识符
@@ -110,6 +109,7 @@ class Person extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

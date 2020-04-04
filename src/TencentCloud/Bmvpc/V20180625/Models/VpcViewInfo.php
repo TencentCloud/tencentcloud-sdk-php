@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPC视图信息
+ *
  * @method string getVpcId() 获取私有网络ID
  * @method void setVpcId(string $VpcId) 设置私有网络ID
  * @method string getVpcName() 获取私有网络名称
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNatNum(integer $NatNum) 设置NAT网关个数
  * @method array getSubnetSet() 获取子网列表
  * @method void setSubnetSet(array $SubnetSet) 设置子网列表
- */
-
-/**
- *VPC视图信息
  */
 class VpcViewInfo extends AbstractModel
 {
@@ -80,6 +78,7 @@ class VpcViewInfo extends AbstractModel
      * @var array 子网列表
      */
     public $SubnetSet;
+
     /**
      * @param string $VpcId 私有网络ID
      * @param string $VpcName 私有网络名称
@@ -94,6 +93,7 @@ class VpcViewInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

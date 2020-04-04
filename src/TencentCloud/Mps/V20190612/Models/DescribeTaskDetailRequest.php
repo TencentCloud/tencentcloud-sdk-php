@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskDetail请求参数结构体
+ *
  * @method string getTaskId() 获取视频处理任务的任务 ID。
  * @method void setTaskId(string $TaskId) 设置视频处理任务的任务 ID。
- */
-
-/**
- *DescribeTaskDetail请求参数结构体
  */
 class DescribeTaskDetailRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeTaskDetailRequest extends AbstractModel
      * @var string 视频处理任务的任务 ID。
      */
     public $TaskId;
+
     /**
      * @param string $TaskId 视频处理任务的任务 ID。
      */
@@ -38,6 +37,7 @@ class DescribeTaskDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

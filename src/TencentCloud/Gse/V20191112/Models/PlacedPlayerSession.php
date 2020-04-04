@@ -18,14 +18,12 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 部署的玩家游戏会话
+ *
  * @method string getPlayerId() 获取玩家Id
  * @method void setPlayerId(string $PlayerId) 设置玩家Id
  * @method string getPlayerSessionId() 获取玩家会话Id
  * @method void setPlayerSessionId(string $PlayerSessionId) 设置玩家会话Id
- */
-
-/**
- *部署的玩家游戏会话
  */
 class PlacedPlayerSession extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PlacedPlayerSession extends AbstractModel
      * @var string 玩家会话Id
      */
     public $PlayerSessionId;
+
     /**
      * @param string $PlayerId 玩家Id
      * @param string $PlayerSessionId 玩家会话Id
@@ -46,6 +45,7 @@ class PlacedPlayerSession extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

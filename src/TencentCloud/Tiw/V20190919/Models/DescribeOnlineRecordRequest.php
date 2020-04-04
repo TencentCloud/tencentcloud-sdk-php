@@ -18,14 +18,12 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeOnlineRecord请求参数结构体
+ *
  * @method integer getSdkAppId() 获取客户的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置客户的SdkAppId
  * @method string getTaskId() 获取实时录制任务Id
  * @method void setTaskId(string $TaskId) 设置实时录制任务Id
- */
-
-/**
- *DescribeOnlineRecord请求参数结构体
  */
 class DescribeOnlineRecordRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeOnlineRecordRequest extends AbstractModel
      * @var string 实时录制任务Id
      */
     public $TaskId;
+
     /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param string $TaskId 实时录制任务Id
@@ -46,6 +45,7 @@ class DescribeOnlineRecordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

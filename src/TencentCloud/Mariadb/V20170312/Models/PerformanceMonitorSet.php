@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DB性能监控指标集合
+ *
  * @method MonitorData getUpdateTotal() 获取更新操作数UPDATE
  * @method void setUpdateTotal(MonitorData $UpdateTotal) 设置更新操作数UPDATE
  * @method MonitorData getDiskIops() 获取磁盘每秒IO次数
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInsertTotal(MonitorData $InsertTotal) 设置插入操作数INSERT
  * @method MonitorData getIsMasterSwitched() 获取是否发生主备切换，1为发生，0否
  * @method void setIsMasterSwitched(MonitorData $IsMasterSwitched) 设置是否发生主备切换，1为发生，0否
- */
-
-/**
- *DB性能监控指标集合
  */
 class PerformanceMonitorSet extends AbstractModel
 {
@@ -94,6 +92,7 @@ class PerformanceMonitorSet extends AbstractModel
      * @var MonitorData 是否发生主备切换，1为发生，0否
      */
     public $IsMasterSwitched;
+
     /**
      * @param MonitorData $UpdateTotal 更新操作数UPDATE
      * @param MonitorData $DiskIops 磁盘每秒IO次数
@@ -110,6 +109,7 @@ class PerformanceMonitorSet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

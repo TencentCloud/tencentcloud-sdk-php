@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceBackups请求参数结构体
+ *
  * @method string getInstanceId() 获取待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
  * @method void setInstanceId(string $InstanceId) 设置待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
  * @method integer getLimit() 获取实例列表大小，默认大小20
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
  * @method array getStatus() 获取1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。
  * @method void setStatus(array $Status) 设置1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。
- */
-
-/**
- *DescribeInstanceBackups请求参数结构体
  */
 class DescribeInstanceBackupsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeInstanceBackupsRequest extends AbstractModel
      * @var array 1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。
      */
     public $Status;
+
     /**
      * @param string $InstanceId 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
      * @param integer $Limit 实例列表大小，默认大小20
@@ -78,6 +77,7 @@ class DescribeInstanceBackupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

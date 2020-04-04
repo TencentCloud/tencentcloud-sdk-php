@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateServerlessDBInstance请求参数结构体
+ *
  * @method string getZone() 获取可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
  * @method void setZone(string $Zone) 设置可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
  * @method string getDBInstanceName() 获取DB实例名称，同一个账号下该值必须唯一。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络ID。
  * @method string getSubnetId() 获取私有网络子网ID。
  * @method void setSubnetId(string $SubnetId) 设置私有网络子网ID。
- */
-
-/**
- *CreateServerlessDBInstance请求参数结构体
  */
 class CreateServerlessDBInstanceRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateServerlessDBInstanceRequest extends AbstractModel
      * @var string 私有网络子网ID。
      */
     public $SubnetId;
+
     /**
      * @param string $Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
      * @param string $DBInstanceName DB实例名称，同一个账号下该值必须唯一。
@@ -86,6 +85,7 @@ class CreateServerlessDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

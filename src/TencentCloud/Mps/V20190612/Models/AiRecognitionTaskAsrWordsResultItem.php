@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音关键词识别结果。
+ *
  * @method string getWord() 获取语音关键词。
  * @method void setWord(string $Word) 设置语音关键词。
  * @method array getSegmentSet() 获取语音关键词出现的时间片段列表。
  * @method void setSegmentSet(array $SegmentSet) 设置语音关键词出现的时间片段列表。
- */
-
-/**
- *语音关键词识别结果。
  */
 class AiRecognitionTaskAsrWordsResultItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AiRecognitionTaskAsrWordsResultItem extends AbstractModel
      * @var array 语音关键词出现的时间片段列表。
      */
     public $SegmentSet;
+
     /**
      * @param string $Word 语音关键词。
      * @param array $SegmentSet 语音关键词出现的时间片段列表。
@@ -46,6 +45,7 @@ class AiRecognitionTaskAsrWordsResultItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

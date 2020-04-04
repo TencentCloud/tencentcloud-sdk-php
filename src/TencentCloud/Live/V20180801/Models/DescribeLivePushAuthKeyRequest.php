@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLivePushAuthKey请求参数结构体
+ *
  * @method string getDomainName() 获取推流域名。
  * @method void setDomainName(string $DomainName) 设置推流域名。
- */
-
-/**
- *DescribeLivePushAuthKey请求参数结构体
  */
 class DescribeLivePushAuthKeyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeLivePushAuthKeyRequest extends AbstractModel
      * @var string 推流域名。
      */
     public $DomainName;
+
     /**
      * @param string $DomainName 推流域名。
      */
@@ -38,6 +37,7 @@ class DescribeLivePushAuthKeyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

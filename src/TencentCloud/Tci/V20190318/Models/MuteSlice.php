@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 所有静音片段。
+ *
  * @method integer getMuteBtm() 获取起始时间。
  * @method void setMuteBtm(integer $MuteBtm) 设置起始时间。
  * @method integer getMuteEtm() 获取终止时间。
  * @method void setMuteEtm(integer $MuteEtm) 设置终止时间。
- */
-
-/**
- *所有静音片段。
  */
 class MuteSlice extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MuteSlice extends AbstractModel
      * @var integer 终止时间。
      */
     public $MuteEtm;
+
     /**
      * @param integer $MuteBtm 起始时间。
      * @param integer $MuteEtm 终止时间。
@@ -46,6 +45,7 @@ class MuteSlice extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

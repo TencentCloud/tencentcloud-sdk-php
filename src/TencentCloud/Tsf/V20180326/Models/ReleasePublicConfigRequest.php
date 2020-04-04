@@ -18,16 +18,14 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReleasePublicConfig请求参数结构体
+ *
  * @method string getConfigId() 获取配置ID
  * @method void setConfigId(string $ConfigId) 设置配置ID
  * @method string getNamespaceId() 获取命名空间ID
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
  * @method string getReleaseDesc() 获取发布描述
  * @method void setReleaseDesc(string $ReleaseDesc) 设置发布描述
- */
-
-/**
- *ReleasePublicConfig请求参数结构体
  */
 class ReleasePublicConfigRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ReleasePublicConfigRequest extends AbstractModel
      * @var string 发布描述
      */
     public $ReleaseDesc;
+
     /**
      * @param string $ConfigId 配置ID
      * @param string $NamespaceId 命名空间ID
@@ -54,6 +53,7 @@ class ReleasePublicConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

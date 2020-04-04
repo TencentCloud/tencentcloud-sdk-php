@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveRecordTemplates请求参数结构体
+ *
  * @method integer getIsDelayLive() 获取是否属于慢直播模板
  * @method void setIsDelayLive(integer $IsDelayLive) 设置是否属于慢直播模板
- */
-
-/**
- *DescribeLiveRecordTemplates请求参数结构体
  */
 class DescribeLiveRecordTemplatesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeLiveRecordTemplatesRequest extends AbstractModel
      * @var integer 是否属于慢直播模板
      */
     public $IsDelayLive;
+
     /**
      * @param integer $IsDelayLive 是否属于慢直播模板
      */
@@ -38,6 +37,7 @@ class DescribeLiveRecordTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

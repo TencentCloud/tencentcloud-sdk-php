@@ -18,14 +18,12 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * FinanBillSliceOCR返回参数结构体
+ *
  * @method array getFinanBillSliceInfos() 获取金融票据切片识别结果，具体内容请点击左侧链接。
  * @method void setFinanBillSliceInfos(array $FinanBillSliceInfos) 设置金融票据切片识别结果，具体内容请点击左侧链接。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *FinanBillSliceOCR返回参数结构体
  */
 class FinanBillSliceOCRResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class FinanBillSliceOCRResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $FinanBillSliceInfos 金融票据切片识别结果，具体内容请点击左侧链接。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class FinanBillSliceOCRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

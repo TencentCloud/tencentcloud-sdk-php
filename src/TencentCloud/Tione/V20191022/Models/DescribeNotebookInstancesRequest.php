@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNotebookInstances请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取限制数目
@@ -42,10 +44,6 @@ default-code-repo-name - String - 是否必填：否 -（过滤条件）按照�
 additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
  * @method string getSortBy() 获取【废弃字段】排序字段
  * @method void setSortBy(string $SortBy) 设置【废弃字段】排序字段
- */
-
-/**
- *DescribeNotebookInstances请求参数结构体
  */
 class DescribeNotebookInstancesRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ additional-code-repo-name - String - 是否必填：否 -（过滤条件）按�
      * @var string 【废弃字段】排序字段
      */
     public $SortBy;
+
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 限制数目
@@ -98,6 +97,7 @@ additional-code-repo-name - String - 是否必填：否 -（过滤条件）按�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

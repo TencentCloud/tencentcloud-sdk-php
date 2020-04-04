@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转动图模板详情。
+ *
  * @method integer getDefinition() 获取转动图模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置转动图模板唯一标识。
  * @method string getType() 获取模板类型，取值范围：
@@ -72,10 +74,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- */
-
-/**
- *转动图模板详情。
  */
 class AnimatedGraphicsTemplate extends AbstractModel
 {
@@ -153,6 +151,7 @@ class AnimatedGraphicsTemplate extends AbstractModel
      * @var string 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $UpdateTime;
+
     /**
      * @param integer $Definition 转动图模板唯一标识。
      * @param string $Type 模板类型，取值范围：
@@ -186,6 +185,7 @@ class AnimatedGraphicsTemplate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

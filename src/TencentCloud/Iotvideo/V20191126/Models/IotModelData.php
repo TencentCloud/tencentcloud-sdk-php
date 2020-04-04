@@ -18,14 +18,12 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 物模型历史版本
+ *
  * @method integer getRevision() 获取版本号
  * @method void setRevision(integer $Revision) 设置版本号
  * @method integer getReleaseTime() 获取发布时间
  * @method void setReleaseTime(integer $ReleaseTime) 设置发布时间
- */
-
-/**
- *物模型历史版本
  */
 class IotModelData extends AbstractModel
 {
@@ -38,6 +36,7 @@ class IotModelData extends AbstractModel
      * @var integer 发布时间
      */
     public $ReleaseTime;
+
     /**
      * @param integer $Revision 版本号
      * @param integer $ReleaseTime 发布时间
@@ -46,6 +45,7 @@ class IotModelData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

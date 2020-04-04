@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 函数列表
+ *
  * @method string getModTime() 获取修改时间
  * @method void setModTime(string $ModTime) 设置修改时间
  * @method string getAddTime() 获取创建时间
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置函数标签
  * @method string getType() 获取函数类型，取值为 HTTP 或者 Event
  * @method void setType(string $Type) 设置函数类型，取值为 HTTP 或者 Event
- */
-
-/**
- *函数列表
  */
 class FunctionInfo extends AbstractModel
 {
@@ -101,6 +99,7 @@ class FunctionInfo extends AbstractModel
      * @var string 函数类型，取值为 HTTP 或者 Event
      */
     public $Type;
+
     /**
      * @param string $ModTime 修改时间
      * @param string $AddTime 创建时间
@@ -118,6 +117,7 @@ class FunctionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

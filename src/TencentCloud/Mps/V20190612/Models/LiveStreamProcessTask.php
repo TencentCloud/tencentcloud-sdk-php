@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 直播处理任务信息
+ *
  * @method string getTaskId() 获取视频处理任务 ID。
  * @method void setTaskId(string $TaskId) 设置视频处理任务 ID。
  * @method string getStatus() 获取任务流状态，取值：
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) 设置错误信息。
  * @method string getUrl() 获取直播流 URL。
  * @method void setUrl(string $Url) 设置直播流 URL。
- */
-
-/**
- *直播处理任务信息
  */
 class LiveStreamProcessTask extends AbstractModel
 {
@@ -65,6 +63,7 @@ class LiveStreamProcessTask extends AbstractModel
      * @var string 直播流 URL。
      */
     public $Url;
+
     /**
      * @param string $TaskId 视频处理任务 ID。
      * @param string $Status 任务流状态，取值：
@@ -78,6 +77,7 @@ class LiveStreamProcessTask extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

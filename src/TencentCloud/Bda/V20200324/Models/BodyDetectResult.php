@@ -18,6 +18,8 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图中检测出来的人体框。
+ *
  * @method float getConfidence() 获取检测出的人体置信度。 
 误识率百分之十对应的阈值是0.14；误识率百分之五对应的阈值是0.32；误识率百分之二对应的阈值是0.62；误识率百分之一对应的阈值是0.81。 
 通常情况建议使用阈值0.32，可适用大多数情况。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 通常情况建议使用阈值0.32，可适用大多数情况。
  * @method BodyRect getBodyRect() 获取图中检测出来的人体框
  * @method void setBodyRect(BodyRect $BodyRect) 设置图中检测出来的人体框
- */
-
-/**
- *图中检测出来的人体框。
  */
 class BodyDetectResult extends AbstractModel
 {
@@ -44,6 +42,7 @@ class BodyDetectResult extends AbstractModel
      * @var BodyRect 图中检测出来的人体框
      */
     public $BodyRect;
+
     /**
      * @param float $Confidence 检测出的人体置信度。 
 误识率百分之十对应的阈值是0.14；误识率百分之五对应的阈值是0.32；误识率百分之二对应的阈值是0.62；误识率百分之一对应的阈值是0.81。 
@@ -54,6 +53,7 @@ class BodyDetectResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

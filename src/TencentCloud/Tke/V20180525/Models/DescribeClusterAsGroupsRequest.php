@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterAsGroups请求参数结构体
+ *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method array getAutoScalingGroupIds() 获取伸缩组ID列表，如果为空，表示拉取集群关联的所有伸缩组。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
- */
-
-/**
- *DescribeClusterAsGroups请求参数结构体
  */
 class DescribeClusterAsGroupsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeClusterAsGroupsRequest extends AbstractModel
      * @var integer 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public $Limit;
+
     /**
      * @param string $ClusterId 集群ID
      * @param array $AutoScalingGroupIds 伸缩组ID列表，如果为空，表示拉取集群关联的所有伸缩组。
@@ -62,6 +61,7 @@ class DescribeClusterAsGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

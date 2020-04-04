@@ -18,14 +18,12 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述设备分区信息
+ *
  * @method string getName() 获取分区名称
  * @method void setName(string $Name) 设置分区名称
  * @method integer getSize() 获取分区大小
  * @method void setSize(integer $Size) 设置分区大小
- */
-
-/**
- *描述设备分区信息
  */
 class PartitionInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PartitionInfo extends AbstractModel
      * @var integer 分区大小
      */
     public $Size;
+
     /**
      * @param string $Name 分区名称
      * @param integer $Size 分区大小
@@ -46,6 +45,7 @@ class PartitionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

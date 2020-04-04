@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EMR产品配置
+ *
  * @method array getSoftInfo() 获取软件信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSoftInfo(array $SoftInfo) 设置软件信息
@@ -82,10 +84,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCbsEncrypt(integer $CbsEncrypt) 设置是否开启Cbs加密
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *EMR产品配置
  */
 class EmrProductConfigOutter extends AbstractModel
 {
@@ -184,6 +182,7 @@ class EmrProductConfigOutter extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CbsEncrypt;
+
     /**
      * @param array $SoftInfo 软件信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -222,6 +221,7 @@ class EmrProductConfigOutter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

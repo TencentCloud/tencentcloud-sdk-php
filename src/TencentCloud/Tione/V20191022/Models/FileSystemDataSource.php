@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文件系统输入数据源
+ *
  * @method string getDirectoryPath() 获取文件系统目录
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDirectoryPath(string $DirectoryPath) 设置文件系统目录
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *文件系统输入数据源
  */
 class FileSystemDataSource extends AbstractModel
 {
@@ -64,6 +62,7 @@ class FileSystemDataSource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSystemId;
+
     /**
      * @param string $DirectoryPath 文件系统目录
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +77,7 @@ class FileSystemDataSource extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

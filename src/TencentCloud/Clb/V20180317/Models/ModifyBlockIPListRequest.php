@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyBlockIPList请求参数结构体
+ *
  * @method array getLoadBalancerIds() 获取负载均衡实例ID
  * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置负载均衡实例ID
  * @method string getType() 获取操作类型，可取：
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireTime(integer $ExpireTime) 设置过期时间，单位秒，默认值3600
  * @method string getAddStrategy() 获取添加IP的策略，可取：fifo（如果黑名单容量已满，新加入黑名单的IP采用先进先出策略）
  * @method void setAddStrategy(string $AddStrategy) 设置添加IP的策略，可取：fifo（如果黑名单容量已满，新加入黑名单的IP采用先进先出策略）
- */
-
-/**
- *ModifyBlockIPList请求参数结构体
  */
 class ModifyBlockIPListRequest extends AbstractModel
 {
@@ -84,6 +82,7 @@ class ModifyBlockIPListRequest extends AbstractModel
      * @var string 添加IP的策略，可取：fifo（如果黑名单容量已满，新加入黑名单的IP采用先进先出策略）
      */
     public $AddStrategy;
+
     /**
      * @param array $LoadBalancerIds 负载均衡实例ID
      * @param string $Type 操作类型，可取：
@@ -102,6 +101,7 @@ class ModifyBlockIPListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

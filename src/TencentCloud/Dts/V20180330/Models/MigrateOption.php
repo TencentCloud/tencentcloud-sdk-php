@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 迁移任务配置选项
+ *
  * @method integer getRunMode() 获取任务运行模式，值包括：1-立即执行，2-定时执行
  * @method void setRunMode(integer $RunMode) 设置任务运行模式，值包括：1-立即执行，2-定时执行
  * @method string getExpectTime() 获取期望执行时间，当runMode=2时，该字段必填，时间格式：yyyy-mm-dd hh:mm:ss
@@ -64,10 +66,6 @@ MongoDB可定义如下的参数:
 MySQL暂不支持额外参数设置。
  * @method ConsistencyParams getConsistencyParams() 获取仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
  * @method void setConsistencyParams(ConsistencyParams $ConsistencyParams) 设置仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
- */
-
-/**
- *迁移任务配置选项
  */
 class MigrateOption extends AbstractModel
 {
@@ -125,6 +123,7 @@ MySQL暂不支持额外参数设置。
      * @var ConsistencyParams 仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
      */
     public $ConsistencyParams;
+
     /**
      * @param integer $RunMode 任务运行模式，值包括：1-立即执行，2-定时执行
      * @param string $ExpectTime 期望执行时间，当runMode=2时，该字段必填，时间格式：yyyy-mm-dd hh:mm:ss
@@ -154,6 +153,7 @@ MySQL暂不支持额外参数设置。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

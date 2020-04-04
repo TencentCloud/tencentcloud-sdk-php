@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 订单信息
+ *
  * @method string getDealName() 获取订单名
  * @method void setDealName(string $DealName) 设置订单名
  * @method integer getCount() 获取商品数量
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwnerUin(string $OwnerUin) 设置所属账号
  * @method string getInstanceChargeType() 获取实例付费类型
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例付费类型
- */
-
-/**
- *订单信息
  */
 class DealInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DealInfo extends AbstractModel
      * @var string 实例付费类型
      */
     public $InstanceChargeType;
+
     /**
      * @param string $DealName 订单名
      * @param integer $Count 商品数量
@@ -78,6 +77,7 @@ class DealInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

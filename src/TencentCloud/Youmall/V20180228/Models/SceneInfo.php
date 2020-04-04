@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 场景图信息
+ *
  * @method string getScenePictureURL() 获取场景图
  * @method void setScenePictureURL(string $ScenePictureURL) 设置场景图
  * @method integer getHeadX() 获取抓拍头像左上角X坐标在场景图中的像素点位置
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHeadWidth(integer $HeadWidth) 设置抓拍头像在场景图中占有的像素宽度
  * @method integer getHeadHeight() 获取抓拍头像在场景图中占有的像素高度
  * @method void setHeadHeight(integer $HeadHeight) 设置抓拍头像在场景图中占有的像素高度
- */
-
-/**
- *场景图信息
  */
 class SceneInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class SceneInfo extends AbstractModel
      * @var integer 抓拍头像在场景图中占有的像素高度
      */
     public $HeadHeight;
+
     /**
      * @param string $ScenePictureURL 场景图
      * @param integer $HeadX 抓拍头像左上角X坐标在场景图中的像素点位置
@@ -70,6 +69,7 @@ class SceneInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * LogoDetail
+ *
  * @method array getAppLogoDetail() 获取命中的Applogo详情
  * @method void setAppLogoDetail(array $AppLogoDetail) 设置命中的Applogo详情
- */
-
-/**
- *LogoDetail
  */
 class LogoDetail extends AbstractModel
 {
@@ -31,6 +29,7 @@ class LogoDetail extends AbstractModel
      * @var array 命中的Applogo详情
      */
     public $AppLogoDetail;
+
     /**
      * @param array $AppLogoDetail 命中的Applogo详情
      */
@@ -38,6 +37,7 @@ class LogoDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

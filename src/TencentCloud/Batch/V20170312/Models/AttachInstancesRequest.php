@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AttachInstances请求参数结构体
+ *
  * @method string getEnvId() 获取计算环境ID
  * @method void setEnvId(string $EnvId) 设置计算环境ID
  * @method array getInstances() 获取加入计算环境实例列表
  * @method void setInstances(array $Instances) 设置加入计算环境实例列表
- */
-
-/**
- *AttachInstances请求参数结构体
  */
 class AttachInstancesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AttachInstancesRequest extends AbstractModel
      * @var array 加入计算环境实例列表
      */
     public $Instances;
+
     /**
      * @param string $EnvId 计算环境ID
      * @param array $Instances 加入计算环境实例列表
@@ -46,6 +45,7 @@ class AttachInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

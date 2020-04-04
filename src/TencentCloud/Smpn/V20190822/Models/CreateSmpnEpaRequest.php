@@ -18,14 +18,12 @@ namespace TencentCloud\Smpn\V20190822\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSmpnEpa请求参数结构体
+ *
  * @method EPARequest getRequestData() 获取企业号码认证请求内容
  * @method void setRequestData(EPARequest $RequestData) 设置企业号码认证请求内容
  * @method string getResourceId() 获取用于计费的资源ID
  * @method void setResourceId(string $ResourceId) 设置用于计费的资源ID
- */
-
-/**
- *CreateSmpnEpa请求参数结构体
  */
 class CreateSmpnEpaRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateSmpnEpaRequest extends AbstractModel
      * @var string 用于计费的资源ID
      */
     public $ResourceId;
+
     /**
      * @param EPARequest $RequestData 企业号码认证请求内容
      * @param string $ResourceId 用于计费的资源ID
@@ -46,6 +45,7 @@ class CreateSmpnEpaRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

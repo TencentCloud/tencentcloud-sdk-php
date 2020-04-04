@@ -18,12 +18,10 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VerifyResult请求参数结构体
+ *
  * @method integer getResultId() 获取要查询的拨测任务的结果id
  * @method void setResultId(integer $ResultId) 设置要查询的拨测任务的结果id
- */
-
-/**
- *VerifyResult请求参数结构体
  */
 class VerifyResultRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class VerifyResultRequest extends AbstractModel
      * @var integer 要查询的拨测任务的结果id
      */
     public $ResultId;
+
     /**
      * @param integer $ResultId 要查询的拨测任务的结果id
      */
@@ -38,6 +37,7 @@ class VerifyResultRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

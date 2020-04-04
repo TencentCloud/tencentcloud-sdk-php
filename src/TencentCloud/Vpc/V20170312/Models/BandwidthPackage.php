@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述带宽包信息的结构
+ *
  * @method string getBandwidthPackageId() 获取带宽包唯一标识Id
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包唯一标识Id
  * @method string getNetworkType() 获取带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceSet(array $ResourceSet) 设置带宽包资源信息
  * @method integer getBandwidth() 获取带宽包限速大小。单位：Mbps，-1表示不限速。
  * @method void setBandwidth(integer $Bandwidth) 设置带宽包限速大小。单位：Mbps，-1表示不限速。
- */
-
-/**
- *描述带宽包信息的结构
  */
 class BandwidthPackage extends AbstractModel
 {
@@ -80,6 +78,7 @@ class BandwidthPackage extends AbstractModel
      * @var integer 带宽包限速大小。单位：Mbps，-1表示不限速。
      */
     public $Bandwidth;
+
     /**
      * @param string $BandwidthPackageId 带宽包唯一标识Id
      * @param string $NetworkType 带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
@@ -94,6 +93,7 @@ class BandwidthPackage extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

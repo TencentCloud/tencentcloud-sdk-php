@@ -18,14 +18,12 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAccessRules请求参数结构体
+ *
  * @method array getAccessRules() 获取多个权限规则，上限为10
  * @method void setAccessRules(array $AccessRules) 设置多个权限规则，上限为10
  * @method string getAccessGroupId() 获取权限组ID
  * @method void setAccessGroupId(string $AccessGroupId) 设置权限组ID
- */
-
-/**
- *CreateAccessRules请求参数结构体
  */
 class CreateAccessRulesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateAccessRulesRequest extends AbstractModel
      * @var string 权限组ID
      */
     public $AccessGroupId;
+
     /**
      * @param array $AccessRules 多个权限规则，上限为10
      * @param string $AccessGroupId 权限组ID
@@ -46,6 +45,7 @@ class CreateAccessRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

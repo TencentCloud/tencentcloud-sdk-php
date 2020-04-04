@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 空的轨道片段，用来进行时间轴的占位。如需要两个音频片段之间有一段时间的静音，可以用 EmptyTrackItem 来进行占位。
+ *
  * @method float getDuration() 获取持续时间，单位为秒。
  * @method void setDuration(float $Duration) 设置持续时间，单位为秒。
- */
-
-/**
- *空的轨道片段，用来进行时间轴的占位。如需要两个音频片段之间有一段时间的静音，可以用 EmptyTrackItem 来进行占位。
  */
 class EmptyTrackItem extends AbstractModel
 {
@@ -31,6 +29,7 @@ class EmptyTrackItem extends AbstractModel
      * @var float 持续时间，单位为秒。
      */
     public $Duration;
+
     /**
      * @param float $Duration 持续时间，单位为秒。
      */
@@ -38,6 +37,7 @@ class EmptyTrackItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

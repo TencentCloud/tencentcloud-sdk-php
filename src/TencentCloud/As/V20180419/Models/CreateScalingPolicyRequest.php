@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateScalingPolicy请求参数结构体
+ *
  * @method string getAutoScalingGroupId() 获取伸缩组ID。
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。
  * @method string getScalingPolicyName() 获取告警触发策略名称。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCooldown(integer $Cooldown) 设置冷却时间，单位为秒。默认冷却时间300秒。
  * @method array getNotificationUserGroupIds() 获取通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
  * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
- */
-
-/**
- *CreateScalingPolicy请求参数结构体
  */
 class CreateScalingPolicyRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateScalingPolicyRequest extends AbstractModel
      * @var array 通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
      */
     public $NotificationUserGroupIds;
+
     /**
      * @param string $AutoScalingGroupId 伸缩组ID。
      * @param string $ScalingPolicyName 告警触发策略名称。
@@ -86,6 +85,7 @@ class CreateScalingPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

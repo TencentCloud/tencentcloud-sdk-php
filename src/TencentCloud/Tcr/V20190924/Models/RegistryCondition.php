@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例创建过程
+ *
  * @method string getType() 获取实例创建过程类型
  * @method void setType(string $Type) 设置实例创建过程类型
  * @method string getStatus() 获取实例创建过程状态
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置转换到该过程的简明原因
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *实例创建过程
  */
 class RegistryCondition extends AbstractModel
 {
@@ -48,6 +46,7 @@ class RegistryCondition extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
+
     /**
      * @param string $Type 实例创建过程类型
      * @param string $Status 实例创建过程状态
@@ -58,6 +57,7 @@ class RegistryCondition extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

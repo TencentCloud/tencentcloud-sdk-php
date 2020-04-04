@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 本地重定向信息
+ *
  * @method string getStdoutLocalPath() 获取标准输出重定向本地路径
  * @method void setStdoutLocalPath(string $StdoutLocalPath) 设置标准输出重定向本地路径
  * @method string getStderrLocalPath() 获取标准错误重定向本地路径
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStdoutLocalFileName(string $StdoutLocalFileName) 设置标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
  * @method string getStderrLocalFileName() 获取标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
  * @method void setStderrLocalFileName(string $StderrLocalFileName) 设置标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
- */
-
-/**
- *本地重定向信息
  */
 class RedirectLocalInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RedirectLocalInfo extends AbstractModel
      * @var string 标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
      */
     public $StderrLocalFileName;
+
     /**
      * @param string $StdoutLocalPath 标准输出重定向本地路径
      * @param string $StderrLocalPath 标准错误重定向本地路径
@@ -62,6 +61,7 @@ class RedirectLocalInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

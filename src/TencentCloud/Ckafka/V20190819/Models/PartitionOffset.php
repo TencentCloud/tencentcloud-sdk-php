@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 分区和位移
+ *
  * @method string getPartition() 获取Partition,例如"0"或"1"
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartition(string $Partition) 设置Partition,例如"0"或"1"
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffset(integer $Offset) 设置Offset,例如100
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *分区和位移
  */
 class PartitionOffset extends AbstractModel
 {
@@ -44,6 +42,7 @@ class PartitionOffset extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Offset;
+
     /**
      * @param string $Partition Partition,例如"0"或"1"
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class PartitionOffset extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

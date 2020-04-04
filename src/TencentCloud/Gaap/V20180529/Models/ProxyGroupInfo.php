@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 通道组详情列表
+ *
  * @method string getGroupId() 获取通道组id
  * @method void setGroupId(string $GroupId) 设置通道组id
  * @method string getDomain() 获取通道组域名
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 11，通道迁移中。
  * @method array getTagSet() 获取标签列表。
  * @method void setTagSet(array $TagSet) 设置标签列表。
- */
-
-/**
- *通道组详情列表
  */
 class ProxyGroupInfo extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ProxyGroupInfo extends AbstractModel
      * @var array 标签列表。
      */
     public $TagSet;
+
     /**
      * @param string $GroupId 通道组id
      * @param string $Domain 通道组域名
@@ -114,6 +113,7 @@ class ProxyGroupInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

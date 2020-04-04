@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUDPListeners返回参数结构体
+ *
  * @method integer getTotalCount() 获取监听器个数
  * @method void setTotalCount(integer $TotalCount) 设置监听器个数
  * @method array getListenerSet() 获取UDP监听器列表
  * @method void setListenerSet(array $ListenerSet) 设置UDP监听器列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeUDPListeners返回参数结构体
  */
 class DescribeUDPListenersResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeUDPListenersResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 监听器个数
      * @param array $ListenerSet UDP监听器列表
@@ -54,6 +53,7 @@ class DescribeUDPListenersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

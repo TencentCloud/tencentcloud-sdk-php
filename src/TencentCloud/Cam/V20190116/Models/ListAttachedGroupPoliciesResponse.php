@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListAttachedGroupPolicies返回参数结构体
+ *
  * @method integer getTotalNum() 获取策略总数
  * @method void setTotalNum(integer $TotalNum) 设置策略总数
  * @method array getList() 获取策略列表
  * @method void setList(array $List) 设置策略列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ListAttachedGroupPolicies返回参数结构体
  */
 class ListAttachedGroupPoliciesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListAttachedGroupPoliciesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalNum 策略总数
      * @param array $List 策略列表
@@ -54,6 +53,7 @@ class ListAttachedGroupPoliciesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

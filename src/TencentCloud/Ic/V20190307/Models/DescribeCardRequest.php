@@ -18,14 +18,12 @@ namespace TencentCloud\Ic\V20190307\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCard请求参数结构体
+ *
  * @method integer getSdkappid() 获取应用ID
  * @method void setSdkappid(integer $Sdkappid) 设置应用ID
  * @method string getIccid() 获取卡片ID
  * @method void setIccid(string $Iccid) 设置卡片ID
- */
-
-/**
- *DescribeCard请求参数结构体
  */
 class DescribeCardRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeCardRequest extends AbstractModel
      * @var string 卡片ID
      */
     public $Iccid;
+
     /**
      * @param integer $Sdkappid 应用ID
      * @param string $Iccid 卡片ID
@@ -46,6 +45,7 @@ class DescribeCardRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Fmu\V20191213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 唇色信息
+ *
  * @method RGBAInfo getRGBA() 获取使用RGBA模型试唇色。
  * @method void setRGBA(RGBAInfo $RGBA) 设置使用RGBA模型试唇色。
  * @method string getModelId() 获取使用已注册的 LUT 文件试唇色。  
@@ -28,10 +30,6 @@ ModelId 和 RGBA 两个参数只需提供一个，若都提供只使用 ModelId�
 您可以通过 [人脸检测与分析](https://cloud.tencent.com/document/api/867/32800)  接口获取人脸框位置信息。
  * @method void setFaceRect(FaceRect $FaceRect) 设置人脸框位置。若不输入则选择 Image 或 Url 中面积最大的人脸。  
 您可以通过 [人脸检测与分析](https://cloud.tencent.com/document/api/867/32800)  接口获取人脸框位置信息。
- */
-
-/**
- *唇色信息
  */
 class LipColorInfo extends AbstractModel
 {
@@ -51,6 +49,7 @@ ModelId 和 RGBA 两个参数只需提供一个，若都提供只使用 ModelId�
 您可以通过 [人脸检测与分析](https://cloud.tencent.com/document/api/867/32800)  接口获取人脸框位置信息。
      */
     public $FaceRect;
+
     /**
      * @param RGBAInfo $RGBA 使用RGBA模型试唇色。
      * @param string $ModelId 使用已注册的 LUT 文件试唇色。  
@@ -62,6 +61,7 @@ ModelId 和 RGBA 两个参数只需提供一个，若都提供只使用 ModelId�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

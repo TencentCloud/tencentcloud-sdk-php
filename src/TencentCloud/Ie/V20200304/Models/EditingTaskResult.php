@@ -18,6 +18,8 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能识别任务结果信息
+ *
  * @method string getTaskId() 获取编辑任务 ID。
  * @method void setTaskId(string $TaskId) 设置编辑任务 ID。
  * @method integer getStatus() 获取编辑任务状态。 
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpeningEndingTaskResult(OpeningEndingTaskResult $OpeningEndingTaskResult) 设置片头片尾识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *智能识别任务结果信息
  */
 class EditingTaskResult extends AbstractModel
 {
@@ -101,6 +99,7 @@ class EditingTaskResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpeningEndingTaskResult;
+
     /**
      * @param string $TaskId 编辑任务 ID。
      * @param integer $Status 编辑任务状态。 
@@ -122,6 +121,7 @@ class EditingTaskResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteClusterInstances请求参数结构体
+ *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method array getInstanceIds() 获取主机InstanceId列表
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceDeleteMode(string $InstanceDeleteMode) 设置集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
  * @method boolean getForceDelete() 获取是否强制删除(当节点在初始化时，可以指定参数为TRUE)
  * @method void setForceDelete(boolean $ForceDelete) 设置是否强制删除(当节点在初始化时，可以指定参数为TRUE)
- */
-
-/**
- *DeleteClusterInstances请求参数结构体
  */
 class DeleteClusterInstancesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DeleteClusterInstancesRequest extends AbstractModel
      * @var boolean 是否强制删除(当节点在初始化时，可以指定参数为TRUE)
      */
     public $ForceDelete;
+
     /**
      * @param string $ClusterId 集群ID
      * @param array $InstanceIds 主机InstanceId列表
@@ -62,6 +61,7 @@ class DeleteClusterInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

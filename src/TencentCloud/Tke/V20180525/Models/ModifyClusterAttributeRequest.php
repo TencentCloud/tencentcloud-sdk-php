@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyClusterAttribute请求参数结构体
+ *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method integer getProjectId() 获取集群所属项目
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterName(string $ClusterName) 设置集群名称
  * @method string getClusterDesc() 获取集群描述
  * @method void setClusterDesc(string $ClusterDesc) 设置集群描述
- */
-
-/**
- *ModifyClusterAttribute请求参数结构体
  */
 class ModifyClusterAttributeRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyClusterAttributeRequest extends AbstractModel
      * @var string 集群描述
      */
     public $ClusterDesc;
+
     /**
      * @param string $ClusterId 集群ID
      * @param integer $ProjectId 集群所属项目
@@ -62,6 +61,7 @@ class ModifyClusterAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

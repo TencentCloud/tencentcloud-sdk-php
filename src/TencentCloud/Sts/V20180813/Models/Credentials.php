@@ -18,16 +18,14 @@ namespace TencentCloud\Sts\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 临时证书
+ *
  * @method string getToken() 获取token
  * @method void setToken(string $Token) 设置token
  * @method string getTmpSecretId() 获取临时证书密钥ID
  * @method void setTmpSecretId(string $TmpSecretId) 设置临时证书密钥ID
  * @method string getTmpSecretKey() 获取临时证书密钥Key
  * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时证书密钥Key
- */
-
-/**
- *临时证书
  */
 class Credentials extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Credentials extends AbstractModel
      * @var string 临时证书密钥Key
      */
     public $TmpSecretKey;
+
     /**
      * @param string $Token token
      * @param string $TmpSecretId 临时证书密钥ID
@@ -54,6 +53,7 @@ class Credentials extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

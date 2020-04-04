@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 省份可用率
+ *
  * @method float getAvgAvailRatio() 获取可用率
  * @method void setAvgAvailRatio(float $AvgAvailRatio) 设置可用率
  * @method string getProvinceName() 获取省份名称
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAvgTime(float $AvgTime) 设置平均耗时，单位毫秒
  * @method string getProvince() 获取省份
  * @method void setProvince(string $Province) 设置省份
- */
-
-/**
- *省份可用率
  */
 class ProvinceDetail extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ProvinceDetail extends AbstractModel
      * @var string 省份
      */
     public $Province;
+
     /**
      * @param float $AvgAvailRatio 可用率
      * @param string $ProvinceName 省份名称
@@ -86,6 +85,7 @@ class ProvinceDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

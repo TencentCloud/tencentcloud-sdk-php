@@ -18,14 +18,12 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CloseProVersion请求参数结构体
+ *
  * @method string getQuuid() 获取主机唯一标识Uuid。
 黑石的InstanceId，CVM的Uuid
  * @method void setQuuid(string $Quuid) 设置主机唯一标识Uuid。
 黑石的InstanceId，CVM的Uuid
- */
-
-/**
- *CloseProVersion请求参数结构体
  */
 class CloseProVersionRequest extends AbstractModel
 {
@@ -34,6 +32,7 @@ class CloseProVersionRequest extends AbstractModel
 黑石的InstanceId，CVM的Uuid
      */
     public $Quuid;
+
     /**
      * @param string $Quuid 主机唯一标识Uuid。
 黑石的InstanceId，CVM的Uuid
@@ -42,6 +41,7 @@ class CloseProVersionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

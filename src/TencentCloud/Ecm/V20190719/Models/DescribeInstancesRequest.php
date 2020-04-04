@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstances请求参数结构体
+ *
  * @method array getFilters() 获取过滤条件。
 zone      String      是否必填：否     （过滤条件）按照可用区中文名过滤,支持模糊匹配。
 module-id      String      是否必填：否     （过滤条件）按照模块ID过滤。
@@ -49,10 +51,6 @@ tag:tag-key      String      是否必填：否      （过滤条件）按照标
  * @method integer getLimit() 获取返回数量，默认为20(如果查询结果数目大于等于20)，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20(如果查询结果数目大于等于20)，最大值为100。
  */
-
-/**
- *DescribeInstances请求参数结构体
- */
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
@@ -81,6 +79,7 @@ tag:tag-key      String      是否必填：否      （过滤条件）按照标
      * @var integer 返回数量，默认为20(如果查询结果数目大于等于20)，最大值为100。
      */
     public $Limit;
+
     /**
      * @param array $Filters 过滤条件。
 zone      String      是否必填：否     （过滤条件）按照可用区中文名过滤,支持模糊匹配。
@@ -102,6 +101,7 @@ tag:tag-key      String      是否必填：否      （过滤条件）按照标
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

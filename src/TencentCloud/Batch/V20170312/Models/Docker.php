@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Docker容器信息
+ *
  * @method string getUser() 获取Docker Hub 用户名或 Tencent Registry 用户名
  * @method void setUser(string $User) 设置Docker Hub 用户名或 Tencent Registry 用户名
  * @method string getPassword() 获取Docker Hub 密码或 Tencent Registry 密码
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImage(string $Image) 设置Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
  * @method string getServer() 获取Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
  * @method void setServer(string $Server) 设置Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
- */
-
-/**
- *Docker容器信息
  */
 class Docker extends AbstractModel
 {
@@ -52,6 +50,7 @@ class Docker extends AbstractModel
      * @var string Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
      */
     public $Server;
+
     /**
      * @param string $User Docker Hub 用户名或 Tencent Registry 用户名
      * @param string $Password Docker Hub 密码或 Tencent Registry 密码
@@ -62,6 +61,7 @@ class Docker extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取应用用量统计数据输出参数
+ *
  * @method array getAppStatistics() 获取应用用量统计数据
  * @method void setAppStatistics(array $AppStatistics) 设置应用用量统计数据
- */
-
-/**
- *获取应用用量统计数据输出参数
  */
 class DescribeAppStatisticsResponse extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeAppStatisticsResponse extends AbstractModel
      * @var array 应用用量统计数据
      */
     public $AppStatistics;
+
     /**
      * @param array $AppStatistics 应用用量统计数据
      */
@@ -38,6 +37,7 @@ class DescribeAppStatisticsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

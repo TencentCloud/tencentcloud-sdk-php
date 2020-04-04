@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * cdh实例的资源信息
+ *
  * @method integer getCpuTotal() 获取cdh实例总cpu核数
  * @method void setCpuTotal(integer $CpuTotal) 设置cdh实例总cpu核数
  * @method integer getCpuAvailable() 获取cdh实例可用cpu核数
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskAvailable(integer $DiskAvailable) 设置cdh实例可用磁盘大小（单位为:GiB）
  * @method string getDiskType() 获取cdh实例磁盘类型
  * @method void setDiskType(string $DiskType) 设置cdh实例磁盘类型
- */
-
-/**
- *cdh实例的资源信息
  */
 class HostResource extends AbstractModel
 {
@@ -73,6 +71,7 @@ class HostResource extends AbstractModel
      * @var string cdh实例磁盘类型
      */
     public $DiskType;
+
     /**
      * @param integer $CpuTotal cdh实例总cpu核数
      * @param integer $CpuAvailable cdh实例可用cpu核数
@@ -86,6 +85,7 @@ class HostResource extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

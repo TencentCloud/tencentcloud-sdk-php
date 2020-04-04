@@ -18,16 +18,14 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateFileSystem请求参数结构体
+ *
  * @method string getFileSystemName() 获取文件系统名称
  * @method void setFileSystemName(string $FileSystemName) 设置文件系统名称
  * @method integer getCapacityQuota() 获取文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
  * @method void setCapacityQuota(integer $CapacityQuota) 设置文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
  * @method string getDescription() 获取文件系统描述
  * @method void setDescription(string $Description) 设置文件系统描述
- */
-
-/**
- *CreateFileSystem请求参数结构体
  */
 class CreateFileSystemRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateFileSystemRequest extends AbstractModel
      * @var string 文件系统描述
      */
     public $Description;
+
     /**
      * @param string $FileSystemName 文件系统名称
      * @param integer $CapacityQuota 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
@@ -54,6 +53,7 @@ class CreateFileSystemRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

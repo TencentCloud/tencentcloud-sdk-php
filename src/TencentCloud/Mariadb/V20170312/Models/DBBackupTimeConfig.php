@@ -18,16 +18,14 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云数据库实例备份时间配置信息
+ *
  * @method string getInstanceId() 获取实例 ID
  * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method string getStartBackupTime() 获取每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
  * @method void setStartBackupTime(string $StartBackupTime) 设置每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
  * @method string getEndBackupTime() 获取每天备份执行的区间的结束时间，格式 mm:ss，形如 23:00
  * @method void setEndBackupTime(string $EndBackupTime) 设置每天备份执行的区间的结束时间，格式 mm:ss，形如 23:00
- */
-
-/**
- *云数据库实例备份时间配置信息
  */
 class DBBackupTimeConfig extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DBBackupTimeConfig extends AbstractModel
      * @var string 每天备份执行的区间的结束时间，格式 mm:ss，形如 23:00
      */
     public $EndBackupTime;
+
     /**
      * @param string $InstanceId 实例 ID
      * @param string $StartBackupTime 每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
@@ -54,6 +53,7 @@ class DBBackupTimeConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

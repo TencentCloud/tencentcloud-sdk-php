@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云服务器实例名称（InstanceName）的相关设置
+ *
  * @method string getInstanceName() 获取云服务器的实例名。
 
 点号（.）和短横线（-）不能作为 InstanceName 的首尾字符，不能连续使用。
@@ -43,10 +45,6 @@ ORIGINAL，AS 直接将入参中所填的 InstanceName 传递给 CVM，CVM 可�
 UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会对其进行拓展，伸缩组中实例的 InstanceName 可以保证唯一。
 注意：此字段可能返回 null，表示取不到有效值。
  */
-
-/**
- *云服务器实例名称（InstanceName）的相关设置
- */
 class InstanceNameSettings extends AbstractModel
 {
     /**
@@ -68,6 +66,7 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceNameStyle;
+
     /**
      * @param string $InstanceName 云服务器的实例名。
 
@@ -86,6 +85,7 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

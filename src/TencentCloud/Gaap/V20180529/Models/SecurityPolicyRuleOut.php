@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全策略规则（出参）
+ *
  * @method string getAction() 获取策略：允许（ACCEPT）或拒绝（DROP）
  * @method void setAction(string $Action) 设置策略：允许（ACCEPT）或拒绝（DROP）
  * @method string getSourceCidr() 获取请求来源Ip或Ip段
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyId(string $PolicyId) 设置安全策略ID
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *安全策略规则（出参）
  */
 class SecurityPolicyRuleOut extends AbstractModel
 {
@@ -82,6 +80,7 @@ class SecurityPolicyRuleOut extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyId;
+
     /**
      * @param string $Action 策略：允许（ACCEPT）或拒绝（DROP）
      * @param string $SourceCidr 请求来源Ip或Ip段
@@ -98,6 +97,7 @@ class SecurityPolicyRuleOut extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

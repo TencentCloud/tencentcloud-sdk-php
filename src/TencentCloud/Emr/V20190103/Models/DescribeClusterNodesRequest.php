@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterNodes请求参数结构体
+ *
  * @method string getInstanceId() 获取集群实例ID,实例ID形如: emr-xxxxxxxx
  * @method void setInstanceId(string $InstanceId) 设置集群实例ID,实例ID形如: emr-xxxxxxxx
  * @method string getNodeFlag() 获取节点标识，取值为：
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置页编号，默认值为0，表示第一页。
  * @method integer getLimit() 获取每页返回数量，默认值为100，最大值为100。
  * @method void setLimit(integer $Limit) 设置每页返回数量，默认值为100，最大值为100。
- */
-
-/**
- *DescribeClusterNodes请求参数结构体
  */
 class DescribeClusterNodesRequest extends AbstractModel
 {
@@ -82,6 +80,7 @@ class DescribeClusterNodesRequest extends AbstractModel
      * @var integer 每页返回数量，默认值为100，最大值为100。
      */
     public $Limit;
+
     /**
      * @param string $InstanceId 集群实例ID,实例ID形如: emr-xxxxxxxx
      * @param string $NodeFlag 节点标识，取值为：
@@ -102,6 +101,7 @@ class DescribeClusterNodesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

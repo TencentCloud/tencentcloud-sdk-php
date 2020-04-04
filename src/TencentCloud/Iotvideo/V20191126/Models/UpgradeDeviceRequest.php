@@ -18,16 +18,14 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpgradeDevice请求参数结构体
+ *
  * @method string getTid() 获取设备TID
  * @method void setTid(string $Tid) 设置设备TID
  * @method string getOtaVersion() 获取固件版本号
  * @method void setOtaVersion(string $OtaVersion) 设置固件版本号
  * @method boolean getUpgradeNow() 获取是否立即升级
  * @method void setUpgradeNow(boolean $UpgradeNow) 设置是否立即升级
- */
-
-/**
- *UpgradeDevice请求参数结构体
  */
 class UpgradeDeviceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UpgradeDeviceRequest extends AbstractModel
      * @var boolean 是否立即升级
      */
     public $UpgradeNow;
+
     /**
      * @param string $Tid 设备TID
      * @param string $OtaVersion 固件版本号
@@ -54,6 +53,7 @@ class UpgradeDeviceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

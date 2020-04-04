@@ -18,12 +18,10 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeFileSystem请求参数结构体
+ *
  * @method string getFileSystemId() 获取文件系统ID
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
- */
-
-/**
- *DescribeFileSystem请求参数结构体
  */
 class DescribeFileSystemRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeFileSystemRequest extends AbstractModel
      * @var string 文件系统ID
      */
     public $FileSystemId;
+
     /**
      * @param string $FileSystemId 文件系统ID
      */
@@ -38,6 +37,7 @@ class DescribeFileSystemRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

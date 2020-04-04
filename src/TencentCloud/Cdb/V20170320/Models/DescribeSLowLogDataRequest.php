@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSLowLogData请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
  * @method integer getStartTime() 获取开始时间戳。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取一次性返回的记录数量，最大为400。
  * @method void setLimit(integer $Limit) 设置一次性返回的记录数量，最大为400。
- */
-
-/**
- *DescribeSLowLogData请求参数结构体
  */
 class DescribeSLowLogDataRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class DescribeSLowLogDataRequest extends AbstractModel
      * @var integer 一次性返回的记录数量，最大为400。
      */
     public $Limit;
+
     /**
      * @param string $InstanceId 实例 ID。
      * @param integer $StartTime 开始时间戳。
@@ -110,6 +109,7 @@ class DescribeSLowLogDataRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

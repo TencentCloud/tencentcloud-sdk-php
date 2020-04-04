@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 加速域名全量配置信息
+ *
  * @method string getResourceId() 获取域名 ID
  * @method void setResourceId(string $ResourceId) 设置域名 ID
  * @method integer getAppId() 获取腾讯云账号ID
@@ -204,10 +206,6 @@ global：全球锁定
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) 设置回源S3鉴权配置
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *加速域名全量配置信息
  */
 class DetailDomain extends AbstractModel
 {
@@ -463,6 +461,7 @@ global：全球锁定
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AwsPrivateAccess;
+
     /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
@@ -562,6 +561,7 @@ global：全球锁定
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeL4RulesErrHealth返回参数结构体
+ *
  * @method integer getTotal() 获取异常规则的总数
  * @method void setTotal(integer $Total) 设置异常规则的总数
  * @method array getErrHealths() 获取异常规则列表，返回值说明: Key值为规则ID，Value值为异常IP，多个IP用","分割
@@ -38,10 +40,6 @@ Key值为ErrMessage时，Value值为健康检查异常信息；
 SourceIp表示源站IP，SourcePort表示源站端口，AbnormalStatTime表示异常时间，AbnormalReason表示异常原因，Interval表示检查周期，CheckNum表示检查次数，FailNum表示失败次数；
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeL4RulesErrHealth返回参数结构体
  */
 class DescribeL4RulesErrHealthResponse extends AbstractModel
 {
@@ -70,6 +68,7 @@ SourceIp表示源站IP，SourcePort表示源站端口，AbnormalStatTime表示�
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Total 异常规则的总数
      * @param array $ErrHealths 异常规则列表，返回值说明: Key值为规则ID，Value值为异常IP，多个IP用","分割
@@ -86,6 +85,7 @@ SourceIp表示源站IP，SourcePort表示源站端口，AbnormalStatTime表示�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

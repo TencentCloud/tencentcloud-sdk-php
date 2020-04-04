@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备操作日志
+ *
  * @method integer getId() 获取日志的ID
  * @method void setId(integer $Id) 设置日志的ID
  * @method string getInstanceId() 获取设备ID
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOpUin(string $OpUin) 设置操作者
  * @method string getLogDescription() 获取操作描述
  * @method void setLogDescription(string $LogDescription) 设置操作描述
- */
-
-/**
- *设备操作日志
  */
 class DeviceOperationLog extends AbstractModel
 {
@@ -94,6 +92,7 @@ class DeviceOperationLog extends AbstractModel
      * @var string 操作描述
      */
     public $LogDescription;
+
     /**
      * @param integer $Id 日志的ID
      * @param string $InstanceId 设备ID
@@ -110,6 +109,7 @@ class DeviceOperationLog extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

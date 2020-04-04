@@ -18,6 +18,8 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AuditApplyClient返回参数结构体
+ *
  * @method string getUin() 获取代理商账号ID
  * @method void setUin(string $Uin) 设置代理商账号ID
  * @method string getClientUin() 获取客户账号ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgentTime(integer $AgentTime) 设置关联时间对应的时间戳
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *AuditApplyClient返回参数结构体
  */
 class AuditApplyClientResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AuditApplyClientResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Uin 代理商账号ID
      * @param string $ClientUin 客户账号ID
@@ -70,6 +69,7 @@ class AuditApplyClientResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

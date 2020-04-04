@@ -18,14 +18,12 @@ namespace TencentCloud\Cds\V20180420\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDbauditInstancesRenewFlag请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method integer getAutoRenewFlag() 获取0，表示默认状态(用户未设置，即初始状态)；1，表示自动续费；2，表示明确不自动续费
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置0，表示默认状态(用户未设置，即初始状态)；1，表示自动续费；2，表示明确不自动续费
- */
-
-/**
- *ModifyDbauditInstancesRenewFlag请求参数结构体
  */
 class ModifyDbauditInstancesRenewFlagRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDbauditInstancesRenewFlagRequest extends AbstractModel
      * @var integer 0，表示默认状态(用户未设置，即初始状态)；1，表示自动续费；2，表示明确不自动续费
      */
     public $AutoRenewFlag;
+
     /**
      * @param string $InstanceId 实例ID
      * @param integer $AutoRenewFlag 0，表示默认状态(用户未设置，即初始状态)；1，表示自动续费；2，表示明确不自动续费
@@ -46,6 +45,7 @@ class ModifyDbauditInstancesRenewFlagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 漏洞信息
+ *
  * @method array getVulList() 获取漏洞列表
  * @method void setVulList(array $VulList) 设置漏洞列表
  * @method integer getVulFileScore() 获取漏洞文件评分
  * @method void setVulFileScore(integer $VulFileScore) 设置漏洞文件评分
- */
-
-/**
- *漏洞信息
  */
 class VulInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class VulInfo extends AbstractModel
      * @var integer 漏洞文件评分
      */
     public $VulFileScore;
+
     /**
      * @param array $VulList 漏洞列表
      * @param integer $VulFileScore 漏洞文件评分
@@ -46,6 +45,7 @@ class VulInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

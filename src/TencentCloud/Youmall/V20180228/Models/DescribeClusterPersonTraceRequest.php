@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterPersonTrace请求参数结构体
+ *
  * @method string getMallId() 获取卖场编码
  * @method void setMallId(string $MallId) 设置卖场编码
  * @method string getPersonId() 获取客户编码
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置查询开始时间
  * @method string getEndTime() 获取查询结束时间
  * @method void setEndTime(string $EndTime) 设置查询结束时间
- */
-
-/**
- *DescribeClusterPersonTrace请求参数结构体
  */
 class DescribeClusterPersonTraceRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeClusterPersonTraceRequest extends AbstractModel
      * @var string 查询结束时间
      */
     public $EndTime;
+
     /**
      * @param string $MallId 卖场编码
      * @param string $PersonId 客户编码
@@ -62,6 +61,7 @@ class DescribeClusterPersonTraceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

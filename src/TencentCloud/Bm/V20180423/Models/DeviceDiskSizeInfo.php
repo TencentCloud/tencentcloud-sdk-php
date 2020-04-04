@@ -18,14 +18,12 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 硬盘大小的描述
+ *
  * @method string getDiskName() 获取硬盘名称
  * @method void setDiskName(string $DiskName) 设置硬盘名称
  * @method integer getDiskSize() 获取硬盘大小（单位GiB）
  * @method void setDiskSize(integer $DiskSize) 设置硬盘大小（单位GiB）
- */
-
-/**
- *硬盘大小的描述
  */
 class DeviceDiskSizeInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeviceDiskSizeInfo extends AbstractModel
      * @var integer 硬盘大小（单位GiB）
      */
     public $DiskSize;
+
     /**
      * @param string $DiskName 硬盘名称
      * @param integer $DiskSize 硬盘大小（单位GiB）
@@ -46,6 +45,7 @@ class DeviceDiskSizeInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

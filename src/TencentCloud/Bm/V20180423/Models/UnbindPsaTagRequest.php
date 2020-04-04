@@ -18,16 +18,14 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnbindPsaTag请求参数结构体
+ *
  * @method string getPsaId() 获取预授权规则ID
  * @method void setPsaId(string $PsaId) 设置预授权规则ID
  * @method string getTagKey() 获取需要解绑的标签key
  * @method void setTagKey(string $TagKey) 设置需要解绑的标签key
  * @method string getTagValue() 获取需要解绑的标签value
  * @method void setTagValue(string $TagValue) 设置需要解绑的标签value
- */
-
-/**
- *UnbindPsaTag请求参数结构体
  */
 class UnbindPsaTagRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UnbindPsaTagRequest extends AbstractModel
      * @var string 需要解绑的标签value
      */
     public $TagValue;
+
     /**
      * @param string $PsaId 预授权规则ID
      * @param string $TagKey 需要解绑的标签key
@@ -54,6 +53,7 @@ class UnbindPsaTagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

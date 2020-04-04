@@ -18,14 +18,12 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OpenServerlessDBExtranetAccess请求参数结构体
+ *
  * @method string getDBInstanceId() 获取实例的唯一标识符
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例的唯一标识符
  * @method string getDBInstanceName() 获取实例名称
  * @method void setDBInstanceName(string $DBInstanceName) 设置实例名称
- */
-
-/**
- *OpenServerlessDBExtranetAccess请求参数结构体
  */
 class OpenServerlessDBExtranetAccessRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class OpenServerlessDBExtranetAccessRequest extends AbstractModel
      * @var string 实例名称
      */
     public $DBInstanceName;
+
     /**
      * @param string $DBInstanceId 实例的唯一标识符
      * @param string $DBInstanceName 实例名称
@@ -46,6 +45,7 @@ class OpenServerlessDBExtranetAccessRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

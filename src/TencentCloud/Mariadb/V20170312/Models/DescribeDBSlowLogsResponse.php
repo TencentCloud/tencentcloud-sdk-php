@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBSlowLogs返回参数结构体
+ *
  * @method array getData() 获取慢查询日志数据
  * @method void setData(array $Data) 设置慢查询日志数据
  * @method float getLockTimeSum() 获取所有语句锁时间总和
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryTimeSum(float $QueryTimeSum) 设置所有语句查询时间总和
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDBSlowLogs返回参数结构体
  */
 class DescribeDBSlowLogsResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeDBSlowLogsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Data 慢查询日志数据
      * @param float $LockTimeSum 所有语句锁时间总和
@@ -78,6 +77,7 @@ class DescribeDBSlowLogsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

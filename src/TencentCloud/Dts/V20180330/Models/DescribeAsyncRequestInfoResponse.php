@@ -18,16 +18,14 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAsyncRequestInfo返回参数结构体
+ *
  * @method string getInfo() 获取任务执行结果信息
  * @method void setInfo(string $Info) 设置任务执行结果信息
  * @method string getStatus() 获取任务执行状态，可能的值有：success，failed，running
  * @method void setStatus(string $Status) 设置任务执行状态，可能的值有：success，failed，running
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAsyncRequestInfo返回参数结构体
  */
 class DescribeAsyncRequestInfoResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAsyncRequestInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Info 任务执行结果信息
      * @param string $Status 任务执行状态，可能的值有：success，failed，running
@@ -54,6 +53,7 @@ class DescribeAsyncRequestInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

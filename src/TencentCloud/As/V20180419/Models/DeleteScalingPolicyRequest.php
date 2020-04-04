@@ -18,12 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteScalingPolicy请求参数结构体
+ *
  * @method string getAutoScalingPolicyId() 获取待删除的告警策略ID。
  * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) 设置待删除的告警策略ID。
- */
-
-/**
- *DeleteScalingPolicy请求参数结构体
  */
 class DeleteScalingPolicyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteScalingPolicyRequest extends AbstractModel
      * @var string 待删除的告警策略ID。
      */
     public $AutoScalingPolicyId;
+
     /**
      * @param string $AutoScalingPolicyId 待删除的告警策略ID。
      */
@@ -38,6 +37,7 @@ class DeleteScalingPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

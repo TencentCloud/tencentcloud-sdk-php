@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeShopHourTrafficInfo请求参数结构体
+ *
  * @method string getCompanyId() 获取公司ID
  * @method void setCompanyId(string $CompanyId) 设置公司ID
  * @method integer getShopId() 获取门店ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
  * @method integer getLimit() 获取Limit:每页的数据项，最大100，超过100会被强制指定为100
  * @method void setLimit(integer $Limit) 设置Limit:每页的数据项，最大100，超过100会被强制指定为100
- */
-
-/**
- *DescribeShopHourTrafficInfo请求参数结构体
  */
 class DescribeShopHourTrafficInfoRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeShopHourTrafficInfoRequest extends AbstractModel
      * @var integer Limit:每页的数据项，最大100，超过100会被强制指定为100
      */
     public $Limit;
+
     /**
      * @param string $CompanyId 公司ID
      * @param integer $ShopId 门店ID
@@ -78,6 +77,7 @@ class DescribeShopHourTrafficInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

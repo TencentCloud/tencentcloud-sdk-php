@@ -18,6 +18,8 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDatabaseACL请求参数结构体
+ *
  * @method string getEnvId() 获取环境ID
  * @method void setEnvId(string $EnvId) 设置环境ID
  * @method string getCollectionName() 获取集合名称
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 <li> PRIVATE：仅创建者及管理员可读写</li>
 <li> ADMINWRITE：所有用户可读，仅管理员可写</li>
 <li> ADMINONLY：仅管理员可读写</li>
- */
-
-/**
- *ModifyDatabaseACL请求参数结构体
  */
 class ModifyDatabaseACLRequest extends AbstractModel
 {
@@ -57,6 +55,7 @@ class ModifyDatabaseACLRequest extends AbstractModel
 <li> ADMINONLY：仅管理员可读写</li>
      */
     public $AclTag;
+
     /**
      * @param string $EnvId 环境ID
      * @param string $CollectionName 集合名称
@@ -70,6 +69,7 @@ class ModifyDatabaseACLRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

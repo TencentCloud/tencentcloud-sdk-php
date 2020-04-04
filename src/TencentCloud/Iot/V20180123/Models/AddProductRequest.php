@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddProduct请求参数结构体
+ *
  * @method string getName() 获取产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
  * @method void setName(string $Name) 设置产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
  * @method string getDescription() 获取产品描述
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommProtocol(string $CommProtocol) 设置通信方式（other/wifi/cellular/nb-iot）
  * @method string getDeviceType() 获取产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
  * @method void setDeviceType(string $DeviceType) 设置产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
- */
-
-/**
- *AddProduct请求参数结构体
  */
 class AddProductRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class AddProductRequest extends AbstractModel
      * @var string 产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
      */
     public $DeviceType;
+
     /**
      * @param string $Name 产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
      * @param string $Description 产品描述
@@ -86,6 +85,7 @@ class AddProductRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

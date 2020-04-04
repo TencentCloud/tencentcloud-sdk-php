@@ -18,14 +18,12 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateCodeRepository请求参数结构体
+ *
  * @method string getCodeRepositoryName() 获取查询存储库名称
  * @method void setCodeRepositoryName(string $CodeRepositoryName) 设置查询存储库名称
  * @method GitSecret getGitSecret() 获取Git凭证
  * @method void setGitSecret(GitSecret $GitSecret) 设置Git凭证
- */
-
-/**
- *UpdateCodeRepository请求参数结构体
  */
 class UpdateCodeRepositoryRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UpdateCodeRepositoryRequest extends AbstractModel
      * @var GitSecret Git凭证
      */
     public $GitSecret;
+
     /**
      * @param string $CodeRepositoryName 查询存储库名称
      * @param GitSecret $GitSecret Git凭证
@@ -46,6 +45,7 @@ class UpdateCodeRepositoryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWatermarkTemplates返回参数结构体
+ *
  * @method integer getTotalCount() 获取符合过滤条件的记录总数。
  * @method void setTotalCount(integer $TotalCount) 设置符合过滤条件的记录总数。
  * @method array getWatermarkTemplateSet() 获取水印模板详情列表。
  * @method void setWatermarkTemplateSet(array $WatermarkTemplateSet) 设置水印模板详情列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeWatermarkTemplates返回参数结构体
  */
 class DescribeWatermarkTemplatesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeWatermarkTemplatesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 符合过滤条件的记录总数。
      * @param array $WatermarkTemplateSet 水印模板详情列表。
@@ -54,6 +53,7 @@ class DescribeWatermarkTemplatesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

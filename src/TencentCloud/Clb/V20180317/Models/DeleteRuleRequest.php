@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteRule请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例 ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
  * @method string getListenerId() 获取负载均衡监听器 ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
  * @method string getUrl() 获取要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
  * @method void setUrl(string $Url) 设置要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
- */
-
-/**
- *DeleteRule请求参数结构体
  */
 class DeleteRuleRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DeleteRuleRequest extends AbstractModel
      * @var string 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
      */
     public $Url;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param string $ListenerId 负载均衡监听器 ID
@@ -70,6 +69,7 @@ class DeleteRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

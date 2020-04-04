@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRuleSets返回参数结构体
+ *
  * @method array getL4RuleSets() 获取规则记录数数组，取值说明:
 Key值为"Id"时，Value表示资源ID
 Key值为"RuleIdList"时，Value值表示资源的规则ID，多个规则ID用","分割
@@ -40,10 +42,6 @@ Key值为"RuleNameList"时，Value值表示资源的规则名，多个规则名�
 Key值为"RuleNum"时，Value值表示资源的规则数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeRuleSets返回参数结构体
  */
 class DescribeRuleSetsResponse extends AbstractModel
 {
@@ -69,6 +67,7 @@ Key值为"RuleNum"时，Value值表示资源的规则数
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $L4RuleSets 规则记录数数组，取值说明:
 Key值为"Id"时，Value表示资源ID
@@ -86,6 +85,7 @@ Key值为"RuleNum"时，Value值表示资源的规则数
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

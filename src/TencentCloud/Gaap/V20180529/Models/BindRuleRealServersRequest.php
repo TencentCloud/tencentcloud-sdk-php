@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindRuleRealServers请求参数结构体
+ *
  * @method string getRuleId() 获取转发规则ID
  * @method void setRuleId(string $RuleId) 设置转发规则ID
  * @method array getRealServerBindSet() 获取需要绑定的源站信息列表。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 如果已经存在绑定的源站，则会覆盖更新成这个源站列表。
 当不带该字段时，表示解绑该规则上的所有源站。
 如果该规则的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
- */
-
-/**
- *BindRuleRealServers请求参数结构体
  */
 class BindRuleRealServersRequest extends AbstractModel
 {
@@ -47,6 +45,7 @@ class BindRuleRealServersRequest extends AbstractModel
 如果该规则的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
      */
     public $RealServerBindSet;
+
     /**
      * @param string $RuleId 转发规则ID
      * @param array $RealServerBindSet 需要绑定的源站信息列表。
@@ -58,6 +57,7 @@ class BindRuleRealServersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

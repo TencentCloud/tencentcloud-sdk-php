@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例状态
+ *
  * @method string getRegistryId() 获取实例的Id
  * @method void setRegistryId(string $RegistryId) 设置实例的Id
  * @method string getStatus() 获取实例的状态
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConditions(array $Conditions) 设置附加状态
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *实例状态
  */
 class RegistryStatus extends AbstractModel
 {
@@ -48,6 +46,7 @@ class RegistryStatus extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Conditions;
+
     /**
      * @param string $RegistryId 实例的Id
      * @param string $Status 实例的状态
@@ -58,6 +57,7 @@ class RegistryStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

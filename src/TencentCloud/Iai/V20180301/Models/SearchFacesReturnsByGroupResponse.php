@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SearchFacesReturnsByGroup返回参数结构体
+ *
  * @method integer getFaceNum() 获取搜索的人员库中包含的人脸数。
  * @method void setFaceNum(integer $FaceNum) 设置搜索的人员库中包含的人脸数。
  * @method array getResultsReturnsByGroup() 获取识别结果。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别所用的算法模型版本。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *SearchFacesReturnsByGroup返回参数结构体
  */
 class SearchFacesReturnsByGroupResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SearchFacesReturnsByGroupResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $FaceNum 搜索的人员库中包含的人脸数。
      * @param array $ResultsReturnsByGroup 识别结果。
@@ -62,6 +61,7 @@ class SearchFacesReturnsByGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

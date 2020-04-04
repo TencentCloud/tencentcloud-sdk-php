@@ -18,12 +18,10 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceVncUrl请求参数结构体
+ *
  * @method string getInstanceId() 获取一个操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。
  * @method void setInstanceId(string $InstanceId) 设置一个操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。
- */
-
-/**
- *DescribeInstanceVncUrl请求参数结构体
  */
 class DescribeInstanceVncUrlRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeInstanceVncUrlRequest extends AbstractModel
      * @var string 一个操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 一个操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。
      */
@@ -38,6 +37,7 @@ class DescribeInstanceVncUrlRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

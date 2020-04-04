@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVulInfo请求参数结构体
+ *
  * @method integer getVulId() 获取漏洞种类ID。
  * @method void setVulId(integer $VulId) 设置漏洞种类ID。
- */
-
-/**
- *DescribeVulInfo请求参数结构体
  */
 class DescribeVulInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeVulInfoRequest extends AbstractModel
      * @var integer 漏洞种类ID。
      */
     public $VulId;
+
     /**
      * @param integer $VulId 漏洞种类ID。
      */
@@ -38,6 +37,7 @@ class DescribeVulInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

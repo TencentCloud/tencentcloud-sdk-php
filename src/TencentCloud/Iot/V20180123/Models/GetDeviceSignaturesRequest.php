@@ -18,16 +18,14 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetDeviceSignatures请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method array getDeviceNames() 获取设备名称列表（单次限制1000个设备）
  * @method void setDeviceNames(array $DeviceNames) 设置设备名称列表（单次限制1000个设备）
  * @method integer getExpire() 获取过期时间
  * @method void setExpire(integer $Expire) 设置过期时间
- */
-
-/**
- *GetDeviceSignatures请求参数结构体
  */
 class GetDeviceSignaturesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GetDeviceSignaturesRequest extends AbstractModel
      * @var integer 过期时间
      */
     public $Expire;
+
     /**
      * @param string $ProductId 产品ID
      * @param array $DeviceNames 设备名称列表（单次限制1000个设备）
@@ -54,6 +53,7 @@ class GetDeviceSignaturesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数学试题识别结果
+ *
  * @method string getItem() 获取识别出的字段名称（关键字）
  * @method void setItem(string $Item) 设置识别出的字段名称（关键字）
  * @method string getDetectedText() 获取识别出的字段名称对应的值，也就是字段Item对应的字符串结果
  * @method void setDetectedText(string $DetectedText) 设置识别出的字段名称对应的值，也就是字段Item对应的字符串结果
  * @method ItemCoord getItemcoord() 获取文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
  * @method void setItemcoord(ItemCoord $Itemcoord) 设置文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
- */
-
-/**
- *数学试题识别结果
  */
 class TextEduPaper extends AbstractModel
 {
@@ -45,6 +43,7 @@ class TextEduPaper extends AbstractModel
      * @var ItemCoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
      */
     public $Itemcoord;
+
     /**
      * @param string $Item 识别出的字段名称（关键字）
      * @param string $DetectedText 识别出的字段名称对应的值，也就是字段Item对应的字符串结果
@@ -54,6 +53,7 @@ class TextEduPaper extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

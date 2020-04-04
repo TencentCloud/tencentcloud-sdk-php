@@ -18,16 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePaiInstances返回参数结构体
+ *
  * @method integer getTotalCount() 获取符合条件的PAI实例数量
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的PAI实例数量
  * @method array getPaiInstanceSet() 获取PAI实例详细信息
  * @method void setPaiInstanceSet(array $PaiInstanceSet) 设置PAI实例详细信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribePaiInstances返回参数结构体
  */
 class DescribePaiInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribePaiInstancesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 符合条件的PAI实例数量
      * @param array $PaiInstanceSet PAI实例详细信息
@@ -54,6 +53,7 @@ class DescribePaiInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

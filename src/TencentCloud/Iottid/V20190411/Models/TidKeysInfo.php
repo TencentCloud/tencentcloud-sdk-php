@@ -18,6 +18,8 @@ namespace TencentCloud\Iottid\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 系统生成的TID和密钥信息
+ *
  * @method string getTid() 获取TID号码
  * @method void setTid(string $Tid) 设置TID号码
  * @method string getPublicKey() 获取公钥
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDownloadUrl(string $DownloadUrl) 设置软加固白盒密钥下载地址
  * @method string getDeviceCode() 获取软加固设备标识码
  * @method void setDeviceCode(string $DeviceCode) 设置软加固设备标识码
- */
-
-/**
- *系统生成的TID和密钥信息
  */
 class TidKeysInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class TidKeysInfo extends AbstractModel
      * @var string 软加固设备标识码
      */
     public $DeviceCode;
+
     /**
      * @param string $Tid TID号码
      * @param string $PublicKey 公钥
@@ -78,6 +77,7 @@ class TidKeysInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

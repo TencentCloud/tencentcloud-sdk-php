@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 预付费订单的费用。
+ *
  * @method float getOriginalPrice() 获取预付费云盘或快照预支费用的原价，单位：元。
  * @method void setOriginalPrice(float $OriginalPrice) 设置预付费云盘或快照预支费用的原价，单位：元。
  * @method float getDiscountPrice() 获取预付费云盘或快照预支费用的折扣价，单位：元。
  * @method void setDiscountPrice(float $DiscountPrice) 设置预付费云盘或快照预支费用的折扣价，单位：元。
- */
-
-/**
- *预付费订单的费用。
  */
 class PrepayPrice extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PrepayPrice extends AbstractModel
      * @var float 预付费云盘或快照预支费用的折扣价，单位：元。
      */
     public $DiscountPrice;
+
     /**
      * @param float $OriginalPrice 预付费云盘或快照预支费用的原价，单位：元。
      * @param float $DiscountPrice 预付费云盘或快照预支费用的折扣价，单位：元。
@@ -46,6 +45,7 @@ class PrepayPrice extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

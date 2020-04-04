@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetectAuth请求参数结构体
+ *
  * @method string getRuleId() 获取用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
  * @method void setRuleId(string $RuleId) 设置用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
  * @method string getTerminalType() 获取本接口不需要传递此参数。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
  * @method void setImageBase64(string $ImageBase64) 设置用于人脸比对的照片，图片的BASE64值；
 BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
- */
-
-/**
- *DetectAuth请求参数结构体
  */
 class DetectAuthRequest extends AbstractModel
 {
@@ -79,6 +77,7 @@ class DetectAuthRequest extends AbstractModel
 BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
      */
     public $ImageBase64;
+
     /**
      * @param string $RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
      * @param string $TerminalType 本接口不需要传递此参数。
@@ -94,6 +93,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

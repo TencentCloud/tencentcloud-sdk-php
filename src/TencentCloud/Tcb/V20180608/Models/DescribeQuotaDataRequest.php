@@ -18,6 +18,8 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeQuotaData请求参数结构体
+ *
  * @method string getEnvId() 获取环境ID
  * @method void setEnvId(string $EnvId) 设置环境ID
  * @method string getMetricName() 获取<li> 指标名: </li>
@@ -67,10 +69,6 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResourceID() 获取资源ID, 目前仅对云函数相关的指标(FunctionInvocationpkg, FunctionGBspkg, FunctionFluxpkg)有意义, 如果想查询某个云函数的指标则在ResourceId中传入函数名; 如果只想查询整个namespace的指标, 则留空或不传.
  * @method void setResourceID(string $ResourceID) 设置资源ID, 目前仅对云函数相关的指标(FunctionInvocationpkg, FunctionGBspkg, FunctionFluxpkg)有意义, 如果想查询某个云函数的指标则在ResourceId中传入函数名; 如果只想查询整个namespace的指标, 则留空或不传.
  */
-
-/**
- *DescribeQuotaData请求参数结构体
- */
 class DescribeQuotaDataRequest extends AbstractModel
 {
     /**
@@ -108,6 +106,7 @@ class DescribeQuotaDataRequest extends AbstractModel
      * @var string 资源ID, 目前仅对云函数相关的指标(FunctionInvocationpkg, FunctionGBspkg, FunctionFluxpkg)有意义, 如果想查询某个云函数的指标则在ResourceId中传入函数名; 如果只想查询整个namespace的指标, 则留空或不传.
      */
     public $ResourceID;
+
     /**
      * @param string $EnvId 环境ID
      * @param string $MetricName <li> 指标名: </li>
@@ -138,6 +137,7 @@ class DescribeQuotaDataRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

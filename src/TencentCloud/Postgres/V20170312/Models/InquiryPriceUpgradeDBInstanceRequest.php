@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceUpgradeDBInstance请求参数结构体
+ *
  * @method integer getStorage() 获取实例的磁盘大小，单位GB
  * @method void setStorage(integer $Storage) 设置实例的磁盘大小，单位GB
  * @method integer getMemory() 获取实例的内存大小，单位GB
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-hez4fh0v
  * @method string getInstanceChargeType() 获取实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
- */
-
-/**
- *InquiryPriceUpgradeDBInstance请求参数结构体
  */
 class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
      * @var string 实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
      */
     public $InstanceChargeType;
+
     /**
      * @param integer $Storage 实例的磁盘大小，单位GB
      * @param integer $Memory 实例的内存大小，单位GB
@@ -62,6 +61,7 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

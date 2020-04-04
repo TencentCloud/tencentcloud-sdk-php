@@ -18,14 +18,12 @@ namespace TencentCloud\Captcha\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 该类型为DescribeCaptchaData 方法返回数据类型
+ *
  * @method integer getCnt() 获取数量
  * @method void setCnt(integer $Cnt) 设置数量
  * @method string getDate() 获取时间
  * @method void setDate(string $Date) 设置时间
- */
-
-/**
- *该类型为DescribeCaptchaData 方法返回数据类型
  */
 class CaptchaQueryData extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CaptchaQueryData extends AbstractModel
      * @var string 时间
      */
     public $Date;
+
     /**
      * @param integer $Cnt 数量
      * @param string $Date 时间
@@ -46,6 +45,7 @@ class CaptchaQueryData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

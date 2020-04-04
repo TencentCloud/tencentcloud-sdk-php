@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 自定义转码的规格参数。
+ *
  * @method string getContainer() 获取封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
  * @method void setContainer(string $Container) 设置封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
  * @method integer getRemoveVideo() 获取是否去除视频数据，取值：
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) 设置音频流配置参数，当 RemoveAudio 为 0，该字段必填。
  * @method TEHDConfig getTEHDConfig() 获取极速高清转码参数。
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置极速高清转码参数。
- */
-
-/**
- *自定义转码的规格参数。
  */
 class RawTranscodeParameter extends AbstractModel
 {
@@ -84,6 +82,7 @@ class RawTranscodeParameter extends AbstractModel
      * @var TEHDConfig 极速高清转码参数。
      */
     public $TEHDConfig;
+
     /**
      * @param string $Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      * @param integer $RemoveVideo 是否去除视频数据，取值：
@@ -102,6 +101,7 @@ class RawTranscodeParameter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

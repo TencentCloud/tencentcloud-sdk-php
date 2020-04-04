@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLiveWatermark请求参数结构体
+ *
  * @method integer getWatermarkId() 获取水印ID。
  * @method void setWatermarkId(integer $WatermarkId) 设置水印ID。
- */
-
-/**
- *DeleteLiveWatermark请求参数结构体
  */
 class DeleteLiveWatermarkRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteLiveWatermarkRequest extends AbstractModel
      * @var integer 水印ID。
      */
     public $WatermarkId;
+
     /**
      * @param integer $WatermarkId 水印ID。
      */
@@ -38,6 +37,7 @@ class DeleteLiveWatermarkRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

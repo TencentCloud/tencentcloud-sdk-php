@@ -18,12 +18,10 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetGroupInfo请求参数结构体
+ *
  * @method string getGroupId() 获取人员库 ID。
  * @method void setGroupId(string $GroupId) 设置人员库 ID。
- */
-
-/**
- *GetGroupInfo请求参数结构体
  */
 class GetGroupInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetGroupInfoRequest extends AbstractModel
      * @var string 人员库 ID。
      */
     public $GroupId;
+
     /**
      * @param string $GroupId 人员库 ID。
      */
@@ -38,6 +37,7 @@ class GetGroupInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

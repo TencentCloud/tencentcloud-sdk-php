@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterNodes返回参数结构体
+ *
  * @method integer getTotalCnt() 获取查询到的节点总数
  * @method void setTotalCnt(integer $TotalCnt) 设置查询到的节点总数
  * @method array getNodeList() 获取节点详细信息列表
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeClusterNodes返回参数结构体
  */
 class DescribeClusterNodesResponse extends AbstractModel
 {
@@ -58,6 +56,7 @@ class DescribeClusterNodesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCnt 查询到的节点总数
      * @param array $NodeList 节点详细信息列表
@@ -70,6 +69,7 @@ class DescribeClusterNodesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

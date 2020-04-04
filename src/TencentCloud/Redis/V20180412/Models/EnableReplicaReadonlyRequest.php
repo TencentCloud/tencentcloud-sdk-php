@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EnableReplicaReadonly请求参数结构体
+ *
  * @method string getInstanceId() 获取实例序号ID
  * @method void setInstanceId(string $InstanceId) 设置实例序号ID
  * @method array getReadonlyPolicy() 获取账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
  * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
- */
-
-/**
- *EnableReplicaReadonly请求参数结构体
  */
 class EnableReplicaReadonlyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EnableReplicaReadonlyRequest extends AbstractModel
      * @var array 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
      */
     public $ReadonlyPolicy;
+
     /**
      * @param string $InstanceId 实例序号ID
      * @param array $ReadonlyPolicy 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
@@ -46,6 +45,7 @@ class EnableReplicaReadonlyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

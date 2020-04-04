@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 子订单列表
+ *
  * @method integer getAmt() 获取子订单支付金额
  * @method void setAmt(integer $Amt) 设置子订单支付金额
  * @method integer getSubMchIncome() 获取子订单结算应收金额，单位：分
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubAppId(string $SubAppId) 设置聚鑫计费SubAppId，代表子商户
  * @method string getSubOutTradeNo() 获取子订单号
  * @method void setSubOutTradeNo(string $SubOutTradeNo) 设置子订单号
- */
-
-/**
- *子订单列表
  */
 class QueryOrderOutSubOrderList extends AbstractModel
 {
@@ -94,6 +92,7 @@ class QueryOrderOutSubOrderList extends AbstractModel
      * @var string 子订单号
      */
     public $SubOutTradeNo;
+
     /**
      * @param integer $Amt 子订单支付金额
      * @param integer $SubMchIncome 子订单结算应收金额，单位：分
@@ -110,6 +109,7 @@ class QueryOrderOutSubOrderList extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

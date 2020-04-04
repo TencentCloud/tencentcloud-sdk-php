@@ -18,14 +18,12 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 版本控制-类型数组
+ *
  * @method array getProtocols() 获取协议与售卖详情
  * @method void setProtocols(array $Protocols) 设置协议与售卖详情
  * @method string getType() 获取存储类型。可选值有 SD 标准型存储、HP性能型存储
  * @method void setType(string $Type) 设置存储类型。可选值有 SD 标准型存储、HP性能型存储
- */
-
-/**
- *版本控制-类型数组
  */
 class AvailableType extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AvailableType extends AbstractModel
      * @var string 存储类型。可选值有 SD 标准型存储、HP性能型存储
      */
     public $Type;
+
     /**
      * @param array $Protocols 协议与售卖详情
      * @param string $Type 存储类型。可选值有 SD 标准型存储、HP性能型存储
@@ -46,6 +45,7 @@ class AvailableType extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

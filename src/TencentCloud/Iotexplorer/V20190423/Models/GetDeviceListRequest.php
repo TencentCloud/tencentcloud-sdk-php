@@ -18,16 +18,14 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetDeviceList请求参数结构体
+ *
  * @method string getProductId() 获取需要查看设备列表的产品 ID
  * @method void setProductId(string $ProductId) 设置需要查看设备列表的产品 ID
  * @method integer getOffset() 获取分页偏移
  * @method void setOffset(integer $Offset) 设置分页偏移
  * @method integer getLimit() 获取分页的大小，数值范围 10-100
  * @method void setLimit(integer $Limit) 设置分页的大小，数值范围 10-100
- */
-
-/**
- *GetDeviceList请求参数结构体
  */
 class GetDeviceListRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GetDeviceListRequest extends AbstractModel
      * @var integer 分页的大小，数值范围 10-100
      */
     public $Limit;
+
     /**
      * @param string $ProductId 需要查看设备列表的产品 ID
      * @param integer $Offset 分页偏移
@@ -54,6 +53,7 @@ class GetDeviceListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IdCardOCRVerification请求参数结构体
+ *
  * @method string getIdCard() 获取身份证号
 姓名和身份证号、ImageBase64、ImageUrl三者必须提供其中之一。若都提供了，则按照姓名和身份证号>ImageBase64>ImageUrl的优先级使用参数。
  * @method void setIdCard(string $IdCard) 设置身份证号
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
- */
-
-/**
- *IdCardOCRVerification请求参数结构体
  */
 class IdCardOCRVerificationRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class IdCardOCRVerificationRequest extends AbstractModel
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      */
     public $ImageUrl;
+
     /**
      * @param string $IdCard 身份证号
 姓名和身份证号、ImageBase64、ImageUrl三者必须提供其中之一。若都提供了，则按照姓名和身份证号>ImageBase64>ImageUrl的优先级使用参数。
@@ -90,6 +89,7 @@ class IdCardOCRVerificationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

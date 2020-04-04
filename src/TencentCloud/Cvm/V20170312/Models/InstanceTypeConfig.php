@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述实例机型配置信息
+ *
  * @method string getZone() 获取可用区。
  * @method void setZone(string $Zone) 设置可用区。
  * @method string getInstanceType() 获取实例机型。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置内存容量，单位：`GB`。
  * @method integer getFPGA() 获取FPGA核数，单位：核。
  * @method void setFPGA(integer $FPGA) 设置FPGA核数，单位：核。
- */
-
-/**
- *描述实例机型配置信息
  */
 class InstanceTypeConfig extends AbstractModel
 {
@@ -73,6 +71,7 @@ class InstanceTypeConfig extends AbstractModel
      * @var integer FPGA核数，单位：核。
      */
     public $FPGA;
+
     /**
      * @param string $Zone 可用区。
      * @param string $InstanceType 实例机型。
@@ -86,6 +85,7 @@ class InstanceTypeConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

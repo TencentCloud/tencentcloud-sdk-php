@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRealServers请求参数结构体
+ *
  * @method integer getProjectId() 获取查询源站的所属项目ID，-1表示所有项目
  * @method void setProjectId(integer $ProjectId) 设置查询源站的所属项目ID，-1表示所有项目
  * @method string getSearchValue() 获取需要查询的源站IP或域名，支持模糊匹配
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，源站会被拉取出来。
  * @method array getFilters() 获取过滤条件。filter的name取值(RealServerName,RealServerIP)
  * @method void setFilters(array $Filters) 设置过滤条件。filter的name取值(RealServerName,RealServerIP)
- */
-
-/**
- *DescribeRealServers请求参数结构体
  */
 class DescribeRealServersRequest extends AbstractModel
 {
@@ -69,6 +67,7 @@ class DescribeRealServersRequest extends AbstractModel
      * @var array 过滤条件。filter的name取值(RealServerName,RealServerIP)
      */
     public $Filters;
+
     /**
      * @param integer $ProjectId 查询源站的所属项目ID，-1表示所有项目
      * @param string $SearchValue 需要查询的源站IP或域名，支持模糊匹配
@@ -82,6 +81,7 @@ class DescribeRealServersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

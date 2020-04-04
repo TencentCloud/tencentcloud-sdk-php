@@ -18,14 +18,12 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskDetail请求参数结构体
+ *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
  * @method string getTaskId() 获取任务 Id。
  * @method void setTaskId(string $TaskId) 设置任务 Id。
- */
-
-/**
- *DescribeTaskDetail请求参数结构体
  */
 class DescribeTaskDetailRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeTaskDetailRequest extends AbstractModel
      * @var string 任务 Id。
      */
     public $TaskId;
+
     /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $TaskId 任务 Id。
@@ -46,6 +45,7 @@ class DescribeTaskDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

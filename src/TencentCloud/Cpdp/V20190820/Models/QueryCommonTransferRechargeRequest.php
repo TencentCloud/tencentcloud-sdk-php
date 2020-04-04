@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * QueryCommonTransferRecharge请求参数结构体
+ *
  * @method string getMrchCode() 获取String(22)，商户号（签约客户号）
  * @method void setMrchCode(string $MrchCode) 设置String(22)，商户号（签约客户号）
  * @method string getFunctionFlag() 获取STRING(2)，功能标志（1为查询当日数据，0查询历史数据）
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNum(string $PageNum) 设置STRING(10)，页码（起始值为1，每次最多返回20条记录，第二页返回的记录数为第21至40条记录，第三页为41至60条记录，顺序均按照建立时间的先后）
  * @method string getReservedMsg() 获取STRING(1027)，保留域
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
- */
-
-/**
- *QueryCommonTransferRecharge请求参数结构体
  */
 class QueryCommonTransferRechargeRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class QueryCommonTransferRechargeRequest extends AbstractModel
      * @var string STRING(1027)，保留域
      */
     public $ReservedMsg;
+
     /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $FunctionFlag STRING(2)，功能标志（1为查询当日数据，0查询历史数据）
@@ -78,6 +77,7 @@ class QueryCommonTransferRechargeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

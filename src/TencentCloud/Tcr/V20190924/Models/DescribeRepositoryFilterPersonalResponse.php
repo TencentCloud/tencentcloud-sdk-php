@@ -18,14 +18,12 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRepositoryFilterPersonal返回参数结构体
+ *
  * @method SearchUserRepositoryResp getData() 获取仓库信息
  * @method void setData(SearchUserRepositoryResp $Data) 设置仓库信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeRepositoryFilterPersonal返回参数结构体
  */
 class DescribeRepositoryFilterPersonalResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeRepositoryFilterPersonalResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param SearchUserRepositoryResp $Data 仓库信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeRepositoryFilterPersonalResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

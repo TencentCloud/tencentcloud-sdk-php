@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 工作流信息详情。
+ *
  * @method integer getWorkflowId() 获取工作流 ID。
  * @method void setWorkflowId(integer $WorkflowId) 设置工作流 ID。
  * @method string getWorkflowName() 获取工作流名称。
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置工作流创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method string getUpdateTime() 获取工作流最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method void setUpdateTime(string $UpdateTime) 设置工作流最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
- */
-
-/**
- *工作流信息详情。
  */
 class WorkflowInfo extends AbstractModel
 {
@@ -146,6 +144,7 @@ class WorkflowInfo extends AbstractModel
      * @var string 工作流最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      */
     public $UpdateTime;
+
     /**
      * @param integer $WorkflowId 工作流 ID。
      * @param string $WorkflowName 工作流名称。
@@ -174,6 +173,7 @@ class WorkflowInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

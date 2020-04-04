@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDBInstance请求参数结构体
+ *
  * @method integer getSecondaryNum() 获取每个副本集内从节点个数
  * @method void setSecondaryNum(integer $SecondaryNum) 设置每个副本集内从节点个数
  * @method integer getMemory() 获取实例内存大小，单位：GB
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络ID，如果不传则默认选择基础网络
  * @method string getUniqSubnetId() 获取私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
- */
-
-/**
- *CreateDBInstance请求参数结构体
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -115,6 +113,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @var string 私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
      */
     public $UniqSubnetId;
+
     /**
      * @param integer $SecondaryNum 每个副本集内从节点个数
      * @param integer $Memory 实例内存大小，单位：GB
@@ -134,6 +133,7 @@ class CreateDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 预执行脚本配置
+ *
  * @method string getPath() 获取脚本在COS上路径，已废弃
  * @method void setPath(string $Path) 设置脚本在COS上路径，已废弃
  * @method array getArgs() 获取执行脚本参数
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosSecretKey(string $CosSecretKey) 设置Cos的SecretKey
  * @method string getAppId() 获取cos的appid，已废弃
  * @method void setAppId(string $AppId) 设置cos的appid，已废弃
- */
-
-/**
- *预执行脚本配置
  */
 class PreExecuteFileSettings extends AbstractModel
 {
@@ -108,6 +106,7 @@ class PreExecuteFileSettings extends AbstractModel
      * @var string cos的appid，已废弃
      */
     public $AppId;
+
     /**
      * @param string $Path 脚本在COS上路径，已废弃
      * @param array $Args 执行脚本参数
@@ -126,6 +125,7 @@ class PreExecuteFileSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

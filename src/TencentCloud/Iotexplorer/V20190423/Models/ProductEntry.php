@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 产品详情
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getProductName() 获取产品名称
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableProductScript(string $EnableProductScript) 设置是否使用脚本进行二进制转json功能 可以取值 true / false
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *产品详情
  */
 class ProductEntry extends AbstractModel
 {
@@ -132,6 +130,7 @@ class ProductEntry extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableProductScript;
+
     /**
      * @param string $ProductId 产品ID
      * @param string $ProductName 产品名称
@@ -154,6 +153,7 @@ class ProductEntry extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

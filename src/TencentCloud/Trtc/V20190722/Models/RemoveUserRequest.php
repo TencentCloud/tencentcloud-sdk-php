@@ -18,16 +18,14 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RemoveUser请求参数结构体
+ *
  * @method integer getSdkAppId() 获取TRTC的SDKAppId。
  * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的SDKAppId。
  * @method integer getRoomId() 获取房间号。
  * @method void setRoomId(integer $RoomId) 设置房间号。
  * @method array getUserIds() 获取要移出的用户列表，最多10个。
  * @method void setUserIds(array $UserIds) 设置要移出的用户列表，最多10个。
- */
-
-/**
- *RemoveUser请求参数结构体
  */
 class RemoveUserRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RemoveUserRequest extends AbstractModel
      * @var array 要移出的用户列表，最多10个。
      */
     public $UserIds;
+
     /**
      * @param integer $SdkAppId TRTC的SDKAppId。
      * @param integer $RoomId 房间号。
@@ -54,6 +53,7 @@ class RemoveUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

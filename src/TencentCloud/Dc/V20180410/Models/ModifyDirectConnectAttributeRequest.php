@@ -18,6 +18,8 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDirectConnectAttribute请求参数结构体
+ *
  * @method string getDirectConnectId() 获取物理专线的ID。
  * @method void setDirectConnectId(string $DirectConnectId) 设置物理专线的ID。
  * @method string getDirectConnectName() 获取物理专线名称。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaultReportContactPerson(string $FaultReportContactPerson) 设置报障联系人。
  * @method string getFaultReportContactNumber() 获取报障联系电话。
  * @method void setFaultReportContactNumber(string $FaultReportContactNumber) 设置报障联系电话。
- */
-
-/**
- *ModifyDirectConnectAttribute请求参数结构体
  */
 class ModifyDirectConnectAttributeRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
      * @var string 报障联系电话。
      */
     public $FaultReportContactNumber;
+
     /**
      * @param string $DirectConnectId 物理专线的ID。
      * @param string $DirectConnectName 物理专线名称。
@@ -118,6 +117,7 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

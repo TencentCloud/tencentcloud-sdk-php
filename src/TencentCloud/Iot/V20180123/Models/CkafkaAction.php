@@ -18,16 +18,14 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转发至Ckafka
+ *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getTopicName() 获取topic名称
  * @method void setTopicName(string $TopicName) 设置topic名称
  * @method string getRegion() 获取地域
  * @method void setRegion(string $Region) 设置地域
- */
-
-/**
- *转发至Ckafka
  */
 class CkafkaAction extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CkafkaAction extends AbstractModel
      * @var string 地域
      */
     public $Region;
+
     /**
      * @param string $InstanceId 实例Id
      * @param string $TopicName topic名称
@@ -54,6 +53,7 @@ class CkafkaAction extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

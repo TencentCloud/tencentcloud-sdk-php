@@ -18,14 +18,12 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取命名空间信息返回
+ *
  * @method integer getNamespaceCount() 获取命名空间数量
  * @method void setNamespaceCount(integer $NamespaceCount) 设置命名空间数量
  * @method array getNamespaceInfo() 获取命名空间信息
  * @method void setNamespaceInfo(array $NamespaceInfo) 设置命名空间信息
- */
-
-/**
- *获取命名空间信息返回
  */
 class NamespaceInfoResp extends AbstractModel
 {
@@ -38,6 +36,7 @@ class NamespaceInfoResp extends AbstractModel
      * @var array 命名空间信息
      */
     public $NamespaceInfo;
+
     /**
      * @param integer $NamespaceCount 命名空间数量
      * @param array $NamespaceInfo 命名空间信息
@@ -46,6 +45,7 @@ class NamespaceInfoResp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

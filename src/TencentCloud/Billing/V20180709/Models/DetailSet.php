@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 由域名和使用明细组成的数据结构
+ *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
  * @method array getDetailPoints() 获取使用数据明细
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceID(string $InstanceID) 设置实例ID
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *由域名和使用明细组成的数据结构
  */
 class DetailSet extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DetailSet extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceID;
+
     /**
      * @param string $Domain 域名
      * @param array $DetailPoints 使用数据明细
@@ -58,6 +57,7 @@ class DetailSet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceDTSInfo请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- */
-
-/**
- *DescribeInstanceDTSInfo请求参数结构体
  */
 class DescribeInstanceDTSInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeInstanceDTSInfoRequest extends AbstractModel
      * @var string 实例ID
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 实例ID
      */
@@ -38,6 +37,7 @@ class DescribeInstanceDTSInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

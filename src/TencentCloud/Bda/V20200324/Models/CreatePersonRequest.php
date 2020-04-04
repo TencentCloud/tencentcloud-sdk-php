@@ -18,6 +18,8 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePerson请求参数结构体
+ *
  * @method string getGroupId() 获取待加入的人员库ID。
  * @method void setGroupId(string $GroupId) 设置待加入的人员库ID。
  * @method string getPersonName() 获取人员名称。[1，60]个字符，可修改，可重复。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 支持英文、数字、-%@#&_，，长度限制64B。
  * @method Trace getTrace() 获取人体轨迹信息。
  * @method void setTrace(Trace $Trace) 设置人体轨迹信息。
- */
-
-/**
- *CreatePerson请求参数结构体
  */
 class CreatePersonRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class CreatePersonRequest extends AbstractModel
      * @var Trace 人体轨迹信息。
      */
     public $Trace;
+
     /**
      * @param string $GroupId 待加入的人员库ID。
      * @param string $PersonName 人员名称。[1，60]个字符，可修改，可重复。
@@ -66,6 +65,7 @@ class CreatePersonRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Hcm\V20181106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 识别出的算术式信息及评估结果
+ *
  * @method string getItem() 获取识别的算式是否正确
  * @method void setItem(string $Item) 设置识别的算式是否正确
  * @method string getItemString() 获取识别的算式
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpressionType(string $ExpressionType) 设置算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *识别出的算术式信息及评估结果
  */
 class Item extends AbstractModel
 {
@@ -62,6 +60,7 @@ class Item extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpressionType;
+
     /**
      * @param string $Item 识别的算式是否正确
      * @param string $ItemString 识别的算式
@@ -74,6 +73,7 @@ class Item extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 添加实例到集群的结果
+ *
  * @method array getFailedInstanceIds() 获取添加集群失败的节点列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedInstanceIds(array $FailedInstanceIds) 设置添加集群失败的节点列表
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeoutInstanceIds(array $TimeoutInstanceIds) 设置添加集群超时的节点列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *添加实例到集群的结果
  */
 class AddInstanceResult extends AbstractModel
 {
@@ -54,6 +52,7 @@ class AddInstanceResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeoutInstanceIds;
+
     /**
      * @param array $FailedInstanceIds 添加集群失败的节点列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class AddInstanceResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

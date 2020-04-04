@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetDevices请求参数结构体
+ *
  * @method string getProductId() 获取产品Id
  * @method void setProductId(string $ProductId) 设置产品Id
  * @method integer getOffset() 获取偏移
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLength(integer $Length) 设置长度
  * @method string getKeyword() 获取关键字查询
  * @method void setKeyword(string $Keyword) 设置关键字查询
- */
-
-/**
- *GetDevices请求参数结构体
  */
 class GetDevicesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GetDevicesRequest extends AbstractModel
      * @var string 关键字查询
      */
     public $Keyword;
+
     /**
      * @param string $ProductId 产品Id
      * @param integer $Offset 偏移
@@ -62,6 +61,7 @@ class GetDevicesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

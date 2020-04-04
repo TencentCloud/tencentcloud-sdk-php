@@ -18,16 +18,14 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSubscribes返回参数结构体
+ *
  * @method integer getTotalCount() 获取符合查询条件的实例总数
  * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的实例总数
  * @method array getItems() 获取数据订阅实例的信息列表
  * @method void setItems(array $Items) 设置数据订阅实例的信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeSubscribes返回参数结构体
  */
 class DescribeSubscribesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeSubscribesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 符合查询条件的实例总数
      * @param array $Items 数据订阅实例的信息列表
@@ -54,6 +53,7 @@ class DescribeSubscribesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

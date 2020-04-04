@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 已经存在的实例信息
+ *
  * @method boolean getUsable() 获取实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsable(boolean $Usable) 设置实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
@@ -76,10 +78,6 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置实例机型。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *已经存在的实例信息
  */
 class ExistedInstance extends AbstractModel
 {
@@ -163,6 +161,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
+
     /**
      * @param boolean $Usable 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -198,6 +197,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人脸描述
+ *
  * @method string getFaceId() 获取人脸唯一标识符
  * @method void setFaceId(string $FaceId) 设置人脸唯一标识符
  * @method string getFaceUrl() 获取人脸图片 URL
  * @method void setFaceUrl(string $FaceUrl) 设置人脸图片 URL
  * @method string getPersonId() 获取人员唯一标识符
  * @method void setPersonId(string $PersonId) 设置人员唯一标识符
- */
-
-/**
- *人脸描述
  */
 class Face extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Face extends AbstractModel
      * @var string 人员唯一标识符
      */
     public $PersonId;
+
     /**
      * @param string $FaceId 人脸唯一标识符
      * @param string $FaceUrl 人脸图片 URL
@@ -54,6 +53,7 @@ class Face extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

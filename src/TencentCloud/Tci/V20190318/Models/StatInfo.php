@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 单词出现的次数信息
+ *
  * @method string getKeyword() 获取词汇库中的单词
  * @method void setKeyword(string $Keyword) 设置词汇库中的单词
  * @method integer getValue() 获取单词出现在该音频中总次数
  * @method void setValue(integer $Value) 设置单词出现在该音频中总次数
- */
-
-/**
- *单词出现的次数信息
  */
 class StatInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class StatInfo extends AbstractModel
      * @var integer 单词出现在该音频中总次数
      */
     public $Value;
+
     /**
      * @param string $Keyword 词汇库中的单词
      * @param integer $Value 单词出现在该音频中总次数
@@ -46,6 +45,7 @@ class StatInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 白名单规则
+ *
  * @method array getPlaces() 获取加白地域
  * @method void setPlaces(array $Places) 设置加白地域
  * @method string getSrcIp() 获取加白源IP，支持网段，多个IP以逗号隔开
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostIp(string $HostIp) 设置白名单生效的机器
  * @method integer getId() 获取规则ID，用于更新规则
  * @method void setId(integer $Id) 设置规则ID，用于更新规则
- */
-
-/**
- *白名单规则
  */
 class LoginWhiteListsRule extends AbstractModel
 {
@@ -66,6 +64,7 @@ class LoginWhiteListsRule extends AbstractModel
      * @var integer 规则ID，用于更新规则
      */
     public $Id;
+
     /**
      * @param array $Places 加白地域
      * @param string $SrcIp 加白源IP，支持网段，多个IP以逗号隔开
@@ -78,6 +77,7 @@ class LoginWhiteListsRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

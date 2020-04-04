@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyModuleImage请求参数结构体
+ *
  * @method string getDefaultImageId() 获取默认镜像ID
  * @method void setDefaultImageId(string $DefaultImageId) 设置默认镜像ID
  * @method string getModuleId() 获取模块ID
  * @method void setModuleId(string $ModuleId) 设置模块ID
- */
-
-/**
- *ModifyModuleImage请求参数结构体
  */
 class ModifyModuleImageRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyModuleImageRequest extends AbstractModel
      * @var string 模块ID
      */
     public $ModuleId;
+
     /**
      * @param string $DefaultImageId 默认镜像ID
      * @param string $ModuleId 模块ID
@@ -46,6 +45,7 @@ class ModifyModuleImageRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

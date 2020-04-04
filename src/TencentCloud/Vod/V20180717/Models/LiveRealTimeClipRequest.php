@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * LiveRealTimeClip请求参数结构体
+ *
  * @method string getStreamId() 获取推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
  * @method void setStreamId(string $StreamId) 设置推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
  * @method string getStartTime() 获取流剪辑的开始时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtInfo(string $ExtInfo) 设置系统保留字段，请勿填写。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *LiveRealTimeClip请求参数结构体
  */
 class LiveRealTimeClipRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class LiveRealTimeClipRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param string $StreamId 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
      * @param string $StartTime 流剪辑的开始时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -110,6 +109,7 @@ class LiveRealTimeClipRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

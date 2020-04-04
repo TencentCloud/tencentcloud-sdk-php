@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务查询结果类型
+ *
  * @method string getType() 获取任务的类型，可以取的值有：
 <li>Transcode：转码</li>
 <li>AnimatedGraphics：转动图</li>
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageSpriteTask(MediaProcessTaskImageSpriteResult $ImageSpriteTask) 设置对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *任务查询结果类型
  */
 class MediaProcessTaskResult extends AbstractModel
 {
@@ -102,6 +100,7 @@ class MediaProcessTaskResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageSpriteTask;
+
     /**
      * @param string $Type 任务的类型，可以取的值有：
 <li>Transcode：转码</li>
@@ -126,6 +125,7 @@ class MediaProcessTaskResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskDetail请求参数结构体
+ *
  * @method array getTaskIds() 获取拨测任务id 数组
  * @method void setTaskIds(array $TaskIds) 设置拨测任务id 数组
- */
-
-/**
- *DescribeTaskDetail请求参数结构体
  */
 class DescribeTaskDetailRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeTaskDetailRequest extends AbstractModel
      * @var array 拨测任务id 数组
      */
     public $TaskIds;
+
     /**
      * @param array $TaskIds 拨测任务id 数组
      */
@@ -38,6 +37,7 @@ class DescribeTaskDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

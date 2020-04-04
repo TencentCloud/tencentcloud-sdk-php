@@ -18,14 +18,12 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePresignedNotebookInstanceUrl请求参数结构体
+ *
  * @method string getNotebookInstanceName() 获取Notebook实例名称
  * @method void setNotebookInstanceName(string $NotebookInstanceName) 设置Notebook实例名称
  * @method integer getSessionExpirationDurationInSeconds() 获取session有效时间，秒
  * @method void setSessionExpirationDurationInSeconds(integer $SessionExpirationDurationInSeconds) 设置session有效时间，秒
- */
-
-/**
- *CreatePresignedNotebookInstanceUrl请求参数结构体
  */
 class CreatePresignedNotebookInstanceUrlRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreatePresignedNotebookInstanceUrlRequest extends AbstractModel
      * @var integer session有效时间，秒
      */
     public $SessionExpirationDurationInSeconds;
+
     /**
      * @param string $NotebookInstanceName Notebook实例名称
      * @param integer $SessionExpirationDurationInSeconds session有效时间，秒
@@ -46,6 +45,7 @@ class CreatePresignedNotebookInstanceUrlRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

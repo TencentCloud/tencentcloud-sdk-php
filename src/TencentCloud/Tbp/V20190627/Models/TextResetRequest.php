@@ -18,6 +18,8 @@ namespace TencentCloud\Tbp\V20190627\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TextReset请求参数结构体
+ *
  * @method string getBotId() 获取机器人标识，用于定义抽象机器人。
  * @method void setBotId(string $BotId) 设置机器人标识，用于定义抽象机器人。
  * @method string getBotEnv() 获取机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatformType(string $PlatformType) 设置平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
  * @method string getPlatformId() 获取当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
  * @method void setPlatformId(string $PlatformId) 设置当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
- */
-
-/**
- *TextReset请求参数结构体
  */
 class TextResetRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class TextResetRequest extends AbstractModel
      * @var string 当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
      */
     public $PlatformId;
+
     /**
      * @param string $BotId 机器人标识，用于定义抽象机器人。
      * @param string $BotEnv 机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
@@ -70,6 +69,7 @@ class TextResetRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

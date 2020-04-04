@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyUploadInfo请求参数结构体
+ *
  * @method string getApplicationId() 获取应用ID
  * @method void setApplicationId(string $ApplicationId) 设置应用ID
  * @method string getPkgId() 获取调用DescribeUploadInfo接口时返回的软件包ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMd5(string $Md5) 设置程序包MD5
  * @method integer getSize() 获取程序包大小（单位字节）
  * @method void setSize(integer $Size) 设置程序包大小（单位字节）
- */
-
-/**
- *ModifyUploadInfo请求参数结构体
  */
 class ModifyUploadInfoRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyUploadInfoRequest extends AbstractModel
      * @var integer 程序包大小（单位字节）
      */
     public $Size;
+
     /**
      * @param string $ApplicationId 应用ID
      * @param string $PkgId 调用DescribeUploadInfo接口时返回的软件包ID
@@ -70,6 +69,7 @@ class ModifyUploadInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

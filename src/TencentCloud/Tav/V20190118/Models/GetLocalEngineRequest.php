@@ -18,12 +18,10 @@ namespace TencentCloud\Tav\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetLocalEngine请求参数结构体
+ *
  * @method string getKey() 获取购买服务后获得的授权信息，用于保证请求有效性
  * @method void setKey(string $Key) 设置购买服务后获得的授权信息，用于保证请求有效性
- */
-
-/**
- *GetLocalEngine请求参数结构体
  */
 class GetLocalEngineRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetLocalEngineRequest extends AbstractModel
      * @var string 购买服务后获得的授权信息，用于保证请求有效性
      */
     public $Key;
+
     /**
      * @param string $Key 购买服务后获得的授权信息，用于保证请求有效性
      */
@@ -38,6 +37,7 @@ class GetLocalEngineRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

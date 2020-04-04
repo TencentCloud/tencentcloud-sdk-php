@@ -18,16 +18,14 @@ namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListSecrets返回参数结构体
+ *
  * @method integer getTotalCount() 获取根据State和SearchSecretName 筛选的凭据总数。
  * @method void setTotalCount(integer $TotalCount) 设置根据State和SearchSecretName 筛选的凭据总数。
  * @method array getSecretMetadatas() 获取返回凭据信息列表。
  * @method void setSecretMetadatas(array $SecretMetadatas) 设置返回凭据信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ListSecrets返回参数结构体
  */
 class ListSecretsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListSecretsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 根据State和SearchSecretName 筛选的凭据总数。
      * @param array $SecretMetadatas 返回凭据信息列表。
@@ -54,6 +53,7 @@ class ListSecretsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

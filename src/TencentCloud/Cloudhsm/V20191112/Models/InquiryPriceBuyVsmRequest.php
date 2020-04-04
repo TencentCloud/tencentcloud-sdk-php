@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceBuyVsm请求参数结构体
+ *
  * @method integer getGoodsNum() 获取需购买实例的数量
  * @method void setGoodsNum(integer $GoodsNum) 设置需购买实例的数量
  * @method integer getPayMode() 获取付费模式：0表示按需计费/后付费，1表示预付费
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrency(string $Currency) 设置货币类型，默认为CNY
  * @method string getType() 获取默认为CREATE，可选RENEW
  * @method void setType(string $Type) 设置默认为CREATE，可选RENEW
- */
-
-/**
- *InquiryPriceBuyVsm请求参数结构体
  */
 class InquiryPriceBuyVsmRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class InquiryPriceBuyVsmRequest extends AbstractModel
      * @var string 默认为CREATE，可选RENEW
      */
     public $Type;
+
     /**
      * @param integer $GoodsNum 需购买实例的数量
      * @param integer $PayMode 付费模式：0表示按需计费/后付费，1表示预付费
@@ -78,6 +77,7 @@ class InquiryPriceBuyVsmRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

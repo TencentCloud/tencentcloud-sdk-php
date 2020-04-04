@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProductEventList返回的Events里的GroupInfo
+ *
  * @method integer getGroupId() 获取策略ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(integer $GroupId) 设置策略ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置策略名
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DescribeProductEventList返回的Events里的GroupInfo
  */
 class DescribeProductEventListEventsGroupInfo extends AbstractModel
 {
@@ -44,6 +42,7 @@ class DescribeProductEventListEventsGroupInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
+
     /**
      * @param integer $GroupId 策略ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class DescribeProductEventListEventsGroupInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

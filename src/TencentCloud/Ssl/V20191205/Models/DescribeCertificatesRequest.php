@@ -18,6 +18,8 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCertificates请求参数结构体
+ *
  * @method integer getOffset() 获取分页偏移量，从0开始。
  * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始。
  * @method integer getLimit() 获取每页数量。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertificateStatus(array $CertificateStatus) 设置证书状态。
  * @method integer getDeployable() 获取是否可部署，可选值：1 = 可部署，0 =  不可部署。
  * @method void setDeployable(integer $Deployable) 设置是否可部署，可选值：1 = 可部署，0 =  不可部署。
- */
-
-/**
- *DescribeCertificates请求参数结构体
  */
 class DescribeCertificatesRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeCertificatesRequest extends AbstractModel
      * @var integer 是否可部署，可选值：1 = 可部署，0 =  不可部署。
      */
     public $Deployable;
+
     /**
      * @param integer $Offset 分页偏移量，从0开始。
      * @param integer $Limit 每页数量。
@@ -94,6 +93,7 @@ class DescribeCertificatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

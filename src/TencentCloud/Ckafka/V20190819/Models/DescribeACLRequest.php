@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeACL请求参数结构体
+ *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method integer getResourceType() 获取Acl资源类型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，当前只有TOPIC，其它字段用于后续兼容开源kafka的acl时使用
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置个数限制
  * @method string getSearchWord() 获取关键字匹配
  * @method void setSearchWord(string $SearchWord) 设置关键字匹配
- */
-
-/**
- *DescribeACL请求参数结构体
  */
 class DescribeACLRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeACLRequest extends AbstractModel
      * @var string 关键字匹配
      */
     public $SearchWord;
+
     /**
      * @param string $InstanceId 实例Id
      * @param integer $ResourceType Acl资源类型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，当前只有TOPIC，其它字段用于后续兼容开源kafka的acl时使用
@@ -78,6 +77,7 @@ class DescribeACLRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

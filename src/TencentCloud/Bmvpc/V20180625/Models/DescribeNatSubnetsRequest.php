@@ -18,14 +18,12 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNatSubnets请求参数结构体
+ *
  * @method string getNatId() 获取NAT网关ID，例如：nat-kdm476mp
  * @method void setNatId(string $NatId) 设置NAT网关ID，例如：nat-kdm476mp
  * @method string getVpcId() 获取私有网络ID，例如：vpc-kd7d06of
  * @method void setVpcId(string $VpcId) 设置私有网络ID，例如：vpc-kd7d06of
- */
-
-/**
- *DescribeNatSubnets请求参数结构体
  */
 class DescribeNatSubnetsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeNatSubnetsRequest extends AbstractModel
      * @var string 私有网络ID，例如：vpc-kd7d06of
      */
     public $VpcId;
+
     /**
      * @param string $NatId NAT网关ID，例如：nat-kdm476mp
      * @param string $VpcId 私有网络ID，例如：vpc-kd7d06of
@@ -46,6 +45,7 @@ class DescribeNatSubnetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

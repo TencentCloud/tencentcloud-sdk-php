@@ -18,6 +18,8 @@ namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 机器详细信息
+ *
  * @method integer getAppId() 获取客户appid
  * @method void setAppId(integer $AppId) 设置客户appid
  * @method integer getSetNo() 获取资源池编号
@@ -52,10 +54,6 @@ RECONNECT-等待重连
 RECOVERY-清理恢复
 FORBID-禁用
 UNAVAILABLE-不可用
- */
-
-/**
- *机器详细信息
  */
 class WorkerDetail extends AbstractModel
 {
@@ -103,6 +101,7 @@ FORBID-禁用
 UNAVAILABLE-不可用
      */
     public $ServiceState;
+
     /**
      * @param integer $AppId 客户appid
      * @param integer $SetNo 资源池编号
@@ -126,6 +125,7 @@ UNAVAILABLE-不可用
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

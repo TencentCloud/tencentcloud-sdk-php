@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDeployGroupList请求参数结构体
+ *
  * @method string getDeployGroupId() 获取置放群组 ID。
  * @method void setDeployGroupId(string $DeployGroupId) 设置置放群组 ID。
  * @method string getDeployGroupName() 获取置放群组名称。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- */
-
-/**
- *DescribeDeployGroupList请求参数结构体
  */
 class DescribeDeployGroupListRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeDeployGroupListRequest extends AbstractModel
      * @var integer 偏移量，默认为0。
      */
     public $Offset;
+
     /**
      * @param string $DeployGroupId 置放群组 ID。
      * @param string $DeployGroupName 置放群组名称。
@@ -62,6 +61,7 @@ class DescribeDeployGroupListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

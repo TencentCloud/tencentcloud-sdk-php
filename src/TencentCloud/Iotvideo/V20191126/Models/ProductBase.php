@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 产品信息摘要
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getProductModel() 获取产器型号(APP产品,为APP包名)
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIotModelRevision(integer $IotModelRevision) 设置物模型发布版本号,0代表物模型尚未发布
  * @method string getSecretKey() 获取产品密钥
  * @method void setSecretKey(string $SecretKey) 设置产品密钥
- */
-
-/**
- *产品信息摘要
  */
 class ProductBase extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ProductBase extends AbstractModel
      * @var string 产品密钥
      */
     public $SecretKey;
+
     /**
      * @param string $ProductId 产品ID
      * @param string $ProductModel 产器型号(APP产品,为APP包名)
@@ -86,6 +85,7 @@ class ProductBase extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

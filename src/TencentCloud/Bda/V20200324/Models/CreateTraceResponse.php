@@ -18,6 +18,8 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTrace返回参数结构体
+ *
  * @method string getTraceId() 获取人员轨迹唯一标识。
  * @method void setTraceId(string $TraceId) 设置人员轨迹唯一标识。
  * @method string getBodyModelVersion() 获取人体识别所用的算法模型版本。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 -1101:图片无效，-1102:url不合法。-1103:图片过大。-1104:图片下载失败。-1105:图片解码失败。-1109:图片分辨率过高。-2023:轨迹中有非同人图片。-2024: 轨迹提取失败。-2025: 人体检测失败。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateTrace返回参数结构体
  */
 class CreateTraceResponse extends AbstractModel
 {
@@ -68,6 +66,7 @@ class CreateTraceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $TraceId 人员轨迹唯一标识。
      * @param string $BodyModelVersion 人体识别所用的算法模型版本。
@@ -82,6 +81,7 @@ class CreateTraceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 7层监听器转发规则信息
+ *
  * @method string getRuleId() 获取规则信息
  * @method void setRuleId(string $RuleId) 设置规则信息
  * @method string getListenerId() 获取监听器信息
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setForwardHost(string $ForwardHost) 设置通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *7层监听器转发规则信息
  */
 class RuleInfo extends AbstractModel
 {
@@ -117,6 +115,7 @@ class RuleInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ForwardHost;
+
     /**
      * @param string $RuleId 规则信息
      * @param string $ListenerId 监听器信息
@@ -138,6 +137,7 @@ class RuleInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

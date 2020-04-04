@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频处理任务中的马赛克参数类型
+ *
  * @method string getCoordinateOrigin() 获取原点位置，目前仅支持：
 <li>TopLeft：表示坐标原点位于视频图像左上角，马赛克原点为图片或文字的左上角。</li>
 默认值：TopLeft。
@@ -72,10 +74,6 @@ use TencentCloud\Common\AbstractModel;
 <li>不填或填0，表示马赛克持续到画面结束；</li>
 <li>当数值大于0时（假设为 n），表示马赛克持续到第 n 秒时消失；</li>
 <li>当数值小于0时（假设为 -n），表示马赛克持续到离画面结束 n 秒前消失。</li>
- */
-
-/**
- *视频处理任务中的马赛克参数类型
  */
 class MosaicInput extends AbstractModel
 {
@@ -133,6 +131,7 @@ class MosaicInput extends AbstractModel
 <li>当数值小于0时（假设为 -n），表示马赛克持续到离画面结束 n 秒前消失。</li>
      */
     public $EndTimeOffset;
+
     /**
      * @param string $CoordinateOrigin 原点位置，目前仅支持：
 <li>TopLeft：表示坐标原点位于视频图像左上角，马赛克原点为图片或文字的左上角。</li>
@@ -166,6 +165,7 @@ class MosaicInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

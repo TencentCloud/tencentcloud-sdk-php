@@ -18,14 +18,12 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteVirtualIp请求参数结构体
+ *
  * @method string getVpcId() 获取私有网络唯一ID。
  * @method void setVpcId(string $VpcId) 设置私有网络唯一ID。
  * @method array getIps() 获取退还的IP列表。
  * @method void setIps(array $Ips) 设置退还的IP列表。
- */
-
-/**
- *DeleteVirtualIp请求参数结构体
  */
 class DeleteVirtualIpRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteVirtualIpRequest extends AbstractModel
      * @var array 退还的IP列表。
      */
     public $Ips;
+
     /**
      * @param string $VpcId 私有网络唯一ID。
      * @param array $Ips 退还的IP列表。
@@ -46,6 +45,7 @@ class DeleteVirtualIpRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

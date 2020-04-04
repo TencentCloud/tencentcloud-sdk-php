@@ -18,12 +18,10 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备属性
+ *
  * @method array getTags() 获取属性列表
  * @method void setTags(array $Tags) 设置属性列表
- */
-
-/**
- *设备属性
  */
 class Attribute extends AbstractModel
 {
@@ -31,6 +29,7 @@ class Attribute extends AbstractModel
      * @var array 属性列表
      */
     public $Tags;
+
     /**
      * @param array $Tags 属性列表
      */
@@ -38,6 +37,7 @@ class Attribute extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

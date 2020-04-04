@@ -18,16 +18,14 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备证书及密钥
+ *
  * @method string getTid() 获取设备TID
  * @method void setTid(string $Tid) 设置设备TID
  * @method string getCertificate() 获取设备初始证书信息，base64编码
  * @method void setCertificate(string $Certificate) 设置设备初始证书信息，base64编码
  * @method string getWhiteBoxSoUrl() 获取设备私钥下载地址
  * @method void setWhiteBoxSoUrl(string $WhiteBoxSoUrl) 设置设备私钥下载地址
- */
-
-/**
- *设备证书及密钥
  */
 class DeviceCertificate extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeviceCertificate extends AbstractModel
      * @var string 设备私钥下载地址
      */
     public $WhiteBoxSoUrl;
+
     /**
      * @param string $Tid 设备TID
      * @param string $Certificate 设备初始证书信息，base64编码
@@ -54,6 +53,7 @@ class DeviceCertificate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

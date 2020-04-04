@@ -18,6 +18,8 @@ namespace TencentCloud\Tmt\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ImageTranslate返回参数结构体
+ *
  * @method string getSessionUuid() 获取请求的SessionUuid返回
  * @method void setSessionUuid(string $SessionUuid) 设置请求的SessionUuid返回
  * @method string getSource() 获取源语言
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageRecord(ImageRecord $ImageRecord) 设置图片翻译结果，翻译结果按识别的文本每一行独立翻译，后续会推出按段落划分并翻译的版本
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ImageTranslate返回参数结构体
  */
 class ImageTranslateResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ImageTranslateResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $SessionUuid 请求的SessionUuid返回
      * @param string $Source 源语言
@@ -70,6 +69,7 @@ class ImageTranslateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

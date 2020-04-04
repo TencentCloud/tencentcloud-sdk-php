@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI 视频智能分析输入参数类型
+ *
  * @method integer getDefinition() 获取视频内容分析模板 ID。
  * @method void setDefinition(integer $Definition) 设置视频内容分析模板 ID。
- */
-
-/**
- *AI 视频智能分析输入参数类型
  */
 class AiAnalysisTaskInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiAnalysisTaskInput extends AbstractModel
      * @var integer 视频内容分析模板 ID。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 视频内容分析模板 ID。
      */
@@ -38,6 +37,7 @@ class AiAnalysisTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

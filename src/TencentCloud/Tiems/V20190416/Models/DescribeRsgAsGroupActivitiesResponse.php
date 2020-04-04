@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRsgAsGroupActivities返回参数结构体
+ *
  * @method array getRsgAsGroupActivitySet() 获取伸缩组活动数组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRsgAsGroupActivitySet(array $RsgAsGroupActivitySet) 设置伸缩组活动数组
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置所查询的伸缩组活动总数目
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeRsgAsGroupActivities返回参数结构体
  */
 class DescribeRsgAsGroupActivitiesResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DescribeRsgAsGroupActivitiesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $RsgAsGroupActivitySet 伸缩组活动数组
 注意：此字段可能返回 null，表示取不到有效值。
@@ -58,6 +57,7 @@ class DescribeRsgAsGroupActivitiesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

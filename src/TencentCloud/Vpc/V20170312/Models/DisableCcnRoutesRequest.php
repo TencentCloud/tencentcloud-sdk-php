@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisableCcnRoutes请求参数结构体
+ *
  * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
  * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
  * @method array getRouteIds() 获取CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
  * @method void setRouteIds(array $RouteIds) 设置CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
- */
-
-/**
- *DisableCcnRoutes请求参数结构体
  */
 class DisableCcnRoutesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DisableCcnRoutesRequest extends AbstractModel
      * @var array CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
      */
     public $RouteIds;
+
     /**
      * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
      * @param array $RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
@@ -46,6 +45,7 @@ class DisableCcnRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

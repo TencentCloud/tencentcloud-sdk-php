@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityPolicyDetail返回参数结构体
+ *
  * @method string getProxyId() 获取通道ID
  * @method void setProxyId(string $ProxyId) 设置通道ID
  * @method string getStatus() 获取安全策略状态：
@@ -38,10 +40,6 @@ UNBINDING，安全策略关闭中。
  * @method void setRuleList(array $RuleList) 设置规则列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeSecurityPolicyDetail返回参数结构体
  */
 class DescribeSecurityPolicyDetailResponse extends AbstractModel
 {
@@ -78,6 +76,7 @@ UNBINDING，安全策略关闭中。
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $ProxyId 通道ID
      * @param string $Status 安全策略状态：
@@ -94,6 +93,7 @@ UNBINDING，安全策略关闭中。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

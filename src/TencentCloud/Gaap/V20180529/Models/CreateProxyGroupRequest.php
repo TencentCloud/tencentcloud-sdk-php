@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateProxyGroup请求参数结构体
+ *
  * @method integer getProjectId() 获取通道组所属项目ID
  * @method void setProjectId(integer $ProjectId) 设置通道组所属项目ID
  * @method string getGroupName() 获取通道组别名
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerRegion(string $RealServerRegion) 设置源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
  * @method array getTagSet() 获取标签列表
  * @method void setTagSet(array $TagSet) 设置标签列表
- */
-
-/**
- *CreateProxyGroup请求参数结构体
  */
 class CreateProxyGroupRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateProxyGroupRequest extends AbstractModel
      * @var array 标签列表
      */
     public $TagSet;
+
     /**
      * @param integer $ProjectId 通道组所属项目ID
      * @param string $GroupName 通道组别名
@@ -62,6 +61,7 @@ class CreateProxyGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

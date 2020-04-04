@@ -18,6 +18,8 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateGameServerSession请求参数结构体
+ *
  * @method string getGameServerSessionId() 获取游戏服务器会话ID
  * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话ID
  * @method integer getMaximumPlayerSessionCount() 获取最大玩家数量
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlayerSessionCreationPolicy(string $PlayerSessionCreationPolicy) 设置玩家会话创建策略（ACCEPT_ALL,DENY_ALL）
  * @method string getProtectionPolicy() 获取保护策略(NoProtection,TimeLimitProtection,FullProtection)
  * @method void setProtectionPolicy(string $ProtectionPolicy) 设置保护策略(NoProtection,TimeLimitProtection,FullProtection)
- */
-
-/**
- *UpdateGameServerSession请求参数结构体
  */
 class UpdateGameServerSessionRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class UpdateGameServerSessionRequest extends AbstractModel
      * @var string 保护策略(NoProtection,TimeLimitProtection,FullProtection)
      */
     public $ProtectionPolicy;
+
     /**
      * @param string $GameServerSessionId 游戏服务器会话ID
      * @param integer $MaximumPlayerSessionCount 最大玩家数量
@@ -70,6 +69,7 @@ class UpdateGameServerSessionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

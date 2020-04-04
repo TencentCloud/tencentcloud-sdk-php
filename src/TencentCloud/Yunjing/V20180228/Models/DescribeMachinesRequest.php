@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMachines请求参数结构体
+ *
  * @method string getMachineType() 获取云主机类型。
 <li>CVM：表示虚拟主机</li>
 <li>BM:  表示黑石物理机</li>
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线 | ONLINE: 在线）</li>
 <li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版）</li>
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
- */
-
-/**
- *DescribeMachines请求参数结构体
  */
 class DescribeMachinesRequest extends AbstractModel
 {
@@ -77,6 +75,7 @@ class DescribeMachinesRequest extends AbstractModel
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
      */
     public $Filters;
+
     /**
      * @param string $MachineType 云主机类型。
 <li>CVM：表示虚拟主机</li>
@@ -94,6 +93,7 @@ class DescribeMachinesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

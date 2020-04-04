@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImage请求参数结构体
+ *
  * @method array getFilters() 获取过滤条件，每次请求的Filters的上限为10，详细的过滤条件如下：
 image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤
 image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
@@ -32,10 +34,6 @@ PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
- */
-
-/**
- *DescribeImage请求参数结构体
  */
 class DescribeImageRequest extends AbstractModel
 {
@@ -57,6 +55,7 @@ PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
      * @var integer 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
      */
     public $Limit;
+
     /**
      * @param array $Filters 过滤条件，每次请求的Filters的上限为10，详细的过滤条件如下：
 image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤
@@ -70,6 +69,7 @@ PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

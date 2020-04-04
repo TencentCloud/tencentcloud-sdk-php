@@ -18,12 +18,10 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StopContainerGroup请求参数结构体
+ *
  * @method string getGroupId() 获取部署组ID
  * @method void setGroupId(string $GroupId) 设置部署组ID
- */
-
-/**
- *StopContainerGroup请求参数结构体
  */
 class StopContainerGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class StopContainerGroupRequest extends AbstractModel
      * @var string 部署组ID
      */
     public $GroupId;
+
     /**
      * @param string $GroupId 部署组ID
      */
@@ -38,6 +37,7 @@ class StopContainerGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

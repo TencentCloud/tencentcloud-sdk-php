@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SubmitHighlights请求参数结构体
+ *
  * @method HLFunction getFunctions() 获取表情配置开关项。
  * @method void setFunctions(HLFunction $Functions) 设置表情配置开关项。
  * @method string getFileContent() 获取视频url。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxVideoDuration(integer $MaxVideoDuration) 设置处理视频的总时长，单位毫秒。该值为0或未设置时，默认值两小时生效；当该值大于视频实际时长时，视频实际时长生效；当该值小于视频实际时长时，该值生效；当获取视频实际时长失败时，若该值设置则生效，否则默认值生效。建议留空。
  * @method float getSimThreshold() 获取人脸检索的相似度阈值，默认值0.89。建议留空。
  * @method void setSimThreshold(float $SimThreshold) 设置人脸检索的相似度阈值，默认值0.89。建议留空。
- */
-
-/**
- *SubmitHighlights请求参数结构体
  */
 class SubmitHighlightsRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class SubmitHighlightsRequest extends AbstractModel
      * @var float 人脸检索的相似度阈值，默认值0.89。建议留空。
      */
     public $SimThreshold;
+
     /**
      * @param HLFunction $Functions 表情配置开关项。
      * @param string $FileContent 视频url。
@@ -102,6 +101,7 @@ class SubmitHighlightsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

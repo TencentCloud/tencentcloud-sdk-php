@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSimpleApplications请求参数结构体
+ *
  * @method array getApplicationIdList() 获取应用ID列表
  * @method void setApplicationIdList(array $ApplicationIdList) 设置应用ID列表
  * @method string getApplicationType() 获取应用类型
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationResourceTypeList(array $ApplicationResourceTypeList) 设置资源类型数组
  * @method string getSearchWord() 获取通过id和name进行关键词过滤
  * @method void setSearchWord(string $SearchWord) 设置通过id和name进行关键词过滤
- */
-
-/**
- *DescribeSimpleApplications请求参数结构体
  */
 class DescribeSimpleApplicationsRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
      * @var string 通过id和name进行关键词过滤
      */
     public $SearchWord;
+
     /**
      * @param array $ApplicationIdList 应用ID列表
      * @param string $ApplicationType 应用类型
@@ -86,6 +85,7 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

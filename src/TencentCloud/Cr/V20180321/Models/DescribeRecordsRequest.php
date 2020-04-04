@@ -18,6 +18,8 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRecords请求参数结构体
+ *
  * @method string getModule() 获取模块名，本接口取值：Record
  * @method void setModule(string $Module) 设置模块名，本接口取值：Record
  * @method string getOperation() 获取操作名，本接口取值：List
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(string $Limit) 设置分页参数，页长，默认为20
  * @method string getInstId() 获取实例ID，不传默认为系统分配的初始实例
  * @method void setInstId(string $InstId) 设置实例ID，不传默认为系统分配的初始实例
- */
-
-/**
- *DescribeRecords请求参数结构体
  */
 class DescribeRecordsRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class DescribeRecordsRequest extends AbstractModel
      * @var string 实例ID，不传默认为系统分配的初始实例
      */
     public $InstId;
+
     /**
      * @param string $Module 模块名，本接口取值：Record
      * @param string $Operation 操作名，本接口取值：List
@@ -110,6 +109,7 @@ class DescribeRecordsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

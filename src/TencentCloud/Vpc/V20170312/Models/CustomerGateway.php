@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 对端网关
+ *
  * @method string getCustomerGatewayId() 获取用户网关唯一ID
  * @method void setCustomerGatewayId(string $CustomerGatewayId) 设置用户网关唯一ID
  * @method string getCustomerGatewayName() 获取网关名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpAddress(string $IpAddress) 设置公网地址
  * @method string getCreatedTime() 获取创建时间
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间
- */
-
-/**
- *对端网关
  */
 class CustomerGateway extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CustomerGateway extends AbstractModel
      * @var string 创建时间
      */
     public $CreatedTime;
+
     /**
      * @param string $CustomerGatewayId 用户网关唯一ID
      * @param string $CustomerGatewayName 网关名称
@@ -62,6 +61,7 @@ class CustomerGateway extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

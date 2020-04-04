@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * QueryReconciliationDocument请求参数结构体
+ *
  * @method string getMrchCode() 获取String(22)，商户号
  * @method void setMrchCode(string $MrchCode) 设置String(22)，商户号
  * @method string getFileType() 获取STRING(10)，文件类型（充值文件-CZ; 提现文件-TX; 交易文件-JY; 余额文件-YE; 合约文件-HY）
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileDate(string $FileDate) 设置STRING(8)，文件日期（格式：20190101）
  * @method string getReservedMsg() 获取STRING(1027)，保留域
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
- */
-
-/**
- *QueryReconciliationDocument请求参数结构体
  */
 class QueryReconciliationDocumentRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class QueryReconciliationDocumentRequest extends AbstractModel
      * @var string STRING(1027)，保留域
      */
     public $ReservedMsg;
+
     /**
      * @param string $MrchCode String(22)，商户号
      * @param string $FileType STRING(10)，文件类型（充值文件-CZ; 提现文件-TX; 交易文件-JY; 余额文件-YE; 合约文件-HY）
@@ -62,6 +61,7 @@ class QueryReconciliationDocumentRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

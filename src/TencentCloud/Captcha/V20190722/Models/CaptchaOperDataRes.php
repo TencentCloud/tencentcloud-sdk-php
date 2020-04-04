@@ -18,6 +18,8 @@ namespace TencentCloud\Captcha\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCaptchaOperData 接口 返回数据类型集合
+ *
  * @method array getOperDataLoadTimeUnitArray() 获取验证码加载耗时数据返回
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperDataLoadTimeUnitArray(array $OperDataLoadTimeUnitArray) 设置验证码加载耗时数据返回
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperDataTryTimesDistributeUnitArray(array $OperDataTryTimesDistributeUnitArray) 设置验证码尝试次数分布数据返回
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DescribeCaptchaOperData 接口 返回数据类型集合
  */
 class CaptchaOperDataRes extends AbstractModel
 {
@@ -64,6 +62,7 @@ class CaptchaOperDataRes extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperDataTryTimesDistributeUnitArray;
+
     /**
      * @param array $OperDataLoadTimeUnitArray 验证码加载耗时数据返回
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +77,7 @@ class CaptchaOperDataRes extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

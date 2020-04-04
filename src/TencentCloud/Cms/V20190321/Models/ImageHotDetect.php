@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图片性感详情
+ *
  * @method integer getEvilType() 获取恶意类型
 100：正常
 20103：性感
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) 设置性感标签：性感特征中文描述
  * @method integer getScore() 获取性感分：分值范围 0-100，分数越高性感倾向越明显
  * @method void setScore(integer $Score) 设置性感分：分值范围 0-100，分数越高性感倾向越明显
- */
-
-/**
- *图片性感详情
  */
 class ImageHotDetect extends AbstractModel
 {
@@ -65,6 +63,7 @@ class ImageHotDetect extends AbstractModel
      * @var integer 性感分：分值范围 0-100，分数越高性感倾向越明显
      */
     public $Score;
+
     /**
      * @param integer $EvilType 恶意类型
 100：正常
@@ -78,6 +77,7 @@ class ImageHotDetect extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

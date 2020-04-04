@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySecurityGroupAttribute请求参数结构体
+ *
  * @method string getSecurityGroupId() 获取安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
  * @method string getGroupName() 获取安全组名称，可任意命名，但不得超过60个字符。
  * @method void setGroupName(string $GroupName) 设置安全组名称，可任意命名，但不得超过60个字符。
  * @method string getGroupDescription() 获取安全组备注，最多100个字符。
  * @method void setGroupDescription(string $GroupDescription) 设置安全组备注，最多100个字符。
- */
-
-/**
- *ModifySecurityGroupAttribute请求参数结构体
  */
 class ModifySecurityGroupAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifySecurityGroupAttributeRequest extends AbstractModel
      * @var string 安全组备注，最多100个字符。
      */
     public $GroupDescription;
+
     /**
      * @param string $SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      * @param string $GroupName 安全组名称，可任意命名，但不得超过60个字符。
@@ -54,6 +53,7 @@ class ModifySecurityGroupAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

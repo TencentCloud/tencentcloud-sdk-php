@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 就近接入的国家地区详情
+ *
  * @method string getNationCountryName() 获取国家名
  * @method void setNationCountryName(string $NationCountryName) 设置国家名
  * @method string getNationCountryInnerCode() 获取国家内部编码
  * @method void setNationCountryInnerCode(string $NationCountryInnerCode) 设置国家内部编码
- */
-
-/**
- *就近接入的国家地区详情
  */
 class NationCountryInnerInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class NationCountryInnerInfo extends AbstractModel
      * @var string 国家内部编码
      */
     public $NationCountryInnerCode;
+
     /**
      * @param string $NationCountryName 国家名
      * @param string $NationCountryInnerCode 国家内部编码
@@ -46,6 +45,7 @@ class NationCountryInnerInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

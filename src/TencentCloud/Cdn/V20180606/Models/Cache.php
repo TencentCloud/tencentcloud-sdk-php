@@ -18,6 +18,10 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 节点缓存过期时间配置，分为以下两种：
++ 基础版缓存过期规则配置
++ 高级版缓存过期规则配置
+ *
  * @method SimpleCache getSimpleCache() 获取基础缓存过期时间配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSimpleCache(SimpleCache $SimpleCache) 设置基础缓存过期时间配置
@@ -26,12 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdvancedCache(AdvancedCache $AdvancedCache) 设置高级缓存过期时间配置（功能灰度中，尚未全量）
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *节点缓存过期时间配置，分为以下两种：
-+ 基础版缓存过期规则配置
-+ 高级版缓存过期规则配置
  */
 class Cache extends AbstractModel
 {
@@ -46,6 +44,7 @@ class Cache extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdvancedCache;
+
     /**
      * @param SimpleCache $SimpleCache 基础缓存过期时间配置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -56,6 +55,7 @@ class Cache extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

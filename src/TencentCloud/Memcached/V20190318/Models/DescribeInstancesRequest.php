@@ -18,6 +18,8 @@ namespace TencentCloud\Memcached\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstances请求参数结构体
+ *
  * @method array getInstanceIds() 获取实例ID组成的数组，数组下标从0开始
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID组成的数组，数组下标从0开始
  * @method array getInstanceNames() 获取实例名称组成的数组，数组下标从0开始
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcIds(array $UniqVpcIds) 设置私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
  * @method array getVips() 获取实例服务IP组成的数组，数组下标从0开始
  * @method void setVips(array $Vips) 设置实例服务IP组成的数组，数组下标从0开始
- */
-
-/**
- *DescribeInstances请求参数结构体
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @var array 实例服务IP组成的数组，数组下标从0开始
      */
     public $Vips;
+
     /**
      * @param array $InstanceIds 实例ID组成的数组，数组下标从0开始
      * @param array $InstanceNames 实例名称组成的数组，数组下标从0开始
@@ -118,6 +117,7 @@ class DescribeInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

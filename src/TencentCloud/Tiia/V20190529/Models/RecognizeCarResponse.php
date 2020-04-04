@@ -18,16 +18,14 @@ namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RecognizeCar返回参数结构体
+ *
  * @method array getCarCoords() 获取汽车的四个矩形顶点坐标，如果图片中存在多辆车，则输出最大车辆的坐标。
  * @method void setCarCoords(array $CarCoords) 设置汽车的四个矩形顶点坐标，如果图片中存在多辆车，则输出最大车辆的坐标。
  * @method array getCarTags() 获取车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
  * @method void setCarTags(array $CarTags) 设置车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *RecognizeCar返回参数结构体
  */
 class RecognizeCarResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RecognizeCarResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $CarCoords 汽车的四个矩形顶点坐标，如果图片中存在多辆车，则输出最大车辆的坐标。
      * @param array $CarTags 车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
@@ -54,6 +53,7 @@ class RecognizeCarResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VerifyPerson请求参数结构体
+ *
  * @method string getImage() 获取图片 base64 数据。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -53,10 +55,6 @@ use TencentCloud\Common\AbstractModel;
 默认 0。 
 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
  */
-
-/**
- *VerifyPerson请求参数结构体
- */
 class VerifyPersonRequest extends AbstractModel
 {
     /**
@@ -91,6 +89,7 @@ class VerifyPersonRequest extends AbstractModel
 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
      */
     public $QualityControl;
+
     /**
      * @param string $Image 图片 base64 数据。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
@@ -114,6 +113,7 @@ class VerifyPersonRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListEventHistory返回参数结构体
+ *
  * @method string getContext() 获取搜索上下文, 用作查询游标
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContext(string $Context) 设置搜索上下文, 用作查询游标
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ListEventHistory返回参数结构体
  */
 class ListEventHistoryResponse extends AbstractModel
 {
@@ -71,6 +69,7 @@ class ListEventHistoryResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Context 搜索上下文, 用作查询游标
 注意：此字段可能返回 null，表示取不到有效值。
@@ -86,6 +85,7 @@ class ListEventHistoryResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

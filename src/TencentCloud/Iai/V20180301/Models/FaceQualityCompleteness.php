@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 五官遮挡分，评价眉毛（Eyebrow）、眼睛（Eye）、鼻子（Nose）、脸颊（Cheek）、嘴巴（Mouth）、下巴（Chin）的被遮挡程度。
+ *
  * @method integer getEyebrow() 获取眉毛的遮挡分数[0,100]，分数越高遮挡越少。 
 参考范围：[0,80]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChin(integer $Chin) 设置下巴的遮挡分数[0,100],分数越高遮挡越少。 
 参考范围：[0,70]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *五官遮挡分，评价眉毛（Eyebrow）、眼睛（Eye）、鼻子（Nose）、脸颊（Cheek）、嘴巴（Mouth）、下巴（Chin）的被遮挡程度。
  */
 class FaceQualityCompleteness extends AbstractModel
 {
@@ -102,6 +100,7 @@ class FaceQualityCompleteness extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Chin;
+
     /**
      * @param integer $Eyebrow 眉毛的遮挡分数[0,100]，分数越高遮挡越少。 
 参考范围：[0,80]表示发生遮挡。
@@ -126,6 +125,7 @@ class FaceQualityCompleteness extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

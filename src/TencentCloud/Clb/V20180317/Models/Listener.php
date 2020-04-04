@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 监听器的信息
+ *
  * @method string getListenerId() 获取负载均衡监听器 ID
  * @method void setListenerId(string $ListenerId) 设置负载均衡监听器 ID
  * @method string getProtocol() 获取监听器协议
@@ -68,10 +70,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetGroup(BasicTargetGroupInfo $TargetGroup) 设置绑定的目标组基本信息；当监听器绑定目标组时，会返回该字段
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *监听器的信息
  */
 class Listener extends AbstractModel
 {
@@ -155,6 +153,7 @@ class Listener extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetGroup;
+
     /**
      * @param string $ListenerId 负载均衡监听器 ID
      * @param string $Protocol 监听器协议
@@ -186,6 +185,7 @@ class Listener extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

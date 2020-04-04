@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTCPListeners请求参数结构体
+ *
  * @method string getListenerName() 获取监听器名称。
  * @method void setListenerName(string $ListenerName) 设置监听器名称。
  * @method array getPorts() 获取监听器端口列表。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectTimeout(integer $ConnectTimeout) 设置源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
  * @method array getRealServerPorts() 获取源站端口列表，该参数仅支持v1版本监听器和通道组监听器。
  * @method void setRealServerPorts(array $RealServerPorts) 设置源站端口列表，该参数仅支持v1版本监听器和通道组监听器。
- */
-
-/**
- *CreateTCPListeners请求参数结构体
  */
 class CreateTCPListenersRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class CreateTCPListenersRequest extends AbstractModel
      * @var array 源站端口列表，该参数仅支持v1版本监听器和通道组监听器。
      */
     public $RealServerPorts;
+
     /**
      * @param string $ListenerName 监听器名称。
      * @param array $Ports 监听器端口列表。
@@ -110,6 +109,7 @@ class CreateTCPListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

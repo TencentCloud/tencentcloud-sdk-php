@@ -18,14 +18,13 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBandwidthPackageQuota请求参数结构体
+ *
 
- */
-
-/**
- *DescribeBandwidthPackageQuota请求参数结构体
  */
 class DescribeBandwidthPackageQuotaRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeBandwidthPackageQuotaRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

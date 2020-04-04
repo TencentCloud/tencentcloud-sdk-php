@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 规则与目标组的关联关系
+ *
  * @method string getLoadBalancerId() 获取负载均衡ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡ID
  * @method string getListenerId() 获取监听器ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID
  * @method string getLocationId() 获取转发规则ID
  * @method void setLocationId(string $LocationId) 设置转发规则ID
- */
-
-/**
- *规则与目标组的关联关系
  */
 class TargetGroupAssociation extends AbstractModel
 {
@@ -52,6 +50,7 @@ class TargetGroupAssociation extends AbstractModel
      * @var string 转发规则ID
      */
     public $LocationId;
+
     /**
      * @param string $LoadBalancerId 负载均衡ID
      * @param string $ListenerId 监听器ID
@@ -62,6 +61,7 @@ class TargetGroupAssociation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

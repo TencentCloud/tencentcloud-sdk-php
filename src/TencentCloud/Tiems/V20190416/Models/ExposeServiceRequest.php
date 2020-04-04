@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ExposeService请求参数结构体
+ *
  * @method string getServiceId() 获取服务Id
  * @method void setServiceId(string $ServiceId) 设置服务Id
  * @method string getExposeType() 获取暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置暴露方式为 VPC 时，填写需要打通的私有网络Id
  * @method string getSubnetId() 获取暴露方式为 VPC 时，填写需要打通的子网Id
  * @method void setSubnetId(string $SubnetId) 设置暴露方式为 VPC 时，填写需要打通的子网Id
- */
-
-/**
- *ExposeService请求参数结构体
  */
 class ExposeServiceRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ExposeServiceRequest extends AbstractModel
      * @var string 暴露方式为 VPC 时，填写需要打通的子网Id
      */
     public $SubnetId;
+
     /**
      * @param string $ServiceId 服务Id
      * @param string $ExposeType 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
@@ -62,6 +61,7 @@ class ExposeServiceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

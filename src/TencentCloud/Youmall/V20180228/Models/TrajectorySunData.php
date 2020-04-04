@@ -18,16 +18,14 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 轨迹动线信息子结构
+ *
  * @method string getZones() 获取区域动线，形如 x-x-x-x-x，其中 x 为区域 ID
  * @method void setZones(string $Zones) 设置区域动线，形如 x-x-x-x-x，其中 x 为区域 ID
  * @method integer getCount() 获取该动线出现次数
  * @method void setCount(integer $Count) 设置该动线出现次数
  * @method integer getAvgStayTime() 获取该动线平均停留时间（秒）
  * @method void setAvgStayTime(integer $AvgStayTime) 设置该动线平均停留时间（秒）
- */
-
-/**
- *轨迹动线信息子结构
  */
 class TrajectorySunData extends AbstractModel
 {
@@ -45,6 +43,7 @@ class TrajectorySunData extends AbstractModel
      * @var integer 该动线平均停留时间（秒）
      */
     public $AvgStayTime;
+
     /**
      * @param string $Zones 区域动线，形如 x-x-x-x-x，其中 x 为区域 ID
      * @param integer $Count 该动线出现次数
@@ -54,6 +53,7 @@ class TrajectorySunData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

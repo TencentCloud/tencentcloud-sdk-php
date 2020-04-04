@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateImage请求参数结构体
+ *
  * @method string getImageName() 获取镜像名称
  * @method void setImageName(string $ImageName) 设置镜像名称
  * @method string getInstanceId() 获取需要制作镜像的实例ID
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotIds(array $SnapshotIds) 设置需要制作镜像的快照ID,必须包含一个系统盘快照
  * @method boolean getDryRun() 获取检测请求的合法性，但不会对操作的资源产生任何影响
  * @method void setDryRun(boolean $DryRun) 设置检测请求的合法性，但不会对操作的资源产生任何影响
- */
-
-/**
- *CreateImage请求参数结构体
  */
 class CreateImageRequest extends AbstractModel
 {
@@ -83,6 +81,7 @@ class CreateImageRequest extends AbstractModel
      * @var boolean 检测请求的合法性，但不会对操作的资源产生任何影响
      */
     public $DryRun;
+
     /**
      * @param string $ImageName 镜像名称
      * @param string $InstanceId 需要制作镜像的实例ID
@@ -98,6 +97,7 @@ class CreateImageRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

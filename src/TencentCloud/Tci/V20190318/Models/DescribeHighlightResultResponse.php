@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHighlightResult返回参数结构体
+ *
  * @method array getHighlightsInfo() 获取精彩集锦详细信息。
  * @method void setHighlightsInfo(array $HighlightsInfo) 设置精彩集锦详细信息。
  * @method integer getJobId() 获取精彩集锦任务唯一id。在URL方式时提交请求后会返回一个JobId，后续查询该url的结果时使用这个JobId进行查询。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProgress(float $Progress) 设置任务的进度百分比，100表示任务已完成。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeHighlightResult返回参数结构体
  */
 class DescribeHighlightResultResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeHighlightResultResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $HighlightsInfo 精彩集锦详细信息。
      * @param integer $JobId 精彩集锦任务唯一id。在URL方式时提交请求后会返回一个JobId，后续查询该url的结果时使用这个JobId进行查询。
@@ -62,6 +61,7 @@ class DescribeHighlightResultResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

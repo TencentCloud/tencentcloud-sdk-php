@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReviseMbrProperty请求参数结构体
+ *
  * @method string getMrchCode() 获取String(22)，商户号（签约客户号）
  * @method void setMrchCode(string $MrchCode) 设置String(22)，商户号（签约客户号）
  * @method string getSubAcctNo() 获取STRING(50)，见证子账户的账号
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemberProperty(string $MemberProperty) 设置STRING(10)，会员属性（00-普通子账号; SH-商户子账户。暂时只支持00-普通子账号改为SH-商户子账户）
  * @method string getReservedMsg() 获取STRING(1027)，保留域
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
- */
-
-/**
- *ReviseMbrProperty请求参数结构体
  */
 class ReviseMbrPropertyRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ReviseMbrPropertyRequest extends AbstractModel
      * @var string STRING(1027)，保留域
      */
     public $ReservedMsg;
+
     /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $SubAcctNo STRING(50)，见证子账户的账号
@@ -62,6 +61,7 @@ class ReviseMbrPropertyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

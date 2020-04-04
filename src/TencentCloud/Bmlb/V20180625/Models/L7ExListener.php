@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 监听器信息。
+ *
  * @method string getListenerId() 获取绑定的监听器唯一ID。
  * @method void setListenerId(string $ListenerId) 设置绑定的监听器唯一ID。
  * @method string getListenerName() 获取监听器名称。
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpProtocolType(string $IpProtocolType) 设置支持的IP协议类型。ipv4或者是ipv6。
  * @method boolean getBindTrafficMirror() 获取是否绑定在入参指定的流量镜像中。
  * @method void setBindTrafficMirror(boolean $BindTrafficMirror) 设置是否绑定在入参指定的流量镜像中。
- */
-
-/**
- *监听器信息。
  */
 class L7ExListener extends AbstractModel
 {
@@ -157,6 +155,7 @@ class L7ExListener extends AbstractModel
      * @var boolean 是否绑定在入参指定的流量镜像中。
      */
     public $BindTrafficMirror;
+
     /**
      * @param string $ListenerId 绑定的监听器唯一ID。
      * @param string $ListenerName 监听器名称。
@@ -182,6 +181,7 @@ class L7ExListener extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

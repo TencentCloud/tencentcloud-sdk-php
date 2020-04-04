@@ -18,14 +18,12 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MoveOrganizationMembersToNode请求参数结构体
+ *
  * @method integer getNodeId() 获取组织单元ID
  * @method void setNodeId(integer $NodeId) 设置组织单元ID
  * @method array getUins() 获取成员UIN列表
  * @method void setUins(array $Uins) 设置成员UIN列表
- */
-
-/**
- *MoveOrganizationMembersToNode请求参数结构体
  */
 class MoveOrganizationMembersToNodeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MoveOrganizationMembersToNodeRequest extends AbstractModel
      * @var array 成员UIN列表
      */
     public $Uins;
+
     /**
      * @param integer $NodeId 组织单元ID
      * @param array $Uins 成员UIN列表
@@ -46,6 +45,7 @@ class MoveOrganizationMembersToNodeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

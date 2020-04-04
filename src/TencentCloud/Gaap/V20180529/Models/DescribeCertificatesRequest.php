@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCertificates请求参数结构体
+ *
  * @method integer getCertificateType() 获取证书类型。其中：
 0，表示基础认证配置；
 1，表示客户端CA证书；
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取限制数量，默认为20。
  * @method void setLimit(integer $Limit) 设置限制数量，默认为20。
- */
-
-/**
- *DescribeCertificates请求参数结构体
  */
 class DescribeCertificatesRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeCertificatesRequest extends AbstractModel
      * @var integer 限制数量，默认为20。
      */
     public $Limit;
+
     /**
      * @param integer $CertificateType 证书类型。其中：
 0，表示基础认证配置；
@@ -82,6 +81,7 @@ class DescribeCertificatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReportData请求参数结构体
+ *
  * @method string getReportData() 获取上报数据
 注:reportData为客户端压缩后的上报数据进行16进制转换的字符串数据
 压缩说明：
@@ -45,10 +47,6 @@ reportData由两部分数据组成：
 详细说明请参考文档reportdata.docx：
 https://github.com/ame-demo/doc
  */
-
-/**
- *ReportData请求参数结构体
- */
 class ReportDataRequest extends AbstractModel
 {
     /**
@@ -67,6 +65,7 @@ reportData由两部分数据组成：
 https://github.com/ame-demo/doc
      */
     public $ReportData;
+
     /**
      * @param string $ReportData 上报数据
 注:reportData为客户端压缩后的上报数据进行16进制转换的字符串数据
@@ -86,6 +85,7 @@ https://github.com/ame-demo/doc
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

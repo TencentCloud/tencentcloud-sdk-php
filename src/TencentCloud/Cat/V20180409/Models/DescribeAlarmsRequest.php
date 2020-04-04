@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAlarms请求参数结构体
+ *
  * @method integer getOffset() 获取从第Offset 条开始查询。缺省值为0
  * @method void setOffset(integer $Offset) 设置从第Offset 条开始查询。缺省值为0
  * @method integer getLimit() 获取本批次查询Limit 条记录。缺省值为20
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortBy(string $SortBy) 设置排序字段，可为Time, ObjName, Duration, Status, Content 之一。缺省为Time。
  * @method string getSortType() 获取升序或降序。可为Desc, Asc之一。缺省为Desc。
  * @method void setSortType(string $SortType) 设置升序或降序。可为Desc, Asc之一。缺省为Desc。
- */
-
-/**
- *DescribeAlarms请求参数结构体
  */
 class DescribeAlarmsRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeAlarmsRequest extends AbstractModel
      * @var string 升序或降序。可为Desc, Asc之一。缺省为Desc。
      */
     public $SortType;
+
     /**
      * @param integer $Offset 从第Offset 条开始查询。缺省值为0
      * @param integer $Limit 本批次查询Limit 条记录。缺省值为20
@@ -94,6 +93,7 @@ class DescribeAlarmsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

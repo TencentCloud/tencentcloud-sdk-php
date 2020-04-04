@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListTopData请求参数结构体
+ *
  * @method string getStartTime() 获取查询起始日期，如：2018-09-09
 仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
 返回大于等于起始日期当天 00:00:00 点产生的数据
@@ -103,10 +105,6 @@ client：指定查询客户端地区（用户请求终端所在地区）数据�
 server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
 client：指定查询客户端地区（用户请求终端所在地区）数据，当 Metric 为 host 时仅支持 flux、request、bandwidth Filter
  */
-
-/**
- *ListTopData请求参数结构体
- */
 class ListTopDataRequest extends AbstractModel
 {
     /**
@@ -190,6 +188,7 @@ server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）
 client：指定查询客户端地区（用户请求终端所在地区）数据，当 Metric 为 host 时仅支持 flux、request、bandwidth Filter
      */
     public $AreaType;
+
     /**
      * @param string $StartTime 查询起始日期，如：2018-09-09
 仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
@@ -238,6 +237,7 @@ client：指定查询客户端地区（用户请求终端所在地区）数据�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

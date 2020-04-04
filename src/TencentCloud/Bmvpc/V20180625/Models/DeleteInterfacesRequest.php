@@ -18,14 +18,12 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteInterfaces请求参数结构体
+ *
  * @method string getInstanceId() 获取物理机ID
  * @method void setInstanceId(string $InstanceId) 设置物理机ID
  * @method array getSubnetIds() 获取子网的唯一ID列表
  * @method void setSubnetIds(array $SubnetIds) 设置子网的唯一ID列表
- */
-
-/**
- *DeleteInterfaces请求参数结构体
  */
 class DeleteInterfacesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteInterfacesRequest extends AbstractModel
      * @var array 子网的唯一ID列表
      */
     public $SubnetIds;
+
     /**
      * @param string $InstanceId 物理机ID
      * @param array $SubnetIds 子网的唯一ID列表
@@ -46,6 +45,7 @@ class DeleteInterfacesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

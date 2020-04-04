@@ -18,6 +18,8 @@ namespace TencentCloud\Soe\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 单词评分细则
+ *
  * @method integer getMemBeginTime() 获取当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
  * @method void setMemBeginTime(integer $MemBeginTime) 设置当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
  * @method integer getMemEndTime() 获取当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhoneInfos(array $PhoneInfos) 设置音节评估详情
  * @method string getReferenceWord() 获取参考词，目前为保留字段。
  * @method void setReferenceWord(string $ReferenceWord) 设置参考词，目前为保留字段。
- */
-
-/**
- *单词评分细则
  */
 class WordRsp extends AbstractModel
 {
@@ -80,6 +78,7 @@ class WordRsp extends AbstractModel
      * @var string 参考词，目前为保留字段。
      */
     public $ReferenceWord;
+
     /**
      * @param integer $MemBeginTime 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
      * @param integer $MemEndTime 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
@@ -94,6 +93,7 @@ class WordRsp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

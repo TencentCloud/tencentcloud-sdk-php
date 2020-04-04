@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBSlowlogs请求参数结构体
+ *
  * @method string getDBInstanceId() 获取实例ID，形如postgres-lnp6j617
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-lnp6j617
  * @method string getStartTime() 获取查询起始时间，形如2018-06-10 17:06:38，起始时间不得小于7天以前
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页返回结果，每页最大返回数量，取值为1-100，默认20
  * @method integer getOffset() 获取分页返回结果，返回结果的第几页，从0开始计数
  * @method void setOffset(integer $Offset) 设置分页返回结果，返回结果的第几页，从0开始计数
- */
-
-/**
- *DescribeDBSlowlogs请求参数结构体
  */
 class DescribeDBSlowlogsRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeDBSlowlogsRequest extends AbstractModel
      * @var integer 分页返回结果，返回结果的第几页，从0开始计数
      */
     public $Offset;
+
     /**
      * @param string $DBInstanceId 实例ID，形如postgres-lnp6j617
      * @param string $StartTime 查询起始时间，形如2018-06-10 17:06:38，起始时间不得小于7天以前
@@ -94,6 +93,7 @@ class DescribeDBSlowlogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UDP类型监听器信息
+ *
  * @method string getListenerId() 获取监听器ID
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getListenerName() 获取监听器名称
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerSet(array $RealServerSet) 设置监听器绑定的源站信息
  * @method integer getCreateTime() 获取监听器创建时间，Unix时间戳
  * @method void setCreateTime(integer $CreateTime) 设置监听器创建时间，Unix时间戳
- */
-
-/**
- *UDP类型监听器信息
  */
 class UDPListener extends AbstractModel
 {
@@ -119,6 +117,7 @@ class UDPListener extends AbstractModel
      * @var integer 监听器创建时间，Unix时间戳
      */
     public $CreateTime;
+
     /**
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
@@ -142,6 +141,7 @@ class UDPListener extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

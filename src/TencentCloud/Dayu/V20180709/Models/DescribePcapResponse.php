@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePcap返回参数结构体
+ *
  * @method array getPcapUrlList() 获取pcap包的下载链接列表，无pcap包时为空数组；
  * @method void setPcapUrlList(array $PcapUrlList) 设置pcap包的下载链接列表，无pcap包时为空数组；
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribePcap返回参数结构体
  */
 class DescribePcapResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribePcapResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $PcapUrlList pcap包的下载链接列表，无pcap包时为空数组；
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribePcapResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBindingPolicyObjectList接口的Dimension
+ *
  * @method integer getRegionId() 获取地域id
  * @method void setRegionId(integer $RegionId) 设置地域id
  * @method string getRegion() 获取地域简称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDimensions(string $Dimensions) 设置维度组合json字符串
  * @method string getEventDimensions() 获取事件维度组合json字符串
  * @method void setEventDimensions(string $EventDimensions) 设置事件维度组合json字符串
- */
-
-/**
- *DescribeBindingPolicyObjectList接口的Dimension
  */
 class DescribeBindingPolicyObjectListDimension extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeBindingPolicyObjectListDimension extends AbstractModel
      * @var string 事件维度组合json字符串
      */
     public $EventDimensions;
+
     /**
      * @param integer $RegionId 地域id
      * @param string $Region 地域简称
@@ -62,6 +61,7 @@ class DescribeBindingPolicyObjectListDimension extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

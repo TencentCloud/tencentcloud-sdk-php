@@ -18,14 +18,12 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * KeywordsExtraction请求参数结构体
+ *
  * @method string getText() 获取待处理的文本（仅支持UTF-8格式，不超过10000字）
  * @method void setText(string $Text) 设置待处理的文本（仅支持UTF-8格式，不超过10000字）
  * @method integer getNum() 获取指定关键词个数上限（默认值为5）
  * @method void setNum(integer $Num) 设置指定关键词个数上限（默认值为5）
- */
-
-/**
- *KeywordsExtraction请求参数结构体
  */
 class KeywordsExtractionRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class KeywordsExtractionRequest extends AbstractModel
      * @var integer 指定关键词个数上限（默认值为5）
      */
     public $Num;
+
     /**
      * @param string $Text 待处理的文本（仅支持UTF-8格式，不超过10000字）
      * @param integer $Num 指定关键词个数上限（默认值为5）
@@ -46,6 +45,7 @@ class KeywordsExtractionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

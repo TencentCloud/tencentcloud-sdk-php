@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用于回档的数据库表详情
+ *
  * @method string getDatabase() 获取数据库名
  * @method void setDatabase(string $Database) 设置数据库名
  * @method array getTable() 获取数据库表详情
  * @method void setTable(array $Table) 设置数据库表详情
- */
-
-/**
- *用于回档的数据库表详情
  */
 class RollbackTables extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RollbackTables extends AbstractModel
      * @var array 数据库表详情
      */
     public $Table;
+
     /**
      * @param string $Database 数据库名
      * @param array $Table 数据库表详情
@@ -46,6 +45,7 @@ class RollbackTables extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

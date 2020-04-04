@@ -18,14 +18,12 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUsualLoginPlaces返回参数结构体
+ *
  * @method array getUsualLoginPlaces() 获取常用登录地数组
  * @method void setUsualLoginPlaces(array $UsualLoginPlaces) 设置常用登录地数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeUsualLoginPlaces返回参数结构体
  */
 class DescribeUsualLoginPlacesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeUsualLoginPlacesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $UsualLoginPlaces 常用登录地数组
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeUsualLoginPlacesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

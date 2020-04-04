@@ -18,6 +18,8 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateMonitors请求参数结构体
+ *
  * @method array getUrls() 获取站点的url列表
  * @method void setUrls(array $Urls) 设置站点的url列表
  * @method string getName() 获取任务名称
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRateLimit(integer $RateLimit) 设置扫描速率限制，每秒发送X个HTTP请求
  * @method string getFirstScanStartTime() 获取首次扫描开始时间
  * @method void setFirstScanStartTime(string $FirstScanStartTime) 设置首次扫描开始时间
- */
-
-/**
- *CreateMonitors请求参数结构体
  */
 class CreateMonitorsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateMonitorsRequest extends AbstractModel
      * @var string 首次扫描开始时间
      */
     public $FirstScanStartTime;
+
     /**
      * @param array $Urls 站点的url列表
      * @param string $Name 任务名称
@@ -78,6 +77,7 @@ class CreateMonitorsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

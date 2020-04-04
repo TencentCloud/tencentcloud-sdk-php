@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLoadBalancerSnatIps请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡唯一性Id，如lb-12345678
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡唯一性Id，如lb-12345678
  * @method array getSnatIps() 获取添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
  * @method void setSnatIps(array $SnatIps) 设置添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
- */
-
-/**
- *CreateLoadBalancerSnatIps请求参数结构体
  */
 class CreateLoadBalancerSnatIpsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateLoadBalancerSnatIpsRequest extends AbstractModel
      * @var array 添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
      */
     public $SnatIps;
+
     /**
      * @param string $LoadBalancerId 负载均衡唯一性Id，如lb-12345678
      * @param array $SnatIps 添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
@@ -46,6 +45,7 @@ class CreateLoadBalancerSnatIpsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

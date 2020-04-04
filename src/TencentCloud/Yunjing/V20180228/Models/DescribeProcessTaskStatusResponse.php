@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProcessTaskStatus返回参数结构体
+ *
  * @method string getStatus() 获取任务状态。
 <li>COMPLETE：完成（此时可以调用DescribeProcesses接口获取实时进程列表）</li>
 <li>AGENT_OFFLINE：云镜客户端离线</li>
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>FAILED：进程获取失败</li>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeProcessTaskStatus返回参数结构体
  */
 class DescribeProcessTaskStatusResponse extends AbstractModel
 {
@@ -50,6 +48,7 @@ class DescribeProcessTaskStatusResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Status 任务状态。
 <li>COMPLETE：完成（此时可以调用DescribeProcesses接口获取实时进程列表）</li>
@@ -62,6 +61,7 @@ class DescribeProcessTaskStatusResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

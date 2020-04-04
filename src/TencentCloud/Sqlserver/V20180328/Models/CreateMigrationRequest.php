@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateMigration请求参数结构体
+ *
  * @method string getMigrateName() 获取迁移任务的名称
  * @method void setMigrateName(string $MigrateName) 设置迁移任务的名称
  * @method integer getMigrateType() 获取迁移类型（1:结构迁移 2:数据迁移 3:增量同步）
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTarget(MigrateTarget $Target) 设置迁移目标
  * @method array getMigrateDBSet() 获取迁移DB对象 ，离线迁移不使用（SourceType=4或SourceType=5）。
  * @method void setMigrateDBSet(array $MigrateDBSet) 设置迁移DB对象 ，离线迁移不使用（SourceType=4或SourceType=5）。
- */
-
-/**
- *CreateMigration请求参数结构体
  */
 class CreateMigrationRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateMigrationRequest extends AbstractModel
      * @var array 迁移DB对象 ，离线迁移不使用（SourceType=4或SourceType=5）。
      */
     public $MigrateDBSet;
+
     /**
      * @param string $MigrateName 迁移任务的名称
      * @param integer $MigrateType 迁移类型（1:结构迁移 2:数据迁移 3:增量同步）
@@ -78,6 +77,7 @@ class CreateMigrationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDevicePartition返回参数结构体
+ *
  * @method DevicePartition getDevicePartition() 获取物理机分区格式
  * @method void setDevicePartition(DevicePartition $DevicePartition) 设置物理机分区格式
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDevicePartition返回参数结构体
  */
 class DescribeDevicePartitionResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDevicePartitionResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param DevicePartition $DevicePartition 物理机分区格式
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeDevicePartitionResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

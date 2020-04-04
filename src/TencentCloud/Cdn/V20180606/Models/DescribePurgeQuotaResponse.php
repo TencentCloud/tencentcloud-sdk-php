@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePurgeQuota返回参数结构体
+ *
  * @method array getUrlPurge() 获取Url刷新用量及配额。
  * @method void setUrlPurge(array $UrlPurge) 设置Url刷新用量及配额。
  * @method array getPathPurge() 获取目录刷新用量及配额。
  * @method void setPathPurge(array $PathPurge) 设置目录刷新用量及配额。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribePurgeQuota返回参数结构体
  */
 class DescribePurgeQuotaResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribePurgeQuotaResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $UrlPurge Url刷新用量及配额。
      * @param array $PathPurge 目录刷新用量及配额。
@@ -54,6 +53,7 @@ class DescribePurgeQuotaResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例参数的详细描述
+ *
  * @method string getName() 获取参数名称
  * @method void setName(string $Name) 设置参数名称
  * @method string getParamType() 获取参数类型
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMin(integer $Min) 设置参数允许的最小值
  * @method array getEnumValue() 获取参数的可选枚举值。如果为非枚举参数，则为空
  * @method void setEnumValue(array $EnumValue) 设置参数的可选枚举值。如果为非枚举参数，则为空
- */
-
-/**
- *实例参数的详细描述
  */
 class ParameterDetail extends AbstractModel
 {
@@ -87,6 +85,7 @@ class ParameterDetail extends AbstractModel
      * @var array 参数的可选枚举值。如果为非枚举参数，则为空
      */
     public $EnumValue;
+
     /**
      * @param string $Name 参数名称
      * @param string $ParamType 参数类型
@@ -102,6 +101,7 @@ class ParameterDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

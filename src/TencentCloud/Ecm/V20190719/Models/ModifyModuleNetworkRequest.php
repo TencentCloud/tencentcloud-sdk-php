@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyModuleNetwork请求参数结构体
+ *
  * @method string getModuleId() 获取模块Id
  * @method void setModuleId(string $ModuleId) 设置模块Id
  * @method integer getDefaultBandwidth() 获取默认带宽上限
  * @method void setDefaultBandwidth(integer $DefaultBandwidth) 设置默认带宽上限
- */
-
-/**
- *ModifyModuleNetwork请求参数结构体
  */
 class ModifyModuleNetworkRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyModuleNetworkRequest extends AbstractModel
      * @var integer 默认带宽上限
      */
     public $DefaultBandwidth;
+
     /**
      * @param string $ModuleId 模块Id
      * @param integer $DefaultBandwidth 默认带宽上限
@@ -46,6 +45,7 @@ class ModifyModuleNetworkRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

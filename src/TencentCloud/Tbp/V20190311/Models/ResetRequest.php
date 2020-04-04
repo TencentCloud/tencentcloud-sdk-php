@@ -18,6 +18,8 @@ namespace TencentCloud\Tbp\V20190311\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Reset请求参数结构体
+ *
  * @method string getBotId() 获取机器人标识
  * @method void setBotId(string $BotId) 设置机器人标识
  * @method string getUserId() 获取子账户id，每个终端对应一个
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBotVersion(string $BotVersion) 设置机器人版本号。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
  * @method string getBotEnv() 获取机器人环境{dev:测试;release:线上}。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
  * @method void setBotEnv(string $BotEnv) 设置机器人环境{dev:测试;release:线上}。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
- */
-
-/**
- *Reset请求参数结构体
  */
 class ResetRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ResetRequest extends AbstractModel
      * @var string 机器人环境{dev:测试;release:线上}。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
      */
     public $BotEnv;
+
     /**
      * @param string $BotId 机器人标识
      * @param string $UserId 子账户id，每个终端对应一个
@@ -62,6 +61,7 @@ class ResetRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

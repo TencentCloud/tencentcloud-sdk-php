@@ -18,14 +18,13 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDisasterRecoverGroupQuota请求参数结构体
+ *
 
- */
-
-/**
- *DescribeDisasterRecoverGroupQuota请求参数结构体
  */
 class DescribeDisasterRecoverGroupQuotaRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeDisasterRecoverGroupQuotaRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

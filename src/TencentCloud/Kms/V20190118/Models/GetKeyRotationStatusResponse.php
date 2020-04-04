@@ -18,14 +18,12 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetKeyRotationStatus返回参数结构体
+ *
  * @method boolean getKeyRotationEnabled() 获取密钥轮换是否开启
  * @method void setKeyRotationEnabled(boolean $KeyRotationEnabled) 设置密钥轮换是否开启
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetKeyRotationStatus返回参数结构体
  */
 class GetKeyRotationStatusResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GetKeyRotationStatusResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param boolean $KeyRotationEnabled 密钥轮换是否开启
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class GetKeyRotationStatusResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

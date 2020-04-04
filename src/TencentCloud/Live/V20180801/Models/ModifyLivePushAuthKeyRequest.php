@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLivePushAuthKey请求参数结构体
+ *
  * @method string getDomainName() 获取推流域名。
  * @method void setDomainName(string $DomainName) 设置推流域名。
  * @method integer getEnable() 获取是否启用，0：关闭，1：启用。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupAuthKey(string $BackupAuthKey) 设置备鉴权key。
  * @method integer getAuthDelta() 获取有效时间，单位：秒。
  * @method void setAuthDelta(integer $AuthDelta) 设置有效时间，单位：秒。
- */
-
-/**
- *ModifyLivePushAuthKey请求参数结构体
  */
 class ModifyLivePushAuthKeyRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyLivePushAuthKeyRequest extends AbstractModel
      * @var integer 有效时间，单位：秒。
      */
     public $AuthDelta;
+
     /**
      * @param string $DomainName 推流域名。
      * @param integer $Enable 是否启用，0：关闭，1：启用。
@@ -70,6 +69,7 @@ class ModifyLivePushAuthKeyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

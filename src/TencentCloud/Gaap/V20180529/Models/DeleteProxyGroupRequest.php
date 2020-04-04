@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteProxyGroup请求参数结构体
+ *
  * @method string getGroupId() 获取需要删除的通道组ID。
  * @method void setGroupId(string $GroupId) 设置需要删除的通道组ID。
- */
-
-/**
- *DeleteProxyGroup请求参数结构体
  */
 class DeleteProxyGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteProxyGroupRequest extends AbstractModel
      * @var string 需要删除的通道组ID。
      */
     public $GroupId;
+
     /**
      * @param string $GroupId 需要删除的通道组ID。
      */
@@ -38,6 +37,7 @@ class DeleteProxyGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 访问协议强制跳转配置，默认为关闭状态
+ *
  * @method string getSwitch() 获取访问强制跳转配置开关
 on：开启
 off：关闭
@@ -40,10 +42,6 @@ https：强制 https 跳转
  * @method void setRedirectStatusCode(integer $RedirectStatusCode) 设置强制跳转时返回状态码 
 支持 301、302
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *访问协议强制跳转配置，默认为关闭状态
  */
 class ForceRedirect extends AbstractModel
 {
@@ -69,6 +67,7 @@ https：强制 https 跳转
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RedirectStatusCode;
+
     /**
      * @param string $Switch 访问强制跳转配置开关
 on：开启
@@ -86,6 +85,7 @@ https：强制 https 跳转
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

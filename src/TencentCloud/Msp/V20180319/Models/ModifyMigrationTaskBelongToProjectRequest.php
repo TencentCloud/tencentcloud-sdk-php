@@ -18,14 +18,12 @@ namespace TencentCloud\Msp\V20180319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyMigrationTaskBelongToProject请求参数结构体
+ *
  * @method string getTaskId() 获取任务ID，例如msp-jitoh33n
  * @method void setTaskId(string $TaskId) 设置任务ID，例如msp-jitoh33n
  * @method integer getProjectId() 获取项目ID，例如10005
  * @method void setProjectId(integer $ProjectId) 设置项目ID，例如10005
- */
-
-/**
- *ModifyMigrationTaskBelongToProject请求参数结构体
  */
 class ModifyMigrationTaskBelongToProjectRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyMigrationTaskBelongToProjectRequest extends AbstractModel
      * @var integer 项目ID，例如10005
      */
     public $ProjectId;
+
     /**
      * @param string $TaskId 任务ID，例如msp-jitoh33n
      * @param integer $ProjectId 项目ID，例如10005
@@ -46,6 +45,7 @@ class ModifyMigrationTaskBelongToProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

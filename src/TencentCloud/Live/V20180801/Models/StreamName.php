@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 流名称列表
+ *
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method string getAppName() 获取应用名称。
@@ -44,10 +46,6 @@ UTC格式时间，
  * @method void setClientIp(string $ClientIp) 设置主播IP。
  * @method string getResolution() 获取分辨率。
  * @method void setResolution(string $Resolution) 设置分辨率。
- */
-
-/**
- *流名称列表
  */
 class StreamName extends AbstractModel
 {
@@ -99,6 +97,7 @@ UTC格式时间，
      * @var string 分辨率。
      */
     public $Resolution;
+
     /**
      * @param string $StreamName 流名称。
      * @param string $AppName 应用名称。
@@ -118,6 +117,7 @@ UTC格式时间，
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

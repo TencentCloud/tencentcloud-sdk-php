@@ -18,6 +18,8 @@ namespace TencentCloud\Facefusion\V20181201\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人脸融合鉴黄鉴政人脸信息
+ *
  * @method string getField() 获取保留字段
  * @method void setField(string $Field) 设置保留字段
  * @method string getLabel() 获取人员名称
@@ -38,10 +40,6 @@ BLOCK：违规
 PASS：正常 
 REVIEW：疑似  
 BLOCK：违规
- */
-
-/**
- *人脸融合鉴黄鉴政人脸信息
  */
 class FuseFaceReviewDetail extends AbstractModel
 {
@@ -70,6 +68,7 @@ REVIEW：疑似
 BLOCK：违规
      */
     public $Suggestion;
+
     /**
      * @param string $Field 保留字段
      * @param string $Label 人员名称
@@ -86,6 +85,7 @@ BLOCK：违规
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

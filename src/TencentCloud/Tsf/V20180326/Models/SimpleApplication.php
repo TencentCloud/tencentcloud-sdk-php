@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 简单应用
+ *
  * @method string getApplicationId() 获取应用ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(string $ApplicationId) 设置应用ID
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationRuntimeType(string $ApplicationRuntimeType) 设置ApplicationRuntimeType
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *简单应用
  */
 class SimpleApplication extends AbstractModel
 {
@@ -134,6 +132,7 @@ class SimpleApplication extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationRuntimeType;
+
     /**
      * @param string $ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -162,6 +161,7 @@ class SimpleApplication extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

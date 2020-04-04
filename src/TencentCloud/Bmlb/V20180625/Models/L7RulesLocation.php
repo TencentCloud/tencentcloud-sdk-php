@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取七层转发规则时返回的转发域名下面的转发路径。
+ *
  * @method string getUrl() 获取转发路径。
  * @method void setUrl(string $Url) 设置转发路径。
  * @method string getLocationId() 获取转发路径实例ID。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
  * @method string getAddTimestamp() 获取创建时间戳。
  * @method void setAddTimestamp(string $AddTimestamp) 设置创建时间戳。
- */
-
-/**
- *获取七层转发规则时返回的转发域名下面的转发路径。
  */
 class L7RulesLocation extends AbstractModel
 {
@@ -115,6 +113,7 @@ class L7RulesLocation extends AbstractModel
      * @var string 创建时间戳。
      */
     public $AddTimestamp;
+
     /**
      * @param string $Url 转发路径。
      * @param string $LocationId 转发路径实例ID。
@@ -134,6 +133,7 @@ class L7RulesLocation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

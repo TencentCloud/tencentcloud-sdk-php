@@ -18,16 +18,14 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 轮船票字段信息
+ *
  * @method string getName() 获取识别出的字段名称（关键字）。
  * @method void setName(string $Name) 设置识别出的字段名称（关键字）。
  * @method string getValue() 获取识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
  * @method void setValue(string $Value) 设置识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
  * @method Rect getRect() 获取文本行在旋转纠正之后的图像中的像素坐标。
  * @method void setRect(Rect $Rect) 设置文本行在旋转纠正之后的图像中的像素坐标。
- */
-
-/**
- *轮船票字段信息
  */
 class ShipInvoiceInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ShipInvoiceInfo extends AbstractModel
      * @var Rect 文本行在旋转纠正之后的图像中的像素坐标。
      */
     public $Rect;
+
     /**
      * @param string $Name 识别出的字段名称（关键字）。
      * @param string $Value 识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
@@ -54,6 +53,7 @@ class ShipInvoiceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DestroyProxies返回参数结构体
+ *
  * @method array getInvalidStatusInstanceSet() 获取处于不可销毁状态下的通道实例ID列表。
  * @method void setInvalidStatusInstanceSet(array $InvalidStatusInstanceSet) 设置处于不可销毁状态下的通道实例ID列表。
  * @method array getOperationFailedInstanceSet() 获取销毁操作失败的通道实例ID列表。
  * @method void setOperationFailedInstanceSet(array $OperationFailedInstanceSet) 设置销毁操作失败的通道实例ID列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DestroyProxies返回参数结构体
  */
 class DestroyProxiesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DestroyProxiesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $InvalidStatusInstanceSet 处于不可销毁状态下的通道实例ID列表。
      * @param array $OperationFailedInstanceSet 销毁操作失败的通道实例ID列表。
@@ -54,6 +53,7 @@ class DestroyProxiesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

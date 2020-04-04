@@ -18,12 +18,10 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteProject请求参数结构体
+ *
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
- */
-
-/**
- *DeleteProject请求参数结构体
  */
 class DeleteProjectRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteProjectRequest extends AbstractModel
      * @var string 项目ID
      */
     public $ProjectId;
+
     /**
      * @param string $ProjectId 项目ID
      */
@@ -38,6 +37,7 @@ class DeleteProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

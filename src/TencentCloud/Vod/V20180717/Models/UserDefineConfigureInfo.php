@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户自定义审核任务控制参数
+ *
  * @method UserDefineFaceReviewTemplateInfo getFaceReviewInfo() 获取用户自定义人物审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo $FaceReviewInfo) 设置用户自定义人物审核控制参数。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo) 设置用户自定义文本审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *用户自定义审核任务控制参数
  */
 class UserDefineConfigureInfo extends AbstractModel
 {
@@ -54,6 +52,7 @@ class UserDefineConfigureInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrReviewInfo;
+
     /**
      * @param UserDefineFaceReviewTemplateInfo $FaceReviewInfo 用户自定义人物审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class UserDefineConfigureInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

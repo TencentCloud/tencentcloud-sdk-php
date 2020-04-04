@@ -18,14 +18,12 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 离线语音服务配置数据
+ *
  * @method string getStatus() 获取离线语音服务开关，取值：open/close
  * @method void setStatus(string $Status) 设置离线语音服务开关，取值：open/close
  * @method string getLanguage() 获取离线语音支持语种，取值： all-全部，cnen-中英文。默认为中英文
  * @method void setLanguage(string $Language) 设置离线语音支持语种，取值： all-全部，cnen-中英文。默认为中英文
- */
-
-/**
- *离线语音服务配置数据
  */
 class VoiceMessageConf extends AbstractModel
 {
@@ -38,6 +36,7 @@ class VoiceMessageConf extends AbstractModel
      * @var string 离线语音支持语种，取值： all-全部，cnen-中英文。默认为中英文
      */
     public $Language;
+
     /**
      * @param string $Status 离线语音服务开关，取值：open/close
      * @param string $Language 离线语音支持语种，取值： all-全部，cnen-中英文。默认为中英文
@@ -46,6 +45,7 @@ class VoiceMessageConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

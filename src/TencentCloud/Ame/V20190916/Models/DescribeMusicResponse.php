@@ -18,16 +18,14 @@ namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMusic返回参数结构体
+ *
  * @method Music getMusic() 获取音乐相关信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMusic(Music $Music) 设置音乐相关信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeMusic返回参数结构体
  */
 class DescribeMusicResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class DescribeMusicResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param Music $Music 音乐相关信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class DescribeMusicResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

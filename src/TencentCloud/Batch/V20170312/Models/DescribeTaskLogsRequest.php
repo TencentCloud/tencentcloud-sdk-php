@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskLogs请求参数结构体
+ *
  * @method string getJobId() 获取作业ID
  * @method void setJobId(string $JobId) 设置作业ID
  * @method string getTaskName() 获取任务名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置起始任务实例
  * @method integer getLimit() 获取最大任务实例数
  * @method void setLimit(integer $Limit) 设置最大任务实例数
- */
-
-/**
- *DescribeTaskLogs请求参数结构体
  */
 class DescribeTaskLogsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeTaskLogsRequest extends AbstractModel
      * @var integer 最大任务实例数
      */
     public $Limit;
+
     /**
      * @param string $JobId 作业ID
      * @param string $TaskName 任务名称
@@ -70,6 +69,7 @@ class DescribeTaskLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

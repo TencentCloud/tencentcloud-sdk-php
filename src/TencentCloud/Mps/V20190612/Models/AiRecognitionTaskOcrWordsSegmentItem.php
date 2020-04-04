@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文本识别片段。
+ *
  * @method float getStartTimeOffset() 获取识别片段起始的偏移时间，单位：秒。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置识别片段起始的偏移时间，单位：秒。
  * @method float getEndTimeOffset() 获取识别片段终止的偏移时间，单位：秒。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfidence(float $Confidence) 设置识别片段置信度。取值：0~100。
  * @method array getAreaCoordSet() 获取识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
  * @method void setAreaCoordSet(array $AreaCoordSet) 设置识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
- */
-
-/**
- *文本识别片段。
  */
 class AiRecognitionTaskOcrWordsSegmentItem extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AiRecognitionTaskOcrWordsSegmentItem extends AbstractModel
      * @var array 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
      */
     public $AreaCoordSet;
+
     /**
      * @param float $StartTimeOffset 识别片段起始的偏移时间，单位：秒。
      * @param float $EndTimeOffset 识别片段终止的偏移时间，单位：秒。
@@ -62,6 +61,7 @@ class AiRecognitionTaskOcrWordsSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

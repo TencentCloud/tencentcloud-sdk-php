@@ -18,12 +18,10 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSyncJob请求参数结构体
+ *
  * @method string getJobId() 获取待删除的灾备同步任务ID
  * @method void setJobId(string $JobId) 设置待删除的灾备同步任务ID
- */
-
-/**
- *DeleteSyncJob请求参数结构体
  */
 class DeleteSyncJobRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteSyncJobRequest extends AbstractModel
      * @var string 待删除的灾备同步任务ID
      */
     public $JobId;
+
     /**
      * @param string $JobId 待删除的灾备同步任务ID
      */
@@ -38,6 +37,7 @@ class DeleteSyncJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

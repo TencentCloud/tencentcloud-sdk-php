@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPN通道对象。
+ *
  * @method string getVpnConnectionId() 获取通道实例ID。
  * @method void setVpnConnectionId(string $VpnConnectionId) 设置通道实例ID。
  * @method string getVpnConnectionName() 获取通道名称。
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceCidr(array $SourceCidr) 设置IPSEC VPN通道路由策略源端地址
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *VPN通道对象。
  */
 class VpnConnection extends AbstractModel
 {
@@ -170,6 +168,7 @@ class VpnConnection extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceCidr;
+
     /**
      * @param string $VpnConnectionId 通道实例ID。
      * @param string $VpnConnectionName 通道名称。
@@ -198,6 +197,7 @@ class VpnConnection extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

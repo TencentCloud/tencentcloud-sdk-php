@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateL7Listeners请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID
  * @method array getListenerSet() 获取七层监听器信息数组，可以创建多个七层监听器。目前一个负载均衡下面最多允许创建50个七层监听器。
  * @method void setListenerSet(array $ListenerSet) 设置七层监听器信息数组，可以创建多个七层监听器。目前一个负载均衡下面最多允许创建50个七层监听器。
- */
-
-/**
- *CreateL7Listeners请求参数结构体
  */
 class CreateL7ListenersRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateL7ListenersRequest extends AbstractModel
      * @var array 七层监听器信息数组，可以创建多个七层监听器。目前一个负载均衡下面最多允许创建50个七层监听器。
      */
     public $ListenerSet;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例ID
      * @param array $ListenerSet 七层监听器信息数组，可以创建多个七层监听器。目前一个负载均衡下面最多允许创建50个七层监听器。
@@ -46,6 +45,7 @@ class CreateL7ListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCCEvList请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
  * @method string getStartTime() 获取开始时间
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置一页条数，填0表示不分页
  * @method integer getOffset() 获取页起始偏移，取值为(页码-1)*一页条数
  * @method void setOffset(integer $Offset) 设置页起始偏移，取值为(页码-1)*一页条数
- */
-
-/**
- *DescribeCCEvList请求参数结构体
  */
 class DescribeCCEvListRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeCCEvListRequest extends AbstractModel
      * @var integer 页起始偏移，取值为(页码-1)*一页条数
      */
     public $Offset;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      * @param string $StartTime 开始时间
@@ -86,6 +85,7 @@ class DescribeCCEvListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePkgs请求参数结构体
+ *
  * @method string getApplicationId() 获取应用ID（只传入应用ID，返回该应用下所有软件包信息）
  * @method void setApplicationId(string $ApplicationId) 设置应用ID（只传入应用ID，返回该应用下所有软件包信息）
  * @method string getSearchWord() 获取查询关键字（支持根据包ID，包名，包版本号搜索）
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询起始偏移
  * @method integer getLimit() 获取返回数量限制
  * @method void setLimit(integer $Limit) 设置返回数量限制
- */
-
-/**
- *DescribePkgs请求参数结构体
  */
 class DescribePkgsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribePkgsRequest extends AbstractModel
      * @var integer 返回数量限制
      */
     public $Limit;
+
     /**
      * @param string $ApplicationId 应用ID（只传入应用ID，返回该应用下所有软件包信息）
      * @param string $SearchWord 查询关键字（支持根据包ID，包名，包版本号搜索）
@@ -78,6 +77,7 @@ class DescribePkgsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

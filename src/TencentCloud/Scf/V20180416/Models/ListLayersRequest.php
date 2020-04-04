@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListLayers请求参数结构体
+ *
  * @method string getCompatibleRuntime() 获取适配的运行时
  * @method void setCompatibleRuntime(string $CompatibleRuntime) 设置适配的运行时
  * @method integer getOffset() 获取Offset
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置Limit
  * @method string getSearchKey() 获取查询key，模糊匹配名称
  * @method void setSearchKey(string $SearchKey) 设置查询key，模糊匹配名称
- */
-
-/**
- *ListLayers请求参数结构体
  */
 class ListLayersRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ListLayersRequest extends AbstractModel
      * @var string 查询key，模糊匹配名称
      */
     public $SearchKey;
+
     /**
      * @param string $CompatibleRuntime 适配的运行时
      * @param integer $Offset Offset
@@ -62,6 +61,7 @@ class ListLayersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

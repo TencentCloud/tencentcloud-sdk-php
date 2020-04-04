@@ -18,14 +18,13 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDCDBSaleInfo请求参数结构体
+ *
 
- */
-
-/**
- *DescribeDCDBSaleInfo请求参数结构体
  */
 class DescribeDCDBSaleInfoRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeDCDBSaleInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

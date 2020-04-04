@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 账号详细信息
+ *
  * @method string getNotes() 获取账号备注信息
  * @method void setNotes(string $Notes) 设置账号备注信息
  * @method string getHost() 获取账号的域名
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyPasswordTime(string $ModifyPasswordTime) 设置修改密码的时间
  * @method string getCreateTime() 获取账号的创建时间
  * @method void setCreateTime(string $CreateTime) 设置账号的创建时间
- */
-
-/**
- *账号详细信息
  */
 class AccountInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class AccountInfo extends AbstractModel
      * @var string 账号的创建时间
      */
     public $CreateTime;
+
     /**
      * @param string $Notes 账号备注信息
      * @param string $Host 账号的域名
@@ -78,6 +77,7 @@ class AccountInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

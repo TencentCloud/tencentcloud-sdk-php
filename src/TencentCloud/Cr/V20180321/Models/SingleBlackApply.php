@@ -18,6 +18,8 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 黑名单申请信息
+ *
  * @method string getBlackType() 获取黑名单类型，01代表手机号码。
  * @method void setBlackType(string $BlackType) 设置黑名单类型，01代表手机号码。
  * @method string getOperationType() 获取操作类型，A为新增，D为删除。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlackDescription(string $BlackDescription) 设置备注。
  * @method string getBlackValidDate() 获取黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
  * @method void setBlackValidDate(string $BlackValidDate) 设置黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
- */
-
-/**
- *黑名单申请信息
  */
 class SingleBlackApply extends AbstractModel
 {
@@ -59,6 +57,7 @@ class SingleBlackApply extends AbstractModel
      * @var string 黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
      */
     public $BlackValidDate;
+
     /**
      * @param string $BlackType 黑名单类型，01代表手机号码。
      * @param string $OperationType 操作类型，A为新增，D为删除。
@@ -70,6 +69,7 @@ class SingleBlackApply extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

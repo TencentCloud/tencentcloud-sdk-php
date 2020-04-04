@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRsgAsGroupActivities请求参数结构体
+ *
  * @method string getId() 获取伸缩组 ID
  * @method void setId(string $Id) 设置伸缩组 ID
  * @method string getStartTime() 获取查询活动的开始时间
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) 设置输出列表的排列顺序。取值范围："ASC", "DESC"
  * @method string getOrderField() 获取排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
  * @method void setOrderField(string $OrderField) 设置排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
- */
-
-/**
- *DescribeRsgAsGroupActivities请求参数结构体
  */
 class DescribeRsgAsGroupActivitiesRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeRsgAsGroupActivitiesRequest extends AbstractModel
      * @var string 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
      */
     public $OrderField;
+
     /**
      * @param string $Id 伸缩组 ID
      * @param string $StartTime 查询活动的开始时间
@@ -94,6 +93,7 @@ class DescribeRsgAsGroupActivitiesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyCcnRegionBandwidthLimitsType请求参数结构体
+ *
  * @method string getCcnId() 获取云联网实例ID。
  * @method void setCcnId(string $CcnId) 设置云联网实例ID。
  * @method string getBandwidthLimitType() 获取云联网限速类型，INTER_REGION_LIMIT：地域间限速，OUTER_REGION_LIMIT：地域出口限速。
  * @method void setBandwidthLimitType(string $BandwidthLimitType) 设置云联网限速类型，INTER_REGION_LIMIT：地域间限速，OUTER_REGION_LIMIT：地域出口限速。
- */
-
-/**
- *ModifyCcnRegionBandwidthLimitsType请求参数结构体
  */
 class ModifyCcnRegionBandwidthLimitsTypeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyCcnRegionBandwidthLimitsTypeRequest extends AbstractModel
      * @var string 云联网限速类型，INTER_REGION_LIMIT：地域间限速，OUTER_REGION_LIMIT：地域出口限速。
      */
     public $BandwidthLimitType;
+
     /**
      * @param string $CcnId 云联网实例ID。
      * @param string $BandwidthLimitType 云联网限速类型，INTER_REGION_LIMIT：地域间限速，OUTER_REGION_LIMIT：地域出口限速。
@@ -46,6 +45,7 @@ class ModifyCcnRegionBandwidthLimitsTypeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

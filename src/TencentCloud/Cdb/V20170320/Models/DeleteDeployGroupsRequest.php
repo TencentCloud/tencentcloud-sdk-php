@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteDeployGroups请求参数结构体
+ *
  * @method array getDeployGroupIds() 获取要删除的置放群组 ID 列表。
  * @method void setDeployGroupIds(array $DeployGroupIds) 设置要删除的置放群组 ID 列表。
- */
-
-/**
- *DeleteDeployGroups请求参数结构体
  */
 class DeleteDeployGroupsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteDeployGroupsRequest extends AbstractModel
      * @var array 要删除的置放群组 ID 列表。
      */
     public $DeployGroupIds;
+
     /**
      * @param array $DeployGroupIds 要删除的置放群组 ID 列表。
      */
@@ -38,6 +37,7 @@ class DeleteDeployGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

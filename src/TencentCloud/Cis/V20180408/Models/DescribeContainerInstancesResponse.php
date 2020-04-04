@@ -18,16 +18,14 @@ namespace TencentCloud\Cis\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeContainerInstances返回参数结构体
+ *
  * @method array getContainerInstanceList() 获取容器实例列表
  * @method void setContainerInstanceList(array $ContainerInstanceList) 设置容器实例列表
  * @method integer getTotalCount() 获取容器实例总数
  * @method void setTotalCount(integer $TotalCount) 设置容器实例总数
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- */
-
-/**
- *DescribeContainerInstances返回参数结构体
  */
 class DescribeContainerInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeContainerInstancesResponse extends AbstractModel
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $ContainerInstanceList 容器实例列表
      * @param integer $TotalCount 容器实例总数
@@ -54,6 +53,7 @@ class DescribeContainerInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

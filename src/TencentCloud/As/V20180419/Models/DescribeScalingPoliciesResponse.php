@@ -18,16 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeScalingPolicies返回参数结构体
+ *
  * @method array getScalingPolicySet() 获取弹性伸缩告警触发策略详细信息列表。
  * @method void setScalingPolicySet(array $ScalingPolicySet) 设置弹性伸缩告警触发策略详细信息列表。
  * @method integer getTotalCount() 获取符合条件的通知数量。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的通知数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeScalingPolicies返回参数结构体
  */
 class DescribeScalingPoliciesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeScalingPoliciesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $ScalingPolicySet 弹性伸缩告警触发策略详细信息列表。
      * @param integer $TotalCount 符合条件的通知数量。
@@ -54,6 +53,7 @@ class DescribeScalingPoliciesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Yunsou\V20191115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SearchResultSeg
+ *
  * @method string getSegStr() 获取分词
  * @method void setSegStr(string $SegStr) 设置分词
- */
-
-/**
- *SearchResultSeg
  */
 class SearchResultSeg extends AbstractModel
 {
@@ -31,6 +29,7 @@ class SearchResultSeg extends AbstractModel
      * @var string 分词
      */
     public $SegStr;
+
     /**
      * @param string $SegStr 分词
      */
@@ -38,6 +37,7 @@ class SearchResultSeg extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 成功运行的自定义脚本信息
+ *
  * @method string getInstanceId() 获取运行脚本的设备ID
  * @method void setInstanceId(string $InstanceId) 设置运行脚本的设备ID
  * @method integer getTaskId() 获取黑石异步任务ID
  * @method void setTaskId(integer $TaskId) 设置黑石异步任务ID
  * @method string getCmdTaskId() 获取黑石自定义脚本运行任务ID
  * @method void setCmdTaskId(string $CmdTaskId) 设置黑石自定义脚本运行任务ID
- */
-
-/**
- *成功运行的自定义脚本信息
  */
 class SuccessTaskInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SuccessTaskInfo extends AbstractModel
      * @var string 黑石自定义脚本运行任务ID
      */
     public $CmdTaskId;
+
     /**
      * @param string $InstanceId 运行脚本的设备ID
      * @param integer $TaskId 黑石异步任务ID
@@ -54,6 +53,7 @@ class SuccessTaskInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

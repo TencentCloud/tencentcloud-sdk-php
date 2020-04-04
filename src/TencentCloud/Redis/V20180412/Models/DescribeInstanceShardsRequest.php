@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceShards请求参数结构体
+ *
  * @method string getInstanceId() 获取实例id
  * @method void setInstanceId(string $InstanceId) 设置实例id
  * @method boolean getFilterSlave() 获取是否过滤掉从节信息
  * @method void setFilterSlave(boolean $FilterSlave) 设置是否过滤掉从节信息
- */
-
-/**
- *DescribeInstanceShards请求参数结构体
  */
 class DescribeInstanceShardsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeInstanceShardsRequest extends AbstractModel
      * @var boolean 是否过滤掉从节信息
      */
     public $FilterSlave;
+
     /**
      * @param string $InstanceId 实例id
      * @param boolean $FilterSlave 是否过滤掉从节信息
@@ -46,6 +45,7 @@ class DescribeInstanceShardsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

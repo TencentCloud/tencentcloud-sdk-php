@@ -18,14 +18,12 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HTTP域名相关信息
+ *
  * @method string getHost() 获取域名
  * @method void setHost(string $Host) 设置域名
  * @method string getVip() 获取VIP
  * @method void setVip(string $Vip) 设置VIP
- */
-
-/**
- *HTTP域名相关信息
  */
 class AccessInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AccessInfo extends AbstractModel
      * @var string VIP
      */
     public $Vip;
+
     /**
      * @param string $Host 域名
      * @param string $Vip VIP
@@ -46,6 +45,7 @@ class AccessInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

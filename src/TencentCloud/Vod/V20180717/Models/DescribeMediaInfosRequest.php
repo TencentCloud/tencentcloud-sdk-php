@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMediaInfos请求参数结构体
+ *
  * @method array getFileIds() 获取媒体文件 ID 列表，N 从 0 开始取值，最大 19。
  * @method void setFileIds(array $FileIds) 设置媒体文件 ID 列表，N 从 0 开始取值，最大 19。
  * @method array getFilters() 获取指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
@@ -45,10 +47,6 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
-
-/**
- *DescribeMediaInfos请求参数结构体
- */
 class DescribeMediaInfosRequest extends AbstractModel
 {
     /**
@@ -75,6 +73,7 @@ class DescribeMediaInfosRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param array $FileIds 媒体文件 ID 列表，N 从 0 开始取值，最大 19。
      * @param array $Filters 指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
@@ -94,6 +93,7 @@ class DescribeMediaInfosRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

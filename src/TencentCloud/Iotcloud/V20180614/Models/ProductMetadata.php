@@ -18,12 +18,10 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 产品元数据
+ *
  * @method integer getCreationDate() 获取产品创建时间
  * @method void setCreationDate(integer $CreationDate) 设置产品创建时间
- */
-
-/**
- *产品元数据
  */
 class ProductMetadata extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ProductMetadata extends AbstractModel
      * @var integer 产品创建时间
      */
     public $CreationDate;
+
     /**
      * @param integer $CreationDate 产品创建时间
      */
@@ -38,6 +37,7 @@ class ProductMetadata extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

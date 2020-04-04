@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RegisterCallback请求参数结构体
+ *
  * @method string getCompanyId() 获取集团id，通过"指定身份标识获取客户门店列表"接口获取
  * @method void setCompanyId(string $CompanyId) 设置集团id，通过"指定身份标识获取客户门店列表"接口获取
  * @method string getBackUrl() 获取通知回调地址，完整url，示例（http://youmall.tencentcloudapi.com/）
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTime(integer $Time) 设置请求时间戳
  * @method integer getNeedFacePic() 获取是否需要顾客图片，1-需要图片，其它-不需要图片
  * @method void setNeedFacePic(integer $NeedFacePic) 设置是否需要顾客图片，1-需要图片，其它-不需要图片
- */
-
-/**
- *RegisterCallback请求参数结构体
  */
 class RegisterCallbackRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RegisterCallbackRequest extends AbstractModel
      * @var integer 是否需要顾客图片，1-需要图片，其它-不需要图片
      */
     public $NeedFacePic;
+
     /**
      * @param string $CompanyId 集团id，通过"指定身份标识获取客户门店列表"接口获取
      * @param string $BackUrl 通知回调地址，完整url，示例（http://youmall.tencentcloudapi.com/）
@@ -62,6 +61,7 @@ class RegisterCallbackRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

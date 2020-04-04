@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeComponents请求参数结构体
+ *
  * @method string getUuid() 获取云镜客户端唯一Uuid。Uuid和ComponentId必填其一，使用Uuid表示，查询该主机列表信息。
  * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid。Uuid和ComponentId必填其一，使用Uuid表示，查询该主机列表信息。
  * @method integer getComponentId() 获取组件ID。Uuid和ComponentId必填其一，使用ComponentId表示，查询该组件列表信息。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>ComponentVersion - String - 是否必填：否 - 组件版本号</li>
 <li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
- */
-
-/**
- *DescribeComponents请求参数结构体
  */
 class DescribeComponentsRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ class DescribeComponentsRequest extends AbstractModel
 <li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
      */
     public $Filters;
+
     /**
      * @param string $Uuid 云镜客户端唯一Uuid。Uuid和ComponentId必填其一，使用Uuid表示，查询该主机列表信息。
      * @param integer $ComponentId 组件ID。Uuid和ComponentId必填其一，使用ComponentId表示，查询该组件列表信息。
@@ -78,6 +77,7 @@ class DescribeComponentsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

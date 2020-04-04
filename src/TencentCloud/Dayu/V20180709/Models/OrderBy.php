@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 排序字段
+ *
  * @method string getField() 获取排序字段名称，取值[
 bandwidth（带宽），
 overloadCount（超峰值次数）
@@ -28,10 +30,6 @@ overloadCount（超峰值次数）
 ]
  * @method string getOrder() 获取升降序，取值为[asc（升序），（升序），desc（降序）， DESC（降序）]
  * @method void setOrder(string $Order) 设置升降序，取值为[asc（升序），（升序），desc（降序）， DESC（降序）]
- */
-
-/**
- *排序字段
  */
 class OrderBy extends AbstractModel
 {
@@ -47,6 +45,7 @@ overloadCount（超峰值次数）
      * @var string 升降序，取值为[asc（升序），（升序），desc（降序）， DESC（降序）]
      */
     public $Order;
+
     /**
      * @param string $Field 排序字段名称，取值[
 bandwidth（带宽），
@@ -58,6 +57,7 @@ overloadCount（超峰值次数）
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

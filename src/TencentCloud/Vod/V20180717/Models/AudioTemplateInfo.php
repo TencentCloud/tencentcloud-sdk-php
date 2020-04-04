@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 音频流配置参数
+ *
  * @method string getCodec() 获取音频流的编码格式。
 当外层参数 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
@@ -75,10 +77,6 @@ use TencentCloud\Common\AbstractModel;
 <li>6：立体声</li>
 默认值：2。
  */
-
-/**
- *音频流配置参数
- */
 class AudioTemplateInfo extends AbstractModel
 {
     /**
@@ -124,6 +122,7 @@ class AudioTemplateInfo extends AbstractModel
 默认值：2。
      */
     public $AudioChannel;
+
     /**
      * @param string $Codec 音频流的编码格式。
 当外层参数 Container 为 mp3 时，可选值为：
@@ -158,6 +157,7 @@ class AudioTemplateInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

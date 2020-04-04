@@ -18,12 +18,10 @@ namespace TencentCloud\Tmt\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图片翻译结果
+ *
  * @method array getValue() 获取图片翻译结果
  * @method void setValue(array $Value) 设置图片翻译结果
- */
-
-/**
- *图片翻译结果
  */
 class ImageRecord extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ImageRecord extends AbstractModel
      * @var array 图片翻译结果
      */
     public $Value;
+
     /**
      * @param array $Value 图片翻译结果
      */
@@ -38,6 +37,7 @@ class ImageRecord extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

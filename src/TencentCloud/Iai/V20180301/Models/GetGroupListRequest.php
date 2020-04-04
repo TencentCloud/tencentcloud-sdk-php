@@ -18,14 +18,12 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetGroupList请求参数结构体
+ *
  * @method integer getOffset() 获取起始序号，默认值为0
  * @method void setOffset(integer $Offset) 设置起始序号，默认值为0
  * @method integer getLimit() 获取返回数量，默认值为10，最大值为1000
  * @method void setLimit(integer $Limit) 设置返回数量，默认值为10，最大值为1000
- */
-
-/**
- *GetGroupList请求参数结构体
  */
 class GetGroupListRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GetGroupListRequest extends AbstractModel
      * @var integer 返回数量，默认值为10，最大值为1000
      */
     public $Limit;
+
     /**
      * @param integer $Offset 起始序号，默认值为0
      * @param integer $Limit 返回数量，默认值为10，最大值为1000
@@ -46,6 +45,7 @@ class GetGroupListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

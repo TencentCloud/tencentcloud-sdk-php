@@ -18,16 +18,14 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateUsrToken请求参数结构体
+ *
  * @method string getAccessId() 获取终端用户在IoT Video上的唯一标识ID
  * @method void setAccessId(string $AccessId) 设置终端用户在IoT Video上的唯一标识ID
  * @method string getUniqueId() 获取终端唯一ID，用于区分同一个用户的多个终端
  * @method void setUniqueId(string $UniqueId) 设置终端唯一ID，用于区分同一个用户的多个终端
  * @method integer getTtlMinutes() 获取Token的TTL(time to alive)分钟数
  * @method void setTtlMinutes(integer $TtlMinutes) 设置Token的TTL(time to alive)分钟数
- */
-
-/**
- *CreateUsrToken请求参数结构体
  */
 class CreateUsrTokenRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateUsrTokenRequest extends AbstractModel
      * @var integer Token的TTL(time to alive)分钟数
      */
     public $TtlMinutes;
+
     /**
      * @param string $AccessId 终端用户在IoT Video上的唯一标识ID
      * @param string $UniqueId 终端唯一ID，用于区分同一个用户的多个终端
@@ -54,6 +53,7 @@ class CreateUsrTokenRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

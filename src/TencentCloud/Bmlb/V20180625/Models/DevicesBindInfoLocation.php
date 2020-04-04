@@ -18,16 +18,14 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取设备绑定信息时返回的设备所绑定的转发路径信息。
+ *
  * @method string getUrl() 获取转发路径。
  * @method void setUrl(string $Url) 设置转发路径。
  * @method string getLocationId() 获取转发路径实例ID。
  * @method void setLocationId(string $LocationId) 设置转发路径实例ID。
  * @method array getBackendSet() 获取该转发路径所绑定的主机列表。
  * @method void setBackendSet(array $BackendSet) 设置该转发路径所绑定的主机列表。
- */
-
-/**
- *获取设备绑定信息时返回的设备所绑定的转发路径信息。
  */
 class DevicesBindInfoLocation extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DevicesBindInfoLocation extends AbstractModel
      * @var array 该转发路径所绑定的主机列表。
      */
     public $BackendSet;
+
     /**
      * @param string $Url 转发路径。
      * @param string $LocationId 转发路径实例ID。
@@ -54,6 +53,7 @@ class DevicesBindInfoLocation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

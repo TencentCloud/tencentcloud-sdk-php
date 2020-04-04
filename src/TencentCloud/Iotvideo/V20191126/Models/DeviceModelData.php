@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备物模型数据
+ *
  * @method string getTid() 获取设备TID
  * @method void setTid(string $Tid) 设置设备TID
  * @method string getBranch() 获取物模型分支路径
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIotModel(string $IotModel) 设置物模型数据
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *设备物模型数据
  */
 class DeviceModelData extends AbstractModel
 {
@@ -51,6 +49,7 @@ class DeviceModelData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IotModel;
+
     /**
      * @param string $Tid 设备TID
      * @param string $Branch 物模型分支路径
@@ -62,6 +61,7 @@ class DeviceModelData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyVpcAttribute请求参数结构体
+ *
  * @method string getVpcId() 获取私有网络ID
  * @method void setVpcId(string $VpcId) 设置私有网络ID
  * @method string getVpcName() 获取私有网络名称
  * @method void setVpcName(string $VpcName) 设置私有网络名称
  * @method boolean getEnableMonitor() 获取是否开启内网监控，0为关闭，1为开启
  * @method void setEnableMonitor(boolean $EnableMonitor) 设置是否开启内网监控，0为关闭，1为开启
- */
-
-/**
- *ModifyVpcAttribute请求参数结构体
  */
 class ModifyVpcAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyVpcAttributeRequest extends AbstractModel
      * @var boolean 是否开启内网监控，0为关闭，1为开启
      */
     public $EnableMonitor;
+
     /**
      * @param string $VpcId 私有网络ID
      * @param string $VpcName 私有网络名称
@@ -54,6 +53,7 @@ class ModifyVpcAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

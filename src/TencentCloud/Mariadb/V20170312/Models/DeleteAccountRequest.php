@@ -18,16 +18,14 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAccount请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method string getUserName() 获取用户名
  * @method void setUserName(string $UserName) 设置用户名
  * @method string getHost() 获取用户允许的访问 host
  * @method void setHost(string $Host) 设置用户允许的访问 host
- */
-
-/**
- *DeleteAccount请求参数结构体
  */
 class DeleteAccountRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteAccountRequest extends AbstractModel
      * @var string 用户允许的访问 host
      */
     public $Host;
+
     /**
      * @param string $InstanceId 实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param string $UserName 用户名
@@ -54,6 +53,7 @@ class DeleteAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务列表详细信息
+ *
  * @method string getType() 获取任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
  * @method void setType(string $Type) 设置任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
  * @method string getId() 获取任务 ID
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetCode(integer $RetCode) 设置返回的错误码
  * @method string getErrMsg() 获取返回的错误信息
  * @method void setErrMsg(string $ErrMsg) 设置返回的错误信息
- */
-
-/**
- *任务列表详细信息
  */
 class TaskInfo extends AbstractModel
 {
@@ -80,6 +78,7 @@ class TaskInfo extends AbstractModel
      * @var string 返回的错误信息
      */
     public $ErrMsg;
+
     /**
      * @param string $Type 任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
      * @param string $Id 任务 ID
@@ -94,6 +93,7 @@ class TaskInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

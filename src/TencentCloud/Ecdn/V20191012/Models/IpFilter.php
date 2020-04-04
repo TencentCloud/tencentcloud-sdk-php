@@ -18,6 +18,8 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IP黑白名单。
+ *
  * @method string getSwitch() 获取IP黑白名单开关，on或off。
  * @method void setSwitch(string $Switch) 设置IP黑白名单开关，on或off。
  * @method string getFilterType() 获取IP黑白名单类型，whitelist或blacklist。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilters(array $Filters) 设置IP黑白名单列表。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *IP黑白名单。
  */
 class IpFilter extends AbstractModel
 {
@@ -51,6 +49,7 @@ class IpFilter extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Filters;
+
     /**
      * @param string $Switch IP黑白名单开关，on或off。
      * @param string $FilterType IP黑白名单类型，whitelist或blacklist。
@@ -62,6 +61,7 @@ class IpFilter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

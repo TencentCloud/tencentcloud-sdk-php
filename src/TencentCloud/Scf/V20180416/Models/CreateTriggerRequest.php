@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTrigger请求参数结构体
+ *
  * @method string getFunctionName() 获取新建触发器绑定的函数名称
  * @method void setFunctionName(string $FunctionName) 设置新建触发器绑定的函数名称
  * @method string getTriggerName() 获取新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是cos触发器，需要是对应cos存储桶适用于XML API的访问域名(例如:5401-5ff414-12345.cos.ap-shanghai.myqcloud.com);如果是其他触发器，见具体触发器绑定参数的说明
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQualifier(string $Qualifier) 设置函数的版本
  * @method string getEnable() 获取触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
  * @method void setEnable(string $Enable) 设置触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
- */
-
-/**
- *CreateTrigger请求参数结构体
  */
 class CreateTriggerRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateTriggerRequest extends AbstractModel
      * @var string 触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
      */
     public $Enable;
+
     /**
      * @param string $FunctionName 新建触发器绑定的函数名称
      * @param string $TriggerName 新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是cos触发器，需要是对应cos存储桶适用于XML API的访问域名(例如:5401-5ff414-12345.cos.ap-shanghai.myqcloud.com);如果是其他触发器，见具体触发器绑定参数的说明
@@ -86,6 +85,7 @@ class CreateTriggerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

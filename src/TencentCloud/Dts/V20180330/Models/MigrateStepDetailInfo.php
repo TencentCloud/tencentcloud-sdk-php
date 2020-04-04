@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 迁移中的步骤信息
+ *
  * @method integer getStepNo() 获取步骤序列
  * @method void setStepNo(integer $StepNo) 设置步骤序列
  * @method string getStepName() 获取步骤展现名称
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *迁移中的步骤信息
  */
 class MigrateStepDetailInfo extends AbstractModel
 {
@@ -62,6 +60,7 @@ class MigrateStepDetailInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
+
     /**
      * @param integer $StepNo 步骤序列
      * @param string $StepName 步骤展现名称
@@ -74,6 +73,7 @@ class MigrateStepDetailInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

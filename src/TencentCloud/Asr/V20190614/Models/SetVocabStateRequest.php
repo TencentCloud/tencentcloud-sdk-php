@@ -18,14 +18,12 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetVocabState请求参数结构体
+ *
  * @method string getVocabId() 获取热词表ID。
  * @method void setVocabId(string $VocabId) 设置热词表ID。
  * @method integer getState() 获取热词表状态，1：设为默认状态；0：设为非默认状态。
  * @method void setState(integer $State) 设置热词表状态，1：设为默认状态；0：设为非默认状态。
- */
-
-/**
- *SetVocabState请求参数结构体
  */
 class SetVocabStateRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SetVocabStateRequest extends AbstractModel
      * @var integer 热词表状态，1：设为默认状态；0：设为非默认状态。
      */
     public $State;
+
     /**
      * @param string $VocabId 热词表ID。
      * @param integer $State 热词表状态，1：设为默认状态；0：设为非默认状态。
@@ -46,6 +45,7 @@ class SetVocabStateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CDN加速流量包。
+ *
  * @method integer getId() 获取流量包 Id
  * @method void setId(integer $Id) 设置流量包 Id
  * @method string getType() 获取流量包类型
@@ -46,10 +48,6 @@ disabled：未启用
  * @method void setAutoExtension(boolean $AutoExtension) 设置流量包是否自动续订
  * @method string getChannel() 获取流量包来源
  * @method void setChannel(string $Channel) 设置流量包来源
- */
-
-/**
- *CDN加速流量包。
  */
 class TrafficPackage extends AbstractModel
 {
@@ -110,6 +108,7 @@ disabled：未启用
      * @var string 流量包来源
      */
     public $Channel;
+
     /**
      * @param integer $Id 流量包 Id
      * @param string $Type 流量包类型
@@ -130,6 +129,7 @@ disabled：未启用
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

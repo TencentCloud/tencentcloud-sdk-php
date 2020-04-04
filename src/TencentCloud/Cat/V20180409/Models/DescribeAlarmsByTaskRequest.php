@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAlarmsByTask请求参数结构体
+ *
  * @method integer getTaskId() 获取拨测任务Id
  * @method void setTaskId(integer $TaskId) 设置拨测任务Id
  * @method integer getOffset() 获取从第Offset 条开始查询。缺省值为0
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortType(string $SortType) 设置升序或降序。可为Desc, Asc之一。缺省为Desc
  * @method string getObjName() 获取告警对象的名称
  * @method void setObjName(string $ObjName) 设置告警对象的名称
- */
-
-/**
- *DescribeAlarmsByTask请求参数结构体
  */
 class DescribeAlarmsByTaskRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class DescribeAlarmsByTaskRequest extends AbstractModel
      * @var string 告警对象的名称
      */
     public $ObjName;
+
     /**
      * @param integer $TaskId 拨测任务Id
      * @param integer $Offset 从第Offset 条开始查询。缺省值为0
@@ -102,6 +101,7 @@ class DescribeAlarmsByTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

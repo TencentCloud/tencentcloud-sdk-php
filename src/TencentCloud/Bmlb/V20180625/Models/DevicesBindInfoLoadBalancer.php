@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取设备绑定信息时返回的设备被绑定所在的负载均衡信息。
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例ID。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
  * @method integer getAppId() 获取开发商AppId。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setL4ListenerSet(array $L4ListenerSet) 设置具有该绑定关系的四层监听器列表。
  * @method array getL7ListenerSet() 获取具有该绑定关系的七层监听器列表。
  * @method void setL7ListenerSet(array $L7ListenerSet) 设置具有该绑定关系的七层监听器列表。
- */
-
-/**
- *获取设备绑定信息时返回的设备被绑定所在的负载均衡信息。
  */
 class DevicesBindInfoLoadBalancer extends AbstractModel
 {
@@ -87,6 +85,7 @@ class DevicesBindInfoLoadBalancer extends AbstractModel
      * @var array 具有该绑定关系的七层监听器列表。
      */
     public $L7ListenerSet;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例ID。
      * @param integer $AppId 开发商AppId。
@@ -102,6 +101,7 @@ class DevicesBindInfoLoadBalancer extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

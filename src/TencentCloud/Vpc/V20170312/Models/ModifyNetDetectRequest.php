@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNetDetect请求参数结构体
+ *
  * @method string getNetDetectId() 获取网络探测实例`ID`。形如：`netd-12345678`
  * @method void setNetDetectId(string $NetDetectId) 设置网络探测实例`ID`。形如：`netd-12345678`
  * @method string getNetDetectName() 获取网络探测名称，最大长度不能超过60个字节。
@@ -50,10 +52,6 @@ NORMAL_CVM：普通云服务器；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
  * @method string getNetDetectDescription() 获取网络探测描述。
  * @method void setNetDetectDescription(string $NetDetectDescription) 设置网络探测描述。
- */
-
-/**
- *ModifyNetDetect请求参数结构体
  */
 class ModifyNetDetectRequest extends AbstractModel
 {
@@ -96,6 +94,7 @@ NORMAL_CVM：普通云服务器；
      * @var string 网络探测描述。
      */
     public $NetDetectDescription;
+
     /**
      * @param string $NetDetectId 网络探测实例`ID`。形如：`netd-12345678`
      * @param string $NetDetectName 网络探测名称，最大长度不能超过60个字节。
@@ -118,6 +117,7 @@ NORMAL_CVM：普通云服务器；
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 传统型负载均衡的后端服务相关信息
+ *
  * @method string getType() 获取后端服务的类型，可取值：CVM、ENI（即将支持）
  * @method void setType(string $Type) 设置后端服务的类型，可取值：CVM、ENI（即将支持）
  * @method string getInstanceId() 获取后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRunFlag(integer $RunFlag) 设置后端服务的状态
 1：故障，2：运行中，3：创建中，4：已关机，5：已退还，6：退还中， 7：重启中，8：开机中，9：关机中，10：密码重置中，11：格式化中，12：镜像制作中，13：带宽设置中，14：重装系统中，19：升级中，21：热迁移中
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *传统型负载均衡的后端服务相关信息
  */
 class ClassicalTarget extends AbstractModel
 {
@@ -88,6 +86,7 @@ class ClassicalTarget extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunFlag;
+
     /**
      * @param string $Type 后端服务的类型，可取值：CVM、ENI（即将支持）
      * @param string $InstanceId 后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
@@ -106,6 +105,7 @@ class ClassicalTarget extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

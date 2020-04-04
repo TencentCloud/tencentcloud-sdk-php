@@ -18,14 +18,12 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 伸缩组活动关联的节点
+ *
  * @method string getInstanceId() 获取节点 ID
  * @method void setInstanceId(string $InstanceId) 设置节点 ID
  * @method string getInstanceStatus() 获取节点状态
  * @method void setInstanceStatus(string $InstanceStatus) 设置节点状态
- */
-
-/**
- *伸缩组活动关联的节点
  */
 class RsgAsActivityRelatedInstance extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RsgAsActivityRelatedInstance extends AbstractModel
      * @var string 节点状态
      */
     public $InstanceStatus;
+
     /**
      * @param string $InstanceId 节点 ID
      * @param string $InstanceStatus 节点状态
@@ -46,6 +45,7 @@ class RsgAsActivityRelatedInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

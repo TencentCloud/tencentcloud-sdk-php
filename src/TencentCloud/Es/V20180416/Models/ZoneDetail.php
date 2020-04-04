@@ -18,14 +18,12 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 多可用区部署时可用区的详细信息
+ *
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
- */
-
-/**
- *多可用区部署时可用区的详细信息
  */
 class ZoneDetail extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ZoneDetail extends AbstractModel
      * @var string 子网ID
      */
     public $SubnetId;
+
     /**
      * @param string $Zone 可用区
      * @param string $SubnetId 子网ID
@@ -46,6 +45,7 @@ class ZoneDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

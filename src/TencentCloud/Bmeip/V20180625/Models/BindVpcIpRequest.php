@@ -18,16 +18,14 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindVpcIp请求参数结构体
+ *
  * @method string getEipId() 获取Eip实例ID
  * @method void setEipId(string $EipId) 设置Eip实例ID
  * @method string getVpcId() 获取EIP归属VpcId，例如vpc-k7j1t2x1
  * @method void setVpcId(string $VpcId) 设置EIP归属VpcId，例如vpc-k7j1t2x1
  * @method string getVpcIp() 获取绑定的VPC内IP地址
  * @method void setVpcIp(string $VpcIp) 设置绑定的VPC内IP地址
- */
-
-/**
- *BindVpcIp请求参数结构体
  */
 class BindVpcIpRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class BindVpcIpRequest extends AbstractModel
      * @var string 绑定的VPC内IP地址
      */
     public $VpcIp;
+
     /**
      * @param string $EipId Eip实例ID
      * @param string $VpcId EIP归属VpcId，例如vpc-k7j1t2x1
@@ -54,6 +53,7 @@ class BindVpcIpRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

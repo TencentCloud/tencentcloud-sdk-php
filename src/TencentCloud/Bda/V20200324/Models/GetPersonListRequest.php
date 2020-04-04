@@ -18,16 +18,14 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetPersonList请求参数结构体
+ *
  * @method string getGroupId() 获取人体库ID。
  * @method void setGroupId(string $GroupId) 设置人体库ID。
  * @method integer getOffset() 获取起始序号，默认值为0。
  * @method void setOffset(integer $Offset) 设置起始序号，默认值为0。
  * @method integer getLimit() 获取返回数量，默认值为10，最大值为1000。
  * @method void setLimit(integer $Limit) 设置返回数量，默认值为10，最大值为1000。
- */
-
-/**
- *GetPersonList请求参数结构体
  */
 class GetPersonListRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GetPersonListRequest extends AbstractModel
      * @var integer 返回数量，默认值为10，最大值为1000。
      */
     public $Limit;
+
     /**
      * @param string $GroupId 人体库ID。
      * @param integer $Offset 起始序号，默认值为0。
@@ -54,6 +53,7 @@ class GetPersonListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

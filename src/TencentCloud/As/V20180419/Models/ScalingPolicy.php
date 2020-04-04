@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 告警触发策略。
+ *
  * @method string getAutoScalingGroupId() 获取伸缩组ID。
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。
  * @method string getAutoScalingPolicyId() 获取告警触发策略ID。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetricAlarm(MetricAlarm $MetricAlarm) 设置告警监控指标。
  * @method array getNotificationUserGroupIds() 获取通知组ID，即为用户组ID集合。
  * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置通知组ID，即为用户组ID集合。
- */
-
-/**
- *告警触发策略。
  */
 class ScalingPolicy extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ScalingPolicy extends AbstractModel
      * @var array 通知组ID，即为用户组ID集合。
      */
     public $NotificationUserGroupIds;
+
     /**
      * @param string $AutoScalingGroupId 伸缩组ID。
      * @param string $AutoScalingPolicyId 告警触发策略ID。
@@ -94,6 +93,7 @@ class ScalingPolicy extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

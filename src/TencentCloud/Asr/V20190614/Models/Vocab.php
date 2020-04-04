@@ -18,6 +18,8 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 词表内容
+ *
  * @method string getName() 获取热词表名称
  * @method void setName(string $Name) 设置热词表名称
  * @method string getDescription() 获取热词表描述
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置词表更新时间
  * @method integer getState() 获取热词表状态，1为默认状态即在识别时默认加载该热词表进行识别，0为初始状态
  * @method void setState(integer $State) 设置热词表状态，1为默认状态即在识别时默认加载该热词表进行识别，0为初始状态
- */
-
-/**
- *词表内容
  */
 class Vocab extends AbstractModel
 {
@@ -73,6 +71,7 @@ class Vocab extends AbstractModel
      * @var integer 热词表状态，1为默认状态即在识别时默认加载该热词表进行识别，0为初始状态
      */
     public $State;
+
     /**
      * @param string $Name 热词表名称
      * @param string $Description 热词表描述
@@ -86,6 +85,7 @@ class Vocab extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

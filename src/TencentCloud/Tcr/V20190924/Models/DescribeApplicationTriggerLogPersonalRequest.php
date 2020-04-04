@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeApplicationTriggerLogPersonal请求参数结构体
+ *
  * @method string getRepoName() 获取仓库名称
  * @method void setRepoName(string $RepoName) 设置仓库名称
  * @method integer getOffset() 获取偏移量，默认为0
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) 设置升序或降序
  * @method string getOrderBy() 获取按某列排序
  * @method void setOrderBy(string $OrderBy) 设置按某列排序
- */
-
-/**
- *DescribeApplicationTriggerLogPersonal请求参数结构体
  */
 class DescribeApplicationTriggerLogPersonalRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeApplicationTriggerLogPersonalRequest extends AbstractModel
      * @var string 按某列排序
      */
     public $OrderBy;
+
     /**
      * @param string $RepoName 仓库名称
      * @param integer $Offset 偏移量，默认为0
@@ -70,6 +69,7 @@ class DescribeApplicationTriggerLogPersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

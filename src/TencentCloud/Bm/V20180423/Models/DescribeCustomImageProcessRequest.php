@@ -18,12 +18,10 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCustomImageProcess请求参数结构体
+ *
  * @method string getImageId() 获取镜像ID
  * @method void setImageId(string $ImageId) 设置镜像ID
- */
-
-/**
- *DescribeCustomImageProcess请求参数结构体
  */
 class DescribeCustomImageProcessRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeCustomImageProcessRequest extends AbstractModel
      * @var string 镜像ID
      */
     public $ImageId;
+
     /**
      * @param string $ImageId 镜像ID
      */
@@ -38,6 +37,7 @@ class DescribeCustomImageProcessRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 光照强度统计结果
+ *
  * @method integer getTime() 获取时间点
  * @method void setTime(integer $Time) 设置时间点
  * @method integer getValue() 获取光线值
  * @method void setValue(integer $Value) 设置光线值
- */
-
-/**
- *光照强度统计结果
  */
 class LightDistributionStatistic extends AbstractModel
 {
@@ -38,6 +36,7 @@ class LightDistributionStatistic extends AbstractModel
      * @var integer 光线值
      */
     public $Value;
+
     /**
      * @param integer $Time 时间点
      * @param integer $Value 光线值
@@ -46,6 +45,7 @@ class LightDistributionStatistic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

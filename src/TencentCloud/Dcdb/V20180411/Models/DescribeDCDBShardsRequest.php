@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDCDBShards请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，形如：dcdbt-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如：dcdbt-ow728lmc。
  * @method array getShardInstanceIds() 获取分片ID列表。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置排序字段， 目前仅支持 createtime
  * @method string getOrderByType() 获取排序类型， desc 或者 asc
  * @method void setOrderByType(string $OrderByType) 设置排序类型， desc 或者 asc
- */
-
-/**
- *DescribeDCDBShards请求参数结构体
  */
 class DescribeDCDBShardsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeDCDBShardsRequest extends AbstractModel
      * @var string 排序类型， desc 或者 asc
      */
     public $OrderByType;
+
     /**
      * @param string $InstanceId 实例ID，形如：dcdbt-ow728lmc。
      * @param array $ShardInstanceIds 分片ID列表。
@@ -78,6 +77,7 @@ class DescribeDCDBShardsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

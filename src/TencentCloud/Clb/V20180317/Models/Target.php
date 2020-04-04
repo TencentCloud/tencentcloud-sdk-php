@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转发目标，即绑定在负载均衡上的后端服务
+ *
  * @method integer getPort() 获取后端服务的监听端口
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置后端服务的监听端口
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEniIp(string $EniIp) 设置绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。注意：绑定弹性网卡需要先提交工单开白名单使用。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *转发目标，即绑定在负载均衡上的后端服务
  */
 class Target extends AbstractModel
 {
@@ -74,6 +72,7 @@ class Target extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EniIp;
+
     /**
      * @param integer $Port 后端服务的监听端口
 注意：此字段可能返回 null，表示取不到有效值。
@@ -90,6 +89,7 @@ class Target extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisableKey请求参数结构体
+ *
  * @method string getKeyId() 获取CMK唯一标识符
  * @method void setKeyId(string $KeyId) 设置CMK唯一标识符
- */
-
-/**
- *DisableKey请求参数结构体
  */
 class DisableKeyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DisableKeyRequest extends AbstractModel
      * @var string CMK唯一标识符
      */
     public $KeyId;
+
     /**
      * @param string $KeyId CMK唯一标识符
      */
@@ -38,6 +37,7 @@ class DisableKeyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

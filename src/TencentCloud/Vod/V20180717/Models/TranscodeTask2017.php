@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频转码任务信息，该结构仅用于对 2017 版[视频转码](https://cloud.tencent.com/document/product/266/7822)接口发起的任务。
+ *
  * @method string getTaskId() 获取转码任务 ID。
  * @method void setTaskId(string $TaskId) 设置转码任务 ID。
  * @method integer getErrCode() 获取错误码
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlayInfoSet(array $PlayInfoSet) 设置视频转码后生成的播放信息。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *视频转码任务信息，该结构仅用于对 2017 版[视频转码](https://cloud.tencent.com/document/product/266/7822)接口发起的任务。
  */
 class TranscodeTask2017 extends AbstractModel
 {
@@ -107,6 +105,7 @@ class TranscodeTask2017 extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlayInfoSet;
+
     /**
      * @param string $TaskId 转码任务 ID。
      * @param integer $ErrCode 错误码
@@ -130,6 +129,7 @@ class TranscodeTask2017 extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,13 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteImageLifecycleGlobalPersonal请求参数结构体
+ *
 
- */
-
-/**
- *DeleteImageLifecycleGlobalPersonal请求参数结构体
  */
 class DeleteImageLifecycleGlobalPersonalRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DeleteImageLifecycleGlobalPersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

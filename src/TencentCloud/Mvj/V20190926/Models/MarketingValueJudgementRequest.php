@@ -18,6 +18,8 @@ namespace TencentCloud\Mvj\V20190926\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MarketingValueJudgement请求参数结构体
+ *
  * @method integer getAccountType() 获取手机账号类型填写4
  * @method void setAccountType(integer $AccountType) 设置手机账号类型填写4
  * @method string getUid() 获取填写手机号码，如15317537488
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImei(string $Imei) 设置用户设备号imei/idfa(建议填写)
  * @method string getReferer() 获取活动链接(建议填写)
  * @method void setReferer(string $Referer) 设置活动链接(建议填写)
- */
-
-/**
- *MarketingValueJudgement请求参数结构体
  */
 class MarketingValueJudgementRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class MarketingValueJudgementRequest extends AbstractModel
      * @var string 活动链接(建议填写)
      */
     public $Referer;
+
     /**
      * @param integer $AccountType 手机账号类型填写4
      * @param string $Uid 填写手机号码，如15317537488
@@ -78,6 +77,7 @@ class MarketingValueJudgementRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

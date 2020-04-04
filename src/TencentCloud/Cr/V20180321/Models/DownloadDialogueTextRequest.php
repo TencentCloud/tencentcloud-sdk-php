@@ -18,6 +18,8 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DownloadDialogueText请求参数结构体
+ *
  * @method string getModule() 获取模块名，本接口取值：Report
  * @method void setModule(string $Module) 设置模块名，本接口取值：Report
  * @method string getOperation() 获取操作名，本接口取值：DownloadTextReport
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReportDate(string $ReportDate) 设置报告日期，格式为YYYY-MM-DD
  * @method string getInstId() 获取实例ID
  * @method void setInstId(string $InstId) 设置实例ID
- */
-
-/**
- *DownloadDialogueText请求参数结构体
  */
 class DownloadDialogueTextRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DownloadDialogueTextRequest extends AbstractModel
      * @var string 实例ID
      */
     public $InstId;
+
     /**
      * @param string $Module 模块名，本接口取值：Report
      * @param string $Operation 操作名，本接口取值：DownloadTextReport
@@ -62,6 +61,7 @@ class DownloadDialogueTextRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

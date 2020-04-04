@@ -18,12 +18,10 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBindDev请求参数结构体
+ *
  * @method string getAccessId() 获取终端用户在IoT Video上的唯一标识ID
  * @method void setAccessId(string $AccessId) 设置终端用户在IoT Video上的唯一标识ID
- */
-
-/**
- *DescribeBindDev请求参数结构体
  */
 class DescribeBindDevRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeBindDevRequest extends AbstractModel
      * @var string 终端用户在IoT Video上的唯一标识ID
      */
     public $AccessId;
+
     /**
      * @param string $AccessId 终端用户在IoT Video上的唯一标识ID
      */
@@ -38,6 +37,7 @@ class DescribeBindDevRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetAccountPassword请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：dcdbt-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：dcdbt-ow728lmc。
  * @method string getUserName() 获取登录用户名。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) 设置用户允许的访问 host，用户名+host唯一确定一个账号。
  * @method string getPassword() 获取新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
  * @method void setPassword(string $Password) 设置新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
- */
-
-/**
- *ResetAccountPassword请求参数结构体
  */
 class ResetAccountPasswordRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ResetAccountPasswordRequest extends AbstractModel
      * @var string 新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
      */
     public $Password;
+
     /**
      * @param string $InstanceId 实例 ID，形如：dcdbt-ow728lmc。
      * @param string $UserName 登录用户名。
@@ -62,6 +61,7 @@ class ResetAccountPasswordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

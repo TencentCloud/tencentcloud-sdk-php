@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PushUrlsCache请求参数结构体
+ *
  * @method array getUrls() 获取URL 列表，需要包含协议头部 http:// 或 https://
  * @method void setUrls(array $Urls) 设置URL 列表，需要包含协议头部 http:// 或 https://
  * @method string getUserAgent() 获取指定预热请求回源时 HTTP 请求的 User-Agent 头部
@@ -34,10 +36,6 @@ mainland：预热至境内节点
 overseas：预热至境外节点
 global：预热全球节点
 不填充情况下，默认为 mainland， URL 中域名必须在对应区域启用了加速服务才能提交对应区域的预热任务
- */
-
-/**
- *PushUrlsCache请求参数结构体
  */
 class PushUrlsCacheRequest extends AbstractModel
 {
@@ -60,6 +58,7 @@ global：预热全球节点
 不填充情况下，默认为 mainland， URL 中域名必须在对应区域启用了加速服务才能提交对应区域的预热任务
      */
     public $Area;
+
     /**
      * @param array $Urls URL 列表，需要包含协议头部 http:// 或 https://
      * @param string $UserAgent 指定预热请求回源时 HTTP 请求的 User-Agent 头部
@@ -74,6 +73,7 @@ global：预热全球节点
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

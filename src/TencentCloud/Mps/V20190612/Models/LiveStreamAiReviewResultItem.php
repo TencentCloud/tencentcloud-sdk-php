@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 直播流 AI 审核结果
+ *
  * @method string getType() 获取审核结果的类型，可以取的值有：
 <li>ImagePorn：图片鉴黄</li>
 <li>ImageTerrorism：图片鉴恐</li>
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImagePoliticalResultSet(array $ImagePoliticalResultSet) 设置图片鉴政的结果，当 Type 为 ImagePolitical 时有效。
  * @method array getVoicePornResultSet() 获取声音鉴黄的结果，当 Type 为 PornVoice 时有效。
  * @method void setVoicePornResultSet(array $VoicePornResultSet) 设置声音鉴黄的结果，当 Type 为 PornVoice 时有效。
- */
-
-/**
- *直播流 AI 审核结果
  */
 class LiveStreamAiReviewResultItem extends AbstractModel
 {
@@ -71,6 +69,7 @@ class LiveStreamAiReviewResultItem extends AbstractModel
      * @var array 声音鉴黄的结果，当 Type 为 PornVoice 时有效。
      */
     public $VoicePornResultSet;
+
     /**
      * @param string $Type 审核结果的类型，可以取的值有：
 <li>ImagePorn：图片鉴黄</li>
@@ -86,6 +85,7 @@ class LiveStreamAiReviewResultItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

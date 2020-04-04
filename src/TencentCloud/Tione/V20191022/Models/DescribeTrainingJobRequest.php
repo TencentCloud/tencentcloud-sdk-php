@@ -18,12 +18,10 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTrainingJob请求参数结构体
+ *
  * @method string getTrainingJobName() 获取训练任务名称
  * @method void setTrainingJobName(string $TrainingJobName) 设置训练任务名称
- */
-
-/**
- *DescribeTrainingJob请求参数结构体
  */
 class DescribeTrainingJobRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeTrainingJobRequest extends AbstractModel
      * @var string 训练任务名称
      */
     public $TrainingJobName;
+
     /**
      * @param string $TrainingJobName 训练任务名称
      */
@@ -38,6 +37,7 @@ class DescribeTrainingJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

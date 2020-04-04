@@ -18,12 +18,10 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLoadBalancerTaskResult请求参数结构体
+ *
  * @method string getTaskId() 获取任务ID。由具体的异步操作接口提供。
  * @method void setTaskId(string $TaskId) 设置任务ID。由具体的异步操作接口提供。
- */
-
-/**
- *DescribeLoadBalancerTaskResult请求参数结构体
  */
 class DescribeLoadBalancerTaskResultRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeLoadBalancerTaskResultRequest extends AbstractModel
      * @var string 任务ID。由具体的异步操作接口提供。
      */
     public $TaskId;
+
     /**
      * @param string $TaskId 任务ID。由具体的异步操作接口提供。
      */
@@ -38,6 +37,7 @@ class DescribeLoadBalancerTaskResultRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

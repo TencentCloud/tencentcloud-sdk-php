@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 存储库列表
+ *
  * @method string getCreationTime() 获取创建时间
  * @method void setCreationTime(string $CreationTime) 设置创建时间
  * @method string getLastModifiedTime() 获取更新时间
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGitConfig(GitConfig $GitConfig) 设置Git配置
  * @method boolean getNoSecret() 获取是否有Git凭证
  * @method void setNoSecret(boolean $NoSecret) 设置是否有Git凭证
- */
-
-/**
- *存储库列表
  */
 class CodeRepoSummary extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CodeRepoSummary extends AbstractModel
      * @var boolean 是否有Git凭证
      */
     public $NoSecret;
+
     /**
      * @param string $CreationTime 创建时间
      * @param string $LastModifiedTime 更新时间
@@ -70,6 +69,7 @@ class CodeRepoSummary extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

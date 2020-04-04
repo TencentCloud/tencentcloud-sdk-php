@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteVocab请求参数结构体
+ *
  * @method string getVocabLibName() 获取要删除词汇的词汇库名
  * @method void setVocabLibName(string $VocabLibName) 设置要删除词汇的词汇库名
  * @method array getVocabList() 获取要删除的词汇列表
  * @method void setVocabList(array $VocabList) 设置要删除的词汇列表
- */
-
-/**
- *DeleteVocab请求参数结构体
  */
 class DeleteVocabRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteVocabRequest extends AbstractModel
      * @var array 要删除的词汇列表
      */
     public $VocabList;
+
     /**
      * @param string $VocabLibName 要删除词汇的词汇库名
      * @param array $VocabList 要删除的词汇列表
@@ -46,6 +45,7 @@ class DeleteVocabRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

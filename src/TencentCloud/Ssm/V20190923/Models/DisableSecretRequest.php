@@ -18,12 +18,10 @@ namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisableSecret请求参数结构体
+ *
  * @method string getSecretName() 获取指定停用的凭据名称。
  * @method void setSecretName(string $SecretName) 设置指定停用的凭据名称。
- */
-
-/**
- *DisableSecret请求参数结构体
  */
 class DisableSecretRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DisableSecretRequest extends AbstractModel
      * @var string 指定停用的凭据名称。
      */
     public $SecretName;
+
     /**
      * @param string $SecretName 指定停用的凭据名称。
      */
@@ -38,6 +37,7 @@ class DisableSecretRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

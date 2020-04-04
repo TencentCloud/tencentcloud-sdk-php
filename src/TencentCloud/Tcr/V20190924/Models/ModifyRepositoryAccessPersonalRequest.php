@@ -18,14 +18,12 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyRepositoryAccessPersonal请求参数结构体
+ *
  * @method string getRepoName() 获取仓库名称
  * @method void setRepoName(string $RepoName) 设置仓库名称
  * @method integer getPublic() 获取默认值为0
  * @method void setPublic(integer $Public) 设置默认值为0
- */
-
-/**
- *ModifyRepositoryAccessPersonal请求参数结构体
  */
 class ModifyRepositoryAccessPersonalRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyRepositoryAccessPersonalRequest extends AbstractModel
      * @var integer 默认值为0
      */
     public $Public;
+
     /**
      * @param string $RepoName 仓库名称
      * @param integer $Public 默认值为0
@@ -46,6 +45,7 @@ class ModifyRepositoryAccessPersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

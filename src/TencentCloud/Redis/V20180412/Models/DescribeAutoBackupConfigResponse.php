@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAutoBackupConfig返回参数结构体
+ *
  * @method integer getAutoBackupType() 获取备份类型。自动备份类型： 1 “定时回档”
  * @method void setAutoBackupType(integer $AutoBackupType) 设置备份类型。自动备份类型： 1 “定时回档”
  * @method array getWeekDays() 获取Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimePeriod(string $TimePeriod) 设置时间段。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAutoBackupConfig返回参数结构体
  */
 class DescribeAutoBackupConfigResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeAutoBackupConfigResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $AutoBackupType 备份类型。自动备份类型： 1 “定时回档”
      * @param array $WeekDays Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
@@ -62,6 +61,7 @@ class DescribeAutoBackupConfigResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

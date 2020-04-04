@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLiveRecordRule请求参数结构体
+ *
  * @method string getDomainName() 获取推流域名。
 域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
  * @method void setDomainName(string $DomainName) 设置推流域名。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
  * @method void setStreamName(string $StreamName) 设置流名称。
 域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
- */
-
-/**
- *DeleteLiveRecordRule请求参数结构体
  */
 class DeleteLiveRecordRuleRequest extends AbstractModel
 {
@@ -54,6 +52,7 @@ class DeleteLiveRecordRuleRequest extends AbstractModel
 域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      */
     public $StreamName;
+
     /**
      * @param string $DomainName 推流域名。
 域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
@@ -66,6 +65,7 @@ class DeleteLiveRecordRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

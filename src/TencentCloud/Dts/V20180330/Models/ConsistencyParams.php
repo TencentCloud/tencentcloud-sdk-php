@@ -18,16 +18,14 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 抽样检验时的抽样参数
+ *
  * @method integer getSelectRowsPerTable() 获取数据内容检测参数。表中选出用来数据对比的行，占表的总行数的百分比。取值范围是整数[1-100]
  * @method void setSelectRowsPerTable(integer $SelectRowsPerTable) 设置数据内容检测参数。表中选出用来数据对比的行，占表的总行数的百分比。取值范围是整数[1-100]
  * @method integer getTablesSelectAll() 获取数据内容检测参数。迁移库表中，要进行数据内容检测的表，占所有表的百分比。取值范围是整数[1-100]
  * @method void setTablesSelectAll(integer $TablesSelectAll) 设置数据内容检测参数。迁移库表中，要进行数据内容检测的表，占所有表的百分比。取值范围是整数[1-100]
  * @method integer getTablesSelectCount() 获取数据数量检测，检测表行数是否一致。迁移库表中，要进行数据数量检测的表，占所有表的百分比。取值范围是整数[1-100]
  * @method void setTablesSelectCount(integer $TablesSelectCount) 设置数据数量检测，检测表行数是否一致。迁移库表中，要进行数据数量检测的表，占所有表的百分比。取值范围是整数[1-100]
- */
-
-/**
- *抽样检验时的抽样参数
  */
 class ConsistencyParams extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ConsistencyParams extends AbstractModel
      * @var integer 数据数量检测，检测表行数是否一致。迁移库表中，要进行数据数量检测的表，占所有表的百分比。取值范围是整数[1-100]
      */
     public $TablesSelectCount;
+
     /**
      * @param integer $SelectRowsPerTable 数据内容检测参数。表中选出用来数据对比的行，占表的总行数的百分比。取值范围是整数[1-100]
      * @param integer $TablesSelectAll 数据内容检测参数。迁移库表中，要进行数据内容检测的表，占所有表的百分比。取值范围是整数[1-100]
@@ -54,6 +53,7 @@ class ConsistencyParams extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

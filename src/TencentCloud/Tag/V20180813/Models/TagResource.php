@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 标签键值对以及资源ID
+ *
  * @method string getTagKey() 获取标签键
  * @method void setTagKey(string $TagKey) 设置标签键
  * @method string getTagValue() 获取标签值
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceType(string $ServiceType) 设置资源类型
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *标签键值对以及资源ID
  */
 class TagResource extends AbstractModel
 {
@@ -69,6 +67,7 @@ class TagResource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceType;
+
     /**
      * @param string $TagKey 标签键
      * @param string $TagValue 标签值
@@ -82,6 +81,7 @@ class TagResource extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

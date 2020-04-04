@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePrice请求参数结构体
+ *
  * @method string getZone() 获取欲新购实例的可用区ID。
  * @method void setZone(string $Zone) 设置欲新购实例的可用区ID。
  * @method integer getNodeCount() 获取实例节点个数，可以通过 DescribeDBInstanceSpecs
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(integer $Period) 设置欲购买的时长，单位：月。
  * @method integer getCount() 获取欲购买的数量，默认查询购买1个实例的价格。
  * @method void setCount(integer $Count) 设置欲购买的数量，默认查询购买1个实例的价格。
- */
-
-/**
- *DescribePrice请求参数结构体
  */
 class DescribePriceRequest extends AbstractModel
 {
@@ -75,6 +73,7 @@ class DescribePriceRequest extends AbstractModel
      * @var integer 欲购买的数量，默认查询购买1个实例的价格。
      */
     public $Count;
+
     /**
      * @param string $Zone 欲新购实例的可用区ID。
      * @param integer $NodeCount 实例节点个数，可以通过 DescribeDBInstanceSpecs
@@ -90,6 +89,7 @@ class DescribePriceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

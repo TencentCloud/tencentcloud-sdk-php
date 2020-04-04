@@ -18,6 +18,8 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 自定义混流配置布局参数
+ *
  * @method integer getWidth() 获取流画面宽，取值范围[2,3000]
  * @method void setWidth(integer $Width) 设置流画面宽，取值范围[2,3000]
  * @method integer getHeight() 获取流画面高，取值范围[2,3000]
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 z轴确定了重叠画面的遮盖顺序，z轴值大的画面处于顶层
  * @method void setZOrder(integer $ZOrder) 设置画面z轴位置，默认为0
 z轴确定了重叠画面的遮盖顺序，z轴值大的画面处于顶层
- */
-
-/**
- *自定义混流配置布局参数
  */
 class LayoutParams extends AbstractModel
 {
@@ -62,6 +60,7 @@ class LayoutParams extends AbstractModel
 z轴确定了重叠画面的遮盖顺序，z轴值大的画面处于顶层
      */
     public $ZOrder;
+
     /**
      * @param integer $Width 流画面宽，取值范围[2,3000]
      * @param integer $Height 流画面高，取值范围[2,3000]
@@ -74,6 +73,7 @@ z轴确定了重叠画面的遮盖顺序，z轴值大的画面处于顶层
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

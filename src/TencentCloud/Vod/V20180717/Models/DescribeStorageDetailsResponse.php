@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeStorageDetails返回参数结构体
+ *
  * @method array getData() 获取存储统计数据，每分钟/小时/天一条数据。
  * @method void setData(array $Data) 设置存储统计数据，每分钟/小时/天一条数据。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeStorageDetails返回参数结构体
  */
 class DescribeStorageDetailsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeStorageDetailsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Data 存储统计数据，每分钟/小时/天一条数据。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeStorageDetailsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

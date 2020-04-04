@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 终端用户绑定的设备
+ *
  * @method string getTid() 获取设备TID
  * @method void setTid(string $Tid) 设置设备TID
  * @method string getDeviceName() 获取设备名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRole() 获取用户角色，owner：主人，guest：访客
  * @method void setRole(string $Role) 设置用户角色，owner：主人，guest：访客
- */
-
-/**
- *终端用户绑定的设备
  */
 class BindDevInfo extends AbstractModel
 {
@@ -55,6 +53,7 @@ class BindDevInfo extends AbstractModel
      * @var string 用户角色，owner：主人，guest：访客
      */
     public $Role;
+
     /**
      * @param string $Tid 设备TID
      * @param string $DeviceName 设备名称
@@ -66,6 +65,7 @@ class BindDevInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

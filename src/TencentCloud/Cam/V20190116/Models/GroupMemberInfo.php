@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户组用户信息
+ *
  * @method integer getUid() 获取子用户 Uid。
  * @method void setUid(integer $Uid) 设置子用户 Uid。
  * @method integer getUin() 获取子用户 Uin。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
  * @method integer getIsReceiverOwner() 获取是否为主消息接收人。
  * @method void setIsReceiverOwner(integer $IsReceiverOwner) 设置是否为主消息接收人。
- */
-
-/**
- *用户组用户信息
  */
 class GroupMemberInfo extends AbstractModel
 {
@@ -101,6 +99,7 @@ class GroupMemberInfo extends AbstractModel
      * @var integer 是否为主消息接收人。
      */
     public $IsReceiverOwner;
+
     /**
      * @param integer $Uid 子用户 Uid。
      * @param integer $Uin 子用户 Uin。
@@ -118,6 +117,7 @@ class GroupMemberInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

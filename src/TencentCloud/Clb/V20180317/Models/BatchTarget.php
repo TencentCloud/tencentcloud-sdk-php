@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 批量绑定类型
+ *
  * @method string getListenerId() 获取监听器ID
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method integer getPort() 获取绑定端口
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWeight(integer $Weight) 设置子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
  * @method string getLocationId() 获取七层规则ID
  * @method void setLocationId(string $LocationId) 设置七层规则ID
- */
-
-/**
- *批量绑定类型
  */
 class BatchTarget extends AbstractModel
 {
@@ -66,6 +64,7 @@ class BatchTarget extends AbstractModel
      * @var string 七层规则ID
      */
     public $LocationId;
+
     /**
      * @param string $ListenerId 监听器ID
      * @param integer $Port 绑定端口
@@ -78,6 +77,7 @@ class BatchTarget extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

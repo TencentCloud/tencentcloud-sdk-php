@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAIRecognitionTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取视频内容识别模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置视频内容识别模板唯一标识。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *DeleteAIRecognitionTemplate请求参数结构体
  */
 class DeleteAIRecognitionTemplateRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteAIRecognitionTemplateRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param integer $Definition 视频内容识别模板唯一标识。
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
@@ -46,6 +45,7 @@ class DeleteAIRecognitionTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

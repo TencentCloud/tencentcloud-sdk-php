@@ -18,12 +18,10 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInsurePacks请求参数结构体
+ *
  * @method array getIdList() 获取可选字段，保险包套餐ID，当要获取指定ID（例如insure-000000xe）的保险包套餐时请填写此字段；
  * @method void setIdList(array $IdList) 设置可选字段，保险包套餐ID，当要获取指定ID（例如insure-000000xe）的保险包套餐时请填写此字段；
- */
-
-/**
- *DescribeInsurePacks请求参数结构体
  */
 class DescribeInsurePacksRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeInsurePacksRequest extends AbstractModel
      * @var array 可选字段，保险包套餐ID，当要获取指定ID（例如insure-000000xe）的保险包套餐时请填写此字段；
      */
     public $IdList;
+
     /**
      * @param array $IdList 可选字段，保险包套餐ID，当要获取指定ID（例如insure-000000xe）的保险包套餐时请填写此字段；
      */
@@ -38,6 +37,7 @@ class DescribeInsurePacksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

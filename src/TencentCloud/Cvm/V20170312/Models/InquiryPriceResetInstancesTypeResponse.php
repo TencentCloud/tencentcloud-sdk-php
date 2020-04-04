@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceResetInstancesType返回参数结构体
+ *
  * @method Price getPrice() 获取该参数表示调整成对应机型实例的价格。
  * @method void setPrice(Price $Price) 设置该参数表示调整成对应机型实例的价格。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *InquiryPriceResetInstancesType返回参数结构体
  */
 class InquiryPriceResetInstancesTypeResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InquiryPriceResetInstancesTypeResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param Price $Price 该参数表示调整成对应机型实例的价格。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class InquiryPriceResetInstancesTypeResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

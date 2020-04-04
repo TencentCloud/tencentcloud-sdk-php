@@ -18,12 +18,10 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteVpcPeerConnection请求参数结构体
+ *
  * @method string getVpcPeerConnectionId() 获取黑石对等连接实例ID
  * @method void setVpcPeerConnectionId(string $VpcPeerConnectionId) 设置黑石对等连接实例ID
- */
-
-/**
- *DeleteVpcPeerConnection请求参数结构体
  */
 class DeleteVpcPeerConnectionRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteVpcPeerConnectionRequest extends AbstractModel
      * @var string 黑石对等连接实例ID
      */
     public $VpcPeerConnectionId;
+
     /**
      * @param string $VpcPeerConnectionId 黑石对等连接实例ID
      */
@@ -38,6 +37,7 @@ class DeleteVpcPeerConnectionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

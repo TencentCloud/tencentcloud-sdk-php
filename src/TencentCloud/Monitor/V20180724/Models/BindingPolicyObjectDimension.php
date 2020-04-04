@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 策略绑定实例维度信息
+ *
  * @method string getRegion() 获取地域名
  * @method void setRegion(string $Region) 设置地域名
  * @method integer getRegionId() 获取地域ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDimensions(string $Dimensions) 设置维度信息
  * @method string getEventDimensions() 获取事件维度信息
  * @method void setEventDimensions(string $EventDimensions) 设置事件维度信息
- */
-
-/**
- *策略绑定实例维度信息
  */
 class BindingPolicyObjectDimension extends AbstractModel
 {
@@ -52,6 +50,7 @@ class BindingPolicyObjectDimension extends AbstractModel
      * @var string 事件维度信息
      */
     public $EventDimensions;
+
     /**
      * @param string $Region 地域名
      * @param integer $RegionId 地域ID
@@ -62,6 +61,7 @@ class BindingPolicyObjectDimension extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

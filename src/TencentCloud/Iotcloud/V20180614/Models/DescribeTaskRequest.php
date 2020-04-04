@@ -18,12 +18,10 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTask请求参数结构体
+ *
  * @method string getId() 获取任务ID
  * @method void setId(string $Id) 设置任务ID
- */
-
-/**
- *DescribeTask请求参数结构体
  */
 class DescribeTaskRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeTaskRequest extends AbstractModel
      * @var string 任务ID
      */
     public $Id;
+
     /**
      * @param string $Id 任务ID
      */
@@ -38,6 +37,7 @@ class DescribeTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

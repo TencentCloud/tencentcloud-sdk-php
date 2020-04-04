@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * L4规则回源列表
+ *
  * @method string getSource() 获取回源IP或域名
  * @method void setSource(string $Source) 设置回源IP或域名
  * @method integer getWeight() 获取权重值，取值[0,100]
  * @method void setWeight(integer $Weight) 设置权重值，取值[0,100]
- */
-
-/**
- *L4规则回源列表
  */
 class L4RuleSource extends AbstractModel
 {
@@ -38,6 +36,7 @@ class L4RuleSource extends AbstractModel
      * @var integer 权重值，取值[0,100]
      */
     public $Weight;
+
     /**
      * @param string $Source 回源IP或域名
      * @param integer $Weight 权重值，取值[0,100]
@@ -46,6 +45,7 @@ class L4RuleSource extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

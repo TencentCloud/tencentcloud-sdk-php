@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 产品详细信息
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getProductName() 获取产品名
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductMetadata(ProductMetadata $ProductMetadata) 设置产品元数据
  * @method ProductProperties getProductProperties() 获取产品属性
  * @method void setProductProperties(ProductProperties $ProductProperties) 设置产品属性
- */
-
-/**
- *产品详细信息
  */
 class ProductInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ProductInfo extends AbstractModel
      * @var ProductProperties 产品属性
      */
     public $ProductProperties;
+
     /**
      * @param string $ProductId 产品ID
      * @param string $ProductName 产品名
@@ -62,6 +61,7 @@ class ProductInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

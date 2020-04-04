@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 迁移任务详情
+ *
  * @method string getJobId() 获取数据迁移任务ID
  * @method void setJobId(string $JobId) 设置数据迁移任务ID
  * @method string getJobName() 获取数据迁移任务名称
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetail(MigrateDetailInfo $Detail) 设置任务详情
  * @method array getErrorInfo() 获取任务错误信息提示，当任务发生错误时，不为null或者空值
  * @method void setErrorInfo(array $ErrorInfo) 设置任务错误信息提示，当任务发生错误时，不为null或者空值
- */
-
-/**
- *迁移任务详情
  */
 class MigrateJobInfo extends AbstractModel
 {
@@ -136,6 +134,7 @@ class MigrateJobInfo extends AbstractModel
      * @var array 任务错误信息提示，当任务发生错误时，不为null或者空值
      */
     public $ErrorInfo;
+
     /**
      * @param string $JobId 数据迁移任务ID
      * @param string $JobName 数据迁移任务名称
@@ -158,6 +157,7 @@ class MigrateJobInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

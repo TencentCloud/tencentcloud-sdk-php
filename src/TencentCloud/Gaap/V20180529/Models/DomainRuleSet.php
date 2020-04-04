@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 按照域名分类的7层监听器转发规则信息
+ *
  * @method string getDomain() 获取转发规则域名。
  * @method void setDomain(string $Domain) 设置转发规则域名。
  * @method array getRuleSet() 获取该域名对应的转发规则列表。
@@ -98,10 +100,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolyRealServerCertificateAliasInfo(array $PolyRealServerCertificateAliasInfo) 设置多源站证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *按照域名分类的7层监听器转发规则信息
  */
 class DomainRuleSet extends AbstractModel
 {
@@ -216,6 +214,7 @@ class DomainRuleSet extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolyRealServerCertificateAliasInfo;
+
     /**
      * @param string $Domain 转发规则域名。
      * @param array $RuleSet 该域名对应的转发规则列表。
@@ -262,6 +261,7 @@ class DomainRuleSet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

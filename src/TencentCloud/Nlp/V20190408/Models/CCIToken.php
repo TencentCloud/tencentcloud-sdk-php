@@ -18,16 +18,14 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文本纠错结果
+ *
  * @method integer getBeginOffset() 获取错别字的起始位置，从0开始
  * @method void setBeginOffset(integer $BeginOffset) 设置错别字的起始位置，从0开始
  * @method string getCorrectWord() 获取错别字纠错结果
  * @method void setCorrectWord(string $CorrectWord) 设置错别字纠错结果
  * @method string getWord() 获取错别字内容
  * @method void setWord(string $Word) 设置错别字内容
- */
-
-/**
- *文本纠错结果
  */
 class CCIToken extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CCIToken extends AbstractModel
      * @var string 错别字内容
      */
     public $Word;
+
     /**
      * @param integer $BeginOffset 错别字的起始位置，从0开始
      * @param string $CorrectWord 错别字纠错结果
@@ -54,6 +53,7 @@ class CCIToken extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

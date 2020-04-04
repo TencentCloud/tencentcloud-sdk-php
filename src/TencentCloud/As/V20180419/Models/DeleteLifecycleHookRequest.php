@@ -18,12 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLifecycleHook请求参数结构体
+ *
  * @method string getLifecycleHookId() 获取生命周期挂钩ID
  * @method void setLifecycleHookId(string $LifecycleHookId) 设置生命周期挂钩ID
- */
-
-/**
- *DeleteLifecycleHook请求参数结构体
  */
 class DeleteLifecycleHookRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteLifecycleHookRequest extends AbstractModel
      * @var string 生命周期挂钩ID
      */
     public $LifecycleHookId;
+
     /**
      * @param string $LifecycleHookId 生命周期挂钩ID
      */
@@ -38,6 +37,7 @@ class DeleteLifecycleHookRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

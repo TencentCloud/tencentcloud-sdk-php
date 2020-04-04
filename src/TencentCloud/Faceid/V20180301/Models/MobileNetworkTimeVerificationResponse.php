@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MobileNetworkTimeVerification返回参数结构体
+ *
  * @method string getResult() 获取认证结果码，收费情况如下。
 收费结果码：
 0: 成功
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 格式为(a,b]，表示在网时长在a个月以上，b个月以下。若b为+时表示没有上限。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *MobileNetworkTimeVerification返回参数结构体
  */
 class MobileNetworkTimeVerificationResponse extends AbstractModel
 {
@@ -76,6 +74,7 @@ class MobileNetworkTimeVerificationResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Result 认证结果码，收费情况如下。
 收费结果码：
@@ -94,6 +93,7 @@ class MobileNetworkTimeVerificationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Iottid\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BurnTidNotify请求参数结构体
+ *
  * @method string getOrderId() 获取订单编号
  * @method void setOrderId(string $OrderId) 设置订单编号
  * @method string getTid() 获取TID编号
  * @method void setTid(string $Tid) 设置TID编号
- */
-
-/**
- *BurnTidNotify请求参数结构体
  */
 class BurnTidNotifyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BurnTidNotifyRequest extends AbstractModel
      * @var string TID编号
      */
     public $Tid;
+
     /**
      * @param string $OrderId 订单编号
      * @param string $Tid TID编号
@@ -46,6 +45,7 @@ class BurnTidNotifyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

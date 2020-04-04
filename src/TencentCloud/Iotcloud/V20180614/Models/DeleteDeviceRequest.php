@@ -18,16 +18,14 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteDevice请求参数结构体
+ *
  * @method string getProductId() 获取设备所属的产品 ID
  * @method void setProductId(string $ProductId) 设置设备所属的产品 ID
  * @method string getDeviceName() 获取需要删除的设备名称
  * @method void setDeviceName(string $DeviceName) 设置需要删除的设备名称
  * @method string getSkey() 获取删除LoRa设备以及LoRa网关设备需要skey
  * @method void setSkey(string $Skey) 设置删除LoRa设备以及LoRa网关设备需要skey
- */
-
-/**
- *DeleteDevice请求参数结构体
  */
 class DeleteDeviceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteDeviceRequest extends AbstractModel
      * @var string 删除LoRa设备以及LoRa网关设备需要skey
      */
     public $Skey;
+
     /**
      * @param string $ProductId 设备所属的产品 ID
      * @param string $DeviceName 需要删除的设备名称
@@ -54,6 +53,7 @@ class DeleteDeviceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

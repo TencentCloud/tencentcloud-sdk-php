@@ -18,16 +18,14 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户自建Hive-MetaDB信息
+ *
  * @method string getMetaDataJdbcUrl() 获取自定义MetaDB的JDBC连接，请以 jdbc:mysql:// 开头
  * @method void setMetaDataJdbcUrl(string $MetaDataJdbcUrl) 设置自定义MetaDB的JDBC连接，请以 jdbc:mysql:// 开头
  * @method string getMetaDataUser() 获取自定义MetaDB用户名
  * @method void setMetaDataUser(string $MetaDataUser) 设置自定义MetaDB用户名
  * @method string getMetaDataPass() 获取自定义MetaDB密码
  * @method void setMetaDataPass(string $MetaDataPass) 设置自定义MetaDB密码
- */
-
-/**
- *用户自建Hive-MetaDB信息
  */
 class CustomMetaInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CustomMetaInfo extends AbstractModel
      * @var string 自定义MetaDB密码
      */
     public $MetaDataPass;
+
     /**
      * @param string $MetaDataJdbcUrl 自定义MetaDB的JDBC连接，请以 jdbc:mysql:// 开头
      * @param string $MetaDataUser 自定义MetaDB用户名
@@ -54,6 +53,7 @@ class CustomMetaInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

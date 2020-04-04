@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateFunctionCode请求参数结构体
+ *
  * @method string getHandler() 获取函数处理方法名称。名称格式支持“文件名称.函数名称”形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
  * @method void setHandler(string $Handler) 设置函数处理方法名称。名称格式支持“文件名称.函数名称”形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
  * @method string getFunctionName() 获取要修改的函数名称
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCode(Code $Code) 设置函数代码
  * @method string getCodeSource() 获取代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
  * @method void setCodeSource(string $CodeSource) 设置代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
- */
-
-/**
- *UpdateFunctionCode请求参数结构体
  */
 class UpdateFunctionCodeRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class UpdateFunctionCodeRequest extends AbstractModel
      * @var string 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
      */
     public $CodeSource;
+
     /**
      * @param string $Handler 函数处理方法名称。名称格式支持“文件名称.函数名称”形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
      * @param string $FunctionName 要修改的函数名称
@@ -118,6 +117,7 @@ class UpdateFunctionCodeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

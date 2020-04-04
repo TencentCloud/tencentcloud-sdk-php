@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 微信小程序发布任务信息
+ *
  * @method string getTaskId() 获取任务 ID。
  * @method void setTaskId(string $TaskId) 设置任务 ID。
  * @method string getStatus() 获取任务状态，取值：
@@ -48,10 +50,6 @@ FINISH：已完成。
 <li>Pass：发布成功；</li>
 <li>Failed：发布失败；</li>
 <li>Rejected：审核未通过。</li>
- */
-
-/**
- *微信小程序发布任务信息
  */
 class WechatMiniProgramPublishTask extends AbstractModel
 {
@@ -97,6 +95,7 @@ FINISH：已完成。
 <li>Rejected：审核未通过。</li>
      */
     public $PublishResult;
+
     /**
      * @param string $TaskId 任务 ID。
      * @param string $Status 任务状态，取值：
@@ -118,6 +117,7 @@ FINISH：已完成。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

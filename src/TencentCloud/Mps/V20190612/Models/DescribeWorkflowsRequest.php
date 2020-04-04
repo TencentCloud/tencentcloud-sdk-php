@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWorkflows请求参数结构体
+ *
  * @method array getWorkflowIds() 获取工作流 ID 过滤条件，数组长度限制：100。
  * @method void setWorkflowIds(array $WorkflowIds) 设置工作流 ID 过滤条件，数组长度限制：100。
  * @method string getStatus() 获取工作流状态，取值范围：
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
- */
-
-/**
- *DescribeWorkflows请求参数结构体
  */
 class DescribeWorkflowsRequest extends AbstractModel
 {
@@ -61,6 +59,7 @@ class DescribeWorkflowsRequest extends AbstractModel
      * @var integer 返回记录条数，默认值：10，最大值：100。
      */
     public $Limit;
+
     /**
      * @param array $WorkflowIds 工作流 ID 过滤条件，数组长度限制：100。
      * @param string $Status 工作流状态，取值范围：
@@ -74,6 +73,7 @@ class DescribeWorkflowsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

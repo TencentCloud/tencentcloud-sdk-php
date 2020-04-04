@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSampleSnapshotTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取采样截图模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置采样截图模板唯一标识。
- */
-
-/**
- *DeleteSampleSnapshotTemplate请求参数结构体
  */
 class DeleteSampleSnapshotTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteSampleSnapshotTemplateRequest extends AbstractModel
      * @var integer 采样截图模板唯一标识。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 采样截图模板唯一标识。
      */
@@ -38,6 +37,7 @@ class DeleteSampleSnapshotTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

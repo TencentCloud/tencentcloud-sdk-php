@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusters请求参数结构体
+ *
  * @method array getClusterIds() 获取指定查询的集群ID列表
  * @method void setClusterIds(array $ClusterIds) 设置指定查询的集群ID列表
  * @method array getFilters() 获取查询过滤条件
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询列表偏移量
  * @method integer getLimit() 获取查询列表返回记录数，默认值20
  * @method void setLimit(integer $Limit) 设置查询列表返回记录数，默认值20
- */
-
-/**
- *DescribeClusters请求参数结构体
  */
 class DescribeClustersRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeClustersRequest extends AbstractModel
      * @var integer 查询列表返回记录数，默认值20
      */
     public $Limit;
+
     /**
      * @param array $ClusterIds 指定查询的集群ID列表
      * @param array $Filters 查询过滤条件
@@ -62,6 +61,7 @@ class DescribeClustersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAvailableZoneInfo返回参数结构体
+ *
  * @method array getRegionZones() 获取各可用区的资源售卖情况以及支持的存储类型、存储协议等信息
  * @method void setRegionZones(array $RegionZones) 设置各可用区的资源售卖情况以及支持的存储类型、存储协议等信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAvailableZoneInfo返回参数结构体
  */
 class DescribeAvailableZoneInfoResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeAvailableZoneInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $RegionZones 各可用区的资源售卖情况以及支持的存储类型、存储协议等信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeAvailableZoneInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

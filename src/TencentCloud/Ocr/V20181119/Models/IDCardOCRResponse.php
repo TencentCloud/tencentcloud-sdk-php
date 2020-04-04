@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IDCardOCR返回参数结构体
+ *
  * @method string getName() 获取姓名（人像面）
  * @method void setName(string $Name) 设置姓名（人像面）
  * @method string getSex() 获取性别（人像面）
@@ -60,10 +62,6 @@ WarnInfos，告警信息，Code 告警码列表和释义：
 -9106	身份证 PS 告警。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *IDCardOCR返回参数结构体
  */
 class IDCardOCRResponse extends AbstractModel
 {
@@ -127,6 +125,7 @@ WarnInfos，告警信息，Code 告警码列表和释义：
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Name 姓名（人像面）
      * @param string $Sex 性别（人像面）
@@ -154,6 +153,7 @@ WarnInfos，告警信息，Code 告警码列表和释义：
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

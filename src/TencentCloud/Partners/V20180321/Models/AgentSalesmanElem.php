@@ -18,6 +18,8 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 代理商业务员信息
+ *
  * @method string getUin() 获取代理商账号ID
  * @method void setUin(string $Uin) 设置代理商账号ID
  * @method string getSalesUin() 获取业务员ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSalesName(string $SalesName) 设置业务员姓名
  * @method string getCreateTime() 获取业务员创建时间
  * @method void setCreateTime(string $CreateTime) 设置业务员创建时间
- */
-
-/**
- *代理商业务员信息
  */
 class AgentSalesmanElem extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AgentSalesmanElem extends AbstractModel
      * @var string 业务员创建时间
      */
     public $CreateTime;
+
     /**
      * @param string $Uin 代理商账号ID
      * @param string $SalesUin 业务员ID
@@ -62,6 +61,7 @@ class AgentSalesmanElem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频轨的视频片段信息。
+ *
  * @method string getSourceMedia() 获取视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
  * @method void setSourceMedia(string $SourceMedia) 设置视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
  * @method float getSourceMediaStartTime() 获取视频片段取自素材文件的起始时间，单位为秒。默认为0。
@@ -78,10 +80,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioOperations(array $AudioOperations) 设置对音频进行操作，如静音等。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *视频轨的视频片段信息。
  */
 class VideoTrackItem extends AbstractModel
 {
@@ -154,6 +152,7 @@ class VideoTrackItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioOperations;
+
     /**
      * @param string $SourceMedia 视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
      * @param float $SourceMediaStartTime 视频片段取自素材文件的起始时间，单位为秒。默认为0。
@@ -190,6 +189,7 @@ class VideoTrackItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

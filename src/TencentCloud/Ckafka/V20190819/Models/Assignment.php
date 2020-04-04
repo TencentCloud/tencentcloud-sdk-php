@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 存储着分配给该消费者的 partition 信息
+ *
  * @method integer getVersion() 获取assingment版本信息
  * @method void setVersion(integer $Version) 设置assingment版本信息
  * @method array getTopics() 获取topic信息列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopics(array $Topics) 设置topic信息列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *存储着分配给该消费者的 partition 信息
  */
 class Assignment extends AbstractModel
 {
@@ -41,6 +39,7 @@ class Assignment extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Topics;
+
     /**
      * @param integer $Version assingment版本信息
      * @param array $Topics topic信息列表
@@ -50,6 +49,7 @@ class Assignment extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

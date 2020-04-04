@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstanceConfig返回参数结构体
+ *
  * @method integer getProtectMode() 获取主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
  * @method void setProtectMode(integer $ProtectMode) 设置主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
  * @method integer getDeployMode() 获取主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupConfig(BackupConfig $BackupConfig) 设置强同步实例第二备库的配置信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDBInstanceConfig返回参数结构体
  */
 class DescribeDBInstanceConfigResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $ProtectMode 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
      * @param integer $DeployMode 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
@@ -78,6 +77,7 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

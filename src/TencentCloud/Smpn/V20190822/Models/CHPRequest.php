@@ -18,12 +18,10 @@ namespace TencentCloud\Smpn\V20190822\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 终端骚扰保护请求内容
+ *
  * @method string getPhoneNumber() 获取电话号码
  * @method void setPhoneNumber(string $PhoneNumber) 设置电话号码
- */
-
-/**
- *终端骚扰保护请求内容
  */
 class CHPRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CHPRequest extends AbstractModel
      * @var string 电话号码
      */
     public $PhoneNumber;
+
     /**
      * @param string $PhoneNumber 电话号码
      */
@@ -38,6 +37,7 @@ class CHPRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccountPrivileges返回参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method array getPrivileges() 获取权限列表。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) 设置数据库账号Host
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAccountPrivileges返回参数结构体
  */
 class DescribeAccountPrivilegesResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeAccountPrivilegesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $InstanceId 实例ID
      * @param array $Privileges 权限列表。
@@ -70,6 +69,7 @@ class DescribeAccountPrivilegesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

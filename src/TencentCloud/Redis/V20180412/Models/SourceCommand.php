@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 访问命令
+ *
  * @method string getCmd() 获取命令
  * @method void setCmd(string $Cmd) 设置命令
  * @method integer getCount() 获取执行次数
  * @method void setCount(integer $Count) 设置执行次数
- */
-
-/**
- *访问命令
  */
 class SourceCommand extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SourceCommand extends AbstractModel
      * @var integer 执行次数
      */
     public $Count;
+
     /**
      * @param string $Cmd 命令
      * @param integer $Count 执行次数
@@ -46,6 +45,7 @@ class SourceCommand extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

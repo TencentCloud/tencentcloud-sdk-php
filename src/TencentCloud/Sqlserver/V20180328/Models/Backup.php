@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 备份文件详细信息
+ *
  * @method string getFileName() 获取文件名
  * @method void setFileName(string $FileName) 设置文件名
  * @method integer getSize() 获取文件大小，单位 KB
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategy(integer $Strategy) 设置备份策略（0-实例备份；1-多库备份）
  * @method integer getBackupWay() 获取备份方式，0-定时备份；1-手动临时备份
  * @method void setBackupWay(integer $BackupWay) 设置备份方式，0-定时备份；1-手动临时备份
- */
-
-/**
- *备份文件详细信息
  */
 class Backup extends AbstractModel
 {
@@ -101,6 +99,7 @@ class Backup extends AbstractModel
      * @var integer 备份方式，0-定时备份；1-手动临时备份
      */
     public $BackupWay;
+
     /**
      * @param string $FileName 文件名
      * @param integer $Size 文件大小，单位 KB
@@ -118,6 +117,7 @@ class Backup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

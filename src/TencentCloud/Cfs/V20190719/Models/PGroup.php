@@ -18,14 +18,12 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文件系统绑定权限组信息
+ *
  * @method string getPGroupId() 获取权限组ID
  * @method void setPGroupId(string $PGroupId) 设置权限组ID
  * @method string getName() 获取权限组名称
  * @method void setName(string $Name) 设置权限组名称
- */
-
-/**
- *文件系统绑定权限组信息
  */
 class PGroup extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PGroup extends AbstractModel
      * @var string 权限组名称
      */
     public $Name;
+
     /**
      * @param string $PGroupId 权限组ID
      * @param string $Name 权限组名称
@@ -46,6 +45,7 @@ class PGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

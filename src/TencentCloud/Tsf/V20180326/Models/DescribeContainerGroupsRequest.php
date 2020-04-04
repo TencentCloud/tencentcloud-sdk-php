@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeContainerGroups请求参数结构体
+ *
  * @method string getSearchWord() 获取搜索字段，模糊搜索groupName字段
  * @method void setSearchWord(string $SearchWord) 设置搜索字段，模糊搜索groupName字段
  * @method string getApplicationId() 获取分组所属应用ID
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getNamespaceId() 获取命名空间 ID
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间 ID
- */
-
-/**
- *DescribeContainerGroups请求参数结构体
  */
 class DescribeContainerGroupsRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeContainerGroupsRequest extends AbstractModel
      * @var string 命名空间 ID
      */
     public $NamespaceId;
+
     /**
      * @param string $SearchWord 搜索字段，模糊搜索groupName字段
      * @param string $ApplicationId 分组所属应用ID
@@ -94,6 +93,7 @@ class DescribeContainerGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 待与七层监听器转发规则解绑的物理机主机、虚拟机或半托管主机信息。
+ *
  * @method integer getPort() 获取待解绑的主机端口，可选值1~65535。
  * @method void setPort(integer $Port) 设置待解绑的主机端口，可选值1~65535。
  * @method string getInstanceId() 获取黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
  * @method void setInstanceId(string $InstanceId) 设置黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
- */
-
-/**
- *待与七层监听器转发规则解绑的物理机主机、虚拟机或半托管主机信息。
  */
 class UnbindL7Backend extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UnbindL7Backend extends AbstractModel
      * @var string 黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
      */
     public $InstanceId;
+
     /**
      * @param integer $Port 待解绑的主机端口，可选值1~65535。
      * @param string $InstanceId 黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
@@ -46,6 +45,7 @@ class UnbindL7Backend extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

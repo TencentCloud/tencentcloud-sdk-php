@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 短信回复状态
+ *
  * @method string getExtendCode() 获取短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
  * @method void setExtendCode(string $ExtendCode) 设置短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
  * @method string getNationCode() 获取国家（或地区）码。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReplyTime(string $ReplyTime) 设置回复时间（例如：2019-10-08 17:18:37）。
  * @method integer getReplyUnixTime() 获取回复时间，UNIX 时间戳（单位：秒）。
  * @method void setReplyUnixTime(integer $ReplyUnixTime) 设置回复时间，UNIX 时间戳（单位：秒）。
- */
-
-/**
- *短信回复状态
  */
 class PullSmsReplyStatus extends AbstractModel
 {
@@ -73,6 +71,7 @@ class PullSmsReplyStatus extends AbstractModel
      * @var integer 回复时间，UNIX 时间戳（单位：秒）。
      */
     public $ReplyUnixTime;
+
     /**
      * @param string $ExtendCode 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
      * @param string $NationCode 国家（或地区）码。
@@ -86,6 +85,7 @@ class PullSmsReplyStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAttackLogInfo请求参数结构体
+ *
  * @method integer getId() 获取日志ID
  * @method void setId(integer $Id) 设置日志ID
- */
-
-/**
- *DescribeAttackLogInfo请求参数结构体
  */
 class DescribeAttackLogInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeAttackLogInfoRequest extends AbstractModel
      * @var integer 日志ID
      */
     public $Id;
+
     /**
      * @param integer $Id 日志ID
      */
@@ -38,6 +37,7 @@ class DescribeAttackLogInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

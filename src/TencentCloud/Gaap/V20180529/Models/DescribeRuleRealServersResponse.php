@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRuleRealServers返回参数结构体
+ *
  * @method integer getTotalCount() 获取可绑定的源站个数
  * @method void setTotalCount(integer $TotalCount) 设置可绑定的源站个数
  * @method array getRealServerSet() 获取可绑定的源站信息列表
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBindRealServerSet(array $BindRealServerSet) 设置已绑定的源站信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeRuleRealServers返回参数结构体
  */
 class DescribeRuleRealServersResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeRuleRealServersResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 可绑定的源站个数
      * @param array $RealServerSet 可绑定的源站信息列表
@@ -70,6 +69,7 @@ class DescribeRuleRealServersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

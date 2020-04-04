@@ -18,12 +18,10 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVsmAttributes请求参数结构体
+ *
  * @method string getResourceId() 获取资源Id
  * @method void setResourceId(string $ResourceId) 设置资源Id
- */
-
-/**
- *DescribeVsmAttributes请求参数结构体
  */
 class DescribeVsmAttributesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeVsmAttributesRequest extends AbstractModel
      * @var string 资源Id
      */
     public $ResourceId;
+
     /**
      * @param string $ResourceId 资源Id
      */
@@ -38,6 +37,7 @@ class DescribeVsmAttributesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

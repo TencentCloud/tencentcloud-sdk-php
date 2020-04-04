@@ -18,12 +18,10 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteServerlessGroup请求参数结构体
+ *
  * @method string getGroupId() 获取groupId，分组唯一标识
  * @method void setGroupId(string $GroupId) 设置groupId，分组唯一标识
- */
-
-/**
- *DeleteServerlessGroup请求参数结构体
  */
 class DeleteServerlessGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteServerlessGroupRequest extends AbstractModel
      * @var string groupId，分组唯一标识
      */
     public $GroupId;
+
     /**
      * @param string $GroupId groupId，分组唯一标识
      */
@@ -38,6 +37,7 @@ class DeleteServerlessGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

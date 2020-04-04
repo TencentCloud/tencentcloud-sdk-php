@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveTranscodeDetailInfo返回参数结构体
+ *
  * @method array getDataInfoList() 获取统计数据列表。
  * @method void setDataInfoList(array $DataInfoList) 设置统计数据列表。
  * @method integer getPageNum() 获取页码。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalPage(integer $TotalPage) 设置总页数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeLiveTranscodeDetailInfo返回参数结构体
  */
 class DescribeLiveTranscodeDetailInfoResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeLiveTranscodeDetailInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $DataInfoList 统计数据列表。
      * @param integer $PageNum 页码。
@@ -78,6 +77,7 @@ class DescribeLiveTranscodeDetailInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

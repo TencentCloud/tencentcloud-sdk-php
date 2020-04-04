@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateTopicPolicy请求参数结构体
+ *
  * @method string getProductID() 获取产品ID
  * @method void setProductID(string $ProductID) 设置产品ID
  * @method string getTopicName() 获取更新前Topic名
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivilege(integer $Privilege) 设置Topic权限
  * @method BrokerSubscribe getBrokerSubscribe() 获取代理订阅信息
  * @method void setBrokerSubscribe(BrokerSubscribe $BrokerSubscribe) 设置代理订阅信息
- */
-
-/**
- *UpdateTopicPolicy请求参数结构体
  */
 class UpdateTopicPolicyRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class UpdateTopicPolicyRequest extends AbstractModel
      * @var BrokerSubscribe 代理订阅信息
      */
     public $BrokerSubscribe;
+
     /**
      * @param string $ProductID 产品ID
      * @param string $TopicName 更新前Topic名
@@ -70,6 +69,7 @@ class UpdateTopicPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

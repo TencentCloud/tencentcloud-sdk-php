@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNetworkAclEntries请求参数结构体
+ *
  * @method string getNetworkAclId() 获取网络ACL实例ID。例如：acl-12345678。
  * @method void setNetworkAclId(string $NetworkAclId) 设置网络ACL实例ID。例如：acl-12345678。
  * @method NetworkAclEntrySet getNetworkAclEntrySet() 获取网络ACL规则集。
  * @method void setNetworkAclEntrySet(NetworkAclEntrySet $NetworkAclEntrySet) 设置网络ACL规则集。
- */
-
-/**
- *ModifyNetworkAclEntries请求参数结构体
  */
 class ModifyNetworkAclEntriesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyNetworkAclEntriesRequest extends AbstractModel
      * @var NetworkAclEntrySet 网络ACL规则集。
      */
     public $NetworkAclEntrySet;
+
     /**
      * @param string $NetworkAclId 网络ACL实例ID。例如：acl-12345678。
      * @param NetworkAclEntrySet $NetworkAclEntrySet 网络ACL规则集。
@@ -46,6 +45,7 @@ class ModifyNetworkAclEntriesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Ic\V20190307\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeApp请求参数结构体
+ *
  * @method integer getSdkappid() 获取物联卡应用ID
  * @method void setSdkappid(integer $Sdkappid) 设置物联卡应用ID
- */
-
-/**
- *DescribeApp请求参数结构体
  */
 class DescribeAppRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeAppRequest extends AbstractModel
      * @var integer 物联卡应用ID
      */
     public $Sdkappid;
+
     /**
      * @param integer $Sdkappid 物联卡应用ID
      */
@@ -38,6 +37,7 @@ class DescribeAppRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

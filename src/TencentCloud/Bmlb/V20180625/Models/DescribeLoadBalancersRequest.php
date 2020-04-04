@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLoadBalancers请求参数结构体
+ *
  * @method array getLoadBalancerIds() 获取负载均衡器ID数组
  * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置负载均衡器ID数组
  * @method string getLoadBalancerType() 获取负载均衡的类型 : open表示公网LB类型，internal表示内网LB类型
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryType(string $QueryType) 设置'CONFLIST' 查询带confId的LB列表，'CONFID' 查询某个confId绑定的LB列表
  * @method string getConfId() 获取个性化配置ID
  * @method void setConfId(string $ConfId) 设置个性化配置ID
- */
-
-/**
- *DescribeLoadBalancers请求参数结构体
  */
 class DescribeLoadBalancersRequest extends AbstractModel
 {
@@ -136,6 +134,7 @@ class DescribeLoadBalancersRequest extends AbstractModel
      * @var string 个性化配置ID
      */
     public $ConfId;
+
     /**
      * @param array $LoadBalancerIds 负载均衡器ID数组
      * @param string $LoadBalancerType 负载均衡的类型 : open表示公网LB类型，internal表示内网LB类型
@@ -158,6 +157,7 @@ class DescribeLoadBalancersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

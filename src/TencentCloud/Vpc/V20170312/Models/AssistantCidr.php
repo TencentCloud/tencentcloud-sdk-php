@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPC辅助CIDR信息。
+ *
  * @method string getVpcId() 获取`VPC`实例`ID`。形如：`vpc-6v2ht8q5`
  * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。形如：`vpc-6v2ht8q5`
  * @method string getCidrBlock() 获取辅助CIDR。形如：`172.16.0.0/16`
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetSet(array $SubnetSet) 设置辅助CIDR拆分的子网。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *VPC辅助CIDR信息。
  */
 class AssistantCidr extends AbstractModel
 {
@@ -55,6 +53,7 @@ class AssistantCidr extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetSet;
+
     /**
      * @param string $VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
      * @param string $CidrBlock 辅助CIDR。形如：`172.16.0.0/16`
@@ -66,6 +65,7 @@ class AssistantCidr extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

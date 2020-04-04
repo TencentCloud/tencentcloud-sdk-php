@@ -18,6 +18,8 @@ namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeItems请求参数结构体
+ *
  * @method integer getOffset() 获取offset (Default = 0)，(当前页-1) * Limit
  * @method void setOffset(integer $Offset) 设置offset (Default = 0)，(当前页-1) * Limit
  * @method integer getLimit() 获取条数，必须大于0，最大值为30
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCategoryId(string $CategoryId) 设置（电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
  * @method string getCategoryCode() 获取（电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
  * @method void setCategoryCode(string $CategoryCode) 设置（电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
- */
-
-/**
- *DescribeItems请求参数结构体
  */
 class DescribeItemsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeItemsRequest extends AbstractModel
      * @var string （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
      */
     public $CategoryCode;
+
     /**
      * @param integer $Offset offset (Default = 0)，(当前页-1) * Limit
      * @param integer $Limit 条数，必须大于0，最大值为30
@@ -62,6 +61,7 @@ class DescribeItemsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

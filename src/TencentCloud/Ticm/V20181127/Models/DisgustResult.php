@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 恶心识别结果。
+ *
  * @method integer getCode() 获取该识别场景的错误码：
 0表示成功，
 -1表示系统错误，
@@ -38,10 +40,6 @@ REVIEW：疑似
 BLOCK：违规
  * @method integer getConfidence() 获取图像恶心的分数，0-100之间，分数越高恶心几率越大。
  * @method void setConfidence(integer $Confidence) 设置图像恶心的分数，0-100之间，分数越高恶心几率越大。
- */
-
-/**
- *恶心识别结果。
  */
 class DisgustResult extends AbstractModel
 {
@@ -70,6 +68,7 @@ BLOCK：违规
      * @var integer 图像恶心的分数，0-100之间，分数越高恶心几率越大。
      */
     public $Confidence;
+
     /**
      * @param integer $Code 该识别场景的错误码：
 0表示成功，
@@ -86,6 +85,7 @@ BLOCK：违规
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

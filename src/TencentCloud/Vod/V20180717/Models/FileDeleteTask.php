@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文件删除任务
+ *
  * @method array getFileIdSet() 获取删除文件 ID 列表。
  * @method void setFileIdSet(array $FileIdSet) 设置删除文件 ID 列表。
- */
-
-/**
- *文件删除任务
  */
 class FileDeleteTask extends AbstractModel
 {
@@ -31,6 +29,7 @@ class FileDeleteTask extends AbstractModel
      * @var array 删除文件 ID 列表。
      */
     public $FileIdSet;
+
     /**
      * @param array $FileIdSet 删除文件 ID 列表。
      */
@@ -38,6 +37,7 @@ class FileDeleteTask extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

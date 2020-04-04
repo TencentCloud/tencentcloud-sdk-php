@@ -18,16 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音全文识别结果。
+ *
  * @method array getSegmentSet() 获取语音全文识别片段列表。
  * @method void setSegmentSet(array $SegmentSet) 设置语音全文识别片段列表。
  * @method string getSubtitlePath() 获取字幕文件地址。
  * @method void setSubtitlePath(string $SubtitlePath) 设置字幕文件地址。
  * @method TaskOutputStorage getOutputStorage() 获取字幕文件存储位置。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置字幕文件存储位置。
- */
-
-/**
- *语音全文识别结果。
  */
 class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel
      * @var TaskOutputStorage 字幕文件存储位置。
      */
     public $OutputStorage;
+
     /**
      * @param array $SegmentSet 语音全文识别片段列表。
      * @param string $SubtitlePath 字幕文件地址。
@@ -54,6 +53,7 @@ class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

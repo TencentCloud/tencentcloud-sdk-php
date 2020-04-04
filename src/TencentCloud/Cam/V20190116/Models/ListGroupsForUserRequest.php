@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListGroupsForUser请求参数结构体
+ *
  * @method integer getUid() 获取子用户 UID
  * @method void setUid(integer $Uid) 设置子用户 UID
  * @method integer getRp() 获取每页数量。默认为20。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPage(integer $Page) 设置页码。默认为1。
  * @method integer getSubUin() 获取子账号UIN
  * @method void setSubUin(integer $SubUin) 设置子账号UIN
- */
-
-/**
- *ListGroupsForUser请求参数结构体
  */
 class ListGroupsForUserRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ListGroupsForUserRequest extends AbstractModel
      * @var integer 子账号UIN
      */
     public $SubUin;
+
     /**
      * @param integer $Uid 子用户 UID
      * @param integer $Rp 每页数量。默认为20。
@@ -62,6 +61,7 @@ class ListGroupsForUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

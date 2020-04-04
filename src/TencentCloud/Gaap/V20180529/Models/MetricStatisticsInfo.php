@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 单指标的统计数据
+ *
  * @method string getMetricName() 获取指标名称
  * @method void setMetricName(string $MetricName) 设置指标名称
  * @method array getMetricData() 获取指标统计数据
  * @method void setMetricData(array $MetricData) 设置指标统计数据
- */
-
-/**
- *单指标的统计数据
  */
 class MetricStatisticsInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MetricStatisticsInfo extends AbstractModel
      * @var array 指标统计数据
      */
     public $MetricData;
+
     /**
      * @param string $MetricName 指标名称
      * @param array $MetricData 指标统计数据
@@ -46,6 +45,7 @@ class MetricStatisticsInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

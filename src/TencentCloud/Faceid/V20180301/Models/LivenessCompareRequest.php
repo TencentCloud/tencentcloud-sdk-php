@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * LivenessCompare请求参数结构体
+ *
  * @method string getImageBase64() 获取用于人脸比对的照片，图片的BASE64值；
 BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
  * @method void setImageBase64(string $ImageBase64) 设置用于人脸比对的照片，图片的BASE64值；
@@ -38,10 +40,6 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 静默模式传参：空。
  * @method string getOptional() 获取本接口不需要传递此参数。
  * @method void setOptional(string $Optional) 设置本接口不需要传递此参数。
- */
-
-/**
- *LivenessCompare请求参数结构体
  */
 class LivenessCompareRequest extends AbstractModel
 {
@@ -74,6 +72,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
      * @var string 本接口不需要传递此参数。
      */
     public $Optional;
+
     /**
      * @param string $ImageBase64 用于人脸比对的照片，图片的BASE64值；
 BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
@@ -90,6 +89,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

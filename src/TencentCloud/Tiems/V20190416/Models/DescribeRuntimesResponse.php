@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRuntimes返回参数结构体
+ *
  * @method array getRuntimes() 获取TIEMS支持的运行环境列表
  * @method void setRuntimes(array $Runtimes) 设置TIEMS支持的运行环境列表
  * @method integer getUserAccess() 获取用户对runtime对权限
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeRuntimes返回参数结构体
  */
 class DescribeRuntimesResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DescribeRuntimesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Runtimes TIEMS支持的运行环境列表
      * @param integer $UserAccess 用户对runtime对权限
@@ -58,6 +57,7 @@ class DescribeRuntimesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

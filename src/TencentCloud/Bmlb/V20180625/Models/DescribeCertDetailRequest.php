@@ -18,12 +18,10 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCertDetail请求参数结构体
+ *
  * @method string getCertId() 获取证书ID。
  * @method void setCertId(string $CertId) 设置证书ID。
- */
-
-/**
- *DescribeCertDetail请求参数结构体
  */
 class DescribeCertDetailRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeCertDetailRequest extends AbstractModel
      * @var string 证书ID。
      */
     public $CertId;
+
     /**
      * @param string $CertId 证书ID。
      */
@@ -38,6 +37,7 @@ class DescribeCertDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

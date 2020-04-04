@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceRenewInstance请求参数结构体
+ *
  * @method integer getTimeSpan() 获取实例续费的时长。需要结合TimeUnit一起使用。
  * @method void setTimeSpan(integer $TimeSpan) 设置实例续费的时长。需要结合TimeUnit一起使用。
  * @method array getResourceIds() 获取待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr/static/hardware)查询。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 <li>CNY：表示人民币。</li>
  * @method void setCurrency(string $Currency) 设置货币种类。取值范围：
 <li>CNY：表示人民币。</li>
- */
-
-/**
- *InquiryPriceRenewInstance请求参数结构体
  */
 class InquiryPriceRenewInstanceRequest extends AbstractModel
 {
@@ -72,6 +70,7 @@ class InquiryPriceRenewInstanceRequest extends AbstractModel
 <li>CNY：表示人民币。</li>
      */
     public $Currency;
+
     /**
      * @param integer $TimeSpan 实例续费的时长。需要结合TimeUnit一起使用。
      * @param array $ResourceIds 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr/static/hardware)查询。
@@ -86,6 +85,7 @@ class InquiryPriceRenewInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

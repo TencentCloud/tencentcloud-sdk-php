@@ -18,16 +18,14 @@ namespace TencentCloud\Habo\V20181203\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StartAnalyse请求参数结构体
+ *
  * @method string getPk() 获取购买服务后获得的授权帐号，用于保证请求有效性
  * @method void setPk(string $Pk) 设置购买服务后获得的授权帐号，用于保证请求有效性
  * @method string getMd5() 获取样本md5，用于对下载获得的样本完整性进行校验
  * @method void setMd5(string $Md5) 设置样本md5，用于对下载获得的样本完整性进行校验
  * @method string getDlUrl() 获取待分析样本下载地址
  * @method void setDlUrl(string $DlUrl) 设置待分析样本下载地址
- */
-
-/**
- *StartAnalyse请求参数结构体
  */
 class StartAnalyseRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class StartAnalyseRequest extends AbstractModel
      * @var string 待分析样本下载地址
      */
     public $DlUrl;
+
     /**
      * @param string $Pk 购买服务后获得的授权帐号，用于保证请求有效性
      * @param string $Md5 样本md5，用于对下载获得的样本完整性进行校验
@@ -54,6 +53,7 @@ class StartAnalyseRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

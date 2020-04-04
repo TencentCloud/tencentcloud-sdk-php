@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SearchPersons请求参数结构体
+ *
  * @method array getGroupIds() 获取希望搜索的人员库列表，上限100个。
  * @method void setGroupIds(array $GroupIds) 设置希望搜索的人员库列表，上限100个。
  * @method string getImage() 获取图片 base64 数据，base64 编码后大小不可超过5M。
@@ -70,10 +72,6 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
  * @method void setFaceMatchThreshold(float $FaceMatchThreshold) 设置出参Score中，只有大于等于FaceMatchThreshold值的结果才会返回。默认为0。取值范围[0.0,100.0) 。
  * @method integer getNeedPersonInfo() 获取是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
  * @method void setNeedPersonInfo(integer $NeedPersonInfo) 设置是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
- */
-
-/**
- *SearchPersons请求参数结构体
  */
 class SearchPersonsRequest extends AbstractModel
 {
@@ -138,6 +136,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
      * @var integer 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
      */
     public $NeedPersonInfo;
+
     /**
      * @param array $GroupIds 希望搜索的人员库列表，上限100个。
      * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。
@@ -170,6 +169,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePullStreamConfig请求参数结构体
+ *
  * @method string getFromUrl() 获取源 Url ，用于拉流的地址。目前可支持直播流及点播文件。
 注意：
 1. 多个点播url之间使用空格拼接。
@@ -77,10 +79,6 @@ use TencentCloud\Common\AbstractModel;
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  */
-
-/**
- *CreatePullStreamConfig请求参数结构体
- */
 class CreatePullStreamConfigRequest extends AbstractModel
 {
     /**
@@ -135,6 +133,7 @@ class CreatePullStreamConfigRequest extends AbstractModel
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $EndTime;
+
     /**
      * @param string $FromUrl 源 Url ，用于拉流的地址。目前可支持直播流及点播文件。
 注意：
@@ -170,6 +169,7 @@ class CreatePullStreamConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

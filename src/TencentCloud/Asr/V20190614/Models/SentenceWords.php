@@ -18,6 +18,8 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 识别结果中词文本，以及对应时间偏移
+ *
  * @method string getWord() 获取词文本
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWord(string $Word) 设置词文本
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffsetEndMs(integer $OffsetEndMs) 设置在句子中的结束时间偏移量
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *识别结果中词文本，以及对应时间偏移
  */
 class SentenceWords extends AbstractModel
 {
@@ -54,6 +52,7 @@ class SentenceWords extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OffsetEndMs;
+
     /**
      * @param string $Word 词文本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class SentenceWords extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 运行失败的自定义脚本信息
+ *
  * @method string getInstanceId() 获取运行脚本的设备ID
  * @method void setInstanceId(string $InstanceId) 设置运行脚本的设备ID
  * @method string getErrorMsg() 获取失败原因
  * @method void setErrorMsg(string $ErrorMsg) 设置失败原因
- */
-
-/**
- *运行失败的自定义脚本信息
  */
 class FailedTaskInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class FailedTaskInfo extends AbstractModel
      * @var string 失败原因
      */
     public $ErrorMsg;
+
     /**
      * @param string $InstanceId 运行脚本的设备ID
      * @param string $ErrorMsg 失败原因
@@ -46,6 +45,7 @@ class FailedTaskInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

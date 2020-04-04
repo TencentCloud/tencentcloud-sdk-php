@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全组对象
+ *
  * @method string getSecurityGroupId() 获取安全组实例ID，例如：sg-ohuuioma。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如：sg-ohuuioma。
  * @method string getSecurityGroupName() 获取安全组名称，可任意命名，但不得超过60个字符。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置安全组创建时间。
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
- */
-
-/**
- *安全组对象
  */
 class SecurityGroup extends AbstractModel
 {
@@ -73,6 +71,7 @@ class SecurityGroup extends AbstractModel
      * @var array 标签键值对。
      */
     public $TagSet;
+
     /**
      * @param string $SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
      * @param string $SecurityGroupName 安全组名称，可任意命名，但不得超过60个字符。
@@ -86,6 +85,7 @@ class SecurityGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

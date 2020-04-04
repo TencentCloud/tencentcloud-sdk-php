@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateServiceTemplate请求参数结构体
+ *
  * @method string getServiceTemplateName() 获取协议端口模板名称
  * @method void setServiceTemplateName(string $ServiceTemplateName) 设置协议端口模板名称
  * @method array getServices() 获取支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
  * @method void setServices(array $Services) 设置支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
- */
-
-/**
- *CreateServiceTemplate请求参数结构体
  */
 class CreateServiceTemplateRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateServiceTemplateRequest extends AbstractModel
      * @var array 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
      */
     public $Services;
+
     /**
      * @param string $ServiceTemplateName 协议端口模板名称
      * @param array $Services 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
@@ -46,6 +45,7 @@ class CreateServiceTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

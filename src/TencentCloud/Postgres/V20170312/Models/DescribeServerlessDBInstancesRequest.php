@@ -18,16 +18,14 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeServerlessDBInstances请求参数结构体
+ *
  * @method array getFilter() 获取查询条件
  * @method void setFilter(array $Filter) 设置查询条件
  * @method integer getLimit() 获取查询个数
  * @method void setLimit(integer $Limit) 设置查询个数
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
- */
-
-/**
- *DescribeServerlessDBInstances请求参数结构体
  */
 class DescribeServerlessDBInstancesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeServerlessDBInstancesRequest extends AbstractModel
      * @var integer 偏移量
      */
     public $Offset;
+
     /**
      * @param array $Filter 查询条件
      * @param integer $Limit 查询个数
@@ -54,6 +53,7 @@ class DescribeServerlessDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

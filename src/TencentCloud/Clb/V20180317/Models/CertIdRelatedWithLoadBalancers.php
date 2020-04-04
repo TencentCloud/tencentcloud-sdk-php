@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 证书ID，以及与该证书ID关联的负载均衡实例列表
+ *
  * @method string getCertId() 获取证书ID
  * @method void setCertId(string $CertId) 设置证书ID
  * @method array getLoadBalancers() 获取与证书关联的负载均衡实例列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalancers(array $LoadBalancers) 设置与证书关联的负载均衡实例列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *证书ID，以及与该证书ID关联的负载均衡实例列表
  */
 class CertIdRelatedWithLoadBalancers extends AbstractModel
 {
@@ -41,6 +39,7 @@ class CertIdRelatedWithLoadBalancers extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadBalancers;
+
     /**
      * @param string $CertId 证书ID
      * @param array $LoadBalancers 与证书关联的负载均衡实例列表
@@ -50,6 +49,7 @@ class CertIdRelatedWithLoadBalancers extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

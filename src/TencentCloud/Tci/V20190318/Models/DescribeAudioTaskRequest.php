@@ -18,16 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAudioTask请求参数结构体
+ *
  * @method integer getJobId() 获取音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
  * @method void setJobId(integer $JobId) 设置音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
  * @method integer getLimit() 获取限制数目
  * @method void setLimit(integer $Limit) 设置限制数目
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
- */
-
-/**
- *DescribeAudioTask请求参数结构体
  */
 class DescribeAudioTaskRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAudioTaskRequest extends AbstractModel
      * @var integer 偏移量
      */
     public $Offset;
+
     /**
      * @param integer $JobId 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      * @param integer $Limit 限制数目
@@ -54,6 +53,7 @@ class DescribeAudioTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

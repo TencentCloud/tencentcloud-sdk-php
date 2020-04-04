@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 微服务实例的分页内容
+ *
  * @method integer getTotalCount() 获取微服务实例总数目
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置微服务实例总数目
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置微服务实例列表内容
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *微服务实例的分页内容
  */
 class TsfPageMsInstance extends AbstractModel
 {
@@ -44,6 +42,7 @@ class TsfPageMsInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
+
     /**
      * @param integer $TotalCount 微服务实例总数目
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class TsfPageMsInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

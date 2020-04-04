@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPN网关对象。
+ *
  * @method string getVpnGatewayId() 获取网关实例ID。
  * @method void setVpnGatewayId(string $VpnGatewayId) 设置网关实例ID。
  * @method string getVpcId() 获取VPC实例ID。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区，如：ap-guangzhou
  * @method integer getVpnConnNum() 获取VPN网关的通道数
  * @method void setVpnConnNum(integer $VpnConnNum) 设置VPN网关的通道数
- */
-
-/**
- *VPN网关对象。
  */
 class VpnGateway extends AbstractModel
 {
@@ -101,6 +99,7 @@ class VpnGateway extends AbstractModel
      * @var integer VPN网关的通道数
      */
     public $VpnConnNum;
+
     /**
      * @param string $VpnGatewayId 网关实例ID。
      * @param string $VpcId VPC实例ID。
@@ -118,6 +117,7 @@ class VpnGateway extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

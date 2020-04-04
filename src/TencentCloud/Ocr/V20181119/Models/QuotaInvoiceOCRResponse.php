@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * QuotaInvoiceOCR返回参数结构体
+ *
  * @method string getInvoiceNum() 获取发票号码
  * @method void setInvoiceNum(string $InvoiceNum) 设置发票号码
  * @method string getInvoiceCode() 获取发票代码
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *QuotaInvoiceOCR返回参数结构体
  */
 class QuotaInvoiceOCRResponse extends AbstractModel
 {
@@ -96,6 +94,7 @@ class QuotaInvoiceOCRResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $InvoiceNum 发票号码
      * @param string $InvoiceCode 发票代码
@@ -114,6 +113,7 @@ class QuotaInvoiceOCRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

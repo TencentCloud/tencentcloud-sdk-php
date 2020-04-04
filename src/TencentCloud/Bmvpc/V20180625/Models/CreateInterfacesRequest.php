@@ -18,16 +18,14 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateInterfaces请求参数结构体
+ *
  * @method array getInstanceIds() 获取物理机实例ID列表
  * @method void setInstanceIds(array $InstanceIds) 设置物理机实例ID列表
  * @method string getVpcId() 获取私有网络ID
  * @method void setVpcId(string $VpcId) 设置私有网络ID
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
- */
-
-/**
- *CreateInterfaces请求参数结构体
  */
 class CreateInterfacesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateInterfacesRequest extends AbstractModel
      * @var string 子网ID
      */
     public $SubnetId;
+
     /**
      * @param array $InstanceIds 物理机实例ID列表
      * @param string $VpcId 私有网络ID
@@ -54,6 +53,7 @@ class CreateInterfacesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

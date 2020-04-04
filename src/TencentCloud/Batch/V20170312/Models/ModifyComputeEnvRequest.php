@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyComputeEnv请求参数结构体
+ *
  * @method string getEnvId() 获取计算环境ID
  * @method void setEnvId(string $EnvId) 设置计算环境ID
  * @method integer getDesiredComputeNodeCount() 获取计算节点期望个数
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvDescription(string $EnvDescription) 设置计算环境描述
  * @method ComputeEnvData getEnvData() 获取计算环境属性数据
  * @method void setEnvData(ComputeEnvData $EnvData) 设置计算环境属性数据
- */
-
-/**
- *ModifyComputeEnv请求参数结构体
  */
 class ModifyComputeEnvRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyComputeEnvRequest extends AbstractModel
      * @var ComputeEnvData 计算环境属性数据
      */
     public $EnvData;
+
     /**
      * @param string $EnvId 计算环境ID
      * @param integer $DesiredComputeNodeCount 计算节点期望个数
@@ -70,6 +69,7 @@ class ModifyComputeEnvRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

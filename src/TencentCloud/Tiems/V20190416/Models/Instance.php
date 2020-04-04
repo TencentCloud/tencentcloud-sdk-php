@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 节点
+ *
  * @method string getId() 获取节点 ID
  * @method void setId(string $Id) 设置节点 ID
  * @method string getZone() 获取节点所在地区
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGpuRequested(integer $GpuRequested) 设置当前 Gpu 申请使用量
  * @method string getRsgAsGroupId() 获取节点所在伸缩组 ID
  * @method void setRsgAsGroupId(string $RsgAsGroupId) 设置节点所在伸缩组 ID
- */
-
-/**
- *节点
  */
 class Instance extends AbstractModel
 {
@@ -157,6 +155,7 @@ class Instance extends AbstractModel
      * @var string 节点所在伸缩组 ID
      */
     public $RsgAsGroupId;
+
     /**
      * @param string $Id 节点 ID
      * @param string $Zone 节点所在地区
@@ -182,6 +181,7 @@ class Instance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

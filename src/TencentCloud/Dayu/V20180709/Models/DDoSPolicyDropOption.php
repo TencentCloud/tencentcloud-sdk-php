@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DDoS高级策略的禁用协议选项
+ *
  * @method integer getDropTcp() 获取禁用TCP协议，取值范围[0,1]
  * @method void setDropTcp(integer $DropTcp) 设置禁用TCP协议，取值范围[0,1]
  * @method integer getDropUdp() 获取禁用UDP协议，取值范围[0,1]
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDIcmpMbpsLimit(integer $DIcmpMbpsLimit) 设置icmp限速，取值范围[0,4294967295]
  * @method integer getDOtherMbpsLimit() 获取other协议限速，取值范围[0,4294967295]
  * @method void setDOtherMbpsLimit(integer $DOtherMbpsLimit) 设置other协议限速，取值范围[0,4294967295]
- */
-
-/**
- *DDoS高级策略的禁用协议选项
  */
 class DDoSPolicyDropOption extends AbstractModel
 {
@@ -157,6 +155,7 @@ class DDoSPolicyDropOption extends AbstractModel
      * @var integer other协议限速，取值范围[0,4294967295]
      */
     public $DOtherMbpsLimit;
+
     /**
      * @param integer $DropTcp 禁用TCP协议，取值范围[0,1]
      * @param integer $DropUdp 禁用UDP协议，取值范围[0,1]
@@ -182,6 +181,7 @@ class DDoSPolicyDropOption extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

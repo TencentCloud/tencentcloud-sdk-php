@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDevices请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method integer getNumber() 获取创建设备的数量，数量范围1-100
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamePrefix(string $NamePrefix) 设置设备名称前缀，支持英文、数字，不超过10字符
  * @method string getOperator() 获取操作人
  * @method void setOperator(string $Operator) 设置操作人
- */
-
-/**
- *CreateDevices请求参数结构体
  */
 class CreateDevicesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateDevicesRequest extends AbstractModel
      * @var string 操作人
      */
     public $Operator;
+
     /**
      * @param string $ProductId 产品ID
      * @param integer $Number 创建设备的数量，数量范围1-100
@@ -62,6 +61,7 @@ class CreateDevicesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

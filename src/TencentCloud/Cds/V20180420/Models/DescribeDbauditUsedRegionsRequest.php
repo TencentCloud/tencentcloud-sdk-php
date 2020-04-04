@@ -18,14 +18,13 @@ namespace TencentCloud\Cds\V20180420\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDbauditUsedRegions请求参数结构体
+ *
 
- */
-
-/**
- *DescribeDbauditUsedRegions请求参数结构体
  */
 class DescribeDbauditUsedRegionsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeDbauditUsedRegionsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

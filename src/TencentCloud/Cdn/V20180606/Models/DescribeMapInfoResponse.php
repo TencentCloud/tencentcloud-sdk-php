@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMapInfo返回参数结构体
+ *
  * @method array getMapInfoList() 获取映射关系数组。
  * @method void setMapInfoList(array $MapInfoList) 设置映射关系数组。
  * @method array getServerRegionRelation() 获取服务端区域id和子区域id的映射关系。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeMapInfo返回参数结构体
  */
 class DescribeMapInfoResponse extends AbstractModel
 {
@@ -58,6 +56,7 @@ class DescribeMapInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $MapInfoList 映射关系数组。
      * @param array $ServerRegionRelation 服务端区域id和子区域id的映射关系。
@@ -70,6 +69,7 @@ class DescribeMapInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

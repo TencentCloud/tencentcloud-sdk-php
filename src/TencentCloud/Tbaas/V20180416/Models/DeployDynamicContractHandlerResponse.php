@@ -18,14 +18,12 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeployDynamicContractHandler返回参数结构体
+ *
  * @method string getContractAddress() 获取部署成功返回的合约地址
  * @method void setContractAddress(string $ContractAddress) 设置部署成功返回的合约地址
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DeployDynamicContractHandler返回参数结构体
  */
 class DeployDynamicContractHandlerResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeployDynamicContractHandlerResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $ContractAddress 部署成功返回的合约地址
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DeployDynamicContractHandlerResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

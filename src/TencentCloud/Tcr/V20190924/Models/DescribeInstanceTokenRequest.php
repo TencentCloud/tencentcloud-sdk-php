@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceToken请求参数结构体
+ *
  * @method string getRegistryId() 获取实例 ID
  * @method void setRegistryId(string $RegistryId) 设置实例 ID
  * @method integer getLimit() 获取分页单页数量
  * @method void setLimit(integer $Limit) 设置分页单页数量
  * @method integer getOffset() 获取分页偏移量
  * @method void setOffset(integer $Offset) 设置分页偏移量
- */
-
-/**
- *DescribeInstanceToken请求参数结构体
  */
 class DescribeInstanceTokenRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeInstanceTokenRequest extends AbstractModel
      * @var integer 分页偏移量
      */
     public $Offset;
+
     /**
      * @param string $RegistryId 实例 ID
      * @param integer $Limit 分页单页数量
@@ -54,6 +53,7 @@ class DescribeInstanceTokenRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

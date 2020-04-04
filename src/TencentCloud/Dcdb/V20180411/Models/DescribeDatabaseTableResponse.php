@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDatabaseTable返回参数结构体
+ *
  * @method string getInstanceId() 获取实例名称。
  * @method void setInstanceId(string $InstanceId) 设置实例名称。
  * @method string getDbName() 获取数据库名称。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCols(array $Cols) 设置列信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDatabaseTable返回参数结构体
  */
 class DescribeDatabaseTableResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeDatabaseTableResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $InstanceId 实例名称。
      * @param string $DbName 数据库名称。
@@ -70,6 +69,7 @@ class DescribeDatabaseTableResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

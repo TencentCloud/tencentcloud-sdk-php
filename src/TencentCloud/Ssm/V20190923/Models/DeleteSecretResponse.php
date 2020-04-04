@@ -18,16 +18,14 @@ namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteSecret返回参数结构体
+ *
  * @method string getSecretName() 获取指定删除的凭据名称。
  * @method void setSecretName(string $SecretName) 设置指定删除的凭据名称。
  * @method integer getDeleteTime() 获取凭据删除的日期，unix时间戳。
  * @method void setDeleteTime(integer $DeleteTime) 设置凭据删除的日期，unix时间戳。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DeleteSecret返回参数结构体
  */
 class DeleteSecretResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteSecretResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $SecretName 指定删除的凭据名称。
      * @param integer $DeleteTime 凭据删除的日期，unix时间戳。
@@ -54,6 +53,7 @@ class DeleteSecretResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

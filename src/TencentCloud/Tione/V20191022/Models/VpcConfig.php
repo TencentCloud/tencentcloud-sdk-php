@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPC配置
+ *
  * @method array getSecurityGroupIds() 获取安全组id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组id
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网id
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *VPC配置
  */
 class VpcConfig extends AbstractModel
 {
@@ -44,6 +42,7 @@ class VpcConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
+
     /**
      * @param array $SecurityGroupIds 安全组id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class VpcConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

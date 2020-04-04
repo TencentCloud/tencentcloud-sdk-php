@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 主题详情
+ *
  * @method string getTopicName() 获取主题名称
  * @method void setTopicName(string $TopicName) 设置主题名称
  * @method string getTopicId() 获取主题ID
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfig(Config $Config) 设置高级配置
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *主题详情
  */
 class TopicDetail extends AbstractModel
 {
@@ -117,6 +115,7 @@ class TopicDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Config;
+
     /**
      * @param string $TopicName 主题名称
      * @param string $TopicId 主题ID
@@ -138,6 +137,7 @@ class TopicDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

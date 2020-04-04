@@ -18,16 +18,14 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 门店客流量列表信息
+ *
  * @method string getDate() 获取日期
  * @method void setDate(string $Date) 设置日期
  * @method integer getDayTrafficTotalCount() 获取客流量
  * @method void setDayTrafficTotalCount(integer $DayTrafficTotalCount) 设置客流量
  * @method array getGenderAgeTrafficDetailSet() 获取性别年龄分组下的客流信息
  * @method void setGenderAgeTrafficDetailSet(array $GenderAgeTrafficDetailSet) 设置性别年龄分组下的客流信息
- */
-
-/**
- *门店客流量列表信息
  */
 class ShopDayTrafficInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ShopDayTrafficInfo extends AbstractModel
      * @var array 性别年龄分组下的客流信息
      */
     public $GenderAgeTrafficDetailSet;
+
     /**
      * @param string $Date 日期
      * @param integer $DayTrafficTotalCount 客流量
@@ -54,6 +53,7 @@ class ShopDayTrafficInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

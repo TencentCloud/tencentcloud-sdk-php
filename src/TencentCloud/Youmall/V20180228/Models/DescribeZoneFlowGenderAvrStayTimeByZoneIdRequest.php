@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeZoneFlowGenderAvrStayTimeByZoneId请求参数结构体
+ *
  * @method string getCompanyId() 获取集团ID
  * @method void setCompanyId(string $CompanyId) 设置集团ID
  * @method integer getShopId() 获取店铺ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartDate(string $StartDate) 设置开始日期，格式yyyy-MM-dd
  * @method string getEndDate() 获取结束日期，格式yyyy-MM-dd
  * @method void setEndDate(string $EndDate) 设置结束日期，格式yyyy-MM-dd
- */
-
-/**
- *DescribeZoneFlowGenderAvrStayTimeByZoneId请求参数结构体
  */
 class DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest extends AbstractModel
      * @var string 结束日期，格式yyyy-MM-dd
      */
     public $EndDate;
+
     /**
      * @param string $CompanyId 集团ID
      * @param integer $ShopId 店铺ID
@@ -70,6 +69,7 @@ class DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 素材基础信息。
+ *
  * @method string getName() 获取素材名称。
  * @method void setName(string $Name) 设置素材名称。
  * @method string getDescription() 获取描述信息。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVodFileId(string $VodFileId) 设置云点播媒资 FileId。
  * @method string getCreateTime() 获取创建时间，格式按照 ISO 8601 标准表示。
  * @method void setCreateTime(string $CreateTime) 设置创建时间，格式按照 ISO 8601 标准表示。
- */
-
-/**
- *素材基础信息。
  */
 class MaterialBaseInfo extends AbstractModel
 {
@@ -87,6 +85,7 @@ class MaterialBaseInfo extends AbstractModel
      * @var string 创建时间，格式按照 ISO 8601 标准表示。
      */
     public $CreateTime;
+
     /**
      * @param string $Name 素材名称。
      * @param string $Description 描述信息。
@@ -102,6 +101,7 @@ class MaterialBaseInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

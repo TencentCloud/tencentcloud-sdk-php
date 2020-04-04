@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeIpVisit请求参数结构体
+ *
  * @method string getStartTime() 获取查询起始时间，如：2018-09-04 10:40:10，返回结果大于等于指定时间
 根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:10 在按 5 分钟的时间粒度查询时，返回的第一个数据对应时间点为 2018-09-04 10:40:00
  * @method void setStartTime(string $StartTime) 设置查询起始时间，如：2018-09-04 10:40:10，返回结果大于等于指定时间
@@ -38,10 +40,6 @@ day：天粒度，查询时间区间大于 1 天时，默认返回天粒度活�
  * @method void setInterval(string $Interval) 设置时间粒度，支持以下几种模式：
 5min：5 分钟粒度，查询时间区间 24 小时内，默认返回 5 分钟粒度活跃用户数
 day：天粒度，查询时间区间大于 1 天时，默认返回天粒度活跃用户数
- */
-
-/**
- *DescribeIpVisit请求参数结构体
  */
 class DescribeIpVisitRequest extends AbstractModel
 {
@@ -74,6 +72,7 @@ class DescribeIpVisitRequest extends AbstractModel
 day：天粒度，查询时间区间大于 1 天时，默认返回天粒度活跃用户数
      */
     public $Interval;
+
     /**
      * @param string $StartTime 查询起始时间，如：2018-09-04 10:40:10，返回结果大于等于指定时间
 根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:10 在按 5 分钟的时间粒度查询时，返回的第一个数据对应时间点为 2018-09-04 10:40:00
@@ -90,6 +89,7 @@ day：天粒度，查询时间区间大于 1 天时，默认返回天粒度活�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

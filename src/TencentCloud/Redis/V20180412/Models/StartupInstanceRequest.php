@@ -18,12 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StartupInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取实例id
  * @method void setInstanceId(string $InstanceId) 设置实例id
- */
-
-/**
- *StartupInstance请求参数结构体
  */
 class StartupInstanceRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class StartupInstanceRequest extends AbstractModel
      * @var string 实例id
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 实例id
      */
@@ -38,6 +37,7 @@ class StartupInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

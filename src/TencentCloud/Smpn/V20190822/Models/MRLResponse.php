@@ -18,6 +18,8 @@ namespace TencentCloud\Smpn\V20190822\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 号码恶意标记等级
+ *
  * @method integer getDisturbLevel() 获取骚扰电话恶意标记等级
  * @method void setDisturbLevel(integer $DisturbLevel) 设置骚扰电话恶意标记等级
  * @method integer getHouseAgentLevel() 获取房产中介恶意标记等级
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSalesLevel(integer $SalesLevel) 设置广告推销恶意标记等级
  * @method integer getCheatLevel() 获取诈骗电话恶意标记等级
  * @method void setCheatLevel(integer $CheatLevel) 设置诈骗电话恶意标记等级
- */
-
-/**
- *号码恶意标记等级
  */
 class MRLResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class MRLResponse extends AbstractModel
      * @var integer 诈骗电话恶意标记等级
      */
     public $CheatLevel;
+
     /**
      * @param integer $DisturbLevel 骚扰电话恶意标记等级
      * @param integer $HouseAgentLevel 房产中介恶意标记等级
@@ -70,6 +69,7 @@ class MRLResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeL7ListenerInfo请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method string getSearchKey() 获取查找的键值，可用于模糊查找有该转发域名的监听器。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) 设置主机ID或虚机IP列表，可用于获取绑定了该主机的监听器。
  * @method integer getIfGetBackendInfo() 获取是否获取转发规则下的主机信息。默认为0，不获取。
  * @method void setIfGetBackendInfo(integer $IfGetBackendInfo) 设置是否获取转发规则下的主机信息。默认为0，不获取。
- */
-
-/**
- *DescribeL7ListenerInfo请求参数结构体
  */
 class DescribeL7ListenerInfoRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeL7ListenerInfoRequest extends AbstractModel
      * @var integer 是否获取转发规则下的主机信息。默认为0，不获取。
      */
     public $IfGetBackendInfo;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param string $SearchKey 查找的键值，可用于模糊查找有该转发域名的监听器。
@@ -62,6 +61,7 @@ class DescribeL7ListenerInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

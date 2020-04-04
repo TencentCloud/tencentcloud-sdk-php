@@ -18,16 +18,14 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDBInstanceHour返回参数结构体
+ *
  * @method string getDealId() 获取订单ID
  * @method void setDealId(string $DealId) 设置订单ID
  * @method array getInstanceIds() 获取创建的实例ID列表
  * @method void setInstanceIds(array $InstanceIds) 设置创建的实例ID列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateDBInstanceHour返回参数结构体
  */
 class CreateDBInstanceHourResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateDBInstanceHourResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $DealId 订单ID
      * @param array $InstanceIds 创建的实例ID列表
@@ -54,6 +53,7 @@ class CreateDBInstanceHourResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

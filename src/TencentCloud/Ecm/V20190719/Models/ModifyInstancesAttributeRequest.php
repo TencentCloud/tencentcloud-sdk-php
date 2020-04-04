@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyInstancesAttribute请求参数结构体
+ *
  * @method array getInstanceIdSet() 获取待修改的实例ID列表。在单次请求的过程中，请求实例数上限为100。
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置待修改的实例ID列表。在单次请求的过程中，请求实例数上限为100。
  * @method string getInstanceName() 获取修改成功后显示的实例名称，不得超过60个字符，不传则名称显示为空。
  * @method void setInstanceName(string $InstanceName) 设置修改成功后显示的实例名称，不得超过60个字符，不传则名称显示为空。
- */
-
-/**
- *ModifyInstancesAttribute请求参数结构体
  */
 class ModifyInstancesAttributeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyInstancesAttributeRequest extends AbstractModel
      * @var string 修改成功后显示的实例名称，不得超过60个字符，不传则名称显示为空。
      */
     public $InstanceName;
+
     /**
      * @param array $InstanceIdSet 待修改的实例ID列表。在单次请求的过程中，请求实例数上限为100。
      * @param string $InstanceName 修改成功后显示的实例名称，不得超过60个字符，不传则名称显示为空。
@@ -46,6 +45,7 @@ class ModifyInstancesAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

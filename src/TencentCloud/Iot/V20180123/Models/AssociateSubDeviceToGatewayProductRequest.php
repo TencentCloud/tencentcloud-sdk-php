@@ -18,14 +18,12 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AssociateSubDeviceToGatewayProduct请求参数结构体
+ *
  * @method string getSubDeviceProductId() 获取子设备产品Id
  * @method void setSubDeviceProductId(string $SubDeviceProductId) 设置子设备产品Id
  * @method string getGatewayProductId() 获取网关产品Id
  * @method void setGatewayProductId(string $GatewayProductId) 设置网关产品Id
- */
-
-/**
- *AssociateSubDeviceToGatewayProduct请求参数结构体
  */
 class AssociateSubDeviceToGatewayProductRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AssociateSubDeviceToGatewayProductRequest extends AbstractModel
      * @var string 网关产品Id
      */
     public $GatewayProductId;
+
     /**
      * @param string $SubDeviceProductId 子设备产品Id
      * @param string $GatewayProductId 网关产品Id
@@ -46,6 +45,7 @@ class AssociateSubDeviceToGatewayProductRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

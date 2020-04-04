@@ -18,12 +18,10 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CloseDBExtranetAccess请求参数结构体
+ *
  * @method string getInstanceId() 获取待关闭外网访问的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置待关闭外网访问的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
- */
-
-/**
- *CloseDBExtranetAccess请求参数结构体
  */
 class CloseDBExtranetAccessRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CloseDBExtranetAccessRequest extends AbstractModel
      * @var string 待关闭外网访问的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 待关闭外网访问的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
@@ -38,6 +37,7 @@ class CloseDBExtranetAccessRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述实例机型配额信息。
+ *
  * @method string getZone() 获取可用区。
  * @method void setZone(string $Zone) 设置可用区。
  * @method string getInstanceType() 获取实例机型。
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSoldOutReason(string $SoldOutReason) 设置售罄原因。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *描述实例机型配额信息。
  */
 class InstanceTypeQuotaItem extends AbstractModel
 {
@@ -121,6 +119,7 @@ class InstanceTypeQuotaItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SoldOutReason;
+
     /**
      * @param string $Zone 可用区。
      * @param string $InstanceType 实例机型。
@@ -142,6 +141,7 @@ class InstanceTypeQuotaItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

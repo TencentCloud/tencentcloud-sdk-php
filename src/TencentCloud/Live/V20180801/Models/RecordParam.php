@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 录制模板参数
+ *
  * @method integer getRecordInterval() 获取录制间隔。
 单位秒，默认值1800。
 取值范围:300-7200。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(integer $Enable) 设置是否开启当前格式录制，0 否 1是。默认值0。
  * @method integer getVodSubAppId() 获取点播子应用ID。
  * @method void setVodSubAppId(integer $VodSubAppId) 设置点播子应用ID。
- */
-
-/**
- *录制模板参数
  */
 class RecordParam extends AbstractModel
 {
@@ -67,6 +65,7 @@ class RecordParam extends AbstractModel
      * @var integer 点播子应用ID。
      */
     public $VodSubAppId;
+
     /**
      * @param integer $RecordInterval 录制间隔。
 单位秒，默认值1800。
@@ -82,6 +81,7 @@ class RecordParam extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

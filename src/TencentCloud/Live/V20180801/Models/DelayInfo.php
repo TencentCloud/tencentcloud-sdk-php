@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 延播信息
+ *
  * @method string getDomainName() 获取推流域名。
  * @method void setDomainName(string $DomainName) 设置推流域名。
  * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置当前状态，
 -1：已过期，
 1： 生效中。
- */
-
-/**
- *延播信息
  */
 class DelayInfo extends AbstractModel
 {
@@ -91,6 +89,7 @@ class DelayInfo extends AbstractModel
 1： 生效中。
      */
     public $Status;
+
     /**
      * @param string $DomainName 推流域名。
      * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
@@ -110,6 +109,7 @@ class DelayInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

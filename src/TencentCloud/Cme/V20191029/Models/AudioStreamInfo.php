@@ -18,16 +18,14 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 音频流信息。
+ *
  * @method integer getBitrate() 获取码率，单位：bps。
  * @method void setBitrate(integer $Bitrate) 设置码率，单位：bps。
  * @method integer getSamplingRate() 获取采样率，单位：hz。
  * @method void setSamplingRate(integer $SamplingRate) 设置采样率，单位：hz。
  * @method string getCodec() 获取编码格式。
  * @method void setCodec(string $Codec) 设置编码格式。
- */
-
-/**
- *音频流信息。
  */
 class AudioStreamInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AudioStreamInfo extends AbstractModel
      * @var string 编码格式。
      */
     public $Codec;
+
     /**
      * @param integer $Bitrate 码率，单位：bps。
      * @param integer $SamplingRate 采样率，单位：hz。
@@ -54,6 +53,7 @@ class AudioStreamInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

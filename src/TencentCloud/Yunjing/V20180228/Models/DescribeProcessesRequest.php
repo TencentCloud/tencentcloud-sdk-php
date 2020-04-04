@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProcesses请求参数结构体
+ *
  * @method string getUuid() 获取云镜客户端唯一Uuid。Uuid和ProcessName必填其一，使用Uuid表示，查询该主机列表信息。
  * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid。Uuid和ProcessName必填其一，使用Uuid表示，查询该主机列表信息。
  * @method string getProcessName() 获取进程名。Uuid和ProcessName必填其一，使用ProcessName表示，查询该进程列表信息。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>ProcessName - String - 是否必填：否 - 进程名</li>
 <li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
- */
-
-/**
- *DescribeProcesses请求参数结构体
  */
 class DescribeProcessesRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ class DescribeProcessesRequest extends AbstractModel
 <li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
      */
     public $Filters;
+
     /**
      * @param string $Uuid 云镜客户端唯一Uuid。Uuid和ProcessName必填其一，使用Uuid表示，查询该主机列表信息。
      * @param string $ProcessName 进程名。Uuid和ProcessName必填其一，使用ProcessName表示，查询该进程列表信息。
@@ -78,6 +77,7 @@ class DescribeProcessesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

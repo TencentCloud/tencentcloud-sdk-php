@@ -18,14 +18,12 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyCertificateAlias请求参数结构体
+ *
  * @method string getCertificateId() 获取证书 ID。
  * @method void setCertificateId(string $CertificateId) 设置证书 ID。
  * @method string getAlias() 获取备注名称。
  * @method void setAlias(string $Alias) 设置备注名称。
- */
-
-/**
- *ModifyCertificateAlias请求参数结构体
  */
 class ModifyCertificateAliasRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyCertificateAliasRequest extends AbstractModel
      * @var string 备注名称。
      */
     public $Alias;
+
     /**
      * @param string $CertificateId 证书 ID。
      * @param string $Alias 备注名称。
@@ -46,6 +45,7 @@ class ModifyCertificateAliasRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

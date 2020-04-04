@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 地域信息
+ *
  * @method string getRegionId() 获取地域ID
  * @method void setRegionId(string $RegionId) 设置地域ID
  * @method string getRegionName() 获取地域名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArea(string $Area) 设置地域所在大区名称
  * @method array getZoneSet() 获取可用区信息
  * @method void setZoneSet(array $ZoneSet) 设置可用区信息
- */
-
-/**
- *地域信息
  */
 class RegionConf extends AbstractModel
 {
@@ -59,6 +57,7 @@ class RegionConf extends AbstractModel
      * @var array 可用区信息
      */
     public $ZoneSet;
+
     /**
      * @param string $RegionId 地域ID
      * @param string $RegionName 地域名称
@@ -70,6 +69,7 @@ class RegionConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

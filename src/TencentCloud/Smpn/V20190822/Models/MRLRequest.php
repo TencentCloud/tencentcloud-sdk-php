@@ -18,12 +18,10 @@ namespace TencentCloud\Smpn\V20190822\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 号码恶意标记等级请求
+ *
  * @method string getPhoneNumber() 获取电话号码
  * @method void setPhoneNumber(string $PhoneNumber) 设置电话号码
- */
-
-/**
- *号码恶意标记等级请求
  */
 class MRLRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class MRLRequest extends AbstractModel
      * @var string 电话号码
      */
     public $PhoneNumber;
+
     /**
      * @param string $PhoneNumber 电话号码
      */
@@ -38,6 +37,7 @@ class MRLRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

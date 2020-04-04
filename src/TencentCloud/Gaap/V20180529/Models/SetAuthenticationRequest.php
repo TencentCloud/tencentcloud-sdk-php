@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetAuthentication请求参数结构体
+ *
  * @method string getListenerId() 获取监听器ID。
  * @method void setListenerId(string $ListenerId) 设置监听器ID。
  * @method string getDomain() 获取需要进行高级配置的域名，该域名为监听器下的转发规则的域名。
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerCertificateDomain(string $RealServerCertificateDomain) 设置源站证书域名。
  * @method array getPolyRealServerCertificateIds() 获取多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
  * @method void setPolyRealServerCertificateIds(array $PolyRealServerCertificateIds) 设置多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
- */
-
-/**
- *SetAuthentication请求参数结构体
  */
 class SetAuthenticationRequest extends AbstractModel
 {
@@ -121,6 +119,7 @@ class SetAuthenticationRequest extends AbstractModel
      * @var array 多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
      */
     public $PolyRealServerCertificateIds;
+
     /**
      * @param string $ListenerId 监听器ID。
      * @param string $Domain 需要进行高级配置的域名，该域名为监听器下的转发规则的域名。
@@ -146,6 +145,7 @@ class SetAuthenticationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

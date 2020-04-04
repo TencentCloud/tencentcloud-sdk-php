@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMultiDevices返回参数结构体
+ *
  * @method string getTaskId() 获取任务 ID，由批量创建设备接口返回
  * @method void setTaskId(string $TaskId) 设置任务 ID，由批量创建设备接口返回
  * @method array getDevicesInfo() 获取设备详细信息列表
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalDevNum(integer $TotalDevNum) 设置该任务创建设备的总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeMultiDevices返回参数结构体
  */
 class DescribeMultiDevicesResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeMultiDevicesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $TaskId 任务 ID，由批量创建设备接口返回
      * @param array $DevicesInfo 设备详细信息列表
@@ -62,6 +61,7 @@ class DescribeMultiDevicesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

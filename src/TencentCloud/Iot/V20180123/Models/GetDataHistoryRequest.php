@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetDataHistory请求参数结构体
+ *
  * @method string getProductId() 获取产品Id
  * @method void setProductId(string $ProductId) 设置产品Id
  * @method array getDeviceNames() 获取设备名称列表，允许最多一次100台
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) 设置时间排序（desc/asc）
  * @method string getScrollId() 获取查询游标
  * @method void setScrollId(string $ScrollId) 设置查询游标
- */
-
-/**
- *GetDataHistory请求参数结构体
  */
 class GetDataHistoryRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class GetDataHistoryRequest extends AbstractModel
      * @var string 查询游标
      */
     public $ScrollId;
+
     /**
      * @param string $ProductId 产品Id
      * @param array $DeviceNames 设备名称列表，允许最多一次100台
@@ -86,6 +85,7 @@ class GetDataHistoryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLiveTranscodeRule请求参数结构体
+ *
  * @method string getDomainName() 获取播放域名。
 域名维度转码，域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
  * @method void setDomainName(string $DomainName) 设置播放域名。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
  * @method void setTemplateId(integer $TemplateId) 设置模板ID。
 域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
- */
-
-/**
- *DeleteLiveTranscodeRule请求参数结构体
  */
 class DeleteLiveTranscodeRuleRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ class DeleteLiveTranscodeRuleRequest extends AbstractModel
 域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      */
     public $TemplateId;
+
     /**
      * @param string $DomainName 播放域名。
 域名维度转码，域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
@@ -78,6 +77,7 @@ class DeleteLiveTranscodeRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

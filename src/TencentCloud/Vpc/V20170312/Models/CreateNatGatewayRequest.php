@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNatGateway请求参数结构体
+ *
  * @method string getNatGatewayName() 获取NAT网关名称
  * @method void setNatGatewayName(string $NatGatewayName) 设置NAT网关名称
  * @method string getVpcId() 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区，形如：`ap-guangzhou-1`。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
- */
-
-/**
- *CreateNatGateway请求参数结构体
  */
 class CreateNatGatewayRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CreateNatGatewayRequest extends AbstractModel
      * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     public $Tags;
+
     /**
      * @param string $NatGatewayName NAT网关名称
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
@@ -94,6 +93,7 @@ class CreateNatGatewayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CloseSecurityPolicy返回参数结构体
+ *
  * @method string getTaskId() 获取异步流程ID，可以通过DescribeAsyncTaskStatus 查询流程执行进展和状态
  * @method void setTaskId(string $TaskId) 设置异步流程ID，可以通过DescribeAsyncTaskStatus 查询流程执行进展和状态
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CloseSecurityPolicy返回参数结构体
  */
 class CloseSecurityPolicyResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CloseSecurityPolicyResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $TaskId 异步流程ID，可以通过DescribeAsyncTaskStatus 查询流程执行进展和状态
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CloseSecurityPolicyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySecurityRule请求参数结构体
+ *
  * @method string getRuleId() 获取规则ID
  * @method void setRuleId(string $RuleId) 设置规则ID
  * @method string getAliasName() 获取规则名：不得超过30个字符，超过部分会被截断。
  * @method void setAliasName(string $AliasName) 设置规则名：不得超过30个字符，超过部分会被截断。
  * @method string getPolicyId() 获取安全策略ID
  * @method void setPolicyId(string $PolicyId) 设置安全策略ID
- */
-
-/**
- *ModifySecurityRule请求参数结构体
  */
 class ModifySecurityRuleRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifySecurityRuleRequest extends AbstractModel
      * @var string 安全策略ID
      */
     public $PolicyId;
+
     /**
      * @param string $RuleId 规则ID
      * @param string $AliasName 规则名：不得超过30个字符，超过部分会被截断。
@@ -54,6 +53,7 @@ class ModifySecurityRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListAlgorithms返回参数结构体
+ *
  * @method array getSymmetricAlgorithms() 获取本地区支持的对称加密算法
  * @method void setSymmetricAlgorithms(array $SymmetricAlgorithms) 设置本地区支持的对称加密算法
  * @method array getAsymmetricAlgorithms() 获取本地区支持的非对称加密算法
  * @method void setAsymmetricAlgorithms(array $AsymmetricAlgorithms) 设置本地区支持的非对称加密算法
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ListAlgorithms返回参数结构体
  */
 class ListAlgorithmsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListAlgorithmsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $SymmetricAlgorithms 本地区支持的对称加密算法
      * @param array $AsymmetricAlgorithms 本地区支持的非对称加密算法
@@ -54,6 +53,7 @@ class ListAlgorithmsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

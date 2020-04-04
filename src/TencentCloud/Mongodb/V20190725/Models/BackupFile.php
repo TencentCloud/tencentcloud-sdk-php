@@ -18,14 +18,12 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 备份文件存储信息
+ *
  * @method string getReplicateSetId() 获取备份文件所属的副本集/分片ID
  * @method void setReplicateSetId(string $ReplicateSetId) 设置备份文件所属的副本集/分片ID
  * @method string getFile() 获取备份文件保存路径
  * @method void setFile(string $File) 设置备份文件保存路径
- */
-
-/**
- *备份文件存储信息
  */
 class BackupFile extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BackupFile extends AbstractModel
      * @var string 备份文件保存路径
      */
     public $File;
+
     /**
      * @param string $ReplicateSetId 备份文件所属的副本集/分片ID
      * @param string $File 备份文件保存路径
@@ -46,6 +45,7 @@ class BackupFile extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

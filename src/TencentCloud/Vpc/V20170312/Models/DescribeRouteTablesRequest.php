@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRouteTables请求参数结构体
+ *
  * @method array getRouteTableIds() 获取路由表实例ID，例如：rtb-azd4dt1c。
  * @method void setRouteTableIds(array $RouteTableIds) 设置路由表实例ID，例如：rtb-azd4dt1c。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定RouteTableIds和Filters。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) 设置偏移量。
  * @method string getLimit() 获取请求对象个数。
  * @method void setLimit(string $Limit) 设置请求对象个数。
- */
-
-/**
- *DescribeRouteTables请求参数结构体
  */
 class DescribeRouteTablesRequest extends AbstractModel
 {
@@ -70,6 +68,7 @@ class DescribeRouteTablesRequest extends AbstractModel
      * @var string 请求对象个数。
      */
     public $Limit;
+
     /**
      * @param array $RouteTableIds 路由表实例ID，例如：rtb-azd4dt1c。
      * @param array $Filters 过滤条件，参数不支持同时指定RouteTableIds和Filters。
@@ -86,6 +85,7 @@ class DescribeRouteTablesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

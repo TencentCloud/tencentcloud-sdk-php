@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTags请求参数结构体
+ *
  * @method string getTagKey() 获取标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
  * @method void setTagKey(string $TagKey) 设置标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
  * @method string getTagValue() 获取标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateUin(integer $CreateUin) 设置创建者用户 Uin，不传或为空只将 Uin 作为条件查询
  * @method array getTagKeys() 获取标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只会本值
  * @method void setTagKeys(array $TagKeys) 设置标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只会本值
- */
-
-/**
- *DescribeTags请求参数结构体
  */
 class DescribeTagsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeTagsRequest extends AbstractModel
      * @var array 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只会本值
      */
     public $TagKeys;
+
     /**
      * @param string $TagKey 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
      * @param string $TagValue 标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
@@ -78,6 +77,7 @@ class DescribeTagsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

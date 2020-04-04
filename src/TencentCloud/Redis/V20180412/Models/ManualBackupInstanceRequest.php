@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ManualBackupInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
  * @method void setInstanceId(string $InstanceId) 设置待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
  * @method string getRemark() 获取备份的备注信息
  * @method void setRemark(string $Remark) 设置备份的备注信息
- */
-
-/**
- *ManualBackupInstance请求参数结构体
  */
 class ManualBackupInstanceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ManualBackupInstanceRequest extends AbstractModel
      * @var string 备份的备注信息
      */
     public $Remark;
+
     /**
      * @param string $InstanceId 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
      * @param string $Remark 备份的备注信息
@@ -46,6 +45,7 @@ class ManualBackupInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

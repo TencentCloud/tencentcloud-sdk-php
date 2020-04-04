@@ -18,16 +18,14 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAccount返回参数结构体
+ *
  * @method array getDelSuccessList() 获取删除成功帐号ID列表
  * @method void setDelSuccessList(array $DelSuccessList) 设置删除成功帐号ID列表
  * @method array getDelFailedList() 获取删除失败帐号ID列表
  * @method void setDelFailedList(array $DelFailedList) 设置删除失败帐号ID列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DeleteAccount返回参数结构体
  */
 class DeleteAccountResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteAccountResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $DelSuccessList 删除成功帐号ID列表
      * @param array $DelFailedList 删除失败帐号ID列表
@@ -54,6 +53,7 @@ class DeleteAccountResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDDoSAttackSource返回参数结构体
+ *
  * @method integer getTotal() 获取总攻击源条数
  * @method void setTotal(integer $Total) 设置总攻击源条数
  * @method array getAttackSourceList() 获取攻击源列表
  * @method void setAttackSourceList(array $AttackSourceList) 设置攻击源列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDDoSAttackSource返回参数结构体
  */
 class DescribeDDoSAttackSourceResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDDoSAttackSourceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Total 总攻击源条数
      * @param array $AttackSourceList 攻击源列表
@@ -54,6 +53,7 @@ class DescribeDDoSAttackSourceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

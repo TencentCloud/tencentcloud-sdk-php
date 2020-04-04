@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpgradeDBInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，形如mssql-j8kv137v
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-j8kv137v
  * @method integer getMemory() 获取实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0
  * @method array getVoucherIds() 获取代金券ID，目前单个订单只能使用一张代金券
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID，目前单个订单只能使用一张代金券
- */
-
-/**
- *UpgradeDBInstance请求参数结构体
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @var array 代金券ID，目前单个订单只能使用一张代金券
      */
     public $VoucherIds;
+
     /**
      * @param string $InstanceId 实例ID，形如mssql-j8kv137v
      * @param integer $Memory 实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
@@ -70,6 +69,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

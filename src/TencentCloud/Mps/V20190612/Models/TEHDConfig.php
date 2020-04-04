@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 极速高清参数配置。
+ *
  * @method string getType() 获取极速高清类型，可选值：
 <li>TEHD-100：极速高清-100。</li>
 不填代表不启用极速高清。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 不填或填0表示不设视频码率上限。
  * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) 设置视频码率上限，当 Type 指定了极速高清类型时有效。
 不填或填0表示不设视频码率上限。
- */
-
-/**
- *极速高清参数配置。
  */
 class TEHDConfig extends AbstractModel
 {
@@ -47,6 +45,7 @@ class TEHDConfig extends AbstractModel
 不填或填0表示不设视频码率上限。
      */
     public $MaxVideoBitrate;
+
     /**
      * @param string $Type 极速高清类型，可选值：
 <li>TEHD-100：极速高清-100。</li>
@@ -58,6 +57,7 @@ class TEHDConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

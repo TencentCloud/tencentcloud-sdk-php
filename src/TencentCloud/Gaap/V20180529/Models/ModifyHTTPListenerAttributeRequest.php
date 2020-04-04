@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyHTTPListenerAttribute请求参数结构体
+ *
  * @method string getListenerId() 获取需要修改的监听器ID
  * @method void setListenerId(string $ListenerId) 设置需要修改的监听器ID
  * @method string getListenerName() 获取新的监听器名称
  * @method void setListenerName(string $ListenerName) 设置新的监听器名称
  * @method string getProxyId() 获取通道ID
  * @method void setProxyId(string $ProxyId) 设置通道ID
- */
-
-/**
- *ModifyHTTPListenerAttribute请求参数结构体
  */
 class ModifyHTTPListenerAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyHTTPListenerAttributeRequest extends AbstractModel
      * @var string 通道ID
      */
     public $ProxyId;
+
     /**
      * @param string $ListenerId 需要修改的监听器ID
      * @param string $ListenerName 新的监听器名称
@@ -54,6 +53,7 @@ class ModifyHTTPListenerAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

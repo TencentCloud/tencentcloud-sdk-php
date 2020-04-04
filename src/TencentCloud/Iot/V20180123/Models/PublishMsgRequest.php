@@ -18,16 +18,14 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PublishMsg请求参数结构体
+ *
  * @method string getTopic() 获取Topic
  * @method void setTopic(string $Topic) 设置Topic
  * @method string getMessage() 获取消息内容
  * @method void setMessage(string $Message) 设置消息内容
  * @method integer getQos() 获取Qos(目前QoS支持0与1)
  * @method void setQos(integer $Qos) 设置Qos(目前QoS支持0与1)
- */
-
-/**
- *PublishMsg请求参数结构体
  */
 class PublishMsgRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class PublishMsgRequest extends AbstractModel
      * @var integer Qos(目前QoS支持0与1)
      */
     public $Qos;
+
     /**
      * @param string $Topic Topic
      * @param string $Message 消息内容
@@ -54,6 +53,7 @@ class PublishMsgRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

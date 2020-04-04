@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 帐号列表信息数据。
+ *
  * @method integer getId() 获取唯一ID。
  * @method void setId(integer $Id) 设置唯一ID。
  * @method string getUuid() 获取云镜客户端唯一Uuid
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountCreateTime(string $AccountCreateTime) 设置帐号创建时间。
  * @method string getLastLoginTime() 获取帐号最后登录时间。
  * @method void setLastLoginTime(string $LastLoginTime) 设置帐号最后登录时间。
- */
-
-/**
- *帐号列表信息数据。
  */
 class Account extends AbstractModel
 {
@@ -93,6 +91,7 @@ class Account extends AbstractModel
      * @var string 帐号最后登录时间。
      */
     public $LastLoginTime;
+
     /**
      * @param integer $Id 唯一ID。
      * @param string $Uuid 云镜客户端唯一Uuid
@@ -110,6 +109,7 @@ class Account extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

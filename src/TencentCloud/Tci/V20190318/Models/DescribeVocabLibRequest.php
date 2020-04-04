@@ -18,14 +18,13 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVocabLib请求参数结构体
+ *
 
- */
-
-/**
- *DescribeVocabLib请求参数结构体
  */
 class DescribeVocabLibRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeVocabLibRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

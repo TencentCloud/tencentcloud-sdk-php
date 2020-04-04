@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 缓存配置高级版本规则
+ *
  * @method string getCacheType() 获取规则类型：
 all：所有文件生效
 file：指定文件后缀生效
@@ -53,10 +55,6 @@ default 时填充 "no max-age"
 单位为秒，最大可设置为 365 天
 注意：此字段可能返回 null，表示取不到有效值。
  */
-
-/**
- *缓存配置高级版本规则
- */
 class AdvanceCacheRule extends AbstractModel
 {
     /**
@@ -87,6 +85,7 @@ default 时填充 "no max-age"
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CacheTime;
+
     /**
      * @param string $CacheType 规则类型：
 all：所有文件生效
@@ -110,6 +109,7 @@ default 时填充 "no max-age"
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

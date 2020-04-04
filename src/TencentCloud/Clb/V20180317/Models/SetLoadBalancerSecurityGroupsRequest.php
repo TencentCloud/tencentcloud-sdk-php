@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetLoadBalancerSecurityGroups请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例 ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
  * @method array getSecurityGroups() 获取安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数，或传入空数组。
  * @method void setSecurityGroups(array $SecurityGroups) 设置安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数，或传入空数组。
- */
-
-/**
- *SetLoadBalancerSecurityGroups请求参数结构体
  */
 class SetLoadBalancerSecurityGroupsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SetLoadBalancerSecurityGroupsRequest extends AbstractModel
      * @var array 安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数，或传入空数组。
      */
     public $SecurityGroups;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param array $SecurityGroups 安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数，或传入空数组。
@@ -46,6 +45,7 @@ class SetLoadBalancerSecurityGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

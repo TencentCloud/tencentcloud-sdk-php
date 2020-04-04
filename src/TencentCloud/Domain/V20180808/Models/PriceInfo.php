@@ -18,6 +18,8 @@ namespace TencentCloud\Domain\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 域名价格信息
+ *
  * @method string getTld() 获取域名后缀，例如.com
  * @method void setTld(string $Tld) 设置域名后缀，例如.com
  * @method integer getYear() 获取购买年限，范围[1-10]
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealPrice(integer $RealPrice) 设置域名现价
  * @method string getOperation() 获取商品的购买类型，新购，续费，赎回，转入，续费并转入
  * @method void setOperation(string $Operation) 设置商品的购买类型，新购，续费，赎回，转入，续费并转入
- */
-
-/**
- *域名价格信息
  */
 class PriceInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class PriceInfo extends AbstractModel
      * @var string 商品的购买类型，新购，续费，赎回，转入，续费并转入
      */
     public $Operation;
+
     /**
      * @param string $Tld 域名后缀，例如.com
      * @param integer $Year 购买年限，范围[1-10]
@@ -70,6 +69,7 @@ class PriceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnifiedOrder请求参数结构体
+ *
  * @method string getCurrencyType() 获取ISO 货币代码，CNY
  * @method void setCurrencyType(string $CurrencyType) 设置ISO 货币代码，CNY
  * @method string getMidasAppId() 获取聚鑫分配的支付主MidasAppId
@@ -66,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWxOpenId(string $WxOpenId) 设置微信公众号/小程序支付时为必选，需要传微信下的openid
  * @method string getWxSubOpenId() 获取在服务商模式下，微信公众号/小程序支付时wx_sub_openid和wx_openid二选一
  * @method void setWxSubOpenId(string $WxSubOpenId) 设置在服务商模式下，微信公众号/小程序支付时wx_sub_openid和wx_openid二选一
- */
-
-/**
- *UnifiedOrder请求参数结构体
  */
 class UnifiedOrderRequest extends AbstractModel
 {
@@ -184,6 +182,7 @@ class UnifiedOrderRequest extends AbstractModel
      * @var string 在服务商模式下，微信公众号/小程序支付时wx_sub_openid和wx_openid二选一
      */
     public $WxSubOpenId;
+
     /**
      * @param string $CurrencyType ISO 货币代码，CNY
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
@@ -214,6 +213,7 @@ class UnifiedOrderRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

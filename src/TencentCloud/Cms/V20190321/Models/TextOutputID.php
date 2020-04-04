@@ -18,14 +18,12 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 消息类输出ID参数
+ *
  * @method string getMsgID() 获取接入业务的唯一ID
  * @method void setMsgID(string $MsgID) 设置接入业务的唯一ID
  * @method string getUin() 获取用户账号uin，对应请求协议里的Content.User.Uin。旁路结果有回带，串联结果无该字段
  * @method void setUin(string $Uin) 设置用户账号uin，对应请求协议里的Content.User.Uin。旁路结果有回带，串联结果无该字段
- */
-
-/**
- *消息类输出ID参数
  */
 class TextOutputID extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TextOutputID extends AbstractModel
      * @var string 用户账号uin，对应请求协议里的Content.User.Uin。旁路结果有回带，串联结果无该字段
      */
     public $Uin;
+
     /**
      * @param string $MsgID 接入业务的唯一ID
      * @param string $Uin 用户账号uin，对应请求协议里的Content.User.Uin。旁路结果有回带，串联结果无该字段
@@ -46,6 +45,7 @@ class TextOutputID extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

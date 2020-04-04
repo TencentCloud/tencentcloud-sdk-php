@@ -18,6 +18,8 @@ namespace TencentCloud\Captcha\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCaptchaData返回参数结构体
+ *
  * @method integer getCaptchaCode() 获取返回码 0 成功 其它失败
  * @method void setCaptchaCode(integer $CaptchaCode) 设置返回码 0 成功 其它失败
  * @method array getData() 获取数据数组
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeCaptchaData返回参数结构体
  */
 class DescribeCaptchaDataResponse extends AbstractModel
 {
@@ -58,6 +56,7 @@ class DescribeCaptchaDataResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $CaptchaCode 返回码 0 成功 其它失败
      * @param array $Data 数据数组
@@ -70,6 +69,7 @@ class DescribeCaptchaDataResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

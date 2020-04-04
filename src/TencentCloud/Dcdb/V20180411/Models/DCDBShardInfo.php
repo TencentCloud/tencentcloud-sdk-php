@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述分布式数据库分片信息。
+ *
  * @method string getInstanceId() 获取所属实例Id
  * @method void setInstanceId(string $InstanceId) 设置所属实例Id
  * @method string getShardSerialId() 获取分片SQL透传Id，用于将sql透传到指定分片执行
@@ -72,10 +74,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCpu() 获取CPU核数
  * @method void setCpu(integer $Cpu) 设置CPU核数
- */
-
-/**
- *描述分布式数据库分片信息。
  */
 class DCDBShardInfo extends AbstractModel
 {
@@ -201,6 +199,7 @@ class DCDBShardInfo extends AbstractModel
      * @var integer CPU核数
      */
     public $Cpu;
+
     /**
      * @param string $InstanceId 所属实例Id
      * @param string $ShardSerialId 分片SQL透传Id，用于将sql透传到指定分片执行
@@ -234,6 +233,7 @@ class DCDBShardInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

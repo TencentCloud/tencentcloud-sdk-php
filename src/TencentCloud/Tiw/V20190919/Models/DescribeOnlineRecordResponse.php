@@ -18,6 +18,8 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeOnlineRecord返回参数结构体
+ *
  * @method string getFinishReason() 获取录制结束原因，
 - AUTO: 房间内长时间没有音视频上行及白板操作导致自动停止录制
 - USER_CALL: 主动调用了停止录制接口
@@ -60,10 +62,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoInfos(array $VideoInfos) 设置录制视频列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeOnlineRecord返回参数结构体
  */
 class DescribeOnlineRecordResponse extends AbstractModel
 {
@@ -139,6 +137,7 @@ class DescribeOnlineRecordResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $FinishReason 录制结束原因，
 - AUTO: 房间内长时间没有音视频上行及白板操作导致自动停止录制
@@ -166,6 +165,7 @@ class DescribeOnlineRecordResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

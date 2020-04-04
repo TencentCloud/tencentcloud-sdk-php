@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Cls日志搜索结果
+ *
  * @method string getContext() 获取获取更多检索结果的游标
  * @method void setContext(string $Context) 设置获取更多检索结果的游标
  * @method boolean getListover() 获取搜索结果是否已经全部返回
  * @method void setListover(boolean $Listover) 设置搜索结果是否已经全部返回
  * @method array getResults() 获取日志内容信息
  * @method void setResults(array $Results) 设置日志内容信息
- */
-
-/**
- *Cls日志搜索结果
  */
 class ClsSearchLogs extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ClsSearchLogs extends AbstractModel
      * @var array 日志内容信息
      */
     public $Results;
+
     /**
      * @param string $Context 获取更多检索结果的游标
      * @param boolean $Listover 搜索结果是否已经全部返回
@@ -54,6 +53,7 @@ class ClsSearchLogs extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

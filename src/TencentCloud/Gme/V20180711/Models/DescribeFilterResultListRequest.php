@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeFilterResultList请求参数结构体
+ *
  * @method integer getBizId() 获取应用ID
  * @method void setBizId(integer $BizId) 设置应用ID
  * @method string getStartDate() 获取开始时间，格式为 年-月-日，如: 2018-07-11
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。
  * @method integer getLimit() 获取返回数量，默认值为10，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认值为10，最大值为100。
- */
-
-/**
- *DescribeFilterResultList请求参数结构体
  */
 class DescribeFilterResultListRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeFilterResultListRequest extends AbstractModel
      * @var integer 返回数量，默认值为10，最大值为100。
      */
     public $Limit;
+
     /**
      * @param integer $BizId 应用ID
      * @param string $StartDate 开始时间，格式为 年-月-日，如: 2018-07-11
@@ -70,6 +69,7 @@ class DescribeFilterResultListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

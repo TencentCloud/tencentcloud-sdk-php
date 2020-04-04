@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图片涉政详情
+ *
  * @method integer getEvilType() 获取恶意类型
 100：正常 
 20001：政治
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolityItems(array $PolityItems) 设置命中的政治物品名称
  * @method integer getScore() 获取政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
  * @method void setScore(integer $Score) 设置政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
- */
-
-/**
- *图片涉政详情
  */
 class ImagePolityDetect extends AbstractModel
 {
@@ -79,6 +77,7 @@ class ImagePolityDetect extends AbstractModel
      * @var integer 政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
      */
     public $Score;
+
     /**
      * @param integer $EvilType 恶意类型
 100：正常 
@@ -94,6 +93,7 @@ class ImagePolityDetect extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

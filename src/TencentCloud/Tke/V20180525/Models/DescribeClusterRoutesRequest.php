@@ -18,12 +18,10 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClusterRoutes请求参数结构体
+ *
  * @method string getRouteTableName() 获取路由表名称。
  * @method void setRouteTableName(string $RouteTableName) 设置路由表名称。
- */
-
-/**
- *DescribeClusterRoutes请求参数结构体
  */
 class DescribeClusterRoutesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeClusterRoutesRequest extends AbstractModel
      * @var string 路由表名称。
      */
     public $RouteTableName;
+
     /**
      * @param string $RouteTableName 路由表名称。
      */
@@ -38,6 +37,7 @@ class DescribeClusterRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

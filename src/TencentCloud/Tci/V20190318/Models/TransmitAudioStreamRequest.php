@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TransmitAudioStream请求参数结构体
+ *
  * @method FunctionInfo getFunctions() 获取功能开关列表，表示是否需要打开相应的功能，返回相应的信息
  * @method void setFunctions(FunctionInfo $Functions) 设置功能开关列表，表示是否需要打开相应的功能，返回相应的信息
  * @method integer getSeqId() 获取流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageMode(integer $StorageMode) 设置是否临时保存 音频链接
  * @method array getVocabLibNameList() 获取识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
  * @method void setVocabLibNameList(array $VocabLibNameList) 设置识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
- */
-
-/**
- *TransmitAudioStream请求参数结构体
  */
 class TransmitAudioStreamRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class TransmitAudioStreamRequest extends AbstractModel
      * @var array 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      */
     public $VocabLibNameList;
+
     /**
      * @param FunctionInfo $Functions 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      * @param integer $SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义。
@@ -110,6 +109,7 @@ class TransmitAudioStreamRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 新添加源站信息
+ *
  * @method string getRealServerId() 获取源站ID
  * @method void setRealServerId(string $RealServerId) 设置源站ID
  * @method string getRealServerIP() 获取源站ip或域名
  * @method void setRealServerIP(string $RealServerIP) 设置源站ip或域名
- */
-
-/**
- *新添加源站信息
  */
 class NewRealServer extends AbstractModel
 {
@@ -38,6 +36,7 @@ class NewRealServer extends AbstractModel
      * @var string 源站ip或域名
      */
     public $RealServerIP;
+
     /**
      * @param string $RealServerId 源站ID
      * @param string $RealServerIP 源站ip或域名
@@ -46,6 +45,7 @@ class NewRealServer extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

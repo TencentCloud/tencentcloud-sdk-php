@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteRule请求参数结构体
+ *
  * @method string getListenerId() 获取7层监听器ID
  * @method void setListenerId(string $ListenerId) 设置7层监听器ID
  * @method string getRuleId() 获取转发规则ID
  * @method void setRuleId(string $RuleId) 设置转发规则ID
  * @method integer getForce() 获取是否可以强制删除已绑定源站的转发规则，0非强制，1强制
  * @method void setForce(integer $Force) 设置是否可以强制删除已绑定源站的转发规则，0非强制，1强制
- */
-
-/**
- *DeleteRule请求参数结构体
  */
 class DeleteRuleRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteRuleRequest extends AbstractModel
      * @var integer 是否可以强制删除已绑定源站的转发规则，0非强制，1强制
      */
     public $Force;
+
     /**
      * @param string $ListenerId 7层监听器ID
      * @param string $RuleId 转发规则ID
@@ -54,6 +53,7 @@ class DeleteRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

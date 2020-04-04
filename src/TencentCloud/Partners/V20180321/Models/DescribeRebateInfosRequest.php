@@ -18,16 +18,14 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRebateInfos请求参数结构体
+ *
  * @method string getRebateMonth() 获取返佣月份，如2018-02
  * @method void setRebateMonth(string $RebateMonth) 设置返佣月份，如2018-02
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取限制数目
  * @method void setLimit(integer $Limit) 设置限制数目
- */
-
-/**
- *DescribeRebateInfos请求参数结构体
  */
 class DescribeRebateInfosRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeRebateInfosRequest extends AbstractModel
      * @var integer 限制数目
      */
     public $Limit;
+
     /**
      * @param string $RebateMonth 返佣月份，如2018-02
      * @param integer $Offset 偏移量
@@ -54,6 +53,7 @@ class DescribeRebateInfosRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

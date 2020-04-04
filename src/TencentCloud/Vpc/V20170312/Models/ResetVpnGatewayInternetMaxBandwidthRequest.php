@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetVpnGatewayInternetMaxBandwidth请求参数结构体
+ *
  * @method string getVpnGatewayId() 获取VPN网关实例ID。
  * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
  * @method integer getInternetMaxBandwidthOut() 获取公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
- */
-
-/**
- *ResetVpnGatewayInternetMaxBandwidth请求参数结构体
  */
 class ResetVpnGatewayInternetMaxBandwidthRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ResetVpnGatewayInternetMaxBandwidthRequest extends AbstractModel
      * @var integer 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
      */
     public $InternetMaxBandwidthOut;
+
     /**
      * @param string $VpnGatewayId VPN网关实例ID。
      * @param integer $InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
@@ -46,6 +45,7 @@ class ResetVpnGatewayInternetMaxBandwidthRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

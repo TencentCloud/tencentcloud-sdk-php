@@ -18,14 +18,12 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCfsPGroup请求参数结构体
+ *
  * @method string getName() 获取权限组名称，1-64个字符且只能为中文，字母，数字，下划线或横线
  * @method void setName(string $Name) 设置权限组名称，1-64个字符且只能为中文，字母，数字，下划线或横线
  * @method string getDescInfo() 获取权限组描述信息，1-255个字符
  * @method void setDescInfo(string $DescInfo) 设置权限组描述信息，1-255个字符
- */
-
-/**
- *CreateCfsPGroup请求参数结构体
  */
 class CreateCfsPGroupRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateCfsPGroupRequest extends AbstractModel
      * @var string 权限组描述信息，1-255个字符
      */
     public $DescInfo;
+
     /**
      * @param string $Name 权限组名称，1-64个字符且只能为中文，字母，数字，下划线或横线
      * @param string $DescInfo 权限组描述信息，1-255个字符
@@ -46,6 +45,7 @@ class CreateCfsPGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

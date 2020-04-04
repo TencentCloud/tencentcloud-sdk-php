@@ -18,15 +18,13 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 版本控制-协议详情
+
+ *
  * @method string getSaleStatus() 获取售卖状态。可选值有 sale_out 售罄、saling可售、no_saling不可销售
  * @method void setSaleStatus(string $SaleStatus) 设置售卖状态。可选值有 sale_out 售罄、saling可售、no_saling不可销售
  * @method string getProtocol() 获取协议类型。可选值有 NFS、CIFS
  * @method void setProtocol(string $Protocol) 设置协议类型。可选值有 NFS、CIFS
- */
-
-/**
- *版本控制-协议详情
-
  */
 class AvailableProtoStatus extends AbstractModel
 {
@@ -39,6 +37,7 @@ class AvailableProtoStatus extends AbstractModel
      * @var string 协议类型。可选值有 NFS、CIFS
      */
     public $Protocol;
+
     /**
      * @param string $SaleStatus 售卖状态。可选值有 sale_out 售罄、saling可售、no_saling不可销售
      * @param string $Protocol 协议类型。可选值有 NFS、CIFS
@@ -47,6 +46,7 @@ class AvailableProtoStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

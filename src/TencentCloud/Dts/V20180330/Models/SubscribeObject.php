@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据数据订阅的对象
+ *
  * @method integer getObjectsType() 获取数据订阅对象的类型，0-数据库，1-数据库内的表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectsType(integer $ObjectsType) 设置数据订阅对象的类型，0-数据库，1-数据库内的表
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableNames(array $TableNames) 设置订阅数据库中表名称数组
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *数据数据订阅的对象
  */
 class SubscribeObject extends AbstractModel
 {
@@ -54,6 +52,7 @@ class SubscribeObject extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableNames;
+
     /**
      * @param integer $ObjectsType 数据订阅对象的类型，0-数据库，1-数据库内的表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class SubscribeObject extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 拉取的日志信息
+ *
  * @method integer getMtime() 获取Log最后修改时间
  * @method void setMtime(integer $Mtime) 设置Log最后修改时间
  * @method integer getLength() 获取文件长度
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUri(string $Uri) 设置下载Log时用到的统一资源标识符
  * @method string getFileName() 获取文件名
  * @method void setFileName(string $FileName) 设置文件名
- */
-
-/**
- *拉取的日志信息
  */
 class LogFileInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class LogFileInfo extends AbstractModel
      * @var string 文件名
      */
     public $FileName;
+
     /**
      * @param integer $Mtime Log最后修改时间
      * @param integer $Length 文件长度
@@ -62,6 +61,7 @@ class LogFileInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

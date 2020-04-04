@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文件样本返回信息
+ *
  * @method integer getCode() 获取处理错误码
  * @method void setCode(integer $Code) 设置处理错误码
  * @method integer getCreatedAt() 获取创建时间戳
@@ -60,10 +62,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompressFileUrl(string $CompressFileUrl) 设置文件压缩后云url
  * @method string getFileUrl() 获取文件的url
  * @method void setFileUrl(string $FileUrl) 设置文件的url
- */
-
-/**
- *文件样本返回信息
  */
 class FileSampleInfo extends AbstractModel
 {
@@ -131,6 +129,7 @@ class FileSampleInfo extends AbstractModel
      * @var string 文件的url
      */
     public $FileUrl;
+
     /**
      * @param integer $Code 处理错误码
      * @param integer $CreatedAt 创建时间戳
@@ -158,6 +157,7 @@ class FileSampleInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDisasterRecoverGroups请求参数结构体
+ *
  * @method array getDisasterRecoverGroupIds() 获取分散置放群组ID列表。
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置分散置放群组ID列表。
  * @method string getName() 获取分散置放群组名称，支持模糊匹配。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
- */
-
-/**
- *DescribeDisasterRecoverGroups请求参数结构体
  */
 class DescribeDisasterRecoverGroupsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeDisasterRecoverGroupsRequest extends AbstractModel
      * @var integer 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public $Limit;
+
     /**
      * @param array $DisasterRecoverGroupIds 分散置放群组ID列表。
      * @param string $Name 分散置放群组名称，支持模糊匹配。
@@ -62,6 +61,7 @@ class DescribeDisasterRecoverGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

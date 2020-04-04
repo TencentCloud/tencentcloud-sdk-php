@@ -18,6 +18,8 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyEipAcl请求参数结构体
+ *
  * @method string getAclId() 获取ACL 实例 ID
  * @method void setAclId(string $AclId) 设置ACL 实例 ID
  * @method string getAclName() 获取ACL 名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置规则类型（in/out）。in：入站规则 out：出站规则
  * @method array getRules() 获取ACL规则列表
  * @method void setRules(array $Rules) 设置ACL规则列表
- */
-
-/**
- *ModifyEipAcl请求参数结构体
  */
 class ModifyEipAclRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyEipAclRequest extends AbstractModel
      * @var array ACL规则列表
      */
     public $Rules;
+
     /**
      * @param string $AclId ACL 实例 ID
      * @param string $AclName ACL 名称
@@ -70,6 +69,7 @@ class ModifyEipAclRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

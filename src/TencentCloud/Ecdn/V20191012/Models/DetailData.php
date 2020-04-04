@@ -18,14 +18,12 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 排序类型的数据结构
+ *
  * @method string getName() 获取数据类型的名称
  * @method void setName(string $Name) 设置数据类型的名称
  * @method float getValue() 获取数据值
  * @method void setValue(float $Value) 设置数据值
- */
-
-/**
- *排序类型的数据结构
  */
 class DetailData extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DetailData extends AbstractModel
      * @var float 数据值
      */
     public $Value;
+
     /**
      * @param string $Name 数据类型的名称
      * @param float $Value 数据值
@@ -46,6 +45,7 @@ class DetailData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

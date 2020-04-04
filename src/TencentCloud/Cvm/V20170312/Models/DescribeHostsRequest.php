@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHosts请求参数结构体
+ *
  * @method array getFilters() 获取过滤条件。
 <li> zone - String - 是否必填：否 - （过滤条件）按照可用区过滤。</li>
 <li> project-id - Integer - 是否必填：否 - （过滤条件）按照项目ID过滤。可通过调用 DescribeProject 查询已创建的项目列表或登录控制台进行查看；也可以调用 AddProject 创建新的项目。</li>
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
- */
-
-/**
- *DescribeHosts请求参数结构体
  */
 class DescribeHostsRequest extends AbstractModel
 {
@@ -60,6 +58,7 @@ class DescribeHostsRequest extends AbstractModel
      * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
+
     /**
      * @param array $Filters 过滤条件。
 <li> zone - String - 是否必填：否 - （过滤条件）按照可用区过滤。</li>
@@ -74,6 +73,7 @@ class DescribeHostsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

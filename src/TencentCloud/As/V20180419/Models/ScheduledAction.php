@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述定时任务的信息
+ *
  * @method string getScheduledActionId() 获取定时任务ID。
  * @method void setScheduledActionId(string $ScheduledActionId) 设置定时任务ID。
  * @method string getScheduledActionName() 获取定时任务名称。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinSize(integer $MinSize) 设置定时任务设置的最小实例数。
  * @method string getCreatedTime() 获取定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
  * @method void setCreatedTime(string $CreatedTime) 设置定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
- */
-
-/**
- *描述定时任务的信息
  */
 class ScheduledAction extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ScheduledAction extends AbstractModel
      * @var string 定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public $CreatedTime;
+
     /**
      * @param string $ScheduledActionId 定时任务ID。
      * @param string $ScheduledActionName 定时任务名称。
@@ -110,6 +109,7 @@ class ScheduledAction extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

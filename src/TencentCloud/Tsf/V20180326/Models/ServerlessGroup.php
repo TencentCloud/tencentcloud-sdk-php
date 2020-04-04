@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Serverless部署组信息
+ *
  * @method string getGroupId() 获取部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置部署组ID
@@ -90,10 +92,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceCount(integer $InstanceCount) 设置部署组实例数
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *Serverless部署组信息
  */
 class ServerlessGroup extends AbstractModel
 {
@@ -204,6 +202,7 @@ class ServerlessGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceCount;
+
     /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -246,6 +245,7 @@ class ServerlessGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

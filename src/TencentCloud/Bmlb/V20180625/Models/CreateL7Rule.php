@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用于创建七层监听器的转发规则的信息。目前一个七层监听器下面最多允许创建50个七层转发域名，而每一个转发域名下最多可以创建100个转发规则。
+ *
  * @method string getDomain() 获取七层转发规则的转发域名。
  * @method void setDomain(string $Domain) 设置七层转发规则的转发域名。
  * @method string getUrl() 获取七层转发规则的转发路径。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHttpCheckDomain(string $HttpCheckDomain) 设置健康检查检查域名。如果创建规则的域名使用通配符或正则表达式，则健康检查检查域名可自定义，否则必须跟健康检查检查域名一样。
  * @method string getBalanceMode() 获取均衡方式：ip_hash、wrr。默认值wrr。
  * @method void setBalanceMode(string $BalanceMode) 设置均衡方式：ip_hash、wrr。默认值wrr。
- */
-
-/**
- *用于创建七层监听器的转发规则的信息。目前一个七层监听器下面最多允许创建50个七层转发域名，而每一个转发域名下最多可以创建100个转发规则。
  */
 class CreateL7Rule extends AbstractModel
 {
@@ -101,6 +99,7 @@ class CreateL7Rule extends AbstractModel
      * @var string 均衡方式：ip_hash、wrr。默认值wrr。
      */
     public $BalanceMode;
+
     /**
      * @param string $Domain 七层转发规则的转发域名。
      * @param string $Url 七层转发规则的转发路径。
@@ -118,6 +117,7 @@ class CreateL7Rule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

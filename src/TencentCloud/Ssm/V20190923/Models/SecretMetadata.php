@@ -18,6 +18,8 @@ namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 凭据的基础信息
+ *
  * @method string getSecretName() 获取凭据名称。
  * @method void setSecretName(string $SecretName) 设置凭据名称。
  * @method string getDescription() 获取凭据的描述信息。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置凭据创建时间，unix时间戳。
  * @method string getKmsKeyType() 获取用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥。
  * @method void setKmsKeyType(string $KmsKeyType) 设置用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥。
- */
-
-/**
- *凭据的基础信息
  */
 class SecretMetadata extends AbstractModel
 {
@@ -80,6 +78,7 @@ class SecretMetadata extends AbstractModel
      * @var string 用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥。
      */
     public $KmsKeyType;
+
     /**
      * @param string $SecretName 凭据名称。
      * @param string $Description 凭据的描述信息。
@@ -94,6 +93,7 @@ class SecretMetadata extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

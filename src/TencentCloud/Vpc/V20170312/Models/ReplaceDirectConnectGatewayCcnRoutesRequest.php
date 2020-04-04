@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReplaceDirectConnectGatewayCcnRoutes请求参数结构体
+ *
  * @method string getDirectConnectGatewayId() 获取专线网关ID，形如：dcg-prpqlmg1
  * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) 设置专线网关ID，形如：dcg-prpqlmg1
  * @method array getRoutes() 获取需要连通的IDC网段列表
  * @method void setRoutes(array $Routes) 设置需要连通的IDC网段列表
- */
-
-/**
- *ReplaceDirectConnectGatewayCcnRoutes请求参数结构体
  */
 class ReplaceDirectConnectGatewayCcnRoutesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ReplaceDirectConnectGatewayCcnRoutesRequest extends AbstractModel
      * @var array 需要连通的IDC网段列表
      */
     public $Routes;
+
     /**
      * @param string $DirectConnectGatewayId 专线网关ID，形如：dcg-prpqlmg1
      * @param array $Routes 需要连通的IDC网段列表
@@ -46,6 +45,7 @@ class ReplaceDirectConnectGatewayCcnRoutesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

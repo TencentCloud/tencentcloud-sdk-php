@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeOverviewStatistics返回参数结构体
+ *
  * @method integer getOnlineMachineNum() 获取服务器在线数。
  * @method void setOnlineMachineNum(integer $OnlineMachineNum) 设置服务器在线数。
  * @method integer getProVersionMachineNum() 获取专业服务器数。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBaseLineNum(integer $BaseLineNum) 设置安全基线数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeOverviewStatistics返回参数结构体
  */
 class DescribeOverviewStatisticsResponse extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeOverviewStatisticsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $OnlineMachineNum 服务器在线数。
      * @param integer $ProVersionMachineNum 专业服务器数。
@@ -94,6 +93,7 @@ class DescribeOverviewStatisticsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMultiDevTask请求参数结构体
+ *
  * @method string getTaskId() 获取任务 ID，由批量创建设备接口返回
  * @method void setTaskId(string $TaskId) 设置任务 ID，由批量创建设备接口返回
  * @method string getProductId() 获取产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
  * @method void setProductId(string $ProductId) 设置产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
- */
-
-/**
- *DescribeMultiDevTask请求参数结构体
  */
 class DescribeMultiDevTaskRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeMultiDevTaskRequest extends AbstractModel
      * @var string 产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
      */
     public $ProductId;
+
     /**
      * @param string $TaskId 任务 ID，由批量创建设备接口返回
      * @param string $ProductId 产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
@@ -46,6 +45,7 @@ class DescribeMultiDevTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

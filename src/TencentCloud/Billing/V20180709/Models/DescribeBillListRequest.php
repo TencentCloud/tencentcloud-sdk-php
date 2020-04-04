@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBillList请求参数结构体
+ *
  * @method string getStartTime() 获取查询范围的起始时间（包含）
  * @method void setStartTime(string $StartTime) 设置查询范围的起始时间（包含）
  * @method string getEndTime() 获取查询范围的结束时间（包含）
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubPayType(array $SubPayType) 设置扣费模式，当所选的交易类型中包含扣费deduct时有意义： all所有扣费类型，trade预付费支付，hour_h按量小时结，hour_d按量日结，hour_m按量月结，decompensate调账扣费，other其他扣费
  * @method integer getWithZeroAmount() 获取是否返回0元交易金额的交易项，取值：0-不返回，1-返回。不传该参数则不返回
  * @method void setWithZeroAmount(integer $WithZeroAmount) 设置是否返回0元交易金额的交易项，取值：0-不返回，1-返回。不传该参数则不返回
- */
-
-/**
- *DescribeBillList请求参数结构体
  */
 class DescribeBillListRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeBillListRequest extends AbstractModel
      * @var integer 是否返回0元交易金额的交易项，取值：0-不返回，1-返回。不传该参数则不返回
      */
     public $WithZeroAmount;
+
     /**
      * @param string $StartTime 查询范围的起始时间（包含）
      * @param string $EndTime 查询范围的结束时间（包含）
@@ -86,6 +85,7 @@ class DescribeBillListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

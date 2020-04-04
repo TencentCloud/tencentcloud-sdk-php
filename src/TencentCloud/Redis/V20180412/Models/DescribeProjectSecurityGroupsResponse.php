@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProjectSecurityGroups返回参数结构体
+ *
  * @method array getGroups() 获取安全组规则。
  * @method void setGroups(array $Groups) 设置安全组规则。
  * @method integer getTotal() 获取符合条件的安全组总数量。
  * @method void setTotal(integer $Total) 设置符合条件的安全组总数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeProjectSecurityGroups返回参数结构体
  */
 class DescribeProjectSecurityGroupsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeProjectSecurityGroupsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Groups 安全组规则。
      * @param integer $Total 符合条件的安全组总数量。
@@ -54,6 +53,7 @@ class DescribeProjectSecurityGroupsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

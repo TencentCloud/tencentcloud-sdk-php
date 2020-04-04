@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 7层CC自定义规则
+ *
  * @method integer getPeriod() 获取统计周期，单位秒，取值[10, 30, 60]
  * @method void setPeriod(integer $Period) 设置统计周期，单位秒，取值[10, 30, 60]
  * @method integer getReqNumber() 获取访问次数，取值[1-10000]
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAction(string $Action) 设置执行动作，取值["alg"（人机识别）, "drop"（拦截）]
  * @method integer getExeDuration() 获取执行时间，单位秒，取值[1-900]
  * @method void setExeDuration(integer $ExeDuration) 设置执行时间，单位秒，取值[1-900]
- */
-
-/**
- *7层CC自定义规则
  */
 class CCRuleConfig extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CCRuleConfig extends AbstractModel
      * @var integer 执行时间，单位秒，取值[1-900]
      */
     public $ExeDuration;
+
     /**
      * @param integer $Period 统计周期，单位秒，取值[10, 30, 60]
      * @param integer $ReqNumber 访问次数，取值[1-10000]
@@ -62,6 +61,7 @@ class CCRuleConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

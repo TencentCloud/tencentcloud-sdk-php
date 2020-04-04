@@ -18,14 +18,13 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEnvLimit请求参数结构体
+ *
 
- */
-
-/**
- *DescribeEnvLimit请求参数结构体
  */
 class DescribeEnvLimitRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeEnvLimitRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

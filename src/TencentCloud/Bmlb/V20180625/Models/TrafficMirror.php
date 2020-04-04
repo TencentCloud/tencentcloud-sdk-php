@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取流量镜像实例的列表信息时返回的流量镜像信息。
+ *
  * @method string getTrafficMirrorId() 获取流量镜像ID。
  * @method void setTrafficMirrorId(string $TrafficMirrorId) 设置流量镜像ID。
  * @method string getAlias() 获取流量镜像名称。
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置流量镜像所在私有网络的Cidr。
  * @method string getVpcName() 获取流量镜像所在私有网络的名称。
  * @method void setVpcName(string $VpcName) 设置流量镜像所在私有网络的名称。
- */
-
-/**
- *获取流量镜像实例的列表信息时返回的流量镜像信息。
  */
 class TrafficMirror extends AbstractModel
 {
@@ -122,6 +120,7 @@ class TrafficMirror extends AbstractModel
      * @var string 流量镜像所在私有网络的名称。
      */
     public $VpcName;
+
     /**
      * @param string $TrafficMirrorId 流量镜像ID。
      * @param string $Alias 流量镜像名称。
@@ -142,6 +141,7 @@ class TrafficMirror extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

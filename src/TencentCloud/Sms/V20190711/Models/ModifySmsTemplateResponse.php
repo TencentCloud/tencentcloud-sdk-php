@@ -18,14 +18,12 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySmsTemplate返回参数结构体
+ *
  * @method ModifyTemplateStatus getModifyTemplateStatus() 获取修改模板参数响应
  * @method void setModifyTemplateStatus(ModifyTemplateStatus $ModifyTemplateStatus) 设置修改模板参数响应
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ModifySmsTemplate返回参数结构体
  */
 class ModifySmsTemplateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifySmsTemplateResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param ModifyTemplateStatus $ModifyTemplateStatus 修改模板参数响应
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class ModifySmsTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

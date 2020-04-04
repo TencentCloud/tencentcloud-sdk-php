@@ -18,14 +18,12 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 批量发消息请求
+ *
  * @method string getTopic() 获取消息发往的主题。为 Topic 权限中去除 ProductID 和 DeviceName 的部分，如 “event”
  * @method void setTopic(string $Topic) 设置消息发往的主题。为 Topic 权限中去除 ProductID 和 DeviceName 的部分，如 “event”
  * @method string getPayload() 获取消息内容
  * @method void setPayload(string $Payload) 设置消息内容
- */
-
-/**
- *批量发消息请求
  */
 class BatchPublishMessage extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BatchPublishMessage extends AbstractModel
      * @var string 消息内容
      */
     public $Payload;
+
     /**
      * @param string $Topic 消息发往的主题。为 Topic 权限中去除 ProductID 和 DeviceName 的部分，如 “event”
      * @param string $Payload 消息内容
@@ -46,6 +45,7 @@ class BatchPublishMessage extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

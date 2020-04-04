@@ -18,12 +18,10 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转发到第三方http(s)服务
+ *
  * @method string getUrl() 获取服务url地址
  * @method void setUrl(string $Url) 设置服务url地址
- */
-
-/**
- *转发到第三方http(s)服务
  */
 class ServiceAction extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ServiceAction extends AbstractModel
      * @var string 服务url地址
      */
     public $Url;
+
     /**
      * @param string $Url 服务url地址
      */
@@ -38,6 +37,7 @@ class ServiceAction extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

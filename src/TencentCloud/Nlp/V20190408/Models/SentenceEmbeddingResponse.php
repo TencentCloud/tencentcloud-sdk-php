@@ -18,16 +18,14 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SentenceEmbedding返回参数结构体
+ *
  * @method integer getDimension() 获取句向量的维度
  * @method void setDimension(integer $Dimension) 设置句向量的维度
  * @method array getVector() 获取句向量数组
  * @method void setVector(array $Vector) 设置句向量数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *SentenceEmbedding返回参数结构体
  */
 class SentenceEmbeddingResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SentenceEmbeddingResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Dimension 句向量的维度
      * @param array $Vector 句向量数组
@@ -54,6 +53,7 @@ class SentenceEmbeddingResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

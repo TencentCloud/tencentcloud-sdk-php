@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 角色详细信息
+ *
  * @method string getRoleId() 获取角色ID
  * @method void setRoleId(string $RoleId) 设置角色ID
  * @method string getRoleName() 获取角色名称
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeletionTaskId(string $DeletionTaskId) 设置服务相关角色删除TaskId
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *角色详细信息
  */
 class RoleInfo extends AbstractModel
 {
@@ -103,6 +101,7 @@ class RoleInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeletionTaskId;
+
     /**
      * @param string $RoleId 角色ID
      * @param string $RoleName 角色名称
@@ -122,6 +121,7 @@ class RoleInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

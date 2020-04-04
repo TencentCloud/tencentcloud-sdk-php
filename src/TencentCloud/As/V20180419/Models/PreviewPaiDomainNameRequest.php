@@ -18,12 +18,10 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PreviewPaiDomainName请求参数结构体
+ *
  * @method string getDomainNameType() 获取域名类型
  * @method void setDomainNameType(string $DomainNameType) 设置域名类型
- */
-
-/**
- *PreviewPaiDomainName请求参数结构体
  */
 class PreviewPaiDomainNameRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class PreviewPaiDomainNameRequest extends AbstractModel
      * @var string 域名类型
      */
     public $DomainNameType;
+
     /**
      * @param string $DomainNameType 域名类型
      */
@@ -38,6 +37,7 @@ class PreviewPaiDomainNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

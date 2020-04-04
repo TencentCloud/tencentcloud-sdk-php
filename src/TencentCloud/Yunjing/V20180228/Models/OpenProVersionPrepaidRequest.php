@@ -18,14 +18,12 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OpenProVersionPrepaid请求参数结构体
+ *
  * @method ChargePrepaid getChargePrepaid() 获取购买相关参数。
  * @method void setChargePrepaid(ChargePrepaid $ChargePrepaid) 设置购买相关参数。
  * @method array getMachines() 获取需要开通专业版主机信息数组。
  * @method void setMachines(array $Machines) 设置需要开通专业版主机信息数组。
- */
-
-/**
- *OpenProVersionPrepaid请求参数结构体
  */
 class OpenProVersionPrepaidRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class OpenProVersionPrepaidRequest extends AbstractModel
      * @var array 需要开通专业版主机信息数组。
      */
     public $Machines;
+
     /**
      * @param ChargePrepaid $ChargePrepaid 购买相关参数。
      * @param array $Machines 需要开通专业版主机信息数组。
@@ -46,6 +45,7 @@ class OpenProVersionPrepaidRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

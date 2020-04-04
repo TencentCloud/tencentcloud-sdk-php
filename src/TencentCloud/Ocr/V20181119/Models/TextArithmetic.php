@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 算式识别结果
+ *
  * @method string getDetectedText() 获取识别出的文本行内容
  * @method void setDetectedText(string $DetectedText) 设置识别出的文本行内容
  * @method boolean getResult() 获取算式运算结果
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
 ‘9’: 竖式乘除法
 ‘10’: 脱式计算
 ‘11’: 解方程
- */
-
-/**
- *算式识别结果
  */
 class TextArithmetic extends AbstractModel
 {
@@ -109,6 +107,7 @@ class TextArithmetic extends AbstractModel
 ‘11’: 解方程
      */
     public $ExpressionType;
+
     /**
      * @param string $DetectedText 识别出的文本行内容
      * @param boolean $Result 算式运算结果
@@ -134,6 +133,7 @@ class TextArithmetic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

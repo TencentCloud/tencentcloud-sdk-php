@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 资源的IP数组
+ *
  * @method string getId() 获取资源ID
  * @method void setId(string $Id) 设置资源ID
  * @method array getIpList() 获取资源的IP数组
  * @method void setIpList(array $IpList) 设置资源的IP数组
- */
-
-/**
- *资源的IP数组
  */
 class ResourceIp extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ResourceIp extends AbstractModel
      * @var array 资源的IP数组
      */
     public $IpList;
+
     /**
      * @param string $Id 资源ID
      * @param array $IpList 资源的IP数组
@@ -46,6 +45,7 @@ class ResourceIp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateVulsReport返回参数结构体
+ *
  * @method string getReportFileUrl() 获取报告下载地址
  * @method void setReportFileUrl(string $ReportFileUrl) 设置报告下载地址
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateVulsReport返回参数结构体
  */
 class CreateVulsReportResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateVulsReportResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $ReportFileUrl 报告下载地址
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateVulsReportResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

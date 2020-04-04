@@ -18,6 +18,8 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReplaceCertificate请求参数结构体
+ *
  * @method string getCertificateId() 获取证书 ID。
  * @method void setCertificateId(string $CertificateId) 设置证书 ID。
  * @method string getValidType() 获取验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCsrContent(string $CsrContent) 设置CSR 内容。
  * @method string getCsrkeyPassword() 获取KEY 密码。
  * @method void setCsrkeyPassword(string $CsrkeyPassword) 设置KEY 密码。
- */
-
-/**
- *ReplaceCertificate请求参数结构体
  */
 class ReplaceCertificateRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ReplaceCertificateRequest extends AbstractModel
      * @var string KEY 密码。
      */
     public $CsrkeyPassword;
+
     /**
      * @param string $CertificateId 证书 ID。
      * @param string $ValidType 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
@@ -70,6 +69,7 @@ class ReplaceCertificateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

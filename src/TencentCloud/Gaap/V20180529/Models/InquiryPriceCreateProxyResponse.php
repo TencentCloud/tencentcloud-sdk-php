@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceCreateProxy返回参数结构体
+ *
  * @method float getProxyDailyPrice() 获取通道基础费用价格，单位：元/天。
  * @method void setProxyDailyPrice(float $ProxyDailyPrice) 设置通道基础费用价格，单位：元/天。
  * @method array getBandwidthUnitPrice() 获取通道带宽费用梯度价格。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrency(string $Currency) 设置价格使用的货币，支持人民币，美元等。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *InquiryPriceCreateProxy返回参数结构体
  */
 class InquiryPriceCreateProxyResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class InquiryPriceCreateProxyResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param float $ProxyDailyPrice 通道基础费用价格，单位：元/天。
      * @param array $BandwidthUnitPrice 通道带宽费用梯度价格。
@@ -70,6 +69,7 @@ class InquiryPriceCreateProxyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

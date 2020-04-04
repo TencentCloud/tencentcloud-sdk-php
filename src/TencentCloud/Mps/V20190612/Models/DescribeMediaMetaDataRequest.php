@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMediaMetaData请求参数结构体
+ *
  * @method MediaInputInfo getInputInfo() 获取需要获取元信息的文件输入信息。
  * @method void setInputInfo(MediaInputInfo $InputInfo) 设置需要获取元信息的文件输入信息。
- */
-
-/**
- *DescribeMediaMetaData请求参数结构体
  */
 class DescribeMediaMetaDataRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeMediaMetaDataRequest extends AbstractModel
      * @var MediaInputInfo 需要获取元信息的文件输入信息。
      */
     public $InputInfo;
+
     /**
      * @param MediaInputInfo $InputInfo 需要获取元信息的文件输入信息。
      */
@@ -38,6 +37,7 @@ class DescribeMediaMetaDataRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

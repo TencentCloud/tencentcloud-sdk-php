@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 服务器价格信息
+ *
  * @method string getInstanceId() 获取物理机ID
  * @method void setInstanceId(string $InstanceId) 设置物理机ID
  * @method string getDeviceClassCode() 获取设备型号
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeUnit(string $TimeUnit) 设置计费时长单位, M:按月计费; D:按天计费
  * @method integer getGoodsCount() 获取商品数量
  * @method void setGoodsCount(integer $GoodsCount) 设置商品数量
- */
-
-/**
- *服务器价格信息
  */
 class DevicePriceInfo extends AbstractModel
 {
@@ -143,6 +141,7 @@ class DevicePriceInfo extends AbstractModel
      * @var integer 商品数量
      */
     public $GoodsCount;
+
     /**
      * @param string $InstanceId 物理机ID
      * @param string $DeviceClassCode 设备型号
@@ -166,6 +165,7 @@ class DevicePriceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

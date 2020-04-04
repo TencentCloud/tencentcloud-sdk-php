@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 教师是否在屏幕内判断结果
+ *
  * @method string getClass() 获取动作识别结果，InScreen：在屏幕内
 OutScreen：不在屏幕内
  * @method void setClass(string $Class) 设置动作识别结果，InScreen：在屏幕内
@@ -30,10 +32,6 @@ OutScreen：不在屏幕内
  * @method void setTop(integer $Top) 设置识别结果顶坐标
  * @method integer getWidth() 获取识别结果宽度
  * @method void setWidth(integer $Width) 设置识别结果宽度
- */
-
-/**
- *教师是否在屏幕内判断结果
  */
 class TeacherOutScreenResult extends AbstractModel
 {
@@ -62,6 +60,7 @@ OutScreen：不在屏幕内
      * @var integer 识别结果宽度
      */
     public $Width;
+
     /**
      * @param string $Class 动作识别结果，InScreen：在屏幕内
 OutScreen：不在屏幕内
@@ -74,6 +73,7 @@ OutScreen：不在屏幕内
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

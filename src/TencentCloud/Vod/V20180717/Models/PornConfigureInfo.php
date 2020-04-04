@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 鉴黄任务控制参数
+ *
  * @method PornImgReviewTemplateInfo getImgReviewInfo() 获取画面鉴黄控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImgReviewInfo(PornImgReviewTemplateInfo $ImgReviewInfo) 设置画面鉴黄控制参数。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrReviewInfo(PornOcrReviewTemplateInfo $OcrReviewInfo) 设置文本鉴黄控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *鉴黄任务控制参数
  */
 class PornConfigureInfo extends AbstractModel
 {
@@ -54,6 +52,7 @@ class PornConfigureInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrReviewInfo;
+
     /**
      * @param PornImgReviewTemplateInfo $ImgReviewInfo 画面鉴黄控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class PornConfigureInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

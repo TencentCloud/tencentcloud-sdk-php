@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 小程序审核概要元信息
+ *
  * @method string getType() 获取审核类型。 
 <li>Porn：画面涉黄，</li>
 <li>Porn.Ocr：文字涉黄，</li>
@@ -45,10 +47,6 @@ use TencentCloud\Common\AbstractModel;
  * @method float getConfidence() 获取审核结果置信度。取值 0~100。
  * @method void setConfidence(float $Confidence) 设置审核结果置信度。取值 0~100。
  */
-
-/**
- *小程序审核概要元信息
- */
 class MediaMiniProgramReviewElem extends AbstractModel
 {
     /**
@@ -75,6 +73,7 @@ class MediaMiniProgramReviewElem extends AbstractModel
      * @var float 审核结果置信度。取值 0~100。
      */
     public $Confidence;
+
     /**
      * @param string $Type 审核类型。 
 <li>Porn：画面涉黄，</li>
@@ -94,6 +93,7 @@ class MediaMiniProgramReviewElem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

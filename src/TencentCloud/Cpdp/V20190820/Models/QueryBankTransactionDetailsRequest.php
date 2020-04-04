@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * QueryBankTransactionDetails请求参数结构体
+ *
  * @method string getMrchCode() 获取String(22)，商户号（签约客户号）
  * @method void setMrchCode(string $MrchCode) 设置String(22)，商户号（签约客户号）
  * @method string getFunctionFlag() 获取STRING(2)，功能标志（1: 当日; 2: 历史）
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndDate(string $EndDate) 设置STRING(8)，终止日期（若是历史查询，则必输，当日查询时，不起作用。格式：20190101）
  * @method string getReservedMsg() 获取STRING(1027)，保留域
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
- */
-
-/**
- *QueryBankTransactionDetails请求参数结构体
  */
 class QueryBankTransactionDetailsRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class QueryBankTransactionDetailsRequest extends AbstractModel
      * @var string STRING(1027)，保留域
      */
     public $ReservedMsg;
+
     /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $FunctionFlag STRING(2)，功能标志（1: 当日; 2: 历史）
@@ -94,6 +93,7 @@ class QueryBankTransactionDetailsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 创建子网时的子网类型
+ *
  * @method string getSubnetName() 获取子网名称，可任意命名，但不得超过60个字符
  * @method void setSubnetName(string $SubnetName) 设置子网名称，可任意命名，但不得超过60个字符
  * @method string getCidrBlock() 获取子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置黑石子网的可用区
  * @method integer getIsSmartNic() 获取是否25G子网，1为是，0为否。
  * @method void setIsSmartNic(integer $IsSmartNic) 设置是否25G子网，1为是，0为否。
- */
-
-/**
- *创建子网时的子网类型
  */
 class SubnetCreateInputInfo extends AbstractModel
 {
@@ -87,6 +85,7 @@ class SubnetCreateInputInfo extends AbstractModel
      * @var integer 是否25G子网，1为是，0为否。
      */
     public $IsSmartNic;
+
     /**
      * @param string $SubnetName 子网名称，可任意命名，但不得超过60个字符
      * @param string $CidrBlock 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠
@@ -102,6 +101,7 @@ class SubnetCreateInputInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

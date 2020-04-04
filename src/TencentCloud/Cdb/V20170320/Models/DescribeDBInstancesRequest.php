@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBInstances请求参数结构体
+ *
  * @method integer getProjectId() 获取项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
  * @method void setProjectId(integer $ProjectId) 设置项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
  * @method array getInstanceTypes() 获取实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
@@ -70,10 +72,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWithMaster(integer $WithMaster) 设置是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
  * @method array getDeployGroupIds() 获取置放群组ID列表。
  * @method void setDeployGroupIds(array $DeployGroupIds) 设置置放群组ID列表。
- */
-
-/**
- *DescribeDBInstances请求参数结构体
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -206,6 +204,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @var array 置放群组ID列表。
      */
     public $DeployGroupIds;
+
     /**
      * @param integer $ProjectId 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
      * @param array $InstanceTypes 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
@@ -238,6 +237,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

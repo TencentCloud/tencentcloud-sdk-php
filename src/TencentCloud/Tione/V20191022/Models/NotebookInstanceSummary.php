@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * notebook实例概览
+ *
  * @method string getCreationTime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreationTime(string $CreationTime) 设置创建时间
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置算力Id
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *notebook实例概览
  */
 class NotebookInstanceSummary extends AbstractModel
 {
@@ -84,6 +82,7 @@ class NotebookInstanceSummary extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
+
     /**
      * @param string $CreationTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,6 +101,7 @@ class NotebookInstanceSummary extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

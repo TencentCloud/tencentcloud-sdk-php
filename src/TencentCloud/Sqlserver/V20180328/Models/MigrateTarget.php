@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 迁移任务的目标类型
+ *
  * @method string getInstanceId() 获取迁移目标实例的ID，格式如：mssql-si2823jyl
  * @method void setInstanceId(string $InstanceId) 设置迁移目标实例的ID，格式如：mssql-si2823jyl
  * @method string getUserName() 获取迁移目标实例的用户名
  * @method void setUserName(string $UserName) 设置迁移目标实例的用户名
  * @method string getPassword() 获取迁移目标实例的密码
  * @method void setPassword(string $Password) 设置迁移目标实例的密码
- */
-
-/**
- *迁移任务的目标类型
  */
 class MigrateTarget extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MigrateTarget extends AbstractModel
      * @var string 迁移目标实例的密码
      */
     public $Password;
+
     /**
      * @param string $InstanceId 迁移目标实例的ID，格式如：mssql-si2823jyl
      * @param string $UserName 迁移目标实例的用户名
@@ -54,6 +53,7 @@ class MigrateTarget extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

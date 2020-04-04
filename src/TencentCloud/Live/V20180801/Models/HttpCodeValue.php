@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HTTP返回码数据信息
+ *
  * @method string getTime() 获取时间，格式：yyyy-mm-dd HH:MM:SS。
  * @method void setTime(string $Time) 设置时间，格式：yyyy-mm-dd HH:MM:SS。
  * @method integer getNumbers() 获取次数。
  * @method void setNumbers(integer $Numbers) 设置次数。
  * @method float getPercentage() 获取占比。
  * @method void setPercentage(float $Percentage) 设置占比。
- */
-
-/**
- *HTTP返回码数据信息
  */
 class HttpCodeValue extends AbstractModel
 {
@@ -45,6 +43,7 @@ class HttpCodeValue extends AbstractModel
      * @var float 占比。
      */
     public $Percentage;
+
     /**
      * @param string $Time 时间，格式：yyyy-mm-dd HH:MM:SS。
      * @param integer $Numbers 次数。
@@ -54,6 +53,7 @@ class HttpCodeValue extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWorkersInfo返回参数结构体
+ *
  * @method integer getWorkerNum() 获取机器数量
  * @method void setWorkerNum(integer $WorkerNum) 设置机器数量
  * @method array getWorkerDetail() 获取机器详细信息
  * @method void setWorkerDetail(array $WorkerDetail) 设置机器详细信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeWorkersInfo返回参数结构体
  */
 class DescribeWorkersInfoResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeWorkersInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $WorkerNum 机器数量
      * @param array $WorkerDetail 机器详细信息
@@ -54,6 +53,7 @@ class DescribeWorkersInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

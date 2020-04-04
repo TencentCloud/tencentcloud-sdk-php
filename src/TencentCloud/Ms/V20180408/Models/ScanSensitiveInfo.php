@@ -18,16 +18,14 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全扫描敏感词
+ *
  * @method array getWordList() 获取敏感词
  * @method void setWordList(array $WordList) 设置敏感词
  * @method string getFilePath() 获取敏感词对应的文件信息
  * @method void setFilePath(string $FilePath) 设置敏感词对应的文件信息
  * @method string getFileSha() 获取文件sha1值
  * @method void setFileSha(string $FileSha) 设置文件sha1值
- */
-
-/**
- *安全扫描敏感词
  */
 class ScanSensitiveInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ScanSensitiveInfo extends AbstractModel
      * @var string 文件sha1值
      */
     public $FileSha;
+
     /**
      * @param array $WordList 敏感词
      * @param string $FilePath 敏感词对应的文件信息
@@ -54,6 +53,7 @@ class ScanSensitiveInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

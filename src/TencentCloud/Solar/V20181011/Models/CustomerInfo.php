@@ -18,6 +18,8 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 客户档案
+ *
  * @method integer getActivity() 获取总活跃度
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivity(integer $Activity) 设置总活跃度
@@ -96,10 +98,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWxProvince(string $WxProvince) 设置微信省份
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *客户档案
  */
 class CustomerInfo extends AbstractModel
 {
@@ -221,6 +219,7 @@ class CustomerInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WxProvince;
+
     /**
      * @param integer $Activity 总活跃度
 注意：此字段可能返回 null，表示取不到有效值。
@@ -266,6 +265,7 @@ class CustomerInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

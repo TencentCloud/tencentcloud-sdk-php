@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述实例的详细信息
+ *
  * @method string getRegion() 获取实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
  * @method void setRegion(string $Region) 设置实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
  * @method string getZone() 获取实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
@@ -70,10 +72,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(integer $AppId) 设置用户的AppId
  * @method integer getUid() 获取实例的Uid
  * @method void setUid(integer $Uid) 设置实例的Uid
- */
-
-/**
- *描述实例的详细信息
  */
 class DBInstance extends AbstractModel
 {
@@ -206,6 +204,7 @@ class DBInstance extends AbstractModel
      * @var integer 实例的Uid
      */
     public $Uid;
+
     /**
      * @param string $Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      * @param string $Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
@@ -238,6 +237,7 @@ class DBInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

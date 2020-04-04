@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 点播文件信息
+ *
  * @method MediaBasicInfo getBasicInfo() 获取基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBasicInfo(MediaBasicInfo $BasicInfo) 设置基础信息。包括视频名称、分类、播放地址、封面图片等。
@@ -60,10 +62,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取媒体文件唯一标识 ID。
  * @method void setFileId(string $FileId) 设置媒体文件唯一标识 ID。
- */
-
-/**
- *点播文件信息
  */
 class MediaInfo extends AbstractModel
 {
@@ -131,6 +129,7 @@ class MediaInfo extends AbstractModel
      * @var string 媒体文件唯一标识 ID。
      */
     public $FileId;
+
     /**
      * @param MediaBasicInfo $BasicInfo 基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -158,6 +157,7 @@ class MediaInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

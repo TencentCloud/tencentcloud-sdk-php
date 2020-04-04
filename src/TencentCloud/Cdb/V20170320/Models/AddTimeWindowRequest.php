@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddTimeWindow请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method array getMonday() 获取星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSaturday(array $Saturday) 设置星期六的可维护时间窗口。
  * @method array getSunday() 获取星期日的可维护时间窗口。
  * @method void setSunday(array $Sunday) 设置星期日的可维护时间窗口。
- */
-
-/**
- *AddTimeWindow请求参数结构体
  */
 class AddTimeWindowRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class AddTimeWindowRequest extends AbstractModel
      * @var array 星期日的可维护时间窗口。
      */
     public $Sunday;
+
     /**
      * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param array $Monday 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。
@@ -94,6 +93,7 @@ class AddTimeWindowRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

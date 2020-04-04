@@ -18,16 +18,14 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDomains请求参数结构体
+ *
  * @method integer getOffset() 获取分页查询的偏移地址，默认0。
  * @method void setOffset(integer $Offset) 设置分页查询的偏移地址，默认0。
  * @method integer getLimit() 获取分页查询的域名个数，默认100，最大支持1000。
  * @method void setLimit(integer $Limit) 设置分页查询的域名个数，默认100，最大支持1000。
  * @method array getFilters() 获取查询条件过滤器。
  * @method void setFilters(array $Filters) 设置查询条件过滤器。
- */
-
-/**
- *DescribeDomains请求参数结构体
  */
 class DescribeDomainsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDomainsRequest extends AbstractModel
      * @var array 查询条件过滤器。
      */
     public $Filters;
+
     /**
      * @param integer $Offset 分页查询的偏移地址，默认0。
      * @param integer $Limit 分页查询的域名个数，默认100，最大支持1000。
@@ -54,6 +53,7 @@ class DescribeDomainsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

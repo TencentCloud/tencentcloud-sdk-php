@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateBandwidthPackage返回参数结构体
+ *
  * @method string getBandwidthPackageId() 获取带宽包唯一ID
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包唯一ID
  * @method array getBandwidthPackageIds() 获取带宽包唯一ID列表(申请数量大于1时有效)
  * @method void setBandwidthPackageIds(array $BandwidthPackageIds) 设置带宽包唯一ID列表(申请数量大于1时有效)
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateBandwidthPackage返回参数结构体
  */
 class CreateBandwidthPackageResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateBandwidthPackageResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $BandwidthPackageId 带宽包唯一ID
      * @param array $BandwidthPackageIds 带宽包唯一ID列表(申请数量大于1时有效)
@@ -54,6 +53,7 @@ class CreateBandwidthPackageResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 编辑视频任务信息
+ *
  * @method string getTaskId() 获取任务 ID。
  * @method void setTaskId(string $TaskId) 设置任务 ID。
  * @method string getStatus() 获取任务状态，取值：
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(EditMediaTaskOutput $Output) 设置视频编辑任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *编辑视频任务信息
  */
 class EditMediaTask extends AbstractModel
 {
@@ -81,6 +79,7 @@ class EditMediaTask extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
+
     /**
      * @param string $TaskId 任务 ID。
      * @param string $Status 任务状态，取值：
@@ -98,6 +97,7 @@ class EditMediaTask extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

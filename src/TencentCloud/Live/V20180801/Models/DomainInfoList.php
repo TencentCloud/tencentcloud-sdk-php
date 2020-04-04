@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 多个域名信息列表
+ *
  * @method string getDomain() 获取域名。
  * @method void setDomain(string $Domain) 设置域名。
  * @method array getDetailInfoList() 获取明细信息。
  * @method void setDetailInfoList(array $DetailInfoList) 设置明细信息。
- */
-
-/**
- *多个域名信息列表
  */
 class DomainInfoList extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DomainInfoList extends AbstractModel
      * @var array 明细信息。
      */
     public $DetailInfoList;
+
     /**
      * @param string $Domain 域名。
      * @param array $DetailInfoList 明细信息。
@@ -46,6 +45,7 @@ class DomainInfoList extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

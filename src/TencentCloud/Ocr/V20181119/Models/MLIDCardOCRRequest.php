@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MLIDCardOCR请求参数结构体
+ *
  * @method string getImageBase64() 获取图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
  * @method boolean getRetImage() 获取是否返回图片
  * @method void setRetImage(boolean $RetImage) 设置是否返回图片
- */
-
-/**
- *MLIDCardOCR请求参数结构体
  */
 class MLIDCardOCRRequest extends AbstractModel
 {
@@ -63,6 +61,7 @@ class MLIDCardOCRRequest extends AbstractModel
      * @var boolean 是否返回图片
      */
     public $RetImage;
+
     /**
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
@@ -78,6 +77,7 @@ class MLIDCardOCRRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

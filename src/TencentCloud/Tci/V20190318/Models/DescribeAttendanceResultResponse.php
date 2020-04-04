@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAttendanceResult返回参数结构体
+ *
  * @method array getAbsenceSetInLibs() 获取缺失人员的ID列表(只针对请求中的libids字段)
  * @method void setAbsenceSetInLibs(array $AbsenceSetInLibs) 设置缺失人员的ID列表(只针对请求中的libids字段)
  * @method array getAttendanceSet() 获取确定出勤人员列表
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProgress(integer $Progress) 设置请求处理进度
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAttendanceResult返回参数结构体
  */
 class DescribeAttendanceResultResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeAttendanceResultResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $AbsenceSetInLibs 缺失人员的ID列表(只针对请求中的libids字段)
      * @param array $AttendanceSet 确定出勤人员列表
@@ -78,6 +77,7 @@ class DescribeAttendanceResultResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

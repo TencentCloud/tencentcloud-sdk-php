@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDevicePosition请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取数量限制
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表
  * @method string getAlias() 获取实例别名
  * @method void setAlias(string $Alias) 设置实例别名
- */
-
-/**
- *DescribeDevicePosition请求参数结构体
  */
 class DescribeDevicePositionRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeDevicePositionRequest extends AbstractModel
      * @var string 实例别名
      */
     public $Alias;
+
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 数量限制
@@ -78,6 +77,7 @@ class DescribeDevicePositionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

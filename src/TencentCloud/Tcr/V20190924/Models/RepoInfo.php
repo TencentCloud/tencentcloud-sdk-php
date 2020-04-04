@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 仓库的信息
+ *
  * @method string getRepoName() 获取仓库名称
  * @method void setRepoName(string $RepoName) 设置仓库名称
  * @method string getRepoType() 获取仓库类型
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreationTime(string $CreationTime) 设置仓库创建时间
  * @method string getUpdateTime() 获取仓库更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置仓库更新时间
- */
-
-/**
- *仓库的信息
  */
 class RepoInfo extends AbstractModel
 {
@@ -101,6 +99,7 @@ class RepoInfo extends AbstractModel
      * @var string 仓库更新时间
      */
     public $UpdateTime;
+
     /**
      * @param string $RepoName 仓库名称
      * @param string $RepoType 仓库类型
@@ -118,6 +117,7 @@ class RepoInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

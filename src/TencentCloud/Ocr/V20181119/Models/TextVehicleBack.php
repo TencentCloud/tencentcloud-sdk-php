@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 行驶证副页正面的识别结果
+ *
  * @method string getPlateNo() 获取号牌号码
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlateNo(string $PlateNo) 设置号牌号码
@@ -58,10 +60,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalQuasiMass(string $TotalQuasiMass) 设置准牵引总质量
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *行驶证副页正面的识别结果
  */
 class TextVehicleBack extends AbstractModel
 {
@@ -124,6 +122,7 @@ class TextVehicleBack extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalQuasiMass;
+
     /**
      * @param string $PlateNo 号牌号码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -150,6 +149,7 @@ class TextVehicleBack extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

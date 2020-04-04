@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图像任务控制选项
+ *
  * @method boolean getEnableActionClass() 获取大教室场景学生肢体动作识别选项
  * @method void setEnableActionClass(boolean $EnableActionClass) 设置大教室场景学生肢体动作识别选项
  * @method boolean getEnableFaceDetect() 获取人脸检测选项
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableTeacherBodyMovements(boolean $EnableTeacherBodyMovements) 设置教师动作选项（该功能尚未支持）
  * @method boolean getEnableTeacherOutScreen() 获取判断老师是否在屏幕中
  * @method void setEnableTeacherOutScreen(boolean $EnableTeacherOutScreen) 设置判断老师是否在屏幕中
- */
-
-/**
- *图像任务控制选项
  */
 class ImageTaskFunction extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ImageTaskFunction extends AbstractModel
      * @var boolean 判断老师是否在屏幕中
      */
     public $EnableTeacherOutScreen;
+
     /**
      * @param boolean $EnableActionClass 大教室场景学生肢体动作识别选项
      * @param boolean $EnableFaceDetect 人脸检测选项
@@ -110,6 +109,7 @@ class ImageTaskFunction extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

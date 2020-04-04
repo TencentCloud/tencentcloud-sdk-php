@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 域名的定制错误响应配置
+ *
  * @method string getErrorPageId() 获取错误定制响应的配置ID
  * @method void setErrorPageId(string $ErrorPageId) 设置错误定制响应的配置ID
  * @method string getListenerId() 获取监听器ID
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置规则状态,0为成功
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *域名的定制错误响应配置
  */
 class DomainErrorPageInfo extends AbstractModel
 {
@@ -102,6 +100,7 @@ class DomainErrorPageInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
+
     /**
      * @param string $ErrorPageId 错误定制响应的配置ID
      * @param string $ListenerId 监听器ID
@@ -122,6 +121,7 @@ class DomainErrorPageInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

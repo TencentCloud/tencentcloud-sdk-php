@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 漏洞列表数据
+ *
  * @method integer getVulId() 获取漏洞种类ID
  * @method void setVulId(integer $VulId) 设置漏洞种类ID
  * @method string getVulName() 获取漏洞名称
@@ -42,10 +44,6 @@ NOTICE：提示
  * @method void setVulStatus(string $VulStatus) 设置漏洞状态
 * UN_OPERATED : 待处理
 * FIXED : 已修复
- */
-
-/**
- *漏洞列表数据
  */
 class Vul extends AbstractModel
 {
@@ -84,6 +82,7 @@ NOTICE：提示
 * FIXED : 已修复
      */
     public $VulStatus;
+
     /**
      * @param integer $VulId 漏洞种类ID
      * @param string $VulName 漏洞名称
@@ -102,6 +101,7 @@ NOTICE：提示
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

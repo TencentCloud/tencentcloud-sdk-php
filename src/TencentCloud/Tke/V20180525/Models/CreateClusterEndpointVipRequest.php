@@ -18,14 +18,12 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateClusterEndpointVip请求参数结构体
+ *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method array getSecurityPolicies() 获取安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
  * @method void setSecurityPolicies(array $SecurityPolicies) 设置安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
- */
-
-/**
- *CreateClusterEndpointVip请求参数结构体
  */
 class CreateClusterEndpointVipRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateClusterEndpointVipRequest extends AbstractModel
      * @var array 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
      */
     public $SecurityPolicies;
+
     /**
      * @param string $ClusterId 集群ID
      * @param array $SecurityPolicies 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
@@ -46,6 +45,7 @@ class CreateClusterEndpointVipRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

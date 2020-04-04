@@ -18,12 +18,10 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RestartDBInstances请求参数结构体
+ *
  * @method array getInstanceIds() 获取实例ID的数组
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID的数组
- */
-
-/**
- *RestartDBInstances请求参数结构体
  */
 class RestartDBInstancesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RestartDBInstancesRequest extends AbstractModel
      * @var array 实例ID的数组
      */
     public $InstanceIds;
+
     /**
      * @param array $InstanceIds 实例ID的数组
      */
@@ -38,6 +37,7 @@ class RestartDBInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

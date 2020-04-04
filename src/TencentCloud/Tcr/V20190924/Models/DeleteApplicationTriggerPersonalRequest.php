@@ -18,12 +18,10 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteApplicationTriggerPersonal请求参数结构体
+ *
  * @method string getTriggerName() 获取触发器名称
  * @method void setTriggerName(string $TriggerName) 设置触发器名称
- */
-
-/**
- *DeleteApplicationTriggerPersonal请求参数结构体
  */
 class DeleteApplicationTriggerPersonalRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteApplicationTriggerPersonalRequest extends AbstractModel
      * @var string 触发器名称
      */
     public $TriggerName;
+
     /**
      * @param string $TriggerName 触发器名称
      */
@@ -38,6 +37,7 @@ class DeleteApplicationTriggerPersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

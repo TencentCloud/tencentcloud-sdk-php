@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTaskTemplate请求参数结构体
+ *
  * @method string getTaskTemplateId() 获取任务模板ID
  * @method void setTaskTemplateId(string $TaskTemplateId) 设置任务模板ID
  * @method string getTaskTemplateName() 获取任务模板名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskTemplateDescription(string $TaskTemplateDescription) 设置任务模板描述
  * @method Task getTaskTemplateInfo() 获取任务模板信息
  * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) 设置任务模板信息
- */
-
-/**
- *ModifyTaskTemplate请求参数结构体
  */
 class ModifyTaskTemplateRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyTaskTemplateRequest extends AbstractModel
      * @var Task 任务模板信息
      */
     public $TaskTemplateInfo;
+
     /**
      * @param string $TaskTemplateId 任务模板ID
      * @param string $TaskTemplateName 任务模板名称
@@ -62,6 +61,7 @@ class ModifyTaskTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

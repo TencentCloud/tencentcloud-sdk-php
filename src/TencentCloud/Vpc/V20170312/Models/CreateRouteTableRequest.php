@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRouteTable请求参数结构体
+ *
  * @method string getVpcId() 获取待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method void setVpcId(string $VpcId) 设置待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method string getRouteTableName() 获取路由表名称，最大长度不能超过60个字节。
  * @method void setRouteTableName(string $RouteTableName) 设置路由表名称，最大长度不能超过60个字节。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
- */
-
-/**
- *CreateRouteTable请求参数结构体
  */
 class CreateRouteTableRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateRouteTableRequest extends AbstractModel
      * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     public $Tags;
+
     /**
      * @param string $VpcId 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param string $RouteTableName 路由表名称，最大长度不能超过60个字节。
@@ -54,6 +53,7 @@ class CreateRouteTableRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

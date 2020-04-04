@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CommitUpload返回参数结构体
+ *
  * @method string getFileId() 获取媒体文件的唯一标识。
  * @method void setFileId(string $FileId) 设置媒体文件的唯一标识。
  * @method string getMediaUrl() 获取媒体播放地址。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CommitUpload返回参数结构体
  */
 class CommitUploadResponse extends AbstractModel
 {
@@ -58,6 +56,7 @@ class CommitUploadResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $FileId 媒体文件的唯一标识。
      * @param string $MediaUrl 媒体播放地址。
@@ -70,6 +69,7 @@ class CommitUploadResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

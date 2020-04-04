@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCCSelfDefinePolicy请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgp高防包；bgp-multip共享包）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgp高防包；bgp-multip共享包）
  * @method string getId() 获取资源ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置拉取的条数
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
- */
-
-/**
- *DescribeCCSelfDefinePolicy请求参数结构体
  */
 class DescribeCCSelfDefinePolicyRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeCCSelfDefinePolicyRequest extends AbstractModel
      * @var integer 偏移量
      */
     public $Offset;
+
     /**
      * @param string $Business 大禹子产品代号（bgp高防包；bgp-multip共享包）
      * @param string $Id 资源ID
@@ -62,6 +61,7 @@ class DescribeCCSelfDefinePolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

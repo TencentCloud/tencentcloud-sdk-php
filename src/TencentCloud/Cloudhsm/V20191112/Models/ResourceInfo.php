@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 资源信息
+ *
  * @method string getResourceId() 获取资源Id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源Id
@@ -90,10 +92,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcName(string $VpcName) 设置Vpc名称
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *资源信息
  */
 class ResourceInfo extends AbstractModel
 {
@@ -204,6 +202,7 @@ class ResourceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcName;
+
     /**
      * @param string $ResourceId 资源Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -246,6 +245,7 @@ class ResourceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

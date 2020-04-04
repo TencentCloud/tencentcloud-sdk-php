@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveRecordTemplate请求参数结构体
+ *
  * @method integer getTemplateId() 获取模板Id。
  * @method void setTemplateId(integer $TemplateId) 设置模板Id。
- */
-
-/**
- *DescribeLiveRecordTemplate请求参数结构体
  */
 class DescribeLiveRecordTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeLiveRecordTemplateRequest extends AbstractModel
      * @var integer 模板Id。
      */
     public $TemplateId;
+
     /**
      * @param integer $TemplateId 模板Id。
      */
@@ -38,6 +37,7 @@ class DescribeLiveRecordTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

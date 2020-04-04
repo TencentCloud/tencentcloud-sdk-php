@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteImageSpriteTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取雪碧图模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置雪碧图模板唯一标识。
- */
-
-/**
- *DeleteImageSpriteTemplate请求参数结构体
  */
 class DeleteImageSpriteTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteImageSpriteTemplateRequest extends AbstractModel
      * @var integer 雪碧图模板唯一标识。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 雪碧图模板唯一标识。
      */
@@ -38,6 +37,7 @@ class DeleteImageSpriteTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 机型族配置
+ *
  * @method string getInstanceFamilyName() 获取机型名称
  * @method void setInstanceFamilyName(string $InstanceFamilyName) 设置机型名称
  * @method string getInstanceFamily() 获取机型ID
  * @method void setInstanceFamily(string $InstanceFamily) 设置机型ID
- */
-
-/**
- *机型族配置
  */
 class InstanceFamilyConfig extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceFamilyConfig extends AbstractModel
      * @var string 机型ID
      */
     public $InstanceFamily;
+
     /**
      * @param string $InstanceFamilyName 机型名称
      * @param string $InstanceFamily 机型ID
@@ -46,6 +45,7 @@ class InstanceFamilyConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

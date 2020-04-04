@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddUser请求参数结构体
+ *
  * @method string getName() 获取子用户用户名
  * @method void setName(string $Name) 设置子用户用户名
  * @method string getRemark() 获取子用户备注
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCountryCode(string $CountryCode) 设置区号
  * @method string getEmail() 获取邮箱
  * @method void setEmail(string $Email) 设置邮箱
- */
-
-/**
- *AddUser请求参数结构体
  */
 class AddUserRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class AddUserRequest extends AbstractModel
      * @var string 邮箱
      */
     public $Email;
+
     /**
      * @param string $Name 子用户用户名
      * @param string $Remark 子用户备注
@@ -102,6 +101,7 @@ class AddUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

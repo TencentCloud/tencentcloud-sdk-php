@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 清分提现明细信息
+ *
  * @method string getBookingFlag() 获取STRING(2)，记账标志（01: 提现; 02: 清分 ）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBookingFlag(string $BookingFlag) 设置STRING(2)，记账标志（01: 提现; 02: 清分 ）
@@ -66,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置STRING(300)，备注
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *清分提现明细信息
  */
 class WithdrawItem extends AbstractModel
 {
@@ -144,6 +142,7 @@ class WithdrawItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
+
     /**
      * @param string $BookingFlag STRING(2)，记账标志（01: 提现; 02: 清分 ）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,6 +173,7 @@ class WithdrawItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

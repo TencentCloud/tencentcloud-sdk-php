@@ -18,6 +18,8 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内容页结构
+ *
  * @method string getTemplateId() 获取模板id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateId(string $TemplateId) 设置模板id
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductName(string $ProductName) 设置作品名称
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *内容页结构
  */
 class ProductInfo extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ProductInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductName;
+
     /**
      * @param string $TemplateId 模板id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,6 +113,7 @@ class ProductInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

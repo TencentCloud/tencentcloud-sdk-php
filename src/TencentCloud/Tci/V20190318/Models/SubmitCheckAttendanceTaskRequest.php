@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SubmitCheckAttendanceTask请求参数结构体
+ *
  * @method string getFileContent() 获取输入数据
  * @method void setFileContent(string $FileContent) 设置输入数据
  * @method string getFileType() 获取视频流类型，vod_url表示点播URL，live_url表示直播URL，默认vod_url
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 对于直播场景，使用绝对时间戳，单位秒，默认当前时间
  * @method float getThreshold() 获取识别阈值；默认为0.8
  * @method void setThreshold(float $Threshold) 设置识别阈值；默认为0.8
- */
-
-/**
- *SubmitCheckAttendanceTask请求参数结构体
  */
 class SubmitCheckAttendanceTaskRequest extends AbstractModel
 {
@@ -93,6 +91,7 @@ class SubmitCheckAttendanceTaskRequest extends AbstractModel
      * @var float 识别阈值；默认为0.8
      */
     public $Threshold;
+
     /**
      * @param string $FileContent 输入数据
      * @param string $FileType 视频流类型，vod_url表示点播URL，live_url表示直播URL，默认vod_url
@@ -110,6 +109,7 @@ class SubmitCheckAttendanceTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

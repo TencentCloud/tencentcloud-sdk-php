@@ -18,14 +18,12 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 产品发布过的全部版本
+ *
  * @method string getOtaVersion() 获取版本名称
  * @method void setOtaVersion(string $OtaVersion) 设置版本名称
  * @method integer getPublishTime() 获取发布时间，unix时间戳，单位：秒
  * @method void setPublishTime(integer $PublishTime) 设置发布时间，unix时间戳，单位：秒
- */
-
-/**
- *产品发布过的全部版本
  */
 class OtaPubHistory extends AbstractModel
 {
@@ -38,6 +36,7 @@ class OtaPubHistory extends AbstractModel
      * @var integer 发布时间，unix时间戳，单位：秒
      */
     public $PublishTime;
+
     /**
      * @param string $OtaVersion 版本名称
      * @param integer $PublishTime 发布时间，unix时间戳，单位：秒
@@ -46,6 +45,7 @@ class OtaPubHistory extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 签署坐标对象
+ *
  * @method string getSignOnPage() 获取签名域页数
  * @method void setSignOnPage(string $SignOnPage) 设置签名域页数
  * @method string getSignLocationLBX() 获取签名域左下角X轴坐标轴
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSignLocationRUX(string $SignLocationRUX) 设置签名域右上角X轴坐标轴
  * @method string getSignLocationRUY() 获取签名域右上角Y轴坐标轴
  * @method void setSignLocationRUY(string $SignLocationRUY) 设置签名域右上角Y轴坐标轴
- */
-
-/**
- *签署坐标对象
  */
 class SignLocation extends AbstractModel
 {
@@ -59,6 +57,7 @@ class SignLocation extends AbstractModel
      * @var string 签名域右上角Y轴坐标轴
      */
     public $SignLocationRUY;
+
     /**
      * @param string $SignOnPage 签名域页数
      * @param string $SignLocationLBX 签名域左下角X轴坐标轴
@@ -70,6 +69,7 @@ class SignLocation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

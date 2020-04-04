@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 音频增益调节参数
+ *
  * @method integer getMute() 获取是否静音，取值范围0或1。
 <li>0表示不静音。</li>
 <li>1表示静音。</li>
@@ -37,10 +39,6 @@ use TencentCloud\Common\AbstractModel;
 <li>0和1：表示不改变。</li>
 默认是0。
  */
-
-/**
- *音频增益调节参数
- */
 class AudioVolumeParam extends AbstractModel
 {
     /**
@@ -59,6 +57,7 @@ class AudioVolumeParam extends AbstractModel
 默认是0。
      */
     public $Gain;
+
     /**
      * @param integer $Mute 是否静音，取值范围0或1。
 <li>0表示不静音。</li>
@@ -74,6 +73,7 @@ class AudioVolumeParam extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveTranscodeTemplate请求参数结构体
+ *
  * @method string getTemplateName() 获取模板名称，例：900 900p 仅支持字母和数字的组合。
  * @method void setTemplateName(string $TemplateName) 设置模板名称，例：900 900p 仅支持字母和数字的组合。
  * @method integer getVideoBitrate() 获取视频码率。范围：100-8000。
@@ -62,10 +64,6 @@ baseline/main/high。默认baseline
  * @method void setAiTransCode(integer $AiTransCode) 设置是否是极速高清模板，0：否，1：是。默认0。
  * @method float getAdaptBitratePercent() 获取极速高清相比VideoBitrate少多少码率，0.1到0.5
  * @method void setAdaptBitratePercent(float $AdaptBitratePercent) 设置极速高清相比VideoBitrate少多少码率，0.1到0.5
- */
-
-/**
- *CreateLiveTranscodeTemplate请求参数结构体
  */
 class CreateLiveTranscodeTemplateRequest extends AbstractModel
 {
@@ -166,6 +164,7 @@ baseline/main/high。默认baseline
      * @var float 极速高清相比VideoBitrate少多少码率，0.1到0.5
      */
     public $AdaptBitratePercent;
+
     /**
      * @param string $TemplateName 模板名称，例：900 900p 仅支持字母和数字的组合。
      * @param integer $VideoBitrate 视频码率。范围：100-8000。
@@ -194,6 +193,7 @@ baseline/main/high。默认baseline
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

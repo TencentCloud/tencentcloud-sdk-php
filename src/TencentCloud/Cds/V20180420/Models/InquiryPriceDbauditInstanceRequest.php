@@ -18,6 +18,8 @@ namespace TencentCloud\Cds\V20180420\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceDbauditInstance请求参数结构体
+ *
  * @method string getInstanceVersion() 获取实例规格，取值范围： cdsaudit，cdsaudit_adv， cdsaudit_ent 分别为合规版，高级版，企业版
  * @method void setInstanceVersion(string $InstanceVersion) 设置实例规格，取值范围： cdsaudit，cdsaudit_adv， cdsaudit_ent 分别为合规版，高级版，企业版
  * @method string getInquiryType() 获取询价类型： renew，续费；newbuy，新购
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeUnit(string $TimeUnit) 设置购买时长单位，y：年；m：月
  * @method string getServiceRegion() 获取实例所在地域
  * @method void setServiceRegion(string $ServiceRegion) 设置实例所在地域
- */
-
-/**
- *InquiryPriceDbauditInstance请求参数结构体
  */
 class InquiryPriceDbauditInstanceRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class InquiryPriceDbauditInstanceRequest extends AbstractModel
      * @var string 实例所在地域
      */
     public $ServiceRegion;
+
     /**
      * @param string $InstanceVersion 实例规格，取值范围： cdsaudit，cdsaudit_adv， cdsaudit_ent 分别为合规版，高级版，企业版
      * @param string $InquiryType 询价类型： renew，续费；newbuy，新购
@@ -70,6 +69,7 @@ class InquiryPriceDbauditInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReplaceCertForLoadBalancers请求参数结构体
+ *
  * @method string getOldCertificateId() 获取需要被替换的证书的ID，可以是服务端证书或客户端证书
  * @method void setOldCertificateId(string $OldCertificateId) 设置需要被替换的证书的ID，可以是服务端证书或客户端证书
  * @method CertificateInput getCertificate() 获取新证书的内容等相关信息
  * @method void setCertificate(CertificateInput $Certificate) 设置新证书的内容等相关信息
- */
-
-/**
- *ReplaceCertForLoadBalancers请求参数结构体
  */
 class ReplaceCertForLoadBalancersRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ReplaceCertForLoadBalancersRequest extends AbstractModel
      * @var CertificateInput 新证书的内容等相关信息
      */
     public $Certificate;
+
     /**
      * @param string $OldCertificateId 需要被替换的证书的ID，可以是服务端证书或客户端证书
      * @param CertificateInput $Certificate 新证书的内容等相关信息
@@ -46,6 +45,7 @@ class ReplaceCertForLoadBalancersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReEncrypt请求参数结构体
+ *
  * @method string getCiphertextBlob() 获取需要重新加密的密文
  * @method void setCiphertextBlob(string $CiphertextBlob) 设置需要重新加密的密文
  * @method string getDestinationKeyId() 获取重新加密使用的CMK，如果为空，则使用密文原有的CMK重新加密（若密钥没有轮换则密文不会刷新）
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceEncryptionContext(string $SourceEncryptionContext) 设置CiphertextBlob 密文加密时使用的key/value对的json字符串。如果加密时未使用，则为空
  * @method string getDestinationEncryptionContext() 获取重新加密使用的key/value对的json字符串，如果使用该字段，则返回的新密文在解密时需要填入相同的字符串
  * @method void setDestinationEncryptionContext(string $DestinationEncryptionContext) 设置重新加密使用的key/value对的json字符串，如果使用该字段，则返回的新密文在解密时需要填入相同的字符串
- */
-
-/**
- *ReEncrypt请求参数结构体
  */
 class ReEncryptRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ReEncryptRequest extends AbstractModel
      * @var string 重新加密使用的key/value对的json字符串，如果使用该字段，则返回的新密文在解密时需要填入相同的字符串
      */
     public $DestinationEncryptionContext;
+
     /**
      * @param string $CiphertextBlob 需要重新加密的密文
      * @param string $DestinationKeyId 重新加密使用的CMK，如果为空，则使用密文原有的CMK重新加密（若密钥没有轮换则密文不会刷新）
@@ -62,6 +61,7 @@ class ReEncryptRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

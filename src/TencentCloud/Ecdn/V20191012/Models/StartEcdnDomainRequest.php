@@ -18,12 +18,10 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StartEcdnDomain请求参数结构体
+ *
  * @method string getDomain() 获取待启用域名。
  * @method void setDomain(string $Domain) 设置待启用域名。
- */
-
-/**
- *StartEcdnDomain请求参数结构体
  */
 class StartEcdnDomainRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class StartEcdnDomainRequest extends AbstractModel
      * @var string 待启用域名。
      */
     public $Domain;
+
     /**
      * @param string $Domain 待启用域名。
      */
@@ -38,6 +37,7 @@ class StartEcdnDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

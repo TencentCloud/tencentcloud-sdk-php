@@ -18,6 +18,8 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设置加密密钥所需的参数
+ *
  * @method string getTrack() 获取加密track类型。取值范围：
 SD、HD、UHD1、UHD2、AUDIO
  * @method void setTrack(string $Track) 设置加密track类型。取值范围：
@@ -28,10 +30,6 @@ SD、HD、UHD1、UHD2、AUDIO
  * @method void setKeyId(string $KeyId) 设置密钥ID。
  * @method string getIv() 获取请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对解密密钥进行加密，并对加密结果进行base64编码。
  * @method void setIv(string $Iv) 设置请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对解密密钥进行加密，并对加密结果进行base64编码。
- */
-
-/**
- *设置加密密钥所需的参数
  */
 class KeyParam extends AbstractModel
 {
@@ -55,6 +53,7 @@ SD、HD、UHD1、UHD2、AUDIO
      * @var string 请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对解密密钥进行加密，并对加密结果进行base64编码。
      */
     public $Iv;
+
     /**
      * @param string $Track 加密track类型。取值范围：
 SD、HD、UHD1、UHD2、AUDIO
@@ -66,6 +65,7 @@ SD、HD、UHD1、UHD2、AUDIO
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

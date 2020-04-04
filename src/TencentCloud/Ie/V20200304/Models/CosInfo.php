@@ -18,6 +18,8 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务视频cos信息
+ *
  * @method string getRegion() 获取cos 区域值。例如：ap-beijing。
  * @method void setRegion(string $Region) 设置cos 区域值。例如：ap-beijing。
  * @method string getBucket() 获取cos 存储桶，格式为BuketName-AppId。例如：test-123456。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 对于读表示文件路径，例如：/test/test.mp4。
  * @method CosAuthMode getCosAuthMode() 获取cos 授权信息，不填默认为公有权限。
  * @method void setCosAuthMode(CosAuthMode $CosAuthMode) 设置cos 授权信息，不填默认为公有权限。
- */
-
-/**
- *任务视频cos信息
  */
 class CosInfo extends AbstractModel
 {
@@ -58,6 +56,7 @@ class CosInfo extends AbstractModel
      * @var CosAuthMode cos 授权信息，不填默认为公有权限。
      */
     public $CosAuthMode;
+
     /**
      * @param string $Region cos 区域值。例如：ap-beijing。
      * @param string $Bucket cos 存储桶，格式为BuketName-AppId。例如：test-123456。
@@ -70,6 +69,7 @@ class CosInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

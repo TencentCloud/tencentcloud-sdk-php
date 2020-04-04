@@ -18,16 +18,14 @@ namespace TencentCloud\Mongodb\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetPassword请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method string getUserName() 获取实例账户名称
  * @method void setUserName(string $UserName) 设置实例账户名称
  * @method string getPassword() 获取实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
  * @method void setPassword(string $Password) 设置实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
- */
-
-/**
- *SetPassword请求参数结构体
  */
 class SetPasswordRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SetPasswordRequest extends AbstractModel
      * @var string 实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
      */
     public $Password;
+
     /**
      * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      * @param string $UserName 实例账户名称
@@ -54,6 +53,7 @@ class SetPasswordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

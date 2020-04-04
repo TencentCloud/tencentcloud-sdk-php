@@ -18,14 +18,12 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDeviceModel请求参数结构体
+ *
  * @method string getTid() 获取设备TID
  * @method void setTid(string $Tid) 设置设备TID
  * @method string getBranch() 获取物模型的分支路径
  * @method void setBranch(string $Branch) 设置物模型的分支路径
- */
-
-/**
- *DescribeDeviceModel请求参数结构体
  */
 class DescribeDeviceModelRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDeviceModelRequest extends AbstractModel
      * @var string 物模型的分支路径
      */
     public $Branch;
+
     /**
      * @param string $Tid 设备TID
      * @param string $Branch 物模型的分支路径
@@ -46,6 +45,7 @@ class DescribeDeviceModelRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

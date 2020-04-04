@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeL7Listeners请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method array getListenerIds() 获取七层监听器实例ID列表，可通过接口DescribeL7Listeners查询。
  * @method void setListenerIds(array $ListenerIds) 设置七层监听器实例ID列表，可通过接口DescribeL7Listeners查询。
- */
-
-/**
- *DescribeL7Listeners请求参数结构体
  */
 class DescribeL7ListenersRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeL7ListenersRequest extends AbstractModel
      * @var array 七层监听器实例ID列表，可通过接口DescribeL7Listeners查询。
      */
     public $ListenerIds;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param array $ListenerIds 七层监听器实例ID列表，可通过接口DescribeL7Listeners查询。
@@ -46,6 +45,7 @@ class DescribeL7ListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

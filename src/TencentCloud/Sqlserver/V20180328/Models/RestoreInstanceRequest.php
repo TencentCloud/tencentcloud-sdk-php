@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RestoreInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，形如mssql-j8kv137v
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-j8kv137v
  * @method integer getBackupId() 获取备份文件ID，该ID可以通过DescribeBackups接口返回数据中的Id字段获得
  * @method void setBackupId(integer $BackupId) 设置备份文件ID，该ID可以通过DescribeBackups接口返回数据中的Id字段获得
- */
-
-/**
- *RestoreInstance请求参数结构体
  */
 class RestoreInstanceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RestoreInstanceRequest extends AbstractModel
      * @var integer 备份文件ID，该ID可以通过DescribeBackups接口返回数据中的Id字段获得
      */
     public $BackupId;
+
     /**
      * @param string $InstanceId 实例ID，形如mssql-j8kv137v
      * @param integer $BackupId 备份文件ID，该ID可以通过DescribeBackups接口返回数据中的Id字段获得
@@ -46,6 +45,7 @@ class RestoreInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

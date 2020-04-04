@@ -18,6 +18,8 @@ namespace TencentCloud\Sts\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AssumeRole请求参数结构体
+ *
  * @method string getRoleArn() 获取角色的资源描述。例如：qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName
  * @method void setRoleArn(string $RoleArn) 设置角色的资源描述。例如：qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName
  * @method string getRoleSessionName() 获取临时会话名称，由用户自定义名称
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照[云 API 规范](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2)再 urlencode 一次）。
 2、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 3、策略中不能包含 principal 元素。
- */
-
-/**
- *AssumeRole请求参数结构体
  */
 class AssumeRoleRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ class AssumeRoleRequest extends AbstractModel
 3、策略中不能包含 principal 元素。
      */
     public $Policy;
+
     /**
      * @param string $RoleArn 角色的资源描述。例如：qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName
      * @param string $RoleSessionName 临时会话名称，由用户自定义名称
@@ -78,6 +77,7 @@ class AssumeRoleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

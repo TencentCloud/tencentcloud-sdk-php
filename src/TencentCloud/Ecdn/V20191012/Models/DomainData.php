@@ -18,14 +18,12 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 排序类型数据结构
+ *
  * @method string getResource() 获取域名
  * @method void setResource(string $Resource) 设置域名
  * @method array getDetailData() 获取结果详情
  * @method void setDetailData(array $DetailData) 设置结果详情
- */
-
-/**
- *排序类型数据结构
  */
 class DomainData extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DomainData extends AbstractModel
      * @var array 结果详情
      */
     public $DetailData;
+
     /**
      * @param string $Resource 域名
      * @param array $DetailData 结果详情
@@ -46,6 +45,7 @@ class DomainData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

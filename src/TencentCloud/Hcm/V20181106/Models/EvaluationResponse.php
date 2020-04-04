@@ -18,6 +18,8 @@ namespace TencentCloud\Hcm\V20181106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Evaluation返回参数结构体
+ *
  * @method string getSessionId() 获取图片唯一标识，一张图片一个SessionId；
  * @method void setSessionId(string $SessionId) 设置图片唯一标识，一张图片一个SessionId；
  * @method array getItems() 获取识别出的算式信息；
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置任务 id，用于查询接口
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *Evaluation返回参数结构体
  */
 class EvaluationResponse extends AbstractModel
 {
@@ -55,6 +53,7 @@ class EvaluationResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $SessionId 图片唯一标识，一张图片一个SessionId；
      * @param array $Items 识别出的算式信息；
@@ -66,6 +65,7 @@ class EvaluationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

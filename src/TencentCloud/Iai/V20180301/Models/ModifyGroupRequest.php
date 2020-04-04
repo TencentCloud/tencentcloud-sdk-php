@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyGroup请求参数结构体
+ *
  * @method string getGroupId() 获取人员库ID
  * @method void setGroupId(string $GroupId) 设置人员库ID
  * @method string getGroupName() 获取人员库名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupExDescriptionInfos(array $GroupExDescriptionInfos) 设置需要修改的人员库自定义描述字段，key-value
  * @method string getTag() 获取人员库信息备注
  * @method void setTag(string $Tag) 设置人员库信息备注
- */
-
-/**
- *ModifyGroup请求参数结构体
  */
 class ModifyGroupRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyGroupRequest extends AbstractModel
      * @var string 人员库信息备注
      */
     public $Tag;
+
     /**
      * @param string $GroupId 人员库ID
      * @param string $GroupName 人员库名称
@@ -62,6 +61,7 @@ class ModifyGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

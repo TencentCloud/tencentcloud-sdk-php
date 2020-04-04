@@ -18,12 +18,10 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云监控服务
+ *
  * @method boolean getEnabled() 获取是否开启。
  * @method void setEnabled(boolean $Enabled) 设置是否开启。
- */
-
-/**
- *云监控服务
  */
 class RunMonitorServiceEnabled extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RunMonitorServiceEnabled extends AbstractModel
      * @var boolean 是否开启。
      */
     public $Enabled;
+
     /**
      * @param boolean $Enabled 是否开启。
      */
@@ -38,6 +37,7 @@ class RunMonitorServiceEnabled extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyRouteTableAttribute请求参数结构体
+ *
  * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
  * @method string getRouteTableName() 获取路由表名称。
  * @method void setRouteTableName(string $RouteTableName) 设置路由表名称。
- */
-
-/**
- *ModifyRouteTableAttribute请求参数结构体
  */
 class ModifyRouteTableAttributeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyRouteTableAttributeRequest extends AbstractModel
      * @var string 路由表名称。
      */
     public $RouteTableName;
+
     /**
      * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      * @param string $RouteTableName 路由表名称。
@@ -46,6 +45,7 @@ class ModifyRouteTableAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

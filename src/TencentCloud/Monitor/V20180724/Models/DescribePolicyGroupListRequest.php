@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePolicyGroupList请求参数结构体
+ *
  * @method string getModule() 获取固定值，为"monitor"
  * @method void setModule(string $Module) 设置固定值，为"monitor"
  * @method integer getLimit() 获取分页参数，每页返回的数量，取值1~100
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConditionTempGroupId(string $ConditionTempGroupId) 设置模板策略组id, 多个id用逗号分隔
  * @method string getReceiverType() 获取过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
  * @method void setReceiverType(string $ReceiverType) 设置过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
- */
-
-/**
- *DescribePolicyGroupList请求参数结构体
  */
 class DescribePolicyGroupListRequest extends AbstractModel
 {
@@ -122,6 +120,7 @@ class DescribePolicyGroupListRequest extends AbstractModel
      * @var string 过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
      */
     public $ReceiverType;
+
     /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $Limit 分页参数，每页返回的数量，取值1~100
@@ -142,6 +141,7 @@ class DescribePolicyGroupListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

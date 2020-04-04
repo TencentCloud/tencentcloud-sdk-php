@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例可售卖规格详细信息，创建实例和扩容实例时 NodeCount、Memory 确定售卖规格，硬盘大小可用区间为[MinStorage,MaxStorage]
+ *
  * @method integer getNodeCount() 获取节点个数，2 表示一主一从，3 表示一主二从
  * @method void setNodeCount(integer $NodeCount) 设置节点个数，2 表示一主一从，3 表示一主二从
  * @method integer getMemory() 获取内存大小，单位 GB
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQps(integer $Qps) 设置最大 Qps 值
  * @method integer getCpu() 获取CPU核数
  * @method void setCpu(integer $Cpu) 设置CPU核数
- */
-
-/**
- *实例可售卖规格详细信息，创建实例和扩容实例时 NodeCount、Memory 确定售卖规格，硬盘大小可用区间为[MinStorage,MaxStorage]
  */
 class SpecConfigInfo extends AbstractModel
 {
@@ -80,6 +78,7 @@ class SpecConfigInfo extends AbstractModel
      * @var integer CPU核数
      */
     public $Cpu;
+
     /**
      * @param integer $NodeCount 节点个数，2 表示一主一从，3 表示一主二从
      * @param integer $Memory 内存大小，单位 GB
@@ -94,6 +93,7 @@ class SpecConfigInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

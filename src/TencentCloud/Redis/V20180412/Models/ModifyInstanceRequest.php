@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyInstance请求参数结构体
+ *
  * @method string getOperation() 获取修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
  * @method void setOperation(string $Operation) 设置修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
  * @method array getInstanceIds() 获取实例Id
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置已经废弃
  * @method integer getAutoRenew() 获取已经废弃
  * @method void setAutoRenew(integer $AutoRenew) 设置已经废弃
- */
-
-/**
- *ModifyInstance请求参数结构体
  */
 class ModifyInstanceRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ModifyInstanceRequest extends AbstractModel
      * @var integer 已经废弃
      */
     public $AutoRenew;
+
     /**
      * @param string $Operation 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
      * @param array $InstanceIds 实例Id
@@ -94,6 +93,7 @@ class ModifyInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

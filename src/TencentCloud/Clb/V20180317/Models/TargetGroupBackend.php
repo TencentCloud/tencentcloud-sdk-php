@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 目标组绑定的后端服务器
+ *
  * @method string getTargetGroupId() 获取目标组ID
  * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID
  * @method string getType() 获取后端服务的类型，可取：CVM、ENI（即将支持）
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEniId(string $EniId) 设置弹性网卡唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *目标组绑定的后端服务器
  */
 class TargetGroupBackend extends AbstractModel
 {
@@ -109,6 +107,7 @@ class TargetGroupBackend extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EniId;
+
     /**
      * @param string $TargetGroupId 目标组ID
      * @param string $Type 后端服务的类型，可取：CVM、ENI（即将支持）
@@ -130,6 +129,7 @@ class TargetGroupBackend extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccessPoints返回参数结构体
+ *
  * @method array getAccessPointSet() 获取接入点信息。
  * @method void setAccessPointSet(array $AccessPointSet) 设置接入点信息。
  * @method integer getTotalCount() 获取符合接入点数量。
  * @method void setTotalCount(integer $TotalCount) 设置符合接入点数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAccessPoints返回参数结构体
  */
 class DescribeAccessPointsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAccessPointsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $AccessPointSet 接入点信息。
      * @param integer $TotalCount 符合接入点数量。
@@ -54,6 +53,7 @@ class DescribeAccessPointsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 直播 AI 内容审核声音鉴黄结果
+ *
  * @method float getStartPtsTime() 获取嫌疑片段起始的 PTS 时间，单位：秒。
  * @method void setStartPtsTime(float $StartPtsTime) 设置嫌疑片段起始的 PTS 时间，单位：秒。
  * @method float getEndPtsTime() 获取嫌疑片段结束的 PTS 时间，单位：秒。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 <li>sexual_moan：呻吟。</li>
  * @method void setLabel(string $Label) 设置视频鉴黄结果标签，取值范围：
 <li>sexual_moan：呻吟。</li>
- */
-
-/**
- *直播 AI 内容审核声音鉴黄结果
  */
 class LiveStreamAiReviewVoicePornResult extends AbstractModel
 {
@@ -71,6 +69,7 @@ class LiveStreamAiReviewVoicePornResult extends AbstractModel
 <li>sexual_moan：呻吟。</li>
      */
     public $Label;
+
     /**
      * @param float $StartPtsTime 嫌疑片段起始的 PTS 时间，单位：秒。
      * @param float $EndPtsTime 嫌疑片段结束的 PTS 时间，单位：秒。
@@ -86,6 +85,7 @@ class LiveStreamAiReviewVoicePornResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

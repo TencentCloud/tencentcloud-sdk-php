@@ -18,6 +18,8 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEipAcls请求参数结构体
+ *
  * @method string getAclName() 获取ACL 名称，支持模糊查找
  * @method void setAclName(string $AclName) 设置ACL 名称，支持模糊查找
  * @method array getAclIds() 获取ACL 实例 ID 列表，数组下标从 0 开始
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(integer $Order) 设置排序方式，取值：0:增序(默认)，1:降序
  * @method array getAclNames() 获取ACL名称列表，支持模糊查找
  * @method void setAclNames(array $AclNames) 设置ACL名称列表，支持模糊查找
- */
-
-/**
- *DescribeEipAcls请求参数结构体
  */
 class DescribeEipAclsRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class DescribeEipAclsRequest extends AbstractModel
      * @var array ACL名称列表，支持模糊查找
      */
     public $AclNames;
+
     /**
      * @param string $AclName ACL 名称，支持模糊查找
      * @param array $AclIds ACL 实例 ID 列表，数组下标从 0 开始
@@ -110,6 +109,7 @@ class DescribeEipAclsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

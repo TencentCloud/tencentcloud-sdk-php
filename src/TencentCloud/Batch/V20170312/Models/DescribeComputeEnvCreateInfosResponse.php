@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeComputeEnvCreateInfos返回参数结构体
+ *
  * @method integer getTotalCount() 获取计算环境数量
  * @method void setTotalCount(integer $TotalCount) 设置计算环境数量
  * @method array getComputeEnvCreateInfoSet() 获取计算环境创建信息列表
  * @method void setComputeEnvCreateInfoSet(array $ComputeEnvCreateInfoSet) 设置计算环境创建信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeComputeEnvCreateInfos返回参数结构体
  */
 class DescribeComputeEnvCreateInfosResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeComputeEnvCreateInfosResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 计算环境数量
      * @param array $ComputeEnvCreateInfoSet 计算环境创建信息列表
@@ -54,6 +53,7 @@ class DescribeComputeEnvCreateInfosResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

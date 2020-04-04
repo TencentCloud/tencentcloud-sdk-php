@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRepositoryFilterPersonal请求参数结构体
+ *
  * @method string getRepoName() 获取搜索镜像名
  * @method void setRepoName(string $RepoName) 设置搜索镜像名
  * @method integer getOffset() 获取偏移量，默认为0
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublic(integer $Public) 设置筛选条件：1表示public，0表示private
  * @method string getNamespace() 获取命名空间
  * @method void setNamespace(string $Namespace) 设置命名空间
- */
-
-/**
- *DescribeRepositoryFilterPersonal请求参数结构体
  */
 class DescribeRepositoryFilterPersonalRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeRepositoryFilterPersonalRequest extends AbstractModel
      * @var string 命名空间
      */
     public $Namespace;
+
     /**
      * @param string $RepoName 搜索镜像名
      * @param integer $Offset 偏移量，默认为0
@@ -70,6 +69,7 @@ class DescribeRepositoryFilterPersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

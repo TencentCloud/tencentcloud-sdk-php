@@ -18,12 +18,10 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音过滤用量统计数据
+ *
  * @method integer getDuration() 获取语音过滤总时长
  * @method void setDuration(integer $Duration) 设置语音过滤总时长
- */
-
-/**
- *语音过滤用量统计数据
  */
 class VoiceFilterStatisticsItem extends AbstractModel
 {
@@ -31,6 +29,7 @@ class VoiceFilterStatisticsItem extends AbstractModel
      * @var integer 语音过滤总时长
      */
     public $Duration;
+
     /**
      * @param integer $Duration 语音过滤总时长
      */
@@ -38,6 +37,7 @@ class VoiceFilterStatisticsItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

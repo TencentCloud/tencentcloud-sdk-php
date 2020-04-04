@@ -18,16 +18,14 @@ namespace TencentCloud\Tia\V20180226\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeModel请求参数结构体
+ *
  * @method string getName() 获取模型名称
  * @method void setName(string $Name) 设置模型名称
  * @method string getCluster() 获取模型所在集群名称，`集群模式` 必填
  * @method void setCluster(string $Cluster) 设置模型所在集群名称，`集群模式` 必填
  * @method string getServType() 获取模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
  * @method void setServType(string $ServType) 设置模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
- */
-
-/**
- *DescribeModel请求参数结构体
  */
 class DescribeModelRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeModelRequest extends AbstractModel
      * @var string 模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
      */
     public $ServType;
+
     /**
      * @param string $Name 模型名称
      * @param string $Cluster 模型所在集群名称，`集群模式` 必填
@@ -54,6 +53,7 @@ class DescribeModelRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImageTags请求参数结构体
+ *
  * @method string getApplicationId() 获取应用Id
  * @method void setApplicationId(string $ApplicationId) 设置应用Id
  * @method integer getOffset() 获取偏移量，取值从0开始
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryImageIdFlag(integer $QueryImageIdFlag) 设置不填和0:查询 1:不查询
  * @method string getSearchWord() 获取可用于搜索的 tag 名字
  * @method void setSearchWord(string $SearchWord) 设置可用于搜索的 tag 名字
- */
-
-/**
- *DescribeImageTags请求参数结构体
  */
 class DescribeImageTagsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeImageTagsRequest extends AbstractModel
      * @var string 可用于搜索的 tag 名字
      */
     public $SearchWord;
+
     /**
      * @param string $ApplicationId 应用Id
      * @param integer $Offset 偏移量，取值从0开始
@@ -70,6 +69,7 @@ class DescribeImageTagsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

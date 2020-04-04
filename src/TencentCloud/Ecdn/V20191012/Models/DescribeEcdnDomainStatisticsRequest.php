@@ -18,6 +18,8 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEcdnDomainStatistics请求参数结构体
+ *
  * @method string getStartTime() 获取查询起始时间，如：2019-12-13 00:00:00。
 起止时间不超过90天。
  * @method void setStartTime(string $StartTime) 设置查询起始时间，如：2019-12-13 00:00:00。
@@ -56,10 +58,6 @@ dynamic_bandwidth：动态带宽，单位为 bps
  * @method void setOffset(integer $Offset) 设置列表分页起始地址，默认0。
  * @method integer getLimit() 获取列表分页记录条数，默认1000，最大3000。
  * @method void setLimit(integer $Limit) 设置列表分页记录条数，默认1000，最大3000。
- */
-
-/**
- *DescribeEcdnDomainStatistics请求参数结构体
  */
 class DescribeEcdnDomainStatisticsRequest extends AbstractModel
 {
@@ -109,6 +107,7 @@ dynamic_bandwidth：动态带宽，单位为 bps
      * @var integer 列表分页记录条数，默认1000，最大3000。
      */
     public $Limit;
+
     /**
      * @param string $StartTime 查询起始时间，如：2019-12-13 00:00:00。
 起止时间不超过90天。
@@ -134,6 +133,7 @@ dynamic_bandwidth：动态带宽，单位为 bps
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

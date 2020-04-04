@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVideoTask返回参数结构体
+ *
  * @method string getStatus() 获取任务状态，取值：
 WAITING：等待中；
 PROCESSING：处理中；
@@ -48,10 +50,6 @@ FINISH：已完成。
  * @method void setMetaData(VodMetaData $MetaData) 设置原始视频的元信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeVideoTask返回参数结构体
  */
 class DescribeVideoTaskResponse extends AbstractModel
 {
@@ -117,6 +115,7 @@ FINISH：已完成。
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Status 任务状态，取值：
 WAITING：等待中；
@@ -138,6 +137,7 @@ FINISH：已完成。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

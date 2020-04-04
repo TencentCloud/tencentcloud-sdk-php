@@ -18,14 +18,12 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 周报列表。
+ *
  * @method string getBeginDate() 获取周报开始时间。
  * @method void setBeginDate(string $BeginDate) 设置周报开始时间。
  * @method string getEndDate() 获取周报结束时间。
  * @method void setEndDate(string $EndDate) 设置周报结束时间。
- */
-
-/**
- *周报列表。
  */
 class WeeklyReport extends AbstractModel
 {
@@ -38,6 +36,7 @@ class WeeklyReport extends AbstractModel
      * @var string 周报结束时间。
      */
     public $EndDate;
+
     /**
      * @param string $BeginDate 周报开始时间。
      * @param string $EndDate 周报结束时间。
@@ -46,6 +45,7 @@ class WeeklyReport extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CCN路由策略对象
+ *
  * @method string getRouteId() 获取路由策略ID
  * @method void setRouteId(string $RouteId) 设置路由策略ID
  * @method string getDestinationCidrBlock() 获取目的端
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnabled(boolean $Enabled) 设置路由是否启用
  * @method string getInstanceUin() 获取关联实例所属UIN（根账号）
  * @method void setInstanceUin(string $InstanceUin) 设置关联实例所属UIN（根账号）
- */
-
-/**
- *CCN路由策略对象
  */
 class CcnRoute extends AbstractModel
 {
@@ -87,6 +85,7 @@ class CcnRoute extends AbstractModel
      * @var string 关联实例所属UIN（根账号）
      */
     public $InstanceUin;
+
     /**
      * @param string $RouteId 路由策略ID
      * @param string $DestinationCidrBlock 目的端
@@ -102,6 +101,7 @@ class CcnRoute extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

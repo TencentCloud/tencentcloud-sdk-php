@@ -18,14 +18,12 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteFace请求参数结构体
+ *
  * @method string getPersonId() 获取人员ID
  * @method void setPersonId(string $PersonId) 设置人员ID
  * @method array getFaceIds() 获取待删除的人脸ID列表
  * @method void setFaceIds(array $FaceIds) 设置待删除的人脸ID列表
- */
-
-/**
- *DeleteFace请求参数结构体
  */
 class DeleteFaceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteFaceRequest extends AbstractModel
      * @var array 待删除的人脸ID列表
      */
     public $FaceIds;
+
     /**
      * @param string $PersonId 人员ID
      * @param array $FaceIds 待删除的人脸ID列表
@@ -46,6 +45,7 @@ class DeleteFaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

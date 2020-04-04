@@ -18,14 +18,13 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetTaskTotalNumber请求参数结构体
+ *
 
- */
-
-/**
- *GetTaskTotalNumber请求参数结构体
  */
 class GetTaskTotalNumberRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class GetTaskTotalNumberRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

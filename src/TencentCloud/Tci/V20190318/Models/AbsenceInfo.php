@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 缺勤人员信息
+ *
  * @method string getLibraryIds() 获取识别到的人员所在的库id
  * @method void setLibraryIds(string $LibraryIds) 设置识别到的人员所在的库id
  * @method string getPersonId() 获取识别到的人员id
  * @method void setPersonId(string $PersonId) 设置识别到的人员id
- */
-
-/**
- *缺勤人员信息
  */
 class AbsenceInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AbsenceInfo extends AbstractModel
      * @var string 识别到的人员id
      */
     public $PersonId;
+
     /**
      * @param string $LibraryIds 识别到的人员所在的库id
      * @param string $PersonId 识别到的人员id
@@ -46,6 +45,7 @@ class AbsenceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

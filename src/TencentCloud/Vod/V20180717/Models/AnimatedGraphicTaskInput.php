@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转动图任务类型
+ *
  * @method integer getDefinition() 获取视频转动图模板 ID
  * @method void setDefinition(integer $Definition) 设置视频转动图模板 ID
  * @method float getStartTimeOffset() 获取动图在视频中的开始时间，单位为秒。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置动图在视频中的开始时间，单位为秒。
  * @method float getEndTimeOffset() 获取动图在视频中的结束时间，单位为秒。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置动图在视频中的结束时间，单位为秒。
- */
-
-/**
- *转动图任务类型
  */
 class AnimatedGraphicTaskInput extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AnimatedGraphicTaskInput extends AbstractModel
      * @var float 动图在视频中的结束时间，单位为秒。
      */
     public $EndTimeOffset;
+
     /**
      * @param integer $Definition 视频转动图模板 ID
      * @param float $StartTimeOffset 动图在视频中的开始时间，单位为秒。
@@ -54,6 +53,7 @@ class AnimatedGraphicTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

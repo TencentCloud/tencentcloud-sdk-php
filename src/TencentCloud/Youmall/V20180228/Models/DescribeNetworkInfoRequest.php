@@ -18,16 +18,14 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNetworkInfo请求参数结构体
+ *
  * @method integer getTime() 获取请求时间戳
  * @method void setTime(integer $Time) 设置请求时间戳
  * @method string getCompanyId() 获取优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
  * @method void setCompanyId(string $CompanyId) 设置优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
  * @method integer getShopId() 获取优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，不填则拉取集团全部店铺当前
  * @method void setShopId(integer $ShopId) 设置优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，不填则拉取集团全部店铺当前
- */
-
-/**
- *DescribeNetworkInfo请求参数结构体
  */
 class DescribeNetworkInfoRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeNetworkInfoRequest extends AbstractModel
      * @var integer 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，不填则拉取集团全部店铺当前
      */
     public $ShopId;
+
     /**
      * @param integer $Time 请求时间戳
      * @param string $CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
@@ -54,6 +53,7 @@ class DescribeNetworkInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

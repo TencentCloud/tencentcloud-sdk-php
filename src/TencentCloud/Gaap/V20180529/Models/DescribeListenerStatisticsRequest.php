@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeListenerStatistics请求参数结构体
+ *
  * @method string getListenerId() 获取监听器ID
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getStartTime() 获取起始时间
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 查询时间范围不超过1天，支持最小粒度300秒；
 查询间范围不超过7天，支持最小粒度3600秒；
 查询间范围超过7天，支持最小粒度86400秒。
- */
-
-/**
- *DescribeListenerStatistics请求参数结构体
  */
 class DescribeListenerStatisticsRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ class DescribeListenerStatisticsRequest extends AbstractModel
 查询间范围超过7天，支持最小粒度86400秒。
      */
     public $Granularity;
+
     /**
      * @param string $ListenerId 监听器ID
      * @param string $StartTime 起始时间
@@ -82,6 +81,7 @@ class DescribeListenerStatisticsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

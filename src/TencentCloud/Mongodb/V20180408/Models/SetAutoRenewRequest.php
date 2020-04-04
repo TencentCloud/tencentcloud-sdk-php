@@ -18,14 +18,12 @@ namespace TencentCloud\Mongodb\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetAutoRenew请求参数结构体
+ *
  * @method array getInstanceIds() 获取实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method integer getAutoRenewFlag() 获取续费选项，取值范围：0-手动续费，1-自动续费，2-确认不续费
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置续费选项，取值范围：0-手动续费，1-自动续费，2-确认不续费
- */
-
-/**
- *SetAutoRenew请求参数结构体
  */
 class SetAutoRenewRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SetAutoRenewRequest extends AbstractModel
      * @var integer 续费选项，取值范围：0-手动续费，1-自动续费，2-确认不续费
      */
     public $AutoRenewFlag;
+
     /**
      * @param array $InstanceIds 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      * @param integer $AutoRenewFlag 续费选项，取值范围：0-手动续费，1-自动续费，2-确认不续费
@@ -46,6 +45,7 @@ class SetAutoRenewRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

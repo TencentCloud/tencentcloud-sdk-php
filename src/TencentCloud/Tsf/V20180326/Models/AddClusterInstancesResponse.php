@@ -18,16 +18,14 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddClusterInstances返回参数结构体
+ *
  * @method AddInstanceResult getResult() 获取添加云主机的返回列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(AddInstanceResult $Result) 设置添加云主机的返回列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *AddClusterInstances返回参数结构体
  */
 class AddClusterInstancesResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class AddClusterInstancesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param AddInstanceResult $Result 添加云主机的返回列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class AddClusterInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

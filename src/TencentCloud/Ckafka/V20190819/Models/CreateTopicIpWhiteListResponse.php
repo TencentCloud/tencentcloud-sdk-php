@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTopicIpWhiteList返回参数结构体
+ *
  * @method JgwOperateResponse getResult() 获取删除主题IP白名单结果
  * @method void setResult(JgwOperateResponse $Result) 设置删除主题IP白名单结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateTopicIpWhiteList返回参数结构体
  */
 class CreateTopicIpWhiteListResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateTopicIpWhiteListResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param JgwOperateResponse $Result 删除主题IP白名单结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateTopicIpWhiteListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

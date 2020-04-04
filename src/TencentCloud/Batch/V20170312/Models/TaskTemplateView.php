@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务模板信息
+ *
  * @method string getTaskTemplateId() 获取任务模板ID
  * @method void setTaskTemplateId(string $TaskTemplateId) 设置任务模板ID
  * @method string getTaskTemplateName() 获取任务模板名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) 设置任务模板信息
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
- */
-
-/**
- *任务模板信息
  */
 class TaskTemplateView extends AbstractModel
 {
@@ -59,6 +57,7 @@ class TaskTemplateView extends AbstractModel
      * @var string 创建时间
      */
     public $CreateTime;
+
     /**
      * @param string $TaskTemplateId 任务模板ID
      * @param string $TaskTemplateName 任务模板名称
@@ -70,6 +69,7 @@ class TaskTemplateView extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 环境变量
+ *
  * @method string getName() 获取环境变量名称
  * @method void setName(string $Name) 设置环境变量名称
  * @method string getValue() 获取环境变量取值
  * @method void setValue(string $Value) 设置环境变量取值
- */
-
-/**
- *环境变量
  */
 class EnvVar extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EnvVar extends AbstractModel
      * @var string 环境变量取值
      */
     public $Value;
+
     /**
      * @param string $Name 环境变量名称
      * @param string $Value 环境变量取值
@@ -46,6 +45,7 @@ class EnvVar extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

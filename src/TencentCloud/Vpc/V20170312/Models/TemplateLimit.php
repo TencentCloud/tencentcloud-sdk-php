@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 参数模板配额
+ *
  * @method integer getAddressTemplateMemberLimit() 获取参数模板IP地址成员配额。
  * @method void setAddressTemplateMemberLimit(integer $AddressTemplateMemberLimit) 设置参数模板IP地址成员配额。
  * @method integer getAddressTemplateGroupMemberLimit() 获取参数模板IP地址组成员配额。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceTemplateMemberLimit(integer $ServiceTemplateMemberLimit) 设置参数模板I协议端口成员配额。
  * @method integer getServiceTemplateGroupMemberLimit() 获取参数模板协议端口组成员配额。
  * @method void setServiceTemplateGroupMemberLimit(integer $ServiceTemplateGroupMemberLimit) 设置参数模板协议端口组成员配额。
- */
-
-/**
- *参数模板配额
  */
 class TemplateLimit extends AbstractModel
 {
@@ -52,6 +50,7 @@ class TemplateLimit extends AbstractModel
      * @var integer 参数模板协议端口组成员配额。
      */
     public $ServiceTemplateGroupMemberLimit;
+
     /**
      * @param integer $AddressTemplateMemberLimit 参数模板IP地址成员配额。
      * @param integer $AddressTemplateGroupMemberLimit 参数模板IP地址组成员配额。
@@ -62,6 +61,7 @@ class TemplateLimit extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

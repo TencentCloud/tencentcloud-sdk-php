@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetPassword请求参数结构体
+ *
  * @method string getInstanceId() 获取Redis实例ID
  * @method void setInstanceId(string $InstanceId) 设置Redis实例ID
  * @method string getPassword() 获取重置的密码（切换为免密实例时，可不传；其他情况必传）
  * @method void setPassword(string $Password) 设置重置的密码（切换为免密实例时，可不传；其他情况必传）
  * @method boolean getNoAuth() 获取是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
  * @method void setNoAuth(boolean $NoAuth) 设置是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
- */
-
-/**
- *ResetPassword请求参数结构体
  */
 class ResetPasswordRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ResetPasswordRequest extends AbstractModel
      * @var boolean 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
      */
     public $NoAuth;
+
     /**
      * @param string $InstanceId Redis实例ID
      * @param string $Password 重置的密码（切换为免密实例时，可不传；其他情况必传）
@@ -54,6 +53,7 @@ class ResetPasswordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

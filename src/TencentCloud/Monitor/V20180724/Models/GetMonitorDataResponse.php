@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetMonitorData返回参数结构体
+ *
  * @method integer getPeriod() 获取统计周期
  * @method void setPeriod(integer $Period) 设置统计周期
  * @method string getMetricName() 获取指标名
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetMonitorData返回参数结构体
  */
 class GetMonitorDataResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class GetMonitorDataResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Period 统计周期
      * @param string $MetricName 指标名
@@ -78,6 +77,7 @@ class GetMonitorDataResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

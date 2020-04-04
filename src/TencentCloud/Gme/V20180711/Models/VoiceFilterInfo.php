@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音文件过滤详情
+ *
  * @method integer getBizId() 获取应用ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBizId(integer $BizId) 设置应用ID
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置过滤结果列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *语音文件过滤详情
  */
 class VoiceFilterInfo extends AbstractModel
 {
@@ -84,6 +82,7 @@ class VoiceFilterInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
+
     /**
      * @param integer $BizId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,6 +101,7 @@ class VoiceFilterInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

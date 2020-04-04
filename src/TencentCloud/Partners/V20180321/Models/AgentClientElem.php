@@ -18,6 +18,8 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述待审核代客信息
+ *
  * @method string getUin() 获取代理商账号ID
  * @method void setUin(string $Uin) 设置代理商账号ID
  * @method string getClientUin() 获取代客账号ID
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSalesName(string $SalesName) 设置业务员姓名
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *描述待审核代客信息
  */
 class AgentClientElem extends AbstractModel
 {
@@ -100,6 +98,7 @@ class AgentClientElem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SalesName;
+
     /**
      * @param string $Uin 代理商账号ID
      * @param string $ClientUin 代客账号ID
@@ -118,6 +117,7 @@ class AgentClientElem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetachClassicLinkVpc请求参数结构体
+ *
  * @method string getVpcId() 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method array getInstanceIds() 获取CVM实例ID查询。形如：ins-r8hr2upy。
  * @method void setInstanceIds(array $InstanceIds) 设置CVM实例ID查询。形如：ins-r8hr2upy。
- */
-
-/**
- *DetachClassicLinkVpc请求参数结构体
  */
 class DetachClassicLinkVpcRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DetachClassicLinkVpcRequest extends AbstractModel
      * @var array CVM实例ID查询。形如：ins-r8hr2upy。
      */
     public $InstanceIds;
+
     /**
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param array $InstanceIds CVM实例ID查询。形如：ins-r8hr2upy。
@@ -46,6 +45,7 @@ class DetachClassicLinkVpcRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

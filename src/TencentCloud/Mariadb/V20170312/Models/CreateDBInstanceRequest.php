@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDBInstance请求参数结构体
+ *
  * @method array getZones() 获取实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
  * @method void setZones(array $Zones) 设置实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
  * @method integer getNodeCount() 获取节点个数大小，可以通过 DescribeDBInstanceSpecs
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
  * @method string getDbVersionId() 获取数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
  * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
- */
-
-/**
- *CreateDBInstance请求参数结构体
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -117,6 +115,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @var string 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
      */
     public $DbVersionId;
+
     /**
      * @param array $Zones 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
      * @param integer $NodeCount 节点个数大小，可以通过 DescribeDBInstanceSpecs
@@ -138,6 +137,7 @@ class CreateDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

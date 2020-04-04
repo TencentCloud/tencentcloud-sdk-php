@@ -18,14 +18,12 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetAutoRenewFlag请求参数结构体
+ *
  * @method array getDBInstanceIdSet() 获取实例ID数组
  * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置实例ID数组
  * @method integer getAutoRenewFlag() 获取续费标记。0-正常续费；1-自动续费；2-到期不续费
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置续费标记。0-正常续费；1-自动续费；2-到期不续费
- */
-
-/**
- *SetAutoRenewFlag请求参数结构体
  */
 class SetAutoRenewFlagRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SetAutoRenewFlagRequest extends AbstractModel
      * @var integer 续费标记。0-正常续费；1-自动续费；2-到期不续费
      */
     public $AutoRenewFlag;
+
     /**
      * @param array $DBInstanceIdSet 实例ID数组
      * @param integer $AutoRenewFlag 续费标记。0-正常续费；1-自动续费；2-到期不续费
@@ -46,6 +45,7 @@ class SetAutoRenewFlagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AutoRewrite请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID
  * @method string getListenerId() 获取HTTPS:443监听器的ID
  * @method void setListenerId(string $ListenerId) 设置HTTPS:443监听器的ID
  * @method array getDomains() 获取HTTPS:443监听器下需要重定向的域名
  * @method void setDomains(array $Domains) 设置HTTPS:443监听器下需要重定向的域名
- */
-
-/**
- *AutoRewrite请求参数结构体
  */
 class AutoRewriteRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AutoRewriteRequest extends AbstractModel
      * @var array HTTPS:443监听器下需要重定向的域名
      */
     public $Domains;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例ID
      * @param string $ListenerId HTTPS:443监听器的ID
@@ -54,6 +53,7 @@ class AutoRewriteRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstancesOperationLimit请求参数结构体
+ *
  * @method array getInstanceIds() 获取按照一个或者多个实例ID查询，可通过[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)API返回值中的InstanceId获取。实例ID形如：ins-xxxxxxxx。（此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的id.N一节）。每次请求的实例的上限为100。
  * @method void setInstanceIds(array $InstanceIds) 设置按照一个或者多个实例ID查询，可通过[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)API返回值中的InstanceId获取。实例ID形如：ins-xxxxxxxx。（此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的id.N一节）。每次请求的实例的上限为100。
  * @method string getOperation() 获取实例操作。
 <li> INSTANCE_DEGRADE：实例降配操作</li>
  * @method void setOperation(string $Operation) 设置实例操作。
 <li> INSTANCE_DEGRADE：实例降配操作</li>
- */
-
-/**
- *DescribeInstancesOperationLimit请求参数结构体
  */
 class DescribeInstancesOperationLimitRequest extends AbstractModel
 {
@@ -41,6 +39,7 @@ class DescribeInstancesOperationLimitRequest extends AbstractModel
 <li> INSTANCE_DEGRADE：实例降配操作</li>
      */
     public $Operation;
+
     /**
      * @param array $InstanceIds 按照一个或者多个实例ID查询，可通过[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)API返回值中的InstanceId获取。实例ID形如：ins-xxxxxxxx。（此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的id.N一节）。每次请求的实例的上限为100。
      * @param string $Operation 实例操作。
@@ -50,6 +49,7 @@ class DescribeInstancesOperationLimitRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

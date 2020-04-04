@@ -18,12 +18,10 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetRealAvailRatio请求参数结构体
+ *
  * @method integer getTaskId() 获取拨测任务Id
  * @method void setTaskId(integer $TaskId) 设置拨测任务Id
- */
-
-/**
- *GetRealAvailRatio请求参数结构体
  */
 class GetRealAvailRatioRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetRealAvailRatioRequest extends AbstractModel
      * @var integer 拨测任务Id
      */
     public $TaskId;
+
     /**
      * @param integer $TaskId 拨测任务Id
      */
@@ -38,6 +37,7 @@ class GetRealAvailRatioRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

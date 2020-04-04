@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EnableReplicaReadonly返回参数结构体
+ *
  * @method string getStatus() 获取错误：ERROR，正确OK。
  * @method void setStatus(string $Status) 设置错误：ERROR，正确OK。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *EnableReplicaReadonly返回参数结构体
  */
 class EnableReplicaReadonlyResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EnableReplicaReadonlyResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Status 错误：ERROR，正确OK。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class EnableReplicaReadonlyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

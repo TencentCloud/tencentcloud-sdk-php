@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ScaleOutInstance请求参数结构体
+ *
  * @method string getTimeUnit() 获取扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -58,10 +60,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置分散置放群组ID列表，当前仅支持指定一个。
  * @method array getTags() 获取扩容节点绑定标签列表。
  * @method void setTags(array $Tags) 设置扩容节点绑定标签列表。
- */
-
-/**
- *ScaleOutInstance请求参数结构体
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -140,6 +138,7 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @var array 扩容节点绑定标签列表。
      */
     public $Tags;
+
     /**
      * @param string $TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
@@ -166,6 +165,7 @@ class ScaleOutInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

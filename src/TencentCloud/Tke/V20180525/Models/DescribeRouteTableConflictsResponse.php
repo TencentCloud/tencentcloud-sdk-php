@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRouteTableConflicts返回参数结构体
+ *
  * @method boolean getHasConflict() 获取路由表是否冲突。
  * @method void setHasConflict(boolean $HasConflict) 设置路由表是否冲突。
  * @method array getRouteTableConflictSet() 获取路由表冲突列表。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeRouteTableConflicts返回参数结构体
  */
 class DescribeRouteTableConflictsResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DescribeRouteTableConflictsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param boolean $HasConflict 路由表是否冲突。
      * @param array $RouteTableConflictSet 路由表冲突列表。
@@ -58,6 +57,7 @@ class DescribeRouteTableConflictsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveStreamOnlineList请求参数结构体
+ *
  * @method string getDomainName() 获取推流域名。多域名用户需要填写DomainName。
  * @method void setDomainName(string $DomainName) 设置推流域名。多域名用户需要填写DomainName。
  * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。多路径用户需要填写AppName。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 默认值：10。
  * @method string getStreamName() 获取流名称，用于精确查询。
  * @method void setStreamName(string $StreamName) 设置流名称，用于精确查询。
- */
-
-/**
- *DescribeLiveStreamOnlineList请求参数结构体
  */
 class DescribeLiveStreamOnlineListRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ class DescribeLiveStreamOnlineListRequest extends AbstractModel
      * @var string 流名称，用于精确查询。
      */
     public $StreamName;
+
     /**
      * @param string $DomainName 推流域名。多域名用户需要填写DomainName。
      * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。多路径用户需要填写AppName。
@@ -78,6 +77,7 @@ class DescribeLiveStreamOnlineListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

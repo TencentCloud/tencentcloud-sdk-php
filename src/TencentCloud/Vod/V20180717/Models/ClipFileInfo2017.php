@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频裁剪结果文件信息（2017 版）
+ *
  * @method integer getErrCode() 获取错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileType(string $FileType) 设置输出目标文件的文件类型。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *视频裁剪结果文件信息（2017 版）
  */
 class ClipFileInfo2017 extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ClipFileInfo2017 extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileType;
+
     /**
      * @param integer $ErrCode 错误码
 <li>0：成功；</li>
@@ -98,6 +97,7 @@ class ClipFileInfo2017 extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

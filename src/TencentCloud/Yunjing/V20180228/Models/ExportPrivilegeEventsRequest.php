@@ -18,14 +18,13 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ExportPrivilegeEvents请求参数结构体
+ *
 
- */
-
-/**
- *ExportPrivilegeEvents请求参数结构体
  */
 class ExportPrivilegeEventsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class ExportPrivilegeEventsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

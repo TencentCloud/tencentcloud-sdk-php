@@ -18,14 +18,12 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ManageImageLifecycleGlobalPersonal请求参数结构体
+ *
  * @method string getType() 获取global_keep_last_days:全局保留最近几天的数据;global_keep_last_nums:全局保留最近多少个
  * @method void setType(string $Type) 设置global_keep_last_days:全局保留最近几天的数据;global_keep_last_nums:全局保留最近多少个
  * @method integer getVal() 获取策略值
  * @method void setVal(integer $Val) 设置策略值
- */
-
-/**
- *ManageImageLifecycleGlobalPersonal请求参数结构体
  */
 class ManageImageLifecycleGlobalPersonalRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ManageImageLifecycleGlobalPersonalRequest extends AbstractModel
      * @var integer 策略值
      */
     public $Val;
+
     /**
      * @param string $Type global_keep_last_days:全局保留最近几天的数据;global_keep_last_nums:全局保留最近多少个
      * @param integer $Val 策略值
@@ -46,6 +45,7 @@ class ManageImageLifecycleGlobalPersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTasks请求参数结构体
+ *
  * @method array getTaskIds() 获取拨测任务id
  * @method void setTaskIds(array $TaskIds) 设置拨测任务id
- */
-
-/**
- *DeleteTasks请求参数结构体
  */
 class DeleteTasksRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteTasksRequest extends AbstractModel
      * @var array 拨测任务id
      */
     public $TaskIds;
+
     /**
      * @param array $TaskIds 拨测任务id
      */
@@ -38,6 +37,7 @@ class DeleteTasksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

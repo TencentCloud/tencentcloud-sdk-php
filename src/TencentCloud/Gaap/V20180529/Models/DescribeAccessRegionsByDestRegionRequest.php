@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccessRegionsByDestRegion请求参数结构体
+ *
  * @method string getDestRegion() 获取源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
  * @method void setDestRegion(string $DestRegion) 设置源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
- */
-
-/**
- *DescribeAccessRegionsByDestRegion请求参数结构体
  */
 class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
      * @var string 源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
      */
     public $DestRegion;
+
     /**
      * @param string $DestRegion 源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
      */
@@ -38,6 +37,7 @@ class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

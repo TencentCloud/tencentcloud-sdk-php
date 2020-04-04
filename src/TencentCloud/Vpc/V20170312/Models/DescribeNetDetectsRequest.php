@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNetDetects请求参数结构体
+ *
  * @method array getNetDetectIds() 获取网络探测实例`ID`数组。形如：[`netd-12345678`]
  * @method void setNetDetectIds(array $NetDetectIds) 设置网络探测实例`ID`数组。形如：[`netd-12345678`]
  * @method array getFilters() 获取过滤条件，参数不支持同时指定NetDetectIds和Filters。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
- */
-
-/**
- *DescribeNetDetects请求参数结构体
  */
 class DescribeNetDetectsRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ class DescribeNetDetectsRequest extends AbstractModel
      * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
+
     /**
      * @param array $NetDetectIds 网络探测实例`ID`数组。形如：[`netd-12345678`]
      * @param array $Filters 过滤条件，参数不支持同时指定NetDetectIds和Filters。
@@ -78,6 +77,7 @@ class DescribeNetDetectsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

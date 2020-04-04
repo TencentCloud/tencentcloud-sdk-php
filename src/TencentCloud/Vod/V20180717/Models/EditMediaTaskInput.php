@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 编辑视频任务的输入。
+ *
  * @method string getInputType() 获取输入视频的来源类型，可以取的值为 File，Stream 两种。
  * @method void setInputType(string $InputType) 设置输入视频的来源类型，可以取的值为 File，Stream 两种。
  * @method array getFileInfoSet() 获取输入的视频文件信息，当 InputType 为 File 时，该字段有值。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamInfoSet(array $StreamInfoSet) 设置输入的流信息，当 InputType 为 Stream 时，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *编辑视频任务的输入。
  */
 class EditMediaTaskInput extends AbstractModel
 {
@@ -51,6 +49,7 @@ class EditMediaTaskInput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamInfoSet;
+
     /**
      * @param string $InputType 输入视频的来源类型，可以取的值为 File，Stream 两种。
      * @param array $FileInfoSet 输入的视频文件信息，当 InputType 为 File 时，该字段有值。
@@ -62,6 +61,7 @@ class EditMediaTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

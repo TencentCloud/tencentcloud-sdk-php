@@ -18,16 +18,14 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AgentPayDeals请求参数结构体
+ *
  * @method string getOwnerUin() 获取订单所有者uin
  * @method void setOwnerUin(string $OwnerUin) 设置订单所有者uin
  * @method integer getAgentPay() 获取代付标志，1：代付；0：自付
  * @method void setAgentPay(integer $AgentPay) 设置代付标志，1：代付；0：自付
  * @method array getDealNames() 获取订单号数组
  * @method void setDealNames(array $DealNames) 设置订单号数组
- */
-
-/**
- *AgentPayDeals请求参数结构体
  */
 class AgentPayDealsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AgentPayDealsRequest extends AbstractModel
      * @var array 订单号数组
      */
     public $DealNames;
+
     /**
      * @param string $OwnerUin 订单所有者uin
      * @param integer $AgentPay 代付标志，1：代付；0：自付
@@ -54,6 +53,7 @@ class AgentPayDealsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

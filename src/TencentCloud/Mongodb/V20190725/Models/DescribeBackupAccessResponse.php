@@ -18,6 +18,8 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupAccess返回参数结构体
+ *
  * @method string getRegion() 获取实例所属地域
  * @method void setRegion(string $Region) 设置实例所属地域
  * @method string getBucket() 获取备份文件所在存储桶
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFiles(array $Files) 设置备份文件的存储信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeBackupAccess返回参数结构体
  */
 class DescribeBackupAccessResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeBackupAccessResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Region 实例所属地域
      * @param string $Bucket 备份文件所在存储桶
@@ -62,6 +61,7 @@ class DescribeBackupAccessResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

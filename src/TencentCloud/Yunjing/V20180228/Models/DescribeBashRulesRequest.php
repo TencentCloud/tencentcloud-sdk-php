@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBashRules请求参数结构体
+ *
  * @method integer getType() 获取0-系统规则; 1-用户规则
  * @method void setType(integer $Type) 设置0-系统规则; 1-用户规则
  * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Keywords - String - 是否必填：否 - 关键字(规则名称)</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>Keywords - String - 是否必填：否 - 关键字(规则名称)</li>
- */
-
-/**
- *DescribeBashRules请求参数结构体
  */
 class DescribeBashRulesRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class DescribeBashRulesRequest extends AbstractModel
 <li>Keywords - String - 是否必填：否 - 关键字(规则名称)</li>
      */
     public $Filters;
+
     /**
      * @param integer $Type 0-系统规则; 1-用户规则
      * @param integer $Limit 返回数量，默认为10，最大值为100。
@@ -66,6 +65,7 @@ class DescribeBashRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

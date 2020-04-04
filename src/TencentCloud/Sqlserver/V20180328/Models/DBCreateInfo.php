@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据库创建信息
+ *
  * @method string getDBName() 获取数据库名
  * @method void setDBName(string $DBName) 设置数据库名
  * @method string getCharset() 获取字符集。可选值包括：Chinese_PRC_CI_AS, Chinese_PRC_CS_AS, Chinese_PRC_BIN, Chinese_Taiwan_Stroke_CI_AS, SQL_Latin1_General_CP1_CI_AS, SQL_Latin1_General_CP1_CS_AS。不填默认为Chinese_PRC_CI_AS
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccounts(array $Accounts) 设置数据库账号权限信息
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
- */
-
-/**
- *数据库创建信息
  */
 class DBCreateInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DBCreateInfo extends AbstractModel
      * @var string 备注
      */
     public $Remark;
+
     /**
      * @param string $DBName 数据库名
      * @param string $Charset 字符集。可选值包括：Chinese_PRC_CI_AS, Chinese_PRC_CS_AS, Chinese_PRC_BIN, Chinese_Taiwan_Stroke_CI_AS, SQL_Latin1_General_CP1_CI_AS, SQL_Latin1_General_CP1_CS_AS。不填默认为Chinese_PRC_CI_AS
@@ -62,6 +61,7 @@ class DBCreateInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

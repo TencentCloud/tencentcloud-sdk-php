@@ -18,16 +18,14 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CVM竞价请求相关选项
+ *
  * @method SpotMarketOptions getSpotOptions() 获取竞价相关选项
  * @method void setSpotOptions(SpotMarketOptions $SpotOptions) 设置竞价相关选项
  * @method string getMarketType() 获取市场选项类型，当前只支持取值：spot
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarketType(string $MarketType) 设置市场选项类型，当前只支持取值：spot
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *CVM竞价请求相关选项
  */
 class InstanceMarketOptionsRequest extends AbstractModel
 {
@@ -41,6 +39,7 @@ class InstanceMarketOptionsRequest extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarketType;
+
     /**
      * @param SpotMarketOptions $SpotOptions 竞价相关选项
      * @param string $MarketType 市场选项类型，当前只支持取值：spot
@@ -50,6 +49,7 @@ class InstanceMarketOptionsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

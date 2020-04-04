@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 缓存键配置（过滤参数配置）
+ *
  * @method string getFullUrlCache() 获取是否开启全路径缓存
 on：开启全路径缓存（即关闭参数过滤）
 off：关闭全路径缓存（即开启参数过滤）
  * @method void setFullUrlCache(string $FullUrlCache) 设置是否开启全路径缓存
 on：开启全路径缓存（即关闭参数过滤）
 off：关闭全路径缓存（即开启参数过滤）
- */
-
-/**
- *缓存键配置（过滤参数配置）
  */
 class CacheKey extends AbstractModel
 {
@@ -37,6 +35,7 @@ on：开启全路径缓存（即关闭参数过滤）
 off：关闭全路径缓存（即开启参数过滤）
      */
     public $FullUrlCache;
+
     /**
      * @param string $FullUrlCache 是否开启全路径缓存
 on：开启全路径缓存（即关闭参数过滤）
@@ -46,6 +45,7 @@ off：关闭全路径缓存（即开启参数过滤）
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

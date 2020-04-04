@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProxies请求参数结构体
+ *
  * @method array getInstanceIds() 获取（旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
  * @method void setInstanceIds(array $InstanceIds) 设置（旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -48,10 +50,6 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
  * @method void setIndependent(integer $Independent) 设置当该字段为1时，仅拉取非通道组的通道，
 当该字段为0时，仅拉取通道组的通道，
 不存在该字段时，拉取所有通道，包括独立通道和通道组通道。
- */
-
-/**
- *DescribeProxies请求参数结构体
  */
 class DescribeProxiesRequest extends AbstractModel
 {
@@ -97,6 +95,7 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
 不存在该字段时，拉取所有通道，包括独立通道和通道组通道。
      */
     public $Independent;
+
     /**
      * @param array $InstanceIds （旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
      * @param integer $Offset 偏移量，默认为0。
@@ -118,6 +117,7 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

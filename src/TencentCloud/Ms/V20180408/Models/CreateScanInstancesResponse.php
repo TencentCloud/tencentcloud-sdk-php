@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateScanInstances返回参数结构体
+ *
  * @method string getItemId() 获取任务唯一标识
  * @method void setItemId(string $ItemId) 设置任务唯一标识
  * @method integer getProgress() 获取任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimitTime(integer $LimitTime) 设置到期时间
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateScanInstances返回参数结构体
  */
 class CreateScanInstancesResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateScanInstancesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $ItemId 任务唯一标识
      * @param integer $Progress 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
@@ -78,6 +77,7 @@ class CreateScanInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

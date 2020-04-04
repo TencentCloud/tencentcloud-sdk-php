@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGroupInfo请求参数结构体
+ *
  * @method string getInstanceId() 获取（过滤条件）按照实例 ID 过滤。
  * @method void setInstanceId(string $InstanceId) 设置（过滤条件）按照实例 ID 过滤。
  * @method array getGroupList() 获取Kafka 消费分组，Consumer-group，这里是数组形式，格式：GroupList.0=xxx&GroupList.1=yyy。
  * @method void setGroupList(array $GroupList) 设置Kafka 消费分组，Consumer-group，这里是数组形式，格式：GroupList.0=xxx&GroupList.1=yyy。
- */
-
-/**
- *DescribeGroupInfo请求参数结构体
  */
 class DescribeGroupInfoRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeGroupInfoRequest extends AbstractModel
      * @var array Kafka 消费分组，Consumer-group，这里是数组形式，格式：GroupList.0=xxx&GroupList.1=yyy。
      */
     public $GroupList;
+
     /**
      * @param string $InstanceId （过滤条件）按照实例 ID 过滤。
      * @param array $GroupList Kafka 消费分组，Consumer-group，这里是数组形式，格式：GroupList.0=xxx&GroupList.1=yyy。
@@ -46,6 +45,7 @@ class DescribeGroupInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBInstanceName请求参数结构体
+ *
  * @method string getDBInstanceId() 获取数据库实例ID，形如postgres-6fego161
  * @method void setDBInstanceId(string $DBInstanceId) 设置数据库实例ID，形如postgres-6fego161
  * @method string getInstanceName() 获取新的数据库实例名字
  * @method void setInstanceName(string $InstanceName) 设置新的数据库实例名字
- */
-
-/**
- *ModifyDBInstanceName请求参数结构体
  */
 class ModifyDBInstanceNameRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDBInstanceNameRequest extends AbstractModel
      * @var string 新的数据库实例名字
      */
     public $InstanceName;
+
     /**
      * @param string $DBInstanceId 数据库实例ID，形如postgres-6fego161
      * @param string $InstanceName 新的数据库实例名字
@@ -46,6 +45,7 @@ class ModifyDBInstanceNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

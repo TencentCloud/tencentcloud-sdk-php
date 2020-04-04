@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音全文识别任务控制参数
+ *
  * @method string getSwitch() 获取语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>
 <li>OFF：关闭智能语音全文识别任务。</li>
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 <li>vtt：生成 WebVTT 字幕文件。</li>
  * @method void setSubtitleFormat(string $SubtitleFormat) 设置生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
 <li>vtt：生成 WebVTT 字幕文件。</li>
- */
-
-/**
- *语音全文识别任务控制参数
  */
 class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 {
@@ -47,6 +45,7 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 <li>vtt：生成 WebVTT 字幕文件。</li>
      */
     public $SubtitleFormat;
+
     /**
      * @param string $Switch 语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>
@@ -58,6 +57,7 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

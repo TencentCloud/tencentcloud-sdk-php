@@ -18,12 +18,10 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePublicConfig请求参数结构体
+ *
  * @method string getConfigId() 获取需要查询的配置项ID
  * @method void setConfigId(string $ConfigId) 设置需要查询的配置项ID
- */
-
-/**
- *DescribePublicConfig请求参数结构体
  */
 class DescribePublicConfigRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribePublicConfigRequest extends AbstractModel
      * @var string 需要查询的配置项ID
      */
     public $ConfigId;
+
     /**
      * @param string $ConfigId 需要查询的配置项ID
      */
@@ -38,6 +37,7 @@ class DescribePublicConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

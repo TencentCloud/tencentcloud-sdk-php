@@ -18,12 +18,10 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteResourceGroup请求参数结构体
+ *
  * @method string getResourceGroupId() 获取要删除的资源组 ID
  * @method void setResourceGroupId(string $ResourceGroupId) 设置要删除的资源组 ID
- */
-
-/**
- *DeleteResourceGroup请求参数结构体
  */
 class DeleteResourceGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteResourceGroupRequest extends AbstractModel
      * @var string 要删除的资源组 ID
      */
     public $ResourceGroupId;
+
     /**
      * @param string $ResourceGroupId 要删除的资源组 ID
      */
@@ -38,6 +37,7 @@ class DeleteResourceGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteClusterEndpoint请求参数结构体
+ *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method boolean getIsExtranet() 获取是否为外网访问（TRUE 外网访问 FALSE 内网访问，默认值： FALSE）
  * @method void setIsExtranet(boolean $IsExtranet) 设置是否为外网访问（TRUE 外网访问 FALSE 内网访问，默认值： FALSE）
- */
-
-/**
- *DeleteClusterEndpoint请求参数结构体
  */
 class DeleteClusterEndpointRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteClusterEndpointRequest extends AbstractModel
      * @var boolean 是否为外网访问（TRUE 外网访问 FALSE 内网访问，默认值： FALSE）
      */
     public $IsExtranet;
+
     /**
      * @param string $ClusterId 集群ID
      * @param boolean $IsExtranet 是否为外网访问（TRUE 外网访问 FALSE 内网访问，默认值： FALSE）
@@ -46,6 +45,7 @@ class DeleteClusterEndpointRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveRecord请求参数结构体
+ *
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method string getAppName() 获取推流路径，与推流和播放地址中的 AppName保持一致，默认为 live。
@@ -72,10 +74,6 @@ storage_time - 录制文件存储时长，单位 秒。
 eg. record_interval=3600&storage_time=2592000。
 注：参数需要url encode。
 在定时录制模式或实时视频录制模式下，该参数均有效。
- */
-
-/**
- *CreateLiveRecord请求参数结构体
  */
 class CreateLiveRecordRequest extends AbstractModel
 {
@@ -145,6 +143,7 @@ eg. record_interval=3600&storage_time=2592000。
 在定时录制模式或实时视频录制模式下，该参数均有效。
      */
     public $StreamParam;
+
     /**
      * @param string $StreamName 流名称。
      * @param string $AppName 推流路径，与推流和播放地址中的 AppName保持一致，默认为 live。
@@ -178,6 +177,7 @@ eg. record_interval=3600&storage_time=2592000。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

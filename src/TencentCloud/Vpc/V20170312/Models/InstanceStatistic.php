@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用于描述实例的统计信息
+ *
  * @method string getInstanceType() 获取实例的类型
  * @method void setInstanceType(string $InstanceType) 设置实例的类型
  * @method integer getInstanceCount() 获取实例的个数
  * @method void setInstanceCount(integer $InstanceCount) 设置实例的个数
- */
-
-/**
- *用于描述实例的统计信息
  */
 class InstanceStatistic extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceStatistic extends AbstractModel
      * @var integer 实例的个数
      */
     public $InstanceCount;
+
     /**
      * @param string $InstanceType 实例的类型
      * @param integer $InstanceCount 实例的个数
@@ -46,6 +45,7 @@ class InstanceStatistic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

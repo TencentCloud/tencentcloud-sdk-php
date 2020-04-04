@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 集群关联的伸缩组信息
+ *
  * @method string getAutoScalingGroupId() 获取伸缩组ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
  * @method string getStatus() 获取伸缩组状态(开启 enabled 开启中 enabling 关闭 disabled 关闭中 disabling 更新中 updating 删除中 deleting 开启缩容中 scaleDownEnabling 关闭缩容中 scaleDownDisabling)
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(array $Labels) 设置伸缩组的label列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *集群关联的伸缩组信息
  */
 class ClusterAsGroup extends AbstractModel
 {
@@ -58,6 +56,7 @@ class ClusterAsGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
+
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $Status 伸缩组状态(开启 enabled 开启中 enabling 关闭 disabled 关闭中 disabling 更新中 updating 删除中 deleting 开启缩容中 scaleDownEnabling 关闭缩容中 scaleDownDisabling)
@@ -70,6 +69,7 @@ class ClusterAsGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

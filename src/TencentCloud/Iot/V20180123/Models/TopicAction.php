@@ -18,12 +18,10 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转发到topic动作
+ *
  * @method string getTopic() 获取目标topic
  * @method void setTopic(string $Topic) 设置目标topic
- */
-
-/**
- *转发到topic动作
  */
 class TopicAction extends AbstractModel
 {
@@ -31,6 +29,7 @@ class TopicAction extends AbstractModel
      * @var string 目标topic
      */
     public $Topic;
+
     /**
      * @param string $Topic 目标topic
      */
@@ -38,6 +37,7 @@ class TopicAction extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

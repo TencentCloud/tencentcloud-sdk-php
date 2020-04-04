@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteInstanceAccount请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getAccountName() 获取子账号名称
  * @method void setAccountName(string $AccountName) 设置子账号名称
- */
-
-/**
- *DeleteInstanceAccount请求参数结构体
  */
 class DeleteInstanceAccountRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteInstanceAccountRequest extends AbstractModel
      * @var string 子账号名称
      */
     public $AccountName;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $AccountName 子账号名称
@@ -46,6 +45,7 @@ class DeleteInstanceAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

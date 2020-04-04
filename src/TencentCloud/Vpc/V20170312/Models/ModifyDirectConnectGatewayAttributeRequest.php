@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDirectConnectGatewayAttribute请求参数结构体
+ *
  * @method string getDirectConnectGatewayId() 获取专线网关唯一`ID`，形如：`dcg-9o233uri`。
  * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) 设置专线网关唯一`ID`，形如：`dcg-9o233uri`。
  * @method string getDirectConnectGatewayName() 获取专线网关名称，可任意命名，但不得超过60个字符。
  * @method void setDirectConnectGatewayName(string $DirectConnectGatewayName) 设置专线网关名称，可任意命名，但不得超过60个字符。
  * @method string getCcnRouteType() 获取云联网路由学习类型，可选值：`BGP`（自动学习）、`STATIC`（静态，即用户配置）。只有云联网类型专线网关且开启了BGP功能才支持修改`CcnRouteType`。
  * @method void setCcnRouteType(string $CcnRouteType) 设置云联网路由学习类型，可选值：`BGP`（自动学习）、`STATIC`（静态，即用户配置）。只有云联网类型专线网关且开启了BGP功能才支持修改`CcnRouteType`。
- */
-
-/**
- *ModifyDirectConnectGatewayAttribute请求参数结构体
  */
 class ModifyDirectConnectGatewayAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyDirectConnectGatewayAttributeRequest extends AbstractModel
      * @var string 云联网路由学习类型，可选值：`BGP`（自动学习）、`STATIC`（静态，即用户配置）。只有云联网类型专线网关且开启了BGP功能才支持修改`CcnRouteType`。
      */
     public $CcnRouteType;
+
     /**
      * @param string $DirectConnectGatewayId 专线网关唯一`ID`，形如：`dcg-9o233uri`。
      * @param string $DirectConnectGatewayName 专线网关名称，可任意命名，但不得超过60个字符。
@@ -54,6 +53,7 @@ class ModifyDirectConnectGatewayAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUsgRule请求参数结构体
+ *
  * @method array getSgIds() 获取根据安全组Id获取安全组详情
  * @method void setSgIds(array $SgIds) 设置根据安全组Id获取安全组详情
- */
-
-/**
- *DescribeUsgRule请求参数结构体
  */
 class DescribeUsgRuleRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeUsgRuleRequest extends AbstractModel
      * @var array 根据安全组Id获取安全组详情
      */
     public $SgIds;
+
     /**
      * @param array $SgIds 根据安全组Id获取安全组详情
      */
@@ -38,6 +37,7 @@ class DescribeUsgRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

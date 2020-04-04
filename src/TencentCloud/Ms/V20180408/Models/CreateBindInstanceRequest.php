@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateBindInstance请求参数结构体
+ *
  * @method string getResourceId() 获取资源id，全局唯一
  * @method void setResourceId(string $ResourceId) 设置资源id，全局唯一
  * @method string getAppIconUrl() 获取app的icon的url
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) 设置app的名称
  * @method string getAppPkgName() 获取app的包名
  * @method void setAppPkgName(string $AppPkgName) 设置app的包名
- */
-
-/**
- *CreateBindInstance请求参数结构体
  */
 class CreateBindInstanceRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateBindInstanceRequest extends AbstractModel
      * @var string app的包名
      */
     public $AppPkgName;
+
     /**
      * @param string $ResourceId 资源id，全局唯一
      * @param string $AppIconUrl app的icon的url
@@ -62,6 +61,7 @@ class CreateBindInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

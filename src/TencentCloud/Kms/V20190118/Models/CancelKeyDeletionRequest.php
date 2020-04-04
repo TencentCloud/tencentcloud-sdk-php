@@ -18,12 +18,10 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CancelKeyDeletion请求参数结构体
+ *
  * @method string getKeyId() 获取需要被取消删除的CMK的唯一标志
  * @method void setKeyId(string $KeyId) 设置需要被取消删除的CMK的唯一标志
- */
-
-/**
- *CancelKeyDeletion请求参数结构体
  */
 class CancelKeyDeletionRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CancelKeyDeletionRequest extends AbstractModel
      * @var string 需要被取消删除的CMK的唯一标志
      */
     public $KeyId;
+
     /**
      * @param string $KeyId 需要被取消删除的CMK的唯一标志
      */
@@ -38,6 +37,7 @@ class CancelKeyDeletionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

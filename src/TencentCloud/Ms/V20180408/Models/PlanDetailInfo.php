@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 加固策略具体信息
+ *
  * @method integer getIsDefault() 获取默认策略，1为默认，0为非默认
  * @method void setIsDefault(integer $IsDefault) 设置默认策略，1为默认，0为非默认
  * @method integer getPlanId() 获取策略id
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlanName(string $PlanName) 设置策略名称
  * @method PlanInfo getPlanInfo() 获取策略信息
  * @method void setPlanInfo(PlanInfo $PlanInfo) 设置策略信息
- */
-
-/**
- *加固策略具体信息
  */
 class PlanDetailInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class PlanDetailInfo extends AbstractModel
      * @var PlanInfo 策略信息
      */
     public $PlanInfo;
+
     /**
      * @param integer $IsDefault 默认策略，1为默认，0为非默认
      * @param integer $PlanId 策略id
@@ -62,6 +61,7 @@ class PlanDetailInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateModule请求参数结构体
+ *
  * @method string getModuleName() 获取模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。
  * @method void setModuleName(string $ModuleName) 设置模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。
  * @method integer getDefaultBandWidth() 获取默认带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefaultSystemDiskSize(integer $DefaultSystemDiskSize) 设置默认系统盘大小，单位：G，默认大小为50G。范围不得超过系统盘上下限制，详看DescribeConfig。
  * @method integer getDefaultDataDiskSize() 获取默认数据盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
  * @method void setDefaultDataDiskSize(integer $DefaultDataDiskSize) 设置默认数据盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
- */
-
-/**
- *CreateModule请求参数结构体
  */
 class CreateModuleRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateModuleRequest extends AbstractModel
      * @var integer 默认数据盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
      */
     public $DefaultDataDiskSize;
+
     /**
      * @param string $ModuleName 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。
      * @param integer $DefaultBandWidth 默认带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
@@ -78,6 +77,7 @@ class CreateModuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

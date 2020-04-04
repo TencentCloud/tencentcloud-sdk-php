@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 导入任务记录
+ *
  * @method integer getStatus() 获取状态值
  * @method void setStatus(integer $Status) 设置状态值
  * @method integer getCode() 获取状态值
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbName(string $DbName) 设置导入库表名
  * @method string getAsyncRequestId() 获取异步任务的请求ID
  * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务的请求ID
- */
-
-/**
- *导入任务记录
  */
 class ImportRecord extends AbstractModel
 {
@@ -115,6 +113,7 @@ class ImportRecord extends AbstractModel
      * @var string 异步任务的请求ID
      */
     public $AsyncRequestId;
+
     /**
      * @param integer $Status 状态值
      * @param integer $Code 状态值
@@ -134,6 +133,7 @@ class ImportRecord extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

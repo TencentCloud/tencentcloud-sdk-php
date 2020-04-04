@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * QueryBalance请求参数结构体
+ *
  * @method string getMidasAppId() 获取聚鑫分配的支付主MidasAppId
  * @method void setMidasAppId(string $MidasAppId) 设置聚鑫分配的支付主MidasAppId
  * @method string getSubAppId() 获取聚鑫计费SubAppId，代表子商户
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidasSecretId(string $MidasSecretId) 设置聚鑫分配的安全ID
  * @method string getMidasSignature() 获取按照聚鑫安全密钥计算的签名
  * @method void setMidasSignature(string $MidasSignature) 设置按照聚鑫安全密钥计算的签名
- */
-
-/**
- *QueryBalance请求参数结构体
  */
 class QueryBalanceRequest extends AbstractModel
 {
@@ -69,6 +67,7 @@ class QueryBalanceRequest extends AbstractModel
      * @var string 按照聚鑫安全密钥计算的签名
      */
     public $MidasSignature;
+
     /**
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $SubAppId 聚鑫计费SubAppId，代表子商户
@@ -82,6 +81,7 @@ class QueryBalanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

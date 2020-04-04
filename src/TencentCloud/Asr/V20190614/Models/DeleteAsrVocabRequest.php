@@ -18,12 +18,10 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAsrVocab请求参数结构体
+ *
  * @method string getVocabId() 获取热词表Id
  * @method void setVocabId(string $VocabId) 设置热词表Id
- */
-
-/**
- *DeleteAsrVocab请求参数结构体
  */
 class DeleteAsrVocabRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteAsrVocabRequest extends AbstractModel
      * @var string 热词表Id
      */
     public $VocabId;
+
     /**
      * @param string $VocabId 热词表Id
      */
@@ -38,6 +37,7 @@ class DeleteAsrVocabRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

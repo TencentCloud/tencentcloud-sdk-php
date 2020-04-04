@@ -18,12 +18,10 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetResultSummary请求参数结构体
+ *
  * @method array getTaskIds() 获取任务Id列表
  * @method void setTaskIds(array $TaskIds) 设置任务Id列表
- */
-
-/**
- *GetResultSummary请求参数结构体
  */
 class GetResultSummaryRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetResultSummaryRequest extends AbstractModel
      * @var array 任务Id列表
      */
     public $TaskIds;
+
     /**
      * @param array $TaskIds 任务Id列表
      */
@@ -38,6 +37,7 @@ class GetResultSummaryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

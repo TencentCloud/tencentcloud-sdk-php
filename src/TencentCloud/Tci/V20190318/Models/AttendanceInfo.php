@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 识别到的人员信息
+ *
  * @method FrameInfo getFace() 获取识别到的人员信息
  * @method void setFace(FrameInfo $Face) 设置识别到的人员信息
  * @method string getPersonId() 获取识别到的人员id
  * @method void setPersonId(string $PersonId) 设置识别到的人员id
- */
-
-/**
- *识别到的人员信息
  */
 class AttendanceInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AttendanceInfo extends AbstractModel
      * @var string 识别到的人员id
      */
     public $PersonId;
+
     /**
      * @param FrameInfo $Face 识别到的人员信息
      * @param string $PersonId 识别到的人员id
@@ -46,6 +45,7 @@ class AttendanceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

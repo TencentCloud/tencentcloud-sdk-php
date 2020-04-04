@@ -18,16 +18,14 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * QueryOrder返回参数结构体
+ *
  * @method integer getTotalNum() 获取返回订单数
  * @method void setTotalNum(integer $TotalNum) 设置返回订单数
  * @method array getOrderList() 获取查询结果的订单列表
  * @method void setOrderList(array $OrderList) 设置查询结果的订单列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *QueryOrder返回参数结构体
  */
 class QueryOrderResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class QueryOrderResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalNum 返回订单数
      * @param array $OrderList 查询结果的订单列表
@@ -54,6 +53,7 @@ class QueryOrderResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

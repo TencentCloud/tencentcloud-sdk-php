@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 资源组
+ *
  * @method string getId() 获取资源组 Id
  * @method void setId(string $Id) 设置资源组 Id
  * @method string getRegion() 获取地域
@@ -88,10 +90,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(string $PayMode) 设置资源组是否允许预付费或后付费模式
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *资源组
  */
 class ResourceGroup extends AbstractModel
 {
@@ -209,6 +207,7 @@ class ResourceGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
+
     /**
      * @param string $Id 资源组 Id
      * @param string $Region 地域
@@ -250,6 +249,7 @@ class ResourceGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

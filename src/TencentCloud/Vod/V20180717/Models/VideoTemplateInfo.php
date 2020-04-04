@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频流配置参数
+ *
  * @method string getCodec() 获取视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
@@ -85,10 +87,6 @@ use TencentCloud\Common\AbstractModel;
 默认值：black 。
 注意：此字段可能返回 null，表示取不到有效值。
  */
-
-/**
- *视频流配置参数
- */
 class VideoTemplateInfo extends AbstractModel
 {
     /**
@@ -151,6 +149,7 @@ class VideoTemplateInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FillType;
+
     /**
      * @param string $Codec 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
@@ -190,6 +189,7 @@ class VideoTemplateInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

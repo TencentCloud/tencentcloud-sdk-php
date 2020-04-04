@@ -18,16 +18,14 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 缓存配置规则。
+ *
  * @method string getCacheType() 获取缓存类型，支持all，file，directory，path，index，分别表示全部文件，后缀类型，目录，完整路径，首页。
  * @method void setCacheType(string $CacheType) 设置缓存类型，支持all，file，directory，path，index，分别表示全部文件，后缀类型，目录，完整路径，首页。
  * @method array getCacheContents() 获取缓存内容列表。
  * @method void setCacheContents(array $CacheContents) 设置缓存内容列表。
  * @method integer getCacheTime() 获取缓存时间，单位秒。
  * @method void setCacheTime(integer $CacheTime) 设置缓存时间，单位秒。
- */
-
-/**
- *缓存配置规则。
  */
 class CacheRule extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CacheRule extends AbstractModel
      * @var integer 缓存时间，单位秒。
      */
     public $CacheTime;
+
     /**
      * @param string $CacheType 缓存类型，支持all，file，directory，path，index，分别表示全部文件，后缀类型，目录，完整路径，首页。
      * @param array $CacheContents 缓存内容列表。
@@ -54,6 +53,7 @@ class CacheRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

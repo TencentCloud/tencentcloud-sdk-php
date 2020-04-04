@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetBlockListHandler请求参数结构体
+ *
  * @method string getModule() 获取模块名，固定字段：block
  * @method void setModule(string $Module) 设置模块名，固定字段：block
  * @method string getOperation() 获取操作名，固定字段：get_block_list
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupPk(string $GroupPk) 设置当前群组编号
  * @method string getBlockHash() 获取区块哈希
  * @method void setBlockHash(string $BlockHash) 设置区块哈希
- */
-
-/**
- *GetBlockListHandler请求参数结构体
  */
 class GetBlockListHandlerRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class GetBlockListHandlerRequest extends AbstractModel
      * @var string 区块哈希
      */
     public $BlockHash;
+
     /**
      * @param string $Module 模块名，固定字段：block
      * @param string $Operation 操作名，固定字段：get_block_list
@@ -78,6 +77,7 @@ class GetBlockListHandlerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

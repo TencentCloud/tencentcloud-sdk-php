@@ -18,6 +18,8 @@ namespace TencentCloud\Tmt\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ImageTranslate请求参数结构体
+ *
  * @method string getSessionUuid() 获取唯一id，返回时原样返回
  * @method void setSessionUuid(string $SessionUuid) 设置唯一id，返回时原样返回
  * @method string getScene() 获取doc:文档扫描
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTarget(string $Target) 设置目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
  * @method integer getProjectId() 获取项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
  * @method void setProjectId(integer $ProjectId) 设置项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
- */
-
-/**
- *ImageTranslate请求参数结构体
  */
 class ImageTranslateRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ImageTranslateRequest extends AbstractModel
      * @var integer 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      */
     public $ProjectId;
+
     /**
      * @param string $SessionUuid 唯一id，返回时原样返回
      * @param string $Scene doc:文档扫描
@@ -78,6 +77,7 @@ class ImageTranslateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

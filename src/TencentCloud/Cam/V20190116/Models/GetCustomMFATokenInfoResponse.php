@@ -18,14 +18,12 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetCustomMFATokenInfo返回参数结构体
+ *
  * @method integer getUin() 获取自定义多因子验证Token对应的帐号Id
  * @method void setUin(integer $Uin) 设置自定义多因子验证Token对应的帐号Id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetCustomMFATokenInfo返回参数结构体
  */
 class GetCustomMFATokenInfoResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GetCustomMFATokenInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Uin 自定义多因子验证Token对应的帐号Id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class GetCustomMFATokenInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

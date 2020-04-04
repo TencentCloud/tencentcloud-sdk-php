@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转码任务输入参数类型
+ *
  * @method integer getDefinition() 获取视频转码模板 ID。
  * @method void setDefinition(integer $Definition) 设置视频转码模板 ID。
  * @method RawTranscodeParameter getRawParameter() 获取视频转码自定义参数，当 Definition 填 0 时有效。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) 设置转码后输出路径中的`{number}`变量的规则。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *转码任务输入参数类型
  */
 class TranscodeTaskInput extends AbstractModel
 {
@@ -88,6 +86,7 @@ class TranscodeTaskInput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectNumberFormat;
+
     /**
      * @param integer $Definition 视频转码模板 ID。
      * @param RawTranscodeParameter $RawParameter 视频转码自定义参数，当 Definition 填 0 时有效。
@@ -106,6 +105,7 @@ class TranscodeTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

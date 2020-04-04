@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetectFace请求参数结构体
+ *
  * @method integer getMaxFaceNum() 获取最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为120。 
 此参数用于控制处理待检测图片中的人脸个数，值越小，处理速度越快。
  * @method void setMaxFaceNum(integer $MaxFaceNum) 设置最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为120。 
@@ -64,10 +66,6 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
  * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
 2020年4月2日开始，默认为“3.0”，之前使用过本接口的账号若未填写本参数默认为“2.0”。 
 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
- */
-
-/**
- *DetectFace请求参数结构体
  */
 class DetectFaceRequest extends AbstractModel
 {
@@ -121,6 +119,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
      */
     public $FaceModelVersion;
+
     /**
      * @param integer $MaxFaceNum 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为120。 
 此参数用于控制处理待检测图片中的人脸个数，值越小，处理速度越快。
@@ -150,6 +149,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

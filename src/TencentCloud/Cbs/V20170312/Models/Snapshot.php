@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述了快照的详细信息
+ *
  * @method string getSnapshotId() 获取快照ID。
  * @method void setSnapshotId(string $SnapshotId) 设置快照ID。
  * @method Placement getPlacement() 获取快照所在的位置。
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotType(string $SnapshotType) 设置快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
  * @method integer getShareReference() 获取快照当前被共享数
  * @method void setShareReference(integer $ShareReference) 设置快照当前被共享数
- */
-
-/**
- *描述了快照的详细信息
  */
 class Snapshot extends AbstractModel
 {
@@ -150,6 +148,7 @@ class Snapshot extends AbstractModel
      * @var integer 快照当前被共享数
      */
     public $ShareReference;
+
     /**
      * @param string $SnapshotId 快照ID。
      * @param Placement $Placement 快照所在的位置。
@@ -174,6 +173,7 @@ class Snapshot extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

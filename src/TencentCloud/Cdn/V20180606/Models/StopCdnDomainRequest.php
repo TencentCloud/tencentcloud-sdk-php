@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StopCdnDomain请求参数结构体
+ *
  * @method string getDomain() 获取域名
 域名需要为【已启动】状态
  * @method void setDomain(string $Domain) 设置域名
 域名需要为【已启动】状态
- */
-
-/**
- *StopCdnDomain请求参数结构体
  */
 class StopCdnDomainRequest extends AbstractModel
 {
@@ -34,6 +32,7 @@ class StopCdnDomainRequest extends AbstractModel
 域名需要为【已启动】状态
      */
     public $Domain;
+
     /**
      * @param string $Domain 域名
 域名需要为【已启动】状态
@@ -42,6 +41,7 @@ class StopCdnDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

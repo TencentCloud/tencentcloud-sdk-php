@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述一条sql日志的详细信息。
+ *
  * @method integer getOffset() 获取本条日志在消息队列中的偏移量。
  * @method void setOffset(integer $Offset) 设置本条日志在消息队列中的偏移量。
  * @method string getUser() 获取执行本条sql的用户。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeCostMs(integer $TimeCostMs) 设置Sql耗时，单位为毫秒。
  * @method integer getResultCode() 获取Sql返回码，0为成功。
  * @method void setResultCode(integer $ResultCode) 设置Sql返回码，0为成功。
- */
-
-/**
- *描述一条sql日志的详细信息。
  */
 class SqlLogItem extends AbstractModel
 {
@@ -94,6 +92,7 @@ class SqlLogItem extends AbstractModel
      * @var integer Sql返回码，0为成功。
      */
     public $ResultCode;
+
     /**
      * @param integer $Offset 本条日志在消息队列中的偏移量。
      * @param string $User 执行本条sql的用户。
@@ -110,6 +109,7 @@ class SqlLogItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

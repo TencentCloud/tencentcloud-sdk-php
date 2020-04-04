@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLogs请求参数结构体
+ *
  * @method string getTid() 获取设备TID
  * @method void setTid(string $Tid) 设置设备TID
  * @method integer getLimit() 获取当前分页的最大条数,0<取值范围<=100
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataObject(string $DataObject) 设置物模型对象索引，用于模糊查询，字符长度<=255，每层节点的字符长度<=16
  * @method integer getEndTime() 获取查询的结束时间 UNIX时间戳，单位秒
  * @method void setEndTime(integer $EndTime) 设置查询的结束时间 UNIX时间戳，单位秒
- */
-
-/**
- *DescribeLogs请求参数结构体
  */
 class DescribeLogsRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeLogsRequest extends AbstractModel
      * @var integer 查询的结束时间 UNIX时间戳，单位秒
      */
     public $EndTime;
+
     /**
      * @param string $Tid 设备TID
      * @param integer $Limit 当前分页的最大条数,0<取值范围<=100
@@ -86,6 +85,7 @@ class DescribeLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

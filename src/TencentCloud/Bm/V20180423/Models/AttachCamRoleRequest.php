@@ -18,14 +18,12 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AttachCamRole请求参数结构体
+ *
  * @method string getInstanceId() 获取服务器ID
  * @method void setInstanceId(string $InstanceId) 设置服务器ID
  * @method string getRoleName() 获取角色名称。
  * @method void setRoleName(string $RoleName) 设置角色名称。
- */
-
-/**
- *AttachCamRole请求参数结构体
  */
 class AttachCamRoleRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AttachCamRoleRequest extends AbstractModel
      * @var string 角色名称。
      */
     public $RoleName;
+
     /**
      * @param string $InstanceId 服务器ID
      * @param string $RoleName 角色名称。
@@ -46,6 +45,7 @@ class AttachCamRoleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

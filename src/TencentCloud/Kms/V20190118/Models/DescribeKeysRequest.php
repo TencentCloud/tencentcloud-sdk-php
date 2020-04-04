@@ -18,12 +18,10 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeKeys请求参数结构体
+ *
  * @method array getKeyIds() 获取查询CMK的ID列表，批量查询一次最多支持100个KeyId
  * @method void setKeyIds(array $KeyIds) 设置查询CMK的ID列表，批量查询一次最多支持100个KeyId
- */
-
-/**
- *DescribeKeys请求参数结构体
  */
 class DescribeKeysRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeKeysRequest extends AbstractModel
      * @var array 查询CMK的ID列表，批量查询一次最多支持100个KeyId
      */
     public $KeyIds;
+
     /**
      * @param array $KeyIds 查询CMK的ID列表，批量查询一次最多支持100个KeyId
      */
@@ -38,6 +37,7 @@ class DescribeKeysRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

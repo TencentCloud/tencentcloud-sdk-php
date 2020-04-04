@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频处理 COS 输出对象信息。
+ *
  * @method string getBucket() 获取视频处理生成的文件输出的目标 Bucket 名，如 TopRankVideo-125xxx88。如果不填，表示继承上层。
  * @method void setBucket(string $Bucket) 设置视频处理生成的文件输出的目标 Bucket 名，如 TopRankVideo-125xxx88。如果不填，表示继承上层。
  * @method string getRegion() 获取视频处理生成的文件输出的目标 Bucket 的园区，如 ap-chongqing。如果不填，表示继承上层。
  * @method void setRegion(string $Region) 设置视频处理生成的文件输出的目标 Bucket 的园区，如 ap-chongqing。如果不填，表示继承上层。
- */
-
-/**
- *视频处理 COS 输出对象信息。
  */
 class CosOutputStorage extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CosOutputStorage extends AbstractModel
      * @var string 视频处理生成的文件输出的目标 Bucket 的园区，如 ap-chongqing。如果不填，表示继承上层。
      */
     public $Region;
+
     /**
      * @param string $Bucket 视频处理生成的文件输出的目标 Bucket 名，如 TopRankVideo-125xxx88。如果不填，表示继承上层。
      * @param string $Region 视频处理生成的文件输出的目标 Bucket 的园区，如 ap-chongqing。如果不填，表示继承上层。
@@ -46,6 +45,7 @@ class CosOutputStorage extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

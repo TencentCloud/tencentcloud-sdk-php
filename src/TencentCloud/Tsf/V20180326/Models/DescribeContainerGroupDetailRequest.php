@@ -18,12 +18,10 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeContainerGroupDetail请求参数结构体
+ *
  * @method string getGroupId() 获取分组ID
  * @method void setGroupId(string $GroupId) 设置分组ID
- */
-
-/**
- *DescribeContainerGroupDetail请求参数结构体
  */
 class DescribeContainerGroupDetailRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeContainerGroupDetailRequest extends AbstractModel
      * @var string 分组ID
      */
     public $GroupId;
+
     /**
      * @param string $GroupId 分组ID
      */
@@ -38,6 +37,7 @@ class DescribeContainerGroupDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateUploadPath返回参数结构体
+ *
  * @method string getData() 获取固件上传地址URL，用户可将本地的固件文件通过该URL以PUT的请求方式上传。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(string $Data) 设置固件上传地址URL，用户可将本地的固件文件通过该URL以PUT的请求方式上传。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateUploadPath返回参数结构体
  */
 class CreateUploadPathResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class CreateUploadPathResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Data 固件上传地址URL，用户可将本地的固件文件通过该URL以PUT的请求方式上传。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class CreateUploadPathResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

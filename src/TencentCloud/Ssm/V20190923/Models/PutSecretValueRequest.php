@@ -18,6 +18,8 @@ namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PutSecretValue请求参数结构体
+ *
  * @method string getSecretName() 获取指定需要增加版本的凭据名称。
  * @method void setSecretName(string $SecretName) 设置指定需要增加版本的凭据名称。
  * @method string getVersionId() 获取指定新增加的版本号，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretBinary(string $SecretBinary) 设置二进制凭据信息，使用base64编码。SecretBinary 和 SecretString 必须且只能设置一个。
  * @method string getSecretString() 获取文本类型凭据信息明文（不需要进行base64编码），SecretBinary 和 SecretString 必须且只能设置一个。
  * @method void setSecretString(string $SecretString) 设置文本类型凭据信息明文（不需要进行base64编码），SecretBinary 和 SecretString 必须且只能设置一个。
- */
-
-/**
- *PutSecretValue请求参数结构体
  */
 class PutSecretValueRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class PutSecretValueRequest extends AbstractModel
      * @var string 文本类型凭据信息明文（不需要进行base64编码），SecretBinary 和 SecretString 必须且只能设置一个。
      */
     public $SecretString;
+
     /**
      * @param string $SecretName 指定需要增加版本的凭据名称。
      * @param string $VersionId 指定新增加的版本号，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。
@@ -62,6 +61,7 @@ class PutSecretValueRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

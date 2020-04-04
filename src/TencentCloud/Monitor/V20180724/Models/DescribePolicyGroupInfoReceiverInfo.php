@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询策略输出的告警接收人信息
+ *
  * @method array getReceiverGroupList() 获取告警接收组id列表
  * @method void setReceiverGroupList(array $ReceiverGroupList) 设置告警接收组id列表
  * @method array getReceiverUserList() 获取告警接收人id列表
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReceiveLanguage(string $ReceiveLanguage) 设置告警发送语言
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *查询策略输出的告警接收人信息
  */
 class DescribePolicyGroupInfoReceiverInfo extends AbstractModel
 {
@@ -128,6 +126,7 @@ class DescribePolicyGroupInfoReceiverInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReceiveLanguage;
+
     /**
      * @param array $ReceiverGroupList 告警接收组id列表
      * @param array $ReceiverUserList 告警接收人id列表
@@ -150,6 +149,7 @@ class DescribePolicyGroupInfoReceiverInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

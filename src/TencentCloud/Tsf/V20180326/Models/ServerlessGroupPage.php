@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ServerlessGroup 翻页对象
+ *
  * @method integer getTotalCount() 获取总记录数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置总记录数
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置列表信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *ServerlessGroup 翻页对象
  */
 class ServerlessGroupPage extends AbstractModel
 {
@@ -44,6 +42,7 @@ class ServerlessGroupPage extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
+
     /**
      * @param integer $TotalCount 总记录数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class ServerlessGroupPage extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

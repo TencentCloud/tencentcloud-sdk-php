@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * LookUpEvents返回参数结构体
+ *
  * @method array getEvents() 获取日志集合
  * @method void setEvents(array $Events) 设置日志集合
  * @method boolean getListOver() 获取日志集合是否结束
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNextToken(string $NextToken) 设置查看更多日志的凭证
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *LookUpEvents返回参数结构体
  */
 class LookUpEventsResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class LookUpEventsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Events 日志集合
      * @param boolean $ListOver 日志集合是否结束
@@ -62,6 +61,7 @@ class LookUpEventsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

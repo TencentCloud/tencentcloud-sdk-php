@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例可售卖规格详细信息，创建实例和扩容实例时 Pid+MemSize 唯一确定一种售卖规格，磁盘大小可用区间为[MinDataDisk,MaxDataDisk]
+ *
  * @method string getMachine() 获取设备型号
  * @method void setMachine(string $Machine) 设置设备型号
  * @method integer getMemory() 获取内存大小，单位 GB
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeCount(integer $NodeCount) 设置节点个数，2 表示一主一从，3 表示一主二从
  * @method integer getCpu() 获取Cpu核数
  * @method void setCpu(integer $Cpu) 设置Cpu核数
- */
-
-/**
- *实例可售卖规格详细信息，创建实例和扩容实例时 Pid+MemSize 唯一确定一种售卖规格，磁盘大小可用区间为[MinDataDisk,MaxDataDisk]
  */
 class SpecConfigInfo extends AbstractModel
 {
@@ -87,6 +85,7 @@ class SpecConfigInfo extends AbstractModel
      * @var integer Cpu核数
      */
     public $Cpu;
+
     /**
      * @param string $Machine 设备型号
      * @param integer $Memory 内存大小，单位 GB
@@ -102,6 +101,7 @@ class SpecConfigInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

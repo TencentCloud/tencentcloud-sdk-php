@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频拆条输入。
+ *
  * @method integer getDefinition() 获取视频拆条模板 ID。
  * @method void setDefinition(integer $Definition) 设置视频拆条模板 ID。
- */
-
-/**
- *视频拆条输入。
  */
 class AiRecognitionTaskSegmentResultInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskSegmentResultInput extends AbstractModel
      * @var integer 视频拆条模板 ID。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 视频拆条模板 ID。
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskSegmentResultInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

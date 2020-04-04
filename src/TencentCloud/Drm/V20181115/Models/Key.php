@@ -18,6 +18,8 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DRM加密密钥
+ *
  * @method string getTrack() 获取加密track类型。Widevine支持SD、HD、UHD1、UHD2、AUDIO。Fairplay只支持HD。
  * @method void setTrack(string $Track) 设置加密track类型。Widevine支持SD、HD、UHD1、UHD2、AUDIO。Fairplay只支持HD。
  * @method string getKeyId() 获取密钥ID。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInsertTimestamp(integer $InsertTimestamp) 设置该key生成时的时间戳
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DRM加密密钥
  */
 class Key extends AbstractModel
 {
@@ -62,6 +60,7 @@ class Key extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InsertTimestamp;
+
     /**
      * @param string $Track 加密track类型。Widevine支持SD、HD、UHD1、UHD2、AUDIO。Fairplay只支持HD。
      * @param string $KeyId 密钥ID。
@@ -74,6 +73,7 @@ class Key extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

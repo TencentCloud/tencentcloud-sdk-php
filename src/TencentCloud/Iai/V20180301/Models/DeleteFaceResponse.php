@@ -18,16 +18,14 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteFace返回参数结构体
+ *
  * @method integer getSucDeletedNum() 获取删除成功的人脸数量
  * @method void setSucDeletedNum(integer $SucDeletedNum) 设置删除成功的人脸数量
  * @method array getSucFaceIds() 获取删除成功的人脸ID列表
  * @method void setSucFaceIds(array $SucFaceIds) 设置删除成功的人脸ID列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DeleteFace返回参数结构体
  */
 class DeleteFaceResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteFaceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $SucDeletedNum 删除成功的人脸数量
      * @param array $SucFaceIds 删除成功的人脸ID列表
@@ -54,6 +53,7 @@ class DeleteFaceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

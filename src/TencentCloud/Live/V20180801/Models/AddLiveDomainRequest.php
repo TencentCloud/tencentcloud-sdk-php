@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddLiveDomain请求参数结构体
+ *
  * @method string getDomainName() 获取域名名称。
  * @method void setDomainName(string $DomainName) 设置域名名称。
  * @method integer getDomainType() 获取域名类型，
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
 0： 普通直播，
 1 ：慢直播 。
 默认值： 0。
- */
-
-/**
- *AddLiveDomain请求参数结构体
  */
 class AddLiveDomainRequest extends AbstractModel
 {
@@ -79,6 +77,7 @@ class AddLiveDomainRequest extends AbstractModel
 默认值： 0。
      */
     public $IsDelayLive;
+
     /**
      * @param string $DomainName 域名名称。
      * @param integer $DomainType 域名类型，
@@ -98,6 +97,7 @@ class AddLiveDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

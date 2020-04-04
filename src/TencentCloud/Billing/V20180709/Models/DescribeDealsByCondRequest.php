@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDealsByCond请求参数结构体
+ *
  * @method string getStartTime() 获取开始时间
  * @method void setStartTime(string $StartTime) 设置开始时间
  * @method string getEndTime() 获取结束时间
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
 12：支付中
  * @method string getOrderId() 获取订单号
  * @method void setOrderId(string $OrderId) 设置订单号
- */
-
-/**
- *DescribeDealsByCond请求参数结构体
  */
 class DescribeDealsByCondRequest extends AbstractModel
 {
@@ -102,6 +100,7 @@ class DescribeDealsByCondRequest extends AbstractModel
      * @var string 订单号
      */
     public $OrderId;
+
     /**
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
@@ -126,6 +125,7 @@ class DescribeDealsByCondRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

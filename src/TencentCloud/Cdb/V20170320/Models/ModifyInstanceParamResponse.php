@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyInstanceParam返回参数结构体
+ *
  * @method string getAsyncRequestId() 获取异步任务 ID，可用于查询任务进度。
  * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务 ID，可用于查询任务进度。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ModifyInstanceParam返回参数结构体
  */
 class ModifyInstanceParamResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyInstanceParamResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $AsyncRequestId 异步任务 ID，可用于查询任务进度。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class ModifyInstanceParamResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

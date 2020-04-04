@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内容审核 Asr 文字审核嫌疑片段
+ *
  * @method float getStartTimeOffset() 获取嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置嫌疑片段起始的偏移时间，单位：秒。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeywordSet(array $KeywordSet) 设置嫌疑关键词列表。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *内容审核 Asr 文字审核嫌疑片段
  */
 class MediaContentReviewAsrTextSegmentItem extends AbstractModel
 {
@@ -83,6 +81,7 @@ class MediaContentReviewAsrTextSegmentItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeywordSet;
+
     /**
      * @param float $StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,6 +101,7 @@ class MediaContentReviewAsrTextSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

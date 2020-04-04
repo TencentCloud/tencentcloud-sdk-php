@@ -18,6 +18,8 @@ namespace TencentCloud\Msp\V20180319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 迁移目的信息
+ *
  * @method string getRegion() 获取迁移目的地域
  * @method void setRegion(string $Region) 设置迁移目的地域
  * @method string getIp() 获取迁移目的Ip
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(string $Port) 设置迁移目的端口
  * @method string getInstanceId() 获取迁移目的实例Id
  * @method void setInstanceId(string $InstanceId) 设置迁移目的实例Id
- */
-
-/**
- *迁移目的信息
  */
 class DstInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DstInfo extends AbstractModel
      * @var string 迁移目的实例Id
      */
     public $InstanceId;
+
     /**
      * @param string $Region 迁移目的地域
      * @param string $Ip 迁移目的Ip
@@ -62,6 +61,7 @@ class DstInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

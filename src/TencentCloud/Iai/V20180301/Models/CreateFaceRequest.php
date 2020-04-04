@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateFace请求参数结构体
+ *
  * @method string getPersonId() 获取人员ID。
  * @method void setPersonId(string $PersonId) 设置人员ID。
  * @method array getImages() 获取图片 base64 数据，base64 编码后大小不可超过5M。
@@ -63,10 +65,6 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 默认 0。 
 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
  */
-
-/**
- *CreateFace请求参数结构体
- */
 class CreateFaceRequest extends AbstractModel
 {
     /**
@@ -110,6 +108,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
      */
     public $QualityControl;
+
     /**
      * @param string $PersonId 人员ID。
      * @param array $Images 图片 base64 数据，base64 编码后大小不可超过5M。
@@ -138,6 +137,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeletePersonFromGroup请求参数结构体
+ *
  * @method string getPersonId() 获取人员ID
  * @method void setPersonId(string $PersonId) 设置人员ID
  * @method string getGroupId() 获取人员库ID
  * @method void setGroupId(string $GroupId) 设置人员库ID
- */
-
-/**
- *DeletePersonFromGroup请求参数结构体
  */
 class DeletePersonFromGroupRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeletePersonFromGroupRequest extends AbstractModel
      * @var string 人员库ID
      */
     public $GroupId;
+
     /**
      * @param string $PersonId 人员ID
      * @param string $GroupId 人员库ID
@@ -46,6 +45,7 @@ class DeletePersonFromGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

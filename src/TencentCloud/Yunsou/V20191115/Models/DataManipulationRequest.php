@@ -18,6 +18,8 @@ namespace TencentCloud\Yunsou\V20191115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DataManipulation请求参数结构体
+ *
  * @method string getOpType() 获取操作类型，add或del
  * @method void setOpType(string $OpType) 设置操作类型，add或del
  * @method string getEncoding() 获取数据编码类型
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContents(string $Contents) 设置数据
  * @method integer getResourceId() 获取应用Id
  * @method void setResourceId(integer $ResourceId) 设置应用Id
- */
-
-/**
- *DataManipulation请求参数结构体
  */
 class DataManipulationRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DataManipulationRequest extends AbstractModel
      * @var integer 应用Id
      */
     public $ResourceId;
+
     /**
      * @param string $OpType 操作类型，add或del
      * @param string $Encoding 数据编码类型
@@ -62,6 +61,7 @@ class DataManipulationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

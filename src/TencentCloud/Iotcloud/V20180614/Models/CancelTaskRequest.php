@@ -18,12 +18,10 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CancelTask请求参数结构体
+ *
  * @method string getId() 获取任务 ID
  * @method void setId(string $Id) 设置任务 ID
- */
-
-/**
- *CancelTask请求参数结构体
  */
 class CancelTaskRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CancelTaskRequest extends AbstractModel
      * @var string 任务 ID
      */
     public $Id;
+
     /**
      * @param string $Id 任务 ID
      */
@@ -38,6 +37,7 @@ class CancelTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

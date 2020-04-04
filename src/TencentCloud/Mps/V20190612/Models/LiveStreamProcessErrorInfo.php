@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 直播流处理错误信息
+ *
  * @method integer getErrCode() 获取错误码：
 <li>0表示没有错误；</li>
 <li>非0表示错误，请参考 Message 错误信息。</li>
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 <li>非0表示错误，请参考 Message 错误信息。</li>
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
- */
-
-/**
- *直播流处理错误信息
  */
 class LiveStreamProcessErrorInfo extends AbstractModel
 {
@@ -44,6 +42,7 @@ class LiveStreamProcessErrorInfo extends AbstractModel
      * @var string 错误信息。
      */
     public $Message;
+
     /**
      * @param integer $ErrCode 错误码：
 <li>0表示没有错误；</li>
@@ -54,6 +53,7 @@ class LiveStreamProcessErrorInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DestroyProxies请求参数结构体
+ *
  * @method integer getForce() 获取强制删除标识。
 1，强制删除该通道列表，无论是否已经绑定了源站；
 0，如果已绑定了源站，则无法删除。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 更多详细信息请参阅：如何保证幂等性。
  * @method array getProxyIds() 获取（新参数）通道实例ID列表。
  * @method void setProxyIds(array $ProxyIds) 设置（新参数）通道实例ID列表。
- */
-
-/**
- *DestroyProxies请求参数结构体
  */
 class DestroyProxiesRequest extends AbstractModel
 {
@@ -64,6 +62,7 @@ class DestroyProxiesRequest extends AbstractModel
      * @var array （新参数）通道实例ID列表。
      */
     public $ProxyIds;
+
     /**
      * @param integer $Force 强制删除标识。
 1，强制删除该通道列表，无论是否已经绑定了源站；
@@ -78,6 +77,7 @@ class DestroyProxiesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

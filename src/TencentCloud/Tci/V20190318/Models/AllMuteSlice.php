@@ -18,16 +18,14 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
+ *
  * @method array getMuteSlice() 获取所有静音片段。
  * @method void setMuteSlice(array $MuteSlice) 设置所有静音片段。
  * @method float getMuteRatio() 获取静音时长占比。
  * @method void setMuteRatio(float $MuteRatio) 设置静音时长占比。
  * @method integer getTotalMuteDuration() 获取静音总时长。
  * @method void setTotalMuteDuration(integer $TotalMuteDuration) 设置静音总时长。
- */
-
-/**
- *如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
  */
 class AllMuteSlice extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AllMuteSlice extends AbstractModel
      * @var integer 静音总时长。
      */
     public $TotalMuteDuration;
+
     /**
      * @param array $MuteSlice 所有静音片段。
      * @param float $MuteRatio 静音时长占比。
@@ -54,6 +53,7 @@ class AllMuteSlice extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

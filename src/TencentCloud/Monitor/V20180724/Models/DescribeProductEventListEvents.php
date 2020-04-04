@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProductEventList返回的Events
+ *
  * @method integer getEventId() 获取事件ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventId(integer $EventId) 设置事件ID
@@ -98,10 +100,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupInfo(array $GroupInfo) 设置策略信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DescribeProductEventList返回的Events
  */
 class DescribeProductEventListEvents extends AbstractModel
 {
@@ -224,6 +222,7 @@ class DescribeProductEventListEvents extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupInfo;
+
     /**
      * @param integer $EventId 事件ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -270,6 +269,7 @@ class DescribeProductEventListEvents extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

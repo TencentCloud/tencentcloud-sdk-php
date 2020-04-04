@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * L7规则健康检查参数
+ *
  * @method string getRuleId() 获取规则ID
  * @method void setRuleId(string $RuleId) 设置规则ID
  * @method integer getEnable() 获取=1表示开启；=0表示关闭
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置检查目录的URL，默认为/
  * @method integer getStatus() 获取配置状态，0： 正常，1：配置中，2：配置失败
  * @method void setStatus(integer $Status) 设置配置状态，0： 正常，1：配置中，2：配置失败
- */
-
-/**
- *L7规则健康检查参数
  */
 class L7RuleHealth extends AbstractModel
 {
@@ -87,6 +85,7 @@ class L7RuleHealth extends AbstractModel
      * @var integer 配置状态，0： 正常，1：配置中，2：配置失败
      */
     public $Status;
+
     /**
      * @param string $RuleId 规则ID
      * @param integer $Enable =1表示开启；=0表示关闭
@@ -102,6 +101,7 @@ class L7RuleHealth extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

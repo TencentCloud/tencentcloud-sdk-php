@@ -18,14 +18,12 @@ namespace TencentCloud\Tics\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 标签及对应的解释
+ *
  * @method string getTag() 获取标签
  * @method void setTag(string $Tag) 设置标签
  * @method string getDesc() 获取标签对应的中文解释
  * @method void setDesc(string $Desc) 设置标签对应的中文解释
- */
-
-/**
- *标签及对应的解释
  */
 class TagType extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TagType extends AbstractModel
      * @var string 标签对应的中文解释
      */
     public $Desc;
+
     /**
      * @param string $Tag 标签
      * @param string $Desc 标签对应的中文解释
@@ -46,6 +45,7 @@ class TagType extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

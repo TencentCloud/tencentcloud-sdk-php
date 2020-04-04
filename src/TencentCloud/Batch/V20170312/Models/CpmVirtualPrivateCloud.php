@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 黑石私有网络
+ *
  * @method string getVpcId() 获取黑石私有网络ID
  * @method void setVpcId(string $VpcId) 设置黑石私有网络ID
  * @method string getSubnetId() 获取黑石子网ID
  * @method void setSubnetId(string $SubnetId) 设置黑石子网ID
- */
-
-/**
- *黑石私有网络
  */
 class CpmVirtualPrivateCloud extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CpmVirtualPrivateCloud extends AbstractModel
      * @var string 黑石子网ID
      */
     public $SubnetId;
+
     /**
      * @param string $VpcId 黑石私有网络ID
      * @param string $SubnetId 黑石子网ID
@@ -46,6 +45,7 @@ class CpmVirtualPrivateCloud extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

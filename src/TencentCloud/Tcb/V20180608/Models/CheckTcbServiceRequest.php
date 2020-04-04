@@ -18,14 +18,13 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CheckTcbService请求参数结构体
+ *
 
- */
-
-/**
- *CheckTcbService请求参数结构体
  */
 class CheckTcbServiceRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class CheckTcbServiceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

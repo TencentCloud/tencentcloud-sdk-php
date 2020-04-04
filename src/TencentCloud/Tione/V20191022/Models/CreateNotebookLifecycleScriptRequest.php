@@ -18,16 +18,14 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNotebookLifecycleScript请求参数结构体
+ *
  * @method string getNotebookLifecycleScriptsName() 获取Notebook生命周期脚本名称
  * @method void setNotebookLifecycleScriptsName(string $NotebookLifecycleScriptsName) 设置Notebook生命周期脚本名称
  * @method string getCreateScript() 获取创建脚本，base64编码格式
  * @method void setCreateScript(string $CreateScript) 设置创建脚本，base64编码格式
  * @method string getStartScript() 获取启动脚本，base64编码格式
  * @method void setStartScript(string $StartScript) 设置启动脚本，base64编码格式
- */
-
-/**
- *CreateNotebookLifecycleScript请求参数结构体
  */
 class CreateNotebookLifecycleScriptRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateNotebookLifecycleScriptRequest extends AbstractModel
      * @var string 启动脚本，base64编码格式
      */
     public $StartScript;
+
     /**
      * @param string $NotebookLifecycleScriptsName Notebook生命周期脚本名称
      * @param string $CreateScript 创建脚本，base64编码格式
@@ -54,6 +53,7 @@ class CreateNotebookLifecycleScriptRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 组偏移量分区对象
+ *
  * @method integer getPartition() 获取topic 的 partitionId
  * @method void setPartition(integer $Partition) 设置topic 的 partitionId
  * @method integer getOffset() 获取consumer 提交的 offset 位置
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogEndOffset(integer $LogEndOffset) 设置当前 partition 最新的 offset
  * @method integer getLag() 获取未消费的消息个数
  * @method void setLag(integer $Lag) 设置未消费的消息个数
- */
-
-/**
- *组偏移量分区对象
  */
 class GroupOffsetPartition extends AbstractModel
 {
@@ -69,6 +67,7 @@ class GroupOffsetPartition extends AbstractModel
      * @var integer 未消费的消息个数
      */
     public $Lag;
+
     /**
      * @param integer $Partition topic 的 partitionId
      * @param integer $Offset consumer 提交的 offset 位置
@@ -82,6 +81,7 @@ class GroupOffsetPartition extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

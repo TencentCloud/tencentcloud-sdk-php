@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 按交易类型汇总消费详情
+ *
  * @method string getActionType() 获取交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
  * @method void setActionType(string $ActionType) 设置交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
  * @method string getActionTypeName() 获取交易类型名称
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置代金券金额
  * @method string getBillMonth() 获取账单月份，格式2019-08
  * @method void setBillMonth(string $BillMonth) 设置账单月份，格式2019-08
- */
-
-/**
- *按交易类型汇总消费详情
  */
 class ActionSummaryOverviewItem extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ActionSummaryOverviewItem extends AbstractModel
      * @var string 账单月份，格式2019-08
      */
     public $BillMonth;
+
     /**
      * @param string $ActionType 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
      * @param string $ActionTypeName 交易类型名称
@@ -94,6 +93,7 @@ class ActionSummaryOverviewItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

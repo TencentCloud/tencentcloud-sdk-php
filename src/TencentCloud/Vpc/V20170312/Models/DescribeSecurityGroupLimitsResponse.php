@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityGroupLimits返回参数结构体
+ *
  * @method SecurityGroupLimitSet getSecurityGroupLimitSet() 获取用户安全组配额限制。
  * @method void setSecurityGroupLimitSet(SecurityGroupLimitSet $SecurityGroupLimitSet) 设置用户安全组配额限制。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeSecurityGroupLimits返回参数结构体
  */
 class DescribeSecurityGroupLimitsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeSecurityGroupLimitsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param SecurityGroupLimitSet $SecurityGroupLimitSet 用户安全组配额限制。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeSecurityGroupLimitsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

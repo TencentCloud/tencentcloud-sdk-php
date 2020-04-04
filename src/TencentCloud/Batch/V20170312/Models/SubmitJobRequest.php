@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SubmitJob请求参数结构体
+ *
  * @method Placement getPlacement() 获取作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
  * @method void setPlacement(Placement $Placement) 设置作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
  * @method Job getJob() 获取作业信息
  * @method void setJob(Job $Job) 设置作业信息
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
- */
-
-/**
- *SubmitJob请求参数结构体
  */
 class SubmitJobRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SubmitJobRequest extends AbstractModel
      * @var string 用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     public $ClientToken;
+
     /**
      * @param Placement $Placement 作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
      * @param Job $Job 作业信息
@@ -54,6 +53,7 @@ class SubmitJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

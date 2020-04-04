@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 运营商可用率
+ *
  * @method string getIspName() 获取运营商名称
  * @method void setIspName(string $IspName) 设置运营商名称
  * @method float getAvailRatio() 获取可用率
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvgTime(float $AvgTime) 设置平均耗时
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *运营商可用率
  */
 class IspDetail extends AbstractModel
 {
@@ -48,6 +46,7 @@ class IspDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AvgTime;
+
     /**
      * @param string $IspName 运营商名称
      * @param float $AvailRatio 可用率
@@ -58,6 +57,7 @@ class IspDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 挂载点信息
+ *
  * @method string getFileSystemId() 获取文件系统 ID
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID
  * @method string getMountTargetId() 获取挂载点 ID
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置子网 Id
  * @method string getSubnetName() 获取子网名称
  * @method void setSubnetName(string $SubnetName) 设置子网名称
- */
-
-/**
- *挂载点信息
  */
 class MountInfo extends AbstractModel
 {
@@ -94,6 +92,7 @@ class MountInfo extends AbstractModel
      * @var string 子网名称
      */
     public $SubnetName;
+
     /**
      * @param string $FileSystemId 文件系统 ID
      * @param string $MountTargetId 挂载点 ID
@@ -110,6 +109,7 @@ class MountInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

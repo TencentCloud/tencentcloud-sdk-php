@@ -18,6 +18,8 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例访问凭证信息
+ *
  * @method Credentials getCredentials() 获取访问实例所需要的凭据
  * @method void setCredentials(Credentials $Credentials) 设置访问实例所需要的凭据
  * @method string getFleetId() 获取服务部署Id
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpAddress(string $IpAddress) 设置实例公网IP
  * @method string getOperatingSystem() 获取操作系统
  * @method void setOperatingSystem(string $OperatingSystem) 设置操作系统
- */
-
-/**
- *实例访问凭证信息
  */
 class InstanceAccess extends AbstractModel
 {
@@ -59,6 +57,7 @@ class InstanceAccess extends AbstractModel
      * @var string 操作系统
      */
     public $OperatingSystem;
+
     /**
      * @param Credentials $Credentials 访问实例所需要的凭据
      * @param string $FleetId 服务部署Id
@@ -70,6 +69,7 @@ class InstanceAccess extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

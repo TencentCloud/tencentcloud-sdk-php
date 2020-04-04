@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RechargeMemberThirdPay请求参数结构体
+ *
  * @method string getTranNetMemberCode() 获取STRING(32)，交易网会代码
  * @method void setTranNetMemberCode(string $TranNetMemberCode) 设置STRING(32)，交易网会代码
  * @method string getMemberFillAmt() 获取STRING(20)，会员充值金额
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReservedMsgTwo(string $ReservedMsgTwo) 设置STRING(300)，保留域2
  * @method string getReservedMsgThree() 获取STRING(300)，保留域3
  * @method void setReservedMsgThree(string $ReservedMsgThree) 设置STRING(300)，保留域3
- */
-
-/**
- *RechargeMemberThirdPay请求参数结构体
  */
 class RechargeMemberThirdPayRequest extends AbstractModel
 {
@@ -122,6 +120,7 @@ class RechargeMemberThirdPayRequest extends AbstractModel
      * @var string STRING(300)，保留域3
      */
     public $ReservedMsgThree;
+
     /**
      * @param string $TranNetMemberCode STRING(32)，交易网会代码
      * @param string $MemberFillAmt STRING(20)，会员充值金额
@@ -142,6 +141,7 @@ class RechargeMemberThirdPayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

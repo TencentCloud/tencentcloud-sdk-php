@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据库账号权限信息。创建数据库时设置
+ *
  * @method string getUserName() 获取数据库用户名
  * @method void setUserName(string $UserName) 设置数据库用户名
  * @method string getPrivilege() 获取数据库权限。ReadWrite表示可读写，ReadOnly表示只读
  * @method void setPrivilege(string $Privilege) 设置数据库权限。ReadWrite表示可读写，ReadOnly表示只读
- */
-
-/**
- *数据库账号权限信息。创建数据库时设置
  */
 class AccountPrivilege extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AccountPrivilege extends AbstractModel
      * @var string 数据库权限。ReadWrite表示可读写，ReadOnly表示只读
      */
     public $Privilege;
+
     /**
      * @param string $UserName 数据库用户名
      * @param string $Privilege 数据库权限。ReadWrite表示可读写，ReadOnly表示只读
@@ -46,6 +45,7 @@ class AccountPrivilege extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

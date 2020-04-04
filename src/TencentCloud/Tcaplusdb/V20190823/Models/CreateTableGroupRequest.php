@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTableGroup请求参数结构体
+ *
  * @method string getClusterId() 获取表格组所属集群ID
  * @method void setClusterId(string $ClusterId) 设置表格组所属集群ID
  * @method string getTableGroupName() 获取表格组名称，可以采用中文、英文或数字字符，最大长度32个字符
  * @method void setTableGroupName(string $TableGroupName) 设置表格组名称，可以采用中文、英文或数字字符，最大长度32个字符
  * @method string getTableGroupId() 获取表格组ID，可以由用户指定，但在同一个集群内不能重复，如果不指定则采用自增的模式
  * @method void setTableGroupId(string $TableGroupId) 设置表格组ID，可以由用户指定，但在同一个集群内不能重复，如果不指定则采用自增的模式
- */
-
-/**
- *CreateTableGroup请求参数结构体
  */
 class CreateTableGroupRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateTableGroupRequest extends AbstractModel
      * @var string 表格组ID，可以由用户指定，但在同一个集群内不能重复，如果不指定则采用自增的模式
      */
     public $TableGroupId;
+
     /**
      * @param string $ClusterId 表格组所属集群ID
      * @param string $TableGroupName 表格组名称，可以采用中文、英文或数字字符，最大长度32个字符
@@ -54,6 +53,7 @@ class CreateTableGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 告警主题
+ *
  * @method string getTopicId() 获取主题的ID
  * @method void setTopicId(string $TopicId) 设置主题的ID
  * @method string getTopicName() 获取主题的名称
  * @method void setTopicName(string $TopicName) 设置主题的名称
- */
-
-/**
- *告警主题
  */
 class AlarmTopic extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AlarmTopic extends AbstractModel
      * @var string 主题的名称
      */
     public $TopicName;
+
     /**
      * @param string $TopicId 主题的ID
      * @param string $TopicName 主题的名称
@@ -46,6 +45,7 @@ class AlarmTopic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

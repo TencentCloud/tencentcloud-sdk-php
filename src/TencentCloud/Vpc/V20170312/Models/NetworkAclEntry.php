@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 网络ACL规则。
+ *
  * @method string getModifyTime() 获取修改时间。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间。
  * @method string getProtocol() 获取协议, 取值: TCP,UDP, ICMP。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAction(string $Action) 设置ACCEPT 或 DROP。
  * @method string getDescription() 获取规则描述，最大长度100。
  * @method void setDescription(string $Description) 设置规则描述，最大长度100。
- */
-
-/**
- *网络ACL规则。
  */
 class NetworkAclEntry extends AbstractModel
 {
@@ -73,6 +71,7 @@ class NetworkAclEntry extends AbstractModel
      * @var string 规则描述，最大长度100。
      */
     public $Description;
+
     /**
      * @param string $ModifyTime 修改时间。
      * @param string $Protocol 协议, 取值: TCP,UDP, ICMP。
@@ -86,6 +85,7 @@ class NetworkAclEntry extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

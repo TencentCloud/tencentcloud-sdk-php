@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 按付费模式汇总消费详情
+ *
  * @method string getPayMode() 获取付费模式
  * @method void setPayMode(string $PayMode) 设置付费模式
  * @method string getPayModeName() 获取付费模式名称
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送金金额
  * @method string getVoucherPayAmount() 获取代金券金额
  * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置代金券金额
- */
-
-/**
- *按付费模式汇总消费详情
  */
 class PayModeSummaryOverviewItem extends AbstractModel
 {
@@ -80,6 +78,7 @@ class PayModeSummaryOverviewItem extends AbstractModel
      * @var string 代金券金额
      */
     public $VoucherPayAmount;
+
     /**
      * @param string $PayMode 付费模式
      * @param string $PayModeName 付费模式名称
@@ -94,6 +93,7 @@ class PayModeSummaryOverviewItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

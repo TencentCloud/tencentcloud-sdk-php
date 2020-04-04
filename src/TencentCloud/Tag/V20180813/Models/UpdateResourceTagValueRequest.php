@@ -18,16 +18,14 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateResourceTagValue请求参数结构体
+ *
  * @method string getTagKey() 获取资源关联的标签键
  * @method void setTagKey(string $TagKey) 设置资源关联的标签键
  * @method string getTagValue() 获取修改后的标签值
  * @method void setTagValue(string $TagValue) 设置修改后的标签值
  * @method string getResource() 获取资源的六段式描述
  * @method void setResource(string $Resource) 设置资源的六段式描述
- */
-
-/**
- *UpdateResourceTagValue请求参数结构体
  */
 class UpdateResourceTagValueRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UpdateResourceTagValueRequest extends AbstractModel
      * @var string 资源的六段式描述
      */
     public $Resource;
+
     /**
      * @param string $TagKey 资源关联的标签键
      * @param string $TagValue 修改后的标签值
@@ -54,6 +53,7 @@ class UpdateResourceTagValueRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

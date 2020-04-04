@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskInfo请求参数结构体
+ *
  * @method integer getOffset() 获取开始位置
  * @method void setOffset(integer $Offset) 设置开始位置
  * @method integer getLimit() 获取数据条数
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAliases(array $Aliases) 设置实例别名过滤
  * @method array getTaskTypeIds() 获取故障类型ID过滤
  * @method void setTaskTypeIds(array $TaskTypeIds) 设置故障类型ID过滤
- */
-
-/**
- *DescribeTaskInfo请求参数结构体
  */
 class DescribeTaskInfoRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class DescribeTaskInfoRequest extends AbstractModel
      * @var array 故障类型ID过滤
      */
     public $TaskTypeIds;
+
     /**
      * @param integer $Offset 开始位置
      * @param integer $Limit 数据条数
@@ -118,6 +117,7 @@ class DescribeTaskInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

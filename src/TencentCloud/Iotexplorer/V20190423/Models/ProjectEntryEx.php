@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 项目详情
+ *
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method string getProjectName() 获取项目名称
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNativeAppCount(integer $NativeAppCount) 设置NativeApp数量
  * @method integer getWebAppCount() 获取WebApp数量
  * @method void setWebAppCount(integer $WebAppCount) 设置WebApp数量
- */
-
-/**
- *项目详情
  */
 class ProjectEntryEx extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ProjectEntryEx extends AbstractModel
      * @var integer WebApp数量
      */
     public $WebAppCount;
+
     /**
      * @param string $ProjectId 项目ID
      * @param string $ProjectName 项目名称
@@ -94,6 +93,7 @@ class ProjectEntryEx extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

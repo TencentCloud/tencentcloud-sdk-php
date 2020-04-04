@@ -18,16 +18,14 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListFunctions返回参数结构体
+ *
  * @method array getFunctions() 获取函数列表
  * @method void setFunctions(array $Functions) 设置函数列表
  * @method integer getTotalCount() 获取总数
  * @method void setTotalCount(integer $TotalCount) 设置总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ListFunctions返回参数结构体
  */
 class ListFunctionsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListFunctionsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Functions 函数列表
      * @param integer $TotalCount 总数
@@ -54,6 +53,7 @@ class ListFunctionsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

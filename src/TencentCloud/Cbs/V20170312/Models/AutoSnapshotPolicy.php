@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述了定期快照策略的详细信息
+ *
  * @method string getAutoSnapshotPolicyId() 获取定期快照策略ID。
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置定期快照策略ID。
  * @method string getAutoSnapshotPolicyName() 获取定期快照策略名称。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicy(array $Policy) 设置定期快照的执行策略。
  * @method array getDiskIdSet() 获取已绑定当前定期快照策略的云盘ID列表。
  * @method void setDiskIdSet(array $DiskIdSet) 设置已绑定当前定期快照策略的云盘ID列表。
- */
-
-/**
- *描述了定期快照策略的详细信息
  */
 class AutoSnapshotPolicy extends AbstractModel
 {
@@ -94,6 +92,7 @@ class AutoSnapshotPolicy extends AbstractModel
      * @var array 已绑定当前定期快照策略的云盘ID列表。
      */
     public $DiskIdSet;
+
     /**
      * @param string $AutoSnapshotPolicyId 定期快照策略ID。
      * @param string $AutoSnapshotPolicyName 定期快照策略名称。
@@ -110,6 +109,7 @@ class AutoSnapshotPolicy extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

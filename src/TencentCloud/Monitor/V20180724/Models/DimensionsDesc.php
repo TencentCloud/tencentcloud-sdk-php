@@ -18,12 +18,10 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 维度信息
+ *
  * @method array getDimensions() 获取维度名数组
  * @method void setDimensions(array $Dimensions) 设置维度名数组
- */
-
-/**
- *维度信息
  */
 class DimensionsDesc extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DimensionsDesc extends AbstractModel
      * @var array 维度名数组
      */
     public $Dimensions;
+
     /**
      * @param array $Dimensions 维度名数组
      */
@@ -38,6 +37,7 @@ class DimensionsDesc extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

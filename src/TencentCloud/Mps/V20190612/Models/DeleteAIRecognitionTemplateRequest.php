@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAIRecognitionTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取视频内容识别模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置视频内容识别模板唯一标识。
- */
-
-/**
- *DeleteAIRecognitionTemplate请求参数结构体
  */
 class DeleteAIRecognitionTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteAIRecognitionTemplateRequest extends AbstractModel
      * @var integer 视频内容识别模板唯一标识。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 视频内容识别模板唯一标识。
      */
@@ -38,6 +37,7 @@ class DeleteAIRecognitionTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

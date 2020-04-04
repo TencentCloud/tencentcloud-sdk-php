@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内容审核涉黄/暴恐嫌疑片段
+ *
  * @method float getStartTimeOffset() 获取嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置嫌疑片段起始的偏移时间，单位：秒。
@@ -56,10 +58,6 @@ PicUrlExpireTime 时间点后图片将被删除）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPicUrlExpireTimeStamp(integer $PicUrlExpireTimeStamp) 设置嫌疑图片 URL 失效时间，使用 ISO 日期格式。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *内容审核涉黄/暴恐嫌疑片段
  */
 class VodPornReviewSegmentItem extends AbstractModel
 {
@@ -109,6 +107,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PicUrlExpireTimeStamp;
+
     /**
      * @param float $StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -134,6 +133,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

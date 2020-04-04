@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 核身身份证图片信息
+ *
  * @method string getOcrFront() 获取OCR正面照片的base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrFront(string $OcrFront) 设置OCR正面照片的base64编码。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvatar(string $Avatar) 设置身份证正面人像图base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *核身身份证图片信息
  */
 class DetectInfoIdCardData extends AbstractModel
 {
@@ -74,6 +72,7 @@ class DetectInfoIdCardData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Avatar;
+
     /**
      * @param string $OcrFront OCR正面照片的base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -90,6 +89,7 @@ class DetectInfoIdCardData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

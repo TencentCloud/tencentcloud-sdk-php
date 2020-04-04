@@ -18,6 +18,8 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAllKeys请求参数结构体
+ *
  * @method string getDrmType() 获取使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
  * @method void setDrmType(string $DrmType) 设置使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
  * @method string getRsaPublicKey() 获取Base64编码的Rsa公钥，用来加密出参中的SessionKey。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContentId(string $ContentId) 设置一个加密内容的唯一标识。
  * @method string getContentType() 获取内容类型。接口取值VodVideo,LiveVideo。
  * @method void setContentType(string $ContentType) 设置内容类型。接口取值VodVideo,LiveVideo。
- */
-
-/**
- *DescribeAllKeys请求参数结构体
  */
 class DescribeAllKeysRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class DescribeAllKeysRequest extends AbstractModel
      * @var string 内容类型。接口取值VodVideo,LiveVideo。
      */
     public $ContentType;
+
     /**
      * @param string $DrmType 使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
      * @param string $RsaPublicKey Base64编码的Rsa公钥，用来加密出参中的SessionKey。
@@ -66,6 +65,7 @@ class DescribeAllKeysRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

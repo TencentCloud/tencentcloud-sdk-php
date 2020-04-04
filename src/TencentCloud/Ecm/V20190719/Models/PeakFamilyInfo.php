@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PeakFamilyInfo 按机型类别分类的cpu等数据的峰值信息
+ *
  * @method InstanceFamilyTypeConfig getInstanceFamily() 获取机型类别信息。
  * @method void setInstanceFamily(InstanceFamilyTypeConfig $InstanceFamily) 设置机型类别信息。
  * @method array getPeakBaseSet() 获取基础数据峰值信息。
  * @method void setPeakBaseSet(array $PeakBaseSet) 设置基础数据峰值信息。
- */
-
-/**
- *PeakFamilyInfo 按机型类别分类的cpu等数据的峰值信息
  */
 class PeakFamilyInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PeakFamilyInfo extends AbstractModel
      * @var array 基础数据峰值信息。
      */
     public $PeakBaseSet;
+
     /**
      * @param InstanceFamilyTypeConfig $InstanceFamily 机型类别信息。
      * @param array $PeakBaseSet 基础数据峰值信息。
@@ -46,6 +45,7 @@ class PeakFamilyInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAccount请求参数结构体
+ *
  * @method string getInstanceId() 获取数据库实例ID，形如mssql-njj2mtpl
  * @method void setInstanceId(string $InstanceId) 设置数据库实例ID，形如mssql-njj2mtpl
  * @method array getUserNames() 获取实例用户名数组
  * @method void setUserNames(array $UserNames) 设置实例用户名数组
- */
-
-/**
- *DeleteAccount请求参数结构体
  */
 class DeleteAccountRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteAccountRequest extends AbstractModel
      * @var array 实例用户名数组
      */
     public $UserNames;
+
     /**
      * @param string $InstanceId 数据库实例ID，形如mssql-njj2mtpl
      * @param array $UserNames 实例用户名数组
@@ -46,6 +45,7 @@ class DeleteAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

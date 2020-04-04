@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAdaptiveDynamicStreamingTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取自适应转码模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置自适应转码模板唯一标识。
- */
-
-/**
- *DeleteAdaptiveDynamicStreamingTemplate请求参数结构体
  */
 class DeleteAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
      * @var integer 自适应转码模板唯一标识。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 自适应转码模板唯一标识。
      */
@@ -38,6 +37,7 @@ class DeleteAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

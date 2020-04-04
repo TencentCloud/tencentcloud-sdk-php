@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 精彩集锦信息
+ *
  * @method array getConcentration() 获取专注的起始与终止时间信息。
  * @method void setConcentration(array $Concentration) 设置专注的起始与终止时间信息。
  * @method array getSmile() 获取微笑的起始与终止时间信息。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHighlightsUrl(string $HighlightsUrl) 设置高光集锦视频地址，保存剪辑好的视频地址。
  * @method string getPersonId() 获取片段中识别出来的人脸ID。
  * @method void setPersonId(string $PersonId) 设置片段中识别出来的人脸ID。
- */
-
-/**
- *精彩集锦信息
  */
 class HighlightsInfomation extends AbstractModel
 {
@@ -52,6 +50,7 @@ class HighlightsInfomation extends AbstractModel
      * @var string 片段中识别出来的人脸ID。
      */
     public $PersonId;
+
     /**
      * @param array $Concentration 专注的起始与终止时间信息。
      * @param array $Smile 微笑的起始与终止时间信息。
@@ -62,6 +61,7 @@ class HighlightsInfomation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

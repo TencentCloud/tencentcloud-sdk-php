@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 集群高级配置
+ *
  * @method boolean getIPVS() 获取是否启用IPVS
  * @method void setIPVS(boolean $IPVS) 设置是否启用IPVS
  * @method boolean getAsEnabled() 获取是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkType(string $NetworkType) 设置集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
  * @method boolean getIsNonStaticIpMode() 获取集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
  * @method void setIsNonStaticIpMode(boolean $IsNonStaticIpMode) 设置集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
- */
-
-/**
- *集群高级配置
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ClusterAdvancedSettings extends AbstractModel
      * @var boolean 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
      */
     public $IsNonStaticIpMode;
+
     /**
      * @param boolean $IPVS 是否启用IPVS
      * @param boolean $AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
@@ -86,6 +85,7 @@ class ClusterAdvancedSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

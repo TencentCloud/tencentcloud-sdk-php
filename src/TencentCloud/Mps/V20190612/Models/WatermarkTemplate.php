@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 水印模板详情
+ *
  * @method integer getDefinition() 获取水印模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置水印模板唯一标识。
  * @method string getType() 获取水印类型，取值：
@@ -68,10 +70,6 @@ use TencentCloud\Common\AbstractModel;
 <li>topRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
 <li>bottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
 <li>bottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下。；</li>
- */
-
-/**
- *水印模板详情
  */
 class WatermarkTemplate extends AbstractModel
 {
@@ -147,6 +145,7 @@ class WatermarkTemplate extends AbstractModel
 <li>bottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下。；</li>
      */
     public $CoordinateOrigin;
+
     /**
      * @param integer $Definition 水印模板唯一标识。
      * @param string $Type 水印类型，取值：
@@ -178,6 +177,7 @@ class WatermarkTemplate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

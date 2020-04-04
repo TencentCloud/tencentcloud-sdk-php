@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AttachClassicLinkVpc请求参数结构体
+ *
  * @method string getVpcId() 获取VPC实例ID
  * @method void setVpcId(string $VpcId) 设置VPC实例ID
  * @method array getInstanceIds() 获取CVM实例ID
  * @method void setInstanceIds(array $InstanceIds) 设置CVM实例ID
- */
-
-/**
- *AttachClassicLinkVpc请求参数结构体
  */
 class AttachClassicLinkVpcRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AttachClassicLinkVpcRequest extends AbstractModel
      * @var array CVM实例ID
      */
     public $InstanceIds;
+
     /**
      * @param string $VpcId VPC实例ID
      * @param array $InstanceIds CVM实例ID
@@ -46,6 +45,7 @@ class AttachClassicLinkVpcRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

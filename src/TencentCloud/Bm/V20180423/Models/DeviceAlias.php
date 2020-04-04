@@ -18,14 +18,12 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备ID与别名
+ *
  * @method string getInstanceId() 获取设备ID
  * @method void setInstanceId(string $InstanceId) 设置设备ID
  * @method string getAlias() 获取设备别名
  * @method void setAlias(string $Alias) 设置设备别名
- */
-
-/**
- *设备ID与别名
  */
 class DeviceAlias extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeviceAlias extends AbstractModel
      * @var string 设备别名
      */
     public $Alias;
+
     /**
      * @param string $InstanceId 设备ID
      * @param string $Alias 设备别名
@@ -46,6 +45,7 @@ class DeviceAlias extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

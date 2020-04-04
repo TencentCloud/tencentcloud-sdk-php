@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskTemplates请求参数结构体
+ *
  * @method array getTaskTemplateIds() 获取任务模板ID列表，与Filters参数不能同时指定。
  * @method void setTaskTemplateIds(array $TaskTemplateIds) 设置任务模板ID列表，与Filters参数不能同时指定。
  * @method array getFilters() 获取过滤条件
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
  * @method void setLimit(integer $Limit) 设置返回数量
- */
-
-/**
- *DescribeTaskTemplates请求参数结构体
  */
 class DescribeTaskTemplatesRequest extends AbstractModel
 {
@@ -58,6 +56,7 @@ class DescribeTaskTemplatesRequest extends AbstractModel
      * @var integer 返回数量
      */
     public $Limit;
+
     /**
      * @param array $TaskTemplateIds 任务模板ID列表，与Filters参数不能同时指定。
      * @param array $Filters 过滤条件
@@ -70,6 +69,7 @@ class DescribeTaskTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

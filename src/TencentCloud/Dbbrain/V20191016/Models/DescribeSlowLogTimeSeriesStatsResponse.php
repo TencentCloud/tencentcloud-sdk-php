@@ -18,6 +18,8 @@ namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSlowLogTimeSeriesStats返回参数结构体
+ *
  * @method integer getPeriod() 获取柱间单位时间间隔，单位为秒。
  * @method void setPeriod(integer $Period) 设置柱间单位时间间隔，单位为秒。
  * @method array getTimeSeries() 获取单位时间间隔内慢日志数量统计。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSeriesData(MonitorMetricSeriesData $SeriesData) 设置单位时间间隔内的实例 cpu 利用率监控数据。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeSlowLogTimeSeriesStats返回参数结构体
  */
 class DescribeSlowLogTimeSeriesStatsResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeSlowLogTimeSeriesStatsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Period 柱间单位时间间隔，单位为秒。
      * @param array $TimeSeries 单位时间间隔内慢日志数量统计。
@@ -62,6 +61,7 @@ class DescribeSlowLogTimeSeriesStatsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

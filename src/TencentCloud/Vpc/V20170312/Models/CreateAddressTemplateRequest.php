@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAddressTemplate请求参数结构体
+ *
  * @method string getAddressTemplateName() 获取IP地址模版名称
  * @method void setAddressTemplateName(string $AddressTemplateName) 设置IP地址模版名称
  * @method array getAddresses() 获取地址信息，支持 IP、CIDR、IP 范围。
  * @method void setAddresses(array $Addresses) 设置地址信息，支持 IP、CIDR、IP 范围。
- */
-
-/**
- *CreateAddressTemplate请求参数结构体
  */
 class CreateAddressTemplateRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateAddressTemplateRequest extends AbstractModel
      * @var array 地址信息，支持 IP、CIDR、IP 范围。
      */
     public $Addresses;
+
     /**
      * @param string $AddressTemplateName IP地址模版名称
      * @param array $Addresses 地址信息，支持 IP、CIDR、IP 范围。
@@ -46,6 +45,7 @@ class CreateAddressTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

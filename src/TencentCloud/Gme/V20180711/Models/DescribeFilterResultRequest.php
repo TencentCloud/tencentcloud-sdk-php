@@ -18,14 +18,12 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeFilterResult请求参数结构体
+ *
  * @method integer getBizId() 获取应用ID
  * @method void setBizId(integer $BizId) 设置应用ID
  * @method string getFileId() 获取文件ID
  * @method void setFileId(string $FileId) 设置文件ID
- */
-
-/**
- *DescribeFilterResult请求参数结构体
  */
 class DescribeFilterResultRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeFilterResultRequest extends AbstractModel
      * @var string 文件ID
      */
     public $FileId;
+
     /**
      * @param integer $BizId 应用ID
      * @param string $FileId 文件ID
@@ -46,6 +45,7 @@ class DescribeFilterResultRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

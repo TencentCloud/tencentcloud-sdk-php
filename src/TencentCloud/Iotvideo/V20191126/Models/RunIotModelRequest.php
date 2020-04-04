@@ -18,14 +18,12 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RunIotModel请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getIotModel() 获取物模型定义，json格式的字符串
  * @method void setIotModel(string $IotModel) 设置物模型定义，json格式的字符串
- */
-
-/**
- *RunIotModel请求参数结构体
  */
 class RunIotModelRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RunIotModelRequest extends AbstractModel
      * @var string 物模型定义，json格式的字符串
      */
     public $IotModel;
+
     /**
      * @param string $ProductId 产品ID
      * @param string $IotModel 物模型定义，json格式的字符串
@@ -46,6 +45,7 @@ class RunIotModelRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

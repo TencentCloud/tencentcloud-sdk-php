@@ -18,6 +18,8 @@ namespace TencentCloud\Captcha\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCaptchaOperData方法 拦截情况type = 2 返回的数据结构
+ *
  * @method string getDateKey() 获取时间
  * @method void setDateKey(string $DateKey) 设置时间
  * @method float getAllStopCnt() 获取停止验证数量
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPicStopCnt(float $PicStopCnt) 设置图片停止加载数量
  * @method float getStrategyStopCnt() 获取策略拦截数量
  * @method void setStrategyStopCnt(float $StrategyStopCnt) 设置策略拦截数量
- */
-
-/**
- *DescribeCaptchaOperData方法 拦截情况type = 2 返回的数据结构
  */
 class CaptchaOperDataInterceptUnit extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CaptchaOperDataInterceptUnit extends AbstractModel
      * @var float 策略拦截数量
      */
     public $StrategyStopCnt;
+
     /**
      * @param string $DateKey 时间
      * @param float $AllStopCnt 停止验证数量
@@ -62,6 +61,7 @@ class CaptchaOperDataInterceptUnit extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

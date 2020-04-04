@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveStreamPublishedList请求参数结构体
+ *
  * @method string getDomainName() 获取您的推流域名。
  * @method void setDomainName(string $DomainName) 设置您的推流域名。
  * @method string getEndTime() 获取结束时间。
@@ -50,10 +52,6 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 默认值：10。
  * @method string getStreamName() 获取流名称，支持模糊匹配。
  * @method void setStreamName(string $StreamName) 设置流名称，支持模糊匹配。
- */
-
-/**
- *DescribeLiveStreamPublishedList请求参数结构体
  */
 class DescribeLiveStreamPublishedListRequest extends AbstractModel
 {
@@ -100,6 +98,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
      * @var string 流名称，支持模糊匹配。
      */
     public $StreamName;
+
     /**
      * @param string $DomainName 您的推流域名。
      * @param string $EndTime 结束时间。
@@ -122,6 +121,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

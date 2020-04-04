@@ -18,6 +18,8 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SearchTrace请求参数结构体
+ *
  * @method string getGroupId() 获取希望搜索的人体库ID。
  * @method void setGroupId(string $GroupId) 设置希望搜索的人体库ID。
  * @method Trace getTrace() 获取人体轨迹信息。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 默认为0。范围[0, 100.0]。
  * @method void setTraceMatchThreshold(float $TraceMatchThreshold) 设置出参Score中，只有超过TraceMatchThreshold值的结果才会返回。
 默认为0。范围[0, 100.0]。
- */
-
-/**
- *SearchTrace请求参数结构体
  */
 class SearchTraceRequest extends AbstractModel
 {
@@ -61,6 +59,7 @@ class SearchTraceRequest extends AbstractModel
 默认为0。范围[0, 100.0]。
      */
     public $TraceMatchThreshold;
+
     /**
      * @param string $GroupId 希望搜索的人体库ID。
      * @param Trace $Trace 人体轨迹信息。
@@ -74,6 +73,7 @@ class SearchTraceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

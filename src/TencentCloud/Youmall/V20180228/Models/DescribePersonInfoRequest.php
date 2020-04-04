@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePersonInfo请求参数结构体
+ *
  * @method string getCompanyId() 获取公司ID
  * @method void setCompanyId(string $CompanyId) 设置公司ID
  * @method integer getShopId() 获取门店ID
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPictureExpires(integer $PictureExpires) 设置图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
  * @method integer getPersonType() 获取身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
  * @method void setPersonType(integer $PersonType) 设置身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
- */
-
-/**
- *DescribePersonInfo请求参数结构体
  */
 class DescribePersonInfoRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribePersonInfoRequest extends AbstractModel
      * @var integer 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
      */
     public $PersonType;
+
     /**
      * @param string $CompanyId 公司ID
      * @param integer $ShopId 门店ID
@@ -86,6 +85,7 @@ class DescribePersonInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

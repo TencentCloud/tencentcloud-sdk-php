@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 编辑视频任务的输出
+ *
  * @method TaskOutputStorage getOutputStorage() 获取编辑后文件的目标存储。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置编辑后文件的目标存储。
  * @method string getPath() 获取编辑后的视频文件路径。
  * @method void setPath(string $Path) 设置编辑后的视频文件路径。
- */
-
-/**
- *编辑视频任务的输出
  */
 class EditMediaTaskOutput extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EditMediaTaskOutput extends AbstractModel
      * @var string 编辑后的视频文件路径。
      */
     public $Path;
+
     /**
      * @param TaskOutputStorage $OutputStorage 编辑后文件的目标存储。
      * @param string $Path 编辑后的视频文件路径。
@@ -46,6 +45,7 @@ class EditMediaTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

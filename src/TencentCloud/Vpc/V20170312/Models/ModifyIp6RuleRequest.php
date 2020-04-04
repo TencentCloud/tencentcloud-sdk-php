@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyIp6Rule请求参数结构体
+ *
  * @method string getIp6TranslatorId() 获取IPV6转换实例唯一ID，形如ip6-xxxxxxxx
  * @method void setIp6TranslatorId(string $Ip6TranslatorId) 设置IPV6转换实例唯一ID，形如ip6-xxxxxxxx
  * @method string getIp6RuleId() 获取IPV6转换规则唯一ID，形如rule6-xxxxxxxx
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) 设置IPV6转换规则修改后的IPV4地址
  * @method integer getVport() 获取IPV6转换规则修改后的IPV4端口号
  * @method void setVport(integer $Vport) 设置IPV6转换规则修改后的IPV4端口号
- */
-
-/**
- *ModifyIp6Rule请求参数结构体
  */
 class ModifyIp6RuleRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyIp6RuleRequest extends AbstractModel
      * @var integer IPV6转换规则修改后的IPV4端口号
      */
     public $Vport;
+
     /**
      * @param string $Ip6TranslatorId IPV6转换实例唯一ID，形如ip6-xxxxxxxx
      * @param string $Ip6RuleId IPV6转换规则唯一ID，形如rule6-xxxxxxxx
@@ -70,6 +69,7 @@ class ModifyIp6RuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 监听器上绑定的后端服务的信息
+ *
  * @method string getListenerId() 获取监听器 ID
  * @method void setListenerId(string $ListenerId) 设置监听器 ID
  * @method string getProtocol() 获取监听器的协议
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndPort(integer $EndPort) 设置若支持端口段，则为端口段结束端口；若不支持端口段，则为0
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *监听器上绑定的后端服务的信息
  */
 class ListenerBackend extends AbstractModel
 {
@@ -75,6 +73,7 @@ class ListenerBackend extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndPort;
+
     /**
      * @param string $ListenerId 监听器 ID
      * @param string $Protocol 监听器的协议
@@ -90,6 +89,7 @@ class ListenerBackend extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

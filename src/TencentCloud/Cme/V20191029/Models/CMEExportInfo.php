@@ -18,6 +18,8 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云剪导出信息。
+ *
  * @method Entity getOwner() 获取导出的归属者。
  * @method void setOwner(Entity $Owner) 设置导出的归属者。
  * @method string getName() 获取导出的素材名称，不得超过30个字符。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClassPath(string $ClassPath) 设置导出的素材分类路径，长度不能超过15字符。
  * @method array getTagSet() 获取导出的素材标签，单个标签不得超过10个字符。
  * @method void setTagSet(array $TagSet) 设置导出的素材标签，单个标签不得超过10个字符。
- */
-
-/**
- *云剪导出信息。
  */
 class CMEExportInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CMEExportInfo extends AbstractModel
      * @var array 导出的素材标签，单个标签不得超过10个字符。
      */
     public $TagSet;
+
     /**
      * @param Entity $Owner 导出的归属者。
      * @param string $Name 导出的素材名称，不得超过30个字符。
@@ -70,6 +69,7 @@ class CMEExportInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

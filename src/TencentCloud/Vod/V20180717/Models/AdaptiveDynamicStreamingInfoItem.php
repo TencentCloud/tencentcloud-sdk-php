@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转自适应码流信息
+ *
  * @method integer getDefinition() 获取转自适应码流规格。
  * @method void setDefinition(integer $Definition) 设置转自适应码流规格。
  * @method string getPackage() 获取打包格式，可能为 hls 和 dash 两种。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDrmType(string $DrmType) 设置加密类型。
  * @method string getUrl() 获取播放地址。
  * @method void setUrl(string $Url) 设置播放地址。
- */
-
-/**
- *转自适应码流信息
  */
 class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
      * @var string 播放地址。
      */
     public $Url;
+
     /**
      * @param integer $Definition 转自适应码流规格。
      * @param string $Package 打包格式，可能为 hls 和 dash 两种。
@@ -62,6 +61,7 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

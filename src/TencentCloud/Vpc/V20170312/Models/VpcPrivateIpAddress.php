@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPC内网IP对象。
+ *
  * @method string getPrivateIpAddress() 获取`VPC`内网`IP`。
  * @method void setPrivateIpAddress(string $PrivateIpAddress) 设置`VPC`内网`IP`。
  * @method string getCidrBlock() 获取所属子网`CIDR`。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddressType(string $PrivateIpAddressType) 设置内网`IP`类型。
  * @method string getCreatedTime() 获取`IP`申请时间。
  * @method void setCreatedTime(string $CreatedTime) 设置`IP`申请时间。
- */
-
-/**
- *VPC内网IP对象。
  */
 class VpcPrivateIpAddress extends AbstractModel
 {
@@ -52,6 +50,7 @@ class VpcPrivateIpAddress extends AbstractModel
      * @var string `IP`申请时间。
      */
     public $CreatedTime;
+
     /**
      * @param string $PrivateIpAddress `VPC`内网`IP`。
      * @param string $CidrBlock 所属子网`CIDR`。
@@ -62,6 +61,7 @@ class VpcPrivateIpAddress extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

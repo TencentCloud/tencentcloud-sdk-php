@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVulInfo返回参数结构体
+ *
  * @method integer getVulId() 获取漏洞种类ID。
  * @method void setVulId(integer $VulId) 设置漏洞种类ID。
  * @method string getVulName() 获取漏洞名称。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReference(string $Reference) 设置参考链接。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeVulInfo返回参数结构体
  */
 class DescribeVulInfoResponse extends AbstractModel
 {
@@ -87,6 +85,7 @@ class DescribeVulInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $VulId 漏洞种类ID。
      * @param string $VulName 漏洞名称。
@@ -102,6 +101,7 @@ class DescribeVulInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

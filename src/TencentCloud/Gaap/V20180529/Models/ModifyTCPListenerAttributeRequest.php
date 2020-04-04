@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTCPListenerAttribute请求参数结构体
+ *
  * @method string getListenerId() 获取监听器ID
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getGroupId() 获取通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectTimeout(integer $ConnectTimeout) 设置源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
  * @method integer getHealthCheck() 获取是否开启健康检查，1开启，0关闭。
  * @method void setHealthCheck(integer $HealthCheck) 设置是否开启健康检查，1开启，0关闭。
- */
-
-/**
- *ModifyTCPListenerAttribute请求参数结构体
  */
 class ModifyTCPListenerAttributeRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ModifyTCPListenerAttributeRequest extends AbstractModel
      * @var integer 是否开启健康检查，1开启，0关闭。
      */
     public $HealthCheck;
+
     /**
      * @param string $ListenerId 监听器ID
      * @param string $GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
@@ -94,6 +93,7 @@ class ModifyTCPListenerAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

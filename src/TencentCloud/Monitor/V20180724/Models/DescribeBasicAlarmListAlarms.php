@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBasicAlarmList返回的Alarms
+ *
  * @method integer getId() 获取该条告警的ID
  * @method void setId(integer $Id) 设置该条告警的ID
  * @method integer getProjectId() 获取项目ID
@@ -104,10 +106,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceGroup(array $InstanceGroup) 设置所属实例组信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DescribeBasicAlarmList返回的Alarms
  */
 class DescribeBasicAlarmListAlarms extends AbstractModel
 {
@@ -241,6 +239,7 @@ class DescribeBasicAlarmListAlarms extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceGroup;
+
     /**
      * @param integer $Id 该条告警的ID
      * @param integer $ProjectId 项目ID
@@ -290,6 +289,7 @@ class DescribeBasicAlarmListAlarms extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

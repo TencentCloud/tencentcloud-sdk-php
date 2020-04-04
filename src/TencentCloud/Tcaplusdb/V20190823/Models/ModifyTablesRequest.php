@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTables请求参数结构体
+ *
  * @method string getClusterId() 获取待修改表格所在集群ID
  * @method void setClusterId(string $ClusterId) 设置待修改表格所在集群ID
  * @method array getIdlFiles() 获取选中的改表IDL文件
  * @method void setIdlFiles(array $IdlFiles) 设置选中的改表IDL文件
  * @method array getSelectedTables() 获取待改表格列表
  * @method void setSelectedTables(array $SelectedTables) 设置待改表格列表
- */
-
-/**
- *ModifyTables请求参数结构体
  */
 class ModifyTablesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyTablesRequest extends AbstractModel
      * @var array 待改表格列表
      */
     public $SelectedTables;
+
     /**
      * @param string $ClusterId 待修改表格所在集群ID
      * @param array $IdlFiles 选中的改表IDL文件
@@ -54,6 +53,7 @@ class ModifyTablesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

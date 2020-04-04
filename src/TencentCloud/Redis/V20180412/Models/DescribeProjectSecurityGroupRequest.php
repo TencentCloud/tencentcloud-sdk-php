@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProjectSecurityGroup请求参数结构体
+ *
  * @method integer getProjectId() 获取0:默认项目；-1 所有项目; >0: 特定项目
  * @method void setProjectId(integer $ProjectId) 设置0:默认项目；-1 所有项目; >0: 特定项目
  * @method string getSecurityGroupId() 获取安全组Id
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组Id
- */
-
-/**
- *DescribeProjectSecurityGroup请求参数结构体
  */
 class DescribeProjectSecurityGroupRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeProjectSecurityGroupRequest extends AbstractModel
      * @var string 安全组Id
      */
     public $SecurityGroupId;
+
     /**
      * @param integer $ProjectId 0:默认项目；-1 所有项目; >0: 特定项目
      * @param string $SecurityGroupId 安全组Id
@@ -46,6 +45,7 @@ class DescribeProjectSecurityGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

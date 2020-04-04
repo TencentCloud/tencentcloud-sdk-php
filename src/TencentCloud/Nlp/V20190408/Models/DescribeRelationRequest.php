@@ -18,14 +18,12 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRelation请求参数结构体
+ *
  * @method string getLeftEntityName() 获取输入第一个实体
  * @method void setLeftEntityName(string $LeftEntityName) 设置输入第一个实体
  * @method string getRightEntityName() 获取输入第二个实体
  * @method void setRightEntityName(string $RightEntityName) 设置输入第二个实体
- */
-
-/**
- *DescribeRelation请求参数结构体
  */
 class DescribeRelationRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeRelationRequest extends AbstractModel
      * @var string 输入第二个实体
      */
     public $RightEntityName;
+
     /**
      * @param string $LeftEntityName 输入第一个实体
      * @param string $RightEntityName 输入第二个实体
@@ -46,6 +45,7 @@ class DescribeRelationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

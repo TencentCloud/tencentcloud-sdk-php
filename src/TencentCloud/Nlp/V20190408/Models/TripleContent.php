@@ -18,6 +18,8 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 三元组查询返回的元记录
+ *
  * @method string getId() 获取实体id
  * @method void setId(string $Id) 设置实体id
  * @method string getName() 获取实体名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(integer $Order) 设置实体order
  * @method integer getPopular() 获取实体流行度
  * @method void setPopular(integer $Popular) 设置实体流行度
- */
-
-/**
- *三元组查询返回的元记录
  */
 class TripleContent extends AbstractModel
 {
@@ -52,6 +50,7 @@ class TripleContent extends AbstractModel
      * @var integer 实体流行度
      */
     public $Popular;
+
     /**
      * @param string $Id 实体id
      * @param string $Name 实体名称
@@ -62,6 +61,7 @@ class TripleContent extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

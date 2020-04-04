@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 提交的app基本信息
+ *
  * @method string getAppUrl() 获取app的url，必须保证不用权限校验就可以下载
  * @method void setAppUrl(string $AppUrl) 设置app的url，必须保证不用权限校验就可以下载
  * @method string getAppMd5() 获取app的md5，需要正确传递
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppIconUrl(string $AppIconUrl) 设置app的图标url
  * @method string getAppName() 获取app的名称
  * @method void setAppName(string $AppName) 设置app的名称
- */
-
-/**
- *提交的app基本信息
  */
 class AppInfo extends AbstractModel
 {
@@ -80,6 +78,7 @@ class AppInfo extends AbstractModel
      * @var string app的名称
      */
     public $AppName;
+
     /**
      * @param string $AppUrl app的url，必须保证不用权限校验就可以下载
      * @param string $AppMd5 app的md5，需要正确传递
@@ -94,6 +93,7 @@ class AppInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

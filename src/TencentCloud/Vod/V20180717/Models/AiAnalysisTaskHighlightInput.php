@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能精彩片段任务输入类型
+ *
  * @method integer getDefinition() 获取视频智能精彩片段模板 ID。
  * @method void setDefinition(integer $Definition) 设置视频智能精彩片段模板 ID。
- */
-
-/**
- *智能精彩片段任务输入类型
  */
 class AiAnalysisTaskHighlightInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiAnalysisTaskHighlightInput extends AbstractModel
      * @var integer 视频智能精彩片段模板 ID。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 视频智能精彩片段模板 ID。
      */
@@ -38,6 +37,7 @@ class AiAnalysisTaskHighlightInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

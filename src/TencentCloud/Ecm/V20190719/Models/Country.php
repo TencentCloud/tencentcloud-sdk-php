@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 国家信息
+ *
  * @method string getCountryId() 获取国家ID
  * @method void setCountryId(string $CountryId) 设置国家ID
  * @method string getCountryName() 获取国家名称
  * @method void setCountryName(string $CountryName) 设置国家名称
- */
-
-/**
- *国家信息
  */
 class Country extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Country extends AbstractModel
      * @var string 国家名称
      */
     public $CountryName;
+
     /**
      * @param string $CountryId 国家ID
      * @param string $CountryName 国家名称
@@ -46,6 +45,7 @@ class Country extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

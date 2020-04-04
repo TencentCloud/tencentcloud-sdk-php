@@ -18,12 +18,10 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RemovePayRelationForClient请求参数结构体
+ *
  * @method string getClientUin() 获取客户账号ID
  * @method void setClientUin(string $ClientUin) 设置客户账号ID
- */
-
-/**
- *RemovePayRelationForClient请求参数结构体
  */
 class RemovePayRelationForClientRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RemovePayRelationForClientRequest extends AbstractModel
      * @var string 客户账号ID
      */
     public $ClientUin;
+
     /**
      * @param string $ClientUin 客户账号ID
      */
@@ -38,6 +37,7 @@ class RemovePayRelationForClientRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

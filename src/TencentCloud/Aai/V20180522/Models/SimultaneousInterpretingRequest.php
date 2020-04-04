@@ -18,6 +18,8 @@ namespace TencentCloud\Aai\V20180522\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SimultaneousInterpreting请求参数结构体
+ *
  * @method integer getProjectId() 获取腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
  * @method void setProjectId(integer $ProjectId) 设置腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
  * @method integer getSubServiceType() 获取子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。3：同传。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetLanguage(string $TargetLanguage) 设置如果需要翻译，表示目标语言类型，可取值：zh，en。
  * @method integer getSeq() 获取表明当前语音分片的索引，从0开始
  * @method void setSeq(integer $Seq) 设置表明当前语音分片的索引，从0开始
- */
-
-/**
- *SimultaneousInterpreting请求参数结构体
  */
 class SimultaneousInterpretingRequest extends AbstractModel
 {
@@ -108,6 +106,7 @@ class SimultaneousInterpretingRequest extends AbstractModel
      * @var integer 表明当前语音分片的索引，从0开始
      */
     public $Seq;
+
     /**
      * @param integer $ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      * @param integer $SubServiceType 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。3：同传。
@@ -126,6 +125,7 @@ class SimultaneousInterpretingRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

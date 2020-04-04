@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 自定义镜像信息
+ *
  * @method string getImageId() 获取镜像ID
  * @method void setImageId(string $ImageId) 设置镜像ID
  * @method string getImageName() 获取镜像别名
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageDescription(string $ImageDescription) 设置备注
  * @method integer getOsTypeId() 获取原始镜像id
  * @method void setOsTypeId(integer $OsTypeId) 设置原始镜像id
- */
-
-/**
- *自定义镜像信息
  */
 class CustomImage extends AbstractModel
 {
@@ -108,6 +106,7 @@ class CustomImage extends AbstractModel
      * @var integer 原始镜像id
      */
     public $OsTypeId;
+
     /**
      * @param string $ImageId 镜像ID
      * @param string $ImageName 镜像别名
@@ -126,6 +125,7 @@ class CustomImage extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

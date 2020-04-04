@@ -18,16 +18,14 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePodInstances请求参数结构体
+ *
  * @method string getGroupId() 获取实例所属groupId
  * @method void setGroupId(string $GroupId) 设置实例所属groupId
  * @method integer getOffset() 获取偏移量，取值从0开始
  * @method void setOffset(integer $Offset) 设置偏移量，取值从0开始
  * @method integer getLimit() 获取分页个数，默认为20， 取值应为1~50
  * @method void setLimit(integer $Limit) 设置分页个数，默认为20， 取值应为1~50
- */
-
-/**
- *DescribePodInstances请求参数结构体
  */
 class DescribePodInstancesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribePodInstancesRequest extends AbstractModel
      * @var integer 分页个数，默认为20， 取值应为1~50
      */
     public $Limit;
+
     /**
      * @param string $GroupId 实例所属groupId
      * @param integer $Offset 偏移量，取值从0开始
@@ -54,6 +53,7 @@ class DescribePodInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

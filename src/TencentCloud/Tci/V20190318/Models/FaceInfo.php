@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人脸操作信息
+ *
  * @method string getErrorCode() 获取人脸操作错误码
  * @method void setErrorCode(string $ErrorCode) 设置人脸操作错误码
  * @method string getErrorMsg() 获取人脸操作结果信息
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaceUrl(string $FaceUrl) 设置人脸保存地址
  * @method string getPersonId() 获取人员唯一标识
  * @method void setPersonId(string $PersonId) 设置人员唯一标识
- */
-
-/**
- *人脸操作信息
  */
 class FaceInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class FaceInfo extends AbstractModel
      * @var string 人员唯一标识
      */
     public $PersonId;
+
     /**
      * @param string $ErrorCode 人脸操作错误码
      * @param string $ErrorMsg 人脸操作结果信息
@@ -70,6 +69,7 @@ class FaceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

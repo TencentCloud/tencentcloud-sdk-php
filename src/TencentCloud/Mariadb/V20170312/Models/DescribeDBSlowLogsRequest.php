@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBSlowLogs请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：tdsql-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：tdsql-ow728lmc。
  * @method integer getOffset() 获取从结果的第几条数据开始返回
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderByType(string $OrderByType) 设置排序类型，desc或者asc
  * @method integer getSlave() 获取是否查询从机的慢查询，0-主机; 1-从机
  * @method void setSlave(integer $Slave) 设置是否查询从机的慢查询，0-主机; 1-从机
- */
-
-/**
- *DescribeDBSlowLogs请求参数结构体
  */
 class DescribeDBSlowLogsRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class DescribeDBSlowLogsRequest extends AbstractModel
      * @var integer 是否查询从机的慢查询，0-主机; 1-从机
      */
     public $Slave;
+
     /**
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc。
      * @param integer $Offset 从结果的第几条数据开始返回
@@ -102,6 +101,7 @@ class DescribeDBSlowLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备日志信息
+ *
  * @method integer getOccurtime() 获取发生时间 UNIX时间戳，单位秒
  * @method void setOccurtime(integer $Occurtime) 设置发生时间 UNIX时间戳，单位秒
  * @method integer getLogType() 获取日志类型 1在线状态变更 2FP变更 3SP变更 4CO控制 5ST变更 6EV事件
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewValue(string $NewValue) 设置物模型新值  json串
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *设备日志信息
  */
 class LogData extends AbstractModel
 {
@@ -68,6 +66,7 @@ class LogData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewValue;
+
     /**
      * @param integer $Occurtime 发生时间 UNIX时间戳，单位秒
      * @param integer $LogType 日志类型 1在线状态变更 2FP变更 3SP变更 4CO控制 5ST变更 6EV事件
@@ -82,6 +81,7 @@ class LogData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

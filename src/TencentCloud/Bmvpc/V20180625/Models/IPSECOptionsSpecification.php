@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IPSec配置，腾讯云提供IPSec安全会话设置
+ *
  * @method string getPfsDhGroup() 获取PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
  * @method void setPfsDhGroup(string $PfsDhGroup) 设置PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
  * @method integer getIPSECSaLifetimeTraffic() 获取IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityProto(string $SecurityProto) 设置安全协议，默认为ESP
  * @method string getEncapMode() 获取报文封装模式:默认为Tunnel
  * @method void setEncapMode(string $EncapMode) 设置报文封装模式:默认为Tunnel
- */
-
-/**
- *IPSec配置，腾讯云提供IPSec安全会话设置
  */
 class IPSECOptionsSpecification extends AbstractModel
 {
@@ -73,6 +71,7 @@ class IPSECOptionsSpecification extends AbstractModel
      * @var string 报文封装模式:默认为Tunnel
      */
     public $EncapMode;
+
     /**
      * @param string $PfsDhGroup PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
      * @param integer $IPSECSaLifetimeTraffic IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
@@ -86,6 +85,7 @@ class IPSECOptionsSpecification extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpnGateways返回参数结构体
+ *
  * @method integer getTotalCount() 获取符合条件的实例数量。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例数量。
  * @method array getVpnGatewaySet() 获取VPN网关实例详细信息列表。
  * @method void setVpnGatewaySet(array $VpnGatewaySet) 设置VPN网关实例详细信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeVpnGateways返回参数结构体
  */
 class DescribeVpnGatewaysResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeVpnGatewaysResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 符合条件的实例数量。
      * @param array $VpnGatewaySet VPN网关实例详细信息列表。
@@ -54,6 +53,7 @@ class DescribeVpnGatewaysResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

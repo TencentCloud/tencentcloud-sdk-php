@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * LookUpEvents请求参数结构体
+ *
  * @method integer getEndTime() 获取结束时间
  * @method void setEndTime(integer $EndTime) 设置结束时间
  * @method integer getStartTime() 获取开始时间
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMode(string $Mode) 设置云审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
  * @method string getNextToken() 获取查看更多日志的凭证
  * @method void setNextToken(string $NextToken) 设置查看更多日志的凭证
- */
-
-/**
- *LookUpEvents请求参数结构体
  */
 class LookUpEventsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class LookUpEventsRequest extends AbstractModel
      * @var string 查看更多日志的凭证
      */
     public $NextToken;
+
     /**
      * @param integer $EndTime 结束时间
      * @param integer $StartTime 开始时间
@@ -78,6 +77,7 @@ class LookUpEventsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

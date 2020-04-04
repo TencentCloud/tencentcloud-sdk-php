@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能按帧标签任务控制参数
+ *
  * @method string getSwitch() 获取智能按帧标签任务开关，可选值：
 <li>ON：开启智能按帧标签任务；</li>
 <li>OFF：关闭智能按帧标签任务。</li>
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 <li>OFF：关闭智能按帧标签任务。</li>
  * @method float getScreenshotInterval() 获取截帧间隔，单位为秒，当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
  * @method void setScreenshotInterval(float $ScreenshotInterval) 设置截帧间隔，单位为秒，当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
- */
-
-/**
- *智能按帧标签任务控制参数
  */
 class FrameTagConfigureInfo extends AbstractModel
 {
@@ -44,6 +42,7 @@ class FrameTagConfigureInfo extends AbstractModel
      * @var float 截帧间隔，单位为秒，当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
      */
     public $ScreenshotInterval;
+
     /**
      * @param string $Switch 智能按帧标签任务开关，可选值：
 <li>ON：开启智能按帧标签任务；</li>
@@ -54,6 +53,7 @@ class FrameTagConfigureInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

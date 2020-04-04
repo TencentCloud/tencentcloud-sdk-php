@@ -18,12 +18,10 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MobileNetworkTimeVerification请求参数结构体
+ *
  * @method string getMobile() 获取手机号码。不支持电信手机号。
  * @method void setMobile(string $Mobile) 设置手机号码。不支持电信手机号。
- */
-
-/**
- *MobileNetworkTimeVerification请求参数结构体
  */
 class MobileNetworkTimeVerificationRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class MobileNetworkTimeVerificationRequest extends AbstractModel
      * @var string 手机号码。不支持电信手机号。
      */
     public $Mobile;
+
     /**
      * @param string $Mobile 手机号码。不支持电信手机号。
      */
@@ -38,6 +37,7 @@ class MobileNetworkTimeVerificationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

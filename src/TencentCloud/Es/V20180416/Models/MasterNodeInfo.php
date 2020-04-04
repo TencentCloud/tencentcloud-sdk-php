@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例专用主节点相关信息
+ *
  * @method boolean getEnableDedicatedMaster() 获取是否启用了专用主节点
  * @method void setEnableDedicatedMaster(boolean $EnableDedicatedMaster) 设置是否启用了专用主节点
  * @method string getMasterNodeType() 获取专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMasterNodeDiskSize(integer $MasterNodeDiskSize) 设置专用主节点磁盘大小，单位GB
  * @method string getMasterNodeDiskType() 获取专用主节点磁盘类型
  * @method void setMasterNodeDiskType(string $MasterNodeDiskType) 设置专用主节点磁盘类型
- */
-
-/**
- *实例专用主节点相关信息
  */
 class MasterNodeInfo extends AbstractModel
 {
@@ -73,6 +71,7 @@ class MasterNodeInfo extends AbstractModel
      * @var string 专用主节点磁盘类型
      */
     public $MasterNodeDiskType;
+
     /**
      * @param boolean $EnableDedicatedMaster 是否启用了专用主节点
      * @param string $MasterNodeType 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
@@ -86,6 +85,7 @@ class MasterNodeInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

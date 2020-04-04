@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetectAuth返回参数结构体
+ *
  * @method string getUrl() 获取用于发起核身流程的URL，仅微信H5场景使用。
  * @method void setUrl(string $Url) 设置用于发起核身流程的URL，仅微信H5场景使用。
  * @method string getBizToken() 获取一次核身流程的标识，有效时间为7,200秒；
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 完成核身后，可用该标识获取验证结果信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DetectAuth返回参数结构体
  */
 class DetectAuthResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DetectAuthResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Url 用于发起核身流程的URL，仅微信H5场景使用。
      * @param string $BizToken 一次核身流程的标识，有效时间为7,200秒；
@@ -58,6 +57,7 @@ class DetectAuthResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDDoSPolicyCase请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method string getSceneId() 获取策略场景ID
@@ -66,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTcpPortList(string $TcpPortList) 设置TCP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
  * @method string getUdpPortList() 获取UDP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
  * @method void setUdpPortList(string $UdpPortList) 设置UDP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
- */
-
-/**
- *ModifyDDoSPolicyCase请求参数结构体
  */
 class ModifyDDoSPolicyCaseRequest extends AbstractModel
 {
@@ -192,6 +190,7 @@ class ModifyDDoSPolicyCaseRequest extends AbstractModel
      * @var string UDP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
      */
     public $UdpPortList;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param string $SceneId 策略场景ID
@@ -222,6 +221,7 @@ class ModifyDDoSPolicyCaseRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

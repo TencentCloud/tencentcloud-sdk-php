@@ -18,14 +18,12 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SimilarWords请求参数结构体
+ *
  * @method string getText() 获取输入的词语（仅支持UTF-8格式，不超过20字）
  * @method void setText(string $Text) 设置输入的词语（仅支持UTF-8格式，不超过20字）
  * @method integer getWordNumber() 获取相似词个数；取值范围：1-200，默认为10；
  * @method void setWordNumber(integer $WordNumber) 设置相似词个数；取值范围：1-200，默认为10；
- */
-
-/**
- *SimilarWords请求参数结构体
  */
 class SimilarWordsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SimilarWordsRequest extends AbstractModel
      * @var integer 相似词个数；取值范围：1-200，默认为10；
      */
     public $WordNumber;
+
     /**
      * @param string $Text 输入的词语（仅支持UTF-8格式，不超过20字）
      * @param integer $WordNumber 相似词个数；取值范围：1-200，默认为10；
@@ -46,6 +45,7 @@ class SimilarWordsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

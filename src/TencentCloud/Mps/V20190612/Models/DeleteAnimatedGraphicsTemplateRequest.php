@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteAnimatedGraphicsTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取转动图模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置转动图模板唯一标识。
- */
-
-/**
- *DeleteAnimatedGraphicsTemplate请求参数结构体
  */
 class DeleteAnimatedGraphicsTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteAnimatedGraphicsTemplateRequest extends AbstractModel
      * @var integer 转动图模板唯一标识。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 转动图模板唯一标识。
      */
@@ -38,6 +37,7 @@ class DeleteAnimatedGraphicsTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

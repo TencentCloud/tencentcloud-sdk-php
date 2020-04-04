@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TrainTicketOCR返回参数结构体
+ *
  * @method string getTicketNum() 获取编号
  * @method void setTicketNum(string $TicketNum) 设置编号
  * @method string getStartStation() 获取出发站
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSerialNumber(string $SerialNumber) 设置序列号
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *TrainTicketOCR返回参数结构体
  */
 class TrainTicketOCRResponse extends AbstractModel
 {
@@ -115,6 +113,7 @@ class TrainTicketOCRResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $TicketNum 编号
      * @param string $StartStation 出发站
@@ -134,6 +133,7 @@ class TrainTicketOCRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

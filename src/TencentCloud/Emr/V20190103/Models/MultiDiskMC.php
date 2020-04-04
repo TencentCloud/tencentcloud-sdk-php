@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 多云盘参数
+ *
  * @method integer getCount() 获取该类型云盘个数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置该类型云盘个数
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolume(integer $Volume) 设置云盘大小
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *多云盘参数
  */
 class MultiDiskMC extends AbstractModel
 {
@@ -54,6 +52,7 @@ class MultiDiskMC extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Volume;
+
     /**
      * @param integer $Count 该类型云盘个数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class MultiDiskMC extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCCFrequencyRules返回参数结构体
+ *
  * @method string getCCFrequencyRuleId() 获取CC防护的访问频率控制规则ID
  * @method void setCCFrequencyRuleId(string $CCFrequencyRuleId) 设置CC防护的访问频率控制规则ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateCCFrequencyRules返回参数结构体
  */
 class CreateCCFrequencyRulesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateCCFrequencyRulesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $CCFrequencyRuleId CC防护的访问频率控制规则ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateCCFrequencyRulesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

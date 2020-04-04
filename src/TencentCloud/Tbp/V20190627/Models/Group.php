@@ -18,6 +18,8 @@ namespace TencentCloud\Tbp\V20190627\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Group是消息组的具体定义，当前包含ContentType、Url、Content三个字段。其中，具体的ContentType字段定义，参考互联网MIME类型标准。
+ *
  * @method string getContentType() 获取消息类型参考互联网MIME类型标准，当前仅支持"text/plain"。
  * @method void setContentType(string $ContentType) 设置消息类型参考互联网MIME类型标准，当前仅支持"text/plain"。
  * @method string getUrl() 获取返回内容以链接形式提供。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置普通文本。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *Group是消息组的具体定义，当前包含ContentType、Url、Content三个字段。其中，具体的ContentType字段定义，参考互联网MIME类型标准。
  */
 class Group extends AbstractModel
 {
@@ -51,6 +49,7 @@ class Group extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
+
     /**
      * @param string $ContentType 消息类型参考互联网MIME类型标准，当前仅支持"text/plain"。
      * @param string $Url 返回内容以链接形式提供。
@@ -62,6 +61,7 @@ class Group extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

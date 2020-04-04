@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 播放汇总统计信息
+ *
  * @method string getName() 获取域名或流id。
  * @method void setName(string $Name) 设置域名或流id。
  * @method float getAvgFluxPerSecond() 获取平均下载速度，单位是MB/s，计算公式是每分钟的下载速度求平均值。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalFlux(float $TotalFlux) 设置总流量，单位是MB。
  * @method integer getTotalRequest() 获取总请求数。
  * @method void setTotalRequest(integer $TotalRequest) 设置总请求数。
- */
-
-/**
- *播放汇总统计信息
  */
 class PlaySumStatInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class PlaySumStatInfo extends AbstractModel
      * @var integer 总请求数。
      */
     public $TotalRequest;
+
     /**
      * @param string $Name 域名或流id。
      * @param float $AvgFluxPerSecond 平均下载速度，单位是MB/s，计算公式是每分钟的下载速度求平均值。
@@ -62,6 +61,7 @@ class PlaySumStatInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

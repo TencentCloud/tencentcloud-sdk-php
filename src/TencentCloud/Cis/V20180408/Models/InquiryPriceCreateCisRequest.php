@@ -18,16 +18,14 @@ namespace TencentCloud\Cis\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceCreateCis请求参数结构体
+ *
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
  * @method float getCpu() 获取CPU，单位：核
  * @method void setCpu(float $Cpu) 设置CPU，单位：核
  * @method float getMemory() 获取内存，单位：Gi
  * @method void setMemory(float $Memory) 设置内存，单位：Gi
- */
-
-/**
- *InquiryPriceCreateCis请求参数结构体
  */
 class InquiryPriceCreateCisRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InquiryPriceCreateCisRequest extends AbstractModel
      * @var float 内存，单位：Gi
      */
     public $Memory;
+
     /**
      * @param string $Zone 可用区
      * @param float $Cpu CPU，单位：核
@@ -54,6 +53,7 @@ class InquiryPriceCreateCisRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSubscribeConf返回参数结构体
+ *
  * @method string getSubscribeId() 获取订阅实例ID
  * @method void setSubscribeId(string $SubscribeId) 设置订阅实例ID
  * @method string getSubscribeName() 获取订阅实例名称
@@ -68,10 +70,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeSubscribeConf返回参数结构体
  */
 class DescribeSubscribeConfResponse extends AbstractModel
 {
@@ -199,6 +197,7 @@ class DescribeSubscribeConfResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $SubscribeId 订阅实例ID
      * @param string $SubscribeName 订阅实例名称
@@ -230,6 +229,7 @@ class DescribeSubscribeConfResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

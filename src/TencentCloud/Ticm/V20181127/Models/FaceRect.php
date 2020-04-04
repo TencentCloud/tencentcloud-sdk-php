@@ -18,6 +18,9 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 识别出的人脸在图片中的位置。
+
+ *
  * @method integer getX() 获取人脸区域左上角横坐标。
  * @method void setX(integer $X) 设置人脸区域左上角横坐标。
  * @method integer getY() 获取人脸区域左上角纵坐标。
@@ -26,11 +29,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) 设置人脸区域宽度。
  * @method integer getHeight() 获取人脸区域高度。
  * @method void setHeight(integer $Height) 设置人脸区域高度。
- */
-
-/**
- *识别出的人脸在图片中的位置。
-
  */
 class FaceRect extends AbstractModel
 {
@@ -53,6 +51,7 @@ class FaceRect extends AbstractModel
      * @var integer 人脸区域高度。
      */
     public $Height;
+
     /**
      * @param integer $X 人脸区域左上角横坐标。
      * @param integer $Y 人脸区域左上角纵坐标。
@@ -63,6 +62,7 @@ class FaceRect extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

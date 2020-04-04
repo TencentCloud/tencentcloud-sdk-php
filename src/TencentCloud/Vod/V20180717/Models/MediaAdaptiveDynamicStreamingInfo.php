@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转自适应码流信息
+ *
  * @method array getAdaptiveDynamicStreamingSet() 获取转自适应码流信息数组。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdaptiveDynamicStreamingSet(array $AdaptiveDynamicStreamingSet) 设置转自适应码流信息数组。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *转自适应码流信息
  */
 class MediaAdaptiveDynamicStreamingInfo extends AbstractModel
 {
@@ -34,6 +32,7 @@ class MediaAdaptiveDynamicStreamingInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdaptiveDynamicStreamingSet;
+
     /**
      * @param array $AdaptiveDynamicStreamingSet 转自适应码流信息数组。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,6 +41,7 @@ class MediaAdaptiveDynamicStreamingInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

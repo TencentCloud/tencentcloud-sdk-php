@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskResult请求参数结构体
+ *
  * @method integer getTaskId() 获取异步任务ID。TaskId和DealName必填一个参数
  * @method void setTaskId(integer $TaskId) 设置异步任务ID。TaskId和DealName必填一个参数
  * @method string getDealName() 获取计费订单号。TaskId和DealName必填一个参数
  * @method void setDealName(string $DealName) 设置计费订单号。TaskId和DealName必填一个参数
- */
-
-/**
- *DescribeTaskResult请求参数结构体
  */
 class DescribeTaskResultRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeTaskResultRequest extends AbstractModel
      * @var string 计费订单号。TaskId和DealName必填一个参数
      */
     public $DealName;
+
     /**
      * @param integer $TaskId 异步任务ID。TaskId和DealName必填一个参数
      * @param string $DealName 计费订单号。TaskId和DealName必填一个参数
@@ -46,6 +45,7 @@ class DescribeTaskResultRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

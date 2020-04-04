@@ -18,6 +18,8 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 站点数据
+ *
  * @method integer getId() 获取站点ID。
  * @method void setId(integer $Id) 设置站点ID。
  * @method integer getMonitorId() 获取监控任务ID，为0时表示未加入监控任务。
@@ -86,10 +88,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContentStatus(integer $ContentStatus) 设置内容检测状态：0-未检测；1-已检测；
  * @method integer getLastScanContentNum() 获取最近一次扫描内容检测数量
  * @method void setLastScanContentNum(integer $LastScanContentNum) 设置最近一次扫描内容检测数量
- */
-
-/**
- *站点数据
  */
 class Site extends AbstractModel
 {
@@ -262,6 +260,7 @@ class Site extends AbstractModel
      * @var integer 最近一次扫描内容检测数量
      */
     public $LastScanContentNum;
+
     /**
      * @param integer $Id 站点ID。
      * @param integer $MonitorId 监控任务ID，为0时表示未加入监控任务。
@@ -302,6 +301,7 @@ class Site extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

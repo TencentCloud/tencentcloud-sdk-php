@@ -18,6 +18,8 @@ namespace TencentCloud\Npp\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 结构体，主叫呼叫预处理操作，根据不同操作确认是否呼通被叫。如需使用，本结构体需要与 keyList 结构体配合使用，此时这两个参数都为必填项
+ *
  * @method string getReadPrompt() 获取呼叫主叫以后，给主叫用户的语音提示，播放该提示时用户所有按键无效
  * @method void setReadPrompt(string $ReadPrompt) 设置呼叫主叫以后，给主叫用户的语音提示，播放该提示时用户所有按键无效
  * @method string getInterruptPrompt() 获取可中断提示，播放该提示时，用户可以按键
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyPressUrl(string $KeyPressUrl) 设置用户按键回调通知地址，如果为空不回调
  * @method string getPromptGender() 获取提示音男声女声：1女声，2男声。默认女声
  * @method void setPromptGender(string $PromptGender) 设置提示音男声女声：1女声，2男声。默认女声
- */
-
-/**
- *结构体，主叫呼叫预处理操作，根据不同操作确认是否呼通被叫。如需使用，本结构体需要与 keyList 结构体配合使用，此时这两个参数都为必填项
  */
 class RreCallerHandle extends AbstractModel
 {
@@ -66,6 +64,7 @@ class RreCallerHandle extends AbstractModel
      * @var string 提示音男声女声：1女声，2男声。默认女声
      */
     public $PromptGender;
+
     /**
      * @param string $ReadPrompt 呼叫主叫以后，给主叫用户的语音提示，播放该提示时用户所有按键无效
      * @param string $InterruptPrompt 可中断提示，播放该提示时，用户可以按键
@@ -78,6 +77,7 @@ class RreCallerHandle extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePerson请求参数结构体
+ *
  * @method string getMallId() 获取卖场编码
  * @method void setMallId(string $MallId) 设置卖场编码
  * @method integer getOffset() 获取查询偏移
  * @method void setOffset(integer $Offset) 设置查询偏移
  * @method integer getLimit() 获取查询数量，默认20，最大查询数量100
  * @method void setLimit(integer $Limit) 设置查询数量，默认20，最大查询数量100
- */
-
-/**
- *DescribePerson请求参数结构体
  */
 class DescribePersonRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribePersonRequest extends AbstractModel
      * @var integer 查询数量，默认20，最大查询数量100
      */
     public $Limit;
+
     /**
      * @param string $MallId 卖场编码
      * @param integer $Offset 查询偏移
@@ -54,6 +53,7 @@ class DescribePersonRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

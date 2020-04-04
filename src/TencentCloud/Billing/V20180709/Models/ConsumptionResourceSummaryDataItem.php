@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 消耗按资源汇总详情
+ *
  * @method string getResourceId() 获取资源ID
  * @method void setResourceId(string $ResourceId) 设置资源ID
  * @method string getResourceName() 获取资源名称
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称
  * @method string getConsumptionTypeName() 获取消耗类型
  * @method void setConsumptionTypeName(string $ConsumptionTypeName) 设置消耗类型
- */
-
-/**
- *消耗按资源汇总详情
  */
 class ConsumptionResourceSummaryDataItem extends AbstractModel
 {
@@ -115,6 +113,7 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
      * @var string 消耗类型
      */
     public $ConsumptionTypeName;
+
     /**
      * @param string $ResourceId 资源ID
      * @param string $ResourceName 资源名称
@@ -134,6 +133,7 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

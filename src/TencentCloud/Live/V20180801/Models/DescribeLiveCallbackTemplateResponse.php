@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveCallbackTemplate返回参数结构体
+ *
  * @method CallBackTemplateInfo getTemplate() 获取回调模板信息。
  * @method void setTemplate(CallBackTemplateInfo $Template) 设置回调模板信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeLiveCallbackTemplate返回参数结构体
  */
 class DescribeLiveCallbackTemplateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeLiveCallbackTemplateResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param CallBackTemplateInfo $Template 回调模板信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeLiveCallbackTemplateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

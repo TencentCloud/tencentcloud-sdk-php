@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 核身最佳帧信息
+ *
  * @method string getBestFrame() 获取活体比对最佳帧。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBestFrame(string $BestFrame) 设置活体比对最佳帧。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBestFrames(array $BestFrames) 设置自截帧。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *核身最佳帧信息
  */
 class DetectInfoBestFrame extends AbstractModel
 {
@@ -44,6 +42,7 @@ class DetectInfoBestFrame extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BestFrames;
+
     /**
      * @param string $BestFrame 活体比对最佳帧。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class DetectInfoBestFrame extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

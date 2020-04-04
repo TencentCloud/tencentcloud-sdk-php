@@ -18,16 +18,14 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TerminateInstances请求参数结构体
+ *
  * @method array getInstanceIdSet() 获取待销毁的实例ID列表。
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置待销毁的实例ID列表。
  * @method boolean getTerminateDelay() 获取是否定时销毁，默认为否。
  * @method void setTerminateDelay(boolean $TerminateDelay) 设置是否定时销毁，默认为否。
  * @method string getTerminateTime() 获取定时销毁的时间，格式形如："2019-08-05 12:01:30"，若非定时销毁，则此参数被忽略。
  * @method void setTerminateTime(string $TerminateTime) 设置定时销毁的时间，格式形如："2019-08-05 12:01:30"，若非定时销毁，则此参数被忽略。
- */
-
-/**
- *TerminateInstances请求参数结构体
  */
 class TerminateInstancesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class TerminateInstancesRequest extends AbstractModel
      * @var string 定时销毁的时间，格式形如："2019-08-05 12:01:30"，若非定时销毁，则此参数被忽略。
      */
     public $TerminateTime;
+
     /**
      * @param array $InstanceIdSet 待销毁的实例ID列表。
      * @param boolean $TerminateDelay 是否定时销毁，默认为否。
@@ -54,6 +53,7 @@ class TerminateInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

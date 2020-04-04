@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBillResourceSummary返回参数结构体
+ *
  * @method array getResourceSummarySet() 获取资源汇总列表
  * @method void setResourceSummarySet(array $ResourceSummarySet) 设置资源汇总列表
  * @method integer getTotal() 获取资源汇总列表总数
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeBillResourceSummary返回参数结构体
  */
 class DescribeBillResourceSummaryResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DescribeBillResourceSummaryResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $ResourceSummarySet 资源汇总列表
      * @param integer $Total 资源汇总列表总数
@@ -58,6 +57,7 @@ class DescribeBillResourceSummaryResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据盘挂载选项
+ *
  * @method string getLocalPath() 获取挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
  * @method void setLocalPath(string $LocalPath) 设置挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
  * @method string getFileSystemType() 获取文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
  * @method void setFileSystemType(string $FileSystemType) 设置文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
- */
-
-/**
- *数据盘挂载选项
  */
 class MountDataDisk extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MountDataDisk extends AbstractModel
      * @var string 文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
      */
     public $FileSystemType;
+
     /**
      * @param string $LocalPath 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
      * @param string $FileSystemType 文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
@@ -46,6 +45,7 @@ class MountDataDisk extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

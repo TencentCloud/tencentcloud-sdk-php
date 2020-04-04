@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 摄像头抓图人物属性
+ *
  * @method string getTempId() 获取临时id，还未生成face id时返回
  * @method void setTempId(string $TempId) 设置临时id，还未生成face id时返回
  * @method integer getFaceId() 获取人脸face id
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTime(integer $Time) 设置当次抓拍时间戳
  * @method PersonInfo getPersonInfo() 获取当前的person基本信息，图片以FacePic为准，结构体内未填
  * @method void setPersonInfo(PersonInfo $PersonInfo) 设置当前的person基本信息，图片以FacePic为准，结构体内未填
- */
-
-/**
- *摄像头抓图人物属性
  */
 class CameraPersonInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CameraPersonInfo extends AbstractModel
      * @var PersonInfo 当前的person基本信息，图片以FacePic为准，结构体内未填
      */
     public $PersonInfo;
+
     /**
      * @param string $TempId 临时id，还未生成face id时返回
      * @param integer $FaceId 人脸face id
@@ -78,6 +77,7 @@ class CameraPersonInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

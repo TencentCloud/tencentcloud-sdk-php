@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyRule请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例 ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
  * @method string getListenerId() 获取负载均衡监听器 ID
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrpcCallee(string $TrpcCallee) 设置TRPC被调服务器路由，ForwardType为TRPC时必填
  * @method string getTrpcFunc() 获取TRPC调用服务接口，ForwardType为TRPC时必填
  * @method void setTrpcFunc(string $TrpcFunc) 设置TRPC调用服务接口，ForwardType为TRPC时必填
- */
-
-/**
- *ModifyRule请求参数结构体
  */
 class ModifyRuleRequest extends AbstractModel
 {
@@ -97,6 +95,7 @@ class ModifyRuleRequest extends AbstractModel
      * @var string TRPC调用服务接口，ForwardType为TRPC时必填
      */
     public $TrpcFunc;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param string $ListenerId 负载均衡监听器 ID
@@ -114,6 +113,7 @@ class ModifyRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

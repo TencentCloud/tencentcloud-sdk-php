@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文字识别结果
+ *
  * @method string getDetectedText() 获取识别出的文本行内容
  * @method void setDetectedText(string $DetectedText) 设置识别出的文本行内容
  * @method integer getConfidence() 获取置信度 0 - 100
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdvancedInfo(string $AdvancedInfo) 设置此字段为扩展字段。
 能返回文本行的段落信息，例如：{\"Parag\":{\"ParagNo\":2}}，
 其中ParagNo为段落行，从1开始。
- */
-
-/**
- *文字识别结果
  */
 class TextGeneralHandwriting extends AbstractModel
 {
@@ -58,6 +56,7 @@ class TextGeneralHandwriting extends AbstractModel
 其中ParagNo为段落行，从1开始。
      */
     public $AdvancedInfo;
+
     /**
      * @param string $DetectedText 识别出的文本行内容
      * @param integer $Confidence 置信度 0 - 100
@@ -70,6 +69,7 @@ class TextGeneralHandwriting extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 筛选项
+ *
  * @method string getName() 获取名称
  * @method void setName(string $Name) 设置名称
  * @method array getValues() 获取取值
  * @method void setValues(array $Values) 设置取值
- */
-
-/**
- *筛选项
  */
 class Filter extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Filter extends AbstractModel
      * @var array 取值
      */
     public $Values;
+
     /**
      * @param string $Name 名称
      * @param array $Values 取值
@@ -46,6 +45,7 @@ class Filter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

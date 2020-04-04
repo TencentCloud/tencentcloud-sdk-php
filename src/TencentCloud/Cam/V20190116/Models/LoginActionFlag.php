@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 登录和敏感操作flag
+ *
  * @method integer getPhone() 获取手机
  * @method void setPhone(integer $Phone) 设置手机
  * @method integer getToken() 获取硬token
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWechat(integer $Wechat) 设置微信
  * @method integer getCustom() 获取自定义
  * @method void setCustom(integer $Custom) 设置自定义
- */
-
-/**
- *登录和敏感操作flag
  */
 class LoginActionFlag extends AbstractModel
 {
@@ -59,6 +57,7 @@ class LoginActionFlag extends AbstractModel
      * @var integer 自定义
      */
     public $Custom;
+
     /**
      * @param integer $Phone 手机
      * @param integer $Token 硬token
@@ -70,6 +69,7 @@ class LoginActionFlag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

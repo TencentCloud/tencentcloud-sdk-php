@@ -18,16 +18,14 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 插件信息
+ *
  * @method integer getPluginType() 获取插件类型，分别为 1-通知栏广告，2-积分墙广告，3-banner广告，4- 悬浮窗图标广告，5-精品推荐列表广告, 6-插播广告
  * @method void setPluginType(integer $PluginType) 设置插件类型，分别为 1-通知栏广告，2-积分墙广告，3-banner广告，4- 悬浮窗图标广告，5-精品推荐列表广告, 6-插播广告
  * @method string getPluginName() 获取插件名称
  * @method void setPluginName(string $PluginName) 设置插件名称
  * @method string getPluginDesc() 获取插件描述
  * @method void setPluginDesc(string $PluginDesc) 设置插件描述
- */
-
-/**
- *插件信息
  */
 class PluginInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class PluginInfo extends AbstractModel
      * @var string 插件描述
      */
     public $PluginDesc;
+
     /**
      * @param integer $PluginType 插件类型，分别为 1-通知栏广告，2-积分墙广告，3-banner广告，4- 悬浮窗图标广告，5-精品推荐列表广告, 6-插播广告
      * @param string $PluginName 插件名称
@@ -54,6 +53,7 @@ class PluginInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

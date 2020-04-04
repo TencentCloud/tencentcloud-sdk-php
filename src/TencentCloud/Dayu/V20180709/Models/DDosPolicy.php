@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DDoS高级策略
+ *
  * @method array getResources() 获取策略绑定的资源
  * @method void setResources(array $Resources) 设置策略绑定的资源
  * @method DDoSPolicyDropOption getDropOptions() 获取禁用协议
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSceneId(string $SceneId) 设置策略所属的策略场景
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DDoS高级策略
  */
 class DDosPolicy extends AbstractModel
 {
@@ -114,6 +112,7 @@ class DDosPolicy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SceneId;
+
     /**
      * @param array $Resources 策略绑定的资源
      * @param DDoSPolicyDropOption $DropOptions 禁用协议
@@ -134,6 +133,7 @@ class DDosPolicy extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

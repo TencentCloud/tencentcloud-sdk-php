@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音全文识别的输入。
+ *
  * @method integer getDefinition() 获取语音全文识别模板 ID。
  * @method void setDefinition(integer $Definition) 设置语音全文识别模板 ID。
- */
-
-/**
- *语音全文识别的输入。
  */
 class AiRecognitionTaskAsrFullTextResultInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskAsrFullTextResultInput extends AbstractModel
      * @var integer 语音全文识别模板 ID。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 语音全文识别模板 ID。
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskAsrFullTextResultInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

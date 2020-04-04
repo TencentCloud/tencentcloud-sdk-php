@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 产品转发消息队列配置
+ *
  * @method integer getMsgQueueType() 获取消息队列类型 1：CMQ 2：kafka
  * @method void setMsgQueueType(integer $MsgQueueType) 设置消息队列类型 1：CMQ 2：kafka
  * @method string getMsgType() 获取消息类型列表，整型值（0-31）之间以“,”分隔
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstance(string $Instance) 设置实例名称
  * @method string getMsgRegion() 获取消息地域
  * @method void setMsgRegion(string $MsgRegion) 设置消息地域
- */
-
-/**
- *产品转发消息队列配置
  */
 class MsgQueueData extends AbstractModel
 {
@@ -59,6 +57,7 @@ class MsgQueueData extends AbstractModel
      * @var string 消息地域
      */
     public $MsgRegion;
+
     /**
      * @param integer $MsgQueueType 消息队列类型 1：CMQ 2：kafka
      * @param string $MsgType 消息类型列表，整型值（0-31）之间以“,”分隔
@@ -70,6 +69,7 @@ class MsgQueueData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSites请求参数结构体
+ *
  * @method array getUrls() 获取站点的url列表
  * @method void setUrls(array $Urls) 设置站点的url列表
  * @method string getUserAgent() 获取访问网站的客户端标识
  * @method void setUserAgent(string $UserAgent) 设置访问网站的客户端标识
- */
-
-/**
- *CreateSites请求参数结构体
  */
 class CreateSitesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateSitesRequest extends AbstractModel
      * @var string 访问网站的客户端标识
      */
     public $UserAgent;
+
     /**
      * @param array $Urls 站点的url列表
      * @param string $UserAgent 访问网站的客户端标识
@@ -46,6 +45,7 @@ class CreateSitesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

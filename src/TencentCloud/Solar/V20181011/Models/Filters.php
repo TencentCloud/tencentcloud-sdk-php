@@ -18,16 +18,14 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 可见范围过滤参数
+ *
  * @method integer getType() 获取过滤类型, 0: 默认(可见部门+自创) 1: 自创 2: 指定部门(部门在可见范围内)
  * @method void setType(integer $Type) 设置过滤类型, 0: 默认(可见部门+自创) 1: 自创 2: 指定部门(部门在可见范围内)
  * @method array getDeptIds() 获取指定部门Id, 类型2使用
  * @method void setDeptIds(array $DeptIds) 设置指定部门Id, 类型2使用
  * @method array getUserIds() 获取用户Id列表
  * @method void setUserIds(array $UserIds) 设置用户Id列表
- */
-
-/**
- *可见范围过滤参数
  */
 class Filters extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Filters extends AbstractModel
      * @var array 用户Id列表
      */
     public $UserIds;
+
     /**
      * @param integer $Type 过滤类型, 0: 默认(可见部门+自创) 1: 自创 2: 指定部门(部门在可见范围内)
      * @param array $DeptIds 指定部门Id, 类型2使用
@@ -54,6 +53,7 @@ class Filters extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

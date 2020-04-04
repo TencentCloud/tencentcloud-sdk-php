@@ -18,14 +18,12 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 性别画像元素
+ *
  * @method string getGender() 获取性别
  * @method void setGender(string $Gender) 设置性别
  * @method integer getPercent() 获取百分比
  * @method void setPercent(integer $Percent) 设置百分比
- */
-
-/**
- *性别画像元素
  */
 class GenderPortrait extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GenderPortrait extends AbstractModel
      * @var integer 百分比
      */
     public $Percent;
+
     /**
      * @param string $Gender 性别
      * @param integer $Percent 百分比
@@ -46,6 +45,7 @@ class GenderPortrait extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

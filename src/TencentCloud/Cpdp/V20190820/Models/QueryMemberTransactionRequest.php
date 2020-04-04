@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * QueryMemberTransaction请求参数结构体
+ *
  * @method string getMrchCode() 获取String(22)，商户号（签约客户号）
  * @method void setMrchCode(string $MrchCode) 设置String(22)，商户号（签约客户号）
  * @method string getFunctionFlag() 获取STRING(2)，功能标志（1: 下单预支付; 2: 确认并付款; 3: 退款; 6: 直接支付T+1; 9: 直接支付T+0）
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域（若需短信验证码则此项必输短信指令号）
  * @method string getWebSign() 获取STRING(300)，网银签名（若需短信验证码则此项必输）
  * @method void setWebSign(string $WebSign) 设置STRING(300)，网银签名（若需短信验证码则此项必输）
- */
-
-/**
- *QueryMemberTransaction请求参数结构体
  */
 class QueryMemberTransactionRequest extends AbstractModel
 {
@@ -143,6 +141,7 @@ class QueryMemberTransactionRequest extends AbstractModel
      * @var string STRING(300)，网银签名（若需短信验证码则此项必输）
      */
     public $WebSign;
+
     /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $FunctionFlag STRING(2)，功能标志（1: 下单预支付; 2: 确认并付款; 3: 退款; 6: 直接支付T+1; 9: 直接支付T+0）
@@ -166,6 +165,7 @@ class QueryMemberTransactionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

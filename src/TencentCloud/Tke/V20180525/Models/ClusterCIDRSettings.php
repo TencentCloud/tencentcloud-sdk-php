@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 集群容器网络相关参数
+ *
  * @method string getClusterCIDR() 获取用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
  * @method void setClusterCIDR(string $ClusterCIDR) 设置用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
  * @method boolean getIgnoreClusterCIDRConflict() 获取是否忽略 ClusterCIDR 冲突错误, 默认不忽略
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEniSubnetIds(array $EniSubnetIds) 设置VPC-CNI网络模式下，弹性网卡的子网Id。
  * @method integer getClaimExpiredSeconds() 获取VPC-CNI网络模式下，弹性网卡IP的回收时间，取值范围[300,15768000)
  * @method void setClaimExpiredSeconds(integer $ClaimExpiredSeconds) 设置VPC-CNI网络模式下，弹性网卡IP的回收时间，取值范围[300,15768000)
- */
-
-/**
- *集群容器网络相关参数
  */
 class ClusterCIDRSettings extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ClusterCIDRSettings extends AbstractModel
      * @var integer VPC-CNI网络模式下，弹性网卡IP的回收时间，取值范围[300,15768000)
      */
     public $ClaimExpiredSeconds;
+
     /**
      * @param string $ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
      * @param boolean $IgnoreClusterCIDRConflict 是否忽略 ClusterCIDR 冲突错误, 默认不忽略
@@ -86,6 +85,7 @@ class ClusterCIDRSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实时录制白板参数，例如白板宽高等
+ *
  * @method integer getWidth() 获取实时录制结果里白板视频宽，默认为1280
  * @method void setWidth(integer $Width) 设置实时录制结果里白板视频宽，默认为1280
  * @method integer getHeight() 获取实时录制结果里白板视频高，默认为960
  * @method void setHeight(integer $Height) 设置实时录制结果里白板视频高，默认为960
  * @method string getInitParam() 获取白板初始化参数，透传到白板 SDK
  * @method void setInitParam(string $InitParam) 设置白板初始化参数，透传到白板 SDK
- */
-
-/**
- *实时录制白板参数，例如白板宽高等
  */
 class Whiteboard extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Whiteboard extends AbstractModel
      * @var string 白板初始化参数，透传到白板 SDK
      */
     public $InitParam;
+
     /**
      * @param integer $Width 实时录制结果里白板视频宽，默认为1280
      * @param integer $Height 实时录制结果里白板视频高，默认为960
@@ -54,6 +53,7 @@ class Whiteboard extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

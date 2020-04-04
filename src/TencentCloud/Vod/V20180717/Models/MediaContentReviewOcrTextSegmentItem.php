@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内容审核 Ocr 文字审核嫌疑片段
+ *
  * @method float getStartTimeOffset() 获取嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置嫌疑片段起始的偏移时间，单位：秒。
@@ -54,10 +56,6 @@ PicUrlExpireTime 时间点后图片将被删除）。
 PicUrlExpireTime 时间点后图片将被删除）。
  * @method string getPicUrlExpireTime() 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setPicUrlExpireTime(string $PicUrlExpireTime) 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- */
-
-/**
- *内容审核 Ocr 文字审核嫌疑片段
  */
 class MediaContentReviewOcrTextSegmentItem extends AbstractModel
 {
@@ -110,6 +108,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
      * @var string 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $PicUrlExpireTime;
+
     /**
      * @param float $StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -134,6 +133,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

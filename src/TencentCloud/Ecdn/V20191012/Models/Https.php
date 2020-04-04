@@ -18,6 +18,8 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 域名https配置。
+ *
  * @method string getSwitch() 获取https配置开关，on或off。开启https配置的域名在部署中状态，开关保持off。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitch(string $Switch) 设置https配置开关，on或off。开启https配置的域名在部署中状态，开关保持off。
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSslStatus(string $SslStatus) 设置https证书部署状态，closed，deploying，deployed，failed分别表示已关闭，部署中，部署成功，部署失败。不可作为入参使用。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *域名https配置。
  */
 class Https extends AbstractModel
 {
@@ -104,6 +102,7 @@ class Https extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SslStatus;
+
     /**
      * @param string $Switch https配置开关，on或off。开启https配置的域名在部署中状态，开关保持off。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -126,6 +125,7 @@ class Https extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

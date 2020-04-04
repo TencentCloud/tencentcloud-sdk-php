@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 推流时间
+ *
  * @method string getPublishTime() 获取推流时间
 UTC 格式，例如：2018-06-29T19:00:00Z。
  * @method void setPublishTime(string $PublishTime) 设置推流时间
 UTC 格式，例如：2018-06-29T19:00:00Z。
- */
-
-/**
- *推流时间
  */
 class PublishTime extends AbstractModel
 {
@@ -34,6 +32,7 @@ class PublishTime extends AbstractModel
 UTC 格式，例如：2018-06-29T19:00:00Z。
      */
     public $PublishTime;
+
     /**
      * @param string $PublishTime 推流时间
 UTC 格式，例如：2018-06-29T19:00:00Z。
@@ -42,6 +41,7 @@ UTC 格式，例如：2018-06-29T19:00:00Z。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

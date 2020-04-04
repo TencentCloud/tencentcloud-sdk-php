@@ -18,6 +18,8 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 玩家延迟信息
+ *
  * @method string getPlayerId() 获取玩家Id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlayerId(string $PlayerId) 设置玩家Id
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLatencyInMilliseconds() 获取毫秒级延迟
  * @method void setLatencyInMilliseconds(integer $LatencyInMilliseconds) 设置毫秒级延迟
- */
-
-/**
- *玩家延迟信息
  */
 class PlayerLatency extends AbstractModel
 {
@@ -51,6 +49,7 @@ class PlayerLatency extends AbstractModel
      * @var integer 毫秒级延迟
      */
     public $LatencyInMilliseconds;
+
     /**
      * @param string $PlayerId 玩家Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -62,6 +61,7 @@ class PlayerLatency extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

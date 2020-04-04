@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 集群详细信息
+ *
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
  * @method string getClusterId() 获取集群ID
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldPasswordExpireTime(string $OldPasswordExpireTime) 设置如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *集群详细信息
  */
 class ClusterInfo extends AbstractModel
 {
@@ -125,6 +123,7 @@ class ClusterInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldPasswordExpireTime;
+
     /**
      * @param string $ClusterName 集群名称
      * @param string $ClusterId 集群ID
@@ -146,6 +145,7 @@ class ClusterInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

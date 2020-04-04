@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDCDBInstance请求参数结构体
+ *
  * @method array getZones() 获取分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
  * @method void setZones(array $Zones) 设置分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
  * @method integer getPeriod() 获取欲购买的时长，单位：月。
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组id
  * @method string getInstanceName() 获取实例名称， 可以通过该字段自主的设置实例的名字
  * @method void setInstanceName(string $InstanceName) 设置实例名称， 可以通过该字段自主的设置实例的名字
- */
-
-/**
- *CreateDCDBInstance请求参数结构体
  */
 class CreateDCDBInstanceRequest extends AbstractModel
 {
@@ -150,6 +148,7 @@ class CreateDCDBInstanceRequest extends AbstractModel
      * @var string 实例名称， 可以通过该字段自主的设置实例的名字
      */
     public $InstanceName;
+
     /**
      * @param array $Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
      * @param integer $Period 欲购买的时长，单位：月。
@@ -178,6 +177,7 @@ class CreateDCDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

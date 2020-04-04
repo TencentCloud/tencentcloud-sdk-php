@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转码模板详情
+ *
  * @method string getDefinition() 获取转码模板唯一标识。
  * @method void setDefinition(string $Definition) 设置转码模板唯一标识。
  * @method string getContainer() 获取封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
@@ -70,10 +72,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- */
-
-/**
- *转码模板详情
  */
 class TranscodeTemplate extends AbstractModel
 {
@@ -154,6 +152,7 @@ class TranscodeTemplate extends AbstractModel
      * @var string 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $UpdateTime;
+
     /**
      * @param string $Definition 转码模板唯一标识。
      * @param string $Container 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
@@ -186,6 +185,7 @@ class TranscodeTemplate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

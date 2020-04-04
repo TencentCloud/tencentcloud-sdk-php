@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddSmsTemplate请求参数结构体
+ *
  * @method string getTemplateName() 获取模板名称。
  * @method void setTemplateName(string $TemplateName) 设置模板名称。
  * @method string getTemplateContent() 获取模板内容。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 1：表示国际/港澳台短信。
  * @method string getRemark() 获取模板备注，例如申请原因，使用场景等。
  * @method void setRemark(string $Remark) 设置模板备注，例如申请原因，使用场景等。
- */
-
-/**
- *AddSmsTemplate请求参数结构体
  */
 class AddSmsTemplateRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ class AddSmsTemplateRequest extends AbstractModel
      * @var string 模板备注，例如申请原因，使用场景等。
      */
     public $Remark;
+
     /**
      * @param string $TemplateName 模板名称。
      * @param string $TemplateContent 模板内容。
@@ -78,6 +77,7 @@ class AddSmsTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

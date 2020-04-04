@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDDoSAlarmThreshold请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP专业版）
  * @method string getRsId() 获取资源ID,字符串类型
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmThreshold(integer $AlarmThreshold) 设置告警阈值，大于0（目前暂定的值）
  * @method array getIpList() 获取资源关联的IP列表，高防包未绑定时，传空数组，高防IP专业版传多个IP的数据
  * @method void setIpList(array $IpList) 设置资源关联的IP列表，高防包未绑定时，传空数组，高防IP专业版传多个IP的数据
- */
-
-/**
- *ModifyDDoSAlarmThreshold请求参数结构体
  */
 class ModifyDDoSAlarmThresholdRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyDDoSAlarmThresholdRequest extends AbstractModel
      * @var array 资源关联的IP列表，高防包未绑定时，传空数组，高防IP专业版传多个IP的数据
      */
     public $IpList;
+
     /**
      * @param string $Business 大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP专业版）
      * @param string $RsId 资源ID,字符串类型
@@ -70,6 +69,7 @@ class ModifyDDoSAlarmThresholdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

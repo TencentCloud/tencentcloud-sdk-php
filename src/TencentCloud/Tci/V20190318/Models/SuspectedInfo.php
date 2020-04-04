@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 疑似出席人员
+ *
  * @method array getFaceSet() 获取TopN匹配信息列表
  * @method void setFaceSet(array $FaceSet) 设置TopN匹配信息列表
  * @method string getPersonId() 获取识别到的人员id
  * @method void setPersonId(string $PersonId) 设置识别到的人员id
- */
-
-/**
- *疑似出席人员
  */
 class SuspectedInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SuspectedInfo extends AbstractModel
      * @var string 识别到的人员id
      */
     public $PersonId;
+
     /**
      * @param array $FaceSet TopN匹配信息列表
      * @param string $PersonId 识别到的人员id
@@ -46,6 +45,7 @@ class SuspectedInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

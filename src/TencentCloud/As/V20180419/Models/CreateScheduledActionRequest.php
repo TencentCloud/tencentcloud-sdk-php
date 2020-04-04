@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateScheduledAction请求参数结构体
+ *
  * @method string getAutoScalingGroupId() 获取伸缩组ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
  * @method string getScheduledActionName() 获取定时任务名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。同一伸缩组下必须唯一。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置定时任务的结束时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br><br>此参数与`Recurrence`需要同时指定，到达结束时间之后，定时任务将不再生效。
  * @method string getRecurrence() 获取定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
  * @method void setRecurrence(string $Recurrence) 设置定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
- */
-
-/**
- *CreateScheduledAction请求参数结构体
  */
 class CreateScheduledActionRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CreateScheduledActionRequest extends AbstractModel
      * @var string 定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
      */
     public $Recurrence;
+
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $ScheduledActionName 定时任务名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。同一伸缩组下必须唯一。
@@ -94,6 +93,7 @@ class CreateScheduledActionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

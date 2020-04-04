@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetFlag请求参数结构体
+ *
  * @method integer getOpUin() 获取设置用户的uin
  * @method void setOpUin(integer $OpUin) 设置设置用户的uin
  * @method LoginActionFlag getLoginFlag() 获取登录设置
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffsiteFlag(OffsiteFlag $OffsiteFlag) 设置异地登录设置
  * @method integer getNeedResetMfa() 获取是否需要充值mfa
  * @method void setNeedResetMfa(integer $NeedResetMfa) 设置是否需要充值mfa
- */
-
-/**
- *SetFlag请求参数结构体
  */
 class SetFlagRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class SetFlagRequest extends AbstractModel
      * @var integer 是否需要充值mfa
      */
     public $NeedResetMfa;
+
     /**
      * @param integer $OpUin 设置用户的uin
      * @param LoginActionFlag $LoginFlag 登录设置
@@ -70,6 +69,7 @@ class SetFlagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

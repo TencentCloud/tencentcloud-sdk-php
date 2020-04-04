@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetClusterSummary返回参数结构体
+ *
  * @method integer getTotalChannelCount() 获取网络通道总数量
  * @method void setTotalChannelCount(integer $TotalChannelCount) 设置网络通道总数量
  * @method integer getMyChannelCount() 获取当前组织创建的通道数量
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientCertCount(integer $ClientCertCount) 设置当前组织业务证书数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetClusterSummary返回参数结构体
  */
 class GetClusterSummaryResponse extends AbstractModel
 {
@@ -136,6 +134,7 @@ class GetClusterSummaryResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalChannelCount 网络通道总数量
      * @param integer $MyChannelCount 当前组织创建的通道数量
@@ -158,6 +157,7 @@ class GetClusterSummaryResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

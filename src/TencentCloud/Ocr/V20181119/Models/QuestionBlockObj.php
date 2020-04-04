@@ -18,12 +18,10 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数学试题识别结构化对象
+ *
  * @method array getQuestionArr() 获取数学试题识别结构化信息数组
  * @method void setQuestionArr(array $QuestionArr) 设置数学试题识别结构化信息数组
- */
-
-/**
- *数学试题识别结构化对象
  */
 class QuestionBlockObj extends AbstractModel
 {
@@ -31,6 +29,7 @@ class QuestionBlockObj extends AbstractModel
      * @var array 数学试题识别结构化信息数组
      */
     public $QuestionArr;
+
     /**
      * @param array $QuestionArr 数学试题识别结构化信息数组
      */
@@ -38,6 +37,7 @@ class QuestionBlockObj extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

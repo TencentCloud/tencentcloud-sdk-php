@@ -18,16 +18,14 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 死信队列参数
+ *
  * @method string getType() 获取死信队列模式
  * @method void setType(string $Type) 设置死信队列模式
  * @method string getName() 获取死信队列名称
  * @method void setName(string $Name) 设置死信队列名称
  * @method string getFilterType() 获取死信队列主题模式的标签形式
  * @method void setFilterType(string $FilterType) 设置死信队列主题模式的标签形式
- */
-
-/**
- *死信队列参数
  */
 class DeadLetterConfig extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeadLetterConfig extends AbstractModel
      * @var string 死信队列主题模式的标签形式
      */
     public $FilterType;
+
     /**
      * @param string $Type 死信队列模式
      * @param string $Name 死信队列名称
@@ -54,6 +53,7 @@ class DeadLetterConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

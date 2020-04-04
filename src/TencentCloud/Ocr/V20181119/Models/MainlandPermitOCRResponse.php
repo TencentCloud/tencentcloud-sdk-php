@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MainlandPermitOCR返回参数结构体
+ *
  * @method string getName() 获取中文姓名
  * @method void setName(string $Name) 设置中文姓名
  * @method string getEnglishName() 获取英文姓名
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProfile(string $Profile) 设置RetProfile为True时返回头像字段， Base64编码
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *MainlandPermitOCR返回参数结构体
  */
 class MainlandPermitOCRResponse extends AbstractModel
 {
@@ -108,6 +106,7 @@ class MainlandPermitOCRResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Name 中文姓名
      * @param string $EnglishName 英文姓名
@@ -126,6 +125,7 @@ class MainlandPermitOCRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

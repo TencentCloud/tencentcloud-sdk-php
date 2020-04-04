@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeConfigs请求参数结构体
+ *
  * @method string getApplicationId() 获取应用ID，不传入时查询全量
  * @method void setApplicationId(string $ApplicationId) 设置应用ID，不传入时查询全量
  * @method string getConfigId() 获取配置项ID，不传入时查询全量，高优先级
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfigName(string $ConfigName) 设置配置项名称，精确查询，不传入时查询全量
  * @method string getConfigVersion() 获取配置项版本，精确查询，不传入时查询全量
  * @method void setConfigVersion(string $ConfigVersion) 设置配置项版本，精确查询，不传入时查询全量
- */
-
-/**
- *DescribeConfigs请求参数结构体
  */
 class DescribeConfigsRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeConfigsRequest extends AbstractModel
      * @var string 配置项版本，精确查询，不传入时查询全量
      */
     public $ConfigVersion;
+
     /**
      * @param string $ApplicationId 应用ID，不传入时查询全量
      * @param string $ConfigId 配置项ID，不传入时查询全量，高优先级
@@ -86,6 +85,7 @@ class DescribeConfigsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

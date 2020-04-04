@@ -18,14 +18,12 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 自定义键值对
+ *
  * @method string getName() 获取自定义键
  * @method void setName(string $Name) 设置自定义键
  * @method string getValue() 获取自定义值
  * @method void setValue(string $Value) 设置自定义值
- */
-
-/**
- *自定义键值对
  */
 class EventVar extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EventVar extends AbstractModel
      * @var string 自定义值
      */
     public $Value;
+
     /**
      * @param string $Name 自定义键
      * @param string $Value 自定义值
@@ -46,6 +45,7 @@ class EventVar extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

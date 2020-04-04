@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 标签相关服务器信息
+ *
  * @method string getId() 获取ID
  * @method void setId(string $Id) 设置ID
  * @method string getQuuid() 获取主机ID
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineRegion(string $MachineRegion) 设置主机区域
  * @method string getMachineType() 获取主机区域类型
  * @method void setMachineType(string $MachineType) 设置主机区域类型
- */
-
-/**
- *标签相关服务器信息
  */
 class TagMachine extends AbstractModel
 {
@@ -73,6 +71,7 @@ class TagMachine extends AbstractModel
      * @var string 主机区域类型
      */
     public $MachineType;
+
     /**
      * @param string $Id ID
      * @param string $Quuid 主机ID
@@ -86,6 +85,7 @@ class TagMachine extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

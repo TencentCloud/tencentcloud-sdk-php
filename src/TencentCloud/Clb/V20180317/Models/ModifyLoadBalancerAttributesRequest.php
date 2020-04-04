@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLoadBalancerAttributes请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡的唯一ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡的唯一ID
  * @method string getLoadBalancerName() 获取负载均衡实例名称
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) 设置Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
  * @method boolean getSnatPro() 获取是否开启SnatPro
  * @method void setSnatPro(boolean $SnatPro) 设置是否开启SnatPro
- */
-
-/**
- *ModifyLoadBalancerAttributes请求参数结构体
  */
 class ModifyLoadBalancerAttributesRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
      * @var boolean 是否开启SnatPro
      */
     public $SnatPro;
+
     /**
      * @param string $LoadBalancerId 负载均衡的唯一ID
      * @param string $LoadBalancerName 负载均衡实例名称
@@ -78,6 +77,7 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

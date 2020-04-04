@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 时间戳防盗链配置
+ *
  * @method string getSwitch() 获取防盗链配置开关
 on：开启
 off：关闭
@@ -42,10 +44,6 @@ off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTypeD(AuthenticationTypeD $TypeD) 设置时间戳防盗链模式 D 配置
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *时间戳防盗链配置
  */
 class Authentication extends AbstractModel
 {
@@ -80,6 +78,7 @@ off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TypeD;
+
     /**
      * @param string $Switch 防盗链配置开关
 on：开启
@@ -98,6 +97,7 @@ off：关闭
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

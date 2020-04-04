@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CompareIdlFiles返回参数结构体
+ *
  * @method array getIdlFiles() 获取本次上传校验所有的IDL文件信息列表
  * @method void setIdlFiles(array $IdlFiles) 设置本次上传校验所有的IDL文件信息列表
  * @method integer getTotalCount() 获取本次校验合法的表格数量
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableInfos(array $TableInfos) 设置读取IDL描述文件后,根据用户指示的所选中表格解析校验结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CompareIdlFiles返回参数结构体
  */
 class CompareIdlFilesResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CompareIdlFilesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $IdlFiles 本次上传校验所有的IDL文件信息列表
      * @param integer $TotalCount 本次校验合法的表格数量
@@ -62,6 +61,7 @@ class CompareIdlFilesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

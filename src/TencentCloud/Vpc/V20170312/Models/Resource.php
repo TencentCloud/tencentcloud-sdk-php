@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述带宽包资源信息的结构
+ *
  * @method string getResourceType() 获取带宽包资源类型，包括'Address'和'LoadBalance'
  * @method void setResourceType(string $ResourceType) 设置带宽包资源类型，包括'Address'和'LoadBalance'
  * @method string getResourceId() 获取带宽包资源Id，形如'eip-xxxx', 'lb-xxxx'
  * @method void setResourceId(string $ResourceId) 设置带宽包资源Id，形如'eip-xxxx', 'lb-xxxx'
  * @method string getAddressIp() 获取带宽包资源Ip
  * @method void setAddressIp(string $AddressIp) 设置带宽包资源Ip
- */
-
-/**
- *描述带宽包资源信息的结构
  */
 class Resource extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Resource extends AbstractModel
      * @var string 带宽包资源Ip
      */
     public $AddressIp;
+
     /**
      * @param string $ResourceType 带宽包资源类型，包括'Address'和'LoadBalance'
      * @param string $ResourceId 带宽包资源Id，形如'eip-xxxx', 'lb-xxxx'
@@ -54,6 +53,7 @@ class Resource extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

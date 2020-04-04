@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例参数信息
+ *
  * @method string getName() 获取参数名
  * @method void setName(string $Name) 设置参数名
  * @method string getValue() 获取参数值
  * @method void setValue(string $Value) 设置参数值
- */
-
-/**
- *实例参数信息
  */
 class ParamInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ParamInfo extends AbstractModel
      * @var string 参数值
      */
     public $Value;
+
     /**
      * @param string $Name 参数名
      * @param string $Value 参数值
@@ -46,6 +45,7 @@ class ParamInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

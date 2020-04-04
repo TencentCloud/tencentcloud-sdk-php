@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateBasicDDoSAlarmThreshold请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（basic表示DDoS基础防护）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（basic表示DDoS基础防护）
  * @method string getMethod() 获取=get表示读取告警阈值；=set表示设置告警阈值；
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmType(integer $AlarmType) 设置可选，告警阈值类型，1-入流量，2-清洗流量；当Method为set时必须填写；
  * @method integer getAlarmThreshold() 获取可选，告警阈值，当Method为set时必须填写；当设置阈值为0时表示清除告警阈值配置；
  * @method void setAlarmThreshold(integer $AlarmThreshold) 设置可选，告警阈值，当Method为set时必须填写；当设置阈值为0时表示清除告警阈值配置；
- */
-
-/**
- *CreateBasicDDoSAlarmThreshold请求参数结构体
  */
 class CreateBasicDDoSAlarmThresholdRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateBasicDDoSAlarmThresholdRequest extends AbstractModel
      * @var integer 可选，告警阈值，当Method为set时必须填写；当设置阈值为0时表示清除告警阈值配置；
      */
     public $AlarmThreshold;
+
     /**
      * @param string $Business 大禹子产品代号（basic表示DDoS基础防护）
      * @param string $Method =get表示读取告警阈值；=set表示设置告警阈值；
@@ -62,6 +61,7 @@ class CreateBasicDDoSAlarmThresholdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

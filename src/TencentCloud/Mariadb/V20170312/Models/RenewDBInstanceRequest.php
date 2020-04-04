@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RenewDBInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取待续费的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置待续费的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method integer getPeriod() 获取续费时长，单位：月。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动使用代金券进行支付，默认不使用。
  * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券。
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券。
- */
-
-/**
- *RenewDBInstance请求参数结构体
  */
 class RenewDBInstanceRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RenewDBInstanceRequest extends AbstractModel
      * @var array 代金券ID列表，目前仅支持指定一张代金券。
      */
     public $VoucherIds;
+
     /**
      * @param string $InstanceId 待续费的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param integer $Period 续费时长，单位：月。
@@ -62,6 +61,7 @@ class RenewDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

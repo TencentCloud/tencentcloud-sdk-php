@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRoGroups请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv或者cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv或者cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
- */
-
-/**
- *DescribeRoGroups请求参数结构体
  */
 class DescribeRoGroupsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeRoGroupsRequest extends AbstractModel
      * @var string 实例ID，格式如：cdb-c1nl9rpv或者cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv或者cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
      */
@@ -38,6 +37,7 @@ class DescribeRoGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

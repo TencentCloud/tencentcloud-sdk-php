@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 输出的媒体文件信息。
+ *
  * @method string getFileName() 获取文件名称，最长 64 个字符。
  * @method void setFileName(string $FileName) 设置文件名称，最长 64 个字符。
  * @method string getDescription() 获取描述信息，最长 128 个字符。
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
 <li>0：保留</li>
 <li>1：去除</li>
 默认值：0。
- */
-
-/**
- *输出的媒体文件信息。
  */
 class ComposeMediaOutput extends AbstractModel
 {
@@ -114,6 +112,7 @@ class ComposeMediaOutput extends AbstractModel
 默认值：0。
      */
     public $RemoveAudio;
+
     /**
      * @param string $FileName 文件名称，最长 64 个字符。
      * @param string $Description 描述信息，最长 128 个字符。
@@ -138,6 +137,7 @@ class ComposeMediaOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

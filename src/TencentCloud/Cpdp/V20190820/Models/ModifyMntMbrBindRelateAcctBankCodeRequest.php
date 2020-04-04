@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyMntMbrBindRelateAcctBankCode请求参数结构体
+ *
  * @method string getMrchCode() 获取String(22)，商户号（签约客户号）
  * @method void setMrchCode(string $MrchCode) 设置String(22)，商户号（签约客户号）
  * @method string getSubAcctNo() 获取STRING(50)，见证子账户的账号
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEiconBankBranchId(string $EiconBankBranchId) 设置STRING(20)，超级网银行号
  * @method string getReservedMsg() 获取STRING(1027)，保留域
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
- */
-
-/**
- *ModifyMntMbrBindRelateAcctBankCode请求参数结构体
  */
 class ModifyMntMbrBindRelateAcctBankCodeRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifyMntMbrBindRelateAcctBankCodeRequest extends AbstractModel
      * @var string STRING(1027)，保留域
      */
     public $ReservedMsg;
+
     /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $SubAcctNo STRING(50)，见证子账户的账号
@@ -86,6 +85,7 @@ class ModifyMntMbrBindRelateAcctBankCodeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

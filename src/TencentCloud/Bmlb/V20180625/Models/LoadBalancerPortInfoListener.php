@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取黑石负载均衡端口相关信息时返回的监听器信息（四层和七层）。
+ *
  * @method string getListenerId() 获取负载均衡监听器ID。
  * @method void setListenerId(string $ListenerId) 设置负载均衡监听器ID。
  * @method string getListenerName() 获取监听器名称。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
  * @method integer getPort() 获取与监听器绑定的主机端口。
  * @method void setPort(integer $Port) 设置与监听器绑定的主机端口。
- */
-
-/**
- *获取黑石负载均衡端口相关信息时返回的监听器信息（四层和七层）。
  */
 class LoadBalancerPortInfoListener extends AbstractModel
 {
@@ -73,6 +71,7 @@ class LoadBalancerPortInfoListener extends AbstractModel
      * @var integer 与监听器绑定的主机端口。
      */
     public $Port;
+
     /**
      * @param string $ListenerId 负载均衡监听器ID。
      * @param string $ListenerName 监听器名称。
@@ -86,6 +85,7 @@ class LoadBalancerPortInfoListener extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

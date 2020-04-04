@@ -18,14 +18,12 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyClusterName请求参数结构体
+ *
  * @method string getClusterId() 获取需要修改名称的集群ID
  * @method void setClusterId(string $ClusterId) 设置需要修改名称的集群ID
  * @method string getClusterName() 获取需要修改的集群名称，可使用中文或英文字符，最大长度32个字符
  * @method void setClusterName(string $ClusterName) 设置需要修改的集群名称，可使用中文或英文字符，最大长度32个字符
- */
-
-/**
- *ModifyClusterName请求参数结构体
  */
 class ModifyClusterNameRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyClusterNameRequest extends AbstractModel
      * @var string 需要修改的集群名称，可使用中文或英文字符，最大长度32个字符
      */
     public $ClusterName;
+
     /**
      * @param string $ClusterId 需要修改名称的集群ID
      * @param string $ClusterName 需要修改的集群名称，可使用中文或英文字符，最大长度32个字符
@@ -46,6 +45,7 @@ class ModifyClusterNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Drm加密对象输出参数
+ *
  * @method string getType() 获取内容类型。例:video，audio，mpd，m3u8
  * @method void setType(string $Type) 设置内容类型。例:video，audio，mpd，m3u8
  * @method string getLanguage() 获取语言,例: en, zh-cn
  * @method void setLanguage(string $Language) 设置语言,例: en, zh-cn
- */
-
-/**
- *Drm加密对象输出参数
  */
 class DrmOutputPara extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DrmOutputPara extends AbstractModel
      * @var string 语言,例: en, zh-cn
      */
     public $Language;
+
     /**
      * @param string $Type 内容类型。例:video，audio，mpd，m3u8
      * @param string $Language 语言,例: en, zh-cn
@@ -46,6 +45,7 @@ class DrmOutputPara extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

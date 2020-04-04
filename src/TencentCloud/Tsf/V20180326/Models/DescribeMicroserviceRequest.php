@@ -18,16 +18,14 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMicroservice请求参数结构体
+ *
  * @method string getMicroserviceId() 获取微服务ID
  * @method void setMicroserviceId(string $MicroserviceId) 设置微服务ID
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取分页个数
  * @method void setLimit(integer $Limit) 设置分页个数
- */
-
-/**
- *DescribeMicroservice请求参数结构体
  */
 class DescribeMicroserviceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeMicroserviceRequest extends AbstractModel
      * @var integer 分页个数
      */
     public $Limit;
+
     /**
      * @param string $MicroserviceId 微服务ID
      * @param integer $Offset 偏移量
@@ -54,6 +53,7 @@ class DescribeMicroserviceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

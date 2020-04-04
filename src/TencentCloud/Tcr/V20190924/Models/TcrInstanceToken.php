@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例登录令牌
+ *
  * @method string getId() 获取令牌ID
  * @method void setId(string $Id) 设置令牌ID
  * @method string getDesc() 获取令牌描述
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedAt(string $CreatedAt) 设置令牌创建时间
  * @method integer getExpiredAt() 获取令牌过期时间戳
  * @method void setExpiredAt(integer $ExpiredAt) 设置令牌过期时间戳
- */
-
-/**
- *实例登录令牌
  */
 class TcrInstanceToken extends AbstractModel
 {
@@ -66,6 +64,7 @@ class TcrInstanceToken extends AbstractModel
      * @var integer 令牌过期时间戳
      */
     public $ExpiredAt;
+
     /**
      * @param string $Id 令牌ID
      * @param string $Desc 令牌描述
@@ -78,6 +77,7 @@ class TcrInstanceToken extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

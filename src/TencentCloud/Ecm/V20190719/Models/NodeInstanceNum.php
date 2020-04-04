@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 节点实例数量信息
+ *
  * @method integer getNodeNum() 获取节点数量
  * @method void setNodeNum(integer $NodeNum) 设置节点数量
  * @method integer getInstanceNum() 获取实例数量
  * @method void setInstanceNum(integer $InstanceNum) 设置实例数量
- */
-
-/**
- *节点实例数量信息
  */
 class NodeInstanceNum extends AbstractModel
 {
@@ -38,6 +36,7 @@ class NodeInstanceNum extends AbstractModel
      * @var integer 实例数量
      */
     public $InstanceNum;
+
     /**
      * @param integer $NodeNum 节点数量
      * @param integer $InstanceNum 实例数量
@@ -46,6 +45,7 @@ class NodeInstanceNum extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

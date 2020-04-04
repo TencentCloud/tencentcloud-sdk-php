@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribleL4Rules返回参数结构体
+ *
  * @method array getRules() 获取转发规则列表
  * @method void setRules(array $Rules) 设置转发规则列表
  * @method integer getTotal() 获取总规则数
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealths(array $Healths) 设置健康检查配置列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribleL4Rules返回参数结构体
  */
 class DescribleL4RulesResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribleL4RulesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Rules 转发规则列表
      * @param integer $Total 总规则数
@@ -62,6 +61,7 @@ class DescribleL4RulesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

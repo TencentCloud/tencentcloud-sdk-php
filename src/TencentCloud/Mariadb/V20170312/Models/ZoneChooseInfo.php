@@ -18,14 +18,12 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 分片节点可用区选择
+ *
  * @method ZonesInfo getMasterZone() 获取主可用区
  * @method void setMasterZone(ZonesInfo $MasterZone) 设置主可用区
  * @method array getSlaveZones() 获取可选的从可用区
  * @method void setSlaveZones(array $SlaveZones) 设置可选的从可用区
- */
-
-/**
- *分片节点可用区选择
  */
 class ZoneChooseInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ZoneChooseInfo extends AbstractModel
      * @var array 可选的从可用区
      */
     public $SlaveZones;
+
     /**
      * @param ZonesInfo $MasterZone 主可用区
      * @param array $SlaveZones 可选的从可用区
@@ -46,6 +45,7 @@ class ZoneChooseInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

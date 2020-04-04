@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述了单台实例操作次数限制
+ *
  * @method string getOperation() 获取实例操作。取值范围：<br><li>`INSTANCE_DEGRADE`：降配操作<br><li>`INTERNET_CHARGE_TYPE_CHANGE`：修改网络带宽计费模式
  * @method void setOperation(string $Operation) 设置实例操作。取值范围：<br><li>`INSTANCE_DEGRADE`：降配操作<br><li>`INTERNET_CHARGE_TYPE_CHANGE`：修改网络带宽计费模式
  * @method string getInstanceId() 获取实例ID。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentCount(integer $CurrentCount) 设置当前已使用次数，如果返回值为-1表示该操作无次数限制。
  * @method integer getLimitCount() 获取操作次数最高额度，如果返回值为-1表示该操作无次数限制，如果返回值为0表示不支持调整配置。
  * @method void setLimitCount(integer $LimitCount) 设置操作次数最高额度，如果返回值为-1表示该操作无次数限制，如果返回值为0表示不支持调整配置。
- */
-
-/**
- *描述了单台实例操作次数限制
  */
 class OperationCountLimit extends AbstractModel
 {
@@ -52,6 +50,7 @@ class OperationCountLimit extends AbstractModel
      * @var integer 操作次数最高额度，如果返回值为-1表示该操作无次数限制，如果返回值为0表示不支持调整配置。
      */
     public $LimitCount;
+
     /**
      * @param string $Operation 实例操作。取值范围：<br><li>`INSTANCE_DEGRADE`：降配操作<br><li>`INTERNET_CHARGE_TYPE_CHANGE`：修改网络带宽计费模式
      * @param string $InstanceId 实例ID。
@@ -62,6 +61,7 @@ class OperationCountLimit extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

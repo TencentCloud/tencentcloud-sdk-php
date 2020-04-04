@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeClassicLinkInstances返回参数结构体
+ *
  * @method integer getTotalCount() 获取符合条件的实例数量。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例数量。
  * @method array getClassicLinkInstanceSet() 获取私有网络和基础网络互通设备。
  * @method void setClassicLinkInstanceSet(array $ClassicLinkInstanceSet) 设置私有网络和基础网络互通设备。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeClassicLinkInstances返回参数结构体
  */
 class DescribeClassicLinkInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeClassicLinkInstancesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 符合条件的实例数量。
      * @param array $ClassicLinkInstanceSet 私有网络和基础网络互通设备。
@@ -54,6 +53,7 @@ class DescribeClassicLinkInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

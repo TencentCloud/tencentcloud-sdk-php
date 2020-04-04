@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PublishMessage请求参数结构体
+ *
  * @method string getTopic() 获取消息发往的主题。命名规则：${ProductId}/${DeviceName}/[a-zA-Z0-9:_-]{1,128}
  * @method void setTopic(string $Topic) 设置消息发往的主题。命名规则：${ProductId}/${DeviceName}/[a-zA-Z0-9:_-]{1,128}
  * @method string getPayload() 获取消息内容
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method integer getQos() 获取服务质量等级，取值为0或1
  * @method void setQos(integer $Qos) 设置服务质量等级，取值为0或1
- */
-
-/**
- *PublishMessage请求参数结构体
  */
 class PublishMessageRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class PublishMessageRequest extends AbstractModel
      * @var integer 服务质量等级，取值为0或1
      */
     public $Qos;
+
     /**
      * @param string $Topic 消息发往的主题。命名规则：${ProductId}/${DeviceName}/[a-zA-Z0-9:_-]{1,128}
      * @param string $Payload 消息内容
@@ -70,6 +69,7 @@ class PublishMessageRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

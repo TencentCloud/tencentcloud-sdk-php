@@ -18,6 +18,8 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 监控任务详细数据
+ *
  * @method Monitor getBasic() 获取监控任务基础信息。
  * @method void setBasic(Monitor $Basic) 设置监控任务基础信息。
  * @method array getSites() 获取监控任务包含的站点列表。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageCount(integer $PageCount) 设置扫描页面总数。
  * @method integer getContentNumber() 获取内容检测数量。
  * @method void setContentNumber(integer $ContentNumber) 设置内容检测数量。
- */
-
-/**
- *监控任务详细数据
  */
 class MonitorsDetail extends AbstractModel
 {
@@ -108,6 +106,7 @@ class MonitorsDetail extends AbstractModel
      * @var integer 内容检测数量。
      */
     public $ContentNumber;
+
     /**
      * @param Monitor $Basic 监控任务基础信息。
      * @param array $Sites 监控任务包含的站点列表。
@@ -126,6 +125,7 @@ class MonitorsDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

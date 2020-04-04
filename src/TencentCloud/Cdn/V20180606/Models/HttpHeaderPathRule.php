@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Http 头部设置规则，最多可设置 100 条
+ *
  * @method string getHeaderMode() 获取http 头部设置方式
 add：添加头部，若已存在头部，则会存在重复头部
 set：仅回源头部配置支持，若头部已存在则会覆盖原有头部值，若不存在，则会增加该头部及值
@@ -65,10 +67,6 @@ directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
 注意：此字段可能返回 null，表示取不到有效值。
  */
-
-/**
- *Http 头部设置规则，最多可设置 100 条
- */
 class HttpHeaderPathRule extends AbstractModel
 {
     /**
@@ -113,6 +111,7 @@ path 时填充绝对路径，如 /xxx/test.html
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RulePaths;
+
     /**
      * @param string $HeaderMode http 头部设置方式
 add：添加头部，若已存在头部，则会存在重复头部
@@ -142,6 +141,7 @@ path 时填充绝对路径，如 /xxx/test.html
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文件类型样本
+ *
  * @method string getFileMd5() 获取文件md5
  * @method void setFileMd5(string $FileMd5) 设置文件md5
  * @method string getFileName() 获取文件名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileUrl(string $FileUrl) 设置文件url
  * @method string getCompressFileUrl() 获取文件压缩后云url
  * @method void setCompressFileUrl(string $CompressFileUrl) 设置文件压缩后云url
- */
-
-/**
- *文件类型样本
  */
 class FileSample extends AbstractModel
 {
@@ -52,6 +50,7 @@ class FileSample extends AbstractModel
      * @var string 文件压缩后云url
      */
     public $CompressFileUrl;
+
     /**
      * @param string $FileMd5 文件md5
      * @param string $FileName 文件名称
@@ -62,6 +61,7 @@ class FileSample extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

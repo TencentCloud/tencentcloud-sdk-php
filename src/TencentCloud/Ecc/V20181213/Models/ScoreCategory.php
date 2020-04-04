@@ -18,6 +18,8 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 四个维度的得分
+ *
  * @method Aspect getWords() 获取词汇维度
  * @method void setWords(Aspect $Words) 设置词汇维度
  * @method Aspect getSentences() 获取句子维度
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScore(float $Score) 设置维度得分
  * @method float getPercentage() 获取维度分数占比
  * @method void setPercentage(float $Percentage) 设置维度分数占比
- */
-
-/**
- *四个维度的得分
  */
 class ScoreCategory extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ScoreCategory extends AbstractModel
      * @var float 维度分数占比
      */
     public $Percentage;
+
     /**
      * @param Aspect $Words 词汇维度
      * @param Aspect $Sentences 句子维度
@@ -78,6 +77,7 @@ class ScoreCategory extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

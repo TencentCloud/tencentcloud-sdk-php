@@ -18,12 +18,10 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLoadBalancer请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
- */
-
-/**
- *DeleteLoadBalancer请求参数结构体
  */
 class DeleteLoadBalancerRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteLoadBalancerRequest extends AbstractModel
      * @var string 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public $LoadBalancerId;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
@@ -38,6 +37,7 @@ class DeleteLoadBalancerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

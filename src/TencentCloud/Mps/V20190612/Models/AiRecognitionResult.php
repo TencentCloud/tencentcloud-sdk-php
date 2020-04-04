@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能识别结果。
+ *
  * @method string getType() 获取任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
@@ -64,10 +66,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOcrFullTextTask(AiRecognitionTaskOcrFullTextResult $OcrFullTextTask) 设置文本全文识别结果，当 Type 为
  OcrFullTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *智能识别结果。
  */
 class AiRecognitionResult extends AbstractModel
 {
@@ -117,6 +115,7 @@ class AiRecognitionResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrFullTextTask;
+
     /**
      * @param string $Type 任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
@@ -146,6 +145,7 @@ class AiRecognitionResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

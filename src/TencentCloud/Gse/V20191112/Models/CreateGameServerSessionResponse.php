@@ -18,16 +18,14 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateGameServerSession返回参数结构体
+ *
  * @method GameServerSession getGameServerSession() 获取游戏服务器会话
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGameServerSession(GameServerSession $GameServerSession) 设置游戏服务器会话
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateGameServerSession返回参数结构体
  */
 class CreateGameServerSessionResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class CreateGameServerSessionResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param GameServerSession $GameServerSession 游戏服务器会话
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class CreateGameServerSessionResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

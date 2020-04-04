@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyCCUrlAllow请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method string getId() 获取资源ID
@@ -40,10 +42,6 @@ https://域名/cgi
 当Method为delete时，可以不用填写此字段；
  * @method void setRuleId(string $RuleId) 设置可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID），当添加并且Protocol=https时必须填写；
 当Method为delete时，可以不用填写此字段；
- */
-
-/**
- *ModifyCCUrlAllow请求参数结构体
  */
 class ModifyCCUrlAllowRequest extends AbstractModel
 {
@@ -89,6 +87,7 @@ https://域名/cgi
 当Method为delete时，可以不用填写此字段；
      */
     public $RuleId;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param string $Id 资源ID
@@ -106,6 +105,7 @@ https://域名/cgi
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 维度单词坐标
+ *
  * @method array getCoordinate() 获取维度单词坐标
  * @method void setCoordinate(array $Coordinate) 设置维度单词坐标
- */
-
-/**
- *维度单词坐标
  */
 class ErrorCoordinate extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ErrorCoordinate extends AbstractModel
      * @var array 维度单词坐标
      */
     public $Coordinate;
+
     /**
      * @param array $Coordinate 维度单词坐标
      */
@@ -38,6 +37,7 @@ class ErrorCoordinate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

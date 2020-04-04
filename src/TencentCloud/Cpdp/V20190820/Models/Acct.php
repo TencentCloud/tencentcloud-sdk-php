@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 账户信息
+ *
  * @method string getSubAcctNo() 获取STRING(50)，见证子账户的账号（可重复）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubAcctNo(string $SubAcctNo) 设置STRING(50)，见证子账户的账号（可重复）
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaintenanceDate(string $MaintenanceDate) 设置STRING(8)，维护日期
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *账户信息
  */
 class Acct extends AbstractModel
 {
@@ -94,6 +92,7 @@ class Acct extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaintenanceDate;
+
     /**
      * @param string $SubAcctNo STRING(50)，见证子账户的账号（可重复）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,6 +113,7 @@ class Acct extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

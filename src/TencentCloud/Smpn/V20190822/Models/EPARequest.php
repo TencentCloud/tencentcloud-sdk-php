@@ -18,14 +18,12 @@ namespace TencentCloud\Smpn\V20190822\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 企业号码认证请求
+ *
  * @method string getPhoneNumber() 获取电话号码
  * @method void setPhoneNumber(string $PhoneNumber) 设置电话号码
  * @method string getName() 获取黄页名称
  * @method void setName(string $Name) 设置黄页名称
- */
-
-/**
- *企业号码认证请求
  */
 class EPARequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EPARequest extends AbstractModel
      * @var string 黄页名称
      */
     public $Name;
+
     /**
      * @param string $PhoneNumber 电话号码
      * @param string $Name 黄页名称
@@ -46,6 +45,7 @@ class EPARequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

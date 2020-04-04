@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCCUrlAllow返回参数结构体
+ *
  * @method array getData() 获取该字段被RecordList字段替代了，请不要使用
  * @method void setData(array $Data) 设置该字段被RecordList字段替代了，请不要使用
  * @method integer getTotal() 获取记录总数
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 "Key":"protocol"时，"Value":值表示CC的防护类型(HTTP防护或HTTPS域名防护);
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeCCUrlAllow返回参数结构体
  */
 class DescribeCCUrlAllowResponse extends AbstractModel
 {
@@ -64,6 +62,7 @@ class DescribeCCUrlAllowResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Data 该字段被RecordList字段替代了，请不要使用
      * @param integer $Total 记录总数
@@ -78,6 +77,7 @@ class DescribeCCUrlAllowResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

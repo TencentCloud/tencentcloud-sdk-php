@@ -18,16 +18,14 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateUserCmd请求参数结构体
+ *
  * @method string getAlias() 获取用户自定义脚本的名称
  * @method void setAlias(string $Alias) 设置用户自定义脚本的名称
  * @method string getOsType() 获取命令适用的操作系统类型，取值linux或xserver
  * @method void setOsType(string $OsType) 设置命令适用的操作系统类型，取值linux或xserver
  * @method string getContent() 获取脚本内容，必须经过base64编码
  * @method void setContent(string $Content) 设置脚本内容，必须经过base64编码
- */
-
-/**
- *CreateUserCmd请求参数结构体
  */
 class CreateUserCmdRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateUserCmdRequest extends AbstractModel
      * @var string 脚本内容，必须经过base64编码
      */
     public $Content;
+
     /**
      * @param string $Alias 用户自定义脚本的名称
      * @param string $OsType 命令适用的操作系统类型，取值linux或xserver
@@ -54,6 +53,7 @@ class CreateUserCmdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

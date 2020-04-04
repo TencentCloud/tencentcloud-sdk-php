@@ -18,12 +18,10 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TerminateDBInstance请求参数结构体
+ *
  * @method array getInstanceIdSet() 获取主动销毁的实例ID列表，格式如：[mssql-3l3fgqn7]。与云数据库控制台页面中显示的实例ID相同
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置主动销毁的实例ID列表，格式如：[mssql-3l3fgqn7]。与云数据库控制台页面中显示的实例ID相同
- */
-
-/**
- *TerminateDBInstance请求参数结构体
  */
 class TerminateDBInstanceRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class TerminateDBInstanceRequest extends AbstractModel
      * @var array 主动销毁的实例ID列表，格式如：[mssql-3l3fgqn7]。与云数据库控制台页面中显示的实例ID相同
      */
     public $InstanceIdSet;
+
     /**
      * @param array $InstanceIdSet 主动销毁的实例ID列表，格式如：[mssql-3l3fgqn7]。与云数据库控制台页面中显示的实例ID相同
      */
@@ -38,6 +37,7 @@ class TerminateDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 回源 301/302 状态码自动跟随配置，默认为关闭状态
+ *
  * @method string getSwitch() 获取回源跟随开关
 on：开启
 off：关闭
  * @method void setSwitch(string $Switch) 设置回源跟随开关
 on：开启
 off：关闭
- */
-
-/**
- *回源 301/302 状态码自动跟随配置，默认为关闭状态
  */
 class FollowRedirect extends AbstractModel
 {
@@ -37,6 +35,7 @@ on：开启
 off：关闭
      */
     public $Switch;
+
     /**
      * @param string $Switch 回源跟随开关
 on：开启
@@ -46,6 +45,7 @@ off：关闭
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 可用区相关信息
+ *
  * @method integer getZoneId() 获取可用区数值形式的唯一ID，如：100001
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置可用区数值形式的唯一ID，如：100001
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneName(string $ZoneName) 设置可用区名称，如：广州一区
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *可用区相关信息
  */
 class ZoneInfo extends AbstractModel
 {
@@ -54,6 +52,7 @@ class ZoneInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneName;
+
     /**
      * @param integer $ZoneId 可用区数值形式的唯一ID，如：100001
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class ZoneInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

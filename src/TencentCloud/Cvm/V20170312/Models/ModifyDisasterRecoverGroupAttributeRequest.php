@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDisasterRecoverGroupAttribute请求参数结构体
+ *
  * @method string getDisasterRecoverGroupId() 获取分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
  * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) 设置分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
  * @method string getName() 获取分散置放群组名称，长度1-60个字符，支持中、英文。
  * @method void setName(string $Name) 设置分散置放群组名称，长度1-60个字符，支持中、英文。
- */
-
-/**
- *ModifyDisasterRecoverGroupAttribute请求参数结构体
  */
 class ModifyDisasterRecoverGroupAttributeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyDisasterRecoverGroupAttributeRequest extends AbstractModel
      * @var string 分散置放群组名称，长度1-60个字符，支持中、英文。
      */
     public $Name;
+
     /**
      * @param string $DisasterRecoverGroupId 分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
      * @param string $Name 分散置放群组名称，长度1-60个字符，支持中、英文。
@@ -46,6 +45,7 @@ class ModifyDisasterRecoverGroupAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

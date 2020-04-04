@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceOperations请求参数结构体
+ *
  * @method string getInstanceId() 获取集群实例ID
  * @method void setInstanceId(string $InstanceId) 设置集群实例ID
  * @method string getStartTime() 获取起始时间, e.g. "2019-03-07 16:30:39"
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页起始值
  * @method integer getLimit() 获取分页大小
  * @method void setLimit(integer $Limit) 设置分页大小
- */
-
-/**
- *DescribeInstanceOperations请求参数结构体
  */
 class DescribeInstanceOperationsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeInstanceOperationsRequest extends AbstractModel
      * @var integer 分页大小
      */
     public $Limit;
+
     /**
      * @param string $InstanceId 集群实例ID
      * @param string $StartTime 起始时间, e.g. "2019-03-07 16:30:39"
@@ -70,6 +69,7 @@ class DescribeInstanceOperationsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

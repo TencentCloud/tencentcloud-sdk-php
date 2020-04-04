@@ -18,16 +18,14 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 资源服务信息
+ *
  * @method integer getCreateTime() 获取创建时间戳
  * @method void setCreateTime(integer $CreateTime) 设置创建时间戳
  * @method integer getExpireTime() 获取到期时间戳
  * @method void setExpireTime(integer $ExpireTime) 设置到期时间戳
  * @method string getResourceName() 获取资源名称，如应用加固，源码混淆
  * @method void setResourceName(string $ResourceName) 设置资源名称，如应用加固，源码混淆
- */
-
-/**
- *资源服务信息
  */
 class ResourceServiceInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ResourceServiceInfo extends AbstractModel
      * @var string 资源名称，如应用加固，源码混淆
      */
     public $ResourceName;
+
     /**
      * @param integer $CreateTime 创建时间戳
      * @param integer $ExpireTime 到期时间戳
@@ -54,6 +53,7 @@ class ResourceServiceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

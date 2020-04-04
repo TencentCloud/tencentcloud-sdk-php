@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 当前音频的统计结果
+ *
  * @method float getAvgSpeed() 获取当前音频的平均语速
  * @method void setAvgSpeed(float $AvgSpeed) 设置当前音频的平均语速
  * @method float getAvgVolume() 获取Vad的平均音量
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVadNum(integer $VadNum) 设置当前音频的句子总数
  * @method integer getWordNum() 获取当前音频的单词总数
  * @method void setWordNum(integer $WordNum) 设置当前音频的单词总数
- */
-
-/**
- *当前音频的统计结果
  */
 class ASRStat extends AbstractModel
 {
@@ -87,6 +85,7 @@ class ASRStat extends AbstractModel
      * @var integer 当前音频的单词总数
      */
     public $WordNum;
+
     /**
      * @param float $AvgSpeed 当前音频的平均语速
      * @param float $AvgVolume Vad的平均音量
@@ -102,6 +101,7 @@ class ASRStat extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

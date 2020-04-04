@@ -18,12 +18,10 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeletePsaRegulation请求参数结构体
+ *
  * @method string getPsaId() 获取预授权规则ID
  * @method void setPsaId(string $PsaId) 设置预授权规则ID
- */
-
-/**
- *DeletePsaRegulation请求参数结构体
  */
 class DeletePsaRegulationRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeletePsaRegulationRequest extends AbstractModel
      * @var string 预授权规则ID
      */
     public $PsaId;
+
     /**
      * @param string $PsaId 预授权规则ID
      */
@@ -38,6 +37,7 @@ class DeletePsaRegulationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

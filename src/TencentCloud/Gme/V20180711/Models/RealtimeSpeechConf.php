@@ -18,14 +18,12 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实时语音配置数据
+ *
  * @method string getStatus() 获取实时语音服务开关，取值：open/close
  * @method void setStatus(string $Status) 设置实时语音服务开关，取值：open/close
  * @method string getQuality() 获取实时语音音质类型，取值：high-高音质，ordinary-普通音质。默认高音质。普通音质仅白名单开放，如需要普通音质，请联系腾讯云商务。
  * @method void setQuality(string $Quality) 设置实时语音音质类型，取值：high-高音质，ordinary-普通音质。默认高音质。普通音质仅白名单开放，如需要普通音质，请联系腾讯云商务。
- */
-
-/**
- *实时语音配置数据
  */
 class RealtimeSpeechConf extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RealtimeSpeechConf extends AbstractModel
      * @var string 实时语音音质类型，取值：high-高音质，ordinary-普通音质。默认高音质。普通音质仅白名单开放，如需要普通音质，请联系腾讯云商务。
      */
     public $Quality;
+
     /**
      * @param string $Status 实时语音服务开关，取值：open/close
      * @param string $Quality 实时语音音质类型，取值：high-高音质，ordinary-普通音质。默认高音质。普通音质仅白名单开放，如需要普通音质，请联系腾讯云商务。
@@ -46,6 +45,7 @@ class RealtimeSpeechConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

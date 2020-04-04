@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HDD的本地存储信息
+ *
  * @method string getType() 获取HDD本地存储类型，值为：LOCAL_PRO.
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置HDD本地存储类型，值为：LOCAL_PRO.
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxSize(integer $MaxSize) 设置HDD本地存储的最大容量
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *HDD的本地存储信息
  */
 class StorageBlock extends AbstractModel
 {
@@ -54,6 +52,7 @@ class StorageBlock extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxSize;
+
     /**
      * @param string $Type HDD本地存储类型，值为：LOCAL_PRO.
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class StorageBlock extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

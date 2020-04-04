@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 指标告警配置
+ *
  * @method DescribePolicyConditionListConfigManual getConfigManual() 获取指标配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigManual(DescribePolicyConditionListConfigManual $ConfigManual) 设置指标配置
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetricShowName(string $MetricShowName) 设置指标名称
  * @method string getMetricUnit() 获取指标单位
  * @method void setMetricUnit(string $MetricUnit) 设置指标单位
- */
-
-/**
- *指标告警配置
  */
 class DescribePolicyConditionListMetric extends AbstractModel
 {
@@ -55,6 +53,7 @@ class DescribePolicyConditionListMetric extends AbstractModel
      * @var string 指标单位
      */
     public $MetricUnit;
+
     /**
      * @param DescribePolicyConditionListConfigManual $ConfigManual 指标配置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class DescribePolicyConditionListMetric extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

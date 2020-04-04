@@ -18,14 +18,12 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteDB请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，形如mssql-rljoi3bf
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-rljoi3bf
  * @method array getNames() 获取数据库名数组
  * @method void setNames(array $Names) 设置数据库名数组
- */
-
-/**
- *DeleteDB请求参数结构体
  */
 class DeleteDBRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteDBRequest extends AbstractModel
      * @var array 数据库名数组
      */
     public $Names;
+
     /**
      * @param string $InstanceId 实例ID，形如mssql-rljoi3bf
      * @param array $Names 数据库名数组
@@ -46,6 +45,7 @@ class DeleteDBRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

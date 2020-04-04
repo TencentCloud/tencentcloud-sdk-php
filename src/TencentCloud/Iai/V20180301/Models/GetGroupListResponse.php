@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetGroupList返回参数结构体
+ *
  * @method array getGroupInfos() 获取返回的人员库信息
  * @method void setGroupInfos(array $GroupInfos) 设置返回的人员库信息
  * @method integer getGroupNum() 获取人员库总数量
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetGroupList返回参数结构体
  */
 class GetGroupListResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ class GetGroupListResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $GroupInfos 返回的人员库信息
      * @param integer $GroupNum 人员库总数量
@@ -58,6 +57,7 @@ class GetGroupListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

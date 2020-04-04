@@ -18,6 +18,8 @@ namespace TencentCloud\Bizlive\V20190313\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeStreamPlayInfoList请求参数结构体
+ *
  * @method string getEndTime() 获取结束时间，北京时间，格式：2019-04-28 10:36:00
 结束时间 和 开始时间  必须在同一天内。
  * @method void setEndTime(string $EndTime) 设置结束时间，北京时间，格式：2019-04-28 10:36:00
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 若不填，则为查询总体播放数据。
  * @method void setStreamName(string $StreamName) 设置流名称，精确匹配。
 若不填，则为查询总体播放数据。
- */
-
-/**
- *DescribeStreamPlayInfoList请求参数结构体
  */
 class DescribeStreamPlayInfoListRequest extends AbstractModel
 {
@@ -61,6 +59,7 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
 若不填，则为查询总体播放数据。
      */
     public $StreamName;
+
     /**
      * @param string $EndTime 结束时间，北京时间，格式：2019-04-28 10:36:00
 结束时间 和 开始时间  必须在同一天内。
@@ -74,6 +73,7 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

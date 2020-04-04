@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateHTTPListener请求参数结构体
+ *
  * @method string getListenerName() 获取监听器名称
  * @method void setListenerName(string $ListenerName) 设置监听器名称
  * @method integer getPort() 获取监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
  * @method void setPort(integer $Port) 设置监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
  * @method string getProxyId() 获取通道ID
  * @method void setProxyId(string $ProxyId) 设置通道ID
- */
-
-/**
- *CreateHTTPListener请求参数结构体
  */
 class CreateHTTPListenerRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateHTTPListenerRequest extends AbstractModel
      * @var string 通道ID
      */
     public $ProxyId;
+
     /**
      * @param string $ListenerName 监听器名称
      * @param integer $Port 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
@@ -54,6 +53,7 @@ class CreateHTTPListenerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

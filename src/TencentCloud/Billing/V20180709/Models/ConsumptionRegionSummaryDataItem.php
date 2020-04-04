@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 消耗按地域汇总详情
+ *
  * @method string getRegionId() 获取地域ID
  * @method void setRegionId(string $RegionId) 设置地域ID
  * @method string getRegionName() 获取地域名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrend(ConsumptionSummaryTrend $Trend) 设置趋势
  * @method array getBusiness() 获取产品消费详情
  * @method void setBusiness(array $Business) 设置产品消费详情
- */
-
-/**
- *消耗按地域汇总详情
  */
 class ConsumptionRegionSummaryDataItem extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ConsumptionRegionSummaryDataItem extends AbstractModel
      * @var array 产品消费详情
      */
     public $Business;
+
     /**
      * @param string $RegionId 地域ID
      * @param string $RegionName 地域名称
@@ -70,6 +69,7 @@ class ConsumptionRegionSummaryDataItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

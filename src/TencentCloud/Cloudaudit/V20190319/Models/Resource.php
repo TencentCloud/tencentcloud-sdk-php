@@ -18,14 +18,12 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 资源类型
+ *
  * @method string getResourceName() 获取资源名称
  * @method void setResourceName(string $ResourceName) 设置资源名称
  * @method string getResourceType() 获取资源类型
  * @method void setResourceType(string $ResourceType) 设置资源类型
- */
-
-/**
- *资源类型
  */
 class Resource extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Resource extends AbstractModel
      * @var string 资源类型
      */
     public $ResourceType;
+
     /**
      * @param string $ResourceName 资源名称
      * @param string $ResourceType 资源类型
@@ -46,6 +45,7 @@ class Resource extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

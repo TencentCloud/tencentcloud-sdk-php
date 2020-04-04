@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyInstanceParams返回参数结构体
+ *
  * @method boolean getChanged() 获取修改是否成功。
  * @method void setChanged(boolean $Changed) 设置修改是否成功。
  * @method integer getTaskId() 获取任务ID
  * @method void setTaskId(integer $TaskId) 设置任务ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ModifyInstanceParams返回参数结构体
  */
 class ModifyInstanceParamsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyInstanceParamsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param boolean $Changed 修改是否成功。
      * @param integer $TaskId 任务ID
@@ -54,6 +53,7 @@ class ModifyInstanceParamsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

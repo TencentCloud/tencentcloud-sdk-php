@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 鉴黄结果信息
+ *
  * @method float getConfidence() 获取视频鉴黄评分，分值为0到100。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfidence(float $Confidence) 设置视频鉴黄评分，分值为0到100。
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentSet(array $SegmentSet) 设置有涉黄嫌疑的视频片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *鉴黄结果信息
  */
 class AiReviewPornTaskOutput extends AbstractModel
 {
@@ -85,6 +83,7 @@ class AiReviewPornTaskOutput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentSet;
+
     /**
      * @param float $Confidence 视频鉴黄评分，分值为0到100。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -106,6 +105,7 @@ class AiReviewPornTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

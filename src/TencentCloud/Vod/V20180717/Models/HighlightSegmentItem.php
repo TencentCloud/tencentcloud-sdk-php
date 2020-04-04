@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能精彩集锦片段列表。
+ *
  * @method float getConfidence() 获取置信度。
  * @method void setConfidence(float $Confidence) 设置置信度。
  * @method float getStartTimeOffset() 获取片段起始时间偏移。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置片段起始时间偏移。
  * @method float getEndTimeOffset() 获取片段结束时间偏移。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置片段结束时间偏移。
- */
-
-/**
- *智能精彩集锦片段列表。
  */
 class HighlightSegmentItem extends AbstractModel
 {
@@ -45,6 +43,7 @@ class HighlightSegmentItem extends AbstractModel
      * @var float 片段结束时间偏移。
      */
     public $EndTimeOffset;
+
     /**
      * @param float $Confidence 置信度。
      * @param float $StartTimeOffset 片段起始时间偏移。
@@ -54,6 +53,7 @@ class HighlightSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

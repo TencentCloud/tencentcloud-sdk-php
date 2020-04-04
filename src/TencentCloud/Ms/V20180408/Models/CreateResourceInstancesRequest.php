@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateResourceInstances请求参数结构体
+ *
  * @method integer getPid() 获取资源类型id。13624：加固专业版。
  * @method void setPid(integer $Pid) 设置资源类型id。13624：加固专业版。
  * @method string getTimeUnit() 获取时间单位，取值为d，m，y，分别表示天，月，年。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeSpan(integer $TimeSpan) 设置时间数量。
  * @method integer getResourceNum() 获取资源数量。
  * @method void setResourceNum(integer $ResourceNum) 设置资源数量。
- */
-
-/**
- *CreateResourceInstances请求参数结构体
  */
 class CreateResourceInstancesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateResourceInstancesRequest extends AbstractModel
      * @var integer 资源数量。
      */
     public $ResourceNum;
+
     /**
      * @param integer $Pid 资源类型id。13624：加固专业版。
      * @param string $TimeUnit 时间单位，取值为d，m，y，分别表示天，月，年。
@@ -62,6 +61,7 @@ class CreateResourceInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

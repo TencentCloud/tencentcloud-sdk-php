@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ForbidLiveStream请求参数结构体
+ *
  * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
  * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
  * @method string getDomainName() 获取您的推流域名。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReason(string $Reason) 设置禁推原因。
 注明：请务必填写禁推原因，防止误操作。
 长度限制：2048字节。
- */
-
-/**
- *ForbidLiveStream请求参数结构体
  */
 class ForbidLiveStreamRequest extends AbstractModel
 {
@@ -74,6 +72,7 @@ class ForbidLiveStreamRequest extends AbstractModel
 长度限制：2048字节。
      */
     public $Reason;
+
     /**
      * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      * @param string $DomainName 您的推流域名。
@@ -90,6 +89,7 @@ class ForbidLiveStreamRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

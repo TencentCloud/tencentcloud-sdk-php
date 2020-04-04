@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 节点统计数据
+ *
  * @method array getISPCounterSet() 获取运营商统计信息列表
  * @method void setISPCounterSet(array $ISPCounterSet) 设置运营商统计信息列表
  * @method integer getProvinceNum() 获取省份数量
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeNum(integer $NodeNum) 设置节点数量
  * @method integer getInstanceNum() 获取实例数量
  * @method void setInstanceNum(integer $InstanceNum) 设置实例数量
- */
-
-/**
- *节点统计数据
  */
 class ModuleCounter extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModuleCounter extends AbstractModel
      * @var integer 实例数量
      */
     public $InstanceNum;
+
     /**
      * @param array $ISPCounterSet 运营商统计信息列表
      * @param integer $ProvinceNum 省份数量
@@ -70,6 +69,7 @@ class ModuleCounter extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

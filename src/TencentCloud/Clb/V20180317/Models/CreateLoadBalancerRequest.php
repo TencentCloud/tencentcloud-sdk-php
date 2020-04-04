@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLoadBalancer请求参数结构体
+ *
  * @method string getLoadBalancerType() 获取负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
  * @method void setLoadBalancerType(string $LoadBalancerType) 设置负载均衡实例的网络类型：
@@ -50,10 +52,6 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setVipIsp(string $VipIsp) 设置仅适用于公网负载均衡。CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。
  * @method array getTags() 获取购买负载均衡同时，给负载均衡打上标签
  * @method void setTags(array $Tags) 设置购买负载均衡同时，给负载均衡打上标签
- */
-
-/**
- *CreateLoadBalancer请求参数结构体
  */
 class CreateLoadBalancerRequest extends AbstractModel
 {
@@ -124,6 +122,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @var array 购买负载均衡同时，给负载均衡打上标签
      */
     public $Tags;
+
     /**
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
@@ -146,6 +145,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

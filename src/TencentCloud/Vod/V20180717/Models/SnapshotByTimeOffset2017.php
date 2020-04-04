@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 截图输出信息（2017 版）
+ *
  * @method integer getErrCode() 获取错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置截图输出文件地址。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *截图输出信息（2017 版）
  */
 class SnapshotByTimeOffset2017 extends AbstractModel
 {
@@ -60,6 +58,7 @@ class SnapshotByTimeOffset2017 extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
+
     /**
      * @param integer $ErrCode 错误码
 <li>0：成功；</li>
@@ -74,6 +73,7 @@ class SnapshotByTimeOffset2017 extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

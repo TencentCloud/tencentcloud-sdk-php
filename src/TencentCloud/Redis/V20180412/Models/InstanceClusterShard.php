@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例分片列表信息
+ *
  * @method string getShardName() 获取分片节点名称
  * @method void setShardName(string $ShardName) 设置分片节点名称
  * @method string getShardId() 获取分片节点Id
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRunid(string $Runid) 设置实例运行时节点Id
  * @method integer getConnected() 获取服务状态：0-down；1-on
  * @method void setConnected(integer $Connected) 设置服务状态：0-down；1-on
- */
-
-/**
- *实例分片列表信息
  */
 class InstanceClusterShard extends AbstractModel
 {
@@ -87,6 +85,7 @@ class InstanceClusterShard extends AbstractModel
      * @var integer 服务状态：0-down；1-on
      */
     public $Connected;
+
     /**
      * @param string $ShardName 分片节点名称
      * @param string $ShardId 分片节点Id
@@ -102,6 +101,7 @@ class InstanceClusterShard extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

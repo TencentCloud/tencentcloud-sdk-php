@@ -18,6 +18,8 @@ namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Item
+ *
  * @method string getItemID() 获取Song ID
  * @method void setItemID(string $ItemID) 设置Song ID
  * @method DataInfo getDataInfo() 获取Song info
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setArtists(array $Artists) 设置多个歌手集合
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *Item
  */
 class Item extends AbstractModel
 {
@@ -61,6 +59,7 @@ class Item extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Artists;
+
     /**
      * @param string $ItemID Song ID
      * @param DataInfo $DataInfo Song info
@@ -74,6 +73,7 @@ class Item extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

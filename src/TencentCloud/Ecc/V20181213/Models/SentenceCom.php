@@ -18,14 +18,12 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 批改结果按句点评的详细信息
+ *
  * @method array getSuggestions() 获取句子错误纠正信息
  * @method void setSuggestions(array $Suggestions) 设置句子错误纠正信息
  * @method SentenceItem getSentence() 获取句子信息
  * @method void setSentence(SentenceItem $Sentence) 设置句子信息
- */
-
-/**
- *批改结果按句点评的详细信息
  */
 class SentenceCom extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SentenceCom extends AbstractModel
      * @var SentenceItem 句子信息
      */
     public $Sentence;
+
     /**
      * @param array $Suggestions 句子错误纠正信息
      * @param SentenceItem $Sentence 句子信息
@@ -46,6 +45,7 @@ class SentenceCom extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

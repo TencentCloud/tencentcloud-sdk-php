@@ -18,14 +18,12 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 证书操作日志。
+ *
  * @method string getAction() 获取操作证书动作。
  * @method void setAction(string $Action) 设置操作证书动作。
  * @method string getCreatedOn() 获取操作时间。
  * @method void setCreatedOn(string $CreatedOn) 设置操作时间。
- */
-
-/**
- *证书操作日志。
  */
 class OperationLog extends AbstractModel
 {
@@ -38,6 +36,7 @@ class OperationLog extends AbstractModel
      * @var string 操作时间。
      */
     public $CreatedOn;
+
     /**
      * @param string $Action 操作证书动作。
      * @param string $CreatedOn 操作时间。
@@ -46,6 +45,7 @@ class OperationLog extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

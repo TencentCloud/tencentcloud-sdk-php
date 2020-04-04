@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLiveWatermarkRule请求参数结构体
+ *
  * @method string getDomainName() 获取推流域名。
  * @method void setDomainName(string $DomainName) 设置推流域名。
  * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为live。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method integer getTemplateId() 获取水印Id，即调用[AddLiveWatermark](/document/product/267/30154)接口返回的WatermarkId。
  * @method void setTemplateId(integer $TemplateId) 设置水印Id，即调用[AddLiveWatermark](/document/product/267/30154)接口返回的WatermarkId。
- */
-
-/**
- *CreateLiveWatermarkRule请求参数结构体
  */
 class CreateLiveWatermarkRuleRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateLiveWatermarkRuleRequest extends AbstractModel
      * @var integer 水印Id，即调用[AddLiveWatermark](/document/product/267/30154)接口返回的WatermarkId。
      */
     public $TemplateId;
+
     /**
      * @param string $DomainName 推流域名。
      * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
@@ -62,6 +61,7 @@ class CreateLiveWatermarkRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

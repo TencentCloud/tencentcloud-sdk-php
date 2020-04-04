@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 四层健康检查配置
+ *
  * @method string getProtocol() 获取转发协议，取值[TCP, UDP]
  * @method void setProtocol(string $Protocol) 设置转发协议，取值[TCP, UDP]
  * @method integer getVirtualPort() 获取转发端口
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAliveNum(integer $AliveNum) 设置健康阈值，单位次
  * @method integer getKeepTime() 获取会话保持时间，单位秒
  * @method void setKeepTime(integer $KeepTime) 设置会话保持时间，单位秒
- */
-
-/**
- *四层健康检查配置
  */
 class L4HealthConfig extends AbstractModel
 {
@@ -80,6 +78,7 @@ class L4HealthConfig extends AbstractModel
      * @var integer 会话保持时间，单位秒
      */
     public $KeepTime;
+
     /**
      * @param string $Protocol 转发协议，取值[TCP, UDP]
      * @param integer $VirtualPort 转发端口
@@ -94,6 +93,7 @@ class L4HealthConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

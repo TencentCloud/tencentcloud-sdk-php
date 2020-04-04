@@ -18,16 +18,14 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 域名日志信息
+ *
  * @method string getStartTime() 获取日志起始时间。
  * @method void setStartTime(string $StartTime) 设置日志起始时间。
  * @method string getEndTime() 获取日志结束时间。
  * @method void setEndTime(string $EndTime) 设置日志结束时间。
  * @method string getLogPath() 获取日志下载路径。
  * @method void setLogPath(string $LogPath) 设置日志下载路径。
- */
-
-/**
- *域名日志信息
  */
 class DomainLogs extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DomainLogs extends AbstractModel
      * @var string 日志下载路径。
      */
     public $LogPath;
+
     /**
      * @param string $StartTime 日志起始时间。
      * @param string $EndTime 日志结束时间。
@@ -54,6 +53,7 @@ class DomainLogs extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

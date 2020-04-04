@@ -18,12 +18,10 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDevicePartition请求参数结构体
+ *
  * @method string getInstanceId() 获取物理机ID
  * @method void setInstanceId(string $InstanceId) 设置物理机ID
- */
-
-/**
- *DescribeDevicePartition请求参数结构体
  */
 class DescribeDevicePartitionRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeDevicePartitionRequest extends AbstractModel
      * @var string 物理机ID
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 物理机ID
      */
@@ -38,6 +37,7 @@ class DescribeDevicePartitionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

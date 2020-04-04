@@ -18,6 +18,8 @@ namespace TencentCloud\Cmq\V20190304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeadLetterPolicy
+ *
  * @method string getDeadLetterQueueName() 获取DeadLetterQueueName
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeadLetterQueueName(string $DeadLetterQueueName) 设置DeadLetterQueueName
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxReceiveCount(integer $MaxReceiveCount) 设置MaxReceiveCount
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DeadLetterPolicy
  */
 class DeadLetterPolicy extends AbstractModel
 {
@@ -74,6 +72,7 @@ class DeadLetterPolicy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxReceiveCount;
+
     /**
      * @param string $DeadLetterQueueName DeadLetterQueueName
 注意：此字段可能返回 null，表示取不到有效值。
@@ -90,6 +89,7 @@ class DeadLetterPolicy extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAcct返回参数结构体
+ *
  * @method string getSubAppId() 获取聚鑫计费SubAppId，代表子商户
  * @method void setSubAppId(string $SubAppId) 设置聚鑫计费SubAppId，代表子商户
  * @method string getSubAcctNo() 获取平安银行生成的子商户账户
  * @method void setSubAcctNo(string $SubAcctNo) 设置平安银行生成的子商户账户
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateAcct返回参数结构体
  */
 class CreateAcctResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateAcctResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $SubAppId 聚鑫计费SubAppId，代表子商户
      * @param string $SubAcctNo 平安银行生成的子商户账户
@@ -54,6 +53,7 @@ class CreateAcctResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

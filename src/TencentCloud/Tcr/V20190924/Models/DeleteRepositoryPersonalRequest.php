@@ -18,12 +18,10 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteRepositoryPersonal请求参数结构体
+ *
  * @method string getRepoName() 获取仓库名称
  * @method void setRepoName(string $RepoName) 设置仓库名称
- */
-
-/**
- *DeleteRepositoryPersonal请求参数结构体
  */
 class DeleteRepositoryPersonalRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteRepositoryPersonalRequest extends AbstractModel
      * @var string 仓库名称
      */
     public $RepoName;
+
     /**
      * @param string $RepoName 仓库名称
      */
@@ -38,6 +37,7 @@ class DeleteRepositoryPersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

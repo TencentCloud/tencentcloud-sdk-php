@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 封禁url的详细信息
+ *
  * @method string getStatus() 获取状态(disable表示封禁，enable表示解封)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态(disable表示封禁，enable表示解封)
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *封禁url的详细信息
  */
 class UrlRecord extends AbstractModel
 {
@@ -64,6 +62,7 @@ class UrlRecord extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
+
     /**
      * @param string $Status 状态(disable表示封禁，enable表示解封)
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +77,7 @@ class UrlRecord extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

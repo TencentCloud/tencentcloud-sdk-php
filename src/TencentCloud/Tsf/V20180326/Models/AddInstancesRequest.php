@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddInstances请求参数结构体
+ *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method array getInstanceIdList() 获取云主机ID列表
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSgId(string $SgId) 设置安全组设置
  * @method string getInstanceImportMode() 获取云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
  * @method void setInstanceImportMode(string $InstanceImportMode) 设置云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
- */
-
-/**
- *AddInstances请求参数结构体
  */
 class AddInstancesRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class AddInstancesRequest extends AbstractModel
      * @var string 云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
      */
     public $InstanceImportMode;
+
     /**
      * @param string $ClusterId 集群ID
      * @param array $InstanceIdList 云主机ID列表
@@ -94,6 +93,7 @@ class AddInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

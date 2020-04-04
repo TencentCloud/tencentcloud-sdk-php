@@ -18,14 +18,12 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 门店区域客流信息
+ *
  * @method string getDate() 获取日期
  * @method void setDate(string $Date) 设置日期
  * @method array getZoneTrafficInfoDetailSet() 获取门店区域客流详细信息
  * @method void setZoneTrafficInfoDetailSet(array $ZoneTrafficInfoDetailSet) 设置门店区域客流详细信息
- */
-
-/**
- *门店区域客流信息
  */
 class ZoneTrafficInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ZoneTrafficInfo extends AbstractModel
      * @var array 门店区域客流详细信息
      */
     public $ZoneTrafficInfoDetailSet;
+
     /**
      * @param string $Date 日期
      * @param array $ZoneTrafficInfoDetailSet 门店区域客流详细信息
@@ -46,6 +45,7 @@ class ZoneTrafficInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

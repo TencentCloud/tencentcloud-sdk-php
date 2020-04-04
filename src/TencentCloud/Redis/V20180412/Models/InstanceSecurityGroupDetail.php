@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例安全组信息
+ *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method array getSecurityGroupDetails() 获取安全组信息
  * @method void setSecurityGroupDetails(array $SecurityGroupDetails) 设置安全组信息
- */
-
-/**
- *实例安全组信息
  */
 class InstanceSecurityGroupDetail extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InstanceSecurityGroupDetail extends AbstractModel
      * @var array 安全组信息
      */
     public $SecurityGroupDetails;
+
     /**
      * @param string $InstanceId 实例Id
      * @param array $SecurityGroupDetails 安全组信息
@@ -46,6 +45,7 @@ class InstanceSecurityGroupDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

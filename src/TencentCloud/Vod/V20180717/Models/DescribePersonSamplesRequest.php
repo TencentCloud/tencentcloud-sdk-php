@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePersonSamples请求参数结构体
+ *
  * @method string getType() 获取拉取的人物类型，可选值：
 <li>UserDefine：用户自定义人物库；</li>
 <li>Default：系统默认人物库。</li>
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：100，最大值：100。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *DescribePersonSamples请求参数结构体
  */
 class DescribePersonSamplesRequest extends AbstractModel
 {
@@ -88,6 +86,7 @@ class DescribePersonSamplesRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param string $Type 拉取的人物类型，可选值：
 <li>UserDefine：用户自定义人物库；</li>
@@ -106,6 +105,7 @@ class DescribePersonSamplesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

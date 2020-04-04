@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTrafficMirrorReceiverHealthStatus返回参数结构体
+ *
  * @method array getReceiversStatusSet() 获取内网IP和端口对应的状态。
  * @method void setReceiversStatusSet(array $ReceiversStatusSet) 设置内网IP和端口对应的状态。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeTrafficMirrorReceiverHealthStatus返回参数结构体
  */
 class DescribeTrafficMirrorReceiverHealthStatusResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeTrafficMirrorReceiverHealthStatusResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $ReceiversStatusSet 内网IP和端口对应的状态。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeTrafficMirrorReceiverHealthStatusResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

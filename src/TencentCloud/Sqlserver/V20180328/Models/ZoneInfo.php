@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 可用区信息
+ *
  * @method string getZone() 获取可用区英文ID，形如ap-guangzhou-1，表示广州一区
  * @method void setZone(string $Zone) 设置可用区英文ID，形如ap-guangzhou-1，表示广州一区
  * @method string getZoneName() 获取可用区中文名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpecId(integer $SpecId) 设置该可用区目前可售卖的规格ID，利用SpecId，结合接口DescribeProductConfig返回的数据，可获悉该可用区目前可售卖的规格大小
  * @method string getVersion() 获取当前可用区与规格下，可售卖的数据库版本，形如2008R2（表示SQL Server 2008 R2）。其可选值有2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
  * @method void setVersion(string $Version) 设置当前可用区与规格下，可售卖的数据库版本，形如2008R2（表示SQL Server 2008 R2）。其可选值有2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
- */
-
-/**
- *可用区信息
  */
 class ZoneInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ZoneInfo extends AbstractModel
      * @var string 当前可用区与规格下，可售卖的数据库版本，形如2008R2（表示SQL Server 2008 R2）。其可选值有2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
      */
     public $Version;
+
     /**
      * @param string $Zone 可用区英文ID，形如ap-guangzhou-1，表示广州一区
      * @param string $ZoneName 可用区中文名称
@@ -70,6 +69,7 @@ class ZoneInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

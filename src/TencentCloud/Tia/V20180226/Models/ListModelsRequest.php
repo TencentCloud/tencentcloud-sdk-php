@@ -18,6 +18,8 @@ namespace TencentCloud\Tia\V20180226\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListModels请求参数结构体
+ *
  * @method string getCluster() 获取部署模型的集群， `集群模式` 必填
  * @method void setCluster(string $Cluster) 设置部署模型的集群， `集群模式` 必填
  * @method integer getLimit() 获取分页参数，返回数量上限
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页参数，分页起始位置
  * @method string getServType() 获取部署类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`。
  * @method void setServType(string $ServType) 设置部署类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`。
- */
-
-/**
- *ListModels请求参数结构体
  */
 class ListModelsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ListModelsRequest extends AbstractModel
      * @var string 部署类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`。
      */
     public $ServType;
+
     /**
      * @param string $Cluster 部署模型的集群， `集群模式` 必填
      * @param integer $Limit 分页参数，返回数量上限
@@ -62,6 +61,7 @@ class ListModelsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AppAddUser请求参数结构体
+ *
  * @method string getUserName() 获取用户名
  * @method void setUserName(string $UserName) 设置用户名
  * @method string getPassword() 获取密码
  * @method void setPassword(string $Password) 设置密码
- */
-
-/**
- *AppAddUser请求参数结构体
  */
 class AppAddUserRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AppAddUserRequest extends AbstractModel
      * @var string 密码
      */
     public $Password;
+
     /**
      * @param string $UserName 用户名
      * @param string $Password 密码
@@ -46,6 +45,7 @@ class AppAddUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

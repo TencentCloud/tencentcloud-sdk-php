@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频处理任务信息
+ *
  * @method string getTaskId() 获取视频处理任务 ID。
  * @method void setTaskId(string $TaskId) 设置视频处理任务 ID。
  * @method string getStatus() 获取任务流状态，取值：
@@ -82,10 +84,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
  * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
- */
-
-/**
- *视频处理任务信息
  */
 class ProcedureTask extends AbstractModel
 {
@@ -184,6 +182,7 @@ class ProcedureTask extends AbstractModel
      * @var string 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public $SessionId;
+
     /**
      * @param string $TaskId 视频处理任务 ID。
      * @param string $Status 任务流状态，取值：
@@ -222,6 +221,7 @@ class ProcedureTask extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

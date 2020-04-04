@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SearchClsLog请求参数结构体
+ *
  * @method string getLogsetId() 获取需要查询的日志集ID
  * @method void setLogsetId(string $LogsetId) 设置需要查询的日志集ID
  * @method string getTopicIds() 获取需要查询的日志主题ID组合，以逗号分隔
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContext(string $Context) 设置加载更多使用，透传上次返回的 context 值，获取后续的日志内容，通过游标最多可获取10000条，请尽可能缩小时间范围
  * @method string getSort() 获取按日志时间排序， asc（升序）或者 desc（降序），默认为 desc
  * @method void setSort(string $Sort) 设置按日志时间排序， asc（升序）或者 desc（降序），默认为 desc
- */
-
-/**
- *SearchClsLog请求参数结构体
  */
 class SearchClsLogRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class SearchClsLogRequest extends AbstractModel
      * @var string 按日志时间排序， asc（升序）或者 desc（降序），默认为 desc
      */
     public $Sort;
+
     /**
      * @param string $LogsetId 需要查询的日志集ID
      * @param string $TopicIds 需要查询的日志主题ID组合，以逗号分隔
@@ -102,6 +101,7 @@ class SearchClsLogRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

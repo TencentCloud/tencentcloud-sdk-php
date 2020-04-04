@@ -18,12 +18,10 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteGroup请求参数结构体
+ *
  * @method integer getGroupId() 获取用户组 ID
  * @method void setGroupId(integer $GroupId) 设置用户组 ID
- */
-
-/**
- *DeleteGroup请求参数结构体
  */
 class DeleteGroupRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteGroupRequest extends AbstractModel
      * @var integer 用户组 ID
      */
     public $GroupId;
+
     /**
      * @param integer $GroupId 用户组 ID
      */
@@ -38,6 +37,7 @@ class DeleteGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

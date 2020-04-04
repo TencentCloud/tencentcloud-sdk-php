@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务信息详情
+ *
  * @method integer getTaskId() 获取任务Id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(integer $TaskId) 设置任务Id
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(integer $Result) 设置任务状态
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *任务信息详情
  */
 class TaskInfoDetail extends AbstractModel
 {
@@ -114,6 +112,7 @@ class TaskInfoDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
+
     /**
      * @param integer $TaskId 任务Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -138,6 +137,7 @@ class TaskInfoDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

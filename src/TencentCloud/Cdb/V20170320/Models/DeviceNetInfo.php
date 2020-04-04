@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例所在物理机网络监控信息
+ *
  * @method array getConn() 获取tcp连接数
  * @method void setConn(array $Conn) 设置tcp连接数
  * @method array getPackageIn() 获取网卡入包量，单位：个/秒
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowIn(array $FlowIn) 设置入流量，单位：kbps
  * @method array getFlowOut() 获取出流量，单位：kbps
  * @method void setFlowOut(array $FlowOut) 设置出流量，单位：kbps
- */
-
-/**
- *实例所在物理机网络监控信息
  */
 class DeviceNetInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DeviceNetInfo extends AbstractModel
      * @var array 出流量，单位：kbps
      */
     public $FlowOut;
+
     /**
      * @param array $Conn tcp连接数
      * @param array $PackageIn 网卡入包量，单位：个/秒
@@ -70,6 +69,7 @@ class DeviceNetInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

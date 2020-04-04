@@ -18,14 +18,12 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPC限额信息
+ *
  * @method integer getTypeId() 获取配额类型ID
  * @method void setTypeId(integer $TypeId) 设置配额类型ID
  * @method integer getQuota() 获取配额
  * @method void setQuota(integer $Quota) 设置配额
- */
-
-/**
- *VPC限额信息
  */
 class VpcQuota extends AbstractModel
 {
@@ -38,6 +36,7 @@ class VpcQuota extends AbstractModel
      * @var integer 配额
      */
     public $Quota;
+
     /**
      * @param integer $TypeId 配额类型ID
      * @param integer $Quota 配额
@@ -46,6 +45,7 @@ class VpcQuota extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

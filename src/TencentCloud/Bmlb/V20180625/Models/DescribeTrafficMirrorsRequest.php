@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTrafficMirrors请求参数结构体
+ *
  * @method array getTrafficMirrorIds() 获取流量镜像实例ID的数组，支持批量查询
  * @method void setTrafficMirrorIds(array $TrafficMirrorIds) 设置流量镜像实例ID的数组，支持批量查询
  * @method array getAliases() 获取流量镜像实例别名数组。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(integer $Order) 设置排序方式，取值：0:增序(默认)，1:降序
  * @method string getSearchKey() 获取模糊匹配trafficMirrorId或者alias字段。
  * @method void setSearchKey(string $SearchKey) 设置模糊匹配trafficMirrorId或者alias字段。
- */
-
-/**
- *DescribeTrafficMirrors请求参数结构体
  */
 class DescribeTrafficMirrorsRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeTrafficMirrorsRequest extends AbstractModel
      * @var string 模糊匹配trafficMirrorId或者alias字段。
      */
     public $SearchKey;
+
     /**
      * @param array $TrafficMirrorIds 流量镜像实例ID的数组，支持批量查询
      * @param array $Aliases 流量镜像实例别名数组。
@@ -94,6 +93,7 @@ class DescribeTrafficMirrorsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

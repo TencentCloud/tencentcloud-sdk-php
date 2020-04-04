@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 目标组信息
+ *
  * @method string getTargetGroupId() 获取目标组ID
  * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID
  * @method string getVpcId() 获取目标组的vpcid
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociatedRule(array $AssociatedRule) 设置关联到的规则数组
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *目标组信息
  */
 class TargetGroupInfo extends AbstractModel
 {
@@ -79,6 +77,7 @@ class TargetGroupInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssociatedRule;
+
     /**
      * @param string $TargetGroupId 目标组ID
      * @param string $VpcId 目标组的vpcid
@@ -94,6 +93,7 @@ class TargetGroupInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

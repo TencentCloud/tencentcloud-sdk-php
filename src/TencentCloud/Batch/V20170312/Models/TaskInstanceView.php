@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务实例视图信息
+ *
  * @method integer getTaskInstanceIndex() 获取任务实例索引
  * @method void setTaskInstanceIndex(integer $TaskInstanceIndex) 设置任务实例索引
  * @method string getTaskInstanceState() 获取任务实例状态
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRedirectInfo(RedirectInfo $RedirectInfo) 设置重定向信息
  * @method string getStateDetailedReason() 获取任务实例状态原因详情，任务实例失败时，会记录失败原因
  * @method void setStateDetailedReason(string $StateDetailedReason) 设置任务实例状态原因详情，任务实例失败时，会记录失败原因
- */
-
-/**
- *任务实例视图信息
  */
 class TaskInstanceView extends AbstractModel
 {
@@ -116,6 +114,7 @@ class TaskInstanceView extends AbstractModel
      * @var string 任务实例状态原因详情，任务实例失败时，会记录失败原因
      */
     public $StateDetailedReason;
+
     /**
      * @param integer $TaskInstanceIndex 任务实例索引
      * @param string $TaskInstanceState 任务实例状态
@@ -138,6 +137,7 @@ class TaskInstanceView extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

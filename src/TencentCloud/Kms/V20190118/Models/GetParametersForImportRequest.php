@@ -18,16 +18,14 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetParametersForImport请求参数结构体
+ *
  * @method string getKeyId() 获取CMK的唯一标识，获取密钥参数的CMK必须是EXTERNAL类型，即在CreateKey时指定Type=2 类型的CMK。
  * @method void setKeyId(string $KeyId) 设置CMK的唯一标识，获取密钥参数的CMK必须是EXTERNAL类型，即在CreateKey时指定Type=2 类型的CMK。
  * @method string getWrappingAlgorithm() 获取指定加密密钥材料的算法，目前支持RSAES_PKCS1_V1_5、RSAES_OAEP_SHA_1、RSAES_OAEP_SHA_256
  * @method void setWrappingAlgorithm(string $WrappingAlgorithm) 设置指定加密密钥材料的算法，目前支持RSAES_PKCS1_V1_5、RSAES_OAEP_SHA_1、RSAES_OAEP_SHA_256
  * @method string getWrappingKeySpec() 获取指定加密密钥材料的类型，目前只支持RSA_2048
  * @method void setWrappingKeySpec(string $WrappingKeySpec) 设置指定加密密钥材料的类型，目前只支持RSA_2048
- */
-
-/**
- *GetParametersForImport请求参数结构体
  */
 class GetParametersForImportRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GetParametersForImportRequest extends AbstractModel
      * @var string 指定加密密钥材料的类型，目前只支持RSA_2048
      */
     public $WrappingKeySpec;
+
     /**
      * @param string $KeyId CMK的唯一标识，获取密钥参数的CMK必须是EXTERNAL类型，即在CreateKey时指定Type=2 类型的CMK。
      * @param string $WrappingAlgorithm 指定加密密钥材料的算法，目前支持RSAES_PKCS1_V1_5、RSAES_OAEP_SHA_1、RSAES_OAEP_SHA_256
@@ -54,6 +53,7 @@ class GetParametersForImportRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

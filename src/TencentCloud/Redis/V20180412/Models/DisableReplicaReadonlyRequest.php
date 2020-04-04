@@ -18,12 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisableReplicaReadonly请求参数结构体
+ *
  * @method string getInstanceId() 获取实例序号ID
  * @method void setInstanceId(string $InstanceId) 设置实例序号ID
- */
-
-/**
- *DisableReplicaReadonly请求参数结构体
  */
 class DisableReplicaReadonlyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DisableReplicaReadonlyRequest extends AbstractModel
      * @var string 实例序号ID
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 实例序号ID
      */
@@ -38,6 +37,7 @@ class DisableReplicaReadonlyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

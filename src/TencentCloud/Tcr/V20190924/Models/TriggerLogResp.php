@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 触发器日志
+ *
  * @method string getRepoName() 获取仓库名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepoName(string $RepoName) 设置仓库名称
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvokeResult(TriggerInvokeResult $InvokeResult) 设置触发结果
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *触发器日志
  */
 class TriggerLogResp extends AbstractModel
 {
@@ -114,6 +112,7 @@ class TriggerLogResp extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvokeResult;
+
     /**
      * @param string $RepoName 仓库名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -138,6 +137,7 @@ class TriggerLogResp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

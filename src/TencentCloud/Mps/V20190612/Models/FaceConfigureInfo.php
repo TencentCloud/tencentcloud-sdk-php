@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人脸识别任务控制参数
+ *
  * @method string getSwitch() 获取人脸识别任务开关，可选值：
 <li>ON：开启智能人脸识别任务；</li>
 <li>OFF：关闭智能人脸识别任务。</li>
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 <li>UserDefine：使用用户自定义人物库。</li>
 <li>All：同时使用默认人物库和用户自定义人物库。</li>
 默认值：All，使用系统默认人物库及用户自定义人物库。
- */
-
-/**
- *人脸识别任务控制参数
  */
 class FaceConfigureInfo extends AbstractModel
 {
@@ -89,6 +87,7 @@ class FaceConfigureInfo extends AbstractModel
 默认值：All，使用系统默认人物库及用户自定义人物库。
      */
     public $FaceLibrary;
+
     /**
      * @param string $Switch 人脸识别任务开关，可选值：
 <li>ON：开启智能人脸识别任务；</li>
@@ -110,6 +109,7 @@ class FaceConfigureInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

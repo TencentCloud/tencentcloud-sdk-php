@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取省份/运营商的播放信息
+ *
  * @method string getName() 获取省份/运营商/国家或地区。
  * @method void setName(string $Name) 设置省份/运营商/国家或地区。
  * @method float getTotalFlux() 获取总流量，单位：MB。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalRequest(integer $TotalRequest) 设置总请求数。
  * @method float getAvgFluxPerSecond() 获取平均下载流量，单位：MB/s
  * @method void setAvgFluxPerSecond(float $AvgFluxPerSecond) 设置平均下载流量，单位：MB/s
- */
-
-/**
- *获取省份/运营商的播放信息
  */
 class ProIspPlaySumInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ProIspPlaySumInfo extends AbstractModel
      * @var float 平均下载流量，单位：MB/s
      */
     public $AvgFluxPerSecond;
+
     /**
      * @param string $Name 省份/运营商/国家或地区。
      * @param float $TotalFlux 总流量，单位：MB。
@@ -62,6 +61,7 @@ class ProIspPlaySumInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

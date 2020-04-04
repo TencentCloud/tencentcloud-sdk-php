@@ -18,14 +18,12 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CopyPerson请求参数结构体
+ *
  * @method string getPersonId() 获取人员ID
  * @method void setPersonId(string $PersonId) 设置人员ID
  * @method array getGroupIds() 获取待加入的人员库列表
  * @method void setGroupIds(array $GroupIds) 设置待加入的人员库列表
- */
-
-/**
- *CopyPerson请求参数结构体
  */
 class CopyPersonRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CopyPersonRequest extends AbstractModel
      * @var array 待加入的人员库列表
      */
     public $GroupIds;
+
     /**
      * @param string $PersonId 人员ID
      * @param array $GroupIds 待加入的人员库列表
@@ -46,6 +45,7 @@ class CopyPersonRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Asr 文字涉政信息
+ *
  * @method float getConfidence() 获取Asr 文字涉政、敏感评分，分值为0到100。
  * @method void setConfidence(float $Confidence) 设置Asr 文字涉政、敏感评分，分值为0到100。
  * @method string getSuggestion() 获取Asr 文字涉政、敏感结果建议，取值范围：
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>block。</li>
  * @method array getSegmentSet() 获取Asr 文字有涉政、敏感嫌疑的视频片段列表。
  * @method void setSegmentSet(array $SegmentSet) 设置Asr 文字有涉政、敏感嫌疑的视频片段列表。
- */
-
-/**
- *Asr 文字涉政信息
  */
 class AiReviewPoliticalAsrTaskOutput extends AbstractModel
 {
@@ -54,6 +52,7 @@ class AiReviewPoliticalAsrTaskOutput extends AbstractModel
      * @var array Asr 文字有涉政、敏感嫌疑的视频片段列表。
      */
     public $SegmentSet;
+
     /**
      * @param float $Confidence Asr 文字涉政、敏感评分，分值为0到100。
      * @param string $Suggestion Asr 文字涉政、敏感结果建议，取值范围：
@@ -66,6 +65,7 @@ class AiReviewPoliticalAsrTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

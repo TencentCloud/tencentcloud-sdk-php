@@ -18,14 +18,13 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquireAuditCredit请求参数结构体
+ *
 
- */
-
-/**
- *InquireAuditCredit请求参数结构体
  */
 class InquireAuditCreditRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class InquireAuditCreditRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

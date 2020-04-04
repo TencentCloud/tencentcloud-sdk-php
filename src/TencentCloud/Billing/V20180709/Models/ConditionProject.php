@@ -18,14 +18,12 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 项目过滤条件
+ *
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method string getProjectName() 获取项目名称
  * @method void setProjectName(string $ProjectName) 设置项目名称
- */
-
-/**
- *项目过滤条件
  */
 class ConditionProject extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ConditionProject extends AbstractModel
      * @var string 项目名称
      */
     public $ProjectName;
+
     /**
      * @param string $ProjectId 项目ID
      * @param string $ProjectName 项目名称
@@ -46,6 +45,7 @@ class ConditionProject extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

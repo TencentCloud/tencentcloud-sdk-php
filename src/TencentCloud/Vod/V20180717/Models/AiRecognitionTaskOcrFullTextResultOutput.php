@@ -18,12 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文本全文识别输出。
+ *
  * @method array getSegmentSet() 获取文本全文识别结果集。
  * @method void setSegmentSet(array $SegmentSet) 设置文本全文识别结果集。
- */
-
-/**
- *文本全文识别输出。
  */
 class AiRecognitionTaskOcrFullTextResultOutput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskOcrFullTextResultOutput extends AbstractModel
      * @var array 文本全文识别结果集。
      */
     public $SegmentSet;
+
     /**
      * @param array $SegmentSet 文本全文识别结果集。
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskOcrFullTextResultOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

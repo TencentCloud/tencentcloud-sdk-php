@@ -18,14 +18,12 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 客流统计分时数据子结构
+ *
  * @method integer getHour() 获取分时 0~23
  * @method void setHour(integer $Hour) 设置分时 0~23
  * @method integer getFlowCount() 获取客流量
  * @method void setFlowCount(integer $FlowCount) 设置客流量
- */
-
-/**
- *客流统计分时数据子结构
  */
 class ZoneHourFlow extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ZoneHourFlow extends AbstractModel
      * @var integer 客流量
      */
     public $FlowCount;
+
     /**
      * @param integer $Hour 分时 0~23
      * @param integer $FlowCount 客流量
@@ -46,6 +45,7 @@ class ZoneHourFlow extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

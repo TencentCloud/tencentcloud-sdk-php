@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务查询结果类型
+ *
  * @method string getType() 获取任务的类型，可以取的值有：
 <li>Transcode：转码</li>
 <li>AnimatedGraphics：转动图</li>
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdaptiveDynamicStreamingTask(MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask) 设置对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *任务查询结果类型
  */
 class MediaProcessTaskResult extends AbstractModel
 {
@@ -122,6 +120,7 @@ class MediaProcessTaskResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdaptiveDynamicStreamingTask;
+
     /**
      * @param string $Type 任务的类型，可以取的值有：
 <li>Transcode：转码</li>
@@ -150,6 +149,7 @@ class MediaProcessTaskResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

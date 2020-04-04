@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ForbidMediaDistribution请求参数结构体
+ *
  * @method array getFileIds() 获取媒体文件列表，每次最多可提交 20 条。
  * @method void setFileIds(array $FileIds) 设置媒体文件列表，每次最多可提交 20 条。
  * @method string getOperation() 获取forbid：禁播，recover：解禁。
  * @method void setOperation(string $Operation) 设置forbid：禁播，recover：解禁。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *ForbidMediaDistribution请求参数结构体
  */
 class ForbidMediaDistributionRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ForbidMediaDistributionRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param array $FileIds 媒体文件列表，每次最多可提交 20 条。
      * @param string $Operation forbid：禁播，recover：解禁。
@@ -54,6 +53,7 @@ class ForbidMediaDistributionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 行业报道新闻
+ *
  * @method string getIndustryId() 获取行业报道ID
  * @method void setIndustryId(string $IndustryId) 设置行业报道ID
  * @method string getPubTime() 获取报道发表时间
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlag(integer $Flag) 设置报道标识
  * @method string getAbstract() 获取报道摘要
  * @method void setAbstract(string $Abstract) 设置报道摘要
- */
-
-/**
- *行业报道新闻
  */
 class IndustryNews extends AbstractModel
 {
@@ -87,6 +85,7 @@ class IndustryNews extends AbstractModel
      * @var string 报道摘要
      */
     public $Abstract;
+
     /**
      * @param string $IndustryId 行业报道ID
      * @param string $PubTime 报道发表时间
@@ -102,6 +101,7 @@ class IndustryNews extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

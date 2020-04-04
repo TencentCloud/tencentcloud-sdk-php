@@ -18,14 +18,12 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGroup返回实体
+ *
  * @method string getGroup() 获取groupId
  * @method void setGroup(string $Group) 设置groupId
  * @method string getProtocol() 获取该 group 使用的协议。
  * @method void setProtocol(string $Protocol) 设置该 group 使用的协议。
- */
-
-/**
- *DescribeGroup返回实体
  */
 class DescribeGroup extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeGroup extends AbstractModel
      * @var string 该 group 使用的协议。
      */
     public $Protocol;
+
     /**
      * @param string $Group groupId
      * @param string $Protocol 该 group 使用的协议。
@@ -46,6 +45,7 @@ class DescribeGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

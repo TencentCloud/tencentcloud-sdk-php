@@ -18,16 +18,14 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDBParameters返回参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：dcdbt-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：dcdbt-ow728lmc。
  * @method array getResult() 获取各参数修改结果
  * @method void setResult(array $Result) 设置各参数修改结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ModifyDBParameters返回参数结构体
  */
 class ModifyDBParametersResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyDBParametersResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $InstanceId 实例 ID，形如：dcdbt-ow728lmc。
      * @param array $Result 各参数修改结果
@@ -54,6 +53,7 @@ class ModifyDBParametersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

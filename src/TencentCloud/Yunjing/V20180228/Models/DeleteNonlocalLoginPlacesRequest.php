@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteNonlocalLoginPlaces请求参数结构体
+ *
  * @method array getIds() 获取异地登录事件ID数组。
  * @method void setIds(array $Ids) 设置异地登录事件ID数组。
- */
-
-/**
- *DeleteNonlocalLoginPlaces请求参数结构体
  */
 class DeleteNonlocalLoginPlacesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteNonlocalLoginPlacesRequest extends AbstractModel
      * @var array 异地登录事件ID数组。
      */
     public $Ids;
+
     /**
      * @param array $Ids 异地登录事件ID数组。
      */
@@ -38,6 +37,7 @@ class DeleteNonlocalLoginPlacesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

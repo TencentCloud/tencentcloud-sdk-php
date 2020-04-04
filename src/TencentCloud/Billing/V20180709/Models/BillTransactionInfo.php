@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 收支明细的流水信息
+ *
  * @method string getActionType() 获取收支类型：deduct 扣费, recharge 充值, return 退费， block 冻结, unblock 解冻
  * @method void setActionType(string $ActionType) 设置收支类型：deduct 扣费, recharge 充值, return 退费， block 冻结, unblock 解冻
  * @method integer getAmount() 获取流水金额，单位（分）；正数表示入账，负数表示出账
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncentive(integer $Incentive) 设置赠送金余额，单位（分）
  * @method integer getFreezing() 获取冻结余额，单位（分）
  * @method void setFreezing(integer $Freezing) 设置冻结余额，单位（分）
- */
-
-/**
- *收支明细的流水信息
  */
 class BillTransactionInfo extends AbstractModel
 {
@@ -87,6 +85,7 @@ class BillTransactionInfo extends AbstractModel
      * @var integer 冻结余额，单位（分）
      */
     public $Freezing;
+
     /**
      * @param string $ActionType 收支类型：deduct 扣费, recharge 充值, return 退费， block 冻结, unblock 解冻
      * @param integer $Amount 流水金额，单位（分）；正数表示入账，负数表示出账
@@ -102,6 +101,7 @@ class BillTransactionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

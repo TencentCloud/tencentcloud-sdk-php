@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务统计数据，包括任务数和用量。
+ *
  * @method string getTime() 获取数据所在时间区间的开始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#52)。如：当时间粒度为天，2018-12-01T00:00:00+08:00，表示2018年12月1日（含）到2018年12月2日（不含）区间。
  * @method void setTime(string $Time) 设置数据所在时间区间的开始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#52)。如：当时间粒度为天，2018-12-01T00:00:00+08:00，表示2018年12月1日（含）到2018年12月2日（不含）区间。
  * @method integer getCount() 获取任务数。
  * @method void setCount(integer $Count) 设置任务数。
  * @method integer getUsage() 获取任务用量。
  * @method void setUsage(integer $Usage) 设置任务用量。
- */
-
-/**
- *任务统计数据，包括任务数和用量。
  */
 class TaskStatDataItem extends AbstractModel
 {
@@ -45,6 +43,7 @@ class TaskStatDataItem extends AbstractModel
      * @var integer 任务用量。
      */
     public $Usage;
+
     /**
      * @param string $Time 数据所在时间区间的开始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#52)。如：当时间粒度为天，2018-12-01T00:00:00+08:00，表示2018年12月1日（含）到2018年12月2日（不含）区间。
      * @param integer $Count 任务数。
@@ -54,6 +53,7 @@ class TaskStatDataItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

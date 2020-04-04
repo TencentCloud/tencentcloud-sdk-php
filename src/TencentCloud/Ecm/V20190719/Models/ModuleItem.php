@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 模块列表Item信息
+ *
  * @method NodeInstanceNum getNodeInstanceNum() 获取节点实例统计信息
  * @method void setNodeInstanceNum(NodeInstanceNum $NodeInstanceNum) 设置节点实例统计信息
  * @method Module getModule() 获取模块信息
  * @method void setModule(Module $Module) 设置模块信息
- */
-
-/**
- *模块列表Item信息
  */
 class ModuleItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModuleItem extends AbstractModel
      * @var Module 模块信息
      */
     public $Module;
+
     /**
      * @param NodeInstanceNum $NodeInstanceNum 节点实例统计信息
      * @param Module $Module 模块信息
@@ -46,6 +45,7 @@ class ModuleItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

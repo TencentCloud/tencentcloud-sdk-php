@@ -18,14 +18,12 @@ namespace TencentCloud\Mongodb\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TerminateDBInstance返回参数结构体
+ *
  * @method string getAsyncRequestId() 获取订单ID，表示注销实例成功
  * @method void setAsyncRequestId(string $AsyncRequestId) 设置订单ID，表示注销实例成功
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *TerminateDBInstance返回参数结构体
  */
 class TerminateDBInstanceResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TerminateDBInstanceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $AsyncRequestId 订单ID，表示注销实例成功
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class TerminateDBInstanceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

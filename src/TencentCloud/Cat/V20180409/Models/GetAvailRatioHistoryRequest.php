@@ -18,14 +18,12 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetAvailRatioHistory请求参数结构体
+ *
  * @method integer getTaskId() 获取拨测任务Id
  * @method void setTaskId(integer $TaskId) 设置拨测任务Id
  * @method string getTimeStamp() 获取具体时间点
  * @method void setTimeStamp(string $TimeStamp) 设置具体时间点
- */
-
-/**
- *GetAvailRatioHistory请求参数结构体
  */
 class GetAvailRatioHistoryRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GetAvailRatioHistoryRequest extends AbstractModel
      * @var string 具体时间点
      */
     public $TimeStamp;
+
     /**
      * @param integer $TaskId 拨测任务Id
      * @param string $TimeStamp 具体时间点
@@ -46,6 +45,7 @@ class GetAvailRatioHistoryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

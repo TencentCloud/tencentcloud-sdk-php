@@ -18,14 +18,12 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyRouteTable请求参数结构体
+ *
  * @method string getRouteTableId() 获取路由表ID
  * @method void setRouteTableId(string $RouteTableId) 设置路由表ID
  * @method string getRouteTableName() 获取路由表名称
  * @method void setRouteTableName(string $RouteTableName) 设置路由表名称
- */
-
-/**
- *ModifyRouteTable请求参数结构体
  */
 class ModifyRouteTableRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyRouteTableRequest extends AbstractModel
      * @var string 路由表名称
      */
     public $RouteTableName;
+
     /**
      * @param string $RouteTableId 路由表ID
      * @param string $RouteTableName 路由表名称
@@ -46,6 +45,7 @@ class ModifyRouteTableRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

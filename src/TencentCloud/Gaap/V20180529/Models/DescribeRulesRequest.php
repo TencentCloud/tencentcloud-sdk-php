@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRules请求参数结构体
+ *
  * @method string getListenerId() 获取7层监听器Id。
  * @method void setListenerId(string $ListenerId) 设置7层监听器Id。
- */
-
-/**
- *DescribeRules请求参数结构体
  */
 class DescribeRulesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeRulesRequest extends AbstractModel
      * @var string 7层监听器Id。
      */
     public $ListenerId;
+
     /**
      * @param string $ListenerId 7层监听器Id。
      */
@@ -38,6 +37,7 @@ class DescribeRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

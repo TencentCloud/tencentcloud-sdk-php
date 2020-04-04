@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 播放错误码信息
+ *
  * @method string getCountryAreaName() 获取国家或地区。
  * @method void setCountryAreaName(string $CountryAreaName) 设置国家或地区。
  * @method string getProvinceName() 获取省份。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCode4xx(integer $Code4xx) 设置错误码为4开头的次数。
  * @method integer getCode5xx() 获取错误码为5开头的次数。
  * @method void setCode5xx(integer $Code5xx) 设置错误码为5开头的次数。
- */
-
-/**
- *播放错误码信息
  */
 class ProIspPlayCodeDataInfo extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ProIspPlayCodeDataInfo extends AbstractModel
      * @var integer 错误码为5开头的次数。
      */
     public $Code5xx;
+
     /**
      * @param string $CountryAreaName 国家或地区。
      * @param string $ProvinceName 省份。
@@ -86,6 +85,7 @@ class ProIspPlayCodeDataInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeIPProductInfo返回参数结构体
+ *
  * @method array getData() 获取云产品信息列表，如果没有查询到则返回空数组，值说明如下：
 Key为ProductName时，value表示云产品实例的名称；
 Key为ProductInstanceId时，value表示云产品实例的ID；
@@ -30,10 +32,6 @@ Key为ProductType时，value表示的是云产品的类型（cvm表示云主机�
 Key为IP时，value表示云产品实例的IP；
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeIPProductInfo返回参数结构体
  */
 class DescribeIPProductInfoResponse extends AbstractModel
 {
@@ -50,6 +48,7 @@ Key为IP时，value表示云产品实例的IP；
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Data 云产品信息列表，如果没有查询到则返回空数组，值说明如下：
 Key为ProductName时，value表示云产品实例的名称；
@@ -62,6 +61,7 @@ Key为IP时，value表示云产品实例的IP；
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

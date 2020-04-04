@@ -18,12 +18,10 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务结果回调地址信息
+ *
  * @method string getUrl() 获取回调URL。
  * @method void setUrl(string $Url) 设置回调URL。
- */
-
-/**
- *任务结果回调地址信息
  */
 class CallbackInfo extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CallbackInfo extends AbstractModel
      * @var string 回调URL。
      */
     public $Url;
+
     /**
      * @param string $Url 回调URL。
      */
@@ -38,6 +37,7 @@ class CallbackInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetAvailRatioHistory返回参数结构体
+ *
  * @method float getAvgAvailRatio() 获取整体平均可用率
  * @method void setAvgAvailRatio(float $AvgAvailRatio) 设置整体平均可用率
  * @method float getLowestAvailRatio() 获取各省份最低可用率
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProvinceData2(array $ProvinceData2) 设置国外分区域的可用率数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetAvailRatioHistory返回参数结构体
  */
 class GetAvailRatioHistoryResponse extends AbstractModel
 {
@@ -115,6 +113,7 @@ class GetAvailRatioHistoryResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param float $AvgAvailRatio 整体平均可用率
      * @param float $LowestAvailRatio 各省份最低可用率
@@ -134,6 +133,7 @@ class GetAvailRatioHistoryResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

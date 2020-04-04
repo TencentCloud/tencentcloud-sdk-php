@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAdaptiveDynamicStreamingTemplate请求参数结构体
+ *
  * @method string getFormat() 获取自适应转码格式，取值范围：
 <li>HLS。</li>
  * @method void setFormat(string $Format) 设置自适应转码格式，取值范围：
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
 默认为否。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
- */
-
-/**
- *CreateAdaptiveDynamicStreamingTemplate请求参数结构体
  */
 class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
@@ -109,6 +107,7 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
      * @var string 模板描述信息，长度限制：256 个字符。
      */
     public $Comment;
+
     /**
      * @param string $Format 自适应转码格式，取值范围：
 <li>HLS。</li>
@@ -134,6 +133,7 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

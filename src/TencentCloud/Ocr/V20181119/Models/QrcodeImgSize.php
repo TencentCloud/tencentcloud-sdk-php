@@ -18,14 +18,12 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图片大小
+ *
  * @method integer getWide() 获取宽
  * @method void setWide(integer $Wide) 设置宽
  * @method integer getHigh() 获取高
  * @method void setHigh(integer $High) 设置高
- */
-
-/**
- *图片大小
  */
 class QrcodeImgSize extends AbstractModel
 {
@@ -38,6 +36,7 @@ class QrcodeImgSize extends AbstractModel
      * @var integer 高
      */
     public $High;
+
     /**
      * @param integer $Wide 宽
      * @param integer $High 高
@@ -46,6 +45,7 @@ class QrcodeImgSize extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

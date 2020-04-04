@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例所在物理机内存监控信息
+ *
  * @method array getTotal() 获取总内存大小。free命令中Mem:一行total的值,单位：KB
  * @method void setTotal(array $Total) 设置总内存大小。free命令中Mem:一行total的值,单位：KB
  * @method array getUsed() 获取已使用内存。free命令中Mem:一行used的值,单位：KB
  * @method void setUsed(array $Used) 设置已使用内存。free命令中Mem:一行used的值,单位：KB
- */
-
-/**
- *实例所在物理机内存监控信息
  */
 class DeviceMemInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeviceMemInfo extends AbstractModel
      * @var array 已使用内存。free命令中Mem:一行used的值,单位：KB
      */
     public $Used;
+
     /**
      * @param array $Total 总内存大小。free命令中Mem:一行total的值,单位：KB
      * @param array $Used 已使用内存。free命令中Mem:一行used的值,单位：KB
@@ -46,6 +45,7 @@ class DeviceMemInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

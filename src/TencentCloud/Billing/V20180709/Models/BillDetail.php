@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 账单明细数据对象
+ *
  * @method string getBusinessCodeName() 获取产品名称：云产品大类，如云服务器CVM、云数据库MySQL
  * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称：云产品大类，如云服务器CVM、云数据库MySQL
  * @method string getProductCodeName() 获取子产品名称：云产品子类，如云服务器CVM-标准型S1
@@ -74,10 +76,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(string $RegionId) 设置区域ID
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *账单明细数据对象
  */
 class BillDetail extends AbstractModel
 {
@@ -200,6 +198,7 @@ class BillDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
+
     /**
      * @param string $BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      * @param string $ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1
@@ -234,6 +233,7 @@ class BillDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

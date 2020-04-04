@@ -18,14 +18,13 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRepairTaskConstant请求参数结构体
+ *
 
- */
-
-/**
- *DescribeRepairTaskConstant请求参数结构体
  */
 class DescribeRepairTaskConstantRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeRepairTaskConstantRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

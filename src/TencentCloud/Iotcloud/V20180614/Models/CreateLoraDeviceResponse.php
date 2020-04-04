@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLoraDevice返回参数结构体
+ *
  * @method string getAppEui() 获取LoRa应用UUID
  * @method void setAppEui(string $AppEui) 设置LoRa应用UUID
  * @method string getDeviceEui() 获取LoRa设备UUID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateLoraDevice返回参数结构体
  */
 class CreateLoraDeviceResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateLoraDeviceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $AppEui LoRa应用UUID
      * @param string $DeviceEui LoRa设备UUID
@@ -70,6 +69,7 @@ class CreateLoraDeviceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

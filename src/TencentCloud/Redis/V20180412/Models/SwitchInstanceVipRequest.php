@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SwitchInstanceVip请求参数结构体
+ *
  * @method string getSrcInstanceId() 获取源实例ID
  * @method void setSrcInstanceId(string $SrcInstanceId) 设置源实例ID
  * @method string getDstInstanceId() 获取目标实例ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForceSwitch(integer $ForceSwitch) 设置在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
  * @method string getSwitchTime() 获取now: 立即切换，syncComplete：等待同步完成后切换
  * @method void setSwitchTime(string $SwitchTime) 设置now: 立即切换，syncComplete：等待同步完成后切换
- */
-
-/**
- *SwitchInstanceVip请求参数结构体
  */
 class SwitchInstanceVipRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class SwitchInstanceVipRequest extends AbstractModel
      * @var string now: 立即切换，syncComplete：等待同步完成后切换
      */
     public $SwitchTime;
+
     /**
      * @param string $SrcInstanceId 源实例ID
      * @param string $DstInstanceId 目标实例ID
@@ -70,6 +69,7 @@ class SwitchInstanceVipRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

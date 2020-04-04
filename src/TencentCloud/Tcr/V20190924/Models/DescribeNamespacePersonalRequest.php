@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNamespacePersonal请求参数结构体
+ *
  * @method string getNamespace() 获取命名空间，支持模糊查询
  * @method void setNamespace(string $Namespace) 设置命名空间，支持模糊查询
  * @method integer getLimit() 获取单页数量
  * @method void setLimit(integer $Limit) 设置单页数量
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
- */
-
-/**
- *DescribeNamespacePersonal请求参数结构体
  */
 class DescribeNamespacePersonalRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeNamespacePersonalRequest extends AbstractModel
      * @var integer 偏移量
      */
     public $Offset;
+
     /**
      * @param string $Namespace 命名空间，支持模糊查询
      * @param integer $Limit 单页数量
@@ -54,6 +53,7 @@ class DescribeNamespacePersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

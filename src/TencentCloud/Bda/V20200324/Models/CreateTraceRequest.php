@@ -18,14 +18,12 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTrace请求参数结构体
+ *
  * @method string getPersonId() 获取人员ID。
  * @method void setPersonId(string $PersonId) 设置人员ID。
  * @method Trace getTrace() 获取人体轨迹信息。
  * @method void setTrace(Trace $Trace) 设置人体轨迹信息。
- */
-
-/**
- *CreateTrace请求参数结构体
  */
 class CreateTraceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateTraceRequest extends AbstractModel
      * @var Trace 人体轨迹信息。
      */
     public $Trace;
+
     /**
      * @param string $PersonId 人员ID。
      * @param Trace $Trace 人体轨迹信息。
@@ -46,6 +45,7 @@ class CreateTraceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccessGroups请求参数结构体
+ *
  * @method array getFilters() 获取过滤条件，Name可选“AccessGroupId“和“AccessGroupName”，Values上限为10
  * @method void setFilters(array $Filters) 设置过滤条件，Name可选“AccessGroupId“和“AccessGroupName”，Values上限为10
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认为所有
  * @method void setLimit(integer $Limit) 设置返回数量，默认为所有
- */
-
-/**
- *DescribeAccessGroups请求参数结构体
  */
 class DescribeAccessGroupsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAccessGroupsRequest extends AbstractModel
      * @var integer 返回数量，默认为所有
      */
     public $Limit;
+
     /**
      * @param array $Filters 过滤条件，Name可选“AccessGroupId“和“AccessGroupName”，Values上限为10
      * @param integer $Offset 偏移量，默认为0
@@ -54,6 +53,7 @@ class DescribeAccessGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DriverLicenseOCR请求参数结构体
+ *
  * @method string getImageBase64() 获取图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
  * @method void setImageBase64(string $ImageBase64) 设置图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 BACK 为驾驶证副页正面（有档案编号的一面）。
  * @method void setCardSide(string $CardSide) 设置FRONT 为驾驶证主页正面（有红色印章的一面），
 BACK 为驾驶证副页正面（有档案编号的一面）。
- */
-
-/**
- *DriverLicenseOCR请求参数结构体
  */
 class DriverLicenseOCRRequest extends AbstractModel
 {
@@ -54,6 +52,7 @@ class DriverLicenseOCRRequest extends AbstractModel
 BACK 为驾驶证副页正面（有档案编号的一面）。
      */
     public $CardSide;
+
     /**
      * @param string $ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
@@ -66,6 +65,7 @@ BACK 为驾驶证副页正面（有档案编号的一面）。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

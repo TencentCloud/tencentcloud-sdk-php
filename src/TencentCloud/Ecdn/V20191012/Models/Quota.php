@@ -18,16 +18,14 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 刷新用量及刷新配额
+ *
  * @method integer getBatch() 获取单次批量提交配额上限。
  * @method void setBatch(integer $Batch) 设置单次批量提交配额上限。
  * @method integer getTotal() 获取每日提交配额上限。
  * @method void setTotal(integer $Total) 设置每日提交配额上限。
  * @method integer getAvailable() 获取每日剩余的可提交配额。
  * @method void setAvailable(integer $Available) 设置每日剩余的可提交配额。
- */
-
-/**
- *刷新用量及刷新配额
  */
 class Quota extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Quota extends AbstractModel
      * @var integer 每日剩余的可提交配额。
      */
     public $Available;
+
     /**
      * @param integer $Batch 单次批量提交配额上限。
      * @param integer $Total 每日提交配额上限。
@@ -54,6 +53,7 @@ class Quota extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

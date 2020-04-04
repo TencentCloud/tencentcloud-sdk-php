@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CLS主题信息
+ *
  * @method string getTopicId() 获取主题ID
  * @method void setTopicId(string $TopicId) 设置主题ID
  * @method string getTopicName() 获取主题名字
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *CLS主题信息
  */
 class TopicInfo extends AbstractModel
 {
@@ -55,6 +53,7 @@ class TopicInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
+
     /**
      * @param string $TopicId 主题ID
      * @param string $TopicName 主题名字
@@ -66,6 +65,7 @@ class TopicInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

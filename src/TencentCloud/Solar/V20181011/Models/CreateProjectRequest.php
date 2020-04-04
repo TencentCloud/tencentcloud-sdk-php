@@ -18,6 +18,8 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateProject请求参数结构体
+ *
  * @method string getProjectName() 获取项目名称
  * @method void setProjectName(string $ProjectName) 设置项目名称
  * @method string getProjectOrg() 获取项目机构
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectIntroduction(string $ProjectIntroduction) 设置项目简介
  * @method string getProjectOrgId() 获取所属部门ID
  * @method void setProjectOrgId(string $ProjectOrgId) 设置所属部门ID
- */
-
-/**
- *CreateProject请求参数结构体
  */
 class CreateProjectRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateProjectRequest extends AbstractModel
      * @var string 所属部门ID
      */
     public $ProjectOrgId;
+
     /**
      * @param string $ProjectName 项目名称
      * @param string $ProjectOrg 项目机构
@@ -70,6 +69,7 @@ class CreateProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

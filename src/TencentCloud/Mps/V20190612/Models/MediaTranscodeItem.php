@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转码信息
+ *
  * @method TaskOutputStorage getOutputStorage() 获取转码后文件的目标存储。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置转码后文件的目标存储。
  * @method string getPath() 获取转码后的视频文件路径。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioStreamSet(array $AudioStreamSet) 设置音频流信息。
  * @method array getVideoStreamSet() 获取视频流信息。
  * @method void setVideoStreamSet(array $VideoStreamSet) 设置视频流信息。
- */
-
-/**
- *转码信息
  */
 class MediaTranscodeItem extends AbstractModel
 {
@@ -108,6 +106,7 @@ class MediaTranscodeItem extends AbstractModel
      * @var array 视频流信息。
      */
     public $VideoStreamSet;
+
     /**
      * @param TaskOutputStorage $OutputStorage 转码后文件的目标存储。
      * @param string $Path 转码后的视频文件路径。
@@ -126,6 +125,7 @@ class MediaTranscodeItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iottid\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePermission返回参数结构体
+ *
  * @method boolean getEnterpriseUser() 获取企业用户
  * @method void setEnterpriseUser(boolean $EnterpriseUser) 设置企业用户
  * @method string getDownloadPermission() 获取下载控制台权限
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsePermission(string $UsePermission) 设置使用控制台权限
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribePermission返回参数结构体
  */
 class DescribePermissionResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribePermissionResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param boolean $EnterpriseUser 企业用户
      * @param string $DownloadPermission 下载控制台权限
@@ -62,6 +61,7 @@ class DescribePermissionResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

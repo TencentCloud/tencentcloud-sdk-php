@@ -18,14 +18,12 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StopOnlineRecord请求参数结构体
+ *
  * @method integer getSdkAppId() 获取客户的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置客户的SdkAppId
  * @method string getTaskId() 获取需要停止录制的任务 Id
  * @method void setTaskId(string $TaskId) 设置需要停止录制的任务 Id
- */
-
-/**
- *StopOnlineRecord请求参数结构体
  */
 class StopOnlineRecordRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class StopOnlineRecordRequest extends AbstractModel
      * @var string 需要停止录制的任务 Id
      */
     public $TaskId;
+
     /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param string $TaskId 需要停止录制的任务 Id
@@ -46,6 +45,7 @@ class StopOnlineRecordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

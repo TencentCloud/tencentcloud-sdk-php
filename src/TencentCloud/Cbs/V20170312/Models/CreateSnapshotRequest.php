@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSnapshot请求参数结构体
+ *
  * @method string getDiskId() 获取需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
  * @method void setDiskId(string $DiskId) 设置需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
  * @method string getSnapshotName() 获取快照名称，不传则新快照名称默认为“未命名”。
  * @method void setSnapshotName(string $SnapshotName) 设置快照名称，不传则新快照名称默认为“未命名”。
- */
-
-/**
- *CreateSnapshot请求参数结构体
  */
 class CreateSnapshotRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateSnapshotRequest extends AbstractModel
      * @var string 快照名称，不传则新快照名称默认为“未命名”。
      */
     public $SnapshotName;
+
     /**
      * @param string $DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
      * @param string $SnapshotName 快照名称，不传则新快照名称默认为“未命名”。
@@ -46,6 +45,7 @@ class CreateSnapshotRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

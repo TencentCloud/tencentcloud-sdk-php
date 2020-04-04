@@ -18,6 +18,8 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 流布局参数
+ *
  * @method LayoutParams getLayoutParams() 获取流布局配置参数
  * @method void setLayoutParams(LayoutParams $LayoutParams) 设置流布局配置参数
  * @method string getInputStreamId() 获取视频流ID
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 4. 不填 - 表示当前画面用于备选，当有新的视频流加入时，会从这些备选的空位中选择一个没有被占用的位置来显示新的视频流画面
  * @method string getBackgroundColor() 获取背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
  * @method void setBackgroundColor(string $BackgroundColor) 设置背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
- */
-
-/**
- *流布局参数
  */
 class StreamLayout extends AbstractModel
 {
@@ -60,6 +58,7 @@ class StreamLayout extends AbstractModel
      * @var string 背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
      */
     public $BackgroundColor;
+
     /**
      * @param LayoutParams $LayoutParams 流布局配置参数
      * @param string $InputStreamId 视频流ID
@@ -74,6 +73,7 @@ class StreamLayout extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

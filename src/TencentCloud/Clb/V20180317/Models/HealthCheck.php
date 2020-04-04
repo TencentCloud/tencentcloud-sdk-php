@@ -18,6 +18,9 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 健康检查信息。
+注意，自定义探测相关参数 目前只有少量区域灰度支持。
+ *
  * @method integer getHealthSwitch() 获取是否开启健康检查：1（开启）、0（关闭）。
  * @method void setHealthSwitch(integer $HealthSwitch) 设置是否开启健康检查：1（开启）、0（关闭）。
  * @method integer getTimeOut() 获取健康检查的响应超时时间（仅适用于四层监听器），可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
@@ -78,11 +81,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpVersion(string $HttpVersion) 设置自定义探测相关参数。健康检查协议CheckType的值取HTTP时，必传此字段，代表后端服务的HTTP版本：HTTP/1.0、HTTP/1.1；（仅适用于TCP监听器）
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *健康检查信息。
-注意，自定义探测相关参数 目前只有少量区域灰度支持。
  */
 class HealthCheck extends AbstractModel
 {
@@ -175,6 +173,7 @@ class HealthCheck extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpVersion;
+
     /**
      * @param integer $HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。
      * @param integer $TimeOut 健康检查的响应超时时间（仅适用于四层监听器），可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
@@ -211,6 +210,7 @@ class HealthCheck extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

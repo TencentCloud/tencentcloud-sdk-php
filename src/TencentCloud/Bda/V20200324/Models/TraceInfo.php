@@ -18,14 +18,12 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人体轨迹信息。
+ *
  * @method string getTraceId() 获取人体轨迹ID。
  * @method void setTraceId(string $TraceId) 设置人体轨迹ID。
  * @method array getBodyIds() 获取包含的人体轨迹图片Id列表。
  * @method void setBodyIds(array $BodyIds) 设置包含的人体轨迹图片Id列表。
- */
-
-/**
- *人体轨迹信息。
  */
 class TraceInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TraceInfo extends AbstractModel
      * @var array 包含的人体轨迹图片Id列表。
      */
     public $BodyIds;
+
     /**
      * @param string $TraceId 人体轨迹ID。
      * @param array $BodyIds 包含的人体轨迹图片Id列表。
@@ -46,6 +45,7 @@ class TraceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

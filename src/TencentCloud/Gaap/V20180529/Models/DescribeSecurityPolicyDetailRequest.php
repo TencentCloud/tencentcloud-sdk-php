@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityPolicyDetail请求参数结构体
+ *
  * @method string getPolicyId() 获取安全策略ID
  * @method void setPolicyId(string $PolicyId) 设置安全策略ID
- */
-
-/**
- *DescribeSecurityPolicyDetail请求参数结构体
  */
 class DescribeSecurityPolicyDetailRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeSecurityPolicyDetailRequest extends AbstractModel
      * @var string 安全策略ID
      */
     public $PolicyId;
+
     /**
      * @param string $PolicyId 安全策略ID
      */
@@ -38,6 +37,7 @@ class DescribeSecurityPolicyDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

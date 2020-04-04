@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转码信息
+ *
  * @method string getUrl() 获取转码后的视频文件地址。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置转码后的视频文件地址。
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoStreamSet(array $VideoStreamSet) 设置视频流信息。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *转码信息
  */
 class MediaTranscodeItem extends AbstractModel
 {
@@ -134,6 +132,7 @@ class MediaTranscodeItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoStreamSet;
+
     /**
      * @param string $Url 转码后的视频文件地址。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -162,6 +161,7 @@ class MediaTranscodeItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

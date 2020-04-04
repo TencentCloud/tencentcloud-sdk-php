@@ -18,12 +18,10 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSpecInfo请求参数结构体
+ *
  * @method string getZone() 获取待查询可用区
  * @method void setZone(string $Zone) 设置待查询可用区
- */
-
-/**
- *DescribeSpecInfo请求参数结构体
  */
 class DescribeSpecInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeSpecInfoRequest extends AbstractModel
      * @var string 待查询可用区
      */
     public $Zone;
+
     /**
      * @param string $Zone 待查询可用区
      */
@@ -38,6 +37,7 @@ class DescribeSpecInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

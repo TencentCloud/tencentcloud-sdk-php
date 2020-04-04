@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNetDetect请求参数结构体
+ *
  * @method string getVpcId() 获取`VPC`实例`ID`。形如：`vpc-12345678`
  * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。形如：`vpc-12345678`
  * @method string getSubnetId() 获取子网实例ID。形如：subnet-12345678。
@@ -52,10 +54,6 @@ NORMAL_CVM：普通云服务器；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
  * @method string getNetDetectDescription() 获取网络探测描述。
  * @method void setNetDetectDescription(string $NetDetectDescription) 设置网络探测描述。
- */
-
-/**
- *CreateNetDetect请求参数结构体
  */
 class CreateNetDetectRequest extends AbstractModel
 {
@@ -103,6 +101,7 @@ NORMAL_CVM：普通云服务器；
      * @var string 网络探测描述。
      */
     public $NetDetectDescription;
+
     /**
      * @param string $VpcId `VPC`实例`ID`。形如：`vpc-12345678`
      * @param string $SubnetId 子网实例ID。形如：subnet-12345678。
@@ -126,6 +125,7 @@ NORMAL_CVM：普通云服务器；
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

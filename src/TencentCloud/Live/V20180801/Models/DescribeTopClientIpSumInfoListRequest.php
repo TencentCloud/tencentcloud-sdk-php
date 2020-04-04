@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTopClientIpSumInfoList请求参数结构体
+ *
  * @method string getStartTime() 获取起始时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method void setStartTime(string $StartTime) 设置起始时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method string getEndTime() 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
  * @method string getOutLanguage() 获取输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
  * @method void setOutLanguage(string $OutLanguage) 设置输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
- */
-
-/**
- *DescribeTopClientIpSumInfoList请求参数结构体
  */
 class DescribeTopClientIpSumInfoListRequest extends AbstractModel
 {
@@ -83,6 +81,7 @@ class DescribeTopClientIpSumInfoListRequest extends AbstractModel
      * @var string 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
      */
     public $OutLanguage;
+
     /**
      * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS
@@ -98,6 +97,7 @@ class DescribeTopClientIpSumInfoListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

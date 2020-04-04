@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddMachineTag请求参数结构体
+ *
  * @method string getQuuid() 获取云服务器ID
  * @method void setQuuid(string $Quuid) 设置云服务器ID
  * @method integer getTagId() 获取标签ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMRegion(string $MRegion) 设置云服务器地区
  * @method string getMArea() 获取云服务器类型(CVM|BM)
  * @method void setMArea(string $MArea) 设置云服务器类型(CVM|BM)
- */
-
-/**
- *AddMachineTag请求参数结构体
  */
 class AddMachineTagRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AddMachineTagRequest extends AbstractModel
      * @var string 云服务器类型(CVM|BM)
      */
     public $MArea;
+
     /**
      * @param string $Quuid 云服务器ID
      * @param integer $TagId 标签ID
@@ -62,6 +61,7 @@ class AddMachineTagRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

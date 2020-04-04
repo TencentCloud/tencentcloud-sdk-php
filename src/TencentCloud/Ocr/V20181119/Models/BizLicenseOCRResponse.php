@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BizLicenseOCR返回参数结构体
+ *
  * @method string getRegNum() 获取注册号
  * @method void setRegNum(string $RegNum) 设置注册号
  * @method string getName() 获取公司名称
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSetDate(string $SetDate) 设置成立日期
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *BizLicenseOCR返回参数结构体
  */
 class BizLicenseOCRResponse extends AbstractModel
 {
@@ -101,6 +99,7 @@ class BizLicenseOCRResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $RegNum 注册号
      * @param string $Name 公司名称
@@ -118,6 +117,7 @@ class BizLicenseOCRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

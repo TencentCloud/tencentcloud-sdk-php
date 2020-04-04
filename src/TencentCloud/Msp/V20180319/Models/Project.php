@@ -18,14 +18,12 @@ namespace TencentCloud\Msp\V20180319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 列表类型
+ *
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method string getProjectName() 获取项目名称
  * @method void setProjectName(string $ProjectName) 设置项目名称
- */
-
-/**
- *列表类型
  */
 class Project extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Project extends AbstractModel
      * @var string 项目名称
      */
     public $ProjectName;
+
     /**
      * @param integer $ProjectId 项目ID
      * @param string $ProjectName 项目名称
@@ -46,6 +45,7 @@ class Project extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

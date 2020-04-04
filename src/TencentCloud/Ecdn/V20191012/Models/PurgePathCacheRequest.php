@@ -18,14 +18,12 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PurgePathCache请求参数结构体
+ *
  * @method array getPaths() 获取要刷新的目录列表，必须包含协议头部。
  * @method void setPaths(array $Paths) 设置要刷新的目录列表，必须包含协议头部。
  * @method string getFlushType() 获取刷新类型，flush 代表刷新有更新的资源，delete 表示刷新全部资源。
  * @method void setFlushType(string $FlushType) 设置刷新类型，flush 代表刷新有更新的资源，delete 表示刷新全部资源。
- */
-
-/**
- *PurgePathCache请求参数结构体
  */
 class PurgePathCacheRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class PurgePathCacheRequest extends AbstractModel
      * @var string 刷新类型，flush 代表刷新有更新的资源，delete 表示刷新全部资源。
      */
     public $FlushType;
+
     /**
      * @param array $Paths 要刷新的目录列表，必须包含协议头部。
      * @param string $FlushType 刷新类型，flush 代表刷新有更新的资源，delete 表示刷新全部资源。
@@ -46,6 +45,7 @@ class PurgePathCacheRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

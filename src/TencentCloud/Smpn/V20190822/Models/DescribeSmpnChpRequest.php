@@ -18,14 +18,12 @@ namespace TencentCloud\Smpn\V20190822\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSmpnChp请求参数结构体
+ *
  * @method string getResourceId() 获取客户用于计费的资源Id
  * @method void setResourceId(string $ResourceId) 设置客户用于计费的资源Id
  * @method CHPRequest getRequestData() 获取终端骚扰保护请求
  * @method void setRequestData(CHPRequest $RequestData) 设置终端骚扰保护请求
- */
-
-/**
- *DescribeSmpnChp请求参数结构体
  */
 class DescribeSmpnChpRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeSmpnChpRequest extends AbstractModel
      * @var CHPRequest 终端骚扰保护请求
      */
     public $RequestData;
+
     /**
      * @param string $ResourceId 客户用于计费的资源Id
      * @param CHPRequest $RequestData 终端骚扰保护请求
@@ -46,6 +45,7 @@ class DescribeSmpnChpRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

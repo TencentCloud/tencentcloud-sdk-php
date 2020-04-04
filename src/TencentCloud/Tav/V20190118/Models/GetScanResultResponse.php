@@ -18,6 +18,8 @@ namespace TencentCloud\Tav\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetScanResult返回参数结构体
+ *
  * @method integer getStatus() 获取接口调用状态，成功返回200，失败返回400
  * @method void setStatus(integer $Status) 设置接口调用状态，成功返回200，失败返回400
  * @method string getInfo() 获取接口调用描述信息，成功返回"scan success"，失败返回"scan error"
@@ -28,10 +30,6 @@ scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、
 scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、1样本扫描结束且不报毒、2样本扫描结束且报黑、3样本下载失败；
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetScanResult返回参数结构体
  */
 class GetScanResultResponse extends AbstractModel
 {
@@ -55,6 +53,7 @@ scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Status 接口调用状态，成功返回200，失败返回400
      * @param string $Info 接口调用描述信息，成功返回"scan success"，失败返回"scan error"
@@ -66,6 +65,7 @@ scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

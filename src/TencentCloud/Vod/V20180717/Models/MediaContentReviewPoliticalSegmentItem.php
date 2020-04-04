@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内容审核涉政嫌疑片段
+ *
  * @method float getStartTimeOffset() 获取嫌疑片段起始的偏移时间，单位：秒。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置嫌疑片段起始的偏移时间，单位：秒。
  * @method float getEndTimeOffset() 获取嫌疑片段结束的偏移时间，单位：秒。
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPicUrlExpireTimeStamp(integer $PicUrlExpireTimeStamp) 设置该字段已废弃，请使用 PicUrlExpireTime。
  * @method string getPicUrlExpireTime() 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setPicUrlExpireTime(string $PicUrlExpireTime) 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- */
-
-/**
- *内容审核涉政嫌疑片段
  */
 class MediaContentReviewPoliticalSegmentItem extends AbstractModel
 {
@@ -106,6 +104,7 @@ class MediaContentReviewPoliticalSegmentItem extends AbstractModel
      * @var string 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $PicUrlExpireTime;
+
     /**
      * @param float $StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
      * @param float $EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
@@ -126,6 +125,7 @@ class MediaContentReviewPoliticalSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

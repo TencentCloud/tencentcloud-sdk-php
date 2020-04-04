@@ -18,6 +18,8 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SegmentPortraitPic请求参数结构体
+ *
  * @method string getImage() 获取图片 base64 数据，base64 编码后大小不可超过5M。
 图片分辨率须小于2000*2000。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -37,10 +39,6 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  */
-
-/**
- *SegmentPortraitPic请求参数结构体
- */
 class SegmentPortraitPicRequest extends AbstractModel
 {
     /**
@@ -59,6 +57,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Url;
+
     /**
      * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。
 图片分辨率须小于2000*2000。 
@@ -74,6 +73,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

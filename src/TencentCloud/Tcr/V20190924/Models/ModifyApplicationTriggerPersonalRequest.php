@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyApplicationTriggerPersonal请求参数结构体
+ *
  * @method string getRepoName() 获取触发器关联的镜像仓库，library/test格式
  * @method void setRepoName(string $RepoName) 设置触发器关联的镜像仓库，library/test格式
  * @method string getTriggerName() 获取触发器名称
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterRegion(integer $ClusterRegion) 设置应用所在TKE集群地域数字ID，如1（广州）、16（成都）
  * @method string getNewTriggerName() 获取新触发器名称
  * @method void setNewTriggerName(string $NewTriggerName) 设置新触发器名称
- */
-
-/**
- *ModifyApplicationTriggerPersonal请求参数结构体
  */
 class ModifyApplicationTriggerPersonalRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class ModifyApplicationTriggerPersonalRequest extends AbstractModel
      * @var string 新触发器名称
      */
     public $NewTriggerName;
+
     /**
      * @param string $RepoName 触发器关联的镜像仓库，library/test格式
      * @param string $TriggerName 触发器名称
@@ -118,6 +117,7 @@ class ModifyApplicationTriggerPersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

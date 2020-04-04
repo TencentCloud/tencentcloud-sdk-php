@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音关键词识别输入。
+ *
  * @method integer getDefinition() 获取语音关键词识别模板 ID。
  * @method void setDefinition(integer $Definition) 设置语音关键词识别模板 ID。
- */
-
-/**
- *语音关键词识别输入。
  */
 class AiRecognitionTaskAsrWordsResultInput extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AiRecognitionTaskAsrWordsResultInput extends AbstractModel
      * @var integer 语音关键词识别模板 ID。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 语音关键词识别模板 ID。
      */
@@ -38,6 +37,7 @@ class AiRecognitionTaskAsrWordsResultInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

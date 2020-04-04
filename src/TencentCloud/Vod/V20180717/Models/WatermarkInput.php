@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频处理任务中的水印参数类型
+ *
  * @method integer getDefinition() 获取水印模板 ID。
  * @method void setDefinition(integer $Definition) 设置水印模板 ID。
  * @method string getTextContent() 获取文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 <li>不填或填0，表示水印持续到画面结束；</li>
 <li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
 <li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
- */
-
-/**
- *视频处理任务中的水印参数类型
  */
 class WatermarkInput extends AbstractModel
 {
@@ -77,6 +75,7 @@ class WatermarkInput extends AbstractModel
 <li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
      */
     public $EndTimeOffset;
+
     /**
      * @param integer $Definition 水印模板 ID。
      * @param string $TextContent 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
@@ -94,6 +93,7 @@ class WatermarkInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述了 “云监控” 服务相关的信息
+ *
  * @method boolean getEnabled() 获取是否开启[云监控](/document/product/248)服务。取值范围：<br><li>TRUE：表示开启云监控服务<br><li>FALSE：表示不开启云监控服务<br><br>默认取值：TRUE。
  * @method void setEnabled(boolean $Enabled) 设置是否开启[云监控](/document/product/248)服务。取值范围：<br><li>TRUE：表示开启云监控服务<br><li>FALSE：表示不开启云监控服务<br><br>默认取值：TRUE。
- */
-
-/**
- *描述了 “云监控” 服务相关的信息
  */
 class RunMonitorServiceEnabled extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RunMonitorServiceEnabled extends AbstractModel
      * @var boolean 是否开启[云监控](/document/product/248)服务。取值范围：<br><li>TRUE：表示开启云监控服务<br><li>FALSE：表示不开启云监控服务<br><br>默认取值：TRUE。
      */
     public $Enabled;
+
     /**
      * @param boolean $Enabled 是否开启[云监控](/document/product/248)服务。取值范围：<br><li>TRUE：表示开启云监控服务<br><li>FALSE：表示不开启云监控服务<br><br>默认取值：TRUE。
      */
@@ -38,6 +37,7 @@ class RunMonitorServiceEnabled extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

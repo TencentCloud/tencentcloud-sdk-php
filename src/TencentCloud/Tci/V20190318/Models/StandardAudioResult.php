@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 标准化接口图像分析结果
+ *
  * @method ASRStat getAsrStat() 获取返回的当前音频的统计信息。当进度为100时返回。
  * @method void setAsrStat(ASRStat $AsrStat) 设置返回的当前音频的统计信息。当进度为100时返回。
  * @method array getTexts() 获取返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置任务状态
  * @method integer getTotalCount() 获取结果数量
  * @method void setTotalCount(integer $TotalCount) 设置结果数量
- */
-
-/**
- *标准化接口图像分析结果
  */
 class StandardAudioResult extends AbstractModel
 {
@@ -73,6 +71,7 @@ class StandardAudioResult extends AbstractModel
      * @var integer 结果数量
      */
     public $TotalCount;
+
     /**
      * @param ASRStat $AsrStat 返回的当前音频的统计信息。当进度为100时返回。
      * @param array $Texts 返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
@@ -86,6 +85,7 @@ class StandardAudioResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

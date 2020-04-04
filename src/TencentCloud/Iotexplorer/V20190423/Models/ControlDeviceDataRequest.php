@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ControlDeviceData请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getDeviceName() 获取设备名称
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceId(string $DeviceId) 设置设备ID，该字段有值将代替 ProductId/DeviceName , 通常情况不需要填写
  * @method integer getDataTimestamp() 获取上报数据UNIX时间戳(毫秒), 仅对Method:reported有效
  * @method void setDataTimestamp(integer $DataTimestamp) 设置上报数据UNIX时间戳(毫秒), 仅对Method:reported有效
- */
-
-/**
- *ControlDeviceData请求参数结构体
  */
 class ControlDeviceDataRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ControlDeviceDataRequest extends AbstractModel
      * @var integer 上报数据UNIX时间戳(毫秒), 仅对Method:reported有效
      */
     public $DataTimestamp;
+
     /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
@@ -78,6 +77,7 @@ class ControlDeviceDataRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 直播 AI Ocr 单词识别结果
+ *
  * @method string getWord() 获取文本关键词。
  * @method void setWord(string $Word) 设置文本关键词。
  * @method float getStartPtsTime() 获取识别片段起始的 PTS 时间，单位：秒。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfidence(float $Confidence) 设置识别片段置信度。取值：0~100。
  * @method array getAreaCoords() 获取识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
  * @method void setAreaCoords(array $AreaCoords) 设置识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
- */
-
-/**
- *直播 AI Ocr 单词识别结果
  */
 class LiveStreamOcrWordsRecognitionResult extends AbstractModel
 {
@@ -59,6 +57,7 @@ class LiveStreamOcrWordsRecognitionResult extends AbstractModel
      * @var array 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
      */
     public $AreaCoords;
+
     /**
      * @param string $Word 文本关键词。
      * @param float $StartPtsTime 识别片段起始的 PTS 时间，单位：秒。
@@ -70,6 +69,7 @@ class LiveStreamOcrWordsRecognitionResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

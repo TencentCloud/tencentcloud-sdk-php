@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveStreamPushInfoList返回参数结构体
+ *
  * @method array getDataInfoList() 获取直播流的统计信息列表。
  * @method void setDataInfoList(array $DataInfoList) 设置直播流的统计信息列表。
  * @method integer getTotalNum() 获取所有在线流的总数量。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置每页的在线流的个数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeLiveStreamPushInfoList返回参数结构体
  */
 class DescribeLiveStreamPushInfoListResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeLiveStreamPushInfoListResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $DataInfoList 直播流的统计信息列表。
      * @param integer $TotalNum 所有在线流的总数量。
@@ -78,6 +77,7 @@ class DescribeLiveStreamPushInfoListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

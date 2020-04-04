@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeResourceGroups请求参数结构体
+ *
  * @method array getFilters() 获取筛选选项
  * @method void setFilters(array $Filters) 设置筛选选项
  * @method integer getOffset() 获取偏移量，默认为0
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) 设置输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
  * @method string getOrderField() 获取排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
  * @method void setOrderField(string $OrderField) 设置排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
- */
-
-/**
- *DescribeResourceGroups请求参数结构体
  */
 class DescribeResourceGroupsRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeResourceGroupsRequest extends AbstractModel
      * @var string 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
      */
     public $OrderField;
+
     /**
      * @param array $Filters 筛选选项
      * @param integer $Offset 偏移量，默认为0
@@ -70,6 +69,7 @@ class DescribeResourceGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

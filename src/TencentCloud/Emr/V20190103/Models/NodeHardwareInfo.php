@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 节点硬件信息
+ *
  * @method integer getAppId() 获取用户APPID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置用户APPID
@@ -162,10 +164,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoFlag(integer $AutoFlag) 设置是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *节点硬件信息
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -384,6 +382,7 @@ class NodeHardwareInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoFlag;
+
     /**
      * @param integer $AppId 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -462,6 +461,7 @@ class NodeHardwareInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

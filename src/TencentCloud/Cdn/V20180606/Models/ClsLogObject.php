@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CLS日志搜索对象
+ *
  * @method string getTopicId() 获取主题ID
  * @method void setTopicId(string $TopicId) 设置主题ID
  * @method string getTopicName() 获取主题名字
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilename(string $Filename) 设置采集路径
  * @method string getSource() 获取日志来源设备
  * @method void setSource(string $Source) 设置日志来源设备
- */
-
-/**
- *CLS日志搜索对象
  */
 class ClsLogObject extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ClsLogObject extends AbstractModel
      * @var string 日志来源设备
      */
     public $Source;
+
     /**
      * @param string $TopicId 主题ID
      * @param string $TopicName 主题名字
@@ -78,6 +77,7 @@ class ClsLogObject extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

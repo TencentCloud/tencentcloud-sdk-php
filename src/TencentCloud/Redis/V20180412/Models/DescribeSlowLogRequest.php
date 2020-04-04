@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSlowLog请求参数结构体
+ *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getBeginTime() 获取开始时间
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置页面大小
  * @method integer getOffset() 获取偏移量，取Limit整数倍
  * @method void setOffset(integer $Offset) 设置偏移量，取Limit整数倍
- */
-
-/**
- *DescribeSlowLog请求参数结构体
  */
 class DescribeSlowLogRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeSlowLogRequest extends AbstractModel
      * @var integer 偏移量，取Limit整数倍
      */
     public $Offset;
+
     /**
      * @param string $InstanceId 实例Id
      * @param string $BeginTime 开始时间
@@ -78,6 +77,7 @@ class DescribeSlowLogRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

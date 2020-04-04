@@ -18,6 +18,8 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateMountPoint请求参数结构体
+ *
  * @method string getMountPointName() 获取挂载点名称
  * @method void setMountPointName(string $MountPointName) 设置挂载点名称
  * @method string getFileSystemId() 获取文件系统ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMountPointStatus(integer $MountPointStatus) 设置挂载点状态（1：打开；2：关闭）
  * @method integer getVpcType() 获取VPC网络类型（1：CVM；2：黑石1.0；3：黑石2.0）
  * @method void setVpcType(integer $VpcType) 设置VPC网络类型（1：CVM；2：黑石1.0；3：黑石2.0）
- */
-
-/**
- *CreateMountPoint请求参数结构体
  */
 class CreateMountPointRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CreateMountPointRequest extends AbstractModel
      * @var integer VPC网络类型（1：CVM；2：黑石1.0；3：黑石2.0）
      */
     public $VpcType;
+
     /**
      * @param string $MountPointName 挂载点名称
      * @param string $FileSystemId 文件系统ID
@@ -78,6 +77,7 @@ class CreateMountPointRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

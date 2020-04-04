@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetLatesdTransactionList请求参数结构体
+ *
  * @method string getModule() 获取模块名称，固定字段：transaction
  * @method void setModule(string $Module) 设置模块名称，固定字段：transaction
  * @method string getOperation() 获取操作名称，固定字段：latest_transaction_list
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置需要获取的起始交易偏移
  * @method integer getLimit() 获取需要获取的交易数量
  * @method void setLimit(integer $Limit) 设置需要获取的交易数量
- */
-
-/**
- *GetLatesdTransactionList请求参数结构体
  */
 class GetLatesdTransactionListRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class GetLatesdTransactionListRequest extends AbstractModel
      * @var integer 需要获取的交易数量
      */
     public $Limit;
+
     /**
      * @param string $Module 模块名称，固定字段：transaction
      * @param string $Operation 操作名称，固定字段：latest_transaction_list
@@ -110,6 +109,7 @@ class GetLatesdTransactionListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

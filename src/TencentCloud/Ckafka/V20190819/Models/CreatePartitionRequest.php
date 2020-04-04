@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePartition请求参数结构体
+ *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getTopicName() 获取主题名称
  * @method void setTopicName(string $TopicName) 设置主题名称
  * @method integer getPartitionNum() 获取主题分区个数
  * @method void setPartitionNum(integer $PartitionNum) 设置主题分区个数
- */
-
-/**
- *CreatePartition请求参数结构体
  */
 class CreatePartitionRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreatePartitionRequest extends AbstractModel
      * @var integer 主题分区个数
      */
     public $PartitionNum;
+
     /**
      * @param string $InstanceId 实例Id
      * @param string $TopicName 主题名称
@@ -54,6 +53,7 @@ class CreatePartitionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

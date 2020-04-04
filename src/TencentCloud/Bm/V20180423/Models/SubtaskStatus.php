@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 各实例对应的异步任务执行结果
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method integer getTaskStatus() 获取实例ID对应任务的状态，取值如下：<br>
@@ -37,10 +39,6 @@ use TencentCloud\Common\AbstractModel;
 6：部分未完成，部分失败<br>
 7：部分未完成，部分失败，部分成功
  */
-
-/**
- *各实例对应的异步任务执行结果
- */
 class SubtaskStatus extends AbstractModel
 {
     /**
@@ -59,6 +57,7 @@ class SubtaskStatus extends AbstractModel
 7：部分未完成，部分失败，部分成功
      */
     public $TaskStatus;
+
     /**
      * @param string $InstanceId 实例ID
      * @param integer $TaskStatus 实例ID对应任务的状态，取值如下：<br>
@@ -74,6 +73,7 @@ class SubtaskStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

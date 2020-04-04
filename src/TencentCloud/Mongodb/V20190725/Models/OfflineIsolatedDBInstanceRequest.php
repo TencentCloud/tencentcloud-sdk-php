@@ -18,12 +18,10 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OfflineIsolatedDBInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- */
-
-/**
- *OfflineIsolatedDBInstance请求参数结构体
  */
 class OfflineIsolatedDBInstanceRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class OfflineIsolatedDBInstanceRequest extends AbstractModel
      * @var string 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
@@ -38,6 +37,7 @@ class OfflineIsolatedDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

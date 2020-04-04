@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyPersonSample请求参数结构体
+ *
  * @method string getPersonId() 获取人物 ID。
  * @method void setPersonId(string $PersonId) 设置人物 ID。
  * @method string getName() 获取名称，长度限制：128 个字符。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaceOperationInfo(AiSampleFaceOperation $FaceOperationInfo) 设置人脸操作信息。
  * @method AiSampleTagOperation getTagOperationInfo() 获取标签操作信息。
  * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) 设置标签操作信息。
- */
-
-/**
- *ModifyPersonSample请求参数结构体
  */
 class ModifyPersonSampleRequest extends AbstractModel
 {
@@ -75,6 +73,7 @@ class ModifyPersonSampleRequest extends AbstractModel
      * @var AiSampleTagOperation 标签操作信息。
      */
     public $TagOperationInfo;
+
     /**
      * @param string $PersonId 人物 ID。
      * @param string $Name 名称，长度限制：128 个字符。
@@ -90,6 +89,7 @@ class ModifyPersonSampleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

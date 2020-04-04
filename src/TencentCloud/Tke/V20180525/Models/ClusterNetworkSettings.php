@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 集群网络相关的参数
+ *
  * @method string getClusterCIDR() 获取用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
  * @method void setClusterCIDR(string $ClusterCIDR) 设置用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
  * @method boolean getIgnoreClusterCIDRConflict() 获取是否忽略 ClusterCIDR 冲突错误, 默认不忽略
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
  * @method boolean getCni() 获取网络插件是否启用CNI(默认开启)
  * @method void setCni(boolean $Cni) 设置网络插件是否启用CNI(默认开启)
- */
-
-/**
- *集群网络相关的参数
  */
 class ClusterNetworkSettings extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ClusterNetworkSettings extends AbstractModel
      * @var boolean 网络插件是否启用CNI(默认开启)
      */
     public $Cni;
+
     /**
      * @param string $ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      * @param boolean $IgnoreClusterCIDRConflict 是否忽略 ClusterCIDR 冲突错误, 默认不忽略
@@ -86,6 +85,7 @@ class ClusterNetworkSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

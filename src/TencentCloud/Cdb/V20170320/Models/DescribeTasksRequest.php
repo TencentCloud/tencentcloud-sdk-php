@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTasks请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
  * @method string getAsyncRequestId() 获取异步任务请求 ID，执行云数据库相关操作返回的 AsyncRequestId。
@@ -74,10 +76,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置记录偏移量，默认值为0。
  * @method integer getLimit() 获取单次请求返回的数量，默认值为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置单次请求返回的数量，默认值为20，最大值为100。
- */
-
-/**
- *DescribeTasks请求参数结构体
  */
 class DescribeTasksRequest extends AbstractModel
 {
@@ -140,6 +138,7 @@ class DescribeTasksRequest extends AbstractModel
      * @var integer 单次请求返回的数量，默认值为20，最大值为100。
      */
     public $Limit;
+
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      * @param string $AsyncRequestId 异步任务请求 ID，执行云数据库相关操作返回的 AsyncRequestId。
@@ -174,6 +173,7 @@ class DescribeTasksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

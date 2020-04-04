@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人脸监测统计信息
+ *
  * @method float getFaceSizeRatio() 获取人脸大小占画面平均占比
  * @method void setFaceSizeRatio(float $FaceSizeRatio) 设置人脸大小占画面平均占比
  * @method integer getFrontalFaceCount() 获取检测到正脸次数
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSideFaceRatio(float $SideFaceRatio) 设置侧脸时长占比
  * @method float getSideFaceRealRatio() 获取侧脸时长在总出现时常占比
  * @method void setSideFaceRealRatio(float $SideFaceRealRatio) 设置侧脸时长在总出现时常占比
- */
-
-/**
- *人脸监测统计信息
  */
 class FaceDetectStatistic extends AbstractModel
 {
@@ -80,6 +78,7 @@ class FaceDetectStatistic extends AbstractModel
      * @var float 侧脸时长在总出现时常占比
      */
     public $SideFaceRealRatio;
+
     /**
      * @param float $FaceSizeRatio 人脸大小占画面平均占比
      * @param integer $FrontalFaceCount 检测到正脸次数
@@ -94,6 +93,7 @@ class FaceDetectStatistic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

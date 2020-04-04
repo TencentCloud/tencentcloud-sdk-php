@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 网络攻击日志
+ *
  * @method integer getId() 获取日志ID
  * @method void setId(integer $Id) 设置日志ID
  * @method string getUuid() 获取客户端ID
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstPort(integer $DstPort) 设置目标端口
  * @method string getHttpContent() 获取攻击内容
  * @method void setHttpContent(string $HttpContent) 设置攻击内容
- */
-
-/**
- *网络攻击日志
  */
 class DefendAttackLog extends AbstractModel
 {
@@ -122,6 +120,7 @@ class DefendAttackLog extends AbstractModel
      * @var string 攻击内容
      */
     public $HttpContent;
+
     /**
      * @param integer $Id 日志ID
      * @param string $Uuid 客户端ID
@@ -142,6 +141,7 @@ class DefendAttackLog extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

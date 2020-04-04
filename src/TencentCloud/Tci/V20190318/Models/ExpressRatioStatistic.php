@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 表情比例统计
+ *
  * @method integer getCount() 获取出现次数
  * @method void setCount(integer $Count) 设置出现次数
  * @method string getExpress() 获取表情
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRatio(float $Ratio) 设置该表情时长占所有表情时长的比例
  * @method float getRatioUseDuration() 获取该表情时长占视频总时长的比例
  * @method void setRatioUseDuration(float $RatioUseDuration) 设置该表情时长占视频总时长的比例
- */
-
-/**
- *表情比例统计
  */
 class ExpressRatioStatistic extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ExpressRatioStatistic extends AbstractModel
      * @var float 该表情时长占视频总时长的比例
      */
     public $RatioUseDuration;
+
     /**
      * @param integer $Count 出现次数
      * @param string $Express 表情
@@ -62,6 +61,7 @@ class ExpressRatioStatistic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

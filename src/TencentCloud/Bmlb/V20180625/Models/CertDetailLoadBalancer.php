@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取证书信息时返回的所用在的负载均衡信息。
+ *
  * @method string getLoadBalancerId() 获取黑石负载均衡实例ID。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置黑石负载均衡实例ID。
  * @method string getLoadBalancerName() 获取黑石负载均衡实例名称。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置该黑石负载均衡所在的VpcId。
  * @method integer getRegionId() 获取该黑石负载均衡所在的regionId。
  * @method void setRegionId(integer $RegionId) 设置该黑石负载均衡所在的regionId。
- */
-
-/**
- *获取证书信息时返回的所用在的负载均衡信息。
  */
 class CertDetailLoadBalancer extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CertDetailLoadBalancer extends AbstractModel
      * @var integer 该黑石负载均衡所在的regionId。
      */
     public $RegionId;
+
     /**
      * @param string $LoadBalancerId 黑石负载均衡实例ID。
      * @param string $LoadBalancerName 黑石负载均衡实例名称。
@@ -62,6 +61,7 @@ class CertDetailLoadBalancer extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

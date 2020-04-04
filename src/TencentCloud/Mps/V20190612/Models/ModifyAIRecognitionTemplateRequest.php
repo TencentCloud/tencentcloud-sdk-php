@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAIRecognitionTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取视频内容识别模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置视频内容识别模板唯一标识。
  * @method string getName() 获取视频内容识别模板名称，长度限制：64 个字符。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfoForUpdate $AsrFullTextConfigure) 设置语音全文识别控制参数。
  * @method AsrWordsConfigureInfoForUpdate getAsrWordsConfigure() 获取语音关键词识别控制参数。
  * @method void setAsrWordsConfigure(AsrWordsConfigureInfoForUpdate $AsrWordsConfigure) 设置语音关键词识别控制参数。
- */
-
-/**
- *ModifyAIRecognitionTemplate请求参数结构体
  */
 class ModifyAIRecognitionTemplateRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class ModifyAIRecognitionTemplateRequest extends AbstractModel
      * @var AsrWordsConfigureInfoForUpdate 语音关键词识别控制参数。
      */
     public $AsrWordsConfigure;
+
     /**
      * @param integer $Definition 视频内容识别模板唯一标识。
      * @param string $Name 视频内容识别模板名称，长度限制：64 个字符。
@@ -94,6 +93,7 @@ class ModifyAIRecognitionTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteOrganizationMemberFromNode请求参数结构体
+ *
  * @method integer getMemberUin() 获取被删除成员UIN
  * @method void setMemberUin(integer $MemberUin) 设置被删除成员UIN
  * @method integer getNodeId() 获取组织单元ID
  * @method void setNodeId(integer $NodeId) 设置组织单元ID
- */
-
-/**
- *DeleteOrganizationMemberFromNode请求参数结构体
  */
 class DeleteOrganizationMemberFromNodeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteOrganizationMemberFromNodeRequest extends AbstractModel
      * @var integer 组织单元ID
      */
     public $NodeId;
+
     /**
      * @param integer $MemberUin 被删除成员UIN
      * @param integer $NodeId 组织单元ID
@@ -46,6 +45,7 @@ class DeleteOrganizationMemberFromNodeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 镜像。
+ *
  * @method string getImageId() 获取镜像实例ID。
  * @method void setImageId(string $ImageId) 设置镜像实例ID。
  * @method string getImageName() 获取镜像名称。
  * @method void setImageName(string $ImageName) 设置镜像名称。
- */
-
-/**
- *镜像。
  */
 class Image extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Image extends AbstractModel
      * @var string 镜像名称。
      */
     public $ImageName;
+
     /**
      * @param string $ImageId 镜像实例ID。
      * @param string $ImageName 镜像名称。
@@ -46,6 +45,7 @@ class Image extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

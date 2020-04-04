@@ -18,12 +18,10 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OpenDBExtranetAccess请求参数结构体
+ *
  * @method string getDBInstanceId() 获取实例ID，形如postgres-hez4fh0v
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-hez4fh0v
- */
-
-/**
- *OpenDBExtranetAccess请求参数结构体
  */
 class OpenDBExtranetAccessRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class OpenDBExtranetAccessRequest extends AbstractModel
      * @var string 实例ID，形如postgres-hez4fh0v
      */
     public $DBInstanceId;
+
     /**
      * @param string $DBInstanceId 实例ID，形如postgres-hez4fh0v
      */
@@ -38,6 +37,7 @@ class OpenDBExtranetAccessRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

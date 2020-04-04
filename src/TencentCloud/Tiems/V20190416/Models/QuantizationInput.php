@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 量化输入
+ *
  * @method string getInputPath() 获取量化输入路径
  * @method void setInputPath(string $InputPath) 设置量化输入路径
  * @method string getOutputPath() 获取量化输出路径
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrecision(string $Precision) 设置量化精度，支持：FP32，FP16，INT8
  * @method string getConvertType() 获取转换类型
  * @method void setConvertType(string $ConvertType) 设置转换类型
- */
-
-/**
- *量化输入
  */
 class QuantizationInput extends AbstractModel
 {
@@ -59,6 +57,7 @@ class QuantizationInput extends AbstractModel
      * @var string 转换类型
      */
     public $ConvertType;
+
     /**
      * @param string $InputPath 量化输入路径
      * @param string $OutputPath 量化输出路径
@@ -70,6 +69,7 @@ class QuantizationInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

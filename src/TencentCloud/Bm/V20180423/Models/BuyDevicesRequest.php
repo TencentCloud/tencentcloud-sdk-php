@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BuyDevices请求参数结构体
+ *
  * @method string getZone() 获取可用区ID。通过接口[查询地域以及可用区(DescribeRegions)](https://cloud.tencent.com/document/api/386/33564)获取可用区信息
  * @method void setZone(string $Zone) 设置可用区ID。通过接口[查询地域以及可用区(DescribeRegions)](https://cloud.tencent.com/document/api/386/33564)获取可用区信息
  * @method integer getOsTypeId() 获取部署服务器的操作系统ID。通过接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)获取操作系统信息
@@ -100,10 +102,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSgId(string $SgId) 设置绑定已有的安全组ID。仅在NeedSecurityAgent为1时生效
  * @method string getTemplateId() 获取安全组模板ID，由模板创建新安全组并绑定。TemplateId和SgId不能同时传入
  * @method void setTemplateId(string $TemplateId) 设置安全组模板ID，由模板创建新安全组并绑定。TemplateId和SgId不能同时传入
- */
-
-/**
- *BuyDevices请求参数结构体
  */
 class BuyDevicesRequest extends AbstractModel
 {
@@ -307,6 +305,7 @@ class BuyDevicesRequest extends AbstractModel
      * @var string 安全组模板ID，由模板创建新安全组并绑定。TemplateId和SgId不能同时传入
      */
     public $TemplateId;
+
     /**
      * @param string $Zone 可用区ID。通过接口[查询地域以及可用区(DescribeRegions)](https://cloud.tencent.com/document/api/386/33564)获取可用区信息
      * @param integer $OsTypeId 部署服务器的操作系统ID。通过接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)获取操作系统信息
@@ -354,6 +353,7 @@ class BuyDevicesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

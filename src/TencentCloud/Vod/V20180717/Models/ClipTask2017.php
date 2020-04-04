@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频剪辑任务信息，该结构仅用于对 2017 版[视频剪辑](https://cloud.tencent.com/document/product/266/10156)接口发起的任务。
+ *
  * @method string getTaskId() 获取视频剪辑任务 ID。
  * @method void setTaskId(string $TaskId) 设置视频剪辑任务 ID。
  * @method string getSrcFileId() 获取视频剪辑任务源文件 ID。
  * @method void setSrcFileId(string $SrcFileId) 设置视频剪辑任务源文件 ID。
  * @method ClipFileInfo2017 getFileInfo() 获取视频剪辑输出的文件信息。
  * @method void setFileInfo(ClipFileInfo2017 $FileInfo) 设置视频剪辑输出的文件信息。
- */
-
-/**
- *视频剪辑任务信息，该结构仅用于对 2017 版[视频剪辑](https://cloud.tencent.com/document/product/266/10156)接口发起的任务。
  */
 class ClipTask2017 extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ClipTask2017 extends AbstractModel
      * @var ClipFileInfo2017 视频剪辑输出的文件信息。
      */
     public $FileInfo;
+
     /**
      * @param string $TaskId 视频剪辑任务 ID。
      * @param string $SrcFileId 视频剪辑任务源文件 ID。
@@ -54,6 +53,7 @@ class ClipTask2017 extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

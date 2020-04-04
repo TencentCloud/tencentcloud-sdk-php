@@ -18,16 +18,14 @@ namespace TencentCloud\Tav\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ScanFile请求参数结构体
+ *
  * @method string getKey() 获取购买服务后获得的授权信息，用于保证请求有效性
  * @method void setKey(string $Key) 设置购买服务后获得的授权信息，用于保证请求有效性
  * @method string getSample() 获取文件下载url地址
  * @method void setSample(string $Sample) 设置文件下载url地址
  * @method string getMd5() 获取文件的md5值
  * @method void setMd5(string $Md5) 设置文件的md5值
- */
-
-/**
- *ScanFile请求参数结构体
  */
 class ScanFileRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ScanFileRequest extends AbstractModel
      * @var string 文件的md5值
      */
     public $Md5;
+
     /**
      * @param string $Key 购买服务后获得的授权信息，用于保证请求有效性
      * @param string $Sample 文件下载url地址
@@ -54,6 +53,7 @@ class ScanFileRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

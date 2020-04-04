@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * QueryBalance返回参数结构体
+ *
  * @method string getResultCount() 获取本次交易返回查询结果记录数
  * @method void setResultCount(string $ResultCount) 设置本次交易返回查询结果记录数
  * @method string getStartRecordOffset() 获取起始记录号
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryItems(array $QueryItems) 设置查询结果项
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *QueryBalance返回参数结构体
  */
 class QueryBalanceResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class QueryBalanceResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $ResultCount 本次交易返回查询结果记录数
      * @param string $StartRecordOffset 起始记录号
@@ -78,6 +77,7 @@ class QueryBalanceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

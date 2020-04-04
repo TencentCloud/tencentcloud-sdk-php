@@ -18,16 +18,14 @@ namespace TencentCloud\Domain\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDomainPriceList请求参数结构体
+ *
  * @method array getTldList() 获取查询价格的后缀列表。默认则为全部后缀
  * @method void setTldList(array $TldList) 设置查询价格的后缀列表。默认则为全部后缀
  * @method array getYear() 获取查询购买的年份，默认会列出所有年份的价格
  * @method void setYear(array $Year) 设置查询购买的年份，默认会列出所有年份的价格
  * @method array getOperation() 获取域名的购买类型：new  新购，renew 续费，redem 赎回，tran 转入
  * @method void setOperation(array $Operation) 设置域名的购买类型：new  新购，renew 续费，redem 赎回，tran 转入
- */
-
-/**
- *DescribeDomainPriceList请求参数结构体
  */
 class DescribeDomainPriceListRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDomainPriceListRequest extends AbstractModel
      * @var array 域名的购买类型：new  新购，renew 续费，redem 赎回，tran 转入
      */
     public $Operation;
+
     /**
      * @param array $TldList 查询价格的后缀列表。默认则为全部后缀
      * @param array $Year 查询购买的年份，默认会列出所有年份的价格
@@ -54,6 +53,7 @@ class DescribeDomainPriceListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

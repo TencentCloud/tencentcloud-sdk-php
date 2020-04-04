@@ -18,14 +18,13 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ExportReverseShellEvents请求参数结构体
+ *
 
- */
-
-/**
- *ExportReverseShellEvents请求参数结构体
  */
 class ExportReverseShellEventsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class ExportReverseShellEventsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

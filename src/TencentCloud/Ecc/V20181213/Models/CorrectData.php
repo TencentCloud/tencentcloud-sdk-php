@@ -18,6 +18,8 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 批改的结果
+ *
  * @method float getScore() 获取总得分
  * @method void setScore(float $Score) 设置总得分
  * @method ScoreCategory getScoreCat() 获取各项得分详情
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComment(string $Comment) 设置综合评价
  * @method array getSentenceComments() 获取句子点评
  * @method void setSentenceComments(array $SentenceComments) 设置句子点评
- */
-
-/**
- *批改的结果
  */
 class CorrectData extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CorrectData extends AbstractModel
      * @var array 句子点评
      */
     public $SentenceComments;
+
     /**
      * @param float $Score 总得分
      * @param ScoreCategory $ScoreCat 各项得分详情
@@ -62,6 +61,7 @@ class CorrectData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

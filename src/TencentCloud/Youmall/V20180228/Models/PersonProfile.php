@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 来访客人基本资料
+ *
  * @method string getPersonId() 获取客人编码
  * @method void setPersonId(string $PersonId) 设置客人编码
  * @method integer getGender() 获取性别
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPicUrl(string $PicUrl) 设置客户图片
  * @method float getSimilarity() 获取置信度
  * @method void setSimilarity(float $Similarity) 设置置信度
- */
-
-/**
- *来访客人基本资料
  */
 class PersonProfile extends AbstractModel
 {
@@ -73,6 +71,7 @@ class PersonProfile extends AbstractModel
      * @var float 置信度
      */
     public $Similarity;
+
     /**
      * @param string $PersonId 客人编码
      * @param integer $Gender 性别
@@ -86,6 +85,7 @@ class PersonProfile extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAnimatedGraphicsTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取转动图模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置转动图模板唯一标识。
  * @method string getName() 获取转动图模板名称，长度限制：64 个字符。
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuality(float $Quality) 设置图片质量，取值范围：[1, 100]，默认值为 75。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
- */
-
-/**
- *ModifyAnimatedGraphicsTemplate请求参数结构体
  */
 class ModifyAnimatedGraphicsTemplateRequest extends AbstractModel
 {
@@ -126,6 +124,7 @@ class ModifyAnimatedGraphicsTemplateRequest extends AbstractModel
      * @var string 模板描述信息，长度限制：256 个字符。
      */
     public $Comment;
+
     /**
      * @param integer $Definition 转动图模板唯一标识。
      * @param string $Name 转动图模板名称，长度限制：64 个字符。
@@ -154,6 +153,7 @@ class ModifyAnimatedGraphicsTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

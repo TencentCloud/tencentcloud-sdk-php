@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteRouteTable请求参数结构体
+ *
  * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
- */
-
-/**
- *DeleteRouteTable请求参数结构体
  */
 class DeleteRouteTableRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteRouteTableRequest extends AbstractModel
      * @var string 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public $RouteTableId;
+
     /**
      * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
@@ -38,6 +37,7 @@ class DeleteRouteTableRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

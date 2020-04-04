@@ -18,16 +18,14 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBillSummaryByRegion请求参数结构体
+ *
  * @method string getPayerUin() 获取查询账单数据的用户UIN
  * @method void setPayerUin(string $PayerUin) 设置查询账单数据的用户UIN
  * @method string getBeginTime() 获取目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
  * @method void setBeginTime(string $BeginTime) 设置目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
  * @method string getEndTime() 获取目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
  * @method void setEndTime(string $EndTime) 设置目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
- */
-
-/**
- *DescribeBillSummaryByRegion请求参数结构体
  */
 class DescribeBillSummaryByRegionRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeBillSummaryByRegionRequest extends AbstractModel
      * @var string 目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
      */
     public $EndTime;
+
     /**
      * @param string $PayerUin 查询账单数据的用户UIN
      * @param string $BeginTime 目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
@@ -54,6 +53,7 @@ class DescribeBillSummaryByRegionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

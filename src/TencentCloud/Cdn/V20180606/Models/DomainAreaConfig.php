@@ -18,14 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 域名地区配置
+ *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
  * @method array getArea() 获取地区列表，其中元素可为mainland/overseas
  * @method void setArea(array $Area) 设置地区列表，其中元素可为mainland/overseas
- */
-
-/**
- *域名地区配置
  */
 class DomainAreaConfig extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DomainAreaConfig extends AbstractModel
      * @var array 地区列表，其中元素可为mainland/overseas
      */
     public $Area;
+
     /**
      * @param string $Domain 域名
      * @param array $Area 地区列表，其中元素可为mainland/overseas
@@ -46,6 +45,7 @@ class DomainAreaConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

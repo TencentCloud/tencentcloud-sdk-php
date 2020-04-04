@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeUDPListeners请求参数结构体
+ *
  * @method string getProxyId() 获取过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
  * @method void setProxyId(string $ProxyId) 设置过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
  * @method string getListenerId() 获取过滤条件，根据监听器ID精确查询。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
  * @method string getSearchValue() 获取过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
  * @method void setSearchValue(string $SearchValue) 设置过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
- */
-
-/**
- *DescribeUDPListeners请求参数结构体
  */
 class DescribeUDPListenersRequest extends AbstractModel
 {
@@ -86,6 +84,7 @@ class DescribeUDPListenersRequest extends AbstractModel
      * @var string 过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
      */
     public $SearchValue;
+
     /**
      * @param string $ProxyId 过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
      * @param string $ListenerId 过滤条件，根据监听器ID精确查询。
@@ -102,6 +101,7 @@ class DescribeUDPListenersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 商品详细信息
+ *
  * @method string getName() 获取商品详情名称标识
  * @method void setName(string $Name) 设置商品详情名称标识
  * @method string getValue() 获取商品详情
  * @method void setValue(string $Value) 设置商品详情
- */
-
-/**
- *商品详细信息
  */
 class ProductInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ProductInfo extends AbstractModel
      * @var string 商品详情
      */
     public $Value;
+
     /**
      * @param string $Name 商品详情名称标识
      * @param string $Value 商品详情
@@ -46,6 +45,7 @@ class ProductInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,13 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetOrganization请求参数结构体
+ *
 
- */
-
-/**
- *GetOrganization请求参数结构体
  */
 class GetOrganizationRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class GetOrganizationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

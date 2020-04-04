@@ -18,6 +18,8 @@ namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetectLabel请求参数结构体
+ *
  * @method string getImageUrl() 获取图片URL地址。 
 图片限制： 
 • 图片格式：PNG、JPG、JPEG。 
@@ -53,10 +55,6 @@ ALBUM，针对手机相册、网盘产品优化;
 
 支持多场景（Scenes）一起检测。例如，使用 Scenes=["WEB", "CAMERA"]，即对一张图片使用两个模型同时检测，输出两套识别结果。
  */
-
-/**
- *DetectLabel请求参数结构体
- */
 class DetectLabelRequest extends AbstractModel
 {
     /**
@@ -87,6 +85,7 @@ ALBUM，针对手机相册、网盘产品优化;
 支持多场景（Scenes）一起检测。例如，使用 Scenes=["WEB", "CAMERA"]，即对一张图片使用两个模型同时检测，输出两套识别结果。
      */
     public $Scenes;
+
     /**
      * @param string $ImageUrl 图片URL地址。 
 图片限制： 
@@ -110,6 +109,7 @@ ALBUM，针对手机相册、网盘产品优化;
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

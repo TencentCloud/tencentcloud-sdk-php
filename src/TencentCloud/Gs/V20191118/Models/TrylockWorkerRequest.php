@@ -18,6 +18,8 @@ namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TrylockWorker请求参数结构体
+ *
  * @method string getUserId() 获取游戏用户ID
  * @method void setUserId(string $UserId) 设置游戏用户ID
  * @method string getGameId() 获取游戏ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSetNo(integer $SetNo) 设置资源池编号，1表示共用，2表示测试
  * @method string getUserIp() 获取游戏用户IP，用于就近调度，例如125.127.178.228
  * @method void setUserIp(string $UserIp) 设置游戏用户IP，用于就近调度，例如125.127.178.228
- */
-
-/**
- *TrylockWorker请求参数结构体
  */
 class TrylockWorkerRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class TrylockWorkerRequest extends AbstractModel
      * @var string 游戏用户IP，用于就近调度，例如125.127.178.228
      */
     public $UserIp;
+
     /**
      * @param string $UserId 游戏用户ID
      * @param string $GameId 游戏ID
@@ -70,6 +69,7 @@ class TrylockWorkerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

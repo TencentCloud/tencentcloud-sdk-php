@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetTrafficMirrorHealthSwitch请求参数结构体
+ *
  * @method string getTrafficMirrorId() 获取流量镜像实例ID。
  * @method void setTrafficMirrorId(string $TrafficMirrorId) 设置流量镜像实例ID。
  * @method integer getHealthSwitch() 获取健康检查开关，0：关闭，1：打开
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHttpCheckPath(string $HttpCheckPath) 设置检查的路径配置。
  * @method array getHttpCodes() 获取健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
  * @method void setHttpCodes(array $HttpCodes) 设置健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
- */
-
-/**
- *SetTrafficMirrorHealthSwitch请求参数结构体
  */
 class SetTrafficMirrorHealthSwitchRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class SetTrafficMirrorHealthSwitchRequest extends AbstractModel
      * @var array 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      */
     public $HttpCodes;
+
     /**
      * @param string $TrafficMirrorId 流量镜像实例ID。
      * @param integer $HealthSwitch 健康检查开关，0：关闭，1：打开
@@ -94,6 +93,7 @@ class SetTrafficMirrorHealthSwitchRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateImageLifecyclePersonal请求参数结构体
+ *
  * @method string getRepoName() 获取仓库名称
  * @method void setRepoName(string $RepoName) 设置仓库名称
  * @method string getType() 获取keep_last_days:保留最近几天的数据;keep_last_nums:保留最近多少个
  * @method void setType(string $Type) 设置keep_last_days:保留最近几天的数据;keep_last_nums:保留最近多少个
  * @method integer getVal() 获取策略值
  * @method void setVal(integer $Val) 设置策略值
- */
-
-/**
- *CreateImageLifecyclePersonal请求参数结构体
  */
 class CreateImageLifecyclePersonalRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateImageLifecyclePersonalRequest extends AbstractModel
      * @var integer 策略值
      */
     public $Val;
+
     /**
      * @param string $RepoName 仓库名称
      * @param string $Type keep_last_days:保留最近几天的数据;keep_last_nums:保留最近多少个
@@ -54,6 +53,7 @@ class CreateImageLifecyclePersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

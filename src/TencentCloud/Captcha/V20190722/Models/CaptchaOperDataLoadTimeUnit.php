@@ -18,16 +18,14 @@ namespace TencentCloud\Captcha\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 操作数据查询方法DescribeCaptchaOperData 的返回结果，安全验证码加载耗时type = 1
+ *
  * @method string getDateKey() 获取时间
  * @method void setDateKey(string $DateKey) 设置时间
  * @method float getMarketLoadTime() 获取Market加载时间
  * @method void setMarketLoadTime(float $MarketLoadTime) 设置Market加载时间
  * @method float getAppIdLoadTime() 获取AppId加载时间
  * @method void setAppIdLoadTime(float $AppIdLoadTime) 设置AppId加载时间
- */
-
-/**
- *操作数据查询方法DescribeCaptchaOperData 的返回结果，安全验证码加载耗时type = 1
  */
 class CaptchaOperDataLoadTimeUnit extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CaptchaOperDataLoadTimeUnit extends AbstractModel
      * @var float AppId加载时间
      */
     public $AppIdLoadTime;
+
     /**
      * @param string $DateKey 时间
      * @param float $MarketLoadTime Market加载时间
@@ -54,6 +53,7 @@ class CaptchaOperDataLoadTimeUnit extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

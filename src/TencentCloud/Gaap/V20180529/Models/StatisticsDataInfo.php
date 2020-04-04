@@ -18,16 +18,14 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 统计数据信息
+ *
  * @method integer getTime() 获取对应的时间点
  * @method void setTime(integer $Time) 设置对应的时间点
  * @method float getData() 获取统计数据值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(float $Data) 设置统计数据值
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *统计数据信息
  */
 class StatisticsDataInfo extends AbstractModel
 {
@@ -41,6 +39,7 @@ class StatisticsDataInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
+
     /**
      * @param integer $Time 对应的时间点
      * @param float $Data 统计数据值
@@ -50,6 +49,7 @@ class StatisticsDataInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

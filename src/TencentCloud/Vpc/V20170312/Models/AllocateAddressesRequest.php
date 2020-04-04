@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AllocateAddresses请求参数结构体
+ *
  * @method integer getAddressCount() 获取EIP数量。默认值：1。
  * @method void setAddressCount(integer $AddressCount) 设置EIP数量。默认值：1。
  * @method string getInternetServiceProvider() 获取EIP线路类型。默认值：BGP。
@@ -66,10 +68,6 @@ AnycastEIP是否用于绑定负载均衡。
 <li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
  * @method string getBandwidthPackageId() 获取BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
- */
-
-/**
- *AllocateAddresses请求参数结构体
  */
 class AllocateAddressesRequest extends AbstractModel
 {
@@ -128,6 +126,7 @@ AnycastEIP是否用于绑定负载均衡。
      * @var string BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
      */
     public $BandwidthPackageId;
+
     /**
      * @param integer $AddressCount EIP数量。默认值：1。
      * @param string $InternetServiceProvider EIP线路类型。默认值：BGP。
@@ -158,6 +157,7 @@ AnycastEIP是否用于绑定负载均衡。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

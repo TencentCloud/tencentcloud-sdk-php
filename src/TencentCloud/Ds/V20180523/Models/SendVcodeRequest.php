@@ -18,6 +18,8 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SendVcode请求参数结构体
+ *
  * @method string getModule() 获取模块名VerifyCode
  * @method void setModule(string $Module) 设置模块名VerifyCode
  * @method string getOperation() 获取操作名SendVcode
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContractResId(string $ContractResId) 设置合同ID
  * @method string getAccountResId() 获取帐号ID
  * @method void setAccountResId(string $AccountResId) 设置帐号ID
- */
-
-/**
- *SendVcode请求参数结构体
  */
 class SendVcodeRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SendVcodeRequest extends AbstractModel
      * @var string 帐号ID
      */
     public $AccountResId;
+
     /**
      * @param string $Module 模块名VerifyCode
      * @param string $Operation 操作名SendVcode
@@ -62,6 +61,7 @@ class SendVcodeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

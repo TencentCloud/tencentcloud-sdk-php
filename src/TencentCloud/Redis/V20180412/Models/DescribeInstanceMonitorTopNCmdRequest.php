@@ -18,14 +18,12 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceMonitorTopNCmd请求参数结构体
+ *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method integer getSpanType() 获取时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
  * @method void setSpanType(integer $SpanType) 设置时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
- */
-
-/**
- *DescribeInstanceMonitorTopNCmd请求参数结构体
  */
 class DescribeInstanceMonitorTopNCmdRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeInstanceMonitorTopNCmdRequest extends AbstractModel
      * @var integer 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
      */
     public $SpanType;
+
     /**
      * @param string $InstanceId 实例Id
      * @param integer $SpanType 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
@@ -46,6 +45,7 @@ class DescribeInstanceMonitorTopNCmdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

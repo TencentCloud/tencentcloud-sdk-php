@@ -18,14 +18,12 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetRules请求参数结构体
+ *
  * @method integer getOffset() 获取偏移
  * @method void setOffset(integer $Offset) 设置偏移
  * @method integer getLength() 获取长度
  * @method void setLength(integer $Length) 设置长度
- */
-
-/**
- *GetRules请求参数结构体
  */
 class GetRulesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GetRulesRequest extends AbstractModel
      * @var integer 长度
      */
     public $Length;
+
     /**
      * @param integer $Offset 偏移
      * @param integer $Length 长度
@@ -46,6 +45,7 @@ class GetRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

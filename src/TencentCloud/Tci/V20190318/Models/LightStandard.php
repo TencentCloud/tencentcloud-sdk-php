@@ -18,19 +18,17 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * @method string getName() 获取光照名称
- * @method void setName(string $Name) 设置光照名称
- * @method array getRange() 获取范围
- * @method void setRange(array $Range) 设置范围
- */
-
-/**
- *光照标准，结构的相关示例为：
+ * 光照标准，结构的相关示例为：
 {
     "Name":"dark"，
     "Range":[0,30]
 }
 当光照的区间落入在0到30的范围时，就会命中dark的光照标准
+ *
+ * @method string getName() 获取光照名称
+ * @method void setName(string $Name) 设置光照名称
+ * @method array getRange() 获取范围
+ * @method void setRange(array $Range) 设置范围
  */
 class LightStandard extends AbstractModel
 {
@@ -43,6 +41,7 @@ class LightStandard extends AbstractModel
      * @var array 范围
      */
     public $Range;
+
     /**
      * @param string $Name 光照名称
      * @param array $Range 范围
@@ -51,6 +50,7 @@ class LightStandard extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

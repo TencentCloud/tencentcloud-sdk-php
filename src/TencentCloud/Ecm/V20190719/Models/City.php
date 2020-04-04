@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 城市信息
+ *
  * @method string getCityId() 获取城市ID
  * @method void setCityId(string $CityId) 设置城市ID
  * @method string getCityName() 获取城市名称
  * @method void setCityName(string $CityName) 设置城市名称
- */
-
-/**
- *城市信息
  */
 class City extends AbstractModel
 {
@@ -38,6 +36,7 @@ class City extends AbstractModel
      * @var string 城市名称
      */
     public $CityName;
+
     /**
      * @param string $CityId 城市ID
      * @param string $CityName 城市名称
@@ -46,6 +45,7 @@ class City extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAgentClients返回参数结构体
+ *
  * @method array getAgentClientSet() 获取待审核代客列表
  * @method void setAgentClientSet(array $AgentClientSet) 设置待审核代客列表
  * @method integer getTotalCount() 获取符合条件的代客总数
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的代客总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAgentClients返回参数结构体
  */
 class DescribeAgentClientsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAgentClientsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $AgentClientSet 待审核代客列表
      * @param integer $TotalCount 符合条件的代客总数
@@ -54,6 +53,7 @@ class DescribeAgentClientsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

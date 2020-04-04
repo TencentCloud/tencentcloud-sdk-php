@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DetachDisks请求参数结构体
+ *
  * @method array getDiskIds() 获取将要解挂的云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询，单次请求最多可解挂10块弹性云盘。
  * @method void setDiskIds(array $DiskIds) 设置将要解挂的云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询，单次请求最多可解挂10块弹性云盘。
  * @method string getInstanceId() 获取对于非共享型云盘，会忽略该参数；对于共享型云盘，该参数表示要从哪个CVM实例上解挂云盘。
  * @method void setInstanceId(string $InstanceId) 设置对于非共享型云盘，会忽略该参数；对于共享型云盘，该参数表示要从哪个CVM实例上解挂云盘。
- */
-
-/**
- *DetachDisks请求参数结构体
  */
 class DetachDisksRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DetachDisksRequest extends AbstractModel
      * @var string 对于非共享型云盘，会忽略该参数；对于共享型云盘，该参数表示要从哪个CVM实例上解挂云盘。
      */
     public $InstanceId;
+
     /**
      * @param array $DiskIds 将要解挂的云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询，单次请求最多可解挂10块弹性云盘。
      * @param string $InstanceId 对于非共享型云盘，会忽略该参数；对于共享型云盘，该参数表示要从哪个CVM实例上解挂云盘。
@@ -46,6 +45,7 @@ class DetachDisksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

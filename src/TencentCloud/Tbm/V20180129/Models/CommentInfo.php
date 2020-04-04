@@ -18,14 +18,12 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户评论内容类型
+ *
  * @method string getComment() 获取用户评论内容
  * @method void setComment(string $Comment) 设置用户评论内容
  * @method string getDate() 获取评论的时间
  * @method void setDate(string $Date) 设置评论的时间
- */
-
-/**
- *用户评论内容类型
  */
 class CommentInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CommentInfo extends AbstractModel
      * @var string 评论的时间
      */
     public $Date;
+
     /**
      * @param string $Comment 用户评论内容
      * @param string $Date 评论的时间
@@ -46,6 +45,7 @@ class CommentInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

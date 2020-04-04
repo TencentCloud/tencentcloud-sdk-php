@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 当前句子的信息
+ *
  * @method array getWords() 获取当前句子包含的所有单词信息
  * @method void setWords(array $Words) 设置当前句子包含的所有单词信息
  * @method float getConfidence() 获取当前句子的置信度
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setText(string $Text) 设置当前句子
  * @method integer getTextSize() 获取当前句子的字节数
  * @method void setTextSize(integer $TextSize) 设置当前句子的字节数
- */
-
-/**
- *当前句子的信息
  */
 class TextItem extends AbstractModel
 {
@@ -73,6 +71,7 @@ class TextItem extends AbstractModel
      * @var integer 当前句子的字节数
      */
     public $TextSize;
+
     /**
      * @param array $Words 当前句子包含的所有单词信息
      * @param float $Confidence 当前句子的置信度
@@ -86,6 +85,7 @@ class TextItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 制作媒体文件任务信息
+ *
  * @method string getTaskId() 获取任务 ID。
  * @method void setTaskId(string $TaskId) 设置任务 ID。
  * @method string getStatus() 获取任务流状态，取值：
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(ComposeMediaTaskOutput $Output) 设置制作媒体文件任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *制作媒体文件任务信息
  */
 class ComposeMediaTask extends AbstractModel
 {
@@ -93,6 +91,7 @@ class ComposeMediaTask extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
+
     /**
      * @param string $TaskId 任务 ID。
      * @param string $Status 任务流状态，取值：
@@ -114,6 +113,7 @@ class ComposeMediaTask extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI 样本管理，处理失败的人脸信息
+ *
  * @method integer getIndex() 获取对应入参 FaceContents 中错误图片下标，从 0 开始。
  * @method void setIndex(integer $Index) 设置对应入参 FaceContents 中错误图片下标，从 0 开始。
  * @method integer getErrCode() 获取错误码，取值：
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 <li>其他：失败。</li>
  * @method string getMessage() 获取错误描述。
  * @method void setMessage(string $Message) 设置错误描述。
- */
-
-/**
- *AI 样本管理，处理失败的人脸信息
  */
 class AiSampleFailFaceInfo extends AbstractModel
 {
@@ -51,6 +49,7 @@ class AiSampleFailFaceInfo extends AbstractModel
      * @var string 错误描述。
      */
     public $Message;
+
     /**
      * @param integer $Index 对应入参 FaceContents 中错误图片下标，从 0 开始。
      * @param integer $ErrCode 错误码，取值：
@@ -62,6 +61,7 @@ class AiSampleFailFaceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

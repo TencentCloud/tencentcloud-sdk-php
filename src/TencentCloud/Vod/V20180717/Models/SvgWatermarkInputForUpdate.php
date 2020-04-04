@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SVG水印模板输入参数
+ *
  * @method string getWidth() 获取水印的宽度，支持 px，%，W%，H%，S%，L% 六种格式：
 <li>当字符串以 px 结尾，表示水印 Width 单位为像素，如 100px 表示 Width 为 100 像素；当填 0px 且
  Height 不为 0px 时，表示水印的宽度按原始 SVG 图像等比缩放；当 Width、Height 都填 0px 时，表示水印的宽度取原始 SVG 图像的宽度；</li>
@@ -67,10 +69,6 @@ use TencentCloud\Common\AbstractModel;
 可以看出，A、B、C、D 都是周期性地显示 5 秒、隐藏 15 秒，且四者有固定的显示顺序。
 此配置项即用来描述单个水印的周期配置。
  */
-
-/**
- *SVG水印模板输入参数
- */
 class SvgWatermarkInputForUpdate extends AbstractModel
 {
     /**
@@ -108,6 +106,7 @@ class SvgWatermarkInputForUpdate extends AbstractModel
 此配置项即用来描述单个水印的周期配置。
      */
     public $CycleConfig;
+
     /**
      * @param string $Width 水印的宽度，支持 px，%，W%，H%，S%，L% 六种格式：
 <li>当字符串以 px 结尾，表示水印 Width 单位为像素，如 100px 表示 Width 为 100 像素；当填 0px 且
@@ -138,6 +137,7 @@ class SvgWatermarkInputForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

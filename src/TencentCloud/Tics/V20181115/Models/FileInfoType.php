@@ -18,6 +18,8 @@ namespace TencentCloud\Tics\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文件信息类型
+ *
  * @method string getDetectId() 获取判定渠道
  * @method void setDetectId(string $DetectId) 设置判定渠道
  * @method string getDetectPriority() 获取检测优先级
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVirusType(string $VirusType) 设置病毒类型
  * @method string getWhiteScore() 获取白名单分数
  * @method void setWhiteScore(string $WhiteScore) 设置白名单分数
- */
-
-/**
- *文件信息类型
  */
 class FileInfoType extends AbstractModel
 {
@@ -150,6 +148,7 @@ class FileInfoType extends AbstractModel
      * @var string 白名单分数
      */
     public $WhiteScore;
+
     /**
      * @param string $DetectId 判定渠道
      * @param string $DetectPriority 检测优先级
@@ -174,6 +173,7 @@ class FileInfoType extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

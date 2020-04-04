@@ -18,6 +18,8 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateGameServerSession请求参数结构体
+ *
  * @method integer getMaximumPlayerSessionCount() 获取最大玩家数量
  * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) 设置最大玩家数量
  * @method string getAliasId() 获取别名ID
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdempotencyToken(string $IdempotencyToken) 设置幂等token
  * @method string getName() 获取游戏服务器会话名称
  * @method void setName(string $Name) 设置游戏服务器会话名称
- */
-
-/**
- *CreateGameServerSession请求参数结构体
  */
 class CreateGameServerSessionRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class CreateGameServerSessionRequest extends AbstractModel
      * @var string 游戏服务器会话名称
      */
     public $Name;
+
     /**
      * @param integer $MaximumPlayerSessionCount 最大玩家数量
      * @param string $AliasId 别名ID
@@ -102,6 +101,7 @@ class CreateGameServerSessionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 客户轨迹点
+ *
  * @method integer getMallAreaId() 获取卖场区域编码
  * @method void setMallAreaId(integer $MallAreaId) 设置卖场区域编码
  * @method integer getShopId() 获取门店编码
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShoppingBagType(integer $ShoppingBagType) 设置购物袋类型
  * @method integer getShoppingBagCount() 获取购物袋数量
  * @method void setShoppingBagCount(integer $ShoppingBagCount) 设置购物袋数量
- */
-
-/**
- *客户轨迹点
  */
 class PersonTracePoint extends AbstractModel
 {
@@ -80,6 +78,7 @@ class PersonTracePoint extends AbstractModel
      * @var integer 购物袋数量
      */
     public $ShoppingBagCount;
+
     /**
      * @param integer $MallAreaId 卖场区域编码
      * @param integer $ShopId 门店编码
@@ -94,6 +93,7 @@ class PersonTracePoint extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

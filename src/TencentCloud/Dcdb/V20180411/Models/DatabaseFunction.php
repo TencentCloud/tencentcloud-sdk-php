@@ -18,12 +18,10 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据库函数信息
+ *
  * @method string getFunc() 获取函数名称
  * @method void setFunc(string $Func) 设置函数名称
- */
-
-/**
- *数据库函数信息
  */
 class DatabaseFunction extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DatabaseFunction extends AbstractModel
      * @var string 函数名称
      */
     public $Func;
+
     /**
      * @param string $Func 函数名称
      */
@@ -38,6 +37,7 @@ class DatabaseFunction extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

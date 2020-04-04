@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全组入站规则
+ *
  * @method string getAction() 获取策略，ACCEPT 或者 DROP
  * @method void setAction(string $Action) 设置策略，ACCEPT 或者 DROP
  * @method string getCidrIp() 获取来源 IP 或 IP 段，例如192.168.0.0/16
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpProtocol(string $IpProtocol) 设置网络协议，支持 UDP、TCP 等
  * @method string getDir() 获取规则限定的方向，进站规则为 INPUT
  * @method void setDir(string $Dir) 设置规则限定的方向，进站规则为 INPUT
- */
-
-/**
- *安全组入站规则
  */
 class Inbound extends AbstractModel
 {
@@ -59,6 +57,7 @@ class Inbound extends AbstractModel
      * @var string 规则限定的方向，进站规则为 INPUT
      */
     public $Dir;
+
     /**
      * @param string $Action 策略，ACCEPT 或者 DROP
      * @param string $CidrIp 来源 IP 或 IP 段，例如192.168.0.0/16
@@ -70,6 +69,7 @@ class Inbound extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

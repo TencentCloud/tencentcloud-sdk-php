@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 账单明细组件对象
+ *
  * @method string getComponentCodeName() 获取组件类型:资源组件类型的名称，如内存、硬盘等
  * @method void setComponentCodeName(string $ComponentCodeName) 设置组件类型:资源组件类型的名称，如内存、硬盘等
  * @method string getItemCodeName() 获取组件名称:资源组件的名称，如云数据库MySQL-内存等
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContractPrice(string $ContractPrice) 设置合同价
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *账单明细组件对象
  */
 class BillDetailComponent extends AbstractModel
 {
@@ -166,6 +164,7 @@ class BillDetailComponent extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContractPrice;
+
     /**
      * @param string $ComponentCodeName 组件类型:资源组件类型的名称，如内存、硬盘等
      * @param string $ItemCodeName 组件名称:资源组件的名称，如云数据库MySQL-内存等
@@ -194,6 +193,7 @@ class BillDetailComponent extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

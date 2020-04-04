@@ -18,12 +18,10 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDeviceHardwareInfo请求参数结构体
+ *
  * @method array getInstanceIds() 获取设备 ID 列表
  * @method void setInstanceIds(array $InstanceIds) 设置设备 ID 列表
- */
-
-/**
- *DescribeDeviceHardwareInfo请求参数结构体
  */
 class DescribeDeviceHardwareInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeDeviceHardwareInfoRequest extends AbstractModel
      * @var array 设备 ID 列表
      */
     public $InstanceIds;
+
     /**
      * @param array $InstanceIds 设备 ID 列表
      */
@@ -38,6 +37,7 @@ class DescribeDeviceHardwareInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 业务信息定义
+ *
  * @method string getUin() 获取代理商账号ID
  * @method void setUin(string $Uin) 设置代理商账号ID
  * @method string getOrderId() 获取订单号，仅对预付费账单有意义
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivityId(string $ActivityId) 设置活动ID
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *业务信息定义
  */
 class AgentBillElem extends AbstractModel
 {
@@ -124,6 +122,7 @@ class AgentBillElem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActivityId;
+
     /**
      * @param string $Uin 代理商账号ID
      * @param string $OrderId 订单号，仅对预付费账单有意义
@@ -146,6 +145,7 @@ class AgentBillElem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

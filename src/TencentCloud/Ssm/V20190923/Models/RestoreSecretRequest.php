@@ -18,12 +18,10 @@ namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RestoreSecret请求参数结构体
+ *
  * @method string getSecretName() 获取指定需要恢复的凭据名称。
  * @method void setSecretName(string $SecretName) 设置指定需要恢复的凭据名称。
- */
-
-/**
- *RestoreSecret请求参数结构体
  */
 class RestoreSecretRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RestoreSecretRequest extends AbstractModel
      * @var string 指定需要恢复的凭据名称。
      */
     public $SecretName;
+
     /**
      * @param string $SecretName 指定需要恢复的凭据名称。
      */
@@ -38,6 +37,7 @@ class RestoreSecretRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

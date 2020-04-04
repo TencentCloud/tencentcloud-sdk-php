@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VoiceFilter请求参数结构体
+ *
  * @method integer getBizId() 获取应用ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
  * @method void setBizId(integer $BizId) 设置应用ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
  * @method string getFileId() 获取文件ID，表示文件唯一ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileContent(string $FileContent) 设置文件内容，base64编码，FileUrl和FileContent二选一
  * @method string getOpenId() 获取用户ID
  * @method void setOpenId(string $OpenId) 设置用户ID
- */
-
-/**
- *VoiceFilter请求参数结构体
  */
 class VoiceFilterRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class VoiceFilterRequest extends AbstractModel
      * @var string 用户ID
      */
     public $OpenId;
+
     /**
      * @param integer $BizId 应用ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      * @param string $FileId 文件ID，表示文件唯一ID
@@ -78,6 +77,7 @@ class VoiceFilterRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

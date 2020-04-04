@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeImages返回参数结构体
+ *
  * @method array getImageInfoList() 获取容器镜像信息列表
  * @method void setImageInfoList(array $ImageInfoList) 设置容器镜像信息列表
  * @method integer getTotalCount() 获取容器镜像总数
  * @method void setTotalCount(integer $TotalCount) 设置容器镜像总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeImages返回参数结构体
  */
 class DescribeImagesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeImagesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $ImageInfoList 容器镜像信息列表
      * @param integer $TotalCount 容器镜像总数
@@ -54,6 +53,7 @@ class DescribeImagesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

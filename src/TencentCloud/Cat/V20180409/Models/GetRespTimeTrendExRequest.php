@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetRespTimeTrendEx请求参数结构体
+ *
  * @method integer getTaskId() 获取验证成功的拨测任务id
  * @method void setTaskId(integer $TaskId) 设置验证成功的拨测任务id
  * @method string getDate() 获取统计数据的发生日期。格式如：2017-05-09
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDimensions(DimensionsDetail $Dimensions) 设置可为 Isp, Province
  * @method string getMetricName() 获取可为  totalTime, parseTime, connectTime, sendTime, waitTime, receiveTime, availRatio。缺省值为 totalTime
  * @method void setMetricName(string $MetricName) 设置可为  totalTime, parseTime, connectTime, sendTime, waitTime, receiveTime, availRatio。缺省值为 totalTime
- */
-
-/**
- *GetRespTimeTrendEx请求参数结构体
  */
 class GetRespTimeTrendExRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class GetRespTimeTrendExRequest extends AbstractModel
      * @var string 可为  totalTime, parseTime, connectTime, sendTime, waitTime, receiveTime, availRatio。缺省值为 totalTime
      */
     public $MetricName;
+
     /**
      * @param integer $TaskId 验证成功的拨测任务id
      * @param string $Date 统计数据的发生日期。格式如：2017-05-09
@@ -70,6 +69,7 @@ class GetRespTimeTrendExRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

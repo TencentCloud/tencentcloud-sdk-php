@@ -18,12 +18,10 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetGameServerSessionLogUrl请求参数结构体
+ *
  * @method string getGameServerSessionId() 获取游戏服务器会话ID
  * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话ID
- */
-
-/**
- *GetGameServerSessionLogUrl请求参数结构体
  */
 class GetGameServerSessionLogUrlRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetGameServerSessionLogUrlRequest extends AbstractModel
      * @var string 游戏服务器会话ID
      */
     public $GameServerSessionId;
+
     /**
      * @param string $GameServerSessionId 游戏服务器会话ID
      */
@@ -38,6 +37,7 @@ class GetGameServerSessionLogUrlRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

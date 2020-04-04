@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTopic请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID
  * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method string getSearchWord() 获取过滤条件，按照 topicName 过滤，支持模糊查询
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，不填默认为0
  * @method integer getLimit() 获取返回数量，不填则默认为10，最大值为50
  * @method void setLimit(integer $Limit) 设置返回数量，不填则默认为10，最大值为50
- */
-
-/**
- *DescribeTopic请求参数结构体
  */
 class DescribeTopicRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeTopicRequest extends AbstractModel
      * @var integer 返回数量，不填则默认为10，最大值为50
      */
     public $Limit;
+
     /**
      * @param string $InstanceId 实例 ID
      * @param string $SearchWord 过滤条件，按照 topicName 过滤，支持模糊查询
@@ -62,6 +61,7 @@ class DescribeTopicRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

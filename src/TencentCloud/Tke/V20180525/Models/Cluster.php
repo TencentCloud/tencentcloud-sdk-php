@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 集群信息结构体
+ *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getClusterName() 获取集群名称
@@ -64,10 +66,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *集群信息结构体
  */
 class Cluster extends AbstractModel
 {
@@ -161,6 +159,7 @@ class Cluster extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
+
     /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
@@ -190,6 +189,7 @@ class Cluster extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

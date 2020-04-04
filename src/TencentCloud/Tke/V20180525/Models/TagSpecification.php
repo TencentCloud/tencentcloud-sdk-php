@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云主机实例。
+ *
  * @method string getResourceType() 获取标签绑定的资源类型，当前支持类型："cluster"
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceType(string $ResourceType) 设置标签绑定的资源类型，当前支持类型："cluster"
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签对列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云主机实例。
  */
 class TagSpecification extends AbstractModel
 {
@@ -44,6 +42,7 @@ class TagSpecification extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
+
     /**
      * @param string $ResourceType 标签绑定的资源类型，当前支持类型："cluster"
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class TagSpecification extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

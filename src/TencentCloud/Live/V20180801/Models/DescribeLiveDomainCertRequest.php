@@ -18,12 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveDomainCert请求参数结构体
+ *
  * @method string getDomainName() 获取播放域名。
  * @method void setDomainName(string $DomainName) 设置播放域名。
- */
-
-/**
- *DescribeLiveDomainCert请求参数结构体
  */
 class DescribeLiveDomainCertRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeLiveDomainCertRequest extends AbstractModel
      * @var string 播放域名。
      */
     public $DomainName;
+
     /**
      * @param string $DomainName 播放域名。
      */
@@ -38,6 +37,7 @@ class DescribeLiveDomainCertRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

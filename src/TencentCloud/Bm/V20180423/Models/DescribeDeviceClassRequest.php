@@ -18,14 +18,12 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDeviceClass请求参数结构体
+ *
  * @method integer getOnSale() 获取是否仅查询在售标准机型配置信息。取值0：查询所有机型；1：查询在售机型。默认为1
  * @method void setOnSale(integer $OnSale) 设置是否仅查询在售标准机型配置信息。取值0：查询所有机型；1：查询在售机型。默认为1
  * @method integer getNeedPriceInfo() 获取是否返回价格信息。取值0：不返回价格信息，接口返回速度更快；1：返回价格信息。默认为1
  * @method void setNeedPriceInfo(integer $NeedPriceInfo) 设置是否返回价格信息。取值0：不返回价格信息，接口返回速度更快；1：返回价格信息。默认为1
- */
-
-/**
- *DescribeDeviceClass请求参数结构体
  */
 class DescribeDeviceClassRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDeviceClassRequest extends AbstractModel
      * @var integer 是否返回价格信息。取值0：不返回价格信息，接口返回速度更快；1：返回价格信息。默认为1
      */
     public $NeedPriceInfo;
+
     /**
      * @param integer $OnSale 是否仅查询在售标准机型配置信息。取值0：查询所有机型；1：查询在售机型。默认为1
      * @param integer $NeedPriceInfo 是否返回价格信息。取值0：不返回价格信息，接口返回速度更快；1：返回价格信息。默认为1
@@ -46,6 +45,7 @@ class DescribeDeviceClassRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 计费数据明细
+ *
  * @method string getResource() 获取资源名称，根据查询条件不同分为以下几类：
 某一个具体域名：表示该域名明细数据
 multiDomains：表示多域名汇总明细数据
@@ -30,10 +32,6 @@ multiDomains：表示多域名汇总明细数据
 all：账号维度数据明细
  * @method array getBillingData() 获取计费数据详情
  * @method void setBillingData(array $BillingData) 设置计费数据详情
- */
-
-/**
- *计费数据明细
  */
 class ResourceBillingData extends AbstractModel
 {
@@ -50,6 +48,7 @@ all：账号维度数据明细
      * @var array 计费数据详情
      */
     public $BillingData;
+
     /**
      * @param string $Resource 资源名称，根据查询条件不同分为以下几类：
 某一个具体域名：表示该域名明细数据
@@ -62,6 +61,7 @@ all：账号维度数据明细
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UploadOtaVersion请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getOtaVersion() 获取固件版本号，格式为x.y.z， x，y 范围0-63，z范围1~524288
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMd5(string $Md5) 设置文件md5校验码（32字符）
  * @method string getOperator() 获取操作人
  * @method void setOperator(string $Operator) 设置操作人
- */
-
-/**
- *UploadOtaVersion请求参数结构体
  */
 class UploadOtaVersionRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class UploadOtaVersionRequest extends AbstractModel
      * @var string 操作人
      */
     public $Operator;
+
     /**
      * @param string $ProductId 产品ID
      * @param string $OtaVersion 固件版本号，格式为x.y.z， x，y 范围0-63，z范围1~524288
@@ -78,6 +77,7 @@ class UploadOtaVersionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 资源组的伸缩组
+ *
  * @method string getId() 获取伸缩组 ID
  * @method void setId(string $Id) 设置伸缩组 ID
  * @method string getRegion() 获取伸缩组所在地域
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceCount(integer $InstanceCount) 设置伸缩组内节点个数
  * @method integer getDesiredSize() 获取伸缩组起始节点数
  * @method void setDesiredSize(integer $DesiredSize) 设置伸缩组起始节点数
- */
-
-/**
- *资源组的伸缩组
  */
 class RsgAsGroup extends AbstractModel
 {
@@ -122,6 +120,7 @@ class RsgAsGroup extends AbstractModel
      * @var integer 伸缩组起始节点数
      */
     public $DesiredSize;
+
     /**
      * @param string $Id 伸缩组 ID
      * @param string $Region 伸缩组所在地域
@@ -142,6 +141,7 @@ class RsgAsGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

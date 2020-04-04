@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNonlocalLoginPlaces请求参数结构体
+ *
  * @method string getUuid() 获取客户端唯一Uuid。
  * @method void setUuid(string $Uuid) 设置客户端唯一Uuid。
  * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>Keywords - String - 是否必填：否 -  查询关键字</li>
 <li>Status - String - 是否必填：否 -  登录状态（NON_LOCAL_LOGIN: 异地登录 | NORMAL_LOGIN : 正常登录）</li>
- */
-
-/**
- *DescribeNonlocalLoginPlaces请求参数结构体
  */
 class DescribeNonlocalLoginPlacesRequest extends AbstractModel
 {
@@ -58,6 +56,7 @@ class DescribeNonlocalLoginPlacesRequest extends AbstractModel
 <li>Status - String - 是否必填：否 -  登录状态（NON_LOCAL_LOGIN: 异地登录 | NORMAL_LOGIN : 正常登录）</li>
      */
     public $Filters;
+
     /**
      * @param string $Uuid 客户端唯一Uuid。
      * @param integer $Limit 返回数量，默认为10，最大值为100。
@@ -70,6 +69,7 @@ class DescribeNonlocalLoginPlacesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

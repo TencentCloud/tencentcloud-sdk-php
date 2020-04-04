@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 应用型负载均衡器
+ *
  * @method string getLoadBalancerId() 获取负载均衡器ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡器ID
  * @method string getListenerId() 获取应用型负载均衡监听器 ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocationId(string $LocationId) 设置转发规则ID，注意：针对七层监听器此参数必填
  * @method string getRegion() 获取负载均衡实例所属地域，默认取AS服务所在地域。格式与公共参数Region相同，如："ap-guangzhou"。
  * @method void setRegion(string $Region) 设置负载均衡实例所属地域，默认取AS服务所在地域。格式与公共参数Region相同，如："ap-guangzhou"。
- */
-
-/**
- *应用型负载均衡器
  */
 class ForwardLoadBalancer extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ForwardLoadBalancer extends AbstractModel
      * @var string 负载均衡实例所属地域，默认取AS服务所在地域。格式与公共参数Region相同，如："ap-guangzhou"。
      */
     public $Region;
+
     /**
      * @param string $LoadBalancerId 负载均衡器ID
      * @param string $ListenerId 应用型负载均衡监听器 ID
@@ -70,6 +69,7 @@ class ForwardLoadBalancer extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

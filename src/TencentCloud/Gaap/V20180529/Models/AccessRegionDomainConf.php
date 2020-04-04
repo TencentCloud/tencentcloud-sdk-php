@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 域名就近接入配置
+ *
  * @method string getRegionId() 获取地域ID。
  * @method void setRegionId(string $RegionId) 设置地域ID。
  * @method array getNationCountryInnerList() 获取就近接入区域国家内部编码，编码列表可通过DescribeCountryAreaMapping接口获取。
  * @method void setNationCountryInnerList(array $NationCountryInnerList) 设置就近接入区域国家内部编码，编码列表可通过DescribeCountryAreaMapping接口获取。
- */
-
-/**
- *域名就近接入配置
  */
 class AccessRegionDomainConf extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AccessRegionDomainConf extends AbstractModel
      * @var array 就近接入区域国家内部编码，编码列表可通过DescribeCountryAreaMapping接口获取。
      */
     public $NationCountryInnerList;
+
     /**
      * @param string $RegionId 地域ID。
      * @param array $NationCountryInnerList 就近接入区域国家内部编码，编码列表可通过DescribeCountryAreaMapping接口获取。
@@ -46,6 +45,7 @@ class AccessRegionDomainConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

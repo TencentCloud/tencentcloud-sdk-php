@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeResourceInstances请求参数结构体
+ *
  * @method array getPids() 获取资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
  * @method void setPids(array $Pids) 设置资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
  * @method array getFilters() 获取支持通过资源id，pid进行查询
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置按某个字段排序，目前支持CreateTime、ExpireTime其中的一个排序。
  * @method string getOrderDirection() 获取升序（asc）还是降序（desc），默认：desc。
  * @method void setOrderDirection(string $OrderDirection) 设置升序（asc）还是降序（desc），默认：desc。
- */
-
-/**
- *DescribeResourceInstances请求参数结构体
  */
 class DescribeResourceInstancesRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeResourceInstancesRequest extends AbstractModel
      * @var string 升序（asc）还是降序（desc），默认：desc。
      */
     public $OrderDirection;
+
     /**
      * @param array $Pids 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
      * @param array $Filters 支持通过资源id，pid进行查询
@@ -78,6 +77,7 @@ class DescribeResourceInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

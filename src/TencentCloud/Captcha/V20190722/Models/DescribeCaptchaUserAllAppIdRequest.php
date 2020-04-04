@@ -18,14 +18,13 @@ namespace TencentCloud\Captcha\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCaptchaUserAllAppId请求参数结构体
+ *
 
- */
-
-/**
- *DescribeCaptchaUserAllAppId请求参数结构体
  */
 class DescribeCaptchaUserAllAppIdRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeCaptchaUserAllAppIdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

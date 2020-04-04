@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceBackups返回参数结构体
+ *
  * @method integer getTotalCount() 获取备份总数
  * @method void setTotalCount(integer $TotalCount) 设置备份总数
  * @method array getBackupSet() 获取实例的备份数组
  * @method void setBackupSet(array $BackupSet) 设置实例的备份数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeInstanceBackups返回参数结构体
  */
 class DescribeInstanceBackupsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeInstanceBackupsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 备份总数
      * @param array $BackupSet 实例的备份数组
@@ -54,6 +53,7 @@ class DescribeInstanceBackupsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

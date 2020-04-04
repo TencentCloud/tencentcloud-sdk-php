@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePsaRegulations请求参数结构体
+ *
  * @method integer getLimit() 获取数量限制
  * @method void setLimit(integer $Limit) 设置数量限制
  * @method integer getOffset() 获取偏移量
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置排序字段，取值支持：CreateTime
  * @method integer getOrder() 获取排序方式 0:递增(默认) 1:递减
  * @method void setOrder(integer $Order) 设置排序方式 0:递增(默认) 1:递减
- */
-
-/**
- *DescribePsaRegulations请求参数结构体
  */
 class DescribePsaRegulationsRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribePsaRegulationsRequest extends AbstractModel
      * @var integer 排序方式 0:递增(默认) 1:递减
      */
     public $Order;
+
     /**
      * @param integer $Limit 数量限制
      * @param integer $Offset 偏移量
@@ -86,6 +85,7 @@ class DescribePsaRegulationsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

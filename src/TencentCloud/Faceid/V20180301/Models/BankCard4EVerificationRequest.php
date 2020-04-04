@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BankCard4EVerification请求参数结构体
+ *
  * @method string getName() 获取姓名
  * @method void setName(string $Name) 设置姓名
  * @method string getBankCard() 获取银行卡
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
  * @method void setCertType(integer $CertType) 设置证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
 目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
- */
-
-/**
- *BankCard4EVerification请求参数结构体
  */
 class BankCard4EVerificationRequest extends AbstractModel
 {
@@ -62,6 +60,7 @@ class BankCard4EVerificationRequest extends AbstractModel
 目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
      */
     public $CertType;
+
     /**
      * @param string $Name 姓名
      * @param string $BankCard 银行卡
@@ -74,6 +73,7 @@ class BankCard4EVerificationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

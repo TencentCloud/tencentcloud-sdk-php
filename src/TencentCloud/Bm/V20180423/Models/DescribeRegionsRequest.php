@@ -18,12 +18,10 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRegions请求参数结构体
+ *
  * @method integer getRegionId() 获取地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-广州， 19-重庆
  * @method void setRegionId(integer $RegionId) 设置地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-广州， 19-重庆
- */
-
-/**
- *DescribeRegions请求参数结构体
  */
 class DescribeRegionsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeRegionsRequest extends AbstractModel
      * @var integer 地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-广州， 19-重庆
      */
     public $RegionId;
+
     /**
      * @param integer $RegionId 地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-广州， 19-重庆
      */
@@ -38,6 +37,7 @@ class DescribeRegionsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

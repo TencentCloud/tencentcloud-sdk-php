@@ -18,12 +18,10 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户年龄画像元素数组
+ *
  * @method array getPortraitSet() 获取用户年龄画像数组
  * @method void setPortraitSet(array $PortraitSet) 设置用户年龄画像数组
- */
-
-/**
- *用户年龄画像元素数组
  */
 class AgePortraitInfo extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AgePortraitInfo extends AbstractModel
      * @var array 用户年龄画像数组
      */
     public $PortraitSet;
+
     /**
      * @param array $PortraitSet 用户年龄画像数组
      */
@@ -38,6 +37,7 @@ class AgePortraitInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

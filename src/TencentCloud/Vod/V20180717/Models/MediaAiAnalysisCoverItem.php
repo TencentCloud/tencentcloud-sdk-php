@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能封面信息
+ *
  * @method string getCoverUrl() 获取智能封面地址。
  * @method void setCoverUrl(string $CoverUrl) 设置智能封面地址。
  * @method float getConfidence() 获取智能封面的可信度，取值范围是 0 到 100。
  * @method void setConfidence(float $Confidence) 设置智能封面的可信度，取值范围是 0 到 100。
- */
-
-/**
- *智能封面信息
  */
 class MediaAiAnalysisCoverItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MediaAiAnalysisCoverItem extends AbstractModel
      * @var float 智能封面的可信度，取值范围是 0 到 100。
      */
     public $Confidence;
+
     /**
      * @param string $CoverUrl 智能封面地址。
      * @param float $Confidence 智能封面的可信度，取值范围是 0 到 100。
@@ -46,6 +45,7 @@ class MediaAiAnalysisCoverItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

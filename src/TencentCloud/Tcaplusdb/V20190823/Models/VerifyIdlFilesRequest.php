@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VerifyIdlFiles请求参数结构体
+ *
  * @method string getClusterId() 获取待创建表格的集群ID
  * @method void setClusterId(string $ClusterId) 设置待创建表格的集群ID
  * @method string getTableGroupId() 获取待创建表格的表格组ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExistingIdlFiles(array $ExistingIdlFiles) 设置曾经上传过的IDL文件信息列表，与NewIdlFiles至少有一者
  * @method array getNewIdlFiles() 获取待上传的IDL文件信息列表，与ExistingIdlFiles至少有一者
  * @method void setNewIdlFiles(array $NewIdlFiles) 设置待上传的IDL文件信息列表，与ExistingIdlFiles至少有一者
- */
-
-/**
- *VerifyIdlFiles请求参数结构体
  */
 class VerifyIdlFilesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class VerifyIdlFilesRequest extends AbstractModel
      * @var array 待上传的IDL文件信息列表，与ExistingIdlFiles至少有一者
      */
     public $NewIdlFiles;
+
     /**
      * @param string $ClusterId 待创建表格的集群ID
      * @param string $TableGroupId 待创建表格的表格组ID
@@ -62,6 +61,7 @@ class VerifyIdlFilesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

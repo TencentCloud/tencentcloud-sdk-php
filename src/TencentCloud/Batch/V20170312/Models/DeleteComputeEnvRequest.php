@@ -18,12 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteComputeEnv请求参数结构体
+ *
  * @method string getEnvId() 获取计算环境ID
  * @method void setEnvId(string $EnvId) 设置计算环境ID
- */
-
-/**
- *DeleteComputeEnv请求参数结构体
  */
 class DeleteComputeEnvRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteComputeEnvRequest extends AbstractModel
      * @var string 计算环境ID
      */
     public $EnvId;
+
     /**
      * @param string $EnvId 计算环境ID
      */
@@ -38,6 +37,7 @@ class DeleteComputeEnvRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

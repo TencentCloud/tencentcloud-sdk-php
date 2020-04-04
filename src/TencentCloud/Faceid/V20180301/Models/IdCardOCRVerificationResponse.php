@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IdCardOCRVerification返回参数结构体
+ *
  * @method string getResult() 获取认证结果码，收费情况如下。
 收费结果码：
 0: 姓名和身份证号一致
@@ -60,10 +62,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *IdCardOCRVerification返回参数结构体
  */
 class IdCardOCRVerificationResponse extends AbstractModel
 {
@@ -123,6 +121,7 @@ class IdCardOCRVerificationResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Result 认证结果码，收费情况如下。
 收费结果码：
@@ -150,6 +149,7 @@ class IdCardOCRVerificationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

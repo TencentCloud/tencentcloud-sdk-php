@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CheckProxyCreate返回参数结构体
+ *
  * @method integer getCheckFlag() 获取查询能否创建给定配置的通道，1可以创建，0不可创建。
  * @method void setCheckFlag(integer $CheckFlag) 设置查询能否创建给定配置的通道，1可以创建，0不可创建。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CheckProxyCreate返回参数结构体
  */
 class CheckProxyCreateResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CheckProxyCreateResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $CheckFlag 查询能否创建给定配置的通道，1可以创建，0不可创建。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CheckProxyCreateResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

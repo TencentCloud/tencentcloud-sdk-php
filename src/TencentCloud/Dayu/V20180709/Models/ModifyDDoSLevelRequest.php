@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDDoSLevel请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method string getId() 获取资源ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMethod(string $Method) 设置=get表示读取防护等级；=set表示修改防护等级
  * @method string getDDoSLevel() 获取防护等级，取值[low,middle,high]；当Method=set时必填
  * @method void setDDoSLevel(string $DDoSLevel) 设置防护等级，取值[low,middle,high]；当Method=set时必填
- */
-
-/**
- *ModifyDDoSLevel请求参数结构体
  */
 class ModifyDDoSLevelRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyDDoSLevelRequest extends AbstractModel
      * @var string 防护等级，取值[low,middle,high]；当Method=set时必填
      */
     public $DDoSLevel;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param string $Id 资源ID
@@ -62,6 +61,7 @@ class ModifyDDoSLevelRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

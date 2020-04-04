@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务统计指标
+ *
  * @method integer getSubmittedCount() 获取Submitted个数
  * @method void setSubmittedCount(integer $SubmittedCount) 设置Submitted个数
  * @method integer getPendingCount() 获取Pending个数
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFailedInterruptedCount(integer $FailedInterruptedCount) 设置FailedInterrupted个数
  * @method integer getFailedCount() 获取Failed个数
  * @method void setFailedCount(integer $FailedCount) 设置Failed个数
- */
-
-/**
- *任务统计指标
  */
 class TaskMetrics extends AbstractModel
 {
@@ -80,6 +78,7 @@ class TaskMetrics extends AbstractModel
      * @var integer Failed个数
      */
     public $FailedCount;
+
     /**
      * @param integer $SubmittedCount Submitted个数
      * @param integer $PendingCount Pending个数
@@ -94,6 +93,7 @@ class TaskMetrics extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

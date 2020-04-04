@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyCCFrequencyRules请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method string getCCFrequencyRuleId() 获取CC的访问频率控制规则ID
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserAgent(string $UserAgent) 设置User-Agent字符串，长度不超过80
  * @method string getCookie() 获取Cookie字符串，长度不超过40
  * @method void setCookie(string $Cookie) 设置Cookie字符串，长度不超过40
- */
-
-/**
- *ModifyCCFrequencyRules请求参数结构体
  */
 class ModifyCCFrequencyRulesRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ModifyCCFrequencyRulesRequest extends AbstractModel
      * @var string Cookie字符串，长度不超过40
      */
     public $Cookie;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param string $CCFrequencyRuleId CC的访问频率控制规则ID
@@ -110,6 +109,7 @@ class ModifyCCFrequencyRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

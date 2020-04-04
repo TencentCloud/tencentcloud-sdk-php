@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 订单交易信息
+ *
  * @method string getDealId() 获取订单号ID，调用云API时使用此ID
  * @method void setDealId(string $DealId) 设置订单号ID，调用云API时使用此ID
  * @method string getDealName() 获取长订单ID，反馈订单问题给官方客服使用此ID
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrice(integer $Price) 设置订单实际总价，单位：分
  * @method array getInstanceIds() 获取实例ID
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID
- */
-
-/**
- *订单交易信息
  */
 class TradeDealDetail extends AbstractModel
 {
@@ -108,6 +106,7 @@ class TradeDealDetail extends AbstractModel
      * @var array 实例ID
      */
     public $InstanceIds;
+
     /**
      * @param string $DealId 订单号ID，调用云API时使用此ID
      * @param string $DealName 长订单ID，反馈订单问题给官方客服使用此ID
@@ -126,6 +125,7 @@ class TradeDealDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

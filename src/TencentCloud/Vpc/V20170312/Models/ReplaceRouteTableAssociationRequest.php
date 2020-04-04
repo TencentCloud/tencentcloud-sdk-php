@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReplaceRouteTableAssociation请求参数结构体
+ *
  * @method string getSubnetId() 获取子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
  * @method void setSubnetId(string $SubnetId) 设置子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
  * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
- */
-
-/**
- *ReplaceRouteTableAssociation请求参数结构体
  */
 class ReplaceRouteTableAssociationRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ReplaceRouteTableAssociationRequest extends AbstractModel
      * @var string 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public $RouteTableId;
+
     /**
      * @param string $SubnetId 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
      * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
@@ -46,6 +45,7 @@ class ReplaceRouteTableAssociationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

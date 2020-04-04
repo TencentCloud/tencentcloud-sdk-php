@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceUpdateInstance请求参数结构体
+ *
  * @method string getTimeUnit() 获取变配的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 <li>CNY：表示人民币。</li>
  * @method void setCurrency(string $Currency) 设置货币种类。取值范围：
 <li>CNY：表示人民币。</li>
- */
-
-/**
- *InquiryPriceUpdateInstance请求参数结构体
  */
 class InquiryPriceUpdateInstanceRequest extends AbstractModel
 {
@@ -84,6 +82,7 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
 <li>CNY：表示人民币。</li>
      */
     public $Currency;
+
     /**
      * @param string $TimeUnit 变配的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
@@ -102,6 +101,7 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

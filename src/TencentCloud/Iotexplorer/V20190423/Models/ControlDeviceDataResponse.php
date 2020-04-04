@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ControlDeviceData返回参数结构体
+ *
  * @method string getData() 获取返回信息
  * @method void setData(string $Data) 设置返回信息
  * @method string getResult() 获取JSON字符串， 返回下发控制的结果信息, 
@@ -28,10 +30,6 @@ Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ControlDeviceData返回参数结构体
  */
 class ControlDeviceDataResponse extends AbstractModel
 {
@@ -51,6 +49,7 @@ Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Data 返回信息
      * @param string $Result JSON字符串， 返回下发控制的结果信息, 
@@ -62,6 +61,7 @@ Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

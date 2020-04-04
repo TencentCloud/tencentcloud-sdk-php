@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RemoveBandwidthPackageResources请求参数结构体
+ *
  * @method string getBandwidthPackageId() 获取带宽包唯一标识ID，形如'bwp-xxxx'
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包唯一标识ID，形如'bwp-xxxx'
  * @method string getResourceType() 获取资源类型，包括‘Address’, ‘LoadBalance’
  * @method void setResourceType(string $ResourceType) 设置资源类型，包括‘Address’, ‘LoadBalance’
  * @method array getResourceIds() 获取资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
  * @method void setResourceIds(array $ResourceIds) 设置资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
- */
-
-/**
- *RemoveBandwidthPackageResources请求参数结构体
  */
 class RemoveBandwidthPackageResourcesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RemoveBandwidthPackageResourcesRequest extends AbstractModel
      * @var array 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
      */
     public $ResourceIds;
+
     /**
      * @param string $BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'
      * @param string $ResourceType 资源类型，包括‘Address’, ‘LoadBalance’
@@ -54,6 +53,7 @@ class RemoveBandwidthPackageResourcesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

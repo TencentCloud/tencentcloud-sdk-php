@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateL7CCRule请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method string getId() 获取资源ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleId(string $RuleId) 设置7层转发规则ID，例如：rule-0000001
  * @method array getRuleConfig() 获取7层CC自定义规则参数，当操作码为query时，可以不用填写；当操作码为add或del时，必须填写，且数组长度只能为1；
  * @method void setRuleConfig(array $RuleConfig) 设置7层CC自定义规则参数，当操作码为query时，可以不用填写；当操作码为add或del时，必须填写，且数组长度只能为1；
- */
-
-/**
- *CreateL7CCRule请求参数结构体
  */
 class CreateL7CCRuleRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateL7CCRuleRequest extends AbstractModel
      * @var array 7层CC自定义规则参数，当操作码为query时，可以不用填写；当操作码为add或del时，必须填写，且数组长度只能为1；
      */
     public $RuleConfig;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param string $Id 资源ID
@@ -70,6 +69,7 @@ class CreateL7CCRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

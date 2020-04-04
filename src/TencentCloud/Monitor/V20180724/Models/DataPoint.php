@@ -18,16 +18,14 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 监控数据点
+ *
  * @method array getDimensions() 获取实例对象维度组合
  * @method void setDimensions(array $Dimensions) 设置实例对象维度组合
  * @method array getTimestamps() 获取时间戳数组，表示那些时间点有数据，缺失的时间戳，没有数据点，可以理解为掉点了
  * @method void setTimestamps(array $Timestamps) 设置时间戳数组，表示那些时间点有数据，缺失的时间戳，没有数据点，可以理解为掉点了
  * @method array getValues() 获取监控值数组，该数组和Timestamps一一对应
  * @method void setValues(array $Values) 设置监控值数组，该数组和Timestamps一一对应
- */
-
-/**
- *监控数据点
  */
 class DataPoint extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DataPoint extends AbstractModel
      * @var array 监控值数组，该数组和Timestamps一一对应
      */
     public $Values;
+
     /**
      * @param array $Dimensions 实例对象维度组合
      * @param array $Timestamps 时间戳数组，表示那些时间点有数据，缺失的时间戳，没有数据点，可以理解为掉点了
@@ -54,6 +53,7 @@ class DataPoint extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

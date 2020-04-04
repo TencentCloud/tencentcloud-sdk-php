@@ -18,14 +18,12 @@ namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 汽车坐标信息
+ *
  * @method integer getX() 获取横坐标x
  * @method void setX(integer $X) 设置横坐标x
  * @method integer getY() 获取纵坐标y
  * @method void setY(integer $Y) 设置纵坐标y
- */
-
-/**
- *汽车坐标信息
  */
 class Coord extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Coord extends AbstractModel
      * @var integer 纵坐标y
      */
     public $Y;
+
     /**
      * @param integer $X 横坐标x
      * @param integer $Y 纵坐标y
@@ -46,6 +45,7 @@ class Coord extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 混流配置
+ *
  * @method boolean getEnabled() 获取是否开启混流
  * @method void setEnabled(boolean $Enabled) 设置是否开启混流
  * @method boolean getDisableAudio() 获取是否禁用音频混流
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 当此字段存在时，ModelId 及 TeacherId 字段将被忽略
  * @method void setCustom(CustomLayout $Custom) 设置自定义混流布局参数
 当此字段存在时，ModelId 及 TeacherId 字段将被忽略
- */
-
-/**
- *混流配置
  */
 class MixStream extends AbstractModel
 {
@@ -71,6 +69,7 @@ class MixStream extends AbstractModel
 当此字段存在时，ModelId 及 TeacherId 字段将被忽略
      */
     public $Custom;
+
     /**
      * @param boolean $Enabled 是否开启混流
      * @param boolean $DisableAudio 是否禁用音频混流
@@ -86,6 +85,7 @@ class MixStream extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

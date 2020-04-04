@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCatLogs请求参数结构体
+ *
  * @method integer getTaskId() 获取拨测任务Id
  * @method void setTaskId(integer $TaskId) 设置拨测任务Id
  * @method integer getOffset() 获取从第Offset 条开始查询。缺省值为0
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置格式如：2017-05-10 00:00:00  缺省为当前时间
  * @method string getSortType() 获取按时间升序或降序。默认降序。可选值： Desc, Asc
  * @method void setSortType(string $SortType) 设置按时间升序或降序。默认降序。可选值： Desc, Asc
- */
-
-/**
- *DescribeCatLogs请求参数结构体
  */
 class DescribeCatLogsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeCatLogsRequest extends AbstractModel
      * @var string 按时间升序或降序。默认降序。可选值： Desc, Asc
      */
     public $SortType;
+
     /**
      * @param integer $TaskId 拨测任务Id
      * @param integer $Offset 从第Offset 条开始查询。缺省值为0
@@ -78,6 +77,7 @@ class DescribeCatLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

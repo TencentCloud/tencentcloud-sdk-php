@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 输出的视频流信息
+ *
  * @method string getCodec() 获取视频流的编码格式，可选值：
 <li>libx264：H.264 编码 </li>
 默认值：libx264。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 默认值：0，表示和第一个视频轨的第一个视频片段的视频帧率一致。
  * @method void setFps(integer $Fps) 设置视频帧率，取值范围：[0, 60]，单位：Hz。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频帧率一致。
- */
-
-/**
- *输出的视频流信息
  */
 class OutputVideoStream extends AbstractModel
 {
@@ -47,6 +45,7 @@ class OutputVideoStream extends AbstractModel
 默认值：0，表示和第一个视频轨的第一个视频片段的视频帧率一致。
      */
     public $Fps;
+
     /**
      * @param string $Codec 视频流的编码格式，可选值：
 <li>libx264：H.264 编码 </li>
@@ -58,6 +57,7 @@ class OutputVideoStream extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

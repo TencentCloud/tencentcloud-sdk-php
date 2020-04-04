@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 计算资源配置
+ *
  * @method integer getInstanceCount() 获取计算实例数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceCount(integer $InstanceCount) 设置计算实例数量
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolumeSizeInGB(integer $VolumeSizeInGB) 设置挂载CBS大小（GB）
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *计算资源配置
  */
 class ResourceConfig extends AbstractModel
 {
@@ -54,6 +52,7 @@ class ResourceConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeSizeInGB;
+
     /**
      * @param integer $InstanceCount 计算实例数量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class ResourceConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

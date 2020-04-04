@@ -18,14 +18,12 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 关键词提取结果
+ *
  * @method float getScore() 获取权重
  * @method void setScore(float $Score) 设置权重
  * @method string getWord() 获取关键词
  * @method void setWord(string $Word) 设置关键词
- */
-
-/**
- *关键词提取结果
  */
 class Keyword extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Keyword extends AbstractModel
      * @var string 关键词
      */
     public $Word;
+
     /**
      * @param float $Score 权重
      * @param string $Word 关键词
@@ -46,6 +45,7 @@ class Keyword extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

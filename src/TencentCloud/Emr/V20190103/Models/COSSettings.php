@@ -18,16 +18,14 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * COS 相关配置
+ *
  * @method string getCosSecretId() 获取COS SecretId
  * @method void setCosSecretId(string $CosSecretId) 设置COS SecretId
  * @method string getCosSecretKey() 获取COS SecrectKey
  * @method void setCosSecretKey(string $CosSecretKey) 设置COS SecrectKey
  * @method string getLogOnCosPath() 获取日志存储在COS上的路径
  * @method void setLogOnCosPath(string $LogOnCosPath) 设置日志存储在COS上的路径
- */
-
-/**
- *COS 相关配置
  */
 class COSSettings extends AbstractModel
 {
@@ -45,6 +43,7 @@ class COSSettings extends AbstractModel
      * @var string 日志存储在COS上的路径
      */
     public $LogOnCosPath;
+
     /**
      * @param string $CosSecretId COS SecretId
      * @param string $CosSecretKey COS SecrectKey
@@ -54,6 +53,7 @@ class COSSettings extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

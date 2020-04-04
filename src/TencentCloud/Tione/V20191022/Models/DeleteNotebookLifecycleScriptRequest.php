@@ -18,14 +18,12 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteNotebookLifecycleScript请求参数结构体
+ *
  * @method string getNotebookLifecycleScriptsName() 获取生命周期脚本名称
  * @method void setNotebookLifecycleScriptsName(string $NotebookLifecycleScriptsName) 设置生命周期脚本名称
  * @method boolean getForcible() 获取是否忽略已关联的 notebook 实例强行删除生命周期脚本，默认 false
  * @method void setForcible(boolean $Forcible) 设置是否忽略已关联的 notebook 实例强行删除生命周期脚本，默认 false
- */
-
-/**
- *DeleteNotebookLifecycleScript请求参数结构体
  */
 class DeleteNotebookLifecycleScriptRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteNotebookLifecycleScriptRequest extends AbstractModel
      * @var boolean 是否忽略已关联的 notebook 实例强行删除生命周期脚本，默认 false
      */
     public $Forcible;
+
     /**
      * @param string $NotebookLifecycleScriptsName 生命周期脚本名称
      * @param boolean $Forcible 是否忽略已关联的 notebook 实例强行删除生命周期脚本，默认 false
@@ -46,6 +45,7 @@ class DeleteNotebookLifecycleScriptRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 播放鉴权key信息
+ *
  * @method string getDomainName() 获取域名。
  * @method void setDomainName(string $DomainName) 设置域名。
  * @method integer getEnable() 获取是否启用，0：关闭，1：启用。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthDelta(integer $AuthDelta) 设置有效时间，单位：秒。
  * @method string getAuthBackKey() 获取鉴权BackKey。
  * @method void setAuthBackKey(string $AuthBackKey) 设置鉴权BackKey。
- */
-
-/**
- *播放鉴权key信息
  */
 class PlayAuthKeyInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class PlayAuthKeyInfo extends AbstractModel
      * @var string 鉴权BackKey。
      */
     public $AuthBackKey;
+
     /**
      * @param string $DomainName 域名。
      * @param integer $Enable 是否启用，0：关闭，1：启用。
@@ -70,6 +69,7 @@ class PlayAuthKeyInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

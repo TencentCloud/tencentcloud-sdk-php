@@ -18,12 +18,10 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetPersonBaseInfo请求参数结构体
+ *
  * @method string getPersonId() 获取人员ID
  * @method void setPersonId(string $PersonId) 设置人员ID
- */
-
-/**
- *GetPersonBaseInfo请求参数结构体
  */
 class GetPersonBaseInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class GetPersonBaseInfoRequest extends AbstractModel
      * @var string 人员ID
      */
     public $PersonId;
+
     /**
      * @param string $PersonId 人员ID
      */
@@ -38,6 +37,7 @@ class GetPersonBaseInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

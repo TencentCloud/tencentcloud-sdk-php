@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 单词出现的那个句子的起始时间和结束时间信息
+ *
  * @method array getValue() 获取单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
  * @method void setValue(array $Value) 设置单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
  * @method string getKeyword() 获取词汇库中的单词
  * @method void setKeyword(string $Keyword) 设置词汇库中的单词
- */
-
-/**
- *单词出现的那个句子的起始时间和结束时间信息
  */
 class DetailInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DetailInfo extends AbstractModel
      * @var string 词汇库中的单词
      */
     public $Keyword;
+
     /**
      * @param array $Value 单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
      * @param string $Keyword 词汇库中的单词
@@ -46,6 +45,7 @@ class DetailInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

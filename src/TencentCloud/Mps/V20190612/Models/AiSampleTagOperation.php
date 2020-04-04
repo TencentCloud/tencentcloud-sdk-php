@@ -18,14 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI 样本管理，标签操作。
+ *
  * @method string getType() 获取操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
  * @method void setType(string $Type) 设置操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
  * @method array getTags() 获取标签，长度限制：128 个字符。
  * @method void setTags(array $Tags) 设置标签，长度限制：128 个字符。
- */
-
-/**
- *AI 样本管理，标签操作。
  */
 class AiSampleTagOperation extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AiSampleTagOperation extends AbstractModel
      * @var array 标签，长度限制：128 个字符。
      */
     public $Tags;
+
     /**
      * @param string $Type 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
      * @param array $Tags 标签，长度限制：128 个字符。
@@ -46,6 +45,7 @@ class AiSampleTagOperation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

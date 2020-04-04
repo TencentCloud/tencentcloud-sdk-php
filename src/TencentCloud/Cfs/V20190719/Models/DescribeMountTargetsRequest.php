@@ -18,12 +18,10 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMountTargets请求参数结构体
+ *
  * @method string getFileSystemId() 获取文件系统 ID
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID
- */
-
-/**
- *DescribeMountTargets请求参数结构体
  */
 class DescribeMountTargetsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeMountTargetsRequest extends AbstractModel
      * @var string 文件系统 ID
      */
     public $FileSystemId;
+
     /**
      * @param string $FileSystemId 文件系统 ID
      */
@@ -38,6 +37,7 @@ class DescribeMountTargetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

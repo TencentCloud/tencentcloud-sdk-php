@@ -18,6 +18,8 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 句法依存分析结果，包括基础词，基础词的序号，当前词父节点的序号，句法依存关系的类型
+ *
  * @method integer getHeadId() 获取当前词父节点的序号
  * @method void setHeadId(integer $HeadId) 设置当前词父节点的序号
  * @method integer getId() 获取基础词的序号
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRelation(string $Relation) 设置句法依存关系的类型
  * @method string getWord() 获取基础词
  * @method void setWord(string $Word) 设置基础词
- */
-
-/**
- *句法依存分析结果，包括基础词，基础词的序号，当前词父节点的序号，句法依存关系的类型
  */
 class DpToken extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DpToken extends AbstractModel
      * @var string 基础词
      */
     public $Word;
+
     /**
      * @param integer $HeadId 当前词父节点的序号
      * @param integer $Id 基础词的序号
@@ -62,6 +61,7 @@ class DpToken extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

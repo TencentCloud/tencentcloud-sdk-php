@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteContentReviewTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取内容审核模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置内容审核模板唯一标识。
- */
-
-/**
- *DeleteContentReviewTemplate请求参数结构体
  */
 class DeleteContentReviewTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteContentReviewTemplateRequest extends AbstractModel
      * @var integer 内容审核模板唯一标识。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 内容审核模板唯一标识。
      */
@@ -38,6 +37,7 @@ class DeleteContentReviewTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

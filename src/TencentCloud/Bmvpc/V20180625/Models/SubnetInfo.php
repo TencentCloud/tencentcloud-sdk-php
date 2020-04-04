@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 黑石子网的信息
+ *
  * @method string getVpcId() 获取私有网络的唯一ID。
  * @method void setVpcId(string $VpcId) 设置私有网络的唯一ID。
  * @method string getVpcName() 获取VPC的名称。
@@ -64,10 +66,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcZone(string $VpcZone) 设置VPC所在可用区
  * @method integer getBroadcastFlag() 获取是否开启广播，关闭为0，开启为1。
  * @method void setBroadcastFlag(integer $BroadcastFlag) 设置是否开启广播，关闭为0，开启为1。
- */
-
-/**
- *黑石子网的信息
  */
 class SubnetInfo extends AbstractModel
 {
@@ -181,6 +179,7 @@ class SubnetInfo extends AbstractModel
      * @var integer 是否开启广播，关闭为0，开启为1。
      */
     public $BroadcastFlag;
+
     /**
      * @param string $VpcId 私有网络的唯一ID。
      * @param string $VpcName VPC的名称。
@@ -210,6 +209,7 @@ class SubnetInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

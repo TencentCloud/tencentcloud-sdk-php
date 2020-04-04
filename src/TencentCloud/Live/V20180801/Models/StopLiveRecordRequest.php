@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StopLiveRecord请求参数结构体
+ *
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method integer getTaskId() 获取任务ID，全局唯一标识录制任务。
  * @method void setTaskId(integer $TaskId) 设置任务ID，全局唯一标识录制任务。
- */
-
-/**
- *StopLiveRecord请求参数结构体
  */
 class StopLiveRecordRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class StopLiveRecordRequest extends AbstractModel
      * @var integer 任务ID，全局唯一标识录制任务。
      */
     public $TaskId;
+
     /**
      * @param string $StreamName 流名称。
      * @param integer $TaskId 任务ID，全局唯一标识录制任务。
@@ -46,6 +45,7 @@ class StopLiveRecordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

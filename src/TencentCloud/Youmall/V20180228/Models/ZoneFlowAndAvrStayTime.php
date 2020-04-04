@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 客流停留统计子结构
+ *
  * @method integer getZoneId() 获取区域id
  * @method void setZoneId(integer $ZoneId) 设置区域id
  * @method string getZoneName() 获取区域名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowCount(integer $FlowCount) 设置人流量
  * @method integer getAvrStayTime() 获取平均停留时长
  * @method void setAvrStayTime(integer $AvrStayTime) 设置平均停留时长
- */
-
-/**
- *客流停留统计子结构
  */
 class ZoneFlowAndAvrStayTime extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ZoneFlowAndAvrStayTime extends AbstractModel
      * @var integer 平均停留时长
      */
     public $AvrStayTime;
+
     /**
      * @param integer $ZoneId 区域id
      * @param string $ZoneName 区域名称
@@ -62,6 +61,7 @@ class ZoneFlowAndAvrStayTime extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

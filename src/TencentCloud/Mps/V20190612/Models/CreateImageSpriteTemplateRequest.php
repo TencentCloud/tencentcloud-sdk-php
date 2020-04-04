@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateImageSpriteTemplate请求参数结构体
+ *
  * @method string getSampleType() 获取采样类型，取值：
 <li>Percent：按百分比。</li>
 <li>Time：按时间间隔。</li>
@@ -76,10 +78,6 @@ use TencentCloud\Common\AbstractModel;
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 默认值：black 。
- */
-
-/**
- *CreateImageSpriteTemplate请求参数结构体
  */
 class CreateImageSpriteTemplateRequest extends AbstractModel
 {
@@ -147,6 +145,7 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
 默认值：black 。
      */
     public $FillType;
+
     /**
      * @param string $SampleType 采样类型，取值：
 <li>Percent：按百分比。</li>
@@ -182,6 +181,7 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

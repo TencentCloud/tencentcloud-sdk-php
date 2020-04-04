@@ -18,6 +18,8 @@ namespace TencentCloud\Cmq\V20190304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDeadLetterSourceQueues请求参数结构体
+ *
  * @method string getDeadLetterQueueName() 获取死信队列名称
  * @method void setDeadLetterQueueName(string $DeadLetterQueueName) 设置死信队列名称
  * @method integer getLimit() 获取分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
  * @method array getFilters() 获取过滤死信队列源队列名称，目前仅支持SourceQueueName过滤
  * @method void setFilters(array $Filters) 设置过滤死信队列源队列名称，目前仅支持SourceQueueName过滤
- */
-
-/**
- *DescribeDeadLetterSourceQueues请求参数结构体
  */
 class DescribeDeadLetterSourceQueuesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeDeadLetterSourceQueuesRequest extends AbstractModel
      * @var array 过滤死信队列源队列名称，目前仅支持SourceQueueName过滤
      */
     public $Filters;
+
     /**
      * @param string $DeadLetterQueueName 死信队列名称
      * @param integer $Limit 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
@@ -62,6 +61,7 @@ class DescribeDeadLetterSourceQueuesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

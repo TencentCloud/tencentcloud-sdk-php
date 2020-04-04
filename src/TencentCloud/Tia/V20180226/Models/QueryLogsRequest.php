@@ -18,6 +18,8 @@ namespace TencentCloud\Tia\V20180226\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * QueryLogs请求参数结构体
+ *
  * @method string getJobName() 获取任务的名称
  * @method void setJobName(string $JobName) 设置任务的名称
  * @method string getCluster() 获取任务所在集群的名称
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置单次要返回的日志条数上限
  * @method string getContext() 获取加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
  * @method void setContext(string $Context) 设置加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
- */
-
-/**
- *QueryLogs请求参数结构体
  */
 class QueryLogsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class QueryLogsRequest extends AbstractModel
      * @var string 加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
      */
     public $Context;
+
     /**
      * @param string $JobName 任务的名称
      * @param string $Cluster 任务所在集群的名称
@@ -78,6 +77,7 @@ class QueryLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

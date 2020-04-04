@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IDCardOCR请求参数结构体
+ *
  * @method string getImageBase64() 获取图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
  * @method void setImageBase64(string $ImageBase64) 设置图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
@@ -63,10 +65,6 @@ Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
 API 3.0 Explorer 设置方式参考：
 Config = {"CropIdCard":true,"CropPortrait":true}
  */
-
-/**
- *IDCardOCR请求参数结构体
- */
 class IDCardOCRRequest extends AbstractModel
 {
     /**
@@ -106,6 +104,7 @@ API 3.0 Explorer 设置方式参考：
 Config = {"CropIdCard":true,"CropPortrait":true}
      */
     public $Config;
+
     /**
      * @param string $ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
@@ -134,6 +133,7 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

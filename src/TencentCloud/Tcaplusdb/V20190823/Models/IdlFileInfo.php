@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 表定义描述文件详情，包含文件内容
+ *
  * @method string getFileName() 获取文件名称，不包含扩展名
  * @method void setFileName(string $FileName) 设置文件名称，不包含扩展名
  * @method string getFileType() 获取数据描述语言（IDL）类型
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileContent(string $FileContent) 设置文件内容，对于本次新上传的文件有意义
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *表定义描述文件详情，包含文件内容
  */
 class IdlFileInfo extends AbstractModel
 {
@@ -72,6 +70,7 @@ class IdlFileInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileContent;
+
     /**
      * @param string $FileName 文件名称，不包含扩展名
      * @param string $FileType 数据描述语言（IDL）类型
@@ -86,6 +85,7 @@ class IdlFileInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

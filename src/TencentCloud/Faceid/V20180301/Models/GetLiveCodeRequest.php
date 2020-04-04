@@ -18,14 +18,13 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetLiveCode请求参数结构体
+ *
 
- */
-
-/**
- *GetLiveCode请求参数结构体
  */
 class GetLiveCodeRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class GetLiveCodeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

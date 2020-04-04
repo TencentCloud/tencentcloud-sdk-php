@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内网IP信息
+ *
  * @method string getPrivateIpAddress() 获取内网IP地址。
  * @method void setPrivateIpAddress(string $PrivateIpAddress) 设置内网IP地址。
  * @method boolean getPrimary() 获取是否是主IP。
@@ -40,10 +42,6 @@ PENDING：生产中
 MIGRATING：迁移中
 DELETING：删除中
 AVAILABLE：可用的
- */
-
-/**
- *内网IP信息
  */
 class PrivateIpAddressSpecification extends AbstractModel
 {
@@ -85,6 +83,7 @@ DELETING：删除中
 AVAILABLE：可用的
      */
     public $State;
+
     /**
      * @param string $PrivateIpAddress 内网IP地址。
      * @param boolean $Primary 是否是主IP。
@@ -102,6 +101,7 @@ AVAILABLE：可用的
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

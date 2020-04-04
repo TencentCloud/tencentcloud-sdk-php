@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeZoneFlowHourlyByZoneId返回参数结构体
+ *
  * @method string getCompanyId() 获取集团ID
  * @method void setCompanyId(string $CompanyId) 设置集团ID
  * @method integer getShopId() 获取店铺ID
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(array $Data) 设置各个分时人流量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeZoneFlowHourlyByZoneId返回参数结构体
  */
 class DescribeZoneFlowHourlyByZoneIdResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeZoneFlowHourlyByZoneIdResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $CompanyId 集团ID
      * @param integer $ShopId 店铺ID
@@ -78,6 +77,7 @@ class DescribeZoneFlowHourlyByZoneIdResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

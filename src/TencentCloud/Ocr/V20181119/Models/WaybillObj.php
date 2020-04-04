@@ -18,12 +18,10 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 运单识别对象
+ *
  * @method string getText() 获取识别出的文本行内容
  * @method void setText(string $Text) 设置识别出的文本行内容
- */
-
-/**
- *运单识别对象
  */
 class WaybillObj extends AbstractModel
 {
@@ -31,6 +29,7 @@ class WaybillObj extends AbstractModel
      * @var string 识别出的文本行内容
      */
     public $Text;
+
     /**
      * @param string $Text 识别出的文本行内容
      */
@@ -38,6 +37,7 @@ class WaybillObj extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

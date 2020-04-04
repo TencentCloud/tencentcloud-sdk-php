@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 票据检测结果
+ *
  * @method float getAngle() 获取识别出的图片在混贴票据图片中的旋转角度。
  * @method void setAngle(float $Angle) 设置识别出的图片在混贴票据图片中的旋转角度。
  * @method integer getType() 获取识别出的图片所属的票据类型。
@@ -61,10 +63,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImage(string $Image) 设置入参 ReturnImage 为 True 时返回 Base64 编码后的图片。
 注意：此字段可能返回 null，表示取不到有效值。
  */
-
-/**
- *票据检测结果
- */
 class InvoiceDetectInfo extends AbstractModel
 {
     /**
@@ -103,6 +101,7 @@ class InvoiceDetectInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Image;
+
     /**
      * @param float $Angle 识别出的图片在混贴票据图片中的旋转角度。
      * @param integer $Type 识别出的图片所属的票据类型。
@@ -130,6 +129,7 @@ class InvoiceDetectInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

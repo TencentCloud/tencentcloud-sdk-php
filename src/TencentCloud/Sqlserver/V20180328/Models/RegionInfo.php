@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 地域信息
+ *
  * @method string getRegion() 获取地域英文ID，类似ap-guanghou
  * @method void setRegion(string $Region) 设置地域英文ID，类似ap-guanghou
  * @method string getRegionName() 获取地域中文名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionId(integer $RegionId) 设置地域数字ID
  * @method string getRegionState() 获取该地域目前是否可以售卖，UNAVAILABLE-不可售卖；AVAILABLE-可售卖
  * @method void setRegionState(string $RegionState) 设置该地域目前是否可以售卖，UNAVAILABLE-不可售卖；AVAILABLE-可售卖
- */
-
-/**
- *地域信息
  */
 class RegionInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class RegionInfo extends AbstractModel
      * @var string 该地域目前是否可以售卖，UNAVAILABLE-不可售卖；AVAILABLE-可售卖
      */
     public $RegionState;
+
     /**
      * @param string $Region 地域英文ID，类似ap-guanghou
      * @param string $RegionName 地域中文名称
@@ -62,6 +61,7 @@ class RegionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

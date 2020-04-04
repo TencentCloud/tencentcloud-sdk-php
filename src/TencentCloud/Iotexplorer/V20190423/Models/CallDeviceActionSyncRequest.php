@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CallDeviceActionSync请求参数结构体
+ *
  * @method string getProductId() 获取产品Id
  * @method void setProductId(string $ProductId) 设置产品Id
  * @method string getDeviceName() 获取设备名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionId(string $ActionId) 设置动作Id
  * @method string getInputParams() 获取输入参数
  * @method void setInputParams(string $InputParams) 设置输入参数
- */
-
-/**
- *CallDeviceActionSync请求参数结构体
  */
 class CallDeviceActionSyncRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CallDeviceActionSyncRequest extends AbstractModel
      * @var string 输入参数
      */
     public $InputParams;
+
     /**
      * @param string $ProductId 产品Id
      * @param string $DeviceName 设备名称
@@ -62,6 +61,7 @@ class CallDeviceActionSyncRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 订单信息
+ *
  * @method string getDealName() 获取订单号
  * @method void setDealName(string $DealName) 设置订单号
  * @method string getOwnerUin() 获取所属账号
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPayMode() 获取付费模式，0后付费/1预付费
  * @method void setPayMode(integer $PayMode) 设置付费模式，0后付费/1预付费
- */
-
-/**
- *订单信息
  */
 class Deal extends AbstractModel
 {
@@ -69,6 +67,7 @@ class Deal extends AbstractModel
      * @var integer 付费模式，0后付费/1预付费
      */
     public $PayMode;
+
     /**
      * @param string $DealName 订单号
      * @param string $OwnerUin 所属账号
@@ -82,6 +81,7 @@ class Deal extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

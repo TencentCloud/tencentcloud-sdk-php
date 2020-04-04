@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 命名空间
+ *
  * @method string getNamespaceId() 获取命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
@@ -70,10 +72,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceType(string $NamespaceType) 设置命名空间类型
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *命名空间
  */
 class Namespace extends AbstractModel
 {
@@ -154,6 +152,7 @@ class Namespace extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceType;
+
     /**
      * @param string $NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -186,6 +185,7 @@ class Namespace extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

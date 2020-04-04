@@ -18,16 +18,14 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户好评差评个数信息
+ *
  * @method string getDate() 获取评论的日期
  * @method void setDate(string $Date) 设置评论的日期
  * @method integer getNegCommentCount() 获取差评的个数
  * @method void setNegCommentCount(integer $NegCommentCount) 设置差评的个数
  * @method integer getPosCommentCount() 获取好评的个数
  * @method void setPosCommentCount(integer $PosCommentCount) 设置好评的个数
- */
-
-/**
- *用户好评差评个数信息
  */
 class Comment extends AbstractModel
 {
@@ -45,6 +43,7 @@ class Comment extends AbstractModel
      * @var integer 好评的个数
      */
     public $PosCommentCount;
+
     /**
      * @param string $Date 评论的日期
      * @param integer $NegCommentCount 差评的个数
@@ -54,6 +53,7 @@ class Comment extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 直播 AI 人脸识别结果
+ *
  * @method string getId() 获取人物唯一标识 ID。
  * @method void setId(string $Id) 设置人物唯一标识 ID。
  * @method string getName() 获取人物名称。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfidence(float $Confidence) 设置识别片段置信度。取值：0~100。
  * @method array getAreaCoordSet() 获取识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
  * @method void setAreaCoordSet(array $AreaCoordSet) 设置识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
- */
-
-/**
- *直播 AI 人脸识别结果
  */
 class LiveStreamFaceRecognitionResult extends AbstractModel
 {
@@ -76,6 +74,7 @@ class LiveStreamFaceRecognitionResult extends AbstractModel
      * @var array 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
      */
     public $AreaCoordSet;
+
     /**
      * @param string $Id 人物唯一标识 ID。
      * @param string $Name 人物名称。
@@ -90,6 +89,7 @@ class LiveStreamFaceRecognitionResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

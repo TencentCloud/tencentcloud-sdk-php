@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 订单数据对象
+ *
  * @method string getOrderId() 获取订单号
  * @method void setOrderId(string $OrderId) 设置订单号
  * @method integer getStatus() 获取订单状态
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubProductCode() 获取子产品编码
  * @method void setSubProductCode(string $SubProductCode) 设置子产品编码
- */
-
-/**
- *订单数据对象
  */
 class Deal extends AbstractModel
 {
@@ -153,6 +151,7 @@ class Deal extends AbstractModel
      * @var string 子产品编码
      */
     public $SubProductCode;
+
     /**
      * @param string $OrderId 订单号
      * @param integer $Status 订单状态
@@ -178,6 +177,7 @@ class Deal extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyFileSystem请求参数结构体
+ *
  * @method string getFileSystemId() 获取文件系统ID
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
  * @method string getFileSystemName() 获取文件系统名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：修改的文件系统容量不能小于当前使用量
  * @method void setCapacityQuota(integer $CapacityQuota) 设置文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
 注意：修改的文件系统容量不能小于当前使用量
- */
-
-/**
- *ModifyFileSystem请求参数结构体
  */
 class ModifyFileSystemRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class ModifyFileSystemRequest extends AbstractModel
 注意：修改的文件系统容量不能小于当前使用量
      */
     public $CapacityQuota;
+
     /**
      * @param string $FileSystemId 文件系统ID
      * @param string $FileSystemName 文件系统名称
@@ -66,6 +65,7 @@ class ModifyFileSystemRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

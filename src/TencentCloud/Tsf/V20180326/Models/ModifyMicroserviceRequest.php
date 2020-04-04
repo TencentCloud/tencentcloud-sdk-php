@@ -18,14 +18,12 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyMicroservice请求参数结构体
+ *
  * @method string getMicroserviceId() 获取微服务 ID
  * @method void setMicroserviceId(string $MicroserviceId) 设置微服务 ID
  * @method string getMicroserviceDesc() 获取微服务备注信息
  * @method void setMicroserviceDesc(string $MicroserviceDesc) 设置微服务备注信息
- */
-
-/**
- *ModifyMicroservice请求参数结构体
  */
 class ModifyMicroserviceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyMicroserviceRequest extends AbstractModel
      * @var string 微服务备注信息
      */
     public $MicroserviceDesc;
+
     /**
      * @param string $MicroserviceId 微服务 ID
      * @param string $MicroserviceDesc 微服务备注信息
@@ -46,6 +45,7 @@ class ModifyMicroserviceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

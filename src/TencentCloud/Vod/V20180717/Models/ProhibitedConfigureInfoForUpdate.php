@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 违禁任务控制参数
+ *
  * @method ProhibitedAsrReviewTemplateInfoForUpdate getAsrReviewInfo() 获取语音违禁控制参数。
  * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfoForUpdate $AsrReviewInfo) 设置语音违禁控制参数。
  * @method ProhibitedOcrReviewTemplateInfoForUpdate getOcrReviewInfo() 获取文本违禁控制参数。
  * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfoForUpdate $OcrReviewInfo) 设置文本违禁控制参数。
- */
-
-/**
- *违禁任务控制参数
  */
 class ProhibitedConfigureInfoForUpdate extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ProhibitedConfigureInfoForUpdate extends AbstractModel
      * @var ProhibitedOcrReviewTemplateInfoForUpdate 文本违禁控制参数。
      */
     public $OcrReviewInfo;
+
     /**
      * @param ProhibitedAsrReviewTemplateInfoForUpdate $AsrReviewInfo 语音违禁控制参数。
      * @param ProhibitedOcrReviewTemplateInfoForUpdate $OcrReviewInfo 文本违禁控制参数。
@@ -46,6 +45,7 @@ class ProhibitedConfigureInfoForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

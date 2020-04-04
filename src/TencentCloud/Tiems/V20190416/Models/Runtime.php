@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 运行环境
+ *
  * @method string getName() 获取运行环境名称
  * @method void setName(string $Name) 设置运行环境名称
  * @method string getFramework() 获取运行环境框架
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *运行环境
  */
 class Runtime extends AbstractModel
 {
@@ -85,6 +83,7 @@ class Runtime extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
+
     /**
      * @param string $Name 运行环境名称
      * @param string $Framework 运行环境框架
@@ -102,6 +101,7 @@ class Runtime extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TcaplusDB服务地域信息详情
+ *
  * @method string getRegionName() 获取地域Ap-Code
  * @method void setRegionName(string $RegionName) 设置地域Ap-Code
  * @method string getRegionAbbr() 获取地域缩写
  * @method void setRegionAbbr(string $RegionAbbr) 设置地域缩写
  * @method integer getRegionId() 获取地域ID
  * @method void setRegionId(integer $RegionId) 设置地域ID
- */
-
-/**
- *TcaplusDB服务地域信息详情
  */
 class RegionInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RegionInfo extends AbstractModel
      * @var integer 地域ID
      */
     public $RegionId;
+
     /**
      * @param string $RegionName 地域Ap-Code
      * @param string $RegionAbbr 地域缩写
@@ -54,6 +53,7 @@ class RegionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

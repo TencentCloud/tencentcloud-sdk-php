@@ -18,12 +18,10 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteDirectConnect请求参数结构体
+ *
  * @method string getDirectConnectId() 获取物理专线的ID。
  * @method void setDirectConnectId(string $DirectConnectId) 设置物理专线的ID。
- */
-
-/**
- *DeleteDirectConnect请求参数结构体
  */
 class DeleteDirectConnectRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteDirectConnectRequest extends AbstractModel
      * @var string 物理专线的ID。
      */
     public $DirectConnectId;
+
     /**
      * @param string $DirectConnectId 物理专线的ID。
      */
@@ -38,6 +37,7 @@ class DeleteDirectConnectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLoraDevice请求参数结构体
+ *
  * @method string getProductId() 获取产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
  * @method void setProductId(string $ProductId) 设置产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
  * @method string getDeviceName() 获取设备名称
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthKey(string $AuthKey) 设置LoRa设备验证密钥
  * @method string getMemo() 获取设备备注
  * @method void setMemo(string $Memo) 设置设备备注
- */
-
-/**
- *CreateLoraDevice请求参数结构体
  */
 class CreateLoraDeviceRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CreateLoraDeviceRequest extends AbstractModel
      * @var string 设备备注
      */
     public $Memo;
+
     /**
      * @param string $ProductId 产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
      * @param string $DeviceName 设备名称
@@ -94,6 +93,7 @@ class CreateLoraDeviceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

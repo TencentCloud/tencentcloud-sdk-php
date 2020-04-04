@@ -18,12 +18,10 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 仓库是否存在的返回值
+ *
  * @method boolean getIsExist() 获取仓库是否存在
  * @method void setIsExist(boolean $IsExist) 设置仓库是否存在
- */
-
-/**
- *仓库是否存在的返回值
  */
 class RepoIsExistResp extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RepoIsExistResp extends AbstractModel
      * @var boolean 仓库是否存在
      */
     public $IsExist;
+
     /**
      * @param boolean $IsExist 仓库是否存在
      */
@@ -38,6 +37,7 @@ class RepoIsExistResp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 退款子订单列表
+ *
  * @method integer getPlatformRefundAmt() 获取平台应退金额
  * @method void setPlatformRefundAmt(integer $PlatformRefundAmt) 设置平台应退金额
  * @method integer getRefundAmt() 获取子订单退款金额
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubOutTradeNo(string $SubOutTradeNo) 设置子订单号
  * @method string getSubRefundId() 获取子退款单号，调用方需要保证 全局唯一性
  * @method void setSubRefundId(string $SubRefundId) 设置子退款单号，调用方需要保证 全局唯一性
- */
-
-/**
- *退款子订单列表
  */
 class RefundOutSubOrderRefundList extends AbstractModel
 {
@@ -59,6 +57,7 @@ class RefundOutSubOrderRefundList extends AbstractModel
      * @var string 子退款单号，调用方需要保证 全局唯一性
      */
     public $SubRefundId;
+
     /**
      * @param integer $PlatformRefundAmt 平台应退金额
      * @param integer $RefundAmt 子订单退款金额
@@ -70,6 +69,7 @@ class RefundOutSubOrderRefundList extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

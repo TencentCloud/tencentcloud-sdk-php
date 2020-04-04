@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSuperPlayerConfig请求参数结构体
+ *
  * @method string getName() 获取播放器配置名称，长度限制：64 个字符。只允许出现 [0-9a-zA-Z] 及 _- 字符（如 test_ABC-123），同一个用户该名称唯一。
  * @method void setName(string $Name) 设置播放器配置名称，长度限制：64 个字符。只允许出现 [0-9a-zA-Z] 及 _- 字符（如 test_ABC-123），同一个用户该名称唯一。
  * @method string getDrmSwitch() 获取播放 DRM 保护的自适应码流开关：
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
 <li>MinEdgeLength：4320，Name：8K。</li>
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *CreateSuperPlayerConfig请求参数结构体
  */
 class CreateSuperPlayerConfigRequest extends AbstractModel
 {
@@ -103,6 +101,7 @@ class CreateSuperPlayerConfigRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param string $Name 播放器配置名称，长度限制：64 个字符。只允许出现 [0-9a-zA-Z] 及 _- 字符（如 test_ABC-123），同一个用户该名称唯一。
      * @param string $DrmSwitch 播放 DRM 保护的自适应码流开关：
@@ -126,6 +125,7 @@ class CreateSuperPlayerConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

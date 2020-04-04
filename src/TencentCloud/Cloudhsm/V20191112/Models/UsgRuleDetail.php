@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全组规则详情
+ *
  * @method array getInBound() 获取入站规则
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInBound(array $InBound) 设置入站规则
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(integer $Version) 设置版本
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *安全组规则详情
  */
 class UsgRuleDetail extends AbstractModel
 {
@@ -94,6 +92,7 @@ class UsgRuleDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
+
     /**
      * @param array $InBound 入站规则
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,6 +113,7 @@ class UsgRuleDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

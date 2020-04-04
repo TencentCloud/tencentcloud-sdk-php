@@ -18,6 +18,8 @@ namespace TencentCloud\Sts\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AssumeRoleWithSAML请求参数结构体
+ *
  * @method string getSAMLAssertion() 获取base64 编码的 SAML 断言信息
  * @method void setSAMLAssertion(string $SAMLAssertion) 设置base64 编码的 SAML 断言信息
  * @method string getPrincipalArn() 获取扮演者访问描述名
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleSessionName(string $RoleSessionName) 设置会话名称
  * @method integer getDurationSeconds() 获取指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 7200 秒
  * @method void setDurationSeconds(integer $DurationSeconds) 设置指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 7200 秒
- */
-
-/**
- *AssumeRoleWithSAML请求参数结构体
  */
 class AssumeRoleWithSAMLRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AssumeRoleWithSAMLRequest extends AbstractModel
      * @var integer 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 7200 秒
      */
     public $DurationSeconds;
+
     /**
      * @param string $SAMLAssertion base64 编码的 SAML 断言信息
      * @param string $PrincipalArn 扮演者访问描述名
@@ -70,6 +69,7 @@ class AssumeRoleWithSAMLRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 黑白IP
+ *
  * @method string getIp() 获取IP地址
  * @method void setIp(string $Ip) 设置IP地址
  * @method string getType() 获取黑白类型，取值范围[black，white]
  * @method void setType(string $Type) 设置黑白类型，取值范围[black，white]
- */
-
-/**
- *黑白IP
  */
 class IpBlackWhite extends AbstractModel
 {
@@ -38,6 +36,7 @@ class IpBlackWhite extends AbstractModel
      * @var string 黑白类型，取值范围[black，white]
      */
     public $Type;
+
     /**
      * @param string $Ip IP地址
      * @param string $Type 黑白类型，取值范围[black，white]
@@ -46,6 +45,7 @@ class IpBlackWhite extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

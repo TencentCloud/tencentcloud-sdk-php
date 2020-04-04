@@ -18,12 +18,10 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTranscodeCallback请求参数结构体
+ *
  * @method integer getSdkAppId() 获取应用的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置应用的SdkAppId
- */
-
-/**
- *DescribeTranscodeCallback请求参数结构体
  */
 class DescribeTranscodeCallbackRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeTranscodeCallbackRequest extends AbstractModel
      * @var integer 应用的SdkAppId
      */
     public $SdkAppId;
+
     /**
      * @param integer $SdkAppId 应用的SdkAppId
      */
@@ -38,6 +37,7 @@ class DescribeTranscodeCallbackRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

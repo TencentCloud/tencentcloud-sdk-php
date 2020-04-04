@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 播放器配置详情
+ *
  * @method string getName() 获取播放器配置名字。
  * @method void setName(string $Name) 设置播放器配置名字。
  * @method string getType() 获取播放器配置类型，取值范围：
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置播放器配置创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method string getUpdateTime() 获取播放器配置最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method void setUpdateTime(string $UpdateTime) 设置播放器配置最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- */
-
-/**
- *播放器配置详情
  */
 class PlayerConfig extends AbstractModel
 {
@@ -102,6 +100,7 @@ class PlayerConfig extends AbstractModel
      * @var string 播放器配置最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public $UpdateTime;
+
     /**
      * @param string $Name 播放器配置名字。
      * @param string $Type 播放器配置类型，取值范围：
@@ -122,6 +121,7 @@ class PlayerConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

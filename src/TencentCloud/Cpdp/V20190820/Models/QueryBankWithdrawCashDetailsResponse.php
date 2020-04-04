@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * QueryBankWithdrawCashDetails返回参数结构体
+ *
  * @method string getTxnReturnCode() 获取String(20)，返回码
  * @method void setTxnReturnCode(string $TxnReturnCode) 设置String(20)，返回码
  * @method string getTxnReturnMsg() 获取String(100)，返回信息
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *QueryBankWithdrawCashDetails返回参数结构体
  */
 class QueryBankWithdrawCashDetailsResponse extends AbstractModel
 {
@@ -112,6 +110,7 @@ class QueryBankWithdrawCashDetailsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $TxnReturnCode String(20)，返回码
      * @param string $TxnReturnMsg String(100)，返回信息
@@ -134,6 +133,7 @@ class QueryBankWithdrawCashDetailsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

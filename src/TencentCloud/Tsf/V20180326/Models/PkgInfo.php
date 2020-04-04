@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 包信息
+ *
  * @method string getPkgId() 获取程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgId(string $PkgId) 设置程序包ID
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgPubStatus(integer $PkgPubStatus) 设置程序包状态
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *包信息
  */
 class PkgInfo extends AbstractModel
 {
@@ -104,6 +102,7 @@ class PkgInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PkgPubStatus;
+
     /**
      * @param string $PkgId 程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -126,6 +125,7 @@ class PkgInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

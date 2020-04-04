@@ -18,16 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBZoneConfig返回参数结构体
+ *
  * @method integer getTotalCount() 获取可售卖地域配置数量
  * @method void setTotalCount(integer $TotalCount) 设置可售卖地域配置数量
  * @method array getItems() 获取可售卖地域配置详情
  * @method void setItems(array $Items) 设置可售卖地域配置详情
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDBZoneConfig返回参数结构体
  */
 class DescribeDBZoneConfigResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBZoneConfigResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 可售卖地域配置数量
      * @param array $Items 可售卖地域配置详情
@@ -54,6 +53,7 @@ class DescribeDBZoneConfigResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

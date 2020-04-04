@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateInstances请求参数结构体
+ *
  * @method integer getZoneId() 获取实例所属的可用区ID
  * @method void setZoneId(integer $ZoneId) 设置实例所属的可用区ID
  * @method integer getTypeId() 获取实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，8 – Redis5.0主从版，9 – Redis5.0集群版，
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置实例名称
  * @method boolean getNoAuth() 获取是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
  * @method void setNoAuth(boolean $NoAuth) 设置是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
- */
-
-/**
- *CreateInstances请求参数结构体
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -150,6 +148,7 @@ class CreateInstancesRequest extends AbstractModel
      * @var boolean 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
      */
     public $NoAuth;
+
     /**
      * @param integer $ZoneId 实例所属的可用区ID
      * @param integer $TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，8 – Redis5.0主从版，9 – Redis5.0集群版，
@@ -174,6 +173,7 @@ class CreateInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

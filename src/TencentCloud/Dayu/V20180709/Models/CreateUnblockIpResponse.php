@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateUnblockIp返回参数结构体
+ *
  * @method string getIp() 获取IP
  * @method void setIp(string $Ip) 设置IP
  * @method string getActionType() 获取解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnblockTime(string $UnblockTime) 设置解封时间（预计解封时间）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateUnblockIp返回参数结构体
  */
 class CreateUnblockIpResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateUnblockIpResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Ip IP
      * @param string $ActionType 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
@@ -62,6 +61,7 @@ class CreateUnblockIpResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

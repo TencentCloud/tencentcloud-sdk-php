@@ -18,14 +18,12 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 按日期的统计数据
+ *
  * @method string getDate() 获取统计日期
  * @method void setDate(string $Date) 设置统计日期
  * @method integer getCount() 获取统计值
  * @method void setCount(integer $Count) 设置统计值
- */
-
-/**
- *按日期的统计数据
  */
 class DateCount extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DateCount extends AbstractModel
      * @var integer 统计值
      */
     public $Count;
+
     /**
      * @param string $Date 统计日期
      * @param integer $Count 统计值
@@ -46,6 +45,7 @@ class DateCount extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

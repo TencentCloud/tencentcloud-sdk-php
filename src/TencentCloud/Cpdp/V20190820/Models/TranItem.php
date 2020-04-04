@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 交易信息
+ *
  * @method string getFundSummaryAcctNo() 获取STRING(50)，资金汇总账号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFundSummaryAcctNo(string $FundSummaryAcctNo) 设置STRING(50)，资金汇总账号
@@ -66,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMobile(string $Mobile) 设置STRING(30)，会员的手机号
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *交易信息
  */
 class TranItem extends AbstractModel
 {
@@ -144,6 +142,7 @@ class TranItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mobile;
+
     /**
      * @param string $FundSummaryAcctNo STRING(50)，资金汇总账号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,6 +173,7 @@ class TranItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

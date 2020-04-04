@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDiskOperationLogs返回参数结构体
+ *
  * @method array getDiskOperationLogSet() 获取云盘的操作日志列表。
  * @method void setDiskOperationLogSet(array $DiskOperationLogSet) 设置云盘的操作日志列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDiskOperationLogs返回参数结构体
  */
 class DescribeDiskOperationLogsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDiskOperationLogsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $DiskOperationLogSet 云盘的操作日志列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeDiskOperationLogsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

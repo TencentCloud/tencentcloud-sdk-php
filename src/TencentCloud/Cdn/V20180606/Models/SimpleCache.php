@@ -18,6 +18,11 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 缓存配置基础版本
+默认情况下所有文件缓存过期时间为 30 天
+默认情况下静态加速类型的域名 .php;.jsp;.asp;.aspx 不缓存
+注意：该版本不支持设置源站未返回 max-age 情况下的缓存过期规则设置
+ *
  * @method array getCacheRules() 获取缓存过期时间规则
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCacheRules(array $CacheRules) 设置缓存过期时间规则
@@ -65,13 +70,6 @@ off：关闭
 默认为关闭状态
 注意：此字段可能返回 null，表示取不到有效值。
  */
-
-/**
- *缓存配置基础版本
-默认情况下所有文件缓存过期时间为 30 天
-默认情况下静态加速类型的域名 .php;.jsp;.asp;.aspx 不缓存
-注意：该版本不支持设置源站未返回 max-age 情况下的缓存过期规则设置
- */
 class SimpleCache extends AbstractModel
 {
     /**
@@ -116,6 +114,7 @@ off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompareMaxAge;
+
     /**
      * @param array $CacheRules 缓存过期时间规则
 注意：此字段可能返回 null，表示取不到有效值。
@@ -145,6 +144,7 @@ off：关闭
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

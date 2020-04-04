@@ -18,16 +18,14 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeOrders返回参数结构体
+ *
  * @method array getTotalCount() 获取返回的订单数量。
  * @method void setTotalCount(array $TotalCount) 设置返回的订单数量。
  * @method array getDeals() 获取订单信息列表。
  * @method void setDeals(array $Deals) 设置订单信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeOrders返回参数结构体
  */
 class DescribeOrdersResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeOrdersResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $TotalCount 返回的订单数量。
      * @param array $Deals 订单信息列表。
@@ -54,6 +53,7 @@ class DescribeOrdersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

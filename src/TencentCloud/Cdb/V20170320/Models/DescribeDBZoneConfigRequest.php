@@ -18,14 +18,13 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBZoneConfig请求参数结构体
+ *
 
- */
-
-/**
- *DescribeDBZoneConfig请求参数结构体
  */
 class DescribeDBZoneConfigRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeDBZoneConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

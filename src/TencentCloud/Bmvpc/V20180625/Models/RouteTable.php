@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 路由表对象
+ *
  * @method string getVpcId() 获取VPC实例ID。
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。
  * @method string getVpcName() 获取VPC的名称
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouteTableName(string $RouteTableName) 设置路由表名称。
  * @method string getCreateTime() 获取创建时间。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
- */
-
-/**
- *路由表对象
  */
 class RouteTable extends AbstractModel
 {
@@ -73,6 +71,7 @@ class RouteTable extends AbstractModel
      * @var string 创建时间。
      */
     public $CreateTime;
+
     /**
      * @param string $VpcId VPC实例ID。
      * @param string $VpcName VPC的名称
@@ -86,6 +85,7 @@ class RouteTable extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

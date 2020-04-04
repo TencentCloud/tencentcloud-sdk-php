@@ -18,14 +18,12 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyPersonInfo请求参数结构体
+ *
  * @method string getPersonId() 获取人员ID。
  * @method void setPersonId(string $PersonId) 设置人员ID。
  * @method string getPersonName() 获取人员名称。
  * @method void setPersonName(string $PersonName) 设置人员名称。
- */
-
-/**
- *ModifyPersonInfo请求参数结构体
  */
 class ModifyPersonInfoRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyPersonInfoRequest extends AbstractModel
      * @var string 人员名称。
      */
     public $PersonName;
+
     /**
      * @param string $PersonId 人员ID。
      * @param string $PersonName 人员名称。
@@ -46,6 +45,7 @@ class ModifyPersonInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

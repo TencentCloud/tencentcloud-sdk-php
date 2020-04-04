@@ -18,16 +18,14 @@ namespace TencentCloud\Ic\V20190307\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SendMultiSms请求参数结构体
+ *
  * @method string getSdkappid() 获取应用ID
  * @method void setSdkappid(string $Sdkappid) 设置应用ID
  * @method array getIccids() 获取卡片列表
  * @method void setIccids(array $Iccids) 设置卡片列表
  * @method string getContent() 获取短信内容 长度限制 70
  * @method void setContent(string $Content) 设置短信内容 长度限制 70
- */
-
-/**
- *SendMultiSms请求参数结构体
  */
 class SendMultiSmsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SendMultiSmsRequest extends AbstractModel
      * @var string 短信内容 长度限制 70
      */
     public $Content;
+
     /**
      * @param string $Sdkappid 应用ID
      * @param array $Iccids 卡片列表
@@ -54,6 +53,7 @@ class SendMultiSmsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

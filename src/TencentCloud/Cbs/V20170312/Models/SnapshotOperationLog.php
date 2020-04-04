@@ -18,6 +18,8 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 快照操作日志。
+ *
  * @method string getOperator() 获取操作者的UIN。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperator(string $Operator) 设置操作者的UIN。
@@ -52,10 +54,6 @@ PROCESSING :表示操作中。
  * @method void setStartTime(string $StartTime) 设置开始时间。
  * @method string getEndTime() 获取结束时间。
  * @method void setEndTime(string $EndTime) 设置结束时间。
- */
-
-/**
- *快照操作日志。
  */
 class SnapshotOperationLog extends AbstractModel
 {
@@ -99,6 +97,7 @@ PROCESSING :表示操作中。
      * @var string 结束时间。
      */
     public $EndTime;
+
     /**
      * @param string $Operator 操作者的UIN。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -122,6 +121,7 @@ PROCESSING :表示操作中。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

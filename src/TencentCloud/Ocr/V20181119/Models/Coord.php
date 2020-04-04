@@ -18,14 +18,12 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 坐标
+ *
  * @method integer getX() 获取横坐标
  * @method void setX(integer $X) 设置横坐标
  * @method integer getY() 获取纵坐标
  * @method void setY(integer $Y) 设置纵坐标
- */
-
-/**
- *坐标
  */
 class Coord extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Coord extends AbstractModel
      * @var integer 纵坐标
      */
     public $Y;
+
     /**
      * @param integer $X 横坐标
      * @param integer $Y 纵坐标
@@ -46,6 +45,7 @@ class Coord extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

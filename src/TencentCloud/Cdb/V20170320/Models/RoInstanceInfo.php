@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RO实例的详细信息
+ *
  * @method string getMasterInstanceId() 获取RO组对应的主实例的ID
  * @method void setMasterInstanceId(string $MasterInstanceId) 设置RO组对应的主实例的ID
  * @method string getRoStatus() 获取RO实例在RO组内的状态，可能的值：online-在线，offline-下线
@@ -64,10 +66,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadlineTime(string $DeadlineTime) 设置RO实例到期时间，时间格式：yyyy-mm-dd hh:mm:ss，如实例为按量计费模式，则此字段值为0000-00-00 00:00:00
  * @method integer getPayType() 获取RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结
  * @method void setPayType(integer $PayType) 设置RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结
- */
-
-/**
- *RO实例的详细信息
  */
 class RoInstanceInfo extends AbstractModel
 {
@@ -185,6 +183,7 @@ class RoInstanceInfo extends AbstractModel
      * @var integer RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结
      */
     public $PayType;
+
     /**
      * @param string $MasterInstanceId RO组对应的主实例的ID
      * @param string $RoStatus RO实例在RO组内的状态，可能的值：online-在线，offline-下线
@@ -214,6 +213,7 @@ class RoInstanceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

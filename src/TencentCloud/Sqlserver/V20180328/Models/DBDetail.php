@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据库信息
+ *
  * @method string getName() 获取数据库名称
  * @method void setName(string $Name) 设置数据库名称
  * @method string getCharset() 获取字符集
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccounts(array $Accounts) 设置数据库账号权限信息
  * @method string getInternalStatus() 获取内部状态。ONLINE表示运行中
  * @method void setInternalStatus(string $InternalStatus) 设置内部状态。ONLINE表示运行中
- */
-
-/**
- *数据库信息
  */
 class DBDetail extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DBDetail extends AbstractModel
      * @var string 内部状态。ONLINE表示运行中
      */
     public $InternalStatus;
+
     /**
      * @param string $Name 数据库名称
      * @param string $Charset 字符集
@@ -86,6 +85,7 @@ class DBDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

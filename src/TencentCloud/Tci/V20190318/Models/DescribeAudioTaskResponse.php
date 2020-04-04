@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAudioTask返回参数结构体
+ *
  * @method AllMuteSlice getAllMuteSlice() 获取如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
  * @method void setAllMuteSlice(AllMuteSlice $AllMuteSlice) 设置如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
  * @method ASRStat getAsrStat() 获取返回的当前音频的统计信息。当进度为100时返回。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置结果总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAudioTask返回参数结构体
  */
 class DescribeAudioTaskResponse extends AbstractModel
 {
@@ -94,6 +92,7 @@ class DescribeAudioTaskResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param AllMuteSlice $AllMuteSlice 如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
      * @param ASRStat $AsrStat 返回的当前音频的统计信息。当进度为100时返回。
@@ -110,6 +109,7 @@ class DescribeAudioTaskResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyHTTPSListenerAttribute请求参数结构体
+ *
  * @method string getListenerId() 获取监听器ID
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getProxyId() 获取通道ID， 若为单通道监听器，此项必须填写
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientCertificateId(string $ClientCertificateId) 设置修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
  * @method array getPolyClientCertificateIds() 获取新字段,修改后的监听器客户端证书ID
  * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) 设置新字段,修改后的监听器客户端证书ID
- */
-
-/**
- *ModifyHTTPSListenerAttribute请求参数结构体
  */
 class ModifyHTTPSListenerAttributeRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifyHTTPSListenerAttributeRequest extends AbstractModel
      * @var array 新字段,修改后的监听器客户端证书ID
      */
     public $PolyClientCertificateIds;
+
     /**
      * @param string $ListenerId 监听器ID
      * @param string $ProxyId 通道ID， 若为单通道监听器，此项必须填写
@@ -86,6 +85,7 @@ class ModifyHTTPSListenerAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

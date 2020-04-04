@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云数据库账号信息
+ *
  * @method string getUserName() 获取用户名
  * @method void setUserName(string $UserName) 设置用户名
  * @method string getHost() 获取用户可以从哪台主机登录（对应 MySQL 用户的 host 字段，UserName + Host 唯一标识一个用户，IP形式，IP段以%结尾；支持填入%；为空默认等于%）
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDelayThresh(integer $DelayThresh) 设置该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *云数据库账号信息
  */
 class DBAccount extends AbstractModel
 {
@@ -76,6 +74,7 @@ class DBAccount extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DelayThresh;
+
     /**
      * @param string $UserName 用户名
      * @param string $Host 用户可以从哪台主机登录（对应 MySQL 用户的 host 字段，UserName + Host 唯一标识一个用户，IP形式，IP段以%结尾；支持填入%；为空默认等于%）
@@ -90,6 +89,7 @@ class DBAccount extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

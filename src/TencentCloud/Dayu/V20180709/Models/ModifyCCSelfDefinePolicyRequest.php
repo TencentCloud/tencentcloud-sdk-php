@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyCCSelfDefinePolicy请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method string getId() 获取资源ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSetId(string $SetId) 设置策略ID
  * @method CCPolicy getPolicy() 获取CC策略描述
  * @method void setPolicy(CCPolicy $Policy) 设置CC策略描述
- */
-
-/**
- *ModifyCCSelfDefinePolicy请求参数结构体
  */
 class ModifyCCSelfDefinePolicyRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyCCSelfDefinePolicyRequest extends AbstractModel
      * @var CCPolicy CC策略描述
      */
     public $Policy;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param string $Id 资源ID
@@ -62,6 +61,7 @@ class ModifyCCSelfDefinePolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

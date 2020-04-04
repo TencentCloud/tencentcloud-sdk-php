@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRuleRealServers请求参数结构体
+ *
  * @method string getRuleId() 获取转发规则ID
  * @method void setRuleId(string $RuleId) 设置转发规则ID
- */
-
-/**
- *DescribeRuleRealServers请求参数结构体
  */
 class DescribeRuleRealServersRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeRuleRealServersRequest extends AbstractModel
      * @var string 转发规则ID
      */
     public $RuleId;
+
     /**
      * @param string $RuleId 转发规则ID
      */
@@ -38,6 +37,7 @@ class DescribeRuleRealServersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

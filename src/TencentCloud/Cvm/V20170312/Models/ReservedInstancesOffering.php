@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述可购买预留实例计费信息
+ *
  * @method string getZone() 获取预留实例计费可购买的可用区。形如：ap-guangzhou-1。
 返回项：<a href="https://cloud.tencent.com/document/product/213/6091">可用区列表</a>
  * @method void setZone(string $Zone) 设置预留实例计费可购买的可用区。形如：ap-guangzhou-1。
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsagePrice(float $UsagePrice) 设置扣除预付费之后的使用价格 (按小时计费)。形如：0.0。
 目前，因为只支持 All Upfront 付款类型，所以默认为 0元/小时。
 计量单位：元/小时，货币单位与 currencyCode 一致，目前支持 USD（美元）
- */
-
-/**
- *描述可购买预留实例计费信息
  */
 class ReservedInstancesOffering extends AbstractModel
 {
@@ -114,6 +112,7 @@ class ReservedInstancesOffering extends AbstractModel
 计量单位：元/小时，货币单位与 currencyCode 一致，目前支持 USD（美元）
      */
     public $UsagePrice;
+
     /**
      * @param string $Zone 预留实例计费可购买的可用区。形如：ap-guangzhou-1。
 返回项：<a href="https://cloud.tencent.com/document/product/213/6091">可用区列表</a>
@@ -138,6 +137,7 @@ class ReservedInstancesOffering extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

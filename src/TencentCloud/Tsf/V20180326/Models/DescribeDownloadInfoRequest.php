@@ -18,14 +18,12 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDownloadInfo请求参数结构体
+ *
  * @method string getApplicationId() 获取应用ID
  * @method void setApplicationId(string $ApplicationId) 设置应用ID
  * @method string getPkgId() 获取程序包ID
  * @method void setPkgId(string $PkgId) 设置程序包ID
- */
-
-/**
- *DescribeDownloadInfo请求参数结构体
  */
 class DescribeDownloadInfoRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDownloadInfoRequest extends AbstractModel
      * @var string 程序包ID
      */
     public $PkgId;
+
     /**
      * @param string $ApplicationId 应用ID
      * @param string $PkgId 程序包ID
@@ -46,6 +45,7 @@ class DescribeDownloadInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

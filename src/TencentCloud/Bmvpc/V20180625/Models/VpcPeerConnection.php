@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 对等连接对象
+ *
  * @method string getVpcId() 获取本端VPC唯一ID
  * @method void setVpcId(string $VpcId) 设置本端VPC唯一ID
  * @method string getPeerVpcId() 获取对端VPC唯一ID
@@ -58,10 +60,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
- */
-
-/**
- *对等连接对象
  */
 class VpcPeerConnection extends AbstractModel
 {
@@ -152,6 +150,7 @@ class VpcPeerConnection extends AbstractModel
      * @var string 创建时间
      */
     public $CreateTime;
+
     /**
      * @param string $VpcId 本端VPC唯一ID
      * @param string $PeerVpcId 对端VPC唯一ID
@@ -178,6 +177,7 @@ class VpcPeerConnection extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

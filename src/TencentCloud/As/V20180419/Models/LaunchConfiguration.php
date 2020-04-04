@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 符合条件的启动配置信息的集合。
+ *
  * @method integer getProjectId() 获取实例所属项目ID。
  * @method void setProjectId(integer $ProjectId) 设置实例所属项目ID。
  * @method string getLaunchConfigurationId() 获取启动配置ID。
@@ -78,10 +80,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) 设置云服务器实例名（InstanceName）的相关设置。
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
- */
-
-/**
- *符合条件的启动配置信息的集合。
  */
 class LaunchConfiguration extends AbstractModel
 {
@@ -218,6 +216,7 @@ class LaunchConfiguration extends AbstractModel
      * @var InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      */
     public $InstanceChargePrepaid;
+
     /**
      * @param integer $ProjectId 实例所属项目ID。
      * @param string $LaunchConfigurationId 启动配置ID。
@@ -254,6 +253,7 @@ class LaunchConfiguration extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetTranscodeCallback请求参数结构体
+ *
  * @method integer getSdkAppId() 获取客户的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置客户的SdkAppId
  * @method string getCallback() 获取文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
  * @method void setCallback(string $Callback) 设置文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
- */
-
-/**
- *SetTranscodeCallback请求参数结构体
  */
 class SetTranscodeCallbackRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SetTranscodeCallbackRequest extends AbstractModel
      * @var string 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
      */
     public $Callback;
+
     /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param string $Callback 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
@@ -46,6 +45,7 @@ class SetTranscodeCallbackRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

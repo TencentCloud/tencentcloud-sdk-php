@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityGroups请求参数结构体
+ *
  * @method array getSecurityGroupIds() 获取安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) 设置偏移量。
  * @method string getLimit() 获取返回数量。
  * @method void setLimit(string $Limit) 设置返回数量。
- */
-
-/**
- *DescribeSecurityGroups请求参数结构体
  */
 class DescribeSecurityGroupsRequest extends AbstractModel
 {
@@ -67,6 +65,7 @@ class DescribeSecurityGroupsRequest extends AbstractModel
      * @var string 返回数量。
      */
     public $Limit;
+
     /**
      * @param array $SecurityGroupIds 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
@@ -82,6 +81,7 @@ class DescribeSecurityGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

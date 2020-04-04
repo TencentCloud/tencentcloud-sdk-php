@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateMicroservice返回参数结构体
+ *
  * @method boolean getResult() 获取新增微服务是否成功。
 true：操作成功。
 false：操作失败。
@@ -26,10 +28,6 @@ true：操作成功。
 false：操作失败。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateMicroservice返回参数结构体
  */
 class CreateMicroserviceResponse extends AbstractModel
 {
@@ -44,6 +42,7 @@ false：操作失败。
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param boolean $Result 新增微服务是否成功。
 true：操作成功。
@@ -54,6 +53,7 @@ false：操作失败。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

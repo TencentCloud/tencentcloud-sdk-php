@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例详细信息列表
+ *
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
  * @method string getInstanceId() 获取实例Id
@@ -124,10 +126,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) 设置内部参数，用户可忽略
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *实例详细信息列表
  */
 class InstanceSet extends AbstractModel
 {
@@ -355,6 +353,7 @@ class InstanceSet extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemainBandwidthDuration;
+
     /**
      * @param string $InstanceName 实例名称
      * @param string $InstanceId 实例Id
@@ -414,6 +413,7 @@ class InstanceSet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 状态
+ *
  * @method string getReason() 获取原因
  * @method void setReason(string $Reason) 设置原因
  * @method integer getCount() 获取具有相同原因的副本个数
  * @method void setCount(integer $Count) 设置具有相同原因的副本个数
- */
-
-/**
- *状态
  */
 class Conditions extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Conditions extends AbstractModel
      * @var integer 具有相同原因的副本个数
      */
     public $Count;
+
     /**
      * @param string $Reason 原因
      * @param integer $Count 具有相同原因的副本个数
@@ -46,6 +45,7 @@ class Conditions extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

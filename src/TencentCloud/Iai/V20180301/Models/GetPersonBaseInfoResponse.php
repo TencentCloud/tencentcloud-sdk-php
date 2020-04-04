@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetPersonBaseInfo返回参数结构体
+ *
  * @method string getPersonName() 获取人员名称
  * @method void setPersonName(string $PersonName) 设置人员名称
  * @method integer getGender() 获取人员性别
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaceIds(array $FaceIds) 设置包含的人脸 ID 列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetPersonBaseInfo返回参数结构体
  */
 class GetPersonBaseInfoResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GetPersonBaseInfoResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $PersonName 人员名称
      * @param integer $Gender 人员性别
@@ -62,6 +61,7 @@ class GetPersonBaseInfoResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

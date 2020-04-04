@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * NAT网关对象。
+ *
  * @method string getNatGatewayId() 获取NAT网关的ID。
  * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID。
  * @method string getNatGatewayName() 获取NAT网关的名称。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。
  * @method string getZone() 获取NAT网关所在的可用区。
  * @method void setZone(string $Zone) 设置NAT网关所在的可用区。
- */
-
-/**
- *NAT网关对象。
  */
 class NatGateway extends AbstractModel
 {
@@ -107,6 +105,7 @@ class NatGateway extends AbstractModel
      * @var string NAT网关所在的可用区。
      */
     public $Zone;
+
     /**
      * @param string $NatGatewayId NAT网关的ID。
      * @param string $NatGatewayName NAT网关的名称。
@@ -126,6 +125,7 @@ class NatGateway extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

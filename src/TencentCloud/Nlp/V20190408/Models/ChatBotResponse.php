@@ -18,16 +18,14 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ChatBot返回参数结构体
+ *
  * @method float getConfidence() 获取对于当前输出回复的自信度
  * @method void setConfidence(float $Confidence) 设置对于当前输出回复的自信度
  * @method string getReply() 获取闲聊回复
  * @method void setReply(string $Reply) 设置闲聊回复
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ChatBot返回参数结构体
  */
 class ChatBotResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ChatBotResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param float $Confidence 对于当前输出回复的自信度
      * @param string $Reply 闲聊回复
@@ -54,6 +53,7 @@ class ChatBotResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

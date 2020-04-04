@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeIPProductInfo请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
  * @method array getIpList() 获取IP列表
  * @method void setIpList(array $IpList) 设置IP列表
- */
-
-/**
- *DescribeIPProductInfo请求参数结构体
  */
 class DescribeIPProductInfoRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeIPProductInfoRequest extends AbstractModel
      * @var array IP列表
      */
     public $IpList;
+
     /**
      * @param string $Business 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
      * @param array $IpList IP列表
@@ -46,6 +45,7 @@ class DescribeIPProductInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

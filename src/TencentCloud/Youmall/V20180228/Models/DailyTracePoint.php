@@ -18,14 +18,12 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 客户天轨迹
+ *
  * @method string getTraceDate() 获取轨迹日期
  * @method void setTraceDate(string $TraceDate) 设置轨迹日期
  * @method array getTracePointSet() 获取轨迹点序列
  * @method void setTracePointSet(array $TracePointSet) 设置轨迹点序列
- */
-
-/**
- *客户天轨迹
  */
 class DailyTracePoint extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DailyTracePoint extends AbstractModel
      * @var array 轨迹点序列
      */
     public $TracePointSet;
+
     /**
      * @param string $TraceDate 轨迹日期
      * @param array $TracePointSet 轨迹点序列
@@ -46,6 +45,7 @@ class DailyTracePoint extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

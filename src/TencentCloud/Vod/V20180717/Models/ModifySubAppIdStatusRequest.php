@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySubAppIdStatus请求参数结构体
+ *
  * @method integer getSubAppId() 获取子应用 ID。
  * @method void setSubAppId(integer $SubAppId) 设置子应用 ID。
  * @method string getStatus() 获取子应用状态，取值范围：
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置子应用状态，取值范围：
 <li>On：启用</li>
 <li>Off：停用</li>
- */
-
-/**
- *ModifySubAppIdStatus请求参数结构体
  */
 class ModifySubAppIdStatusRequest extends AbstractModel
 {
@@ -44,6 +42,7 @@ class ModifySubAppIdStatusRequest extends AbstractModel
 <li>Off：停用</li>
      */
     public $Status;
+
     /**
      * @param integer $SubAppId 子应用 ID。
      * @param string $Status 子应用状态，取值范围：
@@ -54,6 +53,7 @@ class ModifySubAppIdStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

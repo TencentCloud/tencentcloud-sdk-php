@@ -18,14 +18,12 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteServiceConfig请求参数结构体
+ *
  * @method string getServiceConfigId() 获取服务配置Id
  * @method void setServiceConfigId(string $ServiceConfigId) 设置服务配置Id
  * @method string getServiceConfigName() 获取服务配置名称
  * @method void setServiceConfigName(string $ServiceConfigName) 设置服务配置名称
- */
-
-/**
- *DeleteServiceConfig请求参数结构体
  */
 class DeleteServiceConfigRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteServiceConfigRequest extends AbstractModel
      * @var string 服务配置名称
      */
     public $ServiceConfigName;
+
     /**
      * @param string $ServiceConfigId 服务配置Id
      * @param string $ServiceConfigName 服务配置名称
@@ -46,6 +45,7 @@ class DeleteServiceConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

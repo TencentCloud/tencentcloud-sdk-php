@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindRelateAcctSmallAmount请求参数结构体
+ *
  * @method string getMrchCode() 获取String(22)，商户号（签约客户号）
  * @method void setMrchCode(string $MrchCode) 设置String(22)，商户号（签约客户号）
  * @method string getTranNetMemberCode() 获取STRING(32)，交易网会员代码（若需要把一个待绑定账户关联到两个会员名下，此字段可上送两个会员的交易网代码，并且须用“|::|”(右侧)进行分隔）
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEiconBankBranchId(string $EiconBankBranchId) 设置STRING(20)，会员的待绑定账户的开户行的超级网银行号（本他行类型为他行的情况下，此字段和上一个字段至少一个不为空）
  * @method string getReservedMsg() 获取STRING(1027)，转账方式（1: 往账鉴权(默认值); 2: 来账鉴权）
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，转账方式（1: 往账鉴权(默认值); 2: 来账鉴权）
- */
-
-/**
- *BindRelateAcctSmallAmount请求参数结构体
  */
 class BindRelateAcctSmallAmountRequest extends AbstractModel
 {
@@ -108,6 +106,7 @@ class BindRelateAcctSmallAmountRequest extends AbstractModel
      * @var string STRING(1027)，转账方式（1: 往账鉴权(默认值); 2: 来账鉴权）
      */
     public $ReservedMsg;
+
     /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $TranNetMemberCode STRING(32)，交易网会员代码（若需要把一个待绑定账户关联到两个会员名下，此字段可上送两个会员的交易网代码，并且须用“|::|”(右侧)进行分隔）
@@ -126,6 +125,7 @@ class BindRelateAcctSmallAmountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

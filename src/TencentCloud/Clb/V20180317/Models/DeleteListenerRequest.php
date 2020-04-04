@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteListener请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例 ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
  * @method string getListenerId() 获取要删除的监听器 ID
  * @method void setListenerId(string $ListenerId) 设置要删除的监听器 ID
- */
-
-/**
- *DeleteListener请求参数结构体
  */
 class DeleteListenerRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteListenerRequest extends AbstractModel
      * @var string 要删除的监听器 ID
      */
     public $ListenerId;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param string $ListenerId 要删除的监听器 ID
@@ -46,6 +45,7 @@ class DeleteListenerRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

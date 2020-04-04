@@ -18,14 +18,12 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetVpnConnection请求参数结构体
+ *
  * @method string getVpcId() 获取VPC唯一ID
  * @method void setVpcId(string $VpcId) 设置VPC唯一ID
  * @method string getVpnConnectionId() 获取VPN通道实例ID。形如：bmvpnx-f49l6u0z。
  * @method void setVpnConnectionId(string $VpnConnectionId) 设置VPN通道实例ID。形如：bmvpnx-f49l6u0z。
- */
-
-/**
- *ResetVpnConnection请求参数结构体
  */
 class ResetVpnConnectionRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ResetVpnConnectionRequest extends AbstractModel
      * @var string VPN通道实例ID。形如：bmvpnx-f49l6u0z。
      */
     public $VpnConnectionId;
+
     /**
      * @param string $VpcId VPC唯一ID
      * @param string $VpnConnectionId VPN通道实例ID。形如：bmvpnx-f49l6u0z。
@@ -46,6 +45,7 @@ class ResetVpnConnectionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

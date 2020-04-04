@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 与本次伸缩活动相关的实例信息。
+ *
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
  * @method string getInstanceStatus() 获取实例在伸缩活动中的状态。取值如下：
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>RUNNING：实例操作中
 <li>SUCCESSFUL：活动成功
 <li>FAILED：活动失败
- */
-
-/**
- *与本次伸缩活动相关的实例信息。
  */
 class ActivtyRelatedInstance extends AbstractModel
 {
@@ -50,6 +48,7 @@ class ActivtyRelatedInstance extends AbstractModel
 <li>FAILED：活动失败
      */
     public $InstanceStatus;
+
     /**
      * @param string $InstanceId 实例ID。
      * @param string $InstanceStatus 实例在伸缩活动中的状态。取值如下：
@@ -62,6 +61,7 @@ class ActivtyRelatedInstance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

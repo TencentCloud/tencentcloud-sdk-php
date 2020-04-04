@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBruteAttacks请求参数结构体
+ *
  * @method string getUuid() 获取客户端唯一Uuid。
  * @method void setUuid(string $Uuid) 设置客户端唯一Uuid。
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Status - String - 是否必填：否 -  查询状态（FAILED：破解失败 |SUCCESS：破解成功）</li>
  * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
- */
-
-/**
- *DescribeBruteAttacks请求参数结构体
  */
 class DescribeBruteAttacksRequest extends AbstractModel
 {
@@ -58,6 +56,7 @@ class DescribeBruteAttacksRequest extends AbstractModel
      * @var integer 返回数量，默认为10，最大值为100。
      */
     public $Limit;
+
     /**
      * @param string $Uuid 客户端唯一Uuid。
      * @param integer $Offset 偏移量，默认为0。
@@ -70,6 +69,7 @@ class DescribeBruteAttacksRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

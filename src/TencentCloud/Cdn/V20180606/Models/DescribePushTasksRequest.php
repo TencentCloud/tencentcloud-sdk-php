@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePushTasks请求参数结构体
+ *
  * @method string getStartTime() 获取开始时间，如2018-08-08 00:00:00。
  * @method void setStartTime(string $StartTime) 设置开始时间，如2018-08-08 00:00:00。
  * @method string getEndTime() 获取结束时间，如2018-08-08 23:59:59。
@@ -48,10 +50,6 @@ process：预热中
 fail：预热失败
 done：预热成功
 process：预热中
- */
-
-/**
- *DescribePushTasks请求参数结构体
  */
 class DescribePushTasksRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ done：预热成功
 process：预热中
      */
     public $Status;
+
     /**
      * @param string $StartTime 开始时间，如2018-08-08 00:00:00。
      * @param string $EndTime 结束时间，如2018-08-08 23:59:59。
@@ -122,6 +121,7 @@ process：预热中
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

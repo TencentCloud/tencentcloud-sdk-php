@@ -18,16 +18,14 @@ namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBDiagHistory请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID 。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
  * @method string getStartTime() 获取开始时间。如“2019-09-10 12:13:14”。
  * @method void setStartTime(string $StartTime) 设置开始时间。如“2019-09-10 12:13:14”。
  * @method string getEndTime() 获取结束时间。如“2019-09-11 12:13:14”。
  * @method void setEndTime(string $EndTime) 设置结束时间。如“2019-09-11 12:13:14”。
- */
-
-/**
- *DescribeDBDiagHistory请求参数结构体
  */
 class DescribeDBDiagHistoryRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeDBDiagHistoryRequest extends AbstractModel
      * @var string 结束时间。如“2019-09-11 12:13:14”。
      */
     public $EndTime;
+
     /**
      * @param string $InstanceId 实例 ID 。
      * @param string $StartTime 开始时间。如“2019-09-10 12:13:14”。
@@ -54,6 +53,7 @@ class DescribeDBDiagHistoryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

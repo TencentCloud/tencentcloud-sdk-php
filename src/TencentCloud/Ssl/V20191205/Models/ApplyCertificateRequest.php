@@ -18,6 +18,8 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ApplyCertificate请求参数结构体
+ *
  * @method string getDvAuthMethod() 获取验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
  * @method void setDvAuthMethod(string $DvAuthMethod) 设置验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
  * @method string getDomainName() 获取域名。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlias(string $Alias) 设置备注名称。
  * @method string getOldCertificateId() 获取原证书 ID，用于重新申请。
  * @method void setOldCertificateId(string $OldCertificateId) 设置原证书 ID，用于重新申请。
- */
-
-/**
- *ApplyCertificate请求参数结构体
  */
 class ApplyCertificateRequest extends AbstractModel
 {
@@ -108,6 +106,7 @@ class ApplyCertificateRequest extends AbstractModel
      * @var string 原证书 ID，用于重新申请。
      */
     public $OldCertificateId;
+
     /**
      * @param string $DvAuthMethod 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
      * @param string $DomainName 域名。
@@ -126,6 +125,7 @@ class ApplyCertificateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

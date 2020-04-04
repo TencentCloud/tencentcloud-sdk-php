@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 参数约束
+ *
  * @method string getType() 获取约束类型,如枚举enum，区间section
  * @method void setType(string $Type) 设置约束类型,如枚举enum，区间section
  * @method string getEnum() 获取约束类型为enum时的可选值列表
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getString() 获取约束类型为string时的可选值列表
  * @method void setString(string $String) 设置约束类型为string时的可选值列表
- */
-
-/**
- *参数约束
  */
 class ParamConstraint extends AbstractModel
 {
@@ -55,6 +53,7 @@ class ParamConstraint extends AbstractModel
      * @var string 约束类型为string时的可选值列表
      */
     public $String;
+
     /**
      * @param string $Type 约束类型,如枚举enum，区间section
      * @param string $Enum 约束类型为enum时的可选值列表
@@ -66,6 +65,7 @@ class ParamConstraint extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

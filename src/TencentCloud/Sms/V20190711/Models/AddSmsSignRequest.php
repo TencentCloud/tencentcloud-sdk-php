@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddSmsSign请求参数结构体
+ *
  * @method string getSignName() 获取签名名称。
  * @method void setSignName(string $SignName) 设置签名名称。
  * @method integer getSignType() 获取签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：
@@ -76,10 +78,6 @@ use TencentCloud\Common\AbstractModel;
 注：只有 UsedMethod 在选择为 1（他用）时，这个字段才会生效。
  * @method string getRemark() 获取签名的申请备注。
  * @method void setRemark(string $Remark) 设置签名的申请备注。
- */
-
-/**
- *AddSmsSign请求参数结构体
  */
 class AddSmsSignRequest extends AbstractModel
 {
@@ -143,6 +141,7 @@ class AddSmsSignRequest extends AbstractModel
      * @var string 签名的申请备注。
      */
     public $Remark;
+
     /**
      * @param string $SignName 签名名称。
      * @param integer $SignType 签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：
@@ -178,6 +177,7 @@ class AddSmsSignRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

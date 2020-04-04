@@ -18,14 +18,13 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SignUpCfsService请求参数结构体
+ *
 
- */
-
-/**
- *SignUpCfsService请求参数结构体
  */
 class SignUpCfsServiceRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class SignUpCfsServiceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

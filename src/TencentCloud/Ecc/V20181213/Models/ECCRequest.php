@@ -18,6 +18,8 @@ namespace TencentCloud\Ecc\V20181213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ECC请求参数结构体
+ *
  * @method string getContent() 获取作文文本，必填
  * @method void setContent(string $Content) 设置作文文本，必填
  * @method string getTitle() 获取作文题目，可选参数
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAsync(integer $IsAsync) 设置异步模式标识，0：同步模式，1：异步模式，默认为同步模式
  * @method string getSessionId() 获取图像识别唯一标识，一次识别一个 SessionId。当传入此前识别接口使用过的 SessionId，则本次批改按图像批改价格收费；如使用了识别接口且本次没有传入 SessionId，则需要加取文本批改的费用；如果直接使用文本批改接口，则只收取文本批改的费用
  * @method void setSessionId(string $SessionId) 设置图像识别唯一标识，一次识别一个 SessionId。当传入此前识别接口使用过的 SessionId，则本次批改按图像批改价格收费；如使用了识别接口且本次没有传入 SessionId，则需要加取文本批改的费用；如果直接使用文本批改接口，则只收取文本批改的费用
- */
-
-/**
- *ECC请求参数结构体
  */
 class ECCRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class ECCRequest extends AbstractModel
      * @var string 图像识别唯一标识，一次识别一个 SessionId。当传入此前识别接口使用过的 SessionId，则本次批改按图像批改价格收费；如使用了识别接口且本次没有传入 SessionId，则需要加取文本批改的费用；如果直接使用文本批改接口，则只收取文本批改的费用
      */
     public $SessionId;
+
     /**
      * @param string $Content 作文文本，必填
      * @param string $Title 作文题目，可选参数
@@ -102,6 +101,7 @@ class ECCRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

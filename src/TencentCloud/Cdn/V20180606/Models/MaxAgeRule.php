@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * MagAge 规则配置
+ *
  * @method string getMaxAgeType() 获取规则类型：
 all：所有文件生效
 file：指定文件后缀生效
@@ -40,10 +42,6 @@ directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
  * @method integer getMaxAgeTime() 获取MaxAge 时间设置，单位秒
  * @method void setMaxAgeTime(integer $MaxAgeTime) 设置MaxAge 时间设置，单位秒
- */
-
-/**
- *MagAge 规则配置
  */
 class MaxAgeRule extends AbstractModel
 {
@@ -69,6 +67,7 @@ path 时填充绝对路径，如 /xxx/test.html
      * @var integer MaxAge 时间设置，单位秒
      */
     public $MaxAgeTime;
+
     /**
      * @param string $MaxAgeType 规则类型：
 all：所有文件生效
@@ -86,6 +85,7 @@ path 时填充绝对路径，如 /xxx/test.html
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

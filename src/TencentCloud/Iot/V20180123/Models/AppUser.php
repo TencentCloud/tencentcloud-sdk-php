@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 应用用户
+ *
  * @method string getApplicationId() 获取应用Id
  * @method void setApplicationId(string $ApplicationId) 设置应用Id
  * @method string getUserName() 获取用户名
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取修改时间
  * @method void setUpdateTime(string $UpdateTime) 设置修改时间
- */
-
-/**
- *应用用户
  */
 class AppUser extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AppUser extends AbstractModel
      * @var string 修改时间
      */
     public $UpdateTime;
+
     /**
      * @param string $ApplicationId 应用Id
      * @param string $UserName 用户名
@@ -70,6 +69,7 @@ class AppUser extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

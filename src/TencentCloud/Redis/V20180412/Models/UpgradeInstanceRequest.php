@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpgradeInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method integer getMemSize() 获取分片大小 单位 MB
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
  * @method integer getRedisReplicasNum() 获取副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
  * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
- */
-
-/**
- *UpgradeInstance请求参数结构体
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class UpgradeInstanceRequest extends AbstractModel
      * @var integer 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
     public $RedisReplicasNum;
+
     /**
      * @param string $InstanceId 实例ID
      * @param integer $MemSize 分片大小 单位 MB
@@ -62,6 +61,7 @@ class UpgradeInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cds\V20180420\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据安全审计产品规格信息
+ *
  * @method string getInstanceVersionName() 获取规格描述
  * @method void setInstanceVersionName(string $InstanceVersionName) 设置规格描述
  * @method string getInstanceVersionKey() 获取规格名称
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOnlineStorageCapacity(integer $OnlineStorageCapacity) 设置最大在线存储量，单位：条
  * @method integer getArchivingStorageCapacity() 获取最大归档存储量，单位：条
  * @method void setArchivingStorageCapacity(integer $ArchivingStorageCapacity) 设置最大归档存储量，单位：条
- */
-
-/**
- *数据安全审计产品规格信息
  */
 class DbauditTypesInfo extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DbauditTypesInfo extends AbstractModel
      * @var integer 最大归档存储量，单位：条
      */
     public $ArchivingStorageCapacity;
+
     /**
      * @param string $InstanceVersionName 规格描述
      * @param string $InstanceVersionKey 规格名称
@@ -86,6 +85,7 @@ class DbauditTypesInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

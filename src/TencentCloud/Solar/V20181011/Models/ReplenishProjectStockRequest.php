@@ -18,6 +18,8 @@ namespace TencentCloud\Solar\V20181011\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReplenishProjectStock请求参数结构体
+ *
  * @method string getSubProjectId() 获取项目id
  * @method void setSubProjectId(string $SubProjectId) 设置项目id
  * @method string getPrizeId() 获取奖品id
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPoolIndex(integer $PoolIndex) 设置奖池索引
  * @method string getPoolName() 获取奖池名称
  * @method void setPoolName(string $PoolName) 设置奖池名称
- */
-
-/**
- *ReplenishProjectStock请求参数结构体
  */
 class ReplenishProjectStockRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ReplenishProjectStockRequest extends AbstractModel
      * @var string 奖池名称
      */
     public $PoolName;
+
     /**
      * @param string $SubProjectId 项目id
      * @param string $PrizeId 奖品id
@@ -70,6 +69,7 @@ class ReplenishProjectStockRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

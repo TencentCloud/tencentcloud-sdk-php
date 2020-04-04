@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyClusterPassword请求参数结构体
+ *
  * @method string getClusterId() 获取需要修改密码的集群ID
  * @method void setClusterId(string $ClusterId) 设置需要修改密码的集群ID
  * @method string getOldPassword() 获取集群旧密码
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewPassword(string $NewPassword) 设置集群新密码，密码必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
  * @method string getMode() 获取更新模式： `1` 更新密码；`2` 更新旧密码失效时间，默认为`1` 模式
  * @method void setMode(string $Mode) 设置更新模式： `1` 更新密码；`2` 更新旧密码失效时间，默认为`1` 模式
- */
-
-/**
- *ModifyClusterPassword请求参数结构体
  */
 class ModifyClusterPasswordRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyClusterPasswordRequest extends AbstractModel
      * @var string 更新模式： `1` 更新密码；`2` 更新旧密码失效时间，默认为`1` 模式
      */
     public $Mode;
+
     /**
      * @param string $ClusterId 需要修改密码的集群ID
      * @param string $OldPassword 集群旧密码
@@ -70,6 +69,7 @@ class ModifyClusterPasswordRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

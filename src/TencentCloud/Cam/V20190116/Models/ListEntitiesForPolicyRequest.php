@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListEntitiesForPolicy请求参数结构体
+ *
  * @method integer getPolicyId() 获取策略 id
  * @method void setPolicyId(integer $PolicyId) 设置策略 id
  * @method integer getPage() 获取页码，默认值是 1，从 1 开始
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRp(integer $Rp) 设置每页大小，默认值是 20
  * @method string getEntityFilter() 获取可取值 'All'、'User'、'Group' 和 'Role'，'All' 表示获取所有实体类型，'User' 表示只获取子账号，'Group' 表示只获取用户组，'Role' 表示只获取角色，默认取 'All'
  * @method void setEntityFilter(string $EntityFilter) 设置可取值 'All'、'User'、'Group' 和 'Role'，'All' 表示获取所有实体类型，'User' 表示只获取子账号，'Group' 表示只获取用户组，'Role' 表示只获取角色，默认取 'All'
- */
-
-/**
- *ListEntitiesForPolicy请求参数结构体
  */
 class ListEntitiesForPolicyRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ListEntitiesForPolicyRequest extends AbstractModel
      * @var string 可取值 'All'、'User'、'Group' 和 'Role'，'All' 表示获取所有实体类型，'User' 表示只获取子账号，'Group' 表示只获取用户组，'Role' 表示只获取角色，默认取 'All'
      */
     public $EntityFilter;
+
     /**
      * @param integer $PolicyId 策略 id
      * @param integer $Page 页码，默认值是 1，从 1 开始
@@ -62,6 +61,7 @@ class ListEntitiesForPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

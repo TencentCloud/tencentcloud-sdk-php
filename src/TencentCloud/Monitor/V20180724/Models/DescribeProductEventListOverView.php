@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeProductEventList返回的OverView对象
+ *
  * @method integer getStatusChangeAmount() 获取状态变更的事件数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusChangeAmount(integer $StatusChangeAmount) 设置状态变更的事件数量
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnRecoverAmount(integer $UnRecoverAmount) 设置未恢复的事件数量
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DescribeProductEventList返回的OverView对象
  */
 class DescribeProductEventListOverView extends AbstractModel
 {
@@ -64,6 +62,7 @@ class DescribeProductEventListOverView extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnRecoverAmount;
+
     /**
      * @param integer $StatusChangeAmount 状态变更的事件数量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +77,7 @@ class DescribeProductEventListOverView extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

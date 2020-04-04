@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindAcct请求参数结构体
+ *
  * @method string getMidasAppId() 获取聚鑫分配的支付主MidasAppId
  * @method void setMidasAppId(string $MidasAppId) 设置聚鑫分配的支付主MidasAppId
  * @method string getSubAppId() 获取聚鑫计费SubAppId，代表子商户
@@ -66,10 +68,6 @@ BindType==2时必填
 二选一
  * @method void setEiconBankBranchId(string $EiconBankBranchId) 设置超级网银行号和大小额行号
 二选一
- */
-
-/**
- *BindAcct请求参数结构体
  */
 class BindAcctRequest extends AbstractModel
 {
@@ -152,6 +150,7 @@ BindType==2时必填
 二选一
      */
     public $EiconBankBranchId;
+
     /**
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $SubAppId 聚鑫计费SubAppId，代表子商户
@@ -182,6 +181,7 @@ BindType==2时必填
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,13 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVulsNumberTimeline请求参数结构体
+ *
 
- */
-
-/**
- *DescribeVulsNumberTimeline请求参数结构体
  */
 class DescribeVulsNumberTimelineRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeVulsNumberTimelineRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

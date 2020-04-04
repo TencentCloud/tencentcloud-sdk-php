@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 	端口对象
+ *
  * @method string getProtocol() 获取TCP UDP
  * @method void setProtocol(string $Protocol) 设置TCP UDP
  * @method integer getPort() 获取服务端口
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodePort(integer $NodePort) 设置主机端口
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *	端口对象
  */
 class ProtocolPort extends AbstractModel
 {
@@ -55,6 +53,7 @@ class ProtocolPort extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodePort;
+
     /**
      * @param string $Protocol TCP UDP
      * @param integer $Port 服务端口
@@ -66,6 +65,7 @@ class ProtocolPort extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

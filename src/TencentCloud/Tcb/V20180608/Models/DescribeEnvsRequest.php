@@ -18,6 +18,8 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEnvs请求参数结构体
+ *
  * @method string getEnvId() 获取环境ID，如果传了这个参数则只返回该环境的相关信息
  * @method void setEnvId(string $EnvId) 设置环境ID，如果传了这个参数则只返回该环境的相关信息
  * @method boolean getIsVisible() 获取指定Channels字段为可见渠道列表或不可见渠道列表
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
  * @method array getChannels() 获取渠道列表，代表可见或不可见渠道由IsVisible参数指定
  * @method void setChannels(array $Channels) 设置渠道列表，代表可见或不可见渠道由IsVisible参数指定
- */
-
-/**
- *DescribeEnvs请求参数结构体
  */
 class DescribeEnvsRequest extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DescribeEnvsRequest extends AbstractModel
      * @var array 渠道列表，代表可见或不可见渠道由IsVisible参数指定
      */
     public $Channels;
+
     /**
      * @param string $EnvId 环境ID，如果传了这个参数则只返回该环境的相关信息
      * @param boolean $IsVisible 指定Channels字段为可见渠道列表或不可见渠道列表
@@ -58,6 +57,7 @@ class DescribeEnvsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

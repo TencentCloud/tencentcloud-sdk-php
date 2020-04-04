@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCustomImages请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取数量限制
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
 <li>3：正常</li>
 <li>4：删除中</li>
 </ul>
- */
-
-/**
- *DescribeCustomImages请求参数结构体
  */
 class DescribeCustomImagesRequest extends AbstractModel
 {
@@ -91,6 +89,7 @@ class DescribeCustomImagesRequest extends AbstractModel
 </ul>
      */
     public $ImageStatus;
+
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 数量限制
@@ -110,6 +109,7 @@ class DescribeCustomImagesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

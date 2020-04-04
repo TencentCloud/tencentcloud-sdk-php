@@ -18,12 +18,10 @@ namespace TencentCloud\Iottid\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VerifyChipBurnInfo请求参数结构体
+ *
  * @method string getData() 获取验证数据
  * @method void setData(string $Data) 设置验证数据
- */
-
-/**
- *VerifyChipBurnInfo请求参数结构体
  */
 class VerifyChipBurnInfoRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class VerifyChipBurnInfoRequest extends AbstractModel
      * @var string 验证数据
      */
     public $Data;
+
     /**
      * @param string $Data 验证数据
      */
@@ -38,6 +37,7 @@ class VerifyChipBurnInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

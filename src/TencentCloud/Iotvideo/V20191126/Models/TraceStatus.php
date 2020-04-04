@@ -18,14 +18,12 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 布尔值，标识指定设备是否在白名单中
+ *
  * @method string getTid() 获取设备TID
  * @method void setTid(string $Tid) 设置设备TID
  * @method boolean getIsExist() 获取设备追踪状态
  * @method void setIsExist(boolean $IsExist) 设置设备追踪状态
- */
-
-/**
- *布尔值，标识指定设备是否在白名单中
  */
 class TraceStatus extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TraceStatus extends AbstractModel
      * @var boolean 设备追踪状态
      */
     public $IsExist;
+
     /**
      * @param string $Tid 设备TID
      * @param boolean $IsExist 设备追踪状态
@@ -46,6 +45,7 @@ class TraceStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

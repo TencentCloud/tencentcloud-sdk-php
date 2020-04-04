@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 某条流的推流质量详情数据。
+ *
  * @method string getTime() 获取数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
  * @method void setTime(string $Time) 设置数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
  * @method string getPushDomain() 获取推流域名。
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetaAudioRate(integer $MetaAudioRate) 设置metadata中的音频码率，单位是kbps。
  * @method integer getMateFps() 获取metadata中的帧率。
  * @method void setMateFps(integer $MateFps) 设置metadata中的帧率。
- */
-
-/**
- *某条流的推流质量详情数据。
  */
 class PushQualityData extends AbstractModel
 {
@@ -157,6 +155,7 @@ class PushQualityData extends AbstractModel
      * @var integer metadata中的帧率。
      */
     public $MateFps;
+
     /**
      * @param string $Time 数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      * @param string $PushDomain 推流域名。
@@ -182,6 +181,7 @@ class PushQualityData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

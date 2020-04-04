@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAcct请求参数结构体
+ *
  * @method string getMidasAppId() 获取聚鑫平台分配的支付MidasAppId
  * @method void setMidasAppId(string $MidasAppId) 设置聚鑫平台分配的支付MidasAppId
  * @method string getSubMchId() 获取业务平台的子商户ID，唯一
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
 缺省： enterprise
  * @method string getShortName() 获取不填则默认子商户名称
  * @method void setShortName(string $ShortName) 设置不填则默认子商户名称
- */
-
-/**
- *CreateAcct请求参数结构体
  */
 class CreateAcctRequest extends AbstractModel
 {
@@ -119,6 +117,7 @@ class CreateAcctRequest extends AbstractModel
      * @var string 不填则默认子商户名称
      */
     public $ShortName;
+
     /**
      * @param string $MidasAppId 聚鑫平台分配的支付MidasAppId
      * @param string $SubMchId 业务平台的子商户ID，唯一
@@ -142,6 +141,7 @@ class CreateAcctRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

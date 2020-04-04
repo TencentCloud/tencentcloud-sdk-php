@@ -18,16 +18,14 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 升级实例 -- 新增分片类型
+ *
  * @method integer getShardCount() 获取新增分片的数量
  * @method void setShardCount(integer $ShardCount) 设置新增分片的数量
  * @method integer getShardMemory() 获取分片内存大小，单位 GB
  * @method void setShardMemory(integer $ShardMemory) 设置分片内存大小，单位 GB
  * @method integer getShardStorage() 获取分片存储大小，单位 GB
  * @method void setShardStorage(integer $ShardStorage) 设置分片存储大小，单位 GB
- */
-
-/**
- *升级实例 -- 新增分片类型
  */
 class AddShardConfig extends AbstractModel
 {
@@ -45,6 +43,7 @@ class AddShardConfig extends AbstractModel
      * @var integer 分片存储大小，单位 GB
      */
     public $ShardStorage;
+
     /**
      * @param integer $ShardCount 新增分片的数量
      * @param integer $ShardMemory 分片内存大小，单位 GB
@@ -54,6 +53,7 @@ class AddShardConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

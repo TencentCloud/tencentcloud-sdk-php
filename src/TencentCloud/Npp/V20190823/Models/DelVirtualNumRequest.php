@@ -18,16 +18,14 @@ namespace TencentCloud\Npp\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DelVirtualNum请求参数结构体
+ *
  * @method string getBizAppId() 获取业务appid
  * @method void setBizAppId(string $BizAppId) 设置业务appid
  * @method string getBindId() 获取双方号码 + 中间号绑定 ID，该 ID 全局唯一
  * @method void setBindId(string $BindId) 设置双方号码 + 中间号绑定 ID，该 ID 全局唯一
  * @method string getBizId() 获取应用二级业务 ID，bizId 需保证在该 appId 下全局唯一，最大长度不超过 16 个字节。
  * @method void setBizId(string $BizId) 设置应用二级业务 ID，bizId 需保证在该 appId 下全局唯一，最大长度不超过 16 个字节。
- */
-
-/**
- *DelVirtualNum请求参数结构体
  */
 class DelVirtualNumRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DelVirtualNumRequest extends AbstractModel
      * @var string 应用二级业务 ID，bizId 需保证在该 appId 下全局唯一，最大长度不超过 16 个字节。
      */
     public $BizId;
+
     /**
      * @param string $BizAppId 业务appid
      * @param string $BindId 双方号码 + 中间号绑定 ID，该 ID 全局唯一
@@ -54,6 +53,7 @@ class DelVirtualNumRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 物理机机架信息
+ *
  * @method string getInstanceId() 获取设备ID
  * @method void setInstanceId(string $InstanceId) 设置设备ID
  * @method string getZone() 获取所在可用区
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeliverTime(string $DeliverTime) 设置设备交付时间
  * @method string getDeadline() 获取过期时间
  * @method void setDeadline(string $Deadline) 设置过期时间
- */
-
-/**
- *物理机机架信息
  */
 class DevicePositionInfo extends AbstractModel
 {
@@ -101,6 +99,7 @@ class DevicePositionInfo extends AbstractModel
      * @var string 过期时间
      */
     public $Deadline;
+
     /**
      * @param string $InstanceId 设备ID
      * @param string $Zone 所在可用区
@@ -118,6 +117,7 @@ class DevicePositionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

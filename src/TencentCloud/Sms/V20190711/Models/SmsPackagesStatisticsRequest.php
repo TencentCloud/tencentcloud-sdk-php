@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SmsPackagesStatistics请求参数结构体
+ *
  * @method string getSmsSdkAppid() 获取短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
  * @method void setSmsSdkAppid(string $SmsSdkAppid) 设置短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
  * @method integer getLimit() 获取最大上限(需要拉取的套餐包个数)。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注：目前固定设置为0。
  * @method void setOffset(integer $Offset) 设置偏移量。
 注：目前固定设置为0。
- */
-
-/**
- *SmsPackagesStatistics请求参数结构体
  */
 class SmsPackagesStatisticsRequest extends AbstractModel
 {
@@ -48,6 +46,7 @@ class SmsPackagesStatisticsRequest extends AbstractModel
 注：目前固定设置为0。
      */
     public $Offset;
+
     /**
      * @param string $SmsSdkAppid 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
      * @param integer $Limit 最大上限(需要拉取的套餐包个数)。
@@ -58,6 +57,7 @@ class SmsPackagesStatisticsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

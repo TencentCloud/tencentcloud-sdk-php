@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVuls请求参数结构体
+ *
  * @method string getVulType() 获取漏洞类型。
 <li>WEB：Web应用漏洞</li>
 <li>SYSTEM：系统组件漏洞</li>
@@ -38,10 +40,6 @@ Status过滤条件值只能取其一，不能是“或”逻辑。
 <li>Status - String - 是否必填：否 - 状态筛选（UN_OPERATED: 待处理 | FIXED：已修复）
 
 Status过滤条件值只能取其一，不能是“或”逻辑。
- */
-
-/**
- *DescribeVuls请求参数结构体
  */
 class DescribeVulsRequest extends AbstractModel
 {
@@ -70,6 +68,7 @@ class DescribeVulsRequest extends AbstractModel
 Status过滤条件值只能取其一，不能是“或”逻辑。
      */
     public $Filters;
+
     /**
      * @param string $VulType 漏洞类型。
 <li>WEB：Web应用漏洞</li>
@@ -86,6 +85,7 @@ Status过滤条件值只能取其一，不能是“或”逻辑。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

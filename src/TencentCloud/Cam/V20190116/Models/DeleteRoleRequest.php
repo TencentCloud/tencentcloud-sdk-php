@@ -18,14 +18,12 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteRole请求参数结构体
+ *
  * @method string getRoleId() 获取角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
  * @method void setRoleId(string $RoleId) 设置角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
  * @method string getRoleName() 获取角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
  * @method void setRoleName(string $RoleName) 设置角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
- */
-
-/**
- *DeleteRole请求参数结构体
  */
 class DeleteRoleRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteRoleRequest extends AbstractModel
      * @var string 角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public $RoleName;
+
     /**
      * @param string $RoleId 角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
      * @param string $RoleName 角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
@@ -46,6 +45,7 @@ class DeleteRoleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

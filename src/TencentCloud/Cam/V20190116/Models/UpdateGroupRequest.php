@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateGroup请求参数结构体
+ *
  * @method integer getGroupId() 获取用户组 ID
  * @method void setGroupId(integer $GroupId) 设置用户组 ID
  * @method string getGroupName() 获取用户组名
  * @method void setGroupName(string $GroupName) 设置用户组名
  * @method string getRemark() 获取用户组描述
  * @method void setRemark(string $Remark) 设置用户组描述
- */
-
-/**
- *UpdateGroup请求参数结构体
  */
 class UpdateGroupRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UpdateGroupRequest extends AbstractModel
      * @var string 用户组描述
      */
     public $Remark;
+
     /**
      * @param integer $GroupId 用户组 ID
      * @param string $GroupName 用户组名
@@ -54,6 +53,7 @@ class UpdateGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

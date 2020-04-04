@@ -18,16 +18,14 @@ namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateSecret返回参数结构体
+ *
  * @method string getSecretName() 获取凭据名称。
  * @method void setSecretName(string $SecretName) 设置凭据名称。
  * @method string getVersionId() 获取凭据版本号。
  * @method void setVersionId(string $VersionId) 设置凭据版本号。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *UpdateSecret返回参数结构体
  */
 class UpdateSecretResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class UpdateSecretResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $SecretName 凭据名称。
      * @param string $VersionId 凭据版本号。
@@ -54,6 +53,7 @@ class UpdateSecretResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例信息
+ *
  * @method string getFleetId() 获取服务部署ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFleetId(string $FleetId) 设置服务部署ID
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *实例信息
  */
 class Instance extends AbstractModel
 {
@@ -104,6 +102,7 @@ class Instance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
+
     /**
      * @param string $FleetId 服务部署ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -126,6 +125,7 @@ class Instance extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

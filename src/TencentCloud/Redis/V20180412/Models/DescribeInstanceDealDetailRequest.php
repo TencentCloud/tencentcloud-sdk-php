@@ -18,12 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceDealDetail请求参数结构体
+ *
  * @method array getDealIds() 获取订单ID数组
  * @method void setDealIds(array $DealIds) 设置订单ID数组
- */
-
-/**
- *DescribeInstanceDealDetail请求参数结构体
  */
 class DescribeInstanceDealDetailRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeInstanceDealDetailRequest extends AbstractModel
      * @var array 订单ID数组
      */
     public $DealIds;
+
     /**
      * @param array $DealIds 订单ID数组
      */
@@ -38,6 +37,7 @@ class DescribeInstanceDealDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * FaceIdentifyResult
+ *
  * @method string getFaceId() 获取人脸标识符
  * @method void setFaceId(string $FaceId) 设置人脸标识符
  * @method string getLibraryId() 获取人员库标识符
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPersonId(string $PersonId) 设置人员标识符
  * @method float getSimilarity() 获取相似度
  * @method void setSimilarity(float $Similarity) 设置相似度
- */
-
-/**
- *FaceIdentifyResult
  */
 class FaceIdentifyResult extends AbstractModel
 {
@@ -52,6 +50,7 @@ class FaceIdentifyResult extends AbstractModel
      * @var float 相似度
      */
     public $Similarity;
+
     /**
      * @param string $FaceId 人脸标识符
      * @param string $LibraryId 人员库标识符
@@ -62,6 +61,7 @@ class FaceIdentifyResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

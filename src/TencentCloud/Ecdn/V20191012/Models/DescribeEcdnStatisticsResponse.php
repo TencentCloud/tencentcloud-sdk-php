@@ -18,14 +18,12 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEcdnStatistics返回参数结构体
+ *
  * @method array getData() 获取指定条件查询得到的数据明细
  * @method void setData(array $Data) 设置指定条件查询得到的数据明细
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeEcdnStatistics返回参数结构体
  */
 class DescribeEcdnStatisticsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeEcdnStatisticsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Data 指定条件查询得到的数据明细
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeEcdnStatisticsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

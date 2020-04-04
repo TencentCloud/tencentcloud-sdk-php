@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 可用区内产品信息
+ *
  * @method string getZoneId() 获取可用区ID：如ap-guangzhou-3
  * @method void setZoneId(string $ZoneId) 设置可用区ID：如ap-guangzhou-3
  * @method string getZoneName() 获取可用区名称
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductSet(array $ProductSet) 设置可用区内产品规格等信息
  * @method integer getOldZoneId() 获取可用区ID：如100003
  * @method void setOldZoneId(integer $OldZoneId) 设置可用区ID：如100003
- */
-
-/**
- *可用区内产品信息
  */
 class ZoneCapacityConf extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ZoneCapacityConf extends AbstractModel
      * @var integer 可用区ID：如100003
      */
     public $OldZoneId;
+
     /**
      * @param string $ZoneId 可用区ID：如ap-guangzhou-3
      * @param string $ZoneName 可用区名称
@@ -86,6 +85,7 @@ class ZoneCapacityConf extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

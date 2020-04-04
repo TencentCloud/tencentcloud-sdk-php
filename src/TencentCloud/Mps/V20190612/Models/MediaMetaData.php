@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 点播媒体文件元信息
+ *
  * @method integer getSize() 获取上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
  * @method void setSize(integer $Size) 设置上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
  * @method string getContainer() 获取容器类型，例如 m4a，mp4 等。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoDuration(float $VideoDuration) 设置视频时长，单位：秒。
  * @method float getAudioDuration() 获取音频时长，单位：秒。
  * @method void setAudioDuration(float $AudioDuration) 设置音频时长，单位：秒。
- */
-
-/**
- *点播媒体文件元信息
  */
 class MediaMetaData extends AbstractModel
 {
@@ -101,6 +99,7 @@ class MediaMetaData extends AbstractModel
      * @var float 音频时长，单位：秒。
      */
     public $AudioDuration;
+
     /**
      * @param integer $Size 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
      * @param string $Container 容器类型，例如 m4a，mp4 等。
@@ -118,6 +117,7 @@ class MediaMetaData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

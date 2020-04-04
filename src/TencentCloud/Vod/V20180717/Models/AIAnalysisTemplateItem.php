@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI 智能分析模板详情
+ *
  * @method integer getDefinition() 获取智能分析模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置智能分析模板唯一标识。
  * @method string getName() 获取智能分析模板名称。
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- */
-
-/**
- *AI 智能分析模板详情
  */
 class AIAnalysisTemplateItem extends AbstractModel
 {
@@ -106,6 +104,7 @@ class AIAnalysisTemplateItem extends AbstractModel
      * @var string 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $UpdateTime;
+
     /**
      * @param integer $Definition 智能分析模板唯一标识。
      * @param string $Name 智能分析模板名称。
@@ -126,6 +125,7 @@ class AIAnalysisTemplateItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

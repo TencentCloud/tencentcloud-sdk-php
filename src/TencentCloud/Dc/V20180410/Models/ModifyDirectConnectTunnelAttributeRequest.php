@@ -18,6 +18,8 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDirectConnectTunnelAttribute请求参数结构体
+ *
  * @method string getDirectConnectTunnelId() 获取专用通道ID
  * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) 设置专用通道ID
  * @method string getDirectConnectTunnelName() 获取专用通道名称
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomerAddress(string $CustomerAddress) 设置用户侧互联IP
  * @method integer getBandwidth() 获取专用通道带宽值，单位为M。
  * @method void setBandwidth(integer $Bandwidth) 设置专用通道带宽值，单位为M。
- */
-
-/**
- *ModifyDirectConnectTunnelAttribute请求参数结构体
  */
 class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
      * @var integer 专用通道带宽值，单位为M。
      */
     public $Bandwidth;
+
     /**
      * @param string $DirectConnectTunnelId 专用通道ID
      * @param string $DirectConnectTunnelName 专用通道名称
@@ -86,6 +85,7 @@ class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

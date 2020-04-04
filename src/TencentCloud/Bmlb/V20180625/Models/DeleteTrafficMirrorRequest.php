@@ -18,12 +18,10 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteTrafficMirror请求参数结构体
+ *
  * @method array getTrafficMirrorIds() 获取流量镜像实例ID数组，可以批量删除，每次删除上限为20
  * @method void setTrafficMirrorIds(array $TrafficMirrorIds) 设置流量镜像实例ID数组，可以批量删除，每次删除上限为20
- */
-
-/**
- *DeleteTrafficMirror请求参数结构体
  */
 class DeleteTrafficMirrorRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteTrafficMirrorRequest extends AbstractModel
      * @var array 流量镜像实例ID数组，可以批量删除，每次删除上限为20
      */
     public $TrafficMirrorIds;
+
     /**
      * @param array $TrafficMirrorIds 流量镜像实例ID数组，可以批量删除，每次删除上限为20
      */
@@ -38,6 +37,7 @@ class DeleteTrafficMirrorRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

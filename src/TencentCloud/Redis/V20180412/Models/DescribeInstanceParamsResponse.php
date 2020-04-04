@@ -18,6 +18,8 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceParams返回参数结构体
+ *
  * @method integer getTotalCount() 获取实例参数个数
  * @method void setTotalCount(integer $TotalCount) 设置实例参数个数
  * @method array getInstanceEnumParam() 获取实例枚举类型参数
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceMultiParam(array $InstanceMultiParam) 设置实例多选项型参数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeInstanceParams返回参数结构体
  */
 class DescribeInstanceParamsResponse extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeInstanceParamsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 实例参数个数
      * @param array $InstanceEnumParam 实例枚举类型参数
@@ -78,6 +77,7 @@ class DescribeInstanceParamsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

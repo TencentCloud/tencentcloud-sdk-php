@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音检测任务列表
+ *
  * @method string getDataId() 获取数据的唯一ID
  * @method void setDataId(string $DataId) 设置数据的唯一ID
  * @method string getUrl() 获取数据文件的url，为 urlencode 编码，流式则为拉流地址
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomId(string $RoomId) 设置gme实时语音房间ID，通过gme实时语音进行语音分析时输入
  * @method string getOpenId() 获取gme实时语音用户ID，通过gme实时语音进行语音分析时输入
  * @method void setOpenId(string $OpenId) 设置gme实时语音用户ID，通过gme实时语音进行语音分析时输入
- */
-
-/**
- *语音检测任务列表
  */
 class Task extends AbstractModel
 {
@@ -52,6 +50,7 @@ class Task extends AbstractModel
      * @var string gme实时语音用户ID，通过gme实时语音进行语音分析时输入
      */
     public $OpenId;
+
     /**
      * @param string $DataId 数据的唯一ID
      * @param string $Url 数据文件的url，为 urlencode 编码，流式则为拉流地址
@@ -62,6 +61,7 @@ class Task extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

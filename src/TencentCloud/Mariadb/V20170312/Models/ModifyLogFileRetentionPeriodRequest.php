@@ -18,14 +18,12 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLogFileRetentionPeriod请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：tdsql-ow728lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：tdsql-ow728lmc。
  * @method integer getDays() 获取保存的天数,不能超过30
  * @method void setDays(integer $Days) 设置保存的天数,不能超过30
- */
-
-/**
- *ModifyLogFileRetentionPeriod请求参数结构体
  */
 class ModifyLogFileRetentionPeriodRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyLogFileRetentionPeriodRequest extends AbstractModel
      * @var integer 保存的天数,不能超过30
      */
     public $Days;
+
     /**
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc。
      * @param integer $Days 保存的天数,不能超过30
@@ -46,6 +45,7 @@ class ModifyLogFileRetentionPeriodRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

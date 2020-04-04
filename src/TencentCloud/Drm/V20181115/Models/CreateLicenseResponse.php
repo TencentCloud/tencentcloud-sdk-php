@@ -18,16 +18,14 @@ namespace TencentCloud\Drm\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLicense返回参数结构体
+ *
  * @method string getLicense() 获取Base64 编码的许可证二进制数据。
  * @method void setLicense(string $License) 设置Base64 编码的许可证二进制数据。
  * @method string getContentId() 获取加密内容的内容ID
  * @method void setContentId(string $ContentId) 设置加密内容的内容ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateLicense返回参数结构体
  */
 class CreateLicenseResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateLicenseResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $License Base64 编码的许可证二进制数据。
      * @param string $ContentId 加密内容的内容ID
@@ -54,6 +53,7 @@ class CreateLicenseResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

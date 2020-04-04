@@ -18,14 +18,12 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云数据库参数信息。
+ *
  * @method string getParam() 获取参数名称
  * @method void setParam(string $Param) 设置参数名称
  * @method string getValue() 获取参数值
  * @method void setValue(string $Value) 设置参数值
- */
-
-/**
- *云数据库参数信息。
  */
 class DBParamValue extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DBParamValue extends AbstractModel
      * @var string 参数值
      */
     public $Value;
+
     /**
      * @param string $Param 参数名称
      * @param string $Value 参数值
@@ -46,6 +45,7 @@ class DBParamValue extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

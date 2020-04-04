@@ -18,6 +18,8 @@ namespace TencentCloud\Tics\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeThreatInfo返回参数结构体
+ *
  * @method integer getReturnCode() 获取是否有数据，0代表有数据，1代表没有数据
  * @method void setReturnCode(integer $ReturnCode) 设置是否有数据，0代表有数据，1代表没有数据
  * @method string getResult() 获取判定结果，如：black、white、grey
@@ -78,10 +80,6 @@ expired = 过期
 每个数据默认为3 条
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeThreatInfo返回参数结构体
  */
 class DescribeThreatInfoResponse extends AbstractModel
 {
@@ -146,6 +144,7 @@ expired = 过期
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $ReturnCode 是否有数据，0代表有数据，1代表没有数据
      * @param string $Result 判定结果，如：black、white、grey
@@ -182,6 +181,7 @@ expired = 过期
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateBoundIP请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
  * @method string getId() 获取资源实例ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnBoundDevList(array $UnBoundDevList) 设置与资源实例解绑的IP数组，当资源实例为高防包(独享包)时，数组只允许填1个IP；当没有要解绑的IP时可以为空数组；但是BoundDevList和UnBoundDevList至少有一个不为空；
  * @method string getCopyPolicy() 获取已弃用，不填
  * @method void setCopyPolicy(string $CopyPolicy) 设置已弃用，不填
- */
-
-/**
- *CreateBoundIP请求参数结构体
  */
 class CreateBoundIPRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateBoundIPRequest extends AbstractModel
      * @var string 已弃用，不填
      */
     public $CopyPolicy;
+
     /**
      * @param string $Business 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
      * @param string $Id 资源实例ID
@@ -70,6 +69,7 @@ class CreateBoundIPRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

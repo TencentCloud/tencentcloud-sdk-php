@@ -18,16 +18,14 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 修改负载均衡计费方式的监听器信息。
+ *
  * @method string getListenerId() 获取监听器ID。
  * @method void setListenerId(string $ListenerId) 设置监听器ID。
  * @method string getProtocol() 获取协议类型。
  * @method void setProtocol(string $Protocol) 设置协议类型。
  * @method integer getBandwidth() 获取带宽。
  * @method void setBandwidth(integer $Bandwidth) 设置带宽。
- */
-
-/**
- *修改负载均衡计费方式的监听器信息。
  */
 class ModifyLoadBalancerChargeModeListener extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyLoadBalancerChargeModeListener extends AbstractModel
      * @var integer 带宽。
      */
     public $Bandwidth;
+
     /**
      * @param string $ListenerId 监听器ID。
      * @param string $Protocol 协议类型。
@@ -54,6 +53,7 @@ class ModifyLoadBalancerChargeModeListener extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

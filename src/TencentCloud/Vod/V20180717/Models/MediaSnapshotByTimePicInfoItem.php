@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 指定时间点截图信息
+ *
  * @method float getTimeOffset() 获取该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeOffset(float $TimeOffset) 设置该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWaterMarkDefinition(array $WaterMarkDefinition) 设置截图如果被打上了水印，被打水印的模板 ID 列表。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *指定时间点截图信息
  */
 class MediaSnapshotByTimePicInfoItem extends AbstractModel
 {
@@ -54,6 +52,7 @@ class MediaSnapshotByTimePicInfoItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WaterMarkDefinition;
+
     /**
      * @param float $TimeOffset 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class MediaSnapshotByTimePicInfoItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

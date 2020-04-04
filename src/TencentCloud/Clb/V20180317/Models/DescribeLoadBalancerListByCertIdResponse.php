@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLoadBalancerListByCertId返回参数结构体
+ *
  * @method array getCertSet() 获取证书ID，以及与该证书ID关联的负载均衡实例列表
  * @method void setCertSet(array $CertSet) 设置证书ID，以及与该证书ID关联的负载均衡实例列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeLoadBalancerListByCertId返回参数结构体
  */
 class DescribeLoadBalancerListByCertIdResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeLoadBalancerListByCertIdResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $CertSet 证书ID，以及与该证书ID关联的负载均衡实例列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeLoadBalancerListByCertIdResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

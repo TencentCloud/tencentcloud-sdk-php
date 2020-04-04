@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 维护平台维修任务信息
+ *
  * @method string getTaskId() 获取任务id
  * @method void setTaskId(string $TaskId) 设置任务id
  * @method string getInstanceId() 获取主机id
@@ -70,10 +72,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskSubType(string $TaskSubType) 设置故障类型，取值：unconfirmed (不明确故障)；redundancy (有冗余故障)；nonredundancy (无冗余故障)
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *维护平台维修任务信息
  */
 class TaskInfo extends AbstractModel
 {
@@ -198,6 +196,7 @@ class TaskInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskSubType;
+
     /**
      * @param string $TaskId 任务id
      * @param string $InstanceId 主机id
@@ -230,6 +229,7 @@ class TaskInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

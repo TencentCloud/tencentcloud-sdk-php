@@ -18,16 +18,14 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateComputeEnv请求参数结构体
+ *
  * @method NamedComputeEnv getComputeEnv() 获取计算环境信息
  * @method void setComputeEnv(NamedComputeEnv $ComputeEnv) 设置计算环境信息
  * @method Placement getPlacement() 获取位置信息
  * @method void setPlacement(Placement $Placement) 设置位置信息
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
- */
-
-/**
- *CreateComputeEnv请求参数结构体
  */
 class CreateComputeEnvRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateComputeEnvRequest extends AbstractModel
      * @var string 用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     public $ClientToken;
+
     /**
      * @param NamedComputeEnv $ComputeEnv 计算环境信息
      * @param Placement $Placement 位置信息
@@ -54,6 +53,7 @@ class CreateComputeEnvRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

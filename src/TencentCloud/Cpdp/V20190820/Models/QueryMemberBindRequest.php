@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * QueryMemberBind请求参数结构体
+ *
  * @method string getMrchCode() 获取String(22)，商户号（签约客户号）
  * @method void setMrchCode(string $MrchCode) 设置String(22)，商户号（签约客户号）
  * @method string getQueryFlag() 获取STRING(4)，查询标志（1: 全部会员; 2: 单个会员; 3: 单个会员的证件信息）
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubAcctNo(string $SubAcctNo) 设置STRING(50)，见证子账户的账号（若SelectFlag为2或3时，子账户账号必输）
  * @method string getReservedMsg() 获取STRING(1027)，保留域
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
- */
-
-/**
- *QueryMemberBind请求参数结构体
  */
 class QueryMemberBindRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class QueryMemberBindRequest extends AbstractModel
      * @var string STRING(1027)，保留域
      */
     public $ReservedMsg;
+
     /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $QueryFlag STRING(4)，查询标志（1: 全部会员; 2: 单个会员; 3: 单个会员的证件信息）
@@ -70,6 +69,7 @@ class QueryMemberBindRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ft\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SwapGenderPic请求参数结构体
+ *
  * @method array getGenderInfos() 获取人脸转化性别信息。 
 您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸转换性别。
  * @method void setGenderInfos(array $GenderInfos) 设置人脸转化性别信息。 
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 图片存储于腾讯云的 Url 可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- */
-
-/**
- *SwapGenderPic请求参数结构体
  */
 class SwapGenderPicRequest extends AbstractModel
 {
@@ -63,6 +61,7 @@ class SwapGenderPicRequest extends AbstractModel
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Url;
+
     /**
      * @param array $GenderInfos 人脸转化性别信息。 
 您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸转换性别。
@@ -78,6 +77,7 @@ class SwapGenderPicRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

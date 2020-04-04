@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpcs请求参数结构体
+ *
  * @method array getVpcIds() 获取VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
  * @method void setVpcIds(array $VpcIds) 设置VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定VpcIds和Filters。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) 设置偏移量
  * @method string getLimit() 获取返回数量
  * @method void setLimit(string $Limit) 设置返回数量
- */
-
-/**
- *DescribeVpcs请求参数结构体
  */
 class DescribeVpcsRequest extends AbstractModel
 {
@@ -70,6 +68,7 @@ class DescribeVpcsRequest extends AbstractModel
      * @var string 返回数量
      */
     public $Limit;
+
     /**
      * @param array $VpcIds VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
@@ -86,6 +85,7 @@ class DescribeVpcsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

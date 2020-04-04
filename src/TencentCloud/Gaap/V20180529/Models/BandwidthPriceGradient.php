@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 带宽梯度价格
+ *
  * @method array getBandwidthRange() 获取带宽范围。
  * @method void setBandwidthRange(array $BandwidthRange) 设置带宽范围。
  * @method float getBandwidthUnitPrice() 获取在对应带宽范围内的单宽单价，单位：元/Mbps/天。
  * @method void setBandwidthUnitPrice(float $BandwidthUnitPrice) 设置在对应带宽范围内的单宽单价，单位：元/Mbps/天。
- */
-
-/**
- *带宽梯度价格
  */
 class BandwidthPriceGradient extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BandwidthPriceGradient extends AbstractModel
      * @var float 在对应带宽范围内的单宽单价，单位：元/Mbps/天。
      */
     public $BandwidthUnitPrice;
+
     /**
      * @param array $BandwidthRange 带宽范围。
      * @param float $BandwidthUnitPrice 在对应带宽范围内的单宽单价，单位：元/Mbps/天。
@@ -46,6 +45,7 @@ class BandwidthPriceGradient extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

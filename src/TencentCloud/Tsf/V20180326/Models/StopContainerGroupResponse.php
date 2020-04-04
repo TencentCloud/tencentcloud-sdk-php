@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StopContainerGroup返回参数结构体
+ *
  * @method boolean getResult() 获取停止操作是否成功。
 true：停止成功
 flase：停止失败
@@ -26,10 +28,6 @@ true：停止成功
 flase：停止失败
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *StopContainerGroup返回参数结构体
  */
 class StopContainerGroupResponse extends AbstractModel
 {
@@ -44,6 +42,7 @@ flase：停止失败
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param boolean $Result 停止操作是否成功。
 true：停止成功
@@ -54,6 +53,7 @@ flase：停止失败
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

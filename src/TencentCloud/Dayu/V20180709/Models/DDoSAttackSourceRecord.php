@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 攻击源信息
+ *
  * @method string getSrcIp() 获取攻击源ip
  * @method void setSrcIp(string $SrcIp) 设置攻击源ip
  * @method string getProvince() 获取省份（国内有效，不包含港澳台）
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPacketSum(integer $PacketSum) 设置累计攻击包量
  * @method integer getPacketLen() 获取累计攻击流量
  * @method void setPacketLen(integer $PacketLen) 设置累计攻击流量
- */
-
-/**
- *攻击源信息
  */
 class DDoSAttackSourceRecord extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DDoSAttackSourceRecord extends AbstractModel
      * @var integer 累计攻击流量
      */
     public $PacketLen;
+
     /**
      * @param string $SrcIp 攻击源ip
      * @param string $Province 省份（国内有效，不包含港澳台）
@@ -70,6 +69,7 @@ class DDoSAttackSourceRecord extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyWordSample请求参数结构体
+ *
  * @method string getKeyword() 获取关键词，长度限制：128 个字符。
  * @method void setKeyword(string $Keyword) 设置关键词，长度限制：128 个字符。
  * @method array getUsages() 获取<b>关键词应用场景，可选值：</b>
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 7. All：通过光学字符识别技术、语音识别技术，进行内容识别、内容审核，等价于 1+2+3+4。
  * @method AiSampleTagOperation getTagOperationInfo() 获取标签操作信息。
  * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) 设置标签操作信息。
- */
-
-/**
- *ModifyWordSample请求参数结构体
  */
 class ModifyWordSampleRequest extends AbstractModel
 {
@@ -69,6 +67,7 @@ class ModifyWordSampleRequest extends AbstractModel
      * @var AiSampleTagOperation 标签操作信息。
      */
     public $TagOperationInfo;
+
     /**
      * @param string $Keyword 关键词，长度限制：128 个字符。
      * @param array $Usages <b>关键词应用场景，可选值：</b>
@@ -86,6 +85,7 @@ class ModifyWordSampleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpcPeerConnections请求参数结构体
+ *
  * @method array getVpcPeerConnectionIds() 获取对等连接实例ID
  * @method void setVpcPeerConnectionIds(array $VpcPeerConnectionIds) 设置对等连接实例ID
  * @method array getFilters() 获取过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpcPeerConnectionIds和Filters。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  * @method string getVpcId() 获取私有网络ID
  * @method void setVpcId(string $VpcId) 设置私有网络ID
- */
-
-/**
- *DescribeVpcPeerConnections请求参数结构体
  */
 class DescribeVpcPeerConnectionsRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ class DescribeVpcPeerConnectionsRequest extends AbstractModel
      * @var string 私有网络ID
      */
     public $VpcId;
+
     /**
      * @param array $VpcPeerConnectionIds 对等连接实例ID
      * @param array $Filters 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpcPeerConnectionIds和Filters。
@@ -78,6 +77,7 @@ class DescribeVpcPeerConnectionsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例对象的维度组合
+ *
  * @method string getName() 获取实例维度名称
  * @method void setName(string $Name) 设置实例维度名称
  * @method string getValue() 获取实例维度值
  * @method void setValue(string $Value) 设置实例维度值
- */
-
-/**
- *实例对象的维度组合
  */
 class Dimension extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Dimension extends AbstractModel
      * @var string 实例维度值
      */
     public $Value;
+
     /**
      * @param string $Name 实例维度名称
      * @param string $Value 实例维度值
@@ -46,6 +45,7 @@ class Dimension extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSession请求参数结构体
+ *
  * @method string getClientSession() 获取客户端session信息，从JSSDK请求中获得
  * @method void setClientSession(string $ClientSession) 设置客户端session信息，从JSSDK请求中获得
  * @method string getUserId() 获取游戏用户ID
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserIp(string $UserIp) 设置游戏用户IP，用于就近调度，例如125.127.178.228
  * @method integer getOptimization() 获取优化项，便于客户灰度开启新的优化项，默认为0
  * @method void setOptimization(integer $Optimization) 设置优化项，便于客户灰度开启新的优化项，默认为0
- */
-
-/**
- *CreateSession请求参数结构体
  */
 class CreateSessionRequest extends AbstractModel
 {
@@ -122,6 +120,7 @@ class CreateSessionRequest extends AbstractModel
      * @var integer 优化项，便于客户灰度开启新的优化项，默认为0
      */
     public $Optimization;
+
     /**
      * @param string $ClientSession 客户端session信息，从JSSDK请求中获得
      * @param string $UserId 游戏用户ID
@@ -142,6 +141,7 @@ class CreateSessionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateEip请求参数结构体
+ *
  * @method integer getGoodsNum() 获取申请数量，默认为1, 最大 20
  * @method void setGoodsNum(integer $GoodsNum) 设置申请数量，默认为1, 最大 20
  * @method string getPayMode() 获取EIP计费方式，flow-流量计费；bandwidth-带宽计费
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置EIP归属私有网络ID，例如vpc-k7j1t2x1
  * @method array getIpList() 获取指定申请的IP列表
  * @method void setIpList(array $IpList) 设置指定申请的IP列表
- */
-
-/**
- *CreateEip请求参数结构体
  */
 class CreateEipRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateEipRequest extends AbstractModel
      * @var array 指定申请的IP列表
      */
     public $IpList;
+
     /**
      * @param integer $GoodsNum 申请数量，默认为1, 最大 20
      * @param string $PayMode EIP计费方式，flow-流量计费；bandwidth-带宽计费
@@ -86,6 +85,7 @@ class CreateEipRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

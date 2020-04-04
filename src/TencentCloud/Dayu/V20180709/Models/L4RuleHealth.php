@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 规则健康检查参数
+ *
  * @method string getRuleId() 获取规则ID
  * @method void setRuleId(string $RuleId) 设置规则ID
  * @method integer getEnable() 获取=1表示开启；=0表示关闭
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKickNum(integer $KickNum) 设置不健康阈值，单位次
  * @method integer getAliveNum() 获取健康阈值，单位次
  * @method void setAliveNum(integer $AliveNum) 设置健康阈值，单位次
- */
-
-/**
- *规则健康检查参数
  */
 class L4RuleHealth extends AbstractModel
 {
@@ -66,6 +64,7 @@ class L4RuleHealth extends AbstractModel
      * @var integer 健康阈值，单位次
      */
     public $AliveNum;
+
     /**
      * @param string $RuleId 规则ID
      * @param integer $Enable =1表示开启；=0表示关闭
@@ -78,6 +77,7 @@ class L4RuleHealth extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeErrorLogData请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID 。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
  * @method integer getStartTime() 获取开始时间戳。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页的返回数量，最大为400。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- */
-
-/**
- *DescribeErrorLogData请求参数结构体
  */
 class DescribeErrorLogDataRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeErrorLogDataRequest extends AbstractModel
      * @var integer 偏移量，默认为0。
      */
     public $Offset;
+
     /**
      * @param string $InstanceId 实例 ID 。
      * @param integer $StartTime 开始时间戳。
@@ -78,6 +77,7 @@ class DescribeErrorLogDataRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

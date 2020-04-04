@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 雪碧图信息
+ *
  * @method integer getDefinition() 获取雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
  * @method void setDefinition(integer $Definition) 设置雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
  * @method integer getHeight() 获取雪碧图小图的高度。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWebVttPath(string $WebVttPath) 设置雪碧图子图位置与时间关系的 WebVtt 文件路径。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
  * @method TaskOutputStorage getStorage() 获取雪碧图文件的存储位置。
  * @method void setStorage(TaskOutputStorage $Storage) 设置雪碧图文件的存储位置。
- */
-
-/**
- *雪碧图信息
  */
 class MediaImageSpriteItem extends AbstractModel
 {
@@ -73,6 +71,7 @@ class MediaImageSpriteItem extends AbstractModel
      * @var TaskOutputStorage 雪碧图文件的存储位置。
      */
     public $Storage;
+
     /**
      * @param integer $Definition 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      * @param integer $Height 雪碧图小图的高度。
@@ -86,6 +85,7 @@ class MediaImageSpriteItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

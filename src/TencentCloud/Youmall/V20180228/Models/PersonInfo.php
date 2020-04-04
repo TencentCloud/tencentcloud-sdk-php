@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户信息
+ *
  * @method integer getPersonId() 获取用户ID
  * @method void setPersonId(integer $PersonId) 设置用户ID
  * @method string getPersonPicture() 获取人脸图片Base64内容，已弃用，返回默认空值
@@ -42,10 +44,6 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
  * @method void setVisitTimes(integer $VisitTimes) 设置到访次数，-1表示未知
  * @method integer getVisitDays() 获取到访天数，-1表示未知
  * @method void setVisitDays(integer $VisitDays) 设置到访天数，-1表示未知
- */
-
-/**
- *用户信息
  */
 class PersonInfo extends AbstractModel
 {
@@ -96,6 +94,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * @var integer 到访天数，-1表示未知
      */
     public $VisitDays;
+
     /**
      * @param integer $PersonId 用户ID
      * @param string $PersonPicture 人脸图片Base64内容，已弃用，返回默认空值
@@ -114,6 +113,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

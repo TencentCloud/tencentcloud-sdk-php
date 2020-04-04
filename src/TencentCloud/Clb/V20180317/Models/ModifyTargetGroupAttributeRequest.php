@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTargetGroupAttribute请求参数结构体
+ *
  * @method string getTargetGroupId() 获取目标组的ID
  * @method void setTargetGroupId(string $TargetGroupId) 设置目标组的ID
  * @method string getTargetGroupName() 获取目标组的新名称
  * @method void setTargetGroupName(string $TargetGroupName) 设置目标组的新名称
  * @method integer getPort() 获取目标组的新默认端口
  * @method void setPort(integer $Port) 设置目标组的新默认端口
- */
-
-/**
- *ModifyTargetGroupAttribute请求参数结构体
  */
 class ModifyTargetGroupAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
      * @var integer 目标组的新默认端口
      */
     public $Port;
+
     /**
      * @param string $TargetGroupId 目标组的ID
      * @param string $TargetGroupName 目标组的新名称
@@ -54,6 +53,7 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetReturnCodeHistory请求参数结构体
+ *
  * @method integer getTaskId() 获取正整数。验证成功的拨测任务id
  * @method void setTaskId(integer $TaskId) 设置正整数。验证成功的拨测任务id
  * @method string getBeginTime() 获取开始时间点。格式如：2017-05-09 10:20:00。注意，BeginTime 和 EndTime 需要在同一天
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间点。格式如：2017-05-09 10:25:00。注意，BeginTime 和 EndTime 需要在同一天
  * @method string getProvince() 获取省份名称的全拼
  * @method void setProvince(string $Province) 设置省份名称的全拼
- */
-
-/**
- *GetReturnCodeHistory请求参数结构体
  */
 class GetReturnCodeHistoryRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class GetReturnCodeHistoryRequest extends AbstractModel
      * @var string 省份名称的全拼
      */
     public $Province;
+
     /**
      * @param integer $TaskId 正整数。验证成功的拨测任务id
      * @param string $BeginTime 开始时间点。格式如：2017-05-09 10:20:00。注意，BeginTime 和 EndTime 需要在同一天
@@ -62,6 +61,7 @@ class GetReturnCodeHistoryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

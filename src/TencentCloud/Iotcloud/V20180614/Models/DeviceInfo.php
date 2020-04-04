@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备详细信息
+ *
  * @method string getDeviceName() 获取设备名
  * @method void setDeviceName(string $DeviceName) 设置设备名
  * @method integer getOnline() 获取设备是否在线，0不在线，1在线
@@ -76,10 +78,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(array $Labels) 设置设备标签
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *设备详细信息
  */
 class DeviceInfo extends AbstractModel
 {
@@ -199,6 +197,7 @@ class DeviceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
+
     /**
      * @param string $DeviceName 设备名
      * @param integer $Online 设备是否在线，0不在线，1在线
@@ -234,6 +233,7 @@ class DeviceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

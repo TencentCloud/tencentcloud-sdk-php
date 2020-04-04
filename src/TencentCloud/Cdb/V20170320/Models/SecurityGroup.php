@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全组详情
+ *
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method string getCreateTime() 获取创建时间，时间格式：yyyy-mm-dd hh:mm:ss
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupName(string $SecurityGroupName) 设置安全组名称
  * @method string getSecurityGroupRemark() 获取安全组备注
  * @method void setSecurityGroupRemark(string $SecurityGroupRemark) 设置安全组备注
- */
-
-/**
- *安全组详情
  */
 class SecurityGroup extends AbstractModel
 {
@@ -73,6 +71,7 @@ class SecurityGroup extends AbstractModel
      * @var string 安全组备注
      */
     public $SecurityGroupRemark;
+
     /**
      * @param integer $ProjectId 项目ID
      * @param string $CreateTime 创建时间，时间格式：yyyy-mm-dd hh:mm:ss
@@ -86,6 +85,7 @@ class SecurityGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图像旋转、翻转等操作
+ *
  * @method string getType() 获取类型，取值有：
 <li> Rotate：图像旋转。</li>
 <li> Flip：图像翻转。</li>
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Horizental：水平翻转，即左右镜像。</li>
 <li>Vertical：垂直翻转，即上下镜像。</li>
 当 Type = Flip 时有效。
- */
-
-/**
- *图像旋转、翻转等操作
  */
 class ImageTransform extends AbstractModel
 {
@@ -60,6 +58,7 @@ class ImageTransform extends AbstractModel
 当 Type = Flip 时有效。
      */
     public $Flip;
+
     /**
      * @param string $Type 类型，取值有：
 <li> Rotate：图像旋转。</li>
@@ -74,6 +73,7 @@ class ImageTransform extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

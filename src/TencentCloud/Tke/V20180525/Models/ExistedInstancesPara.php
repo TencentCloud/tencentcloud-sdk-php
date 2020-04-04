@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 已存在实例的重装参数
+ *
  * @method array getInstanceIds() 获取集群ID
  * @method void setInstanceIds(array $InstanceIds) 设置集群ID
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取实例额外需要设置参数信息
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
  * @method string getHostName() 获取重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
  * @method void setHostName(string $HostName) 设置重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
- */
-
-/**
- *已存在实例的重装参数
  */
 class ExistedInstancesPara extends AbstractModel
 {
@@ -66,6 +64,7 @@ class ExistedInstancesPara extends AbstractModel
      * @var string 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
      */
     public $HostName;
+
     /**
      * @param array $InstanceIds 集群ID
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 实例额外需要设置参数信息
@@ -78,6 +77,7 @@ class ExistedInstancesPara extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteApplication请求参数结构体
+ *
  * @method string getApplicationId() 获取应用ID
  * @method void setApplicationId(string $ApplicationId) 设置应用ID
- */
-
-/**
- *DeleteApplication请求参数结构体
  */
 class DeleteApplicationRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteApplicationRequest extends AbstractModel
      * @var string 应用ID
      */
     public $ApplicationId;
+
     /**
      * @param string $ApplicationId 应用ID
      */
@@ -38,6 +37,7 @@ class DeleteApplicationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

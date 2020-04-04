@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyInstanceToken请求参数结构体
+ *
  * @method string getTokenId() 获取实例长期访问凭证 ID
  * @method void setTokenId(string $TokenId) 设置实例长期访问凭证 ID
  * @method boolean getEnable() 获取启用或禁用实例长期访问凭证
  * @method void setEnable(boolean $Enable) 设置启用或禁用实例长期访问凭证
  * @method string getRegistryId() 获取实例 ID
  * @method void setRegistryId(string $RegistryId) 设置实例 ID
- */
-
-/**
- *ModifyInstanceToken请求参数结构体
  */
 class ModifyInstanceTokenRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyInstanceTokenRequest extends AbstractModel
      * @var string 实例 ID
      */
     public $RegistryId;
+
     /**
      * @param string $TokenId 实例长期访问凭证 ID
      * @param boolean $Enable 启用或禁用实例长期访问凭证
@@ -54,6 +53,7 @@ class ModifyInstanceTokenRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

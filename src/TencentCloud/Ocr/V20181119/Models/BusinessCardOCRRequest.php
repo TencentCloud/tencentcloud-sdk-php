@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BusinessCardOCR请求参数结构体
+ *
  * @method string getImageBase64() 获取图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -55,10 +57,6 @@ Config = Json.stringify({"RetImageType":"PROPROCESS"})
 API 3.0 Explorer 设置方式参考：
 Config = {"RetImageType":"PROPROCESS"}
  */
-
-/**
- *BusinessCardOCR请求参数结构体
- */
 class BusinessCardOCRRequest extends AbstractModel
 {
     /**
@@ -90,6 +88,7 @@ API 3.0 Explorer 设置方式参考：
 Config = {"RetImageType":"PROPROCESS"}
      */
     public $Config;
+
     /**
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
@@ -114,6 +113,7 @@ Config = {"RetImageType":"PROPROCESS"}
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

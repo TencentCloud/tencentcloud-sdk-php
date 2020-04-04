@@ -18,12 +18,10 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceStatus请求参数结构体
+ *
  * @method array getRegistryIds() 获取实例ID的数组
  * @method void setRegistryIds(array $RegistryIds) 设置实例ID的数组
- */
-
-/**
- *DescribeInstanceStatus请求参数结构体
  */
 class DescribeInstanceStatusRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeInstanceStatusRequest extends AbstractModel
      * @var array 实例ID的数组
      */
     public $RegistryIds;
+
     /**
      * @param array $RegistryIds 实例ID的数组
      */
@@ -38,6 +37,7 @@ class DescribeInstanceStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

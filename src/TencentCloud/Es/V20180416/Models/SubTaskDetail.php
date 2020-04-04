@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例操作记录流程任务中的子任务信息（如升级检查任务中的各个检查项）
+ *
  * @method string getName() 获取子任务名
  * @method void setName(string $Name) 设置子任务名
  * @method boolean getResult() 获取子任务结果
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFinishTime(string $FinishTime) 设置子任务结束时间
  * @method integer getLevel() 获取子任务等级，1警告 2失败
  * @method void setLevel(integer $Level) 设置子任务等级，1警告 2失败
- */
-
-/**
- *实例操作记录流程任务中的子任务信息（如升级检查任务中的各个检查项）
  */
 class SubTaskDetail extends AbstractModel
 {
@@ -80,6 +78,7 @@ class SubTaskDetail extends AbstractModel
      * @var integer 子任务等级，1警告 2失败
      */
     public $Level;
+
     /**
      * @param string $Name 子任务名
      * @param boolean $Result 子任务结果
@@ -94,6 +93,7 @@ class SubTaskDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

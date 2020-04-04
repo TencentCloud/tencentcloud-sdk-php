@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDCDBUpgradePrice请求参数结构体
+ *
  * @method string getInstanceId() 获取待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
  * @method string getUpgradeType() 获取升级类型，取值范围: 
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpandShardConfig(ExpandShardConfig $ExpandShardConfig) 设置扩容分片配置，当UpgradeType为EXPAND时生效。
  * @method SplitShardConfig getSplitShardConfig() 获取切分分片配置，当UpgradeType为SPLIT时生效。
  * @method void setSplitShardConfig(SplitShardConfig $SplitShardConfig) 设置切分分片配置，当UpgradeType为SPLIT时生效。
- */
-
-/**
- *DescribeDCDBUpgradePrice请求参数结构体
  */
 class DescribeDCDBUpgradePriceRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ class DescribeDCDBUpgradePriceRequest extends AbstractModel
      * @var SplitShardConfig 切分分片配置，当UpgradeType为SPLIT时生效。
      */
     public $SplitShardConfig;
+
     /**
      * @param string $InstanceId 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      * @param string $UpgradeType 升级类型，取值范围: 
@@ -82,6 +81,7 @@ class DescribeDCDBUpgradePriceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

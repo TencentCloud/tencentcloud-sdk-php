@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateBinding请求参数结构体
+ *
  * @method string getAccessId() 获取终端用户在IoT Video上的唯一标识ID
  * @method void setAccessId(string $AccessId) 设置终端用户在IoT Video上的唯一标识ID
  * @method string getTid() 获取设备TID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRole(string $Role) 设置用户角色，owner：主人，guest：访客
  * @method boolean getForceBind() 获取是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为owner时，可以不填
  * @method void setForceBind(boolean $ForceBind) 设置是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为owner时，可以不填
- */
-
-/**
- *CreateBinding请求参数结构体
  */
 class CreateBindingRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateBindingRequest extends AbstractModel
      * @var boolean 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为owner时，可以不填
      */
     public $ForceBind;
+
     /**
      * @param string $AccessId 终端用户在IoT Video上的唯一标识ID
      * @param string $Tid 设备TID
@@ -62,6 +61,7 @@ class CreateBindingRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

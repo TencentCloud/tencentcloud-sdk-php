@@ -18,6 +18,8 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDeviceInventory请求参数结构体
+ *
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
  * @method string getDeviceClassCode() 获取设备型号
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataDiskTypeId(integer $DataDiskTypeId) 设置数据盘类型ID，查询自定义机型时可填
  * @method integer getDataDiskCount() 获取数据盘数量，查询自定义机型时可填
  * @method void setDataDiskCount(integer $DataDiskCount) 设置数据盘数量，查询自定义机型时可填
- */
-
-/**
- *DescribeDeviceInventory请求参数结构体
  */
 class DescribeDeviceInventoryRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class DescribeDeviceInventoryRequest extends AbstractModel
      * @var integer 数据盘数量，查询自定义机型时可填
      */
     public $DataDiskCount;
+
     /**
      * @param string $Zone 可用区
      * @param string $DeviceClassCode 设备型号
@@ -118,6 +117,7 @@ class DescribeDeviceInventoryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

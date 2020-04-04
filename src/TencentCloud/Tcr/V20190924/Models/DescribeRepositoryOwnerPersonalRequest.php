@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRepositoryOwnerPersonal请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回最大数量，默认 20, 最大值 100
  * @method void setLimit(integer $Limit) 设置返回最大数量，默认 20, 最大值 100
  * @method string getRepoName() 获取仓库名称
  * @method void setRepoName(string $RepoName) 设置仓库名称
- */
-
-/**
- *DescribeRepositoryOwnerPersonal请求参数结构体
  */
 class DescribeRepositoryOwnerPersonalRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeRepositoryOwnerPersonalRequest extends AbstractModel
      * @var string 仓库名称
      */
     public $RepoName;
+
     /**
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回最大数量，默认 20, 最大值 100
@@ -54,6 +53,7 @@ class DescribeRepositoryOwnerPersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

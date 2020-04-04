@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindLiveDomainCert请求参数结构体
+ *
  * @method integer getCertId() 获取证书Id。使用添加证书接口获取证书Id。
  * @method void setCertId(integer $CertId) 设置证书Id。使用添加证书接口获取证书Id。
  * @method string getDomainName() 获取播放域名。
  * @method void setDomainName(string $DomainName) 设置播放域名。
  * @method integer getStatus() 获取状态，0： 关闭  1：打开。
  * @method void setStatus(integer $Status) 设置状态，0： 关闭  1：打开。
- */
-
-/**
- *BindLiveDomainCert请求参数结构体
  */
 class BindLiveDomainCertRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class BindLiveDomainCertRequest extends AbstractModel
      * @var integer 状态，0： 关闭  1：打开。
      */
     public $Status;
+
     /**
      * @param integer $CertId 证书Id。使用添加证书接口获取证书Id。
      * @param string $DomainName 播放域名。
@@ -54,6 +53,7 @@ class BindLiveDomainCertRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

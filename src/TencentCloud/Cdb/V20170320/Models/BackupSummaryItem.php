@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例备份统计项
+ *
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
  * @method integer getAutoBackupCount() 获取该实例自动数据备份的个数。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBinlogBackupVolume(integer $BinlogBackupVolume) 设置该实例日志备份的容量。
  * @method integer getBackupVolume() 获取该实例的总备份（包含数据备份和日志备份）占用容量。
  * @method void setBackupVolume(integer $BackupVolume) 设置该实例的总备份（包含数据备份和日志备份）占用容量。
- */
-
-/**
- *实例备份统计项
  */
 class BackupSummaryItem extends AbstractModel
 {
@@ -94,6 +92,7 @@ class BackupSummaryItem extends AbstractModel
      * @var integer 该实例的总备份（包含数据备份和日志备份）占用容量。
      */
     public $BackupVolume;
+
     /**
      * @param string $InstanceId 实例ID。
      * @param integer $AutoBackupCount 该实例自动数据备份的个数。
@@ -110,6 +109,7 @@ class BackupSummaryItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

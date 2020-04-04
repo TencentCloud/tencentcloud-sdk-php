@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTranscodeTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取转码模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置转码模板唯一标识。
  * @method string getContainer() 获取封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) 设置音频流配置参数。
  * @method TEHDConfigForUpdate getTEHDConfig() 获取极速高清转码参数。
  * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) 设置极速高清转码参数。
- */
-
-/**
- *ModifyTranscodeTemplate请求参数结构体
  */
 class ModifyTranscodeTemplateRequest extends AbstractModel
 {
@@ -99,6 +97,7 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
      * @var TEHDConfigForUpdate 极速高清转码参数。
      */
     public $TEHDConfig;
+
     /**
      * @param integer $Definition 转码模板唯一标识。
      * @param string $Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
@@ -118,6 +117,7 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

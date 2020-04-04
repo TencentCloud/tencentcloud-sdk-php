@@ -18,16 +18,14 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVsms请求参数结构体
+ *
  * @method integer getOffset() 获取偏移
  * @method void setOffset(integer $Offset) 设置偏移
  * @method integer getLimit() 获取最大数量
  * @method void setLimit(integer $Limit) 设置最大数量
  * @method string getSearchWord() 获取查询关键字
  * @method void setSearchWord(string $SearchWord) 设置查询关键字
- */
-
-/**
- *DescribeVsms请求参数结构体
  */
 class DescribeVsmsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeVsmsRequest extends AbstractModel
      * @var string 查询关键字
      */
     public $SearchWord;
+
     /**
      * @param integer $Offset 偏移
      * @param integer $Limit 最大数量
@@ -54,6 +53,7 @@ class DescribeVsmsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

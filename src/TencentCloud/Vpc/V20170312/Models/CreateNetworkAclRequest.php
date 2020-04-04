@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNetworkAcl请求参数结构体
+ *
  * @method string getVpcId() 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method string getNetworkAclName() 获取网络ACL名称，最大长度不能超过60个字节。
  * @method void setNetworkAclName(string $NetworkAclName) 设置网络ACL名称，最大长度不能超过60个字节。
- */
-
-/**
- *CreateNetworkAcl请求参数结构体
  */
 class CreateNetworkAclRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateNetworkAclRequest extends AbstractModel
      * @var string 网络ACL名称，最大长度不能超过60个字节。
      */
     public $NetworkAclName;
+
     /**
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param string $NetworkAclName 网络ACL名称，最大长度不能超过60个字节。
@@ -46,6 +45,7 @@ class CreateNetworkAclRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

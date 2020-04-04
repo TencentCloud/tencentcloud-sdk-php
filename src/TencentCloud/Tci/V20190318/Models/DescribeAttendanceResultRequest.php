@@ -18,12 +18,10 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAttendanceResult请求参数结构体
+ *
  * @method integer getJobId() 获取任务唯一标识符
  * @method void setJobId(integer $JobId) 设置任务唯一标识符
- */
-
-/**
- *DescribeAttendanceResult请求参数结构体
  */
 class DescribeAttendanceResultRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeAttendanceResultRequest extends AbstractModel
      * @var integer 任务唯一标识符
      */
     public $JobId;
+
     /**
      * @param integer $JobId 任务唯一标识符
      */
@@ -38,6 +37,7 @@ class DescribeAttendanceResultRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

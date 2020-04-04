@@ -18,16 +18,14 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例规格信息
+ *
  * @method string getRegion() 获取地域信息
  * @method void setRegion(string $Region) 设置地域信息
  * @method string getZone() 获取可用区信息
  * @method void setZone(string $Zone) 设置可用区信息
  * @method array getSpecItems() 获取售卖规格信息
  * @method void setSpecItems(array $SpecItems) 设置售卖规格信息
- */
-
-/**
- *实例规格信息
  */
 class SpecificationInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class SpecificationInfo extends AbstractModel
      * @var array 售卖规格信息
      */
     public $SpecItems;
+
     /**
      * @param string $Region 地域信息
      * @param string $Zone 可用区信息
@@ -54,6 +53,7 @@ class SpecificationInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

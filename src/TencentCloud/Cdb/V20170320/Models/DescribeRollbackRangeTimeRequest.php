@@ -18,12 +18,10 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRollbackRangeTime请求参数结构体
+ *
  * @method array getInstanceIds() 获取实例 ID 列表，单个实例 ID 的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表，单个实例 ID 的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
- */
-
-/**
- *DescribeRollbackRangeTime请求参数结构体
  */
 class DescribeRollbackRangeTimeRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeRollbackRangeTimeRequest extends AbstractModel
      * @var array 实例 ID 列表，单个实例 ID 的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
     public $InstanceIds;
+
     /**
      * @param array $InstanceIds 实例 ID 列表，单个实例 ID 的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
@@ -38,6 +37,7 @@ class DescribeRollbackRangeTimeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

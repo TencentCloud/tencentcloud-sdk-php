@@ -18,16 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateClusterAsGroup返回参数结构体
+ *
  * @method string getLaunchConfigurationId() 获取启动配置ID
  * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置启动配置ID
  * @method string getAutoScalingGroupId() 获取伸缩组ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateClusterAsGroup返回参数结构体
  */
 class CreateClusterAsGroupResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateClusterAsGroupResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $LaunchConfigurationId 启动配置ID
      * @param string $AutoScalingGroupId 伸缩组ID
@@ -54,6 +53,7 @@ class CreateClusterAsGroupResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

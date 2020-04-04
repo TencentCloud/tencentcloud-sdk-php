@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeIpUnBlockList请求参数结构体
+ *
  * @method string getBeginTime() 获取开始时间
  * @method void setBeginTime(string $BeginTime) 设置开始时间
  * @method string getEndTime() 获取结束时间
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置一页条数，填0表示不分页
  * @method integer getOffset() 获取页起始偏移，取值为(页码-1)*一页条数
  * @method void setOffset(integer $Offset) 设置页起始偏移，取值为(页码-1)*一页条数
- */
-
-/**
- *DescribeIpUnBlockList请求参数结构体
  */
 class DescribeIpUnBlockListRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeIpUnBlockListRequest extends AbstractModel
      * @var integer 页起始偏移，取值为(页码-1)*一页条数
      */
     public $Offset;
+
     /**
      * @param string $BeginTime 开始时间
      * @param string $EndTime 结束时间
@@ -78,6 +77,7 @@ class DescribeIpUnBlockListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

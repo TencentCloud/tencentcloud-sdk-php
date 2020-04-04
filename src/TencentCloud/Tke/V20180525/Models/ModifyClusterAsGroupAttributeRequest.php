@@ -18,14 +18,12 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyClusterAsGroupAttribute请求参数结构体
+ *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method ClusterAsGroupAttribute getClusterAsGroupAttribute() 获取集群关联的伸缩组属性
  * @method void setClusterAsGroupAttribute(ClusterAsGroupAttribute $ClusterAsGroupAttribute) 设置集群关联的伸缩组属性
- */
-
-/**
- *ModifyClusterAsGroupAttribute请求参数结构体
  */
 class ModifyClusterAsGroupAttributeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyClusterAsGroupAttributeRequest extends AbstractModel
      * @var ClusterAsGroupAttribute 集群关联的伸缩组属性
      */
     public $ClusterAsGroupAttribute;
+
     /**
      * @param string $ClusterId 集群ID
      * @param ClusterAsGroupAttribute $ClusterAsGroupAttribute 集群关联的伸缩组属性
@@ -46,6 +45,7 @@ class ModifyClusterAsGroupAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

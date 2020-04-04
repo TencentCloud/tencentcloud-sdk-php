@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCluster请求参数结构体
+ *
  * @method ClusterCIDRSettings getClusterCIDRSettings() 获取集群容器网络配置信息
  * @method void setClusterCIDRSettings(ClusterCIDRSettings $ClusterCIDRSettings) 设置集群容器网络配置信息
  * @method string getClusterType() 获取集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExistedInstancesForNode(array $ExistedInstancesForNode) 设置已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
  * @method array getInstanceDataDiskMountSettings() 获取CVM类型和其对应的数据盘挂载配置信息
  * @method void setInstanceDataDiskMountSettings(array $InstanceDataDiskMountSettings) 设置CVM类型和其对应的数据盘挂载配置信息
- */
-
-/**
- *CreateCluster请求参数结构体
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class CreateClusterRequest extends AbstractModel
      * @var array CVM类型和其对应的数据盘挂载配置信息
      */
     public $InstanceDataDiskMountSettings;
+
     /**
      * @param ClusterCIDRSettings $ClusterCIDRSettings 集群容器网络配置信息
      * @param string $ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
@@ -94,6 +93,7 @@ class CreateClusterRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

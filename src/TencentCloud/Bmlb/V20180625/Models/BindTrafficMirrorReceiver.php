@@ -18,16 +18,14 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 待与流量镜像绑定的接收机信息。
+ *
  * @method integer getPort() 获取待绑定的主机端口，可选值1~65535。
  * @method void setPort(integer $Port) 设置待绑定的主机端口，可选值1~65535。
  * @method string getInstanceId() 获取待绑定的主机实例ID。
  * @method void setInstanceId(string $InstanceId) 设置待绑定的主机实例ID。
  * @method integer getWeight() 获取待绑定的主机权重，可选值0~100。
  * @method void setWeight(integer $Weight) 设置待绑定的主机权重，可选值0~100。
- */
-
-/**
- *待与流量镜像绑定的接收机信息。
  */
 class BindTrafficMirrorReceiver extends AbstractModel
 {
@@ -45,6 +43,7 @@ class BindTrafficMirrorReceiver extends AbstractModel
      * @var integer 待绑定的主机权重，可选值0~100。
      */
     public $Weight;
+
     /**
      * @param integer $Port 待绑定的主机端口，可选值1~65535。
      * @param string $InstanceId 待绑定的主机实例ID。
@@ -54,6 +53,7 @@ class BindTrafficMirrorReceiver extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

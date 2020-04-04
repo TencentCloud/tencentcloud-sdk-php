@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 算法配置
+ *
  * @method string getTrainingImageName() 获取镜像名字
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrainingImageName(string $TrainingImageName) 设置镜像名字
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlgorithmName(string $AlgorithmName) 设置算法名字
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *算法配置
  */
 class AlgorithmSpecification extends AbstractModel
 {
@@ -54,6 +52,7 @@ class AlgorithmSpecification extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlgorithmName;
+
     /**
      * @param string $TrainingImageName 镜像名字
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +65,7 @@ class AlgorithmSpecification extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Eip信息
+ *
  * @method string getEipId() 获取EIP实例ID
  * @method void setEipId(string $EipId) 设置EIP实例ID
  * @method string getEipName() 获取EIP名称
@@ -74,10 +76,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHInstanceId(string $HInstanceId) 设置托管机器实例ID
  * @method string getHInstanceAlias() 获取托管机器别名
  * @method void setHInstanceAlias(string $HInstanceAlias) 设置托管机器别名
- */
-
-/**
- *Eip信息
  */
 class EipInfo extends AbstractModel
 {
@@ -220,6 +218,7 @@ class EipInfo extends AbstractModel
      * @var string 托管机器别名
      */
     public $HInstanceAlias;
+
     /**
      * @param string $EipId EIP实例ID
      * @param string $EipName EIP名称
@@ -254,6 +253,7 @@ class EipInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

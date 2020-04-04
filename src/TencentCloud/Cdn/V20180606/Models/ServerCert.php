@@ -18,6 +18,11 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * https 加速服务端证书配置：
++ 支持使用托管至 SSL 证书管理的证书进行部署
++ 支持上传 PEM 格式的证书进行部署
+注意：上传 PEM 证书时，需要进行 Base 64 编码
+ *
  * @method string getCertId() 获取服务器证书 ID
 在 SSL 证书管理进行证书托管时自动生成
 注意：此字段可能返回 null，表示取不到有效值。
@@ -58,13 +63,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置证书备注信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *https 加速服务端证书配置：
-+ 支持使用托管至 SSL 证书管理的证书进行部署
-+ 支持上传 PEM 格式的证书进行部署
-注意：上传 PEM 证书时，需要进行 Base 64 编码
  */
 class ServerCert extends AbstractModel
 {
@@ -115,6 +113,7 @@ class ServerCert extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
+
     /**
      * @param string $CertId 服务器证书 ID
 在 SSL 证书管理进行证书托管时自动生成
@@ -141,6 +140,7 @@ class ServerCert extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

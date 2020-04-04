@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyTargetGroupInstancesPort请求参数结构体
+ *
  * @method string getTargetGroupId() 获取目标组ID
  * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID
  * @method array getTargetGroupInstances() 获取待修改端口的服务器数组
  * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置待修改端口的服务器数组
- */
-
-/**
- *ModifyTargetGroupInstancesPort请求参数结构体
  */
 class ModifyTargetGroupInstancesPortRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyTargetGroupInstancesPortRequest extends AbstractModel
      * @var array 待修改端口的服务器数组
      */
     public $TargetGroupInstances;
+
     /**
      * @param string $TargetGroupId 目标组ID
      * @param array $TargetGroupInstances 待修改端口的服务器数组
@@ -46,6 +45,7 @@ class ModifyTargetGroupInstancesPortRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

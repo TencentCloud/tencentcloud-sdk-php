@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Asr 文字涉黄信息
+ *
  * @method float getConfidence() 获取Asr 文字涉黄评分，分值为0到100。
  * @method void setConfidence(float $Confidence) 设置Asr 文字涉黄评分，分值为0到100。
  * @method string getSuggestion() 获取Asr 文字涉黄结果建议，取值范围：
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>block。</li>
  * @method array getSegmentSet() 获取Asr 文字有涉黄嫌疑的视频片段列表。
  * @method void setSegmentSet(array $SegmentSet) 设置Asr 文字有涉黄嫌疑的视频片段列表。
- */
-
-/**
- *Asr 文字涉黄信息
  */
 class AiReviewPornAsrTaskOutput extends AbstractModel
 {
@@ -54,6 +52,7 @@ class AiReviewPornAsrTaskOutput extends AbstractModel
      * @var array Asr 文字有涉黄嫌疑的视频片段列表。
      */
     public $SegmentSet;
+
     /**
      * @param float $Confidence Asr 文字涉黄评分，分值为0到100。
      * @param string $Suggestion Asr 文字涉黄结果建议，取值范围：
@@ -66,6 +65,7 @@ class AiReviewPornAsrTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

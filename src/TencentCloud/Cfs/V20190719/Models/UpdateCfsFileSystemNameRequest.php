@@ -18,14 +18,12 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateCfsFileSystemName请求参数结构体
+ *
  * @method string getFileSystemId() 获取文件系统 ID
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID
  * @method string getFsName() 获取用户自定义文件系统名称
  * @method void setFsName(string $FsName) 设置用户自定义文件系统名称
- */
-
-/**
- *UpdateCfsFileSystemName请求参数结构体
  */
 class UpdateCfsFileSystemNameRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UpdateCfsFileSystemNameRequest extends AbstractModel
      * @var string 用户自定义文件系统名称
      */
     public $FsName;
+
     /**
      * @param string $FileSystemId 文件系统 ID
      * @param string $FsName 用户自定义文件系统名称
@@ -46,6 +45,7 @@ class UpdateCfsFileSystemNameRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeConsumerGroup请求参数结构体
+ *
  * @method string getInstanceId() 获取ckafka实例id。
  * @method void setInstanceId(string $InstanceId) 设置ckafka实例id。
  * @method string getGroupName() 获取可选，用户需要查询的group名称。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置本次返回个数限制
  * @method integer getOffset() 获取偏移位置
  * @method void setOffset(integer $Offset) 设置偏移位置
- */
-
-/**
- *DescribeConsumerGroup请求参数结构体
  */
 class DescribeConsumerGroupRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeConsumerGroupRequest extends AbstractModel
      * @var integer 偏移位置
      */
     public $Offset;
+
     /**
      * @param string $InstanceId ckafka实例id。
      * @param string $GroupName 可选，用户需要查询的group名称。
@@ -70,6 +69,7 @@ class DescribeConsumerGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

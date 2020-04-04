@@ -18,6 +18,8 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 登录态信息
+ *
  * @method string getUserId() 获取用户 Id。
  * @method void setUserId(string $UserId) 设置用户 Id。
  * @method string getStatus() 获取用户登录状态。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置用户登录状态。
 <li>Online：在线；</li>
 <li>Offline：离线。</li>
- */
-
-/**
- *登录态信息
  */
 class LoginStatusInfo extends AbstractModel
 {
@@ -44,6 +42,7 @@ class LoginStatusInfo extends AbstractModel
 <li>Offline：离线。</li>
      */
     public $Status;
+
     /**
      * @param string $UserId 用户 Id。
      * @param string $Status 用户登录状态。
@@ -54,6 +53,7 @@ class LoginStatusInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,13 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHardwareSpecification请求参数结构体
+ *
 
- */
-
-/**
- *DescribeHardwareSpecification请求参数结构体
  */
 class DescribeHardwareSpecificationRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeHardwareSpecificationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

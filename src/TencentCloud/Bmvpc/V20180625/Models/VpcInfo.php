@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPC信息
+ *
  * @method string getVpcId() 获取私有网络的唯一ID。
  * @method void setVpcId(string $VpcId) 设置私有网络的唯一ID。
  * @method string getVpcName() 获取VPC的名称。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method integer getIntVpcId() 获取整型私有网络ID。
  * @method void setIntVpcId(integer $IntVpcId) 设置整型私有网络ID。
- */
-
-/**
- *VPC信息
  */
 class VpcInfo extends AbstractModel
 {
@@ -73,6 +71,7 @@ class VpcInfo extends AbstractModel
      * @var integer 整型私有网络ID。
      */
     public $IntVpcId;
+
     /**
      * @param string $VpcId 私有网络的唯一ID。
      * @param string $VpcName VPC的名称。
@@ -86,6 +85,7 @@ class VpcInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

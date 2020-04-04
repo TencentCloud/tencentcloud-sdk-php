@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLoadBalancers请求参数结构体
+ *
  * @method string getVpcId() 获取黑石负载均衡实例所属的私有网络ID。
  * @method void setVpcId(string $VpcId) 设置黑石负载均衡实例所属的私有网络ID。
  * @method string getLoadBalancerType() 获取负载均衡的类型，取值为open或internal。open表示公网(有日租)，internal表示内网。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBzConf(CreateLoadBalancerBzConf $BzConf) 设置（未全地域开放）保障型负载均衡设定参数，如果类别选择保障型则需传入此参数。
  * @method string getIpProtocolType() 获取IP协议类型。可取的值为“ipv4”或“ipv6”。
  * @method void setIpProtocolType(string $IpProtocolType) 设置IP协议类型。可取的值为“ipv4”或“ipv6”。
- */
-
-/**
- *CreateLoadBalancers请求参数结构体
  */
 class CreateLoadBalancersRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class CreateLoadBalancersRequest extends AbstractModel
      * @var string IP协议类型。可取的值为“ipv4”或“ipv6”。
      */
     public $IpProtocolType;
+
     /**
      * @param string $VpcId 黑石负载均衡实例所属的私有网络ID。
      * @param string $LoadBalancerType 负载均衡的类型，取值为open或internal。open表示公网(有日租)，internal表示内网。
@@ -118,6 +117,7 @@ class CreateLoadBalancersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

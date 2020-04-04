@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 分页索引
+ *
  * @method integer getOffset() 获取起始位置
  * @method void setOffset(integer $Offset) 设置起始位置
  * @method integer getLimit() 获取数量
  * @method void setLimit(integer $Limit) 设置数量
- */
-
-/**
- *分页索引
  */
 class Paging extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Paging extends AbstractModel
      * @var integer 数量
      */
     public $Limit;
+
     /**
      * @param integer $Offset 起始位置
      * @param integer $Limit 数量
@@ -46,6 +45,7 @@ class Paging extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

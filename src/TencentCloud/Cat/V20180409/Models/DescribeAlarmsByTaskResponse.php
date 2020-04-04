@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAlarmsByTask返回参数结构体
+ *
  * @method array getAlarmInfos() 获取告警信息列表
  * @method void setAlarmInfos(array $AlarmInfos) 设置告警信息列表
  * @method float getFaultRatio() 获取故障率
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaultTimeSpec(string $FaultTimeSpec) 设置故障总时长
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAlarmsByTask返回参数结构体
  */
 class DescribeAlarmsByTaskResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeAlarmsByTaskResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $AlarmInfos 告警信息列表
      * @param float $FaultRatio 故障率
@@ -62,6 +61,7 @@ class DescribeAlarmsByTaskResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

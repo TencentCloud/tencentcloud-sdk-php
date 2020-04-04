@@ -18,14 +18,12 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAuthDomain请求参数结构体
+ *
  * @method string getEnvId() 获取环境ID
  * @method void setEnvId(string $EnvId) 设置环境ID
  * @method array getDomains() 获取安全域名
  * @method void setDomains(array $Domains) 设置安全域名
- */
-
-/**
- *CreateAuthDomain请求参数结构体
  */
 class CreateAuthDomainRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateAuthDomainRequest extends AbstractModel
      * @var array 安全域名
      */
     public $Domains;
+
     /**
      * @param string $EnvId 环境ID
      * @param array $Domains 安全域名
@@ -46,6 +45,7 @@ class CreateAuthDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

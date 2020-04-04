@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CheckFacePhoto请求参数结构体
+ *
  * @method string getFileContent() 获取输入分析对象内容
  * @method void setFileContent(string $FileContent) 设置输入分析对象内容
  * @method string getFileType() 获取输入分析对象类型，picture_url:图片地址
  * @method void setFileType(string $FileType) 设置输入分析对象类型，picture_url:图片地址
- */
-
-/**
- *CheckFacePhoto请求参数结构体
  */
 class CheckFacePhotoRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CheckFacePhotoRequest extends AbstractModel
      * @var string 输入分析对象类型，picture_url:图片地址
      */
     public $FileType;
+
     /**
      * @param string $FileContent 输入分析对象内容
      * @param string $FileType 输入分析对象类型，picture_url:图片地址
@@ -46,6 +45,7 @@ class CheckFacePhotoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

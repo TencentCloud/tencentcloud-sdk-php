@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeReservedInstancesOfferings请求参数结构体
+ *
  * @method boolean getDryRun() 获取试运行, 默认为 false。
  * @method void setDryRun(boolean $DryRun) 设置试运行, 默认为 false。
  * @method integer getOffset() 获取偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
@@ -62,10 +64,6 @@ use TencentCloud\Common\AbstractModel;
 <li><strong>reserved-instances-offering-id</strong></li>
 <p style="padding-left: 30px;">按照【<strong>预留实例计费配置ID</strong>】进行过滤。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。</p><p style="padding-left: 30px;">类型：String</p><p style="padding-left: 30px;">必选：否</p>
 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。
- */
-
-/**
- *DescribeReservedInstancesOfferings请求参数结构体
  */
 class DescribeReservedInstancesOfferingsRequest extends AbstractModel
 {
@@ -114,6 +112,7 @@ class DescribeReservedInstancesOfferingsRequest extends AbstractModel
 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。
      */
     public $Filters;
+
     /**
      * @param boolean $DryRun 试运行, 默认为 false。
      * @param integer $Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
@@ -142,6 +141,7 @@ class DescribeReservedInstancesOfferingsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

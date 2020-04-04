@@ -18,14 +18,12 @@ namespace TencentCloud\Smpn\V20190822\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSmpnMhm请求参数结构体
+ *
  * @method MHMRequest getRequestData() 获取号码营销监控请求内容
  * @method void setRequestData(MHMRequest $RequestData) 设置号码营销监控请求内容
  * @method string getResourceId() 获取用于计费的资源ID
  * @method void setResourceId(string $ResourceId) 设置用于计费的资源ID
- */
-
-/**
- *DescribeSmpnMhm请求参数结构体
  */
 class DescribeSmpnMhmRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeSmpnMhmRequest extends AbstractModel
      * @var string 用于计费的资源ID
      */
     public $ResourceId;
+
     /**
      * @param MHMRequest $RequestData 号码营销监控请求内容
      * @param string $ResourceId 用于计费的资源ID
@@ -46,6 +45,7 @@ class DescribeSmpnMhmRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

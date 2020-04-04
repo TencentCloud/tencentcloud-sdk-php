@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IPV6转换规则
+ *
  * @method integer getVport6() 获取IPV6端口号，可在0~65535范围取值
  * @method void setVport6(integer $Vport6) 设置IPV6端口号，可在0~65535范围取值
  * @method string getProtocol() 获取协议类型，支持TCP/UDP
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) 设置IPV4地址
  * @method integer getVport() 获取IPV4端口号，可在0~65535范围取值
  * @method void setVport(integer $Vport) 设置IPV4端口号，可在0~65535范围取值
- */
-
-/**
- *IPV6转换规则
  */
 class Ip6RuleInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class Ip6RuleInfo extends AbstractModel
      * @var integer IPV4端口号，可在0~65535范围取值
      */
     public $Vport;
+
     /**
      * @param integer $Vport6 IPV6端口号，可在0~65535范围取值
      * @param string $Protocol 协议类型，支持TCP/UDP
@@ -62,6 +61,7 @@ class Ip6RuleInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

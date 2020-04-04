@@ -18,6 +18,8 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 作业信息
+ *
  * @method string getJobId() 获取作业ID
  * @method void setJobId(string $JobId) 设置作业ID
  * @method string getJobName() 获取作业名称
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method TaskMetrics getTaskMetrics() 获取任务统计指标
  * @method void setTaskMetrics(TaskMetrics $TaskMetrics) 设置任务统计指标
- */
-
-/**
- *作业信息
  */
 class JobView extends AbstractModel
 {
@@ -86,6 +84,7 @@ class JobView extends AbstractModel
      * @var TaskMetrics 任务统计指标
      */
     public $TaskMetrics;
+
     /**
      * @param string $JobId 作业ID
      * @param string $JobName 作业名称
@@ -102,6 +101,7 @@ class JobView extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

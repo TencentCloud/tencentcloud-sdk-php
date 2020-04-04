@@ -18,16 +18,14 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMountTargets返回参数结构体
+ *
  * @method array getMountTargets() 获取挂载点详情
  * @method void setMountTargets(array $MountTargets) 设置挂载点详情
  * @method integer getNumberOfMountTargets() 获取挂载点数量
  * @method void setNumberOfMountTargets(integer $NumberOfMountTargets) 设置挂载点数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeMountTargets返回参数结构体
  */
 class DescribeMountTargetsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeMountTargetsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $MountTargets 挂载点详情
      * @param integer $NumberOfMountTargets 挂载点数量
@@ -54,6 +53,7 @@ class DescribeMountTargetsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

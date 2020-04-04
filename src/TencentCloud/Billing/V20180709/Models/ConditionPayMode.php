@@ -18,14 +18,12 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 付费模式过滤条件
+ *
  * @method string getPayMode() 获取付费模式
  * @method void setPayMode(string $PayMode) 设置付费模式
  * @method string getPayModeName() 获取付费模式名称
  * @method void setPayModeName(string $PayModeName) 设置付费模式名称
- */
-
-/**
- *付费模式过滤条件
  */
 class ConditionPayMode extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ConditionPayMode extends AbstractModel
      * @var string 付费模式名称
      */
     public $PayModeName;
+
     /**
      * @param string $PayMode 付费模式
      * @param string $PayModeName 付费模式名称
@@ -46,6 +45,7 @@ class ConditionPayMode extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Album
+ *
  * @method string getAlbumName() 获取专辑名
  * @method void setAlbumName(string $AlbumName) 设置专辑名
  * @method array getImagePathMap() 获取专辑图片大小及类别
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImagePathMap(array $ImagePathMap) 设置专辑图片大小及类别
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *Album
  */
 class Album extends AbstractModel
 {
@@ -41,6 +39,7 @@ class Album extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImagePathMap;
+
     /**
      * @param string $AlbumName 专辑名
      * @param array $ImagePathMap 专辑图片大小及类别
@@ -50,6 +49,7 @@ class Album extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePubVersions请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
- */
-
-/**
- *DescribePubVersions请求参数结构体
  */
 class DescribePubVersionsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribePubVersionsRequest extends AbstractModel
      * @var string 产品ID
      */
     public $ProductId;
+
     /**
      * @param string $ProductId 产品ID
      */
@@ -38,6 +37,7 @@ class DescribePubVersionsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

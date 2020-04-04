@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 标签对应资源信息
+ *
  * @method string getResourceType() 获取资源类型，其中：
 Proxy表示通道，
 ProxyGroup表示通道组，
@@ -28,10 +30,6 @@ ProxyGroup表示通道组，
 RealServer表示源站
  * @method string getResourceId() 获取资源ID
  * @method void setResourceId(string $ResourceId) 设置资源ID
- */
-
-/**
- *标签对应资源信息
  */
 class TagResourceInfo extends AbstractModel
 {
@@ -47,6 +45,7 @@ RealServer表示源站
      * @var string 资源ID
      */
     public $ResourceId;
+
     /**
      * @param string $ResourceType 资源类型，其中：
 Proxy表示通道，
@@ -58,6 +57,7 @@ RealServer表示源站
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNamespaces请求参数结构体
+ *
  * @method string getRegistryId() 获取实例Id
  * @method void setRegistryId(string $RegistryId) 设置实例Id
  * @method string getNamespaceName() 获取指定命名空间，不填写默认查询所有命名空间
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页个数
  * @method integer getOffset() 获取页偏移
  * @method void setOffset(integer $Offset) 设置页偏移
- */
-
-/**
- *DescribeNamespaces请求参数结构体
  */
 class DescribeNamespacesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeNamespacesRequest extends AbstractModel
      * @var integer 页偏移
      */
     public $Offset;
+
     /**
      * @param string $RegistryId 实例Id
      * @param string $NamespaceName 指定命名空间，不填写默认查询所有命名空间
@@ -62,6 +61,7 @@ class DescribeNamespacesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

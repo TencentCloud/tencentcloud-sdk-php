@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据库可回档时间范围信息
+ *
  * @method string getDBName() 获取数据库名称
  * @method void setDBName(string $DBName) 设置数据库名称
  * @method string getStartTime() 获取可回档开始时间
  * @method void setStartTime(string $StartTime) 设置可回档开始时间
  * @method string getEndTime() 获取可回档结束时间
  * @method void setEndTime(string $EndTime) 设置可回档结束时间
- */
-
-/**
- *数据库可回档时间范围信息
  */
 class DbRollbackTimeInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DbRollbackTimeInfo extends AbstractModel
      * @var string 可回档结束时间
      */
     public $EndTime;
+
     /**
      * @param string $DBName 数据库名称
      * @param string $StartTime 可回档开始时间
@@ -54,6 +53,7 @@ class DbRollbackTimeInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

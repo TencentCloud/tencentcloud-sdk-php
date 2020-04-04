@@ -18,6 +18,8 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDirectConnects请求参数结构体
+ *
  * @method array getFilters() 获取过滤条件:
  * @method void setFilters(array $Filters) 设置过滤条件:
  * @method array getDirectConnectIds() 获取物理专线 ID数组
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100
- */
-
-/**
- *DescribeDirectConnects请求参数结构体
  */
 class DescribeDirectConnectsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeDirectConnectsRequest extends AbstractModel
      * @var integer 返回数量，默认为20，最大值为100
      */
     public $Limit;
+
     /**
      * @param array $Filters 过滤条件:
      * @param array $DirectConnectIds 物理专线 ID数组
@@ -62,6 +61,7 @@ class DescribeDirectConnectsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 输出的音频流信息
+ *
  * @method string getCodec() 获取音频流的编码格式，可选值：
 <li>libfdk_aac：适合 mp4 文件。</li>
 默认值：libfdk_aac。
@@ -47,10 +49,6 @@ use TencentCloud\Common\AbstractModel;
 <li>2：双声道</li>
 默认值：2。
  */
-
-/**
- *输出的音频流信息
- */
 class OutputAudioStream extends AbstractModel
 {
     /**
@@ -78,6 +76,7 @@ class OutputAudioStream extends AbstractModel
 默认值：2。
      */
     public $AudioChannel;
+
     /**
      * @param string $Codec 音频流的编码格式，可选值：
 <li>libfdk_aac：适合 mp4 文件。</li>
@@ -98,6 +97,7 @@ class OutputAudioStream extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

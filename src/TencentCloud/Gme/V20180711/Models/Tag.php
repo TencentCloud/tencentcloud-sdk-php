@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 标签列表
+ *
  * @method string getTagKey() 获取标签键
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagKey(string $TagKey) 设置标签键
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagValue(string $TagValue) 设置标签值
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *标签列表
  */
 class Tag extends AbstractModel
 {
@@ -44,6 +42,7 @@ class Tag extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagValue;
+
     /**
      * @param string $TagKey 标签键
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class Tag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

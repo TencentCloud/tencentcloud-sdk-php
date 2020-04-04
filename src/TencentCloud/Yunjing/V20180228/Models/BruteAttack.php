@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 暴力破解列表
+ *
  * @method integer getId() 获取事件ID。
  * @method void setId(integer $Id) 设置事件ID。
  * @method string getMachineIp() 获取主机IP。
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBanStatus(string $BanStatus) 设置阻断状态。
  * @method string getQuuid() 获取机器UUID
  * @method void setQuuid(string $Quuid) 设置机器UUID
- */
-
-/**
- *暴力破解列表
  */
 class BruteAttack extends AbstractModel
 {
@@ -138,6 +136,7 @@ class BruteAttack extends AbstractModel
      * @var string 机器UUID
      */
     public $Quuid;
+
     /**
      * @param integer $Id 事件ID。
      * @param string $MachineIp 主机IP。
@@ -162,6 +161,7 @@ class BruteAttack extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DestroyStaticStore请求参数结构体
+ *
  * @method string getEnvId() 获取环境ID
  * @method void setEnvId(string $EnvId) 设置环境ID
  * @method string getCdnDomain() 获取cdn域名
  * @method void setCdnDomain(string $CdnDomain) 设置cdn域名
- */
-
-/**
- *DestroyStaticStore请求参数结构体
  */
 class DestroyStaticStoreRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DestroyStaticStoreRequest extends AbstractModel
      * @var string cdn域名
      */
     public $CdnDomain;
+
     /**
      * @param string $EnvId 环境ID
      * @param string $CdnDomain cdn域名
@@ -46,6 +45,7 @@ class DestroyStaticStoreRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

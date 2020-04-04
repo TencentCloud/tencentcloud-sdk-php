@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 服务器证书
+ *
  * @method string getCertificateId() 获取证书ID
  * @method void setCertificateId(string $CertificateId) 设置证书ID
  * @method string getCertificateName() 获取证书名称（旧参数，请使用CertificateAlias）。
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubjectCN(string $SubjectCN) 设置证书主题通用名称。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *服务器证书
  */
 class Certificate extends AbstractModel
 {
@@ -102,6 +100,7 @@ class Certificate extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubjectCN;
+
     /**
      * @param string $CertificateId 证书ID
      * @param string $CertificateName 证书名称（旧参数，请使用CertificateAlias）。
@@ -122,6 +121,7 @@ class Certificate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

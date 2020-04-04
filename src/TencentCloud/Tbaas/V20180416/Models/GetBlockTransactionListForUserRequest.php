@@ -18,6 +18,8 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetBlockTransactionListForUser请求参数结构体
+ *
  * @method string getModule() 获取模块名，固定字段：transaction
  * @method void setModule(string $Module) 设置模块名，固定字段：transaction
  * @method string getOperation() 获取操作名，固定字段：block_transaction_list_for_user
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询的交易列表起始偏移地址
  * @method integer getLimit() 获取查询的交易列表数量
  * @method void setLimit(integer $Limit) 设置查询的交易列表数量
- */
-
-/**
- *GetBlockTransactionListForUser请求参数结构体
  */
 class GetBlockTransactionListForUserRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class GetBlockTransactionListForUserRequest extends AbstractModel
      * @var integer 查询的交易列表数量
      */
     public $Limit;
+
     /**
      * @param string $Module 模块名，固定字段：transaction
      * @param string $Operation 操作名，固定字段：block_transaction_list_for_user
@@ -94,6 +93,7 @@ class GetBlockTransactionListForUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

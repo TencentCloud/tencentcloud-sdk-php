@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 对业务指标的单位及支持统计周期的描述
+ *
  * @method string getNamespace() 获取命名空间，每个云产品会有一个命名空间
  * @method void setNamespace(string $Namespace) 设置命名空间，每个云产品会有一个命名空间
  * @method string getMetricName() 获取指标名称
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMeaning(MetricObjectMeaning $Meaning) 设置统计指标含义解释
  * @method array getDimensions() 获取维度描述信息
  * @method void setDimensions(array $Dimensions) 设置维度描述信息
- */
-
-/**
- *对业务指标的单位及支持统计周期的描述
  */
 class MetricSet extends AbstractModel
 {
@@ -80,6 +78,7 @@ class MetricSet extends AbstractModel
      * @var array 维度描述信息
      */
     public $Dimensions;
+
     /**
      * @param string $Namespace 命名空间，每个云产品会有一个命名空间
      * @param string $MetricName 指标名称
@@ -94,6 +93,7 @@ class MetricSet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

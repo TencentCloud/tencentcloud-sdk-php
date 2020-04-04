@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EstateCertOCR返回参数结构体
+ *
  * @method string getObligee() 获取权利人
  * @method void setObligee(string $Obligee) 设置权利人
  * @method string getOwnership() 获取共有情况
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNumber(string $Number) 设置不动产权号
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *EstateCertOCR返回参数结构体
  */
 class EstateCertOCRResponse extends AbstractModel
 {
@@ -115,6 +113,7 @@ class EstateCertOCRResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Obligee 权利人
      * @param string $Ownership 共有情况
@@ -134,6 +133,7 @@ class EstateCertOCRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

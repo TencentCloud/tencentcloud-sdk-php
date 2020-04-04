@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteRepository请求参数结构体
+ *
  * @method string getRegistryId() 获取实例Id
  * @method void setRegistryId(string $RegistryId) 设置实例Id
  * @method string getNamespaceName() 获取命名空间的名称
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间的名称
  * @method string getRepositoryName() 获取仓库名称的名称
  * @method void setRepositoryName(string $RepositoryName) 设置仓库名称的名称
- */
-
-/**
- *DeleteRepository请求参数结构体
  */
 class DeleteRepositoryRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteRepositoryRequest extends AbstractModel
      * @var string 仓库名称的名称
      */
     public $RepositoryName;
+
     /**
      * @param string $RegistryId 实例Id
      * @param string $NamespaceName 命名空间的名称
@@ -54,6 +53,7 @@ class DeleteRepositoryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

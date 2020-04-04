@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySubnetDHCPRelay请求参数结构体
+ *
  * @method string getVpcId() 获取私有网络ID
  * @method void setVpcId(string $VpcId) 设置私有网络ID
  * @method string getSubnetId() 获取子网ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerIps(array $ServerIps) 设置DHCP服务器IP
  * @method integer getReservedIpCount() 获取预留IP个数
  * @method void setReservedIpCount(integer $ReservedIpCount) 设置预留IP个数
- */
-
-/**
- *ModifySubnetDHCPRelay请求参数结构体
  */
 class ModifySubnetDHCPRelayRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifySubnetDHCPRelayRequest extends AbstractModel
      * @var integer 预留IP个数
      */
     public $ReservedIpCount;
+
     /**
      * @param string $VpcId 私有网络ID
      * @param string $SubnetId 子网ID
@@ -70,6 +69,7 @@ class ModifySubnetDHCPRelayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

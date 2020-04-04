@@ -18,16 +18,14 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCustomImage请求参数结构体
+ *
  * @method string getInstanceId() 获取用于制作镜像的物理机ID
  * @method void setInstanceId(string $InstanceId) 设置用于制作镜像的物理机ID
  * @method string getImageName() 获取镜像别名
  * @method void setImageName(string $ImageName) 设置镜像别名
  * @method string getImageDescription() 获取镜像描述
  * @method void setImageDescription(string $ImageDescription) 设置镜像描述
- */
-
-/**
- *CreateCustomImage请求参数结构体
  */
 class CreateCustomImageRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateCustomImageRequest extends AbstractModel
      * @var string 镜像描述
      */
     public $ImageDescription;
+
     /**
      * @param string $InstanceId 用于制作镜像的物理机ID
      * @param string $ImageName 镜像别名
@@ -54,6 +53,7 @@ class CreateCustomImageRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

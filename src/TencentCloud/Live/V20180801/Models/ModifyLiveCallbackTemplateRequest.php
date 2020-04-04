@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLiveCallbackTemplate请求参数结构体
+ *
  * @method integer getTemplateId() 获取模板Id。
  * @method void setTemplateId(integer $TemplateId) 设置模板Id。
  * @method string getTemplateName() 获取模板名称。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPornCensorshipNotifyUrl(string $PornCensorshipNotifyUrl) 设置鉴黄回调URL。
  * @method string getCallbackKey() 获取回调key，回调URL公用，鉴权回调说明详见回调格式文档。
  * @method void setCallbackKey(string $CallbackKey) 设置回调key，回调URL公用，鉴权回调说明详见回调格式文档。
- */
-
-/**
- *ModifyLiveCallbackTemplate请求参数结构体
  */
 class ModifyLiveCallbackTemplateRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
      * @var string 回调key，回调URL公用，鉴权回调说明详见回调格式文档。
      */
     public $CallbackKey;
+
     /**
      * @param integer $TemplateId 模板Id。
      * @param string $TemplateName 模板名称。
@@ -102,6 +101,7 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

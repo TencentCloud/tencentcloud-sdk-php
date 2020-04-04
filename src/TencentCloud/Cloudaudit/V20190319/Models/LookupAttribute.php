@@ -18,14 +18,12 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 检索条件
+ *
  * @method string getAttributeKey() 获取AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
  * @method void setAttributeKey(string $AttributeKey) 设置AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
  * @method string getAttributeValue() 获取AttributeValue
  * @method void setAttributeValue(string $AttributeValue) 设置AttributeValue
- */
-
-/**
- *检索条件
  */
 class LookupAttribute extends AbstractModel
 {
@@ -38,6 +36,7 @@ class LookupAttribute extends AbstractModel
      * @var string AttributeValue
      */
     public $AttributeValue;
+
     /**
      * @param string $AttributeKey AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
      * @param string $AttributeValue AttributeValue
@@ -46,6 +45,7 @@ class LookupAttribute extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

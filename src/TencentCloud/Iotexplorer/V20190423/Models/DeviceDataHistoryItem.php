@@ -18,14 +18,12 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备历史数据结构
+ *
  * @method string getTime() 获取时间点，毫秒时间戳
  * @method void setTime(string $Time) 设置时间点，毫秒时间戳
  * @method string getValue() 获取字段取值
  * @method void setValue(string $Value) 设置字段取值
- */
-
-/**
- *设备历史数据结构
  */
 class DeviceDataHistoryItem extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeviceDataHistoryItem extends AbstractModel
      * @var string 字段取值
      */
     public $Value;
+
     /**
      * @param string $Time 时间点，毫秒时间戳
      * @param string $Value 字段取值
@@ -46,6 +45,7 @@ class DeviceDataHistoryItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

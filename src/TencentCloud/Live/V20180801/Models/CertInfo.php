@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 证书信息
+ *
  * @method integer getCertId() 获取证书Id。
  * @method void setCertId(integer $CertId) 设置证书Id。
  * @method string getCertName() 获取证书名称。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertExpireTime(string $CertExpireTime) 设置证书过期时间，UTC格式。
  * @method array getDomainList() 获取使用此证书的域名列表。
  * @method void setDomainList(array $DomainList) 设置使用此证书的域名列表。
- */
-
-/**
- *证书信息
  */
 class CertInfo extends AbstractModel
 {
@@ -86,6 +84,7 @@ class CertInfo extends AbstractModel
      * @var array 使用此证书的域名列表。
      */
     public $DomainList;
+
     /**
      * @param integer $CertId 证书Id。
      * @param string $CertName 证书名称。
@@ -102,6 +101,7 @@ class CertInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

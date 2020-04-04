@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 镜像分享信息结构
+ *
  * @method string getCreatedTime() 获取镜像分享时间
  * @method void setCreatedTime(string $CreatedTime) 设置镜像分享时间
  * @method string getAccountId() 获取镜像分享的账户ID
  * @method void setAccountId(string $AccountId) 设置镜像分享的账户ID
- */
-
-/**
- *镜像分享信息结构
  */
 class SharePermission extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SharePermission extends AbstractModel
      * @var string 镜像分享的账户ID
      */
     public $AccountId;
+
     /**
      * @param string $CreatedTime 镜像分享时间
      * @param string $AccountId 镜像分享的账户ID
@@ -46,6 +45,7 @@ class SharePermission extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 规则信息
+ *
  * @method string getCreateTime() 获取规则创建时间。
  * @method void setCreateTime(string $CreateTime) 设置规则创建时间。
  * @method string getUpdateTime() 获取规则更新时间。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) 设置推流路径。
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
- */
-
-/**
- *规则信息
  */
 class RuleInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class RuleInfo extends AbstractModel
      * @var string 流名称。
      */
     public $StreamName;
+
     /**
      * @param string $CreateTime 规则创建时间。
      * @param string $UpdateTime 规则更新时间。
@@ -78,6 +77,7 @@ class RuleInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

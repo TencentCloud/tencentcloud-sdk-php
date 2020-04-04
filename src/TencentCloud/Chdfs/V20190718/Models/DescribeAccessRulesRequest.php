@@ -18,16 +18,14 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccessRules请求参数结构体
+ *
  * @method string getAccessGroupId() 获取权限组ID
  * @method void setAccessGroupId(string $AccessGroupId) 设置权限组ID
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认为所有
  * @method void setLimit(integer $Limit) 设置返回数量，默认为所有
- */
-
-/**
- *DescribeAccessRules请求参数结构体
  */
 class DescribeAccessRulesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAccessRulesRequest extends AbstractModel
      * @var integer 返回数量，默认为所有
      */
     public $Limit;
+
     /**
      * @param string $AccessGroupId 权限组ID
      * @param integer $Offset 偏移量，默认为0
@@ -54,6 +53,7 @@ class DescribeAccessRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

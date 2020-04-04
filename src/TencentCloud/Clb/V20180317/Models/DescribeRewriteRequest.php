@@ -18,16 +18,14 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRewrite请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID
  * @method array getSourceListenerIds() 获取负载均衡监听器ID数组
  * @method void setSourceListenerIds(array $SourceListenerIds) 设置负载均衡监听器ID数组
  * @method array getSourceLocationIds() 获取负载均衡转发规则的ID数组
  * @method void setSourceLocationIds(array $SourceLocationIds) 设置负载均衡转发规则的ID数组
- */
-
-/**
- *DescribeRewrite请求参数结构体
  */
 class DescribeRewriteRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeRewriteRequest extends AbstractModel
      * @var array 负载均衡转发规则的ID数组
      */
     public $SourceLocationIds;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例ID
      * @param array $SourceListenerIds 负载均衡监听器ID数组
@@ -54,6 +53,7 @@ class DescribeRewriteRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

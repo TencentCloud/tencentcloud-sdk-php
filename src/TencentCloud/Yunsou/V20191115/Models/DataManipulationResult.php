@@ -18,6 +18,8 @@ namespace TencentCloud\Yunsou\V20191115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数据操作结果
+ *
  * @method integer getAppId() 获取应用ID
  * @method void setAppId(integer $AppId) 设置应用ID
  * @method integer getSeq() 获取序号
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorResult(string $ErrorResult) 设置异常信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *数据操作结果
  */
 class DataManipulationResult extends AbstractModel
 {
@@ -65,6 +63,7 @@ class DataManipulationResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorResult;
+
     /**
      * @param integer $AppId 应用ID
      * @param integer $Seq 序号
@@ -78,6 +77,7 @@ class DataManipulationResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

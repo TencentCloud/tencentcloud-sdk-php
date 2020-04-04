@@ -18,16 +18,14 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeComponents返回参数结构体
+ *
  * @method integer getTotalCount() 获取组件列表记录总数。
  * @method void setTotalCount(integer $TotalCount) 设置组件列表记录总数。
  * @method array getComponents() 获取组件列表数据。
  * @method void setComponents(array $Components) 设置组件列表数据。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeComponents返回参数结构体
  */
 class DescribeComponentsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeComponentsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 组件列表记录总数。
      * @param array $Components 组件列表数据。
@@ -54,6 +53,7 @@ class DescribeComponentsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

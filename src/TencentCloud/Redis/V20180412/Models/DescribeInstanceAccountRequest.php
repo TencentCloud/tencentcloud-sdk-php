@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeInstanceAccount请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method integer getLimit() 获取分页大小
  * @method void setLimit(integer $Limit) 设置分页大小
  * @method integer getOffset() 获取分页偏移量
  * @method void setOffset(integer $Offset) 设置分页偏移量
- */
-
-/**
- *DescribeInstanceAccount请求参数结构体
  */
 class DescribeInstanceAccountRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeInstanceAccountRequest extends AbstractModel
      * @var integer 分页偏移量
      */
     public $Offset;
+
     /**
      * @param string $InstanceId 实例ID
      * @param integer $Limit 分页大小
@@ -54,6 +53,7 @@ class DescribeInstanceAccountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetSimilarPersonResult返回参数结构体
+ *
  * @method float getProgress() 获取查重任务完成进度。取值[0.0，100.0]。当且仅当值为100时，SimilarPersons才有意义。
  * @method void setProgress(float $Progress) 设置查重任务完成进度。取值[0.0，100.0]。当且仅当值为100时，SimilarPersons才有意义。
  * @method string getSimilarPersonsUrl() 获取疑似同一人的人员信息文件临时下载链接， 有效时间为5分钟，结果文件实际保存90天。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 文件内容由 SimilarPerson 的数组组成。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetSimilarPersonResult返回参数结构体
  */
 class GetSimilarPersonResultResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ class GetSimilarPersonResultResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param float $Progress 查重任务完成进度。取值[0.0，100.0]。当且仅当值为100时，SimilarPersons才有意义。
      * @param string $SimilarPersonsUrl 疑似同一人的人员信息文件临时下载链接， 有效时间为5分钟，结果文件实际保存90天。
@@ -58,6 +57,7 @@ class GetSimilarPersonResultResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

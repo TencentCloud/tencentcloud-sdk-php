@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHistoryNetworkInfo请求参数结构体
+ *
  * @method integer getTime() 获取请求时间戳
  * @method void setTime(integer $Time) 设置请求时间戳
  * @method string getCompanyId() 获取优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置拉取条数，默认10
  * @method integer getOffset() 获取拉取偏移，返回offset之后的数据
  * @method void setOffset(integer $Offset) 设置拉取偏移，返回offset之后的数据
- */
-
-/**
- *DescribeHistoryNetworkInfo请求参数结构体
  */
 class DescribeHistoryNetworkInfoRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeHistoryNetworkInfoRequest extends AbstractModel
      * @var integer 拉取偏移，返回offset之后的数据
      */
     public $Offset;
+
     /**
      * @param integer $Time 请求时间戳
      * @param string $CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
@@ -86,6 +85,7 @@ class DescribeHistoryNetworkInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 跟踪集概览
+ *
  * @method string getAuditName() 获取跟踪集名称
  * @method void setAuditName(string $AuditName) 设置跟踪集名称
  * @method integer getAuditStatus() 获取跟踪集状态，1：开启，0：关闭
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosBucketName(string $CosBucketName) 设置COS存储桶名称
  * @method string getLogFilePrefix() 获取日志前缀
  * @method void setLogFilePrefix(string $LogFilePrefix) 设置日志前缀
- */
-
-/**
- *跟踪集概览
  */
 class AuditSummary extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AuditSummary extends AbstractModel
      * @var string 日志前缀
      */
     public $LogFilePrefix;
+
     /**
      * @param string $AuditName 跟踪集名称
      * @param integer $AuditStatus 跟踪集状态，1：开启，0：关闭
@@ -62,6 +61,7 @@ class AuditSummary extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

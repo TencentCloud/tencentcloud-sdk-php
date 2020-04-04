@@ -18,14 +18,12 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RemoveInstances请求参数结构体
+ *
  * @method string getAutoScalingGroupId() 获取伸缩组ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
  * @method array getInstanceIds() 获取CVM实例ID列表
  * @method void setInstanceIds(array $InstanceIds) 设置CVM实例ID列表
- */
-
-/**
- *RemoveInstances请求参数结构体
  */
 class RemoveInstancesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RemoveInstancesRequest extends AbstractModel
      * @var array CVM实例ID列表
      */
     public $InstanceIds;
+
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param array $InstanceIds CVM实例ID列表
@@ -46,6 +45,7 @@ class RemoveInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

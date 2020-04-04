@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateMigrateJob请求参数结构体
+ *
  * @method string getJobName() 获取数据迁移任务名称
  * @method void setJobName(string $JobName) 设置数据迁移任务名称
  * @method MigrateOption getMigrateOption() 获取迁移任务配置选项
@@ -52,10 +54,6 @@ Table:[table1,table2]},{Database:db1,Schema:s2
 Table:[table1,table2]},{Database:db2,Schema:s1
 Table:[table1,table2]},{Database:db3},{Database:db4
 Schema:s1}]
- */
-
-/**
- *CreateMigrateJob请求参数结构体
  */
 class CreateMigrateJobRequest extends AbstractModel
 {
@@ -111,6 +109,7 @@ Table:[table1,table2]},{Database:db3},{Database:db4
 Schema:s1}]
      */
     public $DatabaseInfo;
+
     /**
      * @param string $JobName 数据迁移任务名称
      * @param MigrateOption $MigrateOption 迁移任务配置选项
@@ -134,6 +133,7 @@ Schema:s1}]
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

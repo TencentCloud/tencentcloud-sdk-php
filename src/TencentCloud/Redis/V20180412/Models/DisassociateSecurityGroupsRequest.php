@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisassociateSecurityGroups请求参数结构体
+ *
  * @method string getProduct() 获取数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
  * @method void setProduct(string $Product) 设置数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
  * @method string getSecurityGroupId() 获取安全组Id。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组Id。
  * @method array getInstanceIds() 获取实例ID列表，一个或者多个实例Id组成的数组。
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表，一个或者多个实例Id组成的数组。
- */
-
-/**
- *DisassociateSecurityGroups请求参数结构体
  */
 class DisassociateSecurityGroupsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
      * @var array 实例ID列表，一个或者多个实例Id组成的数组。
      */
     public $InstanceIds;
+
     /**
      * @param string $Product 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
      * @param string $SecurityGroupId 安全组Id。
@@ -54,6 +53,7 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

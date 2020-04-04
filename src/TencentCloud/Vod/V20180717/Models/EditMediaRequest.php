@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EditMedia请求参数结构体
+ *
  * @method string getInputType() 获取输入视频的类型，可以取的值为  File，Stream 两种。
  * @method void setInputType(string $InputType) 设置输入视频的类型，可以取的值为  File，Stream 两种。
  * @method array getFileInfos() 获取输入的视频文件信息，当 InputType 为 File 时必填。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置用于任务去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *EditMedia请求参数结构体
  */
 class EditMediaRequest extends AbstractModel
 {
@@ -100,6 +98,7 @@ class EditMediaRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param string $InputType 输入视频的类型，可以取的值为  File，Stream 两种。
      * @param array $FileInfos 输入的视频文件信息，当 InputType 为 File 时必填。
@@ -118,6 +117,7 @@ class EditMediaRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

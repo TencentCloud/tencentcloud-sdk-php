@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 状态码重定向规则配置
+ *
  * @method integer getStatusCode() 获取状态码
 支持 400、403、404、500
  * @method void setStatusCode(integer $StatusCode) 设置状态码
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 需要为完整跳转路径，如 https://www.test.com/error.html
  * @method void setRedirectUrl(string $RedirectUrl) 设置重定向 URL
 需要为完整跳转路径，如 https://www.test.com/error.html
- */
-
-/**
- *状态码重定向规则配置
  */
 class ErrorPageRule extends AbstractModel
 {
@@ -54,6 +52,7 @@ class ErrorPageRule extends AbstractModel
 需要为完整跳转路径，如 https://www.test.com/error.html
      */
     public $RedirectUrl;
+
     /**
      * @param integer $StatusCode 状态码
 支持 400、403、404、500
@@ -66,6 +65,7 @@ class ErrorPageRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

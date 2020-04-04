@@ -18,12 +18,10 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RevocationPublicConfig请求参数结构体
+ *
  * @method string getConfigReleaseId() 获取配置项发布ID
  * @method void setConfigReleaseId(string $ConfigReleaseId) 设置配置项发布ID
- */
-
-/**
- *RevocationPublicConfig请求参数结构体
  */
 class RevocationPublicConfigRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class RevocationPublicConfigRequest extends AbstractModel
      * @var string 配置项发布ID
      */
     public $ConfigReleaseId;
+
     /**
      * @param string $ConfigReleaseId 配置项发布ID
      */
@@ -38,6 +37,7 @@ class RevocationPublicConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

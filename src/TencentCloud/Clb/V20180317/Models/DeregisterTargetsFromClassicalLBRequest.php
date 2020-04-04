@@ -18,14 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeregisterTargetsFromClassicalLB请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例 ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
  * @method array getInstanceIds() 获取后端服务的实例ID列表
  * @method void setInstanceIds(array $InstanceIds) 设置后端服务的实例ID列表
- */
-
-/**
- *DeregisterTargetsFromClassicalLB请求参数结构体
  */
 class DeregisterTargetsFromClassicalLBRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeregisterTargetsFromClassicalLBRequest extends AbstractModel
      * @var array 后端服务的实例ID列表
      */
     public $InstanceIds;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param array $InstanceIds 后端服务的实例ID列表
@@ -46,6 +45,7 @@ class DeregisterTargetsFromClassicalLBRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

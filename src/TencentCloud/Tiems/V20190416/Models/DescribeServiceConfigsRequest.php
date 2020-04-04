@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeServiceConfigs请求参数结构体
+ *
  * @method array getFilters() 获取筛选选项，支持按照name等进行筛选
  * @method void setFilters(array $Filters) 设置筛选选项，支持按照name等进行筛选
  * @method integer getOffset() 获取偏移量，默认为0
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
  * @method boolean getPageByName() 获取是否按照配置名分页
  * @method void setPageByName(boolean $PageByName) 设置是否按照配置名分页
- */
-
-/**
- *DescribeServiceConfigs请求参数结构体
  */
 class DescribeServiceConfigsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeServiceConfigsRequest extends AbstractModel
      * @var boolean 是否按照配置名分页
      */
     public $PageByName;
+
     /**
      * @param array $Filters 筛选选项，支持按照name等进行筛选
      * @param integer $Offset 偏移量，默认为0
@@ -78,6 +77,7 @@ class DescribeServiceConfigsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

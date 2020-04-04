@@ -18,16 +18,14 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeL4ListenerInfo请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method string getSearchKey() 获取查找的键值，可用于模糊查找该名称的监听器。
  * @method void setSearchKey(string $SearchKey) 设置查找的键值，可用于模糊查找该名称的监听器。
  * @method array getInstanceIds() 获取主机ID或虚机IP列表，可用于获取绑定了该主机的监听器。
  * @method void setInstanceIds(array $InstanceIds) 设置主机ID或虚机IP列表，可用于获取绑定了该主机的监听器。
- */
-
-/**
- *DescribeL4ListenerInfo请求参数结构体
  */
 class DescribeL4ListenerInfoRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeL4ListenerInfoRequest extends AbstractModel
      * @var array 主机ID或虚机IP列表，可用于获取绑定了该主机的监听器。
      */
     public $InstanceIds;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param string $SearchKey 查找的键值，可用于模糊查找该名称的监听器。
@@ -54,6 +53,7 @@ class DescribeL4ListenerInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

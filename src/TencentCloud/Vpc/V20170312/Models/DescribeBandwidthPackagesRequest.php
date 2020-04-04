@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBandwidthPackages请求参数结构体
+ *
  * @method array getBandwidthPackageIds() 获取带宽包唯一ID列表
  * @method void setBandwidthPackageIds(array $BandwidthPackageIds) 设置带宽包唯一ID列表
  * @method array getFilters() 获取每次请求的`Filters`的上限为10。参数不支持同时指定`BandwidthPackageIds`和`Filters`。详细的过滤条件如下：
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询带宽包偏移量
  * @method integer getLimit() 获取查询带宽包数量限制
  * @method void setLimit(integer $Limit) 设置查询带宽包数量限制
- */
-
-/**
- *DescribeBandwidthPackages请求参数结构体
  */
 class DescribeBandwidthPackagesRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeBandwidthPackagesRequest extends AbstractModel
      * @var integer 查询带宽包数量限制
      */
     public $Limit;
+
     /**
      * @param array $BandwidthPackageIds 带宽包唯一ID列表
      * @param array $Filters 每次请求的`Filters`的上限为10。参数不支持同时指定`BandwidthPackageIds`和`Filters`。详细的过滤条件如下：
@@ -90,6 +89,7 @@ class DescribeBandwidthPackagesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

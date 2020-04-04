@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLogDownloadList请求参数结构体
+ *
  * @method string getStartTime() 获取开始时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
  * @method void setStartTime(string $StartTime) 设置开始时间，北京时间。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：结束时间 - 开始时间 <=7天。
  * @method array getPlayDomains() 获取域名列表。
  * @method void setPlayDomains(array $PlayDomains) 设置域名列表。
- */
-
-/**
- *DescribeLogDownloadList请求参数结构体
  */
 class DescribeLogDownloadListRequest extends AbstractModel
 {
@@ -54,6 +52,7 @@ class DescribeLogDownloadListRequest extends AbstractModel
      * @var array 域名列表。
      */
     public $PlayDomains;
+
     /**
      * @param string $StartTime 开始时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
@@ -66,6 +65,7 @@ class DescribeLogDownloadListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEnvLimit返回参数结构体
+ *
  * @method integer getMaxEnvNum() 获取环境总数上限
  * @method void setMaxEnvNum(integer $MaxEnvNum) 设置环境总数上限
  * @method integer getCurrentEnvNum() 获取目前环境总数
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentDeleteMonthly(integer $CurrentDeleteMonthly) 设置本月已销毁环境次数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeEnvLimit返回参数结构体
  */
 class DescribeEnvLimitResponse extends AbstractModel
 {
@@ -87,6 +85,7 @@ class DescribeEnvLimitResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $MaxEnvNum 环境总数上限
      * @param integer $CurrentEnvNum 目前环境总数
@@ -102,6 +101,7 @@ class DescribeEnvLimitResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

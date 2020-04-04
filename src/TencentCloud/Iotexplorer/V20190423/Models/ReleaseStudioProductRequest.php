@@ -18,14 +18,12 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReleaseStudioProduct请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getDevStatus() 获取产品DevStatus
  * @method void setDevStatus(string $DevStatus) 设置产品DevStatus
- */
-
-/**
- *ReleaseStudioProduct请求参数结构体
  */
 class ReleaseStudioProductRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ReleaseStudioProductRequest extends AbstractModel
      * @var string 产品DevStatus
      */
     public $DevStatus;
+
     /**
      * @param string $ProductId 产品ID
      * @param string $DevStatus 产品DevStatus
@@ -46,6 +45,7 @@ class ReleaseStudioProductRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

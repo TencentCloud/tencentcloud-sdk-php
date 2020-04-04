@@ -18,6 +18,8 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * https服务端证书配置。
+ *
  * @method string getCertId() 获取服务器证书id，当证书为腾讯云托管证书时必填。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertId(string $CertId) 设置服务器证书id，当证书为腾讯云托管证书时必填。
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置证书备注信息。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *https服务端证书配置。
  */
 class ServerCert extends AbstractModel
 {
@@ -94,6 +92,7 @@ class ServerCert extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
+
     /**
      * @param string $CertId 服务器证书id，当证书为腾讯云托管证书时必填。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,6 +113,7 @@ class ServerCert extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateUnblockIp请求参数结构体
+ *
  * @method string getIp() 获取IP
  * @method void setIp(string $Ip) 设置IP
  * @method string getActionType() 获取解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
  * @method void setActionType(string $ActionType) 设置解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
- */
-
-/**
- *CreateUnblockIp请求参数结构体
  */
 class CreateUnblockIpRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateUnblockIpRequest extends AbstractModel
      * @var string 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
      */
     public $ActionType;
+
     /**
      * @param string $Ip IP
      * @param string $ActionType 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
@@ -46,6 +45,7 @@ class CreateUnblockIpRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

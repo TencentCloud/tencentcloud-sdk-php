@@ -18,6 +18,8 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 加固策略信息
+ *
  * @method integer getApkSizeOpt() 获取apk大小优化，0关闭，1开启
  * @method void setApkSizeOpt(integer $ApkSizeOpt) 设置apk大小优化，0关闭，1开启
  * @method integer getDex() 获取Dex加固，0关闭，1开启
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAntiScreenshot(integer $AntiScreenshot) 设置防止截屏，0关闭，1开启
  * @method integer getAntiSSL() 获取SSL证书防窃取，0关闭，1开启
  * @method void setAntiSSL(integer $AntiSSL) 设置SSL证书防窃取，0关闭，1开启
- */
-
-/**
- *加固策略信息
  */
 class PlanInfo extends AbstractModel
 {
@@ -136,6 +134,7 @@ class PlanInfo extends AbstractModel
      * @var integer SSL证书防窃取，0关闭，1开启
      */
     public $AntiSSL;
+
     /**
      * @param integer $ApkSizeOpt apk大小优化，0关闭，1开启
      * @param integer $Dex Dex加固，0关闭，1开启
@@ -158,6 +157,7 @@ class PlanInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

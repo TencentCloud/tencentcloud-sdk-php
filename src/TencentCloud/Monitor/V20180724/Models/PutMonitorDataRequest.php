@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PutMonitorData请求参数结构体
+ *
  * @method array getMetrics() 获取一组指标和数据
  * @method void setMetrics(array $Metrics) 设置一组指标和数据
  * @method string getAnnounceIp() 获取上报时自行指定的 IP
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAnnounceTimestamp(integer $AnnounceTimestamp) 设置上报时自行指定的时间戳
  * @method string getAnnounceInstance() 获取上报时自行指定的 IP 或 产品实例ID
  * @method void setAnnounceInstance(string $AnnounceInstance) 设置上报时自行指定的 IP 或 产品实例ID
- */
-
-/**
- *PutMonitorData请求参数结构体
  */
 class PutMonitorDataRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class PutMonitorDataRequest extends AbstractModel
      * @var string 上报时自行指定的 IP 或 产品实例ID
      */
     public $AnnounceInstance;
+
     /**
      * @param array $Metrics 一组指标和数据
      * @param string $AnnounceIp 上报时自行指定的 IP
@@ -62,6 +61,7 @@ class PutMonitorDataRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

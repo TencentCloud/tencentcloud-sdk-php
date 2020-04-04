@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCertDetail返回参数结构体
+ *
  * @method string getCertId() 获取证书ID。
  * @method void setCertId(string $CertId) 设置证书ID。
  * @method string getCertName() 获取证书名称。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertLoadBalancerSet(array $CertLoadBalancerSet) 设置该证书关联的黑石负载均衡对象列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeCertDetail返回参数结构体
  */
 class DescribeCertDetailResponse extends AbstractModel
 {
@@ -101,6 +99,7 @@ class DescribeCertDetailResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $CertId 证书ID。
      * @param string $CertName 证书名称。
@@ -118,6 +117,7 @@ class DescribeCertDetailResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

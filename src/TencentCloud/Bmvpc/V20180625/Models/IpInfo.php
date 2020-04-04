@@ -18,14 +18,12 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * NAT IP信息
+ *
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
  * @method array getIps() 获取IP列表
  * @method void setIps(array $Ips) 设置IP列表
- */
-
-/**
- *NAT IP信息
  */
 class IpInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class IpInfo extends AbstractModel
      * @var array IP列表
      */
     public $Ips;
+
     /**
      * @param string $SubnetId 子网ID
      * @param array $Ips IP列表
@@ -46,6 +45,7 @@ class IpInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

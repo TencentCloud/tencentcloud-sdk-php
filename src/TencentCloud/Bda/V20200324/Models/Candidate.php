@@ -18,6 +18,8 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 识别出的最相似候选人。
+ *
  * @method string getPersonId() 获取人员ID。
  * @method void setPersonId(string $PersonId) 设置人员ID。
  * @method string getTraceId() 获取人体轨迹ID。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 二十万人体库下，误识率百分之五对应的分数为80分；误识率百分之二对应的分数为90分；误识率百分之一对应的分数为95分。
  
 通常情况建议使用分数80分（保召回）。若希望获得较高精度，建议使用分数90分（保准确）。
- */
-
-/**
- *识别出的最相似候选人。
  */
 class Candidate extends AbstractModel
 {
@@ -60,6 +58,7 @@ class Candidate extends AbstractModel
 通常情况建议使用分数80分（保召回）。若希望获得较高精度，建议使用分数90分（保准确）。
      */
     public $Score;
+
     /**
      * @param string $PersonId 人员ID。
      * @param string $TraceId 人体轨迹ID。
@@ -74,6 +73,7 @@ class Candidate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

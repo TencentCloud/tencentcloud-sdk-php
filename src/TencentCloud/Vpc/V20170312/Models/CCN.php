@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 云联网（CCN）对象
+ *
  * @method string getCcnId() 获取云联网唯一ID
  * @method void setCcnId(string $CcnId) 设置云联网唯一ID
  * @method string getCcnName() 获取云联网名称
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
- */
-
-/**
- *云联网（CCN）对象
  */
 class CCN extends AbstractModel
 {
@@ -100,6 +98,7 @@ class CCN extends AbstractModel
      * @var array 标签键值对。
      */
     public $TagSet;
+
     /**
      * @param string $CcnId 云联网唯一ID
      * @param string $CcnName 云联网名称
@@ -118,6 +117,7 @@ class CCN extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

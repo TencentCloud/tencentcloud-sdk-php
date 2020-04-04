@@ -18,14 +18,12 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDatabaseACL请求参数结构体
+ *
  * @method string getEnvId() 获取环境ID
  * @method void setEnvId(string $EnvId) 设置环境ID
  * @method string getCollectionName() 获取集合名称
  * @method void setCollectionName(string $CollectionName) 设置集合名称
- */
-
-/**
- *DescribeDatabaseACL请求参数结构体
  */
 class DescribeDatabaseACLRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDatabaseACLRequest extends AbstractModel
      * @var string 集合名称
      */
     public $CollectionName;
+
     /**
      * @param string $EnvId 环境ID
      * @param string $CollectionName 集合名称
@@ -46,6 +45,7 @@ class DescribeDatabaseACLRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

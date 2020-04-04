@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePaiInstances请求参数结构体
+ *
  * @method array getInstanceIds() 获取依据PAI实例的实例ID进行查询。
  * @method void setInstanceIds(array $InstanceIds) 设置依据PAI实例的实例ID进行查询。
  * @method array getFilters() 获取过滤条件。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- */
-
-/**
- *DescribePaiInstances请求参数结构体
  */
 class DescribePaiInstancesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribePaiInstancesRequest extends AbstractModel
      * @var integer 偏移量，默认为0。
      */
     public $Offset;
+
     /**
      * @param array $InstanceIds 依据PAI实例的实例ID进行查询。
      * @param array $Filters 过滤条件。
@@ -62,6 +61,7 @@ class DescribePaiInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

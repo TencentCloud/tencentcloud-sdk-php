@@ -18,6 +18,8 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StartGameServerSessionPlacement请求参数结构体
+ *
  * @method string getPlacementId() 获取开始部署游戏服务器会话的唯一标识符
  * @method void setPlacementId(string $PlacementId) 设置开始部署游戏服务器会话的唯一标识符
  * @method string getGameServerSessionQueueName() 获取游戏服务器会话队列名称
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGameServerSessionName(string $GameServerSessionName) 设置游戏服务器会话名称
  * @method array getPlayerLatencies() 获取玩家延迟
  * @method void setPlayerLatencies(array $PlayerLatencies) 设置玩家延迟
- */
-
-/**
- *StartGameServerSessionPlacement请求参数结构体
  */
 class StartGameServerSessionPlacementRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class StartGameServerSessionPlacementRequest extends AbstractModel
      * @var array 玩家延迟
      */
     public $PlayerLatencies;
+
     /**
      * @param string $PlacementId 开始部署游戏服务器会话的唯一标识符
      * @param string $GameServerSessionQueueName 游戏服务器会话队列名称
@@ -94,6 +93,7 @@ class StartGameServerSessionPlacementRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

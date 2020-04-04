@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSampleSnapshotTemplate请求参数结构体
+ *
  * @method string getSampleType() 获取采样截图类型，取值：
 <li>Percent：按百分比。</li>
 <li>Time：按时间间隔。</li>
@@ -82,10 +84,6 @@ use TencentCloud\Common\AbstractModel;
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>
 默认值：black 。
- */
-
-/**
- *CreateSampleSnapshotTemplate请求参数结构体
  */
 class CreateSampleSnapshotTemplateRequest extends AbstractModel
 {
@@ -160,6 +158,7 @@ class CreateSampleSnapshotTemplateRequest extends AbstractModel
 默认值：black 。
      */
     public $FillType;
+
     /**
      * @param string $SampleType 采样截图类型，取值：
 <li>Percent：按百分比。</li>
@@ -198,6 +197,7 @@ class CreateSampleSnapshotTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

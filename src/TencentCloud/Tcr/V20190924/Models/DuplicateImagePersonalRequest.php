@@ -18,14 +18,12 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DuplicateImagePersonal请求参数结构体
+ *
  * @method string getSrcImage() 获取源镜像名称，不包含domain。例如： tencentyun/foo:v1
  * @method void setSrcImage(string $SrcImage) 设置源镜像名称，不包含domain。例如： tencentyun/foo:v1
  * @method string getDestImage() 获取目的镜像名称，不包含domain。例如： tencentyun/foo:latest
  * @method void setDestImage(string $DestImage) 设置目的镜像名称，不包含domain。例如： tencentyun/foo:latest
- */
-
-/**
- *DuplicateImagePersonal请求参数结构体
  */
 class DuplicateImagePersonalRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DuplicateImagePersonalRequest extends AbstractModel
      * @var string 目的镜像名称，不包含domain。例如： tencentyun/foo:latest
      */
     public $DestImage;
+
     /**
      * @param string $SrcImage 源镜像名称，不包含domain。例如： tencentyun/foo:v1
      * @param string $DestImage 目的镜像名称，不包含domain。例如： tencentyun/foo:latest
@@ -46,6 +45,7 @@ class DuplicateImagePersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

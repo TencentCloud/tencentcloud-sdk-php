@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文本关键词识别控制参数。
+ *
  * @method string getSwitch() 获取文本关键词识别任务开关，可选值：
 <li>ON：开启文本关键词识别任务；</li>
 <li>OFF：关闭文本关键词识别任务。</li>
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 标签个数最多 10 个，每个标签长度最多 16 个字符。
  * @method void setLabelSet(array $LabelSet) 设置关键词过滤标签，指定需要返回的关键词的标签。如果未填或者为空，则全部结果都返回。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
- */
-
-/**
- *文本关键词识别控制参数。
  */
 class OcrWordsConfigureInfo extends AbstractModel
 {
@@ -47,6 +45,7 @@ class OcrWordsConfigureInfo extends AbstractModel
 标签个数最多 10 个，每个标签长度最多 16 个字符。
      */
     public $LabelSet;
+
     /**
      * @param string $Switch 文本关键词识别任务开关，可选值：
 <li>ON：开启文本关键词识别任务；</li>
@@ -58,6 +57,7 @@ class OcrWordsConfigureInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

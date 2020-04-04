@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpgradeDCDBInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
  * @method string getUpgradeType() 获取升级类型，取值范围: 
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动使用代金券进行支付，默认不使用。
  * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券。
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券。
- */
-
-/**
- *UpgradeDCDBInstance请求参数结构体
  */
 class UpgradeDCDBInstanceRequest extends AbstractModel
 {
@@ -82,6 +80,7 @@ class UpgradeDCDBInstanceRequest extends AbstractModel
      * @var array 代金券ID列表，目前仅支持指定一张代金券。
      */
     public $VoucherIds;
+
     /**
      * @param string $InstanceId 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      * @param string $UpgradeType 升级类型，取值范围: 
@@ -98,6 +97,7 @@ class UpgradeDCDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindAutoSnapshotPolicy请求参数结构体
+ *
  * @method string getAutoSnapshotPolicyId() 获取要绑定的定期快照策略ID。
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置要绑定的定期快照策略ID。
  * @method array getDiskIds() 获取要绑定的云硬盘ID列表，一次请求最多绑定80块云盘。
  * @method void setDiskIds(array $DiskIds) 设置要绑定的云硬盘ID列表，一次请求最多绑定80块云盘。
- */
-
-/**
- *BindAutoSnapshotPolicy请求参数结构体
  */
 class BindAutoSnapshotPolicyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BindAutoSnapshotPolicyRequest extends AbstractModel
      * @var array 要绑定的云硬盘ID列表，一次请求最多绑定80块云盘。
      */
     public $DiskIds;
+
     /**
      * @param string $AutoSnapshotPolicyId 要绑定的定期快照策略ID。
      * @param array $DiskIds 要绑定的云硬盘ID列表，一次请求最多绑定80块云盘。
@@ -46,6 +45,7 @@ class BindAutoSnapshotPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

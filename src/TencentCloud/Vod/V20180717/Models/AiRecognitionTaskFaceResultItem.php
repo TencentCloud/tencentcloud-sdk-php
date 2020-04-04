@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人脸识别结果
+ *
  * @method string getId() 获取人物唯一标识 ID。
  * @method void setId(string $Id) 设置人物唯一标识 ID。
  * @method string getType() 获取人物库类型，表示识别出的人物来自哪个人物库：
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置人物名称。
  * @method array getSegmentSet() 获取人物出现的片段结果集。
  * @method void setSegmentSet(array $SegmentSet) 设置人物出现的片段结果集。
- */
-
-/**
- *人脸识别结果
  */
 class AiRecognitionTaskFaceResultItem extends AbstractModel
 {
@@ -58,6 +56,7 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
      * @var array 人物出现的片段结果集。
      */
     public $SegmentSet;
+
     /**
      * @param string $Id 人物唯一标识 ID。
      * @param string $Type 人物库类型，表示识别出的人物来自哪个人物库：
@@ -70,6 +69,7 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

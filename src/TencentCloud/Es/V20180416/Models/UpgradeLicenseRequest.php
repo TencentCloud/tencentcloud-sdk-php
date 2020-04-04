@@ -18,6 +18,8 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpgradeLicense请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getLicenseType() 获取License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBasicSecurityType(integer $BasicSecurityType) 设置6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
  * @method boolean getForceRestart() 获取是否强制重启<li>true强制重启</li><li>false不强制重启</li> 默认值false
  * @method void setForceRestart(boolean $ForceRestart) 设置是否强制重启<li>true强制重启</li><li>false不强制重启</li> 默认值false
- */
-
-/**
- *UpgradeLicense请求参数结构体
  */
 class UpgradeLicenseRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class UpgradeLicenseRequest extends AbstractModel
      * @var boolean 是否强制重启<li>true强制重启</li><li>false不强制重启</li> 默认值false
      */
     public $ForceRestart;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $LicenseType License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
@@ -78,6 +77,7 @@ class UpgradeLicenseRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

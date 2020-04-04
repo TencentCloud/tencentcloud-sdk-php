@@ -18,12 +18,10 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteVpnConnection请求参数结构体
+ *
  * @method string getVpnConnectionId() 获取VPN通道实例ID。形如：bmvpnx-f49l6u0z。
  * @method void setVpnConnectionId(string $VpnConnectionId) 设置VPN通道实例ID。形如：bmvpnx-f49l6u0z。
- */
-
-/**
- *DeleteVpnConnection请求参数结构体
  */
 class DeleteVpnConnectionRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteVpnConnectionRequest extends AbstractModel
      * @var string VPN通道实例ID。形如：bmvpnx-f49l6u0z。
      */
     public $VpnConnectionId;
+
     /**
      * @param string $VpnConnectionId VPN通道实例ID。形如：bmvpnx-f49l6u0z。
      */
@@ -38,6 +37,7 @@ class DeleteVpnConnectionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

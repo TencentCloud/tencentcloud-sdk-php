@@ -18,14 +18,12 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeletePkgs请求参数结构体
+ *
  * @method string getApplicationId() 获取应用ID
  * @method void setApplicationId(string $ApplicationId) 设置应用ID
  * @method array getPkgIds() 获取需要删除的程序包ID列表
  * @method void setPkgIds(array $PkgIds) 设置需要删除的程序包ID列表
- */
-
-/**
- *DeletePkgs请求参数结构体
  */
 class DeletePkgsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeletePkgsRequest extends AbstractModel
      * @var array 需要删除的程序包ID列表
      */
     public $PkgIds;
+
     /**
      * @param string $ApplicationId 应用ID
      * @param array $PkgIds 需要删除的程序包ID列表
@@ -46,6 +45,7 @@ class DeletePkgsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

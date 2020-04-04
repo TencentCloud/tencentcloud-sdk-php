@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 接收人信息
+ *
  * @method integer getStartTime() 获取告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
  * @method void setStartTime(integer $StartTime) 设置告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
  * @method integer getEndTime() 获取告警时间段结束时间。含义同StartTime
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReceiverUserList(array $ReceiverUserList) 设置接收人列表。通过平台接口查询到的接收人id列表
  * @method string getReceiveLanguage() 获取告警接收语言，枚举值（zh-CN，en-US）
  * @method void setReceiveLanguage(string $ReceiveLanguage) 设置告警接收语言，枚举值（zh-CN，en-US）
- */
-
-/**
- *接收人信息
  */
 class ReceiverInfo extends AbstractModel
 {
@@ -129,6 +127,7 @@ class ReceiverInfo extends AbstractModel
      * @var string 告警接收语言，枚举值（zh-CN，en-US）
      */
     public $ReceiveLanguage;
+
     /**
      * @param integer $StartTime 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
      * @param integer $EndTime 告警时间段结束时间。含义同StartTime
@@ -150,6 +149,7 @@ class ReceiverInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

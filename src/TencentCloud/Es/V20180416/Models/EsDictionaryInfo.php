@@ -18,14 +18,12 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ES IK词库信息
+ *
  * @method array getMainDict() 获取启用词词典列表
  * @method void setMainDict(array $MainDict) 设置启用词词典列表
  * @method array getStopwords() 获取停用词词典列表
  * @method void setStopwords(array $Stopwords) 设置停用词词典列表
- */
-
-/**
- *ES IK词库信息
  */
 class EsDictionaryInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EsDictionaryInfo extends AbstractModel
      * @var array 停用词词典列表
      */
     public $Stopwords;
+
     /**
      * @param array $MainDict 启用词词典列表
      * @param array $Stopwords 停用词词典列表
@@ -46,6 +45,7 @@ class EsDictionaryInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

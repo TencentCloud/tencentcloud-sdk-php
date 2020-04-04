@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ResetWorkflow请求参数结构体
+ *
  * @method integer getWorkflowId() 获取工作流 ID。
  * @method void setWorkflowId(integer $WorkflowId) 设置工作流 ID。
  * @method string getWorkflowName() 获取工作流名称，最多128字符。同一个用户该名称唯一。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskPriority(integer $TaskPriority) 设置工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知信息，不填代表不获取事件通知。
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知信息，不填代表不获取事件通知。
- */
-
-/**
- *ResetWorkflow请求参数结构体
  */
 class ResetWorkflowRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class ResetWorkflowRequest extends AbstractModel
      * @var TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      */
     public $TaskNotifyConfig;
+
     /**
      * @param integer $WorkflowId 工作流 ID。
      * @param string $WorkflowName 工作流名称，最多128字符。同一个用户该名称唯一。
@@ -118,6 +117,7 @@ class ResetWorkflowRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

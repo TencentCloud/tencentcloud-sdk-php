@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCdnDomainLogs返回参数结构体
+ *
  * @method array getDomainLogs() 获取日志包下载链接
  * @method void setDomainLogs(array $DomainLogs) 设置日志包下载链接
  * @method integer getTotalCount() 获取查询到的总条数
  * @method void setTotalCount(integer $TotalCount) 设置查询到的总条数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeCdnDomainLogs返回参数结构体
  */
 class DescribeCdnDomainLogsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeCdnDomainLogsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $DomainLogs 日志包下载链接
      * @param integer $TotalCount 查询到的总条数
@@ -54,6 +53,7 @@ class DescribeCdnDomainLogsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

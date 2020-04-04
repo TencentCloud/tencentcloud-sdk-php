@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询网络状态历史数据输出
+ *
  * @method integer getCount() 获取总数
  * @method void setCount(integer $Count) 设置总数
  * @method string getCompanyId() 获取集团id
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShopName(string $ShopName) 设置店铺名称
  * @method array getInfos() 获取网络信息
  * @method void setInfos(array $Infos) 设置网络信息
- */
-
-/**
- *查询网络状态历史数据输出
  */
 class NetworkHistoryInfo extends AbstractModel
 {
@@ -73,6 +71,7 @@ class NetworkHistoryInfo extends AbstractModel
      * @var array 网络信息
      */
     public $Infos;
+
     /**
      * @param integer $Count 总数
      * @param string $CompanyId 集团id
@@ -86,6 +85,7 @@ class NetworkHistoryInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

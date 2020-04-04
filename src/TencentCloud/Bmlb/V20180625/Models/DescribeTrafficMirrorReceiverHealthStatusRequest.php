@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTrafficMirrorReceiverHealthStatus请求参数结构体
+ *
  * @method string getTrafficMirrorId() 获取查询所在的流量镜像ID。
  * @method void setTrafficMirrorId(string $TrafficMirrorId) 设置查询所在的流量镜像ID。
  * @method array getReceiverSet() 获取流量镜像接收机实例ID和端口数组。
  * @method void setReceiverSet(array $ReceiverSet) 设置流量镜像接收机实例ID和端口数组。
- */
-
-/**
- *DescribeTrafficMirrorReceiverHealthStatus请求参数结构体
  */
 class DescribeTrafficMirrorReceiverHealthStatusRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeTrafficMirrorReceiverHealthStatusRequest extends AbstractModel
      * @var array 流量镜像接收机实例ID和端口数组。
      */
     public $ReceiverSet;
+
     /**
      * @param string $TrafficMirrorId 查询所在的流量镜像ID。
      * @param array $ReceiverSet 流量镜像接收机实例ID和端口数组。
@@ -46,6 +45,7 @@ class DescribeTrafficMirrorReceiverHealthStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

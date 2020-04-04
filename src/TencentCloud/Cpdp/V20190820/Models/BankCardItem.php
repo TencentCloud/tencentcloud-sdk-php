@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 绑卡列表
+ *
  * @method string getEiconBankBranchId() 获取超级网银行号
  * @method void setEiconBankBranchId(string $EiconBankBranchId) 设置超级网银行号
  * @method string getCnapsBranchId() 获取大小额行号
@@ -58,10 +60,6 @@ BindType==2时必填
 <敏感信息>
  * @method void setIdCode(string $IdCode) 设置证件号码
 <敏感信息>
- */
-
-/**
- *绑卡列表
  */
 class BankCardItem extends AbstractModel
 {
@@ -128,6 +126,7 @@ BindType==2时必填
 <敏感信息>
      */
     public $IdCode;
+
     /**
      * @param string $EiconBankBranchId 超级网银行号
      * @param string $CnapsBranchId 大小额行号
@@ -154,6 +153,7 @@ BindType==2时必填
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

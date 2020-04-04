@@ -18,12 +18,10 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ValidateNamespaceExistPersonal请求参数结构体
+ *
  * @method string getNamespace() 获取命名空间名称
  * @method void setNamespace(string $Namespace) 设置命名空间名称
- */
-
-/**
- *ValidateNamespaceExistPersonal请求参数结构体
  */
 class ValidateNamespaceExistPersonalRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ValidateNamespaceExistPersonalRequest extends AbstractModel
      * @var string 命名空间名称
      */
     public $Namespace;
+
     /**
      * @param string $Namespace 命名空间名称
      */
@@ -38,6 +37,7 @@ class ValidateNamespaceExistPersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

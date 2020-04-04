@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 路由表关联关系
+ *
  * @method string getSubnetId() 获取子网实例ID。
  * @method void setSubnetId(string $SubnetId) 设置子网实例ID。
  * @method string getRouteTableId() 获取路由表实例ID。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID。
- */
-
-/**
- *路由表关联关系
  */
 class RouteTableAssociation extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RouteTableAssociation extends AbstractModel
      * @var string 路由表实例ID。
      */
     public $RouteTableId;
+
     /**
      * @param string $SubnetId 子网实例ID。
      * @param string $RouteTableId 路由表实例ID。
@@ -46,6 +45,7 @@ class RouteTableAssociation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

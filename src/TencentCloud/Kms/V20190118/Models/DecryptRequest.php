@@ -18,14 +18,12 @@ namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Decrypt请求参数结构体
+ *
  * @method string getCiphertextBlob() 获取待解密的密文数据
  * @method void setCiphertextBlob(string $CiphertextBlob) 设置待解密的密文数据
  * @method string getEncryptionContext() 获取key/value对的json字符串，如果Encrypt指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024字符
  * @method void setEncryptionContext(string $EncryptionContext) 设置key/value对的json字符串，如果Encrypt指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024字符
- */
-
-/**
- *Decrypt请求参数结构体
  */
 class DecryptRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DecryptRequest extends AbstractModel
      * @var string key/value对的json字符串，如果Encrypt指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024字符
      */
     public $EncryptionContext;
+
     /**
      * @param string $CiphertextBlob 待解密的密文数据
      * @param string $EncryptionContext key/value对的json字符串，如果Encrypt指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024字符
@@ -46,6 +45,7 @@ class DecryptRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

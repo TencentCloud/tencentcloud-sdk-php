@@ -18,6 +18,8 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 符合条件的伸缩活动相关信息。
+ *
  * @method string getAutoScalingGroupId() 获取伸缩组ID。
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。
  * @method string getActivityId() 获取伸缩活动ID。
@@ -60,10 +62,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActivityRelatedInstanceSet(array $ActivityRelatedInstanceSet) 设置伸缩活动相关实例信息集合。
  * @method string getStatusMessageSimplified() 获取伸缩活动状态简要描述。
  * @method void setStatusMessageSimplified(string $StatusMessageSimplified) 设置伸缩活动状态简要描述。
- */
-
-/**
- *符合条件的伸缩活动相关信息。
  */
 class Activity extends AbstractModel
 {
@@ -135,6 +133,7 @@ class Activity extends AbstractModel
      * @var string 伸缩活动状态简要描述。
      */
     public $StatusMessageSimplified;
+
     /**
      * @param string $AutoScalingGroupId 伸缩组ID。
      * @param string $ActivityId 伸缩活动ID。
@@ -162,6 +161,7 @@ class Activity extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

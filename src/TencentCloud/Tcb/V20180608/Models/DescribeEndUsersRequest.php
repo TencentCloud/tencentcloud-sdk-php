@@ -18,14 +18,12 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEndUsers请求参数结构体
+ *
  * @method string getEnvId() 获取开发者的环境ID
  * @method void setEnvId(string $EnvId) 设置开发者的环境ID
  * @method array getUUIds() 获取按照 uuid 列表过滤，最大个数为100
  * @method void setUUIds(array $UUIds) 设置按照 uuid 列表过滤，最大个数为100
- */
-
-/**
- *DescribeEndUsers请求参数结构体
  */
 class DescribeEndUsersRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeEndUsersRequest extends AbstractModel
      * @var array 按照 uuid 列表过滤，最大个数为100
      */
     public $UUIds;
+
     /**
      * @param string $EnvId 开发者的环境ID
      * @param array $UUIds 按照 uuid 列表过滤，最大个数为100
@@ -46,6 +45,7 @@ class DescribeEndUsersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

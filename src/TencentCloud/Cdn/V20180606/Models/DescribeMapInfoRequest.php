@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMapInfo请求参数结构体
+ *
  * @method string getName() 获取映射查询类别：
 isp：运营商映射查询
 district：省份（中国境内）、国家/地区（中国境外）映射查询
  * @method void setName(string $Name) 设置映射查询类别：
 isp：运营商映射查询
 district：省份（中国境内）、国家/地区（中国境外）映射查询
- */
-
-/**
- *DescribeMapInfo请求参数结构体
  */
 class DescribeMapInfoRequest extends AbstractModel
 {
@@ -37,6 +35,7 @@ isp：运营商映射查询
 district：省份（中国境内）、国家/地区（中国境外）映射查询
      */
     public $Name;
+
     /**
      * @param string $Name 映射查询类别：
 isp：运营商映射查询
@@ -46,6 +45,7 @@ district：省份（中国境内）、国家/地区（中国境外）映射查�
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CopyFunction请求参数结构体
+ *
  * @method string getFunctionName() 获取要复制的函数的名称
  * @method void setFunctionName(string $FunctionName) 设置要复制的函数的名称
  * @method string getNewFunctionName() 获取新函数的名称
@@ -44,10 +46,6 @@ FALSE：不复制函数配置
  * @method void setCopyConfiguration(boolean $CopyConfiguration) 设置是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
 TRUE：复制函数配置
 FALSE：不复制函数配置
- */
-
-/**
- *CopyFunction请求参数结构体
  */
 class CopyFunctionRequest extends AbstractModel
 {
@@ -95,6 +93,7 @@ TRUE：复制函数配置
 FALSE：不复制函数配置
      */
     public $CopyConfiguration;
+
     /**
      * @param string $FunctionName 要复制的函数的名称
      * @param string $NewFunctionName 新函数的名称
@@ -114,6 +113,7 @@ FALSE：不复制函数配置
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

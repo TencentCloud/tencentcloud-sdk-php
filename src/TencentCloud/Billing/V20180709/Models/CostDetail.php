@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 消耗明细数据类型
+ *
  * @method string getPayerUin() 获取支付者uin
  * @method void setPayerUin(string $PayerUin) 设置支付者uin
  * @method string getBusinessCodeName() 获取业务名称
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComponentSet(array $ComponentSet) 设置组件明细
  * @method string getProductCode() 获取产品代码
  * @method void setProductCode(string $ProductCode) 设置产品代码
- */
-
-/**
- *消耗明细数据类型
  */
 class CostDetail extends AbstractModel
 {
@@ -139,6 +137,7 @@ class CostDetail extends AbstractModel
      * @var string 产品代码
      */
     public $ProductCode;
+
     /**
      * @param string $PayerUin 支付者uin
      * @param string $BusinessCodeName 业务名称
@@ -162,6 +161,7 @@ class CostDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 创建设备时返回的设备信息
+ *
  * @method string getDeviceName() 获取设备名
  * @method void setDeviceName(string $DeviceName) 设置设备名
  * @method string getDevicePsk() 获取对称加密密钥，base64 编码，采用对称加密时返回该参数
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResult(integer $Result) 设置错误码
  * @method string getErrMsg() 获取错误信息
  * @method void setErrMsg(string $ErrMsg) 设置错误信息
- */
-
-/**
- *创建设备时返回的设备信息
  */
 class MultiDevicesInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class MultiDevicesInfo extends AbstractModel
      * @var string 错误信息
      */
     public $ErrMsg;
+
     /**
      * @param string $DeviceName 设备名
      * @param string $DevicePsk 对称加密密钥，base64 编码，采用对称加密时返回该参数
@@ -78,6 +77,7 @@ class MultiDevicesInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

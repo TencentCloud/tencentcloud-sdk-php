@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLivePackageInfo请求参数结构体
+ *
  * @method integer getPackageType() 获取包类型，可选值：
 0：流量包；
 1：转码包。
  * @method void setPackageType(integer $PackageType) 设置包类型，可选值：
 0：流量包；
 1：转码包。
- */
-
-/**
- *DescribeLivePackageInfo请求参数结构体
  */
 class DescribeLivePackageInfoRequest extends AbstractModel
 {
@@ -37,6 +35,7 @@ class DescribeLivePackageInfoRequest extends AbstractModel
 1：转码包。
      */
     public $PackageType;
+
     /**
      * @param integer $PackageType 包类型，可选值：
 0：流量包；
@@ -46,6 +45,7 @@ class DescribeLivePackageInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

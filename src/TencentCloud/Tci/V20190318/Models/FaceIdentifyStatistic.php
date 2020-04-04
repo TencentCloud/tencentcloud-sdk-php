@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人员检索统计结果
+ *
  * @method integer getDuration() 获取持续时间
  * @method void setDuration(integer $Duration) 设置持续时间
  * @method integer getEndTs() 获取结束时间
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSimilarity(float $Similarity) 设置相似度
  * @method integer getStartTs() 获取开始时间
  * @method void setStartTs(integer $StartTs) 设置开始时间
- */
-
-/**
- *人员检索统计结果
  */
 class FaceIdentifyStatistic extends AbstractModel
 {
@@ -59,6 +57,7 @@ class FaceIdentifyStatistic extends AbstractModel
      * @var integer 开始时间
      */
     public $StartTs;
+
     /**
      * @param integer $Duration 持续时间
      * @param integer $EndTs 结束时间
@@ -70,6 +69,7 @@ class FaceIdentifyStatistic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

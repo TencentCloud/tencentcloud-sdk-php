@@ -18,6 +18,8 @@ namespace TencentCloud\Fmu\V20191213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TryLipstickPic请求参数结构体
+ *
  * @method array getLipColorInfos() 获取唇色信息。 
 您可以输入最多3个 LipColorInfo 来实现给一张图中的最多3张人脸试唇色。
  * @method void setLipColorInfos(array $LipColorInfos) 设置唇色信息。 
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 图片存储于腾讯云的 Url 可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- */
-
-/**
- *TryLipstickPic请求参数结构体
  */
 class TryLipstickPicRequest extends AbstractModel
 {
@@ -63,6 +61,7 @@ class TryLipstickPicRequest extends AbstractModel
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Url;
+
     /**
      * @param array $LipColorInfos 唇色信息。 
 您可以输入最多3个 LipColorInfo 来实现给一张图中的最多3张人脸试唇色。
@@ -78,6 +77,7 @@ class TryLipstickPicRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

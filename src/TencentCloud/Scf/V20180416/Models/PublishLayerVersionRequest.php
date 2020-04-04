@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PublishLayerVersion请求参数结构体
+ *
  * @method string getLayerName() 获取层名称，支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度1-64
  * @method void setLayerName(string $LayerName) 设置层名称，支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度1-64
  * @method array getCompatibleRuntimes() 获取层适用的运行时，可多选，可选的值对应函数的 Runtime 可选值。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置层的版本的描述
  * @method string getLicenseInfo() 获取层的软件许可证
  * @method void setLicenseInfo(string $LicenseInfo) 设置层的软件许可证
- */
-
-/**
- *PublishLayerVersion请求参数结构体
  */
 class PublishLayerVersionRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class PublishLayerVersionRequest extends AbstractModel
      * @var string 层的软件许可证
      */
     public $LicenseInfo;
+
     /**
      * @param string $LayerName 层名称，支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度1-64
      * @param array $CompatibleRuntimes 层适用的运行时，可多选，可选的值对应函数的 Runtime 可选值。
@@ -70,6 +69,7 @@ class PublishLayerVersionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

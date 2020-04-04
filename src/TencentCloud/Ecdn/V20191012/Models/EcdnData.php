@@ -18,14 +18,12 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 访问明细数据类型
+ *
  * @method array getMetrics() 获取查询指定的指标名称：Bandwidth，Flux，Request，Delay，状态码，LogBandwidth，LogFlux，LogRequest
  * @method void setMetrics(array $Metrics) 设置查询指定的指标名称：Bandwidth，Flux，Request，Delay，状态码，LogBandwidth，LogFlux，LogRequest
  * @method array getDetailData() 获取明细数据组合
  * @method void setDetailData(array $DetailData) 设置明细数据组合
- */
-
-/**
- *访问明细数据类型
  */
 class EcdnData extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EcdnData extends AbstractModel
      * @var array 明细数据组合
      */
     public $DetailData;
+
     /**
      * @param array $Metrics 查询指定的指标名称：Bandwidth，Flux，Request，Delay，状态码，LogBandwidth，LogFlux，LogRequest
      * @param array $DetailData 明细数据组合
@@ -46,6 +45,7 @@ class EcdnData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

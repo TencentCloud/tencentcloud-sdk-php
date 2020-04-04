@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRoutePolicies请求参数结构体
+ *
  * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-afg8md3c。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-afg8md3c。
  * @method array getRoutePolicyIds() 获取路由策略实例ID，例如：rti-azd4dt1c。
@@ -46,10 +48,6 @@ enable - Bool - （过滤条件）路由策略是否启用。
  * @method void setOffset(integer $Offset) 设置初始行的偏移量，默认为0。
  * @method integer getLimit() 获取每页行数，默认为20。
  * @method void setLimit(integer $Limit) 设置每页行数，默认为20。
- */
-
-/**
- *DescribeRoutePolicies请求参数结构体
  */
 class DescribeRoutePoliciesRequest extends AbstractModel
 {
@@ -86,6 +84,7 @@ enable - Bool - （过滤条件）路由策略是否启用。
      * @var integer 每页行数，默认为20。
      */
     public $Limit;
+
     /**
      * @param string $RouteTableId 路由表实例ID，例如：rtb-afg8md3c。
      * @param array $RoutePolicyIds 路由策略实例ID，例如：rti-azd4dt1c。
@@ -106,6 +105,7 @@ enable - Bool - （过滤条件）路由策略是否启用。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAIAnalysisTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取视频内容分析模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置视频内容分析模板唯一标识。
  * @method string getName() 获取视频内容分析模板名称，长度限制：64 个字符。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCoverConfigure(CoverConfigureInfoForUpdate $CoverConfigure) 设置智能封面任务控制参数。
  * @method FrameTagConfigureInfoForUpdate getFrameTagConfigure() 获取智能按帧标签任务控制参数。
  * @method void setFrameTagConfigure(FrameTagConfigureInfoForUpdate $FrameTagConfigure) 设置智能按帧标签任务控制参数。
- */
-
-/**
- *ModifyAIAnalysisTemplate请求参数结构体
  */
 class ModifyAIAnalysisTemplateRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
      * @var FrameTagConfigureInfoForUpdate 智能按帧标签任务控制参数。
      */
     public $FrameTagConfigure;
+
     /**
      * @param integer $Definition 视频内容分析模板唯一标识。
      * @param string $Name 视频内容分析模板名称，长度限制：64 个字符。
@@ -86,6 +85,7 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

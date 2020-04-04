@@ -18,6 +18,8 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取证书列表（Certificate）返回参数键为 DvAuths 的内容。
+ *
  * @method string getDvAuthKey() 获取DV 认证密钥。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDvAuthKey(string $DvAuthKey) 设置DV 认证密钥。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDvAuthVerifyType(string $DvAuthVerifyType) 设置DV 认证类型。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *获取证书列表（Certificate）返回参数键为 DvAuths 的内容。
  */
 class DvAuths extends AbstractModel
 {
@@ -84,6 +82,7 @@ class DvAuths extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DvAuthVerifyType;
+
     /**
      * @param string $DvAuthKey DV 认证密钥。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,6 +101,7 @@ class DvAuths extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Bizlive\V20190313\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSession请求参数结构体
+ *
  * @method string getClientSession() 获取客户端session信息，从JSSDK请求中获得
  * @method void setClientSession(string $ClientSession) 设置客户端session信息，从JSSDK请求中获得
  * @method string getGameId() 获取游戏ID
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageUrl(string $ImageUrl) 设置背景图url
  * @method string getResolution() 获取分辨率
  * @method void setResolution(string $Resolution) 设置分辨率
- */
-
-/**
- *CreateSession请求参数结构体
  */
 class CreateSessionRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class CreateSessionRequest extends AbstractModel
      * @var string 分辨率
      */
     public $Resolution;
+
     /**
      * @param string $ClientSession 客户端session信息，从JSSDK请求中获得
      * @param string $GameId 游戏ID
@@ -86,6 +85,7 @@ class CreateSessionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

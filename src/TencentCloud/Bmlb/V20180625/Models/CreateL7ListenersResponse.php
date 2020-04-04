@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateL7Listeners返回参数结构体
+ *
  * @method array getListenerIds() 获取新建的负载均衡七层监听器的唯一ID列表。
  * @method void setListenerIds(array $ListenerIds) 设置新建的负载均衡七层监听器的唯一ID列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateL7Listeners返回参数结构体
  */
 class CreateL7ListenersResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateL7ListenersResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $ListenerIds 新建的负载均衡七层监听器的唯一ID列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateL7ListenersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

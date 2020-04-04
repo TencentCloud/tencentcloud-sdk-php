@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * sql文件信息
+ *
  * @method string getUploadTime() 获取上传时间
  * @method void setUploadTime(string $UploadTime) 设置上传时间
  * @method UploadInfo getUploadInfo() 获取上传进度
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsUploadFinished(integer $IsUploadFinished) 设置上传是否完成标志，可选值：0 - 未完成，1 - 已完成
  * @method string getFileId() 获取文件ID
  * @method void setFileId(string $FileId) 设置文件ID
- */
-
-/**
- *sql文件信息
  */
 class SqlFileInfo extends AbstractModel
 {
@@ -66,6 +64,7 @@ class SqlFileInfo extends AbstractModel
      * @var string 文件ID
      */
     public $FileId;
+
     /**
      * @param string $UploadTime 上传时间
      * @param UploadInfo $UploadInfo 上传进度
@@ -78,6 +77,7 @@ class SqlFileInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

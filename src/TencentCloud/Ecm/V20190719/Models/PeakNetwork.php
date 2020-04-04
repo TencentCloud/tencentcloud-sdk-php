@@ -18,16 +18,14 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 峰值网络数据
+ *
  * @method string getRecordTime() 获取记录时间。
  * @method void setRecordTime(string $RecordTime) 设置记录时间。
  * @method string getPeakInNetwork() 获取入带宽数据。
  * @method void setPeakInNetwork(string $PeakInNetwork) 设置入带宽数据。
  * @method string getPeakOutNetwork() 获取出带宽数据。
  * @method void setPeakOutNetwork(string $PeakOutNetwork) 设置出带宽数据。
- */
-
-/**
- *峰值网络数据
  */
 class PeakNetwork extends AbstractModel
 {
@@ -45,6 +43,7 @@ class PeakNetwork extends AbstractModel
      * @var string 出带宽数据。
      */
     public $PeakOutNetwork;
+
     /**
      * @param string $RecordTime 记录时间。
      * @param string $PeakInNetwork 入带宽数据。
@@ -54,6 +53,7 @@ class PeakNetwork extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

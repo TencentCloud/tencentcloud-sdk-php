@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SubmitDoubleVideoHighlights请求参数结构体
+ *
  * @method string getFileContent() 获取学生视频url
  * @method void setFileContent(string $FileContent) 设置学生视频url
  * @method array getLibIds() 获取需要检索的人脸合集库，不在库中的人脸将不参与精彩集锦；目前仅支持输入一个人脸库。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSimThreshold(float $SimThreshold) 设置人脸检索的相似度阈值，默认值0.89。建议留空。
  * @method string getTeacherFileContent() 获取老师视频url
  * @method void setTeacherFileContent(string $TeacherFileContent) 设置老师视频url
- */
-
-/**
- *SubmitDoubleVideoHighlights请求参数结构体
  */
 class SubmitDoubleVideoHighlightsRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class SubmitDoubleVideoHighlightsRequest extends AbstractModel
      * @var string 老师视频url
      */
     public $TeacherFileContent;
+
     /**
      * @param string $FileContent 学生视频url
      * @param array $LibIds 需要检索的人脸合集库，不在库中的人脸将不参与精彩集锦；目前仅支持输入一个人脸库。
@@ -94,6 +93,7 @@ class SubmitDoubleVideoHighlightsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

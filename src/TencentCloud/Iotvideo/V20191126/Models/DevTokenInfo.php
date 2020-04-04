@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用于终端用户临时访问设备的token授权信息
+ *
  * @method string getAccessId() 获取客户的终端用户在IotVideo上的唯一标识id
  * @method void setAccessId(string $AccessId) 设置客户的终端用户在IotVideo上的唯一标识id
  * @method string getTid() 获取设备TID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessToken(string $AccessToken) 设置IotVideo平台的accessToken
  * @method integer getExpireTime() 获取Token的过期时间，单位秒(UTC时间)
  * @method void setExpireTime(integer $ExpireTime) 设置Token的过期时间，单位秒(UTC时间)
- */
-
-/**
- *用于终端用户临时访问设备的token授权信息
  */
 class DevTokenInfo extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DevTokenInfo extends AbstractModel
      * @var integer Token的过期时间，单位秒(UTC时间)
      */
     public $ExpireTime;
+
     /**
      * @param string $AccessId 客户的终端用户在IotVideo上的唯一标识id
      * @param string $Tid 设备TID
@@ -62,6 +61,7 @@ class DevTokenInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

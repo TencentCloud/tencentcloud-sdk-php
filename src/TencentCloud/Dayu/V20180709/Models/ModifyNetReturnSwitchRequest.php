@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyNetReturnSwitch请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（net表示高防IP专业版）
  * @method string getId() 获取资源实例ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置Status 表示回切开关，0: 关闭， 1:打开
  * @method integer getHour() 获取回切时长，单位：小时，取值[0,1,2,3,4,5,6;]当status=1时必选填写Hour>0
  * @method void setHour(integer $Hour) 设置回切时长，单位：小时，取值[0,1,2,3,4,5,6;]当status=1时必选填写Hour>0
- */
-
-/**
- *ModifyNetReturnSwitch请求参数结构体
  */
 class ModifyNetReturnSwitchRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ModifyNetReturnSwitchRequest extends AbstractModel
      * @var integer 回切时长，单位：小时，取值[0,1,2,3,4,5,6;]当status=1时必选填写Hour>0
      */
     public $Hour;
+
     /**
      * @param string $Business 大禹子产品代号（net表示高防IP专业版）
      * @param string $Id 资源实例ID
@@ -62,6 +61,7 @@ class ModifyNetReturnSwitchRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

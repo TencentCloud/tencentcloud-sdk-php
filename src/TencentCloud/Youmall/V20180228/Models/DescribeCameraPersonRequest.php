@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCameraPerson请求参数结构体
+ *
  * @method string getCompanyId() 获取优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
  * @method void setCompanyId(string $CompanyId) 设置优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
  * @method integer getShopId() 获取优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNum(integer $Num) 设置拉取图片数，默认为1，最大为3
  * @method integer getIsNeedPic() 获取是否需要base64的图片，0-不需要，1-需要，默认0
  * @method void setIsNeedPic(integer $IsNeedPic) 设置是否需要base64的图片，0-不需要，1-需要，默认0
- */
-
-/**
- *DescribeCameraPerson请求参数结构体
  */
 class DescribeCameraPersonRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeCameraPersonRequest extends AbstractModel
      * @var integer 是否需要base64的图片，0-不需要，1-需要，默认0
      */
     public $IsNeedPic;
+
     /**
      * @param string $CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      * @param integer $ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
@@ -94,6 +93,7 @@ class DescribeCameraPersonRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

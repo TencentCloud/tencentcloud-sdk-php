@@ -18,16 +18,14 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMultiDevTask返回参数结构体
+ *
  * @method string getTaskId() 获取任务 ID
  * @method void setTaskId(string $TaskId) 设置任务 ID
  * @method integer getTaskStatus() 获取任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
  * @method void setTaskStatus(integer $TaskStatus) 设置任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeMultiDevTask返回参数结构体
  */
 class DescribeMultiDevTaskResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeMultiDevTaskResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $TaskId 任务 ID
      * @param integer $TaskStatus 任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
@@ -54,6 +53,7 @@ class DescribeMultiDevTaskResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

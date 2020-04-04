@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeIp6TranslatorQuota请求参数结构体
+ *
  * @method array getIp6TranslatorIds() 获取待查询IPV6转换实例的唯一ID列表，形如ip6-xxxxxxxx
  * @method void setIp6TranslatorIds(array $Ip6TranslatorIds) 设置待查询IPV6转换实例的唯一ID列表，形如ip6-xxxxxxxx
- */
-
-/**
- *DescribeIp6TranslatorQuota请求参数结构体
  */
 class DescribeIp6TranslatorQuotaRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeIp6TranslatorQuotaRequest extends AbstractModel
      * @var array 待查询IPV6转换实例的唯一ID列表，形如ip6-xxxxxxxx
      */
     public $Ip6TranslatorIds;
+
     /**
      * @param array $Ip6TranslatorIds 待查询IPV6转换实例的唯一ID列表，形如ip6-xxxxxxxx
      */
@@ -38,6 +37,7 @@ class DescribeIp6TranslatorQuotaRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

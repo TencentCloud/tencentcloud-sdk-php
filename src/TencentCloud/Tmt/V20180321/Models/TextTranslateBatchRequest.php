@@ -18,6 +18,8 @@ namespace TencentCloud\Tmt\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TextTranslateBatch请求参数结构体
+ *
  * @method string getSource() 获取源语言，参照Target支持语言列表
  * @method void setSource(string $Source) 设置源语言，参照Target支持语言列表
  * @method string getTarget() 获取目标语言，参照支持语言列表
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
  * @method array getSourceTextList() 获取待翻译的文本列表，批量接口可以以数组方式在一次请求中填写多个待翻译文本。文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本会翻译失败。单次请求的文本长度总和需要低于2000。
  * @method void setSourceTextList(array $SourceTextList) 设置待翻译的文本列表，批量接口可以以数组方式在一次请求中填写多个待翻译文本。文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本会翻译失败。单次请求的文本长度总和需要低于2000。
- */
-
-/**
- *TextTranslateBatch请求参数结构体
  */
 class TextTranslateBatchRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class TextTranslateBatchRequest extends AbstractModel
      * @var array 待翻译的文本列表，批量接口可以以数组方式在一次请求中填写多个待翻译文本。文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本会翻译失败。单次请求的文本长度总和需要低于2000。
      */
     public $SourceTextList;
+
     /**
      * @param string $Source 源语言，参照Target支持语言列表
      * @param string $Target 目标语言，参照支持语言列表
@@ -66,6 +65,7 @@ class TextTranslateBatchRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

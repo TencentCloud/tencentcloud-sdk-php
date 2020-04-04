@@ -18,6 +18,8 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述代理商代付的订单信息
+ *
  * @method string getDealId() 获取订单自增 ID
  * @method void setDealId(string $DealId) 设置订单自增 ID
  * @method string getDealName() 获取订单号
@@ -106,10 +108,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivityId(string $ActivityId) 设置活动ID
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *描述代理商代付的订单信息
  */
 class AgentDealElem extends AbstractModel
 {
@@ -252,6 +250,7 @@ class AgentDealElem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActivityId;
+
     /**
      * @param string $DealId 订单自增 ID
      * @param string $DealName 订单号
@@ -302,6 +301,7 @@ class AgentDealElem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

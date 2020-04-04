@@ -18,12 +18,10 @@ namespace TencentCloud\Cmq\V20190304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnbindDeadLetter请求参数结构体
+ *
  * @method string getQueueName() 获取死信策略源队列名称，调用本接口会清空该队列的死信队列策略。
  * @method void setQueueName(string $QueueName) 设置死信策略源队列名称，调用本接口会清空该队列的死信队列策略。
- */
-
-/**
- *UnbindDeadLetter请求参数结构体
  */
 class UnbindDeadLetterRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class UnbindDeadLetterRequest extends AbstractModel
      * @var string 死信策略源队列名称，调用本接口会清空该队列的死信队列策略。
      */
     public $QueueName;
+
     /**
      * @param string $QueueName 死信策略源队列名称，调用本接口会清空该队列的死信队列策略。
      */
@@ -38,6 +37,7 @@ class UnbindDeadLetterRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

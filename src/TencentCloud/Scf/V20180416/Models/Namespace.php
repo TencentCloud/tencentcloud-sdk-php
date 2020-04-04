@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 命名空间
+ *
  * @method string getModTime() 获取命名空间创建时间
  * @method void setModTime(string $ModTime) 设置命名空间创建时间
  * @method string getAddTime() 获取命名空间修改时间
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置命名空间名称
  * @method string getType() 获取默认default，TCB表示是小程序云开发创建的
  * @method void setType(string $Type) 设置默认default，TCB表示是小程序云开发创建的
- */
-
-/**
- *命名空间
  */
 class Namespace extends AbstractModel
 {
@@ -59,6 +57,7 @@ class Namespace extends AbstractModel
      * @var string 默认default，TCB表示是小程序云开发创建的
      */
     public $Type;
+
     /**
      * @param string $ModTime 命名空间创建时间
      * @param string $AddTime 命名空间修改时间
@@ -70,6 +69,7 @@ class Namespace extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

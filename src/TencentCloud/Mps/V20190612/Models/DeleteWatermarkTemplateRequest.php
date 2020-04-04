@@ -18,12 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteWatermarkTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取水印模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置水印模板唯一标识。
- */
-
-/**
- *DeleteWatermarkTemplate请求参数结构体
  */
 class DeleteWatermarkTemplateRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteWatermarkTemplateRequest extends AbstractModel
      * @var integer 水印模板唯一标识。
      */
     public $Definition;
+
     /**
      * @param integer $Definition 水印模板唯一标识。
      */
@@ -38,6 +37,7 @@ class DeleteWatermarkTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

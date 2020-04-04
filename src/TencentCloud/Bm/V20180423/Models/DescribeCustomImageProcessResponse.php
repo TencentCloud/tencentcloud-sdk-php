@@ -18,14 +18,12 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCustomImageProcess返回参数结构体
+ *
  * @method array getCustomImageProcessSet() 获取镜像制作进度
  * @method void setCustomImageProcessSet(array $CustomImageProcessSet) 设置镜像制作进度
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeCustomImageProcess返回参数结构体
  */
 class DescribeCustomImageProcessResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeCustomImageProcessResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $CustomImageProcessSet 镜像制作进度
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeCustomImageProcessResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

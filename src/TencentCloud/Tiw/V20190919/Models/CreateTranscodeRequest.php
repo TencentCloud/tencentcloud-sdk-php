@@ -18,6 +18,8 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTranscode请求参数结构体
+ *
  * @method integer getSdkAppId() 获取客户的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置客户的SdkAppId
  * @method string getUrl() 获取需要进行转码文件地址
@@ -46,10 +48,6 @@ tar.gz： 生成`.tar.gz`压缩包
 
 zip： 生成`.zip`压缩包
 tar.gz： 生成`.tar.gz`压缩包
- */
-
-/**
- *CreateTranscode请求参数结构体
  */
 class CreateTranscodeRequest extends AbstractModel
 {
@@ -90,6 +88,7 @@ zip： 生成`.zip`压缩包
 tar.gz： 生成`.tar.gz`压缩包
      */
     public $CompressFileType;
+
     /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param string $Url 需要进行转码文件地址
@@ -110,6 +109,7 @@ tar.gz： 生成`.tar.gz`压缩包
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

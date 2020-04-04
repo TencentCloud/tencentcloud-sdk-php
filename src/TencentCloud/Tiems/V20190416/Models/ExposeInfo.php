@@ -18,6 +18,8 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 暴露信息
+ *
  * @method string getExposeType() 获取暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
  * @method void setExposeType(string $ExposeType) 设置暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
  * @method string getIp() 获取暴露Ip。暴露方式为 EXTERNAL 为外网 Ip，暴露方式为 VPC 时为指定 Vpc 下的Vip
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGateWayDomain(string $GateWayDomain) 设置GATEWAY domain，ExposeType = GATEWAY 时返回
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *暴露信息
  */
 class ExposeInfo extends AbstractModel
 {
@@ -88,6 +86,7 @@ class ExposeInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GateWayDomain;
+
     /**
      * @param string $ExposeType 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
      * @param string $Ip 暴露Ip。暴露方式为 EXTERNAL 为外网 Ip，暴露方式为 VPC 时为指定 Vpc 下的Vip
@@ -106,6 +105,7 @@ class ExposeInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

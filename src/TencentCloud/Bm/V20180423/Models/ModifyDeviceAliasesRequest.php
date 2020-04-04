@@ -18,12 +18,10 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDeviceAliases请求参数结构体
+ *
  * @method array getDeviceAliases() 获取需要改名的设备与别名列表
  * @method void setDeviceAliases(array $DeviceAliases) 设置需要改名的设备与别名列表
- */
-
-/**
- *ModifyDeviceAliases请求参数结构体
  */
 class ModifyDeviceAliasesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ModifyDeviceAliasesRequest extends AbstractModel
      * @var array 需要改名的设备与别名列表
      */
     public $DeviceAliases;
+
     /**
      * @param array $DeviceAliases 需要改名的设备与别名列表
      */
@@ -38,6 +37,7 @@ class ModifyDeviceAliasesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

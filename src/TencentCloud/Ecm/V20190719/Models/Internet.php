@@ -18,6 +18,8 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例的网络相关信息。
+ *
  * @method array getPrivateIPAddressSet() 获取实例的内网相关信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateIPAddressSet(array $PrivateIPAddressSet) 设置实例的内网相关信息列表。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIPAddressSet(array $PublicIPAddressSet) 设置实例的公网相关信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *实例的网络相关信息。
  */
 class Internet extends AbstractModel
 {
@@ -44,6 +42,7 @@ class Internet extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIPAddressSet;
+
     /**
      * @param array $PrivateIPAddressSet 实例的内网相关信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class Internet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

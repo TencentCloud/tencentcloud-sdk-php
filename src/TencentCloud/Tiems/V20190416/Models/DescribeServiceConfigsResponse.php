@@ -18,16 +18,14 @@ namespace TencentCloud\Tiems\V20190416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeServiceConfigs返回参数结构体
+ *
  * @method array getServiceConfigs() 获取服务配置
  * @method void setServiceConfigs(array $ServiceConfigs) 设置服务配置
  * @method integer getTotalCount() 获取服务配置总数
  * @method void setTotalCount(integer $TotalCount) 设置服务配置总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeServiceConfigs返回参数结构体
  */
 class DescribeServiceConfigsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeServiceConfigsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $ServiceConfigs 服务配置
      * @param integer $TotalCount 服务配置总数
@@ -54,6 +53,7 @@ class DescribeServiceConfigsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

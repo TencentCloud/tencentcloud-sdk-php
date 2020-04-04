@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBasicAlarmList请求参数结构体
+ *
  * @method string getModule() 获取接口模块名，当前取值monitor
  * @method void setModule(string $Module) 设置接口模块名，当前取值monitor
  * @method integer getStartTime() 获取起始时间，默认一天前的时间戳
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setObjLike(string $ObjLike) 设置根据告警对象过滤
  * @method array getInstanceGroupIds() 获取根据实例组ID过滤
  * @method void setInstanceGroupIds(array $InstanceGroupIds) 设置根据实例组ID过滤
- */
-
-/**
- *DescribeBasicAlarmList请求参数结构体
  */
 class DescribeBasicAlarmListRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class DescribeBasicAlarmListRequest extends AbstractModel
      * @var array 根据实例组ID过滤
      */
     public $InstanceGroupIds;
+
     /**
      * @param string $Module 接口模块名，当前取值monitor
      * @param integer $StartTime 起始时间，默认一天前的时间戳
@@ -118,6 +117,7 @@ class DescribeBasicAlarmListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

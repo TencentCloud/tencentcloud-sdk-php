@@ -18,14 +18,12 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyContainerReplicas请求参数结构体
+ *
  * @method string getGroupId() 获取部署组ID，部署组唯一标识
  * @method void setGroupId(string $GroupId) 设置部署组ID，部署组唯一标识
  * @method integer getInstanceNum() 获取实例数量
  * @method void setInstanceNum(integer $InstanceNum) 设置实例数量
- */
-
-/**
- *ModifyContainerReplicas请求参数结构体
  */
 class ModifyContainerReplicasRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyContainerReplicasRequest extends AbstractModel
      * @var integer 实例数量
      */
     public $InstanceNum;
+
     /**
      * @param string $GroupId 部署组ID，部署组唯一标识
      * @param integer $InstanceNum 实例数量
@@ -46,6 +45,7 @@ class ModifyContainerReplicasRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

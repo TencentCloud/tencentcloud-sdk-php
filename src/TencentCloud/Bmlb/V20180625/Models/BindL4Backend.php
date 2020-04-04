@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 待与四层监听器绑定的物理机主机、虚拟机或半托管主机信息。目前一个四层监听器下面最多允许绑定255个主机端口。
+ *
  * @method integer getPort() 获取待绑定的主机端口，可选值1~65535。
  * @method void setPort(integer $Port) 设置待绑定的主机端口，可选值1~65535。
  * @method string getInstanceId() 获取待绑定的黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWeight(integer $Weight) 设置待绑定的主机权重，可选值0~100。
  * @method integer getProbePort() 获取自定义探测的主机端口，可选值1~65535。（需要监听器开启自定义健康检查）
  * @method void setProbePort(integer $ProbePort) 设置自定义探测的主机端口，可选值1~65535。（需要监听器开启自定义健康检查）
- */
-
-/**
- *待与四层监听器绑定的物理机主机、虚拟机或半托管主机信息。目前一个四层监听器下面最多允许绑定255个主机端口。
  */
 class BindL4Backend extends AbstractModel
 {
@@ -52,6 +50,7 @@ class BindL4Backend extends AbstractModel
      * @var integer 自定义探测的主机端口，可选值1~65535。（需要监听器开启自定义健康检查）
      */
     public $ProbePort;
+
     /**
      * @param integer $Port 待绑定的主机端口，可选值1~65535。
      * @param string $InstanceId 待绑定的黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
@@ -62,6 +61,7 @@ class BindL4Backend extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

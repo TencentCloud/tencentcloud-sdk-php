@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAccounts请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method array getAccounts() 获取云数据库账号。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) 设置新账户的密码。
  * @method string getDescription() 获取备注信息。
  * @method void setDescription(string $Description) 设置备注信息。
- */
-
-/**
- *CreateAccounts请求参数结构体
  */
 class CreateAccountsRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateAccountsRequest extends AbstractModel
      * @var string 备注信息。
      */
     public $Description;
+
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param array $Accounts 云数据库账号。
@@ -62,6 +61,7 @@ class CreateAccountsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 每个域名的统计信息
+ *
  * @method string getMainlandOrOversea() 获取国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
  * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
  * @method float getBandwidth() 获取带宽，单位是Mbps。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOnline(integer $Online) 设置人数。
  * @method integer getRequest() 获取请求数。
  * @method void setRequest(integer $Request) 设置请求数。
- */
-
-/**
- *每个域名的统计信息
  */
 class DomainDetailInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DomainDetailInfo extends AbstractModel
      * @var integer 请求数。
      */
     public $Request;
+
     /**
      * @param string $MainlandOrOversea 国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
      * @param float $Bandwidth 带宽，单位是Mbps。
@@ -70,6 +69,7 @@ class DomainDetailInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

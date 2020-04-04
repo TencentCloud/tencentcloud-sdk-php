@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Zone的实例信息
+ *
  * @method string getZoneName() 获取Zone名称
  * @method void setZoneName(string $ZoneName) 设置Zone名称
  * @method integer getInstanceNum() 获取实例数量
  * @method void setInstanceNum(integer $InstanceNum) 设置实例数量
- */
-
-/**
- *Zone的实例信息
  */
 class ZoneInstanceInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ZoneInstanceInfo extends AbstractModel
      * @var integer 实例数量
      */
     public $InstanceNum;
+
     /**
      * @param string $ZoneName Zone名称
      * @param integer $InstanceNum 实例数量
@@ -46,6 +45,7 @@ class ZoneInstanceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyLiveTranscodeTemplate请求参数结构体
+ *
  * @method integer getTemplateId() 获取模板Id。
  * @method void setTemplateId(integer $TemplateId) 设置模板Id。
  * @method string getVcodec() 获取视频编码：
@@ -60,10 +62,6 @@ baseline/main/high。
  * @method void setFpsToOrig(integer $FpsToOrig) 设置是否不超过原始帧率。0：否，1：是。默认0。
  * @method float getAdaptBitratePercent() 获取急速高清相比VideoBitrate少多少码率，0.1到0.5
  * @method void setAdaptBitratePercent(float $AdaptBitratePercent) 设置急速高清相比VideoBitrate少多少码率，0.1到0.5
- */
-
-/**
- *ModifyLiveTranscodeTemplate请求参数结构体
  */
 class ModifyLiveTranscodeTemplateRequest extends AbstractModel
 {
@@ -159,6 +157,7 @@ baseline/main/high。
      * @var float 急速高清相比VideoBitrate少多少码率，0.1到0.5
      */
     public $AdaptBitratePercent;
+
     /**
      * @param integer $TemplateId 模板Id。
      * @param string $Vcodec 视频编码：
@@ -186,6 +185,7 @@ baseline/main/high。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

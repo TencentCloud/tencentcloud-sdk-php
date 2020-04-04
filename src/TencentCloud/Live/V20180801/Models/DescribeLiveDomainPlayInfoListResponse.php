@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveDomainPlayInfoList返回参数结构体
+ *
  * @method string getTime() 获取数据时间，格式为yyyy-mm-dd HH:MM:SS。
  * @method void setTime(string $Time) 设置数据时间，格式为yyyy-mm-dd HH:MM:SS。
  * @method float getTotalBandwidth() 获取实时总带宽。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainInfoList(array $DomainInfoList) 设置分域名的数据情况。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeLiveDomainPlayInfoList返回参数结构体
  */
 class DescribeLiveDomainPlayInfoListResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeLiveDomainPlayInfoListResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Time 数据时间，格式为yyyy-mm-dd HH:MM:SS。
      * @param float $TotalBandwidth 实时总带宽。
@@ -86,6 +85,7 @@ class DescribeLiveDomainPlayInfoListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频拆条片段。
+ *
  * @method string getFileId() 获取文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
  * @method void setFileId(string $FileId) 设置文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
  * @method string getSegmentUrl() 获取视频拆条片段 Url。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCovImgUrl(string $CovImgUrl) 设置拆条封面图片 Url。
  * @method string getSpecialInfo() 获取特殊字段，请忽略。
  * @method void setSpecialInfo(string $SpecialInfo) 设置特殊字段，请忽略。
- */
-
-/**
- *视频拆条片段。
  */
 class AiRecognitionTaskSegmentSegmentItem extends AbstractModel
 {
@@ -73,6 +71,7 @@ class AiRecognitionTaskSegmentSegmentItem extends AbstractModel
      * @var string 特殊字段，请忽略。
      */
     public $SpecialInfo;
+
     /**
      * @param string $FileId 文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
      * @param string $SegmentUrl 视频拆条片段 Url。
@@ -86,6 +85,7 @@ class AiRecognitionTaskSegmentSegmentItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

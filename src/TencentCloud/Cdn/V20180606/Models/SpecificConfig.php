@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 域名国内海外分地区特殊配置。
+ *
  * @method MainlandConfig getMainland() 获取国内特殊配置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMainland(MainlandConfig $Mainland) 设置国内特殊配置。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOverseas(OverseaConfig $Overseas) 设置海外特殊配置。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *域名国内海外分地区特殊配置。
  */
 class SpecificConfig extends AbstractModel
 {
@@ -44,6 +42,7 @@ class SpecificConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Overseas;
+
     /**
      * @param MainlandConfig $Mainland 国内特殊配置。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class SpecificConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

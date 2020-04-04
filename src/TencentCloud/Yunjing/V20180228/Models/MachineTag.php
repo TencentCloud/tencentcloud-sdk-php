@@ -18,14 +18,12 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 服务器标签信息
+ *
  * @method integer getRid() 获取关联标签ID
  * @method void setRid(integer $Rid) 设置关联标签ID
  * @method string getName() 获取标签名
  * @method void setName(string $Name) 设置标签名
- */
-
-/**
- *服务器标签信息
  */
 class MachineTag extends AbstractModel
 {
@@ -38,6 +36,7 @@ class MachineTag extends AbstractModel
      * @var string 标签名
      */
     public $Name;
+
     /**
      * @param integer $Rid 关联标签ID
      * @param string $Name 标签名
@@ -46,6 +45,7 @@ class MachineTag extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

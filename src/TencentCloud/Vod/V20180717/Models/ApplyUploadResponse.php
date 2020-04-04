@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ApplyUpload返回参数结构体
+ *
  * @method string getStorageBucket() 获取存储桶，用于上传接口 URL 的 bucket_name。
  * @method void setStorageBucket(string $StorageBucket) 设置存储桶，用于上传接口 URL 的 bucket_name。
  * @method string getStorageRegion() 获取存储园区，用于上传接口 Host 的 Region。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTempCertificate(TempCertificate $TempCertificate) 设置临时凭证，用于上传接口的权限验证。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ApplyUpload返回参数结构体
  */
 class ApplyUploadResponse extends AbstractModel
 {
@@ -79,6 +77,7 @@ class ApplyUploadResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $StorageBucket 存储桶，用于上传接口 URL 的 bucket_name。
      * @param string $StorageRegion 存储园区，用于上传接口 Host 的 Region。
@@ -94,6 +93,7 @@ class ApplyUploadResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

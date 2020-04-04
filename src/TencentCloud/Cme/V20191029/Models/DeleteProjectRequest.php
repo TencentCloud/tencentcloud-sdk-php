@@ -18,14 +18,12 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteProject请求参数结构体
+ *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
  * @method string getProjectId() 获取项目 Id。
  * @method void setProjectId(string $ProjectId) 设置项目 Id。
- */
-
-/**
- *DeleteProject请求参数结构体
  */
 class DeleteProjectRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteProjectRequest extends AbstractModel
      * @var string 项目 Id。
      */
     public $ProjectId;
+
     /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $ProjectId 项目 Id。
@@ -46,6 +45,7 @@ class DeleteProjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

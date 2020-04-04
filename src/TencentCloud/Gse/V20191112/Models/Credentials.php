@@ -18,14 +18,12 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 访问实例所需要的凭据
+ *
  * @method string getSecret() 获取ssh私钥
  * @method void setSecret(string $Secret) 设置ssh私钥
  * @method string getUserName() 获取用户名
  * @method void setUserName(string $UserName) 设置用户名
- */
-
-/**
- *访问实例所需要的凭据
  */
 class Credentials extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Credentials extends AbstractModel
      * @var string 用户名
      */
     public $UserName;
+
     /**
      * @param string $Secret ssh私钥
      * @param string $UserName 用户名
@@ -46,6 +45,7 @@ class Credentials extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

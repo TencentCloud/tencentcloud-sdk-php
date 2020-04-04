@@ -18,16 +18,14 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 任务存储信息
+ *
  * @method integer getType() 获取存储类型，可选值： 
 1：CosInfo。
  * @method void setType(integer $Type) 设置存储类型，可选值： 
 1：CosInfo。
  * @method CosInfo getCosInfo() 获取Cos形式存储信息，当Type等于1时必选。
  * @method void setCosInfo(CosInfo $CosInfo) 设置Cos形式存储信息，当Type等于1时必选。
- */
-
-/**
- *任务存储信息
  */
 class SaveInfo extends AbstractModel
 {
@@ -41,6 +39,7 @@ class SaveInfo extends AbstractModel
      * @var CosInfo Cos形式存储信息，当Type等于1时必选。
      */
     public $CosInfo;
+
     /**
      * @param integer $Type 存储类型，可选值： 
 1：CosInfo。
@@ -50,6 +49,7 @@ class SaveInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

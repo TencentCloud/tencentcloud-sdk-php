@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceCreateDBInstances返回参数结构体
+ *
  * @method integer getOriginalPrice() 获取未打折前价格，其值除以100表示多少钱。例如10010表示100.10元
  * @method void setOriginalPrice(integer $OriginalPrice) 设置未打折前价格，其值除以100表示多少钱。例如10010表示100.10元
  * @method integer getPrice() 获取实际需要支付的价格，其值除以100表示多少钱。例如10010表示100.10元
  * @method void setPrice(integer $Price) 设置实际需要支付的价格，其值除以100表示多少钱。例如10010表示100.10元
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *InquiryPriceCreateDBInstances返回参数结构体
  */
 class InquiryPriceCreateDBInstancesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InquiryPriceCreateDBInstancesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $OriginalPrice 未打折前价格，其值除以100表示多少钱。例如10010表示100.10元
      * @param integer $Price 实际需要支付的价格，其值除以100表示多少钱。例如10010表示100.10元
@@ -54,6 +53,7 @@ class InquiryPriceCreateDBInstancesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

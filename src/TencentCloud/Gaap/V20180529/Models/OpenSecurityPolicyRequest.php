@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OpenSecurityPolicy请求参数结构体
+ *
  * @method string getProxyId() 获取需开启安全策略的通道ID
  * @method void setProxyId(string $ProxyId) 设置需开启安全策略的通道ID
- */
-
-/**
- *OpenSecurityPolicy请求参数结构体
  */
 class OpenSecurityPolicyRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class OpenSecurityPolicyRequest extends AbstractModel
      * @var string 需开启安全策略的通道ID
      */
     public $ProxyId;
+
     /**
      * @param string $ProxyId 需开启安全策略的通道ID
      */
@@ -38,6 +37,7 @@ class OpenSecurityPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

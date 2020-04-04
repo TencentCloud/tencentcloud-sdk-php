@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * NAT网关绑定的弹性IP
+ *
  * @method string getAddressId() 获取弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
  * @method void setAddressId(string $AddressId) 设置弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
  * @method string getPublicIpAddress() 获取外网IP地址，形如：`123.121.34.33`。
  * @method void setPublicIpAddress(string $PublicIpAddress) 设置外网IP地址，形如：`123.121.34.33`。
  * @method boolean getIsBlocked() 获取资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
  * @method void setIsBlocked(boolean $IsBlocked) 设置资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
- */
-
-/**
- *NAT网关绑定的弹性IP
  */
 class NatGatewayAddress extends AbstractModel
 {
@@ -45,6 +43,7 @@ class NatGatewayAddress extends AbstractModel
      * @var boolean 资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
      */
     public $IsBlocked;
+
     /**
      * @param string $AddressId 弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
      * @param string $PublicIpAddress 外网IP地址，形如：`123.121.34.33`。
@@ -54,6 +53,7 @@ class NatGatewayAddress extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

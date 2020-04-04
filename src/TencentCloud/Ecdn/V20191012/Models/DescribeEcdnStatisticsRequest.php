@@ -18,6 +18,8 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeEcdnStatistics请求参数结构体
+ *
  * @method string getStartTime() 获取查询起始时间，如：2019-12-13 00:00:00
  * @method void setStartTime(string $StartTime) 设置查询起始时间，如：2019-12-13 00:00:00
  * @method string getEndTime() 获取查询结束时间，如：2019-12-13 23:59:59
@@ -73,10 +75,6 @@ dynamic_bandwidth：动态带宽，单位为 bps
  * @method void setProjects(array $Projects) 设置指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
  */
-
-/**
- *DescribeEcdnStatistics请求参数结构体
- */
 class DescribeEcdnStatisticsRequest extends AbstractModel
 {
     /**
@@ -129,6 +127,7 @@ dynamic_bandwidth：动态带宽，单位为 bps
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
      */
     public $Projects;
+
     /**
      * @param string $StartTime 查询起始时间，如：2019-12-13 00:00:00
      * @param string $EndTime 查询结束时间，如：2019-12-13 23:59:59
@@ -162,6 +161,7 @@ dynamic_bandwidth：动态带宽，单位为 bps
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

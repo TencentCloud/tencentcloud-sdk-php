@@ -18,14 +18,12 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RollbackConfig请求参数结构体
+ *
  * @method string getConfigReleaseLogId() 获取配置项发布历史ID
  * @method void setConfigReleaseLogId(string $ConfigReleaseLogId) 设置配置项发布历史ID
  * @method string getReleaseDesc() 获取回滚描述
  * @method void setReleaseDesc(string $ReleaseDesc) 设置回滚描述
- */
-
-/**
- *RollbackConfig请求参数结构体
  */
 class RollbackConfigRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RollbackConfigRequest extends AbstractModel
      * @var string 回滚描述
      */
     public $ReleaseDesc;
+
     /**
      * @param string $ConfigReleaseLogId 配置项发布历史ID
      * @param string $ReleaseDesc 回滚描述
@@ -46,6 +45,7 @@ class RollbackConfigRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

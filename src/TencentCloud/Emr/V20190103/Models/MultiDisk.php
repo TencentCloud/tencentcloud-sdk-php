@@ -18,16 +18,14 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 多云盘参数
+ *
  * @method string getDiskType() 获取云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
  * @method void setDiskType(string $DiskType) 设置云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
  * @method integer getVolume() 获取云盘大小
  * @method void setVolume(integer $Volume) 设置云盘大小
  * @method integer getCount() 获取该类型云盘个数
  * @method void setCount(integer $Count) 设置该类型云盘个数
- */
-
-/**
- *多云盘参数
  */
 class MultiDisk extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MultiDisk extends AbstractModel
      * @var integer 该类型云盘个数
      */
     public $Count;
+
     /**
      * @param string $DiskType 云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
      * @param integer $Volume 云盘大小
@@ -54,6 +53,7 @@ class MultiDisk extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

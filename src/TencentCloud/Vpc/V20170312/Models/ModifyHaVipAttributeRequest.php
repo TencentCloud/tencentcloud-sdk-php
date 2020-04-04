@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyHaVipAttribute请求参数结构体
+ *
  * @method string getHaVipId() 获取`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
  * @method void setHaVipId(string $HaVipId) 设置`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
  * @method string getHaVipName() 获取`HAVIP`名称，可任意命名，但不得超过60个字符。
  * @method void setHaVipName(string $HaVipName) 设置`HAVIP`名称，可任意命名，但不得超过60个字符。
- */
-
-/**
- *ModifyHaVipAttribute请求参数结构体
  */
 class ModifyHaVipAttributeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifyHaVipAttributeRequest extends AbstractModel
      * @var string `HAVIP`名称，可任意命名，但不得超过60个字符。
      */
     public $HaVipName;
+
     /**
      * @param string $HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
      * @param string $HaVipName `HAVIP`名称，可任意命名，但不得超过60个字符。
@@ -46,6 +45,7 @@ class ModifyHaVipAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

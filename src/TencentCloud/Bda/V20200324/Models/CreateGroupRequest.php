@@ -18,6 +18,8 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateGroup请求参数结构体
+ *
  * @method string getGroupName() 获取人体库名称，[1,60]个字符，可修改，不可重复。
  * @method void setGroupName(string $GroupName) 设置人体库名称，[1,60]个字符，可修改，不可重复。
  * @method string getGroupId() 获取人体库 ID，不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBodyModelVersion(string $BodyModelVersion) 设置人体识别所用的算法模型版本。 
 目前入参仅支持 “1.0”1个输入。 默认为"1.0"。  
 不同算法模型版本对应的人体识别算法不同，新版本的整体效果会优于旧版本，后续我们将推出更新版本。
- */
-
-/**
- *CreateGroup请求参数结构体
  */
 class CreateGroupRequest extends AbstractModel
 {
@@ -58,6 +56,7 @@ class CreateGroupRequest extends AbstractModel
 不同算法模型版本对应的人体识别算法不同，新版本的整体效果会优于旧版本，后续我们将推出更新版本。
      */
     public $BodyModelVersion;
+
     /**
      * @param string $GroupName 人体库名称，[1,60]个字符，可修改，不可重复。
      * @param string $GroupId 人体库 ID，不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
@@ -70,6 +69,7 @@ class CreateGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

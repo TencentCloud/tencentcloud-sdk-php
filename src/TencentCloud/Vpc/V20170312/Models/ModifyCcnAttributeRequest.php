@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyCcnAttribute请求参数结构体
+ *
  * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
  * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
  * @method string getCcnName() 获取CCN名称，最大长度不能超过60个字节。
  * @method void setCcnName(string $CcnName) 设置CCN名称，最大长度不能超过60个字节。
  * @method string getCcnDescription() 获取CCN描述信息，最大长度不能超过100个字节。
  * @method void setCcnDescription(string $CcnDescription) 设置CCN描述信息，最大长度不能超过100个字节。
- */
-
-/**
- *ModifyCcnAttribute请求参数结构体
  */
 class ModifyCcnAttributeRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyCcnAttributeRequest extends AbstractModel
      * @var string CCN描述信息，最大长度不能超过100个字节。
      */
     public $CcnDescription;
+
     /**
      * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
      * @param string $CcnName CCN名称，最大长度不能超过60个字节。
@@ -54,6 +53,7 @@ class ModifyCcnAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

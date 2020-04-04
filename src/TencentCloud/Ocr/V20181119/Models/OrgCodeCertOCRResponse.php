@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * OrgCodeCertOCR返回参数结构体
+ *
  * @method string getOrgCode() 获取代码
  * @method void setOrgCode(string $OrgCode) 设置代码
  * @method string getName() 获取机构名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValidDate(string $ValidDate) 设置有效期
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *OrgCodeCertOCR返回参数结构体
  */
 class OrgCodeCertOCRResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class OrgCodeCertOCRResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $OrgCode 代码
      * @param string $Name 机构名称
@@ -70,6 +69,7 @@ class OrgCodeCertOCRResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

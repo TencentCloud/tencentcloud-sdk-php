@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBasicDeviceThreshold返回参数结构体
+ *
  * @method integer getThreshold() 获取返回黑洞封堵值
  * @method void setThreshold(integer $Threshold) 设置返回黑洞封堵值
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeBasicDeviceThreshold返回参数结构体
  */
 class DescribeBasicDeviceThresholdResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeBasicDeviceThresholdResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Threshold 返回黑洞封堵值
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeBasicDeviceThresholdResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

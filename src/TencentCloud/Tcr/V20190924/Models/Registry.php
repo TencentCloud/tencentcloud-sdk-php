@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例信息结构体
+ *
  * @method string getRegistryId() 获取实例ID
  * @method void setRegistryId(string $RegistryId) 设置实例ID
  * @method string getRegistryName() 获取实例名称
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableAnonymous(boolean $EnableAnonymous) 设置是否支持匿名
  * @method integer getTokenValidTime() 获取Token有效时间
  * @method void setTokenValidTime(integer $TokenValidTime) 设置Token有效时间
- */
-
-/**
- *实例信息结构体
  */
 class Registry extends AbstractModel
 {
@@ -94,6 +92,7 @@ class Registry extends AbstractModel
      * @var integer Token有效时间
      */
     public $TokenValidTime;
+
     /**
      * @param string $RegistryId 实例ID
      * @param string $RegistryName 实例名称
@@ -110,6 +109,7 @@ class Registry extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

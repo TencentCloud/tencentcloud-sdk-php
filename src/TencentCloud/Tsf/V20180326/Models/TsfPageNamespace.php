@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Tsf命名空间分页对象
+ *
  * @method integer getTotalCount() 获取命名空间总条数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置命名空间总条数
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置命名空间列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *Tsf命名空间分页对象
  */
 class TsfPageNamespace extends AbstractModel
 {
@@ -44,6 +42,7 @@ class TsfPageNamespace extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
+
     /**
      * @param integer $TotalCount 命名空间总条数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class TsfPageNamespace extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

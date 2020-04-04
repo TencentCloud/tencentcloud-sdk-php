@@ -18,14 +18,12 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AppUpdateUser请求参数结构体
+ *
  * @method string getAccessToken() 获取访问Token
  * @method void setAccessToken(string $AccessToken) 设置访问Token
  * @method string getNickName() 获取昵称
  * @method void setNickName(string $NickName) 设置昵称
- */
-
-/**
- *AppUpdateUser请求参数结构体
  */
 class AppUpdateUserRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AppUpdateUserRequest extends AbstractModel
      * @var string 昵称
      */
     public $NickName;
+
     /**
      * @param string $AccessToken 访问Token
      * @param string $NickName 昵称
@@ -46,6 +45,7 @@ class AppUpdateUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

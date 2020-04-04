@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyContainerGroup请求参数结构体
+ *
  * @method string getGroupId() 获取部署组ID
  * @method void setGroupId(string $GroupId) 设置部署组ID
  * @method integer getAccessType() 获取0:公网 1:集群内访问 2：NodePort
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateType(integer $UpdateType) 设置更新方式：0:快速更新 1:滚动更新
  * @method integer getUpdateIvl() 获取更新间隔,单位秒
  * @method void setUpdateIvl(integer $UpdateIvl) 设置更新间隔,单位秒
- */
-
-/**
- *ModifyContainerGroup请求参数结构体
  */
 class ModifyContainerGroupRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyContainerGroupRequest extends AbstractModel
      * @var integer 更新间隔,单位秒
      */
     public $UpdateIvl;
+
     /**
      * @param string $GroupId 部署组ID
      * @param integer $AccessType 0:公网 1:集群内访问 2：NodePort
@@ -70,6 +69,7 @@ class ModifyContainerGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

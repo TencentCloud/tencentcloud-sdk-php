@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全组关联的实例统计
+ *
  * @method string getSecurityGroupId() 获取安全组实例ID。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID。
  * @method integer getCVM() 获取云服务器实例数。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCLB(integer $CLB) 设置负载均衡实例数。
  * @method array getInstanceStatistics() 获取全量实例的绑定统计。
  * @method void setInstanceStatistics(array $InstanceStatistics) 设置全量实例的绑定统计。
- */
-
-/**
- *安全组关联的实例统计
  */
 class SecurityGroupAssociationStatistics extends AbstractModel
 {
@@ -73,6 +71,7 @@ class SecurityGroupAssociationStatistics extends AbstractModel
      * @var array 全量实例的绑定统计。
      */
     public $InstanceStatistics;
+
     /**
      * @param string $SecurityGroupId 安全组实例ID。
      * @param integer $CVM 云服务器实例数。
@@ -86,6 +85,7 @@ class SecurityGroupAssociationStatistics extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 需要开通专业版机器信息。
+ *
  * @method string getMachineType() 获取主机类型。
 <li>CVM: 虚拟主机</li>
 <li>BM: 黑石物理机</li>
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 黑石的InstanceId，CVM的Uuid
  * @method void setQuuid(string $Quuid) 设置主机唯一标识Uuid。
 黑石的InstanceId，CVM的Uuid
- */
-
-/**
- *需要开通专业版机器信息。
  */
 class ProVersionMachine extends AbstractModel
 {
@@ -57,6 +55,7 @@ class ProVersionMachine extends AbstractModel
 黑石的InstanceId，CVM的Uuid
      */
     public $Quuid;
+
     /**
      * @param string $MachineType 主机类型。
 <li>CVM: 虚拟主机</li>
@@ -70,6 +69,7 @@ class ProVersionMachine extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

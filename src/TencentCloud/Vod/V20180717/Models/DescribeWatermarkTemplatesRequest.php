@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWatermarkTemplates请求参数结构体
+ *
  * @method array getDefinitions() 获取水印模板唯一标识过滤条件，数组长度限制：100。
  * @method void setDefinitions(array $Definitions) 设置水印模板唯一标识过滤条件，数组长度限制：100。
  * @method string getType() 获取水印类型过滤条件，可选值：
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 <li>最大值：100。</li>
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *DescribeWatermarkTemplates请求参数结构体
  */
 class DescribeWatermarkTemplatesRequest extends AbstractModel
 {
@@ -71,6 +69,7 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param array $Definitions 水印模板唯一标识过滤条件，数组长度限制：100。
      * @param string $Type 水印类型过滤条件，可选值：
@@ -86,6 +85,7 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

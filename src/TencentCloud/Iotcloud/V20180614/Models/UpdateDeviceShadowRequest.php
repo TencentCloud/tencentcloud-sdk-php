@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateDeviceShadow请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getDeviceName() 获取设备名称
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShadowVersion(integer $ShadowVersion) 设置当前版本号，需要和后台的version保持一致，才能更新成功
  * @method string getPrefix() 获取下发delta消息的topic前缀，可选类型: "$shadow","$template"。不填写默认"$shadow"。
  * @method void setPrefix(string $Prefix) 设置下发delta消息的topic前缀，可选类型: "$shadow","$template"。不填写默认"$shadow"。
- */
-
-/**
- *UpdateDeviceShadow请求参数结构体
  */
 class UpdateDeviceShadowRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class UpdateDeviceShadowRequest extends AbstractModel
      * @var string 下发delta消息的topic前缀，可选类型: "$shadow","$template"。不填写默认"$shadow"。
      */
     public $Prefix;
+
     /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
@@ -70,6 +69,7 @@ class UpdateDeviceShadowRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

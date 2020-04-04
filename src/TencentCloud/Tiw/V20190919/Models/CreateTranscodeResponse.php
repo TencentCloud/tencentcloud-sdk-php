@@ -18,14 +18,12 @@ namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTranscode返回参数结构体
+ *
  * @method string getTaskId() 获取文档转码任务的唯一标识Id，用于查询该任务的进度以及转码结果
  * @method void setTaskId(string $TaskId) 设置文档转码任务的唯一标识Id，用于查询该任务的进度以及转码结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateTranscode返回参数结构体
  */
 class CreateTranscodeResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateTranscodeResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $TaskId 文档转码任务的唯一标识Id，用于查询该任务的进度以及转码结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateTranscodeResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

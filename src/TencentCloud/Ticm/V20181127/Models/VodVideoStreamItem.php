@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文件视频流信息
+ *
  * @method integer getBitrate() 获取视频流的码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBitrate(integer $Bitrate) 设置视频流的码率，单位：bps。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFps(integer $Fps) 设置帧率，单位：hz。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *文件视频流信息
  */
 class VodVideoStreamItem extends AbstractModel
 {
@@ -74,6 +72,7 @@ class VodVideoStreamItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Fps;
+
     /**
      * @param integer $Bitrate 视频流的码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -90,6 +89,7 @@ class VodVideoStreamItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

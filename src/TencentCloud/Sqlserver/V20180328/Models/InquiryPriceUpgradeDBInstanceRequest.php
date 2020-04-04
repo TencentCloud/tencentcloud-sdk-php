@@ -18,16 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceUpgradeDBInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取实例ID，形如mssql-njj2mtpl
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-njj2mtpl
  * @method integer getMemory() 获取实例升级后的内存大小，单位GB，其值不能比当前实例内存小
  * @method void setMemory(integer $Memory) 设置实例升级后的内存大小，单位GB，其值不能比当前实例内存小
  * @method integer getStorage() 获取实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
  * @method void setStorage(integer $Storage) 设置实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
- */
-
-/**
- *InquiryPriceUpgradeDBInstance请求参数结构体
  */
 class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
      * @var integer 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
      */
     public $Storage;
+
     /**
      * @param string $InstanceId 实例ID，形如mssql-njj2mtpl
      * @param integer $Memory 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
@@ -54,6 +53,7 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

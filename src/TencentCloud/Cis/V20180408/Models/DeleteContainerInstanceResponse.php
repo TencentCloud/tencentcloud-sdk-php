@@ -18,14 +18,12 @@ namespace TencentCloud\Cis\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteContainerInstance返回参数结构体
+ *
  * @method string getMsg() 获取操作信息
  * @method void setMsg(string $Msg) 设置操作信息
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- */
-
-/**
- *DeleteContainerInstance返回参数结构体
  */
 class DeleteContainerInstanceResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteContainerInstanceResponse extends AbstractModel
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Msg 操作信息
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -46,6 +45,7 @@ class DeleteContainerInstanceResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

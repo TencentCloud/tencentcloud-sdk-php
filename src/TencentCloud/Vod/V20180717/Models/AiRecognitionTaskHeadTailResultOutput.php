@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频片头片尾识别输出。
+ *
  * @method float getHeadConfidence() 获取片头识别置信度。取值：0~100。
  * @method void setHeadConfidence(float $HeadConfidence) 设置片头识别置信度。取值：0~100。
  * @method float getHeadTimeOffset() 获取视频片头的结束时间点，单位：秒。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTailConfidence(float $TailConfidence) 设置片尾识别置信度。取值：0~100。
  * @method float getTailTimeOffset() 获取视频片尾的开始时间点，单位：秒。
  * @method void setTailTimeOffset(float $TailTimeOffset) 设置视频片尾的开始时间点，单位：秒。
- */
-
-/**
- *视频片头片尾识别输出。
  */
 class AiRecognitionTaskHeadTailResultOutput extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AiRecognitionTaskHeadTailResultOutput extends AbstractModel
      * @var float 视频片尾的开始时间点，单位：秒。
      */
     public $TailTimeOffset;
+
     /**
      * @param float $HeadConfidence 片头识别置信度。取值：0~100。
      * @param float $HeadTimeOffset 视频片头的结束时间点，单位：秒。
@@ -62,6 +61,7 @@ class AiRecognitionTaskHeadTailResultOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

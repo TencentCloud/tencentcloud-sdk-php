@@ -18,14 +18,12 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateInstance请求参数结构体
+ *
  * @method string getRegistryName() 获取企业版实例名称
  * @method void setRegistryName(string $RegistryName) 设置企业版实例名称
  * @method string getRegistryType() 获取企业版实例类型
  * @method void setRegistryType(string $RegistryType) 设置企业版实例类型
- */
-
-/**
- *CreateInstance请求参数结构体
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateInstanceRequest extends AbstractModel
      * @var string 企业版实例类型
      */
     public $RegistryType;
+
     /**
      * @param string $RegistryName 企业版实例名称
      * @param string $RegistryType 企业版实例类型
@@ -46,6 +45,7 @@ class CreateInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

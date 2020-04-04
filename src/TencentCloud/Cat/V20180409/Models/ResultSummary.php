@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实时统计数据
+ *
  * @method string getLogTime() 获取统计时间
  * @method void setLogTime(string $LogTime) 设置统计时间
  * @method integer getTaskId() 获取任务ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAvailRatio(float $AvailRatio) 设置实时可用率
  * @method float getReponseTime() 获取实时响应时间
  * @method void setReponseTime(float $ReponseTime) 设置实时响应时间
- */
-
-/**
- *实时统计数据
  */
 class ResultSummary extends AbstractModel
 {
@@ -52,6 +50,7 @@ class ResultSummary extends AbstractModel
      * @var float 实时响应时间
      */
     public $ReponseTime;
+
     /**
      * @param string $LogTime 统计时间
      * @param integer $TaskId 任务ID
@@ -62,6 +61,7 @@ class ResultSummary extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

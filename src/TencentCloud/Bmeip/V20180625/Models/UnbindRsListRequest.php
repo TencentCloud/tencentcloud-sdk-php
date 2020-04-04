@@ -18,12 +18,10 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnbindRsList请求参数结构体
+ *
  * @method array getEipRsList() 获取物理机绑定的EIP列表
  * @method void setEipRsList(array $EipRsList) 设置物理机绑定的EIP列表
- */
-
-/**
- *UnbindRsList请求参数结构体
  */
 class UnbindRsListRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class UnbindRsListRequest extends AbstractModel
      * @var array 物理机绑定的EIP列表
      */
     public $EipRsList;
+
     /**
      * @param array $EipRsList 物理机绑定的EIP列表
      */
@@ -38,6 +37,7 @@ class UnbindRsListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

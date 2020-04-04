@@ -18,14 +18,12 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 区域信息
+ *
  * @method string getAreaId() 获取区域ID
  * @method void setAreaId(string $AreaId) 设置区域ID
  * @method string getAreaName() 获取区域名称
  * @method void setAreaName(string $AreaName) 设置区域名称
- */
-
-/**
- *区域信息
  */
 class Area extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Area extends AbstractModel
      * @var string 区域名称
      */
     public $AreaName;
+
     /**
      * @param string $AreaId 区域ID
      * @param string $AreaName 区域名称
@@ -46,6 +45,7 @@ class Area extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddIp6Rules返回参数结构体
+ *
  * @method array getIp6RuleSet() 获取IPV6转换规则唯一ID数组，形如rule6-xxxxxxxx
  * @method void setIp6RuleSet(array $Ip6RuleSet) 设置IPV6转换规则唯一ID数组，形如rule6-xxxxxxxx
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *AddIp6Rules返回参数结构体
  */
 class AddIp6RulesResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AddIp6RulesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Ip6RuleSet IPV6转换规则唯一ID数组，形如rule6-xxxxxxxx
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class AddIp6RulesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图片涉黄详情
+ *
  * @method integer getEvilType() 获取恶意类型
 100：正常
 20002：色情
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) 设置色情标签：色情特征中文描述
  * @method integer getScore() 获取色情分：分值范围 0-100，分数越高色情倾向越明显
  * @method void setScore(integer $Score) 设置色情分：分值范围 0-100，分数越高色情倾向越明显
- */
-
-/**
- *图片涉黄详情
  */
 class ImagePornDetect extends AbstractModel
 {
@@ -65,6 +63,7 @@ class ImagePornDetect extends AbstractModel
      * @var integer 色情分：分值范围 0-100，分数越高色情倾向越明显
      */
     public $Score;
+
     /**
      * @param integer $EvilType 恶意类型
 100：正常
@@ -78,6 +77,7 @@ class ImagePornDetect extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,12 +18,10 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DenyOrganizationInvitation请求参数结构体
+ *
  * @method integer getId() 获取邀请ID
  * @method void setId(integer $Id) 设置邀请ID
- */
-
-/**
- *DenyOrganizationInvitation请求参数结构体
  */
 class DenyOrganizationInvitationRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DenyOrganizationInvitationRequest extends AbstractModel
      * @var integer 邀请ID
      */
     public $Id;
+
     /**
      * @param integer $Id 邀请ID
      */
@@ -38,6 +37,7 @@ class DenyOrganizationInvitationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 路由表对象
+ *
  * @method string getVpcId() 获取VPC实例ID。
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。
  * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
- */
-
-/**
- *路由表对象
  */
 class RouteTable extends AbstractModel
 {
@@ -80,6 +78,7 @@ class RouteTable extends AbstractModel
      * @var array 标签键值对。
      */
     public $TagSet;
+
     /**
      * @param string $VpcId VPC实例ID。
      * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
@@ -94,6 +93,7 @@ class RouteTable extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

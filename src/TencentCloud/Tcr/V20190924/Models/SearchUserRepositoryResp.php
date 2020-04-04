@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取满足输入搜索条件的用户镜像仓库
+ *
  * @method integer getTotalCount() 获取总个数
  * @method void setTotalCount(integer $TotalCount) 设置总个数
  * @method array getRepoInfo() 获取仓库列表
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServer(string $Server) 设置Server
  * @method boolean getPrivilegeFiltered() 获取PrivilegeFiltered
  * @method void setPrivilegeFiltered(boolean $PrivilegeFiltered) 设置PrivilegeFiltered
- */
-
-/**
- *获取满足输入搜索条件的用户镜像仓库
  */
 class SearchUserRepositoryResp extends AbstractModel
 {
@@ -52,6 +50,7 @@ class SearchUserRepositoryResp extends AbstractModel
      * @var boolean PrivilegeFiltered
      */
     public $PrivilegeFiltered;
+
     /**
      * @param integer $TotalCount 总个数
      * @param array $RepoInfo 仓库列表
@@ -62,6 +61,7 @@ class SearchUserRepositoryResp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

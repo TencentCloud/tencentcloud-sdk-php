@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 设备日志条目
+ *
  * @method string getId() 获取日志id
  * @method void setId(string $Id) 设置日志id
  * @method string getEvent() 获取行为（事件）
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopic(string $Topic) 设置数据来源topic
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
- */
-
-/**
- *设备日志条目
  */
 class DebugLogEntry extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DebugLogEntry extends AbstractModel
      * @var string 设备名称
      */
     public $DeviceName;
+
     /**
      * @param string $Id 日志id
      * @param string $Event 行为（事件）
@@ -94,6 +93,7 @@ class DebugLogEntry extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

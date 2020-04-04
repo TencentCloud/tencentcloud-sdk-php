@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 点播文件转码信息
+ *
  * @method array getTranscodeSet() 获取各规格的转码信息集合，每个元素代表一个规格的转码结果。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranscodeSet(array $TranscodeSet) 设置各规格的转码信息集合，每个元素代表一个规格的转码结果。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *点播文件转码信息
  */
 class MediaTranscodeInfo extends AbstractModel
 {
@@ -34,6 +32,7 @@ class MediaTranscodeInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeSet;
+
     /**
      * @param array $TranscodeSet 各规格的转码信息集合，每个元素代表一个规格的转码结果。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,6 +41,7 @@ class MediaTranscodeInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 转动图任务类型。
+ *
  * @method integer getDefinition() 获取视频转动图模板 ID。
  * @method void setDefinition(integer $Definition) 设置视频转动图模板 ID。
  * @method float getStartTimeOffset() 获取动图在视频中的开始时间，单位为秒。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutputObjectPath() 获取转动图后文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
  * @method void setOutputObjectPath(string $OutputObjectPath) 设置转动图后文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
- */
-
-/**
- *转动图任务类型。
  */
 class AnimatedGraphicTaskInput extends AbstractModel
 {
@@ -62,6 +60,7 @@ class AnimatedGraphicTaskInput extends AbstractModel
      * @var string 转动图后文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
      */
     public $OutputObjectPath;
+
     /**
      * @param integer $Definition 视频转动图模板 ID。
      * @param float $StartTimeOffset 动图在视频中的开始时间，单位为秒。
@@ -74,6 +73,7 @@ class AnimatedGraphicTaskInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 主机列表
+ *
  * @method string getMachineName() 获取主机名称。
  * @method void setMachineName(string $MachineName) 设置主机名称。
  * @method string getMachineOs() 获取主机系统。
@@ -56,10 +58,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMalwareNum(integer $MalwareNum) 设置木马数。
  * @method array getTag() 获取标签信息
  * @method void setTag(array $Tag) 设置标签信息
- */
-
-/**
- *主机列表
  */
 class Machine extends AbstractModel
 {
@@ -129,6 +127,7 @@ class Machine extends AbstractModel
      * @var array 标签信息
      */
     public $Tag;
+
     /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
@@ -154,6 +153,7 @@ class Machine extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

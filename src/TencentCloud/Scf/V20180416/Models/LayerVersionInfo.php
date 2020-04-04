@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 层版本信息
+ *
  * @method array getCompatibleRuntimes() 获取版本适用的运行时
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompatibleRuntimes(array $CompatibleRuntimes) 设置版本适用的运行时
@@ -46,10 +48,6 @@ Active 正常
 Publishing  发布中
 PublishFailed  发布失败
 Deleted 已删除
- */
-
-/**
- *层版本信息
  */
 class LayerVersionInfo extends AbstractModel
 {
@@ -94,6 +92,7 @@ PublishFailed  发布失败
 Deleted 已删除
      */
     public $Status;
+
     /**
      * @param array $CompatibleRuntimes 版本适用的运行时
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,6 +113,7 @@ Deleted 已删除
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

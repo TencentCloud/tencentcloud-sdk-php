@@ -18,16 +18,14 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySubscribeObjects请求参数结构体
+ *
  * @method string getSubscribeId() 获取数据订阅实例的ID
  * @method void setSubscribeId(string $SubscribeId) 设置数据订阅实例的ID
  * @method integer getSubscribeObjectType() 获取数据订阅的类型，可选的值有：0 - 全实例订阅；1 - 数据订阅；2 - 结构订阅；3 - 数据订阅+结构订阅
  * @method void setSubscribeObjectType(integer $SubscribeObjectType) 设置数据订阅的类型，可选的值有：0 - 全实例订阅；1 - 数据订阅；2 - 结构订阅；3 - 数据订阅+结构订阅
  * @method array getObjects() 获取订阅的数据库表信息
  * @method void setObjects(array $Objects) 设置订阅的数据库表信息
- */
-
-/**
- *ModifySubscribeObjects请求参数结构体
  */
 class ModifySubscribeObjectsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifySubscribeObjectsRequest extends AbstractModel
      * @var array 订阅的数据库表信息
      */
     public $Objects;
+
     /**
      * @param string $SubscribeId 数据订阅实例的ID
      * @param integer $SubscribeObjectType 数据订阅的类型，可选的值有：0 - 全实例订阅；1 - 数据订阅；2 - 结构订阅；3 - 数据订阅+结构订阅
@@ -54,6 +53,7 @@ class ModifySubscribeObjectsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

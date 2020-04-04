@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateGroup请求参数结构体
+ *
  * @method string getApplicationId() 获取部署组所属的应用ID
  * @method void setApplicationId(string $ApplicationId) 设置部署组所属的应用ID
  * @method string getNamespaceId() 获取部署组所属命名空间ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getGroupDesc() 获取部署组描述
  * @method void setGroupDesc(string $GroupDesc) 设置部署组描述
- */
-
-/**
- *CreateGroup请求参数结构体
  */
 class CreateGroupRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateGroupRequest extends AbstractModel
      * @var string 部署组描述
      */
     public $GroupDesc;
+
     /**
      * @param string $ApplicationId 部署组所属的应用ID
      * @param string $NamespaceId 部署组所属命名空间ID
@@ -70,6 +69,7 @@ class CreateGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

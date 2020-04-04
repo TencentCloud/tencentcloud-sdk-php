@@ -18,12 +18,10 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCodeRepository请求参数结构体
+ *
  * @method string getCodeRepositoryName() 获取存储库名称
  * @method void setCodeRepositoryName(string $CodeRepositoryName) 设置存储库名称
- */
-
-/**
- *DeleteCodeRepository请求参数结构体
  */
 class DeleteCodeRepositoryRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteCodeRepositoryRequest extends AbstractModel
      * @var string 存储库名称
      */
     public $CodeRepositoryName;
+
     /**
      * @param string $CodeRepositoryName 存储库名称
      */
@@ -38,6 +37,7 @@ class DeleteCodeRepositoryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

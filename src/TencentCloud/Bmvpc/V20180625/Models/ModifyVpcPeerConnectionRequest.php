@@ -18,16 +18,14 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyVpcPeerConnection请求参数结构体
+ *
  * @method string getVpcPeerConnectionId() 获取黑石对等连接唯一ID
  * @method void setVpcPeerConnectionId(string $VpcPeerConnectionId) 设置黑石对等连接唯一ID
  * @method integer getBandwidth() 获取对等连接带宽
  * @method void setBandwidth(integer $Bandwidth) 设置对等连接带宽
  * @method string getVpcPeerConnectionName() 获取对等连接名称
  * @method void setVpcPeerConnectionName(string $VpcPeerConnectionName) 设置对等连接名称
- */
-
-/**
- *ModifyVpcPeerConnection请求参数结构体
  */
 class ModifyVpcPeerConnectionRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyVpcPeerConnectionRequest extends AbstractModel
      * @var string 对等连接名称
      */
     public $VpcPeerConnectionName;
+
     /**
      * @param string $VpcPeerConnectionId 黑石对等连接唯一ID
      * @param integer $Bandwidth 对等连接带宽
@@ -54,6 +53,7 @@ class ModifyVpcPeerConnectionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

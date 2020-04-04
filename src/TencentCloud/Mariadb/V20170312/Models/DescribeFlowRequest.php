@@ -18,12 +18,10 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeFlow请求参数结构体
+ *
  * @method integer getFlowId() 获取异步请求接口返回的任务流程号。
  * @method void setFlowId(integer $FlowId) 设置异步请求接口返回的任务流程号。
- */
-
-/**
- *DescribeFlow请求参数结构体
  */
 class DescribeFlowRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeFlowRequest extends AbstractModel
      * @var integer 异步请求接口返回的任务流程号。
      */
     public $FlowId;
+
     /**
      * @param integer $FlowId 异步请求接口返回的任务流程号。
      */
@@ -38,6 +37,7 @@ class DescribeFlowRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

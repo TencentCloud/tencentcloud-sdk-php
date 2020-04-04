@@ -18,6 +18,8 @@ namespace TencentCloud\Aai\V20180522\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TextToVoice请求参数结构体
+ *
  * @method string getText() 获取合成语音的源文本，按UTF-8编码统一计算。
 中文最大支持100个汉字（全角标点符号算一个汉字）；英文最大支持400个字母（半角标点符号算一个字母）。包含空格等字符时需要url encode再传输。
  * @method void setText(string $Text) 设置合成语音的源文本，按UTF-8编码统一计算。
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSampleRate(integer $SampleRate) 设置音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
  * @method string getCodec() 获取返回音频格式，可取值：wav（默认），mp3
  * @method void setCodec(string $Codec) 设置返回音频格式，可取值：wav（默认），mp3
- */
-
-/**
- *TextToVoice请求参数结构体
  */
 class TextToVoiceRequest extends AbstractModel
 {
@@ -100,6 +98,7 @@ class TextToVoiceRequest extends AbstractModel
      * @var string 返回音频格式，可取值：wav（默认），mp3
      */
     public $Codec;
+
     /**
      * @param string $Text 合成语音的源文本，按UTF-8编码统一计算。
 中文最大支持100个汉字（全角标点符号算一个汉字）；英文最大支持400个字母（半角标点符号算一个字母）。包含空格等字符时需要url encode再传输。
@@ -118,6 +117,7 @@ class TextToVoiceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

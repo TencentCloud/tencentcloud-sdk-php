@@ -18,16 +18,14 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListLayers返回参数结构体
+ *
  * @method array getLayers() 获取层列表
  * @method void setLayers(array $Layers) 设置层列表
  * @method integer getTotalCount() 获取层总数
  * @method void setTotalCount(integer $TotalCount) 设置层总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ListLayers返回参数结构体
  */
 class ListLayersResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListLayersResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Layers 层列表
      * @param integer $TotalCount 层总数
@@ -54,6 +53,7 @@ class ListLayersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

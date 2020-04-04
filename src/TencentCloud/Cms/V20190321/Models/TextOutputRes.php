@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 消息类输出结果参数
+ *
  * @method string getOperator() 获取操作人,信安处理人企业微信ID
  * @method void setOperator(string $Operator) 设置操作人,信安处理人企业微信ID
  * @method integer getResultCode() 获取恶意操作码，
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResultMsg(string $ResultMsg) 设置操作结果备注说明
  * @method integer getResultType() 获取恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
  * @method void setResultType(integer $ResultType) 设置恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
- */
-
-/**
- *消息类输出结果参数
  */
 class TextOutputRes extends AbstractModel
 {
@@ -55,6 +53,7 @@ class TextOutputRes extends AbstractModel
      * @var integer 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
      */
     public $ResultType;
+
     /**
      * @param string $Operator 操作人,信安处理人企业微信ID
      * @param integer $ResultCode 恶意操作码，
@@ -66,6 +65,7 @@ class TextOutputRes extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

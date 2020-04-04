@@ -18,6 +18,8 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音检测结果，Code 为 0 时返回
+ *
  * @method string getDumpUrl() 获取流检测时返回，音频转存地址，保留30min
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDumpUrl(string $DumpUrl) 设置流检测时返回，音频转存地址，保留30min
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPieceStartTime(integer $PieceStartTime) 设置分片开始检测时间
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *语音检测结果，Code 为 0 时返回
  */
 class ScanPiece extends AbstractModel
 {
@@ -118,6 +116,7 @@ class ScanPiece extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PieceStartTime;
+
     /**
      * @param string $DumpUrl 流检测时返回，音频转存地址，保留30min
 注意：此字段可能返回 null，表示取不到有效值。
@@ -142,6 +141,7 @@ class ScanPiece extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

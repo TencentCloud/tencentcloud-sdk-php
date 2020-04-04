@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图片水印模板输入参数
+ *
  * @method MediaInputInfo getImageContent() 获取水印图片的输入内容。支持 jpeg、png 图片格式。
  * @method void setImageContent(MediaInputInfo $ImageContent) 设置水印图片的输入内容。支持 jpeg、png 图片格式。
  * @method string getWidth() 获取水印的宽度。支持 %、px 两种格式：
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 <li>当字符串以 % 结尾，表示水印 Height 为视频高度的百分比大小，如 10% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Height 单位为像素，如 100px 表示 Height 为 100 像素。</li>
 默认值：0px，表示 Height 按照原始水印图片的宽高比缩放。
- */
-
-/**
- *图片水印模板输入参数
  */
 class RawImageWatermarkInput extends AbstractModel
 {
@@ -63,6 +61,7 @@ class RawImageWatermarkInput extends AbstractModel
 默认值：0px，表示 Height 按照原始水印图片的宽高比缩放。
      */
     public $Height;
+
     /**
      * @param MediaInputInfo $ImageContent 水印图片的输入内容。支持 jpeg、png 图片格式。
      * @param string $Width 水印的宽度。支持 %、px 两种格式：
@@ -78,6 +77,7 @@ class RawImageWatermarkInput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

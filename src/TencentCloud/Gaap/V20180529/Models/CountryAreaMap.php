@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 国家地区映射关系（名称和编码）
+ *
  * @method string getNationCountryName() 获取国家名称。
  * @method void setNationCountryName(string $NationCountryName) 设置国家名称。
  * @method string getNationCountryInnerCode() 获取国家编码。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContinentName(string $ContinentName) 设置大洲名称。
  * @method string getContinentInnerCode() 获取大洲编码。
  * @method void setContinentInnerCode(string $ContinentInnerCode) 设置大洲编码。
- */
-
-/**
- *国家地区映射关系（名称和编码）
  */
 class CountryAreaMap extends AbstractModel
 {
@@ -66,6 +64,7 @@ class CountryAreaMap extends AbstractModel
      * @var string 大洲编码。
      */
     public $ContinentInnerCode;
+
     /**
      * @param string $NationCountryName 国家名称。
      * @param string $NationCountryInnerCode 国家编码。
@@ -78,6 +77,7 @@ class CountryAreaMap extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

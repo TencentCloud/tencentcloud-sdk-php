@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDDoSSwitch请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（basic表示基础防护）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（basic表示基础防护）
  * @method string getMethod() 获取=get表示读取DDoS防护状态；=set表示修改DDoS防护状态；
@@ -78,10 +80,6 @@ use TencentCloud\Common\AbstractModel;
 "nj":     南京
  * @method integer getStatus() 获取可选字段，防护状态值，取值[0（关闭），1（开启）]；当Method为get时可以不填写此字段；
  * @method void setStatus(integer $Status) 设置可选字段，防护状态值，取值[0（关闭），1（开启）]；当Method为get时可以不填写此字段；
- */
-
-/**
- *ModifyDDoSSwitch请求参数结构体
  */
 class ModifyDDoSSwitchRequest extends AbstractModel
 {
@@ -146,6 +144,7 @@ class ModifyDDoSSwitchRequest extends AbstractModel
      * @var integer 可选字段，防护状态值，取值[0（关闭），1（开启）]；当Method为get时可以不填写此字段；
      */
     public $Status;
+
     /**
      * @param string $Business 大禹子产品代号（basic表示基础防护）
      * @param string $Method =get表示读取DDoS防护状态；=set表示修改DDoS防护状态；
@@ -182,6 +181,7 @@ class ModifyDDoSSwitchRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

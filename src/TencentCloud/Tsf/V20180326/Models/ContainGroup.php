@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 部署组列表（应用下钻界面的）
+ *
  * @method string getGroupId() 获取部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置部署组ID
@@ -74,10 +76,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemLimit(string $MemLimit) 设置最大分配的内存 MiB 数，对应 K8S limit
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *部署组列表（应用下钻界面的）
  */
 class ContainGroup extends AbstractModel
 {
@@ -164,6 +162,7 @@ class ContainGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemLimit;
+
     /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -198,6 +197,7 @@ class ContainGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

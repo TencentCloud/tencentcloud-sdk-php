@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * InquiryPriceCreateInstance请求参数结构体
+ *
  * @method string getTimeUnit() 获取购买实例的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -72,10 +74,6 @@ use TencentCloud\Common\AbstractModel;
 <li>2：表示EMR-V2.0.1。</li>
 <li>4：表示EMR-V2.1.0。</li>
 <li>7：表示EMR-V3.0.0。</li>
- */
-
-/**
- *InquiryPriceCreateInstance请求参数结构体
  */
 class InquiryPriceCreateInstanceRequest extends AbstractModel
 {
@@ -157,6 +155,7 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
 <li>7：表示EMR-V3.0.0。</li>
      */
     public $ProductId;
+
     /**
      * @param string $TimeUnit 购买实例的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
@@ -190,6 +189,7 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

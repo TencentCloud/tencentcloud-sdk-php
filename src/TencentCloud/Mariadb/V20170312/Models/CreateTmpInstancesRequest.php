@@ -18,14 +18,12 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTmpInstances请求参数结构体
+ *
  * @method array getInstanceIds() 获取回档实例的ID列表，形如：tdsql-ow728lmc。
  * @method void setInstanceIds(array $InstanceIds) 设置回档实例的ID列表，形如：tdsql-ow728lmc。
  * @method string getRollbackTime() 获取回档时间点
  * @method void setRollbackTime(string $RollbackTime) 设置回档时间点
- */
-
-/**
- *CreateTmpInstances请求参数结构体
  */
 class CreateTmpInstancesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateTmpInstancesRequest extends AbstractModel
      * @var string 回档时间点
      */
     public $RollbackTime;
+
     /**
      * @param array $InstanceIds 回档实例的ID列表，形如：tdsql-ow728lmc。
      * @param string $RollbackTime 回档时间点
@@ -46,6 +45,7 @@ class CreateTmpInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ParseStreamingManifest返回参数结构体
+ *
  * @method array getMediaSegmentSet() 获取分片文件列表。
  * @method void setMediaSegmentSet(array $MediaSegmentSet) 设置分片文件列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ParseStreamingManifest返回参数结构体
  */
 class ParseStreamingManifestResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ParseStreamingManifestResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $MediaSegmentSet 分片文件列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class ParseStreamingManifestResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ReplaceCert返回参数结构体
+ *
  * @method string getNewCertId() 获取新证书ID。
  * @method void setNewCertId(string $NewCertId) 设置新证书ID。
  * @method string getOldCertId() 获取旧证书ID。
  * @method void setOldCertId(string $OldCertId) 设置旧证书ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ReplaceCert返回参数结构体
  */
 class ReplaceCertResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ReplaceCertResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $NewCertId 新证书ID。
      * @param string $OldCertId 旧证书ID。
@@ -54,6 +53,7 @@ class ReplaceCertResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

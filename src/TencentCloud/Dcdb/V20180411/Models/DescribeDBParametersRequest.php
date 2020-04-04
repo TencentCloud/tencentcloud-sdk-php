@@ -18,12 +18,10 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBParameters请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：dcdbt-ow7t8lmc。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：dcdbt-ow7t8lmc。
- */
-
-/**
- *DescribeDBParameters请求参数结构体
  */
 class DescribeDBParametersRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeDBParametersRequest extends AbstractModel
      * @var string 实例 ID，形如：dcdbt-ow7t8lmc。
      */
     public $InstanceId;
+
     /**
      * @param string $InstanceId 实例 ID，形如：dcdbt-ow7t8lmc。
      */
@@ -38,6 +37,7 @@ class DescribeDBParametersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

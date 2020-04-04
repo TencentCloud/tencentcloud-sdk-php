@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindEipsToNatGateway请求参数结构体
+ *
  * @method string getNatId() 获取NAT网关ID，例如：nat-kdm476mp
  * @method void setNatId(string $NatId) 设置NAT网关ID，例如：nat-kdm476mp
  * @method string getVpcId() 获取私有网络ID，例如：vpc-kd7d06of
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssignedEips(array $AssignedEips) 设置已分配的EIP列表；AssignedEips和AutoAllocEipNum至少输入一个
  * @method integer getAutoAllocEipNum() 获取新建EIP数目，系统将会按您的要求生产该数目个数EIP；AssignedEips和AutoAllocEipNum至少输入一个
  * @method void setAutoAllocEipNum(integer $AutoAllocEipNum) 设置新建EIP数目，系统将会按您的要求生产该数目个数EIP；AssignedEips和AutoAllocEipNum至少输入一个
- */
-
-/**
- *BindEipsToNatGateway请求参数结构体
  */
 class BindEipsToNatGatewayRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class BindEipsToNatGatewayRequest extends AbstractModel
      * @var integer 新建EIP数目，系统将会按您的要求生产该数目个数EIP；AssignedEips和AutoAllocEipNum至少输入一个
      */
     public $AutoAllocEipNum;
+
     /**
      * @param string $NatId NAT网关ID，例如：nat-kdm476mp
      * @param string $VpcId 私有网络ID，例如：vpc-kd7d06of
@@ -62,6 +61,7 @@ class BindEipsToNatGatewayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

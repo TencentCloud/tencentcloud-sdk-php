@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 违规资源封禁/解封返回类型
+ *
  * @method array getSuccessUrls() 获取成功的url列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuccessUrls(array $SuccessUrls) 设置成功的url列表
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailUrls(array $FailUrls) 设置失败的url列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *违规资源封禁/解封返回类型
  */
 class CacheOptResult extends AbstractModel
 {
@@ -44,6 +42,7 @@ class CacheOptResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailUrls;
+
     /**
      * @param array $SuccessUrls 成功的url列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class CacheOptResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

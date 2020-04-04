@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ImageModeration请求参数结构体
+ *
  * @method array getScenes() 获取本次调用支持的识别场景，可选值如下：
 1. PORN，即色情识别
 2. TERRORISM，即暴恐识别
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtra(string $Extra) 设置透传字段，透传简单信息。
  * @method string getImageBase64() 获取图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
  * @method void setImageBase64(string $ImageBase64) 设置图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
- */
-
-/**
- *ImageModeration请求参数结构体
  */
 class ImageModerationRequest extends AbstractModel
 {
@@ -92,6 +90,7 @@ class ImageModerationRequest extends AbstractModel
      * @var string 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
      */
     public $ImageBase64;
+
     /**
      * @param array $Scenes 本次调用支持的识别场景，可选值如下：
 1. PORN，即色情识别
@@ -114,6 +113,7 @@ class ImageModerationRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

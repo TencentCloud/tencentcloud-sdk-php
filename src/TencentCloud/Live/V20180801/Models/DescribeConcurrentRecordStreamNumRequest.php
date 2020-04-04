@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeConcurrentRecordStreamNum请求参数结构体
+ *
  * @method string getLiveType() 获取直播类型，SlowLive：慢直播。
 NormalLive：普通直播。
  * @method void setLiveType(string $LiveType) 设置直播类型，SlowLive：慢直播。
@@ -34,10 +36,6 @@ NormalLive：普通直播。
  * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
  * @method array getPushDomains() 获取推流域名列表，不填表示总体数据。
  * @method void setPushDomains(array $PushDomains) 设置推流域名列表，不填表示总体数据。
- */
-
-/**
- *DescribeConcurrentRecordStreamNum请求参数结构体
  */
 class DescribeConcurrentRecordStreamNumRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ NormalLive：普通直播。
      * @var array 推流域名列表，不填表示总体数据。
      */
     public $PushDomains;
+
     /**
      * @param string $LiveType 直播类型，SlowLive：慢直播。
 NormalLive：普通直播。
@@ -82,6 +81,7 @@ NormalLive：普通直播。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

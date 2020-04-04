@@ -18,6 +18,8 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BindAlarmPolicy请求参数结构体
+ *
  * @method integer getTaskId() 获取拨测任务Id
  * @method void setTaskId(integer $TaskId) 设置拨测任务Id
  * @method integer getPolicyGroupId() 获取告警策略组Id
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIfBind(integer $IfBind) 设置是否绑定操作。非0 为绑定， 0 为 解绑。缺省表示 绑定。
  * @method string getTopicId() 获取告警主题Id
  * @method void setTopicId(string $TopicId) 设置告警主题Id
- */
-
-/**
- *BindAlarmPolicy请求参数结构体
  */
 class BindAlarmPolicyRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class BindAlarmPolicyRequest extends AbstractModel
      * @var string 告警主题Id
      */
     public $TopicId;
+
     /**
      * @param integer $TaskId 拨测任务Id
      * @param integer $PolicyGroupId 告警策略组Id
@@ -62,6 +61,7 @@ class BindAlarmPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

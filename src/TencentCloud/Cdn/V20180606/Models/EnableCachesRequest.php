@@ -18,12 +18,10 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * EnableCaches请求参数结构体
+ *
  * @method array getUrls() 获取解封 URL 列表
  * @method void setUrls(array $Urls) 设置解封 URL 列表
- */
-
-/**
- *EnableCaches请求参数结构体
  */
 class EnableCachesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class EnableCachesRequest extends AbstractModel
      * @var array 解封 URL 列表
      */
     public $Urls;
+
     /**
      * @param array $Urls 解封 URL 列表
      */
@@ -38,6 +37,7 @@ class EnableCachesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

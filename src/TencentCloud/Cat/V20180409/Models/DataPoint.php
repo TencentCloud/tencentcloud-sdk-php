@@ -18,14 +18,12 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 时延等数据，数据点
+ *
  * @method string getLogTime() 获取数据点的时间
  * @method void setLogTime(string $LogTime) 设置数据点的时间
  * @method float getMetricValue() 获取数据值
  * @method void setMetricValue(float $MetricValue) 设置数据值
- */
-
-/**
- *时延等数据，数据点
  */
 class DataPoint extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DataPoint extends AbstractModel
      * @var float 数据值
      */
     public $MetricValue;
+
     /**
      * @param string $LogTime 数据点的时间
      * @param float $MetricValue 数据值
@@ -46,6 +45,7 @@ class DataPoint extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGatewayFlowMonitorDetail请求参数结构体
+ *
  * @method string getTimePoint() 获取时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
  * @method void setTimePoint(string $TimePoint) 设置时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
  * @method string getVpnId() 获取VPN网关实例ID，形如：`vpn-ltjahce6`。
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
  * @method string getOrderDirection() 获取排序方法。顺序：`ASC`，倒序：`DESC`。
  * @method void setOrderDirection(string $OrderDirection) 设置排序方法。顺序：`ASC`，倒序：`DESC`。
- */
-
-/**
- *DescribeGatewayFlowMonitorDetail请求参数结构体
  */
 class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel
      * @var string 排序方法。顺序：`ASC`，倒序：`DESC`。
      */
     public $OrderDirection;
+
     /**
      * @param string $TimePoint 时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
      * @param string $VpnId VPN网关实例ID，形如：`vpn-ltjahce6`。
@@ -102,6 +101,7 @@ class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

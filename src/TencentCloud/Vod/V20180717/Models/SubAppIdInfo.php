@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 子应用信息。
+ *
  * @method integer getSubAppId() 获取子应用 ID。
  * @method void setSubAppId(integer $SubAppId) 设置子应用 ID。
  * @method string getName() 获取子应用名称。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置子应用状态，有效值：
 <li>On：启用；</li>
 <li>Off：停用。</li>
- */
-
-/**
- *子应用信息。
  */
 class SubAppIdInfo extends AbstractModel
 {
@@ -65,6 +63,7 @@ class SubAppIdInfo extends AbstractModel
 <li>Off：停用。</li>
      */
     public $Status;
+
     /**
      * @param integer $SubAppId 子应用 ID。
      * @param string $Name 子应用名称。
@@ -78,6 +77,7 @@ class SubAppIdInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

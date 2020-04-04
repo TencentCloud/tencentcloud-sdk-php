@@ -18,6 +18,8 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GeneralHandwritingOCR请求参数结构体
+ *
  * @method string getImageBase64() 获取图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
 可选值:only_hw  表示只输出手写体识别结果，过滤印刷体。
  * @method void setScene(string $Scene) 设置场景字段，默认不用填写。
 可选值:only_hw  表示只输出手写体识别结果，过滤印刷体。
- */
-
-/**
- *GeneralHandwritingOCR请求参数结构体
  */
 class GeneralHandwritingOCRRequest extends AbstractModel
 {
@@ -69,6 +67,7 @@ class GeneralHandwritingOCRRequest extends AbstractModel
 可选值:only_hw  表示只输出手写体识别结果，过滤印刷体。
      */
     public $Scene;
+
     /**
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
@@ -86,6 +85,7 @@ class GeneralHandwritingOCRRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

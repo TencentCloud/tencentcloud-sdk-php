@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeployContainerGroup请求参数结构体
+ *
  * @method string getGroupId() 获取部署组ID，分组唯一标识
  * @method void setGroupId(string $GroupId) 设置部署组ID，分组唯一标识
  * @method string getServer() 获取镜像server
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateType(integer $UpdateType) 设置更新方式：0:快速更新 1:滚动更新
  * @method integer getUpdateIvl() 获取滚动更新必填，更新间隔
  * @method void setUpdateIvl(integer $UpdateIvl) 设置滚动更新必填，更新间隔
- */
-
-/**
- *DeployContainerGroup请求参数结构体
  */
 class DeployContainerGroupRequest extends AbstractModel
 {
@@ -122,6 +120,7 @@ class DeployContainerGroupRequest extends AbstractModel
      * @var integer 滚动更新必填，更新间隔
      */
     public $UpdateIvl;
+
     /**
      * @param string $GroupId 部署组ID，分组唯一标识
      * @param string $Server 镜像server
@@ -142,6 +141,7 @@ class DeployContainerGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

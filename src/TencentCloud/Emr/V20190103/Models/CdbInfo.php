@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 出参
+ *
  * @method string getInstanceName() 获取数据库实例
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置数据库实例
@@ -78,10 +80,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(integer $RegionId) 设置RegionId
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *出参
  */
 class CdbInfo extends AbstractModel
 {
@@ -174,6 +172,7 @@ class CdbInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
+
     /**
      * @param string $InstanceName 数据库实例
 注意：此字段可能返回 null，表示取不到有效值。
@@ -210,6 +209,7 @@ class CdbInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

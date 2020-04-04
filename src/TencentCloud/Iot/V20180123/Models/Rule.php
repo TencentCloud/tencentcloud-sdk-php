@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 规则
+ *
  * @method string getRuleId() 获取规则Id
  * @method void setRuleId(string $RuleId) 设置规则Id
  * @method integer getAppId() 获取AppId
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsgOrder(integer $MsgOrder) 设置消息顺序
  * @method integer getDataType() 获取数据类型（0：文本，1：二进制）
  * @method void setDataType(integer $DataType) 设置数据类型（0：文本，1：二进制）
- */
-
-/**
- *规则
  */
 class Rule extends AbstractModel
 {
@@ -108,6 +106,7 @@ class Rule extends AbstractModel
      * @var integer 数据类型（0：文本，1：二进制）
      */
     public $DataType;
+
     /**
      * @param string $RuleId 规则Id
      * @param integer $AppId AppId
@@ -126,6 +125,7 @@ class Rule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

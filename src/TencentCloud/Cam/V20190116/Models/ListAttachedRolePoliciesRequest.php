@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListAttachedRolePolicies请求参数结构体
+ *
  * @method integer getPage() 获取页码，从 1 开始
  * @method void setPage(integer $Page) 设置页码，从 1 开始
  * @method integer getRp() 获取每页行数，不能大于200
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleName(string $RoleName) 设置角色名。用于指定角色，入参 RoleId 与 RoleName 二选一
  * @method string getPolicyType() 获取按策略类型过滤，User表示仅查询自定义策略，QCS表示仅查询预设策略
  * @method void setPolicyType(string $PolicyType) 设置按策略类型过滤，User表示仅查询自定义策略，QCS表示仅查询预设策略
- */
-
-/**
- *ListAttachedRolePolicies请求参数结构体
  */
 class ListAttachedRolePoliciesRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ListAttachedRolePoliciesRequest extends AbstractModel
      * @var string 按策略类型过滤，User表示仅查询自定义策略，QCS表示仅查询预设策略
      */
     public $PolicyType;
+
     /**
      * @param integer $Page 页码，从 1 开始
      * @param integer $Rp 每页行数，不能大于200
@@ -70,6 +69,7 @@ class ListAttachedRolePoliciesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UploadDataFile请求参数结构体
+ *
  * @method string getModule() 获取模块名，本接口取值：Data
  * @method void setModule(string $Module) 设置模块名，本接口取值：Data
  * @method string getOperation() 获取操作名，本接口取值：Upload
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileUrl(string $FileUrl) 设置文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
  * @method string getInstId() 获取实例ID，不传默认为系统分配的初始实例。
  * @method void setInstId(string $InstId) 设置实例ID，不传默认为系统分配的初始实例。
- */
-
-/**
- *UploadDataFile请求参数结构体
  */
 class UploadDataFileRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class UploadDataFileRequest extends AbstractModel
      * @var string 实例ID，不传默认为系统分配的初始实例。
      */
     public $InstId;
+
     /**
      * @param string $Module 模块名，本接口取值：Data
      * @param string $Operation 操作名，本接口取值：Upload
@@ -86,6 +85,7 @@ class UploadDataFileRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

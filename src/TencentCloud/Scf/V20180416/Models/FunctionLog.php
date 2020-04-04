@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 日志信息
+ *
  * @method string getFunctionName() 获取函数的名称
  * @method void setFunctionName(string $FunctionName) 设置函数的名称
  * @method string getRetMsg() 获取函数执行完成后的返回值
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLevel(string $Level) 设置日志等级
  * @method string getSource() 获取日志来源
  * @method void setSource(string $Source) 设置日志来源
- */
-
-/**
- *日志信息
  */
 class FunctionLog extends AbstractModel
 {
@@ -108,6 +106,7 @@ class FunctionLog extends AbstractModel
      * @var string 日志来源
      */
     public $Source;
+
     /**
      * @param string $FunctionName 函数的名称
      * @param string $RetMsg 函数执行完成后的返回值
@@ -126,6 +125,7 @@ class FunctionLog extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

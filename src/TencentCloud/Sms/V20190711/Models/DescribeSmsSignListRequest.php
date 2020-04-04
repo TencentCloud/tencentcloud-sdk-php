@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSmsSignList请求参数结构体
+ *
  * @method array getSignIdSet() 获取签名 ID 数组。
  * @method void setSignIdSet(array $SignIdSet) 设置签名 ID 数组。
  * @method integer getInternational() 获取是否国际/港澳台短信：
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternational(integer $International) 设置是否国际/港澳台短信：
 0：表示国内短信。
 1：表示国际/港澳台短信。
- */
-
-/**
- *DescribeSmsSignList请求参数结构体
  */
 class DescribeSmsSignListRequest extends AbstractModel
 {
@@ -44,6 +42,7 @@ class DescribeSmsSignListRequest extends AbstractModel
 1：表示国际/港澳台短信。
      */
     public $International;
+
     /**
      * @param array $SignIdSet 签名 ID 数组。
      * @param integer $International 是否国际/港澳台短信：
@@ -54,6 +53,7 @@ class DescribeSmsSignListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAccountRemark请求参数结构体
+ *
  * @method string getDBInstanceId() 获取实例ID，形如postgres-4wdeb0zv
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-4wdeb0zv
  * @method string getUserName() 获取实例用户名
  * @method void setUserName(string $UserName) 设置实例用户名
  * @method string getRemark() 获取用户UserName对应的新备注
  * @method void setRemark(string $Remark) 设置用户UserName对应的新备注
- */
-
-/**
- *ModifyAccountRemark请求参数结构体
  */
 class ModifyAccountRemarkRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyAccountRemarkRequest extends AbstractModel
      * @var string 用户UserName对应的新备注
      */
     public $Remark;
+
     /**
      * @param string $DBInstanceId 实例ID，形如postgres-4wdeb0zv
      * @param string $UserName 实例用户名
@@ -54,6 +53,7 @@ class ModifyAccountRemarkRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

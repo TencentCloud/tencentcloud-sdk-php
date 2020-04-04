@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用于回档的数据库表名
+ *
  * @method string getTableName() 获取回档前的原数据库表名
  * @method void setTableName(string $TableName) 设置回档前的原数据库表名
  * @method string getNewTableName() 获取回档后的新数据库表名
  * @method void setNewTableName(string $NewTableName) 设置回档后的新数据库表名
- */
-
-/**
- *用于回档的数据库表名
  */
 class RollbackTableName extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RollbackTableName extends AbstractModel
      * @var string 回档后的新数据库表名
      */
     public $NewTableName;
+
     /**
      * @param string $TableName 回档前的原数据库表名
      * @param string $NewTableName 回档后的新数据库表名
@@ -46,6 +45,7 @@ class RollbackTableName extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

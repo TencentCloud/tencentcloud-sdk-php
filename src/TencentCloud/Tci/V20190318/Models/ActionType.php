@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 动作行为子类型
+ *
  * @method float getConfidence() 获取置信度
  * @method void setConfidence(float $Confidence) 设置置信度
  * @method string getType() 获取动作类别
  * @method void setType(string $Type) 设置动作类别
- */
-
-/**
- *动作行为子类型
  */
 class ActionType extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ActionType extends AbstractModel
      * @var string 动作类别
      */
     public $Type;
+
     /**
      * @param float $Confidence 置信度
      * @param string $Type 动作类别
@@ -46,6 +45,7 @@ class ActionType extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

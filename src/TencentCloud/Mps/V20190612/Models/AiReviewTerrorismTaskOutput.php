@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 暴恐信息
+ *
  * @method float getConfidence() 获取视频暴恐评分，分值为0到100。
  * @method void setConfidence(float $Confidence) 设置视频暴恐评分，分值为0到100。
  * @method string getSuggestion() 获取暴恐结果建议，取值范围：
@@ -48,10 +50,6 @@ use TencentCloud\Common\AbstractModel;
 <li>terrorists：暴恐人物。</li>
  * @method array getSegmentSet() 获取有暴恐嫌疑的视频片段列表。
  * @method void setSegmentSet(array $SegmentSet) 设置有暴恐嫌疑的视频片段列表。
- */
-
-/**
- *暴恐信息
  */
 class AiReviewTerrorismTaskOutput extends AbstractModel
 {
@@ -85,6 +83,7 @@ class AiReviewTerrorismTaskOutput extends AbstractModel
      * @var array 有暴恐嫌疑的视频片段列表。
      */
     public $SegmentSet;
+
     /**
      * @param float $Confidence 视频暴恐评分，分值为0到100。
      * @param string $Suggestion 暴恐结果建议，取值范围：
@@ -106,6 +105,7 @@ class AiReviewTerrorismTaskOutput extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

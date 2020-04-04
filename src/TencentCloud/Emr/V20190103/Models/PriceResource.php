@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 询价资源
+ *
  * @method string getSpec() 获取需要的规格
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpec(string $Spec) 设置需要的规格
@@ -70,10 +72,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalDiskNum(integer $LocalDiskNum) 设置本地盘的数量
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *询价资源
  */
 class PriceResource extends AbstractModel
 {
@@ -154,6 +152,7 @@ class PriceResource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalDiskNum;
+
     /**
      * @param string $Spec 需要的规格
 注意：此字段可能返回 null，表示取不到有效值。
@@ -186,6 +185,7 @@ class PriceResource extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

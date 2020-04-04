@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSubnets请求参数结构体
+ *
  * @method string getVpcId() 获取`VPC`实例`ID`。形如：`vpc-6v2ht8q5`
  * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。形如：`vpc-6v2ht8q5`
  * @method array getSubnets() 获取子网对象列表。
  * @method void setSubnets(array $Subnets) 设置子网对象列表。
  * @method array getTags() 获取指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
- */
-
-/**
- *CreateSubnets请求参数结构体
  */
 class CreateSubnetsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateSubnetsRequest extends AbstractModel
      * @var array 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     public $Tags;
+
     /**
      * @param string $VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
      * @param array $Subnets 子网对象列表。
@@ -54,6 +53,7 @@ class CreateSubnetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

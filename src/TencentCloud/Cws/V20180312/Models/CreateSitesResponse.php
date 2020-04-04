@@ -18,16 +18,14 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSites返回参数结构体
+ *
  * @method integer getNumber() 获取新增站点数。
  * @method void setNumber(integer $Number) 设置新增站点数。
  * @method array getSites() 获取站点数组
  * @method void setSites(array $Sites) 设置站点数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateSites返回参数结构体
  */
 class CreateSitesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateSitesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Number 新增站点数。
      * @param array $Sites 站点数组
@@ -54,6 +53,7 @@ class CreateSitesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

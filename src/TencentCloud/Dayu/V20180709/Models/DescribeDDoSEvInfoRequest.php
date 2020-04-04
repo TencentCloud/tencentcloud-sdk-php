@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDDoSEvInfo请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method string getId() 获取资源ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置攻击开始时间
  * @method string getEndTime() 获取攻击结束时间
  * @method void setEndTime(string $EndTime) 设置攻击结束时间
- */
-
-/**
- *DescribeDDoSEvInfo请求参数结构体
  */
 class DescribeDDoSEvInfoRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeDDoSEvInfoRequest extends AbstractModel
      * @var string 攻击结束时间
      */
     public $EndTime;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param string $Id 资源ID
@@ -70,6 +69,7 @@ class DescribeDDoSEvInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

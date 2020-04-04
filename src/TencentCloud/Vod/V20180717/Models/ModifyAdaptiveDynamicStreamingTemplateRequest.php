@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyAdaptiveDynamicStreamingTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取自适应转码模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置自适应转码模板唯一标识。
  * @method string getName() 获取模板名称，长度限制：64 个字符。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
 注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
- */
-
-/**
- *ModifyAdaptiveDynamicStreamingTemplate请求参数结构体
  */
 class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
@@ -91,6 +89,7 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
      * @var string 模板描述信息，长度限制：256 个字符。
      */
     public $Comment;
+
     /**
      * @param integer $Definition 自适应转码模板唯一标识。
      * @param string $Name 模板名称，长度限制：64 个字符。
@@ -110,6 +109,7 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

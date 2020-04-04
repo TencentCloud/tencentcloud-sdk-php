@@ -18,12 +18,10 @@ namespace TencentCloud\Batch\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TerminateJob请求参数结构体
+ *
  * @method string getJobId() 获取作业ID
  * @method void setJobId(string $JobId) 设置作业ID
- */
-
-/**
- *TerminateJob请求参数结构体
  */
 class TerminateJobRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class TerminateJobRequest extends AbstractModel
      * @var string 作业ID
      */
     public $JobId;
+
     /**
      * @param string $JobId 作业ID
      */
@@ -38,6 +37,7 @@ class TerminateJobRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

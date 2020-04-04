@@ -18,6 +18,8 @@ namespace TencentCloud\Chdfs\V20190718\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 文件系统
+ *
  * @method integer getAppId() 获取appid
  * @method void setAppId(integer $AppId) 设置appid
  * @method string getFileSystemName() 获取文件系统名称
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCapacityQuota(integer $CapacityQuota) 设置文件系统容量（byte）
  * @method integer getStatus() 获取文件系统状态（1：创建中；2：创建成功；3：创建失败）
  * @method void setStatus(integer $Status) 设置文件系统状态（1：创建中；2：创建成功；3：创建失败）
- */
-
-/**
- *文件系统
  */
 class FileSystem extends AbstractModel
 {
@@ -87,6 +85,7 @@ class FileSystem extends AbstractModel
      * @var integer 文件系统状态（1：创建中；2：创建成功；3：创建失败）
      */
     public $Status;
+
     /**
      * @param integer $AppId appid
      * @param string $FileSystemName 文件系统名称
@@ -102,6 +101,7 @@ class FileSystem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 含有语速的句子信息
+ *
  * @method TextItem getTextItem() 获取当前句子的信息
  * @method void setTextItem(TextItem $TextItem) 设置当前句子的信息
  * @method float getAvgVolume() 获取Vad的平均音量
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinVolume(float $MinVolume) 设置Vad的最小音量
  * @method float getSpeed() 获取当前句子的语速
  * @method void setSpeed(float $Speed) 设置当前句子的语速
- */
-
-/**
- *含有语速的句子信息
  */
 class WholeTextItem extends AbstractModel
 {
@@ -59,6 +57,7 @@ class WholeTextItem extends AbstractModel
      * @var float 当前句子的语速
      */
     public $Speed;
+
     /**
      * @param TextItem $TextItem 当前句子的信息
      * @param float $AvgVolume Vad的平均音量
@@ -70,6 +69,7 @@ class WholeTextItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

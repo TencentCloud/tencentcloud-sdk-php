@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人员库描述
+ *
  * @method string getCreateTime() 获取人员库创建时间
  * @method void setCreateTime(string $CreateTime) 设置人员库创建时间
  * @method string getLibraryId() 获取人员库唯一标识符
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPersonCount(integer $PersonCount) 设置人员库人员数量
  * @method string getUpdateTime() 获取人员库修改时间
  * @method void setUpdateTime(string $UpdateTime) 设置人员库修改时间
- */
-
-/**
- *人员库描述
  */
 class Library extends AbstractModel
 {
@@ -59,6 +57,7 @@ class Library extends AbstractModel
      * @var string 人员库修改时间
      */
     public $UpdateTime;
+
     /**
      * @param string $CreateTime 人员库创建时间
      * @param string $LibraryId 人员库唯一标识符
@@ -70,6 +69,7 @@ class Library extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人脸表情统计结果
+ *
  * @method string getPersonId() 获取人员唯一标识符
  * @method void setPersonId(string $PersonId) 设置人员唯一标识符
  * @method array getExpressRatio() 获取表情统计结果
  * @method void setExpressRatio(array $ExpressRatio) 设置表情统计结果
- */
-
-/**
- *人脸表情统计结果
  */
 class FaceExpressStatistic extends AbstractModel
 {
@@ -38,6 +36,7 @@ class FaceExpressStatistic extends AbstractModel
      * @var array 表情统计结果
      */
     public $ExpressRatio;
+
     /**
      * @param string $PersonId 人员唯一标识符
      * @param array $ExpressRatio 表情统计结果
@@ -46,6 +45,7 @@ class FaceExpressStatistic extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

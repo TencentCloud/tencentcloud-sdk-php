@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeHistoryAccounts请求参数结构体
+ *
  * @method string getUuid() 获取云镜客户端唯一Uuid。
  * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid。
  * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Username - String - 是否必填：否 - 帐号名</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>Username - String - 是否必填：否 - 帐号名</li>
- */
-
-/**
- *DescribeHistoryAccounts请求参数结构体
  */
 class DescribeHistoryAccountsRequest extends AbstractModel
 {
@@ -55,6 +53,7 @@ class DescribeHistoryAccountsRequest extends AbstractModel
 <li>Username - String - 是否必填：否 - 帐号名</li>
      */
     public $Filters;
+
     /**
      * @param string $Uuid 云镜客户端唯一Uuid。
      * @param integer $Limit 返回数量，默认为10，最大值为100。
@@ -66,6 +65,7 @@ class DescribeHistoryAccountsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

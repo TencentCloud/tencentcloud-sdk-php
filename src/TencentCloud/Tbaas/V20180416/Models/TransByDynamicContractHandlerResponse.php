@@ -18,14 +18,12 @@ namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * TransByDynamicContractHandler返回参数结构体
+ *
  * @method string getTransactionRsp() 获取交易结果json字符串
  * @method void setTransactionRsp(string $TransactionRsp) 设置交易结果json字符串
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *TransByDynamicContractHandler返回参数结构体
  */
 class TransByDynamicContractHandlerResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TransByDynamicContractHandlerResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $TransactionRsp 交易结果json字符串
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class TransByDynamicContractHandlerResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

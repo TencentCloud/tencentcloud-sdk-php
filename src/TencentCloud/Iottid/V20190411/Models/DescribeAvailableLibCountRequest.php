@@ -18,12 +18,10 @@ namespace TencentCloud\Iottid\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAvailableLibCount请求参数结构体
+ *
  * @method string getOrderId() 获取订单编号
  * @method void setOrderId(string $OrderId) 设置订单编号
- */
-
-/**
- *DescribeAvailableLibCount请求参数结构体
  */
 class DescribeAvailableLibCountRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeAvailableLibCountRequest extends AbstractModel
      * @var string 订单编号
      */
     public $OrderId;
+
     /**
      * @param string $OrderId 订单编号
      */
@@ -38,6 +37,7 @@ class DescribeAvailableLibCountRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DestroyEnv请求参数结构体
+ *
  * @method string getEnvId() 获取环境Id
  * @method void setEnvId(string $EnvId) 设置环境Id
  * @method boolean getIsForce() 获取针对预付费 删除隔离中的环境时要传true 正常环境直接跳过隔离期删除
  * @method void setIsForce(boolean $IsForce) 设置针对预付费 删除隔离中的环境时要传true 正常环境直接跳过隔离期删除
- */
-
-/**
- *DestroyEnv请求参数结构体
  */
 class DestroyEnvRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DestroyEnvRequest extends AbstractModel
      * @var boolean 针对预付费 删除隔离中的环境时要传true 正常环境直接跳过隔离期删除
      */
     public $IsForce;
+
     /**
      * @param string $EnvId 环境Id
      * @param boolean $IsForce 针对预付费 删除隔离中的环境时要传true 正常环境直接跳过隔离期删除
@@ -46,6 +45,7 @@ class DestroyEnvRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

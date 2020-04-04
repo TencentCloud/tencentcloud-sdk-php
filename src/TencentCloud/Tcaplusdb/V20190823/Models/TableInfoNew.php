@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 表格详情信息
+ *
  * @method string getTableName() 获取表格名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableName(string $TableName) 设置表格名称
@@ -122,10 +124,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSortRule(integer $SortRule) 设置SORTLIST类型表格排序顺序
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *表格详情信息
  */
 class TableInfoNew extends AbstractModel
 {
@@ -284,6 +282,7 @@ class TableInfoNew extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SortRule;
+
     /**
      * @param string $TableName 表格名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -342,6 +341,7 @@ class TableInfoNew extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

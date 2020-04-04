@@ -18,6 +18,8 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeConfig返回参数结构体
+ *
  * @method string getNoticeLevel() 获取漏洞告警通知等级，4位分别代表：高危、中危、低危、提示。
  * @method void setNoticeLevel(string $NoticeLevel) 设置漏洞告警通知等级，4位分别代表：高危、中危、低危、提示。
  * @method integer getId() 获取配置ID。
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContentLevel(integer $ContentLevel) 设置内容检测通知等级-1:通知,0-不通知
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeConfig返回参数结构体
  */
 class DescribeConfigResponse extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeConfigResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $NoticeLevel 漏洞告警通知等级，4位分别代表：高危、中危、低危、提示。
      * @param integer $Id 配置ID。
@@ -86,6 +85,7 @@ class DescribeConfigResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 获取设备绑定信息时返回的所绑定的主机信息。
+ *
  * @method string getInstanceId() 获取黑石物理机的主机ID、托管主机ID或虚拟机IP。
  * @method void setInstanceId(string $InstanceId) 设置黑石物理机的主机ID、托管主机ID或虚拟机IP。
  * @method integer getPort() 获取主机端口。
  * @method void setPort(integer $Port) 设置主机端口。
- */
-
-/**
- *获取设备绑定信息时返回的所绑定的主机信息。
  */
 class DevicesBindInfoBackend extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DevicesBindInfoBackend extends AbstractModel
      * @var integer 主机端口。
      */
     public $Port;
+
     /**
      * @param string $InstanceId 黑石物理机的主机ID、托管主机ID或虚拟机IP。
      * @param integer $Port 主机端口。
@@ -46,6 +45,7 @@ class DevicesBindInfoBackend extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

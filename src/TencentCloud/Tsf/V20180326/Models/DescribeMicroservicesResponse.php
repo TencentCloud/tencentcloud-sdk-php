@@ -18,16 +18,14 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeMicroservices返回参数结构体
+ *
  * @method TsfPageMicroservice getResult() 获取微服务分页列表信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(TsfPageMicroservice $Result) 设置微服务分页列表信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeMicroservices返回参数结构体
  */
 class DescribeMicroservicesResponse extends AbstractModel
 {
@@ -41,6 +39,7 @@ class DescribeMicroservicesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param TsfPageMicroservice $Result 微服务分页列表信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,6 +49,7 @@ class DescribeMicroservicesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

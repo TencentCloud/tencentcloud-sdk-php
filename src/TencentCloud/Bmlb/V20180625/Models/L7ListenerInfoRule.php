@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询绑定了某主机的七层监听器时返回的转发规则。
+ *
  * @method string getDomain() 获取转发域名。
  * @method void setDomain(string $Domain) 设置转发域名。
  * @method string getDomainId() 获取转发域名实例ID。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddTimestamp(string $AddTimestamp) 设置创建时间戳。
  * @method array getLocationSet() 获取该转发域名下面的转发路径列表。
  * @method void setLocationSet(array $LocationSet) 设置该转发域名下面的转发路径列表。
- */
-
-/**
- *查询绑定了某主机的七层监听器时返回的转发规则。
  */
 class L7ListenerInfoRule extends AbstractModel
 {
@@ -59,6 +57,7 @@ class L7ListenerInfoRule extends AbstractModel
      * @var array 该转发域名下面的转发路径列表。
      */
     public $LocationSet;
+
     /**
      * @param string $Domain 转发域名。
      * @param string $DomainId 转发域名实例ID。
@@ -70,6 +69,7 @@ class L7ListenerInfoRule extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

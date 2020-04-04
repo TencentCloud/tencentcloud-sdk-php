@@ -18,14 +18,12 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * WordSimilarity请求参数结构体
+ *
  * @method string getSrcWord() 获取计算相似度的源词（仅支持UTF-8格式，不超过20字）
  * @method void setSrcWord(string $SrcWord) 设置计算相似度的源词（仅支持UTF-8格式，不超过20字）
  * @method string getTargetWord() 获取计算相似度的目标词（仅支持UTF-8格式，不超过20字）
  * @method void setTargetWord(string $TargetWord) 设置计算相似度的目标词（仅支持UTF-8格式，不超过20字）
- */
-
-/**
- *WordSimilarity请求参数结构体
  */
 class WordSimilarityRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class WordSimilarityRequest extends AbstractModel
      * @var string 计算相似度的目标词（仅支持UTF-8格式，不超过20字）
      */
     public $TargetWord;
+
     /**
      * @param string $SrcWord 计算相似度的源词（仅支持UTF-8格式，不超过20字）
      * @param string $TargetWord 计算相似度的目标词（仅支持UTF-8格式，不超过20字）
@@ -46,6 +45,7 @@ class WordSimilarityRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

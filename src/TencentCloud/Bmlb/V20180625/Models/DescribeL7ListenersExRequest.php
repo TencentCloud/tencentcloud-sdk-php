@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeL7ListenersEx请求参数结构体
+ *
  * @method string getTrafficMirrorId() 获取返回的监听器中标识是否绑定在此流量镜像中。
  * @method void setTrafficMirrorId(string $TrafficMirrorId) 设置返回的监听器中标识是否绑定在此流量镜像中。
  * @method string getVpcId() 获取待获取监听器所在的VPC的ID。
@@ -42,10 +44,6 @@ ListenerId - String - （过滤条件）监听器ID。
 ListenerName -  String - （过滤条件）监听器名称。
 Protocol -  String - （过滤条件）七层协议。
 LoadBalancerPort -  String - （过滤条件）监听器端口。
- */
-
-/**
- *DescribeL7ListenersEx请求参数结构体
  */
 class DescribeL7ListenersExRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ Protocol -  String - （过滤条件）七层协议。
 LoadBalancerPort -  String - （过滤条件）监听器端口。
      */
     public $Filters;
+
     /**
      * @param string $TrafficMirrorId 返回的监听器中标识是否绑定在此流量镜像中。
      * @param string $VpcId 待获取监听器所在的VPC的ID。
@@ -98,6 +97,7 @@ LoadBalancerPort -  String - （过滤条件）监听器端口。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

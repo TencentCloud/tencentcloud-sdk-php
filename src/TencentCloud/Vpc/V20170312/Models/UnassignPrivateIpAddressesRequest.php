@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnassignPrivateIpAddresses请求参数结构体
+ *
  * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method array getPrivateIpAddresses() 获取指定的内网IP信息，单次最多指定10个。
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息，单次最多指定10个。
- */
-
-/**
- *UnassignPrivateIpAddresses请求参数结构体
  */
 class UnassignPrivateIpAddressesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class UnassignPrivateIpAddressesRequest extends AbstractModel
      * @var array 指定的内网IP信息，单次最多指定10个。
      */
     public $PrivateIpAddresses;
+
     /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      * @param array $PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
@@ -46,6 +45,7 @@ class UnassignPrivateIpAddressesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

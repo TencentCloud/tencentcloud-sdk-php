@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyCCLevel请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
  * @method string getId() 获取资源ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
  * @method string getRuleId() 获取表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
  * @method void setRuleId(string $RuleId) 设置表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
- */
-
-/**
- *ModifyCCLevel请求参数结构体
  */
 class ModifyCCLevelRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ModifyCCLevelRequest extends AbstractModel
      * @var string 表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
      */
     public $RuleId;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param string $Id 资源ID
@@ -70,6 +69,7 @@ class ModifyCCLevelRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

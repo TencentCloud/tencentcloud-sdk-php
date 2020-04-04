@@ -18,6 +18,8 @@ namespace TencentCloud\Yunsou\V20191115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 搜索结果
+ *
  * @method integer getCostTime() 获取检索耗时，单位ms
  * @method void setCostTime(integer $CostTime) 设置检索耗时，单位ms
  * @method integer getDisplayNum() 获取搜索最多可以展示的结果数，多页
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegList(array $SegList) 设置检索的分词结果，array类型，可包含多个
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *搜索结果
  */
 class SearchResult extends AbstractModel
 {
@@ -79,6 +77,7 @@ class SearchResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegList;
+
     /**
      * @param integer $CostTime 检索耗时，单位ms
      * @param integer $DisplayNum 搜索最多可以展示的结果数，多页
@@ -94,6 +93,7 @@ class SearchResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

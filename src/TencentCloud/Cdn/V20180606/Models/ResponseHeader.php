@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 自定义响应头配置，默认为关闭状态
+ *
  * @method string getSwitch() 获取自定义响应头开关
 on：开启
 off：关闭
@@ -28,10 +30,6 @@ off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeaderRules(array $HeaderRules) 设置自定义响应头规则
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *自定义响应头配置，默认为关闭状态
  */
 class ResponseHeader extends AbstractModel
 {
@@ -47,6 +45,7 @@ off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeaderRules;
+
     /**
      * @param string $Switch 自定义响应头开关
 on：开启
@@ -58,6 +57,7 @@ off：关闭
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

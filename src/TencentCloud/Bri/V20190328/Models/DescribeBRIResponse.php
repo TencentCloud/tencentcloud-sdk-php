@@ -18,14 +18,12 @@ namespace TencentCloud\Bri\V20190328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBRI返回参数结构体
+ *
  * @method BRIResponse getResponseData() 获取业务风险情报响应体
  * @method void setResponseData(BRIResponse $ResponseData) 设置业务风险情报响应体
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeBRI返回参数结构体
  */
 class DescribeBRIResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeBRIResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param BRIResponse $ResponseData 业务风险情报响应体
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeBRIResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

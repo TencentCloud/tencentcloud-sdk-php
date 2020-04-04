@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ImageModeration返回参数结构体
+ *
  * @method string getSuggestion() 获取识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
@@ -46,10 +48,6 @@ BLOCK：违规
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ImageModeration返回参数结构体
  */
 class ImageModerationResponse extends AbstractModel
 {
@@ -94,6 +92,7 @@ BLOCK：违规
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Suggestion 识别场景的审核结论：
 PASS：正常
@@ -114,6 +113,7 @@ BLOCK：违规
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

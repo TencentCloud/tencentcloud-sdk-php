@@ -18,6 +18,8 @@ namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 实例诊断历史事件
+ *
  * @method string getDiagType() 获取诊断类型。
  * @method void setDiagType(string $DiagType) 设置诊断类型。
  * @method string getEndTime() 获取结束时间。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *实例诊断历史事件
  */
 class DiagHistoryEventItem extends AbstractModel
 {
@@ -103,6 +101,7 @@ class DiagHistoryEventItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
+
     /**
      * @param string $DiagType 诊断类型。
      * @param string $EndTime 结束时间。
@@ -122,6 +121,7 @@ class DiagHistoryEventItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

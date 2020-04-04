@@ -18,16 +18,14 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RestoreInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取待操作的实例ID，可通过 DescribeRedis 接口返回值中的 redisId 获取。
  * @method void setInstanceId(string $InstanceId) 设置待操作的实例ID，可通过 DescribeRedis 接口返回值中的 redisId 获取。
  * @method string getBackupId() 获取备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
  * @method void setBackupId(string $BackupId) 设置备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
  * @method string getPassword() 获取实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
  * @method void setPassword(string $Password) 设置实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
- */
-
-/**
- *RestoreInstance请求参数结构体
  */
 class RestoreInstanceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class RestoreInstanceRequest extends AbstractModel
      * @var string 实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
      */
     public $Password;
+
     /**
      * @param string $InstanceId 待操作的实例ID，可通过 DescribeRedis 接口返回值中的 redisId 获取。
      * @param string $BackupId 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
@@ -54,6 +53,7 @@ class RestoreInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

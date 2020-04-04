@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisassociateSecurityGroups请求参数结构体
+ *
  * @method string getSecurityGroupId() 获取安全组 ID。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组 ID。
  * @method array getInstanceIds() 获取实例 ID 列表，一个或者多个实例 ID 组成的数组。
  * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表，一个或者多个实例 ID 组成的数组。
- */
-
-/**
- *DisassociateSecurityGroups请求参数结构体
  */
 class DisassociateSecurityGroupsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
      * @var array 实例 ID 列表，一个或者多个实例 ID 组成的数组。
      */
     public $InstanceIds;
+
     /**
      * @param string $SecurityGroupId 安全组 ID。
      * @param array $InstanceIds 实例 ID 列表，一个或者多个实例 ID 组成的数组。
@@ -46,6 +45,7 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

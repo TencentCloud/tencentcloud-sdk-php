@@ -18,12 +18,10 @@ namespace TencentCloud\Npp\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCallerDisplayList请求参数结构体
+ *
  * @method string getBizAppId() 获取业务appid
  * @method void setBizAppId(string $BizAppId) 设置业务appid
- */
-
-/**
- *DescribeCallerDisplayList请求参数结构体
  */
 class DescribeCallerDisplayListRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeCallerDisplayListRequest extends AbstractModel
      * @var string 业务appid
      */
     public $BizAppId;
+
     /**
      * @param string $BizAppId 业务appid
      */
@@ -38,6 +37,7 @@ class DescribeCallerDisplayListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

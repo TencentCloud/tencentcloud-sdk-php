@@ -18,6 +18,8 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTask返回参数结构体
+ *
  * @method string getType() 获取任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
  * @method void setType(string $Type) 设置任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
  * @method string getId() 获取任务 ID
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDoneDeviceCnt(integer $DoneDeviceCnt) 设置已完成任务的设备数目
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeTask返回参数结构体
  */
 class DescribeTaskResponse extends AbstractModel
 {
@@ -122,6 +120,7 @@ class DescribeTaskResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Type 任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
      * @param string $Id 任务 ID
@@ -142,6 +141,7 @@ class DescribeTaskResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图片违法详情
+ *
  * @method integer getEvilType() 获取恶意类型
 100：正常 
 20006：涉毒违法
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) 设置违法标签：返回违法特征中文描述，如赌桌，枪支
  * @method integer getScore() 获取违法分：分值范围 0-100，分数越高违法倾向越明显
  * @method void setScore(integer $Score) 设置违法分：分值范围 0-100，分数越高违法倾向越明显
- */
-
-/**
- *图片违法详情
  */
 class ImageIllegalDetect extends AbstractModel
 {
@@ -65,6 +63,7 @@ class ImageIllegalDetect extends AbstractModel
      * @var integer 违法分：分值范围 0-100，分数越高违法倾向越明显
      */
     public $Score;
+
     /**
      * @param integer $EvilType 恶意类型
 100：正常 
@@ -78,6 +77,7 @@ class ImageIllegalDetect extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

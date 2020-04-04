@@ -18,6 +18,8 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 表处理结果信息
+ *
  * @method string getTableInstanceId() 获取表格实例ID，形如：tcaplus-3be64cbb
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableInstanceId(string $TableInstanceId) 设置表格实例ID，形如：tcaplus-3be64cbb
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskIds(array $TaskIds) 设置任务ID列表，对于创建多任务的接口有效
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *表处理结果信息
  */
 class TableResultNew extends AbstractModel
 {
@@ -104,6 +102,7 @@ class TableResultNew extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskIds;
+
     /**
      * @param string $TableInstanceId 表格实例ID，形如：tcaplus-3be64cbb
 注意：此字段可能返回 null，表示取不到有效值。
@@ -126,6 +125,7 @@ class TableResultNew extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

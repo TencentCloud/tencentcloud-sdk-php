@@ -18,14 +18,12 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述了网络计费
+ *
  * @method string getInternetChargeType() 获取网络计费模式。
  * @method void setInternetChargeType(string $InternetChargeType) 设置网络计费模式。
  * @method string getDescription() 获取网络计费模式描述信息。
  * @method void setDescription(string $Description) 设置网络计费模式描述信息。
- */
-
-/**
- *描述了网络计费
  */
 class InternetChargeTypeConfig extends AbstractModel
 {
@@ -38,6 +36,7 @@ class InternetChargeTypeConfig extends AbstractModel
      * @var string 网络计费模式描述信息。
      */
     public $Description;
+
     /**
      * @param string $InternetChargeType 网络计费模式。
      * @param string $Description 网络计费模式描述信息。
@@ -46,6 +45,7 @@ class InternetChargeTypeConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateNatGatewayDestinationIpPortTranslationNatRule请求参数结构体
+ *
  * @method string getNatGatewayId() 获取NAT网关的ID，形如：`nat-df45454`。
  * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID，形如：`nat-df45454`。
  * @method array getDestinationIpPortTranslationNatRules() 获取NAT网关的端口转换规则。
  * @method void setDestinationIpPortTranslationNatRules(array $DestinationIpPortTranslationNatRules) 设置NAT网关的端口转换规则。
- */
-
-/**
- *CreateNatGatewayDestinationIpPortTranslationNatRule请求参数结构体
  */
 class CreateNatGatewayDestinationIpPortTranslationNatRuleRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateNatGatewayDestinationIpPortTranslationNatRuleRequest extends Abstrac
      * @var array NAT网关的端口转换规则。
      */
     public $DestinationIpPortTranslationNatRules;
+
     /**
      * @param string $NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      * @param array $DestinationIpPortTranslationNatRules NAT网关的端口转换规则。
@@ -46,6 +45,7 @@ class CreateNatGatewayDestinationIpPortTranslationNatRuleRequest extends Abstrac
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

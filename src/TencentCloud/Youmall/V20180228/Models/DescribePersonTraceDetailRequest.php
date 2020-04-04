@@ -18,16 +18,14 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePersonTraceDetail请求参数结构体
+ *
  * @method string getMallId() 获取卖场编码
  * @method void setMallId(string $MallId) 设置卖场编码
  * @method string getPersonId() 获取客户编码
  * @method void setPersonId(string $PersonId) 设置客户编码
  * @method string getTraceId() 获取轨迹编码
  * @method void setTraceId(string $TraceId) 设置轨迹编码
- */
-
-/**
- *DescribePersonTraceDetail请求参数结构体
  */
 class DescribePersonTraceDetailRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribePersonTraceDetailRequest extends AbstractModel
      * @var string 轨迹编码
      */
     public $TraceId;
+
     /**
      * @param string $MallId 卖场编码
      * @param string $PersonId 客户编码
@@ -54,6 +53,7 @@ class DescribePersonTraceDetailRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

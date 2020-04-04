@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccidentEventList接口的出参类型
+ *
  * @method string getBusinessTypeDesc() 获取事件分类
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessTypeDesc(string $BusinessTypeDesc) 设置事件分类
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DescribeAccidentEventList接口的出参类型
  */
 class DescribeAccidentEventListAlarms extends AbstractModel
 {
@@ -104,6 +102,7 @@ class DescribeAccidentEventListAlarms extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
+
     /**
      * @param string $BusinessTypeDesc 事件分类
 注意：此字段可能返回 null，表示取不到有效值。
@@ -126,6 +125,7 @@ class DescribeAccidentEventListAlarms extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

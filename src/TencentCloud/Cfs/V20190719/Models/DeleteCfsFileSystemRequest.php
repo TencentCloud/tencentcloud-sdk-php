@@ -18,12 +18,10 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCfsFileSystem请求参数结构体
+ *
  * @method string getFileSystemId() 获取文件系统 ID。说明，进行删除文件系统操作前需要先调用 DeleteMountTarget 接口删除该文件系统的挂载点，否则会删除失败。
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID。说明，进行删除文件系统操作前需要先调用 DeleteMountTarget 接口删除该文件系统的挂载点，否则会删除失败。
- */
-
-/**
- *DeleteCfsFileSystem请求参数结构体
  */
 class DeleteCfsFileSystemRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteCfsFileSystemRequest extends AbstractModel
      * @var string 文件系统 ID。说明，进行删除文件系统操作前需要先调用 DeleteMountTarget 接口删除该文件系统的挂载点，否则会删除失败。
      */
     public $FileSystemId;
+
     /**
      * @param string $FileSystemId 文件系统 ID。说明，进行删除文件系统操作前需要先调用 DeleteMountTarget 接口删除该文件系统的挂载点，否则会删除失败。
      */
@@ -38,6 +37,7 @@ class DeleteCfsFileSystemRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

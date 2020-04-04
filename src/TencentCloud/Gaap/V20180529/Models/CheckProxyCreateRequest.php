@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CheckProxyCreate请求参数结构体
+ *
  * @method string getAccessRegion() 获取通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
  * @method void setAccessRegion(string $AccessRegion) 设置通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
  * @method string getRealServerRegion() 获取通道的源站区域。取值可通过接口DescribeDestRegions获取到
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidth(integer $Bandwidth) 设置通道带宽上限，单位：Mbps。
  * @method integer getConcurrent() 获取通道并发量上限，表示同时在线的连接数，单位：万。
  * @method void setConcurrent(integer $Concurrent) 设置通道并发量上限，表示同时在线的连接数，单位：万。
- */
-
-/**
- *CheckProxyCreate请求参数结构体
  */
 class CheckProxyCreateRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CheckProxyCreateRequest extends AbstractModel
      * @var integer 通道并发量上限，表示同时在线的连接数，单位：万。
      */
     public $Concurrent;
+
     /**
      * @param string $AccessRegion 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
      * @param string $RealServerRegion 通道的源站区域。取值可通过接口DescribeDestRegions获取到
@@ -62,6 +61,7 @@ class CheckProxyCreateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

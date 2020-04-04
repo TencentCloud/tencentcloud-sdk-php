@@ -18,12 +18,10 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全扫描敏感词列表
+ *
  * @method array getSensitiveList() 获取敏感词列表
  * @method void setSensitiveList(array $SensitiveList) 设置敏感词列表
- */
-
-/**
- *安全扫描敏感词列表
  */
 class ScanSensitiveList extends AbstractModel
 {
@@ -31,6 +29,7 @@ class ScanSensitiveList extends AbstractModel
      * @var array 敏感词列表
      */
     public $SensitiveList;
+
     /**
      * @param array $SensitiveList 敏感词列表
      */
@@ -38,6 +37,7 @@ class ScanSensitiveList extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

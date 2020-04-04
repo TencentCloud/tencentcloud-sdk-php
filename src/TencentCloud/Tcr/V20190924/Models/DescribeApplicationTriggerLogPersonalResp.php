@@ -18,16 +18,14 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询应用更新触发器触发日志返回值
+ *
  * @method integer getTotalCount() 获取返回总数
  * @method void setTotalCount(integer $TotalCount) 设置返回总数
  * @method array getLogInfo() 获取触发日志列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogInfo(array $LogInfo) 设置触发日志列表
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *查询应用更新触发器触发日志返回值
  */
 class DescribeApplicationTriggerLogPersonalResp extends AbstractModel
 {
@@ -41,6 +39,7 @@ class DescribeApplicationTriggerLogPersonalResp extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogInfo;
+
     /**
      * @param integer $TotalCount 返回总数
      * @param array $LogInfo 触发日志列表
@@ -50,6 +49,7 @@ class DescribeApplicationTriggerLogPersonalResp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

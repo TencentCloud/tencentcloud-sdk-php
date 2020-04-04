@@ -18,14 +18,12 @@ namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetSecretValue请求参数结构体
+ *
  * @method string getSecretName() 获取指定凭据的名称。
  * @method void setSecretName(string $SecretName) 设置指定凭据的名称。
  * @method string getVersionId() 获取指定对应凭据的版本号。
  * @method void setVersionId(string $VersionId) 设置指定对应凭据的版本号。
- */
-
-/**
- *GetSecretValue请求参数结构体
  */
 class GetSecretValueRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class GetSecretValueRequest extends AbstractModel
      * @var string 指定对应凭据的版本号。
      */
     public $VersionId;
+
     /**
      * @param string $SecretName 指定凭据的名称。
      * @param string $VersionId 指定对应凭据的版本号。
@@ -46,6 +45,7 @@ class GetSecretValueRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

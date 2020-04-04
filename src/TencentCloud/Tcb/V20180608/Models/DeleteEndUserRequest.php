@@ -18,14 +18,12 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteEndUser请求参数结构体
+ *
  * @method string getEnvId() 获取环境ID
  * @method void setEnvId(string $EnvId) 设置环境ID
  * @method array getUserList() 获取用户列表，每一项都是uuid
  * @method void setUserList(array $UserList) 设置用户列表，每一项都是uuid
- */
-
-/**
- *DeleteEndUser请求参数结构体
  */
 class DeleteEndUserRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteEndUserRequest extends AbstractModel
      * @var array 用户列表，每一项都是uuid
      */
     public $UserList;
+
     /**
      * @param string $EnvId 环境ID
      * @param array $UserList 用户列表，每一项都是uuid
@@ -46,6 +45,7 @@ class DeleteEndUserRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

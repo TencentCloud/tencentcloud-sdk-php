@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTargetGroup请求参数结构体
+ *
  * @method string getTargetGroupName() 获取目标组名称，限定50个字符
  * @method void setTargetGroupName(string $TargetGroupName) 设置目标组名称，限定50个字符
  * @method string getVpcId() 获取目标组的vpcid属性，不填则使用默认vpc
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) 设置目标组的默认端口， 后续添加服务器时可使用该默认端口
  * @method array getTargetGroupInstances() 获取目标组绑定的后端服务器
  * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置目标组绑定的后端服务器
- */
-
-/**
- *CreateTargetGroup请求参数结构体
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateTargetGroupRequest extends AbstractModel
      * @var array 目标组绑定的后端服务器
      */
     public $TargetGroupInstances;
+
     /**
      * @param string $TargetGroupName 目标组名称，限定50个字符
      * @param string $VpcId 目标组的vpcid属性，不填则使用默认vpc
@@ -62,6 +61,7 @@ class CreateTargetGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

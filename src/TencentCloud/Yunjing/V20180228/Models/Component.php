@@ -18,6 +18,8 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 组件列表数据。
+ *
  * @method integer getId() 获取唯一ID。
  * @method void setId(integer $Id) 设置唯一ID。
  * @method string getUuid() 获取云镜客户端唯一Uuid。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComponentName(string $ComponentName) 设置组件名称。
  * @method string getModifyTime() 获取组件检测更新时间。
  * @method void setModifyTime(string $ModifyTime) 设置组件检测更新时间。
- */
-
-/**
- *组件列表数据。
  */
 class Component extends AbstractModel
 {
@@ -86,6 +84,7 @@ class Component extends AbstractModel
      * @var string 组件检测更新时间。
      */
     public $ModifyTime;
+
     /**
      * @param integer $Id 唯一ID。
      * @param string $Uuid 云镜客户端唯一Uuid。
@@ -102,6 +101,7 @@ class Component extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

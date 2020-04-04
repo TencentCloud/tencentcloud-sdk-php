@@ -18,14 +18,13 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeShardSpec请求参数结构体
+ *
 
- */
-
-/**
- *DescribeShardSpec请求参数结构体
  */
 class DescribeShardSpecRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeShardSpecRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

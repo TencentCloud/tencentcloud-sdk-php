@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 视频处理输出文件信息参数。
+ *
  * @method string getRegion() 获取输出文件 Bucket 所属地域，如 ap-guangzhou  。
  * @method void setRegion(string $Region) 设置输出文件 Bucket 所属地域，如 ap-guangzhou  。
  * @method string getBucket() 获取输出文件 Bucket 。
  * @method void setBucket(string $Bucket) 设置输出文件 Bucket 。
  * @method string getDir() 获取输出文件目录，目录名必须以 "/" 结尾。
  * @method void setDir(string $Dir) 设置输出文件目录，目录名必须以 "/" 结尾。
- */
-
-/**
- *视频处理输出文件信息参数。
  */
 class MediaOutputInfo extends AbstractModel
 {
@@ -45,6 +43,7 @@ class MediaOutputInfo extends AbstractModel
      * @var string 输出文件目录，目录名必须以 "/" 结尾。
      */
     public $Dir;
+
     /**
      * @param string $Region 输出文件 Bucket 所属地域，如 ap-guangzhou  。
      * @param string $Bucket 输出文件 Bucket 。
@@ -54,6 +53,7 @@ class MediaOutputInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 账号创建信息
+ *
  * @method string getUserName() 获取实例用户名
  * @method void setUserName(string $UserName) 设置实例用户名
  * @method string getPassword() 获取实例密码
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置账号备注信息
  * @method boolean getIsAdmin() 获取是否为管理员账户，默认为否
  * @method void setIsAdmin(boolean $IsAdmin) 设置是否为管理员账户，默认为否
- */
-
-/**
- *账号创建信息
  */
 class AccountCreateInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AccountCreateInfo extends AbstractModel
      * @var boolean 是否为管理员账户，默认为否
      */
     public $IsAdmin;
+
     /**
      * @param string $UserName 实例用户名
      * @param string $Password 实例密码
@@ -70,6 +69,7 @@ class AccountCreateInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

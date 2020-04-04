@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Refund请求参数结构体
+ *
  * @method string getUserId() 获取用户ID，长度不小于5位， 仅支持字母和数字的组合
  * @method void setUserId(string $UserId) 设置用户ID，长度不小于5位， 仅支持字母和数字的组合
  * @method string getRefundId() 获取退款订单号，仅支持数字、 字母、下划线（_）、横杠字 符（-）、点（.）的组合
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTransactionId(string $TransactionId) 设置调用下单接口获取的聚鑫交 易订单。  OutTradeNo ,TransactionId 二选一,不能都为空,优先使用 OutTradeNo
  * @method integer getPlatformRefundAmt() 获取平台应收金额，单位：分
  * @method void setPlatformRefundAmt(integer $PlatformRefundAmt) 设置平台应收金额，单位：分
- */
-
-/**
- *Refund请求参数结构体
  */
 class RefundRequest extends AbstractModel
 {
@@ -101,6 +99,7 @@ class RefundRequest extends AbstractModel
      * @var integer 平台应收金额，单位：分
      */
     public $PlatformRefundAmt;
+
     /**
      * @param string $UserId 用户ID，长度不小于5位， 仅支持字母和数字的组合
      * @param string $RefundId 退款订单号，仅支持数字、 字母、下划线（_）、横杠字 符（-）、点（.）的组合
@@ -118,6 +117,7 @@ class RefundRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

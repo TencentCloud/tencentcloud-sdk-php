@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDomains返回参数结构体
+ *
  * @method array getDomains() 获取域名列表
  * @method void setDomains(array $Domains) 设置域名列表
  * @method integer getTotalNumber() 获取符合查询条件的域名总数
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 用于分页查询
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDomains返回参数结构体
  */
 class DescribeDomainsResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DescribeDomainsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Domains 域名列表
      * @param integer $TotalNumber 符合查询条件的域名总数
@@ -58,6 +57,7 @@ class DescribeDomainsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

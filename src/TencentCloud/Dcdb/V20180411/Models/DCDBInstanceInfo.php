@@ -18,6 +18,8 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 分布式数据库实例信息
+ *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getInstanceName() 获取实例名称
@@ -98,10 +100,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAuditSupported(integer $IsAuditSupported) 设置该实例是否支持审计。1-支持；0-不支持
  * @method integer getCpu() 获取Cpu核数
  * @method void setCpu(integer $Cpu) 设置Cpu核数
- */
-
-/**
- *分布式数据库实例信息
  */
 class DCDBInstanceInfo extends AbstractModel
 {
@@ -300,6 +298,7 @@ class DCDBInstanceInfo extends AbstractModel
      * @var integer Cpu核数
      */
     public $Cpu;
+
     /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
@@ -346,6 +345,7 @@ class DCDBInstanceInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetCheckSimilarPersonJobIdList返回参数结构体
+ *
  * @method array getJobIdInfos() 获取人员查重任务信息列表。
  * @method void setJobIdInfos(array $JobIdInfos) 设置人员查重任务信息列表。
  * @method integer getJobIdNum() 获取查重任务总数量。
  * @method void setJobIdNum(integer $JobIdNum) 设置查重任务总数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetCheckSimilarPersonJobIdList返回参数结构体
  */
 class GetCheckSimilarPersonJobIdListResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GetCheckSimilarPersonJobIdListResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $JobIdInfos 人员查重任务信息列表。
      * @param integer $JobIdNum 查重任务总数量。
@@ -54,6 +53,7 @@ class GetCheckSimilarPersonJobIdListResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

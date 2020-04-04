@@ -18,12 +18,10 @@ namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeWorkers请求参数结构体
+ *
  * @method integer getSetNo() 获取资源池编号，1表示正式，2表示测试
  * @method void setSetNo(integer $SetNo) 设置资源池编号，1表示正式，2表示测试
- */
-
-/**
- *DescribeWorkers请求参数结构体
  */
 class DescribeWorkersRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeWorkersRequest extends AbstractModel
      * @var integer 资源池编号，1表示正式，2表示测试
      */
     public $SetNo;
+
     /**
      * @param integer $SetNo 资源池编号，1表示正式，2表示测试
      */
@@ -38,6 +37,7 @@ class DescribeWorkersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

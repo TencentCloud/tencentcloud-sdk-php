@@ -18,16 +18,14 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskOperationLog请求参数结构体
+ *
  * @method string getTaskId() 获取维修任务ID
  * @method void setTaskId(string $TaskId) 设置维修任务ID
  * @method string getOrderField() 获取排序字段，目前支持：OperationTime
  * @method void setOrderField(string $OrderField) 设置排序字段，目前支持：OperationTime
  * @method integer getOrder() 获取排序方式 0:递增(默认) 1:递减
  * @method void setOrder(integer $Order) 设置排序方式 0:递增(默认) 1:递减
- */
-
-/**
- *DescribeTaskOperationLog请求参数结构体
  */
 class DescribeTaskOperationLogRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTaskOperationLogRequest extends AbstractModel
      * @var integer 排序方式 0:递增(默认) 1:递减
      */
     public $Order;
+
     /**
      * @param string $TaskId 维修任务ID
      * @param string $OrderField 排序字段，目前支持：OperationTime
@@ -54,6 +53,7 @@ class DescribeTaskOperationLogRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

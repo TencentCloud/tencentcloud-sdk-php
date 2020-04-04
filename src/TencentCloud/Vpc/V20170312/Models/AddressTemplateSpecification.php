@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IP地址模版
+ *
  * @method string getAddressId() 获取IP地址ID，例如：ipm-2uw6ujo6。
  * @method void setAddressId(string $AddressId) 设置IP地址ID，例如：ipm-2uw6ujo6。
  * @method string getAddressGroupId() 获取IP地址组ID，例如：ipmg-2uw6ujo6。
  * @method void setAddressGroupId(string $AddressGroupId) 设置IP地址组ID，例如：ipmg-2uw6ujo6。
- */
-
-/**
- *IP地址模版
  */
 class AddressTemplateSpecification extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AddressTemplateSpecification extends AbstractModel
      * @var string IP地址组ID，例如：ipmg-2uw6ujo6。
      */
     public $AddressGroupId;
+
     /**
      * @param string $AddressId IP地址ID，例如：ipm-2uw6ujo6。
      * @param string $AddressGroupId IP地址组ID，例如：ipmg-2uw6ujo6。
@@ -46,6 +45,7 @@ class AddressTemplateSpecification extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

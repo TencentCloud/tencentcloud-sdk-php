@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PublishVersion返回参数结构体
+ *
  * @method string getFunctionVersion() 获取函数的版本
  * @method void setFunctionVersion(string $FunctionVersion) 设置函数的版本
  * @method integer getCodeSize() 获取代码大小
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespace(string $Namespace) 设置函数的命名空间
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *PublishVersion返回参数结构体
  */
 class PublishVersionResponse extends AbstractModel
 {
@@ -87,6 +85,7 @@ class PublishVersionResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $FunctionVersion 函数的版本
      * @param integer $CodeSize 代码大小
@@ -102,6 +101,7 @@ class PublishVersionResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

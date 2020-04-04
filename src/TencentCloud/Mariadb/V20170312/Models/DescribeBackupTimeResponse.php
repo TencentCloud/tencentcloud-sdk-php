@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBackupTime返回参数结构体
+ *
  * @method integer getTotalCount() 获取返回的配置数量
  * @method void setTotalCount(integer $TotalCount) 设置返回的配置数量
  * @method array getItems() 获取实例备份时间配置信息
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeBackupTime返回参数结构体
  */
 class DescribeBackupTimeResponse extends AbstractModel
 {
@@ -48,6 +46,7 @@ class DescribeBackupTimeResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 返回的配置数量
      * @param array $Items 实例备份时间配置信息
@@ -58,6 +57,7 @@ class DescribeBackupTimeResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

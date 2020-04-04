@@ -18,14 +18,12 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateUsualLoginPlaces请求参数结构体
+ *
  * @method array getUuids() 获取云镜客户端UUID数组。
  * @method void setUuids(array $Uuids) 设置云镜客户端UUID数组。
  * @method array getPlaces() 获取登录地域信息数组。
  * @method void setPlaces(array $Places) 设置登录地域信息数组。
- */
-
-/**
- *CreateUsualLoginPlaces请求参数结构体
  */
 class CreateUsualLoginPlacesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateUsualLoginPlacesRequest extends AbstractModel
      * @var array 登录地域信息数组。
      */
     public $Places;
+
     /**
      * @param array $Uuids 云镜客户端UUID数组。
      * @param array $Places 登录地域信息数组。
@@ -46,6 +45,7 @@ class CreateUsualLoginPlacesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

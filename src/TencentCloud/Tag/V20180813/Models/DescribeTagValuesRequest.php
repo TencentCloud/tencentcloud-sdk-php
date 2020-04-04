@@ -18,6 +18,8 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTagValues请求参数结构体
+ *
  * @method array getTagKeys() 获取标签键列表
  * @method void setTagKeys(array $TagKeys) 设置标签键列表
  * @method integer getCreateUin() 获取创建者用户 Uin，不传或为空只将 Uin 作为条件查询
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置数据偏移量，默认为 0, 必须为Limit参数的整数倍
  * @method integer getLimit() 获取每页大小，默认为 15
  * @method void setLimit(integer $Limit) 设置每页大小，默认为 15
- */
-
-/**
- *DescribeTagValues请求参数结构体
  */
 class DescribeTagValuesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DescribeTagValuesRequest extends AbstractModel
      * @var integer 每页大小，默认为 15
      */
     public $Limit;
+
     /**
      * @param array $TagKeys 标签键列表
      * @param integer $CreateUin 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
@@ -62,6 +61,7 @@ class DescribeTagValuesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

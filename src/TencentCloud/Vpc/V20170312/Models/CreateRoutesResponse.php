@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateRoutes返回参数结构体
+ *
  * @method integer getTotalCount() 获取新增的实例个数。
  * @method void setTotalCount(integer $TotalCount) 设置新增的实例个数。
  * @method array getRouteTableSet() 获取路由表对象。
  * @method void setRouteTableSet(array $RouteTableSet) 设置路由表对象。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateRoutes返回参数结构体
  */
 class CreateRoutesResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateRoutesResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount 新增的实例个数。
      * @param array $RouteTableSet 路由表对象。
@@ -54,6 +53,7 @@ class CreateRoutesResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

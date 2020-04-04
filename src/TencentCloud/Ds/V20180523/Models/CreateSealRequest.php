@@ -18,6 +18,8 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSeal请求参数结构体
+ *
  * @method string getModule() 获取模块名SealMng
  * @method void setModule(string $Module) 设置模块名SealMng
  * @method string getOperation() 获取操作名CreateSeal
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImgUrl(string $ImgUrl) 设置签章链接，图片必须为png格式
  * @method string getImgData() 获取图片数据，base64编码
  * @method void setImgData(string $ImgData) 设置图片数据，base64编码
- */
-
-/**
- *CreateSeal请求参数结构体
  */
 class CreateSealRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class CreateSealRequest extends AbstractModel
      * @var string 图片数据，base64编码
      */
     public $ImgData;
+
     /**
      * @param string $Module 模块名SealMng
      * @param string $Operation 操作名CreateSeal
@@ -70,6 +69,7 @@ class CreateSealRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

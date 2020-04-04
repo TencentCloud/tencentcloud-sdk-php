@@ -18,12 +18,10 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteRule请求参数结构体
+ *
  * @method string getRuleId() 获取规则Id
  * @method void setRuleId(string $RuleId) 设置规则Id
- */
-
-/**
- *DeleteRule请求参数结构体
  */
 class DeleteRuleRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteRuleRequest extends AbstractModel
      * @var string 规则Id
      */
     public $RuleId;
+
     /**
      * @param string $RuleId 规则Id
      */
@@ -38,6 +37,7 @@ class DeleteRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

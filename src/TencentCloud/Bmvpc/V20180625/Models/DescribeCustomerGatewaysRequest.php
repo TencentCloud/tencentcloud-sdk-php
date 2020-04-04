@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCustomerGateways请求参数结构体
+ *
  * @method array getCustomerGatewayIds() 获取对端网关ID，例如：bmcgw-2wqq41m9。每次请求的实例的上限为100。参数不支持同时指定CustomerGatewayIds和Filters。
  * @method void setCustomerGatewayIds(array $CustomerGatewayIds) 设置对端网关ID，例如：bmcgw-2wqq41m9。每次请求的实例的上限为100。参数不支持同时指定CustomerGatewayIds和Filters。
  * @method array getFilters() 获取过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定CustomerGatewayIds和Filters。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置排序字段, 支持"CreateTime"排序
  * @method string getOrderDirection() 获取排序方向, “asc”、“desc”
  * @method void setOrderDirection(string $OrderDirection) 设置排序方向, “asc”、“desc”
- */
-
-/**
- *DescribeCustomerGateways请求参数结构体
  */
 class DescribeCustomerGatewaysRequest extends AbstractModel
 {
@@ -78,6 +76,7 @@ class DescribeCustomerGatewaysRequest extends AbstractModel
      * @var string 排序方向, “asc”、“desc”
      */
     public $OrderDirection;
+
     /**
      * @param array $CustomerGatewayIds 对端网关ID，例如：bmcgw-2wqq41m9。每次请求的实例的上限为100。参数不支持同时指定CustomerGatewayIds和Filters。
      * @param array $Filters 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定CustomerGatewayIds和Filters。
@@ -94,6 +93,7 @@ class DescribeCustomerGatewaysRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

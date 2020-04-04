@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListSAMLProviders返回参数结构体
+ *
  * @method integer getTotalCount() 获取SAML身份提供商总数
  * @method void setTotalCount(integer $TotalCount) 设置SAML身份提供商总数
  * @method array getSAMLProviderSet() 获取SAML身份提供商列表
  * @method void setSAMLProviderSet(array $SAMLProviderSet) 设置SAML身份提供商列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *ListSAMLProviders返回参数结构体
  */
 class ListSAMLProvidersResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListSAMLProvidersResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $TotalCount SAML身份提供商总数
      * @param array $SAMLProviderSet SAML身份提供商列表
@@ -54,6 +53,7 @@ class ListSAMLProvidersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

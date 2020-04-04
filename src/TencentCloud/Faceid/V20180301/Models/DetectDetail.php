@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 活体一比一详情
+ *
  * @method string getReqTime() 获取请求时间戳。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReqTime(string $ReqTime) 设置请求时间戳。
@@ -66,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComparemsg(string $Comparemsg) 设置本次一比一结果描述。（仅描述用，文案更新时不会通知。）
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *活体一比一详情
  */
 class DetectDetail extends AbstractModel
 {
@@ -144,6 +142,7 @@ class DetectDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comparemsg;
+
     /**
      * @param string $ReqTime 请求时间戳。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,6 +173,7 @@ class DetectDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBasicAlarmList返回的Alarms里的InstanceGroup
+ *
  * @method integer getInstanceGroupId() 获取实例组ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例组ID
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceGroupName(string $InstanceGroupName) 设置实例组名
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *DescribeBasicAlarmList返回的Alarms里的InstanceGroup
  */
 class InstanceGroup extends AbstractModel
 {
@@ -44,6 +42,7 @@ class InstanceGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceGroupName;
+
     /**
      * @param integer $InstanceGroupId 实例组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class InstanceGroup extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

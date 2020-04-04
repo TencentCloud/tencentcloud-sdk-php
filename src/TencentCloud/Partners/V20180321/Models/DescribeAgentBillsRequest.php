@@ -18,6 +18,8 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAgentBills请求参数结构体
+ *
  * @method string getSettleMonth() 获取支付月份，如2018-02
  * @method void setSettleMonth(string $SettleMonth) 设置支付月份，如2018-02
  * @method string getClientUin() 获取客户账号ID
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取限制数目
  * @method void setLimit(integer $Limit) 设置限制数目
- */
-
-/**
- *DescribeAgentBills请求参数结构体
  */
 class DescribeAgentBillsRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeAgentBillsRequest extends AbstractModel
      * @var integer 限制数目
      */
     public $Limit;
+
     /**
      * @param string $SettleMonth 支付月份，如2018-02
      * @param string $ClientUin 客户账号ID
@@ -86,6 +85,7 @@ class DescribeAgentBillsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ES公网访问访问控制信息
+ *
  * @method array getBlackIpList() 获取访问黑名单
  * @method void setBlackIpList(array $BlackIpList) 设置访问黑名单
  * @method array getWhiteIpList() 获取访问白名单
  * @method void setWhiteIpList(array $WhiteIpList) 设置访问白名单
- */
-
-/**
- *ES公网访问访问控制信息
  */
 class EsPublicAcl extends AbstractModel
 {
@@ -38,6 +36,7 @@ class EsPublicAcl extends AbstractModel
      * @var array 访问白名单
      */
     public $WhiteIpList;
+
     /**
      * @param array $BlackIpList 访问黑名单
      * @param array $WhiteIpList 访问白名单
@@ -46,6 +45,7 @@ class EsPublicAcl extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

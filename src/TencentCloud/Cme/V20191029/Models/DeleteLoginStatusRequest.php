@@ -18,14 +18,12 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLoginStatus请求参数结构体
+ *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
  * @method array getUserIds() 获取用户 Id 列表，N 从 0 开始取值，最大 19。
  * @method void setUserIds(array $UserIds) 设置用户 Id 列表，N 从 0 开始取值，最大 19。
- */
-
-/**
- *DeleteLoginStatus请求参数结构体
  */
 class DeleteLoginStatusRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteLoginStatusRequest extends AbstractModel
      * @var array 用户 Id 列表，N 从 0 开始取值，最大 19。
      */
     public $UserIds;
+
     /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param array $UserIds 用户 Id 列表，N 从 0 开始取值，最大 19。
@@ -46,6 +45,7 @@ class DeleteLoginStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

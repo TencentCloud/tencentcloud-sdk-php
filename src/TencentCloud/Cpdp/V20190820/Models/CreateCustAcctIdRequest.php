@@ -18,6 +18,8 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateCustAcctId请求参数结构体
+ *
  * @method string getFunctionFlag() 获取STRING(2)，功能标志（1: 开户; 3: 销户）
  * @method void setFunctionFlag(string $FunctionFlag) 设置STRING(2)，功能标志（1: 开户; 3: 销户）
  * @method string getFundSummaryAcctNo() 获取STRING(50)，资金汇总账号（即收单资金归集入账的账号）
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEmail(string $Email) 设置STRING(150)，邮箱
  * @method string getReservedMsg() 获取STRING(1027)，保留域
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
- */
-
-/**
- *CreateCustAcctId请求参数结构体
  */
 class CreateCustAcctIdRequest extends AbstractModel
 {
@@ -122,6 +120,7 @@ class CreateCustAcctIdRequest extends AbstractModel
      * @var string STRING(1027)，保留域
      */
     public $ReservedMsg;
+
     /**
      * @param string $FunctionFlag STRING(2)，功能标志（1: 开户; 3: 销户）
      * @param string $FundSummaryAcctNo STRING(50)，资金汇总账号（即收单资金归集入账的账号）
@@ -142,6 +141,7 @@ class CreateCustAcctIdRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

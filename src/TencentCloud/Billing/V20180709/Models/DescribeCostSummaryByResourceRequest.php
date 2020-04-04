@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCostSummaryByResource请求参数结构体
+ *
  * @method string getPayerUin() 获取查询账单数据的用户UIN
  * @method void setPayerUin(string $PayerUin) 设置查询账单数据的用户UIN
  * @method string getBeginTime() 获取目前只支持传当月1号 00:00:00，且必须和EndTime为相同月份，不支持跨月查询，例 2018-09-01 00:00:00
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedConditionValue(integer $NeedConditionValue) 设置是否需要返回过滤条件，0不需要，1需要，默认不需要
  * @method Conditions getConditions() 获取过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc）
  * @method void setConditions(Conditions $Conditions) 设置过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc）
- */
-
-/**
- *DescribeCostSummaryByResource请求参数结构体
  */
 class DescribeCostSummaryByResourceRequest extends AbstractModel
 {
@@ -80,6 +78,7 @@ class DescribeCostSummaryByResourceRequest extends AbstractModel
      * @var Conditions 过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc）
      */
     public $Conditions;
+
     /**
      * @param string $PayerUin 查询账单数据的用户UIN
      * @param string $BeginTime 目前只支持传当月1号 00:00:00，且必须和EndTime为相同月份，不支持跨月查询，例 2018-09-01 00:00:00
@@ -94,6 +93,7 @@ class DescribeCostSummaryByResourceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

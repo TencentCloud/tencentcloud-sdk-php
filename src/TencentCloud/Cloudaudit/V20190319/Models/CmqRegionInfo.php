@@ -18,14 +18,12 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * cmq地域信息
+ *
  * @method string getCmqRegion() 获取cmq地域
  * @method void setCmqRegion(string $CmqRegion) 设置cmq地域
  * @method string getCmqRegionName() 获取地域描述
  * @method void setCmqRegionName(string $CmqRegionName) 设置地域描述
- */
-
-/**
- *cmq地域信息
  */
 class CmqRegionInfo extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CmqRegionInfo extends AbstractModel
      * @var string 地域描述
      */
     public $CmqRegionName;
+
     /**
      * @param string $CmqRegion cmq地域
      * @param string $CmqRegionName 地域描述
@@ -46,6 +45,7 @@ class CmqRegionInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

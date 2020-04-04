@@ -18,6 +18,8 @@ namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 名人识别的标签
+ *
  * @method string getFirstLabel() 获取公众人物身份标签的一级分类，例如体育明星、娱乐明星、政治人物等；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstLabel(string $FirstLabel) 设置公众人物身份标签的一级分类，例如体育明星、娱乐明星、政治人物等；
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecondLabel(string $SecondLabel) 设置公众人物身份标签的二级分类，例如歌手（对应一级标签为“娱乐明星”）；
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *名人识别的标签
  */
 class Labels extends AbstractModel
 {
@@ -44,6 +42,7 @@ class Labels extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecondLabel;
+
     /**
      * @param string $FirstLabel 公众人物身份标签的一级分类，例如体育明星、娱乐明星、政治人物等；
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class Labels extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

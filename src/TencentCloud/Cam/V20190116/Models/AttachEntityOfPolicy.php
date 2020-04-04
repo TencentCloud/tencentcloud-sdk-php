@@ -18,6 +18,8 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 策略关联的实体信息
+ *
  * @method string getId() 获取实体ID
  * @method void setId(string $Id) 设置实体ID
  * @method string getName() 获取实体名称
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRelatedType() 获取关联类型。1 用户关联 ； 2 用户组关联
  * @method void setRelatedType(integer $RelatedType) 设置关联类型。1 用户关联 ； 2 用户组关联
- */
-
-/**
- *策略关联的实体信息
  */
 class AttachEntityOfPolicy extends AbstractModel
 {
@@ -58,6 +56,7 @@ class AttachEntityOfPolicy extends AbstractModel
      * @var integer 关联类型。1 用户关联 ； 2 用户组关联
      */
     public $RelatedType;
+
     /**
      * @param string $Id 实体ID
      * @param string $Name 实体名称
@@ -70,6 +69,7 @@ class AttachEntityOfPolicy extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

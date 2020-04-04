@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 流量镜像进行健康检查的接收机信息。
+ *
  * @method string getInstanceId() 获取物理机实例ID。
  * @method void setInstanceId(string $InstanceId) 设置物理机实例ID。
  * @method integer getPort() 获取物理机绑定的端口。
  * @method void setPort(integer $Port) 设置物理机绑定的端口。
- */
-
-/**
- *流量镜像进行健康检查的接收机信息。
  */
 class DescribeTrafficMirrorReceiver extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeTrafficMirrorReceiver extends AbstractModel
      * @var integer 物理机绑定的端口。
      */
     public $Port;
+
     /**
      * @param string $InstanceId 物理机实例ID。
      * @param integer $Port 物理机绑定的端口。
@@ -46,6 +45,7 @@ class DescribeTrafficMirrorReceiver extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

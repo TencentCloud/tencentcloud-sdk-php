@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 触发器触发结果
+ *
  * @method integer getReturnCode() 获取请求TKE返回值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReturnCode(integer $ReturnCode) 设置请求TKE返回值
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReturnMsg(string $ReturnMsg) 设置请求TKE返回信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *触发器触发结果
  */
 class TriggerInvokeResult extends AbstractModel
 {
@@ -44,6 +42,7 @@ class TriggerInvokeResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReturnMsg;
+
     /**
      * @param integer $ReturnCode 请求TKE返回值
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +53,7 @@ class TriggerInvokeResult extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

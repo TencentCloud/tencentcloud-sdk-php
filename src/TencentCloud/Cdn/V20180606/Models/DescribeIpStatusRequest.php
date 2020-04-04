@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeIpStatus请求参数结构体
+ *
  * @method string getDomain() 获取加速域名
  * @method void setDomain(string $Domain) 设置加速域名
  * @method string getLayer() 获取节点类型：
@@ -28,10 +30,6 @@ last：表示回源层节点
 edge：表示边缘节点
 last：表示回源层节点
 不填充情况下，默认返回边缘节点信息
- */
-
-/**
- *DescribeIpStatus请求参数结构体
  */
 class DescribeIpStatusRequest extends AbstractModel
 {
@@ -47,6 +45,7 @@ last：表示回源层节点
 不填充情况下，默认返回边缘节点信息
      */
     public $Layer;
+
     /**
      * @param string $Domain 加速域名
      * @param string $Layer 节点类型：
@@ -58,6 +57,7 @@ last：表示回源层节点
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

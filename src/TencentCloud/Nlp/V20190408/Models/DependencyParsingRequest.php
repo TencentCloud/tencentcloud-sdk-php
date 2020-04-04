@@ -18,12 +18,10 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DependencyParsing请求参数结构体
+ *
  * @method string getText() 获取待分析的文本（仅支持UTF-8格式，不超过200字）
  * @method void setText(string $Text) 设置待分析的文本（仅支持UTF-8格式，不超过200字）
- */
-
-/**
- *DependencyParsing请求参数结构体
  */
 class DependencyParsingRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DependencyParsingRequest extends AbstractModel
      * @var string 待分析的文本（仅支持UTF-8格式，不超过200字）
      */
     public $Text;
+
     /**
      * @param string $Text 待分析的文本（仅支持UTF-8格式，不超过200字）
      */
@@ -38,6 +37,7 @@ class DependencyParsingRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

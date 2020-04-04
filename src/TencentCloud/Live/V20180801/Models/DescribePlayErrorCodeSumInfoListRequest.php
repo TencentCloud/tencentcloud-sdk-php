@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePlayErrorCodeSumInfoList请求参数结构体
+ *
  * @method string getStartTime() 获取起始时间点，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
  * @method void setStartTime(string $StartTime) 设置起始时间点，北京时间。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupType(string $GroupType) 设置分组参数，可选值：CountryProIsp（默认值），Country（国家），默认是按照国家+省份+运营商来进行分组；目前国外的省份和运营商暂时无法识别。
  * @method string getOutLanguage() 获取输出字段使用的语言，可选值：Chinese（默认值），English，目前国家，省份和运营商支持多语言。
  * @method void setOutLanguage(string $OutLanguage) 设置输出字段使用的语言，可选值：Chinese（默认值），English，目前国家，省份和运营商支持多语言。
- */
-
-/**
- *DescribePlayErrorCodeSumInfoList请求参数结构体
  */
 class DescribePlayErrorCodeSumInfoListRequest extends AbstractModel
 {
@@ -89,6 +87,7 @@ class DescribePlayErrorCodeSumInfoListRequest extends AbstractModel
      * @var string 输出字段使用的语言，可选值：Chinese（默认值），English，目前国家，省份和运营商支持多语言。
      */
     public $OutLanguage;
+
     /**
      * @param string $StartTime 起始时间点，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
@@ -106,6 +105,7 @@ class DescribePlayErrorCodeSumInfoListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

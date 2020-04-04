@@ -18,6 +18,8 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSyncJobs请求参数结构体
+ *
  * @method string getJobId() 获取灾备同步任务ID
  * @method void setJobId(string $JobId) 设置灾备同步任务ID
  * @method string getJobName() 获取灾备同步任务名
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回实例数量，默认20，有效区间[1,100]
  * @method void setLimit(integer $Limit) 设置返回实例数量，默认20，有效区间[1,100]
- */
-
-/**
- *DescribeSyncJobs请求参数结构体
  */
 class DescribeSyncJobsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeSyncJobsRequest extends AbstractModel
      * @var integer 返回实例数量，默认20，有效区间[1,100]
      */
     public $Limit;
+
     /**
      * @param string $JobId 灾备同步任务ID
      * @param string $JobName 灾备同步任务名
@@ -78,6 +77,7 @@ class DescribeSyncJobsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

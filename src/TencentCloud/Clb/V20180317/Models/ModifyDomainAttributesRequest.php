@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyDomainAttributes请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例 ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
  * @method string getListenerId() 获取负载均衡监听器 ID
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHttp2(boolean $Http2) 设置是否开启Http2，注意，只有HTTPS域名才能开启Http2。
  * @method boolean getDefaultServer() 获取是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
  * @method void setDefaultServer(boolean $DefaultServer) 设置是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
- */
-
-/**
- *ModifyDomainAttributes请求参数结构体
  */
 class ModifyDomainAttributesRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
      * @var boolean 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
      */
     public $DefaultServer;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param string $ListenerId 负载均衡监听器 ID
@@ -86,6 +85,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

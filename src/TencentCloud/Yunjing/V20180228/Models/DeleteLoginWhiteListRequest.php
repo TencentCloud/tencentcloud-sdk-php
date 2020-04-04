@@ -18,12 +18,10 @@ namespace TencentCloud\Yunjing\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLoginWhiteList请求参数结构体
+ *
  * @method array getIds() 获取白名单ID
  * @method void setIds(array $Ids) 设置白名单ID
- */
-
-/**
- *DeleteLoginWhiteList请求参数结构体
  */
 class DeleteLoginWhiteListRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteLoginWhiteListRequest extends AbstractModel
      * @var array 白名单ID
      */
     public $Ids;
+
     /**
      * @param array $Ids 白名单ID
      */
@@ -38,6 +37,7 @@ class DeleteLoginWhiteListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

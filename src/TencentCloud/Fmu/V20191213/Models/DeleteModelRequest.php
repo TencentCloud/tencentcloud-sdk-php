@@ -18,12 +18,10 @@ namespace TencentCloud\Fmu\V20191213\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteModel请求参数结构体
+ *
  * @method string getModelId() 获取素材ID。
  * @method void setModelId(string $ModelId) 设置素材ID。
- */
-
-/**
- *DeleteModel请求参数结构体
  */
 class DeleteModelRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteModelRequest extends AbstractModel
      * @var string 素材ID。
      */
     public $ModelId;
+
     /**
      * @param string $ModelId 素材ID。
      */
@@ -38,6 +37,7 @@ class DeleteModelRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

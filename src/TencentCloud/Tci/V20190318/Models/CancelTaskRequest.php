@@ -18,12 +18,10 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CancelTask请求参数结构体
+ *
  * @method integer getJobId() 获取待取消任务标志符。
  * @method void setJobId(integer $JobId) 设置待取消任务标志符。
- */
-
-/**
- *CancelTask请求参数结构体
  */
 class CancelTaskRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CancelTaskRequest extends AbstractModel
      * @var integer 待取消任务标志符。
      */
     public $JobId;
+
     /**
      * @param integer $JobId 待取消任务标志符。
      */
@@ -38,6 +37,7 @@ class CancelTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

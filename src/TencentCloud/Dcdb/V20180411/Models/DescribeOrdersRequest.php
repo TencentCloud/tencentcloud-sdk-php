@@ -18,12 +18,10 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeOrders请求参数结构体
+ *
  * @method array getDealNames() 获取待查询的长订单号列表，创建实例、续费实例、扩容实例接口返回。
  * @method void setDealNames(array $DealNames) 设置待查询的长订单号列表，创建实例、续费实例、扩容实例接口返回。
- */
-
-/**
- *DescribeOrders请求参数结构体
  */
 class DescribeOrdersRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeOrdersRequest extends AbstractModel
      * @var array 待查询的长订单号列表，创建实例、续费实例、扩容实例接口返回。
      */
     public $DealNames;
+
     /**
      * @param array $DealNames 待查询的长订单号列表，创建实例、续费实例、扩容实例接口返回。
      */
@@ -38,6 +37,7 @@ class DescribeOrdersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

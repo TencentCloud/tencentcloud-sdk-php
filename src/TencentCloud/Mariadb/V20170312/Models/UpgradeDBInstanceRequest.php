@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpgradeDBInstance请求参数结构体
+ *
  * @method string getInstanceId() 获取待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method integer getMemory() 获取内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动使用代金券进行支付，默认不使用。
  * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券。
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券。
- */
-
-/**
- *UpgradeDBInstance请求参数结构体
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -65,6 +63,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @var array 代金券ID列表，目前仅支持指定一张代金券。
      */
     public $VoucherIds;
+
     /**
      * @param string $InstanceId 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param integer $Memory 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
@@ -78,6 +77,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

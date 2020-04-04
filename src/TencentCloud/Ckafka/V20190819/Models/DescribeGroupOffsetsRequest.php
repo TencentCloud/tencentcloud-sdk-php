@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeGroupOffsets请求参数结构体
+ *
  * @method string getInstanceId() 获取（过滤条件）按照实例 ID 过滤
  * @method void setInstanceId(string $InstanceId) 设置（过滤条件）按照实例 ID 过滤
  * @method string getGroup() 获取Kafka 消费分组
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置本次查询的偏移位置，默认为0
  * @method integer getLimit() 获取本次返回结果的最大个数，默认为50，最大值为50
  * @method void setLimit(integer $Limit) 设置本次返回结果的最大个数，默认为50，最大值为50
- */
-
-/**
- *DescribeGroupOffsets请求参数结构体
  */
 class DescribeGroupOffsetsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeGroupOffsetsRequest extends AbstractModel
      * @var integer 本次返回结果的最大个数，默认为50，最大值为50
      */
     public $Limit;
+
     /**
      * @param string $InstanceId （过滤条件）按照实例 ID 过滤
      * @param string $Group Kafka 消费分组
@@ -78,6 +77,7 @@ class DescribeGroupOffsetsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

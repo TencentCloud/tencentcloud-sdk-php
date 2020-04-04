@@ -18,16 +18,14 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAgentDealsCache返回参数结构体
+ *
  * @method array getAgentDealSet() 获取订单数组
  * @method void setAgentDealSet(array $AgentDealSet) 设置订单数组
  * @method integer getTotalCount() 获取符合条件的订单总数量
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的订单总数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeAgentDealsCache返回参数结构体
  */
 class DescribeAgentDealsCacheResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeAgentDealsCacheResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $AgentDealSet 订单数组
      * @param integer $TotalCount 符合条件的订单总数量
@@ -54,6 +53,7 @@ class DescribeAgentDealsCacheResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

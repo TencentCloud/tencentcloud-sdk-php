@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyVpnConnectionAttribute请求参数结构体
+ *
  * @method string getVpnConnectionId() 获取VPN通道实例ID。形如：bmvpnx-f49l6u0z。
  * @method void setVpnConnectionId(string $VpnConnectionId) 设置VPN通道实例ID。形如：bmvpnx-f49l6u0z。
  * @method string getVpcId() 获取VPC实例ID
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIKEOptionsSpecification(IKEOptionsSpecification $IKEOptionsSpecification) 设置IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议。
  * @method IPSECOptionsSpecification getIPSECOptionsSpecification() 获取IPSec配置，腾讯云提供IPSec安全会话设置。
  * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) 设置IPSec配置，腾讯云提供IPSec安全会话设置。
- */
-
-/**
- *ModifyVpnConnectionAttribute请求参数结构体
  */
 class ModifyVpnConnectionAttributeRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
      * @var IPSECOptionsSpecification IPSec配置，腾讯云提供IPSec安全会话设置。
      */
     public $IPSECOptionsSpecification;
+
     /**
      * @param string $VpnConnectionId VPN通道实例ID。形如：bmvpnx-f49l6u0z。
      * @param string $VpcId VPC实例ID
@@ -86,6 +85,7 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

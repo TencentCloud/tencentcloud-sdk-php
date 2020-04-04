@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用于创建四层监听器的监听器信息。目前一个负载均衡下面最多允许创建50个监听器。
+ *
  * @method integer getLoadBalancerPort() 获取监听器监听端口，可选值1~65535。
  * @method void setLoadBalancerPort(integer $LoadBalancerPort) 设置监听器监听端口，可选值1~65535。
  * @method string getProtocol() 获取监听器协议类型，可选值tcp，udp。
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthResponse(string $HealthResponse) 设置自定义探测返回内容。
  * @method integer getToaFlag() 获取是否开启toa。可选值：0（关闭）、1（开启），默认关闭。（该字段在负载均衡为fullnat类型下才生效）
  * @method void setToaFlag(integer $ToaFlag) 设置是否开启toa。可选值：0（关闭）、1（开启），默认关闭。（该字段在负载均衡为fullnat类型下才生效）
- */
-
-/**
- *用于创建四层监听器的监听器信息。目前一个负载均衡下面最多允许创建50个监听器。
  */
 class CreateL4Listener extends AbstractModel
 {
@@ -136,6 +134,7 @@ class CreateL4Listener extends AbstractModel
      * @var integer 是否开启toa。可选值：0（关闭）、1（开启），默认关闭。（该字段在负载均衡为fullnat类型下才生效）
      */
     public $ToaFlag;
+
     /**
      * @param integer $LoadBalancerPort 监听器监听端口，可选值1~65535。
      * @param string $Protocol 监听器协议类型，可选值tcp，udp。
@@ -158,6 +157,7 @@ class CreateL4Listener extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 时间戳与其对应的数值
+ *
  * @method string getTime() 获取数据统计时间点，采用向前汇总模式
 以 5 分钟粒度为例，13:35:00 时间点代表的统计数据区间为 13:35:00 至 13:39:59
  * @method void setTime(string $Time) 设置数据统计时间点，采用向前汇总模式
 以 5 分钟粒度为例，13:35:00 时间点代表的统计数据区间为 13:35:00 至 13:39:59
  * @method float getValue() 获取数据值
  * @method void setValue(float $Value) 设置数据值
- */
-
-/**
- *时间戳与其对应的数值
  */
 class TimestampData extends AbstractModel
 {
@@ -41,6 +39,7 @@ class TimestampData extends AbstractModel
      * @var float 数据值
      */
     public $Value;
+
     /**
      * @param string $Time 数据统计时间点，采用向前汇总模式
 以 5 分钟粒度为例，13:35:00 时间点代表的统计数据区间为 13:35:00 至 13:39:59
@@ -50,6 +49,7 @@ class TimestampData extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

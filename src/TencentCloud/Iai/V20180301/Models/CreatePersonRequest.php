@@ -18,6 +18,8 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePerson请求参数结构体
+ *
  * @method string getGroupId() 获取待加入的人员库ID。
  * @method void setGroupId(string $GroupId) 设置待加入的人员库ID。
  * @method string getPersonName() 获取人员名称。[1，60]个字符，可修改，可重复。
@@ -78,10 +80,6 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 4: 很高的质量要求，各个维度均为最好或最多在某一维度上存在轻微问题； 
 默认 0。 
 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
- */
-
-/**
- *CreatePerson请求参数结构体
  */
 class CreatePersonRequest extends AbstractModel
 {
@@ -150,6 +148,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
      */
     public $QualityControl;
+
     /**
      * @param string $GroupId 待加入的人员库ID。
      * @param string $PersonName 人员名称。[1，60]个字符，可修改，可重复。
@@ -186,6 +185,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

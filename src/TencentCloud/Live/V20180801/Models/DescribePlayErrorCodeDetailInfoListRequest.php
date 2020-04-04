@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePlayErrorCodeDetailInfoList请求参数结构体
+ *
  * @method string getStartTime() 获取起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
  * @method void setStartTime(string $StartTime) 设置起始时间，北京时间，
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlayDomains(array $PlayDomains) 设置播放域名列表。
  * @method string getMainlandOrOversea() 获取地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
  * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
- */
-
-/**
- *DescribePlayErrorCodeDetailInfoList请求参数结构体
  */
 class DescribePlayErrorCodeDetailInfoListRequest extends AbstractModel
 {
@@ -78,6 +76,7 @@ class DescribePlayErrorCodeDetailInfoListRequest extends AbstractModel
      * @var string 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
      */
     public $MainlandOrOversea;
+
     /**
      * @param string $StartTime 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
@@ -94,6 +93,7 @@ class DescribePlayErrorCodeDetailInfoListRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

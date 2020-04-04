@@ -18,14 +18,12 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteLiveCallbackRule请求参数结构体
+ *
  * @method string getDomainName() 获取推流域名。
  * @method void setDomainName(string $DomainName) 设置推流域名。
  * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为live。
  * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为live。
- */
-
-/**
- *DeleteLiveCallbackRule请求参数结构体
  */
 class DeleteLiveCallbackRuleRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DeleteLiveCallbackRuleRequest extends AbstractModel
      * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
      */
     public $AppName;
+
     /**
      * @param string $DomainName 推流域名。
      * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
@@ -46,6 +45,7 @@ class DeleteLiveCallbackRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

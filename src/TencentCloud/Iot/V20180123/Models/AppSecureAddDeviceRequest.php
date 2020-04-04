@@ -18,14 +18,12 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AppSecureAddDevice请求参数结构体
+ *
  * @method string getAccessToken() 获取访问Token
  * @method void setAccessToken(string $AccessToken) 设置访问Token
  * @method string getDeviceSignature() 获取设备签名
  * @method void setDeviceSignature(string $DeviceSignature) 设置设备签名
- */
-
-/**
- *AppSecureAddDevice请求参数结构体
  */
 class AppSecureAddDeviceRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class AppSecureAddDeviceRequest extends AbstractModel
      * @var string 设备签名
      */
     public $DeviceSignature;
+
     /**
      * @param string $AccessToken 访问Token
      * @param string $DeviceSignature 设备签名
@@ -46,6 +45,7 @@ class AppSecureAddDeviceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

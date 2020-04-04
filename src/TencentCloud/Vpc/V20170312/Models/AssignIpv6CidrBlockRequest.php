@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AssignIpv6CidrBlock请求参数结构体
+ *
  * @method string getVpcId() 获取`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
  * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
- */
-
-/**
- *AssignIpv6CidrBlock请求参数结构体
  */
 class AssignIpv6CidrBlockRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class AssignIpv6CidrBlockRequest extends AbstractModel
      * @var string `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
      */
     public $VpcId;
+
     /**
      * @param string $VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
      */
@@ -38,6 +37,7 @@ class AssignIpv6CidrBlockRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

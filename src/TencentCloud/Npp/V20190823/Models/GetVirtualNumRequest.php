@@ -18,6 +18,8 @@ namespace TencentCloud\Npp\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetVirtualNum请求参数结构体
+ *
  * @method string getBizAppId() 获取appId 值测试时由腾讯统一分配
  * @method void setBizAppId(string $BizAppId) 设置appId 值测试时由腾讯统一分配
  * @method string getDst() 获取被叫号码(号码前加 0086，如 008613631686024)
@@ -76,10 +78,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHangupUrl(string $HangupUrl) 设置话单回调通知地址，正式环境可以配置默认推送地址
  * @method string getRecordUrl() 获取录单 URL 回调通知地址，正式环境可以配置默认推送地址
  * @method void setRecordUrl(string $RecordUrl) 设置录单 URL 回调通知地址，正式环境可以配置默认推送地址
- */
-
-/**
- *GetVirtualNum请求参数结构体
  */
 class GetVirtualNumRequest extends AbstractModel
 {
@@ -163,6 +161,7 @@ class GetVirtualNumRequest extends AbstractModel
      * @var string 录单 URL 回调通知地址，正式环境可以配置默认推送地址
      */
     public $RecordUrl;
+
     /**
      * @param string $BizAppId appId 值测试时由腾讯统一分配
      * @param string $Dst 被叫号码(号码前加 0086，如 008613631686024)
@@ -198,6 +197,7 @@ class GetVirtualNumRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBResourceUsageDetails返回参数结构体
+ *
  * @method ResourceUsageMonitorSet getMaster() 获取主节点资源使用情况监控数据
  * @method void setMaster(ResourceUsageMonitorSet $Master) 设置主节点资源使用情况监控数据
  * @method ResourceUsageMonitorSet getSlave1() 获取备机1资源使用情况监控数据
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeDBResourceUsageDetails返回参数结构体
  */
 class DescribeDBResourceUsageDetailsResponse extends AbstractModel
 {
@@ -58,6 +56,7 @@ class DescribeDBResourceUsageDetailsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param ResourceUsageMonitorSet $Master 主节点资源使用情况监控数据
      * @param ResourceUsageMonitorSet $Slave1 备机1资源使用情况监控数据
@@ -70,6 +69,7 @@ class DescribeDBResourceUsageDetailsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

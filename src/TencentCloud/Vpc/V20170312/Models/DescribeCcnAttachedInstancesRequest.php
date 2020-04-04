@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCcnAttachedInstances请求参数结构体
+ *
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
  * @method string getOrderDirection() 获取排序方法。顺序：`ASC`，倒序：`DESC`。
  * @method void setOrderDirection(string $OrderDirection) 设置排序方法。顺序：`ASC`，倒序：`DESC`。
- */
-
-/**
- *DescribeCcnAttachedInstances请求参数结构体
  */
 class DescribeCcnAttachedInstancesRequest extends AbstractModel
 {
@@ -78,6 +76,7 @@ class DescribeCcnAttachedInstancesRequest extends AbstractModel
      * @var string 排序方法。顺序：`ASC`，倒序：`DESC`。
      */
     public $OrderDirection;
+
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
@@ -94,6 +93,7 @@ class DescribeCcnAttachedInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,13 @@ namespace TencentCloud\Iottid\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePermission请求参数结构体
+ *
 
- */
-
-/**
- *DescribePermission请求参数结构体
  */
 class DescribePermissionRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribePermissionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

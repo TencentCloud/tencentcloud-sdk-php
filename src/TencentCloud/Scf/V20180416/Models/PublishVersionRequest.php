@@ -18,16 +18,14 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * PublishVersion请求参数结构体
+ *
  * @method string getFunctionName() 获取发布函数的名称
  * @method void setFunctionName(string $FunctionName) 设置发布函数的名称
  * @method string getDescription() 获取函数的描述
  * @method void setDescription(string $Description) 设置函数的描述
  * @method string getNamespace() 获取函数的命名空间
  * @method void setNamespace(string $Namespace) 设置函数的命名空间
- */
-
-/**
- *PublishVersion请求参数结构体
  */
 class PublishVersionRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class PublishVersionRequest extends AbstractModel
      * @var string 函数的命名空间
      */
     public $Namespace;
+
     /**
      * @param string $FunctionName 发布函数的名称
      * @param string $Description 函数的描述
@@ -54,6 +53,7 @@ class PublishVersionRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

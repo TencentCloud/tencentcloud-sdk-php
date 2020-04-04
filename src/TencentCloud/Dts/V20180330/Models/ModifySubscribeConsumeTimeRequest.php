@@ -18,14 +18,12 @@ namespace TencentCloud\Dts\V20180330\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifySubscribeConsumeTime请求参数结构体
+ *
  * @method string getSubscribeId() 获取数据订阅实例的ID
  * @method void setSubscribeId(string $SubscribeId) 设置数据订阅实例的ID
  * @method string getConsumeStartTime() 获取消费时间起点，也即是指定订阅数据的时间起点，时间格式如：Y-m-d h:m:s，取值范围为过去24小时之内
  * @method void setConsumeStartTime(string $ConsumeStartTime) 设置消费时间起点，也即是指定订阅数据的时间起点，时间格式如：Y-m-d h:m:s，取值范围为过去24小时之内
- */
-
-/**
- *ModifySubscribeConsumeTime请求参数结构体
  */
 class ModifySubscribeConsumeTimeRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class ModifySubscribeConsumeTimeRequest extends AbstractModel
      * @var string 消费时间起点，也即是指定订阅数据的时间起点，时间格式如：Y-m-d h:m:s，取值范围为过去24小时之内
      */
     public $ConsumeStartTime;
+
     /**
      * @param string $SubscribeId 数据订阅实例的ID
      * @param string $ConsumeStartTime 消费时间起点，也即是指定订阅数据的时间起点，时间格式如：Y-m-d h:m:s，取值范围为过去24小时之内
@@ -46,6 +45,7 @@ class ModifySubscribeConsumeTimeRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

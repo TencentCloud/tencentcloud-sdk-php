@@ -18,6 +18,8 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteL7Rules请求参数结构体
+ *
  * @method string getLoadBalancerId() 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
  * @method string getListenerId() 获取七层监听器实例ID，可通过接口DescribeL7Listeners查询。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainId(string $DomainId) 设置转发域名实例ID，可通过接口DescribeL7Rules查询。
  * @method array getLocationIds() 获取转发路径实例ID列表，可通过接口DescribeL7Rules查询。
  * @method void setLocationIds(array $LocationIds) 设置转发路径实例ID列表，可通过接口DescribeL7Rules查询。
- */
-
-/**
- *DeleteL7Rules请求参数结构体
  */
 class DeleteL7RulesRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class DeleteL7RulesRequest extends AbstractModel
      * @var array 转发路径实例ID列表，可通过接口DescribeL7Rules查询。
      */
     public $LocationIds;
+
     /**
      * @param string $LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param string $ListenerId 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
@@ -62,6 +61,7 @@ class DeleteL7RulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

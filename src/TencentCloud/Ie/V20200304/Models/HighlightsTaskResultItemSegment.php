@@ -18,16 +18,14 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 智能集锦结果片段
+ *
  * @method float getConfidence() 获取置信度，取值范围是 0 到 100。
  * @method void setConfidence(float $Confidence) 设置置信度，取值范围是 0 到 100。
  * @method float getStartTimeOffset() 获取集锦片段起始的偏移时间，单位：秒。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置集锦片段起始的偏移时间，单位：秒。
  * @method float getEndTimeOffset() 获取集锦片段终止的偏移时间，单位：秒。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置集锦片段终止的偏移时间，单位：秒。
- */
-
-/**
- *智能集锦结果片段
  */
 class HighlightsTaskResultItemSegment extends AbstractModel
 {
@@ -45,6 +43,7 @@ class HighlightsTaskResultItemSegment extends AbstractModel
      * @var float 集锦片段终止的偏移时间，单位：秒。
      */
     public $EndTimeOffset;
+
     /**
      * @param float $Confidence 置信度，取值范围是 0 到 100。
      * @param float $StartTimeOffset 集锦片段起始的偏移时间，单位：秒。
@@ -54,6 +53,7 @@ class HighlightsTaskResultItemSegment extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

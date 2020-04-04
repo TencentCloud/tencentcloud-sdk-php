@@ -18,6 +18,8 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BankCard4EVerification返回参数结构体
+ *
  * @method string getResult() 获取认证结果码
 收费结果码：
 '0': '认证通过'
@@ -67,10 +69,6 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-
-/**
- *BankCard4EVerification返回参数结构体
- */
 class BankCard4EVerificationResponse extends AbstractModel
 {
     /**
@@ -108,6 +106,7 @@ class BankCard4EVerificationResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Result 认证结果码
 收费结果码：
@@ -138,6 +137,7 @@ class BankCard4EVerificationResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

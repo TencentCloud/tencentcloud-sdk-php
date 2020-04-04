@@ -18,16 +18,14 @@ namespace TencentCloud\Ds\V20180523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeTaskStatus请求参数结构体
+ *
  * @method string getModule() 获取模块名CommonMng
  * @method void setModule(string $Module) 设置模块名CommonMng
  * @method string getOperation() 获取操作名DescribeTaskStatus
  * @method void setOperation(string $Operation) 设置操作名DescribeTaskStatus
  * @method integer getTaskId() 获取任务ID
  * @method void setTaskId(integer $TaskId) 设置任务ID
- */
-
-/**
- *DescribeTaskStatus请求参数结构体
  */
 class DescribeTaskStatusRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeTaskStatusRequest extends AbstractModel
      * @var integer 任务ID
      */
     public $TaskId;
+
     /**
      * @param string $Module 模块名CommonMng
      * @param string $Operation 操作名DescribeTaskStatus
@@ -54,6 +53,7 @@ class DescribeTaskStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

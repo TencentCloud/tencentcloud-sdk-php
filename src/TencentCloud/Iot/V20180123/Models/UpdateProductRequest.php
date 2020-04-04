@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateProduct请求参数结构体
+ *
  * @method string getProductId() 获取产品Id
  * @method void setProductId(string $ProductId) 设置产品Id
  * @method string getName() 获取产品名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置产品描述
  * @method array getDataTemplate() 获取数据模版
  * @method void setDataTemplate(array $DataTemplate) 设置数据模版
- */
-
-/**
- *UpdateProduct请求参数结构体
  */
 class UpdateProductRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class UpdateProductRequest extends AbstractModel
      * @var array 数据模版
      */
     public $DataTemplate;
+
     /**
      * @param string $ProductId 产品Id
      * @param string $Name 产品名称
@@ -62,6 +61,7 @@ class UpdateProductRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

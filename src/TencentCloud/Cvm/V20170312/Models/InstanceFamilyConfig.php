@@ -18,15 +18,13 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述实例的机型族配置信息
+形如：{'InstanceFamilyName': '标准型S1', 'InstanceFamily': 'S1'}、{'InstanceFamilyName': '网络优化型N1', 'InstanceFamily': 'N1'}、{'InstanceFamilyName': '高IO型I1', 'InstanceFamily': 'I1'}等。
+ *
  * @method string getInstanceFamilyName() 获取机型族名称的中文全称。
  * @method void setInstanceFamilyName(string $InstanceFamilyName) 设置机型族名称的中文全称。
  * @method string getInstanceFamily() 获取机型族名称的英文简称。
  * @method void setInstanceFamily(string $InstanceFamily) 设置机型族名称的英文简称。
- */
-
-/**
- *描述实例的机型族配置信息
-形如：{'InstanceFamilyName': '标准型S1', 'InstanceFamily': 'S1'}、{'InstanceFamilyName': '网络优化型N1', 'InstanceFamily': 'N1'}、{'InstanceFamilyName': '高IO型I1', 'InstanceFamily': 'I1'}等。
  */
 class InstanceFamilyConfig extends AbstractModel
 {
@@ -39,6 +37,7 @@ class InstanceFamilyConfig extends AbstractModel
      * @var string 机型族名称的英文简称。
      */
     public $InstanceFamily;
+
     /**
      * @param string $InstanceFamilyName 机型族名称的中文全称。
      * @param string $InstanceFamily 机型族名称的英文简称。
@@ -47,6 +46,7 @@ class InstanceFamilyConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

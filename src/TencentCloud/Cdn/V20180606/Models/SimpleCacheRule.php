@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 缓存过期规则配置
+ *
  * @method string getCacheType() 获取规则类型：
 all：所有文件生效
 file：指定文件后缀生效
@@ -47,10 +49,6 @@ index 时填充 /
  * @method void setCacheTime(integer $CacheTime) 设置缓存过期时间设置
 单位为秒，最大可设置为 365 天
  */
-
-/**
- *缓存过期规则配置
- */
 class SimpleCacheRule extends AbstractModel
 {
     /**
@@ -78,6 +76,7 @@ index 时填充 /
 单位为秒，最大可设置为 365 天
      */
     public $CacheTime;
+
     /**
      * @param string $CacheType 规则类型：
 all：所有文件生效
@@ -98,6 +97,7 @@ index 时填充 /
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

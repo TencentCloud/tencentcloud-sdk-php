@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveDomains请求参数结构体
+ *
  * @method integer getDomainStatus() 获取域名状态过滤。0-停用，1-启用。
  * @method void setDomainStatus(integer $DomainStatus) 设置域名状态过滤。0-停用，1-启用。
  * @method integer getDomainType() 获取域名类型过滤。0-推流，1-播放。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDelayLive(integer $IsDelayLive) 设置0 普通直播 1慢直播 默认0。
  * @method string getDomainPrefix() 获取域名前缀。
  * @method void setDomainPrefix(string $DomainPrefix) 设置域名前缀。
- */
-
-/**
- *DescribeLiveDomains请求参数结构体
  */
 class DescribeLiveDomainsRequest extends AbstractModel
 {
@@ -66,6 +64,7 @@ class DescribeLiveDomainsRequest extends AbstractModel
      * @var string 域名前缀。
      */
     public $DomainPrefix;
+
     /**
      * @param integer $DomainStatus 域名状态过滤。0-停用，1-启用。
      * @param integer $DomainType 域名类型过滤。0-推流，1-播放。
@@ -78,6 +77,7 @@ class DescribeLiveDomainsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 路由策略对象
+ *
  * @method string getDestinationCidrBlock() 获取目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
  * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
  * @method string getGatewayType() 获取下一跳类型，目前我们支持的类型有：
@@ -62,10 +64,6 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 用户只能添加和操作 USER 类型的路由。
  * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
- */
-
-/**
- *路由策略对象
  */
 class Route extends AbstractModel
 {
@@ -122,6 +120,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
      * @var string 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public $RouteTableId;
+
     /**
      * @param string $DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      * @param string $GatewayType 下一跳类型，目前我们支持的类型有：
@@ -150,6 +149,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

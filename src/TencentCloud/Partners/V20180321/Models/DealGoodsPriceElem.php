@@ -18,12 +18,10 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 订单价格详情
+ *
  * @method integer getRealTotalCost() 获取实付金额
  * @method void setRealTotalCost(integer $RealTotalCost) 设置实付金额
- */
-
-/**
- *订单价格详情
  */
 class DealGoodsPriceElem extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DealGoodsPriceElem extends AbstractModel
      * @var integer 实付金额
      */
     public $RealTotalCost;
+
     /**
      * @param integer $RealTotalCost 实付金额
      */
@@ -38,6 +37,7 @@ class DealGoodsPriceElem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

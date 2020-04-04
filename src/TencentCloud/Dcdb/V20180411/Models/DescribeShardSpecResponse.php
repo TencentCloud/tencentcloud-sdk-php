@@ -18,14 +18,12 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeShardSpec返回参数结构体
+ *
  * @method array getSpecConfig() 获取按机型分类的可售卖规格列表
  * @method void setSpecConfig(array $SpecConfig) 设置按机型分类的可售卖规格列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeShardSpec返回参数结构体
  */
 class DescribeShardSpecResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeShardSpecResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $SpecConfig 按机型分类的可售卖规格列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class DescribeShardSpecResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

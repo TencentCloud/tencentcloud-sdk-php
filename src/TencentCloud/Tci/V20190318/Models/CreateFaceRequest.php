@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateFace请求参数结构体
+ *
  * @method string getPersonId() 获取人员唯一标识符
  * @method void setPersonId(string $PersonId) 设置人员唯一标识符
  * @method array getImages() 获取图片数据 base64 字符串，与 Urls 参数选择一个输入
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLibraryId(string $LibraryId) 设置人员库唯一标识符
  * @method array getUrls() 获取图片下载地址，与 Images 参数选择一个输入
  * @method void setUrls(array $Urls) 设置图片下载地址，与 Images 参数选择一个输入
- */
-
-/**
- *CreateFace请求参数结构体
  */
 class CreateFaceRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateFaceRequest extends AbstractModel
      * @var array 图片下载地址，与 Images 参数选择一个输入
      */
     public $Urls;
+
     /**
      * @param string $PersonId 人员唯一标识符
      * @param array $Images 图片数据 base64 字符串，与 Urls 参数选择一个输入
@@ -62,6 +61,7 @@ class CreateFaceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

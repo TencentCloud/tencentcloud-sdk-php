@@ -18,16 +18,14 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeRebateInfos返回参数结构体
+ *
  * @method array getRebateInfoSet() 获取返佣信息列表
  * @method void setRebateInfoSet(array $RebateInfoSet) 设置返佣信息列表
  * @method integer getTotalCount() 获取符合查询条件返佣信息数目
  * @method void setTotalCount(integer $TotalCount) 设置符合查询条件返佣信息数目
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeRebateInfos返回参数结构体
  */
 class DescribeRebateInfosResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeRebateInfosResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $RebateInfoSet 返佣信息列表
      * @param integer $TotalCount 符合查询条件返佣信息数目
@@ -54,6 +53,7 @@ class DescribeRebateInfosResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateShieldPlanInstance请求参数结构体
+ *
  * @method string getResourceId() 获取资源id
  * @method void setResourceId(string $ResourceId) 设置资源id
  * @method string getPlanName() 获取策略名称
  * @method void setPlanName(string $PlanName) 设置策略名称
  * @method PlanInfo getPlanInfo() 获取策略具体信息
  * @method void setPlanInfo(PlanInfo $PlanInfo) 设置策略具体信息
- */
-
-/**
- *CreateShieldPlanInstance请求参数结构体
  */
 class CreateShieldPlanInstanceRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateShieldPlanInstanceRequest extends AbstractModel
      * @var PlanInfo 策略具体信息
      */
     public $PlanInfo;
+
     /**
      * @param string $ResourceId 资源id
      * @param string $PlanName 策略名称
@@ -54,6 +53,7 @@ class CreateShieldPlanInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

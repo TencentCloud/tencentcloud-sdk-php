@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 安全策略规则（入参）
+ *
  * @method string getSourceCidr() 获取请求来源IP或IP段。
  * @method void setSourceCidr(string $SourceCidr) 设置请求来源IP或IP段。
  * @method string getAction() 获取策略：允许（ACCEPT）或拒绝（DROP）
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 多个端口: 80,443
 连续端口: 3306-20000
 所有端口: ALL
- */
-
-/**
- *安全策略规则（入参）
  */
 class SecurityPolicyRuleIn extends AbstractModel
 {
@@ -71,6 +69,7 @@ class SecurityPolicyRuleIn extends AbstractModel
 所有端口: ALL
      */
     public $DestPortRange;
+
     /**
      * @param string $SourceCidr 请求来源IP或IP段。
      * @param string $Action 策略：允许（ACCEPT）或拒绝（DROP）
@@ -86,6 +85,7 @@ class SecurityPolicyRuleIn extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

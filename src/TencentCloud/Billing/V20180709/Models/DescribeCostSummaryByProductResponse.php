@@ -18,6 +18,8 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeCostSummaryByProduct返回参数结构体
+ *
  * @method integer getReady() 获取数据是否准备好，0未准备好，1准备好
  * @method void setReady(integer $Ready) 设置数据是否准备好，0未准备好，1准备好
  * @method ConsumptionSummaryTotal getTotal() 获取消耗详情
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeCostSummaryByProduct返回参数结构体
  */
 class DescribeCostSummaryByProductResponse extends AbstractModel
 {
@@ -65,6 +63,7 @@ class DescribeCostSummaryByProductResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $Ready 数据是否准备好，0未准备好，1准备好
      * @param ConsumptionSummaryTotal $Total 消耗详情
@@ -78,6 +77,7 @@ class DescribeCostSummaryByProductResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

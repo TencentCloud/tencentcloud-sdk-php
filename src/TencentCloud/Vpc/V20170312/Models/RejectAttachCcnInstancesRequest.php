@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RejectAttachCcnInstances请求参数结构体
+ *
  * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
  * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
  * @method array getInstances() 获取拒绝关联实例列表。
  * @method void setInstances(array $Instances) 设置拒绝关联实例列表。
- */
-
-/**
- *RejectAttachCcnInstances请求参数结构体
  */
 class RejectAttachCcnInstancesRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class RejectAttachCcnInstancesRequest extends AbstractModel
      * @var array 拒绝关联实例列表。
      */
     public $Instances;
+
     /**
      * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
      * @param array $Instances 拒绝关联实例列表。
@@ -46,6 +45,7 @@ class RejectAttachCcnInstancesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

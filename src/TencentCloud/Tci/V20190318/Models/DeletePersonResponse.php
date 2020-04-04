@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeletePerson返回参数结构体
+ *
  * @method array getFaceInfoSet() 获取人脸信息
  * @method void setFaceInfoSet(array $FaceInfoSet) 设置人脸信息
  * @method string getLibraryId() 获取人员库唯一标识符
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPersonName(string $PersonName) 设置人员名称
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DeletePerson返回参数结构体
  */
 class DeletePersonResponse extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DeletePersonResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $FaceInfoSet 人脸信息
      * @param string $LibraryId 人员库唯一标识符
@@ -70,6 +69,7 @@ class DeletePersonResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

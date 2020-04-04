@@ -18,6 +18,8 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 直播包信息
+ *
  * @method string getId() 获取包ID。
  * @method void setId(string $Id) 设置包ID。
  * @method integer getTotal() 获取总量。
@@ -58,10 +60,6 @@ use TencentCloud\Common\AbstractModel;
 0：未使用；
 1：使用中；
 2：已过期。
- */
-
-/**
- *直播包信息
  */
 class LivePackageInfo extends AbstractModel
 {
@@ -116,6 +114,7 @@ class LivePackageInfo extends AbstractModel
 2：已过期。
      */
     public $Status;
+
     /**
      * @param string $Id 包ID。
      * @param integer $Total 总量。
@@ -142,6 +141,7 @@ class LivePackageInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

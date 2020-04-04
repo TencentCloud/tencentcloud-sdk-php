@@ -18,6 +18,8 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDBErrlogs请求参数结构体
+ *
  * @method string getDBInstanceId() 获取实例ID，形如postgres-5bq3wfjd
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-5bq3wfjd
  * @method string getStartTime() 获取查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页返回，每页返回的最大数量。取值为1-100
  * @method integer getOffset() 获取分页返回，返回第几页的数据，从第0页开始计数
  * @method void setOffset(integer $Offset) 设置分页返回，返回第几页的数据，从第0页开始计数
- */
-
-/**
- *DescribeDBErrlogs请求参数结构体
  */
 class DescribeDBErrlogsRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class DescribeDBErrlogsRequest extends AbstractModel
      * @var integer 分页返回，返回第几页的数据，从第0页开始计数
      */
     public $Offset;
+
     /**
      * @param string $DBInstanceId 实例ID，形如postgres-5bq3wfjd
      * @param string $StartTime 查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前
@@ -86,6 +85,7 @@ class DescribeDBErrlogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

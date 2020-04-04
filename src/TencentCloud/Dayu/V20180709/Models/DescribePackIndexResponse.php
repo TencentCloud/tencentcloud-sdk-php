@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribePackIndex返回参数结构体
+ *
  * @method array getData() 获取字段值，如下：
 TotalPackCount：资源数
 AttackPackCount：清洗中的资源数
@@ -34,10 +36,6 @@ ExpireingPackCount：即将过期的资源数
 IsolatePackCount：隔离中的资源数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribePackIndex返回参数结构体
  */
 class DescribePackIndexResponse extends AbstractModel
 {
@@ -56,6 +54,7 @@ IsolatePackCount：隔离中的资源数
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $Data 字段值，如下：
 TotalPackCount：资源数
@@ -70,6 +69,7 @@ IsolatePackCount：隔离中的资源数
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

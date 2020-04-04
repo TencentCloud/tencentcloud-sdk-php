@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 微信发布任务信息
+ *
  * @method string getTaskId() 获取任务 ID。
  * @method void setTaskId(string $TaskId) 设置任务 ID。
  * @method string getStatus() 获取任务状态，取值：
@@ -72,10 +74,6 @@ FINISH：已完成。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWechatUrl(string $WechatUrl) 设置微信地址。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *微信发布任务信息
  */
 class WechatPublishTask extends AbstractModel
 {
@@ -145,6 +143,7 @@ FINISH：已完成。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WechatUrl;
+
     /**
      * @param string $TaskId 任务 ID。
      * @param string $Status 任务状态，取值：
@@ -178,6 +177,7 @@ FINISH：已完成。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

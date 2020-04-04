@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetDisableRecords请求参数结构体
+ *
  * @method string getStartTime() 获取开始时间，如：2018-12-12 10:24:00。
  * @method void setStartTime(string $StartTime) 设置开始时间，如：2018-12-12 10:24:00。
  * @method string getEndTime() 获取结束时间，如：2018-12-14 10:24:00。
@@ -34,10 +36,6 @@ enable：当前为可用状态，已解禁，可正常访问
  * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0 （第一页）。
  * @method integer getLimit() 获取分页查询限制数目，默认为20。
  * @method void setLimit(integer $Limit) 设置分页查询限制数目，默认为20。
- */
-
-/**
- *GetDisableRecords请求参数结构体
  */
 class GetDisableRecordsRequest extends AbstractModel
 {
@@ -72,6 +70,7 @@ enable：当前为可用状态，已解禁，可正常访问
      * @var integer 分页查询限制数目，默认为20。
      */
     public $Limit;
+
     /**
      * @param string $StartTime 开始时间，如：2018-12-12 10:24:00。
      * @param string $EndTime 结束时间，如：2018-12-14 10:24:00。
@@ -86,6 +85,7 @@ enable：当前为可用状态，已解禁，可正常访问
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

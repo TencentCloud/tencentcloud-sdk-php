@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI 样本管理，人物信息。
+ *
  * @method string getPersonId() 获取人物 ID。
  * @method void setPersonId(string $PersonId) 设置人物 ID。
  * @method string getName() 获取人物名称。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method string getUpdateTime() 获取最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method void setUpdateTime(string $UpdateTime) 设置最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
- */
-
-/**
- *AI 样本管理，人物信息。
  */
 class AiSamplePerson extends AbstractModel
 {
@@ -80,6 +78,7 @@ class AiSamplePerson extends AbstractModel
      * @var string 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      */
     public $UpdateTime;
+
     /**
      * @param string $PersonId 人物 ID。
      * @param string $Name 人物名称。
@@ -94,6 +93,7 @@ class AiSamplePerson extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

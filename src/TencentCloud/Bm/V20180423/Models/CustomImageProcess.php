@@ -18,16 +18,14 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 镜像制作进度列表
+ *
  * @method string getStepName() 获取步骤
  * @method void setStepName(string $StepName) 设置步骤
  * @method string getStartTime() 获取此步骤开始时间
  * @method void setStartTime(string $StartTime) 设置此步骤开始时间
  * @method integer getStepType() 获取0: 已完成 1: 当前进行 2: 未开始
  * @method void setStepType(integer $StepType) 设置0: 已完成 1: 当前进行 2: 未开始
- */
-
-/**
- *镜像制作进度列表
  */
 class CustomImageProcess extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CustomImageProcess extends AbstractModel
      * @var integer 0: 已完成 1: 当前进行 2: 未开始
      */
     public $StepType;
+
     /**
      * @param string $StepName 步骤
      * @param string $StartTime 此步骤开始时间
@@ -54,6 +53,7 @@ class CustomImageProcess extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

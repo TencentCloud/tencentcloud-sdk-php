@@ -18,14 +18,12 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateTopicRule请求参数结构体
+ *
  * @method string getRuleName() 获取规则名称
  * @method void setRuleName(string $RuleName) 设置规则名称
  * @method TopicRulePayload getTopicRulePayload() 获取规则内容
  * @method void setTopicRulePayload(TopicRulePayload $TopicRulePayload) 设置规则内容
- */
-
-/**
- *CreateTopicRule请求参数结构体
  */
 class CreateTopicRuleRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateTopicRuleRequest extends AbstractModel
      * @var TopicRulePayload 规则内容
      */
     public $TopicRulePayload;
+
     /**
      * @param string $RuleName 规则名称
      * @param TopicRulePayload $TopicRulePayload 规则内容
@@ -46,6 +45,7 @@ class CreateTopicRuleRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

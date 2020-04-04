@@ -18,6 +18,8 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 证书详情，包括证书ID， 证书名字，证书类型，证书内容以及密钥内容。
+ *
  * @method string getCertificateId() 获取证书ID。
  * @method void setCertificateId(string $CertificateId) 设置证书ID。
  * @method integer getCertificateType() 获取证书类型。
@@ -52,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubjectCN(string $SubjectCN) 设置证书主题通用名称。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *证书详情，包括证书ID， 证书名字，证书类型，证书内容以及密钥内容。
  */
 class CertificateDetail extends AbstractModel
 {
@@ -115,6 +113,7 @@ class CertificateDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubjectCN;
+
     /**
      * @param string $CertificateId 证书ID。
      * @param integer $CertificateType 证书类型。
@@ -138,6 +137,7 @@ class CertificateDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

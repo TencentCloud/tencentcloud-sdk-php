@@ -18,16 +18,14 @@ namespace TencentCloud\Msp\V20180319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 迁移详情列表
+ *
  * @method string getStatus() 获取迁移状态
  * @method void setStatus(string $Status) 设置迁移状态
  * @method string getProgress() 获取迁移进度
  * @method void setProgress(string $Progress) 设置迁移进度
  * @method string getUpdateTime() 获取迁移日期
  * @method void setUpdateTime(string $UpdateTime) 设置迁移日期
- */
-
-/**
- *迁移详情列表
  */
 class TaskStatus extends AbstractModel
 {
@@ -45,6 +43,7 @@ class TaskStatus extends AbstractModel
      * @var string 迁移日期
      */
     public $UpdateTime;
+
     /**
      * @param string $Status 迁移状态
      * @param string $Progress 迁移进度
@@ -54,6 +53,7 @@ class TaskStatus extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

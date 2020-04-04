@@ -18,16 +18,14 @@ namespace TencentCloud\Iai\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetPersonGroupInfo请求参数结构体
+ *
  * @method string getPersonId() 获取人员ID
  * @method void setPersonId(string $PersonId) 设置人员ID
  * @method integer getOffset() 获取起始序号，默认值为0
  * @method void setOffset(integer $Offset) 设置起始序号，默认值为0
  * @method integer getLimit() 获取返回数量，默认值为10，最大值为100
  * @method void setLimit(integer $Limit) 设置返回数量，默认值为10，最大值为100
- */
-
-/**
- *GetPersonGroupInfo请求参数结构体
  */
 class GetPersonGroupInfoRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GetPersonGroupInfoRequest extends AbstractModel
      * @var integer 返回数量，默认值为10，最大值为100
      */
     public $Limit;
+
     /**
      * @param string $PersonId 人员ID
      * @param integer $Offset 起始序号，默认值为0
@@ -54,6 +53,7 @@ class GetPersonGroupInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

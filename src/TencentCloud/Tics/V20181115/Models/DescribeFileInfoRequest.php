@@ -18,14 +18,12 @@ namespace TencentCloud\Tics\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeFileInfo请求参数结构体
+ *
  * @method string getKey() 获取要查询文件的MD5
  * @method void setKey(string $Key) 设置要查询文件的MD5
  * @method integer getOption() 获取附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
  * @method void setOption(integer $Option) 设置附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
- */
-
-/**
- *DescribeFileInfo请求参数结构体
  */
 class DescribeFileInfoRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeFileInfoRequest extends AbstractModel
      * @var integer 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
      */
     public $Option;
+
     /**
      * @param string $Key 要查询文件的MD5
      * @param integer $Option 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
@@ -46,6 +45,7 @@ class DescribeFileInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

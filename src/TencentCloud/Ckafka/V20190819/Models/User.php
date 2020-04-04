@@ -18,6 +18,8 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户实体
+ *
  * @method integer getUserId() 获取用户id
  * @method void setUserId(integer $UserId) 设置用户id
  * @method string getName() 获取用户名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取最后更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置最后更新时间
- */
-
-/**
- *用户实体
  */
 class User extends AbstractModel
 {
@@ -52,6 +50,7 @@ class User extends AbstractModel
      * @var string 最后更新时间
      */
     public $UpdateTime;
+
     /**
      * @param integer $UserId 用户id
      * @param string $Name 用户名称
@@ -62,6 +61,7 @@ class User extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

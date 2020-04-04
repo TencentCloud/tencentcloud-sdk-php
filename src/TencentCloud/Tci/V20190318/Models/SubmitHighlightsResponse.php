@@ -18,14 +18,12 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SubmitHighlights返回参数结构体
+ *
  * @method integer getJobId() 获取视频拆条任务ID，用来唯一标识视频拆条任务。
  * @method void setJobId(integer $JobId) 设置视频拆条任务ID，用来唯一标识视频拆条任务。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *SubmitHighlights返回参数结构体
  */
 class SubmitHighlightsResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SubmitHighlightsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $JobId 视频拆条任务ID，用来唯一标识视频拆条任务。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class SubmitHighlightsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

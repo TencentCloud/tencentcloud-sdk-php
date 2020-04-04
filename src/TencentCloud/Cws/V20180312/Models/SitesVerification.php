@@ -18,6 +18,8 @@ namespace TencentCloud\Cws\V20180312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 站点验证数据
+ *
  * @method string getDomain() 获取根域名。
  * @method void setDomain(string $Domain) 设置根域名。
  * @method string getTxtName() 获取txt解析域名验证的name。
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVerifyUrl(string $VerifyUrl) 设置用于验证站点的url，即访问该url获取验证数据。
  * @method string getVerifyFileUrl() 获取获取验证验证文件的url。
  * @method void setVerifyFileUrl(string $VerifyFileUrl) 设置获取验证验证文件的url。
- */
-
-/**
- *站点验证数据
  */
 class SitesVerification extends AbstractModel
 {
@@ -101,6 +99,7 @@ class SitesVerification extends AbstractModel
      * @var string 获取验证验证文件的url。
      */
     public $VerifyFileUrl;
+
     /**
      * @param string $Domain 根域名。
      * @param string $TxtName txt解析域名验证的name。
@@ -118,6 +117,7 @@ class SitesVerification extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

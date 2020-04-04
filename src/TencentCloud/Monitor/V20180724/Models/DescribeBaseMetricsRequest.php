@@ -18,14 +18,12 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeBaseMetrics请求参数结构体
+ *
  * @method string getNamespace() 获取业务命名空间
  * @method void setNamespace(string $Namespace) 设置业务命名空间
  * @method string getMetricName() 获取指标名
  * @method void setMetricName(string $MetricName) 设置指标名
- */
-
-/**
- *DescribeBaseMetrics请求参数结构体
  */
 class DescribeBaseMetricsRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeBaseMetricsRequest extends AbstractModel
      * @var string 指标名
      */
     public $MetricName;
+
     /**
      * @param string $Namespace 业务命名空间
      * @param string $MetricName 指标名
@@ -46,6 +45,7 @@ class DescribeBaseMetricsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

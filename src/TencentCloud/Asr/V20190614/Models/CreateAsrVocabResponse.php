@@ -18,14 +18,12 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAsrVocab返回参数结构体
+ *
  * @method string getVocabId() 获取词表ID，可用于获取词表信息
  * @method void setVocabId(string $VocabId) 设置词表ID，可用于获取词表信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateAsrVocab返回参数结构体
  */
 class CreateAsrVocabResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateAsrVocabResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $VocabId 词表ID，可用于获取词表信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class CreateAsrVocabResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

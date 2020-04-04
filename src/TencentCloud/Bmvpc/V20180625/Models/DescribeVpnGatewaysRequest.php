@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpnGateways请求参数结构体
+ *
  * @method array getVpnGatewayIds() 获取VPN网关实例ID。形如：bmvpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
  * @method void setVpnGatewayIds(array $VpnGatewayIds) 设置VPN网关实例ID。形如：bmvpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置排序字段, 支持"CreateTime"排序
  * @method string getOrderDirection() 获取排序方向, “asc”、“desc”
  * @method void setOrderDirection(string $OrderDirection) 设置排序方向, “asc”、“desc”
- */
-
-/**
- *DescribeVpnGateways请求参数结构体
  */
 class DescribeVpnGatewaysRequest extends AbstractModel
 {
@@ -78,6 +76,7 @@ class DescribeVpnGatewaysRequest extends AbstractModel
      * @var string 排序方向, “asc”、“desc”
      */
     public $OrderDirection;
+
     /**
      * @param array $VpnGatewayIds VPN网关实例ID。形如：bmvpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
@@ -94,6 +93,7 @@ class DescribeVpnGatewaysRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

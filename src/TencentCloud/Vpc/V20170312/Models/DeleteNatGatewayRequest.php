@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteNatGateway请求参数结构体
+ *
  * @method string getNatGatewayId() 获取NAT网关的ID，形如：`nat-df45454`。
  * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID，形如：`nat-df45454`。
- */
-
-/**
- *DeleteNatGateway请求参数结构体
  */
 class DeleteNatGatewayRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteNatGatewayRequest extends AbstractModel
      * @var string NAT网关的ID，形如：`nat-df45454`。
      */
     public $NatGatewayId;
+
     /**
      * @param string $NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      */
@@ -38,6 +37,7 @@ class DeleteNatGatewayRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

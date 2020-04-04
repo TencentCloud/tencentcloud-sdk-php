@@ -18,6 +18,8 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用户到访明细
+ *
  * @method integer getPersonId() 获取用户ID
  * @method void setPersonId(integer $PersonId) 设置用户ID
  * @method integer getVisitId() 获取用户到访ID
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCapturedPictureUrl(string $CapturedPictureUrl) 设置抓拍到的头像Url，在有效期内可以访问下载
  * @method SceneInfo getSceneInfo() 获取抓拍头像的场景图信息
  * @method void setSceneInfo(SceneInfo $SceneInfo) 设置抓拍头像的场景图信息
- */
-
-/**
- *用户到访明细
  */
 class PersonVisitInfo extends AbstractModel
 {
@@ -87,6 +85,7 @@ class PersonVisitInfo extends AbstractModel
      * @var SceneInfo 抓拍头像的场景图信息
      */
     public $SceneInfo;
+
     /**
      * @param integer $PersonId 用户ID
      * @param integer $VisitId 用户到访ID
@@ -102,6 +101,7 @@ class PersonVisitInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

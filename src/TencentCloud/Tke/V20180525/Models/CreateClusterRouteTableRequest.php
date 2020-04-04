@@ -18,6 +18,8 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateClusterRouteTable请求参数结构体
+ *
  * @method string getRouteTableName() 获取路由表名称
  * @method void setRouteTableName(string $RouteTableName) 设置路由表名称
  * @method string getRouteTableCidrBlock() 获取路由表CIDR
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置路由表绑定的VPC
  * @method integer getIgnoreClusterCidrConflict() 获取是否忽略CIDR冲突
  * @method void setIgnoreClusterCidrConflict(integer $IgnoreClusterCidrConflict) 设置是否忽略CIDR冲突
- */
-
-/**
- *CreateClusterRouteTable请求参数结构体
  */
 class CreateClusterRouteTableRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class CreateClusterRouteTableRequest extends AbstractModel
      * @var integer 是否忽略CIDR冲突
      */
     public $IgnoreClusterCidrConflict;
+
     /**
      * @param string $RouteTableName 路由表名称
      * @param string $RouteTableCidrBlock 路由表CIDR
@@ -62,6 +61,7 @@ class CreateClusterRouteTableRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

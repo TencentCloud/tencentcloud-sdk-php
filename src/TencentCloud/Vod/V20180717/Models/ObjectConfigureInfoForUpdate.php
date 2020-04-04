@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 物体识别任务控制参数
+ *
  * @method string getSwitch() 获取物体识别任务开关，可选值：
 <li>ON：开启智能物体识别任务；</li>
 <li>OFF：关闭智能物体识别任务。</li>
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Default：使用默认物体库；</li>
 <li>UserDefine：使用用户自定义物体库。</li>
 <li>All：同时使用默认物体库和用户自定义物体库。</li>
- */
-
-/**
- *物体识别任务控制参数
  */
 class ObjectConfigureInfoForUpdate extends AbstractModel
 {
@@ -53,6 +51,7 @@ class ObjectConfigureInfoForUpdate extends AbstractModel
 <li>All：同时使用默认物体库和用户自定义物体库。</li>
      */
     public $ObjectLibrary;
+
     /**
      * @param string $Switch 物体识别任务开关，可选值：
 <li>ON：开启智能物体识别任务；</li>
@@ -66,6 +65,7 @@ class ObjectConfigureInfoForUpdate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

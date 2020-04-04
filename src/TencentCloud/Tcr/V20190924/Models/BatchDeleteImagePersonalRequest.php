@@ -18,14 +18,12 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BatchDeleteImagePersonal请求参数结构体
+ *
  * @method string getRepoName() 获取仓库名称
  * @method void setRepoName(string $RepoName) 设置仓库名称
  * @method array getTags() 获取Tag列表
  * @method void setTags(array $Tags) 设置Tag列表
- */
-
-/**
- *BatchDeleteImagePersonal请求参数结构体
  */
 class BatchDeleteImagePersonalRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BatchDeleteImagePersonalRequest extends AbstractModel
      * @var array Tag列表
      */
     public $Tags;
+
     /**
      * @param string $RepoName 仓库名称
      * @param array $Tags Tag列表
@@ -46,6 +45,7 @@ class BatchDeleteImagePersonalRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

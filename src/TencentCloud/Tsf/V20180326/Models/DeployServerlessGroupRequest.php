@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeployServerlessGroup请求参数结构体
+ *
  * @method string getGroupId() 获取部署组ID
  * @method void setGroupId(string $GroupId) 设置部署组ID
  * @method string getPkgId() 获取程序包ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceRequest(integer $InstanceRequest) 设置要求最小实例数，取值范围 [1, 4]，缺省为 1，不传表示维持原态
  * @method string getStartupParameters() 获取部署组启动参数，不传表示维持原态
  * @method void setStartupParameters(string $StartupParameters) 设置部署组启动参数，不传表示维持原态
- */
-
-/**
- *DeployServerlessGroup请求参数结构体
  */
 class DeployServerlessGroupRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DeployServerlessGroupRequest extends AbstractModel
      * @var string 部署组启动参数，不传表示维持原态
      */
     public $StartupParameters;
+
     /**
      * @param string $GroupId 部署组ID
      * @param string $PkgId 程序包ID
@@ -70,6 +69,7 @@ class DeployServerlessGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

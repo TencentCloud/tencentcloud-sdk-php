@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * HaVipDisassociateAddressIp请求参数结构体
+ *
  * @method string getHaVipId() 获取`HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是已绑定`EIP`的`HAVIP`。
  * @method void setHaVipId(string $HaVipId) 设置`HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是已绑定`EIP`的`HAVIP`。
- */
-
-/**
- *HaVipDisassociateAddressIp请求参数结构体
  */
 class HaVipDisassociateAddressIpRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class HaVipDisassociateAddressIpRequest extends AbstractModel
      * @var string `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是已绑定`EIP`的`HAVIP`。
      */
     public $HaVipId;
+
     /**
      * @param string $HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是已绑定`EIP`的`HAVIP`。
      */
@@ -38,6 +37,7 @@ class HaVipDisassociateAddressIpRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

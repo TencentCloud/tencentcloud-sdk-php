@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateDefaultVpc请求参数结构体
+ *
  * @method string getZone() 获取子网所在的可用区ID，不指定将随机选择可用区
  * @method void setZone(string $Zone) 设置子网所在的可用区ID，不指定将随机选择可用区
  * @method boolean getForce() 获取是否强制返回默认VPC
  * @method void setForce(boolean $Force) 设置是否强制返回默认VPC
- */
-
-/**
- *CreateDefaultVpc请求参数结构体
  */
 class CreateDefaultVpcRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateDefaultVpcRequest extends AbstractModel
      * @var boolean 是否强制返回默认VPC
      */
     public $Force;
+
     /**
      * @param string $Zone 子网所在的可用区ID，不指定将随机选择可用区
      * @param boolean $Force 是否强制返回默认VPC
@@ -46,6 +45,7 @@ class CreateDefaultVpcRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

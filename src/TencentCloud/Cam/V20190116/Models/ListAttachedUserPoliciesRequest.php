@@ -18,16 +18,14 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListAttachedUserPolicies请求参数结构体
+ *
  * @method integer getTargetUin() 获取子账号 uin
  * @method void setTargetUin(integer $TargetUin) 设置子账号 uin
  * @method integer getPage() 获取页码，默认值是 1，从 1 开始
  * @method void setPage(integer $Page) 设置页码，默认值是 1，从 1 开始
  * @method integer getRp() 获取每页大小，默认值是 20
  * @method void setRp(integer $Rp) 设置每页大小，默认值是 20
- */
-
-/**
- *ListAttachedUserPolicies请求参数结构体
  */
 class ListAttachedUserPoliciesRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ListAttachedUserPoliciesRequest extends AbstractModel
      * @var integer 每页大小，默认值是 20
      */
     public $Rp;
+
     /**
      * @param integer $TargetUin 子账号 uin
      * @param integer $Page 页码，默认值是 1，从 1 开始
@@ -54,6 +53,7 @@ class ListAttachedUserPoliciesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

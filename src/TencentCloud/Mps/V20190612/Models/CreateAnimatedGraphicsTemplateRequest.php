@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateAnimatedGraphicsTemplate请求参数结构体
+ *
  * @method integer getFps() 获取帧率，取值范围：[1, 30]，单位：Hz。
  * @method void setFps(integer $Fps) 设置帧率，取值范围：[1, 30]，单位：Hz。
  * @method integer getWidth() 获取动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
@@ -60,10 +62,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置转动图模板名称，长度限制：64 个字符。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
- */
-
-/**
- *CreateAnimatedGraphicsTemplate请求参数结构体
  */
 class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
 {
@@ -119,6 +117,7 @@ class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
      * @var string 模板描述信息，长度限制：256 个字符。
      */
     public $Comment;
+
     /**
      * @param integer $Fps 帧率，取值范围：[1, 30]，单位：Hz。
      * @param integer $Width 动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
@@ -146,6 +145,7 @@ class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

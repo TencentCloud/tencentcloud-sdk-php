@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 直播 AI 内容审核图片鉴黄结果
+ *
  * @method float getStartPtsTime() 获取嫌疑片段起始的 PTS 时间，单位：秒。
  * @method void setStartPtsTime(float $StartPtsTime) 设置嫌疑片段起始的 PTS 时间，单位：秒。
  * @method float getEndPtsTime() 获取嫌疑片段结束的 PTS 时间，单位：秒。
@@ -48,10 +50,6 @@ PicUrlExpireTime 时间点后图片将被删除）。
 PicUrlExpireTime 时间点后图片将被删除）。
  * @method string getPicUrlExpireTime() 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method void setPicUrlExpireTime(string $PicUrlExpireTime) 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
- */
-
-/**
- *直播 AI 内容审核图片鉴黄结果
  */
 class LiveStreamAiReviewImagePornResult extends AbstractModel
 {
@@ -97,6 +95,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
      * @var string 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      */
     public $PicUrlExpireTime;
+
     /**
      * @param float $StartPtsTime 嫌疑片段起始的 PTS 时间，单位：秒。
      * @param float $EndPtsTime 嫌疑片段结束的 PTS 时间，单位：秒。
@@ -118,6 +117,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

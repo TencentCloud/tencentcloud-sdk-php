@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 一个关于镜像详细信息的结构体，主要包括镜像的主要状态与属性。
+ *
  * @method string getImageId() 获取镜像ID
  * @method void setImageId(string $ImageId) 设置镜像ID
  * @method string getOsName() 获取镜像操作系统
@@ -68,10 +70,6 @@ IMPORTFAILED-导入失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotSet(array $SnapshotSet) 设置镜像关联的快照信息
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *一个关于镜像详细信息的结构体，主要包括镜像的主要状态与属性。
  */
 class Image extends AbstractModel
 {
@@ -159,6 +157,7 @@ IMPORTFAILED-导入失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotSet;
+
     /**
      * @param string $ImageId 镜像ID
      * @param string $OsName 镜像操作系统
@@ -190,6 +189,7 @@ IMPORTFAILED-导入失败
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

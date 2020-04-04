@@ -18,12 +18,10 @@ namespace TencentCloud\Bm\V20180423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteUserCmds请求参数结构体
+ *
  * @method array getCmdIds() 获取需要删除的脚本ID
  * @method void setCmdIds(array $CmdIds) 设置需要删除的脚本ID
- */
-
-/**
- *DeleteUserCmds请求参数结构体
  */
 class DeleteUserCmdsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteUserCmdsRequest extends AbstractModel
      * @var array 需要删除的脚本ID
      */
     public $CmdIds;
+
     /**
      * @param array $CmdIds 需要删除的脚本ID
      */
@@ -38,6 +37,7 @@ class DeleteUserCmdsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

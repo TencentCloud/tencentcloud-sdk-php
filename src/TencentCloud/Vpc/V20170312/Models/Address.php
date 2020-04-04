@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述 EIP 信息
+ *
  * @method string getAddressId() 获取`EIP`的`ID`，是`EIP`的唯一标识。
  * @method void setAddressId(string $AddressId) 设置`EIP`的`ID`，是`EIP`的唯一标识。
  * @method string getAddressName() 获取`EIP`名称。
@@ -46,10 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCascadeRelease(boolean $CascadeRelease) 设置eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
  * @method AlgType getEipAlgType() 获取EIP ALG开启的协议类型。
  * @method void setEipAlgType(AlgType $EipAlgType) 设置EIP ALG开启的协议类型。
- */
-
-/**
- *描述 EIP 信息
  */
 class Address extends AbstractModel
 {
@@ -122,6 +120,7 @@ class Address extends AbstractModel
      * @var AlgType EIP ALG开启的协议类型。
      */
     public $EipAlgType;
+
     /**
      * @param string $AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      * @param string $AddressName `EIP`名称。
@@ -142,6 +141,7 @@ class Address extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

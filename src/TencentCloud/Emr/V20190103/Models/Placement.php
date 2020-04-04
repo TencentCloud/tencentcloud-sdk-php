@@ -18,14 +18,12 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述集群实例位置信息
+ *
  * @method integer getProjectId() 获取实例所属项目ID。该参数可以通过调用 DescribeProject 的返回值中的 projectId 字段来获取。填0为默认项目。
  * @method void setProjectId(integer $ProjectId) 设置实例所属项目ID。该参数可以通过调用 DescribeProject 的返回值中的 projectId 字段来获取。填0为默认项目。
  * @method string getZone() 获取实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用 DescribeZones 的返回值中的Zone字段来获取。
  * @method void setZone(string $Zone) 设置实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用 DescribeZones 的返回值中的Zone字段来获取。
- */
-
-/**
- *描述集群实例位置信息
  */
 class Placement extends AbstractModel
 {
@@ -38,6 +36,7 @@ class Placement extends AbstractModel
      * @var string 实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用 DescribeZones 的返回值中的Zone字段来获取。
      */
     public $Zone;
+
     /**
      * @param integer $ProjectId 实例所属项目ID。该参数可以通过调用 DescribeProject 的返回值中的 projectId 字段来获取。填0为默认项目。
      * @param string $Zone 实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用 DescribeZones 的返回值中的Zone字段来获取。
@@ -46,6 +45,7 @@ class Placement extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

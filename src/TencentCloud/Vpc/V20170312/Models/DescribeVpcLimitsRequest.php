@@ -18,12 +18,10 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeVpcLimits请求参数结构体
+ *
  * @method array getLimitTypes() 获取配额名称。每次最大查询100个配额类型。
  * @method void setLimitTypes(array $LimitTypes) 设置配额名称。每次最大查询100个配额类型。
- */
-
-/**
- *DescribeVpcLimits请求参数结构体
  */
 class DescribeVpcLimitsRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeVpcLimitsRequest extends AbstractModel
      * @var array 配额名称。每次最大查询100个配额类型。
      */
     public $LimitTypes;
+
     /**
      * @param array $LimitTypes 配额名称。每次最大查询100个配额类型。
      */
@@ -38,6 +37,7 @@ class DescribeVpcLimitsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

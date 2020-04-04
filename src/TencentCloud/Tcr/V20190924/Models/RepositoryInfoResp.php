@@ -18,6 +18,8 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 查询共享版仓库信息返回
+ *
  * @method string getRepoName() 获取镜像仓库名字
  * @method void setRepoName(string $RepoName) 设置镜像仓库名字
  * @method string getRepoType() 获取镜像仓库类型
@@ -40,10 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsUserFavor(boolean $IsUserFavor) 设置是否为用户收藏
  * @method boolean getIsQcloudOfficial() 获取是否为腾讯云官方镜像
  * @method void setIsQcloudOfficial(boolean $IsQcloudOfficial) 设置是否为腾讯云官方镜像
- */
-
-/**
- *查询共享版仓库信息返回
  */
 class RepositoryInfoResp extends AbstractModel
 {
@@ -97,6 +95,7 @@ class RepositoryInfoResp extends AbstractModel
      * @var boolean 是否为腾讯云官方镜像
      */
     public $IsQcloudOfficial;
+
     /**
      * @param string $RepoName 镜像仓库名字
      * @param string $RepoType 镜像仓库类型
@@ -114,6 +113,7 @@ class RepositoryInfoResp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

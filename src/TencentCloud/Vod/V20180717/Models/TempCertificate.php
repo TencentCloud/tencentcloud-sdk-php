@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 临时凭证
+ *
  * @method string getSecretId() 获取临时安全证书 Id。
  * @method void setSecretId(string $SecretId) 设置临时安全证书 Id。
  * @method string getSecretKey() 获取临时安全证书 Key。
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setToken(string $Token) 设置Token 值。
  * @method integer getExpiredTime() 获取证书无效的时间，返回 Unix 时间戳，精确到秒。
  * @method void setExpiredTime(integer $ExpiredTime) 设置证书无效的时间，返回 Unix 时间戳，精确到秒。
- */
-
-/**
- *临时凭证
  */
 class TempCertificate extends AbstractModel
 {
@@ -52,6 +50,7 @@ class TempCertificate extends AbstractModel
      * @var integer 证书无效的时间，返回 Unix 时间戳，精确到秒。
      */
     public $ExpiredTime;
+
     /**
      * @param string $SecretId 临时安全证书 Id。
      * @param string $SecretKey 临时安全证书 Key。
@@ -62,6 +61,7 @@ class TempCertificate extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

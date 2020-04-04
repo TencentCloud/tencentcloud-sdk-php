@@ -18,14 +18,12 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 图片二维码详情
+ *
  * @method array getModerationDetail() 获取从图片中检测到的二维码，可能为多个
  * @method void setModerationDetail(array $ModerationDetail) 设置从图片中检测到的二维码，可能为多个
  * @method integer getModerationCode() 获取检测是否成功，0：成功，-1：出错
  * @method void setModerationCode(integer $ModerationCode) 设置检测是否成功，0：成功，-1：出错
- */
-
-/**
- *图片二维码详情
  */
 class CodeDetect extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CodeDetect extends AbstractModel
      * @var integer 检测是否成功，0：成功，-1：出错
      */
     public $ModerationCode;
+
     /**
      * @param array $ModerationDetail 从图片中检测到的二维码，可能为多个
      * @param integer $ModerationCode 检测是否成功，0：成功，-1：出错
@@ -46,6 +45,7 @@ class CodeDetect extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

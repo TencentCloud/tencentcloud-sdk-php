@@ -18,16 +18,14 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateBackup请求参数结构体
+ *
  * @method string getClusterId() 获取待创建备份表所属集群ID
  * @method void setClusterId(string $ClusterId) 设置待创建备份表所属集群ID
  * @method array getSelectedTables() 获取待创建备份表信息列表
  * @method void setSelectedTables(array $SelectedTables) 设置待创建备份表信息列表
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
- */
-
-/**
- *CreateBackup请求参数结构体
  */
 class CreateBackupRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateBackupRequest extends AbstractModel
      * @var string 备注信息
      */
     public $Remark;
+
     /**
      * @param string $ClusterId 待创建备份表所属集群ID
      * @param array $SelectedTables 待创建备份表信息列表
@@ -54,6 +53,7 @@ class CreateBackupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

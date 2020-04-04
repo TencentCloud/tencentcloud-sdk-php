@@ -18,6 +18,8 @@ namespace TencentCloud\Msp\V20180319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * RegisterMigrationTask请求参数结构体
+ *
  * @method string getTaskType() 获取任务类型，取值database（数据库迁移）、file（文件迁移）、host（主机迁移）
  * @method void setTaskType(string $TaskType) 设置任务类型，取值database（数据库迁移）、file（文件迁移）、host（主机迁移）
  * @method string getTaskName() 获取任务名称
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstAccessType(string $DstAccessType) 设置目标实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
  * @method string getDstDatabaseType() 获取目标实例数据库类型,数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
  * @method void setDstDatabaseType(string $DstDatabaseType) 设置目标实例数据库类型,数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
- */
-
-/**
- *RegisterMigrationTask请求参数结构体
  */
 class RegisterMigrationTaskRequest extends AbstractModel
 {
@@ -108,6 +106,7 @@ class RegisterMigrationTaskRequest extends AbstractModel
      * @var string 目标实例数据库类型,数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
      */
     public $DstDatabaseType;
+
     /**
      * @param string $TaskType 任务类型，取值database（数据库迁移）、file（文件迁移）、host（主机迁移）
      * @param string $TaskName 任务名称
@@ -126,6 +125,7 @@ class RegisterMigrationTaskRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

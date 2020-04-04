@@ -18,6 +18,8 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateAudit请求参数结构体
+ *
  * @method string getAuditName() 获取跟踪集名称
  * @method void setAuditName(string $AuditName) 设置跟踪集名称
  * @method string getCmqQueueName() 获取队列名称。队列名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。如果IsEnableCmqNotify值是1的话，此值属于必填字段。如果不是新创建的队列，云审计不会去校验该队列是否真的存在，请谨慎填写，避免日志通知不成功，导致您的数据丢失。
@@ -44,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogFilePrefix(string $LogFilePrefix) 设置日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。
  * @method integer getReadWriteAttribute() 获取管理事件的读写属性。1：只读，2：只写，3：全部。
  * @method void setReadWriteAttribute(integer $ReadWriteAttribute) 设置管理事件的读写属性。1：只读，2：只写，3：全部。
- */
-
-/**
- *UpdateAudit请求参数结构体
  */
 class UpdateAuditRequest extends AbstractModel
 {
@@ -115,6 +113,7 @@ class UpdateAuditRequest extends AbstractModel
      * @var integer 管理事件的读写属性。1：只读，2：只写，3：全部。
      */
     public $ReadWriteAttribute;
+
     /**
      * @param string $AuditName 跟踪集名称
      * @param string $CmqQueueName 队列名称。队列名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。如果IsEnableCmqNotify值是1的话，此值属于必填字段。如果不是新创建的队列，云审计不会去校验该队列是否真的存在，请谨慎填写，避免日志通知不成功，导致您的数据丢失。
@@ -134,6 +133,7 @@ class UpdateAuditRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

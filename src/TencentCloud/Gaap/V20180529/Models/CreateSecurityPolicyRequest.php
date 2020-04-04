@@ -18,14 +18,12 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateSecurityPolicy请求参数结构体
+ *
  * @method string getProxyId() 获取加速通道ID
  * @method void setProxyId(string $ProxyId) 设置加速通道ID
  * @method string getDefaultAction() 获取默认策略：ACCEPT或DROP
  * @method void setDefaultAction(string $DefaultAction) 设置默认策略：ACCEPT或DROP
- */
-
-/**
- *CreateSecurityPolicy请求参数结构体
  */
 class CreateSecurityPolicyRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class CreateSecurityPolicyRequest extends AbstractModel
      * @var string 默认策略：ACCEPT或DROP
      */
     public $DefaultAction;
+
     /**
      * @param string $ProxyId 加速通道ID
      * @param string $DefaultAction 默认策略：ACCEPT或DROP
@@ -46,6 +45,7 @@ class CreateSecurityPolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Ft\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 人脸转换性别信息
+ *
  * @method integer getGender() 获取选择转换方向，0：男变女，1：女变男。
  * @method void setGender(integer $Gender) 设置选择转换方向，0：男变女，1：女变男。
  * @method FaceRect getFaceRect() 获取人脸框位置。若不输入则选择 Image 或 Url 中面积最大的人脸。  
 您可以通过 [人脸检测与分析](https://cloud.tencent.com/document/api/867/32800)  接口获取人脸框位置信息。
  * @method void setFaceRect(FaceRect $FaceRect) 设置人脸框位置。若不输入则选择 Image 或 Url 中面积最大的人脸。  
 您可以通过 [人脸检测与分析](https://cloud.tencent.com/document/api/867/32800)  接口获取人脸框位置信息。
- */
-
-/**
- *人脸转换性别信息
  */
 class GenderInfo extends AbstractModel
 {
@@ -41,6 +39,7 @@ class GenderInfo extends AbstractModel
 您可以通过 [人脸检测与分析](https://cloud.tencent.com/document/api/867/32800)  接口获取人脸框位置信息。
      */
     public $FaceRect;
+
     /**
      * @param integer $Gender 选择转换方向，0：男变女，1：女变男。
      * @param FaceRect $FaceRect 人脸框位置。若不输入则选择 Image 或 Url 中面积最大的人脸。  
@@ -50,6 +49,7 @@ class GenderInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Iottid\V20190411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * BurnTidNotify返回参数结构体
+ *
  * @method string getTid() 获取接收回执成功的TID
  * @method void setTid(string $Tid) 设置接收回执成功的TID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *BurnTidNotify返回参数结构体
  */
 class BurnTidNotifyResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class BurnTidNotifyResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Tid 接收回执成功的TID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +45,7 @@ class BurnTidNotifyResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

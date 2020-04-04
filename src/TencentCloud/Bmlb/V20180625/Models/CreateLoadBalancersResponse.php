@@ -18,16 +18,14 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateLoadBalancers返回参数结构体
+ *
  * @method array getLoadBalancerIds() 获取创建的黑石负载均衡实例ID。
  * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置创建的黑石负载均衡实例ID。
  * @method string getTaskId() 获取创建负载均衡的异步任务ID。
  * @method void setTaskId(string $TaskId) 设置创建负载均衡的异步任务ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *CreateLoadBalancers返回参数结构体
  */
 class CreateLoadBalancersResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateLoadBalancersResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $LoadBalancerIds 创建的黑石负载均衡实例ID。
      * @param string $TaskId 创建负载均衡的异步任务ID。
@@ -54,6 +53,7 @@ class CreateLoadBalancersResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

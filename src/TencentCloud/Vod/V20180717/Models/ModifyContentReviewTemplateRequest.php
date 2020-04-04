@@ -18,6 +18,8 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyContentReviewTemplate请求参数结构体
+ *
  * @method integer getDefinition() 获取内容审核模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置内容审核模板唯一标识。
  * @method string getName() 获取内容审核模板名称，长度限制：64 个字符。
@@ -50,10 +52,6 @@ use TencentCloud\Common\AbstractModel;
 <li>OFF：否。</li>
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *ModifyContentReviewTemplate请求参数结构体
  */
 class ModifyContentReviewTemplateRequest extends AbstractModel
 {
@@ -116,6 +114,7 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param integer $Definition 内容审核模板唯一标识。
      * @param string $Name 内容审核模板名称，长度限制：64 个字符。
@@ -138,6 +137,7 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

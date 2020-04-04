@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 路由条目
+ *
  * @method string getDestinationCidrBlock() 获取目的网段
  * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置目的网段
  * @method string getGatewayType() 获取下一跳类型，目前我们支持的类型有：
@@ -54,10 +56,6 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 用户只能添加和编辑USER 类型的路由。
  * @method boolean getEnabled() 获取是否启用
  * @method void setEnabled(boolean $Enabled) 设置是否启用
- */
-
-/**
- *路由条目
  */
 class RoutePolicy extends AbstractModel
 {
@@ -106,6 +104,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
      * @var boolean 是否启用
      */
     public $Enabled;
+
     /**
      * @param string $DestinationCidrBlock 目的网段
      * @param string $GatewayType 下一跳类型，目前我们支持的类型有：
@@ -130,6 +129,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

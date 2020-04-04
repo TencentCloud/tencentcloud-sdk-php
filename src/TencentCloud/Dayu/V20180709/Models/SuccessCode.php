@@ -18,14 +18,12 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 操作返回码，只用于返回成功的情况
+ *
  * @method string getCode() 获取成功/错误码
  * @method void setCode(string $Code) 设置成功/错误码
  * @method string getMessage() 获取描述
  * @method void setMessage(string $Message) 设置描述
- */
-
-/**
- *操作返回码，只用于返回成功的情况
  */
 class SuccessCode extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SuccessCode extends AbstractModel
      * @var string 描述
      */
     public $Message;
+
     /**
      * @param string $Code 成功/错误码
      * @param string $Message 描述
@@ -46,6 +45,7 @@ class SuccessCode extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

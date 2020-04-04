@@ -18,6 +18,8 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 资源详情
+ *
  * @method string getSpec() 获取规格
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpec(string $Spec) 设置规格
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置规格
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *资源详情
  */
 class OutterResource extends AbstractModel
 {
@@ -114,6 +112,7 @@ class OutterResource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
+
     /**
      * @param string $Spec 规格
 注意：此字段可能返回 null，表示取不到有效值。
@@ -138,6 +137,7 @@ class OutterResource extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

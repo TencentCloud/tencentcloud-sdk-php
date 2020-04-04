@@ -18,14 +18,12 @@ namespace TencentCloud\Bmlb\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDevicesBindInfo请求参数结构体
+ *
  * @method string getVpcId() 获取黑石私有网络唯一ID。
  * @method void setVpcId(string $VpcId) 设置黑石私有网络唯一ID。
  * @method array getInstanceIds() 获取主机ID或虚机IP列表，可用于获取绑定了该主机的负载均衡列表。
  * @method void setInstanceIds(array $InstanceIds) 设置主机ID或虚机IP列表，可用于获取绑定了该主机的负载均衡列表。
- */
-
-/**
- *DescribeDevicesBindInfo请求参数结构体
  */
 class DescribeDevicesBindInfoRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeDevicesBindInfoRequest extends AbstractModel
      * @var array 主机ID或虚机IP列表，可用于获取绑定了该主机的负载均衡列表。
      */
     public $InstanceIds;
+
     /**
      * @param string $VpcId 黑石私有网络唯一ID。
      * @param array $InstanceIds 主机ID或虚机IP列表，可用于获取绑定了该主机的负载均衡列表。
@@ -46,6 +45,7 @@ class DescribeDevicesBindInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

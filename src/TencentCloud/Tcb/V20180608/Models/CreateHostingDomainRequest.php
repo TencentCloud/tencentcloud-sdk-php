@@ -18,16 +18,14 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreateHostingDomain请求参数结构体
+ *
  * @method string getEnvId() 获取环境ID
  * @method void setEnvId(string $EnvId) 设置环境ID
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
  * @method string getCertId() 获取证书ID
  * @method void setCertId(string $CertId) 设置证书ID
- */
-
-/**
- *CreateHostingDomain请求参数结构体
  */
 class CreateHostingDomainRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class CreateHostingDomainRequest extends AbstractModel
      * @var string 证书ID
      */
     public $CertId;
+
     /**
      * @param string $EnvId 环境ID
      * @param string $Domain 域名
@@ -54,6 +53,7 @@ class CreateHostingDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

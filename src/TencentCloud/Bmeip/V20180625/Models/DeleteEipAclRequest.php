@@ -18,12 +18,10 @@ namespace TencentCloud\Bmeip\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteEipAcl请求参数结构体
+ *
  * @method string getAclId() 获取待删除的 ACL 实例 ID
  * @method void setAclId(string $AclId) 设置待删除的 ACL 实例 ID
- */
-
-/**
- *DeleteEipAcl请求参数结构体
  */
 class DeleteEipAclRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteEipAclRequest extends AbstractModel
      * @var string 待删除的 ACL 实例 ID
      */
     public $AclId;
+
     /**
      * @param string $AclId 待删除的 ACL 实例 ID
      */
@@ -38,6 +37,7 @@ class DeleteEipAclRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

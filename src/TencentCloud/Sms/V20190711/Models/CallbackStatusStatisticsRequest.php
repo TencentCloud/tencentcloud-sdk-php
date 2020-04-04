@@ -18,6 +18,8 @@ namespace TencentCloud\Sms\V20190711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CallbackStatusStatistics请求参数结构体
+ *
  * @method integer getStartDateTime() 获取开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时。
  * @method void setStartDateTime(integer $StartDateTime) 设置开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时。
  * @method integer getEndDataTime() 获取结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时。
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 注：目前固定设置为0。
  * @method void setOffset(integer $Offset) 设置偏移量。
 注：目前固定设置为0。
- */
-
-/**
- *CallbackStatusStatistics请求参数结构体
  */
 class CallbackStatusStatisticsRequest extends AbstractModel
 {
@@ -68,6 +66,7 @@ class CallbackStatusStatisticsRequest extends AbstractModel
 注：目前固定设置为0。
      */
     public $Offset;
+
     /**
      * @param integer $StartDateTime 开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时。
      * @param integer $EndDataTime 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时。
@@ -82,6 +81,7 @@ class CallbackStatusStatisticsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

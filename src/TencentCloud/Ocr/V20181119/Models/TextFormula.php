@@ -18,12 +18,10 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 数学公式识别结果
+ *
  * @method string getDetectedText() 获取识别出的文本行内容
  * @method void setDetectedText(string $DetectedText) 设置识别出的文本行内容
- */
-
-/**
- *数学公式识别结果
  */
 class TextFormula extends AbstractModel
 {
@@ -31,6 +29,7 @@ class TextFormula extends AbstractModel
      * @var string 识别出的文本行内容
      */
     public $DetectedText;
+
     /**
      * @param string $DetectedText 识别出的文本行内容
      */
@@ -38,6 +37,7 @@ class TextFormula extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

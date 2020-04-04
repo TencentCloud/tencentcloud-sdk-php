@@ -18,6 +18,8 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSimpleClusters请求参数结构体
+ *
  * @method array getClusterIdList() 获取需要查询的集群ID列表，不填或不传入时查询所有内容
  * @method void setClusterIdList(array $ClusterIdList) 设置需要查询的集群ID列表，不填或不传入时查询所有内容
  * @method string getClusterType() 获取需要查询的集群类型，不填或不传入时查询所有内容
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页个数，默认为20， 取值应为1~50
  * @method string getSearchWord() 获取对id和name进行关键词过滤
  * @method void setSearchWord(string $SearchWord) 设置对id和name进行关键词过滤
- */
-
-/**
- *DescribeSimpleClusters请求参数结构体
  */
 class DescribeSimpleClustersRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeSimpleClustersRequest extends AbstractModel
      * @var string 对id和name进行关键词过滤
      */
     public $SearchWord;
+
     /**
      * @param array $ClusterIdList 需要查询的集群ID列表，不填或不传入时查询所有内容
      * @param string $ClusterType 需要查询的集群类型，不填或不传入时查询所有内容
@@ -70,6 +69,7 @@ class DescribeSimpleClustersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

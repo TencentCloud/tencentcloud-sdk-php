@@ -18,6 +18,8 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 传统型负载均衡后端服务的健康状态
+ *
  * @method string getIP() 获取后端服务的内网 IP
  * @method void setIP(string $IP) 设置后端服务的内网 IP
  * @method integer getPort() 获取后端服务的端口
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置转发协议
  * @method integer getHealthStatus() 获取健康检查结果，1 表示健康，0 表示不健康
  * @method void setHealthStatus(integer $HealthStatus) 设置健康检查结果，1 表示健康，0 表示不健康
- */
-
-/**
- *传统型负载均衡后端服务的健康状态
  */
 class ClassicalHealth extends AbstractModel
 {
@@ -59,6 +57,7 @@ class ClassicalHealth extends AbstractModel
      * @var integer 健康检查结果，1 表示健康，0 表示不健康
      */
     public $HealthStatus;
+
     /**
      * @param string $IP 后端服务的内网 IP
      * @param integer $Port 后端服务的端口
@@ -70,6 +69,7 @@ class ClassicalHealth extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

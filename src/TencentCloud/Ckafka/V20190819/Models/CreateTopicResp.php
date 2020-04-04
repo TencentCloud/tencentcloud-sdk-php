@@ -18,12 +18,10 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 创建主题返回
+ *
  * @method string getTopicId() 获取主题Id
  * @method void setTopicId(string $TopicId) 设置主题Id
- */
-
-/**
- *创建主题返回
  */
 class CreateTopicResp extends AbstractModel
 {
@@ -31,6 +29,7 @@ class CreateTopicResp extends AbstractModel
      * @var string 主题Id
      */
     public $TopicId;
+
     /**
      * @param string $TopicId 主题Id
      */
@@ -38,6 +37,7 @@ class CreateTopicResp extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Sts\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AssumeRole返回参数结构体
+ *
  * @method Credentials getCredentials() 获取临时安全证书
  * @method void setCredentials(Credentials $Credentials) 设置临时安全证书
  * @method integer getExpiredTime() 获取证书无效的时间，返回 Unix 时间戳，精确到秒
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpiration(string $Expiration) 设置证书无效的时间，以 iso8601 格式的 UTC 时间表示
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *AssumeRole返回参数结构体
  */
 class AssumeRoleResponse extends AbstractModel
 {
@@ -52,6 +50,7 @@ class AssumeRoleResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param Credentials $Credentials 临时安全证书
      * @param integer $ExpiredTime 证书无效的时间，返回 Unix 时间戳，精确到秒
@@ -62,6 +61,7 @@ class AssumeRoleResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iotvideo\V20191126\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * SetMessageQueue请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method integer getMsgQueueType() 获取消息队列类型 1-CMQ; 2-Ckafka
@@ -42,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstance(string $Instance) 设置kafka消息队列的实例名，不超过64字符
  * @method string getMsgRegion() 获取消息地域，不超过32字符
  * @method void setMsgRegion(string $MsgRegion) 设置消息地域，不超过32字符
- */
-
-/**
- *SetMessageQueue请求参数结构体
  */
 class SetMessageQueueRequest extends AbstractModel
 {
@@ -84,6 +82,7 @@ class SetMessageQueueRequest extends AbstractModel
      * @var string 消息地域，不超过32字符
      */
     public $MsgRegion;
+
     /**
      * @param string $ProductId 产品ID
      * @param integer $MsgQueueType 消息队列类型 1-CMQ; 2-Ckafka
@@ -102,6 +101,7 @@ class SetMessageQueueRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

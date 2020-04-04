@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * VPC占用资源
+ *
  * @method string getVpcId() 获取私有网络ID
  * @method void setVpcId(string $VpcId) 设置私有网络ID
  * @method string getVpcName() 获取私有网络名称
@@ -72,10 +74,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIntVpcId() 获取整型私有网络ID
  * @method void setIntVpcId(integer $IntVpcId) 设置整型私有网络ID
- */
-
-/**
- *VPC占用资源
  */
 class VpcResource extends AbstractModel
 {
@@ -201,6 +199,7 @@ class VpcResource extends AbstractModel
      * @var integer 整型私有网络ID
      */
     public $IntVpcId;
+
     /**
      * @param string $VpcId 私有网络ID
      * @param string $VpcName 私有网络名称
@@ -234,6 +233,7 @@ class VpcResource extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

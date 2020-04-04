@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * Git凭证
+ *
  * @method boolean getNoSecret() 获取无秘钥，默认选项
  * @method void setNoSecret(boolean $NoSecret) 设置无秘钥，默认选项
  * @method string getSecret() 获取Git用户名密码base64编码后的字符串
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecret(string $Secret) 设置Git用户名密码base64编码后的字符串
 编码前的内容应为Json字符串，如
 {"UserName": "用户名", "Password":"密码"}
- */
-
-/**
- *Git凭证
  */
 class GitSecret extends AbstractModel
 {
@@ -44,6 +42,7 @@ class GitSecret extends AbstractModel
 {"UserName": "用户名", "Password":"密码"}
      */
     public $Secret;
+
     /**
      * @param boolean $NoSecret 无秘钥，默认选项
      * @param string $Secret Git用户名密码base64编码后的字符串
@@ -54,6 +53,7 @@ class GitSecret extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

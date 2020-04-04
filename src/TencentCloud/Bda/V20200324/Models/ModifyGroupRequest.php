@@ -18,16 +18,14 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ModifyGroup请求参数结构体
+ *
  * @method string getGroupId() 获取人体库ID。
  * @method void setGroupId(string $GroupId) 设置人体库ID。
  * @method string getGroupName() 获取人体库名称。
  * @method void setGroupName(string $GroupName) 设置人体库名称。
  * @method string getTag() 获取人体库信息备注。
  * @method void setTag(string $Tag) 设置人体库信息备注。
- */
-
-/**
- *ModifyGroup请求参数结构体
  */
 class ModifyGroupRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class ModifyGroupRequest extends AbstractModel
      * @var string 人体库信息备注。
      */
     public $Tag;
+
     /**
      * @param string $GroupId 人体库ID。
      * @param string $GroupName 人体库名称。
@@ -54,6 +53,7 @@ class ModifyGroupRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

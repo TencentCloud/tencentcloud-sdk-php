@@ -18,16 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * WeChatMiniProgramPublish请求参数结构体
+ *
  * @method string getFileId() 获取媒体文件 ID。
  * @method void setFileId(string $FileId) 设置媒体文件 ID。
  * @method integer getSourceDefinition() 获取发布视频所对应的转码模板 ID，为0代表原始视频。
  * @method void setSourceDefinition(integer $SourceDefinition) 设置发布视频所对应的转码模板 ID，为0代表原始视频。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- */
-
-/**
- *WeChatMiniProgramPublish请求参数结构体
  */
 class WeChatMiniProgramPublishRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class WeChatMiniProgramPublishRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
     /**
      * @param string $FileId 媒体文件 ID。
      * @param integer $SourceDefinition 发布视频所对应的转码模板 ID，为0代表原始视频。
@@ -54,6 +53,7 @@ class WeChatMiniProgramPublishRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

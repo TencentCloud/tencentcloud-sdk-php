@@ -18,6 +18,8 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AddBandwidthPackageResources请求参数结构体
+ *
  * @method array getResourceIds() 获取资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
  * @method void setResourceIds(array $ResourceIds) 设置资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
  * @method string getBandwidthPackageId() 获取带宽包唯一标识ID，形如'bwp-xxxx'
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceType(string $ResourceType) 设置资源类型，包括'Address', 'LoadBalance'
  * @method string getProtocol() 获取带宽包协议类型。当前支持'ipv4'和'ipv6'协议类型。
  * @method void setProtocol(string $Protocol) 设置带宽包协议类型。当前支持'ipv4'和'ipv6'协议类型。
- */
-
-/**
- *AddBandwidthPackageResources请求参数结构体
  */
 class AddBandwidthPackageResourcesRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class AddBandwidthPackageResourcesRequest extends AbstractModel
      * @var string 带宽包协议类型。当前支持'ipv4'和'ipv6'协议类型。
      */
     public $Protocol;
+
     /**
      * @param array $ResourceIds 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
      * @param string $BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'
@@ -70,6 +69,7 @@ class AddBandwidthPackageResourcesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

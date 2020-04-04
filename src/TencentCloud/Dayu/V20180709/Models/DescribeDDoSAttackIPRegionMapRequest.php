@@ -18,6 +18,8 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeDDoSAttackIPRegionMap请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP专业版）
  * @method string getId() 获取资源ID
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置统计结束时间，最大可统计的时间范围是半年；
  * @method array getIpList() 获取指定资源的特定IP的攻击源，可选
  * @method void setIpList(array $IpList) 设置指定资源的特定IP的攻击源，可选
- */
-
-/**
- *DescribeDDoSAttackIPRegionMap请求参数结构体
  */
 class DescribeDDoSAttackIPRegionMapRequest extends AbstractModel
 {
@@ -59,6 +57,7 @@ class DescribeDDoSAttackIPRegionMapRequest extends AbstractModel
      * @var array 指定资源的特定IP的攻击源，可选
      */
     public $IpList;
+
     /**
      * @param string $Business 大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP专业版）
      * @param string $Id 资源ID
@@ -70,6 +69,7 @@ class DescribeDDoSAttackIPRegionMapRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 产品模型定义
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getModelDefine() 获取模型定义
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryModel(string $CategoryModel) 设置产品所属分类的模型快照（产品创建时刻的）
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *产品模型定义
  */
 class ProductModelDefinition extends AbstractModel
 {
@@ -62,6 +60,7 @@ class ProductModelDefinition extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryModel;
+
     /**
      * @param string $ProductId 产品ID
      * @param string $ModelDefine 模型定义
@@ -74,6 +73,7 @@ class ProductModelDefinition extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

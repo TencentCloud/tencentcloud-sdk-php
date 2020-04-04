@@ -18,12 +18,10 @@ namespace TencentCloud\Ecdn\V20191012\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * StopEcdnDomain请求参数结构体
+ *
  * @method string getDomain() 获取待停用域名。
  * @method void setDomain(string $Domain) 设置待停用域名。
- */
-
-/**
- *StopEcdnDomain请求参数结构体
  */
 class StopEcdnDomainRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class StopEcdnDomainRequest extends AbstractModel
      * @var string 待停用域名。
      */
     public $Domain;
+
     /**
      * @param string $Domain 待停用域名。
      */
@@ -38,6 +37,7 @@ class StopEcdnDomainRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

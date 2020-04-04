@@ -18,14 +18,12 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 分时客流量详细信息
+ *
  * @method integer getHour() 获取小时 取值为：0，1，2，3，4，5，6，7，8，9，10，11，12，13，14，15，16，17，18，19，20，21，22，23
  * @method void setHour(integer $Hour) 设置小时 取值为：0，1，2，3，4，5，6，7，8，9，10，11，12，13，14，15，16，17，18，19，20，21，22，23
  * @method integer getHourTrafficTotalCount() 获取分时客流量
  * @method void setHourTrafficTotalCount(integer $HourTrafficTotalCount) 设置分时客流量
- */
-
-/**
- *分时客流量详细信息
  */
 class HourTrafficInfoDetail extends AbstractModel
 {
@@ -38,6 +36,7 @@ class HourTrafficInfoDetail extends AbstractModel
      * @var integer 分时客流量
      */
     public $HourTrafficTotalCount;
+
     /**
      * @param integer $Hour 小时 取值为：0，1，2，3，4，5，6，7，8，9，10，11，12，13，14，15，16，17，18，19，20，21，22，23
      * @param integer $HourTrafficTotalCount 分时客流量
@@ -46,6 +45,7 @@ class HourTrafficInfoDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

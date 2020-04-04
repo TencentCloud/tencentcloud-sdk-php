@@ -18,14 +18,13 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSubAppIds请求参数结构体
+ *
 
- */
-
-/**
- *DescribeSubAppIds请求参数结构体
  */
 class DescribeSubAppIdsRequest extends AbstractModel
 {
+
 
     /**
 
@@ -34,6 +33,7 @@ class DescribeSubAppIdsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

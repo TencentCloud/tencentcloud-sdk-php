@@ -18,14 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 从库的配置信息
+ *
  * @method string getReplicationMode() 获取从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
  * @method void setReplicationMode(string $ReplicationMode) 设置从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
  * @method string getZone() 获取从库可用区的正式名称，如ap-shanghai-1
  * @method void setZone(string $Zone) 设置从库可用区的正式名称，如ap-shanghai-1
- */
-
-/**
- *从库的配置信息
  */
 class SlaveConfig extends AbstractModel
 {
@@ -38,6 +36,7 @@ class SlaveConfig extends AbstractModel
      * @var string 从库可用区的正式名称，如ap-shanghai-1
      */
     public $Zone;
+
     /**
      * @param string $ReplicationMode 从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
      * @param string $Zone 从库可用区的正式名称，如ap-shanghai-1
@@ -46,6 +45,7 @@ class SlaveConfig extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

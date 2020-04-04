@@ -18,6 +18,8 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeAccessPoints请求参数结构体
+ *
  * @method string getRegionId() 获取接入点所在的地域。使用DescribeRegions查询
 
 您可以通过调用 DescribeRegions接口获取地域ID。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
- */
-
-/**
- *DescribeAccessPoints请求参数结构体
  */
 class DescribeAccessPointsRequest extends AbstractModel
 {
@@ -51,6 +49,7 @@ class DescribeAccessPointsRequest extends AbstractModel
      * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
+
     /**
      * @param string $RegionId 接入点所在的地域。使用DescribeRegions查询
 
@@ -62,6 +61,7 @@ class DescribeAccessPointsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

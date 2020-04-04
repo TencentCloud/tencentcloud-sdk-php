@@ -18,6 +18,8 @@ namespace TencentCloud\Ticm\V20181127\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 内容审核鉴黄任务结果类型
+ *
  * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method integer getCode() 获取错误码，0：成功，其他值：失败。
@@ -62,10 +64,6 @@ intimacy：亲密行为。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentSet(array $SegmentSet) 设置有涉黄嫌疑的视频片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *内容审核鉴黄任务结果类型
  */
 class VodPornReviewResult extends AbstractModel
 {
@@ -118,6 +116,7 @@ intimacy：亲密行为。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentSet;
+
     /**
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param integer $Code 错误码，0：成功，其他值：失败。
@@ -146,6 +145,7 @@ intimacy：亲密行为。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

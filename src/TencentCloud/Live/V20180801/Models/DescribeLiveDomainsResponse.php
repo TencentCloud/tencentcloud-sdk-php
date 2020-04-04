@@ -18,16 +18,14 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeLiveDomains返回参数结构体
+ *
  * @method integer getAllCount() 获取总记录数。
  * @method void setAllCount(integer $AllCount) 设置总记录数。
  * @method array getDomainList() 获取域名详细信息列表。
  * @method void setDomainList(array $DomainList) 设置域名详细信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *DescribeLiveDomains返回参数结构体
  */
 class DescribeLiveDomainsResponse extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeLiveDomainsResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param integer $AllCount 总记录数。
      * @param array $DomainList 域名详细信息列表。
@@ -54,6 +53,7 @@ class DescribeLiveDomainsResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

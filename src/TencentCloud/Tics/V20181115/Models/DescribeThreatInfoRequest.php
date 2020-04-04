@@ -18,16 +18,14 @@ namespace TencentCloud\Tics\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeThreatInfo请求参数结构体
+ *
  * @method string getKey() 获取查询对象，域名或IP
  * @method void setKey(string $Key) 设置查询对象，域名或IP
  * @method string getType() 获取查询类型，当前取值为domain或ip
  * @method void setType(string $Type) 设置查询类型，当前取值为domain或ip
  * @method integer getOption() 获取附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
  * @method void setOption(integer $Option) 设置附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
- */
-
-/**
- *DescribeThreatInfo请求参数结构体
  */
 class DescribeThreatInfoRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeThreatInfoRequest extends AbstractModel
      * @var integer 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
      */
     public $Option;
+
     /**
      * @param string $Key 查询对象，域名或IP
      * @param string $Type 查询类型，当前取值为domain或ip
@@ -54,6 +53,7 @@ class DescribeThreatInfoRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,16 +18,14 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteCCSelfDefinePolicy请求参数结构体
+ *
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method string getId() 获取资源ID
  * @method void setId(string $Id) 设置资源ID
  * @method string getSetId() 获取策略ID
  * @method void setSetId(string $SetId) 设置策略ID
- */
-
-/**
- *DeleteCCSelfDefinePolicy请求参数结构体
  */
 class DeleteCCSelfDefinePolicyRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DeleteCCSelfDefinePolicyRequest extends AbstractModel
      * @var string 策略ID
      */
     public $SetId;
+
     /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param string $Id 资源ID
@@ -54,6 +53,7 @@ class DeleteCCSelfDefinePolicyRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

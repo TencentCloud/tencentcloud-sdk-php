@@ -18,12 +18,10 @@ namespace TencentCloud\Organization\V20181225\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DeleteOrganizationMembers请求参数结构体
+ *
  * @method array getUins() 获取被删除成员的UIN列表
  * @method void setUins(array $Uins) 设置被删除成员的UIN列表
- */
-
-/**
- *DeleteOrganizationMembers请求参数结构体
  */
 class DeleteOrganizationMembersRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DeleteOrganizationMembersRequest extends AbstractModel
      * @var array 被删除成员的UIN列表
      */
     public $Uins;
+
     /**
      * @param array $Uins 被删除成员的UIN列表
      */
@@ -38,6 +37,7 @@ class DeleteOrganizationMembersRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

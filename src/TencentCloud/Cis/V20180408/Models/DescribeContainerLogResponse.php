@@ -18,14 +18,12 @@ namespace TencentCloud\Cis\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeContainerLog返回参数结构体
+ *
  * @method array getContainerLogList() 获取容器日志数组
  * @method void setContainerLogList(array $ContainerLogList) 设置容器日志数组
  * @method string getRequestId() 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
- */
-
-/**
- *DescribeContainerLog返回参数结构体
  */
 class DescribeContainerLogResponse extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeContainerLogResponse extends AbstractModel
      * @var string 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $ContainerLogList 容器日志数组
      * @param string $RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -46,6 +45,7 @@ class DescribeContainerLogResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

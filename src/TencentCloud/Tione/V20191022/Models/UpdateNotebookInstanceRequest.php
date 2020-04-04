@@ -18,6 +18,8 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UpdateNotebookInstance请求参数结构体
+ *
  * @method string getNotebookInstanceName() 获取Notebook实例名称
  * @method void setNotebookInstanceName(string $NotebookInstanceName) 设置Notebook实例名称
  * @method string getRoleArn() 获取角色的资源描述
@@ -54,10 +56,6 @@ use TencentCloud\Common\AbstractModel;
 该值为true时，AdditionalCodeRepositories将被忽略
  * @method void setDisassociateAdditionalCodeRepositories(boolean $DisassociateAdditionalCodeRepositories) 设置是否取消关联其他存储库，默认false
 该值为true时，AdditionalCodeRepositories将被忽略
- */
-
-/**
- *UpdateNotebookInstance请求参数结构体
  */
 class UpdateNotebookInstanceRequest extends AbstractModel
 {
@@ -122,6 +120,7 @@ class UpdateNotebookInstanceRequest extends AbstractModel
 该值为true时，AdditionalCodeRepositories将被忽略
      */
     public $DisassociateAdditionalCodeRepositories;
+
     /**
      * @param string $NotebookInstanceName Notebook实例名称
      * @param string $RoleArn 角色的资源描述
@@ -146,6 +145,7 @@ class UpdateNotebookInstanceRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

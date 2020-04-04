@@ -18,6 +18,8 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 状态码缓存过期配置，默认情况下会对 404 状态码缓存 10 秒
+ *
  * @method string getSwitch() 获取状态码缓存过期配置开关
 on：开启
 off：关闭
@@ -30,10 +32,6 @@ off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCacheRules(array $CacheRules) 设置状态码缓存过期规则明细
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *状态码缓存过期配置，默认情况下会对 404 状态码缓存 10 秒
  */
 class StatusCodeCache extends AbstractModel
 {
@@ -50,6 +48,7 @@ off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CacheRules;
+
     /**
      * @param string $Switch 状态码缓存过期配置开关
 on：开启
@@ -62,6 +61,7 @@ off：关闭
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

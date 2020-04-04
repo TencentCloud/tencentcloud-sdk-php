@@ -18,16 +18,14 @@ namespace TencentCloud\Youmall\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 性别年龄分组下的客流信息
+ *
  * @method integer getGender() 获取性别: 0男1女
  * @method void setGender(integer $Gender) 设置性别: 0男1女
  * @method string getAgeGap() 获取年龄区间，枚举值：0-17、18-23、24-30、31-40、41-50、51-60、>60
  * @method void setAgeGap(string $AgeGap) 设置年龄区间，枚举值：0-17、18-23、24-30、31-40、41-50、51-60、>60
  * @method integer getTrafficCount() 获取客流量
  * @method void setTrafficCount(integer $TrafficCount) 设置客流量
- */
-
-/**
- *性别年龄分组下的客流信息
  */
 class GenderAgeTrafficDetail extends AbstractModel
 {
@@ -45,6 +43,7 @@ class GenderAgeTrafficDetail extends AbstractModel
      * @var integer 客流量
      */
     public $TrafficCount;
+
     /**
      * @param integer $Gender 性别: 0男1女
      * @param string $AgeGap 年龄区间，枚举值：0-17、18-23、24-30、31-40、41-50、51-60、>60
@@ -54,6 +53,7 @@ class GenderAgeTrafficDetail extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

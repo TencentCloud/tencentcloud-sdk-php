@@ -18,6 +18,8 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 描述镜像关联的快照信息
+ *
  * @method string getSnapshotId() 获取快照Id。
  * @method void setSnapshotId(string $SnapshotId) 设置快照Id。
  * @method string getDiskUsage() 获取创建此快照的云硬盘类型。取值范围：
@@ -28,10 +30,6 @@ SYSTEM_DISK：系统盘
 DATA_DISK：数据盘。
  * @method integer getDiskSize() 获取创建此快照的云硬盘大小，单位GB。
  * @method void setDiskSize(integer $DiskSize) 设置创建此快照的云硬盘大小，单位GB。
- */
-
-/**
- *描述镜像关联的快照信息
  */
 class Snapshot extends AbstractModel
 {
@@ -51,6 +49,7 @@ DATA_DISK：数据盘。
      * @var integer 创建此快照的云硬盘大小，单位GB。
      */
     public $DiskSize;
+
     /**
      * @param string $SnapshotId 快照Id。
      * @param string $DiskUsage 创建此快照的云硬盘类型。取值范围：
@@ -62,6 +61,7 @@ DATA_DISK：数据盘。
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Habo\V20181203\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeStatus请求参数结构体
+ *
  * @method string getPk() 获取购买服务后获得的授权帐号，用于保证请求有效性
  * @method void setPk(string $Pk) 设置购买服务后获得的授权帐号，用于保证请求有效性
  * @method string getMd5() 获取需要获取分析结果的样本md5
  * @method void setMd5(string $Md5) 设置需要获取分析结果的样本md5
- */
-
-/**
- *DescribeStatus请求参数结构体
  */
 class DescribeStatusRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DescribeStatusRequest extends AbstractModel
      * @var string 需要获取分析结果的样本md5
      */
     public $Md5;
+
     /**
      * @param string $Pk 购买服务后获得的授权帐号，用于保证请求有效性
      * @param string $Md5 需要获取分析结果的样本md5
@@ -46,6 +45,7 @@ class DescribeStatusRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

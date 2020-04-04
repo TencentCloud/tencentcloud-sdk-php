@@ -18,14 +18,12 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DisassociateNatGatewayAddress请求参数结构体
+ *
  * @method string getNatGatewayId() 获取NAT网关的ID，形如：`nat-df45454`。
  * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID，形如：`nat-df45454`。
  * @method array getPublicIpAddresses() 获取绑定NAT网关的弹性IP数组。
  * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置绑定NAT网关的弹性IP数组。
- */
-
-/**
- *DisassociateNatGatewayAddress请求参数结构体
  */
 class DisassociateNatGatewayAddressRequest extends AbstractModel
 {
@@ -38,6 +36,7 @@ class DisassociateNatGatewayAddressRequest extends AbstractModel
      * @var array 绑定NAT网关的弹性IP数组。
      */
     public $PublicIpAddresses;
+
     /**
      * @param string $NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      * @param array $PublicIpAddresses 绑定NAT网关的弹性IP数组。
@@ -46,6 +45,7 @@ class DisassociateNatGatewayAddressRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

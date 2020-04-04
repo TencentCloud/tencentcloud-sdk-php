@@ -18,12 +18,10 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSecurityRules请求参数结构体
+ *
  * @method array getSecurityRuleIds() 获取安全规则ID列表。总数不能超过20个。
  * @method void setSecurityRuleIds(array $SecurityRuleIds) 设置安全规则ID列表。总数不能超过20个。
- */
-
-/**
- *DescribeSecurityRules请求参数结构体
  */
 class DescribeSecurityRulesRequest extends AbstractModel
 {
@@ -31,6 +29,7 @@ class DescribeSecurityRulesRequest extends AbstractModel
      * @var array 安全规则ID列表。总数不能超过20个。
      */
     public $SecurityRuleIds;
+
     /**
      * @param array $SecurityRuleIds 安全规则ID列表。总数不能超过20个。
      */
@@ -38,6 +37,7 @@ class DescribeSecurityRulesRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

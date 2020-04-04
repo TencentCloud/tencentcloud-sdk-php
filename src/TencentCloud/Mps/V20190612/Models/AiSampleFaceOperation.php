@@ -18,6 +18,8 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * AI 样本管理，人脸数据操作。
+ *
  * @method string getType() 获取操作类型，可选值：add（添加）、delete（删除）、reset（重置）。重置操作将清空该人物已有人脸数据，并添加 FaceContents 指定人脸数据。
  * @method void setType(string $Type) 设置操作类型，可选值：add（添加）、delete（删除）、reset（重置）。重置操作将清空该人物已有人脸数据，并添加 FaceContents 指定人脸数据。
  * @method array getFaceIds() 获取人脸 ID 集合，当 Type为delete 时，该字段必填。
@@ -30,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>当 Type为add 或 reset 时，该字段必填；</li>
 <li>数组长度限制：5 张图片。</li>
 注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
- */
-
-/**
- *AI 样本管理，人脸数据操作。
  */
 class AiSampleFaceOperation extends AbstractModel
 {
@@ -54,6 +52,7 @@ class AiSampleFaceOperation extends AbstractModel
 注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
      */
     public $FaceContents;
+
     /**
      * @param string $Type 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。重置操作将清空该人物已有人脸数据，并添加 FaceContents 指定人脸数据。
      * @param array $FaceIds 人脸 ID 集合，当 Type为delete 时，该字段必填。
@@ -66,6 +65,7 @@ class AiSampleFaceOperation extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

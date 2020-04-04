@@ -18,16 +18,14 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeSqlLogs请求参数结构体
+ *
  * @method string getInstanceId() 获取实例 ID，形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
  * @method integer getOffset() 获取SQL日志偏移。
  * @method void setOffset(integer $Offset) 设置SQL日志偏移。
  * @method integer getLimit() 获取拉取数量（0-10000，为0时拉取总数信息）。
  * @method void setLimit(integer $Limit) 设置拉取数量（0-10000，为0时拉取总数信息）。
- */
-
-/**
- *DescribeSqlLogs请求参数结构体
  */
 class DescribeSqlLogsRequest extends AbstractModel
 {
@@ -45,6 +43,7 @@ class DescribeSqlLogsRequest extends AbstractModel
      * @var integer 拉取数量（0-10000，为0时拉取总数信息）。
      */
     public $Limit;
+
     /**
      * @param string $InstanceId 实例 ID，形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      * @param integer $Offset SQL日志偏移。
@@ -54,6 +53,7 @@ class DescribeSqlLogsRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

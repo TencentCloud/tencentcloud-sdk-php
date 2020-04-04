@@ -18,6 +18,8 @@ namespace TencentCloud\Bmvpc\V20180625\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * DescribeNatGateways请求参数结构体
+ *
  * @method string getNatId() 获取NAT网关ID，例如：nat-kdm476mp
  * @method void setNatId(string $NatId) 设置NAT网关ID，例如：nat-kdm476mp
  * @method string getNatName() 获取NAT名称
@@ -36,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置排序字段, 支持"CreateTime"排序
  * @method string getOrderDirection() 获取排序方向, “asc”、“desc”
  * @method void setOrderDirection(string $OrderDirection) 设置排序方向, “asc”、“desc”
- */
-
-/**
- *DescribeNatGateways请求参数结构体
  */
 class DescribeNatGatewaysRequest extends AbstractModel
 {
@@ -87,6 +85,7 @@ class DescribeNatGatewaysRequest extends AbstractModel
      * @var string 排序方向, “asc”、“desc”
      */
     public $OrderDirection;
+
     /**
      * @param string $NatId NAT网关ID，例如：nat-kdm476mp
      * @param string $NatName NAT名称
@@ -102,6 +101,7 @@ class DescribeNatGatewaysRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

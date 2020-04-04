@@ -18,6 +18,8 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 用于回档的实例详情
+ *
  * @method string getInstanceId() 获取云数据库实例ID
  * @method void setInstanceId(string $InstanceId) 设置云数据库实例ID
  * @method string getStrategy() 获取回档策略。可选值为：table、db、full；默认值为full。table - 急速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和binlog，速度较慢。
@@ -28,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabases(array $Databases) 设置待回档的数据库信息，表示整库回档
  * @method array getTables() 获取待回档的数据库表信息，表示按表回档
  * @method void setTables(array $Tables) 设置待回档的数据库表信息，表示按表回档
- */
-
-/**
- *用于回档的实例详情
  */
 class RollbackInstancesInfo extends AbstractModel
 {
@@ -59,6 +57,7 @@ class RollbackInstancesInfo extends AbstractModel
      * @var array 待回档的数据库表信息，表示按表回档
      */
     public $Tables;
+
     /**
      * @param string $InstanceId 云数据库实例ID
      * @param string $Strategy 回档策略。可选值为：table、db、full；默认值为full。table - 急速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和binlog，速度较慢。
@@ -70,6 +69,7 @@ class RollbackInstancesInfo extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

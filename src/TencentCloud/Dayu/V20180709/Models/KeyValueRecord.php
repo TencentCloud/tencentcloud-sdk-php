@@ -18,12 +18,10 @@ namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * KeyValue记录
+ *
  * @method array getRecord() 获取一条记录的Key-Value数组
  * @method void setRecord(array $Record) 设置一条记录的Key-Value数组
- */
-
-/**
- *KeyValue记录
  */
 class KeyValueRecord extends AbstractModel
 {
@@ -31,6 +29,7 @@ class KeyValueRecord extends AbstractModel
      * @var array 一条记录的Key-Value数组
      */
     public $Record;
+
     /**
      * @param array $Record 一条记录的Key-Value数组
      */
@@ -38,6 +37,7 @@ class KeyValueRecord extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

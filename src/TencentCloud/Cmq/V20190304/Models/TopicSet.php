@@ -18,6 +18,8 @@ namespace TencentCloud\Cmq\V20190304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * topic返回信息展示字段
+ *
  * @method string getTopicId() 获取TopicId
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置TopicId
@@ -66,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrace(boolean $Trace) 设置主题是否开启消息轨迹，true表示开启，false表示不开启
 注意：此字段可能返回 null，表示取不到有效值。
- */
-
-/**
- *topic返回信息展示字段
  */
 class TopicSet extends AbstractModel
 {
@@ -144,6 +142,7 @@ class TopicSet extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Trace;
+
     /**
      * @param string $TopicId TopicId
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,6 +173,7 @@ class TopicSet extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

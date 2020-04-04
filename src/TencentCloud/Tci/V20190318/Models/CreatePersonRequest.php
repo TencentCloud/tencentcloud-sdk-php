@@ -18,6 +18,8 @@ namespace TencentCloud\Tci\V20190318\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * CreatePerson请求参数结构体
+ *
  * @method string getLibraryId() 获取人员库唯一标识符
  * @method void setLibraryId(string $LibraryId) 设置人员库唯一标识符
  * @method string getPersonName() 获取人员名称
@@ -38,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStudentNumber(string $StudentNumber) 设置人员学生号码
  * @method array getUrls() 获取图片下载地址，与 Images 参数选择一个输入
  * @method void setUrls(array $Urls) 设置图片下载地址，与 Images 参数选择一个输入
- */
-
-/**
- *CreatePerson请求参数结构体
  */
 class CreatePersonRequest extends AbstractModel
 {
@@ -94,6 +92,7 @@ class CreatePersonRequest extends AbstractModel
      * @var array 图片下载地址，与 Images 参数选择一个输入
      */
     public $Urls;
+
     /**
      * @param string $LibraryId 人员库唯一标识符
      * @param string $PersonName 人员名称
@@ -110,6 +109,7 @@ class CreatePersonRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

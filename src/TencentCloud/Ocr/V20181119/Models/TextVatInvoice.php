@@ -18,14 +18,12 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 增值税发票识别结果
+ *
  * @method string getName() 获取识别出的字段名称（关键字）。
  * @method void setName(string $Name) 设置识别出的字段名称（关键字）。
  * @method string getValue() 获取识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
  * @method void setValue(string $Value) 设置识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
- */
-
-/**
- *增值税发票识别结果
  */
 class TextVatInvoice extends AbstractModel
 {
@@ -38,6 +36,7 @@ class TextVatInvoice extends AbstractModel
      * @var string 识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
      */
     public $Value;
+
     /**
      * @param string $Name 识别出的字段名称（关键字）。
      * @param string $Value 识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
@@ -46,6 +45,7 @@ class TextVatInvoice extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

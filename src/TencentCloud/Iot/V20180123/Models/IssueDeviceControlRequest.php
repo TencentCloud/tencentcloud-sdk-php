@@ -18,6 +18,8 @@ namespace TencentCloud\Iot\V20180123\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * IssueDeviceControl请求参数结构体
+ *
  * @method string getProductId() 获取产品Id
  * @method void setProductId(string $ProductId) 设置产品Id
  * @method string getDeviceName() 获取设备名称
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setControlData(string $ControlData) 设置控制数据（json）
  * @method boolean getMetadata() 获取是否发送metadata字段
  * @method void setMetadata(boolean $Metadata) 设置是否发送metadata字段
- */
-
-/**
- *IssueDeviceControl请求参数结构体
  */
 class IssueDeviceControlRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class IssueDeviceControlRequest extends AbstractModel
      * @var boolean 是否发送metadata字段
      */
     public $Metadata;
+
     /**
      * @param string $ProductId 产品Id
      * @param string $DeviceName 设备名称
@@ -62,6 +61,7 @@ class IssueDeviceControlRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

@@ -18,14 +18,12 @@ namespace TencentCloud\Tbm\V20180129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 明星喜好画像元素
+ *
  * @method string getName() 获取喜欢的明星名字
  * @method void setName(string $Name) 设置喜欢的明星名字
  * @method float getPercent() 获取百分比
  * @method void setPercent(float $Percent) 设置百分比
- */
-
-/**
- *明星喜好画像元素
  */
 class StarPortrait extends AbstractModel
 {
@@ -38,6 +36,7 @@ class StarPortrait extends AbstractModel
      * @var float 百分比
      */
     public $Percent;
+
     /**
      * @param string $Name 喜欢的明星名字
      * @param float $Percent 百分比
@@ -46,6 +45,7 @@ class StarPortrait extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

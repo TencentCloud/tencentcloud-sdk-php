@@ -18,6 +18,8 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * UnBindingPolicyObject请求参数结构体
+ *
  * @method string getModule() 获取固定值，为"monitor"
  * @method void setModule(string $Module) 设置固定值，为"monitor"
  * @method integer getGroupId() 获取策略组id
@@ -26,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqueId(array $UniqueId) 设置待删除对象实例的唯一id列表
  * @method integer getInstanceGroupId() 获取实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
  * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
- */
-
-/**
- *UnBindingPolicyObject请求参数结构体
  */
 class UnBindingPolicyObjectRequest extends AbstractModel
 {
@@ -52,6 +50,7 @@ class UnBindingPolicyObjectRequest extends AbstractModel
      * @var integer 实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
      */
     public $InstanceGroupId;
+
     /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $GroupId 策略组id
@@ -62,6 +61,7 @@ class UnBindingPolicyObjectRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

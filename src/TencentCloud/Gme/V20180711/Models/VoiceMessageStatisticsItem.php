@@ -18,12 +18,10 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * 语音消息用量统计信息
+ *
  * @method integer getDau() 获取离线语音DAU
  * @method void setDau(integer $Dau) 设置离线语音DAU
- */
-
-/**
- *语音消息用量统计信息
  */
 class VoiceMessageStatisticsItem extends AbstractModel
 {
@@ -31,6 +29,7 @@ class VoiceMessageStatisticsItem extends AbstractModel
      * @var integer 离线语音DAU
      */
     public $Dau;
+
     /**
      * @param integer $Dau 离线语音DAU
      */
@@ -38,6 +37,7 @@ class VoiceMessageStatisticsItem extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

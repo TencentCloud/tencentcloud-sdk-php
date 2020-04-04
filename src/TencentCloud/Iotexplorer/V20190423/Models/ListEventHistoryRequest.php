@@ -18,6 +18,8 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * ListEventHistory请求参数结构体
+ *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getDeviceName() 获取设备名称
@@ -32,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContext(string $Context) 设置搜索上下文, 用作查询游标
  * @method integer getSize() 获取单次获取的历史数据项目的最大数量
  * @method void setSize(integer $Size) 设置单次获取的历史数据项目的最大数量
- */
-
-/**
- *ListEventHistory请求参数结构体
  */
 class ListEventHistoryRequest extends AbstractModel
 {
@@ -73,6 +71,7 @@ class ListEventHistoryRequest extends AbstractModel
      * @var integer 单次获取的历史数据项目的最大数量
      */
     public $Size;
+
     /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
@@ -86,6 +85,7 @@ class ListEventHistoryRequest extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

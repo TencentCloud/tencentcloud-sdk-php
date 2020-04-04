@@ -18,6 +18,8 @@ namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetLayerVersion返回参数结构体
+ *
  * @method array getCompatibleRuntimes() 获取适配的运行时
  * @method void setCompatibleRuntimes(array $CompatibleRuntimes) 设置适配的运行时
  * @method string getCodeSha256() 获取层中版本文件的SHA256编码
@@ -46,10 +48,6 @@ PublishFailed  发布失败
 Deleted 已删除
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetLayerVersion返回参数结构体
  */
 class GetLayerVersionResponse extends AbstractModel
 {
@@ -106,6 +104,7 @@ Deleted 已删除
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param array $CompatibleRuntimes 适配的运行时
      * @param string $CodeSha256 层中版本文件的SHA256编码
@@ -126,6 +125,7 @@ Deleted 已删除
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

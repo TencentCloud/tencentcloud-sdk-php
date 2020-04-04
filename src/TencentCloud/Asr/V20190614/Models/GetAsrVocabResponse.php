@@ -18,6 +18,8 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
+ * GetAsrVocab返回参数结构体
+ *
  * @method string getName() 获取热词表名称
  * @method void setName(string $Name) 设置热词表名称
  * @method string getDescription() 获取热词表描述
@@ -34,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setState(integer $State) 设置热词表状态，1为默认状态即在识别时默认加载该热词表进行识别，0为初始状态
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- */
-
-/**
- *GetAsrVocab返回参数结构体
  */
 class GetAsrVocabResponse extends AbstractModel
 {
@@ -80,6 +78,7 @@ class GetAsrVocabResponse extends AbstractModel
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
+
     /**
      * @param string $Name 热词表名称
      * @param string $Description 热词表描述
@@ -94,6 +93,7 @@ class GetAsrVocabResponse extends AbstractModel
     {
 
     }
+
     /**
      * For internal only. DO NOT USE IT.
      */

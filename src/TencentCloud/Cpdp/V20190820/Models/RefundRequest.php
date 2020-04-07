@@ -28,8 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidasAppId(string $MidasAppId) 设置聚鑫分配的支付主MidasAppId
  * @method integer getTotalRefundAmt() 获取退款金额，单位：分。备注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额作为退款金额
  * @method void setTotalRefundAmt(integer $TotalRefundAmt) 设置退款金额，单位：分。备注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额作为退款金额
- * @method array getSubOrderRefundList() 获取支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
- * @method void setSubOrderRefundList(array $SubOrderRefundList) 设置支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
  * @method string getMidasSecretId() 获取聚鑫分配的安全ID
  * @method void setMidasSecretId(string $MidasSecretId) 设置聚鑫分配的安全ID
  * @method string getMidasSignature() 获取按照聚鑫安全密钥计算的签名
@@ -42,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTransactionId(string $TransactionId) 设置调用下单接口获取的聚鑫交 易订单。  OutTradeNo ,TransactionId 二选一,不能都为空,优先使用 OutTradeNo
  * @method integer getPlatformRefundAmt() 获取平台应收金额，单位：分
  * @method void setPlatformRefundAmt(integer $PlatformRefundAmt) 设置平台应收金额，单位：分
+ * @method array getSubOrderRefundList() 获取支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
+ * @method void setSubOrderRefundList(array $SubOrderRefundList) 设置支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
  */
 class RefundRequest extends AbstractModel
 {
@@ -64,11 +64,6 @@ class RefundRequest extends AbstractModel
      * @var integer 退款金额，单位：分。备注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额作为退款金额
      */
     public $TotalRefundAmt;
-
-    /**
-     * @var array 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
-     */
-    public $SubOrderRefundList;
 
     /**
      * @var string 聚鑫分配的安全ID
@@ -101,17 +96,22 @@ class RefundRequest extends AbstractModel
     public $PlatformRefundAmt;
 
     /**
+     * @var array 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
+     */
+    public $SubOrderRefundList;
+
+    /**
      * @param string $UserId 用户ID，长度不小于5位， 仅支持字母和数字的组合
      * @param string $RefundId 退款订单号，仅支持数字、 字母、下划线（_）、横杠字 符（-）、点（.）的组合
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param integer $TotalRefundAmt 退款金额，单位：分。备注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额作为退款金额
-     * @param array $SubOrderRefundList 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
      * @param string $MidasSecretId 聚鑫分配的安全ID
      * @param string $MidasSignature 按照聚鑫安全密钥计算的签名
      * @param string $OutTradeNo 商品订单，仅支持数字、字 母、下划线（_）、横杠字符 （-）、点（.）的组合。  OutTradeNo ,TransactionId 二选一,不能都为空,优先使用 OutTradeNo
      * @param integer $MchRefundAmt 结算应收金额，单位：分
      * @param string $TransactionId 调用下单接口获取的聚鑫交 易订单。  OutTradeNo ,TransactionId 二选一,不能都为空,优先使用 OutTradeNo
      * @param integer $PlatformRefundAmt 平台应收金额，单位：分
+     * @param array $SubOrderRefundList 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
      */
     function __construct()
     {
@@ -142,15 +142,6 @@ class RefundRequest extends AbstractModel
             $this->TotalRefundAmt = $param["TotalRefundAmt"];
         }
 
-        if (array_key_exists("SubOrderRefundList",$param) and $param["SubOrderRefundList"] !== null) {
-            $this->SubOrderRefundList = [];
-            foreach ($param["SubOrderRefundList"] as $key => $value){
-                $obj = new RefundOutSubOrderRefundList();
-                $obj->deserialize($value);
-                array_push($this->SubOrderRefundList, $obj);
-            }
-        }
-
         if (array_key_exists("MidasSecretId",$param) and $param["MidasSecretId"] !== null) {
             $this->MidasSecretId = $param["MidasSecretId"];
         }
@@ -173,6 +164,15 @@ class RefundRequest extends AbstractModel
 
         if (array_key_exists("PlatformRefundAmt",$param) and $param["PlatformRefundAmt"] !== null) {
             $this->PlatformRefundAmt = $param["PlatformRefundAmt"];
+        }
+
+        if (array_key_exists("SubOrderRefundList",$param) and $param["SubOrderRefundList"] !== null) {
+            $this->SubOrderRefundList = [];
+            foreach ($param["SubOrderRefundList"] as $key => $value){
+                $obj = new RefundOutSubOrderRefundList();
+                $obj->deserialize($value);
+                array_push($this->SubOrderRefundList, $obj);
+            }
         }
     }
 }

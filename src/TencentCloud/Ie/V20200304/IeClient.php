@@ -16,22 +16,35 @@
  */
 
 namespace TencentCloud\Ie\V20200304;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Ie\V20200304\Models as Models;
 
 /**
-* @method Models\CreateEditingTaskResponse CreateEditingTask(Models\CreateEditingTaskRequest $req) 创建智能编辑任务，可以同时选择视频标签识别、分类识别、智能拆条、智能集锦、智能封面和片头片尾识别中的一项或者多项能力。
-* @method Models\DescribeEditingTaskResultResponse DescribeEditingTaskResult(Models\DescribeEditingTaskResultRequest $req) 获取智能编辑任务结果。
+ * @method Models\CreateEditingTaskResponse CreateEditingTask(Models\CreateEditingTaskRequest $req) 创建智能编辑任务，可以同时选择视频标签识别、分类识别、智能拆条、智能集锦、智能封面和片头片尾识别中的一项或者多项能力。
+ * @method Models\DescribeEditingTaskResultResponse DescribeEditingTaskResult(Models\DescribeEditingTaskResultRequest $req) 获取智能编辑任务结果。
  */
 
 class IeClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "ie.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2020-03-04";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

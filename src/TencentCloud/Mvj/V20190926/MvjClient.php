@@ -16,23 +16,36 @@
  */
 
 namespace TencentCloud\Mvj\V20190926;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Mvj\V20190926\Models as Models;
 
 /**
-* @method Models\MarketingValueJudgementResponse MarketingValueJudgement(Models\MarketingValueJudgementRequest $req) 欢迎使用营销价值判断（Marketing Value Judgement，简称 MVJ）。
+ * @method Models\MarketingValueJudgementResponse MarketingValueJudgement(Models\MarketingValueJudgementRequest $req) 欢迎使用营销价值判断（Marketing Value Judgement，简称 MVJ）。
 
 营销价值判断（MVJ）是针对零售场景的风控服务，通过识别高价值顾客，以帮助零售商保障营销资金
  */
 
 class MvjClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "mvj.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-09-26";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

@@ -16,24 +16,37 @@
  */
 
 namespace TencentCloud\Tav\V20190118;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Tav\V20190118\Models as Models;
 
 /**
-* @method Models\GetLocalEngineResponse GetLocalEngine(Models\GetLocalEngineRequest $req) 获取TAV本地引擎
-* @method Models\GetScanResultResponse GetScanResult(Models\GetScanResultRequest $req) tav文件上传扫描结果查询
-* @method Models\ScanFileResponse ScanFile(Models\ScanFileRequest $req) tav文件上传扫描
-* @method Models\ScanFileHashResponse ScanFileHash(Models\ScanFileHashRequest $req) 通过文件哈希值获取文件黑白属性
+ * @method Models\GetLocalEngineResponse GetLocalEngine(Models\GetLocalEngineRequest $req) 获取TAV本地引擎
+ * @method Models\GetScanResultResponse GetScanResult(Models\GetScanResultRequest $req) tav文件上传扫描结果查询
+ * @method Models\ScanFileResponse ScanFile(Models\ScanFileRequest $req) tav文件上传扫描
+ * @method Models\ScanFileHashResponse ScanFileHash(Models\ScanFileHashRequest $req) 通过文件哈希值获取文件黑白属性
  */
 
 class TavClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "tav.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-01-18";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

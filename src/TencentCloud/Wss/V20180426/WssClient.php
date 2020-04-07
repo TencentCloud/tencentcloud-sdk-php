@@ -16,23 +16,36 @@
  */
 
 namespace TencentCloud\Wss\V20180426;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Wss\V20180426\Models as Models;
 
 /**
-* @method Models\DeleteCertResponse DeleteCert(Models\DeleteCertRequest $req) 本接口（DeleteCert）用于删除证书。
-* @method Models\DescribeCertListResponse DescribeCertList(Models\DescribeCertListRequest $req) 本接口(DescribeCertList)用于获取证书列表。
-* @method Models\UploadCertResponse UploadCert(Models\UploadCertRequest $req) 本接口（UploadCert）用于上传证书。
+ * @method Models\DeleteCertResponse DeleteCert(Models\DeleteCertRequest $req) 本接口（DeleteCert）用于删除证书。
+ * @method Models\DescribeCertListResponse DescribeCertList(Models\DescribeCertListRequest $req) 本接口(DescribeCertList)用于获取证书列表。
+ * @method Models\UploadCertResponse UploadCert(Models\UploadCertRequest $req) 本接口（UploadCert）用于上传证书。
  */
 
 class WssClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "wss.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-04-26";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

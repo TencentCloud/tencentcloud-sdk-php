@@ -16,21 +16,34 @@
  */
 
 namespace TencentCloud\Memcached\V20190318;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Memcached\V20190318\Models as Models;
 
 /**
-* @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 获取Cmem实例列表
+ * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 获取Cmem实例列表
  */
 
 class MemcachedClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "memcached.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-03-18";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

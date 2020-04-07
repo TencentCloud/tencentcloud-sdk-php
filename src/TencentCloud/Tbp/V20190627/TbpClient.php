@@ -16,22 +16,35 @@
  */
 
 namespace TencentCloud\Tbp\V20190627;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Tbp\V20190627\Models as Models;
 
 /**
-* @method Models\TextProcessResponse TextProcess(Models\TextProcessRequest $req) 接收调用侧的文本输入，返回应答文本。
-* @method Models\TextResetResponse TextReset(Models\TextResetRequest $req) 会话重置接口。
+ * @method Models\TextProcessResponse TextProcess(Models\TextProcessRequest $req) 接收调用侧的文本输入，返回应答文本。
+ * @method Models\TextResetResponse TextReset(Models\TextResetRequest $req) 会话重置接口。
  */
 
 class TbpClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "tbp.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-06-27";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

@@ -16,24 +16,37 @@
  */
 
 namespace TencentCloud\Tbp\V20190311;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Tbp\V20190311\Models as Models;
 
 /**
-* @method Models\CreateBotResponse CreateBot(Models\CreateBotRequest $req) 创建机器人
-* @method Models\ResetResponse Reset(Models\ResetRequest $req) 对当前机器人的会话状态进行复位
-* @method Models\TextProcessResponse TextProcess(Models\TextProcessRequest $req) 接收调用侧的文本输入，返回应答文本。已废弃，推荐使用最新版TextProcess接口。
-* @method Models\TextResetResponse TextReset(Models\TextResetRequest $req) 会话重置接口。已废弃，推荐使用最新版TextReset接口。
+ * @method Models\CreateBotResponse CreateBot(Models\CreateBotRequest $req) 创建机器人
+ * @method Models\ResetResponse Reset(Models\ResetRequest $req) 对当前机器人的会话状态进行复位
+ * @method Models\TextProcessResponse TextProcess(Models\TextProcessRequest $req) 接收调用侧的文本输入，返回应答文本。已废弃，推荐使用最新版TextProcess接口。
+ * @method Models\TextResetResponse TextReset(Models\TextResetRequest $req) 会话重置接口。已废弃，推荐使用最新版TextReset接口。
  */
 
 class TbpClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "tbp.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-03-11";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

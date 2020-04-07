@@ -16,40 +16,53 @@
  */
 
 namespace TencentCloud\Organization\V20181225;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Organization\V20181225\Models as Models;
 
 /**
-* @method Models\AcceptOrganizationInvitationResponse AcceptOrganizationInvitation(Models\AcceptOrganizationInvitationRequest $req) 接受加入企业组织邀请
-* @method Models\AddOrganizationNodeResponse AddOrganizationNode(Models\AddOrganizationNodeRequest $req) 添加企业组织单元
-* @method Models\CancelOrganizationInvitationResponse CancelOrganizationInvitation(Models\CancelOrganizationInvitationRequest $req) 取消企业组织邀请
-* @method Models\CreateOrganizationResponse CreateOrganization(Models\CreateOrganizationRequest $req) 创建企业组织
-* @method Models\DeleteOrganizationResponse DeleteOrganization(Models\DeleteOrganizationRequest $req) 删除企业组织
-* @method Models\DeleteOrganizationMemberFromNodeResponse DeleteOrganizationMemberFromNode(Models\DeleteOrganizationMemberFromNodeRequest $req) 删除企业组织成员
-* @method Models\DeleteOrganizationMembersResponse DeleteOrganizationMembers(Models\DeleteOrganizationMembersRequest $req) 批量删除企业组织成员
-* @method Models\DeleteOrganizationNodesResponse DeleteOrganizationNodes(Models\DeleteOrganizationNodesRequest $req) 批量删除企业组织单元
-* @method Models\DenyOrganizationInvitationResponse DenyOrganizationInvitation(Models\DenyOrganizationInvitationRequest $req) 拒绝企业组织邀请
-* @method Models\GetOrganizationResponse GetOrganization(Models\GetOrganizationRequest $req) 获取企业组织信息
-* @method Models\GetOrganizationMemberResponse GetOrganizationMember(Models\GetOrganizationMemberRequest $req) 获取企业组织成员
-* @method Models\ListOrganizationInvitationsResponse ListOrganizationInvitations(Models\ListOrganizationInvitationsRequest $req) 获取邀请信息列表
-* @method Models\ListOrganizationMembersResponse ListOrganizationMembers(Models\ListOrganizationMembersRequest $req) 获取企业组织成员列表
-* @method Models\ListOrganizationNodeMembersResponse ListOrganizationNodeMembers(Models\ListOrganizationNodeMembersRequest $req) 获取企业组织单元成员列表
-* @method Models\ListOrganizationNodesResponse ListOrganizationNodes(Models\ListOrganizationNodesRequest $req) 获取企业组织单元列表
-* @method Models\MoveOrganizationMembersToNodeResponse MoveOrganizationMembersToNode(Models\MoveOrganizationMembersToNodeRequest $req) 移动成员到指定企业组织单元
-* @method Models\QuitOrganizationResponse QuitOrganization(Models\QuitOrganizationRequest $req) 退出企业组织
-* @method Models\SendOrganizationInvitationResponse SendOrganizationInvitation(Models\SendOrganizationInvitationRequest $req) 发送企业组织邀请
-* @method Models\UpdateOrganizationMemberResponse UpdateOrganizationMember(Models\UpdateOrganizationMemberRequest $req) 更新企业成员信息
-* @method Models\UpdateOrganizationNodeResponse UpdateOrganizationNode(Models\UpdateOrganizationNodeRequest $req) 更新企业组织单元
+ * @method Models\AcceptOrganizationInvitationResponse AcceptOrganizationInvitation(Models\AcceptOrganizationInvitationRequest $req) 接受加入企业组织邀请
+ * @method Models\AddOrganizationNodeResponse AddOrganizationNode(Models\AddOrganizationNodeRequest $req) 添加企业组织单元
+ * @method Models\CancelOrganizationInvitationResponse CancelOrganizationInvitation(Models\CancelOrganizationInvitationRequest $req) 取消企业组织邀请
+ * @method Models\CreateOrganizationResponse CreateOrganization(Models\CreateOrganizationRequest $req) 创建企业组织
+ * @method Models\DeleteOrganizationResponse DeleteOrganization(Models\DeleteOrganizationRequest $req) 删除企业组织
+ * @method Models\DeleteOrganizationMemberFromNodeResponse DeleteOrganizationMemberFromNode(Models\DeleteOrganizationMemberFromNodeRequest $req) 删除企业组织成员
+ * @method Models\DeleteOrganizationMembersResponse DeleteOrganizationMembers(Models\DeleteOrganizationMembersRequest $req) 批量删除企业组织成员
+ * @method Models\DeleteOrganizationNodesResponse DeleteOrganizationNodes(Models\DeleteOrganizationNodesRequest $req) 批量删除企业组织单元
+ * @method Models\DenyOrganizationInvitationResponse DenyOrganizationInvitation(Models\DenyOrganizationInvitationRequest $req) 拒绝企业组织邀请
+ * @method Models\GetOrganizationResponse GetOrganization(Models\GetOrganizationRequest $req) 获取企业组织信息
+ * @method Models\GetOrganizationMemberResponse GetOrganizationMember(Models\GetOrganizationMemberRequest $req) 获取企业组织成员
+ * @method Models\ListOrganizationInvitationsResponse ListOrganizationInvitations(Models\ListOrganizationInvitationsRequest $req) 获取邀请信息列表
+ * @method Models\ListOrganizationMembersResponse ListOrganizationMembers(Models\ListOrganizationMembersRequest $req) 获取企业组织成员列表
+ * @method Models\ListOrganizationNodeMembersResponse ListOrganizationNodeMembers(Models\ListOrganizationNodeMembersRequest $req) 获取企业组织单元成员列表
+ * @method Models\ListOrganizationNodesResponse ListOrganizationNodes(Models\ListOrganizationNodesRequest $req) 获取企业组织单元列表
+ * @method Models\MoveOrganizationMembersToNodeResponse MoveOrganizationMembersToNode(Models\MoveOrganizationMembersToNodeRequest $req) 移动成员到指定企业组织单元
+ * @method Models\QuitOrganizationResponse QuitOrganization(Models\QuitOrganizationRequest $req) 退出企业组织
+ * @method Models\SendOrganizationInvitationResponse SendOrganizationInvitation(Models\SendOrganizationInvitationRequest $req) 发送企业组织邀请
+ * @method Models\UpdateOrganizationMemberResponse UpdateOrganizationMember(Models\UpdateOrganizationMemberRequest $req) 更新企业成员信息
+ * @method Models\UpdateOrganizationNodeResponse UpdateOrganizationNode(Models\UpdateOrganizationNodeRequest $req) 更新企业组织单元
  */
 
 class OrganizationClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "organization.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-12-25";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

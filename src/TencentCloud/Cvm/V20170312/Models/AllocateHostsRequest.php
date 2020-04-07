@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。
  * @method ChargePrepaid getHostChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method void setHostChargePrepaid(ChargePrepaid $HostChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
- * @method string getHostChargeType() 获取实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
- * @method void setHostChargeType(string $HostChargeType) 设置实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
+ * @method string getHostChargeType() 获取实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式），默认为：'PREPAID'。
+ * @method void setHostChargeType(string $HostChargeType) 设置实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式），默认为：'PREPAID'。
  * @method string getHostType() 获取CDH实例机型，默认为：'HS1'。
  * @method void setHostType(string $HostType) 设置CDH实例机型，默认为：'HS1'。
- * @method integer getHostCount() 获取购买CDH实例数量。
- * @method void setHostCount(integer $HostCount) 设置购买CDH实例数量。
+ * @method integer getHostCount() 获取购买CDH实例数量，默认为：1。
+ * @method void setHostCount(integer $HostCount) 设置购买CDH实例数量，默认为：1。
  * @method array getTagSpecification() 获取标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
  * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
  */
@@ -53,7 +53,7 @@ class AllocateHostsRequest extends AbstractModel
     public $HostChargePrepaid;
 
     /**
-     * @var string 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
+     * @var string 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式），默认为：'PREPAID'。
      */
     public $HostChargeType;
 
@@ -63,7 +63,7 @@ class AllocateHostsRequest extends AbstractModel
     public $HostType;
 
     /**
-     * @var integer 购买CDH实例数量。
+     * @var integer 购买CDH实例数量，默认为：1。
      */
     public $HostCount;
 
@@ -76,9 +76,9 @@ class AllocateHostsRequest extends AbstractModel
      * @param Placement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      * @param string $ClientToken 用于保证请求幂等性的字符串。
      * @param ChargePrepaid $HostChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
-     * @param string $HostChargeType 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
+     * @param string $HostChargeType 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式），默认为：'PREPAID'。
      * @param string $HostType CDH实例机型，默认为：'HS1'。
-     * @param integer $HostCount 购买CDH实例数量。
+     * @param integer $HostCount 购买CDH实例数量，默认为：1。
      * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
      */
     function __construct()

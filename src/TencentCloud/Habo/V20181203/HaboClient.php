@@ -16,22 +16,35 @@
  */
 
 namespace TencentCloud\Habo\V20181203;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Habo\V20181203\Models as Models;
 
 /**
-* @method Models\DescribeStatusResponse DescribeStatus(Models\DescribeStatusRequest $req) 查询指定md5样本是否分析完成，并获取分析日志下载地址。
-* @method Models\StartAnalyseResponse StartAnalyse(Models\StartAnalyseRequest $req) 上传样本到哈勃进行分析，异步生成分析日志。
+ * @method Models\DescribeStatusResponse DescribeStatus(Models\DescribeStatusRequest $req) 查询指定md5样本是否分析完成，并获取分析日志下载地址。
+ * @method Models\StartAnalyseResponse StartAnalyse(Models\StartAnalyseRequest $req) 上传样本到哈勃进行分析，异步生成分析日志。
  */
 
 class HaboClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "habo.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-12-03";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

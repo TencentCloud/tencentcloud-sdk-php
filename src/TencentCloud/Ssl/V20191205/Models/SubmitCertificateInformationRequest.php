@@ -22,36 +22,36 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCertificateId() 获取证书 ID。
  * @method void setCertificateId(string $CertificateId) 设置证书 ID。
- * @method string getCsrType() 获取CSR 生成方式：online = 在线生成, parse = 手动上传 。
- * @method void setCsrType(string $CsrType) 设置CSR 生成方式：online = 在线生成, parse = 手动上传 。
+ * @method string getCsrType() 获取CSR 生成方式：online = 在线生成, parse = 手动上传。
+ * @method void setCsrType(string $CsrType) 设置CSR 生成方式：online = 在线生成, parse = 手动上传。
  * @method string getCsrContent() 获取上传的 CSR 内容。
  * @method void setCsrContent(string $CsrContent) 设置上传的 CSR 内容。
- * @method string getCertificateDomain() 获取绑定证书的域名 。
- * @method void setCertificateDomain(string $CertificateDomain) 设置绑定证书的域名 。
+ * @method string getCertificateDomain() 获取绑定证书的域名。
+ * @method void setCertificateDomain(string $CertificateDomain) 设置绑定证书的域名。
  * @method array getDomainList() 获取上传的域名数组（多域名证书可以上传）。
  * @method void setDomainList(array $DomainList) 设置上传的域名数组（多域名证书可以上传）。
- * @method string getKeyPassword() 获取私钥密码 。
- * @method void setKeyPassword(string $KeyPassword) 设置私钥密码 。
- * @method string getOrganizationName() 获取公司名称 。
- * @method void setOrganizationName(string $OrganizationName) 设置公司名称 。
+ * @method string getKeyPassword() 获取私钥密码。
+ * @method void setKeyPassword(string $KeyPassword) 设置私钥密码。
+ * @method string getOrganizationName() 获取公司名称。
+ * @method void setOrganizationName(string $OrganizationName) 设置公司名称。
  * @method string getOrganizationDivision() 获取部门名称。
  * @method void setOrganizationDivision(string $OrganizationDivision) 设置部门名称。
- * @method string getOrganizationAddress() 获取公司详细地址 。
- * @method void setOrganizationAddress(string $OrganizationAddress) 设置公司详细地址 。
- * @method string getOrganizationCountry() 获取国家名称 如中国：CN 。
- * @method void setOrganizationCountry(string $OrganizationCountry) 设置国家名称 如中国：CN 。
- * @method string getOrganizationCity() 获取公司所在城市 。
- * @method void setOrganizationCity(string $OrganizationCity) 设置公司所在城市 。
+ * @method string getOrganizationAddress() 获取公司详细地址。
+ * @method void setOrganizationAddress(string $OrganizationAddress) 设置公司详细地址。
+ * @method string getOrganizationCountry() 获取国家名称，如中国：CN 。
+ * @method void setOrganizationCountry(string $OrganizationCountry) 设置国家名称，如中国：CN 。
+ * @method string getOrganizationCity() 获取公司所在城市。
+ * @method void setOrganizationCity(string $OrganizationCity) 设置公司所在城市。
  * @method string getOrganizationRegion() 获取公司所在省份。
  * @method void setOrganizationRegion(string $OrganizationRegion) 设置公司所在省份。
- * @method string getPostalCode() 获取公司邮编 。
- * @method void setPostalCode(string $PostalCode) 设置公司邮编 。
- * @method string getPhoneAreaCode() 获取公司座机区号 。
- * @method void setPhoneAreaCode(string $PhoneAreaCode) 设置公司座机区号 。
- * @method string getPhoneNumber() 获取公司座机号码 。
- * @method void setPhoneNumber(string $PhoneNumber) 设置公司座机号码 。
- * @method string getVerifyType() 获取证书验证方式 。
- * @method void setVerifyType(string $VerifyType) 设置证书验证方式 。
+ * @method string getPostalCode() 获取公司邮编。
+ * @method void setPostalCode(string $PostalCode) 设置公司邮编。
+ * @method string getPhoneAreaCode() 获取公司座机区号。
+ * @method void setPhoneAreaCode(string $PhoneAreaCode) 设置公司座机区号。
+ * @method string getPhoneNumber() 获取公司座机号码。
+ * @method void setPhoneNumber(string $PhoneNumber) 设置公司座机号码。
+ * @method string getVerifyType() 获取证书验证方式。
+ * @method void setVerifyType(string $VerifyType) 设置证书验证方式。
  * @method string getAdminFirstName() 获取管理人姓。
  * @method void setAdminFirstName(string $AdminFirstName) 设置管理人姓。
  * @method string getAdminLastName() 获取管理人名。
@@ -66,10 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContactFirstName(string $ContactFirstName) 设置联系人姓。
  * @method string getContactLastName() 获取联系人名。
  * @method void setContactLastName(string $ContactLastName) 设置联系人名。
- * @method string getContactEmail() 获取联系人邮箱地址 。
- * @method void setContactEmail(string $ContactEmail) 设置联系人邮箱地址 。
- * @method string getContactNumber() 获取联系人手机号码 。
- * @method void setContactNumber(string $ContactNumber) 设置联系人手机号码 。
+ * @method string getContactEmail() 获取联系人邮箱地址。
+ * @method void setContactEmail(string $ContactEmail) 设置联系人邮箱地址。
+ * @method string getContactNumber() 获取联系人手机号码。
+ * @method void setContactNumber(string $ContactNumber) 设置联系人手机号码。
  * @method string getContactPosition() 获取联系人职位。
  * @method void setContactPosition(string $ContactPosition) 设置联系人职位。
  */
@@ -81,7 +81,7 @@ class SubmitCertificateInformationRequest extends AbstractModel
     public $CertificateId;
 
     /**
-     * @var string CSR 生成方式：online = 在线生成, parse = 手动上传 。
+     * @var string CSR 生成方式：online = 在线生成, parse = 手动上传。
      */
     public $CsrType;
 
@@ -91,7 +91,7 @@ class SubmitCertificateInformationRequest extends AbstractModel
     public $CsrContent;
 
     /**
-     * @var string 绑定证书的域名 。
+     * @var string 绑定证书的域名。
      */
     public $CertificateDomain;
 
@@ -101,12 +101,12 @@ class SubmitCertificateInformationRequest extends AbstractModel
     public $DomainList;
 
     /**
-     * @var string 私钥密码 。
+     * @var string 私钥密码。
      */
     public $KeyPassword;
 
     /**
-     * @var string 公司名称 。
+     * @var string 公司名称。
      */
     public $OrganizationName;
 
@@ -116,17 +116,17 @@ class SubmitCertificateInformationRequest extends AbstractModel
     public $OrganizationDivision;
 
     /**
-     * @var string 公司详细地址 。
+     * @var string 公司详细地址。
      */
     public $OrganizationAddress;
 
     /**
-     * @var string 国家名称 如中国：CN 。
+     * @var string 国家名称，如中国：CN 。
      */
     public $OrganizationCountry;
 
     /**
-     * @var string 公司所在城市 。
+     * @var string 公司所在城市。
      */
     public $OrganizationCity;
 
@@ -136,22 +136,22 @@ class SubmitCertificateInformationRequest extends AbstractModel
     public $OrganizationRegion;
 
     /**
-     * @var string 公司邮编 。
+     * @var string 公司邮编。
      */
     public $PostalCode;
 
     /**
-     * @var string 公司座机区号 。
+     * @var string 公司座机区号。
      */
     public $PhoneAreaCode;
 
     /**
-     * @var string 公司座机号码 。
+     * @var string 公司座机号码。
      */
     public $PhoneNumber;
 
     /**
-     * @var string 证书验证方式 。
+     * @var string 证书验证方式。
      */
     public $VerifyType;
 
@@ -191,12 +191,12 @@ class SubmitCertificateInformationRequest extends AbstractModel
     public $ContactLastName;
 
     /**
-     * @var string 联系人邮箱地址 。
+     * @var string 联系人邮箱地址。
      */
     public $ContactEmail;
 
     /**
-     * @var string 联系人手机号码 。
+     * @var string 联系人手机号码。
      */
     public $ContactNumber;
 
@@ -207,21 +207,21 @@ class SubmitCertificateInformationRequest extends AbstractModel
 
     /**
      * @param string $CertificateId 证书 ID。
-     * @param string $CsrType CSR 生成方式：online = 在线生成, parse = 手动上传 。
+     * @param string $CsrType CSR 生成方式：online = 在线生成, parse = 手动上传。
      * @param string $CsrContent 上传的 CSR 内容。
-     * @param string $CertificateDomain 绑定证书的域名 。
+     * @param string $CertificateDomain 绑定证书的域名。
      * @param array $DomainList 上传的域名数组（多域名证书可以上传）。
-     * @param string $KeyPassword 私钥密码 。
-     * @param string $OrganizationName 公司名称 。
+     * @param string $KeyPassword 私钥密码。
+     * @param string $OrganizationName 公司名称。
      * @param string $OrganizationDivision 部门名称。
-     * @param string $OrganizationAddress 公司详细地址 。
-     * @param string $OrganizationCountry 国家名称 如中国：CN 。
-     * @param string $OrganizationCity 公司所在城市 。
+     * @param string $OrganizationAddress 公司详细地址。
+     * @param string $OrganizationCountry 国家名称，如中国：CN 。
+     * @param string $OrganizationCity 公司所在城市。
      * @param string $OrganizationRegion 公司所在省份。
-     * @param string $PostalCode 公司邮编 。
-     * @param string $PhoneAreaCode 公司座机区号 。
-     * @param string $PhoneNumber 公司座机号码 。
-     * @param string $VerifyType 证书验证方式 。
+     * @param string $PostalCode 公司邮编。
+     * @param string $PhoneAreaCode 公司座机区号。
+     * @param string $PhoneNumber 公司座机号码。
+     * @param string $VerifyType 证书验证方式。
      * @param string $AdminFirstName 管理人姓。
      * @param string $AdminLastName 管理人名。
      * @param string $AdminPhoneNum 管理人手机号码。
@@ -229,8 +229,8 @@ class SubmitCertificateInformationRequest extends AbstractModel
      * @param string $AdminPosition 管理人职位。
      * @param string $ContactFirstName 联系人姓。
      * @param string $ContactLastName 联系人名。
-     * @param string $ContactEmail 联系人邮箱地址 。
-     * @param string $ContactNumber 联系人手机号码 。
+     * @param string $ContactEmail 联系人邮箱地址。
+     * @param string $ContactNumber 联系人手机号码。
      * @param string $ContactPosition 联系人职位。
      */
     function __construct()

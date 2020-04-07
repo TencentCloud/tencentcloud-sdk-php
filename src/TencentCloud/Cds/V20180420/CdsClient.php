@@ -16,26 +16,39 @@
  */
 
 namespace TencentCloud\Cds\V20180420;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Cds\V20180420\Models as Models;
 
 /**
-* @method Models\DescribeDasbImageIdsResponse DescribeDasbImageIds(Models\DescribeDasbImageIdsRequest $req) 获取镜像列表
-* @method Models\DescribeDbauditInstanceTypeResponse DescribeDbauditInstanceType(Models\DescribeDbauditInstanceTypeRequest $req) 本接口 (DescribeDbauditInstanceType) 用于查询可售卖的产品规格列表。
-* @method Models\DescribeDbauditInstancesResponse DescribeDbauditInstances(Models\DescribeDbauditInstancesRequest $req) 本接口 (DescribeDbauditInstances) 用于查询数据安全审计实例列表
-* @method Models\DescribeDbauditUsedRegionsResponse DescribeDbauditUsedRegions(Models\DescribeDbauditUsedRegionsRequest $req) 本接口 (DescribeDbauditUsedRegions) 用于查询可售卖地域列表。
-* @method Models\InquiryPriceDbauditInstanceResponse InquiryPriceDbauditInstance(Models\InquiryPriceDbauditInstanceRequest $req) 用于查询数据安全审计产品实例价格
-* @method Models\ModifyDbauditInstancesRenewFlagResponse ModifyDbauditInstancesRenewFlag(Models\ModifyDbauditInstancesRenewFlagRequest $req) 本接口 (ModifyDbauditInstancesRenewFlag) 用于修改数据安全审计产品实例续费标识
+ * @method Models\DescribeDasbImageIdsResponse DescribeDasbImageIds(Models\DescribeDasbImageIdsRequest $req) 获取镜像列表
+ * @method Models\DescribeDbauditInstanceTypeResponse DescribeDbauditInstanceType(Models\DescribeDbauditInstanceTypeRequest $req) 本接口 (DescribeDbauditInstanceType) 用于查询可售卖的产品规格列表。
+ * @method Models\DescribeDbauditInstancesResponse DescribeDbauditInstances(Models\DescribeDbauditInstancesRequest $req) 本接口 (DescribeDbauditInstances) 用于查询数据安全审计实例列表
+ * @method Models\DescribeDbauditUsedRegionsResponse DescribeDbauditUsedRegions(Models\DescribeDbauditUsedRegionsRequest $req) 本接口 (DescribeDbauditUsedRegions) 用于查询可售卖地域列表。
+ * @method Models\InquiryPriceDbauditInstanceResponse InquiryPriceDbauditInstance(Models\InquiryPriceDbauditInstanceRequest $req) 用于查询数据安全审计产品实例价格
+ * @method Models\ModifyDbauditInstancesRenewFlagResponse ModifyDbauditInstancesRenewFlag(Models\ModifyDbauditInstancesRenewFlagRequest $req) 本接口 (ModifyDbauditInstancesRenewFlag) 用于修改数据安全审计产品实例续费标识
  */
 
 class CdsClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "cds.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-04-20";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

@@ -16,23 +16,36 @@
  */
 
 namespace TencentCloud\Ticm\V20181127;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Ticm\V20181127\Models as Models;
 
 /**
-* @method Models\DescribeVideoTaskResponse DescribeVideoTask(Models\DescribeVideoTaskRequest $req) 提交完视频审核任务后，可以通过本接口来获取当前处理的进度和结果
-* @method Models\ImageModerationResponse ImageModeration(Models\ImageModerationRequest $req) 本接口提供多种维度的图像审核能力，支持色情和性感内容识别，政治人物和涉政敏感场景识别，以及暴恐人物、场景、旗帜标识等违禁内容的识别。
-* @method Models\VideoModerationResponse VideoModeration(Models\VideoModerationRequest $req) 本接口提供多种维度的视频审核能力，支持色情和性感内容识别，政治人物和涉政敏感场景识别，以及暴恐人物、场景、旗帜标识等违禁内容的识别。
+ * @method Models\DescribeVideoTaskResponse DescribeVideoTask(Models\DescribeVideoTaskRequest $req) 提交完视频审核任务后，可以通过本接口来获取当前处理的进度和结果
+ * @method Models\ImageModerationResponse ImageModeration(Models\ImageModerationRequest $req) 本接口提供多种维度的图像审核能力，支持色情和性感内容识别，政治人物和涉政敏感场景识别，以及暴恐人物、场景、旗帜标识等违禁内容的识别。
+ * @method Models\VideoModerationResponse VideoModeration(Models\VideoModerationRequest $req) 本接口提供多种维度的视频审核能力，支持色情和性感内容识别，政治人物和涉政敏感场景识别，以及暴恐人物、场景、旗帜标识等违禁内容的识别。
  */
 
 class TicmClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "ticm.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-11-27";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

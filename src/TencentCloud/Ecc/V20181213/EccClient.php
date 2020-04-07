@@ -16,27 +16,40 @@
  */
 
 namespace TencentCloud\Ecc\V20181213;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Ecc\V20181213\Models as Models;
 
 /**
-* @method Models\CorrectMultiImageResponse CorrectMultiImage(Models\CorrectMultiImageRequest $req) https://ecc.tencentcloudapi.com/?Action=CorrectMultiImage
+ * @method Models\CorrectMultiImageResponse CorrectMultiImage(Models\CorrectMultiImageRequest $req) https://ecc.tencentcloudapi.com/?Action=CorrectMultiImage
 多图像识别批改接口
-* @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 异步任务结果查询接口
-* @method Models\ECCResponse ECC(Models\ECCRequest $req) 接口请求域名： ecc.tencentcloudapi.com 
+ * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 异步任务结果查询接口
+ * @method Models\ECCResponse ECC(Models\ECCRequest $req) 接口请求域名： ecc.tencentcloudapi.com 
 纯文本英语作文批改
-* @method Models\EHOCRResponse EHOCR(Models\EHOCRRequest $req) https://ecc.tencentcloudapi.com/?Action=EHOCR
+ * @method Models\EHOCRResponse EHOCR(Models\EHOCRRequest $req) https://ecc.tencentcloudapi.com/?Action=EHOCR
 图像识别批改接口
  */
 
 class EccClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "ecc.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-12-13";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

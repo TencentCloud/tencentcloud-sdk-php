@@ -16,23 +16,36 @@
  */
 
 namespace TencentCloud\Yunsou\V20191115;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Yunsou\V20191115\Models as Models;
 
 /**
-* @method Models\DataManipulationResponse DataManipulation(Models\DataManipulationRequest $req) 上传云搜数据的API接口。
+ * @method Models\DataManipulationResponse DataManipulation(Models\DataManipulationRequest $req) 上传云搜数据的API接口。
 
-* @method Models\DataSearchResponse DataSearch(Models\DataSearchRequest $req) 用于检索云搜中的数据。
+ * @method Models\DataSearchResponse DataSearch(Models\DataSearchRequest $req) 用于检索云搜中的数据。
  */
 
 class YunsouClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "yunsou.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-11-15";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

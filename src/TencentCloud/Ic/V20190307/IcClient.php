@@ -16,25 +16,38 @@
  */
 
 namespace TencentCloud\Ic\V20190307;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Ic\V20190307\Models as Models;
 
 /**
-* @method Models\DescribeAppResponse DescribeApp(Models\DescribeAppRequest $req) 根据应用id查询物联卡应用详情
-* @method Models\DescribeCardResponse DescribeCard(Models\DescribeCardRequest $req) 查询卡片详细信息
-* @method Models\DescribeCardsResponse DescribeCards(Models\DescribeCardsRequest $req) 查询卡片列表信息
-* @method Models\SendMultiSmsResponse SendMultiSms(Models\SendMultiSmsRequest $req) 群发短信
-* @method Models\SendSmsResponse SendSms(Models\SendSmsRequest $req) 发送短信息接口
+ * @method Models\DescribeAppResponse DescribeApp(Models\DescribeAppRequest $req) 根据应用id查询物联卡应用详情
+ * @method Models\DescribeCardResponse DescribeCard(Models\DescribeCardRequest $req) 查询卡片详细信息
+ * @method Models\DescribeCardsResponse DescribeCards(Models\DescribeCardsRequest $req) 查询卡片列表信息
+ * @method Models\SendMultiSmsResponse SendMultiSms(Models\SendMultiSmsRequest $req) 群发短信
+ * @method Models\SendSmsResponse SendSms(Models\SendSmsRequest $req) 发送短信息接口
  */
 
 class IcClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "ic.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-03-07";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

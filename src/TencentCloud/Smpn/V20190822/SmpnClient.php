@@ -16,25 +16,38 @@
  */
 
 namespace TencentCloud\Smpn\V20190822;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Smpn\V20190822\Models as Models;
 
 /**
-* @method Models\CreateSmpnEpaResponse CreateSmpnEpa(Models\CreateSmpnEpaRequest $req) 企业号码认证
-* @method Models\DescribeSmpnChpResponse DescribeSmpnChp(Models\DescribeSmpnChpRequest $req) 查询号码的标记和标记次数
-* @method Models\DescribeSmpnFnrResponse DescribeSmpnFnr(Models\DescribeSmpnFnrRequest $req) 虚假号码识别
-* @method Models\DescribeSmpnMhmResponse DescribeSmpnMhm(Models\DescribeSmpnMhmRequest $req) 号码营销监控
-* @method Models\DescribeSmpnMrlResponse DescribeSmpnMrl(Models\DescribeSmpnMrlRequest $req) 查询号码恶意标记等级
+ * @method Models\CreateSmpnEpaResponse CreateSmpnEpa(Models\CreateSmpnEpaRequest $req) 企业号码认证
+ * @method Models\DescribeSmpnChpResponse DescribeSmpnChp(Models\DescribeSmpnChpRequest $req) 查询号码的标记和标记次数
+ * @method Models\DescribeSmpnFnrResponse DescribeSmpnFnr(Models\DescribeSmpnFnrRequest $req) 虚假号码识别
+ * @method Models\DescribeSmpnMhmResponse DescribeSmpnMhm(Models\DescribeSmpnMhmRequest $req) 号码营销监控
+ * @method Models\DescribeSmpnMrlResponse DescribeSmpnMrl(Models\DescribeSmpnMrlRequest $req) 查询号码恶意标记等级
  */
 
 class SmpnClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "smpn.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2019-08-22";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

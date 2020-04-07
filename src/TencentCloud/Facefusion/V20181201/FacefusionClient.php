@@ -16,16 +16,17 @@
  */
 
 namespace TencentCloud\Facefusion\V20181201;
+
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
 use TencentCloud\Facefusion\V20181201\Models as Models;
 
 /**
-* @method Models\FaceFusionResponse FaceFusion(Models\FaceFusionRequest $req) 本接口用于人脸融合，用户上传人脸图片，获取与模板融合后的人脸图片。未发布的活动请求频率限制为1次/秒，已发布的活动请求频率限制50次/秒。如有需要提高活动的请求频率限制，请在控制台中申请。
+ * @method Models\FaceFusionResponse FaceFusion(Models\FaceFusionRequest $req) 本接口用于人脸融合，用户上传人脸图片，获取与模板融合后的人脸图片。未发布的活动请求频率限制为1次/秒，已发布的活动请求频率限制50次/秒。如有需要提高活动的请求频率限制，请在控制台中申请。
 >     
 - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
-* @method Models\FuseFaceResponse FuseFace(Models\FuseFaceRequest $req) 本接口用于单脸、多脸融合，用户上传人脸图片，获取与模板融合后的人脸图片。查看 <a href="https://cloud.tencent.com/document/product/670/38247" target="_blank">选脸融合接入指引</a>。
+ * @method Models\FuseFaceResponse FuseFace(Models\FuseFaceRequest $req) 本接口用于单脸、多脸融合，用户上传人脸图片，获取与模板融合后的人脸图片。查看 <a href="https://cloud.tencent.com/document/product/670/38247" target="_blank">选脸融合接入指引</a>。
 
 未发布的活动请求频率限制为1次/秒，已发布的活动请求频率限制50次/秒。如有需要提高活动的请求频率限制，请在控制台中申请。
 >
@@ -34,10 +35,22 @@ use TencentCloud\Facefusion\V20181201\Models as Models;
 
 class FacefusionClient extends AbstractClient
 {
+    /**
+     * @var string
+     */
     protected $endpoint = "facefusion.tencentcloudapi.com";
 
+    /**
+     * @var string
+     */
     protected $version = "2018-12-01";
 
+    /**
+     * @param Credential $credential
+     * @param string $region
+     * @param ClientProfile|null $profile
+     * @throws TencentCloudSDKException
+     */
     function __construct($credential, $region, $profile=null)
     {
         parent::__construct($this->endpoint, $this->version, $credential, $region, $profile);

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenewHosts请求参数结构体
  *
- * @method array getHostIds() 获取一个或多个待操作的CDH实例ID。
- * @method void setHostIds(array $HostIds) 设置一个或多个待操作的CDH实例ID。
+ * @method array getHostIds() 获取一个或多个待操作的CDH实例ID。每次请求的CDH实例的上限为100。
+ * @method void setHostIds(array $HostIds) 设置一个或多个待操作的CDH实例ID。每次请求的CDH实例的上限为100。
  * @method ChargePrepaid getHostChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method void setHostChargePrepaid(ChargePrepaid $HostChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  */
 class RenewHostsRequest extends AbstractModel
 {
     /**
-     * @var array 一个或多个待操作的CDH实例ID。
+     * @var array 一个或多个待操作的CDH实例ID。每次请求的CDH实例的上限为100。
      */
     public $HostIds;
 
@@ -38,7 +38,7 @@ class RenewHostsRequest extends AbstractModel
     public $HostChargePrepaid;
 
     /**
-     * @param array $HostIds 一个或多个待操作的CDH实例ID。
+     * @param array $HostIds 一个或多个待操作的CDH实例ID。每次请求的CDH实例的上限为100。
      * @param ChargePrepaid $HostChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      */
     function __construct()

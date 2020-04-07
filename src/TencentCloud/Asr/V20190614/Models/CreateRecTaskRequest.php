@@ -25,15 +25,17 @@ use TencentCloud\Common\AbstractModel;
 8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
 16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
-16k_ca：16k 粤语。
+16k_ca：16k 粤语；
+16k_zh_video：16k 音视频领域模型。
  * @method void setEngineModelType(string $EngineModelType) 设置引擎模型类型。
 8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
 8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
 16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
-16k_ca：16k 粤语。
- * @method integer getChannelNum() 获取语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
- * @method void setChannelNum(integer $ChannelNum) 设置语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
+16k_ca：16k 粤语；
+16k_zh_video：16k 音视频领域模型。
+ * @method integer getChannelNum() 获取语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
+ * @method void setChannelNum(integer $ChannelNum) 设置语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
  * @method integer getResTextFormat() 获取识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
  * @method void setResTextFormat(integer $ResTextFormat) 设置识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
@@ -61,12 +63,13 @@ class CreateRecTaskRequest extends AbstractModel
 8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
 16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
-16k_ca：16k 粤语。
+16k_ca：16k 粤语；
+16k_zh_video：16k 音视频领域模型。
      */
     public $EngineModelType;
 
     /**
-     * @var integer 语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
+     * @var integer 语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
      */
     public $ChannelNum;
 
@@ -121,8 +124,9 @@ class CreateRecTaskRequest extends AbstractModel
 8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
 16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
-16k_ca：16k 粤语。
-     * @param integer $ChannelNum 语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
+16k_ca：16k 粤语；
+16k_zh_video：16k 音视频领域模型。
+     * @param integer $ChannelNum 语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
      * @param integer $ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
      * @param string $CallbackUrl 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。

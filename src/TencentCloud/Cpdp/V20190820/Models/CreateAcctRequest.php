@@ -54,6 +54,14 @@ use TencentCloud\Common\AbstractModel;
 缺省： enterprise
  * @method string getShortName() 获取不填则默认子商户名称
  * @method void setShortName(string $ShortName) 设置不填则默认子商户名称
+ * @method string getSubMerchantMemberType() 获取子商户会员类型：
+general:普通子账户
+merchant:商户子账户
+缺省： general
+ * @method void setSubMerchantMemberType(string $SubMerchantMemberType) 设置子商户会员类型：
+general:普通子账户
+merchant:商户子账户
+缺省： general
  */
 class CreateAcctRequest extends AbstractModel
 {
@@ -119,6 +127,14 @@ class CreateAcctRequest extends AbstractModel
     public $ShortName;
 
     /**
+     * @var string 子商户会员类型：
+general:普通子账户
+merchant:商户子账户
+缺省： general
+     */
+    public $SubMerchantMemberType;
+
+    /**
      * @param string $MidasAppId 聚鑫平台分配的支付MidasAppId
      * @param string $SubMchId 业务平台的子商户ID，唯一
      * @param string $SubMchName 子商户名称
@@ -136,6 +152,10 @@ class CreateAcctRequest extends AbstractModel
 企业：enterprise
 缺省： enterprise
      * @param string $ShortName 不填则默认子商户名称
+     * @param string $SubMerchantMemberType 子商户会员类型：
+general:普通子账户
+merchant:商户子账户
+缺省： general
      */
     function __construct()
     {
@@ -192,6 +212,10 @@ class CreateAcctRequest extends AbstractModel
 
         if (array_key_exists("ShortName",$param) and $param["ShortName"] !== null) {
             $this->ShortName = $param["ShortName"];
+        }
+
+        if (array_key_exists("SubMerchantMemberType",$param) and $param["SubMerchantMemberType"] !== null) {
+            $this->SubMerchantMemberType = $param["SubMerchantMemberType"];
         }
     }
 }

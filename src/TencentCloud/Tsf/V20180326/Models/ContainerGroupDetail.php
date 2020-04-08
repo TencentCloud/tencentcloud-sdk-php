@@ -144,6 +144,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupResourceType() 获取部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupResourceType(string $GroupResourceType) 设置部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceCount() 获取部署组实例个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceCount(integer $InstanceCount) 设置部署组实例个数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerGroupDetail extends AbstractModel
 {
@@ -334,6 +342,18 @@ class ContainerGroupDetail extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var string 部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupResourceType;
+
+    /**
+     * @var integer 部署组实例个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceCount;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
@@ -395,6 +415,10 @@ class ContainerGroupDetail extends AbstractModel
      * @param string $MemRequest 初始分配的内存 MiB 数，对应 K8S request
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupResourceType 部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceCount 部署组实例个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -542,6 +566,14 @@ class ContainerGroupDetail extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("GroupResourceType",$param) and $param["GroupResourceType"] !== null) {
+            $this->GroupResourceType = $param["GroupResourceType"];
+        }
+
+        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
+            $this->InstanceCount = $param["InstanceCount"];
         }
     }
 }

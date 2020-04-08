@@ -26,10 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemberFillAmt(string $MemberFillAmt) 设置STRING(20)，会员充值金额
  * @method string getCommission() 获取STRING(20)，手续费金额
  * @method void setCommission(string $Commission) 设置STRING(20)，手续费金额
- * @method string getCcy() 获取STRING(3)，币种
- * @method void setCcy(string $Ccy) 设置STRING(3)，币种
- * @method string getPayChannelType() 获取STRING(20)，支付渠道类型
- * @method void setPayChannelType(string $PayChannelType) 设置STRING(20)，支付渠道类型
+ * @method string getCcy() 获取STRING(3)，币种。如RMB
+ * @method void setCcy(string $Ccy) 设置STRING(3)，币种。如RMB
+ * @method string getPayChannelType() 获取STRING(20)，支付渠道类型。
+0001-微信
+0002-支付宝
+0003-京东支付
+ * @method void setPayChannelType(string $PayChannelType) 设置STRING(20)，支付渠道类型。
+0001-微信
+0002-支付宝
+0003-京东支付
  * @method string getPayChannelAssignMerNo() 获取STRING(50)，支付渠道所分配的商户号
  * @method void setPayChannelAssignMerNo(string $PayChannelAssignMerNo) 设置STRING(50)，支付渠道所分配的商户号
  * @method string getPayChannelTranSeqNo() 获取STRING(52)，支付渠道交易流水号
@@ -67,12 +73,15 @@ class RechargeMemberThirdPayRequest extends AbstractModel
     public $Commission;
 
     /**
-     * @var string STRING(3)，币种
+     * @var string STRING(3)，币种。如RMB
      */
     public $Ccy;
 
     /**
-     * @var string STRING(20)，支付渠道类型
+     * @var string STRING(20)，支付渠道类型。
+0001-微信
+0002-支付宝
+0003-京东支付
      */
     public $PayChannelType;
 
@@ -125,8 +134,11 @@ class RechargeMemberThirdPayRequest extends AbstractModel
      * @param string $TranNetMemberCode STRING(32)，交易网会代码
      * @param string $MemberFillAmt STRING(20)，会员充值金额
      * @param string $Commission STRING(20)，手续费金额
-     * @param string $Ccy STRING(3)，币种
-     * @param string $PayChannelType STRING(20)，支付渠道类型
+     * @param string $Ccy STRING(3)，币种。如RMB
+     * @param string $PayChannelType STRING(20)，支付渠道类型。
+0001-微信
+0002-支付宝
+0003-京东支付
      * @param string $PayChannelAssignMerNo STRING(50)，支付渠道所分配的商户号
      * @param string $PayChannelTranSeqNo STRING(52)，支付渠道交易流水号
      * @param string $EjzbOrderNo STRING(52)，电商见证宝订单号

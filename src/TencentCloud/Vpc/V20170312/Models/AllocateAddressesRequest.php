@@ -66,6 +66,8 @@ AnycastEIP是否用于绑定负载均衡。
 AnycastEIP是否用于绑定负载均衡。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
 <li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
+ * @method array getTags() 获取需要关联的标签列表。
+ * @method void setTags(array $Tags) 设置需要关联的标签列表。
  * @method string getBandwidthPackageId() 获取BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
  */
@@ -123,6 +125,11 @@ AnycastEIP是否用于绑定负载均衡。
     public $ApplicableForCLB;
 
     /**
+     * @var array 需要关联的标签列表。
+     */
+    public $Tags;
+
+    /**
      * @var string BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
      */
     public $BandwidthPackageId;
@@ -151,6 +158,7 @@ AnycastEIP是否用于绑定负载均衡。
 AnycastEIP是否用于绑定负载均衡。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
 <li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
+     * @param array $Tags 需要关联的标签列表。
      * @param string $BandwidthPackageId BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
      */
     function __construct()
@@ -192,6 +200,15 @@ AnycastEIP是否用于绑定负载均衡。
 
         if (array_key_exists("ApplicableForCLB",$param) and $param["ApplicableForCLB"] !== null) {
             $this->ApplicableForCLB = $param["ApplicableForCLB"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
 
         if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {

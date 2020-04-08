@@ -37,6 +37,7 @@ use TencentCloud\Ecm\V20190719\Models as Models;
  * @method Models\DescribeNodeResponse DescribeNode(Models\DescribeNodeRequest $req) 获取节点列表
  * @method Models\DescribePeakBaseOverviewResponse DescribePeakBaseOverview(Models\DescribePeakBaseOverviewRequest $req) CPU 内存 硬盘等基础信息峰值数据
  * @method Models\DescribePeakNetworkOverviewResponse DescribePeakNetworkOverview(Models\DescribePeakNetworkOverviewRequest $req) 获取网络峰值数据
+ * @method Models\ImportImageResponse ImportImage(Models\ImportImageRequest $req) 从CVM产品导入镜像到ECM
  * @method Models\ModifyInstancesAttributeResponse ModifyInstancesAttribute(Models\ModifyInstancesAttributeRequest $req) 修改实例的属性。
  * @method Models\ModifyModuleImageResponse ModifyModuleImage(Models\ModifyModuleImageRequest $req) ModifyModuleImage
  * @method Models\ModifyModuleNameResponse ModifyModuleName(Models\ModifyModuleNameRequest $req) 修改模块名称

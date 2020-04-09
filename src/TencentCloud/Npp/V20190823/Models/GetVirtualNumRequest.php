@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetVirtualNum请求参数结构体
  *
- * @method string getBizAppId() 获取appId 值测试时由腾讯统一分配
- * @method void setBizAppId(string $BizAppId) 设置appId 值测试时由腾讯统一分配
+ * @method string getBizAppId() 获取业务appid
+ * @method void setBizAppId(string $BizAppId) 设置业务appid
  * @method string getDst() 获取被叫号码(号码前加 0086，如 008613631686024)
  * @method void setDst(string $Dst) 设置被叫号码(号码前加 0086，如 008613631686024)
  * @method string getSrc() 获取主叫号码(号码前加 0086，如 008613631686024)，xb 模式下是不用填写，axb 模式下是必选
@@ -82,7 +82,7 @@ use TencentCloud\Common\AbstractModel;
 class GetVirtualNumRequest extends AbstractModel
 {
     /**
-     * @var string appId 值测试时由腾讯统一分配
+     * @var string 业务appid
      */
     public $BizAppId;
 
@@ -163,7 +163,7 @@ class GetVirtualNumRequest extends AbstractModel
     public $RecordUrl;
 
     /**
-     * @param string $BizAppId appId 值测试时由腾讯统一分配
+     * @param string $BizAppId 业务appid
      * @param string $Dst 被叫号码(号码前加 0086，如 008613631686024)
      * @param string $Src 主叫号码(号码前加 0086，如 008613631686024)，xb 模式下是不用填写，axb 模式下是必选
      * @param array $AccreditList {“accreditList”:[“008613631686024”,”008612345678910”]}，主要用于 N-1 场景，号码绑定非共享是独占型，指定了 dst 独占中间号绑定，accreditList 表示这个列表成员可以拨打 dst 绑 定的中间号，默认值为空，表示所有号码都可以拨打独占型中间号绑定，最大集合不允许超过 30 个，仅适用于xb模式

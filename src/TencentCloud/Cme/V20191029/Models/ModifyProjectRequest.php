@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目 Id。
  * @method string getName() 获取项目名称，不可超过30个字符。
  * @method void setName(string $Name) 设置项目名称，不可超过30个字符。
+ * @method string getAspectRatio() 获取画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16。</li>
+ * @method void setAspectRatio(string $AspectRatio) 设置画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16。</li>
  * @method Entity getOwner() 获取归属者。
  * @method void setOwner(Entity $Owner) 设置归属者。
  */
@@ -47,6 +53,13 @@ class ModifyProjectRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var string 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16。</li>
+     */
+    public $AspectRatio;
+
+    /**
      * @var Entity 归属者。
      */
     public $Owner;
@@ -55,6 +68,9 @@ class ModifyProjectRequest extends AbstractModel
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $ProjectId 项目 Id。
      * @param string $Name 项目名称，不可超过30个字符。
+     * @param string $AspectRatio 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16。</li>
      * @param Entity $Owner 归属者。
      */
     function __construct()
@@ -80,6 +96,10 @@ class ModifyProjectRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("AspectRatio",$param) and $param["AspectRatio"] !== null) {
+            $this->AspectRatio = $param["AspectRatio"];
         }
 
         if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {

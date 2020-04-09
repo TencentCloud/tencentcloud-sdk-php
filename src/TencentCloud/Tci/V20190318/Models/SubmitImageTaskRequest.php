@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctions(ImageTaskFunction $Functions) 设置任务控制选项
  * @method array getLightStandardSet() 获取光照标准列表
  * @method void setLightStandardSet(array $LightStandardSet) 设置光照标准列表
+ * @method string getEventsCallBack() 获取结果更新回调地址。
+ * @method void setEventsCallBack(string $EventsCallBack) 设置结果更新回调地址。
  * @method integer getFrameInterval() 获取抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
  * @method void setFrameInterval(integer $FrameInterval) 设置抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
  * @method array getLibrarySet() 获取查询人员库列表
@@ -60,6 +62,11 @@ class SubmitImageTaskRequest extends AbstractModel
     public $LightStandardSet;
 
     /**
+     * @var string 结果更新回调地址。
+     */
+    public $EventsCallBack;
+
+    /**
      * @var integer 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
      */
     public $FrameInterval;
@@ -84,6 +91,7 @@ class SubmitImageTaskRequest extends AbstractModel
      * @param string $FileType 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
      * @param ImageTaskFunction $Functions 任务控制选项
      * @param array $LightStandardSet 光照标准列表
+     * @param string $EventsCallBack 结果更新回调地址。
      * @param integer $FrameInterval 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
      * @param array $LibrarySet 查询人员库列表
      * @param integer $MaxVideoDuration 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
@@ -122,6 +130,10 @@ class SubmitImageTaskRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->LightStandardSet, $obj);
             }
+        }
+
+        if (array_key_exists("EventsCallBack",$param) and $param["EventsCallBack"] !== null) {
+            $this->EventsCallBack = $param["EventsCallBack"];
         }
 
         if (array_key_exists("FrameInterval",$param) and $param["FrameInterval"] !== null) {

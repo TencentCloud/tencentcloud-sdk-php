@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKibanaPublicAccess(string $KibanaPublicAccess) 设置Kibana公网访问状态
  * @method string getKibanaPrivateAccess() 获取Kibana内网访问状态
  * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) 设置Kibana内网访问状态
+ * @method integer getBasicSecurityType() 获取ES 6.8及以上版本基础版开启或关闭用户认证
+ * @method void setBasicSecurityType(integer $BasicSecurityType) 设置ES 6.8及以上版本基础版开启或关闭用户认证
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -168,6 +170,11 @@ class UpdateInstanceRequest extends AbstractModel
     public $KibanaPrivateAccess;
 
     /**
+     * @var integer ES 6.8及以上版本基础版开启或关闭用户认证
+     */
+    public $BasicSecurityType;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
@@ -192,6 +199,7 @@ class UpdateInstanceRequest extends AbstractModel
      * @param EsPublicAcl $EsPublicAcl 公网访问控制列表
      * @param string $KibanaPublicAccess Kibana公网访问状态
      * @param string $KibanaPrivateAccess Kibana内网访问状态
+     * @param integer $BasicSecurityType ES 6.8及以上版本基础版开启或关闭用户认证
      */
     function __construct()
     {
@@ -284,6 +292,10 @@ class UpdateInstanceRequest extends AbstractModel
 
         if (array_key_exists("KibanaPrivateAccess",$param) and $param["KibanaPrivateAccess"] !== null) {
             $this->KibanaPrivateAccess = $param["KibanaPrivateAccess"];
+        }
+
+        if (array_key_exists("BasicSecurityType",$param) and $param["BasicSecurityType"] !== null) {
+            $this->BasicSecurityType = $param["BasicSecurityType"];
         }
     }
 }

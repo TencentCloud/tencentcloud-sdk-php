@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getEnableActionClass() 获取大教室场景学生肢体动作识别选项
  * @method void setEnableActionClass(boolean $EnableActionClass) 设置大教室场景学生肢体动作识别选项
- * @method boolean getEnableFaceDetect() 获取人脸检测选项
- * @method void setEnableFaceDetect(boolean $EnableFaceDetect) 设置人脸检测选项
+ * @method boolean getEnableFaceDetect() 获取人脸检测选项（默认为true，目前不可编辑）
+ * @method void setEnableFaceDetect(boolean $EnableFaceDetect) 设置人脸检测选项（默认为true，目前不可编辑）
  * @method boolean getEnableFaceExpression() 获取人脸表情识别选项
  * @method void setEnableFaceExpression(boolean $EnableFaceExpression) 设置人脸表情识别选项
- * @method boolean getEnableFaceIdentify() 获取人脸检索选项
- * @method void setEnableFaceIdentify(boolean $EnableFaceIdentify) 设置人脸检索选项
+ * @method boolean getEnableFaceIdentify() 获取人脸检索选项（默认为true，目前不可编辑）
+ * @method void setEnableFaceIdentify(boolean $EnableFaceIdentify) 设置人脸检索选项（默认为true，目前不可编辑）
  * @method boolean getEnableGesture() 获取手势选项
  * @method void setEnableGesture(boolean $EnableGesture) 设置手势选项
  * @method boolean getEnableHandTracking() 获取优图手势选项（该功能尚未支持）
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableStudentBodyMovements(boolean $EnableStudentBodyMovements) 设置小班课场景学生肢体动作识别选项
  * @method boolean getEnableTeacherBodyMovements() 获取教师动作选项（该功能尚未支持）
  * @method void setEnableTeacherBodyMovements(boolean $EnableTeacherBodyMovements) 设置教师动作选项（该功能尚未支持）
- * @method boolean getEnableTeacherOutScreen() 获取判断老师是否在屏幕中
- * @method void setEnableTeacherOutScreen(boolean $EnableTeacherOutScreen) 设置判断老师是否在屏幕中
+ * @method boolean getEnableTeacherOutScreen() 获取判断老师是否在屏幕中（该功能尚未支持）
+ * @method void setEnableTeacherOutScreen(boolean $EnableTeacherOutScreen) 设置判断老师是否在屏幕中（该功能尚未支持）
  */
 class ImageTaskFunction extends AbstractModel
 {
@@ -49,7 +49,7 @@ class ImageTaskFunction extends AbstractModel
     public $EnableActionClass;
 
     /**
-     * @var boolean 人脸检测选项
+     * @var boolean 人脸检测选项（默认为true，目前不可编辑）
      */
     public $EnableFaceDetect;
 
@@ -59,7 +59,7 @@ class ImageTaskFunction extends AbstractModel
     public $EnableFaceExpression;
 
     /**
-     * @var boolean 人脸检索选项
+     * @var boolean 人脸检索选项（默认为true，目前不可编辑）
      */
     public $EnableFaceIdentify;
 
@@ -89,21 +89,21 @@ class ImageTaskFunction extends AbstractModel
     public $EnableTeacherBodyMovements;
 
     /**
-     * @var boolean 判断老师是否在屏幕中
+     * @var boolean 判断老师是否在屏幕中（该功能尚未支持）
      */
     public $EnableTeacherOutScreen;
 
     /**
      * @param boolean $EnableActionClass 大教室场景学生肢体动作识别选项
-     * @param boolean $EnableFaceDetect 人脸检测选项
+     * @param boolean $EnableFaceDetect 人脸检测选项（默认为true，目前不可编辑）
      * @param boolean $EnableFaceExpression 人脸表情识别选项
-     * @param boolean $EnableFaceIdentify 人脸检索选项
+     * @param boolean $EnableFaceIdentify 人脸检索选项（默认为true，目前不可编辑）
      * @param boolean $EnableGesture 手势选项
      * @param boolean $EnableHandTracking 优图手势选项（该功能尚未支持）
      * @param boolean $EnableLightJudge 光照选项
      * @param boolean $EnableStudentBodyMovements 小班课场景学生肢体动作识别选项
      * @param boolean $EnableTeacherBodyMovements 教师动作选项（该功能尚未支持）
-     * @param boolean $EnableTeacherOutScreen 判断老师是否在屏幕中
+     * @param boolean $EnableTeacherOutScreen 判断老师是否在屏幕中（该功能尚未支持）
      */
     function __construct()
     {

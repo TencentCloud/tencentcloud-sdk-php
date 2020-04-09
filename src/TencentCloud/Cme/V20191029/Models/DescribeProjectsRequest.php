@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAspectRatioSet(array $AspectRatioSet) 设置画布宽高比集合。
  * @method array getCategorySet() 获取项目类别集合。
  * @method void setCategorySet(array $CategorySet) 设置项目类别集合。
+ * @method SortBy getSort() 获取列表排序，支持下列排序字段：
+<li>CreateTime：创建时间；</li>
+<li>UpdateTime：更新时间。</li>
+ * @method void setSort(SortBy $Sort) 设置列表排序，支持下列排序字段：
+<li>CreateTime：创建时间；</li>
+<li>UpdateTime：更新时间。</li>
  * @method Entity getOwner() 获取项目归属者。
  * @method void setOwner(Entity $Owner) 设置项目归属者。
  * @method integer getOffset() 获取分页返回的起始偏移量，默认值：0。
@@ -58,6 +64,13 @@ class DescribeProjectsRequest extends AbstractModel
     public $CategorySet;
 
     /**
+     * @var SortBy 列表排序，支持下列排序字段：
+<li>CreateTime：创建时间；</li>
+<li>UpdateTime：更新时间。</li>
+     */
+    public $Sort;
+
+    /**
      * @var Entity 项目归属者。
      */
     public $Owner;
@@ -77,6 +90,9 @@ class DescribeProjectsRequest extends AbstractModel
      * @param array $ProjectIds 项目 Id 列表，N 从 0 开始取值，最大 19。
      * @param array $AspectRatioSet 画布宽高比集合。
      * @param array $CategorySet 项目类别集合。
+     * @param SortBy $Sort 列表排序，支持下列排序字段：
+<li>CreateTime：创建时间；</li>
+<li>UpdateTime：更新时间。</li>
      * @param Entity $Owner 项目归属者。
      * @param integer $Offset 分页返回的起始偏移量，默认值：0。
      * @param integer $Limit 分页返回的记录条数，默认值：10。
@@ -108,6 +124,11 @@ class DescribeProjectsRequest extends AbstractModel
 
         if (array_key_exists("CategorySet",$param) and $param["CategorySet"] !== null) {
             $this->CategorySet = $param["CategorySet"];
+        }
+
+        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
+            $this->Sort = new SortBy();
+            $this->Sort->deserialize($param["Sort"]);
         }
 
         if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {

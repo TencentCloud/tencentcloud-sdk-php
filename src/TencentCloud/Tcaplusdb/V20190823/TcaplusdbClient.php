@@ -32,7 +32,7 @@ use TencentCloud\Tcaplusdb\V20190823\Models as Models;
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) 删除TcaplusDB集群，必须在集群所属所有资源（包括表格组，表）都已经释放的情况下才会成功。
  * @method Models\DeleteIdlFilesResponse DeleteIdlFiles(Models\DeleteIdlFilesRequest $req) 指定集群ID和待删除IDL文件的信息，删除目标文件，如果文件正在被表关联则删除失败。
  * @method Models\DeleteTableGroupResponse DeleteTableGroup(Models\DeleteTableGroupRequest $req) 删除表格组
- * @method Models\DeleteTablesResponse DeleteTables(Models\DeleteTablesRequest $req) 根据指定的表信息删除目标表
+ * @method Models\DeleteTablesResponse DeleteTables(Models\DeleteTablesRequest $req) 删除指定的表,第一次调用此接口代表将表移动至回收站，再次调用代表将此表格从回收站中彻底删除。
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 查询TcaplusDB集群列表，包含集群详细信息。
  * @method Models\DescribeIdlFileInfosResponse DescribeIdlFileInfos(Models\DescribeIdlFileInfosRequest $req) 查询表描述文件详情
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 查询TcaplusDB服务支持的地域列表

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionFlag(LoginActionFlag $ActionFlag) 设置敏感操作设置
  * @method OffsiteFlag getOffsiteFlag() 获取异地登录设置
  * @method void setOffsiteFlag(OffsiteFlag $OffsiteFlag) 设置异地登录设置
- * @method integer getNeedResetMfa() 获取是否需要充值mfa
- * @method void setNeedResetMfa(integer $NeedResetMfa) 设置是否需要充值mfa
+ * @method integer getNeedResetMfa() 获取是否需要重置mfa
+ * @method void setNeedResetMfa(integer $NeedResetMfa) 设置是否需要重置mfa
  */
 class SetFlagRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class SetFlagRequest extends AbstractModel
     public $OffsiteFlag;
 
     /**
-     * @var integer 是否需要充值mfa
+     * @var integer 是否需要重置mfa
      */
     public $NeedResetMfa;
 
@@ -63,7 +63,7 @@ class SetFlagRequest extends AbstractModel
      * @param LoginActionFlag $LoginFlag 登录设置
      * @param LoginActionFlag $ActionFlag 敏感操作设置
      * @param OffsiteFlag $OffsiteFlag 异地登录设置
-     * @param integer $NeedResetMfa 是否需要充值mfa
+     * @param integer $NeedResetMfa 是否需要重置mfa
      */
     function __construct()
     {

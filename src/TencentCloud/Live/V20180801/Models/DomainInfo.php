@@ -42,10 +42,10 @@ use TencentCloud\Common\AbstractModel;
 1：慢直播。
  * @method string getCurrentCName() 获取当前客户使用的cname信息
  * @method void setCurrentCName(string $CurrentCName) 设置当前客户使用的cname信息
- * @method integer getRentTag() 获取是否租用域名
- * @method void setRentTag(integer $RentTag) 设置是否租用域名
- * @method string getRentExpireTime() 获取租用域名过期时间
- * @method void setRentExpireTime(string $RentExpireTime) 设置租用域名过期时间
+ * @method integer getRentTag() 获取已无效，可忽略。
+ * @method void setRentTag(integer $RentTag) 设置已无效，可忽略。
+ * @method string getRentExpireTime() 获取已无效，可忽略。
+ * @method void setRentExpireTime(string $RentExpireTime) 设置已无效，可忽略。
  * @method integer getIsMiniProgramLive() 获取0：标准直播，
 1：小程序直播。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -103,12 +103,12 @@ class DomainInfo extends AbstractModel
     public $CurrentCName;
 
     /**
-     * @var integer 是否租用域名
+     * @var integer 已无效，可忽略。
      */
     public $RentTag;
 
     /**
-     * @var string 租用域名过期时间
+     * @var string 已无效，可忽略。
      */
     public $RentExpireTime;
 
@@ -131,8 +131,8 @@ class DomainInfo extends AbstractModel
      * @param integer $IsDelayLive 0：普通直播，
 1：慢直播。
      * @param string $CurrentCName 当前客户使用的cname信息
-     * @param integer $RentTag 是否租用域名
-     * @param string $RentExpireTime 租用域名过期时间
+     * @param integer $RentTag 已无效，可忽略。
+     * @param string $RentExpireTime 已无效，可忽略。
      * @param integer $IsMiniProgramLive 0：标准直播，
 1：小程序直播。
 注意：此字段可能返回 null，表示取不到有效值。

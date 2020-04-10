@@ -20,17 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetachRolePolicy请求参数结构体
  *
- * @method integer getPolicyId() 获取策略ID
- * @method void setPolicyId(integer $PolicyId) 设置策略ID
+ * @method integer getPolicyId() 获取策略ID，入参PolicyId与PolicyName二选一
+ * @method void setPolicyId(integer $PolicyId) 设置策略ID，入参PolicyId与PolicyName二选一
  * @method string getDetachRoleId() 获取角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
  * @method void setDetachRoleId(string $DetachRoleId) 设置角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
  * @method string getDetachRoleName() 获取角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
  * @method void setDetachRoleName(string $DetachRoleName) 设置角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+ * @method string getPolicyName() 获取策略名，入参PolicyId与PolicyName二选一
+ * @method void setPolicyName(string $PolicyName) 设置策略名，入参PolicyId与PolicyName二选一
  */
 class DetachRolePolicyRequest extends AbstractModel
 {
     /**
-     * @var integer 策略ID
+     * @var integer 策略ID，入参PolicyId与PolicyName二选一
      */
     public $PolicyId;
 
@@ -45,9 +47,15 @@ class DetachRolePolicyRequest extends AbstractModel
     public $DetachRoleName;
 
     /**
-     * @param integer $PolicyId 策略ID
+     * @var string 策略名，入参PolicyId与PolicyName二选一
+     */
+    public $PolicyName;
+
+    /**
+     * @param integer $PolicyId 策略ID，入参PolicyId与PolicyName二选一
      * @param string $DetachRoleId 角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
      * @param string $DetachRoleName 角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+     * @param string $PolicyName 策略名，入参PolicyId与PolicyName二选一
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DetachRolePolicyRequest extends AbstractModel
 
         if (array_key_exists("DetachRoleName",$param) and $param["DetachRoleName"] !== null) {
             $this->DetachRoleName = $param["DetachRoleName"];
+        }
+
+        if (array_key_exists("PolicyName",$param) and $param["PolicyName"] !== null) {
+            $this->PolicyName = $param["PolicyName"];
         }
     }
 }

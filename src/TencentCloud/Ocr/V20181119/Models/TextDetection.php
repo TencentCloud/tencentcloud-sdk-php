@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
  * @method void setAdvancedInfo(string $AdvancedInfo) 设置此字段为扩展字段。
 GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
+ * @method ItemCoord getItemPolygon() 获取文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+ * @method void setItemPolygon(ItemCoord $ItemPolygon) 设置文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
  */
 class TextDetection extends AbstractModel
 {
@@ -58,12 +60,18 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
     public $AdvancedInfo;
 
     /**
+     * @var ItemCoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     */
+    public $ItemPolygon;
+
+    /**
      * @param string $DetectedText 识别出的文本行内容
      * @param integer $Confidence 置信度 0 ~100
      * @param array $Polygon 文本行坐标，以四个顶点坐标表示
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdvancedInfo 此字段为扩展字段。
 GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
+     * @param ItemCoord $ItemPolygon 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
      */
     function __construct()
     {
@@ -97,6 +105,11 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
 
         if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
             $this->AdvancedInfo = $param["AdvancedInfo"];
+        }
+
+        if (array_key_exists("ItemPolygon",$param) and $param["ItemPolygon"] !== null) {
+            $this->ItemPolygon = new ItemCoord();
+            $this->ItemPolygon->deserialize($param["ItemPolygon"]);
         }
     }
 }

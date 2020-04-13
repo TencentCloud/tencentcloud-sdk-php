@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyDBInstanceVipVport返回参数结构体
+ * CreateLink返回参数结构体
  *
- * @method string getAsyncRequestId() 获取异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMaterialId() 获取新建链接的素材 Id。
+ * @method void setMaterialId(string $MaterialId) 设置新建链接的素材 Id。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyDBInstanceVipVportResponse extends AbstractModel
+class CreateLinkResponse extends AbstractModel
 {
     /**
-     * @var string 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 新建链接的素材 Id。
      */
-    public $AsyncRequestId;
+    public $MaterialId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class ModifyDBInstanceVipVportResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MaterialId 新建链接的素材 Id。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +54,8 @@ class ModifyDBInstanceVipVportResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("MaterialId",$param) and $param["MaterialId"] !== null) {
+            $this->MaterialId = $param["MaterialId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

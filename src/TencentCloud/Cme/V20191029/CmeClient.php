@@ -27,6 +27,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
  * @method Models\CreateClassResponse CreateClass(Models\CreateClassRequest $req) 新增分类，用于管理素材。
 <li>分类层数不能超过10；</li>
 <li>子分类数不能超过10。</li>
+ * @method Models\CreateLinkResponse CreateLink(Models\CreateLinkRequest $req)  创建素材链接或分类路径链接，将源资源信息链接到目标。
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建云剪的编辑项目，支持创建视频剪辑及直播剪辑两大类项目。
 
  * @method Models\CreateTeamResponse CreateTeam(Models\CreateTeamRequest $req) 创建一个团队。

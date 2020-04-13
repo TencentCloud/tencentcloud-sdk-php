@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getEsVersion() 获取目标ES版本
- * @method void setEsVersion(string $EsVersion) 设置目标ES版本
+ * @method string getEsVersion() 获取目标ES版本，支持：”6.4.3“, "6.8.2"，"7.5.1"
+ * @method void setEsVersion(string $EsVersion) 设置目标ES版本，支持：”6.4.3“, "6.8.2"，"7.5.1"
  * @method boolean getCheckOnly() 获取是否只做升级检查，默认值为false
  * @method void setCheckOnly(boolean $CheckOnly) 设置是否只做升级检查，默认值为false
  * @method string getLicenseType() 获取目标商业特性版本：<li>oss 开源版</li><li>basic 基础版</li>当前仅在5.6.4升级6.x版本时使用，默认值为basic
@@ -39,7 +39,7 @@ class UpgradeInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 目标ES版本
+     * @var string 目标ES版本，支持：”6.4.3“, "6.8.2"，"7.5.1"
      */
     public $EsVersion;
 
@@ -60,7 +60,7 @@ class UpgradeInstanceRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例ID
-     * @param string $EsVersion 目标ES版本
+     * @param string $EsVersion 目标ES版本，支持：”6.4.3“, "6.8.2"，"7.5.1"
      * @param boolean $CheckOnly 是否只做升级检查，默认值为false
      * @param string $LicenseType 目标商业特性版本：<li>oss 开源版</li><li>basic 基础版</li>当前仅在5.6.4升级6.x版本时使用，默认值为basic
      * @param integer $BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>

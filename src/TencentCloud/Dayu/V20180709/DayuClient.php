@@ -87,6 +87,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
  * @method Models\DescribeResIpListResponse DescribeResIpList(Models\DescribeResIpListRequest $req) 获取资源的IP列表
  * @method Models\DescribeResourceListResponse DescribeResourceList(Models\DescribeResourceListRequest $req) 获取资源列表
  * @method Models\DescribeRuleSetsResponse DescribeRuleSets(Models\DescribeRuleSetsRequest $req) 获取资源的规则数
+ * @method Models\DescribeSchedulingDomainListResponse DescribeSchedulingDomainList(Models\DescribeSchedulingDomainListRequest $req) 获取调度域名列表
  * @method Models\DescribeSecIndexResponse DescribeSecIndex(Models\DescribeSecIndexRequest $req) 获取本月安全统计
  * @method Models\DescribeSourceIpSegmentResponse DescribeSourceIpSegment(Models\DescribeSourceIpSegmentRequest $req) 获取回源IP段，支持的产品：高防IP，高防IP专业版；
  * @method Models\DescribeTransmitStatisResponse DescribeTransmitStatis(Models\DescribeTransmitStatisRequest $req) 获取业务转发统计数据，支持转发流量和转发包速率

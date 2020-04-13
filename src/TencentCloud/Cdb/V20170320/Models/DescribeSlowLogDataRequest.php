@@ -18,7 +18,7 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSLowLogData请求参数结构体
+ * DescribeSlowLogData请求参数结构体
  *
  * @method string getInstanceId() 获取实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
@@ -41,7 +41,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() 获取一次性返回的记录数量，最大为400。
  * @method void setLimit(integer $Limit) 设置一次性返回的记录数量，最大为400。
  */
-class DescribeSLowLogDataRequest extends AbstractModel
+class DescribeSlowLogDataRequest extends AbstractModel
 {
     /**
      * @var string 实例 ID。

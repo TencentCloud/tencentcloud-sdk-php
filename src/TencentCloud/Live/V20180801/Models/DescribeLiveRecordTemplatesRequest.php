@@ -20,18 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveRecordTemplates请求参数结构体
  *
- * @method integer getIsDelayLive() 获取是否属于慢直播模板
- * @method void setIsDelayLive(integer $IsDelayLive) 设置是否属于慢直播模板
+ * @method integer getIsDelayLive() 获取是否属于慢直播模板。默认：0。
+示例：
+0 - 标准直播。
+1 - 慢直播。
+ * @method void setIsDelayLive(integer $IsDelayLive) 设置是否属于慢直播模板。默认：0。
+示例：
+0 - 标准直播。
+1 - 慢直播。
  */
 class DescribeLiveRecordTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer 是否属于慢直播模板
+     * @var integer 是否属于慢直播模板。默认：0。
+示例：
+0 - 标准直播。
+1 - 慢直播。
      */
     public $IsDelayLive;
 
     /**
-     * @param integer $IsDelayLive 是否属于慢直播模板
+     * @param integer $IsDelayLive 是否属于慢直播模板。默认：0。
+示例：
+0 - 标准直播。
+1 - 慢直播。
      */
     function __construct()
     {

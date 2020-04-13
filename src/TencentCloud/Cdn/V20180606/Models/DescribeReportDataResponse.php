@@ -14,33 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSLowLogData返回参数结构体
+ * DescribeReportData返回参数结构体
  *
- * @method integer getTotalCount() 获取符合条件的记录总数。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的记录总数。
- * @method array getItems() 获取查询到的记录。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setItems(array $Items) 设置查询到的记录。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDomainReport() 获取域名维度数据详情
+ * @method void setDomainReport(array $DomainReport) 设置域名维度数据详情
+ * @method array getProjectReport() 获取项目维度数据详情
+ * @method void setProjectReport(array $ProjectReport) 设置项目维度数据详情
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeSLowLogDataResponse extends AbstractModel
+class DescribeReportDataResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的记录总数。
+     * @var array 域名维度数据详情
      */
-    public $TotalCount;
+    public $DomainReport;
 
     /**
-     * @var array 查询到的记录。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 项目维度数据详情
      */
-    public $Items;
+    public $ProjectReport;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +45,8 @@ class DescribeSLowLogDataResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合条件的记录总数。
-     * @param array $Items 查询到的记录。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DomainReport 域名维度数据详情
+     * @param array $ProjectReport 项目维度数据详情
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,16 +62,21 @@ class DescribeSLowLogDataResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("DomainReport",$param) and $param["DomainReport"] !== null) {
+            $this->DomainReport = [];
+            foreach ($param["DomainReport"] as $key => $value){
+                $obj = new ReportData();
+                $obj->deserialize($value);
+                array_push($this->DomainReport, $obj);
+            }
         }
 
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
-            $this->Items = [];
-            foreach ($param["Items"] as $key => $value){
-                $obj = new SlowLogItem();
+        if (array_key_exists("ProjectReport",$param) and $param["ProjectReport"] !== null) {
+            $this->ProjectReport = [];
+            foreach ($param["ProjectReport"] as $key => $value){
+                $obj = new ReportData();
                 $obj->deserialize($value);
-                array_push($this->Items, $obj);
+                array_push($this->ProjectReport, $obj);
             }
         }
 

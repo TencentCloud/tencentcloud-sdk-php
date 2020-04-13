@@ -18,22 +18,29 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyDBInstanceVipVport返回参数结构体
+ * DescribeSlowLogData返回参数结构体
  *
- * @method string getAsyncRequestId() 获取异步任务ID。(该返回字段目前已废弃)
+ * @method integer getTotalCount() 获取符合条件的记录总数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的记录总数。
+ * @method array getItems() 获取查询到的记录。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务ID。(该返回字段目前已废弃)
+ * @method void setItems(array $Items) 设置查询到的记录。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyDBInstanceVipVportResponse extends AbstractModel
+class DescribeSlowLogDataResponse extends AbstractModel
 {
     /**
-     * @var string 异步任务ID。(该返回字段目前已废弃)
+     * @var integer 符合条件的记录总数。
+     */
+    public $TotalCount;
+
+    /**
+     * @var array 查询到的记录。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $AsyncRequestId;
+    public $Items;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,7 +48,8 @@ class ModifyDBInstanceVipVportResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId 异步任务ID。(该返回字段目前已废弃)
+     * @param integer $TotalCount 符合条件的记录总数。
+     * @param array $Items 查询到的记录。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -58,8 +66,17 @@ class ModifyDBInstanceVipVportResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new SlowLogItem();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

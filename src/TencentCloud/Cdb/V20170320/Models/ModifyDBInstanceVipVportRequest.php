@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络统一 ID。
  * @method string getUniqSubnetId() 获取子网统一 ID。
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网统一 ID。
+ * @method integer getReleaseDuration() 获取进行基础网络转 VPC 网络和 VPC 网络下的子网变更时，原网络中旧IP的回收时间，单位为小时，取值范围为0-168，默认值为24小时。
+ * @method void setReleaseDuration(integer $ReleaseDuration) 设置进行基础网络转 VPC 网络和 VPC 网络下的子网变更时，原网络中旧IP的回收时间，单位为小时，取值范围为0-168，默认值为24小时。
  */
 class ModifyDBInstanceVipVportRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyDBInstanceVipVportRequest extends AbstractModel
     public $UniqSubnetId;
 
     /**
+     * @var integer 进行基础网络转 VPC 网络和 VPC 网络下的子网变更时，原网络中旧IP的回收时间，单位为小时，取值范围为0-168，默认值为24小时。
+     */
+    public $ReleaseDuration;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      * @param string $DstIp 目标 IP。该参数和 DstPort 参数，两者必传一个。
      * @param integer $DstPort 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
      * @param string $UniqVpcId 私有网络统一 ID。
      * @param string $UniqSubnetId 子网统一 ID。
+     * @param integer $ReleaseDuration 进行基础网络转 VPC 网络和 VPC 网络下的子网变更时，原网络中旧IP的回收时间，单位为小时，取值范围为0-168，默认值为24小时。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyDBInstanceVipVportRequest extends AbstractModel
 
         if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
             $this->UniqSubnetId = $param["UniqSubnetId"];
+        }
+
+        if (array_key_exists("ReleaseDuration",$param) and $param["ReleaseDuration"] !== null) {
+            $this->ReleaseDuration = $param["ReleaseDuration"];
         }
     }
 }

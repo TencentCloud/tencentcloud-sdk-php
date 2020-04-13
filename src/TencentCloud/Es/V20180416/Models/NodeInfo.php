@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalDiskInfo(LocalDiskInfo $LocalDiskInfo) 设置节点本地盘信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDiskCount() 获取节点磁盘块数
+ * @method void setDiskCount(integer $DiskCount) 设置节点磁盘块数
  */
 class NodeInfo extends AbstractModel
 {
@@ -78,6 +80,11 @@ class NodeInfo extends AbstractModel
     public $LocalDiskInfo;
 
     /**
+     * @var integer 节点磁盘块数
+     */
+    public $DiskCount;
+
+    /**
      * @param integer $NodeNum 节点数量
      * @param string $NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      * @param string $Type 节点类型<li>hotData: 热数据节点</li>
@@ -88,6 +95,7 @@ class NodeInfo extends AbstractModel
      * @param integer $DiskSize 节点磁盘容量（单位GB）
      * @param LocalDiskInfo $LocalDiskInfo 节点本地盘信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DiskCount 节点磁盘块数
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class NodeInfo extends AbstractModel
         if (array_key_exists("LocalDiskInfo",$param) and $param["LocalDiskInfo"] !== null) {
             $this->LocalDiskInfo = new LocalDiskInfo();
             $this->LocalDiskInfo->deserialize($param["LocalDiskInfo"]);
+        }
+
+        if (array_key_exists("DiskCount",$param) and $param["DiskCount"] !== null) {
+            $this->DiskCount = $param["DiskCount"];
         }
     }
 }

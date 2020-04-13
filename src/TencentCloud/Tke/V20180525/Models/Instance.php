@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取添加时间
  * @method void setCreatedTime(string $CreatedTime) 设置添加时间
+ * @method string getLanIP() 获取节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLanIP(string $LanIP) 设置节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -79,6 +83,12 @@ class Instance extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var string 节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LanIP;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceRole 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER
      * @param string $FailedReason 实例异常(或者处于初始化中)的原因
@@ -88,6 +98,8 @@ class Instance extends AbstractModel
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 节点配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 添加时间
+     * @param string $LanIP 节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -129,6 +141,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("LanIP",$param) and $param["LanIP"] !== null) {
+            $this->LanIP = $param["LanIP"];
         }
     }
 }

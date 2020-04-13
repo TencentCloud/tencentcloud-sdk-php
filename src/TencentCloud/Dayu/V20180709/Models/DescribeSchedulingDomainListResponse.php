@@ -14,26 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Dayu\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyDBInstanceVipVport返回参数结构体
+ * DescribeSchedulingDomainList返回参数结构体
  *
- * @method string getAsyncRequestId() 获取异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotal() 获取调度域名总数
+ * @method void setTotal(integer $Total) 设置调度域名总数
+ * @method array getDomainList() 获取调度域名列表信息
+ * @method void setDomainList(array $DomainList) 设置调度域名列表信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyDBInstanceVipVportResponse extends AbstractModel
+class DescribeSchedulingDomainListResponse extends AbstractModel
 {
     /**
-     * @var string 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 调度域名总数
      */
-    public $AsyncRequestId;
+    public $Total;
+
+    /**
+     * @var array 调度域名列表信息
+     */
+    public $DomainList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +45,8 @@ class ModifyDBInstanceVipVportResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Total 调度域名总数
+     * @param array $DomainList 调度域名列表信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +62,17 @@ class ModifyDBInstanceVipVportResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("DomainList",$param) and $param["DomainList"] !== null) {
+            $this->DomainList = [];
+            foreach ($param["DomainList"] as $key => $value){
+                $obj = new SchedulingDomain();
+                $obj->deserialize($value);
+                array_push($this->DomainList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

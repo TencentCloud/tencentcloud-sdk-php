@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置记录偏移量，默认值为0。
  * @method integer getLimit() 获取单次请求返回的数量，默认值为20，最小值为1，最大值为100。
  * @method void setLimit(integer $Limit) 设置单次请求返回的数量，默认值为20，最小值为1，最大值为100。
+ * @method string getAccountRegexp() 获取匹配账号名的正则表达式，规则同 MySQL 官网。
+ * @method void setAccountRegexp(string $AccountRegexp) 设置匹配账号名的正则表达式，规则同 MySQL 官网。
  */
 class DescribeAccountsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeAccountsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 匹配账号名的正则表达式，规则同 MySQL 官网。
+     */
+    public $AccountRegexp;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param integer $Offset 记录偏移量，默认值为0。
      * @param integer $Limit 单次请求返回的数量，默认值为20，最小值为1，最大值为100。
+     * @param string $AccountRegexp 匹配账号名的正则表达式，规则同 MySQL 官网。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeAccountsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("AccountRegexp",$param) and $param["AccountRegexp"] !== null) {
+            $this->AccountRegexp = $param["AccountRegexp"];
         }
     }
 }

@@ -76,6 +76,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置实例类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCurrentCustomCount() 获取当前自定义数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCurrentCustomCount(integer $CurrentCustomCount) 设置当前自定义数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxCustomCount() 获取最大自定义数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxCustomCount(integer $MaxCustomCount) 设置最大自定义数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWeight() 获取权重
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWeight(integer $Weight) 设置权重
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAvailabilityStatus() 获取会话可用性状态，是否被屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAvailabilityStatus(string $AvailabilityStatus) 设置会话可用性状态，是否被屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GameServerSession extends AbstractModel
 {
@@ -180,6 +196,30 @@ class GameServerSession extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var integer 当前自定义数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CurrentCustomCount;
+
+    /**
+     * @var integer 最大自定义数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxCustomCount;
+
+    /**
+     * @var integer 权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Weight;
+
+    /**
+     * @var string 会话可用性状态，是否被屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AvailabilityStatus;
+
+    /**
      * @param string $CreationTime 游戏服务器会话创建时间
      * @param string $CreatorId 创建者ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -207,6 +247,14 @@ class GameServerSession extends AbstractModel
      * @param string $TerminationTime 终止的时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CurrentCustomCount 当前自定义数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxCustomCount 最大自定义数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Weight 权重
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AvailabilityStatus 会话可用性状态，是否被屏蔽
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -297,6 +345,22 @@ class GameServerSession extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("CurrentCustomCount",$param) and $param["CurrentCustomCount"] !== null) {
+            $this->CurrentCustomCount = $param["CurrentCustomCount"];
+        }
+
+        if (array_key_exists("MaxCustomCount",$param) and $param["MaxCustomCount"] !== null) {
+            $this->MaxCustomCount = $param["MaxCustomCount"];
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
+        }
+
+        if (array_key_exists("AvailabilityStatus",$param) and $param["AvailabilityStatus"] !== null) {
+            $this->AvailabilityStatus = $param["AvailabilityStatus"];
         }
     }
 }

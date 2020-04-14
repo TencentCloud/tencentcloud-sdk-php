@@ -124,6 +124,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSortRule(integer $SortRule) 设置SORTLIST类型表格排序顺序
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDbClusterInfoStruct() 获取表格分布式索引信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDbClusterInfoStruct(string $DbClusterInfoStruct) 设置表格分布式索引信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableInfoNew extends AbstractModel
 {
@@ -284,6 +288,12 @@ class TableInfoNew extends AbstractModel
     public $SortRule;
 
     /**
+     * @var string 表格分布式索引信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DbClusterInfoStruct;
+
+    /**
      * @param string $TableName 表格名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableInstanceId 表格实例ID
@@ -335,6 +345,8 @@ class TableInfoNew extends AbstractModel
      * @param integer $SortFieldNum SORTLIST类型表格排序字段个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SortRule SORTLIST类型表格排序顺序
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DbClusterInfoStruct 表格分布式索引信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -458,6 +470,10 @@ class TableInfoNew extends AbstractModel
 
         if (array_key_exists("SortRule",$param) and $param["SortRule"] !== null) {
             $this->SortRule = $param["SortRule"];
+        }
+
+        if (array_key_exists("DbClusterInfoStruct",$param) and $param["DbClusterInfoStruct"] !== null) {
+            $this->DbClusterInfoStruct = $param["DbClusterInfoStruct"];
         }
     }
 }

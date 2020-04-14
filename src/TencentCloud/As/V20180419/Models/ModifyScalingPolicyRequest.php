@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCooldown(integer $Cooldown) 设置冷却时间，单位为秒。
  * @method MetricAlarm getMetricAlarm() 获取告警监控指标。
  * @method void setMetricAlarm(MetricAlarm $MetricAlarm) 设置告警监控指标。
- * @method array getNotificationUserGroupIds() 获取通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
+ * @method array getNotificationUserGroupIds() 获取通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
 如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
- * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
+ * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
 如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
  */
 class ModifyScalingPolicyRequest extends AbstractModel
@@ -70,7 +70,7 @@ class ModifyScalingPolicyRequest extends AbstractModel
     public $MetricAlarm;
 
     /**
-     * @var array 通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
+     * @var array 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
 如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
      */
     public $NotificationUserGroupIds;
@@ -82,7 +82,7 @@ class ModifyScalingPolicyRequest extends AbstractModel
      * @param integer $AdjustmentValue 告警触发后，期望实例数的调整值。取值：<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
      * @param integer $Cooldown 冷却时间，单位为秒。
      * @param MetricAlarm $MetricAlarm 告警监控指标。
-     * @param array $NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
+     * @param array $NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
 如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
      */
     function __construct()

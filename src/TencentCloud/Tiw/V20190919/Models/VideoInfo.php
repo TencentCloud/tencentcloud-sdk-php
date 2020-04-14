@@ -34,18 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoId(string $VideoId) 设置视频文件Id
  * @method integer getVideoType() 获取视频流类型 
 - 0：摄像头视频 
-- 1：屏幕分享视频（仅课后录制支持）
+- 1：屏幕分享视频
 - 2：白板视频 
 - 3：混流视频
 - 4：纯音频（mp3)
  * @method void setVideoType(integer $VideoType) 设置视频流类型 
 - 0：摄像头视频 
-- 1：屏幕分享视频（仅课后录制支持）
+- 1：屏幕分享视频
 - 2：白板视频 
 - 3：混流视频
 - 4：纯音频（mp3)
- * @method string getUserId() 获取摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型）
- * @method void setUserId(string $UserId) 设置摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型）
+ * @method string getUserId() 获取摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型、辅路视频tic_substream_用户Id）
+ * @method void setUserId(string $UserId) 设置摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型、辅路视频tic_substream_用户Id）
  */
 class VideoInfo extends AbstractModel
 {
@@ -82,7 +82,7 @@ class VideoInfo extends AbstractModel
     /**
      * @var integer 视频流类型 
 - 0：摄像头视频 
-- 1：屏幕分享视频（仅课后录制支持）
+- 1：屏幕分享视频
 - 2：白板视频 
 - 3：混流视频
 - 4：纯音频（mp3)
@@ -90,7 +90,7 @@ class VideoInfo extends AbstractModel
     public $VideoType;
 
     /**
-     * @var string 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型）
+     * @var string 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型、辅路视频tic_substream_用户Id）
      */
     public $UserId;
 
@@ -103,11 +103,11 @@ class VideoInfo extends AbstractModel
      * @param string $VideoId 视频文件Id
      * @param integer $VideoType 视频流类型 
 - 0：摄像头视频 
-- 1：屏幕分享视频（仅课后录制支持）
+- 1：屏幕分享视频
 - 2：白板视频 
 - 3：混流视频
 - 4：纯音频（mp3)
-     * @param string $UserId 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型）
+     * @param string $UserId 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型、辅路视频tic_substream_用户Id）
      */
     function __construct()
     {

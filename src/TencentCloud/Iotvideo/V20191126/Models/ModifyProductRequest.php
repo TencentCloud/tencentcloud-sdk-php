@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductName(string $ProductName) 设置产品名称
  * @method string getProductDescription() 获取产品描述
  * @method void setProductDescription(string $ProductDescription) 设置产品描述
+ * @method string getChipManufactureId() 获取主芯片产商ID
+ * @method void setChipManufactureId(string $ChipManufactureId) 设置主芯片产商ID
+ * @method string getChipId() 获取主芯片ID
+ * @method void setChipId(string $ChipId) 设置主芯片ID
  */
 class ModifyProductRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class ModifyProductRequest extends AbstractModel
     public $ProductDescription;
 
     /**
+     * @var string 主芯片产商ID
+     */
+    public $ChipManufactureId;
+
+    /**
+     * @var string 主芯片ID
+     */
+    public $ChipId;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $ProductName 产品名称
      * @param string $ProductDescription 产品描述
+     * @param string $ChipManufactureId 主芯片产商ID
+     * @param string $ChipId 主芯片ID
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class ModifyProductRequest extends AbstractModel
 
         if (array_key_exists("ProductDescription",$param) and $param["ProductDescription"] !== null) {
             $this->ProductDescription = $param["ProductDescription"];
+        }
+
+        if (array_key_exists("ChipManufactureId",$param) and $param["ChipManufactureId"] !== null) {
+            $this->ChipManufactureId = $param["ChipManufactureId"];
+        }
+
+        if (array_key_exists("ChipId",$param) and $param["ChipId"] !== null) {
+            $this->ChipId = $param["ChipId"];
         }
     }
 }

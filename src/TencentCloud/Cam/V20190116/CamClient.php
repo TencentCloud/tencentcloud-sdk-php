@@ -28,6 +28,8 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\AttachGroupPolicyResponse AttachGroupPolicy(Models\AttachGroupPolicyRequest $req) 本接口（AttachGroupPolicy）可用于绑定策略到用户组。
  * @method Models\AttachRolePolicyResponse AttachRolePolicy(Models\AttachRolePolicyRequest $req) 本接口（AttachRolePolicy）用于绑定策略到角色。
  * @method Models\AttachUserPolicyResponse AttachUserPolicy(Models\AttachUserPolicyRequest $req) 本接口（AttachUserPolicy）可用于绑定到用户的策略。
+ * @method Models\CheckResponse Check(Models\CheckRequest $req) mfa校验
+ * @method Models\CheckNewMfaCodeResponse CheckNewMfaCode(Models\CheckNewMfaCodeRequest $req) 校验新手机新邮箱接口
  * @method Models\ConsumeCustomMFATokenResponse ConsumeCustomMFAToken(Models\ConsumeCustomMFATokenRequest $req) 验证自定义多因子Token
  * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) 创建用户组
  * @method Models\CreatePolicyResponse CreatePolicy(Models\CreatePolicyRequest $req) 本接口（CreatePolicy）可用于创建策略。
@@ -38,10 +40,14 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\DeleteRoleResponse DeleteRole(Models\DeleteRoleRequest $req) 本接口（DeleteRole）用于删除指定角色。
  * @method Models\DeleteSAMLProviderResponse DeleteSAMLProvider(Models\DeleteSAMLProviderRequest $req) 删除SAML身份提供商
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除子用户
+ * @method Models\DescribeMfaCodeStatusResponse DescribeMfaCodeStatus(Models\DescribeMfaCodeStatusRequest $req) 查询微信code状态
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) 本接口（DescribeRoleList）用于获取账号下的角色列表。
  * @method Models\DetachGroupPolicyResponse DetachGroupPolicy(Models\DetachGroupPolicyRequest $req) 本接口（DetachGroupPolicy）可用于解除绑定到用户组的策略。
  * @method Models\DetachRolePolicyResponse DetachRolePolicy(Models\DetachRolePolicyRequest $req) 本接口（DetachRolePolicy）用于解除绑定角色的策略。
  * @method Models\DetachUserPolicyResponse DetachUserPolicy(Models\DetachUserPolicyRequest $req) 本接口（DetachUserPolicy）可用于解除绑定到用户的策略。
+ * @method Models\DetectAuthResponse DetectAuth(Models\DetectAuthRequest $req) 发起人脸核身
+ * @method Models\DetectMaskAuthResponse DetectMaskAuth(Models\DetectMaskAuthRequest $req) 获取并更新人脸核身校验状态实名传递参数比对
+ * @method Models\DetectStateResponse DetectState(Models\DetectStateRequest $req) 获取并且更新人联合身状态
  * @method Models\GetCustomMFATokenInfoResponse GetCustomMFATokenInfo(Models\GetCustomMFATokenInfoRequest $req) 获取自定义多因子Token关联信息
  * @method Models\GetGroupResponse GetGroup(Models\GetGroupRequest $req) 查询用户组详情
  * @method Models\GetPolicyResponse GetPolicy(Models\GetPolicyRequest $req) 本接口（GetPolicy）可用于查询查看策略详情。

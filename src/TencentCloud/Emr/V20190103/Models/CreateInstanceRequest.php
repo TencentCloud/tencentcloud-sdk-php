@@ -32,8 +32,16 @@ use TencentCloud\Common\AbstractModel;
 <li>7：表示EMR-V3.0.0。</li>
  * @method VPCSettings getVPCSettings() 获取私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
  * @method void setVPCSettings(VPCSettings $VPCSettings) 设置私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
- * @method array getSoftware() 获取部署的组件列表。不同ProductId对应特定版本的组件。例如，当ProductId取值为4时，该参数可以填写Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9；当ProductId取值为2时，该参数可以填写Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9。
- * @method void setSoftware(array $Software) 设置部署的组件列表。不同ProductId对应特定版本的组件。例如，当ProductId取值为4时，该参数可以填写Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9；当ProductId取值为2时，该参数可以填写Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9。
+ * @method array getSoftware() 获取部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）需要选择不同的必选组件：
+<li>ProductId为1的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为2的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为4的时候，必选组件包括：hadoop-2.8.4、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为7的时候，必选组件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li>
+ * @method void setSoftware(array $Software) 设置部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）需要选择不同的必选组件：
+<li>ProductId为1的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为2的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为4的时候，必选组件包括：hadoop-2.8.4、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为7的时候，必选组件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li>
  * @method NewResourceSpec getResourceSpec() 获取节点资源的规格。
  * @method void setResourceSpec(NewResourceSpec $ResourceSpec) 设置节点资源的规格。
  * @method integer getSupportHA() 获取是否开启节点高可用。取值范围：
@@ -56,10 +64,12 @@ use TencentCloud\Common\AbstractModel;
 <li>1：表示包年包月。</li>
  * @method Placement getPlacement() 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
  * @method void setPlacement(Placement $Placement) 设置实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
- * @method integer getTimeSpan() 获取购买实例的时长。需要结合TimeUnit一起使用。
-<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
- * @method void setTimeSpan(integer $TimeSpan) 设置购买实例的时长。需要结合TimeUnit一起使用。
-<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
+ * @method integer getTimeSpan() 获取购买实例的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+ * @method void setTimeSpan(integer $TimeSpan) 设置购买实例的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
  * @method string getTimeUnit() 获取购买实例的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -134,7 +144,11 @@ class CreateInstanceRequest extends AbstractModel
     public $VPCSettings;
 
     /**
-     * @var array 部署的组件列表。不同ProductId对应特定版本的组件。例如，当ProductId取值为4时，该参数可以填写Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9；当ProductId取值为2时，该参数可以填写Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9。
+     * @var array 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）需要选择不同的必选组件：
+<li>ProductId为1的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为2的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为4的时候，必选组件包括：hadoop-2.8.4、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为7的时候，必选组件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li>
      */
     public $Software;
 
@@ -170,8 +184,9 @@ class CreateInstanceRequest extends AbstractModel
     public $Placement;
 
     /**
-     * @var integer 购买实例的时长。需要结合TimeUnit一起使用。
-<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
+     * @var integer 购买实例的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
      */
     public $TimeSpan;
 
@@ -278,7 +293,11 @@ class CreateInstanceRequest extends AbstractModel
 <li>4：表示EMR-V2.1.0。</li>
 <li>7：表示EMR-V3.0.0。</li>
      * @param VPCSettings $VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
-     * @param array $Software 部署的组件列表。不同ProductId对应特定版本的组件。例如，当ProductId取值为4时，该参数可以填写Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9；当ProductId取值为2时，该参数可以填写Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9。
+     * @param array $Software 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）需要选择不同的必选组件：
+<li>ProductId为1的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为2的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为4的时候，必选组件包括：hadoop-2.8.4、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为7的时候，必选组件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li>
      * @param NewResourceSpec $ResourceSpec 节点资源的规格。
      * @param integer $SupportHA 是否开启节点高可用。取值范围：
 <li>0：表示不开启节点高可用。</li>
@@ -290,8 +309,9 @@ class CreateInstanceRequest extends AbstractModel
 <li>0：表示按量计费。</li>
 <li>1：表示包年包月。</li>
      * @param Placement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
-     * @param integer $TimeSpan 购买实例的时长。需要结合TimeUnit一起使用。
-<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
+     * @param integer $TimeSpan 购买实例的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
      * @param string $TimeUnit 购买实例的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>

@@ -65,6 +65,7 @@ use TencentCloud\Iotvideo\V20191126\Models as Models;
  * @method Models\DescribeProductResponse DescribeProduct(Models\DescribeProductRequest $req) 本接口（DescribeProduct）用于获取单个产品的详细信息。
  * @method Models\DescribeProductsResponse DescribeProducts(Models\DescribeProductsRequest $req) 本接口（DescribeProducts）用于列出用户账号下的物联网智能视频产品列表。
  * @method Models\DescribePubVersionsResponse DescribePubVersions(Models\DescribePubVersionsRequest $req) 本接口（DescribePubVersions）用于获取某一产品发布过的全部固件版本。
+ * @method Models\DescribeRegistrationStatusResponse DescribeRegistrationStatus(Models\DescribeRegistrationStatusRequest $req) 本接口（DescribeRegistrationStatus）用于查询终端用户的注册状态。
  * @method Models\DescribeRunLogResponse DescribeRunLog(Models\DescribeRunLogRequest $req) 本接口（DescribeRunLog）用于获取设备运行日志。
  * @method Models\DescribeTraceIdsResponse DescribeTraceIds(Models\DescribeTraceIdsRequest $req) 本接口（DescribeTraceIds）用于查询设备日志跟踪白名单。
  * @method Models\DescribeTraceStatusResponse DescribeTraceStatus(Models\DescribeTraceStatusRequest $req) 本接口（DescribeTraceStatus）用于查询指定设备是否在白名单中。

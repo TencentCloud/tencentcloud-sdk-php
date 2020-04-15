@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeUnit(string $TimeUnit) 设置变配的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
- * @method integer getTimeSpan() 获取变配的时长。需要结合TimeUnit一起使用。
-<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
- * @method void setTimeSpan(integer $TimeSpan) 设置变配的时长。需要结合TimeUnit一起使用。
-<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
+ * @method integer getTimeSpan() 获取变配的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+ * @method void setTimeSpan(integer $TimeSpan) 设置变配的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
  * @method UpdateInstanceSettings getUpdateSpec() 获取节点变配的目标配置。
  * @method void setUpdateSpec(UpdateInstanceSettings $UpdateSpec) 设置节点变配的目标配置。
  * @method integer getPayMode() 获取实例计费模式。取值范围：
@@ -55,8 +57,9 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
     public $TimeUnit;
 
     /**
-     * @var integer 变配的时长。需要结合TimeUnit一起使用。
-<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
+     * @var integer 变配的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
      */
     public $TimeSpan;
 
@@ -87,8 +90,9 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
      * @param string $TimeUnit 变配的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
-     * @param integer $TimeSpan 变配的时长。需要结合TimeUnit一起使用。
-<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
+     * @param integer $TimeSpan 变配的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
      * @param UpdateInstanceSettings $UpdateSpec 节点变配的目标配置。
      * @param integer $PayMode 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>

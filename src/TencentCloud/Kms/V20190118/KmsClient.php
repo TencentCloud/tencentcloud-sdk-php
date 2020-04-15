@@ -27,17 +27,28 @@ use TencentCloud\Kms\V20190118\Models as Models;
  * @method Models\AsymmetricSm2DecryptResponse AsymmetricSm2Decrypt(Models\AsymmetricSm2DecryptRequest $req) 使用指定的SM2非对称密钥的私钥进行数据解密，密文必须是使用对应公钥加密的。处于Enabled 状态的非对称密钥才能进行解密操作。传入的密文的长度不能超过256字节。
  * @method Models\CancelKeyDeletionResponse CancelKeyDeletion(Models\CancelKeyDeletionRequest $req) 取消CMK的计划删除操作
  * @method Models\CreateKeyResponse CreateKey(Models\CreateKeyRequest $req) 创建用户管理数据密钥的主密钥CMK（Custom Master Key）。
+ * @method Models\CreateWhiteBoxKeyResponse CreateWhiteBoxKey(Models\CreateWhiteBoxKeyRequest $req) 创建白盒密钥。 密钥个数的上限为 50。
  * @method Models\DecryptResponse Decrypt(Models\DecryptRequest $req) 本接口用于解密密文，得到明文数据。
  * @method Models\DeleteImportedKeyMaterialResponse DeleteImportedKeyMaterial(Models\DeleteImportedKeyMaterialRequest $req) 用于删除导入的密钥材料，仅对EXTERNAL类型的CMK有效，该接口将CMK设置为PendingImport 状态，并不会删除CMK，在重新进行密钥导入后可继续使用。彻底删除CMK请使用 ScheduleKeyDeletion 接口。
+ * @method Models\DeleteWhiteBoxKeyResponse DeleteWhiteBoxKey(Models\DeleteWhiteBoxKeyRequest $req) 删除白盒密钥, 注意：必须先禁用后，才可以删除。
  * @method Models\DescribeKeyResponse DescribeKey(Models\DescribeKeyRequest $req) 用于获取指定KeyId的主密钥属性详情信息。
  * @method Models\DescribeKeysResponse DescribeKeys(Models\DescribeKeysRequest $req) 该接口用于批量获取主密钥属性信息。
+ * @method Models\DescribeWhiteBoxDecryptKeyResponse DescribeWhiteBoxDecryptKey(Models\DescribeWhiteBoxDecryptKeyRequest $req) 获取白盒解密密钥
+ * @method Models\DescribeWhiteBoxKeyResponse DescribeWhiteBoxKey(Models\DescribeWhiteBoxKeyRequest $req) 展示白盒密钥的信息
+ * @method Models\DescribeWhiteBoxKeyDetailsResponse DescribeWhiteBoxKeyDetails(Models\DescribeWhiteBoxKeyDetailsRequest $req) 获取白盒密钥列表
+ * @method Models\DescribeWhiteBoxServiceStatusResponse DescribeWhiteBoxServiceStatus(Models\DescribeWhiteBoxServiceStatusRequest $req) 获取白盒密钥服务状态
  * @method Models\DisableKeyResponse DisableKey(Models\DisableKeyRequest $req) 本接口用于禁用一个主密钥，处于禁用状态的Key无法用于加密、解密操作。
  * @method Models\DisableKeyRotationResponse DisableKeyRotation(Models\DisableKeyRotationRequest $req) 对指定的CMK禁止密钥轮换功能。
  * @method Models\DisableKeysResponse DisableKeys(Models\DisableKeysRequest $req) 该接口用于批量禁止CMK的使用。
+ * @method Models\DisableWhiteBoxKeyResponse DisableWhiteBoxKey(Models\DisableWhiteBoxKeyRequest $req) 禁用白盒密钥
+ * @method Models\DisableWhiteBoxKeysResponse DisableWhiteBoxKeys(Models\DisableWhiteBoxKeysRequest $req) 批量禁用白盒密钥
  * @method Models\EnableKeyResponse EnableKey(Models\EnableKeyRequest $req) 用于启用一个指定的CMK。
  * @method Models\EnableKeyRotationResponse EnableKeyRotation(Models\EnableKeyRotationRequest $req) 对指定的CMK开启密钥轮换功能。
  * @method Models\EnableKeysResponse EnableKeys(Models\EnableKeysRequest $req) 该接口用于批量启用CMK。
+ * @method Models\EnableWhiteBoxKeyResponse EnableWhiteBoxKey(Models\EnableWhiteBoxKeyRequest $req) 批量启用白盒密钥
+ * @method Models\EnableWhiteBoxKeysResponse EnableWhiteBoxKeys(Models\EnableWhiteBoxKeysRequest $req) 批量启用白盒密钥
  * @method Models\EncryptResponse Encrypt(Models\EncryptRequest $req) 本接口用于加密最多为4KB任意数据，可用于加密数据库密码，RSA Key，或其它较小的敏感信息。对于应用的数据加密，使用GenerateDataKey生成的DataKey进行本地数据的加解密操作
+ * @method Models\EncryptByWhiteBoxResponse EncryptByWhiteBox(Models\EncryptByWhiteBoxRequest $req) 使用白盒密钥进行加密
  * @method Models\GenerateDataKeyResponse GenerateDataKey(Models\GenerateDataKeyRequest $req) 本接口生成一个数据密钥，您可以用这个密钥进行本地数据的加密。
  * @method Models\GenerateRandomResponse GenerateRandom(Models\GenerateRandomRequest $req) 随机数生成接口。
  * @method Models\GetKeyRotationStatusResponse GetKeyRotationStatus(Models\GetKeyRotationStatusRequest $req) 查询指定的CMK是否开启了密钥轮换功能。

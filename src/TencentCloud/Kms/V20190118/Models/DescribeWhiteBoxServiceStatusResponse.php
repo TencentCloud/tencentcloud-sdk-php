@@ -14,23 +14,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyPullStreamConfig返回参数结构体
+ * DescribeWhiteBoxServiceStatus返回参数结构体
  *
+ * @method boolean getServiceEnabled() 获取用户的白盒密钥服务是否可用
+ * @method void setServiceEnabled(boolean $ServiceEnabled) 设置用户的白盒密钥服务是否可用
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyPullStreamConfigResponse extends AbstractModel
+class DescribeWhiteBoxServiceStatusResponse extends AbstractModel
 {
+    /**
+     * @var boolean 用户的白盒密钥服务是否可用
+     */
+    public $ServiceEnabled;
+
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param boolean $ServiceEnabled 用户的白盒密钥服务是否可用
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,10 @@ class ModifyPullStreamConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ServiceEnabled",$param) and $param["ServiceEnabled"] !== null) {
+            $this->ServiceEnabled = $param["ServiceEnabled"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

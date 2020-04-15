@@ -14,23 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribePullStreamConfigs返回参数结构体
+ * CreateWhiteBoxKey返回参数结构体
  *
- * @method array getPullStreamConfigs() 获取拉流配置。
- * @method void setPullStreamConfigs(array $PullStreamConfigs) 设置拉流配置。
+ * @method string getEncryptKey() 获取用于加密的密钥，base64编码
+ * @method void setEncryptKey(string $EncryptKey) 设置用于加密的密钥，base64编码
+ * @method string getDecryptKey() 获取用于解密的密钥，base64编码
+ * @method void setDecryptKey(string $DecryptKey) 设置用于解密的密钥，base64编码
+ * @method string getKeyId() 获取白盒密钥的全局唯一标识符
+ * @method void setKeyId(string $KeyId) 设置白盒密钥的全局唯一标识符
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribePullStreamConfigsResponse extends AbstractModel
+class CreateWhiteBoxKeyResponse extends AbstractModel
 {
     /**
-     * @var array 拉流配置。
+     * @var string 用于加密的密钥，base64编码
      */
-    public $PullStreamConfigs;
+    public $EncryptKey;
+
+    /**
+     * @var string 用于解密的密钥，base64编码
+     */
+    public $DecryptKey;
+
+    /**
+     * @var string 白盒密钥的全局唯一标识符
+     */
+    public $KeyId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +52,9 @@ class DescribePullStreamConfigsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $PullStreamConfigs 拉流配置。
+     * @param string $EncryptKey 用于加密的密钥，base64编码
+     * @param string $DecryptKey 用于解密的密钥，base64编码
+     * @param string $KeyId 白盒密钥的全局唯一标识符
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +70,16 @@ class DescribePullStreamConfigsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PullStreamConfigs",$param) and $param["PullStreamConfigs"] !== null) {
-            $this->PullStreamConfigs = [];
-            foreach ($param["PullStreamConfigs"] as $key => $value){
-                $obj = new PullStreamConfig();
-                $obj->deserialize($value);
-                array_push($this->PullStreamConfigs, $obj);
-            }
+        if (array_key_exists("EncryptKey",$param) and $param["EncryptKey"] !== null) {
+            $this->EncryptKey = $param["EncryptKey"];
+        }
+
+        if (array_key_exists("DecryptKey",$param) and $param["DecryptKey"] !== null) {
+            $this->DecryptKey = $param["DecryptKey"];
+        }
+
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

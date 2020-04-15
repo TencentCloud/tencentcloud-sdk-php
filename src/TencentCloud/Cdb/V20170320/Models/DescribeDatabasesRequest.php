@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，最小值为0。
  * @method integer getLimit() 获取单次请求数量，默认值为20，最小值为1，最大值为100。
  * @method void setLimit(integer $Limit) 设置单次请求数量，默认值为20，最小值为1，最大值为100。
- * @method string getDatabaseRegexp() 获取匹配数据库库名的正则表达式，规则同 MySQL 官网
- * @method void setDatabaseRegexp(string $DatabaseRegexp) 设置匹配数据库库名的正则表达式，规则同 MySQL 官网
+ * @method string getDatabaseRegexp() 获取匹配数据库库名的正则表达式。
+ * @method void setDatabaseRegexp(string $DatabaseRegexp) 设置匹配数据库库名的正则表达式。
  */
 class DescribeDatabasesRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeDatabasesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 匹配数据库库名的正则表达式，规则同 MySQL 官网
+     * @var string 匹配数据库库名的正则表达式。
      */
     public $DatabaseRegexp;
 
@@ -55,7 +55,7 @@ class DescribeDatabasesRequest extends AbstractModel
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param integer $Offset 偏移量，最小值为0。
      * @param integer $Limit 单次请求数量，默认值为20，最小值为1，最大值为100。
-     * @param string $DatabaseRegexp 匹配数据库库名的正则表达式，规则同 MySQL 官网
+     * @param string $DatabaseRegexp 匹配数据库库名的正则表达式。
      */
     function __construct()
     {

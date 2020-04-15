@@ -110,6 +110,10 @@ REJECTED:拒绝
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcName(string $VpcName) 设置VPC名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTencentBackupAddress() 获取TencentBackupAddress，腾讯侧备用互联 IP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTencentBackupAddress(string $TencentBackupAddress) 设置TencentBackupAddress，腾讯侧备用互联 IP
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DirectConnectTunnel extends AbstractModel
 {
@@ -267,6 +271,12 @@ REJECTED:拒绝
     public $VpcName;
 
     /**
+     * @var string TencentBackupAddress，腾讯侧备用互联 IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TencentBackupAddress;
+
+    /**
      * @param string $DirectConnectTunnelId 专用通道ID
      * @param string $DirectConnectId 物理专线ID
      * @param string $State 专用通道状态
@@ -311,6 +321,8 @@ REJECTED:拒绝
      * @param string $DirectConnectGatewayName 专线网关名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcName VPC名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TencentBackupAddress TencentBackupAddress，腾讯侧备用互联 IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -443,6 +455,10 @@ REJECTED:拒绝
 
         if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
             $this->VpcName = $param["VpcName"];
+        }
+
+        if (array_key_exists("TencentBackupAddress",$param) and $param["TencentBackupAddress"] !== null) {
+            $this->TencentBackupAddress = $param["TencentBackupAddress"];
         }
     }
 }

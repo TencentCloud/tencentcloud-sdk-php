@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInsertTime(integer $InsertTime) 设置插入时间，戳格式为Unix时间戳，不填则按后台处理时间填充
  * @method array getConditions() 获取策略组中的阈值告警规则
  * @method void setConditions(array $Conditions) 设置策略组中的阈值告警规则
- * @method array getEventConditions() 获取策略组中的时间告警规则
- * @method void setEventConditions(array $EventConditions) 设置策略组中的时间告警规则
+ * @method array getEventConditions() 获取策略组中的事件告警规则
+ * @method void setEventConditions(array $EventConditions) 设置策略组中的事件告警规则
  * @method integer getBackEndCall() 获取是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
  * @method void setBackEndCall(integer $BackEndCall) 设置是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
  * @method integer getIsUnionRule() 获取指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
@@ -93,7 +93,7 @@ class CreatePolicyGroupRequest extends AbstractModel
     public $Conditions;
 
     /**
-     * @var array 策略组中的时间告警规则
+     * @var array 策略组中的事件告警规则
      */
     public $EventConditions;
 
@@ -117,7 +117,7 @@ class CreatePolicyGroupRequest extends AbstractModel
      * @param string $Remark 策略组的备注信息
      * @param integer $InsertTime 插入时间，戳格式为Unix时间戳，不填则按后台处理时间填充
      * @param array $Conditions 策略组中的阈值告警规则
-     * @param array $EventConditions 策略组中的时间告警规则
+     * @param array $EventConditions 策略组中的事件告警规则
      * @param integer $BackEndCall 是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
      * @param integer $IsUnionRule 指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
      */

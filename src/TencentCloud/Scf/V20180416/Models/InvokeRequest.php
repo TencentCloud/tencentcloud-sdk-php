@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogType(string $LogType) 设置同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志
  * @method string getNamespace() 获取命名空间
  * @method void setNamespace(string $Namespace) 设置命名空间
+ * @method string getRoutingKey() 获取函数灰度流量控制调用，以json格式传入，例如{"k":"v"}，注意kv都需要是字符串类型，最大支持的参数长度是1024字节
+ * @method void setRoutingKey(string $RoutingKey) 设置函数灰度流量控制调用，以json格式传入，例如{"k":"v"}，注意kv都需要是字符串类型，最大支持的参数长度是1024字节
  */
 class InvokeRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class InvokeRequest extends AbstractModel
     public $Namespace;
 
     /**
+     * @var string 函数灰度流量控制调用，以json格式传入，例如{"k":"v"}，注意kv都需要是字符串类型，最大支持的参数长度是1024字节
+     */
+    public $RoutingKey;
+
+    /**
      * @param string $FunctionName 函数名称
      * @param string $InvocationType RequestResponse(同步) 和 Event(异步)，默认为同步
      * @param string $Qualifier 触发函数的版本号
      * @param string $ClientContext 运行函数时的参数，以json格式传入，最大支持的参数长度是 1M
      * @param string $LogType 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志
      * @param string $Namespace 命名空间
+     * @param string $RoutingKey 函数灰度流量控制调用，以json格式传入，例如{"k":"v"}，注意kv都需要是字符串类型，最大支持的参数长度是1024字节
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class InvokeRequest extends AbstractModel
 
         if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
             $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("RoutingKey",$param) and $param["RoutingKey"] !== null) {
+            $this->RoutingKey = $param["RoutingKey"];
         }
     }
 }

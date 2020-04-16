@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * CreateDCDBInstance请求参数结构体
  *
  * @method array getZones() 获取分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
  * @method void setZones(array $Zones) 设置分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
  * @method integer getPeriod() 获取欲购买的时长，单位：月。
  * @method void setPeriod(integer $Period) 设置欲购买的时长，单位：月。
  * @method integer getShardMemory() 获取分片内存大小，单位：GB，可以通过 DescribeShardSpec
@@ -69,6 +71,7 @@ class CreateDCDBInstanceRequest extends AbstractModel
 {
     /**
      * @var array 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
      */
     public $Zones;
 
@@ -151,6 +154,7 @@ class CreateDCDBInstanceRequest extends AbstractModel
 
     /**
      * @param array $Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
      * @param integer $Period 欲购买的时长，单位：月。
      * @param integer $ShardMemory 分片内存大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。

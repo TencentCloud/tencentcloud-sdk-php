@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ExecuteFunction返回参数结构体
+ * DeletePullStreamConfig返回参数结构体
  *
- * @method string getResult() 获取处理结果打包后的字符串，具体与后台一同协调。
- * @method void setResult(string $Result) 设置处理结果打包后的字符串，具体与后台一同协调。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ExecuteFunctionResponse extends AbstractModel
+class DeletePullStreamConfigResponse extends AbstractModel
 {
-    /**
-     * @var string 处理结果打包后的字符串，具体与后台一同协调。
-     */
-    public $Result;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $Result 处理结果打包后的字符串，具体与后台一同协调。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,10 +46,6 @@ class ExecuteFunctionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

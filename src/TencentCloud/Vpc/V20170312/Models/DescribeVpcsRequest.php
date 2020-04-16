@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
 <li>cidr-block - String - （过滤条件）vpc的cidr。</li>
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
- * @method string getOffset() 获取偏移量
- * @method void setOffset(string $Offset) 设置偏移量
- * @method string getLimit() 获取返回数量
- * @method void setLimit(string $Limit) 设置返回数量
+ * @method string getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(string $Offset) 设置偏移量，默认为0。
+ * @method string getLimit() 获取返回数量，默认为20，最大值为100。
+ * @method void setLimit(string $Limit) 设置返回数量，默认为20，最大值为100。
  */
 class DescribeVpcsRequest extends AbstractModel
 {
@@ -60,12 +60,12 @@ class DescribeVpcsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 偏移量
+     * @var string 偏移量，默认为0。
      */
     public $Offset;
 
     /**
-     * @var string 返回数量
+     * @var string 返回数量，默认为20，最大值为100。
      */
     public $Limit;
 
@@ -78,8 +78,8 @@ class DescribeVpcsRequest extends AbstractModel
 <li>cidr-block - String - （过滤条件）vpc的cidr。</li>
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
-     * @param string $Offset 偏移量
-     * @param string $Limit 返回数量
+     * @param string $Offset 偏移量，默认为0。
+     * @param string $Limit 返回数量，默认为20，最大值为100。
      */
     function __construct()
     {

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCluster返回参数结构体
  *
- * @method boolean getResult() 获取创建集群操作是否成功。
+ * @method string getResult() 获取创建集群操作是否成功。
 true：操作成功。
 false：操作失败。
- * @method void setResult(boolean $Result) 设置创建集群操作是否成功。
+ * @method void setResult(string $Result) 设置创建集群操作是否成功。
 true：操作成功。
 false：操作失败。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,7 +32,7 @@ false：操作失败。
 class CreateClusterResponse extends AbstractModel
 {
     /**
-     * @var boolean 创建集群操作是否成功。
+     * @var string 创建集群操作是否成功。
 true：操作成功。
 false：操作失败。
      */
@@ -44,7 +44,7 @@ false：操作失败。
     public $RequestId;
 
     /**
-     * @param boolean $Result 创建集群操作是否成功。
+     * @param string $Result 创建集群操作是否成功。
 true：操作成功。
 false：操作失败。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

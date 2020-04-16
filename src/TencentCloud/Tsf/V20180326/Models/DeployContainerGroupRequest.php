@@ -30,16 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceNum(integer $InstanceNum) 设置实例数量
  * @method string getReponame() 获取旧版镜像名，如/tsf/nginx
  * @method void setReponame(string $Reponame) 设置旧版镜像名，如/tsf/nginx
- * @method string getCpuLimit() 获取最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
- * @method void setCpuLimit(string $CpuLimit) 设置最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
- * @method string getMemLimit() 获取最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
- * @method void setMemLimit(string $MemLimit) 设置最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+ * @method string getCpuLimit() 获取业务容器最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+ * @method void setCpuLimit(string $CpuLimit) 设置业务容器最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+ * @method string getMemLimit() 获取业务容器最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+ * @method void setMemLimit(string $MemLimit) 设置业务容器最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
  * @method string getJvmOpts() 获取jvm参数
  * @method void setJvmOpts(string $JvmOpts) 设置jvm参数
- * @method string getCpuRequest() 获取分配的 CPU 核数，对应 K8S 的 request
- * @method void setCpuRequest(string $CpuRequest) 设置分配的 CPU 核数，对应 K8S 的 request
- * @method string getMemRequest() 获取分配的内存 MiB 数，对应 K8S 的 request
- * @method void setMemRequest(string $MemRequest) 设置分配的内存 MiB 数，对应 K8S 的 request
+ * @method string getCpuRequest() 获取业务容器分配的 CPU 核数，对应 K8S 的 request
+ * @method void setCpuRequest(string $CpuRequest) 设置业务容器分配的 CPU 核数，对应 K8S 的 request
+ * @method string getMemRequest() 获取业务容器分配的内存 MiB 数，对应 K8S 的 request
+ * @method void setMemRequest(string $MemRequest) 设置业务容器分配的内存 MiB 数，对应 K8S 的 request
  * @method boolean getDoNotStart() 获取是否不立即启动
  * @method void setDoNotStart(boolean $DoNotStart) 设置是否不立即启动
  * @method string getRepoName() 获取（优先使用）新版镜像名，如/tsf/nginx
@@ -48,6 +48,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateType(integer $UpdateType) 设置更新方式：0:快速更新 1:滚动更新
  * @method integer getUpdateIvl() 获取滚动更新必填，更新间隔
  * @method void setUpdateIvl(integer $UpdateIvl) 设置滚动更新必填，更新间隔
+ * @method string getAgentCpuRequest() 获取agent 容器分配的 CPU 核数，对应 K8S 的 request
+ * @method void setAgentCpuRequest(string $AgentCpuRequest) 设置agent 容器分配的 CPU 核数，对应 K8S 的 request
+ * @method string getAgentCpuLimit() 获取agent 容器最大的 CPU 核数，对应 K8S 的 limit
+ * @method void setAgentCpuLimit(string $AgentCpuLimit) 设置agent 容器最大的 CPU 核数，对应 K8S 的 limit
+ * @method string getAgentMemRequest() 获取agent 容器分配的内存 MiB 数，对应 K8S 的 request
+ * @method void setAgentMemRequest(string $AgentMemRequest) 设置agent 容器分配的内存 MiB 数，对应 K8S 的 request
+ * @method string getAgentMemLimit() 获取agent 容器最大的内存 MiB 数，对应 K8S 的 limit
+ * @method void setAgentMemLimit(string $AgentMemLimit) 设置agent 容器最大的内存 MiB 数，对应 K8S 的 limit
+ * @method string getIstioCpuRequest() 获取istioproxy 容器分配的 CPU 核数，对应 K8S 的 request
+ * @method void setIstioCpuRequest(string $IstioCpuRequest) 设置istioproxy 容器分配的 CPU 核数，对应 K8S 的 request
+ * @method string getIstioCpuLimit() 获取istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit
+ * @method void setIstioCpuLimit(string $IstioCpuLimit) 设置istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit
+ * @method string getIstioMemRequest() 获取istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
+ * @method void setIstioMemRequest(string $IstioMemRequest) 设置istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
+ * @method string getIstioMemLimit() 获取istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
+ * @method void setIstioMemLimit(string $IstioMemLimit) 设置istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
  */
 class DeployContainerGroupRequest extends AbstractModel
 {
@@ -77,12 +93,12 @@ class DeployContainerGroupRequest extends AbstractModel
     public $Reponame;
 
     /**
-     * @var string 最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+     * @var string 业务容器最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
      */
     public $CpuLimit;
 
     /**
-     * @var string 最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+     * @var string 业务容器最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
      */
     public $MemLimit;
 
@@ -92,12 +108,12 @@ class DeployContainerGroupRequest extends AbstractModel
     public $JvmOpts;
 
     /**
-     * @var string 分配的 CPU 核数，对应 K8S 的 request
+     * @var string 业务容器分配的 CPU 核数，对应 K8S 的 request
      */
     public $CpuRequest;
 
     /**
-     * @var string 分配的内存 MiB 数，对应 K8S 的 request
+     * @var string 业务容器分配的内存 MiB 数，对应 K8S 的 request
      */
     public $MemRequest;
 
@@ -122,20 +138,68 @@ class DeployContainerGroupRequest extends AbstractModel
     public $UpdateIvl;
 
     /**
+     * @var string agent 容器分配的 CPU 核数，对应 K8S 的 request
+     */
+    public $AgentCpuRequest;
+
+    /**
+     * @var string agent 容器最大的 CPU 核数，对应 K8S 的 limit
+     */
+    public $AgentCpuLimit;
+
+    /**
+     * @var string agent 容器分配的内存 MiB 数，对应 K8S 的 request
+     */
+    public $AgentMemRequest;
+
+    /**
+     * @var string agent 容器最大的内存 MiB 数，对应 K8S 的 limit
+     */
+    public $AgentMemLimit;
+
+    /**
+     * @var string istioproxy 容器分配的 CPU 核数，对应 K8S 的 request
+     */
+    public $IstioCpuRequest;
+
+    /**
+     * @var string istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit
+     */
+    public $IstioCpuLimit;
+
+    /**
+     * @var string istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
+     */
+    public $IstioMemRequest;
+
+    /**
+     * @var string istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
+     */
+    public $IstioMemLimit;
+
+    /**
      * @param string $GroupId 部署组ID，分组唯一标识
      * @param string $Server 镜像server
      * @param string $TagName 镜像版本名称,如v1
      * @param integer $InstanceNum 实例数量
      * @param string $Reponame 旧版镜像名，如/tsf/nginx
-     * @param string $CpuLimit 最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
-     * @param string $MemLimit 最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+     * @param string $CpuLimit 业务容器最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+     * @param string $MemLimit 业务容器最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
      * @param string $JvmOpts jvm参数
-     * @param string $CpuRequest 分配的 CPU 核数，对应 K8S 的 request
-     * @param string $MemRequest 分配的内存 MiB 数，对应 K8S 的 request
+     * @param string $CpuRequest 业务容器分配的 CPU 核数，对应 K8S 的 request
+     * @param string $MemRequest 业务容器分配的内存 MiB 数，对应 K8S 的 request
      * @param boolean $DoNotStart 是否不立即启动
      * @param string $RepoName （优先使用）新版镜像名，如/tsf/nginx
      * @param integer $UpdateType 更新方式：0:快速更新 1:滚动更新
      * @param integer $UpdateIvl 滚动更新必填，更新间隔
+     * @param string $AgentCpuRequest agent 容器分配的 CPU 核数，对应 K8S 的 request
+     * @param string $AgentCpuLimit agent 容器最大的 CPU 核数，对应 K8S 的 limit
+     * @param string $AgentMemRequest agent 容器分配的内存 MiB 数，对应 K8S 的 request
+     * @param string $AgentMemLimit agent 容器最大的内存 MiB 数，对应 K8S 的 limit
+     * @param string $IstioCpuRequest istioproxy 容器分配的 CPU 核数，对应 K8S 的 request
+     * @param string $IstioCpuLimit istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit
+     * @param string $IstioMemRequest istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
+     * @param string $IstioMemLimit istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
      */
     function __construct()
     {
@@ -204,6 +268,38 @@ class DeployContainerGroupRequest extends AbstractModel
 
         if (array_key_exists("UpdateIvl",$param) and $param["UpdateIvl"] !== null) {
             $this->UpdateIvl = $param["UpdateIvl"];
+        }
+
+        if (array_key_exists("AgentCpuRequest",$param) and $param["AgentCpuRequest"] !== null) {
+            $this->AgentCpuRequest = $param["AgentCpuRequest"];
+        }
+
+        if (array_key_exists("AgentCpuLimit",$param) and $param["AgentCpuLimit"] !== null) {
+            $this->AgentCpuLimit = $param["AgentCpuLimit"];
+        }
+
+        if (array_key_exists("AgentMemRequest",$param) and $param["AgentMemRequest"] !== null) {
+            $this->AgentMemRequest = $param["AgentMemRequest"];
+        }
+
+        if (array_key_exists("AgentMemLimit",$param) and $param["AgentMemLimit"] !== null) {
+            $this->AgentMemLimit = $param["AgentMemLimit"];
+        }
+
+        if (array_key_exists("IstioCpuRequest",$param) and $param["IstioCpuRequest"] !== null) {
+            $this->IstioCpuRequest = $param["IstioCpuRequest"];
+        }
+
+        if (array_key_exists("IstioCpuLimit",$param) and $param["IstioCpuLimit"] !== null) {
+            $this->IstioCpuLimit = $param["IstioCpuLimit"];
+        }
+
+        if (array_key_exists("IstioMemRequest",$param) and $param["IstioMemRequest"] !== null) {
+            $this->IstioMemRequest = $param["IstioMemRequest"];
+        }
+
+        if (array_key_exists("IstioMemLimit",$param) and $param["IstioMemLimit"] !== null) {
+            $this->IstioMemLimit = $param["IstioMemLimit"];
         }
     }
 }

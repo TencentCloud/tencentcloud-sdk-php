@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyDocument(string $PolicyDocument) 设置策略文档
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPresetAlias() 获取备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPresetAlias(string $PresetAlias) 设置备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsServiceLinkedRolePolicy() 获取是否服务相关策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsServiceLinkedRolePolicy(integer $IsServiceLinkedRolePolicy) 设置是否服务相关策略
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -86,6 +94,18 @@ class GetPolicyResponse extends AbstractModel
     public $PolicyDocument;
 
     /**
+     * @var string 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PresetAlias;
+
+    /**
+     * @var integer 是否服务相关策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsServiceLinkedRolePolicy;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -102,6 +122,10 @@ class GetPolicyResponse extends AbstractModel
      * @param string $UpdateTime 最近更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyDocument 策略文档
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PresetAlias 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsServiceLinkedRolePolicy 是否服务相关策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -140,6 +164,14 @@ class GetPolicyResponse extends AbstractModel
 
         if (array_key_exists("PolicyDocument",$param) and $param["PolicyDocument"] !== null) {
             $this->PolicyDocument = $param["PolicyDocument"];
+        }
+
+        if (array_key_exists("PresetAlias",$param) and $param["PresetAlias"] !== null) {
+            $this->PresetAlias = $param["PresetAlias"];
+        }
+
+        if (array_key_exists("IsServiceLinkedRolePolicy",$param) and $param["IsServiceLinkedRolePolicy"] !== null) {
+            $this->IsServiceLinkedRolePolicy = $param["IsServiceLinkedRolePolicy"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

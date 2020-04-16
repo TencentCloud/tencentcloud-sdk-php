@@ -57,6 +57,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\ListAttachedGroupPoliciesResponse ListAttachedGroupPolicies(Models\ListAttachedGroupPoliciesRequest $req) 本接口（ListAttachedGroupPolicies）可用于查询用户组关联的策略列表。
  * @method Models\ListAttachedRolePoliciesResponse ListAttachedRolePolicies(Models\ListAttachedRolePoliciesRequest $req) 本接口（ListAttachedRolePolicies）用于获取角色绑定的策略列表。
  * @method Models\ListAttachedUserPoliciesResponse ListAttachedUserPolicies(Models\ListAttachedUserPoliciesRequest $req) 本接口（ListAttachedUserPolicies）可用于查询子账号关联的策略列表。
+ * @method Models\ListCollaboratorsResponse ListCollaborators(Models\ListCollaboratorsRequest $req) 获取协作者列表
  * @method Models\ListEntitiesForPolicyResponse ListEntitiesForPolicy(Models\ListEntitiesForPolicyRequest $req) 本接口（ListEntitiesForPolicy）可用于查询策略关联的实体列表。
  * @method Models\ListGroupsResponse ListGroups(Models\ListGroupsRequest $req) 查询用户组列表
  * @method Models\ListGroupsForUserResponse ListGroupsForUser(Models\ListGroupsForUserRequest $req) 列出用户关联的用户组
@@ -68,6 +69,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\SetFlagResponse SetFlag(Models\SetFlagRequest $req) 设置用户的登录保护和敏感操作校验方式
  * @method Models\UpdateAssumeRolePolicyResponse UpdateAssumeRolePolicy(Models\UpdateAssumeRolePolicyRequest $req) 本接口（UpdateAssumeRolePolicy）用于修改角色信任策略的策略文档。
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) 更新用户组
+ * @method Models\UpdateRoleConsoleLoginResponse UpdateRoleConsoleLogin(Models\UpdateRoleConsoleLoginRequest $req) 本接口（UpdateRoleConsoleLogin）用于修改角色是否可登录。
  * @method Models\UpdateRoleDescriptionResponse UpdateRoleDescription(Models\UpdateRoleDescriptionRequest $req) 本接口（UpdateRoleDescription）用于修改角色的描述信息。
  * @method Models\UpdateSAMLProviderResponse UpdateSAMLProvider(Models\UpdateSAMLProviderRequest $req) 更新SAML身份提供商信息
  * @method Models\UpdateUserResponse UpdateUser(Models\UpdateUserRequest $req) 更新子用户

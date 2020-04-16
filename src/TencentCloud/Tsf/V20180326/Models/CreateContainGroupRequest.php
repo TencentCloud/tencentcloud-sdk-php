@@ -48,6 +48,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuRequest(string $CpuRequest) 设置初始分配的 CPU 核数，对应 K8S request
  * @method string getMemRequest() 获取初始分配的内存 MiB 数，对应 K8S request
  * @method void setMemRequest(string $MemRequest) 设置初始分配的内存 MiB 数，对应 K8S request
+ * @method string getGroupResourceType() 获取部署组资源类型
+ * @method void setGroupResourceType(string $GroupResourceType) 设置部署组资源类型
+ * @method string getSubnetId() 获取子网ID
+ * @method void setSubnetId(string $SubnetId) 设置子网ID
+ * @method string getAgentCpuRequest() 获取agent 容器分配的 CPU 核数，对应 K8S 的 request
+ * @method void setAgentCpuRequest(string $AgentCpuRequest) 设置agent 容器分配的 CPU 核数，对应 K8S 的 request
+ * @method string getAgentCpuLimit() 获取agent 容器最大的 CPU 核数，对应 K8S 的 limit
+ * @method void setAgentCpuLimit(string $AgentCpuLimit) 设置agent 容器最大的 CPU 核数，对应 K8S 的 limit
+ * @method string getAgentMemRequest() 获取agent 容器分配的内存 MiB 数，对应 K8S 的 request
+ * @method void setAgentMemRequest(string $AgentMemRequest) 设置agent 容器分配的内存 MiB 数，对应 K8S 的 request
+ * @method string getAgentMemLimit() 获取agent 容器最大的内存 MiB 数，对应 K8S 的 limit
+ * @method void setAgentMemLimit(string $AgentMemLimit) 设置agent 容器最大的内存 MiB 数，对应 K8S 的 limit
+ * @method string getIstioCpuRequest() 获取istioproxy 容器分配的 CPU 核数，对应 K8S 的 request
+ * @method void setIstioCpuRequest(string $IstioCpuRequest) 设置istioproxy 容器分配的 CPU 核数，对应 K8S 的 request
+ * @method string getIstioCpuLimit() 获取istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit
+ * @method void setIstioCpuLimit(string $IstioCpuLimit) 设置istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit
+ * @method string getIstioMemRequest() 获取istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
+ * @method void setIstioMemRequest(string $IstioMemRequest) 设置istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
+ * @method string getIstioMemLimit() 获取istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
+ * @method void setIstioMemLimit(string $IstioMemLimit) 设置istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
  */
 class CreateContainGroupRequest extends AbstractModel
 {
@@ -122,6 +142,56 @@ class CreateContainGroupRequest extends AbstractModel
     public $MemRequest;
 
     /**
+     * @var string 部署组资源类型
+     */
+    public $GroupResourceType;
+
+    /**
+     * @var string 子网ID
+     */
+    public $SubnetId;
+
+    /**
+     * @var string agent 容器分配的 CPU 核数，对应 K8S 的 request
+     */
+    public $AgentCpuRequest;
+
+    /**
+     * @var string agent 容器最大的 CPU 核数，对应 K8S 的 limit
+     */
+    public $AgentCpuLimit;
+
+    /**
+     * @var string agent 容器分配的内存 MiB 数，对应 K8S 的 request
+     */
+    public $AgentMemRequest;
+
+    /**
+     * @var string agent 容器最大的内存 MiB 数，对应 K8S 的 limit
+     */
+    public $AgentMemLimit;
+
+    /**
+     * @var string istioproxy 容器分配的 CPU 核数，对应 K8S 的 request
+     */
+    public $IstioCpuRequest;
+
+    /**
+     * @var string istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit
+     */
+    public $IstioCpuLimit;
+
+    /**
+     * @var string istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
+     */
+    public $IstioMemRequest;
+
+    /**
+     * @var string istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
+     */
+    public $IstioMemLimit;
+
+    /**
      * @param string $ApplicationId 分组所属应用ID
      * @param string $NamespaceId 分组所属命名空间ID
      * @param string $GroupName 分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
@@ -136,6 +206,16 @@ class CreateContainGroupRequest extends AbstractModel
      * @param integer $UpdateIvl 滚动更新必填，更新间隔
      * @param string $CpuRequest 初始分配的 CPU 核数，对应 K8S request
      * @param string $MemRequest 初始分配的内存 MiB 数，对应 K8S request
+     * @param string $GroupResourceType 部署组资源类型
+     * @param string $SubnetId 子网ID
+     * @param string $AgentCpuRequest agent 容器分配的 CPU 核数，对应 K8S 的 request
+     * @param string $AgentCpuLimit agent 容器最大的 CPU 核数，对应 K8S 的 limit
+     * @param string $AgentMemRequest agent 容器分配的内存 MiB 数，对应 K8S 的 request
+     * @param string $AgentMemLimit agent 容器最大的内存 MiB 数，对应 K8S 的 limit
+     * @param string $IstioCpuRequest istioproxy 容器分配的 CPU 核数，对应 K8S 的 request
+     * @param string $IstioCpuLimit istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit
+     * @param string $IstioMemRequest istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
+     * @param string $IstioMemLimit istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
      */
     function __construct()
     {
@@ -209,6 +289,46 @@ class CreateContainGroupRequest extends AbstractModel
 
         if (array_key_exists("MemRequest",$param) and $param["MemRequest"] !== null) {
             $this->MemRequest = $param["MemRequest"];
+        }
+
+        if (array_key_exists("GroupResourceType",$param) and $param["GroupResourceType"] !== null) {
+            $this->GroupResourceType = $param["GroupResourceType"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("AgentCpuRequest",$param) and $param["AgentCpuRequest"] !== null) {
+            $this->AgentCpuRequest = $param["AgentCpuRequest"];
+        }
+
+        if (array_key_exists("AgentCpuLimit",$param) and $param["AgentCpuLimit"] !== null) {
+            $this->AgentCpuLimit = $param["AgentCpuLimit"];
+        }
+
+        if (array_key_exists("AgentMemRequest",$param) and $param["AgentMemRequest"] !== null) {
+            $this->AgentMemRequest = $param["AgentMemRequest"];
+        }
+
+        if (array_key_exists("AgentMemLimit",$param) and $param["AgentMemLimit"] !== null) {
+            $this->AgentMemLimit = $param["AgentMemLimit"];
+        }
+
+        if (array_key_exists("IstioCpuRequest",$param) and $param["IstioCpuRequest"] !== null) {
+            $this->IstioCpuRequest = $param["IstioCpuRequest"];
+        }
+
+        if (array_key_exists("IstioCpuLimit",$param) and $param["IstioCpuLimit"] !== null) {
+            $this->IstioCpuLimit = $param["IstioCpuLimit"];
+        }
+
+        if (array_key_exists("IstioMemRequest",$param) and $param["IstioMemRequest"] !== null) {
+            $this->IstioMemRequest = $param["IstioMemRequest"];
+        }
+
+        if (array_key_exists("IstioMemLimit",$param) and $param["IstioMemLimit"] !== null) {
+            $this->IstioMemLimit = $param["IstioMemLimit"];
         }
     }
 }

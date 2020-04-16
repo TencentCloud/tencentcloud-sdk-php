@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ExecuteFunction返回参数结构体
+ * DescribePullStreamConfigs返回参数结构体
  *
- * @method string getResult() 获取处理结果打包后的字符串，具体与后台一同协调。
- * @method void setResult(string $Result) 设置处理结果打包后的字符串，具体与后台一同协调。
+ * @method array getPullStreamConfigs() 获取拉流配置。
+ * @method void setPullStreamConfigs(array $PullStreamConfigs) 设置拉流配置。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ExecuteFunctionResponse extends AbstractModel
+class DescribePullStreamConfigsResponse extends AbstractModel
 {
     /**
-     * @var string 处理结果打包后的字符串，具体与后台一同协调。
+     * @var array 拉流配置。
      */
-    public $Result;
+    public $PullStreamConfigs;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class ExecuteFunctionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result 处理结果打包后的字符串，具体与后台一同协调。
+     * @param array $PullStreamConfigs 拉流配置。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,13 @@ class ExecuteFunctionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("PullStreamConfigs",$param) and $param["PullStreamConfigs"] !== null) {
+            $this->PullStreamConfigs = [];
+            foreach ($param["PullStreamConfigs"] as $key => $value){
+                $obj = new PullStreamConfig();
+                $obj->deserialize($value);
+                array_push($this->PullStreamConfigs, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

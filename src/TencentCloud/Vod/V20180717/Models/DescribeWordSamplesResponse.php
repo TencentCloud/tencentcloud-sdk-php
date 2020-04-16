@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeWordSamples返回参数结构体
  *
  * @method integer getTotalCount() 获取符合条件的记录总数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的记录总数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWordSet() 获取关键词信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWordSet(array $WordSet) 设置关键词信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class DescribeWordSamplesResponse extends AbstractModel
 {
     /**
      * @var integer 符合条件的记录总数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 关键词信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WordSet;
 
@@ -52,9 +46,7 @@ class DescribeWordSamplesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 符合条件的记录总数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WordSet 关键词信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

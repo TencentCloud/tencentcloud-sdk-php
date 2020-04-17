@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTextDetections(array $TextDetections) 设置检测到的文本信息，具体内容请点击左侧链接。
  * @method string getLanguage() 获取检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
  * @method void setLanguage(string $Language) 设置检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
+ * @method float getAngel() 获取图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+ * @method void setAngel(float $Angel) 设置图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class GeneralBasicOCRResponse extends AbstractModel
     public $Language;
 
     /**
+     * @var float 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+     */
+    public $Angel;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class GeneralBasicOCRResponse extends AbstractModel
     /**
      * @param array $TextDetections 检测到的文本信息，具体内容请点击左侧链接。
      * @param string $Language 检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
+     * @param float $Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,10 @@ class GeneralBasicOCRResponse extends AbstractModel
 
         if (array_key_exists("Language",$param) and $param["Language"] !== null) {
             $this->Language = $param["Language"];
+        }
+
+        if (array_key_exists("Angel",$param) and $param["Angel"] !== null) {
+            $this->Angel = $param["Angel"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

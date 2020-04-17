@@ -40,6 +40,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\DeleteRoleResponse DeleteRole(Models\DeleteRoleRequest $req) 本接口（DeleteRole）用于删除指定角色。
  * @method Models\DeleteSAMLProviderResponse DeleteSAMLProvider(Models\DeleteSAMLProviderRequest $req) 删除SAML身份提供商
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除子用户
+ * @method Models\DescribeMFADeviceCollResponse DescribeMFADeviceColl(Models\DescribeMFADeviceCollRequest $req) 查询mfa设备
  * @method Models\DescribeMfaCodeStatusResponse DescribeMfaCodeStatus(Models\DescribeMfaCodeStatusRequest $req) 查询微信code状态
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) 本接口（DescribeRoleList）用于获取账号下的角色列表。
  * @method Models\DetachGroupPolicyResponse DetachGroupPolicy(Models\DetachGroupPolicyRequest $req) 本接口（DetachGroupPolicy）可用于解除绑定到用户组的策略。

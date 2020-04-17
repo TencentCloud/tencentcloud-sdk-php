@@ -66,6 +66,8 @@ STATIC：静态
  * @method void setTencentAddress(string $TencentAddress) 设置TencentAddress，腾讯侧互联 IP
  * @method string getCustomerAddress() 获取CustomerAddress，用户侧互联 IP
  * @method void setCustomerAddress(string $CustomerAddress) 设置CustomerAddress，用户侧互联 IP
+ * @method string getTencentBackupAddress() 获取TencentBackupAddress，腾讯侧备用互联 IP
+ * @method void setTencentBackupAddress(string $TencentBackupAddress) 设置TencentBackupAddress，腾讯侧备用互联 IP
  */
 class CreateDirectConnectTunnelRequest extends AbstractModel
 {
@@ -149,6 +151,11 @@ STATIC：静态
     public $CustomerAddress;
 
     /**
+     * @var string TencentBackupAddress，腾讯侧备用互联 IP
+     */
+    public $TencentBackupAddress;
+
+    /**
      * @param string $DirectConnectId 专线 ID，例如：dc-kd7d06of
      * @param string $DirectConnectTunnelName 专用通道名称
      * @param string $DirectConnectOwnerAccount 物理专线 owner，缺省为当前客户（物理专线 owner）
@@ -172,6 +179,7 @@ STATIC：静态
 默认值是非0
      * @param string $TencentAddress TencentAddress，腾讯侧互联 IP
      * @param string $CustomerAddress CustomerAddress，用户侧互联 IP
+     * @param string $TencentBackupAddress TencentBackupAddress，腾讯侧备用互联 IP
      */
     function __construct()
     {
@@ -246,6 +254,10 @@ STATIC：静态
 
         if (array_key_exists("CustomerAddress",$param) and $param["CustomerAddress"] !== null) {
             $this->CustomerAddress = $param["CustomerAddress"];
+        }
+
+        if (array_key_exists("TencentBackupAddress",$param) and $param["TencentBackupAddress"] !== null) {
+            $this->TencentBackupAddress = $param["TencentBackupAddress"];
         }
     }
 }

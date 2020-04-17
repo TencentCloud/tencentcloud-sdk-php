@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModifyTime() 获取修改时间。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间。
- * @method string getProtocol() 获取协议, 取值: TCP,UDP, ICMP。
- * @method void setProtocol(string $Protocol) 设置协议, 取值: TCP,UDP, ICMP。
- * @method string getPort() 获取端口(all, 单个port,  range)。
- * @method void setPort(string $Port) 设置端口(all, 单个port,  range)。
+ * @method string getProtocol() 获取协议, 取值: TCP,UDP, ICMP, ALL。
+ * @method void setProtocol(string $Protocol) 设置协议, 取值: TCP,UDP, ICMP, ALL。
+ * @method string getPort() 获取端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
+ * @method void setPort(string $Port) 设置端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
  * @method string getCidrBlock() 获取网段或IP(互斥)。
  * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)。
  * @method string getIpv6CidrBlock() 获取网段或IPv6(互斥)。
@@ -43,12 +43,12 @@ class NetworkAclEntry extends AbstractModel
     public $ModifyTime;
 
     /**
-     * @var string 协议, 取值: TCP,UDP, ICMP。
+     * @var string 协议, 取值: TCP,UDP, ICMP, ALL。
      */
     public $Protocol;
 
     /**
-     * @var string 端口(all, 单个port,  range)。
+     * @var string 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
      */
     public $Port;
 
@@ -74,8 +74,8 @@ class NetworkAclEntry extends AbstractModel
 
     /**
      * @param string $ModifyTime 修改时间。
-     * @param string $Protocol 协议, 取值: TCP,UDP, ICMP。
-     * @param string $Port 端口(all, 单个port,  range)。
+     * @param string $Protocol 协议, 取值: TCP,UDP, ICMP, ALL。
+     * @param string $Port 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
      * @param string $CidrBlock 网段或IP(互斥)。
      * @param string $Ipv6CidrBlock 网段或IPv6(互斥)。
      * @param string $Action ACCEPT 或 DROP。

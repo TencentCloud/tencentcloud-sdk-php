@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActivityRelatedInstanceSet(array $ActivityRelatedInstanceSet) 设置伸缩活动相关实例信息集合。
  * @method string getStatusMessageSimplified() 获取伸缩活动状态简要描述。
  * @method void setStatusMessageSimplified(string $StatusMessageSimplified) 设置伸缩活动状态简要描述。
+ * @method array getLifecycleActionResultSet() 获取伸缩活动中生命周期挂钩的执行结果。
+ * @method void setLifecycleActionResultSet(array $LifecycleActionResultSet) 设置伸缩活动中生命周期挂钩的执行结果。
  */
 class Activity extends AbstractModel
 {
@@ -135,6 +137,11 @@ class Activity extends AbstractModel
     public $StatusMessageSimplified;
 
     /**
+     * @var array 伸缩活动中生命周期挂钩的执行结果。
+     */
+    public $LifecycleActionResultSet;
+
+    /**
      * @param string $AutoScalingGroupId 伸缩组ID。
      * @param string $ActivityId 伸缩活动ID。
      * @param string $ActivityType 伸缩活动类型。取值如下：<br>
@@ -156,6 +163,7 @@ class Activity extends AbstractModel
      * @param string $CreatedTime 伸缩活动创建时间。
      * @param array $ActivityRelatedInstanceSet 伸缩活动相关实例信息集合。
      * @param string $StatusMessageSimplified 伸缩活动状态简要描述。
+     * @param array $LifecycleActionResultSet 伸缩活动中生命周期挂钩的执行结果。
      */
     function __construct()
     {
@@ -221,6 +229,15 @@ class Activity extends AbstractModel
 
         if (array_key_exists("StatusMessageSimplified",$param) and $param["StatusMessageSimplified"] !== null) {
             $this->StatusMessageSimplified = $param["StatusMessageSimplified"];
+        }
+
+        if (array_key_exists("LifecycleActionResultSet",$param) and $param["LifecycleActionResultSet"] !== null) {
+            $this->LifecycleActionResultSet = [];
+            foreach ($param["LifecycleActionResultSet"] as $key => $value){
+                $obj = new LifecycleActionResultInfo();
+                $obj->deserialize($value);
+                array_push($this->LifecycleActionResultSet, $obj);
+            }
         }
     }
 }

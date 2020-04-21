@@ -46,6 +46,14 @@ use TencentCloud\Common\AbstractModel;
 0： 普通直播，
 1 ：慢直播 。
 默认值： 0。
+ * @method integer getIsMiniProgramLive() 获取是否是小程序直播：
+0： 标准直播，
+1 ：小程序直播 。
+默认值： 0。
+ * @method void setIsMiniProgramLive(integer $IsMiniProgramLive) 设置是否是小程序直播：
+0： 标准直播，
+1 ：小程序直播 。
+默认值： 0。
  */
 class AddLiveDomainRequest extends AbstractModel
 {
@@ -79,6 +87,14 @@ class AddLiveDomainRequest extends AbstractModel
     public $IsDelayLive;
 
     /**
+     * @var integer 是否是小程序直播：
+0： 标准直播，
+1 ：小程序直播 。
+默认值： 0。
+     */
+    public $IsMiniProgramLive;
+
+    /**
      * @param string $DomainName 域名名称。
      * @param integer $DomainType 域名类型，
 0：推流域名，
@@ -91,6 +107,10 @@ class AddLiveDomainRequest extends AbstractModel
      * @param integer $IsDelayLive 是否是慢直播：
 0： 普通直播，
 1 ：慢直播 。
+默认值： 0。
+     * @param integer $IsMiniProgramLive 是否是小程序直播：
+0： 标准直播，
+1 ：小程序直播 。
 默认值： 0。
      */
     function __construct()
@@ -120,6 +140,10 @@ class AddLiveDomainRequest extends AbstractModel
 
         if (array_key_exists("IsDelayLive",$param) and $param["IsDelayLive"] !== null) {
             $this->IsDelayLive = $param["IsDelayLive"];
+        }
+
+        if (array_key_exists("IsMiniProgramLive",$param) and $param["IsMiniProgramLive"] !== null) {
+            $this->IsMiniProgramLive = $param["IsMiniProgramLive"];
         }
     }
 }

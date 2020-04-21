@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 指定时间点截图信息
  *
  * @method float getTimeOffset() 获取该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeOffset(float $TimeOffset) 设置该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取该张截图的 URL 地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置该张截图的 URL 地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWaterMarkDefinition() 获取截图如果被打上了水印，被打水印的模板 ID 列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWaterMarkDefinition(array $WaterMarkDefinition) 设置截图如果被打上了水印，被打水印的模板 ID 列表。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaSnapshotByTimePicInfoItem extends AbstractModel
 {
     /**
      * @var float 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeOffset;
 
     /**
      * @var string 该张截图的 URL 地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
      * @var array 截图如果被打上了水印，被打水印的模板 ID 列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WaterMarkDefinition;
 
     /**
      * @param float $TimeOffset 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 该张截图的 URL 地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WaterMarkDefinition 截图如果被打上了水印，被打水印的模板 ID 列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

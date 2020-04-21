@@ -25,15 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取人物名称。
  * @method void setName(string $Name) 设置人物名称。
  * @method string getDescription() 获取人物描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置人物描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFaceInfoSet() 获取人脸信息。
  * @method void setFaceInfoSet(array $FaceInfoSet) 设置人脸信息。
  * @method array getTagSet() 获取人物标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置人物标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getUsageSet() 获取应用场景。
  * @method void setUsageSet(array $UsageSet) 设置应用场景。
  * @method string getCreateTime() 获取创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -55,7 +51,6 @@ class AiSamplePerson extends AbstractModel
 
     /**
      * @var string 人物描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -66,7 +61,6 @@ class AiSamplePerson extends AbstractModel
 
     /**
      * @var array 人物标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
 
@@ -89,10 +83,8 @@ class AiSamplePerson extends AbstractModel
      * @param string $PersonId 人物 ID。
      * @param string $Name 人物名称。
      * @param string $Description 人物描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FaceInfoSet 人脸信息。
      * @param array $TagSet 人物标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UsageSet 应用场景。
      * @param string $CreateTime 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $UpdateTime 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。

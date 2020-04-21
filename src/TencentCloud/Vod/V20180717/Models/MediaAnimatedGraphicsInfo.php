@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 点播文件视频转动图结果信息
  *
  * @method array getAnimatedGraphicsSet() 获取视频转动图结果信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnimatedGraphicsSet(array $AnimatedGraphicsSet) 设置视频转动图结果信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaAnimatedGraphicsInfo extends AbstractModel
 {
     /**
      * @var array 视频转动图结果信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnimatedGraphicsSet;
 
     /**
      * @param array $AnimatedGraphicsSet 视频转动图结果信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

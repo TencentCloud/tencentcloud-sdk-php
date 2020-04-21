@@ -33,47 +33,31 @@ FINISH：已完成。
  * @method integer getErrCode() 获取错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrCode(integer $ErrCode) 设置错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取发布视频文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(string $FileId) 设置发布视频文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDefinition() 获取微信发布模板 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefinition(integer $Definition) 设置微信发布模板 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSourceDefinition() 获取发布视频所对应的转码模板 ID，为 0 代表原始视频。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceDefinition(integer $SourceDefinition) 设置发布视频所对应的转码模板 ID，为 0 代表原始视频。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWechatStatus() 获取微信发布状态，取值：
 <li>FAIL：失败；</li>
 <li>SUCCESS：成功；</li>
 <li>AUDITNOTPASS：审核未通过；</li>
 <li>NOTTRIGGERED：尚未发起微信发布。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWechatStatus(string $WechatStatus) 设置微信发布状态，取值：
 <li>FAIL：失败；</li>
 <li>SUCCESS：成功；</li>
 <li>AUDITNOTPASS：审核未通过；</li>
 <li>NOTTRIGGERED：尚未发起微信发布。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWechatVid() 获取微信 Vid。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWechatVid(string $WechatVid) 设置微信 Vid。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWechatUrl() 获取微信地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWechatUrl(string $WechatUrl) 设置微信地址。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WechatPublishTask extends AbstractModel
 {
@@ -94,31 +78,26 @@ FINISH：已完成。
      * @var integer 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
 
     /**
      * @var string 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var string 发布视频文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
      * @var integer 微信发布模板 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Definition;
 
     /**
      * @var integer 发布视频所对应的转码模板 ID，为 0 代表原始视频。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceDefinition;
 
@@ -128,19 +107,16 @@ FINISH：已完成。
 <li>SUCCESS：成功；</li>
 <li>AUDITNOTPASS：审核未通过；</li>
 <li>NOTTRIGGERED：尚未发起微信发布。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WechatStatus;
 
     /**
      * @var string 微信 Vid。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WechatVid;
 
     /**
      * @var string 微信地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WechatUrl;
 
@@ -153,25 +129,17 @@ FINISH：已完成。
      * @param integer $ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 发布视频文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Definition 微信发布模板 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SourceDefinition 发布视频所对应的转码模板 ID，为 0 代表原始视频。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WechatStatus 微信发布状态，取值：
 <li>FAIL：失败；</li>
 <li>SUCCESS：成功；</li>
 <li>AUDITNOTPASS：审核未通过；</li>
 <li>NOTTRIGGERED：尚未发起微信发布。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WechatVid 微信 Vid。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WechatUrl 微信地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

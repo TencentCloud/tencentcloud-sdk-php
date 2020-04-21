@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Sticker ：贴图轨道。贴图轨道以下 Item 组成：<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
 </ul>
  * @method array getTrackItems() 获取轨道上的媒体片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrackItems(array $TrackItems) 设置轨道上的媒体片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaTrack extends AbstractModel
 {
@@ -51,7 +49,6 @@ class MediaTrack extends AbstractModel
 
     /**
      * @var array 轨道上的媒体片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrackItems;
 
@@ -63,7 +60,6 @@ class MediaTrack extends AbstractModel
 <li>Sticker ：贴图轨道。贴图轨道以下 Item 组成：<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
 </ul>
      * @param array $TrackItems 轨道上的媒体片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -66,6 +66,8 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
  * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
 2020年4月2日开始，默认为“3.0”，之前使用过本接口的账号若未填写本参数默认为“2.0”。 
 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
+ * @method integer getNeedRotateDetection() 获取是否开启图片旋转识别支持。0为不开启，1为开启。默认为0。本参数的作用为，当图片中的人脸被旋转且图片没有exif信息时，如果不开启图片旋转识别支持则无法正确检测、识别图片中的人脸。若您确认图片包含exif信息或者您确认输入图中人脸不会出现被旋转情况，请不要开启本参数。开启后，整体耗时将可能增加数百毫秒。
+ * @method void setNeedRotateDetection(integer $NeedRotateDetection) 设置是否开启图片旋转识别支持。0为不开启，1为开启。默认为0。本参数的作用为，当图片中的人脸被旋转且图片没有exif信息时，如果不开启图片旋转识别支持则无法正确检测、识别图片中的人脸。若您确认图片包含exif信息或者您确认输入图中人脸不会出现被旋转情况，请不要开启本参数。开启后，整体耗时将可能增加数百毫秒。
  */
 class DetectFaceRequest extends AbstractModel
 {
@@ -121,6 +123,11 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     public $FaceModelVersion;
 
     /**
+     * @var integer 是否开启图片旋转识别支持。0为不开启，1为开启。默认为0。本参数的作用为，当图片中的人脸被旋转且图片没有exif信息时，如果不开启图片旋转识别支持则无法正确检测、识别图片中的人脸。若您确认图片包含exif信息或者您确认输入图中人脸不会出现被旋转情况，请不要开启本参数。开启后，整体耗时将可能增加数百毫秒。
+     */
+    public $NeedRotateDetection;
+
+    /**
      * @param integer $MaxFaceNum 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为120。 
 此参数用于控制处理待检测图片中的人脸个数，值越小，处理速度越快。
      * @param integer $MinFaceSize 人脸长和宽的最小尺寸，单位为像素。
@@ -144,6 +151,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      * @param string $FaceModelVersion 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
 2020年4月2日开始，默认为“3.0”，之前使用过本接口的账号若未填写本参数默认为“2.0”。 
 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
+     * @param integer $NeedRotateDetection 是否开启图片旋转识别支持。0为不开启，1为开启。默认为0。本参数的作用为，当图片中的人脸被旋转且图片没有exif信息时，如果不开启图片旋转识别支持则无法正确检测、识别图片中的人脸。若您确认图片包含exif信息或者您确认输入图中人脸不会出现被旋转情况，请不要开启本参数。开启后，整体耗时将可能增加数百毫秒。
      */
     function __construct()
     {
@@ -184,6 +192,10 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
         if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
             $this->FaceModelVersion = $param["FaceModelVersion"];
+        }
+
+        if (array_key_exists("NeedRotateDetection",$param) and $param["NeedRotateDetection"] !== null) {
+            $this->NeedRotateDetection = $param["NeedRotateDetection"];
         }
     }
 }

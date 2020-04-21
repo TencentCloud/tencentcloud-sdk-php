@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLevel() 获取分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
  * @method void setLevel(integer $Level) 设置分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
  * @method array getSubClassIdSet() 获取当前分类的第一级子类 ID 集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubClassIdSet(array $SubClassIdSet) 设置当前分类的第一级子类 ID 集合
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaClassInfo extends AbstractModel
 {
@@ -57,7 +55,6 @@ class MediaClassInfo extends AbstractModel
 
     /**
      * @var array 当前分类的第一级子类 ID 集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubClassIdSet;
 
@@ -67,7 +64,6 @@ class MediaClassInfo extends AbstractModel
      * @param string $ClassName 分类名称
      * @param integer $Level 分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
      * @param array $SubClassIdSet 当前分类的第一级子类 ID 集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

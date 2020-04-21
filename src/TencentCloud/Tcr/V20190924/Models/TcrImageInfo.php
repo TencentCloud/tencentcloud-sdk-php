@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) 设置镜像大小
  * @method string getImageVersion() 获取Tag名称
  * @method void setImageVersion(string $ImageVersion) 设置Tag名称
+ * @method string getUpdateTime() 获取更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间
  */
 class TcrImageInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class TcrImageInfo extends AbstractModel
     public $ImageVersion;
 
     /**
+     * @var string 更新时间
+     */
+    public $UpdateTime;
+
+    /**
      * @param string $Digest 哈希值
      * @param integer $Size 镜像大小
      * @param string $ImageVersion Tag名称
+     * @param string $UpdateTime 更新时间
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class TcrImageInfo extends AbstractModel
 
         if (array_key_exists("ImageVersion",$param) and $param["ImageVersion"] !== null) {
             $this->ImageVersion = $param["ImageVersion"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

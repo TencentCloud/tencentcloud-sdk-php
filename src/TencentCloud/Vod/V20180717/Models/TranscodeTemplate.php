@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getContainer() 获取封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
  * @method void setContainer(string $Container) 设置封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
  * @method string getName() 获取转码模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置转码模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComment() 获取模板描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComment(string $Comment) 设置模板描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取模板类型，取值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
@@ -87,13 +83,11 @@ class TranscodeTemplate extends AbstractModel
 
     /**
      * @var string 转码模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 模板描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comment;
 
@@ -157,9 +151,7 @@ class TranscodeTemplate extends AbstractModel
      * @param string $Definition 转码模板唯一标识。
      * @param string $Container 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
      * @param string $Name 转码模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Comment 模板描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 模板类型，取值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>

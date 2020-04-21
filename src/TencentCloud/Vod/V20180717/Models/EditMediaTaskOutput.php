@@ -21,85 +21,61 @@ use TencentCloud\Common\AbstractModel;
  * 编辑视频任务的输出
  *
  * @method string getFileType() 获取文件类型，例如 mp4、flv 等。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileType(string $FileType) 设置文件类型，例如 mp4、flv 等。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileUrl() 获取媒体文件播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileUrl(string $FileUrl) 设置媒体文件播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取媒体文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(string $FileId) 设置媒体文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMediaName() 获取输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMediaName(string $MediaName) 设置输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClassId() 获取分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClassId(integer $ClassId) 设置分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EditMediaTaskOutput extends AbstractModel
 {
     /**
      * @var string 文件类型，例如 mp4、flv 等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileType;
 
     /**
      * @var string 媒体文件播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileUrl;
 
     /**
      * @var string 媒体文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
      * @var string 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MediaName;
 
     /**
      * @var integer 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClassId;
 
     /**
      * @var string 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @param string $FileType 文件类型，例如 mp4、flv 等。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileUrl 媒体文件播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 媒体文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

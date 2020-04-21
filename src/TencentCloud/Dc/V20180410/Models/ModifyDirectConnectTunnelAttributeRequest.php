@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomerAddress(string $CustomerAddress) 设置用户侧互联IP
  * @method integer getBandwidth() 获取专用通道带宽值，单位为M。
  * @method void setBandwidth(integer $Bandwidth) 设置专用通道带宽值，单位为M。
+ * @method string getTencentBackupAddress() 获取腾讯侧备用互联IP
+ * @method void setTencentBackupAddress(string $TencentBackupAddress) 设置腾讯侧备用互联IP
  */
 class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
     public $Bandwidth;
 
     /**
+     * @var string 腾讯侧备用互联IP
+     */
+    public $TencentBackupAddress;
+
+    /**
      * @param string $DirectConnectTunnelId 专用通道ID
      * @param string $DirectConnectTunnelName 专用通道名称
      * @param BgpPeer $BgpPeer 用户侧BGP，包括Asn，AuthKey
@@ -80,6 +87,7 @@ class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
      * @param string $TencentAddress 腾讯侧互联IP
      * @param string $CustomerAddress 用户侧互联IP
      * @param integer $Bandwidth 专用通道带宽值，单位为M。
+     * @param string $TencentBackupAddress 腾讯侧备用互联IP
      */
     function __construct()
     {
@@ -126,6 +134,10 @@ class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
 
         if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
             $this->Bandwidth = $param["Bandwidth"];
+        }
+
+        if (array_key_exists("TencentBackupAddress",$param) and $param["TencentBackupAddress"] !== null) {
+            $this->TencentBackupAddress = $param["TencentBackupAddress"];
         }
     }
 }

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 当设置该参数时，表示复制该通道。
  * @method void setClonedProxyId(string $ClonedProxyId) 设置被复制的通道ID。只有处于运行中状态的通道可以被复制。
 当设置该参数时，表示复制该通道。
+ * @method integer getBillingType() 获取计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+ * @method void setBillingType(integer $BillingType) 设置计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
  */
 class CreateProxyRequest extends AbstractModel
 {
@@ -100,6 +102,11 @@ class CreateProxyRequest extends AbstractModel
     public $ClonedProxyId;
 
     /**
+     * @var integer 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+     */
+    public $BillingType;
+
+    /**
      * @param integer $ProjectId 通道的项目ID。
      * @param string $ProxyName 通道名称。
      * @param string $AccessRegion 接入地域。
@@ -112,6 +119,7 @@ class CreateProxyRequest extends AbstractModel
      * @param array $TagSet 通道需要添加的标签列表。
      * @param string $ClonedProxyId 被复制的通道ID。只有处于运行中状态的通道可以被复制。
 当设置该参数时，表示复制该通道。
+     * @param integer $BillingType 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ class CreateProxyRequest extends AbstractModel
 
         if (array_key_exists("ClonedProxyId",$param) and $param["ClonedProxyId"] !== null) {
             $this->ClonedProxyId = $param["ClonedProxyId"];
+        }
+
+        if (array_key_exists("BillingType",$param) and $param["BillingType"] !== null) {
+            $this->BillingType = $param["BillingType"];
         }
     }
 }

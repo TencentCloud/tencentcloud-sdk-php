@@ -73,13 +73,9 @@ use TencentCloud\Common\AbstractModel;
 <li>当 Width 为空，Height 非空，则 Width 按比例缩放</li>
 <li>当 Width 非空，Height 为空，则 Height 按比例缩放。</li>
  * @method array getImageOperations() 获取对图像进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageOperations(array $ImageOperations) 设置对图像进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAudioOperations() 获取对音频进行操作，如静音等。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioOperations(array $AudioOperations) 设置对音频进行操作，如静音等。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VideoTrackItem extends AbstractModel
 {
@@ -143,13 +139,11 @@ class VideoTrackItem extends AbstractModel
 
     /**
      * @var array 对图像进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageOperations;
 
     /**
      * @var array 对音频进行操作，如静音等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioOperations;
 
@@ -181,9 +175,7 @@ class VideoTrackItem extends AbstractModel
 <li>当 Width 为空，Height 非空，则 Width 按比例缩放</li>
 <li>当 Width 非空，Height 为空，则 Height 按比例缩放。</li>
      * @param array $ImageOperations 对图像进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AudioOperations 对音频进行操作，如静音等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

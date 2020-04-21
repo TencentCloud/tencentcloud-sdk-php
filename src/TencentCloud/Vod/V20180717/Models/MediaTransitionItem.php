@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method float getDuration() 获取转场持续时间，单位为秒。进行转场处理的两个媒体片段，第二个片段在轨道上的起始时间会自动进行调整，设置为前面一个片段的结束时间减去转场的持续时间。
  * @method void setDuration(float $Duration) 设置转场持续时间，单位为秒。进行转场处理的两个媒体片段，第二个片段在轨道上的起始时间会自动进行调整，设置为前面一个片段的结束时间减去转场的持续时间。
  * @method array getTransitions() 获取转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransitions(array $Transitions) 设置转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaTransitionItem extends AbstractModel
 {
@@ -36,14 +34,12 @@ class MediaTransitionItem extends AbstractModel
 
     /**
      * @var array 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Transitions;
 
     /**
      * @param float $Duration 转场持续时间，单位为秒。进行转场处理的两个媒体片段，第二个片段在轨道上的起始时间会自动进行调整，设置为前面一个片段的结束时间减去转场的持续时间。
      * @param array $Transitions 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

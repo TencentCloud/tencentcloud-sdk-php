@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+ * @method integer getLimit() 获取查询返回记录条数，默认为10000。
+ * @method void setLimit(integer $Limit) 设置查询返回记录条数，默认为10000。
+ * @method integer getOffset() 获取偏移量，默认值为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。
  */
 class DescribeClientConnectionsRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeClientConnectionsRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var integer 查询返回记录条数，默认为10000。
+     */
+    public $Limit;
+
+    /**
+     * @var integer 偏移量，默认值为0。
+     */
+    public $Offset;
+
+    /**
      * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * @param integer $Limit 查询返回记录条数，默认为10000。
+     * @param integer $Offset 偏移量，默认值为0。
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeClientConnectionsRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

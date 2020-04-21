@@ -25,17 +25,13 @@ use TencentCloud\Common\AbstractModel;
 <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
 <li>VideoProcessing：来自视频处理。如视频拼接、视频剪辑等。</li>
 <li>Unknown：未知来源。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceType(string $SourceType) 设置媒体文件的来源类别：
 <li>Record：来自录制。如直播录制、直播时移录制等。</li>
 <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
 <li>VideoProcessing：来自视频处理。如视频拼接、视频剪辑等。</li>
 <li>Unknown：未知来源。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSourceContext() 获取用户创建文件时透传的字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceContext(string $SourceContext) 设置用户创建文件时透传的字段
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaSourceData extends AbstractModel
 {
@@ -45,13 +41,11 @@ class MediaSourceData extends AbstractModel
 <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
 <li>VideoProcessing：来自视频处理。如视频拼接、视频剪辑等。</li>
 <li>Unknown：未知来源。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceType;
 
     /**
      * @var string 用户创建文件时透传的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceContext;
 
@@ -61,9 +55,7 @@ class MediaSourceData extends AbstractModel
 <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
 <li>VideoProcessing：来自视频处理。如视频拼接、视频剪辑等。</li>
 <li>Unknown：未知来源。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceContext 用户创建文件时透传的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

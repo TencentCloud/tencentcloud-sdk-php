@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
 <li>image：图片水印；</li>
 <li>text：文字水印。</li>
  * @method string getName() 获取水印模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置水印模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComment() 获取模板描述信息。
  * @method void setComment(string $Comment) 设置模板描述信息。
  * @method string getXPos() 获取水印图片原点距离视频图像原点的水平位置。
@@ -89,7 +87,6 @@ class WatermarkTemplate extends AbstractModel
 
     /**
      * @var string 水印模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -155,7 +152,6 @@ class WatermarkTemplate extends AbstractModel
 <li>image：图片水印；</li>
 <li>text：文字水印。</li>
      * @param string $Name 水印模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Comment 模板描述信息。
      * @param string $XPos 水印图片原点距离视频图像原点的水平位置。
 <li>当字符串以 % 结尾，表示水印 Left 为视频宽度指定百分比的位置，如 10% 表示 Left 为视频宽度的 10%；</li>

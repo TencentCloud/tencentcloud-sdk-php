@@ -21,37 +21,28 @@ use TencentCloud\Common\AbstractModel;
  * 涉政信息
  *
  * @method float getConfidence() 获取视频涉政评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfidence(float $Confidence) 设置视频涉政评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestion() 获取涉政结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestion(string $Suggestion) 设置涉政结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabel() 获取视频鉴政结果标签，取值范围：
 <li>politician：政治人物。</li>
 <li>violation_photo：违规图标。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置视频鉴政结果标签，取值范围：
 <li>politician：政治人物。</li>
 <li>violation_photo：违规图标。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSegmentSet() 获取有涉政嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentSet(array $SegmentSet) 设置有涉政嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiReviewPoliticalTaskOutput extends AbstractModel
 {
     /**
      * @var float 视频涉政评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Confidence;
 
@@ -60,7 +51,6 @@ class AiReviewPoliticalTaskOutput extends AbstractModel
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
@@ -68,30 +58,24 @@ class AiReviewPoliticalTaskOutput extends AbstractModel
      * @var string 视频鉴政结果标签，取值范围：
 <li>politician：政治人物。</li>
 <li>violation_photo：违规图标。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var array 有涉政嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentSet;
 
     /**
      * @param float $Confidence 视频涉政评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Suggestion 涉政结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 视频鉴政结果标签，取值范围：
 <li>politician：政治人物。</li>
 <li>violation_photo：违规图标。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SegmentSet 有涉政嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

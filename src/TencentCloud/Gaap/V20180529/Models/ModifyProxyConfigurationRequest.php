@@ -36,6 +36,8 @@ Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAcces
 更多详细信息请参阅：如何保证幂等性。
  * @method string getProxyId() 获取（新参数）通道的实例ID。
  * @method void setProxyId(string $ProxyId) 设置（新参数）通道的实例ID。
+ * @method integer getBillingType() 获取计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+ * @method void setBillingType(integer $BillingType) 设置计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
  */
 class ModifyProxyConfigurationRequest extends AbstractModel
 {
@@ -68,6 +70,11 @@ Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAcces
     public $ProxyId;
 
     /**
+     * @var integer 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+     */
+    public $BillingType;
+
+    /**
      * @param string $InstanceId （旧参数，请切换到ProxyId）通道的实例ID。
      * @param integer $Bandwidth 需要调整到的目标带宽，单位：Mbps。
 Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
@@ -76,6 +83,7 @@ Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAcces
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
 更多详细信息请参阅：如何保证幂等性。
      * @param string $ProxyId （新参数）通道的实例ID。
+     * @param integer $BillingType 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAcces
 
         if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
             $this->ProxyId = $param["ProxyId"];
+        }
+
+        if (array_key_exists("BillingType",$param) and $param["BillingType"] !== null) {
+            $this->BillingType = $param["BillingType"];
         }
     }
 }

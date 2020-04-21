@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 转自适应码流信息
  *
  * @method array getAdaptiveDynamicStreamingSet() 获取转自适应码流信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdaptiveDynamicStreamingSet(array $AdaptiveDynamicStreamingSet) 设置转自适应码流信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaAdaptiveDynamicStreamingInfo extends AbstractModel
 {
     /**
      * @var array 转自适应码流信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdaptiveDynamicStreamingSet;
 
     /**
      * @param array $AdaptiveDynamicStreamingSet 转自适应码流信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

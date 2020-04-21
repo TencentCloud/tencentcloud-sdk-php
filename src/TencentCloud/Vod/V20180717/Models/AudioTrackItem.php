@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method float getDuration() 获取音频片段的时长，单位为秒。默认和素材本身长度一致，表示截取全部素材。
  * @method void setDuration(float $Duration) 设置音频片段的时长，单位为秒。默认和素材本身长度一致，表示截取全部素材。
  * @method array getAudioOperations() 获取对音频片段进行的操作，如音量调节等。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioOperations(array $AudioOperations) 设置对音频片段进行的操作，如音量调节等。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioTrackItem extends AbstractModel
 {
@@ -50,7 +48,6 @@ class AudioTrackItem extends AbstractModel
 
     /**
      * @var array 对音频片段进行的操作，如音量调节等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioOperations;
 
@@ -59,7 +56,6 @@ class AudioTrackItem extends AbstractModel
      * @param float $SourceMediaStartTime 音频片段取自素材文件的起始时间，单位为秒。0 表示从素材开始位置截取。默认为0。
      * @param float $Duration 音频片段的时长，单位为秒。默认和素材本身长度一致，表示截取全部素材。
      * @param array $AudioOperations 对音频片段进行的操作，如音量调节等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

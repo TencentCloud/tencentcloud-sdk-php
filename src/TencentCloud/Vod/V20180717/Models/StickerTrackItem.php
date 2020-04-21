@@ -71,9 +71,7 @@ use TencentCloud\Common\AbstractModel;
 <li>当 Width 为空，Height 非空，则 Width 按比例缩放</li>
 <li>当 Width 非空，Height 为空，则 Height 按比例缩放。</li>
  * @method array getImageOperations() 获取对贴图进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageOperations(array $ImageOperations) 设置对贴图进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StickerTrackItem extends AbstractModel
 {
@@ -136,7 +134,6 @@ class StickerTrackItem extends AbstractModel
 
     /**
      * @var array 对贴图进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageOperations;
 
@@ -167,7 +164,6 @@ class StickerTrackItem extends AbstractModel
 <li>当 Width 为空，Height 非空，则 Width 按比例缩放</li>
 <li>当 Width 非空，Height 为空，则 Height 按比例缩放。</li>
      * @param array $ImageOperations 对贴图进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

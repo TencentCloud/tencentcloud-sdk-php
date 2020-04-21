@@ -25,23 +25,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getErrCode() 获取错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrCode(integer $ErrCode) 设置错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ComposeMediaTaskInput getInput() 获取制作媒体文件任务的输入。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInput(ComposeMediaTaskInput $Input) 设置制作媒体文件任务的输入。
@@ -62,7 +56,6 @@ class ComposeMediaTask extends AbstractModel
      * @var string 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -70,13 +63,11 @@ class ComposeMediaTask extends AbstractModel
      * @var integer 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
 
     /**
      * @var string 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
@@ -97,13 +88,10 @@ class ComposeMediaTask extends AbstractModel
      * @param string $Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComposeMediaTaskInput $Input 制作媒体文件任务的输入。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ComposeMediaTaskOutput $Output 制作媒体文件任务的输出。

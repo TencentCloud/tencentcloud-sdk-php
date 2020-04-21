@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method MediaMetaData getMetaData() 获取视频元信息。
  * @method void setMetaData(MediaMetaData $MetaData) 设置视频元信息。
  * @method string getUrl() 获取小程序审核视频播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置小程序审核视频播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReviewResult() 获取小程序视频发布状态：
 <li>Pass：成功。</li>
 <li>Rejected：未通过。</li>
@@ -35,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Pass：成功。</li>
 <li>Rejected：未通过。</li>
  * @method array getReviewSummary() 获取小程序审核元素。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReviewSummary(array $ReviewSummary) 设置小程序审核元素。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaMiniProgramReviewInfoItem extends AbstractModel
 {
@@ -53,7 +49,6 @@ class MediaMiniProgramReviewInfoItem extends AbstractModel
 
     /**
      * @var string 小程序审核视频播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
@@ -66,7 +61,6 @@ class MediaMiniProgramReviewInfoItem extends AbstractModel
 
     /**
      * @var array 小程序审核元素。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReviewSummary;
 
@@ -74,12 +68,10 @@ class MediaMiniProgramReviewInfoItem extends AbstractModel
      * @param integer $Definition 模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。
      * @param MediaMetaData $MetaData 视频元信息。
      * @param string $Url 小程序审核视频播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReviewResult 小程序视频发布状态：
 <li>Pass：成功。</li>
 <li>Rejected：未通过。</li>
      * @param array $ReviewSummary 小程序审核元素。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

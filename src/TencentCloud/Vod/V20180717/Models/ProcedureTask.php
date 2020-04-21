@@ -55,21 +55,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetaData(MediaMetaData $MetaData) 设置原始视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMediaProcessResultSet() 获取视频处理任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMediaProcessResultSet(array $MediaProcessResultSet) 设置视频处理任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAiContentReviewResultSet() 获取视频内容审核任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) 设置视频内容审核任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAiAnalysisResultSet() 获取视频内容分析任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) 设置视频内容分析任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAiRecognitionResultSet() 获取视频内容识别任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) 设置视频内容识别任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTasksPriority() 获取任务流的优先级，取值范围为 [-10, 10]。
  * @method void setTasksPriority(integer $TasksPriority) 设置任务流的优先级，取值范围为 [-10, 10]。
  * @method string getTasksNotifyMode() 获取任务流状态变更通知模式。
@@ -138,25 +130,21 @@ class ProcedureTask extends AbstractModel
 
     /**
      * @var array 视频处理任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MediaProcessResultSet;
 
     /**
      * @var array 视频内容审核任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AiContentReviewResultSet;
 
     /**
      * @var array 视频内容分析任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AiAnalysisResultSet;
 
     /**
      * @var array 视频内容识别任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AiRecognitionResultSet;
 
@@ -202,13 +190,9 @@ class ProcedureTask extends AbstractModel
      * @param MediaMetaData $MetaData 原始视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MediaProcessResultSet 视频处理任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TasksPriority 任务流的优先级，取值范围为 [-10, 10]。
      * @param string $TasksNotifyMode 任务流状态变更通知模式。
 <li>Finish：只有当任务流全部执行完毕时，才发起一次事件通知；</li>

@@ -206,9 +206,9 @@ global：全球锁定
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) 设置回源S3鉴权配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSecurityConfig() 获取Scdn配置
+ * @method SecurityConfig getSecurityConfig() 获取Scdn配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecurityConfig(array $SecurityConfig) 设置Scdn配置
+ * @method void setSecurityConfig(SecurityConfig $SecurityConfig) 设置Scdn配置
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
@@ -467,7 +467,7 @@ global：全球锁定
     public $AwsPrivateAccess;
 
     /**
-     * @var array Scdn配置
+     * @var SecurityConfig Scdn配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityConfig;
@@ -566,7 +566,7 @@ global：全球锁定
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AwsPrivateAccess $AwsPrivateAccess 回源S3鉴权配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SecurityConfig Scdn配置
+     * @param SecurityConfig $SecurityConfig Scdn配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -771,12 +771,8 @@ global：全球锁定
         }
 
         if (array_key_exists("SecurityConfig",$param) and $param["SecurityConfig"] !== null) {
-            $this->SecurityConfig = [];
-            foreach ($param["SecurityConfig"] as $key => $value){
-                $obj = new SecurityConfig();
-                $obj->deserialize($value);
-                array_push($this->SecurityConfig, $obj);
-            }
+            $this->SecurityConfig = new SecurityConfig();
+            $this->SecurityConfig->deserialize($param["SecurityConfig"]);
         }
     }
 }

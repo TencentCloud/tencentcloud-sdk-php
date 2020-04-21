@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDefinition() 获取指定时间点截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
  * @method void setDefinition(integer $Definition) 设置指定时间点截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
  * @method array getPicInfoSet() 获取同一规格的截图信息集合，每个元素代表一张截图。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPicInfoSet(array $PicInfoSet) 设置同一规格的截图信息集合，每个元素代表一张截图。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaSnapshotByTimeOffsetItem extends AbstractModel
 {
@@ -36,14 +34,12 @@ class MediaSnapshotByTimeOffsetItem extends AbstractModel
 
     /**
      * @var array 同一规格的截图信息集合，每个元素代表一张截图。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PicInfoSet;
 
     /**
      * @param integer $Definition 指定时间点截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      * @param array $PicInfoSet 同一规格的截图信息集合，每个元素代表一张截图。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

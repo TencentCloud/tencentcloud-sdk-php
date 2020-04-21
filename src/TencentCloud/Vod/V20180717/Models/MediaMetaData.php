@@ -35,13 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRotate() 获取视频拍摄时的选择角度，单位：度。
  * @method void setRotate(integer $Rotate) 设置视频拍摄时的选择角度，单位：度。
  * @method array getVideoStreamSet() 获取视频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoStreamSet(array $VideoStreamSet) 设置视频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAudioStreamSet() 获取音频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioStreamSet(array $AudioStreamSet) 设置音频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getVideoDuration() 获取视频时长，单位：秒。
  * @method void setVideoDuration(float $VideoDuration) 设置视频时长，单位：秒。
  * @method float getAudioDuration() 获取音频时长，单位：秒。
@@ -86,13 +82,11 @@ class MediaMetaData extends AbstractModel
 
     /**
      * @var array 视频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoStreamSet;
 
     /**
      * @var array 音频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioStreamSet;
 
@@ -115,9 +109,7 @@ class MediaMetaData extends AbstractModel
      * @param float $Duration 视频时长，单位：秒。
      * @param integer $Rotate 视频拍摄时的选择角度，单位：度。
      * @param array $VideoStreamSet 视频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AudioStreamSet 音频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $VideoDuration 视频时长，单位：秒。
      * @param float $AudioDuration 音频时长，单位：秒。
      */

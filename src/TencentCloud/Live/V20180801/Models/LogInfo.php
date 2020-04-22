@@ -18,16 +18,16 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 日志url信息
+ * 日志url信息。
  *
  * @method string getLogName() 获取日志名称。
  * @method void setLogName(string $LogName) 设置日志名称。
- * @method string getLogUrl() 获取日志Url。
- * @method void setLogUrl(string $LogUrl) 设置日志Url。
- * @method string getLogTime() 获取日志生成时间
- * @method void setLogTime(string $LogTime) 设置日志生成时间
- * @method integer getFileSize() 获取文件大小
- * @method void setFileSize(integer $FileSize) 设置文件大小
+ * @method string getLogUrl() 获取日志 URL。
+ * @method void setLogUrl(string $LogUrl) 设置日志 URL。
+ * @method string getLogTime() 获取日志生成时间。
+ * @method void setLogTime(string $LogTime) 设置日志生成时间。
+ * @method integer getFileSize() 获取文件大小。
+ * @method void setFileSize(integer $FileSize) 设置文件大小。
  */
 class LogInfo extends AbstractModel
 {
@@ -37,25 +37,25 @@ class LogInfo extends AbstractModel
     public $LogName;
 
     /**
-     * @var string 日志Url。
+     * @var string 日志 URL。
      */
     public $LogUrl;
 
     /**
-     * @var string 日志生成时间
+     * @var string 日志生成时间。
      */
     public $LogTime;
 
     /**
-     * @var integer 文件大小
+     * @var integer 文件大小。
      */
     public $FileSize;
 
     /**
      * @param string $LogName 日志名称。
-     * @param string $LogUrl 日志Url。
-     * @param string $LogTime 日志生成时间
-     * @param integer $FileSize 文件大小
+     * @param string $LogUrl 日志 URL。
+     * @param string $LogTime 日志生成时间。
+     * @param integer $FileSize 文件大小。
      */
     function __construct()
     {

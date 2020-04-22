@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeletePullStreamConfig请求参数结构体
  *
- * @method string getConfigId() 获取配置id。
- * @method void setConfigId(string $ConfigId) 设置配置id。
+ * @method string getConfigId() 获取配置 ID。
+1. 在添加拉流配置接口 [CreatePullStreamConfig](/document/api/267/30159) 调用返回值中获取配置 ID。
+2. 可以从接口 [DescribePullStreamConfigs](/document/api/267/30158) 中查询已创建过的拉流配置列表。
+ * @method void setConfigId(string $ConfigId) 设置配置 ID。
+1. 在添加拉流配置接口 [CreatePullStreamConfig](/document/api/267/30159) 调用返回值中获取配置 ID。
+2. 可以从接口 [DescribePullStreamConfigs](/document/api/267/30158) 中查询已创建过的拉流配置列表。
  */
 class DeletePullStreamConfigRequest extends AbstractModel
 {
     /**
-     * @var string 配置id。
+     * @var string 配置 ID。
+1. 在添加拉流配置接口 [CreatePullStreamConfig](/document/api/267/30159) 调用返回值中获取配置 ID。
+2. 可以从接口 [DescribePullStreamConfigs](/document/api/267/30158) 中查询已创建过的拉流配置列表。
      */
     public $ConfigId;
 
     /**
-     * @param string $ConfigId 配置id。
+     * @param string $ConfigId 配置 ID。
+1. 在添加拉流配置接口 [CreatePullStreamConfig](/document/api/267/30159) 调用返回值中获取配置 ID。
+2. 可以从接口 [DescribePullStreamConfigs](/document/api/267/30158) 中查询已创建过的拉流配置列表。
      */
     function __construct()
     {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 某个时间点的指标的数值是多少。
  *
- * @method string getTime() 获取utc时间，时间格式为yyyy-mm-ddTHH:MM:SSZ。
- * @method void setTime(string $Time) 设置utc时间，时间格式为yyyy-mm-ddTHH:MM:SSZ。
+ * @method string getTime() 获取UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。
+ * @method void setTime(string $Time) 设置UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。
  * @method integer getNum() 获取数值。
  * @method void setNum(integer $Num) 设置数值。
  */
 class TimeValue extends AbstractModel
 {
     /**
-     * @var string utc时间，时间格式为yyyy-mm-ddTHH:MM:SSZ。
+     * @var string UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。
      */
     public $Time;
 
@@ -38,7 +38,7 @@ class TimeValue extends AbstractModel
     public $Num;
 
     /**
-     * @param string $Time utc时间，时间格式为yyyy-mm-ddTHH:MM:SSZ。
+     * @param string $Time UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。
      * @param integer $Num 数值。
      */
     function __construct()

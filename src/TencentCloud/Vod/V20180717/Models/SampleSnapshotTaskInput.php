@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDefinition() 获取采样截图模板 ID。
  * @method void setDefinition(integer $Definition) 设置采样截图模板 ID。
  * @method array getWatermarkSet() 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SampleSnapshotTaskInput extends AbstractModel
 {
@@ -36,14 +34,12 @@ class SampleSnapshotTaskInput extends AbstractModel
 
     /**
      * @var array 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WatermarkSet;
 
     /**
      * @param integer $Definition 采样截图模板 ID。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

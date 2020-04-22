@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() 获取自适应转码模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置自适应转码模板唯一标识。
+ * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+ * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class DeleteAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     public $Definition;
 
     /**
+     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     */
+    public $SubAppId;
+
+    /**
      * @param integer $Definition 自适应转码模板唯一标识。
+     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

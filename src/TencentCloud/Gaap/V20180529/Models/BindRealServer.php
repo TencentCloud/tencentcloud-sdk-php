@@ -27,13 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRealServerWeight() 获取该源站所占权重
  * @method void setRealServerWeight(integer $RealServerWeight) 设置该源站所占权重
  * @method integer getRealServerStatus() 获取源站健康检查状态，其中：
-0，正常；
-1，异常。
+0表示正常；
+1表示异常。
 未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealServerStatus(integer $RealServerStatus) 设置源站健康检查状态，其中：
-0，正常；
-1，异常。
+0表示正常；
+1表示异常。
 未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRealServerPort() 获取源站的端口号
@@ -62,8 +62,8 @@ class BindRealServer extends AbstractModel
 
     /**
      * @var integer 源站健康检查状态，其中：
-0，正常；
-1，异常。
+0表示正常；
+1表示异常。
 未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -85,8 +85,8 @@ class BindRealServer extends AbstractModel
      * @param string $RealServerIP 源站IP或者域名
      * @param integer $RealServerWeight 该源站所占权重
      * @param integer $RealServerStatus 源站健康检查状态，其中：
-0，正常；
-1，异常。
+0表示正常；
+1表示异常。
 未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RealServerPort 源站的端口号

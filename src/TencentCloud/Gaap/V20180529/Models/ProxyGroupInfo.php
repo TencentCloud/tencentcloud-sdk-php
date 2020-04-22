@@ -36,16 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerRegionInfo(RegionDetail $RealServerRegionInfo) 设置目标地域
  * @method string getStatus() 获取通道组状态。
 其中，
-0，运行中；
-1，创建中；
-4，销毁中；
-11，通道迁移中。
+0表示运行中；
+1表示创建中；
+4表示销毁中；
+11表示通道迁移中。
  * @method void setStatus(string $Status) 设置通道组状态。
 其中，
-0，运行中；
-1，创建中；
-4，销毁中；
-11，通道迁移中。
+0表示运行中；
+1表示创建中；
+4表示销毁中；
+11表示通道迁移中。
  * @method array getTagSet() 获取标签列表。
  * @method void setTagSet(array $TagSet) 设置标签列表。
  */
@@ -81,10 +81,10 @@ class ProxyGroupInfo extends AbstractModel
     /**
      * @var string 通道组状态。
 其中，
-0，运行中；
-1，创建中；
-4，销毁中；
-11，通道迁移中。
+0表示运行中；
+1表示创建中；
+4表示销毁中；
+11表示通道迁移中。
      */
     public $Status;
 
@@ -103,10 +103,10 @@ class ProxyGroupInfo extends AbstractModel
      * @param RegionDetail $RealServerRegionInfo 目标地域
      * @param string $Status 通道组状态。
 其中，
-0，运行中；
-1，创建中；
-4，销毁中；
-11，通道迁移中。
+0表示运行中；
+1表示创建中；
+4表示销毁中；
+11表示通道迁移中。
      * @param array $TagSet 标签列表。
      */
     function __construct()

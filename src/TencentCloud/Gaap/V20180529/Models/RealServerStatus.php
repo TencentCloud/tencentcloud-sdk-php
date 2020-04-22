@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRealServerId() 获取源站ID。
  * @method void setRealServerId(string $RealServerId) 设置源站ID。
- * @method integer getBindStatus() 获取0: 未被绑定 1：被规则或者监听器绑定。
- * @method void setBindStatus(integer $BindStatus) 设置0: 未被绑定 1：被规则或者监听器绑定。
+ * @method integer getBindStatus() 获取0表示未被绑定 1表示被规则或者监听器绑定。
+ * @method void setBindStatus(integer $BindStatus) 设置0表示未被绑定 1表示被规则或者监听器绑定。
  * @method string getProxyId() 获取绑定此源站的通道ID，没有绑定时为空字符串。
  * @method void setProxyId(string $ProxyId) 设置绑定此源站的通道ID，没有绑定时为空字符串。
  */
@@ -35,7 +35,7 @@ class RealServerStatus extends AbstractModel
     public $RealServerId;
 
     /**
-     * @var integer 0: 未被绑定 1：被规则或者监听器绑定。
+     * @var integer 0表示未被绑定 1表示被规则或者监听器绑定。
      */
     public $BindStatus;
 
@@ -46,7 +46,7 @@ class RealServerStatus extends AbstractModel
 
     /**
      * @param string $RealServerId 源站ID。
-     * @param integer $BindStatus 0: 未被绑定 1：被规则或者监听器绑定。
+     * @param integer $BindStatus 0表示未被绑定 1表示被规则或者监听器绑定。
      * @param string $ProxyId 绑定此源站的通道ID，没有绑定时为空字符串。
      */
     function __construct()

@@ -18,33 +18,35 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 延播信息
+ * 延播信息。
  *
  * @method string getDomainName() 获取推流域名。
  * @method void setDomainName(string $DomainName) 设置推流域名。
- * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
- * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+ * @method string getAppName() 获取推流路径，与推流和播放地址中的 
+ AppName 保持一致，默认为 live。
+ * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的 
+ AppName 保持一致，默认为 live。
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method integer getDelayInterval() 获取延播时间，单位：秒。
  * @method void setDelayInterval(integer $DelayInterval) 设置延播时间，单位：秒。
- * @method string getCreateTime() 获取创建时间，UTC时间。
+ * @method string getCreateTime() 获取创建时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
- * @method void setCreateTime(string $CreateTime) 设置创建时间，UTC时间。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
- * @method string getExpireTime() 获取过期时间，UTC时间。
+ * @method string getExpireTime() 获取过期时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
- * @method void setExpireTime(string $ExpireTime) 设置过期时间，UTC时间。
+ * @method void setExpireTime(string $ExpireTime) 设置过期时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
- * @method integer getStatus() 获取当前状态，
--1：已过期，
+ * @method integer getStatus() 获取当前状态:
+-1：已过期。
 1： 生效中。
- * @method void setStatus(integer $Status) 设置当前状态，
--1：已过期，
+ * @method void setStatus(integer $Status) 设置当前状态:
+-1：已过期。
 1： 生效中。
  */
 class DelayInfo extends AbstractModel
@@ -55,7 +57,8 @@ class DelayInfo extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @var string 推流路径，与推流和播放地址中的 
+ AppName 保持一致，默认为 live。
      */
     public $AppName;
 
@@ -70,39 +73,40 @@ class DelayInfo extends AbstractModel
     public $DelayInterval;
 
     /**
-     * @var string 创建时间，UTC时间。
+     * @var string 创建时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
      */
     public $CreateTime;
 
     /**
-     * @var string 过期时间，UTC时间。
+     * @var string 过期时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
      */
     public $ExpireTime;
 
     /**
-     * @var integer 当前状态，
--1：已过期，
+     * @var integer 当前状态:
+-1：已过期。
 1： 生效中。
      */
     public $Status;
 
     /**
      * @param string $DomainName 推流域名。
-     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @param string $AppName 推流路径，与推流和播放地址中的 
+ AppName 保持一致，默认为 live。
      * @param string $StreamName 流名称。
      * @param integer $DelayInterval 延播时间，单位：秒。
-     * @param string $CreateTime 创建时间，UTC时间。
+     * @param string $CreateTime 创建时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
-     * @param string $ExpireTime 过期时间，UTC时间。
+     * @param string $ExpireTime 过期时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
-     * @param integer $Status 当前状态，
--1：已过期，
+     * @param integer $Status 当前状态:
+-1：已过期。
 1： 生效中。
      */
     function __construct()

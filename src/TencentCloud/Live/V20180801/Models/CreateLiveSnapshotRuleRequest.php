@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomainName() 获取推流域名。
  * @method void setDomainName(string $DomainName) 设置推流域名。
- * @method integer getTemplateId() 获取模板Id。
- * @method void setTemplateId(integer $TemplateId) 设置模板Id。
- * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
- * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+ * @method integer getTemplateId() 获取模板 ID。
+ * @method void setTemplateId(integer $TemplateId) 设置模板 ID。
+ * @method string getAppName() 获取推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
+ * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
  * @method string getStreamName() 获取流名称。
 注：如果本参数设置为非空字符串，规则将只对此推流起作用。
  * @method void setStreamName(string $StreamName) 设置流名称。
@@ -39,12 +39,12 @@ class CreateLiveSnapshotRuleRequest extends AbstractModel
     public $DomainName;
 
     /**
-     * @var integer 模板Id。
+     * @var integer 模板 ID。
      */
     public $TemplateId;
 
     /**
-     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @var string 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
      */
     public $AppName;
 
@@ -56,8 +56,8 @@ class CreateLiveSnapshotRuleRequest extends AbstractModel
 
     /**
      * @param string $DomainName 推流域名。
-     * @param integer $TemplateId 模板Id。
-     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @param integer $TemplateId 模板 ID。
+     * @param string $AppName 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
      * @param string $StreamName 流名称。
 注：如果本参数设置为非空字符串，规则将只对此推流起作用。
      */

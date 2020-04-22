@@ -36,8 +36,8 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
  * @method void setStartTime(string $StartTime) 设置起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
 最长支持查询60天内数据。
- * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
- * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
+ * @method string getAppName() 获取推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。不支持模糊匹配。
+ * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。不支持模糊匹配。
  * @method integer getPageNum() 获取取得第几页。
 默认值：1。
  * @method void setPageNum(integer $PageNum) 设置取得第几页。
@@ -76,7 +76,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     public $StartTime;
 
     /**
-     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
+     * @var string 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。不支持模糊匹配。
      */
     public $AppName;
 
@@ -108,7 +108,7 @@ UTC 格式，例如：2016-06-30T19:00:00Z。
      * @param string $StartTime 起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
 最长支持查询60天内数据。
-     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
+     * @param string $AppName 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。不支持模糊匹配。
      * @param integer $PageNum 取得第几页。
 默认值：1。
      * @param integer $PageSize 分页大小。

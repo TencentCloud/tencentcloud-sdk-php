@@ -18,47 +18,46 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 水印信息
-
+ * 水印信息。
  *
- * @method integer getWatermarkId() 获取水印ID。
- * @method void setWatermarkId(integer $WatermarkId) 设置水印ID。
- * @method string getPictureUrl() 获取水印图片url。
- * @method void setPictureUrl(string $PictureUrl) 设置水印图片url。
- * @method integer getXPosition() 获取显示位置，X轴偏移。
- * @method void setXPosition(integer $XPosition) 设置显示位置，X轴偏移。
- * @method integer getYPosition() 获取显示位置，Y轴偏移。
- * @method void setYPosition(integer $YPosition) 设置显示位置，Y轴偏移。
+ * @method integer getWatermarkId() 获取水印 ID。
+ * @method void setWatermarkId(integer $WatermarkId) 设置水印 ID。
+ * @method string getPictureUrl() 获取水印图片 URL。
+ * @method void setPictureUrl(string $PictureUrl) 设置水印图片 URL。
+ * @method integer getXPosition() 获取显示位置，X 轴偏移。
+ * @method void setXPosition(integer $XPosition) 设置显示位置，X 轴偏移。
+ * @method integer getYPosition() 获取显示位置，Y 轴偏移。
+ * @method void setYPosition(integer $YPosition) 设置显示位置，Y 轴偏移。
  * @method string getWatermarkName() 获取水印名称。
  * @method void setWatermarkName(string $WatermarkName) 设置水印名称。
  * @method integer getStatus() 获取当前状态。0：未使用，1:使用中。
  * @method void setStatus(integer $Status) 设置当前状态。0：未使用，1:使用中。
  * @method string getCreateTime() 获取添加时间。
  * @method void setCreateTime(string $CreateTime) 设置添加时间。
- * @method integer getWidth() 获取水印宽
- * @method void setWidth(integer $Width) 设置水印宽
- * @method integer getHeight() 获取水印高
- * @method void setHeight(integer $Height) 设置水印高
+ * @method integer getWidth() 获取水印宽。
+ * @method void setWidth(integer $Width) 设置水印宽。
+ * @method integer getHeight() 获取水印高。
+ * @method void setHeight(integer $Height) 设置水印高。
  */
 class WatermarkInfo extends AbstractModel
 {
     /**
-     * @var integer 水印ID。
+     * @var integer 水印 ID。
      */
     public $WatermarkId;
 
     /**
-     * @var string 水印图片url。
+     * @var string 水印图片 URL。
      */
     public $PictureUrl;
 
     /**
-     * @var integer 显示位置，X轴偏移。
+     * @var integer 显示位置，X 轴偏移。
      */
     public $XPosition;
 
     /**
-     * @var integer 显示位置，Y轴偏移。
+     * @var integer 显示位置，Y 轴偏移。
      */
     public $YPosition;
 
@@ -78,25 +77,25 @@ class WatermarkInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer 水印宽
+     * @var integer 水印宽。
      */
     public $Width;
 
     /**
-     * @var integer 水印高
+     * @var integer 水印高。
      */
     public $Height;
 
     /**
-     * @param integer $WatermarkId 水印ID。
-     * @param string $PictureUrl 水印图片url。
-     * @param integer $XPosition 显示位置，X轴偏移。
-     * @param integer $YPosition 显示位置，Y轴偏移。
+     * @param integer $WatermarkId 水印 ID。
+     * @param string $PictureUrl 水印图片 URL。
+     * @param integer $XPosition 显示位置，X 轴偏移。
+     * @param integer $YPosition 显示位置，Y 轴偏移。
      * @param string $WatermarkName 水印名称。
      * @param integer $Status 当前状态。0：未使用，1:使用中。
      * @param string $CreateTime 添加时间。
-     * @param integer $Width 水印宽
-     * @param integer $Height 水印高
+     * @param integer $Width 水印宽。
+     * @param integer $Height 水印高。
      */
     function __construct()
     {

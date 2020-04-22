@@ -27,15 +27,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProxyNum() 获取通道组中通道数量
  * @method void setProxyNum(integer $ProxyNum) 设置通道组中通道数量
  * @method integer getStatus() 获取通道组状态：
-0 正常运行
-1 创建中
-4 销毁中
-11 迁移中
+0表示正常运行；
+1表示创建中；
+4表示销毁中；
+11表示迁移中；
  * @method void setStatus(integer $Status) 设置通道组状态：
-0 正常运行
-1 创建中
-4 销毁中
-11 迁移中
+0表示正常运行；
+1表示创建中；
+4表示销毁中；
+11表示迁移中；
  * @method string getOwnerUin() 获取归属Uin
  * @method void setOwnerUin(string $OwnerUin) 设置归属Uin
  * @method string getCreateUin() 获取创建Uin
@@ -78,10 +78,10 @@ class ProxyGroupDetail extends AbstractModel
 
     /**
      * @var integer 通道组状态：
-0 正常运行
-1 创建中
-4 销毁中
-11 迁移中
+0表示正常运行；
+1表示创建中；
+4表示销毁中；
+11表示迁移中；
      */
     public $Status;
 
@@ -137,10 +137,10 @@ class ProxyGroupDetail extends AbstractModel
      * @param integer $ProjectId 项目ID
      * @param integer $ProxyNum 通道组中通道数量
      * @param integer $Status 通道组状态：
-0 正常运行
-1 创建中
-4 销毁中
-11 迁移中
+0表示正常运行；
+1表示创建中；
+4表示销毁中；
+11表示迁移中；
      * @param string $OwnerUin 归属Uin
      * @param string $CreateUin 创建Uin
      * @param string $GroupName 通道名称

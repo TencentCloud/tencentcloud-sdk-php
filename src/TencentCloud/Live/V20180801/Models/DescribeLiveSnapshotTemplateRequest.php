@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveSnapshotTemplate请求参数结构体
  *
- * @method integer getTemplateId() 获取模板Id。
- * @method void setTemplateId(integer $TemplateId) 设置模板Id。
+ * @method integer getTemplateId() 获取模板 ID。
+调用 [CreateLiveSnapshotTemplate](/document/product/267/32624) 时返回的模板 ID。
+ * @method void setTemplateId(integer $TemplateId) 设置模板 ID。
+调用 [CreateLiveSnapshotTemplate](/document/product/267/32624) 时返回的模板 ID。
  */
 class DescribeLiveSnapshotTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 模板Id。
+     * @var integer 模板 ID。
+调用 [CreateLiveSnapshotTemplate](/document/product/267/32624) 时返回的模板 ID。
      */
     public $TemplateId;
 
     /**
-     * @param integer $TemplateId 模板Id。
+     * @param integer $TemplateId 模板 ID。
+调用 [CreateLiveSnapshotTemplate](/document/product/267/32624) 时返回的模板 ID。
      */
     function __construct()
     {

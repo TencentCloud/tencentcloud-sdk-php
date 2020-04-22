@@ -18,64 +18,64 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 录制模板参数
+ * 录制模板参数。
  *
  * @method integer getRecordInterval() 获取录制间隔。
-单位秒，默认值1800。
-取值范围:300-7200。
+单位秒，默认：1800。
+取值范围：300-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
  * @method void setRecordInterval(integer $RecordInterval) 设置录制间隔。
-单位秒，默认值1800。
-取值范围:300-7200。
+单位秒，默认：1800。
+取值范围：300-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
  * @method integer getStorageTime() 获取录制存储时长。
-单位秒，取值范围： 0-93312000。
-0表示永久存储。
+单位秒，取值范围： 0 - 93312000。
+0：表示永久存储。
  * @method void setStorageTime(integer $StorageTime) 设置录制存储时长。
-单位秒，取值范围： 0-93312000。
-0表示永久存储。
- * @method integer getEnable() 获取是否开启当前格式录制，0 否 1是。默认值0。
- * @method void setEnable(integer $Enable) 设置是否开启当前格式录制，0 否 1是。默认值0。
- * @method integer getVodSubAppId() 获取点播子应用ID。
- * @method void setVodSubAppId(integer $VodSubAppId) 设置点播子应用ID。
+单位秒，取值范围： 0 - 93312000。
+0：表示永久存储。
+ * @method integer getEnable() 获取是否开启当前格式录制，默认值为0，0：否， 1：是。
+ * @method void setEnable(integer $Enable) 设置是否开启当前格式录制，默认值为0，0：否， 1：是。
+ * @method integer getVodSubAppId() 获取点播子应用 ID。
+ * @method void setVodSubAppId(integer $VodSubAppId) 设置点播子应用 ID。
  */
 class RecordParam extends AbstractModel
 {
     /**
      * @var integer 录制间隔。
-单位秒，默认值1800。
-取值范围:300-7200。
+单位秒，默认：1800。
+取值范围：300-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      */
     public $RecordInterval;
 
     /**
      * @var integer 录制存储时长。
-单位秒，取值范围： 0-93312000。
-0表示永久存储。
+单位秒，取值范围： 0 - 93312000。
+0：表示永久存储。
      */
     public $StorageTime;
 
     /**
-     * @var integer 是否开启当前格式录制，0 否 1是。默认值0。
+     * @var integer 是否开启当前格式录制，默认值为0，0：否， 1：是。
      */
     public $Enable;
 
     /**
-     * @var integer 点播子应用ID。
+     * @var integer 点播子应用 ID。
      */
     public $VodSubAppId;
 
     /**
      * @param integer $RecordInterval 录制间隔。
-单位秒，默认值1800。
-取值范围:300-7200。
+单位秒，默认：1800。
+取值范围：300-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      * @param integer $StorageTime 录制存储时长。
-单位秒，取值范围： 0-93312000。
-0表示永久存储。
-     * @param integer $Enable 是否开启当前格式录制，0 否 1是。默认值0。
-     * @param integer $VodSubAppId 点播子应用ID。
+单位秒，取值范围： 0 - 93312000。
+0：表示永久存储。
+     * @param integer $Enable 是否开启当前格式录制，默认值为0，0：否， 1：是。
+     * @param integer $VodSubAppId 点播子应用 ID。
      */
     function __construct()
     {

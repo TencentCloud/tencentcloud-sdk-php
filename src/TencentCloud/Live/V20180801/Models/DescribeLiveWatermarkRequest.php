@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveWatermark请求参数结构体
  *
- * @method integer getWatermarkId() 获取水印ID。
- * @method void setWatermarkId(integer $WatermarkId) 设置水印ID。
+ * @method integer getWatermarkId() 获取水印 ID。
+ * @method void setWatermarkId(integer $WatermarkId) 设置水印 ID。
  */
 class DescribeLiveWatermarkRequest extends AbstractModel
 {
     /**
-     * @var integer 水印ID。
+     * @var integer 水印 ID。
      */
     public $WatermarkId;
 
     /**
-     * @param integer $WatermarkId 水印ID。
+     * @param integer $WatermarkId 水印 ID。
      */
     function __construct()
     {

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDefinition() 获取视频转码模板 ID。
  * @method void setDefinition(integer $Definition) 设置视频转码模板 ID。
  * @method array getWatermarkSet() 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMosaicSet() 获取马赛克列表，最大可支持 10 张。
  * @method void setMosaicSet(array $MosaicSet) 设置马赛克列表，最大可支持 10 张。
  */
@@ -38,7 +36,6 @@ class TranscodeTaskInput extends AbstractModel
 
     /**
      * @var array 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WatermarkSet;
 
@@ -50,7 +47,6 @@ class TranscodeTaskInput extends AbstractModel
     /**
      * @param integer $Definition 视频转码模板 ID。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MosaicSet 马赛克列表，最大可支持 10 张。
      */
     function __construct()

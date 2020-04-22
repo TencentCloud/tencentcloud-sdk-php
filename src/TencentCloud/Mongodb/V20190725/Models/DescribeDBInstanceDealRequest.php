@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cam\V20190116\Models;
+namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMFADeviceColl请求参数结构体
+ * DescribeDBInstanceDeal请求参数结构体
  *
- * @method integer getSubUin() 获取子用户Uin
- * @method void setSubUin(integer $SubUin) 设置子用户Uin
+ * @method string getDealId() 获取订单ID，通过CreateDBInstance等接口返回
+ * @method void setDealId(string $DealId) 设置订单ID，通过CreateDBInstance等接口返回
  */
-class DescribeMFADeviceCollRequest extends AbstractModel
+class DescribeDBInstanceDealRequest extends AbstractModel
 {
     /**
-     * @var integer 子用户Uin
+     * @var string 订单ID，通过CreateDBInstance等接口返回
      */
-    public $SubUin;
+    public $DealId;
 
     /**
-     * @param integer $SubUin 子用户Uin
+     * @param string $DealId 订单ID，通过CreateDBInstance等接口返回
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeMFADeviceCollRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubUin",$param) and $param["SubUin"] !== null) {
-            $this->SubUin = $param["SubUin"];
+        if (array_key_exists("DealId",$param) and $param["DealId"] !== null) {
+            $this->DealId = $param["DealId"];
         }
     }
 }

@@ -35,41 +35,41 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProtocol() 获取监听器协议， TCP
  * @method void setProtocol(string $Protocol) 设置监听器协议， TCP
  * @method integer getListenerStatus() 获取监听器状态，其中：
-0， 运行中；
-1， 创建中；
-2，销毁中；
-3，源站调整中；
-4，配置变更中。
+0表示运行中；
+1表示创建中；
+2表示销毁中；
+3表示源站调整中；
+4表示配置变更中。
  * @method void setListenerStatus(integer $ListenerStatus) 设置监听器状态，其中：
-0， 运行中；
-1， 创建中；
-2，销毁中；
-3，源站调整中；
-4，配置变更中。
+0表示运行中；
+1表示创建中；
+2表示销毁中；
+3表示源站调整中；
+4表示配置变更中。
  * @method string getScheduler() 获取监听器源站访问策略，其中：
-rr，轮询；
-wrr，加权轮询；
-lc，最小连接数。
+rr表示轮询；
+wrr表示加权轮询；
+lc表示最小连接数。
  * @method void setScheduler(string $Scheduler) 设置监听器源站访问策略，其中：
-rr，轮询；
-wrr，加权轮询；
-lc，最小连接数。
+rr表示轮询；
+wrr表示加权轮询；
+lc表示最小连接数。
  * @method integer getConnectTimeout() 获取源站健康检查响应超时时间，单位：秒
  * @method void setConnectTimeout(integer $ConnectTimeout) 设置源站健康检查响应超时时间，单位：秒
  * @method integer getDelayLoop() 获取源站健康检查时间间隔，单位：秒
  * @method void setDelayLoop(integer $DelayLoop) 设置源站健康检查时间间隔，单位：秒
  * @method integer getHealthCheck() 获取监听器是否开启健康检查，其中：
-0，关闭；
-1，开启
+0表示关闭；
+1表示开启
  * @method void setHealthCheck(integer $HealthCheck) 设置监听器是否开启健康检查，其中：
-0，关闭；
-1，开启
+0表示关闭；
+1表示开启
  * @method integer getBindStatus() 获取监听器绑定的源站状态， 其中：
-0，异常；
-1，正常。
+0表示异常；
+1表示正常。
  * @method void setBindStatus(integer $BindStatus) 设置监听器绑定的源站状态， 其中：
-0，异常；
-1，正常。
+0表示异常；
+1表示正常。
  * @method array getRealServerSet() 获取监听器绑定的源站信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealServerSet(array $RealServerSet) 设置监听器绑定的源站信息
@@ -112,19 +112,19 @@ class TCPListener extends AbstractModel
 
     /**
      * @var integer 监听器状态，其中：
-0， 运行中；
-1， 创建中；
-2，销毁中；
-3，源站调整中；
-4，配置变更中。
+0表示运行中；
+1表示创建中；
+2表示销毁中；
+3表示源站调整中；
+4表示配置变更中。
      */
     public $ListenerStatus;
 
     /**
      * @var string 监听器源站访问策略，其中：
-rr，轮询；
-wrr，加权轮询；
-lc，最小连接数。
+rr表示轮询；
+wrr表示加权轮询；
+lc表示最小连接数。
      */
     public $Scheduler;
 
@@ -140,15 +140,15 @@ lc，最小连接数。
 
     /**
      * @var integer 监听器是否开启健康检查，其中：
-0，关闭；
-1，开启
+0表示关闭；
+1表示开启
      */
     public $HealthCheck;
 
     /**
      * @var integer 监听器绑定的源站状态， 其中：
-0，异常；
-1，正常。
+0表示异常；
+1表示正常。
      */
     public $BindStatus;
 
@@ -172,23 +172,23 @@ lc，最小连接数。
      * @param string $RealServerType 监听器绑定源站类型
      * @param string $Protocol 监听器协议， TCP
      * @param integer $ListenerStatus 监听器状态，其中：
-0， 运行中；
-1， 创建中；
-2，销毁中；
-3，源站调整中；
-4，配置变更中。
+0表示运行中；
+1表示创建中；
+2表示销毁中；
+3表示源站调整中；
+4表示配置变更中。
      * @param string $Scheduler 监听器源站访问策略，其中：
-rr，轮询；
-wrr，加权轮询；
-lc，最小连接数。
+rr表示轮询；
+wrr表示加权轮询；
+lc表示最小连接数。
      * @param integer $ConnectTimeout 源站健康检查响应超时时间，单位：秒
      * @param integer $DelayLoop 源站健康检查时间间隔，单位：秒
      * @param integer $HealthCheck 监听器是否开启健康检查，其中：
-0，关闭；
-1，开启
+0表示关闭；
+1表示开启
      * @param integer $BindStatus 监听器绑定的源站状态， 其中：
-0，异常；
-1，正常。
+0表示异常；
+1表示正常。
      * @param array $RealServerSet 监听器绑定的源站信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 监听器创建时间，Unix时间戳

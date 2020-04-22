@@ -18,14 +18,18 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 每个域名的统计信息
+ * 每个域名的统计信息。
  *
- * @method string getMainlandOrOversea() 获取国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
- * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
- * @method float getBandwidth() 获取带宽，单位是Mbps。
- * @method void setBandwidth(float $Bandwidth) 设置带宽，单位是Mbps。
- * @method float getFlux() 获取流量，单位是MB。
- * @method void setFlux(float $Flux) 设置流量，单位是MB。
+ * @method string getMainlandOrOversea() 获取国内还是国外:
+Mainland: 表示国内数据。
+Oversea: 表示国外数据。
+ * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置国内还是国外:
+Mainland: 表示国内数据。
+Oversea: 表示国外数据。
+ * @method float getBandwidth() 获取带宽，单位: Mbps。
+ * @method void setBandwidth(float $Bandwidth) 设置带宽，单位: Mbps。
+ * @method float getFlux() 获取流量，单位: MB。
+ * @method void setFlux(float $Flux) 设置流量，单位: MB。
  * @method integer getOnline() 获取人数。
  * @method void setOnline(integer $Online) 设置人数。
  * @method integer getRequest() 获取请求数。
@@ -34,17 +38,19 @@ use TencentCloud\Common\AbstractModel;
 class DomainDetailInfo extends AbstractModel
 {
     /**
-     * @var string 国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
+     * @var string 国内还是国外:
+Mainland: 表示国内数据。
+Oversea: 表示国外数据。
      */
     public $MainlandOrOversea;
 
     /**
-     * @var float 带宽，单位是Mbps。
+     * @var float 带宽，单位: Mbps。
      */
     public $Bandwidth;
 
     /**
-     * @var float 流量，单位是MB。
+     * @var float 流量，单位: MB。
      */
     public $Flux;
 
@@ -59,9 +65,11 @@ class DomainDetailInfo extends AbstractModel
     public $Request;
 
     /**
-     * @param string $MainlandOrOversea 国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
-     * @param float $Bandwidth 带宽，单位是Mbps。
-     * @param float $Flux 流量，单位是MB。
+     * @param string $MainlandOrOversea 国内还是国外:
+Mainland: 表示国内数据。
+Oversea: 表示国外数据。
+     * @param float $Bandwidth 带宽，单位: Mbps。
+     * @param float $Flux 流量，单位: MB。
      * @param integer $Online 人数。
      * @param integer $Request 请求数。
      */

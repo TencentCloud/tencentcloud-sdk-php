@@ -18,73 +18,73 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 直播包信息
+ * 直播包信息。
  *
- * @method string getId() 获取包ID。
- * @method void setId(string $Id) 设置包ID。
+ * @method string getId() 获取包 ID。
+ * @method void setId(string $Id) 设置包 ID。
  * @method integer getTotal() 获取总量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
  * @method void setTotal(integer $Total) 设置总量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
  * @method integer getUsed() 获取使用量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
  * @method void setUsed(integer $Used) 设置使用量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
  * @method integer getLeft() 获取剩余量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
  * @method void setLeft(integer $Left) 设置剩余量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
  * @method string getBuyTime() 获取购买时间。
  * @method void setBuyTime(string $BuyTime) 设置购买时间。
  * @method string getExpireTime() 获取过期时间。
  * @method void setExpireTime(string $ExpireTime) 设置过期时间。
- * @method integer getType() 获取包类型，可选值：
-0：流量包；
-1：普通转码包；
-2：极速高清包。
- * @method void setType(integer $Type) 设置包类型，可选值：
-0：流量包；
-1：普通转码包；
-2：极速高清包。
- * @method integer getStatus() 获取包状态，可选值：
-0：未使用；
-1：使用中；
-2：已过期。
- * @method void setStatus(integer $Status) 设置包状态，可选值：
-0：未使用；
-1：使用中；
-2：已过期。
+ * @method integer getType() 获取包类型，可选值:
+0: 流量包。
+1: 普通转码包。
+2: 极速高清包。
+ * @method void setType(integer $Type) 设置包类型，可选值:
+0: 流量包。
+1: 普通转码包。
+2: 极速高清包。
+ * @method integer getStatus() 获取包状态，可选值:
+0: 未使用。
+1: 使用中。
+2: 已过期。
+ * @method void setStatus(integer $Status) 设置包状态，可选值:
+0: 未使用。
+1: 使用中。
+2: 已过期。
  */
 class LivePackageInfo extends AbstractModel
 {
     /**
-     * @var string 包ID。
+     * @var string 包 ID。
      */
     public $Id;
 
     /**
      * @var integer 总量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
      */
     public $Total;
 
     /**
      * @var integer 使用量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
      */
     public $Used;
 
     /**
      * @var integer 剩余量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
      */
     public $Left;
@@ -100,42 +100,42 @@ class LivePackageInfo extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @var integer 包类型，可选值：
-0：流量包；
-1：普通转码包；
-2：极速高清包。
+     * @var integer 包类型，可选值:
+0: 流量包。
+1: 普通转码包。
+2: 极速高清包。
      */
     public $Type;
 
     /**
-     * @var integer 包状态，可选值：
-0：未使用；
-1：使用中；
-2：已过期。
+     * @var integer 包状态，可选值:
+0: 未使用。
+1: 使用中。
+2: 已过期。
      */
     public $Status;
 
     /**
-     * @param string $Id 包ID。
+     * @param string $Id 包 ID。
      * @param integer $Total 总量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
      * @param integer $Used 使用量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
      * @param integer $Left 剩余量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
      * @param string $BuyTime 购买时间。
      * @param string $ExpireTime 过期时间。
-     * @param integer $Type 包类型，可选值：
-0：流量包；
-1：普通转码包；
-2：极速高清包。
-     * @param integer $Status 包状态，可选值：
-0：未使用；
-1：使用中；
-2：已过期。
+     * @param integer $Type 包类型，可选值:
+0: 流量包。
+1: 普通转码包。
+2: 极速高清包。
+     * @param integer $Status 包状态，可选值:
+0: 未使用。
+1: 使用中。
+2: 已过期。
      */
     function __construct()
     {

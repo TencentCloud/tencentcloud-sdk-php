@@ -18,33 +18,33 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 证书信息
+ * 证书信息。
  *
- * @method integer getCertId() 获取证书Id。
- * @method void setCertId(integer $CertId) 设置证书Id。
+ * @method integer getCertId() 获取证书 ID。
+ * @method void setCertId(integer $CertId) 设置证书 ID。
  * @method string getCertName() 获取证书名称。
  * @method void setCertName(string $CertName) 设置证书名称。
  * @method string getDescription() 获取描述信息。
  * @method void setDescription(string $Description) 设置描述信息。
- * @method string getCreateTime() 获取创建时间，UTC格式。
- * @method void setCreateTime(string $CreateTime) 设置创建时间，UTC格式。
+ * @method string getCreateTime() 获取创建时间，UTC 格式。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间，UTC 格式。
  * @method string getHttpsCrt() 获取证书内容。
  * @method void setHttpsCrt(string $HttpsCrt) 设置证书内容。
- * @method integer getCertType() 获取证书类型。
-0：腾讯云托管证书
+ * @method integer getCertType() 获取证书类型:
+0：腾讯云托管证书。
 1：用户添加证书。
- * @method void setCertType(integer $CertType) 设置证书类型。
-0：腾讯云托管证书
+ * @method void setCertType(integer $CertType) 设置证书类型:
+0：腾讯云托管证书。
 1：用户添加证书。
- * @method string getCertExpireTime() 获取证书过期时间，UTC格式。
- * @method void setCertExpireTime(string $CertExpireTime) 设置证书过期时间，UTC格式。
+ * @method string getCertExpireTime() 获取证书过期时间，UTC 格式。
+ * @method void setCertExpireTime(string $CertExpireTime) 设置证书过期时间，UTC 格式。
  * @method array getDomainList() 获取使用此证书的域名列表。
  * @method void setDomainList(array $DomainList) 设置使用此证书的域名列表。
  */
 class CertInfo extends AbstractModel
 {
     /**
-     * @var integer 证书Id。
+     * @var integer 证书 ID。
      */
     public $CertId;
 
@@ -59,7 +59,7 @@ class CertInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var string 创建时间，UTC格式。
+     * @var string 创建时间，UTC 格式。
      */
     public $CreateTime;
 
@@ -69,14 +69,14 @@ class CertInfo extends AbstractModel
     public $HttpsCrt;
 
     /**
-     * @var integer 证书类型。
-0：腾讯云托管证书
+     * @var integer 证书类型:
+0：腾讯云托管证书。
 1：用户添加证书。
      */
     public $CertType;
 
     /**
-     * @var string 证书过期时间，UTC格式。
+     * @var string 证书过期时间，UTC 格式。
      */
     public $CertExpireTime;
 
@@ -86,15 +86,15 @@ class CertInfo extends AbstractModel
     public $DomainList;
 
     /**
-     * @param integer $CertId 证书Id。
+     * @param integer $CertId 证书 ID。
      * @param string $CertName 证书名称。
      * @param string $Description 描述信息。
-     * @param string $CreateTime 创建时间，UTC格式。
+     * @param string $CreateTime 创建时间，UTC 格式。
      * @param string $HttpsCrt 证书内容。
-     * @param integer $CertType 证书类型。
-0：腾讯云托管证书
+     * @param integer $CertType 证书类型:
+0：腾讯云托管证书。
 1：用户添加证书。
-     * @param string $CertExpireTime 证书过期时间，UTC格式。
+     * @param string $CertExpireTime 证书过期时间，UTC 格式。
      * @param array $DomainList 使用此证书的域名列表。
      */
     function __construct()

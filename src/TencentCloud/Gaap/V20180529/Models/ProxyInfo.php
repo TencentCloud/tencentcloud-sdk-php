@@ -39,29 +39,29 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getConcurrent() 获取并发，单位：个/秒。
  * @method void setConcurrent(integer $Concurrent) 设置并发，单位：个/秒。
  * @method string getStatus() 获取通道状态。其中：
-RUNNING，运行中；
-CREATING，创建中；
-DESTROYING，销毁中；
-OPENING，开启中；
-CLOSING，关闭中；
-CLOSED，已关闭；
-ADJUSTING，配置变更中；
-ISOLATING，隔离中（欠费触发）；
-ISOLATED，已隔离（欠费触发）；
-CLONING，复制中；
-UNKNOWN，未知状态。
+RUNNING表示运行中；
+CREATING表示创建中；
+DESTROYING表示销毁中；
+OPENING表示开启中；
+CLOSING表示关闭中；
+CLOSED表示已关闭；
+ADJUSTING表示配置变更中；
+ISOLATING表示隔离中（欠费触发）；
+ISOLATED表示已隔离（欠费触发）；
+CLONING表示复制中；
+UNKNOWN表示未知状态。
  * @method void setStatus(string $Status) 设置通道状态。其中：
-RUNNING，运行中；
-CREATING，创建中；
-DESTROYING，销毁中；
-OPENING，开启中；
-CLOSING，关闭中；
-CLOSED，已关闭；
-ADJUSTING，配置变更中；
-ISOLATING，隔离中（欠费触发）；
-ISOLATED，已隔离（欠费触发）；
-CLONING，复制中；
-UNKNOWN，未知状态。
+RUNNING表示运行中；
+CREATING表示创建中；
+DESTROYING表示销毁中；
+OPENING表示开启中；
+CLOSING表示关闭中；
+CLOSED表示已关闭；
+ADJUSTING表示配置变更中；
+ISOLATING表示隔离中（欠费触发）；
+ISOLATED表示已隔离（欠费触发）；
+CLONING表示复制中；
+UNKNOWN表示未知状态。
  * @method string getDomain() 获取接入域名。
  * @method void setDomain(string $Domain) 设置接入域名。
  * @method string getIP() 获取接入IP。
@@ -152,17 +152,17 @@ class ProxyInfo extends AbstractModel
 
     /**
      * @var string 通道状态。其中：
-RUNNING，运行中；
-CREATING，创建中；
-DESTROYING，销毁中；
-OPENING，开启中；
-CLOSING，关闭中；
-CLOSED，已关闭；
-ADJUSTING，配置变更中；
-ISOLATING，隔离中（欠费触发）；
-ISOLATED，已隔离（欠费触发）；
-CLONING，复制中；
-UNKNOWN，未知状态。
+RUNNING表示运行中；
+CREATING表示创建中；
+DESTROYING表示销毁中；
+OPENING表示开启中；
+CLOSING表示关闭中；
+CLOSED表示已关闭；
+ADJUSTING表示配置变更中；
+ISOLATING表示隔离中（欠费触发）；
+ISOLATED表示已隔离（欠费触发）；
+CLONING表示复制中；
+UNKNOWN表示未知状态。
      */
     public $Status;
 
@@ -255,17 +255,17 @@ UNKNOWN，未知状态。
      * @param integer $Bandwidth 带宽，单位：Mbps。
      * @param integer $Concurrent 并发，单位：个/秒。
      * @param string $Status 通道状态。其中：
-RUNNING，运行中；
-CREATING，创建中；
-DESTROYING，销毁中；
-OPENING，开启中；
-CLOSING，关闭中；
-CLOSED，已关闭；
-ADJUSTING，配置变更中；
-ISOLATING，隔离中（欠费触发）；
-ISOLATED，已隔离（欠费触发）；
-CLONING，复制中；
-UNKNOWN，未知状态。
+RUNNING表示运行中；
+CREATING表示创建中；
+DESTROYING表示销毁中；
+OPENING表示开启中；
+CLOSING表示关闭中；
+CLOSED表示已关闭；
+ADJUSTING表示配置变更中；
+ISOLATING表示隔离中（欠费触发）；
+ISOLATED表示已隔离（欠费触发）；
+CLONING表示复制中；
+UNKNOWN表示未知状态。
      * @param string $Domain 接入域名。
      * @param string $IP 接入IP。
      * @param string $Version 通道版本号：1.0，2.0，3.0。

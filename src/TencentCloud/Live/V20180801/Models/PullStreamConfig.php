@@ -18,53 +18,59 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 拉流配置
+ * 拉流配置。
  *
- * @method string getConfigId() 获取拉流配置Id。
- * @method void setConfigId(string $ConfigId) 设置拉流配置Id。
- * @method string getFromUrl() 获取源Url。
- * @method void setFromUrl(string $FromUrl) 设置源Url。
- * @method string getToUrl() 获取目的Url。
- * @method void setToUrl(string $ToUrl) 设置目的Url。
+ * @method string getConfigId() 获取拉流配置 ID。
+ * @method void setConfigId(string $ConfigId) 设置拉流配置 ID。
+ * @method string getFromUrl() 获取源 URL。
+ * @method void setFromUrl(string $FromUrl) 设置源 URL。
+ * @method string getToUrl() 获取目的 URL。
+ * @method void setToUrl(string $ToUrl) 设置目的 URL。
  * @method string getAreaName() 获取区域名。
  * @method void setAreaName(string $AreaName) 设置区域名。
  * @method string getIspName() 获取运营商名。
  * @method void setIspName(string $IspName) 设置运营商名。
  * @method string getStartTime() 获取开始时间。
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如: 2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setStartTime(string $StartTime) 设置开始时间。
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如: 2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getEndTime() 获取结束时间。
 
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setEndTime(string $EndTime) 设置结束时间。
 
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getStatus() 获取0无效，1初始状态，2正在运行，3拉起失败，4暂停。
- * @method void setStatus(string $Status) 设置0无效，1初始状态，2正在运行，3拉起失败，4暂停。
+ * @method string getStatus() 获取状态:
+0: 无效。
+1: 初始状态。
+2: 正在运行。
+3: 拉起失败。
+4: 暂停。
+ * @method void setStatus(string $Status) 设置状态:
+0: 无效。
+1: 初始状态。
+2: 正在运行。
+3: 拉起失败。
+4: 暂停。
  */
 class PullStreamConfig extends AbstractModel
 {
     /**
-     * @var string 拉流配置Id。
+     * @var string 拉流配置 ID。
      */
     public $ConfigId;
 
     /**
-     * @var string 源Url。
+     * @var string 源 URL。
      */
     public $FromUrl;
 
     /**
-     * @var string 目的Url。
+     * @var string 目的 URL。
      */
     public $ToUrl;
 
@@ -80,8 +86,7 @@ class PullStreamConfig extends AbstractModel
 
     /**
      * @var string 开始时间。
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如: 2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $StartTime;
@@ -89,33 +94,40 @@ UTC格式时间，
     /**
      * @var string 结束时间。
 
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $EndTime;
 
     /**
-     * @var string 0无效，1初始状态，2正在运行，3拉起失败，4暂停。
+     * @var string 状态:
+0: 无效。
+1: 初始状态。
+2: 正在运行。
+3: 拉起失败。
+4: 暂停。
      */
     public $Status;
 
     /**
-     * @param string $ConfigId 拉流配置Id。
-     * @param string $FromUrl 源Url。
-     * @param string $ToUrl 目的Url。
+     * @param string $ConfigId 拉流配置 ID。
+     * @param string $FromUrl 源 URL。
+     * @param string $ToUrl 目的 URL。
      * @param string $AreaName 区域名。
      * @param string $IspName 运营商名。
      * @param string $StartTime 开始时间。
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如: 2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $EndTime 结束时间。
 
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $Status 0无效，1初始状态，2正在运行，3拉起失败，4暂停。
+     * @param string $Status 状态:
+0: 无效。
+1: 初始状态。
+2: 正在运行。
+3: 拉起失败。
+4: 暂停。
      */
     function __construct()
     {

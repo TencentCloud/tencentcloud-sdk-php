@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLiveRecordTemplate请求参数结构体
  *
- * @method string getTemplateName() 获取模板名。非空的字符串
- * @method void setTemplateName(string $TemplateName) 设置模板名。非空的字符串
+ * @method string getTemplateName() 获取模板名。仅支持中文、英文、数字、_、-。
+ * @method void setTemplateName(string $TemplateName) 设置模板名。仅支持中文、英文、数字、_、-。
  * @method string getDescription() 获取描述信息。
  * @method void setDescription(string $Description) 设置描述信息。
  * @method RecordParam getFlvParam() 获取Flv录制参数，开启Flv录制时设置。
@@ -32,9 +32,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMp4Param(RecordParam $Mp4Param) 设置Mp4录制参数，开启Mp4录制时设置。
  * @method RecordParam getAacParam() 获取Aac录制参数，开启Aac录制时设置。
  * @method void setAacParam(RecordParam $AacParam) 设置Aac录制参数，开启Aac录制时设置。
- * @method integer getIsDelayLive() 获取0：普通直播，
+ * @method integer getIsDelayLive() 获取直播类型，默认 0。
+0：普通直播，
 1：慢直播。
- * @method void setIsDelayLive(integer $IsDelayLive) 设置0：普通直播，
+ * @method void setIsDelayLive(integer $IsDelayLive) 设置直播类型，默认 0。
+0：普通直播，
 1：慢直播。
  * @method HlsSpecialParam getHlsSpecialParam() 获取HLS专属录制参数。
  * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) 设置HLS专属录制参数。
@@ -44,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateLiveRecordTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 模板名。非空的字符串
+     * @var string 模板名。仅支持中文、英文、数字、_、-。
      */
     public $TemplateName;
 
@@ -74,7 +76,8 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
     public $AacParam;
 
     /**
-     * @var integer 0：普通直播，
+     * @var integer 直播类型，默认 0。
+0：普通直播，
 1：慢直播。
      */
     public $IsDelayLive;
@@ -90,13 +93,14 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
     public $Mp3Param;
 
     /**
-     * @param string $TemplateName 模板名。非空的字符串
+     * @param string $TemplateName 模板名。仅支持中文、英文、数字、_、-。
      * @param string $Description 描述信息。
      * @param RecordParam $FlvParam Flv录制参数，开启Flv录制时设置。
      * @param RecordParam $HlsParam Hls录制参数，开启hls录制时设置。
      * @param RecordParam $Mp4Param Mp4录制参数，开启Mp4录制时设置。
      * @param RecordParam $AacParam Aac录制参数，开启Aac录制时设置。
-     * @param integer $IsDelayLive 0：普通直播，
+     * @param integer $IsDelayLive 直播类型，默认 0。
+0：普通直播，
 1：慢直播。
      * @param HlsSpecialParam $HlsSpecialParam HLS专属录制参数。
      * @param RecordParam $Mp3Param Mp3录制参数，开启Mp3录制时设置。

@@ -18,31 +18,37 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 播放汇总统计信息
+ * 播放汇总统计信息。
  *
- * @method string getName() 获取域名或流id。
- * @method void setName(string $Name) 设置域名或流id。
- * @method float getAvgFluxPerSecond() 获取平均下载速度，单位是MB/s，计算公式是每分钟的下载速度求平均值。
- * @method void setAvgFluxPerSecond(float $AvgFluxPerSecond) 设置平均下载速度，单位是MB/s，计算公式是每分钟的下载速度求平均值。
- * @method float getTotalFlux() 获取总流量，单位是MB。
- * @method void setTotalFlux(float $TotalFlux) 设置总流量，单位是MB。
+ * @method string getName() 获取域名或流 ID。
+ * @method void setName(string $Name) 设置域名或流 ID。
+ * @method float getAvgFluxPerSecond() 获取平均下载速度，
+单位: MB/s。
+计算公式: 每分钟的下载速度求平均值。
+ * @method void setAvgFluxPerSecond(float $AvgFluxPerSecond) 设置平均下载速度，
+单位: MB/s。
+计算公式: 每分钟的下载速度求平均值。
+ * @method float getTotalFlux() 获取总流量，单位: MB。
+ * @method void setTotalFlux(float $TotalFlux) 设置总流量，单位: MB。
  * @method integer getTotalRequest() 获取总请求数。
  * @method void setTotalRequest(integer $TotalRequest) 设置总请求数。
  */
 class PlaySumStatInfo extends AbstractModel
 {
     /**
-     * @var string 域名或流id。
+     * @var string 域名或流 ID。
      */
     public $Name;
 
     /**
-     * @var float 平均下载速度，单位是MB/s，计算公式是每分钟的下载速度求平均值。
+     * @var float 平均下载速度，
+单位: MB/s。
+计算公式: 每分钟的下载速度求平均值。
      */
     public $AvgFluxPerSecond;
 
     /**
-     * @var float 总流量，单位是MB。
+     * @var float 总流量，单位: MB。
      */
     public $TotalFlux;
 
@@ -52,9 +58,11 @@ class PlaySumStatInfo extends AbstractModel
     public $TotalRequest;
 
     /**
-     * @param string $Name 域名或流id。
-     * @param float $AvgFluxPerSecond 平均下载速度，单位是MB/s，计算公式是每分钟的下载速度求平均值。
-     * @param float $TotalFlux 总流量，单位是MB。
+     * @param string $Name 域名或流 ID。
+     * @param float $AvgFluxPerSecond 平均下载速度，
+单位: MB/s。
+计算公式: 每分钟的下载速度求平均值。
+     * @param float $TotalFlux 总流量，单位: MB。
      * @param integer $TotalRequest 总请求数。
      */
     function __construct()

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePullStreamConfigs请求参数结构体
  *
- * @method string getConfigId() 获取配置id。
- * @method void setConfigId(string $ConfigId) 设置配置id。
+ * @method string getConfigId() 获取配置 ID。
+ * @method void setConfigId(string $ConfigId) 设置配置 ID。
  */
 class DescribePullStreamConfigsRequest extends AbstractModel
 {
     /**
-     * @var string 配置id。
+     * @var string 配置 ID。
      */
     public $ConfigId;
 
     /**
-     * @param string $ConfigId 配置id。
+     * @param string $ConfigId 配置 ID。
      */
     function __construct()
     {

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveStreamOnlineList请求参数结构体
  *
- * @method string getDomainName() 获取推流域名。多域名用户需要填写DomainName。
- * @method void setDomainName(string $DomainName) 设置推流域名。多域名用户需要填写DomainName。
- * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。多路径用户需要填写AppName。
- * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。多路径用户需要填写AppName。
+ * @method string getDomainName() 获取推流域名。多域名用户需要填写 DomainName。
+ * @method void setDomainName(string $DomainName) 设置推流域名。多域名用户需要填写 DomainName。
+ * @method string getAppName() 获取推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。多路径用户需要填写 AppName。
+ * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。多路径用户需要填写 AppName。
  * @method integer getPageNum() 获取取得第几页，默认1。
  * @method void setPageNum(integer $PageNum) 设置取得第几页，默认1。
  * @method integer getPageSize() 获取每页大小，最大100。 
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLiveStreamOnlineListRequest extends AbstractModel
 {
     /**
-     * @var string 推流域名。多域名用户需要填写DomainName。
+     * @var string 推流域名。多域名用户需要填写 DomainName。
      */
     public $DomainName;
 
     /**
-     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。多路径用户需要填写AppName。
+     * @var string 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。多路径用户需要填写 AppName。
      */
     public $AppName;
 
@@ -65,8 +65,8 @@ class DescribeLiveStreamOnlineListRequest extends AbstractModel
     public $StreamName;
 
     /**
-     * @param string $DomainName 推流域名。多域名用户需要填写DomainName。
-     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。多路径用户需要填写AppName。
+     * @param string $DomainName 推流域名。多域名用户需要填写 DomainName。
+     * @param string $AppName 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。多路径用户需要填写 AppName。
      * @param integer $PageNum 取得第几页，默认1。
      * @param integer $PageSize 每页大小，最大100。 
 取值：10~100之间的任意整数。

@@ -20,102 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLiveCallbackTemplate请求参数结构体
  *
- * @method string getTemplateName() 获取模板名称，非空的字符串。
+ * @method string getTemplateName() 获取模板名称。
 长度上限：255字节。
- * @method void setTemplateName(string $TemplateName) 设置模板名称，非空的字符串。
+仅支持中文、英文、数字、_、-。
+ * @method void setTemplateName(string $TemplateName) 设置模板名称。
 长度上限：255字节。
+仅支持中文、英文、数字、_、-。
  * @method string getDescription() 获取描述信息。
 长度上限：1024字节。
+仅支持中文、英文、数字、_、-。
  * @method void setDescription(string $Description) 设置描述信息。
 长度上限：1024字节。
- * @method string getStreamBeginNotifyUrl() 获取开播回调URL，
+仅支持中文、英文、数字、_、-。
+ * @method string getStreamBeginNotifyUrl() 获取开播回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
- * @method void setStreamBeginNotifyUrl(string $StreamBeginNotifyUrl) 设置开播回调URL，
+ * @method void setStreamBeginNotifyUrl(string $StreamBeginNotifyUrl) 设置开播回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
- * @method string getStreamEndNotifyUrl() 获取断流回调URL，
+ * @method string getStreamEndNotifyUrl() 获取断流回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
- * @method void setStreamEndNotifyUrl(string $StreamEndNotifyUrl) 设置断流回调URL，
+ * @method void setStreamEndNotifyUrl(string $StreamEndNotifyUrl) 设置断流回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
- * @method string getRecordNotifyUrl() 获取录制回调URL，
+ * @method string getRecordNotifyUrl() 获取录制回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
- * @method void setRecordNotifyUrl(string $RecordNotifyUrl) 设置录制回调URL，
+ * @method void setRecordNotifyUrl(string $RecordNotifyUrl) 设置录制回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
- * @method string getSnapshotNotifyUrl() 获取截图回调URL，
+ * @method string getSnapshotNotifyUrl() 获取截图回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
- * @method void setSnapshotNotifyUrl(string $SnapshotNotifyUrl) 设置截图回调URL，
+ * @method void setSnapshotNotifyUrl(string $SnapshotNotifyUrl) 设置截图回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
- * @method string getPornCensorshipNotifyUrl() 获取鉴黄回调URL，
+ * @method string getPornCensorshipNotifyUrl() 获取鉴黄回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32741)。
- * @method void setPornCensorshipNotifyUrl(string $PornCensorshipNotifyUrl) 设置鉴黄回调URL，
+ * @method void setPornCensorshipNotifyUrl(string $PornCensorshipNotifyUrl) 设置鉴黄回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32741)。
- * @method string getCallbackKey() 获取回调key，回调URL公用，鉴权回调说明详见回调格式文档
- * @method void setCallbackKey(string $CallbackKey) 设置回调key，回调URL公用，鉴权回调说明详见回调格式文档
+ * @method string getCallbackKey() 获取回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
+[事件消息通知](/document/product/267/32744)。
+ * @method void setCallbackKey(string $CallbackKey) 设置回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
+[事件消息通知](/document/product/267/32744)。
  */
 class CreateLiveCallbackTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 模板名称，非空的字符串。
+     * @var string 模板名称。
 长度上限：255字节。
+仅支持中文、英文、数字、_、-。
      */
     public $TemplateName;
 
     /**
      * @var string 描述信息。
 长度上限：1024字节。
+仅支持中文、英文、数字、_、-。
      */
     public $Description;
 
     /**
-     * @var string 开播回调URL，
+     * @var string 开播回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public $StreamBeginNotifyUrl;
 
     /**
-     * @var string 断流回调URL，
+     * @var string 断流回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public $StreamEndNotifyUrl;
 
     /**
-     * @var string 录制回调URL，
+     * @var string 录制回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public $RecordNotifyUrl;
 
     /**
-     * @var string 截图回调URL，
+     * @var string 截图回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public $SnapshotNotifyUrl;
 
     /**
-     * @var string 鉴黄回调URL，
+     * @var string 鉴黄回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32741)。
      */
     public $PornCensorshipNotifyUrl;
 
     /**
-     * @var string 回调key，回调URL公用，鉴权回调说明详见回调格式文档
+     * @var string 回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
+[事件消息通知](/document/product/267/32744)。
      */
     public $CallbackKey;
 
     /**
-     * @param string $TemplateName 模板名称，非空的字符串。
+     * @param string $TemplateName 模板名称。
 长度上限：255字节。
+仅支持中文、英文、数字、_、-。
      * @param string $Description 描述信息。
 长度上限：1024字节。
-     * @param string $StreamBeginNotifyUrl 开播回调URL，
+仅支持中文、英文、数字、_、-。
+     * @param string $StreamBeginNotifyUrl 开播回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
-     * @param string $StreamEndNotifyUrl 断流回调URL，
+     * @param string $StreamEndNotifyUrl 断流回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
-     * @param string $RecordNotifyUrl 录制回调URL，
+     * @param string $RecordNotifyUrl 录制回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
-     * @param string $SnapshotNotifyUrl 截图回调URL，
+     * @param string $SnapshotNotifyUrl 截图回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
-     * @param string $PornCensorshipNotifyUrl 鉴黄回调URL，
+     * @param string $PornCensorshipNotifyUrl 鉴黄回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32741)。
-     * @param string $CallbackKey 回调key，回调URL公用，鉴权回调说明详见回调格式文档
+     * @param string $CallbackKey 回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
+[事件消息通知](/document/product/267/32744)。
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomainName() 获取推流域名。
  * @method void setDomainName(string $DomainName) 设置推流域名。
- * @method string getAppName() 获取推流路径。
- * @method void setAppName(string $AppName) 设置推流路径。
+ * @method string getAppName() 获取推流路径。与推流和播放地址中的 AppName 保持一致，默认为live。
+ * @method void setAppName(string $AppName) 设置推流路径。与推流和播放地址中的 AppName 保持一致，默认为live。
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
  */
@@ -35,7 +35,7 @@ class DeleteLiveWatermarkRuleRequest extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string 推流路径。
+     * @var string 推流路径。与推流和播放地址中的 AppName 保持一致，默认为live。
      */
     public $AppName;
 
@@ -46,7 +46,7 @@ class DeleteLiveWatermarkRuleRequest extends AbstractModel
 
     /**
      * @param string $DomainName 推流域名。
-     * @param string $AppName 推流路径。
+     * @param string $AppName 推流路径。与推流和播放地址中的 AppName 保持一致，默认为live。
      * @param string $StreamName 流名称。
      */
     function __construct()

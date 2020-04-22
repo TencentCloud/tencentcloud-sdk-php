@@ -18,38 +18,34 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 转码详细信息
+ * 转码详细信息。
  *
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
- * @method string getStartTime() 获取开始时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
- * @method void setStartTime(string $StartTime) 设置开始时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
- * @method string getEndTime() 获取结束时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
- * @method void setEndTime(string $EndTime) 设置结束时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
+ * @method string getStartTime() 获取开始时间（北京时间），格式：yyyy-mm-dd HH:MM。
+ * @method void setStartTime(string $StartTime) 设置开始时间（北京时间），格式：yyyy-mm-dd HH:MM。
+ * @method string getEndTime() 获取结束时间（北京时间），格式：yyyy-mm-dd HH:MM。
+ * @method void setEndTime(string $EndTime) 设置结束时间（北京时间），格式：yyyy-mm-dd HH:MM。
  * @method integer getDuration() 获取转码时长，单位：分钟。
 注意：因推流过程中可能有中断重推情况，此处时长为真实转码时长累加值，并非结束时间和开始时间的间隔。
  * @method void setDuration(integer $Duration) 设置转码时长，单位：分钟。
 注意：因推流过程中可能有中断重推情况，此处时长为真实转码时长累加值，并非结束时间和开始时间的间隔。
  * @method string getModuleCodec() 获取编码方式，带模块，
 示例：
-liveprocessor_H264 =》直播转码-H264，
-liveprocessor_H265 =》 直播转码-H265，
-topspeed_H264 =》极速高清-H264，
-topspeed_H265 =》极速高清-H265。
+liveprocessor_H264：直播转码-H264，
+liveprocessor_H265： 直播转码-H265，
+topspeed_H264：极速高清-H264，
+topspeed_H265：极速高清-H265。
  * @method void setModuleCodec(string $ModuleCodec) 设置编码方式，带模块，
 示例：
-liveprocessor_H264 =》直播转码-H264，
-liveprocessor_H265 =》 直播转码-H265，
-topspeed_H264 =》极速高清-H264，
-topspeed_H265 =》极速高清-H265。
+liveprocessor_H264：直播转码-H264，
+liveprocessor_H265： 直播转码-H265，
+topspeed_H264：极速高清-H264，
+topspeed_H265：极速高清-H265。
  * @method integer getBitrate() 获取码率。
  * @method void setBitrate(integer $Bitrate) 设置码率。
- * @method string getType() 获取类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
- * @method void setType(string $Type) 设置类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
+ * @method string getType() 获取类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
+ * @method void setType(string $Type) 设置类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
  * @method string getPushDomain() 获取推流域名。
  * @method void setPushDomain(string $PushDomain) 设置推流域名。
  * @method string getResolution() 获取分辨率。
@@ -63,14 +59,12 @@ class TranscodeDetailInfo extends AbstractModel
     public $StreamName;
 
     /**
-     * @var string 开始时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
+     * @var string 开始时间（北京时间），格式：yyyy-mm-dd HH:MM。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
+     * @var string 结束时间（北京时间），格式：yyyy-mm-dd HH:MM。
      */
     public $EndTime;
 
@@ -83,10 +77,10 @@ class TranscodeDetailInfo extends AbstractModel
     /**
      * @var string 编码方式，带模块，
 示例：
-liveprocessor_H264 =》直播转码-H264，
-liveprocessor_H265 =》 直播转码-H265，
-topspeed_H264 =》极速高清-H264，
-topspeed_H265 =》极速高清-H265。
+liveprocessor_H264：直播转码-H264，
+liveprocessor_H265： 直播转码-H265，
+topspeed_H264：极速高清-H264，
+topspeed_H265：极速高清-H265。
      */
     public $ModuleCodec;
 
@@ -96,7 +90,7 @@ topspeed_H265 =》极速高清-H265。
     public $Bitrate;
 
     /**
-     * @var string 类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
+     * @var string 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
      */
     public $Type;
 
@@ -112,20 +106,18 @@ topspeed_H265 =》极速高清-H265。
 
     /**
      * @param string $StreamName 流名称。
-     * @param string $StartTime 开始时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
-     * @param string $EndTime 结束时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
+     * @param string $StartTime 开始时间（北京时间），格式：yyyy-mm-dd HH:MM。
+     * @param string $EndTime 结束时间（北京时间），格式：yyyy-mm-dd HH:MM。
      * @param integer $Duration 转码时长，单位：分钟。
 注意：因推流过程中可能有中断重推情况，此处时长为真实转码时长累加值，并非结束时间和开始时间的间隔。
      * @param string $ModuleCodec 编码方式，带模块，
 示例：
-liveprocessor_H264 =》直播转码-H264，
-liveprocessor_H265 =》 直播转码-H265，
-topspeed_H264 =》极速高清-H264，
-topspeed_H265 =》极速高清-H265。
+liveprocessor_H264：直播转码-H264，
+liveprocessor_H265： 直播转码-H265，
+topspeed_H264：极速高清-H264，
+topspeed_H265：极速高清-H265。
      * @param integer $Bitrate 码率。
-     * @param string $Type 类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
+     * @param string $Type 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
      * @param string $PushDomain 推流域名。
      * @param string $Resolution 分辨率。
      */

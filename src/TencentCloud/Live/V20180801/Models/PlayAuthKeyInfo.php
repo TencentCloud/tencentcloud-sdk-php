@@ -18,18 +18,22 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 播放鉴权key信息
+ * 播放鉴权key信息。
  *
  * @method string getDomainName() 获取域名。
  * @method void setDomainName(string $DomainName) 设置域名。
- * @method integer getEnable() 获取是否启用，0：关闭，1：启用。
- * @method void setEnable(integer $Enable) 设置是否启用，0：关闭，1：启用。
- * @method string getAuthKey() 获取鉴权key。
- * @method void setAuthKey(string $AuthKey) 设置鉴权key。
+ * @method integer getEnable() 获取是否启用:
+0: 关闭。
+1: 启用。
+ * @method void setEnable(integer $Enable) 设置是否启用:
+0: 关闭。
+1: 启用。
+ * @method string getAuthKey() 获取鉴权 Key。
+ * @method void setAuthKey(string $AuthKey) 设置鉴权 Key。
  * @method integer getAuthDelta() 获取有效时间，单位：秒。
  * @method void setAuthDelta(integer $AuthDelta) 设置有效时间，单位：秒。
- * @method string getAuthBackKey() 获取鉴权BackKey。
- * @method void setAuthBackKey(string $AuthBackKey) 设置鉴权BackKey。
+ * @method string getAuthBackKey() 获取鉴权 BackKey。
+ * @method void setAuthBackKey(string $AuthBackKey) 设置鉴权 BackKey。
  */
 class PlayAuthKeyInfo extends AbstractModel
 {
@@ -39,12 +43,14 @@ class PlayAuthKeyInfo extends AbstractModel
     public $DomainName;
 
     /**
-     * @var integer 是否启用，0：关闭，1：启用。
+     * @var integer 是否启用:
+0: 关闭。
+1: 启用。
      */
     public $Enable;
 
     /**
-     * @var string 鉴权key。
+     * @var string 鉴权 Key。
      */
     public $AuthKey;
 
@@ -54,16 +60,18 @@ class PlayAuthKeyInfo extends AbstractModel
     public $AuthDelta;
 
     /**
-     * @var string 鉴权BackKey。
+     * @var string 鉴权 BackKey。
      */
     public $AuthBackKey;
 
     /**
      * @param string $DomainName 域名。
-     * @param integer $Enable 是否启用，0：关闭，1：启用。
-     * @param string $AuthKey 鉴权key。
+     * @param integer $Enable 是否启用:
+0: 关闭。
+1: 启用。
+     * @param string $AuthKey 鉴权 Key。
      * @param integer $AuthDelta 有效时间，单位：秒。
-     * @param string $AuthBackKey 鉴权BackKey。
+     * @param string $AuthBackKey 鉴权 BackKey。
      */
     function __construct()
     {

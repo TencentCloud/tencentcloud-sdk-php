@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFileId() 获取视频的 ID。
  * @method void setFileId(string $FileId) 设置视频的 ID。
  * @method float getStartTimeOffset() 获取视频剪辑的起始偏移时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置视频剪辑的起始偏移时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getEndTimeOffset() 获取视频剪辑的起始结束时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置视频剪辑的起始结束时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EditMediaFileInfo extends AbstractModel
 {
@@ -40,22 +36,18 @@ class EditMediaFileInfo extends AbstractModel
 
     /**
      * @var float 视频剪辑的起始偏移时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTimeOffset;
 
     /**
      * @var float 视频剪辑的起始结束时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTimeOffset;
 
     /**
      * @param string $FileId 视频的 ID。
      * @param float $StartTimeOffset 视频剪辑的起始偏移时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $EndTimeOffset 视频剪辑的起始结束时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

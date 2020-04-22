@@ -20,121 +20,157 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 直播域名信息
  *
- * @method string getName() 获取直播域名
- * @method void setName(string $Name) 设置直播域名
- * @method integer getType() 获取域名类型。0-推流，1-播放
- * @method void setType(integer $Type) 设置域名类型。0-推流，1-播放
- * @method integer getStatus() 获取域名状态。0-停用，1-启用
- * @method void setStatus(integer $Status) 设置域名状态。0-停用，1-启用
- * @method string getCreateTime() 获取添加时间
- * @method void setCreateTime(string $CreateTime) 设置添加时间
- * @method integer getBCName() 获取是否有CName到固定规则域名。0-否，1-是
- * @method void setBCName(integer $BCName) 设置是否有CName到固定规则域名。0-否，1-是
- * @method string getTargetDomain() 获取cname对应的域名
- * @method void setTargetDomain(string $TargetDomain) 设置cname对应的域名
- * @method integer getPlayType() 获取播放区域，只在Type=1时该参数有意义。
-1-国内，2-全球，3-海外。
- * @method void setPlayType(integer $PlayType) 设置播放区域，只在Type=1时该参数有意义。
-1-国内，2-全球，3-海外。
- * @method integer getIsDelayLive() 获取0：普通直播，
-1：慢直播。
- * @method void setIsDelayLive(integer $IsDelayLive) 设置0：普通直播，
-1：慢直播。
- * @method string getCurrentCName() 获取当前客户使用的cname信息
- * @method void setCurrentCName(string $CurrentCName) 设置当前客户使用的cname信息
- * @method integer getRentTag() 获取已无效，可忽略。
- * @method void setRentTag(integer $RentTag) 设置已无效，可忽略。
- * @method string getRentExpireTime() 获取已无效，可忽略。
- * @method void setRentExpireTime(string $RentExpireTime) 设置已无效，可忽略。
- * @method integer getIsMiniProgramLive() 获取0：标准直播，
-1：小程序直播。
+ * @method string getName() 获取直播域名。
+ * @method void setName(string $Name) 设置直播域名。
+ * @method integer getType() 获取域名类型:
+0: 推流。
+1: 播放。
+ * @method void setType(integer $Type) 设置域名类型:
+0: 推流。
+1: 播放。
+ * @method integer getStatus() 获取域名状态:
+0: 停用。
+1: 启用。
+ * @method void setStatus(integer $Status) 设置域名状态:
+0: 停用。
+1: 启用。
+ * @method string getCreateTime() 获取添加时间。
+ * @method void setCreateTime(string $CreateTime) 设置添加时间。
+ * @method integer getBCName() 获取是否有 CName 到固定规则域名:
+0: 否。
+1: 是。
+ * @method void setBCName(integer $BCName) 设置是否有 CName 到固定规则域名:
+0: 否。
+1: 是。
+ * @method string getTargetDomain() 获取cname 对应的域名。
+ * @method void setTargetDomain(string $TargetDomain) 设置cname 对应的域名。
+ * @method integer getPlayType() 获取播放区域，只在 Type=1 时该参数有意义。
+1: 国内。
+2: 全球。
+3: 海外。
+ * @method void setPlayType(integer $PlayType) 设置播放区域，只在 Type=1 时该参数有意义。
+1: 国内。
+2: 全球。
+3: 海外。
+ * @method integer getIsDelayLive() 获取是否慢直播:
+0: 普通直播。
+1: 慢直播。
+ * @method void setIsDelayLive(integer $IsDelayLive) 设置是否慢直播:
+0: 普通直播。
+1: 慢直播。
+ * @method string getCurrentCName() 获取当前客户使用的 cname 信息。
+ * @method void setCurrentCName(string $CurrentCName) 设置当前客户使用的 cname 信息。
+ * @method integer getRentTag() 获取失效参数，可忽略。
+ * @method void setRentTag(integer $RentTag) 设置失效参数，可忽略。
+ * @method string getRentExpireTime() 获取失效参数，可忽略。
+ * @method void setRentExpireTime(string $RentExpireTime) 设置失效参数，可忽略。
+ * @method integer getIsMiniProgramLive() 获取0: 标准直播。
+1: 小程序直播。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsMiniProgramLive(integer $IsMiniProgramLive) 设置0：标准直播，
-1：小程序直播。
+ * @method void setIsMiniProgramLive(integer $IsMiniProgramLive) 设置0: 标准直播。
+1: 小程序直播。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainInfo extends AbstractModel
 {
     /**
-     * @var string 直播域名
+     * @var string 直播域名。
      */
     public $Name;
 
     /**
-     * @var integer 域名类型。0-推流，1-播放
+     * @var integer 域名类型:
+0: 推流。
+1: 播放。
      */
     public $Type;
 
     /**
-     * @var integer 域名状态。0-停用，1-启用
+     * @var integer 域名状态:
+0: 停用。
+1: 启用。
      */
     public $Status;
 
     /**
-     * @var string 添加时间
+     * @var string 添加时间。
      */
     public $CreateTime;
 
     /**
-     * @var integer 是否有CName到固定规则域名。0-否，1-是
+     * @var integer 是否有 CName 到固定规则域名:
+0: 否。
+1: 是。
      */
     public $BCName;
 
     /**
-     * @var string cname对应的域名
+     * @var string cname 对应的域名。
      */
     public $TargetDomain;
 
     /**
-     * @var integer 播放区域，只在Type=1时该参数有意义。
-1-国内，2-全球，3-海外。
+     * @var integer 播放区域，只在 Type=1 时该参数有意义。
+1: 国内。
+2: 全球。
+3: 海外。
      */
     public $PlayType;
 
     /**
-     * @var integer 0：普通直播，
-1：慢直播。
+     * @var integer 是否慢直播:
+0: 普通直播。
+1: 慢直播。
      */
     public $IsDelayLive;
 
     /**
-     * @var string 当前客户使用的cname信息
+     * @var string 当前客户使用的 cname 信息。
      */
     public $CurrentCName;
 
     /**
-     * @var integer 已无效，可忽略。
+     * @var integer 失效参数，可忽略。
      */
     public $RentTag;
 
     /**
-     * @var string 已无效，可忽略。
+     * @var string 失效参数，可忽略。
      */
     public $RentExpireTime;
 
     /**
-     * @var integer 0：标准直播，
-1：小程序直播。
+     * @var integer 0: 标准直播。
+1: 小程序直播。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsMiniProgramLive;
 
     /**
-     * @param string $Name 直播域名
-     * @param integer $Type 域名类型。0-推流，1-播放
-     * @param integer $Status 域名状态。0-停用，1-启用
-     * @param string $CreateTime 添加时间
-     * @param integer $BCName 是否有CName到固定规则域名。0-否，1-是
-     * @param string $TargetDomain cname对应的域名
-     * @param integer $PlayType 播放区域，只在Type=1时该参数有意义。
-1-国内，2-全球，3-海外。
-     * @param integer $IsDelayLive 0：普通直播，
-1：慢直播。
-     * @param string $CurrentCName 当前客户使用的cname信息
-     * @param integer $RentTag 已无效，可忽略。
-     * @param string $RentExpireTime 已无效，可忽略。
-     * @param integer $IsMiniProgramLive 0：标准直播，
-1：小程序直播。
+     * @param string $Name 直播域名。
+     * @param integer $Type 域名类型:
+0: 推流。
+1: 播放。
+     * @param integer $Status 域名状态:
+0: 停用。
+1: 启用。
+     * @param string $CreateTime 添加时间。
+     * @param integer $BCName 是否有 CName 到固定规则域名:
+0: 否。
+1: 是。
+     * @param string $TargetDomain cname 对应的域名。
+     * @param integer $PlayType 播放区域，只在 Type=1 时该参数有意义。
+1: 国内。
+2: 全球。
+3: 海外。
+     * @param integer $IsDelayLive 是否慢直播:
+0: 普通直播。
+1: 慢直播。
+     * @param string $CurrentCName 当前客户使用的 cname 信息。
+     * @param integer $RentTag 失效参数，可忽略。
+     * @param string $RentExpireTime 失效参数，可忽略。
+     * @param integer $IsMiniProgramLive 0: 标准直播。
+1: 小程序直播。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

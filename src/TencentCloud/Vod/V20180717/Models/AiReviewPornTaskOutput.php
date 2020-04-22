@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 鉴黄结果信息
  *
  * @method float getConfidence() 获取视频鉴黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfidence(float $Confidence) 设置视频鉴黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestion() 获取鉴黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
@@ -49,7 +47,6 @@ class AiReviewPornTaskOutput extends AbstractModel
 {
     /**
      * @var float 视频鉴黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Confidence;
 
@@ -77,7 +74,6 @@ class AiReviewPornTaskOutput extends AbstractModel
 
     /**
      * @param float $Confidence 视频鉴黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Suggestion 鉴黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>

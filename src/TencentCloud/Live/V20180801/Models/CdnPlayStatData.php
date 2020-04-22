@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 下行播放统计指标
  *
- * @method string getTime() 获取时间点，格式为yyyy-mm-dd HH:MM:SS。
- * @method void setTime(string $Time) 设置时间点，格式为yyyy-mm-dd HH:MM:SS。
- * @method float getBandwidth() 获取带宽，（单位Mbps）。
- * @method void setBandwidth(float $Bandwidth) 设置带宽，（单位Mbps）。
- * @method float getFlux() 获取流量，（单位MB）。
- * @method void setFlux(float $Flux) 设置流量，（单位MB）。
+ * @method string getTime() 获取时间点，格式: yyyy-mm-dd HH:MM:SS。
+ * @method void setTime(string $Time) 设置时间点，格式: yyyy-mm-dd HH:MM:SS。
+ * @method float getBandwidth() 获取带宽，单位: Mbps。
+ * @method void setBandwidth(float $Bandwidth) 设置带宽，单位: Mbps。
+ * @method float getFlux() 获取流量，单位: MB。
+ * @method void setFlux(float $Flux) 设置流量，单位: MB。
  * @method integer getRequest() 获取新增请求数。
  * @method void setRequest(integer $Request) 设置新增请求数。
  * @method integer getOnline() 获取并发连接数。
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class CdnPlayStatData extends AbstractModel
 {
     /**
-     * @var string 时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * @var string 时间点，格式: yyyy-mm-dd HH:MM:SS。
      */
     public $Time;
 
     /**
-     * @var float 带宽，（单位Mbps）。
+     * @var float 带宽，单位: Mbps。
      */
     public $Bandwidth;
 
     /**
-     * @var float 流量，（单位MB）。
+     * @var float 流量，单位: MB。
      */
     public $Flux;
 
@@ -59,9 +59,9 @@ class CdnPlayStatData extends AbstractModel
     public $Online;
 
     /**
-     * @param string $Time 时间点，格式为yyyy-mm-dd HH:MM:SS。
-     * @param float $Bandwidth 带宽，（单位Mbps）。
-     * @param float $Flux 流量，（单位MB）。
+     * @param string $Time 时间点，格式: yyyy-mm-dd HH:MM:SS。
+     * @param float $Bandwidth 带宽，单位: Mbps。
+     * @param float $Flux 流量，单位: MB。
      * @param integer $Request 新增请求数。
      * @param integer $Online 并发连接数。
      */

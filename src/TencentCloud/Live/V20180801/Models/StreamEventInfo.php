@@ -27,23 +27,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method string getStreamStartTime() 获取推流开始时间。
-UTC格式时间，
-例如：2019-01-07T12:00:00Z。
+UTC 格式时间，例如：2019-01-07T12:00:00Z。
  * @method void setStreamStartTime(string $StreamStartTime) 设置推流开始时间。
-UTC格式时间，
-例如：2019-01-07T12:00:00Z。
+UTC 格式时间，例如：2019-01-07T12:00:00Z。
  * @method string getStreamEndTime() 获取推流结束时间。
-UTC格式时间，
-例如：2019-01-07T15:00:00Z。
+UTC 格式时间，例如：2019-01-07T15:00:00Z。
  * @method void setStreamEndTime(string $StreamEndTime) 设置推流结束时间。
-UTC格式时间，
-例如：2019-01-07T15:00:00Z。
+UTC 格式时间，例如：2019-01-07T15:00:00Z。
  * @method string getStopReason() 获取停止原因。
  * @method void setStopReason(string $StopReason) 设置停止原因。
  * @method integer getDuration() 获取推流持续时长，单位：秒。
  * @method void setDuration(integer $Duration) 设置推流持续时长，单位：秒。
- * @method string getClientIp() 获取主播IP。
- * @method void setClientIp(string $ClientIp) 设置主播IP。
+ * @method string getClientIp() 获取主播 IP。
+ * @method void setClientIp(string $ClientIp) 设置主播 IP。
  * @method string getResolution() 获取分辨率。
  * @method void setResolution(string $Resolution) 设置分辨率。
  */
@@ -66,15 +62,13 @@ class StreamEventInfo extends AbstractModel
 
     /**
      * @var string 推流开始时间。
-UTC格式时间，
-例如：2019-01-07T12:00:00Z。
+UTC 格式时间，例如：2019-01-07T12:00:00Z。
      */
     public $StreamStartTime;
 
     /**
      * @var string 推流结束时间。
-UTC格式时间，
-例如：2019-01-07T15:00:00Z。
+UTC 格式时间，例如：2019-01-07T15:00:00Z。
      */
     public $StreamEndTime;
 
@@ -89,7 +83,7 @@ UTC格式时间，
     public $Duration;
 
     /**
-     * @var string 主播IP。
+     * @var string 主播 IP。
      */
     public $ClientIp;
 
@@ -103,14 +97,12 @@ UTC格式时间，
      * @param string $DomainName 推流域名。
      * @param string $StreamName 流名称。
      * @param string $StreamStartTime 推流开始时间。
-UTC格式时间，
-例如：2019-01-07T12:00:00Z。
+UTC 格式时间，例如：2019-01-07T12:00:00Z。
      * @param string $StreamEndTime 推流结束时间。
-UTC格式时间，
-例如：2019-01-07T15:00:00Z。
+UTC 格式时间，例如：2019-01-07T15:00:00Z。
      * @param string $StopReason 停止原因。
      * @param integer $Duration 推流持续时长，单位：秒。
-     * @param string $ClientIp 主播IP。
+     * @param string $ClientIp 主播 IP。
      * @param string $Resolution 分辨率。
      */
     function __construct()

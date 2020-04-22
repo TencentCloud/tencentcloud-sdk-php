@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 某条流的推流质量详情数据。
  *
- * @method string getTime() 获取数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
- * @method void setTime(string $Time) 设置数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+ * @method string getTime() 获取数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+ * @method void setTime(string $Time) 设置数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
  * @method string getPushDomain() 获取推流域名。
  * @method void setPushDomain(string $PushDomain) 设置推流域名。
  * @method string getAppName() 获取推流路径。
  * @method void setAppName(string $AppName) 设置推流路径。
- * @method string getClientIp() 获取推流客户端ip。
- * @method void setClientIp(string $ClientIp) 设置推流客户端ip。
- * @method string getBeginPushTime() 获取开始推流时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
- * @method void setBeginPushTime(string $BeginPushTime) 设置开始推流时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+ * @method string getClientIp() 获取推流客户端 IP。
+ * @method void setClientIp(string $ClientIp) 设置推流客户端 IP。
+ * @method string getBeginPushTime() 获取开始推流时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+ * @method void setBeginPushTime(string $BeginPushTime) 设置开始推流时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
  * @method string getResolution() 获取分辨率信息。
  * @method void setResolution(string $Resolution) 设置分辨率信息。
  * @method string getVCodec() 获取视频编码格式。
@@ -40,29 +40,29 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSequence(string $Sequence) 设置推流序列号，用来唯一的标志一次推流。
  * @method integer getVideoFps() 获取视频帧率。
  * @method void setVideoFps(integer $VideoFps) 设置视频帧率。
- * @method integer getVideoRate() 获取视频码率，单位是bps。
- * @method void setVideoRate(integer $VideoRate) 设置视频码率，单位是bps。
+ * @method integer getVideoRate() 获取视频码率，单位: bps。
+ * @method void setVideoRate(integer $VideoRate) 设置视频码率，单位: bps。
  * @method integer getAudioFps() 获取音频帧率。
  * @method void setAudioFps(integer $AudioFps) 设置音频帧率。
- * @method integer getAudioRate() 获取音频码率，单位是bps。
- * @method void setAudioRate(integer $AudioRate) 设置音频码率，单位是bps。
- * @method integer getLocalTs() 获取本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
- * @method void setLocalTs(integer $LocalTs) 设置本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
- * @method integer getVideoTs() 获取视频流逝时间，单位是ms。
- * @method void setVideoTs(integer $VideoTs) 设置视频流逝时间，单位是ms。
- * @method integer getAudioTs() 获取音频流逝时间，单位是ms。
- * @method void setAudioTs(integer $AudioTs) 设置音频流逝时间，单位是ms。
- * @method integer getMetaVideoRate() 获取metadata中的视频码率，单位是kbps。
- * @method void setMetaVideoRate(integer $MetaVideoRate) 设置metadata中的视频码率，单位是kbps。
- * @method integer getMetaAudioRate() 获取metadata中的音频码率，单位是kbps。
- * @method void setMetaAudioRate(integer $MetaAudioRate) 设置metadata中的音频码率，单位是kbps。
- * @method integer getMateFps() 获取metadata中的帧率。
- * @method void setMateFps(integer $MateFps) 设置metadata中的帧率。
+ * @method integer getAudioRate() 获取音频码率，单位: bps。
+ * @method void setAudioRate(integer $AudioRate) 设置音频码率，单位: bps。
+ * @method integer getLocalTs() 获取本地流逝时间，单位: ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
+ * @method void setLocalTs(integer $LocalTs) 设置本地流逝时间，单位: ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
+ * @method integer getVideoTs() 获取视频流逝时间，单位: ms。
+ * @method void setVideoTs(integer $VideoTs) 设置视频流逝时间，单位: ms。
+ * @method integer getAudioTs() 获取音频流逝时间，单位: ms。
+ * @method void setAudioTs(integer $AudioTs) 设置音频流逝时间，单位: ms。
+ * @method integer getMetaVideoRate() 获取metadata 中的视频码率，单位: kbps。
+ * @method void setMetaVideoRate(integer $MetaVideoRate) 设置metadata 中的视频码率，单位: kbps。
+ * @method integer getMetaAudioRate() 获取metadata 中的音频码率，单位: kbps。
+ * @method void setMetaAudioRate(integer $MetaAudioRate) 设置metadata 中的音频码率，单位: kbps。
+ * @method integer getMateFps() 获取metadata 中的帧率。
+ * @method void setMateFps(integer $MateFps) 设置metadata 中的帧率。
  */
 class PushQualityData extends AbstractModel
 {
     /**
-     * @var string 数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+     * @var string 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      */
     public $Time;
 
@@ -77,12 +77,12 @@ class PushQualityData extends AbstractModel
     public $AppName;
 
     /**
-     * @var string 推流客户端ip。
+     * @var string 推流客户端 IP。
      */
     public $ClientIp;
 
     /**
-     * @var string 开始推流时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+     * @var string 开始推流时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      */
     public $BeginPushTime;
 
@@ -112,7 +112,7 @@ class PushQualityData extends AbstractModel
     public $VideoFps;
 
     /**
-     * @var integer 视频码率，单位是bps。
+     * @var integer 视频码率，单位: bps。
      */
     public $VideoRate;
 
@@ -122,60 +122,60 @@ class PushQualityData extends AbstractModel
     public $AudioFps;
 
     /**
-     * @var integer 音频码率，单位是bps。
+     * @var integer 音频码率，单位: bps。
      */
     public $AudioRate;
 
     /**
-     * @var integer 本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
+     * @var integer 本地流逝时间，单位: ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
      */
     public $LocalTs;
 
     /**
-     * @var integer 视频流逝时间，单位是ms。
+     * @var integer 视频流逝时间，单位: ms。
      */
     public $VideoTs;
 
     /**
-     * @var integer 音频流逝时间，单位是ms。
+     * @var integer 音频流逝时间，单位: ms。
      */
     public $AudioTs;
 
     /**
-     * @var integer metadata中的视频码率，单位是kbps。
+     * @var integer metadata 中的视频码率，单位: kbps。
      */
     public $MetaVideoRate;
 
     /**
-     * @var integer metadata中的音频码率，单位是kbps。
+     * @var integer metadata 中的音频码率，单位: kbps。
      */
     public $MetaAudioRate;
 
     /**
-     * @var integer metadata中的帧率。
+     * @var integer metadata 中的帧率。
      */
     public $MateFps;
 
     /**
-     * @param string $Time 数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+     * @param string $Time 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      * @param string $PushDomain 推流域名。
      * @param string $AppName 推流路径。
-     * @param string $ClientIp 推流客户端ip。
-     * @param string $BeginPushTime 开始推流时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+     * @param string $ClientIp 推流客户端 IP。
+     * @param string $BeginPushTime 开始推流时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      * @param string $Resolution 分辨率信息。
      * @param string $VCodec 视频编码格式。
      * @param string $ACodec 音频编码格式。
      * @param string $Sequence 推流序列号，用来唯一的标志一次推流。
      * @param integer $VideoFps 视频帧率。
-     * @param integer $VideoRate 视频码率，单位是bps。
+     * @param integer $VideoRate 视频码率，单位: bps。
      * @param integer $AudioFps 音频帧率。
-     * @param integer $AudioRate 音频码率，单位是bps。
-     * @param integer $LocalTs 本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
-     * @param integer $VideoTs 视频流逝时间，单位是ms。
-     * @param integer $AudioTs 音频流逝时间，单位是ms。
-     * @param integer $MetaVideoRate metadata中的视频码率，单位是kbps。
-     * @param integer $MetaAudioRate metadata中的音频码率，单位是kbps。
-     * @param integer $MateFps metadata中的帧率。
+     * @param integer $AudioRate 音频码率，单位: bps。
+     * @param integer $LocalTs 本地流逝时间，单位: ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
+     * @param integer $VideoTs 视频流逝时间，单位: ms。
+     * @param integer $AudioTs 音频流逝时间，单位: ms。
+     * @param integer $MetaVideoRate metadata 中的视频码率，单位: kbps。
+     * @param integer $MetaAudioRate metadata 中的音频码率，单位: kbps。
+     * @param integer $MateFps metadata 中的帧率。
      */
     function __construct()
     {

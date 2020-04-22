@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLiveSnapshotTemplate请求参数结构体
  *
- * @method integer getTemplateId() 获取模板Id。
- * @method void setTemplateId(integer $TemplateId) 设置模板Id。
+ * @method integer getTemplateId() 获取模板 ID。
+ * @method void setTemplateId(integer $TemplateId) 设置模板 ID。
  * @method string getTemplateName() 获取模板名称。
 长度上限：255字节。
  * @method void setTemplateName(string $TemplateName) 设置模板名称。
@@ -38,10 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) 设置截图宽度。默认：0（原始宽）。
  * @method integer getHeight() 获取截图高度。默认：0（原始高）。
  * @method void setHeight(integer $Height) 设置截图高度。默认：0（原始高）。
- * @method integer getPornFlag() 获取是否开启鉴黄，0：不开启，1：开启。
- * @method void setPornFlag(integer $PornFlag) 设置是否开启鉴黄，0：不开启，1：开启。
- * @method integer getCosAppId() 获取Cos AppId。
- * @method void setCosAppId(integer $CosAppId) 设置Cos AppId。
+ * @method integer getPornFlag() 获取是否开启鉴黄，默认 0 。
+0：不开启。
+1：开启。
+ * @method void setPornFlag(integer $PornFlag) 设置是否开启鉴黄，默认 0 。
+0：不开启。
+1：开启。
+ * @method integer getCosAppId() 获取Cos 应用 ID。
+ * @method void setCosAppId(integer $CosAppId) 设置Cos 应用 ID。
  * @method string getCosBucket() 获取Cos Bucket名称。
  * @method void setCosBucket(string $CosBucket) 设置Cos Bucket名称。
  * @method string getCosRegion() 获取Cos 地域。
@@ -50,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyLiveSnapshotTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 模板Id。
+     * @var integer 模板 ID。
      */
     public $TemplateId;
 
@@ -83,12 +87,14 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
     public $Height;
 
     /**
-     * @var integer 是否开启鉴黄，0：不开启，1：开启。
+     * @var integer 是否开启鉴黄，默认 0 。
+0：不开启。
+1：开启。
      */
     public $PornFlag;
 
     /**
-     * @var integer Cos AppId。
+     * @var integer Cos 应用 ID。
      */
     public $CosAppId;
 
@@ -103,7 +109,7 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
     public $CosRegion;
 
     /**
-     * @param integer $TemplateId 模板Id。
+     * @param integer $TemplateId 模板 ID。
      * @param string $TemplateName 模板名称。
 长度上限：255字节。
      * @param string $Description 描述信息。
@@ -112,8 +118,10 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
 范围： 5s ~ 600s。
      * @param integer $Width 截图宽度。默认：0（原始宽）。
      * @param integer $Height 截图高度。默认：0（原始高）。
-     * @param integer $PornFlag 是否开启鉴黄，0：不开启，1：开启。
-     * @param integer $CosAppId Cos AppId。
+     * @param integer $PornFlag 是否开启鉴黄，默认 0 。
+0：不开启。
+1：开启。
+     * @param integer $CosAppId Cos 应用 ID。
      * @param string $CosBucket Cos Bucket名称。
      * @param string $CosRegion Cos 地域。
      */

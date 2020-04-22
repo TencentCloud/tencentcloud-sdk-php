@@ -58,6 +58,7 @@ EIP 如果欠费或被封堵，则不能被绑定。
  * @method Models\DescribePeakNetworkOverviewResponse DescribePeakNetworkOverview(Models\DescribePeakNetworkOverviewRequest $req) 获取网络峰值数据
  * @method Models\DescribeSubnetsResponse DescribeSubnets(Models\DescribeSubnetsRequest $req) 查询子网列表
  * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) 查询EIP异步任务执行结果
+ * @method Models\DescribeVpcsResponse DescribeVpcs(Models\DescribeVpcsRequest $req) 查询私有网络列表
  * @method Models\DetachNetworkInterfaceResponse DetachNetworkInterface(Models\DetachNetworkInterfaceRequest $req) 弹性网卡解绑云主机
  * @method Models\DisassociateAddressResponse DisassociateAddress(Models\DisassociateAddressRequest $req) 解绑弹性公网IP（简称 EIP）
 只有状态为 BIND 和 BIND_ENI 的 EIP 才能进行解绑定操作。

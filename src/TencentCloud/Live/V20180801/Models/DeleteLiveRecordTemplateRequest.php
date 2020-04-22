@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLiveRecordTemplate请求参数结构体
  *
- * @method integer getTemplateId() 获取模板ID。
- * @method void setTemplateId(integer $TemplateId) 设置模板ID。
+ * @method integer getTemplateId() 获取模板 ID。
+ * @method void setTemplateId(integer $TemplateId) 设置模板 ID。
  */
 class DeleteLiveRecordTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 模板ID。
+     * @var integer 模板 ID。
      */
     public $TemplateId;
 
     /**
-     * @param integer $TemplateId 模板ID。
+     * @param integer $TemplateId 模板 ID。
      */
     function __construct()
     {

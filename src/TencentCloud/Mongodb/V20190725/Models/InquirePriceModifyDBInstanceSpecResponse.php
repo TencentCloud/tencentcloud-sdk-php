@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cam\V20190116\Models;
+namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DetectMaskAuth返回参数结构体
+ * InquirePriceModifyDBInstanceSpec返回参数结构体
  *
- * @method string getToken() 获取人脸核身Token
- * @method void setToken(string $Token) 设置人脸核身Token
+ * @method DBInstancePrice getPrice() 获取价格。
+ * @method void setPrice(DBInstancePrice $Price) 设置价格。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DetectMaskAuthResponse extends AbstractModel
+class InquirePriceModifyDBInstanceSpecResponse extends AbstractModel
 {
     /**
-     * @var string 人脸核身Token
+     * @var DBInstancePrice 价格。
      */
-    public $Token;
+    public $Price;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class DetectMaskAuthResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Token 人脸核身Token
+     * @param DBInstancePrice $Price 价格。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,9 @@ class DetectMaskAuthResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
+        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
+            $this->Price = new DBInstancePrice();
+            $this->Price->deserialize($param["Price"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

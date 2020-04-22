@@ -18,10 +18,10 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 客户端ip播放汇总信息
+ * 客户端ip播放汇总信息。
  *
- * @method string getClientIp() 获取客户端ip，点分型。
- * @method void setClientIp(string $ClientIp) 设置客户端ip，点分型。
+ * @method string getClientIp() 获取客户端 IP，点分型。
+ * @method void setClientIp(string $ClientIp) 设置客户端 IP，点分型。
  * @method string getProvince() 获取客户端所在省份。
  * @method void setProvince(string $Province) 设置客户端所在省份。
  * @method float getTotalFlux() 获取总流量。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ClientIpPlaySumInfo extends AbstractModel
 {
     /**
-     * @var string 客户端ip，点分型。
+     * @var string 客户端 IP，点分型。
      */
     public $ClientIp;
 
@@ -66,7 +66,7 @@ class ClientIpPlaySumInfo extends AbstractModel
     public $CountryArea;
 
     /**
-     * @param string $ClientIp 客户端ip，点分型。
+     * @param string $ClientIp 客户端 IP，点分型。
      * @param string $Province 客户端所在省份。
      * @param float $TotalFlux 总流量。
      * @param integer $TotalRequest 总请求数。

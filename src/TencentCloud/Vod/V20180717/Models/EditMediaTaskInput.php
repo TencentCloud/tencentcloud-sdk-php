@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInputType() 获取输入视频的来源类型，可以取的值为 File，Stream 两种。
  * @method void setInputType(string $InputType) 设置输入视频的来源类型，可以取的值为 File，Stream 两种。
  * @method array getFileInfoSet() 获取输入的视频文件信息，当 InputType 为 File 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileInfoSet(array $FileInfoSet) 设置输入的视频文件信息，当 InputType 为 File 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStreamInfoSet() 获取输入的流信息，当 InputType 为 Stream 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamInfoSet(array $StreamInfoSet) 设置输入的流信息，当 InputType 为 Stream 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EditMediaTaskInput extends AbstractModel
 {
@@ -40,22 +36,18 @@ class EditMediaTaskInput extends AbstractModel
 
     /**
      * @var array 输入的视频文件信息，当 InputType 为 File 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileInfoSet;
 
     /**
      * @var array 输入的流信息，当 InputType 为 Stream 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamInfoSet;
 
     /**
      * @param string $InputType 输入视频的来源类型，可以取的值为 File，Stream 两种。
      * @param array $FileInfoSet 输入的视频文件信息，当 InputType 为 File 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StreamInfoSet 输入的流信息，当 InputType 为 Stream 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

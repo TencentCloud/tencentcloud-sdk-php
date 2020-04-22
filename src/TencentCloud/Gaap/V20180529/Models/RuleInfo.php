@@ -32,18 +32,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerType(string $RealServerType) 设置源站类型
  * @method string getScheduler() 获取转发源站策略
  * @method void setScheduler(string $Scheduler) 设置转发源站策略
- * @method integer getHealthCheck() 获取是否开启健康检查标志，1开启，0关闭
- * @method void setHealthCheck(integer $HealthCheck) 设置是否开启健康检查标志，1开启，0关闭
- * @method integer getRuleStatus() 获取规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中
- * @method void setRuleStatus(integer $RuleStatus) 设置规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中
+ * @method integer getHealthCheck() 获取是否开启健康检查标志，1表示开启，0表示关闭
+ * @method void setHealthCheck(integer $HealthCheck) 设置是否开启健康检查标志，1表示开启，0表示关闭
+ * @method integer getRuleStatus() 获取规则状态，0表示运行中，1表示创建中，2表示销毁中，3表示绑定解绑源站中，4表示配置更新中
+ * @method void setRuleStatus(integer $RuleStatus) 设置规则状态，0表示运行中，1表示创建中，2表示销毁中，3表示绑定解绑源站中，4表示配置更新中
  * @method RuleCheckParams getCheckParams() 获取健康检查相关参数
  * @method void setCheckParams(RuleCheckParams $CheckParams) 设置健康检查相关参数
  * @method array getRealServerSet() 获取已绑定的源站相关信息
  * @method void setRealServerSet(array $RealServerSet) 设置已绑定的源站相关信息
- * @method integer getBindStatus() 获取源站的服务状态，0：异常，1：正常。
+ * @method integer getBindStatus() 获取源站的服务状态，0表示异常，1表示正常。
 未开启健康检查时，该状态始终未正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
- * @method void setBindStatus(integer $BindStatus) 设置源站的服务状态，0：异常，1：正常。
+ * @method void setBindStatus(integer $BindStatus) 设置源站的服务状态，0表示异常，1表示正常。
 未开启健康检查时，该状态始终未正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
  * @method string getForwardHost() 获取通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
@@ -84,12 +84,12 @@ class RuleInfo extends AbstractModel
     public $Scheduler;
 
     /**
-     * @var integer 是否开启健康检查标志，1开启，0关闭
+     * @var integer 是否开启健康检查标志，1表示开启，0表示关闭
      */
     public $HealthCheck;
 
     /**
-     * @var integer 规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中
+     * @var integer 规则状态，0表示运行中，1表示创建中，2表示销毁中，3表示绑定解绑源站中，4表示配置更新中
      */
     public $RuleStatus;
 
@@ -104,7 +104,7 @@ class RuleInfo extends AbstractModel
     public $RealServerSet;
 
     /**
-     * @var integer 源站的服务状态，0：异常，1：正常。
+     * @var integer 源站的服务状态，0表示异常，1表示正常。
 未开启健康检查时，该状态始终未正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
      */
@@ -123,11 +123,11 @@ class RuleInfo extends AbstractModel
      * @param string $Path 规则路径
      * @param string $RealServerType 源站类型
      * @param string $Scheduler 转发源站策略
-     * @param integer $HealthCheck 是否开启健康检查标志，1开启，0关闭
-     * @param integer $RuleStatus 规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中
+     * @param integer $HealthCheck 是否开启健康检查标志，1表示开启，0表示关闭
+     * @param integer $RuleStatus 规则状态，0表示运行中，1表示创建中，2表示销毁中，3表示绑定解绑源站中，4表示配置更新中
      * @param RuleCheckParams $CheckParams 健康检查相关参数
      * @param array $RealServerSet 已绑定的源站相关信息
-     * @param integer $BindStatus 源站的服务状态，0：异常，1：正常。
+     * @param integer $BindStatus 源站的服务状态，0表示异常，1表示正常。
 未开启健康检查时，该状态始终未正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
      * @param string $ForwardHost 通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。

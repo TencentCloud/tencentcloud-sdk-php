@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method integer getTaskId() 获取任务ID，全局唯一标识录制任务。
+从接口 [CreateLiveRecord](/document/product/267/30148) 的返回值中获取TaskId。
  * @method void setTaskId(integer $TaskId) 设置任务ID，全局唯一标识录制任务。
+从接口 [CreateLiveRecord](/document/product/267/30148) 的返回值中获取TaskId。
  */
 class DeleteLiveRecordRequest extends AbstractModel
 {
@@ -34,12 +36,14 @@ class DeleteLiveRecordRequest extends AbstractModel
 
     /**
      * @var integer 任务ID，全局唯一标识录制任务。
+从接口 [CreateLiveRecord](/document/product/267/30148) 的返回值中获取TaskId。
      */
     public $TaskId;
 
     /**
      * @param string $StreamName 流名称。
      * @param integer $TaskId 任务ID，全局唯一标识录制任务。
+从接口 [CreateLiveRecord](/document/product/267/30148) 的返回值中获取TaskId。
      */
     function __construct()
     {

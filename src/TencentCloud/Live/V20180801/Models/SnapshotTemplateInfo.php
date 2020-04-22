@@ -18,33 +18,37 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 截图模板信息
+ * 截图模板信息。
  *
- * @method integer getTemplateId() 获取模板Id。
- * @method void setTemplateId(integer $TemplateId) 设置模板Id。
+ * @method integer getTemplateId() 获取模板 ID。
+ * @method void setTemplateId(integer $TemplateId) 设置模板 ID。
  * @method string getTemplateName() 获取模板名称。
  * @method void setTemplateName(string $TemplateName) 设置模板名称。
- * @method integer getSnapshotInterval() 获取截图时间间隔。5-300秒。
- * @method void setSnapshotInterval(integer $SnapshotInterval) 设置截图时间间隔。5-300秒。
- * @method integer getWidth() 获取截图宽度。0-3000 0原始宽度并适配原始比例
- * @method void setWidth(integer $Width) 设置截图宽度。0-3000 0原始宽度并适配原始比例
- * @method integer getHeight() 获取截图高度。0-2000 0原始高度并适配原始比例
- * @method void setHeight(integer $Height) 设置截图高度。0-2000 0原始高度并适配原始比例
+ * @method integer getSnapshotInterval() 获取截图时间间隔，5-300秒。
+ * @method void setSnapshotInterval(integer $SnapshotInterval) 设置截图时间间隔，5-300秒。
+ * @method integer getWidth() 获取截图宽度，范围：0-3000。 
+0：原始宽度并适配原始比例。
+ * @method void setWidth(integer $Width) 设置截图宽度，范围：0-3000。 
+0：原始宽度并适配原始比例。
+ * @method integer getHeight() 获取截图高度，范围：0-2000。
+0：原始高度并适配原始比例。
+ * @method void setHeight(integer $Height) 设置截图高度，范围：0-2000。
+0：原始高度并适配原始比例。
  * @method integer getPornFlag() 获取是否开启鉴黄，0：不开启，1：开启。
  * @method void setPornFlag(integer $PornFlag) 设置是否开启鉴黄，0：不开启，1：开启。
- * @method integer getCosAppId() 获取Cos AppId。
- * @method void setCosAppId(integer $CosAppId) 设置Cos AppId。
+ * @method integer getCosAppId() 获取Cos 应用 ID。
+ * @method void setCosAppId(integer $CosAppId) 设置Cos 应用 ID。
  * @method string getCosBucket() 获取Cos Bucket名称。
  * @method void setCosBucket(string $CosBucket) 设置Cos Bucket名称。
  * @method string getCosRegion() 获取Cos 地域。
  * @method void setCosRegion(string $CosRegion) 设置Cos 地域。
- * @method string getDescription() 获取模板描述
- * @method void setDescription(string $Description) 设置模板描述
+ * @method string getDescription() 获取模板描述。
+ * @method void setDescription(string $Description) 设置模板描述。
  */
 class SnapshotTemplateInfo extends AbstractModel
 {
     /**
-     * @var integer 模板Id。
+     * @var integer 模板 ID。
      */
     public $TemplateId;
 
@@ -54,17 +58,19 @@ class SnapshotTemplateInfo extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var integer 截图时间间隔。5-300秒。
+     * @var integer 截图时间间隔，5-300秒。
      */
     public $SnapshotInterval;
 
     /**
-     * @var integer 截图宽度。0-3000 0原始宽度并适配原始比例
+     * @var integer 截图宽度，范围：0-3000。 
+0：原始宽度并适配原始比例。
      */
     public $Width;
 
     /**
-     * @var integer 截图高度。0-2000 0原始高度并适配原始比例
+     * @var integer 截图高度，范围：0-2000。
+0：原始高度并适配原始比例。
      */
     public $Height;
 
@@ -74,7 +80,7 @@ class SnapshotTemplateInfo extends AbstractModel
     public $PornFlag;
 
     /**
-     * @var integer Cos AppId。
+     * @var integer Cos 应用 ID。
      */
     public $CosAppId;
 
@@ -89,21 +95,23 @@ class SnapshotTemplateInfo extends AbstractModel
     public $CosRegion;
 
     /**
-     * @var string 模板描述
+     * @var string 模板描述。
      */
     public $Description;
 
     /**
-     * @param integer $TemplateId 模板Id。
+     * @param integer $TemplateId 模板 ID。
      * @param string $TemplateName 模板名称。
-     * @param integer $SnapshotInterval 截图时间间隔。5-300秒。
-     * @param integer $Width 截图宽度。0-3000 0原始宽度并适配原始比例
-     * @param integer $Height 截图高度。0-2000 0原始高度并适配原始比例
+     * @param integer $SnapshotInterval 截图时间间隔，5-300秒。
+     * @param integer $Width 截图宽度，范围：0-3000。 
+0：原始宽度并适配原始比例。
+     * @param integer $Height 截图高度，范围：0-2000。
+0：原始高度并适配原始比例。
      * @param integer $PornFlag 是否开启鉴黄，0：不开启，1：开启。
-     * @param integer $CosAppId Cos AppId。
+     * @param integer $CosAppId Cos 应用 ID。
      * @param string $CosBucket Cos Bucket名称。
      * @param string $CosRegion Cos 地域。
-     * @param string $Description 模板描述
+     * @param string $Description 模板描述。
      */
     function __construct()
     {

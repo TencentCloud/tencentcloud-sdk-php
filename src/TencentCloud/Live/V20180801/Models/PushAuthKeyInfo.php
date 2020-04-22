@@ -18,16 +18,16 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 推流鉴权key信息
+ * 推流鉴权key信息。
  *
  * @method string getDomainName() 获取域名。
  * @method void setDomainName(string $DomainName) 设置域名。
  * @method integer getEnable() 获取是否启用，0：关闭，1：启用。
  * @method void setEnable(integer $Enable) 设置是否启用，0：关闭，1：启用。
- * @method string getMasterAuthKey() 获取主鉴权key。
- * @method void setMasterAuthKey(string $MasterAuthKey) 设置主鉴权key。
- * @method string getBackupAuthKey() 获取备鉴权key。
- * @method void setBackupAuthKey(string $BackupAuthKey) 设置备鉴权key。
+ * @method string getMasterAuthKey() 获取主鉴权 Key。
+ * @method void setMasterAuthKey(string $MasterAuthKey) 设置主鉴权 Key。
+ * @method string getBackupAuthKey() 获取备鉴权 Key。
+ * @method void setBackupAuthKey(string $BackupAuthKey) 设置备鉴权 Key。
  * @method integer getAuthDelta() 获取有效时间，单位：秒。
  * @method void setAuthDelta(integer $AuthDelta) 设置有效时间，单位：秒。
  */
@@ -44,12 +44,12 @@ class PushAuthKeyInfo extends AbstractModel
     public $Enable;
 
     /**
-     * @var string 主鉴权key。
+     * @var string 主鉴权 Key。
      */
     public $MasterAuthKey;
 
     /**
-     * @var string 备鉴权key。
+     * @var string 备鉴权 Key。
      */
     public $BackupAuthKey;
 
@@ -61,8 +61,8 @@ class PushAuthKeyInfo extends AbstractModel
     /**
      * @param string $DomainName 域名。
      * @param integer $Enable 是否启用，0：关闭，1：启用。
-     * @param string $MasterAuthKey 主鉴权key。
-     * @param string $BackupAuthKey 备鉴权key。
+     * @param string $MasterAuthKey 主鉴权 Key。
+     * @param string $BackupAuthKey 备鉴权 Key。
      * @param integer $AuthDelta 有效时间，单位：秒。
      */
     function __construct()

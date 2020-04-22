@@ -20,20 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLiveSnapshotTemplate请求参数结构体
  *
- * @method string getTemplateName() 获取模板名称，非空的字符串。
+ * @method string getTemplateName() 获取模板名称。
 长度上限：255字节。
- * @method void setTemplateName(string $TemplateName) 设置模板名称，非空的字符串。
+仅支持中文、英文、数字、_、-。
+ * @method void setTemplateName(string $TemplateName) 设置模板名称。
 长度上限：255字节。
- * @method integer getCosAppId() 获取Cos AppId。
- * @method void setCosAppId(integer $CosAppId) 设置Cos AppId。
+仅支持中文、英文、数字、_、-。
+ * @method integer getCosAppId() 获取Cos 应用 ID。
+ * @method void setCosAppId(integer $CosAppId) 设置Cos 应用 ID。
  * @method string getCosBucket() 获取Cos Bucket名称。
  * @method void setCosBucket(string $CosBucket) 设置Cos Bucket名称。
  * @method string getCosRegion() 获取Cos地区。
  * @method void setCosRegion(string $CosRegion) 设置Cos地区。
  * @method string getDescription() 获取描述信息。
 长度上限：1024字节。
+仅支持中文、英文、数字、_、-。
  * @method void setDescription(string $Description) 设置描述信息。
 长度上限：1024字节。
+仅支持中文、英文、数字、_、-。
  * @method integer getSnapshotInterval() 获取截图间隔，单位s，默认10s。
 范围： 5s ~ 600s。
  * @method void setSnapshotInterval(integer $SnapshotInterval) 设置截图间隔，单位s，默认10s。
@@ -48,13 +52,14 @@ use TencentCloud\Common\AbstractModel;
 class CreateLiveSnapshotTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 模板名称，非空的字符串。
+     * @var string 模板名称。
 长度上限：255字节。
+仅支持中文、英文、数字、_、-。
      */
     public $TemplateName;
 
     /**
-     * @var integer Cos AppId。
+     * @var integer Cos 应用 ID。
      */
     public $CosAppId;
 
@@ -71,6 +76,7 @@ class CreateLiveSnapshotTemplateRequest extends AbstractModel
     /**
      * @var string 描述信息。
 长度上限：1024字节。
+仅支持中文、英文、数字、_、-。
      */
     public $Description;
 
@@ -96,13 +102,15 @@ class CreateLiveSnapshotTemplateRequest extends AbstractModel
     public $PornFlag;
 
     /**
-     * @param string $TemplateName 模板名称，非空的字符串。
+     * @param string $TemplateName 模板名称。
 长度上限：255字节。
-     * @param integer $CosAppId Cos AppId。
+仅支持中文、英文、数字、_、-。
+     * @param integer $CosAppId Cos 应用 ID。
      * @param string $CosBucket Cos Bucket名称。
      * @param string $CosRegion Cos地区。
      * @param string $Description 描述信息。
 长度上限：1024字节。
+仅支持中文、英文、数字、_、-。
      * @param integer $SnapshotInterval 截图间隔，单位s，默认10s。
 范围： 5s ~ 600s。
      * @param integer $Width 截图宽度。默认：0（原始宽）。

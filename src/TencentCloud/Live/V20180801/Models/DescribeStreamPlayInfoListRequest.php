@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
 若不填，则为查询总体播放数据。
  * @method void setStreamName(string $StreamName) 设置流名称，精确匹配。
 若不填，则为查询总体播放数据。
- * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
+ * @method string getAppName() 获取推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
 若不填，则为查询总体播放数据。
 注意：按AppName查询，需要联系客服同学提单支持。
- * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
+ * @method void setAppName(string $AppName) 设置推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
 若不填，则为查询总体播放数据。
 注意：按AppName查询，需要联系客服同学提单支持。
  */
@@ -70,7 +70,7 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
     public $StreamName;
 
     /**
-     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
+     * @var string 推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
 若不填，则为查询总体播放数据。
 注意：按AppName查询，需要联系客服同学提单支持。
      */
@@ -85,7 +85,7 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
 若不填，则为查询所有播放域名的在线流数据。
      * @param string $StreamName 流名称，精确匹配。
 若不填，则为查询总体播放数据。
-     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
+     * @param string $AppName 推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
 若不填，则为查询总体播放数据。
 注意：按AppName查询，需要联系客服同学提单支持。
      */

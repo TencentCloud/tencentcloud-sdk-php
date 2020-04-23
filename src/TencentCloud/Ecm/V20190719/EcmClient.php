@@ -85,7 +85,12 @@ EIP 如果被封堵，则不能进行解绑定操作。
 退还弹性网卡上的辅助内网IP，接口自动解关联弹性公网 IP。不能退还弹性网卡的主内网IP。
  * @method Models\ResetInstancesResponse ResetInstances(Models\ResetInstancesRequest $req) 重装实例，若指定了ImageId参数，则使用指定的镜像重装；否则按照当前实例使用的镜像进行重装；若未指定密码，则密码通过站内信形式随后发送。
  * @method Models\ResetInstancesMaxBandwidthResponse ResetInstancesMaxBandwidth(Models\ResetInstancesMaxBandwidthRequest $req) 重置实例的最大带宽上限。
+ * @method Models\ResetInstancesPasswordResponse ResetInstancesPassword(Models\ResetInstancesPasswordRequest $req) 重置处于运行中状态的实例的密码，需要显式指定强制关机参数ForceStop。如果没有显式指定强制关机参数，则只有处于关机状态的实例才允许执行重置密码操作。
  * @method Models\RunInstancesResponse RunInstances(Models\RunInstancesRequest $req) 创建ECM实例
+ * @method Models\StartInstancesResponse StartInstances(Models\StartInstancesRequest $req) 只有状态为STOPPED的实例才可以进行此操作；接口调用成功时，实例会进入STARTING状态；启动实例成功时，实例会进入RUNNING状态。
+ * @method Models\StopInstancesResponse StopInstances(Models\StopInstancesRequest $req) 只有处于"RUNNING"状态的实例才能够进行关机操作；
+调用成功时，实例会进入STOPPING状态；关闭实例成功时，实例会进入STOPPED状态；
+支持强制关闭，强制关机的效果等同于关闭物理计算机的电源开关，强制关机可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常关机时使用。
  * @method Models\TerminateInstancesResponse TerminateInstances(Models\TerminateInstancesRequest $req) 销毁实例
  */
 

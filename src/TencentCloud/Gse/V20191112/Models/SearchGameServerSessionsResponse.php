@@ -14,30 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribePurgeQuota返回参数结构体
+ * SearchGameServerSessions返回参数结构体
  *
- * @method array getUrlPurge() 获取URL刷新用量及配额。
- * @method void setUrlPurge(array $UrlPurge) 设置URL刷新用量及配额。
- * @method array getPathPurge() 获取目录刷新用量及配额。
- * @method void setPathPurge(array $PathPurge) 设置目录刷新用量及配额。
+ * @method array getGameServerSessions() 获取游戏服务器会话列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGameServerSessions(array $GameServerSessions) 设置游戏服务器会话列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNextToken() 获取页偏移，用于查询下一页
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNextToken(string $NextToken) 设置页偏移，用于查询下一页
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribePurgeQuotaResponse extends AbstractModel
+class SearchGameServerSessionsResponse extends AbstractModel
 {
     /**
-     * @var array URL刷新用量及配额。
+     * @var array 游戏服务器会话列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $UrlPurge;
+    public $GameServerSessions;
 
     /**
-     * @var array 目录刷新用量及配额。
+     * @var string 页偏移，用于查询下一页
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $PathPurge;
+    public $NextToken;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +51,10 @@ class DescribePurgeQuotaResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $UrlPurge URL刷新用量及配额。
-     * @param array $PathPurge 目录刷新用量及配额。
+     * @param array $GameServerSessions 游戏服务器会话列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NextToken 页偏移，用于查询下一页
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,22 +70,17 @@ class DescribePurgeQuotaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UrlPurge",$param) and $param["UrlPurge"] !== null) {
-            $this->UrlPurge = [];
-            foreach ($param["UrlPurge"] as $key => $value){
-                $obj = new Quota();
+        if (array_key_exists("GameServerSessions",$param) and $param["GameServerSessions"] !== null) {
+            $this->GameServerSessions = [];
+            foreach ($param["GameServerSessions"] as $key => $value){
+                $obj = new GameServerSession();
                 $obj->deserialize($value);
-                array_push($this->UrlPurge, $obj);
+                array_push($this->GameServerSessions, $obj);
             }
         }
 
-        if (array_key_exists("PathPurge",$param) and $param["PathPurge"] !== null) {
-            $this->PathPurge = [];
-            foreach ($param["PathPurge"] as $key => $value){
-                $obj = new Quota();
-                $obj->deserialize($value);
-                array_push($this->PathPurge, $obj);
-            }
+        if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {
+            $this->NextToken = $param["NextToken"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

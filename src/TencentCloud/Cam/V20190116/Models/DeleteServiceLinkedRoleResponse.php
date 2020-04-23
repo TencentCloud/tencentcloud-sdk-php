@@ -18,19 +18,27 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CheckNewMfaCode返回参数结构体
+ * DeleteServiceLinkedRole返回参数结构体
  *
+ * @method string getDeletionTaskId() 获取删除任务ID，可用于检查删除服务相关角色状态。
+ * @method void setDeletionTaskId(string $DeletionTaskId) 设置删除任务ID，可用于检查删除服务相关角色状态。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CheckNewMfaCodeResponse extends AbstractModel
+class DeleteServiceLinkedRoleResponse extends AbstractModel
 {
+    /**
+     * @var string 删除任务ID，可用于检查删除服务相关角色状态。
+     */
+    public $DeletionTaskId;
+
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $DeletionTaskId 删除任务ID，可用于检查删除服务相关角色状态。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,10 @@ class CheckNewMfaCodeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DeletionTaskId",$param) and $param["DeletionTaskId"] !== null) {
+            $this->DeletionTaskId = $param["DeletionTaskId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

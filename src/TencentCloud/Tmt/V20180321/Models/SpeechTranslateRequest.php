@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSource(string $Source) 设置音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
  * @method string getTarget() 获取翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
  * @method void setTarget(string $Target) 设置翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
- * @method integer getAudioFormat() 获取pcm : 146   amr : 33554432   mp3 : 83886080
- * @method void setAudioFormat(integer $AudioFormat) 设置pcm : 146   amr : 33554432   mp3 : 83886080
+ * @method integer getAudioFormat() 获取pcm : 146   speex : 16779154   mp3 : 83886080
+ * @method void setAudioFormat(integer $AudioFormat) 设置pcm : 146   speex : 16779154   mp3 : 83886080
  * @method integer getSeq() 获取语音分片的序号，从0开始
  * @method void setSeq(integer $Seq) 设置语音分片的序号，从0开始
  * @method integer getIsEnd() 获取是否最后一片语音分片，0-否，1-是
@@ -57,7 +57,7 @@ class SpeechTranslateRequest extends AbstractModel
     public $Target;
 
     /**
-     * @var integer pcm : 146   amr : 33554432   mp3 : 83886080
+     * @var integer pcm : 146   speex : 16779154   mp3 : 83886080
      */
     public $AudioFormat;
 
@@ -90,7 +90,7 @@ class SpeechTranslateRequest extends AbstractModel
      * @param string $SessionUuid 一段完整的语音对应一个SessionUuid
      * @param string $Source 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      * @param string $Target 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
-     * @param integer $AudioFormat pcm : 146   amr : 33554432   mp3 : 83886080
+     * @param integer $AudioFormat pcm : 146   speex : 16779154   mp3 : 83886080
      * @param integer $Seq 语音分片的序号，从0开始
      * @param integer $IsEnd 是否最后一片语音分片，0-否，1-是
      * @param string $Data 语音分片内容的base64字符串，音频内容应含有效并可识别的文本

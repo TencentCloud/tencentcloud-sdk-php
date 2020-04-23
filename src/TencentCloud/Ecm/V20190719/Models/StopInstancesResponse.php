@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribePurgeQuota返回参数结构体
+ * StopInstances返回参数结构体
  *
- * @method array getUrlPurge() 获取URL刷新用量及配额。
- * @method void setUrlPurge(array $UrlPurge) 设置URL刷新用量及配额。
- * @method array getPathPurge() 获取目录刷新用量及配额。
- * @method void setPathPurge(array $PathPurge) 设置目录刷新用量及配额。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribePurgeQuotaResponse extends AbstractModel
+class StopInstancesResponse extends AbstractModel
 {
-    /**
-     * @var array URL刷新用量及配额。
-     */
-    public $UrlPurge;
-
-    /**
-     * @var array 目录刷新用量及配额。
-     */
-    public $PathPurge;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $UrlPurge URL刷新用量及配额。
-     * @param array $PathPurge 目录刷新用量及配额。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,24 +46,6 @@ class DescribePurgeQuotaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UrlPurge",$param) and $param["UrlPurge"] !== null) {
-            $this->UrlPurge = [];
-            foreach ($param["UrlPurge"] as $key => $value){
-                $obj = new Quota();
-                $obj->deserialize($value);
-                array_push($this->UrlPurge, $obj);
-            }
-        }
-
-        if (array_key_exists("PathPurge",$param) and $param["PathPurge"] !== null) {
-            $this->PathPurge = [];
-            foreach ($param["PathPurge"] as $key => $value){
-                $obj = new Quota();
-                $obj->deserialize($value);
-                array_push($this->PathPurge, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

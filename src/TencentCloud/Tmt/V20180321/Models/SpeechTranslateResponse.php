@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionUuid(string $SessionUuid) 设置请求的SessionUuid直接返回
  * @method integer getRecognizeStatus() 获取语音识别状态 1-进行中 0-完成
  * @method void setRecognizeStatus(integer $RecognizeStatus) 设置语音识别状态 1-进行中 0-完成
- * @method string getSourceText() 获取识别出的源文
- * @method void setSourceText(string $SourceText) 设置识别出的源文
+ * @method string getSourceText() 获取识别出的原文
+ * @method void setSourceText(string $SourceText) 设置识别出的原文
  * @method string getTargetText() 获取翻译出的译文
  * @method void setTargetText(string $TargetText) 设置翻译出的译文
  * @method integer getSeq() 获取第几个语音分片
  * @method void setSeq(integer $Seq) 设置第几个语音分片
- * @method string getSource() 获取源语言
- * @method void setSource(string $Source) 设置源语言
+ * @method string getSource() 获取原语言
+ * @method void setSource(string $Source) 设置原语言
  * @method string getTarget() 获取目标语言
  * @method void setTarget(string $Target) 设置目标语言
  * @method integer getVadSeq() 获取当请求的Mode参数填写bvad是，启动VadSeq。此时Seq会被设置为后台vad（静音检测）后的新序号，而VadSeq代表客户端原始Seq值
@@ -52,7 +52,7 @@ class SpeechTranslateResponse extends AbstractModel
     public $RecognizeStatus;
 
     /**
-     * @var string 识别出的源文
+     * @var string 识别出的原文
      */
     public $SourceText;
 
@@ -67,7 +67,7 @@ class SpeechTranslateResponse extends AbstractModel
     public $Seq;
 
     /**
-     * @var string 源语言
+     * @var string 原语言
      */
     public $Source;
 
@@ -89,10 +89,10 @@ class SpeechTranslateResponse extends AbstractModel
     /**
      * @param string $SessionUuid 请求的SessionUuid直接返回
      * @param integer $RecognizeStatus 语音识别状态 1-进行中 0-完成
-     * @param string $SourceText 识别出的源文
+     * @param string $SourceText 识别出的原文
      * @param string $TargetText 翻译出的译文
      * @param integer $Seq 第几个语音分片
-     * @param string $Source 源语言
+     * @param string $Source 原语言
      * @param string $Target 目标语言
      * @param integer $VadSeq 当请求的Mode参数填写bvad是，启动VadSeq。此时Seq会被设置为后台vad（静音检测）后的新序号，而VadSeq代表客户端原始Seq值
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

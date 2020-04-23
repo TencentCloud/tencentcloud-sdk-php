@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群实例信息
  *
- * @method integer getId() 获取ID
+ * @method integer getId() 获取ID号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(integer $Id) 设置ID
+ * @method void setId(integer $Id) 设置ID号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterId() 获取集群ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -186,11 +186,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAliasInfo(string $AliasInfo) 设置集群所有节点的别名序列化
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProductId() 获取集群版本Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductId(integer $ProductId) 设置集群版本Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInstancesInfo extends AbstractModel
 {
     /**
-     * @var integer ID
+     * @var integer ID号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
@@ -385,7 +389,13 @@ class ClusterInstancesInfo extends AbstractModel
     public $AliasInfo;
 
     /**
-     * @param integer $Id ID
+     * @var integer 集群版本Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductId;
+
+    /**
+     * @param integer $Id ID号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -467,6 +477,8 @@ class ClusterInstancesInfo extends AbstractModel
      * @param string $ServiceClass 集群类型:EMR,CLICKHOUSE,DRUID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AliasInfo 集群所有节点的别名序列化
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProductId 集群版本Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -598,6 +610,10 @@ class ClusterInstancesInfo extends AbstractModel
 
         if (array_key_exists("AliasInfo",$param) and $param["AliasInfo"] !== null) {
             $this->AliasInfo = $param["AliasInfo"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCascadeRelease(boolean $CascadeRelease) 设置eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
  * @method AlgType getEipAlgType() 获取EIP ALG开启的协议类型。
  * @method void setEipAlgType(AlgType $EipAlgType) 设置EIP ALG开启的协议类型。
+ * @method string getInternetServiceProvider() 获取弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
+ * @method void setInternetServiceProvider(string $InternetServiceProvider) 设置弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
  */
 class Address extends AbstractModel
 {
@@ -122,6 +124,11 @@ class Address extends AbstractModel
     public $EipAlgType;
 
     /**
+     * @var string 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
+     */
+    public $InternetServiceProvider;
+
+    /**
      * @param string $AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      * @param string $AddressName `EIP`名称。
      * @param string $AddressStatus `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
@@ -136,6 +143,7 @@ class Address extends AbstractModel
      * @param string $AddressType eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
      * @param boolean $CascadeRelease eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
      * @param AlgType $EipAlgType EIP ALG开启的协议类型。
+     * @param string $InternetServiceProvider 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
      */
     function __construct()
     {
@@ -205,6 +213,10 @@ class Address extends AbstractModel
         if (array_key_exists("EipAlgType",$param) and $param["EipAlgType"] !== null) {
             $this->EipAlgType = new AlgType();
             $this->EipAlgType->deserialize($param["EipAlgType"]);
+        }
+
+        if (array_key_exists("InternetServiceProvider",$param) and $param["InternetServiceProvider"] !== null) {
+            $this->InternetServiceProvider = $param["InternetServiceProvider"];
         }
     }
 }

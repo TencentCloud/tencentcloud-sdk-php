@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinitions(array $Definitions) 设置水印模板唯一标识过滤条件，数组长度限制：100。
  * @method string getType() 获取水印类型过滤条件，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li>
  * @method void setType(string $Type) 设置水印类型过滤条件，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li>
  * @method integer getOffset() 获取分页偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数
@@ -49,7 +51,8 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
     /**
      * @var string 水印类型过滤条件，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li>
      */
     public $Type;
 
@@ -74,7 +77,8 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
      * @param array $Definitions 水印模板唯一标识过滤条件，数组长度限制：100。
      * @param string $Type 水印类型过滤条件，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li>
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数
 <li>默认值：10；</li>

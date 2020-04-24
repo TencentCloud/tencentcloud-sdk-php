@@ -54,6 +54,14 @@ RECONNECT-等待重连
 RECOVERY-清理恢复
 FORBID-禁用
 UNAVAILABLE-不可用
+ * @method string getUserId() 获取用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserId(string $UserId) 设置用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGameId() 获取游戏ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGameId(string $GameId) 设置游戏ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkerDetail extends AbstractModel
 {
@@ -103,6 +111,18 @@ UNAVAILABLE-不可用
     public $ServiceState;
 
     /**
+     * @var string 用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserId;
+
+    /**
+     * @var string 游戏ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GameId;
+
+    /**
      * @param integer $AppId 客户appid
      * @param integer $SetNo 资源池编号
      * @param string $Region 机器所属区域
@@ -120,6 +140,10 @@ RECONNECT-等待重连
 RECOVERY-清理恢复
 FORBID-禁用
 UNAVAILABLE-不可用
+     * @param string $UserId 用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GameId 游戏ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -160,6 +184,14 @@ UNAVAILABLE-不可用
 
         if (array_key_exists("ServiceState",$param) and $param["ServiceState"] !== null) {
             $this->ServiceState = $param["ServiceState"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("GameId",$param) and $param["GameId"] !== null) {
+            $this->GameId = $param["GameId"];
         }
     }
 }

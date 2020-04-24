@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHandler(string $Handler) 设置函数处理方法名称，名称格式支持 "文件名称.方法名称" 形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求是 2-60 个字符
  * @method string getDescription() 获取函数描述,最大支持 1000 个英文字母、数字、空格、逗号、换行符和英文句号，支持中文
  * @method void setDescription(string $Description) 设置函数描述,最大支持 1000 个英文字母、数字、空格、逗号、换行符和英文句号，支持中文
- * @method integer getMemorySize() 获取函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯
- * @method void setMemorySize(integer $MemorySize) 设置函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯
- * @method integer getTimeout() 获取函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
- * @method void setTimeout(integer $Timeout) 设置函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
+ * @method integer getMemorySize() 获取函数运行时内存大小，默认为 128M，可选范围 64、128MB-3072MB，并且以 128MB 为阶梯
+ * @method void setMemorySize(integer $MemorySize) 设置函数运行时内存大小，默认为 128M，可选范围 64、128MB-3072MB，并且以 128MB 为阶梯
+ * @method integer getTimeout() 获取函数最长执行时间，单位为秒，可选值范围 1-900 秒，默认为 3 秒
+ * @method void setTimeout(integer $Timeout) 设置函数最长执行时间，单位为秒，可选值范围 1-900 秒，默认为 3 秒
  * @method Environment getEnvironment() 获取函数的环境变量
  * @method void setEnvironment(Environment $Environment) 设置函数的环境变量
- * @method string getRuntime() 获取函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
- * @method void setRuntime(string $Runtime) 设置函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
+ * @method string getRuntime() 获取函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
+ * @method void setRuntime(string $Runtime) 设置函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
  * @method VpcConfig getVpcConfig() 获取函数的私有网络配置
  * @method void setVpcConfig(VpcConfig $VpcConfig) 设置函数的私有网络配置
  * @method string getNamespace() 获取函数所属命名空间
@@ -78,12 +78,12 @@ class CreateFunctionRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer 函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯
+     * @var integer 函数运行时内存大小，默认为 128M，可选范围 64、128MB-3072MB，并且以 128MB 为阶梯
      */
     public $MemorySize;
 
     /**
-     * @var integer 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
+     * @var integer 函数最长执行时间，单位为秒，可选值范围 1-900 秒，默认为 3 秒
      */
     public $Timeout;
 
@@ -93,7 +93,7 @@ class CreateFunctionRequest extends AbstractModel
     public $Environment;
 
     /**
-     * @var string 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
+     * @var string 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
      */
     public $Runtime;
 
@@ -147,10 +147,10 @@ class CreateFunctionRequest extends AbstractModel
      * @param Code $Code 函数的代码. 注意：不能同时指定Cos与ZipFile
      * @param string $Handler 函数处理方法名称，名称格式支持 "文件名称.方法名称" 形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求是 2-60 个字符
      * @param string $Description 函数描述,最大支持 1000 个英文字母、数字、空格、逗号、换行符和英文句号，支持中文
-     * @param integer $MemorySize 函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯
-     * @param integer $Timeout 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
+     * @param integer $MemorySize 函数运行时内存大小，默认为 128M，可选范围 64、128MB-3072MB，并且以 128MB 为阶梯
+     * @param integer $Timeout 函数最长执行时间，单位为秒，可选值范围 1-900 秒，默认为 3 秒
      * @param Environment $Environment 函数的环境变量
-     * @param string $Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
+     * @param string $Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
      * @param VpcConfig $VpcConfig 函数的私有网络配置
      * @param string $Namespace 函数所属命名空间
      * @param string $Role 函数绑定的角色

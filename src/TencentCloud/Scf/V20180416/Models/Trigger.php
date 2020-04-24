@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(integer $Enable) 设置使能开关
  * @method string getCustomArgument() 获取客户自定义参数
  * @method void setCustomArgument(string $CustomArgument) 设置客户自定义参数
+ * @method string getAvailableStatus() 获取触发器状态
+ * @method void setAvailableStatus(string $AvailableStatus) 设置触发器状态
  */
 class Trigger extends AbstractModel
 {
@@ -73,6 +75,11 @@ class Trigger extends AbstractModel
     public $CustomArgument;
 
     /**
+     * @var string 触发器状态
+     */
+    public $AvailableStatus;
+
+    /**
      * @param string $ModTime 触发器最后修改时间
      * @param string $Type 触发器类型
      * @param string $TriggerDesc 触发器详细配置
@@ -80,6 +87,7 @@ class Trigger extends AbstractModel
      * @param string $AddTime 触发器创建时间
      * @param integer $Enable 使能开关
      * @param string $CustomArgument 客户自定义参数
+     * @param string $AvailableStatus 触发器状态
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class Trigger extends AbstractModel
 
         if (array_key_exists("CustomArgument",$param) and $param["CustomArgument"] !== null) {
             $this->CustomArgument = $param["CustomArgument"];
+        }
+
+        if (array_key_exists("AvailableStatus",$param) and $param["AvailableStatus"] !== null) {
+            $this->AvailableStatus = $param["AvailableStatus"];
         }
     }
 }

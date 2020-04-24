@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaterialUrl(string $MaterialUrl) 设置素材媒体文件的 URL 地址
  * @method string getCoverUrl() 获取素材媒体文件的封面图片地址。
  * @method void setCoverUrl(string $CoverUrl) 设置素材媒体文件的封面图片地址。
- * @method string getResolution() 获取媒体文件分辨率。
- * @method void setResolution(string $Resolution) 设置媒体文件分辨率。
+ * @method string getResolution() 获取媒体文件分辨率。取值为：LD/SD/HD/FHD/2K/4K。
+ * @method void setResolution(string $Resolution) 设置媒体文件分辨率。取值为：LD/SD/HD/FHD/2K/4K。
  */
 class VideoMaterial extends AbstractModel
 {
@@ -54,7 +54,7 @@ class VideoMaterial extends AbstractModel
     public $CoverUrl;
 
     /**
-     * @var string 媒体文件分辨率。
+     * @var string 媒体文件分辨率。取值为：LD/SD/HD/FHD/2K/4K。
      */
     public $Resolution;
 
@@ -63,7 +63,7 @@ class VideoMaterial extends AbstractModel
      * @param MediaImageSpriteInfo $ImageSpriteInfo 雪碧图信息。
      * @param string $MaterialUrl 素材媒体文件的 URL 地址
      * @param string $CoverUrl 素材媒体文件的封面图片地址。
-     * @param string $Resolution 媒体文件分辨率。
+     * @param string $Resolution 媒体文件分辨率。取值为：LD/SD/HD/FHD/2K/4K。
      */
     function __construct()
     {

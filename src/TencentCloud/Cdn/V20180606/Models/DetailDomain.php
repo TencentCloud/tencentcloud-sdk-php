@@ -210,6 +210,10 @@ global：全球锁定
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityConfig(SecurityConfig $SecurityConfig) 设置Scdn配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ImageOptimization getImageOptimization() 获取ImageOptimization配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageOptimization(ImageOptimization $ImageOptimization) 设置ImageOptimization配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
 {
@@ -473,6 +477,12 @@ global：全球锁定
     public $SecurityConfig;
 
     /**
+     * @var ImageOptimization ImageOptimization配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageOptimization;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -567,6 +577,8 @@ global：全球锁定
      * @param AwsPrivateAccess $AwsPrivateAccess 回源S3鉴权配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityConfig $SecurityConfig Scdn配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageOptimization $ImageOptimization ImageOptimization配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -773,6 +785,11 @@ global：全球锁定
         if (array_key_exists("SecurityConfig",$param) and $param["SecurityConfig"] !== null) {
             $this->SecurityConfig = new SecurityConfig();
             $this->SecurityConfig->deserialize($param["SecurityConfig"]);
+        }
+
+        if (array_key_exists("ImageOptimization",$param) and $param["ImageOptimization"] !== null) {
+            $this->ImageOptimization = new ImageOptimization();
+            $this->ImageOptimization->deserialize($param["ImageOptimization"]);
         }
     }
 }

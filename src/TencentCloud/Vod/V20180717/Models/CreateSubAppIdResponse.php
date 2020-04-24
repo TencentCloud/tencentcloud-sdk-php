@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mariadb\V20170312\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyDBInstanceName返回参数结构体
+ * CreateSubAppId返回参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method integer getSubAppId() 获取新创建的子应用 ID。
+ * @method void setSubAppId(integer $SubAppId) 设置新创建的子应用 ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyDBInstanceNameResponse extends AbstractModel
+class CreateSubAppIdResponse extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var integer 新创建的子应用 ID。
      */
-    public $InstanceId;
+    public $SubAppId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class ModifyDBInstanceNameResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param integer $SubAppId 新创建的子应用 ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class ModifyDBInstanceNameResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

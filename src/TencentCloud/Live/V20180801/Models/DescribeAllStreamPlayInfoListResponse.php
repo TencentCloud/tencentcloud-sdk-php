@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mariadb\V20170312\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyDBInstanceName返回参数结构体
+ * DescribeAllStreamPlayInfoList返回参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getQueryTime() 获取查询时间点，回传的输入参数中的查询时间。
+ * @method void setQueryTime(string $QueryTime) 设置查询时间点，回传的输入参数中的查询时间。
+ * @method array getDataInfoList() 获取数据信息列表。
+ * @method void setDataInfoList(array $DataInfoList) 设置数据信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyDBInstanceNameResponse extends AbstractModel
+class DescribeAllStreamPlayInfoListResponse extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 查询时间点，回传的输入参数中的查询时间。
      */
-    public $InstanceId;
+    public $QueryTime;
+
+    /**
+     * @var array 数据信息列表。
+     */
+    public $DataInfoList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class ModifyDBInstanceNameResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $QueryTime 查询时间点，回传的输入参数中的查询时间。
+     * @param array $DataInfoList 数据信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class ModifyDBInstanceNameResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("QueryTime",$param) and $param["QueryTime"] !== null) {
+            $this->QueryTime = $param["QueryTime"];
+        }
+
+        if (array_key_exists("DataInfoList",$param) and $param["DataInfoList"] !== null) {
+            $this->DataInfoList = [];
+            foreach ($param["DataInfoList"] as $key => $value){
+                $obj = new MonitorStreamPlayInfo();
+                $obj->deserialize($value);
+                array_push($this->DataInfoList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

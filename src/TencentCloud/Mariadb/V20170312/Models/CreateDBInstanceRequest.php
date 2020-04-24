@@ -50,6 +50,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
  * @method string getDbVersionId() 获取数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
  * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
+ * @method string getInstanceName() 获取实例名称， 可以通过该字段自主的设置实例的名字
+ * @method void setInstanceName(string $InstanceName) 设置实例名称， 可以通过该字段自主的设置实例的名字
+ * @method array getSecurityGroupIds() 获取安全组ID列表
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID列表
+ * @method integer getAutoRenewFlag() 获取自动续费标志，1:自动续费，2:不自动续费
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标志，1:自动续费，2:不自动续费
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -117,6 +123,21 @@ class CreateDBInstanceRequest extends AbstractModel
     public $DbVersionId;
 
     /**
+     * @var string 实例名称， 可以通过该字段自主的设置实例的名字
+     */
+    public $InstanceName;
+
+    /**
+     * @var array 安全组ID列表
+     */
+    public $SecurityGroupIds;
+
+    /**
+     * @var integer 自动续费标志，1:自动续费，2:不自动续费
+     */
+    public $AutoRenewFlag;
+
+    /**
      * @param array $Zones 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
      * @param integer $NodeCount 节点个数大小，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
@@ -132,6 +153,9 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $SubnetId 虚拟私有网络子网 ID，VpcId 不为空时必填
      * @param integer $ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
      * @param string $DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
+     * @param string $InstanceName 实例名称， 可以通过该字段自主的设置实例的名字
+     * @param array $SecurityGroupIds 安全组ID列表
+     * @param integer $AutoRenewFlag 自动续费标志，1:自动续费，2:不自动续费
      */
     function __construct()
     {
@@ -192,6 +216,18 @@ class CreateDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("DbVersionId",$param) and $param["DbVersionId"] !== null) {
             $this->DbVersionId = $param["DbVersionId"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
     }
 }

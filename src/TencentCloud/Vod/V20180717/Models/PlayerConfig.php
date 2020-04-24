@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置播放器配置创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method string getUpdateTime() 获取播放器配置最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method void setUpdateTime(string $UpdateTime) 设置播放器配置最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+ * @method string getComment() 获取模板描述信息。
+ * @method void setComment(string $Comment) 设置模板描述信息。
  */
 class PlayerConfig extends AbstractModel
 {
@@ -102,6 +104,11 @@ class PlayerConfig extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 模板描述信息。
+     */
+    public $Comment;
+
+    /**
      * @param string $Name 播放器配置名字。
      * @param string $Type 播放器配置类型，取值范围：
 <li>Preset：系统预置配置；</li>
@@ -116,6 +123,7 @@ class PlayerConfig extends AbstractModel
      * @param array $ResolutionNameSet 播放器对不于不同分辨率的子流展示名字。
      * @param string $CreateTime 播放器配置创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param string $UpdateTime 播放器配置最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @param string $Comment 模板描述信息。
      */
     function __construct()
     {
@@ -170,6 +178,10 @@ class PlayerConfig extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
         }
     }
 }

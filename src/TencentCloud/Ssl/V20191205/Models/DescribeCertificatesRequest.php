@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始。
  * @method integer getLimit() 获取每页数量，默认20。
  * @method void setLimit(integer $Limit) 设置每页数量，默认20。
- * @method string getSearchKey() 获取搜索关键词。
- * @method void setSearchKey(string $SearchKey) 设置搜索关键词。
+ * @method string getSearchKey() 获取搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
+ * @method void setSearchKey(string $SearchKey) 设置搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
  * @method string getCertificateType() 获取证书类型：CA = 客户端证书，SVR = 服务器证书。
  * @method void setCertificateType(string $CertificateType) 设置证书类型：CA = 客户端证书，SVR = 服务器证书。
  * @method integer getProjectId() 获取项目 ID。
@@ -50,7 +50,7 @@ class DescribeCertificatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 搜索关键词。
+     * @var string 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
      */
     public $SearchKey;
 
@@ -82,7 +82,7 @@ class DescribeCertificatesRequest extends AbstractModel
     /**
      * @param integer $Offset 分页偏移量，从0开始。
      * @param integer $Limit 每页数量，默认20。
-     * @param string $SearchKey 搜索关键词。
+     * @param string $SearchKey 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
      * @param string $CertificateType 证书类型：CA = 客户端证书，SVR = 服务器证书。
      * @param integer $ProjectId 项目 ID。
      * @param string $ExpirationSort 按到期时间排序：DESC = 降序， ASC = 升序。

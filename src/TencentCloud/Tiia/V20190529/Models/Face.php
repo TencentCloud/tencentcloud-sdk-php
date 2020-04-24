@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getBasicInfo() 获取对人物的简介。
  * @method void setBasicInfo(string $BasicInfo) 设置对人物的简介。
  * @method integer getConfidence() 获取算法对于Name的置信度（图像中人脸与公众人物的相似度），0-100之间，值越高，表示对于Name越确定。
-当Confidence低于70分时，Name仅供参考。您可以根据业务实际情况调整阈值。
  * @method void setConfidence(integer $Confidence) 设置算法对于Name的置信度（图像中人脸与公众人物的相似度），0-100之间，值越高，表示对于Name越确定。
-当Confidence低于70分时，Name仅供参考。您可以根据业务实际情况调整阈值。
  * @method integer getX() 获取人脸区域左上角横坐标。
  * @method void setX(integer $X) 设置人脸区域左上角横坐标。
  * @method integer getY() 获取人脸区域左上角纵坐标。
@@ -62,7 +60,6 @@ class Face extends AbstractModel
 
     /**
      * @var integer 算法对于Name的置信度（图像中人脸与公众人物的相似度），0-100之间，值越高，表示对于Name越确定。
-当Confidence低于70分时，Name仅供参考。您可以根据业务实际情况调整阈值。
      */
     public $Confidence;
 
@@ -97,7 +94,6 @@ class Face extends AbstractModel
      * @param array $Labels 公众人物身份标签的数组，一个公众人物可能有多个身份标签。
      * @param string $BasicInfo 对人物的简介。
      * @param integer $Confidence 算法对于Name的置信度（图像中人脸与公众人物的相似度），0-100之间，值越高，表示对于Name越确定。
-当Confidence低于70分时，Name仅供参考。您可以根据业务实际情况调整阈值。
      * @param integer $X 人脸区域左上角横坐标。
      * @param integer $Y 人脸区域左上角纵坐标。
      * @param integer $Width 人脸区域宽度。

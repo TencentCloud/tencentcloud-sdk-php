@@ -14,23 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mariadb\V20170312\Models;
+namespace TencentCloud\Cr\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyDBInstanceName返回参数结构体
+ * QueryInstantData返回参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method integer getTotalCount() 获取总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getData() 获取返回内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setData(string $Data) 设置返回内容
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyDBInstanceNameResponse extends AbstractModel
+class QueryInstantDataResponse extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var integer 总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $InstanceId;
+    public $TotalCount;
+
+    /**
+     * @var string 返回内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +51,10 @@ class ModifyDBInstanceNameResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param integer $TotalCount 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Data 返回内容
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +70,12 @@ class ModifyDBInstanceNameResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = $param["Data"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

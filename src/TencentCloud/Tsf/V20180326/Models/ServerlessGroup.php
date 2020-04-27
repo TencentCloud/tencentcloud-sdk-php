@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceCount(integer $InstanceCount) 设置部署组实例数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getApplicationName() 获取应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationName(array $ApplicationName) 设置应用名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerlessGroup extends AbstractModel
 {
@@ -204,6 +208,12 @@ class ServerlessGroup extends AbstractModel
     public $InstanceCount;
 
     /**
+     * @var array 应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationName;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
@@ -239,6 +249,8 @@ class ServerlessGroup extends AbstractModel
      * @param string $ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceCount 部署组实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ApplicationName 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -324,6 +336,10 @@ class ServerlessGroup extends AbstractModel
 
         if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
             $this->InstanceCount = $param["InstanceCount"];
+        }
+
+        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
+            $this->ApplicationName = $param["ApplicationName"];
         }
     }
 }

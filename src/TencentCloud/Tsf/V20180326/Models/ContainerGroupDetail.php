@@ -152,6 +152,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceCount(integer $InstanceCount) 设置部署组实例个数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUpdatedTime() 获取部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdatedTime(integer $UpdatedTime) 设置部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerGroupDetail extends AbstractModel
 {
@@ -354,6 +358,12 @@ class ContainerGroupDetail extends AbstractModel
     public $InstanceCount;
 
     /**
+     * @var integer 部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdatedTime;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
@@ -419,6 +429,8 @@ class ContainerGroupDetail extends AbstractModel
      * @param string $GroupResourceType 部署组资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceCount 部署组实例个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UpdatedTime 部署组更新时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -574,6 +586,10 @@ class ContainerGroupDetail extends AbstractModel
 
         if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
             $this->InstanceCount = $param["InstanceCount"];
+        }
+
+        if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
+            $this->UpdatedTime = $param["UpdatedTime"];
         }
     }
 }

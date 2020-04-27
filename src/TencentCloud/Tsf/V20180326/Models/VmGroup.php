@@ -100,13 +100,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMicroserviceType(string $MicroserviceType) 设置微服务类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApplicationType() 获取ApplicationType
+ * @method string getApplicationType() 获取应用类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApplicationType(string $ApplicationType) 设置ApplicationType
+ * @method void setApplicationType(string $ApplicationType) 设置应用类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGroupResourceType() 获取GroupResourceType
+ * @method string getGroupResourceType() 获取部署组资源类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupResourceType(string $GroupResourceType) 设置GroupResourceType
+ * @method void setGroupResourceType(string $GroupResourceType) 设置部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUpdatedTime() 获取部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdatedTime(integer $UpdatedTime) 设置部署组更新时间戳
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class VmGroup extends AbstractModel
@@ -232,16 +236,22 @@ class VmGroup extends AbstractModel
     public $MicroserviceType;
 
     /**
-     * @var string ApplicationType
+     * @var string 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationType;
 
     /**
-     * @var string GroupResourceType
+     * @var string 部署组资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupResourceType;
+
+    /**
+     * @var integer 部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdatedTime;
 
     /**
      * @param string $GroupId 部署组ID
@@ -284,9 +294,11 @@ class VmGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MicroserviceType 微服务类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApplicationType ApplicationType
+     * @param string $ApplicationType 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GroupResourceType GroupResourceType
+     * @param string $GroupResourceType 部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UpdatedTime 部署组更新时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -388,6 +400,10 @@ class VmGroup extends AbstractModel
 
         if (array_key_exists("GroupResourceType",$param) and $param["GroupResourceType"] !== null) {
             $this->GroupResourceType = $param["GroupResourceType"];
+        }
+
+        if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
+            $this->UpdatedTime = $param["UpdatedTime"];
         }
     }
 }

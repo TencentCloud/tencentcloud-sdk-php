@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagSet(array $TagSet) 设置媒体文件的标签信息。
  * @method string getVid() 获取直播录制文件的唯一标识
  * @method void setVid(string $Vid) 设置直播录制文件的唯一标识
+ * @method string getCategory() 获取文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
+ * @method void setCategory(string $Category) 设置文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
  */
 class MediaBasicInfo extends AbstractModel
 {
@@ -132,6 +140,14 @@ class MediaBasicInfo extends AbstractModel
     public $Vid;
 
     /**
+     * @var string 文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
+     */
+    public $Category;
+
+    /**
      * @param string $Name 媒体文件名称。
      * @param string $Description 媒体文件描述。
      * @param string $CreateTime 媒体文件的创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -148,6 +164,10 @@ class MediaBasicInfo extends AbstractModel
      * @param string $StorageRegion 媒体文件存储地区，如 ap-guangzhou，参见[地域列表](https://cloud.tencent.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
      * @param array $TagSet 媒体文件的标签信息。
      * @param string $Vid 直播录制文件的唯一标识
+     * @param string $Category 文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
      */
     function __construct()
     {
@@ -221,6 +241,10 @@ class MediaBasicInfo extends AbstractModel
 
         if (array_key_exists("Vid",$param) and $param["Vid"] !== null) {
             $this->Vid = $param["Vid"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

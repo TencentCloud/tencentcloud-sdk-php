@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 默认值：black 。
+ * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
+ * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
  */
 class CreateImageSpriteTemplateRequest extends AbstractModel
 {
@@ -147,6 +149,11 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
     public $FillType;
 
     /**
+     * @var string 模板描述信息，长度限制：256 个字符。
+     */
+    public $Comment;
+
+    /**
      * @param string $SampleType 采样类型，取值：
 <li>Percent：按百分比。</li>
 <li>Time：按时间间隔。</li>
@@ -176,6 +183,7 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 默认值：black 。
+     * @param string $Comment 模板描述信息，长度限制：256 个字符。
      */
     function __construct()
     {
@@ -224,6 +232,10 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
 
         if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
             $this->FillType = $param["FillType"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
         }
     }
 }

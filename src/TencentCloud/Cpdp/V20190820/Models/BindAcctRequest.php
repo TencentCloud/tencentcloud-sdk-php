@@ -60,13 +60,13 @@ BindType==2时必填
  * @method void setMobile(string $Mobile) 设置用于短信验证
 BindType==2时必填
 <敏感信息>加密详见《商户端接口敏感信息加密说明》
- * @method string getCnapsBranchId() 获取超级网银行号和大小额行号
+ * @method string getCnapsBranchId() 获取大小额行号，超级网银行号和大小额行号
 二选一
- * @method void setCnapsBranchId(string $CnapsBranchId) 设置超级网银行号和大小额行号
+ * @method void setCnapsBranchId(string $CnapsBranchId) 设置大小额行号，超级网银行号和大小额行号
 二选一
- * @method string getEiconBankBranchId() 获取超级网银行号和大小额行号
+ * @method string getEiconBankBranchId() 获取超级网银行号，超级网银行号和大小额行号
 二选一
- * @method void setEiconBankBranchId(string $EiconBankBranchId) 设置超级网银行号和大小额行号
+ * @method void setEiconBankBranchId(string $EiconBankBranchId) 设置超级网银行号，超级网银行号和大小额行号
 二选一
  */
 class BindAcctRequest extends AbstractModel
@@ -140,13 +140,13 @@ BindType==2时必填
     public $Mobile;
 
     /**
-     * @var string 超级网银行号和大小额行号
+     * @var string 大小额行号，超级网银行号和大小额行号
 二选一
      */
     public $CnapsBranchId;
 
     /**
-     * @var string 超级网银行号和大小额行号
+     * @var string 超级网银行号，超级网银行号和大小额行号
 二选一
      */
     public $EiconBankBranchId;
@@ -172,9 +172,9 @@ BindType==2时必填
      * @param string $Mobile 用于短信验证
 BindType==2时必填
 <敏感信息>加密详见《商户端接口敏感信息加密说明》
-     * @param string $CnapsBranchId 超级网银行号和大小额行号
+     * @param string $CnapsBranchId 大小额行号，超级网银行号和大小额行号
 二选一
-     * @param string $EiconBankBranchId 超级网银行号和大小额行号
+     * @param string $EiconBankBranchId 超级网银行号，超级网银行号和大小额行号
 二选一
      */
     function __construct()

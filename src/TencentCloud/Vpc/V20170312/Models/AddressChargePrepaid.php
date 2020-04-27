@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cpdp\V20190820\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 发票管理返回结果
+ * 用于描述弹性公网IP的费用对象
  *
- * @method integer getTotal() 获取总数。
- * @method void setTotal(integer $Total) 设置总数。
- * @method array getList() 获取发票列表。
- * @method void setList(array $List) 设置发票列表。
+ * @method integer getPeriod() 获取购买实例的时长
+ * @method void setPeriod(integer $Period) 设置购买实例的时长
+ * @method string getRenewFlag() 获取自动续费标志
+ * @method void setRenewFlag(string $RenewFlag) 设置自动续费标志
  */
-class InvoiceManangementResult extends AbstractModel
+class AddressChargePrepaid extends AbstractModel
 {
     /**
-     * @var integer 总数。
+     * @var integer 购买实例的时长
      */
-    public $Total;
+    public $Period;
 
     /**
-     * @var array 发票列表。
+     * @var string 自动续费标志
      */
-    public $List;
+    public $RenewFlag;
 
     /**
-     * @param integer $Total 总数。
-     * @param array $List 发票列表。
+     * @param integer $Period 购买实例的时长
+     * @param string $RenewFlag 自动续费标志
      */
     function __construct()
     {
@@ -54,17 +54,12 @@ class InvoiceManangementResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
 
-        if (array_key_exists("List",$param) and $param["List"] !== null) {
-            $this->List = [];
-            foreach ($param["List"] as $key => $value){
-                $obj = new InvoiceManagementList();
-                $obj->deserialize($value);
-                array_push($this->List, $obj);
-            }
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
         }
     }
 }

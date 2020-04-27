@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取任务流名字
  * @method void setName(string $Name) 设置任务流名字
+ * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
+ * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
  * @method MediaProcessTaskInput getMediaProcessTask() 获取视频处理类型任务参数。
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) 设置视频处理类型任务参数。
  * @method AiContentReviewTaskInput getAiContentReviewTask() 获取AI 智能内容审核类型任务参数。
@@ -39,6 +41,11 @@ class ResetProcedureTemplateRequest extends AbstractModel
      * @var string 任务流名字
      */
     public $Name;
+
+    /**
+     * @var string 模板描述信息，长度限制：256 个字符。
+     */
+    public $Comment;
 
     /**
      * @var MediaProcessTaskInput 视频处理类型任务参数。
@@ -67,6 +74,7 @@ class ResetProcedureTemplateRequest extends AbstractModel
 
     /**
      * @param string $Name 任务流名字
+     * @param string $Comment 模板描述信息，长度限制：256 个字符。
      * @param MediaProcessTaskInput $MediaProcessTask 视频处理类型任务参数。
      * @param AiContentReviewTaskInput $AiContentReviewTask AI 智能内容审核类型任务参数。
      * @param AiAnalysisTaskInput $AiAnalysisTask AI 智能内容分析类型任务参数。
@@ -88,6 +96,10 @@ class ResetProcedureTemplateRequest extends AbstractModel
         }
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
         }
 
         if (array_key_exists("MediaProcessTask",$param) and $param["MediaProcessTask"] !== null) {

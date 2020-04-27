@@ -38,6 +38,8 @@ use TencentCloud\Dayu\V20180709\Models as Models;
  * @method Models\CreateL7RulesResponse CreateL7Rules(Models\CreateL7RulesRequest $req) 添加7层(网站)转发规则
  * @method Models\CreateL7RulesUploadResponse CreateL7RulesUpload(Models\CreateL7RulesUploadRequest $req) 批量上传7层转发规则
  * @method Models\CreateNetReturnResponse CreateNetReturn(Models\CreateNetReturnRequest $req) 高防IP专业版一键切回源站
+ * @method Models\CreateNewL4RulesResponse CreateNewL4Rules(Models\CreateNewL4RulesRequest $req) 添加L4转发规则
+ * @method Models\CreateNewL7RulesResponse CreateNewL7Rules(Models\CreateNewL7RulesRequest $req) 添加7层转发规则
  * @method Models\CreateUnblockIpResponse CreateUnblockIp(Models\CreateUnblockIpRequest $req) IP解封操作
  * @method Models\DeleteCCFrequencyRulesResponse DeleteCCFrequencyRules(Models\DeleteCCFrequencyRulesRequest $req) 删除CC防护的访问频率控制规则
  * @method Models\DeleteCCSelfDefinePolicyResponse DeleteCCSelfDefinePolicy(Models\DeleteCCSelfDefinePolicyRequest $req) 删除CC自定义策略
@@ -45,6 +47,8 @@ use TencentCloud\Dayu\V20180709\Models as Models;
  * @method Models\DeleteDDoSPolicyCaseResponse DeleteDDoSPolicyCase(Models\DeleteDDoSPolicyCaseRequest $req) 删除策略场景
  * @method Models\DeleteL4RulesResponse DeleteL4Rules(Models\DeleteL4RulesRequest $req) 删除四层转发规则
  * @method Models\DeleteL7RulesResponse DeleteL7Rules(Models\DeleteL7RulesRequest $req) 删除七层转发规则
+ * @method Models\DeleteNewL4RulesResponse DeleteNewL4Rules(Models\DeleteNewL4RulesRequest $req) 删除L4转发规则
+ * @method Models\DeleteNewL7RulesResponse DeleteNewL7Rules(Models\DeleteNewL7RulesRequest $req) 删除L7转发规则
  * @method Models\DescribeActionLogResponse DescribeActionLog(Models\DescribeActionLogRequest $req) 获取操作日志
  * @method Models\DescribeBGPIPL7RuleMaxCntResponse DescribeBGPIPL7RuleMaxCnt(Models\DescribeBGPIPL7RuleMaxCntRequest $req) 获取高防IP可添加的最多7层规则数量
 
@@ -81,6 +85,9 @@ use TencentCloud\Dayu\V20180709\Models as Models;
  * @method Models\DescribeL4HealthConfigResponse DescribeL4HealthConfig(Models\DescribeL4HealthConfigRequest $req) 导出四层健康检查配置
  * @method Models\DescribeL4RulesErrHealthResponse DescribeL4RulesErrHealth(Models\DescribeL4RulesErrHealthRequest $req) 获取L4转发规则健康检查异常结果
  * @method Models\DescribeL7HealthConfigResponse DescribeL7HealthConfig(Models\DescribeL7HealthConfigRequest $req) 导出七层健康检查配置
+ * @method Models\DescribeNewL4RulesResponse DescribeNewL4Rules(Models\DescribeNewL4RulesRequest $req) 获取L4转发规则
+ * @method Models\DescribeNewL4RulesErrHealthResponse DescribeNewL4RulesErrHealth(Models\DescribeNewL4RulesErrHealthRequest $req) 获取L4转发规则健康检查异常结果
+ * @method Models\DescribeNewL7RulesErrHealthResponse DescribeNewL7RulesErrHealth(Models\DescribeNewL7RulesErrHealthRequest $req) 获取L7转发规则健康检查异常结果
  * @method Models\DescribePackIndexResponse DescribePackIndex(Models\DescribePackIndexRequest $req) 获取产品总览统计，支持高防包、高防IP、高防IP专业版；
  * @method Models\DescribePcapResponse DescribePcap(Models\DescribePcapRequest $req) 下载攻击事件的pcap包
  * @method Models\DescribePolicyCaseResponse DescribePolicyCase(Models\DescribePolicyCaseRequest $req) 获取策略场景
@@ -94,6 +101,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
  * @method Models\DescribeUnBlockStatisResponse DescribeUnBlockStatis(Models\DescribeUnBlockStatisRequest $req) 获取黑洞解封次数
  * @method Models\DescribleL4RulesResponse DescribleL4Rules(Models\DescribleL4RulesRequest $req) 获取四层转发规则
  * @method Models\DescribleL7RulesResponse DescribleL7Rules(Models\DescribleL7RulesRequest $req) 获取七层转发规则
+ * @method Models\DescribleNewL7RulesResponse DescribleNewL7Rules(Models\DescribleNewL7RulesRequest $req) 获取7层规则
  * @method Models\DescribleRegionCountResponse DescribleRegionCount(Models\DescribleRegionCountRequest $req) 获取地域的资源实例数
  * @method Models\ModifyCCAlarmThresholdResponse ModifyCCAlarmThreshold(Models\ModifyCCAlarmThresholdRequest $req) 为高防包、高防IP、高防IP专业版、棋牌盾产品设置CC攻击的告警通知阈值
  * @method Models\ModifyCCFrequencyRulesResponse ModifyCCFrequencyRules(Models\ModifyCCFrequencyRulesRequest $req) 修改CC防护的访问频率控制规则

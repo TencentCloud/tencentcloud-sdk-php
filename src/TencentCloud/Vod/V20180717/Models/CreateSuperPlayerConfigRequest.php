@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取播放器配置名称，长度限制：64 个字符。只允许出现 [0-9a-zA-Z] 及 _- 字符（如 test_ABC-123），同一个用户该名称唯一。
  * @method void setName(string $Name) 设置播放器配置名称，长度限制：64 个字符。只允许出现 [0-9a-zA-Z] 及 _- 字符（如 test_ABC-123），同一个用户该名称唯一。
+ * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
+ * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
  * @method string getDrmSwitch() 获取播放 DRM 保护的自适应码流开关：
 <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
 <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
@@ -61,6 +63,11 @@ class CreateSuperPlayerConfigRequest extends AbstractModel
      * @var string 播放器配置名称，长度限制：64 个字符。只允许出现 [0-9a-zA-Z] 及 _- 字符（如 test_ABC-123），同一个用户该名称唯一。
      */
     public $Name;
+
+    /**
+     * @var string 模板描述信息，长度限制：256 个字符。
+     */
+    public $Comment;
 
     /**
      * @var string 播放 DRM 保护的自适应码流开关：
@@ -104,6 +111,7 @@ class CreateSuperPlayerConfigRequest extends AbstractModel
 
     /**
      * @param string $Name 播放器配置名称，长度限制：64 个字符。只允许出现 [0-9a-zA-Z] 及 _- 字符（如 test_ABC-123），同一个用户该名称唯一。
+     * @param string $Comment 模板描述信息，长度限制：256 个字符。
      * @param string $DrmSwitch 播放 DRM 保护的自适应码流开关：
 <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
 <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
@@ -136,6 +144,10 @@ class CreateSuperPlayerConfigRequest extends AbstractModel
         }
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
         }
 
         if (array_key_exists("DrmSwitch",$param) and $param["DrmSwitch"] !== null) {

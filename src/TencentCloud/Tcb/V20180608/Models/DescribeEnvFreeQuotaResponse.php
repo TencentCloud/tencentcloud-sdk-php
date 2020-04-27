@@ -14,26 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cpdp\V20190820\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryMerchantInfoForManagement返回参数结构体
+ * DescribeEnvFreeQuota返回参数结构体
  *
- * @method MerchantManagementResult getResult() 获取商户结果
+ * @method array getQuotaItems() 获取免费抵扣配额详情
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(MerchantManagementResult $Result) 设置商户结果
+ * @method void setQuotaItems(array $QuotaItems) 设置免费抵扣配额详情
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class QueryMerchantInfoForManagementResponse extends AbstractModel
+class DescribeEnvFreeQuotaResponse extends AbstractModel
 {
     /**
-     * @var MerchantManagementResult 商户结果
+     * @var array 免费抵扣配额详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Result;
+    public $QuotaItems;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,7 +41,7 @@ class QueryMerchantInfoForManagementResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param MerchantManagementResult $Result 商户结果
+     * @param array $QuotaItems 免费抵扣配额详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -58,9 +58,13 @@ class QueryMerchantInfoForManagementResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new MerchantManagementResult();
-            $this->Result->deserialize($param["Result"]);
+        if (array_key_exists("QuotaItems",$param) and $param["QuotaItems"] !== null) {
+            $this->QuotaItems = [];
+            foreach ($param["QuotaItems"] as $key => $value){
+                $obj = new PostpayEnvQuota();
+                $obj->deserialize($value);
+                array_push($this->QuotaItems, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

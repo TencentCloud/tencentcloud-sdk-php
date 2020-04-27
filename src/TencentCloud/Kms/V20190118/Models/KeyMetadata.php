@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidTo(integer $ValidTo) 设置在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceId() 获取资源ID，格式：creatorUin/$creatorUin/$keyId
+ * @method void setResourceId(string $ResourceId) 设置资源ID，格式：creatorUin/$creatorUin/$keyId
  */
 class KeyMetadata extends AbstractModel
 {
@@ -131,6 +133,11 @@ class KeyMetadata extends AbstractModel
     public $ValidTo;
 
     /**
+     * @var string 资源ID，格式：creatorUin/$creatorUin/$keyId
+     */
+    public $ResourceId;
+
+    /**
      * @param string $KeyId CMK的全局唯一标识
      * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名
      * @param integer $CreateTime 密钥创建时间
@@ -148,6 +155,7 @@ class KeyMetadata extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ValidTo 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceId 资源ID，格式：creatorUin/$creatorUin/$keyId
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class KeyMetadata extends AbstractModel
 
         if (array_key_exists("ValidTo",$param) and $param["ValidTo"] !== null) {
             $this->ValidTo = $param["ValidTo"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncryptKey(string $EncryptKey) 设置白盒加密密钥，base64编码
  * @method string getDecryptKey() 获取白盒解密密钥，base64编码
  * @method void setDecryptKey(string $DecryptKey) 设置白盒解密密钥，base64编码
+ * @method string getResourceId() 获取资源ID，格式：creatorUin/$creatorUin/$keyId
+ * @method void setResourceId(string $ResourceId) 设置资源ID，格式：creatorUin/$creatorUin/$keyId
  */
 class WhiteboxKeyInfo extends AbstractModel
 {
@@ -94,6 +96,11 @@ class WhiteboxKeyInfo extends AbstractModel
     public $DecryptKey;
 
     /**
+     * @var string 资源ID，格式：creatorUin/$creatorUin/$keyId
+     */
+    public $ResourceId;
+
+    /**
      * @param string $KeyId 白盒密钥的全局唯一标识符
      * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字母数字 - _ 的组合，首字符必须为字母或者数字. 不可重复
      * @param integer $CreatorUin 创建者
@@ -104,6 +111,7 @@ class WhiteboxKeyInfo extends AbstractModel
      * @param string $Algorithm 密钥所用的算法类型
      * @param string $EncryptKey 白盒加密密钥，base64编码
      * @param string $DecryptKey 白盒解密密钥，base64编码
+     * @param string $ResourceId 资源ID，格式：creatorUin/$creatorUin/$keyId
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class WhiteboxKeyInfo extends AbstractModel
 
         if (array_key_exists("DecryptKey",$param) and $param["DecryptKey"] !== null) {
             $this->DecryptKey = $param["DecryptKey"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

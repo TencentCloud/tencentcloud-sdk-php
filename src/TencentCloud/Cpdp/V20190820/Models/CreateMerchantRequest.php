@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaxpayerName(string $TaxpayerName) 设置企业名称
  * @method string getTaxpayerNum() 获取销方纳税人识别号
  * @method void setTaxpayerNum(string $TaxpayerNum) 设置销方纳税人识别号
- * @method string getLegalPersonName() 获取注册企业法人代表名称
- * @method void setLegalPersonName(string $LegalPersonName) 设置注册企业法人代表名称
+ * @method string getLegalPersonName() 获取注册企业法定代表人名称
+ * @method void setLegalPersonName(string $LegalPersonName) 设置注册企业法定代表人名称
  * @method string getContactsName() 获取联系人
  * @method void setContactsName(string $ContactsName) 设置联系人
  * @method string getPhone() 获取联系人手机号
@@ -89,7 +89,7 @@ class CreateMerchantRequest extends AbstractModel
     public $TaxpayerNum;
 
     /**
-     * @var string 注册企业法人代表名称
+     * @var string 注册企业法定代表人名称
      */
     public $LegalPersonName;
 
@@ -186,7 +186,7 @@ class CreateMerchantRequest extends AbstractModel
      * @param integer $InvoicePlatformId 开票平台ID
      * @param string $TaxpayerName 企业名称
      * @param string $TaxpayerNum 销方纳税人识别号
-     * @param string $LegalPersonName 注册企业法人代表名称
+     * @param string $LegalPersonName 注册企业法定代表人名称
      * @param string $ContactsName 联系人
      * @param string $Phone 联系人手机号
      * @param string $Address 不包含省市名称的地址

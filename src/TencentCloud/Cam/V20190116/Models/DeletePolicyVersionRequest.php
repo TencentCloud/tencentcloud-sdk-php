@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cpdp\V20190820\Models;
+namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 商户管理端结果
+ * DeletePolicyVersion请求参数结构体
  *
- * @method integer getTotal() 获取总数。
- * @method void setTotal(integer $Total) 设置总数。
- * @method array getList() 获取商户列表。
- * @method void setList(array $List) 设置商户列表。
+ * @method integer getPolicyId() 获取策略ID
+ * @method void setPolicyId(integer $PolicyId) 设置策略ID
+ * @method array getVersionId() 获取策略版本号
+ * @method void setVersionId(array $VersionId) 设置策略版本号
  */
-class MerchantManagementResult extends AbstractModel
+class DeletePolicyVersionRequest extends AbstractModel
 {
     /**
-     * @var integer 总数。
+     * @var integer 策略ID
      */
-    public $Total;
+    public $PolicyId;
 
     /**
-     * @var array 商户列表。
+     * @var array 策略版本号
      */
-    public $List;
+    public $VersionId;
 
     /**
-     * @param integer $Total 总数。
-     * @param array $List 商户列表。
+     * @param integer $PolicyId 策略ID
+     * @param array $VersionId 策略版本号
      */
     function __construct()
     {
@@ -54,17 +54,12 @@ class MerchantManagementResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
         }
 
-        if (array_key_exists("List",$param) and $param["List"] !== null) {
-            $this->List = [];
-            foreach ($param["List"] as $key => $value){
-                $obj = new MerchantManagementList();
-                $obj->deserialize($value);
-                array_push($this->List, $obj);
-            }
+        if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
+            $this->VersionId = $param["VersionId"];
         }
     }
 }

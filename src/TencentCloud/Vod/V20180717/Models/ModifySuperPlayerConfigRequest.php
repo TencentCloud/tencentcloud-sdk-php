@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) 设置允许输出的雪碧图模板 ID。
  * @method array getResolutionNames() 获取播放器对不于不同分辨率的子流展示名字。
  * @method void setResolutionNames(array $ResolutionNames) 设置播放器对不于不同分辨率的子流展示名字。
+ * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
+ * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
@@ -74,6 +76,11 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
     public $ResolutionNames;
 
     /**
+     * @var string 模板描述信息，长度限制：256 个字符。
+     */
+    public $Comment;
+
+    /**
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
@@ -87,6 +94,7 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
      * @param DrmStreamingsInfoForUpdate $DrmStreamingsInfo 允许输出的 DRM 自适应码流模板内容。
      * @param integer $ImageSpriteDefinition 允许输出的雪碧图模板 ID。
      * @param array $ResolutionNames 播放器对不于不同分辨率的子流展示名字。
+     * @param string $Comment 模板描述信息，长度限制：256 个字符。
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
@@ -130,6 +138,10 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResolutionNames, $obj);
             }
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

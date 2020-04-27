@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHeight(integer $Height) 设置截图高度。默认：0（原始高）。
  * @method integer getPornFlag() 获取是否开启鉴黄，0：不开启，1：开启。默认：0。
  * @method void setPornFlag(integer $PornFlag) 设置是否开启鉴黄，0：不开启，1：开启。默认：0。
+ * @method string getCosPrefix() 获取Cos Bucket文件夹前缀。
+ * @method void setCosPrefix(string $CosPrefix) 设置Cos Bucket文件夹前缀。
+ * @method string getCosFileName() 获取Cos 文件名称。
+ * @method void setCosFileName(string $CosFileName) 设置Cos 文件名称。
  */
 class CreateLiveSnapshotTemplateRequest extends AbstractModel
 {
@@ -102,6 +106,16 @@ class CreateLiveSnapshotTemplateRequest extends AbstractModel
     public $PornFlag;
 
     /**
+     * @var string Cos Bucket文件夹前缀。
+     */
+    public $CosPrefix;
+
+    /**
+     * @var string Cos 文件名称。
+     */
+    public $CosFileName;
+
+    /**
      * @param string $TemplateName 模板名称。
 长度上限：255字节。
 仅支持中文、英文、数字、_、-。
@@ -116,6 +130,8 @@ class CreateLiveSnapshotTemplateRequest extends AbstractModel
      * @param integer $Width 截图宽度。默认：0（原始宽）。
      * @param integer $Height 截图高度。默认：0（原始高）。
      * @param integer $PornFlag 是否开启鉴黄，0：不开启，1：开启。默认：0。
+     * @param string $CosPrefix Cos Bucket文件夹前缀。
+     * @param string $CosFileName Cos 文件名称。
      */
     function __construct()
     {
@@ -164,6 +180,14 @@ class CreateLiveSnapshotTemplateRequest extends AbstractModel
 
         if (array_key_exists("PornFlag",$param) and $param["PornFlag"] !== null) {
             $this->PornFlag = $param["PornFlag"];
+        }
+
+        if (array_key_exists("CosPrefix",$param) and $param["CosPrefix"] !== null) {
+            $this->CosPrefix = $param["CosPrefix"];
+        }
+
+        if (array_key_exists("CosFileName",$param) and $param["CosFileName"] !== null) {
+            $this->CosFileName = $param["CosFileName"];
         }
     }
 }

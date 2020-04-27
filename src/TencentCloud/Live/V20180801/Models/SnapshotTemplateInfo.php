@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosRegion(string $CosRegion) 设置Cos 地域。
  * @method string getDescription() 获取模板描述。
  * @method void setDescription(string $Description) 设置模板描述。
+ * @method string getCosPrefix() 获取Cos Bucket文件夹前缀。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCosPrefix(string $CosPrefix) 设置Cos Bucket文件夹前缀。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCosFileName() 获取Cos 文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCosFileName(string $CosFileName) 设置Cos 文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SnapshotTemplateInfo extends AbstractModel
 {
@@ -100,6 +108,18 @@ class SnapshotTemplateInfo extends AbstractModel
     public $Description;
 
     /**
+     * @var string Cos Bucket文件夹前缀。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CosPrefix;
+
+    /**
+     * @var string Cos 文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CosFileName;
+
+    /**
      * @param integer $TemplateId 模板 ID。
      * @param string $TemplateName 模板名称。
      * @param integer $SnapshotInterval 截图时间间隔，5-300秒。
@@ -112,6 +132,10 @@ class SnapshotTemplateInfo extends AbstractModel
      * @param string $CosBucket Cos Bucket名称。
      * @param string $CosRegion Cos 地域。
      * @param string $Description 模板描述。
+     * @param string $CosPrefix Cos Bucket文件夹前缀。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CosFileName Cos 文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -164,6 +188,14 @@ class SnapshotTemplateInfo extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("CosPrefix",$param) and $param["CosPrefix"] !== null) {
+            $this->CosPrefix = $param["CosPrefix"];
+        }
+
+        if (array_key_exists("CosFileName",$param) and $param["CosFileName"] !== null) {
+            $this->CosFileName = $param["CosFileName"];
         }
     }
 }

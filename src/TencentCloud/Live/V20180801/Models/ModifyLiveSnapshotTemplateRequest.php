@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosBucket(string $CosBucket) 设置Cos Bucket名称。
  * @method string getCosRegion() 获取Cos 地域。
  * @method void setCosRegion(string $CosRegion) 设置Cos 地域。
+ * @method string getCosPrefix() 获取Cos Bucket文件夹前缀。
+ * @method void setCosPrefix(string $CosPrefix) 设置Cos Bucket文件夹前缀。
+ * @method string getCosFileName() 获取Cos 文件名称。
+ * @method void setCosFileName(string $CosFileName) 设置Cos 文件名称。
  */
 class ModifyLiveSnapshotTemplateRequest extends AbstractModel
 {
@@ -109,6 +113,16 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
     public $CosRegion;
 
     /**
+     * @var string Cos Bucket文件夹前缀。
+     */
+    public $CosPrefix;
+
+    /**
+     * @var string Cos 文件名称。
+     */
+    public $CosFileName;
+
+    /**
      * @param integer $TemplateId 模板 ID。
      * @param string $TemplateName 模板名称。
 长度上限：255字节。
@@ -124,6 +138,8 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
      * @param integer $CosAppId Cos 应用 ID。
      * @param string $CosBucket Cos Bucket名称。
      * @param string $CosRegion Cos 地域。
+     * @param string $CosPrefix Cos Bucket文件夹前缀。
+     * @param string $CosFileName Cos 文件名称。
      */
     function __construct()
     {
@@ -176,6 +192,14 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
 
         if (array_key_exists("CosRegion",$param) and $param["CosRegion"] !== null) {
             $this->CosRegion = $param["CosRegion"];
+        }
+
+        if (array_key_exists("CosPrefix",$param) and $param["CosPrefix"] !== null) {
+            $this->CosPrefix = $param["CosPrefix"];
+        }
+
+        if (array_key_exists("CosFileName",$param) and $param["CosFileName"] !== null) {
+            $this->CosFileName = $param["CosFileName"];
         }
     }
 }

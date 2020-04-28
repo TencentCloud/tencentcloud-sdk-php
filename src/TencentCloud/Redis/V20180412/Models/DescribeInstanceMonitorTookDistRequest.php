@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getDate() 获取时间；例如："20190219"
  * @method void setDate(string $Date) 设置时间；例如："20190219"
- * @method integer getSpanType() 获取请求类型：1——string类型，2——所有类型
- * @method void setSpanType(integer $SpanType) 设置请求类型：1——string类型，2——所有类型
+ * @method integer getSpanType() 获取时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
+ * @method void setSpanType(integer $SpanType) 设置时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
  */
 class DescribeInstanceMonitorTookDistRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeInstanceMonitorTookDistRequest extends AbstractModel
     public $Date;
 
     /**
-     * @var integer 请求类型：1——string类型，2——所有类型
+     * @var integer 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
      */
     public $SpanType;
 
     /**
      * @param string $InstanceId 实例Id
      * @param string $Date 时间；例如："20190219"
-     * @param integer $SpanType 请求类型：1——string类型，2——所有类型
+     * @param integer $SpanType 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
      */
     function __construct()
     {

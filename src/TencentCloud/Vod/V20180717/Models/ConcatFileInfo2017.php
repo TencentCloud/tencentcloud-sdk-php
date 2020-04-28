@@ -23,27 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getErrCode() 获取错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrCode(integer $ErrCode) 设置错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取视频拼接源文件的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(string $FileId) 设置视频拼接源文件的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileUrl() 获取视频拼接源文件的地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileUrl(string $FileUrl) 设置视频拼接源文件的地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileType() 获取视频拼接源文件的格式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileType(string $FileType) 设置视频拼接源文件的格式。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConcatFileInfo2017 extends AbstractModel
 {
@@ -51,31 +41,26 @@ class ConcatFileInfo2017 extends AbstractModel
      * @var integer 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
 
     /**
      * @var string 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var string 视频拼接源文件的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
      * @var string 视频拼接源文件的地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileUrl;
 
     /**
      * @var string 视频拼接源文件的格式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileType;
 
@@ -83,15 +68,10 @@ class ConcatFileInfo2017 extends AbstractModel
      * @param integer $ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 视频拼接源文件的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileUrl 视频拼接源文件的地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileType 视频拼接源文件的格式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

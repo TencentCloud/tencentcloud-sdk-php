@@ -45,7 +45,7 @@ use TencentCloud\Kms\V20190118\Models as Models;
  * @method Models\EnableKeyResponse EnableKey(Models\EnableKeyRequest $req) 用于启用一个指定的CMK。
  * @method Models\EnableKeyRotationResponse EnableKeyRotation(Models\EnableKeyRotationRequest $req) 对指定的CMK开启密钥轮换功能。
  * @method Models\EnableKeysResponse EnableKeys(Models\EnableKeysRequest $req) 该接口用于批量启用CMK。
- * @method Models\EnableWhiteBoxKeyResponse EnableWhiteBoxKey(Models\EnableWhiteBoxKeyRequest $req) 批量启用白盒密钥
+ * @method Models\EnableWhiteBoxKeyResponse EnableWhiteBoxKey(Models\EnableWhiteBoxKeyRequest $req) 启用白盒密钥
  * @method Models\EnableWhiteBoxKeysResponse EnableWhiteBoxKeys(Models\EnableWhiteBoxKeysRequest $req) 批量启用白盒密钥
  * @method Models\EncryptResponse Encrypt(Models\EncryptRequest $req) 本接口用于加密最多为4KB任意数据，可用于加密数据库密码，RSA Key，或其它较小的敏感信息。对于应用的数据加密，使用GenerateDataKey生成的DataKey进行本地数据的加解密操作
  * @method Models\EncryptByWhiteBoxResponse EncryptByWhiteBox(Models\EncryptByWhiteBoxRequest $req) 使用白盒密钥进行加密

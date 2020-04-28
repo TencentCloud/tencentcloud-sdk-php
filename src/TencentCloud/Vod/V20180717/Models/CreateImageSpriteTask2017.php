@@ -25,35 +25,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getErrCode() 获取错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrCode(integer $ErrCode) 设置错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取截取雪碧图文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(string $FileId) 设置截取雪碧图文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDefinition() 获取雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefinition(integer $Definition) 设置雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取雪碧图小图总数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置雪碧图小图总数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getImageSpriteUrlSet() 获取截取雪碧图输出的地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageSpriteUrlSet(array $ImageSpriteUrlSet) 设置截取雪碧图输出的地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWebVttUrl() 获取雪碧图子图位置与时间关系 WebVtt 文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebVttUrl(string $WebVttUrl) 设置雪碧图子图位置与时间关系 WebVtt 文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateImageSpriteTask2017 extends AbstractModel
 {
@@ -66,43 +52,36 @@ class CreateImageSpriteTask2017 extends AbstractModel
      * @var integer 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
 
     /**
      * @var string 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var string 截取雪碧图文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
      * @var integer 雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Definition;
 
     /**
      * @var integer 雪碧图小图总数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 截取雪碧图输出的地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageSpriteUrlSet;
 
     /**
      * @var string 雪碧图子图位置与时间关系 WebVtt 文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebVttUrl;
 
@@ -111,19 +90,12 @@ class CreateImageSpriteTask2017 extends AbstractModel
      * @param integer $ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 截取雪碧图文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Definition 雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 雪碧图小图总数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ImageSpriteUrlSet 截取雪碧图输出的地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WebVttUrl 雪碧图子图位置与时间关系 WebVtt 文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -23,19 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getErrCode() 获取错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrCode(integer $ErrCode) 设置错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimeOffset() 获取截图的具体时间点，单位：毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeOffset(integer $TimeOffset) 设置截图的具体时间点，单位：毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取截图输出文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置截图输出文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SnapshotByTimeOffset2017 extends AbstractModel
 {
@@ -43,19 +37,16 @@ class SnapshotByTimeOffset2017 extends AbstractModel
      * @var integer 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
 
     /**
      * @var integer 截图的具体时间点，单位：毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeOffset;
 
     /**
      * @var string 截图输出文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
@@ -63,11 +54,8 @@ class SnapshotByTimeOffset2017 extends AbstractModel
      * @param integer $ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TimeOffset 截图的具体时间点，单位：毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 截图输出文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

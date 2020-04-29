@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) 设置目标实例vport。已废弃，无需填写
  * @method integer getReadOnly() 获取目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
  * @method void setReadOnly(integer $ReadOnly) 设置目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
+ * @method string getUser() 获取目标数据库账号
+ * @method void setUser(string $User) 设置目标数据库账号
+ * @method string getPassword() 获取目标数据库密码
+ * @method void setPassword(string $Password) 设置目标数据库密码
  */
 class DstInfo extends AbstractModel
 {
@@ -59,11 +63,23 @@ class DstInfo extends AbstractModel
     public $ReadOnly;
 
     /**
+     * @var string 目标数据库账号
+     */
+    public $User;
+
+    /**
+     * @var string 目标数据库密码
+     */
+    public $Password;
+
+    /**
      * @param string $InstanceId 目标实例ID，如cdb-jd92ijd8
      * @param string $Region 目标实例地域，如ap-guangzhou
      * @param string $Ip 目标实例vip。已废弃，无需填写
      * @param integer $Port 目标实例vport。已废弃，无需填写
      * @param integer $ReadOnly 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
+     * @param string $User 目标数据库账号
+     * @param string $Password 目标数据库密码
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class DstInfo extends AbstractModel
 
         if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {
             $this->ReadOnly = $param["ReadOnly"];
+        }
+
+        if (array_key_exists("User",$param) and $param["User"] !== null) {
+            $this->User = $param["User"];
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
         }
     }
 }

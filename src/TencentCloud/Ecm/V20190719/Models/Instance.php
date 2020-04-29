@@ -100,9 +100,9 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataDiskSize(integer $DataDiskSize) 设置数据盘大小，单位GB。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUUID() 获取UUID
+ * @method string getUUID() 获取实例UUID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUUID(string $UUID) 设置UUID
+ * @method void setUUID(string $UUID) 设置实例UUID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPayMode() 获取付费方式。
     0为后付费。
@@ -145,6 +145,10 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
  * @method array getDataDisks() 获取数据盘信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataDisks(array $DataDisks) 设置数据盘信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNewFlag() 获取新实例标志
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNewFlag(integer $NewFlag) 设置新实例标志
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
@@ -250,7 +254,7 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     public $DataDiskSize;
 
     /**
-     * @var string UUID
+     * @var string 实例UUID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UUID;
@@ -305,6 +309,12 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     public $DataDisks;
 
     /**
+     * @var integer 新实例标志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NewFlag;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param string $InstanceName 实例名称，如ens-34241f3s。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -345,7 +355,7 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DataDiskSize 数据盘大小，单位GB。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UUID UUID
+     * @param string $UUID 实例UUID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PayMode 付费方式。
     0为后付费。
@@ -367,6 +377,8 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
      * @param DiskInfo $SystemDisk 系统盘信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DataDisks 数据盘信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NewFlag 新实例标志
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -488,6 +500,10 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
                 $obj->deserialize($value);
                 array_push($this->DataDisks, $obj);
             }
+        }
+
+        if (array_key_exists("NewFlag",$param) and $param["NewFlag"] !== null) {
+            $this->NewFlag = $param["NewFlag"];
         }
     }
 }

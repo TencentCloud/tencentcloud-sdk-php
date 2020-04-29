@@ -70,6 +70,8 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\SetDefaultPolicyVersionResponse SetDefaultPolicyVersion(Models\SetDefaultPolicyVersionRequest $req) 本接口（SetDefaultPolicyVersion）可用于设置生效的策略版本。
  * @method Models\UpdateAssumeRolePolicyResponse UpdateAssumeRolePolicy(Models\UpdateAssumeRolePolicyRequest $req) 本接口（UpdateAssumeRolePolicy）用于修改角色信任策略的策略文档。
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) 更新用户组
+ * @method Models\UpdatePolicyResponse UpdatePolicy(Models\UpdatePolicyRequest $req) 本接口（UpdatePolicy ）可用于更新策略。
+如果已存在策略版本，本接口会直接更新策略的默认版本，不会创建新版本，如果不存在任何策略版本，则直接创建一个默认版本。
  * @method Models\UpdateRoleConsoleLoginResponse UpdateRoleConsoleLogin(Models\UpdateRoleConsoleLoginRequest $req) 本接口（UpdateRoleConsoleLogin）用于修改角色是否可登录。
  * @method Models\UpdateRoleDescriptionResponse UpdateRoleDescription(Models\UpdateRoleDescriptionRequest $req) 本接口（UpdateRoleDescription）用于修改角色的描述信息。
  * @method Models\UpdateSAMLProviderResponse UpdateSAMLProvider(Models\UpdateSAMLProviderRequest $req) 更新SAML身份提供商信息

@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscountPrice(float $DiscountPrice) 设置预支合计费用的折扣价，预付费模式使用，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDiscount() 获取折扣，如20代表2折
+ * @method float getDiscount() 获取折扣，如20.0代表2折
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiscount(integer $Discount) 设置折扣，如20代表2折
+ * @method void setDiscount(float $Discount) 设置折扣，如20.0代表2折
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getUnitPriceDiscount() 获取后续合计费用的折扣价，后付费模式使用，单位：元<br><li>如返回了其他时间区间项，如UnitPriceDiscountSecondStep，则本项代表时间区间在(0, 96)小时；若未返回其他时间区间项，则本项代表全时段，即(0, ∞)小时
 注意：此字段可能返回 null，表示取不到有效值。
@@ -88,7 +88,7 @@ class ItemPrice extends AbstractModel
     public $DiscountPrice;
 
     /**
-     * @var integer 折扣，如20代表2折
+     * @var float 折扣，如20.0代表2折
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Discount;
@@ -132,7 +132,7 @@ class ItemPrice extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DiscountPrice 预支合计费用的折扣价，预付费模式使用，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Discount 折扣，如20代表2折
+     * @param float $Discount 折扣，如20.0代表2折
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $UnitPriceDiscount 后续合计费用的折扣价，后付费模式使用，单位：元<br><li>如返回了其他时间区间项，如UnitPriceDiscountSecondStep，则本项代表时间区间在(0, 96)小时；若未返回其他时间区间项，则本项代表全时段，即(0, ∞)小时
 注意：此字段可能返回 null，表示取不到有效值。

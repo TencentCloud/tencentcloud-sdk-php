@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaterialUrl(string $MaterialUrl) 设置素材媒体文件的 URL 地址。
  * @method string getCoverUrl() 获取素材媒体文件的封面图片地址。
  * @method void setCoverUrl(string $CoverUrl) 设置素材媒体文件的封面图片地址。
+ * @method MaterialStatus getMaterialStatus() 获取素材状态。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaterialStatus(MaterialStatus $MaterialStatus) 设置素材状态。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioMaterial extends AbstractModel
 {
@@ -45,9 +49,17 @@ class AudioMaterial extends AbstractModel
     public $CoverUrl;
 
     /**
+     * @var MaterialStatus 素材状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaterialStatus;
+
+    /**
      * @param MediaMetaData $MetaData 素材元信息。
      * @param string $MaterialUrl 素材媒体文件的 URL 地址。
      * @param string $CoverUrl 素材媒体文件的封面图片地址。
+     * @param MaterialStatus $MaterialStatus 素材状态。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -73,6 +85,11 @@ class AudioMaterial extends AbstractModel
 
         if (array_key_exists("CoverUrl",$param) and $param["CoverUrl"] !== null) {
             $this->CoverUrl = $param["CoverUrl"];
+        }
+
+        if (array_key_exists("MaterialStatus",$param) and $param["MaterialStatus"] !== null) {
+            $this->MaterialStatus = new MaterialStatus();
+            $this->MaterialStatus->deserialize($param["MaterialStatus"]);
         }
     }
 }

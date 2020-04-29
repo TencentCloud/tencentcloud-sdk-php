@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getInstanceDeleteMode() 获取集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
  * @method void setInstanceDeleteMode(string $InstanceDeleteMode) 设置集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
+ * @method array getResourceDeleteOptions() 获取集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
+ * @method void setResourceDeleteOptions(array $ResourceDeleteOptions) 设置集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
  */
 class DeleteClusterRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteClusterRequest extends AbstractModel
     public $InstanceDeleteMode;
 
     /**
+     * @var array 集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
+     */
+    public $ResourceDeleteOptions;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $InstanceDeleteMode 集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
+     * @param array $ResourceDeleteOptions 集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class DeleteClusterRequest extends AbstractModel
 
         if (array_key_exists("InstanceDeleteMode",$param) and $param["InstanceDeleteMode"] !== null) {
             $this->InstanceDeleteMode = $param["InstanceDeleteMode"];
+        }
+
+        if (array_key_exists("ResourceDeleteOptions",$param) and $param["ResourceDeleteOptions"] !== null) {
+            $this->ResourceDeleteOptions = [];
+            foreach ($param["ResourceDeleteOptions"] as $key => $value){
+                $obj = new ResourceDeleteOption();
+                $obj->deserialize($value);
+                array_push($this->ResourceDeleteOptions, $obj);
+            }
         }
     }
 }

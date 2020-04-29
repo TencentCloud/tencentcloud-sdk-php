@@ -44,14 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClsTopicId(string $ClsTopicId) 设置日志投递到的cls Topic ID
  * @method string getPublish() 获取在更新时是否同步发布新版本，默认为：FALSE，不发布
  * @method void setPublish(string $Publish) 设置在更新时是否同步发布新版本，默认为：FALSE，不发布
- * @method string getL5Enable() 获取是否开启L5访问能力，TRUE 为开启，FALSE为关闭
- * @method void setL5Enable(string $L5Enable) 设置是否开启L5访问能力，TRUE 为开启，FALSE为关闭
  * @method array getLayers() 获取函数要关联的层版本列表，层的版本会按照在列表中顺序依次覆盖。
  * @method void setLayers(array $Layers) 设置函数要关联的层版本列表，层的版本会按照在列表中顺序依次覆盖。
  * @method DeadLetterConfig getDeadLetterConfig() 获取函数关联的死信队列信息
  * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) 设置函数关联的死信队列信息
- * @method string getOnsEnable() 获取是否开启Ons访问能力，TRUE 为开启，FALSE为关闭
- * @method void setOnsEnable(string $OnsEnable) 设置是否开启Ons访问能力，TRUE 为开启，FALSE为关闭
  */
 class UpdateFunctionConfigurationRequest extends AbstractModel
 {
@@ -116,11 +112,6 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $Publish;
 
     /**
-     * @var string 是否开启L5访问能力，TRUE 为开启，FALSE为关闭
-     */
-    public $L5Enable;
-
-    /**
      * @var array 函数要关联的层版本列表，层的版本会按照在列表中顺序依次覆盖。
      */
     public $Layers;
@@ -129,11 +120,6 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @var DeadLetterConfig 函数关联的死信队列信息
      */
     public $DeadLetterConfig;
-
-    /**
-     * @var string 是否开启Ons访问能力，TRUE 为开启，FALSE为关闭
-     */
-    public $OnsEnable;
 
     /**
      * @param string $FunctionName 要修改的函数名称
@@ -148,10 +134,8 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param string $ClsLogsetId 日志投递到的cls日志集ID
      * @param string $ClsTopicId 日志投递到的cls Topic ID
      * @param string $Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
-     * @param string $L5Enable 是否开启L5访问能力，TRUE 为开启，FALSE为关闭
      * @param array $Layers 函数要关联的层版本列表，层的版本会按照在列表中顺序依次覆盖。
      * @param DeadLetterConfig $DeadLetterConfig 函数关联的死信队列信息
-     * @param string $OnsEnable 是否开启Ons访问能力，TRUE 为开启，FALSE为关闭
      */
     function __construct()
     {
@@ -216,10 +200,6 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
             $this->Publish = $param["Publish"];
         }
 
-        if (array_key_exists("L5Enable",$param) and $param["L5Enable"] !== null) {
-            $this->L5Enable = $param["L5Enable"];
-        }
-
         if (array_key_exists("Layers",$param) and $param["Layers"] !== null) {
             $this->Layers = [];
             foreach ($param["Layers"] as $key => $value){
@@ -232,10 +212,6 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
         if (array_key_exists("DeadLetterConfig",$param) and $param["DeadLetterConfig"] !== null) {
             $this->DeadLetterConfig = new DeadLetterConfig();
             $this->DeadLetterConfig->deserialize($param["DeadLetterConfig"]);
-        }
-
-        if (array_key_exists("OnsEnable",$param) and $param["OnsEnable"] !== null) {
-            $this->OnsEnable = $param["OnsEnable"];
         }
     }
 }

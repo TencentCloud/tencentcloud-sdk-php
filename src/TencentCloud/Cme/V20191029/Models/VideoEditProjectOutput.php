@@ -26,10 +26,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setURL(string $URL) 设置导出的媒资 URL。
  * @method MediaMetaData getMetaData() 获取元信息。
  * @method void setMetaData(MediaMetaData $MetaData) 设置元信息。
- * @method MaterialBaseInfo getMaterialBaseInfo() 获取素材基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaterialBaseInfo(MaterialBaseInfo $MaterialBaseInfo) 设置素材基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VideoEditProjectOutput extends AbstractModel
 {
@@ -49,17 +45,9 @@ class VideoEditProjectOutput extends AbstractModel
     public $MetaData;
 
     /**
-     * @var MaterialBaseInfo 素材基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $MaterialBaseInfo;
-
-    /**
      * @param string $VodFileId 云点播媒资 FileId。
      * @param string $URL 导出的媒资 URL。
      * @param MediaMetaData $MetaData 元信息。
-     * @param MaterialBaseInfo $MaterialBaseInfo 素材基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -85,11 +73,6 @@ class VideoEditProjectOutput extends AbstractModel
         if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
             $this->MetaData = new MediaMetaData();
             $this->MetaData->deserialize($param["MetaData"]);
-        }
-
-        if (array_key_exists("MaterialBaseInfo",$param) and $param["MaterialBaseInfo"] !== null) {
-            $this->MaterialBaseInfo = new MaterialBaseInfo();
-            $this->MaterialBaseInfo->deserialize($param["MaterialBaseInfo"]);
         }
     }
 }

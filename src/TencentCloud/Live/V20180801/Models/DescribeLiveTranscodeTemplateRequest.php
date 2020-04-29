@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveTranscodeTemplate请求参数结构体
  *
- * @method integer getTemplateId() 获取模板Id。
- * @method void setTemplateId(integer $TemplateId) 设置模板Id。
+ * @method integer getTemplateId() 获取模板 ID。
+注意：在创建转码模板接口 [CreateLiveTranscodeTemplate](/document/product/267/32646) 调用的返回值中获取模板 ID。
+ * @method void setTemplateId(integer $TemplateId) 设置模板 ID。
+注意：在创建转码模板接口 [CreateLiveTranscodeTemplate](/document/product/267/32646) 调用的返回值中获取模板 ID。
  */
 class DescribeLiveTranscodeTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 模板Id。
+     * @var integer 模板 ID。
+注意：在创建转码模板接口 [CreateLiveTranscodeTemplate](/document/product/267/32646) 调用的返回值中获取模板 ID。
      */
     public $TemplateId;
 
     /**
-     * @param integer $TemplateId 模板Id。
+     * @param integer $TemplateId 模板 ID。
+注意：在创建转码模板接口 [CreateLiveTranscodeTemplate](/document/product/267/32646) 调用的返回值中获取模板 ID。
      */
     function __construct()
     {

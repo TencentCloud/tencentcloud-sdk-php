@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() 获取转自适应码流规格。
  * @method void setDefinition(integer $Definition) 设置转自适应码流规格。
- * @method string getPackage() 获取打包格式，可能为 hls 和 dash 两种。
- * @method void setPackage(string $Package) 设置打包格式，可能为 hls 和 dash 两种。
+ * @method string getPackage() 获取打包格式，只能为 HLS。
+ * @method void setPackage(string $Package) 设置打包格式，只能为 HLS。
  * @method string getDrmType() 获取加密类型。
  * @method void setDrmType(string $DrmType) 设置加密类型。
  * @method string getUrl() 获取播放地址。
@@ -37,7 +37,7 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     public $Definition;
 
     /**
-     * @var string 打包格式，可能为 hls 和 dash 两种。
+     * @var string 打包格式，只能为 HLS。
      */
     public $Package;
 
@@ -53,7 +53,7 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 
     /**
      * @param integer $Definition 转自适应码流规格。
-     * @param string $Package 打包格式，可能为 hls 和 dash 两种。
+     * @param string $Package 打包格式，只能为 HLS。
      * @param string $DrmType 加密类型。
      * @param string $Url 播放地址。
      */

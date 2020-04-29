@@ -36,10 +36,10 @@ aac/mp3。
 范围：0-500。
  * @method string getDescription() 获取模板描述。
  * @method void setDescription(string $Description) 设置模板描述。
- * @method integer getVideoBitrate() 获取视频码率。
-范围：100-8000。
- * @method void setVideoBitrate(integer $VideoBitrate) 设置视频码率。
-范围：100-8000。
+ * @method integer getVideoBitrate() 获取视频码率。范围：100kbps - 8000kbps。
+注意：码率必须是100的倍数。
+ * @method void setVideoBitrate(integer $VideoBitrate) 设置视频码率。范围：100kbps - 8000kbps。
+注意：码率必须是100的倍数。
  * @method integer getWidth() 获取宽。0-3000。
  * @method void setWidth(integer $Width) 设置宽。0-3000。
  * @method integer getNeedVideo() 获取是否保留视频，0：否，1：是。默认1。
@@ -100,8 +100,8 @@ aac/mp3。
     public $Description;
 
     /**
-     * @var integer 视频码率。
-范围：100-8000。
+     * @var integer 视频码率。范围：100kbps - 8000kbps。
+注意：码率必须是100的倍数。
      */
     public $VideoBitrate;
 
@@ -176,8 +176,8 @@ aac/mp3。
      * @param integer $AudioBitrate 音频码率，默认0。
 范围：0-500。
      * @param string $Description 模板描述。
-     * @param integer $VideoBitrate 视频码率。
-范围：100-8000。
+     * @param integer $VideoBitrate 视频码率。范围：100kbps - 8000kbps。
+注意：码率必须是100的倍数。
      * @param integer $Width 宽。0-3000。
      * @param integer $NeedVideo 是否保留视频，0：否，1：是。默认1。
      * @param integer $NeedAudio 是否保留音频，0：否，1：是。默认1。

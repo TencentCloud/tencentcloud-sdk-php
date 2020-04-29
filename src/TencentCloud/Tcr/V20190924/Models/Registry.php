@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableAnonymous(boolean $EnableAnonymous) 设置是否支持匿名
  * @method integer getTokenValidTime() 获取Token有效时间
  * @method void setTokenValidTime(integer $TokenValidTime) 设置Token有效时间
+ * @method string getInternalEndpoint() 获取实例内部访问地址
+ * @method void setInternalEndpoint(string $InternalEndpoint) 设置实例内部访问地址
  */
 class Registry extends AbstractModel
 {
@@ -94,6 +96,11 @@ class Registry extends AbstractModel
     public $TokenValidTime;
 
     /**
+     * @var string 实例内部访问地址
+     */
+    public $InternalEndpoint;
+
+    /**
      * @param string $RegistryId 实例ID
      * @param string $RegistryName 实例名称
      * @param string $RegistryType 实例规格
@@ -104,6 +111,7 @@ class Registry extends AbstractModel
      * @param integer $RegionId 地域Id
      * @param boolean $EnableAnonymous 是否支持匿名
      * @param integer $TokenValidTime Token有效时间
+     * @param string $InternalEndpoint 实例内部访问地址
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class Registry extends AbstractModel
 
         if (array_key_exists("TokenValidTime",$param) and $param["TokenValidTime"] !== null) {
             $this->TokenValidTime = $param["TokenValidTime"];
+        }
+
+        if (array_key_exists("InternalEndpoint",$param) and $param["InternalEndpoint"] !== null) {
+            $this->InternalEndpoint = $param["InternalEndpoint"];
         }
     }
 }

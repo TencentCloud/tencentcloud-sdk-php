@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVodSessionKey() 获取点播会话，用于确认上传接口的参数 VodSessionKey。
  * @method void setVodSessionKey(string $VodSessionKey) 设置点播会话，用于确认上传接口的参数 VodSessionKey。
  * @method string getMediaStoragePath() 获取媒体存储路径，用于上传接口存储媒体的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMediaStoragePath(string $MediaStoragePath) 设置媒体存储路径，用于上传接口存储媒体的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCoverStoragePath() 获取封面存储路径，用于上传接口存储封面的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoverStoragePath(string $CoverStoragePath) 设置封面存储路径，用于上传接口存储封面的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TempCertificate getTempCertificate() 获取临时凭证，用于上传接口的权限验证。
  * @method void setTempCertificate(TempCertificate $TempCertificate) 设置临时凭证，用于上传接口的权限验证。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -58,13 +54,11 @@ class ApplyUploadResponse extends AbstractModel
 
     /**
      * @var string 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MediaStoragePath;
 
     /**
      * @var string 封面存储路径，用于上传接口存储封面的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CoverStoragePath;
 
@@ -83,9 +77,7 @@ class ApplyUploadResponse extends AbstractModel
      * @param string $StorageRegion 存储园区，用于上传接口 Host 的 Region。
      * @param string $VodSessionKey 点播会话，用于确认上传接口的参数 VodSessionKey。
      * @param string $MediaStoragePath 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CoverStoragePath 封面存储路径，用于上传接口存储封面的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TempCertificate $TempCertificate 临时凭证，用于上传接口的权限验证。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

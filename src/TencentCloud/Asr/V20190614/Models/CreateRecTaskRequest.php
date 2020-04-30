@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterDirty(integer $FilterDirty) 设置是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
  * @method integer getFilterModal() 获取是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
  * @method void setFilterModal(integer $FilterModal) 设置是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
+ * @method integer getConvertNumMode() 获取是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
+ * @method void setConvertNumMode(integer $ConvertNumMode) 设置是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
  */
 class CreateRecTaskRequest extends AbstractModel
 {
@@ -119,6 +121,11 @@ class CreateRecTaskRequest extends AbstractModel
     public $FilterModal;
 
     /**
+     * @var integer 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
+     */
+    public $ConvertNumMode;
+
+    /**
      * @param string $EngineModelType 引擎模型类型。
 8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
 8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
@@ -136,6 +143,7 @@ class CreateRecTaskRequest extends AbstractModel
      * @param string $HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
      * @param integer $FilterDirty 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
      * @param integer $FilterModal 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
+     * @param integer $ConvertNumMode 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class CreateRecTaskRequest extends AbstractModel
 
         if (array_key_exists("FilterModal",$param) and $param["FilterModal"] !== null) {
             $this->FilterModal = $param["FilterModal"];
+        }
+
+        if (array_key_exists("ConvertNumMode",$param) and $param["ConvertNumMode"] !== null) {
+            $this->ConvertNumMode = $param["ConvertNumMode"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRollbackTaskDetail请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表] (https://cloud.tencent.com/document/api/236/15872)。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表] (https://cloud.tencent.com/document/api/236/15872)。
+ * @method string getInstanceId() 获取实例 ID。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872)。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872)。
  * @method string getAsyncRequestId() 获取异步任务 ID。
  * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务 ID。
  * @method integer getLimit() 获取分页参数，每次请求返回的记录数。默认值为 20，最大值为 100。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRollbackTaskDetailRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表] (https://cloud.tencent.com/document/api/236/15872)。
+     * @var string 实例 ID。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872)。
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class DescribeRollbackTaskDetailRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $InstanceId 实例 ID。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表] (https://cloud.tencent.com/document/api/236/15872)。
+     * @param string $InstanceId 实例 ID。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872)。
      * @param string $AsyncRequestId 异步任务 ID。
      * @param integer $Limit 分页参数，每次请求返回的记录数。默认值为 20，最大值为 100。
      * @param integer $Offset 分页偏移量。默认为 0。

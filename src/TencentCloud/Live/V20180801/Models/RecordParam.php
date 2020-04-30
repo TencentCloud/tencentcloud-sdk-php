@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(integer $Enable) 设置是否开启当前格式录制，默认值为0，0：否， 1：是。
  * @method integer getVodSubAppId() 获取点播子应用 ID。
  * @method void setVodSubAppId(integer $VodSubAppId) 设置点播子应用 ID。
+ * @method string getVodFileName() 获取录制文件名。
+ * @method void setVodFileName(string $VodFileName) 设置录制文件名。
  */
 class RecordParam extends AbstractModel
 {
@@ -67,6 +69,11 @@ class RecordParam extends AbstractModel
     public $VodSubAppId;
 
     /**
+     * @var string 录制文件名。
+     */
+    public $VodFileName;
+
+    /**
      * @param integer $RecordInterval 录制间隔。
 单位秒，默认：1800。
 取值范围：300-7200。
@@ -76,6 +83,7 @@ class RecordParam extends AbstractModel
 0：表示永久存储。
      * @param integer $Enable 是否开启当前格式录制，默认值为0，0：否， 1：是。
      * @param integer $VodSubAppId 点播子应用 ID。
+     * @param string $VodFileName 录制文件名。
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ class RecordParam extends AbstractModel
 
         if (array_key_exists("VodSubAppId",$param) and $param["VodSubAppId"] !== null) {
             $this->VodSubAppId = $param["VodSubAppId"];
+        }
+
+        if (array_key_exists("VodFileName",$param) and $param["VodFileName"] !== null) {
+            $this->VodFileName = $param["VodFileName"];
         }
     }
 }

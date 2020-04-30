@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceContext(string $SourceContext) 设置来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
  * @method string getSessionContext() 获取会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。
  * @method void setSessionContext(string $SessionContext) 设置会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。
+ * @method string getExtInfo() 获取保留字段，特殊用途时使用。
+ * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。
  * @method integer getSubAppId() 获取点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
@@ -92,6 +94,11 @@ class ApplyUploadRequest extends AbstractModel
     public $SessionContext;
 
     /**
+     * @var string 保留字段，特殊用途时使用。
+     */
+    public $ExtInfo;
+
+    /**
      * @var integer 点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
@@ -107,6 +114,7 @@ class ApplyUploadRequest extends AbstractModel
 <li>默认值：0，表示其他分类。</li>
      * @param string $SourceContext 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
      * @param string $SessionContext 会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。
+     * @param string $ExtInfo 保留字段，特殊用途时使用。
      * @param integer $SubAppId 点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
@@ -156,6 +164,10 @@ class ApplyUploadRequest extends AbstractModel
 
         if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
             $this->SessionContext = $param["SessionContext"];
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

@@ -26,6 +26,10 @@ off：关闭全路径缓存（即开启参数过滤）
  * @method void setFullUrlCache(string $FullUrlCache) 设置是否开启全路径缓存
 on：开启全路径缓存（即关闭参数过滤）
 off：关闭全路径缓存（即开启参数过滤）
+ * @method string getCaseSensitive() 获取缓存是否忽略大小写
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCaseSensitive(string $CaseSensitive) 设置缓存是否忽略大小写
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CacheKey extends AbstractModel
 {
@@ -37,9 +41,17 @@ off：关闭全路径缓存（即开启参数过滤）
     public $FullUrlCache;
 
     /**
+     * @var string 缓存是否忽略大小写
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CaseSensitive;
+
+    /**
      * @param string $FullUrlCache 是否开启全路径缓存
 on：开启全路径缓存（即关闭参数过滤）
 off：关闭全路径缓存（即开启参数过滤）
+     * @param string $CaseSensitive 缓存是否忽略大小写
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -56,6 +68,10 @@ off：关闭全路径缓存（即开启参数过滤）
         }
         if (array_key_exists("FullUrlCache",$param) and $param["FullUrlCache"] !== null) {
             $this->FullUrlCache = $param["FullUrlCache"];
+        }
+
+        if (array_key_exists("CaseSensitive",$param) and $param["CaseSensitive"] !== null) {
+            $this->CaseSensitive = $param["CaseSensitive"];
         }
     }
 }

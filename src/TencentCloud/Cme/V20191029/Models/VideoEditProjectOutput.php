@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getURL() 获取导出的媒资 URL。
  * @method void setURL(string $URL) 设置导出的媒资 URL。
  * @method MediaMetaData getMetaData() 获取元信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetaData(MediaMetaData $MetaData) 设置元信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VideoEditProjectOutput extends AbstractModel
 {
@@ -41,6 +43,7 @@ class VideoEditProjectOutput extends AbstractModel
 
     /**
      * @var MediaMetaData 元信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetaData;
 
@@ -48,6 +51,7 @@ class VideoEditProjectOutput extends AbstractModel
      * @param string $VodFileId 云点播媒资 FileId。
      * @param string $URL 导出的媒资 URL。
      * @param MediaMetaData $MetaData 元信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

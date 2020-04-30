@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomStr(string $RoomStr) 设置房间号
  * @method string getUserId() 获取用户Id
  * @method void setUserId(string $UserId) 设置用户Id
- * @method integer getJoinTs() 获取用户进房事件
- * @method void setJoinTs(integer $JoinTs) 设置用户进房事件
+ * @method integer getJoinTs() 获取用户进房时间
+ * @method void setJoinTs(integer $JoinTs) 设置用户进房时间
  * @method integer getLeaveTs() 获取用户退房时间
  * @method void setLeaveTs(integer $LeaveTs) 设置用户退房时间
  * @method string getDeviceType() 获取终端类型
@@ -48,7 +48,7 @@ class UserInformation extends AbstractModel
     public $UserId;
 
     /**
-     * @var integer 用户进房事件
+     * @var integer 用户进房时间
      */
     public $JoinTs;
 
@@ -75,7 +75,7 @@ class UserInformation extends AbstractModel
     /**
      * @param string $RoomStr 房间号
      * @param string $UserId 用户Id
-     * @param integer $JoinTs 用户进房事件
+     * @param integer $JoinTs 用户进房时间
      * @param integer $LeaveTs 用户退房时间
      * @param string $DeviceType 终端类型
      * @param string $SdkVersion Sdk版本号

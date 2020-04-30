@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SmsPackagesStatistics请求参数结构体
  *
- * @method string getSmsSdkAppid() 获取短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
- * @method void setSmsSdkAppid(string $SmsSdkAppid) 设置短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
+ * @method string getSmsSdkAppid() 获取短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/smsv2) 添加应用后生成的实际SdkAppid，示例如1400006666。
+ * @method void setSmsSdkAppid(string $SmsSdkAppid) 设置短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/smsv2) 添加应用后生成的实际SdkAppid，示例如1400006666。
  * @method integer getLimit() 获取最大上限(需要拉取的套餐包个数)。
  * @method void setLimit(integer $Limit) 设置最大上限(需要拉取的套餐包个数)。
  * @method integer getOffset() 获取偏移量。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class SmsPackagesStatisticsRequest extends AbstractModel
 {
     /**
-     * @var string 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
+     * @var string 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/smsv2) 添加应用后生成的实际SdkAppid，示例如1400006666。
      */
     public $SmsSdkAppid;
 
@@ -48,7 +48,7 @@ class SmsPackagesStatisticsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $SmsSdkAppid 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
+     * @param string $SmsSdkAppid 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/smsv2) 添加应用后生成的实际SdkAppid，示例如1400006666。
      * @param integer $Limit 最大上限(需要拉取的套餐包个数)。
      * @param integer $Offset 偏移量。
 注：目前固定设置为0。

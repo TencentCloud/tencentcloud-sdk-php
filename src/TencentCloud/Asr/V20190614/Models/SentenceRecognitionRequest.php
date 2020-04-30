@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterModal(integer $FilterModal) 设置是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
  * @method integer getFilterPunc() 获取是否过滤句末的句号（目前支持中文普通话引擎）。0：不过滤句末的句号；1：过滤句末的句号。
  * @method void setFilterPunc(integer $FilterPunc) 设置是否过滤句末的句号（目前支持中文普通话引擎）。0：不过滤句末的句号；1：过滤句末的句号。
+ * @method integer getConvertNumMode() 获取是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
+ * @method void setConvertNumMode(integer $ConvertNumMode) 设置是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
  */
 class SentenceRecognitionRequest extends AbstractModel
 {
@@ -127,6 +129,11 @@ class SentenceRecognitionRequest extends AbstractModel
     public $FilterPunc;
 
     /**
+     * @var integer 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
+     */
+    public $ConvertNumMode;
+
+    /**
      * @param integer $ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      * @param integer $SubServiceType 子服务类型。2： 一句话识别。
      * @param string $EngSerViceType 引擎模型类型。
@@ -144,6 +151,7 @@ class SentenceRecognitionRequest extends AbstractModel
      * @param integer $FilterDirty 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
      * @param integer $FilterModal 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
      * @param integer $FilterPunc 是否过滤句末的句号（目前支持中文普通话引擎）。0：不过滤句末的句号；1：过滤句末的句号。
+     * @param integer $ConvertNumMode 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
      */
     function __construct()
     {
@@ -208,6 +216,10 @@ class SentenceRecognitionRequest extends AbstractModel
 
         if (array_key_exists("FilterPunc",$param) and $param["FilterPunc"] !== null) {
             $this->FilterPunc = $param["FilterPunc"];
+        }
+
+        if (array_key_exists("ConvertNumMode",$param) and $param["ConvertNumMode"] !== null) {
+            $this->ConvertNumMode = $param["ConvertNumMode"];
         }
     }
 }

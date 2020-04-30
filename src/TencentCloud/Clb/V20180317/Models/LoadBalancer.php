@@ -190,6 +190,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsBlockTime(string $IsBlockTime) 设置封堵或解封时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getLocalBgp() 获取IP类型是否是本地BGP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocalBgp(boolean $LocalBgp) 设置IP类型是否是本地BGP
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancer extends AbstractModel
 {
@@ -455,6 +459,12 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $IsBlockTime;
 
     /**
+     * @var boolean IP类型是否是本地BGP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LocalBgp;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
@@ -539,6 +549,8 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param boolean $IsBlock vip是否被封堵
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsBlockTime 封堵或解封时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $LocalBgp IP类型是否是本地BGP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -749,6 +761,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("IsBlockTime",$param) and $param["IsBlockTime"] !== null) {
             $this->IsBlockTime = $param["IsBlockTime"];
+        }
+
+        if (array_key_exists("LocalBgp",$param) and $param["LocalBgp"] !== null) {
+            $this->LocalBgp = $param["LocalBgp"];
         }
     }
 }

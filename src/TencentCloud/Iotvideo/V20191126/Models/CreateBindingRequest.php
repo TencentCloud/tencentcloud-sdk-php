@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTid(string $Tid) 设置设备TID
  * @method string getRole() 获取用户角色，owner：主人，guest：访客
  * @method void setRole(string $Role) 设置用户角色，owner：主人，guest：访客
- * @method boolean getForceBind() 获取是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为owner时，可以不填
- * @method void setForceBind(boolean $ForceBind) 设置是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为owner时，可以不填
+ * @method boolean getForceBind() 获取是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为guest时，可以不填
+ * @method void setForceBind(boolean $ForceBind) 设置是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为guest时，可以不填
  */
 class CreateBindingRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CreateBindingRequest extends AbstractModel
     public $Role;
 
     /**
-     * @var boolean 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为owner时，可以不填
+     * @var boolean 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为guest时，可以不填
      */
     public $ForceBind;
 
@@ -55,7 +55,7 @@ class CreateBindingRequest extends AbstractModel
      * @param string $AccessId 终端用户在IoT Video上的唯一标识ID
      * @param string $Tid 设备TID
      * @param string $Role 用户角色，owner：主人，guest：访客
-     * @param boolean $ForceBind 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为owner时，可以不填
+     * @param boolean $ForceBind 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为guest时，可以不填
      */
     function __construct()
     {

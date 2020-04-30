@@ -94,6 +94,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItems(array $Items) 设置项目商品明细
  * @method string getProfile() 获取接入环境。沙箱环境填sandbox。
  * @method void setProfile(string $Profile) 设置接入环境。沙箱环境填sandbox。
+ * @method integer getUndoPart() 获取撤销部分商品。0-不撤销，1-撤销
+ * @method void setUndoPart(integer $UndoPart) 设置撤销部分商品。0-不撤销，1-撤销
  */
 class CreateInvoiceRequest extends AbstractModel
 {
@@ -259,6 +261,11 @@ class CreateInvoiceRequest extends AbstractModel
     public $Profile;
 
     /**
+     * @var integer 撤销部分商品。0-不撤销，1-撤销
+     */
+    public $UndoPart;
+
+    /**
      * @param integer $InvoicePlatformId 开票平台ID。0：高灯
      * @param integer $TitleType 抬头类型：1：个人/政府事业单位；2：企业
      * @param string $BuyerTitle 购方名称
@@ -296,6 +303,7 @@ class CreateInvoiceRequest extends AbstractModel
      * @param string $Remark 备注（票面信息）
      * @param array $Items 项目商品明细
      * @param string $Profile 接入环境。沙箱环境填sandbox。
+     * @param integer $UndoPart 撤销部分商品。0-不撤销，1-撤销
      */
     function __construct()
     {
@@ -437,6 +445,10 @@ class CreateInvoiceRequest extends AbstractModel
 
         if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
             $this->Profile = $param["Profile"];
+        }
+
+        if (array_key_exists("UndoPart",$param) and $param["UndoPart"] !== null) {
+            $this->UndoPart = $param["UndoPart"];
         }
     }
 }

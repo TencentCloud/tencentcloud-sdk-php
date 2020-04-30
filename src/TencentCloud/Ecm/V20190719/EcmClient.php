@@ -48,6 +48,7 @@ EIP 如果欠费或被封堵，则不能被绑定。
  * @method Models\DescribeConfigResponse DescribeConfig(Models\DescribeConfigRequest $req) 获取带宽硬盘等数据的限制
  * @method Models\DescribeImageResponse DescribeImage(Models\DescribeImageRequest $req) 展示镜像列表
  * @method Models\DescribeInstanceTypeConfigResponse DescribeInstanceTypeConfig(Models\DescribeInstanceTypeConfigRequest $req) 获取机型配置列表
+ * @method Models\DescribeInstanceVncUrlResponse DescribeInstanceVncUrl(Models\DescribeInstanceVncUrlRequest $req) 查询实例管理终端地址
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 获取实例的相关信息。
  * @method Models\DescribeInstancesDeniedActionsResponse DescribeInstancesDeniedActions(Models\DescribeInstancesDeniedActionsRequest $req) 通过实例id获取当前禁止的操作
  * @method Models\DescribeModuleResponse DescribeModule(Models\DescribeModuleRequest $req) 获取模块列表

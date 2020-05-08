@@ -51,6 +51,7 @@ use TencentCloud\Scf\V20180416\Models as Models;
  * @method Models\ListLayerVersionsResponse ListLayerVersions(Models\ListLayerVersionsRequest $req) 返回指定层的全部版本的信息
  * @method Models\ListLayersResponse ListLayers(Models\ListLayersRequest $req) 返回全部层的列表，其中包含了每个层最新版本的信息，可以通过适配运行时进行过滤。
  * @method Models\ListNamespacesResponse ListNamespaces(Models\ListNamespacesRequest $req) 列出命名空间列表
+ * @method Models\ListTriggersResponse ListTriggers(Models\ListTriggersRequest $req) 获取函数触发器列表
  * @method Models\ListVersionByFunctionResponse ListVersionByFunction(Models\ListVersionByFunctionRequest $req) 该接口根据传入的参数查询函数的版本。
  * @method Models\PublishLayerVersionResponse PublishLayerVersion(Models\PublishLayerVersionRequest $req) 使用给定的zip文件或cos对象创建一个层的新版本，每次使用相同的层的名称调用本接口，都会生成一个新版本。
  * @method Models\PublishVersionResponse PublishVersion(Models\PublishVersionRequest $req) 该接口用于用户发布新版本函数。

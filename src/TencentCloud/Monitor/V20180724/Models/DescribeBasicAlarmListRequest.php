@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setObjLike(string $ObjLike) 设置根据告警对象过滤
  * @method array getInstanceGroupIds() 获取根据实例组ID过滤
  * @method void setInstanceGroupIds(array $InstanceGroupIds) 设置根据实例组ID过滤
+ * @method array getMetricNames() 获取根据指标名过滤
+ * @method void setMetricNames(array $MetricNames) 设置根据指标名过滤
  */
 class DescribeBasicAlarmListRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class DescribeBasicAlarmListRequest extends AbstractModel
     public $InstanceGroupIds;
 
     /**
+     * @var array 根据指标名过滤
+     */
+    public $MetricNames;
+
+    /**
      * @param string $Module 接口模块名，当前取值monitor
      * @param integer $StartTime 起始时间，默认一天前的时间戳
      * @param integer $EndTime 结束时间，默认当前时间戳
@@ -112,6 +119,7 @@ class DescribeBasicAlarmListRequest extends AbstractModel
      * @param array $AlarmStatus 根据告警状态过滤
      * @param string $ObjLike 根据告警对象过滤
      * @param array $InstanceGroupIds 根据实例组ID过滤
+     * @param array $MetricNames 根据指标名过滤
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class DescribeBasicAlarmListRequest extends AbstractModel
 
         if (array_key_exists("InstanceGroupIds",$param) and $param["InstanceGroupIds"] !== null) {
             $this->InstanceGroupIds = $param["InstanceGroupIds"];
+        }
+
+        if (array_key_exists("MetricNames",$param) and $param["MetricNames"] !== null) {
+            $this->MetricNames = $param["MetricNames"];
         }
     }
 }

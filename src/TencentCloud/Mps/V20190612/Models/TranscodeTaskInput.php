@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMosaicSet() 获取马赛克列表，最大可支持 10 张。
+ * @method void setMosaicSet(array $MosaicSet) 设置马赛克列表，最大可支持 10 张。
  * @method TaskOutputStorage getOutputStorage() 获取转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
@@ -66,6 +68,11 @@ class TranscodeTaskInput extends AbstractModel
     public $WatermarkSet;
 
     /**
+     * @var array 马赛克列表，最大可支持 10 张。
+     */
+    public $MosaicSet;
+
+    /**
      * @var TaskOutputStorage 转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -94,6 +101,7 @@ class TranscodeTaskInput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MosaicSet 马赛克列表，最大可支持 10 张。
      * @param TaskOutputStorage $OutputStorage 转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutputObjectPath 转码后主文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_transcode_{definition}.{format}`。
@@ -129,6 +137,15 @@ class TranscodeTaskInput extends AbstractModel
                 $obj = new WatermarkInput();
                 $obj->deserialize($value);
                 array_push($this->WatermarkSet, $obj);
+            }
+        }
+
+        if (array_key_exists("MosaicSet",$param) and $param["MosaicSet"] !== null) {
+            $this->MosaicSet = [];
+            foreach ($param["MosaicSet"] as $key => $value){
+                $obj = new MosaicInput();
+                $obj->deserialize($value);
+                array_push($this->MosaicSet, $obj);
             }
         }
 

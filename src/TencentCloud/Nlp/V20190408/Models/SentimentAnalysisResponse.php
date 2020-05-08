@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method float getNegative() 获取负面情感概率
  * @method void setNegative(float $Negative) 设置负面情感概率
+ * @method float getNeutral() 获取中性情感概率，当输入参数Mode取值为3class时有效，否则值为空
+ * @method void setNeutral(float $Neutral) 设置中性情感概率，当输入参数Mode取值为3class时有效，否则值为空
  * @method float getPositive() 获取正面情感概率
  * @method void setPositive(float $Positive) 设置正面情感概率
  * @method string getSentiment() 获取情感属性
@@ -35,6 +37,11 @@ class SentimentAnalysisResponse extends AbstractModel
      * @var float 负面情感概率
      */
     public $Negative;
+
+    /**
+     * @var float 中性情感概率，当输入参数Mode取值为3class时有效，否则值为空
+     */
+    public $Neutral;
 
     /**
      * @var float 正面情感概率
@@ -53,6 +60,7 @@ class SentimentAnalysisResponse extends AbstractModel
 
     /**
      * @param float $Negative 负面情感概率
+     * @param float $Neutral 中性情感概率，当输入参数Mode取值为3class时有效，否则值为空
      * @param float $Positive 正面情感概率
      * @param string $Sentiment 情感属性
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -72,6 +80,10 @@ class SentimentAnalysisResponse extends AbstractModel
         }
         if (array_key_exists("Negative",$param) and $param["Negative"] !== null) {
             $this->Negative = $param["Negative"];
+        }
+
+        if (array_key_exists("Neutral",$param) and $param["Neutral"] !== null) {
+            $this->Neutral = $param["Neutral"];
         }
 
         if (array_key_exists("Positive",$param) and $param["Positive"] !== null) {

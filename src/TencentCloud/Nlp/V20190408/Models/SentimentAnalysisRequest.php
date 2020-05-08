@@ -22,16 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getText() 获取待分析的文本（仅支持UTF-8格式，不超过200字）
  * @method void setText(string $Text) 设置待分析的文本（仅支持UTF-8格式，不超过200字）
- * @method integer getFlag() 获取文本所属类型（默认取4值）：
+ * @method integer getFlag() 获取待分析文本所属的类型，仅当输入参数Mode取值为2class时有效（默认取4值）：
 1、商品评论类
 2、社交类
 3、美食酒店类
 4、通用领域类
- * @method void setFlag(integer $Flag) 设置文本所属类型（默认取4值）：
+ * @method void setFlag(integer $Flag) 设置待分析文本所属的类型，仅当输入参数Mode取值为2class时有效（默认取4值）：
 1、商品评论类
 2、社交类
 3、美食酒店类
 4、通用领域类
+ * @method string getMode() 获取情感分类模式选项，可取2class或3class（默认值为2class）
+1、2class：返回正负面二分类情感结果
+2、3class：返回正负面及中性三分类情感结果
+ * @method void setMode(string $Mode) 设置情感分类模式选项，可取2class或3class（默认值为2class）
+1、2class：返回正负面二分类情感结果
+2、3class：返回正负面及中性三分类情感结果
  */
 class SentimentAnalysisRequest extends AbstractModel
 {
@@ -41,7 +47,7 @@ class SentimentAnalysisRequest extends AbstractModel
     public $Text;
 
     /**
-     * @var integer 文本所属类型（默认取4值）：
+     * @var integer 待分析文本所属的类型，仅当输入参数Mode取值为2class时有效（默认取4值）：
 1、商品评论类
 2、社交类
 3、美食酒店类
@@ -50,12 +56,22 @@ class SentimentAnalysisRequest extends AbstractModel
     public $Flag;
 
     /**
+     * @var string 情感分类模式选项，可取2class或3class（默认值为2class）
+1、2class：返回正负面二分类情感结果
+2、3class：返回正负面及中性三分类情感结果
+     */
+    public $Mode;
+
+    /**
      * @param string $Text 待分析的文本（仅支持UTF-8格式，不超过200字）
-     * @param integer $Flag 文本所属类型（默认取4值）：
+     * @param integer $Flag 待分析文本所属的类型，仅当输入参数Mode取值为2class时有效（默认取4值）：
 1、商品评论类
 2、社交类
 3、美食酒店类
 4、通用领域类
+     * @param string $Mode 情感分类模式选项，可取2class或3class（默认值为2class）
+1、2class：返回正负面二分类情感结果
+2、3class：返回正负面及中性三分类情感结果
      */
     function __construct()
     {
@@ -76,6 +92,10 @@ class SentimentAnalysisRequest extends AbstractModel
 
         if (array_key_exists("Flag",$param) and $param["Flag"] !== null) {
             $this->Flag = $param["Flag"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
     }
 }

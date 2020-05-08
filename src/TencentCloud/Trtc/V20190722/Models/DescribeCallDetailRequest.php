@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCallDetail请求参数结构体
  *
- * @method string getCommId() 获取通话ID
- * @method void setCommId(string $CommId) 设置通话ID
+ * @method string getCommId() 获取通话ID（唯一标识一次通话）= sdkappid+roomgString（房间号）+房间创建时间（unix时间戳，s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
+ * @method void setCommId(string $CommId) 设置通话ID（唯一标识一次通话）= sdkappid+roomgString（房间号）+房间创建时间（unix时间戳，s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
  * @method integer getStartTime() 获取查询开始时间
  * @method void setStartTime(integer $StartTime) 设置查询开始时间
  * @method integer getEndTime() 获取查询结束时间
  * @method void setEndTime(integer $EndTime) 设置查询结束时间
  * @method string getSdkAppId() 获取用户sdkappid
  * @method void setSdkAppId(string $SdkAppId) 设置用户sdkappid
- * @method array getUserIds() 获取需查询的用户数组，不填默认返回6个用户
- * @method void setUserIds(array $UserIds) 设置需查询的用户数组，不填默认返回6个用户
+ * @method array getUserIds() 获取需查询的用户数组，不填默认返回6个用户,最多可填6个用户
+ * @method void setUserIds(array $UserIds) 设置需查询的用户数组，不填默认返回6个用户,最多可填6个用户
  * @method array getDataType() 获取需查询的指标，不填则只返回用户列表，填all则返回所有指标。
 appCpu：APP CPU使用率；
 sysCpu：系统 CPU使用率；
@@ -62,7 +62,7 @@ vHeight：上/下行分辨率高
 class DescribeCallDetailRequest extends AbstractModel
 {
     /**
-     * @var string 通话ID
+     * @var string 通话ID（唯一标识一次通话）= sdkappid+roomgString（房间号）+房间创建时间（unix时间戳，s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
      */
     public $CommId;
 
@@ -82,7 +82,7 @@ class DescribeCallDetailRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var array 需查询的用户数组，不填默认返回6个用户
+     * @var array 需查询的用户数组，不填默认返回6个用户,最多可填6个用户
      */
     public $UserIds;
 
@@ -105,11 +105,11 @@ vHeight：上/下行分辨率高
     public $DataType;
 
     /**
-     * @param string $CommId 通话ID
+     * @param string $CommId 通话ID（唯一标识一次通话）= sdkappid+roomgString（房间号）+房间创建时间（unix时间戳，s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
      * @param integer $StartTime 查询开始时间
      * @param integer $EndTime 查询结束时间
      * @param string $SdkAppId 用户sdkappid
-     * @param array $UserIds 需查询的用户数组，不填默认返回6个用户
+     * @param array $UserIds 需查询的用户数组，不填默认返回6个用户,最多可填6个用户
      * @param array $DataType 需查询的指标，不填则只返回用户列表，填all则返回所有指标。
 appCpu：APP CPU使用率；
 sysCpu：系统 CPU使用率；

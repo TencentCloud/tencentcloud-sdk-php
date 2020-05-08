@@ -22,8 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() 获取指定时间点截图模板 ID。
  * @method void setDefinition(integer $Definition) 设置指定时间点截图模板 ID。
- * @method array getTimeOffsetSet() 获取截图时间点列表，单位为<font color=red>毫秒</font>。
- * @method void setTimeOffsetSet(array $TimeOffsetSet) 设置截图时间点列表，单位为<font color=red>毫秒</font>。
+ * @method array getExtTimeOffsetSet() 获取截图时间点列表，时间点支持 s、% 两种格式：
+<li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li>
+<li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li>
+ * @method void setExtTimeOffsetSet(array $ExtTimeOffsetSet) 设置截图时间点列表，时间点支持 s、% 两种格式：
+<li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li>
+<li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li>
+ * @method array getTimeOffsetSet() 获取截图时间点列表，单位为<font color=red>毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。
+ * @method void setTimeOffsetSet(array $TimeOffsetSet) 设置截图时间点列表，单位为<font color=red>毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。
  * @method array getWatermarkSet() 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
  */
@@ -35,7 +41,14 @@ class SnapshotByTimeOffsetTaskInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var array 截图时间点列表，单位为<font color=red>毫秒</font>。
+     * @var array 截图时间点列表，时间点支持 s、% 两种格式：
+<li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li>
+<li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li>
+     */
+    public $ExtTimeOffsetSet;
+
+    /**
+     * @var array 截图时间点列表，单位为<font color=red>毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。
      */
     public $TimeOffsetSet;
 
@@ -46,7 +59,10 @@ class SnapshotByTimeOffsetTaskInput extends AbstractModel
 
     /**
      * @param integer $Definition 指定时间点截图模板 ID。
-     * @param array $TimeOffsetSet 截图时间点列表，单位为<font color=red>毫秒</font>。
+     * @param array $ExtTimeOffsetSet 截图时间点列表，时间点支持 s、% 两种格式：
+<li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li>
+<li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li>
+     * @param array $TimeOffsetSet 截图时间点列表，单位为<font color=red>毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      */
     function __construct()
@@ -64,6 +80,10 @@ class SnapshotByTimeOffsetTaskInput extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("ExtTimeOffsetSet",$param) and $param["ExtTimeOffsetSet"] !== null) {
+            $this->ExtTimeOffsetSet = $param["ExtTimeOffsetSet"];
         }
 
         if (array_key_exists("TimeOffsetSet",$param) and $param["TimeOffsetSet"] !== null) {

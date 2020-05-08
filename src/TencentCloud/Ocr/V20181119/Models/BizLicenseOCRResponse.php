@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BizLicenseOCR返回参数结构体
  *
- * @method string getRegNum() 获取注册号
- * @method void setRegNum(string $RegNum) 设置注册号
+ * @method string getRegNum() 获取统一社会信用代码（三合一之前为注册号）
+ * @method void setRegNum(string $RegNum) 设置统一社会信用代码（三合一之前为注册号）
  * @method string getName() 获取公司名称
  * @method void setName(string $Name) 设置公司名称
  * @method string getCapital() 获取注册资本
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class BizLicenseOCRResponse extends AbstractModel
 {
     /**
-     * @var string 注册号
+     * @var string 统一社会信用代码（三合一之前为注册号）
      */
     public $RegNum;
 
@@ -101,7 +101,7 @@ class BizLicenseOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $RegNum 注册号
+     * @param string $RegNum 统一社会信用代码（三合一之前为注册号）
      * @param string $Name 公司名称
      * @param string $Capital 注册资本
      * @param string $Person 法定代表人

@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置告警时间段结束时间。含义同StartTime
  * @method array getNotifyWay() 获取告警通知方式。可选 "SMS","SITE","EMAIL","CALL","WECHAT"
  * @method void setNotifyWay(array $NotifyWay) 设置告警通知方式。可选 "SMS","SITE","EMAIL","CALL","WECHAT"
- * @method array getReceiverType() 获取接收人类型。“group” 或 “user”
- * @method void setReceiverType(array $ReceiverType) 设置接收人类型。“group” 或 “user”
- * @method integer getId() 获取Id
- * @method void setId(integer $Id) 设置Id
+ * @method string getReceiverType() 获取接收人类型。“group” 或 “user”
+ * @method void setReceiverType(string $ReceiverType) 设置接收人类型。“group” 或 “user”
+ * @method integer getId() 获取ReceiverId
+ * @method void setId(integer $Id) 设置ReceiverId
  * @method array getSendFor() 获取电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
  * @method void setSendFor(array $SendFor) 设置电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
  * @method array getUidList() 获取电话告警接收者uid
@@ -69,12 +69,12 @@ class ReceiverInfo extends AbstractModel
     public $NotifyWay;
 
     /**
-     * @var array 接收人类型。“group” 或 “user”
+     * @var string 接收人类型。“group” 或 “user”
      */
     public $ReceiverType;
 
     /**
-     * @var integer Id
+     * @var integer ReceiverId
      */
     public $Id;
 
@@ -132,8 +132,8 @@ class ReceiverInfo extends AbstractModel
      * @param integer $StartTime 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
      * @param integer $EndTime 告警时间段结束时间。含义同StartTime
      * @param array $NotifyWay 告警通知方式。可选 "SMS","SITE","EMAIL","CALL","WECHAT"
-     * @param array $ReceiverType 接收人类型。“group” 或 “user”
-     * @param integer $Id Id
+     * @param string $ReceiverType 接收人类型。“group” 或 “user”
+     * @param integer $Id ReceiverId
      * @param array $SendFor 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
      * @param array $UidList 电话告警接收者uid
      * @param integer $RoundNumber 电话告警轮数

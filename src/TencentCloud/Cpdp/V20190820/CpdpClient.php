@@ -44,16 +44,21 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\CheckAmountResponse CheckAmount(Models\CheckAmountRequest $req) 验证鉴权金额。此接口可受理BindRelateAcctSmallAmount接口发起的转账金额（往账鉴权方式）的验证处理。若所回填的验证金额验证通过，则会绑定原申请中的银行账户作为提现账户。通过此接口也可以查得BindRelateAcctSmallAmount接口发起的来账鉴权方式的申请的当前状态。
  * @method Models\CloseOrderResponse CloseOrder(Models\CloseOrderRequest $req) 通过此接口关闭此前已创建的订单，关闭后，用户将无法继续付款。仅能关闭创建后未支付的订单
  * @method Models\CreateAcctResponse CreateAcct(Models\CreateAcctRequest $req) 子商户入驻聚鑫平台
+ * @method Models\CreateAgentTaxPaymentInfosResponse CreateAgentTaxPaymentInfos(Models\CreateAgentTaxPaymentInfosRequest $req) 直播平台-代理商完税信息录入
  * @method Models\CreateCustAcctIdResponse CreateCustAcctId(Models\CreateCustAcctIdRequest $req) 会员子账户开立。会员在银行注册，并开立会员子账户，交易网会员代码即会员在平台端系统的会员编号。
 平台需保存银行返回的子账户账号，后续交易接口都会用到。会员属性字段为预留扩展字段，当前必须送默认值。
  * @method Models\CreateInvoiceResponse CreateInvoice(Models\CreateInvoiceRequest $req) 智慧零售-发票开具
  * @method Models\CreateMerchantResponse CreateMerchant(Models\CreateMerchantRequest $req) 智慧零售-商户注册
  * @method Models\CreateRedInvoiceResponse CreateRedInvoice(Models\CreateRedInvoiceRequest $req) 智慧零售-发票红冲
+ * @method Models\DeleteAgentTaxPaymentInfoResponse DeleteAgentTaxPaymentInfo(Models\DeleteAgentTaxPaymentInfoRequest $req) 直播平台-删除代理商完税信息
+ * @method Models\DeleteAgentTaxPaymentInfosResponse DeleteAgentTaxPaymentInfos(Models\DeleteAgentTaxPaymentInfosRequest $req) 直播平台-删除代理商完税信息
  * @method Models\DownloadBillResponse DownloadBill(Models\DownloadBillRequest $req) 账单下载接口，根据本接口返回的URL地址，在D+1日下载对账单。注意，本接口返回的URL地址有时效，请尽快下载。URL超时时效后，请重新调用本接口再次获取。
+ * @method Models\ModifyAgentTaxPaymentInfoResponse ModifyAgentTaxPaymentInfo(Models\ModifyAgentTaxPaymentInfoRequest $req) 直播平台-修改代理商完税信息
  * @method Models\ModifyMntMbrBindRelateAcctBankCodeResponse ModifyMntMbrBindRelateAcctBankCode(Models\ModifyMntMbrBindRelateAcctBankCodeRequest $req) 维护会员绑定提现账户联行号。此接口可以支持市场修改会员的提现账户的开户行信息，具体包括开户行行名、开户行的银行联行号（大小额联行号）和超级网银行号。
  * @method Models\QueryAcctBindingResponse QueryAcctBinding(Models\QueryAcctBindingRequest $req) 聚鑫-查询子账户绑定银行卡
  * @method Models\QueryAcctInfoResponse QueryAcctInfo(Models\QueryAcctInfoRequest $req) 聚鑫-开户信息查询
  * @method Models\QueryAcctInfoListResponse QueryAcctInfoList(Models\QueryAcctInfoListRequest $req) 聚鑫-开户信息列表查询, 查询某一段时间的开户信息
+ * @method Models\QueryAgentTaxPaymentBatchResponse QueryAgentTaxPaymentBatch(Models\QueryAgentTaxPaymentBatchRequest $req) 直播平台-查询批次信息
  * @method Models\QueryApplicationMaterialResponse QueryApplicationMaterial(Models\QueryApplicationMaterialRequest $req) 跨境-成功申报材料查询
  * @method Models\QueryBalanceResponse QueryBalance(Models\QueryBalanceRequest $req) 子商户余额查询
  * @method Models\QueryBankClearResponse QueryBankClear(Models\QueryBankClearRequest $req) 查询银行在途清算结果。查询时间段内交易网的在途清算结果。

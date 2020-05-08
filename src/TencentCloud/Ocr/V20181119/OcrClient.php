@@ -25,7 +25,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 /**
  * @method Models\ArithmeticOCRResponse ArithmeticOCR(Models\ArithmeticOCRRequest $req) 本接口支持作业算式题目的自动识别，目前覆盖 K12 学力范围内的 14 种题型，包括加减乘除四则运算、分数四则运算、竖式四则运算、脱式计算等。
  * @method Models\BankCardOCRResponse BankCardOCR(Models\BankCardOCRRequest $req) 本接口支持对中国大陆主流银行卡的卡号、银行信息、有效期等关键字段的检测与识别。
- * @method Models\BizLicenseOCRResponse BizLicenseOCR(Models\BizLicenseOCRRequest $req) 本接口支持快速精准识别营业执照上的字段，包括注册号、公司名称、经营场所、主体类型、法定代表人、注册资金、组成形式、成立日期、营业期限和经营范围等字段。
+ * @method Models\BizLicenseOCRResponse BizLicenseOCR(Models\BizLicenseOCRRequest $req) 本接口支持快速精准识别营业执照上的字段，包括统一社会信用代码、公司名称、经营场所、主体类型、法定代表人、注册资金、组成形式、成立日期、营业期限和经营范围等字段。
  * @method Models\BusInvoiceOCRResponse BusInvoiceOCR(Models\BusInvoiceOCRRequest $req) 本接口支持识别公路汽车客票的发票代码、发票号码、日期、姓名、票价等字段。
  * @method Models\BusinessCardOCRResponse BusinessCardOCR(Models\BusinessCardOCRRequest $req) 本接口支持名片各字段的自动定位与识别，包含姓名、电话、手机号、邮箱、公司、部门、职位、网址、地址、QQ、微信、MSN等。
  * @method Models\CarInvoiceOCRResponse CarInvoiceOCR(Models\CarInvoiceOCRRequest $req) 本接口支持机动车销售统一发票和二手车销售统一发票的识别，包括发票号码、发票代码、合计金额、合计税额等二十多个字段。

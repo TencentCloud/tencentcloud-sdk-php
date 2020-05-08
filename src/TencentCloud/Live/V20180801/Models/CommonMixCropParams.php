@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 通用混流输入裁剪参数。
  *
- * @method float getCropWidth() 获取裁剪的宽度。取值范围[0，3000]。
- * @method void setCropWidth(float $CropWidth) 设置裁剪的宽度。取值范围[0，3000]。
- * @method float getCropHeight() 获取裁剪的高度。取值范围[0，3000]。
- * @method void setCropHeight(float $CropHeight) 设置裁剪的高度。取值范围[0，3000]。
- * @method float getCropStartLocationX() 获取裁剪的起始X坐标。取值范围[0，3000]。
- * @method void setCropStartLocationX(float $CropStartLocationX) 设置裁剪的起始X坐标。取值范围[0，3000]。
- * @method float getCropStartLocationY() 获取裁剪的起始Y坐标。取值范围[0，3000]。
- * @method void setCropStartLocationY(float $CropStartLocationY) 设置裁剪的起始Y坐标。取值范围[0，3000]。
+ * @method float getCropWidth() 获取裁剪的宽度。取值范围[0，2000]。
+ * @method void setCropWidth(float $CropWidth) 设置裁剪的宽度。取值范围[0，2000]。
+ * @method float getCropHeight() 获取裁剪的高度。取值范围[0，2000]。
+ * @method void setCropHeight(float $CropHeight) 设置裁剪的高度。取值范围[0，2000]。
+ * @method float getCropStartLocationX() 获取裁剪的起始X坐标。取值范围[0，2000]。
+ * @method void setCropStartLocationX(float $CropStartLocationX) 设置裁剪的起始X坐标。取值范围[0，2000]。
+ * @method float getCropStartLocationY() 获取裁剪的起始Y坐标。取值范围[0，2000]。
+ * @method void setCropStartLocationY(float $CropStartLocationY) 设置裁剪的起始Y坐标。取值范围[0，2000]。
  */
 class CommonMixCropParams extends AbstractModel
 {
     /**
-     * @var float 裁剪的宽度。取值范围[0，3000]。
+     * @var float 裁剪的宽度。取值范围[0，2000]。
      */
     public $CropWidth;
 
     /**
-     * @var float 裁剪的高度。取值范围[0，3000]。
+     * @var float 裁剪的高度。取值范围[0，2000]。
      */
     public $CropHeight;
 
     /**
-     * @var float 裁剪的起始X坐标。取值范围[0，3000]。
+     * @var float 裁剪的起始X坐标。取值范围[0，2000]。
      */
     public $CropStartLocationX;
 
     /**
-     * @var float 裁剪的起始Y坐标。取值范围[0，3000]。
+     * @var float 裁剪的起始Y坐标。取值范围[0，2000]。
      */
     public $CropStartLocationY;
 
     /**
-     * @param float $CropWidth 裁剪的宽度。取值范围[0，3000]。
-     * @param float $CropHeight 裁剪的高度。取值范围[0，3000]。
-     * @param float $CropStartLocationX 裁剪的起始X坐标。取值范围[0，3000]。
-     * @param float $CropStartLocationY 裁剪的起始Y坐标。取值范围[0，3000]。
+     * @param float $CropWidth 裁剪的宽度。取值范围[0，2000]。
+     * @param float $CropHeight 裁剪的高度。取值范围[0，2000]。
+     * @param float $CropStartLocationX 裁剪的起始X坐标。取值范围[0，2000]。
+     * @param float $CropStartLocationY 裁剪的起始Y坐标。取值范围[0，2000]。
      */
     function __construct()
     {

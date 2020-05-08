@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 人脸变年龄信息
  *
- * @method integer getAge() 获取当前只支持设置为10且不可调整（后续放开后再知会）。
- * @method void setAge(integer $Age) 设置当前只支持设置为10且不可调整（后续放开后再知会）。
+ * @method integer getAge() 获取变化到的人脸年龄 [10,80]。
+ * @method void setAge(integer $Age) 设置变化到的人脸年龄 [10,80]。
  * @method FaceRect getFaceRect() 获取人脸框位置。若不输入则选择 Image 或 Url 中面积最大的人脸。  
 您可以通过 [人脸检测与分析](https://cloud.tencent.com/document/api/867/32800)  接口获取人脸框位置信息。
  * @method void setFaceRect(FaceRect $FaceRect) 设置人脸框位置。若不输入则选择 Image 或 Url 中面积最大的人脸。  
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class AgeInfo extends AbstractModel
 {
     /**
-     * @var integer 当前只支持设置为10且不可调整（后续放开后再知会）。
+     * @var integer 变化到的人脸年龄 [10,80]。
      */
     public $Age;
 
@@ -41,7 +41,7 @@ class AgeInfo extends AbstractModel
     public $FaceRect;
 
     /**
-     * @param integer $Age 当前只支持设置为10且不可调整（后续放开后再知会）。
+     * @param integer $Age 变化到的人脸年龄 [10,80]。
      * @param FaceRect $FaceRect 人脸框位置。若不输入则选择 Image 或 Url 中面积最大的人脸。  
 您可以通过 [人脸检测与分析](https://cloud.tencent.com/document/api/867/32800)  接口获取人脸框位置信息。
      */

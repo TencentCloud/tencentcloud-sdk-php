@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getBatchNum() 获取批次号
  * @method void setBatchNum(integer $BatchNum) 设置批次号
+ * @method string getProfile() 获取接入环境。沙箱环境填sandbox
+ * @method void setProfile(string $Profile) 设置接入环境。沙箱环境填sandbox
  */
 class DeleteAgentTaxPaymentInfoRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteAgentTaxPaymentInfoRequest extends AbstractModel
     public $BatchNum;
 
     /**
+     * @var string 接入环境。沙箱环境填sandbox
+     */
+    public $Profile;
+
+    /**
      * @param integer $BatchNum 批次号
+     * @param string $Profile 接入环境。沙箱环境填sandbox
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteAgentTaxPaymentInfoRequest extends AbstractModel
         }
         if (array_key_exists("BatchNum",$param) and $param["BatchNum"] !== null) {
             $this->BatchNum = $param["BatchNum"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

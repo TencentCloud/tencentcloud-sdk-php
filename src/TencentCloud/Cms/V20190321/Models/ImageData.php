@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogoDetect(LogoDetail $LogoDetect) 设置logo详情
  * @method OCRDetect getOCRDetect() 获取图片OCR详情
  * @method void setOCRDetect(OCRDetect $OCRDetect) 设置图片OCR详情
+ * @method PhoneDetect getPhoneDetect() 获取手机检测详情
+ * @method void setPhoneDetect(PhoneDetect $PhoneDetect) 设置手机检测详情
  * @method ImagePolityDetect getPolityDetect() 获取图片涉政详情
  * @method void setPolityDetect(ImagePolityDetect $PolityDetect) 设置图片涉政详情
  * @method ImagePornDetect getPornDetect() 获取图片涉黄详情
@@ -102,6 +104,11 @@ class ImageData extends AbstractModel
     public $OCRDetect;
 
     /**
+     * @var PhoneDetect 手机检测详情
+     */
+    public $PhoneDetect;
+
+    /**
      * @var ImagePolityDetect 图片涉政详情
      */
     public $PolityDetect;
@@ -136,6 +143,7 @@ class ImageData extends AbstractModel
      * @param ImageIllegalDetect $IllegalDetect 图片违法详情
      * @param LogoDetail $LogoDetect logo详情
      * @param OCRDetect $OCRDetect 图片OCR详情
+     * @param PhoneDetect $PhoneDetect 手机检测详情
      * @param ImagePolityDetect $PolityDetect 图片涉政详情
      * @param ImagePornDetect $PornDetect 图片涉黄详情
      * @param Similar $Similar 图片相似度详情
@@ -185,6 +193,11 @@ class ImageData extends AbstractModel
         if (array_key_exists("OCRDetect",$param) and $param["OCRDetect"] !== null) {
             $this->OCRDetect = new OCRDetect();
             $this->OCRDetect->deserialize($param["OCRDetect"]);
+        }
+
+        if (array_key_exists("PhoneDetect",$param) and $param["PhoneDetect"] !== null) {
+            $this->PhoneDetect = new PhoneDetect();
+            $this->PhoneDetect->deserialize($param["PhoneDetect"]);
         }
 
         if (array_key_exists("PolityDetect",$param) and $param["PolityDetect"] !== null) {

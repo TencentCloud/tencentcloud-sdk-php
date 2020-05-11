@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getVatInvoiceInfos() 获取检测到的文本信息，具体内容请点击左侧链接。
  * @method void setVatInvoiceInfos(array $VatInvoiceInfos) 设置检测到的文本信息，具体内容请点击左侧链接。
+ * @method array getItems() 获取明细条目。VatInvoiceInfos中关于明细项的具体条目。
+ * @method void setItems(array $Items) 设置明细条目。VatInvoiceInfos中关于明细项的具体条目。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class VatInvoiceOCRResponse extends AbstractModel
     public $VatInvoiceInfos;
 
     /**
+     * @var array 明细条目。VatInvoiceInfos中关于明细项的具体条目。
+     */
+    public $Items;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $VatInvoiceInfos 检测到的文本信息，具体内容请点击左侧链接。
+     * @param array $Items 明细条目。VatInvoiceInfos中关于明细项的具体条目。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -60,6 +68,15 @@ class VatInvoiceOCRResponse extends AbstractModel
                 $obj = new TextVatInvoice();
                 $obj->deserialize($value);
                 array_push($this->VatInvoiceInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new VatInvoiceItem();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
             }
         }
 

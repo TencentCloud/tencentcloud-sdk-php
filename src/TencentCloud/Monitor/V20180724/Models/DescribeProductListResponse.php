@@ -14,23 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Sms\V20190711\Models;
+namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSmsTemplateList返回参数结构体
+ * DescribeProductList返回参数结构体
  *
- * @method array getDescribeTemplateStatusSet() 获取获取短信模板信息响应
- * @method void setDescribeTemplateStatusSet(array $DescribeTemplateStatusSet) 设置获取短信模板信息响应
+ * @method array getProductList() 获取产品信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductList(array $ProductList) 设置产品信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取产品总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置产品总数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeSmsTemplateListResponse extends AbstractModel
+class DescribeProductListResponse extends AbstractModel
 {
     /**
-     * @var array 获取短信模板信息响应
+     * @var array 产品信息列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $DescribeTemplateStatusSet;
+    public $ProductList;
+
+    /**
+     * @var integer 产品总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +51,10 @@ class DescribeSmsTemplateListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DescribeTemplateStatusSet 获取短信模板信息响应
+     * @param array $ProductList 产品信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 产品总数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +70,17 @@ class DescribeSmsTemplateListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DescribeTemplateStatusSet",$param) and $param["DescribeTemplateStatusSet"] !== null) {
-            $this->DescribeTemplateStatusSet = [];
-            foreach ($param["DescribeTemplateStatusSet"] as $key => $value){
-                $obj = new DescribeTemplateListStatus();
+        if (array_key_exists("ProductList",$param) and $param["ProductList"] !== null) {
+            $this->ProductList = [];
+            foreach ($param["ProductList"] as $key => $value){
+                $obj = new ProductSimple();
                 $obj->deserialize($value);
-                array_push($this->DescribeTemplateStatusSet, $obj);
+                array_push($this->ProductList, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

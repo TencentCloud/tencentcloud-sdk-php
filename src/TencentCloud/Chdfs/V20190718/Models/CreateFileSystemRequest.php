@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileSystemName() 获取文件系统名称
  * @method void setFileSystemName(string $FileSystemName) 设置文件系统名称
- * @method integer getCapacityQuota() 获取文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
- * @method void setCapacityQuota(integer $CapacityQuota) 设置文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+ * @method integer getCapacityQuota() 获取文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+ * @method void setCapacityQuota(integer $CapacityQuota) 设置文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
  * @method string getDescription() 获取文件系统描述
  * @method void setDescription(string $Description) 设置文件系统描述
  */
@@ -35,7 +35,7 @@ class CreateFileSystemRequest extends AbstractModel
     public $FileSystemName;
 
     /**
-     * @var integer 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+     * @var integer 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
      */
     public $CapacityQuota;
 
@@ -46,7 +46,7 @@ class CreateFileSystemRequest extends AbstractModel
 
     /**
      * @param string $FileSystemName 文件系统名称
-     * @param integer $CapacityQuota 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+     * @param integer $CapacityQuota 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
      * @param string $Description 文件系统描述
      */
     function __construct()

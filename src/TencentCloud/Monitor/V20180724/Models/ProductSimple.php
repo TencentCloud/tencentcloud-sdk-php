@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cpdp\V20190820\Models;
+namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryAgentTaxPaymentBatch请求参数结构体
+ * 云监控支持的产品简要信息
  *
- * @method integer getBatchNum() 获取批次号
- * @method void setBatchNum(integer $BatchNum) 设置批次号
- * @method string getProfile() 获取接入环境。沙箱环境填sandbox
- * @method void setProfile(string $Profile) 设置接入环境。沙箱环境填sandbox
+ * @method string getNamespace() 获取命名空间
+ * @method void setNamespace(string $Namespace) 设置命名空间
+ * @method string getProductName() 获取产品名称
+ * @method void setProductName(string $ProductName) 设置产品名称
  */
-class QueryAgentTaxPaymentBatchRequest extends AbstractModel
+class ProductSimple extends AbstractModel
 {
     /**
-     * @var integer 批次号
+     * @var string 命名空间
      */
-    public $BatchNum;
+    public $Namespace;
 
     /**
-     * @var string 接入环境。沙箱环境填sandbox
+     * @var string 产品名称
      */
-    public $Profile;
+    public $ProductName;
 
     /**
-     * @param integer $BatchNum 批次号
-     * @param string $Profile 接入环境。沙箱环境填sandbox
+     * @param string $Namespace 命名空间
+     * @param string $ProductName 产品名称
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class QueryAgentTaxPaymentBatchRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BatchNum",$param) and $param["BatchNum"] !== null) {
-            $this->BatchNum = $param["BatchNum"];
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
+            $this->ProductName = $param["ProductName"];
         }
     }
 }

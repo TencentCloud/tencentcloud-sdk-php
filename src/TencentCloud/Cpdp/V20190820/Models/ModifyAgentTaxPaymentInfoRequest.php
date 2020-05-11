@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRawElectronicCertUrl(string $RawElectronicCertUrl) 设置新源电子凭证地址
  * @method string getFileName() 获取新的文件名
  * @method void setFileName(string $FileName) 设置新的文件名
+ * @method string getProfile() 获取接入环境。沙箱环境填sandbox
+ * @method void setProfile(string $Profile) 设置接入环境。沙箱环境填sandbox
  */
 class ModifyAgentTaxPaymentInfoRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyAgentTaxPaymentInfoRequest extends AbstractModel
     public $FileName;
 
     /**
+     * @var string 接入环境。沙箱环境填sandbox
+     */
+    public $Profile;
+
+    /**
      * @param integer $BatchNum 批次号
      * @param string $RawElectronicCertUrl 新源电子凭证地址
      * @param string $FileName 新的文件名
+     * @param string $Profile 接入环境。沙箱环境填sandbox
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyAgentTaxPaymentInfoRequest extends AbstractModel
 
         if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
             $this->FileName = $param["FileName"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

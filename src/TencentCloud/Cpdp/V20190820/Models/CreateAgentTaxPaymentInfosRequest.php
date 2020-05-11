@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileName(string $FileName) 设置文件名
  * @method array getAgentTaxPaymentInfos() 获取完税信息
  * @method void setAgentTaxPaymentInfos(array $AgentTaxPaymentInfos) 设置完税信息
+ * @method string getProfile() 获取接入环境。沙箱环境填sandbox
+ * @method void setProfile(string $Profile) 设置接入环境。沙箱环境填sandbox
  */
 class CreateAgentTaxPaymentInfosRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateAgentTaxPaymentInfosRequest extends AbstractModel
     public $AgentTaxPaymentInfos;
 
     /**
+     * @var string 接入环境。沙箱环境填sandbox
+     */
+    public $Profile;
+
+    /**
      * @param string $AgentId 代理商ID
      * @param integer $Channel 平台渠道
      * @param integer $Type 类型。0-视同，1-个体工商户
      * @param string $RawElectronicCertUrl 源电子凭证下载地址
      * @param string $FileName 文件名
      * @param array $AgentTaxPaymentInfos 完税信息
+     * @param string $Profile 接入环境。沙箱环境填sandbox
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class CreateAgentTaxPaymentInfosRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AgentTaxPaymentInfos, $obj);
             }
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

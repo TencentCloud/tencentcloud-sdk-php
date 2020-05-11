@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteModule请求参数结构体
  *
- * @method string getModuleId() 获取模块ID。如：es-qn46snq8
- * @method void setModuleId(string $ModuleId) 设置模块ID。如：es-qn46snq8
+ * @method string getModuleId() 获取模块ID。如：em-qn46snq8
+ * @method void setModuleId(string $ModuleId) 设置模块ID。如：em-qn46snq8
  */
 class DeleteModuleRequest extends AbstractModel
 {
     /**
-     * @var string 模块ID。如：es-qn46snq8
+     * @var string 模块ID。如：em-qn46snq8
      */
     public $ModuleId;
 
     /**
-     * @param string $ModuleId 模块ID。如：es-qn46snq8
+     * @param string $ModuleId 模块ID。如：em-qn46snq8
      */
     function __construct()
     {

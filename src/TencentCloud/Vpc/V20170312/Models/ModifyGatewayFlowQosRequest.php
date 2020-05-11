@@ -28,8 +28,8 @@ VPN网关实例ID，形如，`vpn-ltjahce6`。
 专线网关实例ID，形如，`dcg-ltjahce6`；
 Nat网关实例ID，形如，`nat-ltjahce6`；
 VPN网关实例ID，形如，`vpn-ltjahce6`。
- * @method integer getBandwidth() 获取流控带宽值。
- * @method void setBandwidth(integer $Bandwidth) 设置流控带宽值。
+ * @method integer getBandwidth() 获取流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
+ * @method void setBandwidth(integer $Bandwidth) 设置流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
  * @method array getIpAddresses() 获取限流的云服务器内网IP。
  * @method void setIpAddresses(array $IpAddresses) 设置限流的云服务器内网IP。
  */
@@ -44,7 +44,7 @@ VPN网关实例ID，形如，`vpn-ltjahce6`。
     public $GatewayId;
 
     /**
-     * @var integer 流控带宽值。
+     * @var integer 流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
      */
     public $Bandwidth;
 
@@ -58,7 +58,7 @@ VPN网关实例ID，形如，`vpn-ltjahce6`。
 专线网关实例ID，形如，`dcg-ltjahce6`；
 Nat网关实例ID，形如，`nat-ltjahce6`；
 VPN网关实例ID，形如，`vpn-ltjahce6`。
-     * @param integer $Bandwidth 流控带宽值。
+     * @param integer $Bandwidth 流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
      * @param array $IpAddresses 限流的云服务器内网IP。
      */
     function __construct()

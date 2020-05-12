@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNamespace() 获取命名空间
  * @method void setNamespace(string $Namespace) 设置命名空间
- * @method string getProductName() 获取产品名称
- * @method void setProductName(string $ProductName) 设置产品名称
+ * @method string getProductName() 获取产品中文名称
+ * @method void setProductName(string $ProductName) 设置产品中文名称
+ * @method string getProductEnName() 获取产品英文名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductEnName(string $ProductEnName) 设置产品英文名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductSimple extends AbstractModel
 {
@@ -33,13 +37,21 @@ class ProductSimple extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string 产品名称
+     * @var string 产品中文名称
      */
     public $ProductName;
 
     /**
+     * @var string 产品英文名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductEnName;
+
+    /**
      * @param string $Namespace 命名空间
-     * @param string $ProductName 产品名称
+     * @param string $ProductName 产品中文名称
+     * @param string $ProductEnName 产品英文名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class ProductSimple extends AbstractModel
 
         if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
             $this->ProductName = $param["ProductName"];
+        }
+
+        if (array_key_exists("ProductEnName",$param) and $param["ProductEnName"] !== null) {
+            $this->ProductEnName = $param["ProductEnName"];
         }
     }
 }

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSeq(integer $Seq) 设置语音分片的序号，从0开始
  * @method integer getIsEnd() 获取是否最后一片语音分片，0-否，1-是
  * @method void setIsEnd(integer $IsEnd) 设置是否最后一片语音分片，0-否，1-是
- * @method string getData() 获取语音分片内容的base64字符串，音频内容应含有效并可识别的文本
- * @method void setData(string $Data) 设置语音分片内容的base64字符串，音频内容应含有效并可识别的文本
+ * @method string getData() 获取语音分片内容进行 Base64 编码后的字符串。音频内容需包含有效并可识别的文本信息。
+ * @method void setData(string $Data) 设置语音分片内容进行 Base64 编码后的字符串。音频内容需包含有效并可识别的文本信息。
  * @method integer getProjectId() 获取项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
  * @method void setProjectId(integer $ProjectId) 设置项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
  * @method string getMode() 获取识别模式，该参数已废弃
@@ -72,7 +72,7 @@ class SpeechTranslateRequest extends AbstractModel
     public $IsEnd;
 
     /**
-     * @var string 语音分片内容的base64字符串，音频内容应含有效并可识别的文本
+     * @var string 语音分片内容进行 Base64 编码后的字符串。音频内容需包含有效并可识别的文本信息。
      */
     public $Data;
 
@@ -93,7 +93,7 @@ class SpeechTranslateRequest extends AbstractModel
      * @param integer $AudioFormat pcm : 146   speex : 16779154   mp3 : 83886080
      * @param integer $Seq 语音分片的序号，从0开始
      * @param integer $IsEnd 是否最后一片语音分片，0-否，1-是
-     * @param string $Data 语音分片内容的base64字符串，音频内容应含有效并可识别的文本
+     * @param string $Data 语音分片内容进行 Base64 编码后的字符串。音频内容需包含有效并可识别的文本信息。
      * @param integer $ProjectId 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      * @param string $Mode 识别模式，该参数已废弃
      */

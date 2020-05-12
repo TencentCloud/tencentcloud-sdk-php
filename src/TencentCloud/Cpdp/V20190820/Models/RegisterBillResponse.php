@@ -14,30 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tiw\V20190919\Models;
+namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTranscodeCallback返回参数结构体
+ * RegisterBill返回参数结构体
  *
- * @method string getCallback() 获取文档转码回调地址
- * @method void setCallback(string $Callback) 设置文档转码回调地址
- * @method string getCallbackKey() 获取文档转码回调鉴权密钥
- * @method void setCallbackKey(string $CallbackKey) 设置文档转码回调鉴权密钥
+ * @method string getFrontSeqNo() 获取银行流水号
+ * @method void setFrontSeqNo(string $FrontSeqNo) 设置银行流水号
+ * @method string getReservedMessage() 获取保留字段
+ * @method void setReservedMessage(string $ReservedMessage) 设置保留字段
+ * @method string getRequestType() 获取请求类型
+ * @method void setRequestType(string $RequestType) 设置请求类型
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTranscodeCallbackResponse extends AbstractModel
+class RegisterBillResponse extends AbstractModel
 {
     /**
-     * @var string 文档转码回调地址
+     * @var string 银行流水号
      */
-    public $Callback;
+    public $FrontSeqNo;
 
     /**
-     * @var string 文档转码回调鉴权密钥
+     * @var string 保留字段
      */
-    public $CallbackKey;
+    public $ReservedMessage;
+
+    /**
+     * @var string 请求类型
+     */
+    public $RequestType;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class DescribeTranscodeCallbackResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Callback 文档转码回调地址
-     * @param string $CallbackKey 文档转码回调鉴权密钥
+     * @param string $FrontSeqNo 银行流水号
+     * @param string $ReservedMessage 保留字段
+     * @param string $RequestType 请求类型
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +70,16 @@ class DescribeTranscodeCallbackResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Callback",$param) and $param["Callback"] !== null) {
-            $this->Callback = $param["Callback"];
+        if (array_key_exists("FrontSeqNo",$param) and $param["FrontSeqNo"] !== null) {
+            $this->FrontSeqNo = $param["FrontSeqNo"];
         }
 
-        if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
-            $this->CallbackKey = $param["CallbackKey"];
+        if (array_key_exists("ReservedMessage",$param) and $param["ReservedMessage"] !== null) {
+            $this->ReservedMessage = $param["ReservedMessage"];
+        }
+
+        if (array_key_exists("RequestType",$param) and $param["RequestType"] !== null) {
+            $this->RequestType = $param["RequestType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

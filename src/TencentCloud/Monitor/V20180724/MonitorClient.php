@@ -39,6 +39,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
 接口调用频率限制为：20次/秒，1200次/分钟。
 若您需要调用的指标、对象较多，可能存在因限频出现拉取失败的情况，建议尽量将请求按时间维度均摊。
  * @method Models\ModifyAlarmReceiversResponse ModifyAlarmReceivers(Models\ModifyAlarmReceiversRequest $req) 修改告警接收人
+ * @method Models\ModifyPolicyGroupResponse ModifyPolicyGroup(Models\ModifyPolicyGroupRequest $req) 更新策略组
  * @method Models\PutMonitorDataResponse PutMonitorData(Models\PutMonitorDataRequest $req) 默认接口请求频率限制：50次/秒。
 默认单租户指标上限：100个。
 单次上报最多 30 个指标/值对，请求返回错误时，请求中所有的指标/值均不会被保存。

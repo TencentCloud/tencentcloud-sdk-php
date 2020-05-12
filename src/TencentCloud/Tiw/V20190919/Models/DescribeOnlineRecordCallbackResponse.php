@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCallback() 获取实时录制事件回调地址，如果未设置回调地址，该字段为空字符串
  * @method void setCallback(string $Callback) 设置实时录制事件回调地址，如果未设置回调地址，该字段为空字符串
+ * @method string getCallbackKey() 获取实时录制回调鉴权密钥
+ * @method void setCallbackKey(string $CallbackKey) 设置实时录制回调鉴权密钥
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class DescribeOnlineRecordCallbackResponse extends AbstractModel
     public $Callback;
 
     /**
+     * @var string 实时录制回调鉴权密钥
+     */
+    public $CallbackKey;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $Callback 实时录制事件回调地址，如果未设置回调地址，该字段为空字符串
+     * @param string $CallbackKey 实时录制回调鉴权密钥
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class DescribeOnlineRecordCallbackResponse extends AbstractModel
         }
         if (array_key_exists("Callback",$param) and $param["Callback"] !== null) {
             $this->Callback = $param["Callback"];
+        }
+
+        if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
+            $this->CallbackKey = $param["CallbackKey"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

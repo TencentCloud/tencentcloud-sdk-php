@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tiw\V20190919\Models;
+namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTranscodeCallback返回参数结构体
+ * ModifyPolicyGroup返回参数结构体
  *
- * @method string getCallback() 获取文档转码回调地址
- * @method void setCallback(string $Callback) 设置文档转码回调地址
- * @method string getCallbackKey() 获取文档转码回调鉴权密钥
- * @method void setCallbackKey(string $CallbackKey) 设置文档转码回调鉴权密钥
+ * @method integer getGroupId() 获取策略组id
+ * @method void setGroupId(integer $GroupId) 设置策略组id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTranscodeCallbackResponse extends AbstractModel
+class ModifyPolicyGroupResponse extends AbstractModel
 {
     /**
-     * @var string 文档转码回调地址
+     * @var integer 策略组id
      */
-    public $Callback;
-
-    /**
-     * @var string 文档转码回调鉴权密钥
-     */
-    public $CallbackKey;
+    public $GroupId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeTranscodeCallbackResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Callback 文档转码回调地址
-     * @param string $CallbackKey 文档转码回调鉴权密钥
+     * @param integer $GroupId 策略组id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +54,8 @@ class DescribeTranscodeCallbackResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Callback",$param) and $param["Callback"] !== null) {
-            $this->Callback = $param["Callback"];
-        }
-
-        if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
-            $this->CallbackKey = $param["CallbackKey"];
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

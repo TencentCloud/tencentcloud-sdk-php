@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(integer $Id) 设置触发器Id
  * @method string getDescription() 获取触发器描述
  * @method void setDescription(string $Description) 设置触发器描述
+ * @method integer getNamespaceId() 获取触发器所属命名空间 Id
+ * @method void setNamespaceId(integer $NamespaceId) 设置触发器所属命名空间 Id
  */
 class WebhookTrigger extends AbstractModel
 {
@@ -73,6 +75,11 @@ class WebhookTrigger extends AbstractModel
     public $Description;
 
     /**
+     * @var integer 触发器所属命名空间 Id
+     */
+    public $NamespaceId;
+
+    /**
      * @param string $Name 触发器名称
      * @param array $Targets 触发器目标
      * @param array $EventTypes 触发动作
@@ -80,6 +87,7 @@ class WebhookTrigger extends AbstractModel
      * @param boolean $Enabled 启用触发器
      * @param integer $Id 触发器Id
      * @param string $Description 触发器描述
+     * @param integer $NamespaceId 触发器所属命名空间 Id
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class WebhookTrigger extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
+            $this->NamespaceId = $param["NamespaceId"];
         }
     }
 }

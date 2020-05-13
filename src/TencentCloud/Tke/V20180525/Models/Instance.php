@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLanIP(string $LanIP) 设置节点内网IP
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodePoolId() 获取资源池ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodePoolId(string $NodePoolId) 设置资源池ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAutoscalingGroupId() 获取自动伸缩组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoscalingGroupId(string $AutoscalingGroupId) 设置自动伸缩组ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -89,6 +97,18 @@ class Instance extends AbstractModel
     public $LanIP;
 
     /**
+     * @var string 资源池ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodePoolId;
+
+    /**
+     * @var string 自动伸缩组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoscalingGroupId;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceRole 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER
      * @param string $FailedReason 实例异常(或者处于初始化中)的原因
@@ -99,6 +119,10 @@ class Instance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 添加时间
      * @param string $LanIP 节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodePoolId 资源池ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AutoscalingGroupId 自动伸缩组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -145,6 +169,14 @@ class Instance extends AbstractModel
 
         if (array_key_exists("LanIP",$param) and $param["LanIP"] !== null) {
             $this->LanIP = $param["LanIP"];
+        }
+
+        if (array_key_exists("NodePoolId",$param) and $param["NodePoolId"] !== null) {
+            $this->NodePoolId = $param["NodePoolId"];
+        }
+
+        if (array_key_exists("AutoscalingGroupId",$param) and $param["AutoscalingGroupId"] !== null) {
+            $this->AutoscalingGroupId = $param["AutoscalingGroupId"];
         }
     }
 }

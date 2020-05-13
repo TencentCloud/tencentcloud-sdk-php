@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(array $Labels) 设置伸缩组的label列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatedTime() 获取创建时间
+ * @method void setCreatedTime(string $CreatedTime) 设置创建时间
  */
 class ClusterAsGroup extends AbstractModel
 {
@@ -58,12 +60,18 @@ class ClusterAsGroup extends AbstractModel
     public $Labels;
 
     /**
+     * @var string 创建时间
+     */
+    public $CreatedTime;
+
+    /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $Status 伸缩组状态(开启 enabled 开启中 enabling 关闭 disabled 关闭中 disabling 更新中 updating 删除中 deleting 开启缩容中 scaleDownEnabling 关闭缩容中 scaleDownDisabling)
      * @param boolean $IsUnschedulable 节点是否设置成不可调度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Labels 伸缩组的label列表
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatedTime 创建时间
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ class ClusterAsGroup extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Labels, $obj);
             }
+        }
+
+        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
+            $this->CreatedTime = $param["CreatedTime"];
         }
     }
 }

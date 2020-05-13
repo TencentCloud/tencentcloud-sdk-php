@@ -52,16 +52,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceChargeType() 获取实例计费模式。取值范围：
-PREPAID：表示预付费，即包年包月
-POSTPAID_BY_HOUR：表示后付费，即按量计费
-CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费模式。取值范围：
-PREPAID：表示预付费，即包年包月
-POSTPAID_BY_HOUR：表示后付费，即按量计费
-CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCPU() 获取实例的CPU核数，单位：核。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCPU(integer $CPU) 设置实例的CPU核数，单位：核。
@@ -77,6 +67,14 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
  * @method string getInstanceType() 获取实例机型。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置实例机型。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAutoscalingGroupId() 获取伸缩组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoscalingGroupId(string $AutoscalingGroupId) 设置伸缩组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceChargeType() 获取实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExistedInstance extends AbstractModel
@@ -130,15 +128,6 @@ class ExistedInstance extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var string 实例计费模式。取值范围：
-PREPAID：表示预付费，即包年包月
-POSTPAID_BY_HOUR：表示后付费，即按量计费
-CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $InstanceChargeType;
-
-    /**
      * @var integer 实例的CPU核数，单位：核。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -163,6 +152,18 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     public $InstanceType;
 
     /**
+     * @var string 伸缩组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoscalingGroupId;
+
+    /**
+     * @var string 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceChargeType;
+
+    /**
      * @param boolean $Usable 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UnusableReason 实例不支持加入的原因。
@@ -179,11 +180,6 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceChargeType 实例计费模式。取值范围：
-PREPAID：表示预付费，即包年包月
-POSTPAID_BY_HOUR：表示后付费，即按量计费
-CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CPU 实例的CPU核数，单位：核。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Memory 实例内存容量，单位：GB。
@@ -191,6 +187,10 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
      * @param string $OsName 操作系统名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 实例机型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AutoscalingGroupId 伸缩组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceChargeType 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -238,10 +238,6 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
             $this->CreatedTime = $param["CreatedTime"];
         }
 
-        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
-            $this->InstanceChargeType = $param["InstanceChargeType"];
-        }
-
         if (array_key_exists("CPU",$param) and $param["CPU"] !== null) {
             $this->CPU = $param["CPU"];
         }
@@ -256,6 +252,14 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("AutoscalingGroupId",$param) and $param["AutoscalingGroupId"] !== null) {
+            $this->AutoscalingGroupId = $param["AutoscalingGroupId"];
+        }
+
+        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
+            $this->InstanceChargeType = $param["InstanceChargeType"];
         }
     }
 }

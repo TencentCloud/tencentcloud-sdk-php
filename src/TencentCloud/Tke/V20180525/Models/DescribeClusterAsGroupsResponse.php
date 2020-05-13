@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取集群关联的伸缩组总数
  * @method void setTotalCount(integer $TotalCount) 设置集群关联的伸缩组总数
- * @method ClusterAsGroup getClusterAsGroupSet() 获取集群关联的伸缩组列表
- * @method void setClusterAsGroupSet(ClusterAsGroup $ClusterAsGroupSet) 设置集群关联的伸缩组列表
+ * @method array getClusterAsGroupSet() 获取集群关联的伸缩组列表
+ * @method void setClusterAsGroupSet(array $ClusterAsGroupSet) 设置集群关联的伸缩组列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class DescribeClusterAsGroupsResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var ClusterAsGroup 集群关联的伸缩组列表
+     * @var array 集群关联的伸缩组列表
      */
     public $ClusterAsGroupSet;
 
@@ -46,7 +46,7 @@ class DescribeClusterAsGroupsResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 集群关联的伸缩组总数
-     * @param ClusterAsGroup $ClusterAsGroupSet 集群关联的伸缩组列表
+     * @param array $ClusterAsGroupSet 集群关联的伸缩组列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -67,8 +67,12 @@ class DescribeClusterAsGroupsResponse extends AbstractModel
         }
 
         if (array_key_exists("ClusterAsGroupSet",$param) and $param["ClusterAsGroupSet"] !== null) {
-            $this->ClusterAsGroupSet = new ClusterAsGroup();
-            $this->ClusterAsGroupSet->deserialize($param["ClusterAsGroupSet"]);
+            $this->ClusterAsGroupSet = [];
+            foreach ($param["ClusterAsGroupSet"] as $key => $value){
+                $obj = new ClusterAsGroup();
+                $obj->deserialize($value);
+                array_push($this->ClusterAsGroupSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

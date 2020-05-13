@@ -21,19 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * CreateRecTask请求参数结构体
  *
  * @method string getEngineModelType() 获取引擎模型类型。
-8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
-8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
-16k_zh：16k 中文普通话通用；
-16k_en：16k 英语；
-16k_ca：16k 粤语；
-16k_zh_video：16k 音视频领域模型。
+电话场景：
+• 8k_zh：电话 8k 中文普通话通用（可用于双声道音频）；
+• 8k_zh_s：电话 8k 中文普通话话者分离（仅适用于单声道音频）；
+非电话场景：
+• 16k_zh：16k 中文普通话通用；
+• 16k_zh_video：16k 音视频领域；
+• 16k_en：16k 英语；
+• 16k_ca：16k 粤语；
  * @method void setEngineModelType(string $EngineModelType) 设置引擎模型类型。
-8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
-8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
-16k_zh：16k 中文普通话通用；
-16k_en：16k 英语；
-16k_ca：16k 粤语；
-16k_zh_video：16k 音视频领域模型。
+电话场景：
+• 8k_zh：电话 8k 中文普通话通用（可用于双声道音频）；
+• 8k_zh_s：电话 8k 中文普通话话者分离（仅适用于单声道音频）；
+非电话场景：
+• 16k_zh：16k 中文普通话通用；
+• 16k_zh_video：16k 音视频领域；
+• 16k_en：16k 英语；
+• 16k_ca：16k 粤语；
  * @method integer getChannelNum() 获取语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
  * @method void setChannelNum(integer $ChannelNum) 设置语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
  * @method integer getResTextFormat() 获取识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
@@ -61,12 +65,14 @@ class CreateRecTaskRequest extends AbstractModel
 {
     /**
      * @var string 引擎模型类型。
-8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
-8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
-16k_zh：16k 中文普通话通用；
-16k_en：16k 英语；
-16k_ca：16k 粤语；
-16k_zh_video：16k 音视频领域模型。
+电话场景：
+• 8k_zh：电话 8k 中文普通话通用（可用于双声道音频）；
+• 8k_zh_s：电话 8k 中文普通话话者分离（仅适用于单声道音频）；
+非电话场景：
+• 16k_zh：16k 中文普通话通用；
+• 16k_zh_video：16k 音视频领域；
+• 16k_en：16k 英语；
+• 16k_ca：16k 粤语；
      */
     public $EngineModelType;
 
@@ -127,12 +133,14 @@ class CreateRecTaskRequest extends AbstractModel
 
     /**
      * @param string $EngineModelType 引擎模型类型。
-8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
-8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
-16k_zh：16k 中文普通话通用；
-16k_en：16k 英语；
-16k_ca：16k 粤语；
-16k_zh_video：16k 音视频领域模型。
+电话场景：
+• 8k_zh：电话 8k 中文普通话通用（可用于双声道音频）；
+• 8k_zh_s：电话 8k 中文普通话话者分离（仅适用于单声道音频）；
+非电话场景：
+• 16k_zh：16k 中文普通话通用；
+• 16k_zh_video：16k 音视频领域；
+• 16k_en：16k 英语；
+• 16k_ca：16k 粤语；
      * @param integer $ChannelNum 语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
      * @param integer $ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。

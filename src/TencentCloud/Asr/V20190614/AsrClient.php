@@ -29,12 +29,12 @@ use TencentCloud\Asr\V20190614\Models as Models;
 <br>•   热词表可以通过数组或者本地文件形式上传。
 <br>•   本地文件必须为UTF-8编码格式，每行仅添加一个热词且不能包含标点和特殊字符。
 <br>•   热词权重取值范围为[1,10]之间的整数，权重越大代表该词被识别出来的概率越大。
- * @method Models\CreateRecTaskResponse CreateRecTask(Models\CreateRecTaskRequest $req) 本接口服务对录音时长1小时以内的录音文件进行识别，异步返回识别全部结果。
-<br>• 接口是 HTTP RESTful 形式
-<br>• 接口支持wav、mp3、silk、amr、m4a等主流音频格式
+ * @method Models\CreateRecTaskResponse CreateRecTask(Models\CreateRecTaskRequest $req) 本接口服务对录音时长1小时以内的录音文件进行识别，异步返回识别全部结果， HTTP RESTful 形式。
+<br>• 支持中文普通话、英语和粤语
+<br>• 支持通用和音视频领域
+<br>• 支持wav、mp3、silk、amr、m4a等主流音频格式
 <br>• 支持语音 URL 和本地语音文件两种请求方式
 <br>• 本地语音文件上传的文件不能大于5MB，语音 URL的音频时长不能长于1小时
-<br>• 支持中文普通话、英语和粤语。
 <br>• 支持回调或轮询的方式获取结果，结果获取请参考[ 录音文件识别结果查询](https://cloud.tencent.com/document/product/1093/37822)。
  * @method Models\DeleteAsrVocabResponse DeleteAsrVocab(Models\DeleteAsrVocabRequest $req) 用户通过本接口进行热词表的删除。
  * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 在调用录音文件识别请求接口后，有回调和轮询两种方式获取识别结果。

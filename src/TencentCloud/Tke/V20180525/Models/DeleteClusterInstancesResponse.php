@@ -20,17 +20,53 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteClusterInstances返回参数结构体
  *
+ * @method array getSuccInstanceIds() 获取删除成功的实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSuccInstanceIds(array $SuccInstanceIds) 设置删除成功的实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFailedInstanceIds() 获取删除失败的实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailedInstanceIds(array $FailedInstanceIds) 设置删除失败的实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNotFoundInstanceIds() 获取未匹配到的实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNotFoundInstanceIds(array $NotFoundInstanceIds) 设置未匹配到的实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DeleteClusterInstancesResponse extends AbstractModel
 {
     /**
+     * @var array 删除成功的实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SuccInstanceIds;
+
+    /**
+     * @var array 删除失败的实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailedInstanceIds;
+
+    /**
+     * @var array 未匹配到的实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NotFoundInstanceIds;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $SuccInstanceIds 删除成功的实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $FailedInstanceIds 删除失败的实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NotFoundInstanceIds 未匹配到的实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +82,18 @@ class DeleteClusterInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SuccInstanceIds",$param) and $param["SuccInstanceIds"] !== null) {
+            $this->SuccInstanceIds = $param["SuccInstanceIds"];
+        }
+
+        if (array_key_exists("FailedInstanceIds",$param) and $param["FailedInstanceIds"] !== null) {
+            $this->FailedInstanceIds = $param["FailedInstanceIds"];
+        }
+
+        if (array_key_exists("NotFoundInstanceIds",$param) and $param["NotFoundInstanceIds"] !== null) {
+            $this->NotFoundInstanceIds = $param["NotFoundInstanceIds"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -56,6 +56,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIgnoreDaemonSetsUtilization(boolean $IgnoreDaemonSetsUtilization) 设置计算资源使用量时是否默认忽略DaemonSet的实例(默认值: False，不忽略)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOkTotalUnreadyCount() 获取CA做健康性判断的个数，默认3，即超过OkTotalUnreadyCount个数后，CA会进行健康性判断。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOkTotalUnreadyCount(integer $OkTotalUnreadyCount) 设置CA做健康性判断的个数，默认3，即超过OkTotalUnreadyCount个数后，CA会进行健康性判断。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxTotalUnreadyPercentage() 获取未就绪节点的最大百分比，此后CA会停止操作
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxTotalUnreadyPercentage(integer $MaxTotalUnreadyPercentage) 设置未就绪节点的最大百分比，此后CA会停止操作
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getScaleDownUnreadyTime() 获取表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScaleDownUnreadyTime(integer $ScaleDownUnreadyTime) 设置表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUnregisteredNodeRemovalTime() 获取CA删除未在Kubernetes中注册的节点之前等待的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnregisteredNodeRemovalTime(integer $UnregisteredNodeRemovalTime) 设置CA删除未在Kubernetes中注册的节点之前等待的时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterAsGroupOption extends AbstractModel
 {
@@ -114,6 +130,30 @@ class ClusterAsGroupOption extends AbstractModel
     public $IgnoreDaemonSetsUtilization;
 
     /**
+     * @var integer CA做健康性判断的个数，默认3，即超过OkTotalUnreadyCount个数后，CA会进行健康性判断。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OkTotalUnreadyCount;
+
+    /**
+     * @var integer 未就绪节点的最大百分比，此后CA会停止操作
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxTotalUnreadyPercentage;
+
+    /**
+     * @var integer 表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScaleDownUnreadyTime;
+
+    /**
+     * @var integer CA删除未在Kubernetes中注册的节点之前等待的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UnregisteredNodeRemovalTime;
+
+    /**
      * @param boolean $IsScaleDownEnabled 是否开启缩容
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Expander 多伸缩组情况下扩容选择算法(random 随机选择，most-pods 最多类型的Pod least-waste 最少的资源浪费，默认为random)
@@ -131,6 +171,14 @@ class ClusterAsGroupOption extends AbstractModel
      * @param boolean $SkipNodesWithSystemPods 含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： FALSE)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IgnoreDaemonSetsUtilization 计算资源使用量时是否默认忽略DaemonSet的实例(默认值: False，不忽略)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OkTotalUnreadyCount CA做健康性判断的个数，默认3，即超过OkTotalUnreadyCount个数后，CA会进行健康性判断。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxTotalUnreadyPercentage 未就绪节点的最大百分比，此后CA会停止操作
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ScaleDownUnreadyTime 表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UnregisteredNodeRemovalTime CA删除未在Kubernetes中注册的节点之前等待的时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +228,22 @@ class ClusterAsGroupOption extends AbstractModel
 
         if (array_key_exists("IgnoreDaemonSetsUtilization",$param) and $param["IgnoreDaemonSetsUtilization"] !== null) {
             $this->IgnoreDaemonSetsUtilization = $param["IgnoreDaemonSetsUtilization"];
+        }
+
+        if (array_key_exists("OkTotalUnreadyCount",$param) and $param["OkTotalUnreadyCount"] !== null) {
+            $this->OkTotalUnreadyCount = $param["OkTotalUnreadyCount"];
+        }
+
+        if (array_key_exists("MaxTotalUnreadyPercentage",$param) and $param["MaxTotalUnreadyPercentage"] !== null) {
+            $this->MaxTotalUnreadyPercentage = $param["MaxTotalUnreadyPercentage"];
+        }
+
+        if (array_key_exists("ScaleDownUnreadyTime",$param) and $param["ScaleDownUnreadyTime"] !== null) {
+            $this->ScaleDownUnreadyTime = $param["ScaleDownUnreadyTime"];
+        }
+
+        if (array_key_exists("UnregisteredNodeRemovalTime",$param) and $param["UnregisteredNodeRemovalTime"] !== null) {
+            $this->UnregisteredNodeRemovalTime = $param["UnregisteredNodeRemovalTime"];
         }
     }
 }

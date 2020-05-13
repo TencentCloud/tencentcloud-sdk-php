@@ -33,10 +33,16 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPgwEndpoint() 获取集群Endpoint地址
  * @method void setPgwEndpoint(string $PgwEndpoint) 设置集群Endpoint地址
  * @method array getSecurityPolicy() 获取集群访问策略组
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityPolicy(array $SecurityPolicy) 设置集群访问策略组
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKubeconfig() 获取集群Kubeconfig文件
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKubeconfig(string $Kubeconfig) 设置集群Kubeconfig文件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getJnsGwEndpoint() 获取集群JnsGw的访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJnsGwEndpoint(string $JnsGwEndpoint) 设置集群JnsGw的访问地址
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -75,6 +81,7 @@ class DescribeClusterSecurityResponse extends AbstractModel
 
     /**
      * @var array 集群访问策略组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityPolicy;
 
@@ -83,6 +90,12 @@ class DescribeClusterSecurityResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Kubeconfig;
+
+    /**
+     * @var string 集群JnsGw的访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JnsGwEndpoint;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -97,7 +110,10 @@ class DescribeClusterSecurityResponse extends AbstractModel
      * @param string $Domain 集群访问的域名
      * @param string $PgwEndpoint 集群Endpoint地址
      * @param array $SecurityPolicy 集群访问策略组
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Kubeconfig 集群Kubeconfig文件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $JnsGwEndpoint 集群JnsGw的访问地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -144,6 +160,10 @@ class DescribeClusterSecurityResponse extends AbstractModel
 
         if (array_key_exists("Kubeconfig",$param) and $param["Kubeconfig"] !== null) {
             $this->Kubeconfig = $param["Kubeconfig"];
+        }
+
+        if (array_key_exists("JnsGwEndpoint",$param) and $param["JnsGwEndpoint"] !== null) {
+            $this->JnsGwEndpoint = $param["JnsGwEndpoint"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

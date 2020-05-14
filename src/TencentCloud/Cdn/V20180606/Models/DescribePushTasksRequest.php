@@ -30,8 +30,8 @@ TaskId 和起始时间必须指定一项
 TaskId 和起始时间必须指定一项
  * @method string getKeyword() 获取查询关键字，请输入域名或 http(s):// 开头完整 URL
  * @method void setKeyword(string $Keyword) 设置查询关键字，请输入域名或 http(s):// 开头完整 URL
- * @method integer getOffset() 获取分页查询偏移量，默认为 0 （第一页）
- * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0 （第一页）
+ * @method integer getOffset() 获取分页查询偏移量，默认为 0
+ * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0
  * @method integer getLimit() 获取分页查询限制数目，默认为 20
  * @method void setLimit(integer $Limit) 设置分页查询限制数目，默认为 20
  * @method string getArea() 获取指定地区查询预热纪录
@@ -75,7 +75,7 @@ TaskId 和起始时间必须指定一项
     public $Keyword;
 
     /**
-     * @var integer 分页查询偏移量，默认为 0 （第一页）
+     * @var integer 分页查询偏移量，默认为 0
      */
     public $Offset;
 
@@ -106,7 +106,7 @@ process：预热中
      * @param string $TaskId 指定任务 ID 查询
 TaskId 和起始时间必须指定一项
      * @param string $Keyword 查询关键字，请输入域名或 http(s):// 开头完整 URL
-     * @param integer $Offset 分页查询偏移量，默认为 0 （第一页）
+     * @param integer $Offset 分页查询偏移量，默认为 0
      * @param integer $Limit 分页查询限制数目，默认为 20
      * @param string $Area 指定地区查询预热纪录
 mainland：境内

@@ -28,8 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwner(Entity $Owner) 设置素材归属。
  * @method string getName() 获取素材名称，不能超过30个字符。
  * @method void setName(string $Name) 设置素材名称，不能超过30个字符。
- * @method array getTags() 获取素材标签，单个标签长度不能超过10个字符，数组长度不能超过10。
- * @method void setTags(array $Tags) 设置素材标签，单个标签长度不能超过10个字符，数组长度不能超过10。
  * @method string getClassPath() 获取素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。
  * @method void setClassPath(string $ClassPath) 设置素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。
  * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验操作权限。
@@ -58,11 +56,6 @@ class ModifyMaterialRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var array 素材标签，单个标签长度不能超过10个字符，数组长度不能超过10。
-     */
-    public $Tags;
-
-    /**
      * @var string 素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。
      */
     public $ClassPath;
@@ -77,7 +70,6 @@ class ModifyMaterialRequest extends AbstractModel
      * @param string $MaterialId 素材 Id。
      * @param Entity $Owner 素材归属。
      * @param string $Name 素材名称，不能超过30个字符。
-     * @param array $Tags 素材标签，单个标签长度不能超过10个字符，数组长度不能超过10。
      * @param string $ClassPath 素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。
      * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
      */
@@ -109,10 +101,6 @@ class ModifyMaterialRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
-        }
-
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = $param["Tags"];
         }
 
         if (array_key_exists("ClassPath",$param) and $param["ClassPath"] !== null) {

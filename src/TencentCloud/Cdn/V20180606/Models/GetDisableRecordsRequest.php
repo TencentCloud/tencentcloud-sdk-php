@@ -32,8 +32,8 @@ enable：当前为可用状态，已解禁，可正常访问
  * @method void setStatus(string $Status) 设置URL 当前状态
 disable：当前仍为禁用状态，访问返回 403
 enable：当前为可用状态，已解禁，可正常访问
- * @method integer getOffset() 获取分页查询偏移量，默认为 0 （第一页）。
- * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0 （第一页）。
+ * @method integer getOffset() 获取分页查询偏移量，默认为 0
+ * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0
  * @method integer getLimit() 获取分页查询限制数目，默认为20。
  * @method void setLimit(integer $Limit) 设置分页查询限制数目，默认为20。
  */
@@ -62,7 +62,7 @@ enable：当前为可用状态，已解禁，可正常访问
     public $Status;
 
     /**
-     * @var integer 分页查询偏移量，默认为 0 （第一页）。
+     * @var integer 分页查询偏移量，默认为 0
      */
     public $Offset;
 
@@ -78,7 +78,7 @@ enable：当前为可用状态，已解禁，可正常访问
      * @param string $Status URL 当前状态
 disable：当前仍为禁用状态，访问返回 403
 enable：当前为可用状态，已解禁，可正常访问
-     * @param integer $Offset 分页查询偏移量，默认为 0 （第一页）。
+     * @param integer $Offset 分页查询偏移量，默认为 0
      * @param integer $Limit 分页查询限制数目，默认为20。
      */
     function __construct()

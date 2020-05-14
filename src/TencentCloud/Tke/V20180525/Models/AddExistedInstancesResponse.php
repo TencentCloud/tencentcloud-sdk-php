@@ -21,11 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * AddExistedInstances返回参数结构体
  *
  * @method array getFailedInstanceIds() 获取失败的节点ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedInstanceIds(array $FailedInstanceIds) 设置失败的节点ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSuccInstanceIds() 获取成功的节点ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuccInstanceIds(array $SuccInstanceIds) 设置成功的节点ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTimeoutInstanceIds() 获取超时未返回出来节点的ID(可能失败，也可能成功)
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeoutInstanceIds(array $TimeoutInstanceIds) 设置超时未返回出来节点的ID(可能失败，也可能成功)
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,16 +39,19 @@ class AddExistedInstancesResponse extends AbstractModel
 {
     /**
      * @var array 失败的节点ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedInstanceIds;
 
     /**
      * @var array 成功的节点ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuccInstanceIds;
 
     /**
      * @var array 超时未返回出来节点的ID(可能失败，也可能成功)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeoutInstanceIds;
 
@@ -53,8 +62,11 @@ class AddExistedInstancesResponse extends AbstractModel
 
     /**
      * @param array $FailedInstanceIds 失败的节点ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SuccInstanceIds 成功的节点ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TimeoutInstanceIds 超时未返回出来节点的ID(可能失败，也可能成功)
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

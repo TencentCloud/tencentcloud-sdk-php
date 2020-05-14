@@ -30,8 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置素材名称，不能超过30个字符。
  * @method string getClassPath() 获取素材分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
  * @method void setClassPath(string $ClassPath) 设置素材分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
- * @method array getTags() 获取素材标签，单个标签长度不能超过10，数组长度不能超过10。
- * @method void setTags(array $Tags) 设置素材标签，单个标签长度不能超过10，数组长度不能超过10。
  * @method integer getPreProcessDefinition() 获取素材预处理任务模板 ID。取值：
 <li>10：进行编辑预处理。</li>
  * @method void setPreProcessDefinition(integer $PreProcessDefinition) 设置素材预处理任务模板 ID。取值：
@@ -67,11 +65,6 @@ class ImportMaterialRequest extends AbstractModel
     public $ClassPath;
 
     /**
-     * @var array 素材标签，单个标签长度不能超过10，数组长度不能超过10。
-     */
-    public $Tags;
-
-    /**
      * @var integer 素材预处理任务模板 ID。取值：
 <li>10：进行编辑预处理。</li>
      */
@@ -88,7 +81,6 @@ class ImportMaterialRequest extends AbstractModel
      * @param Entity $Owner 素材归属者。
      * @param string $Name 素材名称，不能超过30个字符。
      * @param string $ClassPath 素材分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
-     * @param array $Tags 素材标签，单个标签长度不能超过10，数组长度不能超过10。
      * @param integer $PreProcessDefinition 素材预处理任务模板 ID。取值：
 <li>10：进行编辑预处理。</li>
      * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
@@ -125,10 +117,6 @@ class ImportMaterialRequest extends AbstractModel
 
         if (array_key_exists("ClassPath",$param) and $param["ClassPath"] !== null) {
             $this->ClassPath = $param["ClassPath"];
-        }
-
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = $param["Tags"];
         }
 
         if (array_key_exists("PreProcessDefinition",$param) and $param["PreProcessDefinition"] !== null) {

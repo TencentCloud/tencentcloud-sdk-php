@@ -34,8 +34,8 @@ path：目录刷新记录
 查询时任务 ID 与起始时间必须填充一项
  * @method void setTaskId(string $TaskId) 设置根据任务 ID 查询时，填充任务 ID
 查询时任务 ID 与起始时间必须填充一项
- * @method integer getOffset() 获取分页查询偏移量，默认为 0 （第一页）
- * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0 （第一页）
+ * @method integer getOffset() 获取分页查询偏移量，默认为 0
+ * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0
  * @method integer getLimit() 获取分页查询限制数目，默认为 20
  * @method void setLimit(integer $Limit) 设置分页查询限制数目，默认为 20
  * @method string getKeyword() 获取支持域名过滤，或 http(s):// 开头完整 URL 过滤
@@ -83,7 +83,7 @@ path：目录刷新记录
     public $TaskId;
 
     /**
-     * @var integer 分页查询偏移量，默认为 0 （第一页）
+     * @var integer 分页查询偏移量，默认为 0
      */
     public $Offset;
 
@@ -121,7 +121,7 @@ path：目录刷新记录
      * @param string $EndTime 根据时间区间查询时，填充结束时间，如 2018-08-08 23:59:59
      * @param string $TaskId 根据任务 ID 查询时，填充任务 ID
 查询时任务 ID 与起始时间必须填充一项
-     * @param integer $Offset 分页查询偏移量，默认为 0 （第一页）
+     * @param integer $Offset 分页查询偏移量，默认为 0
      * @param integer $Limit 分页查询限制数目，默认为 20
      * @param string $Keyword 支持域名过滤，或 http(s):// 开头完整 URL 过滤
      * @param string $Status 指定任务状态查询

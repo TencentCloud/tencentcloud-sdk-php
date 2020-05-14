@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间，如 2019-09-04 00:00:00
  * @method string getEndTime() 获取结束时间，如 2019-09-04 12:00:00
  * @method void setEndTime(string $EndTime) 设置结束时间，如 2019-09-04 12:00:00
- * @method integer getOffset() 获取分页查询偏移量，默认为 0 （第一页）
- * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0 （第一页）
+ * @method integer getOffset() 获取分页查询偏移量，默认为 0
+ * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0
  * @method integer getLimit() 获取分页查询限制数目，默认为 100，最大为 1000
  * @method void setLimit(integer $Limit) 设置分页查询限制数目，默认为 100，最大为 1000
  * @method string getArea() 获取指定区域下载日志
@@ -40,6 +40,10 @@ mainland：获取境内加速日志包下载链接
 overseas：获取境外加速日志包下载链接
 global：同时获取境内、境外加速日志包下载链接（分开打包）
 不指定时默认为 mainland
+ * @method string getLogType() 获取指定下载日志的类型。
+access：获取访问日志
+ * @method void setLogType(string $LogType) 设置指定下载日志的类型。
+access：获取访问日志
  */
 class DescribeCdnDomainLogsRequest extends AbstractModel
 {
@@ -59,7 +63,7 @@ class DescribeCdnDomainLogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 分页查询偏移量，默认为 0 （第一页）
+     * @var integer 分页查询偏移量，默认为 0
      */
     public $Offset;
 
@@ -78,16 +82,24 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     public $Area;
 
     /**
+     * @var string 指定下载日志的类型。
+access：获取访问日志
+     */
+    public $LogType;
+
+    /**
      * @param string $Domain 指定域名查询
      * @param string $StartTime 开始时间，如 2019-09-04 00:00:00
      * @param string $EndTime 结束时间，如 2019-09-04 12:00:00
-     * @param integer $Offset 分页查询偏移量，默认为 0 （第一页）
+     * @param integer $Offset 分页查询偏移量，默认为 0
      * @param integer $Limit 分页查询限制数目，默认为 100，最大为 1000
      * @param string $Area 指定区域下载日志
 mainland：获取境内加速日志包下载链接
 overseas：获取境外加速日志包下载链接
 global：同时获取境内、境外加速日志包下载链接（分开打包）
 不指定时默认为 mainland
+     * @param string $LogType 指定下载日志的类型。
+access：获取访问日志
      */
     function __construct()
     {
@@ -124,6 +136,10 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
+            $this->LogType = $param["LogType"];
         }
     }
 }

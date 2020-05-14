@@ -14,32 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTrafficPackages请求参数结构体
+ * DescribeLanes请求参数结构体
  *
- * @method integer getOffset() 获取分页查询起始地址，默认 0
- * @method void setOffset(integer $Offset) 设置分页查询起始地址，默认 0
- * @method integer getLimit() 获取分页查询记录个数，默认100，最大1000
- * @method void setLimit(integer $Limit) 设置分页查询记录个数，默认100，最大1000
+ * @method integer getLimit() 获取每页展示的条数
+ * @method void setLimit(integer $Limit) 设置每页展示的条数
+ * @method integer getOffset() 获取翻页偏移量
+ * @method void setOffset(integer $Offset) 设置翻页偏移量
+ * @method string getSearchWord() 获取搜索关键字
+ * @method void setSearchWord(string $SearchWord) 设置搜索关键字
  */
-class DescribeTrafficPackagesRequest extends AbstractModel
+class DescribeLanesRequest extends AbstractModel
 {
     /**
-     * @var integer 分页查询起始地址，默认 0
-     */
-    public $Offset;
-
-    /**
-     * @var integer 分页查询记录个数，默认100，最大1000
+     * @var integer 每页展示的条数
      */
     public $Limit;
 
     /**
-     * @param integer $Offset 分页查询起始地址，默认 0
-     * @param integer $Limit 分页查询记录个数，默认100，最大1000
+     * @var integer 翻页偏移量
+     */
+    public $Offset;
+
+    /**
+     * @var string 搜索关键字
+     */
+    public $SearchWord;
+
+    /**
+     * @param integer $Limit 每页展示的条数
+     * @param integer $Offset 翻页偏移量
+     * @param string $SearchWord 搜索关键字
      */
     function __construct()
     {
@@ -54,12 +62,16 @@ class DescribeTrafficPackagesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
+            $this->SearchWord = $param["SearchWord"];
         }
     }
 }

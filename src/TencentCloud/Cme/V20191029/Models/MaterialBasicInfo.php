@@ -34,10 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置素材文件的最近更新时间（如修改视频属性、发起视频处理等会触发更新媒体文件信息的操作），使用 ISO 日期格式。
  * @method string getClassPath() 获取素材的分类目录路径。
  * @method void setClassPath(string $ClassPath) 设置素材的分类目录路径。
- * @method array getTagSet() 获取素材标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTagSet(array $TagSet) 设置素材标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPreviewUrl() 获取素材媒体文件的预览图。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreviewUrl(string $PreviewUrl) 设置素材媒体文件的预览图。
@@ -81,12 +77,6 @@ class MaterialBasicInfo extends AbstractModel
     public $ClassPath;
 
     /**
-     * @var array 素材标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $TagSet;
-
-    /**
      * @var string 素材媒体文件的预览图。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -100,8 +90,6 @@ class MaterialBasicInfo extends AbstractModel
      * @param string $CreateTime 素材文件的创建时间，使用 ISO 日期格式。
      * @param string $UpdateTime 素材文件的最近更新时间（如修改视频属性、发起视频处理等会触发更新媒体文件信息的操作），使用 ISO 日期格式。
      * @param string $ClassPath 素材的分类目录路径。
-     * @param array $TagSet 素材标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PreviewUrl 素材媒体文件的预览图。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -145,10 +133,6 @@ class MaterialBasicInfo extends AbstractModel
 
         if (array_key_exists("ClassPath",$param) and $param["ClassPath"] !== null) {
             $this->ClassPath = $param["ClassPath"];
-        }
-
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
-            $this->TagSet = $param["TagSet"];
         }
 
         if (array_key_exists("PreviewUrl",$param) and $param["PreviewUrl"] !== null) {

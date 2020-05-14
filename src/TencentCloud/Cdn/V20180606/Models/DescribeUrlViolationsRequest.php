@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUrlViolations请求参数结构体
  *
- * @method integer getOffset() 获取分页查询偏移量，默认为 0 （第一页）
- * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0 （第一页）
+ * @method integer getOffset() 获取分页查询偏移量，默认为 0
+ * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0
  * @method integer getLimit() 获取分页查询限制数目，默认为 100
  * @method void setLimit(integer $Limit) 设置分页查询限制数目，默认为 100
  * @method array getDomains() 获取指定的域名查询
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeUrlViolationsRequest extends AbstractModel
 {
     /**
-     * @var integer 分页查询偏移量，默认为 0 （第一页）
+     * @var integer 分页查询偏移量，默认为 0
      */
     public $Offset;
 
@@ -45,7 +45,7 @@ class DescribeUrlViolationsRequest extends AbstractModel
     public $Domains;
 
     /**
-     * @param integer $Offset 分页查询偏移量，默认为 0 （第一页）
+     * @param integer $Offset 分页查询偏移量，默认为 0
      * @param integer $Limit 分页查询限制数目，默认为 100
      * @param array $Domains 指定的域名查询
      */

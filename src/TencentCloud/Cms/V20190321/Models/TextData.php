@@ -40,12 +40,24 @@ use TencentCloud\Common\AbstractModel;
 24001：暴恐
  * @method TextOutputComm getCommon() 获取消息类公共相关参数
  * @method void setCommon(TextOutputComm $Common) 设置消息类公共相关参数
+ * @method array getCustomResult() 获取返回的自定义词库结果
+ * @method void setCustomResult(array $CustomResult) 设置返回的自定义词库结果
+ * @method array getDetailResult() 获取返回的详细结果
+ * @method void setDetailResult(array $DetailResult) 设置返回的详细结果
  * @method TextOutputID getID() 获取消息类ID信息
  * @method void setID(TextOutputID $ID) 设置消息类ID信息
  * @method TextOutputRes getRes() 获取消息类输出结果
  * @method void setRes(TextOutputRes $Res) 设置消息类输出结果
+ * @method integer getBizType() 获取最终使用的BizType
+ * @method void setBizType(integer $BizType) 设置最终使用的BizType
+ * @method string getEvilLabel() 获取恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+ * @method void setEvilLabel(string $EvilLabel) 设置恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
  * @method array getKeywords() 获取命中的关键词
  * @method void setKeywords(array $Keywords) 设置命中的关键词
+ * @method integer getScore() 获取命中的模型分值
+ * @method void setScore(integer $Score) 设置命中的模型分值
+ * @method string getSuggestion() 获取建议值,Block：打击,Review：待复审,Normal：正常
+ * @method void setSuggestion(string $Suggestion) 设置建议值,Block：打击,Review：待复审,Normal：正常
  */
 class TextData extends AbstractModel
 {
@@ -72,6 +84,16 @@ class TextData extends AbstractModel
     public $Common;
 
     /**
+     * @var array 返回的自定义词库结果
+     */
+    public $CustomResult;
+
+    /**
+     * @var array 返回的详细结果
+     */
+    public $DetailResult;
+
+    /**
      * @var TextOutputID 消息类ID信息
      */
     public $ID;
@@ -82,9 +104,29 @@ class TextData extends AbstractModel
     public $Res;
 
     /**
+     * @var integer 最终使用的BizType
+     */
+    public $BizType;
+
+    /**
+     * @var string 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     */
+    public $EvilLabel;
+
+    /**
      * @var array 命中的关键词
      */
     public $Keywords;
+
+    /**
+     * @var integer 命中的模型分值
+     */
+    public $Score;
+
+    /**
+     * @var string 建议值,Block：打击,Review：待复审,Normal：正常
+     */
+    public $Suggestion;
 
     /**
      * @param integer $EvilFlag 是否恶意 0：正常 1：可疑
@@ -97,9 +139,15 @@ class TextData extends AbstractModel
 20105：广告引流 
 24001：暴恐
      * @param TextOutputComm $Common 消息类公共相关参数
+     * @param array $CustomResult 返回的自定义词库结果
+     * @param array $DetailResult 返回的详细结果
      * @param TextOutputID $ID 消息类ID信息
      * @param TextOutputRes $Res 消息类输出结果
+     * @param integer $BizType 最终使用的BizType
+     * @param string $EvilLabel 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
      * @param array $Keywords 命中的关键词
+     * @param integer $Score 命中的模型分值
+     * @param string $Suggestion 建议值,Block：打击,Review：待复审,Normal：正常
      */
     function __construct()
     {
@@ -127,6 +175,24 @@ class TextData extends AbstractModel
             $this->Common->deserialize($param["Common"]);
         }
 
+        if (array_key_exists("CustomResult",$param) and $param["CustomResult"] !== null) {
+            $this->CustomResult = [];
+            foreach ($param["CustomResult"] as $key => $value){
+                $obj = new CustomResult();
+                $obj->deserialize($value);
+                array_push($this->CustomResult, $obj);
+            }
+        }
+
+        if (array_key_exists("DetailResult",$param) and $param["DetailResult"] !== null) {
+            $this->DetailResult = [];
+            foreach ($param["DetailResult"] as $key => $value){
+                $obj = new DetailResult();
+                $obj->deserialize($value);
+                array_push($this->DetailResult, $obj);
+            }
+        }
+
         if (array_key_exists("ID",$param) and $param["ID"] !== null) {
             $this->ID = new TextOutputID();
             $this->ID->deserialize($param["ID"]);
@@ -137,8 +203,24 @@ class TextData extends AbstractModel
             $this->Res->deserialize($param["Res"]);
         }
 
+        if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {
+            $this->BizType = $param["BizType"];
+        }
+
+        if (array_key_exists("EvilLabel",$param) and $param["EvilLabel"] !== null) {
+            $this->EvilLabel = $param["EvilLabel"];
+        }
+
         if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
             $this->Keywords = $param["Keywords"];
+        }
+
+        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
+            $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
+            $this->Suggestion = $param["Suggestion"];
         }
     }
 }

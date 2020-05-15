@@ -32,16 +32,14 @@ use TencentCloud\Common\AbstractModel;
 <li>AUDIO：音频；</li>
 <li>VIDEO：视频 ；</li>
 <li>IMAGE：图片。</li>
- * @method string getText() 获取搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。
- * @method void setText(string $Text) 设置搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。
+ * @method string getText() 获取搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
+ * @method void setText(string $Text) 设置搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
  * @method string getResolution() 获取按画质检索，取值为：LD/SD/HD/FHD/2K/4K。
  * @method void setResolution(string $Resolution) 设置按画质检索，取值为：LD/SD/HD/FHD/2K/4K。
  * @method IntegerRange getDurationRange() 获取按素材时长检索，单位s。
  * @method void setDurationRange(IntegerRange $DurationRange) 设置按素材时长检索，单位s。
  * @method TimeRange getCreateTimeRange() 获取按照素材创建时间检索。
  * @method void setCreateTimeRange(TimeRange $CreateTimeRange) 设置按照素材创建时间检索。
- * @method array getTags() 获取标签集合，匹配集合中任意元素。单个标签长度限制：10 个字符。数组长度限制：10。
- * @method void setTags(array $Tags) 设置标签集合，匹配集合中任意元素。单个标签长度限制：10 个字符。数组长度限制：10。
  * @method SortBy getSort() 获取排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。
  * @method void setSort(SortBy $Sort) 设置排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。
  * @method integer getOffset() 获取偏移量。默认值：0。
@@ -72,7 +70,7 @@ class SearchMaterialRequest extends AbstractModel
     public $MaterialTypes;
 
     /**
-     * @var string 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。
+     * @var string 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
      */
     public $Text;
 
@@ -90,11 +88,6 @@ class SearchMaterialRequest extends AbstractModel
      * @var TimeRange 按照素材创建时间检索。
      */
     public $CreateTimeRange;
-
-    /**
-     * @var array 标签集合，匹配集合中任意元素。单个标签长度限制：10 个字符。数组长度限制：10。
-     */
-    public $Tags;
 
     /**
      * @var SortBy 排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。
@@ -123,11 +116,10 @@ class SearchMaterialRequest extends AbstractModel
 <li>AUDIO：音频；</li>
 <li>VIDEO：视频 ；</li>
 <li>IMAGE：图片。</li>
-     * @param string $Text 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。
+     * @param string $Text 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
      * @param string $Resolution 按画质检索，取值为：LD/SD/HD/FHD/2K/4K。
      * @param IntegerRange $DurationRange 按素材时长检索，单位s。
      * @param TimeRange $CreateTimeRange 按照素材创建时间检索。
-     * @param array $Tags 标签集合，匹配集合中任意元素。单个标签长度限制：10 个字符。数组长度限制：10。
      * @param SortBy $Sort 排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。
      * @param integer $Offset 偏移量。默认值：0。
      * @param integer $Limit 返回记录条数，默认值：50。
@@ -179,10 +171,6 @@ class SearchMaterialRequest extends AbstractModel
         if (array_key_exists("CreateTimeRange",$param) and $param["CreateTimeRange"] !== null) {
             $this->CreateTimeRange = new TimeRange();
             $this->CreateTimeRange->deserialize($param["CreateTimeRange"]);
-        }
-
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = $param["Tags"];
         }
 
         if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {

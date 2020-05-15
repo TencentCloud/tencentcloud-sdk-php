@@ -26,8 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeutral(float $Neutral) 设置中性情感概率，当输入参数Mode取值为3class时有效，否则值为空
  * @method float getPositive() 获取正面情感概率
  * @method void setPositive(float $Positive) 设置正面情感概率
- * @method string getSentiment() 获取情感属性
- * @method void setSentiment(string $Sentiment) 设置情感属性
+ * @method string getSentiment() 获取情感分类结果：
+1、positive，表示正面情感
+2、negative，表示负面情感
+3、neutral，表示中性、无情感
+ * @method void setSentiment(string $Sentiment) 设置情感分类结果：
+1、positive，表示正面情感
+2、negative，表示负面情感
+3、neutral，表示中性、无情感
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,7 +55,10 @@ class SentimentAnalysisResponse extends AbstractModel
     public $Positive;
 
     /**
-     * @var string 情感属性
+     * @var string 情感分类结果：
+1、positive，表示正面情感
+2、negative，表示负面情感
+3、neutral，表示中性、无情感
      */
     public $Sentiment;
 
@@ -62,7 +71,10 @@ class SentimentAnalysisResponse extends AbstractModel
      * @param float $Negative 负面情感概率
      * @param float $Neutral 中性情感概率，当输入参数Mode取值为3class时有效，否则值为空
      * @param float $Positive 正面情感概率
-     * @param string $Sentiment 情感属性
+     * @param string $Sentiment 情感分类结果：
+1、positive，表示正面情感
+2、negative，表示负面情感
+3、neutral，表示中性、无情感
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

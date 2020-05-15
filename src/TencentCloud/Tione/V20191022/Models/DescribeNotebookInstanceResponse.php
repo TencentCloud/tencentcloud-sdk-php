@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdditionalCodeRepositories(array $AdditionalCodeRepositories) 设置其他存储库列表
 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClsAccess() 获取是否开启CLS日志服务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClsAccess(string $ClsAccess) 设置是否开启CLS日志服务
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -189,6 +193,12 @@ class DescribeNotebookInstanceResponse extends AbstractModel
     public $AdditionalCodeRepositories;
 
     /**
+     * @var string 是否开启CLS日志服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClsAccess;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -226,6 +236,8 @@ class DescribeNotebookInstanceResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AdditionalCodeRepositories 其他存储库列表
 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClsAccess 是否开启CLS日志服务
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -304,6 +316,10 @@ class DescribeNotebookInstanceResponse extends AbstractModel
 
         if (array_key_exists("AdditionalCodeRepositories",$param) and $param["AdditionalCodeRepositories"] !== null) {
             $this->AdditionalCodeRepositories = $param["AdditionalCodeRepositories"];
+        }
+
+        if (array_key_exists("ClsAccess",$param) and $param["ClsAccess"] !== null) {
+            $this->ClsAccess = $param["ClsAccess"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

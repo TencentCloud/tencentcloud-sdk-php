@@ -31,9 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getWarn() 获取告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警
+-9106       证件遮挡告警
  * @method void setWarn(array $Warn) 设置告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警
+-9106       证件遮挡告警
  * @method string getImage() 获取证件图片
  * @method void setImage(string $Image) 设置证件图片
  * @method string getAdvancedInfo() 获取扩展字段:
@@ -54,6 +56,20 @@ use TencentCloud\Common\AbstractModel;
         Confidence:0.9996
     }
 }
+ * @method string getType() 获取证件类型
+MyKad  身份证
+MyPR    永居证
+MyTentera   军官证
+MyKAS    临时身份证
+POLIS  警察
+IKAD   劳工证
+ * @method void setType(string $Type) 设置证件类型
+MyKad  身份证
+MyPR    永居证
+MyTentera   军官证
+MyKAS    临时身份证
+POLIS  警察
+IKAD   劳工证
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -83,6 +99,7 @@ class MLIDCardOCRResponse extends AbstractModel
      * @var array 告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警
+-9106       证件遮挡告警
      */
     public $Warn;
 
@@ -105,6 +122,17 @@ class MLIDCardOCRResponse extends AbstractModel
     public $AdvancedInfo;
 
     /**
+     * @var string 证件类型
+MyKad  身份证
+MyPR    永居证
+MyTentera   军官证
+MyKAS    临时身份证
+POLIS  警察
+IKAD   劳工证
+     */
+    public $Type;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -117,6 +145,7 @@ class MLIDCardOCRResponse extends AbstractModel
      * @param array $Warn 告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警
+-9106       证件遮挡告警
      * @param string $Image 证件图片
      * @param string $AdvancedInfo 扩展字段:
 {
@@ -127,6 +156,13 @@ class MLIDCardOCRResponse extends AbstractModel
         Confidence:0.9996
     }
 }
+     * @param string $Type 证件类型
+MyKad  身份证
+MyPR    永居证
+MyTentera   军官证
+MyKAS    临时身份证
+POLIS  警察
+IKAD   劳工证
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -168,6 +204,10 @@ class MLIDCardOCRResponse extends AbstractModel
 
         if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
             $this->AdvancedInfo = $param["AdvancedInfo"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

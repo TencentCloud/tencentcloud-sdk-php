@@ -43,7 +43,15 @@ use TencentCloud\Common\AbstractModel;
     "Location": null, // 地理位置信息
     "Extra": "",          // DetectAuth结果传进来的Extra信息
     "Detail": {           // 活体一比一信息详情
-      "LivenessData": []
+      "LivenessData": [
+            {
+              ErrCode: null, // 活体比对验证错误码
+              ErrMsg: null, // 活体比对验证错误描述
+              ReqTime: null, // 活体验证时间戳
+              IdCard: null, // 验证身份证号
+              Name: null // 验证姓名
+            }
+      ]
     }
   },
   // 身份证正反面照片Base64
@@ -83,7 +91,15 @@ use TencentCloud\Common\AbstractModel;
     "Location": null, // 地理位置信息
     "Extra": "",          // DetectAuth结果传进来的Extra信息
     "Detail": {           // 活体一比一信息详情
-      "LivenessData": []
+      "LivenessData": [
+            {
+              ErrCode: null, // 活体比对验证错误码
+              ErrMsg: null, // 活体比对验证错误描述
+              ReqTime: null, // 活体验证时间戳
+              IdCard: null, // 验证身份证号
+              Name: null // 验证姓名
+            }
+      ]
     }
   },
   // 身份证正反面照片Base64
@@ -129,7 +145,15 @@ class GetDetectInfoResponse extends AbstractModel
     "Location": null, // 地理位置信息
     "Extra": "",          // DetectAuth结果传进来的Extra信息
     "Detail": {           // 活体一比一信息详情
-      "LivenessData": []
+      "LivenessData": [
+            {
+              ErrCode: null, // 活体比对验证错误码
+              ErrMsg: null, // 活体比对验证错误描述
+              ReqTime: null, // 活体验证时间戳
+              IdCard: null, // 验证身份证号
+              Name: null // 验证姓名
+            }
+      ]
     }
   },
   // 身份证正反面照片Base64
@@ -178,7 +202,15 @@ class GetDetectInfoResponse extends AbstractModel
     "Location": null, // 地理位置信息
     "Extra": "",          // DetectAuth结果传进来的Extra信息
     "Detail": {           // 活体一比一信息详情
-      "LivenessData": []
+      "LivenessData": [
+            {
+              ErrCode: null, // 活体比对验证错误码
+              ErrMsg: null, // 活体比对验证错误描述
+              ReqTime: null, // 活体验证时间戳
+              IdCard: null, // 验证身份证号
+              Name: null // 验证姓名
+            }
+      ]
     }
   },
   // 身份证正反面照片Base64

@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskName(string $TaskName) 设置任务名称
  * @method string getServiceSupplier() 获取服务提供商名称
  * @method void setServiceSupplier(string $ServiceSupplier) 设置服务提供商名称
- * @method SrcInfo getSrcInfo() 获取迁移任务源信息
- * @method void setSrcInfo(SrcInfo $SrcInfo) 设置迁移任务源信息
- * @method DstInfo getDstInfo() 获取迁移任务目的信息
- * @method void setDstInfo(DstInfo $DstInfo) 设置迁移任务目的信息
  * @method string getCreateTime() 获取迁移任务创建时间
  * @method void setCreateTime(string $CreateTime) 设置迁移任务创建时间
  * @method string getUpdateTime() 获取迁移任务更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置迁移任务更新时间
  * @method string getMigrateClass() 获取迁移类别，如数据库迁移中mysql:mysql代表从mysql迁移到mysql，文件迁移中oss:cos代表从阿里云oss迁移到腾讯云cos
  * @method void setMigrateClass(string $MigrateClass) 设置迁移类别，如数据库迁移中mysql:mysql代表从mysql迁移到mysql，文件迁移中oss:cos代表从阿里云oss迁移到腾讯云cos
+ * @method SrcInfo getSrcInfo() 获取迁移任务源信息
+ * @method void setSrcInfo(SrcInfo $SrcInfo) 设置迁移任务源信息
+ * @method DstInfo getDstInfo() 获取迁移任务目的信息
+ * @method void setDstInfo(DstInfo $DstInfo) 设置迁移任务目的信息
  * @method string getSrcAccessType() 获取源实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
  * @method void setSrcAccessType(string $SrcAccessType) 设置源实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
  * @method string getSrcDatabaseType() 获取源实例数据库类型，数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
@@ -63,16 +63,6 @@ class RegisterMigrationTaskRequest extends AbstractModel
     public $ServiceSupplier;
 
     /**
-     * @var SrcInfo 迁移任务源信息
-     */
-    public $SrcInfo;
-
-    /**
-     * @var DstInfo 迁移任务目的信息
-     */
-    public $DstInfo;
-
-    /**
      * @var string 迁移任务创建时间
      */
     public $CreateTime;
@@ -86,6 +76,16 @@ class RegisterMigrationTaskRequest extends AbstractModel
      * @var string 迁移类别，如数据库迁移中mysql:mysql代表从mysql迁移到mysql，文件迁移中oss:cos代表从阿里云oss迁移到腾讯云cos
      */
     public $MigrateClass;
+
+    /**
+     * @var SrcInfo 迁移任务源信息
+     */
+    public $SrcInfo;
+
+    /**
+     * @var DstInfo 迁移任务目的信息
+     */
+    public $DstInfo;
 
     /**
      * @var string 源实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
@@ -111,11 +111,11 @@ class RegisterMigrationTaskRequest extends AbstractModel
      * @param string $TaskType 任务类型，取值database（数据库迁移）、file（文件迁移）、host（主机迁移）
      * @param string $TaskName 任务名称
      * @param string $ServiceSupplier 服务提供商名称
-     * @param SrcInfo $SrcInfo 迁移任务源信息
-     * @param DstInfo $DstInfo 迁移任务目的信息
      * @param string $CreateTime 迁移任务创建时间
      * @param string $UpdateTime 迁移任务更新时间
      * @param string $MigrateClass 迁移类别，如数据库迁移中mysql:mysql代表从mysql迁移到mysql，文件迁移中oss:cos代表从阿里云oss迁移到腾讯云cos
+     * @param SrcInfo $SrcInfo 迁移任务源信息
+     * @param DstInfo $DstInfo 迁移任务目的信息
      * @param string $SrcAccessType 源实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
      * @param string $SrcDatabaseType 源实例数据库类型，数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
      * @param string $DstAccessType 目标实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
@@ -146,16 +146,6 @@ class RegisterMigrationTaskRequest extends AbstractModel
             $this->ServiceSupplier = $param["ServiceSupplier"];
         }
 
-        if (array_key_exists("SrcInfo",$param) and $param["SrcInfo"] !== null) {
-            $this->SrcInfo = new SrcInfo();
-            $this->SrcInfo->deserialize($param["SrcInfo"]);
-        }
-
-        if (array_key_exists("DstInfo",$param) and $param["DstInfo"] !== null) {
-            $this->DstInfo = new DstInfo();
-            $this->DstInfo->deserialize($param["DstInfo"]);
-        }
-
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
         }
@@ -166,6 +156,16 @@ class RegisterMigrationTaskRequest extends AbstractModel
 
         if (array_key_exists("MigrateClass",$param) and $param["MigrateClass"] !== null) {
             $this->MigrateClass = $param["MigrateClass"];
+        }
+
+        if (array_key_exists("SrcInfo",$param) and $param["SrcInfo"] !== null) {
+            $this->SrcInfo = new SrcInfo();
+            $this->SrcInfo->deserialize($param["SrcInfo"]);
+        }
+
+        if (array_key_exists("DstInfo",$param) and $param["DstInfo"] !== null) {
+            $this->DstInfo = new DstInfo();
+            $this->DstInfo->deserialize($param["DstInfo"]);
         }
 
         if (array_key_exists("SrcAccessType",$param) and $param["SrcAccessType"] !== null) {

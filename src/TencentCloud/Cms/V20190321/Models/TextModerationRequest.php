@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getContent() 获取文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
  * @method void setContent(string $Content) 设置文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
+ * @method integer getBizType() 获取该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
+ * @method void setBizType(integer $BizType) 设置该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
+ * @method string getDataId() 获取数据ID，英文字母、下划线、-组成，不超过64个字符
+ * @method void setDataId(string $DataId) 设置数据ID，英文字母、下划线、-组成，不超过64个字符
+ * @method integer getSdkAppId() 获取业务应用ID
+ * @method void setSdkAppId(integer $SdkAppId) 设置业务应用ID
  */
 class TextModerationRequest extends AbstractModel
 {
@@ -31,7 +37,25 @@ class TextModerationRequest extends AbstractModel
     public $Content;
 
     /**
+     * @var integer 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
+     */
+    public $BizType;
+
+    /**
+     * @var string 数据ID，英文字母、下划线、-组成，不超过64个字符
+     */
+    public $DataId;
+
+    /**
+     * @var integer 业务应用ID
+     */
+    public $SdkAppId;
+
+    /**
      * @param string $Content 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
+     * @param integer $BizType 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
+     * @param string $DataId 数据ID，英文字母、下划线、-组成，不超过64个字符
+     * @param integer $SdkAppId 业务应用ID
      */
     function __construct()
     {
@@ -48,6 +72,18 @@ class TextModerationRequest extends AbstractModel
         }
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {
+            $this->BizType = $param["BizType"];
+        }
+
+        if (array_key_exists("DataId",$param) and $param["DataId"] !== null) {
+            $this->DataId = $param["DataId"];
+        }
+
+        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
+            $this->SdkAppId = $param["SdkAppId"];
         }
     }
 }

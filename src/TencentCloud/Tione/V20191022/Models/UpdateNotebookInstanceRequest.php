@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
 该值为true时，AdditionalCodeRepositories将被忽略
  * @method void setDisassociateAdditionalCodeRepositories(boolean $DisassociateAdditionalCodeRepositories) 设置是否取消关联其他存储库，默认false
 该值为true时，AdditionalCodeRepositories将被忽略
+ * @method string getClsAccess() 获取是否开启CLS日志服务，可取值Enabled/Disabled
+ * @method void setClsAccess(string $ClsAccess) 设置是否开启CLS日志服务，可取值Enabled/Disabled
  */
 class UpdateNotebookInstanceRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class UpdateNotebookInstanceRequest extends AbstractModel
     public $DisassociateAdditionalCodeRepositories;
 
     /**
+     * @var string 是否开启CLS日志服务，可取值Enabled/Disabled
+     */
+    public $ClsAccess;
+
+    /**
      * @param string $NotebookInstanceName Notebook实例名称
      * @param string $RoleArn 角色的资源描述
      * @param string $RootAccess Root访问权限
@@ -140,6 +147,7 @@ class UpdateNotebookInstanceRequest extends AbstractModel
 该值为true时，DefaultCodeRepository将被忽略
      * @param boolean $DisassociateAdditionalCodeRepositories 是否取消关联其他存储库，默认false
 该值为true时，AdditionalCodeRepositories将被忽略
+     * @param string $ClsAccess 是否开启CLS日志服务，可取值Enabled/Disabled
      */
     function __construct()
     {
@@ -196,6 +204,10 @@ class UpdateNotebookInstanceRequest extends AbstractModel
 
         if (array_key_exists("DisassociateAdditionalCodeRepositories",$param) and $param["DisassociateAdditionalCodeRepositories"] !== null) {
             $this->DisassociateAdditionalCodeRepositories = $param["DisassociateAdditionalCodeRepositories"];
+        }
+
+        if (array_key_exists("ClsAccess",$param) and $param["ClsAccess"] !== null) {
+            $this->ClsAccess = $param["ClsAccess"];
         }
     }
 }

@@ -22,13 +22,13 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTaskInstanceIndex() 获取任务实例
  * @method void setTaskInstanceIndex(integer $TaskInstanceIndex) 设置任务实例
- * @method string getStdoutLog() 获取标准输出日志（Base64编码）
+ * @method string getStdoutLog() 获取标准输出日志（Base64编码，解码后最大日志长度2048字节）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStdoutLog(string $StdoutLog) 设置标准输出日志（Base64编码）
+ * @method void setStdoutLog(string $StdoutLog) 设置标准输出日志（Base64编码，解码后最大日志长度2048字节）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStderrLog() 获取标准错误日志（Base64编码）
+ * @method string getStderrLog() 获取标准错误日志（Base64编码，解码后最大日志长度2048字节）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStderrLog(string $StderrLog) 设置标准错误日志（Base64编码）
+ * @method void setStderrLog(string $StderrLog) 设置标准错误日志（Base64编码，解码后最大日志长度2048字节）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStdoutRedirectPath() 获取标准输出重定向路径
 注意：此字段可能返回 null，表示取不到有效值。
@@ -55,13 +55,13 @@ class TaskInstanceLog extends AbstractModel
     public $TaskInstanceIndex;
 
     /**
-     * @var string 标准输出日志（Base64编码）
+     * @var string 标准输出日志（Base64编码，解码后最大日志长度2048字节）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StdoutLog;
 
     /**
-     * @var string 标准错误日志（Base64编码）
+     * @var string 标准错误日志（Base64编码，解码后最大日志长度2048字节）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StderrLog;
@@ -92,9 +92,9 @@ class TaskInstanceLog extends AbstractModel
 
     /**
      * @param integer $TaskInstanceIndex 任务实例
-     * @param string $StdoutLog 标准输出日志（Base64编码）
+     * @param string $StdoutLog 标准输出日志（Base64编码，解码后最大日志长度2048字节）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StderrLog 标准错误日志（Base64编码）
+     * @param string $StderrLog 标准错误日志（Base64编码，解码后最大日志长度2048字节）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StdoutRedirectPath 标准输出重定向路径
 注意：此字段可能返回 null，表示取不到有效值。

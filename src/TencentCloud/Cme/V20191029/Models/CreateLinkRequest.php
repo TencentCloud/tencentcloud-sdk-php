@@ -42,8 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDestinationOwner(Entity $DestinationOwner) 设置目标资源归属者。
  * @method string getClassPath() 获取链接的分类路径，如填"/a/b"则代表链接属于该分类路径，不填则默认为根路径。
  * @method void setClassPath(string $ClassPath) 设置链接的分类路径，如填"/a/b"则代表链接属于该分类路径，不填则默认为根路径。
- * @method array getTags() 获取链接标签，单个标签长度不能超过10，数组长度不能超过10。
- * @method void setTags(array $Tags) 设置链接标签，单个标签长度不能超过10，数组长度不能超过10。
  * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验操作权限。
  * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验操作权限。
  */
@@ -89,11 +87,6 @@ class CreateLinkRequest extends AbstractModel
     public $ClassPath;
 
     /**
-     * @var array 链接标签，单个标签长度不能超过10，数组长度不能超过10。
-     */
-    public $Tags;
-
-    /**
      * @var string 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
      */
     public $Operator;
@@ -110,7 +103,6 @@ class CreateLinkRequest extends AbstractModel
 <li>当 Type 为 CLASS 时填写分类路径。</li>
      * @param Entity $DestinationOwner 目标资源归属者。
      * @param string $ClassPath 链接的分类路径，如填"/a/b"则代表链接属于该分类路径，不填则默认为根路径。
-     * @param array $Tags 链接标签，单个标签长度不能超过10，数组长度不能超过10。
      * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
      */
     function __construct()
@@ -154,10 +146,6 @@ class CreateLinkRequest extends AbstractModel
 
         if (array_key_exists("ClassPath",$param) and $param["ClassPath"] !== null) {
             $this->ClassPath = $param["ClassPath"];
-        }
-
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = $param["Tags"];
         }
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {

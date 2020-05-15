@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
  * @method void setAdditionalCodeRepositories(array $AdditionalCodeRepositories) 设置其他存储库列表
 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+ * @method string getClsAccess() 获取是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+ * @method void setClsAccess(string $ClsAccess) 设置是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
  */
 class CreateNotebookInstanceRequest extends AbstractModel
 {
@@ -93,6 +95,11 @@ class CreateNotebookInstanceRequest extends AbstractModel
     public $AdditionalCodeRepositories;
 
     /**
+     * @var string 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+     */
+    public $ClsAccess;
+
+    /**
      * @param string $NotebookInstanceName Notebook实例名称
      * @param string $InstanceType Notebook算力类型
      * @param integer $VolumeSizeInGB 数据卷大小(GB)
@@ -104,6 +111,7 @@ class CreateNotebookInstanceRequest extends AbstractModel
 可以是已创建的存储库名称或者已https://开头的公共git库
      * @param array $AdditionalCodeRepositories 其他存储库列表
 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+     * @param string $ClsAccess 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
      */
     function __construct()
     {
@@ -152,6 +160,10 @@ class CreateNotebookInstanceRequest extends AbstractModel
 
         if (array_key_exists("AdditionalCodeRepositories",$param) and $param["AdditionalCodeRepositories"] !== null) {
             $this->AdditionalCodeRepositories = $param["AdditionalCodeRepositories"];
+        }
+
+        if (array_key_exists("ClsAccess",$param) and $param["ClsAccess"] !== null) {
+            $this->ClsAccess = $param["ClsAccess"];
         }
     }
 }

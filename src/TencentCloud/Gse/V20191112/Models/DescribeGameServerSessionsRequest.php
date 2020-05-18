@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置单次查询记录数上限
  * @method string getNextToken() 获取页偏移，用于查询下一页
  * @method void setNextToken(string $NextToken) 设置页偏移，用于查询下一页
- * @method string getStatusFilter() 获取游戏服务器会话状态
- * @method void setStatusFilter(string $StatusFilter) 设置游戏服务器会话状态
+ * @method string getStatusFilter() 获取游戏服务器会话状态(ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR)
+ * @method void setStatusFilter(string $StatusFilter) 设置游戏服务器会话状态(ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR)
  */
 class DescribeGameServerSessionsRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeGameServerSessionsRequest extends AbstractModel
     public $NextToken;
 
     /**
-     * @var string 游戏服务器会话状态
+     * @var string 游戏服务器会话状态(ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR)
      */
     public $StatusFilter;
 
@@ -71,7 +71,7 @@ class DescribeGameServerSessionsRequest extends AbstractModel
      * @param string $GameServerSessionId 游戏服务器会话ID
      * @param integer $Limit 单次查询记录数上限
      * @param string $NextToken 页偏移，用于查询下一页
-     * @param string $StatusFilter 游戏服务器会话状态
+     * @param string $StatusFilter 游戏服务器会话状态(ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR)
      */
     function __construct()
     {

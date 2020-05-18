@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHttp2(boolean $Http2) 设置是否开启Http2，注意，只有HTTPS域名才能开启Http2。
  * @method boolean getDefaultServer() 获取是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
  * @method void setDefaultServer(boolean $DefaultServer) 设置是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
+ * @method string getNewDefaultServerDomain() 获取监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名。
+ * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) 设置监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名。
  */
 class ModifyDomainAttributesRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $DefaultServer;
 
     /**
+     * @var string 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名。
+     */
+    public $NewDefaultServerDomain;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param string $ListenerId 负载均衡监听器 ID
      * @param string $Domain 域名（必须是已经创建的转发规则下的域名）
@@ -80,6 +87,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
      * @param CertificateInput $Certificate 域名相关的证书信息，注意，仅对启用SNI的监听器适用。
      * @param boolean $Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      * @param boolean $DefaultServer 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
+     * @param string $NewDefaultServerDomain 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名。
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class ModifyDomainAttributesRequest extends AbstractModel
 
         if (array_key_exists("DefaultServer",$param) and $param["DefaultServer"] !== null) {
             $this->DefaultServer = $param["DefaultServer"];
+        }
+
+        if (array_key_exists("NewDefaultServerDomain",$param) and $param["NewDefaultServerDomain"] !== null) {
+            $this->NewDefaultServerDomain = $param["NewDefaultServerDomain"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
  * @method string getUrl() 获取要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
  * @method void setUrl(string $Url) 设置要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
+ * @method string getNewDefaultServerDomain() 获取监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
+ * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) 设置监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
  */
 class DeleteRuleRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DeleteRuleRequest extends AbstractModel
     public $Url;
 
     /**
+     * @var string 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
+     */
+    public $NewDefaultServerDomain;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param string $ListenerId 负载均衡监听器 ID
      * @param array $LocationIds 要删除的转发规则的ID组成的数组
      * @param string $Domain 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
      * @param string $Url 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
+     * @param string $NewDefaultServerDomain 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DeleteRuleRequest extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("NewDefaultServerDomain",$param) and $param["NewDefaultServerDomain"] !== null) {
+            $this->NewDefaultServerDomain = $param["NewDefaultServerDomain"];
         }
     }
 }

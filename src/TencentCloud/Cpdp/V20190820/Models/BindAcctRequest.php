@@ -26,9 +26,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubAppId(string $SubAppId) 设置聚鑫计费SubAppId，代表子商户
  * @method integer getBindType() 获取1 – 小额转账验证
 2 – 短信验证
+3 - 一分钱转账验证，无需再调CheckAcct验证绑卡
+4 - 银行四要素验证，无需再调CheckAcct验证绑卡
 每个结算账户每天只能使用一次小额转账验证
  * @method void setBindType(integer $BindType) 设置1 – 小额转账验证
 2 – 短信验证
+3 - 一分钱转账验证，无需再调CheckAcct验证绑卡
+4 - 银行四要素验证，无需再调CheckAcct验证绑卡
 每个结算账户每天只能使用一次小额转账验证
  * @method string getSettleAcctNo() 获取用于提现
 <敏感信息>加密详见《商户端接口敏感信息加密说明》
@@ -68,6 +72,14 @@ BindType==2时必填
 二选一
  * @method void setEiconBankBranchId(string $EiconBankBranchId) 设置超级网银行号，超级网银行号和大小额行号
 二选一
+ * @method string getEncryptType() 获取敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA
+ * @method void setEncryptType(string $EncryptType) 设置敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA
  */
 class BindAcctRequest extends AbstractModel
 {
@@ -84,6 +96,8 @@ class BindAcctRequest extends AbstractModel
     /**
      * @var integer 1 – 小额转账验证
 2 – 短信验证
+3 - 一分钱转账验证，无需再调CheckAcct验证绑卡
+4 - 银行四要素验证，无需再调CheckAcct验证绑卡
 每个结算账户每天只能使用一次小额转账验证
      */
     public $BindType;
@@ -152,10 +166,20 @@ BindType==2时必填
     public $EiconBankBranchId;
 
     /**
+     * @var string 敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA
+     */
+    public $EncryptType;
+
+    /**
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $SubAppId 聚鑫计费SubAppId，代表子商户
      * @param integer $BindType 1 – 小额转账验证
 2 – 短信验证
+3 - 一分钱转账验证，无需再调CheckAcct验证绑卡
+4 - 银行四要素验证，无需再调CheckAcct验证绑卡
 每个结算账户每天只能使用一次小额转账验证
      * @param string $SettleAcctNo 用于提现
 <敏感信息>加密详见《商户端接口敏感信息加密说明》
@@ -176,6 +200,10 @@ BindType==2时必填
 二选一
      * @param string $EiconBankBranchId 超级网银行号，超级网银行号和大小额行号
 二选一
+     * @param string $EncryptType 敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA
      */
     function __construct()
     {
@@ -244,6 +272,10 @@ BindType==2时必填
 
         if (array_key_exists("EiconBankBranchId",$param) and $param["EiconBankBranchId"] !== null) {
             $this->EiconBankBranchId = $param["EiconBankBranchId"];
+        }
+
+        if (array_key_exists("EncryptType",$param) and $param["EncryptType"] !== null) {
+            $this->EncryptType = $param["EncryptType"];
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) 设置密码设置，若未指定，则后续将以站内信的形式通知密码。
  * @method EnhancedService getEnhancedService() 获取是否开启云监控和云镜服务，未指定时默认开启。
  * @method void setEnhancedService(EnhancedService $EnhancedService) 设置是否开启云监控和云镜服务，未指定时默认开启。
+ * @method string getKeepData() 获取是否保留数据盘数据，取值"true"/"false"。默认为"true"
+ * @method void setKeepData(string $KeepData) 设置是否保留数据盘数据，取值"true"/"false"。默认为"true"
  */
 class ResetInstancesRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ResetInstancesRequest extends AbstractModel
     public $EnhancedService;
 
     /**
+     * @var string 是否保留数据盘数据，取值"true"/"false"。默认为"true"
+     */
+    public $KeepData;
+
+    /**
      * @param array $InstanceIdSet 待重装的实例ID列表。
      * @param string $ImageId 重装使用的镜像ID，若未指定，则使用各个实例当前的镜像进行重装。
      * @param string $Password 密码设置，若未指定，则后续将以站内信的形式通知密码。
      * @param EnhancedService $EnhancedService 是否开启云监控和云镜服务，未指定时默认开启。
+     * @param string $KeepData 是否保留数据盘数据，取值"true"/"false"。默认为"true"
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class ResetInstancesRequest extends AbstractModel
         if (array_key_exists("EnhancedService",$param) and $param["EnhancedService"] !== null) {
             $this->EnhancedService = new EnhancedService();
             $this->EnhancedService->deserialize($param["EnhancedService"]);
+        }
+
+        if (array_key_exists("KeepData",$param) and $param["KeepData"] !== null) {
+            $this->KeepData = $param["KeepData"];
         }
     }
 }

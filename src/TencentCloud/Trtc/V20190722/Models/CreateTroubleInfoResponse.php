@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cpdp\V20190820\Models;
+namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAcct返回参数结构体
+ * CreateTroubleInfo返回参数结构体
  *
- * @method string getSubAppId() 获取聚鑫计费SubAppId，代表子商户
- * @method void setSubAppId(string $SubAppId) 设置聚鑫计费SubAppId，代表子商户
- * @method string getSubAcctNo() 获取银行生成的子商户账户
- * @method void setSubAcctNo(string $SubAcctNo) 设置银行生成的子商户账户
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateAcctResponse extends AbstractModel
+class CreateTroubleInfoResponse extends AbstractModel
 {
-    /**
-     * @var string 聚鑫计费SubAppId，代表子商户
-     */
-    public $SubAppId;
-
-    /**
-     * @var string 银行生成的子商户账户
-     */
-    public $SubAcctNo;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $SubAppId 聚鑫计费SubAppId，代表子商户
-     * @param string $SubAcctNo 银行生成的子商户账户
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,14 +46,6 @@ class CreateAcctResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
-        }
-
-        if (array_key_exists("SubAcctNo",$param) and $param["SubAcctNo"] !== null) {
-            $this->SubAcctNo = $param["SubAcctNo"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -55,13 +55,31 @@ use TencentCloud\Common\AbstractModel;
  * @method string getShortName() 获取不填则默认子商户名称
  * @method void setShortName(string $ShortName) 设置不填则默认子商户名称
  * @method string getSubMerchantMemberType() 获取子商户会员类型：
-general:普通子账户
-merchant:商户子账户
-缺省： general
+general: 普通子账户
+merchant: 商户子账户
+缺省: general
  * @method void setSubMerchantMemberType(string $SubMerchantMemberType) 设置子商户会员类型：
-general:普通子账户
-merchant:商户子账户
-缺省： general
+general: 普通子账户
+merchant: 商户子账户
+缺省: general
+ * @method string getSubMerchantKey() 获取子商户密钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》
+ * @method void setSubMerchantKey(string $SubMerchantKey) 设置子商户密钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》
+ * @method string getSubMerchantPrivateKey() 获取子商户私钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》
+ * @method void setSubMerchantPrivateKey(string $SubMerchantPrivateKey) 设置子商户私钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》
+ * @method string getEncryptType() 获取敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA
+ * @method void setEncryptType(string $EncryptType) 设置敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA
+ * @method string getSubAcctNo() 获取银行生成的子商户账户，已开户的场景需要录入
+ * @method void setSubAcctNo(string $SubAcctNo) 设置银行生成的子商户账户，已开户的场景需要录入
  */
 class CreateAcctRequest extends AbstractModel
 {
@@ -128,11 +146,36 @@ class CreateAcctRequest extends AbstractModel
 
     /**
      * @var string 子商户会员类型：
-general:普通子账户
-merchant:商户子账户
-缺省： general
+general: 普通子账户
+merchant: 商户子账户
+缺省: general
      */
     public $SubMerchantMemberType;
+
+    /**
+     * @var string 子商户密钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》
+     */
+    public $SubMerchantKey;
+
+    /**
+     * @var string 子商户私钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》
+     */
+    public $SubMerchantPrivateKey;
+
+    /**
+     * @var string 敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA
+     */
+    public $EncryptType;
+
+    /**
+     * @var string 银行生成的子商户账户，已开户的场景需要录入
+     */
+    public $SubAcctNo;
 
     /**
      * @param string $MidasAppId 聚鑫平台分配的支付MidasAppId
@@ -153,9 +196,18 @@ merchant:商户子账户
 缺省： enterprise
      * @param string $ShortName 不填则默认子商户名称
      * @param string $SubMerchantMemberType 子商户会员类型：
-general:普通子账户
-merchant:商户子账户
-缺省： general
+general: 普通子账户
+merchant: 商户子账户
+缺省: general
+     * @param string $SubMerchantKey 子商户密钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》
+     * @param string $SubMerchantPrivateKey 子商户私钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》
+     * @param string $EncryptType 敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA
+     * @param string $SubAcctNo 银行生成的子商户账户，已开户的场景需要录入
      */
     function __construct()
     {
@@ -216,6 +268,22 @@ merchant:商户子账户
 
         if (array_key_exists("SubMerchantMemberType",$param) and $param["SubMerchantMemberType"] !== null) {
             $this->SubMerchantMemberType = $param["SubMerchantMemberType"];
+        }
+
+        if (array_key_exists("SubMerchantKey",$param) and $param["SubMerchantKey"] !== null) {
+            $this->SubMerchantKey = $param["SubMerchantKey"];
+        }
+
+        if (array_key_exists("SubMerchantPrivateKey",$param) and $param["SubMerchantPrivateKey"] !== null) {
+            $this->SubMerchantPrivateKey = $param["SubMerchantPrivateKey"];
+        }
+
+        if (array_key_exists("EncryptType",$param) and $param["EncryptType"] !== null) {
+            $this->EncryptType = $param["EncryptType"];
+        }
+
+        if (array_key_exists("SubAcctNo",$param) and $param["SubAcctNo"] !== null) {
+            $this->SubAcctNo = $param["SubAcctNo"];
         }
     }
 }

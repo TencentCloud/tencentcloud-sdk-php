@@ -28,10 +28,12 @@ use TencentCloud\Common\AbstractModel;
 <li>`VPC`：私有网络</li>
 <li>`DIRECTCONNECT`：专线网关</li>
 <li>`BMVPC`：黑石私有网络</li>
+<li>`VPNGW`：VPNGW类型</li>
  * @method void setInstanceType(string $InstanceType) 设置关联实例类型，可选值：
 <li>`VPC`：私有网络</li>
 <li>`DIRECTCONNECT`：专线网关</li>
 <li>`BMVPC`：黑石私有网络</li>
+<li>`VPNGW`：VPNGW类型</li>
  */
 class CcnInstance extends AbstractModel
 {
@@ -50,6 +52,7 @@ class CcnInstance extends AbstractModel
 <li>`VPC`：私有网络</li>
 <li>`DIRECTCONNECT`：专线网关</li>
 <li>`BMVPC`：黑石私有网络</li>
+<li>`VPNGW`：VPNGW类型</li>
      */
     public $InstanceType;
 
@@ -60,6 +63,7 @@ class CcnInstance extends AbstractModel
 <li>`VPC`：私有网络</li>
 <li>`DIRECTCONNECT`：专线网关</li>
 <li>`BMVPC`：黑石私有网络</li>
+<li>`VPNGW`：VPNGW类型</li>
      */
     function __construct()
     {

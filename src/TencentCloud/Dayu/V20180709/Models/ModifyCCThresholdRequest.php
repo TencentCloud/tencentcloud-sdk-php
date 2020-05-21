@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBasicIpInstance(string $BasicIpInstance) 设置仅基础防护提供。可选，IPInstance Nat 网关（如果查询的设备类型是NAT服务器，需要传此参数，通过nat资源查询接口获取）
  * @method integer getBasicIspCode() 获取仅基础防护提供。可选，运营商线路（如果查询的设备类型是NAT服务器，需要传此参数为5）
  * @method void setBasicIspCode(integer $BasicIspCode) 设置仅基础防护提供。可选，运营商线路（如果查询的设备类型是NAT服务器，需要传此参数为5）
+ * @method string getDomain() 获取可选字段，当协议取值HTTPS时，必填
+ * @method void setDomain(string $Domain) 设置可选字段，当协议取值HTTPS时，必填
  */
 class ModifyCCThresholdRequest extends AbstractModel
 {
@@ -134,6 +136,11 @@ class ModifyCCThresholdRequest extends AbstractModel
     public $BasicIspCode;
 
     /**
+     * @var string 可选字段，当协议取值HTTPS时，必填
+     */
+    public $Domain;
+
+    /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示基础防护）
      * @param integer $Threshold CC防护阈值，取值(0 100 150 240 350 480 550 700 850 1000 1500 2000 3000 5000 10000 20000);
 当Business为高防IP、高防IP专业版时，其CC防护最大阈值跟资源的保底防护带宽有关，对应关系如下：
@@ -156,6 +163,7 @@ class ModifyCCThresholdRequest extends AbstractModel
      * @param string $BasicDeviceType 设备类型（仅基础防护提供），取值如：服务器：cvm，公有云负载均衡：clb，黑石负载均衡：lb，NAT服务器：nat，互联网通道：channel.
      * @param string $BasicIpInstance 仅基础防护提供。可选，IPInstance Nat 网关（如果查询的设备类型是NAT服务器，需要传此参数，通过nat资源查询接口获取）
      * @param integer $BasicIspCode 仅基础防护提供。可选，运营商线路（如果查询的设备类型是NAT服务器，需要传此参数为5）
+     * @param string $Domain 可选字段，当协议取值HTTPS时，必填
      */
     function __construct()
     {
@@ -212,6 +220,10 @@ class ModifyCCThresholdRequest extends AbstractModel
 
         if (array_key_exists("BasicIspCode",$param) and $param["BasicIspCode"] !== null) {
             $this->BasicIspCode = $param["BasicIspCode"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

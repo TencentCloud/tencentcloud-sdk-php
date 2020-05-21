@@ -23,9 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getKey() 获取排序字段，当前支持：
 createTime，域名创建时间
 certExpireTime，证书过期时间
+默认createTime。
  * @method void setKey(string $Key) 设置排序字段，当前支持：
 createTime，域名创建时间
 certExpireTime，证书过期时间
+默认createTime。
  * @method string getSequence() 获取asc/desc，默认desc。
  * @method void setSequence(string $Sequence) 设置asc/desc，默认desc。
  */
@@ -35,6 +37,7 @@ class Sort extends AbstractModel
      * @var string 排序字段，当前支持：
 createTime，域名创建时间
 certExpireTime，证书过期时间
+默认createTime。
      */
     public $Key;
 
@@ -47,6 +50,7 @@ certExpireTime，证书过期时间
      * @param string $Key 排序字段，当前支持：
 createTime，域名创建时间
 certExpireTime，证书过期时间
+默认createTime。
      * @param string $Sequence asc/desc，默认desc。
      */
     function __construct()

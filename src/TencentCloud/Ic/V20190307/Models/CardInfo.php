@@ -106,6 +106,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedSms(integer $NeedSms) 设置是否开通短信0:未开短信 1:开通短信
  * @method integer getProvider() 获取服务
  * @method void setProvider(integer $Provider) 设置服务
+ * @method integer getCertificationState() 获取实名验证(浙江联通)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCertificationState(integer $CertificationState) 设置实名验证(浙江联通)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CardInfo extends AbstractModel
 {
@@ -257,6 +261,12 @@ class CardInfo extends AbstractModel
     public $Provider;
 
     /**
+     * @var integer 实名验证(浙江联通)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CertificationState;
+
+    /**
      * @param string $Iccid 卡片ID
      * @param string $Msisdn 卡电话号码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -300,6 +310,8 @@ class CardInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NeedSms 是否开通短信0:未开短信 1:开通短信
      * @param integer $Provider 服务
+     * @param integer $CertificationState 实名验证(浙江联通)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -416,6 +428,10 @@ class CardInfo extends AbstractModel
 
         if (array_key_exists("Provider",$param) and $param["Provider"] !== null) {
             $this->Provider = $param["Provider"];
+        }
+
+        if (array_key_exists("CertificationState",$param) and $param["CertificationState"] !== null) {
+            $this->CertificationState = $param["CertificationState"];
         }
     }
 }

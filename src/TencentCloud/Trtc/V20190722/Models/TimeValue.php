@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTime() 获取时间
  * @method void setTime(integer $Time) 设置时间
- * @method float getValue() 获取当前时间取值
- * @method void setValue(float $Value) 设置当前时间取值
+ * @method float getValue() 获取当前时间取值，unix时间戳
+ * @method void setValue(float $Value) 设置当前时间取值，unix时间戳
  */
 class TimeValue extends AbstractModel
 {
@@ -33,13 +33,13 @@ class TimeValue extends AbstractModel
     public $Time;
 
     /**
-     * @var float 当前时间取值
+     * @var float 当前时间取值，unix时间戳
      */
     public $Value;
 
     /**
      * @param integer $Time 时间
-     * @param float $Value 当前时间取值
+     * @param float $Value 当前时间取值，unix时间戳
      */
     function __construct()
     {

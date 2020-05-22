@@ -25,17 +25,13 @@ use TencentCloud\Common\AbstractModel;
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
-<li>OcrFullTextRecognition：文本全文识别，</li>
-<li>HeadTailRecognition：视频片头片尾识别，</li>
-<li>ObjectRecognition：物体识别。</li>
+<li>OcrFullTextRecognition：文本全文识别。</li>
  * @method void setType(string $Type) 设置任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
-<li>OcrFullTextRecognition：文本全文识别，</li>
-<li>HeadTailRecognition：视频片头片尾识别，</li>
-<li>ObjectRecognition：物体识别。</li>
+<li>OcrFullTextRecognition：文本全文识别。</li>
  * @method AiRecognitionTaskFaceResult getFaceTask() 获取人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -75,9 +71,7 @@ class AiRecognitionResult extends AbstractModel
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
-<li>OcrFullTextRecognition：文本全文识别，</li>
-<li>HeadTailRecognition：视频片头片尾识别，</li>
-<li>ObjectRecognition：物体识别。</li>
+<li>OcrFullTextRecognition：文本全文识别。</li>
      */
     public $Type;
 
@@ -122,9 +116,7 @@ class AiRecognitionResult extends AbstractModel
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
-<li>OcrFullTextRecognition：文本全文识别，</li>
-<li>HeadTailRecognition：视频片头片尾识别，</li>
-<li>ObjectRecognition：物体识别。</li>
+<li>OcrFullTextRecognition：文本全文识别。</li>
      * @param AiRecognitionTaskFaceResult $FaceTask 人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。

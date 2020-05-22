@@ -23,15 +23,33 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFilters() 获取过滤条件。
 module-name - string - 是否必填：否 - （过滤条件）按照模块名称过滤。
 module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤。
+image-id      String      是否必填：否      （过滤条件）按照镜像ID过滤。
+instance-family      String      是否必填：否      （过滤条件）按照机型family过滤。
+
 每次请求的Filters的上限为10，Filter.Values的上限为5。
  * @method void setFilters(array $Filters) 设置过滤条件。
 module-name - string - 是否必填：否 - （过滤条件）按照模块名称过滤。
 module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤。
+image-id      String      是否必填：否      （过滤条件）按照镜像ID过滤。
+instance-family      String      是否必填：否      （过滤条件）按照机型family过滤。
+
 每次请求的Filters的上限为10，Filter.Values的上限为5。
  * @method integer getOffset() 获取偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
+ * @method string getOrderByField() 获取指定排序字段。目前支持的可选值如下
+instance-num 按实例数量排序。
+node-num 按节点数量排序。
+timestamp 按实例创建时间排序。
+如果不传，默认按实例创建时间排序
+ * @method void setOrderByField(string $OrderByField) 设置指定排序字段。目前支持的可选值如下
+instance-num 按实例数量排序。
+node-num 按节点数量排序。
+timestamp 按实例创建时间排序。
+如果不传，默认按实例创建时间排序
+ * @method integer getOrderDirection() 获取指定排序是降序还是升序。0表示降序； 1表示升序。如果不传默认为降序
+ * @method void setOrderDirection(integer $OrderDirection) 设置指定排序是降序还是升序。0表示降序； 1表示升序。如果不传默认为降序
  */
 class DescribeModuleRequest extends AbstractModel
 {
@@ -39,6 +57,9 @@ class DescribeModuleRequest extends AbstractModel
      * @var array 过滤条件。
 module-name - string - 是否必填：否 - （过滤条件）按照模块名称过滤。
 module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤。
+image-id      String      是否必填：否      （过滤条件）按照镜像ID过滤。
+instance-family      String      是否必填：否      （过滤条件）按照机型family过滤。
+
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */
     public $Filters;
@@ -54,12 +75,35 @@ module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤
     public $Limit;
 
     /**
+     * @var string 指定排序字段。目前支持的可选值如下
+instance-num 按实例数量排序。
+node-num 按节点数量排序。
+timestamp 按实例创建时间排序。
+如果不传，默认按实例创建时间排序
+     */
+    public $OrderByField;
+
+    /**
+     * @var integer 指定排序是降序还是升序。0表示降序； 1表示升序。如果不传默认为降序
+     */
+    public $OrderDirection;
+
+    /**
      * @param array $Filters 过滤条件。
 module-name - string - 是否必填：否 - （过滤条件）按照模块名称过滤。
 module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤。
+image-id      String      是否必填：否      （过滤条件）按照镜像ID过滤。
+instance-family      String      是否必填：否      （过滤条件）按照机型family过滤。
+
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      * @param integer $Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
+     * @param string $OrderByField 指定排序字段。目前支持的可选值如下
+instance-num 按实例数量排序。
+node-num 按节点数量排序。
+timestamp 按实例创建时间排序。
+如果不传，默认按实例创建时间排序
+     * @param integer $OrderDirection 指定排序是降序还是升序。0表示降序； 1表示升序。如果不传默认为降序
      */
     function __construct()
     {
@@ -89,6 +133,14 @@ module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("OrderByField",$param) and $param["OrderByField"] !== null) {
+            $this->OrderByField = $param["OrderByField"];
+        }
+
+        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
+            $this->OrderDirection = $param["OrderDirection"];
         }
     }
 }

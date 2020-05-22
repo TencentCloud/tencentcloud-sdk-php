@@ -26,7 +26,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Political：图片鉴政</li>
 <li>Porn.Asr：Asr 文字鉴黄</li>
 <li>Porn.Ocr：Ocr 文字鉴黄</li>
-<li>Porn.Voice：声音鉴黄</li>
 <li>Political.Asr：Asr 文字鉴政</li>
 <li>Political.Ocr：Ocr 文字鉴政</li>
 <li>Terrorism.Ocr：Ocr 文字鉴恐</li>
@@ -38,7 +37,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Political：图片鉴政</li>
 <li>Porn.Asr：Asr 文字鉴黄</li>
 <li>Porn.Ocr：Ocr 文字鉴黄</li>
-<li>Porn.Voice：声音鉴黄</li>
 <li>Political.Asr：Asr 文字鉴政</li>
 <li>Political.Ocr：Ocr 文字鉴政</li>
 <li>Terrorism.Ocr：Ocr 文字鉴恐</li>
@@ -98,7 +96,6 @@ class AiContentReviewResult extends AbstractModel
 <li>Political：图片鉴政</li>
 <li>Porn.Asr：Asr 文字鉴黄</li>
 <li>Porn.Ocr：Ocr 文字鉴黄</li>
-<li>Porn.Voice：声音鉴黄</li>
 <li>Political.Asr：Asr 文字鉴政</li>
 <li>Political.Ocr：Ocr 文字鉴政</li>
 <li>Terrorism.Ocr：Ocr 文字鉴恐</li>
@@ -184,7 +181,6 @@ class AiContentReviewResult extends AbstractModel
 <li>Political：图片鉴政</li>
 <li>Porn.Asr：Asr 文字鉴黄</li>
 <li>Porn.Ocr：Ocr 文字鉴黄</li>
-<li>Porn.Voice：声音鉴黄</li>
 <li>Political.Asr：Asr 文字鉴政</li>
 <li>Political.Ocr：Ocr 文字鉴政</li>
 <li>Terrorism.Ocr：Ocr 文字鉴恐</li>

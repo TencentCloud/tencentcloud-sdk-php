@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCallDetail请求参数结构体
  *
- * @method string getCommId() 获取通话ID（唯一标识一次通话）= sdkappid+roomgString（房间号）+房间创建时间（unix时间戳，s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
- * @method void setCommId(string $CommId) 设置通话ID（唯一标识一次通话）= sdkappid+roomgString（房间号）+房间创建时间（unix时间戳，s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
+ * @method string getCommId() 获取通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位为s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
+ * @method void setCommId(string $CommId) 设置通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位为s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
  * @method integer getStartTime() 获取查询开始时间，5天内。本地unix时间戳（1588031999s）
  * @method void setStartTime(integer $StartTime) 设置查询开始时间，5天内。本地unix时间戳（1588031999s）
  * @method integer getEndTime() 获取查询结束时间，本地unix时间戳（1588031999s）
@@ -62,7 +62,7 @@ vHeight：上/下行分辨率高
 class DescribeCallDetailRequest extends AbstractModel
 {
     /**
-     * @var string 通话ID（唯一标识一次通话）= sdkappid+roomgString（房间号）+房间创建时间（unix时间戳，s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
+     * @var string 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位为s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
      */
     public $CommId;
 
@@ -105,7 +105,7 @@ vHeight：上/下行分辨率高
     public $DataType;
 
     /**
-     * @param string $CommId 通话ID（唯一标识一次通话）= sdkappid+roomgString（房间号）+房间创建时间（unix时间戳，s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
+     * @param string $CommId 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位为s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
      * @param integer $StartTime 查询开始时间，5天内。本地unix时间戳（1588031999s）
      * @param integer $EndTime 查询结束时间，本地unix时间戳（1588031999s）
      * @param string $SdkAppId 用户sdkappid

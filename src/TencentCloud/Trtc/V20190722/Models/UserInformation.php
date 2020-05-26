@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkVersion(string $SdkVersion) 设置Sdk版本号
  * @method string getClientIp() 获取客户端IP地址
  * @method void setClientIp(string $ClientIp) 设置客户端IP地址
+ * @method boolean getFinished() 获取判断用户是否已经离开房间
+ * @method void setFinished(boolean $Finished) 设置判断用户是否已经离开房间
  */
 class UserInformation extends AbstractModel
 {
@@ -73,6 +75,11 @@ class UserInformation extends AbstractModel
     public $ClientIp;
 
     /**
+     * @var boolean 判断用户是否已经离开房间
+     */
+    public $Finished;
+
+    /**
      * @param string $RoomStr 房间号
      * @param string $UserId 用户Id
      * @param integer $JoinTs 用户进房时间
@@ -80,6 +87,7 @@ class UserInformation extends AbstractModel
      * @param string $DeviceType 终端类型
      * @param string $SdkVersion Sdk版本号
      * @param string $ClientIp 客户端IP地址
+     * @param boolean $Finished 判断用户是否已经离开房间
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class UserInformation extends AbstractModel
 
         if (array_key_exists("ClientIp",$param) and $param["ClientIp"] !== null) {
             $this->ClientIp = $param["ClientIp"];
+        }
+
+        if (array_key_exists("Finished",$param) and $param["Finished"] !== null) {
+            $this->Finished = $param["Finished"];
         }
     }
 }

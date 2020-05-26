@@ -30,8 +30,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStudentUserId(string $StudentUserId) 设置学生用户ID
  * @method string getTroubleUserId() 获取体验异常端（老师或学生）的用户 ID。
  * @method void setTroubleUserId(string $TroubleUserId) 设置体验异常端（老师或学生）的用户 ID。
- * @method integer getTroubleType() 获取异常类型
- * @method void setTroubleType(integer $TroubleType) 设置异常类型
+ * @method integer getTroubleType() 获取异常类型。
+1. 仅视频异常
+2. 仅声音异常
+3. 音视频都异常
+5. 进房异常
+4. 切课
+6. 求助
+7. 问题反馈
+8. 投诉
+ * @method void setTroubleType(integer $TroubleType) 设置异常类型。
+1. 仅视频异常
+2. 仅声音异常
+3. 音视频都异常
+5. 进房异常
+4. 切课
+6. 求助
+7. 问题反馈
+8. 投诉
  * @method integer getTroubleTime() 获取异常发生的UNIX 时间戳，单位为秒。
  * @method void setTroubleTime(integer $TroubleTime) 设置异常发生的UNIX 时间戳，单位为秒。
  * @method string getTroubleMsg() 获取异常详情
@@ -65,7 +81,15 @@ class CreateTroubleInfoRequest extends AbstractModel
     public $TroubleUserId;
 
     /**
-     * @var integer 异常类型
+     * @var integer 异常类型。
+1. 仅视频异常
+2. 仅声音异常
+3. 音视频都异常
+5. 进房异常
+4. 切课
+6. 求助
+7. 问题反馈
+8. 投诉
      */
     public $TroubleType;
 
@@ -85,7 +109,15 @@ class CreateTroubleInfoRequest extends AbstractModel
      * @param string $TeacherUserId 老师用户ID
      * @param string $StudentUserId 学生用户ID
      * @param string $TroubleUserId 体验异常端（老师或学生）的用户 ID。
-     * @param integer $TroubleType 异常类型
+     * @param integer $TroubleType 异常类型。
+1. 仅视频异常
+2. 仅声音异常
+3. 音视频都异常
+5. 进房异常
+4. 切课
+6. 求助
+7. 问题反馈
+8. 投诉
      * @param integer $TroubleTime 异常发生的UNIX 时间戳，单位为秒。
      * @param string $TroubleMsg 异常详情
      */

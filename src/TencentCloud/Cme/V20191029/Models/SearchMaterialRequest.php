@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDurationRange(IntegerRange $DurationRange) 设置按素材时长检索，单位s。
  * @method TimeRange getCreateTimeRange() 获取按照素材创建时间检索。
  * @method void setCreateTimeRange(TimeRange $CreateTimeRange) 设置按照素材创建时间检索。
+ * @method array getTags() 获取按标签检索，填入检索的标签名。
+ * @method void setTags(array $Tags) 设置按标签检索，填入检索的标签名。
  * @method SortBy getSort() 获取排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。
  * @method void setSort(SortBy $Sort) 设置排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。
  * @method integer getOffset() 获取偏移量。默认值：0。
@@ -90,6 +92,11 @@ class SearchMaterialRequest extends AbstractModel
     public $CreateTimeRange;
 
     /**
+     * @var array 按标签检索，填入检索的标签名。
+     */
+    public $Tags;
+
+    /**
      * @var SortBy 排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。
      */
     public $Sort;
@@ -120,6 +127,7 @@ class SearchMaterialRequest extends AbstractModel
      * @param string $Resolution 按画质检索，取值为：LD/SD/HD/FHD/2K/4K。
      * @param IntegerRange $DurationRange 按素材时长检索，单位s。
      * @param TimeRange $CreateTimeRange 按照素材创建时间检索。
+     * @param array $Tags 按标签检索，填入检索的标签名。
      * @param SortBy $Sort 排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。
      * @param integer $Offset 偏移量。默认值：0。
      * @param integer $Limit 返回记录条数，默认值：50。
@@ -171,6 +179,10 @@ class SearchMaterialRequest extends AbstractModel
         if (array_key_exists("CreateTimeRange",$param) and $param["CreateTimeRange"] !== null) {
             $this->CreateTimeRange = new TimeRange();
             $this->CreateTimeRange->deserialize($param["CreateTimeRange"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = $param["Tags"];
         }
 
         if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {

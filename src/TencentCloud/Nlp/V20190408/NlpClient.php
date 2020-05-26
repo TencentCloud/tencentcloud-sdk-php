@@ -76,7 +76,7 @@ use TencentCloud\Nlp\V20190408\Models as Models;
 
 https://ai.tencent.com/ailab/zh/news/detial?id=22
 
-https://ai.tencent.com/ailab/nlp/embedding.html 
+https://ai.tencent.com/ailab/nlp/zh/embedding.html
  * @method Models\WordSimilarityResponse WordSimilarity(Models\WordSimilarityRequest $req) 词相似度接口能够基于词向量技术来计算两个输入词语的余弦相似度，相似度数值越大的两个词语在语义上越相似。
  */
 

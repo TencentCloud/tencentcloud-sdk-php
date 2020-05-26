@@ -14,21 +14,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Taf\V20200210\Models;
+namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DetectAccountActivity返回参数结构体
+ * DescribeDetailEvent返回参数结构体
  *
- * @method OutputDetectAccountActivity getData() 获取回包数据
- * @method void setData(OutputDetectAccountActivity $Data) 设置回包数据
+ * @method array getData() 获取返回的事件列表
+ * @method void setData(array $Data) 设置返回的事件列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DetectAccountActivityResponse extends AbstractModel
+class DescribeDetailEventResponse extends AbstractModel
 {
     /**
-     * @var OutputDetectAccountActivity 回包数据
+     * @var array 返回的事件列表
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DetectAccountActivityResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param OutputDetectAccountActivity $Data 回包数据
+     * @param array $Data 返回的事件列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -55,8 +55,12 @@ class DetectAccountActivityResponse extends AbstractModel
             return;
         }
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new OutputDetectAccountActivity();
-            $this->Data->deserialize($param["Data"]);
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new EventList();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -23,7 +23,6 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cms\V20190321\Models as Models;
 
 /**
- * @method Models\CommonMediaRecognitionResponse CommonMediaRecognition(Models\CommonMediaRecognitionRequest $req) 广交会商品企业信息发布内容审核
  * @method Models\CreateFileSampleResponse CreateFileSample(Models\CreateFileSampleRequest $req) 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
 <br>
 通过该接口可以将图片新增到样本库。

@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidasAppId(string $MidasAppId) 设置聚鑫分配的支付主MidasAppId
  * @method string getSubAppId() 获取聚鑫计费SubAppId，代表子商户
  * @method void setSubAppId(string $SubAppId) 设置聚鑫计费SubAppId，代表子商户
- * @method integer getBindType() 获取1：小额鉴权
-2：短信校验鉴权
- * @method void setBindType(integer $BindType) 设置1：小额鉴权
-2：短信校验鉴权
+ * @method integer getBindType() 获取1 – 小额转账验证
+2 – 短信验证
+每个结算账户每天只能使用一次小额转账验证
+ * @method void setBindType(integer $BindType) 设置1 – 小额转账验证
+2 – 短信验证
+每个结算账户每天只能使用一次小额转账验证
  * @method string getSettleAcctNo() 获取结算账户账号
 <敏感信息>加密详见《商户端接口敏感信息加密说明》
  * @method void setSettleAcctNo(string $SettleAcctNo) 设置结算账户账号
@@ -54,6 +56,24 @@ BindType==1必填
 BindType==1必填
  * @method void setCurrencyAmt(string $CurrencyAmt) 设置金额
 BindType==1必填
+ * @method string getEncryptType() 获取敏感信息加密类型:
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
+ * @method void setEncryptType(string $EncryptType) 设置敏感信息加密类型:
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
+ * @method string getMidasEnvironment() 获取环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+ * @method void setMidasEnvironment(string $MidasEnvironment) 设置环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
  */
 class CheckAcctRequest extends AbstractModel
 {
@@ -68,8 +88,9 @@ class CheckAcctRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var integer 1：小额鉴权
-2：短信校验鉴权
+     * @var integer 1 – 小额转账验证
+2 – 短信验证
+每个结算账户每天只能使用一次小额转账验证
      */
     public $BindType;
 
@@ -115,10 +136,28 @@ BindType==1必填
     public $CurrencyAmt;
 
     /**
+     * @var string 敏感信息加密类型:
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
+     */
+    public $EncryptType;
+
+    /**
+     * @var string 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public $MidasEnvironment;
+
+    /**
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $SubAppId 聚鑫计费SubAppId，代表子商户
-     * @param integer $BindType 1：小额鉴权
-2：短信校验鉴权
+     * @param integer $BindType 1 – 小额转账验证
+2 – 短信验证
+每个结算账户每天只能使用一次小额转账验证
      * @param string $SettleAcctNo 结算账户账号
 <敏感信息>加密详见《商户端接口敏感信息加密说明》
      * @param string $MidasSecretId 聚鑫分配的安全ID
@@ -132,6 +171,15 @@ BindType==1必填
 BindType==1必填
      * @param string $CurrencyAmt 金额
 BindType==1必填
+     * @param string $EncryptType 敏感信息加密类型:
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
+     * @param string $MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
      */
     function __construct()
     {
@@ -184,6 +232,14 @@ BindType==1必填
 
         if (array_key_exists("CurrencyAmt",$param) and $param["CurrencyAmt"] !== null) {
             $this->CurrencyAmt = $param["CurrencyAmt"];
+        }
+
+        if (array_key_exists("EncryptType",$param) and $param["EncryptType"] !== null) {
+            $this->EncryptType = $param["EncryptType"];
+        }
+
+        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
+            $this->MidasEnvironment = $param["MidasEnvironment"];
         }
     }
 }

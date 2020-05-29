@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置产品Id
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method string getActionId() 获取动作Id
- * @method void setActionId(string $ActionId) 设置动作Id
+ * @method string getActionId() 获取产品数据模板中行为功能的标识符，由开发者自行根据设备的应用场景定义
+ * @method void setActionId(string $ActionId) 设置产品数据模板中行为功能的标识符，由开发者自行根据设备的应用场景定义
  * @method string getInputParams() 获取输入参数
  * @method void setInputParams(string $InputParams) 设置输入参数
  */
@@ -42,7 +42,7 @@ class CallDeviceActionSyncRequest extends AbstractModel
     public $DeviceName;
 
     /**
-     * @var string 动作Id
+     * @var string 产品数据模板中行为功能的标识符，由开发者自行根据设备的应用场景定义
      */
     public $ActionId;
 
@@ -54,7 +54,7 @@ class CallDeviceActionSyncRequest extends AbstractModel
     /**
      * @param string $ProductId 产品Id
      * @param string $DeviceName 设备名称
-     * @param string $ActionId 动作Id
+     * @param string $ActionId 产品数据模板中行为功能的标识符，由开发者自行根据设备的应用场景定义
      * @param string $InputParams 输入参数
      */
     function __construct()

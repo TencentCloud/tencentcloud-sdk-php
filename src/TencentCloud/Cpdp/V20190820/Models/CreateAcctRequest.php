@@ -46,12 +46,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidasSignature(string $MidasSignature) 设置按照聚鑫安全密钥计算的签名
  * @method string getSubMchType() 获取子商户类型：
 个人: personal
-企业：enterprise
-缺省： enterprise
+企业: enterprise
+缺省: enterprise
  * @method void setSubMchType(string $SubMchType) 设置子商户类型：
 个人: personal
-企业：enterprise
-缺省： enterprise
+企业: enterprise
+缺省: enterprise
  * @method string getShortName() 获取不填则默认子商户名称
  * @method void setShortName(string $ShortName) 设置不填则默认子商户名称
  * @method string getSubMerchantMemberType() 获取子商户会员类型：
@@ -71,15 +71,25 @@ merchant: 商户子账户
  * @method void setSubMerchantPrivateKey(string $SubMerchantPrivateKey) 设置子商户私钥
 <敏感信息>加密详见《商户端接口敏感信息加密说明》
  * @method string getEncryptType() 获取敏感信息加密类型:
-RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
-AES,  aes对称加密，使用AES256-CBC-PCKS7padding
-默认RSA
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
  * @method void setEncryptType(string $EncryptType) 设置敏感信息加密类型:
-RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
-AES,  aes对称加密，使用AES256-CBC-PCKS7padding
-默认RSA
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
  * @method string getSubAcctNo() 获取银行生成的子商户账户，已开户的场景需要录入
  * @method void setSubAcctNo(string $SubAcctNo) 设置银行生成的子商户账户，已开户的场景需要录入
+ * @method string getMidasEnvironment() 获取环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+ * @method void setMidasEnvironment(string $MidasEnvironment) 设置环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
  */
 class CreateAcctRequest extends AbstractModel
 {
@@ -134,8 +144,8 @@ class CreateAcctRequest extends AbstractModel
     /**
      * @var string 子商户类型：
 个人: personal
-企业：enterprise
-缺省： enterprise
+企业: enterprise
+缺省: enterprise
      */
     public $SubMchType;
 
@@ -166,9 +176,9 @@ merchant: 商户子账户
 
     /**
      * @var string 敏感信息加密类型:
-RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
-AES,  aes对称加密，使用AES256-CBC-PCKS7padding
-默认RSA
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
      */
     public $EncryptType;
 
@@ -176,6 +186,15 @@ AES,  aes对称加密，使用AES256-CBC-PCKS7padding
      * @var string 银行生成的子商户账户，已开户的场景需要录入
      */
     public $SubAcctNo;
+
+    /**
+     * @var string 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public $MidasEnvironment;
 
     /**
      * @param string $MidasAppId 聚鑫平台分配的支付MidasAppId
@@ -192,8 +211,8 @@ AES,  aes对称加密，使用AES256-CBC-PCKS7padding
      * @param string $MidasSignature 按照聚鑫安全密钥计算的签名
      * @param string $SubMchType 子商户类型：
 个人: personal
-企业：enterprise
-缺省： enterprise
+企业: enterprise
+缺省: enterprise
      * @param string $ShortName 不填则默认子商户名称
      * @param string $SubMerchantMemberType 子商户会员类型：
 general: 普通子账户
@@ -204,10 +223,15 @@ merchant: 商户子账户
      * @param string $SubMerchantPrivateKey 子商户私钥
 <敏感信息>加密详见《商户端接口敏感信息加密说明》
      * @param string $EncryptType 敏感信息加密类型:
-RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
-AES,  aes对称加密，使用AES256-CBC-PCKS7padding
-默认RSA
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
      * @param string $SubAcctNo 银行生成的子商户账户，已开户的场景需要录入
+     * @param string $MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
      */
     function __construct()
     {
@@ -284,6 +308,10 @@ AES,  aes对称加密，使用AES256-CBC-PCKS7padding
 
         if (array_key_exists("SubAcctNo",$param) and $param["SubAcctNo"] !== null) {
             $this->SubAcctNo = $param["SubAcctNo"];
+        }
+
+        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
+            $this->MidasEnvironment = $param["MidasEnvironment"];
         }
     }
 }

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 7：视频为旁路画面；
  * @method integer getTime() 获取事件上报的时间戳，unix时间（1589891188801ms)
  * @method void setTime(integer $Time) 设置事件上报的时间戳，unix时间（1589891188801ms)
- * @method integer getEventId() 获取事件Id：分为sdk的事件和webrtc的事件，具体映射，查看：事件ID映射表
- * @method void setEventId(integer $EventId) 设置事件Id：分为sdk的事件和webrtc的事件，具体映射，查看：事件ID映射表
+ * @method integer getEventId() 获取事件Id：分为sdk的事件和webrtc的事件，详情见：附录/事件 ID 映射表：https://cloud.tencent.com/document/product/647/44916
+ * @method void setEventId(integer $EventId) 设置事件Id：分为sdk的事件和webrtc的事件，详情见：附录/事件 ID 映射表：https://cloud.tencent.com/document/product/647/44916
  * @method integer getParamOne() 获取事件的第一个参数，如视频分辨率宽
  * @method void setParamOne(integer $ParamOne) 设置事件的第一个参数，如视频分辨率宽
  * @method integer getParamTwo() 获取事件的第二个参数，如视频分辨率高
@@ -56,7 +56,7 @@ class EventMessage extends AbstractModel
     public $Time;
 
     /**
-     * @var integer 事件Id：分为sdk的事件和webrtc的事件，具体映射，查看：事件ID映射表
+     * @var integer 事件Id：分为sdk的事件和webrtc的事件，详情见：附录/事件 ID 映射表：https://cloud.tencent.com/document/product/647/44916
      */
     public $EventId;
 
@@ -77,7 +77,7 @@ class EventMessage extends AbstractModel
 3：视频为小画面；
 7：视频为旁路画面；
      * @param integer $Time 事件上报的时间戳，unix时间（1589891188801ms)
-     * @param integer $EventId 事件Id：分为sdk的事件和webrtc的事件，具体映射，查看：事件ID映射表
+     * @param integer $EventId 事件Id：分为sdk的事件和webrtc的事件，详情见：附录/事件 ID 映射表：https://cloud.tencent.com/document/product/647/44916
      * @param integer $ParamOne 事件的第一个参数，如视频分辨率宽
      * @param integer $ParamTwo 事件的第二个参数，如视频分辨率高
      */

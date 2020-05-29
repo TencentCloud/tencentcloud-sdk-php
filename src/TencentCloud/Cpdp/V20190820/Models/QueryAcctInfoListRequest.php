@@ -32,6 +32,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidasSecretId(string $MidasSecretId) 设置由平台客服提供的计费密钥Id
  * @method string getMidasSignature() 获取计费签名
  * @method void setMidasSignature(string $MidasSignature) 设置计费签名
+ * @method string getEncryptType() 获取敏感信息加密类型:
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
+ * @method void setEncryptType(string $EncryptType) 设置敏感信息加密类型:
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
+ * @method string getMidasEnvironment() 获取环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+ * @method void setMidasEnvironment(string $MidasEnvironment) 设置环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
  */
 class QueryAcctInfoListRequest extends AbstractModel
 {
@@ -66,12 +84,38 @@ class QueryAcctInfoListRequest extends AbstractModel
     public $MidasSignature;
 
     /**
+     * @var string 敏感信息加密类型:
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
+     */
+    public $EncryptType;
+
+    /**
+     * @var string 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public $MidasEnvironment;
+
+    /**
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $QueryAcctBeginTime 查询开始时间(以开户时间为准)
      * @param string $QueryAcctEndTime 查询结束时间(以开户时间为准)
      * @param string $PageOffset 分页号,  起始值为1，每次最多返回20条记录，第二页返回的记录数为第21至40条记录，第三页为41至60条记录，顺序均按照开户时间的先后
      * @param string $MidasSecretId 由平台客服提供的计费密钥Id
      * @param string $MidasSignature 计费签名
+     * @param string $EncryptType 敏感信息加密类型:
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
+     * @param string $MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
      */
     function __construct()
     {
@@ -108,6 +152,14 @@ class QueryAcctInfoListRequest extends AbstractModel
 
         if (array_key_exists("MidasSignature",$param) and $param["MidasSignature"] !== null) {
             $this->MidasSignature = $param["MidasSignature"];
+        }
+
+        if (array_key_exists("EncryptType",$param) and $param["EncryptType"] !== null) {
+            $this->EncryptType = $param["EncryptType"];
+        }
+
+        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
+            $this->MidasEnvironment = $param["MidasEnvironment"];
         }
     }
 }

@@ -35,17 +35,18 @@ EIP 如果欠费或被封堵，则不能被绑定。
  * @method Models\AttachNetworkInterfaceResponse AttachNetworkInterface(Models\AttachNetworkInterfaceRequest $req) 弹性网卡绑定云主机
  * @method Models\CreateModuleResponse CreateModule(Models\CreateModuleRequest $req) 创建模块
  * @method Models\CreateNetworkInterfaceResponse CreateNetworkInterface(Models\CreateNetworkInterfaceRequest $req) 创建弹性网卡
- * @method Models\CreateSubnetResponse CreateSubnet(Models\CreateSubnetRequest $req) 创建子网
+ * @method Models\CreateSubnetResponse CreateSubnet(Models\CreateSubnetRequest $req) 创建子网，若创建成功，则此子网会成为此可用区的默认子网。
  * @method Models\CreateVpcResponse CreateVpc(Models\CreateVpcRequest $req) 创建私有网络
  * @method Models\DeleteImageResponse DeleteImage(Models\DeleteImageRequest $req) 删除镜像
  * @method Models\DeleteModuleResponse DeleteModule(Models\DeleteModuleRequest $req) 删除业务模块
  * @method Models\DeleteNetworkInterfaceResponse DeleteNetworkInterface(Models\DeleteNetworkInterfaceRequest $req) 删除弹性网卡
- * @method Models\DeleteSubnetResponse DeleteSubnet(Models\DeleteSubnetRequest $req) 删除子网
+ * @method Models\DeleteSubnetResponse DeleteSubnet(Models\DeleteSubnetRequest $req) 删除子网，若子网为可用区下的默认子网，则默认子网会回退到系统自动创建的默认子网，非用户最新创建的子网。若默认子网不满足需求，可调用设置默认子网接口设置。
  * @method Models\DeleteVpcResponse DeleteVpc(Models\DeleteVpcRequest $req) 删除私有网络
  * @method Models\DescribeAddressQuotaResponse DescribeAddressQuota(Models\DescribeAddressQuotaRequest $req) 查询您账户的弹性公网IP（简称 EIP）在当前地域的配额信息
  * @method Models\DescribeAddressesResponse DescribeAddresses(Models\DescribeAddressesRequest $req) 查询弹性公网IP列表
  * @method Models\DescribeBaseOverviewResponse DescribeBaseOverview(Models\DescribeBaseOverviewRequest $req) 获取概览页统计的基本数据
  * @method Models\DescribeConfigResponse DescribeConfig(Models\DescribeConfigRequest $req) 获取带宽硬盘等数据的限制
+ * @method Models\DescribeDefaultSubnetResponse DescribeDefaultSubnet(Models\DescribeDefaultSubnetRequest $req) 查询可用区的默认子网
  * @method Models\DescribeImageResponse DescribeImage(Models\DescribeImageRequest $req) 展示镜像列表
  * @method Models\DescribeInstanceTypeConfigResponse DescribeInstanceTypeConfig(Models\DescribeInstanceTypeConfigRequest $req) 获取机型配置列表
  * @method Models\DescribeInstanceVncUrlResponse DescribeInstanceVncUrl(Models\DescribeInstanceVncUrlRequest $req) 查询实例管理终端地址
@@ -72,6 +73,7 @@ EIP 如果被封堵，则不能进行解绑定操作。
  * @method Models\ModifyAddressAttributeResponse ModifyAddressAttribute(Models\ModifyAddressAttributeRequest $req) 修改弹性公网IP属性
  * @method Models\ModifyAddressesBandwidthResponse ModifyAddressesBandwidth(Models\ModifyAddressesBandwidthRequest $req) 调整弹性公网IP带宽
 
+ * @method Models\ModifyDefaultSubnetResponse ModifyDefaultSubnet(Models\ModifyDefaultSubnetRequest $req) 修改在一个可用区下创建实例时使用的默认子网（创建实例时，未填写VPC参数时使用的sunbetId）
  * @method Models\ModifyInstancesAttributeResponse ModifyInstancesAttribute(Models\ModifyInstancesAttributeRequest $req) 修改实例的属性。
  * @method Models\ModifyModuleImageResponse ModifyModuleImage(Models\ModifyModuleImageRequest $req) ModifyModuleImage
  * @method Models\ModifyModuleNameResponse ModifyModuleName(Models\ModifyModuleNameRequest $req) 修改模块名称

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTradeOrderId(string $TradeOrderId) 设置贸易材料订单号
  * @method string getPayerId() 获取付款人ID
  * @method void setPayerId(string $PayerId) 设置付款人ID
- * @method string getPayeeName() 获取付款人姓名
- * @method void setPayeeName(string $PayeeName) 设置付款人姓名
+ * @method string getPayeeName() 获取收款人姓名
+ * @method void setPayeeName(string $PayeeName) 设置收款人姓名
  * @method string getPayeeCountryCode() 获取收款人常驻国家或地区编码 (见常见问题)
  * @method void setPayeeCountryCode(string $PayeeCountryCode) 设置收款人常驻国家或地区编码 (见常见问题)
  * @method string getTradeType() 获取贸易类型 (GOODS: 商品, SERVICE: 服务)
@@ -73,7 +73,7 @@ class ApplyTradeRequest extends AbstractModel
     public $PayerId;
 
     /**
-     * @var string 付款人姓名
+     * @var string 收款人姓名
      */
     public $PayeeName;
 
@@ -138,7 +138,7 @@ TradeType=SERVICE时填写贸易类别，见常见问题-贸易类别)
      * @param string $TradeFileId 贸易材料流水号
      * @param string $TradeOrderId 贸易材料订单号
      * @param string $PayerId 付款人ID
-     * @param string $PayeeName 付款人姓名
+     * @param string $PayeeName 收款人姓名
      * @param string $PayeeCountryCode 收款人常驻国家或地区编码 (见常见问题)
      * @param string $TradeType 贸易类型 (GOODS: 商品, SERVICE: 服务)
      * @param string $TradeTime 交易时间 (格式: yyyyMMdd)

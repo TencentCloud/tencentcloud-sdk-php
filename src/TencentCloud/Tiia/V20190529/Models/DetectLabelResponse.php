@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlbumLabels(array $AlbumLabels) 设置Album相册版标签结果数组。如未选择ALBUM场景，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNewsLabels() 获取News新闻版标签结果数组。如未选择NEWS场景，则为空。
+新闻版目前为测试阶段，暂不提供每个标签的一级、二级分类信息的输出。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNewsLabels(array $NewsLabels) 设置News新闻版标签结果数组。如未选择NEWS场景，则为空。
+新闻版目前为测试阶段，暂不提供每个标签的一级、二级分类信息的输出。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,6 +62,13 @@ class DetectLabelResponse extends AbstractModel
     public $AlbumLabels;
 
     /**
+     * @var array News新闻版标签结果数组。如未选择NEWS场景，则为空。
+新闻版目前为测试阶段，暂不提供每个标签的一级、二级分类信息的输出。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NewsLabels;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -66,6 +79,9 @@ class DetectLabelResponse extends AbstractModel
      * @param array $CameraLabels Camera摄像头版标签结果数组。如未选择CAMERA场景，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AlbumLabels Album相册版标签结果数组。如未选择ALBUM场景，则为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NewsLabels News新闻版标签结果数组。如未选择NEWS场景，则为空。
+新闻版目前为测试阶段，暂不提供每个标签的一级、二级分类信息的输出。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -106,6 +122,15 @@ class DetectLabelResponse extends AbstractModel
                 $obj = new DetectLabelItem();
                 $obj->deserialize($value);
                 array_push($this->AlbumLabels, $obj);
+            }
+        }
+
+        if (array_key_exists("NewsLabels",$param) and $param["NewsLabels"] !== null) {
+            $this->NewsLabels = [];
+            foreach ($param["NewsLabels"] as $key => $value){
+                $obj = new DetectLabelItem();
+                $obj->deserialize($value);
+                array_push($this->NewsLabels, $obj);
             }
         }
 

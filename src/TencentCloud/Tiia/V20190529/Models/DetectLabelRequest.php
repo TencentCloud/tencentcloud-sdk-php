@@ -44,6 +44,7 @@ use TencentCloud\Common\AbstractModel;
 WEB，针对网络图片优化;
 CAMERA，针对手机摄像头拍摄图片优化;
 ALBUM，针对手机相册、网盘产品优化;
+NEWS，针对新闻、资讯、广电等行业优化
 如果不传此参数，则默认为WEB。
 
 支持多场景（Scenes）一起检测。例如，使用 Scenes=["WEB", "CAMERA"]，即对一张图片使用两个模型同时检测，输出两套识别结果。
@@ -51,6 +52,7 @@ ALBUM，针对手机相册、网盘产品优化;
 WEB，针对网络图片优化;
 CAMERA，针对手机摄像头拍摄图片优化;
 ALBUM，针对手机相册、网盘产品优化;
+NEWS，针对新闻、资讯、广电等行业优化
 如果不传此参数，则默认为WEB。
 
 支持多场景（Scenes）一起检测。例如，使用 Scenes=["WEB", "CAMERA"]，即对一张图片使用两个模型同时检测，输出两套识别结果。
@@ -80,6 +82,7 @@ class DetectLabelRequest extends AbstractModel
 WEB，针对网络图片优化;
 CAMERA，针对手机摄像头拍摄图片优化;
 ALBUM，针对手机相册、网盘产品优化;
+NEWS，针对新闻、资讯、广电等行业优化
 如果不传此参数，则默认为WEB。
 
 支持多场景（Scenes）一起检测。例如，使用 Scenes=["WEB", "CAMERA"]，即对一张图片使用两个模型同时检测，输出两套识别结果。
@@ -101,6 +104,7 @@ ALBUM，针对手机相册、网盘产品优化;
 WEB，针对网络图片优化;
 CAMERA，针对手机摄像头拍摄图片优化;
 ALBUM，针对手机相册、网盘产品优化;
+NEWS，针对新闻、资讯、广电等行业优化
 如果不传此参数，则默认为WEB。
 
 支持多场景（Scenes）一起检测。例如，使用 Scenes=["WEB", "CAMERA"]，即对一张图片使用两个模型同时检测，输出两套识别结果。

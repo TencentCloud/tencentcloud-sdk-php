@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubProductCode() 获取子产品编码
  * @method void setSubProductCode(string $SubProductCode) 设置子产品编码
+ * @method string getBigDealId() 获取大订单号
+ * @method void setBigDealId(string $BigDealId) 设置大订单号
  */
 class Deal extends AbstractModel
 {
@@ -153,6 +155,11 @@ class Deal extends AbstractModel
     public $SubProductCode;
 
     /**
+     * @var string 大订单号
+     */
+    public $BigDealId;
+
+    /**
      * @param string $OrderId 订单号
      * @param integer $Status 订单状态
      * @param string $Payer 支付者
@@ -172,6 +179,7 @@ class Deal extends AbstractModel
      * @param string $ProductCode 产品编码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubProductCode 子产品编码
+     * @param string $BigDealId 大订单号
      */
     function __construct()
     {
@@ -261,6 +269,10 @@ class Deal extends AbstractModel
 
         if (array_key_exists("SubProductCode",$param) and $param["SubProductCode"] !== null) {
             $this->SubProductCode = $param["SubProductCode"];
+        }
+
+        if (array_key_exists("BigDealId",$param) and $param["BigDealId"] !== null) {
+            $this->BigDealId = $param["BigDealId"];
         }
     }
 }

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayerCountryCode(string $PayerCountryCode) 设置付款人常驻国家或地区编码 (见常见问题-国家/地区编码)
  * @method string getPayerContactName() 获取付款人联系人名称
  * @method void setPayerContactName(string $PayerContactName) 设置付款人联系人名称
- * @method string getPayerContactNumber() 获取付款人联系电话 (PayerType=CORPORATE 必填)
- * @method void setPayerContactNumber(string $PayerContactNumber) 设置付款人联系电话 (PayerType=CORPORATE 必填)
+ * @method string getPayerContactNumber() 获取付款人联系电话
+ * @method void setPayerContactNumber(string $PayerContactNumber) 设置付款人联系电话
  * @method string getPayerEmailAddress() 获取付款人联系邮箱
  * @method void setPayerEmailAddress(string $PayerEmailAddress) 设置付款人联系邮箱
  * @method string getProfile() 获取接入环境。沙箱环境填sandbox
@@ -79,7 +79,7 @@ class ApplyPayerInfoRequest extends AbstractModel
     public $PayerContactName;
 
     /**
-     * @var string 付款人联系电话 (PayerType=CORPORATE 必填)
+     * @var string 付款人联系电话
      */
     public $PayerContactNumber;
 
@@ -101,7 +101,7 @@ class ApplyPayerInfoRequest extends AbstractModel
      * @param string $PayerIdNo 付款人证件号
      * @param string $PayerCountryCode 付款人常驻国家或地区编码 (见常见问题-国家/地区编码)
      * @param string $PayerContactName 付款人联系人名称
-     * @param string $PayerContactNumber 付款人联系电话 (PayerType=CORPORATE 必填)
+     * @param string $PayerContactNumber 付款人联系电话
      * @param string $PayerEmailAddress 付款人联系邮箱
      * @param string $Profile 接入环境。沙箱环境填sandbox
      */

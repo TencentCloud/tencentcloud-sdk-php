@@ -20,17 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PayDeals请求参数结构体
  *
- * @method array getOrderIds() 获取需要支付的一个或者多个订单号
- * @method void setOrderIds(array $OrderIds) 设置需要支付的一个或者多个订单号
+ * @method array getOrderIds() 获取需要支付的一个或者多个子订单号，与BigDealIds字段两者必须且仅传一个参数
+ * @method void setOrderIds(array $OrderIds) 设置需要支付的一个或者多个子订单号，与BigDealIds字段两者必须且仅传一个参数
  * @method integer getAutoVoucher() 获取是否自动使用代金券,1:是,0否,默认0
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券,1:是,0否,默认0
  * @method array getVoucherIds() 获取代金券ID列表,目前仅支持指定一张代金券
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表,目前仅支持指定一张代金券
+ * @method array getBigDealIds() 获取需要支付的一个或者多个大订单号，与OrderIds字段两者必须且仅传一个参数
+ * @method void setBigDealIds(array $BigDealIds) 设置需要支付的一个或者多个大订单号，与OrderIds字段两者必须且仅传一个参数
  */
 class PayDealsRequest extends AbstractModel
 {
     /**
-     * @var array 需要支付的一个或者多个订单号
+     * @var array 需要支付的一个或者多个子订单号，与BigDealIds字段两者必须且仅传一个参数
      */
     public $OrderIds;
 
@@ -45,9 +47,15 @@ class PayDealsRequest extends AbstractModel
     public $VoucherIds;
 
     /**
-     * @param array $OrderIds 需要支付的一个或者多个订单号
+     * @var array 需要支付的一个或者多个大订单号，与OrderIds字段两者必须且仅传一个参数
+     */
+    public $BigDealIds;
+
+    /**
+     * @param array $OrderIds 需要支付的一个或者多个子订单号，与BigDealIds字段两者必须且仅传一个参数
      * @param integer $AutoVoucher 是否自动使用代金券,1:是,0否,默认0
      * @param array $VoucherIds 代金券ID列表,目前仅支持指定一张代金券
+     * @param array $BigDealIds 需要支付的一个或者多个大订单号，与OrderIds字段两者必须且仅传一个参数
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class PayDealsRequest extends AbstractModel
 
         if (array_key_exists("VoucherIds",$param) and $param["VoucherIds"] !== null) {
             $this->VoucherIds = $param["VoucherIds"];
+        }
+
+        if (array_key_exists("BigDealIds",$param) and $param["BigDealIds"] !== null) {
+            $this->BigDealIds = $param["BigDealIds"];
         }
     }
 }

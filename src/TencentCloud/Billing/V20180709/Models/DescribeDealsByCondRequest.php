@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
 12：支付中
  * @method string getOrderId() 获取订单号
  * @method void setOrderId(string $OrderId) 设置订单号
+ * @method string getBigDealId() 获取大订单号
+ * @method void setBigDealId(string $BigDealId) 设置大订单号
  */
 class DescribeDealsByCondRequest extends AbstractModel
 {
@@ -102,6 +104,11 @@ class DescribeDealsByCondRequest extends AbstractModel
     public $OrderId;
 
     /**
+     * @var string 大订单号
+     */
+    public $BigDealId;
+
+    /**
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
      * @param integer $Limit 一页多少条数据，默认是20条，最大不超过1000
@@ -120,6 +127,7 @@ class DescribeDealsByCondRequest extends AbstractModel
 11：代付拒绝
 12：支付中
      * @param string $OrderId 订单号
+     * @param string $BigDealId 大订单号
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeDealsByCondRequest extends AbstractModel
 
         if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
             $this->OrderId = $param["OrderId"];
+        }
+
+        if (array_key_exists("BigDealId",$param) and $param["BigDealId"] !== null) {
+            $this->BigDealId = $param["BigDealId"];
         }
     }
 }

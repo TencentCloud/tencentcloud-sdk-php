@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAutoDegrade(boolean $IsAutoDegrade) 设置是否到期自动降为免费版
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEnvChannel() 获取环境渠道
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnvChannel(string $EnvChannel) 设置环境渠道
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnvInfo extends AbstractModel
 {
@@ -149,6 +153,12 @@ class EnvInfo extends AbstractModel
     public $IsAutoDegrade;
 
     /**
+     * @var string 环境渠道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnvChannel;
+
+    /**
      * @param string $EnvId 账户下该环境唯一标识
      * @param string $Source 环境来源。包含以下取值：
 <li>miniapp：微信小程序</li>
@@ -171,6 +181,8 @@ class EnvInfo extends AbstractModel
      * @param array $StaticStorages 静态资源信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsAutoDegrade 是否到期自动降为免费版
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EnvChannel 环境渠道
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -265,6 +277,10 @@ class EnvInfo extends AbstractModel
 
         if (array_key_exists("IsAutoDegrade",$param) and $param["IsAutoDegrade"] !== null) {
             $this->IsAutoDegrade = $param["IsAutoDegrade"];
+        }
+
+        if (array_key_exists("EnvChannel",$param) and $param["EnvChannel"] !== null) {
+            $this->EnvChannel = $param["EnvChannel"];
         }
     }
 }

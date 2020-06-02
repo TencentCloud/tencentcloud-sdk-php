@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdlFiles(array $IdlFiles) 设置用户选定的建表格IDL文件列表
  * @method array getSelectedTables() 获取待创建表格信息列表
  * @method void setSelectedTables(array $SelectedTables) 设置待创建表格信息列表
+ * @method array getResourceTags() 获取表格标签列表
+ * @method void setResourceTags(array $ResourceTags) 设置表格标签列表
  */
 class CreateTablesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateTablesRequest extends AbstractModel
     public $SelectedTables;
 
     /**
+     * @var array 表格标签列表
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $ClusterId 待创建表格所属集群ID
      * @param array $IdlFiles 用户选定的建表格IDL文件列表
      * @param array $SelectedTables 待创建表格信息列表
+     * @param array $ResourceTags 表格标签列表
      */
     function __construct()
     {
@@ -81,6 +89,15 @@ class CreateTablesRequest extends AbstractModel
                 $obj = new SelectedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->SelectedTables, $obj);
+            }
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new TagInfoUnit();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
             }
         }
     }

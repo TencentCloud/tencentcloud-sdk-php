@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getZoneInstanceCountISPSet() 获取需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100
  * @method void setZoneInstanceCountISPSet(array $ZoneInstanceCountISPSet) 设置需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100
- * @method string getModuleId() 获取模块ID
- * @method void setModuleId(string $ModuleId) 设置模块ID
  * @method string getPassword() 获取实例登录密码。不同操作系统类型密码复杂度限制不一样，具体如下：
 Linux实例密码必须8到30位，至少包括两项[a-z]，[A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? / ]中的特殊符。Windows实例密码必须12到30位，至少包括三项[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? /]中的特殊符号。
  * @method void setPassword(string $Password) 设置实例登录密码。不同操作系统类型密码复杂度限制不一样，具体如下：
 Linux实例密码必须8到30位，至少包括两项[a-z]，[A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? / ]中的特殊符。Windows实例密码必须12到30位，至少包括三项[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? /]中的特殊符号。
- * @method integer getInternetMaxBandwidthOut() 获取公网出带宽上限，单位：Mbps
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网出带宽上限，单位：Mbps
- * @method string getImageId() 获取镜像ID，不传则使用模块下的默认值
- * @method void setImageId(string $ImageId) 设置镜像ID，不传则使用模块下的默认值
+ * @method integer getInternetMaxBandwidthOut() 获取公网出带宽上限，单位：Mbps。如果未传该参数或者传的值为0，则使用模块下的默认值
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网出带宽上限，单位：Mbps。如果未传该参数或者传的值为0，则使用模块下的默认值
+ * @method string getModuleId() 获取模块ID。如果未传该参数，则必须传ImageId，InstanceType，DataDiskSize，InternetMaxBandwidthOut参数
+ * @method void setModuleId(string $ModuleId) 设置模块ID。如果未传该参数，则必须传ImageId，InstanceType，DataDiskSize，InternetMaxBandwidthOut参数
+ * @method string getImageId() 获取镜像ID。如果未传该参数或者传的值为空，则使用模块下的默认值
+ * @method void setImageId(string $ImageId) 设置镜像ID。如果未传该参数或者传的值为空，则使用模块下的默认值
  * @method string getInstanceName() 获取实例显示名称。
 不指定实例显示名称则默认显示‘未命名’。
 购买多台实例，如果指定模式串{R:x}，表示生成数字[x, x+n-1]，其中n表示购买实例的数量，例如server\_{R:3}，购买1台时，实例显示名称为server\_3；购买2台时，实例显示名称分别为server\_3，server\_4。
@@ -62,6 +62,10 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
  * @method void setTagSpecification(array $TagSpecification) 设置标签列表
  * @method string getUserData() 获取提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB
  * @method void setUserData(string $UserData) 设置提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB
+ * @method string getInstanceType() 获取机型。如果未传该参数或者传的值为空，则使用模块下的默认值
+ * @method void setInstanceType(string $InstanceType) 设置机型。如果未传该参数或者传的值为空，则使用模块下的默认值
+ * @method integer getDataDiskSize() 获取数据盘大小，单位是G。如果未传该参数或者传的值为0，则使用模块下的默认值
+ * @method void setDataDiskSize(integer $DataDiskSize) 设置数据盘大小，单位是G。如果未传该参数或者传的值为0，则使用模块下的默认值
  */
 class RunInstancesRequest extends AbstractModel
 {
@@ -71,23 +75,23 @@ class RunInstancesRequest extends AbstractModel
     public $ZoneInstanceCountISPSet;
 
     /**
-     * @var string 模块ID
-     */
-    public $ModuleId;
-
-    /**
      * @var string 实例登录密码。不同操作系统类型密码复杂度限制不一样，具体如下：
 Linux实例密码必须8到30位，至少包括两项[a-z]，[A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? / ]中的特殊符。Windows实例密码必须12到30位，至少包括三项[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? /]中的特殊符号。
      */
     public $Password;
 
     /**
-     * @var integer 公网出带宽上限，单位：Mbps
+     * @var integer 公网出带宽上限，单位：Mbps。如果未传该参数或者传的值为0，则使用模块下的默认值
      */
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var string 镜像ID，不传则使用模块下的默认值
+     * @var string 模块ID。如果未传该参数，则必须传ImageId，InstanceType，DataDiskSize，InternetMaxBandwidthOut参数
+     */
+    public $ModuleId;
+
+    /**
+     * @var string 镜像ID。如果未传该参数或者传的值为空，则使用模块下的默认值
      */
     public $ImageId;
 
@@ -131,12 +135,22 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
     public $UserData;
 
     /**
+     * @var string 机型。如果未传该参数或者传的值为空，则使用模块下的默认值
+     */
+    public $InstanceType;
+
+    /**
+     * @var integer 数据盘大小，单位是G。如果未传该参数或者传的值为0，则使用模块下的默认值
+     */
+    public $DataDiskSize;
+
+    /**
      * @param array $ZoneInstanceCountISPSet 需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100
-     * @param string $ModuleId 模块ID
      * @param string $Password 实例登录密码。不同操作系统类型密码复杂度限制不一样，具体如下：
 Linux实例密码必须8到30位，至少包括两项[a-z]，[A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? / ]中的特殊符。Windows实例密码必须12到30位，至少包括三项[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? /]中的特殊符号。
-     * @param integer $InternetMaxBandwidthOut 公网出带宽上限，单位：Mbps
-     * @param string $ImageId 镜像ID，不传则使用模块下的默认值
+     * @param integer $InternetMaxBandwidthOut 公网出带宽上限，单位：Mbps。如果未传该参数或者传的值为0，则使用模块下的默认值
+     * @param string $ModuleId 模块ID。如果未传该参数，则必须传ImageId，InstanceType，DataDiskSize，InternetMaxBandwidthOut参数
+     * @param string $ImageId 镜像ID。如果未传该参数或者传的值为空，则使用模块下的默认值
      * @param string $InstanceName 实例显示名称。
 不指定实例显示名称则默认显示‘未命名’。
 购买多台实例，如果指定模式串{R:x}，表示生成数字[x, x+n-1]，其中n表示购买实例的数量，例如server\_{R:3}，购买1台时，实例显示名称为server\_3；购买2台时，实例显示名称分别为server\_3，server\_4。
@@ -152,6 +166,8 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
      * @param EnhancedService $EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认公共镜像开启云监控、云安全服务
      * @param array $TagSpecification 标签列表
      * @param string $UserData 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB
+     * @param string $InstanceType 机型。如果未传该参数或者传的值为空，则使用模块下的默认值
+     * @param integer $DataDiskSize 数据盘大小，单位是G。如果未传该参数或者传的值为0，则使用模块下的默认值
      */
     function __construct()
     {
@@ -175,16 +191,16 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
             }
         }
 
-        if (array_key_exists("ModuleId",$param) and $param["ModuleId"] !== null) {
-            $this->ModuleId = $param["ModuleId"];
-        }
-
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
         }
 
         if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
             $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
+        }
+
+        if (array_key_exists("ModuleId",$param) and $param["ModuleId"] !== null) {
+            $this->ModuleId = $param["ModuleId"];
         }
 
         if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
@@ -219,6 +235,14 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
 
         if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
             $this->UserData = $param["UserData"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("DataDiskSize",$param) and $param["DataDiskSize"] !== null) {
+            $this->DataDiskSize = $param["DataDiskSize"];
         }
     }
 }

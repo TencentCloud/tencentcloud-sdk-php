@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetActionSequence请求参数结构体
+ * FlushInstanceRouterConfig请求参数结构体
  *
- * @method string getActionType() 获取取值FourAction时 返回四种动作的动作序列
- * @method void setActionType(string $ActionType) 设置取值FourAction时 返回四种动作的动作序列
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
  */
-class GetActionSequenceRequest extends AbstractModel
+class FlushInstanceRouterConfigRequest extends AbstractModel
 {
     /**
-     * @var string 取值FourAction时 返回四种动作的动作序列
+     * @var string 实例ID
      */
-    public $ActionType;
+    public $InstanceId;
 
     /**
-     * @param string $ActionType 取值FourAction时 返回四种动作的动作序列
+     * @param string $InstanceId 实例ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class GetActionSequenceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
-            $this->ActionType = $param["ActionType"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

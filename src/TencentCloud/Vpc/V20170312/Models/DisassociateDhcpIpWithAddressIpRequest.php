@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetActionSequence请求参数结构体
+ * DisassociateDhcpIpWithAddressIp请求参数结构体
  *
- * @method string getActionType() 获取取值FourAction时 返回四种动作的动作序列
- * @method void setActionType(string $ActionType) 设置取值FourAction时 返回四种动作的动作序列
+ * @method string getDhcpIpId() 获取`DhcpIp`唯一`ID`，形如：`dhcpip-9o233uri`。必须是已绑定`EIP`的`DhcpIp`。
+ * @method void setDhcpIpId(string $DhcpIpId) 设置`DhcpIp`唯一`ID`，形如：`dhcpip-9o233uri`。必须是已绑定`EIP`的`DhcpIp`。
  */
-class GetActionSequenceRequest extends AbstractModel
+class DisassociateDhcpIpWithAddressIpRequest extends AbstractModel
 {
     /**
-     * @var string 取值FourAction时 返回四种动作的动作序列
+     * @var string `DhcpIp`唯一`ID`，形如：`dhcpip-9o233uri`。必须是已绑定`EIP`的`DhcpIp`。
      */
-    public $ActionType;
+    public $DhcpIpId;
 
     /**
-     * @param string $ActionType 取值FourAction时 返回四种动作的动作序列
+     * @param string $DhcpIpId `DhcpIp`唯一`ID`，形如：`dhcpip-9o233uri`。必须是已绑定`EIP`的`DhcpIp`。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class GetActionSequenceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
-            $this->ActionType = $param["ActionType"];
+        if (array_key_exists("DhcpIpId",$param) and $param["DhcpIpId"] !== null) {
+            $this->DhcpIpId = $param["DhcpIpId"];
         }
     }
 }

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetActionSequence请求参数结构体
+ * ModifyDhcpIpAttribute返回参数结构体
  *
- * @method string getActionType() 获取取值FourAction时 返回四种动作的动作序列
- * @method void setActionType(string $ActionType) 设置取值FourAction时 返回四种动作的动作序列
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class GetActionSequenceRequest extends AbstractModel
+class ModifyDhcpIpAttributeResponse extends AbstractModel
 {
     /**
-     * @var string 取值FourAction时 返回四种动作的动作序列
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $ActionType;
+    public $RequestId;
 
     /**
-     * @param string $ActionType 取值FourAction时 返回四种动作的动作序列
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class GetActionSequenceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
-            $this->ActionType = $param["ActionType"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

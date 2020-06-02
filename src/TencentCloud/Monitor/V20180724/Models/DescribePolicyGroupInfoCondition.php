@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContinueTime(integer $ContinueTime) 设置持续多长时间触发规则会告警(单位秒)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMetricName() 获取告警指标名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetricName(string $MetricName) 设置告警指标名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribePolicyGroupInfoCondition extends AbstractModel
 {
@@ -103,6 +107,12 @@ class DescribePolicyGroupInfoCondition extends AbstractModel
     public $ContinueTime;
 
     /**
+     * @var string 告警指标名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MetricName;
+
+    /**
      * @param string $MetricShowName 指标名称
      * @param integer $Period 数据聚合周期(单位秒)
      * @param integer $MetricId 指标id
@@ -115,6 +125,8 @@ class DescribePolicyGroupInfoCondition extends AbstractModel
      * @param string $CalcValue 检测阈值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ContinueTime 持续多长时间触发规则会告警(单位秒)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MetricName 告警指标名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -168,6 +180,10 @@ class DescribePolicyGroupInfoCondition extends AbstractModel
 
         if (array_key_exists("ContinueTime",$param) and $param["ContinueTime"] !== null) {
             $this->ContinueTime = $param["ContinueTime"];
+        }
+
+        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
+            $this->MetricName = $param["MetricName"];
         }
     }
 }

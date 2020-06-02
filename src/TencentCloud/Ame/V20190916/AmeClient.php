@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ame\V20190916\Models as Models;
 
 /**
+ * @method Models\DescribeItemByIdResponse DescribeItemById(Models\DescribeItemByIdRequest $req) 根据歌曲ID查询歌曲信息
  * @method Models\DescribeItemsResponse DescribeItems(Models\DescribeItemsRequest $req) 分类内容下歌曲列表获取，根据CategoryID或CategoryCode
  * @method Models\DescribeLyricResponse DescribeLyric(Models\DescribeLyricRequest $req) 根据接口的模式及歌曲ID来取得歌词信息。
  * @method Models\DescribeMusicResponse DescribeMusic(Models\DescribeMusicRequest $req) 根据接口的模式及歌曲ID来取得对应权限的歌曲播放地址等信息。

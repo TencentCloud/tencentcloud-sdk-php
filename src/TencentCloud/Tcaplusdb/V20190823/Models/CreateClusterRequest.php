@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置集群所绑定的子网实例ID，形如：subnet-pxir56ns
  * @method string getPassword() 获取集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
  * @method void setPassword(string $Password) 设置集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
+ * @method array getResourceTags() 获取集群标签列表
+ * @method void setResourceTags(array $ResourceTags) 设置集群标签列表
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateClusterRequest extends AbstractModel
     public $Password;
 
     /**
+     * @var array 集群标签列表
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $IdlType 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
      * @param string $ClusterName 集群名称，可使用中文或英文字符，最大长度32个字符
      * @param string $VpcId 集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z
      * @param string $SubnetId 集群所绑定的子网实例ID，形如：subnet-pxir56ns
      * @param string $Password 集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
+     * @param array $ResourceTags 集群标签列表
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new TagInfoUnit();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

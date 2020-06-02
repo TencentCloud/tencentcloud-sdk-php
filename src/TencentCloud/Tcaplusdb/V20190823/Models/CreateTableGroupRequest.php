@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableGroupName(string $TableGroupName) 设置表格组名称，可以采用中文、英文或数字字符，最大长度32个字符
  * @method string getTableGroupId() 获取表格组ID，可以由用户指定，但在同一个集群内不能重复，如果不指定则采用自增的模式
  * @method void setTableGroupId(string $TableGroupId) 设置表格组ID，可以由用户指定，但在同一个集群内不能重复，如果不指定则采用自增的模式
+ * @method array getResourceTags() 获取表格组标签列表
+ * @method void setResourceTags(array $ResourceTags) 设置表格组标签列表
  */
 class CreateTableGroupRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateTableGroupRequest extends AbstractModel
     public $TableGroupId;
 
     /**
+     * @var array 表格组标签列表
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $ClusterId 表格组所属集群ID
      * @param string $TableGroupName 表格组名称，可以采用中文、英文或数字字符，最大长度32个字符
      * @param string $TableGroupId 表格组ID，可以由用户指定，但在同一个集群内不能重复，如果不指定则采用自增的模式
+     * @param array $ResourceTags 表格组标签列表
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class CreateTableGroupRequest extends AbstractModel
 
         if (array_key_exists("TableGroupId",$param) and $param["TableGroupId"] !== null) {
             $this->TableGroupId = $param["TableGroupId"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new TagInfoUnit();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

@@ -39,7 +39,13 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 动作模式传参：传动作顺序(2,1 or 1,2)，需先调用接口获取动作顺序；
 静默模式传参：空。
  * @method string getOptional() 获取额外配置，传入JSON字符串。
+{
+"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+}
  * @method void setOptional(string $Optional) 设置额外配置，传入JSON字符串。
+{
+"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+}
  */
 class LivenessCompareRequest extends AbstractModel
 {
@@ -70,6 +76,9 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 
     /**
      * @var string 额外配置，传入JSON字符串。
+{
+"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+}
      */
     public $Optional;
 
@@ -84,6 +93,9 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 动作模式传参：传动作顺序(2,1 or 1,2)，需先调用接口获取动作顺序；
 静默模式传参：空。
      * @param string $Optional 额外配置，传入JSON字符串。
+{
+"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+}
      */
     function __construct()
     {

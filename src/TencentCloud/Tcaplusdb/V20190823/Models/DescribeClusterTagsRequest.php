@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetActionSequence请求参数结构体
+ * DescribeClusterTags请求参数结构体
  *
- * @method string getActionType() 获取取值FourAction时 返回四种动作的动作序列
- * @method void setActionType(string $ActionType) 设置取值FourAction时 返回四种动作的动作序列
+ * @method array getClusterIds() 获取集群ID列表
+ * @method void setClusterIds(array $ClusterIds) 设置集群ID列表
  */
-class GetActionSequenceRequest extends AbstractModel
+class DescribeClusterTagsRequest extends AbstractModel
 {
     /**
-     * @var string 取值FourAction时 返回四种动作的动作序列
+     * @var array 集群ID列表
      */
-    public $ActionType;
+    public $ClusterIds;
 
     /**
-     * @param string $ActionType 取值FourAction时 返回四种动作的动作序列
+     * @param array $ClusterIds 集群ID列表
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class GetActionSequenceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
-            $this->ActionType = $param["ActionType"];
+        if (array_key_exists("ClusterIds",$param) and $param["ClusterIds"] !== null) {
+            $this->ClusterIds = $param["ClusterIds"];
         }
     }
 }

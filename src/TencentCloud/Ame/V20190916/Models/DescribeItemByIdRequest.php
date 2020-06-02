@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetActionSequence请求参数结构体
+ * DescribeItemById请求参数结构体
  *
- * @method string getActionType() 获取取值FourAction时 返回四种动作的动作序列
- * @method void setActionType(string $ActionType) 设置取值FourAction时 返回四种动作的动作序列
+ * @method string getItemIDs() 获取歌曲ID，目前暂不支持批量查询
+ * @method void setItemIDs(string $ItemIDs) 设置歌曲ID，目前暂不支持批量查询
  */
-class GetActionSequenceRequest extends AbstractModel
+class DescribeItemByIdRequest extends AbstractModel
 {
     /**
-     * @var string 取值FourAction时 返回四种动作的动作序列
+     * @var string 歌曲ID，目前暂不支持批量查询
      */
-    public $ActionType;
+    public $ItemIDs;
 
     /**
-     * @param string $ActionType 取值FourAction时 返回四种动作的动作序列
+     * @param string $ItemIDs 歌曲ID，目前暂不支持批量查询
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class GetActionSequenceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
-            $this->ActionType = $param["ActionType"];
+        if (array_key_exists("ItemIDs",$param) and $param["ItemIDs"] !== null) {
+            $this->ItemIDs = $param["ItemIDs"];
         }
     }
 }

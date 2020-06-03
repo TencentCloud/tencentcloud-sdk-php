@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * cos地域信息
+ * 标签键和标签值
  *
- * @method string getCosRegion() 获取cos地域
- * @method void setCosRegion(string $CosRegion) 设置cos地域
- * @method string getCosRegionName() 获取地域描述
- * @method void setCosRegionName(string $CosRegionName) 设置地域描述
+ * @method string getTagKey() 获取标签键
+ * @method void setTagKey(string $TagKey) 设置标签键
+ * @method string getTagValue() 获取标签值
+ * @method void setTagValue(string $TagValue) 设置标签值
  */
-class CosRegionInfo extends AbstractModel
+class Tag extends AbstractModel
 {
     /**
-     * @var string cos地域
+     * @var string 标签键
      */
-    public $CosRegion;
+    public $TagKey;
 
     /**
-     * @var string 地域描述
+     * @var string 标签值
      */
-    public $CosRegionName;
+    public $TagValue;
 
     /**
-     * @param string $CosRegion cos地域
-     * @param string $CosRegionName 地域描述
+     * @param string $TagKey 标签键
+     * @param string $TagValue 标签值
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class CosRegionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CosRegion",$param) and $param["CosRegion"] !== null) {
-            $this->CosRegion = $param["CosRegion"];
+        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
+            $this->TagKey = $param["TagKey"];
         }
 
-        if (array_key_exists("CosRegionName",$param) and $param["CosRegionName"] !== null) {
-            $this->CosRegionName = $param["CosRegionName"];
+        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
+            $this->TagValue = $param["TagValue"];
         }
     }
 }

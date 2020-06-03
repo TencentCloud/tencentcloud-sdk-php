@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TransactionPolicy
  *
- * @method integer getFirstQueryInterval() 获取FirstQueryInterval
+ * @method integer getFirstQueryInterval() 获取第一次回查时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFirstQueryInterval(integer $FirstQueryInterval) 设置FirstQueryInterval
+ * @method void setFirstQueryInterval(integer $FirstQueryInterval) 设置第一次回查时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxQueryCount() 获取MaxQueryCount
+ * @method integer getMaxQueryCount() 获取最大查询次数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxQueryCount(integer $MaxQueryCount) 设置MaxQueryCount
+ * @method void setMaxQueryCount(integer $MaxQueryCount) 设置最大查询次数。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TransactionPolicy extends AbstractModel
 {
     /**
-     * @var integer FirstQueryInterval
+     * @var integer 第一次回查时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstQueryInterval;
 
     /**
-     * @var integer MaxQueryCount
+     * @var integer 最大查询次数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxQueryCount;
 
     /**
-     * @param integer $FirstQueryInterval FirstQueryInterval
+     * @param integer $FirstQueryInterval 第一次回查时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxQueryCount MaxQueryCount
+     * @param integer $MaxQueryCount 最大查询次数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

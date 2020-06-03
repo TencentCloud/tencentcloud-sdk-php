@@ -20,153 +20,161 @@ use TencentCloud\Common\AbstractModel;
 /**
  * topic返回信息展示字段
  *
- * @method string getTopicId() 获取TopicId
+ * @method string getTopicId() 获取主题的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicId(string $TopicId) 设置TopicId
+ * @method void setTopicId(string $TopicId) 设置主题的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTopicName() 获取TopicName
+ * @method string getTopicName() 获取主题名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicName(string $TopicName) 设置TopicName
+ * @method void setTopicName(string $TopicName) 设置主题名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMsgRetentionSeconds() 获取MsgRetentionSeconds
+ * @method integer getMsgRetentionSeconds() 获取消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) 设置MsgRetentionSeconds
+ * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) 设置消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxMsgSize() 获取MaxMsgSize
+ * @method integer getMaxMsgSize() 获取消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxMsgSize(integer $MaxMsgSize) 设置MaxMsgSize
+ * @method void setMaxMsgSize(integer $MaxMsgSize) 设置消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getQps() 获取Qps
+ * @method integer getQps() 获取每秒钟发布消息的条数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQps(integer $Qps) 设置Qps
+ * @method void setQps(integer $Qps) 设置每秒钟发布消息的条数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFilterType() 获取FilterType
+ * @method integer getFilterType() 获取描述用户创建订阅时选择的过滤策略：
+FilterType = 1表示用户使用 FilterTag 标签过滤;
+FilterType = 2表示用户使用 BindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFilterType(integer $FilterType) 设置FilterType
+ * @method void setFilterType(integer $FilterType) 设置描述用户创建订阅时选择的过滤策略：
+FilterType = 1表示用户使用 FilterTag 标签过滤;
+FilterType = 2表示用户使用 BindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCreateTime() 获取CreateTime
+ * @method integer getCreateTime() 获取主题的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(integer $CreateTime) 设置CreateTime
+ * @method void setCreateTime(integer $CreateTime) 设置主题的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLastModifyTime() 获取LastModifyTime
+ * @method integer getLastModifyTime() 获取最后一次修改主题属性的时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastModifyTime(integer $LastModifyTime) 设置LastModifyTime
+ * @method void setLastModifyTime(integer $LastModifyTime) 设置最后一次修改主题属性的时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMsgCount() 获取MsgCount
+ * @method integer getMsgCount() 获取当前该主题中消息数目（消息堆积数）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMsgCount(integer $MsgCount) 设置MsgCount
+ * @method void setMsgCount(integer $MsgCount) 设置当前该主题中消息数目（消息堆积数）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCreateUin() 获取CreateUin
+ * @method integer getCreateUin() 获取创建者 Uin，CAM 鉴权 resource 由该字段组合而成。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateUin(integer $CreateUin) 设置CreateUin
+ * @method void setCreateUin(integer $CreateUin) 设置创建者 Uin，CAM 鉴权 resource 由该字段组合而成。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取Tags
+ * @method array getTags() 获取关联的标签。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置Tags
+ * @method void setTags(array $Tags) 设置关联的标签。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getTrace() 获取主题是否开启消息轨迹，true表示开启，false表示不开启
+ * @method boolean getTrace() 获取主题是否开启消息轨迹。true表示开启，false表示不开启
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTrace(boolean $Trace) 设置主题是否开启消息轨迹，true表示开启，false表示不开启
+ * @method void setTrace(boolean $Trace) 设置主题是否开启消息轨迹。true表示开启，false表示不开启
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicSet extends AbstractModel
 {
     /**
-     * @var string TopicId
+     * @var string 主题的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
-     * @var string TopicName
+     * @var string 主题名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicName;
 
     /**
-     * @var integer MsgRetentionSeconds
+     * @var integer 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgRetentionSeconds;
 
     /**
-     * @var integer MaxMsgSize
+     * @var integer 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxMsgSize;
 
     /**
-     * @var integer Qps
+     * @var integer 每秒钟发布消息的条数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Qps;
 
     /**
-     * @var integer FilterType
+     * @var integer 描述用户创建订阅时选择的过滤策略：
+FilterType = 1表示用户使用 FilterTag 标签过滤;
+FilterType = 2表示用户使用 BindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilterType;
 
     /**
-     * @var integer CreateTime
+     * @var integer 主题的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var integer LastModifyTime
+     * @var integer 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastModifyTime;
 
     /**
-     * @var integer MsgCount
+     * @var integer 当前该主题中消息数目（消息堆积数）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgCount;
 
     /**
-     * @var integer CreateUin
+     * @var integer 创建者 Uin，CAM 鉴权 resource 由该字段组合而成。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateUin;
 
     /**
-     * @var array Tags
+     * @var array 关联的标签。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var boolean 主题是否开启消息轨迹，true表示开启，false表示不开启
+     * @var boolean 主题是否开启消息轨迹。true表示开启，false表示不开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Trace;
 
     /**
-     * @param string $TopicId TopicId
+     * @param string $TopicId 主题的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TopicName TopicName
+     * @param string $TopicName 主题名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MsgRetentionSeconds MsgRetentionSeconds
+     * @param integer $MsgRetentionSeconds 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxMsgSize MaxMsgSize
+     * @param integer $MaxMsgSize 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Qps Qps
+     * @param integer $Qps 每秒钟发布消息的条数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FilterType FilterType
+     * @param integer $FilterType 描述用户创建订阅时选择的过滤策略：
+FilterType = 1表示用户使用 FilterTag 标签过滤;
+FilterType = 2表示用户使用 BindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CreateTime CreateTime
+     * @param integer $CreateTime 主题的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LastModifyTime LastModifyTime
+     * @param integer $LastModifyTime 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MsgCount MsgCount
+     * @param integer $MsgCount 当前该主题中消息数目（消息堆积数）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CreateUin CreateUin
+     * @param integer $CreateUin 创建者 Uin，CAM 鉴权 resource 由该字段组合而成。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags Tags
+     * @param array $Tags 关联的标签。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Trace 主题是否开启消息轨迹，true表示开启，false表示不开启
+     * @param boolean $Trace 主题是否开启消息轨迹。true表示开启，false表示不开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

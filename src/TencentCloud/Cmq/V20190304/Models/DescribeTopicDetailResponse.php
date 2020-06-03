@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicDetail返回参数结构体
  *
- * @method integer getTotalCount() 获取TotalCount
- * @method void setTotalCount(integer $TotalCount) 设置TotalCount
- * @method array getTopicSet() 获取TopicSet
- * @method void setTopicSet(array $TopicSet) 设置TopicSet
+ * @method integer getTotalCount() 获取主题列表总数。
+ * @method void setTotalCount(integer $TotalCount) 设置主题列表总数。
+ * @method array getTopicSet() 获取主题详情列表。
+ * @method void setTopicSet(array $TopicSet) 设置主题详情列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTopicDetailResponse extends AbstractModel
 {
     /**
-     * @var integer TotalCount
+     * @var integer 主题列表总数。
      */
     public $TotalCount;
 
     /**
-     * @var array TopicSet
+     * @var array 主题详情列表。
      */
     public $TopicSet;
 
@@ -45,8 +45,8 @@ class DescribeTopicDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount TotalCount
-     * @param array $TopicSet TopicSet
+     * @param integer $TotalCount 主题列表总数。
+     * @param array $TopicSet 主题详情列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlgorithm(string $Algorithm) 设置创建密钥所有的算法类型，支持的取值：AES_256,SM4
  * @method string getDescription() 获取密钥的描述，最大1024字节
  * @method void setDescription(string $Description) 设置密钥的描述，最大1024字节
+ * @method array getTags() 获取标签列表
+ * @method void setTags(array $Tags) 设置标签列表
  */
 class CreateWhiteBoxKeyRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateWhiteBoxKeyRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var array 标签列表
+     */
+    public $Tags;
+
+    /**
      * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字母数字 - _ 的组合，首字符必须为字母或者数字。Alias不可重复。
      * @param string $Algorithm 创建密钥所有的算法类型，支持的取值：AES_256,SM4
      * @param string $Description 密钥的描述，最大1024字节
+     * @param array $Tags 标签列表
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class CreateWhiteBoxKeyRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

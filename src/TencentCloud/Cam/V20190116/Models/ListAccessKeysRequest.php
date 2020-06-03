@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * cos地域信息
+ * ListAccessKeys请求参数结构体
  *
- * @method string getCosRegion() 获取cos地域
- * @method void setCosRegion(string $CosRegion) 设置cos地域
- * @method string getCosRegionName() 获取地域描述
- * @method void setCosRegionName(string $CosRegionName) 设置地域描述
+ * @method integer getTargetUin() 获取指定用户Uin，不填默认列出当前用户访问密钥
+ * @method void setTargetUin(integer $TargetUin) 设置指定用户Uin，不填默认列出当前用户访问密钥
  */
-class CosRegionInfo extends AbstractModel
+class ListAccessKeysRequest extends AbstractModel
 {
     /**
-     * @var string cos地域
+     * @var integer 指定用户Uin，不填默认列出当前用户访问密钥
      */
-    public $CosRegion;
+    public $TargetUin;
 
     /**
-     * @var string 地域描述
-     */
-    public $CosRegionName;
-
-    /**
-     * @param string $CosRegion cos地域
-     * @param string $CosRegionName 地域描述
+     * @param integer $TargetUin 指定用户Uin，不填默认列出当前用户访问密钥
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class CosRegionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CosRegion",$param) and $param["CosRegion"] !== null) {
-            $this->CosRegion = $param["CosRegion"];
-        }
-
-        if (array_key_exists("CosRegionName",$param) and $param["CosRegionName"] !== null) {
-            $this->CosRegionName = $param["CosRegionName"];
+        if (array_key_exists("TargetUin",$param) and $param["TargetUin"] !== null) {
+            $this->TargetUin = $param["TargetUin"];
         }
     }
 }

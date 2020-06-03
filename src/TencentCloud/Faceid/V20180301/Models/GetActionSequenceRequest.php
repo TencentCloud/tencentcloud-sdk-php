@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetActionSequence请求参数结构体
  *
- * @method string getActionType() 获取取值FourAction时 返回四种动作的动作序列
- * @method void setActionType(string $ActionType) 设置取值FourAction时 返回四种动作的动作序列
+ * @method string getActionType() 获取默认不需要使用
+ * @method void setActionType(string $ActionType) 设置默认不需要使用
  */
 class GetActionSequenceRequest extends AbstractModel
 {
     /**
-     * @var string 取值FourAction时 返回四种动作的动作序列
+     * @var string 默认不需要使用
      */
     public $ActionType;
 
     /**
-     * @param string $ActionType 取值FourAction时 返回四种动作的动作序列
+     * @param string $ActionType 默认不需要使用
      */
     function __construct()
     {

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeQueueDetail返回参数结构体
  *
- * @method integer getTotalCount() 获取queue总数量
- * @method void setTotalCount(integer $TotalCount) 设置queue总数量
- * @method array getQueueSet() 获取queue列表
- * @method void setQueueSet(array $QueueSet) 设置queue列表
+ * @method integer getTotalCount() 获取总队列数。
+ * @method void setTotalCount(integer $TotalCount) 设置总队列数。
+ * @method array getQueueSet() 获取队列详情列表。
+ * @method void setQueueSet(array $QueueSet) 设置队列详情列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeQueueDetailResponse extends AbstractModel
 {
     /**
-     * @var integer queue总数量
+     * @var integer 总队列数。
      */
     public $TotalCount;
 
     /**
-     * @var array queue列表
+     * @var array 队列详情列表。
      */
     public $QueueSet;
 
@@ -45,8 +45,8 @@ class DescribeQueueDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount queue总数量
-     * @param array $QueueSet queue列表
+     * @param integer $TotalCount 总队列数。
+     * @param array $QueueSet 队列详情列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

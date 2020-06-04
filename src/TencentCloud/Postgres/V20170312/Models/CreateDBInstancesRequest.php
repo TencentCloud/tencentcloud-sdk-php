@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置续费标记：0-正常续费（默认）；1-自动续费；
  * @method integer getActivityId() 获取活动ID
  * @method void setActivityId(integer $ActivityId) 设置活动ID
- * @method string getName() 获取实例名
- * @method void setName(string $Name) 设置实例名
+ * @method string getName() 获取实例名(后续支持)
+ * @method void setName(string $Name) 设置实例名(后续支持)
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -124,7 +124,7 @@ class CreateDBInstancesRequest extends AbstractModel
     public $ActivityId;
 
     /**
-     * @var string 实例名
+     * @var string 实例名(后续支持)
      */
     public $Name;
 
@@ -143,7 +143,7 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param string $SubnetId 私有网络子网ID。
      * @param integer $AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费；
      * @param integer $ActivityId 活动ID
-     * @param string $Name 实例名
+     * @param string $Name 实例名(后续支持)
      */
     function __construct()
     {

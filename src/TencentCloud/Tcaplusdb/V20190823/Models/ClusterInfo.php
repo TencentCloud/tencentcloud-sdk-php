@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getRegion() 获取集群所在地域
  * @method void setRegion(string $Region) 设置集群所在地域
- * @method string getIdlType() 获取集群数据描述语言类型，如：`PROTO`,`TDR`或`MIX`
- * @method void setIdlType(string $IdlType) 设置集群数据描述语言类型，如：`PROTO`,`TDR`或`MIX`
+ * @method string getIdlType() 获取集群数据描述语言类型，如：`PROTO`,`TDR`
+ * @method void setIdlType(string $IdlType) 设置集群数据描述语言类型，如：`PROTO`,`TDR`
  * @method string getNetworkType() 获取网络类型
  * @method void setNetworkType(string $NetworkType) 设置网络类型
  * @method string getVpcId() 获取集群关联的用户私有网络实例ID
@@ -69,7 +69,7 @@ class ClusterInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var string 集群数据描述语言类型，如：`PROTO`,`TDR`或`MIX`
+     * @var string 集群数据描述语言类型，如：`PROTO`,`TDR`
      */
     public $IdlType;
 
@@ -128,7 +128,7 @@ class ClusterInfo extends AbstractModel
      * @param string $ClusterName 集群名称
      * @param string $ClusterId 集群ID
      * @param string $Region 集群所在地域
-     * @param string $IdlType 集群数据描述语言类型，如：`PROTO`,`TDR`或`MIX`
+     * @param string $IdlType 集群数据描述语言类型，如：`PROTO`,`TDR`
      * @param string $NetworkType 网络类型
      * @param string $VpcId 集群关联的用户私有网络实例ID
      * @param string $SubnetId 集群关联的用户子网实例ID

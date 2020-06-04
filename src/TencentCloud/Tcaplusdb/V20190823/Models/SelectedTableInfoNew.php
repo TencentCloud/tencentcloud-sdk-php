@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListElementNum(integer $ListElementNum) 设置LIST表元素个数
  * @method integer getReservedVolume() 获取表格预留容量（GB）
  * @method void setReservedVolume(integer $ReservedVolume) 设置表格预留容量（GB）
- * @method integer getReservedReadQps() 获取表格预留读QPS
- * @method void setReservedReadQps(integer $ReservedReadQps) 设置表格预留读QPS
- * @method integer getReservedWriteQps() 获取表格预留写QPS
- * @method void setReservedWriteQps(integer $ReservedWriteQps) 设置表格预留写QPS
+ * @method integer getReservedReadQps() 获取表格预留读CU
+ * @method void setReservedReadQps(integer $ReservedReadQps) 设置表格预留读CU
+ * @method integer getReservedWriteQps() 获取表格预留写CU
+ * @method void setReservedWriteQps(integer $ReservedWriteQps) 设置表格预留写CU
  * @method string getMemo() 获取表格备注信息
  * @method void setMemo(string $Memo) 设置表格备注信息
  * @method string getFileName() 获取Key回档文件名，回档专用
@@ -87,12 +87,12 @@ class SelectedTableInfoNew extends AbstractModel
     public $ReservedVolume;
 
     /**
-     * @var integer 表格预留读QPS
+     * @var integer 表格预留读CU
      */
     public $ReservedReadQps;
 
     /**
-     * @var integer 表格预留写QPS
+     * @var integer 表格预留写CU
      */
     public $ReservedWriteQps;
 
@@ -129,8 +129,8 @@ class SelectedTableInfoNew extends AbstractModel
      * @param string $TableType 表格数据结构类型：`GENERIC`或`LIST`
      * @param integer $ListElementNum LIST表元素个数
      * @param integer $ReservedVolume 表格预留容量（GB）
-     * @param integer $ReservedReadQps 表格预留读QPS
-     * @param integer $ReservedWriteQps 表格预留写QPS
+     * @param integer $ReservedReadQps 表格预留读CU
+     * @param integer $ReservedWriteQps 表格预留写CU
      * @param string $Memo 表格备注信息
      * @param string $FileName Key回档文件名，回档专用
      * @param string $FileExtType Key回档文件扩展名，回档专用

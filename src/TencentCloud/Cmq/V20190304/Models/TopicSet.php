@@ -68,9 +68,9 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置关联的标签。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getTrace() 获取主题是否开启消息轨迹。true表示开启，false表示不开启
+ * @method boolean getTrace() 获取消息轨迹。true表示开启，false表示不开启。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTrace(boolean $Trace) 设置主题是否开启消息轨迹。true表示开启，false表示不开启
+ * @method void setTrace(boolean $Trace) 设置消息轨迹。true表示开启，false表示不开启。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicSet extends AbstractModel
@@ -144,7 +144,7 @@ FilterType = 2表示用户使用 BindingKey 过滤。
     public $Tags;
 
     /**
-     * @var boolean 主题是否开启消息轨迹。true表示开启，false表示不开启
+     * @var boolean 消息轨迹。true表示开启，false表示不开启。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Trace;
@@ -174,7 +174,7 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 关联的标签。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Trace 主题是否开启消息轨迹。true表示开启，false表示不开启
+     * @param boolean $Trace 消息轨迹。true表示开启，false表示不开启。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

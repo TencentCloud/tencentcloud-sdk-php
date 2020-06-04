@@ -80,13 +80,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReservedVolume(integer $ReservedVolume) 设置表格预留容量（GB）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getReservedReadQps() 获取表格预留读QPS
+ * @method integer getReservedReadQps() 获取表格预留读CU
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReservedReadQps(integer $ReservedReadQps) 设置表格预留读QPS
+ * @method void setReservedReadQps(integer $ReservedReadQps) 设置表格预留读CU
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getReservedWriteQps() 获取表格预留写QPS
+ * @method integer getReservedWriteQps() 获取表格预留写CU
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReservedWriteQps(integer $ReservedWriteQps) 设置表格预留写QPS
+ * @method void setReservedWriteQps(integer $ReservedWriteQps) 设置表格预留写CU
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTableSize() 获取表格实际数据量大小（MB）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -222,13 +222,13 @@ class TableInfoNew extends AbstractModel
     public $ReservedVolume;
 
     /**
-     * @var integer 表格预留读QPS
+     * @var integer 表格预留读CU
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReservedReadQps;
 
     /**
-     * @var integer 表格预留写QPS
+     * @var integer 表格预留写CU
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReservedWriteQps;
@@ -324,9 +324,9 @@ class TableInfoNew extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReservedVolume 表格预留容量（GB）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ReservedReadQps 表格预留读QPS
+     * @param integer $ReservedReadQps 表格预留读CU
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ReservedWriteQps 表格预留写QPS
+     * @param integer $ReservedWriteQps 表格预留写CU
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TableSize 表格实际数据量大小（MB）
 注意：此字段可能返回 null，表示取不到有效值。

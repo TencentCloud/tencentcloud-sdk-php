@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置查询开始时间，形如2018-06-10 17:06:38，起始时间不得小于7天以前
  * @method string getEndTime() 获取查询结束时间，形如2018-06-10 17:06:38
  * @method void setEndTime(string $EndTime) 设置查询结束时间，形如2018-06-10 17:06:38
- * @method integer getLimit() 获取备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。
- * @method void setLimit(integer $Limit) 设置备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。
+ * @method integer getLimit() 获取备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。（当该参数不传或者传0时按默认值处理）
+ * @method void setLimit(integer $Limit) 设置备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。（当该参数不传或者传0时按默认值处理）
  * @method integer getOffset() 获取返回结果中的第几页，从第0页开始。默认为0。
  * @method void setOffset(integer $Offset) 设置返回结果中的第几页，从第0页开始。默认为0。
  */
@@ -56,7 +56,7 @@ class DescribeDBBackupsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。
+     * @var integer 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。（当该参数不传或者传0时按默认值处理）
      */
     public $Limit;
 
@@ -70,7 +70,7 @@ class DescribeDBBackupsRequest extends AbstractModel
      * @param integer $Type 备份方式（1-全量）。目前只支持全量，取值为1。
      * @param string $StartTime 查询开始时间，形如2018-06-10 17:06:38，起始时间不得小于7天以前
      * @param string $EndTime 查询结束时间，形如2018-06-10 17:06:38
-     * @param integer $Limit 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。
+     * @param integer $Limit 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。（当该参数不传或者传0时按默认值处理）
      * @param integer $Offset 返回结果中的第几页，从第0页开始。默认为0。
      */
     function __construct()

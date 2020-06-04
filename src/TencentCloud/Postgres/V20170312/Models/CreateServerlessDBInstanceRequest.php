@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateServerlessDBInstance请求参数结构体
  *
- * @method string getZone() 获取可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
- * @method void setZone(string $Zone) 设置可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+ * @method string getZone() 获取可用区ID。公测阶段仅支持ap-shanghai-2、ap-beijing-1,ap-guangzhou-2.
+ * @method void setZone(string $Zone) 设置可用区ID。公测阶段仅支持ap-shanghai-2、ap-beijing-1,ap-guangzhou-2.
  * @method string getDBInstanceName() 获取DB实例名称，同一个账号下该值必须唯一。
  * @method void setDBInstanceName(string $DBInstanceName) 设置DB实例名称，同一个账号下该值必须唯一。
- * @method string getDBVersion() 获取PostgreSQL内核版本，目前只支持：9.3.5、9.5.4、10.4三种版本。
- * @method void setDBVersion(string $DBVersion) 设置PostgreSQL内核版本，目前只支持：9.3.5、9.5.4、10.4三种版本。
- * @method string getDBCharset() 获取PostgreSQL数据库字符集，目前支持UTF8、LATIN1两种。
- * @method void setDBCharset(string $DBCharset) 设置PostgreSQL数据库字符集，目前支持UTF8、LATIN1两种。
+ * @method string getDBVersion() 获取PostgreSQL内核版本，目前只支持：10.4。
+ * @method void setDBVersion(string $DBVersion) 设置PostgreSQL内核版本，目前只支持：10.4。
+ * @method string getDBCharset() 获取PostgreSQL数据库字符集，目前支持UTF8。
+ * @method void setDBCharset(string $DBCharset) 设置PostgreSQL数据库字符集，目前支持UTF8。
  * @method integer getProjectId() 获取项目ID。
  * @method void setProjectId(integer $ProjectId) 设置项目ID。
  * @method string getVpcId() 获取私有网络ID。
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateServerlessDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * @var string 可用区ID。公测阶段仅支持ap-shanghai-2、ap-beijing-1,ap-guangzhou-2.
      */
     public $Zone;
 
@@ -48,12 +48,12 @@ class CreateServerlessDBInstanceRequest extends AbstractModel
     public $DBInstanceName;
 
     /**
-     * @var string PostgreSQL内核版本，目前只支持：9.3.5、9.5.4、10.4三种版本。
+     * @var string PostgreSQL内核版本，目前只支持：10.4。
      */
     public $DBVersion;
 
     /**
-     * @var string PostgreSQL数据库字符集，目前支持UTF8、LATIN1两种。
+     * @var string PostgreSQL数据库字符集，目前支持UTF8。
      */
     public $DBCharset;
 
@@ -73,10 +73,10 @@ class CreateServerlessDBInstanceRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @param string $Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * @param string $Zone 可用区ID。公测阶段仅支持ap-shanghai-2、ap-beijing-1,ap-guangzhou-2.
      * @param string $DBInstanceName DB实例名称，同一个账号下该值必须唯一。
-     * @param string $DBVersion PostgreSQL内核版本，目前只支持：9.3.5、9.5.4、10.4三种版本。
-     * @param string $DBCharset PostgreSQL数据库字符集，目前支持UTF8、LATIN1两种。
+     * @param string $DBVersion PostgreSQL内核版本，目前只支持：10.4。
+     * @param string $DBCharset PostgreSQL数据库字符集，目前支持UTF8。
      * @param integer $ProjectId 项目ID。
      * @param string $VpcId 私有网络ID。
      * @param string $SubnetId 私有网络子网ID。

@@ -20,153 +20,169 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 订阅返回参数
  *
- * @method string getSubscriptionName() 获取SubscriptionName
+ * @method string getSubscriptionName() 获取订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubscriptionName(string $SubscriptionName) 设置SubscriptionName
+ * @method void setSubscriptionName(string $SubscriptionName) 设置订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubscriptionId() 获取SubscriptionId
+ * @method string getSubscriptionId() 获取订阅 ID。订阅 ID 在拉取监控数据时会用到。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubscriptionId(string $SubscriptionId) 设置SubscriptionId
+ * @method void setSubscriptionId(string $SubscriptionId) 设置订阅 ID。订阅 ID 在拉取监控数据时会用到。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTopicOwner() 获取TopicOwner
+ * @method integer getTopicOwner() 获取订阅拥有者的 APPID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicOwner(integer $TopicOwner) 设置TopicOwner
+ * @method void setTopicOwner(integer $TopicOwner) 设置订阅拥有者的 APPID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMsgCount() 获取MsgCount
+ * @method integer getMsgCount() 获取该订阅待投递的消息数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMsgCount(integer $MsgCount) 设置MsgCount
+ * @method void setMsgCount(integer $MsgCount) 设置该订阅待投递的消息数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLastModifyTime() 获取LastModifyTime
+ * @method integer getLastModifyTime() 获取最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastModifyTime(integer $LastModifyTime) 设置LastModifyTime
+ * @method void setLastModifyTime(integer $LastModifyTime) 设置最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCreateTime() 获取CreateTime
+ * @method integer getCreateTime() 获取订阅的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(integer $CreateTime) 设置CreateTime
+ * @method void setCreateTime(integer $CreateTime) 设置订阅的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getBindingKey() 获取BindingKey
+ * @method array getBindingKey() 获取表示订阅接收消息的过滤策略。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBindingKey(array $BindingKey) 设置BindingKey
+ * @method void setBindingKey(array $BindingKey) 设置表示订阅接收消息的过滤策略。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndpoint() 获取Endpoint
+ * @method string getEndpoint() 获取接收通知的 endpoint，根据协议 protocol 区分：对于 HTTP，endpoint 必须以http://开头，host 可以是域名或 IP；对于 queue，则填 queueName。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndpoint(string $Endpoint) 设置Endpoint
+ * @method void setEndpoint(string $Endpoint) 设置接收通知的 endpoint，根据协议 protocol 区分：对于 HTTP，endpoint 必须以http://开头，host 可以是域名或 IP；对于 queue，则填 queueName。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFilterTags() 获取FilterTags
+ * @method array getFilterTags() 获取描述用户创建订阅时选择的过滤策略：
+filterType = 1表示用户使用 filterTag 标签过滤
+filterType = 2表示用户使用 bindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFilterTags(array $FilterTags) 设置FilterTags
+ * @method void setFilterTags(array $FilterTags) 设置描述用户创建订阅时选择的过滤策略：
+filterType = 1表示用户使用 filterTag 标签过滤
+filterType = 2表示用户使用 bindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProtocol() 获取Protocol
+ * @method string getProtocol() 获取订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProtocol(string $Protocol) 设置Protocol
+ * @method void setProtocol(string $Protocol) 设置订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNotifyStrategy() 获取NotifyStrategy
+ * @method string getNotifyStrategy() 获取向 endpoint 推送消息出现错误时，CMQ 推送服务器的重试策略。取值有：
+（1）BACKOFF_RETRY，退避重试。每隔一定时间重试一次，重试够一定次数后，就把该消息丢弃，继续推送下一条消息；
+（2）EXPONENTIAL_DECAY_RETRY，指数衰退重试。每次重试的间隔是指数递增的，例如开始 1s，后面是 2s，4s，8s...由于 Topic 消息的周期是一天，所以最多重试一天就把消息丢弃。默认值是 EXPONENTIAL_DECAY_RETRY。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNotifyStrategy(string $NotifyStrategy) 设置NotifyStrategy
+ * @method void setNotifyStrategy(string $NotifyStrategy) 设置向 endpoint 推送消息出现错误时，CMQ 推送服务器的重试策略。取值有：
+（1）BACKOFF_RETRY，退避重试。每隔一定时间重试一次，重试够一定次数后，就把该消息丢弃，继续推送下一条消息；
+（2）EXPONENTIAL_DECAY_RETRY，指数衰退重试。每次重试的间隔是指数递增的，例如开始 1s，后面是 2s，4s，8s...由于 Topic 消息的周期是一天，所以最多重试一天就把消息丢弃。默认值是 EXPONENTIAL_DECAY_RETRY。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNotifyContentFormat() 获取NotifyContentFormat
+ * @method string getNotifyContentFormat() 获取推送内容的格式。取值：（1）JSON；（2）SIMPLIFIED，即 raw 格式。如果 protocol 是 queue，则取值必须为 SIMPLIFIED。如果 protocol 是 HTTP，两个值均可以，默认值是 JSON。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNotifyContentFormat(string $NotifyContentFormat) 设置NotifyContentFormat
+ * @method void setNotifyContentFormat(string $NotifyContentFormat) 设置推送内容的格式。取值：（1）JSON；（2）SIMPLIFIED，即 raw 格式。如果 protocol 是 queue，则取值必须为 SIMPLIFIED。如果 protocol 是 HTTP，两个值均可以，默认值是 JSON。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Subscription extends AbstractModel
 {
     /**
-     * @var string SubscriptionName
+     * @var string 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubscriptionName;
 
     /**
-     * @var string SubscriptionId
+     * @var string 订阅 ID。订阅 ID 在拉取监控数据时会用到。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubscriptionId;
 
     /**
-     * @var integer TopicOwner
+     * @var integer 订阅拥有者的 APPID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicOwner;
 
     /**
-     * @var integer MsgCount
+     * @var integer 该订阅待投递的消息数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgCount;
 
     /**
-     * @var integer LastModifyTime
+     * @var integer 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastModifyTime;
 
     /**
-     * @var integer CreateTime
+     * @var integer 订阅的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var array BindingKey
+     * @var array 表示订阅接收消息的过滤策略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BindingKey;
 
     /**
-     * @var string Endpoint
+     * @var string 接收通知的 endpoint，根据协议 protocol 区分：对于 HTTP，endpoint 必须以http://开头，host 可以是域名或 IP；对于 queue，则填 queueName。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Endpoint;
 
     /**
-     * @var array FilterTags
+     * @var array 描述用户创建订阅时选择的过滤策略：
+filterType = 1表示用户使用 filterTag 标签过滤
+filterType = 2表示用户使用 bindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilterTags;
 
     /**
-     * @var string Protocol
+     * @var string 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
-     * @var string NotifyStrategy
+     * @var string 向 endpoint 推送消息出现错误时，CMQ 推送服务器的重试策略。取值有：
+（1）BACKOFF_RETRY，退避重试。每隔一定时间重试一次，重试够一定次数后，就把该消息丢弃，继续推送下一条消息；
+（2）EXPONENTIAL_DECAY_RETRY，指数衰退重试。每次重试的间隔是指数递增的，例如开始 1s，后面是 2s，4s，8s...由于 Topic 消息的周期是一天，所以最多重试一天就把消息丢弃。默认值是 EXPONENTIAL_DECAY_RETRY。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotifyStrategy;
 
     /**
-     * @var string NotifyContentFormat
+     * @var string 推送内容的格式。取值：（1）JSON；（2）SIMPLIFIED，即 raw 格式。如果 protocol 是 queue，则取值必须为 SIMPLIFIED。如果 protocol 是 HTTP，两个值均可以，默认值是 JSON。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotifyContentFormat;
 
     /**
-     * @param string $SubscriptionName SubscriptionName
+     * @param string $SubscriptionName 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubscriptionId SubscriptionId
+     * @param string $SubscriptionId 订阅 ID。订阅 ID 在拉取监控数据时会用到。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TopicOwner TopicOwner
+     * @param integer $TopicOwner 订阅拥有者的 APPID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MsgCount MsgCount
+     * @param integer $MsgCount 该订阅待投递的消息数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LastModifyTime LastModifyTime
+     * @param integer $LastModifyTime 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CreateTime CreateTime
+     * @param integer $CreateTime 订阅的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $BindingKey BindingKey
+     * @param array $BindingKey 表示订阅接收消息的过滤策略。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Endpoint Endpoint
+     * @param string $Endpoint 接收通知的 endpoint，根据协议 protocol 区分：对于 HTTP，endpoint 必须以http://开头，host 可以是域名或 IP；对于 queue，则填 queueName。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $FilterTags FilterTags
+     * @param array $FilterTags 描述用户创建订阅时选择的过滤策略：
+filterType = 1表示用户使用 filterTag 标签过滤
+filterType = 2表示用户使用 bindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Protocol Protocol
+     * @param string $Protocol 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NotifyStrategy NotifyStrategy
+     * @param string $NotifyStrategy 向 endpoint 推送消息出现错误时，CMQ 推送服务器的重试策略。取值有：
+（1）BACKOFF_RETRY，退避重试。每隔一定时间重试一次，重试够一定次数后，就把该消息丢弃，继续推送下一条消息；
+（2）EXPONENTIAL_DECAY_RETRY，指数衰退重试。每次重试的间隔是指数递增的，例如开始 1s，后面是 2s，4s，8s...由于 Topic 消息的周期是一天，所以最多重试一天就把消息丢弃。默认值是 EXPONENTIAL_DECAY_RETRY。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NotifyContentFormat NotifyContentFormat
+     * @param string $NotifyContentFormat 推送内容的格式。取值：（1）JSON；（2）SIMPLIFIED，即 raw 格式。如果 protocol 是 queue，则取值必须为 SIMPLIFIED。如果 protocol 是 HTTP，两个值均可以，默认值是 JSON。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

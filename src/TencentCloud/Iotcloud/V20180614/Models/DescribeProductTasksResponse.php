@@ -18,26 +18,26 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ResetDeviceState返回参数结构体
+ * DescribeProductTasks返回参数结构体
  *
- * @method integer getSuccessCount() 获取批量重置设备成功数
- * @method void setSuccessCount(integer $SuccessCount) 设置批量重置设备成功数
- * @method array getResetDeviceResults() 获取批量重置设备结果
- * @method void setResetDeviceResults(array $ResetDeviceResults) 设置批量重置设备结果
+ * @method integer getTotalCount() 获取符合条件的任务总个数
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的任务总个数
+ * @method array getTaskInfos() 获取任务详细信息列表
+ * @method void setTaskInfos(array $TaskInfos) 设置任务详细信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ResetDeviceStateResponse extends AbstractModel
+class DescribeProductTasksResponse extends AbstractModel
 {
     /**
-     * @var integer 批量重置设备成功数
+     * @var integer 符合条件的任务总个数
      */
-    public $SuccessCount;
+    public $TotalCount;
 
     /**
-     * @var array 批量重置设备结果
+     * @var array 任务详细信息列表
      */
-    public $ResetDeviceResults;
+    public $TaskInfos;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class ResetDeviceStateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $SuccessCount 批量重置设备成功数
-     * @param array $ResetDeviceResults 批量重置设备结果
+     * @param integer $TotalCount 符合条件的任务总个数
+     * @param array $TaskInfos 任务详细信息列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,16 +62,16 @@ class ResetDeviceStateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SuccessCount",$param) and $param["SuccessCount"] !== null) {
-            $this->SuccessCount = $param["SuccessCount"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("ResetDeviceResults",$param) and $param["ResetDeviceResults"] !== null) {
-            $this->ResetDeviceResults = [];
-            foreach ($param["ResetDeviceResults"] as $key => $value){
-                $obj = new ResetDeviceResult();
+        if (array_key_exists("TaskInfos",$param) and $param["TaskInfos"] !== null) {
+            $this->TaskInfos = [];
+            foreach ($param["TaskInfos"] as $key => $value){
+                $obj = new ProductTaskInfo();
                 $obj->deserialize($value);
-                array_push($this->ResetDeviceResults, $obj);
+                array_push($this->TaskInfos, $obj);
             }
         }
 

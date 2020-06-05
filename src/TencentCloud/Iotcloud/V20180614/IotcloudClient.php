@@ -28,21 +28,25 @@ use TencentCloud\Iotcloud\V20180614\Models as Models;
  * @method Models\CreateDeviceResponse CreateDevice(Models\CreateDeviceRequest $req) 本接口（CreateDevice）用于新建一个物联网通信设备。 
  * @method Models\CreateLoraDeviceResponse CreateLoraDevice(Models\CreateLoraDeviceRequest $req) 创建lora类型的设备
  * @method Models\CreateMultiDeviceResponse CreateMultiDevice(Models\CreateMultiDeviceRequest $req) 本接口（CreateMultiDevice）用于批量创建物联云设备。
+ * @method Models\CreateMultiDevicesTaskResponse CreateMultiDevicesTask(Models\CreateMultiDevicesTaskRequest $req) 本接口（CreateMultiDevicesTask）用于创建产品级别的批量创建设备任务
  * @method Models\CreateProductResponse CreateProduct(Models\CreateProductRequest $req) 本接口（CreateProduct）用于创建一个新的物联网通信产品 
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 本接口（CreateTask）用于创建一个批量任务。目前此接口可以创建批量更新影子以及批量下发消息的任务 
+ * @method Models\CreateTaskFileUrlResponse CreateTaskFileUrl(Models\CreateTaskFileUrlRequest $req) 本接口（CreateTaskFileUrl）用于获取产品级任务文件上传链接
  * @method Models\CreateTopicPolicyResponse CreateTopicPolicy(Models\CreateTopicPolicyRequest $req) 本接口（CreateTopicPolicy）用于创建一个Topic 
  * @method Models\CreateTopicRuleResponse CreateTopicRule(Models\CreateTopicRuleRequest $req) 本接口（CreateTopicRule）用于创建一个规则
  * @method Models\DeleteDeviceResponse DeleteDevice(Models\DeleteDeviceRequest $req) 本接口（DeleteDevice）用于删除物联网通信设备。 
  * @method Models\DeleteLoraDeviceResponse DeleteLoraDevice(Models\DeleteLoraDeviceRequest $req) 删除lora类型的设备
  * @method Models\DeleteProductResponse DeleteProduct(Models\DeleteProductRequest $req) 本接口（DeleteProduct）用于删除一个物联网通信产品
  * @method Models\DeleteTopicRuleResponse DeleteTopicRule(Models\DeleteTopicRuleRequest $req) 本接口（DeleteTopicRule）用于删除规则
- * @method Models\DescribeDeviceResponse DescribeDevice(Models\DescribeDeviceRequest $req) 本接口（DescribeDevice）用于查看设备信息 
+ * @method Models\DescribeDeviceResponse DescribeDevice(Models\DescribeDeviceRequest $req) 本接口（DescribeDevice）用于查看设备信息
  * @method Models\DescribeDeviceClientKeyResponse DescribeDeviceClientKey(Models\DescribeDeviceClientKeyRequest $req) 获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次
  * @method Models\DescribeDeviceShadowResponse DescribeDeviceShadow(Models\DescribeDeviceShadowRequest $req) 本接口（DescribeDeviceShadow）用于查询虚拟设备信息。 
  * @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 本接口（DescribeDevices）用于查询物联网通信设备的设备列表。 
  * @method Models\DescribeLoraDeviceResponse DescribeLoraDevice(Models\DescribeLoraDeviceRequest $req) 获取lora类型设备的详细信息
  * @method Models\DescribeMultiDevTaskResponse DescribeMultiDevTask(Models\DescribeMultiDevTaskRequest $req) 本接口（DescribeMultiDevTask）用于查询批量创建设备任务的执行状态。
  * @method Models\DescribeMultiDevicesResponse DescribeMultiDevices(Models\DescribeMultiDevicesRequest $req) 本接口（DescribeMultiDevices）用于查询批量创建设备的执行结果。
+ * @method Models\DescribeProductTaskResponse DescribeProductTask(Models\DescribeProductTaskRequest $req) 本接口（DescribeProductTask）用于查看产品级别的任务信息
+ * @method Models\DescribeProductTasksResponse DescribeProductTasks(Models\DescribeProductTasksRequest $req) 本接口（DescribeProductTasks）用于查看产品级别的任务列表
  * @method Models\DescribeProductsResponse DescribeProducts(Models\DescribeProductsRequest $req) 本接口（DescribeProducts）用于列出产品列表。 
  * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 本接口（DescribeTask）用于查询一个已创建任务的详情，任务保留一个月 
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 本接口（DescribeTasks）用于查询已创建的任务列表，任务保留一个月 

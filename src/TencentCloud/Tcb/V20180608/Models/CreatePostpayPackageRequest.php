@@ -38,14 +38,18 @@ use TencentCloud\Common\AbstractModel;
 <li>miniapp</li>
 <li>qcloud</li>
 用法同CreateEnv接口的Source参数
+和 Channel 参数同时传，或者同时不传；EnvId 为空时必传。
  * @method void setEnvSource(string $EnvSource) 设置环境创建来源，取值：
 <li>miniapp</li>
 <li>qcloud</li>
 用法同CreateEnv接口的Source参数
+和 Channel 参数同时传，或者同时不传；EnvId 为空时必传。
  * @method string getChannel() 获取如果envsource为miniapp, channel可以为ide或api;
 如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
+和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
  * @method void setChannel(string $Channel) 设置如果envsource为miniapp, channel可以为ide或api;
 如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
+和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
  */
 class CreatePostpayPackageRequest extends AbstractModel
 {
@@ -81,12 +85,14 @@ class CreatePostpayPackageRequest extends AbstractModel
 <li>miniapp</li>
 <li>qcloud</li>
 用法同CreateEnv接口的Source参数
+和 Channel 参数同时传，或者同时不传；EnvId 为空时必传。
      */
     public $EnvSource;
 
     /**
      * @var string 如果envsource为miniapp, channel可以为ide或api;
 如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
+和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
      */
     public $Channel;
 
@@ -102,8 +108,10 @@ class CreatePostpayPackageRequest extends AbstractModel
 <li>miniapp</li>
 <li>qcloud</li>
 用法同CreateEnv接口的Source参数
+和 Channel 参数同时传，或者同时不传；EnvId 为空时必传。
      * @param string $Channel 如果envsource为miniapp, channel可以为ide或api;
 如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
+和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
      */
     function __construct()
     {

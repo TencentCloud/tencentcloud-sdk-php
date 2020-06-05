@@ -62,6 +62,14 @@ use TencentCloud\Common\AbstractModel;
 <li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
  * @method void setLimit(integer $Limit) 设置<div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
 <li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+ * @method array getCategories() 获取文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
+ * @method void setCategories(array $Categories) 设置文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
@@ -133,6 +141,14 @@ class SearchMediaRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
+     */
+    public $Categories;
+
+    /**
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
@@ -159,6 +175,10 @@ class SearchMediaRequest extends AbstractModel
 <li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
      * @param integer $Limit <div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
 <li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+     * @param array $Categories 文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
@@ -217,6 +237,10 @@ class SearchMediaRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Categories",$param) and $param["Categories"] !== null) {
+            $this->Categories = $param["Categories"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

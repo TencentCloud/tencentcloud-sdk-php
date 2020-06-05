@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置设备属性
  * @method integer getDeviceType() 获取设备类型
  * @method void setDeviceType(integer $DeviceType) 设置设备类型
- * @method string getImei() 获取IMEI
- * @method void setImei(string $Imei) 设置IMEI
+ * @method string getImei() 获取国际移动设备识别码 IMEI
+ * @method void setImei(string $Imei) 设置国际移动设备识别码 IMEI
  * @method integer getIsp() 获取运营商类型
  * @method void setIsp(integer $Isp) 设置运营商类型
  * @method integer getConnIP() 获取IP地址
@@ -77,6 +77,10 @@ use TencentCloud\Common\AbstractModel;
  * @method array getLabels() 获取设备标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(array $Labels) 设置设备标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClientIP() 获取MQTT客户端IP地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientIP(string $ClientIP) 设置MQTT客户端IP地址
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -129,7 +133,7 @@ class DescribeDeviceResponse extends AbstractModel
     public $DeviceType;
 
     /**
-     * @var string IMEI
+     * @var string 国际移动设备识别码 IMEI
      */
     public $Imei;
 
@@ -201,6 +205,12 @@ class DescribeDeviceResponse extends AbstractModel
     public $Labels;
 
     /**
+     * @var string MQTT客户端IP地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientIP;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -215,7 +225,7 @@ class DescribeDeviceResponse extends AbstractModel
      * @param string $DevicePsk 设备密钥
      * @param array $Tags 设备属性
      * @param integer $DeviceType 设备类型
-     * @param string $Imei IMEI
+     * @param string $Imei 国际移动设备识别码 IMEI
      * @param integer $Isp 运营商类型
      * @param integer $ConnIP IP地址
      * @param string $NbiotDeviceID NB IoT运营商处的DeviceID
@@ -234,6 +244,8 @@ class DescribeDeviceResponse extends AbstractModel
      * @param integer $EnableState 设备启用状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Labels 设备标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClientIP MQTT客户端IP地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -346,6 +358,10 @@ class DescribeDeviceResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Labels, $obj);
             }
+        }
+
+        if (array_key_exists("ClientIP",$param) and $param["ClientIP"] !== null) {
+            $this->ClientIP = $param["ClientIP"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

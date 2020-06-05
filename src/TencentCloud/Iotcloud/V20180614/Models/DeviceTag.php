@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(integer $Type) 设置属性值的类型，1 int，2 string
  * @method string getValue() 获取属性的值
  * @method void setValue(string $Value) 设置属性的值
+ * @method string getName() 获取属性描述名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setName(string $Name) 设置属性描述名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceTag extends AbstractModel
 {
@@ -45,9 +49,17 @@ class DeviceTag extends AbstractModel
     public $Value;
 
     /**
+     * @var string 属性描述名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Name;
+
+    /**
      * @param string $Tag 属性名称
      * @param integer $Type 属性值的类型，1 int，2 string
      * @param string $Value 属性的值
+     * @param string $Name 属性描述名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class DeviceTag extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

@@ -18,26 +18,19 @@ namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ResetDeviceState返回参数结构体
+ * DescribeProductTask返回参数结构体
  *
- * @method integer getSuccessCount() 获取批量重置设备成功数
- * @method void setSuccessCount(integer $SuccessCount) 设置批量重置设备成功数
- * @method array getResetDeviceResults() 获取批量重置设备结果
- * @method void setResetDeviceResults(array $ResetDeviceResults) 设置批量重置设备结果
+ * @method ProductTaskInfo getTaskInfo() 获取产品任务详细信息
+ * @method void setTaskInfo(ProductTaskInfo $TaskInfo) 设置产品任务详细信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ResetDeviceStateResponse extends AbstractModel
+class DescribeProductTaskResponse extends AbstractModel
 {
     /**
-     * @var integer 批量重置设备成功数
+     * @var ProductTaskInfo 产品任务详细信息
      */
-    public $SuccessCount;
-
-    /**
-     * @var array 批量重置设备结果
-     */
-    public $ResetDeviceResults;
+    public $TaskInfo;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class ResetDeviceStateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $SuccessCount 批量重置设备成功数
-     * @param array $ResetDeviceResults 批量重置设备结果
+     * @param ProductTaskInfo $TaskInfo 产品任务详细信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,9 @@ class ResetDeviceStateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SuccessCount",$param) and $param["SuccessCount"] !== null) {
-            $this->SuccessCount = $param["SuccessCount"];
-        }
-
-        if (array_key_exists("ResetDeviceResults",$param) and $param["ResetDeviceResults"] !== null) {
-            $this->ResetDeviceResults = [];
-            foreach ($param["ResetDeviceResults"] as $key => $value){
-                $obj = new ResetDeviceResult();
-                $obj->deserialize($value);
-                array_push($this->ResetDeviceResults, $obj);
-            }
+        if (array_key_exists("TaskInfo",$param) and $param["TaskInfo"] !== null) {
+            $this->TaskInfo = new ProductTaskInfo();
+            $this->TaskInfo->deserialize($param["TaskInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

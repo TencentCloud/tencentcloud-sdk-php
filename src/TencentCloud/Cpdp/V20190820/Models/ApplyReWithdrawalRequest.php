@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBody(WithdrawBill $Body) 设置提现信息
  * @method string getMidasAppId() 获取聚鑫业务ID
  * @method void setMidasAppId(string $MidasAppId) 设置聚鑫业务ID
+ * @method string getMidasEnvironment() 获取环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+ * @method void setMidasEnvironment(string $MidasEnvironment) 设置环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
  */
 class ApplyReWithdrawalRequest extends AbstractModel
 {
@@ -59,11 +69,25 @@ class ApplyReWithdrawalRequest extends AbstractModel
     public $MidasAppId;
 
     /**
+     * @var string 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public $MidasEnvironment;
+
+    /**
      * @param integer $BusinessType 聚鑫业务类型
      * @param string $MidasSecretId 由平台客服提供的计费密钥Id
      * @param string $MidasSignature 计费签名
      * @param WithdrawBill $Body 提现信息
      * @param string $MidasAppId 聚鑫业务ID
+     * @param string $MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
      */
     function __construct()
     {
@@ -97,6 +121,10 @@ class ApplyReWithdrawalRequest extends AbstractModel
 
         if (array_key_exists("MidasAppId",$param) and $param["MidasAppId"] !== null) {
             $this->MidasAppId = $param["MidasAppId"];
+        }
+
+        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
+            $this->MidasEnvironment = $param["MidasEnvironment"];
         }
     }
 }

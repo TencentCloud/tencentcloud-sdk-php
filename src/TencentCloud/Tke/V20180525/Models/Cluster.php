@@ -54,9 +54,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageId(string $ImageId) 设置集群使用镜像id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOsCustomizeType() 获取OsCustomizeType
+ * @method string getOsCustomizeType() 获取OsCustomizeType 系统定制类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOsCustomizeType(string $OsCustomizeType) 设置OsCustomizeType
+ * @method void setOsCustomizeType(string $OsCustomizeType) 设置OsCustomizeType 系统定制类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerRuntime() 获取集群运行环境docker或container
 注意：此字段可能返回 null，表示取不到有效值。
@@ -65,6 +65,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreatedTime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDeletionProtection() 获取删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
@@ -143,7 +147,7 @@ class Cluster extends AbstractModel
     public $ImageId;
 
     /**
-     * @var string OsCustomizeType
+     * @var string OsCustomizeType 系统定制类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsCustomizeType;
@@ -159,6 +163,12 @@ class Cluster extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
+
+    /**
+     * @var boolean 删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeletionProtection;
 
     /**
      * @param string $ClusterId 集群ID
@@ -178,11 +188,13 @@ class Cluster extends AbstractModel
      * @param integer $ClusterMaterNodeNum 集群当前master数量
      * @param string $ImageId 集群使用镜像id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OsCustomizeType OsCustomizeType
+     * @param string $OsCustomizeType OsCustomizeType 系统定制类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerRuntime 集群运行环境docker或container
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DeletionProtection 删除保护开关
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -270,6 +282,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

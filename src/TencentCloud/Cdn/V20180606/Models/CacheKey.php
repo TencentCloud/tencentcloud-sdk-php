@@ -26,6 +26,26 @@ off：关闭全路径缓存（即开启参数过滤）
  * @method void setFullUrlCache(string $FullUrlCache) 设置是否开启全路径缓存
 on：开启全路径缓存（即关闭参数过滤）
 off：关闭全路径缓存（即开启参数过滤）
+ * @method QueryStringKey getQueryString() 获取是否使用请求参数作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQueryString(QueryStringKey $QueryString) 设置是否使用请求参数作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method HeaderKey getHeader() 获取是否使用请求头部作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHeader(HeaderKey $Header) 设置是否使用请求头部作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method CookieKey getCookie() 获取是否使用Cookie作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCookie(CookieKey $Cookie) 设置是否使用Cookie作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SchemeKey getScheme() 获取是否使用请求协议作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheme(SchemeKey $Scheme) 设置是否使用请求协议作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method CacheTagKey getCacheTag() 获取是否使用自定义字符串作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCacheTag(CacheTagKey $CacheTag) 设置是否使用自定义字符串作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCaseSensitive() 获取缓存是否忽略大小写
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCaseSensitive(string $CaseSensitive) 设置缓存是否忽略大小写
@@ -41,6 +61,36 @@ off：关闭全路径缓存（即开启参数过滤）
     public $FullUrlCache;
 
     /**
+     * @var QueryStringKey 是否使用请求参数作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QueryString;
+
+    /**
+     * @var HeaderKey 是否使用请求头部作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Header;
+
+    /**
+     * @var CookieKey 是否使用Cookie作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Cookie;
+
+    /**
+     * @var SchemeKey 是否使用请求协议作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Scheme;
+
+    /**
+     * @var CacheTagKey 是否使用自定义字符串作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CacheTag;
+
+    /**
      * @var string 缓存是否忽略大小写
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -50,6 +100,16 @@ off：关闭全路径缓存（即开启参数过滤）
      * @param string $FullUrlCache 是否开启全路径缓存
 on：开启全路径缓存（即关闭参数过滤）
 off：关闭全路径缓存（即开启参数过滤）
+     * @param QueryStringKey $QueryString 是否使用请求参数作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HeaderKey $Header 是否使用请求头部作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CookieKey $Cookie 是否使用Cookie作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SchemeKey $Scheme 是否使用请求协议作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CacheTagKey $CacheTag 是否使用自定义字符串作为CacheKey的一部分
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CaseSensitive 缓存是否忽略大小写
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -68,6 +128,31 @@ off：关闭全路径缓存（即开启参数过滤）
         }
         if (array_key_exists("FullUrlCache",$param) and $param["FullUrlCache"] !== null) {
             $this->FullUrlCache = $param["FullUrlCache"];
+        }
+
+        if (array_key_exists("QueryString",$param) and $param["QueryString"] !== null) {
+            $this->QueryString = new QueryStringKey();
+            $this->QueryString->deserialize($param["QueryString"]);
+        }
+
+        if (array_key_exists("Header",$param) and $param["Header"] !== null) {
+            $this->Header = new HeaderKey();
+            $this->Header->deserialize($param["Header"]);
+        }
+
+        if (array_key_exists("Cookie",$param) and $param["Cookie"] !== null) {
+            $this->Cookie = new CookieKey();
+            $this->Cookie->deserialize($param["Cookie"]);
+        }
+
+        if (array_key_exists("Scheme",$param) and $param["Scheme"] !== null) {
+            $this->Scheme = new SchemeKey();
+            $this->Scheme->deserialize($param["Scheme"]);
+        }
+
+        if (array_key_exists("CacheTag",$param) and $param["CacheTag"] !== null) {
+            $this->CacheTag = new CacheTagKey();
+            $this->CacheTag->deserialize($param["CacheTag"]);
         }
 
         if (array_key_exists("CaseSensitive",$param) and $param["CaseSensitive"] !== null) {

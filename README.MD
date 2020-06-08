@@ -15,22 +15,15 @@
     
     unix环境在命令行中执行以下命令安装。
     > curl -sS https://getcomposer.org/installer | php
-2. 在 composer.json 的 require 结构体中加入依赖。**注意这里的版本号只是举例,您可以在composer仓库上看到最新的版本号。**：
-    > "tencentcloud/tencentcloud-sdk-php": "3.0.94"
-3. 运行 composer install 下载安装 PHP SDK。
-4. 添加以下引用代码，引用方法可参考示例。
-    > require 'vendor/autoload.php';
+2. 使用 `composer require tencentcloud/tencentcloud-sdk-php` 添加依赖。
+3. 在代码中添加以下引用代码。注意：如下仅为示例，composer 会在项目根目录下生成 vendor 目录，`/path/to/`为项目根目录的实际绝对路径，如果是在当前目录执行，可以省略绝对路径。
+    > require '/path/to/vendor/autoload.php';
 
-## 通过源码包安装
-1. 前往 [Github 代码托管地址](https://github.com/tencentcloud/tencentcloud-sdk-php) 克隆源码。注意：必须使用`git clone`的方式，直接下载源码包将不会包含必要的依赖文件。
-2. 解压源码包到您项目合适的位置。
-3. 添加以下引用代码，引用方法可参考示例。
-    > require_once '../TCloudAutoLoader.php';
 # 示例
 以查询可用区接口为例:
 ```php
 <?php
-require_once '../../../TCloudAutoLoader.php';
+require 'vendor/autoload.php';
 // 导入对应产品模块的client
 use TencentCloud\Cvm\V20170312\CvmClient;
 // 导入要请求接口对应的Request类

@@ -1,5 +1,5 @@
 <?php
-require_once '../../../TCloudAutoLoader.php';
+require_once __DIR__.'/../../../vendor/autoload.php';
 use TencentCloud\Common\Credential;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Profile\HttpProfile;

@@ -1,5 +1,5 @@
 <?php
-require_once '../../../TCloudAutoLoader.php';
+require_once __DIR__.'/../../../vendor/autoload.php';
 // 导入对应产品模块的client
 use TencentCloud\Cvm\V20170312\CvmClient;
 // 导入要请求接口对应的Request类

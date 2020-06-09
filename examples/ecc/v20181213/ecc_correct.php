@@ -1,5 +1,5 @@
 <?php
-require_once '../../../TCloudAutoLoader.php';
+require_once __DIR__.'/../../../vendor/autoload.php';
 // 导入对应产品模块的client
 use TencentCloud\Ecc\V20181213\EccClient;
 

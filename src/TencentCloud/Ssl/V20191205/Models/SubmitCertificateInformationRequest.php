@@ -52,20 +52,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhoneNumber(string $PhoneNumber) 设置公司座机号码。
  * @method string getVerifyType() 获取证书验证方式。
  * @method void setVerifyType(string $VerifyType) 设置证书验证方式。
- * @method string getAdminFirstName() 获取管理人姓。
- * @method void setAdminFirstName(string $AdminFirstName) 设置管理人姓。
- * @method string getAdminLastName() 获取管理人名。
- * @method void setAdminLastName(string $AdminLastName) 设置管理人名。
+ * @method string getAdminFirstName() 获取管理人名。
+ * @method void setAdminFirstName(string $AdminFirstName) 设置管理人名。
+ * @method string getAdminLastName() 获取管理人姓。
+ * @method void setAdminLastName(string $AdminLastName) 设置管理人姓。
  * @method string getAdminPhoneNum() 获取管理人手机号码。
  * @method void setAdminPhoneNum(string $AdminPhoneNum) 设置管理人手机号码。
  * @method string getAdminEmail() 获取管理人邮箱地址。
  * @method void setAdminEmail(string $AdminEmail) 设置管理人邮箱地址。
  * @method string getAdminPosition() 获取管理人职位。
  * @method void setAdminPosition(string $AdminPosition) 设置管理人职位。
- * @method string getContactFirstName() 获取联系人姓。
- * @method void setContactFirstName(string $ContactFirstName) 设置联系人姓。
- * @method string getContactLastName() 获取联系人名。
- * @method void setContactLastName(string $ContactLastName) 设置联系人名。
+ * @method string getContactFirstName() 获取联系人名。
+ * @method void setContactFirstName(string $ContactFirstName) 设置联系人名。
+ * @method string getContactLastName() 获取联系人姓。
+ * @method void setContactLastName(string $ContactLastName) 设置联系人姓。
  * @method string getContactEmail() 获取联系人邮箱地址。
  * @method void setContactEmail(string $ContactEmail) 设置联系人邮箱地址。
  * @method string getContactNumber() 获取联系人手机号码。
@@ -156,12 +156,12 @@ class SubmitCertificateInformationRequest extends AbstractModel
     public $VerifyType;
 
     /**
-     * @var string 管理人姓。
+     * @var string 管理人名。
      */
     public $AdminFirstName;
 
     /**
-     * @var string 管理人名。
+     * @var string 管理人姓。
      */
     public $AdminLastName;
 
@@ -181,12 +181,12 @@ class SubmitCertificateInformationRequest extends AbstractModel
     public $AdminPosition;
 
     /**
-     * @var string 联系人姓。
+     * @var string 联系人名。
      */
     public $ContactFirstName;
 
     /**
-     * @var string 联系人名。
+     * @var string 联系人姓。
      */
     public $ContactLastName;
 
@@ -222,13 +222,13 @@ class SubmitCertificateInformationRequest extends AbstractModel
      * @param string $PhoneAreaCode 公司座机区号。
      * @param string $PhoneNumber 公司座机号码。
      * @param string $VerifyType 证书验证方式。
-     * @param string $AdminFirstName 管理人姓。
-     * @param string $AdminLastName 管理人名。
+     * @param string $AdminFirstName 管理人名。
+     * @param string $AdminLastName 管理人姓。
      * @param string $AdminPhoneNum 管理人手机号码。
      * @param string $AdminEmail 管理人邮箱地址。
      * @param string $AdminPosition 管理人职位。
-     * @param string $ContactFirstName 联系人姓。
-     * @param string $ContactLastName 联系人名。
+     * @param string $ContactFirstName 联系人名。
+     * @param string $ContactLastName 联系人姓。
      * @param string $ContactEmail 联系人邮箱地址。
      * @param string $ContactNumber 联系人手机号码。
      * @param string $ContactPosition 联系人职位。

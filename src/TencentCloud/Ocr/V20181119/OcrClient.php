@@ -311,7 +311,6 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\PermitOCRResponse PermitOCR(Models\PermitOCRRequest $req) 本接口支持对卡式港澳台通行证的识别，包括签发地点、签发机关、有效期限、性别、出生日期、英文姓名、姓名、证件号等字段。
  * @method Models\PropOwnerCertOCRResponse PropOwnerCertOCR(Models\PropOwnerCertOCRRequest $req) 本接口支持房产证关键字段的识别，包括房地产权利人、共有情况、登记时间、规划用途、房屋性质、房屋坐落等。
  * @method Models\QrcodeOCRResponse QrcodeOCR(Models\QrcodeOCRRequest $req) 本接口支持条形码和二维码的识别（包括 DataMatrix 和 PDF417）。
-本接口暂未完全对外开放，如需咨询，请[联系商务](https://cloud.tencent.com/about/connect) 
  * @method Models\QuotaInvoiceOCRResponse QuotaInvoiceOCR(Models\QuotaInvoiceOCRRequest $req) 本接口支持定额发票的发票号码、发票代码、金额(大小写)、发票消费类型、地区及是否有公司印章等关键字段的识别。
  * @method Models\ResidenceBookletOCRResponse ResidenceBookletOCR(Models\ResidenceBookletOCRRequest $req) 本接口支持居民户口簿户主页及成员页关键字段的识别，包括姓名、户别、地址、籍贯、身份证号码等。
  * @method Models\ShipInvoiceOCRResponse ShipInvoiceOCR(Models\ShipInvoiceOCRRequest $req) 本接口支持识别轮船票的发票代码、发票号码、日期、姓名、票价等字段。

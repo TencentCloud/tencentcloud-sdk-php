@@ -60,8 +60,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModelArtifacts(ModelArtifacts $ModelArtifacts) 设置模型输出配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSecondaryStatus() 获取详细状态
- * @method void setSecondaryStatus(string $SecondaryStatus) 设置详细状态
+ * @method string getSecondaryStatus() 获取详细状态，取值范围
+Starting：启动中
+Downloading: 准备训练数据
+Training: 正在训练
+Uploading: 上传训练结果
+Completed：已完成
+Failed: 失败
+MaxRuntimeExceeded: 任务超过最大运行时间
+Stopping: 停止中
+Stopped：已停止
+ * @method void setSecondaryStatus(string $SecondaryStatus) 设置详细状态，取值范围
+Starting：启动中
+Downloading: 准备训练数据
+Training: 正在训练
+Uploading: 上传训练结果
+Completed：已完成
+Failed: 失败
+MaxRuntimeExceeded: 任务超过最大运行时间
+Stopping: 停止中
+Stopped：已停止
  * @method array getSecondaryStatusTransitions() 获取详细状态事件记录
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecondaryStatusTransitions(array $SecondaryStatusTransitions) 设置详细状态事件记录
@@ -70,8 +88,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleName(string $RoleName) 设置角色名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTrainingJobStatus() 获取任务状态
- * @method void setTrainingJobStatus(string $TrainingJobStatus) 设置任务状态
+ * @method string getTrainingJobStatus() 获取训练任务状态，取值范围
+InProgress：运行中
+Completed: 已完成
+Failed: 失败
+Stopping: 停止中
+Stopped：已停止
+ * @method void setTrainingJobStatus(string $TrainingJobStatus) 设置训练任务状态，取值范围
+InProgress：运行中
+Completed: 已完成
+Failed: 失败
+Stopping: 停止中
+Stopped：已停止
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -150,7 +178,16 @@ class DescribeTrainingJobResponse extends AbstractModel
     public $ModelArtifacts;
 
     /**
-     * @var string 详细状态
+     * @var string 详细状态，取值范围
+Starting：启动中
+Downloading: 准备训练数据
+Training: 正在训练
+Uploading: 上传训练结果
+Completed：已完成
+Failed: 失败
+MaxRuntimeExceeded: 任务超过最大运行时间
+Stopping: 停止中
+Stopped：已停止
      */
     public $SecondaryStatus;
 
@@ -167,7 +204,12 @@ class DescribeTrainingJobResponse extends AbstractModel
     public $RoleName;
 
     /**
-     * @var string 任务状态
+     * @var string 训练任务状态，取值范围
+InProgress：运行中
+Completed: 已完成
+Failed: 失败
+Stopping: 停止中
+Stopped：已停止
      */
     public $TrainingJobStatus;
 
@@ -197,12 +239,26 @@ class DescribeTrainingJobResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelArtifacts $ModelArtifacts 模型输出配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SecondaryStatus 详细状态
+     * @param string $SecondaryStatus 详细状态，取值范围
+Starting：启动中
+Downloading: 准备训练数据
+Training: 正在训练
+Uploading: 上传训练结果
+Completed：已完成
+Failed: 失败
+MaxRuntimeExceeded: 任务超过最大运行时间
+Stopping: 停止中
+Stopped：已停止
      * @param array $SecondaryStatusTransitions 详细状态事件记录
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoleName 角色名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TrainingJobStatus 任务状态
+     * @param string $TrainingJobStatus 训练任务状态，取值范围
+InProgress：运行中
+Completed: 已完成
+Failed: 失败
+Stopping: 停止中
+Stopped：已停止
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

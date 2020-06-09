@@ -18,7 +18,7 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 获取证书列表（Certificate）返回参数键为 DvAuths 的内容。
+ * 返回参数键为 DvAuths 的内容。
  *
  * @method string getDvAuthKey() 获取DV 认证密钥。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -46,7 +46,6 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
 当用户使用自定义域名，并使用了自定义映射时，可使用此接口。但需注意，若删除了所有环境的映射时，调用此 API 均会返回失败。
  * @method Models\DeleteUsagePlanResponse DeleteUsagePlan(Models\DeleteUsagePlanRequest $req) 本接口（DeleteUsagePlan）用于删除使用计划。
  * @method Models\DemoteServiceUsagePlanResponse DemoteServiceUsagePlan(Models\DemoteServiceUsagePlanRequest $req) 本接口（DemoteServiceUsagePlan）用于将某个服务在某个环境的使用计划，降级到API上。
-服务若需要鉴权限流生效，则需要绑定使用计划到此服务中，本接口用于查询绑定到一个服务的所有使用计划。
 如果服务内没有API不允许进行此操作。
 如果当前环境没有发布，不允许进行此操作。
  * @method Models\DescribeApiResponse DescribeApi(Models\DescribeApiRequest $req) 本接口（DescribeApi）用于查询用户部署于 API 网关的 API 接口的详细信息。​

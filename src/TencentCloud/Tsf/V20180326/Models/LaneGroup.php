@@ -20,10 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 泳道部署组
  *
- * @method string getLaneId() 获取泳道ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLaneId(string $LaneId) 设置泳道ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置部署组ID
@@ -35,6 +31,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLaneGroupId() 获取泳道部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLaneGroupId(string $LaneGroupId) 设置泳道部署组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLaneId() 获取泳道ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLaneId(string $LaneId) 设置泳道ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupName() 获取部署组名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -72,12 +72,6 @@ use TencentCloud\Common\AbstractModel;
 class LaneGroup extends AbstractModel
 {
     /**
-     * @var string 泳道ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $LaneId;
-
-    /**
      * @var string 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -94,6 +88,12 @@ class LaneGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LaneGroupId;
+
+    /**
+     * @var string 泳道ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LaneId;
 
     /**
      * @var string 部署组名
@@ -144,13 +144,13 @@ class LaneGroup extends AbstractModel
     public $ClusterType;
 
     /**
-     * @param string $LaneId 泳道ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Entrance 是否入口应用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LaneGroupId 泳道部署组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LaneId 泳道ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 部署组名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -182,10 +182,6 @@ class LaneGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LaneId",$param) and $param["LaneId"] !== null) {
-            $this->LaneId = $param["LaneId"];
-        }
-
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
         }
@@ -196,6 +192,10 @@ class LaneGroup extends AbstractModel
 
         if (array_key_exists("LaneGroupId",$param) and $param["LaneGroupId"] !== null) {
             $this->LaneGroupId = $param["LaneGroupId"];
+        }
+
+        if (array_key_exists("LaneId",$param) and $param["LaneId"] !== null) {
+            $this->LaneId = $param["LaneId"];
         }
 
         if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {

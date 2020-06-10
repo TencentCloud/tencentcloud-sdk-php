@@ -51,7 +51,7 @@ use TencentCloud\Iotcloud\V20180614\Models as Models;
  * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 本接口（DescribeTask）用于查询一个已创建任务的详情，任务保留一个月 
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 本接口（DescribeTasks）用于查询已创建的任务列表，任务保留一个月 
  * @method Models\DisableTopicRuleResponse DisableTopicRule(Models\DisableTopicRuleRequest $req) 本接口（DisableTopicRule）用于禁用规则
- * @method Models\EnableTopicRuleResponse EnableTopicRule(Models\EnableTopicRuleRequest $req) 本接口（EnableTopicRule）用于启用规则
+ * @method Models\EnableTopicRuleResponse EnableTopicRule(Models\EnableTopicRuleRequest $req) 本接口（EnableTopicRule）用于启用规则 
  * @method Models\PublishAsDeviceResponse PublishAsDevice(Models\PublishAsDeviceRequest $req) 模拟lora类型的设备端向服务器端发送消息
  * @method Models\PublishMessageResponse PublishMessage(Models\PublishMessageRequest $req) 本接口（PublishMessage）用于向某个主题发消息。 
  * @method Models\PublishToDeviceResponse PublishToDevice(Models\PublishToDeviceRequest $req) 服务器端下发消息给lora类型的设备

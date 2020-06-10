@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReservedMsgTwo(string $ReservedMsgTwo) 设置STRING(300)，保留域2
  * @method string getReservedMsgThree() 获取STRING(300)，保留域3
  * @method void setReservedMsgThree(string $ReservedMsgThree) 设置STRING(300)，保留域3
+ * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+ * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
  */
 class RegisterBillSupportWithdrawRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class RegisterBillSupportWithdrawRequest extends AbstractModel
     public $ReservedMsgThree;
 
     /**
+     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     */
+    public $Profile;
+
+    /**
      * @param string $TranNetMemberCode STRING(32)，交易网会员代码
      * @param string $OrderNo STRING(50)，订单号
      * @param string $SuspendAmt STRING(20)，挂账金额（包含交易费用）
@@ -96,6 +103,7 @@ class RegisterBillSupportWithdrawRequest extends AbstractModel
      * @param string $ReservedMsgOne STRING(300)，保留域1
      * @param string $ReservedMsgTwo STRING(300)，保留域2
      * @param string $ReservedMsgThree STRING(300)，保留域3
+     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class RegisterBillSupportWithdrawRequest extends AbstractModel
 
         if (array_key_exists("ReservedMsgThree",$param) and $param["ReservedMsgThree"] !== null) {
             $this->ReservedMsgThree = $param["ReservedMsgThree"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域（若需短信验证码则此项必输短信指令号）
  * @method string getWebSign() 获取STRING(300)，网银签名（若需短信验证码则此项必输）
  * @method void setWebSign(string $WebSign) 设置STRING(300)，网银签名（若需短信验证码则此项必输）
+ * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+ * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
  */
 class QueryMemberTransactionRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class QueryMemberTransactionRequest extends AbstractModel
     public $WebSign;
 
     /**
+     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     */
+    public $Profile;
+
+    /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $FunctionFlag STRING(2)，功能标志（1: 下单预支付; 2: 确认并付款; 3: 退款; 6: 直接支付T+1; 9: 直接支付T+0）
      * @param string $OutSubAcctNo STRING(50)，转出方的见证子账户的账号（付款方）
@@ -160,6 +167,7 @@ class QueryMemberTransactionRequest extends AbstractModel
      * @param string $Remark STRING(300)，备注（建议可送订单号，可在对账文件的备注字段获取到）
      * @param string $ReservedMsg STRING(1027)，保留域（若需短信验证码则此项必输短信指令号）
      * @param string $WebSign STRING(300)，网银签名（若需短信验证码则此项必输）
+     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
      */
     function __construct()
     {
@@ -240,6 +248,10 @@ class QueryMemberTransactionRequest extends AbstractModel
 
         if (array_key_exists("WebSign",$param) and $param["WebSign"] !== null) {
             $this->WebSign = $param["WebSign"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

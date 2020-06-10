@@ -38,16 +38,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-l2h8d7c2。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
- * @method integer getAvailableIpAddressCount() 获取可用`IP`数。
- * @method void setAvailableIpAddressCount(integer $AvailableIpAddressCount) 设置可用`IP`数。
+ * @method integer getAvailableIpAddressCount() 获取可用`IPv4`数。
+ * @method void setAvailableIpAddressCount(integer $AvailableIpAddressCount) 设置可用`IPv4`数。
  * @method string getIpv6CidrBlock() 获取子网的 `IPv6` `CIDR`。
  * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置子网的 `IPv6` `CIDR`。
  * @method string getNetworkAclId() 获取关联`ACL`ID
  * @method void setNetworkAclId(string $NetworkAclId) 设置关联`ACL`ID
  * @method boolean getIsRemoteVpcSnat() 获取是否为 `SNAT` 地址池子网。
  * @method void setIsRemoteVpcSnat(boolean $IsRemoteVpcSnat) 设置是否为 `SNAT` 地址池子网。
- * @method integer getTotalIpAddressCount() 获取子网`IP`总数。
- * @method void setTotalIpAddressCount(integer $TotalIpAddressCount) 设置子网`IP`总数。
+ * @method integer getTotalIpAddressCount() 获取子网`IPv4`总数。
+ * @method void setTotalIpAddressCount(integer $TotalIpAddressCount) 设置子网`IPv4`总数。
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
  */
@@ -99,7 +99,7 @@ class Subnet extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var integer 可用`IP`数。
+     * @var integer 可用`IPv4`数。
      */
     public $AvailableIpAddressCount;
 
@@ -119,7 +119,7 @@ class Subnet extends AbstractModel
     public $IsRemoteVpcSnat;
 
     /**
-     * @var integer 子网`IP`总数。
+     * @var integer 子网`IPv4`总数。
      */
     public $TotalIpAddressCount;
 
@@ -138,11 +138,11 @@ class Subnet extends AbstractModel
      * @param string $Zone 可用区。
      * @param string $RouteTableId 路由表实例ID，例如：rtb-l2h8d7c2。
      * @param string $CreatedTime 创建时间。
-     * @param integer $AvailableIpAddressCount 可用`IP`数。
+     * @param integer $AvailableIpAddressCount 可用`IPv4`数。
      * @param string $Ipv6CidrBlock 子网的 `IPv6` `CIDR`。
      * @param string $NetworkAclId 关联`ACL`ID
      * @param boolean $IsRemoteVpcSnat 是否为 `SNAT` 地址池子网。
-     * @param integer $TotalIpAddressCount 子网`IP`总数。
+     * @param integer $TotalIpAddressCount 子网`IPv4`总数。
      * @param array $TagSet 标签键值对。
      */
     function __construct()

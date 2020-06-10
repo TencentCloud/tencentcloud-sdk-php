@@ -116,6 +116,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeState(string $ChargeState) 设置计费状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStartTime() 获取物理专线开通时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartTime(string $StartTime) 设置物理专线开通时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DirectConnect extends AbstractModel
 {
@@ -272,6 +276,12 @@ class DirectConnect extends AbstractModel
     public $ChargeState;
 
     /**
+     * @var string 物理专线开通时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartTime;
+
+    /**
      * @param string $DirectConnectId 物理专线ID。
      * @param string $DirectConnectName 物理专线的名称。
      * @param string $AccessPointId 物理专线的接入点ID。
@@ -319,6 +329,8 @@ class DirectConnect extends AbstractModel
      * @param string $IdcCity IDC所在城市
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChargeState 计费状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StartTime 物理专线开通时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -441,6 +453,10 @@ class DirectConnect extends AbstractModel
 
         if (array_key_exists("ChargeState",$param) and $param["ChargeState"] !== null) {
             $this->ChargeState = $param["ChargeState"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
         }
     }
 }

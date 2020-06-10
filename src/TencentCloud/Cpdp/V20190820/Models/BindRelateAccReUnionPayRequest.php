@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessageCheckCode(string $MessageCheckCode) 设置STRING(20)，短信验证码（即 BindRelateAcctUnionPay接口中的手机所接收到的短信验证码）
  * @method string getReservedMsg() 获取STRING(1027)，保留域
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
+ * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+ * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
  */
 class BindRelateAccReUnionPayRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class BindRelateAccReUnionPayRequest extends AbstractModel
     public $ReservedMsg;
 
     /**
+     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     */
+    public $Profile;
+
+    /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $TranNetMemberCode STRING(32)，交易网会员代码（若需要把一个待绑定账户关联到两个会员名下，此字段可上送两个会员的交易网代码，并且须用“|::|”（右侧）进行分隔）
      * @param string $MemberAcctNo STRING(50)，会员的待绑定账户的账号（即 BindRelateAcctUnionPay接口中的“会员的待绑定账户的账号”）
      * @param string $MessageCheckCode STRING(20)，短信验证码（即 BindRelateAcctUnionPay接口中的手机所接收到的短信验证码）
      * @param string $ReservedMsg STRING(1027)，保留域
+     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class BindRelateAccReUnionPayRequest extends AbstractModel
 
         if (array_key_exists("ReservedMsg",$param) and $param["ReservedMsg"] !== null) {
             $this->ReservedMsg = $param["ReservedMsg"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

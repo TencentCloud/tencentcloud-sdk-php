@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
  * @method string getWebSign() 获取STRING(300)，网银签名
  * @method void setWebSign(string $WebSign) 设置STRING(300)，网银签名
+ * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+ * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
  */
 class WithdrawCashMembershipRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class WithdrawCashMembershipRequest extends AbstractModel
     public $WebSign;
 
     /**
+     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     */
+    public $Profile;
+
+    /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $TranWebName STRING(150)，交易网名称（市场名称）
      * @param string $MemberGlobalType STRING(5)，会员证件类型（详情见“常见问题”）
@@ -128,6 +135,7 @@ class WithdrawCashMembershipRequest extends AbstractModel
      * @param string $Remark STRING(300)，备注（建议可送订单号，可在对账文件的备注字段获取到）
      * @param string $ReservedMsg STRING(1027)，保留域
      * @param string $WebSign STRING(300)，网银签名
+     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class WithdrawCashMembershipRequest extends AbstractModel
 
         if (array_key_exists("WebSign",$param) and $param["WebSign"] !== null) {
             $this->WebSign = $param["WebSign"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

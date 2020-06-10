@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemberProperty(string $MemberProperty) 设置STRING(10)，会员属性（00-普通子账号; SH-商户子账户。暂时只支持00-普通子账号改为SH-商户子账户）
  * @method string getReservedMsg() 获取STRING(1027)，保留域
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
+ * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+ * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
  */
 class ReviseMbrPropertyRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ReviseMbrPropertyRequest extends AbstractModel
     public $ReservedMsg;
 
     /**
+     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     */
+    public $Profile;
+
+    /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $SubAcctNo STRING(50)，见证子账户的账号
      * @param string $MemberProperty STRING(10)，会员属性（00-普通子账号; SH-商户子账户。暂时只支持00-普通子账号改为SH-商户子账户）
      * @param string $ReservedMsg STRING(1027)，保留域
+     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ReviseMbrPropertyRequest extends AbstractModel
 
         if (array_key_exists("ReservedMsg",$param) and $param["ReservedMsg"] !== null) {
             $this->ReservedMsg = $param["ReservedMsg"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

@@ -46,10 +46,6 @@ off：关闭全路径缓存（即开启参数过滤）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCacheTag(CacheTagKey $CacheTag) 设置是否使用自定义字符串作为CacheKey的一部分
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCaseSensitive() 获取缓存是否忽略大小写
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCaseSensitive(string $CaseSensitive) 设置缓存是否忽略大小写
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CacheKey extends AbstractModel
 {
@@ -91,12 +87,6 @@ off：关闭全路径缓存（即开启参数过滤）
     public $CacheTag;
 
     /**
-     * @var string 缓存是否忽略大小写
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CaseSensitive;
-
-    /**
      * @param string $FullUrlCache 是否开启全路径缓存
 on：开启全路径缓存（即关闭参数过滤）
 off：关闭全路径缓存（即开启参数过滤）
@@ -109,8 +99,6 @@ off：关闭全路径缓存（即开启参数过滤）
      * @param SchemeKey $Scheme 是否使用请求协议作为CacheKey的一部分
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CacheTagKey $CacheTag 是否使用自定义字符串作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CaseSensitive 缓存是否忽略大小写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -153,10 +141,6 @@ off：关闭全路径缓存（即开启参数过滤）
         if (array_key_exists("CacheTag",$param) and $param["CacheTag"] !== null) {
             $this->CacheTag = new CacheTagKey();
             $this->CacheTag->deserialize($param["CacheTag"]);
-        }
-
-        if (array_key_exists("CaseSensitive",$param) and $param["CaseSensitive"] !== null) {
-            $this->CaseSensitive = $param["CaseSensitive"];
         }
     }
 }

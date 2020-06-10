@@ -88,16 +88,6 @@ deploying：部署中
 deployed：部署成功
 failed：部署失败
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTlsVersion() 获取TLS版本列表，支持填写以下值：
-TLSv1.0, TLSv1.1, TLSv1.2
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTlsVersion(array $TlsVersion) 设置TLS版本列表，支持填写以下值：
-TLSv1.0, TLSv1.1, TLSv1.2
-注意：此字段可能返回 null，表示取不到有效值。
- * @method Hsts getHsts() 获取Hsts配置
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHsts(Hsts $Hsts) 设置Hsts配置
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Https extends AbstractModel
 {
@@ -168,19 +158,6 @@ failed：部署失败
     public $SslStatus;
 
     /**
-     * @var array TLS版本列表，支持填写以下值：
-TLSv1.0, TLSv1.1, TLSv1.2
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $TlsVersion;
-
-    /**
-     * @var Hsts Hsts配置
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Hsts;
-
-    /**
      * @param string $Switch https 配置开关
 on：开启
 off：关闭
@@ -214,11 +191,6 @@ closed：已关闭
 deploying：部署中
 deployed：部署成功
 failed：部署失败
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TlsVersion TLS版本列表，支持填写以下值：
-TLSv1.0, TLSv1.1, TLSv1.2
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Hsts $Hsts Hsts配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -266,15 +238,6 @@ TLSv1.0, TLSv1.1, TLSv1.2
 
         if (array_key_exists("SslStatus",$param) and $param["SslStatus"] !== null) {
             $this->SslStatus = $param["SslStatus"];
-        }
-
-        if (array_key_exists("TlsVersion",$param) and $param["TlsVersion"] !== null) {
-            $this->TlsVersion = $param["TlsVersion"];
-        }
-
-        if (array_key_exists("Hsts",$param) and $param["Hsts"] !== null) {
-            $this->Hsts = new Hsts();
-            $this->Hsts->deserialize($param["Hsts"]);
         }
     }
 }

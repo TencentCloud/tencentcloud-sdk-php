@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReservedMsgTwo(string $ReservedMsgTwo) 设置STRING(300)，保留域2
  * @method string getReservedMsgThree() 获取STRING(300)，保留域3
  * @method void setReservedMsgThree(string $ReservedMsgThree) 设置STRING(300)，保留域3
+ * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+ * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
  */
 class RevokeMemberRechargeThirdPayRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class RevokeMemberRechargeThirdPayRequest extends AbstractModel
     public $ReservedMsgThree;
 
     /**
+     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     */
+    public $Profile;
+
+    /**
      * @param string $OldFillFrontSeqNo STRING(52)，原充值的前置流水号
      * @param string $OldFillPayChannelType STRING(20)，原充值的支付渠道类型
      * @param string $OldPayChannelTranSeqNo STRING(52)，原充值的支付渠道交易流水号
@@ -112,6 +119,7 @@ class RevokeMemberRechargeThirdPayRequest extends AbstractModel
      * @param string $ReservedMsgOne STRING(300)，保留域1
      * @param string $ReservedMsgTwo STRING(300)，保留域2
      * @param string $ReservedMsgThree STRING(300)，保留域3
+     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class RevokeMemberRechargeThirdPayRequest extends AbstractModel
 
         if (array_key_exists("ReservedMsgThree",$param) and $param["ReservedMsgThree"] !== null) {
             $this->ReservedMsgThree = $param["ReservedMsgThree"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileDate(string $FileDate) 设置STRING(8)，文件日期（格式：20190101）
  * @method string getReservedMsg() 获取STRING(1027)，保留域
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
+ * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+ * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
  */
 class QueryReconciliationDocumentRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class QueryReconciliationDocumentRequest extends AbstractModel
     public $ReservedMsg;
 
     /**
+     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     */
+    public $Profile;
+
+    /**
      * @param string $MrchCode String(22)，商户号
      * @param string $FileType STRING(10)，文件类型（充值文件-CZ; 提现文件-TX; 交易文件-JY; 余额文件-YE; 合约文件-HY）
      * @param string $FileDate STRING(8)，文件日期（格式：20190101）
      * @param string $ReservedMsg STRING(1027)，保留域
+     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class QueryReconciliationDocumentRequest extends AbstractModel
 
         if (array_key_exists("ReservedMsg",$param) and $param["ReservedMsg"] !== null) {
             $this->ReservedMsg = $param["ReservedMsg"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCcy(string $Ccy) 设置STRING(3)，币种（默认为RMB）
  * @method string getReservedMsg() 获取STRING(1027)，原小额转账方式（1: 往账鉴权，此为默认值; 2: 来账鉴权）
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，原小额转账方式（1: 往账鉴权，此为默认值; 2: 来账鉴权）
+ * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+ * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
  */
 class CheckAmountRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CheckAmountRequest extends AbstractModel
     public $ReservedMsg;
 
     /**
+     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     */
+    public $Profile;
+
+    /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $TranNetMemberCode STRING(32)，交易网会员代码（若需要把一个待绑定账户关联到两个会员名下，此字段可上送两个会员的交易网代码，并且须用“|::|”(右侧)进行分隔）
      * @param string $TakeCashAcctNo STRING(50)，会员的待绑定账户的账号（即 BindRelateAcctSmallAmount接口中的“会员的待绑定账户的账号”）
      * @param string $AuthAmt STRING(20)，鉴权验证金额（即 BindRelateAcctSmallAmount接口中的“会员的待绑定账户收到的验证金额。原小额转账鉴权方式为来账鉴权的情况下此字段须赋值为0.00）
      * @param string $Ccy STRING(3)，币种（默认为RMB）
      * @param string $ReservedMsg STRING(1027)，原小额转账方式（1: 往账鉴权，此为默认值; 2: 来账鉴权）
+     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class CheckAmountRequest extends AbstractModel
 
         if (array_key_exists("ReservedMsg",$param) and $param["ReservedMsg"] !== null) {
             $this->ReservedMsg = $param["ReservedMsg"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

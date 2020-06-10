@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEmail(string $Email) 设置STRING(150)，邮箱
  * @method string getReservedMsg() 获取STRING(1027)，保留域
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
+ * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+ * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
  */
 class CreateCustAcctIdRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class CreateCustAcctIdRequest extends AbstractModel
     public $ReservedMsg;
 
     /**
+     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     */
+    public $Profile;
+
+    /**
      * @param string $FunctionFlag STRING(2)，功能标志（1: 开户; 3: 销户）
      * @param string $FundSummaryAcctNo STRING(50)，资金汇总账号（即收单资金归集入账的账号）
      * @param string $TranNetMemberCode STRING(32)，交易网会员代码（平台端的用户ID，需要保证唯一性，可数字字母混合，如HY_120）
@@ -136,6 +143,7 @@ class CreateCustAcctIdRequest extends AbstractModel
      * @param string $UserNickname STRING(150)，用户昵称
      * @param string $Email STRING(150)，邮箱
      * @param string $ReservedMsg STRING(1027)，保留域
+     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class CreateCustAcctIdRequest extends AbstractModel
 
         if (array_key_exists("ReservedMsg",$param) and $param["ReservedMsg"] !== null) {
             $this->ReservedMsg = $param["ReservedMsg"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

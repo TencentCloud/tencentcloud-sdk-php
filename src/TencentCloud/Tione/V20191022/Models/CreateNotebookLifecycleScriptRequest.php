@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNotebookLifecycleScriptsName() 获取Notebook生命周期脚本名称
  * @method void setNotebookLifecycleScriptsName(string $NotebookLifecycleScriptsName) 设置Notebook生命周期脚本名称
- * @method string getCreateScript() 获取创建脚本，base64编码格式
- * @method void setCreateScript(string $CreateScript) 设置创建脚本，base64编码格式
- * @method string getStartScript() 获取启动脚本，base64编码格式
- * @method void setStartScript(string $StartScript) 设置启动脚本，base64编码格式
+ * @method string getCreateScript() 获取创建脚本，base64编码
+base64后的脚本长度不能超过16384个字符
+ * @method void setCreateScript(string $CreateScript) 设置创建脚本，base64编码
+base64后的脚本长度不能超过16384个字符
+ * @method string getStartScript() 获取启动脚本，base64编码
+base64后的脚本长度不能超过16384个字符
+ * @method void setStartScript(string $StartScript) 设置启动脚本，base64编码
+base64后的脚本长度不能超过16384个字符
  */
 class CreateNotebookLifecycleScriptRequest extends AbstractModel
 {
@@ -35,19 +39,23 @@ class CreateNotebookLifecycleScriptRequest extends AbstractModel
     public $NotebookLifecycleScriptsName;
 
     /**
-     * @var string 创建脚本，base64编码格式
+     * @var string 创建脚本，base64编码
+base64后的脚本长度不能超过16384个字符
      */
     public $CreateScript;
 
     /**
-     * @var string 启动脚本，base64编码格式
+     * @var string 启动脚本，base64编码
+base64后的脚本长度不能超过16384个字符
      */
     public $StartScript;
 
     /**
      * @param string $NotebookLifecycleScriptsName Notebook生命周期脚本名称
-     * @param string $CreateScript 创建脚本，base64编码格式
-     * @param string $StartScript 启动脚本，base64编码格式
+     * @param string $CreateScript 创建脚本，base64编码
+base64后的脚本长度不能超过16384个字符
+     * @param string $StartScript 启动脚本，base64编码
+base64后的脚本长度不能超过16384个字符
      */
     function __construct()
     {

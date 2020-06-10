@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndDate(string $EndDate) 设置STRING(8)，结束日期（若是历史查询，则必输，当日查询时，不起作用。格式：20190101）
  * @method string getReservedMsg() 获取STRING(1027)，保留域
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
+ * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+ * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
  */
 class QueryBankWithdrawCashDetailsRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class QueryBankWithdrawCashDetailsRequest extends AbstractModel
     public $ReservedMsg;
 
     /**
+     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     */
+    public $Profile;
+
+    /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $FunctionFlag STRING(2)，功能标志（1: 当日; 2: 历史）
      * @param string $SubAcctNo STRING(50)，见证子帐户的帐号
@@ -88,6 +95,7 @@ class QueryBankWithdrawCashDetailsRequest extends AbstractModel
      * @param string $BeginDate STRING(8)，开始日期（若是历史查询，则必输，当日查询时，不起作用。格式：20190101）
      * @param string $EndDate STRING(8)，结束日期（若是历史查询，则必输，当日查询时，不起作用。格式：20190101）
      * @param string $ReservedMsg STRING(1027)，保留域
+     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class QueryBankWithdrawCashDetailsRequest extends AbstractModel
 
         if (array_key_exists("ReservedMsg",$param) and $param["ReservedMsg"] !== null) {
             $this->ReservedMsg = $param["ReservedMsg"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

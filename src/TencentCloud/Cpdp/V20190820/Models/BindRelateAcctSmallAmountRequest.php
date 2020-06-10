@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEiconBankBranchId(string $EiconBankBranchId) 设置STRING(20)，会员的待绑定账户的开户行的超级网银行号（本他行类型为他行的情况下，此字段和上一个字段至少一个不为空）
  * @method string getReservedMsg() 获取STRING(1027)，转账方式（1: 往账鉴权(默认值); 2: 来账鉴权）
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，转账方式（1: 往账鉴权(默认值); 2: 来账鉴权）
+ * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+ * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
  */
 class BindRelateAcctSmallAmountRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class BindRelateAcctSmallAmountRequest extends AbstractModel
     public $ReservedMsg;
 
     /**
+     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     */
+    public $Profile;
+
+    /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $TranNetMemberCode STRING(32)，交易网会员代码（若需要把一个待绑定账户关联到两个会员名下，此字段可上送两个会员的交易网代码，并且须用“|::|”(右侧)进行分隔）
      * @param string $MemberName STRING(150)，见证子账户的户名（首次绑定的情况下，此字段即为待绑定的提现账户的户名。非首次绑定的情况下，须注意带绑定的提现账户的户名须与留存在后台系统的会员户名一致）
@@ -120,6 +127,7 @@ class BindRelateAcctSmallAmountRequest extends AbstractModel
      * @param string $CnapsBranchId STRING(20)，会员的待绑定账户的开户行的联行号（本他行类型为他行的情况下，此字段和下一个字段至少一个不为空）
      * @param string $EiconBankBranchId STRING(20)，会员的待绑定账户的开户行的超级网银行号（本他行类型为他行的情况下，此字段和上一个字段至少一个不为空）
      * @param string $ReservedMsg STRING(1027)，转账方式（1: 往账鉴权(默认值); 2: 来账鉴权）
+     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class BindRelateAcctSmallAmountRequest extends AbstractModel
 
         if (array_key_exists("ReservedMsg",$param) and $param["ReservedMsg"] !== null) {
             $this->ReservedMsg = $param["ReservedMsg"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

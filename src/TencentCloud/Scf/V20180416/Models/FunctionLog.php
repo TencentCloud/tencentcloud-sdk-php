@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLevel(string $Level) 设置日志等级
  * @method string getSource() 获取日志来源
  * @method void setSource(string $Source) 设置日志来源
+ * @method integer getRetryNum() 获取重试次数
+ * @method void setRetryNum(integer $RetryNum) 设置重试次数
  */
 class FunctionLog extends AbstractModel
 {
@@ -108,6 +110,11 @@ class FunctionLog extends AbstractModel
     public $Source;
 
     /**
+     * @var integer 重试次数
+     */
+    public $RetryNum;
+
+    /**
      * @param string $FunctionName 函数的名称
      * @param string $RetMsg 函数执行完成后的返回值
      * @param string $RequestId 执行该函数对应的requestId
@@ -120,6 +127,7 @@ class FunctionLog extends AbstractModel
      * @param string $Log 函数执行过程中的日志输出
      * @param string $Level 日志等级
      * @param string $Source 日志来源
+     * @param integer $RetryNum 重试次数
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class FunctionLog extends AbstractModel
 
         if (array_key_exists("Source",$param) and $param["Source"] !== null) {
             $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("RetryNum",$param) and $param["RetryNum"] !== null) {
+            $this->RetryNum = $param["RetryNum"];
         }
     }
 }

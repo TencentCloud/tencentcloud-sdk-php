@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) 设置告警伸缩策略ID
  * @method boolean getHonorCooldown() 获取是否检查伸缩组活动处于冷却时间内，默认值为false
  * @method void setHonorCooldown(boolean $HonorCooldown) 设置是否检查伸缩组活动处于冷却时间内，默认值为false
+ * @method string getTriggerSource() 获取执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。
+ * @method void setTriggerSource(string $TriggerSource) 设置执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。
  */
 class ExecuteScalingPolicyRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ExecuteScalingPolicyRequest extends AbstractModel
     public $HonorCooldown;
 
     /**
+     * @var string 执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。
+     */
+    public $TriggerSource;
+
+    /**
      * @param string $AutoScalingPolicyId 告警伸缩策略ID
      * @param boolean $HonorCooldown 是否检查伸缩组活动处于冷却时间内，默认值为false
+     * @param string $TriggerSource 执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ExecuteScalingPolicyRequest extends AbstractModel
 
         if (array_key_exists("HonorCooldown",$param) and $param["HonorCooldown"] !== null) {
             $this->HonorCooldown = $param["HonorCooldown"];
+        }
+
+        if (array_key_exists("TriggerSource",$param) and $param["TriggerSource"] !== null) {
+            $this->TriggerSource = $param["TriggerSource"];
         }
     }
 }

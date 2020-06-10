@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubAcctNo(string $SubAcctNo) 设置STRING(50)，见证子账户的账号（若SelectFlag为2或3时，子账户账号必输）
  * @method string getReservedMsg() 获取STRING(1027)，保留域
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
+ * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+ * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
  */
 class QueryMemberBindRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class QueryMemberBindRequest extends AbstractModel
     public $ReservedMsg;
 
     /**
+     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     */
+    public $Profile;
+
+    /**
      * @param string $MrchCode String(22)，商户号（签约客户号）
      * @param string $QueryFlag STRING(4)，查询标志（1: 全部会员; 2: 单个会员; 3: 单个会员的证件信息）
      * @param string $PageNum STRING (10)，页码（起始值为1，每次最多返回20条记录，第二页返回的记录数为第21至40条记录，第三页为41至60条记录，顺序均按照建立时间的先后）
      * @param string $SubAcctNo STRING(50)，见证子账户的账号（若SelectFlag为2或3时，子账户账号必输）
      * @param string $ReservedMsg STRING(1027)，保留域
+     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class QueryMemberBindRequest extends AbstractModel
 
         if (array_key_exists("ReservedMsg",$param) and $param["ReservedMsg"] !== null) {
             $this->ReservedMsg = $param["ReservedMsg"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

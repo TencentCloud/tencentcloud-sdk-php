@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSecurityPolicy请求参数结构体
  *
- * @method string getProxyId() 获取加速通道ID
- * @method void setProxyId(string $ProxyId) 设置加速通道ID
  * @method string getDefaultAction() 获取默认策略：ACCEPT或DROP
  * @method void setDefaultAction(string $DefaultAction) 设置默认策略：ACCEPT或DROP
+ * @method string getProxyId() 获取加速通道ID
+ * @method void setProxyId(string $ProxyId) 设置加速通道ID
+ * @method string getGroupId() 获取通道组ID
+ * @method void setGroupId(string $GroupId) 设置通道组ID
  */
 class CreateSecurityPolicyRequest extends AbstractModel
 {
-    /**
-     * @var string 加速通道ID
-     */
-    public $ProxyId;
-
     /**
      * @var string 默认策略：ACCEPT或DROP
      */
     public $DefaultAction;
 
     /**
-     * @param string $ProxyId 加速通道ID
+     * @var string 加速通道ID
+     */
+    public $ProxyId;
+
+    /**
+     * @var string 通道组ID
+     */
+    public $GroupId;
+
+    /**
      * @param string $DefaultAction 默认策略：ACCEPT或DROP
+     * @param string $ProxyId 加速通道ID
+     * @param string $GroupId 通道组ID
      */
     function __construct()
     {
@@ -54,12 +62,16 @@ class CreateSecurityPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DefaultAction",$param) and $param["DefaultAction"] !== null) {
+            $this->DefaultAction = $param["DefaultAction"];
+        }
+
         if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
             $this->ProxyId = $param["ProxyId"];
         }
 
-        if (array_key_exists("DefaultAction",$param) and $param["DefaultAction"] !== null) {
-            $this->DefaultAction = $param["DefaultAction"];
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

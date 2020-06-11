@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupId() 获取需要删除的通道组ID。
  * @method void setGroupId(string $GroupId) 设置需要删除的通道组ID。
+ * @method integer getForce() 获取强制删除标识。其中：
+0，不强制删除，
+1，强制删除。
+默认为0，当通道组中存在通道或通道组中存在监听器/规则绑定了源站时，且Force为0时，该操作会返回失败。
+ * @method void setForce(integer $Force) 设置强制删除标识。其中：
+0，不强制删除，
+1，强制删除。
+默认为0，当通道组中存在通道或通道组中存在监听器/规则绑定了源站时，且Force为0时，该操作会返回失败。
  */
 class DeleteProxyGroupRequest extends AbstractModel
 {
@@ -31,7 +39,19 @@ class DeleteProxyGroupRequest extends AbstractModel
     public $GroupId;
 
     /**
+     * @var integer 强制删除标识。其中：
+0，不强制删除，
+1，强制删除。
+默认为0，当通道组中存在通道或通道组中存在监听器/规则绑定了源站时，且Force为0时，该操作会返回失败。
+     */
+    public $Force;
+
+    /**
      * @param string $GroupId 需要删除的通道组ID。
+     * @param integer $Force 强制删除标识。其中：
+0，不强制删除，
+1，强制删除。
+默认为0，当通道组中存在通道或通道组中存在监听器/规则绑定了源站时，且Force为0时，该操作会返回失败。
      */
     function __construct()
     {
@@ -48,6 +68,10 @@ class DeleteProxyGroupRequest extends AbstractModel
         }
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("Force",$param) and $param["Force"] !== null) {
+            $this->Force = $param["Force"];
         }
     }
 }

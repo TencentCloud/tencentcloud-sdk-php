@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeSecurityPolicyDetail返回参数结构体
  *
  * @method string getProxyId() 获取通道ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyId(string $ProxyId) 设置通道ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取安全策略状态：
 BOUND，已开启安全策略
 UNBIND，已关闭安全策略
@@ -45,6 +47,7 @@ class DescribeSecurityPolicyDetailResponse extends AbstractModel
 {
     /**
      * @var string 通道ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyId;
 
@@ -79,6 +82,7 @@ UNBINDING，安全策略关闭中。
 
     /**
      * @param string $ProxyId 通道ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 安全策略状态：
 BOUND，已开启安全策略
 UNBIND，已关闭安全策略

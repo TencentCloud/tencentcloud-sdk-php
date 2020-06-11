@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplate(integer $Template) 设置混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板
  * @method string getMainVideoUserId() 获取屏幕分享模板中有效，代表左侧大画面对应的用户ID
  * @method void setMainVideoUserId(string $MainVideoUserId) 设置屏幕分享模板中有效，代表左侧大画面对应的用户ID
- * @method integer getMainVideoStreamType() 获取屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享
- * @method void setMainVideoStreamType(integer $MainVideoStreamType) 设置屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享
+ * @method integer getMainVideoStreamType() 获取屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0
+ * @method void setMainVideoStreamType(integer $MainVideoStreamType) 设置屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0
  */
 class LayoutParams extends AbstractModel
 {
@@ -40,14 +40,14 @@ class LayoutParams extends AbstractModel
     public $MainVideoUserId;
 
     /**
-     * @var integer 屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享
+     * @var integer 屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0
      */
     public $MainVideoStreamType;
 
     /**
      * @param integer $Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板
      * @param string $MainVideoUserId 屏幕分享模板中有效，代表左侧大画面对应的用户ID
-     * @param integer $MainVideoStreamType 屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享
+     * @param integer $MainVideoStreamType 屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0
      */
     function __construct()
     {

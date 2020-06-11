@@ -48,6 +48,14 @@ DESTROYING表示销毁中；
 MOVING表示通道迁移中。
  * @method array getTagSet() 获取标签列表。
  * @method void setTagSet(array $TagSet) 设置标签列表。
+ * @method string getVersion() 获取通道组版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersion(string $Version) 设置通道组版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(integer $CreateTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyGroupInfo extends AbstractModel
 {
@@ -94,6 +102,18 @@ MOVING表示通道迁移中。
     public $TagSet;
 
     /**
+     * @var string 通道组版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Version;
+
+    /**
+     * @var integer 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @param string $GroupId 通道组id
      * @param string $Domain 通道组域名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -108,6 +128,10 @@ CREATING表示创建中；
 DESTROYING表示销毁中；
 MOVING表示通道迁移中。
      * @param array $TagSet 标签列表。
+     * @param string $Version 通道组版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -154,6 +178,14 @@ MOVING表示通道迁移中。
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

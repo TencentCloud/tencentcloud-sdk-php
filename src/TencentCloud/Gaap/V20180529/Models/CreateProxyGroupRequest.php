@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerRegion(string $RealServerRegion) 设置源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
  * @method array getTagSet() 获取标签列表
  * @method void setTagSet(array $TagSet) 设置标签列表
+ * @method array getAccessRegionSet() 获取加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
+ * @method void setAccessRegionSet(array $AccessRegionSet) 设置加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
  */
 class CreateProxyGroupRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateProxyGroupRequest extends AbstractModel
     public $TagSet;
 
     /**
+     * @var array 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
+     */
+    public $AccessRegionSet;
+
+    /**
      * @param integer $ProjectId 通道组所属项目ID
      * @param string $GroupName 通道组别名
      * @param string $RealServerRegion 源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
      * @param array $TagSet 标签列表
+     * @param array $AccessRegionSet 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
      */
     function __construct()
     {
@@ -88,6 +96,15 @@ class CreateProxyGroupRequest extends AbstractModel
                 $obj = new TagPair();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
+            }
+        }
+
+        if (array_key_exists("AccessRegionSet",$param) and $param["AccessRegionSet"] !== null) {
+            $this->AccessRegionSet = [];
+            foreach ($param["AccessRegionSet"] as $key => $value){
+                $obj = new AccessConfiguration();
+                $obj->deserialize($value);
+                array_push($this->AccessRegionSet, $obj);
             }
         }
     }

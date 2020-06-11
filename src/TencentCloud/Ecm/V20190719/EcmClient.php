@@ -35,6 +35,7 @@ EIP 如果欠费或被封堵，则不能被绑定。
  * @method Models\AttachNetworkInterfaceResponse AttachNetworkInterface(Models\AttachNetworkInterfaceRequest $req) 弹性网卡绑定云主机
  * @method Models\CreateModuleResponse CreateModule(Models\CreateModuleRequest $req) 创建模块
  * @method Models\CreateNetworkInterfaceResponse CreateNetworkInterface(Models\CreateNetworkInterfaceRequest $req) 创建弹性网卡
+ * @method Models\CreateSecurityGroupResponse CreateSecurityGroup(Models\CreateSecurityGroupRequest $req) 创建安全组
  * @method Models\CreateSubnetResponse CreateSubnet(Models\CreateSubnetRequest $req) 创建子网，若创建成功，则此子网会成为此可用区的默认子网。
  * @method Models\CreateVpcResponse CreateVpc(Models\CreateVpcRequest $req) 创建私有网络
  * @method Models\DeleteImageResponse DeleteImage(Models\DeleteImageRequest $req) 删除镜像

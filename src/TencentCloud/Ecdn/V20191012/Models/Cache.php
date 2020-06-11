@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getCacheRules() 获取缓存配置规则数组。
  * @method void setCacheRules(array $CacheRules) 设置缓存配置规则数组。
- * @method string getFollowOrigin() 获取遵循源站 Cache-Control: max-age 配置
+ * @method string getFollowOrigin() 获取遵循源站 Cache-Control: max-age 配置，白名单功能。
 on：开启
 off：关闭
 开启后，未能匹配 CacheRules 规则的资源将根据源站返回的 max-age 值进行节点缓存；匹配了 CacheRules 规则的资源将按照 CacheRules 中设置的缓存过期时间在节点进行缓存
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFollowOrigin(string $FollowOrigin) 设置遵循源站 Cache-Control: max-age 配置
+ * @method void setFollowOrigin(string $FollowOrigin) 设置遵循源站 Cache-Control: max-age 配置，白名单功能。
 on：开启
 off：关闭
 开启后，未能匹配 CacheRules 规则的资源将根据源站返回的 max-age 值进行节点缓存；匹配了 CacheRules 规则的资源将按照 CacheRules 中设置的缓存过期时间在节点进行缓存
@@ -41,7 +41,7 @@ class Cache extends AbstractModel
     public $CacheRules;
 
     /**
-     * @var string 遵循源站 Cache-Control: max-age 配置
+     * @var string 遵循源站 Cache-Control: max-age 配置，白名单功能。
 on：开启
 off：关闭
 开启后，未能匹配 CacheRules 规则的资源将根据源站返回的 max-age 值进行节点缓存；匹配了 CacheRules 规则的资源将按照 CacheRules 中设置的缓存过期时间在节点进行缓存
@@ -51,7 +51,7 @@ off：关闭
 
     /**
      * @param array $CacheRules 缓存配置规则数组。
-     * @param string $FollowOrigin 遵循源站 Cache-Control: max-age 配置
+     * @param string $FollowOrigin 遵循源站 Cache-Control: max-age 配置，白名单功能。
 on：开启
 off：关闭
 开启后，未能匹配 CacheRules 规则的资源将根据源站返回的 max-age 值进行节点缓存；匹配了 CacheRules 规则的资源将按照 CacheRules 中设置的缓存过期时间在节点进行缓存

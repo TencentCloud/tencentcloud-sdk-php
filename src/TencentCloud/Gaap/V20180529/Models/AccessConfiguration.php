@@ -18,30 +18,21 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CheckProxyCreate请求参数结构体
+ * 通道组加速地域列表，包括加速地域，以及该加速地域对应的带宽和并发配置。
  *
- * @method string getAccessRegion() 获取通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
- * @method void setAccessRegion(string $AccessRegion) 设置通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
- * @method string getRealServerRegion() 获取通道的源站区域。取值可通过接口DescribeDestRegions获取到
- * @method void setRealServerRegion(string $RealServerRegion) 设置通道的源站区域。取值可通过接口DescribeDestRegions获取到
+ * @method string getAccessRegion() 获取加速地域。
+ * @method void setAccessRegion(string $AccessRegion) 设置加速地域。
  * @method integer getBandwidth() 获取通道带宽上限，单位：Mbps。
  * @method void setBandwidth(integer $Bandwidth) 设置通道带宽上限，单位：Mbps。
  * @method integer getConcurrent() 获取通道并发量上限，表示同时在线的连接数，单位：万。
  * @method void setConcurrent(integer $Concurrent) 设置通道并发量上限，表示同时在线的连接数，单位：万。
- * @method string getGroupId() 获取如果在通道组下创建通道，需要填写通道组的ID
- * @method void setGroupId(string $GroupId) 设置如果在通道组下创建通道，需要填写通道组的ID
  */
-class CheckProxyCreateRequest extends AbstractModel
+class AccessConfiguration extends AbstractModel
 {
     /**
-     * @var string 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
+     * @var string 加速地域。
      */
     public $AccessRegion;
-
-    /**
-     * @var string 通道的源站区域。取值可通过接口DescribeDestRegions获取到
-     */
-    public $RealServerRegion;
 
     /**
      * @var integer 通道带宽上限，单位：Mbps。
@@ -54,16 +45,9 @@ class CheckProxyCreateRequest extends AbstractModel
     public $Concurrent;
 
     /**
-     * @var string 如果在通道组下创建通道，需要填写通道组的ID
-     */
-    public $GroupId;
-
-    /**
-     * @param string $AccessRegion 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
-     * @param string $RealServerRegion 通道的源站区域。取值可通过接口DescribeDestRegions获取到
+     * @param string $AccessRegion 加速地域。
      * @param integer $Bandwidth 通道带宽上限，单位：Mbps。
      * @param integer $Concurrent 通道并发量上限，表示同时在线的连接数，单位：万。
-     * @param string $GroupId 如果在通道组下创建通道，需要填写通道组的ID
      */
     function __construct()
     {
@@ -82,20 +66,12 @@ class CheckProxyCreateRequest extends AbstractModel
             $this->AccessRegion = $param["AccessRegion"];
         }
 
-        if (array_key_exists("RealServerRegion",$param) and $param["RealServerRegion"] !== null) {
-            $this->RealServerRegion = $param["RealServerRegion"];
-        }
-
         if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
             $this->Bandwidth = $param["Bandwidth"];
         }
 
         if (array_key_exists("Concurrent",$param) and $param["Concurrent"] !== null) {
             $this->Concurrent = $param["Concurrent"];
-        }
-
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
         }
     }
 }

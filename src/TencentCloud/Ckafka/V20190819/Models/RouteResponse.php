@@ -14,32 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gaap\V20180529\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * OpenSecurityPolicy请求参数结构体
+ * 路由信息返回对象
  *
- * @method string getProxyId() 获取需开启安全策略的通道ID
- * @method void setProxyId(string $ProxyId) 设置需开启安全策略的通道ID
- * @method string getPolicyId() 获取安全策略ID
- * @method void setPolicyId(string $PolicyId) 设置安全策略ID
+ * @method array getRouters() 获取路由信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRouters(array $Routers) 设置路由信息列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class OpenSecurityPolicyRequest extends AbstractModel
+class RouteResponse extends AbstractModel
 {
     /**
-     * @var string 需开启安全策略的通道ID
+     * @var array 路由信息列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ProxyId;
+    public $Routers;
 
     /**
-     * @var string 安全策略ID
-     */
-    public $PolicyId;
-
-    /**
-     * @param string $ProxyId 需开启安全策略的通道ID
-     * @param string $PolicyId 安全策略ID
+     * @param array $Routers 路由信息列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -54,12 +50,13 @@ class OpenSecurityPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
-            $this->ProxyId = $param["ProxyId"];
-        }
-
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists("Routers",$param) and $param["Routers"] !== null) {
+            $this->Routers = [];
+            foreach ($param["Routers"] as $key => $value){
+                $obj = new Route();
+                $obj->deserialize($value);
+                array_push($this->Routers, $obj);
+            }
         }
     }
 }

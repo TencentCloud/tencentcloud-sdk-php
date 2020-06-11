@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeStreamPlayInfoList返回参数结构体
+ * OpenProxyGroup返回参数结构体
  *
- * @method array getDataInfoList() 获取统计信息列表，时间粒度是1分钟。
- * @method void setDataInfoList(array $DataInfoList) 设置统计信息列表，时间粒度是1分钟。
+ * @method array getInvalidStatusInstanceSet() 获取非关闭状态下的通道实例ID列表，不可开启。
+ * @method void setInvalidStatusInstanceSet(array $InvalidStatusInstanceSet) 设置非关闭状态下的通道实例ID列表，不可开启。
+ * @method array getOperationFailedInstanceSet() 获取开启操作失败的通道实例ID列表。
+ * @method void setOperationFailedInstanceSet(array $OperationFailedInstanceSet) 设置开启操作失败的通道实例ID列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeStreamPlayInfoListResponse extends AbstractModel
+class OpenProxyGroupResponse extends AbstractModel
 {
     /**
-     * @var array 统计信息列表，时间粒度是1分钟。
+     * @var array 非关闭状态下的通道实例ID列表，不可开启。
      */
-    public $DataInfoList;
+    public $InvalidStatusInstanceSet;
+
+    /**
+     * @var array 开启操作失败的通道实例ID列表。
+     */
+    public $OperationFailedInstanceSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeStreamPlayInfoListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DataInfoList 统计信息列表，时间粒度是1分钟。
+     * @param array $InvalidStatusInstanceSet 非关闭状态下的通道实例ID列表，不可开启。
+     * @param array $OperationFailedInstanceSet 开启操作失败的通道实例ID列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +62,12 @@ class DescribeStreamPlayInfoListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataInfoList",$param) and $param["DataInfoList"] !== null) {
-            $this->DataInfoList = [];
-            foreach ($param["DataInfoList"] as $key => $value){
-                $obj = new DayStreamPlayInfo();
-                $obj->deserialize($value);
-                array_push($this->DataInfoList, $obj);
-            }
+        if (array_key_exists("InvalidStatusInstanceSet",$param) and $param["InvalidStatusInstanceSet"] !== null) {
+            $this->InvalidStatusInstanceSet = $param["InvalidStatusInstanceSet"];
+        }
+
+        if (array_key_exists("OperationFailedInstanceSet",$param) and $param["OperationFailedInstanceSet"] !== null) {
+            $this->OperationFailedInstanceSet = $param["OperationFailedInstanceSet"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

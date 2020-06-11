@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProxyId() 获取通道ID
  * @method void setProxyId(string $ProxyId) 设置通道ID
+ * @method string getPolicyId() 获取安全组策略ID
+ * @method void setPolicyId(string $PolicyId) 设置安全组策略ID
  */
 class CloseSecurityPolicyRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CloseSecurityPolicyRequest extends AbstractModel
     public $ProxyId;
 
     /**
+     * @var string 安全组策略ID
+     */
+    public $PolicyId;
+
+    /**
      * @param string $ProxyId 通道ID
+     * @param string $PolicyId 安全组策略ID
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CloseSecurityPolicyRequest extends AbstractModel
         }
         if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
             $this->ProxyId = $param["ProxyId"];
+        }
+
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
         }
     }
 }

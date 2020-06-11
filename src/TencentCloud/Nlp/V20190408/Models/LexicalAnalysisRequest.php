@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getText() 获取待分析的文本（仅支持UTF-8格式，不超过500字）
  * @method void setText(string $Text) 设置待分析的文本（仅支持UTF-8格式，不超过500字）
+ * @method string getDictId() 获取指定要加载的自定义词库ID。
+ * @method void setDictId(string $DictId) 设置指定要加载的自定义词库ID。
  * @method integer getFlag() 获取词法分析模式（默认取2值）：
 1、高精度（混合粒度分词能力）；
 2、高性能（单粒度分词能力）；
@@ -37,6 +39,11 @@ class LexicalAnalysisRequest extends AbstractModel
     public $Text;
 
     /**
+     * @var string 指定要加载的自定义词库ID。
+     */
+    public $DictId;
+
+    /**
      * @var integer 词法分析模式（默认取2值）：
 1、高精度（混合粒度分词能力）；
 2、高性能（单粒度分词能力）；
@@ -45,6 +52,7 @@ class LexicalAnalysisRequest extends AbstractModel
 
     /**
      * @param string $Text 待分析的文本（仅支持UTF-8格式，不超过500字）
+     * @param string $DictId 指定要加载的自定义词库ID。
      * @param integer $Flag 词法分析模式（默认取2值）：
 1、高精度（混合粒度分词能力）；
 2、高性能（单粒度分词能力）；
@@ -64,6 +72,10 @@ class LexicalAnalysisRequest extends AbstractModel
         }
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {
             $this->Text = $param["Text"];
+        }
+
+        if (array_key_exists("DictId",$param) and $param["DictId"] !== null) {
+            $this->DictId = $param["DictId"];
         }
 
         if (array_key_exists("Flag",$param) and $param["Flag"] !== null) {

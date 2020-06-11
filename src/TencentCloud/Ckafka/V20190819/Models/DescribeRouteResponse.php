@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeStreamPlayInfoList返回参数结构体
+ * DescribeRoute返回参数结构体
  *
- * @method array getDataInfoList() 获取统计信息列表，时间粒度是1分钟。
- * @method void setDataInfoList(array $DataInfoList) 设置统计信息列表，时间粒度是1分钟。
+ * @method RouteResponse getResult() 获取返回的路由信息结果集
+ * @method void setResult(RouteResponse $Result) 设置返回的路由信息结果集
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeStreamPlayInfoListResponse extends AbstractModel
+class DescribeRouteResponse extends AbstractModel
 {
     /**
-     * @var array 统计信息列表，时间粒度是1分钟。
+     * @var RouteResponse 返回的路由信息结果集
      */
-    public $DataInfoList;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class DescribeStreamPlayInfoListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DataInfoList 统计信息列表，时间粒度是1分钟。
+     * @param RouteResponse $Result 返回的路由信息结果集
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +54,9 @@ class DescribeStreamPlayInfoListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataInfoList",$param) and $param["DataInfoList"] !== null) {
-            $this->DataInfoList = [];
-            foreach ($param["DataInfoList"] as $key => $value){
-                $obj = new DayStreamPlayInfo();
-                $obj->deserialize($value);
-                array_push($this->DataInfoList, $obj);
-            }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new RouteResponse();
+            $this->Result->deserialize($param["Result"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

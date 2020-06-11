@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制数量，默认为20
  * @method string getSearchValue() 获取过滤条件，支持按照端口或监听器名称进行模糊查询
  * @method void setSearchValue(string $SearchValue) 设置过滤条件，支持按照端口或监听器名称进行模糊查询
+ * @method string getGroupId() 获取过滤条件，通道组ID
+ * @method void setGroupId(string $GroupId) 设置过滤条件，通道组ID
  */
 class DescribeHTTPSListenersRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeHTTPSListenersRequest extends AbstractModel
     public $SearchValue;
 
     /**
+     * @var string 过滤条件，通道组ID
+     */
+    public $GroupId;
+
+    /**
      * @param string $ProxyId 过滤条件，通道ID
      * @param string $ListenerId 过滤条件，根据监听器ID进行精确查询。
      * @param string $ListenerName 过滤条件，根据监听器名称进行精确查询。
@@ -80,6 +87,7 @@ class DescribeHTTPSListenersRequest extends AbstractModel
      * @param integer $Offset 偏移量， 默认为0
      * @param integer $Limit 限制数量，默认为20
      * @param string $SearchValue 过滤条件，支持按照端口或监听器名称进行模糊查询
+     * @param string $GroupId 过滤条件，通道组ID
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeHTTPSListenersRequest extends AbstractModel
 
         if (array_key_exists("SearchValue",$param) and $param["SearchValue"] !== null) {
             $this->SearchValue = $param["SearchValue"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

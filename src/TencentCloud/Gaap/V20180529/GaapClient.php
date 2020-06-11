@@ -29,6 +29,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\BindRuleRealServersResponse BindRuleRealServers(Models\BindRuleRealServersRequest $req) 该接口用于7层监听器的转发规则绑定源站。注意：本接口会解绑之前绑定的源站，绑定本次调用所选择的源站。
  * @method Models\CheckProxyCreateResponse CheckProxyCreate(Models\CheckProxyCreateRequest $req) 本接口(CheckProxyCreate)用于查询能否创建指定配置的加速通道。
  * @method Models\CloseProxiesResponse CloseProxies(Models\CloseProxiesRequest $req) 本接口（CloseProxies）用于关闭通道。通道关闭后，不再产生流量，但每天仍然收取通道基础配置费用。
+ * @method Models\CloseProxyGroupResponse CloseProxyGroup(Models\CloseProxyGroupRequest $req) 本接口（CloseProxyGroup）用于关闭通道组。通道组关闭后，不再产生流量，但每天仍然收取通道基础配置费用。
  * @method Models\CloseSecurityPolicyResponse CloseSecurityPolicy(Models\CloseSecurityPolicyRequest $req) 关闭安全策略
  * @method Models\CreateCertificateResponse CreateCertificate(Models\CreateCertificateRequest $req) 本接口（CreateCertificate）用于创建Gaap相关证书和配置文件，包括基础认证配置文件，客户端CA证书，服务器SSL证书，Gaap SSL证书以及源站CA证书。
  * @method Models\CreateDomainResponse CreateDomain(Models\CreateDomainRequest $req) 本接口（CreateDomain）用于创建HTTP/HTTPS监听器的访问域名，客户端请求通过访问该域名来请求后端业务。
@@ -105,6 +106,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\ModifyTCPListenerAttributeResponse ModifyTCPListenerAttribute(Models\ModifyTCPListenerAttributeRequest $req) 本接口（ModifyTCPListenerAttribute）用于修改通道实例下TCP监听器配置，包括健康检查的配置，调度策略。
  * @method Models\ModifyUDPListenerAttributeResponse ModifyUDPListenerAttribute(Models\ModifyUDPListenerAttributeRequest $req) 本接口（ModifyUDPListenerAttribute）用于修改通道实例下UDP监听器配置，包括监听器名称和调度策略的修改。
  * @method Models\OpenProxiesResponse OpenProxies(Models\OpenProxiesRequest $req) 该接口（OpenProxies）用于开启一条或者多条通道。
+ * @method Models\OpenProxyGroupResponse OpenProxyGroup(Models\OpenProxyGroupRequest $req) 该接口（OpenProxyGroup）用于开启一条通道组中的所有通道
  * @method Models\OpenSecurityPolicyResponse OpenSecurityPolicy(Models\OpenSecurityPolicyRequest $req) 开启安全策略
  * @method Models\RemoveRealServersResponse RemoveRealServers(Models\RemoveRealServersRequest $req) 删除已添加的源站(服务器)IP或域名
  * @method Models\SetAuthenticationResponse SetAuthentication(Models\SetAuthenticationRequest $req) 本接口（SetAuthentication）用于通道的高级认证配置，包括认证方式选择，以及各种认证方式对应的证书选择。仅支持Version3.0的通道。

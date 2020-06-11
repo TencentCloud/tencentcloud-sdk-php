@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTextDetections(array $TextDetections) 设置检测到的文本信息，包括文本行内容、置信度、文本行坐标以及文本行旋转纠正后的坐标，具体内容请点击左侧链接。
  * @method string getLanguage() 获取检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
  * @method void setLanguage(string $Language) 设置检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
- * @method float getAngel() 获取图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
- * @method void setAngel(float $Angel) 设置图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
+ * @method float getAngel() 获取图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
+ * @method void setAngel(float $Angel) 设置图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,7 +42,7 @@ class GeneralBasicOCRResponse extends AbstractModel
     public $Language;
 
     /**
-     * @var float 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
+     * @var float 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
      */
     public $Angel;
 
@@ -54,7 +54,7 @@ class GeneralBasicOCRResponse extends AbstractModel
     /**
      * @param array $TextDetections 检测到的文本信息，包括文本行内容、置信度、文本行坐标以及文本行旋转纠正后的坐标，具体内容请点击左侧链接。
      * @param string $Language 检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
-     * @param float $Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
+     * @param float $Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

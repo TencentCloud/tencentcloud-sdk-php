@@ -41,6 +41,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeInstanceAttributesResponse DescribeInstanceAttributes(Models\DescribeInstanceAttributesRequest $req) 获取实例属性
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口（DescribeInstance）用于在用户账户下获取消息队列 CKafka 实例列表
  * @method Models\DescribeInstancesDetailResponse DescribeInstancesDetail(Models\DescribeInstancesDetailRequest $req) 用户账户下获取实例列表详情
+ * @method Models\DescribeRouteResponse DescribeRoute(Models\DescribeRouteRequest $req) 查看路由信息
  * @method Models\DescribeTopicResponse DescribeTopic(Models\DescribeTopicRequest $req) 接口请求域名：https://ckafka.tencentcloudapi.com
 本接口（DescribeTopic）用于在用户获取消息队列 CKafka 实例的主题列表
  * @method Models\DescribeTopicAttributesResponse DescribeTopicAttributes(Models\DescribeTopicAttributesRequest $req) 获取主题属性

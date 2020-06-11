@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerRegion(string $RealServerRegion) 设置（新参数）源站区域名称。
  * @method integer getConcurrent() 获取（新参数）通道并发量上限，表示同时在线的连接数，单位：万。
  * @method void setConcurrent(integer $Concurrent) 设置（新参数）通道并发量上限，表示同时在线的连接数，单位：万。
- * @method integer getBillingType() 获取计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
- * @method void setBillingType(integer $BillingType) 设置计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+ * @method integer getBillingType() 获取计费方式，0表示按带宽计费，1表示按流量计费。默认按带宽计费
+ * @method void setBillingType(integer $BillingType) 设置计费方式，0表示按带宽计费，1表示按流量计费。默认按带宽计费
  */
 class InquiryPriceCreateProxyRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
     public $Concurrent;
 
     /**
-     * @var integer 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+     * @var integer 计费方式，0表示按带宽计费，1表示按流量计费。默认按带宽计费
      */
     public $BillingType;
 
@@ -79,7 +79,7 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
      * @param integer $Concurrency （旧参数，请切换到Concurrent）通道并发量上限，表示同时在线的连接数，单位：万。
      * @param string $RealServerRegion （新参数）源站区域名称。
      * @param integer $Concurrent （新参数）通道并发量上限，表示同时在线的连接数，单位：万。
-     * @param integer $BillingType 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+     * @param integer $BillingType 计费方式，0表示按带宽计费，1表示按流量计费。默认按带宽计费
      */
     function __construct()
     {

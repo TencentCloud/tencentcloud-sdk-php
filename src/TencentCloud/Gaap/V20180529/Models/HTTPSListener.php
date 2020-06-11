@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerName(string $ListenerName) 设置监听器名称
  * @method integer getPort() 获取监听器端口
  * @method void setPort(integer $Port) 设置监听器端口
- * @method string getProtocol() 获取监听器协议， 值为：HTTP
- * @method void setProtocol(string $Protocol) 设置监听器协议， 值为：HTTP
+ * @method string getProtocol() 获取监听器协议， HTTP表示HTTP，HTTPS表示HTTPS，此结构取值HTTPS
+ * @method void setProtocol(string $Protocol) 设置监听器协议， HTTP表示HTTP，HTTPS表示HTTPS，此结构取值HTTPS
  * @method integer getListenerStatus() 获取监听器状态，其中：
 0表示运行中；
 1表示创建中；
@@ -55,12 +55,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientCertificateId(string $ClientCertificateId) 设置监听器客户端CA证书ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAuthType() 获取监听器认证方式。其中，
-0，单向认证；
-1，双向认证。
+0表示单向认证；
+1表示双向认证。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthType(integer $AuthType) 设置监听器认证方式。其中，
-0，单向认证；
-1，双向认证。
+0表示单向认证；
+1表示双向认证。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClientCertificateAlias() 获取客户端CA证书别名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -89,7 +89,7 @@ class HTTPSListener extends AbstractModel
     public $Port;
 
     /**
-     * @var string 监听器协议， 值为：HTTP
+     * @var string 监听器协议， HTTP表示HTTP，HTTPS表示HTTPS，此结构取值HTTPS
      */
     public $Protocol;
 
@@ -132,8 +132,8 @@ class HTTPSListener extends AbstractModel
 
     /**
      * @var integer 监听器认证方式。其中，
-0，单向认证；
-1，双向认证。
+0表示单向认证；
+1表示双向认证。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthType;
@@ -154,7 +154,7 @@ class HTTPSListener extends AbstractModel
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
      * @param integer $Port 监听器端口
-     * @param string $Protocol 监听器协议， 值为：HTTP
+     * @param string $Protocol 监听器协议， HTTP表示HTTP，HTTPS表示HTTPS，此结构取值HTTPS
      * @param integer $ListenerStatus 监听器状态，其中：
 0表示运行中；
 1表示创建中；
@@ -169,8 +169,8 @@ class HTTPSListener extends AbstractModel
      * @param string $ClientCertificateId 监听器客户端CA证书ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AuthType 监听器认证方式。其中，
-0，单向认证；
-1，双向认证。
+0表示单向认证；
+1表示双向认证。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientCertificateAlias 客户端CA证书别名
 注意：此字段可能返回 null，表示取不到有效值。

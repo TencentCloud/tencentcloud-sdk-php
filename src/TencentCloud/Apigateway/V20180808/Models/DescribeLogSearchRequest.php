@@ -26,16 +26,38 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置日志结束时间
  * @method string getServiceId() 获取服务id
  * @method void setServiceId(string $ServiceId) 设置服务id
- * @method array getFilters() 获取精确查询，支持apiid/reqid搜索
- * @method void setFilters(array $Filters) 设置精确查询，支持apiid/reqid搜索
+ * @method array getFilters() 获取保留字段
+ * @method void setFilters(array $Filters) 设置保留字段
  * @method integer getLimit() 获取单次要返回的日志条数，单次返回的最大条数为100
  * @method void setLimit(integer $Limit) 设置单次要返回的日志条数，单次返回的最大条数为100
  * @method string getConText() 获取根据上次返回的ConText，获取后续的内容，最多可获取10000条
  * @method void setConText(string $ConText) 设置根据上次返回的ConText，获取后续的内容，最多可获取10000条
  * @method string getSort() 获取按时间排序 asc（升序）或者 desc（降序），默认为 desc
  * @method void setSort(string $Sort) 设置按时间排序 asc（升序）或者 desc（降序），默认为 desc
- * @method string getQuery() 获取模糊查询，根据关键字检索日志
- * @method void setQuery(string $Query) 设置模糊查询，根据关键字检索日志
+ * @method string getQuery() 获取保留字段
+ * @method void setQuery(string $Query) 设置保留字段
+ * @method array getLogQuerys() 获取检索条件,支持的检索条件如下：
+req_id：“=”
+api_id：“=”
+cip：“=”
+uip：“:”
+err_msg：“:”
+rsp_st：“=” 、“!=” 、 “:” 、 “>” 、 “<”
+req_t：”>=“ 、 ”<=“
+
+说明：
+“:”表示包含，“!=”表示不等于，字段含义见输出参数的LogSet说明
+ * @method void setLogQuerys(array $LogQuerys) 设置检索条件,支持的检索条件如下：
+req_id：“=”
+api_id：“=”
+cip：“=”
+uip：“:”
+err_msg：“:”
+rsp_st：“=” 、“!=” 、 “:” 、 “>” 、 “<”
+req_t：”>=“ 、 ”<=“
+
+说明：
+“:”表示包含，“!=”表示不等于，字段含义见输出参数的LogSet说明
  */
 class DescribeLogSearchRequest extends AbstractModel
 {
@@ -55,7 +77,7 @@ class DescribeLogSearchRequest extends AbstractModel
     public $ServiceId;
 
     /**
-     * @var array 精确查询，支持apiid/reqid搜索
+     * @var array 保留字段
      */
     public $Filters;
 
@@ -75,19 +97,45 @@ class DescribeLogSearchRequest extends AbstractModel
     public $Sort;
 
     /**
-     * @var string 模糊查询，根据关键字检索日志
+     * @var string 保留字段
      */
     public $Query;
+
+    /**
+     * @var array 检索条件,支持的检索条件如下：
+req_id：“=”
+api_id：“=”
+cip：“=”
+uip：“:”
+err_msg：“:”
+rsp_st：“=” 、“!=” 、 “:” 、 “>” 、 “<”
+req_t：”>=“ 、 ”<=“
+
+说明：
+“:”表示包含，“!=”表示不等于，字段含义见输出参数的LogSet说明
+     */
+    public $LogQuerys;
 
     /**
      * @param string $StartTime 日志开始时间
      * @param string $EndTime 日志结束时间
      * @param string $ServiceId 服务id
-     * @param array $Filters 精确查询，支持apiid/reqid搜索
+     * @param array $Filters 保留字段
      * @param integer $Limit 单次要返回的日志条数，单次返回的最大条数为100
      * @param string $ConText 根据上次返回的ConText，获取后续的内容，最多可获取10000条
      * @param string $Sort 按时间排序 asc（升序）或者 desc（降序），默认为 desc
-     * @param string $Query 模糊查询，根据关键字检索日志
+     * @param string $Query 保留字段
+     * @param array $LogQuerys 检索条件,支持的检索条件如下：
+req_id：“=”
+api_id：“=”
+cip：“=”
+uip：“:”
+err_msg：“:”
+rsp_st：“=” 、“!=” 、 “:” 、 “>” 、 “<”
+req_t：”>=“ 、 ”<=“
+
+说明：
+“:”表示包含，“!=”表示不等于，字段含义见输出参数的LogSet说明
      */
     function __construct()
     {
@@ -137,6 +185,15 @@ class DescribeLogSearchRequest extends AbstractModel
 
         if (array_key_exists("Query",$param) and $param["Query"] !== null) {
             $this->Query = $param["Query"];
+        }
+
+        if (array_key_exists("LogQuerys",$param) and $param["LogQuerys"] !== null) {
+            $this->LogQuerys = [];
+            foreach ($param["LogQuerys"] as $key => $value){
+                $obj = new LogQuery();
+                $obj->deserialize($value);
+                array_push($this->LogQuerys, $obj);
+            }
         }
     }
 }

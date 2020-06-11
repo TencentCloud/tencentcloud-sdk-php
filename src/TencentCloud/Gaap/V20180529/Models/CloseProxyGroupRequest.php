@@ -18,28 +18,20 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * OpenSecurityPolicy请求参数结构体
+ * CloseProxyGroup请求参数结构体
  *
- * @method string getProxyId() 获取需开启安全策略的通道ID
- * @method void setProxyId(string $ProxyId) 设置需开启安全策略的通道ID
- * @method string getPolicyId() 获取安全策略ID
- * @method void setPolicyId(string $PolicyId) 设置安全策略ID
+ * @method string getGroupId() 获取通道组的实例 ID。
+ * @method void setGroupId(string $GroupId) 设置通道组的实例 ID。
  */
-class OpenSecurityPolicyRequest extends AbstractModel
+class CloseProxyGroupRequest extends AbstractModel
 {
     /**
-     * @var string 需开启安全策略的通道ID
+     * @var string 通道组的实例 ID。
      */
-    public $ProxyId;
+    public $GroupId;
 
     /**
-     * @var string 安全策略ID
-     */
-    public $PolicyId;
-
-    /**
-     * @param string $ProxyId 需开启安全策略的通道ID
-     * @param string $PolicyId 安全策略ID
+     * @param string $GroupId 通道组的实例 ID。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class OpenSecurityPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
-            $this->ProxyId = $param["ProxyId"];
-        }
-
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

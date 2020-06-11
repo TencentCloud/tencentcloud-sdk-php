@@ -60,7 +60,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
  * @method Models\DescribeIPStrategyResponse DescribeIPStrategy(Models\DescribeIPStrategyRequest $req) 本接口（DescribeIPStrategy）用于查询IP策略详情。
  * @method Models\DescribeIPStrategyApisStatusResponse DescribeIPStrategyApisStatus(Models\DescribeIPStrategyApisStatusRequest $req) 本接口（DescribeIPStrategyApisStatus）用于查询IP策略绑定的API列表
  * @method Models\DescribeIPStrategysStatusResponse DescribeIPStrategysStatus(Models\DescribeIPStrategysStatusRequest $req) 本接口（DescribeIPStrategysStatus）用于查询服务IP策略列表。
- * @method Models\DescribeLogSearchResponse DescribeLogSearch(Models\DescribeLogSearchRequest $req) 用于搜索日志
+ * @method Models\DescribeLogSearchResponse DescribeLogSearch(Models\DescribeLogSearchRequest $req) 本接口DescribeLogSearch用于搜索日志
  * @method Models\DescribeServiceResponse DescribeService(Models\DescribeServiceRequest $req) 本接口（DescribeService）用于查询一个服务的详细信息、包括服务的描述、域名、协议、创建时间、发布情况等信息。
  * @method Models\DescribeServiceEnvironmentListResponse DescribeServiceEnvironmentList(Models\DescribeServiceEnvironmentListRequest $req) 本接口（DescribeServiceEnvironmentList）用于查询一个服务的环境列表，可查询到此服务下所有环境及其状态。
  * @method Models\DescribeServiceEnvironmentReleaseHistoryResponse DescribeServiceEnvironmentReleaseHistory(Models\DescribeServiceEnvironmentReleaseHistoryRequest $req) 本接口（DescribeServiceEnvironmentReleaseHistory）用于查询服务环境的发布历史。

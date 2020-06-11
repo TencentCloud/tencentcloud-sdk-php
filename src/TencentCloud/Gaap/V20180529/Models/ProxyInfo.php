@@ -102,9 +102,17 @@ UNKNOWN表示未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportSecurity(integer $SupportSecurity) 设置是否支持安全组配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBillingType() 获取计费类型:(0:按带宽计费  1:按流量计费）
+ * @method integer getBillingType() 获取计费类型: 0表示按带宽计费  1表示按流量计费。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBillingType(integer $BillingType) 设置计费类型:(0:按带宽计费  1:按流量计费）
+ * @method void setBillingType(integer $BillingType) 设置计费类型: 0表示按带宽计费  1表示按流量计费。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRelatedGlobalDomains() 获取关联了解析的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRelatedGlobalDomains(array $RelatedGlobalDomains) 设置关联了解析的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getModifyConfigTime() 获取配置变更时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModifyConfigTime(integer $ModifyConfigTime) 设置配置变更时间
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyInfo extends AbstractModel
@@ -239,10 +247,22 @@ UNKNOWN表示未知状态。
     public $SupportSecurity;
 
     /**
-     * @var integer 计费类型:(0:按带宽计费  1:按流量计费）
+     * @var integer 计费类型: 0表示按带宽计费  1表示按流量计费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingType;
+
+    /**
+     * @var array 关联了解析的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RelatedGlobalDomains;
+
+    /**
+     * @var integer 配置变更时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModifyConfigTime;
 
     /**
      * @param string $InstanceId （旧参数，请使用ProxyId）通道实例ID。
@@ -286,7 +306,11 @@ UNKNOWN表示未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SupportSecurity 是否支持安全组配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BillingType 计费类型:(0:按带宽计费  1:按流量计费）
+     * @param integer $BillingType 计费类型: 0表示按带宽计费  1表示按流量计费。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RelatedGlobalDomains 关联了解析的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ModifyConfigTime 配置变更时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -399,6 +423,14 @@ UNKNOWN表示未知状态。
 
         if (array_key_exists("BillingType",$param) and $param["BillingType"] !== null) {
             $this->BillingType = $param["BillingType"];
+        }
+
+        if (array_key_exists("RelatedGlobalDomains",$param) and $param["RelatedGlobalDomains"] !== null) {
+            $this->RelatedGlobalDomains = $param["RelatedGlobalDomains"];
+        }
+
+        if (array_key_exists("ModifyConfigTime",$param) and $param["ModifyConfigTime"] !== null) {
+            $this->ModifyConfigTime = $param["ModifyConfigTime"];
         }
     }
 }
